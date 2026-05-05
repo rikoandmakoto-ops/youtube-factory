@@ -1,0 +1,91 @@
+# ============================================================
+# YouTube Factory — Docker Compose
+# FastAPI バックエンド + VOICEVOX エンジン + ngrok トンネル
+# ============================================================
+# 使い方:
+#   docker compose up -d          # バックグラウンド起動
+#   docker compose logs -f        # ログ表示
+#   docker compose down           # 停止
+#
+# ngrok 管理画面: http://localhost:4040
+# ============================================================
+
+services:
+  # --- FastAPI バックエンド ---
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ytf-backend
+    ports:
+      - "${PORT:-8000}:8000"
+    volumes:
+      # 認証情報の永続化
+      - ./backend/pipeline/credentials:/app/pipeline/credentials
+      # チャンネルデータの永続化
+      - ./data:/app/../data
+      # アセットのマウント
+      - ./assets:/app/../assets:ro
+      # 出力ディレクトリ
+      - ./output:/app/../output
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - YOUTUBE_API_KEY=${YOUTUBE_API_KEY:-}
+      - CORS_ORIGINS=${CORS_ORIGINS:-http://localhost:3000}
+      - VOICEVOX_URL=http://voicevox:50021
+    depends_on:
+      voicevox:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - ytf-network
+
+  # --- VOICEVOX 音声合成エンジン ---
+  voicevox:
+    image: voicevox/voicevox_engine:cpu-ubuntu20.04-latest
+    container_name: ytf-voicevox
+    ports:
+      - "${VOICEVOX_PORT:-50021}:50021"
+    # GPU版を使う場合は以下をアンコメント:
+    # image: voicevox/voicevox_engine:nvidia-ubuntu20.04-latest
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:50021/version"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - ytf-network
+
+  # --- ngrok トンネル（オプション） ---
+  # バックエンドを外部公開する場合に使用
+  # NGROK_AUTHTOKEN を .env に設定してください
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: ytf-ngrok
+    ports:
+      - "4040:4040"  # ngrok 管理画面
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN:-}
+    # 固定ドメインを使う場合:
+    #   command: "http backend:8000 --domain=YOUR_DOMAIN.ngrok-free.app"
+    command: "http backend:8000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - ytf-network
+    profiles:
+      - tunnel  # docker compose --profile tunnel up で起動
+
+networks:
+  ytf-network:
+    driver: bridge

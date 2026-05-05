@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+.thumbnail {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+}
+.thumbnail .bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 上部グラデーション */
+.top-gradient {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 60%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+}
+/* 下部グラデーション */
+.bottom-gradient {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 45%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+}
+/* テキスト共通 */
+.text-line {
+  position: absolute;
+  left: 0; right: 0;
+  text-align: center;
+  font-family: "Hiragino Kaku Gothic Std", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+/* Line 1 */
+.line1 {
+  top: 18px;
+  font-size: 88px;
+  color: #fff;
+  text-shadow:
+    -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000,
+    -6px 0 0 #000, 6px 0 0 #000, 0 -6px 0 #000, 0 6px 0 #000,
+    -3px -5px 0 #000, 3px -5px 0 #000, -3px 5px 0 #000, 3px 5px 0 #000,
+    -5px -3px 0 #000, 5px -3px 0 #000, -5px 3px 0 #000, 5px 3px 0 #000;
+}
+/* Line 2 */
+.line2 {
+  top: 135px;
+  font-size: 105px;
+  color: #FFEB3C;
+  text-shadow:
+    -5px -5px 0 #A00, 5px -5px 0 #A00, -5px 5px 0 #A00, 5px 5px 0 #A00,
+    -7px 0 0 #A00, 7px 0 0 #A00, 0 -7px 0 #A00, 0 7px 0 #A00,
+    -4px -6px 0 #A00, 4px -6px 0 #A00, -4px 6px 0 #A00, 4px 6px 0 #A00,
+    -6px -4px 0 #A00, 6px -4px 0 #A00, -6px 4px 0 #A00, 6px 4px 0 #A00;
+}
+/* Line 3: 赤バー + 白文字 */
+.line3-wrap {
+  position: absolute;
+  top: 278px;
+  left: 0; right: 0;
+  text-align: center;
+}
+.line3-badge {
+  display: inline-block;
+  background: rgba(220, 20, 20, 0.93);
+  border: 4px solid rgba(255,255,255,0.9);
+  border-radius: 14px;
+  padding: 8px 36px;
+  font-family: "Hiragino Kaku Gothic Std", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 82px;
+  color: #fff;
+  letter-spacing: 0.05em;
+  text-shadow:
+    -3px -3px 0 rgba(80,0,0,0.9), 3px -3px 0 rgba(80,0,0,0.9),
+    -3px 3px 0 rgba(80,0,0,0.9), 3px 3px 0 rgba(80,0,0,0.9),
+    -5px 0 0 rgba(80,0,0,0.9), 5px 0 0 rgba(80,0,0,0.9),
+    0 -5px 0 rgba(80,0,0,0.9), 0 5px 0 rgba(80,0,0,0.9);
+}
+/* サブテキスト */
+.sub-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 38px;
+  color: #FFF064;
+  font-family: "Hiragino Kaku Gothic Std", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-weight: 700;
+  text-shadow:
+    -3px -3px 0 #300, 3px -3px 0 #300, -3px 3px 0 #300, 3px 3px 0 #300,
+    -4px 0 0 #300, 4px 0 0 #300, 0 -4px 0 #300, 0 4px 0 #300;
+  white-space: nowrap;
+}
+/* キャラクター */
+.char-riko {
+  position: absolute;
+  bottom: -15px;
+  left: 10px;
+  height: 290px;
+  width: auto;
+  z-index: 10;
+}
+.char-makoto {
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+  height: 290px;
+  width: auto;
+  z-index: 10;
+}
+</style>
+</head>
+<body>
+<div class="thumbnail" id="thumb">
+  <img class="bg" src="sample_wrinkly_fingers_thumb_bg.png">
+  <div class="top-gradient"></div>
+  <div class="bottom-gradient"></div>
+
+  <div class="text-line line1">指がシワシワになるのは</div>
+  <div class="text-line line2">水を吸うから？</div>
+  <div class="line3-wrap"><span class="line3-badge">驚きの真実！？</span></div>
+  <div class="sub-text">神経が起こす驚きの反応</div>
+
+  <img class="char-riko" src="assets/characters/riko/surprise.png">
+  <img class="char-makoto" src="assets/characters/makoto/surprise.png">
+</div>
+</body>
+</html>

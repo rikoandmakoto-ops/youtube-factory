@@ -1,0 +1,20 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+Pillow>=10.0.0
+moviepy>=2.0.0
+numpy>=1.24.0
+# Phase 1 — 認証
+bcrypt>=4.1.0
+PyJWT>=2.8.0
+# Phase 3 — YouTube API + 暗号化
+google-api-python-client>=2.100.0
+google-auth-oauthlib>=1.0.0
+google-auth-httplib2>=0.1.0
+cryptography>=41.0.0
+# Phase 4 — スケジューラ
+apscheduler>=3.10.0
+# Phase 5 — HTML+CSS+Playwright サムネ生成
+# 別途 `python -m playwright install chromium` の実行が必要
+playwright>=1.40.0

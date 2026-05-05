@@ -1,0 +1,63 @@
+# ===== OS / Editor =====
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# ===== Secrets =====
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env.local
+
+# ===== Node / Next.js =====
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+/coverage
+.pnp
+.pnp.*
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# ===== Vercel =====
+.vercel
+
+# ===== Claude Code local =====
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# ===== Runtime data / generated artifacts =====
+jobs/
+logs/
+data/*.db
+data/samples/
+data/thumbnails/
+data/api_usage.jsonl
+backend/static/
+
+# ===== Large root-level samples / temp media =====
+*.b64
+*.mp4
+sample_*.png
+wrinkly_fingers_*.png
+thumbnail_selfcontained.html
+
+# ===== Misc =====
+*.pem
