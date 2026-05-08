@@ -168,6 +168,83 @@ async def update_channel_config(
 
 
 # =====================================================================
+# ペルソナ設定 (video_format.persona の薄いCRUD)
+# =====================================================================
+
+PERSONA_FIELDS = (
+    "age_group",
+    "gender",
+    "interest_categories",
+    "tone_style",
+    "content_depth",
+    "custom_notes",
+)
+
+
+def _empty_persona() -> Dict[str, Any]:
+    return {
+        "age_group": "",
+        "gender": "",
+        "interest_categories": [],
+        "tone_style": "",
+        "content_depth": "",
+        "custom_notes": "",
+    }
+
+
+class PersonaUpdateRequest(BaseModel):
+    """部分更新を許す。未指定フィールドは既存値を維持。"""
+    age_group: Optional[str] = None
+    gender: Optional[str] = None
+    interest_categories: Optional[List[str]] = None
+    tone_style: Optional[str] = None
+    content_depth: Optional[str] = None
+    custom_notes: Optional[str] = None
+
+
+@router.get("/channels/{channel_id}/persona")
+async def get_channel_persona(
+    channel_id: str, _=Depends(require_session)
+) -> Dict[str, Any]:
+    """ペルソナ設定を取得。未設定なら全フィールド空のオブジェクトを返す。"""
+    _, ch = _ensure_channel_or_404(channel_id)
+    raw_vf = (ch._raw or {}).get("video_format") or {}
+    persona = dict(_empty_persona())
+    persona.update({k: v for k, v in (raw_vf.get("persona") or {}).items() if k in PERSONA_FIELDS})
+    return {"channel_id": channel_id, "persona": persona}
+
+
+@router.put("/channels/{channel_id}/persona")
+async def update_channel_persona(
+    channel_id: str,
+    request: PersonaUpdateRequest,
+    _=Depends(require_session),
+) -> Dict[str, Any]:
+    """ペルソナ設定を部分更新する。"""
+    cm, ch = _ensure_channel_or_404(channel_id)
+
+    file_path = cm._data_dir / f"{channel_id}.json"
+    raw = json.loads(file_path.read_text(encoding="utf-8"))
+    vf = raw.get("video_format") or {}
+    current = dict(_empty_persona())
+    current.update({k: v for k, v in (vf.get("persona") or {}).items() if k in PERSONA_FIELDS})
+
+    patch = {k: v for k, v in request.dict().items() if v is not None}
+    if "interest_categories" in patch and not isinstance(patch["interest_categories"], list):
+        raise HTTPException(status_code=422, detail="interest_categories must be a list")
+    current.update(patch)
+
+    vf["persona"] = current
+    raw["video_format"] = vf
+    file_path.write_text(
+        json.dumps(raw, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    cm.reload()
+    return {"status": "updated", "channel_id": channel_id, "persona": current}
+
+
+# =====================================================================
 # チャンネル作成 / 削除
 # =====================================================================
 
