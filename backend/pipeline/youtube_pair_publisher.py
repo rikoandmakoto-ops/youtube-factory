@@ -290,12 +290,23 @@ def run_pair_publish(
     main_thumbnail_path: Optional[str] = None,
     short_thumbnail_path: Optional[str] = None,
     on_complete=None,
+    auth_channel_id: Optional[str] = None,
 ) -> None:
-    """同期実行（ワーカー側で呼ぶ）: メインを公開してショートを time-shift スケジュール。"""
+    """同期実行（ワーカー側で呼ぶ）: メインを公開してショートを time-shift スケジュール。
+
+    Args:
+        auth_channel_id: 認証に使う内部チャンネルID（per-channel OAuth）。
+            未指定時はレガシー（DEFAULT_CHANNEL_ID）にフォールバック。
+        youtube_channel_id: YouTube 側のブランドチャンネルID（UC...）。snippet.channelId に設定。
+    """
     try:
-        creds = yt_oauth.get_credentials()
+        creds = (
+            yt_oauth.get_credentials_for(auth_channel_id)
+            if auth_channel_id
+            else yt_oauth.get_credentials()
+        )
         if not creds:
-            raise RuntimeError("YouTube が未連携です。設定画面から接続してください")
+            raise RuntimeError("YouTube が未連携です。チャンネル設定から接続してください")
         if not HAS_GOOGLE:
             raise RuntimeError("google-api-python-client が未インストールです")
 

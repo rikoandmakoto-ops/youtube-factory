@@ -69,11 +69,30 @@ def ensure_deps():
         )
 
 
-def get_authenticated_service():
-    """Get authenticated YouTube API service."""
-    ensure_deps()
-    creds = None
+def get_authenticated_service(auth_channel_id: str = None):
+    """Get authenticated YouTube API service.
 
+    Args:
+        auth_channel_id: 内部チャンネルID。指定時はチャンネル別 OAuth トークンを使用。
+            未指定時は legacy（DEFAULT_CHANNEL_ID）にフォールバック。
+    """
+    ensure_deps()
+
+    # ── 1. チャンネル別 OAuth (新方式) を優先 ──
+    try:
+        from . import youtube_oauth as _oauth
+        creds = (
+            _oauth.get_credentials_for(auth_channel_id)
+            if auth_channel_id
+            else _oauth.get_credentials()
+        )
+        if creds:
+            return build("youtube", "v3", credentials=creds)
+    except Exception:
+        pass
+
+    # ── 2. レガシー pickle ファイル方式（CLI 専用） ──
+    creds = None
     if TOKEN_FILE.exists():
         with open(TOKEN_FILE, "rb") as f:
             creds = pickle.load(f)
@@ -311,6 +330,7 @@ def upload_video(
     is_short: bool = False,
     made_for_kids: bool = False,
     channel_id: str = None,
+    auth_channel_id: str = None,
 ):
     """
     Upload a video to YouTube with optional scheduling.
@@ -318,7 +338,8 @@ def upload_video(
     or by switching the active channel.
 
     Args:
-        channel_id: Target YouTube channel ID. If None, uploads to default channel.
+        channel_id: Target YouTube channel ID (UC...). If None, uploads to default channel.
+        auth_channel_id: 内部チャンネルID — per-channel OAuth トークンを使う場合に指定。
         (other args same as before)
     """
     ensure_deps()
@@ -373,7 +394,7 @@ def upload_video(
     if scheduled_at:
         print(f"   予約公開: {scheduled_at}")
 
-    youtube = get_authenticated_service()
+    youtube = get_authenticated_service(auth_channel_id=auth_channel_id)
 
     media = MediaFileUpload(
         str(video_path),
@@ -455,6 +476,7 @@ def upload_generated_videos(
     upload_main: bool = True,
     upload_short: bool = True,
     channel_id: str = None,
+    auth_channel_id: str = None,
 ):
     """Upload generated videos, optionally targeting a specific channel."""
     out = Path(output_dir)
@@ -490,6 +512,7 @@ def upload_generated_videos(
                 scheduled_at=scheduled_at,
                 is_short=False,
                 channel_id=channel_id,
+                auth_channel_id=auth_channel_id,
             )
 
     if upload_short:
@@ -504,6 +527,7 @@ def upload_generated_videos(
                 scheduled_at=short_scheduled_at or scheduled_at,
                 is_short=True,
                 channel_id=channel_id,
+                auth_channel_id=auth_channel_id,
             )
 
     return results

@@ -12,6 +12,7 @@ import {
   Toggle,
 } from '@/components/Field';
 import AssetUploader from '@/components/AssetUploader';
+import ChannelYoutubeConnect from '@/components/ChannelYoutubeConnect';
 import type { AssetEntry, AssetKind, Channel } from '@/lib/api';
 
 type ConfigShape = Record<string, any>;
@@ -153,6 +154,11 @@ export default function ConfigEditor({
           </Link>
         ))}
       </nav>
+
+      {/* 0. YouTube 連携 */}
+      <Section title="🔌 YouTube 連携" defaultOpen>
+        <ChannelYoutubeConnect channelId={channelId} />
+      </Section>
 
       {/* 1. 基本情報 */}
       <Section title="📝 基本情報" defaultOpen>

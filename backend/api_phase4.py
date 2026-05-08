@@ -376,10 +376,10 @@ def on_generation_complete(job) -> None:
         )
         return
 
-    if not yt_oauth.is_connected():
+    if not yt_oauth.is_connected_for(job.channel_id):
         _send_event_notification(
             "error",
-            f"⚠️ 自動公開スキップ ({job.id}): YouTube が未連携です",
+            f"⚠️ 自動公開スキップ ({job.id}): チャンネル '{job.channel_id}' が YouTube 未連携です",
         )
         return
 
@@ -453,6 +453,7 @@ def on_generation_complete(job) -> None:
             "main_thumbnail_path": paths.get("main_thumb"),
             "short_thumbnail_path": paths.get("short_thumb"),
             "on_complete": _on_pair_done,
+            "auth_channel_id": job.channel_id,
         },
         daemon=True,
     ).start()
@@ -482,7 +483,7 @@ def _start_single_main_publish(
         _send_event_notification("error", f"⚠️ 自動公開失敗 ({job.id}): {e}")
         return
 
-    creds = yt_oauth.get_credentials()
+    creds = yt_oauth.get_credentials_for(job.channel_id) or yt_oauth.get_credentials()
     if not creds:
         _send_event_notification("error", f"⚠️ 自動公開失敗 ({job.id}): 未連携")
         return

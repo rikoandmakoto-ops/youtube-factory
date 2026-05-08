@@ -81,7 +81,15 @@ export default function SettingsForm({ initial }: { initial: Settings }) {
 
   return (
     <form onSubmit={onSave} className="px-5 space-y-3">
-      <Section title="🔌 YouTube API 連携" defaultOpen>
+      <Section title="🔌 YouTube API 連携（レガシー）">
+        <p className="text-xs text-amber-300 bg-amber-500/10 border border-amber-500/30 rounded-lg px-3 py-2 leading-5">
+          ℹ️ <b>チャンネル個別設定を推奨</b>します。チャンネル毎に異なる
+          OAuth クライアントとアカウントを連携するには、各チャンネルの
+          設定画面（<code>/channels/[id]/config</code>）の「YouTube 連携」
+          セクションを使用してください。<br />
+          以下はレガシー設定で、内部的にデフォルトチャンネル
+          <code> daily-science </code>に紐付けられます。
+        </p>
         <YoutubeConnect />
       </Section>
 

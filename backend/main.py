@@ -531,7 +531,8 @@ class YouTubeUploadRequest(BaseModel):
     short_scheduled_at: Optional[str] = None
     upload_main: bool = True
     upload_short: bool = True
-    channel_id: Optional[str] = None  # ブランドアカウント指定
+    channel_id: Optional[str] = None  # ブランドアカウント指定 (UC...)
+    auth_channel_id: Optional[str] = None  # 内部チャンネルID (per-channel OAuth)
 
 
 class AddChannelRequest(BaseModel):
@@ -559,6 +560,7 @@ def _run_youtube_upload(job_id: str, req: dict):
             upload_main=req.get("upload_main", True),
             upload_short=req.get("upload_short", True),
             channel_id=req.get("channel_id"),
+            auth_channel_id=req.get("auth_channel_id"),
         )
         youtube_upload_jobs[job_id]["status"] = "done"
         youtube_upload_jobs[job_id]["results"] = results

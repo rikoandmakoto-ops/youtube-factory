@@ -372,6 +372,10 @@ export type YoutubeStatus = {
   client_id_preview: string;
   google_libs_installed: boolean;
   crypto_installed: boolean;
+  /** チャンネル別エンドポイントから返される追加情報 */
+  channel_id?: string | null;
+  youtube_channel_id?: string | null;
+  youtube_channel_name?: string | null;
 };
 
 export async function getYoutubeStatus(): Promise<YoutubeStatus> {
@@ -409,6 +413,73 @@ export async function youtubeCallback(
 
 export async function youtubeDisconnect(): Promise<{ status: string }> {
   return call('/api/youtube/disconnect', { method: 'POST' });
+}
+
+// ── Per-channel YouTube OAuth ──
+
+export async function getChannelYoutubeStatus(
+  channelId: string
+): Promise<YoutubeStatus> {
+  return call<YoutubeStatus>(
+    `/api/channels/${encodeURIComponent(channelId)}/youtube/status`,
+    { noStore: true }
+  );
+}
+
+export async function setChannelYoutubeClient(
+  channelId: string,
+  client_id: string,
+  client_secret: string
+): Promise<{ status: string; channel_id: string }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/youtube/client`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ client_id, client_secret }),
+    }
+  );
+}
+
+export async function getChannelYoutubeAuthUrl(
+  channelId: string,
+  redirect_uri: string
+): Promise<{ auth_url: string; state: string }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/youtube/auth`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ redirect_uri }),
+    }
+  );
+}
+
+export async function channelYoutubeCallback(
+  channelId: string,
+  state: string,
+  code: string
+): Promise<{
+  connected: boolean;
+  channel_id: string;
+  account_email: string | null;
+  youtube_channel_id: string | null;
+  youtube_channel_name: string | null;
+}> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/youtube/callback`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ state, code }),
+    }
+  );
+}
+
+export async function channelYoutubeDisconnect(
+  channelId: string
+): Promise<{ status: string; channel_id: string }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/youtube`,
+    { method: 'DELETE' }
+  );
 }
 
 export type PublishPayload = {

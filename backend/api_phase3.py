@@ -102,6 +102,90 @@ async def youtube_disconnect(_=Depends(require_session)) -> Dict[str, str]:
 
 
 # =====================================================================
+# OAuth: チャンネル別エンドポイント
+# =====================================================================
+
+def _require_channel(channel_id: str):
+    cm = _state.get("channel_manager")
+    if cm is None:
+        raise HTTPException(status_code=503, detail="Channel manager not ready")
+    ch = cm.get(channel_id)
+    if not ch:
+        raise HTTPException(status_code=404, detail=f"Channel not found: {channel_id}")
+    return ch
+
+
+@router.get("/channels/{channel_id}/youtube/status")
+async def channel_youtube_status(
+    channel_id: str, _=Depends(require_session)
+) -> Dict[str, Any]:
+    _require_channel(channel_id)
+    return yt_oauth.get_status_for(channel_id)
+
+
+@router.post("/channels/{channel_id}/youtube/client")
+async def channel_set_youtube_client(
+    channel_id: str,
+    request: SetClientRequest,
+    _=Depends(require_session),
+) -> Dict[str, Any]:
+    """チャンネル別 OAuth クライアントID/シークレットを保存。"""
+    _require_channel(channel_id)
+    yt_oauth.set_oauth_client_for(channel_id, request.client_id, request.client_secret)
+    return {"status": "ok", "channel_id": channel_id}
+
+
+class ChannelAuthUrlRequest(BaseModel):
+    redirect_uri: str = Field(min_length=8)
+
+
+@router.post("/channels/{channel_id}/youtube/auth")
+async def channel_youtube_auth_url(
+    channel_id: str,
+    request: ChannelAuthUrlRequest,
+    _=Depends(require_session),
+) -> Dict[str, str]:
+    """指定チャンネル用の認可URLを発行。"""
+    _require_channel(channel_id)
+    try:
+        return yt_oauth.build_auth_url_for(channel_id, request.redirect_uri)
+    except RuntimeError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+class ChannelCallbackRequest(BaseModel):
+    state: str
+    code: str
+
+
+@router.post("/channels/{channel_id}/youtube/callback")
+async def channel_youtube_callback(
+    channel_id: str,
+    request: ChannelCallbackRequest,
+    _=Depends(require_session),
+) -> Dict[str, Any]:
+    """指定チャンネル用の OAuth コールバック処理。"""
+    _require_channel(channel_id)
+    try:
+        return yt_oauth.exchange_code_for(channel_id, request.state, request.code)
+    except RuntimeError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"OAuth exchange failed: {e}")
+
+
+@router.delete("/channels/{channel_id}/youtube")
+async def channel_youtube_disconnect(
+    channel_id: str, _=Depends(require_session)
+) -> Dict[str, Any]:
+    """指定チャンネルの YouTube 連携を解除（トークン + クライアント削除）。"""
+    _require_channel(channel_id)
+    yt_oauth.clear_credentials_for(channel_id)
+    yt_oauth.clear_oauth_client_for(channel_id)
+    return {"status": "disconnected", "channel_id": channel_id}
+
+
+# =====================================================================
 # 動画アップロード
 # =====================================================================
 
@@ -116,7 +200,8 @@ class PublishRequest(BaseModel):
     thumbnail_path: Optional[str] = None
     is_short: bool = False
     made_for_kids: bool = False
-    youtube_channel_id: Optional[str] = None  # ブランドアカウント指定
+    youtube_channel_id: Optional[str] = None  # ブランドアカウント指定 (UC...)
+    auth_channel_id: Optional[str] = None  # 内部チャンネルID (per-channel OAuth)
 
 
 def _validate_file(path_str: str, label: str = "file") -> Path:
@@ -155,9 +240,13 @@ def _run_publish(job_id: str, req: PublishRequest):
             raise RuntimeError(
                 "google-api-python-client がインストールされていません"
             )
-        creds = yt_oauth.get_credentials()
+        creds = (
+            yt_oauth.get_credentials_for(req.auth_channel_id)
+            if req.auth_channel_id
+            else yt_oauth.get_credentials()
+        )
         if not creds:
-            raise RuntimeError("YouTube が未連携です。設定画面から接続してください")
+            raise RuntimeError("YouTube が未連携です。チャンネル設定から接続してください")
 
         video = _validate_file(req.video_path, "video")
         thumb = _validate_file(req.thumbnail_path, "thumbnail") if req.thumbnail_path else None
@@ -236,7 +325,12 @@ def _run_publish(job_id: str, req: PublishRequest):
 async def youtube_publish(
     request: PublishRequest, _=Depends(require_session)
 ) -> Dict[str, Any]:
-    if not yt_oauth.is_connected():
+    connected = (
+        yt_oauth.is_connected_for(request.auth_channel_id)
+        if request.auth_channel_id
+        else yt_oauth.is_connected()
+    )
+    if not connected:
         raise HTTPException(status_code=400, detail="YouTube が未連携です")
 
     job_id = str(uuid.uuid4())[:8]
@@ -393,6 +487,7 @@ def _resolve_pair_inputs(req: PublishPairRequest) -> Dict[str, Any]:
         "short_description_template": template,
         "youtube_channel_id": ch_yt_id,
         "channel_id": channel_id,
+        "auth_channel_id": channel_id,  # per-channel OAuth に使う内部チャンネルID
         "source_job_id": req.job_id,
     }
 
@@ -484,6 +579,7 @@ def _run_pair_publish_async(job_id: str, params: Dict[str, Any]) -> None:
         main_thumbnail_path=params["main_thumb"],
         short_thumbnail_path=params["short_thumb"],
         on_complete=_on_complete,
+        auth_channel_id=params.get("auth_channel_id"),
     )
 
 
@@ -492,10 +588,13 @@ async def youtube_publish_pair(
     request: PublishPairRequest, _=Depends(require_session)
 ) -> Dict[str, Any]:
     """メイン+ショートをペア公開（メイン即時 → 指定分後にショート）。"""
-    if not yt_oauth.is_connected():
-        raise HTTPException(status_code=400, detail="YouTube が未連携です")
-
     params = _resolve_pair_inputs(request)
+    auth_ch = params.get("auth_channel_id")
+    connected = (
+        yt_oauth.is_connected_for(auth_ch) if auth_ch else yt_oauth.is_connected()
+    )
+    if not connected:
+        raise HTTPException(status_code=400, detail="YouTube が未連携です")
     job_id = pair_pub.create_pair_job()
     threading.Thread(
         target=_run_pair_publish_async, args=(job_id, params), daemon=True
@@ -563,10 +662,13 @@ def _mock_analytics(channel_id: str) -> Dict[str, Any]:
 
 
 def _real_analytics(channel_id: str, youtube_channel_id: str) -> Optional[Dict[str, Any]]:
-    """YouTube Analytics API v2 で実データ取得。失敗時 None。"""
+    """YouTube Analytics API v2 で実データ取得。失敗時 None。
+
+    認証は per-channel トークン（channel_id 指定）を優先し、未連携時はレガシーへフォールバック。
+    """
     if not HAS_GOOGLE:
         return None
-    creds = yt_oauth.get_credentials()
+    creds = yt_oauth.get_credentials_for(channel_id) or yt_oauth.get_credentials()
     if not creds:
         return None
 
@@ -672,7 +774,8 @@ async def channel_analytics(
         raise HTTPException(status_code=404, detail=f"Channel not found: {channel_id}")
 
     yt_id = ch.youtube_channel_id
-    if yt_id and yt_oauth.is_connected():
+    has_auth = yt_oauth.is_connected_for(channel_id) or yt_oauth.is_connected()
+    if yt_id and has_auth:
         real = _real_analytics(channel_id, yt_id)
         if real and real.get("source") != "error":
             return real

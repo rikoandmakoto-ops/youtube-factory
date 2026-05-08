@@ -293,7 +293,8 @@ def _channel_metrics(channel_id: str) -> Dict[str, int]:
         from pipeline import youtube_oauth as yo
         cm = _state.get("channel_manager")
         ch = cm.get(channel_id) if cm else None
-        if ch and ch.youtube_channel_id and yo.is_connected():
+        connected = yo.is_connected_for(channel_id) or yo.is_connected()
+        if ch and ch.youtube_channel_id and connected:
             from api_phase3 import _real_analytics
             real = _real_analytics(channel_id, ch.youtube_channel_id)
             if real and real.get("source") == "youtube_analytics":
