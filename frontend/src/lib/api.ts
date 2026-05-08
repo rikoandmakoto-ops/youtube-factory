@@ -233,6 +233,34 @@ export async function updateChannelConfig(
   });
 }
 
+// ── ペルソナ（ターゲット視聴者）── video_format.persona の薄いCRUD
+export type ChannelPersona = {
+  age_group: string;
+  gender: string;
+  interest_categories: string[];
+  tone_style: string;
+  content_depth: string;
+  custom_notes: string;
+};
+
+export async function getChannelPersona(
+  id: string
+): Promise<{ channel_id: string; persona: ChannelPersona }> {
+  return call(`/api/channels/${encodeURIComponent(id)}/persona`, {
+    noStore: true,
+  });
+}
+
+export async function updateChannelPersona(
+  id: string,
+  patch: Partial<ChannelPersona>
+): Promise<{ status: string; channel_id: string; persona: ChannelPersona }> {
+  return call(`/api/channels/${encodeURIComponent(id)}/persona`, {
+    method: 'PUT',
+    body: JSON.stringify(patch),
+  });
+}
+
 export type CreateChannelPayload = {
   id: string;
   name: string;

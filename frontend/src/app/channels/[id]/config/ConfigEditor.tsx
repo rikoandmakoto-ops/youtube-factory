@@ -45,6 +45,23 @@ const SPEAKER_PRESETS: { id: number; name: string }[] = [
   { id: 30, name: '雨晴はう' },
 ];
 
+const PERSONA_AGE_OPTIONS = ['', '10代', '20代', '30代', '40代+'];
+const PERSONA_GENDER_OPTIONS = ['', '男性', '女性', '全般'];
+const PERSONA_TONE_OPTIONS = ['', 'カジュアル', '丁寧', 'フランク', 'ゆるい'];
+const PERSONA_DEPTH_OPTIONS = ['ライト', 'ミドル', 'ディープ'];
+const PERSONA_INTEREST_PRESETS = [
+  '科学',
+  'エンタメ',
+  '雑学',
+  'テクノロジー',
+  '日常',
+  'ビジネス',
+  '健康',
+  '心理',
+  '歴史',
+  'お金',
+];
+
 export default function ConfigEditor({
   channelId,
   initialConfig,
@@ -198,6 +215,157 @@ export default function ConfigEditor({
             />
           </Field>
         </Row>
+      </Section>
+
+      {/* 1.5 ペルソナ（ターゲット視聴者） */}
+      <Section
+        title="🎯 ターゲット視聴者ペルソナ"
+        description="シナリオ生成時にプロンプトへ注入され、口調・例え・解説の深さが自動で切り替わる"
+      >
+        {(() => {
+          const persona = (getIn(cfg, ['video_format', 'persona']) || {}) as {
+            age_group?: string;
+            gender?: string;
+            interest_categories?: string[];
+            tone_style?: string;
+            content_depth?: string;
+            custom_notes?: string;
+          };
+          const interests: string[] = Array.isArray(persona.interest_categories)
+            ? persona.interest_categories
+            : [];
+          const toggleInterest = (label: string) => {
+            const next = interests.includes(label)
+              ? interests.filter((x) => x !== label)
+              : [...interests, label];
+            update(['video_format', 'persona', 'interest_categories'], next);
+          };
+          const allChips = Array.from(
+            new Set([...PERSONA_INTEREST_PRESETS, ...interests])
+          );
+          return (
+            <>
+              <Row>
+                <Field label="年齢層">
+                  <select
+                    value={persona.age_group || ''}
+                    onChange={(e) =>
+                      update(['video_format', 'persona', 'age_group'], e.target.value)
+                    }
+                    className="input"
+                  >
+                    {PERSONA_AGE_OPTIONS.map((v) => (
+                      <option key={v || 'unset'} value={v}>
+                        {v || '指定なし'}
+                      </option>
+                    ))}
+                  </select>
+                </Field>
+                <Field label="性別傾向">
+                  <select
+                    value={persona.gender || ''}
+                    onChange={(e) =>
+                      update(['video_format', 'persona', 'gender'], e.target.value)
+                    }
+                    className="input"
+                  >
+                    {PERSONA_GENDER_OPTIONS.map((v) => (
+                      <option key={v || 'unset'} value={v}>
+                        {v || '指定なし'}
+                      </option>
+                    ))}
+                  </select>
+                </Field>
+              </Row>
+
+              <Field
+                label="興味カテゴリ"
+                hint="クリックでオン/オフ。複数選択可"
+              >
+                <div className="flex flex-wrap gap-2">
+                  {allChips.map((label) => {
+                    const active = interests.includes(label);
+                    return (
+                      <button
+                        key={label}
+                        type="button"
+                        onClick={() => toggleInterest(label)}
+                        className={`px-3 py-1 rounded-full text-xs border transition ${
+                          active
+                            ? 'bg-accent text-white border-accent'
+                            : 'bg-bg-elev text-slate-300 border-border hover:bg-slate-700'
+                        }`}
+                      >
+                        {label}
+                      </button>
+                    );
+                  })}
+                </div>
+              </Field>
+
+              <Row>
+                <Field label="口調スタイル">
+                  <select
+                    value={persona.tone_style || ''}
+                    onChange={(e) =>
+                      update(['video_format', 'persona', 'tone_style'], e.target.value)
+                    }
+                    className="input"
+                  >
+                    {PERSONA_TONE_OPTIONS.map((v) => (
+                      <option key={v || 'unset'} value={v}>
+                        {v || '指定なし'}
+                      </option>
+                    ))}
+                  </select>
+                </Field>
+                <Field
+                  label="コンテンツ深さ"
+                  hint="ライト=雑学中心 / ミドル=データ織り交ぜ / ディープ=専門用語OK"
+                >
+                  <div className="flex gap-1 rounded-xl bg-bg-elev border border-border p-1">
+                    {PERSONA_DEPTH_OPTIONS.map((v) => {
+                      const active = persona.content_depth === v;
+                      return (
+                        <button
+                          key={v}
+                          type="button"
+                          onClick={() =>
+                            update(
+                              ['video_format', 'persona', 'content_depth'],
+                              active ? '' : v
+                            )
+                          }
+                          className={`flex-1 px-2 py-1.5 rounded-lg text-xs transition ${
+                            active
+                              ? 'bg-accent text-white'
+                              : 'text-slate-300 hover:bg-slate-700'
+                          }`}
+                        >
+                          {v}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </Field>
+              </Row>
+
+              <Field
+                label="カスタムメモ"
+                hint="例: 「結論を冒頭で言い切る」「数字は必ず %形式」など、追加で守らせたい指示"
+              >
+                <textarea
+                  value={persona.custom_notes || ''}
+                  onChange={(e) =>
+                    update(['video_format', 'persona', 'custom_notes'], e.target.value)
+                  }
+                  className="input min-h-[80px] text-xs"
+                  placeholder="(任意)"
+                />
+              </Field>
+            </>
+          );
+        })()}
       </Section>
 
       {/* 2. キャラクター */}

@@ -79,6 +79,19 @@ class ScenarioGenerator:
 
         return data["choices"][0]["message"]["content"]
 
+    def _persona_block(self, channel) -> str:
+        """video_format.persona から差し込むプロンプトブロックを返す。
+
+        未設定なら空文字。設定があれば「# ターゲット視聴者ペルソナ ...」を返す。
+        後段の policy / 構成ルールより前に置く想定。
+        """
+        try:
+            persona = channel.video_format.persona
+        except AttributeError:
+            return ""
+        block = persona.to_prompt_block() if persona else ""
+        return f"\n{block}\n" if block else ""
+
     def _build_yukkuri_prompt(self, channel, theme: Dict, target_duration: int) -> str:
         """ゆっくり対話スタイルのシナリオ生成プロンプト"""
         char_names = list(channel.characters.keys())
@@ -92,6 +105,7 @@ class ScenarioGenerator:
         for a in channel.policy_avoid():
             policy_parts.append(f"- 避ける: {a}")
         policy_text = "\n".join(policy_parts) if policy_parts else "(なし)"
+        persona_block = self._persona_block(channel)
 
         target_lines = max(58, min(64, round(target_duration / 12)))
         target_chars = int(target_duration * 8.0)
@@ -110,7 +124,7 @@ class ScenarioGenerator:
 # キャラ:
 {char_lines}
 # テーマ: {theme["title"]} / 切り口:{theme.get("angle","自由")}
-# ポリシー:
+{persona_block}# ポリシー:
 {policy_text}
 
 # 出力JSON
@@ -153,6 +167,7 @@ class ScenarioGenerator:
         for a in channel.policy_avoid():
             policy_parts.append(f"- 避ける: {a}")
         policy_text = "\n".join(policy_parts) if policy_parts else "(なし)"
+        persona_block = self._persona_block(channel)
 
         target_lines = max(50, min(58, round(target_duration / 13)))
         target_chars = int(target_duration * 8.0)
@@ -168,7 +183,7 @@ class ScenarioGenerator:
 # チャンネル: {channel.name} / {channel.concept} / トーン:{tone}
 # ナレーター: {narrator.get("role", "冷静な男性ナレーター")}
 # テーマ: {theme["title"]} / 切り口:{theme.get("angle","自由")}
-# ポリシー:
+{persona_block}# ポリシー:
 {policy_text}
 
 # 出力JSON
