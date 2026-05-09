@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import GenerateForm from './GenerateForm';
-import { listChannels, ApiError } from '@/lib/api';
+import { listChannels, ApiError, redirectIfUnauthorized } from '@/lib/api';
 
 export const dynamic = 'force-dynamic';
 
@@ -14,6 +14,7 @@ export default async function GeneratePage({
   try {
     channels = await listChannels();
   } catch (e) {
+    redirectIfUnauthorized(e, '/generate');
     error = e instanceof ApiError ? e.message : 'チャンネル一覧を取得できません';
   }
 

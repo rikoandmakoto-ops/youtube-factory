@@ -8,6 +8,7 @@ import {
   getChannelAnalytics,
   getYoutubeStatus,
   ApiError,
+  redirectIfUnauthorized,
 } from '@/lib/api';
 
 export const dynamic = 'force-dynamic';
@@ -32,6 +33,7 @@ export default async function ChannelDetailPage({
     channel = await getChannel(params.id);
   } catch (e) {
     if (e instanceof ApiError && e.status === 404) notFound();
+    redirectIfUnauthorized(e, `/channels/${params.id}`);
     backendError =
       e instanceof ApiError
         ? e.message
@@ -52,10 +54,12 @@ export default async function ChannelDetailPage({
     );
   }
 
-  const [analyticsRes, ytStatusRes] = await Promise.allSettled([
+  const subResults = await Promise.allSettled([
     getChannelAnalytics(params.id),
     getYoutubeStatus(),
   ]);
+  redirectIfUnauthorized(subResults, `/channels/${params.id}`);
+  const [analyticsRes, ytStatusRes] = subResults;
   const analytics =
     analyticsRes.status === 'fulfilled' ? analyticsRes.value : null;
   const ytStatus =

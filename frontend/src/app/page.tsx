@@ -10,16 +10,19 @@ import {
   listChannels,
   listActiveJobs,
   ApiError,
+  redirectIfUnauthorized,
 } from '@/lib/api';
 
 export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
-  const [statusRes, channelsRes, jobsRes] = await Promise.allSettled([
+  const results = await Promise.allSettled([
     getSystemStatus(),
     listChannels(),
     listActiveJobs(),
   ]);
+  redirectIfUnauthorized(results, '/');
+  const [statusRes, channelsRes, jobsRes] = results;
 
   const status = statusRes.status === 'fulfilled' ? statusRes.value : null;
   const channels = channelsRes.status === 'fulfilled' ? channelsRes.value : [];

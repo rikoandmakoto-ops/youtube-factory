@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import NewChannelForm from './NewChannelForm';
-import { listChannels, ApiError } from '@/lib/api';
+import { listChannels, ApiError, redirectIfUnauthorized } from '@/lib/api';
 
 export const dynamic = 'force-dynamic';
 
@@ -10,6 +10,7 @@ export default async function NewChannelPage() {
   try {
     templates = await listChannels();
   } catch (e) {
+    redirectIfUnauthorized(e, '/channels/new');
     error = e instanceof ApiError ? e.message : 'チャンネル一覧を取得できません';
   }
   return (

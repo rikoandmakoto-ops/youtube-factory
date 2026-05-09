@@ -1,14 +1,18 @@
 import Header from '@/components/Header';
 import ScheduleManager from './ScheduleManager';
-import { listChannels, listSchedules, ApiError } from '@/lib/api';
+import {
+  listChannels,
+  listSchedules,
+  ApiError,
+  redirectIfUnauthorized,
+} from '@/lib/api';
 
 export const dynamic = 'force-dynamic';
 
 export default async function SchedulePage() {
-  const [chRes, schRes] = await Promise.allSettled([
-    listChannels(),
-    listSchedules(),
-  ]);
+  const results = await Promise.allSettled([listChannels(), listSchedules()]);
+  redirectIfUnauthorized(results, '/schedule');
+  const [chRes, schRes] = results;
   const channels = chRes.status === 'fulfilled' ? chRes.value : [];
   const schedules = schRes.status === 'fulfilled' ? schRes.value.schedules : [];
   const schedulerAvailable =

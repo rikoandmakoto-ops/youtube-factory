@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import SettingsForm from './SettingsForm';
-import { getSettings, ApiError } from '@/lib/api';
+import { getSettings, ApiError, redirectIfUnauthorized } from '@/lib/api';
 
 export const dynamic = 'force-dynamic';
 
@@ -10,6 +10,7 @@ export default async function SettingsPage() {
   try {
     settings = await getSettings();
   } catch (e) {
+    redirectIfUnauthorized(e, '/settings');
     error = e instanceof ApiError ? e.message : '設定を取得できませんでした';
   }
   return (
