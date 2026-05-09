@@ -27,11 +27,29 @@ export default async function ChannelDetailPage({
   params: { id: string };
 }) {
   let channel;
+  let backendError: string | null = null;
   try {
     channel = await getChannel(params.id);
   } catch (e) {
     if (e instanceof ApiError && e.status === 404) notFound();
-    throw e;
+    backendError =
+      e instanceof ApiError
+        ? e.message
+        : 'バックエンドに接続できません';
+  }
+
+  if (!channel) {
+    return (
+      <main className="pb-10">
+        <Header
+          title="チャンネル"
+          back={{ href: '/', label: 'ダッシュボードに戻る' }}
+        />
+        <div className="mx-5 mt-3 rounded-lg bg-red-500/10 border border-red-500/30 px-3 py-2 text-sm text-red-300">
+          ⚠️ {backendError ?? 'チャンネル情報を取得できませんでした'}
+        </div>
+      </main>
+    );
   }
 
   const [analyticsRes, ytStatusRes] = await Promise.allSettled([

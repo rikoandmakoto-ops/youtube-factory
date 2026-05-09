@@ -6,6 +6,18 @@ import type { YoutubeStatus } from '@/lib/api';
 
 const POPUP_FEATURES = 'width=520,height=720';
 
+async function readErrorMessage(res: Response): Promise<string> {
+  const text = await res.text();
+  try {
+    const j = JSON.parse(text);
+    if (j && typeof j === 'object' && 'error' in j) return String(j.error);
+    if (j && typeof j === 'object' && 'detail' in j) return String(j.detail);
+  } catch {
+    /* not JSON — likely an HTML error page from Vercel/edge */
+  }
+  return `${res.status} ${res.statusText || 'リクエストに失敗しました'}`;
+}
+
 /**
  * チャンネル別 YouTube OAuth 連携 UI
  *
@@ -59,7 +71,7 @@ export default function ChannelYoutubeConnect({
           }),
         }
       );
-      if (!res.ok) throw new Error(await res.text());
+      if (!res.ok) throw new Error(await readErrorMessage(res));
       setClientId('');
       setClientSecret('');
       setInfo('✅ OAuth クライアント情報を保存しました');
@@ -97,7 +109,7 @@ export default function ChannelYoutubeConnect({
       );
       if (!res.ok) {
         popup.close();
-        throw new Error(await res.text());
+        throw new Error(await readErrorMessage(res));
       }
       const data: { auth_url: string; state: string } = await res.json();
 
@@ -122,7 +134,7 @@ export default function ChannelYoutubeConnect({
               }),
             }
           );
-          if (!cbRes.ok) throw new Error(await cbRes.text());
+          if (!cbRes.ok) throw new Error(await readErrorMessage(cbRes));
           const result = await cbRes.json();
           setInfo(
             `✅ 連携完了: ${

@@ -19,6 +19,7 @@ export default async function ChannelConfigPage({
   let config: Record<string, unknown> | null = null;
   let channels: Awaited<ReturnType<typeof listChannels>> = [];
   let assets: AssetsResponse = { assets: {} };
+  let backendError: string | null = null;
 
   try {
     [config, channels, assets] = await Promise.all([
@@ -28,10 +29,23 @@ export default async function ChannelConfigPage({
     ]);
   } catch (e) {
     if (e instanceof ApiError && e.status === 404) notFound();
-    throw e;
+    backendError =
+      e instanceof ApiError ? e.message : 'バックエンドに接続できません';
   }
 
-  if (!config) notFound();
+  if (backendError || !config) {
+    return (
+      <main className="pb-20">
+        <Header
+          title="⚙️ チャンネル設定"
+          back={{ href: `/channels/${params.id}`, label: 'チャンネル詳細に戻る' }}
+        />
+        <div className="mx-5 mt-3 rounded-lg bg-red-500/10 border border-red-500/30 px-3 py-2 text-sm text-red-300">
+          ⚠️ {backendError ?? '設定を取得できませんでした'}
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="pb-20">
