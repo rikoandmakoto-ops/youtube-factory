@@ -12,6 +12,50 @@ export class ApiError extends Error {
   }
 }
 
+/**
+ * Backend rejected the JWT (token missing, expired, or signed with a
+ * rotated secret). Pages should treat this as "session no longer valid"
+ * and send the user through /api/auth/clear to drop the stale cookie.
+ */
+export class UnauthorizedError extends ApiError {
+  constructor(body: unknown, message: string) {
+    super(401, body, message);
+    this.name = 'UnauthorizedError';
+  }
+}
+
+/**
+ * Server-component helper: if any backend call failed with 401, redirect
+ * through /api/auth/clear so the stale cookie is dropped before landing
+ * on /login. Without this, the middleware (which only checks cookie
+ * presence) would bounce the user back to / and into a loop.
+ *
+ * Accepts either a Promise.allSettled results array OR a single caught
+ * error from a try/catch block.
+ */
+export function redirectIfUnauthorized(
+  resultsOrError: PromiseSettledResult<unknown>[] | unknown,
+  nextPath?: string
+): void {
+  let hasAuthFailure = false;
+  if (Array.isArray(resultsOrError)) {
+    hasAuthFailure = resultsOrError.some(
+      (r) => r.status === 'rejected' && r.reason instanceof UnauthorizedError
+    );
+  } else if (resultsOrError instanceof UnauthorizedError) {
+    hasAuthFailure = true;
+  }
+  if (!hasAuthFailure) return;
+  // Lazy import to avoid pulling next/navigation into client bundles
+  // that incidentally import from this module.
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { redirect } = require('next/navigation') as typeof import('next/navigation');
+  const target = nextPath
+    ? `/api/auth/clear?next=${encodeURIComponent(nextPath)}`
+    : '/api/auth/clear';
+  redirect(target);
+}
+
 type FetchOpts = RequestInit & {
   /** Pass token explicitly. If omitted, reads from cookies (server only). */
   token?: string | null;
@@ -53,6 +97,9 @@ async function call<T>(path: string, opts: FetchOpts = {}): Promise<T> {
       typeof body === 'object' && body && 'detail' in body
         ? String((body as { detail: unknown }).detail)
         : `${res.status} ${res.statusText}`;
+    if (res.status === 401) {
+      throw new UnauthorizedError(body, msg);
+    }
     throw new ApiError(res.status, body, msg);
   }
 

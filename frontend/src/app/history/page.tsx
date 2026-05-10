@@ -1,15 +1,23 @@
 import Header from '@/components/Header';
 import HistoryView from './HistoryView';
-import { listChannels, listHistory, getCostSummary, ApiError } from '@/lib/api';
+import {
+  listChannels,
+  listHistory,
+  getCostSummary,
+  ApiError,
+  redirectIfUnauthorized,
+} from '@/lib/api';
 
 export const dynamic = 'force-dynamic';
 
 export default async function HistoryPage() {
-  const [chRes, hisRes, costRes] = await Promise.allSettled([
+  const results = await Promise.allSettled([
     listChannels(),
     listHistory({ limit: 200 }),
     getCostSummary(),
   ]);
+  redirectIfUnauthorized(results, '/history');
+  const [chRes, hisRes, costRes] = results;
   const channels = chRes.status === 'fulfilled' ? chRes.value : [];
   const history = hisRes.status === 'fulfilled' ? hisRes.value.history : [];
   const cost = costRes.status === 'fulfilled' ? costRes.value : null;

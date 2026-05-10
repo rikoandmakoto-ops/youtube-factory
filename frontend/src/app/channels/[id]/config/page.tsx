@@ -6,6 +6,7 @@ import {
   listChannels,
   listAssets,
   ApiError,
+  redirectIfUnauthorized,
   type AssetsResponse,
 } from '@/lib/api';
 
@@ -29,6 +30,7 @@ export default async function ChannelConfigPage({
     ]);
   } catch (e) {
     if (e instanceof ApiError && e.status === 404) notFound();
+    redirectIfUnauthorized(e, `/channels/${params.id}/config`);
     backendError =
       e instanceof ApiError ? e.message : 'バックエンドに接続できません';
   }
