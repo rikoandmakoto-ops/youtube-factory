@@ -188,6 +188,8 @@ class GenerateRequest(BaseModel):
     generate_short: bool = True
     generate_thumbnail: bool = True
     copy_to_icloud: bool = False
+    # 0..1 — overrides channel's audio.bgm_volume when provided.
+    bgm_volume: Optional[float] = Field(default=None, ge=0.0, le=1.0)
 
 
 class GenerateResponse(BaseModel):
@@ -491,6 +493,7 @@ async def start_generate(
                     "generate_thumbnail": req.generate_thumbnail,
                     "copy_to_icloud": req.copy_to_icloud,
                     "duration_minutes": req.duration_minutes,
+                    "bgm_volume": req.bgm_volume,
                 }
     except Exception:
         pass

@@ -260,6 +260,9 @@ class JobQueue:
             ch_format = channel.video_format.to_dict() if channel else None
             ch_chars = channel.char_config() if channel else None
             ch_dict = channel.to_dict() if channel else None
+            # フォームのスライダー値（_options.bgm_volume）でチャンネル既定を上書き
+            options = sd.get("_options") or {}
+            bgm_volume_override = options.get("bgm_volume")
             # generate_all() 呼び出し
             result = self._generate_fn(
                 title=sd.get("title", job.title),
@@ -277,6 +280,7 @@ class JobQueue:
                 channel_format=ch_format,
                 char_config=ch_chars,
                 channel_dict=ch_dict,
+                bgm_volume=bgm_volume_override,
             )
 
             job.status = JobStatus.COMPLETED
