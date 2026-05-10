@@ -195,6 +195,8 @@ export type GenerateRequest = {
   generate_short: boolean;
   generate_thumbnail: boolean;
   copy_to_icloud: boolean;
+  /** 0..1. Omit to use the channel's default BGM volume. */
+  bgm_volume?: number;
 };
 
 export type GenerateResponse = { job_id: string; status: string };
@@ -1091,5 +1093,34 @@ export async function deleteThumbnail(
 ): Promise<{ status: string; thumbnail_id: string }> {
   return call(`/api/thumbnails/${encodeURIComponent(thumbnailId)}`, {
     method: 'DELETE',
+  });
+}
+
+// ──────────────────────────────────────────────────────────────────────
+// BGM Volume Preview (Phase 6)
+// ──────────────────────────────────────────────────────────────────────
+export type BgmPreviewRequest = {
+  channel_id: string;
+  /** 0..1 — same scale as channel_format.audio.bgm_volume. */
+  bgm_volume: number;
+  duration_seconds?: number;
+};
+
+export type BgmPreviewResponse = {
+  preview_id: string;
+  /** /api/bgm-preview/{id} — playable from <audio src=...>. */
+  url: string;
+  bgm_volume: number;
+  duration_seconds: number;
+  bgm_filename: string | null;
+  voicevox_used: boolean;
+};
+
+export async function generateBgmPreview(
+  req: BgmPreviewRequest
+): Promise<BgmPreviewResponse> {
+  return call<BgmPreviewResponse>('/api/bgm-preview', {
+    method: 'POST',
+    body: JSON.stringify(req),
   });
 }

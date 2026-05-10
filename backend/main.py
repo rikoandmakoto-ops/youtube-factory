@@ -38,6 +38,7 @@ import api_phase2
 import api_phase3
 import api_phase4
 import api_phase5
+import api_phase6
 
 
 # Models
@@ -154,6 +155,7 @@ app.include_router(api_phase2.router)
 app.include_router(api_phase3.router)
 app.include_router(api_phase4.router)
 app.include_router(api_phase5.router)
+app.include_router(api_phase6.router)
 
 
 # ── Global instances (initialized at startup) ──

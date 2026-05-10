@@ -38,6 +38,17 @@ export default function GenerateForm({
   const [autoPublish, setAutoPublish] = useState(false);
   const [copyToIcloud, setCopyToIcloud] = useState(true);
   const [abTest, setAbTest] = useState(false);
+  // BGM音量: UIは0-100%, バックエンドへは0..1で送る
+  const [bgmVolumePct, setBgmVolumePct] = useState(30);
+
+  // BGMプレビュー
+  const [bgmPreviewUrl, setBgmPreviewUrl] = useState<string | null>(null);
+  const [bgmPreviewLoading, setBgmPreviewLoading] = useState(false);
+  const [bgmPreviewError, setBgmPreviewError] = useState<string | null>(null);
+  const [bgmPreviewMeta, setBgmPreviewMeta] = useState<{
+    bgm_filename: string | null;
+    voicevox_used: boolean;
+  } | null>(null);
 
   const [suggesting, setSuggesting] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -99,6 +110,13 @@ export default function GenerateForm({
     setThumb(null);
     setThumbError(null);
   }, [channelId, theme]);
+
+  // チャンネルが変わったらBGMプレビューもクリア（別BGMファイルになる可能性）
+  useEffect(() => {
+    setBgmPreviewUrl(null);
+    setBgmPreviewMeta(null);
+    setBgmPreviewError(null);
+  }, [channelId]);
 
   useEffect(() => {
     if (!jobId) return;
@@ -344,6 +362,45 @@ export default function GenerateForm({
     }
   };
 
+  const onPreviewBgm = async () => {
+    if (!channelId || bgmPreviewLoading) return;
+    setBgmPreviewError(null);
+    setBgmPreviewLoading(true);
+    setBgmPreviewUrl(null);
+    setBgmPreviewMeta(null);
+    try {
+      const res = await fetch('/api/bgm-preview', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          channel_id: channelId,
+          bgm_volume: bgmVolumePct / 100,
+          duration_seconds: 5,
+        }),
+      });
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || 'プレビュー生成に失敗しました');
+      }
+      const data: {
+        url: string;
+        bgm_filename: string | null;
+        voicevox_used: boolean;
+      } = await res.json();
+      setBgmPreviewUrl(data.url);
+      setBgmPreviewMeta({
+        bgm_filename: data.bgm_filename,
+        voicevox_used: data.voicevox_used,
+      });
+    } catch (e) {
+      setBgmPreviewError(
+        e instanceof Error ? e.message : 'プレビュー生成に失敗しました'
+      );
+    } finally {
+      setBgmPreviewLoading(false);
+    }
+  };
+
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!channelId || !theme.trim() || submitting) return;
@@ -366,6 +423,7 @@ export default function GenerateForm({
           generate_short: generateShort,
           generate_thumbnail: generateThumbnail,
           copy_to_icloud: copyToIcloud,
+          bgm_volume: bgmVolumePct / 100,
         }),
       });
       if (!res.ok) {
@@ -599,6 +657,59 @@ export default function GenerateForm({
           </span>
         </label>
       </fieldset>
+
+      <section className="card space-y-3" aria-label="BGM音量">
+        <div className="flex items-center justify-between">
+          <h3 className="text-sm font-bold text-slate-100">🎵 BGM音量</h3>
+          <span className="text-xs tabular-nums text-slate-300">
+            {bgmVolumePct}%
+          </span>
+        </div>
+        <input
+          aria-label="BGM音量"
+          type="range"
+          min={0}
+          max={100}
+          step={1}
+          value={bgmVolumePct}
+          onChange={(e) => setBgmVolumePct(Number(e.target.value))}
+          className="w-full accent-accent"
+        />
+        <p className="text-xs text-slate-500 leading-relaxed">
+          サンプルでナレーションとBGMを重ねて再生確認できます（5秒）。
+          本生成時もこの値が反映されます。
+        </p>
+        <button
+          type="button"
+          onClick={onPreviewBgm}
+          disabled={!channelId || bgmPreviewLoading}
+          className="btn-secondary w-full"
+        >
+          {bgmPreviewLoading ? 'プレビュー生成中…' : '▶️ プレビューを再生'}
+        </button>
+        {bgmPreviewUrl && (
+          <div className="space-y-2">
+            <audio
+              key={bgmPreviewUrl}
+              src={bgmPreviewUrl}
+              controls
+              autoPlay
+              className="w-full"
+            />
+            {bgmPreviewMeta && (
+              <p className="text-[10px] text-slate-500">
+                BGM: {bgmPreviewMeta.bgm_filename || '（なし — ナレーションのみ）'}
+                {!bgmPreviewMeta.voicevox_used && ' · ⚠️ Mock TTS'}
+              </p>
+            )}
+          </div>
+        )}
+        {bgmPreviewError && (
+          <p className="text-xs text-red-400 bg-red-500/10 border border-red-500/30 rounded-lg px-3 py-2">
+            ⚠️ {bgmPreviewError}
+          </p>
+        )}
+      </section>
 
       <p className="text-center text-xs text-slate-500">
         💡 推定コスト: ¥850〜1,200（GPT-4o + DALL-E 3 × 38枚）

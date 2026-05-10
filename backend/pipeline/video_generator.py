@@ -352,21 +352,29 @@ def _resolve_bgm_file(bgm_path, channel_id):
     return None
 
 
-def _mix_bgm(final_clip, channel_format, channel_id=None):
+def _mix_bgm(final_clip, channel_format, channel_id=None, bgm_volume=None):
     """Layer BGM under the existing narration audio of `final_clip`.
 
-    Reads `bgm_volume` and `bgm_path` from `channel_format["audio"]`. Loops the
-    BGM to cover the full clip duration and scales its volume. If no BGM file
-    is found or `bgm_volume <= 0`, returns the clip unchanged so the pipeline
+    Reads `bgm_path` from `channel_format["audio"]`. Volume is taken from the
+    explicit `bgm_volume` argument when provided (0..1, used by the form's
+    slider preview), otherwise from `channel_format["audio"]["bgm_volume"]`.
+    Loops the BGM to cover the full clip duration. If no BGM file is found or
+    the resolved volume is <= 0, returns the clip unchanged so the pipeline
     keeps working without any BGM asset.
     """
-    if not channel_format:
-        return final_clip
     audio_cfg = (channel_format or {}).get("audio") or {}
-    try:
-        bgm_volume = float(audio_cfg.get("bgm_volume", 0.30) or 0)
-    except (TypeError, ValueError):
-        bgm_volume = 0.0
+    if bgm_volume is None:
+        if not channel_format:
+            return final_clip
+        try:
+            bgm_volume = float(audio_cfg.get("bgm_volume", 0.30) or 0)
+        except (TypeError, ValueError):
+            bgm_volume = 0.0
+    else:
+        try:
+            bgm_volume = float(bgm_volume)
+        except (TypeError, ValueError):
+            bgm_volume = 0.0
     if bgm_volume <= 0:
         return final_clip
 
@@ -1299,7 +1307,8 @@ class MonologueShortRenderer:
 # ============================================================
 def generate_monologue_video(scenario, title, output_prefix, bg_video_path=None,
                               out_dir=None, bg_type="auto", speed=None, target_duration=None,
-                              speaker_id=None, channel_format=None, channel_id=None):
+                              speaker_id=None, channel_format=None, channel_id=None,
+                              bgm_volume=None):
     """
     1人語りスタイルのメイン動画生成。
     scenario format:
@@ -1354,7 +1363,7 @@ def generate_monologue_video(scenario, title, output_prefix, bg_video_path=None,
 
     print(f"\n🎬 Concatenating... (total: {t_off:.1f}s = {t_off/60:.1f}min)")
     final = concatenate_videoclips(clips)
-    final = _mix_bgm(final, channel_format, channel_id=channel_id)
+    final = _mix_bgm(final, channel_format, channel_id=channel_id, bgm_volume=bgm_volume)
     out = str(out_dir / f"{output_prefix}_メイン.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
@@ -1370,7 +1379,7 @@ def generate_monologue_video(scenario, title, output_prefix, bg_video_path=None,
 
 def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
                                out_dir=None, bg_type="auto", speed=None, speaker_id=None,
-                               channel_format=None, channel_id=None):
+                               channel_format=None, channel_id=None, bgm_volume=None):
     """1人語りスタイルのショート動画生成。"""
     print("=" * 60)
     print(f"���ノローグショート生成: {title}")
@@ -1402,7 +1411,7 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
         t_off += dur
 
     final = concatenate_videoclips(clips)
-    final = _mix_bgm(final, channel_format, channel_id=channel_id)
+    final = _mix_bgm(final, channel_format, channel_id=channel_id, bgm_volume=bgm_volume)
     out = str(out_dir / f"{output_prefix}_ショート.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
@@ -1421,7 +1430,8 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
 # ============================================================
 def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_dir=None,
                         bg_type="auto", speed=None, target_duration=None, use_illustrations=True,
-                        channel_format=None, char_config=None, channel_id=None):
+                        channel_format=None, char_config=None, channel_id=None,
+                        bgm_volume=None):
     print("=" * 60)
     print(f"フル動画生成: {title}")
     print("=" * 60)
@@ -1495,7 +1505,7 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
         target_s = target_duration
         print(f"🎯 Target: {target_duration}s ({target_s/60:.1f}min), actual: {t_off:.1f}s ({t_off/60:.1f}min)")
     final = concatenate_videoclips(clips)
-    final = _mix_bgm(final, channel_format, channel_id=channel_id)
+    final = _mix_bgm(final, channel_format, channel_id=channel_id, bgm_volume=bgm_volume)
     out = str(out_dir / f"{output_prefix}_メイン.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
@@ -1514,7 +1524,7 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
 # Generate short video
 # ============================================================
 def generate_short_video(short_scenario, title, output_prefix, bg_video_path=None, out_dir=None, bg_type="auto", speed=None,
-                         channel_format=None, char_config=None, channel_id=None):
+                         channel_format=None, char_config=None, channel_id=None, bgm_volume=None):
     print("=" * 60)
     print(f"ショート動画生成: {title}")
     print("=" * 60)
@@ -1548,7 +1558,7 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
 
     print(f"\n🎬 Concatenating {len(clips)} clips ({t_off:.1f}s)...")
     final = concatenate_videoclips(clips)
-    final = _mix_bgm(final, channel_format, channel_id=channel_id)
+    final = _mix_bgm(final, channel_format, channel_id=channel_id, bgm_volume=bgm_volume)
     out = str(out_dir / f"{output_prefix}_ショート.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
@@ -2571,7 +2581,8 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                  bg_video_path=None, output_dir=None, gen_type="both", bg_type="auto",
                  thumb_info=None, speed=None, target_duration=None, video_title=None,
                  style="yukkuri", use_illustrations=True,
-                 channel_format=None, char_config=None, channel_dict=None):
+                 channel_format=None, char_config=None, channel_dict=None,
+                 bgm_volume=None):
     """
     Generate all outputs into one folder.
 
@@ -2637,14 +2648,16 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
             results["short"] = generate_monologue_short(
                 short_scenario, title, prefix, bg_video_path,
                 out_dir=str(out_dir), bg_type=bg_type, speed=speed,
-                channel_format=channel_format, channel_id=channel_id)
+                channel_format=channel_format, channel_id=channel_id,
+                bgm_volume=bgm_volume)
 
         if gen_type in ("full", "both"):
             results["full"] = generate_monologue_video(
                 full_scenario, title, prefix, bg_video_path,
                 out_dir=str(out_dir), bg_type=bg_type, speed=speed,
                 target_duration=target_duration,
-                channel_format=channel_format, channel_id=channel_id)
+                channel_format=channel_format, channel_id=channel_id,
+                bgm_volume=bgm_volume)
 
     else:
         # Yukkuri dialogue style (default)
@@ -2661,7 +2674,7 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
             results["short"] = generate_short_video(short_scenario, title, prefix, bg_video_path,
                                                      out_dir=str(out_dir), bg_type=bg_type, speed=speed,
                                                      channel_format=channel_format, char_config=char_config,
-                                                     channel_id=channel_id)
+                                                     channel_id=channel_id, bgm_volume=bgm_volume)
 
         if gen_type in ("full", "both"):
             results["full"] = generate_full_video(full_scenario, title, prefix, bg_video_path,
@@ -2669,7 +2682,7 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                                                    target_duration=target_duration,
                                                    use_illustrations=use_illustrations,
                                                    channel_format=channel_format, char_config=char_config,
-                                                   channel_id=channel_id)
+                                                   channel_id=channel_id, bgm_volume=bgm_volume)
 
     # 3. Description txts (common to both styles)
     descs = generate_descriptions(title, short_scenario, full_scenario, thumb_info=thumb_info, video_title=video_title)
