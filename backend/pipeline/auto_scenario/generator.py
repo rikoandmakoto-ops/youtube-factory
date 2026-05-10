@@ -131,8 +131,8 @@ class ScenarioGenerator:
 {{
  "title":"バズるタイトル",
  "thumb_info":{{"hook_lines":["1行","2行"],"subtitle":"...","tagline":"..."}},
- "short_scenario":[{{"speaker":"{c0}","text":"...","expression":"normal"}}, ...全6行],
- "full_scenario":[{{"speaker":"{c0}","text":"...","expression":"normal"}}, ...{floor_lines}〜{target_lines+4}行]
+ "short_scenario":[{{"speaker":"{c0}","text":"...","expression":"normal","mood":"bright"}}, ...全6行],
+ "full_scenario":[{{"speaker":"{c0}","text":"...","expression":"normal","mood":"calm"}}, ...{floor_lines}〜{target_lines+4}行]
 }}
 
 # 尺ルール(絶対厳守・違反は不合格)
@@ -148,6 +148,18 @@ class ScenarioGenerator:
 - 構成: フック(1〜2行)→展開(2〜3行)→**結論・オチ(最終1〜2行)**。最終行は必ず納得の結論で締める(投げっぱなし禁止)。
 
 # 構成(full): CTA+導入(6行) → 問いと背景(7行) → 基本メカニズム(12行) → 詳細&研究データ(12行) → 意外な事実&歴史(10行) → 応用Tips(8行) → 締めCTA(5行) = 計60行
+
+# 雰囲気タグ(mood)ルール — シーンごとのBGM切替に使用
+- 各行に必ず "mood" を付与する。値は次の6種類のいずれか:
+  - "calm"(穏やか・落ち着いた解説)
+  - "bright"(明るい・楽しい・元気な導入や応用Tips)
+  - "tense"(緊張・問題提起・「えっ!?」となる衝撃の事実)
+  - "emotional"(感動・しみじみ・ストーリー的なエピソード)
+  - "funny"(コミカル・ボケツッコミ・笑える脱線)
+  - "mysterious"(ミステリアス・「謎」「不思議」「未解明」を扱うセクション)
+- 同じmoodは連続させて2〜10行ほどの「シーン」を作る(1行ごとに毎回切替えない)。フル尺で4〜8シーンを目安。
+- 構成と雰囲気の対応例: CTA+導入="bright"、問題提起="tense"、基本解説="calm"、研究データ="calm"or"mysterious"、意外な事実="tense"or"mysterious"、応用Tips="bright"、締めCTA="emotional"or"bright"。
+- ショート(short_scenario)は2〜3シーン程度。フック="tense"or"bright"、展開="calm"、オチ="bright"or"emotional"が基本パターン。
 
 # その他ルール
 - text内は1〜2文で完結。文末「。」直後に改行 `\\n` を入れる(例:"...だ。\\nだから...")。
@@ -190,10 +202,10 @@ class ScenarioGenerator:
 {{
  "title":"バズるタイトル",
  "thumb_info":{{"hook_lines":["1行","2行"],"subtitle":"...","tagline":"..."}},
- "short_scenario":[{{"text":"...","chapter_title":null}}, ...全6行],
+ "short_scenario":[{{"text":"...","chapter_title":null,"mood":"tense"}}, ...全6行],
  "full_scenario":[
-   {{"chapter_title":"第1章: 導入"}},
-   {{"text":"..."}},
+   {{"chapter_title":"第1章: 導入","mood":"mysterious"}},
+   {{"text":"...","mood":"mysterious"}},
    ...テキスト行を{floor_lines}〜{target_lines+4}行(章は3〜5章)
  ]
 }}
@@ -208,6 +220,13 @@ class ScenarioGenerator:
 - **short_scenarioは必ず6行**(各行30〜45字、目標38字)。
 - **総文字数は必ず{short_target_chars-30}〜{short_target_chars+30}字**(目標{short_target_chars}字)で**約30秒**を実現。
 - 構成: フック(1〜2行)→展開(2〜3行)→**結論・オチ(最終1〜2行)**。最終行は必ず納得の結論で締める。
+
+# 雰囲気タグ(mood)ルール — シーンごとのBGM切替に使用
+- 各行(章タイトル含む)に必ず "mood" を付与する。値は次の6種類のいずれか:
+  - "calm"(穏やか) / "bright"(明るい) / "tense"(緊張・衝撃)
+  - "emotional"(感動) / "funny"(コミカル) / "mysterious"(ミステリアス)
+- 同じmoodを2〜10行ほど連続させて「シーン」を作る(毎行切替えない)。1章 = 1〜2シーン目安。
+- 章タイトル行のmoodは、その章の主軸となる雰囲気と一致させる。
 
 # その他ルール
 - text内は1〜2文。文末「。」直後に `\\n` 挿入(例:"...だ。\\n...だ。")。
@@ -390,25 +409,25 @@ class ScenarioGenerator:
         char_names = list(channel.characters.keys())
         existing_full = base_scenario.get("full_scenario", [])
 
-        # セクション定義: (タイトル, 行数目安, 内容ガイド)
+        # セクション定義: (タイトル, 行数目安, 内容ガイド, mood)
         # 7セクション × 平均8.6行 = 60行、各行100字 → 6000文字 → 約12.8分(VOICEVOX1.3x)
         # 9セクション×12行=96行で19.9分の過剰生成を起こした反省。7セクションに削減し各行120字上限。
         sections = [
-            ("CTA + 導入フック", 6, "視聴者の興味を引く問いかけ + チャンネル登録CTA"),
-            ("基本メカニズム解説", 9, "テーマの基本原理を分かりやすく説明。専門用語は噛み砕く"),
-            ("具体的な仕組み・研究データ", 10, "研究データ・具体的な数字・パーセンテージ・代表的な実験"),
-            ("背景・歴史的経緯", 9, "発見・研究の経緯、歴史的エピソードや人物"),
-            ("意外な事実・補足知識", 10, "視聴者が驚く意外な情報や雑学・トリビア"),
-            ("日常への応用・実践Tips", 9, "視聴者が今日から使える実践的なTips・応用例"),
-            ("まとめ + 締めCTA", 6, "今日の内容を簡潔にまとめ + 高評価/登録CTA"),
+            ("CTA + 導入フック", 6, "視聴者の興味を引く問いかけ + チャンネル登録CTA", "bright"),
+            ("基本メカニズム解説", 9, "テーマの基本原理を分かりやすく説明。専門用語は噛み砕く", "calm"),
+            ("具体的な仕組み・研究データ", 10, "研究データ・具体的な数字・パーセンテージ・代表的な実験", "calm"),
+            ("背景・歴史的経緯", 9, "発見・研究の経緯、歴史的エピソードや人物", "mysterious"),
+            ("意外な事実・補足知識", 10, "視聴者が驚く意外な情報や雑学・トリビア", "tense"),
+            ("日常への応用・実践Tips", 9, "視聴者が今日から使える実践的なTips・応用例", "bright"),
+            ("まとめ + 締めCTA", 6, "今日の内容を簡潔にまとめ + 高評価/登録CTA", "emotional"),
         ]
         # 合計目標: 6+9+10+9+10+9+6 = 59行
 
         c0 = char_names[0]
         c1 = char_names[1] if len(char_names) > 1 else c0
         all_lines = []
-        for sec_idx, (sec_title, sec_lines, sec_guide) in enumerate(sections):
-            print(f"    📝 Section {sec_idx+1}/{len(sections)}: {sec_title} ({sec_lines}行)")
+        for sec_idx, (sec_title, sec_lines, sec_guide, sec_mood) in enumerate(sections):
+            print(f"    📝 Section {sec_idx+1}/{len(sections)}: {sec_title} ({sec_lines}行, mood={sec_mood})")
             section_prompt = f"""ゆっくり解説1セクションのセリフをJSON配列のみで出力。
 
 # チャンネル: {channel.name} / {channel.concept}
@@ -416,6 +435,7 @@ class ScenarioGenerator:
 # テーマ: {theme["title"]} / 切り口:{theme.get("angle","")}
 # セクション: {sec_title}
 # 内容: {sec_guide}
+# 雰囲気(mood): "{sec_mood}" — このセクション全行で必ず "mood":"{sec_mood}" を付与する。
 # 行数: 厳密に{sec_lines}行(過不足不可)
 # 各行: 90〜120字(目標100字、上限120字)。89字以下も121字以上も不合格。研究データ/数字/例え/歴史を盛る。短い相槌のみ禁止。
 
@@ -423,8 +443,8 @@ class ScenarioGenerator:
 # text本文のキャラ名はカタカナ「リコ」「マコト」(漢字はTTS誤読のため text 内では禁止)。
 
 [
- {{"speaker":"{c0}","text":"...","expression":"normal"}},
- {{"speaker":"{c1}","text":"...","expression":"normal"}}
+ {{"speaker":"{c0}","text":"...","expression":"normal","mood":"{sec_mood}"}},
+ {{"speaker":"{c1}","text":"...","expression":"normal","mood":"{sec_mood}"}}
 ]
 """
             messages = [
@@ -436,6 +456,9 @@ class ScenarioGenerator:
                 raw = self._call_gpt(messages, temperature=0.8, max_tokens=3000)
                 lines = self._extract_json(raw)
                 if isinstance(lines, list):
+                    for ln in lines:
+                        if isinstance(ln, dict) and not ln.get("mood"):
+                            ln["mood"] = sec_mood
                     all_lines.extend(lines)
             except Exception as e:
                 print(f"      ⚠️ Section {sec_idx+1} failed: {e}")

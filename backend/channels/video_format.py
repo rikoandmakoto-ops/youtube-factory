@@ -65,7 +65,9 @@ class AudioConfig:
     speed: float = 1.3            # 話速倍率
     pause_between: float = 0.3     # セリフ間ポーズ（秒）
     bgm_volume: float = 0.30      # BGM音量（0.0-1.0）
-    bgm_path: Optional[str] = None  # チャンネル固定BGM
+    bgm_path: Optional[str] = None  # チャンネル固定BGM（指定時はシーンごと切替を無効化）
+    bgm_per_scene: bool = True    # シーンごと(雰囲気タグ)にBGMを切替えるか
+    bgm_crossfade: float = 1.5    # シーン境界のクロスフェード秒数
 
 
 @dataclass

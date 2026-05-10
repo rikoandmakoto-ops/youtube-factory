@@ -313,10 +313,100 @@ def get_audio_duration(path):
 # BGM mixing
 # ============================================================
 _BGM_AUDIO_EXTS = (".mp3", ".m4a", ".wav", ".ogg")
+VALID_MOODS = ("calm", "bright", "tense", "emotional", "funny", "mysterious")
+_DEFAULT_MOOD = "calm"
+_BGM_CROSSFADE_DEFAULT = 1.5  # seconds
+
+
+def _normalize_mood(mood):
+    """Coerce arbitrary input into one of VALID_MOODS, defaulting to calm."""
+    if not mood:
+        return _DEFAULT_MOOD
+    m = str(mood).strip().lower()
+    return m if m in VALID_MOODS else _DEFAULT_MOOD
+
+
+def _list_audio_files(directory: Path):
+    """Return sorted list of audio files in `directory` (non-recursive)."""
+    if not directory.exists() or not directory.is_dir():
+        return []
+    files = []
+    for ext in _BGM_AUDIO_EXTS:
+        files.extend(directory.glob(f"*{ext}"))
+    return sorted(files)
+
+
+def _load_bgm_mapping(channel_id):
+    """Load `bgm_mapping.json` from `data/channels_assets/<channel_id>/bgm/` if present.
+
+    Format: {"calm": ["path/a.mp3", "path/b.mp3"], "tense": [...], ...}
+    Paths can be absolute or relative to APP_DIR or to the bgm/ folder itself.
+    Returns dict[str, list[Path]] (only existing files), or {} if not found.
+    """
+    if not channel_id:
+        return {}
+    bgm_dir = APP_DIR / "data" / "channels_assets" / channel_id / "bgm"
+    mapping_path = bgm_dir / "bgm_mapping.json"
+    if not mapping_path.exists():
+        return {}
+    try:
+        with open(mapping_path, "r", encoding="utf-8") as f:
+            raw = json.load(f)
+    except Exception as e:
+        print(f"⚠️ bgm_mapping.json 読み込み失敗: {e}")
+        return {}
+    out = {}
+    for mood, paths in (raw or {}).items():
+        if not isinstance(paths, list):
+            continue
+        resolved = []
+        for p in paths:
+            cand = Path(p)
+            for base in (cand, bgm_dir / p, APP_DIR / p):
+                if base.exists() and base.is_file():
+                    resolved.append(base)
+                    break
+        if resolved:
+            out[mood.lower()] = resolved
+    return out
+
+
+def _resolve_bgm_for_mood(mood, channel_id, mapping_cache=None):
+    """Find a BGM file matching `mood` for the given channel.
+
+    Lookup order:
+      1. `bgm_mapping.json` mood → random pick from list
+      2. `data/channels_assets/<channel>/bgm/<mood>/*` → random pick
+      3. `<ASSETS_DIR>/bgm/<mood>/*` → random pick
+      4. Fallback to `_resolve_bgm_file(None, channel_id)` (legacy single file)
+    Returns a Path or None.
+    """
+    mood = _normalize_mood(mood)
+
+    # 1. bgm_mapping.json
+    mapping = mapping_cache if mapping_cache is not None else _load_bgm_mapping(channel_id)
+    if mood in mapping and mapping[mood]:
+        return random.choice(mapping[mood])
+
+    # 2. Per-channel mood folder
+    if channel_id:
+        ch_mood_dir = APP_DIR / "data" / "channels_assets" / channel_id / "bgm" / mood
+        files = _list_audio_files(ch_mood_dir)
+        if files:
+            return random.choice(files)
+
+    # 3. Global mood folder
+    global_mood_dir = ASSETS_DIR / "bgm" / mood
+    files = _list_audio_files(global_mood_dir)
+    if files:
+        return random.choice(files)
+
+    # 4. Legacy fallback (single channel-level file)
+    return _resolve_bgm_file(None, channel_id)
 
 
 def _resolve_bgm_file(bgm_path, channel_id):
-    """Resolve a BGM source path.
+    """Resolve a BGM source path (legacy single-file lookup).
 
     Order:
       1. Explicit `bgm_path` from channel config — absolute, or relative to APP_DIR.
@@ -336,29 +426,139 @@ def _resolve_bgm_file(bgm_path, channel_id):
 
     if channel_id:
         ch_dir = APP_DIR / "data" / "channels_assets" / channel_id / "bgm"
-        if ch_dir.exists():
-            for ext in _BGM_AUDIO_EXTS:
-                hits = sorted(ch_dir.glob(f"*{ext}"))
-                if hits:
-                    return hits[0]
+        files = _list_audio_files(ch_dir)
+        if files:
+            return files[0]
 
     fallback_dir = ASSETS_DIR / "bgm"
-    if fallback_dir.exists():
-        for ext in _BGM_AUDIO_EXTS:
-            hits = sorted(fallback_dir.glob(f"*{ext}"))
-            if hits:
-                return hits[0]
+    files = _list_audio_files(fallback_dir)
+    if files:
+        return files[0]
 
     return None
 
 
-def _mix_bgm(final_clip, channel_format, channel_id=None):
+def _group_mood_scenes(mood_timeline):
+    """Merge consecutive same-mood entries into scenes.
+
+    Args:
+        mood_timeline: list of (start, end, mood) per line.
+    Returns:
+        list of (scene_start, scene_end, mood).
+    """
+    scenes = []
+    for start, end, mood in mood_timeline:
+        if end <= start:
+            continue
+        m = _normalize_mood(mood)
+        if scenes and scenes[-1][2] == m and abs(scenes[-1][1] - start) < 1e-3:
+            scenes[-1] = (scenes[-1][0], end, m)
+        else:
+            scenes.append((start, end, m))
+    return scenes
+
+
+def _build_bgm_track_per_scene(scenes, total_duration, channel_id, bgm_volume,
+                               crossfade=_BGM_CROSSFADE_DEFAULT):
+    """Build a list of AudioClip segments (with set start time, fades, volume)
+    that together form a per-scene BGM track. Returns (segments, info_lines).
+
+    Segments overlap by `crossfade` seconds at scene boundaries.
+    """
+    try:
+        from moviepy.audio.fx import AudioFadeIn, AudioFadeOut
+    except ImportError:
+        AudioFadeIn = AudioFadeOut = None
+    try:
+        from moviepy.audio.AudioClip import concatenate_audioclips
+    except ImportError:
+        from moviepy.editor import concatenate_audioclips
+
+    mapping_cache = _load_bgm_mapping(channel_id)
+    segments = []
+    info = []
+    n = len(scenes)
+    last_file_per_mood = {}  # cache resolved file per scene mood for logging
+
+    for i, (start, end, mood) in enumerate(scenes):
+        bgm_file = _resolve_bgm_for_mood(mood, channel_id, mapping_cache=mapping_cache)
+        if bgm_file is None:
+            info.append(f"  scene {i+1} [{mood}] {start:.1f}-{end:.1f}s: BGM未設定 → 無音")
+            continue
+
+        # Extend each segment by crossfade/2 on each interior side so they overlap with neighbors.
+        seg_start = max(0.0, start - crossfade / 2.0) if i > 0 else 0.0
+        seg_end = min(total_duration, end + crossfade / 2.0) if i < n - 1 else total_duration
+        seg_dur = seg_end - seg_start
+        if seg_dur <= 0:
+            continue
+
+        try:
+            base = AudioFileClip(str(bgm_file))
+            src_dur = float(base.duration or 0)
+            if src_dur <= 0:
+                base.close()
+                continue
+
+            if src_dur < seg_dur:
+                n_loops = int(seg_dur // src_dur) + 1
+                base.close()
+                base = concatenate_audioclips(
+                    [AudioFileClip(str(bgm_file)) for _ in range(n_loops)]
+                )
+
+            try:
+                clip = base.subclipped(0, seg_dur)
+            except AttributeError:
+                clip = base.subclip(0, seg_dur)
+
+            try:
+                clip = clip.with_volume_scaled(bgm_volume)
+            except AttributeError:
+                clip = clip.volumex(bgm_volume)
+
+            effects = []
+            if i > 0 and AudioFadeIn is not None:
+                effects.append(AudioFadeIn(crossfade))
+            if i < n - 1 and AudioFadeOut is not None:
+                effects.append(AudioFadeOut(crossfade))
+            if effects and hasattr(clip, "with_effects"):
+                clip = clip.with_effects(effects)
+            elif AudioFadeIn is None:
+                # v1 fallback
+                if i > 0 and hasattr(clip, "audio_fadein"):
+                    clip = clip.audio_fadein(crossfade)
+                if i < n - 1 and hasattr(clip, "audio_fadeout"):
+                    clip = clip.audio_fadeout(crossfade)
+
+            try:
+                clip = clip.with_start(seg_start)
+            except AttributeError:
+                clip = clip.set_start(seg_start)
+
+            segments.append(clip)
+            last_file_per_mood[mood] = bgm_file.name
+            info.append(f"  scene {i+1} [{mood}] {start:.1f}-{end:.1f}s → {bgm_file.name}")
+        except Exception as e:
+            info.append(f"  scene {i+1} [{mood}] 失敗: {e}")
+            continue
+
+    return segments, info
+
+
+def _mix_bgm(final_clip, channel_format, channel_id=None, mood_timeline=None):
     """Layer BGM under the existing narration audio of `final_clip`.
 
-    Reads `bgm_volume` and `bgm_path` from `channel_format["audio"]`. Loops the
-    BGM to cover the full clip duration and scales its volume. If no BGM file
-    is found or `bgm_volume <= 0`, returns the clip unchanged so the pipeline
-    keeps working without any BGM asset.
+    Reads `bgm_volume` and `bgm_path` from `channel_format["audio"]`.
+
+    Two modes:
+      - Per-scene mix: when `mood_timeline` is provided AND no explicit
+        `bgm_path` override is set. Groups consecutive same-mood lines into
+        scenes and switches BGM at boundaries with a crossfade.
+      - Single-track mix: legacy behavior. Loops one BGM over the whole clip.
+
+    Falls back to single-track if per-scene fails or yields no segments.
+    Returns the (possibly modified) clip; never raises.
     """
     if not channel_format:
         return final_clip
@@ -370,33 +570,70 @@ def _mix_bgm(final_clip, channel_format, channel_id=None):
     if bgm_volume <= 0:
         return final_clip
 
-    bgm_file = _resolve_bgm_file(audio_cfg.get("bgm_path"), channel_id)
+    try:
+        from moviepy import CompositeAudioClip
+    except ImportError:
+        from moviepy.editor import CompositeAudioClip
+    try:
+        from moviepy.audio.AudioClip import concatenate_audioclips
+    except ImportError:
+        from moviepy.editor import concatenate_audioclips
+
+    target_duration = float(final_clip.duration or 0)
+    if target_duration <= 0:
+        return final_clip
+
+    explicit_bgm_path = audio_cfg.get("bgm_path")
+    per_scene_enabled = audio_cfg.get("bgm_per_scene", True)
+
+    # ── Per-scene mix branch ──
+    if (per_scene_enabled and mood_timeline and not explicit_bgm_path
+            and any(_normalize_mood(m) for _, _, m in mood_timeline)):
+        try:
+            scenes = _group_mood_scenes(mood_timeline)
+            if scenes:
+                try:
+                    crossfade = float(audio_cfg.get("bgm_crossfade", _BGM_CROSSFADE_DEFAULT) or 0)
+                except (TypeError, ValueError):
+                    crossfade = _BGM_CROSSFADE_DEFAULT
+                crossfade = max(0.0, min(crossfade, 4.0))
+
+                segments, info = _build_bgm_track_per_scene(
+                    scenes, target_duration, channel_id, bgm_volume,
+                    crossfade=crossfade,
+                )
+                if segments:
+                    narration = final_clip.audio
+                    audio_layers = ([narration] if narration is not None else []) + segments
+                    new_audio = CompositeAudioClip(audio_layers)
+                    try:
+                        mixed = final_clip.with_audio(new_audio)
+                    except AttributeError:
+                        mixed = final_clip.set_audio(new_audio)
+                    print(f"🎵 BGM per-scene mix: {len(scenes)}シーン, "
+                          f"crossfade={crossfade:.1f}s, volume={bgm_volume:.2f}")
+                    for line in info:
+                        print(line)
+                    return mixed
+                else:
+                    print("🎵 BGM per-scene: 全シーンの音源未発見 → シングル曲モードへフォールバック")
+        except Exception as e:
+            print(f"⚠️ BGM per-scene mix失敗 → シングル曲モードへフォールバック: {e}")
+
+    # ── Legacy single-track branch ──
+    bgm_file = _resolve_bgm_file(explicit_bgm_path, channel_id)
     if bgm_file is None:
         print("🎵 BGM: 音源が見つからないためスキップ "
               "(data/channels_assets/<channel>/bgm/ にアップロード可)")
         return final_clip
 
     try:
-        try:
-            from moviepy import CompositeAudioClip
-        except ImportError:
-            from moviepy.editor import CompositeAudioClip
-        try:
-            from moviepy.audio.AudioClip import concatenate_audioclips
-        except ImportError:
-            from moviepy.editor import concatenate_audioclips
-
-        target_duration = float(final_clip.duration or 0)
-        if target_duration <= 0:
-            return final_clip
-
         bgm = AudioFileClip(str(bgm_file))
         src_dur = float(bgm.duration or 0)
         if src_dur <= 0:
             bgm.close()
             return final_clip
 
-        # Loop to cover target duration by concatenating fresh clips.
         if src_dur < target_duration:
             n_loops = int(target_duration // src_dur) + 1
             bgm.close()
@@ -404,13 +641,11 @@ def _mix_bgm(final_clip, channel_format, channel_id=None):
                 [AudioFileClip(str(bgm_file)) for _ in range(n_loops)]
             )
 
-        # Trim to target duration.
         try:
             bgm = bgm.subclipped(0, target_duration)
         except AttributeError:
             bgm = bgm.subclip(0, target_duration)
 
-        # Apply volume scaling.
         try:
             bgm = bgm.with_volume_scaled(bgm_volume)
         except AttributeError:
@@ -1323,14 +1558,21 @@ def generate_monologue_video(scenario, title, output_prefix, bg_video_path=None,
     clips, t_off = [], 0.0
     audio_clips = []
     current_chapter = None
+    current_mood = None
+    mood_timeline = []
 
     for i, entry in enumerate(scenario):
+        # A chapter_title or text entry may set a mood that sticks until the next change.
+        if entry.get("mood"):
+            current_mood = entry.get("mood")
+
         # Chapter title screen (no narration, just visual)
         if "chapter_title" in entry:
             current_chapter = entry["chapter_title"]
             ch_dur = entry.get("duration", 3.0)
             clip = renderer.make_video_clip(current_chapter, ch_dur, t_off, is_chapter_title=True)
             clips.append(clip)
+            mood_timeline.append((t_off, t_off + ch_dur, current_mood))
             t_off += ch_dur
             print(f"  [{i+1}/{len(scenario)}] 📖 {current_chapter}")
             continue
@@ -1350,11 +1592,12 @@ def generate_monologue_video(scenario, title, output_prefix, bg_video_path=None,
         audio_clips.append(ac)
         clip = clip.with_audio(ac)
         clips.append(clip)
+        mood_timeline.append((t_off, t_off + dur, current_mood))
         t_off += dur
 
     print(f"\n🎬 Concatenating... (total: {t_off:.1f}s = {t_off/60:.1f}min)")
     final = concatenate_videoclips(clips)
-    final = _mix_bgm(final, channel_format, channel_id=channel_id)
+    final = _mix_bgm(final, channel_format, channel_id=channel_id, mood_timeline=mood_timeline)
     out = str(out_dir / f"{output_prefix}_メイン.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
@@ -1385,6 +1628,7 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
     tmp_dir = tempfile.mkdtemp(prefix="monos_")
     clips, t_off = [], 0.0
     audio_clips = []
+    mood_timeline = []
 
     for i, entry in enumerate(scenario):
         if "chapter_title" in entry:
@@ -1399,10 +1643,11 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
         audio_clips.append(ac)
         clip = clip.with_audio(ac)
         clips.append(clip)
+        mood_timeline.append((t_off, t_off + dur, entry.get("mood")))
         t_off += dur
 
     final = concatenate_videoclips(clips)
-    final = _mix_bgm(final, channel_format, channel_id=channel_id)
+    final = _mix_bgm(final, channel_format, channel_id=channel_id, mood_timeline=mood_timeline)
     out = str(out_dir / f"{output_prefix}_ショート.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
@@ -1465,6 +1710,7 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
 
     audio_clips = []
     current_illust = None  # sticky: keep showing the latest illustration until the next one
+    mood_timeline = []  # list of (start, end, mood) per line for per-scene BGM
     for i, entry in enumerate(scenario):
         sp, tx = entry["speaker"], entry["text"]
         cfg = CHAR_CONFIG[sp]
@@ -1487,6 +1733,7 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
         audio_clips.append(ac)
         clip = clip.with_audio(ac)
         clips.append(clip)
+        mood_timeline.append((t_off, t_off + dur, entry.get("mood")))
         t_off += dur
 
     print(f"\n🎬 Concatenating... (total: {t_off:.1f}s = {t_off/60:.1f}min)")
@@ -1495,7 +1742,7 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
         target_s = target_duration
         print(f"🎯 Target: {target_duration}s ({target_s/60:.1f}min), actual: {t_off:.1f}s ({t_off/60:.1f}min)")
     final = concatenate_videoclips(clips)
-    final = _mix_bgm(final, channel_format, channel_id=channel_id)
+    final = _mix_bgm(final, channel_format, channel_id=channel_id, mood_timeline=mood_timeline)
     out = str(out_dir / f"{output_prefix}_メイン.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
@@ -1528,6 +1775,7 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
     renderer = ShortFrameRenderer(bg_video_path, bg_type=bg_type)
     tmp_dir = tempfile.mkdtemp(prefix="short_")
     clips, audio_clips, t_off = [], [], 0.0
+    mood_timeline = []
 
     for i, entry in enumerate(short_scenario):
         sp, tx = entry["speaker"], entry["text"]
@@ -1544,11 +1792,12 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         audio_clips.append(ac)
         clip = clip.with_audio(ac)
         clips.append(clip)
+        mood_timeline.append((t_off, t_off + dur, entry.get("mood")))
         t_off += dur
 
     print(f"\n🎬 Concatenating {len(clips)} clips ({t_off:.1f}s)...")
     final = concatenate_videoclips(clips)
-    final = _mix_bgm(final, channel_format, channel_id=channel_id)
+    final = _mix_bgm(final, channel_format, channel_id=channel_id, mood_timeline=mood_timeline)
     out = str(out_dir / f"{output_prefix}_ショート.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
