@@ -165,7 +165,7 @@ def _ensure_db() -> sqlite3.Connection:
             except Exception:
                 pass
 
-    # ── oauth_state: channel_id カラムを追加（state にチャンネルを紐付け） ──
+    # ── oauth_state: channel_id / code_verifier を追加 ──
     state_cols = _table_columns(conn, "oauth_state")
     if not state_cols:
         conn.execute(
@@ -174,15 +174,22 @@ def _ensure_db() -> sqlite3.Connection:
                 state TEXT PRIMARY KEY,
                 channel_id TEXT,
                 redirect_uri TEXT NOT NULL,
+                code_verifier TEXT,
                 created_at INTEGER NOT NULL
             )
             """
         )
-    elif "channel_id" not in state_cols:
-        try:
-            conn.execute("ALTER TABLE oauth_state ADD COLUMN channel_id TEXT")
-        except Exception:
-            pass
+    else:
+        if "channel_id" not in state_cols:
+            try:
+                conn.execute("ALTER TABLE oauth_state ADD COLUMN channel_id TEXT")
+            except Exception:
+                pass
+        if "code_verifier" not in state_cols:
+            try:
+                conn.execute("ALTER TABLE oauth_state ADD COLUMN code_verifier TEXT")
+            except Exception:
+                pass
 
     # ── oauth_clients: チャンネル別 client_id/secret ──
     conn.execute(
@@ -302,7 +309,12 @@ def list_connected_channels() -> List[Dict[str, Any]]:
 # state（CSRF 対策、チャンネルID紐付け）
 # =====================================================================
 
-def save_state(state: str, redirect_uri: str, channel_id: Optional[str] = None) -> None:
+def save_state(
+    state: str,
+    redirect_uri: str,
+    channel_id: Optional[str] = None,
+    code_verifier: Optional[str] = None,
+) -> None:
     conn = _ensure_db()
     try:
         conn.execute(
@@ -311,8 +323,9 @@ def save_state(state: str, redirect_uri: str, channel_id: Optional[str] = None) 
         )
         conn.execute(
             "INSERT OR REPLACE INTO oauth_state "
-            "(state, channel_id, redirect_uri, created_at) VALUES (?, ?, ?, ?)",
-            (state, channel_id, redirect_uri, int(time.time())),
+            "(state, channel_id, redirect_uri, code_verifier, created_at) "
+            "VALUES (?, ?, ?, ?, ?)",
+            (state, channel_id, redirect_uri, code_verifier, int(time.time())),
         )
         conn.commit()
     finally:
@@ -320,18 +333,22 @@ def save_state(state: str, redirect_uri: str, channel_id: Optional[str] = None) 
 
 
 def consume_state(state: str) -> Optional[Dict[str, Optional[str]]]:
-    """state を検証して (redirect_uri, channel_id) を返す（消費）。"""
+    """state を検証して (redirect_uri, channel_id, code_verifier) を返す（消費）。"""
     conn = _ensure_db()
     try:
         row = conn.execute(
-            "SELECT redirect_uri, channel_id FROM oauth_state "
+            "SELECT redirect_uri, channel_id, code_verifier FROM oauth_state "
             "WHERE state = ? AND created_at >= ?",
             (state, int(time.time()) - 600),
         ).fetchone()
         if row:
             conn.execute("DELETE FROM oauth_state WHERE state = ?", (state,))
             conn.commit()
-            return {"redirect_uri": row[0], "channel_id": row[1]}
+            return {
+                "redirect_uri": row[0],
+                "channel_id": row[1],
+                "code_verifier": row[2],
+            }
     finally:
         conn.close()
     return None
@@ -454,14 +471,20 @@ def _build_flow_for(channel_id: str, redirect_uri: str) -> "Flow":
 
 
 def build_auth_url_for(channel_id: str, redirect_uri: str) -> Dict[str, str]:
-    """指定チャンネル用の認可URLを生成。"""
+    """指定チャンネル用の認可URLを生成（PKCE 対応）。"""
     flow = _build_flow_for(channel_id, redirect_uri)
+    flow.autogenerate_code_verifier = True
     auth_url, state = flow.authorization_url(
         access_type="offline",
         include_granted_scopes="true",
         prompt="consent",
     )
-    save_state(state, redirect_uri, channel_id=channel_id)
+    save_state(
+        state,
+        redirect_uri,
+        channel_id=channel_id,
+        code_verifier=getattr(flow, "code_verifier", None),
+    )
     return {"auth_url": auth_url, "state": state}
 
 
@@ -506,6 +529,9 @@ def exchange_code_for(channel_id: str, state: str, code: str) -> Dict[str, Any]:
         raise RuntimeError("channel_id を解決できませんでした")
 
     flow = _build_flow_for(target_channel, redirect_uri)
+    code_verifier = info.get("code_verifier")
+    if code_verifier:
+        flow.code_verifier = code_verifier
     flow.fetch_token(code=code)
     creds = flow.credentials
 
@@ -667,6 +693,9 @@ def exchange_code(state: str, code: str) -> Dict[str, Any]:
     redirect_uri = info["redirect_uri"]
 
     flow = _build_flow_for(target, redirect_uri)
+    code_verifier = info.get("code_verifier")
+    if code_verifier:
+        flow.code_verifier = code_verifier
     flow.fetch_token(code=code)
     creds = flow.credentials
     acc = _fetch_account_info(creds)
