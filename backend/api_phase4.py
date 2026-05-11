@@ -640,6 +640,43 @@ async def list_schedules(_=Depends(require_session)) -> Dict[str, Any]:
     return {"schedules": items, "scheduler_available": HAS_APSCHEDULER}
 
 
+@router.get("/scheduler/jobs")
+async def list_scheduler_jobs(_=Depends(require_session)) -> Dict[str, Any]:
+    """診断用: APScheduler に現在登録されている全ジョブを返す。
+
+    「autopilot 設定したのに動かない」という時の一次切り分けに使う。
+    `sched:*` は /api/schedules 由来、`autopilot:*` は per-channel autopilot。
+    リストが空、または期待した autopilot:<channel_id> がいない場合は、
+    設定が保存されていない or restore に失敗した可能性が高い。
+    """
+    if not HAS_APSCHEDULER:
+        return {"scheduler_available": False, "jobs": []}
+    sch = _ensure_scheduler()
+    if sch is None:
+        return {"scheduler_available": False, "jobs": []}
+    jobs_out: List[Dict[str, Any]] = []
+    try:
+        for j in sch.get_jobs():
+            jobs_out.append({
+                "id": j.id,
+                "name": j.name,
+                "next_run_at": j.next_run_time.isoformat() if j.next_run_time else None,
+                "trigger": str(j.trigger),
+                "kind": (
+                    "autopilot" if j.id.startswith("autopilot:")
+                    else "schedule" if j.id.startswith("sched:")
+                    else "other"
+                ),
+            })
+    except Exception as e:
+        return {"scheduler_available": True, "jobs": [], "error": str(e)}
+    return {
+        "scheduler_available": True,
+        "running": getattr(sch, "running", None),
+        "jobs": jobs_out,
+    }
+
+
 @router.post("/schedules", status_code=201)
 async def create_schedule(req: ScheduleIn, _=Depends(require_session)) -> Dict[str, Any]:
     sid = "sch_" + uuid.uuid4().hex[:10]
@@ -1292,7 +1329,15 @@ def _dispatch_notification(message: str, subject: str = "YouTube Factory") -> Li
 
 
 def _send_event_notification(event: str, message: str) -> None:
-    """イベント種別ごとに on_xxx フラグをチェックしてから送信。スレッドセーフ。"""
+    """イベント種別ごとに on_xxx フラグをチェックしてから送信。スレッドセーフ。
+
+    通知チャンネル (LINE/Slack/Email) を設定していなくても、診断用に
+    すべてのイベントを backend.log にエコーする。Autopilot/Schedule が
+    本当に発火したか・成功したかをユーザーが確認できるようにするため。
+    """
+    # 通知設定 (LINE/Slack/Email) があってもなくても、まず stdout に残す
+    icon = {"generate_done": "🎬", "upload_done": "🚀", "schedule_run": "📅", "error": "⚠️"}.get(event, "ℹ️")
+    print(f"{icon} [{event}] {message}")
     row = _get_notification_settings_row()
     if not row:
         return

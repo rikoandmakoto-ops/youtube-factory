@@ -173,6 +173,7 @@ def _job_id(channel_id: str) -> str:
 def _refresh_channel_job(channel_id: str) -> None:
     sch = api_phase4._ensure_scheduler()
     if sch is None:
+        print(f"⚠️ Autopilot: APScheduler 未利用 — {channel_id} はスケジュール不能")
         return
     job_id = _job_id(channel_id)
     try:
@@ -182,10 +183,13 @@ def _refresh_channel_job(channel_id: str) -> None:
 
     ap = _load_autopilot(channel_id)
     if not ap.get("enabled"):
+        # 明示的に無効化なら sukoshi quiet にしておくが、診断のため一行残す
+        print(f"🚫 Autopilot for {channel_id}: disabled (enabled=false)")
         return
     sched = ap.get("schedule") or {}
     days = sched.get("days_of_week") or []
     if not days:
+        print(f"🚫 Autopilot for {channel_id}: 曜日未指定 — スケジュール登録スキップ")
         return
     try:
         trigger = api_phase4.CronTrigger(
@@ -200,6 +204,14 @@ def _refresh_channel_job(channel_id: str) -> None:
             id=job_id,
             args=[channel_id],
             replace_existing=True,
+        )
+        job = sch.get_job(job_id)
+        nxt = job.next_run_time.isoformat() if job and job.next_run_time else "?"
+        days_label = "・".join(DOW_NAMES[d] for d in days if 0 <= d <= 6)
+        print(
+            f"📅 Autopilot scheduled for {channel_id}: "
+            f"{days_label} {int(sched.get('hour', 18)):02d}:{int(sched.get('minute', 0)):02d} JST "
+            f"→ next run {nxt}"
         )
     except Exception as e:
         print(f"⚠️ Failed to schedule autopilot for {channel_id}: {e}")
@@ -229,15 +241,26 @@ def restore_all() -> None:
     """起動時: すべてのチャンネルの autopilot ジョブを復元"""
     cm = _state.get("channel_manager")
     if cm is None:
+        print("⚠️ Autopilot restore skipped: channel_manager 未初期化")
         return
     sch = api_phase4._ensure_scheduler()
     if sch is None:
+        print("⚠️ Autopilot restore skipped: APScheduler 未利用")
         return
+    enabled_ids: List[str] = []
     for ch in cm.list_channels():
         try:
             _refresh_channel_job(ch.id)
+            ap = _load_autopilot(ch.id)
+            if ap.get("enabled") and ap.get("schedule", {}).get("days_of_week"):
+                enabled_ids.append(ch.id)
         except Exception as e:
             print(f"⚠️ autopilot restore failed for {ch.id}: {e}")
+    total = len(cm.list_channels())
+    if enabled_ids:
+        print(f"🤖 Autopilot restored: {len(enabled_ids)}/{total} channel(s) active — {', '.join(enabled_ids)}")
+    else:
+        print(f"🤖 Autopilot restored: 0/{total} channel(s) active — no scheduled jobs")
 
 
 # =====================================================================
@@ -282,6 +305,8 @@ def _pop_or_refill_theme(channel_id: str) -> Optional[Dict[str, str]]:
 
 def _run_autopilot(channel_id: str) -> None:
     """スケジュール発火: テーマ取得 → シナリオ生成 → キュー投入 → 自動公開フラグ"""
+    fired_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"🤖 Autopilot fired for {channel_id} at {fired_at} JST")
     cm = _state.get("channel_manager")
     sg = _state.get("scenario_generator")
     queue = _state.get("job_queue")
@@ -303,6 +328,7 @@ def _run_autopilot(channel_id: str) -> None:
             f"Autopilot スキップ ({channel_id}): テーマキューが空で AI 補充にも失敗",
         )
         return
+    print(f"🤖 Autopilot {channel_id}: theme = {theme.get('title', '?')[:60]}")
 
     ap = _load_autopilot(channel_id)
     duration_min = int(ap.get("duration_minutes") or 12)
