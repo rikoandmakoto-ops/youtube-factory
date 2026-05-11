@@ -2691,17 +2691,22 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
     # ---- ショート説明文 ----
     first_line = short_scenario[0].get("text", "") if short_scenario else ""
     lines_short = [
-        f"タイトル: {short_title}",
+        "━━━━━━━━━━━━━━━━━━━━━━",
+        "🎬 続きはフル動画で公開中！",
+        "━━━━━━━━━━━━━━━━━━━━━━",
         "",
-        f"{hook or first_line}",
+        f"👉 『{title}』",
+        f"   チャンネル「{CHANNEL_NAME}」で検索！",
         "",
-        "▶ フル動画はこちら👇",
-        f"「{title}」をチャンネルで検索！",
+        "▼ ショートでは語りきれなかった",
+        "  詳しい解説・データ・裏話は本編へ ▼",
         "",
         "━━━━━━━━━━━━━━━━━━━━━━",
+        f"📝 {hook or first_line}",
+        "━━━━━━━━━━━━━━━━━━━━━━",
+        "",
         f"📺 {CHANNEL_NAME}",
         f"   {CHANNEL_CONCEPT}",
-        "━━━━━━━━━━━━━━━━━━━━━━",
         "",
         "#shorts #ゆっくり解説 #雑学 #豆知識 #科学",
     ]
