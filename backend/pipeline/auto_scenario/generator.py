@@ -348,6 +348,16 @@ class ScenarioGenerator:
             except Exception as e:
                 print(f"  ⚠️ improvement feedback addendum failed: {e}")
 
+        # Phase B: Analytics ベースのフィードバック（成功パターン / 維持率 / コメント要望）
+        analytics_addendum = ""
+        applied_analytics = False
+        try:
+            from pipeline.analytics.scenario_feedback import build_analytics_addendum
+            analytics_addendum = build_analytics_addendum(channel.id) or ""
+            applied_analytics = bool(analytics_addendum)
+        except Exception as e:
+            print(f"  ⚠️ analytics feedback addendum failed: {e}")
+
         # スタイル別プロンプト生成
         if channel.style == "monologue":
             prompt = self._build_monologue_prompt(channel, theme, duration)
@@ -359,6 +369,9 @@ class ScenarioGenerator:
             print(
                 f"  💡 Applying improvement feedback from {len(applied_feedback_ids)} prior video(s)"
             )
+        if analytics_addendum:
+            prompt = prompt + "\n\n" + analytics_addendum
+            print("  📊 Applying analytics-derived feedback (success patterns / retention / viewer requests)")
 
         # フル動画の最低行数 + 最低総文字数 + 1行あたり最低平均文字数
         # 実測: VOICEVOX 1.3x speed → 約7.8文字/秒（pause込み）
@@ -477,6 +490,7 @@ class ScenarioGenerator:
             "channel_id": channel.id,
             "style": channel.style,
             "applied_feedback": applied_feedback_ids,
+            "applied_analytics_feedback": applied_analytics,
         }
 
     def _expand_via_sections(
