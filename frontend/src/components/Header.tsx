@@ -32,6 +32,7 @@ export default function Header({
           <NavLink href="/" emoji="🏠" label="ホーム" />
           <NavLink href="/generate" emoji="🎬" label="生成" />
           <NavLink href="/schedule" emoji="⏰" label="スケジュール" />
+          <NavLink href="/analytics" emoji="📈" label="分析" />
           <NavLink href="/history" emoji="📊" label="履歴" />
           <NavLink href="/settings" emoji="⚙️" label="設定" />
         </nav>

@@ -1315,3 +1315,254 @@ export async function generateBgmPreview(
     body: JSON.stringify(req),
   });
 }
+
+// ──────────────────────────────────────────────────────────────────────
+// Phase D — Analytics (YouTube Analytics + Comments + Trends + AB Tests)
+// ──────────────────────────────────────────────────────────────────────
+//
+// Backend (api_analytics.py) endpoints are mounted under `/api/analytics`:
+//   GET  /api/analytics/channel/{id}/overview
+//   GET  /api/analytics/videos/{channel_id}
+//   GET  /api/analytics/video/{video_id}/retention
+//   GET  /api/analytics/video/{video_id}/comments
+//   POST /api/analytics/sync/{channel_id}
+// These are intentionally distinct from the legacy
+// `/api/channels/{id}/analytics` endpoint (mock/lightweight summary).
+
+export type AnalyticsDailyPoint = {
+  date: string;
+  views?: number;
+  watch_time_minutes?: number;
+  subscribers_gained?: number;
+  subscribers_lost?: number;
+  impressions?: number;
+  ctr?: number;
+  average_view_duration_seconds?: number;
+  [k: string]: unknown;
+};
+
+export type AnalyticsOverview = {
+  channel_id: string;
+  days_requested: number;
+  totals: {
+    views: number;
+    watch_time_minutes: number;
+    subscribers_gained: number;
+    subscribers_lost: number;
+    net_subscribers: number;
+  };
+  daily: AnalyticsDailyPoint[];
+};
+
+export async function getAnalyticsOverview(
+  channelId: string,
+  days = 30
+): Promise<AnalyticsOverview> {
+  return call<AnalyticsOverview>(
+    `/api/analytics/channel/${encodeURIComponent(channelId)}/overview?days=${days}`,
+    { noStore: true }
+  );
+}
+
+export type AnalyticsVideoMetric = {
+  video_id: string;
+  title?: string;
+  channel_id?: string;
+  published_at?: string | null;
+  views?: number;
+  impressions?: number;
+  ctr?: number;
+  average_view_duration_seconds?: number;
+  average_view_percentage?: number;
+  watch_time_minutes?: number;
+  likes?: number;
+  comments?: number;
+  subscribers_gained?: number;
+  recorded_at?: string;
+  thumbnail_url?: string | null;
+  [k: string]: unknown;
+};
+
+export type AnalyticsVideosResponse = {
+  channel_id: string;
+  count: number;
+  items: AnalyticsVideoMetric[];
+};
+
+export async function getAnalyticsVideos(
+  channelId: string,
+  limit = 100
+): Promise<AnalyticsVideosResponse> {
+  return call<AnalyticsVideosResponse>(
+    `/api/analytics/videos/${encodeURIComponent(channelId)}?limit=${limit}`,
+    { noStore: true }
+  );
+}
+
+export type AnalyticsRetentionPoint = {
+  elapsed_video_ratio: number;
+  audience_watch_ratio?: number;
+  relative_retention_performance?: number;
+};
+
+export type AnalyticsRetentionResponse = {
+  video_id: string;
+  recorded_at?: string;
+  curve: AnalyticsRetentionPoint[];
+};
+
+export async function getAnalyticsRetention(
+  videoId: string
+): Promise<AnalyticsRetentionResponse> {
+  return call<AnalyticsRetentionResponse>(
+    `/api/analytics/video/${encodeURIComponent(videoId)}/retention`,
+    { noStore: true }
+  );
+}
+
+export type AnalyticsCommentSummary = {
+  total?: number;
+  positive?: number;
+  negative?: number;
+  neutral?: number;
+  question?: number;
+  top_topics?: Array<{ topic: string; count: number }>;
+  [k: string]: unknown;
+};
+
+export type AnalyticsComment = {
+  comment_id: string;
+  text: string;
+  author?: string | null;
+  likes?: number;
+  published_at?: string | null;
+  sentiment?: 'positive' | 'negative' | 'neutral' | string | null;
+  topic?: string | null;
+  [k: string]: unknown;
+};
+
+export type AnalyticsCommentsResponse = {
+  video_id: string;
+  summary: AnalyticsCommentSummary | null;
+  comments: AnalyticsComment[];
+};
+
+export async function getAnalyticsComments(
+  videoId: string,
+  limit = 200
+): Promise<AnalyticsCommentsResponse> {
+  return call<AnalyticsCommentsResponse>(
+    `/api/analytics/video/${encodeURIComponent(videoId)}/comments?limit=${limit}`,
+    { noStore: true }
+  );
+}
+
+export type AnalyticsSyncOptions = {
+  days?: number;
+  max_videos?: number;
+  fetch_retention_for?: number;
+  sync_comments_for?: number;
+  max_comments_per_video?: number;
+  analyze_comments?: boolean;
+};
+
+export type AnalyticsSyncResponse = {
+  channel?: { ok?: boolean; rows?: number; error?: string };
+  videos?: { ok?: boolean; count?: number; items?: AnalyticsVideoMetric[]; error?: string };
+  retention?: { ok?: boolean; count?: number; error?: string };
+  comments?: Array<Record<string, unknown>>;
+  [k: string]: unknown;
+};
+
+export async function syncChannelAnalytics(
+  channelId: string,
+  opts?: AnalyticsSyncOptions
+): Promise<AnalyticsSyncResponse> {
+  return call<AnalyticsSyncResponse>(
+    `/api/analytics/sync/${encodeURIComponent(channelId)}`,
+    {
+      method: 'POST',
+      body: JSON.stringify(opts ?? {}),
+      noStore: true,
+    }
+  );
+}
+
+// ── Trends (Phase C) ──
+export type TrendKeyword = {
+  keyword: string;
+  source?: string;
+  score?: number;
+  query_volume?: number | null;
+  [k: string]: unknown;
+};
+
+export type TrendingVideo = {
+  video_id?: string;
+  title?: string;
+  channel_title?: string;
+  view_count?: number;
+  url?: string;
+  thumbnail_url?: string | null;
+  [k: string]: unknown;
+};
+
+export type TrendsResponse = {
+  status: string;
+  channel_id: string;
+  trends: {
+    keywords?: TrendKeyword[];
+    related_keywords?: TrendKeyword[];
+    trending_videos?: TrendingVideo[];
+    [k: string]: unknown;
+  };
+  themes?: Array<{ title?: string; angle?: string; [k: string]: unknown }>;
+};
+
+export async function getTrends(
+  channelId: string,
+  count = 5
+): Promise<TrendsResponse> {
+  return call<TrendsResponse>(
+    `/api/trends/${encodeURIComponent(channelId)}?count=${count}`,
+    { noStore: true }
+  );
+}
+
+// ── AB Tests (Phase C) ──
+export type ABTestVariant = {
+  title?: string;
+  catchcopy?: string;
+  thumbnail_text?: string;
+  reasoning?: string;
+  ctr_score?: number;
+  [k: string]: unknown;
+};
+
+export type ABTest = {
+  id?: string;
+  test_id?: string;
+  channel_id?: string | null;
+  theme_title?: string;
+  theme_angle?: string;
+  variants?: ABTestVariant[];
+  best_variant_index?: number;
+  created_at?: string;
+  [k: string]: unknown;
+};
+
+export async function listABTests(
+  channelId?: string,
+  limit = 50
+): Promise<{ status: string; items: ABTest[] }> {
+  const q = new URLSearchParams();
+  if (channelId) q.set('channel_id', channelId);
+  q.set('limit', String(limit));
+  return call(`/api/ab-test?${q.toString()}`, { noStore: true });
+}
+
+export async function getABTest(testId: string): Promise<ABTest> {
+  return call<ABTest>(`/api/ab-test/${encodeURIComponent(testId)}`, {
+    noStore: true,
+  });
+}
