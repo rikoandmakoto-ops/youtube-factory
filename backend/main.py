@@ -42,6 +42,7 @@ import api_phase3
 import api_phase4
 import api_phase5
 import api_phase6
+import api_improvement
 import api_channel_autopilot
 
 
@@ -160,6 +161,7 @@ app.include_router(api_phase3.router)
 app.include_router(api_phase4.router)
 app.include_router(api_phase5.router)
 app.include_router(api_phase6.router)
+app.include_router(api_improvement.router)
 app.include_router(api_channel_autopilot.router)
 
 

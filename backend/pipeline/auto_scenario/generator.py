@@ -290,9 +290,15 @@ class ScenarioGenerator:
         channel,  # ChannelProfile
         theme_override: Optional[Dict] = None,
         target_duration: Optional[int] = None,
+        improvement_feedback: Optional[List[Dict[str, Any]]] = None,
     ) -> Dict[str, Any]:
         """
         チャンネルプロファイルからシナリオを自動生成。
+
+        Args:
+            improvement_feedback: いいね率改善ループからの未消費フィードバック。
+                pipeline.analytics.feedback_store.get_pending_for_channel(...) の戻り値
+                をそのまま渡す想定。GPT プロンプトに改善方針として注入される。
 
         Returns:
             {
@@ -303,6 +309,7 @@ class ScenarioGenerator:
                 "thumb_info": {...},
                 "channel_id": str,
                 "style": str,
+                "applied_feedback": [<video_id list>],
             }
         """
         # テーマ選択 — auto モード時は過去に生成済みのテーマを避けて選ぶ
@@ -315,11 +322,29 @@ class ScenarioGenerator:
 
         duration = target_duration or channel.get_target_duration()
 
+        feedback_addendum = ""
+        applied_feedback_ids: List[str] = []
+        if improvement_feedback:
+            try:
+                from pipeline.analytics.feedback_store import build_prompt_addendum
+                feedback_addendum = build_prompt_addendum(improvement_feedback)
+                applied_feedback_ids = [
+                    fb.get("video_id") for fb in improvement_feedback if fb.get("video_id")
+                ]
+            except Exception as e:
+                print(f"  ⚠️ improvement feedback addendum failed: {e}")
+
         # スタイル別プロンプト生成
         if channel.style == "monologue":
             prompt = self._build_monologue_prompt(channel, theme, duration)
         else:
             prompt = self._build_yukkuri_prompt(channel, theme, duration)
+
+        if feedback_addendum:
+            prompt = prompt + "\n\n" + feedback_addendum
+            print(
+                f"  💡 Applying improvement feedback from {len(applied_feedback_ids)} prior video(s)"
+            )
 
         # フル動画の最低行数 + 最低総文字数 + 1行あたり最低平均文字数
         # 実測: VOICEVOX 1.3x speed → 約7.8文字/秒（pause込み）
@@ -437,6 +462,7 @@ class ScenarioGenerator:
             "thumb_info": scenario_data.get("thumb_info", {}),
             "channel_id": channel.id,
             "style": channel.style,
+            "applied_feedback": applied_feedback_ids,
         }
 
     def _expand_via_sections(

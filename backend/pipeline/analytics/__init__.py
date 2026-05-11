@@ -1,7 +1,10 @@
 """
-Analytics — YouTube Analytics API連携（将来実装）
+Analytics ヘルパモジュール。
 
-- チャンネルパフォーマンス分析
-- バズテーマ発見
-- 最適投稿時間分析
+- like_rate: YouTube Data API でのいいね率取得
+- feedback_store: いいね率が閾値を下回った動画の改善フィードバック保存
 """
+
+from . import feedback_store, like_rate  # noqa: F401
+
+__all__ = ["like_rate", "feedback_store"]
