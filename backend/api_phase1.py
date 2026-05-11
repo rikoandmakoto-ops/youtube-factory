@@ -555,6 +555,49 @@ async def generate_status(
     return _job_to_status(j)
 
 
+@router.post("/generate/{job_id}/cancel")
+async def cancel_generate(
+    job_id: str, _=Depends(require_session)
+) -> Dict[str, Any]:
+    """生成ジョブの中断。
+
+    - pending: 即時 cancelled に切り替え
+    - running: cancel_requested フラグを立て、各ステップ間で
+      安全に停止する
+    - completed/failed/cancelled: そのまま現在の状態を返す（idempotent）
+    """
+    queue = _state.get("job_queue")
+    if not queue:
+        raise HTTPException(status_code=503, detail="Job queue not ready")
+    j = queue.get_status(job_id)
+    if not j:
+        raise HTTPException(status_code=404, detail="Job not found")
+
+    cur = j.get("status")
+    if cur in ("completed", "failed", "cancelled"):
+        return _job_to_status(j)
+
+    queue.cancel(job_id)
+    return _job_to_status(queue.get_status(job_id) or j)
+
+
+@router.delete("/generate/{job_id}")
+async def delete_generate(
+    job_id: str, _=Depends(require_session)
+) -> Dict[str, Any]:
+    """RESTful別名: DELETE /api/generate/{job_id} もキャンセル扱い"""
+    queue = _state.get("job_queue")
+    if not queue:
+        raise HTTPException(status_code=503, detail="Job queue not ready")
+    j = queue.get_status(job_id)
+    if not j:
+        raise HTTPException(status_code=404, detail="Job not found")
+    if j.get("status") in ("completed", "failed", "cancelled"):
+        return _job_to_status(j)
+    queue.cancel(job_id)
+    return _job_to_status(queue.get_status(job_id) or j)
+
+
 @router.get("/generate/active")
 async def list_active_jobs(_=Depends(require_session)) -> Dict[str, Any]:
     queue = _state.get("job_queue")

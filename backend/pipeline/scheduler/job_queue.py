@@ -43,6 +43,11 @@ class JobStatus(str, Enum):
     CANCELLED = "cancelled"
 
 
+class JobCancelled(Exception):
+    """ユーザー操作によるジョブ中断。リトライしない。"""
+    pass
+
+
 @dataclass
 class Job:
     """1つの動画生成ジョブ"""
@@ -61,6 +66,8 @@ class Job:
     created_at: str = ""
     started_at: Optional[str] = None
     completed_at: Optional[str] = None
+    # ユーザーが中断ボタンを押したフラグ。実行ループ内の各ステップ間でチェックされる
+    cancel_requested: bool = False
     # Generation options
     gen_type: str = "both"
     output_dir: Optional[str] = None
@@ -174,13 +181,32 @@ class JobQueue:
         return job_id
 
     def cancel(self, job_id: str) -> bool:
-        """ジョブをキャンセル（pending状態のみ）"""
+        """ジョブをキャンセル。
+
+        - pending: 即座に CANCELLED に切り替え
+        - running: cancel_requested フラグを立て、各ステップ間でフラグが
+          チェックされた時点で JobCancelled が送出され、安全に停止する
+        """
         with self._lock:
             job = self._jobs.get(job_id)
-            if job and job.status == JobStatus.PENDING:
+            if not job:
+                return False
+            if job.status == JobStatus.PENDING:
                 job.status = JobStatus.CANCELLED
+                job.cancel_requested = True
+                job.completed_at = datetime.now().isoformat()
+                job.progress = "中断しました"
+                return True
+            if job.status == JobStatus.RUNNING:
+                job.cancel_requested = True
+                job.progress = "中断要求を受信..."
                 return True
         return False
+
+    def is_cancel_requested(self, job_id: str) -> bool:
+        """ジョブがキャンセル要求済みかチェック（パイプラインから呼ぶ）"""
+        job = self._jobs.get(job_id)
+        return bool(job and job.cancel_requested)
 
     def get_status(self, job_id: str) -> Optional[Dict]:
         job = self._jobs.get(job_id)
@@ -242,9 +268,22 @@ class JobQueue:
 
     def _execute_job(self, job: Job):
         """1ジョブの実行"""
+        # ワーカー投入後にキャンセルされていた場合はここで打ち切る
+        if job.cancel_requested:
+            job.status = JobStatus.CANCELLED
+            job.completed_at = datetime.now().isoformat()
+            job.progress = "中断しました"
+            print(f"🛑 Job cancelled before start: [{job.id}] {job.title}")
+            return
+
         job.status = JobStatus.RUNNING
         job.started_at = datetime.now().isoformat()
         job.progress = "動画生成を開始..."
+
+        # generate_all 内で各ステップ間で呼ばれる中断チェック
+        def _cancel_check() -> None:
+            if job.cancel_requested:
+                raise JobCancelled(f"Job {job.id} cancelled by user")
 
         try:
             if not self._generate_fn:
@@ -277,7 +316,17 @@ class JobQueue:
                 channel_format=ch_format,
                 char_config=ch_chars,
                 channel_dict=ch_dict,
+                cancel_check=_cancel_check,
             )
+
+            # generate_all から戻った後にも中断要求が立っていたら CANCELLED で確定
+            if job.cancel_requested:
+                job.status = JobStatus.CANCELLED
+                job.result = result
+                job.completed_at = datetime.now().isoformat()
+                job.progress = "中断しました"
+                print(f"🛑 Job cancelled after pipeline: [{job.id}] {job.title}")
+                return
 
             job.status = JobStatus.COMPLETED
             job.result = result
@@ -288,7 +337,21 @@ class JobQueue:
             if self.on_job_complete:
                 self.on_job_complete(job)
 
+        except JobCancelled as e:
+            job.status = JobStatus.CANCELLED
+            job.completed_at = datetime.now().isoformat()
+            job.progress = "中断しました"
+            print(f"🛑 Job cancelled: [{job.id}] {job.title} — {e}")
+
         except Exception as e:
+            # キャンセル要求中にステップが例外を吐いた場合もリトライしない
+            if job.cancel_requested:
+                job.status = JobStatus.CANCELLED
+                job.completed_at = datetime.now().isoformat()
+                job.progress = "中断しました"
+                print(f"🛑 Job cancelled (during exception): [{job.id}] {job.title} — {e}")
+                return
+
             if job.retries < job.max_retries:
                 job.retries += 1
                 job.status = JobStatus.PENDING

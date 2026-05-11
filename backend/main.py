@@ -1092,12 +1092,16 @@ async def queue_get_job(job_id: str):
 
 @app.post("/queue/jobs/{job_id}/cancel")
 async def queue_cancel_job(job_id: str):
-    """ジョブキャンセル"""
+    """ジョブキャンセル（pending・running 両対応）"""
     if not job_queue:
         raise HTTPException(status_code=500, detail="Job queue not initialized")
-    if job_queue.cancel(job_id):
-        return {"status": "cancelled"}
-    raise HTTPException(status_code=400, detail="Cannot cancel (not pending)")
+    j = job_queue.get_status(job_id)
+    if not j:
+        raise HTTPException(status_code=404, detail="Job not found")
+    if j.get("status") in ("completed", "failed", "cancelled"):
+        return {"status": j.get("status"), "noop": True}
+    job_queue.cancel(job_id)
+    return {"status": "cancelled"}
 
 
 @app.get("/queue/stats")

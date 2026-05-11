@@ -41,6 +41,7 @@ export default function GenerateForm({
 
   const [suggesting, setSuggesting] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [cancelling, setCancelling] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [jobId, setJobId] = useState<string | null>(null);
   const [status, setStatus] = useState<GenerateStatus | null>(null);
@@ -379,6 +380,28 @@ export default function GenerateForm({
       setError(e instanceof Error ? e.message : '生成開始に失敗しました');
     } finally {
       setSubmitting(false);
+    }
+  };
+
+  const onCancel = async () => {
+    if (!jobId || cancelling) return;
+    setCancelling(true);
+    try {
+      const res = await fetch(
+        `/api/jobs/${encodeURIComponent(jobId)}/cancel`,
+        { method: 'POST', cache: 'no-store' }
+      );
+      if (res.ok) {
+        const s: GenerateStatus = await res.json();
+        setStatus(s);
+        if (s.status === 'cancelled') {
+          if (pollRef.current) clearInterval(pollRef.current);
+        }
+      }
+    } catch {
+      /* ポーリングが続くので画面はやがて更新される */
+    } finally {
+      setCancelling(false);
     }
   };
 
@@ -799,7 +822,19 @@ export default function GenerateForm({
 
       {(status || isRunning) && (
         <section aria-label="進捗" className="card mt-2">
-          <h3 className="font-semibold text-sm mb-3">進捗</h3>
+          <div className="flex items-center justify-between mb-3 gap-2">
+            <h3 className="font-semibold text-sm">進捗</h3>
+            {isRunning && jobId && (
+              <button
+                type="button"
+                onClick={onCancel}
+                disabled={cancelling}
+                className="text-xs px-3 py-1 rounded bg-red-500/10 border border-red-500/30 text-red-300 hover:bg-red-500/20 disabled:opacity-50"
+              >
+                {cancelling ? '中断中…' : '🛑 中断'}
+              </button>
+            )}
+          </div>
           <div className="grid grid-cols-5 gap-1 mb-3">
             {STEPS.map((step) => {
               const isPast = step.id < currentStep;
@@ -808,7 +843,9 @@ export default function GenerateForm({
                 <div
                   key={step.id}
                   className={`text-center py-2 px-1 rounded text-[10px] font-semibold ${
-                    isCurrent
+                    status?.status === 'cancelled'
+                      ? 'bg-bg-elev text-slate-500'
+                      : isCurrent
                       ? 'bg-accent text-white'
                       : isPast
                       ? 'bg-emerald-700/60 text-white'
@@ -822,12 +859,18 @@ export default function GenerateForm({
           </div>
           <div className="h-2 rounded bg-bg-elev overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-accent to-purple-500 transition-all"
+              className={`h-full transition-all ${
+                status?.status === 'cancelled'
+                  ? 'bg-slate-500'
+                  : 'bg-gradient-to-r from-accent to-purple-500'
+              }`}
               style={{ width: `${Math.max(2, progress)}%` }}
             />
           </div>
           <p className="text-xs text-slate-400 mt-2">
-            {status?.status === 'failed'
+            {status?.status === 'cancelled'
+              ? '🛑 中断しました'
+              : status?.status === 'failed'
               ? `❌ 失敗: ${status.error || 'unknown error'}`
               : status?.status === 'completed'
               ? '✅ 完了'

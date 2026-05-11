@@ -4,6 +4,6 @@ Scheduler — 並列ジョブキュー & パイプラインオーケストレー
 複数チャンネルの動画生成ジョブを並列管理。
 """
 
-from .job_queue import JobQueue, Job, JobStatus
+from .job_queue import JobQueue, Job, JobStatus, JobCancelled
 
-__all__ = ["JobQueue", "Job", "JobStatus"]
+__all__ = ["JobQueue", "Job", "JobStatus", "JobCancelled"]

@@ -2571,7 +2571,8 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                  bg_video_path=None, output_dir=None, gen_type="both", bg_type="auto",
                  thumb_info=None, speed=None, target_duration=None, video_title=None,
                  style="yukkuri", use_illustrations=True,
-                 channel_format=None, char_config=None, channel_dict=None):
+                 channel_format=None, char_config=None, channel_dict=None,
+                 cancel_check=None):
     """
     Generate all outputs into one folder.
 
@@ -2606,6 +2607,13 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
     if full_scenario is None:
         full_scenario = short_scenario
 
+    # ジョブ中断チェック用ヘルパー（cancel_check が None なら no-op）
+    def _ck():
+        if cancel_check is not None:
+            cancel_check()
+
+    _ck()
+
     # Determine output directory
     if output_dir:
         out_dir = Path(output_dir) / title
@@ -2628,18 +2636,21 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
     if style == "monologue":
         # Monologue style — no thumbnail generation for now (different aesthetic)
         # TODO: Monologue-specific thumbnail generator
+        _ck()
         html_thumb = _generate_html_thumbnail(title, prefix, out_dir, channel_dict, thumb_info) if channel_dict else None
         results["thumbnail"] = html_thumb or generate_thumbnail(
             title, prefix, str(out_dir), bg_video_path, thumb_info=thumb_info,
         )
 
         if gen_type in ("short", "both"):
+            _ck()
             results["short"] = generate_monologue_short(
                 short_scenario, title, prefix, bg_video_path,
                 out_dir=str(out_dir), bg_type=bg_type, speed=speed,
                 channel_format=channel_format, channel_id=channel_id)
 
         if gen_type in ("full", "both"):
+            _ck()
             results["full"] = generate_monologue_video(
                 full_scenario, title, prefix, bg_video_path,
                 out_dir=str(out_dir), bg_type=bg_type, speed=speed,
@@ -2649,21 +2660,25 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
     else:
         # Yukkuri dialogue style (default)
         # 1. Thumbnails (HTML+Playwright when channel_dict is supplied; else legacy Pillow)
+        _ck()
         html_thumb = _generate_html_thumbnail(title, prefix, out_dir, channel_dict, thumb_info) if channel_dict else None
         results["thumbnail"] = html_thumb or generate_thumbnail(
             title, prefix, str(out_dir), bg_video_path, thumb_info=thumb_info,
         )
         if gen_type in ("short", "both"):
+            _ck()
             results["short_thumbnail"] = generate_short_thumbnail(title, prefix, str(out_dir), thumb_info=thumb_info)
 
         # 2. Videos
         if gen_type in ("short", "both"):
+            _ck()
             results["short"] = generate_short_video(short_scenario, title, prefix, bg_video_path,
                                                      out_dir=str(out_dir), bg_type=bg_type, speed=speed,
                                                      channel_format=channel_format, char_config=char_config,
                                                      channel_id=channel_id)
 
         if gen_type in ("full", "both"):
+            _ck()
             results["full"] = generate_full_video(full_scenario, title, prefix, bg_video_path,
                                                    out_dir=str(out_dir), bg_type=bg_type, speed=speed,
                                                    target_duration=target_duration,
@@ -2672,6 +2687,7 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                                                    channel_id=channel_id)
 
     # 3. Description txts (common to both styles)
+    _ck()
     descs = generate_descriptions(title, short_scenario, full_scenario, thumb_info=thumb_info, video_title=video_title)
 
     short_desc_path = str(out_dir / f"{prefix}_ショート_説明文.txt")
