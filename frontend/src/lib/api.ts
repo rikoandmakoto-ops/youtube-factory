@@ -230,6 +230,13 @@ export async function getGenerateStatus(
   );
 }
 
+export async function cancelGenerate(jobId: string): Promise<GenerateStatus> {
+  return call<GenerateStatus>(
+    `/api/generate/${encodeURIComponent(jobId)}/cancel`,
+    { method: 'POST', noStore: true }
+  );
+}
+
 export type ThemeSuggestion = { title: string; angle: string };
 export async function suggestTheme(
   channelId: string
