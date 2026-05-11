@@ -13,6 +13,7 @@ import {
 } from '@/components/Field';
 import AssetUploader from '@/components/AssetUploader';
 import ChannelYoutubeConnect from '@/components/ChannelYoutubeConnect';
+import AutopilotSection from './AutopilotSection';
 import type { AssetEntry, AssetKind, Channel } from '@/lib/api';
 
 type ConfigShape = Record<string, any>;
@@ -176,6 +177,9 @@ export default function ConfigEditor({
       <Section title="🔌 YouTube 連携" defaultOpen>
         <ChannelYoutubeConnect channelId={channelId} />
       </Section>
+
+      {/* 0.5 フルオート自動投稿 */}
+      <AutopilotSection channelId={channelId} />
 
       {/* 1. 基本情報 */}
       <Section title="📝 基本情報" defaultOpen>

@@ -39,6 +39,7 @@ import api_phase3
 import api_phase4
 import api_phase5
 import api_phase6
+import api_channel_autopilot
 
 
 # Models
@@ -156,6 +157,7 @@ app.include_router(api_phase3.router)
 app.include_router(api_phase4.router)
 app.include_router(api_phase5.router)
 app.include_router(api_phase6.router)
+app.include_router(api_channel_autopilot.router)
 
 
 # ── Global instances (initialized at startup) ──
@@ -1256,6 +1258,12 @@ async def startup_event():
         api_phase4.setup_on_startup()
     except Exception as e:
         print(f"⚠️ Phase 4 startup failed: {e}")
+
+    # Channel Autopilot: 既存チャンネルの自動投稿ジョブを復元
+    try:
+        api_channel_autopilot.restore_all()
+    except Exception as e:
+        print(f"⚠️ Autopilot restore failed: {e}")
 
     print()
     print("🏭 YouTube Factory ready!")
