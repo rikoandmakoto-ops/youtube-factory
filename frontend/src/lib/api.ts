@@ -1566,3 +1566,223 @@ export async function getABTest(testId: string): Promise<ABTest> {
     noStore: true,
   });
 }
+
+// ── Phase D: PDCA (evaluations / ab-reconciliation / improvements) ──
+
+export type WeakSection = {
+  section?: string;
+  ratio_from?: number;
+  ratio_to?: number;
+  drop_rate?: number;
+  drop_percent?: number;
+  sample_text?: string;
+  issue?: string;
+  [k: string]: unknown;
+};
+
+export type CommentFeedbackEntry = {
+  comment?: string;
+  section?: string;
+  action?: string;
+  [k: string]: unknown;
+};
+
+export type ScenarioEvaluation = {
+  video_id: string;
+  channel_id: string;
+  evaluated_at: number;
+  hook_strength: number;
+  specificity: number;
+  pacing: number;
+  cta_effectiveness: number;
+  wording_quality: number;
+  overall: number;
+  weak_sections?: WeakSection[];
+  improvement_suggestions?: string[];
+  comment_feedback?: CommentFeedbackEntry[];
+  scenario_path?: string | null;
+  video_title?: string | null;
+};
+
+export type WeakPatternSummary = {
+  count: number;
+  averages?: Record<string, number>;
+  weak_sections?: Array<{
+    section: string;
+    frequency: number;
+    frequency_ratio: number;
+  }>;
+  recent_suggestions?: string[];
+};
+
+export type EvaluationsListResponse = {
+  channel_id: string;
+  count: number;
+  items: ScenarioEvaluation[];
+  weak_patterns?: WeakPatternSummary;
+};
+
+export async function listEvaluations(
+  channelId: string,
+  limit = 100
+): Promise<EvaluationsListResponse> {
+  return call<EvaluationsListResponse>(
+    `/api/evaluations/${encodeURIComponent(channelId)}?limit=${limit}`,
+    { noStore: true }
+  );
+}
+
+export async function getEvaluation(
+  channelId: string,
+  videoId: string
+): Promise<{ evaluation: ScenarioEvaluation; retention?: unknown; comment_summary?: unknown }> {
+  return call(
+    `/api/evaluations/${encodeURIComponent(channelId)}/${encodeURIComponent(videoId)}`,
+    { noStore: true }
+  );
+}
+
+export async function runEvaluations(
+  channelId: string,
+  body?: { use_gpt?: boolean; only_new?: boolean; max_videos?: number }
+): Promise<Record<string, unknown>> {
+  return call(`/api/evaluations/${encodeURIComponent(channelId)}/run`, {
+    method: 'POST',
+    body: JSON.stringify(body ?? {}),
+    noStore: true,
+  });
+}
+
+export type AbReconciliationItem = {
+  test_id: string;
+  variant_index: number;
+  channel_id?: string | null;
+  video_id?: string | null;
+  pattern_type?: string | null;
+  predicted_score?: number | null;
+  actual_ctr?: number | null;
+  actual_impressions?: number | null;
+  actual_views?: number | null;
+  reconciled_at: number;
+};
+
+export type AbPatternInsight = {
+  pattern_type: string;
+  samples: number;
+  predicted_score_avg?: number | null;
+  actual_ctr_avg?: number | null;
+  actual_ctr_percent_avg?: number | null;
+};
+
+export type AbReconciliationResponse = {
+  channel_id: string;
+  count: number;
+  items: AbReconciliationItem[];
+  pattern_insights?: {
+    channel_id: string;
+    total_samples: number;
+    overall_actual_ctr_avg?: number | null;
+    patterns: AbPatternInsight[];
+  };
+};
+
+export async function listAbReconciliation(
+  channelId: string,
+  limit = 200
+): Promise<AbReconciliationResponse> {
+  return call<AbReconciliationResponse>(
+    `/api/ab-reconciliation/${encodeURIComponent(channelId)}?limit=${limit}`,
+    { noStore: true }
+  );
+}
+
+export async function runAbReconciliation(
+  channelId: string,
+  body?: { min_age_days?: number }
+): Promise<Record<string, unknown>> {
+  return call(`/api/ab-reconciliation/${encodeURIComponent(channelId)}/run`, {
+    method: 'POST',
+    body: JSON.stringify(body ?? {}),
+    noStore: true,
+  });
+}
+
+export type ImprovementCatchcopy = {
+  pattern?: string;
+  title?: string;
+  thumb_copy?: string[];
+  score?: number;
+  comment?: string;
+  [k: string]: unknown;
+};
+
+export type ImprovementEntry = {
+  video_id: string;
+  channel_id: string;
+  created_at: number;
+  updated_at: number;
+  status: 'pending' | 'applied' | 'dismissed' | string;
+  current_title?: string | null;
+  current_ctr?: number | null;
+  channel_avg_ctr?: number | null;
+  suggested_titles?: string[];
+  suggested_catchcopies?: ImprovementCatchcopy[];
+  predicted_improvement?: number | null;
+};
+
+export type ImprovementsListResponse = {
+  channel_id: string;
+  count: number;
+  items: ImprovementEntry[];
+  channel_avg_ctr?: number | null;
+};
+
+export async function listImprovements(
+  channelId: string,
+  opts?: { status?: string; limit?: number }
+): Promise<ImprovementsListResponse> {
+  const sp = new URLSearchParams();
+  if (opts?.status) sp.set('status', opts.status);
+  if (opts?.limit) sp.set('limit', String(opts.limit));
+  const qs = sp.toString();
+  return call<ImprovementsListResponse>(
+    `/api/improvements/${encodeURIComponent(channelId)}${qs ? `?${qs}` : ''}`,
+    { noStore: true }
+  );
+}
+
+export async function runImprovementDetection(
+  channelId: string,
+  body?: { threshold_ratio?: number; max_videos?: number; regen_titles?: boolean }
+): Promise<Record<string, unknown>> {
+  return call(`/api/improvements/${encodeURIComponent(channelId)}/run`, {
+    method: 'POST',
+    body: JSON.stringify(body ?? {}),
+    noStore: true,
+  });
+}
+
+export async function regenerateImprovementCatchcopy(
+  channelId: string,
+  videoId: string
+): Promise<ImprovementEntry> {
+  return call<ImprovementEntry>(
+    `/api/improvements/${encodeURIComponent(channelId)}/${encodeURIComponent(videoId)}/regenerate`,
+    { method: 'POST', noStore: true }
+  );
+}
+
+export async function setImprovementStatus(
+  channelId: string,
+  videoId: string,
+  status: 'pending' | 'applied' | 'dismissed'
+): Promise<{ video_id: string; status: string }> {
+  return call(
+    `/api/improvements/${encodeURIComponent(channelId)}/${encodeURIComponent(videoId)}/status`,
+    {
+      method: 'PUT',
+      body: JSON.stringify({ status }),
+      noStore: true,
+    }
+  );
+}

@@ -46,6 +46,12 @@ class SyncRequest(BaseModel):
     sync_comments_for: int = Field(default=5, ge=0, le=50)
     max_comments_per_video: int = Field(default=200, ge=1, le=1000)
     analyze_comments: bool = True
+    # Phase D: PDCA 連鎖実行
+    run_scenario_evaluation: bool = True
+    run_ab_reconciliation: bool = True
+    run_improvement_detection: bool = True
+    improvement_threshold_ratio: float = Field(default=0.8, ge=0.1, le=1.0)
+    ab_min_age_days: float = Field(default=7.0, ge=0.0, le=365.0)
 
 
 class AnalyzeRequest(BaseModel):
@@ -188,6 +194,48 @@ async def sync_channel(
                     )
                 )
         result["comments"] = comment_results
+
+        # Phase D: PDCA 連鎖 — 評価 → AB 答え合わせ → 改善キュー
+        pdca: Dict[str, Any] = {}
+        try:
+            from pipeline.analytics import (
+                ab_reconciler,
+                improvement_queue,
+                scenario_evaluator,
+            )
+
+            if opts.run_scenario_evaluation:
+                try:
+                    pdca["scenario_evaluation"] = scenario_evaluator.evaluate_channel(
+                        channel_id,
+                        max_videos=opts.max_videos,
+                        use_gpt=True,
+                        only_new=True,
+                    )
+                except Exception as e:
+                    pdca["scenario_evaluation"] = {"error": str(e)}
+
+            if opts.run_ab_reconciliation:
+                try:
+                    pdca["ab_reconciliation"] = ab_reconciler.reconcile_channel(
+                        channel_id, min_age_days=opts.ab_min_age_days
+                    )
+                except Exception as e:
+                    pdca["ab_reconciliation"] = {"error": str(e)}
+
+            if opts.run_improvement_detection:
+                try:
+                    pdca["improvement_queue"] = improvement_queue.detect_and_queue(
+                        channel_id,
+                        threshold_ratio=opts.improvement_threshold_ratio,
+                        max_videos=20,
+                        regen_titles=True,
+                    )
+                except Exception as e:
+                    pdca["improvement_queue"] = {"error": str(e)}
+        except Exception as e:
+            pdca["error"] = f"pdca chain failed: {e}"
+        result["pdca"] = pdca
         return result
     finally:
         lock.release()

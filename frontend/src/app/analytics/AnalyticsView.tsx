@@ -4,9 +4,14 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
 import type {
   ABTest,
+  AbReconciliationResponse,
   AnalyticsOverview,
   AnalyticsVideoMetric,
   Channel,
+  EvaluationsListResponse,
+  ImprovementEntry,
+  ImprovementsListResponse,
+  ScenarioEvaluation,
   TrendsResponse,
 } from '@/lib/api';
 
@@ -19,8 +24,13 @@ type Props = {
   initialVideos: AnalyticsVideoMetric[];
   initialTrends: TrendsResponse | null;
   initialABTests: ABTest[];
+  initialEvaluations: EvaluationsListResponse | null;
+  initialAbReconciliation: AbReconciliationResponse | null;
+  initialImprovements: ImprovementsListResponse | null;
   initialErrors: SectionError[];
 };
+
+type TabId = 'overview' | 'evaluations' | 'reconciliation' | 'improvements';
 
 type SyncState =
   | { phase: 'idle' }
@@ -82,6 +92,9 @@ export default function AnalyticsView({
   initialVideos,
   initialTrends,
   initialABTests,
+  initialEvaluations,
+  initialAbReconciliation,
+  initialImprovements,
   initialErrors,
 }: Props) {
   const router = useRouter();
@@ -91,7 +104,19 @@ export default function AnalyticsView({
   const [videos, setVideos] = useState(initialVideos);
   const [trends, setTrends] = useState(initialTrends);
   const [abTests, setABTests] = useState(initialABTests);
+  const [evaluations, setEvaluations] =
+    useState<EvaluationsListResponse | null>(initialEvaluations);
+  const [abReconciliation, setAbReconciliation] =
+    useState<AbReconciliationResponse | null>(initialAbReconciliation);
+  const [improvements, setImprovements] =
+    useState<ImprovementsListResponse | null>(initialImprovements);
   const [errors, setErrors] = useState<SectionError[]>(initialErrors);
+  const [tab, setTab] = useState<TabId>(() => {
+    const t = searchParams.get('tab') as TabId | null;
+    if (t === 'evaluations' || t === 'reconciliation' || t === 'improvements')
+      return t;
+    return 'overview';
+  });
 
   const [sync, setSync] = useState<SyncState>({ phase: 'idle' });
   const [refreshing, setRefreshing] = useState(false);
@@ -107,13 +132,20 @@ export default function AnalyticsView({
     router.push(`/analytics?${sp.toString()}`);
   };
 
+  const switchTab = (next: TabId) => {
+    setTab(next);
+    const sp = new URLSearchParams(searchParams.toString());
+    sp.set('tab', next);
+    router.replace(`/analytics?${sp.toString()}`);
+  };
+
   const reload = async () => {
     setRefreshing(true);
     setErrors([]);
     const collect = (section: string, message: string) =>
       setErrors((prev) => [...prev, { section, message }]);
 
-    const [ov, vid, tr, ab] = await Promise.allSettled([
+    const [ov, vid, tr, ab, ev, rc, im] = await Promise.allSettled([
       fetch(`/api/analytics/channel/${encodeURIComponent(channelId)}/overview?days=30`, {
         cache: 'no-store',
       }).then((r) => (r.ok ? r.json() : Promise.reject(r))),
@@ -126,6 +158,15 @@ export default function AnalyticsView({
       fetch(`/api/ab-test?channel_id=${encodeURIComponent(channelId)}&limit=20`, {
         cache: 'no-store',
       }).then((r) => (r.ok ? r.json() : Promise.reject(r))),
+      fetch(`/api/evaluations/${encodeURIComponent(channelId)}?limit=100`, {
+        cache: 'no-store',
+      }).then((r) => (r.ok ? r.json() : Promise.reject(r))),
+      fetch(`/api/ab-reconciliation/${encodeURIComponent(channelId)}?limit=200`, {
+        cache: 'no-store',
+      }).then((r) => (r.ok ? r.json() : Promise.reject(r))),
+      fetch(`/api/improvements/${encodeURIComponent(channelId)}?limit=100`, {
+        cache: 'no-store',
+      }).then((r) => (r.ok ? r.json() : Promise.reject(r))),
     ]);
 
     if (ov.status === 'fulfilled') setOverview(ov.value as AnalyticsOverview);
@@ -136,8 +177,131 @@ export default function AnalyticsView({
     else collect('トレンド', '取得に失敗しました');
     if (ab.status === 'fulfilled') setABTests((ab.value as { items: ABTest[] }).items || []);
     else collect('AB テスト', '取得に失敗しました');
+    if (ev.status === 'fulfilled')
+      setEvaluations(ev.value as EvaluationsListResponse);
+    else collect('シナリオ評価', '取得に失敗しました');
+    if (rc.status === 'fulfilled')
+      setAbReconciliation(rc.value as AbReconciliationResponse);
+    else collect('AB 答え合わせ', '取得に失敗しました');
+    if (im.status === 'fulfilled')
+      setImprovements(im.value as ImprovementsListResponse);
+    else collect('改善キュー', '取得に失敗しました');
 
     setRefreshing(false);
+  };
+
+  const triggerEvaluations = async () => {
+    try {
+      const res = await fetch(
+        `/api/evaluations/${encodeURIComponent(channelId)}/run`,
+        {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({}),
+        }
+      );
+      if (!res.ok) throw new Error(`status ${res.status}`);
+      await reload();
+    } catch (e) {
+      setErrors((prev) => [
+        ...prev,
+        {
+          section: 'シナリオ評価',
+          message: e instanceof Error ? e.message : '評価実行に失敗',
+        },
+      ]);
+    }
+  };
+
+  const triggerReconciliation = async () => {
+    try {
+      const res = await fetch(
+        `/api/ab-reconciliation/${encodeURIComponent(channelId)}/run`,
+        {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({}),
+        }
+      );
+      if (!res.ok) throw new Error(`status ${res.status}`);
+      await reload();
+    } catch (e) {
+      setErrors((prev) => [
+        ...prev,
+        {
+          section: 'AB 答え合わせ',
+          message: e instanceof Error ? e.message : '実行に失敗',
+        },
+      ]);
+    }
+  };
+
+  const triggerImprovementDetect = async () => {
+    try {
+      const res = await fetch(
+        `/api/improvements/${encodeURIComponent(channelId)}/run`,
+        {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({}),
+        }
+      );
+      if (!res.ok) throw new Error(`status ${res.status}`);
+      await reload();
+    } catch (e) {
+      setErrors((prev) => [
+        ...prev,
+        {
+          section: '改善キュー',
+          message: e instanceof Error ? e.message : '実行に失敗',
+        },
+      ]);
+    }
+  };
+
+  const regenerateForVideo = async (videoId: string) => {
+    try {
+      const res = await fetch(
+        `/api/improvements/${encodeURIComponent(channelId)}/${encodeURIComponent(videoId)}/regenerate`,
+        { method: 'POST' }
+      );
+      if (!res.ok) throw new Error(`status ${res.status}`);
+      await reload();
+    } catch (e) {
+      setErrors((prev) => [
+        ...prev,
+        {
+          section: '改善キュー',
+          message: e instanceof Error ? e.message : '再生成に失敗',
+        },
+      ]);
+    }
+  };
+
+  const setEntryStatus = async (
+    videoId: string,
+    status: 'pending' | 'applied' | 'dismissed'
+  ) => {
+    try {
+      const res = await fetch(
+        `/api/improvements/${encodeURIComponent(channelId)}/${encodeURIComponent(videoId)}/status`,
+        {
+          method: 'PUT',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ status }),
+        }
+      );
+      if (!res.ok) throw new Error(`status ${res.status}`);
+      await reload();
+    } catch (e) {
+      setErrors((prev) => [
+        ...prev,
+        {
+          section: '改善キュー',
+          message: e instanceof Error ? e.message : 'ステータス更新に失敗',
+        },
+      ]);
+    }
   };
 
   const handleSync = async () => {
@@ -255,17 +419,71 @@ export default function AnalyticsView({
         </section>
       )}
 
-      {/* KPI カード */}
-      <OverviewSection overview={overview} />
+      <TabBar tab={tab} onChange={switchTab} />
 
-      {/* 動画別パフォーマンス */}
-      <VideosSection videos={videos} />
+      {tab === 'overview' && (
+        <>
+          <OverviewSection overview={overview} />
+          <VideosSection videos={videos} />
+          <TrendsSection trends={trends} />
+          <ABTestsSection items={abTests} />
+        </>
+      )}
 
-      {/* トレンド */}
-      <TrendsSection trends={trends} />
+      {tab === 'evaluations' && (
+        <EvaluationsTab
+          data={evaluations}
+          onRun={triggerEvaluations}
+        />
+      )}
 
-      {/* AB テスト */}
-      <ABTestsSection items={abTests} />
+      {tab === 'reconciliation' && (
+        <ReconciliationTab
+          data={abReconciliation}
+          onRun={triggerReconciliation}
+        />
+      )}
+
+      {tab === 'improvements' && (
+        <ImprovementsTab
+          data={improvements}
+          onRun={triggerImprovementDetect}
+          onRegenerate={regenerateForVideo}
+          onSetStatus={setEntryStatus}
+        />
+      )}
+    </div>
+  );
+}
+
+function TabBar({
+  tab,
+  onChange,
+}: {
+  tab: TabId;
+  onChange: (next: TabId) => void;
+}) {
+  const items: { id: TabId; label: string }[] = [
+    { id: 'overview', label: '概要' },
+    { id: 'evaluations', label: 'シナリオ評価' },
+    { id: 'reconciliation', label: 'AB 実績' },
+    { id: 'improvements', label: '改善キュー' },
+  ];
+  return (
+    <div className="flex gap-1 overflow-x-auto -mx-1 px-1">
+      {items.map((it) => (
+        <button
+          key={it.id}
+          onClick={() => onChange(it.id)}
+          className={`whitespace-nowrap px-3 py-1.5 rounded-lg text-xs font-semibold border ${
+            tab === it.id
+              ? 'bg-accent/20 border-accent/60 text-accent'
+              : 'bg-bg-elev/40 border-border/40 text-slate-300 hover:text-slate-100'
+          }`}
+        >
+          {it.label}
+        </button>
+      ))}
     </div>
   );
 }
@@ -707,6 +925,628 @@ function ABTestCard({ test }: { test: ABTest }) {
           })}
         </div>
       )}
+    </li>
+  );
+}
+
+// ============================================================
+// Phase D: Evaluations Tab
+// ============================================================
+
+const EVAL_AXES: { key: keyof ScenarioEvaluation; label: string }[] = [
+  { key: 'hook_strength', label: 'フック' },
+  { key: 'specificity', label: '具体性' },
+  { key: 'pacing', label: 'テンポ' },
+  { key: 'cta_effectiveness', label: 'CTA' },
+  { key: 'wording_quality', label: '言回し' },
+  { key: 'overall', label: '総合' },
+];
+
+function EvaluationsTab({
+  data,
+  onRun,
+}: {
+  data: EvaluationsListResponse | null;
+  onRun: () => void;
+}) {
+  const [busy, setBusy] = useState(false);
+  const items = data?.items ?? [];
+  const weak = data?.weak_patterns;
+
+  const handleRun = async () => {
+    setBusy(true);
+    try {
+      await onRun();
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <>
+      <section className="card space-y-3">
+        <div className="flex items-center justify-between gap-2">
+          <h2 className="font-bold">🧠 シナリオ評価</h2>
+          <button
+            className="btn-secondary py-1.5 px-3 text-xs"
+            onClick={handleRun}
+            disabled={busy}
+            aria-busy={busy}
+          >
+            {busy ? '実行中…' : '🤖 未評価の動画を評価'}
+          </button>
+        </div>
+
+        {weak && weak.count > 0 && weak.averages && (
+          <div className="rounded-lg bg-bg-elev/60 border border-border/40 p-3">
+            <h3 className="text-xs text-slate-400 mb-2">
+              直近 {weak.count} 本の平均スコア
+            </h3>
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+              {EVAL_AXES.map((ax) => (
+                <ScoreBar
+                  key={ax.key}
+                  label={ax.label}
+                  value={Number(weak.averages?.[ax.key] ?? 0)}
+                />
+              ))}
+            </div>
+            {weak.weak_sections && weak.weak_sections.length > 0 && (
+              <div className="mt-3 text-xs text-slate-300">
+                <span className="text-slate-400">頻発する弱点セクション:</span>{' '}
+                {weak.weak_sections
+                  .slice(0, 4)
+                  .map(
+                    (w) =>
+                      `${w.section} (${Math.round(
+                        (w.frequency_ratio || 0) * 100
+                      )}%)`
+                  )
+                  .join(' / ')}
+              </div>
+            )}
+            {weak.recent_suggestions && weak.recent_suggestions.length > 0 && (
+              <div className="mt-3">
+                <div className="text-xs text-slate-400 mb-1">
+                  直近の改善提案ピックアップ:
+                </div>
+                <ul className="space-y-1 text-xs text-slate-200">
+                  {weak.recent_suggestions.slice(0, 3).map((s, i) => (
+                    <li key={i}>• {s}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+      </section>
+
+      {items.length === 0 ? (
+        <section className="card">
+          <p className="text-sm text-slate-500 text-center py-6">
+            まだ評価データがありません。同期後に「未評価の動画を評価」を実行してください。
+          </p>
+        </section>
+      ) : (
+        <ul className="space-y-3">
+          {items.map((ev) => (
+            <EvaluationCard key={ev.video_id} ev={ev} />
+          ))}
+        </ul>
+      )}
+    </>
+  );
+}
+
+function ScoreBar({ label, value }: { label: string; value: number }) {
+  const v = Math.max(0, Math.min(10, Number(value) || 0));
+  const pct = (v / 10) * 100;
+  const color =
+    v >= 8 ? 'bg-emerald-400' : v >= 6 ? 'bg-amber-300' : 'bg-rose-400';
+  return (
+    <div className="text-center">
+      <div className="text-[10px] text-slate-400">{label}</div>
+      <div className="h-1.5 mt-1 bg-bg-card rounded-full overflow-hidden">
+        <div className={`${color} h-full`} style={{ width: `${pct}%` }} />
+      </div>
+      <div className="text-[11px] tabular-nums mt-0.5">{v.toFixed(1)}</div>
+    </div>
+  );
+}
+
+function EvaluationCard({ ev }: { ev: ScenarioEvaluation }) {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <li className="card space-y-2">
+      <button
+        type="button"
+        onClick={() => setExpanded((x) => !x)}
+        className="w-full text-left"
+      >
+        <div className="flex items-baseline justify-between gap-2">
+          <p className="text-sm font-semibold text-slate-100 truncate">
+            {ev.video_title || ev.video_id}
+          </p>
+          <span className="text-[10px] text-slate-500 shrink-0">
+            {formatDateTime(new Date(ev.evaluated_at * 1000).toISOString())}
+          </span>
+        </div>
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-2">
+          {EVAL_AXES.map((ax) => (
+            <ScoreBar key={ax.key} label={ax.label} value={Number(ev[ax.key] ?? 0)} />
+          ))}
+        </div>
+      </button>
+
+      {expanded && (
+        <div className="space-y-3 pt-2 border-t border-border/30">
+          {ev.weak_sections && ev.weak_sections.length > 0 && (
+            <div>
+              <h4 className="text-xs text-slate-400 mb-1">⚠️ 弱点セクション</h4>
+              <ul className="space-y-1">
+                {ev.weak_sections.map((w, i) => (
+                  <li
+                    key={i}
+                    className="text-xs text-slate-200 rounded bg-rose-500/10 border border-rose-500/30 px-2 py-1.5"
+                  >
+                    <span className="font-bold">{w.section || '?'}</span>
+                    {typeof w.drop_percent === 'number' && (
+                      <span className="ml-1 text-rose-300 tabular-nums">
+                        ({w.drop_percent.toFixed(1)}% 離脱)
+                      </span>
+                    )}
+                    {w.issue && (
+                      <div className="text-slate-400 mt-1">{w.issue}</div>
+                    )}
+                    {w.sample_text && (
+                      <div className="text-slate-500 mt-1 italic">
+                        “{w.sample_text}”
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {ev.improvement_suggestions && ev.improvement_suggestions.length > 0 && (
+            <div>
+              <h4 className="text-xs text-slate-400 mb-1">💡 改善提案</h4>
+              <ul className="space-y-1">
+                {ev.improvement_suggestions.map((s, i) => (
+                  <li
+                    key={i}
+                    className="text-xs text-slate-100 rounded bg-emerald-500/10 border border-emerald-500/30 px-2 py-1.5"
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {ev.comment_feedback && ev.comment_feedback.length > 0 && (
+            <div>
+              <h4 className="text-xs text-slate-400 mb-1">
+                💬 コメントフィードバック
+              </h4>
+              <ul className="space-y-1">
+                {ev.comment_feedback.slice(0, 5).map((c, i) => (
+                  <li
+                    key={i}
+                    className="text-xs rounded bg-bg-elev/60 border border-border/40 px-2 py-1.5"
+                  >
+                    {c.comment && (
+                      <div className="text-slate-200">“{c.comment}”</div>
+                    )}
+                    {(c.section || c.action) && (
+                      <div className="text-slate-500 mt-1">
+                        {c.section ? `[${c.section}] ` : ''}
+                        {c.action || ''}
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+    </li>
+  );
+}
+
+// ============================================================
+// Phase D: AB Reconciliation Tab
+// ============================================================
+
+function ReconciliationTab({
+  data,
+  onRun,
+}: {
+  data: AbReconciliationResponse | null;
+  onRun: () => void;
+}) {
+  const [busy, setBusy] = useState(false);
+  const items = data?.items ?? [];
+  const insights = data?.pattern_insights;
+  const handleRun = async () => {
+    setBusy(true);
+    try {
+      await onRun();
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <>
+      <section className="card space-y-3">
+        <div className="flex items-center justify-between gap-2">
+          <h2 className="font-bold">🎯 AB テスト実績</h2>
+          <button
+            className="btn-secondary py-1.5 px-3 text-xs"
+            onClick={handleRun}
+            disabled={busy}
+          >
+            {busy ? '実行中…' : '🔁 7日経過分の答え合わせ'}
+          </button>
+        </div>
+
+        {insights && insights.patterns && insights.patterns.length > 0 && (
+          <div className="rounded-lg bg-bg-elev/60 border border-border/40 p-3">
+            <h3 className="text-xs text-slate-400 mb-2">
+              パターン別実績（n={insights.total_samples}）
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              {insights.patterns.map((p) => (
+                <div
+                  key={p.pattern_type}
+                  className="rounded bg-bg-card border border-border/40 p-2"
+                >
+                  <div className="text-xs font-semibold text-slate-100">
+                    {labelForPattern(p.pattern_type)} (n={p.samples})
+                  </div>
+                  <div className="text-[11px] text-slate-400 mt-1">
+                    実 CTR 平均:{' '}
+                    <span className="text-emerald-300 tabular-nums">
+                      {p.actual_ctr_percent_avg != null
+                        ? `${p.actual_ctr_percent_avg.toFixed(2)}%`
+                        : '—'}
+                    </span>
+                  </div>
+                  <div className="text-[11px] text-slate-400">
+                    予測スコア平均:{' '}
+                    <span className="text-slate-100 tabular-nums">
+                      {p.predicted_score_avg != null
+                        ? p.predicted_score_avg.toFixed(2)
+                        : '—'}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {insights.overall_actual_ctr_avg != null && (
+              <p className="text-[11px] text-slate-500 mt-2">
+                全体平均実 CTR:{' '}
+                {(insights.overall_actual_ctr_avg * 100).toFixed(2)}%
+              </p>
+            )}
+          </div>
+        )}
+      </section>
+
+      <section className="card">
+        <h3 className="font-bold text-sm mb-2">予測 vs 実 CTR (個別)</h3>
+        {items.length === 0 ? (
+          <p className="text-sm text-slate-500 text-center py-6">
+            紐付け済みの AB テストがまだありません。
+          </p>
+        ) : (
+          <div className="overflow-x-auto -mx-4 px-4">
+            <table className="w-full text-xs">
+              <thead className="text-[10px] uppercase text-slate-500">
+                <tr className="border-b border-border/40">
+                  <th className="text-left py-2 pr-2">test_id</th>
+                  <th className="text-left py-2 pr-2">パターン</th>
+                  <th className="text-right py-2 px-2">予測</th>
+                  <th className="text-right py-2 px-2">実 CTR</th>
+                  <th className="text-right py-2 px-2">imp</th>
+                  <th className="text-right py-2 pl-2">差分</th>
+                </tr>
+              </thead>
+              <tbody>
+                {items.map((r) => {
+                  const ctrPct =
+                    r.actual_ctr != null ? r.actual_ctr * 100 : null;
+                  // simple delta: actual_ctr% vs (predicted_score gives target like 5 = 5%)
+                  const delta =
+                    ctrPct != null && r.predicted_score != null
+                      ? ctrPct - r.predicted_score
+                      : null;
+                  return (
+                    <tr
+                      key={`${r.test_id}-${r.variant_index}`}
+                      className="border-b border-border/20"
+                    >
+                      <td className="py-1.5 pr-2 truncate max-w-[10rem]">
+                        {r.test_id.slice(-12)}
+                      </td>
+                      <td className="py-1.5 pr-2">
+                        {labelForPattern(r.pattern_type)}
+                      </td>
+                      <td className="py-1.5 px-2 text-right tabular-nums">
+                        {r.predicted_score != null
+                          ? r.predicted_score.toFixed(2)
+                          : '—'}
+                      </td>
+                      <td className="py-1.5 px-2 text-right tabular-nums">
+                        {ctrPct != null ? `${ctrPct.toFixed(2)}%` : '—'}
+                      </td>
+                      <td className="py-1.5 px-2 text-right tabular-nums">
+                        {r.actual_impressions != null
+                          ? formatNumber(r.actual_impressions)
+                          : '—'}
+                      </td>
+                      <td className="py-1.5 pl-2 text-right tabular-nums">
+                        {delta != null ? (
+                          <span
+                            className={
+                              delta >= 0 ? 'text-emerald-300' : 'text-rose-300'
+                            }
+                          >
+                            {delta >= 0 ? '+' : ''}
+                            {delta.toFixed(2)}
+                          </span>
+                        ) : (
+                          '—'
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+    </>
+  );
+}
+
+function labelForPattern(p?: string | null): string {
+  if (!p) return '—';
+  return (
+    { question: '疑問形', number: '数字入り', surprise: '意外性' } as Record<
+      string,
+      string
+    >
+  )[p] || p;
+}
+
+// ============================================================
+// Phase D: Improvement Queue Tab
+// ============================================================
+
+function ImprovementsTab({
+  data,
+  onRun,
+  onRegenerate,
+  onSetStatus,
+}: {
+  data: ImprovementsListResponse | null;
+  onRun: () => void;
+  onRegenerate: (videoId: string) => Promise<void>;
+  onSetStatus: (
+    videoId: string,
+    status: 'pending' | 'applied' | 'dismissed'
+  ) => Promise<void>;
+}) {
+  const [busy, setBusy] = useState(false);
+  const items = data?.items ?? [];
+  const avg = data?.channel_avg_ctr;
+  const handleRun = async () => {
+    setBusy(true);
+    try {
+      await onRun();
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <>
+      <section className="card space-y-2">
+        <div className="flex items-center justify-between gap-2">
+          <h2 className="font-bold">🛠 改善キュー</h2>
+          <button
+            className="btn-secondary py-1.5 px-3 text-xs"
+            onClick={handleRun}
+            disabled={busy}
+          >
+            {busy ? '検出中…' : '🔍 低 CTR 動画を再検出'}
+          </button>
+        </div>
+        <p className="text-xs text-slate-400">
+          チャンネル平均 CTR{' '}
+          <span className="text-slate-100 tabular-nums">
+            {avg != null ? `${(avg * 100).toFixed(2)}%` : '—'}
+          </span>{' '}
+          の 80% 未満を要改善として検出します。
+        </p>
+      </section>
+
+      {items.length === 0 ? (
+        <section className="card">
+          <p className="text-sm text-slate-500 text-center py-6">
+            改善キューはまだ空です。
+          </p>
+        </section>
+      ) : (
+        <ul className="space-y-3">
+          {items.map((it) => (
+            <ImprovementCard
+              key={it.video_id}
+              entry={it}
+              onRegenerate={onRegenerate}
+              onSetStatus={onSetStatus}
+            />
+          ))}
+        </ul>
+      )}
+    </>
+  );
+}
+
+function ImprovementCard({
+  entry,
+  onRegenerate,
+  onSetStatus,
+}: {
+  entry: ImprovementEntry;
+  onRegenerate: (videoId: string) => Promise<void>;
+  onSetStatus: (
+    videoId: string,
+    status: 'pending' | 'applied' | 'dismissed'
+  ) => Promise<void>;
+}) {
+  const [busy, setBusy] = useState(false);
+  const ctrPct = entry.current_ctr != null ? entry.current_ctr * 100 : null;
+  const avgPct =
+    entry.channel_avg_ctr != null ? entry.channel_avg_ctr * 100 : null;
+  const ratio =
+    ctrPct != null && avgPct != null && avgPct > 0 ? ctrPct / avgPct : null;
+
+  const wrap = async (fn: () => Promise<void>) => {
+    setBusy(true);
+    try {
+      await fn();
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <li
+      className={`card space-y-3 ${
+        entry.status === 'applied'
+          ? 'border-emerald-500/40'
+          : entry.status === 'dismissed'
+          ? 'opacity-60'
+          : ''
+      }`}
+    >
+      <div className="flex items-start justify-between gap-2">
+        <div className="min-w-0">
+          <p className="text-sm font-semibold text-slate-100 truncate">
+            {entry.current_title || entry.video_id}
+          </p>
+          <p className="text-[11px] text-slate-500 truncate">
+            {entry.video_id}
+          </p>
+        </div>
+        <span
+          className={`text-[10px] uppercase tracking-wide px-2 py-0.5 rounded shrink-0 ${
+            entry.status === 'applied'
+              ? 'bg-emerald-500/20 text-emerald-300'
+              : entry.status === 'dismissed'
+              ? 'bg-slate-500/20 text-slate-400'
+              : 'bg-amber-500/20 text-amber-300'
+          }`}
+        >
+          {entry.status}
+        </span>
+      </div>
+
+      <div className="grid grid-cols-3 gap-2 text-[11px]">
+        <div className="rounded bg-bg-elev/60 border border-border/40 p-2">
+          <div className="text-slate-400">現状 CTR</div>
+          <div className="text-rose-300 tabular-nums">
+            {ctrPct != null ? `${ctrPct.toFixed(2)}%` : '—'}
+          </div>
+        </div>
+        <div className="rounded bg-bg-elev/60 border border-border/40 p-2">
+          <div className="text-slate-400">チャンネル平均</div>
+          <div className="text-slate-100 tabular-nums">
+            {avgPct != null ? `${avgPct.toFixed(2)}%` : '—'}
+          </div>
+        </div>
+        <div className="rounded bg-bg-elev/60 border border-border/40 p-2">
+          <div className="text-slate-400">平均比</div>
+          <div className="text-amber-300 tabular-nums">
+            {ratio != null ? `${(ratio * 100).toFixed(0)}%` : '—'}
+          </div>
+        </div>
+      </div>
+
+      {entry.suggested_catchcopies && entry.suggested_catchcopies.length > 0 && (
+        <div className="space-y-1">
+          <h4 className="text-xs text-slate-400">
+            ✨ 新キャッチコピー提案
+            {entry.predicted_improvement != null
+              ? ` — 期待改善 +${entry.predicted_improvement.toFixed(0)}%`
+              : ''}
+          </h4>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            {entry.suggested_catchcopies.map((c, i) => (
+              <div
+                key={i}
+                className="rounded bg-bg-card border border-border/40 p-2"
+              >
+                <div className="flex justify-between text-[10px] text-slate-400 mb-1">
+                  <span>{labelForPattern(c.pattern)}</span>
+                  {c.score != null && (
+                    <span className="text-slate-200 tabular-nums">
+                      ★ {c.score}
+                    </span>
+                  )}
+                </div>
+                {c.title && (
+                  <p className="text-xs text-slate-100 leading-snug">
+                    {c.title}
+                  </p>
+                )}
+                {Array.isArray(c.thumb_copy) && c.thumb_copy.length > 0 && (
+                  <p className="text-[11px] text-slate-300 mt-1 leading-snug">
+                    🖼 {c.thumb_copy.join(' / ')}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className="flex flex-wrap items-center gap-2">
+        <button
+          className="btn-secondary py-1 px-3 text-xs"
+          onClick={() => wrap(() => onRegenerate(entry.video_id))}
+          disabled={busy}
+        >
+          🔁 再生成
+        </button>
+        <button
+          className="btn-primary py-1 px-3 text-xs"
+          onClick={() => wrap(() => onSetStatus(entry.video_id, 'applied'))}
+          disabled={busy || entry.status === 'applied'}
+        >
+          ✅ 適用済みにする
+        </button>
+        <button
+          className="btn-secondary py-1 px-3 text-xs"
+          onClick={() => wrap(() => onSetStatus(entry.video_id, 'dismissed'))}
+          disabled={busy || entry.status === 'dismissed'}
+        >
+          ✖ 却下
+        </button>
+        {entry.status !== 'pending' && (
+          <button
+            className="btn-secondary py-1 px-3 text-xs"
+            onClick={() => wrap(() => onSetStatus(entry.video_id, 'pending'))}
+            disabled={busy}
+          >
+            ↺ 戻す
+          </button>
+        )}
+      </div>
     </li>
   );
 }

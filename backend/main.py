@@ -45,6 +45,7 @@ import api_phase6
 import api_improvement
 import api_channel_autopilot
 import api_analytics
+import api_pdca
 
 
 # Models
@@ -165,6 +166,7 @@ app.include_router(api_phase6.router)
 app.include_router(api_improvement.router)
 app.include_router(api_channel_autopilot.router)
 app.include_router(api_analytics.router)
+app.include_router(api_pdca.router)
 
 
 # ── Global instances (initialized at startup) ──

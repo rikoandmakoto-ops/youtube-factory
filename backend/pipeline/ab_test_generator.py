@@ -153,10 +153,21 @@ def _generate_variants(
         f"- {p['id']} ({p['label']}): {p['guidance']}" for p in PATTERNS
     )
     summary_block = f"\n# シナリオ要約:\n{scenario_summary}" if scenario_summary else ""
+
+    learning_block = ""
+    try:
+        from pipeline.analytics.ab_reconciler import build_ab_learning_addendum
+        addendum = build_ab_learning_addendum(channel_id)
+        if addendum:
+            learning_block = "\n" + addendum + "\n"
+    except Exception:
+        pass
+
     user_prompt = (
         f"YouTube動画のタイトルとサムネキャッチコピーを 3 パターン生成。\n\n"
         f"# テーマ: {theme_title} / 切り口: {theme_angle or '自由'}\n"
-        f"{summary_block}\n\n"
+        f"{summary_block}\n"
+        f"{learning_block}\n"
         f"# パターン仕様（必ず 3 パターンとも返す）\n{patterns_block}\n\n"
         f"# 出力 JSON（厳守）\n"
         '{ "variants": [\n'
