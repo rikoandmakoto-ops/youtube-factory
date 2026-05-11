@@ -14,11 +14,13 @@ YouTube Factory — Phase 1 API
 
 from __future__ import annotations
 
+import asyncio
 import json
 import os
 import shutil
 import time
 import urllib.request
+import uuid
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -27,6 +29,8 @@ from typing import Any, Dict, List, Optional
 from fastapi import APIRouter, Depends, Header, HTTPException, Request, status
 from fastapi.security.utils import get_authorization_scheme_param
 from pydantic import BaseModel, Field
+
+from pipeline.scheduler.job_queue import Job, JobStatus
 
 # ── 依存（main.py から後付け）──
 _state: Dict[str, Any] = {
@@ -456,7 +460,16 @@ def _resolve_gen_type(gen_short: bool) -> str:
 async def start_generate(
     req: GenerateRequest, _=Depends(require_session)
 ) -> GenerateResponse:
-    """テーマからシナリオ生成 → 動画ジョブをキューに投入。"""
+    """テーマからシナリオ生成 → 動画ジョブをキューに投入。
+
+    シナリオ生成は GPT-4o の同期呼び出しで 30〜60s 掛かる。これを
+    リクエスト中に走らせると Vercel のサーバレス・タイムアウトや
+    Safari のタブ・スロットリングでフロント側に "Load failed" が
+    出てしまうので、placeholder ジョブをすぐ作って `job_id` を返し、
+    シナリオ生成は背景タスクに逃がす。ジョブは status=running /
+    progress="シナリオ生成中..." の状態で /api/generate/active に
+    最初から見えるので、タブを切り替えても進捗が消えない。
+    """
     cm = _state.get("channel_manager")
     sg = _state.get("scenario_generator")
     queue = _state.get("job_queue")
@@ -474,38 +487,77 @@ async def start_generate(
 
     target_seconds = max(60, req.duration_minutes * 60)
 
-    try:
-        scenario = sg.generate(
-            ch,
-            theme_override={"title": req.theme, "angle": "ユーザー指定テーマ"},
-            target_duration=target_seconds,
-        )
-        sg.save_scenario(scenario)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Scenario generation failed: {e}")
-
-    job_id = queue.submit(
+    # Placeholder ジョブを先に作る。`scenario_data` はあとから差し替える。
+    # `_queue.put` は呼ばないのでワーカーは拾わない。フロント向け API
+    # （/active, /status）は `_jobs` を見るのでこの時点で進捗が出る。
+    job_id = str(uuid.uuid4())[:8]
+    placeholder = Job(
+        id=job_id,
         channel_id=req.channel_id,
-        scenario_data=scenario,
+        title=req.theme,
+        style="yukkuri",
+        scenario_data={
+            "_preparing": True,
+            "_options": {
+                "generate_thumbnail": req.generate_thumbnail,
+                "copy_to_icloud": req.copy_to_icloud,
+                "duration_minutes": req.duration_minutes,
+                "bgm_volume": req.bgm_volume,
+            },
+        },
         priority=5,
         gen_type=_resolve_gen_type(req.generate_short),
     )
+    placeholder.status = JobStatus.RUNNING
+    placeholder.started_at = datetime.now().isoformat()
+    placeholder.progress = "シナリオ生成中..."
+    with queue._lock:
+        queue._jobs[job_id] = placeholder
 
-    # オプション情報をジョブに付随保存（メタデータ用途）
-    try:
+    async def _prepare_scenario() -> None:
+        """背景タスク: シナリオを生成してジョブをキューに流し込む。"""
+        try:
+            # 同期API。スレッドに逃がして event loop をブロックしない。
+            scenario = await asyncio.to_thread(
+                sg.generate,
+                ch,
+                theme_override={"title": req.theme, "angle": "ユーザー指定テーマ"},
+                target_duration=target_seconds,
+            )
+            await asyncio.to_thread(sg.save_scenario, scenario)
+        except Exception as e:
+            with queue._lock:
+                j = queue._jobs.get(job_id)
+                if j:
+                    j.status = JobStatus.FAILED
+                    j.error = f"Scenario generation failed: {e}"
+                    j.progress = "シナリオ生成に失敗"
+                    j.completed_at = datetime.now().isoformat()
+            print(f"❌ Scenario prep failed for [{job_id}]: {e}")
+            return
+
+        # ユーザーが既に中断していたら enqueue しない。
         with queue._lock:
             j = queue._jobs.get(job_id)
-            if j:
-                j.scenario_data["_options"] = {
-                    "generate_thumbnail": req.generate_thumbnail,
-                    "copy_to_icloud": req.copy_to_icloud,
-                    "duration_minutes": req.duration_minutes,
-                    "bgm_volume": req.bgm_volume,
-                }
-    except Exception:
-        pass
+            if not j:
+                return
+            if j.cancel_requested or j.status == JobStatus.CANCELLED:
+                j.status = JobStatus.CANCELLED
+                j.completed_at = datetime.now().isoformat()
+                j.progress = "中断しました"
+                return
+            # オプション情報を保ったまま scenario_data を差し替える
+            options = j.scenario_data.get("_options") or {}
+            j.scenario_data = dict(scenario)
+            j.scenario_data["_options"] = options
+            j.title = scenario.get("title", j.title)
+            j.status = JobStatus.PENDING
+            j.progress = "順番待ち"
+            queue._queue.put((j.priority, job_id))
+        print(f"📥 Job queued after scenario prep: [{job_id}] {req.theme}")
 
-    return GenerateResponse(job_id=job_id, status="queued")
+    asyncio.create_task(_prepare_scenario())
+    return GenerateResponse(job_id=job_id, status="preparing")
 
 
 def _job_to_status(job: Dict[str, Any]) -> Dict[str, Any]:
@@ -521,7 +573,10 @@ def _job_to_status(job: Dict[str, Any]) -> Dict[str, Any]:
     if s == "pending":
         step, step_label, pct = 1, "順番待ち", 5.0
     elif s == "running":
-        if "イラスト" in progress_msg or "dall-e" in progress_msg or "illustration" in progress_msg:
+        if "シナリオ" in progress_msg or "scenario" in progress_msg:
+            # POST /api/generate 直後の "シナリオ生成中..." 状態
+            step, step_label, pct = 1, "シナリオ生成中", 10.0
+        elif "イラスト" in progress_msg or "dall-e" in progress_msg or "illustration" in progress_msg:
             step, step_label, pct = 2, "DALL-E イラスト生成中", 30.0
         elif "tts" in progress_msg or "音声" in progress_msg or "voicevox" in progress_msg:
             step, step_label, pct = 3, "TTS音声生成中", 55.0
