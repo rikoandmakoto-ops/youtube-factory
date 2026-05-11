@@ -795,6 +795,120 @@ export async function runScheduleNow(id: string): Promise<{ status: string }> {
   });
 }
 
+// ── Channel Autopilot (フルオート自動投稿) ──
+export type AutopilotSchedule = {
+  days_of_week: number[];
+  hour: number;
+  minute: number;
+};
+
+export type AutopilotTheme = {
+  id: string;
+  title: string;
+  angle?: string;
+};
+
+export type AutopilotConfig = {
+  enabled: boolean;
+  schedule: AutopilotSchedule;
+  duration_minutes: number;
+  theme_queue: AutopilotTheme[];
+};
+
+export type AutopilotResponse = {
+  channel_id: string;
+  config: AutopilotConfig;
+  next_run_at: string | null;
+  scheduler_available: boolean;
+};
+
+export type AutopilotUpdate = {
+  enabled?: boolean;
+  schedule?: AutopilotSchedule;
+  duration_minutes?: number;
+};
+
+export async function getAutopilot(channelId: string): Promise<AutopilotResponse> {
+  return call(`/api/channels/${encodeURIComponent(channelId)}/autopilot`, {
+    noStore: true,
+  });
+}
+
+export async function updateAutopilot(
+  channelId: string,
+  patch: AutopilotUpdate
+): Promise<AutopilotResponse> {
+  return call(`/api/channels/${encodeURIComponent(channelId)}/autopilot`, {
+    method: 'PUT',
+    body: JSON.stringify(patch),
+  });
+}
+
+export async function addAutopilotTheme(
+  channelId: string,
+  theme: { title: string; angle?: string }
+): Promise<{ channel_id: string; queue: AutopilotTheme[]; added: AutopilotTheme }> {
+  return call(`/api/channels/${encodeURIComponent(channelId)}/autopilot/queue`, {
+    method: 'POST',
+    body: JSON.stringify(theme),
+  });
+}
+
+export async function reorderAutopilotQueue(
+  channelId: string,
+  queue: AutopilotTheme[]
+): Promise<{ channel_id: string; queue: AutopilotTheme[] }> {
+  return call(`/api/channels/${encodeURIComponent(channelId)}/autopilot/queue`, {
+    method: 'PUT',
+    body: JSON.stringify({ queue }),
+  });
+}
+
+export async function updateAutopilotTheme(
+  channelId: string,
+  themeId: string,
+  patch: { title?: string; angle?: string }
+): Promise<{ channel_id: string; queue: AutopilotTheme[] }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/autopilot/queue/${encodeURIComponent(themeId)}`,
+    {
+      method: 'PATCH',
+      body: JSON.stringify(patch),
+    }
+  );
+}
+
+export async function deleteAutopilotTheme(
+  channelId: string,
+  themeId: string
+): Promise<{ channel_id: string; queue: AutopilotTheme[] }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/autopilot/queue/${encodeURIComponent(themeId)}`,
+    { method: 'DELETE' }
+  );
+}
+
+export async function refillAutopilotQueue(
+  channelId: string,
+  count = 5
+): Promise<{ channel_id: string; queue: AutopilotTheme[]; added: AutopilotTheme[] }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/autopilot/queue/refill`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ count }),
+    }
+  );
+}
+
+export async function runAutopilotNow(
+  channelId: string
+): Promise<{ status: string }> {
+  return call(`/api/channels/${encodeURIComponent(channelId)}/autopilot/run-now`, {
+    method: 'POST',
+  });
+}
+
 // ── Templates ──
 export type Template = {
   id: string;

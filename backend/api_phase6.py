@@ -157,6 +157,7 @@ async def bgm_preview(
     try:
         from pipeline.video_generator import (
             _resolve_bgm_file,
+            _resolve_bgm_for_mood,
             check_voicevox,
             synthesize,
             CHAR_CONFIG,
@@ -166,6 +167,15 @@ async def bgm_preview(
 
     audio_cfg = ((ch.video_format.to_dict() if ch else {}) or {}).get("audio") or {}
     bgm_file = _resolve_bgm_file(audio_cfg.get("bgm_path"), req.channel_id)
+    # Legacy lookup only sees files directly under bgm/. When the channel uses
+    # the per-mood layout (bgm/calm/*, bgm/bright/*, ...), fall back to a
+    # mood-based lookup so the preview matches what the per-scene mix would
+    # actually play.
+    if bgm_file is None and not audio_cfg.get("bgm_path"):
+        try:
+            bgm_file = _resolve_bgm_for_mood("calm", req.channel_id)
+        except Exception:
+            bgm_file = None
 
     use_vv = check_voicevox()
     # Pick a sensible speaker — first character in channel config, else default.
