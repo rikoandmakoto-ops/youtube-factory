@@ -575,6 +575,8 @@ async def list_active_jobs(_=Depends(require_session)) -> Dict[str, Any]:
                     "step": s["step"],
                     "step_label": s["step_label"],
                     "progress": s["progress"],
+                    "channel_id": s.get("channel_id"),
+                    "status": s["status"],
                 })
     except Exception:
         pass

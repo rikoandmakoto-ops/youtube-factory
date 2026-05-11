@@ -251,6 +251,8 @@ export type ActiveJob = {
   step: number;
   step_label: string;
   progress: number;
+  channel_id?: string | null;
+  status?: 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';
 };
 export async function listActiveJobs(): Promise<ActiveJob[]> {
   const data = await call<{ jobs: ActiveJob[] }>('/api/generate/active', {

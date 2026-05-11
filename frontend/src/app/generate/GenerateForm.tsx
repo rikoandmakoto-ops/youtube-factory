@@ -86,6 +86,46 @@ export default function GenerateForm({
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const autoPublishedRef = useRef(false);
   const abAutoTriggeredRef = useRef(false);
+  // 走行中ジョブを再接続したばかりかを示すフラグ。
+  // 直後に走る channel/theme 変更リセット効果が sampleApproved を上書きするのを防ぐ。
+  const justAttachedRef = useRef(false);
+
+  // ページ移動から戻ったときに、サーバ側で走っているジョブに自動で再接続。
+  // /api/jobs/active が pending/running のジョブを返すので、最初の1件を採用する。
+  // 既に jobId がある場合（同セッション内で開始済み）は何もしない。
+  useEffect(() => {
+    if (jobId) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch('/api/jobs/active', { cache: 'no-store' });
+        if (!res.ok) return;
+        const data = await res.json();
+        const active = (data?.jobs ?? []) as Array<{
+          job_id: string;
+          channel_id?: string | null;
+        }>;
+        if (cancelled || active.length === 0) return;
+        // 同じチャンネルの走行ジョブを優先（複数チャンネルに対応）。
+        const match =
+          active.find((j) => j.channel_id && j.channel_id === channelId) ||
+          active[0];
+        justAttachedRef.current = true;
+        setJobId(match.job_id);
+        if (match.channel_id && match.channel_id !== channelId) {
+          setChannelId(match.channel_id);
+        }
+        // 走行中はサンプル承認ゲートをスキップ（既に本生成に進んでいるため）。
+        setSampleApproved(true);
+      } catch {
+        /* ignore */
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // マウント時に一度だけ
 
   // YouTube 接続状態
   useEffect(() => {
@@ -105,6 +145,11 @@ export default function GenerateForm({
 
   // チャンネル/テーマが変わったらサンプルの承認を取り消す（前提が変わるため）
   useEffect(() => {
+    // 走行中ジョブへ再接続した直後はリセットしない（サンプル承認を維持）
+    if (justAttachedRef.current) {
+      justAttachedRef.current = false;
+      return;
+    }
     setSampleApproved(false);
     // サムネプレビューも前提が変わるので消す
     setThumb(null);

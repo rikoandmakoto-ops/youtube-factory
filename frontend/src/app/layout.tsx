@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import GlobalProgressBar from '@/components/GlobalProgressBar';
 
 export const metadata: Metadata = {
   title: 'YouTube Factory',
@@ -20,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen">
+        <GlobalProgressBar />
+        {children}
+      </body>
     </html>
   );
 }
