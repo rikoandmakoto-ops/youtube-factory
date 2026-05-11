@@ -23,7 +23,7 @@ import time
 import urllib.parse
 import urllib.request
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.message import EmailMessage
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -86,6 +86,7 @@ def _init_db() -> None:
                     theme TEXT,                   -- manualのとき
                     duration_minutes INTEGER NOT NULL DEFAULT 12,
                     auto_publish INTEGER NOT NULL DEFAULT 0,
+                    publish_offset_minutes INTEGER,  -- 自動投稿時に「生成完了から N 分後」に公開する。NULL=即時
                     enabled INTEGER NOT NULL DEFAULT 1,
                     last_run_at TEXT,
                     last_run_status TEXT,
@@ -123,6 +124,11 @@ def _init_db() -> None:
                 CREATE INDEX IF NOT EXISTS idx_ab_variants_job ON ab_variants(job_id);
                 """
             )
+            # 既存DB向けの軽量マイグレーション（CREATE TABLE IF NOT EXISTS では追加されないため）
+            try:
+                conn.execute("ALTER TABLE schedules ADD COLUMN publish_offset_minutes INTEGER")
+            except sqlite3.OperationalError:
+                pass  # 既にカラムが存在
             conn.commit()
         finally:
             conn.close()
@@ -145,6 +151,9 @@ class ScheduleIn(BaseModel):
     theme: Optional[str] = None
     duration_minutes: int = Field(default=12, ge=1, le=60)
     auto_publish: bool = False
+    # 自動投稿時に「生成完了時点から N 分後」に YouTube 上で公開する。
+    # None または 0 以下 = 即時公開（既存挙動）。最大 30 日まで。
+    publish_offset_minutes: Optional[int] = Field(default=None, ge=0, le=60 * 24 * 30)
     enabled: bool = True
 
 
@@ -166,6 +175,9 @@ def _row_to_schedule(row: sqlite3.Row) -> Dict[str, Any]:
         d["days_of_week"] = []
     d["auto_publish"] = bool(d["auto_publish"])
     d["enabled"] = bool(d["enabled"])
+    # 旧スキーマで存在しない場合のフォールバック
+    if "publish_offset_minutes" not in d:
+        d["publish_offset_minutes"] = None
     return d
 
 
@@ -190,10 +202,11 @@ def _save_schedule(s: ScheduleIn, schedule_id: str, created_at: str) -> Dict[str
                 """
                 INSERT OR REPLACE INTO schedules
                 (id, name, channel_id, days_of_week, hour, minute,
-                 theme_mode, theme, duration_minutes, auto_publish, enabled,
+                 theme_mode, theme, duration_minutes, auto_publish,
+                 publish_offset_minutes, enabled,
                  last_run_at, last_run_status, last_run_job_id,
                  created_at, updated_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
                         (SELECT last_run_at FROM schedules WHERE id = ?),
                         (SELECT last_run_status FROM schedules WHERE id = ?),
                         (SELECT last_run_job_id FROM schedules WHERE id = ?),
@@ -204,7 +217,9 @@ def _save_schedule(s: ScheduleIn, schedule_id: str, created_at: str) -> Dict[str
                     json.dumps(sorted(set(s.days_of_week))),
                     s.hour, s.minute,
                     s.theme_mode, s.theme, s.duration_minutes,
-                    1 if s.auto_publish else 0, 1 if s.enabled else 0,
+                    1 if s.auto_publish else 0,
+                    s.publish_offset_minutes,
+                    1 if s.enabled else 0,
                     schedule_id, schedule_id, schedule_id,
                     created_at, now,
                 ),
@@ -320,9 +335,16 @@ def _restore_all_schedules() -> None:
             _refresh_scheduler_job(s["id"])
 
 
-def _attach_auto_publish_marker(queue, job_id: str, schedule_id: str, auto_publish: bool) -> None:
+def _attach_auto_publish_marker(
+    queue,
+    job_id: str,
+    schedule_id: str,
+    auto_publish: bool,
+    publish_offset_minutes: Optional[int] = None,
+) -> None:
     """ジョブの scenario_data に auto_publish フラグを刻む。
     on_job_complete フックが完了時にこのマーカーを見て pair publish を起こす。
+    publish_offset_minutes が正値なら「生成完了時点 + N 分」で予約公開する。
     """
     try:
         with queue._lock:
@@ -332,10 +354,22 @@ def _attach_auto_publish_marker(queue, job_id: str, schedule_id: str, auto_publi
                 opts.update({
                     "auto_publish": bool(auto_publish),
                     "schedule_id": schedule_id,
+                    "publish_offset_minutes": publish_offset_minutes,
                 })
                 j.scenario_data["_options"] = opts
     except Exception:
         pass
+
+
+def _compute_publish_at_from_offset(offset_minutes: Optional[int]) -> Optional[str]:
+    """生成完了時点から N 分後の YouTube publishAt 文字列 (RFC3339 UTC)。
+
+    None / 0 / 負値の場合は None（即時公開）を返す。
+    """
+    if not offset_minutes or offset_minutes <= 0:
+        return None
+    publish_dt = datetime.now(timezone.utc) + timedelta(minutes=int(offset_minutes))
+    return publish_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def on_generation_complete(job) -> None:
@@ -383,11 +417,16 @@ def on_generation_complete(job) -> None:
         )
         return
 
+    # スケジュール公開: マーカーに publish_offset_minutes が乗っていれば
+    # 「生成完了時点 + N 分」を YouTube の publishAt として渡す
+    publish_offset = opts.get("publish_offset_minutes")
+    main_publish_at = _compute_publish_at_from_offset(publish_offset)
+
     result = job.result or {}
     paths = pair_pub._resolve_paths_from_result(result)
 
     if not paths.get("main_video") or not paths.get("short_video"):
-        # short が無い時は main 単体だけ即時公開（メインだけ）
+        # short が無い時は main 単体だけ公開（オフセット指定があればスケジュール公開）
         if paths.get("main_video"):
             _start_single_main_publish(
                 job=job,
@@ -398,6 +437,7 @@ def on_generation_complete(job) -> None:
                 youtube_channel_id=youtube_channel_id,
                 tags=ch.get_hashtags() if ch else [],
                 category_id=ch.get_category() if ch else "27",
+                publish_at=main_publish_at,
             )
         else:
             _send_event_notification(
@@ -454,6 +494,7 @@ def on_generation_complete(job) -> None:
             "short_thumbnail_path": paths.get("short_thumb"),
             "on_complete": _on_pair_done,
             "auth_channel_id": job.channel_id,
+            "main_publish_at": main_publish_at,
         },
         daemon=True,
     ).start()
@@ -473,8 +514,9 @@ def _start_single_main_publish(
     youtube_channel_id: Optional[str],
     tags: List[str],
     category_id: str,
+    publish_at: Optional[str] = None,
 ) -> None:
-    """ショート不在ジョブの fallback: メイン単体を即時公開。"""
+    """ショート不在ジョブの fallback: メイン単体を公開（publish_at 指定時はスケジュール公開）。"""
     try:
         from pipeline import youtube_pair_publisher as pair_pub
         from googleapiclient.discovery import build
@@ -504,7 +546,7 @@ def _start_single_main_publish(
                 privacy=privacy,
                 is_short=False,
                 youtube_channel_id=youtube_channel_id,
-                publish_at=None,
+                publish_at=publish_at,
                 thumbnail_path=main_thumb,
             )
             _send_event_notification(
@@ -573,7 +615,13 @@ def _run_schedule(schedule_id: str) -> None:
             priority=5,
             gen_type="both",
         )
-        _attach_auto_publish_marker(queue, job_id, schedule_id, s["auto_publish"])
+        _attach_auto_publish_marker(
+            queue,
+            job_id,
+            schedule_id,
+            s["auto_publish"],
+            publish_offset_minutes=s.get("publish_offset_minutes"),
+        )
         _update_run("queued", job_id)
         _send_event_notification(
             "schedule_run",

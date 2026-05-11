@@ -296,9 +296,16 @@ def _channel_metrics(channel_id: str) -> Dict[str, int]:
         cm = _state.get("channel_manager")
         ch = cm.get(channel_id) if cm else None
         connected = yo.is_connected_for(channel_id) or yo.is_connected()
-        if ch and ch.youtube_channel_id and connected:
+        yt_id = ch.youtube_channel_id if ch else None
+        if not yt_id and connected:
+            # チャンネルプロファイル未設定でも OAuth トークンに紐付いた ID を使う
+            try:
+                yt_id = yo.get_status_for(channel_id).get("youtube_channel_id")
+            except Exception:
+                yt_id = None
+        if ch and yt_id and connected:
             from api_phase3 import _real_analytics
-            real = _real_analytics(channel_id, ch.youtube_channel_id)
+            real = _real_analytics(channel_id, yt_id)
             if real and real.get("source") == "youtube_analytics":
                 m = real["metrics"]
                 return {
@@ -575,6 +582,8 @@ async def list_active_jobs(_=Depends(require_session)) -> Dict[str, Any]:
                     "step": s["step"],
                     "step_label": s["step_label"],
                     "progress": s["progress"],
+                    "channel_id": s.get("channel_id"),
+                    "status": s["status"],
                 })
     except Exception:
         pass

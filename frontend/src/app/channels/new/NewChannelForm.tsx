@@ -70,6 +70,9 @@ export default function NewChannelForm({
   const [sampling, setSampling] = useState(false);
   const [sampleError, setSampleError] = useState<string | null>(null);
   const [sampleApproved, setSampleApproved] = useState(false);
+  // 修正フィードバックの履歴（古い→新しい順）
+  const [sampleFeedback, setSampleFeedback] = useState<string[]>([]);
+  const [sampleFeedbackDraft, setSampleFeedbackDraft] = useState('');
 
   // Step 4
   const [submitting, setSubmitting] = useState(false);
@@ -113,11 +116,22 @@ export default function NewChannelForm({
     ]
   );
 
-  const onGenerateSample = async () => {
+  const onGenerateSample = async (
+    extraFeedback?: string,
+    clearFeedback?: boolean,
+  ) => {
     if (sampling) return;
     setSampleError(null);
     setSampleApproved(false);
     setSampling(true);
+
+    const trimmedExtra = (extraFeedback ?? '').trim();
+    const nextFeedback = clearFeedback
+      ? []
+      : trimmedExtra
+        ? [...sampleFeedback, trimmedExtra]
+        : sampleFeedback;
+
     try {
       const prevId = sample?.sample_id;
       const res = await fetch('/api/illustrations/sample', {
@@ -126,6 +140,7 @@ export default function NewChannelForm({
         body: JSON.stringify({
           topic: sampleTopic.trim() || DEFAULT_SAMPLE_TOPIC,
           illust_style: illustStyle,
+          ...(nextFeedback.length ? { feedback: nextFeedback } : {}),
         }),
       });
       if (!res.ok) {
@@ -134,6 +149,8 @@ export default function NewChannelForm({
       }
       const data: SampleIllustrationResponse = await res.json();
       setSample(data);
+      setSampleFeedback(nextFeedback);
+      setSampleFeedbackDraft('');
       if (prevId && prevId !== data.sample_id) {
         fetch(`/api/illustrations/sample/${encodeURIComponent(prevId)}`, {
           method: 'DELETE',
@@ -471,7 +488,7 @@ export default function NewChannelForm({
           {!sample && !sampling && (
             <button
               type="button"
-              onClick={onGenerateSample}
+              onClick={() => onGenerateSample()}
               className="btn-secondary w-full"
             >
               ✨ サンプルを生成
@@ -500,23 +517,83 @@ export default function NewChannelForm({
                   {sample.prompt}
                 </pre>
               </details>
-              {!sampleApproved ? (
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={onGenerateSample}
-                    className="btn bg-bg-elev text-slate-200 border border-border py-3"
-                  >
-                    🔁 再生成
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setSampleApproved(true)}
-                    className="btn bg-emerald-600 hover:bg-emerald-700 text-white py-3"
-                  >
-                    ✅ OK この画像で進む
-                  </button>
+              {/* フィードバック履歴 */}
+              {sampleFeedback.length > 0 && (
+                <div className="rounded-lg border border-border bg-bg-elev/40 p-2 space-y-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-semibold text-slate-300">
+                      📝 修正履歴 ({sampleFeedback.length}回)
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setSampleFeedback([])}
+                      className="text-[10px] text-slate-500 hover:text-slate-300 underline"
+                    >
+                      履歴クリア
+                    </button>
+                  </div>
+                  <ol className="text-[11px] text-slate-400 leading-snug list-decimal list-inside space-y-0.5">
+                    {sampleFeedback.map((f, i) => (
+                      <li key={i} className="break-words">
+                        {f}
+                      </li>
+                    ))}
+                  </ol>
                 </div>
+              )}
+
+              {!sampleApproved ? (
+                <>
+                  {/* 修正リクエスト入力欄 */}
+                  <div className="space-y-1">
+                    <label className="text-[11px] font-semibold text-slate-300 block">
+                      修正リクエスト（任意）
+                    </label>
+                    <textarea
+                      value={sampleFeedbackDraft}
+                      onChange={(e) => setSampleFeedbackDraft(e.target.value)}
+                      placeholder="例: もっと明るい色で / キャラを小さく / 背景を青空に"
+                      rows={2}
+                      className="w-full rounded-lg bg-bg-elev border border-border text-xs text-slate-200 px-2 py-2 resize-y placeholder:text-slate-600"
+                      disabled={sampling}
+                    />
+                    <p className="text-[10px] text-slate-500 leading-snug">
+                      入力して「修正して再生成」を押すと、これまでの修正指示すべてに加えて反映します。
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-2">
+                    <button
+                      type="button"
+                      onClick={() => onGenerateSample(sampleFeedbackDraft)}
+                      disabled={!sampleFeedbackDraft.trim()}
+                      className="btn bg-accent hover:bg-accent/80 text-white py-3 disabled:opacity-40 disabled:cursor-not-allowed"
+                    >
+                      ✏️ 修正して再生成
+                    </button>
+                    <div className="grid grid-cols-2 gap-2">
+                      <button
+                        type="button"
+                        onClick={() => onGenerateSample()}
+                        className="btn bg-bg-elev text-slate-200 border border-border py-3 text-xs"
+                        title={
+                          sampleFeedback.length
+                            ? `これまでの${sampleFeedback.length}件の修正指示を保ったまま再生成`
+                            : '同じ条件でもう1枚生成'
+                        }
+                      >
+                        🔁 再生成（履歴維持）
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setSampleApproved(true)}
+                        className="btn bg-emerald-600 hover:bg-emerald-700 text-white py-3 text-xs"
+                      >
+                        ✅ OK 進む
+                      </button>
+                    </div>
+                  </div>
+                </>
               ) : (
                 <p className="text-xs text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 rounded-lg px-3 py-2">
                   ✓ サンプル承認済み。Step 4 で確定してください

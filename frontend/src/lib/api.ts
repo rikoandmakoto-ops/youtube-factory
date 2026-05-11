@@ -251,6 +251,8 @@ export type ActiveJob = {
   step: number;
   step_label: string;
   progress: number;
+  channel_id?: string | null;
+  status?: 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';
 };
 export async function listActiveJobs(): Promise<ActiveJob[]> {
   const data = await call<{ jobs: ActiveJob[] }>('/api/generate/active', {
@@ -714,6 +716,8 @@ export type Schedule = {
   theme?: string | null;
   duration_minutes: number;
   auto_publish: boolean;
+  /** 自動投稿時に「生成完了から N 分後」に YouTube 上で公開。null = 即時 */
+  publish_offset_minutes?: number | null;
   enabled: boolean;
   last_run_at?: string | null;
   last_run_status?: string | null;
@@ -733,6 +737,7 @@ export type ScheduleInput = {
   theme?: string | null;
   duration_minutes: number;
   auto_publish: boolean;
+  publish_offset_minutes?: number | null;
   enabled: boolean;
 };
 
@@ -1126,6 +1131,12 @@ export type SampleIllustrationRequest = {
   channel_id?: string;
   illust_style?: IllustrationStyle;
   include_characters?: boolean;
+  /**
+   * Ordered list of free-text feedback strings the user has supplied across
+   * previous regenerations of the same sample. Each string is one user
+   * "ここをこう直して" message. Most recent items take priority.
+   */
+  feedback?: string[];
 };
 
 export type SampleIllustrationResponse = {
@@ -1133,6 +1144,7 @@ export type SampleIllustrationResponse = {
   url: string;
   prompt: string;
   style: IllustrationStyle;
+  feedback?: string[];
 };
 
 export async function generateSampleIllustration(
@@ -1163,6 +1175,12 @@ export type ThumbnailGenerateRequest = {
   line2?: string;
   line3_badge?: string;
   sub_text?: string;
+  /**
+   * Ordered list of free-text feedback strings the user has supplied across
+   * previous regenerations of the same thumbnail. The backend forwards them to
+   * GPT-4o so the brief is adjusted on top of the title.
+   */
+  feedback?: string[];
 };
 
 export type ThumbnailBrief = {
@@ -1182,6 +1200,7 @@ export type ThumbnailGenerateResponse = {
   background_id: string;
   background_url: string;
   brief: ThumbnailBrief;
+  feedback?: string[];
 };
 
 export async function generateThumbnail(

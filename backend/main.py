@@ -19,6 +19,9 @@ from datetime import datetime
 from enum import Enum
 import threading
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from pipeline.title_generator import generate_titles, select_best_title
 from pipeline.description_generator import generate_description, generate_description_from_job
 from pipeline.video_generator import (

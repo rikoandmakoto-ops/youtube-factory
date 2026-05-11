@@ -661,6 +661,77 @@ def _mock_analytics(channel_id: str) -> Dict[str, Any]:
     }
 
 
+def _top_videos_via_data_api(
+    yt, youtube_channel_id: str, limit: int = 5
+) -> List[Dict[str, Any]]:
+    """YouTube Data API v3 で全アップロード動画から再生数上位を返す。
+
+    YouTube Analytics API が無効な GCP プロジェクトでも動作する。
+    uploads プレイリストを最大250件辿り、viewCount で降順ソートする。
+    """
+    try:
+        ch = (
+            yt.channels()
+            .list(part="contentDetails", id=youtube_channel_id)
+            .execute()
+        )
+        items = ch.get("items", [])
+        if not items:
+            return []
+        uploads = (
+            items[0]
+            .get("contentDetails", {})
+            .get("relatedPlaylists", {})
+            .get("uploads")
+        )
+        if not uploads:
+            return []
+
+        video_ids: List[str] = []
+        next_token: Optional[str] = None
+        # 最大 5 ページ × 50 = 250 件まで
+        for _ in range(5):
+            pl = (
+                yt.playlistItems()
+                .list(
+                    part="contentDetails",
+                    playlistId=uploads,
+                    maxResults=50,
+                    pageToken=next_token,
+                )
+                .execute()
+            )
+            for it in pl.get("items", []):
+                vid = it.get("contentDetails", {}).get("videoId")
+                if vid:
+                    video_ids.append(vid)
+            next_token = pl.get("nextPageToken")
+            if not next_token:
+                break
+
+        videos: List[Dict[str, Any]] = []
+        for i in range(0, len(video_ids), 50):
+            batch = video_ids[i : i + 50]
+            resp = (
+                yt.videos()
+                .list(part="snippet,statistics", id=",".join(batch))
+                .execute()
+            )
+            for v in resp.get("items", []):
+                videos.append(
+                    {
+                        "video_id": v["id"],
+                        "title": v.get("snippet", {}).get("title", v["id"]),
+                        "views": int(v.get("statistics", {}).get("viewCount", 0)),
+                    }
+                )
+
+        videos.sort(key=lambda x: x["views"], reverse=True)
+        return videos[:limit]
+    except Exception:
+        return []
+
+
 def _real_analytics(channel_id: str, youtube_channel_id: str) -> Optional[Dict[str, Any]]:
     """YouTube Analytics API v2 で実データ取得。失敗時 None。
 
@@ -708,7 +779,8 @@ def _real_analytics(channel_id: str, youtube_channel_id: str) -> Optional[Dict[s
         except Exception:
             views_by_day = []
 
-        # 人気動画（上位5件）
+        # 人気動画（上位5件）— Analytics API → 失敗時 Data API フォールバック
+        top_videos: List[Dict[str, Any]] = []
         try:
             top = analytics.reports().query(
                 ids=f"channel=={youtube_channel_id}",
@@ -720,9 +792,7 @@ def _real_analytics(channel_id: str, youtube_channel_id: str) -> Optional[Dict[s
                 maxResults=5,
             ).execute()
             top_rows = top.get("rows", [])
-            top_videos = []
             if top_rows:
-                # 動画タイトル取得
                 ids = [r[0] for r in top_rows]
                 resp = (
                     yt.videos()
@@ -743,6 +813,9 @@ def _real_analytics(channel_id: str, youtube_channel_id: str) -> Optional[Dict[s
                     )
         except Exception:
             top_videos = []
+
+        if not top_videos:
+            top_videos = _top_videos_via_data_api(yt, youtube_channel_id, limit=5)
 
         return {
             "connected": True,
@@ -775,6 +848,13 @@ async def channel_analytics(
 
     yt_id = ch.youtube_channel_id
     has_auth = yt_oauth.is_connected_for(channel_id) or yt_oauth.is_connected()
+    if not yt_id and has_auth:
+        # チャンネルプロファイル未設定でも OAuth 連携済みなら、
+        # トークンに紐付いた YouTube チャンネル ID を使う
+        try:
+            yt_id = yt_oauth.get_status_for(channel_id).get("youtube_channel_id")
+        except Exception:
+            yt_id = None
     if yt_id and has_auth:
         real = _real_analytics(channel_id, yt_id)
         if real and real.get("source") != "error":

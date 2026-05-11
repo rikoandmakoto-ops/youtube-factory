@@ -21,6 +21,7 @@ import json
 import os
 import random
 import urllib.request
+from pathlib import Path
 from typing import Dict, List, Optional, Any
 
 try:
@@ -78,6 +79,55 @@ class ScenarioGenerator:
                 print(f"⚠️ usage recording failed: {e}")
 
         return data["choices"][0]["message"]["content"]
+
+    def _scenarios_dir_for(self, channel_id: str) -> Path:
+        # generator.py → backend/pipeline/auto_scenario/ → backend/pipeline/ → backend/ → repo_root
+        return Path(__file__).resolve().parent.parent.parent.parent / "data" / "scenarios" / channel_id
+
+    def _collect_past_themes(self, channel_id: str, limit: int = 50) -> List[Dict[str, str]]:
+        """過去に生成済みの scenario JSON からテーマ（title/angle）を新しい順に収集。"""
+        base = self._scenarios_dir_for(channel_id)
+        if not base.exists():
+            return []
+        past: List[Dict[str, str]] = []
+        files = sorted(base.glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+        for f in files[:limit]:
+            try:
+                data = json.loads(f.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+            th = data.get("theme") if isinstance(data, dict) else None
+            title = ""
+            angle = ""
+            if isinstance(th, dict):
+                title = (th.get("title") or "").strip()
+                angle = (th.get("angle") or "").strip()
+            if not title and isinstance(data, dict):
+                title = (data.get("title") or "").strip()
+            if title:
+                past.append({"title": title, "angle": angle})
+        return past
+
+    def _pick_seed_avoiding_past(self, channel) -> Dict:
+        """theme_seeds から過去に使ったものを除外して選ぶ。
+
+        全シードが消化済みなら AI に新規（または発展系）を提案させ、そこから1件選ぶ。
+        最終フォールバックは従来のランダム選択。
+        """
+        past_titles = {t["title"].lower() for t in self._collect_past_themes(channel.id, limit=80)}
+        unused = [s for s in channel.theme_seeds if (s.get("title") or "").lower() not in past_titles]
+        if unused:
+            return random.choice(unused)
+        try:
+            suggestions = self.suggest_themes(channel, count=3)
+            if isinstance(suggestions, list) and suggestions:
+                pick = random.choice(suggestions)
+                if isinstance(pick, dict) and pick.get("title"):
+                    print(f"  💡 All seeds used — using AI-suggested theme: {pick['title']}")
+                    return {"title": pick["title"], "angle": pick.get("angle", "") or ""}
+        except Exception as e:
+            print(f"  ⚠️ AI fresh-theme fallback failed: {e}")
+        return random.choice(channel.theme_seeds)
 
     def _persona_block(self, channel) -> str:
         """video_format.persona から差し込むプロンプトブロックを返す。
@@ -255,11 +305,11 @@ class ScenarioGenerator:
                 "style": str,
             }
         """
-        # テーマ選択
+        # テーマ選択 — auto モード時は過去に生成済みのテーマを避けて選ぶ
         if theme_override:
             theme = theme_override
         elif channel.theme_seeds:
-            theme = random.choice(channel.theme_seeds)
+            theme = self._pick_seed_avoiding_past(channel)
         else:
             raise ValueError(f"No theme_seeds for channel {channel.id}")
 
@@ -499,35 +549,83 @@ class ScenarioGenerator:
         return results
 
     def suggest_themes(self, channel, count: int = 5) -> List[Dict[str, str]]:
+        """GPT にチャンネルコンセプトに合う新テーマを提案させる。
+
+        既存の theme_seeds と、過去に生成済みのシナリオに含まれるテーマの両方を考慮し、
+        - 完全な新規テーマ、または
+        - 過去テーマの「続編・発展系・別角度・深掘り」（parent_title 付き）
+        を提案させる。重複・言い換えは禁止。
         """
-        GPTにチャンネルコンセプトに合う新テーマを提案させる。
-        既存のtheme_seedsと被らないものを生成。
-        """
-        existing = [s["title"] for s in channel.theme_seeds]
+        seed_titles = [s["title"] for s in channel.theme_seeds if s.get("title")]
+        past_themes = self._collect_past_themes(channel.id, limit=40)
+        past_titles = [t["title"] for t in past_themes]
+
+        seen = set()
+        excluded: List[str] = []
+        for t in seed_titles + past_titles:
+            key = t.lower()
+            if key and key not in seen:
+                seen.add(key)
+                excluded.append(t)
+
+        excluded_block = "\n".join(f"- {t}" for t in excluded) if excluded else "(なし)"
+        past_seen = set()
+        past_unique: List[str] = []
+        for t in past_themes:
+            key = t["title"].lower()
+            if key not in past_seen:
+                past_seen.add(key)
+                past_unique.append(t["title"])
+            if len(past_unique) >= 20:
+                break
+        past_block = "\n".join(f"- {t}" for t in past_unique) if past_unique else "(なし)"
 
         prompt = f"""YouTube動画テーマを{count}個提案。JSON配列のみ。
 
 # チャンネル: {channel.name} / {channel.concept} / {channel.style} / {channel.content_policy.get("tone","friendly")}
-# 既存(被り禁止):
-{chr(10).join(f"- {t}" for t in existing)}
 
+# 重複回避ルール（厳守）
+- 下記「除外リスト」と同じ／実質同じ（言い換えだけ）テーマは禁止。
+- ただし、過去テーマを「続編・発展系・別角度・深掘り」として明確に進化させる場合に限り、関連トピックを扱ってよい。
+  - その場合、`parent_title` に元の過去テーマのタイトルを入れる。
+  - `title` には元と被らない新しい切り口を必ず含める（例: 元「なぜ空は青いのか」→ 新「なぜ夕焼けは赤いのか — 空の色シリーズ続編」）。
+- {count}件のうち最大2件まで「過去テーマの発展系（parent_title 付き）」を含めてよい。残りは完全新規のテーマで提案する。
+- 完全新規のテーマは `parent_title` を null にする。
+
+# 除外リスト（重複・言い換え禁止）
+{excluded_block}
+
+# 直近の過去テーマ（続編・発展系の元ネタとして参照可）
+{past_block}
+
+# 出力フォーマット
 [
- {{"title":"テーマ","angle":"切り口"}},
- ...
+ {{"title": "テーマ", "angle": "切り口", "parent_title": null}},
+ {{"title": "テーマ", "angle": "切り口", "parent_title": "元の過去テーマのタイトル"}}
 ]
 
-# バズる条件: 「なぜ〇〇なのか」系/意外性/日常と科学のギャップ/数字データ
+# バズる条件: 「なぜ〇〇なのか」系 / 意外性 / 日常と科学のギャップ / 数字データ
 """
 
         messages = [
-            {"role": "system", "content": "JSON配列のみ。"},
+            {"role": "system", "content": "JSON配列のみ。除外リストとの重複・言い換えは厳禁。"},
             {"role": "user", "content": prompt},
         ]
 
         self._current_channel_id = channel.id
         self._current_purpose = "theme_suggest"
         raw = self._call_gpt(messages, temperature=0.9, max_tokens=2000, model=GPT_MODEL_LIGHT)
-        return self._extract_json(raw)
+        themes = self._extract_json(raw)
+
+        if isinstance(themes, list):
+            excluded_lower = {t.lower() for t in excluded}
+            filtered = [
+                t for t in themes
+                if isinstance(t, dict) and (t.get("title") or "").strip().lower() not in excluded_lower
+            ]
+            if filtered:
+                themes = filtered
+        return themes
 
     @staticmethod
     def _extract_json(text: str) -> Any:

@@ -42,6 +42,7 @@ venv/
 # ===== Claude Code local =====
 .claude/settings.local.json
 .claude/scheduled_tasks.lock
+.claude/worktrees/
 
 # ===== Runtime data / generated artifacts =====
 jobs/

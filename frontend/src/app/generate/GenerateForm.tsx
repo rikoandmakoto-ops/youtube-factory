@@ -36,6 +36,11 @@ export default function GenerateForm({
   const [generateShort, setGenerateShort] = useState(true);
   const [generateThumbnail, setGenerateThumbnail] = useState(true);
   const [autoPublish, setAutoPublish] = useState(false);
+  const [publishMode, setPublishMode] = useState<'immediate' | 'scheduled'>(
+    'immediate'
+  );
+  // <input type="datetime-local"> 用 (例 "2026-05-15T19:30")。空文字=未指定
+  const [scheduledAt, setScheduledAt] = useState('');
   const [copyToIcloud, setCopyToIcloud] = useState(true);
   const [abTest, setAbTest] = useState(false);
   // BGM音量: UIは0-100%, バックエンドへは0..1で送る
@@ -77,15 +82,60 @@ export default function GenerateForm({
   const [sampling, setSampling] = useState(false);
   const [sampleApproved, setSampleApproved] = useState(false);
   const [sampleError, setSampleError] = useState<string | null>(null);
+  // フィードバック履歴（古い→新しい順）。「ここをこう直して」の入力。
+  const [sampleFeedback, setSampleFeedback] = useState<string[]>([]);
+  const [sampleFeedbackDraft, setSampleFeedbackDraft] = useState('');
 
   // サムネイルプレビュー（HTML+Playwright パイプライン）
   const [thumb, setThumb] = useState<ThumbnailGenerateResponse | null>(null);
   const [thumbBusy, setThumbBusy] = useState<'fresh' | 'reuse' | null>(null);
   const [thumbError, setThumbError] = useState<string | null>(null);
+  const [thumbFeedback, setThumbFeedback] = useState<string[]>([]);
+  const [thumbFeedbackDraft, setThumbFeedbackDraft] = useState('');
 
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const autoPublishedRef = useRef(false);
   const abAutoTriggeredRef = useRef(false);
+  // 走行中ジョブを再接続したばかりかを示すフラグ。
+  // 直後に走る channel/theme 変更リセット効果が sampleApproved を上書きするのを防ぐ。
+  const justAttachedRef = useRef(false);
+
+  // ページ移動から戻ったときに、サーバ側で走っているジョブに自動で再接続。
+  // /api/jobs/active が pending/running のジョブを返すので、最初の1件を採用する。
+  // 既に jobId がある場合（同セッション内で開始済み）は何もしない。
+  useEffect(() => {
+    if (jobId) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch('/api/jobs/active', { cache: 'no-store' });
+        if (!res.ok) return;
+        const data = await res.json();
+        const active = (data?.jobs ?? []) as Array<{
+          job_id: string;
+          channel_id?: string | null;
+        }>;
+        if (cancelled || active.length === 0) return;
+        // 同じチャンネルの走行ジョブを優先（複数チャンネルに対応）。
+        const match =
+          active.find((j) => j.channel_id && j.channel_id === channelId) ||
+          active[0];
+        justAttachedRef.current = true;
+        setJobId(match.job_id);
+        if (match.channel_id && match.channel_id !== channelId) {
+          setChannelId(match.channel_id);
+        }
+        // 走行中はサンプル承認ゲートをスキップ（既に本生成に進んでいるため）。
+        setSampleApproved(true);
+      } catch {
+        /* ignore */
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // マウント時に一度だけ
 
   // YouTube 接続状態
   useEffect(() => {
@@ -105,10 +155,20 @@ export default function GenerateForm({
 
   // チャンネル/テーマが変わったらサンプルの承認を取り消す（前提が変わるため）
   useEffect(() => {
+    // 走行中ジョブへ再接続した直後はリセットしない（サンプル承認を維持）
+    if (justAttachedRef.current) {
+      justAttachedRef.current = false;
+      return;
+    }
     setSampleApproved(false);
+    // 前提が変われば修正履歴も流す
+    setSampleFeedback([]);
+    setSampleFeedbackDraft('');
     // サムネプレビューも前提が変わるので消す
     setThumb(null);
     setThumbError(null);
+    setThumbFeedback([]);
+    setThumbFeedbackDraft('');
   }, [channelId, theme]);
 
   // チャンネルが変わったらBGMプレビューもクリア（別BGMファイルになる可能性）
@@ -133,6 +193,10 @@ export default function GenerateForm({
           setPublishMsg('⚠️ 動画パスが取得できず、自動投稿をスキップしました');
           return;
         }
+        // スケジュール公開: datetime-local ("YYYY-MM-DDTHH:MM") をそのまま投げる。
+        // バックエンドの _normalize_publish_at がローカルタイムゾーン未指定として
+        // パースした上で UTC RFC3339 に正規化する。
+        const useSchedule = publishMode === 'scheduled' && !!scheduledAt;
         const res = await fetch('/api/youtube/publish', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
@@ -141,6 +205,7 @@ export default function GenerateForm({
             thumbnail_path: r.thumbnail_path || null,
             title: s.title || 'Untitled',
             privacy: 'private',
+            ...(useSchedule ? { scheduled_at: scheduledAt } : {}),
           }),
         });
         if (!res.ok) {
@@ -148,7 +213,11 @@ export default function GenerateForm({
           return;
         }
         const data: { job_id: string } = await res.json();
-        setPublishMsg(`📤 自動投稿を開始しました (job: ${data.job_id})`);
+        setPublishMsg(
+          useSchedule
+            ? `📤 スケジュール公開を予約しました (公開予定: ${scheduledAt} / job: ${data.job_id})`
+            : `📤 自動投稿を開始しました (job: ${data.job_id})`
+        );
       } catch (err) {
         setPublishMsg(
           err instanceof Error ? `⚠️ ${err.message}` : '⚠️ 自動投稿に失敗しました'
@@ -202,7 +271,7 @@ export default function GenerateForm({
     return () => {
       if (pollRef.current) clearInterval(pollRef.current);
     };
-  }, [jobId, autoPublish, ytConnected, abTest]);
+  }, [jobId, autoPublish, ytConnected, abTest, publishMode, scheduledAt]);
 
   const onSuggest = async () => {
     if (!channelId) return;
@@ -288,11 +357,25 @@ export default function GenerateForm({
     }
   };
 
-  const onGenerateSample = async () => {
+  // `extraFeedback` — 「修正リクエスト」テキストエリアから今回新たに送る一行。
+  //   undefined の場合は履歴に追加せず、既存履歴だけで再生成する（純粋な regenerate）。
+  // `clearFeedback` — true の場合は履歴をリセットしてゼロから生成する。
+  const onGenerateSample = async (
+    extraFeedback?: string,
+    clearFeedback?: boolean,
+  ) => {
     if (!channelId || !theme.trim() || sampling) return;
     setSampleError(null);
     setSampling(true);
     setSampleApproved(false);
+
+    const trimmedExtra = (extraFeedback ?? '').trim();
+    const nextFeedback = clearFeedback
+      ? []
+      : trimmedExtra
+        ? [...sampleFeedback, trimmedExtra]
+        : sampleFeedback;
+
     try {
       const res = await fetch('/api/illustrations/sample', {
         method: 'POST',
@@ -300,6 +383,7 @@ export default function GenerateForm({
         body: JSON.stringify({
           channel_id: channelId,
           topic: theme.trim(),
+          ...(nextFeedback.length ? { feedback: nextFeedback } : {}),
         }),
       });
       if (!res.ok) {
@@ -314,6 +398,8 @@ export default function GenerateForm({
         }).catch(() => {});
       }
       setSample(data);
+      setSampleFeedback(nextFeedback);
+      setSampleFeedbackDraft('');
     } catch (e) {
       setSampleError(e instanceof Error ? e.message : 'サンプル生成に失敗しました');
     } finally {
@@ -326,11 +412,23 @@ export default function GenerateForm({
     setSampleApproved(true);
   };
 
-  const onGenerateThumbnail = async (mode: 'fresh' | 'reuse') => {
+  const onGenerateThumbnail = async (
+    mode: 'fresh' | 'reuse',
+    extraFeedback?: string,
+    clearFeedback?: boolean,
+  ) => {
     if (!channelId || !theme.trim() || thumbBusy) return;
     if (mode === 'reuse' && !thumb) return;
     setThumbError(null);
     setThumbBusy(mode);
+
+    const trimmedExtra = (extraFeedback ?? '').trim();
+    const nextFeedback = clearFeedback
+      ? []
+      : trimmedExtra
+        ? [...thumbFeedback, trimmedExtra]
+        : thumbFeedback;
+
     try {
       const path = mode === 'reuse' ? '/api/thumbnails/preview' : '/api/thumbnails/generate';
       const res = await fetch(path, {
@@ -341,6 +439,7 @@ export default function GenerateForm({
           title: theme.trim(),
           reuse_background_id:
             mode === 'reuse' && thumb ? thumb.background_id : undefined,
+          ...(nextFeedback.length ? { feedback: nextFeedback } : {}),
         }),
       });
       if (!res.ok) {
@@ -355,6 +454,8 @@ export default function GenerateForm({
         }).catch(() => {});
       }
       setThumb(data);
+      setThumbFeedback(nextFeedback);
+      setThumbFeedbackDraft('');
     } catch (e) {
       setThumbError(e instanceof Error ? e.message : 'サムネ生成に失敗しました');
     } finally {
@@ -711,6 +812,55 @@ export default function GenerateForm({
         )}
       </section>
 
+      {autoPublish && ytConnected && (
+        <fieldset className="card space-y-3">
+          <legend className="text-sm font-bold text-slate-100 px-1">
+            📅 公開タイミング
+          </legend>
+          <div role="radiogroup" className="grid grid-cols-2 gap-2">
+            {(
+              [
+                { v: 'immediate', label: '即時公開' },
+                { v: 'scheduled', label: 'スケジュール公開' },
+              ] as const
+            ).map((opt) => (
+              <button
+                key={opt.v}
+                type="button"
+                role="radio"
+                aria-checked={publishMode === opt.v}
+                onClick={() => setPublishMode(opt.v)}
+                className={`py-2 rounded-lg text-sm font-semibold ${
+                  publishMode === opt.v
+                    ? 'bg-accent text-white'
+                    : 'bg-bg-elev text-slate-400 border border-border'
+                }`}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
+          {publishMode === 'scheduled' && (
+            <div>
+              <label htmlFor="scheduled-at" className="label">
+                公開日時
+              </label>
+              <input
+                id="scheduled-at"
+                type="datetime-local"
+                value={scheduledAt}
+                onChange={(e) => setScheduledAt(e.target.value)}
+                className="input"
+              />
+              <p className="text-[10px] text-slate-500 mt-1 leading-relaxed">
+                指定した日時に YouTube 上で自動公開されます (YouTube ネイティブの予約公開機能)。
+                未来の日時を指定してください。
+              </p>
+            </div>
+          )}
+        </fieldset>
+      )}
+
       <p className="text-center text-xs text-slate-500">
         💡 推定コスト: ¥850〜1,200（GPT-4o + DALL-E 3 × 38枚）
         {abTest && <span className="block mt-1">🧪 A/Bテスト: +¥120〜200</span>}
@@ -744,7 +894,7 @@ export default function GenerateForm({
         {!sample && !sampling && (
           <button
             type="button"
-            onClick={onGenerateSample}
+            onClick={() => onGenerateSample()}
             disabled={!channelId || !theme.trim()}
             className="btn-secondary w-full"
           >
@@ -766,23 +916,87 @@ export default function GenerateForm({
               alt="サンプルイラスト"
               className="w-full rounded-lg border border-border bg-bg-elev"
             />
-            {!sampleApproved ? (
-              <div className="grid grid-cols-2 gap-2">
-                <button
-                  type="button"
-                  onClick={onGenerateSample}
-                  className="btn bg-bg-elev text-slate-200 border border-border py-3"
-                >
-                  🔁 再生成
-                </button>
-                <button
-                  type="button"
-                  onClick={onApproveSample}
-                  className="btn bg-emerald-600 hover:bg-emerald-700 text-white py-3"
-                >
-                  ✅ OK この画像で進む
-                </button>
+
+            {/* フィードバック履歴（n回目の修正の証跡） */}
+            {sampleFeedback.length > 0 && (
+              <div className="rounded-lg border border-border bg-bg-elev/40 p-2 space-y-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-semibold text-slate-300">
+                    📝 修正履歴 ({sampleFeedback.length}回)
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSampleFeedback([]);
+                    }}
+                    className="text-[10px] text-slate-500 hover:text-slate-300 underline"
+                    title="履歴をリセットして次回はゼロから生成"
+                  >
+                    履歴クリア
+                  </button>
+                </div>
+                <ol className="text-[11px] text-slate-400 leading-snug list-decimal list-inside space-y-0.5">
+                  {sampleFeedback.map((f, i) => (
+                    <li key={i} className="break-words">
+                      {f}
+                    </li>
+                  ))}
+                </ol>
               </div>
+            )}
+
+            {!sampleApproved ? (
+              <>
+                {/* 修正リクエスト入力欄 */}
+                <div className="space-y-1">
+                  <label className="text-[11px] font-semibold text-slate-300 block">
+                    修正リクエスト（任意）
+                  </label>
+                  <textarea
+                    value={sampleFeedbackDraft}
+                    onChange={(e) => setSampleFeedbackDraft(e.target.value)}
+                    placeholder="例: もっと明るい色で / 真ん中のキャラを小さく / 背景を青空に"
+                    rows={2}
+                    className="w-full rounded-lg bg-bg-elev border border-border text-xs text-slate-200 px-2 py-2 resize-y placeholder:text-slate-600"
+                    disabled={sampling}
+                  />
+                  <p className="text-[10px] text-slate-500 leading-snug">
+                    入力して「修正して再生成」を押すと、これまでの修正指示すべてに加えて反映します。
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => onGenerateSample(sampleFeedbackDraft)}
+                    disabled={!sampleFeedbackDraft.trim()}
+                    className="btn bg-accent hover:bg-accent/80 text-white py-3 disabled:opacity-40 disabled:cursor-not-allowed"
+                  >
+                    ✏️ 修正して再生成
+                  </button>
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      type="button"
+                      onClick={() => onGenerateSample()}
+                      className="btn bg-bg-elev text-slate-200 border border-border py-3 text-xs"
+                      title={
+                        sampleFeedback.length
+                          ? `これまでの${sampleFeedback.length}件の修正指示を保ったまま再生成`
+                          : '同じ条件でもう1枚生成'
+                      }
+                    >
+                      🔁 再生成（履歴維持）
+                    </button>
+                    <button
+                      type="button"
+                      onClick={onApproveSample}
+                      className="btn bg-emerald-600 hover:bg-emerald-700 text-white py-3 text-xs"
+                    >
+                      ✅ OK 進む
+                    </button>
+                  </div>
+                </div>
+              </>
             ) : (
               <button
                 type="button"
@@ -848,24 +1062,91 @@ export default function GenerateForm({
                 alt="生成サムネイル"
                 className="w-full rounded-lg border border-border bg-bg-elev"
               />
-              <div className="grid grid-cols-2 gap-2">
-                <button
-                  type="button"
-                  onClick={() => onGenerateThumbnail('reuse')}
-                  className="btn bg-bg-elev text-slate-200 border border-border py-3 text-xs"
-                  title="DALL-Eをスキップして文字だけ再生成"
-                >
-                  🔁 文字だけ作り直す
-                </button>
-                <button
-                  type="button"
-                  onClick={() => onGenerateThumbnail('fresh')}
-                  className="btn bg-bg-elev text-slate-200 border border-border py-3 text-xs"
-                  title="背景もDALL-Eで作り直す"
-                >
-                  🎨 背景ごと作り直す
-                </button>
+
+              {/* フィードバック履歴 */}
+              {thumbFeedback.length > 0 && (
+                <div className="rounded-lg border border-border bg-bg-elev/40 p-2 space-y-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-semibold text-slate-300">
+                      📝 修正履歴 ({thumbFeedback.length}回)
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setThumbFeedback([])}
+                      className="text-[10px] text-slate-500 hover:text-slate-300 underline"
+                      title="履歴をリセットして次回はゼロから生成"
+                    >
+                      履歴クリア
+                    </button>
+                  </div>
+                  <ol className="text-[11px] text-slate-400 leading-snug list-decimal list-inside space-y-0.5">
+                    {thumbFeedback.map((f, i) => (
+                      <li key={i} className="break-words">
+                        {f}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
+
+              {/* 修正リクエスト入力欄 */}
+              <div className="space-y-1">
+                <label className="text-[11px] font-semibold text-slate-300 block">
+                  修正リクエスト（任意）
+                </label>
+                <textarea
+                  value={thumbFeedbackDraft}
+                  onChange={(e) => setThumbFeedbackDraft(e.target.value)}
+                  placeholder="例: 1行目をもっと短く / 赤バッジを「衝撃」に / 黄色強調を強く"
+                  rows={2}
+                  className="w-full rounded-lg bg-bg-elev border border-border text-xs text-slate-200 px-2 py-2 resize-y placeholder:text-slate-600"
+                  disabled={!!thumbBusy}
+                />
+                <p className="text-[10px] text-slate-500 leading-snug">
+                  入力して送ると、これまでの修正指示すべてと合わせて GPT-4o に渡し、
+                  ブリーフを作り直して再描画します。
+                </p>
               </div>
+
+              <div className="grid grid-cols-1 gap-2">
+                <button
+                  type="button"
+                  onClick={() => onGenerateThumbnail('reuse', thumbFeedbackDraft)}
+                  disabled={!thumbFeedbackDraft.trim()}
+                  className="btn bg-accent hover:bg-accent/80 text-white py-3 disabled:opacity-40 disabled:cursor-not-allowed"
+                  title="DALL-Eをスキップして文字だけ修正"
+                >
+                  ✏️ 修正して文字だけ作り直す
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onGenerateThumbnail('fresh', thumbFeedbackDraft)}
+                  disabled={!thumbFeedbackDraft.trim()}
+                  className="btn bg-purple-600 hover:bg-purple-700 text-white py-3 text-xs disabled:opacity-40 disabled:cursor-not-allowed"
+                  title="背景もDALL-Eで作り直す（コスト高）"
+                >
+                  ✏️ 修正して背景ごと作り直す
+                </button>
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => onGenerateThumbnail('reuse')}
+                    className="btn bg-bg-elev text-slate-200 border border-border py-3 text-xs"
+                    title="DALL-Eをスキップして文字だけ再生成（履歴維持）"
+                  >
+                    🔁 文字だけ作り直す
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => onGenerateThumbnail('fresh')}
+                    className="btn bg-bg-elev text-slate-200 border border-border py-3 text-xs"
+                    title="背景もDALL-Eで作り直す（履歴維持）"
+                  >
+                    🎨 背景ごと作り直す
+                  </button>
+                </div>
+              </div>
+
               {thumb.brief && (
                 <details className="text-[11px] text-slate-400">
                   <summary className="cursor-pointer hover:text-slate-200">

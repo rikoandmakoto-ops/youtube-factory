@@ -291,6 +291,7 @@ def run_pair_publish(
     short_thumbnail_path: Optional[str] = None,
     on_complete=None,
     auth_channel_id: Optional[str] = None,
+    main_publish_at: Optional[str] = None,
 ) -> None:
     """同期実行（ワーカー側で呼ぶ）: メインを公開してショートを time-shift スケジュール。
 
@@ -298,6 +299,9 @@ def run_pair_publish(
         auth_channel_id: 認証に使う内部チャンネルID（per-channel OAuth）。
             未指定時はレガシー（DEFAULT_CHANNEL_ID）にフォールバック。
         youtube_channel_id: YouTube 側のブランドチャンネルID（UC...）。snippet.channelId に設定。
+        main_publish_at: メイン動画の予約公開日時 (RFC3339 UTC, 例 "2025-03-15T14:30:00Z")。
+            指定時はメインも private + publishAt でスケジュールされ、ショートは
+            (main_publish_at + short_delay_minutes) で時差公開される。未指定時は従来通りメイン即時。
     """
     try:
         creds = (
@@ -328,7 +332,7 @@ def run_pair_publish(
             privacy=privacy,
             is_short=False,
             youtube_channel_id=youtube_channel_id,
-            publish_at=None,  # メインは即時
+            publish_at=main_publish_at,  # 指定時はメインもスケジュール公開
             thumbnail_path=main_thumbnail_path,
             progress_cb=main_progress,
         )
@@ -349,7 +353,18 @@ def run_pair_publish(
         )
 
         # ── 3. ショート予約公開 ──
-        publish_at_dt = _now_jst() + timedelta(minutes=max(1, short_delay_minutes))
+        # メインがスケジュール公開ならショートは「メイン公開時刻 + delay」、
+        # 未指定なら従来通り「現時点 + delay」。
+        if main_publish_at:
+            try:
+                base_dt = datetime.strptime(
+                    main_publish_at, "%Y-%m-%dT%H:%M:%SZ"
+                ).replace(tzinfo=timezone.utc)
+            except ValueError:
+                base_dt = _now_jst()
+        else:
+            base_dt = _now_jst()
+        publish_at_dt = base_dt + timedelta(minutes=max(1, short_delay_minutes))
         publish_at_str = _format_publish_at(publish_at_dt)
         _update_job(
             job_id,

@@ -23,7 +23,7 @@ import re
 import time
 import uuid
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import FileResponse
@@ -91,6 +91,25 @@ class SampleRequest(BaseModel):
     # used as the base, and `illust_style` (if any) overrides it field-by-field.
     channel_id: Optional[str] = None
     include_characters: Optional[bool] = None  # explicit override at request level
+    # Ordered list of free-text feedback strings the user has supplied across
+    # previous regenerations of the SAME sample. Applied to the DALL-E prompt as
+    # explicit revision instructions. Empty/None → fresh first-time generation.
+    feedback: Optional[List[str]] = None
+
+
+def _build_feedback_block(feedback: Optional[List[str]]) -> str:
+    """Render the user's feedback history into a prompt-safe instruction block."""
+    if not feedback:
+        return ""
+    cleaned = [f.strip() for f in feedback if f and f.strip()]
+    if not cleaned:
+        return ""
+    bullets = "\n".join(f"- {f}" for f in cleaned)
+    return (
+        "USER REVISION INSTRUCTIONS (apply ALL of the following corrections from "
+        "the user; the latest items take priority over earlier ones if they "
+        "conflict):\n" + bullets
+    )
 
 
 class SampleResponse(BaseModel):
@@ -98,6 +117,8 @@ class SampleResponse(BaseModel):
     url: str
     prompt: str
     style: Dict[str, Any]
+    # Echo the feedback list back so the client can show "n回目の修正" etc.
+    feedback: List[str] = Field(default_factory=list)
 
 
 # =====================================================================
@@ -167,6 +188,12 @@ async def generate_sample_illustration(
         req.topic, char_config=char_config, illust_style=style_dict
     )
 
+    feedback_block = _build_feedback_block(req.feedback)
+    if feedback_block:
+        # Append the user's revision history to the DALL-E prompt so the new
+        # generation actively incorporates the requested fixes.
+        prompt = f"{prompt}\n\n{feedback_block}"
+
     img = _call_openai_image(
         prompt, size=size, style=dalle_style, channel_id=req.channel_id
     )
@@ -182,6 +209,7 @@ async def generate_sample_illustration(
         url=f"/api/illustrations/sample/{sample_id}",
         prompt=prompt,
         style=style_dict,
+        feedback=[f.strip() for f in (req.feedback or []) if f and f.strip()],
     )
 
 
@@ -222,6 +250,12 @@ class ThumbnailGenerateRequest(BaseModel):
     line2: Optional[str] = None
     line3_badge: Optional[str] = None
     sub_text: Optional[str] = None
+    # Ordered list of free-text revision instructions accumulated across
+    # previous regenerations of the same thumbnail. Each string is a single
+    # user feedback message ("もっとインパクトを強く" など). Most recent items take
+    # priority. When non-empty, the GPT-4o brief generation is instructed to
+    # apply these revisions on top of the title.
+    feedback: Optional[List[str]] = None
 
 
 class ThumbnailGenerateResponse(BaseModel):
@@ -230,6 +264,7 @@ class ThumbnailGenerateResponse(BaseModel):
     background_id: str
     background_url: str
     brief: Dict[str, Any]
+    feedback: List[str] = Field(default_factory=list)
 
 
 def _build_brief_override(req: ThumbnailGenerateRequest) -> Optional[Dict[str, Any]]:
@@ -283,7 +318,22 @@ async def _do_generate_thumbnail(
         bg_id = thumb_id
         bg_path = THUMBNAILS_DIR / f"{bg_id}_bg.png"
 
+    cleaned_feedback = [f.strip() for f in (req.feedback or []) if f and f.strip()]
+
     try:
+        result = await generate_thumbnail_async(
+            req.title,
+            ch.to_dict(),
+            thumb_path,
+            openai_api_key=OPENAI_API_KEY,
+            reuse_background_path=bg_path if req.reuse_background_id else None,
+            background_save_path=bg_path,
+            brief_override=_build_brief_override(req),
+            feedback=cleaned_feedback or None,
+        )
+    except TypeError:
+        # Older pipeline that does not yet accept `feedback` — fall back so the
+        # endpoint keeps working, but without the new instructions threading.
         result = await generate_thumbnail_async(
             req.title,
             ch.to_dict(),
@@ -305,6 +355,7 @@ async def _do_generate_thumbnail(
         background_id=bg_id,
         background_url=f"/api/thumbnails/{bg_id}/background",
         brief=result.get("brief", {}),
+        feedback=cleaned_feedback,
     )
 
 

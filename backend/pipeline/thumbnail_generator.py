@@ -21,7 +21,7 @@ import re
 import urllib.error
 import urllib.request
 from pathlib import Path
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS_DIR = ROOT / "assets"
@@ -68,11 +68,31 @@ def _call_openai(url: str, payload: dict, api_key: str, timeout: int = 240) -> d
 # ────────────────────────────────────────────────────────────────────────
 # Step 1 — design brief
 # ────────────────────────────────────────────────────────────────────────
-def design_brief(title: str, api_key: str, channel_meta: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
-    """Ask GPT-4o for a 3-line thumbnail design brief tailored to `title`."""
+def design_brief(
+    title: str,
+    api_key: str,
+    channel_meta: Optional[Dict[str, Any]] = None,
+    feedback: Optional[List[str]] = None,
+) -> Dict[str, Any]:
+    """Ask GPT-4o for a 3-line thumbnail design brief tailored to `title`.
+
+    `feedback` — ordered list of free-text revision instructions from the user
+    accumulated across previous regenerations. When provided, GPT-4o is told to
+    apply these revisions on top of its baseline design.
+    """
     channel_meta = channel_meta or {}
     channel_name = channel_meta.get("name") or ""
     concept = channel_meta.get("concept") or ""
+
+    feedback_block = ""
+    if feedback:
+        cleaned = [f.strip() for f in feedback if f and f.strip()]
+        if cleaned:
+            bullets = "\n".join(f"- {f}" for f in cleaned)
+            feedback_block = (
+                "\n\nユーザーからの修正指示（古い→新しい順、ALLを必ず反映する。"
+                "矛盾する場合は新しい指示を優先する):\n" + bullets + "\n"
+            )
 
     system = (
         "あなたはYouTubeで何百万再生も叩き出すサムネイルを設計する一流のアートディレクターです。"
@@ -82,6 +102,7 @@ def design_brief(title: str, api_key: str, channel_meta: Optional[Dict[str, Any]
     user = (
         f"動画タイトル: 「{title}」\n"
         + (f"チャンネル: 「{channel_name}」 — {concept}\n" if channel_name else "")
+        + feedback_block
         + "\n"
         "サムネイルは固定レイアウトです。次のフィールドを必ず含むJSONだけを返してください"
         "（コードフェンス禁止、純JSON）:\n"
@@ -442,8 +463,13 @@ def generate_thumbnail(
     reuse_background_path=None,
     background_save_path=None,
     brief_override: Optional[Dict[str, Any]] = None,
+    feedback: Optional[List[str]] = None,
 ) -> Dict[str, Any]:
     """Generate a YouTube thumbnail PNG. Synchronous facade.
+
+    `feedback` — optional list of free-text revision instructions accumulated
+    across previous regenerations. Forwarded to `design_brief` so GPT-4o adjusts
+    the brief based on what the user asked to change.
 
     Returns:
         {"thumbnail_path", "background_path", "brief"}
@@ -456,6 +482,7 @@ def generate_thumbnail(
             "name": channel_config.get("name"),
             "concept": channel_config.get("concept"),
         },
+        feedback=feedback,
     )
 
     if reuse_background_path:
@@ -486,11 +513,14 @@ async def generate_thumbnail_async(
     reuse_background_path=None,
     background_save_path=None,
     brief_override: Optional[Dict[str, Any]] = None,
+    feedback: Optional[List[str]] = None,
 ) -> Dict[str, Any]:
     """Async variant — for use from FastAPI handlers (which already have a loop).
 
     The OpenAI calls are blocking (urllib); they run in a thread executor so
     we don't stall the event loop.
+
+    `feedback` — see `generate_thumbnail` docstring.
     """
     loop = asyncio.get_running_loop()
     api_key = _resolve_api_key(openai_api_key)
@@ -505,6 +535,7 @@ async def generate_thumbnail_async(
                 "name": channel_config.get("name"),
                 "concept": channel_config.get("concept"),
             },
+            feedback=feedback,
         ),
     )
 

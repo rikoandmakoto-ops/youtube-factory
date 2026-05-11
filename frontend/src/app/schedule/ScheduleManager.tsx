@@ -24,6 +24,7 @@ const emptyDraft = (channelId: string): ScheduleInput => ({
   theme: '',
   duration_minutes: 12,
   auto_publish: false,
+  publish_offset_minutes: null,
   enabled: true,
 });
 
@@ -70,6 +71,7 @@ export default function ScheduleManager({
       theme: s.theme || '',
       duration_minutes: s.duration_minutes,
       auto_publish: s.auto_publish,
+      publish_offset_minutes: s.publish_offset_minutes ?? null,
       enabled: s.enabled,
     });
     setShowForm(true);
@@ -298,6 +300,68 @@ export default function ScheduleManager({
             />
             <span>生成完了後にYouTubeへ自動投稿</span>
           </label>
+
+          {draft.auto_publish && (
+            <div className="border-l-2 border-accent/40 pl-3 ml-1 space-y-2">
+              <label className="label">📅 公開タイミング</label>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setDraft({ ...draft, publish_offset_minutes: null })
+                  }
+                  className={`py-2 rounded-lg text-sm font-semibold ${
+                    !draft.publish_offset_minutes
+                      ? 'bg-accent text-white'
+                      : 'bg-bg-elev text-slate-400 border border-border'
+                  }`}
+                >
+                  即時公開
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setDraft({
+                      ...draft,
+                      publish_offset_minutes: draft.publish_offset_minutes || 60,
+                    })
+                  }
+                  className={`py-2 rounded-lg text-sm font-semibold ${
+                    draft.publish_offset_minutes
+                      ? 'bg-accent text-white'
+                      : 'bg-bg-elev text-slate-400 border border-border'
+                  }`}
+                >
+                  スケジュール公開
+                </button>
+              </div>
+              {!!draft.publish_offset_minutes && (
+                <div>
+                  <label className="label">
+                    生成完了から何分後に公開するか
+                  </label>
+                  <input
+                    type="number"
+                    className="input"
+                    min={1}
+                    max={60 * 24 * 30}
+                    value={draft.publish_offset_minutes ?? ''}
+                    onChange={(e) =>
+                      setDraft({
+                        ...draft,
+                        publish_offset_minutes:
+                          Number(e.target.value) || null,
+                      })
+                    }
+                  />
+                  <p className="text-[10px] text-slate-500 mt-1 leading-relaxed">
+                    例: 60 → 生成完了から1時間後に YouTube 上で公開。最大 30 日 (43200 分)。
+                  </p>
+                </div>
+              )}
+            </div>
+          )}
+
           <label className="flex items-center gap-2 select-none cursor-pointer text-sm">
             <input
               type="checkbox"
@@ -391,6 +455,9 @@ function ScheduleRow({
             {' · '}
             {schedule.duration_minutes}分
             {schedule.auto_publish && ' · 📤 自動投稿'}
+            {schedule.auto_publish && schedule.publish_offset_minutes
+              ? ` (${schedule.publish_offset_minutes}分後)`
+              : ''}
           </p>
           {schedule.enabled && (
             <p className="text-xs text-emerald-400 mt-1">⏰ 次回: {nextRun}</p>

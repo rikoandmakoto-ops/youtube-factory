@@ -5,6 +5,7 @@ import ChannelCard, { NewChannelCard } from '@/components/ChannelCard';
 import ActiveJobs from '@/components/ActiveJobs';
 import UpcomingSchedules from '@/components/UpcomingSchedules';
 import MonthlyCostSummary from '@/components/MonthlyCostSummary';
+import HeaderCostBadge from '@/components/HeaderCostBadge';
 import {
   getSystemStatus,
   listChannels,
@@ -40,9 +41,12 @@ export default async function DashboardPage() {
       <Header
         showNav
         actions={
-          <Link href="/settings" className="btn-secondary py-2 px-3 text-sm">
-            ⚙️
-          </Link>
+          <div className="flex items-center gap-2">
+            <HeaderCostBadge />
+            <Link href="/settings" className="btn-secondary py-2 px-3 text-sm">
+              ⚙️
+            </Link>
+          </div>
         }
       />
 
