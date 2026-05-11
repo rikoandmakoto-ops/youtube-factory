@@ -215,6 +215,49 @@ export default function ChannelYoutubeConnect({
         </p>
       )}
 
+      <details className="rounded-lg bg-bg-elev/60 border border-border">
+        <summary className="cursor-pointer text-sm font-semibold px-3 py-2 select-none">
+          📖 YouTube連携の設定方法
+        </summary>
+        <div className="px-3 pb-3 pt-1 space-y-3 border-t border-border/50 mt-1">
+          <ol className="list-decimal list-outside pl-5 space-y-1.5 text-xs text-slate-300 leading-relaxed">
+            <li>
+              <a
+                href="https://console.cloud.google.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-accent underline hover:no-underline"
+              >
+                Google Cloud Console
+              </a>
+              でプロジェクトを作成
+            </li>
+            <li>
+              「APIとサービス」→「ライブラリ」→「YouTube Data API v3」を有効化
+            </li>
+            <li>
+              「OAuth同意画面」→「外部」で作成、アプリ名とメールを入力
+            </li>
+            <li>テストユーザーに自分のGmailを追加</li>
+            <li>
+              「認証情報」→「OAuthクライアントID」→「ウェブアプリケーション」で作成
+              <span className="block text-[10px] text-slate-500 mt-0.5">
+                ※ 承認済みリダイレクトURIには下のフォームに表示されるURLを追加
+              </span>
+            </li>
+            <li>
+              表示される「クライアントID」と「クライアントシークレット」を下の入力欄に貼り付け
+            </li>
+            <li>
+              「YouTubeと連携する」ボタンを押してGoogleアカウントで認証
+            </li>
+          </ol>
+          <p className="text-xs text-slate-300 bg-accent/10 border border-accent/30 rounded px-3 py-2 leading-relaxed">
+            💡 OAuth連携すれば動画アップロード・アナリティクス取得・いいね率分析が全てできます。別途APIキーの設定は不要です。
+          </p>
+        </div>
+      </details>
+
       {(showClientForm || !status.client_configured) && (
         <details
           className="rounded-lg bg-bg-elev/60 border border-border p-3"
