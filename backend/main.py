@@ -1241,6 +1241,100 @@ async def factory_run_all(count_per_channel: int = 1, priority: int = 5, gen_typ
     return {"status": "ok", "total_jobs": total_jobs, "by_channel": all_results}
 
 
+# ============================================================
+# Phase C: Trends + AB Testing
+# ============================================================
+
+@app.get("/api/trends/{channel_id}")
+async def api_get_trends(channel_id: str, count: int = 5):
+    """現在のトレンドと、そこから提案される旬のテーマを返す。
+
+    - Google Trends（pytrends）+ YouTube 急上昇（教育/科学）+ チャンネルとの関連語
+    - チャンネルが見つかれば、AI 提案テーマ（`/scenarios/suggest-themes` 相当）も
+      include_trends=True で同時に取得して `themes` フィールドに付ける。
+    """
+    try:
+        from pipeline.trend_fetcher import fetch_combined_trends
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"trend_fetcher import failed: {e}")
+
+    ch = channel_manager.get(channel_id) if channel_manager else None
+    combined = fetch_combined_trends(ch)
+
+    themes: List[Dict] = []
+    if ch and scenario_generator and scenario_generator.api_key:
+        try:
+            themes = scenario_generator.suggest_themes(ch, count=count, include_trends=True) or []
+        except Exception as e:
+            print(f"⚠️ suggest_themes failed in /api/trends: {e}")
+            themes = []
+
+    return {
+        "status": "ok",
+        "channel_id": channel_id,
+        "trends": combined,
+        "themes": themes,
+    }
+
+
+class ABTestGenerateRequest(BaseModel):
+    theme_title: str
+    theme_angle: Optional[str] = ""
+    channel_id: Optional[str] = None
+    scenario_summary: Optional[str] = None
+
+
+@app.post("/api/ab-test/generate")
+async def api_ab_test_generate(request: ABTestGenerateRequest):
+    """タイトル・サムネキャッチコピーを 3 パターン生成して CTR スコアを付ける。"""
+    try:
+        from pipeline.ab_test_generator import generate_ab_test
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"ab_test_generator import failed: {e}")
+    if not os.environ.get("OPENAI_API_KEY", "").strip():
+        # クラッシュさせず、フォールバック生成（スコア 0）を返す
+        result = generate_ab_test(
+            request.theme_title,
+            request.theme_angle or "",
+            channel_id=request.channel_id,
+            scenario_summary=request.scenario_summary,
+        )
+        return {"status": "ok_fallback", "note": "OPENAI_API_KEY not set — using fallback variants", "ab_test": result}
+    try:
+        result = generate_ab_test(
+            request.theme_title,
+            request.theme_angle or "",
+            channel_id=request.channel_id,
+            scenario_summary=request.scenario_summary,
+        )
+        return {"status": "ok", "ab_test": result}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/ab-test/{test_id}")
+async def api_ab_test_get(test_id: str):
+    """過去の AB テスト結果を取得。"""
+    try:
+        from pipeline.ab_test_generator import load_ab_test
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"ab_test_generator import failed: {e}")
+    data = load_ab_test(test_id)
+    if not data:
+        raise HTTPException(status_code=404, detail=f"AB test not found: {test_id}")
+    return data
+
+
+@app.get("/api/ab-test")
+async def api_ab_test_list(channel_id: Optional[str] = None, limit: int = 50):
+    """AB テスト一覧（channel_id でフィルタ可）。"""
+    try:
+        from pipeline.ab_test_generator import list_ab_tests
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"ab_test_generator import failed: {e}")
+    return {"status": "ok", "items": list_ab_tests(channel_id=channel_id, limit=limit)}
+
+
 @app.get("/health")
 async def health():
     """Health check endpoint."""

@@ -305,6 +305,7 @@ class ScenarioGenerator:
         theme_override: Optional[Dict] = None,
         target_duration: Optional[int] = None,
         improvement_feedback: Optional[List[Dict[str, Any]]] = None,
+        run_ab_test: bool = False,
     ) -> Dict[str, Any]:
         """
         チャンネルプロファイルからシナリオを自動生成。
@@ -481,7 +482,7 @@ class ScenarioGenerator:
             if last_short_avg < 30:
                 print(f"  ⚠️ short_scenario: {len(short_lines_data)} lines, {short_total} chars, avg {last_short_avg:.1f}/line — under 30/line, may be under 30s")
 
-        return {
+        result = {
             "title": scenario_data.get("title", theme["title"]),
             "theme": theme,
             "short_scenario": scenario_data.get("short_scenario", []),
@@ -492,6 +493,48 @@ class ScenarioGenerator:
             "applied_feedback": applied_feedback_ids,
             "applied_analytics_feedback": applied_analytics,
         }
+
+        # Phase C: AB テストでタイトル＆サムネを最適化（オプション）
+        if run_ab_test and self.api_key:
+            try:
+                from pipeline.ab_test_generator import generate_ab_test
+                # シナリオ冒頭6行を要約として渡す（コスト圧縮）
+                summary_lines: List[str] = []
+                for line in (result["full_scenario"] or [])[:6]:
+                    text = line.get("text") if isinstance(line, dict) else ""
+                    if text:
+                        summary_lines.append(text)
+                scenario_summary = "\n".join(summary_lines)
+                ab = generate_ab_test(
+                    theme_title=result["title"],
+                    theme_angle=theme.get("angle", "") or "",
+                    channel_id=channel.id,
+                    scenario_summary=scenario_summary,
+                    save=True,
+                )
+                best = ab.get("best") or {}
+                if best.get("title"):
+                    # 既存のタイトル / thumb_info を上書きしつつ、元のタイトルも保持
+                    result["original_title"] = result["title"]
+                    result["title"] = best["title"]
+                    thumb_copy = best.get("thumb_copy") or []
+                    if thumb_copy and isinstance(result.get("thumb_info"), dict):
+                        result["thumb_info"]["hook_lines"] = thumb_copy[:2] or result["thumb_info"].get("hook_lines", [])
+                result["ab_test"] = {
+                    "test_id": ab.get("test_id"),
+                    "best_pattern": best.get("pattern"),
+                    "best_score": best.get("score"),
+                    "variant_count": len(ab.get("variants") or []),
+                }
+                print(
+                    f"  🎯 AB test ({ab.get('test_id')}): "
+                    f"best={best.get('pattern')} score={best.get('score')}"
+                )
+            except Exception as e:
+                print(f"  ⚠️ AB test generation failed: {e}")
+                result["ab_test"] = {"error": str(e)}
+
+        return result
 
     def _expand_via_sections(
         self,
@@ -602,13 +645,22 @@ class ScenarioGenerator:
                 print(f"  ❌ Failed: {theme['title']} — {e}")
         return results
 
-    def suggest_themes(self, channel, count: int = 5) -> List[Dict[str, str]]:
+    def suggest_themes(
+        self,
+        channel,
+        count: int = 5,
+        *,
+        include_trends: bool = True,
+    ) -> List[Dict[str, str]]:
         """GPT にチャンネルコンセプトに合う新テーマを提案させる。
 
         既存の theme_seeds と、過去に生成済みのシナリオに含まれるテーマの両方を考慮し、
         - 完全な新規テーマ、または
         - 過去テーマの「続編・発展系・別角度・深掘り」（parent_title 付き）
         を提案させる。重複・言い換えは禁止。
+
+        Phase C: include_trends=True なら Google Trends / YouTube 急上昇を取得して
+        プロンプトに注入し、トレンドに乗ったテーマには ``is_trending: true`` を付与する。
         """
         seed_titles = [s["title"] for s in channel.theme_seeds if s.get("title")]
         past_themes = self._collect_past_themes(channel.id, limit=40)
@@ -634,6 +686,27 @@ class ScenarioGenerator:
                 break
         past_block = "\n".join(f"- {t}" for t in past_unique) if past_unique else "(なし)"
 
+        # Phase C: トレンド情報を取得してプロンプトへ注入
+        trend_block = ""
+        trend_keywords: List[str] = []
+        if include_trends:
+            try:
+                from pipeline.trend_fetcher import fetch_combined_trends, build_prompt_block
+                combined = fetch_combined_trends(channel)
+                trend_block = build_prompt_block(combined) or ""
+                trend_keywords = (
+                    list(combined.get("relevant_to_channel") or [])
+                    + list(combined.get("google_trends") or [])
+                    + list(combined.get("youtube_keywords") or [])
+                )
+                if trend_block:
+                    print(
+                        f"  📈 Injecting trends (sources: {combined.get('sources_used')}, "
+                        f"relevant: {len(combined.get('relevant_to_channel') or [])})"
+                    )
+            except Exception as e:
+                print(f"  ⚠️ trend fetch failed: {e}")
+
         prompt = f"""YouTube動画テーマを{count}個提案。JSON配列のみ。
 
 # チャンネル: {channel.name} / {channel.concept} / {channel.style} / {channel.content_policy.get("tone","friendly")}
@@ -654,11 +727,16 @@ class ScenarioGenerator:
 
 # 出力フォーマット
 [
- {{"title": "テーマ", "angle": "切り口", "parent_title": null}},
- {{"title": "テーマ", "angle": "切り口", "parent_title": "元の過去テーマのタイトル"}}
+ {{"title": "テーマ", "angle": "切り口", "parent_title": null, "is_trending": false, "trend_match": null}},
+ {{"title": "テーマ", "angle": "切り口", "parent_title": "元の過去テーマのタイトル", "is_trending": true, "trend_match": "該当トレンドワード"}}
 ]
 
+# トレンド連動ルール
+- 後述「現在のトレンド」セクションのキーワードと自然に結びつくテーマは `is_trending: true` にし、`trend_match` に該当キーワードを入れる。
+- 結びつかない／無理な場合は `is_trending: false`, `trend_match: null`。
+
 # バズる条件: 「なぜ〇〇なのか」系 / 意外性 / 日常と科学のギャップ / 数字データ
+{trend_block}
 """
 
         messages = [
@@ -679,6 +757,30 @@ class ScenarioGenerator:
             ]
             if filtered:
                 themes = filtered
+
+            # Phase C: トレンドスコアを付与（GPT が is_trending を返さなくても局所判定で埋める）
+            if trend_keywords:
+                try:
+                    from pipeline.trend_fetcher import score_theme_against_trends
+                    for t in themes:
+                        if not isinstance(t, dict):
+                            continue
+                        title = (t.get("title") or "").strip()
+                        score = score_theme_against_trends(title, trend_keywords)
+                        t["trend_score"] = score
+                        # is_trending が未指定なら自動補完
+                        if "is_trending" not in t:
+                            t["is_trending"] = score >= 0.34
+                        # trend_match 未指定 & スコアが付いたら、最初に被ったキーワードを記録
+                        if t.get("is_trending") and not t.get("trend_match"):
+                            from pipeline.trend_fetcher import _tokens
+                            ttoks = set(_tokens(title))
+                            for kw in trend_keywords:
+                                if set(_tokens(kw)) & ttoks:
+                                    t["trend_match"] = kw
+                                    break
+                except Exception as e:
+                    print(f"  ⚠️ trend scoring failed: {e}")
         return themes
 
     @staticmethod
