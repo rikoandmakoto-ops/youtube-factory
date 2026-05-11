@@ -310,6 +310,7 @@ class JobQueue:
                 full_scenario=sd.get("full_scenario"),
                 output_dir=job.output_dir,
                 gen_type=job.gen_type,
+                bg_video_path=channel.get_bg_video_path() if channel else None,
                 bg_type=channel.get_bg_type() if channel else "auto",
                 thumb_info=sd.get("thumb_info"),
                 speed=channel.get_speed() if channel else 1.3,

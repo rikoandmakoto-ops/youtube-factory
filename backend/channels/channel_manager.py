@@ -83,6 +83,22 @@ class ChannelProfile:
     def get_bg_type(self) -> str:
         return self.defaults.get("bg_type", "auto")
 
+    def get_bg_video_path(self) -> Optional[str]:
+        """Background image/video path from defaults.
+
+        Returns the configured `bg_path`, resolved against the repo root if it
+        is a relative path (so callers can pass it straight through to the
+        video generator, which checks `Path.exists()` directly).
+        """
+        bg_rel = self.defaults.get("bg_path")
+        if not bg_rel:
+            return None
+        p = Path(bg_rel)
+        if not p.is_absolute():
+            repo_root = Path(__file__).resolve().parent.parent.parent
+            p = repo_root / bg_rel
+        return str(p) if p.exists() else None
+
     def get_use_illustrations(self) -> bool:
         return self.defaults.get("use_illustrations", True)
 
