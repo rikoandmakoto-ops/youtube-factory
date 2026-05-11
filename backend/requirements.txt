@@ -19,3 +19,6 @@ apscheduler>=3.10.0
 # Phase 5 — HTML+CSS+Playwright サムネ生成
 # 別途 `python -m playwright install chromium` の実行が必要
 playwright>=1.40.0
+# Phase C — トレンド連動（Google Trends 非公式 API）
+# レート制限で失敗してもクラッシュしないようにフォールバック実装済み
+pytrends>=4.9.0
