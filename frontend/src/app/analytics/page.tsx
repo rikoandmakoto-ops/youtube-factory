@@ -6,6 +6,9 @@ import {
   getAnalyticsVideos,
   getTrends,
   listABTests,
+  listEvaluations,
+  listAbReconciliation,
+  listImprovements,
   ApiError,
   redirectIfUnauthorized,
 } from '@/lib/api';
@@ -27,15 +30,31 @@ export default async function AnalyticsPage({
     getAnalyticsVideos(channelId, 50),
     getTrends(channelId, 5),
     listABTests(channelId, 20),
+    listEvaluations(channelId, 100),
+    listAbReconciliation(channelId, 200),
+    listImprovements(channelId, { limit: 100 }),
   ]);
   redirectIfUnauthorized(results, '/analytics');
-  const [chRes, ovRes, vidRes, trRes, abRes] = results;
+  const [
+    chRes,
+    ovRes,
+    vidRes,
+    trRes,
+    abRes,
+    evalRes,
+    reconRes,
+    impRes,
+  ] = results;
 
   const channels = chRes.status === 'fulfilled' ? chRes.value : [];
   const overview = ovRes.status === 'fulfilled' ? ovRes.value : null;
   const videos = vidRes.status === 'fulfilled' ? vidRes.value.items : [];
   const trends = trRes.status === 'fulfilled' ? trRes.value : null;
   const abTests = abRes.status === 'fulfilled' ? abRes.value.items : [];
+  const evaluations = evalRes.status === 'fulfilled' ? evalRes.value : null;
+  const abReconciliation =
+    reconRes.status === 'fulfilled' ? reconRes.value : null;
+  const improvements = impRes.status === 'fulfilled' ? impRes.value : null;
 
   const sectionErrors: { section: string; message: string }[] = [];
   const collect = (
@@ -54,6 +73,9 @@ export default async function AnalyticsPage({
   collect('動画一覧', vidRes);
   collect('トレンド', trRes);
   collect('AB テスト', abRes);
+  collect('シナリオ評価', evalRes);
+  collect('AB 答え合わせ', reconRes);
+  collect('改善キュー', impRes);
 
   return (
     <main className="pb-10">
@@ -68,6 +90,9 @@ export default async function AnalyticsPage({
         initialVideos={videos}
         initialTrends={trends}
         initialABTests={abTests}
+        initialEvaluations={evaluations}
+        initialAbReconciliation={abReconciliation}
+        initialImprovements={improvements}
         initialErrors={sectionErrors}
       />
     </main>

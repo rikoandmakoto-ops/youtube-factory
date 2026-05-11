@@ -112,6 +112,60 @@ def build_analytics_addendum(channel_id: str) -> Optional[str]:
         block.append("  - 上記に該当するテーマ・切り口を可能な範囲で本シナリオに反映すること。")
         sections.append("\n".join(block))
 
+    # Phase D (A4): 直近のシナリオ評価から弱点パターンを抽出
+    try:
+        from . import scenario_evaluator
+        weak = scenario_evaluator.aggregate_weak_patterns(channel_id, recent=5)
+    except Exception:
+        weak = {"count": 0}
+    if weak.get("count", 0) > 0:
+        avg = weak.get("averages") or {}
+        block = ["**直近シナリオ評価から判明した弱点（必ず克服）**:"]
+        # スコアが低い軸を抽出（10段階で 6.0 未満）
+        low_axes = sorted(
+            ((k, v) for k, v in avg.items() if k != "overall" and v < 6.0),
+            key=lambda kv: kv[1],
+        )
+        if low_axes:
+            label_map = {
+                "hook_strength": "冒頭フック",
+                "specificity": "具体性（数字・固有名詞）",
+                "pacing": "テンポ・展開",
+                "cta_effectiveness": "CTA訴求力",
+                "wording_quality": "言い回し",
+            }
+            for k, v in low_axes[:3]:
+                label = label_map.get(k, k)
+                block.append(
+                    f"  - 過去{weak['count']}本で {label} のスコアが平均{v:.1f}/10。"
+                    f"今回必ず改善する。"
+                )
+                if k == "specificity":
+                    block.append("    - 各展開セクションに具体数字・固有名詞・年号を最低1つずつ含めること")
+                elif k == "hook_strength":
+                    block.append("    - 冒頭5秒に意外な事実・数字・問いかけを必ず置く")
+                elif k == "pacing":
+                    block.append("    - 同じトピックを8行以上引き伸ばさず、3〜5行で次に進む")
+                elif k == "cta_effectiveness":
+                    block.append("    - 結びで具体的なアクション（コメントで問う／類似動画予告）を明示")
+                elif k == "wording_quality":
+                    block.append("    - 抽象語（『すごい』『面白い』）を避け、感覚を呼び起こす描写に置き換える")
+        weak_sections = weak.get("weak_sections") or []
+        if weak_sections:
+            block.append(
+                "  - 頻繁に離脱が出ているセクション: "
+                + " / ".join(
+                    f"**{w['section']}** ({int(w['frequency_ratio'] * 100)}%)"
+                    for w in weak_sections[:3]
+                )
+            )
+            block.append("    - 該当区間は構成を圧縮し、新しい刺激（問い／意外な事実／場面転換）を入れる")
+        suggestions = weak.get("recent_suggestions") or []
+        if suggestions:
+            block.append("  - 直近の改善提案を反映:")
+            block.extend(_bullets(suggestions, prefix="    - ", limit=4))
+        sections.append("\n".join(block))
+
     if not sections:
         return None
 

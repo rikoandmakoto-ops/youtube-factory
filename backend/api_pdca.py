@@ -1,0 +1,232 @@
+"""
+YouTube Factory — Phase D API (`/api/evaluations/*`, `/api/ab-reconciliation/*`, `/api/improvements/*`)
+
+シナリオ評価・AB 答え合わせ・改善キューの参照系 + 手動トリガーをまとめたルーター。
+"""
+
+from __future__ import annotations
+
+import threading
+from typing import Any, Dict, List, Optional
+
+from fastapi import APIRouter, Depends, HTTPException, Query
+from pydantic import BaseModel, Field
+
+from api_phase1 import require_session
+from pipeline.analytics import (
+    ab_reconciler,
+    improvement_queue,
+    scenario_evaluator,
+    store as analytics_store,
+)
+
+
+router = APIRouter(prefix="/api", tags=["pdca"])
+
+_eval_locks: Dict[str, threading.Lock] = {}
+_recon_locks: Dict[str, threading.Lock] = {}
+_imp_locks: Dict[str, threading.Lock] = {}
+
+
+def _lock(d: Dict[str, threading.Lock], key: str) -> threading.Lock:
+    lock = d.get(key)
+    if lock is None:
+        lock = threading.Lock()
+        d[key] = lock
+    return lock
+
+
+# =====================================================================
+# Pydantic
+# =====================================================================
+
+class EvalRunRequest(BaseModel):
+    use_gpt: bool = True
+    only_new: bool = True
+    max_videos: int = Field(default=20, ge=1, le=100)
+
+
+class ReconcileRunRequest(BaseModel):
+    min_age_days: float = Field(default=7.0, ge=0.0, le=365.0)
+
+
+class ImprovementRunRequest(BaseModel):
+    threshold_ratio: float = Field(default=0.8, ge=0.0, le=1.0)
+    max_videos: int = Field(default=20, ge=1, le=100)
+    regen_titles: bool = True
+
+
+class ImprovementStatusRequest(BaseModel):
+    status: str  # pending | applied | dismissed
+
+
+# =====================================================================
+# /api/evaluations
+# =====================================================================
+
+@router.get("/evaluations/{channel_id}")
+async def list_evaluations(
+    channel_id: str,
+    limit: int = Query(default=100, ge=1, le=500),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    items = analytics_store.list_scenario_evaluations(channel_id, limit=limit)
+    return {
+        "channel_id": channel_id,
+        "count": len(items),
+        "items": items,
+        "weak_patterns": scenario_evaluator.aggregate_weak_patterns(channel_id, recent=10),
+    }
+
+
+@router.get("/evaluations/{channel_id}/{video_id}")
+async def get_evaluation(
+    channel_id: str,
+    video_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    rec = analytics_store.get_scenario_evaluation(video_id)
+    if not rec or rec.get("channel_id") != channel_id:
+        raise HTTPException(status_code=404, detail="evaluation not found")
+    # 該当動画の retention curve も同梱
+    retention = analytics_store.get_retention(video_id)
+    comments = analytics_store.comment_summary_for_video(video_id)
+    return {
+        "evaluation": rec,
+        "retention": retention,
+        "comment_summary": comments,
+    }
+
+
+@router.post("/evaluations/{channel_id}/run")
+async def run_evaluation(
+    channel_id: str,
+    body: Optional[EvalRunRequest] = None,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    opts = body or EvalRunRequest()
+    lock = _lock(_eval_locks, channel_id)
+    if not lock.acquire(blocking=False):
+        raise HTTPException(status_code=409, detail="evaluation already running for this channel")
+    try:
+        return scenario_evaluator.evaluate_channel(
+            channel_id,
+            max_videos=opts.max_videos,
+            use_gpt=opts.use_gpt,
+            only_new=opts.only_new,
+        )
+    finally:
+        lock.release()
+
+
+@router.post("/evaluations/{channel_id}/{video_id}/run")
+async def run_evaluation_single(
+    channel_id: str,
+    video_id: str,
+    body: Optional[EvalRunRequest] = None,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    opts = body or EvalRunRequest()
+    return scenario_evaluator.evaluate_video(
+        video_id=video_id,
+        channel_id=channel_id,
+        use_gpt=opts.use_gpt,
+        force=not opts.only_new,
+    )
+
+
+# =====================================================================
+# /api/ab-reconciliation
+# =====================================================================
+
+@router.get("/ab-reconciliation/{channel_id}")
+async def list_ab_reconciliation(
+    channel_id: str,
+    limit: int = Query(default=200, ge=1, le=1000),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    items = analytics_store.list_ab_reconciliations(channel_id, limit=limit)
+    return {
+        "channel_id": channel_id,
+        "count": len(items),
+        "items": items,
+        "pattern_insights": ab_reconciler.pattern_insights(channel_id),
+    }
+
+
+@router.post("/ab-reconciliation/{channel_id}/run")
+async def run_ab_reconciliation(
+    channel_id: str,
+    body: Optional[ReconcileRunRequest] = None,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    opts = body or ReconcileRunRequest()
+    lock = _lock(_recon_locks, channel_id)
+    if not lock.acquire(blocking=False):
+        raise HTTPException(status_code=409, detail="reconciliation already running")
+    try:
+        return ab_reconciler.reconcile_channel(channel_id, min_age_days=opts.min_age_days)
+    finally:
+        lock.release()
+
+
+# =====================================================================
+# /api/improvements
+# =====================================================================
+
+@router.get("/improvements/{channel_id}")
+async def list_improvements(
+    channel_id: str,
+    status: Optional[str] = Query(default=None),
+    limit: int = Query(default=100, ge=1, le=500),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    items = analytics_store.list_improvement_entries(channel_id, status=status, limit=limit)
+    return {
+        "channel_id": channel_id,
+        "count": len(items),
+        "items": items,
+        "channel_avg_ctr": improvement_queue.channel_avg_ctr(channel_id),
+    }
+
+
+@router.post("/improvements/{channel_id}/run")
+async def run_improvement_detect(
+    channel_id: str,
+    body: Optional[ImprovementRunRequest] = None,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    opts = body or ImprovementRunRequest()
+    lock = _lock(_imp_locks, channel_id)
+    if not lock.acquire(blocking=False):
+        raise HTTPException(status_code=409, detail="improvement detection already running")
+    try:
+        return improvement_queue.detect_and_queue(
+            channel_id,
+            threshold_ratio=opts.threshold_ratio,
+            max_videos=opts.max_videos,
+            regen_titles=opts.regen_titles,
+        )
+    finally:
+        lock.release()
+
+
+@router.post("/improvements/{channel_id}/{video_id}/regenerate")
+async def regenerate_catchcopy(
+    channel_id: str,
+    video_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    return improvement_queue.regenerate_for_video(channel_id, video_id, regen=True)
+
+
+@router.put("/improvements/{channel_id}/{video_id}/status")
+async def set_improvement_status(
+    channel_id: str,
+    video_id: str,
+    body: ImprovementStatusRequest,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    if not analytics_store.update_improvement_status(video_id, body.status):
+        raise HTTPException(status_code=404, detail="improvement entry not found")
+    return {"video_id": video_id, "status": body.status}

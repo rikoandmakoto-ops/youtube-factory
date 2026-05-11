@@ -322,6 +322,12 @@ class JobQueue:
                 channel_dict=ch_dict,
                 bgm_volume=bgm_volume_override,
                 cancel_check=_cancel_check,
+                scenario_meta={
+                    "theme": sd.get("theme"),
+                    "applied_feedback": sd.get("applied_feedback"),
+                    "prompt_hash": sd.get("prompt_hash"),
+                    "video_title": sd.get("video_title"),
+                },
             )
 
             # generate_all から戻った後にも中断要求が立っていたら CANCELLED で確定

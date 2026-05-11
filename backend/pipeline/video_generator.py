@@ -2840,7 +2840,7 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                  style="yukkuri", use_illustrations=True,
                  channel_format=None, char_config=None, channel_dict=None,
                  bgm_volume=None,
-                 cancel_check=None):
+                 cancel_check=None, scenario_meta=None):
     """
     Generate all outputs into one folder.
 
@@ -2899,6 +2899,26 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
     results = {"output_dir": str(out_dir), "video_title": video_title, "short_title": short_title, "style": style}
 
     channel_id = (channel_dict or {}).get("id") if channel_dict else None
+
+    # ── Scenario archive (A1) — markdown 原文を永続化 ──
+    if channel_id:
+        try:
+            from pipeline.analytics.scenario_archive import archive_scenario
+            meta = scenario_meta or {}
+            archive_scenario(
+                channel_id=channel_id,
+                prefix=prefix,
+                title=title,
+                short_scenario=short_scenario,
+                full_scenario=full_scenario,
+                thumb_info=thumb_info,
+                theme=meta.get("theme"),
+                style=style,
+                video_title=video_title,
+                applied_feedback=meta.get("applied_feedback"),
+            )
+        except Exception as e:
+            print(f"⚠️ scenario archive failed: {e}")
 
     # ── Style routing ──
     if style == "monologue":
