@@ -140,7 +140,10 @@ class ChannelProfile:
         ps.setdefault("short_delay_minutes", 10)
         ps.setdefault(
             "short_description_template",
-            "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}",
+            "▼ 関連動画 / Related video\n"
+            "🎬 フル解説はこちら！\n"
+            "{main_url}\n\n"
+            "{original_description}",
         )
         return ps
 
