@@ -3,10 +3,18 @@ YouTube Pair Publisher — メイン+ショートをペアで時差公開
 
 フロー:
   1. メイン動画を即時公開（または publish 即時）
-  2. メイン動画のURL（https://youtube.com/watch?v=...）を取得
-  3. ショートの説明文にチャンネル設定の short_description_template を使ってメインURLを差し込む
+  2. メイン動画のURL（https://youtube.com/watch?v=...）と video_id を取得
+  3. ショートの説明文に short_description_template を使ってメインの URL / video_id を差し込み、
+     「関連動画」リンクとして埋め込む
   4. ショート動画を private + publishAt = now + short_delay_minutes でスケジュール公開
      → YouTube ネイティブの予約公開機能を使うのでサーバが落ちても予定通り公開される
+
+関連動画（Related video）について:
+  YouTube Studio のショートには「関連動画」を長尺動画にひもづける UI 機能があるが、
+  YouTube Data API v3 (videos.insert / videos.update) ではこのフィールドは公開されていない。
+  snippet / status / recordingDetails / topicDetails 等いずれも該当フィールド無し。
+  そのため本実装では「説明文の先頭にメイン動画の URL を `▼ 関連動画` ラベル付きで埋め込む」
+  ワークアラウンドを採用している。Studio 側で完全なリンク付けを行いたい場合は手動操作が必要。
 
 呼び出し元:
   - api_phase3 の /api/youtube/publish-pair エンドポイント
@@ -32,7 +40,12 @@ from . import youtube_oauth as yt_oauth
 
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
-DEFAULT_TEMPLATE = "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}"
+DEFAULT_TEMPLATE = (
+    "▼ 関連動画 / Related video\n"
+    "🎬 フル解説はこちら！\n"
+    "{main_url}\n\n"
+    "{original_description}"
+)
 
 # In-memory pair-publish jobs (api_phase3 から共有)
 _pair_jobs: Dict[str, Dict[str, Any]] = {}
@@ -128,13 +141,23 @@ def build_short_description(
     original_short_desc: str,
     main_title: str,
     template: Optional[str],
+    main_video_id: Optional[str] = None,
 ) -> str:
-    """ショート説明文に メイン動画 URL を差し込む。"""
+    """ショート説明文に メイン動画 URL / video_id を差し込む（関連動画リンクとして埋め込み）。
+
+    YouTube Data API v3 では Shorts の Studio 側「関連動画」フィールドを直接設定できないため、
+    説明文に URL を埋め込むワークアラウンド。テンプレ変数として {main_url}, {main_video_id},
+    {main_title}, {original_description} を利用できる。
+    """
     tmpl = template or DEFAULT_TEMPLATE
+    if not tmpl.strip().startswith("▼ 関連動画") and "{main_url}" in tmpl:
+        # 旧テンプレ（"🎬 フル解説はこちら！" 等）にも 関連動画 ラベルが付くよう先頭に挿入
+        tmpl = "▼ 関連動画 / Related video\n" + tmpl
     return _safe_format_template(
         tmpl,
         {
             "main_url": main_url,
+            "main_video_id": main_video_id or "",
             "main_title": main_title,
             "original_description": original_short_desc,
         },
@@ -341,11 +364,19 @@ def run_pair_publish(
         )
 
         # ── 2. ショート説明文を組み立て ──
+        # メインの video_id / URL を「関連動画」リンクとして説明文に埋め込む。
+        # （YouTube Data API v3 には Studio の Related Video 機能を直接叩く API は無い）
         final_short_desc = build_short_description(
             main_url=main_result["url"],
             original_short_desc=short_description,
             main_title=main_title,
             template=short_description_template,
+            main_video_id=main_result.get("video_id"),
+        )
+        _update_job(
+            job_id,
+            related_video_id=main_result.get("video_id"),
+            related_video_url=main_result["url"],
         )
 
         # ── 3. ショート予約公開 ──
@@ -375,6 +406,9 @@ def run_pair_publish(
             thumbnail_path=short_thumbnail_path,
             progress_cb=short_progress,
         )
+        # 関連動画情報を short_result にも残す（UI / 永続化で参照できるよう）
+        short_result["related_video_id"] = main_result.get("video_id")
+        short_result["related_video_url"] = main_result.get("url")
         _update_job(
             job_id,
             short=short_result,
