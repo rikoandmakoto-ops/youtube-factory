@@ -21,6 +21,32 @@ const STEPS = [
   { id: 5, label: '出力', short: '5.出力' },
 ];
 
+/**
+ * fetch() がネットワーク層で失敗したかどうか。Safari は "Load failed"、
+ * Chromium は "Failed to fetch" を投げる。ユーザーが別タブに移動して
+ * 戻ってきた直後によく発生する一過性のエラーで、画面に出すとパニックの元。
+ */
+function isNetworkError(e: unknown): boolean {
+  if (e instanceof DOMException && e.name === 'AbortError') return true;
+  if (e instanceof TypeError) {
+    const msg = e.message || '';
+    return (
+      msg.includes('Load failed') ||
+      msg.includes('Failed to fetch') ||
+      msg.includes('NetworkError') ||
+      msg.includes('network')
+    );
+  }
+  return false;
+}
+
+function networkErrorMessage(e: unknown, fallback: string): string {
+  if (isNetworkError(e)) {
+    return '通信が一時的に切れました。タブを開いたまま、もう一度お試しください。';
+  }
+  return e instanceof Error ? e.message : fallback;
+}
+
 export default function GenerateForm({
   channels,
   initialChannelId,
@@ -86,6 +112,8 @@ export default function GenerateForm({
   // フィードバック履歴（古い→新しい順）。「ここをこう直して」の入力。
   const [sampleFeedback, setSampleFeedback] = useState<string[]>([]);
   const [sampleFeedbackDraft, setSampleFeedbackDraft] = useState('');
+  // 非同期ジョブID — start → poll の流れでタブ移動に強くする。
+  const [sampleJobId, setSampleJobId] = useState<string | null>(null);
 
   // サムネイルプレビュー（HTML+Playwright パイプライン）
   const [thumb, setThumb] = useState<ThumbnailGenerateResponse | null>(null);
@@ -93,6 +121,8 @@ export default function GenerateForm({
   const [thumbError, setThumbError] = useState<string | null>(null);
   const [thumbFeedback, setThumbFeedback] = useState<string[]>([]);
   const [thumbFeedbackDraft, setThumbFeedbackDraft] = useState('');
+  // 非同期ジョブID — start → poll の流れでタブ移動に強くする。
+  const [thumbJobId, setThumbJobId] = useState<string | null>(null);
 
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const autoPublishedRef = useRef(false);
@@ -100,6 +130,9 @@ export default function GenerateForm({
   // 走行中ジョブを再接続したばかりかを示すフラグ。
   // 直後に走る channel/theme 変更リセット効果が sampleApproved を上書きするのを防ぐ。
   const justAttachedRef = useRef(false);
+  // サムネ生成が reuse モードで完了したら、旧 thumbnail_id を消す。
+  // polling 完了側で使えるよう、コンポーネントトップで保持する。
+  const pendingReuseDeleteRef = useRef<string | null>(null);
 
   // ページ移動から戻ったときに、サーバ側で走っているジョブに自動で再接続。
   // /api/jobs/active が pending/running のジョブを返すので、最初の1件を採用する。
@@ -165,11 +198,18 @@ export default function GenerateForm({
     // 前提が変われば修正履歴も流す
     setSampleFeedback([]);
     setSampleFeedbackDraft('');
+    // 走っているサンプル生成ジョブも捨てる（古い前提の結果を上書きしないように）。
+    setSampleJobId(null);
+    setSampling(false);
+    setSampleError(null);
     // サムネプレビューも前提が変わるので消す
     setThumb(null);
     setThumbError(null);
     setThumbFeedback([]);
     setThumbFeedbackDraft('');
+    setThumbJobId(null);
+    setThumbBusy(null);
+    pendingReuseDeleteRef.current = null;
   }, [channelId, theme]);
 
   // チャンネルが変わったらBGMプレビューもクリア（別BGMファイルになる可能性）
@@ -274,6 +314,156 @@ export default function GenerateForm({
     };
   }, [jobId, autoPublish, ytConnected, abTest, publishMode, scheduledAt]);
 
+  // サンプル画像ジョブのポーリング。タブ移動で fetch が TypeError を投げても
+  // 黙って次のポーリングまで待つ（done/error を返してきた時だけ UI を更新）。
+  useEffect(() => {
+    if (!sampleJobId) return;
+    let cancelled = false;
+    let timer: ReturnType<typeof setTimeout> | null = null;
+    const prevSampleId = sample?.sample_id;
+
+    const poll = async () => {
+      if (cancelled) return;
+      try {
+        const res = await fetch(
+          `/api/illustrations/sample/job/${encodeURIComponent(sampleJobId)}`,
+          { cache: 'no-store' },
+        );
+        if (cancelled) return;
+        if (!res.ok) {
+          // 404 (job 期限切れ) や 5xx の場合はリトライしてもムダなので終了
+          if (res.status === 404 || res.status >= 500) {
+            const text = await res.text().catch(() => '');
+            setSampleError(text || 'サンプル生成の状態を取得できませんでした');
+            setSampling(false);
+            setSampleJobId(null);
+            return;
+          }
+          // それ以外はポーリングを継続
+          timer = setTimeout(poll, 2000);
+          return;
+        }
+        const data: {
+          state: 'running' | 'done' | 'error';
+          result?: SampleIllustrationResponse | null;
+          error?: string | null;
+        } = await res.json();
+        if (cancelled) return;
+        if (data.state === 'done' && data.result) {
+          if (prevSampleId && prevSampleId !== data.result.sample_id) {
+            fetch(
+              `/api/illustrations/sample/${encodeURIComponent(prevSampleId)}`,
+              { method: 'DELETE' },
+            ).catch(() => {});
+          }
+          setSample(data.result);
+          setSampling(false);
+          setSampleJobId(null);
+          return;
+        }
+        if (data.state === 'error') {
+          setSampleError(data.error || 'サンプル生成に失敗しました');
+          setSampling(false);
+          setSampleJobId(null);
+          return;
+        }
+        timer = setTimeout(poll, 2000);
+      } catch (e) {
+        // TypeError "Load failed" 等の一過性ネットワークエラーは捨てて
+        // 次のポーリングに賭ける。バックエンドは独立して仕事を続けている。
+        if (cancelled) return;
+        if (isNetworkError(e)) {
+          timer = setTimeout(poll, 2000);
+          return;
+        }
+        setSampleError(networkErrorMessage(e, 'サンプル生成に失敗しました'));
+        setSampling(false);
+        setSampleJobId(null);
+      }
+    };
+
+    poll();
+    return () => {
+      cancelled = true;
+      if (timer) clearTimeout(timer);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sampleJobId]);
+
+  // サムネジョブのポーリング。サンプル画像と同じ作り。
+  useEffect(() => {
+    if (!thumbJobId) return;
+    let cancelled = false;
+    let timer: ReturnType<typeof setTimeout> | null = null;
+
+    const poll = async () => {
+      if (cancelled) return;
+      try {
+        const res = await fetch(
+          `/api/thumbnails/job/${encodeURIComponent(thumbJobId)}`,
+          { cache: 'no-store' },
+        );
+        if (cancelled) return;
+        if (!res.ok) {
+          if (res.status === 404 || res.status >= 500) {
+            const text = await res.text().catch(() => '');
+            setThumbError(text || 'サムネ生成の状態を取得できませんでした');
+            setThumbBusy(null);
+            setThumbJobId(null);
+            pendingReuseDeleteRef.current = null;
+            return;
+          }
+          timer = setTimeout(poll, 2000);
+          return;
+        }
+        const data: {
+          state: 'running' | 'done' | 'error';
+          result?: ThumbnailGenerateResponse | null;
+          error?: string | null;
+        } = await res.json();
+        if (cancelled) return;
+        if (data.state === 'done' && data.result) {
+          const toDelete = pendingReuseDeleteRef.current;
+          pendingReuseDeleteRef.current = null;
+          if (toDelete && toDelete !== data.result.thumbnail_id) {
+            fetch(`/api/thumbnails/${encodeURIComponent(toDelete)}`, {
+              method: 'DELETE',
+            }).catch(() => {});
+          }
+          setThumb(data.result);
+          setThumbBusy(null);
+          setThumbJobId(null);
+          return;
+        }
+        if (data.state === 'error') {
+          setThumbError(data.error || 'サムネ生成に失敗しました');
+          setThumbBusy(null);
+          setThumbJobId(null);
+          pendingReuseDeleteRef.current = null;
+          return;
+        }
+        timer = setTimeout(poll, 2000);
+      } catch (e) {
+        if (cancelled) return;
+        if (isNetworkError(e)) {
+          timer = setTimeout(poll, 2000);
+          return;
+        }
+        setThumbError(networkErrorMessage(e, 'サムネ生成に失敗しました'));
+        setThumbBusy(null);
+        setThumbJobId(null);
+        pendingReuseDeleteRef.current = null;
+      }
+    };
+
+    poll();
+    return () => {
+      cancelled = true;
+      if (timer) clearTimeout(timer);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [thumbJobId]);
+
   const onSuggest = async () => {
     if (!channelId) return;
     setError(null);
@@ -361,6 +551,12 @@ export default function GenerateForm({
   // `extraFeedback` — 「修正リクエスト」テキストエリアから今回新たに送る一行。
   //   undefined の場合は履歴に追加せず、既存履歴だけで再生成する（純粋な regenerate）。
   // `clearFeedback` — true の場合は履歴をリセットしてゼロから生成する。
+  //
+  // start → poll のフローを使う。`fetch` が一発で完走する従来方式だと、
+  // タブを切り替えた瞬間に Safari/Vercel がコネクションを切って
+  // "Load failed" 表示になっていた。/start で job_id を貰ったあとは
+  // 短い GET ポーリングだけになるので、途中で接続が切れても次の
+  // ポーリングが拾い直す。
   const onGenerateSample = async (
     extraFeedback?: string,
     clearFeedback?: boolean,
@@ -376,9 +572,13 @@ export default function GenerateForm({
       : trimmedExtra
         ? [...sampleFeedback, trimmedExtra]
         : sampleFeedback;
+    // 履歴は start 時点で確定させる（draft クリアもここで）。
+    // 結果は polling 側で setSample する。
+    setSampleFeedback(nextFeedback);
+    setSampleFeedbackDraft('');
 
     try {
-      const res = await fetch('/api/illustrations/sample', {
+      const res = await fetch('/api/illustrations/sample/start', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
@@ -389,21 +589,16 @@ export default function GenerateForm({
       });
       if (!res.ok) {
         const text = await res.text();
-        throw new Error(text || 'サンプル生成に失敗しました');
+        throw new Error(text || 'サンプル生成の開始に失敗しました');
       }
-      const data: SampleIllustrationResponse = await res.json();
-      // 直前のサンプルがあればバックエンド側でも掃除
-      if (sample && sample.sample_id !== data.sample_id) {
-        fetch(`/api/illustrations/sample/${encodeURIComponent(sample.sample_id)}`, {
-          method: 'DELETE',
-        }).catch(() => {});
-      }
-      setSample(data);
-      setSampleFeedback(nextFeedback);
-      setSampleFeedbackDraft('');
+      const data: { job_id: string } = await res.json();
+      setSampleJobId(data.job_id);
+      // sampling は polling effect の done/error で false に戻す
     } catch (e) {
-      setSampleError(e instanceof Error ? e.message : 'サンプル生成に失敗しました');
-    } finally {
+      // ここに来るのは start に失敗したケース（バックエンドが落ちている等）。
+      // タブ切り替えでの一時的なネットワークエラー (TypeError "Load failed") も
+      // ここで拾えるが、その場合はユーザーが再試行できるよう状態をリセットする。
+      setSampleError(networkErrorMessage(e, 'サンプル生成に失敗しました'));
       setSampling(false);
     }
   };
@@ -413,6 +608,10 @@ export default function GenerateForm({
     setSampleApproved(true);
   };
 
+  // サムネ生成も start → poll パターンで実装。サンプル画像と同じ理由
+  // （タブ移動でコネクションが切れる）から、長い POST 1 本を持続させない。
+  // mode='reuse' は背景を再利用してテキストだけ作り直す軽量ルート。
+  // 旧サムネの削除は polling 完了側で行う（thumb.thumbnail_id を保持する都合）。
   const onGenerateThumbnail = async (
     mode: 'fresh' | 'reuse',
     extraFeedback?: string,
@@ -429,10 +628,16 @@ export default function GenerateForm({
       : trimmedExtra
         ? [...thumbFeedback, trimmedExtra]
         : thumbFeedback;
+    setThumbFeedback(nextFeedback);
+    setThumbFeedbackDraft('');
+
+    // reuse モードのときだけ、旧サムネ(現在の thumb_id)を完了時に消す。
+    // fresh モードは背景もまるごと別になるので残しても害はない（TTLで掃除される）。
+    pendingReuseDeleteRef.current =
+      mode === 'reuse' && thumb ? thumb.thumbnail_id : null;
 
     try {
-      const path = mode === 'reuse' ? '/api/thumbnails/preview' : '/api/thumbnails/generate';
-      const res = await fetch(path, {
+      const res = await fetch('/api/thumbnails/start', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
@@ -445,22 +650,14 @@ export default function GenerateForm({
       });
       if (!res.ok) {
         const text = await res.text();
-        throw new Error(text || 'サムネ生成に失敗しました');
+        throw new Error(text || 'サムネ生成の開始に失敗しました');
       }
-      const data: ThumbnailGenerateResponse = await res.json();
-      // 直前のサムネがあれば掃除（背景は次回 reuse する可能性があるので残す）
-      if (thumb && thumb.thumbnail_id !== data.thumbnail_id && mode === 'reuse') {
-        fetch(`/api/thumbnails/${encodeURIComponent(thumb.thumbnail_id)}`, {
-          method: 'DELETE',
-        }).catch(() => {});
-      }
-      setThumb(data);
-      setThumbFeedback(nextFeedback);
-      setThumbFeedbackDraft('');
+      const data: { job_id: string } = await res.json();
+      setThumbJobId(data.job_id);
     } catch (e) {
-      setThumbError(e instanceof Error ? e.message : 'サムネ生成に失敗しました');
-    } finally {
+      setThumbError(networkErrorMessage(e, 'サムネ生成に失敗しました'));
       setThumbBusy(null);
+      pendingReuseDeleteRef.current = null;
     }
   };
 

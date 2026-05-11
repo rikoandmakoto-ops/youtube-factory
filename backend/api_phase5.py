@@ -18,12 +18,13 @@ Endpoints:
 
 from __future__ import annotations
 
+import asyncio
 import io
 import re
 import time
 import uuid
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Awaitable, Callable, Dict, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import FileResponse
@@ -32,6 +33,78 @@ from pydantic import BaseModel, Field
 from api_phase1 import _state, require_session
 
 router = APIRouter(prefix="/api", tags=["phase5"])
+
+
+# =====================================================================
+# Async job tracker (in-memory)
+#
+# Sample/thumbnail generation can take 20–60 s. When a browser tab is
+# backgrounded (Safari especially) or a proxy/serverless function times
+# out, the inflight POST connection dies even though the work would
+# succeed. We split the API into "start" + "poll status" so the heavy
+# work runs detached from any single HTTP connection.
+# =====================================================================
+
+_ASYNC_JOB_TTL = 60 * 30  # 30 min — long enough for the slowest gen + idle browser
+
+# job_id → {state, kind, result, error, created_at, finished_at}
+_async_jobs: Dict[str, Dict[str, Any]] = {}
+
+
+def _prune_async_jobs() -> None:
+    cutoff = time.time() - _ASYNC_JOB_TTL
+    stale = [jid for jid, j in _async_jobs.items() if j.get("created_at", 0) < cutoff]
+    for jid in stale:
+        _async_jobs.pop(jid, None)
+
+
+def _start_async_job(
+    kind: str,
+    runner: Callable[[], Awaitable[Dict[str, Any]]],
+) -> str:
+    """Kick off a coroutine in the background and return a job_id.
+
+    The coroutine must return a JSON-serialisable dict (the eventual result
+    payload). Exceptions are captured into job["error"].
+    """
+    _prune_async_jobs()
+    job_id = uuid.uuid4().hex
+    _async_jobs[job_id] = {
+        "state": "running",
+        "kind": kind,
+        "result": None,
+        "error": None,
+        "created_at": time.time(),
+        "finished_at": None,
+    }
+
+    async def _run() -> None:
+        try:
+            result = await runner()
+            _async_jobs[job_id]["state"] = "done"
+            _async_jobs[job_id]["result"] = result
+        except HTTPException as e:
+            _async_jobs[job_id]["state"] = "error"
+            _async_jobs[job_id]["error"] = str(e.detail)
+        except Exception as e:  # noqa: BLE001 — surface everything to client
+            _async_jobs[job_id]["state"] = "error"
+            _async_jobs[job_id]["error"] = f"{type(e).__name__}: {e}"
+        finally:
+            _async_jobs[job_id]["finished_at"] = time.time()
+
+    asyncio.create_task(_run())
+    return job_id
+
+
+def _get_async_job(job_id: str, expected_kind: Optional[str] = None) -> Dict[str, Any]:
+    if not _SAFE_ID_RE.match(job_id):
+        raise HTTPException(status_code=400, detail="Invalid job_id")
+    job = _async_jobs.get(job_id)
+    if job is None:
+        raise HTTPException(status_code=404, detail="Job not found or expired")
+    if expected_kind and job.get("kind") != expected_kind:
+        raise HTTPException(status_code=404, detail="Job kind mismatch")
+    return job
 
 
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -125,15 +198,7 @@ class SampleResponse(BaseModel):
 # Endpoints
 # =====================================================================
 
-@router.post("/illustrations/sample", response_model=SampleResponse)
-async def generate_sample_illustration(
-    req: SampleRequest, _=Depends(require_session)
-) -> SampleResponse:
-    """Generate ONE DALL-E illustration and persist it as a sample.
-
-    Each call returns a fresh `sample_id` even for identical inputs — this is
-    the "regenerate" button on the frontend.
-    """
+async def _do_generate_sample(req: SampleRequest) -> SampleResponse:
     _prune_old_samples()
 
     # Resolve effective style + char_config
@@ -194,8 +259,16 @@ async def generate_sample_illustration(
         # generation actively incorporates the requested fixes.
         prompt = f"{prompt}\n\n{feedback_block}"
 
-    img = _call_openai_image(
-        prompt, size=size, style=dalle_style, channel_id=req.channel_id
+    # _call_openai_image is synchronous and blocks on the HTTP request to
+    # OpenAI for up to ~30 s. Run it in a worker thread so the event loop
+    # stays responsive — without this the polling /job endpoint would also
+    # be blocked.
+    img = await asyncio.to_thread(
+        _call_openai_image,
+        prompt,
+        size=size,
+        style=dalle_style,
+        channel_id=req.channel_id,
     )
     if img is None:
         raise HTTPException(status_code=502, detail="DALL-E sample generation failed")
@@ -210,6 +283,74 @@ async def generate_sample_illustration(
         prompt=prompt,
         style=style_dict,
         feedback=[f.strip() for f in (req.feedback or []) if f and f.strip()],
+    )
+
+
+@router.post("/illustrations/sample", response_model=SampleResponse)
+async def generate_sample_illustration(
+    req: SampleRequest, _=Depends(require_session)
+) -> SampleResponse:
+    """Generate ONE DALL-E illustration and persist it as a sample.
+
+    Each call returns a fresh `sample_id` even for identical inputs — this is
+    the "regenerate" button on the frontend.
+
+    Synchronous endpoint. For browser flows that may tab-switch mid-request
+    (which kills the inflight HTTP connection on Safari), prefer the
+    `/illustrations/sample/start` + `/illustrations/sample/job/{id}` pair.
+    """
+    return await _do_generate_sample(req)
+
+
+# =====================================================================
+# Async (start + poll) variants — survive tab switches and timeouts
+# =====================================================================
+
+
+class AsyncJobStartResponse(BaseModel):
+    job_id: str
+
+
+class AsyncJobStatusResponse(BaseModel):
+    job_id: str
+    state: str  # running | done | error
+    kind: str
+    error: Optional[str] = None
+    # Result is shaped according to `kind`. Clients should narrow by inspecting
+    # `kind` (or by hitting the kind-specific endpoint).
+    result: Optional[Dict[str, Any]] = None
+
+
+@router.post("/illustrations/sample/start", response_model=AsyncJobStartResponse)
+async def start_sample_illustration(
+    req: SampleRequest, _=Depends(require_session)
+) -> AsyncJobStartResponse:
+    """Kick off sample generation in the background and return a job_id.
+
+    Poll `/api/illustrations/sample/job/{job_id}` until `state == 'done'`.
+    """
+
+    async def runner() -> Dict[str, Any]:
+        result = await _do_generate_sample(req)
+        return result.dict()
+
+    job_id = _start_async_job("sample", runner)
+    return AsyncJobStartResponse(job_id=job_id)
+
+
+@router.get(
+    "/illustrations/sample/job/{job_id}", response_model=AsyncJobStatusResponse
+)
+async def get_sample_illustration_job(
+    job_id: str, _=Depends(require_session)
+) -> AsyncJobStatusResponse:
+    job = _get_async_job(job_id, expected_kind="sample")
+    return AsyncJobStatusResponse(
+        job_id=job_id,
+        state=job["state"],
+        kind=job["kind"],
+        error=job.get("error"),
+        result=job.get("result"),
     )
 
 
@@ -363,7 +504,11 @@ async def _do_generate_thumbnail(
 async def generate_thumbnail_endpoint(
     req: ThumbnailGenerateRequest, _=Depends(require_session)
 ) -> ThumbnailGenerateResponse:
-    """Generate a fresh thumbnail (GPT-4o brief + DALL-E 3 BG + HTML render)."""
+    """Generate a fresh thumbnail (GPT-4o brief + DALL-E 3 BG + HTML render).
+
+    Synchronous endpoint. For browser flows that may tab-switch mid-request
+    prefer the `/thumbnails/start` + `/thumbnails/job/{id}` pair.
+    """
     return await _do_generate_thumbnail(req)
 
 
@@ -377,6 +522,40 @@ async def preview_thumbnail_endpoint(
     saved background PNG is reused — only the HTML/text changes are re-rendered.
     """
     return await _do_generate_thumbnail(req)
+
+
+@router.post("/thumbnails/start", response_model=AsyncJobStartResponse)
+async def start_thumbnail_job(
+    req: ThumbnailGenerateRequest, _=Depends(require_session)
+) -> AsyncJobStartResponse:
+    """Kick off thumbnail generation in the background and return a job_id.
+
+    Works for both fresh generation and reuse-background preview iterations —
+    same payload as /thumbnails/generate and /thumbnails/preview.
+
+    Poll `/api/thumbnails/job/{job_id}` until `state == 'done'`.
+    """
+
+    async def runner() -> Dict[str, Any]:
+        result = await _do_generate_thumbnail(req)
+        return result.dict()
+
+    job_id = _start_async_job("thumbnail", runner)
+    return AsyncJobStartResponse(job_id=job_id)
+
+
+@router.get("/thumbnails/job/{job_id}", response_model=AsyncJobStatusResponse)
+async def get_thumbnail_job(
+    job_id: str, _=Depends(require_session)
+) -> AsyncJobStatusResponse:
+    job = _get_async_job(job_id, expected_kind="thumbnail")
+    return AsyncJobStatusResponse(
+        job_id=job_id,
+        state=job["state"],
+        kind=job["kind"],
+        error=job.get("error"),
+        result=job.get("result"),
+    )
 
 
 @router.get("/thumbnails/{thumbnail_id}")

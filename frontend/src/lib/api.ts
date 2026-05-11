@@ -1171,6 +1171,39 @@ export async function deleteSampleIllustration(
   });
 }
 
+// ── Async (start + poll) variants ─────────────────────────────────────
+// These survive tab-switches / serverless timeouts because the heavy
+// generation runs detached from any single HTTP connection. Clients POST
+// to /start to obtain a job_id, then poll /job/{id} until state==='done'.
+
+export type AsyncJobStart = { job_id: string };
+
+export type AsyncJobStatus<T> = {
+  job_id: string;
+  state: 'running' | 'done' | 'error';
+  kind: string;
+  error?: string | null;
+  result?: T | null;
+};
+
+export async function startSampleIllustrationJob(
+  req: SampleIllustrationRequest
+): Promise<AsyncJobStart> {
+  return call<AsyncJobStart>('/api/illustrations/sample/start', {
+    method: 'POST',
+    body: JSON.stringify(req),
+  });
+}
+
+export async function getSampleIllustrationJob(
+  jobId: string
+): Promise<AsyncJobStatus<SampleIllustrationResponse>> {
+  return call<AsyncJobStatus<SampleIllustrationResponse>>(
+    `/api/illustrations/sample/job/${encodeURIComponent(jobId)}`,
+    { noStore: true }
+  );
+}
+
 // ──────────────────────────────────────────────────────────────────────
 // Thumbnail (HTML+CSS+Playwright pipeline)
 // ──────────────────────────────────────────────────────────────────────
@@ -1234,6 +1267,24 @@ export async function deleteThumbnail(
   return call(`/api/thumbnails/${encodeURIComponent(thumbnailId)}`, {
     method: 'DELETE',
   });
+}
+
+export async function startThumbnailJob(
+  req: ThumbnailGenerateRequest
+): Promise<AsyncJobStart> {
+  return call<AsyncJobStart>('/api/thumbnails/start', {
+    method: 'POST',
+    body: JSON.stringify(req),
+  });
+}
+
+export async function getThumbnailJob(
+  jobId: string
+): Promise<AsyncJobStatus<ThumbnailGenerateResponse>> {
+  return call<AsyncJobStatus<ThumbnailGenerateResponse>>(
+    `/api/thumbnails/job/${encodeURIComponent(jobId)}`,
+    { noStore: true }
+  );
 }
 
 // ──────────────────────────────────────────────────────────────────────
