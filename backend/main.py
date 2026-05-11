@@ -1158,8 +1158,18 @@ async def factory_run(request: FactoryRunRequest):
             if not request.auto_theme and request.theme_title:
                 theme_override = {"title": request.theme_title, "angle": request.theme_angle or "自由"}
 
-            # 1. シナリオ生成
-            scenario = scenario_generator.generate(ch, theme_override=theme_override)
+            # 1. シナリオ生成 — 未消費の改善フィードバックがあれば GPT に注入
+            try:
+                from pipeline.analytics.feedback_store import get_pending_for_channel, mark_consumed
+                pending_fb = get_pending_for_channel(request.channel_id)
+            except Exception:
+                pending_fb = []
+                mark_consumed = None  # type: ignore
+            scenario = scenario_generator.generate(
+                ch,
+                theme_override=theme_override,
+                improvement_feedback=pending_fb or None,
+            )
             scenario_generator.save_scenario(scenario)
 
             # 2. ジョブキュー投入
@@ -1169,6 +1179,12 @@ async def factory_run(request: FactoryRunRequest):
                 priority=request.priority,
                 gen_type=request.gen_type,
             )
+            # 適用したフィードバックは consumed にして同じ動画 ID を再度載せない
+            if pending_fb and scenario.get("applied_feedback") and mark_consumed:
+                try:
+                    mark_consumed(scenario["applied_feedback"], consumed_by_job_id=job_id)
+                except Exception:
+                    pass
             results.append({"index": i, "title": scenario["title"], "job_id": job_id, "status": "queued"})
         except Exception as e:
             results.append({"index": i, "error": str(e), "status": "failed"})
@@ -1193,7 +1209,15 @@ async def factory_run_all(count_per_channel: int = 1, priority: int = 5, gen_typ
         ch_results = []
         for i in range(count_per_channel):
             try:
-                scenario = scenario_generator.generate(ch)
+                try:
+                    from pipeline.analytics.feedback_store import get_pending_for_channel, mark_consumed
+                    pending_fb = get_pending_for_channel(ch.id)
+                except Exception:
+                    pending_fb = []
+                    mark_consumed = None  # type: ignore
+                scenario = scenario_generator.generate(
+                    ch, improvement_feedback=pending_fb or None
+                )
                 scenario_generator.save_scenario(scenario)
                 job_id = job_queue.submit(
                     channel_id=ch.id,
@@ -1201,6 +1225,11 @@ async def factory_run_all(count_per_channel: int = 1, priority: int = 5, gen_typ
                     priority=priority,
                     gen_type=gen_type,
                 )
+                if pending_fb and scenario.get("applied_feedback") and mark_consumed:
+                    try:
+                        mark_consumed(scenario["applied_feedback"], consumed_by_job_id=job_id)
+                    except Exception:
+                        pass
                 ch_results.append({"title": scenario["title"], "job_id": job_id})
             except Exception as e:
                 ch_results.append({"error": str(e)})
