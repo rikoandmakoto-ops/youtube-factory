@@ -227,11 +227,37 @@ export default function GenerateForm({
       autoPublishedRef.current = true;
       try {
         const r = (s.result || {}) as Record<string, any>;
+        // generate_all() の戻り値は `full` (= メイン動画パス, 文字列) と
+        // `short` (= ショート動画パス, 文字列) を持つ。dict のときは
+        // value.video_path / path も見る（古い形にも一応対応）。
+        const pickPath = (v: unknown): string | null => {
+          if (typeof v === 'string' && v) return v;
+          if (v && typeof v === 'object') {
+            const obj = v as Record<string, unknown>;
+            for (const k of ['video_path', 'path', 'output', 'main_video_path', 'full_video_path']) {
+              const cand = obj[k];
+              if (typeof cand === 'string' && cand) return cand;
+            }
+          }
+          return null;
+        };
+        // メイン動画優先（ない場合はショートで代用）。
         const videoPath =
-          r.full_video_path || r.video_path || r.main_video_path || r.output_path
-          || (r.main && (r.main as any).video_path);
+          pickPath(r.full) ||
+          pickPath(r.main) ||
+          (typeof r.full_video_path === 'string' ? r.full_video_path : null) ||
+          (typeof r.main_video_path === 'string' ? r.main_video_path : null) ||
+          (typeof r.video_path === 'string' ? r.video_path : null) ||
+          pickPath(r.short);
+        const thumbnailPath =
+          (typeof r.thumbnail === 'string' ? r.thumbnail : null) ||
+          (typeof r.thumbnail_path === 'string' ? r.thumbnail_path : null);
         if (!videoPath) {
-          setPublishMsg('⚠️ 動画パスが取得できず、自動投稿をスキップしました');
+          // 何が来てるか分かるよう、キーをメッセージに含めて切り分けを楽にする。
+          const keys = Object.keys(r).join(', ') || '（空）';
+          setPublishMsg(
+            `⚠️ 動画パスが取得できず、自動投稿をスキップしました（result keys: ${keys}）`,
+          );
           return;
         }
         // スケジュール公開: datetime-local ("YYYY-MM-DDTHH:MM") をそのまま投げる。
@@ -243,7 +269,7 @@ export default function GenerateForm({
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({
             video_path: videoPath,
-            thumbnail_path: r.thumbnail_path || null,
+            thumbnail_path: thumbnailPath,
             title: s.title || 'Untitled',
             privacy: 'private',
             ...(useSchedule ? { scheduled_at: scheduledAt } : {}),
