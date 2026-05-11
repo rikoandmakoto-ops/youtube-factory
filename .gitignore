@@ -48,6 +48,7 @@ venv/
 jobs/
 logs/
 data/*.db
+data/analytics/*.db
 data/samples/
 data/thumbnails/
 data/api_usage.jsonl
