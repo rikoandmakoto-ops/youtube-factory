@@ -1,18 +1,18 @@
 """
-YouTube コメント取得 + GPT-4o による感情/トピック分析。
+YouTube コメント取得 + Claude (Sonnet 4) による感情/トピック分析。
 
 提供する関数:
   - fetch_comments(channel_id, video_id, max_comments=200)
       commentThreads.list を呼んでコメント本体を SQLite に保存（分析はせず）。
   - analyze_pending(video_id, batch_size=20)
-      未分析コメントを GPT-4o に投げ、感情/トピック/リクエスト判定を保存。
+      未分析コメントを Claude に投げ、感情/トピック/リクエスト判定を保存。
   - sync_video_comments(channel_id, video_id, max_comments=200, analyze=True)
       取得 → 分析 をまとめて実行。
 
 設計メモ:
   - 取得は OAuth 必須ではなく、YOUTUBE_API_KEY があればそちらを優先（quota が安い）。
-  - 分析は OPENAI_API_KEY が必要。未設定なら fetch のみ実行されて分析は no-op。
-  - GPT 呼び出しは1リクエストで複数コメントをまとめて分類（コスト圧縮）。
+  - 分析は ANTHROPIC_API_KEY が必要。未設定なら fetch のみ実行されて分析は no-op。
+  - Claude 呼び出しは1リクエストで複数コメントをまとめて分類（コスト圧縮）。
 """
 
 from __future__ import annotations
@@ -25,13 +25,11 @@ import urllib.request
 from typing import Any, Dict, List, Optional
 
 from . import youtube_oauth as yt_oauth
+from . import claude_client
 from .analytics import store as analytics_store
 
 
 YT_API_BASE = "https://www.googleapis.com/youtube/v3"
-GPT_MODEL = "gpt-4o"
-GPT_MODEL_LIGHT = "gpt-4o-mini"
-OPENAI_CHAT_URL = "https://api.openai.com/v1/chat/completions"
 
 
 # ---------------------------------------------------------------------
@@ -186,7 +184,7 @@ def fetch_comments(
 
 
 # ---------------------------------------------------------------------
-# GPT analysis
+# LLM analysis (Claude Sonnet 4)
 # ---------------------------------------------------------------------
 
 _ANALYZE_SYSTEM = (
@@ -202,53 +200,20 @@ _ANALYZE_SYSTEM = (
 )
 
 
-def _call_openai(payload_messages: List[Dict[str, str]], model: str) -> Optional[Dict[str, Any]]:
-    api_key = os.environ.get("OPENAI_API_KEY", "").strip()
-    if not api_key:
-        return None
-    payload = json.dumps(
-        {
-            "model": model,
-            "messages": payload_messages,
-            "temperature": 0.2,
-            "response_format": {"type": "json_object"},
-        }
-    )
-    req = urllib.request.Request(
-        OPENAI_CHAT_URL,
-        data=payload.encode("utf-8"),
-        method="POST",
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}",
-        },
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            data = json.loads(resp.read())
-    except Exception:
-        return None
-    try:
-        content = data["choices"][0]["message"]["content"]
-        return json.loads(content)
-    except Exception:
-        return None
-
-
 def analyze_pending(
     video_id: str,
     *,
     batch_size: int = 20,
     max_batches: int = 10,
-    model: str = GPT_MODEL,
+    model: Optional[str] = None,
 ) -> Dict[str, Any]:
-    """この動画の未分析コメントを GPT-4o で分析して保存。"""
-    if not os.environ.get("OPENAI_API_KEY", "").strip():
+    """この動画の未分析コメントを Claude で分析して保存。"""
+    if not claude_client.has_api_key():
         return {
             "video_id": video_id,
             "analyzed": 0,
             "skipped": True,
-            "reason": "OPENAI_API_KEY 未設定",
+            "reason": "ANTHROPIC_API_KEY 未設定",
         }
 
     pending = [
@@ -271,12 +236,13 @@ def analyze_pending(
             f"以下は YouTube 動画 ({video_id}) の視聴者コメントです。"
             "1件ずつ感情とトピックを分類してください。\n\n" + bullet_list
         )
-        result = _call_openai(
-            [
-                {"role": "system", "content": _ANALYZE_SYSTEM},
-                {"role": "user", "content": user_msg},
-            ],
-            model=model,
+        result = claude_client.call_claude_json(
+            system=_ANALYZE_SYSTEM,
+            user=user_msg,
+            model=model or claude_client.CLAUDE_MODEL,
+            temperature=0.2,
+            max_tokens=2000,
+            purpose="comment_analysis",
         )
         if not result:
             continue

@@ -22,3 +22,6 @@ playwright>=1.40.0
 # Phase C — トレンド連動（Google Trends 非公式 API）
 # レート制限で失敗してもクラッシュしないようにフォールバック実装済み
 pytrends>=4.9.0
+# Phase D — 分析・評価・採点・判断系を Claude (Anthropic) に置換
+# ANTHROPIC_API_KEY を .env に設定する必要あり
+anthropic>=0.40.0

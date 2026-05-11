@@ -1,7 +1,7 @@
 """
 シナリオ自動評価エンジン (Phase D — A2)
 
-各動画のシナリオ原文を GPT-4o で 6 軸採点し、離脱カーブ・コメント分析を
+各動画のシナリオ原文を Claude (Sonnet 4) で 6 軸採点し、離脱カーブ・コメント分析を
 突き合わせて「弱点セクション」と「具体的な改善提案」を生成する。
 
 入力:
@@ -20,7 +20,7 @@
   - wording_quality: 言い回し・表現の質
   - overall:        総合
 
-OPENAI_API_KEY 未設定時は GPT 部分をスキップしてルールベースの推定スコアを返す。
+ANTHROPIC_API_KEY 未設定時は Claude 部分をスキップしてルールベースの推定スコアを返す。
 """
 
 from __future__ import annotations
@@ -29,18 +29,15 @@ import json
 import os
 import re
 import time
-import urllib.request
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 from . import store as analytics_store
+from .. import claude_client
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 SCENARIOS_DIR = PROJECT_ROOT / "data" / "scenarios"
-
-OPENAI_CHAT_URL = "https://api.openai.com/v1/chat/completions"
-GPT_MODEL = "gpt-4o"
 
 # 弱点判定の閾値
 WEAK_SCORE_THRESHOLD = 6.0
@@ -204,7 +201,7 @@ def _weak_sections_from_drops(
 
 
 # ---------------------------------------------------------------------
-# GPT layer
+# LLM layer (Claude)
 # ---------------------------------------------------------------------
 
 _SYSTEM = (
@@ -215,48 +212,7 @@ _SYSTEM = (
 )
 
 
-def _call_gpt(messages: List[Dict[str, str]]) -> Optional[Dict[str, Any]]:
-    api_key = os.environ.get("OPENAI_API_KEY", "").strip()
-    if not api_key:
-        return None
-    payload = {
-        "model": GPT_MODEL,
-        "messages": messages,
-        "temperature": 0.3,
-        "response_format": {"type": "json_object"},
-        "max_tokens": 2000,
-    }
-    req = urllib.request.Request(
-        OPENAI_CHAT_URL,
-        data=json.dumps(payload).encode("utf-8"),
-        method="POST",
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}",
-        },
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=90) as resp:
-            data = json.loads(resp.read())
-        try:
-            from pipeline import api_usage  # type: ignore
-            usage = data.get("usage", {}) or {}
-            api_usage.record_chat_usage(
-                model=GPT_MODEL,
-                prompt_tokens=usage.get("prompt_tokens", 0),
-                completion_tokens=usage.get("completion_tokens", 0),
-                purpose="scenario_evaluation",
-            )
-        except Exception:
-            pass
-        content = data["choices"][0]["message"]["content"]
-        return json.loads(content)
-    except Exception as e:
-        print(f"⚠️ scenario_evaluator GPT call failed: {e}")
-        return None
-
-
-def _gpt_evaluate(
+def _llm_evaluate(
     video_title: str,
     sections: List[Dict[str, Any]],
     weak_sections: List[Dict[str, Any]],
@@ -319,11 +275,12 @@ def _gpt_evaluate(
   ]
 }}
 """
-    return _call_gpt(
-        [
-            {"role": "system", "content": _SYSTEM},
-            {"role": "user", "content": user},
-        ]
+    return claude_client.call_claude_json(
+        system=_SYSTEM,
+        user=user,
+        temperature=0.3,
+        max_tokens=2000,
+        purpose="scenario_evaluation",
     )
 
 
@@ -332,7 +289,7 @@ def _gpt_evaluate(
 # ---------------------------------------------------------------------
 
 def _fallback_scores(full_scenario: List[Dict[str, Any]], weak_sections: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """OPENAI_API_KEY が無いときの簡易採点。具体性などをルールで評価する。"""
+    """ANTHROPIC_API_KEY が無い／呼び出し失敗時の簡易採点。具体性などをルールで評価する。"""
     if not full_scenario:
         return {
             "hook_strength": 0,
@@ -432,17 +389,17 @@ def evaluate_video(
     improvement: List[str] = []
     comment_feedback: List[Dict[str, Any]] = []
     weak_sections_final = weak[:]
-    gpt_used = False
+    llm_used = False
 
-    if use_gpt and os.environ.get("OPENAI_API_KEY", "").strip():
-        gpt = _gpt_evaluate(video_title, sections, weak, comment_summary)
-        if gpt:
-            gpt_used = True
-            scores = gpt.get("scores") or {}
-            if gpt.get("weak_sections"):
-                weak_sections_final = gpt["weak_sections"]
-            improvement = gpt.get("improvement_suggestions") or []
-            comment_feedback = gpt.get("comment_feedback") or []
+    if use_gpt and claude_client.has_api_key():
+        llm = _llm_evaluate(video_title, sections, weak, comment_summary)
+        if llm:
+            llm_used = True
+            scores = llm.get("scores") or {}
+            if llm.get("weak_sections"):
+                weak_sections_final = llm["weak_sections"]
+            improvement = llm.get("improvement_suggestions") or []
+            comment_feedback = llm.get("comment_feedback") or []
 
     if scores is None:
         scores = _fallback_scores(full_scenario, weak)
@@ -469,7 +426,8 @@ def evaluate_video(
         scenario_path=str(sc_path),
         video_title=video_title,
     )
-    record["gpt_used"] = gpt_used
+    record["gpt_used"] = llm_used  # backward-compatible flag (now indicates Claude usage)
+    record["llm_used"] = llm_used
     return record
 
 
