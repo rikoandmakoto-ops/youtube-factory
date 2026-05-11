@@ -6,12 +6,16 @@ from datetime import datetime, date
 from pathlib import Path
 from typing import Optional, Dict, List
 
-# Pricing in USD
+# Pricing in USD per token (input/output)
 GPT_PRICING = {
     "gpt-4o":          {"input": 2.50 / 1_000_000, "output": 10.00 / 1_000_000},
     "gpt-4o-mini":     {"input": 0.15 / 1_000_000, "output": 0.60 / 1_000_000},
     "gpt-4-turbo":     {"input": 10.00 / 1_000_000, "output": 30.00 / 1_000_000},
     "gpt-3.5-turbo":   {"input": 0.50 / 1_000_000, "output": 1.50 / 1_000_000},
+    # Claude (Anthropic) — 分析・評価・採点系で使用
+    "claude-sonnet-4-20250514":  {"input": 3.00 / 1_000_000, "output": 15.00 / 1_000_000},
+    "claude-3-5-sonnet-latest":  {"input": 3.00 / 1_000_000, "output": 15.00 / 1_000_000},
+    "claude-haiku-4-5-20251001": {"input": 1.00 / 1_000_000, "output": 5.00 / 1_000_000},
 }
 
 # DALL-E 3 pricing per image

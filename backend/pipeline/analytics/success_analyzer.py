@@ -9,13 +9,13 @@
   2. データ少（4..7 件）: views 上位 33%
   3. データ極小（< 4 件）: 全件を success として扱う（ヒント程度のフィードバック）
 
-GPT-4o で以下をまとめる:
+Claude (Sonnet 4) で以下をまとめる:
   - title_patterns: タイトル構成の傾向（疑問形 / 数字 / 文字数 / 共通フレーズ）
   - theme_trends: テーマ・カテゴリ傾向
   - description_traits: 説明文の特徴（不明なら省略）
   - posting_time: 投稿時間帯の傾向
 
-OPENAI_API_KEY 未設定なら GPT 部分はスキップし、ルールベース集計のみ返す。
+ANTHROPIC_API_KEY 未設定なら Claude 部分はスキップし、ルールベース集計のみ返す。
 """
 
 from __future__ import annotations
@@ -25,20 +25,17 @@ import os
 import re
 import statistics
 import time
-import urllib.request
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from . import store as analytics_store
+from .. import claude_client
 
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
 OUTPUT_DIR = PROJECT_ROOT / "data" / "analytics"
 OUTPUT_PATH = OUTPUT_DIR / "success_patterns.json"
-
-OPENAI_CHAT_URL = "https://api.openai.com/v1/chat/completions"
-GPT_MODEL = "gpt-4o"
 
 
 # ---------------------------------------------------------------------
@@ -168,10 +165,10 @@ def _avg_metrics(items: List[Dict[str, Any]]) -> Dict[str, float]:
 
 
 # ---------------------------------------------------------------------
-# GPT layer
+# LLM layer (Claude)
 # ---------------------------------------------------------------------
 
-_GPT_SYSTEM = (
+_LLM_SYSTEM = (
     "あなたは YouTube 動画分析の専門家です。"
     "成功した動画群と通常動画群のメトリクス・タイトルを比較し、"
     "次回の動画制作で再現すべき具体的なパターンを JSON で抽出します。"
@@ -179,43 +176,12 @@ _GPT_SYSTEM = (
 )
 
 
-def _call_openai(messages: List[Dict[str, str]], *, model: str = GPT_MODEL) -> Optional[Dict[str, Any]]:
-    api_key = os.environ.get("OPENAI_API_KEY", "").strip()
-    if not api_key:
-        return None
-    payload = json.dumps(
-        {
-            "model": model,
-            "messages": messages,
-            "temperature": 0.3,
-            "response_format": {"type": "json_object"},
-        }
-    )
-    req = urllib.request.Request(
-        OPENAI_CHAT_URL,
-        data=payload.encode("utf-8"),
-        method="POST",
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}",
-        },
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            data = json.loads(resp.read())
-        content = data["choices"][0]["message"]["content"]
-        return json.loads(content)
-    except Exception as e:
-        print(f"⚠️ success_analyzer GPT call failed: {e}")
-        return None
-
-
-def _gpt_summarize(
+def _llm_summarize(
     channel_id: str,
     success: List[Dict[str, Any]],
     others: List[Dict[str, Any]],
 ) -> Optional[Dict[str, Any]]:
-    """GPT-4o に成功 vs 通常を比較させて構造化サマリを返してもらう。"""
+    """Claude に成功 vs 通常を比較させて構造化サマリを返してもらう。"""
     success_block = json.dumps(
         [
             {
@@ -257,11 +223,13 @@ def _gpt_summarize(
   "actionable_recommendations": ["次回のシナリオ生成時に守るべき具体ルール（命令形・3〜6個）", "..."]
 }}
 """
-    return _call_openai(
-        [
-            {"role": "system", "content": _GPT_SYSTEM},
-            {"role": "user", "content": user_msg},
-        ]
+    return claude_client.call_claude_json(
+        system=_LLM_SYSTEM,
+        user=user_msg,
+        temperature=0.3,
+        max_tokens=2000,
+        channel_id=channel_id,
+        purpose="success_pattern",
     )
 
 
@@ -325,13 +293,13 @@ def analyze_channel(
         ],
     }
 
-    gpt = _gpt_summarize(channel_id, buckets["success"], buckets["others"]) if use_gpt else None
-    if gpt:
-        result["gpt_insights"] = gpt
+    llm = _llm_summarize(channel_id, buckets["success"], buckets["others"]) if use_gpt else None
+    if llm:
+        result["gpt_insights"] = llm  # フィールド名は既存互換（中身は Claude）
     else:
         result["gpt_insights"] = None
-        if use_gpt and not os.environ.get("OPENAI_API_KEY", "").strip():
-            result["gpt_skipped_reason"] = "OPENAI_API_KEY 未設定"
+        if use_gpt and not claude_client.has_api_key():
+            result["gpt_skipped_reason"] = "ANTHROPIC_API_KEY 未設定"
 
     _save(channel_id, result)
     return result

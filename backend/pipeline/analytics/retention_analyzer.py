@@ -1,6 +1,6 @@
 """
 視聴維持率カーブ分析エンジン — 各動画の retention カーブから離脱ポイントを検出し、
-シナリオの該当シーンを推定して GPT-4o に改善提案を作らせる。
+シナリオの該当シーンを推定して Claude (Sonnet 4) に改善提案を作らせる。
 
 入力: analytics SQLite の retention_curve / video_metrics
 出力: data/analytics/retention_insights.json（チャンネル別）
@@ -14,7 +14,7 @@
   - video_metrics.title と data/scenarios/{channel_id}/*.json の title を緩く突合
   - マッチしたら full_scenario のうち drop_ratio に対応する行を抽出
 
-GPT-4o は集約サマリから「冒頭フック強化」「中盤テンポ」「結論前倒し」等の具体提案を JSON で返す。
+Claude は集約サマリから「冒頭フック強化」「中盤テンポ」「結論前倒し」等の具体提案を JSON で返す。
 """
 
 from __future__ import annotations
@@ -23,20 +23,17 @@ import json
 import os
 import re
 import time
-import urllib.request
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 from . import store as analytics_store
+from .. import claude_client
 
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
 OUTPUT_DIR = PROJECT_ROOT / "data" / "analytics"
 OUTPUT_PATH = OUTPUT_DIR / "retention_insights.json"
 SCENARIOS_DIR = PROJECT_ROOT / "data" / "scenarios"
-
-OPENAI_CHAT_URL = "https://api.openai.com/v1/chat/completions"
-GPT_MODEL = "gpt-4o"
 
 
 # ---------------------------------------------------------------------
@@ -188,10 +185,10 @@ def _scene_at_ratio(scenario: Dict[str, Any], ratio: float) -> Optional[Dict[str
 
 
 # ---------------------------------------------------------------------
-# GPT layer
+# LLM layer (Claude)
 # ---------------------------------------------------------------------
 
-_GPT_SYSTEM = (
+_LLM_SYSTEM = (
     "あなたは YouTube 動画の視聴維持率を改善するコンサルタントです。"
     "離脱点の発生位置と該当シーンのテキストから、次回シナリオで適用すべき"
     "具体的な改善ルールを JSON で返してください。"
@@ -199,38 +196,7 @@ _GPT_SYSTEM = (
 )
 
 
-def _call_openai(messages: List[Dict[str, str]], *, model: str = GPT_MODEL) -> Optional[Dict[str, Any]]:
-    api_key = os.environ.get("OPENAI_API_KEY", "").strip()
-    if not api_key:
-        return None
-    payload = json.dumps(
-        {
-            "model": model,
-            "messages": messages,
-            "temperature": 0.3,
-            "response_format": {"type": "json_object"},
-        }
-    )
-    req = urllib.request.Request(
-        OPENAI_CHAT_URL,
-        data=payload.encode("utf-8"),
-        method="POST",
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}",
-        },
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            data = json.loads(resp.read())
-        content = data["choices"][0]["message"]["content"]
-        return json.loads(content)
-    except Exception as e:
-        print(f"⚠️ retention_analyzer GPT call failed: {e}")
-        return None
-
-
-def _gpt_suggest(channel_id: str, per_video: List[Dict[str, Any]], aggregate: Dict[str, float]) -> Optional[Dict[str, Any]]:
+def _llm_suggest(channel_id: str, per_video: List[Dict[str, Any]], aggregate: Dict[str, float]) -> Optional[Dict[str, Any]]:
     user_msg = f"""# チャンネル: {channel_id}
 # バケット別の平均離脱率（v0-v1 の平均）
 {json.dumps(aggregate, ensure_ascii=False)}
@@ -245,11 +211,13 @@ def _gpt_suggest(channel_id: str, per_video: List[Dict[str, Any]], aggregate: Di
   "priority_section": "intro|early|middle|late|ending のいずれか1つ。最も改善優先度が高いバケット"
 }}
 """
-    return _call_openai(
-        [
-            {"role": "system", "content": _GPT_SYSTEM},
-            {"role": "user", "content": user_msg},
-        ]
+    return claude_client.call_claude_json(
+        system=_LLM_SYSTEM,
+        user=user_msg,
+        temperature=0.3,
+        max_tokens=2000,
+        channel_id=channel_id,
+        purpose="retention_analysis",
     )
 
 
@@ -336,13 +304,13 @@ def analyze_channel(
         "per_video": per_video,
     }
 
-    gpt = _gpt_suggest(channel_id, per_video, aggregate) if use_gpt else None
-    if gpt:
-        result["gpt_insights"] = gpt
+    llm = _llm_suggest(channel_id, per_video, aggregate) if use_gpt else None
+    if llm:
+        result["gpt_insights"] = llm  # 既存フィールド名を維持（中身は Claude による生成）
     else:
         result["gpt_insights"] = None
-        if use_gpt and not os.environ.get("OPENAI_API_KEY", "").strip():
-            result["gpt_skipped_reason"] = "OPENAI_API_KEY 未設定"
+        if use_gpt and not claude_client.has_api_key():
+            result["gpt_skipped_reason"] = "ANTHROPIC_API_KEY 未設定"
 
     _save(channel_id, result)
     return result

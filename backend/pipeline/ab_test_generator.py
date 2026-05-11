@@ -2,14 +2,18 @@
 ABTestGenerator — Phase C: タイトル・サムネ AB テスト
 
 1つのテーマ／シナリオに対して、タイトル 3 パターン + サムネキャッチコピー 3 パターンを
-GPT で生成し、それぞれに CTR 予測スコア (1-10) を付け、最高スコアの組み合わせを返す。
+生成し、それぞれに CTR 予測スコア (1-10) を付け、最高スコアの組み合わせを返す。
+
+役割分担:
+  - 生成（クリエイティブ）: GPT-4o（タイトル＋サムネキャッチコピー）
+  - 採点（CTR 予測スコアリング）: Claude Sonnet 4（分析・評価系のため Claude に集約）
 
 パターン定義:
   - question : 疑問形（「なぜ〜なのか」「〜は本当か？」）
   - number   : 数字入り（「99%が知らない〜」「3分で分かる〜」「1923年の〜」）
   - surprise : 意外性フック（「実は〜だった」「衝撃の事実」など）
 
-評価軸（GPT-4o に採点させる）:
+評価軸（Claude に採点させる）:
   - 好奇心喚起度
   - 具体性（数字・固有名詞）
   - ターゲット層マッチ
@@ -24,7 +28,7 @@ GPT で生成し、それぞれに CTR 予測スコア (1-10) を付け、最高
   - load_ab_test(test_id) -> Dict
   - list_ab_tests(channel_id=None, limit=50) -> List[Dict]
 
-OPENAI_API_KEY 未設定でもクラッシュしない（フォールバック: ローカル簡易生成 + ゼロスコア）。
+OPENAI_API_KEY / ANTHROPIC_API_KEY 未設定でもクラッシュしない（フォールバック: ローカル簡易生成 + ゼロスコア）。
 """
 
 from __future__ import annotations
@@ -42,6 +46,8 @@ try:
     from pipeline import api_usage
 except ImportError:  # pragma: no cover
     api_usage = None
+
+from pipeline import claude_client
 
 
 GPT_MODEL = "gpt-4o"
@@ -253,7 +259,7 @@ def _score_variants(
     theme_angle: str,
     channel_id: Optional[str],
 ) -> List[Dict[str, Any]]:
-    """GPT-4o に CTR 予測スコア(1-10) を付けさせる。"""
+    """Claude (Sonnet 4) に CTR 予測スコア(1-10) を付けさせる。"""
     payload_variants = [
         {
             "index": i,
@@ -281,12 +287,14 @@ def _score_variants(
         "- index は入力と同じ順序で全件返す。\n"
         "- score は加重: curiosity*0.35 + specificity*0.25 + target_fit*0.25 + readability*0.15。"
     )
-    messages = [
-        {"role": "system", "content": "YouTube CTR を読み解くアナリスト。JSON のみ返す。"},
-        {"role": "user", "content": user_prompt},
-    ]
-    out = _call_gpt(messages, model=GPT_MODEL, temperature=0.3,
-                    channel_id=channel_id, purpose="ab_test_score")
+    out = claude_client.call_claude_json(
+        system="YouTube CTR を読み解くアナリスト。JSON のみ返す。",
+        user=user_prompt,
+        temperature=0.3,
+        max_tokens=1500,
+        channel_id=channel_id,
+        purpose="ab_test_score",
+    )
 
     scored: List[Dict[str, Any]] = []
     raw_scores = (out or {}).get("scores") if isinstance(out, dict) else None
@@ -364,7 +372,8 @@ def generate_ab_test(
         "generated_at": datetime.utcnow().isoformat() + "Z",
         "variants": scored,
         "best": best,
-        "openai_used": bool(os.environ.get("OPENAI_API_KEY", "").strip()),
+        "openai_used": bool(os.environ.get("OPENAI_API_KEY", "").strip()),  # 生成（GPT-4o）
+        "claude_used": claude_client.has_api_key(),  # 採点（Claude Sonnet 4）
         "actual_metrics": None,  # 後で実績 CTR / views を紐付ける枠
     }
 
