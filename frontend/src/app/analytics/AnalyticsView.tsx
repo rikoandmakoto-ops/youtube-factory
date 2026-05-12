@@ -22,16 +22,36 @@ import type {
   TrendDetectionsResponse,
   TrendsResponse,
 } from '@/lib/api';
-import {
-  approveSeriesSuggestion,
-  dismissTrendDetection,
-  listSeriesSuggestions,
-  listTrendDetections,
-  queueTrendDetection,
-  rejectSeriesSuggestion,
-  runSeriesDetection,
-  runTrendScan,
-} from '@/lib/api';
+
+// Client-side fetches reuse the existing pattern (raw `fetch` to /api/...).
+// We don't import the wrapped functions from '@/lib/api' here because that
+// module transitively pulls in `next/headers`, which isn't allowed in
+// client components.
+async function clientGet<T>(path: string): Promise<T> {
+  const r = await fetch(path, { cache: 'no-store' });
+  if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+  return (await r.json()) as T;
+}
+async function clientPost<T>(path: string, body?: unknown): Promise<T> {
+  const r = await fetch(path, {
+    method: 'POST',
+    headers: body ? { 'content-type': 'application/json' } : undefined,
+    body: body ? JSON.stringify(body) : undefined,
+    cache: 'no-store',
+  });
+  if (!r.ok) {
+    let msg = `${r.status} ${r.statusText}`;
+    try {
+      const j = await r.json();
+      if (j && typeof j === 'object' && 'detail' in j) msg = String(j.detail);
+      else if (j && typeof j === 'object' && 'error' in j) msg = String(j.error);
+    } catch {
+      /* ignore */
+    }
+    throw new Error(msg);
+  }
+  return (await r.json()) as T;
+}
 
 type SectionError = { section: string; message: string };
 
@@ -320,7 +340,9 @@ export default function AnalyticsView({
     setTrendLoading(true);
     setTrendError(null);
     try {
-      const r = await listTrendDetections(channelId, { limit: 50 });
+      const r = await clientGet<TrendDetectionsResponse>(
+        `/api/trend-scanner/${encodeURIComponent(channelId)}?limit=50`
+      );
       setTrendDetections(r);
     } catch (e) {
       setTrendError(e instanceof Error ? e.message : 'トレンド取得失敗');
@@ -334,11 +356,13 @@ export default function AnalyticsView({
     setTrendError(null);
     setTrendLoading(true);
     try {
-      const r = (await runTrendScan(channelId, { auto_queue: true })) as {
+      const r = await clientPost<{
         detected?: number;
         auto_queued?: number;
         errors?: Record<string, string>;
-      };
+      }>(`/api/trend-scanner/${encodeURIComponent(channelId)}/scan`, {
+        auto_queue: true,
+      });
       const errCount = Object.keys(r.errors || {}).length;
       setTrendNotice(
         `✅ ${r.detected ?? 0} 件検出 / ${r.auto_queued ?? 0} 件キュー自動投入${
@@ -357,7 +381,14 @@ export default function AnalyticsView({
     setTrendNotice(null);
     setTrendError(null);
     try {
-      const r = await queueTrendDetection(channelId, detectionId);
+      const r = await clientPost<{
+        ok: boolean;
+        theme_id?: string;
+        title?: string;
+        error?: string;
+      }>(
+        `/api/trend-scanner/${encodeURIComponent(channelId)}/queue/${encodeURIComponent(detectionId)}`
+      );
       if (!r.ok) {
         setTrendError(r.error || 'キュー投入失敗');
         return;
@@ -373,7 +404,9 @@ export default function AnalyticsView({
     setTrendNotice(null);
     setTrendError(null);
     try {
-      await dismissTrendDetection(channelId, detectionId);
+      await clientPost(
+        `/api/trend-scanner/${encodeURIComponent(channelId)}/dismiss/${encodeURIComponent(detectionId)}`
+      );
       await loadTrendDetections();
     } catch (e) {
       setTrendError(e instanceof Error ? e.message : '却下失敗');
@@ -384,7 +417,9 @@ export default function AnalyticsView({
     setSeriesLoading(true);
     setSeriesError(null);
     try {
-      const r = await listSeriesSuggestions(channelId, { limit: 100 });
+      const r = await clientGet<SeriesSuggestionsResponse>(
+        `/api/series/${encodeURIComponent(channelId)}?limit=100`
+      );
       setSeriesData(r);
     } catch (e) {
       setSeriesError(e instanceof Error ? e.message : 'シリーズ取得失敗');
@@ -398,10 +433,10 @@ export default function AnalyticsView({
     setSeriesError(null);
     setSeriesLoading(true);
     try {
-      const r = (await runSeriesDetection(channelId)) as {
+      const r = await clientPost<{
         viral_count?: number;
         suggestions_added?: number;
-      };
+      }>(`/api/series/${encodeURIComponent(channelId)}/detect`);
       setSeriesNotice(
         `✅ バズ動画 ${r.viral_count ?? 0} 本 / 続編候補 ${r.suggestions_added ?? 0} 件追加`
       );
@@ -417,7 +452,14 @@ export default function AnalyticsView({
     setSeriesNotice(null);
     setSeriesError(null);
     try {
-      const r = await approveSeriesSuggestion(channelId, suggestionId);
+      const r = await clientPost<{
+        ok: boolean;
+        theme_id?: string;
+        title?: string;
+        error?: string;
+      }>(
+        `/api/series/${encodeURIComponent(channelId)}/approve/${encodeURIComponent(suggestionId)}`
+      );
       if (!r.ok) {
         setSeriesError(r.error || '承認失敗');
         return;
@@ -433,7 +475,9 @@ export default function AnalyticsView({
     setSeriesNotice(null);
     setSeriesError(null);
     try {
-      await rejectSeriesSuggestion(channelId, suggestionId);
+      await clientPost(
+        `/api/series/${encodeURIComponent(channelId)}/reject/${encodeURIComponent(suggestionId)}`
+      );
       await loadSeriesData();
     } catch (e) {
       setSeriesError(e instanceof Error ? e.message : '却下失敗');
