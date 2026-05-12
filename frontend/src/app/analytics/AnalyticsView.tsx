@@ -11,6 +11,7 @@ import type {
   EvaluationsListResponse,
   ImprovementEntry,
   ImprovementsListResponse,
+  ModelPerformanceResponse,
   ScenarioEvaluation,
   TrendsResponse,
 } from '@/lib/api';
@@ -27,6 +28,7 @@ type Props = {
   initialEvaluations: EvaluationsListResponse | null;
   initialAbReconciliation: AbReconciliationResponse | null;
   initialImprovements: ImprovementsListResponse | null;
+  initialModelPerformance: ModelPerformanceResponse | null;
   initialErrors: SectionError[];
 };
 
@@ -95,6 +97,7 @@ export default function AnalyticsView({
   initialEvaluations,
   initialAbReconciliation,
   initialImprovements,
+  initialModelPerformance,
   initialErrors,
 }: Props) {
   const router = useRouter();
@@ -110,6 +113,8 @@ export default function AnalyticsView({
     useState<AbReconciliationResponse | null>(initialAbReconciliation);
   const [improvements, setImprovements] =
     useState<ImprovementsListResponse | null>(initialImprovements);
+  const [modelPerformance, setModelPerformance] =
+    useState<ModelPerformanceResponse | null>(initialModelPerformance);
   const [errors, setErrors] = useState<SectionError[]>(initialErrors);
   const [tab, setTab] = useState<TabId>(() => {
     const t = searchParams.get('tab') as TabId | null;
@@ -145,7 +150,7 @@ export default function AnalyticsView({
     const collect = (section: string, message: string) =>
       setErrors((prev) => [...prev, { section, message }]);
 
-    const [ov, vid, tr, ab, ev, rc, im] = await Promise.allSettled([
+    const [ov, vid, tr, ab, ev, rc, im, mp] = await Promise.allSettled([
       fetch(`/api/analytics/channel/${encodeURIComponent(channelId)}/overview?days=30`, {
         cache: 'no-store',
       }).then((r) => (r.ok ? r.json() : Promise.reject(r))),
@@ -167,6 +172,9 @@ export default function AnalyticsView({
       fetch(`/api/improvements/${encodeURIComponent(channelId)}?limit=100`, {
         cache: 'no-store',
       }).then((r) => (r.ok ? r.json() : Promise.reject(r))),
+      fetch(`/api/model-performance/${encodeURIComponent(channelId)}?recent_runs=20`, {
+        cache: 'no-store',
+      }).then((r) => (r.ok ? r.json() : Promise.reject(r))),
     ]);
 
     if (ov.status === 'fulfilled') setOverview(ov.value as AnalyticsOverview);
@@ -186,6 +194,9 @@ export default function AnalyticsView({
     if (im.status === 'fulfilled')
       setImprovements(im.value as ImprovementsListResponse);
     else collect('改善キュー', '取得に失敗しました');
+    if (mp.status === 'fulfilled')
+      setModelPerformance(mp.value as ModelPerformanceResponse);
+    else collect('AIモデル比較', '取得に失敗しました');
 
     setRefreshing(false);
   };
@@ -433,6 +444,7 @@ export default function AnalyticsView({
       {tab === 'evaluations' && (
         <EvaluationsTab
           data={evaluations}
+          modelPerformance={modelPerformance}
           onRun={triggerEvaluations}
         />
       )}
@@ -944,9 +956,11 @@ const EVAL_AXES: { key: keyof ScenarioEvaluation; label: string }[] = [
 
 function EvaluationsTab({
   data,
+  modelPerformance,
   onRun,
 }: {
   data: EvaluationsListResponse | null;
+  modelPerformance: ModelPerformanceResponse | null;
   onRun: () => void;
 }) {
   const [busy, setBusy] = useState(false);
@@ -964,6 +978,8 @@ function EvaluationsTab({
 
   return (
     <>
+      <ModelComparisonSection data={modelPerformance} />
+
       <section className="card space-y-3">
         <div className="flex items-center justify-between gap-2">
           <h2 className="font-bold">🧠 シナリオ評価</h2>
@@ -1035,6 +1051,202 @@ function EvaluationsTab({
         </ul>
       )}
     </>
+  );
+}
+
+function ModelComparisonSection({
+  data,
+}: {
+  data: ModelPerformanceResponse | null;
+}) {
+  if (!data) {
+    return null;
+  }
+  const { performance, strategy, recent_runs } = data;
+  const gpt = performance.by_model.gpt;
+  const claude = performance.by_model.claude;
+  const totalCompare = performance.blind_compare_runs;
+  const totalScenarios = gpt.scenario_count + claude.scenario_count;
+
+  const winRatePct = (n: number) => `${(n * 100).toFixed(1)}%`;
+  const fmtCtr = (n: number) => (n > 0 ? `${(n * 100).toFixed(2)}%` : '—');
+  const fmtRet = (n: number) => (n > 0 ? `${(n * 100).toFixed(1)}%` : '—');
+
+  const stratLabel =
+    strategy.mode === 'prefer_gpt'
+      ? '📊 GPT 優先（実績バイアス）'
+      : strategy.mode === 'prefer_claude'
+      ? '📊 Claude 優先（実績バイアス）'
+      : '🥊 ブラインド評価で都度判定';
+
+  return (
+    <section className="card space-y-3">
+      <div className="flex items-center justify-between flex-wrap gap-2">
+        <h2 className="font-bold">🤖 AI モデル比較 (GPT vs Claude)</h2>
+        <span className="text-[11px] text-slate-400">
+          コンペ回数: {totalCompare} / 候補シナリオ: {totalScenarios}
+        </span>
+      </div>
+
+      <div className="text-xs text-slate-300 bg-bg-elev/60 border border-border/40 rounded-md p-2">
+        次回の採用方針: <span className="font-semibold text-slate-100">{stratLabel}</span>
+        <span className="text-slate-500"> — {strategy.reason}</span>
+      </div>
+
+      {totalCompare === 0 ? (
+        <p className="text-sm text-slate-500 py-4 text-center">
+          まだコンペデータがありません。両方の API キー（OpenAI + Anthropic）が設定されていれば、次回のシナリオ生成時にデュアル生成が走ります。
+        </p>
+      ) : (
+        <>
+          <div className="grid grid-cols-2 gap-3">
+            <ModelStatCard
+              label="GPT-4o"
+              accent="bg-emerald-400/15 border-emerald-400/40"
+              isLeader={performance.leader === 'gpt'}
+              stats={gpt}
+              winRatePct={winRatePct}
+              fmtCtr={fmtCtr}
+              fmtRet={fmtRet}
+            />
+            <ModelStatCard
+              label="Claude Sonnet 4"
+              accent="bg-violet-400/15 border-violet-400/40"
+              isLeader={performance.leader === 'claude'}
+              stats={claude}
+              winRatePct={winRatePct}
+              fmtCtr={fmtCtr}
+              fmtRet={fmtRet}
+            />
+          </div>
+
+          {recent_runs && recent_runs.length > 0 && (
+            <details className="mt-2">
+              <summary className="cursor-pointer text-xs text-slate-400 hover:text-slate-200">
+                直近 {recent_runs.length} 回のコンペ内訳を見る
+              </summary>
+              <ul className="mt-2 space-y-2">
+                {recent_runs.map((run) => {
+                  const g = run.candidates.gpt;
+                  const c = run.candidates.claude;
+                  const winnerLabel =
+                    g?.selected
+                      ? 'GPT'
+                      : c?.selected
+                      ? 'Claude'
+                      : '—';
+                  return (
+                    <li
+                      key={run.run_id}
+                      className="text-[11px] text-slate-300 bg-bg-elev/40 border border-border/30 rounded-md p-2"
+                    >
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-slate-500">
+                          {formatDateTime(
+                            new Date((run.created_at || 0) * 1000).toISOString()
+                          )}
+                        </span>
+                        <span className="font-semibold text-slate-100">
+                          採用: {winnerLabel}
+                          {g?.selected_by ? ` (${g.selected_by})` : ''}
+                          {c?.selected_by ? ` (${c.selected_by})` : ''}
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 mt-1">
+                        <div>
+                          <div className="text-slate-400">
+                            GPT: {g?.title || '—'}
+                          </div>
+                          <div className="text-slate-500">
+                            blind: {g?.blind_overall?.toFixed(1) ?? '—'}{' '}
+                            {g?.won_blind_eval ? '🏆' : ''}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-slate-400">
+                            Claude: {c?.title || '—'}
+                          </div>
+                          <div className="text-slate-500">
+                            blind: {c?.blind_overall?.toFixed(1) ?? '—'}{' '}
+                            {c?.won_blind_eval ? '🏆' : ''}
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </details>
+          )}
+        </>
+      )}
+    </section>
+  );
+}
+
+function ModelStatCard({
+  label,
+  accent,
+  isLeader,
+  stats,
+  winRatePct,
+  fmtCtr,
+  fmtRet,
+}: {
+  label: string;
+  accent: string;
+  isLeader: boolean;
+  stats: ModelPerformanceResponse['performance']['by_model']['gpt'];
+  winRatePct: (n: number) => string;
+  fmtCtr: (n: number) => string;
+  fmtRet: (n: number) => string;
+}) {
+  return (
+    <div
+      className={`rounded-lg border p-3 ${accent} ${
+        isLeader ? 'ring-1 ring-amber-300/60' : ''
+      }`}
+    >
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-sm font-semibold text-slate-100">{label}</span>
+        {isLeader && (
+          <span className="text-[10px] text-amber-300 font-bold">
+            👑 LEADER
+          </span>
+        )}
+      </div>
+      <dl className="grid grid-cols-2 gap-y-1 text-[11px] text-slate-300">
+        <dt className="text-slate-400">ブラインド勝率</dt>
+        <dd className="text-right tabular-nums">
+          {winRatePct(stats.win_rate)}{' '}
+          <span className="text-slate-500">
+            ({stats.win_count}/{stats.compare_runs})
+          </span>
+        </dd>
+        <dt className="text-slate-400">平均 blind 総合</dt>
+        <dd className="text-right tabular-nums">
+          {stats.avg_blind_overall > 0
+            ? stats.avg_blind_overall.toFixed(1)
+            : '—'}
+        </dd>
+        <dt className="text-slate-400">採用本数</dt>
+        <dd className="text-right tabular-nums">{stats.selected_count}</dd>
+        <dt className="text-slate-400">実 CTR (平均)</dt>
+        <dd className="text-right tabular-nums">{fmtCtr(stats.avg_ctr)}</dd>
+        <dt className="text-slate-400">維持率 (平均)</dt>
+        <dd className="text-right tabular-nums">
+          {fmtRet(stats.avg_retention)}
+        </dd>
+        <dt className="text-slate-400">サンプル数</dt>
+        <dd className="text-right tabular-nums">
+          {stats.samples_with_metrics}
+        </dd>
+        <dt className="text-slate-400">実績スコア</dt>
+        <dd className="text-right tabular-nums font-semibold text-slate-100">
+          {(stats.perf_score * 100).toFixed(2)}
+        </dd>
+      </dl>
+    </div>
   );
 }
 

@@ -2916,6 +2916,9 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                 style=style,
                 video_title=video_title,
                 applied_feedback=meta.get("applied_feedback"),
+                generated_by=meta.get("generated_by"),
+                selected_by=(meta.get("compete") or {}).get("selected_by") if meta.get("compete") else None,
+                compete=meta.get("compete"),
             )
         except Exception as e:
             print(f"⚠️ scenario archive failed: {e}")

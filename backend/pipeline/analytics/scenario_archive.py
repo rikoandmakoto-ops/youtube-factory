@@ -116,6 +116,9 @@ def archive_scenario(
     video_title: Optional[str] = None,
     applied_feedback: Optional[List[str]] = None,
     scenario_data: Optional[Dict[str, Any]] = None,
+    generated_by: Optional[str] = None,
+    selected_by: Optional[str] = None,
+    compete: Optional[Dict[str, Any]] = None,
 ) -> Optional[Path]:
     """シナリオ原文を markdown ファイルとして書き出す。
 
@@ -140,6 +143,12 @@ def archive_scenario(
         short_scenario = scenario_data.get("short_scenario") or scenario_data.get("short")
     if scenario_data and full_scenario is None:
         full_scenario = scenario_data.get("full_scenario") or scenario_data.get("full")
+    if scenario_data and generated_by is None:
+        generated_by = scenario_data.get("generated_by")
+    if scenario_data and compete is None:
+        compete = scenario_data.get("compete")
+    if compete and selected_by is None:
+        selected_by = compete.get("selected_by")
 
     short_scenario = short_scenario or []
     full_scenario = full_scenario or []
@@ -176,12 +185,23 @@ def archive_scenario(
             + ", ".join(json.dumps(x) for x in applied_feedback)
             + "]"
         )
+    if generated_by:
+        fm_lines.append(f"generated_by: {generated_by}")
+    if selected_by:
+        fm_lines.append(f"selected_by: {selected_by}")
     fm_lines.append("---\n")
 
     body: List[str] = []
     body.append(f"# {title}\n")
     if video_title:
         body.append(f"**公開タイトル案**: {video_title}\n")
+    if generated_by:
+        label = "GPT-4o" if generated_by == "gpt" else "Claude Sonnet 4"
+        body.append(f"**生成モデル**: {label}")
+        if selected_by:
+            body.append(f"  (selected_by: {selected_by})\n")
+        else:
+            body.append("")
 
     if thumb_info:
         body.append("## サムネ情報")
@@ -229,6 +249,8 @@ def archive_scenario(
                 "theme": theme or {},
                 "generated_at": datetime.utcnow().isoformat() + "Z",
                 "prompt_hash": h,
+                "generated_by": generated_by,
+                "selected_by": selected_by,
             },
         )
         existing = existing[:500]

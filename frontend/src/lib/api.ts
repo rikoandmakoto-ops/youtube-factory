@@ -1786,3 +1786,72 @@ export async function setImprovementStatus(
     }
   );
 }
+
+// ── Model compete (gpt vs claude) ──
+export type ModelPerformanceStats = {
+  scenario_count: number;
+  selected_count: number;
+  win_count: number;
+  compare_runs: number;
+  win_rate: number;
+  samples_with_metrics: number;
+  avg_views: number;
+  avg_ctr: number;
+  avg_retention: number;
+  avg_blind_overall: number;
+  perf_score: number;
+};
+
+export type ModelPerformanceSummary = {
+  channel_id: string;
+  by_model: { gpt: ModelPerformanceStats; claude: ModelPerformanceStats };
+  leader: 'gpt' | 'claude' | null;
+  leader_margin: number;
+  blind_compare_runs: number;
+  selected_counts: Record<string, number>;
+  min_samples_for_bias: number;
+  bias_threshold: number;
+};
+
+export type ModelCompeteStrategy = {
+  mode: 'blind' | 'prefer_gpt' | 'prefer_claude';
+  reason: string;
+  leader: 'gpt' | 'claude' | null;
+  margin: number;
+};
+
+export type ModelCompeteRunCandidate = {
+  title?: string | null;
+  won_blind_eval?: boolean;
+  blind_overall?: number | null;
+  blind_scores?: Record<string, number>;
+  selected?: boolean;
+  selected_by?: string | null;
+  video_id?: string | null;
+};
+
+export type ModelCompeteRun = {
+  run_id: string;
+  created_at: number;
+  candidates: {
+    gpt?: ModelCompeteRunCandidate;
+    claude?: ModelCompeteRunCandidate;
+  };
+};
+
+export type ModelPerformanceResponse = {
+  channel_id: string;
+  performance: ModelPerformanceSummary;
+  strategy: ModelCompeteStrategy;
+  recent_runs: ModelCompeteRun[];
+};
+
+export async function getModelPerformance(
+  channelId: string,
+  recentRuns = 20
+): Promise<ModelPerformanceResponse> {
+  return call<ModelPerformanceResponse>(
+    `/api/model-performance/${encodeURIComponent(channelId)}?recent_runs=${recentRuns}`,
+    { noStore: true }
+  );
+}

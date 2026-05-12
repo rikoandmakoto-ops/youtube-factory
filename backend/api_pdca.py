@@ -16,6 +16,7 @@ from api_phase1 import require_session
 from pipeline.analytics import (
     ab_reconciler,
     improvement_queue,
+    model_compete,
     scenario_evaluator,
     store as analytics_store,
 )
@@ -230,3 +231,44 @@ async def set_improvement_status(
     if not analytics_store.update_improvement_status(video_id, body.status):
         raise HTTPException(status_code=404, detail="improvement entry not found")
     return {"video_id": video_id, "status": body.status}
+
+
+# =====================================================================
+# /api/model-performance — GPT vs Claude AI compete
+# =====================================================================
+
+@router.get("/model-performance/{channel_id}")
+async def model_performance(
+    channel_id: str,
+    recent_runs: int = Query(default=20, ge=1, le=200),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """GPT / Claude のコンペ実績（ブラインド勝率 + 実 CTR / 維持率）を返す。"""
+    agg = model_compete.aggregate_performance(channel_id)
+    strategy = model_compete.decide_selection_strategy(channel_id)
+    # 直近のコンペ run を run_id でグルーピングして UI に出せる形に整形
+    records = analytics_store.list_model_scenario_records(channel_id, limit=recent_runs * 2)
+    runs: Dict[str, Dict[str, Any]] = {}
+    for r in records:
+        rid = r.get("run_id")
+        if not rid:
+            continue
+        entry = runs.setdefault(rid, {"run_id": rid, "created_at": r.get("created_at"), "candidates": {}})
+        entry["candidates"][r.get("model_name")] = {
+            "title": r.get("title"),
+            "won_blind_eval": r.get("won_blind_eval"),
+            "blind_overall": r.get("blind_overall"),
+            "blind_scores": r.get("blind_scores"),
+            "selected": r.get("selected"),
+            "selected_by": r.get("selected_by"),
+            "video_id": r.get("video_id"),
+        }
+    recent = sorted(
+        runs.values(), key=lambda x: x.get("created_at") or 0, reverse=True
+    )[:recent_runs]
+    return {
+        "channel_id": channel_id,
+        "performance": agg,
+        "strategy": strategy,
+        "recent_runs": recent,
+    }

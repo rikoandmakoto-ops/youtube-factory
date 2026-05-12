@@ -9,6 +9,7 @@ import {
   listEvaluations,
   listAbReconciliation,
   listImprovements,
+  getModelPerformance,
   ApiError,
   redirectIfUnauthorized,
 } from '@/lib/api';
@@ -33,6 +34,7 @@ export default async function AnalyticsPage({
     listEvaluations(channelId, 100),
     listAbReconciliation(channelId, 200),
     listImprovements(channelId, { limit: 100 }),
+    getModelPerformance(channelId, 20),
   ]);
   redirectIfUnauthorized(results, '/analytics');
   const [
@@ -44,6 +46,7 @@ export default async function AnalyticsPage({
     evalRes,
     reconRes,
     impRes,
+    perfRes,
   ] = results;
 
   const channels = chRes.status === 'fulfilled' ? chRes.value : [];
@@ -55,6 +58,8 @@ export default async function AnalyticsPage({
   const abReconciliation =
     reconRes.status === 'fulfilled' ? reconRes.value : null;
   const improvements = impRes.status === 'fulfilled' ? impRes.value : null;
+  const modelPerformance =
+    perfRes.status === 'fulfilled' ? perfRes.value : null;
 
   const sectionErrors: { section: string; message: string }[] = [];
   const collect = (
@@ -76,6 +81,7 @@ export default async function AnalyticsPage({
   collect('シナリオ評価', evalRes);
   collect('AB 答え合わせ', reconRes);
   collect('改善キュー', impRes);
+  collect('AIモデル比較', perfRes);
 
   return (
     <main className="pb-10">
@@ -93,6 +99,7 @@ export default async function AnalyticsPage({
         initialEvaluations={evaluations}
         initialAbReconciliation={abReconciliation}
         initialImprovements={improvements}
+        initialModelPerformance={modelPerformance}
         initialErrors={sectionErrors}
       />
     </main>

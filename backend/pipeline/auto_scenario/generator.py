@@ -20,19 +20,27 @@ Usage:
 import json
 import os
 import random
+import time
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Optional, Any, Tuple
 
 try:
     from pipeline import api_usage
 except ImportError:  # pragma: no cover — running as a script
     api_usage = None
 
+try:
+    from pipeline import claude_client
+except Exception:  # pragma: no cover — module not yet importable
+    claude_client = None  # type: ignore
+
 # GPT models. Main scenario keeps gpt-4o (long-form Japanese, strict length rules).
 # Theme suggestion uses gpt-4o-mini (~16x cheaper, low quality risk for short JSON).
 GPT_MODEL = "gpt-4o"
 GPT_MODEL_LIGHT = "gpt-4o-mini"
+CLAUDE_MODEL = "claude-sonnet-4-20250514"
 
 
 class ScenarioGenerator:
@@ -79,6 +87,70 @@ class ScenarioGenerator:
                 print(f"⚠️ usage recording failed: {e}")
 
         return data["choices"][0]["message"]["content"]
+
+    def _call_claude_text(
+        self,
+        messages: List[Dict],
+        *,
+        temperature: float = 0.85,
+        max_tokens: int = 8000,
+        model: Optional[str] = None,
+    ) -> str:
+        """Claude Messages API を OpenAI 風 messages 配列で呼んで応答テキストを返す。"""
+        try:
+            from anthropic import Anthropic  # type: ignore
+        except Exception as e:
+            raise RuntimeError(f"anthropic SDK not available: {e}")
+        api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+        if not api_key:
+            raise ValueError("ANTHROPIC_API_KEY not set")
+
+        # system は最初の system role を結合し、それ以外を messages に積む
+        system_parts: List[str] = []
+        user_assistant: List[Dict[str, str]] = []
+        for m in messages:
+            role = (m.get("role") or "").lower()
+            content = m.get("content") or ""
+            if role == "system":
+                system_parts.append(content)
+            elif role == "assistant":
+                user_assistant.append({"role": "assistant", "content": content})
+            else:
+                user_assistant.append({"role": "user", "content": content})
+        system_full = "\n\n".join(p for p in system_parts if p) or "JSON のみ出力。"
+
+        use_model = model or CLAUDE_MODEL
+        client = Anthropic(api_key=api_key)
+        resp = client.messages.create(
+            model=use_model,
+            max_tokens=int(max_tokens),
+            temperature=float(temperature),
+            system=system_full,
+            messages=user_assistant or [{"role": "user", "content": ""}],
+        )
+
+        # usage 記録
+        if api_usage is not None:
+            try:
+                usage = getattr(resp, "usage", None)
+                in_t = int(getattr(usage, "input_tokens", 0) or 0)
+                out_t = int(getattr(usage, "output_tokens", 0) or 0)
+                api_usage.record_chat_usage(
+                    model=use_model,
+                    prompt_tokens=in_t,
+                    completion_tokens=out_t,
+                    channel_id=self._current_channel_id,
+                    purpose=self._current_purpose or "scenario_claude",
+                )
+            except Exception:
+                pass
+
+        parts: List[str] = []
+        for block in getattr(resp, "content", []) or []:
+            t = getattr(block, "text", None)
+            if t:
+                parts.append(t)
+        return "".join(parts)
 
     def _scenarios_dir_for(self, channel_id: str) -> Path:
         # generator.py → backend/pipeline/auto_scenario/ → backend/pipeline/ → backend/ → repo_root
@@ -299,6 +371,171 @@ class ScenarioGenerator:
 - CTA配置: {cta_pos}
 """
 
+    def _wrap_for_blind(
+        self,
+        scenario_data: Dict[str, Any],
+        theme: Dict,
+        channel,
+    ) -> Dict[str, Any]:
+        """blind_compare に渡しやすい形に整形（title / scenarios / thumb）。"""
+        return {
+            "title": scenario_data.get("title") or theme.get("title") or "",
+            "short_scenario": scenario_data.get("short_scenario") or [],
+            "full_scenario": scenario_data.get("full_scenario") or [],
+            "thumb_info": scenario_data.get("thumb_info") or {},
+            "channel_id": channel.id,
+        }
+
+    def _record_compete(
+        self,
+        *,
+        channel_id: str,
+        run_id: str,
+        gpt_data: Optional[Dict[str, Any]],
+        claude_data: Optional[Dict[str, Any]],
+        blind_result: Optional[Dict[str, Any]],
+        chosen: str,
+        selected_by: str,
+    ) -> None:
+        """model_scenario_records に gpt / claude 双方の候補を書き込む。"""
+        try:
+            from pipeline.analytics import store as analytics_store
+        except Exception as e:
+            print(f"  ⚠️ compete record store import failed: {e}")
+            return
+
+        mapping = (blind_result or {}).get("mapping") or {}
+        scores_a = (blind_result or {}).get("scores_a") or {}
+        scores_b = (blind_result or {}).get("scores_b") or {}
+        winner_letter = (blind_result or {}).get("winner")
+
+        def _scores_for(model: str) -> Tuple[Dict[str, Any], bool, Optional[float]]:
+            if not blind_result:
+                return ({}, False, None)
+            ab = next((k for k, v in mapping.items() if v == model), None)
+            if ab is None:
+                return ({}, False, None)
+            sc = scores_a if ab == "A" else scores_b
+            won = ab == winner_letter
+            overall = sc.get("overall") if isinstance(sc, dict) else None
+            try:
+                overall_f = float(overall) if overall is not None else None
+            except Exception:
+                overall_f = None
+            return (sc, won, overall_f)
+
+        for model_name, data in (("gpt", gpt_data), ("claude", claude_data)):
+            if data is None:
+                continue
+            scores, won, overall = _scores_for(model_name)
+            try:
+                analytics_store.insert_model_scenario_record(
+                    channel_id=channel_id,
+                    model_name=model_name,
+                    run_id=run_id,
+                    title=data.get("title"),
+                    selected=(model_name == chosen),
+                    selected_by=(selected_by if model_name == chosen else None),
+                    won_blind_eval=won,
+                    blind_overall=overall,
+                    blind_scores=scores,
+                )
+            except Exception as e:
+                print(f"  ⚠️ compete record insert failed ({model_name}): {e}")
+
+    def _run_generation_loop(
+        self,
+        messages: List[Dict[str, str]],
+        *,
+        provider: str,
+        channel,
+        theme: Dict,
+        duration: int,
+        min_full_lines: int,
+        max_full_lines: int,
+        min_full_chars: int,
+        min_avg_chars: int,
+    ) -> Optional[Dict[str, Any]]:
+        """1 つのプロバイダ (gpt | claude) でシナリオ生成 → 行数 / 文字数バリデーション。
+
+        失敗時は None。messages はこの関数内でコピーされて使われる（呼び出し側不変）。
+        """
+        msgs = [dict(m) for m in messages]
+        provider_label = "GPT" if provider == "gpt" else "Claude"
+        self._current_purpose = f"scenario_{provider}"
+
+        def _line_text(entry):
+            if isinstance(entry, dict):
+                return entry.get("text", "")
+            return ""
+
+        scenario_data: Optional[Dict[str, Any]] = None
+        last_full_count = 0
+        last_total_chars = 0
+        last_avg_chars = 0.0
+        for attempt in range(2):
+            try:
+                if provider == "gpt":
+                    raw = self._call_gpt(msgs, temperature=0.85)
+                else:
+                    raw = self._call_claude_text(msgs, temperature=0.85)
+            except Exception as e:
+                print(f"  ⚠️ {provider_label} call failed on attempt {attempt+1}: {e}")
+                return None
+            try:
+                scenario_data = self._extract_json(raw)
+            except Exception as e:
+                print(f"  ⚠️ {provider_label} JSON parse error on attempt {attempt+1}: {e}")
+                continue
+            full_lines = scenario_data.get("full_scenario", [])
+            last_full_count = len(full_lines)
+            last_total_chars = sum(len(_line_text(e)) for e in full_lines)
+            last_avg_chars = (last_total_chars / last_full_count) if last_full_count > 0 else 0.0
+            ok_lines = last_full_count >= min_full_lines
+            ok_chars = last_total_chars >= min_full_chars
+            ok_avg = last_avg_chars >= min_avg_chars
+            if ok_lines and ok_chars and ok_avg:
+                print(f"  ✅ {provider_label} full_scenario: {last_full_count} lines, {last_total_chars} chars, avg {last_avg_chars:.1f}/line")
+                break
+            issue = []
+            if not ok_lines:
+                issue.append(f"行数 {last_full_count}（目標 {min_full_lines}〜{max_full_lines}）")
+            if not ok_chars:
+                issue.append(f"総文字数 {last_total_chars}（目標 ≥{min_full_chars}）")
+            if not ok_avg:
+                issue.append(f"平均 {last_avg_chars:.1f}（目標 ≥{min_avg_chars}）")
+            print(f"  ⚠️ {provider_label} {' / '.join(issue)} — Retrying...")
+            msgs.append({"role": "assistant", "content": raw})
+            msgs.append({
+                "role": "user",
+                "content": (
+                    f"full不足({' / '.join(issue)})。{min_full_lines}〜{max_full_lines}行/計{min_full_chars}字以上/平均{min_avg_chars}字以上に増量。"
+                    f"各行90〜150字、データ/数字/例え必須。89字以下禁止。JSONのみ再出力。"
+                )
+            })
+
+        if scenario_data is None:
+            return None
+
+        # GPT のみ sectional expansion を持っている（Claude では諦めて受け入れる）
+        if (
+            provider == "gpt"
+            and duration >= 300
+            and (last_full_count < min_full_lines or last_total_chars < min_full_chars or last_avg_chars < min_avg_chars)
+        ):
+            print(f"  🔁 GPT sectional expansion (current: {last_full_count} lines, {last_total_chars} chars, avg {last_avg_chars:.1f}/line)")
+            try:
+                scenario_data = self._expand_via_sections(channel, theme, scenario_data, duration, min_full_lines, min_full_chars)
+                full_lines = scenario_data.get("full_scenario", [])
+                last_full_count = len(full_lines)
+                last_total_chars = sum(len(_line_text(e)) for e in full_lines)
+                last_avg_chars = (last_total_chars / last_full_count) if last_full_count > 0 else 0.0
+                print(f"  ✅ After expansion: {last_full_count} lines, {last_total_chars} chars, avg {last_avg_chars:.1f}/line")
+            except Exception as e:
+                print(f"  ⚠️ Sectional expansion failed: {e}")
+
+        return scenario_data
+
     def generate(
         self,
         channel,  # ChannelProfile
@@ -309,6 +546,9 @@ class ScenarioGenerator:
     ) -> Dict[str, Any]:
         """
         チャンネルプロファイルからシナリオを自動生成。
+
+        ANTHROPIC_API_KEY が設定されていれば GPT と Claude の両方で並列生成し、
+        ブラインド評価で勝者を採用する（"AI モデル間コンペ"）。未設定なら GPT のみ。
 
         Args:
             improvement_feedback: いいね率改善ループからの未消費フィードバック。
@@ -325,6 +565,8 @@ class ScenarioGenerator:
                 "channel_id": str,
                 "style": str,
                 "applied_feedback": [<video_id list>],
+                "generated_by": "gpt" | "claude",
+                "compete": {...} or None,
             }
         """
         # テーマ選択 — auto モード時は過去に生成済みのテーマを避けて選ぶ
@@ -375,17 +617,12 @@ class ScenarioGenerator:
             print("  📊 Applying analytics-derived feedback (success patterns / retention / viewer requests)")
 
         # フル動画の最低行数 + 最低総文字数 + 1行あたり最低平均文字数
-        # 実測: VOICEVOX 1.3x speed → 約7.8文字/秒（pause込み）
-        # 720秒(12分目安) ≈ 5760文字 / 60行 → 1行平均96文字
-        # 最低でも10分(600秒 / 4800文字 / 55行)を絶対に下回らないこと
-        # 平均文字数チェック: 行数が足りても各行が短いと尺不足になる(例: 62行×67文字=4154文字=8.9分)
         ABSOLUTE_FLOOR_CHARS = 4800  # 10分 × 8.0文字/秒
         ABSOLUTE_FLOOR_LINES = 55
-        MIN_AVG_CHARS_PER_LINE = 90  # 1行あたり平均下限
+        MIN_AVG_CHARS_PER_LINE = 90
         if duration >= 120:
             min_full_lines = max(ABSOLUTE_FLOOR_LINES, int((duration / 60) * 4.6))
             max_full_lines = max(72, int((duration / 60) * 6.5))
-            # 総文字数のフロア: duration秒 × 8.0文字/秒、ただし絶対に10分相当(4800)を割らない
             min_full_chars = max(ABSOLUTE_FLOOR_CHARS, int(duration * 8.0))
             min_avg_chars = MIN_AVG_CHARS_PER_LINE
         else:
@@ -399,88 +636,186 @@ class ScenarioGenerator:
             f"full:{min_full_lines}〜{max_full_lines}行、各行90字以上(目安90〜150)、計{min_full_chars}字以上、平均{min_avg_chars}字以上。"
             f"89字以下や相槌のみは不合格。"
         )
-
-        messages = [
+        base_messages = [
             {"role": "system", "content": system_msg},
             {"role": "user", "content": prompt},
         ]
-
-        print(f"🤖 GPT generating scenario: {theme['title']} ({channel.style}, target {duration}s, {min_full_lines}-{max_full_lines} lines)")
 
         # Track usage per channel
         self._current_channel_id = channel.id
         self._current_purpose = "scenario"
 
-        def _line_text(entry):
-            if isinstance(entry, dict):
-                return entry.get("text", "")
-            return ""
+        # ─── 採用方針決定 ───
+        claude_available = bool(claude_client and claude_client.has_api_key())
+        compete_meta: Optional[Dict[str, Any]] = None
+        scenario_data: Optional[Dict[str, Any]] = None
+        chosen_provider: str = "gpt"
 
-        scenario_data = None
-        last_full_count = 0
-        last_total_chars = 0
-        last_avg_chars = 0.0
-        last_short_avg = 0.0
-        for attempt in range(2):
-            raw = self._call_gpt(messages, temperature=0.85)
+        if claude_available:
             try:
-                scenario_data = self._extract_json(raw)
-            except Exception as e:
-                print(f"  ⚠️ JSON parse error on attempt {attempt+1}: {e}")
-                continue
-            full_lines = scenario_data.get("full_scenario", [])
-            last_full_count = len(full_lines)
-            last_total_chars = sum(len(_line_text(e)) for e in full_lines)
-            last_avg_chars = (last_total_chars / last_full_count) if last_full_count > 0 else 0.0
-            ok_lines = last_full_count >= min_full_lines
-            ok_chars = last_total_chars >= min_full_chars
-            ok_avg = last_avg_chars >= min_avg_chars
-            if ok_lines and ok_chars and ok_avg:
-                print(f"  ✅ full_scenario: {last_full_count} lines, {last_total_chars} chars, avg {last_avg_chars:.1f}/line (target ≥{min_full_lines} lines / ≥{min_full_chars} chars / ≥{min_avg_chars}/line)")
-                break
-            issue = []
-            if not ok_lines:
-                issue.append(f"行数 {last_full_count} 行（目標 {min_full_lines}〜{max_full_lines}）")
-            if not ok_chars:
-                issue.append(f"総文字数 {last_total_chars} 文字（目標 ≥{min_full_chars}）")
-            if not ok_avg:
-                issue.append(f"1行あたり平均 {last_avg_chars:.1f} 文字（目標 ≥{min_avg_chars}）")
-            print(f"  ⚠️ {' / '.join(issue)} — Retrying...")
-            messages.append({"role": "assistant", "content": raw})
-            messages.append({
-                "role": "user",
-                "content": (
-                    f"full不足({' / '.join(issue)})。{min_full_lines}〜{max_full_lines}行/計{min_full_chars}字以上/平均{min_avg_chars}字以上に増量。"
-                    f"各行90〜150字、データ/数字/例え必須。89字以下禁止。JSONのみ再出力。"
+                from pipeline.analytics.model_compete import (
+                    blind_compare as _blind_compare,
+                    decide_selection_strategy as _decide_strategy,
                 )
-            })
-
-        if scenario_data is None:
-            raise ValueError("GPT failed to produce valid JSON after 2 attempts")
-
-        # If we still don't meet the line/char/avg floor for long videos, expand sectionally
-        if duration >= 300 and (last_full_count < min_full_lines or last_total_chars < min_full_chars or last_avg_chars < min_avg_chars):
-            print(f"  🔁 Falling back to sectional expansion (current: {last_full_count} lines, {last_total_chars} chars, avg {last_avg_chars:.1f}/line)")
-            try:
-                scenario_data = self._expand_via_sections(channel, theme, scenario_data, duration, min_full_lines, min_full_chars)
-                full_lines = scenario_data.get("full_scenario", [])
-                last_full_count = len(full_lines)
-                last_total_chars = sum(len(_line_text(e)) for e in full_lines)
-                last_avg_chars = (last_total_chars / last_full_count) if last_full_count > 0 else 0.0
-                print(f"  ✅ After expansion: {last_full_count} lines, {last_total_chars} chars, avg {last_avg_chars:.1f}/line")
+                strategy = _decide_strategy(channel.id)
             except Exception as e:
-                print(f"  ⚠️ Sectional expansion failed: {e}")
+                print(f"  ⚠️ strategy decision failed: {e}")
+                strategy = {"mode": "blind", "reason": "fallback", "leader": None, "margin": 0.0}
 
-        if last_full_count < min_full_lines or last_total_chars < min_full_chars or last_avg_chars < min_avg_chars:
-            print(f"  ⚠️ Final: {last_full_count} lines, {last_total_chars} chars, avg {last_avg_chars:.1f}/line (wanted ≥{min_full_lines} lines / ≥{min_full_chars} chars / ≥{min_avg_chars}/line)")
+            print(
+                f"🤖 Dual scenario gen (gpt + claude) — theme: {theme['title']} "
+                f"({channel.style}, {duration}s, {min_full_lines}-{max_full_lines} lines, "
+                f"strategy={strategy['mode']})"
+            )
+
+            # 並列で両方生成
+            with ThreadPoolExecutor(max_workers=2) as pool:
+                fut_gpt = pool.submit(
+                    self._run_generation_loop,
+                    base_messages,
+                    provider="gpt",
+                    channel=channel,
+                    theme=theme,
+                    duration=duration,
+                    min_full_lines=min_full_lines,
+                    max_full_lines=max_full_lines,
+                    min_full_chars=min_full_chars,
+                    min_avg_chars=min_avg_chars,
+                )
+                fut_claude = pool.submit(
+                    self._run_generation_loop,
+                    base_messages,
+                    provider="claude",
+                    channel=channel,
+                    theme=theme,
+                    duration=duration,
+                    min_full_lines=min_full_lines,
+                    max_full_lines=max_full_lines,
+                    min_full_chars=min_full_chars,
+                    min_avg_chars=min_avg_chars,
+                )
+                gpt_data = fut_gpt.result()
+                claude_data = fut_claude.result()
+
+            # 候補が両方揃っていればブラインド比較、片方なら自動採用
+            run_id = f"compete_{int(time.time())}_{random.randint(1000,9999)}"
+            blind_result: Optional[Dict[str, Any]] = None
+            blind_winner_model: Optional[str] = None
+            selected_by = "only_one"
+
+            if gpt_data and claude_data:
+                blind_result = _blind_compare(
+                    self._wrap_for_blind(gpt_data, theme, channel),
+                    self._wrap_for_blind(claude_data, theme, channel),
+                    channel_id=channel.id,
+                    model_a="gpt",
+                    model_b="claude",
+                )
+                if blind_result:
+                    blind_winner_model = blind_result.get("winner_model")
+                    selected_by = "blind_eval"
+                    print(
+                        f"  🥊 Blind compare: winner={blind_winner_model} "
+                        f"(A/B mapping={blind_result.get('mapping')})"
+                    )
+                else:
+                    # 比較失敗時は GPT を採用（fallback）
+                    blind_winner_model = "gpt"
+                    selected_by = "only_one"
+                    print("  ⚠️ Blind compare unavailable — falling back to GPT")
+
+                # 実績バイアス補正
+                final_model = blind_winner_model
+                if (
+                    blind_result
+                    and strategy.get("mode") in ("prefer_gpt", "prefer_claude")
+                ):
+                    forced = "gpt" if strategy["mode"] == "prefer_gpt" else "claude"
+                    if forced != blind_winner_model:
+                        print(
+                            f"  📊 Performance bias override: blind picked {blind_winner_model}, "
+                            f"but {forced} leads by {strategy.get('margin', 0)*100:.1f}% → using {forced}"
+                        )
+                        final_model = forced
+                        selected_by = "performance"
+
+                chosen_provider = final_model or "gpt"
+                scenario_data = gpt_data if chosen_provider == "gpt" else claude_data
+
+                # 記録
+                self._record_compete(
+                    channel_id=channel.id,
+                    run_id=run_id,
+                    gpt_data=gpt_data,
+                    claude_data=claude_data,
+                    blind_result=blind_result,
+                    chosen=chosen_provider,
+                    selected_by=selected_by,
+                )
+                compete_meta = {
+                    "run_id": run_id,
+                    "blind_eval": blind_result,
+                    "selected_by": selected_by,
+                    "strategy": strategy,
+                    "candidates": {
+                        "gpt": {"title": gpt_data.get("title")},
+                        "claude": {"title": claude_data.get("title")},
+                    },
+                }
+            elif gpt_data or claude_data:
+                # 片方しか取れなかった → 取れた方をそのまま採用、それでも記録は残す
+                chosen_provider = "gpt" if gpt_data else "claude"
+                scenario_data = gpt_data or claude_data
+                self._record_compete(
+                    channel_id=channel.id,
+                    run_id=run_id,
+                    gpt_data=gpt_data,
+                    claude_data=claude_data,
+                    blind_result=None,
+                    chosen=chosen_provider,
+                    selected_by="only_one",
+                )
+                compete_meta = {
+                    "run_id": run_id,
+                    "blind_eval": None,
+                    "selected_by": "only_one",
+                    "strategy": strategy,
+                    "candidates": {
+                        "gpt": {"title": gpt_data.get("title")} if gpt_data else None,
+                        "claude": {"title": claude_data.get("title")} if claude_data else None,
+                    },
+                }
+                print(f"  ⚠️ Only {chosen_provider} produced a valid scenario — using it")
+            else:
+                raise ValueError("Both GPT and Claude failed to produce valid scenarios")
+        else:
+            # Claude 未設定: 従来通り GPT 単独
+            print(f"🤖 GPT generating scenario: {theme['title']} ({channel.style}, target {duration}s, {min_full_lines}-{max_full_lines} lines)")
+            scenario_data = self._run_generation_loop(
+                base_messages,
+                provider="gpt",
+                channel=channel,
+                theme=theme,
+                duration=duration,
+                min_full_lines=min_full_lines,
+                max_full_lines=max_full_lines,
+                min_full_chars=min_full_chars,
+                min_avg_chars=min_avg_chars,
+            )
+            if scenario_data is None:
+                raise ValueError("GPT failed to produce valid JSON after 2 attempts")
+            chosen_provider = "gpt"
 
         # Short scenario check (warning only — doesn't block)
         short_lines_data = scenario_data.get("short_scenario", [])
         if short_lines_data:
-            short_total = sum(len(_line_text(e)) for e in short_lines_data)
-            last_short_avg = short_total / len(short_lines_data)
-            if last_short_avg < 30:
-                print(f"  ⚠️ short_scenario: {len(short_lines_data)} lines, {short_total} chars, avg {last_short_avg:.1f}/line — under 30/line, may be under 30s")
+            short_total = sum(
+                len(e.get("text", "") if isinstance(e, dict) else "")
+                for e in short_lines_data
+            )
+            short_avg = short_total / len(short_lines_data)
+            if short_avg < 30:
+                print(f"  ⚠️ short_scenario: {len(short_lines_data)} lines, {short_total} chars, avg {short_avg:.1f}/line — under 30/line, may be under 30s")
 
         result = {
             "title": scenario_data.get("title", theme["title"]),
@@ -492,6 +827,8 @@ class ScenarioGenerator:
             "style": channel.style,
             "applied_feedback": applied_feedback_ids,
             "applied_analytics_feedback": applied_analytics,
+            "generated_by": chosen_provider,
+            "compete": compete_meta,
         }
 
         # Phase C: AB テストでタイトル＆サムネを最適化（オプション）
