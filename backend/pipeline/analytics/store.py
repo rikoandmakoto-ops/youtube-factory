@@ -1361,6 +1361,29 @@ def _ensure_phase_f_tables() -> None:
                 CREATE INDEX IF NOT EXISTS idx_competitor_analyses_competitor
                     ON competitor_analyses(channel_id, competitor_id, analysis_date DESC);
 
+                CREATE TABLE IF NOT EXISTS competitor_candidates (
+                    id TEXT PRIMARY KEY,                -- channel_id + ':' + competitor_id
+                    channel_id TEXT NOT NULL,
+                    competitor_id TEXT NOT NULL,        -- YouTube channel ID (UC...)
+                    competitor_title TEXT,
+                    competitor_description TEXT,
+                    thumbnail_url TEXT,
+                    subscriber_count INTEGER,
+                    video_count INTEGER,
+                    view_count INTEGER,
+                    posting_frequency_per_week REAL,
+                    relevance_score REAL NOT NULL DEFAULT 0,    -- 0..1 channel fit
+                    rationale TEXT,                     -- why Claude picked it
+                    matched_keywords TEXT,              -- JSON array of keywords used to discover
+                    sample_titles TEXT,                 -- JSON array of recent competitor video titles
+                    status TEXT NOT NULL DEFAULT 'pending', -- pending | approved | dismissed
+                    discovered_at INTEGER NOT NULL,
+                    decided_at INTEGER,
+                    UNIQUE(channel_id, competitor_id)
+                );
+                CREATE INDEX IF NOT EXISTS idx_competitor_candidates_channel
+                    ON competitor_candidates(channel_id, status, relevance_score DESC);
+
                 CREATE TABLE IF NOT EXISTS comment_demands (
                     id TEXT PRIMARY KEY,                -- short hex id
                     channel_id TEXT NOT NULL,
@@ -1506,6 +1529,169 @@ def delete_competitor_analyses(channel_id: str, competitor_id: str) -> int:
             )
             c.commit()
             return cur.rowcount
+        finally:
+            c.close()
+
+
+# ---------------------------------------------------------------------
+# Phase F-1b: Competitor candidates (auto-discovered)
+# ---------------------------------------------------------------------
+
+def _candidate_row_to_dict(row: sqlite3.Row) -> Dict[str, Any]:
+    d = dict(row)
+    for key in ("matched_keywords", "sample_titles"):
+        raw = d.get(key)
+        if raw:
+            try:
+                d[key] = json.loads(raw)
+            except Exception:
+                d[key] = []
+        else:
+            d[key] = []
+    return d
+
+
+def upsert_competitor_candidate(
+    *,
+    channel_id: str,
+    competitor_id: str,
+    competitor_title: Optional[str],
+    competitor_description: Optional[str],
+    thumbnail_url: Optional[str],
+    subscriber_count: Optional[int],
+    video_count: Optional[int],
+    view_count: Optional[int],
+    posting_frequency_per_week: Optional[float],
+    relevance_score: float,
+    rationale: Optional[str],
+    matched_keywords: Optional[List[str]],
+    sample_titles: Optional[List[str]],
+) -> str:
+    """既存 status を保ったまま指標を更新。status は pending のときのみリフレッシュ。"""
+    cand_id = f"{channel_id}:{competitor_id}"
+    now = int(time.time())
+    with _db_lock:
+        c = _conn()
+        try:
+            existing = c.execute(
+                "SELECT status, discovered_at FROM competitor_candidates WHERE id = ?",
+                (cand_id,),
+            ).fetchone()
+            if existing is None:
+                c.execute(
+                    """
+                    INSERT INTO competitor_candidates
+                    (id, channel_id, competitor_id, competitor_title, competitor_description,
+                     thumbnail_url, subscriber_count, video_count, view_count,
+                     posting_frequency_per_week, relevance_score, rationale,
+                     matched_keywords, sample_titles, status, discovered_at, decided_at)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending', ?, NULL)
+                    """,
+                    (
+                        cand_id, channel_id, competitor_id,
+                        competitor_title, competitor_description, thumbnail_url,
+                        int(subscriber_count) if subscriber_count is not None else None,
+                        int(video_count) if video_count is not None else None,
+                        int(view_count) if view_count is not None else None,
+                        float(posting_frequency_per_week) if posting_frequency_per_week is not None else None,
+                        float(relevance_score),
+                        rationale,
+                        json.dumps(matched_keywords or [], ensure_ascii=False),
+                        json.dumps(sample_titles or [], ensure_ascii=False),
+                        now,
+                    ),
+                )
+            else:
+                # 既存レコードの status は触らない。スコア・統計は更新。
+                c.execute(
+                    """
+                    UPDATE competitor_candidates SET
+                        competitor_title = ?,
+                        competitor_description = ?,
+                        thumbnail_url = ?,
+                        subscriber_count = ?,
+                        video_count = ?,
+                        view_count = ?,
+                        posting_frequency_per_week = ?,
+                        relevance_score = ?,
+                        rationale = ?,
+                        matched_keywords = ?,
+                        sample_titles = ?,
+                        discovered_at = ?
+                    WHERE id = ?
+                    """,
+                    (
+                        competitor_title, competitor_description, thumbnail_url,
+                        int(subscriber_count) if subscriber_count is not None else None,
+                        int(video_count) if video_count is not None else None,
+                        int(view_count) if view_count is not None else None,
+                        float(posting_frequency_per_week) if posting_frequency_per_week is not None else None,
+                        float(relevance_score),
+                        rationale,
+                        json.dumps(matched_keywords or [], ensure_ascii=False),
+                        json.dumps(sample_titles or [], ensure_ascii=False),
+                        now,
+                        cand_id,
+                    ),
+                )
+            c.commit()
+            return cand_id
+        finally:
+            c.close()
+
+
+def list_competitor_candidates(
+    channel_id: str,
+    *,
+    status: Optional[str] = None,
+    limit: int = 100,
+) -> List[Dict[str, Any]]:
+    with _db_lock:
+        c = _conn()
+        try:
+            if status:
+                rows = c.execute(
+                    "SELECT * FROM competitor_candidates WHERE channel_id = ? AND status = ? "
+                    "ORDER BY relevance_score DESC, discovered_at DESC LIMIT ?",
+                    (channel_id, status, int(limit)),
+                ).fetchall()
+            else:
+                rows = c.execute(
+                    "SELECT * FROM competitor_candidates WHERE channel_id = ? "
+                    "ORDER BY relevance_score DESC, discovered_at DESC LIMIT ?",
+                    (channel_id, int(limit)),
+                ).fetchall()
+        finally:
+            c.close()
+    return [_candidate_row_to_dict(r) for r in rows]
+
+
+def get_competitor_candidate(channel_id: str, candidate_id: str) -> Optional[Dict[str, Any]]:
+    """candidate_id は `{channel_id}:{competitor_id}` 形式。"""
+    with _db_lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT * FROM competitor_candidates WHERE id = ? AND channel_id = ?",
+                (candidate_id, channel_id),
+            ).fetchone()
+        finally:
+            c.close()
+    return _candidate_row_to_dict(row) if row else None
+
+
+def update_candidate_status(channel_id: str, candidate_id: str, status: str) -> bool:
+    now = int(time.time())
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                "UPDATE competitor_candidates SET status = ?, decided_at = ? "
+                "WHERE id = ? AND channel_id = ?",
+                (status, now, candidate_id, channel_id),
+            )
+            c.commit()
+            return cur.rowcount > 0
         finally:
             c.close()
 

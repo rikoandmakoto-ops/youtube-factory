@@ -2342,12 +2342,34 @@ export type CompetitorAnalysis = {
   fetched_at: number;
 };
 
+export type CompetitorCandidate = {
+  id: string; // `${channel_id}:${competitor_id}`
+  channel_id: string;
+  competitor_id: string;
+  competitor_title: string | null;
+  competitor_description: string | null;
+  thumbnail_url: string | null;
+  subscriber_count: number | null;
+  video_count: number | null;
+  view_count: number | null;
+  posting_frequency_per_week: number | null;
+  relevance_score: number;
+  rationale: string | null;
+  matched_keywords: string[];
+  sample_titles: string[];
+  status: 'pending' | 'approved' | 'dismissed';
+  discovered_at: number;
+  decided_at: number | null;
+};
+
 export type CompetitorOverview = {
   channel_id: string;
   competitor_ids: string[];
   latest_analyses: CompetitorAnalysis[];
   history: CompetitorAnalysis[];
   count: number;
+  pending_candidates?: CompetitorCandidate[];
+  pending_candidate_count?: number;
 };
 
 export async function getCompetitorOverview(
@@ -2389,6 +2411,64 @@ export async function removeCompetitor(
   return call(
     `/api/competitors/${encodeURIComponent(channelId)}/remove/${encodeURIComponent(competitorId)}`,
     { method: 'DELETE', noStore: true }
+  );
+}
+
+export async function runCompetitorDiscovery(
+  channelId: string,
+  opts: {
+    max_candidates?: number;
+    min_subscribers?: number;
+    relevance_threshold?: number;
+  } = {}
+): Promise<{
+  ok: boolean;
+  matched_keywords?: string[];
+  candidates?: CompetitorCandidate[];
+  count?: number;
+  error?: string;
+  note?: string;
+}> {
+  return call(`/api/competitors/${encodeURIComponent(channelId)}/discover`, {
+    method: 'POST',
+    body: JSON.stringify(opts),
+    noStore: true,
+  });
+}
+
+export async function listCompetitorCandidates(
+  channelId: string,
+  status: 'pending' | 'approved' | 'dismissed' | 'all' = 'pending',
+  limit = 50
+): Promise<{
+  channel_id: string;
+  status_filter: string | null;
+  count: number;
+  items: CompetitorCandidate[];
+}> {
+  return call(
+    `/api/competitors/${encodeURIComponent(channelId)}/candidates?status=${status}&limit=${limit}`,
+    { noStore: true }
+  );
+}
+
+export async function approveCompetitorCandidate(
+  channelId: string,
+  competitorId: string
+): Promise<{ ok: boolean; competitor_id?: string; note?: string; error?: string }> {
+  return call(
+    `/api/competitors/${encodeURIComponent(channelId)}/candidates/${encodeURIComponent(competitorId)}/approve`,
+    { method: 'POST', noStore: true }
+  );
+}
+
+export async function dismissCompetitorCandidate(
+  channelId: string,
+  competitorId: string
+): Promise<{ ok: boolean; error?: string }> {
+  return call(
+    `/api/competitors/${encodeURIComponent(channelId)}/candidates/${encodeURIComponent(competitorId)}/dismiss`,
+    { method: 'POST', noStore: true }
   );
 }
 

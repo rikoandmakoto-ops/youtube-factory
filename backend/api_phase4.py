@@ -1441,6 +1441,7 @@ def setup_on_startup() -> None:
     _register_thumbnail_ab_check_job()
     _register_trend_scanner_job()
     _register_competitor_scan_job()
+    _register_competitor_discovery_job()
     print(f"⏰ Scheduler started — {len(_list_schedules())} schedule(s) restored")
 
 
@@ -1558,6 +1559,45 @@ def _register_competitor_scan_job() -> None:
         print("🕵️ Competitor analyzer weekly scan scheduled (Sun 03:00 JST)")
     except Exception as e:
         print(f"⚠️ Failed to register competitor scan job: {e}")
+
+
+def _register_competitor_discovery_job() -> None:
+    """競合チャンネル自動検出の月次ジョブ（毎月 1 日 04:00 JST）を登録。"""
+    sch = _ensure_scheduler()
+    if sch is None:
+        return
+    try:
+        from pipeline.analytics import competitor_discovery  # type: ignore
+    except Exception as e:
+        print(f"⚠️ competitor_discovery import failed: {e}")
+        return
+    job_id = "competitor_discovery:discover_all"
+    try:
+        sch.remove_job(job_id)
+    except Exception:
+        pass
+
+    def _runner() -> None:
+        try:
+            res = competitor_discovery.discover_all_channels()
+            if res.get("ok"):
+                total = sum(int(r.get("count") or 0) for r in (res.get("results") or []))
+                print(
+                    f"🔎 Competitor discovery: {total} candidate(s) detected across "
+                    f"{len(res.get('results') or [])} channel(s)"
+                )
+            else:
+                print(f"⚠️ Competitor discovery failed: {res.get('error')}")
+        except Exception as e:
+            print(f"⚠️ competitor_discovery.discover_all_channels failed: {e}")
+
+    try:
+        # 毎月 1 日 04:00 JST
+        trigger = CronTrigger(day=1, hour=4, minute=0, timezone="Asia/Tokyo")
+        sch.add_job(_runner, trigger=trigger, id=job_id, replace_existing=True)
+        print("🔎 Competitor discovery monthly scan scheduled (1st of month 04:00 JST)")
+    except Exception as e:
+        print(f"⚠️ Failed to register competitor discovery job: {e}")
 
 
 def shutdown_scheduler() -> None:

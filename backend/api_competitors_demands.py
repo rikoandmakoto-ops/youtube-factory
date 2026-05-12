@@ -29,6 +29,7 @@ from api_phase1 import require_session
 from pipeline.analytics import (
     comment_demand,
     competitor_analyzer,
+    competitor_discovery,
     store as analytics_store,
 )
 
@@ -41,6 +42,7 @@ router = APIRouter(prefix="/api", tags=["competitors", "comment-demands"])
 # =====================================================================
 
 _competitor_locks: Dict[str, threading.Lock] = {}
+_discovery_locks: Dict[str, threading.Lock] = {}
 _demand_locks: Dict[str, threading.Lock] = {}
 
 
@@ -65,6 +67,12 @@ class CompetitorAddRequest(BaseModel):
     competitor_channel_id: str  # UC... / URL / @handle
 
 
+class CompetitorDiscoverRequest(BaseModel):
+    max_candidates: int = Field(default=15, ge=1, le=30)
+    min_subscribers: int = Field(default=1000, ge=0)
+    relevance_threshold: float = Field(default=0.3, ge=0.0, le=1.0)
+
+
 class DemandScanRequest(BaseModel):
     since_days: int = Field(default=30, ge=1, le=365)
     auto_queue: bool = True
@@ -80,7 +88,7 @@ async def get_competitor_overview(
     limit: int = Query(default=50, ge=1, le=200),
     _: Dict[str, Any] = Depends(require_session),
 ) -> Dict[str, Any]:
-    """登録済み競合と最新分析結果。"""
+    """登録済み競合と最新分析結果 + 自動検出された競合候補。"""
     competitor_ids = competitor_analyzer.list_competitors(channel_id)
     analyses = analytics_store.list_competitor_analyses(
         channel_id, latest_per_competitor=True, limit=limit
@@ -89,12 +97,17 @@ async def get_competitor_overview(
     history = analytics_store.list_competitor_analyses(
         channel_id, latest_per_competitor=False, limit=200
     )
+    candidates = competitor_discovery.list_candidates(
+        channel_id, status="pending", limit=50
+    )
     return {
         "channel_id": channel_id,
         "competitor_ids": competitor_ids,
         "latest_analyses": analyses,
         "history": history,
         "count": len(analyses),
+        "pending_candidates": candidates,
+        "pending_candidate_count": len(candidates),
     }
 
 
@@ -144,6 +157,90 @@ async def remove_competitor(
     if not result.get("ok"):
         raise HTTPException(status_code=404, detail=result.get("error") or "remove failed")
     return result
+
+
+# =====================================================================
+# Competitor discovery (auto-detect new competitors)
+# =====================================================================
+
+@router.get("/competitors/{channel_id}/candidates")
+async def list_candidates(
+    channel_id: str,
+    status: Optional[str] = Query(default="pending"),
+    limit: int = Query(default=50, ge=1, le=200),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """自動検出された競合候補一覧。status=pending|approved|dismissed|None(全件)。"""
+    if status and status.lower() == "all":
+        status = None
+    items = competitor_discovery.list_candidates(channel_id, status=status, limit=limit)
+    return {
+        "channel_id": channel_id,
+        "status_filter": status,
+        "count": len(items),
+        "items": items,
+    }
+
+
+@router.post("/competitors/{channel_id}/discover")
+async def run_competitor_discovery(
+    channel_id: str,
+    body: Optional[CompetitorDiscoverRequest] = None,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """自チャンネルのテーマ・キーワードから類似チャンネルを検索して候補化。"""
+    opts = body or CompetitorDiscoverRequest()
+    lock = _lock(_discovery_locks, channel_id)
+    if not lock.acquire(blocking=False):
+        raise HTTPException(
+            status_code=409, detail="competitor discovery already running for this channel"
+        )
+    try:
+        res = competitor_discovery.discover(
+            channel_id,
+            max_candidates=opts.max_candidates,
+            min_subscribers=opts.min_subscribers,
+            relevance_threshold=opts.relevance_threshold,
+        )
+        if not res.get("ok"):
+            raise HTTPException(status_code=400, detail=res.get("error") or "discovery failed")
+        return res
+    finally:
+        lock.release()
+
+
+def _candidate_id(channel_id: str, competitor_id: str) -> str:
+    return f"{channel_id}:{competitor_id}"
+
+
+@router.post("/competitors/{channel_id}/candidates/{competitor_id}/approve")
+async def approve_candidate(
+    channel_id: str,
+    competitor_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """候補を承認 → competitors リストに正式追加。"""
+    res = competitor_discovery.approve_candidate(
+        channel_id, _candidate_id(channel_id, competitor_id)
+    )
+    if not res.get("ok"):
+        raise HTTPException(status_code=400, detail=res.get("error") or "approve failed")
+    return res
+
+
+@router.post("/competitors/{channel_id}/candidates/{competitor_id}/dismiss")
+async def dismiss_candidate(
+    channel_id: str,
+    competitor_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """候補を却下（以後の discover で除外される）。"""
+    res = competitor_discovery.dismiss_candidate(
+        channel_id, _candidate_id(channel_id, competitor_id)
+    )
+    if not res.get("ok"):
+        raise HTTPException(status_code=404, detail=res.get("error") or "dismiss failed")
+    return res
 
 
 # =====================================================================
