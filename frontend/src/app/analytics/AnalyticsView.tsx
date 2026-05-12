@@ -3337,6 +3337,7 @@ function CompetitorsTab({
 }) {
   const [newCompetitor, setNewCompetitor] = useState('');
   const [adding, setAdding] = useState(false);
+  const [showAddHelp, setShowAddHelp] = useState(false);
   const latest = data?.latest_analyses ?? [];
   const competitorIds = data?.competitor_ids ?? [];
 
@@ -3401,23 +3402,60 @@ function CompetitorsTab({
 
       <form
         onSubmit={submitAdd}
-        className="rounded-lg border border-border/40 bg-bg-elev/30 p-3 flex flex-col sm:flex-row gap-2 items-stretch sm:items-center"
+        className={`rounded-lg border bg-bg-elev/40 p-4 space-y-2 ${
+          competitorIds.length === 0
+            ? 'border-accent/50 ring-1 ring-accent/20'
+            : 'border-border/40'
+        }`}
       >
-        <label className="text-xs text-slate-400 shrink-0">競合チャンネル追加</label>
-        <input
-          type="text"
-          value={newCompetitor}
-          onChange={(e) => setNewCompetitor(e.target.value)}
-          placeholder="UCxxxxxx... / @handle / youtube.com/channel/UC..."
-          className="flex-1 input text-xs"
-        />
-        <button
-          type="submit"
-          disabled={adding || !newCompetitor.trim()}
-          className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-accent/20 border border-accent/60 text-accent hover:bg-accent/30 disabled:opacity-50 shrink-0"
-        >
-          {adding ? '追加中…' : '＋ 追加'}
-        </button>
+        <div className="flex items-center justify-between gap-2 flex-wrap">
+          <label className="text-sm font-semibold text-slate-200">
+            ＋ 競合チャンネルを追加
+          </label>
+          <button
+            type="button"
+            onClick={() => setShowAddHelp((v) => !v)}
+            className="text-[11px] text-slate-400 hover:text-slate-200 underline decoration-dotted"
+          >
+            {showAddHelp ? 'ヘルプを閉じる' : 'チャンネルIDの調べ方'}
+          </button>
+        </div>
+        <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
+          <input
+            type="text"
+            value={newCompetitor}
+            onChange={(e) => setNewCompetitor(e.target.value)}
+            placeholder="UCxxxxxxxxxxxxxxxxxxxxxx  または  https://youtube.com/@handle"
+            className="flex-1 input text-sm"
+            autoComplete="off"
+          />
+          <button
+            type="submit"
+            disabled={adding || !newCompetitor.trim()}
+            className="px-4 py-2 rounded-lg text-sm font-semibold bg-accent/30 border border-accent/60 text-accent hover:bg-accent/40 disabled:opacity-50 shrink-0"
+          >
+            {adding ? '追加中…' : '追加する'}
+          </button>
+        </div>
+        {showAddHelp && (
+          <div className="text-[11px] text-slate-400 leading-relaxed space-y-1 pt-1 border-t border-border/30">
+            <div className="font-semibold text-slate-300">入力できる形式:</div>
+            <ul className="list-disc list-inside space-y-0.5">
+              <li>
+                <span className="text-slate-200">UC で始まるチャンネル ID</span>（24 文字、例: <code className="text-emerald-300">UCxxxxxxxxxxxxxxxxxxxxxx</code>） — そのまま動きます
+              </li>
+              <li>
+                <span className="text-slate-200">/channel/UC... を含む URL</span>（例: <code className="text-emerald-300">https://www.youtube.com/channel/UC...</code>）
+              </li>
+              <li>
+                <span className="text-slate-200">@ハンドル</span>（例: <code className="text-emerald-300">@somechannel</code>）または <span className="text-slate-200">@handle 付き URL</span> — 解決に YOUTUBE_API_KEY が必要
+              </li>
+            </ul>
+            <div className="mt-2 text-slate-500">
+              💡 ハンドルから ID が解決できない場合: 対象チャンネルのページを開き <code>view-source:</code> で <code>&quot;channelId&quot;:&quot;UC...&quot;</code> を検索すると確実に取得できます。
+            </div>
+          </div>
+        )}
       </form>
 
       {competitorIds.length === 0 && !loading ? (
