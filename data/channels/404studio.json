@@ -1,0 +1,292 @@
+{
+  "id": "404studio",
+  "name": "404studio",
+  "concept": "SCP財団の異常存在（オブジェクト）や事件をゆっくり解説するエンタメ・考察チャンネル。怖い・不気味・知的好奇心を刺激するSCPの世界をわかりやすく紹介する。",
+  "style": "yukkuri",
+  "youtube_channel_id": null,
+  "competitors": [
+    "UC_Bp8vSyMiYOAss0pQHtZdg",
+    "UCGzXUlx8mai4wq7YitIMqyQ",
+    "UCx_NK1KWR0KN0qNDRV13cSw",
+    "UCuMgJT7crEGCTw7X8MUV69w",
+    "UCjBupWF1DppPiy7CVmz3s3g",
+    "UCxkQKgRyEHgHS-Yppi2stLg",
+    "UCON4TMtM-3jyf47UzvFmLSw",
+    "UCmkg9tzJ5KC-t9PdwjW7B9w",
+    "UCypYgWvXtOlqOt5ErGtAiLA",
+    "UC7HD2-vK2Ho6P5vOn7avSJA",
+    "UCJLKomAN16fmpIC4duYsOJQ",
+    "UCjs5hqhQ_fBMjxXvJC5TGig",
+    "UCV9_c9KIEDmw9kb7fOATJLQ",
+    "UCOtCNmhHd0fsNyvWjweDHyg",
+    "UCaU_l6kjmCzVxP0Ghrt9XYA",
+    "UCsUE9GXFRsb1ISA2PE0q96A",
+    "UC1UUxllB477DnybtxUF6tuA"
+  ],
+  "theme_seeds": [
+    {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    {
+      "title": "SCP-049「ペスト医師」",
+      "angle": "ペスト医師を名乗る存在と『治療』の正体"
+    },
+    {
+      "title": "SCP-096「シャイガイ」",
+      "angle": "顔を見られると殺しに来る存在。徹底した隠蔽体制を解説"
+    },
+    {
+      "title": "SCP-682「不死身の爬虫類」",
+      "angle": "あらゆる収容・終了試行を生き延びる最凶クラスのオブジェクト"
+    },
+    {
+      "title": "SCP-999「タックル・モンスター」",
+      "angle": "癒し系SCPの代表。Safeクラスに分類される理由"
+    },
+    {
+      "title": "SCP-3008「無限のIKEA」",
+      "angle": "閉じ込められた人々と店員の生態。脱出は可能か"
+    },
+    {
+      "title": "SCP-106「オールド・マン」",
+      "angle": "腐敗をもたらす老人。ポケット次元への引きずり込み"
+    },
+    {
+      "title": "SCP-001 提言まとめ",
+      "angle": "存在しないとされる最高機密群。複数の提言を比較解説"
+    },
+    {
+      "title": "Keterクラスとは何か",
+      "angle": "オブジェクトクラスの仕組みと代表的なKeter案件"
+    },
+    {
+      "title": "SCP財団とは何か入門",
+      "angle": "確保・収容・保護。Oクラス職員からO5評議会までの組織構造"
+    },
+    {
+      "title": "SCP-914「クロックワーク」",
+      "angle": "粗削り〜超精密の5段階で物体を変換する装置。実験事例集"
+    },
+    {
+      "title": "SCP-1471「MalO ver1.0.0」",
+      "angle": "インストールすると現れるアプリ型SCP。現代的な恐怖の象徴"
+    },
+    {
+      "title": "SCP-2521「●●●●●●●●」",
+      "angle": "言葉と画像でしか言及できない情報そのものを奪うSCP"
+    },
+    {
+      "title": "SCP-3999「我」",
+      "angle": "メタフィクション的最恐SCP。読み解き方を解説"
+    },
+    {
+      "title": "SCP-426「私はトースター」",
+      "angle": "一人称が感染する家電SCP。一人称規約を徹底解説"
+    },
+    {
+      "title": "GOC・蛇の手など対立組織",
+      "angle": "SCP財団以外の異常存在対応組織まとめ"
+    },
+    {
+      "title": "K-クラスシナリオ大全",
+      "angle": "XK・ZK・CKなど世界終焉シナリオの分類と例"
+    },
+    {
+      "title": "SCP-3001「赤い現実」",
+      "angle": "現実から切り離された科学者の手記。哲学的恐怖の傑作"
+    },
+    {
+      "title": "ミーム災害SCPまとめ",
+      "angle": "認識すると感染するSCPの種類とその対策"
+    },
+    {
+      "title": "Dクラス職員の真実",
+      "angle": "実験で消費される人員制度の闇と倫理問題"
+    }
+  ],
+  "characters": {
+    "理子": {
+      "side": "left",
+      "speaker_id": 2,
+      "text_color": [
+        255,
+        80,
+        80
+      ],
+      "expressions": [
+        "normal",
+        "laugh",
+        "sad",
+        "surprise",
+        "think"
+      ],
+      "role": "解説役（SCP財団に詳しい研究員ロール）",
+      "appearance": "young Japanese anime girl with long silver-white ponytail hair, wearing a white researcher coat with an SCP-style emblem, calm and slightly mysterious expression, chibi-style with a big round head and big eyes, dark-toned mystery explainer character"
+    },
+    "真": {
+      "side": "right",
+      "speaker_id": 3,
+      "text_color": [
+        180,
+        220,
+        255
+      ],
+      "expressions": [
+        "normal",
+        "laugh",
+        "surprise",
+        "happy",
+        "sad"
+      ],
+      "role": "リスナー役（Dクラス職員的な好奇心の強い男の子）",
+      "appearance": "young Japanese anime boy named Makoto with short black hair and round glasses, wearing a dark orange jumpsuit like a Class-D personnel, curious and slightly nervous expression, chibi-style with a big round head and big eyes"
+    }
+  },
+  "publish_settings": {
+    "auto_publish": false,
+    "default_privacy": "private",
+    "short_delay_minutes": 10,
+    "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}"
+  },
+  "thumbnail_template": {
+    "badge_text": "SCP解説",
+    "badge_color": [
+      180,
+      0,
+      0
+    ],
+    "hook_color": [
+      255,
+      230,
+      80
+    ],
+    "subtitle_color": [
+      180,
+      220,
+      255
+    ]
+  },
+  "defaults": {
+    "speed": 1.3,
+    "target_duration": 720,
+    "bg_type": "static",
+    "bg_path": null,
+    "use_illustrations": true,
+    "hashtags": [
+      "#SCP",
+      "#SCP財団",
+      "#ゆっくり解説",
+      "#都市伝説",
+      "#怖い話",
+      "#考察"
+    ],
+    "category": "24"
+  },
+  "content_policy": {
+    "tone": "mysterious",
+    "age_rating": "teen_plus",
+    "cta_position": "after_hook",
+    "cta_style": "ominous",
+    "guidelines": [
+      "SCP財団Wikiのライセンス（CC BY-SA 3.0）に準拠してクレジットを明記する",
+      "原典の改変は最小限にし、考察と解説に焦点を当てる",
+      "過度なグロ・残酷描写は避け、雰囲気と心理的恐怖で見せる"
+    ],
+    "avoid": [
+      "原文の長文コピペ",
+      "現実の事件・人物との混同",
+      "過度なゴア描写"
+    ]
+  },
+  "video_format": {
+    "layout": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "char_canvas_w_ratio": 0.418,
+      "char_y_offset": 130,
+      "char_x_inset_ratio": 0.15,
+      "speaker_glow": true,
+      "nonspeaker_opacity": 0.5,
+      "text_box_height_ratio": 0.2,
+      "text_box_opacity": 200,
+      "text_font_size": 42,
+      "text_stroke_width": 3,
+      "text_line_spacing": 4,
+      "text_margin_x": 60,
+      "illustration_size": 360,
+      "illustration_interval": 30
+    },
+    "colors": {
+      "bg_color": [
+        10,
+        10,
+        18,
+        255
+      ],
+      "text_box_color": [
+        0,
+        0,
+        0
+      ],
+      "text_stroke_color": [
+        0,
+        0,
+        0
+      ]
+    },
+    "audio": {
+      "speed": 1.3,
+      "pause_between": 0.35,
+      "bgm_volume": 0.25,
+      "bgm_path": null
+    },
+    "illustration_style": {
+      "style": "vivid",
+      "format": "landscape",
+      "art_style": "dark mystery documentary illustration with a slightly unsettling tone — restrained color palette dominated by deep blacks, blood reds, and cold blues. Clean confident lines like a redacted government report figure mixed with a horror comic panel. Flat shading with subtle film-grain texture. Avoid kawaii. Should feel like a leaked SCP Foundation document illustration.",
+      "background": "weathered manila folder texture with redacted black bars and faint SCP Foundation logo watermark, slight vignette around edges",
+      "include_characters": false,
+      "frame_style": "redacted-document",
+      "extra_prompt": "Compose like a Foundation containment report figure: label with [DATA EXPUNGED] or [REDACTED] bars where appropriate, add a small fake classification stamp in red, use thin pointer lines and stencil-style Japanese labels. The subject is implied rather than fully shown to preserve mystery. No explicit gore.",
+      "allow_text_labels": true,
+      "allow_frame": true
+    },
+    "branding": {
+      "watermark_text": "404studio",
+      "cta_style": "ominous"
+    },
+    "output": {
+      "target_duration": 720,
+      "gen_type": "both",
+      "bg_type": "static",
+      "bg_path": null,
+      "use_illustrations": true
+    },
+    "youtube": {
+      "channel_id": null,
+      "default_tags": [
+        "SCP",
+        "SCP財団",
+        "SCP解説",
+        "ゆっくり解説",
+        "都市伝説",
+        "怖い話",
+        "考察",
+        "ホラー"
+      ],
+      "default_category": "24",
+      "privacy_status": "private",
+      "upload_schedule": null
+    },
+    "analytics": {
+      "enabled": false,
+      "performance_threshold": {
+        "min_ctr": 5,
+        "min_retention": 45,
+        "min_views_7d": 2000
+      }
+    }
+  }
+}
