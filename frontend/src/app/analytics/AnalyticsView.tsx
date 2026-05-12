@@ -14,9 +14,23 @@ import type {
   ModelPerformanceResponse,
   OptimalPostingStatus,
   ScenarioEvaluation,
+  SeriesSuggestion,
+  SeriesSuggestionsResponse,
   ThumbnailTest,
   ThumbnailTestsResponse,
+  TrendDetection,
+  TrendDetectionsResponse,
   TrendsResponse,
+} from '@/lib/api';
+import {
+  approveSeriesSuggestion,
+  dismissTrendDetection,
+  listSeriesSuggestions,
+  listTrendDetections,
+  queueTrendDetection,
+  rejectSeriesSuggestion,
+  runSeriesDetection,
+  runTrendScan,
 } from '@/lib/api';
 
 type SectionError = { section: string; message: string };
@@ -32,6 +46,8 @@ type Props = {
   initialAbReconciliation: AbReconciliationResponse | null;
   initialImprovements: ImprovementsListResponse | null;
   initialModelPerformance: ModelPerformanceResponse | null;
+  initialTrendDetections: TrendDetectionsResponse | null;
+  initialSeriesSuggestions: SeriesSuggestionsResponse | null;
   initialErrors: SectionError[];
 };
 
@@ -41,7 +57,9 @@ type TabId =
   | 'reconciliation'
   | 'improvements'
   | 'posting'
-  | 'thumbnails';
+  | 'thumbnails'
+  | 'trends'
+  | 'series';
 
 type SyncState =
   | { phase: 'idle' }
@@ -107,6 +125,8 @@ export default function AnalyticsView({
   initialAbReconciliation,
   initialImprovements,
   initialModelPerformance,
+  initialTrendDetections,
+  initialSeriesSuggestions,
   initialErrors,
 }: Props) {
   const router = useRouter();
@@ -125,6 +145,18 @@ export default function AnalyticsView({
   const [modelPerformance, setModelPerformance] =
     useState<ModelPerformanceResponse | null>(initialModelPerformance);
   const [errors, setErrors] = useState<SectionError[]>(initialErrors);
+  const [trendDetections, setTrendDetections] =
+    useState<TrendDetectionsResponse | null>(initialTrendDetections);
+  const [trendLoading, setTrendLoading] = useState(false);
+  const [trendError, setTrendError] = useState<string | null>(null);
+  const [trendNotice, setTrendNotice] = useState<string | null>(null);
+
+  const [seriesData, setSeriesData] =
+    useState<SeriesSuggestionsResponse | null>(initialSeriesSuggestions);
+  const [seriesLoading, setSeriesLoading] = useState(false);
+  const [seriesError, setSeriesError] = useState<string | null>(null);
+  const [seriesNotice, setSeriesNotice] = useState<string | null>(null);
+
   const [tab, setTab] = useState<TabId>(() => {
     const t = searchParams.get('tab') as TabId | null;
     if (
@@ -132,7 +164,9 @@ export default function AnalyticsView({
       t === 'reconciliation' ||
       t === 'improvements' ||
       t === 'posting' ||
-      t === 'thumbnails'
+      t === 'thumbnails' ||
+      t === 'trends' ||
+      t === 'series'
     )
       return t;
     return 'overview';
@@ -282,12 +316,142 @@ export default function AnalyticsView({
     }
   };
 
+  const loadTrendDetections = useCallback(async () => {
+    setTrendLoading(true);
+    setTrendError(null);
+    try {
+      const r = await listTrendDetections(channelId, { limit: 50 });
+      setTrendDetections(r);
+    } catch (e) {
+      setTrendError(e instanceof Error ? e.message : 'トレンド取得失敗');
+    } finally {
+      setTrendLoading(false);
+    }
+  }, [channelId]);
+
+  const handleRunTrendScan = async () => {
+    setTrendNotice(null);
+    setTrendError(null);
+    setTrendLoading(true);
+    try {
+      const r = (await runTrendScan(channelId, { auto_queue: true })) as {
+        detected?: number;
+        auto_queued?: number;
+        errors?: Record<string, string>;
+      };
+      const errCount = Object.keys(r.errors || {}).length;
+      setTrendNotice(
+        `✅ ${r.detected ?? 0} 件検出 / ${r.auto_queued ?? 0} 件キュー自動投入${
+          errCount ? ` (${errCount} ソースエラー)` : ''
+        }`
+      );
+      await loadTrendDetections();
+    } catch (e) {
+      setTrendError(e instanceof Error ? e.message : 'スキャン失敗');
+    } finally {
+      setTrendLoading(false);
+    }
+  };
+
+  const handleQueueTrend = async (detectionId: string) => {
+    setTrendNotice(null);
+    setTrendError(null);
+    try {
+      const r = await queueTrendDetection(channelId, detectionId);
+      if (!r.ok) {
+        setTrendError(r.error || 'キュー投入失敗');
+        return;
+      }
+      setTrendNotice(`✅ 「${r.title || detectionId}」をキューに投入`);
+      await loadTrendDetections();
+    } catch (e) {
+      setTrendError(e instanceof Error ? e.message : 'キュー投入失敗');
+    }
+  };
+
+  const handleDismissTrend = async (detectionId: string) => {
+    setTrendNotice(null);
+    setTrendError(null);
+    try {
+      await dismissTrendDetection(channelId, detectionId);
+      await loadTrendDetections();
+    } catch (e) {
+      setTrendError(e instanceof Error ? e.message : '却下失敗');
+    }
+  };
+
+  const loadSeriesData = useCallback(async () => {
+    setSeriesLoading(true);
+    setSeriesError(null);
+    try {
+      const r = await listSeriesSuggestions(channelId, { limit: 100 });
+      setSeriesData(r);
+    } catch (e) {
+      setSeriesError(e instanceof Error ? e.message : 'シリーズ取得失敗');
+    } finally {
+      setSeriesLoading(false);
+    }
+  }, [channelId]);
+
+  const handleRunSeriesDetect = async () => {
+    setSeriesNotice(null);
+    setSeriesError(null);
+    setSeriesLoading(true);
+    try {
+      const r = (await runSeriesDetection(channelId)) as {
+        viral_count?: number;
+        suggestions_added?: number;
+      };
+      setSeriesNotice(
+        `✅ バズ動画 ${r.viral_count ?? 0} 本 / 続編候補 ${r.suggestions_added ?? 0} 件追加`
+      );
+      await loadSeriesData();
+    } catch (e) {
+      setSeriesError(e instanceof Error ? e.message : '検出失敗');
+    } finally {
+      setSeriesLoading(false);
+    }
+  };
+
+  const handleApproveSeries = async (suggestionId: string) => {
+    setSeriesNotice(null);
+    setSeriesError(null);
+    try {
+      const r = await approveSeriesSuggestion(channelId, suggestionId);
+      if (!r.ok) {
+        setSeriesError(r.error || '承認失敗');
+        return;
+      }
+      setSeriesNotice(`✅ 「${r.title || suggestionId}」をキューに追加`);
+      await loadSeriesData();
+    } catch (e) {
+      setSeriesError(e instanceof Error ? e.message : '承認失敗');
+    }
+  };
+
+  const handleRejectSeries = async (suggestionId: string) => {
+    setSeriesNotice(null);
+    setSeriesError(null);
+    try {
+      await rejectSeriesSuggestion(channelId, suggestionId);
+      await loadSeriesData();
+    } catch (e) {
+      setSeriesError(e instanceof Error ? e.message : '却下失敗');
+    }
+  };
+
   useEffect(() => {
     if (tab === 'posting' && !postingStatus && !postingLoading) {
       void loadPostingStatus(false);
     }
     if (tab === 'thumbnails' && !thumbnailTests && !thumbnailLoading) {
       void loadThumbnailTests();
+    }
+    if (tab === 'trends' && !trendDetections && !trendLoading) {
+      void loadTrendDetections();
+    }
+    if (tab === 'series' && !seriesData && !seriesLoading) {
+      void loadSeriesData();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tab, channelId]);
@@ -658,6 +822,32 @@ export default function AnalyticsView({
           onCheckAll={runThumbnailCheckAll}
         />
       )}
+
+      {tab === 'trends' && (
+        <TrendScannerTab
+          data={trendDetections}
+          loading={trendLoading}
+          error={trendError}
+          notice={trendNotice}
+          onRefresh={loadTrendDetections}
+          onScan={handleRunTrendScan}
+          onQueue={handleQueueTrend}
+          onDismiss={handleDismissTrend}
+        />
+      )}
+
+      {tab === 'series' && (
+        <SeriesEngineTab
+          data={seriesData}
+          loading={seriesLoading}
+          error={seriesError}
+          notice={seriesNotice}
+          onRefresh={loadSeriesData}
+          onDetect={handleRunSeriesDetect}
+          onApprove={handleApproveSeries}
+          onReject={handleRejectSeries}
+        />
+      )}
     </div>
   );
 }
@@ -678,6 +868,8 @@ function TabBar({
     { id: 'improvements', label: '改善キュー' },
     { id: 'posting', label: '最適投稿時間' },
     { id: 'thumbnails', label: 'サムネテスト' },
+    { id: 'trends', label: '🔭 トレンド' },
+    { id: 'series', label: '🎬 シリーズ' },
   ];
   return (
     <div className="flex gap-1 overflow-x-auto -mx-1 px-1">
@@ -2367,6 +2559,466 @@ function ThumbnailTestRow({
             ))}
           </ul>
         </details>
+      )}
+    </li>
+  );
+}
+
+// =====================================================================
+// Trend Scanner Tab
+// =====================================================================
+
+const SOURCE_LABEL: Record<string, string> = {
+  google_trends: 'Googleトレンド',
+  news_api: 'ニュース',
+  youtube_trending: 'YouTube急上昇',
+};
+
+function TrendScannerTab({
+  data,
+  loading,
+  error,
+  notice,
+  onRefresh,
+  onScan,
+  onQueue,
+  onDismiss,
+}: {
+  data: TrendDetectionsResponse | null;
+  loading: boolean;
+  error: string | null;
+  notice: string | null;
+  onRefresh: () => void;
+  onScan: () => void;
+  onQueue: (id: string) => void;
+  onDismiss: (id: string) => void;
+}) {
+  const items = data?.items ?? [];
+  const history = data?.history ?? [];
+  const threshold = data?.auto_queue_threshold ?? 0.7;
+
+  return (
+    <section className="space-y-4 mt-4">
+      <div className="flex items-center justify-between gap-2 flex-wrap">
+        <div>
+          <h2 className="text-lg font-bold text-slate-100">
+            🔭 トレンドキーワード先取りエンジン
+          </h2>
+          <p className="text-xs text-slate-400 mt-1">
+            Googleトレンド・ニュース・YouTube急上昇を6時間ごとにスキャン。
+            適合度{(threshold * 100).toFixed(0)}%以上は自動でテーマキューに投入。
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <button
+            onClick={onScan}
+            disabled={loading}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-accent/20 border border-accent/60 text-accent hover:bg-accent/30 disabled:opacity-50"
+          >
+            {loading ? 'スキャン中…' : '🔄 今すぐスキャン'}
+          </button>
+          <button
+            onClick={onRefresh}
+            disabled={loading}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-bg-elev/40 border border-border/40 text-slate-300 hover:text-slate-100 disabled:opacity-50"
+          >
+            再読込
+          </button>
+        </div>
+      </div>
+
+      {error && (
+        <div className="rounded-lg border border-red-500/40 bg-red-500/10 px-3 py-2 text-xs text-red-200">
+          {error}
+        </div>
+      )}
+      {notice && (
+        <div className="rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-200">
+          {notice}
+        </div>
+      )}
+
+      {data && Object.keys(data.by_source || {}).length > 0 && (
+        <div className="flex gap-2 flex-wrap text-[11px] text-slate-400">
+          {Object.entries(data.by_source).map(([src, n]) => (
+            <span
+              key={src}
+              className="px-2 py-0.5 rounded bg-bg-elev/50 border border-border/40"
+            >
+              {SOURCE_LABEL[src] ?? src}: {n}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {items.length === 0 && !loading ? (
+        <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-6 text-center text-sm text-slate-400">
+          まだトレンドが検出されていません。
+          <br />
+          「今すぐスキャン」ボタンで初回スキャンを実行できます。
+        </div>
+      ) : (
+        <ul className="space-y-3">
+          {items.map((d) => (
+            <TrendDetectionCard
+              key={d.id}
+              detection={d}
+              onQueue={onQueue}
+              onDismiss={onDismiss}
+            />
+          ))}
+        </ul>
+      )}
+
+      {history.length > 0 && (
+        <details className="rounded-lg border border-border/40 bg-bg-elev/30 p-3">
+          <summary className="cursor-pointer text-xs font-semibold text-slate-300">
+            スキャン履歴（直近 {history.length} 回）
+          </summary>
+          <ul className="mt-2 space-y-1 text-[11px] text-slate-400">
+            {history.map((h) => (
+              <li key={h.id}>
+                {new Date(h.started_at * 1000).toLocaleString('ja-JP')} ・
+                検出 {h.detected} / 自動キュー {h.auto_queued}
+                {h.error && (
+                  <span className="text-amber-300"> ・ {h.error}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+    </section>
+  );
+}
+
+function TrendDetectionCard({
+  detection,
+  onQueue,
+  onDismiss,
+}: {
+  detection: TrendDetection;
+  onQueue: (id: string) => void;
+  onDismiss: (id: string) => void;
+}) {
+  const combined = detection.combined_score ?? 0;
+  const scoreColor =
+    combined >= 0.7
+      ? 'text-emerald-300'
+      : combined >= 0.5
+        ? 'text-amber-300'
+        : 'text-slate-300';
+  return (
+    <li className="rounded-lg border border-border/40 bg-bg-elev/40 p-3">
+      <div className="flex items-start justify-between gap-3 flex-wrap">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-[10px] px-1.5 py-0.5 rounded bg-bg-elev/60 border border-border/40 text-slate-400">
+              {SOURCE_LABEL[detection.source] ?? detection.source}
+            </span>
+            {detection.auto_queued && (
+              <span className="text-[10px] px-1.5 py-0.5 rounded bg-accent/20 border border-accent/60 text-accent">
+                ⚡ 自動キュー投入済み
+              </span>
+            )}
+            {detection.status === 'queued' && !detection.auto_queued && (
+              <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/60 text-emerald-300">
+                キュー投入済
+              </span>
+            )}
+            {detection.status === 'dismissed' && (
+              <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-500/20 border border-slate-500/60 text-slate-400">
+                却下
+              </span>
+            )}
+            <span className="text-[10px] text-slate-500">
+              {new Date(detection.detected_at * 1000).toLocaleString('ja-JP', {
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+              })}
+            </span>
+          </div>
+          <p className="mt-1 text-sm font-semibold text-slate-100">
+            {detection.suggested_title || detection.keyword}
+          </p>
+          {detection.suggested_angle && (
+            <p className="text-xs text-slate-400 mt-1">
+              切り口: {detection.suggested_angle}
+            </p>
+          )}
+          {detection.rationale && (
+            <p className="text-[11px] text-slate-500 mt-1">
+              {detection.rationale}
+            </p>
+          )}
+          <p className="text-[11px] text-slate-500 mt-1">
+            キーワード:{' '}
+            <span className="text-slate-400">{detection.keyword}</span>
+          </p>
+        </div>
+        <div className="text-right shrink-0">
+          <div className={`text-lg font-bold ${scoreColor}`}>
+            {(combined * 100).toFixed(0)}
+          </div>
+          <div className="text-[10px] text-slate-500">
+            適合 {(detection.relevance_score * 100).toFixed(0)} ・ 勢い{' '}
+            {(detection.trend_score * 100).toFixed(0)}
+          </div>
+        </div>
+      </div>
+      {detection.status === 'detected' && (
+        <div className="flex gap-2 mt-2">
+          <button
+            onClick={() => onQueue(detection.id)}
+            className="px-3 py-1 rounded text-xs font-semibold bg-accent/20 border border-accent/60 text-accent hover:bg-accent/30"
+          >
+            ＋ キューに追加
+          </button>
+          <button
+            onClick={() => onDismiss(detection.id)}
+            className="px-3 py-1 rounded text-xs font-semibold bg-bg-elev/40 border border-border/40 text-slate-400 hover:text-slate-200"
+          >
+            却下
+          </button>
+        </div>
+      )}
+    </li>
+  );
+}
+
+// =====================================================================
+// Series Engine Tab
+// =====================================================================
+
+const SERIES_TYPE_LABEL: Record<string, string> = {
+  deep_dive: '深堀り',
+  contrast: '対比',
+  application: '応用',
+};
+
+const SERIES_TYPE_BADGE: Record<string, string> = {
+  deep_dive: 'bg-blue-500/20 border-blue-500/60 text-blue-200',
+  contrast: 'bg-purple-500/20 border-purple-500/60 text-purple-200',
+  application: 'bg-amber-500/20 border-amber-500/60 text-amber-200',
+};
+
+function SeriesEngineTab({
+  data,
+  loading,
+  error,
+  notice,
+  onRefresh,
+  onDetect,
+  onApprove,
+  onReject,
+}: {
+  data: SeriesSuggestionsResponse | null;
+  loading: boolean;
+  error: string | null;
+  notice: string | null;
+  onRefresh: () => void;
+  onDetect: () => void;
+  onApprove: (id: string) => void;
+  onReject: (id: string) => void;
+}) {
+  const grouped = data?.grouped ?? [];
+  const summary = data?.summary;
+
+  return (
+    <section className="space-y-4 mt-4">
+      <div className="flex items-center justify-between gap-2 flex-wrap">
+        <div>
+          <h2 className="text-lg font-bold text-slate-100">
+            🎬 シリーズ化エンジン
+          </h2>
+          <p className="text-xs text-slate-400 mt-1">
+            チャンネル平均の1.5倍以上のバズ動画から続編を自動提案。Analytics 同期後に自動実行。
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <button
+            onClick={onDetect}
+            disabled={loading}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-accent/20 border border-accent/60 text-accent hover:bg-accent/30 disabled:opacity-50"
+          >
+            {loading ? '分析中…' : '🔍 今すぐ検出'}
+          </button>
+          <button
+            onClick={onRefresh}
+            disabled={loading}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-bg-elev/40 border border-border/40 text-slate-300 hover:text-slate-100 disabled:opacity-50"
+          >
+            再読込
+          </button>
+        </div>
+      </div>
+
+      {summary && (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+          <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+            <div className="text-slate-400">平均再生数</div>
+            <div className="text-slate-100 font-semibold">
+              {Math.round(summary.channel_avg_views).toLocaleString('ja-JP')}
+            </div>
+          </div>
+          <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+            <div className="text-slate-400">候補総数</div>
+            <div className="text-slate-100 font-semibold">
+              {summary.total_suggestions}
+            </div>
+          </div>
+          <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+            <div className="text-slate-400">承認済</div>
+            <div className="text-emerald-300 font-semibold">
+              {summary.by_status?.approved ?? 0}
+            </div>
+          </div>
+          <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+            <div className="text-slate-400">公開済の続編</div>
+            <div className="text-emerald-300 font-semibold">
+              {summary.approved_with_video}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {error && (
+        <div className="rounded-lg border border-red-500/40 bg-red-500/10 px-3 py-2 text-xs text-red-200">
+          {error}
+        </div>
+      )}
+      {notice && (
+        <div className="rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-200">
+          {notice}
+        </div>
+      )}
+
+      {grouped.length === 0 && !loading ? (
+        <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-6 text-center text-sm text-slate-400">
+          まだバズ動画が検出されていません。
+          <br />
+          チャンネル平均の1.5倍以上の動画が出ると、続編候補がここに表示されます。
+        </div>
+      ) : (
+        <ul className="space-y-4">
+          {grouped.map((g) => (
+            <ViralVideoGroup
+              key={g.original_video_id}
+              group={g}
+              onApprove={onApprove}
+              onReject={onReject}
+            />
+          ))}
+        </ul>
+      )}
+    </section>
+  );
+}
+
+function ViralVideoGroup({
+  group,
+  onApprove,
+  onReject,
+}: {
+  group: SeriesSuggestionsResponse['grouped'][number];
+  onApprove: (id: string) => void;
+  onReject: (id: string) => void;
+}) {
+  return (
+    <li className="rounded-xl border border-border/40 bg-bg-elev/30 p-3">
+      <div className="flex items-center justify-between gap-3 flex-wrap">
+        <div className="flex-1 min-w-0">
+          <div className="text-[10px] uppercase tracking-wide text-amber-300">
+            🔥 バズ動画
+          </div>
+          <p className="text-sm font-semibold text-slate-100 truncate">
+            {group.original_title || group.original_video_id}
+          </p>
+        </div>
+        <div className="text-right">
+          <div className="text-lg font-bold text-amber-300">
+            ×{(group.viral_ratio || 0).toFixed(2)}
+          </div>
+          <div className="text-[10px] text-slate-500">
+            {(group.original_views || 0).toLocaleString('ja-JP')} views
+          </div>
+        </div>
+      </div>
+      <ul className="mt-3 space-y-2">
+        {group.suggestions.map((s) => (
+          <SeriesSuggestionCard
+            key={s.id}
+            suggestion={s}
+            onApprove={onApprove}
+            onReject={onReject}
+          />
+        ))}
+      </ul>
+    </li>
+  );
+}
+
+function SeriesSuggestionCard({
+  suggestion,
+  onApprove,
+  onReject,
+}: {
+  suggestion: SeriesSuggestion;
+  onApprove: (id: string) => void;
+  onReject: (id: string) => void;
+}) {
+  const t = suggestion.series_type || 'unknown';
+  return (
+    <li className="rounded-lg border border-border/40 bg-bg-elev/40 p-3">
+      <div className="flex items-start gap-2 flex-wrap">
+        <span
+          className={`text-[10px] px-1.5 py-0.5 rounded border ${
+            SERIES_TYPE_BADGE[t] ?? 'bg-bg-elev/60 border-border/40 text-slate-300'
+          }`}
+        >
+          {SERIES_TYPE_LABEL[t] ?? t}
+        </span>
+        {suggestion.status === 'approved' && (
+          <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/60 text-emerald-300">
+            承認済 → キュー
+          </span>
+        )}
+        {suggestion.status === 'rejected' && (
+          <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-500/20 border border-slate-500/60 text-slate-400">
+            却下
+          </span>
+        )}
+      </div>
+      <p className="mt-1 text-sm font-semibold text-slate-100">
+        {suggestion.suggested_title}
+      </p>
+      {suggestion.suggested_angle && (
+        <p className="text-xs text-slate-400 mt-1">
+          切り口: {suggestion.suggested_angle}
+        </p>
+      )}
+      {suggestion.rationale && (
+        <p className="text-[11px] text-slate-500 mt-1">
+          {suggestion.rationale}
+        </p>
+      )}
+      {suggestion.status === 'pending' && (
+        <div className="flex gap-2 mt-2">
+          <button
+            onClick={() => onApprove(suggestion.id)}
+            className="px-3 py-1 rounded text-xs font-semibold bg-accent/20 border border-accent/60 text-accent hover:bg-accent/30"
+          >
+            ✓ 承認してキューに追加
+          </button>
+          <button
+            onClick={() => onReject(suggestion.id)}
+            className="px-3 py-1 rounded text-xs font-semibold bg-bg-elev/40 border border-border/40 text-slate-400 hover:text-slate-200"
+          >
+            却下
+          </button>
+        </div>
       )}
     </li>
   );

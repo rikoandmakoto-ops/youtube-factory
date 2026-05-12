@@ -152,6 +152,68 @@ def init_db() -> None:
                 );
                 CREATE INDEX IF NOT EXISTS idx_imp_queue_channel
                     ON improvement_queue(channel_id, status, updated_at DESC);
+
+                -- Phase E: Trend detections (Google Trends / News / etc.)
+                CREATE TABLE IF NOT EXISTS trend_detections (
+                    id TEXT PRIMARY KEY,           -- short hex id
+                    channel_id TEXT NOT NULL,
+                    keyword TEXT NOT NULL,
+                    source TEXT NOT NULL,          -- google_trends | news_api | youtube_trending
+                    trend_score REAL NOT NULL DEFAULT 0,     -- 0..1 source-supplied or rank-derived
+                    relevance_score REAL NOT NULL DEFAULT 0, -- 0..1 channel fit (Claude judged)
+                    combined_score REAL NOT NULL DEFAULT 0,  -- weighted (trend * relevance)
+                    suggested_title TEXT,
+                    suggested_angle TEXT,
+                    rationale TEXT,                -- why this fits the channel
+                    raw TEXT,                      -- JSON: original payload
+                    detected_at INTEGER NOT NULL,
+                    queued_at INTEGER,             -- timestamp when added to theme_queue
+                    auto_queued INTEGER NOT NULL DEFAULT 0,  -- 1 if auto-injected
+                    queue_theme_id TEXT,
+                    status TEXT NOT NULL DEFAULT 'detected' -- detected | queued | dismissed
+                );
+                CREATE INDEX IF NOT EXISTS idx_trend_detections_channel
+                    ON trend_detections(channel_id, detected_at DESC);
+                CREATE INDEX IF NOT EXISTS idx_trend_detections_status
+                    ON trend_detections(channel_id, status, combined_score DESC);
+
+                -- Phase E: Trend scan history
+                CREATE TABLE IF NOT EXISTS trend_scan_history (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    channel_id TEXT NOT NULL,
+                    started_at INTEGER NOT NULL,
+                    finished_at INTEGER,
+                    sources TEXT,                  -- JSON
+                    detected INTEGER NOT NULL DEFAULT 0,
+                    auto_queued INTEGER NOT NULL DEFAULT 0,
+                    error TEXT
+                );
+                CREATE INDEX IF NOT EXISTS idx_trend_scan_history_channel
+                    ON trend_scan_history(channel_id, started_at DESC);
+
+                -- Phase E: Series suggestions (continuations of viral videos)
+                CREATE TABLE IF NOT EXISTS series_suggestions (
+                    id TEXT PRIMARY KEY,
+                    channel_id TEXT NOT NULL,
+                    original_video_id TEXT NOT NULL,
+                    original_title TEXT,
+                    original_views INTEGER NOT NULL DEFAULT 0,
+                    channel_avg_views INTEGER NOT NULL DEFAULT 0,
+                    viral_ratio REAL NOT NULL DEFAULT 1.0,   -- views / avg
+                    series_type TEXT,              -- deep_dive | contrast | application
+                    suggested_title TEXT NOT NULL,
+                    suggested_angle TEXT,
+                    rationale TEXT,
+                    created_at INTEGER NOT NULL,
+                    decided_at INTEGER,
+                    status TEXT NOT NULL DEFAULT 'pending', -- pending | approved | rejected
+                    queue_theme_id TEXT,
+                    queued_video_id TEXT           -- set when the spinoff is actually published
+                );
+                CREATE INDEX IF NOT EXISTS idx_series_channel
+                    ON series_suggestions(channel_id, status, created_at DESC);
+                CREATE INDEX IF NOT EXISTS idx_series_original
+                    ON series_suggestions(channel_id, original_video_id);
                 """
             )
             c.commit()
@@ -920,5 +982,350 @@ def link_model_record_by_title(channel_id: str, title: str, video_id: str) -> in
             )
             c.commit()
             return cur.rowcount
+        finally:
+            c.close()
+
+
+# ---------------------------------------------------------------------
+# Phase E: Trend detections
+# ---------------------------------------------------------------------
+
+def upsert_trend_detection(
+    *,
+    detection_id: str,
+    channel_id: str,
+    keyword: str,
+    source: str,
+    trend_score: float,
+    relevance_score: float,
+    combined_score: float,
+    suggested_title: Optional[str],
+    suggested_angle: Optional[str],
+    rationale: Optional[str],
+    raw: Optional[Dict[str, Any]] = None,
+    auto_queued: bool = False,
+    status: str = "detected",
+    queue_theme_id: Optional[str] = None,
+) -> None:
+    now = int(time.time())
+    raw_json = json.dumps(raw or {}, ensure_ascii=False)
+    with _db_lock:
+        c = _conn()
+        try:
+            existing = c.execute(
+                "SELECT detected_at FROM trend_detections WHERE id = ?",
+                (detection_id,),
+            ).fetchone()
+            detected_at = existing["detected_at"] if existing else now
+            queued_at = now if auto_queued else None
+            c.execute(
+                """
+                INSERT OR REPLACE INTO trend_detections
+                (id, channel_id, keyword, source, trend_score, relevance_score,
+                 combined_score, suggested_title, suggested_angle, rationale,
+                 raw, detected_at, queued_at, auto_queued, queue_theme_id, status)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    detection_id, channel_id, keyword, source,
+                    float(trend_score), float(relevance_score),
+                    float(combined_score), suggested_title, suggested_angle,
+                    rationale, raw_json, detected_at, queued_at,
+                    1 if auto_queued else 0, queue_theme_id, status,
+                ),
+            )
+            c.commit()
+        finally:
+            c.close()
+
+
+def find_recent_trend_by_keyword(
+    channel_id: str, keyword: str, *, within_seconds: int = 7 * 24 * 3600
+) -> Optional[Dict[str, Any]]:
+    """同チャンネルで同じキーワードの直近検出を返す（重複検出回避用）。"""
+    threshold = int(time.time()) - int(within_seconds)
+    with _db_lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT * FROM trend_detections WHERE channel_id = ? "
+                "AND keyword = ? AND detected_at >= ? "
+                "ORDER BY detected_at DESC LIMIT 1",
+                (channel_id, keyword, threshold),
+            ).fetchone()
+        finally:
+            c.close()
+    return dict(row) if row else None
+
+
+def list_trend_detections(
+    channel_id: str,
+    *,
+    status: Optional[str] = None,
+    limit: int = 100,
+) -> List[Dict[str, Any]]:
+    where = ["channel_id = ?"]
+    args: List[Any] = [channel_id]
+    if status:
+        where.append("status = ?")
+        args.append(status)
+    sql = (
+        "SELECT * FROM trend_detections WHERE "
+        + " AND ".join(where)
+        + " ORDER BY combined_score DESC, detected_at DESC LIMIT ?"
+    )
+    args.append(int(limit))
+    with _db_lock:
+        c = _conn()
+        try:
+            rows = c.execute(sql, args).fetchall()
+        finally:
+            c.close()
+    out: List[Dict[str, Any]] = []
+    for r in rows:
+        d = dict(r)
+        try:
+            d["raw"] = json.loads(d.get("raw") or "{}")
+        except Exception:
+            d["raw"] = {}
+        d["auto_queued"] = bool(d.get("auto_queued"))
+        out.append(d)
+    return out
+
+
+def get_trend_detection(detection_id: str) -> Optional[Dict[str, Any]]:
+    with _db_lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT * FROM trend_detections WHERE id = ?", (detection_id,)
+            ).fetchone()
+        finally:
+            c.close()
+    if not row:
+        return None
+    d = dict(row)
+    try:
+        d["raw"] = json.loads(d.get("raw") or "{}")
+    except Exception:
+        d["raw"] = {}
+    d["auto_queued"] = bool(d.get("auto_queued"))
+    return d
+
+
+def update_trend_status(
+    detection_id: str,
+    status: str,
+    *,
+    queue_theme_id: Optional[str] = None,
+    queued: bool = False,
+) -> bool:
+    now = int(time.time())
+    fields = ["status = ?"]
+    args: List[Any] = [status]
+    if queue_theme_id is not None:
+        fields.append("queue_theme_id = ?")
+        args.append(queue_theme_id)
+    if queued:
+        fields.append("queued_at = ?")
+        args.append(now)
+    args.append(detection_id)
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                f"UPDATE trend_detections SET {', '.join(fields)} WHERE id = ?",
+                args,
+            )
+            c.commit()
+            return cur.rowcount > 0
+        finally:
+            c.close()
+
+
+def insert_trend_scan_history(
+    channel_id: str,
+    *,
+    sources: List[str],
+    detected: int,
+    auto_queued: int,
+    error: Optional[str] = None,
+    started_at: Optional[int] = None,
+) -> int:
+    now = int(time.time())
+    started_at = int(started_at or now)
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                """
+                INSERT INTO trend_scan_history
+                (channel_id, started_at, finished_at, sources, detected,
+                 auto_queued, error)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    channel_id, started_at, now,
+                    json.dumps(sources, ensure_ascii=False),
+                    int(detected), int(auto_queued), error,
+                ),
+            )
+            c.commit()
+            return cur.lastrowid
+        finally:
+            c.close()
+
+
+def list_trend_scan_history(channel_id: str, *, limit: int = 20) -> List[Dict[str, Any]]:
+    with _db_lock:
+        c = _conn()
+        try:
+            rows = c.execute(
+                "SELECT * FROM trend_scan_history WHERE channel_id = ? "
+                "ORDER BY started_at DESC LIMIT ?",
+                (channel_id, int(limit)),
+            ).fetchall()
+        finally:
+            c.close()
+    out: List[Dict[str, Any]] = []
+    for r in rows:
+        d = dict(r)
+        try:
+            d["sources"] = json.loads(d.get("sources") or "[]")
+        except Exception:
+            d["sources"] = []
+        out.append(d)
+    return out
+
+
+# ---------------------------------------------------------------------
+# Phase E: Series suggestions
+# ---------------------------------------------------------------------
+
+def upsert_series_suggestion(
+    *,
+    suggestion_id: str,
+    channel_id: str,
+    original_video_id: str,
+    original_title: Optional[str],
+    original_views: int,
+    channel_avg_views: int,
+    viral_ratio: float,
+    series_type: Optional[str],
+    suggested_title: str,
+    suggested_angle: Optional[str],
+    rationale: Optional[str],
+    status: str = "pending",
+) -> None:
+    now = int(time.time())
+    with _db_lock:
+        c = _conn()
+        try:
+            existing = c.execute(
+                "SELECT created_at FROM series_suggestions WHERE id = ?",
+                (suggestion_id,),
+            ).fetchone()
+            created_at = existing["created_at"] if existing else now
+            c.execute(
+                """
+                INSERT OR REPLACE INTO series_suggestions
+                (id, channel_id, original_video_id, original_title,
+                 original_views, channel_avg_views, viral_ratio,
+                 series_type, suggested_title, suggested_angle, rationale,
+                 created_at, status)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    suggestion_id, channel_id, original_video_id, original_title,
+                    int(original_views), int(channel_avg_views),
+                    float(viral_ratio), series_type, suggested_title,
+                    suggested_angle, rationale, created_at, status,
+                ),
+            )
+            c.commit()
+        finally:
+            c.close()
+
+
+def list_series_suggestions(
+    channel_id: str,
+    *,
+    status: Optional[str] = None,
+    limit: int = 100,
+) -> List[Dict[str, Any]]:
+    where = ["channel_id = ?"]
+    args: List[Any] = [channel_id]
+    if status:
+        where.append("status = ?")
+        args.append(status)
+    sql = (
+        "SELECT * FROM series_suggestions WHERE "
+        + " AND ".join(where)
+        + " ORDER BY created_at DESC, viral_ratio DESC LIMIT ?"
+    )
+    args.append(int(limit))
+    with _db_lock:
+        c = _conn()
+        try:
+            rows = c.execute(sql, args).fetchall()
+        finally:
+            c.close()
+    return [dict(r) for r in rows]
+
+
+def get_series_suggestion(suggestion_id: str) -> Optional[Dict[str, Any]]:
+    with _db_lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT * FROM series_suggestions WHERE id = ?", (suggestion_id,)
+            ).fetchone()
+        finally:
+            c.close()
+    return dict(row) if row else None
+
+
+def list_series_for_original(
+    channel_id: str, original_video_id: str
+) -> List[Dict[str, Any]]:
+    with _db_lock:
+        c = _conn()
+        try:
+            rows = c.execute(
+                "SELECT * FROM series_suggestions WHERE channel_id = ? "
+                "AND original_video_id = ? ORDER BY created_at DESC",
+                (channel_id, original_video_id),
+            ).fetchall()
+        finally:
+            c.close()
+    return [dict(r) for r in rows]
+
+
+def update_series_status(
+    suggestion_id: str,
+    status: str,
+    *,
+    queue_theme_id: Optional[str] = None,
+    queued_video_id: Optional[str] = None,
+) -> bool:
+    now = int(time.time())
+    fields = ["status = ?", "decided_at = ?"]
+    args: List[Any] = [status, now]
+    if queue_theme_id is not None:
+        fields.append("queue_theme_id = ?")
+        args.append(queue_theme_id)
+    if queued_video_id is not None:
+        fields.append("queued_video_id = ?")
+        args.append(queued_video_id)
+    args.append(suggestion_id)
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                f"UPDATE series_suggestions SET {', '.join(fields)} WHERE id = ?",
+                args,
+            )
+            c.commit()
+            return cur.rowcount > 0
         finally:
             c.close()

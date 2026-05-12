@@ -10,6 +10,8 @@ import {
   listAbReconciliation,
   listImprovements,
   getModelPerformance,
+  listTrendDetections,
+  listSeriesSuggestions,
   ApiError,
   redirectIfUnauthorized,
 } from '@/lib/api';
@@ -35,6 +37,8 @@ export default async function AnalyticsPage({
     listAbReconciliation(channelId, 200),
     listImprovements(channelId, { limit: 100 }),
     getModelPerformance(channelId, 20),
+    listTrendDetections(channelId, { limit: 50 }),
+    listSeriesSuggestions(channelId, { limit: 100 }),
   ]);
   redirectIfUnauthorized(results, '/analytics');
   const [
@@ -47,6 +51,8 @@ export default async function AnalyticsPage({
     reconRes,
     impRes,
     perfRes,
+    trDetRes,
+    seriesRes,
   ] = results;
 
   const channels = chRes.status === 'fulfilled' ? chRes.value : [];
@@ -60,6 +66,10 @@ export default async function AnalyticsPage({
   const improvements = impRes.status === 'fulfilled' ? impRes.value : null;
   const modelPerformance =
     perfRes.status === 'fulfilled' ? perfRes.value : null;
+  const trendDetections =
+    trDetRes.status === 'fulfilled' ? trDetRes.value : null;
+  const seriesSuggestions =
+    seriesRes.status === 'fulfilled' ? seriesRes.value : null;
 
   const sectionErrors: { section: string; message: string }[] = [];
   const collect = (
@@ -82,6 +92,8 @@ export default async function AnalyticsPage({
   collect('AB 答え合わせ', reconRes);
   collect('改善キュー', impRes);
   collect('AIモデル比較', perfRes);
+  collect('トレンド検出', trDetRes);
+  collect('シリーズ候補', seriesRes);
 
   return (
     <main className="pb-10">
@@ -100,6 +112,8 @@ export default async function AnalyticsPage({
         initialAbReconciliation={abReconciliation}
         initialImprovements={improvements}
         initialModelPerformance={modelPerformance}
+        initialTrendDetections={trendDetections}
+        initialSeriesSuggestions={seriesSuggestions}
         initialErrors={sectionErrors}
       />
     </main>

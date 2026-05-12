@@ -19,8 +19,10 @@ from pipeline.analytics import (
     model_compete,
     posting_optimizer,
     scenario_evaluator,
+    series_engine,
     store as analytics_store,
     thumbnail_ab_test,
+    trend_scanner,
 )
 
 
@@ -29,6 +31,8 @@ router = APIRouter(prefix="/api", tags=["pdca"])
 _eval_locks: Dict[str, threading.Lock] = {}
 _recon_locks: Dict[str, threading.Lock] = {}
 _imp_locks: Dict[str, threading.Lock] = {}
+_trend_locks: Dict[str, threading.Lock] = {}
+_series_locks: Dict[str, threading.Lock] = {}
 
 
 def _lock(d: Dict[str, threading.Lock], key: str) -> threading.Lock:
@@ -409,3 +413,169 @@ async def check_all_thumbnail_tests(
     _: Dict[str, Any] = Depends(require_session),
 ) -> Dict[str, Any]:
     return thumbnail_ab_test.check_pending(channel_id=channel_id)
+
+
+# =====================================================================
+# /api/trend-scanner — Trend Scanner (Phase E-1)
+# =====================================================================
+
+class TrendScanRequest(BaseModel):
+    auto_queue: bool = True
+    sources: Optional[List[str]] = None  # ["google_trends", "news_api", "youtube_trending"]
+
+
+@router.get("/trend-scanner/{channel_id}")
+async def list_trend_detections_api(
+    channel_id: str,
+    status: Optional[str] = Query(default=None),
+    limit: int = Query(default=50, ge=1, le=500),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """検出済みトレンド一覧 + スキャン履歴を返す。"""
+    items = analytics_store.list_trend_detections(channel_id, status=status, limit=limit)
+    history = analytics_store.list_trend_scan_history(channel_id, limit=20)
+    by_source: Dict[str, int] = {}
+    for it in items:
+        s = it.get("source") or "unknown"
+        by_source[s] = by_source.get(s, 0) + 1
+    return {
+        "channel_id": channel_id,
+        "count": len(items),
+        "items": items,
+        "history": history,
+        "by_source": by_source,
+        "auto_queue_threshold": trend_scanner.AUTO_QUEUE_THRESHOLD,
+    }
+
+
+@router.post("/trend-scanner/{channel_id}/scan")
+async def run_trend_scan(
+    channel_id: str,
+    body: Optional[TrendScanRequest] = None,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    opts = body or TrendScanRequest()
+    lock = _lock(_trend_locks, channel_id)
+    if not lock.acquire(blocking=False):
+        raise HTTPException(status_code=409, detail="trend scan already running for this channel")
+    try:
+        return trend_scanner.scan_channel(
+            channel_id,
+            auto_queue=opts.auto_queue,
+            sources=opts.sources,
+        )
+    finally:
+        lock.release()
+
+
+@router.post("/trend-scanner/{channel_id}/queue/{detection_id}")
+async def queue_trend_detection(
+    channel_id: str,
+    detection_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """手動でトレンド検出を theme_queue に投入。"""
+    result = trend_scanner.queue_detection(channel_id, detection_id)
+    if not result.get("ok"):
+        raise HTTPException(status_code=400, detail=result.get("error") or "queue failed")
+    return result
+
+
+@router.post("/trend-scanner/{channel_id}/dismiss/{detection_id}")
+async def dismiss_trend_detection(
+    channel_id: str,
+    detection_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    result = trend_scanner.dismiss_detection(channel_id, detection_id)
+    if not result.get("ok"):
+        raise HTTPException(status_code=404, detail=result.get("error") or "not found")
+    return result
+
+
+# =====================================================================
+# /api/series — Series Engine (Phase E-2)
+# =====================================================================
+
+class SeriesDetectRequest(BaseModel):
+    threshold: float = Field(default=1.5, ge=1.0, le=10.0)
+    max_viral: int = Field(default=5, ge=1, le=20)
+
+
+@router.get("/series/{channel_id}")
+async def list_series_suggestions_api(
+    channel_id: str,
+    status: Optional[str] = Query(default=None),
+    limit: int = Query(default=100, ge=1, le=500),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """シリーズ候補 + バズ動画 + サマリを返す。"""
+    suggestions = analytics_store.list_series_suggestions(channel_id, status=status, limit=limit)
+    detection = series_engine.detect_viral(channel_id)
+    summary = series_engine.channel_summary(channel_id)
+    # バズ動画ごとに候補を束ねる
+    grouped: Dict[str, Dict[str, Any]] = {}
+    for s in suggestions:
+        vid = s.get("original_video_id") or "unknown"
+        g = grouped.setdefault(vid, {
+            "original_video_id": vid,
+            "original_title": s.get("original_title"),
+            "original_views": s.get("original_views"),
+            "viral_ratio": s.get("viral_ratio"),
+            "suggestions": [],
+        })
+        g["suggestions"].append(s)
+    return {
+        "channel_id": channel_id,
+        "count": len(suggestions),
+        "items": suggestions,
+        "grouped": list(grouped.values()),
+        "viral_videos": detection.get("viral", []),
+        "channel_avg_views": detection.get("avg"),
+        "summary": summary,
+    }
+
+
+@router.post("/series/{channel_id}/detect")
+async def run_series_detection(
+    channel_id: str,
+    body: Optional[SeriesDetectRequest] = None,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """バズ動画検出 → 続編候補生成を手動実行。"""
+    opts = body or SeriesDetectRequest()
+    lock = _lock(_series_locks, channel_id)
+    if not lock.acquire(blocking=False):
+        raise HTTPException(status_code=409, detail="series detection already running for this channel")
+    try:
+        return series_engine.detect_for_channel(
+            channel_id,
+            threshold=opts.threshold,
+            max_viral=opts.max_viral,
+        )
+    finally:
+        lock.release()
+
+
+@router.post("/series/{channel_id}/approve/{suggestion_id}")
+async def approve_series_suggestion(
+    channel_id: str,
+    suggestion_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    result = series_engine.approve_suggestion(channel_id, suggestion_id)
+    if not result.get("ok"):
+        raise HTTPException(status_code=400, detail=result.get("error") or "approve failed")
+    return result
+
+
+@router.post("/series/{channel_id}/reject/{suggestion_id}")
+async def reject_series_suggestion(
+    channel_id: str,
+    suggestion_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    result = series_engine.reject_suggestion(channel_id, suggestion_id)
+    if not result.get("ok"):
+        raise HTTPException(status_code=404, detail=result.get("error") or "not found")
+    return result
