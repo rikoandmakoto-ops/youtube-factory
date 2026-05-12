@@ -47,6 +47,8 @@ venv/
 # ===== Runtime data / generated artifacts =====
 jobs/
 logs/
+!frontend/src/app/logs/
+!frontend/src/app/api/logs/
 data/*.db
 data/analytics/*.db
 data/samples/

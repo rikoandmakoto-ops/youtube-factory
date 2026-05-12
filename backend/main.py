@@ -20,7 +20,7 @@ from enum import Enum
 import threading
 
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(override=True)
 
 from pipeline.title_generator import generate_titles, select_best_title
 from pipeline.description_generator import generate_description, generate_description_from_job
@@ -46,6 +46,7 @@ import api_improvement
 import api_channel_autopilot
 import api_analytics
 import api_pdca
+import api_logs_archives
 
 
 # Models
@@ -167,6 +168,7 @@ app.include_router(api_improvement.router)
 app.include_router(api_channel_autopilot.router)
 app.include_router(api_analytics.router)
 app.include_router(api_pdca.router)
+app.include_router(api_logs_archives.router)
 
 
 # ── Global instances (initialized at startup) ──
