@@ -511,6 +511,28 @@ def _ensure_phase_d_tables() -> None:
                 );
                 CREATE INDEX IF NOT EXISTS idx_imp_queue_channel
                     ON improvement_queue(channel_id, status, updated_at DESC);
+
+                -- AI-model compete: one row per generated candidate (both gpt + claude
+                -- are recorded for each dual-gen run). selected=1 marks the one that
+                -- proceeded to production. video_id is filled at archive/match time.
+                CREATE TABLE IF NOT EXISTS model_scenario_records (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    channel_id TEXT NOT NULL,
+                    model_name TEXT NOT NULL,            -- gpt | claude
+                    run_id TEXT NOT NULL,                -- groups gpt+claude from same dual-gen
+                    title TEXT,                          -- candidate title (slug-match against video later)
+                    selected INTEGER NOT NULL DEFAULT 0, -- 1 if this candidate was chosen
+                    selected_by TEXT,                    -- blind_eval | performance | only_one (filled on winner)
+                    won_blind_eval INTEGER NOT NULL DEFAULT 0, -- 1 if blind compare ranked this side as A>B/B>A winner
+                    blind_overall REAL,                  -- this candidate's overall score from blind eval
+                    blind_scores TEXT,                   -- JSON: 6 axes per candidate
+                    video_id TEXT,                       -- filled later when matched to a published video
+                    created_at INTEGER NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS idx_model_records_channel
+                    ON model_scenario_records(channel_id, created_at DESC);
+                CREATE INDEX IF NOT EXISTS idx_model_records_run
+                    ON model_scenario_records(run_id);
                 """
             )
             c.commit()
@@ -777,5 +799,126 @@ def update_improvement_status(video_id: str, status: str) -> bool:
             )
             c.commit()
             return cur.rowcount > 0
+        finally:
+            c.close()
+
+
+# ---------------------------------------------------------------------
+# Model compete (gpt vs claude scenario competition)
+# ---------------------------------------------------------------------
+
+
+def insert_model_scenario_record(
+    *,
+    channel_id: str,
+    model_name: str,
+    run_id: str,
+    title: Optional[str],
+    selected: bool,
+    selected_by: Optional[str],
+    won_blind_eval: bool,
+    blind_overall: Optional[float],
+    blind_scores: Optional[Dict[str, Any]],
+) -> int:
+    """1 候補分のレコードを書き込む。同じ run_id で gpt/claude 双方分を挿入する想定。"""
+    now = int(time.time())
+    payload_scores = json.dumps(blind_scores or {}, ensure_ascii=False)
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                """
+                INSERT INTO model_scenario_records
+                (channel_id, model_name, run_id, title, selected, selected_by,
+                 won_blind_eval, blind_overall, blind_scores, video_id, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, ?)
+                """,
+                (
+                    channel_id, model_name, run_id, title,
+                    1 if selected else 0, selected_by,
+                    1 if won_blind_eval else 0,
+                    float(blind_overall) if blind_overall is not None else None,
+                    payload_scores,
+                    now,
+                ),
+            )
+            c.commit()
+            return int(cur.lastrowid or 0)
+        finally:
+            c.close()
+
+
+def list_model_scenario_records(
+    channel_id: str,
+    *,
+    limit: int = 500,
+    selected_only: bool = False,
+) -> List[Dict[str, Any]]:
+    where = ["channel_id = ?"]
+    args: List[Any] = [channel_id]
+    if selected_only:
+        where.append("selected = 1")
+    sql = (
+        "SELECT * FROM model_scenario_records WHERE "
+        + " AND ".join(where)
+        + " ORDER BY created_at DESC LIMIT ?"
+    )
+    args.append(int(limit))
+    with _db_lock:
+        c = _conn()
+        try:
+            rows = c.execute(sql, args).fetchall()
+        finally:
+            c.close()
+    out: List[Dict[str, Any]] = []
+    for r in rows:
+        d = dict(r)
+        try:
+            d["blind_scores"] = json.loads(d.get("blind_scores") or "{}")
+        except Exception:
+            d["blind_scores"] = {}
+        d["selected"] = bool(d.get("selected"))
+        d["won_blind_eval"] = bool(d.get("won_blind_eval"))
+        out.append(d)
+    return out
+
+
+def update_model_record_video_id(record_id: int, video_id: str) -> bool:
+    """生成後に動画と紐づいたタイミングで video_id を埋める。"""
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                "UPDATE model_scenario_records SET video_id = ? WHERE id = ?",
+                (video_id, int(record_id)),
+            )
+            c.commit()
+            return cur.rowcount > 0
+        finally:
+            c.close()
+
+
+def link_model_record_by_title(channel_id: str, title: str, video_id: str) -> int:
+    """selected かつ video_id 未設定の最新 1 レコードを title 完全一致で video_id 紐づけ。"""
+    if not title or not video_id:
+        return 0
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                """
+                UPDATE model_scenario_records
+                SET video_id = ?
+                WHERE id = (
+                    SELECT id FROM model_scenario_records
+                    WHERE channel_id = ? AND title = ? AND selected = 1
+                          AND video_id IS NULL
+                    ORDER BY created_at DESC LIMIT 1
+                )
+                """,
+                (video_id, channel_id, title),
+            )
+            c.commit()
+            return cur.rowcount
         finally:
             c.close()

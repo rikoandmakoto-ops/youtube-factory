@@ -327,6 +327,8 @@ class JobQueue:
                     "applied_feedback": sd.get("applied_feedback"),
                     "prompt_hash": sd.get("prompt_hash"),
                     "video_title": sd.get("video_title"),
+                    "generated_by": sd.get("generated_by"),
+                    "compete": sd.get("compete"),
                 },
             )
 
