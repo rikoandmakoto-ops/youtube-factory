@@ -1855,3 +1855,95 @@ export async function getModelPerformance(
     { noStore: true }
   );
 }
+
+// ── Server Logs ──
+export type LogsResponse = {
+  path: string | null;
+  size_bytes: number;
+  mtime: number | null;
+  lines: string[];
+  note?: string;
+};
+
+export async function getServerLogs(opts: {
+  lines?: number;
+  filter?: string;
+  level?: 'error' | 'warn' | 'info';
+} = {}): Promise<LogsResponse> {
+  const q = new URLSearchParams();
+  if (opts.lines) q.set('lines', String(opts.lines));
+  if (opts.filter) q.set('filter', opts.filter);
+  if (opts.level) q.set('level', opts.level);
+  const qs = q.toString();
+  return call<LogsResponse>(`/api/logs${qs ? `?${qs}` : ''}`, { noStore: true });
+}
+
+// ── Scenario Archives ──
+export type ScenarioCompeteSummary = {
+  selected_by: string | null;
+  winner_model: string | null;
+  candidates: {
+    gpt: { title?: string } | null;
+    claude: { title?: string } | null;
+  };
+};
+
+export type ScenarioArchiveItem = {
+  channel_id: string;
+  file: string;
+  title: string;
+  theme: Record<string, unknown> | null;
+  style: string;
+  short: { count: number; chars: number; avg_chars: number };
+  full: { count: number; chars: number; avg_chars: number };
+  mtime: number;
+  size_bytes: number;
+  has_compete: boolean;
+  chosen_provider: string | null;
+  compete_summary: ScenarioCompeteSummary | null;
+};
+
+export type ScenarioArchivesResponse = {
+  items: ScenarioArchiveItem[];
+  channels: string[];
+  total?: number;
+};
+
+export async function listScenarioArchives(opts: {
+  channel_id?: string;
+  q?: string;
+  has_compete?: boolean;
+  limit?: number;
+} = {}): Promise<ScenarioArchivesResponse> {
+  const qp = new URLSearchParams();
+  if (opts.channel_id) qp.set('channel_id', opts.channel_id);
+  if (opts.q) qp.set('q', opts.q);
+  if (typeof opts.has_compete === 'boolean')
+    qp.set('has_compete', String(opts.has_compete));
+  if (opts.limit) qp.set('limit', String(opts.limit));
+  const qs = qp.toString();
+  return call<ScenarioArchivesResponse>(
+    `/api/scenario-archives${qs ? `?${qs}` : ''}`,
+    { noStore: true }
+  );
+}
+
+export type ScenarioArchiveDetail = {
+  channel_id: string;
+  file: string;
+  mtime: number;
+  size_bytes: number;
+  data: Record<string, any>;
+};
+
+export async function getScenarioArchive(
+  channelId: string,
+  fileName: string
+): Promise<ScenarioArchiveDetail> {
+  return call<ScenarioArchiveDetail>(
+    `/api/scenario-archives/${encodeURIComponent(channelId)}/${encodeURIComponent(
+      fileName
+    )}`,
+    { noStore: true }
+  );
+}

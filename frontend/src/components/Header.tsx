@@ -34,6 +34,8 @@ export default function Header({
           <NavLink href="/schedule" emoji="⏰" label="スケジュール" />
           <NavLink href="/analytics" emoji="📈" label="分析" />
           <NavLink href="/history" emoji="📊" label="履歴" />
+          <NavLink href="/archives" emoji="📚" label="アーカイブ" />
+          <NavLink href="/logs" emoji="📜" label="ログ" />
           <NavLink href="/settings" emoji="⚙️" label="設定" />
         </nav>
       )}
