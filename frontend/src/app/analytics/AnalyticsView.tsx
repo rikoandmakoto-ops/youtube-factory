@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import type {
   ABTest,
   AbReconciliationResponse,
@@ -12,7 +12,10 @@ import type {
   ImprovementEntry,
   ImprovementsListResponse,
   ModelPerformanceResponse,
+  OptimalPostingStatus,
   ScenarioEvaluation,
+  ThumbnailTest,
+  ThumbnailTestsResponse,
   TrendsResponse,
 } from '@/lib/api';
 
@@ -32,7 +35,13 @@ type Props = {
   initialErrors: SectionError[];
 };
 
-type TabId = 'overview' | 'evaluations' | 'reconciliation' | 'improvements';
+type TabId =
+  | 'overview'
+  | 'evaluations'
+  | 'reconciliation'
+  | 'improvements'
+  | 'posting'
+  | 'thumbnails';
 
 type SyncState =
   | { phase: 'idle' }
@@ -118,10 +127,170 @@ export default function AnalyticsView({
   const [errors, setErrors] = useState<SectionError[]>(initialErrors);
   const [tab, setTab] = useState<TabId>(() => {
     const t = searchParams.get('tab') as TabId | null;
-    if (t === 'evaluations' || t === 'reconciliation' || t === 'improvements')
+    if (
+      t === 'evaluations' ||
+      t === 'reconciliation' ||
+      t === 'improvements' ||
+      t === 'posting' ||
+      t === 'thumbnails'
+    )
       return t;
     return 'overview';
   });
+
+  const [postingStatus, setPostingStatus] =
+    useState<OptimalPostingStatus | null>(null);
+  const [postingLoading, setPostingLoading] = useState(false);
+  const [postingError, setPostingError] = useState<string | null>(null);
+  const [postingNotice, setPostingNotice] = useState<string | null>(null);
+
+  const [thumbnailTests, setThumbnailTests] =
+    useState<ThumbnailTestsResponse | null>(null);
+  const [thumbnailLoading, setThumbnailLoading] = useState(false);
+  const [thumbnailError, setThumbnailError] = useState<string | null>(null);
+  const [thumbnailNotice, setThumbnailNotice] = useState<string | null>(null);
+
+  const loadPostingStatus = useCallback(
+    async (recompute = false) => {
+      setPostingLoading(true);
+      setPostingError(null);
+      try {
+        const qs = new URLSearchParams({ days: '30' });
+        if (recompute) qs.set('recompute', 'true');
+        const r = await fetch(
+          `/api/optimal-posting-time/${encodeURIComponent(channelId)}?${qs.toString()}`,
+          { cache: 'no-store' }
+        );
+        if (!r.ok) throw new Error(`status ${r.status}`);
+        const data = (await r.json()) as OptimalPostingStatus;
+        setPostingStatus(data);
+      } catch (e) {
+        setPostingError(e instanceof Error ? e.message : '取得に失敗');
+      } finally {
+        setPostingLoading(false);
+      }
+    },
+    [channelId]
+  );
+
+  const applyPosting = async () => {
+    setPostingError(null);
+    setPostingNotice(null);
+    try {
+      const r = await fetch(
+        `/api/optimal-posting-time/${encodeURIComponent(channelId)}/apply`,
+        {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ days: 30 }),
+        }
+      );
+      if (!r.ok) throw new Error(`status ${r.status}`);
+      const res = (await r.json()) as {
+        applied: { days_of_week: number[]; hour: number; minute: number };
+      };
+      setPostingNotice(
+        `✅ 推奨スロットを適用しました（${res.applied.days_of_week
+          .map((d) => DOW_LABEL[d])
+          .join('・')} ${res.applied.hour
+          .toString()
+          .padStart(2, '0')}:${res.applied.minute.toString().padStart(2, '0')}）`
+      );
+      await loadPostingStatus(true);
+    } catch (e) {
+      setPostingError(e instanceof Error ? e.message : '適用に失敗');
+    }
+  };
+
+  const loadThumbnailTests = useCallback(async () => {
+    setThumbnailLoading(true);
+    setThumbnailError(null);
+    try {
+      const r = await fetch(
+        `/api/thumbnail-tests/${encodeURIComponent(channelId)}?limit=100`,
+        { cache: 'no-store' }
+      );
+      if (!r.ok) throw new Error(`status ${r.status}`);
+      const data = (await r.json()) as ThumbnailTestsResponse;
+      setThumbnailTests(data);
+    } catch (e) {
+      setThumbnailError(e instanceof Error ? e.message : '取得に失敗');
+    } finally {
+      setThumbnailLoading(false);
+    }
+  }, [channelId]);
+
+  const postThumbnailAction = async (path: string): Promise<unknown> => {
+    const r = await fetch(path, { method: 'POST' });
+    if (!r.ok) throw new Error(`status ${r.status}`);
+    return r.json();
+  };
+
+  const runThumbnailCheckOne = async (videoId: string) => {
+    setThumbnailNotice(null);
+    setThumbnailError(null);
+    try {
+      await postThumbnailAction(
+        `/api/thumbnail-tests/${encodeURIComponent(channelId)}/${encodeURIComponent(videoId)}/check`
+      );
+      setThumbnailNotice('✅ CTR チェック完了');
+      await loadThumbnailTests();
+    } catch (e) {
+      setThumbnailError(e instanceof Error ? e.message : 'チェック失敗');
+    }
+  };
+
+  const runThumbnailSwitch = async (videoId: string) => {
+    setThumbnailNotice(null);
+    setThumbnailError(null);
+    try {
+      await postThumbnailAction(
+        `/api/thumbnail-tests/${encodeURIComponent(channelId)}/${encodeURIComponent(videoId)}/switch`
+      );
+      setThumbnailNotice('✅ 次のサムネに切替えました');
+      await loadThumbnailTests();
+    } catch (e) {
+      setThumbnailError(e instanceof Error ? e.message : '切替失敗');
+    }
+  };
+
+  const runThumbnailStop = async (videoId: string) => {
+    setThumbnailNotice(null);
+    setThumbnailError(null);
+    try {
+      await postThumbnailAction(
+        `/api/thumbnail-tests/${encodeURIComponent(channelId)}/${encodeURIComponent(videoId)}/stop`
+      );
+      setThumbnailNotice('✅ テストを停止しました');
+      await loadThumbnailTests();
+    } catch (e) {
+      setThumbnailError(e instanceof Error ? e.message : '停止失敗');
+    }
+  };
+
+  const runThumbnailCheckAll = async () => {
+    setThumbnailNotice(null);
+    setThumbnailError(null);
+    try {
+      const res = (await postThumbnailAction(
+        `/api/thumbnail-tests/${encodeURIComponent(channelId)}/check-all`
+      )) as { checked: number };
+      setThumbnailNotice(`✅ ${res.checked} 件チェック完了`);
+      await loadThumbnailTests();
+    } catch (e) {
+      setThumbnailError(e instanceof Error ? e.message : 'チェック失敗');
+    }
+  };
+
+  useEffect(() => {
+    if (tab === 'posting' && !postingStatus && !postingLoading) {
+      void loadPostingStatus(false);
+    }
+    if (tab === 'thumbnails' && !thumbnailTests && !thumbnailLoading) {
+      void loadThumbnailTests();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tab, channelId]);
 
   const [sync, setSync] = useState<SyncState>({ phase: 'idle' });
   const [refreshing, setRefreshing] = useState(false);
@@ -464,9 +633,36 @@ export default function AnalyticsView({
           onSetStatus={setEntryStatus}
         />
       )}
+
+      {tab === 'posting' && (
+        <PostingOptimizerTab
+          status={postingStatus}
+          loading={postingLoading}
+          error={postingError}
+          notice={postingNotice}
+          onRefresh={() => loadPostingStatus(true)}
+          onApply={applyPosting}
+        />
+      )}
+
+      {tab === 'thumbnails' && (
+        <ThumbnailTestsTab
+          data={thumbnailTests}
+          loading={thumbnailLoading}
+          error={thumbnailError}
+          notice={thumbnailNotice}
+          onRefresh={loadThumbnailTests}
+          onCheckOne={runThumbnailCheckOne}
+          onSwitch={runThumbnailSwitch}
+          onStop={runThumbnailStop}
+          onCheckAll={runThumbnailCheckAll}
+        />
+      )}
     </div>
   );
 }
+
+const DOW_LABEL = ['日', '月', '火', '水', '木', '金', '土'];
 
 function TabBar({
   tab,
@@ -480,6 +676,8 @@ function TabBar({
     { id: 'evaluations', label: 'シナリオ評価' },
     { id: 'reconciliation', label: 'AB 実績' },
     { id: 'improvements', label: '改善キュー' },
+    { id: 'posting', label: '最適投稿時間' },
+    { id: 'thumbnails', label: 'サムネテスト' },
   ];
   return (
     <div className="flex gap-1 overflow-x-auto -mx-1 px-1">
@@ -1759,6 +1957,417 @@ function ImprovementCard({
           </button>
         )}
       </div>
+    </li>
+  );
+}
+
+// =====================================================================
+// 最適投稿時間 タブ
+// =====================================================================
+
+function PostingOptimizerTab({
+  status,
+  loading,
+  error,
+  notice,
+  onRefresh,
+  onApply,
+}: {
+  status: OptimalPostingStatus | null;
+  loading: boolean;
+  error: string | null;
+  notice: string | null;
+  onRefresh: () => void;
+  onApply: () => void;
+}) {
+  return (
+    <section className="card space-y-3">
+      <header className="flex flex-wrap items-center justify-between gap-2">
+        <div>
+          <h2 className="font-bold">📅 最適投稿時間</h2>
+          <p className="text-xs text-slate-400">
+            過去 {status?.recommendation.data_days ?? 30} 日の動画パフォーマンスから (曜日 × 時間帯) ベストスロットを算出
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <button
+            className="btn-secondary py-1 px-3 text-xs"
+            onClick={onRefresh}
+            disabled={loading}
+          >
+            {loading ? '計算中…' : '↻ 再計算'}
+          </button>
+          {status && (
+            <button
+              className="btn-primary py-1 px-3 text-xs"
+              onClick={onApply}
+              disabled={loading}
+            >
+              ✨ 推奨時間に変更
+            </button>
+          )}
+        </div>
+      </header>
+
+      {error && (
+        <p className="text-xs text-red-300">⚠️ {error}</p>
+      )}
+      {notice && (
+        <p className="text-xs text-emerald-300">{notice}</p>
+      )}
+
+      {loading && !status && (
+        <p className="text-xs text-slate-400">計算中…</p>
+      )}
+
+      {status && (
+        <>
+          <PostingComparisonCard status={status} />
+          <PostingHeatmap status={status} />
+          {status.recommendation.alternatives.length > 0 && (
+            <div className="text-xs text-slate-400">
+              <div className="font-semibold text-slate-300 mb-1">代替候補:</div>
+              <ul className="space-y-0.5">
+                {status.recommendation.alternatives.map((s, i) => (
+                  <li key={i}>
+                    {DOW_LABEL[s.day_of_week]}曜 {s.hour.toString().padStart(2, '0')}:00 — 平均 {Math.round(s.avg_views).toLocaleString()} views (n={s.sample_size})
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {status.recommendation.note && (
+            <p className="text-xs text-amber-300">{status.recommendation.note}</p>
+          )}
+        </>
+      )}
+    </section>
+  );
+}
+
+function PostingComparisonCard({ status }: { status: OptimalPostingStatus }) {
+  const rec = status.recommendation.recommended;
+  const current = status.current_schedule;
+  const currentDow = current?.days_of_week ?? [];
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div className="rounded-lg bg-bg-elev/40 border border-border/30 p-3">
+        <div className="text-xs text-slate-400 mb-1">現在の設定</div>
+        {current ? (
+          <>
+            <div className="font-mono text-lg">
+              {currentDow.length > 0
+                ? currentDow.map((d) => DOW_LABEL[d]).join('・')
+                : '—'}{' '}
+              {current.hour.toString().padStart(2, '0')}:
+              {current.minute.toString().padStart(2, '0')}
+            </div>
+            <div className="text-[11px] text-slate-500 mt-1">
+              {current.enabled ? '🟢 autopilot 有効' : '⚪ autopilot 無効'}
+            </div>
+          </>
+        ) : (
+          <div className="text-xs text-slate-500">autopilot 未設定</div>
+        )}
+      </div>
+      <div className="rounded-lg bg-accent/10 border border-accent/40 p-3">
+        <div className="text-xs text-accent mb-1">推奨スロット</div>
+        <div className="font-mono text-lg text-accent">
+          {DOW_LABEL[rec.day_of_week]}曜 {rec.hour.toString().padStart(2, '0')}:
+          {rec.minute.toString().padStart(2, '0')}
+        </div>
+        <div className="text-[11px] text-slate-300 mt-1">
+          平均 {Math.round(rec.avg_views).toLocaleString()} views / n={rec.sample_size}
+          {rec.boost_percent > 0 && (
+            <span className="ml-2 text-emerald-300">+{rec.boost_percent}% vs 平均</span>
+          )}
+          {rec.is_fallback && (
+            <span className="ml-2 text-amber-300">(fallback)</span>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PostingHeatmap({ status }: { status: OptimalPostingStatus }) {
+  const grid = status.heatmap.grid;
+  const samples = status.heatmap.samples;
+  // 最大値で正規化（fallback は 1.0）
+  let max = 0;
+  for (const row of grid) for (const v of row) if (v > max) max = v;
+  const best = status.recommendation.recommended;
+  return (
+    <div className="overflow-x-auto">
+      <table className="text-[10px] border-separate border-spacing-0.5">
+        <thead>
+          <tr>
+            <th className="text-slate-500 font-normal w-10"></th>
+            {Array.from({ length: 24 }, (_, h) => (
+              <th
+                key={h}
+                className="font-normal text-slate-500 w-7 text-center"
+              >
+                {h}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {grid.map((row, d) => (
+            <tr key={d}>
+              <th className="text-slate-400 font-normal text-right pr-1">
+                {DOW_LABEL[d]}
+              </th>
+              {row.map((v, h) => {
+                const ratio = max > 0 ? v / max : 0;
+                const intensity = Math.round(ratio * 100);
+                const n = samples[d][h];
+                const isBest =
+                  best.day_of_week === d && best.hour === h;
+                return (
+                  <td
+                    key={h}
+                    title={`${DOW_LABEL[d]}曜 ${h}:00 — 平均 ${Math.round(v).toLocaleString()} views (n=${n})`}
+                    className={`w-7 h-6 text-center font-mono ${
+                      isBest ? 'ring-2 ring-accent' : ''
+                    }`}
+                    style={{
+                      backgroundColor: n
+                        ? `rgba(99, 102, 241, ${0.1 + ratio * 0.65})`
+                        : 'rgba(100, 116, 139, 0.07)',
+                    }}
+                  >
+                    {n > 0 ? intensity : ''}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div className="text-[10px] text-slate-500 mt-1">
+        セルの色は (曜日×時間帯) の平均再生数を最大値で正規化したもの (0–100)。空白セルは実績なし。枠線つきが推奨スロット。
+      </div>
+    </div>
+  );
+}
+
+// =====================================================================
+// サムネ AB テスト タブ
+// =====================================================================
+
+function ThumbnailTestsTab({
+  data,
+  loading,
+  error,
+  notice,
+  onRefresh,
+  onCheckOne,
+  onSwitch,
+  onStop,
+  onCheckAll,
+}: {
+  data: ThumbnailTestsResponse | null;
+  loading: boolean;
+  error: string | null;
+  notice: string | null;
+  onRefresh: () => void;
+  onCheckOne: (videoId: string) => void;
+  onSwitch: (videoId: string) => void;
+  onStop: (videoId: string) => void;
+  onCheckAll: () => void;
+}) {
+  const items = data?.items ?? [];
+  return (
+    <section className="card space-y-3">
+      <header className="flex flex-wrap items-center justify-between gap-2">
+        <div>
+          <h2 className="font-bold">🖼️ サムネ AB テスト</h2>
+          <p className="text-xs text-slate-400">
+            投稿後 48h で CTR をチェック。チャンネル平均の 80% 未満なら次の候補に自動差し替え。
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <button
+            className="btn-secondary py-1 px-3 text-xs"
+            onClick={onRefresh}
+            disabled={loading}
+          >
+            {loading ? '更新中…' : '↻ 更新'}
+          </button>
+          <button
+            className="btn-primary py-1 px-3 text-xs"
+            onClick={onCheckAll}
+            disabled={loading}
+          >
+            ⚡ 今すぐ全件チェック
+          </button>
+        </div>
+      </header>
+
+      {data && (
+        <div className="flex flex-wrap gap-3 text-xs text-slate-400">
+          <span>登録テスト: {data.summary.total_tests}</span>
+          <span>監視中: {data.summary.by_status['monitoring'] ?? 0}</span>
+          <span>切替済み: {data.summary.switched_tests}</span>
+          <span>使い切り: {data.summary.by_status['exhausted'] ?? 0}</span>
+          <span>停止: {data.summary.by_status['stopped'] ?? 0}</span>
+          <span>チャンネル平均CTR: {(data.summary.channel_avg_ctr * 100).toFixed(2)}%</span>
+        </div>
+      )}
+
+      {error && <p className="text-xs text-red-300">⚠️ {error}</p>}
+      {notice && <p className="text-xs text-emerald-300">{notice}</p>}
+
+      {loading && items.length === 0 && (
+        <p className="text-xs text-slate-400">読み込み中…</p>
+      )}
+
+      {!loading && items.length === 0 && (
+        <p className="text-xs text-slate-500">
+          まだサムネ AB テストはありません。autopilot で投稿された動画は自動登録されます。
+        </p>
+      )}
+
+      <ul className="space-y-3">
+        {items.map((t) => (
+          <ThumbnailTestRow
+            key={t.video_id}
+            test={t}
+            onCheckOne={() => onCheckOne(t.video_id)}
+            onSwitch={() => onSwitch(t.video_id)}
+            onStop={() => onStop(t.video_id)}
+          />
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function ThumbnailTestRow({
+  test,
+  onCheckOne,
+  onSwitch,
+  onStop,
+}: {
+  test: ThumbnailTest;
+  onCheckOne: () => void;
+  onSwitch: () => void;
+  onStop: () => void;
+}) {
+  const statusBadge =
+    test.status === 'monitoring'
+      ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30'
+      : test.status === 'exhausted'
+      ? 'bg-amber-500/10 text-amber-300 border-amber-500/30'
+      : 'bg-slate-500/10 text-slate-300 border-slate-500/30';
+  return (
+    <li className="rounded-lg bg-bg-elev/40 border border-border/30 p-3 space-y-2">
+      <div className="flex flex-wrap items-start justify-between gap-2">
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-2">
+            <a
+              href={`https://youtube.com/watch?v=${encodeURIComponent(test.video_id)}`}
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs text-accent hover:underline truncate"
+            >
+              {test.video_id}
+            </a>
+            <span
+              className={`px-1.5 py-0.5 rounded text-[10px] border ${statusBadge}`}
+            >
+              {test.status}
+            </span>
+          </div>
+          <p className="text-sm text-slate-100 truncate">{test.video_title}</p>
+          <p className="text-[11px] text-slate-400 mt-0.5">
+            現在 #{test.current_variant_index} / {test.variants.length} ・ 直近CTR:{' '}
+            {test.last_check_ctr != null
+              ? `${(test.last_check_ctr * 100).toFixed(2)}%`
+              : '—'}{' '}
+            ・ 平均CTR: {(test.channel_avg_ctr * 100).toFixed(2)}% ・ 切替回数:{' '}
+            {test.history.length}
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-1.5">
+          <button
+            className="btn-secondary py-1 px-2 text-[11px]"
+            onClick={onCheckOne}
+          >
+            🔍 CTR チェック
+          </button>
+          <button
+            className="btn-primary py-1 px-2 text-[11px]"
+            onClick={onSwitch}
+            disabled={test.current_variant_index >= test.variants.length - 1}
+          >
+            🔁 次に切替
+          </button>
+          {test.status === 'monitoring' && (
+            <button
+              className="btn-secondary py-1 px-2 text-[11px]"
+              onClick={onStop}
+            >
+              ⏸ 停止
+            </button>
+          )}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-3 gap-2">
+        {test.variants.map((v) => (
+          <div
+            key={v.index}
+            className={`rounded-md border p-1.5 ${
+              v.index === test.current_variant_index
+                ? 'border-accent/60 bg-accent/5'
+                : 'border-border/30 bg-bg-elev/50'
+            }`}
+          >
+            <div className="aspect-video bg-bg-elev/80 rounded mb-1 overflow-hidden flex items-center justify-center text-[10px] text-slate-500">
+              {v.path ? (
+                /* サムネはローカルパス。サーバから直接 fetch できないので絶対パスだけ表示 */
+                <span className="truncate w-full px-1" title={v.path}>
+                  {v.path.split('/').slice(-1)[0] || v.path}
+                </span>
+              ) : (
+                <span className="text-red-300">生成失敗</span>
+              )}
+            </div>
+            <div className="text-[10px] text-slate-300 truncate" title={v.feedback}>
+              #{v.index} {v.feedback}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {test.history.length > 0 && (
+        <details className="text-[11px] text-slate-400">
+          <summary className="cursor-pointer hover:text-slate-200">
+            履歴 ({test.history.length} 件)
+          </summary>
+          <ul className="space-y-0.5 mt-1 ml-3 list-disc">
+            {test.history.map((h, i) => (
+              <li key={i}>
+                #{h.variant_index} → #{h.switched_to} ・ CTR{' '}
+                {h.ctr_at_check != null
+                  ? `${(h.ctr_at_check * 100).toFixed(2)}%`
+                  : '—'}{' '}
+                vs 平均{' '}
+                {h.channel_avg_at_check != null
+                  ? `${(h.channel_avg_at_check * 100).toFixed(2)}%`
+                  : '—'}{' '}
+                ・ {new Date(h.switched_at * 1000).toLocaleString('ja-JP')}
+                {!h.youtube_update_ok && (
+                  <span className="text-red-300"> ・ 失敗: {h.youtube_update_error}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
     </li>
   );
 }

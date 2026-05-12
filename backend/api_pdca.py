@@ -17,8 +17,10 @@ from pipeline.analytics import (
     ab_reconciler,
     improvement_queue,
     model_compete,
+    posting_optimizer,
     scenario_evaluator,
     store as analytics_store,
+    thumbnail_ab_test,
 )
 
 
@@ -272,3 +274,138 @@ async def model_performance(
         "strategy": strategy,
         "recent_runs": recent,
     }
+
+
+# =====================================================================
+# /api/optimal-posting-time — Posting Optimizer
+# =====================================================================
+
+class OptimalPostingApplyRequest(BaseModel):
+    days: int = Field(default=30, ge=7, le=180)
+
+
+@router.get("/optimal-posting-time/{channel_id}")
+async def get_optimal_posting_time(
+    channel_id: str,
+    days: int = Query(default=30, ge=7, le=180),
+    recompute: bool = Query(default=False),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """過去 `days` 日の (曜日 × 時間帯) 別パフォーマンスから最適投稿スロットを返す。"""
+    return posting_optimizer.get_status(channel_id, days=days, recompute=recompute)
+
+
+@router.post("/optimal-posting-time/{channel_id}/apply")
+async def apply_optimal_posting_time(
+    channel_id: str,
+    body: Optional[OptimalPostingApplyRequest] = None,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """推奨スロットを autopilot.schedule に書き戻して再スケジュール。"""
+    opts = body or OptimalPostingApplyRequest()
+    result = posting_optimizer.apply_to_autopilot(channel_id, days=opts.days)
+    if not result.get("ok"):
+        raise HTTPException(status_code=400, detail=result.get("error") or "apply failed")
+    return result
+
+
+# =====================================================================
+# /api/thumbnail-tests — Thumbnail AB Test
+# =====================================================================
+
+class ThumbnailTestRegisterRequest(BaseModel):
+    video_id: str
+    channel_id: str
+    video_title: str
+    original_thumbnail_path: Optional[str] = None
+    threshold_ratio: float = Field(default=0.8, ge=0.1, le=1.0)
+    generate_variants: bool = True
+
+
+@router.get("/thumbnail-tests/{channel_id}")
+async def list_thumbnail_tests(
+    channel_id: str,
+    limit: int = Query(default=100, ge=1, le=500),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    items = thumbnail_ab_test.list_tests(channel_id, limit=limit)
+    return {
+        "channel_id": channel_id,
+        "count": len(items),
+        "items": items,
+        "summary": thumbnail_ab_test.summary(channel_id),
+    }
+
+
+@router.get("/thumbnail-tests/{channel_id}/{video_id}")
+async def get_thumbnail_test(
+    channel_id: str,
+    video_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    t = thumbnail_ab_test.get_test(video_id)
+    if not t or t.get("channel_id") != channel_id:
+        raise HTTPException(status_code=404, detail="thumbnail test not found")
+    return t
+
+
+@router.post("/thumbnail-tests/register")
+async def register_thumbnail_test(
+    body: ThumbnailTestRegisterRequest,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    return thumbnail_ab_test.register_test(
+        video_id=body.video_id,
+        channel_id=body.channel_id,
+        video_title=body.video_title,
+        original_thumbnail_path=body.original_thumbnail_path,
+        threshold_ratio=body.threshold_ratio,
+        generate_variants=body.generate_variants,
+    )
+
+
+@router.post("/thumbnail-tests/{channel_id}/{video_id}/check")
+async def check_thumbnail_test(
+    channel_id: str,
+    video_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    t = thumbnail_ab_test.get_test(video_id)
+    if not t or t.get("channel_id") != channel_id:
+        raise HTTPException(status_code=404, detail="thumbnail test not found")
+    return thumbnail_ab_test.check_one(video_id)
+
+
+@router.post("/thumbnail-tests/{channel_id}/{video_id}/switch")
+async def switch_thumbnail_test(
+    channel_id: str,
+    video_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    t = thumbnail_ab_test.get_test(video_id)
+    if not t or t.get("channel_id") != channel_id:
+        raise HTTPException(status_code=404, detail="thumbnail test not found")
+    res = thumbnail_ab_test.force_switch(video_id)
+    if not res.get("ok"):
+        raise HTTPException(status_code=400, detail=res.get("error") or "switch failed")
+    return res
+
+
+@router.post("/thumbnail-tests/{channel_id}/{video_id}/stop")
+async def stop_thumbnail_test(
+    channel_id: str,
+    video_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    t = thumbnail_ab_test.get_test(video_id)
+    if not t or t.get("channel_id") != channel_id:
+        raise HTTPException(status_code=404, detail="thumbnail test not found")
+    return thumbnail_ab_test.stop_test(video_id)
+
+
+@router.post("/thumbnail-tests/{channel_id}/check-all")
+async def check_all_thumbnail_tests(
+    channel_id: str,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    return thumbnail_ab_test.check_pending(channel_id=channel_id)

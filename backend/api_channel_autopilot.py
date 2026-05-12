@@ -307,6 +307,18 @@ def _run_autopilot(channel_id: str) -> None:
     """スケジュール発火: テーマ取得 → シナリオ生成 → キュー投入 → 自動公開フラグ"""
     fired_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"🤖 Autopilot fired for {channel_id} at {fired_at} JST")
+    # 投稿前に「今のスロットが推奨スロットと比べて極端に低い」場合は推奨スロットに移行
+    try:
+        from pipeline.analytics import posting_optimizer as _po
+        check = _po.slot_is_optimal_enough(channel_id, tolerance_percent=50.0)
+        if not check.get("is_optimal_enough"):
+            print(
+                f"📅 Autopilot: current slot underperforms recommended by "
+                f"{check.get('delta_percent')}% — auto-applying recommendation"
+            )
+            _po.apply_to_autopilot(channel_id)
+    except Exception as e:
+        print(f"⚠️ posting_optimizer pre-check failed for {channel_id}: {e}")
     cm = _state.get("channel_manager")
     sg = _state.get("scenario_generator")
     queue = _state.get("job_queue")

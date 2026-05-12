@@ -466,6 +466,19 @@ def on_generation_complete(job) -> None:
             _record_pair_status_to_db(job.id, job.channel_id, main, short)
         except Exception:
             pass
+        # サムネ AB テスト登録（メイン動画のみ）
+        try:
+            main_vid = main.get("video_id")
+            if main_vid:
+                from pipeline.analytics import thumbnail_ab_test as _tat
+                _tat.register_test(
+                    video_id=main_vid,
+                    channel_id=job.channel_id,
+                    video_title=main.get("title") or job.title,
+                    original_thumbnail_path=paths.get("main_thumb"),
+                )
+        except Exception as e:
+            print(f"⚠️ thumbnail_ab_test register failed for {job.id}: {e}")
 
     privacy = publish_settings.get("default_privacy") or "public"
     delay = int(publish_settings.get("short_delay_minutes") or 10)
@@ -1409,7 +1422,41 @@ def setup_on_startup() -> None:
         return
     _ensure_scheduler()
     _restore_all_schedules()
+    _register_thumbnail_ab_check_job()
     print(f"⏰ Scheduler started — {len(_list_schedules())} schedule(s) restored")
+
+
+def _register_thumbnail_ab_check_job() -> None:
+    """サムネ AB テストの定期チェックジョブ（1h ごと）を登録。"""
+    sch = _ensure_scheduler()
+    if sch is None:
+        return
+    try:
+        from pipeline.analytics import thumbnail_ab_test  # type: ignore
+    except Exception as e:
+        print(f"⚠️ thumbnail_ab_test import failed: {e}")
+        return
+    job_id = "thumbnail_ab_test:check_all"
+    try:
+        sch.remove_job(job_id)
+    except Exception:
+        pass
+
+    def _runner() -> None:
+        try:
+            res = thumbnail_ab_test.check_pending()
+            checked = res.get("checked", 0)
+            if checked:
+                print(f"🖼️ Thumbnail AB check: {checked} test(s) evaluated")
+        except Exception as e:
+            print(f"⚠️ thumbnail_ab_test.check_pending failed: {e}")
+
+    try:
+        trigger = CronTrigger(minute=0, timezone="Asia/Tokyo")  # 毎時 0 分
+        sch.add_job(_runner, trigger=trigger, id=job_id, replace_existing=True)
+        print("🖼️ Thumbnail AB test periodic check scheduled (every hour)")
+    except Exception as e:
+        print(f"⚠️ Failed to register thumbnail AB check job: {e}")
 
 
 def shutdown_scheduler() -> None:

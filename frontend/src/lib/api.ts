@@ -1947,3 +1947,183 @@ export async function getScenarioArchive(
     { noStore: true }
   );
 }
+
+// ── Posting Optimizer ──
+export type OptimalPostingSlot = {
+  day_of_week: number; // 0=Sun ... 6=Sat
+  hour: number;
+  minute: number;
+  avg_views: number;
+  sample_size: number;
+  boost_percent: number;
+  is_fallback?: boolean;
+};
+
+export type OptimalPostingRecommendation = {
+  recommended: OptimalPostingSlot;
+  alternatives: OptimalPostingSlot[];
+  channel_avg_views: number;
+  data_days: number;
+  note?: string | null;
+};
+
+export type OptimalPostingHeatmap = {
+  grid: number[][]; // [7][24] avg views
+  samples: number[][]; // [7][24] counts
+  channel_avg_views: number;
+  channel_total_videos: number;
+  data_days: number;
+};
+
+export type OptimalPostingStatus = {
+  channel_id: string;
+  current_schedule: {
+    days_of_week: number[];
+    hour: number;
+    minute: number;
+    enabled: boolean;
+  } | null;
+  recommendation: OptimalPostingRecommendation;
+  heatmap: OptimalPostingHeatmap;
+  computed_at: number;
+};
+
+export async function getOptimalPostingTime(
+  channelId: string,
+  opts: { days?: number; recompute?: boolean } = {}
+): Promise<OptimalPostingStatus> {
+  const q = new URLSearchParams();
+  if (opts.days) q.set('days', String(opts.days));
+  if (opts.recompute) q.set('recompute', 'true');
+  const qs = q.toString();
+  return call<OptimalPostingStatus>(
+    `/api/optimal-posting-time/${encodeURIComponent(channelId)}${
+      qs ? `?${qs}` : ''
+    }`,
+    { noStore: true }
+  );
+}
+
+export async function applyOptimalPostingTime(
+  channelId: string,
+  days = 30
+): Promise<{
+  ok: boolean;
+  previous: { days_of_week: number[]; hour: number; minute: number };
+  applied: { days_of_week: number[]; hour: number; minute: number };
+  recommendation: OptimalPostingRecommendation;
+}> {
+  return call(
+    `/api/optimal-posting-time/${encodeURIComponent(channelId)}/apply`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ days }),
+      noStore: true,
+    }
+  );
+}
+
+// ── Thumbnail AB Tests ──
+export type ThumbnailVariant = {
+  index: number;
+  path: string;
+  feedback: string;
+  generated_at: number;
+  error?: string;
+};
+
+export type ThumbnailTestHistoryEntry = {
+  variant_index: number;
+  ctr_at_check: number | null;
+  channel_avg_at_check: number | null;
+  switched_at: number;
+  switched_to: number;
+  youtube_update_ok: boolean;
+  youtube_update_error?: string | null;
+};
+
+export type ThumbnailTest = {
+  video_id: string;
+  channel_id: string;
+  video_title: string;
+  variants: ThumbnailVariant[];
+  current_variant_index: number;
+  channel_avg_ctr: number;
+  threshold_ratio: number;
+  last_check_ctr: number | null;
+  last_checked_at: number | null;
+  last_switched_at: number | null;
+  status: 'monitoring' | 'exhausted' | 'stopped';
+  history: ThumbnailTestHistoryEntry[];
+  created_at: number;
+  updated_at: number;
+  next_check_at: number;
+};
+
+export type ThumbnailTestsResponse = {
+  channel_id: string;
+  count: number;
+  items: ThumbnailTest[];
+  summary: {
+    channel_id: string;
+    total_tests: number;
+    by_status: Record<string, number>;
+    switched_tests: number;
+    channel_avg_ctr: number;
+  };
+};
+
+export async function listThumbnailTests(
+  channelId: string,
+  limit = 100
+): Promise<ThumbnailTestsResponse> {
+  return call<ThumbnailTestsResponse>(
+    `/api/thumbnail-tests/${encodeURIComponent(channelId)}?limit=${limit}`,
+    { noStore: true }
+  );
+}
+
+export async function checkThumbnailTest(
+  channelId: string,
+  videoId: string
+): Promise<Record<string, unknown>> {
+  return call(
+    `/api/thumbnail-tests/${encodeURIComponent(channelId)}/${encodeURIComponent(
+      videoId
+    )}/check`,
+    { method: 'POST', noStore: true }
+  );
+}
+
+export async function switchThumbnailTest(
+  channelId: string,
+  videoId: string
+): Promise<Record<string, unknown>> {
+  return call(
+    `/api/thumbnail-tests/${encodeURIComponent(channelId)}/${encodeURIComponent(
+      videoId
+    )}/switch`,
+    { method: 'POST', noStore: true }
+  );
+}
+
+export async function stopThumbnailTest(
+  channelId: string,
+  videoId: string
+): Promise<Record<string, unknown>> {
+  return call(
+    `/api/thumbnail-tests/${encodeURIComponent(channelId)}/${encodeURIComponent(
+      videoId
+    )}/stop`,
+    { method: 'POST', noStore: true }
+  );
+}
+
+export async function checkAllThumbnailTests(
+  channelId: string
+): Promise<{ checked: number; results: Array<Record<string, unknown>> }> {
+  return call(
+    `/api/thumbnail-tests/${encodeURIComponent(channelId)}/check-all`,
+    { method: 'POST', noStore: true }
+  );
+}
