@@ -948,7 +948,7 @@ async def cost_summary(_=Depends(require_session)) -> Dict[str, Any]:
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Usage tracker error: {e}")
 
-    # by_day → by_month に集計
+    # by_day → by_month に集計（フロントの月別チャート用）
     by_month: Dict[str, Dict[str, float]] = {}
     for day, m in (summary.get("by_day") or {}).items():
         month = day[:7]  # YYYY-MM
@@ -956,15 +956,31 @@ async def cost_summary(_=Depends(require_session)) -> Dict[str, Any]:
         slot["calls"] += m.get("calls", 0)
         slot["cost_usd"] = round(slot["cost_usd"] + m.get("cost_usd", 0.0), 4)
         slot["images"] += m.get("images", 0)
-
     months = sorted(by_month.keys(), reverse=True)
+
+    # 日別を直近14日分の昇順配列に整形（フロントの日次チャート用）
+    by_day_map = summary.get("by_day") or {}
+    by_day_sorted = sorted(by_day_map.keys())[-14:]
+    by_day_series = [
+        {
+            "date": d,
+            "calls": by_day_map[d].get("calls", 0),
+            "cost_usd": by_day_map[d].get("cost_usd", 0.0),
+            "images": by_day_map[d].get("images", 0),
+        }
+        for d in by_day_sorted
+    ]
+
     return {
         "total": summary.get("total"),
         "today": summary.get("today"),
         "this_month": summary.get("this_month"),
         "by_month": [{"month": m, **by_month[m]} for m in months],
+        "by_day": by_day_series,
         "by_channel": summary.get("by_channel"),
         "by_model": summary.get("by_model"),
+        "by_provider": summary.get("by_provider"),
+        "by_purpose": summary.get("by_purpose"),
         "pricing": summary.get("pricing"),
     }
 

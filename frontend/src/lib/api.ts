@@ -1007,8 +1007,11 @@ export type CostSummary = {
   today: Metrics;
   this_month: Metrics;
   by_month: Array<{ month: string; calls: number; cost_usd: number; images: number }>;
+  by_day?: Array<{ date: string; calls: number; cost_usd: number; images: number }>;
   by_channel: Record<string, Metrics>;
   by_model: Record<string, Metrics>;
+  by_provider?: Record<string, Metrics>;
+  by_purpose?: Record<string, Metrics>;
   pricing: Record<string, unknown>;
 };
 
