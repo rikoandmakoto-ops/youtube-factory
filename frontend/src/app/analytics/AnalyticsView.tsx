@@ -11,6 +11,7 @@ import type {
   CommentDemand,
   CommentDemandsResponse,
   CompetitorAnalysis,
+  CompetitorCandidate,
   CompetitorOverview,
   EvaluationsListResponse,
   ImprovementEntry,
@@ -591,6 +592,74 @@ export default function AnalyticsView({
     }
   };
 
+  const handleRunCompetitorDiscovery = async () => {
+    setCompetitorNotice(null);
+    setCompetitorError(null);
+    setCompetitorLoading(true);
+    try {
+      const r = await clientPost<{
+        ok?: boolean;
+        count?: number;
+        matched_keywords?: string[];
+        error?: string;
+        note?: string;
+      }>(`/api/competitors/${encodeURIComponent(channelId)}/discover`, {});
+      if (r.ok === false && r.error) {
+        setCompetitorError(r.error);
+      } else {
+        const kw = (r.matched_keywords || []).slice(0, 5).join('、');
+        setCompetitorNotice(
+          `🔎 ${r.count ?? 0} 件の競合候補を検出${kw ? ` (検索キーワード: ${kw})` : ''}`
+        );
+      }
+      await loadCompetitorData();
+    } catch (e) {
+      setCompetitorError(e instanceof Error ? e.message : '自動検出失敗');
+    } finally {
+      setCompetitorLoading(false);
+    }
+  };
+
+  const handleApproveCandidate = async (competitorId: string) => {
+    setCompetitorNotice(null);
+    setCompetitorError(null);
+    try {
+      const r = await clientPost<{
+        ok: boolean;
+        competitor_id?: string;
+        error?: string;
+      }>(
+        `/api/competitors/${encodeURIComponent(channelId)}/candidates/${encodeURIComponent(competitorId)}/approve`
+      );
+      if (!r.ok) {
+        setCompetitorError(r.error || '承認失敗');
+        return;
+      }
+      setCompetitorNotice(`✅ 「${r.competitor_id}」を競合に追加しました`);
+      await loadCompetitorData();
+    } catch (e) {
+      setCompetitorError(e instanceof Error ? e.message : '承認失敗');
+    }
+  };
+
+  const handleDismissCandidate = async (competitorId: string) => {
+    setCompetitorNotice(null);
+    setCompetitorError(null);
+    try {
+      const r = await clientPost<{ ok: boolean; error?: string }>(
+        `/api/competitors/${encodeURIComponent(channelId)}/candidates/${encodeURIComponent(competitorId)}/dismiss`
+      );
+      if (!r.ok) {
+        setCompetitorError(r.error || '却下失敗');
+        return;
+      }
+      setCompetitorNotice(`却下しました (${competitorId})`);
+      await loadCompetitorData();
+    } catch (e) {
+      setCompetitorError(e instanceof Error ? e.message : '却下失敗');
+    }
+  };
+
   const loadDemandData = useCallback(async () => {
     setDemandLoading(true);
     setDemandError(null);
@@ -1091,6 +1160,9 @@ export default function AnalyticsView({
           onScan={handleRunCompetitorScan}
           onAdd={handleAddCompetitor}
           onRemove={handleRemoveCompetitor}
+          onDiscover={handleRunCompetitorDiscovery}
+          onApproveCandidate={handleApproveCandidate}
+          onDismissCandidate={handleDismissCandidate}
         />
       )}
 
@@ -3324,6 +3396,9 @@ function CompetitorsTab({
   onScan,
   onAdd,
   onRemove,
+  onDiscover,
+  onApproveCandidate,
+  onDismissCandidate,
 }: {
   data: CompetitorOverview | null;
   ownChannel: Channel | null;
@@ -3334,12 +3409,16 @@ function CompetitorsTab({
   onScan: () => void;
   onAdd: (input: string) => Promise<boolean>;
   onRemove: (competitorId: string) => void;
+  onDiscover: () => void;
+  onApproveCandidate: (competitorId: string) => void;
+  onDismissCandidate: (competitorId: string) => void;
 }) {
   const [newCompetitor, setNewCompetitor] = useState('');
   const [adding, setAdding] = useState(false);
   const [showAddHelp, setShowAddHelp] = useState(false);
   const latest = data?.latest_analyses ?? [];
   const competitorIds = data?.competitor_ids ?? [];
+  const candidates = data?.pending_candidates ?? [];
 
   const submitAdd = async (e: FormEvent) => {
     e.preventDefault();
@@ -3371,7 +3450,15 @@ function CompetitorsTab({
             Claude が共通パターンを抽出し、自チャンネルとの差分・改善ポイントを提示します。
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
+          <button
+            onClick={onDiscover}
+            disabled={loading}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-violet-500/20 border border-violet-400/60 text-violet-200 hover:bg-violet-500/30 disabled:opacity-50"
+            title="YouTube 検索 API + Claude で同ジャンルのチャンネルを自動検出します"
+          >
+            {loading ? '検出中…' : '🔎 競合を自動検出'}
+          </button>
           <button
             onClick={onScan}
             disabled={loading || competitorIds.length === 0}
@@ -3458,13 +3545,25 @@ function CompetitorsTab({
         )}
       </form>
 
-      {competitorIds.length === 0 && !loading ? (
+      {candidates.length > 0 && (
+        <CompetitorCandidatesPanel
+          candidates={candidates}
+          onApprove={onApproveCandidate}
+          onDismiss={onDismissCandidate}
+        />
+      )}
+
+      {competitorIds.length === 0 && !loading && candidates.length === 0 && (
         <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-6 text-center text-sm text-slate-400">
           まだ競合チャンネルが登録されていません。
           <br />
-          上の入力欄から YouTube チャンネル ID（UC...）または @handle を追加してください。
+          上の入力欄から YouTube チャンネル ID（UC...）または @handle を追加するか、
+          <br />
+          <span className="text-violet-300 font-semibold">「🔎 競合を自動検出」</span> ボタンで同ジャンルのチャンネルを自動で見つけることもできます。
         </div>
-      ) : (
+      )}
+
+      {competitorIds.length > 0 && (
         <>
           <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-3">
             <h3 className="text-xs font-semibold text-slate-300 mb-2">
@@ -3554,6 +3653,157 @@ function CompetitorsTab({
         </>
       )}
     </section>
+  );
+}
+
+function CompetitorCandidatesPanel({
+  candidates,
+  onApprove,
+  onDismiss,
+}: {
+  candidates: CompetitorCandidate[];
+  onApprove: (competitorId: string) => void;
+  onDismiss: (competitorId: string) => void;
+}) {
+  return (
+    <div className="rounded-xl border border-violet-400/40 bg-violet-500/[0.06] p-4 space-y-3">
+      <div className="flex items-start justify-between gap-2 flex-wrap">
+        <div>
+          <h3 className="text-sm font-semibold text-violet-200">
+            🔎 競合候補 ({candidates.length})
+          </h3>
+          <p className="text-[11px] text-slate-400 mt-0.5">
+            自チャンネルのテーマから YouTube 検索 + Claude スコアリングで検出した候補です。
+            承認すると競合リストに追加され、以降の週次スキャンの対象になります。
+          </p>
+        </div>
+      </div>
+      <ul className="space-y-2">
+        {candidates.map((c) => (
+          <CompetitorCandidateRow
+            key={c.id}
+            candidate={c}
+            onApprove={() => onApprove(c.competitor_id)}
+            onDismiss={() => onDismiss(c.competitor_id)}
+          />
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function CompetitorCandidateRow({
+  candidate,
+  onApprove,
+  onDismiss,
+}: {
+  candidate: CompetitorCandidate;
+  onApprove: () => void;
+  onDismiss: () => void;
+}) {
+  const [busy, setBusy] = useState(false);
+  const handle = async (fn: () => void) => {
+    if (busy) return;
+    setBusy(true);
+    try {
+      await fn();
+    } finally {
+      setBusy(false);
+    }
+  };
+  const score = Math.max(0, Math.min(1, candidate.relevance_score || 0));
+  const scorePct = Math.round(score * 100);
+  const scoreColor =
+    score >= 0.7 ? 'text-emerald-300' : score >= 0.4 ? 'text-amber-300' : 'text-slate-400';
+  const channelUrl = `https://www.youtube.com/channel/${candidate.competitor_id}`;
+  return (
+    <li className="rounded-lg border border-border/30 bg-bg-elev/40 p-3 space-y-2">
+      <div className="flex items-start gap-3">
+        {candidate.thumbnail_url ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={candidate.thumbnail_url}
+            alt=""
+            className="w-10 h-10 rounded-full shrink-0 bg-bg-elev"
+          />
+        ) : (
+          <div className="w-10 h-10 rounded-full bg-bg-elev shrink-0" />
+        )}
+        <div className="min-w-0 flex-1">
+          <a
+            href={channelUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold text-slate-100 hover:text-violet-200 truncate block"
+          >
+            {candidate.competitor_title || candidate.competitor_id}
+          </a>
+          <div className="text-[10px] text-slate-500 truncate">
+            {candidate.competitor_id}
+            {candidate.subscriber_count != null && (
+              <> ・登録者 {formatNumber(candidate.subscriber_count)}</>
+            )}
+            {candidate.video_count != null && (
+              <> ・動画 {formatNumber(candidate.video_count)}</>
+            )}
+            {candidate.posting_frequency_per_week != null && (
+              <> ・{candidate.posting_frequency_per_week.toFixed(1)} 本/週</>
+            )}
+          </div>
+        </div>
+        <div className={`text-right text-xs font-semibold shrink-0 ${scoreColor}`}>
+          <div>{scorePct}%</div>
+          <div className="text-[10px] text-slate-500 font-normal">関連度</div>
+        </div>
+      </div>
+      {candidate.rationale && (
+        <div className="text-[11px] text-slate-300 leading-relaxed">
+          💡 {candidate.rationale}
+        </div>
+      )}
+      {candidate.matched_keywords.length > 0 && (
+        <div className="flex flex-wrap gap-1">
+          {candidate.matched_keywords.map((kw) => (
+            <span
+              key={kw}
+              className="text-[10px] px-1.5 py-0.5 rounded bg-violet-500/15 border border-violet-400/30 text-violet-200"
+            >
+              {kw}
+            </span>
+          ))}
+        </div>
+      )}
+      {candidate.sample_titles.length > 0 && (
+        <details className="text-[11px] text-slate-400">
+          <summary className="cursor-pointer hover:text-slate-200">
+            最近の動画タイトル ({candidate.sample_titles.length})
+          </summary>
+          <ul className="mt-1 list-disc list-inside space-y-0.5 text-slate-400">
+            {candidate.sample_titles.slice(0, 5).map((t, i) => (
+              <li key={i} className="truncate">
+                {t}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+      <div className="flex gap-2 pt-1">
+        <button
+          onClick={() => handle(onApprove)}
+          disabled={busy}
+          className="flex-1 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-500/20 border border-emerald-500/60 text-emerald-200 hover:bg-emerald-500/30 disabled:opacity-50"
+        >
+          ✅ 競合に追加
+        </button>
+        <button
+          onClick={() => handle(onDismiss)}
+          disabled={busy}
+          className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-bg-elev/40 border border-border/40 text-slate-400 hover:text-red-300 disabled:opacity-50"
+        >
+          却下
+        </button>
+      </div>
+    </li>
   );
 }
 
