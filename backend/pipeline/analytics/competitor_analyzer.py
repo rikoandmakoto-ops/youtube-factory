@@ -157,12 +157,20 @@ def _lookup_channel_by_handle(handle: str) -> Optional[str]:
 
 def add_competitor(channel_id: str, competitor_input: str) -> Dict[str, Any]:
     """data/channels/{id}.json の `competitors` に追加。重複は無視。"""
-    resolved = _resolve_channel_input(competitor_input)
+    raw = (competitor_input or "").strip()
+    if not raw:
+        return {"ok": False, "error": "入力が空です。UC... ID か @handle、URL を入れてください。"}
+    resolved = _resolve_channel_input(raw)
     if not resolved:
-        return {
-            "ok": False,
-            "error": "channel ID を解決できませんでした (URL / @handle / UC...) — YOUTUBE_API_KEY が必要な場合があります",
-        }
+        api_key_set = bool(os.environ.get("YOUTUBE_API_KEY", "").strip())
+        looks_like_uc = raw.startswith("UC")
+        if looks_like_uc:
+            hint = "UC で始まる ID は 24 文字必要です。コピーミスがないか確認してください。"
+        elif not api_key_set:
+            hint = "@handle や URL から UC... ID を解決するには YOUTUBE_API_KEY の設定が必要です。当面は UC... ID を直接入力してください。"
+        else:
+            hint = "ハンドルが見つかりませんでした。チャンネルページから UC... ID を直接コピーしてください。"
+        return {"ok": False, "error": f"チャンネル ID を解決できませんでした。{hint}"}
     try:
         data = _load_channel_json(channel_id)
     except FileNotFoundError:
