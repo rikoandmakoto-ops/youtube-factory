@@ -2127,3 +2127,187 @@ export async function checkAllThumbnailTests(
     { method: 'POST', noStore: true }
   );
 }
+
+// ── Trend Scanner (Phase E-1) ──
+export type TrendDetection = {
+  id: string;
+  channel_id: string;
+  keyword: string;
+  source: string;
+  trend_score: number;
+  relevance_score: number;
+  combined_score: number;
+  suggested_title: string | null;
+  suggested_angle: string | null;
+  rationale: string | null;
+  raw: Record<string, unknown>;
+  detected_at: number;
+  queued_at: number | null;
+  auto_queued: boolean;
+  queue_theme_id: string | null;
+  status: 'detected' | 'queued' | 'dismissed';
+};
+
+export type TrendScanHistory = {
+  id: number;
+  channel_id: string;
+  started_at: number;
+  finished_at: number | null;
+  sources: string[];
+  detected: number;
+  auto_queued: number;
+  error: string | null;
+};
+
+export type TrendDetectionsResponse = {
+  channel_id: string;
+  count: number;
+  items: TrendDetection[];
+  history: TrendScanHistory[];
+  by_source: Record<string, number>;
+  auto_queue_threshold: number;
+};
+
+export async function listTrendDetections(
+  channelId: string,
+  opts: { status?: string; limit?: number } = {}
+): Promise<TrendDetectionsResponse> {
+  const q = new URLSearchParams();
+  if (opts.status) q.set('status', opts.status);
+  if (opts.limit) q.set('limit', String(opts.limit));
+  const qs = q.toString();
+  return call<TrendDetectionsResponse>(
+    `/api/trend-scanner/${encodeURIComponent(channelId)}${qs ? `?${qs}` : ''}`,
+    { noStore: true }
+  );
+}
+
+export async function runTrendScan(
+  channelId: string,
+  opts: { auto_queue?: boolean; sources?: string[] } = {}
+): Promise<Record<string, unknown>> {
+  return call(`/api/trend-scanner/${encodeURIComponent(channelId)}/scan`, {
+    method: 'POST',
+    body: JSON.stringify(opts),
+    noStore: true,
+  });
+}
+
+export async function queueTrendDetection(
+  channelId: string,
+  detectionId: string
+): Promise<{ ok: boolean; theme_id?: string; title?: string; error?: string }> {
+  return call(
+    `/api/trend-scanner/${encodeURIComponent(channelId)}/queue/${encodeURIComponent(detectionId)}`,
+    { method: 'POST', noStore: true }
+  );
+}
+
+export async function dismissTrendDetection(
+  channelId: string,
+  detectionId: string
+): Promise<{ ok: boolean; error?: string }> {
+  return call(
+    `/api/trend-scanner/${encodeURIComponent(channelId)}/dismiss/${encodeURIComponent(detectionId)}`,
+    { method: 'POST', noStore: true }
+  );
+}
+
+// ── Series Engine (Phase E-2) ──
+export type SeriesSuggestion = {
+  id: string;
+  channel_id: string;
+  original_video_id: string;
+  original_title: string | null;
+  original_views: number;
+  channel_avg_views: number;
+  viral_ratio: number;
+  series_type: string | null;
+  suggested_title: string;
+  suggested_angle: string | null;
+  rationale: string | null;
+  created_at: number;
+  decided_at: number | null;
+  status: 'pending' | 'approved' | 'rejected';
+  queue_theme_id: string | null;
+  queued_video_id: string | null;
+};
+
+export type ViralVideoSummary = {
+  video_id: string;
+  title: string | null;
+  views: number;
+  channel_avg: number;
+  viral_ratio: number;
+  published_at: string | null;
+};
+
+export type SeriesGroup = {
+  original_video_id: string;
+  original_title: string | null;
+  original_views: number;
+  viral_ratio: number;
+  suggestions: SeriesSuggestion[];
+};
+
+export type SeriesSuggestionsResponse = {
+  channel_id: string;
+  count: number;
+  items: SeriesSuggestion[];
+  grouped: SeriesGroup[];
+  viral_videos: ViralVideoSummary[];
+  channel_avg_views: number | null;
+  summary: {
+    channel_id: string;
+    channel_avg_views: number;
+    total_suggestions: number;
+    by_status: Record<string, number>;
+    by_type: Record<string, number>;
+    approved_with_video: number;
+  };
+};
+
+export async function listSeriesSuggestions(
+  channelId: string,
+  opts: { status?: string; limit?: number } = {}
+): Promise<SeriesSuggestionsResponse> {
+  const q = new URLSearchParams();
+  if (opts.status) q.set('status', opts.status);
+  if (opts.limit) q.set('limit', String(opts.limit));
+  const qs = q.toString();
+  return call<SeriesSuggestionsResponse>(
+    `/api/series/${encodeURIComponent(channelId)}${qs ? `?${qs}` : ''}`,
+    { noStore: true }
+  );
+}
+
+export async function runSeriesDetection(
+  channelId: string,
+  opts: { threshold?: number; max_viral?: number } = {}
+): Promise<Record<string, unknown>> {
+  return call(`/api/series/${encodeURIComponent(channelId)}/detect`, {
+    method: 'POST',
+    body: JSON.stringify(opts),
+    noStore: true,
+  });
+}
+
+export async function approveSeriesSuggestion(
+  channelId: string,
+  suggestionId: string
+): Promise<{ ok: boolean; theme_id?: string; title?: string; error?: string }> {
+  return call(
+    `/api/series/${encodeURIComponent(channelId)}/approve/${encodeURIComponent(suggestionId)}`,
+    { method: 'POST', noStore: true }
+  );
+}
+
+export async function rejectSeriesSuggestion(
+  channelId: string,
+  suggestionId: string
+): Promise<{ ok: boolean; error?: string }> {
+  return call(
+    `/api/series/${encodeURIComponent(channelId)}/reject/${encodeURIComponent(suggestionId)}`,
+    { method: 'POST', noStore: true }
+  );
+}

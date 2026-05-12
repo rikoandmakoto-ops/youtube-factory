@@ -52,6 +52,9 @@ class SyncRequest(BaseModel):
     run_improvement_detection: bool = True
     improvement_threshold_ratio: float = Field(default=0.8, ge=0.1, le=1.0)
     ab_min_age_days: float = Field(default=7.0, ge=0.0, le=365.0)
+    # Phase E-2: シリーズ化エンジン
+    run_series_detection: bool = True
+    series_threshold: float = Field(default=1.5, ge=1.0, le=10.0)
 
 
 class AnalyzeRequest(BaseModel):
@@ -233,6 +236,17 @@ async def sync_channel(
                     )
                 except Exception as e:
                     pdca["improvement_queue"] = {"error": str(e)}
+
+            # Phase E-2: series engine (Analytics sync 後の自動実行)
+            if opts.run_series_detection:
+                try:
+                    from pipeline.analytics import series_engine
+                    pdca["series_engine"] = series_engine.detect_for_channel(
+                        channel_id,
+                        threshold=opts.series_threshold,
+                    )
+                except Exception as e:
+                    pdca["series_engine"] = {"error": str(e)}
         except Exception as e:
             pdca["error"] = f"pdca chain failed: {e}"
         result["pdca"] = pdca

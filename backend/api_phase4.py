@@ -1423,6 +1423,7 @@ def setup_on_startup() -> None:
     _ensure_scheduler()
     _restore_all_schedules()
     _register_thumbnail_ab_check_job()
+    _register_trend_scanner_job()
     print(f"⏰ Scheduler started — {len(_list_schedules())} schedule(s) restored")
 
 
@@ -1457,6 +1458,50 @@ def _register_thumbnail_ab_check_job() -> None:
         print("🖼️ Thumbnail AB test periodic check scheduled (every hour)")
     except Exception as e:
         print(f"⚠️ Failed to register thumbnail AB check job: {e}")
+
+
+def _register_trend_scanner_job() -> None:
+    """トレンドスキャンの定期実行ジョブ（6h ごと）を登録。"""
+    sch = _ensure_scheduler()
+    if sch is None:
+        return
+    try:
+        from pipeline.analytics import trend_scanner  # type: ignore
+    except Exception as e:
+        print(f"⚠️ trend_scanner import failed: {e}")
+        return
+    job_id = "trend_scanner:scan_all"
+    try:
+        sch.remove_job(job_id)
+    except Exception:
+        pass
+
+    def _runner() -> None:
+        try:
+            res = trend_scanner.scan_all_channels(auto_queue=True)
+            if res.get("ok"):
+                total_detected = sum(
+                    int(r.get("detected", 0) or 0) for r in (res.get("results") or [])
+                )
+                total_queued = sum(
+                    int(r.get("auto_queued", 0) or 0) for r in (res.get("results") or [])
+                )
+                print(
+                    f"🔭 Trend scan: {total_detected} detected, "
+                    f"{total_queued} auto-queued across {len(res.get('results') or [])} channel(s)"
+                )
+            else:
+                print(f"⚠️ Trend scan failed: {res.get('error')}")
+        except Exception as e:
+            print(f"⚠️ trend_scanner.scan_all_channels failed: {e}")
+
+    try:
+        # 6 時間ごと（JST 0:30, 6:30, 12:30, 18:30）
+        trigger = CronTrigger(hour="0,6,12,18", minute=30, timezone="Asia/Tokyo")
+        sch.add_job(_runner, trigger=trigger, id=job_id, replace_existing=True)
+        print("🔭 Trend scanner periodic scan scheduled (every 6 hours)")
+    except Exception as e:
+        print(f"⚠️ Failed to register trend scanner job: {e}")
 
 
 def shutdown_scheduler() -> None:
