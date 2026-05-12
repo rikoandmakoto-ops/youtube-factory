@@ -2311,3 +2311,157 @@ export async function rejectSeriesSuggestion(
     { method: 'POST', noStore: true }
   );
 }
+
+// ── Competitor Analysis (Phase F-1) ──
+export type CompetitorAnalysis = {
+  id: number;
+  channel_id: string;
+  competitor_id: string;
+  competitor_title: string | null;
+  subscriber_count: number | null;
+  video_count: number | null;
+  view_count: number | null;
+  analysis_date: string;
+  insights_json: Record<string, unknown>;
+  top_videos_json: Array<{
+    video_id: string;
+    title: string;
+    published_at: string | null;
+    thumbnail_url: string | null;
+    duration: string | null;
+    views: number;
+    likes: number;
+    comments: number;
+    tags: string[];
+  }>;
+  posting_frequency_per_week: number | null;
+  avg_views: number | null;
+  fetched_at: number;
+};
+
+export type CompetitorOverview = {
+  channel_id: string;
+  competitor_ids: string[];
+  latest_analyses: CompetitorAnalysis[];
+  history: CompetitorAnalysis[];
+  count: number;
+};
+
+export async function getCompetitorOverview(
+  channelId: string,
+  limit = 50
+): Promise<CompetitorOverview> {
+  return call<CompetitorOverview>(
+    `/api/competitors/${encodeURIComponent(channelId)}?limit=${limit}`,
+    { noStore: true }
+  );
+}
+
+export async function runCompetitorScan(
+  channelId: string,
+  opts: { max_videos_per_competitor?: number; max_competitors?: number } = {}
+): Promise<Record<string, unknown>> {
+  return call(`/api/competitors/${encodeURIComponent(channelId)}/scan`, {
+    method: 'POST',
+    body: JSON.stringify(opts),
+    noStore: true,
+  });
+}
+
+export async function addCompetitor(
+  channelId: string,
+  competitorChannelId: string
+): Promise<{ ok: boolean; competitor_id?: string; note?: string; error?: string }> {
+  return call(`/api/competitors/${encodeURIComponent(channelId)}/add`, {
+    method: 'POST',
+    body: JSON.stringify({ competitor_channel_id: competitorChannelId }),
+    noStore: true,
+  });
+}
+
+export async function removeCompetitor(
+  channelId: string,
+  competitorId: string
+): Promise<{ ok: boolean; error?: string }> {
+  return call(
+    `/api/competitors/${encodeURIComponent(channelId)}/remove/${encodeURIComponent(competitorId)}`,
+    { method: 'DELETE', noStore: true }
+  );
+}
+
+// ── Comment Demand (Phase F-2) ──
+export type CommentDemand = {
+  id: string;
+  channel_id: string;
+  video_id: string | null;
+  comment_ids: string[];
+  demand_text: string;
+  demand_type: 'request' | 'question';
+  frequency: number;
+  total_likes: number;
+  relevance_score: number;
+  score: number;
+  suggested_title: string | null;
+  suggested_angle: string | null;
+  rationale: string | null;
+  status: 'pending' | 'queued' | 'auto_queued' | 'dismissed';
+  queue_theme_id: string | null;
+  auto_queued: boolean;
+  created_at: number;
+  updated_at: number;
+};
+
+export type CommentDemandsResponse = {
+  channel_id: string;
+  count: number;
+  items: CommentDemand[];
+  by_status: Record<string, number>;
+  by_type: Record<string, number>;
+  auto_queue_threshold: number;
+};
+
+export async function listCommentDemands(
+  channelId: string,
+  opts: { status?: string; demand_type?: string; limit?: number } = {}
+): Promise<CommentDemandsResponse> {
+  const q = new URLSearchParams();
+  if (opts.status) q.set('status', opts.status);
+  if (opts.demand_type) q.set('demand_type', opts.demand_type);
+  if (opts.limit) q.set('limit', String(opts.limit));
+  const qs = q.toString();
+  return call<CommentDemandsResponse>(
+    `/api/comment-demands/${encodeURIComponent(channelId)}${qs ? `?${qs}` : ''}`,
+    { noStore: true }
+  );
+}
+
+export async function runCommentDemandScan(
+  channelId: string,
+  opts: { since_days?: number; auto_queue?: boolean } = {}
+): Promise<Record<string, unknown>> {
+  return call(`/api/comment-demands/${encodeURIComponent(channelId)}/scan`, {
+    method: 'POST',
+    body: JSON.stringify(opts),
+    noStore: true,
+  });
+}
+
+export async function queueCommentDemand(
+  channelId: string,
+  demandId: string
+): Promise<{ ok: boolean; theme_id?: string; title?: string; error?: string }> {
+  return call(
+    `/api/comment-demands/${encodeURIComponent(channelId)}/queue/${encodeURIComponent(demandId)}`,
+    { method: 'POST', noStore: true }
+  );
+}
+
+export async function dismissCommentDemand(
+  channelId: string,
+  demandId: string
+): Promise<{ ok: boolean; error?: string }> {
+  return call(
+    `/api/comment-demands/${encodeURIComponent(channelId)}/dismiss/${encodeURIComponent(demandId)}`,
+    { method: 'POST', noStore: true }
+  );
+}

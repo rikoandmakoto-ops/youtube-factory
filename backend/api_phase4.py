@@ -1424,6 +1424,7 @@ def setup_on_startup() -> None:
     _restore_all_schedules()
     _register_thumbnail_ab_check_job()
     _register_trend_scanner_job()
+    _register_competitor_scan_job()
     print(f"⏰ Scheduler started — {len(_list_schedules())} schedule(s) restored")
 
 
@@ -1502,6 +1503,45 @@ def _register_trend_scanner_job() -> None:
         print("🔭 Trend scanner periodic scan scheduled (every 6 hours)")
     except Exception as e:
         print(f"⚠️ Failed to register trend scanner job: {e}")
+
+
+def _register_competitor_scan_job() -> None:
+    """競合チャンネル分析の週次ジョブ（日曜深夜 JST 03:00）を登録。"""
+    sch = _ensure_scheduler()
+    if sch is None:
+        return
+    try:
+        from pipeline.analytics import competitor_analyzer  # type: ignore
+    except Exception as e:
+        print(f"⚠️ competitor_analyzer import failed: {e}")
+        return
+    job_id = "competitor_analyzer:scan_all"
+    try:
+        sch.remove_job(job_id)
+    except Exception:
+        pass
+
+    def _runner() -> None:
+        try:
+            res = competitor_analyzer.scan_all_channels()
+            if res.get("ok"):
+                total = sum(int(r.get("count") or 0) for r in (res.get("results") or []))
+                print(
+                    f"🕵️ Competitor scan: {total} competitor(s) analyzed across "
+                    f"{len(res.get('results') or [])} channel(s)"
+                )
+            else:
+                print(f"⚠️ Competitor scan failed: {res.get('error')}")
+        except Exception as e:
+            print(f"⚠️ competitor_analyzer.scan_all_channels failed: {e}")
+
+    try:
+        # 毎週日曜 03:00 JST（深夜）
+        trigger = CronTrigger(day_of_week="sun", hour=3, minute=0, timezone="Asia/Tokyo")
+        sch.add_job(_runner, trigger=trigger, id=job_id, replace_existing=True)
+        print("🕵️ Competitor analyzer weekly scan scheduled (Sun 03:00 JST)")
+    except Exception as e:
+        print(f"⚠️ Failed to register competitor scan job: {e}")
 
 
 def shutdown_scheduler() -> None:

@@ -1329,3 +1329,367 @@ def update_series_status(
             return cur.rowcount > 0
         finally:
             c.close()
+
+
+# ---------------------------------------------------------------------
+# Phase F-1: Competitor analyses
+# ---------------------------------------------------------------------
+
+def _ensure_phase_f_tables() -> None:
+    with _db_lock:
+        c = _conn()
+        try:
+            c.executescript(
+                """
+                CREATE TABLE IF NOT EXISTS competitor_analyses (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    channel_id TEXT NOT NULL,
+                    competitor_id TEXT NOT NULL,        -- YouTube channel ID (UC...)
+                    competitor_title TEXT,
+                    subscriber_count INTEGER,
+                    video_count INTEGER,
+                    view_count INTEGER,
+                    analysis_date TEXT NOT NULL,        -- YYYY-MM-DD
+                    insights_json TEXT,                 -- Claude analysis output
+                    top_videos_json TEXT,               -- raw video samples
+                    posting_frequency_per_week REAL,
+                    avg_views INTEGER,
+                    fetched_at INTEGER NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS idx_competitor_analyses_channel
+                    ON competitor_analyses(channel_id, analysis_date DESC);
+                CREATE INDEX IF NOT EXISTS idx_competitor_analyses_competitor
+                    ON competitor_analyses(channel_id, competitor_id, analysis_date DESC);
+
+                CREATE TABLE IF NOT EXISTS comment_demands (
+                    id TEXT PRIMARY KEY,                -- short hex id
+                    channel_id TEXT NOT NULL,
+                    video_id TEXT,                      -- source video (optional, aggregation may span videos)
+                    comment_ids TEXT,                   -- JSON array of source comment_ids
+                    demand_text TEXT NOT NULL,          -- canonical phrasing of the demand
+                    demand_type TEXT NOT NULL,          -- request | question
+                    frequency INTEGER NOT NULL DEFAULT 1,
+                    total_likes INTEGER NOT NULL DEFAULT 0,
+                    relevance_score REAL NOT NULL DEFAULT 0,  -- 0..1 channel fit
+                    score REAL NOT NULL DEFAULT 0,            -- combined frequency*likes*relevance
+                    suggested_title TEXT,
+                    suggested_angle TEXT,
+                    rationale TEXT,
+                    status TEXT NOT NULL DEFAULT 'pending', -- pending | queued | dismissed | auto_queued
+                    queue_theme_id TEXT,
+                    auto_queued INTEGER NOT NULL DEFAULT 0,
+                    created_at INTEGER NOT NULL,
+                    updated_at INTEGER NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS idx_comment_demands_channel
+                    ON comment_demands(channel_id, status, score DESC);
+                CREATE INDEX IF NOT EXISTS idx_comment_demands_text
+                    ON comment_demands(channel_id, demand_text);
+                """
+            )
+            c.commit()
+        finally:
+            c.close()
+
+
+_ensure_phase_f_tables()
+
+
+def insert_competitor_analysis(
+    *,
+    channel_id: str,
+    competitor_id: str,
+    competitor_title: Optional[str],
+    subscriber_count: Optional[int],
+    video_count: Optional[int],
+    view_count: Optional[int],
+    analysis_date: str,
+    insights: Optional[Dict[str, Any]],
+    top_videos: Optional[List[Dict[str, Any]]],
+    posting_frequency_per_week: Optional[float],
+    avg_views: Optional[int],
+) -> int:
+    now = int(time.time())
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                """
+                INSERT INTO competitor_analyses
+                (channel_id, competitor_id, competitor_title, subscriber_count,
+                 video_count, view_count, analysis_date, insights_json,
+                 top_videos_json, posting_frequency_per_week, avg_views, fetched_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    channel_id, competitor_id, competitor_title,
+                    int(subscriber_count) if subscriber_count is not None else None,
+                    int(video_count) if video_count is not None else None,
+                    int(view_count) if view_count is not None else None,
+                    analysis_date,
+                    json.dumps(insights or {}, ensure_ascii=False),
+                    json.dumps(top_videos or [], ensure_ascii=False),
+                    float(posting_frequency_per_week) if posting_frequency_per_week is not None else None,
+                    int(avg_views) if avg_views is not None else None,
+                    now,
+                ),
+            )
+            c.commit()
+            return int(cur.lastrowid or 0)
+        finally:
+            c.close()
+
+
+def _competitor_row_to_dict(row: sqlite3.Row) -> Dict[str, Any]:
+    d = dict(row)
+    try:
+        d["insights_json"] = json.loads(d.get("insights_json") or "{}")
+    except Exception:
+        d["insights_json"] = {}
+    try:
+        d["top_videos_json"] = json.loads(d.get("top_videos_json") or "[]")
+    except Exception:
+        d["top_videos_json"] = []
+    return d
+
+
+def list_competitor_analyses(
+    channel_id: str,
+    *,
+    competitor_id: Optional[str] = None,
+    latest_per_competitor: bool = True,
+    limit: int = 100,
+) -> List[Dict[str, Any]]:
+    with _db_lock:
+        c = _conn()
+        try:
+            if competitor_id:
+                rows = c.execute(
+                    "SELECT * FROM competitor_analyses WHERE channel_id = ? "
+                    "AND competitor_id = ? ORDER BY analysis_date DESC, fetched_at DESC LIMIT ?",
+                    (channel_id, competitor_id, int(limit)),
+                ).fetchall()
+            elif latest_per_competitor:
+                rows = c.execute(
+                    """
+                    SELECT ca.* FROM competitor_analyses ca
+                    INNER JOIN (
+                        SELECT competitor_id, MAX(fetched_at) AS max_fetched
+                        FROM competitor_analyses WHERE channel_id = ?
+                        GROUP BY competitor_id
+                    ) latest
+                    ON ca.competitor_id = latest.competitor_id AND ca.fetched_at = latest.max_fetched
+                    WHERE ca.channel_id = ?
+                    ORDER BY ca.fetched_at DESC
+                    LIMIT ?
+                    """,
+                    (channel_id, channel_id, int(limit)),
+                ).fetchall()
+            else:
+                rows = c.execute(
+                    "SELECT * FROM competitor_analyses WHERE channel_id = ? "
+                    "ORDER BY fetched_at DESC LIMIT ?",
+                    (channel_id, int(limit)),
+                ).fetchall()
+        finally:
+            c.close()
+    return [_competitor_row_to_dict(r) for r in rows]
+
+
+def delete_competitor_analyses(channel_id: str, competitor_id: str) -> int:
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                "DELETE FROM competitor_analyses WHERE channel_id = ? AND competitor_id = ?",
+                (channel_id, competitor_id),
+            )
+            c.commit()
+            return cur.rowcount
+        finally:
+            c.close()
+
+
+# ---------------------------------------------------------------------
+# Phase F-2: Comment demands
+# ---------------------------------------------------------------------
+
+def upsert_comment_demand(
+    *,
+    demand_id: str,
+    channel_id: str,
+    video_id: Optional[str],
+    comment_ids: Optional[List[str]],
+    demand_text: str,
+    demand_type: str,
+    frequency: int,
+    total_likes: int,
+    relevance_score: float,
+    score: float,
+    suggested_title: Optional[str] = None,
+    suggested_angle: Optional[str] = None,
+    rationale: Optional[str] = None,
+    status: str = "pending",
+    queue_theme_id: Optional[str] = None,
+    auto_queued: bool = False,
+) -> None:
+    now = int(time.time())
+    with _db_lock:
+        c = _conn()
+        try:
+            existing = c.execute(
+                "SELECT created_at FROM comment_demands WHERE id = ?",
+                (demand_id,),
+            ).fetchone()
+            created_at = existing["created_at"] if existing else now
+            c.execute(
+                """
+                INSERT OR REPLACE INTO comment_demands
+                (id, channel_id, video_id, comment_ids, demand_text, demand_type,
+                 frequency, total_likes, relevance_score, score, suggested_title,
+                 suggested_angle, rationale, status, queue_theme_id, auto_queued,
+                 created_at, updated_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    demand_id, channel_id, video_id,
+                    json.dumps(comment_ids or [], ensure_ascii=False),
+                    demand_text, demand_type,
+                    int(frequency), int(total_likes),
+                    float(relevance_score), float(score),
+                    suggested_title, suggested_angle, rationale,
+                    status, queue_theme_id, 1 if auto_queued else 0,
+                    created_at, now,
+                ),
+            )
+            c.commit()
+        finally:
+            c.close()
+
+
+def find_existing_demand(channel_id: str, demand_text: str) -> Optional[Dict[str, Any]]:
+    """既に登録されている同義リクエストを返す（status != dismissed）。"""
+    with _db_lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT * FROM comment_demands WHERE channel_id = ? AND demand_text = ? "
+                "AND status != 'dismissed' ORDER BY updated_at DESC LIMIT 1",
+                (channel_id, demand_text),
+            ).fetchone()
+        finally:
+            c.close()
+    return _demand_row_to_dict(row) if row else None
+
+
+def _demand_row_to_dict(row: sqlite3.Row) -> Dict[str, Any]:
+    d = dict(row)
+    try:
+        d["comment_ids"] = json.loads(d.get("comment_ids") or "[]")
+    except Exception:
+        d["comment_ids"] = []
+    d["auto_queued"] = bool(d.get("auto_queued"))
+    return d
+
+
+def list_comment_demands(
+    channel_id: str,
+    *,
+    status: Optional[str] = None,
+    demand_type: Optional[str] = None,
+    limit: int = 200,
+) -> List[Dict[str, Any]]:
+    where = ["channel_id = ?"]
+    args: List[Any] = [channel_id]
+    if status:
+        where.append("status = ?")
+        args.append(status)
+    if demand_type:
+        where.append("demand_type = ?")
+        args.append(demand_type)
+    sql = (
+        "SELECT * FROM comment_demands WHERE "
+        + " AND ".join(where)
+        + " ORDER BY score DESC, updated_at DESC LIMIT ?"
+    )
+    args.append(int(limit))
+    with _db_lock:
+        c = _conn()
+        try:
+            rows = c.execute(sql, args).fetchall()
+        finally:
+            c.close()
+    return [_demand_row_to_dict(r) for r in rows]
+
+
+def get_comment_demand(demand_id: str) -> Optional[Dict[str, Any]]:
+    with _db_lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT * FROM comment_demands WHERE id = ?", (demand_id,)
+            ).fetchone()
+        finally:
+            c.close()
+    return _demand_row_to_dict(row) if row else None
+
+
+def update_comment_demand_status(
+    demand_id: str,
+    status: str,
+    *,
+    queue_theme_id: Optional[str] = None,
+) -> bool:
+    now = int(time.time())
+    fields = ["status = ?", "updated_at = ?"]
+    args: List[Any] = [status, now]
+    if queue_theme_id is not None:
+        fields.append("queue_theme_id = ?")
+        args.append(queue_theme_id)
+    args.append(demand_id)
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                f"UPDATE comment_demands SET {', '.join(fields)} WHERE id = ?",
+                args,
+            )
+            c.commit()
+            return cur.rowcount > 0
+        finally:
+            c.close()
+
+
+def list_request_comments(
+    channel_id: str,
+    *,
+    since_ts: Optional[int] = None,
+    limit: int = 500,
+) -> List[Dict[str, Any]]:
+    """is_request=1 のコメントを返す（comment_demand の入力に使う）。"""
+    where = ["channel_id = ?", "(is_request = 1 OR sentiment = 'request')"]
+    args: List[Any] = [channel_id]
+    if since_ts is not None:
+        where.append("created_at >= ?")
+        args.append(int(since_ts))
+    sql = (
+        "SELECT * FROM comment_analysis WHERE "
+        + " AND ".join(where)
+        + " ORDER BY like_count DESC, published_at DESC LIMIT ?"
+    )
+    args.append(int(limit))
+    with _db_lock:
+        c = _conn()
+        try:
+            rows = c.execute(sql, args).fetchall()
+        finally:
+            c.close()
+    out: List[Dict[str, Any]] = []
+    for r in rows:
+        d = dict(r)
+        try:
+            d["topics"] = json.loads(d.get("topics") or "[]")
+        except Exception:
+            d["topics"] = []
+        out.append(d)
+    return out

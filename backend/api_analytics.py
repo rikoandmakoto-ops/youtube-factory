@@ -55,6 +55,9 @@ class SyncRequest(BaseModel):
     # Phase E-2: シリーズ化エンジン
     run_series_detection: bool = True
     series_threshold: float = Field(default=1.5, ge=1.0, le=10.0)
+    # Phase F-2: コメントからの需要抽出
+    run_comment_demand: bool = True
+    comment_demand_since_days: int = Field(default=30, ge=1, le=365)
 
 
 class AnalyzeRequest(BaseModel):
@@ -247,6 +250,18 @@ async def sync_channel(
                     )
                 except Exception as e:
                     pdca["series_engine"] = {"error": str(e)}
+
+            # Phase F-2: comment demand 抽出 (Analytics sync 後の自動実行)
+            if opts.run_comment_demand:
+                try:
+                    from pipeline.analytics import comment_demand
+                    pdca["comment_demand"] = comment_demand.scan_channel(
+                        channel_id,
+                        since_days=opts.comment_demand_since_days,
+                        auto_queue=True,
+                    )
+                except Exception as e:
+                    pdca["comment_demand"] = {"error": str(e)}
         except Exception as e:
             pdca["error"] = f"pdca chain failed: {e}"
         result["pdca"] = pdca

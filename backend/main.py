@@ -47,6 +47,7 @@ import api_channel_autopilot
 import api_analytics
 import api_pdca
 import api_logs_archives
+import api_competitors_demands
 
 
 # Models
@@ -169,6 +170,7 @@ app.include_router(api_channel_autopilot.router)
 app.include_router(api_analytics.router)
 app.include_router(api_pdca.router)
 app.include_router(api_logs_archives.router)
+app.include_router(api_competitors_demands.router)
 
 
 # ── Global instances (initialized at startup) ──

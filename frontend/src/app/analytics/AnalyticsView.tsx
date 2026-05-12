@@ -1,13 +1,17 @@
 'use client';
 
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState, type FormEvent } from 'react';
 import type {
   ABTest,
   AbReconciliationResponse,
   AnalyticsOverview,
   AnalyticsVideoMetric,
   Channel,
+  CommentDemand,
+  CommentDemandsResponse,
+  CompetitorAnalysis,
+  CompetitorOverview,
   EvaluationsListResponse,
   ImprovementEntry,
   ImprovementsListResponse,
@@ -79,7 +83,9 @@ type TabId =
   | 'posting'
   | 'thumbnails'
   | 'trends'
-  | 'series';
+  | 'series'
+  | 'competitors'
+  | 'voices';
 
 type SyncState =
   | { phase: 'idle' }
@@ -177,6 +183,18 @@ export default function AnalyticsView({
   const [seriesError, setSeriesError] = useState<string | null>(null);
   const [seriesNotice, setSeriesNotice] = useState<string | null>(null);
 
+  const [competitorData, setCompetitorData] =
+    useState<CompetitorOverview | null>(null);
+  const [competitorLoading, setCompetitorLoading] = useState(false);
+  const [competitorError, setCompetitorError] = useState<string | null>(null);
+  const [competitorNotice, setCompetitorNotice] = useState<string | null>(null);
+
+  const [demandData, setDemandData] =
+    useState<CommentDemandsResponse | null>(null);
+  const [demandLoading, setDemandLoading] = useState(false);
+  const [demandError, setDemandError] = useState<string | null>(null);
+  const [demandNotice, setDemandNotice] = useState<string | null>(null);
+
   const [tab, setTab] = useState<TabId>(() => {
     const t = searchParams.get('tab') as TabId | null;
     if (
@@ -186,7 +204,9 @@ export default function AnalyticsView({
       t === 'posting' ||
       t === 'thumbnails' ||
       t === 'trends' ||
-      t === 'series'
+      t === 'series' ||
+      t === 'competitors' ||
+      t === 'voices'
     )
       return t;
     return 'overview';
@@ -484,6 +504,167 @@ export default function AnalyticsView({
     }
   };
 
+  const loadCompetitorData = useCallback(async () => {
+    setCompetitorLoading(true);
+    setCompetitorError(null);
+    try {
+      const r = await clientGet<CompetitorOverview>(
+        `/api/competitors/${encodeURIComponent(channelId)}?limit=50`
+      );
+      setCompetitorData(r);
+    } catch (e) {
+      setCompetitorError(e instanceof Error ? e.message : '競合一覧の取得失敗');
+    } finally {
+      setCompetitorLoading(false);
+    }
+  }, [channelId]);
+
+  const handleRunCompetitorScan = async () => {
+    setCompetitorNotice(null);
+    setCompetitorError(null);
+    setCompetitorLoading(true);
+    try {
+      const r = await clientPost<{ count?: number; competitors?: unknown[] }>(
+        `/api/competitors/${encodeURIComponent(channelId)}/scan`,
+        {}
+      );
+      setCompetitorNotice(`✅ ${r.count ?? 0} 件の競合チャンネルを分析しました`);
+      await loadCompetitorData();
+    } catch (e) {
+      setCompetitorError(e instanceof Error ? e.message : 'スキャン失敗');
+    } finally {
+      setCompetitorLoading(false);
+    }
+  };
+
+  const handleAddCompetitor = async (input: string) => {
+    setCompetitorNotice(null);
+    setCompetitorError(null);
+    try {
+      const r = await clientPost<{
+        ok: boolean;
+        competitor_id?: string;
+        note?: string;
+        error?: string;
+      }>(`/api/competitors/${encodeURIComponent(channelId)}/add`, {
+        competitor_channel_id: input,
+      });
+      if (!r.ok) {
+        setCompetitorError(r.error || '追加失敗');
+        return false;
+      }
+      setCompetitorNotice(
+        r.note === 'already registered'
+          ? `すでに登録済みです (${r.competitor_id})`
+          : `✅ 「${r.competitor_id}」を追加しました`
+      );
+      await loadCompetitorData();
+      return true;
+    } catch (e) {
+      setCompetitorError(e instanceof Error ? e.message : '追加失敗');
+      return false;
+    }
+  };
+
+  const handleRemoveCompetitor = async (competitorId: string) => {
+    setCompetitorNotice(null);
+    setCompetitorError(null);
+    try {
+      const r = await fetch(
+        `/api/competitors/${encodeURIComponent(channelId)}/remove/${encodeURIComponent(competitorId)}`,
+        { method: 'DELETE' }
+      );
+      if (!r.ok) {
+        let msg = `${r.status}`;
+        try {
+          const j = await r.json();
+          if (j?.error) msg = String(j.error);
+        } catch {
+          /* ignore */
+        }
+        throw new Error(msg);
+      }
+      setCompetitorNotice(`削除しました (${competitorId})`);
+      await loadCompetitorData();
+    } catch (e) {
+      setCompetitorError(e instanceof Error ? e.message : '削除失敗');
+    }
+  };
+
+  const loadDemandData = useCallback(async () => {
+    setDemandLoading(true);
+    setDemandError(null);
+    try {
+      const r = await clientGet<CommentDemandsResponse>(
+        `/api/comment-demands/${encodeURIComponent(channelId)}?limit=200`
+      );
+      setDemandData(r);
+    } catch (e) {
+      setDemandError(e instanceof Error ? e.message : '視聴者需要の取得失敗');
+    } finally {
+      setDemandLoading(false);
+    }
+  }, [channelId]);
+
+  const handleRunDemandScan = async () => {
+    setDemandNotice(null);
+    setDemandError(null);
+    setDemandLoading(true);
+    try {
+      const r = await clientPost<{
+        demands_saved?: number;
+        auto_queued?: number;
+        request_comments_considered?: number;
+      }>(`/api/comment-demands/${encodeURIComponent(channelId)}/scan`, {
+        auto_queue: true,
+      });
+      setDemandNotice(
+        `✅ コメント ${r.request_comments_considered ?? 0} 件から ${r.demands_saved ?? 0} 件の需要を抽出 / ${r.auto_queued ?? 0} 件キュー投入`
+      );
+      await loadDemandData();
+    } catch (e) {
+      setDemandError(e instanceof Error ? e.message : 'スキャン失敗');
+    } finally {
+      setDemandLoading(false);
+    }
+  };
+
+  const handleQueueDemand = async (demandId: string) => {
+    setDemandNotice(null);
+    setDemandError(null);
+    try {
+      const r = await clientPost<{
+        ok: boolean;
+        theme_id?: string;
+        title?: string;
+        error?: string;
+      }>(
+        `/api/comment-demands/${encodeURIComponent(channelId)}/queue/${encodeURIComponent(demandId)}`
+      );
+      if (!r.ok) {
+        setDemandError(r.error || 'キュー投入失敗');
+        return;
+      }
+      setDemandNotice(`✅ 「${r.title || demandId}」をキューに追加`);
+      await loadDemandData();
+    } catch (e) {
+      setDemandError(e instanceof Error ? e.message : 'キュー投入失敗');
+    }
+  };
+
+  const handleDismissDemand = async (demandId: string) => {
+    setDemandNotice(null);
+    setDemandError(null);
+    try {
+      await clientPost(
+        `/api/comment-demands/${encodeURIComponent(channelId)}/dismiss/${encodeURIComponent(demandId)}`
+      );
+      await loadDemandData();
+    } catch (e) {
+      setDemandError(e instanceof Error ? e.message : '却下失敗');
+    }
+  };
+
   useEffect(() => {
     if (tab === 'posting' && !postingStatus && !postingLoading) {
       void loadPostingStatus(false);
@@ -496,6 +677,12 @@ export default function AnalyticsView({
     }
     if (tab === 'series' && !seriesData && !seriesLoading) {
       void loadSeriesData();
+    }
+    if (tab === 'competitors' && !competitorData && !competitorLoading) {
+      void loadCompetitorData();
+    }
+    if (tab === 'voices' && !demandData && !demandLoading) {
+      void loadDemandData();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tab, channelId]);
@@ -892,6 +1079,33 @@ export default function AnalyticsView({
           onReject={handleRejectSeries}
         />
       )}
+
+      {tab === 'competitors' && (
+        <CompetitorsTab
+          data={competitorData}
+          ownChannel={channel}
+          loading={competitorLoading}
+          error={competitorError}
+          notice={competitorNotice}
+          onRefresh={loadCompetitorData}
+          onScan={handleRunCompetitorScan}
+          onAdd={handleAddCompetitor}
+          onRemove={handleRemoveCompetitor}
+        />
+      )}
+
+      {tab === 'voices' && (
+        <ViewerVoicesTab
+          data={demandData}
+          loading={demandLoading}
+          error={demandError}
+          notice={demandNotice}
+          onRefresh={loadDemandData}
+          onScan={handleRunDemandScan}
+          onQueue={handleQueueDemand}
+          onDismiss={handleDismissDemand}
+        />
+      )}
     </div>
   );
 }
@@ -914,6 +1128,8 @@ function TabBar({
     { id: 'thumbnails', label: 'サムネテスト' },
     { id: 'trends', label: '🔭 トレンド' },
     { id: 'series', label: '🎬 シリーズ' },
+    { id: 'competitors', label: '🕵️ 競合分析' },
+    { id: 'voices', label: '🗣️ 視聴者の声' },
   ];
   return (
     <div className="flex gap-1 overflow-x-auto -mx-1 px-1">
@@ -3058,6 +3274,668 @@ function SeriesSuggestionCard({
           </button>
           <button
             onClick={() => onReject(suggestion.id)}
+            className="px-3 py-1 rounded text-xs font-semibold bg-bg-elev/40 border border-border/40 text-slate-400 hover:text-slate-200"
+          >
+            却下
+          </button>
+        </div>
+      )}
+    </li>
+  );
+}
+
+// =====================================================================
+// Competitor analysis Tab (Phase F-1)
+// =====================================================================
+
+const DOW_SHORT = ['月', '火', '水', '木', '金', '土', '日'];
+
+type CompetitorInsights = {
+  title_patterns?: {
+    question_form_ratio?: number;
+    number_usage_ratio?: number;
+    exclamation_usage_ratio?: number;
+    common_keywords?: string[];
+    typical_length_chars?: number;
+    hook_styles?: string[];
+  };
+  thumbnail_patterns?: string[];
+  top_videos_common_traits?: string[];
+  posting_schedule_insights?: string;
+  own_channel_diff?: string[];
+  improvement_suggestions?: string[];
+  posting_summary?: {
+    videos_observed?: number;
+    posting_frequency_per_week?: number | null;
+    day_of_week_counts?: Record<string, number>;
+    first_published_at?: string | null;
+    last_published_at?: string | null;
+  };
+  note?: string;
+};
+
+function CompetitorsTab({
+  data,
+  ownChannel,
+  loading,
+  error,
+  notice,
+  onRefresh,
+  onScan,
+  onAdd,
+  onRemove,
+}: {
+  data: CompetitorOverview | null;
+  ownChannel: Channel | null;
+  loading: boolean;
+  error: string | null;
+  notice: string | null;
+  onRefresh: () => void;
+  onScan: () => void;
+  onAdd: (input: string) => Promise<boolean>;
+  onRemove: (competitorId: string) => void;
+}) {
+  const [newCompetitor, setNewCompetitor] = useState('');
+  const [adding, setAdding] = useState(false);
+  const latest = data?.latest_analyses ?? [];
+  const competitorIds = data?.competitor_ids ?? [];
+
+  const submitAdd = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!newCompetitor.trim()) return;
+    setAdding(true);
+    try {
+      const ok = await onAdd(newCompetitor.trim());
+      if (ok) setNewCompetitor('');
+    } finally {
+      setAdding(false);
+    }
+  };
+
+  const avgCompFreq =
+    latest
+      .map((a) => a.posting_frequency_per_week)
+      .filter((x): x is number => typeof x === 'number')
+      .reduce((a, b, _i, arr) => a + b / arr.length, 0) || 0;
+
+  return (
+    <section className="space-y-4 mt-4">
+      <div className="flex items-center justify-between gap-2 flex-wrap">
+        <div>
+          <h2 className="text-lg font-bold text-slate-100">
+            🕵️ 競合チャンネル分析
+          </h2>
+          <p className="text-xs text-slate-400 mt-1">
+            同ジャンルの伸びているチャンネルのタイトル / サムネ / 投稿頻度を週1回 (日曜深夜) に自動分析。
+            Claude が共通パターンを抽出し、自チャンネルとの差分・改善ポイントを提示します。
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <button
+            onClick={onScan}
+            disabled={loading || competitorIds.length === 0}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-accent/20 border border-accent/60 text-accent hover:bg-accent/30 disabled:opacity-50"
+          >
+            {loading ? 'スキャン中…' : '🔄 今すぐスキャン'}
+          </button>
+          <button
+            onClick={onRefresh}
+            disabled={loading}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-bg-elev/40 border border-border/40 text-slate-300 hover:text-slate-100 disabled:opacity-50"
+          >
+            再読込
+          </button>
+        </div>
+      </div>
+
+      {error && (
+        <div className="rounded-lg border border-red-500/40 bg-red-500/10 px-3 py-2 text-xs text-red-200">
+          {error}
+        </div>
+      )}
+      {notice && (
+        <div className="rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-200">
+          {notice}
+        </div>
+      )}
+
+      <form
+        onSubmit={submitAdd}
+        className="rounded-lg border border-border/40 bg-bg-elev/30 p-3 flex flex-col sm:flex-row gap-2 items-stretch sm:items-center"
+      >
+        <label className="text-xs text-slate-400 shrink-0">競合チャンネル追加</label>
+        <input
+          type="text"
+          value={newCompetitor}
+          onChange={(e) => setNewCompetitor(e.target.value)}
+          placeholder="UCxxxxxx... / @handle / youtube.com/channel/UC..."
+          className="flex-1 input text-xs"
+        />
+        <button
+          type="submit"
+          disabled={adding || !newCompetitor.trim()}
+          className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-accent/20 border border-accent/60 text-accent hover:bg-accent/30 disabled:opacity-50 shrink-0"
+        >
+          {adding ? '追加中…' : '＋ 追加'}
+        </button>
+      </form>
+
+      {competitorIds.length === 0 && !loading ? (
+        <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-6 text-center text-sm text-slate-400">
+          まだ競合チャンネルが登録されていません。
+          <br />
+          上の入力欄から YouTube チャンネル ID（UC...）または @handle を追加してください。
+        </div>
+      ) : (
+        <>
+          <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-3">
+            <h3 className="text-xs font-semibold text-slate-300 mb-2">
+              登録済み競合 ({competitorIds.length})
+            </h3>
+            <ul className="space-y-1">
+              {competitorIds.map((cid) => {
+                const latestEntry = latest.find((a) => a.competitor_id === cid);
+                return (
+                  <li
+                    key={cid}
+                    className="flex items-center justify-between gap-2 text-xs text-slate-300 py-1"
+                  >
+                    <div className="min-w-0 flex-1">
+                      <div className="font-semibold truncate">
+                        {latestEntry?.competitor_title || cid}
+                      </div>
+                      <div className="text-[10px] text-slate-500 truncate">
+                        {cid}
+                        {latestEntry && (
+                          <>
+                            ・登録者 {formatNumber(latestEntry.subscriber_count)} ・動画{' '}
+                            {formatNumber(latestEntry.video_count)} ・総再生{' '}
+                            {formatNumber(latestEntry.view_count)}
+                          </>
+                        )}
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => onRemove(cid)}
+                      className="px-2 py-1 rounded text-[11px] bg-bg-elev/40 border border-border/40 text-slate-400 hover:text-red-300 shrink-0"
+                    >
+                      削除
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          {latest.length > 0 && (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+              <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+                <div className="text-slate-400">競合数</div>
+                <div className="text-slate-100 font-semibold">
+                  {latest.length}
+                </div>
+              </div>
+              <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+                <div className="text-slate-400">平均 投稿/週</div>
+                <div className="text-slate-100 font-semibold">
+                  {avgCompFreq ? avgCompFreq.toFixed(1) : '—'}
+                </div>
+              </div>
+              <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+                <div className="text-slate-400">最大登録者数</div>
+                <div className="text-slate-100 font-semibold">
+                  {formatNumber(
+                    Math.max(...latest.map((a) => a.subscriber_count || 0)) || null
+                  )}
+                </div>
+              </div>
+              <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+                <div className="text-slate-400">自チャンネル</div>
+                <div className="text-slate-100 font-semibold truncate">
+                  {ownChannel?.name || '—'}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {latest.length === 0 ? (
+            <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-6 text-center text-sm text-slate-400">
+              まだ分析結果がありません。「今すぐスキャン」で初回分析を実行してください。
+              <br />
+              <span className="text-[11px] text-slate-500 mt-1 inline-block">
+                ※ YOUTUBE_API_KEY が設定されている必要があります
+              </span>
+            </div>
+          ) : (
+            <ul className="space-y-3">
+              {latest.map((a) => (
+                <CompetitorCard key={a.id} analysis={a} />
+              ))}
+            </ul>
+          )}
+        </>
+      )}
+    </section>
+  );
+}
+
+function CompetitorCard({ analysis }: { analysis: CompetitorAnalysis }) {
+  const insights = (analysis.insights_json || {}) as CompetitorInsights;
+  const tp = insights.title_patterns || {};
+  const ps = insights.posting_summary || {};
+  const dow = ps.day_of_week_counts || {};
+  const maxDow = Math.max(0, ...Object.values(dow).map((v) => Number(v) || 0));
+  return (
+    <li className="rounded-xl border border-border/40 bg-bg-elev/30 p-3 space-y-3">
+      <div className="flex items-start justify-between gap-3 flex-wrap">
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-semibold text-slate-100 truncate">
+            {analysis.competitor_title || analysis.competitor_id}
+          </p>
+          <p className="text-[10px] text-slate-500 truncate">
+            {analysis.competitor_id}
+          </p>
+        </div>
+        <div className="text-right shrink-0 text-[11px] text-slate-400">
+          <div>登録者 {formatNumber(analysis.subscriber_count)}</div>
+          <div>動画 {formatNumber(analysis.video_count)}</div>
+          <div>
+            最終分析{' '}
+            {new Date(analysis.fetched_at * 1000).toLocaleDateString('ja-JP')}
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div className="rounded-lg border border-border/40 bg-bg-elev/40 p-2">
+          <div className="text-[10px] uppercase tracking-wide text-slate-500">
+            投稿頻度
+          </div>
+          <div className="text-slate-100 font-semibold text-base">
+            {analysis.posting_frequency_per_week
+              ? `${analysis.posting_frequency_per_week.toFixed(1)} 本/週`
+              : '—'}
+          </div>
+          <div className="text-[10px] text-slate-500 mt-0.5">
+            観測 {ps.videos_observed ?? 0} 本 ・ 平均再生{' '}
+            {formatNumber(analysis.avg_views)}
+          </div>
+        </div>
+        <div className="rounded-lg border border-border/40 bg-bg-elev/40 p-2">
+          <div className="text-[10px] uppercase tracking-wide text-slate-500">
+            曜日分布
+          </div>
+          <div className="flex items-end gap-1 mt-1 h-10">
+            {DOW_SHORT.map((label, idx) => {
+              const n = Number(dow[String(idx)] || 0);
+              const h = maxDow > 0 ? Math.max(2, (n / maxDow) * 36) : 2;
+              return (
+                <div
+                  key={idx}
+                  className="flex-1 flex flex-col items-center gap-0.5"
+                  title={`${label}: ${n}本`}
+                >
+                  <div
+                    className="w-full bg-accent/40 rounded-t"
+                    style={{ height: `${h}px` }}
+                  />
+                  <div className="text-[9px] text-slate-500">{label}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {(tp.question_form_ratio != null ||
+        tp.number_usage_ratio != null ||
+        tp.exclamation_usage_ratio != null ||
+        (tp.common_keywords && tp.common_keywords.length > 0)) && (
+        <div className="rounded-lg border border-border/40 bg-bg-elev/40 p-2 space-y-1">
+          <div className="text-[10px] uppercase tracking-wide text-slate-500">
+            タイトルパターン
+          </div>
+          <div className="grid grid-cols-3 gap-2 text-[11px] text-slate-300">
+            <div>疑問形 {formatPercent(tp.question_form_ratio, 0)}</div>
+            <div>数字 {formatPercent(tp.number_usage_ratio, 0)}</div>
+            <div>感嘆 {formatPercent(tp.exclamation_usage_ratio, 0)}</div>
+          </div>
+          {tp.typical_length_chars ? (
+            <div className="text-[11px] text-slate-400">
+              典型的なタイトル長: {tp.typical_length_chars} 文字
+            </div>
+          ) : null}
+          {tp.common_keywords && tp.common_keywords.length > 0 && (
+            <div className="flex flex-wrap gap-1 mt-1">
+              {tp.common_keywords.slice(0, 12).map((kw) => (
+                <span
+                  key={kw}
+                  className="text-[10px] px-1.5 py-0.5 rounded bg-bg-elev/60 border border-border/40 text-slate-300"
+                >
+                  {kw}
+                </span>
+              ))}
+            </div>
+          )}
+          {tp.hook_styles && tp.hook_styles.length > 0 && (
+            <div className="text-[11px] text-slate-400">
+              フック: {tp.hook_styles.join(' / ')}
+            </div>
+          )}
+        </div>
+      )}
+
+      {(insights.improvement_suggestions || insights.own_channel_diff) && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          {insights.own_channel_diff && insights.own_channel_diff.length > 0 && (
+            <div className="rounded-lg border border-border/40 bg-bg-elev/40 p-2">
+              <div className="text-[10px] uppercase tracking-wide text-amber-300">
+                自チャンネルとの差分
+              </div>
+              <ul className="text-[11px] text-slate-300 mt-1 list-disc list-inside space-y-0.5">
+                {insights.own_channel_diff.slice(0, 6).map((d, i) => (
+                  <li key={i}>{d}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {insights.improvement_suggestions && insights.improvement_suggestions.length > 0 && (
+            <div className="rounded-lg border border-emerald-500/30 bg-emerald-500/5 p-2">
+              <div className="text-[10px] uppercase tracking-wide text-emerald-300">
+                改善ポイント
+              </div>
+              <ul className="text-[11px] text-slate-200 mt-1 list-disc list-inside space-y-0.5">
+                {insights.improvement_suggestions.slice(0, 6).map((d, i) => (
+                  <li key={i}>{d}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+
+      {analysis.top_videos_json && analysis.top_videos_json.length > 0 && (
+        <details className="rounded-lg border border-border/40 bg-bg-elev/40 p-2">
+          <summary className="cursor-pointer text-[11px] font-semibold text-slate-300">
+            高パフォーマンス動画 TOP {analysis.top_videos_json.length}
+          </summary>
+          <ul className="mt-2 space-y-1">
+            {analysis.top_videos_json.slice(0, 10).map((v) => (
+              <li
+                key={v.video_id}
+                className="flex items-center gap-2 text-[11px] text-slate-300"
+              >
+                {v.thumbnail_url && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={v.thumbnail_url}
+                    alt=""
+                    className="w-16 h-9 object-cover rounded shrink-0"
+                  />
+                )}
+                <div className="min-w-0 flex-1">
+                  <a
+                    href={`https://www.youtube.com/watch?v=${v.video_id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-slate-100 truncate block"
+                  >
+                    {v.title}
+                  </a>
+                  <span className="text-[10px] text-slate-500">
+                    {formatNumber(v.views)} views ・ 👍 {formatNumber(v.likes)}
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+
+      {insights.note && (
+        <p className="text-[10px] text-slate-500 italic">{insights.note}</p>
+      )}
+    </li>
+  );
+}
+
+// =====================================================================
+// Viewer voices Tab (Phase F-2)
+// =====================================================================
+
+function ViewerVoicesTab({
+  data,
+  loading,
+  error,
+  notice,
+  onRefresh,
+  onScan,
+  onQueue,
+  onDismiss,
+}: {
+  data: CommentDemandsResponse | null;
+  loading: boolean;
+  error: string | null;
+  notice: string | null;
+  onRefresh: () => void;
+  onScan: () => void;
+  onQueue: (id: string) => void;
+  onDismiss: (id: string) => void;
+}) {
+  const [filter, setFilter] = useState<'all' | 'request' | 'question'>('all');
+  const items = (data?.items ?? []).filter(
+    (d) => filter === 'all' || d.demand_type === filter
+  );
+  const byStatus = data?.by_status ?? {};
+  const byType = data?.by_type ?? {};
+  const threshold = data?.auto_queue_threshold ?? 0.7;
+
+  return (
+    <section className="space-y-4 mt-4">
+      <div className="flex items-center justify-between gap-2 flex-wrap">
+        <div>
+          <h2 className="text-lg font-bold text-slate-100">
+            🗣️ 視聴者の声から需要発掘
+          </h2>
+          <p className="text-xs text-slate-400 mt-1">
+            視聴者コメントから「○○やってほしい」「なんで○○？」を Claude が抽出。
+            スコア {(threshold * 100).toFixed(0)} 以上は自動でテーマキューに投入されます。
+            Analytics 同期後に自動実行。
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <button
+            onClick={onScan}
+            disabled={loading}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-accent/20 border border-accent/60 text-accent hover:bg-accent/30 disabled:opacity-50"
+          >
+            {loading ? 'スキャン中…' : '🔄 今すぐスキャン'}
+          </button>
+          <button
+            onClick={onRefresh}
+            disabled={loading}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-bg-elev/40 border border-border/40 text-slate-300 hover:text-slate-100 disabled:opacity-50"
+          >
+            再読込
+          </button>
+        </div>
+      </div>
+
+      {error && (
+        <div className="rounded-lg border border-red-500/40 bg-red-500/10 px-3 py-2 text-xs text-red-200">
+          {error}
+        </div>
+      )}
+      {notice && (
+        <div className="rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-200">
+          {notice}
+        </div>
+      )}
+
+      {data && (data.count > 0 || Object.keys(byType).length > 0) && (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+          <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+            <div className="text-slate-400">需要総数</div>
+            <div className="text-slate-100 font-semibold">{data.count}</div>
+          </div>
+          <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+            <div className="text-slate-400">リクエスト系</div>
+            <div className="text-slate-100 font-semibold">
+              {byType.request ?? 0}
+            </div>
+          </div>
+          <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+            <div className="text-slate-400">質問系</div>
+            <div className="text-slate-100 font-semibold">
+              {byType.question ?? 0}
+            </div>
+          </div>
+          <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-2">
+            <div className="text-slate-400">キュー投入済</div>
+            <div className="text-emerald-300 font-semibold">
+              {(byStatus.queued ?? 0) + (byStatus.auto_queued ?? 0)}
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="flex gap-1">
+        {(['all', 'request', 'question'] as const).map((f) => (
+          <button
+            key={f}
+            onClick={() => setFilter(f)}
+            className={`px-3 py-1 rounded-lg text-xs font-semibold border ${
+              filter === f
+                ? 'bg-accent/20 border-accent/60 text-accent'
+                : 'bg-bg-elev/40 border-border/40 text-slate-300 hover:text-slate-100'
+            }`}
+          >
+            {f === 'all' ? 'すべて' : f === 'request' ? 'リクエスト' : '質問'}
+          </button>
+        ))}
+      </div>
+
+      {items.length === 0 && !loading ? (
+        <div className="rounded-lg border border-border/40 bg-bg-elev/30 p-6 text-center text-sm text-slate-400">
+          まだ需要が検出されていません。
+          <br />
+          コメント取得 + 分析が必要です。Analytics タブから同期するか、「今すぐスキャン」を実行してください。
+        </div>
+      ) : (
+        <ul className="space-y-3">
+          {items.map((d) => (
+            <CommentDemandCard
+              key={d.id}
+              demand={d}
+              onQueue={onQueue}
+              onDismiss={onDismiss}
+            />
+          ))}
+        </ul>
+      )}
+    </section>
+  );
+}
+
+function CommentDemandCard({
+  demand,
+  onQueue,
+  onDismiss,
+}: {
+  demand: CommentDemand;
+  onQueue: (id: string) => void;
+  onDismiss: (id: string) => void;
+}) {
+  const score = demand.score ?? 0;
+  const scoreColor =
+    score >= 0.7
+      ? 'text-emerald-300'
+      : score >= 0.5
+        ? 'text-amber-300'
+        : 'text-slate-300';
+  const typeLabel = demand.demand_type === 'question' ? '質問' : 'リクエスト';
+  const typeBadge =
+    demand.demand_type === 'question'
+      ? 'bg-blue-500/20 border-blue-500/60 text-blue-200'
+      : 'bg-purple-500/20 border-purple-500/60 text-purple-200';
+  return (
+    <li className="rounded-lg border border-border/40 bg-bg-elev/40 p-3">
+      <div className="flex items-start justify-between gap-3 flex-wrap">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span
+              className={`text-[10px] px-1.5 py-0.5 rounded border ${typeBadge}`}
+            >
+              {typeLabel}
+            </span>
+            {demand.auto_queued && (
+              <span className="text-[10px] px-1.5 py-0.5 rounded bg-accent/20 border border-accent/60 text-accent">
+                ⚡ 自動キュー投入済み
+              </span>
+            )}
+            {demand.status === 'queued' && !demand.auto_queued && (
+              <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/60 text-emerald-300">
+                キュー投入済
+              </span>
+            )}
+            {demand.status === 'dismissed' && (
+              <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-500/20 border border-slate-500/60 text-slate-400">
+                却下
+              </span>
+            )}
+            <span className="text-[10px] text-slate-500">
+              頻度 {demand.frequency} ・ いいね {demand.total_likes}
+            </span>
+          </div>
+          <p className="mt-1 text-sm font-semibold text-slate-100">
+            {demand.suggested_title || demand.demand_text}
+          </p>
+          {demand.demand_text !== demand.suggested_title && (
+            <p className="text-[11px] text-slate-400 mt-0.5">
+              元: {demand.demand_text}
+            </p>
+          )}
+          {demand.suggested_angle && (
+            <p className="text-xs text-slate-400 mt-1">
+              切り口: {demand.suggested_angle}
+            </p>
+          )}
+          {demand.rationale && (
+            <p className="text-[11px] text-slate-500 mt-1">{demand.rationale}</p>
+          )}
+          {demand.video_id && (
+            <p className="text-[10px] text-slate-500 mt-1">
+              元動画:{' '}
+              <a
+                href={`https://www.youtube.com/watch?v=${demand.video_id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-slate-300"
+              >
+                {demand.video_id}
+              </a>
+            </p>
+          )}
+        </div>
+        <div className="text-right shrink-0">
+          <div className={`text-lg font-bold ${scoreColor}`}>
+            {(score * 100).toFixed(0)}
+          </div>
+          <div className="text-[10px] text-slate-500">
+            適合 {(demand.relevance_score * 100).toFixed(0)}
+          </div>
+        </div>
+      </div>
+      {demand.status === 'pending' && (
+        <div className="flex gap-2 mt-2">
+          <button
+            onClick={() => onQueue(demand.id)}
+            className="px-3 py-1 rounded text-xs font-semibold bg-accent/20 border border-accent/60 text-accent hover:bg-accent/30"
+          >
+            ＋ キューに追加
+          </button>
+          <button
+            onClick={() => onDismiss(demand.id)}
             className="px-3 py-1 rounded text-xs font-semibold bg-bg-elev/40 border border-border/40 text-slate-400 hover:text-slate-200"
           >
             却下
