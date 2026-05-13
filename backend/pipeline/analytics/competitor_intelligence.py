@@ -236,6 +236,72 @@ def _gap_topics(
     return gaps[:_MAX_GAP]
 
 
+def get_competitor_thumbnail_samples(
+    channel_id: str,
+    max_images: int = 6,
+) -> List[str]:
+    """Return local file paths of cached competitor thumbnails for Vision input.
+
+    Picks the highest-viewed videos across the latest analysis of each registered
+    competitor and interleaves them so multiple competitors are represented.
+    If a thumbnail isn't in the local cache yet, this triggers an on-the-fly
+    download as a fallback. Returns an empty list when nothing is available.
+    """
+    if max_images <= 0:
+        return []
+    try:
+        from . import competitor_thumbnails as ct
+    except Exception:
+        return []
+
+    analyses = _latest_analyses(channel_id)
+    if not analyses:
+        return []
+
+    by_comp: Dict[str, List[Tuple[int, str, str, Optional[str]]]] = {}
+    for a in analyses:
+        comp_id = (a.get("competitor_id") or "").strip()
+        if not comp_id:
+            continue
+        for v in a.get("top_videos_json") or []:
+            if not isinstance(v, dict):
+                continue
+            vid = v.get("video_id")
+            if not vid:
+                continue
+            by_comp.setdefault(comp_id, []).append((
+                int(v.get("views") or 0),
+                comp_id,
+                str(vid),
+                v.get("thumbnail_url"),
+            ))
+
+    # Sort each competitor's videos by views desc.
+    for comp_id in list(by_comp.keys()):
+        by_comp[comp_id].sort(key=lambda x: x[0], reverse=True)
+
+    # Round-robin so multiple competitors are represented.
+    queues = list(by_comp.values())
+    interleaved: List[Tuple[int, str, str, Optional[str]]] = []
+    while queues:
+        next_queues = []
+        for q in queues:
+            if q:
+                interleaved.append(q.pop(0))
+                if q:
+                    next_queues.append(q)
+        queues = next_queues
+
+    out: List[str] = []
+    for _views, comp_id, vid, url in interleaved:
+        p = ct.ensure_cached(comp_id, vid, thumbnail_url=url)
+        if p is not None and p.exists():
+            out.append(str(p))
+        if len(out) >= max_images:
+            break
+    return out
+
+
 def competitor_video_titles(channel_id: str) -> List[str]:
     """全競合の最近動画タイトルをまとめて返す（類似度判定に使う）。"""
     titles: List[str] = []

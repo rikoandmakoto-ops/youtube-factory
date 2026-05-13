@@ -578,6 +578,14 @@ def scan_one_competitor(
         videos, key=lambda v: v.get("views") or 0, reverse=True
     )[:15]
 
+    try:
+        from . import competitor_thumbnails
+        competitor_thumbnails.cache_top_thumbnails(
+            competitor_id, top_videos, max_count=5
+        )
+    except Exception as e:
+        print(f"  ⚠️ competitor thumbnail cache failed ({competitor_id}): {e}")
+
     today = date.today().isoformat()
     rec_id = analytics_store.insert_competitor_analysis(
         channel_id=channel_id,
