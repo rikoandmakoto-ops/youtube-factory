@@ -27,6 +27,8 @@ _MAX_HOT_TOPICS = 10
 _MAX_DIFF = 8
 _MAX_SUGGESTIONS = 8
 _MAX_GAP = 6
+_MAX_THUMB_PATTERNS = 8
+_MAX_TRAITS = 8
 
 
 def _latest_analyses(channel_id: str) -> List[Dict[str, Any]]:
@@ -273,6 +275,8 @@ def build_competitor_context(channel_id: str) -> Dict[str, Any]:
             "competitor_hot_topics": [],
             "differentiation_points": [],
             "improvement_suggestions": [],
+            "thumbnail_patterns": [],
+            "top_videos_common_traits": [],
             "gap_topics": [],
             "competitor_video_titles": [],
         }
@@ -282,6 +286,12 @@ def build_competitor_context(channel_id: str) -> Dict[str, Any]:
     differentiation = _aggregate_string_list(analyses, "own_channel_diff", limit=_MAX_DIFF)
     suggestions = _aggregate_string_list(
         analyses, "improvement_suggestions", limit=_MAX_SUGGESTIONS
+    )
+    thumb_patterns = _aggregate_string_list(
+        analyses, "thumbnail_patterns", limit=_MAX_THUMB_PATTERNS
+    )
+    common_traits = _aggregate_string_list(
+        analyses, "top_videos_common_traits", limit=_MAX_TRAITS
     )
     titles = competitor_video_titles(channel_id)
     seeds = _channel_seeds(channel_id)
@@ -294,6 +304,8 @@ def build_competitor_context(channel_id: str) -> Dict[str, Any]:
         "competitor_hot_topics": hot_topics,
         "differentiation_points": differentiation,
         "improvement_suggestions": suggestions,
+        "thumbnail_patterns": thumb_patterns,
+        "top_videos_common_traits": common_traits,
         "gap_topics": gaps,
         "competitor_video_titles": titles,
     }
@@ -325,6 +337,97 @@ def _format_title_patterns(tp: Dict[str, Any]) -> List[str]:
     if keywords:
         out.append(f"  - 頻出キーワード: {', '.join(keywords[:_MAX_KEYWORDS])}")
     return out
+
+
+def build_thumbnail_competitor_block(channel_id: str) -> Optional[str]:
+    """サムネ生成プロンプトに足す競合サムネ傾向の短い日本語テキスト。
+
+    `competitor_intelligence.thumbnail_patterns` と improvement_suggestions の
+    うち「サムネ」「thumb」「タイトル」「フォント」「色」「文字」関連のみを
+    抽出して、design_brief() の system/user に注入できる形にする。
+
+    競合データが空、または抽出すべき情報がなければ None。
+    """
+    ctx = build_competitor_context(channel_id)
+    if not ctx.get("available"):
+        return None
+
+    sections: List[str] = []
+
+    thumb_patterns = ctx.get("thumbnail_patterns") or []
+    if thumb_patterns:
+        block = ["**競合サムネに頻出する要素（差別化しつつ効果的なものは取り入れる）**:"]
+        for p in thumb_patterns[:_MAX_THUMB_PATTERNS]:
+            block.append(f"  - {p}")
+        sections.append("\n".join(block))
+
+    tp = ctx.get("title_patterns_summary") or {}
+    hooks = tp.get("hook_styles") or []
+    if hooks:
+        sections.append(
+            "**競合タイトルの多用フック**: " + ", ".join(hooks[:_MAX_HOOKS])
+            + "\n  - 同じ要素を line1/line2/line3_badge に取り入れてよいが、丸パクリは禁止。"
+        )
+
+    suggestions = ctx.get("improvement_suggestions") or []
+    thumb_keywords = ("サムネ", "thumb", "タイトル", "文字", "フォント", "色", "バッジ", "顔")
+    thumb_related = [
+        s for s in suggestions
+        if any(k in s for k in thumb_keywords)
+    ]
+    if thumb_related:
+        block = ["**競合分析から導かれたサムネ/タイトル改善提案（反映必須）**:"]
+        for s in thumb_related[:_MAX_SUGGESTIONS]:
+            block.append(f"  - {s}")
+        sections.append("\n".join(block))
+
+    if not sections:
+        return None
+
+    header = "## 競合サムネ分析からの方針（必ず反映する）"
+    footer = (
+        "\n上記の競合パターンを参考にしつつ、自チャンネルの個性を必ず加味して、"
+        "競合と一目で見分けがつく独自のサムネを作る。"
+    )
+    return header + "\n\n" + "\n\n".join(sections) + footer
+
+
+def build_illustration_competitor_hint(channel_id: str) -> Optional[str]:
+    """イラスト生成 DALL-E プロンプトに軽く差し込む英語ヒント。
+
+    過度に競合に寄せないため最大 1〜2 行に留め、教育的図解の方向性に対する
+    軽いトーン指示にする。何も抽出できなければ None。
+    """
+    ctx = build_competitor_context(channel_id)
+    if not ctx.get("available"):
+        return None
+
+    traits = ctx.get("top_videos_common_traits") or []
+    illust_keywords = ("図解", "イラスト", "ビジュアル", "図", "データ", "比較", "矢印", "解説")
+    illust_related = [t for t in traits if any(k in t for k in illust_keywords)]
+
+    suggestions = ctx.get("improvement_suggestions") or []
+    illust_related_suggestions = [
+        s for s in suggestions if any(k in s for k in illust_keywords)
+    ]
+
+    hints: List[str] = []
+    if illust_related:
+        joined = " / ".join(illust_related[:3])
+        hints.append(
+            f"Competitor educational videos in this niche tend to favor: {joined}. "
+            "Subtly echo that visual sensibility while keeping the illustration "
+            "distinct and channel-original."
+        )
+    if illust_related_suggestions:
+        joined = " / ".join(illust_related_suggestions[:2])
+        hints.append(
+            f"Apply this illustration-related guidance from competitor analysis: {joined}."
+        )
+
+    if not hints:
+        return None
+    return " ".join(hints)
 
 
 def build_competitor_addendum(channel_id: str) -> Optional[str]:
@@ -374,6 +477,24 @@ def build_competitor_addendum(channel_id: str) -> Optional[str]:
         block = ["**自チャンネルが競合と差別化できているポイント（強みは伸ばす）**:"]
         for d in diffs[:_MAX_DIFF]:
             block.append(f"  - {d}")
+        sections.append("\n".join(block))
+
+    thumb_patterns = ctx.get("thumbnail_patterns") or []
+    if thumb_patterns:
+        block = ["**競合サムネに頻出する要素（thumb_info に反映する材料として参照）**:"]
+        for p in thumb_patterns[:_MAX_THUMB_PATTERNS]:
+            block.append(f"  - {p}")
+        block.append(
+            "  - 効果的な要素（数字訴求 / 疑問形 / 強調バッジ 等）は thumb_info.hook_lines や "
+            "subtitle / tagline に積極的に取り入れる。ただし丸パクリは禁止、独自のひねりを必ず加える。"
+        )
+        sections.append("\n".join(block))
+
+    traits = ctx.get("top_videos_common_traits") or []
+    if traits:
+        block = ["**競合の高再生動画に共通する特徴（中身の方向性として参考）**:"]
+        for t in traits[:_MAX_TRAITS]:
+            block.append(f"  - {t}")
         sections.append("\n".join(block))
 
     suggestions = ctx.get("improvement_suggestions") or []

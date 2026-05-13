@@ -250,7 +250,8 @@ async def _do_generate_sample(req: SampleRequest) -> SampleResponse:
         dalle_style = "vivid"
 
     prompt = _build_illustration_prompt(
-        req.topic, char_config=char_config, illust_style=style_dict
+        req.topic, char_config=char_config, illust_style=style_dict,
+        channel_id=req.channel_id,
     )
 
     feedback_block = _build_feedback_block(req.feedback)

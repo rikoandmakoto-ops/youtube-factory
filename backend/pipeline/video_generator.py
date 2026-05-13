@@ -737,7 +737,7 @@ _ILLUST_FORMAT_COMPOSITION = {
 }
 
 
-def _build_illustration_prompt(topic_text, char_config=None, illust_style=None):
+def _build_illustration_prompt(topic_text, char_config=None, illust_style=None, channel_id=None):
     """Compose a DALL-E prompt for a channel-styled educational illustration.
 
     The MAIN subject of the image is a visual diagram/illustration that
@@ -748,6 +748,11 @@ def _build_illustration_prompt(topic_text, char_config=None, illust_style=None):
 
     illust_style (dict) — channel-specific style overrides:
       art_style, background, include_characters, extra_prompt.
+
+    channel_id — when provided, pull competitor-derived illustration hints from
+    competitor_intelligence.build_illustration_competitor_hint() and append a
+    short tone-only line to the prompt. Educational diagrams remain the focus;
+    competitor input only nudges visual sensibility.
     """
     style = illust_style or {}
     art_style = style.get(
@@ -820,6 +825,16 @@ def _build_illustration_prompt(topic_text, char_config=None, illust_style=None):
             "watermarks of any kind. Pictures and symbols only."
         )
 
+    competitor_hint = ""
+    if channel_id:
+        try:
+            from pipeline.analytics.competitor_intelligence import (
+                build_illustration_competitor_hint,
+            )
+            competitor_hint = build_illustration_competitor_hint(channel_id) or ""
+        except Exception as e:
+            print(f"  ⚠️ illustration competitor hint failed: {e}")
+
     parts = [
         f"{art_style}. Background: {background}. {composition}.",
         (
@@ -833,6 +848,7 @@ def _build_illustration_prompt(topic_text, char_config=None, illust_style=None):
         f"Narration: 「{safe_topic}」.",
         char_block,
         text_block,
+        competitor_hint,
     ]
     if extra:
         parts.append(extra)
@@ -860,7 +876,9 @@ def generate_illustration(topic_text, cache_dir=None, idx=0, char_config=None,
     if dalle_style not in ("vivid", "natural"):
         dalle_style = "vivid"
 
-    prompt = _build_illustration_prompt(topic_text, char_config=char_config, illust_style=style)
+    prompt = _build_illustration_prompt(
+        topic_text, char_config=char_config, illust_style=style, channel_id=channel_id
+    )
     img = _call_openai_image(prompt, size=size, style=dalle_style, channel_id=channel_id)
     if img and cache_dir:
         Path(cache_dir).mkdir(parents=True, exist_ok=True)

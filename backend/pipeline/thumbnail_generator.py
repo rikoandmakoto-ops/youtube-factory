@@ -73,12 +73,18 @@ def design_brief(
     api_key: str,
     channel_meta: Optional[Dict[str, Any]] = None,
     feedback: Optional[List[str]] = None,
+    channel_id: Optional[str] = None,
 ) -> Dict[str, Any]:
     """Ask GPT-4o for a 3-line thumbnail design brief tailored to `title`.
 
     `feedback` — ordered list of free-text revision instructions from the user
     accumulated across previous regenerations. When provided, GPT-4o is told to
     apply these revisions on top of its baseline design.
+
+    `channel_id` — when provided, competitor_analyses-derived thumbnail patterns
+    and improvement suggestions are pulled via competitor_intelligence and
+    injected into the prompt so the brief learns from observed competitor
+    behavior (without losing the channel's own voice).
     """
     channel_meta = channel_meta or {}
     channel_name = channel_meta.get("name") or ""
@@ -94,15 +100,33 @@ def design_brief(
                 "矛盾する場合は新しい指示を優先する):\n" + bullets + "\n"
             )
 
+    competitor_block = ""
+    if channel_id:
+        try:
+            from pipeline.analytics.competitor_intelligence import (
+                build_thumbnail_competitor_block,
+            )
+            competitor_block = build_thumbnail_competitor_block(channel_id) or ""
+        except Exception as e:
+            print(f"  ⚠️ thumbnail competitor block failed: {e}")
+        if competitor_block:
+            competitor_block = "\n\n" + competitor_block + "\n"
+
     system = (
         "あなたはYouTubeで何百万再生も叩き出すサムネイルを設計する一流のアートディレクターです。"
         "日本語のゆっくり解説／知識系チャンネル向けに、思わずクリックしたくなる"
         "サムネイル案を厳密なJSONで返します。"
+        + (
+            " 競合チャンネル分析の知見が提供された場合、その効果的な要素は積極的に取り入れつつ、"
+            "丸パクリは避け、自チャンネルの個性を必ず重ねます。"
+            if competitor_block else ""
+        )
     )
     user = (
         f"動画タイトル: 「{title}」\n"
         + (f"チャンネル: 「{channel_name}」 — {concept}\n" if channel_name else "")
         + feedback_block
+        + competitor_block
         + "\n"
         "サムネイルは固定レイアウトです。次のフィールドを必ず含むJSONだけを返してください"
         "（コードフェンス禁止、純JSON）:\n"
@@ -483,6 +507,7 @@ def generate_thumbnail(
             "concept": channel_config.get("concept"),
         },
         feedback=feedback,
+        channel_id=channel_config.get("id"),
     )
 
     if reuse_background_path:
@@ -536,6 +561,7 @@ async def generate_thumbnail_async(
                 "concept": channel_config.get("concept"),
             },
             feedback=feedback,
+            channel_id=channel_config.get("id"),
         ),
     )
 
