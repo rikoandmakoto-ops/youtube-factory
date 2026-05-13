@@ -53,6 +53,7 @@ data/*.db
 data/analytics/*.db
 data/samples/
 data/thumbnails/
+data/cache/
 data/api_usage.jsonl
 backend/static/
 

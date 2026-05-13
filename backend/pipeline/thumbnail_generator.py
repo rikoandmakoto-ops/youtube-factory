@@ -101,17 +101,33 @@ def design_brief(
             )
 
     competitor_block = ""
+    competitor_thumb_paths: List[str] = []
     if channel_id:
         try:
             from pipeline.analytics.competitor_intelligence import (
                 build_thumbnail_competitor_block,
+                get_competitor_thumbnail_samples,
             )
             competitor_block = build_thumbnail_competitor_block(channel_id) or ""
+            competitor_thumb_paths = get_competitor_thumbnail_samples(
+                channel_id, max_images=6
+            ) or []
         except Exception as e:
             print(f"  ⚠️ thumbnail competitor block failed: {e}")
         if competitor_block:
             competitor_block = "\n\n" + competitor_block + "\n"
 
+    vision_intro = ""
+    if competitor_thumb_paths:
+        vision_intro = (
+            "\n以下に競合チャンネルの人気動画サムネイル画像 "
+            f"{len(competitor_thumb_paths)} 枚を添付します。"
+            "実際のビジュアル傾向（色使い・構図・文字配置・キャラ表情・密度）を分析し、"
+            "効果的な要素は取り入れつつ、競合と一目で見分けがつく独自デザインを提案してください。"
+            "丸パクリは禁止です。\n"
+        )
+
+    has_vision = bool(competitor_thumb_paths)
     system = (
         "あなたはYouTubeで何百万再生も叩き出すサムネイルを設計する一流のアートディレクターです。"
         "日本語のゆっくり解説／知識系チャンネル向けに、思わずクリックしたくなる"
@@ -121,12 +137,18 @@ def design_brief(
             "丸パクリは避け、自チャンネルの個性を必ず重ねます。"
             if competitor_block else ""
         )
+        + (
+            " 添付された競合サムネイル画像が提供された場合は、視覚的傾向を読み取り、"
+            "差別化しつつ強い要素は活かす方向で設計します。"
+            if has_vision else ""
+        )
     )
     user = (
         f"動画タイトル: 「{title}」\n"
         + (f"チャンネル: 「{channel_name}」 — {concept}\n" if channel_name else "")
         + feedback_block
         + competitor_block
+        + vision_intro
         + "\n"
         "サムネイルは固定レイアウトです。次のフィールドを必ず含むJSONだけを返してください"
         "（コードフェンス禁止、純JSON）:\n"
@@ -148,13 +170,36 @@ def design_brief(
         "- DALL-E 3 は文字を綺麗に描けないので背景プロンプトは必ず『no text/letters/numbers』を明記"
     )
 
+    if competitor_thumb_paths:
+        user_content: Any = [{"type": "text", "text": user}]
+        for img_path in competitor_thumb_paths:
+            try:
+                p = Path(img_path)
+                if not p.exists() or p.stat().st_size == 0:
+                    continue
+                mime, _ = mimetypes.guess_type(str(p))
+                if not mime:
+                    mime = "image/jpeg"
+                b64 = base64.b64encode(p.read_bytes()).decode("ascii")
+                user_content.append({
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"data:{mime};base64,{b64}",
+                        "detail": "low",
+                    },
+                })
+            except Exception as e:
+                print(f"  ⚠️ skipped competitor thumbnail image {img_path}: {e}")
+    else:
+        user_content = user
+
     resp = _call_openai(
         "https://api.openai.com/v1/chat/completions",
         {
             "model": "gpt-4o",
             "messages": [
                 {"role": "system", "content": system},
-                {"role": "user", "content": user},
+                {"role": "user", "content": user_content},
             ],
             "response_format": {"type": "json_object"},
             "temperature": 0.9,
