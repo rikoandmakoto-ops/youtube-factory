@@ -18,7 +18,20 @@ GPT_PRICING = {
     "claude-haiku-4-5-20251001": {"input": 1.00 / 1_000_000, "output": 5.00 / 1_000_000},
 }
 
-# DALL-E 3 pricing per image
+# gpt-image-1 pricing per image (size × quality)
+IMAGE_PRICING = {
+    "1024x1024_low":    0.011,
+    "1024x1024_medium": 0.042,
+    "1024x1024_high":   0.167,
+    "1024x1536_low":    0.016,
+    "1024x1536_medium": 0.063,
+    "1024x1536_high":   0.250,
+    "1536x1024_low":    0.016,
+    "1536x1024_medium": 0.063,
+    "1536x1024_high":   0.250,
+}
+
+# Legacy DALL-E 3 pricing retained for historical events (model retired 2026).
 DALLE3_PRICING = {
     "1024x1024_standard": 0.040,
     "1024x1024_hd":       0.080,
@@ -84,17 +97,17 @@ def record_chat_usage(
 
 def record_image_usage(
     size: str = "1024x1024",
-    quality: str = "standard",
+    quality: str = "medium",
     channel_id: Optional[str] = None,
     purpose: Optional[str] = None,
 ) -> Dict:
-    """Record a DALL-E image generation."""
+    """Record a gpt-image-1 image generation."""
     key = f"{size}_{quality}"
-    cost = DALLE3_PRICING.get(key, DALLE3_PRICING["1024x1024_standard"])
+    cost = IMAGE_PRICING.get(key, IMAGE_PRICING["1024x1024_medium"])
     event = {
         "ts": datetime.now().isoformat(),
         "type": "image",
-        "model": "dall-e-3",
+        "model": "gpt-image-1",
         "size": size,
         "quality": quality,
         "cost_usd": round(cost, 6),
@@ -159,7 +172,7 @@ def get_summary() -> Dict:
             "gpt-4o-mini": {"input_per_1m": 0.15, "output_per_1m": 0.60, "currency": "USD"},
             "claude-sonnet-4": {"input_per_1m": 3.00, "output_per_1m": 15.00, "currency": "USD"},
             "claude-haiku-4-5": {"input_per_1m": 1.00, "output_per_1m": 5.00, "currency": "USD"},
-            "dall-e-3": {"per_image_1024_standard": 0.040, "currency": "USD"},
+            "gpt-image-1": {"per_image_1024_medium": 0.042, "per_image_1024_high": 0.167, "currency": "USD"},
         },
     }
 
