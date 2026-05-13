@@ -185,11 +185,14 @@ class ScenarioGenerator:
 
         全シードが消化済みなら AI に新規（または発展系）を提案させ、そこから1件選ぶ。
         最終フォールバックは従来のランダム選択。
+
+        競合動画タイトルとの語彙重なりが大きいシードは weight を下げて選ばれにくくする
+        （完全排除はしない — 同じテーマでも切り口で差別化できるため）。
         """
         past_titles = {t["title"].lower() for t in self._collect_past_themes(channel.id, limit=80)}
         unused = [s for s in channel.theme_seeds if (s.get("title") or "").lower() not in past_titles]
         if unused:
-            return random.choice(unused)
+            return self._weighted_seed_choice(channel, unused)
         try:
             suggestions = self.suggest_themes(channel, count=3)
             if isinstance(suggestions, list) and suggestions:
@@ -199,7 +202,49 @@ class ScenarioGenerator:
                     return {"title": pick["title"], "angle": pick.get("angle", "") or ""}
         except Exception as e:
             print(f"  ⚠️ AI fresh-theme fallback failed: {e}")
-        return random.choice(channel.theme_seeds)
+        return self._weighted_seed_choice(channel, channel.theme_seeds)
+
+    def _weighted_seed_choice(self, channel, seeds: List[Dict]) -> Dict:
+        """競合動画と語彙が被るシードの weight を下げて選ぶ。
+
+        競合データが空 / 取得失敗時は通常の random.choice にフォールバック。
+        """
+        if not seeds:
+            raise ValueError("no seeds to choose from")
+        if len(seeds) == 1:
+            return seeds[0]
+        try:
+            from pipeline.analytics.competitor_intelligence import (
+                competitor_video_titles, theme_overlap_score,
+            )
+            comp_titles = competitor_video_titles(channel.id)
+        except Exception:
+            comp_titles = []
+        if not comp_titles:
+            return random.choice(seeds)
+        weights: List[float] = []
+        annotated: List[Tuple[float, Dict]] = []
+        for s in seeds:
+            title = (s.get("title") or "") if isinstance(s, dict) else ""
+            score = theme_overlap_score(title, comp_titles)
+            # 0.0 (被りなし) → 1.0、0.5 以上 (高被り) → 0.25 まで下げる
+            w = max(0.25, 1.0 - score)
+            weights.append(w)
+            annotated.append((score, s))
+        try:
+            picked = random.choices(seeds, weights=weights, k=1)[0]
+        except Exception:
+            return random.choice(seeds)
+        if isinstance(picked, dict):
+            picked_score = next(
+                (sc for sc, s in annotated if s is picked), 0.0
+            )
+            if picked_score >= 0.3:
+                print(
+                    f"  ⚠️ Picked theme has competitor overlap {picked_score:.2f} — "
+                    f"prompt will instruct on differentiation"
+                )
+        return picked
 
     def _persona_block(self, channel) -> str:
         """video_format.persona から差し込むプロンプトブロックを返す。
@@ -601,6 +646,16 @@ class ScenarioGenerator:
         except Exception as e:
             print(f"  ⚠️ analytics feedback addendum failed: {e}")
 
+        # Phase F-2: 競合分析からの差別化指示
+        competitor_addendum = ""
+        applied_competitor = False
+        try:
+            from pipeline.analytics.competitor_intelligence import build_competitor_addendum
+            competitor_addendum = build_competitor_addendum(channel.id) or ""
+            applied_competitor = bool(competitor_addendum)
+        except Exception as e:
+            print(f"  ⚠️ competitor intelligence addendum failed: {e}")
+
         # スタイル別プロンプト生成
         if channel.style == "monologue":
             prompt = self._build_monologue_prompt(channel, theme, duration)
@@ -615,6 +670,9 @@ class ScenarioGenerator:
         if analytics_addendum:
             prompt = prompt + "\n\n" + analytics_addendum
             print("  📊 Applying analytics-derived feedback (success patterns / retention / viewer requests)")
+        if competitor_addendum:
+            prompt = prompt + "\n\n" + competitor_addendum
+            print("  🥷 Applying competitor intelligence (title patterns / hot topics / gap themes)")
 
         # フル動画の最低行数 + 最低総文字数 + 1行あたり最低平均文字数
         ABSOLUTE_FLOOR_CHARS = 4800  # 10分 × 8.0文字/秒
@@ -827,6 +885,7 @@ class ScenarioGenerator:
             "style": channel.style,
             "applied_feedback": applied_feedback_ids,
             "applied_analytics_feedback": applied_analytics,
+            "applied_competitor_feedback": applied_competitor,
             "generated_by": chosen_provider,
             "compete": compete_meta,
         }
@@ -1023,6 +1082,35 @@ class ScenarioGenerator:
                 break
         past_block = "\n".join(f"- {t}" for t in past_unique) if past_unique else "(なし)"
 
+        # Phase F-2: 競合のホット動画 / gap_topics を提案プロンプトへ注入
+        competitor_block = ""
+        try:
+            from pipeline.analytics.competitor_intelligence import build_competitor_context
+            ctx = build_competitor_context(channel.id)
+            if ctx.get("available"):
+                parts: List[str] = []
+                hot = ctx.get("competitor_hot_topics") or []
+                if hot:
+                    parts.append("# 競合の最近の人気動画（被りを避け、切り口で差別化）")
+                    for h in hot[:8]:
+                        views = h.get("views") or 0
+                        parts.append(f"- 「{h['title']}」（{views:,} 再生 / {h.get('competitor','')}）")
+                gaps = ctx.get("gap_topics") or []
+                if gaps:
+                    parts.append("")
+                    parts.append("# 競合がまだカバーしていない可能性のあるテーマ（優先的に提案）")
+                    for g in gaps[:6]:
+                        parts.append(f"- {g}")
+                if parts:
+                    parts.insert(0, "")
+                    competitor_block = "\n".join(parts)
+                    print(
+                        f"  🥷 Injecting competitor signals "
+                        f"(hot:{len(hot)}, gaps:{len(gaps)})"
+                    )
+        except Exception as e:
+            print(f"  ⚠️ competitor signal injection failed: {e}")
+
         # Phase C: トレンド情報を取得してプロンプトへ注入
         trend_block = ""
         trend_keywords: List[str] = []
@@ -1073,6 +1161,12 @@ class ScenarioGenerator:
 - 結びつかない／無理な場合は `is_trending: false`, `trend_match: null`。
 
 # バズる条件: 「なぜ〇〇なのか」系 / 意外性 / 日常と科学のギャップ / 数字データ
+
+# 競合との差別化ルール
+- 上記「競合の最近の人気動画」と完全に同じテーマは禁止。
+- 競合が扱っている話題に乗る場合は、必ず別角度・別データ・別の意外な切り口を `angle` に明記。
+- 「競合がまだカバーしていない可能性のあるテーマ」リストの内容は優先的に提案して構わない。
+{competitor_block}
 {trend_block}
 """
 
