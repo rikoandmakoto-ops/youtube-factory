@@ -683,19 +683,18 @@ def _mix_bgm(final_clip, channel_format, channel_id=None, bgm_volume=None,
 # ============================================================
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
-def _call_openai_image(prompt, size="1024x1024", style="natural", channel_id=None):
-    """Call OpenAI DALL-E 3 API to generate an illustration."""
+def _call_openai_image(prompt, size="1024x1024", quality="medium", channel_id=None):
+    """Call OpenAI gpt-image-1 API to generate an illustration."""
     if not OPENAI_API_KEY:
         print("⚠️ OPENAI_API_KEY not set — skipping illustration generation")
         return None
     url = "https://api.openai.com/v1/images/generations"
     payload = json.dumps({
-        "model": "dall-e-3",
+        "model": "gpt-image-1",
         "prompt": prompt,
         "n": 1,
         "size": size,
-        "style": style,
-        "response_format": "b64_json",
+        "quality": quality,
     })
     req = urllib.request.Request(url, data=payload.encode("utf-8"), method="POST",
                                  headers={
@@ -703,30 +702,29 @@ def _call_openai_image(prompt, size="1024x1024", style="natural", channel_id=Non
                                      "Authorization": f"Bearer {OPENAI_API_KEY}",
                                  })
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urllib.request.urlopen(req, timeout=120) as resp:
             data = json.loads(resp.read())
         b64 = data["data"][0]["b64_json"]
         img_bytes = base64.b64decode(b64)
-        # Record API usage (DALL-E 3 standard quality)
         try:
             from pipeline import api_usage
             api_usage.record_image_usage(
-                size=size, quality="standard",
+                size=size, quality=quality,
                 channel_id=channel_id, purpose="illustration",
             )
         except Exception:
             pass
         return Image.open(io.BytesIO(img_bytes)).convert("RGBA")
     except Exception as e:
-        print(f"⚠️ DALL-E API error: {e}")
+        print(f"⚠️ Image API error: {e}")
         return None
 
 
-# DALL-E 3 size mapping (channel illustration_style.format → API size string)
+# gpt-image-1 size mapping (channel illustration_style.format → API size string)
 _ILLUST_FORMAT_SIZE = {
-    "landscape": "1792x1024",
+    "landscape": "1536x1024",
     "square":    "1024x1024",
-    "portrait":  "1024x1792",
+    "portrait":  "1024x1536",
 }
 
 # Composition phrase per format (steers DALL-E to fill the canvas correctly)
@@ -871,15 +869,15 @@ def generate_illustration(topic_text, cache_dir=None, idx=0, char_config=None,
 
     style = illust_style or {}
     fmt = style.get("format", "landscape")
-    size = _ILLUST_FORMAT_SIZE.get(fmt, "1792x1024")
-    dalle_style = style.get("style", "vivid")
-    if dalle_style not in ("vivid", "natural"):
-        dalle_style = "vivid"
+    size = _ILLUST_FORMAT_SIZE.get(fmt, "1536x1024")
+    quality = style.get("quality", "medium")
+    if quality not in ("low", "medium", "high", "auto"):
+        quality = "medium"
 
     prompt = _build_illustration_prompt(
         topic_text, char_config=char_config, illust_style=style, channel_id=channel_id
     )
-    img = _call_openai_image(prompt, size=size, style=dalle_style, channel_id=channel_id)
+    img = _call_openai_image(prompt, size=size, quality=quality, channel_id=channel_id)
     if img and cache_dir:
         Path(cache_dir).mkdir(parents=True, exist_ok=True)
         cache_path = Path(cache_dir) / f"illust_{idx:03d}.png"
@@ -1724,7 +1722,7 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
         illust_plans = plan_illustrations(scenario, interval_seconds=illust_interval, speed=plan_speed)
         if illust_style:
             print(f"🎨 Generating {len(illust_plans)} illustrations "
-                  f"(interval={illust_interval}s, style={illust_style.get('style','vivid')}, "
+                  f"(interval={illust_interval}s, quality={illust_style.get('quality','medium')}, "
                   f"format={illust_style.get('format','landscape')}, "
                   f"frame={illust_style.get('frame_style','wooden')})...")
         else:

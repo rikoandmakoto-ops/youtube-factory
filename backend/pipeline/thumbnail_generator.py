@@ -223,7 +223,7 @@ def design_brief(
 # Step 2 — DALL-E 3 background
 # ────────────────────────────────────────────────────────────────────────
 def generate_background(brief: Dict[str, Any], api_key: str, out_path: Path) -> Path:
-    """Call DALL-E 3 and save a 1280x720 PNG to `out_path`."""
+    """Call gpt-image-1 and save a 1280x720 PNG to `out_path`."""
     bg_concept = brief.get("background_concept", "")
     prompt = (
         f"{bg_concept}\n"
@@ -238,13 +238,11 @@ def generate_background(brief: Dict[str, Any], api_key: str, out_path: Path) -> 
     resp = _call_openai(
         "https://api.openai.com/v1/images/generations",
         {
-            "model": "dall-e-3",
+            "model": "gpt-image-1",
             "prompt": prompt,
             "n": 1,
-            "size": "1792x1024",
-            "style": "vivid",
-            "quality": "hd",
-            "response_format": "b64_json",
+            "size": "1536x1024",
+            "quality": "high",
         },
         api_key,
         timeout=240,
@@ -253,10 +251,21 @@ def generate_background(brief: Dict[str, Any], api_key: str, out_path: Path) -> 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_bytes(base64.b64decode(img_b64))
 
-    # Resize 1792x1024 → 1280x720
+    # gpt-image-1 returns 1536x1024 (3:2); crop center to 16:9 then resize to 1280x720
     try:
         from PIL import Image
         img = Image.open(out_path).convert("RGB")
+        target_ratio = 1280 / 720
+        w, h = img.size
+        src_ratio = w / h
+        if src_ratio > target_ratio:
+            new_w = int(round(h * target_ratio))
+            left = (w - new_w) // 2
+            img = img.crop((left, 0, left + new_w, h))
+        elif src_ratio < target_ratio:
+            new_h = int(round(w / target_ratio))
+            top = (h - new_h) // 2
+            img = img.crop((0, top, w, top + new_h))
         img = img.resize((1280, 720), Image.LANCZOS)
         img.save(out_path, "PNG")
     except Exception as e:
