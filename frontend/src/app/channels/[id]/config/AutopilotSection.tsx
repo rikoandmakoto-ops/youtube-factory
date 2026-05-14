@@ -290,11 +290,24 @@ export default function AutopilotSection({ channelId }: { channelId: string }) {
     try {
       const res = await fetch(
         `/api/channels/${encodeURIComponent(channelId)}/autopilot/run-now`,
-        { method: 'POST' }
+        {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          cache: 'no-store',
+        }
       );
+      if (res.status === 401) {
+        window.location.href = `/api/auth/clear?next=${encodeURIComponent(
+          `/channels/${channelId}/config`
+        )}`;
+        return;
+      }
+      const body = await res.json().catch(() => ({}));
       if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        throw new Error(body?.error || '実行失敗');
+        throw new Error(body?.error || `実行失敗 (${res.status})`);
+      }
+      if (body?.status !== 'triggered') {
+        throw new Error('実行リクエストはバックエンドに届きませんでした');
       }
       flash('🚀 即時実行をキックしました（履歴で進捗を確認）');
     } catch (e) {

@@ -15,6 +15,17 @@ export function middleware(req: NextRequest) {
   const token = req.cookies.get(SESSION_COOKIE)?.value;
 
   if (!token && !isPublic) {
+    // For /api/* fetches, redirecting to /login would return a 200 OK HTML
+    // page that `fetch()` silently follows — callers that only check
+    // `res.ok` (e.g. autopilot run-now) would then claim success while the
+    // request never reached the backend. Return 401 JSON instead so the
+    // client can surface the auth failure.
+    if (pathname.startsWith('/api/')) {
+      return NextResponse.json(
+        { error: 'Authentication required' },
+        { status: 401 }
+      );
+    }
     const url = req.nextUrl.clone();
     url.pathname = '/login';
     url.searchParams.set('next', pathname);
