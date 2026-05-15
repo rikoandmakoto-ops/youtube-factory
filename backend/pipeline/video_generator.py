@@ -2669,10 +2669,10 @@ def generate_video_title(title, thumb_info=None):
         return f"【ゆっくり解説】{title}"
 
 
-def generate_short_title(title, thumb_info=None):
+def generate_short_title(title, thumb_info=None, channel_dict=None):
     """
     YouTubeショートタイトル生成
-    型: フック質問＋テーマ名 #shorts
+    型: [シリーズ名]＋フック質問＋テーマ名 #shorts
     """
     hook = ""
     if thumb_info and thumb_info.get("hook_lines"):
@@ -2681,21 +2681,29 @@ def generate_short_title(title, thumb_info=None):
     if thumb_info and thumb_info.get("tagline"):
         tagline = thumb_info["tagline"]
 
+    series_prefix = ""
+    if channel_dict:
+        series_prefix = channel_dict.get("short_series_name") or ""
+
     if hook:
-        return f"{hook}#{title} #shorts #ゆっくり解説"
+        return f"{series_prefix}{hook}#{title} #shorts #ゆっくり解説"
     else:
-        return f"{title} #shorts #ゆっくり解説"
+        return f"{series_prefix}{title} #shorts #ゆっくり解説"
 
 
-def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=None, video_title=None):
+def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=None, video_title=None, channel_dict=None):
     """
     Generate description text files for both main and short videos.
     テンプレート型（カノン準拠）: タイトル→フック→概要→タイムスタンプ→チャンネル情報→ハッシュタグ
     """
+    # チャンネル名/コンセプト — channel_dict が渡されていればそちらを優先
+    channel_name = (channel_dict or {}).get("name") or CHANNEL_NAME
+    channel_concept = (channel_dict or {}).get("concept") or CHANNEL_CONCEPT
+
     # YouTubeタイトル（説明文の最上部に表示）
     if video_title is None:
         video_title = generate_video_title(title, thumb_info)
-    short_title = generate_short_title(title, thumb_info)
+    short_title = generate_short_title(title, thumb_info, channel_dict=channel_dict)
 
     hook = ""
     if thumb_info and thumb_info.get("hook_lines"):
@@ -2712,7 +2720,7 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
         "━━━━━━━━━━━━━━━━━━━━━━",
         "",
         f"👉 『{title}』",
-        f"   チャンネル「{CHANNEL_NAME}」で検索！",
+        f"   チャンネル「{channel_name}」で検索！",
         "",
         "▼ ショートでは語りきれなかった",
         "  詳しい解説・データ・裏話は本編へ ▼",
@@ -2721,8 +2729,8 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
         f"📝 {hook or first_line}",
         "━━━━━━━━━━━━━━━━━━━━━━",
         "",
-        f"📺 {CHANNEL_NAME}",
-        f"   {CHANNEL_CONCEPT}",
+        f"📺 {channel_name}",
+        f"   {channel_concept}",
         "",
         "#shorts #ゆっくり解説 #雑学 #豆知識 #科学",
     ]
@@ -2782,8 +2790,8 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
     # チャンネル情報
     lines_main += [
         "━━━━━━━━━━━━━━━━━━━━━━",
-        f"📺 チャンネル: {CHANNEL_NAME}",
-        f"   {CHANNEL_CONCEPT}",
+        f"📺 チャンネル: {channel_name}",
+        f"   {channel_concept}",
         "",
         "🔔 チャンネル登録・高評価をぜひお願いします！",
         "   新しい動画を見逃さないよう通知をONにしてね",
@@ -2911,7 +2919,7 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
     # Generate video_title if not provided
     if video_title is None:
         video_title = generate_video_title(title, thumb_info)
-    short_title = generate_short_title(title, thumb_info)
+    short_title = generate_short_title(title, thumb_info, channel_dict=channel_dict)
     results = {"output_dir": str(out_dir), "video_title": video_title, "short_title": short_title, "style": style}
 
     channel_id = (channel_dict or {}).get("id") if channel_dict else None
@@ -2997,7 +3005,7 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
 
     # 3. Description txts (common to both styles)
     _ck()
-    descs = generate_descriptions(title, short_scenario, full_scenario, thumb_info=thumb_info, video_title=video_title)
+    descs = generate_descriptions(title, short_scenario, full_scenario, thumb_info=thumb_info, video_title=video_title, channel_dict=channel_dict)
 
     short_desc_path = str(out_dir / f"{prefix}_ショート_説明文.txt")
     main_desc_path = str(out_dir / f"{prefix}_メイン_説明文.txt")
