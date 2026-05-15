@@ -170,6 +170,7 @@ class ChannelProfile:
             "id": self.id,
             "name": self.name,
             "concept": self.concept,
+            "short_series_name": self._raw.get("short_series_name", ""),
             "style": self.style,
             "youtube_channel_id": self.youtube_channel_id,
             "character_names": list(self.characters.keys()),
