@@ -1,0 +1,278 @@
+{
+  "id": "scp-lab",
+  "name": "ゆっくり異常存在SCPラボ",
+  "concept": "SCP財団の異常存在（オブジェクト）を、研究員ロールの理子と好奇心旺盛な真がゆっくり解説する『ラボ』形式のチャンネル。フル動画ではオブジェクトの発見経緯・収容プロトコル・実験記録・関連オブジェクトまで踏み込んで解説する。ショート動画はシリーズ名『一口SCP』として、1体のSCPを30秒で噛み砕いて紹介する一口サイズの導入動画を投稿する（タイトルの先頭に必ず『一口SCP：』を付ける）。",
+  "short_series_name": "一口SCP：",
+  "main_title_prefix": "【SCP解説】",
+  "style": "yukkuri",
+  "youtube_channel_id": null,
+  "competitors": [
+    "UC_Bp8vSyMiYOAss0pQHtZdg",
+    "UCGzXUlx8mai4wq7YitIMqyQ",
+    "UCx_NK1KWR0KN0qNDRV13cSw",
+    "UCuMgJT7crEGCTw7X8MUV69w",
+    "UCjBupWF1DppPiy7CVmz3s3g",
+    "UCxkQKgRyEHgHS-Yppi2stLg",
+    "UCON4TMtM-3jyf47UzvFmLSw",
+    "UCmkg9tzJ5KC-t9PdwjW7B9w",
+    "UCypYgWvXtOlqOt5ErGtAiLA",
+    "UC7HD2-vK2Ho6P5vOn7avSJA",
+    "UCJLKomAN16fmpIC4duYsOJQ"
+  ],
+  "characters": {
+    "理子": {
+      "side": "left",
+      "speaker_id": 2,
+      "text_color": [
+        255,
+        230,
+        120
+      ],
+      "expressions": [
+        "normal",
+        "laugh",
+        "sad",
+        "surprise",
+        "think"
+      ],
+      "role": "ラボの主任研究員（理性的で淡々とSCPを解説する女の子）",
+      "appearance": "young Japanese anime girl with long silver-white ponytail hair, wearing a clean white lab coat with a green SCP-style researcher badge clipped on the chest pocket, calm intellectual expression, chibi-style with a big round head and big eyes, looks like an SCP Foundation lab researcher"
+    },
+    "真": {
+      "side": "right",
+      "speaker_id": 3,
+      "text_color": [
+        150,
+        220,
+        255
+      ],
+      "expressions": [
+        "normal",
+        "laugh",
+        "surprise",
+        "happy",
+        "sad"
+      ],
+      "role": "新入りラボ助手（好奇心旺盛で素朴な疑問を投げる男の子）",
+      "appearance": "young Japanese anime boy named Makoto with short black hair and round glasses, wearing a dark teal lab coat over a casual shirt with a junior researcher ID card, curious slightly nervous expression, chibi-style with a big round head and big eyes, looks like an SCP Foundation junior assistant"
+    }
+  },
+  "publish_settings": {
+    "auto_publish": false,
+    "default_privacy": "private",
+    "short_delay_minutes": 10,
+    "short_description_template": "🎬 フル収容記録はこちら！\n{main_url}\n\n{original_description}"
+  },
+  "thumbnail_template": {
+    "badge_text": "SCPラボ",
+    "badge_color": [
+      40,
+      140,
+      90
+    ],
+    "hook_color": [
+      255,
+      230,
+      80
+    ],
+    "subtitle_color": [
+      180,
+      220,
+      255
+    ],
+    "bg_tone": "dark"
+  },
+  "defaults": {
+    "speed": 1.3,
+    "target_duration": 720,
+    "bg_type": "static",
+    "bg_path": null,
+    "use_illustrations": true,
+    "hashtags": [
+      "#SCP",
+      "#SCP財団",
+      "#ゆっくり解説",
+      "#異常存在",
+      "#都市伝説",
+      "#一口SCP"
+    ],
+    "category": "24"
+  },
+  "content_policy": {
+    "tone": "mysterious",
+    "age_rating": "teen_plus",
+    "cta_position": "after_hook",
+    "cta_style": "ominous",
+    "guidelines": [
+      "SCP財団Wiki（CC BY-SA 3.0）に準拠して原典クレジットを概要欄に明記する",
+      "原文の改変は最小限にし、ラボ視点での考察・実験記録・収容プロトコルの解説に焦点を当てる",
+      "過度なグロ・残酷描写は避け、雰囲気と心理的恐怖、知的好奇心で見せる",
+      "ショート（一口SCP）はタイトル先頭に『一口SCP：』を必ず付け、30秒でオブジェクトを1体だけ紹介する一口サイズ構成にする",
+      "口調はクリニカルで淡々とした研究員視点。煽りすぎず、不気味さと収容報告書らしい無機質さを残す"
+    ],
+    "avoid": [
+      "原文の長文コピペ",
+      "現実の事件・人物との混同",
+      "過度なゴア描写",
+      "オブジェクトの混同（1ショートに複数SCPを詰め込まない）",
+      "「日常」「身近な」「科学的に解説」のような日常科学チャンネル寄りの言い回し"
+    ]
+  },
+  "theme_seeds": [
+    {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルをラボ視点で解説"
+    },
+    {
+      "title": "SCP-096「シャイガイ」",
+      "angle": "顔を見られると殺しに来る存在。徹底した隠蔽体制と回避プロトコル"
+    },
+    {
+      "title": "SCP-049「ペスト医師」",
+      "angle": "ペスト医師を名乗る存在と『治療』の正体、収容違反事例"
+    },
+    {
+      "title": "SCP-682「不死身の爬虫類」",
+      "angle": "あらゆる収容・終了試行を生き延びる最凶クラスのオブジェクト"
+    },
+    {
+      "title": "SCP-999「タックル・モンスター」",
+      "angle": "癒し系SCPの代表。Safeクラスに分類される理由と心理的効果"
+    },
+    {
+      "title": "SCP-3008「無限のIKEA」",
+      "angle": "閉じ込められた人々とスタッフの生態。脱出条件の検証"
+    },
+    {
+      "title": "SCP-106「オールド・マン」",
+      "angle": "腐敗をもたらす老人。ポケット次元への引きずり込み"
+    },
+    {
+      "title": "SCP-914「クロックワーク」",
+      "angle": "粗削り〜超精密の5段階で物体を変換する装置の実験記録"
+    },
+    {
+      "title": "SCP-1471「MalO ver1.0.0」",
+      "angle": "インストールすると現れるアプリ型SCP。現代的恐怖の構造"
+    },
+    {
+      "title": "SCP-426「私はトースター」",
+      "angle": "一人称が感染する家電SCP。一人称規約の徹底"
+    },
+    {
+      "title": "SCP-3999「我」",
+      "angle": "メタフィクション的最恐SCP。読み解き方をラボ視点で解説"
+    },
+    {
+      "title": "SCP-2521「●●●●●●●●」",
+      "angle": "言及した瞬間に情報を奪うSCPと、その存在自体の伝達手段"
+    },
+    {
+      "title": "Keterクラスとは何か",
+      "angle": "オブジェクトクラスの分類と、代表的なKeterオブジェクトを比較"
+    },
+    {
+      "title": "ミーム災害SCP入門",
+      "angle": "認識した瞬間に感染するSCPの種類と心理的対策"
+    },
+    {
+      "title": "Dクラス職員制度の実態",
+      "angle": "実験で消費される人員制度の運用と倫理問題"
+    }
+  ],
+  "next_video_genre_hint": "次回テーマは『別のSCPオブジェクト』『SCPに関連する組織や概念』『Kクラスシナリオ』『収容違反事例』など、SCP財団の世界観に閉じたテーマを必ず選ぶ。「身近な体の不思議」「日常の違和感」のような日常科学系のテーマは絶対に提案しない。",
+  "video_format": {
+    "layout": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "char_canvas_w_ratio": 0.418,
+      "char_y_offset": 130,
+      "char_x_inset_ratio": 0.15,
+      "speaker_glow": true,
+      "nonspeaker_opacity": 0.45,
+      "text_box_height_ratio": 0.2,
+      "text_box_opacity": 210,
+      "text_font_size": 42,
+      "text_stroke_width": 3,
+      "text_line_spacing": 4,
+      "text_margin_x": 60,
+      "illustration_size": 360,
+      "illustration_interval": 30
+    },
+    "colors": {
+      "bg_color": [
+        8,
+        14,
+        20,
+        255
+      ],
+      "text_box_color": [
+        0,
+        0,
+        0
+      ],
+      "text_stroke_color": [
+        0,
+        0,
+        0
+      ]
+    },
+    "audio": {
+      "speed": 1.3,
+      "pause_between": 0.4,
+      "bgm_volume": 0.22,
+      "bgm_path": null
+    },
+    "illustration_style": {
+      "style": "vivid",
+      "format": "landscape",
+      "art_style": "cinematic SCP Foundation containment-cell illustration with cold institutional laboratory lighting. Industrial concrete walls, blast doors, steel observation windows, fluorescent green-tinted gloom with sodium-yellow hazard accents. Surveillance-camera composition with slight CRT scanline texture, soft vignette, and subtle film grain. Restrained palette of charcoal, steel blue, biohazard yellow, and emergency red. Confident clean linework with painterly shading — feels like a still pulled from leaked containment footage. Strictly NOT kawaii, NOT pastel, NOT textbook-cute. The mood is unsettling, clinical, and slightly ominous.",
+      "background": "dim SCP containment cell or observation chamber interior. Reinforced concrete walls with stenciled 'CONTAINMENT' / item-number labels, steel grating on the floor, a heavy blast door with red warning light, and faint biohazard-yellow caution stripes along the lower edge. Slight green CRT scanlines and a heavy vignette around the edges.",
+      "include_characters": false,
+      "frame_style": "containment-cell",
+      "extra_prompt": "Compose like a surveillance still from an SCP Foundation containment cell — the subject of the video is implied through silhouette, partial view, or its containment apparatus rather than fully revealed (preserve mystery). Add a small fake classification stamp in red ('KETER / EUCLID / SAFE' as appropriate) and faint stenciled item-number labels like 'SCP-XXX'. Use stencil-style Japanese labels with thin pointer lines if labels are needed. Heavy atmospheric haze. Absolutely NO cute mascots, NO sparkles, NO pastel backgrounds. The shot should feel like leaked Foundation footage, not a textbook diagram.",
+      "allow_text_labels": true,
+      "allow_frame": true
+    },
+    "branding": {
+      "watermark_text": "SCP LAB",
+      "watermark_opacity": 28,
+      "watermark_position": "bottom_right",
+      "cta_style": "ominous"
+    },
+    "output": {
+      "target_duration": 720,
+      "gen_type": "both",
+      "bg_type": "static",
+      "bg_path": null,
+      "use_illustrations": true
+    },
+    "youtube": {
+      "channel_id": null,
+      "default_tags": [
+        "SCP",
+        "SCP財団",
+        "SCP解説",
+        "異常存在",
+        "ゆっくり解説",
+        "都市伝説",
+        "怖い話",
+        "考察",
+        "ホラー",
+        "一口SCP"
+      ],
+      "default_category": "24",
+      "privacy_status": "private",
+      "upload_schedule": null
+    },
+    "analytics": {
+      "enabled": false,
+      "performance_threshold": {
+        "min_ctr": 5,
+        "min_retention": 45,
+        "min_views_7d": 2000
+      }
+    }
+  }
+}
