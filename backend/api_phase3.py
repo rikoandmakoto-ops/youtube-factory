@@ -165,13 +165,33 @@ async def channel_youtube_callback(
     _=Depends(require_session),
 ) -> Dict[str, Any]:
     """指定チャンネル用の OAuth コールバック処理。"""
-    _require_channel(channel_id)
+    ch = _require_channel(channel_id)
     try:
-        return yt_oauth.exchange_code_for(channel_id, request.state, request.code)
+        result = yt_oauth.exchange_code_for(channel_id, request.state, request.code)
     except RuntimeError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"OAuth exchange failed: {e}")
+
+    # YouTube API から取得した本当のチャンネル名・IDをチャンネルJSONに反映。
+    # 表示名(`name`)はユーザーが内部ID以外に変更していなければ更新する
+    # （`404studio` のような placeholder のまま放置されているケースを救う）。
+    yt_name = result.get("youtube_channel_name")
+    yt_id = result.get("youtube_channel_id")
+    updates: Dict[str, Any] = {}
+    if yt_id and ch.youtube_channel_id != yt_id:
+        updates["youtube_channel_id"] = yt_id
+    if yt_name and ch.name in (None, "", channel_id):
+        updates["name"] = yt_name
+    if updates:
+        cm = _state.get("channel_manager")
+        if cm is not None:
+            try:
+                cm.update_channel(channel_id, updates)
+            except Exception as e:
+                # 同期に失敗しても OAuth 連携自体は成功扱いとする
+                print(f"⚠️ Failed to sync YouTube metadata to channel JSON: {e}")
+    return result
 
 
 @router.delete("/channels/{channel_id}/youtube")
