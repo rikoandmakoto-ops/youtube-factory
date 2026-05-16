@@ -19,6 +19,31 @@ from dataclasses import dataclass, field
 from .video_format import VideoFormat
 
 # ============================================================
+# Image acquisition mode
+# ============================================================
+
+IMAGE_MODES = ("generate", "collect", "mix")
+DEFAULT_IMAGE_MODE = "generate"
+
+DEFAULT_IMAGE_COLLECT_SETTINGS: Dict[str, Any] = {
+    "provider": "auto",          # "auto" | "pixabay" | "unsplash" | "google_cse"
+    "safe_search": True,
+    "license_filter": "cc",      # "cc" | "any"
+    "max_per_query": 5,
+    "attribution_template": "出典: {source}",
+    "mix_strategy": "heuristic", # "heuristic" | "always_collect" | "always_generate"
+}
+
+
+def normalize_image_mode(value: Optional[str]) -> str:
+    """Coerce any incoming value to a valid image_mode (defaults to generate)."""
+    if not value:
+        return DEFAULT_IMAGE_MODE
+    v = str(value).strip().lower()
+    return v if v in IMAGE_MODES else DEFAULT_IMAGE_MODE
+
+
+# ============================================================
 # Channel Profile dataclass
 # ============================================================
 
@@ -38,6 +63,8 @@ class ChannelProfile:
     video_format: VideoFormat = field(default_factory=VideoFormat)
     publish_settings: Dict[str, Any] = field(default_factory=dict)
     voice_style: Dict[str, Any] = field(default_factory=dict)
+    image_mode: str = DEFAULT_IMAGE_MODE
+    image_collect: Dict[str, Any] = field(default_factory=dict)
     _raw: Dict = field(default_factory=dict, repr=False)
 
     # ── Pipeline integration helpers ──
@@ -102,6 +129,20 @@ class ChannelProfile:
 
     def get_use_illustrations(self) -> bool:
         return self.defaults.get("use_illustrations", True)
+
+    def get_image_mode(self) -> str:
+        """Image acquisition mode: 'generate' | 'collect' | 'mix' (default: 'generate')."""
+        return normalize_image_mode(self.image_mode)
+
+    def get_image_collect_settings(self) -> Dict[str, Any]:
+        """Merged collect settings: channel overrides on top of defaults.
+
+        The pipeline always gets a fully populated dict, so it never has to
+        worry about missing keys (e.g. attribution_template).
+        """
+        merged = dict(DEFAULT_IMAGE_COLLECT_SETTINGS)
+        merged.update(self.image_collect or {})
+        return merged
 
     def get_hashtags(self) -> List[str]:
         return self.defaults.get("hashtags", [])
@@ -187,6 +228,8 @@ class ChannelProfile:
             "theme_seeds": self.theme_seeds,
             "thumbnail_template": self.thumbnail_template,
             "publish_settings": self.get_publish_settings(),
+            "image_mode": self.get_image_mode(),
+            "image_collect": self.get_image_collect_settings(),
             "video_format": vf.to_dict(),
             "youtube": {
                 "channel_id": vf.youtube.channel_id,
@@ -250,6 +293,8 @@ class ChannelManager:
                     video_format=vf,
                     publish_settings=raw.get("publish_settings", {}),
                     voice_style=raw.get("voice_style", {}),
+                    image_mode=normalize_image_mode(raw.get("image_mode")),
+                    image_collect=raw.get("image_collect", {}),
                     _raw=raw,
                 )
                 self._channels[profile.id] = profile
@@ -293,9 +338,11 @@ class ChannelManager:
         for key in ("name", "concept", "style", "youtube_channel_id",
                      "characters", "thumbnail_template", "defaults",
                      "content_policy", "theme_seeds", "publish_settings",
-                     "voice_style"):
+                     "voice_style", "image_collect"):
             if key in updates:
                 raw[key] = updates[key]
+        if "image_mode" in updates:
+            raw["image_mode"] = normalize_image_mode(updates["image_mode"])
         # video_format 更新（部分更新対応）
         if "video_format" in updates:
             existing_vf = raw.get("video_format", {})

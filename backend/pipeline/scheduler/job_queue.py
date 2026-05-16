@@ -321,6 +321,8 @@ class JobQueue:
                 char_config=ch_chars,
                 channel_dict=ch_dict,
                 bgm_volume=bgm_volume_override,
+                image_mode=channel.get_image_mode() if channel else "generate",
+                image_collect_settings=channel.get_image_collect_settings() if channel else None,
                 cancel_check=_cancel_check,
                 scenario_meta={
                     "theme": sd.get("theme"),

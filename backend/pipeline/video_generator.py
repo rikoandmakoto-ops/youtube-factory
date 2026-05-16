@@ -1065,7 +1065,52 @@ class FrameRenderer:
         card_layer.paste(illust, (card_x + border, card_y + border), illust)
         return card_layer
 
-    def _build_overlay(self, speaker, text, expression="normal", diagram=False, diagram_text=None, illustration=None):
+    def _render_attribution(self, attribution_text, isz_w, isz_h, W, H, usable_h):
+        """Draw a small attribution caption under the illustration card.
+
+        Returns a full-frame RGBA layer ready for alpha_composite, or None if
+        the text is empty.
+        """
+        if not attribution_text:
+            return None
+        font_size = max(18, int(self.text_font_size * 0.5))
+        font = jp_font(font_size)
+        draw_layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        draw = ImageDraw.Draw(draw_layer)
+
+        try:
+            bbox = draw.textbbox((0, 0), attribution_text, font=font)
+            tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+        except Exception:
+            tw, th = font_size * len(attribution_text) // 2, font_size
+
+        pad_x, pad_y = 12, 6
+        box_w = tw + pad_x * 2
+        box_h = th + pad_y * 2
+
+        # Position the chip centered horizontally, just below the illustration card.
+        # We mirror the card layout in _render_illust_frame so the chip sits at
+        # the bottom edge of the framed image.
+        border = 14 if (self.frame_style or "wooden").lower() in ("wooden", "blackboard", "whiteboard") else 0
+        frame_w = isz_w + border * 2
+        frame_h = isz_h + border * 2
+        card_x = (W - frame_w) // 2
+        card_y = (usable_h - frame_h) // 2
+        chip_x = card_x + (frame_w - box_w) // 2
+        chip_y = card_y + frame_h + 6
+        # Keep chip on-screen: don't let it overlap the subtitle bar.
+        text_box_h = int(H * self.text_box_h_ratio)
+        max_chip_y = H - text_box_h - box_h - 4
+        if chip_y > max_chip_y:
+            chip_y = max_chip_y
+
+        chip_bg = Image.new("RGBA", (box_w, box_h), (0, 0, 0, 170))
+        draw_layer.paste(chip_bg, (chip_x, chip_y), chip_bg)
+        draw.text((chip_x + pad_x, chip_y + pad_y), attribution_text,
+                  font=font, fill=(245, 245, 245, 255))
+        return draw_layer
+
+    def _build_overlay(self, speaker, text, expression="normal", diagram=False, diagram_text=None, illustration=None, attribution=None):
         W, H = self.W, self.H
         overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         text_box_h = int(H * self.text_box_h_ratio)
@@ -1076,6 +1121,7 @@ class FrameRenderer:
         overlay.paste(bar, (0, H - text_box_h), bar)
 
         # Illustration panel — frame style is channel-configurable.
+        attribution_box = None  # populated below when attribution is set
         if illustration:
             usable_h = H - text_box_h
             # Target box depends on illustration aspect (landscape fills wide; portrait/square narrower).
@@ -1097,6 +1143,14 @@ class FrameRenderer:
 
             card_layer = self._render_illust_frame(illust, isz_w, isz_h, W, H, usable_h)
             overlay = Image.alpha_composite(overlay, card_layer)
+
+            # Attribution caption for collected (non-AI) images. We position it
+            # just under the illustration card so the source remains visible
+            # in screenshots and clipped re-uses.
+            if attribution:
+                attr_layer = self._render_attribution(attribution, isz_w, isz_h, W, H, usable_h)
+                if attr_layer is not None:
+                    overlay = Image.alpha_composite(overlay, attr_layer)
 
         # Characters — always show both, highlight the speaker
         for char_name, cfg in self.char_cfg.items():
@@ -1156,8 +1210,8 @@ class FrameRenderer:
 
         return overlay
 
-    def make_video_clip(self, speaker, text, duration, time_offset, expression="normal", diagram=False, diagram_text=None, illustration=None):
-        overlay = self._build_overlay(speaker, text, expression, diagram, diagram_text, illustration=illustration)
+    def make_video_clip(self, speaker, text, duration, time_offset, expression="normal", diagram=False, diagram_text=None, illustration=None, attribution=None):
+        overlay = self._build_overlay(speaker, text, expression, diagram, diagram_text, illustration=illustration, attribution=attribution)
         if self.bg_video is None:
             bg = self._get_bg_frame(0)
             frame = np.array(Image.alpha_composite(bg, overlay).convert("RGB"))
@@ -1695,7 +1749,8 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
 def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_dir=None,
                         bg_type="auto", speed=None, target_duration=None, use_illustrations=True,
                         channel_format=None, char_config=None, channel_id=None,
-                        bgm_volume=None):
+                        bgm_volume=None,
+                        image_mode="generate", image_collect_settings=None):
     print("=" * 60)
     print(f"フル動画生成: {title}")
     print("=" * 60)
@@ -1717,28 +1772,74 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
     illust_style = (channel_format or {}).get("illustration_style", {}) or {}
     plan_speed = speed if speed else 1.3
     illust_map = {}  # {entry_index: PIL.Image}
-    if use_illustrations and OPENAI_API_KEY:
+    attribution_map = {}  # {entry_index: str}  — overlay text for collected images
+    mode = (image_mode or "generate").lower()
+    if mode not in ("generate", "collect", "mix"):
+        mode = "generate"
+    # In collect/mix mode we may run without OPENAI; only block when pure-generate has no key.
+    can_run = use_illustrations and (
+        mode in ("collect", "mix") or OPENAI_API_KEY
+    )
+    if can_run:
         illust_cache = str(Path(out_dir) / "illustrations")
         illust_plans = plan_illustrations(scenario, interval_seconds=illust_interval, speed=plan_speed)
-        if illust_style:
-            print(f"🎨 Generating {len(illust_plans)} illustrations "
-                  f"(interval={illust_interval}s, quality={illust_style.get('quality','medium')}, "
-                  f"format={illust_style.get('format','landscape')}, "
-                  f"frame={illust_style.get('frame_style','wooden')})...")
-        else:
-            print(f"🎨 Generating {len(illust_plans)} illustrations (interval={illust_interval}s)...")
+        print(f"🎨 image_mode={mode} — planning {len(illust_plans)} images "
+              f"(interval={illust_interval}s)")
+
+        try:
+            from pipeline import image_collector
+        except Exception:
+            image_collector = None
+            if mode in ("collect", "mix"):
+                print("⚠️ image_collector unavailable — falling back to generate")
+                mode = "generate"
+
         for idx, (entry_idx, topic) in enumerate(illust_plans):
-            img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
-                                        char_config=char_config, illust_style=illust_style)
-            if img:
+            # Per-scene routing for mix mode.
+            if mode == "mix" and image_collector is not None:
+                per_mode = image_collector.decide_mode(topic, settings=image_collect_settings)
+            else:
+                per_mode = mode
+
+            img = None
+            attribution = None
+
+            if per_mode == "collect" and image_collector is not None:
+                got = image_collector.search_and_cache(
+                    topic, cache_dir=Path(illust_cache),
+                    idx=idx, settings=image_collect_settings,
+                )
+                if got and got.get("image") is not None:
+                    img = got["image"]
+                    attribution = got.get("attribution_text") or None
+                    print(f"  🌐 [{idx+1}/{len(illust_plans)}] Collected for line {entry_idx} "
+                          f"({got.get('provider','?')})")
+                elif mode == "mix" and OPENAI_API_KEY:
+                    # Mix mode allows graceful fall-through to generation when
+                    # the collector can't find a usable image.
+                    img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
+                                                char_config=char_config, illust_style=illust_style)
+                    if img:
+                        print(f"  🎨 [{idx+1}/{len(illust_plans)}] Generated (collect missed) for line {entry_idx}")
+
+            else:  # "generate"
+                if OPENAI_API_KEY:
+                    img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
+                                                char_config=char_config, illust_style=illust_style)
+                    if img:
+                        print(f"  🖼️ [{idx+1}/{len(illust_plans)}] Generated for line {entry_idx}")
+
+            if img is not None:
                 illust_map[entry_idx] = img
-                print(f"  🖼️ [{idx+1}/{len(illust_plans)}] Illustration for line {entry_idx}")
+                if attribution:
+                    attribution_map[entry_idx] = attribution
             time.sleep(0.5)  # Rate limit buffer
     elif use_illustrations:
-        print("⚠️ OPENAI_API_KEY not set — illustrations skipped")
+        print("⚠️ OPENAI_API_KEY not set — illustrations skipped (set image_mode='collect' to use web images instead)")
 
     audio_clips = []
     current_illust = None  # sticky: keep showing the latest illustration until the next one
+    current_attribution = None
     mood_timeline = []  # list of (start, end, mood) per line for per-scene BGM
     for i, entry in enumerate(scenario):
         sp, tx = entry["speaker"], entry["text"]
@@ -1753,11 +1854,14 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
         # Sticky illustration: switch when this entry has a new one, otherwise keep showing the previous.
         if i in illust_map:
             current_illust = illust_map[i]
+            current_attribution = attribution_map.get(i)  # cleared when switching to a generated image
         illust = current_illust
+        attribution = current_attribution
 
         clip = renderer.make_video_clip(sp, tx, dur, t_off, expr,
                                          entry.get("diagram", False), entry.get("diagram_text"),
-                                         illustration=illust)
+                                         illustration=illust,
+                                         attribution=attribution)
         ac = AudioFileClip(wav)
         audio_clips.append(ac)
         clip = clip.with_audio(ac)
@@ -2864,6 +2968,7 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                  style="yukkuri", use_illustrations=True,
                  channel_format=None, char_config=None, channel_dict=None,
                  bgm_volume=None,
+                 image_mode="generate", image_collect_settings=None,
                  cancel_check=None, scenario_meta=None):
     """
     Generate all outputs into one folder.
@@ -3001,7 +3106,9 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                                                    target_duration=target_duration,
                                                    use_illustrations=use_illustrations,
                                                    channel_format=channel_format, char_config=char_config,
-                                                   channel_id=channel_id, bgm_volume=bgm_volume)
+                                                   channel_id=channel_id, bgm_volume=bgm_volume,
+                                                   image_mode=image_mode,
+                                                   image_collect_settings=image_collect_settings)
 
     # 3. Description txts (common to both styles)
     _ck()
@@ -3131,6 +3238,8 @@ def _run_channel_mode(args):
         use_illustrations=use_illustrations,
         channel_format=ch.video_format.to_dict(),
         char_config=ch.char_config(),
+        image_mode=ch.get_image_mode(),
+        image_collect_settings=ch.get_image_collect_settings(),
     )
 
 

@@ -5,6 +5,15 @@
   "short_series_name": "一口SCP：",
   "style": "yukkuri",
   "youtube_channel_id": "UCXEyJqJt9Ug94iOHdpd5a8w",
+  "image_mode": "generate",
+  "image_collect": {
+    "provider": "auto",
+    "safe_search": true,
+    "license_filter": "cc",
+    "max_per_query": 5,
+    "attribution_template": "出典: {source}",
+    "mix_strategy": "heuristic"
+  },
   "voice_style": {
     "tone": "不気味・ミステリアス・研究報告風",
     "narrator_persona": "財団の元研究員。淡々としつつも時折恐怖を滲ませる",
