@@ -259,6 +259,32 @@ class ScenarioGenerator:
         block = persona.to_prompt_block() if persona else ""
         return f"\n{block}\n" if block else ""
 
+    def _voice_style_block(self, channel) -> str:
+        """channel.voice_style からシナリオプロンプト冒頭に差し込むブロックを返す。
+
+        未設定 / 空dict なら空文字（=従来通り）。設定があれば
+        トーン・語り手ペルソナ・冒頭フック例・禁止要素をまとめた
+        「# このチャンネルの語り口」ブロックを返す。
+        """
+        vs = getattr(channel, "voice_style", None) or {}
+        if not vs:
+            return ""
+        lines = ["# このチャンネルの語り口（最優先・全文を通して厳守）"]
+        tone = vs.get("tone")
+        if tone:
+            lines.append(f"- トーン: {tone}")
+        persona = vs.get("narrator_persona")
+        if persona:
+            lines.append(f"- 語り手: {persona}")
+        hooks = vs.get("opening_hooks") or []
+        if hooks:
+            sample = " / ".join(f"「{h}」" for h in hooks)
+            lines.append(f"- 冒頭フック例（雰囲気を真似る・丸ごとコピペは不可）: {sample}")
+        forbidden = vs.get("forbidden") or []
+        if forbidden:
+            lines.append(f"- 使用禁止ワード/要素: {', '.join(forbidden)}")
+        return "\n".join(lines) + "\n\n"
+
     def _build_yukkuri_prompt(self, channel, theme: Dict, target_duration: int) -> str:
         """ゆっくり対話スタイルのシナリオ生成プロンプト"""
         char_names = list(channel.characters.keys())
@@ -285,9 +311,11 @@ class ScenarioGenerator:
         expr0 = channel.characters[c0].get("expressions", ["normal"])
         expr1 = channel.characters[c1].get("expressions", ["normal"])
 
+        voice_block = self._voice_style_block(channel)
+
         return f"""ゆっくり解説動画のシナリオを生成。JSONのみ出力。
 
-# チャンネル: {channel.name} / {channel.concept} / トーン:{tone} / CTA:{cta_style}
+{voice_block}# チャンネル: {channel.name} / {channel.concept} / トーン:{tone} / CTA:{cta_style}
 # キャラ:
 {char_lines}
 # テーマ: {theme["title"]} / 切り口:{theme.get("angle","自由")}
@@ -388,9 +416,11 @@ class ScenarioGenerator:
         tone = channel.content_policy.get("tone", "serious_documentary")
         cta_pos = channel.content_policy.get("cta_position", "end_only")
 
+        voice_block = self._voice_style_block(channel)
+
         return f"""ドキュメンタリー風ナレーション動画のシナリオを生成。JSONのみ出力。
 
-# チャンネル: {channel.name} / {channel.concept} / トーン:{tone}
+{voice_block}# チャンネル: {channel.name} / {channel.concept} / トーン:{tone}
 # ナレーター: {narrator.get("role", "冷静な男性ナレーター")}
 # テーマ: {theme["title"]} / 切り口:{theme.get("angle","自由")}
 {persona_block}# ポリシー:

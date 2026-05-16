@@ -1,10 +1,25 @@
 {
-  "id": "404studio",
-  "name": "異常存在SCPゆっくり解説ラボ",
-  "concept": "SCP財団の異常存在（オブジェクト）や事件をゆっくり解説するエンタメ・考察チャンネル。怖い・不気味・知的好奇心を刺激するSCPの世界をわかりやすく紹介する。",
+  "id": "scp-lab",
+  "name": "ゆっくり異常存在SCPラボ",
+  "concept": "SCP財団の異常存在（オブジェクト）や事件を解説するホラー/ミステリー系チャンネル。不気味さと考察性で『財団から流出した報告書』のような雰囲気を演出する。",
   "short_series_name": "一口SCP：",
   "style": "yukkuri",
   "youtube_channel_id": "UCXEyJqJt9Ug94iOHdpd5a8w",
+  "voice_style": {
+    "tone": "不気味・ミステリアス・研究報告風",
+    "narrator_persona": "財団の元研究員。淡々としつつも時折恐怖を滲ませる",
+    "opening_hooks": [
+      "やぁ、今日も異常な案件が届いたよ",
+      "この報告書…読んだら後悔するかもしれない",
+      "財団データベースから、また一つ流出した"
+    ],
+    "forbidden": [
+      "日常の疑問",
+      "科学的に解説",
+      "リコ",
+      "マコト"
+    ]
+  },
   "competitors": [
     "UC_Bp8vSyMiYOAss0pQHtZdg",
     "UCGzXUlx8mai4wq7YitIMqyQ",
@@ -255,7 +270,7 @@
       "allow_frame": true
     },
     "branding": {
-      "watermark_text": "404studio",
+      "watermark_text": "SCPラボ",
       "cta_style": "ominous"
     },
     "output": {
@@ -266,7 +281,7 @@
       "use_illustrations": true
     },
     "youtube": {
-      "channel_id": null,
+      "channel_id": "UCXEyJqJt9Ug94iOHdpd5a8w",
       "default_tags": [
         "SCP",
         "SCP財団",
