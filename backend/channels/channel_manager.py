@@ -37,6 +37,7 @@ class ChannelProfile:
     theme_seeds: List[Dict[str, str]] = field(default_factory=list)
     video_format: VideoFormat = field(default_factory=VideoFormat)
     publish_settings: Dict[str, Any] = field(default_factory=dict)
+    voice_style: Dict[str, Any] = field(default_factory=dict)
     _raw: Dict = field(default_factory=dict, repr=False)
 
     # ── Pipeline integration helpers ──
@@ -248,6 +249,7 @@ class ChannelManager:
                     theme_seeds=raw.get("theme_seeds", []),
                     video_format=vf,
                     publish_settings=raw.get("publish_settings", {}),
+                    voice_style=raw.get("voice_style", {}),
                     _raw=raw,
                 )
                 self._channels[profile.id] = profile
@@ -290,7 +292,8 @@ class ChannelManager:
         # トップレベルフィールド更新
         for key in ("name", "concept", "style", "youtube_channel_id",
                      "characters", "thumbnail_template", "defaults",
-                     "content_policy", "theme_seeds", "publish_settings"):
+                     "content_policy", "theme_seeds", "publish_settings",
+                     "voice_style"):
             if key in updates:
                 raw[key] = updates[key]
         # video_format 更新（部分更新対応）
