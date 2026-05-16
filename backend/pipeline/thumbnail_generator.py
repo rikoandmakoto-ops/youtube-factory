@@ -89,6 +89,7 @@ def design_brief(
     channel_meta = channel_meta or {}
     channel_name = channel_meta.get("name") or ""
     concept = channel_meta.get("concept") or ""
+    style_hint = channel_meta.get("style_hint") or ""
 
     feedback_block = ""
     if feedback:
@@ -143,9 +144,18 @@ def design_brief(
             if has_vision else ""
         )
     )
+    style_hint_block = ""
+    if style_hint:
+        style_hint_block = (
+            "\n【チャンネル固有のサムネ・スタイル方針 — 最優先で従う】\n"
+            + style_hint.strip()
+            + "\n"
+        )
+
     user = (
         f"動画タイトル: 「{title}」\n"
         + (f"チャンネル: 「{channel_name}」 — {concept}\n" if channel_name else "")
+        + style_hint_block
         + feedback_block
         + competitor_block
         + vision_intro
@@ -559,6 +569,7 @@ def generate_thumbnail(
         title, api_key, channel_meta={
             "name": channel_config.get("name"),
             "concept": channel_config.get("concept"),
+            "style_hint": (channel_config.get("thumbnail_template") or {}).get("style_hint"),
         },
         feedback=feedback,
         channel_id=channel_config.get("id"),
@@ -613,6 +624,7 @@ async def generate_thumbnail_async(
             channel_meta={
                 "name": channel_config.get("name"),
                 "concept": channel_config.get("concept"),
+                "style_hint": (channel_config.get("thumbnail_template") or {}).get("style_hint"),
             },
             feedback=feedback,
             channel_id=channel_config.get("id"),

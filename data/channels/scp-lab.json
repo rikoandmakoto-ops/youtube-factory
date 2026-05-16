@@ -17,7 +17,9 @@
       "日常の疑問",
       "科学的に解説",
       "リコ",
-      "マコト"
+      "マコト",
+      "理子",
+      "真"
     ]
   },
   "competitors": [
@@ -122,27 +124,30 @@
     }
   ],
   "characters": {
-    "理子": {
+    "シロ": {
       "side": "left",
       "speaker_id": 2,
+      "dir": "shiro",
       "text_color": [
-        255,
-        80,
-        80
+        240,
+        240,
+        240
       ],
       "expressions": [
         "normal",
-        "laugh",
+        "happy",
         "sad",
-        "surprise",
-        "think"
+        "angry"
       ],
-      "role": "解説役（SCP財団に詳しい研究員ロール）",
-      "appearance": "young Japanese anime girl with long silver-white ponytail hair, wearing a white researcher coat with an SCP-style emblem, calm and slightly mysterious expression, chibi-style with a big round head and big eyes, dark-toned mystery explainer character"
+      "thumb_dir": "shiro",
+      "thumb_expression": "angry",
+      "role": "解説役（財団の元研究員。淡々と異常存在を語る白髪の少女）",
+      "appearance": "young Japanese anime girl named Shiro with long silver-white hair and red eyes, wearing a tattered white researcher coat with an SCP Foundation emblem, calm but slightly haunted expression, chibi-style with a big round head and big eyes, dark-toned mystery explainer character"
     },
-    "真": {
+    "クロ": {
       "side": "right",
       "speaker_id": 3,
+      "dir": "kuro",
       "text_color": [
         180,
         220,
@@ -150,13 +155,14 @@
       ],
       "expressions": [
         "normal",
-        "laugh",
-        "surprise",
         "happy",
-        "sad"
+        "sad",
+        "angry"
       ],
-      "role": "リスナー役（Dクラス職員的な好奇心の強い男の子）",
-      "appearance": "young Japanese anime boy named Makoto with short black hair and round glasses, wearing a dark orange jumpsuit like a Class-D personnel, curious and slightly nervous expression, chibi-style with a big round head and big eyes"
+      "thumb_dir": "kuro",
+      "thumb_expression": "happy",
+      "role": "リスナー役（Dクラス職員的な好奇心の強い黒髪の少年。怖がりつつも興味津々）",
+      "appearance": "young Japanese anime boy named Kuro with short black hair and big curious eyes, wearing a dark jumpsuit like a Class-D personnel, nervous but excitedly curious expression, chibi-style with a big round head and big eyes"
     }
   },
   "publish_settings": {
@@ -181,7 +187,8 @@
       180,
       220,
       255
-    ]
+    ],
+    "style_hint": "競合『404スタジオ』系の高クリック率SCP/都市伝説サムネ路線に寄せる。\n- 背景はダーク基調（黒・濃紺・血赤）、霧・ノイズ・破損したフィルム質感・REDACTED黒バーや[DATA EXPUNGED]を装飾的に使い『流出した財団資料』のような不穏な雰囲気を作る。\n- 配色は暗い背景に対して黄色／白の大きな見出し文字、赤バッジ、サブコピーは水色系で『SCP-XXX』表記が映えるように。\n- line1（白）は状況・前振り（例: 『見たら最後…』『収容違反』）。line2（黄／強調）は核となる驚き・疑問（『この姿が真実』『○○の正体』）でインパクト最大化。\n- line3_badge は赤で『機密解除』『最恐』『収容違反』のような財団用語＋煽り。sub_text は『SCP-049／173／682』など番号付きで具体性を出す。\n- 被写体は中央〜上部に置き、視線誘導を作る。キャラ立ち絵は端に配置されるので背景中央の主役は『手・目・影・破壊された施設・血痕・収容違反現場』など示唆的なクローズアップで（はっきり全身は描かない）。\n- 文字は太く、強い縁取り（黒2-4px）、わずかなグリッチ／RGBずれ／血しぶき装飾で『怪奇／流出感』を演出する。\n- 過度なゴアは避ける。心理的恐怖と『公式文書』感のあるレイアウトで攻める。"
   },
   "defaults": {
     "speed": 1.3,
