@@ -342,15 +342,23 @@ def _apply_shake(clip, intensity: float, *, fmt_size: Tuple[int, int], cfg: Effe
     return CompositeVideoClip([over], size=fmt_size).with_duration(clip.duration)
 
 
-def _apply_zoom_in(clip, intensity: float):
-    # クリップ全体を通じて 1.0 → 1.0 + zoom_max*intensity に拡大
+def _apply_zoom_in(clip, intensity: float, *, fmt_size: Tuple[int, int]):
+    # クリップ全体を通じて 1.0 → 1.0 + zoom_max*intensity に拡大。
+    # Resize(callable) は時間でフレームサイズが変動するので、隣接クリップとの
+    # 連結時に「array size 1921 vs 1920」のような次元不一致を起こす。
+    # CompositeVideoClip(size=fmt_size) で固定サイズに正規化する。
+    W, H = fmt_size
     end_scale = 1.0 + 0.06 * max(0.3, intensity)
     dur = max(0.1, float(clip.duration or 1.0))
-    # MoviePy v2 の Resize は callable をサポート: lambda t: scale
     def scale_fn(t: float) -> float:
         progress = min(1.0, t / dur)
         return 1.0 + (end_scale - 1.0) * progress
-    return clip.with_effects([Resize(scale_fn)])
+    over = clip.with_effects([Resize(scale_fn)])
+    over = over.with_position(lambda t: (
+        int(W / 2 - clip.w * scale_fn(t) / 2),
+        int(H / 2 - clip.h * scale_fn(t) / 2),
+    ))
+    return CompositeVideoClip([over], size=fmt_size).with_duration(clip.duration)
 
 
 def _apply_tint(clip, intensity: float, color: Tuple[int, int, int],
@@ -430,12 +438,18 @@ def _apply_glitch_rgb(clip, intensity: float, duration: float):
     return clip.transform(trans, apply_to=[], keep_duration=True)
 
 
-def _apply_emphasis_pulse(clip, intensity: float, duration: float):
+def _apply_emphasis_pulse(clip, intensity: float, duration: float,
+                          *, fmt_size: Tuple[int, int]):
     """重要語の冒頭でフレーム全体をふわっと 1.0 → 1.0+δ → 1.0 にパルス。
 
     科学系で「ポイント」「実は」等の語が出た瞬間に視聴者の注意を引く控えめな演出。
     duration は約 0.3〜1.0s。intensity は 0..1（0.5 で δ=2.5%）。
+
+    Resize(callable) を直接返すと時間でフレーム寸法が変わり、後続クリップとの
+    concatenate で次元不一致 (例: 1921 vs 1920) を起こすため CompositeVideoClip
+    で fmt_size に正規化する。
     """
+    W, H = fmt_size
     dur = max(0.15, duration)
     peak = 1.0 + 0.05 * max(0.3, min(1.0, intensity))
     half = dur / 2.0
@@ -447,7 +461,12 @@ def _apply_emphasis_pulse(clip, intensity: float, duration: float):
             return 1.0 + (peak - 1.0) * (t / half)
         return 1.0 + (peak - 1.0) * (1.0 - (t - half) / half)
 
-    return clip.with_effects([Resize(scale_fn)])
+    over = clip.with_effects([Resize(scale_fn)])
+    over = over.with_position(lambda t: (
+        int(W / 2 - clip.w * scale_fn(t) / 2),
+        int(H / 2 - clip.h * scale_fn(t) / 2),
+    ))
+    return CompositeVideoClip([over], size=fmt_size).with_duration(clip.duration)
 
 
 def _apply_fade_in(clip, duration: float):
@@ -474,7 +493,7 @@ def apply_clip_effects(
     for eff in plan:
         try:
             if eff.kind == "zoom_in":
-                out = _apply_zoom_in(out, eff.intensity)
+                out = _apply_zoom_in(out, eff.intensity, fmt_size=fmt_size)
             elif eff.kind == "shake":
                 out = _apply_shake(out, eff.intensity, fmt_size=fmt_size, cfg=cfg)
             elif eff.kind == "tint":
@@ -490,7 +509,8 @@ def apply_clip_effects(
                                         duration=eff.duration or 0.2)
             elif eff.kind == "emphasis_pulse":
                 out = _apply_emphasis_pulse(out, eff.intensity,
-                                            duration=eff.duration or 0.5)
+                                            duration=eff.duration or 0.5,
+                                            fmt_size=fmt_size)
             elif eff.kind == "fade_in":
                 out = _apply_fade_in(out, eff.duration or 0.5)
             elif eff.kind == "fade_out":
