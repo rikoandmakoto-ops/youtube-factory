@@ -13,10 +13,13 @@ JSON 出力:
 
 from __future__ import annotations
 
+import base64
 import json
+import mimetypes
 import os
 import re
-from typing import Any, Dict, List, Optional
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Sequence, Union
 
 try:
     from anthropic import Anthropic  # type: ignore
@@ -118,6 +121,102 @@ def call_claude_json(
             pass
 
     # content blocks (TextBlock) を結合
+    try:
+        text_parts: List[str] = []
+        for block in getattr(resp, "content", []) or []:
+            t = getattr(block, "text", None)
+            if t:
+                text_parts.append(t)
+        return _extract_json("".join(text_parts))
+    except Exception:
+        return None
+
+
+# ---------------------------------------------------------------------
+# Vision: 画像 + テキストを Claude に投げて JSON で返してもらう
+# Anthropic Messages API は content blocks に {type: "image", source: {type: "base64", media_type, data}}
+# を渡せる。サムネ + 抜き出しフレームを一括で投げて分析する用途を想定。
+# ---------------------------------------------------------------------
+
+def _image_block_from_path(path: Union[str, Path]) -> Optional[Dict[str, Any]]:
+    p = Path(path)
+    if not p.exists() or not p.is_file():
+        return None
+    media_type, _ = mimetypes.guess_type(str(p))
+    if not media_type or not media_type.startswith("image/"):
+        # 拡張子で推定できないときは jpeg を仮定
+        media_type = "image/jpeg"
+    try:
+        data = base64.standard_b64encode(p.read_bytes()).decode("ascii")
+    except Exception as e:
+        print(f"⚠️ image read failed ({p}): {e}")
+        return None
+    return {
+        "type": "image",
+        "source": {"type": "base64", "media_type": media_type, "data": data},
+    }
+
+
+def call_claude_vision_json(
+    *,
+    system: str,
+    user_text: str,
+    image_paths: Sequence[Union[str, Path]],
+    model: str = CLAUDE_MODEL,
+    temperature: float = 0.3,
+    max_tokens: int = 2000,
+    channel_id: Optional[str] = None,
+    purpose: Optional[str] = None,
+) -> Optional[Dict[str, Any]]:
+    """画像 + テキストを Claude に渡して JSON 1 つを返す。失敗 / 未設定時は None。
+
+    image_paths はローカルパス。読めない / 拡張子不明のものは黙ってスキップする。
+    1 枚も画像が無ければテキストだけで呼ぶ（call_claude_json と同等）。
+    """
+    if not has_api_key():
+        return None
+    api_key = os.environ["ANTHROPIC_API_KEY"].strip()
+    image_blocks: List[Dict[str, Any]] = []
+    for p in image_paths or []:
+        blk = _image_block_from_path(p)
+        if blk:
+            image_blocks.append(blk)
+    content_blocks: List[Dict[str, Any]] = list(image_blocks)
+    content_blocks.append({"type": "text", "text": user_text})
+
+    system_full = (
+        system.rstrip()
+        + "\n\n出力は JSON オブジェクト1つのみを返してください。"
+          "前置き・後置き・コードブロック（```）は禁止です。"
+    )
+    try:
+        client = Anthropic(api_key=api_key)
+        resp = client.messages.create(
+            model=model,
+            max_tokens=max_tokens,
+            temperature=temperature,
+            system=system_full,
+            messages=[{"role": "user", "content": content_blocks}],
+        )
+    except Exception as e:
+        print(f"⚠️ claude vision call failed ({purpose or model}): {e}")
+        return None
+
+    if api_usage is not None:
+        try:
+            usage = getattr(resp, "usage", None)
+            in_t = int(getattr(usage, "input_tokens", 0) or 0)
+            out_t = int(getattr(usage, "output_tokens", 0) or 0)
+            api_usage.record_chat_usage(
+                model=model,
+                prompt_tokens=in_t,
+                completion_tokens=out_t,
+                channel_id=channel_id,
+                purpose=purpose,
+            )
+        except Exception:
+            pass
+
     try:
         text_parts: List[str] = []
         for block in getattr(resp, "content", []) or []:

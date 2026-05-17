@@ -213,6 +213,15 @@
         "min_retention": 40,
         "min_views_7d": 1000
       }
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "science",
+      "allow_shake": false,
+      "allow_flash": false,
+      "allow_pixelate": false,
+      "allow_glitch": false,
+      "allow_tint": false
     }
   },
   "autopilot": {

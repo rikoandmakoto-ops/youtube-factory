@@ -14,6 +14,7 @@ import {
 import AssetUploader from '@/components/AssetUploader';
 import ChannelYoutubeConnect from '@/components/ChannelYoutubeConnect';
 import AutopilotSection from './AutopilotSection';
+import ResearchEffectsSection from './ResearchEffectsSection';
 import type { AssetEntry, AssetKind, Channel } from '@/lib/api';
 
 type ConfigShape = Record<string, any>;
@@ -818,6 +819,9 @@ export default function ConfigEditor({
           </Field>
         </Row>
       </Section>
+
+      {/* 7.5 競合演出リサーチ */}
+      <ResearchEffectsSection channelId={channelId} />
 
       {/* 8. OP/ED/トランジション */}
       <Section title="🎬 OP / ED / トランジション">

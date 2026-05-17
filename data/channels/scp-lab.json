@@ -324,6 +324,15 @@
         "min_retention": 45,
         "min_views_7d": 2000
       }
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "horror",
+      "allow_shake": true,
+      "allow_flash": true,
+      "shake_max_px": 22,
+      "zoom_max": 0.09,
+      "transition_duration": 0.45
     }
   }
 }

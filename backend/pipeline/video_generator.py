@@ -21,6 +21,11 @@ except ImportError:
 
 import numpy as np
 
+try:
+    from pipeline import video_effects  # type: ignore
+except Exception:  # pragma: no cover — effects optional
+    video_effects = None  # type: ignore
+
 # ============================================================
 # Auto-detect paths
 # ============================================================
@@ -1440,6 +1445,8 @@ class MonologueFrameRenderer:
         self.bg_video_duration = 0
         self.bg_image = None
         self.bg_type = bg_type
+        self.W = WIDTH
+        self.H = HEIGHT
 
         if bg_video_path and Path(bg_video_path).exists():
             ext = Path(bg_video_path).suffix.lower()
@@ -1663,6 +1670,15 @@ def generate_monologue_video(scenario, title, output_prefix, bg_video_path=None,
     current_chapter = None
     current_mood = None
     mood_timeline = []
+    fx_cfg = None
+    fx_plans: list = []
+    durations: list = []
+    if video_effects is not None:
+        try:
+            fx_cfg = video_effects.load_effects_config(channel_format)
+        except Exception as e:
+            print(f"⚠️ effects config load failed: {e}")
+            fx_cfg = None
 
     for i, entry in enumerate(scenario):
         # A chapter_title or text entry may set a mood that sticks until the next change.
@@ -1674,7 +1690,20 @@ def generate_monologue_video(scenario, title, output_prefix, bg_video_path=None,
             current_chapter = entry["chapter_title"]
             ch_dur = entry.get("duration", 3.0)
             clip = renderer.make_video_clip(current_chapter, ch_dur, t_off, is_chapter_title=True)
+            # Chapter title shots get a quick zoom by default for cinematic feel
+            if fx_cfg is not None and fx_cfg.enabled and fx_cfg.allow_zoom:
+                try:
+                    clip = video_effects.apply_clip_effects(
+                        clip,
+                        [video_effects.Effect(kind="zoom_in", intensity=0.7),
+                         video_effects.Effect(kind="fade_in", duration=0.4)],
+                        fmt_size=(renderer.W, renderer.H), cfg=fx_cfg,
+                    )
+                except Exception:
+                    pass
             clips.append(clip)
+            fx_plans.append([])
+            durations.append(ch_dur)
             mood_timeline.append((t_off, t_off + ch_dur, current_mood))
             t_off += ch_dur
             print(f"  [{i+1}/{len(scenario)}] 📖 {current_chapter}")
@@ -1691,12 +1720,42 @@ def generate_monologue_video(scenario, title, output_prefix, bg_video_path=None,
         dur = max(get_audio_duration(wav), 1.0) + 0.4  # Slightly longer pause for monologue pacing
 
         clip = renderer.make_video_clip(tx, dur, t_off, chapter=current_chapter)
+        if fx_cfg is not None and fx_cfg.enabled:
+            try:
+                plan = video_effects.decide_effect_plan(
+                    tx, current_mood,
+                    position=i, total_count=len(scenario), cfg=fx_cfg,
+                )
+                fx_plans.append(plan)
+                if plan:
+                    clip = video_effects.apply_clip_effects(
+                        clip, plan,
+                        fmt_size=(renderer.W, renderer.H), cfg=fx_cfg,
+                    )
+            except Exception as e:
+                print(f"  ⚠️ effects skipped on line {i+1}: {e}")
+                fx_plans.append([])
+        else:
+            fx_plans.append([])
         ac = AudioFileClip(wav)
         audio_clips.append(ac)
         clip = clip.with_audio(ac)
         clips.append(clip)
+        durations.append(dur)
         mood_timeline.append((t_off, t_off + dur, current_mood))
         t_off += dur
+
+    if fx_cfg is not None and fx_cfg.enabled and fx_cfg.allow_transitions:
+        try:
+            clips = video_effects.maybe_add_crossfades(
+                clips, cfg=fx_cfg, durations=durations,
+            )
+        except Exception as e:
+            print(f"⚠️ crossfade pass failed: {e}")
+    if fx_cfg is not None and fx_cfg.enabled:
+        summary = video_effects.summarize_plan(fx_plans)
+        if summary:
+            print(f"✨ effects applied: {summary}  (preset={fx_cfg.preset})")
 
     print(f"\n🎬 Concatenating... (total: {t_off:.1f}s = {t_off/60:.1f}min)")
     final = concatenate_videoclips(clips)
@@ -1863,6 +1922,16 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
     current_attribution = None
     mood_timeline = []  # list of (start, end, mood) per line for per-scene BGM
     active_chars = char_config or CHAR_CONFIG
+    # Build per-line effect plans up-front (cheap, no rendering).
+    fx_cfg = None
+    fx_plans: list = []  # parallel to scenario entries
+    if video_effects is not None:
+        try:
+            fx_cfg = video_effects.load_effects_config(channel_format)
+        except Exception as e:
+            print(f"⚠️ effects config load failed: {e}")
+            fx_cfg = None
+    durations: list = []
     for i, entry in enumerate(scenario):
         sp, tx = entry["speaker"], entry["text"]
         cfg = active_chars.get(sp) or CHAR_CONFIG.get(sp) or next(iter(active_chars.values()))
@@ -1884,12 +1953,46 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
                                          entry.get("diagram", False), entry.get("diagram_text"),
                                          illustration=illust,
                                          attribution=attribution)
+        # Apply per-clip visual effects (zoom / shake / tint / flash / glitch / fade).
+        if fx_cfg is not None and fx_cfg.enabled:
+            try:
+                plan = video_effects.decide_effect_plan(
+                    tx, entry.get("mood"),
+                    position=i, total_count=len(scenario), cfg=fx_cfg,
+                )
+                fx_plans.append(plan)
+                if plan:
+                    clip = video_effects.apply_clip_effects(
+                        clip, plan,
+                        fmt_size=(renderer.W, renderer.H), cfg=fx_cfg,
+                    )
+            except Exception as e:
+                print(f"  ⚠️ effects skipped on line {i+1}: {e}")
+                fx_plans.append([])
+        else:
+            fx_plans.append([])
+
         ac = AudioFileClip(wav)
         audio_clips.append(ac)
         clip = clip.with_audio(ac)
         clips.append(clip)
+        durations.append(dur)
         mood_timeline.append((t_off, t_off + dur, entry.get("mood")))
         t_off += dur
+
+    # Optional cross-clip transitions (short cross-fades between scenes).
+    if fx_cfg is not None and fx_cfg.enabled and fx_cfg.allow_transitions:
+        try:
+            clips = video_effects.maybe_add_crossfades(
+                clips, cfg=fx_cfg, durations=durations,
+            )
+        except Exception as e:
+            print(f"⚠️ crossfade pass failed: {e}")
+
+    if fx_cfg is not None and fx_cfg.enabled:
+        summary = video_effects.summarize_plan(fx_plans)
+        if summary:
+            print(f"✨ effects applied: {summary}  (preset={fx_cfg.preset})")
 
     print(f"\n🎬 Concatenating... (total: {t_off:.1f}s = {t_off/60:.1f}min)")
     if target_duration and t_off > 0:
