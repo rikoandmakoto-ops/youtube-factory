@@ -246,6 +246,34 @@ class ScenarioGenerator:
                 )
         return picked
 
+    def _next_video_hint(self, channel) -> str:
+        """次回予告で提案するべきジャンル指示をチャンネルから抽出する。
+
+        - 明示的に `next_video_genre_hint` が設定されていればそれを使う。
+        - 未設定なら channel.theme_seeds のタイトルからサンプルを3つほど抽出して
+          「このチャンネルの他テーマ」に閉じた次回予告を促す。
+        - どちらも無ければ空文字（呼び出し側で適度なデフォルトを採用）。
+        """
+        try:
+            explicit = (channel._raw or {}).get("next_video_genre_hint")
+        except AttributeError:
+            explicit = None
+        if explicit:
+            return explicit.strip()
+        seeds = getattr(channel, "theme_seeds", None) or []
+        titles = [s.get("title") for s in seeds if isinstance(s, dict) and s.get("title")]
+        if titles:
+            sample = "、".join(f"『{t}』" for t in titles[:3])
+            return (
+                f"次回テーマは必ず本チャンネルの世界観・ジャンルに閉じたものを選ぶ"
+                f"（このチャンネルが扱う題材の例: {sample} など）。"
+                f"チャンネルのジャンルから外れたテーマ（例: 日常科学・身近な雑学）は絶対に提案しない。"
+            )
+        return (
+            f"次回テーマは必ず本チャンネル「{channel.name}」のコンセプト"
+            f"（{channel.concept}）と地続きのジャンルに閉じて選ぶ。チャンネルのジャンルから外れたテーマは絶対に提案しない。"
+        )
+
     def _persona_block(self, channel) -> str:
         """video_format.persona から差し込むプロンプトブロックを返す。
 
@@ -299,6 +327,7 @@ class ScenarioGenerator:
             policy_parts.append(f"- 避ける: {a}")
         policy_text = "\n".join(policy_parts) if policy_parts else "(なし)"
         persona_block = self._persona_block(channel)
+        next_video_hint = self._next_video_hint(channel)
 
         target_lines = max(58, min(64, round(target_duration / 12)))
         target_chars = int(target_duration * 8.0)
@@ -371,7 +400,7 @@ class ScenarioGenerator:
 
 # エンディング+次回予告ルール(登録率改善・絶対厳守)
 - 締めCTA(高評価・登録)の直前または直後に「次回は〇〇を解説するよ」のような次回予告を必ず1〜2行入れる。
-- 次回テーマは現在のテーマと地続きの「身近な体の不思議」「日常の違和感」系を提案する(例:本動画が「自分の声が変に聞こえる理由」なら、次回は「夢で見たことを覚えていない理由」など)。
+- {next_video_hint}
 - 「次回も気になる」と思わせて登録への心理的ハードルを下げるのが目的。次回予告を省略した動画は不合格。
 
 # 雰囲気タグ(mood)ルール — シーンごとのBGM切替に使用
@@ -406,6 +435,7 @@ class ScenarioGenerator:
             policy_parts.append(f"- 避ける: {a}")
         policy_text = "\n".join(policy_parts) if policy_parts else "(なし)"
         persona_block = self._persona_block(channel)
+        next_video_hint = self._next_video_hint(channel)
 
         target_lines = max(50, min(58, round(target_duration / 13)))
         target_chars = int(target_duration * 8.0)
@@ -483,7 +513,7 @@ class ScenarioGenerator:
 
 # エンディング+次回予告ルール(登録率改善・絶対厳守)
 - 最終章の締めCTA(高評価・登録)の直前または直後に「次回は〇〇を解説する」のような次回予告を必ず1〜2行入れる。
-- 次回テーマは現在のテーマと地続きの「身近な体の不思議」「日常の違和感」系を提案する。
+- {next_video_hint}
 - 「次回も気になる」と思わせて登録への心理的ハードルを下げるのが目的。次回予告を省略した動画は不合格。
 
 # その他ルール

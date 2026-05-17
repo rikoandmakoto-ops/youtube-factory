@@ -2676,20 +2676,23 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None):
 CHANNEL_NAME = "リコとマコトのゆっくり日常科学"
 CHANNEL_CONCEPT = "日常のふとした疑問を科学の視点からゆっくり解説するチャンネル"
 
-def generate_video_title(title, thumb_info=None):
+def generate_video_title(title, thumb_info=None, channel_dict=None):
     """
     YouTubeタイトル生成（カノン準拠テンプレート）
-    型: 【ゆっくり解説】＋フック質問（具体例入り）＋テーマ名
+    型: ＜チャンネル固有プレフィックス＞＋フック質問（具体例入り）＋テーマ名
     例: 【ゆっくり解説】なぜ「天体観測」「キセキ」「マリーゴールド」は売れた？カノン進行の科学
+    プレフィックスは channel_dict.main_title_prefix を優先し、未設定なら【ゆっくり解説】。
     """
     hook = ""
     if thumb_info and thumb_info.get("hook_lines"):
         hook = "".join(thumb_info["hook_lines"])
 
+    prefix = (channel_dict or {}).get("main_title_prefix") or "【ゆっくり解説】"
+
     if hook:
-        return f"【ゆっくり解説】{hook}「{title}」"
+        return f"{prefix}{hook}「{title}」"
     else:
-        return f"【ゆっくり解説】{title}"
+        return f"{prefix}{title}"
 
 
 def generate_short_title(title, thumb_info=None, channel_dict=None):
@@ -2749,6 +2752,7 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
     Generate description text files for both main and short videos.
     テンプレート型（カノン準拠）: タイトル→フック→概要→タイムスタンプ→チャンネル情報→ハッシュタグ
     """
+    cd = channel_dict or {}
     # チャンネル名/コンセプト — channel_dict が渡されていればそちらを優先
     channel_name = (channel_dict or {}).get("name") or CHANNEL_NAME
     channel_concept = (channel_dict or {}).get("concept") or CHANNEL_CONCEPT
@@ -2756,7 +2760,7 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
 
     # YouTubeタイトル（説明文の最上部に表示）
     if video_title is None:
-        video_title = generate_video_title(title, thumb_info)
+        video_title = generate_video_title(title, thumb_info, channel_dict=channel_dict)
     short_title = generate_short_title(title, thumb_info, channel_dict=channel_dict)
 
     hook = ""
@@ -2970,7 +2974,7 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
 
     # Generate video_title if not provided
     if video_title is None:
-        video_title = generate_video_title(title, thumb_info)
+        video_title = generate_video_title(title, thumb_info, channel_dict=channel_dict)
     short_title = generate_short_title(title, thumb_info, channel_dict=channel_dict)
     results = {"output_dir": str(out_dir), "video_title": video_title, "short_title": short_title, "style": style}
 
