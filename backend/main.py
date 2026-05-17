@@ -858,6 +858,8 @@ class UpdateChannelFormatRequest(BaseModel):
     style: Optional[str] = None
     video_format: Optional[Dict] = None  # 部分更新: {"layout": {"text_font_size": 44}}
     youtube_channel_id: Optional[str] = None  # YouTubeチャンネルID紐付け
+    image_mode: Optional[str] = None  # "generate" | "collect" | "mix"
+    image_collect: Optional[Dict] = None  # provider / safe_search / etc.
 
 
 @app.put("/channels/{channel_id}")

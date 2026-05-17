@@ -4,6 +4,15 @@
   "concept": "日常のふとした疑問を科学の視点からゆっくり解説するチャンネル",
   "style": "yukkuri",
   "youtube_channel_id": null,
+  "image_mode": "generate",
+  "image_collect": {
+    "provider": "auto",
+    "safe_search": true,
+    "license_filter": "cc",
+    "max_per_query": 5,
+    "attribution_template": "出典: {source}",
+    "mix_strategy": "heuristic"
+  },
   "competitors": [
     "UCJHZshDuIrd_6MaT8MIjFtg",
     "UCLK63mzEn9yPcwrjSEWBK3Q",

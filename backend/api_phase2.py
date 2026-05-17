@@ -115,6 +115,9 @@ class UpdateConfigRequest(BaseModel):
     references: Optional[List[Dict[str, Any]]] = None
     prompts: Optional[Dict[str, str]] = None
     generation_rules: Optional[Dict[str, Any]] = None
+    # 画像取得モード（generate / collect / mix）
+    image_mode: Optional[str] = None
+    image_collect: Optional[Dict[str, Any]] = None
 
 
 @router.put("/channels/{channel_id}/config")

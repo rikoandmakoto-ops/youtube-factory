@@ -113,6 +113,8 @@ export default function ConfigEditor({
         references: cfg.references,
         prompts: cfg.prompts,
         generation_rules: cfg.generation_rules,
+        image_mode: cfg.image_mode,
+        image_collect: cfg.image_collect,
       };
       const res = await fetch(`/api/channels/${encodeURIComponent(channelId)}/config`, {
         method: 'PUT',
@@ -611,6 +613,67 @@ export default function ConfigEditor({
             placeholder="例: colorful hand-drawn cartoon illustration ..."
           />
         </Field>
+        <Field
+          label="画像取得モード"
+          hint="generate=AI生成 / collect=Web画像収集（出典表示） / mix=シーンごとに自動選択"
+        >
+          <select
+            value={getIn(cfg, ['image_mode']) || 'generate'}
+            onChange={(e) => update(['image_mode'], e.target.value)}
+            className="input"
+          >
+            <option value="generate">generate（AI生成のみ）</option>
+            <option value="collect">collect（Web収集＋出典表示）</option>
+            <option value="mix">mix（シーンに応じて自動）</option>
+          </select>
+        </Field>
+        {(getIn(cfg, ['image_mode']) || 'generate') !== 'generate' && (
+          <>
+            <Field
+              label="画像検索プロバイダ"
+              hint="auto=APIキーが設定されたものを順に使う"
+            >
+              <select
+                value={getIn(cfg, ['image_collect', 'provider']) || 'auto'}
+                onChange={(e) => update(['image_collect', 'provider'], e.target.value)}
+                className="input"
+              >
+                <option value="auto">auto</option>
+                <option value="pixabay">Pixabay</option>
+                <option value="unsplash">Unsplash</option>
+                <option value="google_cse">Google Custom Search</option>
+              </select>
+            </Field>
+            <Field label="出典表示テンプレ">
+              <input
+                type="text"
+                value={
+                  getIn(cfg, ['image_collect', 'attribution_template']) || '出典: {source}'
+                }
+                onChange={(e) =>
+                  update(['image_collect', 'attribution_template'], e.target.value)
+                }
+                className="input"
+                placeholder="出典: {source}"
+              />
+            </Field>
+            {(getIn(cfg, ['image_mode']) || 'generate') === 'mix' && (
+              <Field label="mix 判定ストラテジ">
+                <select
+                  value={getIn(cfg, ['image_collect', 'mix_strategy']) || 'heuristic'}
+                  onChange={(e) =>
+                    update(['image_collect', 'mix_strategy'], e.target.value)
+                  }
+                  className="input"
+                >
+                  <option value="heuristic">heuristic（自動）</option>
+                  <option value="always_collect">always_collect</option>
+                  <option value="always_generate">always_generate</option>
+                </select>
+              </Field>
+            )}
+          </>
+        )}
       </Section>
 
       {/* 5. BGM/SE */}
