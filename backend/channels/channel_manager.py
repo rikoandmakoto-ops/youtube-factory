@@ -187,6 +187,7 @@ class ChannelProfile:
             "theme_seeds": self.theme_seeds,
             "thumbnail_template": self.thumbnail_template,
             "publish_settings": self.get_publish_settings(),
+            "description_template": self._raw.get("description_template", {}),
             "video_format": vf.to_dict(),
             "youtube": {
                 "channel_id": vf.youtube.channel_id,

@@ -67,6 +67,11 @@
     "short_delay_minutes": 10,
     "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}"
   },
+  "description_template": {
+    "main_intro": "{title}についてリコとマコトがゆっくり解説します。\n日常のふとした疑問を科学の視点から分かりやすく紐解いていきます。\nぜひ最後までご視聴ください！",
+    "main_hashtags": "#ゆっくり解説 #科学 #日常科学 #教育 #雑学",
+    "short_hashtags": "#shorts #ゆっくり解説 #雑学 #豆知識 #科学"
+  },
   "thumbnail_template": {
     "badge_text": "ゆっくり解説",
     "badge_color": [
