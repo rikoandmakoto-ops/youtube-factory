@@ -6,9 +6,15 @@ Each downloaded image carries an attribution record so the renderer can show
 the source URL on screen (compliance with image licenses).
 
 Providers (env-driven, all optional):
-    pixabay      — PIXABAY_API_KEY               (CC0 / Pixabay license)
+    pixabay      — PIXABAY_API_KEY               (CC0 / Pixabay license; free key)
+    pexels       — PEXELS_API_KEY                (Pexels license, credit appreciated; free key)
     unsplash     — UNSPLASH_ACCESS_KEY           (Unsplash license, credit required)
     google_cse   — GOOGLE_CSE_API_KEY + GOOGLE_CSE_ID  (Custom Search JSON API)
+
+Free-key signup:
+    Pixabay  https://pixabay.com/api/docs/
+    Pexels   https://www.pexels.com/api/
+    Unsplash https://unsplash.com/developers
 
 If no provider is configured, search() returns None and the caller falls
 back to AI generation.
@@ -67,6 +73,7 @@ class CollectedImage:
 def _provider_env() -> Dict[str, str]:
     return {
         "pixabay_key": os.environ.get("PIXABAY_API_KEY", ""),
+        "pexels_key": os.environ.get("PEXELS_API_KEY", ""),
         "unsplash_key": os.environ.get("UNSPLASH_ACCESS_KEY", ""),
         "google_cse_key": os.environ.get("GOOGLE_CSE_API_KEY", ""),
         "google_cse_id": os.environ.get("GOOGLE_CSE_ID", ""),
@@ -78,13 +85,17 @@ def _resolve_provider(preferred: str) -> Optional[str]:
     env = _provider_env()
     if preferred == "pixabay":
         return "pixabay" if env["pixabay_key"] else None
+    if preferred == "pexels":
+        return "pexels" if env["pexels_key"] else None
     if preferred == "unsplash":
         return "unsplash" if env["unsplash_key"] else None
     if preferred == "google_cse":
         return "google_cse" if env["google_cse_key"] and env["google_cse_id"] else None
-    # auto / unknown
+    # auto / unknown — try the free-key providers first, then paid/limited.
     if env["pixabay_key"]:
         return "pixabay"
+    if env["pexels_key"]:
+        return "pexels"
     if env["unsplash_key"]:
         return "unsplash"
     if env["google_cse_key"] and env["google_cse_id"]:
@@ -105,7 +116,7 @@ def search(query: str, settings: Optional[Dict] = None) -> Optional[CollectedIma
     provider = _resolve_provider(settings.get("provider", "auto"))
     if not provider:
         print("⚠️ image_collector: no provider configured "
-              "(set PIXABAY_API_KEY / UNSPLASH_ACCESS_KEY / GOOGLE_CSE_API_KEY)")
+              "(set PIXABAY_API_KEY / PEXELS_API_KEY / UNSPLASH_ACCESS_KEY / GOOGLE_CSE_API_KEY)")
         return None
 
     safe = bool(settings.get("safe_search", True))
@@ -119,6 +130,8 @@ def search(query: str, settings: Optional[Dict] = None) -> Optional[CollectedIma
     try:
         if provider == "pixabay":
             return _search_pixabay(keywords, safe=safe, max_n=max_n)
+        if provider == "pexels":
+            return _search_pexels(keywords, safe=safe, max_n=max_n)
         if provider == "unsplash":
             return _search_unsplash(keywords, safe=safe, max_n=max_n)
         if provider == "google_cse":
@@ -290,6 +303,40 @@ def _search_pixabay(query: str, safe: bool, max_n: int) -> Optional[CollectedIma
             source_url=hit.get("pageURL", "https://pixabay.com/"),
             source_title=hit.get("user", "Pixabay"),
             provider="pixabay",
+            direct_url=direct,
+        )
+    return None
+
+
+def _search_pexels(query: str, safe: bool, max_n: int) -> Optional[CollectedImage]:
+    # Pexels has no public safesearch toggle — the `safe` flag is accepted
+    # for API parity but ignored. Content is curated/moderated upstream.
+    key = _provider_env()["pexels_key"]
+    params = {
+        "query": query,
+        "per_page": max(3, min(max_n, 20)),
+        "orientation": "landscape",
+    }
+    url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(params)
+    req = urllib.request.Request(url, headers={
+        "User-Agent": _UA,
+        "Authorization": key,
+    })
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+    for hit in data.get("photos") or []:
+        src = hit.get("src") or {}
+        direct = src.get("large2x") or src.get("large") or src.get("original")
+        if not direct:
+            continue
+        img = _load_image(direct)
+        if img is None:
+            continue
+        return CollectedImage(
+            image=img,
+            source_url=hit.get("url", "https://www.pexels.com/"),
+            source_title=hit.get("photographer", "Pexels"),
+            provider="pexels",
             direct_url=direct,
         )
     return None

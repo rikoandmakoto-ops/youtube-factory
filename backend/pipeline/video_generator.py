@@ -1080,7 +1080,7 @@ class FrameRenderer:
         if not attribution_text:
             return None
         font_size = max(18, int(self.text_font_size * 0.5))
-        font = jp_font(font_size)
+        font = get_font(font_size)
         draw_layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         draw = ImageDraw.Draw(draw_layer)
 
@@ -1199,7 +1199,7 @@ class FrameRenderer:
 
         # Subtitle text (centered for single line)
         if text:
-            text_color = self.char_cfg.get(speaker, {}).get("text_color", (255, 255, 255))
+            text_color = tuple(self.char_cfg.get(speaker, {}).get("text_color", (255, 255, 255)))
             draw = ImageDraw.Draw(overlay)
             fsize = self.text_font_size
             max_text_w = W - self.text_margin_x * 2
