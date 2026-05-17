@@ -2714,6 +2714,36 @@ def generate_short_title(title, thumb_info=None, channel_dict=None):
         return f"{series_prefix}{title} #shorts #ゆっくり解説"
 
 
+def _build_description_template(channel_dict, title, channel_concept):
+    """チャンネル設定から説明文用テンプレート断片を組み立てる。
+
+    channel_dict["description_template"] が定義されていればそちらを優先。
+    未定義のチャンネルは defaults.hashtags と concept からフォールバック生成する。
+    """
+    tmpl = (channel_dict or {}).get("description_template") or {}
+    defaults = (channel_dict or {}).get("defaults") or {}
+    default_hashtags = defaults.get("hashtags") or ["#ゆっくり解説"]
+    default_hashtag_str = " ".join(default_hashtags)
+
+    main_intro = tmpl.get("main_intro")
+    if main_intro is None:
+        main_intro = (
+            f"{{title}}について、ゆっくり解説していきます。\n"
+            f"{channel_concept}\n"
+            "ぜひ最後までご視聴ください！"
+        )
+    main_intro = main_intro.format(title=title, concept=channel_concept)
+
+    main_hashtags = tmpl.get("main_hashtags") or default_hashtag_str
+    short_hashtags = tmpl.get("short_hashtags") or f"#shorts {default_hashtag_str}"
+
+    return {
+        "main_intro": main_intro,
+        "main_hashtags": main_hashtags,
+        "short_hashtags": short_hashtags,
+    }
+
+
 def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=None, video_title=None, channel_dict=None):
     """
     Generate description text files for both main and short videos.
@@ -2722,6 +2752,7 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
     # チャンネル名/コンセプト — channel_dict が渡されていればそちらを優先
     channel_name = (channel_dict or {}).get("name") or CHANNEL_NAME
     channel_concept = (channel_dict or {}).get("concept") or CHANNEL_CONCEPT
+    desc_tmpl = _build_description_template(channel_dict, title, channel_concept)
 
     # YouTubeタイトル（説明文の最上部に表示）
     if video_title is None:
@@ -2755,7 +2786,7 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
         f"📺 {channel_name}",
         f"   {channel_concept}",
         "",
-        "#shorts #ゆっくり解説 #雑学 #豆知識 #科学",
+        desc_tmpl["short_hashtags"],
     ]
 
     # ---- メイン説明文 ----
@@ -2797,9 +2828,7 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
         f"📌 {summary}",
         "━━━━━━━━━━━━━━━━━━━━━━",
         "",
-        f"{title}についてリコとマコトがゆっくり解説します。",
-        "日常のふとした疑問を科学の視点から分かりやすく紐解いていきます。",
-        "ぜひ最後までご視聴ください！",
+        desc_tmpl["main_intro"],
         "",
     ]
 
@@ -2821,7 +2850,7 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
         "",
         "━━━━━━━━━━━━━━━━━━━━━━",
         "",
-        "#ゆっくり解説 #科学 #日常科学 #教育 #雑学",
+        desc_tmpl["main_hashtags"],
     ]
 
     return {

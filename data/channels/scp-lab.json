@@ -171,6 +171,11 @@
     "short_delay_minutes": 10,
     "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}"
   },
+  "description_template": {
+    "main_intro": "{title}について、シロとクロが財団資料を読み解きます。\nSCP財団の異常存在（オブジェクト）や事件を、不気味で考察性のある雰囲気で紐解いていきます。\n※本動画は SCP財団Wiki (CC BY-SA 3.0) のコンテンツに基づいています。\nぜひ最後までご視聴ください！",
+    "main_hashtags": "#SCP #SCP財団 #ゆっくり解説 #都市伝説 #怖い話 #考察",
+    "short_hashtags": "#shorts #SCP #ゆっくり解説 #都市伝説 #怖い話"
+  },
   "thumbnail_template": {
     "badge_text": "SCP解説",
     "badge_color": [
