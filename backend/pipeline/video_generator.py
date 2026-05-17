@@ -1237,13 +1237,128 @@ class FrameRenderer:
 # ============================================================
 # Short Frame Renderer (vertical, 2ch-style)
 # ============================================================
+def _fit_9x16(img):
+    """Crop & resize a PIL image into SHORT_W x SHORT_H (9:16)."""
+    img = img.convert("RGBA")
+    w, h = img.size
+    target_w = int(h * 9 / 16)
+    if target_w > w:
+        target_h = int(w * 16 / 9)
+        y_off = (h - target_h) // 2
+        img = img.crop((0, max(0, y_off), w, y_off + target_h))
+    else:
+        x_off = (w - target_w) // 2
+        img = img.crop((max(0, x_off), 0, x_off + target_w, h))
+    return img.resize((SHORT_W, SHORT_H))
+
+
+def _short_bg_query(title, scenario, channel_dict):
+    """Build a Pexels-friendly query for the short BG.
+
+    Priority order:
+      1. channel.defaults.short_bg_query (explicit author override — wins)
+      2. channel.defaults.short_bg_keywords (list, joined)
+      3. channel.video_format.illustration_style.background  (English, already
+         tuned for image search — works well across providers)
+      4. fallback: title + leading scenario words
+    """
+    ch = channel_dict or {}
+    defaults = (ch.get("defaults") or {})
+    explicit = defaults.get("short_bg_query")
+    if explicit:
+        return explicit
+    keywords = defaults.get("short_bg_keywords")
+    if keywords:
+        if isinstance(keywords, list):
+            return " ".join(str(k) for k in keywords if k)
+        return str(keywords)
+    fmt = ch.get("video_format") or {}
+    ill = fmt.get("illustration_style") or {}
+    bg_hint = ill.get("background")
+    if bg_hint:
+        return bg_hint[:120]
+    parts = [title or ""]
+    if scenario:
+        first_text = (scenario[0] or {}).get("text", "")
+        if first_text:
+            parts.append(first_text[:60])
+    return " ".join(p for p in parts if p).strip()[:120]
+
+
+def _collect_short_bg(topic_query, image_collect_settings, cache_dir, label="short"):
+    """Fetch a Pexels (or configured provider) image to use as the short BG.
+
+    Returns a 9:16-cropped PIL.Image, or None when collection fails / is unavailable.
+    Cache key is per-out-dir so re-runs reuse the same BG.
+    """
+    if not topic_query:
+        return None
+    try:
+        from pipeline import image_collector
+    except Exception:
+        return None
+    cache_dir = Path(cache_dir)
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    # Force collect (bypass mix heuristic that routes SCP-XXX → generate).
+    settings = dict(image_collect_settings or {})
+    settings.setdefault("provider", "auto")
+    got = image_collector.search_and_cache(
+        topic_query, cache_dir=cache_dir, idx=0, settings=settings,
+    )
+    if not got or got.get("image") is None:
+        print(f"⚠️ {label} BG: collector returned nothing for query '{topic_query[:60]}'")
+        return None
+    print(f"🌐 {label} BG: collected from {got.get('provider')} ({topic_query[:60]})")
+    return _fit_9x16(got["image"])
+
+
+_SCP_NUMBER_RE = __import__("re").compile(r"SCP[\s\-]*(\d{1,5})", __import__("re").IGNORECASE)
+
+
+def _extract_scp_badge_text(*candidates):
+    """Return 'SCP-173'-style label from the first candidate that matches, else None.
+
+    Used by short renderers to pin a top-of-screen badge — competitor research
+    showed the SCP-number header is one of the most consistent visual hooks on
+    the top SCP shorts (see data/research/scp_shorts_visual_analysis.json).
+    """
+    for c in candidates:
+        if not c:
+            continue
+        m = _SCP_NUMBER_RE.search(c)
+        if m:
+            return f"SCP-{m.group(1)}"
+    return None
+
+
 class ShortFrameRenderer:
-    def __init__(self, bg_video_path=None, bg_type="auto", char_config=None):
+    def __init__(self, bg_video_path=None, bg_type="auto", char_config=None,
+                 image_mode="generate", image_collect_settings=None,
+                 topic_query=None, cache_dir=None,
+                 overlay_style=None, title=None):
         self.bg_video = None
         self.bg_video_duration = 0
         self.bg_image = None
         self.bg_type = bg_type
         self.char_cfg = char_config or CHAR_CONFIG
+        self.overlay_style = overlay_style or {}
+        # Default bg fallback color — competitor analysis (SCP shorts) shows
+        # most-viewed shorts use near-black (#2F2F2F) for max text contrast on
+        # mobile. The previous deep-blue fallback washed out subtitles.
+        self.bg_fallback_color = tuple(
+            self.overlay_style.get("bg_fallback_color", (35, 35, 35, 255))
+        )
+        # Top SCP-number badge (auto-extracted from title for SCP channels).
+        badge_cfg = self.overlay_style.get("scp_badge")
+        if badge_cfg is None:
+            # auto-detect: render only when the title contains SCP-XXX
+            self.scp_badge_text = _extract_scp_badge_text(title)
+        elif isinstance(badge_cfg, str):
+            self.scp_badge_text = badge_cfg or None
+        elif badge_cfg is False:
+            self.scp_badge_text = None
+        else:  # truthy dict / True
+            self.scp_badge_text = _extract_scp_badge_text(title)
 
         if bg_video_path and Path(bg_video_path).exists():
             ext = Path(bg_video_path).suffix.lower()
@@ -1254,21 +1369,23 @@ class ShortFrameRenderer:
                     vid = VideoFileClip(str(bg_video_path))
                     img = Image.fromarray(vid.get_frame(0)).convert("RGBA")
                     vid.close()
-                # Crop to 9:16 and resize
-                w, h = img.size
-                target_w = int(h * 9 / 16)
-                if target_w > w:
-                    target_h = int(w * 16 / 9)
-                    y_off = (h - target_h) // 2
-                    img = img.crop((0, max(0, y_off), w, y_off + target_h))
-                else:
-                    x_off = (w - target_w) // 2
-                    img = img.crop((max(0, x_off), 0, x_off + target_w, h))
-                self.bg_image = img.resize((SHORT_W, SHORT_H))
+                self.bg_image = _fit_9x16(img)
                 print(f"🖼️ Static short background loaded")
             elif bg_type in ("video", "auto"):
                 self.bg_video = VideoFileClip(str(bg_video_path))
                 self.bg_video_duration = self.bg_video.duration
+
+        # When no explicit bg_video_path is provided AND the channel asked us
+        # to collect images, mirror the full-video behaviour and pull a themed
+        # Pexels background. This is what makes SCP shorts no longer look blank.
+        if (self.bg_video is None and self.bg_image is None
+                and (image_mode or "").lower() in ("collect", "mix")):
+            cache = cache_dir or (APP_DIR / "data" / "cache" / "short_bg" / "default")
+            self.bg_image = _collect_short_bg(
+                topic_query, image_collect_settings,
+                cache_dir=Path(cache) / "short_bg",
+                label="short",
+            )
 
         self.sprites = {}
         _SHORT_CHAR_DIR_MAP = {"理子": "riko", "真": "makoto", "あかり": "akari", "ゆうた": "yuuta",
@@ -1309,10 +1426,47 @@ class ShortFrameRenderer:
             return Image.fromarray(cropped).convert("RGBA").resize((SHORT_W, SHORT_H))
         if self.bg_image:
             return self.bg_image.copy()
-        return Image.new("RGBA", (SHORT_W, SHORT_H), (15, 25, 50, 255))
+        return Image.new("RGBA", (SHORT_W, SHORT_H), self.bg_fallback_color)
+
+    def _draw_scp_badge(self, overlay):
+        """Big top banner with 'SCP-173'-style label.
+
+        Mirrors the pattern used by the top-viewed Japanese SCP shorts:
+        thick black box, bold white text, anchored to the top safe area so
+        thumbnails / first-frame previews show it clearly.
+        """
+        if not self.scp_badge_text:
+            return
+        draw = ImageDraw.Draw(overlay)
+        text = self.scp_badge_text
+        # Try a few font sizes until it fits ~70% of the short width.
+        font_size = 120
+        target_w = int(SHORT_W * 0.72)
+        while font_size > 60:
+            tw = measure_composite_text(draw, text, font_size)
+            if tw <= target_w:
+                break
+            font_size -= 8
+        tw = measure_composite_text(draw, text, font_size)
+        pad_x, pad_y = 36, 18
+        box_w = tw + pad_x * 2
+        box_h = font_size + pad_y * 2
+        box_x = (SHORT_W - box_w) // 2
+        box_y = 90  # below the YouTube Shorts UI safe-zone
+        # Solid black plate with a thin red bottom rule (財団機密ノリ)
+        plate = Image.new("RGBA", (box_w, box_h), (0, 0, 0, 235))
+        pd = ImageDraw.Draw(plate)
+        pd.rectangle([0, box_h - 4, box_w, box_h], fill=(200, 30, 30, 240))
+        overlay.paste(plate, (box_x, box_y), plate)
+        draw_composite_text(
+            draw, (box_x + pad_x, box_y + pad_y), text, font_size,
+            (255, 255, 255), stroke_fill=(0, 0, 0), stroke_width=3,
+        )
 
     def _build_overlay(self, speaker, text, expression="normal"):
         overlay = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+        # SCP badge first so it sits behind the character / text layers.
+        self._draw_scp_badge(overlay)
         draw = ImageDraw.Draw(overlay)
         cfg = self.char_cfg.get(speaker)
         if not cfg:
@@ -1353,7 +1507,7 @@ class ShortFrameRenderer:
                             (255,255,255), stroke_fill=(0,0,0), stroke_width=4)
 
         if text:
-            tc = cfg.get("text_color", (255,255,255))
+            tc = tuple(cfg.get("text_color") or (255, 255, 255))
             wrapped = wrap_text(text, 64, SHORT_W-80, draw)
             y_start = cy + icon_d//2 + 40
             for line in wrapped:
@@ -1551,7 +1705,9 @@ class MonologueFrameRenderer:
 class MonologueShortRenderer:
     """1人語りスタイルのショート用レンダラー（9:16縦型）。"""
 
-    def __init__(self, bg_video_path=None, bg_type="auto"):
+    def __init__(self, bg_video_path=None, bg_type="auto",
+                 image_mode="generate", image_collect_settings=None,
+                 topic_query=None, cache_dir=None):
         self.bg_video = None
         self.bg_video_duration = 0
         self.bg_image = None
@@ -1565,19 +1721,19 @@ class MonologueShortRenderer:
                     vid = VideoFileClip(str(bg_video_path))
                     img = Image.fromarray(vid.get_frame(0)).convert("RGBA")
                     vid.close()
-                w, h = img.size
-                target_w = int(h * 9 / 16)
-                if target_w > w:
-                    target_h = int(w * 16 / 9)
-                    y_off = (h - target_h) // 2
-                    img = img.crop((0, max(0, y_off), w, y_off + target_h))
-                else:
-                    x_off = (w - target_w) // 2
-                    img = img.crop((max(0, x_off), 0, x_off + target_w, h))
-                self.bg_image = img.resize((SHORT_W, SHORT_H))
+                self.bg_image = _fit_9x16(img)
             elif bg_type in ("video", "auto"):
                 self.bg_video = VideoFileClip(str(bg_video_path))
                 self.bg_video_duration = self.bg_video.duration
+
+        if (self.bg_video is None and self.bg_image is None
+                and (image_mode or "").lower() in ("collect", "mix")):
+            cache = cache_dir or (APP_DIR / "data" / "cache" / "short_bg" / "default")
+            self.bg_image = _collect_short_bg(
+                topic_query, image_collect_settings,
+                cache_dir=Path(cache) / "short_bg",
+                label="monologue-short",
+            )
 
     def close(self):
         if self.bg_video:
@@ -1775,10 +1931,12 @@ def generate_monologue_video(scenario, title, output_prefix, bg_video_path=None,
 
 def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
                                out_dir=None, bg_type="auto", speed=None, speaker_id=None,
-                               channel_format=None, channel_id=None, bgm_volume=None):
+                               channel_format=None, channel_id=None, bgm_volume=None,
+                               image_mode="generate", image_collect_settings=None,
+                               channel_dict=None):
     """1人語りスタイルのショート動画生成。"""
     print("=" * 60)
-    print(f"���ノローグショート生成: {title}")
+    print(f"モノローグショート生成: {title}")
     print("=" * 60)
 
     use_vv = check_voicevox()
@@ -1786,11 +1944,25 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
     if out_dir is None:
         out_dir = get_output_dir(title)
     out_dir = Path(out_dir)
-    renderer = MonologueShortRenderer(bg_video_path, bg_type=bg_type)
+    topic_query = _short_bg_query(title, scenario, channel_dict)
+    renderer = MonologueShortRenderer(
+        bg_video_path, bg_type=bg_type,
+        image_mode=image_mode, image_collect_settings=image_collect_settings,
+        topic_query=topic_query, cache_dir=out_dir,
+    )
     tmp_dir = tempfile.mkdtemp(prefix="monos_")
     clips, t_off = [], 0.0
     audio_clips = []
     mood_timeline = []
+    fx_cfg = None
+    fx_plans: list = []
+    durations: list = []
+    if video_effects is not None:
+        try:
+            fx_cfg = video_effects.load_effects_config(channel_format)
+        except Exception as e:
+            print(f"⚠️ effects config load failed: {e}")
+            fx_cfg = None
 
     for i, entry in enumerate(scenario):
         if "chapter_title" in entry:
@@ -1801,12 +1973,43 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
         dur = max(get_audio_duration(wav), 1.0) + 0.3
 
         clip = renderer.make_video_clip(tx, dur, t_off)
+        if fx_cfg is not None and fx_cfg.enabled:
+            try:
+                plan = video_effects.decide_effect_plan(
+                    tx, entry.get("mood"),
+                    position=i, total_count=len(scenario), cfg=fx_cfg,
+                )
+                fx_plans.append(plan)
+                if plan:
+                    clip = video_effects.apply_clip_effects(
+                        clip, plan,
+                        fmt_size=(SHORT_W, SHORT_H), cfg=fx_cfg,
+                    )
+            except Exception as e:
+                print(f"  ⚠️ effects skipped on line {i+1}: {e}")
+                fx_plans.append([])
+        else:
+            fx_plans.append([])
+
         ac = AudioFileClip(wav)
         audio_clips.append(ac)
         clip = clip.with_audio(ac)
         clips.append(clip)
+        durations.append(dur)
         mood_timeline.append((t_off, t_off + dur, entry.get("mood")))
         t_off += dur
+
+    if fx_cfg is not None and fx_cfg.enabled and fx_cfg.allow_transitions:
+        try:
+            clips = video_effects.maybe_add_crossfades(
+                clips, cfg=fx_cfg, durations=durations,
+            )
+        except Exception as e:
+            print(f"⚠️ crossfade pass failed: {e}")
+    if fx_cfg is not None and fx_cfg.enabled:
+        summary = video_effects.summarize_plan(fx_plans)
+        if summary:
+            print(f"✨ mono-short effects applied: {summary}  (preset={fx_cfg.preset})")
 
     final = concatenate_videoclips(clips)
     final = _mix_bgm(final, channel_format, channel_id=channel_id, bgm_volume=bgm_volume, mood_timeline=mood_timeline)
@@ -2019,7 +2222,9 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
 # Generate short video
 # ============================================================
 def generate_short_video(short_scenario, title, output_prefix, bg_video_path=None, out_dir=None, bg_type="auto", speed=None,
-                         channel_format=None, char_config=None, channel_id=None, bgm_volume=None):
+                         channel_format=None, char_config=None, channel_id=None, bgm_volume=None,
+                         image_mode="generate", image_collect_settings=None,
+                         channel_dict=None):
     print("=" * 60)
     print(f"ショート動画生成: {title}")
     print("=" * 60)
@@ -2030,11 +2235,27 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
     if out_dir is None:
         out_dir = get_output_dir(title)
     out_dir = Path(out_dir)
-    renderer = ShortFrameRenderer(bg_video_path, bg_type=bg_type, char_config=char_config)
+    topic_query = _short_bg_query(title, short_scenario, channel_dict)
+    overlay_style = ((channel_dict or {}).get("defaults") or {}).get("short_overlay_style") or {}
+    renderer = ShortFrameRenderer(
+        bg_video_path, bg_type=bg_type, char_config=char_config,
+        image_mode=image_mode, image_collect_settings=image_collect_settings,
+        topic_query=topic_query, cache_dir=out_dir,
+        overlay_style=overlay_style, title=title,
+    )
     active_chars = char_config or CHAR_CONFIG
     tmp_dir = tempfile.mkdtemp(prefix="short_")
     clips, audio_clips, t_off = [], [], 0.0
     mood_timeline = []
+    fx_cfg = None
+    fx_plans: list = []
+    durations: list = []
+    if video_effects is not None:
+        try:
+            fx_cfg = video_effects.load_effects_config(channel_format)
+        except Exception as e:
+            print(f"⚠️ effects config load failed: {e}")
+            fx_cfg = None
 
     for i, entry in enumerate(short_scenario):
         sp, tx = entry["speaker"], entry["text"]
@@ -2047,12 +2268,43 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         expr = pick_expression(tx, cfg["expressions"])
 
         clip = renderer.make_video_clip(sp, tx, dur, t_off, expr)
+        if fx_cfg is not None and fx_cfg.enabled:
+            try:
+                plan = video_effects.decide_effect_plan(
+                    tx, entry.get("mood"),
+                    position=i, total_count=len(short_scenario), cfg=fx_cfg,
+                )
+                fx_plans.append(plan)
+                if plan:
+                    clip = video_effects.apply_clip_effects(
+                        clip, plan,
+                        fmt_size=(SHORT_W, SHORT_H), cfg=fx_cfg,
+                    )
+            except Exception as e:
+                print(f"  ⚠️ effects skipped on line {i+1}: {e}")
+                fx_plans.append([])
+        else:
+            fx_plans.append([])
+
         ac = AudioFileClip(wav)
         audio_clips.append(ac)
         clip = clip.with_audio(ac)
         clips.append(clip)
+        durations.append(dur)
         mood_timeline.append((t_off, t_off + dur, entry.get("mood")))
         t_off += dur
+
+    if fx_cfg is not None and fx_cfg.enabled and fx_cfg.allow_transitions:
+        try:
+            clips = video_effects.maybe_add_crossfades(
+                clips, cfg=fx_cfg, durations=durations,
+            )
+        except Exception as e:
+            print(f"⚠️ crossfade pass failed: {e}")
+    if fx_cfg is not None and fx_cfg.enabled:
+        summary = video_effects.summarize_plan(fx_plans)
+        if summary:
+            print(f"✨ short effects applied: {summary}  (preset={fx_cfg.preset})")
 
     print(f"\n🎬 Concatenating {len(clips)} clips ({t_off:.1f}s)...")
     final = concatenate_videoclips(clips)
@@ -3227,7 +3479,9 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                 short_scenario, title, prefix, bg_video_path,
                 out_dir=str(out_dir), bg_type=bg_type, speed=speed,
                 channel_format=channel_format, channel_id=channel_id,
-                bgm_volume=bgm_volume)
+                bgm_volume=bgm_volume,
+                image_mode=image_mode, image_collect_settings=image_collect_settings,
+                channel_dict=channel_dict)
 
         if gen_type in ("full", "both"):
             _ck()
@@ -3256,7 +3510,10 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
             results["short"] = generate_short_video(short_scenario, title, prefix, bg_video_path,
                                                      out_dir=str(out_dir), bg_type=bg_type, speed=speed,
                                                      channel_format=channel_format, char_config=char_config,
-                                                     channel_id=channel_id, bgm_volume=bgm_volume)
+                                                     channel_id=channel_id, bgm_volume=bgm_volume,
+                                                     image_mode=image_mode,
+                                                     image_collect_settings=image_collect_settings,
+                                                     channel_dict=channel_dict)
 
         if gen_type in ("full", "both"):
             _ck()

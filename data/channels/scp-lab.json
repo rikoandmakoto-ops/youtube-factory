@@ -209,6 +209,11 @@
     "target_duration": 720,
     "bg_type": "static",
     "bg_path": null,
+    "short_bg_query": "dark abandoned creepy industrial corridor",
+    "short_overlay_style": {
+      "scp_badge": true,
+      "bg_fallback_color": [35, 35, 35, 255]
+    },
     "use_illustrations": true,
     "hashtags": [
       "#SCP",
