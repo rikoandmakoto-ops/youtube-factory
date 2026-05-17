@@ -26,7 +26,7 @@ IMAGE_MODES = ("generate", "collect", "mix")
 DEFAULT_IMAGE_MODE = "generate"
 
 DEFAULT_IMAGE_COLLECT_SETTINGS: Dict[str, Any] = {
-    "provider": "auto",          # "auto" | "pixabay" | "unsplash" | "google_cse"
+    "provider": "auto",          # "auto" | "pixabay" | "pexels" | "unsplash" | "google_cse"
     "safe_search": True,
     "license_filter": "cc",      # "cc" | "any"
     "max_per_query": 5,
