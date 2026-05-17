@@ -1145,13 +1145,16 @@ class FactoryRunRequest(BaseModel):
     auto_theme: bool = True  # True=ランダム選択, False=theme_titleを指定
     theme_title: Optional[str] = None
     theme_angle: Optional[str] = None
+    use_theme_queue: bool = True  # True なら theme_queue を優先消費する
 
 
 @app.post("/factory/run")
 async def factory_run(request: FactoryRunRequest):
     """
     全自動: シナリオ生成 → ジョブキュー投入 を一気に実行。
-    チャンネルのtheme_seedsからランダムに選んでシナリオ生成→動画生成キューへ。
+    use_theme_queue=True なら data/channels/<id>/theme_queue.json の先頭から1件消費。
+    キューが空の場合は従来通り theme_seeds / suggest_themes にフォールバック。
+    消費後はバックグラウンドで補充が走る。
     """
     if not channel_manager or not scenario_generator or not job_queue:
         raise HTTPException(status_code=500, detail="Factory not fully initialized")
@@ -1167,8 +1170,20 @@ async def factory_run(request: FactoryRunRequest):
     for i in range(request.count):
         try:
             theme_override = None
+            consumed_from_queue = False
             if not request.auto_theme and request.theme_title:
+                # 明示指定: queue を使わない
                 theme_override = {"title": request.theme_title, "angle": request.theme_angle or "自由"}
+            elif request.use_theme_queue:
+                popped = _tq.consume(request.channel_id)
+                if popped:
+                    theme_override = {
+                        "title": popped.get("title"),
+                        "angle": popped.get("angle") or "自由",
+                    }
+                    consumed_from_queue = True
+                    # 消費1件につき補充を1件キック（背景）
+                    _tq.replenish_async(ch, scenario_generator)
 
             # 1. シナリオ生成 — 未消費の改善フィードバックがあれば GPT に注入
             try:
@@ -1197,7 +1212,13 @@ async def factory_run(request: FactoryRunRequest):
                     mark_consumed(scenario["applied_feedback"], consumed_by_job_id=job_id)
                 except Exception:
                     pass
-            results.append({"index": i, "title": scenario["title"], "job_id": job_id, "status": "queued"})
+            results.append({
+                "index": i,
+                "title": scenario["title"],
+                "job_id": job_id,
+                "status": "queued",
+                "from_theme_queue": consumed_from_queue,
+            })
         except Exception as e:
             results.append({"index": i, "error": str(e), "status": "failed"})
 
@@ -1221,6 +1242,15 @@ async def factory_run_all(count_per_channel: int = 1, priority: int = 5, gen_typ
         ch_results = []
         for i in range(count_per_channel):
             try:
+                # theme_queue から1件消費（あれば）
+                theme_override = None
+                consumed_from_queue = False
+                popped = _tq.consume(ch.id)
+                if popped:
+                    theme_override = {"title": popped.get("title"), "angle": popped.get("angle") or "自由"}
+                    consumed_from_queue = True
+                    _tq.replenish_async(ch, scenario_generator)
+
                 try:
                     from pipeline.analytics.feedback_store import get_pending_for_channel, mark_consumed
                     pending_fb = get_pending_for_channel(ch.id)
@@ -1228,7 +1258,9 @@ async def factory_run_all(count_per_channel: int = 1, priority: int = 5, gen_typ
                     pending_fb = []
                     mark_consumed = None  # type: ignore
                 scenario = scenario_generator.generate(
-                    ch, improvement_feedback=pending_fb or None
+                    ch,
+                    theme_override=theme_override,
+                    improvement_feedback=pending_fb or None,
                 )
                 scenario_generator.save_scenario(scenario)
                 job_id = job_queue.submit(
@@ -1242,7 +1274,11 @@ async def factory_run_all(count_per_channel: int = 1, priority: int = 5, gen_typ
                         mark_consumed(scenario["applied_feedback"], consumed_by_job_id=job_id)
                     except Exception:
                         pass
-                ch_results.append({"title": scenario["title"], "job_id": job_id})
+                ch_results.append({
+                    "title": scenario["title"],
+                    "job_id": job_id,
+                    "from_theme_queue": consumed_from_queue,
+                })
             except Exception as e:
                 ch_results.append({"error": str(e)})
         all_results[ch.id] = ch_results
@@ -1345,6 +1381,172 @@ async def api_ab_test_list(channel_id: Optional[str] = None, limit: int = 50):
     return {"status": "ok", "items": list_ab_tests(channel_id=channel_id, limit=limit)}
 
 
+# ============================================================
+# Theme Queue Endpoints — チャンネル別の動画ネタストック
+# ============================================================
+
+from pipeline.auto_scenario import theme_queue as _tq
+
+
+class ThemeQueueSettingsRequest(BaseModel):
+    target_size: Optional[int] = None
+    min_threshold: Optional[int] = None
+
+
+class ThemeQueueReplenishRequest(BaseModel):
+    count: Optional[int] = None  # None = target まで満たす
+
+
+class ThemeQueueAddItemRequest(BaseModel):
+    title: str
+    angle: Optional[str] = ""
+    parent_title: Optional[str] = None
+
+
+class ThemeQueueReorderRequest(BaseModel):
+    ordered_ids: List[str]
+
+
+@app.get("/theme-queue/{channel_id}")
+async def theme_queue_status(channel_id: str):
+    """テーマキュー（在庫サマリ + items）を返す。"""
+    if not channel_manager or not channel_manager.get(channel_id):
+        raise HTTPException(status_code=404, detail=f"Channel not found: {channel_id}")
+    return _tq.get_status(channel_id)
+
+
+@app.put("/theme-queue/{channel_id}/settings")
+async def theme_queue_update_settings(channel_id: str, request: ThemeQueueSettingsRequest):
+    """target_size / min_threshold を更新。"""
+    if not channel_manager or not channel_manager.get(channel_id):
+        raise HTTPException(status_code=404, detail=f"Channel not found: {channel_id}")
+    return _tq.update_settings(
+        channel_id,
+        target_size=request.target_size,
+        min_threshold=request.min_threshold,
+    )
+
+
+@app.post("/theme-queue/{channel_id}/replenish")
+async def theme_queue_replenish(channel_id: str, request: ThemeQueueReplenishRequest):
+    """手動補充。count を省略すると target_size まで満たす。"""
+    if not channel_manager or not scenario_generator:
+        raise HTTPException(status_code=500, detail="Not initialized")
+    ch = channel_manager.get(channel_id)
+    if not ch:
+        raise HTTPException(status_code=404, detail=f"Channel not found: {channel_id}")
+    if not scenario_generator.api_key:
+        raise HTTPException(status_code=400, detail="OpenAI API key not set")
+    try:
+        return _tq.replenish(ch, scenario_generator, count=request.count)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/theme-queue/{channel_id}/consume")
+async def theme_queue_consume(channel_id: str, auto_replenish: bool = True):
+    """先頭1件を取り出して返す。auto_replenish=True なら背景で補充も走らせる。"""
+    if not channel_manager:
+        raise HTTPException(status_code=500, detail="Not initialized")
+    ch = channel_manager.get(channel_id)
+    if not ch:
+        raise HTTPException(status_code=404, detail=f"Channel not found: {channel_id}")
+    item = _tq.consume(channel_id)
+    if not item:
+        raise HTTPException(status_code=404, detail="Queue is empty")
+    if auto_replenish and scenario_generator and scenario_generator.api_key:
+        _tq.replenish_async(ch, scenario_generator)
+    return {"status": "ok", "item": item, "queue": _tq.get_status(channel_id)}
+
+
+@app.post("/theme-queue/{channel_id}/items")
+async def theme_queue_add_item(channel_id: str, request: ThemeQueueAddItemRequest):
+    """手動追加。"""
+    if not channel_manager or not channel_manager.get(channel_id):
+        raise HTTPException(status_code=404, detail=f"Channel not found: {channel_id}")
+    item = _tq.add_item(channel_id, {
+        "title": request.title,
+        "angle": request.angle or "",
+        "parent_title": request.parent_title,
+    }, source="manual")
+    if not item:
+        raise HTTPException(status_code=400, detail="Invalid or duplicate title")
+    return {"status": "added", "item": item, "queue": _tq.get_status(channel_id)}
+
+
+@app.delete("/theme-queue/{channel_id}/items/{item_id}")
+async def theme_queue_remove_item(channel_id: str, item_id: str):
+    if not channel_manager or not channel_manager.get(channel_id):
+        raise HTTPException(status_code=404, detail=f"Channel not found: {channel_id}")
+    removed = _tq.remove_item(channel_id, item_id)
+    if not removed:
+        raise HTTPException(status_code=404, detail=f"Item not found: {item_id}")
+    return {"status": "removed", "queue": _tq.get_status(channel_id)}
+
+
+@app.put("/theme-queue/{channel_id}/reorder")
+async def theme_queue_reorder(channel_id: str, request: ThemeQueueReorderRequest):
+    if not channel_manager or not channel_manager.get(channel_id):
+        raise HTTPException(status_code=404, detail=f"Channel not found: {channel_id}")
+    return _tq.reorder(channel_id, request.ordered_ids)
+
+
+@app.post("/theme-queue/check-all")
+async def theme_queue_check_all():
+    """全チャンネルを巡回して、在庫が閾値以下なら補充する。スケジューラから呼ぶ用途。"""
+    if not channel_manager or not scenario_generator:
+        raise HTTPException(status_code=500, detail="Not initialized")
+    if not scenario_generator.api_key:
+        raise HTTPException(status_code=400, detail="OpenAI API key not set")
+    return _tq.check_all_channels(channel_manager, scenario_generator)
+
+
+# 30分ごとに在庫不足チャンネルを補充するスケジューラ。APScheduler が無い環境では起動しない。
+_theme_queue_scheduler = None  # type: ignore[var-annotated]
+THEME_QUEUE_CHECK_INTERVAL_MIN = int(os.environ.get("THEME_QUEUE_CHECK_INTERVAL_MIN", "30"))
+
+
+def _theme_queue_periodic_job():
+    """スケジューラ本体（同期）。OpenAI 未設定/初期化未完了ならスキップ。"""
+    if not channel_manager or not scenario_generator:
+        return
+    if not getattr(scenario_generator, "api_key", None):
+        return
+    try:
+        res = _tq.check_all_channels(channel_manager, scenario_generator)
+        replenished = sum(
+            1 for r in res.get("by_channel", {}).values()
+            if isinstance(r, dict) and r.get("added")
+        )
+        if replenished:
+            print(f"🧺 ThemeQueue periodic: replenished {replenished} channel(s)")
+    except Exception as e:
+        print(f"⚠️ ThemeQueue periodic failed: {e}")
+
+
+def _start_theme_queue_scheduler():
+    global _theme_queue_scheduler
+    try:
+        from apscheduler.schedulers.background import BackgroundScheduler
+        from apscheduler.triggers.interval import IntervalTrigger
+    except ImportError:
+        print("⚠️ APScheduler not installed — theme_queue periodic check disabled")
+        return
+    if _theme_queue_scheduler is not None:
+        return
+    sch = BackgroundScheduler(timezone="Asia/Tokyo")
+    sch.add_job(
+        _theme_queue_periodic_job,
+        trigger=IntervalTrigger(minutes=THEME_QUEUE_CHECK_INTERVAL_MIN),
+        id="theme-queue-check-all",
+        replace_existing=True,
+        next_run_time=datetime.now(),  # 起動直後に一度走らせる
+    )
+    sch.start()
+    _theme_queue_scheduler = sch
+    print(f"🕒 ThemeQueue scheduler started (every {THEME_QUEUE_CHECK_INTERVAL_MIN} min)")
+
+
 @app.get("/health")
 async def health():
     """Health check endpoint."""
@@ -1408,6 +1610,12 @@ async def startup_event():
         api_channel_autopilot.restore_all()
     except Exception as e:
         print(f"⚠️ Autopilot restore failed: {e}")
+
+    # Theme Queue: 定期チェック（30分ごとに在庫不足チャンネルを補充）
+    try:
+        _start_theme_queue_scheduler()
+    except Exception as e:
+        print(f"⚠️ Theme queue scheduler failed to start: {e}")
 
     print()
     print("🏭 YouTube Factory ready!")

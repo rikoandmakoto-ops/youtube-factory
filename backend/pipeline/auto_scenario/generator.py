@@ -1155,6 +1155,7 @@ class ScenarioGenerator:
         count: int = 5,
         *,
         include_trends: bool = True,
+        extra_excluded: Optional[List[str]] = None,
     ) -> List[Dict[str, str]]:
         """GPT にチャンネルコンセプトに合う新テーマを提案させる。
 
@@ -1165,14 +1166,18 @@ class ScenarioGenerator:
 
         Phase C: include_trends=True なら Google Trends / YouTube 急上昇を取得して
         プロンプトに注入し、トレンドに乗ったテーマには ``is_trending: true`` を付与する。
+
+        Args:
+            extra_excluded: 追加で除外したいタイトル群（ThemeQueue 内の未消費ストック等）。
         """
         seed_titles = [s["title"] for s in channel.theme_seeds if s.get("title")]
         past_themes = self._collect_past_themes(channel.id, limit=40)
         past_titles = [t["title"] for t in past_themes]
+        extras = [t for t in (extra_excluded or []) if isinstance(t, str) and t.strip()]
 
         seen = set()
         excluded: List[str] = []
-        for t in seed_titles + past_titles:
+        for t in seed_titles + past_titles + extras:
             key = t.lower()
             if key and key not in seen:
                 seen.add(key)

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import ViewsChart from '@/components/ViewsChart';
 import VideoListClient from './ChannelDetailClient';
+import ThemeQueuePanel from '@/components/ThemeQueuePanel';
 import {
   getChannel,
   getChannelAnalytics,
@@ -154,6 +155,8 @@ export default async function ChannelDetailPage({
           ⚙️ チャンネル設定
         </Link>
       </section>
+
+      <ThemeQueuePanel channelId={channel.id} channelName={channel.name} />
 
       <section className="px-5 mt-6">
         <h2 className="font-bold text-slate-200 mb-3">動画一覧</h2>

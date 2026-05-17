@@ -706,3 +706,115 @@ async def suggest_theme(
         return {"themes": themes}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Suggest failed: {e}")
+
+
+# =====================================================================
+# Theme Queue — チャンネル別「動画ネタストック」の管理 (JWT 保護)
+# =====================================================================
+from pipeline.auto_scenario import theme_queue as _tq  # noqa: E402
+
+
+class ThemeQueueSettingsBody(BaseModel):
+    target_size: Optional[int] = Field(default=None, ge=1, le=50)
+    min_threshold: Optional[int] = Field(default=None, ge=0, le=50)
+
+
+class ThemeQueueReplenishBody(BaseModel):
+    count: Optional[int] = Field(default=None, ge=1, le=20)
+
+
+class ThemeQueueAddItemBody(BaseModel):
+    title: str = Field(min_length=1, max_length=200)
+    angle: Optional[str] = ""
+    parent_title: Optional[str] = None
+
+
+class ThemeQueueReorderBody(BaseModel):
+    ordered_ids: List[str]
+
+
+def _require_channel(channel_id: str):
+    cm = _state.get("channel_manager")
+    if not cm:
+        raise HTTPException(status_code=503, detail="Channel manager not ready")
+    ch = cm.get(channel_id)
+    if not ch:
+        raise HTTPException(status_code=404, detail=f"Channel not found: {channel_id}")
+    return ch
+
+
+@router.get("/theme-queue/{channel_id}")
+async def api_theme_queue_get(channel_id: str, _=Depends(require_session)) -> Dict[str, Any]:
+    _require_channel(channel_id)
+    return _tq.get_status(channel_id)
+
+
+@router.put("/theme-queue/{channel_id}/settings")
+async def api_theme_queue_settings(
+    channel_id: str, body: ThemeQueueSettingsBody, _=Depends(require_session)
+) -> Dict[str, Any]:
+    _require_channel(channel_id)
+    return _tq.update_settings(
+        channel_id,
+        target_size=body.target_size,
+        min_threshold=body.min_threshold,
+    )
+
+
+@router.post("/theme-queue/{channel_id}/replenish")
+async def api_theme_queue_replenish(
+    channel_id: str, body: ThemeQueueReplenishBody, _=Depends(require_session)
+) -> Dict[str, Any]:
+    ch = _require_channel(channel_id)
+    sg = _state.get("scenario_generator")
+    if not sg or not getattr(sg, "api_key", None):
+        raise HTTPException(status_code=400, detail="OpenAI API キーが設定されていません")
+    # LLM 呼び出しは数十秒掛かることがあるのでスレッドへ
+    try:
+        return await asyncio.to_thread(_tq.replenish, ch, sg, count=body.count)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Replenish failed: {e}")
+
+
+@router.post("/theme-queue/{channel_id}/items")
+async def api_theme_queue_add_item(
+    channel_id: str, body: ThemeQueueAddItemBody, _=Depends(require_session)
+) -> Dict[str, Any]:
+    _require_channel(channel_id)
+    item = _tq.add_item(
+        channel_id,
+        {"title": body.title, "angle": body.angle or "", "parent_title": body.parent_title},
+        source="manual",
+    )
+    if not item:
+        raise HTTPException(status_code=400, detail="無効または重複したタイトル")
+    return {"status": "added", "item": item, "queue": _tq.get_status(channel_id)}
+
+
+@router.delete("/theme-queue/{channel_id}/items/{item_id}")
+async def api_theme_queue_remove_item(
+    channel_id: str, item_id: str, _=Depends(require_session)
+) -> Dict[str, Any]:
+    _require_channel(channel_id)
+    if not _tq.remove_item(channel_id, item_id):
+        raise HTTPException(status_code=404, detail=f"Item not found: {item_id}")
+    return {"status": "removed", "queue": _tq.get_status(channel_id)}
+
+
+@router.put("/theme-queue/{channel_id}/reorder")
+async def api_theme_queue_reorder(
+    channel_id: str, body: ThemeQueueReorderBody, _=Depends(require_session)
+) -> Dict[str, Any]:
+    _require_channel(channel_id)
+    return _tq.reorder(channel_id, body.ordered_ids)
+
+
+@router.post("/theme-queue/check-all")
+async def api_theme_queue_check_all(_=Depends(require_session)) -> Dict[str, Any]:
+    cm = _state.get("channel_manager")
+    sg = _state.get("scenario_generator")
+    if not cm or not sg:
+        raise HTTPException(status_code=503, detail="Pipeline not initialized")
+    if not getattr(sg, "api_key", None):
+        raise HTTPException(status_code=400, detail="OpenAI API キーが設定されていません")
+    return await asyncio.to_thread(_tq.check_all_channels, cm, sg)

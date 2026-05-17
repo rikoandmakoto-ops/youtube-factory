@@ -2680,3 +2680,92 @@ export async function dismissCommentDemand(
     { method: 'POST', noStore: true }
   );
 }
+
+// ────────────────────────────────────────────────────────────
+// Theme Queue — チャンネル別の動画ネタストック
+// ────────────────────────────────────────────────────────────
+
+export type ThemeQueueItem = {
+  id: string;
+  title: string;
+  angle: string;
+  parent_title?: string | null;
+  is_trending?: boolean;
+  trend_match?: string | null;
+  trend_score?: number | null;
+  source?: 'auto' | 'manual' | 'seed';
+  created_at: string;
+};
+
+export type ThemeQueueStatus = {
+  channel_id: string;
+  stock: number;
+  target_size: number;
+  min_threshold: number;
+  below_threshold: boolean;
+  last_replenished_at: string | null;
+  last_checked_at: string | null;
+  last_error: string | null;
+  items: ThemeQueueItem[];
+};
+
+export async function getThemeQueue(channelId: string): Promise<ThemeQueueStatus> {
+  return call<ThemeQueueStatus>(
+    `/api/theme-queue/${encodeURIComponent(channelId)}`,
+    { noStore: true }
+  );
+}
+
+export async function updateThemeQueueSettings(
+  channelId: string,
+  patch: { target_size?: number; min_threshold?: number }
+): Promise<ThemeQueueStatus> {
+  return call<ThemeQueueStatus>(
+    `/api/theme-queue/${encodeURIComponent(channelId)}/settings`,
+    { method: 'PUT', body: JSON.stringify(patch) }
+  );
+}
+
+export async function replenishThemeQueue(
+  channelId: string,
+  count?: number
+): Promise<ThemeQueueStatus & { added?: ThemeQueueItem[]; skipped_reason?: string }> {
+  return call(
+    `/api/theme-queue/${encodeURIComponent(channelId)}/replenish`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ count: count ?? null }),
+      noStore: true,
+    }
+  );
+}
+
+export async function addThemeQueueItem(
+  channelId: string,
+  payload: { title: string; angle?: string; parent_title?: string | null }
+): Promise<{ status: string; item: ThemeQueueItem; queue: ThemeQueueStatus }> {
+  return call(
+    `/api/theme-queue/${encodeURIComponent(channelId)}/items`,
+    { method: 'POST', body: JSON.stringify(payload) }
+  );
+}
+
+export async function removeThemeQueueItem(
+  channelId: string,
+  itemId: string
+): Promise<{ status: string; queue: ThemeQueueStatus }> {
+  return call(
+    `/api/theme-queue/${encodeURIComponent(channelId)}/items/${encodeURIComponent(itemId)}`,
+    { method: 'DELETE' }
+  );
+}
+
+export async function reorderThemeQueue(
+  channelId: string,
+  orderedIds: string[]
+): Promise<ThemeQueueStatus> {
+  return call(
+    `/api/theme-queue/${encodeURIComponent(channelId)}/reorder`,
+    { method: 'PUT', body: JSON.stringify({ ordered_ids: orderedIds }) }
+  );
+}
