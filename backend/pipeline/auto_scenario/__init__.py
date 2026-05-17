@@ -6,5 +6,6 @@ yukkuri対話 / monologue 両スタイルのシナリオを自動生成する。
 """
 
 from .generator import ScenarioGenerator
+from . import theme_queue
 
-__all__ = ["ScenarioGenerator"]
+__all__ = ["ScenarioGenerator", "theme_queue"]
