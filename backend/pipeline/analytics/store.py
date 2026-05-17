@@ -1408,6 +1408,48 @@ def _ensure_phase_f_tables() -> None:
                     ON comment_demands(channel_id, status, score DESC);
                 CREATE INDEX IF NOT EXISTS idx_comment_demands_text
                     ON comment_demands(channel_id, demand_text);
+
+                CREATE TABLE IF NOT EXISTS competitor_video_analyses (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    channel_id TEXT NOT NULL,
+                    competitor_id TEXT NOT NULL,
+                    video_id TEXT NOT NULL,
+                    video_title TEXT,
+                    published_at TEXT,
+                    views INTEGER,
+                    duration_seconds INTEGER,
+                    thumbnail_path TEXT,
+                    frame_paths TEXT,
+                    visual_insights TEXT,
+                    transcript_source TEXT,
+                    transcript_excerpt TEXT,
+                    content_insights TEXT,
+                    error TEXT,
+                    analyzed_at INTEGER NOT NULL,
+                    UNIQUE(channel_id, competitor_id, video_id)
+                );
+                CREATE INDEX IF NOT EXISTS idx_competitor_video_analyses_channel
+                    ON competitor_video_analyses(channel_id, analyzed_at DESC);
+                CREATE INDEX IF NOT EXISTS idx_competitor_video_analyses_competitor
+                    ON competitor_video_analyses(channel_id, competitor_id, analyzed_at DESC);
+
+                CREATE TABLE IF NOT EXISTS effects_research (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    channel_id TEXT NOT NULL,
+                    genre TEXT,
+                    queries TEXT,                       -- JSON array
+                    channels_analyzed TEXT,             -- JSON array of competitor metadata
+                    per_video_results TEXT,             -- JSON array of analyze_one_video outputs
+                    aggregated_patterns TEXT,           -- JSON object
+                    suggested_effects TEXT,             -- JSON object (the effects dict)
+                    applied INTEGER NOT NULL DEFAULT 0, -- 1 if written to channel JSON
+                    error TEXT,
+                    started_at INTEGER,
+                    finished_at INTEGER NOT NULL,
+                    created_at INTEGER NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS idx_effects_research_channel
+                    ON effects_research(channel_id, finished_at DESC);
                 """
             )
             c.commit()
@@ -1416,6 +1458,217 @@ def _ensure_phase_f_tables() -> None:
 
 
 _ensure_phase_f_tables()
+
+
+def _competitor_video_row_to_dict(row: sqlite3.Row) -> Dict[str, Any]:
+    d = dict(row)
+    for key in ("frame_paths",):
+        raw = d.get(key)
+        if raw:
+            try:
+                d[key] = json.loads(raw)
+            except Exception:
+                d[key] = []
+        else:
+            d[key] = []
+    for key in ("visual_insights", "content_insights"):
+        raw = d.get(key)
+        if raw:
+            try:
+                d[key] = json.loads(raw)
+            except Exception:
+                d[key] = {}
+        else:
+            d[key] = {}
+    return d
+
+
+def _effects_research_row_to_dict(row: sqlite3.Row) -> Dict[str, Any]:
+    d = dict(row)
+    for key in ("queries", "channels_analyzed", "per_video_results",
+                "aggregated_patterns", "suggested_effects"):
+        raw = d.get(key)
+        if raw:
+            try:
+                d[key] = json.loads(raw)
+            except Exception:
+                # Keep raw string so frontends can show something
+                pass
+        else:
+            d[key] = None if key in ("aggregated_patterns", "suggested_effects") else []
+    d["applied"] = bool(d.get("applied"))
+    return d
+
+
+def upsert_effects_research(
+    *,
+    channel_id: str,
+    genre: Optional[str],
+    queries: List[str],
+    channels_analyzed: List[Dict[str, Any]],
+    per_video_results: List[Dict[str, Any]],
+    aggregated_patterns: Optional[Dict[str, Any]],
+    suggested_effects: Optional[Dict[str, Any]],
+    started_at: Optional[int],
+    finished_at: int,
+    error: Optional[str] = None,
+) -> int:
+    """Always inserts a new row (history table). Returns rowid."""
+    now = int(time.time())
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                """
+                INSERT INTO effects_research
+                (channel_id, genre, queries, channels_analyzed,
+                 per_video_results, aggregated_patterns,
+                 suggested_effects, applied, error,
+                 started_at, finished_at, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    channel_id, genre,
+                    json.dumps(queries or [], ensure_ascii=False),
+                    json.dumps(channels_analyzed or [], ensure_ascii=False),
+                    json.dumps(per_video_results or [], ensure_ascii=False),
+                    json.dumps(aggregated_patterns or {}, ensure_ascii=False) if aggregated_patterns else None,
+                    json.dumps(suggested_effects or {}, ensure_ascii=False) if suggested_effects else None,
+                    0,
+                    error,
+                    started_at,
+                    int(finished_at),
+                    now,
+                ),
+            )
+            c.commit()
+            return int(cur.lastrowid or 0)
+        finally:
+            c.close()
+
+
+def mark_effects_research_applied(record_id: int) -> bool:
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                "UPDATE effects_research SET applied = 1 WHERE id = ?",
+                (int(record_id),),
+            )
+            c.commit()
+            return cur.rowcount > 0
+        finally:
+            c.close()
+
+
+def get_latest_effects_research(channel_id: str) -> Optional[Dict[str, Any]]:
+    with _db_lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT * FROM effects_research WHERE channel_id = ? "
+                "ORDER BY finished_at DESC LIMIT 1",
+                (channel_id,),
+            ).fetchone()
+        finally:
+            c.close()
+    if not row:
+        return None
+    return _effects_research_row_to_dict(row)
+
+
+def list_effects_research(
+    channel_id: str, *, limit: int = 20
+) -> List[Dict[str, Any]]:
+    with _db_lock:
+        c = _conn()
+        try:
+            rows = c.execute(
+                "SELECT * FROM effects_research WHERE channel_id = ? "
+                "ORDER BY finished_at DESC LIMIT ?",
+                (channel_id, int(limit)),
+            ).fetchall()
+        finally:
+            c.close()
+    return [_effects_research_row_to_dict(r) for r in rows]
+
+
+def get_effects_research(record_id: int) -> Optional[Dict[str, Any]]:
+    with _db_lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT * FROM effects_research WHERE id = ? LIMIT 1",
+                (int(record_id),),
+            ).fetchone()
+        finally:
+            c.close()
+    if not row:
+        return None
+    return _effects_research_row_to_dict(row)
+
+
+def upsert_competitor_video_analysis(
+    *,
+    channel_id: str,
+    competitor_id: str,
+    video_id: str,
+    video_title: Optional[str],
+    published_at: Optional[str],
+    views: Optional[int],
+    duration_seconds: Optional[int],
+    thumbnail_path: Optional[str],
+    frame_paths: Optional[List[str]],
+    visual_insights: Optional[Dict[str, Any]],
+    transcript_source: Optional[str],
+    transcript_excerpt: Optional[str],
+    content_insights: Optional[Dict[str, Any]],
+    error: Optional[str] = None,
+) -> int:
+    now = int(time.time())
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                """
+                INSERT INTO competitor_video_analyses
+                (channel_id, competitor_id, video_id, video_title, published_at,
+                 views, duration_seconds, thumbnail_path, frame_paths,
+                 visual_insights, transcript_source, transcript_excerpt,
+                 content_insights, error, analyzed_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(channel_id, competitor_id, video_id) DO UPDATE SET
+                    video_title = excluded.video_title,
+                    published_at = excluded.published_at,
+                    views = excluded.views,
+                    duration_seconds = excluded.duration_seconds,
+                    thumbnail_path = excluded.thumbnail_path,
+                    frame_paths = excluded.frame_paths,
+                    visual_insights = excluded.visual_insights,
+                    transcript_source = excluded.transcript_source,
+                    transcript_excerpt = excluded.transcript_excerpt,
+                    content_insights = excluded.content_insights,
+                    error = excluded.error,
+                    analyzed_at = excluded.analyzed_at
+                """,
+                (
+                    channel_id, competitor_id, video_id, video_title, published_at,
+                    int(views) if views is not None else None,
+                    int(duration_seconds) if duration_seconds is not None else None,
+                    thumbnail_path,
+                    json.dumps(frame_paths or [], ensure_ascii=False),
+                    json.dumps(visual_insights or {}, ensure_ascii=False),
+                    transcript_source,
+                    transcript_excerpt,
+                    json.dumps(content_insights or {}, ensure_ascii=False),
+                    error,
+                    now,
+                ),
+            )
+            c.commit()
+            return int(cur.lastrowid or 0)
+        finally:
+            c.close()
 
 
 def insert_competitor_analysis(

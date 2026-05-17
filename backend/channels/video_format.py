@@ -242,6 +242,35 @@ class PersonaConfig:
 
 
 # ============================================================
+# Effects — 画面演出（pipeline/video_effects.py で消費）
+# ============================================================
+
+@dataclass
+class EffectsConfig:
+    """画面演出（ズーム / シェイク / フラッシュ等）の有効化と強度プリセット。
+
+    preset: "off" | "minimal" | "balanced" | "horror"
+    細かな ON/OFF はプリセット適用後に boolean 上書きで指定する。
+    """
+    enabled: bool = True
+    preset: str = "balanced"
+    allow_zoom: bool = True
+    allow_shake: bool = True
+    allow_flash: bool = True
+    allow_tint: bool = True
+    allow_pixelate: bool = True
+    allow_glitch: bool = True
+    allow_transitions: bool = True
+    max_effects_per_scene: int = 2
+    shake_max_px: int = 14
+    zoom_max: float = 0.06
+    transition_duration: float = 0.35
+    transition_min_gap: float = 6.0
+    fade_in_first: bool = True
+    fade_out_last: bool = True
+
+
+# ============================================================
 # VideoFormat — 統合フォーマット
 # ============================================================
 
@@ -260,6 +289,7 @@ class VideoFormat:
     youtube: YouTubeConfig = field(default_factory=YouTubeConfig)
     analytics: AnalyticsConfig = field(default_factory=AnalyticsConfig)
     persona: PersonaConfig = field(default_factory=PersonaConfig)
+    effects: EffectsConfig = field(default_factory=EffectsConfig)
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "VideoFormat":
@@ -292,6 +322,7 @@ class VideoFormat:
             youtube=_make(YouTubeConfig, data.get("youtube")),
             analytics=_make(AnalyticsConfig, data.get("analytics")),
             persona=_make(PersonaConfig, data.get("persona")),
+            effects=_make(EffectsConfig, data.get("effects")),
         )
 
     def to_dict(self) -> Dict[str, Any]:

@@ -921,6 +921,138 @@ export async function runAutopilotNow(
   });
 }
 
+// ── Competitor effects research ──
+export type EffectsConfig = Record<string, unknown> & {
+  enabled?: boolean;
+  preset?: string;
+  allow_zoom?: boolean;
+  allow_shake?: boolean;
+  allow_flash?: boolean;
+  allow_tint?: boolean;
+  allow_pixelate?: boolean;
+  allow_glitch?: boolean;
+  allow_transitions?: boolean;
+  max_effects_per_scene?: number;
+  shake_max_px?: number;
+  zoom_max?: number;
+  transition_duration?: number;
+};
+
+export type ResearchSummaryChannel = {
+  channel_id: string;
+  channel_title: string;
+  video_ids?: string[];
+  videos?: Array<{ video_id: string; title: string; views?: number | null }>;
+};
+
+export type EffectsResearchRecord = {
+  id: number;
+  channel_id: string;
+  genre?: string | null;
+  queries?: string[];
+  channels_analyzed?: ResearchSummaryChannel[];
+  per_video_results?: unknown[];
+  aggregated_patterns?: Record<string, unknown> | null;
+  suggested_effects?: EffectsConfig | null;
+  applied: boolean;
+  error?: string | null;
+  started_at?: number | null;
+  finished_at: number;
+  created_at: number;
+};
+
+export type ResearchJobStatus = {
+  job_id: string;
+  status: 'queued' | 'running' | 'done' | 'failed';
+  channel_id?: string;
+  created_at?: number;
+  started_at?: number;
+  finished_at?: number;
+  auto_apply?: boolean;
+  progress?: { done: number; total: number; label: string };
+  result?: {
+    ok: boolean;
+    record_id?: number;
+    suggested_effects?: EffectsConfig | null;
+    aggregated_patterns?: Record<string, unknown> | null;
+    channels_analyzed?: ResearchSummaryChannel[];
+    elapsed_seconds?: number;
+    applied?: boolean;
+    error?: string;
+  };
+  error?: string;
+};
+
+export type StartResearchRequest = {
+  target_channels?: number;
+  videos_per_channel?: number;
+  max_videos_per_query?: number;
+  queries?: string[];
+  must_include_token?: string;
+  blacklist_words?: string[];
+  require_japanese?: boolean;
+  auto_apply?: boolean;
+  run_in_background?: boolean;
+};
+
+export async function startEffectsResearch(
+  channelId: string,
+  body: StartResearchRequest = {}
+): Promise<{ ok: true; job_id: string; channel_id: string; status: string }> {
+  return call(`/api/channels/${encodeURIComponent(channelId)}/research-effects`, {
+    method: 'POST',
+    body: JSON.stringify(body),
+  });
+}
+
+export async function getResearchJob(
+  channelId: string,
+  jobId: string
+): Promise<ResearchJobStatus & { ok: true }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/research-effects/job/${encodeURIComponent(jobId)}`,
+    { noStore: true }
+  );
+}
+
+export async function getLatestEffectsResearch(
+  channelId: string
+): Promise<{ ok: true; channel_id: string; latest: EffectsResearchRecord | null }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/research-effects/latest`,
+    { noStore: true }
+  );
+}
+
+export async function listEffectsResearch(
+  channelId: string,
+  limit = 20
+): Promise<{
+  ok: true;
+  channel_id: string;
+  history: EffectsResearchRecord[];
+  count: number;
+}> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/research-effects?limit=${limit}`,
+    { noStore: true }
+  );
+}
+
+export async function applyEffectsResearch(
+  channelId: string,
+  recordId: number,
+  effects?: EffectsConfig
+): Promise<{ ok: true; channel_id: string; record_id: number; applied_effects: EffectsConfig }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/research-effects/${recordId}/apply`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ effects: effects ?? null }),
+    }
+  );
+}
+
 // ── Templates ──
 export type Template = {
   id: string;

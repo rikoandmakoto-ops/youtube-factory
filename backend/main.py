@@ -48,6 +48,7 @@ import api_analytics
 import api_pdca
 import api_logs_archives
 import api_competitors_demands
+import api_research_effects
 
 
 # Models
@@ -171,6 +172,7 @@ app.include_router(api_analytics.router)
 app.include_router(api_pdca.router)
 app.include_router(api_logs_archives.router)
 app.include_router(api_competitors_demands.router)
+app.include_router(api_research_effects.router)
 
 
 # ── Global instances (initialized at startup) ──
