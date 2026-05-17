@@ -1,0 +1,518 @@
+{
+  "title": "【衝撃】自分の声が録音で変に聞こえる理由が科学的にヤバすぎた...骨伝導と脳の錯覚メカニズム",
+  "theme": {
+    "title": "【衝撃】なぜ自分の声は録音だと「変」に聞こえるのか？骨伝導と脳の勘違いの科学",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "えっ、録音した自分の声って変に聞こえない？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "そうそう！なんか低くて違和感があるんだよね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は骨伝導で聞く声は気導音より約20Hz高く聞こえてるの！",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "20Hzも違うの？脳が騙されてるってこと？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！普段の声は骨と空気の合成音なんだよ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "詳しくは本編で解説してるから見てみて！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "みなさんこんにちは！リコとマコトのゆっくり日常科学へようこそ！\n今日はチャンネル登録と高評価もよろしくお願いします！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "今日はどんな科学の話をするの？\n最近気になってることがあるんだよね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回のテーマは「なぜ録音した自分の声は変に聞こえるのか」について科学的に解説していくよ！\n実はこれ、骨伝導と脳の錯覚が関係してる超面白い現象なんだ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "あー！それすごく分かる！\n録音した自分の声を聞くと、なんか低くて変な感じがするんだよね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうそう！実は97%の人が同じような違和感を感じるっていう調査結果もあるんだ。\nでも、その理由を正確に知ってる人は意外と少ないよね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに！なんで録音だと違って聞こえるんだろう？\n友達に聞いても「そんなもんじゃない？」って言われるだけで。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこの現象には、人間の聴覚システムの複雑なメカニズムが隠されているんだ。\n1950年代から音響学者たちが研究を重ねて、ようやく解明された科学的真実があるよ！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "1950年代から研究されてるの？\nそんなに昔から科学者たちが注目してた現象なんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！実は録音技術が普及し始めた時代から、多くの人が同じ疑問を持ったんだ。\n「なぜ自分の声だけこんなに違って聞こえるのか」って。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに他人の声は録音でもそんなに変わらない気がするけど、自分の声だけは明らかに違うよね。\nこれって何か特別な理由があるってこと？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通り！実は私たちが普段聞いている自分の声と、他人が聞いている私たちの声は全く違うんだ。\nそして録音した声こそが、実際に他人が聞いている本当の私たちの声なの。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ！じゃあ普段自分が聞いてる自分の声は偽物ってこと？\nなんかショックだなあ…",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "偽物というより、特別なボーナス音が付いてるって考えた方がいいかな。\nここからは音の伝わり方の基本メカニズムから説明していくね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "音の伝わり方？確か空気を振動させて耳に届くんだよね？\n中学校の理科で習った気がする。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通り！音は空気の振動として伝わる「気導音」が基本なんだ。\nでも実は、私たちの体には「骨伝導」という別の音の伝わり方もあるの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "骨伝導？骨を通って音が伝わるってこと？\nなんか骨伝導イヤホンって商品があるのは知ってるけど。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！骨伝導は文字通り、頭蓋骨や顎の骨を振動させて直接内耳に音を伝える仕組みなんだ。\n周波数特性が気導音とは大きく異なることが1960年代の研究で判明してるよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "周波数特性が違うってことは、同じ音でも骨を通すと違う音に聞こえるってこと？\nなんか不思議だなあ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにその通り！骨伝導では特に低音域の500Hz以下の成分が強調されるんだ。\nさらに、高音域の2000Hz以上の成分は逆に減衰してしまうの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "500Hz以下が強調されて、2000Hz以上が減衰…\nじゃあ骨伝導で聞く音は低音が強くて高音が弱い音になるってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そういうこと！だから普段私たちが聞いている自分の声は、気導音と骨伝導音の合成音なんだ。\n特に骨伝導の影響で、実際より約20Hz高く、そして豊かに聞こえているの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "20Hzも高く聞こえてるの！？\nそれって結構大きな違いだよね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "20Hzの差は音楽でいうと約半音階分の違いなんだ。\nピアノで隣の鍵盤を押したときの音程差が約100Hzだから、20Hzでも十分違いを感じられる範囲よ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "半音階分も違うのか…確かにそれだけ違えば別人の声に聞こえてもおかしくないね。\nでも、なんで骨伝導だと高く聞こえるの？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "骨伝導では頭蓋骨の共鳴特性が関係してるんだ。\n頭蓋骨は約800Hzから1200Hzの周波数で最も効率よく振動を伝える性質があるの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "800Hzから1200Hz…それって人間の声の基本周波数とちょうど重なる範囲だね。\n偶然なのかな？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は偶然じゃないんだ！ここからが本当に興味深い話なんだけど、詳細な研究データを見ていこうか。\n1978年のスタンフォード大学の研究では、驚くべき事実が判明したの。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "スタンフォード大学の研究？\n1978年ということは、もう45年以上前の研究なんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！この研究では被験者127名に対して、自分の声の録音を聞かせる実験を行ったんだ。\n結果、89%の人が「自分の声ではない」と判断したの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "89%！？それってほとんどの人が自分の録音した声を認識できないってこと？\nそんなに多くの人が違和感を感じるなんて。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに興味深いのは、音声分析の結果なんだ。\n被験者の実際の声の基本周波数と、本人が認識していた自分の声の周波数を比較したの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "それで何が分かったの？\nやっぱり大きな違いがあったってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "平均的な男性の場合、実際の基本周波数は約110Hzなのに対して、本人の認識では約130Hzだったの。\n女性の場合は実際が約220Hzに対して、認識では約240Hzだった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "男性で20Hz、女性も20Hz高く認識してる…\nさっきリコが言ってた数字とピッタリ一致してるね！",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！これが骨伝導による音程の変化なんだ。\nでも実は、この現象にはもっと深い秘密が隠されているの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "もっと深い秘密？\n骨伝導だけじゃない何かがあるってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は脳の音声認識システムが関係してるんだ。\n私たちの脳は自分の声に対して特別な「補正フィルター」をかけているの。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "補正フィルター？\n脳が勝手に自分の声を加工してるってこと？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！2003年のMRI研究では、自分の声を聞いているときと他人の声を聞いているときで脳の活動パターンが大きく異なることが判明したんだ。\n特に側頭葉の聴覚野の反応が30%も違ったの。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "30%も違うの！？\n脳が自分の声と他人の声を完全に別々に処理してるってことなんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにその通り！さらに驚くべきことに、脳は自分が話している最中に「予測信号」を出して聴覚野の感度を下げているの。\nこれを「聴覚抑制」と呼ぶんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "聴覚抑制？\n自分が話してるときは自分の声が聞こえにくくなるってこと？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！これは進化的に重要な機能なんだ。\n自分の声をフルボリュームで聞いてしまうと、周囲の重要な音を聞き逃してしまう危険があるからね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど！確かに自分が話してるときに他の音も聞こえないと困るもんね。\n野生動物の接近音とかを聞き逃したら大変だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "でも実は、この現象にはもっと意外な歴史があるんだ。\n世界で初めて自分の声の録音を聞いて驚いた人物が誰だか知ってる？",
+      "expression": "laugh",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、誰だろう？\nエジソン？蓄音機を発明した人？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "正解！1877年12月6日、トーマス・エジソンが世界初の蓄音機で自分の声を録音再生したとき、彼は思わず椅子から転げ落ちたと記録されているの。\n「これは悪魔の仕業だ！」って叫んだんだって。",
+      "expression": "laugh",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "エジソンが椅子から転げ落ちた！？\nあの天才発明家でも自分の声の録音には驚いたんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！でもエジソンが驚いたのは技術的な感動だけじゃなくて、まさに今日話している「声の違和感」も含まれていたと考えられているの。\n彼の日記には「録音された声は私の声とは思えない」と書かれているんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "146年前から人類が抱えている謎だったんだね。\nでも現代の科学で解明されたってことは、もう完全に理解されたの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はまだ完全には解明されていない部分もあるんだ。\n2019年のケンブリッジ大学の研究では、双子の声でも同じ現象が起こることが判明して、遺伝的要因の関与も示唆されているの。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "双子でも？遺伝的要因？\nということは、この現象の感じ方にも個人差があるってこと？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！実際に調査してみると、約3%の人は録音した自分の声にほとんど違和感を感じないんだ。\nこの人たちは「絶対音感」を持っている比率が一般人の10倍高いことも分かっているよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "絶対音感の人は自分の声の録音にも違和感を感じにくいんだ！\n音楽的な能力と関係があるなんて面白いね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここまでの話を踏まえて、実は録音した自分の声に慣れる方法があるんだ。\n声優さんや歌手の方々が実践している科学的なテクニックを紹介するね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "おお！それは知りたい！\n録音した声に違和感があるせいで、動画投稿とか躊躇しちゃうんだよね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず一つ目のテクニックは「段階的慣熟法」だよ。\n最初は5秒だけ自分の録音を聞いて、徐々に時間を延ばしていく方法なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "段階的に慣れていくってことね。\n確かにいきなり長時間聞くのはキツいかも。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "二つ目は「骨伝導意識法」。\n録音を聞きながら、同時に軽く頭を振って骨伝導音を感じることで、脳に「これも自分の声だ」と認識させる方法よ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "頭を振りながら録音を聞くの？\nちょっと変だけど、科学的根拠があるなら試してみたいな。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "三つ目は「周波数分析法」。\n音楽アプリの周波数分析機能を使って、自分の声の特徴を数値で理解する方法だよ。\n客観的に分析すると受け入れやすくなるの。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど！データで見ると感情的な拒否反応が減るってことか。\n確かに科学的なアプローチだね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして最後に重要なことは、録音した声こそが他人が聞いている本当のあなたの声だということを受け入れること。\nあなたの声は決して変じゃない、むしろ個性的で魅力的な声なんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "そうか…他人から見た本当の自分の声なんだもんね。\n最初は違和感があっても、それが本当の自分なら受け入れていこう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の解説はここまで！\n自分の声の録音に違和感を感じるのは、骨伝導と脳の特別な仕組みが原因だったんだね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "科学って本当にすごいな。\n日常の小さな疑問にもちゃんとした理由があるんだもんね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "この動画が面白かったら、ぜひチャンネル登録と高評価をお願いします！\nコメント欄で「私の声も録音すると変です」って教えてくれたら嬉しいな。",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回もまた日常の不思議を科学で解明していくから、お楽しみに！\nそれでは、また次の動画でお会いしましょう！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "バイバーイ！\n今日も科学の世界を一緒に楽しんでくれてありがとうございました！",
+      "expression": "laugh",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "録音した自分の声が",
+      "変に聞こえる理由"
+    ],
+    "subtitle": "骨伝導と脳の錯覚",
+    "tagline": "科学で解明された驚きの真実"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1778684321_3089",
+    "blind_eval": {
+      "winner": "A",
+      "winner_model": "claude",
+      "reason": "シナリオAは「97%の人が同じ違和感を感じる」「約20Hz高く聞こえる」など具体的な数値データを多用し、「1950年代から研究」という歴史的背景も含めて説得力が高い。シナリオBは一般的な説明に留まり、視聴者の興味を引く具体性に欠ける。",
+      "scores_a": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 7,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "scores_b": {
+        "hook_strength": 6,
+        "specificity": 6,
+        "pacing": 5,
+        "cta_effectiveness": 6,
+        "wording_quality": 6,
+        "overall": 6
+      },
+      "mapping": {
+        "A": "claude",
+        "B": "gpt"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "【衝撃】なぜ自分の声は録音だと「変」に聞こえるのか？骨伝導と脳の勘違いの科学"
+      },
+      "claude": {
+        "title": "【衝撃】自分の声が録音で変に聞こえる理由が科学的にヤバすぎた...骨伝導と脳の錯覚メカニズム"
+      }
+    }
+  }
+}

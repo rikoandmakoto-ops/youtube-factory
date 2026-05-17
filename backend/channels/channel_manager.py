@@ -60,6 +60,11 @@ class ChannelProfile:
                 entry["role"] = cfg["role"]
             if "appearance" in cfg:
                 entry["appearance"] = cfg["appearance"]
+            # Optional asset-folder override (assets/characters/<dir>/<expr>.png)
+            if "dir" in cfg:
+                entry["dir"] = cfg["dir"]
+            if "slug" in cfg:
+                entry["slug"] = cfg["slug"]
             config[name] = entry
         return config
 

@@ -996,11 +996,17 @@ class FrameRenderer:
 
         # Load sprites — use channel char_config
         self.sprites = {}
-        # キャラ名→ディレクトリ名の対応
-        _CHAR_DIR_MAP = {"理子": "riko", "真": "makoto", "あかり": "akari", "ゆうた": "yuuta"}
+        # キャラ名→ディレクトリ名の対応（チャンネル側で cfg["dir"]/["slug"] 指定可）
+        _CHAR_DIR_MAP = {"理子": "riko", "真": "makoto", "あかり": "akari", "ゆうた": "yuuta",
+                         "シロ": "shiro", "クロ": "kuro"}
         for name, cfg in self.char_cfg.items():
             self.sprites[name] = {}
-            dir_name = _CHAR_DIR_MAP.get(name, name.lower())
+            dir_name = (
+                cfg.get("dir")
+                or cfg.get("slug")
+                or _CHAR_DIR_MAP.get(name)
+                or name.lower()
+            )
             char_dir = ASSETS_DIR / "characters" / dir_name
             if not char_dir.exists():
                 char_dir = ASSETS_DIR / dir_name
@@ -1173,11 +1179,12 @@ class FrameRenderer:
 # Short Frame Renderer (vertical, 2ch-style)
 # ============================================================
 class ShortFrameRenderer:
-    def __init__(self, bg_video_path=None, bg_type="auto"):
+    def __init__(self, bg_video_path=None, bg_type="auto", char_config=None):
         self.bg_video = None
         self.bg_video_duration = 0
         self.bg_image = None
         self.bg_type = bg_type
+        self.char_cfg = char_config or CHAR_CONFIG
 
         if bg_video_path and Path(bg_video_path).exists():
             ext = Path(bg_video_path).suffix.lower()
@@ -1205,12 +1212,20 @@ class ShortFrameRenderer:
                 self.bg_video_duration = self.bg_video.duration
 
         self.sprites = {}
-        for name, cfg in CHAR_CONFIG.items():
+        _SHORT_CHAR_DIR_MAP = {"理子": "riko", "真": "makoto", "あかり": "akari", "ゆうた": "yuuta",
+                               "シロ": "shiro", "クロ": "kuro"}
+        for name, cfg in self.char_cfg.items():
             self.sprites[name] = {}
-            char_dir = ASSETS_DIR / "characters" / ("riko" if name == "理子" else "makoto")
+            dir_name = (
+                cfg.get("dir")
+                or cfg.get("slug")
+                or _SHORT_CHAR_DIR_MAP.get(name)
+                or name.lower()
+            )
+            char_dir = ASSETS_DIR / "characters" / dir_name
             if not char_dir.exists():
-                char_dir = ASSETS_DIR / ("riko" if name == "理子" else "makoto")
-            for expr in cfg["expressions"]:
+                char_dir = ASSETS_DIR / dir_name
+            for expr in cfg.get("expressions", ["normal"]):
                 p = char_dir / f"{expr}.png"
                 if p.exists():
                     self.sprites[name][expr] = Image.open(str(p)).convert("RGBA")
@@ -1240,7 +1255,7 @@ class ShortFrameRenderer:
     def _build_overlay(self, speaker, text, expression="normal"):
         overlay = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
         draw = ImageDraw.Draw(overlay)
-        cfg = CHAR_CONFIG.get(speaker)
+        cfg = self.char_cfg.get(speaker)
         if not cfg:
             return overlay
 
@@ -1256,7 +1271,13 @@ class ShortFrameRenderer:
             cropped = sprite.crop((left, 0, left + crop_s, crop_s)).resize((icon_d, icon_d), Image.LANCZOS)
             mask = Image.new("L", (icon_d, icon_d), 0)
             ImageDraw.Draw(mask).ellipse([0, 0, icon_d, icon_d], fill=255)
-            ring_c = (230, 50, 50) if speaker == "理子" else (50, 120, 230)
+            # Ring color: use the character's text_color when defined (per-channel),
+            # falling back to the historical riko-vs-other red/blue split.
+            tcol = cfg.get("text_color")
+            if tcol:
+                ring_c = tuple(int(c) for c in tcol[:3])
+            else:
+                ring_c = (230, 50, 50) if cfg.get("side") == "left" else (50, 120, 230)
             rw = 6
             ring = Image.new("RGBA", (icon_d + rw*2, icon_d + rw*2), (0,0,0,0))
             rd = ImageDraw.Draw(ring)
@@ -1740,9 +1761,10 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
     audio_clips = []
     current_illust = None  # sticky: keep showing the latest illustration until the next one
     mood_timeline = []  # list of (start, end, mood) per line for per-scene BGM
+    active_chars = char_config or CHAR_CONFIG
     for i, entry in enumerate(scenario):
         sp, tx = entry["speaker"], entry["text"]
-        cfg = CHAR_CONFIG[sp]
+        cfg = active_chars.get(sp) or CHAR_CONFIG.get(sp) or next(iter(active_chars.values()))
         print(f"  [{i+1}/{len(scenario)}] {sp}: {tx[:35]}...")
 
         wav = os.path.join(tmp_dir, f"l_{i:03d}.wav")
@@ -1801,14 +1823,15 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
     if out_dir is None:
         out_dir = get_output_dir(title)
     out_dir = Path(out_dir)
-    renderer = ShortFrameRenderer(bg_video_path, bg_type=bg_type)
+    renderer = ShortFrameRenderer(bg_video_path, bg_type=bg_type, char_config=char_config)
+    active_chars = char_config or CHAR_CONFIG
     tmp_dir = tempfile.mkdtemp(prefix="short_")
     clips, audio_clips, t_off = [], [], 0.0
     mood_timeline = []
 
     for i, entry in enumerate(short_scenario):
         sp, tx = entry["speaker"], entry["text"]
-        cfg = CHAR_CONFIG[sp]
+        cfg = active_chars.get(sp) or CHAR_CONFIG.get(sp) or next(iter(active_chars.values()))
         print(f"  [{i+1}/{len(short_scenario)}] {sp}: {tx[:35]}...")
 
         wav = os.path.join(tmp_dir, f"s_{i:03d}.wav")

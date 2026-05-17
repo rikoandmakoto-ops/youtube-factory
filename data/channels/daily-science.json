@@ -190,5 +190,16 @@
         "min_views_7d": 1000
       }
     }
+  },
+  "autopilot": {
+    "enabled": true,
+    "schedule": {
+      "days": ["mon", "wed", "fri"],
+      "time": "19:30",
+      "timezone": "Asia/Tokyo"
+    },
+    "queue": [
+      {"theme": "なぜ夢の中で声を出せないのか"}
+    ]
   }
 }
