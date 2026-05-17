@@ -97,7 +97,17 @@
       80,
       220,
       255
-    ]
+    ],
+    "style_hint": "明るく目を引く科学系チャンネルのサムネイル。\n- 背景は『明るくカラフルで楽しい』を最優先する。暗い／陰鬱／ホラー調は絶対NG。\n- background_concept は必ず『bright, vibrant, colorful, well-lit, daylight, cheerful, high-key lighting, clear blue sky / pastel sky / soft sunlight / bright laboratory』のような明るさを示す英語キーワードを複数含めること。『dark / moody / dim / shadowy / cinematic noir / night』など暗さを示す語は禁止。\n- 被写体は科学的に正確で、ポップで親しみやすいクローズアップ（脳・細胞・宇宙の昼面・夢の世界・実験器具・色とりどりの粒子など）。色は鮮やかなパステル＋ビビッドの組み合わせで、視認性の高い背景にする。\n- 中央〜上部に主役を置き、下部はやや空けて文字を載せやすくするが、空けた部分も暗くせず明るいグラデーション（白／クリーム／薄黄／薄水色）にすること。\n- line1（白）は状況・前振り（例: 『なぜ夢で…？』）。line2（黄）は核となる驚き・疑問でインパクト最大化（『声が出ない理由！？』）。\n- line3_badge は赤で『衝撃の事実』『科学が解明』『○○の正体』など。sub_text は答えを匂わせる明るい煽り。",
+    "background_style_suffix": "Style: bright, vibrant, cheerful YouTube thumbnail aesthetic for an educational science channel. High-key daylight lighting, saturated pop colors, cheerful pastel-and-vivid palette, soft clean shadows, crisp focus on the central subject, friendly approachable mood — like a colorful science textbook cover. Absolutely NOT dark, moody, noir, dim, or horror-styled.",
+    "gradient_overlay": {
+      "top_height_pct": 42,
+      "top_opacity_start": 0.38,
+      "top_opacity_mid": 0.12,
+      "bottom_height_pct": 32,
+      "bottom_opacity_start": 0.35,
+      "bottom_opacity_mid": 0.10
+    }
   },
   "defaults": {
     "speed": 1.3,

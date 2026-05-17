@@ -232,14 +232,29 @@ def design_brief(
 # ────────────────────────────────────────────────────────────────────────
 # Step 2 — DALL-E 3 background
 # ────────────────────────────────────────────────────────────────────────
-def generate_background(brief: Dict[str, Any], api_key: str, out_path: Path) -> Path:
-    """Call gpt-image-1 and save a 1280x720 PNG to `out_path`."""
+def generate_background(
+    brief: Dict[str, Any],
+    api_key: str,
+    out_path: Path,
+    channel_config: Optional[Dict[str, Any]] = None,
+) -> Path:
+    """Call gpt-image-1 and save a 1280x720 PNG to `out_path`.
+
+    `channel_config.thumbnail_template.background_style_suffix` — if set,
+    overrides the default "Style: …" sentence appended to the bg prompt. Use
+    this to push toward bright/cheerful for daylight channels, or keep the
+    default dark-cinematic look for dark/horror channels.
+    """
     bg_concept = brief.get("background_concept", "")
-    prompt = (
-        f"{bg_concept}\n"
+    tmpl = ((channel_config or {}).get("thumbnail_template") or {})
+    style_suffix = (tmpl.get("background_style_suffix") or "").strip() or (
         "Style: bold, eye-catching YouTube thumbnail aesthetic, high contrast, "
         "saturated colors, dramatic lighting, shallow depth of field, "
-        "cinematic, photo-realistic close-up. "
+        "cinematic, photo-realistic close-up."
+    )
+    prompt = (
+        f"{bg_concept}\n"
+        f"{style_suffix} "
         "STRICT: absolutely no text, no letters, no numbers, no Japanese characters, "
         "no captions, no logos anywhere in the image. "
         "Composition: wide 16:9 horizontal, leave the bottom ~25% visually simpler "
@@ -396,10 +411,10 @@ body {{ background: #000; display: flex; justify-content: center; align-items: c
        min-height: 100vh; overflow: hidden; }}
 .thumbnail {{ position: relative; width: 1280px; height: 720px; overflow: hidden; }}
 .thumbnail .bg {{ width: 100%; height: 100%; object-fit: cover; }}
-.top-gradient {{ position: absolute; top: 0; left: 0; right: 0; height: 60%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, transparent 100%); }}
-.bottom-gradient {{ position: absolute; bottom: 0; left: 0; right: 0; height: 45%;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, transparent 100%); }}
+.top-gradient {{ position: absolute; top: 0; left: 0; right: 0; height: {top_h}%;
+  background: linear-gradient(to bottom, rgba(0,0,0,{top_o1}) 0%, rgba(0,0,0,{top_o2}) 60%, transparent 100%); }}
+.bottom-gradient {{ position: absolute; bottom: 0; left: 0; right: 0; height: {bot_h}%;
+  background: linear-gradient(to top, rgba(0,0,0,{bot_o1}) 0%, rgba(0,0,0,{bot_o2}) 50%, transparent 100%); }}
 .text-line {{ position: absolute; left: 0; right: 0; text-align: center;
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic Std", "Hiragino Sans", "Yu Gothic", sans-serif;
   font-weight: 900; letter-spacing: 0.04em; }}
@@ -452,13 +467,41 @@ body {{ background: #000; display: flex; justify-content: center; align-items: c
 """
 
 
+_DEFAULT_OVERLAY = {
+    "top_height_pct": 60,
+    "top_opacity_start": 0.75,
+    "top_opacity_mid": 0.30,
+    "bottom_height_pct": 45,
+    "bottom_opacity_start": 0.70,
+    "bottom_opacity_mid": 0.30,
+}
+
+
+def _resolve_overlay(channel_config: Optional[Dict[str, Any]]) -> Dict[str, float]:
+    """Merge per-channel `thumbnail_template.gradient_overlay` over the defaults."""
+    tmpl = ((channel_config or {}).get("thumbnail_template") or {})
+    overlay = tmpl.get("gradient_overlay") or {}
+    out = dict(_DEFAULT_OVERLAY)
+    for k in out:
+        if k in overlay:
+            out[k] = overlay[k]
+    return out
+
+
 def build_html(
     brief: Dict[str, Any],
     bg_path: Path,
     char_left: Optional[Path],
     char_right: Optional[Path],
+    channel_config: Optional[Dict[str, Any]] = None,
 ) -> str:
-    """Compose a self-contained HTML string (all images as data URIs)."""
+    """Compose a self-contained HTML string (all images as data URIs).
+
+    `channel_config.thumbnail_template.gradient_overlay` — optional overrides
+    for top/bottom darkening overlays. Keys: top_height_pct, top_opacity_start,
+    top_opacity_mid, bottom_height_pct, bottom_opacity_start, bottom_opacity_mid.
+    Lower opacities preserve more of the original background brightness.
+    """
     line1 = (brief.get("line1") or "").strip()
     line2 = (brief.get("line2") or "").strip()
     line3 = (brief.get("line3_badge") or "").strip()
@@ -468,6 +511,8 @@ def build_html(
     line2_px = _scaled_font_px(line2, 105, 12, 64)
     line3_px = _scaled_font_px(line3, 82, 10, 52)
     sub_px = _scaled_font_px(sub, 38, 22, 26)
+
+    overlay = _resolve_overlay(channel_config)
 
     bg_uri = _data_uri(bg_path)
     char_left_html = (
@@ -484,6 +529,12 @@ def build_html(
         line3_px=line3_px,
         sub_px=sub_px,
         bg_uri=bg_uri,
+        top_h=overlay["top_height_pct"],
+        top_o1=overlay["top_opacity_start"],
+        top_o2=overlay["top_opacity_mid"],
+        bot_h=overlay["bottom_height_pct"],
+        bot_o1=overlay["bottom_opacity_start"],
+        bot_o2=overlay["bottom_opacity_mid"],
         line1=_esc(line1),
         line2=_esc(line2),
         line3_badge=_esc(line3),
@@ -581,10 +632,10 @@ def generate_thumbnail(
             raise FileNotFoundError(f"reuse_background_path not found: {bg_path}")
     else:
         bg_path = Path(background_save_path) if background_save_path else _default_bg_path(output_path)
-        generate_background(brief, api_key, bg_path)
+        generate_background(brief, api_key, bg_path, channel_config=channel_config)
 
     char_left, char_right = resolve_character_paths(channel_config)
-    html = build_html(brief, bg_path, char_left, char_right)
+    html = build_html(brief, bg_path, char_left, char_right, channel_config=channel_config)
     render_html_to_png(html, output_path)
 
     return {
@@ -637,10 +688,13 @@ async def generate_thumbnail_async(
             raise FileNotFoundError(f"reuse_background_path not found: {bg_path}")
     else:
         bg_path = Path(background_save_path) if background_save_path else _default_bg_path(output_path)
-        await loop.run_in_executor(None, lambda: generate_background(brief, api_key, bg_path))
+        await loop.run_in_executor(
+            None,
+            lambda: generate_background(brief, api_key, bg_path, channel_config=channel_config),
+        )
 
     char_left, char_right = resolve_character_paths(channel_config)
-    html = build_html(brief, bg_path, char_left, char_right)
+    html = build_html(brief, bg_path, char_left, char_right, channel_config=channel_config)
     await render_html_to_png_async(html, output_path)
 
     return {
