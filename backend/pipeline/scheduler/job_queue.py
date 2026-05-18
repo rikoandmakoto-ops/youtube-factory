@@ -94,6 +94,40 @@ class Job:
             "completed_at": self.completed_at,
         }
 
+    def to_persist_dict(self) -> Dict:
+        """ディスク永続化用 — scenario_data など API には載せない情報も含む"""
+        d = self.to_dict()
+        d.update({
+            "scenario_data": self.scenario_data,
+            "max_retries": self.max_retries,
+            "cancel_requested": self.cancel_requested,
+            "output_dir": self.output_dir,
+        })
+        return d
+
+    @classmethod
+    def from_persist_dict(cls, d: Dict) -> "Job":
+        return cls(
+            id=d["id"],
+            channel_id=d["channel_id"],
+            title=d.get("title", ""),
+            style=d.get("style", "yukkuri"),
+            scenario_data=d.get("scenario_data") or {},
+            priority=d.get("priority", 5),
+            status=JobStatus(d.get("status", "pending")),
+            progress=d.get("progress", ""),
+            result=d.get("result"),
+            error=d.get("error"),
+            retries=d.get("retries", 0),
+            max_retries=d.get("max_retries", 1),
+            created_at=d.get("created_at") or datetime.now().isoformat(),
+            started_at=d.get("started_at"),
+            completed_at=d.get("completed_at"),
+            cancel_requested=bool(d.get("cancel_requested", False)),
+            gen_type=d.get("gen_type", "both"),
+            output_dir=d.get("output_dir"),
+        )
+
     def __lt__(self, other):
         """PriorityQueue用比較"""
         return self.priority < other.priority
@@ -109,11 +143,17 @@ class JobQueue:
         on_job_failed: ジョブ失敗時コールバック
     """
 
+    # 既定の永続化先 — <repo-root>/data/job_queue.json
+    DEFAULT_PERSIST_PATH = (
+        Path(__file__).parent.parent.parent.parent / "data" / "job_queue.json"
+    )
+
     def __init__(
         self,
         max_workers: int = 2,
         on_job_complete: Optional[Callable] = None,
         on_job_failed: Optional[Callable] = None,
+        persist_path: Optional[Path] = None,
     ):
         self.max_workers = max_workers
         self._jobs: Dict[str, Job] = {}
@@ -129,6 +169,78 @@ class JobQueue:
         # Pipeline function — set by main.py after import
         self._generate_fn: Optional[Callable] = None
         self._channel_manager = None
+
+        # 永続化先 (None を渡すと完全に無効化)
+        self._persist_path: Optional[Path] = (
+            persist_path if persist_path is not None else self.DEFAULT_PERSIST_PATH
+        )
+        self._load()
+
+    # ────────────────────────────────────────────────────────────────
+    # 永続化
+    # ────────────────────────────────────────────────────────────────
+
+    def _save(self) -> None:
+        """全ジョブ状態をディスクに書き出す。失敗してもキューは継続"""
+        if self._persist_path is None:
+            return
+        try:
+            self._persist_path.parent.mkdir(parents=True, exist_ok=True)
+            snapshot = [j.to_persist_dict() for j in self._jobs.values()]
+            payload = {"version": 1, "jobs": snapshot}
+            tmp = self._persist_path.with_suffix(self._persist_path.suffix + ".tmp")
+            tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
+            tmp.replace(self._persist_path)
+        except Exception as e:
+            print(f"⚠️ JobQueue persist failed: {e}")
+
+    def _load(self) -> None:
+        """起動時: 永続化ファイルからジョブを復元。
+
+        - PENDING: そのままキューに再投入
+        - RUNNING: プロセス停止中に走っていた扱いとして FAILED に確定
+          (途中状態の動画が残っている可能性があるため自動リトライしない)
+        - その他 (completed/failed/cancelled): 履歴として保持
+        """
+        if self._persist_path is None or not self._persist_path.exists():
+            return
+        try:
+            raw = json.loads(self._persist_path.read_text())
+        except Exception as e:
+            print(f"⚠️ JobQueue load failed: {e}")
+            return
+
+        restored_pending = 0
+        marked_interrupted = 0
+        for d in raw.get("jobs", []):
+            try:
+                job = Job.from_persist_dict(d)
+            except Exception as e:
+                print(f"⚠️ JobQueue skip malformed job: {e}")
+                continue
+
+            if job.status == JobStatus.RUNNING:
+                job.status = JobStatus.FAILED
+                prev_err = (job.error or "").strip()
+                job.error = (prev_err + " " if prev_err else "") + "[interrupted by restart]"
+                job.completed_at = job.completed_at or datetime.now().isoformat()
+                job.progress = "中断 (プロセス停止)"
+                marked_interrupted += 1
+
+            self._jobs[job.id] = job
+            if job.status == JobStatus.PENDING:
+                self._queue.put((job.priority, job.id))
+                restored_pending += 1
+
+        if restored_pending or marked_interrupted or self._jobs:
+            print(
+                f"📂 JobQueue restored from {self._persist_path.name}: "
+                f"total={len(self._jobs)} pending_requeued={restored_pending} "
+                f"interrupted_marked_failed={marked_interrupted}"
+            )
+        # 中断ジョブの状態を確定させるため一度書き戻す
+        if marked_interrupted:
+            self._save()
 
     def set_pipeline(self, generate_fn: Callable, channel_manager=None):
         """パイプライン関数とチャンネルマネージャーを設定"""
@@ -176,6 +288,7 @@ class JobQueue:
         with self._lock:
             self._jobs[job_id] = job
             self._queue.put((priority, job_id))
+        self._save()
 
         print(f"📥 Job queued: [{job_id}] {job.title} (ch: {channel_id}, priority: {priority})")
         return job_id
@@ -187,6 +300,7 @@ class JobQueue:
         - running: cancel_requested フラグを立て、各ステップ間でフラグが
           チェックされた時点で JobCancelled が送出され、安全に停止する
         """
+        changed = False
         with self._lock:
             job = self._jobs.get(job_id)
             if not job:
@@ -196,11 +310,14 @@ class JobQueue:
                 job.cancel_requested = True
                 job.completed_at = datetime.now().isoformat()
                 job.progress = "中断しました"
-                return True
-            if job.status == JobStatus.RUNNING:
+                changed = True
+            elif job.status == JobStatus.RUNNING:
                 job.cancel_requested = True
                 job.progress = "中断要求を受信..."
-                return True
+                changed = True
+        if changed:
+            self._save()
+            return True
         return False
 
     def is_cancel_requested(self, job_id: str) -> bool:
@@ -273,12 +390,14 @@ class JobQueue:
             job.status = JobStatus.CANCELLED
             job.completed_at = datetime.now().isoformat()
             job.progress = "中断しました"
+            self._save()
             print(f"🛑 Job cancelled before start: [{job.id}] {job.title}")
             return
 
         job.status = JobStatus.RUNNING
         job.started_at = datetime.now().isoformat()
         job.progress = "動画生成を開始..."
+        self._save()
 
         # generate_all 内で各ステップ間で呼ばれる中断チェック
         def _cancel_check() -> None:
@@ -340,6 +459,7 @@ class JobQueue:
                 job.result = result
                 job.completed_at = datetime.now().isoformat()
                 job.progress = "中断しました"
+                self._save()
                 print(f"🛑 Job cancelled after pipeline: [{job.id}] {job.title}")
                 return
 
@@ -347,6 +467,7 @@ class JobQueue:
             job.result = result
             job.completed_at = datetime.now().isoformat()
             job.progress = "完了"
+            self._save()
             print(f"✅ Job completed: [{job.id}] {job.title}")
 
             if self.on_job_complete:
@@ -356,6 +477,7 @@ class JobQueue:
             job.status = JobStatus.CANCELLED
             job.completed_at = datetime.now().isoformat()
             job.progress = "中断しました"
+            self._save()
             print(f"🛑 Job cancelled: [{job.id}] {job.title} — {e}")
 
         except Exception as e:
@@ -364,6 +486,7 @@ class JobQueue:
                 job.status = JobStatus.CANCELLED
                 job.completed_at = datetime.now().isoformat()
                 job.progress = "中断しました"
+                self._save()
                 print(f"🛑 Job cancelled (during exception): [{job.id}] {job.title} — {e}")
                 return
 
@@ -373,12 +496,14 @@ class JobQueue:
                 job.progress = f"リトライ {job.retries}/{job.max_retries}..."
                 with self._lock:
                     self._queue.put((job.priority, job.id))
+                self._save()
                 print(f"🔄 Job retry: [{job.id}] {job.title} (attempt {job.retries})")
             else:
                 job.status = JobStatus.FAILED
                 job.error = str(e)
                 job.completed_at = datetime.now().isoformat()
                 job.progress = "失敗"
+                self._save()
                 print(f"❌ Job failed: [{job.id}] {job.title} — {e}")
 
                 if self.on_job_failed:
