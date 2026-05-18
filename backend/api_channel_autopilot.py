@@ -124,7 +124,25 @@ def _load_autopilot(channel_id: str) -> Dict[str, Any]:
     merged.update({k: v for k, v in raw.items() if v is not None})
     # 入れ子のスキーマも整える
     sched = dict(_default_autopilot()["schedule"])
-    sched.update(raw.get("schedule") or {})
+    raw_sched = raw.get("schedule") or {}
+    sched.update(raw_sched)
+    # レガシー schedule フィールドのフォールバック (JSON を書き換えずに読み替え)
+    # - schedule.days: ["mon","wed","fri"] → days_of_week: [1,3,5]
+    # - schedule.time: "19:30"             → hour: 19, minute: 30
+    if not sched.get("days_of_week") and raw_sched.get("days"):
+        _name_to_idx = {n: i for i, n in enumerate(DOW_NAMES)}
+        sched["days_of_week"] = [
+            _name_to_idx[d.lower()]
+            for d in raw_sched["days"]
+            if isinstance(d, str) and d.lower() in _name_to_idx
+        ]
+    if isinstance(raw_sched.get("time"), str):
+        try:
+            _hh, _mm = raw_sched["time"].split(":", 1)
+            sched["hour"] = int(_hh)
+            sched["minute"] = int(_mm)
+        except (ValueError, IndexError):
+            pass
     merged["schedule"] = sched
     queue = []
     for item in (raw.get("theme_queue") or []):
