@@ -420,7 +420,7 @@ class ScenarioGenerator:
 - **speaker欄は必ず「{c0}」「{c1}」(このチャンネルのキャラ名そのまま)を使う**。他の表記揺れは crash の原因になる。
 - text本文内で相手を呼ぶときも上記の「{c0}」「{c1}」と完全一致の表記を使い、別の漢字・別表記に置き換えない。
 - expression: {c0}は{expr0}から / {c1}は{expr1}から選ぶ。
-- 科学的・エビデンスベース。冒頭で驚き→なぜ→解説→意外な結論。
+- 本チャンネルのトーン（{tone}）と上記「このチャンネルの語り口」を最優先で守る。冒頭で驚き→なぜ→深掘り→意外な結論の構成は流用しつつ、語彙・世界観はチャンネルに合わせる。
 - **ショートは「浅い豆知識」NG**: ChatGPTでもすぐ出てくるような薄い情報ではなく、視聴者が思わず人に話したくなる具体性のある「ネタ」を入れること。
 """
 
@@ -519,7 +519,7 @@ class ScenarioGenerator:
 # その他ルール
 - text内は1〜2文。文末「。」直後に `\\n` 挿入(例:"...だ。\\n...だ。")。
 - 章タイトルで3〜5章に分割。
-- 冒頭で共感フック→本題→意外な結論。科学的エビデンスベース。
+- 冒頭で共感フック→本題→意外な結論。本チャンネルのトーン（{tone}）と上記「このチャンネルの語り口」を最優先で守り、語彙・世界観はチャンネルに合わせる。
 - **ショートは「浅い豆知識」NG**: 誰でも知っている一般論ではなく、具体性のある事実・数字・固有名詞でフックを作ること。
 - CTA配置: {cta_pos}
 """
@@ -1070,7 +1070,7 @@ class ScenarioGenerator:
             ("背景・歴史的経緯", 9, "発見・研究の経緯、歴史的エピソードや人物", "mysterious"),
             ("意外な事実・補足知識", 10, "視聴者が驚く意外な情報や雑学・トリビア", "tense"),
             ("日常への応用・実践Tips", 9, "視聴者が今日から使える実践的なTips・応用例", "bright"),
-            ("まとめ + 次回予告 + 締めCTA", 7, "今日の内容を簡潔にまとめ → **『次回は〇〇を解説するよ』のような次回予告を必ず1〜2行入れる(身近な体の不思議・日常の違和感系から提案)** → 高評価/登録CTA。次回予告は登録率改善のため絶対省略禁止。", "emotional"),
+            ("まとめ + 次回予告 + 締めCTA", 7, "今日の内容を簡潔にまとめ → **『次回は〇〇を解説するよ』のような次回予告を必ず1〜2行入れる(必ず本チャンネル『" + channel.name + "』のジャンル・世界観に閉じたテーマから提案。他ジャンルへの飛び火禁止)** → 高評価/登録CTA。次回予告は登録率改善のため絶対省略禁止。", "emotional"),
         ]
         # 合計目標: 6+9+10+9+10+9+7 = 60行
 
@@ -1148,6 +1148,75 @@ class ScenarioGenerator:
             except Exception as e:
                 print(f"  ❌ Failed: {theme['title']} — {e}")
         return results
+
+    def _theme_priority_block(self, channel, count: int) -> str:
+        """チャンネルごとの「テーマ優先順位ルール」ブロックを構築する。
+
+        `channel._raw["theme_priority"]` の dict から組み立てる。形式:
+          {
+            "label": "SCP財団題材",            # 必須カテゴリの呼び名
+            "categories": ["...", "..."],      # 最優先カテゴリ群
+            "required_count_per_batch": 3,     # count 件中最低この数を上記から
+            "good_examples": ["...", "..."],   # ✅ お手本
+            "avoid_categories": ["..."],       # ❌ このチャンネルでは禁止
+            "title_style": "...",              # 任意・タイトル書式の指示
+            "viral_hooks": "..."               # 任意・バズる条件の言い換え
+          }
+
+        未設定なら「チャンネルコンセプトから絶対にズレない」だけの最小ルールを返す
+        （以前のように汎用デフォルトで日常科学を強制しない）。
+        """
+        cfg = {}
+        try:
+            cfg = (channel._raw or {}).get("theme_priority") or {}
+        except AttributeError:
+            cfg = {}
+
+        if not cfg:
+            return (
+                "# テーマ優先順位ルール(必須・絶対厳守)\n"
+                f"- 本チャンネル「{channel.name}」のコンセプト（{channel.concept}）から"
+                "ジャンルがズレるテーマは一切提案しない。\n"
+                "- 競合や過去テーマの題材レンジに収まる新しい切り口だけを選ぶ。\n"
+                "- タイトルは疑問型・意外性重視で、結論はサムネ・本編で初めて出す。\n"
+            )
+
+        label = cfg.get("label") or "本チャンネルのコア題材"
+        categories = cfg.get("categories") or []
+        good_examples = cfg.get("good_examples") or []
+        avoid_categories = cfg.get("avoid_categories") or []
+        required = cfg.get("required_count_per_batch")
+        title_style = cfg.get("title_style") or (
+            "タイトルは疑問型・意外性重視で書く。結論をタイトルに含めない。"
+        )
+        viral = cfg.get("viral_hooks") or (
+            "「なぜ〇〇なのか」系 / 意外性 / 数字データ / 視聴者の好奇心への接続"
+        )
+
+        cat_lines = "\n".join(f"  {i+1}. {c}" for i, c in enumerate(categories)) or "  (未指定)"
+        good_lines = "\n".join(f"  - 「{g}」" for g in good_examples)
+        avoid_lines = "\n".join(f"  - {a}" for a in avoid_categories)
+
+        parts: List[str] = []
+        parts.append("# テーマ優先順位ルール(必須・絶対厳守)")
+        parts.append(f"- 最優先カテゴリ（{label}）:")
+        parts.append(cat_lines)
+        if required and required > 0:
+            parts.append(
+                f"- {count}件のうち**{required}件以上**は上記カテゴリから提案すること(必須)。"
+            )
+        else:
+            parts.append("- 提案テーマは原則すべて上記カテゴリの範囲内に収める。")
+        if good_lines:
+            parts.append("- ✅ 良い例(参考・そのまま使わず切り口だけ参考にする):")
+            parts.append(good_lines)
+        if avoid_lines:
+            parts.append("- ❌ 本チャンネルでは禁止カテゴリ(提案したら不合格):")
+            parts.append(avoid_lines)
+        parts.append(f"- {title_style}")
+        parts.append("")
+        parts.append(f"# バズる条件: {viral}")
+        return "\n".join(parts) + "\n"
 
     def suggest_themes(
         self,
@@ -1245,6 +1314,8 @@ class ScenarioGenerator:
             except Exception as e:
                 print(f"  ⚠️ trend fetch failed: {e}")
 
+        theme_priority_block = self._theme_priority_block(channel, count)
+
         prompt = f"""YouTube動画テーマを{count}個提案。JSON配列のみ。
 
 # チャンネル: {channel.name} / {channel.concept} / {channel.style} / {channel.content_policy.get("tone","friendly")}
@@ -1273,22 +1344,7 @@ class ScenarioGenerator:
 - 後述「現在のトレンド」セクションのキーワードと自然に結びつくテーマは `is_trending: true` にし、`trend_match` に該当キーワードを入れる。
 - 結びつかない／無理な場合は `is_trending: false`, `trend_match: null`。
 
-# テーマ優先順位ルール(必須・CTR/維持率改善のため絶対厳守)
-- 最優先カテゴリ(視聴者が今日体験している現象 = 高CTR・高維持率):
-  1. 「身近な体の不思議」: 自分の声・骨伝導・痛覚・記憶・睡眠・くしゃみ・あくび・しゃっくり・耳鳴り・夢など、視聴者自身の体で起きる現象
-  2. 「日常の違和感」: なぜそうなる? と一度は感じたことのある身近な現象(水たまり・信号・電車・スマホ・冷蔵庫など、毎日目にするもの)
-- {count}件のうち**3件以上**は上記カテゴリから提案すること(必須)。
-- 良い例(参考):
-  - 「自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎」
-  - 「暗い部屋でスマホが目に悪い『本当の』理由」
-  - 「もし地球から1秒だけ酸素が消えたら何が起こるのか」
-  - 「アイスで頭がキーンとする現象が長年解明されていなかった理由」
-  - 「夢で見たことを朝には忘れてしまう本当の理由」
-- 抽象的・遠い話題(宇宙の起源・量子論の数式・古代文明の謎)は{count}件中最大1件まで。視聴者の手の届く範囲の現象を優先する。
-- タイトルは「なぜ〇〇なのか」「〇〇の本当の理由」のような疑問型・意外性重視で書く。結論をタイトルに含めない。
-
-# バズる条件: 「なぜ〇〇なのか」系 / 意外性 / 日常と科学のギャップ / 数字データ / 視聴者自身の体験との接続
-
+{theme_priority_block}
 # 競合との差別化ルール
 - 上記「競合の最近の人気動画」と完全に同じテーマは禁止。
 - 競合が扱っている話題に乗る場合は、必ず別角度・別データ・別の意外な切り口を `angle` に明記。
