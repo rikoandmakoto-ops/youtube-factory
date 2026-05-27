@@ -5,7 +5,9 @@ import { useCallback, useState } from 'react';
 import type {
   Channel,
   PdcaBucketSummary,
+  PdcaRecommendation,
   PdcaReport,
+  PdcaSubscriberSources,
   PdcaVideoSample,
 } from '@/lib/api';
 
@@ -131,6 +133,184 @@ function BucketCard({
             ))}
           </div>
         </div>
+      )}
+    </section>
+  );
+}
+
+function RecommendationCard({ rec }: { rec: PdcaRecommendation }) {
+  const palette: Record<
+    PdcaRecommendation['decision'],
+    { ring: string; bg: string; emoji: string; tag: string }
+  > = {
+    keep_main: {
+      ring: 'border-emerald-600',
+      bg: 'bg-emerald-900/20',
+      emoji: '🎯',
+      tag: 'メイン頻度を維持',
+    },
+    reduce_main_ok: {
+      ring: 'border-blue-600',
+      bg: 'bg-blue-900/20',
+      emoji: '💡',
+      tag: 'メイン頻度↓検討可',
+    },
+    balanced: {
+      ring: 'border-slate-600',
+      bg: 'bg-slate-900/40',
+      emoji: '⚖️',
+      tag: 'バランス維持',
+    },
+    more_data_needed: {
+      ring: 'border-amber-600',
+      bg: 'bg-amber-900/20',
+      emoji: '⏳',
+      tag: '判断保留',
+    },
+  };
+  const p = palette[rec.decision];
+  return (
+    <section
+      className={`mb-4 rounded-lg border-2 ${p.ring} ${p.bg} p-4`}
+    >
+      <div className="flex items-start gap-3">
+        <div className="text-3xl">{p.emoji}</div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-200 border border-slate-700">
+              判定: {p.tag}
+            </span>
+            {rec.primary_subscriber_source && (
+              <span className="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                登録主力: {rec.primary_subscriber_source === 'shorts' ? 'ショート' : rec.primary_subscriber_source === 'main' ? 'メイン' : 'バランス型'}
+              </span>
+            )}
+          </div>
+          <h3 className="mt-2 text-lg font-semibold text-slate-100">
+            {rec.headline}
+          </h3>
+          <p className="mt-1 text-sm text-slate-300 leading-relaxed">
+            {rec.reasoning}
+          </p>
+          {rec.warnings.length > 0 && (
+            <ul className="mt-2 space-y-1">
+              {rec.warnings.map((w, i) => (
+                <li
+                  key={i}
+                  className="text-xs text-amber-200 bg-amber-950/40 border border-amber-900 rounded px-2 py-1"
+                >
+                  ⚠️ {w}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SubscriberSourcesCard({
+  sources,
+}: {
+  sources: PdcaSubscriberSources;
+}) {
+  const isMissing = sources.source === 'none';
+  const shortPct = sources.shorts.share_of_gained;
+  const mainPct = sources.main.share_of_gained;
+  return (
+    <section className="mt-4 rounded-lg border border-slate-700 bg-slate-900/40 p-4">
+      <h3 className="text-base font-semibold mb-3">
+        👥 登録者ソース分析{' '}
+        <span className="text-xs font-normal text-slate-400">
+          (登録獲得元)
+        </span>
+      </h3>
+
+      {isMissing ? (
+        <div className="rounded border border-amber-800 bg-amber-950/30 px-3 py-2 text-sm text-amber-200">
+          ⚠️ {sources.error || '登録者ソースを取得できませんでした'}
+        </div>
+      ) : (
+        <>
+          {sources.total_gained > 0 && (
+            <div className="mb-3">
+              <div className="flex h-6 rounded-md overflow-hidden border border-slate-700">
+                <div
+                  className="bg-violet-600 flex items-center justify-center text-xs text-white"
+                  style={{ width: `${Math.max(8, shortPct * 100)}%` }}
+                  title={`ショート: ${sources.shorts.gained}人`}
+                >
+                  {shortPct >= 0.08 && `${Math.round(shortPct * 100)}%`}
+                </div>
+                <div
+                  className="bg-cyan-600 flex items-center justify-center text-xs text-white"
+                  style={{ width: `${Math.max(8, mainPct * 100)}%` }}
+                  title={`メイン: ${sources.main.gained}人`}
+                >
+                  {mainPct >= 0.08 && `${Math.round(mainPct * 100)}%`}
+                </div>
+              </div>
+              <div className="mt-1 flex justify-between text-xs text-slate-400">
+                <span>📱 ショート</span>
+                <span>🎬 メイン</span>
+              </div>
+            </div>
+          )}
+
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+            <div className="rounded border border-violet-900/40 bg-violet-950/20 px-3 py-2">
+              <div className="text-xs text-violet-300">
+                📱 ショートからの登録
+              </div>
+              <div className="text-2xl font-bold text-slate-100">
+                {fmtNumber(sources.shorts.gained)}人
+                <span className="ml-2 text-sm text-violet-300">
+                  ({fmtPercent(shortPct, 1)})
+                </span>
+              </div>
+              <div className="text-xs text-slate-400 mt-1">
+                解除: {sources.shorts.lost} / 純増:{' '}
+                {sources.shorts.net >= 0
+                  ? `+${sources.shorts.net}`
+                  : sources.shorts.net}
+                {' · '}効率: {sources.shorts.subs_per_1000_views.toFixed(2)}/千再生
+              </div>
+            </div>
+            <div className="rounded border border-cyan-900/40 bg-cyan-950/20 px-3 py-2">
+              <div className="text-xs text-cyan-300">
+                🎬 メインからの登録
+              </div>
+              <div className="text-2xl font-bold text-slate-100">
+                {fmtNumber(sources.main.gained)}人
+                <span className="ml-2 text-sm text-cyan-300">
+                  ({fmtPercent(mainPct, 1)})
+                </span>
+              </div>
+              <div className="text-xs text-slate-400 mt-1">
+                解除: {sources.main.lost} / 純増:{' '}
+                {sources.main.net >= 0
+                  ? `+${sources.main.net}`
+                  : sources.main.net}
+                {' · '}効率: {sources.main.subs_per_1000_views.toFixed(2)}/千再生
+              </div>
+            </div>
+          </div>
+
+          <p className="mt-2 text-xs text-slate-500">
+            期間内の登録者総獲得: {fmtNumber(sources.total_gained)}人 · 解除:{' '}
+            {fmtNumber(sources.total_lost)}人 · 純増:{' '}
+            {sources.total_net >= 0
+              ? `+${sources.total_net}`
+              : sources.total_net}
+            人
+            {sources.unknown.gained > 0 && (
+              <span className="text-amber-400 ml-2">
+                ・期間外動画: +{sources.unknown.gained}
+              </span>
+            )}
+          </p>
+        </>
       )}
     </section>
   );
@@ -265,6 +445,8 @@ export default function PdcaReportView({
 
       {report && (
         <>
+          <RecommendationCard rec={report.recommendation} />
+
           <section className="mb-4 rounded-lg border border-slate-700 bg-slate-900/40 p-4">
             <div className="flex flex-wrap items-baseline gap-3">
               <h2 className="text-lg font-semibold">
@@ -318,7 +500,9 @@ export default function PdcaReportView({
             </p>
           </section>
 
-          <div className="grid gap-4 lg:grid-cols-2">
+          <SubscriberSourcesCard sources={report.subscriber_sources} />
+
+          <div className="mt-4 grid gap-4 lg:grid-cols-2">
             <BucketCard
               title="ショート"
               emoji="📱"

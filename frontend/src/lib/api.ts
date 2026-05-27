@@ -1552,6 +1552,38 @@ export type PdcaSubscribersDaily = {
   cumulative_net: number;
 };
 
+export type PdcaSubscriberBucket = {
+  gained: number;
+  lost: number;
+  net: number;
+  share_of_gained: number;
+  subs_per_1000_views: number;
+};
+
+export type PdcaSubscriberSources = {
+  total_gained: number;
+  total_lost: number;
+  total_net: number;
+  shorts: PdcaSubscriberBucket;
+  main: PdcaSubscriberBucket;
+  unknown: { gained: number; lost: number; note: string | null };
+  source: 'youtube_analytics_api' | 'none';
+  error: string | null;
+};
+
+export type PdcaRecommendation = {
+  decision:
+    | 'keep_main'
+    | 'reduce_main_ok'
+    | 'balanced'
+    | 'more_data_needed';
+  primary_subscriber_source: 'shorts' | 'main' | 'balanced' | null;
+  headline: string;
+  reasoning: string;
+  warnings: string[];
+  metrics_used: Record<string, number>;
+};
+
 export type PdcaReport = {
   channel_id: string;
   days: number;
@@ -1574,6 +1606,8 @@ export type PdcaReport = {
     daily: PdcaSubscribersDaily[];
     source: string;
   };
+  subscriber_sources: PdcaSubscriberSources;
+  recommendation: PdcaRecommendation;
   shorts: PdcaBucketSummary;
   main: PdcaBucketSummary;
   comparison: {
@@ -1597,7 +1631,10 @@ export type PdcaReport = {
     fetched_from_youtube: number;
     in_window: number;
   };
-  errors: { youtube_fetch: string | null };
+  errors: {
+    youtube_fetch: string | null;
+    subscriber_sources: string | null;
+  };
 };
 
 export async function getPdcaReport(
