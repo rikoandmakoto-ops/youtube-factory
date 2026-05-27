@@ -1499,6 +1499,101 @@ export async function getAnalyticsOverview(
   );
 }
 
+// ── PDCA レポート (ショート vs メイン) ──
+export type PdcaVideoSample = {
+  video_id: string;
+  title: string;
+  published_at: string | null;
+  duration_seconds: number;
+  views: number;
+  likes: number;
+  comments: number;
+  like_rate: number;
+  is_short: boolean;
+};
+
+export type PdcaBucketSummary = {
+  count: number;
+  total_views: number;
+  total_likes: number;
+  total_comments: number;
+  avg_views: number;
+  avg_likes: number;
+  avg_comments: number;
+  avg_like_rate: number;
+  median_views: number;
+  top_videos: PdcaVideoSample[];
+};
+
+export type PdcaSubscribersDaily = {
+  date: string;
+  gained: number;
+  lost: number;
+  net: number;
+  cumulative_net: number;
+};
+
+export type PdcaReport = {
+  channel_id: string;
+  days: number;
+  generated_at: string;
+  window: { start: string; end: string };
+  channel_stats: {
+    youtube_channel_id?: string;
+    youtube_title?: string;
+    subscriber_count?: number;
+    view_count?: number;
+    video_count?: number;
+    subscriber_hidden?: boolean;
+    error?: string;
+  };
+  subscribers: {
+    current_total: number | null;
+    gained_in_window: number;
+    lost_in_window: number;
+    net_in_window: number;
+    daily: PdcaSubscribersDaily[];
+    source: string;
+  };
+  shorts: PdcaBucketSummary;
+  main: PdcaBucketSummary;
+  comparison: {
+    avg_views_short_vs_main: number | null;
+    avg_likes_short_vs_main: number | null;
+    avg_like_rate_short_vs_main: number | null;
+  };
+  cost: {
+    total_cost_usd: number;
+    events: number;
+    by_purpose: Record<string, number>;
+    by_model: Record<string, number>;
+    videos_in_window: number;
+    cost_per_video_usd: number;
+    cost_per_short_usd: number;
+    cost_per_main_usd: number;
+    note: string;
+  };
+  totals: {
+    published_in_db: number;
+    fetched_from_youtube: number;
+    in_window: number;
+  };
+  errors: { youtube_fetch: string | null };
+};
+
+export async function getPdcaReport(
+  channelId: string,
+  days = 30
+): Promise<PdcaReport> {
+  const qs = new URLSearchParams({
+    channel_id: channelId,
+    days: String(days),
+  });
+  return call<PdcaReport>(`/api/analytics/pdca-report?${qs.toString()}`, {
+    noStore: true,
+  });
+}
+
 export type AnalyticsVideoMetric = {
   video_id: string;
   title?: string;

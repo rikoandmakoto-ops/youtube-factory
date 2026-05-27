@@ -26,6 +26,7 @@ from pydantic import BaseModel, Field
 from api_phase1 import require_session
 from pipeline import youtube_analytics, youtube_comments
 from pipeline.analytics import (
+    pdca_report,
     retention_analyzer,
     store as analytics_store,
     success_analyzer,
@@ -106,6 +107,21 @@ async def videos(
         channel_id, limit=limit, latest_per_video=True
     )
     return {"channel_id": channel_id, "count": len(items), "items": items}
+
+
+@router.get("/pdca-report")
+async def pdca_report_endpoint(
+    channel_id: str = Query(..., description="チャンネル ID (例: daily-science)"),
+    days: int = Query(default=30, ge=1, le=365),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """ショート vs メイン動画のパフォーマンス比較レポート。
+
+    YouTube Data API v3 の videos.list で各動画の statistics + contentDetails を
+    取得し、duration <= 60s またはタイトルに「ショート」/「#Shorts」を含む動画を
+    short として分類して集計する。API 費用は data/api_usage.jsonl を期間で集計。
+    """
+    return pdca_report.build_report(channel_id, days=days)
 
 
 @router.get("/video/{video_id}/retention")

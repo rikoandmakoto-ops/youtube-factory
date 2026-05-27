@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Header from '@/components/Header';
 import AnalyticsView from './AnalyticsView';
 import {
@@ -100,6 +101,14 @@ export default async function AnalyticsPage({
       <Header
         title="📈 分析"
         back={{ href: '/', label: 'ダッシュボードに戻る' }}
+        actions={
+          <Link
+            href={`/analytics/pdca?channel=${encodeURIComponent(channelId)}`}
+            className="rounded border border-slate-600 bg-slate-800 px-3 py-1 text-sm text-slate-100 hover:bg-slate-700"
+          >
+            📊 PDCA レポート
+          </Link>
+        }
       />
       <AnalyticsView
         channels={channels}
