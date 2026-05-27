@@ -1,16 +1,33 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-import {
-  ThemeQueueStatus,
-  ThemeQueueItem,
-  getThemeQueue,
-  replenishThemeQueue,
-  addThemeQueueItem,
-  removeThemeQueueItem,
-  updateThemeQueueSettings,
-  ApiError,
-} from '@/lib/api';
+import type { ThemeQueueItem, ThemeQueueStatus } from '@/lib/api';
+
+// Client-side fetches use the Next.js proxy routes under /api/theme-queue/*.
+// We don't import the wrapped functions from '@/lib/api' here because that
+// module transitively pulls in `next/headers`, which isn't allowed in
+// client components.
+async function clientFetch<T>(
+  path: string,
+  init?: RequestInit
+): Promise<T> {
+  const r = await fetch(path, { cache: 'no-store', ...init });
+  if (!r.ok) {
+    let msg = `${r.status} ${r.statusText}`;
+    try {
+      const j = await r.json();
+      if (j && typeof j === 'object') {
+        if ('error' in j) msg = String((j as { error: unknown }).error);
+        else if ('detail' in j)
+          msg = String((j as { detail: unknown }).detail);
+      }
+    } catch {
+      /* ignore */
+    }
+    throw new Error(msg);
+  }
+  return (await r.json()) as T;
+}
 
 type Props = {
   channelId: string;
@@ -49,13 +66,15 @@ export default function ThemeQueuePanel({ channelId, channelName }: Props) {
 
   const refresh = useCallback(async () => {
     try {
-      const s = await getThemeQueue(channelId);
+      const s = await clientFetch<ThemeQueueStatus>(
+        `/api/theme-queue/${encodeURIComponent(channelId)}`
+      );
       setStatus(s);
       setTargetSize(s.target_size);
       setMinThreshold(s.min_threshold);
       setError(null);
     } catch (e) {
-      setError(e instanceof ApiError ? e.message : 'キューの取得に失敗しました');
+      setError(e instanceof Error ? e.message : 'キューの取得に失敗しました');
     } finally {
       setLoading(false);
     }
@@ -70,9 +89,18 @@ export default function ThemeQueuePanel({ channelId, channelName }: Props) {
     setError(null);
     setInfo(null);
     try {
-      const res = await replenishThemeQueue(channelId);
-      const added = (res as { added?: ThemeQueueItem[] }).added?.length ?? 0;
-      const skipped = (res as { skipped_reason?: string }).skipped_reason;
+      const res = await clientFetch<
+        ThemeQueueStatus & {
+          added?: ThemeQueueItem[];
+          skipped_reason?: string;
+        }
+      >(`/api/theme-queue/${encodeURIComponent(channelId)}/replenish`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ count: null }),
+      });
+      const added = res.added?.length ?? 0;
+      const skipped = res.skipped_reason;
       if (added > 0) {
         setInfo(`${added}件補充しました`);
       } else if (skipped === 'already_full') {
@@ -84,7 +112,7 @@ export default function ThemeQueuePanel({ channelId, channelName }: Props) {
       setTargetSize(res.target_size);
       setMinThreshold(res.min_threshold);
     } catch (e) {
-      setError(e instanceof ApiError ? e.message : '補充に失敗しました');
+      setError(e instanceof Error ? e.message : '補充に失敗しました');
     } finally {
       setBusy(null);
     }
@@ -97,16 +125,21 @@ export default function ThemeQueuePanel({ channelId, channelName }: Props) {
     setError(null);
     setInfo(null);
     try {
-      const res = await addThemeQueueItem(channelId, {
-        title,
-        angle: newAngle.trim(),
+      const res = await clientFetch<{
+        status: string;
+        item: ThemeQueueItem;
+        queue: ThemeQueueStatus;
+      }>(`/api/theme-queue/${encodeURIComponent(channelId)}/items`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ title, angle: newAngle.trim() }),
       });
       setStatus(res.queue);
       setNewTitle('');
       setNewAngle('');
       setInfo('追加しました');
     } catch (e) {
-      setError(e instanceof ApiError ? e.message : '追加に失敗しました');
+      setError(e instanceof Error ? e.message : '追加に失敗しました');
     } finally {
       setBusy(null);
     }
@@ -115,25 +148,38 @@ export default function ThemeQueuePanel({ channelId, channelName }: Props) {
   const onRemove = async (itemId: string) => {
     setError(null);
     try {
-      const res = await removeThemeQueueItem(channelId, itemId);
+      const res = await clientFetch<{
+        status: string;
+        queue: ThemeQueueStatus;
+      }>(
+        `/api/theme-queue/${encodeURIComponent(channelId)}/items/${encodeURIComponent(itemId)}`,
+        { method: 'DELETE' }
+      );
       setStatus(res.queue);
     } catch (e) {
-      setError(e instanceof ApiError ? e.message : '削除に失敗しました');
+      setError(e instanceof Error ? e.message : '削除に失敗しました');
     }
   };
 
   const onSaveSettings = async () => {
     setError(null);
     try {
-      const res = await updateThemeQueueSettings(channelId, {
-        target_size: targetSize,
-        min_threshold: minThreshold,
-      });
+      const res = await clientFetch<ThemeQueueStatus>(
+        `/api/theme-queue/${encodeURIComponent(channelId)}/settings`,
+        {
+          method: 'PUT',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            target_size: targetSize,
+            min_threshold: minThreshold,
+          }),
+        }
+      );
       setStatus(res);
       setEditSettings(false);
       setInfo('設定を保存しました');
     } catch (e) {
-      setError(e instanceof ApiError ? e.message : '設定保存に失敗しました');
+      setError(e instanceof Error ? e.message : '設定保存に失敗しました');
     }
   };
 

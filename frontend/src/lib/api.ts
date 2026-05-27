@@ -1,6 +1,24 @@
-import { getSessionToken } from './auth';
+import { SESSION_COOKIE } from './session-cookie';
 
+// NOTE: `next/headers` is server-only. We must not statically import it
+// (directly or transitively via `./auth`) because client components also
+// import from this module — webpack errors out with "next/headers in pages/"
+// during production builds. Indirect `eval('require')` defeats static
+// analysis, and the `typeof window` guard ensures the call only fires
+// server-side.
 const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
+
+function getSessionTokenServer(): string | null {
+  if (typeof window !== 'undefined') return null;
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-implied-eval, no-eval
+    const req = eval('require') as NodeJS.Require;
+    const nh = req('next/headers') as typeof import('next/headers');
+    return nh.cookies().get(SESSION_COOKIE)?.value ?? null;
+  } catch {
+    return null;
+  }
+}
 
 export class ApiError extends Error {
   status: number;
@@ -73,7 +91,8 @@ async function call<T>(path: string, opts: FetchOpts = {}): Promise<T> {
     headers.set('content-type', 'application/json');
   }
 
-  const token = opts.token === undefined ? getSessionToken() : opts.token;
+  const token =
+    opts.token === undefined ? getSessionTokenServer() : opts.token;
   if (token) {
     headers.set('authorization', `Bearer ${token}`);
   }
