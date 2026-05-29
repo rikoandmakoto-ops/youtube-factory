@@ -222,6 +222,7 @@ def _refresh_channel_job(channel_id: str) -> None:
             id=job_id,
             args=[channel_id],
             replace_existing=True,
+            misfire_grace_time=3600,
         )
         job = sch.get_job(job_id)
         nxt = job.next_run_time.isoformat() if job and job.next_run_time else "?"
