@@ -1,20 +1,38 @@
 import { SESSION_COOKIE } from './session-cookie';
 
 // NOTE: `next/headers` is server-only. We must not statically import it
-// (directly or transitively via `./auth`) because client components also
-// import from this module — webpack errors out with "next/headers in pages/"
-// during production builds. Indirect `eval('require')` defeats static
-// analysis, and the `typeof window` guard ensures the call only fires
-// server-side.
+// because client components also import from this module — webpack would
+// pull `next/headers` into the client bundle, which Next.js's server-only
+// check rejects at build time.
+//
+// The canonical server-side cookie reader lives in `./server-session`,
+// which is marked `import 'server-only'` and can be imported by Server
+// Components / Route Handlers directly. We do NOT import it from here
+// because relative dynamic-import resolution from `new Function` runs in
+// the host realm, not this module — bare package specifiers like
+// `next/headers` are resolvable from there, relative paths are not.
+//
+// Previous approach was `eval('require')('next/headers')`, which failed
+// silently in Vercel's ESM lambda runtime where bare `require` is
+// undefined. The result: Server Components fetched the backend with no
+// Authorization header, got 401, and bounced through /api/auth/clear
+// into a /login loop. The `new Function` indirection below defeats
+// webpack static analysis (so `next/headers` doesn't leak into the
+// client bundle) while still allowing the runtime to load it via Node's
+// bare-specifier resolution in the server lambda.
 const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
 
-function getSessionTokenServer(): string | null {
+let cachedNextHeaders: typeof import('next/headers') | null = null;
+async function getSessionTokenServer(): Promise<string | null> {
   if (typeof window !== 'undefined') return null;
   try {
-    // eslint-disable-next-line @typescript-eslint/no-implied-eval, no-eval
-    const req = eval('require') as NodeJS.Require;
-    const nh = req('next/headers') as typeof import('next/headers');
-    return nh.cookies().get(SESSION_COOKIE)?.value ?? null;
+    if (!cachedNextHeaders) {
+      const dynImport = new Function('m', 'return import(m)') as (
+        m: string
+      ) => Promise<typeof import('next/headers')>;
+      cachedNextHeaders = await dynImport('next/headers');
+    }
+    return cachedNextHeaders.cookies().get(SESSION_COOKIE)?.value ?? null;
   } catch {
     return null;
   }
@@ -92,7 +110,7 @@ async function call<T>(path: string, opts: FetchOpts = {}): Promise<T> {
   }
 
   const token =
-    opts.token === undefined ? getSessionTokenServer() : opts.token;
+    opts.token === undefined ? await getSessionTokenServer() : opts.token;
   if (token) {
     headers.set('authorization', `Bearer ${token}`);
   }

@@ -1,0 +1,11 @@
+import 'server-only';
+import { cookies } from 'next/headers';
+import { SESSION_COOKIE } from './session-cookie';
+
+export function getServerSessionToken(): string | null {
+  try {
+    return cookies().get(SESSION_COOKIE)?.value ?? null;
+  } catch {
+    return null;
+  }
+}
