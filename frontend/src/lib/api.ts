@@ -22,18 +22,27 @@ import { SESSION_COOKIE } from './session-cookie';
 // bare-specifier resolution in the server lambda.
 const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
 
-let cachedNextHeaders: typeof import('next/headers') | null = null;
 async function getSessionTokenServer(): Promise<string | null> {
   if (typeof window !== 'undefined') return null;
   try {
-    if (!cachedNextHeaders) {
-      const dynImport = new Function('m', 'return import(m)') as (
-        m: string
-      ) => Promise<typeof import('next/headers')>;
-      cachedNextHeaders = await dynImport('next/headers');
+    // Webpack-aware dynamic import of `next/headers`. Next.js treats this
+    // specially: server bundle inlines the module (and `cookies()` reads
+    // from the renderer's AsyncLocalStorage instance); client bundle
+    // code-splits it behind the typeof-window guard and never executes
+    // the branch. Pulling it via a relative import of a `'server-only'`-
+    // marked wrapper triggers the build-time check, so the import has to
+    // be the bare `next/headers` specifier here.
+    //
+    // Server Components / Route Handlers should still prefer the
+    // canonical `./server-session` reader — they're never reached from
+    // client bundles, so the static `import 'server-only'` chain is safe.
+    const { cookies } = await import('next/headers');
+    return cookies().get(SESSION_COOKIE)?.value ?? null;
+  } catch (e) {
+    if (typeof console !== 'undefined') {
+      // eslint-disable-next-line no-console
+      console.error('[api.ts] getSessionTokenServer failed:', e);
     }
-    return cachedNextHeaders.cookies().get(SESSION_COOKIE)?.value ?? null;
-  } catch {
     return null;
   }
 }
