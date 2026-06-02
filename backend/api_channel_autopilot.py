@@ -12,10 +12,15 @@ api_phase4 のスケジューラ（APScheduler BackgroundScheduler）に相乗�
         "enabled": false,
         "schedule": {
             "days_of_week": [1, 3, 5],   # 0=sun..6=sat
-            "hour": 18,
-            "minute": 0
+            "hour": 18,                  # 単一スロット用 (times未指定時のレガシー)
+            "minute": 0,
+            "times": [                   # 1日複数スロットを使う場合はこちら
+                {"hour": 7,  "minute": 0},
+                {"hour": 17, "minute": 0}
+            ]
         },
         "duration_minutes": 12,
+        "gen_type": "both",             # "both" | "short" | "full"
         "theme_queue": [
             {"id": "abc12345", "title": "...", "angle": "..."},
             ...
@@ -56,10 +61,17 @@ DOW_NAMES = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
 # Pydantic models
 # =====================================================================
 
+class TimeSlot(BaseModel):
+    hour: int = Field(ge=0, le=23)
+    minute: int = Field(default=0, ge=0, le=59)
+
+
 class ScheduleSpec(BaseModel):
     days_of_week: List[int] = Field(default_factory=list)  # 0=sun..6=sat
     hour: int = Field(default=18, ge=0, le=23)
     minute: int = Field(default=0, ge=0, le=59)
+    # 1日複数回投稿する場合に使う。指定されていれば hour/minute より優先する。
+    times: Optional[List[TimeSlot]] = None
 
 
 class ThemeItem(BaseModel):
@@ -68,10 +80,15 @@ class ThemeItem(BaseModel):
     angle: Optional[str] = ""
 
 
+# pipeline/scheduler/job_queue.submit に渡される gen_type の許容値
+GEN_TYPE_CHOICES = ("both", "short", "full")
+
+
 class AutopilotConfig(BaseModel):
     enabled: bool = False
     schedule: ScheduleSpec = Field(default_factory=ScheduleSpec)
     duration_minutes: int = Field(default=12, ge=1, le=60)
+    gen_type: str = Field(default="both")
     theme_queue: List[ThemeItem] = Field(default_factory=list)
 
 
@@ -79,6 +96,7 @@ class AutopilotUpdate(BaseModel):
     enabled: Optional[bool] = None
     schedule: Optional[ScheduleSpec] = None
     duration_minutes: Optional[int] = Field(default=None, ge=1, le=60)
+    gen_type: Optional[str] = None
 
 
 class ThemeAdd(BaseModel):
@@ -108,6 +126,7 @@ def _default_autopilot() -> Dict[str, Any]:
         "enabled": False,
         "schedule": {"days_of_week": [], "hour": 18, "minute": 0},
         "duration_minutes": 12,
+        "gen_type": "both",
         "theme_queue": [],
     }
 
@@ -143,7 +162,29 @@ def _load_autopilot(channel_id: str) -> Dict[str, Any]:
             sched["minute"] = int(_mm)
         except (ValueError, IndexError):
             pass
+    # 複数時刻スロット (1日N回投稿)
+    raw_times = raw_sched.get("times")
+    if isinstance(raw_times, list):
+        norm_times: List[Dict[str, int]] = []
+        for t in raw_times:
+            if not isinstance(t, dict):
+                continue
+            try:
+                h = int(t.get("hour"))
+                m = int(t.get("minute", 0))
+            except (TypeError, ValueError):
+                continue
+            if 0 <= h <= 23 and 0 <= m <= 59:
+                norm_times.append({"hour": h, "minute": m})
+        if norm_times:
+            sched["times"] = norm_times
     merged["schedule"] = sched
+    # gen_type ("both" | "short" | "full")
+    gt = raw.get("gen_type")
+    if isinstance(gt, str) and gt in ("both", "short", "full"):
+        merged["gen_type"] = gt
+    else:
+        merged.setdefault("gen_type", "both")
     queue = []
     for item in (raw.get("theme_queue") or []):
         if not isinstance(item, dict) or not item.get("title"):
@@ -184,8 +225,41 @@ def _new_theme_id() -> str:
 # Scheduler — api_phase4 の BackgroundScheduler を再利用
 # =====================================================================
 
-def _job_id(channel_id: str) -> str:
-    return f"autopilot:{channel_id}"
+def _job_id(channel_id: str, slot: int = 0) -> str:
+    """スロット付きジョブID。1日複数回投稿のために slot 番号でジョブを分ける。"""
+    return f"autopilot:{channel_id}:{slot}"
+
+
+def _iter_channel_jobs(sch, channel_id: str):
+    """このチャンネルに紐づく全 autopilot ジョブを列挙 (新旧両方のID形式を拾う)。"""
+    legacy = f"autopilot:{channel_id}"
+    prefix = f"{legacy}:"
+    for job in list(sch.get_jobs()):
+        if job.id == legacy or job.id.startswith(prefix):
+            yield job
+
+
+def _resolve_time_slots(sched: Dict[str, Any]) -> List[Dict[str, int]]:
+    """schedule から発火時刻のリストを返す。times が空なら hour/minute を単一スロットとして扱う。"""
+    times = sched.get("times")
+    slots: List[Dict[str, int]] = []
+    if isinstance(times, list):
+        for t in times:
+            if not isinstance(t, dict):
+                continue
+            try:
+                h = int(t.get("hour"))
+                m = int(t.get("minute", 0))
+            except (TypeError, ValueError):
+                continue
+            if 0 <= h <= 23 and 0 <= m <= 59:
+                slots.append({"hour": h, "minute": m})
+    if not slots:
+        slots.append({
+            "hour": int(sched.get("hour", 18)),
+            "minute": int(sched.get("minute", 0)),
+        })
+    return slots
 
 
 def _refresh_channel_job(channel_id: str) -> None:
@@ -193,15 +267,16 @@ def _refresh_channel_job(channel_id: str) -> None:
     if sch is None:
         print(f"⚠️ Autopilot: APScheduler 未利用 — {channel_id} はスケジュール不能")
         return
-    job_id = _job_id(channel_id)
-    try:
-        sch.remove_job(job_id)
-    except Exception:
-        pass
+
+    # 既存ジョブ (新旧ID両方) をクリーンアップ
+    for job in _iter_channel_jobs(sch, channel_id):
+        try:
+            sch.remove_job(job.id)
+        except Exception:
+            pass
 
     ap = _load_autopilot(channel_id)
     if not ap.get("enabled"):
-        # 明示的に無効化なら sukoshi quiet にしておくが、診断のため一行残す
         print(f"🚫 Autopilot for {channel_id}: disabled (enabled=false)")
         return
     sched = ap.get("schedule") or {}
@@ -209,51 +284,58 @@ def _refresh_channel_job(channel_id: str) -> None:
     if not days:
         print(f"🚫 Autopilot for {channel_id}: 曜日未指定 — スケジュール登録スキップ")
         return
-    try:
-        trigger = api_phase4.CronTrigger(
-            day_of_week=",".join(DOW_NAMES[d] for d in days if 0 <= d <= 6),
-            hour=int(sched.get("hour", 18)),
-            minute=int(sched.get("minute", 0)),
-            timezone="Asia/Tokyo",
-        )
-        sch.add_job(
-            _run_autopilot,
-            trigger=trigger,
-            id=job_id,
-            args=[channel_id],
-            replace_existing=True,
-            misfire_grace_time=3600,
-        )
-        job = sch.get_job(job_id)
-        nxt = job.next_run_time.isoformat() if job and job.next_run_time else "?"
-        days_label = "・".join(DOW_NAMES[d] for d in days if 0 <= d <= 6)
-        print(
-            f"📅 Autopilot scheduled for {channel_id}: "
-            f"{days_label} {int(sched.get('hour', 18)):02d}:{int(sched.get('minute', 0)):02d} JST "
-            f"→ next run {nxt}"
-        )
-    except Exception as e:
-        print(f"⚠️ Failed to schedule autopilot for {channel_id}: {e}")
+    days_label = "・".join(DOW_NAMES[d] for d in days if 0 <= d <= 6)
+    day_of_week = ",".join(DOW_NAMES[d] for d in days if 0 <= d <= 6)
+    slots = _resolve_time_slots(sched)
+    for idx, slot in enumerate(slots):
+        try:
+            trigger = api_phase4.CronTrigger(
+                day_of_week=day_of_week,
+                hour=slot["hour"],
+                minute=slot["minute"],
+                timezone="Asia/Tokyo",
+            )
+            jid = _job_id(channel_id, idx)
+            sch.add_job(
+                _run_autopilot,
+                trigger=trigger,
+                id=jid,
+                args=[channel_id],
+                replace_existing=True,
+                misfire_grace_time=3600,
+            )
+            job = sch.get_job(jid)
+            nxt = job.next_run_time.isoformat() if job and job.next_run_time else "?"
+            print(
+                f"📅 Autopilot scheduled for {channel_id} [slot {idx}]: "
+                f"{days_label} {slot['hour']:02d}:{slot['minute']:02d} JST "
+                f"→ next run {nxt}"
+            )
+        except Exception as e:
+            print(f"⚠️ Failed to schedule autopilot for {channel_id} slot {idx}: {e}")
 
 
 def _remove_channel_job(channel_id: str) -> None:
     sch = api_phase4._ensure_scheduler()
     if sch is None:
         return
-    try:
-        sch.remove_job(_job_id(channel_id))
-    except Exception:
-        pass
+    for job in _iter_channel_jobs(sch, channel_id):
+        try:
+            sch.remove_job(job.id)
+        except Exception:
+            pass
 
 
 def _next_run_at(channel_id: str) -> Optional[str]:
     sch = api_phase4._ensure_scheduler()
     if sch is None:
         return None
-    job = sch.get_job(_job_id(channel_id))
-    if not job or not job.next_run_time:
+    next_times = [
+        job.next_run_time for job in _iter_channel_jobs(sch, channel_id) if job.next_run_time
+    ]
+    if not next_times:
         return None
-    return job.next_run_time.isoformat()
+    return min(next_times).isoformat()
 
 
 def restore_all() -> None:
@@ -287,32 +369,49 @@ def restore_all() -> None:
 # =====================================================================
 
 def _pop_or_refill_theme(channel_id: str) -> Optional[Dict[str, str]]:
-    """キュー先頭を取り出す。空なら AI で補充して 1 件目を返す。"""
+    """キュー先頭を取り出す。空なら AI で補充。それも失敗すれば theme_seeds で代替。"""
     with _lock:
         ap = _load_autopilot(channel_id)
         queue = list(ap.get("theme_queue") or [])
 
         if not queue:
-            # AI 補充
-            sg = _state.get("scenario_generator")
             cm = _state.get("channel_manager")
-            if not sg or not cm or not getattr(sg, "api_key", None):
-                return None
-            ch = cm.get(channel_id)
+            ch = cm.get(channel_id) if cm else None
             if not ch:
                 return None
-            try:
-                suggested = sg.suggest_themes(ch, count=5) or []
-            except Exception as e:
-                print(f"⚠️ autopilot AI refill failed for {channel_id}: {e}")
-                return None
-            for s in suggested:
-                if isinstance(s, dict) and s.get("title"):
-                    queue.append({
-                        "id": _new_theme_id(),
-                        "title": str(s["title"]),
-                        "angle": str(s.get("angle") or ""),
-                    })
+
+            sg = _state.get("scenario_generator")
+            if sg and getattr(sg, "api_key", None):
+                try:
+                    suggested = sg.suggest_themes(ch, count=5) or []
+                except Exception as e:
+                    print(f"⚠️ autopilot AI refill failed for {channel_id}: {e}")
+                    suggested = []
+                for s in suggested:
+                    if isinstance(s, dict) and s.get("title"):
+                        queue.append({
+                            "id": _new_theme_id(),
+                            "title": str(s["title"]),
+                            "angle": str(s.get("angle") or ""),
+                        })
+
+            if not queue:
+                # 最終フォールバック: チャンネルJSONの theme_seeds → theme_priority.good_examples
+                seeds: List[Dict[str, Any]] = list(getattr(ch, "theme_seeds", None) or [])
+                if not seeds:
+                    raw = getattr(ch, "_raw", {}) or {}
+                    examples = (raw.get("theme_priority") or {}).get("good_examples") or []
+                    seeds = [{"title": s} for s in examples if isinstance(s, str) and s.strip()]
+                if seeds:
+                    print(f"🪴 autopilot fallback: using {len(seeds)} theme_seeds for {channel_id}")
+                for s in seeds:
+                    if isinstance(s, dict) and s.get("title"):
+                        queue.append({
+                            "id": _new_theme_id(),
+                            "title": str(s["title"]),
+                            "angle": str(s.get("angle") or ""),
+                        })
+
             if not queue:
                 return None
 
@@ -363,6 +462,10 @@ def _run_autopilot(channel_id: str) -> None:
 
     ap = _load_autopilot(channel_id)
     duration_min = int(ap.get("duration_minutes") or 12)
+    gen_type = ap.get("gen_type") or "both"
+    if gen_type not in GEN_TYPE_CHOICES:
+        print(f"⚠️ Autopilot {channel_id}: unknown gen_type={gen_type!r} — falling back to 'both'")
+        gen_type = "both"
 
     try:
         scenario = sg.generate(
@@ -378,7 +481,7 @@ def _run_autopilot(channel_id: str) -> None:
             channel_id=channel_id,
             scenario_data=scenario,
             priority=5,
-            gen_type="both",
+            gen_type=gen_type,
         )
         # 完了時に api_phase4.on_generation_complete が拾って YouTube ペア公開する
         api_phase4._attach_auto_publish_marker(queue, job_id, f"autopilot:{channel_id}", True)
@@ -421,13 +524,33 @@ async def update_autopilot(
         for d in req.schedule.days_of_week:
             if not (0 <= d <= 6):
                 raise HTTPException(status_code=400, detail=f"Invalid day_of_week: {d}")
-        ap["schedule"] = {
+        new_sched: Dict[str, Any] = {
             "days_of_week": sorted(set(req.schedule.days_of_week)),
             "hour": req.schedule.hour,
             "minute": req.schedule.minute,
         }
+        if req.schedule.times:
+            # 重複・無効値は除去し、(hour, minute) でソート
+            seen: set = set()
+            slots: List[Dict[str, int]] = []
+            for t in req.schedule.times:
+                key = (t.hour, t.minute)
+                if key in seen:
+                    continue
+                seen.add(key)
+                slots.append({"hour": t.hour, "minute": t.minute})
+            slots.sort(key=lambda s: (s["hour"], s["minute"]))
+            new_sched["times"] = slots
+        ap["schedule"] = new_sched
     if req.duration_minutes is not None:
         ap["duration_minutes"] = req.duration_minutes
+    if req.gen_type is not None:
+        if req.gen_type not in GEN_TYPE_CHOICES:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Invalid gen_type: {req.gen_type} (allowed: {', '.join(GEN_TYPE_CHOICES)})",
+            )
+        ap["gen_type"] = req.gen_type
     if ap["enabled"] and not ap["schedule"].get("days_of_week"):
         raise HTTPException(
             status_code=400,

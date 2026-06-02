@@ -3,7 +3,7 @@
   "name": "リコとマコトのゆっくり日常科学",
   "concept": "日常のふとした疑問を科学の視点からゆっくり解説するチャンネル",
   "style": "yukkuri",
-  "youtube_channel_id": null,
+  "youtube_channel_id": "UC1OckVkZahT3_fM6W8hD6dg",
   "image_mode": "generate",
   "image_collect": {
     "provider": "auto",
@@ -106,7 +106,7 @@
       "top_opacity_mid": 0.12,
       "bottom_height_pct": 32,
       "bottom_opacity_start": 0.35,
-      "bottom_opacity_mid": 0.10
+      "bottom_opacity_mid": 0.1
     }
   },
   "defaults": {
@@ -247,12 +247,46 @@
   "autopilot": {
     "enabled": true,
     "schedule": {
-      "days": ["mon", "wed", "fri"],
-      "time": "19:30",
-      "timezone": "Asia/Tokyo"
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "hour": 7,
+      "minute": 0,
+      "times": [
+        {
+          "hour": 7,
+          "minute": 0
+        },
+        {
+          "hour": 17,
+          "minute": 0
+        }
+      ]
     },
+    "duration_minutes": 12,
+    "gen_type": "short",
+    "theme_queue": [
+      {
+        "id": "3f9e0c85",
+        "title": "なぜ寝る前のスマホが睡眠に影響を与えるのか？",
+        "angle": "デジタルデバイスと睡眠の関係"
+      },
+      {
+        "id": "f64586b1",
+        "title": "なぜ笑うとストレスが軽減されるのか？",
+        "angle": "笑いと心理的効果の科学"
+      }
+    ],
     "queue": [
-      {"theme": "なぜ夢の中で声を出せないのか"}
+      {
+        "theme": "なぜ夢の中で声を出せないのか"
+      }
     ]
   }
 }
