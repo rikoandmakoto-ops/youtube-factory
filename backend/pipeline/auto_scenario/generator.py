@@ -311,6 +311,11 @@ class ScenarioGenerator:
         forbidden = vs.get("forbidden") or []
         if forbidden:
             lines.append(f"- 使用禁止ワード/要素: {', '.join(forbidden)}")
+        style_rules = vs.get("style_rules") or []
+        if style_rules:
+            lines.append("- 厳守する語りのルール:")
+            for r in style_rules:
+                lines.append(f"  - {r}")
         return "\n".join(lines) + "\n\n"
 
     def _build_yukkuri_prompt(self, channel, theme: Dict, target_duration: int) -> str:
