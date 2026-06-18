@@ -40,7 +40,7 @@ except Exception:  # pragma: no cover — module not yet importable
 # Theme suggestion uses gpt-4o-mini (~16x cheaper, low quality risk for short JSON).
 GPT_MODEL = "gpt-4o"
 GPT_MODEL_LIGHT = "gpt-4o-mini"
-CLAUDE_MODEL = "claude-sonnet-4-20250514"
+CLAUDE_MODEL = "claude-sonnet-4-6"  # 旧 claude-sonnet-4-20250514 は廃止され 404 (2026-06-18)
 
 
 class ScenarioGenerator:
@@ -631,7 +631,11 @@ class ScenarioGenerator:
         last_full_count = 0
         last_total_chars = 0
         last_avg_chars = 0.0
-        for attempt in range(2):
+        # GPT は例外時に即 None（OpenAI quota切れ等のfail-fast）。
+        # Claude は単独採用される場面が多いので検証リトライを1回多く与え、
+        # "Both GPT and Claude failed" の取りこぼしを減らす。
+        max_attempts = 3 if provider == "claude" else 2
+        for attempt in range(max_attempts):
             try:
                 if provider == "gpt":
                     raw = self._call_gpt(msgs, temperature=0.85)

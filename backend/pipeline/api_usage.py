@@ -13,7 +13,8 @@ GPT_PRICING = {
     "gpt-4-turbo":     {"input": 10.00 / 1_000_000, "output": 30.00 / 1_000_000},
     "gpt-3.5-turbo":   {"input": 0.50 / 1_000_000, "output": 1.50 / 1_000_000},
     # Claude (Anthropic) — 分析・評価・採点系で使用
-    "claude-sonnet-4-20250514":  {"input": 3.00 / 1_000_000, "output": 15.00 / 1_000_000},
+    "claude-sonnet-4-6":         {"input": 3.00 / 1_000_000, "output": 15.00 / 1_000_000},
+    "claude-sonnet-4-20250514":  {"input": 3.00 / 1_000_000, "output": 15.00 / 1_000_000},  # 廃止済み・過去ログ用に価格のみ保持
     "claude-3-5-sonnet-latest":  {"input": 3.00 / 1_000_000, "output": 15.00 / 1_000_000},
     "claude-haiku-4-5-20251001": {"input": 1.00 / 1_000_000, "output": 5.00 / 1_000_000},
 }
@@ -53,7 +54,7 @@ def _model_price(model: str) -> Dict[str, float]:
     if model.startswith("claude-"):
         if "haiku" in model:
             return GPT_PRICING["claude-haiku-4-5-20251001"]
-        return GPT_PRICING["claude-sonnet-4-20250514"]
+        return GPT_PRICING["claude-sonnet-4-6"]
     # default fallback to gpt-4o pricing
     return GPT_PRICING["gpt-4o"]
 

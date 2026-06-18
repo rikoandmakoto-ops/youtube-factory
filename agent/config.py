@@ -46,9 +46,10 @@ class AgentConfig:
     """1 回の実行（run）の振る舞いを決める設定。"""
 
     # Claude（考える脳）。AGENT_MODEL で上書き可。
-    # リポジトリで実績のある sonnet-4 を既定にしておく。
+    # 現行 Sonnet（claude-sonnet-4-6）を既定にしておく。
+    # 旧 claude-sonnet-4-20250514 は廃止され 404 になるため更新（2026-06-18）。
     model: str = field(default_factory=lambda: os.environ.get(
-        "AGENT_MODEL", "claude-sonnet-4-20250514"))
+        "AGENT_MODEL", "claude-sonnet-4-6"))
     max_tokens: int = 4096
 
     # 1 サイクル内で Claude に許す思考↔ツールの往復回数の上限（暴走防止）
