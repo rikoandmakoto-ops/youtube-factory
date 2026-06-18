@@ -313,11 +313,18 @@ def _fetch_subscriber_sources_by_video(
         msg = str(e)
         # Google の長い HttpError ダンプから本質だけ抜く
         if "accessNotConfigured" in msg or "has not been used" in msg:
+            # propagation 待ち / 別プロジェクトで有効化したケースの切り分け用に
+            # 元の URL（project_id を含む）を 1 行で残す
+            project_hint = ""
+            import re as _re
+            m = _re.search(r"project[=/](\d+)", msg)
+            if m:
+                project_hint = f" [project={m.group(1)}]"
             return (
                 {},
                 "YouTube Analytics API がこの Google プロジェクトで未有効化です。"
                 " Cloud Console でこのチャンネルの OAuth クライアントが属するプロジェクトに対して"
-                " YouTube Analytics API を有効化してください。",
+                f" YouTube Analytics API を有効化してください。{project_hint}",
             )
         if "insufficientPermissions" in msg or "insufficient" in msg.lower():
             return (

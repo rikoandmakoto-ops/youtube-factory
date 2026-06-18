@@ -37,6 +37,15 @@ router = APIRouter(prefix="/api", tags=["phase3"])
 
 PROJECT_ROOT = Path(__file__).parent.parent
 
+# 公開素材として許可するルート（PROJECT_ROOT に加え、動画の正規出力先）。
+# 動画生成は ~/Desktop/動画出力用/ と iCloud に出力するため、これらを許可しないと
+# job_id 経由の publish-pair で「プロジェクト外」エラーになる。
+_ALLOWED_FILE_ROOTS = [
+    PROJECT_ROOT,
+    Path.home() / "Desktop" / "動画出力用",
+    Path.home() / "Library" / "Mobile Documents" / "com~apple~CloudDocs",
+]
+
 # 公開ジョブ追跡
 _publish_jobs: Dict[str, Dict[str, Any]] = {}
 
@@ -175,7 +184,7 @@ async def channel_youtube_callback(
 
     # YouTube API から取得した本当のチャンネル名・IDをチャンネルJSONに反映。
     # 表示名(`name`)はユーザーが内部ID以外に変更していなければ更新する
-    # （`404studio` のような placeholder のまま放置されているケースを救う）。
+    # （`scp-lab` のような placeholder のまま放置されているケースを救う）。
     yt_name = result.get("youtube_channel_name")
     yt_id = result.get("youtube_channel_id")
     updates: Dict[str, Any] = {}
@@ -226,12 +235,18 @@ class PublishRequest(BaseModel):
 
 def _validate_file(path_str: str, label: str = "file") -> Path:
     p = Path(path_str).expanduser()
-    # PROJECT_ROOT 配下に限定
+    # 許可ルート配下に限定（PROJECT_ROOT + 動画の正規出力先）
     try:
         p_resolved = p.resolve()
-        PROJECT_ROOT_resolved = PROJECT_ROOT.resolve()
-        # 厳密チェックは絶対パスで行う
-        if not str(p_resolved).startswith(str(PROJECT_ROOT_resolved)):
+        allowed = False
+        for root in _ALLOWED_FILE_ROOTS:
+            try:
+                if str(p_resolved).startswith(str(root.resolve())):
+                    allowed = True
+                    break
+            except Exception:
+                continue
+        if not allowed:
             raise HTTPException(status_code=400, detail=f"{label} がプロジェクト外です")
     except HTTPException:
         raise

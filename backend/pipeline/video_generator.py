@@ -983,6 +983,12 @@ class FrameRenderer:
         self.text_box_color = tuple(colors.get("text_box_color", [0, 0, 0]))
         self.text_stroke_color = tuple(colors.get("text_stroke_color", [0, 0, 0]))
 
+        # 出典/クレジット（フレーム右下に常時表示する小さな文字列）
+        branding = self.fmt.get("branding", {}) or {}
+        self.source_credit_text = branding.get("source_credit") or None
+        self.source_credit_opacity = int(branding.get("source_credit_opacity", 160))
+        self.source_credit_font_size = int(branding.get("source_credit_font_size", 20))
+
         if bg_video_path and Path(bg_video_path).exists():
             ext = Path(bg_video_path).suffix.lower()
             if bg_type == "static" or ext in (".png", ".jpg", ".jpeg", ".bmp"):
@@ -1121,6 +1127,33 @@ class FrameRenderer:
                   font=font, fill=(245, 245, 245, 255))
         return draw_layer
 
+    def _render_source_credit(self, W, H, text_box_h):
+        """フレーム右下に常時表示する出典クレジット。subtitle bar の少し上に置く。"""
+        if not self.source_credit_text:
+            return None
+        font_size = max(14, int(self.source_credit_font_size))
+        font = get_font(font_size)
+        layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        draw = ImageDraw.Draw(layer)
+        try:
+            bbox = draw.textbbox((0, 0), self.source_credit_text, font=font)
+            tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+        except Exception:
+            tw, th = font_size * len(self.source_credit_text) // 2, font_size
+        pad_x, pad_y = 10, 4
+        box_w = tw + pad_x * 2
+        box_h = th + pad_y * 2
+        margin = 18
+        x = W - box_w - margin
+        y = H - text_box_h - box_h - 8
+        if y < 0:
+            y = 8
+        chip = Image.new("RGBA", (box_w, box_h), (0, 0, 0, max(0, min(255, self.source_credit_opacity))))
+        layer.paste(chip, (x, y), chip)
+        draw.text((x + pad_x, y + pad_y), self.source_credit_text,
+                  font=font, fill=(230, 230, 230, 235))
+        return layer
+
     def _build_overlay(self, speaker, text, expression="normal", diagram=False, diagram_text=None, illustration=None, attribution=None):
         W, H = self.W, self.H
         overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -1218,6 +1251,11 @@ class FrameRenderer:
                 draw_composite_text(draw, (tx, y_start), line, fsize, text_color,
                                     stroke_fill=self.text_stroke_color, stroke_width=self.text_stroke_width)
                 y_start += line_h + self.text_line_spacing
+
+        # 出典クレジット（右下、最後に重ねる）
+        credit_layer = self._render_source_credit(W, H, text_box_h)
+        if credit_layer is not None:
+            overlay = Image.alpha_composite(overlay, credit_layer)
 
         return overlay
 
@@ -1335,7 +1373,7 @@ class ShortFrameRenderer:
     def __init__(self, bg_video_path=None, bg_type="auto", char_config=None,
                  image_mode="generate", image_collect_settings=None,
                  topic_query=None, cache_dir=None,
-                 overlay_style=None, title=None):
+                 overlay_style=None, title=None, fmt=None):
         self.bg_video = None
         self.bg_video_duration = 0
         self.bg_image = None
@@ -1359,6 +1397,12 @@ class ShortFrameRenderer:
             self.scp_badge_text = None
         else:  # truthy dict / True
             self.scp_badge_text = _extract_scp_badge_text(title)
+
+        self.fmt = fmt or {}
+        branding = self.fmt.get("branding", {}) or {}
+        self.source_credit_text = branding.get("source_credit") or None
+        self.source_credit_opacity = int(branding.get("source_credit_opacity", 160))
+        self.source_credit_font_size = int(branding.get("source_credit_font_size_short", 26))
 
         if bg_video_path and Path(bg_video_path).exists():
             ext = Path(bg_video_path).suffix.lower()
@@ -1515,6 +1559,27 @@ class ShortFrameRenderer:
                 draw_composite_text(draw, ((SHORT_W-tw)//2, y_start), line, 64, tc,
                                     stroke_fill=(0,0,0), stroke_width=5)
                 y_start += 86
+
+        # 出典クレジット（右下、小さく）
+        if self.source_credit_text:
+            font_size = max(16, int(self.source_credit_font_size))
+            font = get_font(font_size)
+            try:
+                bbox = draw.textbbox((0, 0), self.source_credit_text, font=font)
+                tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+            except Exception:
+                tw, th = font_size * len(self.source_credit_text) // 2, font_size
+            pad_x, pad_y = 12, 6
+            box_w = tw + pad_x * 2
+            box_h = th + pad_y * 2
+            margin = 24
+            x = SHORT_W - box_w - margin
+            y = SHORT_H - box_h - margin
+            chip = Image.new("RGBA", (box_w, box_h),
+                             (0, 0, 0, max(0, min(255, self.source_credit_opacity))))
+            overlay.paste(chip, (x, y), chip)
+            draw.text((x + pad_x, y + pad_y), self.source_credit_text,
+                      font=font, fill=(230, 230, 230, 235))
 
         return overlay
 
@@ -2242,6 +2307,7 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         image_mode=image_mode, image_collect_settings=image_collect_settings,
         topic_query=topic_query, cache_dir=out_dir,
         overlay_style=overlay_style, title=title,
+        fmt=channel_format,
     )
     active_chars = char_config or CHAR_CONFIG
     tmp_dir = tempfile.mkdtemp(prefix="short_")

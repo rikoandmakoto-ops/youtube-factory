@@ -79,6 +79,11 @@ class BrandingConfig:
     intro_duration: float = 0.0            # イントロ秒数（0=なし）
     outro_duration: float = 0.0            # アウトロ秒数
     cta_style: str = "casual"              # CTA表示スタイル
+    # 常時表示する出典/クレジット文字列（フレーム右下、控えめサイズ）
+    source_credit: Optional[str] = None
+    source_credit_opacity: int = 160       # 0-255
+    source_credit_font_size: int = 20      # フル動画のフォントサイズ
+    source_credit_font_size_short: int = 26  # 縦長ショート用
 
 
 @dataclass
