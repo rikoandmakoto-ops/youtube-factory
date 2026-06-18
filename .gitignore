@@ -10,6 +10,9 @@
 .env.*.local
 backend/.env
 frontend/.env.local
+# OAuth トークンDB（Fernet 暗号化済みだが秘密情報。絶対にコミットしない）
+backend/pipeline/credentials/oauth.db
+*.db
 
 # ===== Node / Next.js =====
 node_modules/
@@ -55,7 +58,12 @@ data/samples/
 data/thumbnails/
 data/cache/
 data/api_usage.jsonl
+data/job_queue.json
 backend/static/
+# エージェント常駐時に生成されるチャンネル別ランタイム状態
+data/channels/*/
+# ショート単体実行などのアドホック結果ダンプ
+backend/short_only_results_*.json
 
 # ===== Large root-level samples / temp media =====
 *.b64

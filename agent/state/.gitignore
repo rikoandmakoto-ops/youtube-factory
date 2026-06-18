@@ -1,3 +1,10 @@
 # ブラウザツール(Playwright)の実行時生成物。マシン依存・巨大なのでコミットしない。
 browser_profile/
 screenshots/
+
+# エージェント常駐時に絶えず更新されるランタイム状態。マシン固有なのでコミットしない。
+actions.jsonl
+tasks.json
+notifications.log
+learnings.json
+runtime/
