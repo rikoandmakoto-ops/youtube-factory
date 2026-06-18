@@ -209,7 +209,7 @@
     },
     "output": {
       "target_duration": 720,
-      "gen_type": "both",
+      "gen_type": "short",
       "bg_type": "static",
       "bg_path": "assets/backgrounds/classroom.png",
       "use_illustrations": true
@@ -248,15 +248,11 @@
     "enabled": true,
     "schedule": {
       "days_of_week": [
-        0,
         1,
-        2,
         3,
-        4,
-        5,
-        6
+        4
       ],
-      "hour": 7,
+      "hour": 17,
       "minute": 0,
       "times": [
         {
@@ -273,14 +269,19 @@
     "gen_type": "short",
     "theme_queue": [
       {
-        "id": "3f9e0c85",
-        "title": "なぜ寝る前のスマホが睡眠に影響を与えるのか？",
-        "angle": "デジタルデバイスと睡眠の関係"
+        "id": "3a70c375",
+        "title": "もし地球から1秒だけ酸素が消えたら何が起こるのか",
+        "angle": ""
       },
       {
-        "id": "f64586b1",
-        "title": "なぜ笑うとストレスが軽減されるのか？",
-        "angle": "笑いと心理的効果の科学"
+        "id": "263ee913",
+        "title": "アイスで頭がキーンとする現象が長年解明されていなかった理由",
+        "angle": ""
+      },
+      {
+        "id": "4ecffe18",
+        "title": "夢で見たことを朝には忘れてしまう本当の理由",
+        "angle": ""
       }
     ],
     "queue": [
