@@ -30,13 +30,13 @@ OBJECTIVE = Objective(
     name="youtube-growth",
     mission=(
         f"対象チャンネル {CHANNELS} を着実に運用し、継続的に成長させる。\n"
-        "短期の最優先KPIは『各チャンネルが毎日ショートを1本以上、公開(public)で投稿し続けること』。"
+        "短期の最優先KPIは『各チャンネルが毎日ショートを2本、公開(public)で投稿し続けること』。"
         "中期的にはサムネ品質・台本の質・競合分析を通じて視聴数と登録者を伸ばす。"
     ),
     guidance=(
-        "- 各チャンネルについて、まず observe_post_status で『今日まだ投稿していないか』を確認する。\n"
-        "- 今日未投稿なら: VOICEVOX 確認 → generate_short で生成 → upload_to_youtube(privacy=public, is_short=true) で投稿。\n"
-        "- 既に今日投稿済みなら、その日の必須投稿は完了。余力があればサムネや競合分析の改善を検討してよいが、無理はしない。\n"
+        "- 各チャンネルについて、まず observe_post_status で『今日の投稿本数(posted_today)』を確認する。1日の目標は各チャンネル2本。\n"
+        "- 今日の投稿が2本未満なら: VOICEVOX 確認 → generate_short で生成 → upload_to_youtube(privacy=public, is_short=true) で投稿。残り本数ぶん繰り返す。\n"
+        "- 既に今日2本投稿済みなら、その日の必須投稿は完了。余力があればサムネや競合分析の改善を検討してよいが、無理はしない。\n"
         "- 生成時に VOICEVOX が落ちていたら restart_voicevox で復旧してから再試行する。\n"
         "- アップロードで認証エラーが出たら refresh_youtube_token を試す。それでも駄目（refresh_token 失効）なら、"
         "youtube_reauth でブラウザから OAuth 連携をやり直す。自動完了できれば再びアップロードを試す。\n"
@@ -44,7 +44,7 @@ OBJECTIVE = Objective(
         "- 投稿状況やアップロード結果を UI でも確認したいときは browser_observe で /channels/{id}/config や YouTube Studio を見る。\n"
         "- 台本生成の API エラーは generate_short 内で OpenAI→Claude フォールバックと再試行が行われる。数回失敗したら原因を記録し次サイクルに回す。\n"
         "- アップロードした動画のURLは必ずログに残す（行動ログに自動記録される）。\n"
-        "- 1サイクルでは『各チャンネル最大1本の投稿』までに留め、過剰投稿しない。\n"
+        "- 1サイクルでは『各チャンネル最大1本の投稿』までに留め、2本目は次サイクル以降に回して時間を空ける（1日の上限は2本、それを超えて過剰投稿しない）。\n"
         "- 同じ失敗を繰り返さないよう、対処できたエラーは remember に knowhow として残す。"
     ),
 )

@@ -72,6 +72,19 @@ export default function GenerateForm({
   // BGM音量: UIは0-100%, バックエンドへは0..1で送る
   const [bgmVolumePct, setBgmVolumePct] = useState(30);
 
+  // まとめて生成（複数テーマ / 複数回）。SCPショートなどを一括でキュー投入する。
+  // batchMode が ON のときはサンプル承認ゲートを省略し、テーマ × 回数ぶんの
+  // ジョブを順に /api/jobs へ投入する。
+  const [batchMode, setBatchMode] = useState(false);
+  // 1行 = 1テーマ。空行は無視する。
+  const [batchThemes, setBatchThemes] = useState('');
+  // 各テーマを何本ずつ作るか（1〜10）。
+  const [repeatCount, setRepeatCount] = useState(1);
+  const [batchSubmitting, setBatchSubmitting] = useState(false);
+  const [batchJobs, setBatchJobs] = useState<
+    { theme: string; jobId: string | null; error?: string }[] | null
+  >(null);
+
   // BGMプレビュー
   const [bgmPreviewUrl, setBgmPreviewUrl] = useState<string | null>(null);
   const [bgmPreviewLoading, setBgmPreviewLoading] = useState(false);
@@ -515,6 +528,41 @@ export default function GenerateForm({
     }
   };
 
+  // まとめて生成モード用: AI提案で得たテーマ候補をすべてテキストエリアに追記する。
+  const onSuggestBatch = async () => {
+    if (!channelId || suggesting) return;
+    setError(null);
+    setSuggesting(true);
+    try {
+      const res = await fetch('/api/themes/suggest', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ channel_id: channelId }),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      const data: { themes: { title: string; angle: string }[] } =
+        await res.json();
+      const lines = (data.themes ?? []).map((t) =>
+        t.angle ? `${t.title} — ${t.angle}` : t.title
+      );
+      if (lines.length === 0) {
+        setError('提案を取得できませんでした');
+        return;
+      }
+      setBatchThemes((prev) => {
+        const existing = prev
+          .split('\n')
+          .map((s) => s.trim())
+          .filter(Boolean);
+        return [...existing, ...lines].join('\n');
+      });
+    } catch (e) {
+      setError('AI提案に失敗しました');
+    } finally {
+      setSuggesting(false);
+    }
+  };
+
   const onApplyTemplate = (id: string) => {
     setSelectedTemplateId(id);
     if (!id) return;
@@ -726,8 +774,71 @@ export default function GenerateForm({
     }
   };
 
+  // テキストエリア（1行=1テーマ）をテーマ配列に変換。空ならテーマ入力欄で代用。
+  const parseBatchThemes = (): string[] => {
+    const lines = batchThemes
+      .split('\n')
+      .map((s) => s.trim())
+      .filter(Boolean);
+    if (lines.length > 0) return lines;
+    return theme.trim() ? [theme.trim()] : [];
+  };
+
+  // まとめて生成: テーマ × 回数ぶんのジョブを順に投入する。1本ずつ POST して
+  // 進捗を逐次 batchJobs に反映する。サンプル承認ゲートはスキップする。
+  const onBatchSubmit = async () => {
+    const themes = parseBatchThemes();
+    const rep = Math.max(1, Math.min(10, Math.round(repeatCount) || 1));
+    if (!channelId || themes.length === 0 || batchSubmitting) return;
+    setError(null);
+    setBatchSubmitting(true);
+    setBatchJobs([]);
+    const acc: { theme: string; jobId: string | null; error?: string }[] = [];
+    try {
+      for (const th of themes) {
+        for (let i = 0; i < rep; i++) {
+          try {
+            const res = await fetch('/api/jobs', {
+              method: 'POST',
+              headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({
+                channel_id: channelId,
+                theme: th,
+                duration_minutes: duration,
+                generate_short: generateShort,
+                generate_thumbnail: generateThumbnail,
+                copy_to_icloud: copyToIcloud,
+                bgm_volume: bgmVolumePct / 100,
+              }),
+            });
+            if (!res.ok) {
+              const text = await res.text();
+              acc.push({ theme: th, jobId: null, error: text || 'failed' });
+            } else {
+              const data: { job_id: string } = await res.json();
+              acc.push({ theme: th, jobId: data.job_id });
+            }
+          } catch (e) {
+            acc.push({
+              theme: th,
+              jobId: null,
+              error: networkErrorMessage(e, '投入に失敗しました'),
+            });
+          }
+          setBatchJobs([...acc]);
+        }
+      }
+    } finally {
+      setBatchSubmitting(false);
+    }
+  };
+
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (batchMode) {
+      await onBatchSubmit();
+      return;
+    }
     if (!channelId || !theme.trim() || submitting) return;
     if (!sampleApproved) {
       setError('先にサンプル画像を生成・承認してください');
@@ -819,6 +930,17 @@ export default function GenerateForm({
     status.status !== 'cancelled';
   const currentStep = status?.step ?? 1;
   const progress = status?.progress ?? 0;
+
+  // まとめて生成の合計本数（テーマ数 × 回数）。テーマ未入力ならテーマ欄で代用。
+  const batchThemeCount = (() => {
+    const lines = batchThemes
+      .split('\n')
+      .map((s) => s.trim())
+      .filter(Boolean).length;
+    return lines > 0 ? lines : theme.trim() ? 1 : 0;
+  })();
+  const batchTotal =
+    batchThemeCount * Math.max(1, Math.min(10, Math.round(repeatCount) || 1));
 
   return (
     <form onSubmit={onSubmit} className="px-5 space-y-5">
@@ -929,6 +1051,73 @@ export default function GenerateForm({
           </button>
         </div>
       </div>
+
+      <section className="card space-y-3" aria-label="まとめて生成">
+        <label className="flex items-center justify-between gap-2 select-none cursor-pointer">
+          <span className="text-sm font-bold text-slate-100">
+            🔢 まとめて生成（複数テーマ・複数回）
+          </span>
+          <input
+            type="checkbox"
+            checked={batchMode}
+            onChange={(e) => setBatchMode(e.target.checked)}
+            className="w-4 h-4 accent-accent"
+          />
+        </label>
+        {batchMode && (
+          <div className="space-y-3 border-t border-border pt-3">
+            <p className="text-xs text-slate-500 leading-relaxed">
+              テーマを1行に1つずつ入力します。各テーマを「回数」ぶんずつ生成し、
+              まとめてキューに投入します。このモードではサンプル承認は省略されます。
+            </p>
+            <div>
+              <div className="flex items-center justify-between">
+                <label htmlFor="batch-themes" className="label">
+                  テーマ一覧（1行1テーマ）
+                </label>
+                <button
+                  type="button"
+                  onClick={onSuggestBatch}
+                  disabled={suggesting || !channelId}
+                  className="text-xs text-purple-300 hover:underline disabled:opacity-50"
+                >
+                  {suggesting ? '…' : '✨ AI提案で候補を追加'}
+                </button>
+              </div>
+              <textarea
+                id="batch-themes"
+                value={batchThemes}
+                onChange={(e) => setBatchThemes(e.target.value)}
+                rows={5}
+                placeholder={'例:\nSCP-173「彫刻」\nSCP-096「シャイガイ」\nSCP-682「不死身の爬虫類」'}
+                className="w-full rounded-lg bg-bg-elev border border-border text-sm text-slate-200 px-3 py-2 resize-y placeholder:text-slate-600"
+              />
+            </div>
+            <div>
+              <label htmlFor="repeat-count" className="label">
+                各テーマの生成回数
+              </label>
+              <input
+                id="repeat-count"
+                type="number"
+                min={1}
+                max={10}
+                value={repeatCount}
+                onChange={(e) =>
+                  setRepeatCount(
+                    Math.max(1, Math.min(10, Number(e.target.value) || 1))
+                  )
+                }
+                className="input w-24"
+              />
+            </div>
+            <p className="text-xs text-slate-400">
+              合計 <span className="font-bold text-slate-200">{batchTotal}</span>{' '}
+              本を生成します。
+            </p>
+          </div>
+        )}
+      </section>
 
       <div>
         <span className="label">尺の目安</span>
@@ -1417,16 +1606,26 @@ export default function GenerateForm({
       <button
         type="submit"
         disabled={
-          !channelId ||
-          !theme.trim() ||
-          submitting ||
-          !!isRunning ||
-          !sampleApproved
+          batchMode
+            ? !channelId || batchSubmitting || batchTotal === 0
+            : !channelId ||
+              !theme.trim() ||
+              submitting ||
+              !!isRunning ||
+              !sampleApproved
         }
         className="btn-primary w-full"
-        title={!sampleApproved ? 'サンプル承認後に有効になります' : undefined}
+        title={
+          !batchMode && !sampleApproved
+            ? 'サンプル承認後に有効になります'
+            : undefined
+        }
       >
-        {submitting
+        {batchMode
+          ? batchSubmitting
+            ? `投入中…（${batchJobs?.length ?? 0}/${batchTotal}）`
+            : `🚀 まとめて生成（${batchTotal}本）`
+          : submitting
           ? '開始中…'
           : isRunning
           ? '生成中…'
@@ -1434,6 +1633,42 @@ export default function GenerateForm({
           ? '🚀 本生成を開始'
           : '🔒 サンプル承認待ち'}
       </button>
+
+      {batchJobs && batchJobs.length > 0 && (
+        <section aria-label="まとめて生成の結果" className="card space-y-2">
+          <h3 className="font-semibold text-sm">
+            🔢 まとめて生成 — キュー投入結果（{batchJobs.filter((j) => j.jobId).length}/
+            {batchJobs.length} 成功）
+          </h3>
+          <ul className="space-y-1 text-xs">
+            {batchJobs.map((j, i) => (
+              <li
+                key={i}
+                className="flex items-center justify-between gap-2 bg-bg-elev/60 rounded px-2 py-1"
+              >
+                <span className="truncate text-slate-300" title={j.theme}>
+                  {j.theme}
+                </span>
+                {j.jobId ? (
+                  <span className="shrink-0 text-emerald-300 tabular-nums">
+                    ✓ {j.jobId}
+                  </span>
+                ) : (
+                  <span
+                    className="shrink-0 text-red-400"
+                    title={j.error || 'failed'}
+                  >
+                    ⚠️ 失敗
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+          <p className="text-[10px] text-slate-500 leading-relaxed">
+            投入したジョブはバックグラウンドで順に処理されます。進捗はダッシュボードで確認できます。
+          </p>
+        </section>
+      )}
 
       {(status || isRunning) && (
         <section aria-label="進捗" className="card mt-2">

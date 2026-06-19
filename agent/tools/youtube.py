@@ -136,8 +136,9 @@ def _upload_to_youtube(
 OBSERVE_STATUS_TOOL = Tool(
     name="observe_post_status",
     description=(
-        "指定チャンネルの YouTube 投稿状況を観測する。直近の動画一覧と、今日(UTC)既に"
-        "投稿済みかどうか(posted_today)を返す。トークン失効も検知できる。"
+        "指定チャンネルの YouTube 投稿状況を観測する。直近の動画一覧と、今日(UTC)の"
+        "投稿本数(posted_today)を返す。1日の目標は2本なので posted_today<2 なら追加投稿する。"
+        "トークン失効も検知できる。"
     ),
     input_schema={
         "type": "object",
