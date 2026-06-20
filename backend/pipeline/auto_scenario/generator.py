@@ -180,6 +180,33 @@ class ScenarioGenerator:
                 past.append({"title": title, "angle": angle})
         return past
 
+    def _recent_theme_titles(self, channel_id: str, days: int = 30) -> set:
+        """直近 days 日以内に生成した scenario JSON のテーマタイトル集合（normalize: lower+strip）。
+
+        生成時刻はファイル mtime を代用する（scenario JSON に統一の生成時刻フィールドが無いため）。
+        """
+        base = self._scenarios_dir_for(channel_id)
+        if not base.exists():
+            return set()
+        cutoff = time.time() - days * 86400
+        titles: set = set()
+        for f in base.glob("*.json"):
+            try:
+                if f.stat().st_mtime < cutoff:
+                    continue
+                data = json.loads(f.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+            th = data.get("theme") if isinstance(data, dict) else None
+            title = ""
+            if isinstance(th, dict):
+                title = (th.get("title") or "").strip()
+            if not title and isinstance(data, dict):
+                title = (data.get("title") or "").strip()
+            if title:
+                titles.add(title.lower())
+        return titles
+
     def _pick_seed_avoiding_past(self, channel) -> Dict:
         """theme_seeds から過去に使ったものを除外して選ぶ。
 
@@ -736,6 +763,13 @@ class ScenarioGenerator:
             theme = theme_override
         elif channel.theme_seeds:
             theme = self._pick_seed_avoiding_past(channel)
+            # 直近30日に同一タイトルがあれば別候補を引き直す（最大3回、ダメなら続行）
+            recent = self._recent_theme_titles(channel.id, days=30)
+            for _ in range(3):
+                if (theme.get("title") or "").strip().lower() not in recent:
+                    break
+                print(f"  ♻️ Theme '{theme.get('title')}' used within 30d — re-picking")
+                theme = self._pick_seed_avoiding_past(channel)
         else:
             raise ValueError(f"No theme_seeds for channel {channel.id}")
 
