@@ -1369,6 +1369,27 @@ def _extract_scp_badge_text(*candidates):
     return None
 
 
+def _scaled_overlay(overlay, scale, alpha):
+    """Scale an RGBA overlay around its center and apply a global alpha (0..1).
+
+    Used for the opening "punch-in + fade-in" of a short: the hook overlay
+    grows from a slightly smaller size to 1.0 while fading in, which makes the
+    first 0.4s feel like a snap-zoom onto the hook text.
+    """
+    out = overlay
+    if scale != 1.0:
+        w, h = overlay.size
+        nw, nh = max(1, int(w * scale)), max(1, int(h * scale))
+        resized = overlay.resize((nw, nh), Image.LANCZOS)
+        out = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        out.paste(resized, ((w - nw) // 2, (h - nh) // 2), resized)
+    if alpha < 1.0:
+        a = max(0.0, min(1.0, alpha))
+        out = out.copy()
+        out.putalpha(out.split()[3].point(lambda v: int(v * a)))
+    return out
+
+
 class ShortFrameRenderer:
     def __init__(self, bg_video_path=None, bg_type="auto", char_config=None,
                  image_mode="generate", image_collect_settings=None,
@@ -1507,7 +1528,7 @@ class ShortFrameRenderer:
             (255, 255, 255), stroke_fill=(0, 0, 0), stroke_width=3,
         )
 
-    def _build_overlay(self, speaker, text, expression="normal"):
+    def _build_overlay(self, speaker, text, expression="normal", is_opening=False):
         overlay = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
         # SCP badge first so it sits behind the character / text layers.
         self._draw_scp_badge(overlay)
@@ -1546,19 +1567,46 @@ class ShortFrameRenderer:
             overlay.paste(ci, (cx-icon_d//2, cy-icon_d//2), ci)
 
         draw = ImageDraw.Draw(overlay)
-        nw = measure_composite_text(draw, speaker, 36)
-        draw_composite_text(draw, ((SHORT_W-nw)//2, cy-icon_d//2-50), speaker, 36,
-                            (255,255,255), stroke_fill=(0,0,0), stroke_width=4)
+        name_size = 42 if is_opening else 36
+        name_stroke = 5 if is_opening else 4
+        name_gap = 56 if is_opening else 50
+        nw = measure_composite_text(draw, speaker, name_size)
+        draw_composite_text(draw, ((SHORT_W-nw)//2, cy-icon_d//2-name_gap), speaker, name_size,
+                            (255,255,255), stroke_fill=(0,0,0), stroke_width=name_stroke)
 
         if text:
             tc = tuple(cfg.get("text_color") or (255, 255, 255))
-            wrapped = wrap_text(text, 64, SHORT_W-80, draw)
-            y_start = cy + icon_d//2 + 40
-            for line in wrapped:
-                tw = measure_composite_text(draw, line, 64)
-                draw_composite_text(draw, ((SHORT_W-tw)//2, y_start), line, 64, tc,
-                                    stroke_fill=(0,0,0), stroke_width=5)
-                y_start += 86
+            if is_opening:
+                # 冒頭フックは特大・極太・アクセントグロー付きで「指を止める」
+                accent = tuple((cfg.get("text_color") or (255, 210, 40))[:3])
+                # 文字数に応じて最大サイズを自動調整(4行以内に収める)
+                size = 72
+                for cand in (104, 96, 88, 80, 72):
+                    size = cand
+                    if len(wrap_text(text, cand, SHORT_W-50, draw)) <= 4:
+                        break
+                wrapped = wrap_text(text, size, SHORT_W-50, draw)
+                line_gap = int(size * 1.34)
+                stroke = max(7, size // 11)
+                y_start = cy + icon_d//2 + 48
+                for line in wrapped:
+                    tw = measure_composite_text(draw, line, size)
+                    x = (SHORT_W - tw)//2
+                    # ① アクセント色の外側グロー(色付きの太い縁取り)
+                    draw_composite_text(draw, (x, y_start), line, size, (15,15,15),
+                                        stroke_fill=accent, stroke_width=stroke+7)
+                    # ② 黒縁取り+白文字を最前面に重ねる
+                    draw_composite_text(draw, (x, y_start), line, size, (255,255,255),
+                                        stroke_fill=(0,0,0), stroke_width=stroke)
+                    y_start += line_gap
+            else:
+                wrapped = wrap_text(text, 64, SHORT_W-80, draw)
+                y_start = cy + icon_d//2 + 40
+                for line in wrapped:
+                    tw = measure_composite_text(draw, line, 64)
+                    draw_composite_text(draw, ((SHORT_W-tw)//2, y_start), line, 64, tc,
+                                        stroke_fill=(0,0,0), stroke_width=5)
+                    y_start += 86
 
         # 出典クレジット（右下、小さく）
         if self.source_credit_text:
@@ -1583,16 +1631,36 @@ class ShortFrameRenderer:
 
         return overlay
 
-    def make_video_clip(self, speaker, text, duration, time_offset, expression="normal"):
-        overlay = self._build_overlay(speaker, text, expression)
+    def make_video_clip(self, speaker, text, duration, time_offset, expression="normal", is_opening=False):
+        overlay = self._build_overlay(speaker, text, expression, is_opening=is_opening)
+        if not is_opening:
+            if self.bg_video is None:
+                bg = self._get_bg_frame(0)
+                frame = np.array(Image.alpha_composite(bg, overlay).convert("RGB"))
+                return VideoClip(lambda t: frame, duration=duration)
+
+            def make_frame(t):
+                bg = self._get_bg_frame(time_offset + t)
+                return np.array(Image.alpha_composite(bg, overlay).convert("RGB"))
+            return VideoClip(make_frame, duration=duration)
+
+        # --- 冒頭演出: 背景を暗転させてフックを際立たせ、パンチイン+フェードイン ---
+        dim = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 150))  # 約59%暗く
+        anim = min(0.4, duration * 0.6)
+        static_base = None
         if self.bg_video is None:
-            bg = self._get_bg_frame(0)
-            frame = np.array(Image.alpha_composite(bg, overlay).convert("RGB"))
-            return VideoClip(lambda t: frame, duration=duration)
+            static_base = Image.alpha_composite(self._get_bg_frame(0), dim)
 
         def make_frame(t):
-            bg = self._get_bg_frame(time_offset + t)
-            return np.array(Image.alpha_composite(bg, overlay).convert("RGB"))
+            base = static_base if static_base is not None else \
+                Image.alpha_composite(self._get_bg_frame(time_offset + t), dim)
+            if t < anim:
+                p = t / anim
+                ease = 1 - (1 - p) ** 3  # ease-out cubic
+                ov = _scaled_overlay(overlay, 0.84 + 0.16 * ease, ease)
+            else:
+                ov = overlay
+            return np.array(Image.alpha_composite(base, ov).convert("RGB"))
         return VideoClip(make_frame, duration=duration)
 
 
@@ -2333,7 +2401,9 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         dur = max(get_audio_duration(wav), 1.0) + 0.2
         expr = pick_expression(tx, cfg["expressions"])
 
-        clip = renderer.make_video_clip(sp, tx, dur, t_off, expr)
+        # 冒頭(最初の行 or 開始3秒以内)は特大フック演出を適用
+        is_opening = (i == 0) or (t_off < 3.0)
+        clip = renderer.make_video_clip(sp, tx, dur, t_off, expr, is_opening=is_opening)
         if fx_cfg is not None and fx_cfg.enabled:
             try:
                 plan = video_effects.decide_effect_plan(
