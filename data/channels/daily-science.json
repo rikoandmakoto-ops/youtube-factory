@@ -114,6 +114,16 @@
     "target_duration": 720,
     "bg_type": "static",
     "bg_path": "assets/backgrounds/classroom.png",
+    "short_overlay_style": {
+      "opening": {
+        "font_size_max": 104,
+        "font_size_min": 72,
+        "stroke_width": 8,
+        "glow_stroke_extra": 7,
+        "dim_alpha": 130,
+        "punch_start_scale": 0.88
+      }
+    },
     "use_illustrations": true,
     "hashtags": [
       "#ゆっくり解説",

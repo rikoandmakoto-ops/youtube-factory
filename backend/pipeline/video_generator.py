@@ -1401,6 +1401,9 @@ class ShortFrameRenderer:
         self.bg_type = bg_type
         self.char_cfg = char_config or CHAR_CONFIG
         self.overlay_style = overlay_style or {}
+        # 冒頭演出のチャンネル別設定(short_overlay_style.opening)。
+        # 未指定キーは _build_overlay / make_video_clip 側の既定値にフォールバック。
+        self.opening_style = self.overlay_style.get("opening") or {}
         # Default bg fallback color — competitor analysis (SCP shorts) shows
         # most-viewed shorts use near-black (#2F2F2F) for max text contrast on
         # mobile. The previous deep-blue fallback washed out subtitles.
@@ -1577,24 +1580,35 @@ class ShortFrameRenderer:
         if text:
             tc = tuple(cfg.get("text_color") or (255, 255, 255))
             if is_opening:
-                # 冒頭フックは特大・極太・アクセントグロー付きで「指を止める」
-                accent = tuple((cfg.get("text_color") or (255, 210, 40))[:3])
-                # 文字数に応じて最大サイズを自動調整(4行以内に収める)
-                size = 72
-                for cand in (104, 96, 88, 80, 72):
+                # 冒頭フックは特大・極太・アクセントグロー付きで「指を止める」。
+                # サイズ範囲/縁取り/グロー色はチャンネル別(opening_style)から読む。
+                op = self.opening_style
+                acc_cfg = op.get("accent_color")
+                if acc_cfg:
+                    accent = tuple(int(c) for c in acc_cfg[:3])
+                else:
+                    accent = tuple((cfg.get("text_color") or (255, 210, 40))[:3])
+                # 文字数に応じてサイズを自動調整(4行以内に収める)
+                fmax = int(op.get("font_size_max", 104))
+                fmin = int(op.get("font_size_min", 72))
+                cands = list(range(fmax, fmin - 1, -8)) or [fmin]
+                size = cands[-1]
+                for cand in cands:
                     size = cand
                     if len(wrap_text(text, cand, SHORT_W-50, draw)) <= 4:
                         break
                 wrapped = wrap_text(text, size, SHORT_W-50, draw)
                 line_gap = int(size * 1.34)
-                stroke = max(7, size // 11)
+                sw = op.get("stroke_width")
+                stroke = int(sw) if sw else max(7, size // 11)
+                glow_extra = int(op.get("glow_stroke_extra", 7))
                 y_start = cy + icon_d//2 + 48
                 for line in wrapped:
                     tw = measure_composite_text(draw, line, size)
                     x = (SHORT_W - tw)//2
                     # ① アクセント色の外側グロー(色付きの太い縁取り)
                     draw_composite_text(draw, (x, y_start), line, size, (15,15,15),
-                                        stroke_fill=accent, stroke_width=stroke+7)
+                                        stroke_fill=accent, stroke_width=stroke+glow_extra)
                     # ② 黒縁取り+白文字を最前面に重ねる
                     draw_composite_text(draw, (x, y_start), line, size, (255,255,255),
                                         stroke_fill=(0,0,0), stroke_width=stroke)
@@ -1645,7 +1659,11 @@ class ShortFrameRenderer:
             return VideoClip(make_frame, duration=duration)
 
         # --- 冒頭演出: 背景を暗転させてフックを際立たせ、パンチイン+フェードイン ---
-        dim = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 150))  # 約59%暗く
+        # 暗転度合い(dim_alpha)とパンチインの強さ(punch_start_scale)はチャンネル別。
+        op = self.opening_style
+        dim_alpha = max(0, min(255, int(op.get("dim_alpha", 150))))  # 既定150≒59%暗
+        dim = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, dim_alpha))
+        start_scale = float(op.get("punch_start_scale", 0.84))  # 小さいほど強いパンチイン
         anim = min(0.4, duration * 0.6)
         static_base = None
         if self.bg_video is None:
@@ -1657,7 +1675,7 @@ class ShortFrameRenderer:
             if t < anim:
                 p = t / anim
                 ease = 1 - (1 - p) ** 3  # ease-out cubic
-                ov = _scaled_overlay(overlay, 0.84 + 0.16 * ease, ease)
+                ov = _scaled_overlay(overlay, start_scale + (1.0 - start_scale) * ease, ease)
             else:
                 ov = overlay
             return np.array(Image.alpha_composite(base, ov).convert("RGB"))

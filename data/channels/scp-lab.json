@@ -257,7 +257,20 @@
         35,
         35,
         255
-      ]
+      ],
+      "opening": {
+        "font_size_max": 108,
+        "font_size_min": 76,
+        "stroke_width": 10,
+        "glow_stroke_extra": 8,
+        "dim_alpha": 195,
+        "punch_start_scale": 0.78,
+        "accent_color": [
+          220,
+          30,
+          30
+        ]
+      }
     },
     "use_illustrations": true,
     "hashtags": [
