@@ -22,6 +22,7 @@ import os
 import random
 import time
 import urllib.request
+import urllib.error
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Tuple
@@ -52,8 +53,14 @@ class ScenarioGenerator:
         self._current_channel_id: Optional[str] = None
         self._current_purpose: Optional[str] = None
 
-    def _call_gpt(self, messages: List[Dict], temperature: float = 0.8, max_tokens: int = 8000, model: Optional[str] = None) -> str:
-        """GPT API呼び出し"""
+    def _call_gpt(self, messages: List[Dict], temperature: float = 0.8, max_tokens: int = 8000,
+                  model: Optional[str] = None, max_retries: int = 4) -> str:
+        """GPT API呼び出し。
+
+        429 (rate limit) / 5xx (一時障害) は指数バックオフでリトライする。
+        OpenAI が `Retry-After` ヘッダを返した場合はそれを優先して待つ。
+        リトライを使い切ったら最後の例外を送出する（呼び出し側で Claude フォールバック等）。
+        """
         if not self.api_key:
             raise ValueError("OPENAI_API_KEY not set")
 
@@ -65,13 +72,43 @@ class ScenarioGenerator:
             "temperature": temperature,
             "max_tokens": max_tokens,
         })
-        req = urllib.request.Request(url, data=payload.encode("utf-8"), method="POST",
-                                     headers={
-                                         "Content-Type": "application/json",
-                                         "Authorization": f"Bearer {self.api_key}",
-                                     })
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            data = json.loads(resp.read())
+
+        last_exc: Optional[Exception] = None
+        for attempt in range(max_retries):
+            req = urllib.request.Request(url, data=payload.encode("utf-8"), method="POST",
+                                         headers={
+                                             "Content-Type": "application/json",
+                                             "Authorization": f"Bearer {self.api_key}",
+                                         })
+            try:
+                with urllib.request.urlopen(req, timeout=120) as resp:
+                    data = json.loads(resp.read())
+                break
+            except urllib.error.HTTPError as e:
+                last_exc = e
+                retryable = e.code == 429 or 500 <= e.code < 600
+                if not retryable or attempt == max_retries - 1:
+                    raise
+                # Retry-After ヘッダ優先、無ければ指数バックオフ (5s,15s,45s...) + ジッタ
+                retry_after = e.headers.get("Retry-After") if e.headers else None
+                try:
+                    wait = float(retry_after) if retry_after else 0.0
+                except (TypeError, ValueError):
+                    wait = 0.0
+                if wait <= 0:
+                    wait = 5.0 * (3 ** attempt) + random.uniform(0, 2.0)
+                print(f"  ⏳ OpenAI {e.code} (attempt {attempt+1}/{max_retries}) — retrying in {wait:.0f}s")
+                time.sleep(wait)
+            except urllib.error.URLError as e:
+                # ネットワーク一時障害も控えめにリトライ
+                last_exc = e
+                if attempt == max_retries - 1:
+                    raise
+                wait = 3.0 * (2 ** attempt) + random.uniform(0, 1.0)
+                print(f"  ⏳ OpenAI network error (attempt {attempt+1}/{max_retries}): {e} — retrying in {wait:.0f}s")
+                time.sleep(wait)
+        else:  # pragma: no cover — break で抜ける想定
+            raise last_exc or RuntimeError("OpenAI call failed")
 
         if api_usage is not None:
             usage = data.get("usage", {}) or {}
@@ -151,6 +188,31 @@ class ScenarioGenerator:
             if t:
                 parts.append(t)
         return "".join(parts)
+
+    def _call_text_with_fallback(
+        self,
+        messages: List[Dict],
+        *,
+        temperature: float = 0.85,
+        max_tokens: int = 8000,
+        gpt_model: Optional[str] = None,
+    ) -> str:
+        """GPT を試し、失敗（429 リトライ枯渇・quota・障害）したら Claude にフォールバック。
+
+        テーマ提案・意味重複判定など「短い JSON を返させる軽量タスク」用。
+        Claude が即時フォールバックとして使えるので、GPT 側のリトライは少なめ
+        (既定 2 回) に抑え、429 が続く時に長時間バックオフで待たされないようにする。
+        どちらも使えない場合のみ例外を送出する。
+        """
+        gpt_retries = 2 if os.environ.get("ANTHROPIC_API_KEY", "").strip() else 4
+        try:
+            return self._call_gpt(messages, temperature=temperature, max_tokens=max_tokens,
+                                  model=gpt_model, max_retries=gpt_retries)
+        except Exception as gpt_err:
+            print(f"  ⚠️ GPT call failed ({gpt_err}) — falling back to Claude")
+            if not (os.environ.get("ANTHROPIC_API_KEY", "").strip()):
+                raise
+            return self._call_claude_text(messages, temperature=temperature, max_tokens=max_tokens)
 
     def _scenarios_dir_for(self, channel_id: str) -> Path:
         # generator.py → backend/pipeline/auto_scenario/ → backend/pipeline/ → backend/ → repo_root
@@ -1407,17 +1469,46 @@ class ScenarioGenerator:
 
         self._current_channel_id = channel.id
         self._current_purpose = "theme_suggest"
-        raw = self._call_gpt(messages, temperature=0.9, max_tokens=2000, model=GPT_MODEL_LIGHT)
+        # 429 / quota 切れに強くするため GPT→Claude フォールバック付きで呼ぶ。
+        # 件数に応じて max_tokens を確保（多数提案時の末尾切れ＝JSON parse 失敗を防ぐ）。
+        suggest_tokens = max(2000, 320 * count + 800)
+        raw = self._call_text_with_fallback(messages, temperature=0.9, max_tokens=suggest_tokens, gpt_model=GPT_MODEL_LIGHT)
         themes = self._extract_json(raw)
 
         if isinstance(themes, list):
-            excluded_lower = {t.lower() for t in excluded}
-            filtered = [
-                t for t in themes
-                if isinstance(t, dict) and (t.get("title") or "").strip().lower() not in excluded_lower
-            ]
-            if filtered:
-                themes = filtered
+            from pipeline.auto_scenario import theme_dedup as _td
+
+            # 1) 語彙的重複フィルタ — 除外リスト（seed/過去/キュー）と言い回し違いも弾く
+            kept: List[Dict[str, Any]] = []
+            for t in themes:
+                if not isinstance(t, dict):
+                    continue
+                title = (t.get("title") or "").strip()
+                if not title:
+                    continue
+                hit = _td.find_lexical_duplicate(title, excluded)
+                # 候補同士の重複も畳む（同一バッチ内の言い換え重複を防ぐ）
+                if hit is None:
+                    hit = _td.find_lexical_duplicate(title, [k["title"] for k in kept])
+                if hit is not None:
+                    print(f"  ♻️ lexical dup dropped: '{title}' ≈ '{hit[0]}' ({hit[1]:.2f})")
+                    continue
+                kept.append(t)
+            themes = kept
+
+            # 2) 意味的重複フィルタ — 語彙が違うのに実質同義のものを LLM で弾く
+            #    （過去テーマに対してのみ。バッチ内重複は語彙段で概ね畳めている）
+            if themes and past_unique:
+                try:
+                    themes, dropped = _td.semantic_filter(
+                        themes, past_unique,
+                        llm_call=lambda msgs: self._call_text_with_fallback(
+                            msgs, temperature=0.0, max_tokens=1500, gpt_model=GPT_MODEL_LIGHT),
+                    )
+                    for cand, matched in dropped:
+                        print(f"  ♻️ semantic dup dropped: '{cand.get('title')}' ≈ '{matched}'")
+                except Exception as e:
+                    print(f"  ⚠️ semantic dedup skipped: {e}")
 
             # Phase C: トレンドスコアを付与（GPT が is_trending を返さなくても局所判定で埋める）
             if trend_keywords:
@@ -1446,20 +1537,38 @@ class ScenarioGenerator:
 
     @staticmethod
     def _extract_json(text: str) -> Any:
-        """テキストからJSON部分を抽出"""
-        # コードブロック内のJSON
-        if "```json" in text:
-            start = text.index("```json") + 7
-            end = text.index("```", start)
-            text = text[start:end].strip()
-        elif "```" in text:
-            start = text.index("```") + 3
-            end = text.index("```", start)
-            text = text[start:end].strip()
+        """テキストからJSON部分を抽出（コードフェンス欠落・前置き・末尾切れに耐性）。"""
+        import re as _re
 
-        # 直接JSONの場合
-        text = text.strip()
-        return json.loads(text)
+        if text is None:
+            raise ValueError("empty response")
+        raw = text.strip()
+
+        # 1) コードフェンスがあれば中身を取り出す（閉じフェンスが無くても可）
+        candidate = raw
+        fence = _re.search(r"```(?:json)?\s*", candidate, _re.IGNORECASE)
+        if fence:
+            inner = candidate[fence.end():]
+            close = inner.find("```")
+            candidate = (inner[:close] if close != -1 else inner).strip()
+
+        # 2) まずそのまま試す
+        try:
+            return json.loads(candidate)
+        except Exception:
+            pass
+
+        # 3) 最初の JSON 配列 / オブジェクトを貪欲に抽出して試す
+        for pattern in (r"\[.*\]", r"\{.*\}"):
+            m = _re.search(pattern, candidate, _re.DOTALL)
+            if m:
+                try:
+                    return json.loads(m.group(0))
+                except Exception:
+                    continue
+
+        # 4) 全部失敗 — 元テキストでの json.loads エラーを送出
+        return json.loads(candidate)
 
     def save_scenario(self, result: Dict, output_dir: str = None) -> str:
         """生成されたシナリオをJSONファイルとして保存"""

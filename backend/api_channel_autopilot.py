@@ -415,9 +415,40 @@ def _pop_or_refill_theme(channel_id: str) -> Optional[Dict[str, str]]:
             if not queue:
                 return None
 
-        head = queue.pop(0)
+        # 過去テーマと「実質同じ」な先頭は捨てて次へ進む（テーマ重複の最終ゲート）。
+        # ここで弾かないと、run_*_short_upload / autopilot は theme_override 経由で
+        # generator 内の再抽選を通らないため、重複テーマがそのまま投稿されてしまう。
+        try:
+            from pipeline.auto_scenario import theme_dedup as _td
+            past = _td.past_theme_titles(channel_id, within_days=60)
+        except Exception as e:
+            print(f"⚠️ autopilot dedup gate disabled ({channel_id}): {e}")
+            _td = None  # type: ignore
+            past = []
+
+        head = None
+        skipped = 0
+        while queue:
+            cand = queue.pop(0)
+            cand_title = (cand.get("title") or "").strip()
+            if _td is not None and cand_title and past:
+                hit = _td.find_lexical_duplicate(cand_title, past)
+                if hit is not None:
+                    skipped += 1
+                    print(f"  ♻️ autopilot dropped dup theme: '{cand_title}' ≈ '{hit[0]}' ({hit[1]:.2f})")
+                    continue
+            head = cand
+            break
+
+        # 全部重複で枯渇したら、最後に取り出した候補を使う（投稿skipより重複の方がマシ）
+        if head is None:
+            print(f"⚠️ autopilot {channel_id}: all queued themes duplicate recent posts — using last anyway")
+            head = cand  # type: ignore[possibly-undefined]
+
         ap["theme_queue"] = queue
         _save_autopilot(channel_id, ap)
+        if skipped:
+            print(f"  ℹ️ autopilot {channel_id}: skipped {skipped} duplicate theme(s) before '{head.get('title')}'")
         return {"title": head["title"], "angle": head.get("angle") or ""}
 
 

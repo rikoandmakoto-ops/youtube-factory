@@ -129,6 +129,17 @@ def _existing_title_keys(items: List[Dict[str, Any]]) -> set:
     return {(it.get("title") or "").strip().lower() for it in items if it.get("title")}
 
 
+def _dup_reference_titles(channel_id: str, items: List[Dict[str, Any]]) -> List[str]:
+    """重複判定の参照集合: キュー内タイトル + 過去に生成済みのテーマタイトル。"""
+    titles = [(it.get("title") or "").strip() for it in items if it.get("title")]
+    try:
+        from pipeline.auto_scenario import theme_dedup as _td
+        titles = titles + _td.past_theme_titles(channel_id)
+    except Exception as e:
+        print(f"⚠️ past theme load for dedup failed ({channel_id}): {e}")
+    return [t for t in titles if t]
+
+
 # ---------------------------------------------------------------------------
 # Public ops
 # ---------------------------------------------------------------------------
@@ -181,8 +192,12 @@ def consume(channel_id: str) -> Optional[Dict[str, Any]]:
     return item
 
 
-def add_item(channel_id: str, theme: Dict[str, Any], *, source: str = "manual") -> Optional[Dict[str, Any]]:
-    """手動で1件追加。重複タイトルは無視。"""
+def add_item(channel_id: str, theme: Dict[str, Any], *, source: str = "manual",
+             allow_near_dup: bool = False) -> Optional[Dict[str, Any]]:
+    """手動で1件追加。完全一致／言い回し違い／過去テーマと実質同じなら無視（None）。
+
+    allow_near_dup=True で語彙的な近似重複チェックを飛ばし、完全一致のみ拒否する。
+    """
     new = _make_item(theme, source=source)
     if not new:
         return None
@@ -191,6 +206,16 @@ def add_item(channel_id: str, theme: Dict[str, Any], *, source: str = "manual") 
         keys = _existing_title_keys(q.get("items", []))
         if new["title"].lower() in keys:
             return None
+        if not allow_near_dup:
+            try:
+                from pipeline.auto_scenario import theme_dedup as _td
+                refs = _dup_reference_titles(channel_id, q.get("items", []))
+                hit = _td.find_lexical_duplicate(new["title"], refs)
+                if hit is not None:
+                    print(f"  ♻️ add_item skipped near-dup: '{new['title']}' ≈ '{hit[0]}' ({hit[1]:.2f})")
+                    return None
+            except Exception as e:
+                print(f"⚠️ add_item dedup check failed: {e}")
         q.setdefault("items", []).append(new)
         save_queue(channel_id, q)
     return new
@@ -294,6 +319,12 @@ def replenish(
     with _lock_for(channel_id):
         q = load_queue(channel_id)
         keys = _existing_title_keys(q.get("items", []))
+        # 言い回し違い / 過去テーマとの実質重複も弾くための参照集合
+        try:
+            from pipeline.auto_scenario import theme_dedup as _td
+        except Exception:
+            _td = None  # type: ignore
+        dup_refs = _dup_reference_titles(channel_id, q.get("items", []))
         for s in suggestions:
             if len(added) >= need:
                 break
@@ -302,8 +333,14 @@ def replenish(
                 continue
             if item["title"].lower() in keys:
                 continue
+            if _td is not None:
+                hit = _td.find_lexical_duplicate(item["title"], dup_refs)
+                if hit is not None:
+                    print(f"  ♻️ replenish skipped near-dup: '{item['title']}' ≈ '{hit[0]}' ({hit[1]:.2f})")
+                    continue
             q.setdefault("items", []).append(item)
             keys.add(item["title"].lower())
+            dup_refs.append(item["title"])
             added.append(item)
         q["last_replenished_at"] = datetime.now().isoformat()
         q["last_checked_at"] = q["last_replenished_at"]
