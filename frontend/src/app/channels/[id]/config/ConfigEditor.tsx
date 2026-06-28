@@ -13,6 +13,7 @@ import {
 } from '@/components/Field';
 import AssetUploader from '@/components/AssetUploader';
 import ChannelYoutubeConnect from '@/components/ChannelYoutubeConnect';
+import ChannelTiktokConnect from '@/components/ChannelTiktokConnect';
 import AutopilotSection from './AutopilotSection';
 import ResearchEffectsSection from './ResearchEffectsSection';
 import type { AssetEntry, AssetKind, Channel } from '@/lib/api';
@@ -116,6 +117,8 @@ export default function ConfigEditor({
         generation_rules: cfg.generation_rules,
         image_mode: cfg.image_mode,
         image_collect: cfg.image_collect,
+        publish_settings: cfg.publish_settings,
+        tiktok: cfg.tiktok,
       };
       const res = await fetch(`/api/channels/${encodeURIComponent(channelId)}/config`, {
         method: 'PUT',
@@ -179,6 +182,104 @@ export default function ConfigEditor({
       {/* 0. YouTube 連携 */}
       <Section title="🔌 YouTube 連携" defaultOpen>
         <ChannelYoutubeConnect channelId={channelId} />
+      </Section>
+
+      {/* 0.1 TikTok 連携 */}
+      <Section title="📱 TikTok 連携">
+        <ChannelTiktokConnect channelId={channelId} />
+
+        <div className="mt-4 pt-4 border-t border-border/50 space-y-4">
+          <p className="text-xs text-slate-400">
+            自動投稿の投稿先と TikTok 投稿の挙動を設定します（保存ボタンで反映）。
+          </p>
+
+          <Field label="自動投稿の投稿先">
+            <select
+              value={(() => {
+                const t: string[] =
+                  cfg.publish_settings?.publish_targets ?? ['youtube'];
+                const hasYt = t.includes('youtube');
+                const hasTt = t.includes('tiktok');
+                if (hasYt && hasTt) return 'both';
+                if (hasTt) return 'tiktok';
+                return 'youtube';
+              })()}
+              onChange={(e) => {
+                const v = e.target.value;
+                const targets =
+                  v === 'both'
+                    ? ['youtube', 'tiktok']
+                    : v === 'tiktok'
+                    ? ['tiktok']
+                    : ['youtube'];
+                update(['publish_settings', 'publish_targets'], targets);
+              }}
+              className="input"
+            >
+              <option value="youtube">YouTube のみ</option>
+              <option value="both">YouTube + TikTok 同時投稿</option>
+              <option value="tiktok">TikTok のみ</option>
+            </select>
+          </Field>
+
+          <Toggle
+            checked={cfg.tiktok?.enabled ?? false}
+            onChange={(b) => update(['tiktok', 'enabled'], b)}
+            label="TikTok 自動投稿を有効化"
+            description="投稿先に TikTok を含めた場合に、生成完了時へ自動でショートを投稿します"
+          />
+
+          <Field label="TikTok 公開範囲 (privacy_level)">
+            <select
+              value={cfg.tiktok?.privacy_level ?? 'SELF_ONLY'}
+              onChange={(e) =>
+                update(['tiktok', 'privacy_level'], e.target.value)
+              }
+              className="input"
+            >
+              <option value="SELF_ONLY">非公開 (SELF_ONLY) — 未審査アプリ必須</option>
+              <option value="MUTUAL_FOLLOW_FRIENDS">相互フォロー</option>
+              <option value="FOLLOWER_OF_CREATOR">フォロワー</option>
+              <option value="PUBLIC_TO_EVERYONE">全員に公開 — 審査通過後のみ</option>
+            </select>
+          </Field>
+
+          <Field label="追加ハッシュタグ（カンマ区切り）">
+            <input
+              type="text"
+              value={(cfg.tiktok?.extra_hashtags ?? []).join(', ')}
+              onChange={(e) =>
+                update(
+                  ['tiktok', 'extra_hashtags'],
+                  e.target.value
+                    .split(',')
+                    .map((s) => s.trim())
+                    .filter(Boolean)
+                )
+              }
+              className="input"
+              placeholder="#fyp, #おすすめ"
+            />
+          </Field>
+
+          <Row>
+            <Toggle
+              checked={cfg.tiktok?.disable_comment ?? false}
+              onChange={(b) => update(['tiktok', 'disable_comment'], b)}
+              label="コメント無効"
+            />
+            <Toggle
+              checked={cfg.tiktok?.disable_duet ?? false}
+              onChange={(b) => update(['tiktok', 'disable_duet'], b)}
+              label="デュエット無効"
+            />
+            <Toggle
+              checked={cfg.tiktok?.disable_stitch ?? false}
+              onChange={(b) => update(['tiktok', 'disable_stitch'], b)}
+              label="ステッチ無効"
+            />
+          </Row>
+        </div>
       </Section>
 
       {/* 0.5 フルオート自動投稿 */}
@@ -578,6 +679,24 @@ export default function ConfigEditor({
             value={Number(getIn(cfg, ['video_format', 'layout', 'char_y_offset']) ?? 130)}
             onChange={(n) => update(['video_format', 'layout', 'char_y_offset'], n)}
           />
+        </Field>
+        <Field
+          label="ショート解説カードの作画方法"
+          hint="pillow=ローカル図解で生成（APIコスト0・推奨） / dalle=ChatGPT(DALL-E)でAI生成（失敗時はpillowへ自動フォールバック）"
+        >
+          <select
+            value={
+              getIn(cfg, ['video_format', 'short_illustrations', 'illustration_method']) ||
+              'pillow'
+            }
+            onChange={(e) =>
+              update(['video_format', 'short_illustrations', 'illustration_method'], e.target.value)
+            }
+            className="input"
+          >
+            <option value="pillow">pillow（ローカル図解・コスト0）</option>
+            <option value="dalle">dalle（ChatGPT/DALL-E でAI生成）</option>
+          </select>
         </Field>
         <Field label="DALL-E スタイル">
           <select

@@ -937,6 +937,52 @@ def plan_illustrations(scenario, interval_seconds=30, speed=1.3):
     return plans
 
 
+def plan_short_illustrations(short_scenario, max_count=2, speed=1.3,
+                             skip_opening_seconds=3.0):
+    """Pick which short-video dialogue lines should show an illustration card.
+
+    Tuned for the ~30-50s short format (案B = キャラ上のイラストカード):
+    - The opening hook (lines that start within `skip_opening_seconds`) NEVER
+      gets a card — the oversized punch-in hook must stay uncluttered.
+    - At most `max_count` cards, spread as evenly as possible across the
+      remaining post-hook lines.
+
+    Returns a list of (entry_index, topic_text) tuples, where topic_text is the
+    dialogue spoken from this card's line up to the next card, so the generated
+    or collected image matches what is said while the card is on screen.
+    """
+    chars_per_sec = 6.0 * max(speed or 1.3, 0.5)
+    start_times, cum = [], 0.0
+    for entry in short_scenario:
+        start_times.append(cum)
+        cum += max(len((entry.get("text") or "")) / chars_per_sec, 1.0) + 0.2
+
+    # Candidate lines = those that start after the opening hook window.
+    candidates = [i for i, t0 in enumerate(start_times) if t0 >= skip_opening_seconds]
+    if not candidates:
+        candidates = list(range(1, len(short_scenario)))  # fallback: all but line 0
+    if not candidates:
+        return []
+
+    n = max(1, min(int(max_count or 1), len(candidates)))
+    if n == 1:
+        picks = [candidates[len(candidates) // 2]]
+    else:
+        step = (len(candidates) - 1) / (n - 1)
+        picks = sorted({candidates[round(k * step)] for k in range(n)})
+
+    plans = []
+    for k, start_idx in enumerate(picks):
+        end_idx = picks[k + 1] if k + 1 < len(picks) else len(short_scenario)
+        window = [
+            (short_scenario[j].get("text") or "").strip()
+            for j in range(start_idx, end_idx)
+            if (short_scenario[j].get("text") or "").strip()
+        ]
+        plans.append((start_idx, " ".join(window)))
+    return plans
+
+
 # ============================================================
 # Frame Renderer (Full video - landscape)
 # ============================================================
@@ -1428,6 +1474,22 @@ class ShortFrameRenderer:
         self.source_credit_opacity = int(branding.get("source_credit_opacity", 160))
         self.source_credit_font_size = int(branding.get("source_credit_font_size_short", 26))
 
+        # --- 案B: ショート用イラストカード設定 (キャラ上にカードを差し込む) ---
+        si = self.fmt.get("short_illustrations", {}) or {}
+        self.short_illust_enabled = bool(si.get("enabled", False))
+        self.short_illust_max = int(si.get("max_count", 2))
+        # card_style: "textbook"(教科書風カラー) / "leaked-document"(流出文書風モノクロ)
+        self.illust_card_style = (si.get("card_style") or "textbook").lower()
+        self.illust_card_label = si.get("card_label", "解説")
+        self.illust_card_accent = tuple(int(c) for c in (si.get("card_accent") or (74, 108, 212))[:3])
+        self.illust_card_x = int(si.get("card_x", 64))
+        self.illust_card_y = int(si.get("card_y", 250))
+        self.illust_card_w = int(si.get("card_w", SHORT_W - 128))
+        self.illust_card_h = int(si.get("card_h", 430))
+        # カード表示時のキャラ位置(下げて小さくしカードと共存させる)
+        self.illust_char_cy = int(si.get("char_cy", 905))
+        self.illust_char_icon_d = int(si.get("char_icon_d", 210))
+
         if bg_video_path and Path(bg_video_path).exists():
             ext = Path(bg_video_path).suffix.lower()
             if bg_type == "static" or ext in (".png", ".jpg", ".jpeg", ".bmp"):
@@ -1531,10 +1593,131 @@ class ShortFrameRenderer:
             (255, 255, 255), stroke_fill=(0, 0, 0), stroke_width=3,
         )
 
-    def _build_overlay(self, speaker, text, expression="normal", is_opening=False):
+    @staticmethod
+    def _fit_contain(img, box_w, box_h):
+        iw, ih = img.size
+        scale = min(box_w / max(iw, 1), box_h / max(ih, 1))
+        return img.resize((max(1, int(iw * scale)), max(1, int(ih * scale))), Image.LANCZOS)
+
+    def _render_short_illust_card(self, illustration):
+        """案B: 上半分の空きスペースにイラストカードを描画して全画面レイヤーで返す。
+
+        card_style により2種:
+          - "textbook"        … daily-science 教科書風カラー(解説タブ+ウィンドウ風ヘッダー)
+          - "leaked-document" … scp-lab 流出文書風モノクロ(検閲黒塗り + CONTAINスタンプ)
+        """
+        if illustration is None:
+            return None
+        layer = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+        cx0, cy0 = self.illust_card_x, self.illust_card_y
+        cw, ch = self.illust_card_w, self.illust_card_h
+
+        # ドロップシャドウで背景から浮かせる
+        shadow = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+        ImageDraw.Draw(shadow).rounded_rectangle(
+            [cx0, cy0 + 12, cx0 + cw, cy0 + ch + 12], radius=30, fill=(0, 0, 0, 130))
+        layer = Image.alpha_composite(layer, shadow.filter(ImageFilter.GaussianBlur(14)))
+
+        if self.illust_card_style == "leaked-document":
+            self._draw_leaked_card(layer, illustration, cx0, cy0, cw, ch)
+        else:
+            self._draw_textbook_card(layer, illustration, cx0, cy0, cw, ch)
+        return layer
+
+    def _draw_textbook_card(self, layer, illustration, cx0, cy0, cw, ch):
+        radius, header_h = 28, 72
+        accent = self.illust_card_accent
+        draw = ImageDraw.Draw(layer)
+        # 本体(白)+ アクセント枠
+        draw.rounded_rectangle([cx0, cy0, cx0 + cw, cy0 + ch], radius=radius,
+                               fill=(252, 252, 250, 255), outline=(*accent, 255), width=4)
+        # ヘッダー帯(上だけ角丸)
+        hdr = Image.new("RGBA", (cw, header_h), (0, 0, 0, 0))
+        hd = ImageDraw.Draw(hdr)
+        hd.rounded_rectangle([0, 0, cw, header_h], radius=radius, fill=(*accent, 255))
+        hd.rectangle([0, header_h // 2, cw, header_h], fill=(*accent, 255))
+        layer.paste(hdr, (cx0, cy0), hdr)
+        # mac風ウィンドウドット
+        for k, col in enumerate([(255, 95, 86), (255, 189, 46), (39, 201, 63)]):
+            draw.ellipse([cx0 + 22 + k * 26, cy0 + header_h // 2 - 8,
+                          cx0 + 38 + k * 26, cy0 + header_h // 2 + 8], fill=(*col, 255))
+        # 「解説」ラベル
+        label = self.illust_card_label or "解説"
+        draw_composite_text(draw, (cx0 + 122, cy0 + header_h // 2 - 20), label, 34,
+                            (255, 255, 255), stroke_fill=(0, 0, 0), stroke_width=2)
+        # 本文にイラストを contain 配置
+        pad = 18
+        inner_w, inner_h = cw - pad * 2, ch - header_h - pad * 2
+        fitted = self._fit_contain(illustration.convert("RGBA"), inner_w, inner_h)
+        fx = cx0 + pad + (inner_w - fitted.width) // 2
+        fy = cy0 + header_h + pad + (inner_h - fitted.height) // 2
+        layer.paste(fitted, (fx, fy), fitted)
+
+    def _draw_leaked_card(self, layer, illustration, cx0, cy0, cw, ch):
+        radius, header_h = 16, 64
+        red = (190, 30, 30)
+        draw = ImageDraw.Draw(layer)
+        # 本体(くすんだマニラ/ダーク)+ 赤枠
+        draw.rounded_rectangle([cx0, cy0, cx0 + cw, cy0 + ch], radius=radius,
+                               fill=(46, 42, 38, 255), outline=(*red, 255), width=3)
+        # ヘッダー帯(黒・上だけ角丸)
+        hdr = Image.new("RGBA", (cw, header_h), (0, 0, 0, 0))
+        hd = ImageDraw.Draw(hdr)
+        hd.rounded_rectangle([0, 0, cw, header_h], radius=radius, fill=(18, 16, 14, 255))
+        hd.rectangle([0, header_h // 2, cw, header_h], fill=(18, 16, 14, 255))
+        layer.paste(hdr, (cx0, cy0), hdr)
+        # 赤い四角 + 機密ラベル
+        draw.rectangle([cx0 + 18, cy0 + 20, cx0 + 42, cy0 + 44], fill=(*red, 255))
+        label = self.illust_card_label or "CLASSIFIED／機密"
+        draw_composite_text(draw, (cx0 + 54, cy0 + header_h // 2 - 18), label, 30,
+                            (235, 235, 235), stroke_fill=(0, 0, 0), stroke_width=2)
+        # 右肩に偽の資料番号
+        docno = "FILE №[DATA EXPUNGED]"
+        nw = measure_composite_text(draw, docno, 22)
+        draw_composite_text(draw, (cx0 + cw - nw - 18, cy0 + header_h // 2 - 13), docno, 22,
+                            (200, 80, 80), stroke_fill=(0, 0, 0), stroke_width=1)
+        # 本文: グレースケール画像を contain
+        pad = 16
+        inner_w, inner_h = cw - pad * 2, ch - header_h - pad * 2
+        mono = illustration.convert("L").convert("RGBA")
+        fitted = self._fit_contain(mono, inner_w, inner_h)
+        fx = cx0 + pad + (inner_w - fitted.width) // 2
+        fy = cy0 + header_h + pad + (inner_h - fitted.height) // 2
+        layer.paste(fitted, (fx, fy), fitted)
+        # 検閲黒塗りバー(画像の一部を覆う)
+        bar_h = max(26, fitted.height // 8)
+        by1 = fy + int(fitted.height * 0.30)
+        draw.rectangle([fx + int(fitted.width * 0.10), by1,
+                        fx + int(fitted.width * 0.62), by1 + bar_h], fill=(8, 8, 8, 255))
+        draw_composite_text(draw, (fx + int(fitted.width * 0.12), by1 + bar_h // 2 - 12),
+                            "[REDACTED]", 20, (200, 200, 200),
+                            stroke_fill=(0, 0, 0), stroke_width=1)
+        by2 = fy + int(fitted.height * 0.62)
+        draw.rectangle([fx + int(fitted.width * 0.45), by2,
+                        fx + int(fitted.width * 0.92), by2 + bar_h], fill=(8, 8, 8, 255))
+        # CONTAIN スタンプ(赤・斜め)
+        stamp_w, stamp_h = 230, 78
+        stamp = Image.new("RGBA", (stamp_w, stamp_h), (0, 0, 0, 0))
+        st = ImageDraw.Draw(stamp)
+        st.rounded_rectangle([3, 3, stamp_w - 3, stamp_h - 3], radius=8,
+                             outline=(210, 40, 40, 235), width=5)
+        sw = measure_composite_text(st, "CONTAIN", 44)
+        draw_composite_text(st, ((stamp_w - sw) // 2, stamp_h // 2 - 26), "CONTAIN", 44,
+                            (210, 40, 40, 235))
+        stamp = stamp.rotate(-12, expand=True, resample=Image.BICUBIC)
+        layer.alpha_composite(stamp, (cx0 + cw - stamp.width - 26, cy0 + ch - stamp.height - 22))
+
+    def _build_overlay(self, speaker, text, expression="normal", is_opening=False,
+                       illustration=None):
         overlay = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
         # SCP badge first so it sits behind the character / text layers.
         self._draw_scp_badge(overlay)
+        # 案B: イラストカードはキャラ・字幕の下に敷く(冒頭フックでは出さない)
+        show_card = (illustration is not None) and (not is_opening) and self.short_illust_enabled
+        if show_card:
+            card_layer = self._render_short_illust_card(illustration)
+            if card_layer is not None:
+                overlay = Image.alpha_composite(overlay, card_layer)
         draw = ImageDraw.Draw(overlay)
         cfg = self.char_cfg.get(speaker)
         if not cfg:
@@ -1544,8 +1727,13 @@ class ShortFrameRenderer:
         sprite = self.sprites.get(speaker, {}).get(expression)
         if sprite is None:
             sprite = self.sprites.get(speaker, {}).get("normal")
-        icon_d = 280
-        cx, cy = SHORT_W // 2, 580
+        # カード表示時はキャラを下げて小さくし、上のカードと共存させる
+        if show_card:
+            icon_d = self.illust_char_icon_d
+            cx, cy = SHORT_W // 2, self.illust_char_cy
+        else:
+            icon_d = 280
+            cx, cy = SHORT_W // 2, 580
         if sprite:
             crop_s = min(sprite.width, sprite.height)
             left = (sprite.width - crop_s) // 2
@@ -1645,8 +1833,10 @@ class ShortFrameRenderer:
 
         return overlay
 
-    def make_video_clip(self, speaker, text, duration, time_offset, expression="normal", is_opening=False):
-        overlay = self._build_overlay(speaker, text, expression, is_opening=is_opening)
+    def make_video_clip(self, speaker, text, duration, time_offset, expression="normal",
+                        is_opening=False, illustration=None):
+        overlay = self._build_overlay(speaker, text, expression, is_opening=is_opening,
+                                      illustration=illustration)
         if not is_opening:
             if self.bg_video is None:
                 bg = self._get_bg_frame(0)
@@ -2409,6 +2599,80 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
             print(f"⚠️ effects config load failed: {e}")
             fx_cfg = None
 
+    # --- 案B: ショート用イラストカードを事前生成 (冒頭フックはスキップ) ---
+    illust_map = {}  # {entry_index: PIL.Image}
+    si_cfg = (channel_format or {}).get("short_illustrations", {}) or {}
+    if si_cfg.get("enabled") and renderer.short_illust_enabled:
+        illust_style = (channel_format or {}).get("illustration_style", {}) or {}
+        # イラストカードの「中身」をどう作るか:
+        #   "pillow" … ローカル Pillow 図解 (APIコスト0・デフォルト)
+        #   "dalle"  … OpenAI DALL-E で AI 画像生成 (失敗時は Pillow にフォールバック)
+        method = (si_cfg.get("illustration_method") or "pillow").lower()
+        if method not in ("pillow", "dalle"):
+            method = "pillow"
+        card_style = renderer.illust_card_style
+        mode = (image_mode or "generate").lower()
+        if mode not in ("generate", "collect", "mix"):
+            mode = "generate"
+        # pillow はローカル描画なので常に実行可。dalle のみ DALL-E/収集の前提を要する。
+        can_run = (method == "pillow") or mode in ("collect", "mix") or OPENAI_API_KEY
+        if can_run:
+            from pipeline import pillow_illustration
+
+            def _draw_pillow(topic, idx, entry_idx, reason=""):
+                img = pillow_illustration.generate_pillow_illustration(
+                    topic, card_style=card_style, illust_style=illust_style,
+                    idx=idx, cache_dir=illust_cache, channel_id=channel_id)
+                if img is not None:
+                    tag = f" ({reason})" if reason else ""
+                    print(f"  ✏️ [{idx+1}/{len(plans)}] Pillow drawn for line {entry_idx}{tag}")
+                return img
+
+            plan_speed = speed if speed else 1.3
+            plans = plan_short_illustrations(
+                short_scenario, max_count=renderer.short_illust_max, speed=plan_speed)
+            print(f"🎨 short illustrations: method={method} image_mode={mode} "
+                  f"card_style={card_style} — planning {len(plans)} card(s)")
+            try:
+                from pipeline import image_collector
+            except Exception:
+                image_collector = None
+                if mode in ("collect", "mix"):
+                    mode = "generate"
+            illust_cache = str(out_dir / "short_illustrations")
+            for idx, (entry_idx, topic) in enumerate(plans):
+                img = None
+                if method == "pillow":
+                    img = _draw_pillow(topic, idx, entry_idx)
+                else:  # method == "dalle"
+                    per_mode = mode
+                    if mode == "mix" and image_collector is not None:
+                        per_mode = image_collector.decide_mode(topic, settings=image_collect_settings)
+                    if per_mode == "collect" and image_collector is not None:
+                        got = image_collector.search_and_cache(
+                            topic, cache_dir=Path(illust_cache), idx=idx,
+                            settings=image_collect_settings)
+                        if got and got.get("image") is not None:
+                            img = got["image"]
+                            print(f"  🌐 [{idx+1}/{len(plans)}] Collected for line {entry_idx}")
+                        elif OPENAI_API_KEY:
+                            img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
+                                                        char_config=char_config, illust_style=illust_style)
+                    elif OPENAI_API_KEY:
+                        img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
+                                                    char_config=char_config, illust_style=illust_style)
+                        if img:
+                            print(f"  🖼️ [{idx+1}/{len(plans)}] Generated for line {entry_idx}")
+                    # DALL-E が 429 / billing_hard_limit / キー未設定で失敗 → Pillow に自動フォールバック
+                    if img is None:
+                        img = _draw_pillow(topic, idx, entry_idx, reason="DALL-E fallback")
+                if img is not None:
+                    illust_map[entry_idx] = img
+                time.sleep(0.3 if method == "dalle" else 0.0)
+        else:
+            print("⚠️ short illustrations enabled but cannot run — skipped")
+
+    current_illust = None  # sticky: 次のカードまで直近のイラストを出し続ける
     for i, entry in enumerate(short_scenario):
         sp, tx = entry["speaker"], entry["text"]
         cfg = active_chars.get(sp) or CHAR_CONFIG.get(sp) or next(iter(active_chars.values()))
@@ -2421,7 +2685,12 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
 
         # 冒頭(最初の行 or 開始3秒以内)は特大フック演出を適用
         is_opening = (i == 0) or (t_off < 3.0)
-        clip = renderer.make_video_clip(sp, tx, dur, t_off, expr, is_opening=is_opening)
+        # sticky: このentryに新カードがあれば切替、無ければ直近を継続表示
+        if i in illust_map:
+            current_illust = illust_map[i]
+        illust = None if is_opening else current_illust
+        clip = renderer.make_video_clip(sp, tx, dur, t_off, expr, is_opening=is_opening,
+                                        illustration=illust)
         if fx_cfg is not None and fx_cfg.enabled:
             try:
                 plan = video_effects.decide_effect_plan(

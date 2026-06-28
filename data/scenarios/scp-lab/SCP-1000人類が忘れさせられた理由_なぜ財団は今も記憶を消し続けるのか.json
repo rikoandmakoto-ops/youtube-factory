@@ -1,0 +1,432 @@
+{
+  "title": "SCP-1000【人類が忘れさせられた理由】— なぜ財団は今も記憶を消し続けるのか",
+  "theme": {
+    "title": "SCP-1000「ビッグフット」— 人類の前文明を滅ぼした存在が今も財団に記憶を消され続けている理由",
+    "angle": "先史時代の知性体と人類の関係を財団の記憶改ざんプロトコルと絡め、隠蔽の規模を時系列で解説"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "ビッグフットって、ただの都市伝説だと思ってた？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、違うの…？財団が関わってるやつ？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1000は約3万年前、人類より高度な文明を持っていた知性体だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の推計では現在も約1万体が生存していて、今も記憶改ざんが続いている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって…人類が意図的に忘れさせられてるってこと？怖すぎる。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしく！詳細は関連動画でチェックして。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書…読んだら後悔するかもしれない。でも、もう遅い。あなたはすでにこの画面を開いてしまった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、なに？いきなりどういうこと？シロ、怖いんだけど…なんの話をするの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今から話すのは、財団が人類全体に対して実行し続けている、史上最大規模の記憶改ざん作戦の話だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象はSCP-1000。通称『ビッグフット』。だが、その正体はお前たちが想像するような怪物じゃない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ビッグフット？あの森の中をうろついてる毛むくじゃらの…って、なんで財団が？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回はSCP-1000の正体と、財団がなぜこれほどの規模で隠蔽を続けるのか、その理由に迫る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1000はオブジェクトクラス：ケテル。財団が管理する最も危険な分類の一つに位置づけられている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ケテル…それって収容がほぼ不可能なやつだよね？ビッグフットがそのレベルなの？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1000は単体の存在ではない。財団の推計によれば、現在も世界中に約1万体以上が生存しているとされる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "体長は成体で平均2.1メートルから2.7メートル。全身を覆う体毛と、霊長類に近い骨格構造を持つ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2メートル超えか…でも見た目だけなら、ただのデカい動物じゃないの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこが違う。SCP-1000は高度な知性を持ち、独自の言語体系と文化、そして道具を使用する能力を持っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の言語解析班が記録した音声データによれば、SCP-1000の発声は人間の言語構造に近い複雑な文法を持つ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "言語…？文法まであるの？それって普通の動物じゃないよ、明らかに。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。財団の歴史解析チームが辿り着いた結論は、これだ。約3万年前、SCP-1000は人類よりも高度な文明を持っていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え？3万年前？それって現代人類よりも先に文明を築いてたってこと？嘘だろ…",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説によれば、SCP-1000は火の使用・石器加工・集団的な社会構造を人類に先んじて確立していたとされる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "当時の人類、つまりホモ・サピエンスは、SCP-1000に比べて知的・技術的に劣った存在に過ぎなかったという記録がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って…じゃあ今の状況は逆転してるよね？何があったの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこが財団でも完全には解明されていない。記録の大部分は[DATA EXPUNGED]されており、全貌は掴めていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただ、財団が辿り着いた仮説がある。約3万年前、人類はSCP-1000に対してある種の『攻撃』を仕掛けたというものだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "攻撃…？でも当時の人類はSCP-1000より弱かったんでしょ？どうやって？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、人類は『ある異常な手段』を用いてSCP-1000を知的退行させたとされている。詳細は[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その結果、かつて高度な知性体だったSCP-1000は、知性の大半を失い、森の奥深くに退いていったとされる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり…人類が先に仕掛けて、SCP-1000の文明を壊した？それで今の立場が逆転した…？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そういうことだ。そしてここが重要な点だ。SCP-1000は今もその事実を、どこかで記憶している可能性がある。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…それって、SCP-1000は人類に恨みを持ってるかもしれないってこと？怖い、普通に怖い。",
+      "expression": "angry",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団がSCP-1000に対して実行しているのが、プロトコル『ANDROCLES』と呼ばれる記憶改ざん作戦だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このプロトコルの目的は二つ。一つはSCP-1000の存在を一般人類社会から隠蔽し続けること。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そしてもう一つ、より重大な目的は、SCP-1000自身が『かつて文明を持っていた事実』を思い出さないようにすることだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "えっ、それって…SCP-1000が本当のことを思い出したら、何か起きるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の試算では、SCP-1000が自分たちの歴史を完全に思い出した場合、組織的な行動を取り始めるリスクがあるとされている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "約1万体が知性を取り戻し、人類への復讐を目的に動き出す可能性。財団はそれをXKシナリオ、世界終末級事象として分類している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "XK…世界終末…。ビッグフットの話から急にスケールがおかしくなってきた…",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だからプロトコルANDROCLESは、財団史上最長期間継続されている隠蔽作戦の一つだ。少なくとも数十年以上は継続している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ビッグフットの目撃証言が世界中で報告されながら、証拠が一切残らない理由の一つが、このプロトコルの存在だとされる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "目撃した人間の記憶も消されてるってこと？それって…俺たちも知らないうちに消されてるかも？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録によれば、目撃者への記憶処理は年間数百件規模で実施されているとある。ただし正確な数値は[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに不気味な点がある。財団の一部の研究員は、SCP-1000が意図的に人間の前に姿を現すケースを報告している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "意図的に…？自分から姿を見せてる？なんで？記憶が戻りかけてるの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団では解明できていない。ただ、姿を現したSCP-1000の行動記録には、ある共通点があるという報告がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "目撃された個体は必ず、人間の目をじっと見つめた後に立ち去るという。財団はその行動の意味を、今も解析中だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…目をじっと見つめる。なんか…怖い。何かを確認してるみたいで。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説の一つでは、SCP-1000は人類の顔を見て、かつての記憶の断片を探しているのかもしれないとされている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "人類が3万年前に行ったことを、SCP-1000はまだ完全には忘れていない可能性がある。財団でも確認はできていない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって…SCP-1000の立場から見たら、人類が先に仕掛けた側だよね。なんか、やばい話だよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団がこの隠蔽を続ける最大の理由は、人類社会がこの事実を知った場合の混乱を防ぐためだとされる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし人類の歴史の教科書に『3万年前、我々は先住の知性体を滅ぼした』と書かれたとしたら、どうなるか想像してみろ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それ…ゲームで言ったら主人公が実は黒幕でしたっていうやつじゃん。人類の歴史が全部ひっくり返るよ。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は人類社会の安定を守るために、この事実を封印し続けている。それがプロトコルANDROCLESの本質だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし財団内部でも、このプロトコルを継続すべきかどうかの議論は続いているらしい。詳細は当然[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1000は今この瞬間も、世界のどこかの森の中にいる。そして財団は今日も記憶を消し続けている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "なんか…ビッグフットの話って、怖い話じゃなくて悲しい話だったんだね。でもやっぱり怖い。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし森の中で、2メートルを超える影が木々の間からじっとこちらを見つめていたら。絶対に目を合わせるな。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "なぜなら財団の記録には、目を合わせた後に行方不明になった目撃者の報告が、複数件存在するからだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと、それ最後に言う？もう怖くて森行けないよ…シロ、最悪だよ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-096『シャイガイ』を取り上げる予定だ。顔を見た者を決して逃がさない存在の話だ。覚悟しておけ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画が気になったなら高評価と登録を頼む。財団の報告書はまだ山ほど残っている。逃げ場はないぞ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "逃げ場はないって何！？でも…なんか続き気になるんだよな。やっぱり登録しておこうかな…。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "人類の前に『別の文明』が存在した",
+      "財団が隠し続ける、本当の歴史"
+    ],
+    "subtitle": "SCP-1000「ビッグフット」— 記憶改ざんプロトコルの真実",
+    "tagline": "この報告書を読んだ後、あなたは何かを忘れるかもしれない"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1782349528_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "SCP-1000【人類が忘れさせられた理由】— なぜ財団は今も記憶を消し続けるのか"
+      }
+    }
+  }
+}

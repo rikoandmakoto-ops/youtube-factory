@@ -1,0 +1,426 @@
+{
+  "title": "世界が『終わる』分類が実在する——K-クラスシナリオ、財団が隠し続けた終焉の全記録",
+  "theme": {
+    "title": "K-クラスシナリオ大全",
+    "angle": "XK・ZK・CKなど世界終焉シナリオの分類と例"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "ねえ、世界の終わりに『種類』があるって知ってた？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "種類？終わりって一種類じゃないの？怖いんだけど…",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はXK・ZK・CKなど、終焉を18種以上に分類してる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "18種…それぞれ違う終わり方があるってこと？ゾッとする。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも財団は今この瞬間も、複数のK-クラスシナリオを『進行中』として監視してる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1万人目指して毎日投稿中だから登録お願い！K-クラスの詳細は関連動画でチェックして。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書を読んでいるということは、あなたはまだ生きている。\nそれだけで、今日は運がいい日だと思っておいて。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、なに？いきなり怖いんだけど。シロ、今日は何の話？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "K-クラスシナリオ。財団が分類した『世界の終わり方』の全カタログだよ。\n今夜はその封印された記録を読み上げる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "世界の終わり方に…カタログがあるの？それ、財団が本当に想定してるってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "想定どころか、財団の全活動はK-クラスシナリオを防ぐためにある。\n収容プロトコルが存在する理由は、突き詰めれば全部これに行き着く。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ、SCPを収容し損ねたら世界が終わるってこと？\nそんな話、聞いてないよ…",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "K-クラスシナリオとは、財団が定義する『文明規模の壊滅的事態』のことで、現時点で18種以上が公式に記録されている。\nゲームでいうならゲームオーバー画面の種類一覧だ、ただし続きはない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "18種…それぞれ違う終わり方があるってこと？\nなんでそんなに細かく分けてるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対応プロトコルを変えるためだよ。終わり方が違えば、防ぎ方も全く違う。\n財団はその全パターンに対して個別の対処計画を持っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり財団は、世界が18通り以上の方法で終わると本気で考えてるわけだ。\n…それ自体がもう怖い話だよ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まず最も有名なXK-クラス、通称『世界終焉シナリオ』。\nこれは地球上の知的生命体が事実上絶滅するか、文明が回復不可能なレベルで崩壊した状態を指す。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "XKって聞くだけで嫌な感じがする。\nそれって、もう誰も残らないってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残るかどうかより、残った存在が人間と呼べるかどうかが問題になるケースもある。\nSCP-001の提言の中には、XKが人類の『変容』として定義されているものも存在する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "変容って…変わるってこと？\nそれって終焉なの、それとも別の何かなの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団内でも意見が割れている。\n一部の上級職員は『人類の形が変わっても存続するならXKではない』と主張し、別の部門は『異常な形での存続こそ最悪のXKだ』と記録に残している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団の中でも答えが出てないんだ…\nそれ、どっちが正しいかで対応も変わってくるよね？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次にZK-クラス、『現実消失シナリオ』。\nこれは現実そのものが崩壊、または消去される事態で、XKより一段上の恐怖として財団は分類している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "現実が消える？\n…それって、人間が死ぬとかじゃなくて、世界自体がなくなるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう。ZKが発生した場合、対処プロトコルは事実上存在しない。\n財団の記録には『ZK-クラス発生後に財団が取れる行動は記録されていない』という一文がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録されていない…それって、対処できないから書きようがないってこと？\n怖すぎる、ちょっと待って。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "CK-クラスは『現実再構築シナリオ』と呼ばれる。\n現実が崩壊するのではなく、別の形に書き換えられる事態で、財団が最も検知しにくいシナリオとして危険視されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "書き換えられる？\nそれって、書き換えられた後の世界にいる人は気づかないってこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "気づかないどころか、書き換え前の記憶ごと上書きされる可能性がある。\n財団の一部報告書には『CK後の世界に財団自体が存在しなかった記録』が残されており、それ自体がCKの証拠とされることもある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が存在しなかった記録って…それ誰が書いたの？\n存在しないはずなのに記録があるって、どういう状況？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その矛盾自体が、CKシナリオの恐ろしさを示している。\n詳細は[DATA EXPUNGED]とされており、財団の最高機密区分に指定されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "また消されてる…\n消されてることが一番怖いんだよな、毎回。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SK-クラスは『自意識崩壊シナリオ』。\n人類の自意識や認識能力が集合的に失われる事態で、SCP-3125やSCP-4000系列の収容失敗シナリオとして想定されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自意識が崩壊するって、つまり人間が人間でなくなるってこと？\nXKとは違うの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "XKは肉体的・文明的な滅亡、SKは精神・認識レベルでの崩壊だ。\n体は生きていても、人間としての内側が空になっている状態と財団は記録している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "体だけ残って中身がない…\nそれ、生きてるって言えるの？言えないよ、絶対。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "GH-クラスは通称『死神シナリオ』。\nこれは全人類が同時に死亡する、または死の概念自体が異常存在によって操作される事態を指す。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "死の概念が操作されるって、どういうこと？\nまさか、死ねなくなるとか？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その逆も含まれる。死が無効化されるケース、死が無限に増殖するケース、どちらもGH-クラスに分類される。\n財団の収容対象の中には、現在もGH-クラスの引き金になり得るオブジェクトが複数存在している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "複数って…今この瞬間も、そういうものが収容されてるってこと？\n怖い、普通に怖い。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "VK-クラスは『ベール崩壊シナリオ』。\n財団が最も日常的に恐れているシナリオで、異常存在の存在が一般市民に完全に露呈してしまう事態だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "あ、それ…財団が一番必死に隠してることだよね。\nでも、なんでそれがK-クラスになるの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団のシミュレーションによると、VK-クラスが発生した場合、社会秩序は72時間以内に崩壊を開始し、収容プロトコルの維持が不可能になる。\nその後に連鎖する収容違反が、別のK-クラスシナリオを呼び込む。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "72時間って、3日も持たないってこと？\nそれで別の終焉まで引き起こすなんて、連鎖反応じゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が記憶処理や情報統制に莫大なリソースを使い続ける理由がここにある。\nあなたが今日見た不思議な出来事が、翌朝には記憶から消えていたとしたら…それはVK-クラス防止のためかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、ちょっと待って。\nそれって、私たちの記憶が今も操作されてる可能性があるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録上、記憶処理の施術を受けた人間はその事実を認識できない。\n証明も反証もできない。それが財団の収容プロトコルの設計だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "証明できないって…もし今の自分の記憶が全部操作済みだったとして、確かめる方法がないってこと？\nそれ、怖すぎて笑えない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "RK-クラスは『意識的絶滅シナリオ』。\n人類が自らの意思で、あるいは異常存在の誘導により自滅を選ぶ事態で、財団内部では最も解決困難なシナリオとして論文が複数提出されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分たちで終わりを選ぶ…\nそれって、もう止めようがないってことじゃないの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "RK-クラスに関連すると疑われているオブジェクトの一部は、収容対象ではなく財団自体が監視対象としている。\nその詳細は[REDACTED]。私が知っている情報はここまでだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が監視してる…自分たちの組織の中に、そういうものがあるってこと？\nそれ、内部から崩壊するってことじゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "重要なのは、これらのK-クラスシナリオが完全に独立しているわけではないという点だ。\n財団の上位機密文書には、複数のK-クラスシナリオが同時並行で進行した場合の連鎖崩壊モデルが記録されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同時並行って…今この瞬間、複数の終焉が同時に進んでる可能性があるってこと？\n嘘だろ、それ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は現在、少なくとも3件のK-クラス関連インシデントを『監視中』として記録している。\n収容済みか進行中かは、私の権限では確認できない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確認できないって…シロでもわからないなら、私たちには絶対わからないじゃないか。\nなんか、普通に今日の夜が怖くなってきた。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "K-クラスシナリオについて一つだけ確実に言えることがある。\n財団が今日も活動を続けているという事実が、K-クラスがまだ発動していない唯一の証拠だということだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が存在してる限りは、まだ大丈夫ってこと？\n…それ、安心できる話のはずなのに、全然安心できないんだけど。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の収容が失敗した瞬間、あなたはそれを知る前に全てが終わっているかもしれない。\nだから今夜はただ、財団が機能していることに感謝しておいて。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "感謝…って言われても、何に感謝すればいいのか。\nでも、確かに今日も普通に生きてるってことは、まだ間に合ってるってことなのか。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は個別のK-クラスシナリオに深く踏み込む。\nSCP-2399、SCP-1425、SCP-3125——それぞれが引き金を引きかけた記録を読み上げる予定だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それ、聞きたいような聞きたくないような…\nでも、絶対見る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録と高評価を押しておいて。\n次回の報告書が届いたとき、あなたがまだここにいることを願っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "その言い方、毎回ゾッとするんだよなぁ…！\nでも登録は絶対する！",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "XK・ZK・CK…終焉の種類が",
+      "なぜ複数存在するのか"
+    ],
+    "subtitle": "K-クラスシナリオ大全｜財団機密報告書",
+    "tagline": "世界の終わりには『型』がある"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1781742653_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "世界が『終わる』分類が実在する——K-クラスシナリオ、財団が隠し続けた終焉の全記録"
+      }
+    }
+  }
+}

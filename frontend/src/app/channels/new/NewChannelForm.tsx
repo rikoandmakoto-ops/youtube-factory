@@ -185,6 +185,10 @@ export default function NewChannelForm({
             allow_frame: illustStyle.allow_frame,
             extra_prompt: illustStyle.extra_prompt,
           },
+          // ショート解説カードはデフォルトでローカル Pillow 図解（APIコスト0）
+          short_illustrations: {
+            illustration_method: 'pillow',
+          },
         },
       };
       if (template) payload.template = template;

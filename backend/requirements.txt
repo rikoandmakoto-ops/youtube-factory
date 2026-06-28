@@ -25,3 +25,5 @@ pytrends>=4.9.0
 # Phase D — 分析・評価・採点・判断系を Claude (Anthropic) に置換
 # ANTHROPIC_API_KEY を .env に設定する必要あり
 anthropic>=0.40.0
+# TikTok Content Posting API（OAuth + 動画アップロードの HTTP クライアント）
+requests>=2.31.0

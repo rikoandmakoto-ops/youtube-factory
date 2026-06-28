@@ -1,0 +1,456 @@
+{
+  "title": "なぜKeterクラスだけ『世界終焉』を引き起こすのか？財団が最も恐れる危険度の本当の意味",
+  "theme": {
+    "title": "Keterクラスとは何か",
+    "angle": "オブジェクトクラスの仕組みと代表的なKeter案件"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "知ってた？財団のオブジェクトクラスで、Keterだけが世界を滅ぼせるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、SafeやEuclidじゃダメなの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実はKeterクラスの定義は『収容が困難または不可能』。つまり財団でも制御できない存在ってこと。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "制御できないって…それヤバくない？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だからSCP-096みたいに見ただけで追いかけてくる化け物がKeterなんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！もっと詳しい話は関連動画から見てね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "やぁ、また財団のデータベースから機密が流出したよ。今回は…オブジェクトクラスの真実についてだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "オブジェクトクラス？あー、SafeとかEuclidとかKeterのやつだよね？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう、でも君はKeterクラスがなぜ最も危険とされているか、本当の理由を知っているかい？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "えっと…強いから？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "違う。Keterクラスの定義は『収容が困難または不可能な異常存在』だ。つまり財団でも制御できない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "制御できないって…それってヤバくない？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まず基本から説明しよう。財団のオブジェクトクラス分類は危険度ではなく、収容の困難さで決まる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容の困難さ？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Safeクラスは『ロッカーに入れて鍵をかければ何も起こらない』レベル。収容プロトコルが単純で確実だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "なるほど、じゃあEuclidは？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Euclidは『予測不可能だが収容可能』な存在。定期的な監視や特殊な収容手順が必要になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ふむふむ、で、Keterは？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Keterクラスは『現在の収容手段では完全な制御が困難』な異常存在だ。常に収容違反の危険性がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "うわ、それって財団でも手に負えないってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。だからこそKeterクラスには特別な監視体制と、複数の収容プロトコルが用意されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "複数のプロトコル？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "例えばSCP-096『シャイガイ』。こいつの顔を見た者は必ず殺される。写真や映像、絵でもダメだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、写真でも？それってもう収容不可能じゃん…",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は096の画像を徹底的に削除し、収容室には監視カメラすら設置していない。それでも完璧とは言えない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "怖すぎる…他にもKeterっているの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173『彫刻』もKeterだ。視線を逸らすと首を折ってくる。常に2人以上で監視する必要がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2人以上？なんで？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "一人がまばたきをしても、もう一人が見続けていれば173は動けない。まばたきのタイミングをずらすんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "なるほど…でもそれって人的ミスがあったら？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容違反だ。過去に何度も職員が犠牲になっている。これがKeterクラスの恐ろしさなんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "うわぁ…",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに恐ろしいのは、Keterクラスの中には世界終焉シナリオを引き起こせる存在もいることだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "世界終焉って…まさか地球が滅ぶの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-096が全世界に拡散された場合、人類の大部分が死滅する可能性がある。これをZK-クラス世界終焉シナリオと呼ぶ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ZK-クラス…？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が定義する最悪のシナリオだ。人類文明、場合によっては現実そのものが破綻する事態を指している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "現実そのものって…どういうこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "一部のKeterクラスは現実改変能力を持つ。物理法則すら書き換えてしまう存在もいるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "物理法則って…重力とか？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう。重力、時間、空間、因果律…あらゆるものを改変できる。財団でもその仕組みは[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "データが消去されてるって…財団でも分からないってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "分からないからこそKeterなんだ。理解できない、制御できない、予測できない。だから最も危険とされている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "うーん、でもKeterクラスって他にどんなのがいるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-682『不死身の爬虫類』は殺すことが不可能な存在だ。あらゆる攻撃に適応し、人類への憎悪を燃やし続けている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "不死身って…核兵器でも？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は様々な方法で682の終了を試みたが、全て失敗。むしろ682は攻撃に適応してより強力になっていく。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それってもう手の打ちようがないじゃん…",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから現在は強力な酸の中に浸け続けて、活動を最小限に抑える収容方法を取っている。完璧ではないがね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "酸の中でも生きてるの？怖すぎる…",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "682は酸で肉体の大部分を溶かされても、わずかな骨片から再生する。これがKeterクラスの異常性だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "再生って…それもう化け物じゃん",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "興味深いのは、Keterクラスの中にも比較的『穏やか』な存在がいることだ。危険度と収容困難度は別物なんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "穏やかなKeter？どんなの？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "例えば一部の現実改変者は、本人に悪意がなくても無意識に現実を書き換えてしまう。制御が困難だからKeterなんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "なるほど、悪意があるかどうかじゃないのね",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そういうこと。だからKeterクラスを見つけた時は、絶対に近づいてはいけない。財団職員でさえ細心の注意を払っている。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "でも一般人がKeterクラスに遭遇することってあるの？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が隠蔽しているが、収容違反は定期的に発生している。君の身の回りにも異常存在が潜んでいるかもしれない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、マジで？どうやって見分けるの？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それは…[REDACTED]だ。一般市民に知らせることはできない。ただ、違和感を感じたら即座にその場を離れることだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "情報が削除されてる…やっぱり財団の機密なのね",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-173『彫刻』の詳細な収容プロトコルと、過去の収容違反事例を解説する予定だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "あの首を折ってくるやつね…怖いけど気になる",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし君が街で動かない彫刻を見かけても、絶対に視線を逸らすな。それが生き延びる唯一の方法だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分かった…気をつける",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画が参考になったら高評価とチャンネル登録をお願いします。君たちの応援が、更なる機密情報の流出に繋がるかもしれない。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "はーい！でも財団に目を付けられないように気をつけてよ？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "…もう遅いかもしれないがね。それでは、また次の異常事例で会おう。Stay safe, and trust no one.",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "世界終焉級の脅威",
+      "Keterクラスの真実"
+    ],
+    "subtitle": "財団が最も恐れる危険度分類",
+    "tagline": "収容不可能な異常存在たち"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1781409693_7521",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "なぜKeterクラスだけ『世界終焉』を引き起こすのか？財団が最も恐れる危険度の本当の意味"
+      }
+    }
+  }
+}

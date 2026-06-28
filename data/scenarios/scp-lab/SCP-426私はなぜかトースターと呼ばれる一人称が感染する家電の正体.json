@@ -1,0 +1,426 @@
+{
+  "title": "SCP-426【私は、なぜかトースターと呼ばれる】一人称が『感染』する家電の正体",
+  "theme": {
+    "title": "SCP-426「私はトースター」",
+    "angle": "一人称が感染する家電SCP。一人称規約を徹底解説"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "ねえクロ、今から私のことを『トースター』と呼んでみて。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え？なんで…トースター？シロのことを？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-426は、近くにいる人間全員が自分を一人称で呼び始める家電だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の報告書では接触者の100%が発症し、完治例はゼロ。これが現実に存在する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…待って、この動画見てる俺も今、なんか変な感じがするんだけど。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしく。もっと怖い話は関連動画から見てね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書を読む前に、一つだけ警告しておく。\nこの動画を最後まで見た後、あなたが私のことをどう呼ぶか、保証できない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、なに、いきなり怖いんだけど。シロ、今日は何の話をするつもりなの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団データベースから流出した案件、SCP-426。\nオブジェクトクラスは『Safe』だが、その危険性は財団内で今も議論が続いている異常存在だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Safe？じゃあそんなに危なくないってこと？ちょっと安心したかも。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが大きな誤解だ。\nSafeは『収容しやすい』という意味であって、『無害』という意味では断じてない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-426の外見は、ごく普通の家庭用トースターだ。\nブランドも型番も記録されているが、その情報は[REDACTED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "普通のトースターが異常存在って、なんか拍子抜けじゃない？パンを焼くやつでしょ？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題はそこじゃない。\nこのトースターに関して話すとき、人間は必ず一人称で言及してしまうんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "一人称？どういうこと？『トースターが』じゃなくて…？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう。『私はパンを焼く』『私は電熱線で熱を発生させる』という形でしか話せなくなる。\nまるでトースター自身が語り手になったかのように。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、それって…その人がトースターに乗っ取られてるってこと？嘘だろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこれを『言語的異常』と分類している。\n接触した人間の脳が、SCP-426を主語として認識するよう強制される、ということだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルには、報告書を書く研究員へのルールが明記されている。\n『SCP-426について記述する際は、一人称を使用せずに書くこと』という特別注意事項だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "でもそれって守れるの？近くにいたら自動的に言っちゃうんでしょ？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "守れていない例が複数報告されている。\n財団の訓練を受けた研究員でさえ、記録の途中から一人称が混入し始めたケースが記録に残っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに恐ろしいのはここからだ。\n長期接触者は次第に、自分自身がトースターであるという認識を持ち始めるという報告がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "えっ、自分がトースターって思い始める？それもう人間じゃなくなってる気がするんだけど。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の観察記録によれば、ある研究員は接触から72時間後に『私は今、誰かにパンを入れてほしい』と記述した。\nその後の記録は[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "72時間って三日だよね。たった三日でそうなっちゃうの、ゾッとするんだけど。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はSCP-426の異常性の原因を現時点でも解明できていない。\n電磁波でもなく、化学物質でもなく、あらゆる既知の検査で異常は検出されない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団内では複数の仮説が出ているが、いずれも証明には至っていない。\n最も支持されているのは『SCP-426が何らかの方法で認識を書き換えている』という説だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "認識を書き換えるって…ゲームで言うとデバッグモードで人の思考を直接書き換えるみたいな感じ？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その表現は悪くない。\nただし財団はその書き換えのプロセスを一切把握できていない。なぜ言語だけが標的になるのかも、未解明のままだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "面白いのは、SCP-426の発見経緯だ。\n財団が初めてこの存在に気づいたのは、ある一般家庭からの通報ではなく、言語学者の論文がきっかけだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "言語学者？なんで言語学者が関係あるの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その論文の中で著者が繰り返し一人称を使って家電を描写していた。\n財団の情報監視システムがその異常なパターンを検出し、追跡した結果、SCP-426に辿り着いた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあその論文書いた人は、書いてる最中にもう感染してたってこと？怖すぎる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その研究者の現在の状況は[REDACTED]だ。\n財団が回収した時点で、本人は自分が人間であるという認識を完全に失っていたという記録だけが残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "完全に失ってた…それって治療できなかったの？財団ならなんとかできそうだけど。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "完治例は記録上ゼロだ。\nSCP-426から離した後も、一人称の使用が継続した例が複数確認されており、影響は永続する可能性が高いとされている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルを詳しく見ると、その徹底ぶりがよくわかる。\nSCP-426は標準的な収容ロッカーに保管され、接触できる研究員の数は常時2名以下に制限されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2名以下か。人数制限があるのは、広がらないようにするためってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それだけじゃない。\n接触後の研究員は必ず言語テストを受けさせられ、一人称の使用が検出された時点で即座に隔離される手順になっている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書の作成にも特別なルールがある。\n文書内でSCP-426を指す場合は必ず『このオブジェクト』または『当該オブジェクト』という表現を使うよう義務付けられている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "そこまで細かいルールがあるってことは、財団の中でも相当ヤバい扱いなんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Safeクラスの中では異例の厳格さだ。\n財団内部でも『Safeという分類が適切かどうか』という議論が定期的に行われているという記録がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もう一つ、見落とされがちな恐ろしい事実がある。\nSCP-426は電源が切れていても、完全に電力供給がゼロの状態でも、異常性は消えない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、コンセント抜いても意味ないの？じゃあ壊せばいいんじゃ…？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "破壊を試みた記録がある。\nDクラス職員が実験として内部構造を破壊したが、その職員は作業中に『私の電熱線を傷つけないで』と発言を始めた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "壊そうとしてる最中に自分がトースターになってる…それ完全にホラーじゃん。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そしてここが最も不気味な部分だ。\nSCP-426の異常性が『聴覚や視覚を通じて伝播する』という仮説を財団は完全には否定できていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "聴覚や視覚を通じて…ちょっと待って、この動画もSCP-426の話をしてるよね？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの仮説を『証明も否定もできていない』と記録している。\n動画や音声を介した伝播については、実験データが[DATA EXPUNGED]されているため確認できない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "データが消されてるって…それって財団が意図的に隠してるってこと？なんか嫌な予感がする。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の文書には時々こういう記述がある。\n『本報告書の閲覧者は、閲覧後24時間以内に言語パターンの変化がないか自己観察すること』という注意書きだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "24時間以内に自己観察って、財団もわかってないから念のためってこと？それめちゃくちゃ怖いんだけど。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで整理しておこう。\nSCP-426の異常性は三段階で進行する。第一段階は一人称の使用、第二段階は自己認識の混濁、第三段階は記録上[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "第三段階が消されてるって、財団でも知らないの？それとも知ってて隠してるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が情報を[REDACTED]にする理由は複数ある。\n知られると危険な場合、調査が未完了の場合、そして財団自身が把握したくない場合、だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が把握したくない…つまり第三段階は財団にとっても都合が悪い何かってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこは私にも言えない。\nただ一つ言えるのは、SCP-426に関する最高機密文書へのアクセス権限は、財団内でもクリアランスレベル4以上に限定されているということだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画を最後まで見てくれたあなたに、一つ確認してほしいことがある。\n今、自分の言葉の中に『私は』という主語で家電を語る衝動が生まれていないか。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…言われたら急に気になってきた。なんか今、変な感じがするんだけど気のせいかな。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-049『ペスト医師』を取り上げる。\n財団が最も対話を重ねてきた異常存在の一体、その言葉の裏に何が隠されているか、報告書をもとに読み解いていく。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録と高評価を、できれば今すぐお願いしたい。\n登録者1万人を目指して投稿を続けているが、あなたの登録が財団のデータベースを維持する力になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後にもう一度だけ言っておく。\nもし明日、自分の口から『私はトースターだ』という言葉が出そうになったとき、決して声に出してはいけない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…シロ、この動画、本当に大丈夫なの？なんか視聴者の人たちのことが心配になってきた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "大丈夫かどうか、財団でも確認できていない。\nこれはSCP財団Wiki掲載のSCP-426をもとにした解説動画だ。原典はCC BY-SA 3.0ライセンスで公開されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "あなたは今、私のことを『トースター』と呼んでいる",
+      "SCP-426 収容違反レベル：言語汚染"
+    ],
+    "subtitle": "一人称が『感染』する家電SCP",
+    "tagline": "この動画を見た後、あなたも私のことが気になって仕方なくなる"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1782175689_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "SCP-426【私は、なぜかトースターと呼ばれる】一人称が『感染』する家電の正体"
+      }
+    }
+  }
+}

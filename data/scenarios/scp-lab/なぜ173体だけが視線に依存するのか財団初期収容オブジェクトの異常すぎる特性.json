@@ -1,0 +1,446 @@
+{
+  "title": "なぜ173体だけが『視線』に依存するのか？財団初期収容オブジェクトの異常すぎる特性",
+  "theme": {
+    "title": "SCP-173「彫刻」",
+    "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "えっ、知ってた？瞬きした瞬間に首を折られるオブジェクトが存在するって。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、そんなの怖すぎるよ！どういう仕組みなの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173、通称「彫刻」は1973年に発見された財団最古の収容オブジェクトの一つ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "50年前から収容されてるのか...でもなんで視線だけで動きが止まるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実は量子観測理論との関連が示唆されてる。観測行為そのものが現実を固定するのかも。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！詳しい収容プロトコルは関連動画でチェック！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "また財団のデータベースから、興味深い報告書が流出したね。\n今回は特に...慎重に扱う必要がある案件だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "シロ、その表情...いつもより緊張してない？\n一体どんなオブジェクトなんだよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173、通称「彫刻」。\n財団が初期に収容したオブジェクトの中でも、最も危険な部類に入る存在だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画では、なぜ173だけが視線による観測に依存するのか、その異常なメカニズムを徹底解析する。\n君も最後まで見れば、きっと後悔...いや、真実を知ることができるだろう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "後悔って何だよ...でも気になるから聞くよ。\nそのSCP-173って、一体どんな見た目なんだ？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高さ約2メートル、コンクリートと鉄筋で構成された人型の彫刻。\n表面にはスプレーペイントの跡があり、まるで誰かがいたずらで描いたような外見をしている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかし、その無害に見える外観とは裏腹に、173は極めて危険な特性を持つ。\n直接視線を向けられていない状況下では、異常な速度で移動し、対象の首の骨を瞬時に折る能力を有している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待てよ...視線を向けてる間は動かないってこと？\nじゃあずっと見てれば安全なのか？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "理論上はそうだ。\nしかし人間は瞬きを我慢できない...平均して3秒に一度は瞬きをする必要がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その僅かな隙間、0.1秒にも満たない瞬きの間に、173は数メートルの距離を詰めることができる。\n財団の実験記録では、最短0.06秒で5メートル移動した事例が報告されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0.06秒で5メートル!?それって時速300キロ以上だぞ！\n一体どんな原理で動いてるんだ？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここが173の最も異常な点だ。\n物理的な推進力の痕跡が一切検出されない...重力、慣性、摩擦の法則を完全に無視している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の研究チームは当初、テレポーテーション能力を疑った。\nしかし高速度カメラによる撮影で、173は確実に「移動」していることが判明している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "移動してるのに物理法則を無視...それって矛盾してない？\nどうやってそんなことが可能なんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最新の理論では、量子力学における「観測者効果」との関連が示唆されている。\n観測行為そのものが現実を固定し、非観測時には確率的存在状態に移行するという仮説だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり、視線を向けられている間、173は我々の現実に「固定」される。\nしかし観測が途切れた瞬間、空間移動の制約から解放されるのかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "量子力学...難しすぎてよく分からないけど、要するに見てない時は別次元にいるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "正確には分からない。\nただし、173の発見経緯を調べると、さらに興味深い事実が浮かび上がってくる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1973年、█████市の廃工場で初めて発見された時、173の周囲には3体の遺体があった。\n全て首の骨が完全に砕かれ、まるで巨大な力で一瞬にして圧縮されたような状態だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3体も...それって発見前から活動してたってことだよね。\n一体どのくらいの期間、あの場所にいたんだろう。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "工場の閉鎖記録によると、少なくとも15年間は放置されていた。\nその間、不審な失踪事件が周辺で頻発していたという報告もある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も興味深いのは、173が発見された位置だ。\n工場の中央、まるで展示されているかのように、完璧に直立した状態で静止していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "展示って...まさか誰かが意図的に置いたってこと？\n一体誰が、なんの目的で？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それは今でも謎のままだ。\n173の製作者、製作時期、製作目的...全てが不明のまま収容されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかし、最近の研究で一つだけ判明したことがある。\n173の素材に含まれる鉄筋の製造年代が、1960年代後半であることが確認された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "1960年代...ということは発見の約10年前には既に存在してたってことか。\nでもそれだけじゃ作った人は分からないよね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ああ、しかしもう一つ重要な発見がある。\n173の表面に描かれたスプレーペイントの成分分析により、特殊な顔料が検出された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この顔料は1970年代初頭に開発された実験的な化合物で、一般には流通していない。\n使用可能な施設は世界でも数カ所に限られている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって手がかりになるじゃないか！\n財団は調査しなかったの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もちろん調査した。\nしかし、該当する全ての施設で記録の「欠損」が発見されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まるで誰かが意図的に証拠を隠滅したかのように...173に関する情報だけが、綺麗に消去されていた。\nこれは偶然では説明がつかない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "証拠隠滅...ってことは173を作った組織が今でも活動してるってこと？\nそれって財団より前から存在してたってことだよね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その可能性は高い。\n173が「最初のSCP」と呼ばれる理由は、単に発見順序だけではないのかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在の収容プロトコルでは、173との接触時には必ず2名以上の職員が同行することが義務付けられている。\n一人が瞬きする間、もう一人が監視を継続するためだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2人いれば安全なのか...でも万が一、同時に瞬きしちゃったらどうなるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その場合は...報告書には「即座に収容違反が発生する」と記載されている。\n過去に3回、同様の事案が発生し、計7名の職員が犠牲になった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も効果的な対策は「瞬き同期防止装置」の導入だ。\n各職員の瞬きタイミングをモニタリングし、同時瞬きを物理的に阻止するシステムである。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "物理的に阻止って...一体どんな仕組みなんだよ。\n目を無理やり開け続けるとか？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "詳細は機密だが、軽微な電気刺激により瞬きタイミングを調整する技術が採用されている。\n職員の安全を最優先に設計された、財団独自の技術だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "また、収容室内には24時間体制で監視カメラが設置されている。\n人間の瞬きに依存しない、機械による恒常的な観測システムだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "機械なら瞬きしないもんね...でもそれなら最初から機械だけでよくない？\n人間が近づく必要ないじゃん。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実は、それでは不十分なことが判明している。\n173は「生体による直接観測」と「機械による間接観測」を明確に区別しているようだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "カメラ単体では173の活動を完全には抑制できない。\n移動速度が低下する程度で、完全な静止には至らないのが現状だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生体と機械を区別するって...173はどうやって判断してるんだろう。\nそもそも意識とか知性はあるの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "知性の有無については議論が分かれている。\n173は明確な意図を持った行動を取るが、コミュニケーション能力は一切確認されていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、標的選択に一定のパターンがある。\n単独行動者を優先的に狙い、複数人グループには比較的消極的な傾向が見られる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって明らかに戦略的じゃん...単独の相手なら確実に仕留められるけど、複数だとリスクがあるから避けるってことでしょ？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。\n173には少なくとも基本的な戦術判断能力があると考えられている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに興味深いのは、173が「遊び」や「いたずら」に類する行動を取ることがある点だ。\n致命的でない軽微な接触で、職員を威嚇するような事例が報告されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "遊び...？殺人マシンが遊ぶって、それって相当高度な知性がないと無理だよね。\n173って実は人間並みに賢いんじゃないの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "可能性は否定できない。\n財団の心理学者は「173は我々が思っているより遥かに複雑な存在である」と結論付けている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして今日も、173は収容室の中で静かに立ち続けている。\n次に誰かが瞬きした瞬間を、じっと待ちながら...",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "うわあ...想像しただけで鳥肌が立つよ。\nでもシロのおかげで173の恐ろしさがよく分かったよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の機密報告書は、まだまだ謎に満ちている。\n次回はSCP-096「シャイガイ」の収容記録を分析する予定だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画が興味深かったら高評価とチャンネル登録をお願いします。\n君の応援が、さらなる真実の解明につながるんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "みんな、絶対に一人でこの動画を見直さないでよね...173のことを考えながら瞬きするの、めちゃくちゃ怖いから。",
+      "expression": "sad",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "では、また次の報告書で会おう。\n...くれぐれも、夜中に瞬きする時は気をつけてくれ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "視線を外すと",
+      "首の骨が折れる"
+    ],
+    "subtitle": "SCP-173の恐怖メカニズム",
+    "tagline": "財団機密報告書"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1780362414_5625",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "シナリオBは冒頭の「瞬きした瞬間に首を折られる」という具体的な恐怖描写と、量子観測理論などの科学的考察により圧倒的にhook_strengthとspecificityで優位。また文字数3267字でより詳細な内容展開ができており、視聴維持率向上に寄与する。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 6,
+        "cta_effectiveness": 4,
+        "wording_quality": 5,
+        "overall": 5
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "見つめ続けよ！SCP-173の恐怖の接近メカニズム"
+      },
+      "claude": {
+        "title": "なぜ173体だけが『視線』に依存するのか？財団初期収容オブジェクトの異常すぎる特性"
+      }
+    }
+  }
+}

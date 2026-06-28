@@ -1,12 +1,30 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Field } from '@/components/Field';
+import {
+  CANONICAL_OAUTH_ORIGIN,
+  redirectToCanonicalOAuthOrigin,
+} from '@/lib/oauthOrigin';
 import type { YoutubeStatus } from '@/lib/api';
 
-const REDIRECT_PATH = '/settings'; // Google にはこの URL を登録してもらう
-const POPUP_W = 500;
-const POPUP_H = 700;
+// Google に登録済みの承認済みリダイレクト URI。
+// canonical オリジン上のこのパスのみが GCP に登録されている。
+// （旧 '/settings' は未登録で redirect_uri_mismatch になるため使わない）
+const REDIRECT_PATH = '/oauth/youtube/callback';
+const POPUP_FEATURES = 'width=520,height=720';
+
+async function readErrorMessage(res: Response): Promise<string> {
+  const text = await res.text();
+  try {
+    const j = JSON.parse(text);
+    if (j && typeof j === 'object' && 'error' in j) return String(j.error);
+    if (j && typeof j === 'object' && 'detail' in j) return String(j.detail);
+  } catch {
+    /* not JSON — likely an HTML error page from Vercel/edge */
+  }
+  return `${res.status} ${res.statusText || 'リクエストに失敗しました'}`;
+}
 
 export default function YoutubeConnect() {
   const [status, setStatus] = useState<YoutubeStatus | null>(null);
@@ -17,7 +35,6 @@ export default function YoutubeConnect() {
   const [error, setError] = useState<string | null>(null);
   const [info, setInfo] = useState<string | null>(null);
   const [authBusy, setAuthBusy] = useState(false);
-  const stateRef = useRef<string | null>(null);
 
   const refresh = async () => {
     try {
@@ -32,40 +49,6 @@ export default function YoutubeConnect() {
     refresh();
   }, []);
 
-  // OAuth コールバック処理：URL に ?code= があればトークン交換
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const url = new URL(window.location.href);
-    const code = url.searchParams.get('code');
-    const state = url.searchParams.get('state');
-    if (code && state) {
-      // URL を綺麗に
-      url.searchParams.delete('code');
-      url.searchParams.delete('state');
-      url.searchParams.delete('scope');
-      window.history.replaceState({}, '', url.toString());
-      (async () => {
-        setAuthBusy(true);
-        setError(null);
-        try {
-          const res = await fetch('/api/youtube/callback', {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({ state, code }),
-          });
-          if (!res.ok) throw new Error(await res.text());
-          const data = await res.json();
-          setInfo(`✅ 連携完了: ${data.account_email || ''}`);
-          await refresh();
-        } catch (e) {
-          setError(e instanceof Error ? e.message : 'OAuth に失敗しました');
-        } finally {
-          setAuthBusy(false);
-        }
-      })();
-    }
-  }, []);
-
   const saveClient = async () => {
     setSavingClient(true);
     setError(null);
@@ -75,7 +58,7 @@ export default function YoutubeConnect() {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ client_id: clientId, client_secret: clientSecret }),
       });
-      if (!res.ok) throw new Error(await res.text());
+      if (!res.ok) throw new Error(await readErrorMessage(res));
       setClientId('');
       setClientSecret('');
       setInfo('✅ OAuth クライアント情報を保存しました');
@@ -89,7 +72,25 @@ export default function YoutubeConnect() {
 
   const startAuth = async () => {
     setError(null);
+    setInfo(null);
+
+    // canonical でない Vercel エイリアス/プレビューから始まると redirect_uri が
+    // Google 未登録で redirect_uri_mismatch になる。canonical へ誘導してやり直す。
+    if (redirectToCanonicalOAuthOrigin()) {
+      setInfo(`YouTube 連携は ${CANONICAL_OAUTH_ORIGIN} で行います。移動中…`);
+      return;
+    }
+
     setAuthBusy(true);
+
+    // ポップアップブロッカー対策: 必ずユーザーアクション直後に開く
+    const popup = window.open('about:blank', 'yt-oauth', POPUP_FEATURES);
+    if (!popup) {
+      setError('ポップアップがブロックされました');
+      setAuthBusy(false);
+      return;
+    }
+
     try {
       const redirectUri = `${window.location.origin}${REDIRECT_PATH}`;
       const res = await fetch('/api/youtube/auth-url', {
@@ -97,10 +98,45 @@ export default function YoutubeConnect() {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ redirect_uri: redirectUri }),
       });
-      if (!res.ok) throw new Error(await res.text());
+      if (!res.ok) {
+        popup.close();
+        throw new Error(await readErrorMessage(res));
+      }
       const data: { auth_url: string; state: string } = await res.json();
-      stateRef.current = data.state;
-      window.location.href = data.auth_url;
+
+      popup.location.href = data.auth_url;
+
+      // コールバックページ(/oauth/youtube/callback)から code/state を受け取る
+      const onMessage = async (ev: MessageEvent) => {
+        if (ev.origin !== window.location.origin) return;
+        if (ev.data?.type !== 'yt-oauth-callback') return;
+        window.removeEventListener('message', onMessage);
+        try {
+          const cbRes = await fetch('/api/youtube/callback', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ state: ev.data.state, code: ev.data.code }),
+          });
+          if (!cbRes.ok) throw new Error(await readErrorMessage(cbRes));
+          const result = await cbRes.json();
+          setInfo(`✅ 連携完了: ${result.account_email || ''}`);
+          await refresh();
+        } catch (e) {
+          setError(e instanceof Error ? e.message : 'OAuth に失敗しました');
+        } finally {
+          setAuthBusy(false);
+        }
+      };
+      window.addEventListener('message', onMessage);
+
+      // ポップアップが閉じられた場合のクリーンアップ
+      const closedTimer = window.setInterval(() => {
+        if (popup.closed) {
+          window.clearInterval(closedTimer);
+          window.removeEventListener('message', onMessage);
+          setAuthBusy(false);
+        }
+      }, 1000);
     } catch (e) {
       setError(e instanceof Error ? e.message : 'failed');
       setAuthBusy(false);
@@ -125,7 +161,7 @@ export default function YoutubeConnect() {
   const redirectExample =
     typeof window !== 'undefined'
       ? `${window.location.origin}${REDIRECT_PATH}`
-      : 'http://localhost:3000/settings';
+      : `${CANONICAL_OAUTH_ORIGIN}${REDIRECT_PATH}`;
 
   return (
     <div className="space-y-3">

@@ -1,0 +1,488 @@
+{
+  "title": "なぜあくびが『あの人』にうつるのに『この人』にはうつらない？人類の生存に隠された本当の理由",
+  "theme": {
+    "title": "なぜあくびが伝染するのか？ — 生理学的な理由と社会的影響",
+    "angle": "あくびの社会的役割"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "あくびが伝染するのって、実は相手への共感力で決まるって知ってた？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなの？確かに家族にはよくうつるけど...",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は研究で、共感力テストで高得点の人は97%あくびが伝染したの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "すごい！じゃあ冷たい人にはうつらないってこと？",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！これは人類が集団で生き延びるための進化の証拠なのよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしく！もっと詳しい話は関連動画でチェック！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "あくびが伝染するのって、実は相手への共感力で決まるって知ってた？家族や友達にはうつりやすいのに、嫌いな人にはうつらない経験、ない？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "あ、それすごく分かる！確かに仲の良い友達といるとあくびがうつりまくるけど、苦手な先輩の前ではあんまり...",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回は、あくびの伝染に隠された人類進化の秘密と、なぜ人によって伝染するかしないかが決まるのか、科学的に徹底解明するよ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "面白そう！あくびって単純に眠いだけじゃないんだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！実はあくびの伝染は、人間の社会性を測る重要な指標として、心理学や神経科学で注目されているの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へー、あくびがそんなに深い意味を持ってるなんて思わなかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず基本から説明するね。あくびの伝染は「伝染性あくび」と呼ばれて、他人のあくびを見たり聞いたりすると無意識に自分もあくびしてしまう現象よ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに、あくびって見ただけでうつるもんね。テレビであくびしてる人を見ても出ちゃう時がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうそう！面白いのは、この現象は人間だけじゃなくて、チンパンジー、ボノボ、オランウータンなどの類人猿でも確認されているの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "動物にもあるんだ！じゃあ結構古い機能なのかな？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにその通り！進化的に見ると、少なくとも1300万年前の共通祖先から受け継がれている可能性が高いとされているわ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "1300万年！そんなに古いなんて驚きだよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "でも不思議なのは、なぜこんな「無駄」に見える行動が進化の過程で残り続けたかってことなの。ここに重要な意味が隠されているのよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに、生存に必要ないなら淘汰されそうなのに...何か理由があるんだね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "脳科学的に見ると、あくびの伝染には「ミラーニューロン」という特別な神経細胞が関わっているの。この細胞は他人の行動を見て、自分も同じ行動をとろうとする働きがあるわ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ミラーニューロン？鏡みたいに相手を真似する神経があるってこと？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！1990年代にイタリアの研究チームが発見した神経細胞で、他人の動作を見るだけで、自分がその動作をしているかのように反応するのよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "すごい発見だね！じゃあこのミラーニューロンがあくびの伝染を起こしてるの？",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "正確には、ミラーニューロンシステムと「共感」に関わる脳領域が連携して働くの。特に前頭前皮質と側頭頭頂接合部という部分が重要な役割を果たしているわ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "脳の色んな部分が協力してるんだね。でも、なんで共感が関係するの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここからが本当に面白い部分よ！2008年のコネチカット大学の研究で、共感力テストで高得点を取った人は97%の確率であくびが伝染したの。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "97%！ほぼ確実じゃん！じゃあ共感力が低い人は？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "共感力が低いグループでは、伝染率はわずか33%だったの。つまり、相手への共感力が高いほど、あくびが伝染しやすいという明確な関係があることが分かったのよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "すごい差だね！でもなんで共感力とあくびが関係してるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "これは「感情的伝染」という現象の一部なの。人間は無意識のうちに相手の感情や状態を読み取って、自分も同じ状態になろうとする傾向があるのよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "あー、確かに悲しい人を見ると自分も悲しくなったり、笑ってる人を見ると楽しくなったりするもんね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにそれ！あくびの伝染も同じメカニズムで、相手の「疲労」や「リラックス状態」を無意識に感じ取って、自分も同じ状態になろうとしているの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど！だから仲の良い人とか家族にはうつりやすいんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！2011年のピサ大学の研究では、家族間でのあくび伝染率は約50%、友人間では約30%、知らない人同士では約20%という結果が出ているわ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "関係が近いほど伝染しやすいんだ！数字で見ると分かりやすいね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに驚くべきことに、この現象は生後4-5歳頃から現れ始めて、年齢とともに強くなっていくの。つまり、社会性が発達するにつれて伝染しやすくなるのよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "子供の頃からあるんだ！でも最初はそんなに強くないのか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は、自閉症スペクトラム障害の人はあくびの伝染が起こりにくいという研究結果もあるの。これは共感能力と密接に関係していることの証拠とされているわ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "そうなんだ...あくびの伝染って、人とのつながりを測るバロメーターみたいなものなのかな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにその通り！ここで面白い歴史的な話をするね。古代ギリシャの医師ヒポクラテスは、紀元前400年頃にあくびについて「悪い空気を吐き出す行為」と記録しているの。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "2400年も前から観察されてたんだ！昔の人も気になってたのね。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "中世ヨーロッパでは、あくびは「悪魔が口から入り込む隙を与える」と信じられていて、あくびをする時は十字を切る習慣があったのよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へー！昔は迷信深かったんだね。でも現代の科学で本当の理由が分かってよかった。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "19世紀になって、フランスの神経学者デュシェンヌが初めて「あくびの伝染」を科学的に記録したの。彼は「同情的あくび」と呼んでいたわ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "「同情的あくび」って表現、すごく的確だね！まさに共感から生まれる現象だもん。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "20世紀後半になって、動物行動学者のニコ・ティンバーゲンがチンパンジーでも同様の現象を発見して、これが人間特有ではないことが分かったの。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "動物の研究からも人間のことが分かるなんて、科学って面白いね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "さて、ここからは実生活でのあくび伝染の活用法を教えるね！まず、相手との関係性を測るバロメーターとして使えるの。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "おお、実用的！どういうこと？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "例えば、初対面の人や仕事相手があなたのあくびに反応するかで、その人があなたに親近感を持っているかが分かるの。反応が早いほど好意的よ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど！でもわざとあくびするのは失礼かも...",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "もちろん故意にやるのはダメよ！でも自然に出たあくびの反応を観察することで、相手との距離感を測る参考にはできるわね。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに！あと、家族や恋人との絆の深さも分かりそうだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！カップルの研究では、交際期間が長いほどお互いのあくびに反応しやすくなるという結果も出ているの。愛情のバロメーターとも言えるわね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ロマンチック！あくびで愛を測るなんて、詩人が聞いたらびっくりしそう。",
+      "expression": "laugh",
+      "mood": "funny"
+    },
+    {
+      "speaker": "理子",
+      "text": "会議や授業であくびが伝染し始めたら、それは全員が疲労やストレスを共有している証拠。休憩のタイミングを知らせるサインとしても使えるわよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それは実用的！あくびの連鎖が始まったら「みんな疲れてるから休憩しよう」って提案できるね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "最後に、あくびの伝染を通じて人類の進化を考えてみましょう。これは群れの同期を取るための重要なコミュニケーション手段だったと考えられているの。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "同期？どういうこと？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "原始時代、群れの一人が疲労を感じてあくびをすると、それが伝染して全員が同じタイミングで休息を取る。これにより群れ全体の行動が統一されたのよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "すごい！あくびが群れの生存戦略だったなんて...人間って本当に社会的な動物なんだね。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！現代でも、私たちは無意識のうちにこの古い本能を使って、お互いの状態を感じ取り、共感し合っているのよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "あくびひとつでこんなに深い話になるなんて思わなかった！日常の何気ない行動にも、長い進化の歴史が隠されてるんだね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "まとめると、あくびの伝染は単なる生理現象じゃなくて、共感力と社会性を示す重要なサイン。人類が集団で生き延びるために進化させた絆の証なのよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "今度あくびがうつったら、「あ、この人と絆が深まってる」って思えそう！科学って日常を豊かにしてくれるね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は「なぜ笑いも伝染するのか？」について、脳科学と心理学の最新研究から解説するよ。人間の感情伝染のメカニズムをさらに深掘りしていくからね！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "おお、それも気になる！笑いの伝染も深い理由がありそうだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回の動画が面白かったら高評価とチャンネル登録をお願いします！みんなで科学の面白さを共有していきましょう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "日常の疑問を科学で解き明かすって本当に楽しいね！また次回も一緒に学ぼう！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "あくびの伝染には",
+      "隠された法則があった！"
+    ],
+    "subtitle": "共感力が高い人ほど...",
+    "tagline": "人類の進化の秘密"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1779350630_6462",
+    "blind_eval": {
+      "winner": "A",
+      "winner_model": "claude",
+      "reason": "シナリオAは「共感力テストで高得点の人は97%あくびが伝染」という具体的数値や「なぜあの人にはうつるのにこの人にはうつらない？」という強力なフックで視聴者の関心を強く引きつけている。シナリオBは一般的な説明に留まり、視聴維持力で劣る。",
+      "scores_a": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 8,
+        "cta_effectiveness": 6,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "scores_b": {
+        "hook_strength": 5,
+        "specificity": 6,
+        "pacing": 6,
+        "cta_effectiveness": 7,
+        "wording_quality": 6,
+        "overall": 6
+      },
+      "mapping": {
+        "A": "claude",
+        "B": "gpt"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "あくびは伝染する!? 意外すぎるそのメカニズムとは?"
+      },
+      "claude": {
+        "title": "なぜあくびが『あの人』にうつるのに『この人』にはうつらない？人類の生存に隠された本当の理由"
+      }
+    }
+  }
+}

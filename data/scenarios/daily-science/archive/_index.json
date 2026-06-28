@@ -1,5 +1,481 @@
 [
   {
+    "file": "daily-science_20260628_080722_scenario.md",
+    "title": "蛍光灯の下だと肌が青白く見える。あれ、実は目が『騙されている』だけって知ってた？",
+    "video_title": "【ゆっくり解説】蛍光灯の下で肌が青白く見える本当の理由Ra値と目の色補正の謎「蛍光灯の下だと肌が青白く見える。あれ、実は目が『騙されている』だけって知ってた？」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ蛍光灯の下だと肌が青白く見えるのか？ — 光の『演色性』と目の色補正の仕組み",
+      "angle": "信号の色名シリーズの発展として、今度は『光源の種類による色の見え方の歪み』にフォーカス。演色評価数（Ra）という指標を使いながら、スマホカメラのホワイトバランスとも絡めて解説"
+    },
+    "generated_at": "2026-06-28T08:07:22.670621Z",
+    "prompt_hash": "49dbdcc66054",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1782607539_20260628_004539_scenario.md",
+    "title": "同じ部屋にいるのに自分だけ寒い——その『体感温度のズレ』を生み出す5つの正体",
+    "video_title": "同じ部屋にいるのに自分だけ寒い——その『体感温度のズレ』を生み出す5つの正体",
+    "prefix": "daily-science_short_1782607539",
+    "theme": {
+      "title": "なぜ同じ部屋にいるのに『自分だけ寒い』と感じるのか？ — 体感温度を左右する5つの隠れた要因",
+      "angle": "気温は同じなのに体感が人によって大きく違う理由を、筋肉量・血流・風速・湿度・代謝の観点から解説。毎日の生活で感じる違和感を科学で一気に説明する"
+    },
+    "generated_at": "2026-06-28T00:45:39.539848Z",
+    "prompt_hash": "21d0082cc429",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782605290_20260628_000810_scenario.md",
+    "title": "同じ部屋なのに自分だけ寒い…その『差』を生み出している5つの隠れた正体",
+    "video_title": "同じ部屋なのに自分だけ寒い…その『差』を生み出している5つの隠れた正体",
+    "prefix": "daily-science_short_1782605290",
+    "theme": {
+      "title": "なぜ同じ部屋にいるのに『自分だけ寒い』と感じるのか？ — 体感温度を左右する5つの隠れた要因",
+      "angle": "気温は同じなのに体感が人によって大きく違う理由を、筋肉量・血流・風速・湿度・代謝の観点から解説。毎日の生活で感じる違和感を科学で一気に説明する"
+    },
+    "generated_at": "2026-06-28T00:08:10.841431Z",
+    "prompt_hash": "21d0082cc429",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260627_220725_scenario.md",
+    "title": "あなたの隣の人があくびをした。うつった？うつらなかった？——その0.3秒の差が「ある能力」の高さを丸裸にする",
+    "video_title": "【ゆっくり解説】あくびが「うつる人」と「うつらない人」の決定的な差共感力が高いほど止められない——脳の秘密「あなたの隣の人があくびをした。うつった？うつらなかった？——その0.3秒の差が「ある能力」の高さを丸裸にする」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜあくびは『うつる』のか？ — 脳の共感回路が引き起こす連鎖反応の謎",
+      "angle": "あくびの伝染を「ミラーニューロン」と「共感性の進化的意味」から解説。動物実験データも交えて、なぜ共感力が高い人ほどうつりやすいのかという意外な事実に切り込む"
+    },
+    "generated_at": "2026-06-27T22:07:25.799573Z",
+    "prompt_hash": "60ee10c05684",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_20260627_080721_scenario.md",
+    "title": "新しいノートを前にするとなぜか手が止まる——脳が『もったいない』と叫ぶ本当の理由",
+    "video_title": "【ゆっくり解説】新品ノートが使えない…脳のせいだった！？「新しいノートを前にするとなぜか手が止まる——脳が『もったいない』と叫ぶ本当の理由」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ新品のノートに書くとき緊張するのか？ — 完璧主義と脳の「損失回避バイアス」",
+      "angle": "新しいノート・手帳を前にした「もったいなくて使えない」心理を、プロスペクト理論と前頭前野の意思決定から科学的に解説"
+    },
+    "generated_at": "2026-06-27T08:07:21.404216Z",
+    "prompt_hash": "6d3d3c5e2bb2",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1782521481_20260627_005121_scenario.md",
+    "title": "本を読むと必ず眠くなる人が知らない、脳の『省エネモード』の正体",
+    "video_title": "本を読むと必ず眠くなる人が知らない、脳の『省エネモード』の正体",
+    "prefix": "daily-science_short_1782521481",
+    "theme": {
+      "title": "なぜ本を読むと眠くなるのか？ — 「活字と覚醒レベル」の脳科学",
+      "angle": "読書時の脳の処理モードが副交感神経を優位にするメカニズムを解説。「眠くなるのは集中の証拠？」という意外な反転角度で視聴者を引き込む"
+    },
+    "generated_at": "2026-06-27T00:51:21.929645Z",
+    "prompt_hash": "8a4124ab3499",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782519270_20260627_001430_scenario.md",
+    "title": "本を読むと必ず眠くなる人へ — 実はあなたの脳が『ある状態』に入っているだけかもしれない",
+    "video_title": "本を読むと必ず眠くなる人へ — 実はあなたの脳が『ある状態』に入っているだけかもしれない",
+    "prefix": "daily-science_short_1782519270",
+    "theme": {
+      "title": "なぜ本を読むと眠くなるのか？ — 「活字と覚醒レベル」の脳科学",
+      "angle": "読書時の脳の処理モードが副交感神経を優位にするメカニズムを解説。「眠くなるのは集中の証拠？」という意外な反転角度で視聴者を引き込む"
+    },
+    "generated_at": "2026-06-27T00:14:30.982718Z",
+    "prompt_hash": "8a4124ab3499",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260626_220649_scenario.md",
+    "title": "なぜ端っこだけ熱い？電子レンジの『中心が冷たい』現象、実は物理の罠だった",
+    "video_title": "【ゆっくり解説】中心が冷たい理由定在波の罠！「なぜ端っこだけ熱い？電子レンジの『中心が冷たい』現象、実は物理の罠だった」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ電子レンジで温めると端だけ熱くなるのか？ — マイクロ波の『定在波』の謎",
+      "angle": "マイクロ波の定在波パターンが生む加熱ムラを図解。回転皿の科学的意味と「なぜ中心が冷たいのか」という日常の疑問を解消"
+    },
+    "generated_at": "2026-06-26T22:06:49.438208Z",
+    "prompt_hash": "6629f9916113",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1782480780_20260626_133300_scenario.md",
+    "title": "信号の『青』が実は緑なのに、なぜ日本人だけ青と呼び続けるのか？",
+    "video_title": "信号の『青』が実は緑なのに、なぜ日本人だけ青と呼び続けるのか？",
+    "prefix": "daily-science_short_1782480780",
+    "theme": {
+      "title": "なぜ信号の『青』は実際には緑なのに青と呼ぶのか？ — 色名と認知の歴史的ギャップ",
+      "angle": "日本語の色彩語の歴史（青・緑の分化）と脳の色カテゴリ認知を組み合わせ、言語が知覚を変えるという意外な切り口で解説"
+    },
+    "generated_at": "2026-06-26T13:33:00.668547Z",
+    "prompt_hash": "894a3defa47b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "ds_short_1782479100_20260626_130500_scenario.md",
+    "title": "信号の『青』、実は緑なのになぜ『青』と呼ぶのか？日本語だけに起きた不思議な色の歴史",
+    "video_title": "信号の『青』、実は緑なのになぜ『青』と呼ぶのか？日本語だけに起きた不思議な色の歴史",
+    "prefix": "ds_short_1782479100",
+    "theme": {
+      "title": "なぜ信号の『青』は実際には緑なのに青と呼ぶのか？ — 色名と認知の歴史的ギャップ",
+      "angle": "日本語の色彩語の歴史（青・緑の分化）と脳の色カテゴリ認知を組み合わせ、言語が知覚を変えるという意外な切り口で解説"
+    },
+    "generated_at": "2026-06-26T13:05:00.984047Z",
+    "prompt_hash": "894a3defa47b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260625_080702_scenario.md",
+    "title": "冷蔵庫の上段、なぜか全然冷えてない…その『不思議な理由』が意外すぎた",
+    "video_title": "【ゆっくり解説】上段に入れると腐る？冷気は『落ちる』のに…「冷蔵庫の上段、なぜか全然冷えてない…その『不思議な理由』が意外すぎた」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ冷蔵庫を開けると『冷気が下に落ちる』のか？ — 冷気と空気密度の意外な関係",
+      "angle": "冷気の対流と空気密度の差を可視化。「冷蔵庫の上段は冷えにくい」という実体験と結びつけ、食品の正しい置き場所も提示"
+    },
+    "generated_at": "2026-06-25T08:07:02.791233Z",
+    "prompt_hash": "031390e65918",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1782349793_20260625_010953_scenario.md",
+    "title": "ドアが閉まる直前に飛び込んでも間に合う…エレベーターが『あなた』を待つ本当の理由",
+    "video_title": "ドアが閉まる直前に飛び込んでも間に合う…エレベーターが『あなた』を待つ本当の理由",
+    "prefix": "daily-science_short_1782349793",
+    "theme": {
+      "title": "なぜエレベーターのドアが閉まる直前に乗り込むと間に合うのか？ — センサーの「待機判断」の仕組み",
+      "angle": "赤外線センサーと制御プログラムの「閾値設計」を日常の乗り込み体験から解説。毎日乗る乗り物の知られざる設計思想"
+    },
+    "generated_at": "2026-06-25T01:09:53.969329Z",
+    "prompt_hash": "d2d153ce55da",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782347566_20260625_003246_scenario.md",
+    "title": "ドアが閉まりかけても間に合う理由、実はエレベーターが『わざと』待っていた",
+    "video_title": "ドアが閉まりかけても間に合う理由、実はエレベーターが『わざと』待っていた",
+    "prefix": "daily-science_short_1782347566",
+    "theme": {
+      "title": "なぜエレベーターのドアが閉まる直前に乗り込むと間に合うのか？ — センサーの「待機判断」の仕組み",
+      "angle": "赤外線センサーと制御プログラムの「閾値設計」を日常の乗り込み体験から解説。毎日乗る乗り物の知られざる設計思想"
+    },
+    "generated_at": "2026-06-25T00:32:46.224439Z",
+    "prompt_hash": "d2d153ce55da",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260624_220642_scenario.md",
+    "title": "テスト前夜に必死で覚えたのに、なぜか翌朝には消えている『あの感覚』の正体",
+    "video_title": "【ゆっくり解説】翌朝に消える記憶脳が捨てている？「テスト前夜に必死で覚えたのに、なぜか翌朝には消えている『あの感覚』の正体」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ暗記した内容が翌朝には消えているのか？ — 記憶の「固定化」に失敗する理由",
+      "angle": "海馬の記憶固定化（メモリコンソリデーション）と睡眠の質・タイミングの関係を具体的な勉強シーンで解説"
+    },
+    "generated_at": "2026-06-24T22:06:42.543208Z",
+    "prompt_hash": "68537f5f27e6",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_20260624_080717_scenario.md",
+    "title": "紙で指を切ると「なぜか」あんなに痛い — 小さい傷に隠された指先の秘密",
+    "video_title": "【ゆっくり解説】なぜ紙の切り傷はあんなに激痛なの？「紙で指を切ると「なぜか」あんなに痛い — 小さい傷に隠された指先の秘密」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ紙で手を切るとあんなに痛いのか？ — 指先の痛覚密度が高い本当の理由",
+      "angle": "指先の痛覚受容体密度が体の中でトップクラスである理由を進化的観点で解説。「小さい傷なのに激痛」という身近な違和感を科学する"
+    },
+    "generated_at": "2026-06-24T08:07:17.221275Z",
+    "prompt_hash": "743d7b25f758",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1782262040_20260624_004720_scenario.md",
+    "title": "集中すればするほど肩が壊れていく — 脳が出す『謎の筋緊張命令』の正体とは",
+    "video_title": "集中すればするほど肩が壊れていく — 脳が出す『謎の筋緊張命令』の正体とは",
+    "prefix": "daily-science_short_1782262040",
+    "theme": {
+      "title": "なぜ集中しているときに肩が凝るのか？ — 脳の「無意識の筋緊張」命令の謎",
+      "angle": "認知負荷と交感神経が肩の筋肉を過緊張させるメカニズムを、スマホ・PC作業の具体場面と結びつけて解説"
+    },
+    "generated_at": "2026-06-24T00:47:20.379855Z",
+    "prompt_hash": "b4f73d9bd985",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782259729_20260624_000849_scenario.md",
+    "title": "集中すると必ず肩が凝る——脳が無意識に筋肉を『固める』命令を出している本当の理由",
+    "video_title": "集中すると必ず肩が凝る——脳が無意識に筋肉を『固める』命令を出している本当の理由",
+    "prefix": "daily-science_short_1782259729",
+    "theme": {
+      "title": "なぜ集中しているときに肩が凝るのか？ — 脳の「無意識の筋緊張」命令の謎",
+      "angle": "認知負荷と交感神経が肩の筋肉を過緊張させるメカニズムを、スマホ・PC作業の具体場面と結びつけて解説"
+    },
+    "generated_at": "2026-06-24T00:08:49.403880Z",
+    "prompt_hash": "b4f73d9bd985",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260623_220638_scenario.md",
+    "title": "毎朝あの「体がドロドロする感覚」、実は脳がまだ眠ったまま動いてる証拠だった",
+    "video_title": "【ゆっくり解説】脳が「まだ寝てる」状態であなたは動いている「毎朝あの「体がドロドロする感覚」、実は脳がまだ眠ったまま動いてる証拠だった」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ寝起きに体がだるいのか？ — 起床直後の「睡眠慣性」を科学する",
+      "angle": "睡眠慣性（Sleep Inertia）というまだ一般認知度が低い概念を軸に、朝のだるさと脳の覚醒プロセスを解説"
+    },
+    "generated_at": "2026-06-23T22:06:38.569009Z",
+    "prompt_hash": "31e7cb76bbec",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_20260623_093239_scenario.md",
+    "title": "耳に水が入ったとき、なぜかずっと抜けないのには『ある力』が関係していた",
+    "video_title": "【ゆっくり解説】なぜ水は抜けない？表面張力の罠「耳に水が入ったとき、なぜかずっと抜けないのには『ある力』が関係していた」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ耳に水が入ったときあの不快感が続くのか？ — 内耳と表面張力の攻防",
+      "angle": "水が鼓膜付近に留まるのは表面張力のせいという切り口で、耳の構造と感覚神経を図解。競合未着手の感覚器テーマ"
+    },
+    "generated_at": "2026-06-23T09:32:39.102671Z",
+    "prompt_hash": "b7aa46a150e2",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1782175910_20260623_005150_scenario.md",
+    "title": "なぜしゃっくりだけ「自分の意志」で止められないのか？横隔膜が暴走する本当の理由",
+    "video_title": "なぜしゃっくりだけ「自分の意志」で止められないのか？横隔膜が暴走する本当の理由",
+    "prefix": "daily-science_short_1782175910",
+    "theme": {
+      "title": "なぜしゃっくりは止まらなくなるのか？ — 横隔膜が暴走するメカニズム",
+      "angle": "横隔膜の反射弓と迷走神経の関係を日常エピソードで解説。「止め方」の科学的根拠も検証し視聴者の体験と直結させる"
+    },
+    "generated_at": "2026-06-23T00:51:50.489268Z",
+    "prompt_hash": "99ad10194cf8",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782173681_20260623_001441_scenario.md",
+    "title": "なぜしゃっくりだけ「自分の意志」で止められないのか？横隔膜が暴走する本当の理由",
+    "video_title": "なぜしゃっくりだけ「自分の意志」で止められないのか？横隔膜が暴走する本当の理由",
+    "prefix": "daily-science_short_1782173681",
+    "theme": {
+      "title": "なぜしゃっくりは止まらなくなるのか？ — 横隔膜が暴走するメカニズム",
+      "angle": "横隔膜の反射弓と迷走神経の関係を日常エピソードで解説。「止め方」の科学的根拠も検証し視聴者の体験と直結させる"
+    },
+    "generated_at": "2026-06-23T00:14:41.815305Z",
+    "prompt_hash": "99ad10194cf8",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "ds_short_1782172534_20260622_235534_scenario.md",
+    "title": "しゃっくりって、なぜか自分の意志じゃ止められないの？横隔膜が『暴走』する本当の理由",
+    "video_title": "しゃっくりって、なぜか自分の意志じゃ止められないの？横隔膜が『暴走』する本当の理由",
+    "prefix": "ds_short_1782172534",
+    "theme": {
+      "title": "なぜしゃっくりは止まらなくなるのか？ — 横隔膜が暴走するメカニズム",
+      "angle": "横隔膜の反射弓と迷走神経の関係を日常エピソードで解説。「止め方」の科学的根拠も検証し視聴者の体験と直結させる"
+    },
+    "generated_at": "2026-06-22T23:55:34.480064Z",
+    "prompt_hash": "99ad10194cf8",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260622_080637_scenario.md",
+    "title": "アイスを食べるたびに頭がキーンとするのに、なぜ100年以上『原因不明』だったのか",
+    "video_title": "【ゆっくり解説】100年以上原因不明だった「アイスを食べるたびに頭がキーンとするのに、なぜ100年以上『原因不明』だったのか」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "アイスで頭がキーンとする現象が長年解明されていなかった理由",
+      "angle": ""
+    },
+    "generated_at": "2026-06-22T08:06:37.695527Z",
+    "prompt_hash": "efb36ed019a8",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1782089909_20260622_005829_scenario.md",
+    "title": "アイスを食べると頭がキーンとするのに、なぜ100年以上『原因不明』だったのか",
+    "video_title": "アイスを食べると頭がキーンとするのに、なぜ100年以上『原因不明』だったのか",
+    "prefix": "daily-science_short_1782089909",
+    "theme": {
+      "title": "アイスで頭がキーンとする現象が長年解明されていなかった理由",
+      "angle": ""
+    },
+    "generated_at": "2026-06-22T00:58:29.451785Z",
+    "prompt_hash": "efb36ed019a8",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782087644_20260622_002044_scenario.md",
+    "title": "アイスを食べると頭がキーンとするのに、なぜ100年以上『謎のまま』だったのか",
+    "video_title": "アイスを食べると頭がキーンとするのに、なぜ100年以上『謎のまま』だったのか",
+    "prefix": "daily-science_short_1782087644",
+    "theme": {
+      "title": "アイスで頭がキーンとする現象が長年解明されていなかった理由",
+      "angle": ""
+    },
+    "generated_at": "2026-06-22T00:20:44.763433Z",
+    "prompt_hash": "efb36ed019a8",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260621_220642_scenario.md",
+    "title": "たった1秒で人類はどうなる？地球から酸素が消えた瞬間に起きる『本当のこと』",
+    "video_title": "【ゆっくり解説】酸素ゼロ、1秒間地球で何が起きる？「たった1秒で人類はどうなる？地球から酸素が消えた瞬間に起きる『本当のこと』」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "もし地球から1秒だけ酸素が消えたら何が起こるのか",
+      "angle": ""
+    },
+    "generated_at": "2026-06-21T22:06:42.658387Z",
+    "prompt_hash": "cc19844141ca",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1782003886_20260621_010446_scenario.md",
+    "title": "たった1秒なのに、なぜ地球はそこまで壊れるのか？酸素が消えた世界の本当の恐怖",
+    "video_title": "たった1秒なのに、なぜ地球はそこまで壊れるのか？酸素が消えた世界の本当の恐怖",
+    "prefix": "daily-science_short_1782003886",
+    "theme": {
+      "title": "もし地球から1秒だけ酸素が消えたら何が起こるのか",
+      "angle": ""
+    },
+    "generated_at": "2026-06-21T01:04:46.783356Z",
+    "prompt_hash": "cc19844141ca",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782001619_20260621_002659_scenario.md",
+    "title": "たった1秒で人類が終わる？地球から酸素が消えたら、実は『建物』が最初に崩れる理由",
+    "video_title": "たった1秒で人類が終わる？地球から酸素が消えたら、実は『建物』が最初に崩れる理由",
+    "prefix": "daily-science_short_1782001619",
+    "theme": {
+      "title": "もし地球から1秒だけ酸素が消えたら何が起こるのか",
+      "angle": ""
+    },
+    "generated_at": "2026-06-21T00:26:59.540162Z",
+    "prompt_hash": "cc19844141ca",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "ds_short_1781968672_20260620_151752_scenario.md",
+    "title": "満腹なのになぜかケーキだけ入る…あの「別腹」は本当に存在した",
+    "video_title": "満腹なのになぜかケーキだけ入る…あの「別腹」は本当に存在した",
+    "prefix": "ds_short_1781968672",
+    "theme": {
+      "title": "満腹でも「デザートは別腹」が入る本当の理由",
+      "angle": "お腹いっぱいなのに甘いものは食べられる「別腹」現象。脳の報酬系とオレキシンが胃の運動を促し、感覚特異性満腹感で同じ味に飽きても新しい味なら食欲が戻る仕組みを、リコとマコトがゆっくり解説"
+    },
+    "generated_at": "2026-06-20T15:17:52.945597Z",
+    "prompt_hash": "dea3f18282e8",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1781936013_20260620_061333_scenario.md",
+    "title": "もし地球から酸素が1秒だけ消えたら、あなたの体に何が起きるのか",
+    "video_title": "もし地球から酸素が1秒だけ消えたら、あなたの体に何が起きるのか",
+    "prefix": "daily-science_short_1781936013",
+    "theme": {
+      "title": "もし地球から1秒だけ酸素が消えたら何が起こるのか",
+      "angle": ""
+    },
+    "generated_at": "2026-06-20T06:13:33.380268Z",
+    "prompt_hash": "cc19844141ca",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1781926416_20260620_033336_scenario.md",
+    "title": "たった1秒で人類は終わる？地球から酸素が消えたら起こる『あの現象』が怖すぎる",
+    "video_title": "たった1秒で人類は終わる？地球から酸素が消えたら起こる『あの現象』が怖すぎる",
+    "prefix": "daily-science_short_1781926416",
+    "theme": {
+      "title": "もし地球から1秒だけ酸素が消えたら何が起こるのか",
+      "angle": ""
+    },
+    "generated_at": "2026-06-20T03:33:36.072426Z",
+    "prompt_hash": "cc19844141ca",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1781877387_20260619_135627_scenario.md",
+    "title": "もし地球から酸素が1秒だけ消えたら、あなたの体に何が起こるのか",
+    "video_title": "もし地球から酸素が1秒だけ消えたら、あなたの体に何が起こるのか",
+    "prefix": "daily-science_short_1781877387",
+    "theme": {
+      "title": "もし地球から1秒だけ酸素が消えたら何が起こるのか",
+      "angle": ""
+    },
+    "generated_at": "2026-06-19T13:56:27.715549Z",
+    "prompt_hash": "cc19844141ca",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1781828642_20260619_002402_scenario.md",
+    "title": "もし地球から酸素が1秒だけ消えたら、あなたの体に何が起きるのか",
+    "video_title": "もし地球から酸素が1秒だけ消えたら、あなたの体に何が起きるのか",
+    "prefix": "daily-science_short_1781828642",
+    "theme": {
+      "title": "もし地球から1秒だけ酸素が消えたら何が起こるのか",
+      "angle": ""
+    },
+    "generated_at": "2026-06-19T00:24:02.879773Z",
+    "prompt_hash": "cc19844141ca",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1781804650_20260618_174410_scenario.md",
+    "title": "たった1秒で人類が滅ぶ？地球から酸素が消えたら『あの瞬間』に何が起きるのか",
+    "video_title": "たった1秒で人類が滅ぶ？地球から酸素が消えたら『あの瞬間』に何が起きるのか",
+    "prefix": "daily-science_short_1781804650",
+    "theme": {
+      "title": "もし地球から1秒だけ酸素が消えたら何が起こるのか",
+      "angle": ""
+    },
+    "generated_at": "2026-06-18T17:44:10.545362Z",
+    "prompt_hash": "cc19844141ca",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
     "file": "daily-science_20260618_080641_scenario.md",
     "title": "暗い部屋でスマホを見ると目が悪くなる、その『本当の理由』が教科書に載っていない件",
     "video_title": "【ゆっくり解説】暗室スマホの真犯人はブルーライトじゃなかった「暗い部屋でスマホを見ると目が悪くなる、その『本当の理由』が教科書に載っていない件」",

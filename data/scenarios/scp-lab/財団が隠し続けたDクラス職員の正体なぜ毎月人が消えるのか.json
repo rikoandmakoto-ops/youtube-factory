@@ -1,0 +1,438 @@
+{
+  "title": "財団が隠し続けた『Dクラス職員』の正体——なぜ毎月、人が消えるのか",
+  "theme": {
+    "title": "Dクラス職員の真実",
+    "angle": "実験で消費される人員制度の闇と倫理問題"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団には毎月リセットされる人間がいる。それがDクラス職員だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "リセット……って、どういうこと？普通に辞めるってこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "違う。毎月末に処分される。財団の記録では年間数百人規模が『消える』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "数百人……それ、実験で死んだ人の数ってこと？嘘だろ……。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はそれを『消耗品』と分類している。倫理委員会の記録は[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしく！もっと怖い話は関連動画でチェックして。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団データベースから、また一つ流出した。今回の報告書には、財団が絶対に外部へ出したくなかった制度の話が書かれている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団の報告書って……それ、読んで大丈夫なやつ？なんか嫌な予感しかしないんだけど。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "大丈夫かどうかは、読み終わってから判断して。これは『Dクラス職員』と呼ばれる人間たちの話だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Dクラス……SCPの実験に使われる人たちのこと？名前は聞いたことあるけど、詳しくは知らない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の公式分類では、Dクラス職員は『異常存在との直接接触実験に使用される消耗可能な人的資源』と定義されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "消耗可能、という言葉の意味を、財団は本気でそのまま使っている。人間に対してだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……消耗可能って、ゲームのアイテムみたいな言い方じゃないか。人間なのに。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団内部での扱いは、まさにそれに近い。Dクラスは番号で管理され、名前ではなくD-XXXX形式のコードで呼ばれる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そしてここが重要だ。財団の標準プロトコルでは、Dクラス職員は毎月末に全員が処分されることになっている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……毎月末に、全員？実験が終わったら終わりってこと？それ、ただの……",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "言いたいことは分かる。財団の倫理委員会もこの制度に対して異議を唱えた記録が存在する。ただし、その記録の大部分は[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "都合の悪いことは消すってこと？倫理委員会が反対したって事実すら隠すの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団にとって、異常存在の収容と研究は人間の命より優先される。少なくとも、制度の設計はそうなっている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "では、Dクラスには誰が選ばれるのか。財団の公式見解では、重大犯罪の受刑者から徴募されるとされている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "受刑者か……まあ、それなら……いや、でも、それでも実験で死ぬのは別の話じゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。しかも、財団の内部告発に相当するいくつかの流出文書には、受刑者だけでなく一般市民が記憶処理を施されてDクラスに組み込まれた可能性が示唆されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "一般市民が……？ちょっと待って、それって普通に生活してた人が、気づいたら財団の実験室にいたってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その記録の信憑性については財団は否定も肯定もしていない。ただ、関連するファイルは軒並み[REDACTED]になっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "否定しないのが一番怖いんだよ……。もし本当なら、誰でも対象になり得るってことじゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際の実験記録を見てみよう。Dクラスは日々、SCP-173やSCP-096といった即死級のオブジェクトと同じ部屋に閉じ込められる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の実験ログには、D-9341が収容室に入室してから平均4.3秒で接触被害を受けたという記録が残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4.3秒……それって、入った瞬間ほぼ終わりじゃないか。逃げる間もない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実験によっては、Dクラスに事前情報が一切与えられない。何が待ち受けているか知らないまま、扉を開けさせられる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "知らないまま……それ、知っていたら入らないから、わざと教えないってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の実験設計書には『被験者の事前知識が行動に影響を与えるため、ブラインド条件を維持する』と明記されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……ブラインド条件って言葉が、こんなに冷たく聞こえたことないよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここからが、報告書の中で最も不気味な部分だ。Dクラス職員の中に、長期間生き残る個体が稀に存在する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生き残る人が……それは単純に運が良かったってこと？それとも何か特別な理由が？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。D-11424というコードの人物は、SCP-106との接触実験を含む47回の高リスク実験を生き延びた記録が残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "47回……SCP-106って、触れたものを腐らせる老人のやつだよね？それに47回接触して生きてるって、おかしくない？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の研究班はこの個体を精密検査したが、異常性は検出されなかったと報告している。なぜ生き延びたかは、記録上[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "検出されなかったのに、記録が消されてる……それ、何かまずいことが分かったから消したんじゃないの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その可能性は否定できない。財団が情報を消す理由は、常に二種類ある。知られたくないか、あるいは知らせることで被害が拡大するかだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "どっちにしても怖いじゃないか……。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Dクラス制度に関して、財団内部から倫理的異議を唱えた研究員の記録が一つ残っている。その研究員のコードはE-1887だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "E-1887は『Dクラス職員を人道的に扱うべき』という内部請願書を作成し、上層部に提出した。賛同者は23名いたと記録されている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "23人も賛成したんだ……財団の中にも、おかしいって思う人はいたんだね。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "請願提出から72時間後、E-1887の在籍記録は財団データベースから削除されている。23名の賛同者のうち19名も同様だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……え。抗議した人たちが消えたってこと？それって……財団に消された？",
+      "expression": "angry",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "在籍記録の削除理由は[REDACTED]だ。残り4名の行方については、財団のどのデータベースにも記録が存在しない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録が存在しない……正しいことを言った人間が、痕跡ごと消えるって、財団ってそういう組織なんだ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の目的はSCPの収容と研究だ。その目的のためなら、内部の人間でさえ例外ではない。これは財団が組織として機能するために必要なコストだと、上層部は判断している。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "コスト……人間がコストって言葉で片付けられてる。なんか、胃が痛くなってきた。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もう一つ、この報告書には重要な記述がある。毎月末の処分プロトコルだが、実際には全員が処分されているわけではないという情報だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "全員じゃない？じゃあ、生き残れる人もいるってこと？どうすれば……",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団にとって特に有用なデータを提供したDクラスは、特例として翌月も継続使用されることがある。ただし、その基準は非公開だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "有用なデータって……それって、もっと危険な実験に使われるってことじゃないの？生き残っても地獄じゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。生き残ったDクラスは、より高リスクのオブジェクトとの接触実験に優先的に割り当てられる傾向が報告書に記されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生き残るほど、もっとやばい目に遭う……どこにも逃げ場がない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に、この報告書が最も警告している点を伝える。財団は現在も世界各地でDクラス候補者を確保し続けている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の収容施設は世界に少なくとも数十カ所存在し、各施設で常時50名から200名規模のDクラスが運用されていると推定されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "数十カ所に、各200名……それって今この瞬間も、どこかで実験が行われてるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画を見ている今この瞬間も、そうだ。そして財団の徴募基準がどこまで拡大されているか、外部からは確認する方法がない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確認できない……それって、知らないうちに選ばれても分からないってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書の最後にこう書かれている。『Dクラス候補者の選定に関する詳細は、安全保障上の理由から[REDACTED]とする。財団は常に必要な人員を確保する能力を持つ』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……それ、脅しじゃないか。財団は必要なら誰でも連れていける、って言ってるみたいで。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の報告書はここまでだ。Dクラス制度の全貌は、財団が意図的に隠蔽し続けている。倫理委員会の記録も、内部告発者の記録も、全て[DATA EXPUNGED]の闇の中にある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が最も恐れるオブジェクトの一つ、SCP-001提言の中の『門番』について掘り下げる。財団の設立目的そのものに関わる、封印された記録だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-001……それ、財団の中でも最高機密扱いのやつだよね。絶対見る。でも今日の話、しばらく頭から離れそうにないよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録と高評価は、この報告書が広まることへの、せめてもの抵抗だ。もし財団に目をつけられたくなければ、そっとボタンを押して、静かにしていることだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "毎月末に『処分』される人間がいる",
+      "財団が絶対に公開しない人員制度の闇"
+    ],
+    "subtitle": "Dクラス職員制度の真実【財団機密報告書】",
+    "tagline": "あなたも明日、候補者になるかもしれない"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1781916097_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "財団が隠し続けた『Dクラス職員』の正体——なぜ毎月、人が消えるのか"
+      }
+    }
+  }
+}

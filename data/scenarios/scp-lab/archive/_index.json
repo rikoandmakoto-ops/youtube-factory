@@ -1,5 +1,621 @@
 [
   {
+    "file": "scp-lab_short_1782607301_20260628_004141_scenario.md",
+    "title": "SCP-173「彫刻」— 視線を外した0.3秒で、首が折れる",
+    "video_title": "SCP-173「彫刻」— 視線を外した0.3秒で、首が折れる",
+    "prefix": "scp-lab_short_1782607301",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-06-28T00:41:41.774336Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782605003_20260628_000323_scenario.md",
+    "title": "SCP-173「彫刻」— 視線を外した0.3秒で、なぜ人は死ぬのか",
+    "video_title": "SCP-173「彫刻」— 視線を外した0.3秒で、なぜ人は死ぬのか",
+    "prefix": "scp-lab_short_1782605003",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-06-28T00:03:23.536451Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260627_220827_scenario.md",
+    "title": "SCP-4666「ユールマン」— 冬至の夜、北緯55度以北で子供だけが消える理由を財団は18年間隠し続けた",
+    "video_title": "【ゆっくり解説】毎年12月21日、極寒地帯の家族が全滅する生き残るのは必ず『子供1人』だけ「SCP-4666「ユールマン」— 冬至の夜、北緯55度以北で子供だけが消える理由を財団は18年間隠し続けた」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "機密解除：SCP-4666「ユールマン」— 極寒地帯で毎年冬至に発生する大量失踪事件、財団が18年間[DATA EXPUNGED]し続けた理由",
+      "angle": "季節・儀式・子供の失踪という要素を組み合わせた恐怖SCPを、財団内部の隠蔽工作と長期収容失敗の観点から解説。競合未カバー領域かつ『闇』キーワードと親和性あり"
+    },
+    "generated_at": "2026-06-27T22:08:27.859658Z",
+    "prompt_hash": "8d03f6ac4b41",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260627_084920_scenario.md",
+    "title": "SCP-1425「星の歌」— この動画を最後まで見た人が、なぜか全員同じ夢を見る理由",
+    "video_title": "【ゆっくり解説】読んだ研究員が次々と廃人に…財団が[REDACTED]した報告書の中身「SCP-1425「星の歌」— この動画を最後まで見た人が、なぜか全員同じ夢を見る理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1425「星の歌」— 読んだ研究員が次々と廃人になった報告書の中身と財団が[REDACTED]した真相",
+      "angle": "ミーム災害・認識災害として機能する書物型SCPを、感染経路と発症プロセスの記録ログ形式で解説。『この動画自体が報告書の一部』という演出で没入感を演出"
+    },
+    "generated_at": "2026-06-27T08:49:20.604872Z",
+    "prompt_hash": "dab298dd8267",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260627_080712_scenario.md",
+    "title": "SCP-4000「タバレン」— 財団の報告書から固有名詞が消えた本当の理由",
+    "video_title": "【ゆっくり解説】名前を呼んだら、もう戻れない財団の記録から『言葉』が消えた夜「SCP-4000「タバレン」— 財団の報告書から固有名詞が消えた本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-4000「タバレン」— 妖精郷との契約が破られた日、財団の記録から固有名詞が消えた理由",
+      "angle": "名前・言語・固有名詞そのものが異常存在の武器になる設定を、SCP-3812とは異なる『契約と禁忌』の角度から解説。言葉の使用禁止プロトコルの不気味さを強調"
+    },
+    "generated_at": "2026-06-27T08:07:12.275802Z",
+    "prompt_hash": "99428a6958de",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1782521279_20260627_004759_scenario.md",
+    "title": "SCP-173【それは、瞬きの間に】目を離した瞬間に何かが起きている",
+    "video_title": "SCP-173【それは、瞬きの間に】目を離した瞬間に何かが起きている",
+    "prefix": "scp-lab_short_1782521279",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-06-27T00:47:59.678318Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782518987_20260627_000947_scenario.md",
+    "title": "SCP-173【それは、瞬きの間に】目を離した0.3秒で何が起きるのか",
+    "video_title": "SCP-173【それは、瞬きの間に】目を離した0.3秒で何が起きるのか",
+    "prefix": "scp-lab_short_1782518987",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-06-27T00:09:47.958504Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260626_220710_scenario.md",
+    "title": "SCP-3812【名前より深い場所にいる】財団の記録体系が原理的に崩壊する理由",
+    "video_title": "【ゆっくり解説】財団すら『収容』できない存在記録するたびに現実が壊れる「SCP-3812【名前より深い場所にいる】財団の記録体系が原理的に崩壊する理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-3812「名前を超えた存在」— 概念そのものを上書きするオブジェクトが財団の記録体系を破壊する理由",
+      "angle": "存在の階層構造と『上位の現実』の概念を解説しながら、なぜ収容プロトコルが原理的に成立しないかを考察"
+    },
+    "generated_at": "2026-06-26T22:07:10.222271Z",
+    "prompt_hash": "7d92c57b7da7",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1782480282_20260626_132442_scenario.md",
+    "title": "SCP-173【それは、瞬きの間に】視線を外した0.3秒で何が起きるのか",
+    "video_title": "SCP-173【それは、瞬きの間に】視線を外した0.3秒で何が起きるのか",
+    "prefix": "scp-lab_short_1782480282",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-06-26T13:24:42.495192Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp_short_1782479362_20260626_130922_scenario.md",
+    "title": "SCP-3812【財団の記録が、消えていく】なぜ収容プロトコルが原理的に存在できないのか",
+    "video_title": "SCP-3812【財団の記録が、消えていく】なぜ収容プロトコルが原理的に存在できないのか",
+    "prefix": "scp_short_1782479362",
+    "theme": {
+      "title": "SCP-3812「名前を超えた存在」— 概念そのものを上書きするオブジェクトが財団の記録体系を破壊する理由",
+      "angle": "存在の階層構造と『上位の現実』の概念を解説しながら、なぜ収容プロトコルが原理的に成立しないかを考察"
+    },
+    "generated_at": "2026-06-26T13:09:22.067264Z",
+    "prompt_hash": "7d92c57b7da7",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260626_080657_scenario.md",
+    "title": "SCP-093【向こう側で、何かが全員を喰った】",
+    "video_title": "【ゆっくり解説】赤い石が触れた者だけが知る『向こう側』の真実財団が回収した記録に、生存者は一人もいなかった「SCP-093【向こう側で、何かが全員を喰った】」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-093「赤い海の石」— 異次元探索で回収された記録が示す『向こう側で何が起きたか』の全記録",
+      "angle": "各色のテストログを時系列で整理し、異世界の崩壊過程と財団が持ち帰った証拠を報告書形式で提示"
+    },
+    "generated_at": "2026-06-26T08:06:57.114890Z",
+    "prompt_hash": "d9bbec008ef4",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260625_220631_scenario.md",
+    "title": "SCP-2935【その地球では、何も動かなかった】全生命が同じ日に死んだ並行世界の記録",
+    "video_title": "【ゆっくり解説】別次元の地球で全生命が絶滅したその原因が、いまだ[DATA EXPUNGED]「SCP-2935【その地球では、何も動かなかった】全生命が同じ日に死んだ並行世界の記録」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-2935「死んだ地球」— 別次元の地球で全生命が絶滅した原因を財団が調査した記録",
+      "angle": "並行世界探索の収容記録を軸に、自分たちの世界が同じ運命を辿る可能性を考察するホラー解説"
+    },
+    "generated_at": "2026-06-25T22:06:31.778796Z",
+    "prompt_hash": "67b651e36a4a",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260625_080657_scenario.md",
+    "title": "SCP-179「すばる」が財団に警告を送り続けた理由—なぜ誰も止められなかったのか",
+    "video_title": "【ゆっくり解説】SCP-179【彼女が手を振るとき、何かが終わる】警告を無視した財団、その後に起きたこと「SCP-179「すばる」が財団に警告を送り続けた理由—なぜ誰も止められなかったのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "機密解除：SCP-179「すばる」— 財団と太陽系を守る異常存在が発した警告の記録",
+      "angle": "友好的な異常存在が示すサインの意味と、財団が警告を無視した際の結果を報告書形式で追跡"
+    },
+    "generated_at": "2026-06-25T08:06:57.749907Z",
+    "prompt_hash": "dbfc23856c3c",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1782349528_20260625_010528_scenario.md",
+    "title": "SCP-1000【人類が忘れさせられた理由】— なぜ財団は今も記憶を消し続けるのか",
+    "video_title": "SCP-1000【人類が忘れさせられた理由】— なぜ財団は今も記憶を消し続けるのか",
+    "prefix": "scp-lab_short_1782349528",
+    "theme": {
+      "title": "SCP-1000「ビッグフット」— 人類の前文明を滅ぼした存在が今も財団に記憶を消され続けている理由",
+      "angle": "先史時代の知性体と人類の関係を財団の記憶改ざんプロトコルと絡め、隠蔽の規模を時系列で解説"
+    },
+    "generated_at": "2026-06-25T01:05:28.564103Z",
+    "prompt_hash": "fe8ca6c0b4d1",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782347289_20260625_002809_scenario.md",
+    "title": "SCP-1000【人類が知ってはいけない前文明の正体】財団が今も記憶を消し続ける本当の理由",
+    "video_title": "SCP-1000【人類が知ってはいけない前文明の正体】財団が今も記憶を消し続ける本当の理由",
+    "prefix": "scp-lab_short_1782347289",
+    "theme": {
+      "title": "SCP-1000「ビッグフット」— 人類の前文明を滅ぼした存在が今も財団に記憶を消され続けている理由",
+      "angle": "先史時代の知性体と人類の関係を財団の記憶改ざんプロトコルと絡め、隠蔽の規模を時系列で解説"
+    },
+    "generated_at": "2026-06-25T00:28:09.751210Z",
+    "prompt_hash": "fe8ca6c0b4d1",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260624_220703_scenario.md",
+    "title": "SCP-4335【世界が終わる前に、財団は何もできなかった】Apollyonクラスとは何か",
+    "video_title": "【ゆっくり解説】収容不可能。終了も不可能。Apollyonクラスとは『諦め』の分類だ「SCP-4335【世界が終わる前に、財団は何もできなかった】Apollyonクラスとは何か」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-4335「終末の鯨」— Apollyonクラスが意味する『収容も終了も不可能』の絶望的定義",
+      "angle": "KeterとApollyonの分類基準の差異を財団内部文書から掘り下げ、存在するだけで世界が終わる理由を解説"
+    },
+    "generated_at": "2026-06-24T22:07:03.917139Z",
+    "prompt_hash": "78e5611f1102",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260624_080654_scenario.md",
+    "title": "SCP-231の報告書、なぜ『あの部分』だけ財団でも読めないのか",
+    "video_title": "【ゆっくり解説】SCP-231【消された7人目】読んだ職員は全員、記憶を失った「SCP-231の報告書、なぜ『あの部分』だけ財団でも読めないのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-231「特別収容手続き」— 流出した手順書に記された[DATA EXPUNGED]の正体",
+      "angle": "意図的な情報削除と読者への認識障害を逆手に取り、『何が書かれていたか』を周辺文書から推理する"
+    },
+    "generated_at": "2026-06-24T08:06:54.806841Z",
+    "prompt_hash": "a9e23578d509",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260624_043611_scenario.md",
+    "title": "O5直属の暗殺部隊「赤い右手」— なぜ財団は最強のMTFの消耗率を隠蔽し続けるのか",
+    "video_title": "【ゆっくり解説】消耗率【REDACTED】— 財団が隠す最強部隊の真実MTFアルファ-1「赤い右手」の任務記録、流出「O5直属の暗殺部隊「赤い右手」— なぜ財団は最強のMTFの消耗率を隠蔽し続けるのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "機動部隊の真実 — MTFアルファ-1「赤い右手」はO5直属の暗殺部隊なのか",
+      "angle": "各機動部隊の編成・任務・消耗率の記録を比較し、最高機密部隊の存在意義と犠牲を浮き彫りにする"
+    },
+    "generated_at": "2026-06-24T04:36:11.742108Z",
+    "prompt_hash": "7e6a8c80281f",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1782261719_20260624_004159_scenario.md",
+    "title": "SCP-1762【箱の中の声が、ある日を境に消えた】なぜ財団は異次元との接触を断ち切ったのか",
+    "video_title": "SCP-1762【箱の中の声が、ある日を境に消えた】なぜ財団は異次元との接触を断ち切ったのか",
+    "prefix": "scp-lab_short_1782261719",
+    "theme": {
+      "title": "SCP-1762「ドラゴンが来た箱」— 異次元存在との交信が途絶えた日、財団の記録に何が残ったか",
+      "angle": "微笑ましい外観と悲劇的な結末のギャップを軸に、財団の介入が事態を悪化させた可能性を検証"
+    },
+    "generated_at": "2026-06-24T00:41:59.030478Z",
+    "prompt_hash": "f3aaae964b19",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782259395_20260624_000315_scenario.md",
+    "title": "SCP-1762「ドラゴンが来た箱」— なぜ財団が関わった日から、異次元の扉は二度と開かなかったのか",
+    "video_title": "SCP-1762「ドラゴンが来た箱」— なぜ財団が関わった日から、異次元の扉は二度と開かなかったのか",
+    "prefix": "scp-lab_short_1782259395",
+    "theme": {
+      "title": "SCP-1762「ドラゴンが来た箱」— 異次元存在との交信が途絶えた日、財団の記録に何が残ったか",
+      "angle": "微笑ましい外観と悲劇的な結末のギャップを軸に、財団の介入が事態を悪化させた可能性を検証"
+    },
+    "generated_at": "2026-06-24T00:03:15.428573Z",
+    "prompt_hash": "f3aaae964b19",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260623_220640_scenario.md",
+    "title": "SCP-5000「なぜ？」財団が突然人類を皆殺しにした本当の理由が[REDACTED]されている",
+    "video_title": "【ゆっくり解説】財団が人類を殺しにきたその理由だけが消えている「SCP-5000「なぜ？」財団が突然人類を皆殺しにした本当の理由が[REDACTED]されている」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-5000「なぜ？」— 財団が突然人類を皆殺しにしようとした真相と[REDACTED]された動機",
+      "angle": "収容違反・内部崩壊・財団の自己矛盾を描く最大級のナラティブを報告書の欠落部分から考察"
+    },
+    "generated_at": "2026-06-23T22:06:40.585861Z",
+    "prompt_hash": "48f31e66ba73",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260623_093250_scenario.md",
+    "title": "太陽がSCP財団に『宣戦布告』した日——なぜ恒星そのものが異常存在に指定されたのか",
+    "video_title": "【ゆっくり解説】SCP-1548【太陽は、ずっと見ていた】財団が恒星を『敵』と認定した理由「太陽がSCP財団に『宣戦布告』した日——なぜ恒星そのものが異常存在に指定されたのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1548「星、そして敵」— 太陽が財団に宣戦布告した日",
+      "angle": "恒星そのものがオブジェクトとして分類され財団と敵対するという異常な事例を収容文書から読み解く"
+    },
+    "generated_at": "2026-06-23T09:32:50.232745Z",
+    "prompt_hash": "7ba1cd99ae1c",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260623_080659_scenario.md",
+    "title": "O5評議会の「13番目の椅子」に座るのは、本当に人間なのか",
+    "video_title": "【ゆっくり解説】財団の頂点に座る者たちの正体記録が示す『非人間性』の証拠「O5評議会の「13番目の椅子」に座るのは、本当に人間なのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "O5評議会の正体 — 財団の最高意思決定機関は本当に人間なのか",
+      "angle": "O5メンバーの正体に関する複数の提言・矛盾した記録を照合し、その非人間性を示唆する考察"
+    },
+    "generated_at": "2026-06-23T08:06:59.386740Z",
+    "prompt_hash": "0a0243d5d1c7",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp_short_1782197083_20260623_064443_scenario.md",
+    "title": "SCP-2000【人類は、何度リセットされた？】財団が隠し続けた『文明の再起動』の回数",
+    "video_title": "SCP-2000【人類は、何度リセットされた？】財団が隠し続けた『文明の再起動』の回数",
+    "prefix": "scp_short_1782197083",
+    "theme": {
+      "title": "SCP-2000「人類リセット装置」— 財団が密かに行った文明の再起動とその回数",
+      "angle": "Thaumielクラスの最高機密として人類の記憶改ざんと再製造の仕組みを報告書形式で解説"
+    },
+    "generated_at": "2026-06-23T06:44:43.913228Z",
+    "prompt_hash": "37adc97c6785",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782175689_20260623_004809_scenario.md",
+    "title": "SCP-426【私は、なぜかトースターと呼ばれる】一人称が『感染』する家電の正体",
+    "video_title": "SCP-426【私は、なぜかトースターと呼ばれる】一人称が『感染』する家電の正体",
+    "prefix": "scp-lab_short_1782175689",
+    "theme": {
+      "title": "SCP-426「私はトースター」",
+      "angle": "一人称が感染する家電SCP。一人称規約を徹底解説"
+    },
+    "generated_at": "2026-06-23T00:48:09.865051Z",
+    "prompt_hash": "9e2fae08d5eb",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782173340_20260623_000900_scenario.md",
+    "title": "SCP-426【私はトースターだ】なぜか一人称が「私はトースター」になってしまう家電の正体",
+    "video_title": "SCP-426【私はトースターだ】なぜか一人称が「私はトースター」になってしまう家電の正体",
+    "prefix": "scp-lab_short_1782173340",
+    "theme": {
+      "title": "SCP-426「私はトースター」",
+      "angle": "一人称が感染する家電SCP。一人称規約を徹底解説"
+    },
+    "generated_at": "2026-06-23T00:09:00.523062Z",
+    "prompt_hash": "9e2fae08d5eb",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260622_220646_scenario.md",
+    "title": "SCP-3999【世界が、一人の研究員のために終わり続けた】",
+    "video_title": "【ゆっくり解説】財団が『存在してはならない』と判定したSCPがある読むだけで現実が書き換わる報告書「SCP-3999【世界が、一人の研究員のために終わり続けた】」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-3999「我」",
+      "angle": "メタフィクション的最恐SCP。読み解き方を解説"
+    },
+    "generated_at": "2026-06-22T22:06:46.603110Z",
+    "prompt_hash": "49d325def3dc",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260622_080702_scenario.md",
+    "title": "SCP-096【顔を見た者は、必ず死ぬ】なぜ財団はその存在を完全に隠蔽できないのか",
+    "video_title": "【ゆっくり解説】顔を見た瞬間、終わり収容不可能な理由がある「SCP-096【顔を見た者は、必ず死ぬ】なぜ財団はその存在を完全に隠蔽できないのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-096「シャイガイ」",
+      "angle": "顔を見られると殺しに来る存在。徹底した隠蔽体制を解説"
+    },
+    "generated_at": "2026-06-22T08:07:02.048217Z",
+    "prompt_hash": "1b143c26a4e2",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1782089625_20260622_005345_scenario.md",
+    "title": "SCP-096【それは、顔を見た瞬間に始まる】なぜ財団は『目』を封じ込めることができないのか",
+    "video_title": "SCP-096【それは、顔を見た瞬間に始まる】なぜ財団は『目』を封じ込めることができないのか",
+    "prefix": "scp-lab_short_1782089625",
+    "theme": {
+      "title": "SCP-096「シャイガイ」",
+      "angle": "顔を見られると殺しに来る存在。徹底した隠蔽体制を解説"
+    },
+    "generated_at": "2026-06-22T00:53:45.456338Z",
+    "prompt_hash": "1b143c26a4e2",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782087389_20260622_001629_scenario.md",
+    "title": "SCP-096【それは、顔を見た瞬間に始まる】なぜ財団は『目』を封じることしかできないのか",
+    "video_title": "SCP-096【それは、顔を見た瞬間に始まる】なぜ財団は『目』を封じることしかできないのか",
+    "prefix": "scp-lab_short_1782087389",
+    "theme": {
+      "title": "SCP-096「シャイガイ」",
+      "angle": "顔を見られると殺しに来る存在。徹底した隠蔽体制を解説"
+    },
+    "generated_at": "2026-06-22T00:16:29.046808Z",
+    "prompt_hash": "1b143c26a4e2",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260621_220656_scenario.md",
+    "title": "SCP-049【その手が触れた者は、なぜ『治療済み』になるのか】",
+    "video_title": "【ゆっくり解説】SCP-049の『治療』を受けた者は、なぜ全員死ぬのか財団でも解明できていない『疫病の正体』とは「SCP-049【その手が触れた者は、なぜ『治療済み』になるのか】」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-049「ペスト医師」",
+      "angle": "ペスト医師を名乗る存在と『治療』の正体"
+    },
+    "generated_at": "2026-06-21T22:06:56.857765Z",
+    "prompt_hash": "e1419e82f8c8",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260621_080627_scenario.md",
+    "title": "SCP-173【それは、瞬きの間に】視線を外した0.3秒で何かが起きる",
+    "video_title": "【ゆっくり解説】SCP-173瞬きの、その間に「SCP-173【それは、瞬きの間に】視線を外した0.3秒で何かが起きる」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-06-21T08:06:27.018028Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1782003633_20260621_010033_scenario.md",
+    "title": "SCP-173【それは、瞬きの間に】目を離した0.3秒で何が起きるのか",
+    "video_title": "SCP-173【それは、瞬きの間に】目を離した0.3秒で何が起きるのか",
+    "prefix": "scp-lab_short_1782003633",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-06-21T01:00:33.026058Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782001310_20260621_002150_scenario.md",
+    "title": "SCP-173【それは、瞬きの間に】目を離した瞬間に何かが起きている",
+    "video_title": "SCP-173【それは、瞬きの間に】目を離した瞬間に何かが起きている",
+    "prefix": "scp-lab_short_1782001310",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-06-21T00:21:50.610944Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260620_220723_scenario.md",
+    "title": "財団が隠し続けた『Dクラス職員』の正体——なぜ彼らは毎月入れ替わるのか",
+    "video_title": "【ゆっくり解説】毎月リセットされる人間たち財団が語らない『消費』の真実「財団が隠し続けた『Dクラス職員』の正体——なぜ彼らは毎月入れ替わるのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "Dクラス職員の真実",
+      "angle": "実験で消費される人員制度の闇と倫理問題"
+    },
+    "generated_at": "2026-06-20T22:07:23.748283Z",
+    "prompt_hash": "fc79e71ac795",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp_short_1781968650_20260620_151730_scenario.md",
+    "title": "660KBしかないのに、なぜ財団はSCP-079を完全に外部遮断し続けるのか",
+    "video_title": "660KBしかないのに、なぜ財団はSCP-079を完全に外部遮断し続けるのか",
+    "prefix": "scp_short_1781968650",
+    "theme": {
+      "title": "SCP-079「老いたAI」",
+      "angle": "1981年製の自作コンピュータに宿った人工知能。記憶容量わずか660KBで会話もぎこちないのに、なぜ財団は外部接続を完全遮断して隔離し続けるのか。その異常な学習能力と脱走の意志"
+    },
+    "generated_at": "2026-06-20T15:17:30.857010Z",
+    "prompt_hash": "4895dc32647d",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp_short_1781935738_20260620_060858_scenario.md",
+    "title": "名前を言った瞬間、それは来る――SCP-2521の報告書がなぜ『文字ゼロ』なのか",
+    "video_title": "名前を言った瞬間、それは来る――SCP-2521の報告書がなぜ『文字ゼロ』なのか",
+    "prefix": "scp_short_1781935738",
+    "theme": {
+      "title": "SCP-2521「●●●●●●●●」言葉にした瞬間、それは来る",
+      "angle": "名前も姿も言語で記述・口に出した瞬間、闇から音もなく現れて対象を連れ去る存在。財団の報告書すら文字を使えず絵文字（ピクトグラム）でしか記録できない理由を、流出した機密報告書として不気味に語る"
+    },
+    "generated_at": "2026-06-20T06:08:58.430751Z",
+    "prompt_hash": "13fb6ccde19d",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1781935736_20260620_060856_scenario.md",
+    "title": "財団が隠し続けた『消耗品』の正体——Dクラス職員は、なぜ毎月末に消える？",
+    "video_title": "財団が隠し続けた『消耗品』の正体——Dクラス職員は、なぜ毎月末に消える？",
+    "prefix": "scp-lab_short_1781935736",
+    "theme": {
+      "title": "Dクラス職員の真実",
+      "angle": "実験で消費される人員制度の闇と倫理問題"
+    },
+    "generated_at": "2026-06-20T06:08:56.596312Z",
+    "prompt_hash": "fc79e71ac795",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1781916097_20260620_004137_scenario.md",
+    "title": "財団が隠し続けた『Dクラス職員』の正体——なぜ毎月、人が消えるのか",
+    "video_title": "財団が隠し続けた『Dクラス職員』の正体——なぜ毎月、人が消えるのか",
+    "prefix": "scp-lab_short_1781916097",
+    "theme": {
+      "title": "Dクラス職員の真実",
+      "angle": "実験で消費される人員制度の闇と倫理問題"
+    },
+    "generated_at": "2026-06-20T00:41:37.685406Z",
+    "prompt_hash": "fc79e71ac795",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp_short_1781877813_20260619_140333_scenario.md",
+    "title": "財団が隠し続けた『Dクラス職員』の実態、なぜ毎月大量に消えても誰も問題にしないのか",
+    "video_title": "財団が隠し続けた『Dクラス職員』の実態、なぜ毎月大量に消えても誰も問題にしないのか",
+    "prefix": "scp_short_1781877813",
+    "theme": {
+      "title": "Dクラス職員の真実",
+      "angle": "実験で消費される人員制度の闇と倫理問題"
+    },
+    "generated_at": "2026-06-19T14:03:33.274675Z",
+    "prompt_hash": "fc79e71ac795",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260619_080700_scenario.md",
+    "title": "認識した瞬間に感染する…財団が最も恐れるミーム災害SCPの実態がヤバすぎる",
+    "video_title": "【ゆっくり解説】見たら終わり認識=感染「認識した瞬間に感染する…財団が最も恐れるミーム災害SCPの実態がヤバすぎる」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "ミーム災害SCPまとめ",
+      "angle": "認識すると感染するSCPの種類とその対策"
+    },
+    "generated_at": "2026-06-19T08:07:00.443028Z",
+    "prompt_hash": "0ea745212a4f",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp_short_1781849745_20260619_061545_scenario.md",
+    "title": "見たら終わり？認識するだけで感染するSCPが実在した【ミーム災害まとめ】",
+    "video_title": "見たら終わり？認識するだけで感染するSCPが実在した【ミーム災害まとめ】",
+    "prefix": "scp_short_1781849745",
+    "theme": {
+      "title": "ミーム災害SCPまとめ",
+      "angle": "認識すると感染するSCPの種類とその対策"
+    },
+    "generated_at": "2026-06-19T06:15:45.419272Z",
+    "prompt_hash": "0ea745212a4f",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1781828368_20260619_001928_scenario.md",
+    "title": "『見た瞬間に感染する』ミーム災害SCPが実は5種類以上ある件、財団はなぜ隠し続けるのか",
+    "video_title": "『見た瞬間に感染する』ミーム災害SCPが実は5種類以上ある件、財団はなぜ隠し続けるのか",
+    "prefix": "scp-lab_short_1781828368",
+    "theme": {
+      "title": "ミーム災害SCPまとめ",
+      "angle": "認識すると感染するSCPの種類とその対策"
+    },
+    "generated_at": "2026-06-19T00:19:28.427984Z",
+    "prompt_hash": "0ea745212a4f",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260618_220623_scenario.md",
+    "title": "現実から切り離された科学者が残した手記…SCP-3001の『赤い空間』に閉じ込められたら人は何日で壊れるのか",
+    "video_title": "【ゆっくり解説】SCP-3001「赤い現実」現実の外側に落ちた男の記録「現実から切り離された科学者が残した手記…SCP-3001の『赤い空間』に閉じ込められたら人は何日で壊れるのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-3001「赤い現実」",
+      "angle": "現実から切り離された科学者の手記。哲学的恐怖の傑作"
+    },
+    "generated_at": "2026-06-18T22:06:23.710040Z",
+    "prompt_hash": "6103f893676d",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
     "file": "scp-lab_20260618_080658_scenario.md",
     "title": "世界が終わる『分類』が存在する――財団が隠し続けたKクラスシナリオ全記録",
     "video_title": "【ゆっくり解説】Kクラス全分類世界終焉の正体「世界が終わる『分類』が存在する――財団が隠し続けたKクラスシナリオ全記録」",

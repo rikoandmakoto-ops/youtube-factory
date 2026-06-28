@@ -17,6 +17,7 @@ from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, field
 
 from .video_format import VideoFormat
+from .config_validation import validate_channel_config, ConfigIssue
 
 # ============================================================
 # Image acquisition mode
@@ -65,6 +66,7 @@ class ChannelProfile:
     voice_style: Dict[str, Any] = field(default_factory=dict)
     image_mode: str = DEFAULT_IMAGE_MODE
     image_collect: Dict[str, Any] = field(default_factory=dict)
+    tiktok: Dict[str, Any] = field(default_factory=dict)
     _raw: Dict = field(default_factory=dict, repr=False)
 
     # ── Pipeline integration helpers ──
@@ -208,7 +210,33 @@ class ChannelProfile:
             "{main_url}\n\n"
             "{original_description}",
         )
+        # 自動公開の投稿先。"youtube" / "tiktok" の組み合わせ。
+        ps.setdefault("publish_targets", ["youtube"])
         return ps
+
+    def get_tiktok_settings(self) -> Dict[str, Any]:
+        """TikTok 投稿のデフォルト設定（接続状態とは独立した投稿挙動）。
+
+        欠損時はサーバ側のデフォルトを返すので呼び出し側は安心してアクセスできる。
+        """
+        tt = dict(self.tiktok or {})
+        tt.setdefault("enabled", False)            # TikTok 投稿を使うか
+        tt.setdefault("privacy_level", "SELF_ONLY")  # 未審査アプリは SELF_ONLY 強制
+        tt.setdefault("disable_comment", False)
+        tt.setdefault("disable_duet", False)
+        tt.setdefault("disable_stitch", False)
+        tt.setdefault("extra_hashtags", [])        # YouTube タグに加えて付与
+        return tt
+
+    def wants_tiktok_post(self) -> bool:
+        """自動公開時に TikTok へも投稿すべきか。"""
+        targets = self.get_publish_settings().get("publish_targets") or []
+        return "tiktok" in targets and self.get_tiktok_settings().get("enabled", False)
+
+    def wants_youtube_post(self) -> bool:
+        """自動公開時に YouTube へ投稿すべきか（デフォルト True）。"""
+        targets = self.get_publish_settings().get("publish_targets") or ["youtube"]
+        return "youtube" in targets
 
     def to_dict(self) -> Dict:
         """API用JSON変換"""
@@ -250,6 +278,7 @@ class ChannelProfile:
                 "performance_threshold": vf.analytics.performance_threshold,
                 "auto_adjust": vf.analytics.auto_adjust,
             },
+            "tiktok": self.get_tiktok_settings(),
         }
 
 
@@ -270,11 +299,13 @@ class ChannelManager:
             # backend/channels/ → ../../data/channels/
             self._data_dir = Path(__file__).parent.parent.parent / "data" / "channels"
         self._channels: Dict[str, ChannelProfile] = {}
+        self._config_issues: List[ConfigIssue] = []
         self.reload()
 
     def reload(self):
         """チャンネルJSONを再読み込み"""
         self._channels.clear()
+        self._config_issues = []
         if not self._data_dir.exists():
             print(f"⚠️ Channel data dir not found: {self._data_dir}")
             return
@@ -301,14 +332,26 @@ class ChannelManager:
                     voice_style=raw.get("voice_style", {}),
                     image_mode=normalize_image_mode(raw.get("image_mode")),
                     image_collect=raw.get("image_collect", {}),
+                    tiktok=raw.get("tiktok", {}),
                     _raw=raw,
                 )
                 self._channels[profile.id] = profile
                 print(f"  📺 Channel loaded: {profile.id} ({profile.name})")
+                # 設定整合性チェック（autopilot有効 × 非公開 などの矛盾を検知）
+                for issue in validate_channel_config(raw, channel_id=profile.id):
+                    self._config_issues.append(issue)
+                    icon = "❌" if issue.is_error else "⚠️"
+                    print(f"  {icon} CONFIG {issue.level.upper()} [{profile.id}]: {issue.message}")
+                    if issue.fix:
+                        print(f"      → 対処: {issue.fix}")
             except Exception as e:
                 print(f"  ❌ Failed to load {f.name}: {e}")
 
         print(f"✅ {len(self._channels)} channels loaded")
+        n_err = sum(1 for i in self._config_issues if i.is_error)
+        n_warn = len(self._config_issues) - n_err
+        if n_err or n_warn:
+            print(f"🩺 Channel config check: {n_err} error(s), {n_warn} warning(s)")
 
     def get(self, channel_id: str) -> Optional[ChannelProfile]:
         return self._channels.get(channel_id)
@@ -321,6 +364,13 @@ class ChannelManager:
 
     def get_by_style(self, style: str) -> List[ChannelProfile]:
         return [ch for ch in self._channels.values() if ch.style == style]
+
+    def config_issues(self) -> List[ConfigIssue]:
+        """直近の reload で検出した設定整合性の問題一覧。"""
+        return list(self._config_issues)
+
+    def has_config_errors(self) -> bool:
+        return any(i.is_error for i in self._config_issues)
 
     def add_channel(self, profile_data: Dict) -> ChannelProfile:
         """新チャンネルをJSONファイルとして保存し、メモリにも追加"""
@@ -344,7 +394,7 @@ class ChannelManager:
         for key in ("name", "concept", "style", "youtube_channel_id",
                      "characters", "thumbnail_template", "defaults",
                      "content_policy", "theme_seeds", "publish_settings",
-                     "voice_style", "image_collect"):
+                     "voice_style", "image_collect", "tiktok"):
             if key in updates:
                 raw[key] = updates[key]
         if "image_mode" in updates:

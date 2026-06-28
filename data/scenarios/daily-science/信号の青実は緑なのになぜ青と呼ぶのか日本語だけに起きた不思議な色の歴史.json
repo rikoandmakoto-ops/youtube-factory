@@ -1,0 +1,414 @@
+{
+  "title": "信号の『青』、実は緑なのになぜ『青』と呼ぶのか？日本語だけに起きた不思議な色の歴史",
+  "theme": {
+    "title": "なぜ信号の『青』は実際には緑なのに青と呼ぶのか？ — 色名と認知の歴史的ギャップ",
+    "angle": "日本語の色彩語の歴史（青・緑の分化）と脳の色カテゴリ認知を組み合わせ、言語が知覚を変えるという意外な切り口で解説"
+  },
+  "short_scenario": [
+    {
+      "speaker": "真",
+      "text": "信号の『青』、よく見たら絶対に緑じゃない？なんで青って呼ぶの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はそれ、日本語が1000年かけてやらかした色の歴史的バグなんだよ！",
+      "expression": "laugh",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "古代日本語には『青・赤・白・黒』の4色しかなくて、緑も青もぜんぶ『青』だったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、緑って色名が日本語になかったの？それに言語が違うと色の見え方まで変わるって研究もあるらしいね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！2012年のWCS研究で、青と緑を区別する言葉がない民族は、実際に区別して見えにくいと証明されてるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしく！もっと詳しい話は関連動画で見てね！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "真",
+      "text": "ねえ理子、信号機の『青信号』って、どう見ても緑色じゃない？なんで青って呼ぶんだろうってずっと気になってたんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "鋭いところに気づいたね！実はこれ、日本語の色の歴史・脳科学・言語認知が絡み合う、めちゃくちゃ深い謎なんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回はその謎を丸ごと解き明かすよ！言語が変わると色の『見え方』まで変わるって話、最後まで聞いてね。",
+      "expression": "laugh",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず基本から押さえよう。信号機の進行色の波長は約510〜530ナノメートルで、これは物理的には完全に緑の領域なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ誰がどう見ても緑なのに、なんで法律でも『青信号』って言葉が使われてるの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "それが日本語の色彩語の歴史に深く関わってるんだ。古代日本語には色を表す言葉がたった4つしかなかったと言われてるよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "4つって少なすぎない？どんな4つだったの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "『あか・くろ・しろ・あお』の4色で、これが当時の日本語における色彩語の全てだったと言語学者たちは分析してるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白いのは、この『あお』という言葉が現代の青と緑の両方をカバーしていたことで、空も海も葉っぱも全部『あお』だったんだよ。",
+      "expression": "laugh",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "葉っぱが青ってすごく違和感あるけど、当時の人はそれが普通だったんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう。青葉・青草・青リンゴという言葉が今も残ってるのは、その時代の名残りで、現代語でも緑のものを青と呼ぶ慣習が続いてるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その後、平安時代ごろから『みどり』という言葉が登場し始めて、ゆっくりと青と緑が分化していったと言語学の研究は示しているよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ信号機が日本に導入されたとき、すでに緑って言葉があったのに、なんで青って呼ばれたの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "日本に信号機が初めて設置されたのは1930年の東京・日比谷交差点なんだけど、当時はまだ青と緑の境界が曖昧な言語文化が残ってたんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに1973年には国際条約との整合性を保つため、日本政府が信号の進行色を『青』と公式に定めたことで、法的にも青が確定してしまったんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "政府が公式に決めちゃったんだ！それで学校でも『青信号』って習うから、みんなが青だと思い込んでいくんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにそこが面白いところで、ここから脳科学・認知言語学の話が出てくるよ。言語が変わると、色の『見え方』まで変わるって知ってた？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、色の見え方が変わるって？目の構造は同じなのに？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "2012年にWorld Color Survey（WCS）という大規模研究で、110の言語・民族グループを調査したら衝撃的な結果が出たんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "青と緑を区別する言葉を持たない民族は、二色を並べても『違う色』として認識するのに平均で約0.3秒長くかかることが分かったんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "0.3秒って地味に見えるけど、脳の反応速度として考えたら相当な差だよね！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうなんだ。この現象を『言語相対性仮説』または『ウォーフ仮説』と呼んで、言語が思考や知覚に影響を与えるという考え方の根拠になってるんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "もっと具体的な例を出すと、ロシア語には青を表す言葉が『シーニー（暗い青）』と『ガルボイ（明るい青）』の2つあって、ロシア人は英語話者より青の明暗を速く識別できると実験で示されてるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言葉の数が多いほど、色の違いを細かく感じ取れるようになるってこと？すごい話だね。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！逆に言うと、日本語話者は長い間『あお』という一つの言葉で青も緑も処理していたから、その境界が他言語話者より曖昧になりやすいとも言えるんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ日本人って、信号を見て本当に『青っぽく』感じてる可能性があるってこと？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "それを裏付ける面白い実験があって、2009年の慶應義塾大学の研究で、日本語話者に青〜緑のグラデーションを見せたら、英語話者より広い範囲を『青』と判定したという結果が出てるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり、言葉が先にあって、それが脳の色認識を書き換えちゃってるってことか！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "完璧な理解だよ！これを『カテゴリー知覚』と言って、言語カテゴリーの境界線に近い色ほど、その言語の区分に引っ張られて見え方が変わるんだ。",
+      "expression": "laugh",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに驚きの事実として、実は日本の信号機は1973年の国際条約対応の際に、色のトーンを他国より意図的に青みがかった緑に変更したという話もあるんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "え！信号の色自体を変えたの？それって逆に言葉に合わせて現実を変えたってこと？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにそう。言語が現実の物理的なモノまで動かしてしまったという、かなり衝撃的な歴史エピソードなんだよね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "言葉って、思ったより世界を変える力を持ってるんだね。なんかちょっとゾワっとする。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "言語学者のベンジャミン・リー・ウォーフは1940年代にすでに『私たちは言語が切り取った世界を見ている』と言っていて、80年経った今もその考えが実験で証明され続けてるんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみに世界を見渡すと、ベトナム語でも青と緑を同じ『xanh』という言葉で表し、ゾミア語族などの一部言語でも同様のパターンが見られるんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "日本語だけじゃなかったんだね。じゃあ世界的に見て、青と緑を別の言葉で持つ言語の方が多いの少ないの？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "WCSの調査によると、世界の言語の約70%が青と緑を別々の基本色名で区別していて、残り約30%が同じカテゴリーに含める傾向があるとされているよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さて、ここからは実際に使える応用の話をするね！この知識を知ると、日常の色の見方がガラッと変わってくるよ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "おっ、具体的にどんなことに役立つの？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず、デザインや美術をやる人は要注意で、日本語話者は青〜緑の境界付近の色を同じに見がちだから、外国人向けのデザインでは色の区別を意識的に強調した方がいいんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに、日本のゲームやアニメのキャラの髪色が『青』って設定なのに明らかに緑っぽいことがあるよね！",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにそれがいい例で、日本のクリエイターが『青』と呼ぶ色が、英語圏のファンには『なんでこれを青と言うの？』と違和感を持たれることがよくあるんだよ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "また、言語学的な視点から言うと、外国語を学ぶときに色彩語から入るのはとても効果的で、その言語が世界をどう切り取っているかを直感的に理解できるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "英語を勉強するとき、blueとgreenの区別を改めて意識するだけで、英語話者の感覚に近づけるってことかな？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通り！逆に言うと、日本語を学ぶ外国人が一番難しいと感じる部分の一つが、この青と緑の曖昧な使い分けで、ネイティブに近づくにはそのあいまいさを受け入れる必要があるんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに面白いことに、子どもの言語習得研究では、色彩語を覚えるのは動詞や名詞よりも遅く、日本の子どもは平均して5〜6歳ごろまで青と緑を混同しやすいと報告されているんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "子どもの頃の感覚って、ある意味で古代日本人の感覚に近いのかもしれないね！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "いい気づき！言語習得の順序は文化的な色カテゴリーの歴史を反映していることがあって、それを知ると子どもの発達もまた違った目で見えてくるよ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "じゃあ今日のまとめをするね。信号が緑なのに青と呼ぶのは、古代日本語に青と緑を区別する言葉がなかったことに端を発する歴史的な慣習なんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "1000年以上前の言葉の使い方が、今でも信号の名前に残ってるってすごい話だよね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして、これは単なる言葉の話じゃなくて、言語カテゴリーが脳の色認知そのものを変えてしまうという、言語相対性仮説の教科書的な例でもあるんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "私たちが『見ている』と思っている世界は、実は言語によって形作られた世界かもしれないって考えると、なんか哲学的だね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "言語が現実の見え方を変えるって話、日常のふとした疑問から始まったのに、こんなに深いところまで繋がってるのが科学の面白さだよね！",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は『なぜ空は青いのに夕焼けは赤いのか』を、光の散乱と脳の色処理という二つの角度から解説するよ。今回の内容とも繋がってくるから、ぜひ楽しみにしてね！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "今日の話と繋がってるの？それは絶対見たい！理子の解説、いつも日常の見え方が変わるから大好きだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ありがとう！この動画が面白かったと思ったら高評価とチャンネル登録をよろしくね。1万人を目指して毎日投稿してるから、応援してくれると本当に嬉しいよ！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "その色、本当に『青』？",
+      "脳が見ている色と言葉がズレてる"
+    ],
+    "subtitle": "信号が『緑』なのに『青』な理由",
+    "tagline": "言語が変えてしまった、あなたの色の見え方"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1782479100_5043",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "信号の『青』、実は緑なのになぜ『青』と呼ぶのか？日本語だけに起きた不思議な色の歴史"
+      }
+    }
+  }
+}

@@ -614,6 +614,88 @@ export async function channelYoutubeDisconnect(
   );
 }
 
+// ── Per-channel TikTok OAuth ──
+
+export type TiktokStatus = {
+  channel_id?: string | null;
+  connected: boolean;
+  open_id: string | null;
+  display_name: string | null;
+  username: string | null;
+  scopes: string[];
+  can_direct_post: boolean;
+  client_configured: boolean;
+  client_key_preview: string;
+  requests_installed: boolean;
+  crypto_installed: boolean;
+};
+
+export async function getChannelTiktokStatus(
+  channelId: string
+): Promise<TiktokStatus> {
+  return call<TiktokStatus>(
+    `/api/channels/${encodeURIComponent(channelId)}/tiktok/status`,
+    { noStore: true }
+  );
+}
+
+export async function setChannelTiktokClient(
+  channelId: string,
+  client_key: string,
+  client_secret: string
+): Promise<{ status: string; channel_id: string }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/tiktok/client`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ client_key, client_secret }),
+    }
+  );
+}
+
+export async function getChannelTiktokAuthUrl(
+  channelId: string,
+  redirect_uri: string
+): Promise<{ auth_url: string; state: string }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/tiktok/auth`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ redirect_uri }),
+    }
+  );
+}
+
+export async function channelTiktokCallback(
+  channelId: string,
+  state: string,
+  code: string
+): Promise<{
+  connected: boolean;
+  channel_id: string;
+  open_id: string | null;
+  display_name: string | null;
+  username: string | null;
+  scope: string | null;
+}> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/tiktok/callback`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ state, code }),
+    }
+  );
+}
+
+export async function channelTiktokDisconnect(
+  channelId: string
+): Promise<{ status: string; channel_id: string }> {
+  return call(
+    `/api/channels/${encodeURIComponent(channelId)}/tiktok`,
+    { method: 'DELETE' }
+  );
+}
+
 export type PublishPayload = {
   video_path: string;
   title: string;

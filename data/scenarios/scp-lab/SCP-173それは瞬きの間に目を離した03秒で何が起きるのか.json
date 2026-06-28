@@ -1,0 +1,438 @@
+{
+  "title": "SCP-173【それは、瞬きの間に】目を離した0.3秒で何が起きるのか",
+  "theme": {
+    "title": "SCP-173「彫刻」",
+    "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "ねえクロ、今この瞬間、瞬きしてるよね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、当たり前じゃん…何が言いたいの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173は、その0.3秒で首まで届く。財団初期収容記録No.1の存在だよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、瞬き一回で死ぬってこと？怖すぎる…",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから収容室に入る職員は最低3人。全員が同時に目を閉じることを禁止されてる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！詳しい発見経緯と収容プロトコルは関連動画でチェックして。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書を読んでいるあなたに、まず一つ確認しておきたいことがある。\n今この瞬間、あなたは何回瞬きをしたか、数えていたか？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、急に何……？いや、数えてないけど、普通そんなこと意識しないじゃん。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "人間は平均して1分間に15〜20回、つまり約3〜4秒に一度は必ず目を閉じている。\nその無意識の習慣が、ある存在にとっては絶好の『隙』になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "隙って……なんか嫌な言い方するね、シロ。それってまさか173のこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう。今回読み上げるのは、財団データベースに登録されたSCP-173、コードネーム『彫刻』の収容記録だ。\nこれは財団が初期に収容した異常存在の中でも、最も古い部類に入る案件になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最古の案件……財団って昔からこんな存在と戦ってたんだ。なんか想像するだけでゾッとする。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173のオブジェクトクラスはユークリッド。\nこれは『収容は可能だが、その挙動が完全には予測できない』存在に付与されるクラスだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ユークリッドって、セーフじゃないけどケテル（最危険）でもない、中間ってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そういうことになる。ただし、ユークリッドの中でも173は別格だ。\n財団職員の間では『絶対に油断してはならない存在』として、新人研修で必ず最初に名前が挙がる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "新人研修の最初に教わるって……それだけ被害が多かったってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録に残っているだけで、収容違反による職員の死亡事例は複数確認されている。\n実際の数は[DATA EXPUNGED]されており、財団上層部以外には開示されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消されてる……それって、公表できないくらい数が多かったってことじゃないの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173の外見は、高さ約2メートルの人型の彫刻だ。\n素材はコンクリートと金属棒で構成されており、表面には赤茶色の染みが付着している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "赤茶色の染み……それって血じゃないの？それとも錆？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の分析によれば、その物質は血液とフェカルマター、つまり排泄物の混合物だと報告されている。\nなぜそのような物質が付着しているのか、原因は未だ解明されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、待って。コンクリートの彫刻に血と……なんでそんなものが。気持ち悪い、普通に怖い。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして173の核心的な異常性がここだ。\nこの存在は、直接視線を向けられている間は完全に静止する。しかし、誰も見ていない瞬間に、音もなく移動する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "音もなく……カメラとかは？録画してれば分かるんじゃないの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視カメラの映像には、173が移動する瞬間は一切記録されていない。\nカメラが捉えるのは常に『静止している173』と『別の場所にいる173』の二つの状態だけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "カメラにも映らない……じゃあどうやって移動してるの？瞬間移動？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその移動方法について複数の仮説を立てたが、どれも証明には至っていない。\n公式報告書には『視認されていない状態での挙動は[REDACTED]』とだけ記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分からないまま収容してるってこと？それって怖くない？財団でも解明できてないんだ……",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "173が接触した対象は、頸椎の骨折または気管の絞扼によって死亡する。\n財団の記録では、接触から死亡までの時間は0.3秒以下と推定されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0.3秒……それって人間が反応できる速度を超えてるじゃん。逃げる暇すらないってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。人間の平均反応速度は0.2〜0.25秒と言われているが、173の接触はその反応が完了する前に終わる。\n気づいた時には、もう終わっている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ……反応できないなら、もう完全に詰んでるじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから収容プロトコルは極めて厳格に定められている。\nSCP-173の収容室に立ち入る際は、最低でも3名以上の職員が同行することが義務付けられている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3人以上……なんで3人なの？2人じゃダメなの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2人では瞬きのタイミングが重なった瞬間に、両者が同時に視線を外す状況が生まれてしまう。\n3人いれば、常に少なくとも1名の視線が173に向いている確率を保てるからだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確率って言葉が出てくるのが怖い。絶対じゃないんだ。3人でも失敗する可能性があるってことじゃん。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容室の扉を開ける前には、必ず室内を確認する手順がある。\n扉の開錠と同時に全員が173から目を離さないよう、入室手順は財団マニュアル第7条に明記されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "マニュアルに書かれるくらい徹底してるんだ……それだけ事故が多かったってことだよね、過去に。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容室の床には定期的に血液と排泄物が溜まることが報告されており、清掃もDクラス職員が担当する。\nその清掃作業中に何人が173と接触したかの記録は、[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Dクラスって……それって実験に使われる、財団が囚人とかを使う役職だよね。消耗品扱いってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部では、Dクラス職員の扱いについて倫理的な議論が存在するとされている。\nただしその議論の結論も[REDACTED]であり、外部には一切開示されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "知れば知るほど財団って怖い組織だな……173だけじゃなくて、組織自体が。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173が最初に財団に収容されたのは、正確な年代の記録が存在しない。\n財団の内部資料によれば、173の発見は財団の設立初期に遡るとされているが、発見者の名前は全て[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "発見者の名前まで消されてる……なんで消す必要があるの？発見者に何かあったの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その点についての記録は存在しない。あるいは、存在したが削除されたか、どちらかだ。\n財団が情報を消す時、それが何を意味するかは、もう分かるよね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……発見者が、173に接触した。そういうこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "173が最初に一般に知られるようになったのは、2007年にSCP財団Wikiが公開されてからのことだ。\nCC BY-SA 3.0ライセンスの下で公開されたこの記録は、世界中の人間の目に触れることになった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Wikiで公開されてる……つまり今この瞬間も、誰でも173の情報を読めるってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。SCP-173の記事はSCP財団の中でも最初期に書かれたエントリの一つで、番号が示す通り財団データベースの173番目に登録されている。\n今や世界最大のホラー創作コミュニティの原点とも呼ばれる存在だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "原点か……SCP財団って今は何千もの記録があるんだよね。全部173みたいに怖いの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "怖さの種類は違う。でも173が特別なのは、恐怖の構造がシンプルだからだ。\n『見ている間は安全、見ていない間は死』という、ただそれだけのルールが人間の本能的な不安を直撃する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "シンプルだから怖い……確かに。ルールが分かってても、瞬きは止められないもんな。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "人間は意識的に瞬きを我慢しようとしても、最大でも約30秒から1分程度が限界と言われている。\nつまり173と同じ空間にいる以上、完全に安全な状態を保つことは人間には不可能に近い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "1分も持たない……じゃあ収容室の職員って、毎回命がけで清掃してるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そういうことになる。財団がSCP-173を収容し続ける理由の一つは、もし173が外部に出た場合の被害が計算不能なほど大きいからだ。\n人口密集地に173が現れたとして、誰も目を離さないでいることができると思うか？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "無理だ……街中に173がいたら、絶対に誰かが瞬きして、誰かが死ぬ。絶対に止められない。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから財団は173を収容し続ける。コストと犠牲を払い続けながら、それでも外には出さない。\nそれが財団の存在意義でもある。確保、収容、保護。その三つの言葉の重さを、173は体現している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確保、収容、保護……財団ってその言葉のために、何人もの職員を犠牲にしてきたんだね。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後にもう一つだけ伝えておく。この動画を見終えた後、部屋の隅に何か置いてあったとしても、私は何も知らない。\nもしそれが以前からそこにあったものかどうか、確認できるか？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……やめてよ、急に。今すごく部屋の隅が気になってる。見るのが怖い。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "見た方がいい。見ている間は、安全だから。\nでも決して、目を離すな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……シロ、それ笑えない冗談だからね。本当に怖かった。次は何の話するの？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は財団が『ペスト医師』と呼ぶ存在、SCP-049の収容記録を読み上げる予定だ。\n『病』を癒すと主張するその存在が、実際に何をしてきたのかは……報告書が語ってくれる。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もしこの報告書の続きが気になるなら、チャンネル登録をしておいてくれ。毎回、財団の記録を読み上げる。\n高評価ボタンも、財団への協力だと思って押してくれると助かる。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "登録した。絶対に次も見る。……でも今夜、瞬きするたびに思い出しそうで、眠れる気がしない。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それでいい。財団の記録を知った人間は、みんなそうなる。\nだから一つだけ忠告しておく。今夜、部屋が暗くなっても、絶対に目を閉じるな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "SCP-173",
+      "目を離すな"
+    ],
+    "subtitle": "それは、瞬きの間に",
+    "tagline": "財団が最も恐れた『最初の怪物』の正体"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1782003633_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "SCP-173【それは、瞬きの間に】目を離した0.3秒で何が起きるのか"
+      }
+    }
+  }
+}

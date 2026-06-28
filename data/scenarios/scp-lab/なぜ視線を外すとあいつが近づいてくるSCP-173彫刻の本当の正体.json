@@ -1,0 +1,504 @@
+{
+  "title": "なぜ視線を外すと『あいつ』が近づいてくる？SCP-173「彫刻」の本当の正体",
+  "theme": {
+    "title": "SCP-173「彫刻」",
+    "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "えっ、知ってた？視線を外した瞬間に首を折られる存在が実在するって",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ…そんなのホラー映画の話じゃないの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173は財団が最初に収容したオブジェクトで、1993年から記録されてる",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "30年以上も前から…",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから絶対に一人で見張ってはいけない規則がある",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしく！詳しい話は関連動画でチェック！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "やぁ、また財団の機密報告書が流出したよ。\n今回は…読んだら後悔するかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、なんか今日はいつもより怖そうな感じだけど…",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173「彫刻」の完全収容記録が手に入った。\nこれは財団が最初に遭遇した異常存在の真実だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最初って、財団が設立される前からいたってこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1993年、ある美術館で最初の事件が起きた。\n夜警が首を180度ねじ曲げられて発見されたんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、首を180度って…人間には不可能だろ？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視カメラの映像には、コンクリート製の彫刻が一瞬だけ移動する瞬間が記録されていた。\nそれがSCP-173との最初の接触だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "彫刻が動く…？そんなのありえないよ",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "外見は高さ2メートルのコンクリート製彫刻で、鉄筋とクレイ・ペイントで構成されている。\n表面には茶色と赤色の物質が付着している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "その茶色と赤色の物質って…まさか",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の分析では血液と排泄物の混合物だと判明した。\n起源は[DATA EXPUNGED]されているが、犠牲者のものと推測される。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "げっ…犠牲者って、他にもいるの？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173の異常性は極めて単純だが致命的だ。\n観測されていない状態では、異常な速度で移動し生物の首を折る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "観測されてないって、誰も見てないときってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "正確には「直接視線を向けられていない状態」だ。\n瞬きの0.3秒間でも、3メートルの距離を移動できる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0.3秒で3メートル…？人間の反射神経じゃ対応できない",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから収容プロトコルでは、最低2名の職員による監視が義務付けられている。\n一人が瞬きする間、もう一人が監視を続ける。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "なるほど、交代で見張るってことか",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ところが、1998年の収容違反事件で恐ろしい事実が判明した。\n監視員のジョンソン博士が一瞬意識を失った瞬間、SCP-173が行動を起こした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "意識を失った？どういうこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "博士は過労で立ったまま3秒間マイクロスリープ状態に陥った。\nその間、SCP-173は収容室の反対側まで移動し、同僚の首を…",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ…立ったまま寝てる間に？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この事件により、監視員の勤務時間は連続4時間以内に制限された。\n疲労による注意力低下は死を意味するからだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4時間でも長すぎる気がするけど…",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに恐ろしいのは、SCP-173の移動に音が一切しないことだ。\n2トンを超える重量にも関わらず、完全に無音で移動する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2トンって…車並みの重さじゃないか",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "物理法則を無視した移動方法は、財団の研究者たちを困惑させている。\n重力や慣性の影響を受けないかのような挙動を見せる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "物理法則無視って…もう科学じゃ説明できないじゃん",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2003年、Dクラス職員D-9834による実験で更なる異常性が発覚した。\n被験者は鏡越しにSCP-173を観測するよう指示された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "鏡越しなら直接見てないから安全だと思ったの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ところが、鏡に映った像でも観測として認識された。\nSCP-173は鏡越しの監視中は一切移動しなかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "えっ、鏡でも効果があるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかし、被験者が鏡から目を逸らした瞬間、SCP-173は即座に行動を開始した。\n反射像であっても「観測」の条件を満たすことが証明された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ということは、防犯カメラとかでも…？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実は、監視カメラによる観測は効果がない。\n人間の直接的な視覚認識でなければ、SCP-173の行動を止められない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人間の目じゃないとダメなのか…なんで？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-173は「意識ある観測者」を認識している可能性がある。\nAIや機械による観測では反応しない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "意識ある観測者って、哲学的すぎない？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2007年、盲目のDクラス職員による実験も行われた。\n結果、視覚障害者に対してもSCP-173は通常通り攻撃行動を取った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "えっ、目が見えない人でも襲われるの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "これにより、SCP-173の行動抑制には「視覚的観測」が必須条件だと確定した。\n音や触覚による認識では効果がない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "見る以外に対抗手段はないってことか…",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も恐ろしいのは、SCP-173の「学習能力」だ。\n長期間の収容により、監視パターンを把握している可能性がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "学習って…こっちの動きを覚えてるの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2010年の事件では、監視員の交代タイミングを狙ったような行動が記録された。\n偶然にしては出来すぎている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって、わざと隙を狙ってるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録によると、SCP-173による死亡者数は[REDACTED]名。\nしかし、この数字には収容前の犠牲者は含まれていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容前にも被害者がいたのか…",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1993年以前の記録は断片的だが、世界各地で同様の「首折り事件」が報告されている。\nSCP-173の活動期間は数十年に及ぶ可能性がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "数十年って…どれだけの人が犠牲になったんだ",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在、SCP-173はサイト-19の特別収容室に隔離されている。\n24時間体制で最低2名の監視員が配置され続けている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "24時間ずっと見張ってるのか…監視員も大変だな",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "週に一度、清掃のため収容室に入る必要がある。\nその際は最低3名の武装職員が同行し、常に視線を向け続ける。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "清掃って…まさかあの茶色と赤色の",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173は定期的に排泄物と血液の混合物を分泌する。\n放置すると異臭が発生し、職員の集中力低下を招く恐れがある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "うわ…それも計算のうちなのかな",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団研究員の間では「ピーナッツ」という愛称で呼ばれることもある。\nしかし、その親しみやすい呼び名に油断してはいけない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ピーナッツって…形が似てるから？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173は財団が収容した最初のオブジェクトとして、全ての異常存在研究の原点となった。\nこの存在なくして、現在の財団は存在しない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "原点か…確かに、これがなかったら財団も生まれなかったのかもな",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかし、未だにSCP-173の起源や目的は解明されていない。\nなぜ首を折るのか、なぜ観測で止まるのか、全てが謎に包まれている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "30年経っても分からないって、相当ヤバい存在だよな",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし君が美術館や彫刻展で、妙にリアルなコンクリート彫刻を見かけても…\n絶対に一人にならないでくれ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、まさか他にもいるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録では、SCP-173は唯一無二の存在とされている。\nしかし、[REDACTED]により、類似オブジェクトの存在は否定できない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "類似オブジェクトって…怖すぎるだろ",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-096「シャイガイ」について解説する予定だ。\n顔を見た者を世界の果てまで追いかける、別の悪夢的存在についてだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "また怖そうなやつだな…でも気になる",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もしこの動画が興味深かったら、高評価とチャンネル登録をお願いする。\n君の応援が、更なる財団機密の公開を可能にする。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "でも、本当にこんな存在がいるとしたら…\n今夜は電気をつけたまま寝ようかな",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "賢明な判断だ。\nそして覚えておいてくれ…もし何かおかしな彫刻を見かけても、絶対に目を逸らすな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "視線を外すと近づいてくる",
+      "SCP-173の恐怖"
+    ],
+    "subtitle": "財団最初の収容オブジェクト",
+    "tagline": "絶対に目を逸らしてはいけない"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1781042627_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "なぜ視線を外すと『あいつ』が近づいてくる？SCP-173「彫刻」の本当の正体"
+      }
+    }
+  }
+}

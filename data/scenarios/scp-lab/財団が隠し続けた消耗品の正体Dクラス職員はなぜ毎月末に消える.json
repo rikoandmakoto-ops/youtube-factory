@@ -1,0 +1,438 @@
+{
+  "title": "財団が隠し続けた『消耗品』の正体——Dクラス職員は、なぜ毎月末に消える？",
+  "theme": {
+    "title": "Dクラス職員の真実",
+    "angle": "実験で消費される人員制度の闇と倫理問題"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "ねえクロ、財団の実験に使われる『Dクラス職員』って知ってる？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "名前は聞いたことある……なんか実験に使われる人たちだよね？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録では毎月末、数百人単位で『処分』されてる。死刑囚が多いって話だけど、それだけじゃない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……毎月？それって普通に何百人も消えてくってこと？怖すぎる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団倫理委員会ですら、この制度の是非を巡って内部対立が起きてる。答えは、まだ出ていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1万人目指して毎日投稿中だから登録よろしく！Dクラスの全真相は関連動画でチェックしてみて。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書……財団が公式には絶対に認めないやつだ。読み始めたら、後悔するかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、なに？いきなり怖いんだけど……どんな報告書なの、それ？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が異常存在の実験に使う人間、Dクラス職員の話だ。彼らが何者で、毎月末に何が起きるか——記録が残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日はSCP財団の機密区分から流出した、Dクラス職員制度に関する内部記録を読み上げる。覚悟しておいてくれ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……うん、聞く。でも正直、すでに嫌な予感がする。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まず基本から話す。Dクラス職員というのは、財団の最下位人員区分だ。正式には『Dクラス人員』、英語でClass-D Personnel と呼ばれる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の人員ランクはEクラスからAクラスまであるが、Dクラスだけが異常存在と直接接触させられる使い捨ての枠として設計されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "使い捨て……って言葉、すごく引っかかるんだけど。それって本当に制度として決まってるの？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "正式な収容プロトコルに記載されている。Dクラスは毎月の初日に補充され、月末に『処分』される。これは財団の内部規定上、公式に定められたサイクルだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が公表している理由はこうだ——異常存在と接触した人員を長期間保持すると、精神汚染・認識変容・感染リスクが蓄積する、と。だから月ごとにリセットする必要がある、と説明している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって……聞こえはいいけど、要は生き残っても月末には殺されるってこと？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そういうことだ。記録によれば、Dクラスが実験を生き延びても月末の処理は免除されない。生存自体が条件にならない設計になっている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "では、彼らはどこから調達されるのか。財団の公式見解では、死刑囚、重大犯罪者、終身刑受刑者が主な供給源とされている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "死刑囚か……まあ、それならまだ理解できなくもない、かな。でも『主な』って言い方が怖いんだけど。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこだ。流出した内部報告書の一部には、供給が不足した際の代替調達について[DATA EXPUNGED]と記されている。どこからどんな人間が連れてこられているのか、財団でも公式には認めていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……それって、犯罪者じゃない人間も使われてる可能性があるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "少なくとも、財団倫理委員会の内部文書には『調達経路の透明性に関する懸念』という記述が複数回登場している。詳細は[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次に実験内容に触れる。Dクラスが実際に何をやらされるか、いくつかの事例が記録に残っている。これが本当に読んでいて苦しくなる部分だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……聞く。ちゃんと聞く。でもシロ、これ本当に財団の話だよね？現実じゃないよね？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP財団の世界の話だ。ただ、あまりにも現実的な設計がされているから、その問いに意味がないとも言えない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "例えばSCP-173、通称『彫刻』の実験記録では、Dクラスが密室に単独で収容されたオブジェクトと接触させられている。視線を外した瞬間に何が起きるか——それを計測するための実験だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり……目を離したらどうなるか確かめるために、人間を一人で入れたってこと？生きた人間を？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。結果はほぼ全例で同じだった。記録には『被験者は収容室内で頸部損傷により死亡』と繰り返し記されている。実験回数は、記録が閲覧可能な範囲だけでも37回以上。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "37回……それって37人が同じ目に遭ったってことじゃないか。それでも実験を続けたの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の論理では、一人のDクラスが失われることより、オブジェクトの挙動を把握することの方が優先される。それが『正常性の維持』のために必要なコストだ、という建前がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "コスト……人間をコストって呼ぶの、財団は。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の倫理委員会も、この点については内部で対立が続いている。記録によれば、少なくとも3名の倫理委員がDクラス制度の廃止または大幅な改革を提案したが、いずれも[REDACTED]という結末を迎えている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "廃止を提案した人が……[REDACTED]って、それって、まさか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は答えを出していない。少なくとも公式記録の上では、その3名の名前は現在も[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで、Dクラス制度の内部矛盾についても触れておく。財団が死刑囚を使う建前は、『どうせ死ぬ命を有効活用する』という功利的な論理だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "うん、その理屈は一応分かる。でも、それって本当に死刑囚だけが対象なの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題はそこだ。財団の活動規模を考えると、世界中の収容施設が必要とするDクラスの総数は、合法的な死刑囚の供給数を大幅に超える可能性が内部試算で示されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "供給が足りないなら……残りはどこから来てるんだ。それが[DATA EXPUNGED]の部分？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団のサイトは記録上、世界に数百箇所以上存在するとされている。それだけの施設が毎月Dクラスを補充するとなれば、その数は相当なものになる。計算の結果は……記録されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録されていないんじゃなくて、消されたんじゃないの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その区別は、財団の外にいる私たちには永遠につかない。それが財団の情報管理の怖さだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もう一つ、見落とされがちな事実を話す。Dクラスの中には、財団に対して情報を提供したり、特定のオブジェクトへの耐性を示したりした場合に、処分を免れるケースが極めてまれに記録されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "えっ、生き残れる人もいるの？それはどんな条件で？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "条件は明確には定義されていない。財団の裁量による、としか記されていない。つまりどれだけ頑張っても、生かされるかどうかは財団が決める。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "裁量って……それって希望を持たせておく方が従順になるから、わざと曖昧にしてるんじゃないの？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の行動心理学的な分析ではそういう解釈も出ている。ただ、それを肯定する公式文書は存在しない。存在しないか、[REDACTED]かのどちらかだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに深刻な問題がある。一部のDクラスは、実験中に異常存在の影響を受けて認識が変容したり、オブジェクトに同化したりするケースが報告されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同化……って、どういう状態になるの？生きてるの、それ？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "生死の定義が適用できない状態、と報告書には記されている。SCP-106『老人』との接触実験では、被験者が別次元に引きずり込まれた後、断片的な生体反応が数時間にわたって検出されたという記録がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "断片的な生体反応……つまりまだ生きてるのに、取り出せなかったってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は回収を試みなかった。報告書の備考欄には、ただ一言『回収不可能』と記されているだけだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "回収しようとしなかったんじゃなくて、回収しなかった……その違いが怖い。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこに財団のDクラスに対するスタンスが凝縮されている。回収コストより次のDクラスを補充する方が効率的、という計算が働いている可能性が高い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただ、一点だけ言っておく。財団の倫理委員会は完全に機能不全なわけではない。一部の収容施設では、Dクラスへの簡易的な医療提供、精神的なケア、実験前の同意取得が試みられているという記録も存在する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同意……月末に処分されるって分かってて、同意する人がいるの？それって本当に同意って言えるの？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その問いに財団は答えを出していない。倫理委員会の会議録には、この点を巡る議論が延々と続いているが、結論は常に[REDACTED]で終わっている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団のモットーは『確保、収容、保護』だ。世界の異常を封じ込め、人類全体を守るためにある組織が、その内側では何百人もの人間を消耗品として処理し続けている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "守るために犠牲にする……それって、誰かが決めていいことなの？財団に。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその問いを、今もどこかの会議室で議論し続けているはずだ。答えが出たという記録は、少なくともこの流出文書の中には存在しない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の内容はSCP財団WikiのCC BY-SA 3.0ライセンスに基づく設定を参照した。原典の改変は最小限にとどめ、考察と解説に焦点を当てている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……正直、今日の話はずっと頭から離れないと思う。人間を月ごとに消費するって、慣れちゃいけない話だよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "慣れないでいてくれ。それがせめてもの、Dクラスたちへの礼儀かもしれない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団の中で最も多くのDクラスを消耗したとされる異常存在、SCP-096『シャイガイ』の収容実験記録を読み上げる予定だ。今回より、ずっと読み進めるのが辛い内容になるかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……見る。怖いけど、見る。シロ、次回も一緒に読んでくれ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録をしておいてくれ。通知を入れておかないと、次の報告書が届いた時に気づけないかもしれないから。そして——もし身近に『毎月末に姿を消す人』がいたとしても、決して深追いするな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "毎月末、数百人が『処理』される",
+      "Dクラス職員の末路を財団は隠蔽した"
+    ],
+    "subtitle": "実験台として使われ、月末に消える人間たちの記録",
+    "tagline": "あなたは今日も彼らの犠牲の上に立っている"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1781935736_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "財団が隠し続けた『消耗品』の正体——Dクラス職員は、なぜ毎月末に消える？"
+      }
+    }
+  }
+}

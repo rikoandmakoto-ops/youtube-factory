@@ -1,0 +1,432 @@
+{
+  "title": "『見た瞬間に感染する』ミーム災害SCPが実は5種類以上ある件、財団はなぜ隠し続けるのか",
+  "theme": {
+    "title": "ミーム災害SCPまとめ",
+    "angle": "認識すると感染するSCPの種類とその対策"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "ねえクロ、この報告書…読んだら後悔するかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、なに？なんで急にそんな怖いこと言うの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が分類した『ミーム災害』、認識した瞬間に感染が始まるSCPが現在確認されているだけで5件以上ある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "5件って…今俺、この話聞いて大丈夫？もう感染してたりしない？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも『対抗ミーム』を投与しなければ防げないと記録されている。知らないほうが安全だったかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！もっと詳しい話は関連動画でチェックして。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書を読んでいるということは、もうあなたはそれを『認識』してしまった。財団の記録によれば、それだけで感染条件が成立するケースがある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、何の話？読んでるだけで感染って、どういうことだよ……嘘だろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日話すのは、財団が『ミーム災害』と分類した異常存在の記録だ。認識するだけで人の行動・思考・肉体を侵食するSCPが、確認されているだけで5件以上存在する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの情報を原則として一般公開しない。今から話す内容は、データベースから断片的に流出したものを私が繋ぎ合わせたものだと思ってくれ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "流出って…それ聞いていいやつなの？財団に消されたりしない？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それを判断するのはあなた自身だ。ただ、知ってしまった以上、財団の言う『対抗ミーム処置』を受けていない人間は常にリスクを抱える。まず基本から説明しよう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が定義する『ミーム的危険物』とは、情報そのものが異常作用を持つオブジェクトのことだ。画像・音・文章・概念、どれも媒体になりうる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "情報が武器になるってこと？ゲームのデバフみたいな感じ？でもそれって、どこで感染するかわからなくない？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。財団報告書の分類では、ミーム的危険物は大きく三層に分けられる。第一層は『接触型』、オブジェクトに物理的に触れた場合にのみ発動する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第二層は『視覚型』、見るだけで感染が始まる。第三層が最も危険で、『概念型』と呼ばれ、存在を知るだけで、あるいは考えるだけで作用が始まる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、じゃあ今シロが話してる内容も、概念型だったら……俺もう終わりじゃん。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう思うだろう。だから財団は、高リスクのミーム情報にアクセスする前に必ず『対抗ミーム処置』を施す。要するに、ある特定の認識パターンを先に埋め込むことで感染を阻害するワクチンのようなものだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、財団内部の記録では、この対抗ミームが効かないケースも複数報告されている。特にオブジェクトクラスがケテルに指定されたミーム系SCPに対しては、有効な対策が現時点でも確立されていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ケテル……それって財団で一番ヤバいやつでしょ。ミームでケテルって、どれだけ手が付けられないんだよ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "では、具体的なオブジェクトの記録に入る。最初はSCP-1425、コードネーム『スター・パターン』だ。オブジェクトクラスはケテル。これは財団が確認した中で最も広域に拡散したミーム災害の一つとして記録されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "スター・パターン……名前だけで既に嫌な感じがする。何をするやつなの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1425は特定の視覚パターンを含む書物として最初に確認された。閲覧した対象者は段階的に人格が変容し、最終的には財団の記録では『SCP-1425-1』と再分類される状態に移行する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "再分類って……人間じゃなくなるってこと？それって収容できるの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルには、SCP-1425-1化した対象を隔離施設に移送し、接触を遮断するとある。ただし報告書の後半、感染拡大の規模に関するデータは[DATA EXPUNGED]だ。財団が意図的に削除した部分がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消されてる……なんで？どれだけの人数が感染したのか、隠したいってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が情報を抹消する理由は複数あるが、最も多いのは『その数字自体が二次的なミーム作用を持つ場合』だ。知ることで恐怖が伝播し、それがさらなる感染を加速させる可能性がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次に記録するのはSCP-3125、財団内部での通称は『バンダースナッチ』だ。これは概念そのものが自律的に増殖・拡散する、最も抽象的なミーム危険物として記録されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "概念が増殖する……？それって、考えること自体が感染経路になるってこと？もう怖くて聞けないんだけど。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-3125の記録には、この存在を認識した人間は財団のミーム防衛機構によって逆に標的にされる可能性があると記されている。財団の対抗ミームが、この存在に対しては逆効果になるという報告もある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ワクチンが毒になる……それって財団もどうしようもないってことじゃん。ケテルどころじゃない気がする。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部評価では、SCP-3125はXK-クラス終末シナリオに直結しうる存在として位置づけられている。ただしその詳細は[REDACTED]、私が閲覧できたのはここまでだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "続いてSCP-2399、こちらはミーム性を持つ存在の中でも特殊な位置にある。木星の大赤斑内部に収容されている異常存在で、財団はこれが地球へのミーム的干渉を試みていると判断している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "木星!?宇宙から来てるの？それって財団が収容できてないやつじゃん……。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコル上は『観測・監視』が現実的な対応とされている。SCP-2399が発する信号には、受信した人間の認識に干渉する性質があるとされているが、そのメカニズムは財団でも解明されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "宇宙から認識を汚染されてるかもしれないのに、財団は見てるだけって……それで大丈夫なの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "大丈夫かどうかは、財団も答えを持っていない。報告書の末尾には『現時点で有効な干渉手段なし』と記されているだけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで日本支部の記録にも触れておく。SCP-1985-JPは財団日本支部が収容管理するミーム的危険物で、特定の音声パターンを持つ音楽として記録されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "音楽！？それって聴いたら感染するってこと？ヘッドフォンで聴いてたらアウトじゃん。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1985-JPを聴取した対象は、特定の感情状態へと強制誘導される。財団日本支部の報告では、感染後48時間以内に自発的な行動制御が失われるケースが確認されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "48時間……2日で自分じゃなくなる。それって日本のどこかに、今もその音楽があるってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルには、原本音源の完全隔離と、接触した全員へのクラスB記憶処理が記されている。ただし、デジタルコピーが何件流通しているかについては[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "デジタルコピーが何件あるかわからない……それって今もどこかに拡散してる可能性があるってこと？ゾッとする。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に紹介するのはSCP-5000だ。これはミーム的危険物そのものではなく、財団が全人類に対してある異常な措置を実施しようとした事件の記録として分類されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が全人類に措置？それって財団が敵になった話？どういうこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録では、財団がある時点から人間の『魂』に相当するものがミーム的な脅威の温床であるという結論に達し、それを排除するための行動を開始したとされている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "魂が脅威……？それって人間が生きてること自体を、財団が問題だと判断したってこと？怖すぎる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "なぜ財団がその結論に至ったか、その判断に影響を与えたミーム的存在が何であるかについては、報告書の核心部分が全て[REDACTED]になっている。財団内部でも、その真相を知る者は限られていたようだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団自体が、何かに感染してたってこと……？守る側が一番やばい状態だったじゃん。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "これが、ミーム災害が他の異常存在と根本的に異なる点だ。物理的な存在は壁で封じられる。でも認識・思考・判断に侵食するオブジェクトは、収容する側の財団職員自身が感染媒体になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ、俺たちが今できることって何かあるの？対抗ミームの処置なんて受けられないし。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部指針には、ミーム的危険物への対策として三つの原則が記されている。第一は『情報の遮断』、疑わしい情報源には近づかない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第二は『異常な強迫観念の監視』だ。ある考えや映像が頭から離れない、繰り返し同じ行動をしたくなる、そういった状態は感染の初期症状として財団の報告書に記載されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "強迫観念……それって普通のことと区別つかなくない？どこから異常なの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが最も厄介な点だ。財団の記録によれば、感染初期の対象者は自分の変容に気づかない。本人には正常に見えている。気づいたときにはすでに第二段階に入っていることが多い。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第三の原則は、財団内部では皮肉交じりに語られるものだが、『知らないことを恐れるな』だ。ミーム的危険物の多くは、知ろうとする行為そのものをトリガーにして設計されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり、今俺がシロの話を聞こうとしたこと自体が……もしかして狙われてた？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それは否定できない。財団の記録にはこうある。『最も危険なミームは、それが危険であるという情報の中に潜む』。今日の話は、ここで終わりにしておく。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、終わり？なんかすごく嫌な感じで終わるんだけど……俺、この後大丈夫かな。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし今日話した内容が頭から離れないなら、それが答えかもしれない。財団の対抗ミーム処置を受けていない人間は、常にそのリスクと共に生きている。それがこの世界の現実だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が『収容不可能』と判定したまま放置しているSCP、その中でも日本国内に潜伏している可能性があるSCP-JP系オブジェクトの記録を読み上げる予定だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "日本国内に……？それって俺たちの近くにいるってこと？絶対見る。でも怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画が届いたなら、チャンネルを登録しておいてくれ。次の報告書が流出したとき、あなたに最初に届くようにしておく。高評価も、財団への抵抗の一つだと思ってくれていい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に一つだけ。今日ここで話したSCPに関する情報はSCP財団Wiki（CC BY-SA 3.0ライセンス）に基づいている。ただし、この動画を見たことは、財団には話さないほうがいい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……それが一番怖いよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "見たら終わり",
+      "認識＝感染"
+    ],
+    "subtitle": "ミーム災害SCP5選｜知識が凶器になる異常存在まとめ",
+    "tagline": "財団が『閲覧禁止』にした理由がある"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1781828368_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "『見た瞬間に感染する』ミーム災害SCPが実は5種類以上ある件、財団はなぜ隠し続けるのか"
+      }
+    }
+  }
+}

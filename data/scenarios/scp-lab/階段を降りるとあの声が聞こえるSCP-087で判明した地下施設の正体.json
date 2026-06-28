@@ -1,0 +1,416 @@
+{
+  "title": "階段を降りると『あの声』が聞こえる...SCP-087で判明した地下施設の正体",
+  "theme": {
+    "title": "SCP-087「終わりなき階段」— 降りるほどに増す恐怖の正体",
+    "angle": "地下へ延々と続く階段。探索記録ごとに深まる異常と、最後に待つものとは"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "階段を降りていくと、子供の泣き声が聞こえる...知ってた？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、それって普通じゃないの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実はSCP-087では13回の探索で、全て同じ声が記録されてる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "でも声の主に辿り着いた探索者は、一人もいないんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり、その声は...囮ってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！続きは関連動画でチェック！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "やぁ、今日は特に不気味な報告書が手に入った。\nSCP-087、通称『終わりなき階段』について話そう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "階段...それのどこが異常なんだ？\n普通の建物にもあるじゃないか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ところがこの階段、降りても降りても終わりが来ない。\nそして常に子供の泣き声が響いているんだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "子供の泣き声？\nそれは助けに行かないと...！",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その考えが、多くの探索者を地下深くへと誘ったんだ。\n今回はSCP-087の真の恐怖を暴いていく。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "うう...なんだか嫌な予感がするよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-087は、とある大学の構内に存在する階段だ。\n一見すると普通のコンクリート製の非常階段に見える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかし踊り場は13段ごとに現れ、各階の間隔は約3メートル。\n標準的な建築基準を完全に無視した構造になっている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "13段ごと...なんか不吉な数字だね。\n建築基準を無視って、誰が作ったんだろう？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "興味深いことに、この階段に光源を持ち込んでも約1.5メートル先までしか照らせない。\n懐中電灯でもろうそくでも、同じ現象が起きるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして最も重要な特徴が、階段の奥から聞こえる子供の泣き声だ。\n音響分析の結果、5歳から6歳程度の男児の声と判明している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "5歳の男の子...きっと迷子になって泣いてるんだよ！\n早く助けに行かないと！",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団も同じように考え、1998年から本格的な探索を開始した。\n最初の探索では、D-9884が200段まで降下することに成功。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "探索中、D-9884は「声が近づいている」と報告していた。\nしかし実際には、音源との距離は全く変わっていなかったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "距離が変わらない...？\nでも階段を降りてるのに？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう、これがSCP-087の最初の異常性だった。\nどれだけ降りても、泣き声との距離は一定のまま保たれる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2回目の探索では、D-9884が400段まで到達。\nここで初めて『SCP-087-1』と呼ばれる実体との遭遇が記録された。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-087-1...？\nそれって何なんだ？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "探索者の証言によると、人間のような顔を持つが、極めて異形的な存在だった。\n「顔に穴がいくつも空いている」という報告が残されている。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この遭遇後、D-9884は急速に精神状態が悪化。\n「あれは子供を食べるために泣き声で誘っている」と主張し始めた。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "食べる...？\nじゃあ子供の泣き声は...！",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "3回目の探索では別のDクラス職員が投入されたが、結果はさらに悪化した。\n探索者は800段地点で突然の恐怖に襲われ、階段を駆け上がって脱出。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "彼の証言では「SCP-087-1が階段を這い上がってくる音が聞こえた」とのこと。\n実際、録音機器にも謎の摩擦音が記録されていた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "這い上がってくる...？\nそれって追いかけてきたってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も興味深いのは4回目の探索だ。\nこの時、探索者は1500段を超える地点まで到達している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "計算上、既に地下500メートル以上の深度に達していたはずだ。\n大学の建物は地上3階建てだったにも関わらず、だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "地下500メートル...！\nそんなに深い場所があるわけない！",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに不可解なことに、この探索者は「子供の泣き声が複数聞こえる」と報告した。\n音響分析では、やはり同一個体の声だったのだが。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして1500段地点で、探索者は重大な発見をする。\n「階段の壁に手の跡がある」という報告だった。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "手の跡...？\n誰かがそこにいたってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "手の跡は子供のものだった。\nしかし奇妙なことに、その手跡は上向きではなく下向きに付いていたんだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり、誰かが必死に階段を駆け下りようとした跡だった。\n泣き声の主は、逃げ惑っていたのかもしれない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "逃げ惑う...？\nでも泣き声はずっと同じ場所から聞こえるんじゃ...？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここからが最も恐ろしい仮説なんだ。\nSCP-087の泣き声は、録音された音の可能性が高い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり、かつてその子供は確かにそこにいて、SCP-087-1から逃げ回っていた。\nそして最後に捕まった瞬間の声が、永遠に再生され続けているんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "録音...永遠に再生...。\nじゃあもうその子は...？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の研究チームは、SCP-087が一種の「罠」である可能性を示唆している。\n泣き声で人を誘い込み、SCP-087-1の餌食にするための装置だと。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際、13回の探索のうち、5回でSCP-087-1との遭遇が報告されている。\nそして遭遇した探索者の多くが、深刻なPTSDを発症した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "5回も...それって偶然じゃないよね。\n明らかに意図的に現れてる。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最新の理論では、SCP-087は異次元空間への入口だと考えられている。\n我々の現実とは異なる物理法則が適用される領域だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だからこそ光が届かず、音の距離感も狂い、無限に続く階段が存在できる。\nそしてSCP-087-1のような存在も生息できるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "異次元...そんな場所が本当にあるなんて。\n科学じゃ説明できないね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在SCP-087は完全に封鎖されている。\n入口は溶接され、24時間体制で監視が続けられているんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかし時折、封鎖された扉の向こうから微かに泣き声が聞こえることがある。\n監視員たちは、その度に恐怖に震えているそうだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今でも泣き声が...？\nその子は今も一人で泣き続けてるのかな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もしSCP-087の近くで子供の泣き声を聞いても、絶対に近づいてはいけない。\nそれは助けを求める声ではなく、罠への誘いなのだから。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分かったよ...でも聞こえたら、つい助けたくなっちゃいそうだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "人間の善意を利用した、最も悪質な異常存在の一つだ。\n今日の報告は以上だね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "うう...今夜は悪夢を見そうだよ。\nでも勉強になったよ、ありがとう。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-096「シャイガイ」について解説する予定だ。\n見てはいけない存在の恐怖を明かそう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画が気に入ったら高評価とチャンネル登録をお願いします。\n君の応援が、次の調査の励みになるからね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "みんなも気をつけてね！\n変な階段は見つけても絶対に降りちゃダメだよ！",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "階段を降りると聞こえる",
+      "『あの声』の正体とは"
+    ],
+    "subtitle": "SCP-087終わりなき階段",
+    "tagline": "地下に潜む恐怖"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1779870844_4390",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "シナリオBは「子供の泣き声」という具体的で感情に訴える要素を冒頭から提示し、13回の探索記録など詳細なデータで信憑性を高めている。また会話のテンポが良く、視聴者の興味を持続させる構成になっている。",
+      "scores_a": {
+        "hook_strength": 6,
+        "specificity": 5,
+        "pacing": 4,
+        "cta_effectiveness": 5,
+        "wording_quality": 6,
+        "overall": 5
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 7,
+        "cta_effectiveness": 6,
+        "wording_quality": 8,
+        "overall": 7
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜこの階段を降りるとあなたの恐怖が増幅するのか"
+      },
+      "claude": {
+        "title": "階段を降りると『あの声』が聞こえる...SCP-087で判明した地下施設の正体"
+      }
+    }
+  }
+}

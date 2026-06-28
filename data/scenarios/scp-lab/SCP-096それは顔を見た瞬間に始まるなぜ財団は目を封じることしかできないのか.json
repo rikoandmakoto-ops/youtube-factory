@@ -1,0 +1,402 @@
+{
+  "title": "SCP-096【それは、顔を見た瞬間に始まる】なぜ財団は『目』を封じることしかできないのか",
+  "theme": {
+    "title": "SCP-096「シャイガイ」",
+    "angle": "顔を見られると殺しに来る存在。徹底した隠蔽体制を解説"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "ねぇクロ、もし誰かの顔を見ただけで絶対に殺されるとしたら？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え…それって冗談じゃないよな、シロ？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-096、通称シャイガイ。顔を見た者を世界中どこにいても追跡して必ず仕留める存在だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録では、収容違反発生から対象抹殺まで平均で数分以内。距離は関係ない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ収容方法って…目隠しするしかないってこと？それしか手がないの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "登録者1万人目指して毎日投稿中だから応援お願い！もっと詳しい話は関連動画から見てね！",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書を読んでいるあなた、今この瞬間、誰かの顔を見ているか？\nそれが、すべての始まりになる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、シロ…いきなり何？なんか雰囲気おかしくない？ちょっと待って、怖いって。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団データベースに記録された異常存在、SCP-096。通称『シャイガイ』。\n今日はその封印の実態を、報告書の記録から読み上げる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-096のオブジェクトクラスは『ユークリッド』。これは財団が標準的な収容手順で管理できると判断した分類だ。\nだが、その実態は分類名が示す以上に深刻だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ユークリッドって、そんなに危ないのに標準的な収容でいいの？それって甘くない？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が収容できているのは、あくまで顔を見せなければ攻撃性が発現しないという条件があるからだ。\n逆に言えば、その条件が崩れた瞬間、財団に打てる手は何もない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-096の外見は身長約2.38メートル、体重は約77キログラム。\n人間に似た二足歩行の存在だが、筋肉量は著しく少なく、肌は白く変色しているとされる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2メートル38センチって、バスケ選手より全然でかいじゃないか。それが追いかけてくるって…嘘だろ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "通常時、SCP-096は収容室の隅で膝を抱え、顔を壁に向けたまま静止している。\n泣くような声を断続的に発するが、その意味や原因は財団でも解明できていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして問題の異常性、顔を見られた瞬間にすべてが変わる。\n見た者の位置が世界中どこであっても、SCP-096はその方向を正確に認識し、移動を開始する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、世界中どこでも？距離は関係ないってこと？それって地球の裏側でも？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "距離は関係ない。海を渡ろうと、山を越えようと、SCP-096は止まらない。\n財団の記録では、対象者の抹殺まで平均で数分以内という報告が複数残されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "追跡中のSCP-096は時速約35キロメートルで走行するとされており、これは人間の全力疾走を大幅に上回る速度だ。\n障害物があっても進路を変えず、直線的に対象へ向かい続ける。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "時速35キロって…逃げられるわけないじゃないか。車でも余裕で追いつかれる速さじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして対象者に到達した後の記録は、ほぼすべて[DATA EXPUNGED]として抹消されている。\n生存報告は存在しない。これが、財団が記録している事実だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルを確認しよう。SCP-096は現在、5メートル四方の収容室に単独で収容されている。\n収容室内の壁・床・天井はすべて不透明な素材で覆われており、外部からの視認を完全に遮断している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "部屋ごと見えなくする…確かにそれしか手がないか。シロ、もし収容室にカメラを入れたら？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "カメラ映像を通じて顔を認識した場合も、SCP-096は反応するという報告が財団に存在する。\n写真一枚、映像の一コマ、それだけで十分に発動条件を満たすとされている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "写真一枚で…？じゃあ昔に誰かが撮った写真が今も残ってたら、それを見た人全員が…？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が最も恐れているシナリオの一つが、まさにそれだ。\nSCP-096の顔が記録されたデータや画像が拡散した場合、被害者の数は制御不能なレベルに達する可能性がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そのため財団は、SCP-096に関するすべての映像記録・写真・目撃者の証言を厳重に管理している。\n関与した職員の記憶処理を行った記録も、複数のケースで確認されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記憶処理って…財団って普通に怖いな。シャイガイも怖いけど、財団も十分怖いじゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団内部では、SCP-096の顔の視認を防ぐため、接触するすべての職員に不透明なゴーグルの着用が義務づけられている。\nこれは収容室への入室時だけでなく、輸送中も例外なく適用される。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "輸送時には頑丈な布袋をSCP-096の頭部に被せた状態で行うとプロトコルには記載されている。\nしかし財団の内部記録には、輸送中に袋が外れて収容違反に至った事案が少なくとも3件記録されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3件って…その3件全部で犠牲者が出たってこと？それって財団の職員が？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "詳細はすべて[REDACTED]されている。財団の公式発表は『収容は維持されている』の一文のみだ。\n犠牲者の数も、事案の経緯も、記録は完全に封鎖されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで、財団内部で繰り返し議論されてきた問いを提示する。\nなぜSCP-096は顔を見られることに、これほど激烈に反応するのか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "そうだよ、なんで顔を見られると反応するんだろう。恥ずかしいとか？それとも怒るとか？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の研究部門はいくつかの仮説を提示しているが、どれも確証には至っていない。\n一つ目の仮説は、SCP-096が自身の顔を見られることを何らかの脅威として認識しているというものだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "二つ目の仮説は、顔を見るという行為が財団の理解を超えた何らかのトリガーとして機能しているというものだ。\nしかしその仕組みについては、財団の最高レベルの研究員でも解明できていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団でも分からないって…それってつまり、対策も完全じゃないってことだよな。嘘だろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。財団が現状できることは、顔を見せないという一点に集約されている。\n根本的な無力化や制圧の手段は、現時点では存在しない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "過去に財団がSCP-096への直接介入を試みた実験記録が一件存在する。\nDクラス職員を用いた接触実験だったが、その記録は実験開始から約4分後で完全に途切れている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4分で途切れた…それって4分後に何かが起きたってこと？Dクラスの人は…？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書の末尾には『以降の記録は[DATA EXPUNGED]』とだけ記されている。\n財団が隠蔽した情報の中に、その答えがある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "注目すべき点は、SCP-096が対象者を抹殺した後に見せる行動だ。\n目撃者の記録によれば、抹殺後のSCP-096は静かにうずくまり、再び泣くような声を上げながら元の状態に戻るとされている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "泣きながら戻る…？それって後悔してるってこと？それとも別の何か？ゾッとするな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその行動が感情的な表現なのか、それとも別の何かなのか、現在も結論を出せていない。\nSCP-096が何を考え、何を感じているのかは、完全な謎として報告書に記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに財団の内部文書には、こんな記述が残されている。\nSCP-096の顔の映像データが過去に一度、財団の管理外に流出した可能性があるという報告だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "流出した可能性って…それってまだ誰かが持ってるってこと？今もどこかに？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその流出データの追跡と回収を最優先任務として複数のエージェントに命じたとされている。\nしかし回収の成否については、記録は[REDACTED]とされており、確認できない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし回収に失敗していたとすれば、そのデータはどこかにまだ存在している可能性がある。\nインターネット上のどこかに、あるいはあなたのデバイスのキャッシュの中に。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って待って。それって冗談だよね？僕のスマホに入ってるわけないよね？シロ？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の見解では、SCP-096の顔を認識したかどうかは本人が気づかないレベルでも成立する可能性があるとされている。\n見た瞬間に何かが始まる。それが財団の記録だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルの最後に記されているのは、職員への厳重な警告だ。\n『SCP-096の顔を撮影・描写・言及する資料はいかなる形式でも財団の許可なく作成・保存・共有してはならない』。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "その警告を今この動画で話してるってことは…シロ、大丈夫なの？財団に怒られない？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この情報は財団の公式ライセンス、CC BY-SA 3.0に基づいてSCP財団Wikiに開示されている記録の範囲内だ。\n顔の描写は一切含んでいない。それが、私がここで話せる唯一の条件だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "改めて確認しておこう。SCP-096の収容において財団が行えることは、顔を完全に隠し続けるという一点だけだ。\n攻撃・制圧・無力化、そのいずれも財団は現時点では実現できていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団ってあんなに強力な組織なのに、それが唯一の手段か。なんかそっちの方が怖くなってきた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の力をもってしても止められない存在が、今この瞬間も収容室の隅で膝を抱えて泣き続けている。\nそしてその顔を見た者が、今この世界のどこかに存在しているかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は別の異常存在、SCP-049通称『ペスト医師』の収容記録を読み上げる予定だ。\n治療と称して何をしているのか、その記録は今回よりさらに不穏な内容になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ペスト医師…あのマスクの存在か。それも怖そうだな、でも気になる。次も絶対見る。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もしこの報告書が気になったなら、チャンネル登録と高評価で財団の調査を支援してくれ。\n登録者1万人を目指して毎日投稿している。あなたの登録が、次の報告書を届ける力になる。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後にもう一度だけ警告しておく。もし日常の中で、見てはいけないものを見てしまったと感じた時は。\n決して確認しようとするな。それが財団から、あなたへの唯一の忠告だ。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "顔を見たら…逃げられない",
+      "SCP-096 収容違反記録"
+    ],
+    "subtitle": "シャイガイの恐怖と完全隠蔽体制の真実",
+    "tagline": "財団でさえ、止める方法を知らない"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1782087389_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "SCP-096【それは、顔を見た瞬間に始まる】なぜ財団は『目』を封じることしかできないのか"
+      }
+    }
+  }
+}

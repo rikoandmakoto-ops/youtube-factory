@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import { Field } from '@/components/Field';
+import {
+  CANONICAL_OAUTH_ORIGIN,
+  redirectToCanonicalOAuthOrigin,
+} from '@/lib/oauthOrigin';
 import type { YoutubeStatus } from '@/lib/api';
 
 const POPUP_FEATURES = 'width=520,height=720';
@@ -87,6 +91,14 @@ export default function ChannelYoutubeConnect({
   const startAuth = async () => {
     setError(null);
     setInfo(null);
+
+    // canonical でない Vercel エイリアス/プレビューから始まると redirect_uri が
+    // Google 未登録で redirect_uri_mismatch になる。canonical へ誘導してやり直す。
+    if (redirectToCanonicalOAuthOrigin()) {
+      setInfo(`YouTube 連携は ${CANONICAL_OAUTH_ORIGIN} で行います。移動中…`);
+      return;
+    }
+
     setAuthBusy(true);
 
     // ポップアップブロッカー対策: 必ずユーザーアクション直後に開く

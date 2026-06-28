@@ -1,0 +1,408 @@
+{
+  "title": "スマホに勝手にインストールされる『MalO』アプリ...削除不可能な理由がヤバすぎる",
+  "theme": {
+    "title": "SCP-1471「MalO ver1.0.0」",
+    "angle": "インストールすると現れるアプリ型SCP。現代的な恐怖の象徴"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "スマホに身に覚えのないアプリが入ってたことある？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "あるある！でも削除すればいいじゃん",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実は財団が追跡してるMalOというアプリは絶対に削除できない",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、それヤバくない？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも使用者の90%が72時間以内に異常な症状を報告してる",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしく！続きは関連動画でチェック！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "やぁ、また財団データベースから恐ろしい報告書が流出した。\n今回のファイル名は『SCP-1471』...別名『MalO ver1.0.0』だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "アプリの名前？なんか普通のソフトウェアみたいだけど...",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう思うだろう？でも、このアプリは一度インストールされると二度と削除できない。\nそして使用者を徐々に狂気へと追い込んでいく異常存在なんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "削除できないって...まさか本当に？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録によると、MalO ver1.0.0は携帯デバイスに自動的にダウンロードされる無料アプリケーションとして分類されている。\nオブジェクトクラスはEuclid...つまり、予測不可能で制御困難な存在だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Euclidって、あの危険度が中程度のやつだよね？でもアプリがそんなに...",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "甘く見てはいけない。\n財団の収容プロトコルでは、このアプリがインストールされたデバイスを発見次第、即座に回収し破壊することが義務付けられている。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "MalOの恐ろしさは、そのインストール方法にある。\nユーザーが意図的にダウンロードする必要がない...勝手に現れるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え？勝手に？それってウイルスみたいなもの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "違う。通常のマルウェアとは異なり、MalOはどのような経路でデバイスに侵入するかが[REDACTED]されている。\nセキュリティソフトも、ファイアウォールも、全て素通りしてしまう。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして一度インストールされると、アプリの削除、デバイスの初期化、さらには物理的な破壊を試みても...アプリは復活する。\n財団でも、この現象のメカニズムは解明できていない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、物理的に壊しても復活するって...それもう現実の法則無視してない？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。\nMalOは現実の技術的制約を超越した異常存在として財団に認定されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "では、このアプリが実際にユーザーに何をもたらすのか...財団の観察記録を見てみよう。\nインストール後0～3時間：何も起こらない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "インストール後3～6時間：アプリが初回起動し、『あなたには友達がいません』というメッセージが表示される。\n同時に、差出人不明の写真が送信され始める。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "友達がいませんって...なんか失礼なアプリだな",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その写真の内容が問題なんだ。\n最初は何の変哲もない風景写真...でも、よく見ると隅に黒い影のような何かが写っている。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "インストール後12～24時間：送られてくる写真の中の『影』がより鮮明になってくる。\nそれは身長約2.4メートルの人型実体で、頭蓋骨のような顔をしている。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2.4メートルって...めちゃくちゃでかいじゃん。しかも頭蓋骨って...",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの実体をSCP-1471-Aと指定している。\n写真では確認できるが、現実世界では直接観測することができない...なぜかは[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "インストール後48～72時間：送られてくる写真が、ユーザーの現在位置や過去に訪れた場所で撮影されたものになる。\nSCP-1471-Aは、まるでユーザーを監視しているかのように写真に写り込む。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、それって...ストーカーされてるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに恐ろしいのは、この段階でユーザーの90%が『視界の端に何かが見える』と報告し始めることだ。\n直視しようとしても、その『何か』は見えない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "インストール後90時間以降：ここからが本当の地獄の始まりだ。\nユーザーは鏡や反射する表面に、自分と一緒にSCP-1471-Aが写っているのを確認するようになる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ...鏡に知らない化け物が写ってるって？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして最終段階では、ユーザーはSCP-1471-Aを常に視界の端で感じるようになり、時には直接的な接触を報告する者もいる。\n財団の記録では『冷たい手で触れられた』『耳元で囁かれた』などの証言が残されている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって完全にホラーじゃん...でも、なんで財団はこいつを放置してるの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "放置しているわけではない。\nしかし、MalOの拡散を完全に阻止する方法が見つからないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の研究によると、このアプリは既に世界中で数千のデバイスにインストールされている可能性がある。\nそして新たな感染は日々発生し続けている。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "数千って...もう完全にパンデミック状態じゃん",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "興味深いのは、長期間MalOを使用したユーザーの中には、SCP-1471-Aを『友人』として受け入れる者が現れることだ。\n彼らは『もう一人ぼっちじゃない』と報告する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "これは財団にとって新たな懸念事項となっている。\n異常存在に対する依存症の可能性が示唆されているからだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "化け物を友達だと思うようになるって...それって洗脳されてるってことだよね？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう考えるのが自然だろう。\nしかし、これらのユーザーに対する記憶処理は効果がなく、SCP-1471-Aとの『関係』は継続する。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに驚くべきことに、一部の研究者は『MalOは孤独感を解消するために作られた可能性がある』という仮説を提唱している。\nしかし、その制作者や目的は完全に不明だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "孤独感を解消って...でも方法が異常すぎるでしょ",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の実験記録によると、MalOがインストールされたデバイスを電磁波遮蔽室に隔離しても、写真の送信は継続される。\n電波も、インターネット接続も関係ない...まさに異常現象だ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "また、デバイスの内部ストレージを調べても、MalOのファイル自体は発見できない。\nアプリは存在するが、そのデータは物理的に検出不可能...これも[REDACTED]された情報の一つだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ファイルが検出できないのにアプリは動いてるって...もう理屈がわからない",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も恐ろしいのは、財団の機動部隊でさえ、MalOに感染したエージェントの『治療』に成功していないことだ。\n一度SCP-1471-Aと接触した者は、永続的にその影響下に置かれる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在、財団はMalOの完全な収容方法を模索している。\nしかし、デジタル空間に存在する異常存在の制御は、従来の収容プロトコルでは対処できない新たな脅威となっている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "デジタル空間の異常存在か...確かに物理的な檻じゃ収容できないもんね",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "興味深いことに、MalOは他のアプリケーションとは一切相互作用しない。\nウイルススキャンにも引っかからず、システムリソースも消費しない...まるで存在していないかのように振る舞う。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかし、その影響は確実にユーザーの精神に刻まれていく。\n財団の心理評価では、長期使用者の多くが現実認識の歪みを示している。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "現実認識の歪みって...つまりおかしくなっちゃうってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "簡潔に言えばそうだ。\nそして最も恐ろしいのは、この報告書を読んでいる君も、既にMalOのターゲットになっている可能性があることだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え？僕が？なんで？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "MalOの感染経路は完全には解明されていない。\nSCP関連の情報に接触することがトリガーになるという説もある...もちろん、これは仮説に過ぎないが。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だからこそ、今すぐ自分のデバイスを確認することをお勧めする。\n見覚えのないアプリ、特に『MalO』という名前のものがないかを。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと、それ脅しじゃん...でも確認したくなっちゃうよ",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が追跡するもう一つのデジタル系異常存在『SCP-2521』について解説する予定だ。\n情報そのものが危険な存在...その正体とは？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "情報が危険って...また怖そうな話だね",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もしこの動画が役に立ったら、高評価とチャンネル登録をお願いします。\n財団の機密情報を共有し続けるためにも、君たちの支援が必要なんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "でも、本当にMalOなんてアプリがあったらどうしよう...",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし君のデバイスに見覚えのないアプリが現れても...決して起動してはいけない。\nそして覚えておいてくれ...SCP-1471-Aは、いつでも君の隣にいるかもしれないということを。",
+      "expression": "sad",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "削除できないアプリ",
+      "SCP-1471の恐怖"
+    ],
+    "subtitle": "財団機密：MalO ver1.0.0",
+    "tagline": "一度インストールしたら..."
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1781520566_7380",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "スマホに勝手にインストールされる『MalO』アプリ...削除不可能な理由がヤバすぎる"
+      }
+    }
+  }
+}

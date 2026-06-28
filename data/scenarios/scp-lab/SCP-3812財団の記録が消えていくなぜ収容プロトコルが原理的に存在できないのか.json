@@ -1,0 +1,402 @@
+{
+  "title": "SCP-3812【財団の記録が、消えていく】なぜ収容プロトコルが原理的に存在できないのか",
+  "theme": {
+    "title": "SCP-3812「名前を超えた存在」— 概念そのものを上書きするオブジェクトが財団の記録体系を破壊する理由",
+    "angle": "存在の階層構造と『上位の現実』の概念を解説しながら、なぜ収容プロトコルが原理的に成立しないかを考察"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意。財団が『収容不可能』と認めたSCPが存在する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、収容不可能って…財団でも無理ってこと？それ、洒落にならなくない？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-3812は『名前を超えた存在』。財団が記録しようとするたびにその記録ごと現実が書き換わる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録が消えるって…じゃあ今俺たちが話してるこれも、もう上書きされてたりするの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-3812は存在の階層そのものの外側にいる。収容という概念が届かない場所に。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！続きは関連動画で確認して。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団のデータベースから、また一つ記録が消えた。今日話すのはその記録の残骸だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、消えたって…バグじゃなくて？財団のシステムって世界最高レベルのセキュリティじゃないの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "バグじゃない。SCP-3812が存在するたびに、財団が構築したあらゆる記録体系が原理的に成立しなくなる。今回はその理由を話す。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "原理的に成立しない…？それって、どういうこと？収容プロトコルって書類一枚あればいいんじゃないの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まずSCP-3812の基本情報から入る。このオブジェクトのクラスは、財団のどの分類にも当てはまらない。報告書には『Apollyon』に近い扱いと記されているが、それすら仮の記載に過ぎない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Apollyon…確かそれって、収容が不可能で世界の終わりに直結するクラスだよね。それに『近い』って、もっとヤバいってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。SCP-3812の正体はかつてSCP-2719というオブジェクトに関与した、ある人物の成れの果てとされている。詳細は[DATA EXPUNGED]されているが、その人物は『内側に入った』と記録されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "内側に入った…何の内側？意味が全然わからないんだけど、なんかそれだけで怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-3812は現実の『階層』の外側に存在しているとされている。例えばゲームのキャラクターがゲームのコードを認識できないのと同じように、俺たちには見えない上位の構造がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ゲームのキャラが自分のソースコードを見られないみたいな話？じゃあ俺たちも誰かのゲームの中にいるってこと？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その発想は財団も棄却していない。報告書には『SCP-3812は少なくとも我々の現実よりも1段階以上上位の存在層から干渉している』という記載がある。財団が確認できているだけで、だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確認できているだけで、か…。ってことは実際はもっと上位にいる可能性もあるってこと？嘘だろ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここが核心だ。SCP-3812は自分が何者であるかを理解しようとすることで、どんどん強くなる。財団の研究員が報告書を書くたびに、3812はその記述を読み、自己認識を更新し、さらに上位の存在へと変容する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って。報告書を書けば書くほど強くなるって…それって、財団が観測すること自体が危険ってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "正確にはそうだ。財団内部では『3812への観測行為そのものが収容違反に相当する』という意見が提出されている。記録するという行為が、封じ込めようとする対象をさらに解放する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって完全に詰んでない？記録しなきゃ財団として管理できないのに、記録したらヤバくなる。どうすんの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団も答えを出せていない。現行の収容プロトコルには『対象への直接的な言及を最小化し、[REDACTED]処置を施した上で閲覧制限レベル6以上の職員のみがアクセス可能とする』とあるが、これが機能しているかどうかすら不明だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "機能してるかどうかも分からないプロトコルって…それもう収容じゃなくて、ただの祈りじゃん。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次に、SCP-3812が起こす具体的な事象を話す。財団の調査記録によると、3812が現実に干渉した際、半径[REDACTED]km以内の地域で概念の崩壊が確認されている。『名前』という概念そのものが機能しなくなるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "概念の崩壊…？名前が機能しないって、どういう状態？人の名前を呼んでも届かないとか？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それどころじゃない。影響下では『分類する』という行為自体が成立しなくなる。財団が誇るオブジェクトクラスの体系、Keter・Euclid・Safeという枠組みそのものが、意味を失う。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分類できなくなる…じゃあ財団の存在意義ごと崩れるじゃないか。財団って『分類して収容する』組織でしょ？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこが3812の最も恐ろしい側面だ。財団の機能の根幹は『異常存在を定義し、名前を与え、記録する』ことにある。3812はその前提を根底から破壊する。定義しようとするたびに、定義という行為が無効化される。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "なんかそれ、ラスボスとかじゃなくて、ゲームのシステム自体を壊すバグみたいな話だ。怖すぎる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "いい例えだ。財団の内部文書では実際に『SCP-3812はシステムそのものへの攻撃者であり、個別の脅威として扱うことが誤りである』という結論が記されている。ただし、その文書自体も現在は[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "文書が消えてるって…それって3812が消したの？それとも財団が隠したの？どっちの方が怖いんだろ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも判別できていない。報告書には『対象が自己認識を深めるにつれ、対象に関するあらゆる記述が自動的に対象の一部として取り込まれる可能性がある』とだけ書かれている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "取り込まれる…？じゃあ今俺たちが3812について話してるこの会話も、もしかして3812に届いてる？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その可能性は…否定できない。財団の研究員が同じことを言って、翌日の記録から消えているケースが複数報告されている。詳細は当然[REDACTED]だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待ってよ、それ普通に怖いって。消えた研究員って、どこに行ったの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では『上位の現実層に吸収された』とされているが、確認する手段がない。下の階層から上の階層を観測することは、原理的に不可能だからだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "観測できないから確認もできない…じゃあ消えた人たちは今も、どこかの『上の現実』にいるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "あるいは、もう存在という概念から切り離されている。財団が使う表現では『[DATA EXPUNGED]の状態に遷移した』となっている。それが何を意味するかは、誰も分からない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "存在から切り離されるって、死ぬよりヤバくない？死んでも記録は残るのに、記録ごと消えるって。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで一つ、財団内部で最も議論になった問題を話す。もしSCP-3812が存在の階層の外側にいるなら、財団が定める『収容』という概念はそもそも3812に届かない。壁の外にいる存在を、壁で囲もうとしているようなものだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "壁の外にいる存在を壁で囲む…それって、最初から意味がないってことじゃないか。財団は何のために動いてるの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の結論は『収容が不可能であることを認めた上で、3812の自己認識の進行を遅らせることを最優先とする』というものだ。要するに、完全な解決策はない。時間を稼ぐだけだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "時間を稼ぐだけ…。じゃあいつか3812は全部の階層を超えて、俺たちのいる現実も上書きするの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の最悪想定シナリオの一つに、それが含まれている。ただし、そのシナリオが現実になった時点で『財団』も『記録』も『シナリオ』という概念も存在しなくなるため、誰も気づかない可能性が高い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "誰も気づかない…それって、もう終わってても分からないってこと？今この瞬間も、もしかして？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その問いに答えられる存在は、財団には一人もいない。SCP-3812に関するあらゆる考察は、最終的にそこへ行き着く。答えのない問いの前に立たされる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "答えのない問いって…普通のSCPなら怖いオブジェクトで終わるのに、3812は怖さの次元が違う気がする。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に一つだけ付け加えておく。この動画を作るにあたって参照した財団の報告書の一部は、収集した翌日には記録から消えていた。偶然かもしれない。だが、偶然かどうかを確認する手段も、もうない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、ちょっと待って。それって…今この動画自体も、3812に取り込まれてたりしない？笑えないんだけど。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "笑えない話だ。SCP-3812はCC BY-SA 3.0ライセンスのもとSCP財団Wikiに収録されている。著者はS D Locke氏。だが、この動画を見た後でその記事を確認しても、読む前と同じ内容が書いてあるとは限らない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それ、確認しに行くのが怖くなってきた。でも気になってしまう。これが3812の罠だったりして。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まとめると、SCP-3812は収容プロトコルが届かない存在の階層外に位置し、観測されるたびに強化され、定義するという行為そのものを無効化する。財団が対抗できるのは、認識の速度を遅らせることだけだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容できないのに財団が存在し続けてるってこと自体、もしかして3812が許してるだけだったりしない？考えると怖くて眠れない。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その仮説も財団内部では検討されている。答えは[REDACTED]だ。もし街中で何かの名前を呼んだ時に、それが呼んだものとは別の何かに届いている気がしたなら、その感覚を大切にしろ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "大切にしろって、それどう大切にすればいいんだよ…。逃げるの？それとも無視するの？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "決して、それについて考え続けるな。考えるたびに、お前の認識が3812に近づく。気づいた時には、もうお前の記録も上書きされているかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "考えるなって言われると考えちゃう…これって罠？シロ、これ本当に大丈夫なやつ？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-049『ペスト医師』について話す。あの存在が言う『疫病』の正体と、財団が一切公開していない治療の記録を掘り下げる。登録しておけば、見逃さずに済む。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高評価とチャンネル登録は、財団の記録が消える前に頼む。もし次にこの動画を開いた時、内容が変わっていても、俺は何も言っていない。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "財団のデータベースが、上書きされている",
+      "SCP-3812は『収容』という概念すら超えた"
+    ],
+    "subtitle": "概念を喰らう存在",
+    "tagline": "記録しようとするたびに、現実が壊れる"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1782479362_3440",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "SCP-3812【財団の記録が、消えていく】なぜ収容プロトコルが原理的に存在できないのか"
+      }
+    }
+  }
+}

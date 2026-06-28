@@ -1,0 +1,470 @@
+{
+  "title": "なぜ写真だけで？SCP-096を見た研究員の「最後の3分間」に記録された異常",
+  "theme": {
+    "title": "機密解除：SCP-XXXX「シャイガイ再考」 — その悲劇の裏に潜む真実",
+    "angle": "SCP-096の影響を受けた事例を探る"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "写真を見ただけで死ぬって、信じられる？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "えっ、そんなことあるの？ただの写真でしょ？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-096の写真を見た研究員、生存時間は平均2分47秒。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "具体的すぎて怖い...どうやって測ったの？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実は、その「最後の記録」に恐ろしい秘密があった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！詳しい解説は関連動画でチェック！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "また新しい機密文書が流出したね。今回の報告書...読んだら後悔するかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、何の報告書？なんか不気味な雰囲気だけど...",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-096、通称「シャイガイ」の影響を受けた研究員たちの最後の記録だよ。財団が隠し続けてきた、あの3分間の真実。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "シャイガイって、顔を見ちゃいけないやつだよね？でも写真でも危険なの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう、それが今回の核心だ。写真という「間接的な視認」でも、096-1状態に陥る。そしてその瞬間から、カウントダウンが始まる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日は財団の元研究員として、この恐怖の3分間に何が起きるのか、詳しく解説していこう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "うわぁ...聞くのが怖いけど、知りたい気持ちもある...",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まず基本的なメカニズムから説明しよう。SCP-096の顔を視認した瞬間、対象者は「SCP-096-1」に指定される。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この096-1状態になると、SCP-096は激しい感情的苦痛状態に入り、対象者を排除するまで停止しない。距離は関係ない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "距離関係ないって...地球の裏側にいても？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。事例096-1-A では、南極基地にいた研究員が、サイト-19の写真データベースでSCP-096の画像を0.3秒間視認した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "結果、096は南極まで徒歩で移動。移動時間は4日と7時間。その間、096-1対象者は極度の不安状態に陥っていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4日間も恐怖を感じ続けるの？それは精神的におかしくなりそう...",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際、多くの096-1対象者が最終段階で精神崩壊を起こしている。しかし、より恐ろしいのは「最後の3分間」だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "096が対象者の視界に入る約3分前から、異常な現象が記録されている。室温の急激な低下、電子機器の誤作動、そして...",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "そして？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象者の生体反応が異常値を示すんだ。心拍数は毎分180を超え、体温は38.5度まで上昇。まるで身体が「それ」の接近を感知しているかのように。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここからが本当の恐怖の始まりだ。財団の研究データによると、096-1対象者の生存時間には明確なパターンがある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "パターン？どういうこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "直接視認の場合、平均生存時間は1分23秒。写真経由の場合は2分47秒。映像データの場合は3分12秒だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "興味深いのは、視認方法によって096の「殺害効率」が変わることだ。まるで対象者への「怒り」の度合いが違うかのように。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "怒りの度合いって...096に感情があるってこと？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それは後で説明しよう。まず、最も詳細な記録が残っている事例096-1-C の音声ログを見てみよう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "研究員D-9341、SCP-096の写真を誤って視認。その瞬間から3分47秒後、音声記録が途絶えた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後の30秒間の音声には、096の特徴的な泣き声と、研究員の悲鳴、そして...金属が引き裂かれるような音が記録されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "うわぁ...想像するだけで鳥肌が立つ...",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに恐ろしいのは、事後調査で判明した事実だ。096が対象者を排除した後、その場所には必ず「何か」が残されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "血痕や体組織の一部...それは当然として、問題は「それ以外」のものだ。096-1対象者が生前に大切にしていた物品が、必ず破壊されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "大切にしていた物品？なんで096がそれを知ってるの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "これが096の最大の謎の一つだ。家族写真、結婚指輪、子供の描いた絵...096はなぜかそれらを特定し、意図的に破壊していく。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まるで対象者の「幸せな記憶」を根絶やしにしようとしているかのように。これは単なる殺戮本能を超えた、何らかの「意図」を感じさせる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって...096にも感情とか記憶があるってこと？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実は、ここからが今回の本当の核心なんだ。近年の研究で、096の「泣き声」を詳細に分析した結果、驚くべき事実が判明した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "096の泣き声には、人間の言語に近い音素パターンが含まれている。そしてその内容は...「見ないで」という懇願だった。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え？「見ないで」って...096が言ってるの？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。096は自分の顔を見られることを嫌がっている。しかし、見られてしまった以上、その記憶を完全に消去するまで止まらない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり、096-1対象者の大切な物品を破壊するのは、その人の「記憶」そのものを抹消しようとする行為なのかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって...096も苦しんでるってこと？見られるのが嫌で、でも見られちゃったから消すしかないって...",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その可能性は高い。096は「シャイガイ」と呼ばれているが、それは単に恥ずかしがりやという意味ではない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "極度の羞恥心と自己嫌悪から生まれた、歪んだ自己防衛本能。それが096の正体なのかもしれない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "なんか...怖いけど、ちょっと悲しい話でもあるね...",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、この「感情論」には危険な落とし穴がある。096に同情心を抱いた研究員が、実際に096の顔を見てしまった事例があるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "博士████は「096を理解したい」という研究熱心さから、防護装備を外してしまった。結果、096-1状態に陥り、2分34秒後に終了された。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "理解しようとしただけなのに...それはあまりにも...",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "096の悲劇性を理解することと、096に接触することは全く別問題だ。感情移入は、研究者にとって最も危険な罠でもある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "では、096-1状態を回避する方法はあるのか？残念ながら、現在のところ有効な対策は「完全回避」しかない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "完全回避って、096の写真や映像を一切見ないってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。財団では096関連の資料は全て「視覚遮断プロトコル」下で管理されている。研究員も特殊なゴーグルを装着して作業する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、これまでに4回、システムの不具合で096の画像が一般ネットワークに流出した。その度に、複数の096-1事例が発生している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "えっ、ネットに流出？それって一般人も見ちゃう可能性があるじゃない！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そのため財団では、096関連の情報流出を最優先事項として監視している。あなたがこの動画を見ているのも、ある意味「奇跡」かもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に重要な警告をしておこう。もしインターネット上で「細長く白い人型の生物」の画像を発見しても、絶対に顔の部分を見てはいけない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "うわぁ...それって096かもしれないってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "可能性は否定できない。発見した場合は即座にページを閉じ、可能であれば財団の情報部門に報告することを推奨する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の解説で、096の「悲劇性」と「危険性」の両面を理解してもらえたと思う。知識は身を守るための武器でもある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確かに...096のことを知らずに写真を見てしまうより、事前に知識があった方が安全だね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。異常存在との共存には、正しい知識と適切な恐怖心が必要不可欠なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-173「彫刻」の収容違反事例について解説する予定だ。あの石像が動いた時、何が起きたのか...興味深いデータが残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "173も怖いやつだよね...でも気になる！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画が参考になったら高評価とチャンネル登録をお願いします。皆さんの応援が、財団の機密情報公開の励みになります。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それでは、また次の報告書で会おう。くれぐれも、知らない画像には注意してね。\n\n※本動画はSCP財団Wiki（CC BY-SA 3.0）に基づく二次創作です。",
+      "expression": "normal",
+      "mood": "calm"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "写真1枚で終了",
+      "最後の3分間"
+    ],
+    "subtitle": "シャイガイ事案の隠された真実",
+    "tagline": "機密解除：096-1事例分析"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1780646629_8209",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "シナリオBは「写真1枚で終了」「最後の3分間」という具体的な数値とタイムリミットを使ったフックが強力で、「平均2分47秒」などの詳細なデータが視聴者の興味を強く引く。シナリオAは一般的な説明に留まり、具体性とインパクトで大きく劣る。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 4,
+        "cta_effectiveness": 3,
+        "wording_quality": 5,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 7,
+        "cta_effectiveness": 6,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "SCP-096の悲劇――なぜ『シャイガイ』は目を見た者を追うのか"
+      },
+      "claude": {
+        "title": "なぜ写真だけで？SCP-096を見た研究員の「最後の3分間」に記録された異常"
+      }
+    }
+  }
+}

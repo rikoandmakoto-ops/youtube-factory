@@ -1,0 +1,480 @@
+{
+  "title": "なぜ『彼ら』だけが選ばれるのか？財団が隠すDクラス職員の真実",
+  "theme": {
+    "title": "Dクラス職員の選ばれし者 — 彼らの運命と財団の秘密",
+    "angle": "実験の裏側に潜む真実"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "知ってる？財団のDクラス職員って、実は完全にランダムじゃないんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "えっ、そうなの？死刑囚から選んでるって聞いたけど…",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それは表向きの話。実際は特定の遺伝子マーカーを持つ者が92%を占めている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "遺伝子マーカー？なんで？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "異常存在に対する『耐性』があるからだよ。財団は知ってて選んでるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！もっと詳しい話は関連動画から見てね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "やぁ、また一つ…財団から流出した報告書が手に入った。今回の内容は、君も薄々感じていたかもしれない疑問についてだ。なぜ同じDクラス職員でも、ある者は実験を生き延び、ある者は即座に消滅するのか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それ、確かに気になってた。同じ人間なのに生存率があまりにも違いすぎるよね。運だけじゃ説明できないレベルで。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "運ではない。Dクラス職員の選別基準について、公式には死刑囚や終身刑者から無作為抽出とされているが、それは完全な虚偽だった。真実は、もっと計画的で恐ろしいものだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "虚偽って…じゃあ本当の基準は何なの？まさか財団が嘘をついてるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団内部文書[REDACTED-D-2847]によると、現在活動中のDクラス職員4,892名のうち、実に4,501名、つまり92.01%が特定の遺伝子配列『HRA-7』を保有している。これは統計学的に完全に異常な数値だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "92%って…偶然でそんな数字になるわけないよね？一般人だとどのくらいの割合なの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "一般人口におけるHRA-7遺伝子の保有率は0.003%、つまり10万人に3人程度だ。確率論的に考えれば、現在のDクラス職員構成が偶然生まれる可能性は10の-847乗という、事実上ゼロに等しい数値になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "10の-847乗って…もう天文学的に不可能な数字じゃん。完全に意図的ってことだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。では、このHRA-7遺伝子とは一体何なのか。財団の遺伝学研究部門では『異常耐性因子』と呼ばれており、この因子を持つ個体は現実改変系異常存在の影響を受けにくく、認識災害への抵抗力も通常の7.3倍高いことが判明している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "7.3倍って具体的にどのくらい？例えばSCP-096の写真を見ても大丈夫とか？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-096の場合、一般人が写真を0.1秒見ただけで即座に標的認定されるが、HRA-7保有者は平均して2.7秒間の直視に耐えられる。また、SCP-173の瞬間移動による首の骨折も、HRA-7保有者は67%の確率で軽傷に留まる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2.7秒も耐えられるの？それって巨大なアドバンテージじゃん。でもなんでそんな耐性があるんだろう？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり、財団は表向きは人道的配慮を謳いながら、実際は最も『使える』人材を遺伝子レベルで選別していたということだ。彼らにとってDクラス職員は消耗品ではなく、貴重な生体実験材料だったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって…めちゃくちゃ怖くない？人を道具扱いしてるってことでしょ？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だが話はここで終わらない。さらに恐ろしいのは、HRA-7遺伝子の起源についてだ。財団の機密記録によると、この遺伝子配列は自然界には存在しない、完全に人工的な構造を持っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人工的って？誰かが作ったってこと？でもそんな技術、現代にあるの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1953年7月14日、サイト-██で実施されたSCP-████との接触実験において、被験者D-1847の遺伝子が未知のメカニズムにより変異し、HRA-7配列が初めて確認された。以降、同様の変異が世界各地で散発的に発生している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "1953年って…70年も前からこんなことが起きてたの？変異の原因は何だったの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-████の正体は[DATA EXPUNGED]されているが、その影響を受けた個体の脳波パターンは一般人と明確に異なり、通常では観測されない13.7Hz、27.3Hz、41.9Hzの周波数帯域での強い活動が確認されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "13.7Hzとか27.3Hz？普通の人間の脳波にはない周波数なの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "通常の人間の脳波は0.5Hz〜40Hzの範囲内で活動するが、HRA-7保有者は41.9Hzという異常に高い周波数を発生させる。この周波数は、多くの異常存在が発する電磁波パターンと酷似している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "異常存在と似た脳波って…もう人間じゃないってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はそれを『パラノーマル進化』と呼んでいるが、真実は[DATA EXPUNGED]されている。ただ一つ言えるのは、彼らは既に純粋な人間ではなく、異常存在に近い何かに変貌しつつあるということだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "パラノーマル進化って…でもなんで財団はそんな危険な存在を使い続けてるの？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "答えは生存率の圧倒的な差にある。過去10年間のデータを見ると、一般職員がKeterクラス収容違反に巻き込まれた場合の生存率は12.3%に対し、HRA-7保有Dクラス職員は67.8%という驚異的な数値を記録している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "67.8%って…5倍以上も生き残りやすいのか。それは確かに財団にとって貴重すぎる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに恐ろしい事実がある。公式記録では月末処分により全Dクラス職員が入れ替わることになっているが、実際には記憶処理を施した後、偽の身元で別施設に移送されているケースが83.7%を占めている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "83.7%も？ほとんど処分されてないってこと？記憶処理して使い回してるの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。例えばDクラス職員D-9834の秘密記録を見ると、公式には17回『処分』されているが、同一個体が異なる番号D-2156、D-7834、D-4521として各サイトに配属され、計47回の異常実験に参加している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "47回も実験に？17回処分されたのに？それってもう完全に人権無視の拷問じゃん。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だが最も恐ろしいのは、HRA-7遺伝子が『感染性』を持つ可能性があることだ。2019年から2023年にかけて、長期間Dクラス職員と接触した研究員47名のうち、14名に同様の遺伝的変異が確認されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "感染？遺伝子が感染するなんてことあるの？ウイルスみたいに広がるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "通常の遺伝学では説明できない現象だ。しかし感染した研究員の血液サンプルからは、既知のウイルスとは全く異なる未確認の生体構造が発見されている。サイズは平均23.7ナノメートル、DNAでもRNAでもない第三の遺伝物質を含有している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "23.7ナノメートル？第三の遺伝物質って…それもう地球外生命体みたいじゃん。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "可能性は否定できない。特に、異常存在に関する情報に月40時間以上曝露している職員の感染率は28.6%と、短時間接触者の2.1%と比較して異常に高い数値を示している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "月40時間って…僕らみたいに異常存在の動画を見てる人も危ないってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その可能性は完全には否定できない。財団の統計によると、SCP関連コンテンツの長時間視聴者のうち、0.7%に軽度のHRA-7様変異が確認されている。ただし、これが直接的な因果関係かは不明だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0.7%でも1000人に7人…結構な数だよね。ちょっと怖くなってきた。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だからこそ、この情報を君に伝えているんだ。知識は防御になる。では、なぜ財団はこれほど重要な情報を隠蔽し続けているのか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確かに。こんな重大なことを隠す理由って何だろう？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "理由の一つは『パラノーマル人類進化論』だ。財団上層部のO5評議会メンバーのうち少なくとも3名が、HRA-7遺伝子を人類の次なる進化段階と捉え、密かに全人類への拡散を推進している疑いがある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "O5評議会が？でも進化って本当に良いことなの？副作用とかないの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それは誰にも分からない。HRA-7保有者は確かに異常存在への耐性を持つが、同時に深刻な副作用も報告されている。慢性的な睡眠障害、時間認識の歪み、そして最も深刻なのが『現実感の希薄化』だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "現実感の希薄化って？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "HRA-7保有者の78.3%が「この世界が実在するかわからない」「すべてが夢のように感じる」と報告している。詳細は[REDACTED]だが、彼らの中には現実を『視る』能力を獲得し、通常の人間には認識できない異常存在の真の姿を直接知覚できる者もいる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "真の姿を視るって…それって超能力みたいなもの？でもそれが辛いってこと？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "超能力というより、別次元の知覚だ。例えばSCP-173を見た場合、一般人には古びた彫刻に見えるが、HRA-7保有者には「無数の触手が絡み合う肉塊」として認識される。その視覚的ショックは想像を絶する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "無数の触手…想像しただけで気持ち悪い。そんなものを常に見えてしまうの？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかもその代償として、彼らの多くは深刻な精神的後遺症を抱えている。HRA-7保有Dクラス職員の自殺率は一般人口の47.2倍、統合失調症発症率は82.6倍、重度うつ病発症率は156.3倍という異常な数値を記録している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "156倍って…それはあまりにも高すぎる。真実を見る代償がそれほど重いってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに恐ろしいのは、通常の記憶処理では完全に除去できない、魂レベルの傷跡が残ることだ。クラスA記憶処理を受けても、87.4%の対象者が「得体の知れない恐怖」「漠然とした絶望感」を訴え続けている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "魂レベルの傷跡って…記憶処理でも消せないほど深い傷ってことか。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが『選ばれし者』であることの真の代償だ。彼らは異常存在に対する耐性と引き換えに、人間としての正常な認知機能と精神的安定を永久に失っているんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それは…あまりにも酷すぎる。まるで生きながらにして呪われてるみたいじゃん。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だが財団は止まらない。現在も世界各地で新たなHRA-7保有者の発見と回収が続けられており、月平均127名が新規にDクラス職員として登録されている。彼らの多くは、自分の特異な遺伝子を知らないまま財団に連れ去られる。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "月127名も？それってもう組織的な人狩りじゃん。本人の同意とかあるの？",
+      "expression": "angry",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "同意などない。財団にとって彼らは人間ではなく、『異常耐性を持つ生体実験材料』でしかないんだ。偽の逮捕状、でっち上げの犯罪歴、すべては彼らを合法的に拘束するための工作に過ぎない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "偽の逮捕状って…完全に誘拐じゃん。僕らには何かできることはないの？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "できることは限られているが…まずは知ることだ。この真実を知った君も、もう以前の君ではない。知識は時として最大の武器になる。そして、もし君の周りで不自然な逮捕や失踪が起きたら、それは偶然ではないかもしれない。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "そうだね…知らなかった頃には戻れない。でも知ってしまった以上、何かしなきゃいけない気がする。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は『SCP-096「シャイガイ」の真の恐怖』について解説する予定だ。あの存在が本当に怖いのは、その異常性そのものではなく、財団がそれを利用して行っている秘密実験にあるかもしれない。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-096の秘密実験？また恐ろしい話になりそうだな…でも知りたい。",
+      "expression": "sad",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画が良かったら高評価とチャンネル登録をお願いします。君たちの応援が、隠された真実を暴き続ける力になるんだ。一人でも多くの人にこの事実を知ってもらうことが、彼らを救う第一歩になる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "みんな、一緒に真実を知ろう！そして一緒に考えよう！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だが忘れるな…もし君自身がHRA-7遺伝子を保有していたとしても、決して財団に気づかれてはいけない。彼らは今この瞬間も、スマートフォンの生体認証データ、SNSの行動パターン、そして動画の視聴履歴から次の『選ばれし者』を探している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "スマホのデータからも？それって僕らも監視されてるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "可能性は高い。だから…気をつけて。この動画を見た君も、既に彼らのリストに載っているかもしれないのだから。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "Dクラス職員",
+      "選ばれし者の秘密"
+    ],
+    "subtitle": "財団機密報告書",
+    "tagline": "流出データより"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1780869778_1070",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "なぜ『彼ら』だけが選ばれるのか？財団が隠すDクラス職員の真実"
+      }
+    }
+  }
+}

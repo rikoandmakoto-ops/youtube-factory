@@ -215,6 +215,79 @@ async def channel_youtube_disconnect(
 
 
 # =====================================================================
+# TikTok OAuth: チャンネル別エンドポイント（YouTube と並行）
+# =====================================================================
+
+from pipeline import tiktok_oauth as tt_oauth  # noqa: E402
+
+
+class SetTiktokClientRequest(BaseModel):
+    client_key: str = Field(min_length=4)
+    client_secret: str = Field(min_length=4)
+
+
+@router.get("/channels/{channel_id}/tiktok/status")
+async def channel_tiktok_status(
+    channel_id: str, _=Depends(require_session)
+) -> Dict[str, Any]:
+    _require_channel(channel_id)
+    return tt_oauth.get_status_for(channel_id)
+
+
+@router.post("/channels/{channel_id}/tiktok/client")
+async def channel_set_tiktok_client(
+    channel_id: str,
+    request: SetTiktokClientRequest,
+    _=Depends(require_session),
+) -> Dict[str, Any]:
+    """チャンネル別 TikTok client_key/client_secret を保存。"""
+    _require_channel(channel_id)
+    tt_oauth.set_oauth_client_for(channel_id, request.client_key, request.client_secret)
+    return {"status": "ok", "channel_id": channel_id}
+
+
+@router.post("/channels/{channel_id}/tiktok/auth")
+async def channel_tiktok_auth_url(
+    channel_id: str,
+    request: ChannelAuthUrlRequest,
+    _=Depends(require_session),
+) -> Dict[str, str]:
+    """指定チャンネル用の TikTok 認可URLを発行。"""
+    _require_channel(channel_id)
+    try:
+        return tt_oauth.build_auth_url_for(channel_id, request.redirect_uri)
+    except RuntimeError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.post("/channels/{channel_id}/tiktok/callback")
+async def channel_tiktok_callback(
+    channel_id: str,
+    request: ChannelCallbackRequest,
+    _=Depends(require_session),
+) -> Dict[str, Any]:
+    """指定チャンネル用の TikTok OAuth コールバック処理。"""
+    _require_channel(channel_id)
+    try:
+        return tt_oauth.exchange_code_for(channel_id, request.state, request.code)
+    except RuntimeError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"TikTok OAuth exchange failed: {e}")
+
+
+@router.delete("/channels/{channel_id}/tiktok")
+async def channel_tiktok_disconnect(
+    channel_id: str, _=Depends(require_session)
+) -> Dict[str, Any]:
+    """指定チャンネルの TikTok 連携を解除（トークン + クライアント削除）。"""
+    _require_channel(channel_id)
+    tt_oauth.clear_credentials_for(channel_id)
+    tt_oauth.clear_oauth_client_for(channel_id)
+    return {"status": "disconnected", "channel_id": channel_id}
+
+
+# =====================================================================
 # 動画アップロード
 # =====================================================================
 

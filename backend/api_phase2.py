@@ -118,6 +118,9 @@ class UpdateConfigRequest(BaseModel):
     # 画像取得モード（generate / collect / mix）
     image_mode: Optional[str] = None
     image_collect: Optional[Dict[str, Any]] = None
+    # 公開設定（投稿先 publish_targets など）/ TikTok 投稿設定
+    publish_settings: Optional[Dict[str, Any]] = None
+    tiktok: Optional[Dict[str, Any]] = None
 
 
 @router.put("/channels/{channel_id}/config")

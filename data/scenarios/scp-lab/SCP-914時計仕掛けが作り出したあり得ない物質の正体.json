@@ -1,0 +1,618 @@
+{
+  "title": "SCP-914「時計仕掛け」が作り出した『あり得ない物質』の正体",
+  "theme": {
+    "title": "機密解除：SCP-███「異常な機械」 — 製造過程と収容の真実",
+    "angle": "機械の異常性を深掘り"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この機械で何かを作ったら、物理法則を無視した物質が出てくるって知ってた？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、物理法則を無視って何それ怖い…",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-914という異常な機械が実在するんだ。投入した物を5段階で『改良』する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "改良って普通の機械じゃないの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ところが最高設定『Fine』で作られた物質の97%が、現代科学では説明不可能な特性を示している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしく！もっと詳しい収容の真実は関連動画でチェックしてね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団データベースから、また一つ機密報告書が流出した。今回の内容は読んだら後悔するかもしれない。SCP-914『時計仕掛け』の製造記録だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "また怖い話？でも時計仕掛けって、普通の機械みたいな名前だよね。そんなに危険なの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その名前に騙されてはいけない。SCP-914は財団が収容する最も予測不可能な異常存在の一つだ。この動画で、その恐ろしい真実を全て暴く。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "予測不可能って、何がそんなに危険なの？ただの機械でしょ？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "見た目は確かに普通の機械に見える。全長約3.5メートル、幅2.1メートルの巨大な真鍮製装置で、投入口と排出口、そして5つの設定ダイヤルがある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3.5メートルって結構大きいね。5つの設定って何？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "『Rough』『Coarse』『1:1』『Fine』『Ultra Fine』の5段階だ。投入した物質を段階的に『改良』すると称している。だが財団の記録を見れば分かる、これは改良ではない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "改良じゃないって、じゃあ何をしてるの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "異常な変質現象だ。例えば『Rough』設定で腕時計を投入すると、歯車やネジなどの部品がバラバラに分解されて出てくる。これは物理的に理解できる範囲だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分解なら普通の機械でもできそうだけど",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "『Coarse』なら部品が少し整理される。『1:1』は基本的に同じ物が出力される。ここまでは常識の範囲内だ。だが問題は『Fine』と『Ultra Fine』なのだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、何が起きるの…？上位設定だから良い物が出るんじゃないの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "『Fine』設定で同じ腕時計を投入した結果、出てきたのは時間を逆行させる時計だった。針が反時計回りに動き、周囲半径5メートルの時間の流れを実際に17%遅くする。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "時間を遅くするって、そんなのあり得ないよ！17%って具体的にどういうこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1分間が約72秒に引き延ばされる計算だ。財団の測定では、その時計の周囲では物体の落下速度が明らかに遅くなり、人間の心拍数も自然に低下した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "心拍数まで？それって生命にも影響があるってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。財団でも解明できていない現象だ。物理法則を完全に無視した異常性が、この機械では日常的に発生している。記録によれば、投入物の実に97%が科学的に説明不可能な特性を獲得する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "97%って、ほぼ確実じゃん…残りの3%は何なの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残り3%は完全に消失する。分子レベルでも検出不可能になる。どこに消えたのか、別次元に転送されたのか、それとも完全に無に帰したのか、全て不明だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消失って…物質保存の法則はどうなってるの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-914の前では物質保存の法則など意味を持たない。更に恐ろしいのは『Ultra Fine』設定だ。ここで投入された物質の詳細な記録は[DATA EXPUNGED]されているが、一つだけ残された記録がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "データが削除されてるって、相当やばいことが起きたんだね。残された記録って何？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "『Ultra Fine』で処理された一枚の紙切れが、読んだ人間の記憶を改変する認知災害文書になった。3名のD級職員がその文書を読み、全員が24時間以内に[REDACTED]となった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記憶改変って…読むだけで？24時間以内って何が起きたの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "詳細は機密だが、彼らは全員が同じ幻覚を見続け、現実と幻覚の区別がつかなくなった。最終的に自分が実在しているのか分からなくなり、精神的に完全に崩壊したのだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分が実在してるか分からなくなるって…考えただけで怖い",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-914の製造プロセスは完全に未解明だ。機械内部を解体調査した結果、ただの歯車、配線、真鍮パーツしかない。現代技術で再現可能な部品ばかりなのに、なぜ物理法則を超越した出力が可能なのか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "普通の部品で時間操作とか記憶改変とか、全く意味分からないよ",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の主任研究者Dr.██████の仮説によれば、SCP-914は物質の物理的性質ではなく『概念』そのものを操作している可能性が高い。つまり、その物の『意味』や『役割』を根本的に改変しているのではないかと。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "概念の操作って、もはや魔法の領域じゃん…そんなことが機械でできるの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際、1987年の実験記録-914-A47を見ると恐ろしい事実が判明する。D級職員D-8432が『愛』という概念を手書きした紙片をSCP-914に投入した。設定は『Fine』だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "愛って概念を機械に入れたの？何が出てきたの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "出力されたのは、触れた人間を投入者に対して永続的かつ強制的に愛し続けさせる紙片だった。効果は完全に不可逆で、解除方法は現在まで発見されていない。被験者は自由意志を完全に失った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "永遠に愛し続けるって、それもう洗脳どころか人格破壊じゃん！",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "更に恐ろしいのは、この機械が時折自発的に動作することがあるという点だ。1992年11月23日午前3時17分、誰も操作していないのにSCP-914が勝手に稼働を開始した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "勝手に動くって、意思でもあるの？誰も操作してないのに？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "投入口には何も投入されていない。なのに約7分間稼働し、排出口から『完璧な沈黙』が物質として出力された。その沈黙は音波を完全に吸収し、半径50メートルの完全無音空間を12時間維持した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "沈黙が物質として出てくるなんて…音が完全に消えるって想像できない",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その無音空間では、心臓の鼓動すら聞こえない。職員は完全な静寂に包まれ、3名が精神的パニックを起こした。人間は完全な静寂に長時間耐えられるよう設計されていないのだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "完全な静寂って、確かに怖いかも。なんで人間は静寂に耐えられないの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "人間の脳は常に環境音を処理している。完全な静寂状態では脳が異常を検知し、幻聴や幻覚を作り出して感覚を補おうとする。これが精神的混乱を引き起こすメカニズムだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "脳が勝手に音を作り出すって、人間の体って不思議だね",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-914の収容プロトコルが異常に厳重なのも、この予測不可能性のためだ。24時間体制の監視、レベル3以上のクリアランス職員のみアクセス許可、実験は月1回まで、しかも最低72時間前の事前承認が必要だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "72時間前承認って、そこまで慎重にするってことは相当危険なんだね",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際、過去に深刻な収容違反が発生している。1995年8月12日、SCP-914が『Ultra Fine』で処理した鉄の金属片が、厚さ30センチの強化コンクリート壁を分子レベルで素通りした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "30センチの壁を素通り？それじゃあ収容できないじゃん！",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その金属片は物質透過能力を獲得していた。壁、床、天井、あらゆる物質を通り抜けて収容サイト内を自由に移動した。幸い、効果は24時間後に自然消失し、金属片は通常の物質に戻った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "24時間で効果が切れるって時限式だったの？それとも何か別の理由が…",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "効果の消失理由は[データ削除済み]となっている。ただし、その間にサイト内の機密文書17件が何者かによって閲覧された形跡があり、情報漏洩の可能性が指摘されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "機密文書が閲覧されたって、金属片が勝手に文書を読んだってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も恐ろしい実験記録がここにある。SCP-914に生きた人間が投入された記録だ。もちろん財団の正式な実験ではない。1998年3月4日のメンテナンス中の事故による記録だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人間を？それは絶対やっちゃいけないでしょ…事故って何があったの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "メンテナンス作業員のジョンソン技師が、清掃作業中に誤って投入口に転落した。同僚が緊急停止ボタンを押したが、既にSCP-914は稼働を開始していた。設定は『Coarse』だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "緊急停止が間に合わなかったの？で、結果はどうなったの…？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "約2分後、排出口から出てきたのは[REDACTED]だった。詳細は完全に機密扱いだが、唯一判明しているのは、その後SCP-914の周囲で原因不明の時間歪曲現象が継続的に発生しているということだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "時間歪曲が継続してるって、機械自体が何か変化したってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。機械自体が人間の投入によって何らかの恒久的な影響を受けた可能性が極めて高い。現在でも、SCP-914から半径3メートル以内では時計が最大で8%遅れる現象が観測されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "8%の遅れって、1時間で約5分も狂うってことか。それって日常的に影響出るレベルだよ",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在もSCP-914は稼働状態を維持している。財団の研究チームは、この機械の真の目的や製造者について30年以上調査を続けているが、決定的な手がかりは皆無に等しい状態だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "30年以上調査して手がかりなしって、製造者は一体誰なんだろう…",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "機械の底部に刻まれた唯一の手がかりがある。『The Church of the Broken God』の象徴マークだ。壊れた神の教会…彼らがSCP-914の製造に関与している可能性が高いが、教会側は一切の関与を否定している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "壊れた神の教会って、また怖い名前だね…彼らは何を目的にしてるの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "壊れた神の教会は、機械と生体組織を融合させることで人類を『完全な存在』に進化させようとする異常組織だ。彼らにとってSCP-914は神聖な『改良装置』かもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "機械と生体の融合って…それってもう人間じゃなくなっちゃうじゃん",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-914の最も恐ろしい点は、その完全な予測不可能性だ。同じ物質を同じ設定で処理しても、毎回全く異なる結果が出力される。実験回数1,247回中、同一結果は0回だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "1,247回全部違う結果？それじゃあ実験の意味がないよ",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だからこそ危険なのだ。何が出てくるか完全に予測不可能だ。世界を終わらせる物質が出力される可能性も、数学的には完全には否定できない状況にある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "世界を終わらせるって…そんなのが出たらどうするの？止める方法はあるの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の緊急プロトコル-914-ΩKでは、XKクラス世界終焉シナリオを引き起こす可能性のある物質が出力された場合、即座にサイト-19全体を核爆弾で消滅させることになっている。職員の避難は二の次だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "核爆弾で消滅って…職員より世界の安全優先ってそれほど危険視されてるんだ",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際、SCP-914から出力された物質の中には、接触しただけで人格を完全に書き換える『人格改変合金』も存在した。被害者D-9341は触れた瞬間から別人格になり、元の記憶は残るが性格・価値観・感情の全てが変化した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人格を書き換えるって、記憶はあるのに別人になっちゃうってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。彼は自分の名前や過去は覚えているが、好きだった食べ物を嫌いになり、温厚だった性格が攻撃的になった。家族との思い出はあるが、もはや彼らを愛することができなくなったのだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって事実上の殺人と同じじゃん…元の人格は完全に死んだってことでしょ",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。SCP-914の恐怖はここにある。殺すのではなく『変える』のだ。元に戻す方法は一切存在しない。全ての変化は物理法則と同じく、完全に不可逆的なのだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "不可逆って、一度変わったら永遠にそのまま…絶対に元には戻れない",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在、財団はSCP-914を完全に理解することを事実上諦めている。代わりに、如何にして被害を最小限に抑えながら、この異常存在と共存するかという損害制御アプローチに完全に方針転換した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "理解を諦めて共存って、それほど人間の理解を超えてるってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "複雑というより、人間の認識能力そのものを超越している。この機械は我々の知る3次元空間の物理法則とは全く異なる、高次元の法則に従って動作している可能性が極めて高い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "高次元の法則って、4次元とか5次元とかそういう話？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "おそらくそうだ。我々の現実とは異なる次元の物理法則、または現実改変能力を利用している。それがSCP-914の『改良』という名の現実改変の正体だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "現実改変って言葉だけで怖い…そんな力が機械に備わってるなんて",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に警告しておく。もし君がどこかでSCP-914のような『改良装置』や『時計仕掛け』と呼ばれる機械を見かけても、絶対に近づいてはいけない。改良という甘い言葉に騙されてはいけない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分かった…絶対に近づかないよ。でも普通の場所にそんなのあるわけないよね？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それは分からない。SCP-914がどこで発見されたかの記録も[REDACTED]されている。つまり、どこにでも存在する可能性があるということだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "どこにでもって…もしかしたら身近にもあるかもしれないってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-096『シャイガイ』について解説する予定だ。見てはいけない存在、顔を見ただけで確実な死が訪れる恐怖の人型実体の真実を、詳しく語ろう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "また怖そうな話だけど…見ただけで死ぬって、どういうこと？気になっちゃう",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高評価とチャンネル登録、よろしく頼む。財団の機密情報は、君が想像する以上に深く、そして恐ろしいものばかりだからな…",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分かった、登録するよ。でも夜眠れなくなりそう…",
+      "expression": "sad",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "SCP-914製造の",
+      "謎の物質"
+    ],
+    "subtitle": "財団が隠蔽する異常機械の真実",
+    "tagline": "機密解除：収容プロトコル"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1780993042_4186",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "SCP-914「時計仕掛け」が作り出した『あり得ない物質』の正体"
+      }
+    }
+  }
+}

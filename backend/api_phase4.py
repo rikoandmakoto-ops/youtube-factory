@@ -399,6 +399,10 @@ def on_generation_complete(job) -> None:
     publish_settings = ch.get_publish_settings() if ch else {}
     youtube_channel_id = ch.youtube_channel_id if ch else None
 
+    # 投稿先の解決（YouTube + TikTok の同時 / 単独投稿に対応）
+    wants_youtube = ch.wants_youtube_post() if ch else True
+    wants_tiktok = ch.wants_tiktok_post() if ch else False
+
     # ペア公開トリガー（YouTube 連携必須）
     try:
         from pipeline import youtube_oauth as yt_oauth
@@ -410,13 +414,6 @@ def on_generation_complete(job) -> None:
         )
         return
 
-    if not yt_oauth.is_connected_for(job.channel_id):
-        _send_event_notification(
-            "error",
-            f"⚠️ 自動公開スキップ ({job.id}): チャンネル '{job.channel_id}' が YouTube 未連携です",
-        )
-        return
-
     # スケジュール公開: マーカーに publish_offset_minutes が乗っていれば
     # 「生成完了時点 + N 分」を YouTube の publishAt として渡す
     publish_offset = opts.get("publish_offset_minutes")
@@ -425,14 +422,43 @@ def on_generation_complete(job) -> None:
     result = job.result or {}
     paths = pair_pub._resolve_paths_from_result(result)
 
+    # TikTok 投稿（YouTube とは独立したスレッドで実行）
+    if wants_tiktok:
+        _start_tiktok_publish(job=job, ch=ch, paths=paths)
+
+    # 投稿先に YouTube が含まれない（TikTok のみ）場合はここで終了
+    if not wants_youtube:
+        return
+
+    if not yt_oauth.is_connected_for(job.channel_id):
+        _send_event_notification(
+            "error",
+            f"⚠️ 自動公開スキップ ({job.id}): チャンネル '{job.channel_id}' が YouTube 未連携です",
+        )
+        return
+
     if not paths.get("main_video") or not paths.get("short_video"):
-        # short が無い時は main 単体だけ公開（オフセット指定があればスケジュール公開）
+        # main+short が揃っていない場合は単体公開にフォールバック
         if paths.get("main_video"):
+            # main 単体だけ公開（オフセット指定があればスケジュール公開）
             _start_single_main_publish(
                 job=job,
                 main_video=paths["main_video"],
                 main_thumb=paths.get("main_thumb"),
                 main_desc_file=paths.get("main_desc_file"),
+                publish_settings=publish_settings,
+                youtube_channel_id=youtube_channel_id,
+                tags=ch.get_hashtags() if ch else [],
+                category_id=ch.get_category() if ch else "27",
+                publish_at=main_publish_at,
+            )
+        elif paths.get("short_video"):
+            # ショート単体公開（gen_type="short" の自動投稿）
+            _start_single_short_publish(
+                job=job,
+                short_video=paths["short_video"],
+                short_thumb=paths.get("short_thumb"),
+                short_desc_file=paths.get("short_desc_file"),
                 publish_settings=publish_settings,
                 youtube_channel_id=youtube_channel_id,
                 tags=ch.get_hashtags() if ch else [],
@@ -517,6 +543,69 @@ def on_generation_complete(job) -> None:
     )
 
 
+def _start_tiktok_publish(*, job, ch, paths: Dict[str, Any]) -> None:
+    """TikTok 自動投稿。ショート動画を優先（無ければメイン）。独立スレッドで実行。
+
+    TikTok は短尺(最大600秒)プラットフォームなので、ペア生成のショートを投稿する。
+    未審査アプリでは TikTok 側で SELF_ONLY に強制される点に注意。
+    """
+    try:
+        from pipeline import tiktok_oauth as tt_oauth
+        from pipeline import tiktok_uploader as tt_up
+        from pipeline import youtube_pair_publisher as pair_pub
+    except Exception as e:
+        _send_event_notification("error", f"⚠️ TikTok 自動投稿失敗 ({job.id}): モジュール未利用可: {e}")
+        return
+
+    if not tt_oauth.is_connected_for(job.channel_id):
+        _send_event_notification(
+            "error",
+            f"⚠️ TikTok 自動投稿スキップ ({job.id}): チャンネル '{job.channel_id}' が TikTok 未連携です",
+        )
+        return
+
+    # ショート優先。無ければメイン（長尺は TikTok 側で弾かれる可能性あり）
+    video_path = paths.get("short_video") or paths.get("main_video")
+    if not video_path:
+        _send_event_notification("error", f"⚠️ TikTok 自動投稿失敗 ({job.id}): 動画ファイル未解決")
+        return
+    desc_file = (
+        paths.get("short_desc_file") if paths.get("short_video") else paths.get("main_desc_file")
+    )
+    desc = pair_pub._read_desc(desc_file)
+
+    tt_settings = ch.get_tiktok_settings() if ch else {}
+    base_tags = [t for t in (ch.get_hashtags() if ch else [])]
+    extra_tags = tt_settings.get("extra_hashtags") or []
+    hashtags = base_tags + [t for t in extra_tags if t not in base_tags]
+
+    def _do():
+        try:
+            res = tt_up.upload_video(
+                video_path=video_path,
+                title=desc.get("title") or job.title,
+                description=desc.get("body") or "",
+                hashtags=hashtags or None,
+                privacy_level=tt_settings.get("privacy_level", "SELF_ONLY"),
+                disable_comment=bool(tt_settings.get("disable_comment", False)),
+                disable_duet=bool(tt_settings.get("disable_duet", False)),
+                disable_stitch=bool(tt_settings.get("disable_stitch", False)),
+                auth_channel_id=job.channel_id,
+            )
+            _send_event_notification(
+                "upload_done",
+                f"📱 TikTok 自動投稿完了 [{job.title}]: status={res.get('status')} "
+                f"publish_id={res.get('publish_id')}",
+            )
+        except Exception as e:
+            _send_event_notification("error", f"⚠️ TikTok 自動投稿失敗 ({job.id}): {e}")
+
+    threading.Thread(target=_do, daemon=True).start()
+    _send_event_notification(
+        "schedule_run", f"📱 TikTok 自動投稿開始 [{job.title}] (job: {job.id})"
+    )
+
+
 def _start_single_main_publish(
     *,
     job,
@@ -565,6 +654,61 @@ def _start_single_main_publish(
             _send_event_notification(
                 "upload_done",
                 f"🚀 メイン自動公開完了 [{job.title}]: {res.get('url')}",
+            )
+        except Exception as e:
+            _send_event_notification("error", f"⚠️ 自動公開失敗 ({job.id}): {e}")
+
+    threading.Thread(target=_do, daemon=True).start()
+
+
+def _start_single_short_publish(
+    *,
+    job,
+    short_video: str,
+    short_thumb: Optional[str],
+    short_desc_file: Optional[str],
+    publish_settings: Dict[str, Any],
+    youtube_channel_id: Optional[str],
+    tags: List[str],
+    category_id: str,
+    publish_at: Optional[str] = None,
+) -> None:
+    """メイン不在ジョブ（gen_type="short"）の fallback: ショート単体を公開。"""
+    try:
+        from pipeline import youtube_pair_publisher as pair_pub
+        from googleapiclient.discovery import build
+        from pipeline import youtube_oauth as yt_oauth
+    except Exception as e:
+        _send_event_notification("error", f"⚠️ 自動公開失敗 ({job.id}): {e}")
+        return
+
+    creds = yt_oauth.get_credentials_for(job.channel_id) or yt_oauth.get_credentials()
+    if not creds:
+        _send_event_notification("error", f"⚠️ 自動公開失敗 ({job.id}): 未連携")
+        return
+
+    youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
+    short_d = pair_pub._read_desc(short_desc_file)
+    privacy = publish_settings.get("default_privacy") or "public"
+
+    def _do():
+        try:
+            res = pair_pub._upload_one(
+                youtube,
+                video_path=short_video,
+                title=short_d.get("title") or (job.title + "【ショート】"),
+                description=short_d.get("body") or "",
+                tags=[t.lstrip("#") for t in (tags or [])],
+                category_id=category_id or "27",
+                privacy=privacy,
+                is_short=True,
+                youtube_channel_id=youtube_channel_id,
+                publish_at=publish_at,
+                thumbnail_path=short_thumb,
+            )
+            _send_event_notification(
+                "upload_done",
+                f"🚀 ショート自動公開完了 [{job.title}]: {res.get('url')}",
             )
         except Exception as e:
             _send_event_notification("error", f"⚠️ 自動公開失敗 ({job.id}): {e}")

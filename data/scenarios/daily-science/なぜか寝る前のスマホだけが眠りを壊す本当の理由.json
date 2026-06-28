@@ -1,0 +1,344 @@
+{
+  "title": "なぜか寝る前のスマホだけが眠りを壊す本当の理由",
+  "theme": {
+    "title": "なぜ寝る前のスマホが睡眠に影響を与えるのか？",
+    "angle": "デジタルデバイスと睡眠の関係"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "寝る前にスマホ見ちゃって眠れなくなったことない？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "あるある！でもなんでスマホだけなの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は、スマホから出る青い光が体内時計を2.5時間も狂わせてるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そんなに影響があるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "メラトニンという睡眠ホルモンの分泌を抑制しちゃうからなんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから登録お願い！続きは関連動画でチェック！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "夜中にベッドでスマホをいじって、気づいたら朝方まで眠れなかった経験ありませんか？\n実は、これには科学的な理由があるんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "あー、よくある！でも本とか雑誌を読んでも、そこまで眠れなくならないよね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "その違いこそが今回解き明かす謎のカギなんです。\nこの動画で、スマホが睡眠に与える影響の正体を完全に暴きます。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "なんでスマホだけそんなに影響があるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "それは「ブルーライト」という特殊な光が原因なんです。\nスマホやパソコンの画面から強く放射される青い波長の光のことです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "このブルーライトが目に入ると、脳は「まだ昼間だ」と勘違いしてしまうんです。\n人間の体内時計は、光の色で昼夜を判断しているからなんですね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "光の色で昼夜を判断してるの？詳しく教えて。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "太陽光には様々な色の光が含まれていますが、朝や昼間は青い光が強く、夕方になると赤い光が強くなります。\nこの変化を感知して、体内時計が調整されているんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ところが、スマホの画面から出るブルーライトは昼間の太陽光と同じような青い光なんです。\nだから脳は「まだ昼間だから眠る時間じゃない」と判断してしまうわけです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど！でも具体的にはどんな影響があるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "最も重要なのは、メラトニンという睡眠ホルモンの分泌が抑制されることです。\nメラトニンは夜になると分泌量が増えて、自然な眠気を誘発する大切なホルモンなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ハーバード大学の研究によると、就寝前2時間のブルーライト曝露で、メラトニンの分泌が約23%も減少することが分かっています。\nこれは睡眠の質に深刻な影響を与える数値なんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "23%も！それは確実に眠れなくなるね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに驚くべきことに、スマホを1時間使用すると、体内時計が平均2.5時間も後ろにずれることが判明しています。\nつまり、本来なら11時に眠くなるはずが、1時半まで眠気が来なくなってしまうんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "この現象は「概日リズム位相遅延症候群」と呼ばれ、現代社会で急増している睡眠障害の一つなんです。\n特に10代から20代の若者に多く見られる傾向があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "若い人ほど影響を受けやすいの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうなんです。実は年齢によってブルーライトの影響度が変わることが研究で明らかになっています。\n若い人ほど水晶体が透明で、ブルーライトをより多く網膜に通してしまうからなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに興味深いのは、ブルーライトが睡眠に影響を与えるメカニズムが発見されたのは、実は比較的最近のことなんです。\n2002年にデビッド・バーソン博士が、網膜に新しいタイプの細胞を発見したことから始まりました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "新しいタイプの細胞？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "それは「内因性光感受性網膜神経節細胞」という長い名前の細胞です。\nこの細胞は視覚とは無関係で、専門的に光の情報を体内時計に伝える役割を持っているんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "この細胞が発見されるまで、なぜ全盲の人でも体内時計が正常に機能するのかが謎だったんです。\n実は、この特殊な細胞が光を感知して、松果体にメラトニン分泌の調整指令を送っていたんですね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "全盲の人でも体内時計が働くのって、確かに不思議だよね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして、この細胞が最も強く反応するのが、波長480ナノメートル付近の青い光、つまりブルーライトなんです。\nスマホの画面はまさにこの波長の光を強く放射しているんですよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに驚くべきことに、この発見により、なぜ人類が夜型生活に適応できないのかも説明できるようになりました。\n人工照明が普及してから、わずか150年程度しか経っていないからなんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "150年じゃ進化が追いつかないってことか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。人間の体内時計は、何万年もかけて太陽光のリズムに合わせて進化してきました。\n人工的なブルーライトに対応する能力は、まだ備わっていないんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実際に、電球が発明される前の1800年代の人々の睡眠パターンを調べた研究があります。\n当時の人々は日没後2-3時間で眠り、夜明け前に自然に目覚めていたことが分かっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "昔の人の方がよく眠れてたってことなんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "でも安心してください。この問題には効果的な対策があるんです。\n最も簡単で効果的なのは、就寝2時間前からスマホの使用を控えることです。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "どうしても使用する必要がある場合は、ブルーライトカットフィルターやナイトモードを活用しましょう。\nこれらの機能は、画面から放射されるブルーライトを約30-50%カットできます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ナイトモードって本当に効果があるの？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "はい、マンチェスター大学の研究で、ナイトモード使用により睡眠の質が平均15%改善することが確認されています。\n完全ではありませんが、確実に効果はあるんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "また、寝室に暖色系の間接照明を取り入れることも非常に効果的です。\n赤やオレンジの光は、メラトニンの分泌を妨げることがほとんどありません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに上級者向けのテクニックとして、朝の光浴びも重要なんです。\n起床後30分以内に太陽光を浴びることで、体内時計をリセットして夜の睡眠の質を向上させることができます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "朝の光浴びが夜の睡眠に影響するんだ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうなんです。体内時計は24時間より少し長い周期で動いているので、毎日リセットする必要があるんです。\n朝の光がそのリセット信号の役割を果たしているんですよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回は、スマホが睡眠に与える影響について科学的に解説しました。\nブルーライトが体内時計を狂わせるメカニズム、理解していただけましたか？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "よく分かった！今日から寝る前のスマホを控えてみるよ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "それは素晴らしい決断ですね。良質な睡眠は健康の基本ですから。\n次回は「なぜ朝起きるのがこんなにつらいのか？」について解説する予定です。",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "この動画が役に立ったら、ぜひ高評価とチャンネル登録をお願いします。\nみなさんの健康的な睡眠ライフを、これからも科学の力でサポートしていきますよ！",
+      "expression": "laugh",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "寝る前スマホ",
+      "眠れない理由"
+    ],
+    "subtitle": "ブルーライトの正体を科学で解明",
+    "tagline": "睡眠の質を改善する方法も紹介"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1780362214_3736",
+    "blind_eval": {
+      "winner": "A",
+      "winner_model": "claude",
+      "reason": "シナリオAは「2.5時間も狂わせる」「23%減少」など具体的な数値データが豊富で説得力が高く、ハーバード大学やマンチェスター大学の研究引用により専門性も際立っている。シナリオBは内容が浅く、途中で終わっているため完成度に欠ける。",
+      "scores_a": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 8,
+        "cta_effectiveness": 6,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "scores_b": {
+        "hook_strength": 6,
+        "specificity": 6,
+        "pacing": 6,
+        "cta_effectiveness": 5,
+        "wording_quality": 6,
+        "overall": 6
+      },
+      "mapping": {
+        "A": "claude",
+        "B": "gpt"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ寝る前のスマホが眠りを妨げる『光の罠』とは？"
+      },
+      "claude": {
+        "title": "なぜか寝る前のスマホだけが眠りを壊す本当の理由"
+      }
+    }
+  }
+}

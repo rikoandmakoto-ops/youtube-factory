@@ -32,6 +32,7 @@ from pipeline.video_generator import (
 
 # ── Multi-channel modules ──
 from channels import ChannelManager
+from channels.config_validation import summarize
 from pipeline.auto_scenario import ScenarioGenerator
 from pipeline.scheduler import JobQueue
 
@@ -1549,14 +1550,33 @@ def _start_theme_queue_scheduler():
 
 @app.get("/health")
 async def health():
-    """Health check endpoint."""
+    """Health check endpoint.
+
+    チャンネル設定の整合性（autopilot有効 × 非公開 等の矛盾）も検証し、
+    エラーがあれば status を "degraded" にして config_issues に詳細を載せる。
+    """
     channels_count = len(channel_manager.list_ids()) if channel_manager else 0
     queue_running = job_queue._running if job_queue else False
+
+    issues = channel_manager.config_issues() if channel_manager else []
+    cfg = summarize(issues)
     return {
-        "status": "healthy",
+        "status": "degraded" if not cfg["ok"] else "healthy",
         "channels": channels_count,
         "queue_running": queue_running,
+        "config_ok": cfg["ok"],
+        "config_errors": cfg["error_count"],
+        "config_warnings": cfg["warning_count"],
+        "config_issues": cfg["issues"],
     }
+
+
+@app.get("/health/config")
+async def health_config():
+    """全チャンネル設定の整合性チェック結果のみを返す（運用監視用）。"""
+    if not channel_manager:
+        raise HTTPException(status_code=503, detail="Channel manager not initialized")
+    return summarize(channel_manager.config_issues())
 
 
 @app.on_event("startup")

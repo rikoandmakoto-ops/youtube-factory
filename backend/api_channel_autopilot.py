@@ -46,6 +46,7 @@ from pydantic import BaseModel, Field
 
 from api_phase1 import _state, require_session
 import api_phase4
+from channels.config_validation import get_default_privacy
 
 
 router = APIRouter(prefix="/api/channels", tags=["autopilot"])
@@ -456,16 +457,22 @@ def _run_autopilot(channel_id: str) -> None:
     """スケジュール発火: テーマ取得 → シナリオ生成 → キュー投入 → 自動公開フラグ"""
     fired_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"🤖 Autopilot fired for {channel_id} at {fired_at} JST")
-    # 投稿前に「今のスロットが推奨スロットと比べて極端に低い」場合は推奨スロットに移行
+    # 投稿前に「今のスロットが推奨スロットと比べて極端に低い」場合は推奨スロットに移行。
+    # ただしこれは schedule.days_of_week / hour を自動で上書きしてしまうため、
+    # 「毎日2本・固定スロット」運用と衝突する。明示的に
+    # autopilot.auto_optimize_schedule=true を設定したチャンネルだけに限定する
+    # （デフォルト off）。最適時間帯の分析自体は日次 PDCA レポートに出る。
     try:
-        from pipeline.analytics import posting_optimizer as _po
-        check = _po.slot_is_optimal_enough(channel_id, tolerance_percent=50.0)
-        if not check.get("is_optimal_enough"):
-            print(
-                f"📅 Autopilot: current slot underperforms recommended by "
-                f"{check.get('delta_percent')}% — auto-applying recommendation"
-            )
-            _po.apply_to_autopilot(channel_id)
+        ap_cfg = _load_autopilot(channel_id)
+        if ap_cfg.get("auto_optimize_schedule"):
+            from pipeline.analytics import posting_optimizer as _po
+            check = _po.slot_is_optimal_enough(channel_id, tolerance_percent=50.0)
+            if not check.get("is_optimal_enough"):
+                print(
+                    f"📅 Autopilot: current slot underperforms recommended by "
+                    f"{check.get('delta_percent')}% — auto-applying recommendation"
+                )
+                _po.apply_to_autopilot(channel_id)
     except Exception as e:
         print(f"⚠️ posting_optimizer pre-check failed for {channel_id}: {e}")
     cm = _state.get("channel_manager")
@@ -587,6 +594,22 @@ async def update_autopilot(
             status_code=400,
             detail="フルオートを有効化するには曜日を1つ以上選んでください",
         )
+    # 整合性ガード: 非公開(private)のままフルオートを有効化させない。
+    # （過去に scp-lab が default_privacy=private のまま自動投稿し、全部非公開になった事故の再発防止）
+    if ap["enabled"]:
+        cm = _state.get("channel_manager")
+        ch = cm.get(channel_id) if cm else None
+        raw = (ch._raw if ch is not None and hasattr(ch, "_raw") else {}) or {}
+        privacy = get_default_privacy(raw)
+        if privacy == "private":
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    "default_privacy が 'private' のためフルオートを有効化できません。"
+                    "自動投稿された動画がすべて非公開になります。"
+                    "先にチャンネル設定の公開ステータスを 'public' に変更してください。"
+                ),
+            )
     _save_autopilot(channel_id, ap)
     return _autopilot_response(channel_id)
 

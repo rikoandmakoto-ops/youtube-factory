@@ -1,0 +1,426 @@
+{
+  "title": "SCP-173「彫刻」— 視線を外した0.3秒で、なぜ人は死ぬのか",
+  "theme": {
+    "title": "SCP-173「彫刻」",
+    "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団の収容室に、絶対に目を離してはいけないモノがある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、目を離したらどうなるの？ちょっと怖いんだけど…。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173。1993年に財団が初めて収容した異常存在だ。瞬きの0.3秒で人の頸椎を折る。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容室への入室は最低3名必須。一人でも目を閉じたら、別の全員が即座に注視を維持する義務がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…瞬きすら許されないって、それもう人間には無理じゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしく！もっと詳しい話は関連動画から見てね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "1988年、財団の工作員が廃工場の地下室で発見した。床には糞便と血液が混在し、2名の職員が頸椎を完全に破壊された状態で倒れていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、いきなりそれ…？何がいたの、その地下室に？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "コンクリート製の人型彫刻が一体。高さ約1.9メートル、重量推定280キロ。それがSCP-173、通称『彫刻』だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が最初期に収容したオブジェクトのひとつ。SCP財団Wikiに原典が存在し、CC BY-SA 3.0ライセンスの下で公開されている。今日はその記録を読み上げる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…読み上げるって、なんかそれだけで怖いんだけど。報告書って感じがして。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "オブジェクトクラスは『Euclid』。財団の分類では、収容は可能だが行動が予測しきれない危険な存在を指す。173はその中でも特に初期の、そして最も原始的な脅威だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "173の異常性はシンプルで、だからこそ恐ろしい。直接視線が向いている間は一切動かない。しかし視線が外れた瞬間、猛烈な速度で対象へ接近し頸椎を折る、あるいは絞殺する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…猛烈な速度って、どのくらい？財団は計測してないの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の計測記録によれば、173が移動を開始してから対象に到達するまでの推定速度は平均で時速約290キロ。新幹線のぞみの最高速度が時速320キロだから、ほぼそれに匹敵する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "新幹線並みの速度で、コンクリートの塊が…？それが瞬きの間に来るってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "人間の平均的な瞬きは0.15秒から0.4秒。173の移動速度を考えると、0.3秒の瞬き一回で約24メートル以上を詰められる計算になる。収容室の端から端まで、余裕で届く距離だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "24メートル…それって収容室に入ったら、もう逃げ場ないじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから収容プロトコルは徹底している。収容室への入室は最低3名が必須。扉を開ける前に全員が中を確認し、173と視線が合ってから室内に入ることが義務付けられている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "入室後は常に少なくとも一人が173に視線を固定し続ける。誰かが瞬きをするときは、残りの全員が即座にその視線を補う。これが崩れた瞬間、事故が起きる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "瞬きのタイミングを交互に管理するって、それもう普通の仕事じゃないよ。精神的に壊れそう。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際に財団の記録では、収容室担当職員の精神的負荷は極めて高いとされている。交代サイクルは通常の収容業務より短く設定されているが、それでも担当者の離脱率は[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容室内には防犯カメラが設置されているが、カメラの視線が173の移動を抑制するかどうかは財団でも未だ明確な結論が出ていない。電子的な視線が有効かどうか、それ自体が謎なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "カメラでもダメかもしれないって…じゃあ収容室のモニターで見張っても意味がない可能性があるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、173が感知するのは生物的な視線である可能性が高いとされている。ただし断定はされていない。理由は、実験を繰り返すたびに結果が一定しないからだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "結果が一定しないって…173が何か考えてるみたいで、それが一番怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "173の表面には、黒と赤の物質が付着している。財団の分析では、黒い部分はスプレーペイント、赤い部分は…人間の血液と糞便の混合物であることが確認されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、血液と糞便って…それって発見時に死んでた職員のもの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の鑑識報告では、発見時の血液サンプルと現在173に付着している物質のDNA照合結果は[REDACTED]されている。つまり、誰のものかは公式には記録されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに収容室の清掃は定期的に行われるが、173の表面の汚染物質は除去しても一定期間後に再び増加する傾向があると報告されている。どこから補充されているのか、財団でも解明できていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "再び増加するって…収容室の中で何かが起きてるってこと？それって、もしかして—",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それ以上は言わない方がいい。財団の内部報告書でも、その可能性については[DATA EXPUNGED]の処理が施されている。知らない方が、精神衛生上よい情報がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "173が最初に財団の記録に登場したのは1993年、SCP財団Wikiの原点となる投稿だ。作者はAnonymousとされており、この一件がSCP財団という概念そのものの礎になったと言われている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "173って、SCP全体の始まりなんだ…。それって、最初の記録ってことだよね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。現在財団データベースには6000を超えるオブジェクトが収容されているが、そのすべての出発点が173だ。財団という組織が異常存在の収容を始めた、最初の記録がこの彫刻にある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "173の発見から収容までの詳細な経緯は、財団内部でも部分的に[DATA EXPUNGED]されている。発見した工作員の氏名、発見された廃工場の正確な場所、そして最初に接触した2名の氏名も、すべて記録から消されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消されてるって…財団自身が消してるってこと？なんで？隠したいことがあるの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の方針として、異常存在の発見経緯に関与した一般人や下位職員の情報は記録から削除される場合がある。だが173に関しては、消去された情報の量が他のオブジェクトと比べて異常に多い、という指摘が内部にある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "異常に多いって…それって、財団が何かを本当に隠してるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。それだけは言える。173は単純に見えて、その起源については今も多くが謎のままだ。なぜあの廃工場にあったのか、誰が作ったのか、いつから動いていたのか、一切不明だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部研究では、173の素材はコンクリートと繊維強化樹脂の混合物と分析されている。つまり人間が製造した可能性が高い。しかし同じ素材で同じ形状の物体を作っても、異常性は一切再現されない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人間が作ったのに、なんで動くんだよ…。それが一番怖い。普通の彫刻のはずなのに。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説のひとつに、173は元々異常性を持たなかったが、ある時点で何らかの要因によって異常化した可能性があるというものがある。その要因については記録が[REDACTED]されており、確認できない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし173が本当に後天的に異常化したなら、同じことが他の彫刻や構造物にも起こり得るという可能性がある。財団はその可能性を認識しているが、公式には否定している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "否定してるけど、可能性は認識してる…。それって怖い言い回しじゃないか、シロ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルの改訂履歴を見ると、173に関するプロトコルは過去に少なくとも7回更新されている。そのたびに収容室の規格が厳しくなり、入室人数の最低ラインも当初の2名から現在の3名へと引き上げられた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "7回も更新されてるって、それって7回何かが起きたってこと？事故が？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "プロトコル改訂の原因となった事案の詳細は、各改訂ごとに[DATA EXPUNGED]が施されている。財団の内規では、重大な収容違反の詳細記録は最高機密扱いとなり、O5評議会以外には開示されない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり、173に関して過去に何が起きたかは財団上層部しか知らない。現場の研究員ですら、なぜプロトコルが変わったかの理由を知らされないまま新しい手順に従っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "理由も知らされずに、あれと同じ部屋に入れってこと？それが財団の仕事なの？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団のDクラス職員——つまり実験や収容作業に動員される最下位の職員——は、173の収容室清掃にも投入されることがある。彼らには収容プロトコルの最低限の説明しか与えられない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最低限しか知らされないで、あの部屋に入るのか…。Dクラスって、ほぼ実験台じゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部文書では、Dクラス職員は月ごとに補充されると記録されている。173の収容室清掃任務に投入されたDクラスの生存率に関するデータは[REDACTED]されており、外部には公開されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし今日、あなたの周りに目を離せない何かがあるとしたら、それが173に似た性質を持つ可能性を財団は否定しない。財団が確認しているのは173一体だけだが、それが本当に一体だけかどうかは…記録が[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って待って。一体だけじゃないかもしれないって、今そう言った？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録が消えているということは、財団が知っていて隠しているか、財団自身にも分からないかのどちらかだ。どちらが正しいかは、この報告書には書かれていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "どっちも怖いんだけど…財団が知ってて隠してるなら最悪だし、分からないならもっと最悪だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日の報告書のまとめだ。SCP-173はEuclidクラスの異常存在で、視線が向けられている間は完全に静止するが、視線が外れた瞬間に人間の頸椎を折るか絞殺する速度で接近する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容には最低3名の入室が必要で、瞬きのタイミングまで厳密に管理される。発見経緯、起源、異常性の原因、過去の事故の詳細——そのすべてが[REDACTED]または[DATA EXPUNGED]のまま残されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書が本物だとすれば、財団が隠している情報の量は開示されている情報よりも遥かに多い。173について私たちが知っていることは、氷山の一角に過ぎない可能性がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "氷山の一角…。シロ、もし173がこの動画を見てたらって考えたら、今すごく嫌な気分になったんだけど。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-049——ペスト医師と呼ばれる存在を扱う。彼は人間を『治療』しようとする。ただし、その治療が何を意味するかは、受けた者にしか分からない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もしこの報告書に価値があると感じたなら、チャンネル登録で承認を示してくれ。1万人を目指して毎日投稿している。この報告書への高評価も、財団への協力だと思ってほしい。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に一つだけ。もし夜中に、部屋の隅に置いてある何かが、さっきと少し違う場所にある気がしたとしても——絶対に確認するな。それが173なら、見た瞬間から、もう逃げられない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "視線を外した瞬間、終わり",
+      "財団収容室・機密レベル：最高機密"
+    ],
+    "subtitle": "SCP-173【動く彫刻】収容プロトコル全記録",
+    "tagline": "これは財団データベースから流出した報告書だ。読んだ責任は、あなたが負え。"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1782605003_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "SCP-173「彫刻」— 視線を外した0.3秒で、なぜ人は死ぬのか"
+      }
+    }
+  }
+}
