@@ -295,6 +295,9 @@ class VideoFormat:
     analytics: AnalyticsConfig = field(default_factory=AnalyticsConfig)
     persona: PersonaConfig = field(default_factory=PersonaConfig)
     effects: EffectsConfig = field(default_factory=EffectsConfig)
+    # 案B: ショート用イラストカード設定。自由形式dictなのでそのまま保持・往復させる
+    # （データクラス化しないことで pipeline 側の任意キーを欠落させない）。
+    short_illustrations: Dict[str, Any] = field(default_factory=dict)
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "VideoFormat":
@@ -328,6 +331,7 @@ class VideoFormat:
             analytics=_make(AnalyticsConfig, data.get("analytics")),
             persona=_make(PersonaConfig, data.get("persona")),
             effects=_make(EffectsConfig, data.get("effects")),
+            short_illustrations=dict(data.get("short_illustrations") or {}),
         )
 
     def to_dict(self) -> Dict[str, Any]:
