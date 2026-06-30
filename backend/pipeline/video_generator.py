@@ -1469,6 +1469,7 @@ class ShortFrameRenderer:
             self.scp_badge_text = _extract_scp_badge_text(title)
 
         self.fmt = fmt or {}
+        self.title = (title or "").strip()
         branding = self.fmt.get("branding", {}) or {}
         self.source_credit_text = branding.get("source_credit") or None
         self.source_credit_opacity = int(branding.get("source_credit_opacity", 160))
@@ -1599,6 +1600,21 @@ class ShortFrameRenderer:
         scale = min(box_w / max(iw, 1), box_h / max(ih, 1))
         return img.resize((max(1, int(iw * scale)), max(1, int(ih * scale))), Image.LANCZOS)
 
+    def _card_title_text(self):
+        """カード内に出す疑問・フック部分（タイトルの『—』より前）を取り出す。"""
+        t = (self.title or "").strip()
+        if not t:
+            return ""
+        for sep in ("—", "―", "｜", "|", " - ", "："):
+            if sep in t:
+                t = t.split(sep)[0].strip()
+                break
+        # 『一口SCP：』のようなシリーズ接頭辞を除去
+        for pre in ("一口SCP：", "一口SCP:"):
+            if t.startswith(pre):
+                t = t[len(pre):].strip()
+        return t
+
     def _render_short_illust_card(self, illustration):
         """案B: 上半分の空きスペースにイラストカードを描画して全画面レイヤーで返す。
 
@@ -1645,13 +1661,41 @@ class ShortFrameRenderer:
         label = self.illust_card_label or "解説"
         draw_composite_text(draw, (cx0 + 122, cy0 + header_h // 2 - 20), label, 34,
                             (255, 255, 255), stroke_fill=(0, 0, 0), stroke_width=2)
-        # 本文にイラストを contain 配置
+
+        body_top = cy0 + header_h
+        # --- 案B: カード内に疑問文(タイトル)を大きく表示 ---
+        title = self._card_title_text()
+        title_h = 0
+        if title:
+            tpad = 28
+            size = 50
+            while size > 32:
+                if len(wrap_text(title, size, cw - tpad * 2, draw)) <= 2:
+                    break
+                size -= 4
+            lines = wrap_text(title, size, cw - tpad * 2, draw)[:2]
+            ty = body_top + 18
+            for ln in lines:
+                tw = measure_composite_text(draw, ln, size)
+                draw_composite_text(draw, (cx0 + (cw - tw) // 2, ty), ln, size,
+                                    (35, 45, 70), stroke_fill=(255, 255, 255), stroke_width=2)
+                ty += int(size * 1.16)
+            title_h = (ty - body_top) + 8
+            draw.line([(cx0 + 28, body_top + title_h), (cx0 + cw - 28, body_top + title_h)],
+                      fill=(*accent, 130), width=3)
+            title_h += 10
+
+        # 本文にイラストを contain 配置(タイトルの下)
         pad = 18
-        inner_w, inner_h = cw - pad * 2, ch - header_h - pad * 2
-        fitted = self._fit_contain(illustration.convert("RGBA"), inner_w, inner_h)
-        fx = cx0 + pad + (inner_w - fitted.width) // 2
-        fy = cy0 + header_h + pad + (inner_h - fitted.height) // 2
-        layer.paste(fitted, (fx, fy), fitted)
+        inner_x = cx0 + pad
+        inner_y = body_top + title_h + pad
+        inner_w = cw - pad * 2
+        inner_h = (cy0 + ch) - inner_y - pad
+        if illustration is not None and inner_h > 60:
+            fitted = self._fit_contain(illustration.convert("RGBA"), inner_w, inner_h)
+            fx = inner_x + (inner_w - fitted.width) // 2
+            fy = inner_y + (inner_h - fitted.height) // 2
+            layer.paste(fitted, (fx, fy), fitted)
 
     def _draw_leaked_card(self, layer, illustration, cx0, cy0, cw, ch):
         radius, header_h = 16, 64
@@ -1671,8 +1715,8 @@ class ShortFrameRenderer:
         label = self.illust_card_label or "CLASSIFIED／機密"
         draw_composite_text(draw, (cx0 + 54, cy0 + header_h // 2 - 18), label, 30,
                             (235, 235, 235), stroke_fill=(0, 0, 0), stroke_width=2)
-        # 右肩に偽の資料番号
-        docno = "FILE №[DATA EXPUNGED]"
+        # 右肩に資料番号(SCP番号が取れればそれを、無ければ偽番号)
+        docno = f"FILE №{self.scp_badge_text}" if self.scp_badge_text else "FILE №[DATA EXPUNGED]"
         nw = measure_composite_text(draw, docno, 22)
         draw_composite_text(draw, (cx0 + cw - nw - 18, cy0 + header_h // 2 - 13), docno, 22,
                             (200, 80, 80), stroke_fill=(0, 0, 0), stroke_width=1)

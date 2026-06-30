@@ -361,7 +361,7 @@ def _channel_markdown(rep: Dict[str, Any]) -> str:
         dn = dow_names[d] if isinstance(d, int) and 0 <= d <= 6 else "—"
         L.append(f"- 実績ベスト: **{dn}曜 {porec.get('hour','—')}:00**（平均 {porec.get('avg_views','—')}再生 / サンプル {porec.get('sample_size','—')}本 / 平均比 {porec.get('boost_percent','—')}%）")
         if porec.get("sample_size", 0) < 3:
-            L.append("- ⚠️ サンプル数が少なく統計的信頼性は低い（参考値）。固定スロット(7:00/19:00)は維持中。")
+            L.append("- ⚠️ サンプル数が少なく統計的信頼性は低い（参考値）。固定スロット(12:00/19:00)は維持中。")
     else:
         L.append("_データ不足_")
     L.append("")
