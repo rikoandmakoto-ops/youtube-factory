@@ -1336,6 +1336,29 @@ def _fit_9x16(img):
     return img.resize((SHORT_W, SHORT_H))
 
 
+def _vertical_gradient(w, h, top_rgb, bottom_rgb):
+    """Return an RGB image with a smooth top→bottom linear gradient."""
+    top = Image.new("RGB", (1, 2), top_rgb)
+    top.putpixel((0, 1), tuple(int(c) for c in bottom_rgb))
+    return top.resize((w, h))
+
+
+def _apply_vignette(img, strength):
+    """Darken the edges of an RGB image. strength 0..1 (0 = none)."""
+    strength = max(0.0, min(1.0, strength))
+    if strength <= 0:
+        return img
+    w, h = img.size
+    mask = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(mask).ellipse(
+        [-w // 4, -h // 8, w + w // 4, h + h // 8], fill=255)
+    mask = mask.filter(ImageFilter.GaussianBlur(min(w, h) // 5))
+    # Where the mask is dark (edges), blend toward black by `strength`.
+    inv = mask.point(lambda v: int((255 - v) * strength))
+    dark = Image.new("RGB", (w, h), (0, 0, 0))
+    return Image.composite(dark, img.convert("RGB"), inv)
+
+
 def _short_bg_query(title, scenario, channel_dict):
     """Build a Pexels-friendly query for the short BG.
 
@@ -1518,6 +1541,16 @@ class ShortFrameRenderer:
                 label="short",
             )
 
+        # Themed procedural background — so a short is NEVER a flat black
+        # rectangle when no static image / video / collected photo is available
+        # (e.g. Pexels offline or no static bg_path). Drawn once and reused for
+        # every frame. The look follows the channel's illustration card style
+        # (leaked-document → dark facility corridor, otherwise → soft gradient)
+        # and can be overridden via short_overlay_style.background_fallback.
+        self.bg_fallback_image = None
+        if self.bg_video is None and self.bg_image is None:
+            self.bg_fallback_image = self._build_fallback_bg()
+
         self.sprites = {}
         _SHORT_CHAR_DIR_MAP = {"理子": "riko", "真": "makoto", "あかり": "akari", "ゆうた": "yuuta",
                                "シロ": "shiro", "クロ": "kuro"}
@@ -1557,7 +1590,73 @@ class ShortFrameRenderer:
             return Image.fromarray(cropped).convert("RGBA").resize((SHORT_W, SHORT_H))
         if self.bg_image:
             return self.bg_image.copy()
+        if self.bg_fallback_image is not None:
+            return self.bg_fallback_image.copy()
         return Image.new("RGBA", (SHORT_W, SHORT_H), self.bg_fallback_color)
+
+    def _build_fallback_bg(self):
+        """Draw a themed atmospheric background used when no real image/video is
+        available, instead of a flat black fill.
+
+        Returns an RGBA Image sized to the short canvas. The style is taken from
+        short_overlay_style.background_fallback when provided, otherwise inferred
+        from the illustration card style so each channel gets a fitting look:
+          - "corridor" (scp-lab / leaked-document): dark facility hallway with
+            perspective lines, a faint doorway glow and a heavy vignette.
+          - "gradient" (daily-science / textbook): soft top→bottom gradient.
+        """
+        cfg = self.overlay_style.get("background_fallback") or {}
+        base = tuple(int(c) for c in self.bg_fallback_color[:3])
+        style = (cfg.get("style")
+                 or ("corridor" if self.illust_card_style == "leaked-document"
+                     else "gradient")).lower()
+
+        if "top_color" in cfg or "bottom_color" in cfg:
+            top = tuple(int(c) for c in (cfg.get("top_color") or base)[:3])
+            bottom = tuple(int(c) for c in (cfg.get("bottom_color") or base)[:3])
+        elif style == "corridor":
+            # Dim industrial steel: lighter centre fading to near-black floor.
+            top = (28, 32, 38)
+            bottom = (8, 9, 11)
+        else:
+            top = tuple(min(255, c + 22) for c in base)
+            bottom = tuple(max(0, c - 14) for c in base)
+
+        img = _vertical_gradient(SHORT_W, SHORT_H, top, bottom)
+
+        if style == "corridor":
+            self._draw_corridor(img, cfg)
+
+        vig = cfg.get("vignette", 0.6 if style == "corridor" else 0.35)
+        if vig:
+            img = _apply_vignette(img, float(vig))
+        return img.convert("RGBA")
+
+    def _draw_corridor(self, img, cfg):
+        """Overlay simple one-point-perspective hallway lines + doorway glow."""
+        draw = ImageDraw.Draw(img, "RGBA")
+        vx, vy = SHORT_W // 2, int(SHORT_H * 0.46)  # vanishing point
+        line_col = tuple(int(c) for c in (cfg.get("line_color") or (70, 80, 92))[:3])
+        # Ceiling + floor lines converging from the screen edges.
+        step = max(120, SHORT_W // 8)
+        for fx in range(-SHORT_W // 4, SHORT_W + SHORT_W // 4 + 1, step):
+            draw.line([(fx, SHORT_H), (vx, vy)], fill=(*line_col, 70), width=2)
+            draw.line([(fx, 0), (vx, vy)], fill=(*line_col, 45), width=2)
+        # A few receding horizontal "rib" bands for depth.
+        for k in range(1, 6):
+            f = k / 6.0
+            bw = int(SHORT_W * (1 - f) * 0.5)
+            by_top = int(vy - (vy) * (1 - f))
+            by_bot = int(vy + (SHORT_H - vy) * (1 - f))
+            draw.rectangle([vx - bw, by_top, vx + bw, by_bot],
+                           outline=(*line_col, max(20, int(70 * (1 - f)))), width=2)
+        # Faint doorway glow at the end of the corridor.
+        glow_col = tuple(int(c) for c in (cfg.get("glow_color") or (60, 78, 96))[:3])
+        gw, gh = 86, 150
+        glow = Image.new("RGBA", (gw * 3, gh * 3), (0, 0, 0, 0))
+        ImageDraw.Draw(glow).rectangle([gw, gh, gw * 2, gh * 2], fill=(*glow_col, 200))
+        glow = glow.filter(ImageFilter.GaussianBlur(40))
+        img.paste(glow, (vx - glow.width // 2, vy - glow.height // 2), glow)
 
     def _draw_scp_badge(self, overlay):
         """Big top banner with 'SCP-173'-style label.

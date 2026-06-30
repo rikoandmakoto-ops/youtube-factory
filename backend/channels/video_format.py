@@ -337,6 +337,7 @@ class VideoFormat:
     def to_dict(self) -> Dict[str, Any]:
         """JSON用にシリアライズ"""
         import dataclasses
+        import copy
 
         def _serialize(obj):
             if dataclasses.is_dataclass(obj):
@@ -347,6 +348,13 @@ class VideoFormat:
                         val = list(val)
                     elif dataclasses.is_dataclass(val):
                         val = _serialize(val)
+                    elif isinstance(val, dict):
+                        # 案B: short_illustrations 等の自由形式dictは複製して返す。
+                        # 同一参照を渡すと pipeline 側の書き換えが dataclass の
+                        # 状態を汚染し、短尺イラストカード設定が壊れるため。
+                        val = copy.deepcopy(val)
+                    elif isinstance(val, list):
+                        val = list(val)
                     result[f.name] = val
                 return result
             return obj
