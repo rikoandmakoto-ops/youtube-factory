@@ -214,6 +214,28 @@ async def channel_youtube_disconnect(
     return {"status": "disconnected", "channel_id": channel_id}
 
 
+@router.delete("/channels/{channel_id}/videos/{video_id}")
+async def channel_delete_video(
+    channel_id: str, video_id: str, _=Depends(require_session)
+) -> Dict[str, Any]:
+    """指定チャンネルの OAuth を使って YouTube 動画を削除する。
+
+    `youtube.force-ssl` スコープが必要。古いトークンの場合は 403（要再認証）。
+    """
+    _require_channel(channel_id)
+    if not yt_oauth.is_connected_for(channel_id):
+        raise HTTPException(
+            status_code=400,
+            detail=f"Channel not connected to YouTube: {channel_id}",
+        )
+    try:
+        from pipeline import youtube_uploader as yt_up
+        result = yt_up.delete_video(video_id, auth_channel_id=channel_id)
+    except Exception as e:
+        raise HTTPException(status_code=502, detail=f"YouTube delete failed: {e}")
+    return {"status": "deleted", "channel_id": channel_id, **result}
+
+
 # =====================================================================
 # TikTok OAuth: チャンネル別エンドポイント（YouTube と並行）
 # =====================================================================

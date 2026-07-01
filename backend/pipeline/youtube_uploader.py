@@ -438,6 +438,30 @@ def upload_video(
     return result
 
 
+def delete_video(video_id: str, auth_channel_id: str = None) -> dict:
+    """
+    Delete a video from YouTube via the Data API.
+
+    Requires the `youtube.force-ssl` OAuth scope. トークンが古いスコープの場合は
+    再認証が必要（403 insufficientPermissions になる）。
+
+    Args:
+        video_id: 削除する YouTube 動画ID。
+        auth_channel_id: 内部チャンネルID — per-channel OAuth トークンを使う場合に指定。
+
+    Returns:
+        {"video_id": ..., "deleted": True}
+    """
+    ensure_deps()
+    if not video_id:
+        raise ValueError("video_id is required")
+
+    youtube = get_authenticated_service(auth_channel_id=auth_channel_id)
+    youtube.videos().delete(id=video_id).execute()
+    print(f"🗑️ 動画削除完了: {video_id}")
+    return {"video_id": video_id, "deleted": True}
+
+
 def _resumable_upload(request):
     response = None
     while response is None:
