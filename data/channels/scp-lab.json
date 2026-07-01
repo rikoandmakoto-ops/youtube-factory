@@ -248,7 +248,7 @@
     "speed": 1.3,
     "target_duration": 720,
     "bg_type": "static",
-    "bg_path": null,
+    "bg_path": "assets/backgrounds/facility_portrait.png",
     "short_bg_query": "dark abandoned creepy industrial corridor",
     "short_overlay_style": {
       "scp_badge": true,
@@ -381,7 +381,7 @@
     },
     "short_illustrations": {
       "enabled": true,
-      "illustration_method": "pillow",
+      "illustration_method": "dalle",
       "max_count": 2,
       "card_style": "leaked-document",
       "card_label": "CLASSIFIED ／ 機密",

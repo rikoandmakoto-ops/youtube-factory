@@ -285,6 +285,159 @@ def _ic_bulb(d, cx, cy, r, c):
                fill=(255, 200, 60), width=8)
 
 
+# ------------------------------------------------------------------
+# 体・生理系アイコン (daily-science は身近な体の不思議テーマが多い)
+# ------------------------------------------------------------------
+def _ic_droplet(d, cx, cy, r, c):
+    """汗・水滴。"""
+    col = (90, 175, 235)
+    pts = [(cx, cy - r * 1.15)]
+    for k in range(1, 15):
+        a = math.radians(-90 + k * (360 / 16))
+        pts.append((cx + r * math.cos(a), cy + r * 0.45 + r * math.sin(a)))
+    d.polygon(pts, fill=col, outline=(40, 120, 195))
+    d.ellipse([cx - r * 0.5, cy + r * 0.05, cx - r * 0.12, cy + r * 0.45], fill=(200, 230, 255))
+
+
+def _ic_lungs(d, cx, cy, r, c):
+    """呼吸・肺。"""
+    col = (235, 150, 165)
+    line = (185, 90, 115)
+    d.line([(cx, cy - r), (cx, cy - r * 0.2)], fill=line, width=10)  # 気管
+    d.line([(cx, cy - r * 0.2), (cx - r * 0.5, cy - r * 0.05)], fill=line, width=8)
+    d.line([(cx, cy - r * 0.2), (cx + r * 0.5, cy - r * 0.05)], fill=line, width=8)
+    for sx in (-1, 1):
+        box = [cx + (sx * r * 0.1), cy - r * 0.1, cx + sx * r, cy + r]
+        x0, x1 = min(box[0], box[2]), max(box[0], box[2])
+        d.rounded_rectangle([x0, box[1], x1, box[3]], radius=int(r * 0.35),
+                            fill=col, outline=line, width=6)
+
+
+def _ic_bone(d, cx, cy, r, c):
+    """骨・骨伝導。"""
+    col = (245, 243, 232)
+    line = (170, 165, 150)
+    for sx in (-1, 1):
+        for sy in (-1, 1):
+            d.ellipse([cx + sx * r - r * 0.32, cy + sy * r * 0.55 - r * 0.32,
+                       cx + sx * r + r * 0.32, cy + sy * r * 0.55 + r * 0.32],
+                      fill=col, outline=line, width=6)
+    d.line([(cx - r, cy), (cx + r, cy)], fill=col, width=int(r * 0.5))
+    d.line([(cx - r, cy - r * 0.24), (cx + r, cy - r * 0.24)], fill=line, width=4)
+    d.line([(cx - r, cy + r * 0.24), (cx + r, cy + r * 0.24)], fill=line, width=4)
+
+
+def _ic_hand(d, cx, cy, r, c):
+    """手。"""
+    col = (250, 214, 190)
+    line = (205, 155, 130)
+    d.rounded_rectangle([cx - r * 0.6, cy - r * 0.1, cx + r * 0.6, cy + r],
+                        radius=int(r * 0.3), fill=col, outline=line, width=6)
+    for i, fx in enumerate((-0.42, -0.14, 0.14, 0.42)):
+        h = r * (0.85 + (0.12 if i in (1, 2) else 0))
+        d.rounded_rectangle([cx + fx * r - r * 0.14, cy - h, cx + fx * r + r * 0.14, cy + r * 0.05],
+                            radius=int(r * 0.14), fill=col, outline=line, width=5)
+    d.rounded_rectangle([cx - r, cy + r * 0.05, cx - r * 0.45, cy + r * 0.4],
+                        radius=int(r * 0.14), fill=col, outline=line, width=5)
+
+
+def _ic_skin(d, cx, cy, r, c):
+    """皮膚（層構造）。"""
+    layers = [(248, 220, 200), (232, 190, 168), (210, 158, 140)]
+    for i, col in enumerate(layers):
+        y0 = cy - r * 0.7 + i * r * 0.55
+        d.rounded_rectangle([cx - r, y0, cx + r, y0 + r * 0.5],
+                            radius=int(r * 0.12), fill=col, outline=(170, 120, 100), width=4)
+    for hx in (-0.5, 0.0, 0.5):
+        d.line([(cx + hx * r, cy - r * 0.7), (cx + hx * r, cy - r * 1.05)],
+               fill=(140, 100, 80), width=6)  # 毛
+
+
+def _ic_muscle(d, cx, cy, r, c):
+    """筋肉（力こぶ）。"""
+    col = (225, 120, 110)
+    line = (180, 75, 70)
+    d.pieslice([cx - r, cy - r, cx + r * 0.6, cy + r * 0.3], 200, 20, fill=col, outline=line, width=6)
+    d.rounded_rectangle([cx + r * 0.2, cy + r * 0.05, cx + r, cy + r],
+                        radius=int(r * 0.25), fill=col, outline=line, width=6)  # 前腕
+    d.arc([cx - r * 0.6, cy - r * 0.6, cx + r * 0.2, cy + r * 0.2], 210, 350, fill=line, width=5)
+
+
+def _ic_stomach(d, cx, cy, r, c):
+    """胃。"""
+    col = (240, 165, 150)
+    line = (195, 105, 95)
+    d.line([(cx - r * 0.1, cy - r), (cx - r * 0.1, cy - r * 0.3)], fill=line, width=10)  # 食道
+    d.pieslice([cx - r, cy - r * 0.5, cx + r, cy + r], 0, 360, fill=col, outline=line, width=6)
+    d.line([(cx + r * 0.65, cy + r * 0.4), (cx + r, cy + r * 0.2)], fill=line, width=10)  # 十二指腸
+
+
+def _ic_intestine(d, cx, cy, r, c):
+    """腸。"""
+    col = (240, 175, 160)
+    d.rounded_rectangle([cx - r, cy - r, cx + r, cy + r], radius=int(r * 0.3),
+                        outline=col, width=int(r * 0.28))
+    pts = []
+    for i in range(0, 61):
+        t = i / 60
+        x = cx - r * 0.55 + t * r * 1.1
+        y = cy + r * 0.4 * math.sin(t * math.pi * 4)
+        pts.append((x, y))
+    d.line(pts, fill=(210, 130, 120), width=int(r * 0.22), joint="curve")
+
+
+def _ic_ear(d, cx, cy, r, c):
+    """耳。"""
+    col = (250, 214, 190)
+    line = (200, 150, 125)
+    d.pieslice([cx - r, cy - r, cx + r, cy + r], 60, 330, fill=col, outline=line, width=7)
+    d.arc([cx - r * 0.5, cy - r * 0.6, cx + r * 0.4, cy + r * 0.4], 40, 320, fill=line, width=7)
+    d.arc([cx - r * 0.15, cy - r * 0.2, cx + r * 0.3, cy + r * 0.35], 0, 360, fill=line, width=6)
+
+
+def _ic_nose(d, cx, cy, r, c):
+    """鼻。"""
+    col = (250, 214, 190)
+    line = (200, 150, 125)
+    d.polygon([(cx, cy - r), (cx + r * 0.55, cy + r * 0.6), (cx - r * 0.55, cy + r * 0.6)],
+              fill=col, outline=line)
+    d.line([(cx, cy - r), (cx + r * 0.55, cy + r * 0.6)], fill=line, width=6)
+    d.line([(cx, cy - r), (cx - r * 0.55, cy + r * 0.6)], fill=line, width=6)
+    for sx in (-1, 1):
+        d.ellipse([cx + sx * r * 0.34 - r * 0.14, cy + r * 0.35, cx + sx * r * 0.34 + r * 0.14, cy + r * 0.6],
+                  fill=(150, 100, 85))
+
+
+def _ic_tongue(d, cx, cy, r, c):
+    """舌・味覚。"""
+    d.pieslice([cx - r, cy - r * 0.9, cx + r, cy + r * 0.7], 0, 180, fill=(235, 120, 130), outline=(190, 70, 90), width=6)  # 口(下唇)
+    d.chord([cx - r, cy - r, cx + r, cy + r * 0.4], 0, 180, fill=(70, 40, 45))  # 口内
+    d.pieslice([cx - r * 0.55, cy - r * 0.25, cx + r * 0.55, cy + r * 0.9], 180, 360, fill=(240, 130, 145), outline=(200, 80, 100), width=5)  # 舌
+    d.line([(cx, cy + r * 0.05), (cx, cy + r * 0.7)], fill=(200, 80, 100), width=5)
+
+
+def _ic_tooth(d, cx, cy, r, c):
+    """歯。"""
+    col = (250, 250, 245)
+    line = (185, 185, 175)
+    d.pieslice([cx - r * 0.8, cy - r, cx + r * 0.8, cy + r * 0.2], 180, 360, fill=col, outline=line, width=6)
+    d.polygon([(cx - r * 0.8, cy - r * 0.4), (cx - r * 0.55, cy + r), (cx - r * 0.2, cy - r * 0.1)],
+              fill=col, outline=line)
+    d.polygon([(cx + r * 0.8, cy - r * 0.4), (cx + r * 0.55, cy + r), (cx + r * 0.2, cy - r * 0.1)],
+              fill=col, outline=line)
+    d.line([(cx - r * 0.8, cy - r * 0.3), (cx - r * 0.55, cy + r)], fill=line, width=5)
+    d.line([(cx + r * 0.8, cy - r * 0.3), (cx + r * 0.55, cy + r)], fill=line, width=5)
+
+
+def _ic_hair(d, cx, cy, r, c):
+    """髪。"""
+    col = (90, 70, 60)
+    for off in (-0.6, -0.2, 0.2, 0.6):
+        pts = [(cx + off * r + r * 0.35 * math.sin(t / 10 * math.pi * 2), cy - r + t / 10 * r * 2)
+               for t in range(0, 11)]
+        d.line(pts, fill=col, width=12, joint="curve")
+
+
 _TEXTBOOK_ICONS = {
     "sun": _ic_sun, "moon": _ic_moon, "planet": _ic_planet, "water": _ic_water,
     "fire": _ic_fire, "snow": _ic_snow, "bolt": _ic_bolt, "magnet": _ic_magnet,
@@ -292,11 +445,31 @@ _TEXTBOOK_ICONS = {
     "eye": _ic_eye, "leaf": _ic_leaf, "microbe": _ic_microbe, "rocket": _ic_rocket,
     "gear": _ic_gear, "clock": _ic_clock, "wave": _ic_wave, "cloud": _ic_cloud,
     "mountain": _ic_mountain, "thermo": _ic_thermo, "bulb": _ic_bulb,
+    "droplet": _ic_droplet, "lungs": _ic_lungs, "bone": _ic_bone, "hand": _ic_hand,
+    "skin": _ic_skin, "muscle": _ic_muscle, "stomach": _ic_stomach,
+    "intestine": _ic_intestine, "ear": _ic_ear, "nose": _ic_nose,
+    "tongue": _ic_tongue, "tooth": _ic_tooth, "hair": _ic_hair,
 }
 
 # キーワード → (icon, ラベル)。先に書いたものほど優先(longerマッチ重視で順序配置)。
 _TEXTBOOK_KEYWORDS = [
     (("光合成",), ("leaf", "光合成")),
+    # --- 体・生理系(daily-science は身近な体の不思議テーマが多いので優先的に先頭付近へ) ---
+    (("骨伝導", "骨", "骨格"), ("bone", "骨")),
+    (("汗", "発汗"), ("droplet", "汗")),
+    (("呼吸", "肺", "息", "酸欠"), ("lungs", "呼吸")),
+    (("筋肉", "筋", "こむら", "つる"), ("muscle", "筋肉")),
+    (("皮膚", "肌", "鳥肌", "かゆ", "湿疹"), ("skin", "皮膚")),
+    (("胃", "胃酸", "空腹", "消化"), ("stomach", "胃")),
+    (("腸", "便", "腸内", "お腹"), ("intestine", "腸")),
+    (("耳", "聴覚", "鼓膜", "耳鳴り"), ("ear", "耳")),
+    (("鼻", "嗅覚", "くしゃみ", "匂い", "におい"), ("nose", "鼻")),
+    (("舌", "味覚", "味", "唾液"), ("tongue", "味覚")),
+    (("歯", "虫歯", "咀嚼", "噛"), ("tooth", "歯")),
+    (("髪", "毛", "抜け毛", "白髪"), ("hair", "髪")),
+    (("手", "指", "爪", "握"), ("hand", "手")),
+    (("睡眠", "眠", "寝", "夢", "あくび"), ("moon", "睡眠")),
+    (("血液", "血流", "血管", "貧血"), ("heart", "血液")),
     (("太陽", "日光", "恒星", "サン"), ("sun", "太陽")),
     (("月", "ムーン"), ("moon", "月")),
     (("惑星", "地球", "宇宙", "星", "天体"), ("planet", "惑星")),
@@ -368,11 +541,31 @@ def _render_textbook(topic):
                    accent, width=9, head=22)
         _label(d, cx, cy + r + 78, lb, 70, label_col)
     else:
-        # キーワード未ヒット: 電球(ポイント)+ テーマ抜粋
-        cx, cy = CANVAS_W // 2, CANVAS_H // 2 - 40
-        _ic_bulb(d, cx, cy, 200, accent)
-        snippet = (topic or "").strip().replace("\n", " ")[:14]
-        _label(d, cx, cy + 250, snippet or "ポイント", 60, label_col)
+        # キーワード未ヒット: テーマ語そのものを大きく見せる(電球固定はやめる)。
+        snippet = (topic or "").strip().replace("\n", " ")
+        # 助詞・記号を落として要点だけ残す簡易処理
+        for junk in ("なぜ", "とは", "について", "の理由", "の正体", "の秘密", "！", "？", "!", "?", "…"):
+            snippet = snippet.replace(junk, " ")
+        snippet = " ".join(snippet.split())[:24] or "ポイント"
+        # 1行あたりの文字数で 2〜3 行に折り返し
+        per_line = 8
+        lines = [snippet[i:i + per_line] for i in range(0, len(snippet), per_line)][:3]
+        # 文字サイズは行数に応じて可変(1行=特大)
+        size = {1: 150, 2: 120}.get(len(lines), 96)
+        line_h = size + 26
+        total_h = line_h * len(lines)
+        top = CANVAS_H // 2 - total_h // 2 + size // 2 - 10
+        # 装飾: 上下のアクセントバー
+        bar_w = int(CANVAS_W * 0.34)
+        cx = CANVAS_W // 2
+        d.rounded_rectangle([cx - bar_w // 2, top - size, cx + bar_w // 2, top - size + 14],
+                            radius=7, fill=accent)
+        for li, ln in enumerate(lines):
+            _label(d, cx, top + li * line_h, ln, size, (30, 42, 66),
+                   stroke_fill=(255, 255, 255), stroke_width=6)
+        d.rounded_rectangle([cx - bar_w // 2, top + total_h - line_h + size,
+                             cx + bar_w // 2, top + total_h - line_h + size + 14],
+                            radius=7, fill=accent)
     return img
 
 

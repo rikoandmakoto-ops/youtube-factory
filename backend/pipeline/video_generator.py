@@ -2403,7 +2403,8 @@ def generate_monologue_video(scenario, title, output_prefix, bg_video_path=None,
     out = str(out_dir / f"{output_prefix}_メイン.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
-                          threads=4, logger="bar", temp_audiofile=temp_audio)
+                          threads=4, logger="bar", temp_audiofile=temp_audio,
+                          preset="slow", ffmpeg_params=["-crf", "18", "-pix_fmt", "yuv420p"])
 
     final.close()
     for c in clips: c.close()
@@ -2428,6 +2429,7 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
     if out_dir is None:
         out_dir = get_output_dir(title)
     out_dir = Path(out_dir)
+    bg_video_path = _portrait_bg_variant(bg_video_path)
     topic_query = _short_bg_query(title, scenario, channel_dict)
     renderer = MonologueShortRenderer(
         bg_video_path, bg_type=bg_type,
@@ -2500,7 +2502,8 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
     out = str(out_dir / f"{output_prefix}_ショート.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
-                          threads=4, logger="bar", temp_audiofile=temp_audio)
+                          threads=4, logger="bar", temp_audiofile=temp_audio,
+                          preset="slow", ffmpeg_params=["-crf", "18", "-pix_fmt", "yuv420p"])
 
     final.close()
     for c in clips: c.close()
@@ -2691,7 +2694,8 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
     out = str(out_dir / f"{output_prefix}_メイン.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
-                          threads=4, logger="bar", temp_audiofile=temp_audio)
+                          threads=4, logger="bar", temp_audiofile=temp_audio,
+                          preset="slow", ffmpeg_params=["-crf", "18", "-pix_fmt", "yuv420p"])
 
     final.close()
     for c in clips: c.close()
@@ -2705,6 +2709,27 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
 # ============================================================
 # Generate short video
 # ============================================================
+def _portrait_bg_variant(bg_video_path):
+    """ショート(9:16)用の縦長背景があればそのパスを返す。
+
+    渡された背景が landscape 画像(例 assets/backgrounds/classroom.png)のとき、
+    同じフォルダに `<stem>_portrait<ext>`(例 classroom_portrait.png)があれば
+    それを優先する。無ければ元のパスをそのまま返す(既に縦長 or 動画の場合も含む)。
+    """
+    if not bg_video_path:
+        return bg_video_path
+    p = Path(bg_video_path)
+    if p.suffix.lower() not in (".png", ".jpg", ".jpeg", ".bmp"):
+        return bg_video_path
+    if p.stem.endswith("_portrait"):
+        return bg_video_path
+    cand = p.with_name(f"{p.stem}_portrait{p.suffix}")
+    if cand.exists():
+        print(f"🖼️ ショート用縦長背景を使用: {cand.name}")
+        return str(cand)
+    return bg_video_path
+
+
 def generate_short_video(short_scenario, title, output_prefix, bg_video_path=None, out_dir=None, bg_type="auto", speed=None,
                          channel_format=None, char_config=None, channel_id=None, bgm_volume=None,
                          image_mode="generate", image_collect_settings=None,
@@ -2719,6 +2744,8 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
     if out_dir is None:
         out_dir = get_output_dir(title)
     out_dir = Path(out_dir)
+    # ショートは 9:16。縦長版の背景があればそちらを使う(landscape の引き伸ばし防止)。
+    bg_video_path = _portrait_bg_variant(bg_video_path)
     topic_query = _short_bg_query(title, short_scenario, channel_dict)
     overlay_style = ((channel_dict or {}).get("defaults") or {}).get("short_overlay_style") or {}
     renderer = ShortFrameRenderer(
@@ -2878,7 +2905,8 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
     out = str(out_dir / f"{output_prefix}_ショート.mp4")
     temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
-                          threads=4, logger="bar", temp_audiofile=temp_audio)
+                          threads=4, logger="bar", temp_audiofile=temp_audio,
+                          preset="slow", ffmpeg_params=["-crf", "18", "-pix_fmt", "yuv420p"])
 
     final.close()
     for c in clips: c.close()
