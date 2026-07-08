@@ -377,6 +377,32 @@ def _channel_markdown(rep: Dict[str, Any]) -> str:
         L.append("- 重複疑いなし ✅")
     L.append("")
 
+    # 成功パターン分析
+    sp = rep.get("success_patterns") or {}
+    L.append("### 成功パターン分析 → シナリオ生成フィードバック")
+    if sp.get("ok"):
+        ss = sp.get("sample_size") or {}
+        L.append(f"- 成功動画: **{ss.get('success', '—')}**本 / 全体: {ss.get('total', '—')}本")
+        if sp.get("has_gpt_insights"):
+            L.append("- Claude分析: ✅ 完了（actionable_recommendations が scenario_feedback 経由で次回シナリオ生成に自動注入）")
+        else:
+            L.append("- Claude分析: スキップ（ANTHROPIC_API_KEY 未設定 or データ不足）")
+    else:
+        L.append(f"- ⚠️ 分析失敗: {sp.get('error', '不明')}")
+    L.append("")
+
+    # 維持率分析
+    ri = rep.get("retention_insights") or {}
+    L.append("### 視聴維持率分析 → シナリオ生成フィードバック")
+    if ri.get("ok"):
+        if ri.get("has_gpt_insights"):
+            L.append("- Claude分析: ✅ 完了（retention_tips が scenario_feedback 経由で次回シナリオ生成に自動注入）")
+        else:
+            L.append("- Claude分析: スキップ")
+    else:
+        L.append(f"- ⚠️ 分析失敗: {ri.get('error', '不明')}")
+    L.append("")
+
     # Act
     act = rep.get("act") or {}
     L.append("### Act（高再生テーマの続編をキュー投入）")
@@ -391,6 +417,129 @@ def _channel_markdown(rep: Dict[str, Any]) -> str:
         L.append(f"- 投入なし（絶対再生 {MIN_VIRAL_VIEWS} 以上のバズ続編が未検出）")
     L.append("")
     return "\n".join(L)
+
+
+# =====================================================================
+# xlsx 履歴（チャンネルごとに1シート、1日1行を追記）
+# =====================================================================
+
+HISTORY_XLSX = REPORTS_DIR / "pdca_history.xlsx"
+
+# 列の並び（ヘッダー）。日付をキーにして冪等に更新する。
+XLSX_COLUMNS = [
+    "日付", "登録者数", "総再生数", "動画本数", "直近30日ショート本数",
+    "平均再生数", "中央値再生数", "平均いいね率", "伸びてるジャンル",
+    "抑制候補ジャンル", "テーマ重複ペア数", "成功パターン分析(OK/NG)",
+    "維持率分析(OK/NG)", "バズ続編投入数",
+]
+
+
+def _rep_to_row(rep: Dict[str, Any], date_str: str) -> List[Any]:
+    """rep 辞書から xlsx の1行分（XLSX_COLUMNS の順）を作る。"""
+    pr = (rep.get("pdca_report") or {}).get("data") or {}
+    cs = pr.get("channel_stats") or {}
+    sh = pr.get("shorts") or {}
+    gb = rep.get("genre_breakdown") or []
+    dups = rep.get("dup_check") or []
+    sp = rep.get("success_patterns") or {}
+    ri = rep.get("retention_insights") or {}
+    act = rep.get("act") or {}
+
+    top_genre = gb[0]["genre"] if gb else ""
+    low_genre = gb[-1]["genre"] if len(gb) > 1 else ""
+    like_rate = sh.get("avg_like_rate")  # 生の比率（0.015 = 1.5%）。セル側で % 表示。
+    approved = [a for a in (act.get("approved") or []) if not a.get("error")]
+
+    return [
+        date_str,
+        cs.get("subscriber_count"),
+        cs.get("view_count"),
+        cs.get("video_count"),
+        sh.get("count", 0),
+        sh.get("avg_views", 0),
+        sh.get("median_views", 0),
+        like_rate if isinstance(like_rate, (int, float)) else None,
+        top_genre,
+        low_genre,
+        len(dups),
+        "OK" if sp.get("ok") else "NG",
+        "OK" if ri.get("ok") else "NG",
+        len(approved),
+    ]
+
+
+def _write_xlsx_history(reports: List[Dict[str, Any]], date_str: str) -> None:
+    """pdca_history.xlsx にチャンネルごと1シートで当日の行を追記/更新する。
+
+    - ファイルが無ければ新規作成、あれば読み込んで追記。
+    - 同じ日付の行が既にあれば上書き（同日再実行で重複させない）。
+    - ヘッダーは太字＋色付け、オートフィルタ＋ウィンドウ固定。
+    """
+    try:
+        from openpyxl import Workbook, load_workbook
+        from openpyxl.styles import Font, PatternFill, Alignment
+        from openpyxl.utils import get_column_letter
+    except Exception as e:  # openpyxl 未導入でも PDCA 本体は止めない
+        print(f"  [xlsx] スキップ: openpyxl 読み込み失敗 ({e})")
+        return
+
+    HISTORY_XLSX.parent.mkdir(parents=True, exist_ok=True)
+
+    if HISTORY_XLSX.exists():
+        wb = load_workbook(HISTORY_XLSX)
+    else:
+        wb = Workbook()
+        # 既定の空シートは後で使うチャンネルシートに置き換えるため削除予約
+        wb.remove(wb.active)
+
+    header_font = Font(bold=True, color="FFFFFF")
+    header_fill = PatternFill("solid", fgColor="305496")
+    like_col_idx = XLSX_COLUMNS.index("平均いいね率") + 1  # 1-based
+
+    for rep in reports:
+        cid = rep.get("channel_id") or "unknown"
+        sheet_name = cid[:31]  # Excel のシート名は31文字上限
+
+        if sheet_name in wb.sheetnames:
+            ws = wb[sheet_name]
+        else:
+            ws = wb.create_sheet(title=sheet_name)
+            ws.append(XLSX_COLUMNS)
+
+        # ヘッダーが欠けている場合の保険（既存ファイルの空シート等）
+        if ws.max_row == 0 or (ws.cell(row=1, column=1).value != XLSX_COLUMNS[0]):
+            ws.insert_rows(1)
+            for c, name in enumerate(XLSX_COLUMNS, start=1):
+                ws.cell(row=1, column=c, value=name)
+
+        row = _rep_to_row(rep, date_str)
+
+        # 同日行を探して上書き、無ければ追記
+        target_row = None
+        for r in range(2, ws.max_row + 1):
+            if ws.cell(row=r, column=1).value == date_str:
+                target_row = r
+                break
+        if target_row is None:
+            target_row = ws.max_row + 1
+        for c, val in enumerate(row, start=1):
+            ws.cell(row=target_row, column=c, value=val)
+
+        # 見た目の整形
+        for c, name in enumerate(XLSX_COLUMNS, start=1):
+            hc = ws.cell(row=1, column=c)
+            hc.font = header_font
+            hc.fill = header_fill
+            hc.alignment = Alignment(horizontal="center", vertical="center")
+            ws.column_dimensions[get_column_letter(c)].width = max(12, len(name) + 2)
+        # いいね率列を % 表示に
+        for r in range(2, ws.max_row + 1):
+            ws.cell(row=r, column=like_col_idx).number_format = "0.00%"
+        ws.freeze_panes = "A2"
+        ws.auto_filter.ref = f"A1:{get_column_letter(len(XLSX_COLUMNS))}{ws.max_row}"
+
+    wb.save(HISTORY_XLSX)
+    print(f"  [xlsx] 履歴更新: {HISTORY_XLSX} （{len(reports)}ch / {date_str}）")
 
 
 # =====================================================================
@@ -458,6 +607,35 @@ def run_channel(channel_id: str, channel_name: str, token: str,
     rep["view_trends"] = _view_trends(channel_id, live_views=live_views)
     rep["dup_check"] = _dup_check(channel_id, videos)
 
+    # 2b. 成功パターン分析 + 視聴維持率分析 — シナリオ生成へのフィードバックを更新
+    print("  [Analyze] success patterns & retention...")
+    try:
+        from pipeline.analytics import success_analyzer
+        sp = success_analyzer.analyze_channel(channel_id, use_gpt=True)
+        rep["success_patterns"] = {
+            "ok": True,
+            "sample_size": sp.get("sample_size"),
+            "has_gpt_insights": sp.get("gpt_insights") is not None,
+        }
+        recs = (sp.get("gpt_insights") or {}).get("actionable_recommendations") or []
+        print(f"    success patterns ok — {sp.get('sample_size', {}).get('success', 0)} success videos, {len(recs)} recommendations")
+    except Exception as e:
+        rep["success_patterns"] = {"ok": False, "error": str(e)}
+        print(f"    success patterns FAILED: {e}")
+
+    try:
+        from pipeline.analytics import retention_analyzer
+        ri = retention_analyzer.analyze_channel(channel_id, use_gpt=True, max_videos=10)
+        rep["retention_insights"] = {
+            "ok": True,
+            "has_gpt_insights": ri.get("gpt_insights") is not None,
+        }
+        tips = (ri.get("gpt_insights") or {}).get("retention_tips") or []
+        print(f"    retention insights ok — {len(tips)} tips")
+    except Exception as e:
+        rep["retention_insights"] = {"ok": False, "error": str(e)}
+        print(f"    retention insights FAILED: {e}")
+
     # 3. Act — バズ続編の自動投入
     print("  [Act] promote viral sequels...")
     if series.get("ok"):
@@ -519,6 +697,14 @@ def main(argv: List[str]) -> int:
     combined_md = "\n".join(md_parts)
     (out_dir / "report.md").write_text(combined_md, encoding="utf-8")
     (REPORTS_DIR / "latest.md").write_text(combined_md, encoding="utf-8")
+
+    # xlsx 履歴に当日分を追記（チャンネルごと1シート）
+    try:
+        _write_xlsx_history(reports, date_str)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        print(f"⚠️ xlsx 履歴の書き込みに失敗: {e}")
     (out_dir / "summary.json").write_text(
         json.dumps({"date": date_str, "generated_at": now.isoformat(),
                     "channels": channel_ids}, ensure_ascii=False, indent=2),

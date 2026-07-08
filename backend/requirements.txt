@@ -27,3 +27,5 @@ pytrends>=4.9.0
 anthropic>=0.40.0
 # TikTok Content Posting API（OAuth + 動画アップロードの HTTP クライアント）
 requests>=2.31.0
+# 日次 PDCA レポートの xlsx 履歴蓄積（run_daily_pdca.py）
+openpyxl>=3.1.0
