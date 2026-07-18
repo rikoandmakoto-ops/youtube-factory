@@ -72,24 +72,9 @@ DEDUP_SIM_THRESHOLD = 0.62  # テーマ重複とみなす類似度
 # 分析対象の期間
 SYNC_DAYS = 30
 
-# ジャンル分類用キーワード（タイトルに含まれれば該当）。先に来たものを優先。
-GENRE_KEYWORDS: Dict[str, List[Tuple[str, List[str]]]] = {
-    "daily-science": [
-        ("睡眠・夢", ["夢", "睡眠", "眠", "寝", "あくび"]),
-        ("脳・記憶・心理", ["脳", "記憶", "心理", "錯覚", "意識", "感情", "ストレス", "緊張"]),
-        ("体の不思議", ["体", "声", "骨", "痛", "くしゃみ", "しゃっくり", "耳", "目", "肌", "指", "お腹", "免疫", "涙"]),
-        ("食・飲", ["食", "飲", "味", "コーヒー", "アイス", "風呂", "温", "熱"]),
-        ("宇宙・天体", ["宇宙", "星", "星座", "地球", "月", "木星", "酸素", "重力"]),
-        ("日常の違和感", ["水たまり", "信号", "電車", "スマホ", "冷蔵庫", "シャワー", "雨", "音"]),
-    ],
-    "scp-lab": [
-        ("SCP個別オブジェクト", ["scp-", "scp‑", "scp ", "彫刻", "医師", "シャイ", "爬虫類", "ikea", "トースター"]),
-        ("オブジェクトクラス", ["keter", "euclid", "safe", "thaumiel", "apollyon", "クラス"]),
-        ("財団組織・職員", ["財団", "o5", "評議会", "機動部隊", "dクラス", "職員", "収容"]),
-        ("対立組織・Kクラス", ["goc", "蛇の手", "カオス", "反乱", "kクラス", "xk", "終焉", "シナリオ"]),
-        ("ミーム・認識災害", ["ミーム", "認識", "情報災害", "感染", "知るだけ"]),
-    ],
-}
+# ジャンル分類は生成側（genre_blacklist）と共有する。レポートで「平均0再生」と出た
+# ジャンル名をそのままチャンネル JSON の genre_blacklist に書けるよう、分類器は 1 つに保つ。
+from pipeline.auto_scenario.genre import GENRE_KEYWORDS, classify_genre as _classify_genre  # noqa: E402
 
 
 # =====================================================================
@@ -158,15 +143,6 @@ def _enabled_channels(explicit: List[str]) -> List[str]:
         if enabled or explicit:  # 明示指定があれば enabled に関わらず対象にする
             ids.append(cid)
     return ids
-
-
-def _classify_genre(channel_id: str, title: str) -> str:
-    t = (title or "").lower()
-    for genre, kws in GENRE_KEYWORDS.get(channel_id, []):
-        for kw in kws:
-            if kw.lower() in t:
-                return genre
-    return "その他"
 
 
 def _genre_breakdown(channel_id: str, videos: List[Dict[str, Any]]) -> List[Dict[str, Any]]:

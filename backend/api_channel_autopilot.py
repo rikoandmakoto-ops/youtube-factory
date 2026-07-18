@@ -65,6 +65,9 @@ DOW_NAMES = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
 class TimeSlot(BaseModel):
     hour: int = Field(ge=0, le=23)
     minute: int = Field(default=0, ge=0, le=59)
+    # このスロットだけ別の曜日で回したい場合に指定 (0=sun..6=sat)。
+    # 未指定なら schedule.days_of_week を継承する。
+    days_of_week: Optional[List[int]] = None
 
 
 class ScheduleSpec(BaseModel):
@@ -176,7 +179,14 @@ def _load_autopilot(channel_id: str) -> Dict[str, Any]:
             except (TypeError, ValueError):
                 continue
             if 0 <= h <= 23 and 0 <= m <= 59:
-                norm_times.append({"hour": h, "minute": m})
+                slot: Dict[str, Any] = {"hour": h, "minute": m}
+                raw_days = t.get("days_of_week")
+                if isinstance(raw_days, list):
+                    days = sorted({int(d) for d in raw_days
+                                   if isinstance(d, int) and 0 <= d <= 6})
+                    if days:
+                        slot["days_of_week"] = days
+                norm_times.append(slot)
         if norm_times:
             sched["times"] = norm_times
     merged["schedule"] = sched
@@ -240,10 +250,16 @@ def _iter_channel_jobs(sch, channel_id: str):
             yield job
 
 
-def _resolve_time_slots(sched: Dict[str, Any]) -> List[Dict[str, int]]:
-    """schedule から発火時刻のリストを返す。times が空なら hour/minute を単一スロットとして扱う。"""
+def _resolve_time_slots(sched: Dict[str, Any]) -> List[Dict[str, Any]]:
+    """schedule から発火時刻のリストを返す。times が空なら hour/minute を単一スロットとして扱う。
+
+    各スロットは任意で `days_of_week`（0=sun..6=sat）を持てる。指定があればそのスロットは
+    その曜日にだけ発火し、無ければ schedule 直下の days_of_week を使う。
+    これにより「普段は18:00、木曜だけ10:00」のような曜日別の投稿枠を表現できる
+    （PDCA レポートの実績ベスト枠を曜日単位で採用するため）。
+    """
     times = sched.get("times")
-    slots: List[Dict[str, int]] = []
+    slots: List[Dict[str, Any]] = []
     if isinstance(times, list):
         for t in times:
             if not isinstance(t, dict):
@@ -253,8 +269,19 @@ def _resolve_time_slots(sched: Dict[str, Any]) -> List[Dict[str, int]]:
                 m = int(t.get("minute", 0))
             except (TypeError, ValueError):
                 continue
-            if 0 <= h <= 23 and 0 <= m <= 59:
-                slots.append({"hour": h, "minute": m})
+            if not (0 <= h <= 23 and 0 <= m <= 59):
+                continue
+            slot: Dict[str, Any] = {"hour": h, "minute": m}
+            raw_days = t.get("days_of_week")
+            if isinstance(raw_days, list):
+                days = sorted({
+                    int(d) for d in raw_days
+                    if isinstance(d, int) or (isinstance(d, str) and d.isdigit())
+                    if 0 <= int(d) <= 6
+                })
+                if days:
+                    slot["days_of_week"] = days
+            slots.append(slot)
     if not slots:
         slots.append({
             "hour": int(sched.get("hour", 18)),
@@ -285,10 +312,16 @@ def _refresh_channel_job(channel_id: str) -> None:
     if not days:
         print(f"🚫 Autopilot for {channel_id}: 曜日未指定 — スケジュール登録スキップ")
         return
-    days_label = "・".join(DOW_NAMES[d] for d in days if 0 <= d <= 6)
-    day_of_week = ",".join(DOW_NAMES[d] for d in days if 0 <= d <= 6)
     slots = _resolve_time_slots(sched)
     for idx, slot in enumerate(slots):
+        # スロット固有の曜日指定があればそれを優先（例: 木曜だけ別時刻）。
+        slot_days = slot.get("days_of_week") or days
+        slot_days = [d for d in slot_days if 0 <= d <= 6]
+        if not slot_days:
+            print(f"🚫 Autopilot for {channel_id} slot {idx}: 有効な曜日なし — スキップ")
+            continue
+        days_label = "・".join(DOW_NAMES[d] for d in slot_days)
+        day_of_week = ",".join(DOW_NAMES[d] for d in slot_days)
         try:
             trigger = api_phase4.CronTrigger(
                 day_of_week=day_of_week,
@@ -570,13 +603,18 @@ async def update_autopilot(
         if req.schedule.times:
             # 重複・無効値は除去し、(hour, minute) でソート
             seen: set = set()
-            slots: List[Dict[str, int]] = []
+            slots: List[Dict[str, Any]] = []
             for t in req.schedule.times:
-                key = (t.hour, t.minute)
+                slot_days = sorted({d for d in (t.days_of_week or []) if 0 <= d <= 6})
+                # 曜日が違えば同じ時刻でも別スロットとして許容する
+                key = (t.hour, t.minute, tuple(slot_days))
                 if key in seen:
                     continue
                 seen.add(key)
-                slots.append({"hour": t.hour, "minute": t.minute})
+                slot: Dict[str, Any] = {"hour": t.hour, "minute": t.minute}
+                if slot_days:
+                    slot["days_of_week"] = slot_days
+                slots.append(slot)
             slots.sort(key=lambda s: (s["hour"], s["minute"]))
             new_sched["times"] = slots
         ap["schedule"] = new_sched

@@ -102,9 +102,21 @@ def _keyword_overlap(a: str, b: str) -> float:
     sa, sb = set(_content_tokens(a)), set(_content_tokens(b))
     if not sa or not sb:
         return 0.0
+    shared = sa & sb
+    if not shared:
+        return 0.0
     w = lambda s: sum(len(x) ** 2 for x in s)
-    inter = w(sa & sb)
-    den = min(w(sa), w(sb))
+    inter = w(shared)
+    # 共有語がすべて 1 文字語のとき（止・手・脳 のような頻出漢字・動詞語幹）は
+    # 偶然一致になりやすい。特に平仮名主体の title（例:「なぜしゃっくりは止まらない」→
+    # 抽出語が「止」だけ）が語の豊富な無関係 title に薄く一致すると、min 分母では
+    # 誤って 1.0 まで跳ね上がる。分母を max（対称）にして減衰させ、この誤検出を防ぐ。
+    # 双方が短く 1 文字語中心の title 同士（声/夢 のような話題核の共有）では
+    # 依然として中程度のスコアが残る。
+    if all(len(x) == 1 for x in shared):
+        den = max(w(sa), w(sb))
+    else:
+        den = min(w(sa), w(sb))
     return (inter / den) if den else 0.0
 
 

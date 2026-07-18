@@ -71,6 +71,15 @@
     "title_style": "タイトルは『なぜ〇〇は××なのか』『〇〇の真実』『機密解除：〇〇』など、財団資料が流出したような語感で書く。SCP番号は具体的に出して構わない。",
     "viral_hooks": "『財団から流出した報告書』感 / SCP番号の具体名 / 収容違反・機密解除・[REDACTED] / 不気味な余韻"
   },
+  "theme_blacklist": [
+    "SCP-173",
+    "彫刻",
+    "目を離すと動く",
+    "視線を外すと"
+  ],
+  "genre_blacklist": [
+    "オブジェクトクラス"
+  ],
   "competitors": [
     "UC_Bp8vSyMiYOAss0pQHtZdg",
     "UCGzXUlx8mai4wq7YitIMqyQ",
@@ -427,12 +436,27 @@
         5,
         6
       ],
-      "hour": 19,
+      "hour": 18,
       "minute": 0,
       "times": [
         {
-          "hour": 19,
-          "minute": 0
+          "hour": 18,
+          "minute": 0,
+          "days_of_week": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "hour": 10,
+          "minute": 0,
+          "days_of_week": [
+            4
+          ]
         }
       ]
     },

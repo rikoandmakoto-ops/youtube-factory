@@ -43,6 +43,21 @@ GPT_MODEL = "gpt-4o"
 GPT_MODEL_LIGHT = "gpt-4o-mini"
 CLAUDE_MODEL = "claude-sonnet-4-6"  # 旧 claude-sonnet-4-20250514 は廃止され 404 (2026-06-18)
 
+# テーマ重複の「生成ブロック」しきい値。既存動画/過去シナリオのタイトルと
+# この類似度以上なら「実質同じ動画」とみなし、別テーマに差し替える。
+# theme_dedup の既定(0.55) より緩く設定 — 切り口違いの正常な連作まで潰さず、
+# ほぼ同一のタイトル量産（SCP-173 の 23 連投・録音の声/酸素消失 の重複）だけを弾く。
+# 0.8 では PDCA レポートの重複警告（類似 0.98〜1.0 のペアが 4 日連続 15 件）を
+# 取りこぼしたため 0.7 へ引き下げ、検知幅を広げた。
+THEME_DUP_BLOCK_THRESHOLD = 0.7
+
+# 生成後タイトルの「自動リジェクト」しきい値。テーマ段のゲート
+# (THEME_DUP_BLOCK_THRESHOLD) を通っても、LLM が出す最終タイトルが既存動画と
+# ほぼ同一になるケースがある（レポートの重複ペアはこの最終タイトル同士）。
+# ここを超えたらタイトルだけを作り直す。テーマ段より高いのは意図的で、
+# シナリオ本体は既に生成済みのため「ほぼ確実に同じ動画」だけを対象にする。
+TITLE_DUP_REJECT_THRESHOLD = 0.9
+
 
 class ScenarioGenerator:
     """GPT APIを使ったシナリオ自動生成"""
@@ -268,6 +283,285 @@ class ScenarioGenerator:
             if title:
                 titles.add(title.lower())
         return titles
+
+    def _existing_titles_for_dedup(self, channel_id: str, within_days: int = 90) -> List[str]:
+        """テーマ重複判定の基準となる既存タイトル群を集める。
+
+        3 系統をマージ（順序保持・重複除去）:
+          1. 過去シナリオの theme.title（`past_theme_titles`）
+          2. 過去シナリオの生成タイトル（バズるタイトル）— theme.title が同じでも
+             実タイトルが割れているケースを両側から拾う。
+          3. 公開済み動画のタイトル（analytics store）— レポート側 `_dup_check` と
+             同じ published メトリクスを参照するので判定基準が揃う。
+        """
+        from pipeline.auto_scenario import theme_dedup as _td
+        titles: List[str] = list(_td.past_theme_titles(channel_id, within_days=within_days))
+        seen = {t.lower() for t in titles}
+
+        def _add(t: str) -> None:
+            t = (t or "").strip()
+            if t and t.lower() not in seen:
+                seen.add(t.lower())
+                titles.append(t)
+
+        # 2) 過去シナリオの生成タイトル
+        base = self._scenarios_dir_for(channel_id)
+        if base.exists():
+            cutoff = time.time() - within_days * 86400
+            for f in base.glob("*.json"):
+                try:
+                    if f.stat().st_mtime < cutoff:
+                        continue
+                    data = json.loads(f.read_text(encoding="utf-8"))
+                except Exception:
+                    continue
+                if isinstance(data, dict):
+                    _add(data.get("title") or "")
+
+        # 3) 公開済み動画タイトル
+        try:
+            from pipeline.analytics import store as _store
+            for v in (_store.list_video_metrics(channel_id, limit=200) or []):
+                _add((v.get("title") or "") if isinstance(v, dict) else "")
+        except Exception as e:
+            print(f"  ⚠️ published-title fetch for dedup skipped: {e}")
+
+        return titles
+
+    def _channel_theme_blacklist(self, channel) -> List[str]:
+        """チャンネルJSONのテーマ除外設定（`theme_blacklist`）を返す。
+
+        値は「正規化後に部分一致したら弾く」語/フレーズの配列。過剰生産で
+        止めたい題材（例: "SCP-173"、"録音した自分の声"）を運用側で明示指定する。
+        `theme_priority.avoid_categories` は提案プロンプトへの注入で既に効いているため
+        ここでは扱わない（カテゴリ説明文なので部分一致に不向き）。
+        """
+        raw = getattr(channel, "_raw", {}) or {}
+        bl = raw.get("theme_blacklist") or []
+        return [x.strip() for x in bl if isinstance(x, str) and x.strip()]
+
+    def _channel_genre_blacklist(self, channel) -> List[str]:
+        """チャンネルJSONの生成停止ジャンル（`genre_blacklist`）を返す。
+
+        値は `pipeline.auto_scenario.genre` のジャンル名（日次 PDCA レポートの
+        「テーマ（ジャンル）別の成績」に出る名前）の配列。レポートで平均再生が
+        死んでいるジャンル（daily-science の「宇宙・天体」= 6本すべて0再生、
+        scp-lab の「オブジェクトクラス」= 平均5再生）を運用側で止めるための設定。
+
+        `theme_blacklist` が「個別の題材」を語句一致で弾くのに対し、こちらは
+        「系統ごと」を分類器経由で弾く。両方に該当してもどちらかで落ちればよい。
+        """
+        raw = getattr(channel, "_raw", {}) or {}
+        bl = raw.get("genre_blacklist") or []
+        return [x.strip() for x in bl if isinstance(x, str) and x.strip()]
+
+    def _genre_blacklisted_reason(self, channel_id: str, title: str,
+                                  genre_blacklist: List[str]) -> Optional[str]:
+        """title の分類ジャンルが genre_blacklist に含まれれば、そのジャンル名を返す。"""
+        if not genre_blacklist:
+            return None
+        try:
+            from pipeline.auto_scenario.genre import classify_genre
+        except Exception as e:
+            print(f"  ⚠️ genre blacklist skipped (classifier unavailable): {e}")
+            return None
+        g = classify_genre(channel_id, title)
+        return g if g in genre_blacklist else None
+
+    def _blacklisted_reason(self, title: str, blacklist: List[str]) -> Optional[str]:
+        """title が blacklist のいずれかに（正規化部分一致で）該当すれば、その語を返す。"""
+        if not blacklist:
+            return None
+        from pipeline.auto_scenario import theme_dedup as _td
+        norm = _td.normalize_title(title)
+        if not norm:
+            return None
+        for term in blacklist:
+            nt = _td.normalize_title(term)
+            if nt and nt in norm:
+                return term
+        return None
+
+    def _dedupe_theme(self, channel, theme: Dict) -> Dict:
+        """選択済みテーマが既存動画/過去シナリオと重複していれば別テーマへ差し替える。
+
+        全生成経路の最終ゲート。`theme_override`（autopilot / run_*.py / batch）でも
+        必ずここを通るので、generator 内の再抽選をバイパスする経路の重複量産を止める。
+
+        判定:
+          - チャンネルの theme_blacklist に一致 → 除外
+          - チャンネルの genre_blacklist のジャンルに分類される → 除外
+          - 既存タイトルとの類似度 >= THEME_DUP_BLOCK_THRESHOLD → 重複として除外
+        差し替え順: suggest_themes（語彙/意味 dedup 込み）→ seed 再抽選。
+        代替が見つからなければ元テーマのまま続行（投稿 skip より重複投稿の方がマシ）。
+        """
+        try:
+            from pipeline.auto_scenario import theme_dedup as _td
+        except Exception as e:
+            print(f"  ⚠️ theme dedup guard disabled: {e}")
+            return theme
+
+        existing = self._existing_titles_for_dedup(channel.id)
+        blacklist = self._channel_theme_blacklist(channel)
+        genre_blacklist = self._channel_genre_blacklist(channel)
+
+        def _reject_reason(title: str) -> Optional[str]:
+            title = (title or "").strip()
+            if not title:
+                return None
+            bl = self._blacklisted_reason(title, blacklist)
+            if bl:
+                return f"blacklist『{bl}』"
+            gb = self._genre_blacklisted_reason(channel.id, title, genre_blacklist)
+            if gb:
+                return f"停止ジャンル『{gb}』"
+            hit = _td.find_lexical_duplicate(
+                title, existing, threshold=THEME_DUP_BLOCK_THRESHOLD)
+            if hit is not None:
+                return f"既存『{hit[0][:24]}』に類似({hit[1]:.2f})"
+            return None
+
+        reason = _reject_reason(theme.get("title"))
+        if not reason:
+            return theme
+
+        print(f"  ♻️ Theme '{theme.get('title')}' rejected — {reason}. 別テーマを選び直します")
+        tried = {(theme.get("title") or "").strip().lower()}
+
+        # 1) AI 提案（内部で除外リスト+語彙+意味 dedup 済み）から重複しない最初の1件
+        try:
+            for s in (self.suggest_themes(channel, count=6) or []):
+                if not isinstance(s, dict):
+                    continue
+                t = (s.get("title") or "").strip()
+                if not t or t.lower() in tried:
+                    continue
+                tried.add(t.lower())
+                if not _reject_reason(t):
+                    print(f"  ✅ Replaced with AI-suggested theme: {t}")
+                    return {
+                        "title": t,
+                        "angle": s.get("angle", "") or "",
+                        "parent_title": s.get("parent_title"),
+                    }
+        except Exception as e:
+            print(f"  ⚠️ AI theme replacement failed: {e}")
+
+        # 2) seed 再抽選（過去回避つき）
+        for _ in range(6):
+            try:
+                cand = self._pick_seed_avoiding_past(channel)
+            except Exception:
+                break
+            t = (cand.get("title") or "").strip()
+            if t and t.lower() not in tried and not _reject_reason(t):
+                print(f"  ✅ Replaced with seed theme: {t}")
+                return cand
+            tried.add(t.lower())
+
+        print(f"  ⚠️ 非重複の代替テーマが見つからず、元の '{theme.get('title')}' で続行します")
+        return theme
+
+    def _regenerate_title(self, channel, theme: Dict, forbidden: List[str],
+                          scenario_data: Dict[str, Any]) -> Optional[str]:
+        """既存タイトルと衝突した最終タイトルだけを作り直す（軽量モデル）。
+
+        シナリオ本体は使い回すので、コストは1回の短い呼び出しのみ。
+        `forbidden` には衝突相手を含む既存タイトル（上位のみ）を渡し、
+        「この言い換えも禁止」と明示する。
+        """
+        hook_lines: List[str] = []
+        for line in (scenario_data.get("short_scenario") or scenario_data.get("full_scenario") or [])[:4]:
+            text = line.get("text") if isinstance(line, dict) else ""
+            if text:
+                hook_lines.append(str(text))
+        forbid_block = "\n".join(f"  - {t}" for t in forbidden[:20]) or "  (なし)"
+        prompt = (
+            f"YouTubeショートのタイトルを1つだけ作り直してください。\n\n"
+            f"# チャンネル\n{channel.name}（{channel.concept}）\n\n"
+            f"# 動画のテーマ\n{theme.get('title', '')}\n"
+            f"切り口: {theme.get('angle', '') or '(指定なし)'}\n\n"
+            f"# 本編の冒頭\n" + ("\n".join(hook_lines) or "(なし)") + "\n\n"
+            f"# 禁止タイトル（これらと同じ・言い換え・語順違いはすべて不可）\n{forbid_block}\n\n"
+            f"# 条件\n"
+            f"- 禁止リストとは**別の切り口・別の単語**で書くこと（同じ現象でも着眼点を変える）。\n"
+            f"- 40文字以内。疑問型か意外性のある断定。結論は書かない。\n"
+            f"- タイトル本文のみを出力（前置き・引用符・番号なし）。\n"
+        )
+        try:
+            self._current_channel_id = channel.id
+            self._current_purpose = "title_regen"
+            raw = self._call_text_with_fallback(
+                [
+                    {"role": "system", "content": "タイトル1行のみ出力。説明・引用符は不要。"},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.95,
+                max_tokens=200,
+                gpt_model=GPT_MODEL_LIGHT,
+            )
+        except Exception as e:
+            print(f"  ⚠️ title regeneration failed: {e}")
+            return None
+        title = (raw or "").strip().splitlines()[0].strip() if (raw or "").strip() else ""
+        return title.strip("「」\"'　 ") or None
+
+    def _reject_duplicate_title(self, channel, theme: Dict, result: Dict[str, Any],
+                                scenario_data: Dict[str, Any]) -> None:
+        """生成された最終タイトルが既存とほぼ同一なら自動リジェクトして作り直す。
+
+        テーマ段のゲート（`_dedupe_theme`）を通っても、LLM が既存動画と実質同じ
+        タイトルを出すことがある — PDCA レポートで 4 日連続 15 件出ていた重複ペア
+        （類似 0.98〜1.0）はまさにこの最終タイトル同士の衝突だった。
+        シナリオ本体は再利用し、タイトルだけを最大2回作り直す。
+        どうしても解消しなければ元タイトルで続行し、`title_duplicate` に記録を残す
+        （投稿を止めるより、重複を可視化して次回の PDCA で拾う方を選ぶ）。
+        """
+        try:
+            from pipeline.auto_scenario import theme_dedup as _td
+        except Exception as e:
+            print(f"  ⚠️ title dedup guard disabled: {e}")
+            return
+
+        existing = self._existing_titles_for_dedup(channel.id)
+        if not existing:
+            return
+
+        title = (result.get("title") or "").strip()
+        hit = _td.find_lexical_duplicate(title, existing, threshold=TITLE_DUP_REJECT_THRESHOLD)
+        if hit is None:
+            return
+
+        print(f"  🚫 生成タイトル '{title}' が既存『{hit[0][:28]}』と重複({hit[1]:.2f}) — 作り直します")
+        forbidden = [hit[0]] + [t for t in existing[:20] if t != hit[0]]
+        for attempt in range(2):
+            cand = self._regenerate_title(channel, theme, forbidden, scenario_data)
+            if not cand:
+                break
+            again = _td.find_lexical_duplicate(
+                cand, existing, threshold=TITLE_DUP_REJECT_THRESHOLD)
+            if again is None:
+                print(f"  ✅ タイトルを差し替えました: {cand}")
+                # AB テストが既に original_title を入れている場合は「最初のタイトル」を守る
+                result.setdefault("original_title", title)
+                result["title"] = cand
+                result["title_duplicate"] = {
+                    "resolved": True,
+                    "rejected_title": title,
+                    "matched": hit[0],
+                    "score": round(hit[1], 3),
+                }
+                return
+            print(f"  ↻ 再生成タイトルもまだ重複({again[1]:.2f}) — attempt {attempt + 1}/2")
+            forbidden = [cand] + forbidden
+
+        print(f"  ⚠️ 非重複タイトルを作れず、元の '{title}' で続行します")
+        result["title_duplicate"] = {
+            "resolved": False,
+            "rejected_title": title,
+            "matched": hit[0],
+            "score": round(hit[1], 3),
+        }
 
     def _pick_seed_avoiding_past(self, channel) -> Dict:
         """theme_seeds から過去に使ったものを除外して選ぶ。
@@ -798,6 +1092,7 @@ class ScenarioGenerator:
         target_duration: Optional[int] = None,
         improvement_feedback: Optional[List[Dict[str, Any]]] = None,
         run_ab_test: bool = False,
+        avoid_duplicate_theme: bool = True,
     ) -> Dict[str, Any]:
         """
         チャンネルプロファイルからシナリオを自動生成。
@@ -809,6 +1104,13 @@ class ScenarioGenerator:
             improvement_feedback: いいね率改善ループからの未消費フィードバック。
                 pipeline.analytics.feedback_store.get_pending_for_channel(...) の戻り値
                 をそのまま渡す想定。GPT プロンプトに改善方針として注入される。
+            avoid_duplicate_theme: True（既定）なら、選択/指定されたテーマが既存動画・
+                過去シナリオとほぼ同一（類似度 ≥ THEME_DUP_BLOCK_THRESHOLD）か、チャンネル
+                の theme_blacklist / genre_blacklist に該当する場合、別テーマへ自動で
+                差し替える。さらに生成後の最終タイトルが既存とほぼ同一
+                （≥ TITLE_DUP_REJECT_THRESHOLD）ならタイトルだけ作り直す。theme_override
+                経由（autopilot / run_*.py / batch）でも必ず適用される重複量産の最終ゲート。
+                意図的に同一テーマを再生成したい手動実行では False を渡す。
 
         Returns:
             {
@@ -838,6 +1140,11 @@ class ScenarioGenerator:
                 theme = self._pick_seed_avoiding_past(channel)
         else:
             raise ValueError(f"No theme_seeds for channel {channel.id}")
+
+        # テーマ重複の最終ゲート。theme_override（autopilot / run_*.py / batch）でも
+        # 必ずここを通す。既存動画/過去シナリオとほぼ同一のテーマなら別テーマへ差し替える。
+        if avoid_duplicate_theme:
+            theme = self._dedupe_theme(channel, theme)
 
         duration = target_duration or channel.get_target_duration()
 
@@ -1146,6 +1453,11 @@ class ScenarioGenerator:
             except Exception as e:
                 print(f"  ⚠️ AB test generation failed: {e}")
                 result["ab_test"] = {"error": str(e)}
+
+        # 最終タイトルの重複ゲート。AB テストがタイトルを差し替えた後に置くことで、
+        # 「どの経路で決まったタイトルであれ」既存動画とほぼ同一なら作り直す。
+        if avoid_duplicate_theme:
+            self._reject_duplicate_title(channel, theme, result, scenario_data)
 
         return result
 
