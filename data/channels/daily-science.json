@@ -161,6 +161,7 @@
   },
   "theme_blacklist": [
     "骨伝導",
+    "しゃっくり",
     "録音した自分の声",
     "録音の声",
     "自分の声が別人"
@@ -285,31 +286,19 @@
     "enabled": true,
     "schedule": {
       "days_of_week": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
         6
       ],
-      "hour": 0,
+      "hour": 9,
       "minute": 0,
       "times": [
         {
-          "hour": 0,
+          "hour": 9,
           "minute": 0
         }
       ]
     },
     "duration_minutes": 12,
     "gen_type": "short",
-    "theme_queue": [
-      {
-        "id": "ds_q10",
-        "title": "なぜ目の端で見えたものが正面を向くと消えるのか？網膜の盲点ではない意外な理由",
-        "angle": "桿体細胞と錐体細胞の分布差、暗所視と明所視の切り替え、天文学者が使う逸らし目テクニック"
-      }
-    ]
+    "theme_queue": []
   }
 }
