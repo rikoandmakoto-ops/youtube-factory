@@ -72,8 +72,7 @@
     "viral_hooks": "『財団から流出した報告書』感 / SCP番号の具体名 / 収容違反・機密解除・[REDACTED] / 不気味な余韻"
   },
   "theme_blacklist": [
-    "SCP-173",
-    "SCP-1730"
+    "SCP-173"
   ],
   "competitors": [
     "UC_Bp8vSyMiYOAss0pQHtZdg",
@@ -423,13 +422,19 @@
     "enabled": true,
     "schedule": {
       "days_of_week": [
-        4
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
       ],
-      "hour": 9,
+      "hour": 18,
       "minute": 0,
       "times": [
         {
-          "hour": 9,
+          "hour": 18,
           "minute": 0
         }
       ]
