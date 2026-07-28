@@ -249,6 +249,7 @@
     },
     "analytics": {
       "enabled": true,
+      "fetch_retention_for": 5,
       "performance_threshold": {
         "min_ctr": 4,
         "min_retention": 40,
@@ -306,12 +307,6 @@
     },
     "duration_minutes": 12,
     "gen_type": "short",
-    "theme_queue": [
-      {
-        "id": "712af275",
-        "title": "なぜ食べ物の色が食欲に影響を与えるのか？ — 色彩と心理学",
-        "angle": "視覚と味覚の関連性"
-      }
-    ]
+    "theme_queue": []
   }
 }

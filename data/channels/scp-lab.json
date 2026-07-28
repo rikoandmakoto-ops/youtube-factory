@@ -376,6 +376,7 @@
     },
     "analytics": {
       "enabled": true,
+      "fetch_retention_for": 5,
       "performance_threshold": {
         "min_ctr": 5,
         "min_retention": 45,
@@ -441,6 +442,17 @@
     },
     "duration_minutes": 12,
     "gen_type": "short",
-    "theme_queue": []
+    "theme_queue": [
+      {
+        "id": "e1096421",
+        "title": "機密解除：SCP-XXXX「喪失した記憶」 — 収容違反が暴く隠された真実",
+        "angle": "記憶に関する異常とその影響"
+      },
+      {
+        "id": "bd7eb0ff",
+        "title": "SCP-████「見えざる脅威」 — 感知できない存在の恐怖",
+        "angle": "認識できない異常存在の影響"
+      }
+    ]
   }
 }
