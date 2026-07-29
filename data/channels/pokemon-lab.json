@@ -1,0 +1,411 @@
+{
+  "id": "pokemon-lab",
+  "name": "ゆっくりポケモン研究所",
+  "concept": "ポケモンの裏設定・都市伝説・対戦の豆知識・図鑑の謎をゆっくり解説するチャンネル。恐怖ではなく『ワクワクする考察』を軸に、知るほど世界が広がるポケモン学を届ける。",
+  "short_series_name": "1分ポケモン研究：",
+  "style": "yukkuri",
+  "youtube_channel_id": "",
+  "image_mode": "collect",
+  "image_collect": {
+    "provider": "auto",
+    "safe_search": true,
+    "license_filter": "cc",
+    "max_per_query": 5,
+    "attribution_template": "出典: {source}",
+    "mix_strategy": "heuristic"
+  },
+  "voice_style": {
+    "tone": "明るくワクワクする考察トーン。『えっ、そうだったの!?』という発見の楽しさを最優先。ホラー・恐怖演出は使わず、図鑑や公式設定を手掛かりに謎を解いていく研究者の高揚感で語る。断定できないことは『これはあくまで考察だけど』と正直に前置きしつつ、想像の余地をワクワクに変える",
+    "narrator_persona": "ポケモン研究所の助手。図鑑テキスト・ゲーム内描写・公式設定を根拠に、丁寧かつテンポよく謎を解き明かす。ファンとしての愛が滲むが、憶測と公式設定はきちんと区別して話す。専門用語は必ず初見の視聴者にも分かるよう言い換える",
+    "opening_hooks": [
+      "今日の研究テーマ、かなり面白いよ",
+      "図鑑のあの一文、ちゃんと読んだことある？",
+      "この設定に気づくと、見え方が変わるんだ"
+    ],
+    "forbidden": [
+      "SCP",
+      "財団",
+      "収容",
+      "[REDACTED]",
+      "DATA EXPUNGED",
+      "呪い",
+      "ゾッとする",
+      "シロ",
+      "クロ",
+      "リコ",
+      "マコト",
+      "理子",
+      "真"
+    ],
+    "style_rules": [
+      "『怖い』ではなく『面白い・意外・知りたくなる』で引っ張る。ホラー演出や不気味な余韻で締めない。",
+      "根拠は必ずゲーム内図鑑テキスト・公式設定・作中描写に置く。ファンの創作説を語るときは『ファンの間ではこう言われている』と明示して事実と分ける。",
+      "リスナー役（ソラ）のリアクションは驚き・納得・興奮を中心にする（例:『えっ、そんな設定あるの!?』『言われてみれば確かに…』『それ知らなかった！』）。",
+      "締めは『次に遊ぶとき、ちょっと見方が変わるはず』のような、視聴体験が持ち帰れる前向きな余韻で終える。",
+      "対戦の話題では初心者を置き去りにしない。用語（種族値・耐性・上位互換など）は毎回ひと言で補足する。"
+    ]
+  },
+  "theme_priority": {
+    "label": "ポケモン裏設定・考察・図鑑の謎ジャンル",
+    "categories": [
+      "図鑑テキストの謎・矛盾・意味深な記述の考察（初代から最新作までの図鑑読み解き）",
+      "個別ポケモンの裏設定・進化の秘密・モチーフ元ネタ（伝説・幻・準伝説含む）",
+      "登場人物・ストーリーの考察（主人公・ライバル・悪の組織・チャンピオンの正体や背景）",
+      "対戦・ゲームシステムの豆知識（種族値・隠し仕様・乱数・有名なバグや裏技の仕組み）",
+      "シリーズを跨いだ世界観・地方設定・時系列の繋がり考察"
+    ],
+    "required_count_per_batch": 5,
+    "good_examples": [
+      "ミュウツー誕生の裏側 — 図鑑と作中描写から辿る本当の経緯",
+      "レッドはなぜ一言も喋らないのか — 沈黙の主人公に隠された設定",
+      "ポケモン図鑑の『怖すぎる』説明文まとめ — 公式が書いた衝撃の一文",
+      "なぜイーブイだけ進化先が8種類もあるのか — 不安定な遺伝子の設定",
+      "御三家の選択に隠された三すくみ以外の意味とは"
+    ],
+    "avoid_categories": [
+      "実在の事件・人物と絡めた不謹慎な都市伝説（『死亡説』『呪いのカセット』系の悪質なデマ）",
+      "SCP・ホラー系の恐怖演出に寄せた題材",
+      "最新作の未発売情報・リーク・非公式データマイニング"
+    ],
+    "title_style": "タイトルは『なぜ〇〇なのか』『〇〇の正体』『知られざる〇〇』など、答えを言わずに引っ張る疑問形・秘密提示形で書く。ポケモン名・キャラ名は具体的に出す（検索性が高い）。",
+    "viral_hooks": "図鑑の意味深な一文 / 有名ポケモンの意外な裏設定 / 元ネタ・モチーフの発見 / 『言われてみれば確かに』のギャップ / 世代を跨いだ伏線"
+  },
+  "theme_blacklist": [],
+  "genre_blacklist": [],
+  "competitors": [],
+  "theme_seeds": [
+    {
+      "title": "ミュウツーの誕生秘話",
+      "angle": "ミュウの遺伝子から生まれた経緯を、図鑑テキストと作中の研究日誌描写から追う"
+    },
+    {
+      "title": "レッドの正体",
+      "angle": "無口な主人公がチャンピオンとして山頂に立つまで。作品を跨いだ描写から人物像を考察"
+    },
+    {
+      "title": "ポケモン図鑑の怖すぎる説明文",
+      "angle": "公式が書いた衝撃的な図鑑テキストを厳選。なぜそう書かれたのかまで踏み込む"
+    },
+    {
+      "title": "なぜイーブイは8種類も進化するのか",
+      "angle": "不安定な遺伝子という設定と、各進化先の分岐条件を整理する"
+    },
+    {
+      "title": "ミュウとミュウツーの決定的な違い",
+      "angle": "幻と人工。種族値・技・設定の三面から比較する"
+    },
+    {
+      "title": "御三家が炎・水・草である理由",
+      "angle": "三すくみの設計思想と、シリーズを通した例外の有無"
+    },
+    {
+      "title": "ヤドンとシェルダーの共生関係の謎",
+      "angle": "噛まれると進化する仕組みと、ヤドキング分岐の設定を読み解く"
+    },
+    {
+      "title": "ゲンガーの元ネタは影？",
+      "angle": "ファンの間で語られる説と、公式設定として確認できる範囲を切り分ける"
+    },
+    {
+      "title": "伝説のポケモンはなぜ1匹しかいないのか",
+      "angle": "作中の設定と、ゲームシステム上の扱いのズレを考察"
+    },
+    {
+      "title": "種族値って結局なに？",
+      "angle": "対戦の基礎。数字が実際のバトルでどう効くかを初心者向けに解説"
+    },
+    {
+      "title": "初代の伝説的バグ『けつばん』の正体",
+      "angle": "なぜ発生したのか、データ構造の観点からやさしく解説"
+    },
+    {
+      "title": "悪の組織はなぜ毎回ポケモンを狙うのか",
+      "angle": "ロケット団からの歴代組織の目的を比較して共通構造を探る"
+    },
+    {
+      "title": "ポケモンの世界に人間の食文化はあるのか",
+      "angle": "作中描写から生態系と食文化の設定を推理する"
+    },
+    {
+      "title": "ラプラスの図鑑説明に隠された悲しい設定",
+      "angle": "乱獲で数を減らしたという記述の意味と、シリーズでの扱いの変化"
+    },
+    {
+      "title": "なぜコイキングはあれほど弱いのか",
+      "angle": "弱さの設定意図と、ギャラドス進化のギャップ演出を考察"
+    }
+  ],
+  "characters": {
+    "ヒカリ研究員": {
+      "side": "left",
+      "speaker_id": 2,
+      "dir": "hikari",
+      "text_color": [
+        255,
+        230,
+        90
+      ],
+      "expressions": [
+        "normal",
+        "happy",
+        "surprise",
+        "think"
+      ],
+      "thumb_dir": "hikari",
+      "thumb_expression": "happy",
+      "role": "解説役（ポケモン研究所の若手研究員。図鑑データを愛する知識派の女の子）",
+      "appearance": "young Japanese anime girl named Hikari with short orange-brown bob hair and bright amber eyes, wearing a white researcher coat over a red trainer jacket, a pokedex-like tablet in hand, cheerful confident expression, chibi-style with a big round head and big eyes, bright pop explainer character"
+    },
+    "ソラ": {
+      "side": "right",
+      "speaker_id": 3,
+      "dir": "sora",
+      "text_color": [
+        120,
+        220,
+        255
+      ],
+      "expressions": [
+        "normal",
+        "happy",
+        "surprise",
+        "sad"
+      ],
+      "thumb_dir": "sora",
+      "thumb_expression": "surprise",
+      "role": "リスナー役（旅立ったばかりの新米トレーナーの男の子。素直に驚いて質問する）",
+      "appearance": "young Japanese anime boy named Sora with messy dark blue hair and big round eyes, wearing a blue-and-white trainer cap and a green backpack, excited surprised expression, chibi-style with a big round head and big eyes, bright pop explainer character"
+    }
+  },
+  "publish_settings": {
+    "auto_publish": false,
+    "default_privacy": "public",
+    "short_delay_minutes": 10,
+    "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}"
+  },
+  "description_template": {
+    "main_intro": "{title}について、ヒカリ研究員とソラがゆっくり考察します。\nポケモンの裏設定・都市伝説・図鑑の謎・対戦の豆知識を、公式設定を手がかりにワクワク解説していきます。\n※本動画はファンによる非公式の考察コンテンツです。ポケモンは株式会社ポケモン／任天堂の登録商標です。\nぜひ最後までご視聴ください！",
+    "main_hashtags": "#ポケモン #ポケモン考察 #ゆっくり解説 #裏設定 #都市伝説 #ポケモン図鑑",
+    "short_hashtags": "#shorts #ポケモン #ゆっくり解説 #ポケモン考察 #裏設定"
+  },
+  "thumbnail_template": {
+    "badge_text": "ポケモン考察",
+    "badge_color": [
+      230,
+      60,
+      50
+    ],
+    "hook_color": [
+      255,
+      240,
+      70
+    ],
+    "subtitle_color": [
+      90,
+      215,
+      255
+    ],
+    "style_hint": "明るくポップなポケモン考察系サムネイル。\n- 背景は『明るく・カラフル・元気』を最優先。暗い／ホラー調／陰鬱は絶対NG。\n- background_concept には必ず『bright, vibrant, colorful, playful, daylight, cheerful, high-key lighting, pastel sky, adventure field』のような明るさキーワードを複数含める。『dark / moody / dim / horror / night』などは禁止。\n- 配色はモンスターボール由来の赤×白×黒をアクセントに、鮮やかな青空・草原・エネルギー光のカラフルな背景を組み合わせる。\n- line1（白）は前振り（例:『図鑑に書かれた…』『実はこの設定』）。line2（黄・強調）が核となる驚き（『衝撃の一文』『誕生の真実』）でインパクト最大化。\n- line3_badge は赤で『裏設定』『公式設定』『知らないと損』など。sub_text はポケモン名・キャラ名を具体的に出して検索性と具体性を上げる。\n- 被写体は中央〜上部に置き、下部は文字用に空けるが暗くせず明るいグラデーション（白／クリーム／薄水色）にする。\n- 版権キャラそのものの精密な再現は避け、モンスターボール・図鑑デバイス・エネルギーオーラ・草原やジムの風景など『象徴的なモチーフ』で世界観を出す。\n- 文字は極太＋黒の強い縁取り（3-5px）、軽いポップな集中線やキラキラ装飾で勢いを出す。"
+  },
+  "defaults": {
+    "speed": 1.3,
+    "target_duration": 720,
+    "bg_type": "static",
+    "bg_path": null,
+    "short_bg_query": "bright colorful grassland adventure sky",
+    "short_overlay_style": {
+      "opening": {
+        "font_size_max": 104,
+        "font_size_min": 72,
+        "stroke_width": 8,
+        "glow_stroke_extra": 7,
+        "dim_alpha": 110,
+        "punch_start_scale": 0.88
+      }
+    },
+    "use_illustrations": true,
+    "hashtags": [
+      "#ポケモン",
+      "#ポケモン考察",
+      "#ゆっくり解説",
+      "#裏設定",
+      "#都市伝説"
+    ],
+    "category": "20"
+  },
+  "content_policy": {
+    "tone": "friendly",
+    "age_rating": "all_ages",
+    "cta_position": "after_hook",
+    "cta_style": "casual",
+    "guidelines": [
+      "ファンによる非公式の考察であることを明示し、公式設定と憶測を明確に区別する",
+      "権利表記（ポケモンは株式会社ポケモン／任天堂の登録商標）を概要欄に記載する",
+      "ゲーム画面・公式イラストの長時間そのまま使用は避け、解説図と自作ビジュアル中心で構成する",
+      "『死亡説』『呪い』など不謹慎・悪質なデマ系都市伝説は扱わない"
+    ],
+    "avoid": [
+      "版権素材の無断長尺使用",
+      "未発売作品のリーク・データマイニング情報",
+      "実在人物と絡めた不謹慎な都市伝説",
+      "過度なホラー・恐怖演出"
+    ]
+  },
+  "video_format": {
+    "layout": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "char_canvas_w_ratio": 0.418,
+      "char_y_offset": 130,
+      "char_x_inset_ratio": 0.15,
+      "speaker_glow": true,
+      "nonspeaker_opacity": 0.5,
+      "text_box_height_ratio": 0.2,
+      "text_box_opacity": 180,
+      "text_font_size": 42,
+      "text_stroke_width": 3,
+      "text_line_spacing": 4,
+      "text_margin_x": 60,
+      "illustration_size": 360,
+      "illustration_interval": 30
+    },
+    "colors": {
+      "bg_color": [
+        20,
+        60,
+        120,
+        255
+      ],
+      "text_box_color": [
+        0,
+        0,
+        0
+      ],
+      "text_stroke_color": [
+        0,
+        0,
+        0
+      ]
+    },
+    "audio": {
+      "speed": 1.3,
+      "pause_between": 0.3,
+      "bgm_volume": 0.3,
+      "bgm_path": null
+    },
+    "illustration_style": {
+      "style": "vivid",
+      "format": "landscape",
+      "art_style": "bright colorful pop illustration in a game-guidebook style — vivid saturated palette of red, blue, yellow and fresh green, confident clean outlines, flat cel shading with light gradients, energetic and friendly. Looks like a page from an official strategy guide rather than kawaii fan art. Never dark or horror-styled.",
+      "background": "bright pastel sky-blue background with soft radial burst and a light comic-panel frame in red",
+      "include_characters": true,
+      "frame_style": "comic-red-border",
+      "extra_prompt": "Compose like a game guidebook figure: clear Japanese labels with pointer lines, arrows showing cause→effect, small icons for stats or types. Use original generic creature silhouettes and symbolic props (monster ball motif, pokedex-like device, energy aura, route signposts) instead of copying any copyrighted character design. Keep it bright, energetic and easy to read.",
+      "allow_text_labels": true,
+      "allow_frame": true
+    },
+    "branding": {
+      "watermark_text": "ポケモン研究所",
+      "cta_style": "casual",
+      "source_credit": "※ファンによる非公式考察 / ポケモンは株式会社ポケモン・任天堂の登録商標です",
+      "source_credit_opacity": 150,
+      "source_credit_font_size": 20,
+      "source_credit_font_size_short": 26
+    },
+    "output": {
+      "target_duration": 720,
+      "gen_type": "short",
+      "bg_type": "static",
+      "bg_path": null,
+      "use_illustrations": true
+    },
+    "youtube": {
+      "channel_id": "",
+      "default_tags": [
+        "ポケモン",
+        "ポケモン考察",
+        "ゆっくり解説",
+        "裏設定",
+        "都市伝説",
+        "ポケモン図鑑",
+        "ゲーム考察"
+      ],
+      "default_category": "20",
+      "privacy_status": "private",
+      "upload_schedule": null
+    },
+    "analytics": {
+      "enabled": true,
+      "fetch_retention_for": 5,
+      "performance_threshold": {
+        "min_ctr": 4,
+        "min_retention": 40,
+        "min_views_7d": 1000
+      }
+    },
+    "short_illustrations": {
+      "enabled": true,
+      "illustration_method": "pillow",
+      "max_count": 2,
+      "card_style": "textbook",
+      "card_label": "研究データ",
+      "card_accent": [
+        230,
+        60,
+        50
+      ],
+      "card_x": 64,
+      "card_y": 250,
+      "card_w": 952,
+      "card_h": 430,
+      "char_cy": 905,
+      "char_icon_d": 210
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "pop",
+      "allow_shake": false,
+      "allow_flash": true,
+      "allow_pixelate": false,
+      "allow_glitch": false,
+      "allow_tint": false,
+      "zoom_max": 0.06,
+      "transition_duration": 0.35
+    },
+    "persona": {
+      "age_group": "10代",
+      "gender": "男性",
+      "interest_categories": [
+        "ゲーム",
+        "エンタメ"
+      ],
+      "content_depth": "ミドル"
+    }
+  },
+  "autopilot": {
+    "enabled": true,
+    "schedule": {
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "hour": 18,
+      "minute": 0,
+      "times": [
+        {
+          "hour": 18,
+          "minute": 0
+        }
+      ]
+    },
+    "duration_minutes": 12,
+    "gen_type": "short",
+    "theme_queue": []
+  }
+}

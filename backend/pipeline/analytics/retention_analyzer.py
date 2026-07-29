@@ -309,8 +309,10 @@ def analyze_channel(
         result["gpt_insights"] = llm  # 既存フィールド名を維持（中身は Claude による生成）
     else:
         result["gpt_insights"] = None
-        if use_gpt and not claude_client.has_api_key():
-            result["gpt_skipped_reason"] = "ANTHROPIC_API_KEY 未設定"
+        if use_gpt:
+            result["gpt_skipped_reason"] = (
+                claude_client.unavailable_reason() or "Claude 応答から JSON を抽出できず"
+            )
 
     _save(channel_id, result)
     return result

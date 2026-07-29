@@ -38,9 +38,52 @@ _JSON_FENCE_RE = re.compile(r"```(?:json)?\s*(\{.*?\})\s*```", re.DOTALL | re.IG
 _JSON_OBJECT_RE = re.compile(r"\{.*\}", re.DOTALL)
 
 
+# 直近の API 呼び出し失敗理由。呼び出し側が「なぜ Claude 分析がスキップされたか」を
+# 正確にレポートできるように保持する（キー未設定と課金切れ・レート制限を混同しないため）。
+_LAST_ERROR: Optional[str] = None
+
+
 def has_api_key() -> bool:
     """ANTHROPIC_API_KEY が設定され、SDK が import 可能か。"""
     return bool(os.environ.get("ANTHROPIC_API_KEY", "").strip()) and Anthropic is not None
+
+
+def last_error() -> Optional[str]:
+    """直近の Claude 呼び出しで発生したエラー文字列（無ければ None）。"""
+    return _LAST_ERROR
+
+
+def unavailable_reason() -> Optional[str]:
+    """Claude が使えない理由を人間可読で返す。使える見込みなら None。
+
+    レポート・ログ用。「APIキー未設定」と「クレジット残高不足」「レート制限」を
+    区別できるようにするためのヘルパ。
+    """
+    if Anthropic is None:
+        return "anthropic SDK 未導入（pip install anthropic）"
+    if not os.environ.get("ANTHROPIC_API_KEY", "").strip():
+        return "ANTHROPIC_API_KEY 未設定"
+    if _LAST_ERROR:
+        low = _LAST_ERROR.lower()
+        if "credit balance is too low" in low:
+            return "Anthropic クレジット残高不足（Plans & Billing でチャージが必要）"
+        if "authentication_error" in low or "invalid x-api-key" in low:
+            return "ANTHROPIC_API_KEY が無効（認証エラー）"
+        if "rate_limit" in low or "429" in low:
+            return "Anthropic レート制限（429）"
+        return f"Claude 呼び出し失敗: {_LAST_ERROR[:200]}"
+    return None
+
+
+def _record_error(exc: BaseException, purpose: Optional[str], model: str) -> None:
+    global _LAST_ERROR
+    _LAST_ERROR = f"{type(exc).__name__}: {exc}"
+    print(f"⚠️ claude_client call failed ({purpose or model}): {exc}")
+
+
+def _clear_error() -> None:
+    global _LAST_ERROR
+    _LAST_ERROR = None
 
 
 def _extract_json(content: str) -> Optional[Dict[str, Any]]:
@@ -101,8 +144,9 @@ def call_claude_json(
             messages=[{"role": "user", "content": user}],
         )
     except Exception as e:
-        print(f"⚠️ claude_client call failed ({purpose or model}): {e}")
+        _record_error(e, purpose, model)
         return None
+    _clear_error()
 
     # 使用量を記録（OpenAI と同じ JSONL ストアに溜める）
     if api_usage is not None:
@@ -199,8 +243,9 @@ def call_claude_vision_json(
             messages=[{"role": "user", "content": content_blocks}],
         )
     except Exception as e:
-        print(f"⚠️ claude vision call failed ({purpose or model}): {e}")
+        _record_error(e, purpose, model)
         return None
+    _clear_error()
 
     if api_usage is not None:
         try:

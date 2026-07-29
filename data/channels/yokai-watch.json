@@ -1,0 +1,412 @@
+{
+  "id": "yokai-watch",
+  "name": "ゆっくり妖怪ウォッチラボ",
+  "concept": "妖怪ウォッチに登場する妖怪の解説・ストーリー考察・裏設定・元ネタとなった日本の伝承妖怪との比較を行うチャンネル。基本は明るく賑やかに、元ネタの伝承に触れるときだけ少し背筋が寒くなる語りを混ぜる。",
+  "short_series_name": "1分妖怪ファイル：",
+  "style": "yukkuri",
+  "youtube_channel_id": "",
+  "image_mode": "collect",
+  "image_collect": {
+    "provider": "auto",
+    "safe_search": true,
+    "license_filter": "cc",
+    "max_per_query": 5,
+    "attribution_template": "出典: {source}",
+    "mix_strategy": "heuristic"
+  },
+  "voice_style": {
+    "tone": "基本は明るく賑やかな解説トーン。妖怪の可愛さ・くだらなさ・愛嬌をしっかり楽しむ。ただし元ネタの伝承妖怪や意味深な設定に触れる場面では、声のトーンを落として少しゾクッとさせる。明るさ8割・ひんやり2割のバランスを崩さない",
+    "narrator_persona": "妖怪研究をしているラボの調査員。ゲーム・アニメの描写と、日本の民俗学的な妖怪伝承の両方に詳しい。作品の設定を楽しく紹介しつつ、『実はこの妖怪、江戸時代の文献にも出てくるんだ』と元ネタへ橋渡しするのが得意。怖がらせすぎず、知的な面白さで引っ張る",
+    "opening_hooks": [
+      "今日の調査対象、なかなかクセが強いよ",
+      "この妖怪、元ネタを知ると見方が変わるんだ",
+      "友達になった妖怪の正体、気になったことない？"
+    ],
+    "forbidden": [
+      "SCP",
+      "財団",
+      "収容",
+      "[REDACTED]",
+      "DATA EXPUNGED",
+      "シロ",
+      "クロ",
+      "リコ",
+      "マコト",
+      "理子",
+      "真",
+      "ヒカリ",
+      "ソラ"
+    ],
+    "style_rules": [
+      "土台は明るく賑やかなトーク。妖怪のギャグ性・可愛さを素直に楽しんでから、元ネタや裏設定へ入る。",
+      "元ネタの伝承妖怪を語るパートだけトーンを落として不気味さを出す。ただし1本につき長くても数十秒で、明るい締めに必ず戻す。",
+      "作品の公式設定・作中描写と、民俗学的な伝承・ファンの考察は必ず区別して語る（『ゲームではこう』『元になった伝承ではこう』『ファンの間ではこう言われている』）。",
+      "リスナー役（ケンタ）のリアクションは明るい驚きが基本（『えっ、そうなの!?』『かわいい顔してえぐいな…』）。怖いパートでは『それ急に怖いって』程度の軽い怯えに留める。",
+      "締めは『次に会ったら、ちょっと違って見えるかもね』のような、余韻を残しつつ前向きな終わり方にする。トラウマを残す終わり方はしない。"
+    ]
+  },
+  "theme_priority": {
+    "label": "妖怪ウォッチ 妖怪解説・元ネタ考察ジャンル",
+    "categories": [
+      "個別妖怪の解説（能力・性格・入手方法・作中での役割）",
+      "元ネタ考察：日本の伝承・民俗学上の妖怪との比較（鬼太郎的な古典妖怪や江戸の妖怪画との対応）",
+      "ストーリー・世界観の考察（妖怪ウォッチの仕組み・妖怪と人間の関係・シリーズを跨いだ設定）",
+      "裏設定・小ネタ・没データ・隠し要素（キャラの名前の由来・ダジャレ命名法則含む）",
+      "妖怪ウォッチにまつわる都市伝説・噂の検証（デマの否定も含めて扱う）"
+    ],
+    "required_count_per_batch": 5,
+    "good_examples": [
+      "ジバニャンの元ネタは？ — 猫又伝承と『地縛霊』の名前の秘密",
+      "ウィスパーの正体 — 執事妖怪はなぜ何も知らないのか",
+      "妖怪ウォッチの都市伝説を検証してみた — 本当に怖い話はどれか",
+      "妖怪の名前がダジャレばかりな理由 — 命名法則を全部解説",
+      "コマさんの『モンゲー』はどこから来たのか — 狛犬伝承との関係"
+    ],
+    "avoid_categories": [
+      "実在の子ども・事件と結びつけた不謹慎な噂話",
+      "SCP・本格ホラー系の恐怖演出に振り切った題材",
+      "未発売作品のリーク情報・非公式データマイニング"
+    ],
+    "title_style": "タイトルは『〇〇の元ネタは？』『〇〇の正体』『なぜ〇〇なのか』のように疑問形・秘密提示形で書く。妖怪名は具体的に出す（検索性が高い）。答えはタイトルに書かない。",
+    "viral_hooks": "可愛い妖怪の意外な元ネタ / 名前の由来のダジャレ / 古典妖怪との一致 / 『言われてみれば』のギャップ / ちょっとゾッとする伝承"
+  },
+  "theme_blacklist": [],
+  "genre_blacklist": [],
+  "competitors": [],
+  "theme_seeds": [
+    {
+      "title": "ジバニャンの元ネタは？",
+      "angle": "『地縛霊』＋猫。轢かれた猫という設定と、猫又・化け猫伝承との対応を解説"
+    },
+    {
+      "title": "ウィスパーの正体",
+      "angle": "自称・妖怪執事。何も知らないのに図鑑を持つ存在の役割と設定を考察"
+    },
+    {
+      "title": "妖怪ウォッチ都市伝説の検証",
+      "angle": "ネットで語られる噂を、作中描写と照らしてひとつずつ真偽判定する"
+    },
+    {
+      "title": "コマさん・コマじろうと狛犬伝承",
+      "angle": "神社の狛犬がモチーフ。田舎から出てきた設定と守護獣としての元ネタ"
+    },
+    {
+      "title": "妖怪の名前がダジャレな理由",
+      "angle": "命名法則を分類。『〇〇＋現象』型のネーミングを一気に解説"
+    },
+    {
+      "title": "ブシニャンはどこから来たのか",
+      "angle": "武士＋猫。歴史上の武将モチーフとジバニャンとの関係を追う"
+    },
+    {
+      "title": "オロチとヤマタノオロチ",
+      "angle": "レジェンド妖怪の元ネタとなった記紀神話の大蛇を比較する"
+    },
+    {
+      "title": "妖怪ウォッチというガジェットの仕組み",
+      "angle": "なぜ主人公だけが妖怪を見られるのか。作中設定を整理する"
+    },
+    {
+      "title": "ふぶき姫と雪女伝承",
+      "angle": "日本各地の雪女伝承と、作中でのキャラ付けの違いを比較"
+    },
+    {
+      "title": "妖怪はなぜ人に取り憑くのか",
+      "angle": "『とりつく』システムの設定と、憑き物筋という民俗学的な概念の対応"
+    },
+    {
+      "title": "エンマ大王と閻魔信仰",
+      "angle": "仏教の閻魔王が作中でどう再解釈されているかを解説"
+    },
+    {
+      "title": "ロボニャンと未来設定の謎",
+      "angle": "未来から来た設定と、シリーズの時系列の繋がりを考察"
+    },
+    {
+      "title": "妖怪のランク（S・A・B）の意味",
+      "angle": "ランク付けの基準と、伝承上の格の高さとのズレを比較"
+    },
+    {
+      "title": "キュウビと九尾の狐",
+      "angle": "玉藻前など日本の九尾伝承と、作中キャラ設定の重なりを解説"
+    },
+    {
+      "title": "実は怖い妖怪ウォッチの設定まとめ",
+      "angle": "明るい世界観の裏にある、少しゾッとする設定を作中描写ベースで拾う"
+    }
+  ],
+  "characters": {
+    "ミナモ調査員": {
+      "side": "left",
+      "speaker_id": 2,
+      "dir": "minamo",
+      "text_color": [
+        255,
+        215,
+        120
+      ],
+      "expressions": [
+        "normal",
+        "happy",
+        "surprise",
+        "think"
+      ],
+      "thumb_dir": "minamo",
+      "thumb_expression": "happy",
+      "role": "解説役（妖怪ラボの調査員。民俗学オタクで元ネタ探しが得意な女の子）",
+      "appearance": "young Japanese anime girl named Minamo with fluffy purple twin-tail hair and violet eyes, wearing a lab coat over a yukata-inspired top with a small ofuda charm and a watch-like device on her wrist, cheerful mischievous expression, chibi-style with a big round head and big eyes, colorful pop explainer character"
+    },
+    "ケンタ": {
+      "side": "right",
+      "speaker_id": 3,
+      "dir": "kenta",
+      "text_color": [
+        140,
+        255,
+        200
+      ],
+      "expressions": [
+        "normal",
+        "happy",
+        "surprise",
+        "sad"
+      ],
+      "thumb_dir": "kenta",
+      "thumb_expression": "surprise",
+      "role": "リスナー役（妖怪と友達になりたい小学生の男の子。怖い話にはちょっと弱い）",
+      "appearance": "young Japanese anime boy named Kenta with spiky light-brown hair and big round eyes, wearing a yellow hoodie and shorts with a bug-catching net on his back, excited slightly startled expression, chibi-style with a big round head and big eyes, colorful pop explainer character"
+    }
+  },
+  "publish_settings": {
+    "auto_publish": false,
+    "default_privacy": "public",
+    "short_delay_minutes": 10,
+    "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}"
+  },
+  "description_template": {
+    "main_intro": "{title}について、ミナモ調査員とケンタがゆっくり調査します。\n妖怪ウォッチの妖怪解説・ストーリー考察・裏設定、そして元ネタになった日本の伝承妖怪との比較まで掘り下げていきます。\n※本動画はファンによる非公式の考察コンテンツです。妖怪ウォッチは株式会社レベルファイブの登録商標です。\nぜひ最後までご視聴ください！",
+    "main_hashtags": "#妖怪ウォッチ #妖怪 #ゆっくり解説 #考察 #元ネタ #都市伝説",
+    "short_hashtags": "#shorts #妖怪ウォッチ #ゆっくり解説 #妖怪 #元ネタ"
+  },
+  "thumbnail_template": {
+    "badge_text": "妖怪考察",
+    "badge_color": [
+      140,
+      60,
+      190
+    ],
+    "hook_color": [
+      255,
+      240,
+      90
+    ],
+    "subtitle_color": [
+      130,
+      255,
+      210
+    ],
+    "style_hint": "カラフルでポップ、でもほんの少し不気味さを残す妖怪ウォッチ考察サムネ。\n- ベースは明るくカラフル（紫・オレンジ・黄緑・提灯の暖色）。真っ暗なホラー調にはしないが、夕暮れ／宵闇／提灯の灯りなど『夜のお祭り』的な妖しさを1〜2割混ぜる。\n- background_concept には『colorful, playful, vivid, japanese festival lantern glow, twilight purple sky, slightly eerie but cute』のようなポップ寄りのキーワードを含める。『pitch black / gore / horror movie』のような本格ホラー語は禁止。\n- line1（白）は前振り（例:『この妖怪の元ネタ…』）。line2（黄・強調）が核となる驚き（『実在の伝承だった』『正体は◯◯』）でインパクト最大化。\n- line3_badge は紫で『元ネタ判明』『裏設定』『実は怖い』など。sub_text は妖怪名を具体的に出して検索性を上げる。\n- 被写体は中央〜上部。版権キャラの精密再現は避け、提灯・お札・鳥居・妖怪ウォッチ風のガジェット・和柄の影絵・浮世絵風の妖怪シルエットなど象徴的モチーフで世界観を作る。\n- 下部は文字用に空けるが真っ黒にはせず、紫〜橙のグラデーションで明るさを保つ。\n- 文字は極太＋黒の強い縁取り（3-5px）。軽い和風の墨飛沫や提灯の光芒で賑やかさと妖しさを両立させる。"
+  },
+  "defaults": {
+    "speed": 1.3,
+    "target_duration": 720,
+    "bg_type": "static",
+    "bg_path": null,
+    "short_bg_query": "japanese festival lantern night colorful twilight",
+    "short_overlay_style": {
+      "opening": {
+        "font_size_max": 104,
+        "font_size_min": 72,
+        "stroke_width": 8,
+        "glow_stroke_extra": 7,
+        "dim_alpha": 120,
+        "punch_start_scale": 0.88
+      }
+    },
+    "use_illustrations": true,
+    "hashtags": [
+      "#妖怪ウォッチ",
+      "#妖怪",
+      "#ゆっくり解説",
+      "#考察",
+      "#元ネタ"
+    ],
+    "category": "20"
+  },
+  "content_policy": {
+    "tone": "playful",
+    "age_rating": "all_ages",
+    "cta_position": "after_hook",
+    "cta_style": "casual",
+    "guidelines": [
+      "ファンによる非公式の考察であることを明示し、公式設定・伝承・ファン考察を明確に区別する",
+      "権利表記（妖怪ウォッチは株式会社レベルファイブの登録商標）を概要欄に記載する",
+      "ゲーム画面・公式イラストの長時間そのまま使用は避け、解説図と自作ビジュアル中心で構成する",
+      "子どもも視聴する前提で、恐怖演出は軽いゾクッと感に留める"
+    ],
+    "avoid": [
+      "版権素材の無断長尺使用",
+      "実在の子ども・事件と結びつけた不謹慎な噂",
+      "本格ホラー級のグロ・恐怖演出",
+      "未発売作品のリーク情報"
+    ]
+  },
+  "video_format": {
+    "layout": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "char_canvas_w_ratio": 0.418,
+      "char_y_offset": 130,
+      "char_x_inset_ratio": 0.15,
+      "speaker_glow": true,
+      "nonspeaker_opacity": 0.5,
+      "text_box_height_ratio": 0.2,
+      "text_box_opacity": 185,
+      "text_font_size": 42,
+      "text_stroke_width": 3,
+      "text_line_spacing": 4,
+      "text_margin_x": 60,
+      "illustration_size": 360,
+      "illustration_interval": 30
+    },
+    "colors": {
+      "bg_color": [
+        45,
+        25,
+        70,
+        255
+      ],
+      "text_box_color": [
+        0,
+        0,
+        0
+      ],
+      "text_stroke_color": [
+        0,
+        0,
+        0
+      ]
+    },
+    "audio": {
+      "speed": 1.3,
+      "pause_between": 0.3,
+      "bgm_volume": 0.3,
+      "bgm_path": null
+    },
+    "illustration_style": {
+      "style": "vivid",
+      "format": "landscape",
+      "art_style": "colorful playful illustration mixing modern pop cartoon with ukiyo-e yokai woodblock flavor — vivid purples, oranges and yellow-greens, confident brush-like outlines, flat shading with subtle paper texture. Cute and lively overall, with a faint eerie undertone in the shadows. Never gory or genuinely scary.",
+      "background": "warm lantern-lit twilight background with japanese wave and asanoha patterns, comic-panel layout with a purple border frame",
+      "include_characters": true,
+      "frame_style": "comic-purple-border",
+      "extra_prompt": "Compose like a fun yokai encyclopedia figure: neat Japanese labels with pointer lines, arrows comparing 'ゲーム設定' vs '元ネタの伝承', small ofuda / lantern / torii icons. Use original generic yokai silhouettes and symbolic props instead of copying any copyrighted character design. Keep the mood cheerful with just a light spooky accent.",
+      "allow_text_labels": true,
+      "allow_frame": true
+    },
+    "branding": {
+      "watermark_text": "妖怪ウォッチラボ",
+      "cta_style": "casual",
+      "source_credit": "※ファンによる非公式考察 / 妖怪ウォッチは株式会社レベルファイブの登録商標です",
+      "source_credit_opacity": 150,
+      "source_credit_font_size": 20,
+      "source_credit_font_size_short": 26
+    },
+    "output": {
+      "target_duration": 720,
+      "gen_type": "short",
+      "bg_type": "static",
+      "bg_path": null,
+      "use_illustrations": true
+    },
+    "youtube": {
+      "channel_id": "",
+      "default_tags": [
+        "妖怪ウォッチ",
+        "妖怪",
+        "ゆっくり解説",
+        "考察",
+        "元ネタ",
+        "都市伝説",
+        "ゲーム考察"
+      ],
+      "default_category": "20",
+      "privacy_status": "private",
+      "upload_schedule": null
+    },
+    "analytics": {
+      "enabled": true,
+      "fetch_retention_for": 5,
+      "performance_threshold": {
+        "min_ctr": 4,
+        "min_retention": 40,
+        "min_views_7d": 1000
+      }
+    },
+    "short_illustrations": {
+      "enabled": true,
+      "illustration_method": "pillow",
+      "max_count": 2,
+      "card_style": "textbook",
+      "card_label": "妖怪ファイル",
+      "card_accent": [
+        140,
+        60,
+        190
+      ],
+      "card_x": 64,
+      "card_y": 250,
+      "card_w": 952,
+      "card_h": 430,
+      "char_cy": 905,
+      "char_icon_d": 210
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "pop",
+      "allow_shake": true,
+      "allow_flash": true,
+      "allow_pixelate": false,
+      "allow_glitch": false,
+      "allow_tint": true,
+      "shake_max_px": 10,
+      "zoom_max": 0.07,
+      "transition_duration": 0.4
+    },
+    "persona": {
+      "age_group": "10代",
+      "gender": "男性",
+      "interest_categories": [
+        "ゲーム",
+        "エンタメ"
+      ],
+      "content_depth": "ライト"
+    }
+  },
+  "autopilot": {
+    "enabled": true,
+    "schedule": {
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "hour": 19,
+      "minute": 0,
+      "times": [
+        {
+          "hour": 19,
+          "minute": 0
+        }
+      ]
+    },
+    "duration_minutes": 12,
+    "gen_type": "short",
+    "theme_queue": []
+  }
+}

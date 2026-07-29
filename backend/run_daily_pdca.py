@@ -362,7 +362,7 @@ def _channel_markdown(rep: Dict[str, Any]) -> str:
         if sp.get("has_gpt_insights"):
             L.append("- Claude分析: ✅ 完了（actionable_recommendations が scenario_feedback 経由で次回シナリオ生成に自動注入）")
         else:
-            L.append("- Claude分析: スキップ（ANTHROPIC_API_KEY 未設定 or データ不足）")
+            L.append(f"- Claude分析: スキップ（{sp.get('gpt_skipped_reason') or '理由不明'}）")
     else:
         L.append(f"- ⚠️ 分析失敗: {sp.get('error', '不明')}")
     L.append("")
@@ -374,7 +374,7 @@ def _channel_markdown(rep: Dict[str, Any]) -> str:
         if ri.get("has_gpt_insights"):
             L.append("- Claude分析: ✅ 完了（retention_tips が scenario_feedback 経由で次回シナリオ生成に自動注入）")
         else:
-            L.append("- Claude分析: スキップ")
+            L.append(f"- Claude分析: スキップ（{ri.get('gpt_skipped_reason') or '理由不明'}）")
     else:
         L.append(f"- ⚠️ 分析失敗: {ri.get('error', '不明')}")
     L.append("")
@@ -592,6 +592,7 @@ def run_channel(channel_id: str, channel_name: str, token: str,
             "ok": True,
             "sample_size": sp.get("sample_size"),
             "has_gpt_insights": sp.get("gpt_insights") is not None,
+            "gpt_skipped_reason": sp.get("gpt_skipped_reason"),
         }
         recs = (sp.get("gpt_insights") or {}).get("actionable_recommendations") or []
         print(f"    success patterns ok — {sp.get('sample_size', {}).get('success', 0)} success videos, {len(recs)} recommendations")
@@ -605,6 +606,7 @@ def run_channel(channel_id: str, channel_name: str, token: str,
         rep["retention_insights"] = {
             "ok": True,
             "has_gpt_insights": ri.get("gpt_insights") is not None,
+            "gpt_skipped_reason": ri.get("gpt_skipped_reason"),
         }
         tips = (ri.get("gpt_insights") or {}).get("retention_tips") or []
         print(f"    retention insights ok — {len(tips)} tips")
