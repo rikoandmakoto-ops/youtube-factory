@@ -1,0 +1,212 @@
+{
+  "title": "SCP-1618「消える図書館」の謎：財団が隠す異常な本の正体",
+  "theme": {
+    "title": "SCP-1618「消える図書館」 — 収容されている本の恐怖",
+    "angle": "異常な図書館オブジェクトの詳細"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "知ってた？図書館で本を借りたら記憶が消えるって。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、それってどこの話？",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1618、通称『消える図書館』だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の報告では、72時間以内に記憶に異常をきたすとされている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "怖すぎる…。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中! 応援よろしくね! 詳しい話は関連動画から見てね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "ある図書館で本を借りた人々が、次々と記憶を失っていく事件が報告された。\nこれはただの噂ではない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、それって一体…？",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回取り上げるのは、『消える図書館』と呼ばれるSCP-1618の事例だ。\nこの図書館の本はただの印刷物ではない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "本が普通じゃないってこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。\n財団の報告によれば、この図書館の本を読むと、借りた者は72時間以内に記憶を失う恐れがあると記されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "そんなことが…本当に？",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "詳細は定かではない。\n財団もこの異常性を完全には解明できておらず、実験データも[REDACTED]されたままだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり、どんな本でも危険ってこと？",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は、特定の書籍が異常を引き起こすと予測しているが、確証は得られていない。\nただし、接触者の記憶喪失は事実だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "怖すぎる…。\nそんな図書館が存在するなんて。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "これまでにも同じ事例は複数報告されている。\nただ、収容違反の原因までは特定できていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団はどうやって対策を？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は、対象となる本の探索と収容を厳重に実施しているが、その努力は常に収容違反のリスクと隣り合わせだ。\nこの図書館の収容は困難を極める。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "そんな状況でも頑張ってるんだね…。",
+      "expression": "worried",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかし、無数の本が今も人々の記憶を脅かしている。\nこの図書館に存在する本の数は、把握しきれていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "どれだけの人が影響を受けたかもわからないんだね…。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "過去の記録によれば、接触者23名中19名が72時間以内に自分の名前を言えなくなった。\n残り4名の記録は今も[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって、残りの4名はどうなったの？",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それはまだ財団でも解明されていない。\nただし、彼らに何が起きたのかを知るには、さらなる研究が必要だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "本当に謎だらけだね…。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから、もしその図書館を見かけたら、決して近づかないことだ。\n次回はSCP-173「彫刻」についてお話ししよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中なので、応援よろしくね！\n関連動画もぜひチェックしてみて。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "異常な図書館が消える理由とは？",
+      "記憶を奪う書物が存在する？"
+    ],
+    "subtitle": "この図書館で本を借りたら、記憶が消えるかもしれない…",
+    "tagline": "財団が隠し続けた恐怖の収容違反の真実"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1783731634_5625",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "SCP-1618「消える図書館」の謎：財団が隠す異常な本の正体"
+      },
+      "claude": {
+        "title": "一口SCP：SCP-1618「消える図書館」— 入館した72時間後、司書が自分の名前を忘れた本当の理由"
+      }
+    }
+  }
+}

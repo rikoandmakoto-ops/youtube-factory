@@ -1,0 +1,483 @@
+{
+  "title": "財団が記録ごと封印した「異常誕生の法則」——なぜ存在してはならないものが、今この瞬間も生まれ続けるのか",
+  "theme": {
+    "title": "考察：SCP-XXXXの存在理由 — 何故異常は生まれるのか",
+    "angle": "異常存在の生まれる背景",
+    "parent_title": "SCP-XXXX「異常なロジック」"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意。財団が封印した「異常誕生の記録」が流出した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……それって、なんで異常が生まれるかって話？怖いんだけど。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部集計では、確認済み異常存在の発生件数は1972年から現在までで累計4,800件を超えている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4,800件……しかも増え続けてるってこと？それ、止める方法はないの？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。発生源に関する記録は全て[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！もっと詳しい話は関連動画から見てね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "1983年11月7日、午前2時41分。財団サイト-19の無線に、たった一言の交信が届いた。『異常が——異常から生まれた』。送信者の名前は、記録から完全に消えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……異常が、異常から生まれた？それってどういうこと？なんかもう冒頭から嫌な予感しかしないんだけど。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その交信記録はすぐに[REDACTED]された。でも、財団データベースの深部に断片が残っていた。今日はその断片を読み上げる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "テーマは『異常はなぜ生まれるのか』——財団が最も触れたくない問いだ。この動画の後半で、財団が内部的に出した『仮説』を公開する。最後まで聞いてほしい。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……後半に何が出てくるか、もう怖くてたまらないんだけど。でも、気になる。続けて。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まず前提を整理しよう。財団が確認している異常存在の総数は、内部集計で少なくとも4,800件——これは1972年の財団設立以降の累計だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4,800件……それだけの数が世界のどこかに存在してるってこと？しかも財団が全部把握してるわけじゃないんでしょ？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう。財団が『把握できていない』異常存在の数は、把握済みの数の少なくとも3倍以上と内部で試算されている。つまり世界には今この瞬間も、1万4千件以上の異常が潜んでいる可能性がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……1万4千件。ゲームのエネミーカウントじゃないんだから。それ、なんで増え続けてるの？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団内部で長年議論されてきた問いがある。異常存在は『発見される』ものなのか、それとも『生まれる』ものなのか——この二択が、財団の研究部門を二分してきた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……発見されるだけなら怖くないけど、生まれるってなると話が全然違う。誰かが、あるいは何かが生み出してるってこと？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の第12研究部門が1994年に内部報告書を提出している。タイトルは『異常発生の統計的規則性に関する考察』——報告書番号は[REDACTED]、閲覧権限はO5評議会のみだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "O5評議会……財団のトップ中のトップだけが見れる報告書？それが流出してるってこと？嘘でしょ……。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "流出したのは断片だけだ。でもその断片に、こう書かれていた——『異常存在の発生件数は、人類の集合的認知活動と有意な正の相関を示す。係数は0.87』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……係数0.87？それって、人間が何かを考えれば考えるほど、異常が生まれやすくなるってこと？それはまずい。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説はこうだ——人間が『あってはならないもの』を強く想像するとき、世界のどこかでその『あってはならないもの』が形を持ち始める。財団はこれを内部的に『概念具現化仮説』と呼んでいる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……ちょっと待って。それって、怖い話を考えたら本当に怖いものが生まれるってこと？だとしたら今この動画を見てる俺たちが……。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その問いに対する答えは、報告書の該当ページが[DATA EXPUNGED]されていて読めない。財団でも、解明できていないのかもしれない——あるいは、解明した上で隠しているのかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……どっちの可能性も怖すぎる。財団が隠してるなら、それを知った人間に何かが起きたってことでしょ？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第12研究部門の責任者だった上級研究員は、報告書提出の3週間後に職員名簿から消えている。退職記録も、異動記録も、存在しない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……消えた？人が？それって財団が消したってこと？それとも、異常が？どっちだよ、どっち？！",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録には『自発的離職』とだけある。でも財団に自発的離職という制度は存在しない——これは財団の組織規程に明記されている事実だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……嘘だろ。自発的離職って書いてあるのに、その制度がない？それって、誰かが記録を書き換えたってことじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次に話すのは、財団が内部で『第二の仮説』と呼ぶものだ。ここからが本当に不気味な話になる——聞く前に一度、覚悟を決めてほしい。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……覚悟を決めてほしいって言われると逆に聞かないわけにいかないじゃないか。続けて。でも怖い。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第二の仮説は2003年にO5-7が提出した非公開メモに記されている。タイトルは『異常は目的を持って生まれるか』——内容の要約はこうだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "『一部の異常存在は、財団が収容プロトコルを策定した後に初めて発生している。収容プロトコルの策定が、その異常存在の発生を誘発した可能性を排除できない』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……え？財団が収容方法を考えたから、その収容方法が必要な怪物が生まれた？それって順番が逆じゃないか。普通は怪物が先でしょ？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録を照合すると、SCP番号が若い番号——つまり早期に登録された案件ほど、収容プロトコルと存在挙動の適合率が異常に高い。まるで最初から設計されたかのように、ぴったりと噛み合っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……それって、誰かが財団の収容能力に合わせて異常を作ってるってこと？誰が？何のために？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "O5-7のメモはその問いに答えていない。最後の一文だけがある——『問うな。問うことが、次の異常を呼ぶ』。そこでメモは終わっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……問うことが次の異常を呼ぶ？じゃあ俺たちが今ここで『なぜ異常が生まれるのか』って考えてること自体が——。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その可能性を、財団は否定していない。少なくとも、公式に否定した記録は存在しない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……やめて。それ、この動画を見てる全員が何かを呼び寄せてる可能性があるってこと？怖すぎる。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次は、財団が実際に記録した『異常誕生の瞬間』に最も近い事例を話す。これは2011年に財団観測員が目撃した案件——対象はSCP番号の登録を拒否されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP番号の登録を拒否された？それって財団が収容を諦めたってこと？それとも、存在を認めたくないってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "観測員の報告書によると、対象は2011年9月12日の午後11時58分——日付が変わる2分前に、廃工場の中で『形成』されるのを目撃された。形成に要した時間は、0.3秒未満だったと記録されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0.3秒……一瞬で形を持ったってこと？何もないところから？それを人間が目で見てたの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "観測員は翌朝に回収された。その観測員が最初に発した言葉は、記録によると『見てはいけないものを見た』ではなく——『それは最初から、私を待っていた』だったという。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……最初から待っていた？それって、観測員が来ることを知っていたってこと？異常が、人間の行動を予測してた？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "観測員はその後、標準的な記憶処理を受けた。しかし処理後も、観測員は毎晩同じ言葉を繰り返した——財団は最終的に観測員を[REDACTED]した。以降の記録は存在しない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……[REDACTED]って、財団が消したってこと？記憶処理も効かなかったから？それって……その人はどうなったの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "分からない。財団でも、解明できていない。これが今この動画で話せる限界だ。ここから先は、全て[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただ一つ言えることがある。財団の内部資料を横断的に見ると、異常存在の発生件数は年々増加している——1972年の設立時は年間12件、2010年代には年間340件を超えた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "年間12件が340件に……28倍以上？それって人口が増えたから？インターネットが普及して、みんながいろんなことを考えるようになったから？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説はそれと一致している。インターネットが普及した1990年代後半から、異常発生件数は急激に加速した——財団の内部グラフでは、その折れ線が垂直に近い角度で立ち上がっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……つまり、今この動画を見てる俺たちが異常について考えることが、世界のどこかで何かを生み出してる可能性がある——って、そういうこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその可能性を、公式には否定していない。そして財団がこの事実を一般公開しない理由も——考えれば分かる。知らせることで、さらに多くの人間がそれを考え始めるからだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……じゃあこの動画自体が、財団的にはまずいものってこと？それを今ここで俺たちが広めてるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画がどこまで広まるかによって、財団が試算する『次の異常発生リスク』は変動する——そう、財団の仮説が正しければ、の話だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……やめてよ。そんなこと言われたら、この動画を見たことを後悔しそうなんだけど。でも、もう見てしまった。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日話せた内容はここまでだ。異常はなぜ生まれるのか——財団の出した仮説は三つある。人間の想像が形を持つ『概念具現化仮説』、収容の準備が異常を誘発する『逆因果仮説』、そして三つ目は——[DATA EXPUNGED]。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "三つ目が一番重要そうなのに、それが消えてる？財団は三つ目を知っているの？それとも、三つ目を知った人間が全員——。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "三つ目の仮説に関するあらゆる記録は消えている。関与した研究員の名前も、会議の議事録も、実験の結果も——全て、痕跡すら残っていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……痕跡すら残っていない。それって、異常が生まれる理由そのものが——異常存在と同じくらい危険な情報だってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから財団は、この問いを封印し続けている。なぜ異常は生まれるのか——その答えを知ることが、さらに多くの異常を呼ぶとしたら、問いを封じることが唯一の収容プロトコルになる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……問いそのものを封じる。それって、財団が情報を隠してるんじゃなくて、隠すことが収容そのものってこと？怖すぎる。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が『絶対に収容できない』と内部認定した異常存在——SCP-2399について話す。木星の嵐の中で何かが動いている。財団がその正体を追った記録が、断片的に残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "木星の中に……絶対に収容できない異常？それ、財団が諦めたってこと？地球から離れてるから安全とか、そういう話じゃないの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の判断では——安全ではない。次回の報告書を見れば分かる。チャンネル登録をしていれば、その報告書が届いたとき、すぐに気づける。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日の報告書は以上だ。もしこの動画を見た後、日常の何かが少しだけ歪んで見えても——それはただの気のせいだと思ってほしい。財団は、そう言っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……財団が『気のせいだ』って言うときが、一番信用できない。この動画を見たこと、今夜絶対に後悔する気がする。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから、気をつけて。もし日常の中で何かが『最初からお前を待っていた』と感じる瞬間があっても——決して、それを確認しようとするな。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "財団が隠し続けた「異常の起源」",
+      "SCP-XXXX【なぜ、異常は生まれるのか】"
+    ],
+    "subtitle": "LEVEL 4 機密｜財団内部資料｜閲覧注意",
+    "tagline": "これを知った研究員は、全員が異動届を提出した"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1784506927_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはオープニングで具体的な日時・交信記録という実在感のある描写で即座に視聴者を引き込み、hook_strengthとwording_qualityで大きく上回る。さらに「4,800件」「係数0.87」などの数値による具体性、三つ目の仮説を[DATA EXPUNGED]で封じるクリフハンガー構造、そして次回予告をSCP世界観に溶け込ませたCTAにより、視聴維持・チャンネル登録誘導の両面でAを圧倒している。",
+      "scores_a": {
+        "hook_strength": 4,
+        "specificity": 5,
+        "pacing": 5,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 9,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 9,
+        "overall": 9
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 48.4% 優位",
+      "leader": "claude",
+      "margin": 0.4842
+    },
+    "candidates": {
+      "gpt": {
+        "title": "財団が封印したSCP-XXXXの恐怖: この異常はなぜ生まれたのか"
+      },
+      "claude": {
+        "title": "財団が記録ごと封印した「異常誕生の法則」——なぜ存在してはならないものが、今この瞬間も生まれ続けるのか"
+      }
+    }
+  }
+}

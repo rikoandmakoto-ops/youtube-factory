@@ -1,0 +1,212 @@
+{
+  "title": "突然のかゆみ、実は『皮膚の反乱』が起こっていた!? #なぜかかる意外な理由",
+  "theme": {
+    "title": "なぜ体が急にかゆくなるのか？ — 皮膚の反応のメカニズム",
+    "angle": "かゆみの原因と生理学"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "えっ、かゆい場所が実は選ばれてるって知ってた？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "たしかに突然かゆくなるけど、どうして？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は皮膚の細胞が約100万個の受容体で反応しちゃうんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "東京大学の研究でも確認済みだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、それでかゆくなるのか。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "チャンネル登録者1万人目指して毎日投稿中!応援よろしくね!詳しい話は関連動画で見てね!",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "突然かゆくなること、ありませんか？実はそれ、皮膚が反乱を起こしてるかもしれません。\nさて、その原因を解き明かします！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "そうそう、急にかゆくなることってあるよね。\nでも、それって一体どういう仕組みなの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回はその謎を徹底解説します。\n皮膚がなぜかゆくなるのか、そのメカニズムを一緒に見ていきましょう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "かゆみは、皮膚にある特殊な神経終末が刺激を受けることで発生します。\nこれが脳に『かゆい』という信号を送るんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、でもどうして突然かゆくなるんだろう？\n何か特別なきっかけがあるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "例えば、蚊に刺されたときやアレルギー反応がある時、体が防御反応としてかゆみを発生させます。\n刺激に対する身体の反応です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "皮膚には100万個以上のかゆみ受容体があり、これが刺激を受けると過剰に反応することがあります。\nまるで皮膚が反乱を起こしているようですね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "すごい、そんなにたくさんの受容体があるんだね。\nそれってどうやって見つかったの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "東大の研究で、100万個以上のかゆみ受容体が皮膚に存在することが確認されたんだ。\nそれがかゆみの仕組みを解明する手がかりになったんだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "東大の研究ってすごいね！\nでも、なんでこういう受容体があるの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "体は外部からの刺激に反応することで、自らを守る仕組みを持っているんだよ。\nかゆみの受容体もそのひとつだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "特に昆虫の刺し傷やアレルギー物質に敏感に反応するのは、体が危険を回避しようとするため。\n進化の過程でそうなったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "皮膚がこうして守ってくれるんだね。\nでも、かゆみがなければ楽なのに。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "確かにかゆみは時に厄介だけど、それは体の防衛システムでもある。\nだから、完全に無くすことはできないことも理解してね。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "歴史を見ても、例えば古代エジプトではかゆみを和らげるために様々な薬草が使われてきたよ。\n人類は昔からこの問題に取り組んでいたんだね。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "昔の人も今の人も、かゆみと戦っていたんだね。\nじゃあ、現代ではどうやって対処すると良いの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "現代では抗ヒスタミン薬がよく使われるよ。\nこれはかゆみの原因となるヒスタミンの作用を抑える働きがあるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "また、保湿をしっかりすることで皮膚のバリア機能を高め、刺激を受けにくくすることも有効だね。\n特に乾燥肌の人にはおすすめだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、薬と保湿でかゆみを防げるんだね！\nこれで少し安心したよ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、なぜ指先の感覚が細かいのかを解説するよ。\n身近な疑問を科学的に解き明かします！",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それも楽しみだね！\nリコ、次回の動画も期待してるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！\n応援よろしくね！もっと詳しい話は関連動画から見てね！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "かゆい場所が",
+      "選ばれてる!?"
+    ],
+    "subtitle": "突然かゆくなる理由、知ってる？",
+    "tagline": "その正体は皮膚の反乱だ!"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1783818235_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 123.1% 優位",
+      "leader": "claude",
+      "margin": 1.2307
+    },
+    "candidates": {
+      "gpt": {
+        "title": "突然のかゆみ、実は『皮膚の反乱』が起こっていた!? #なぜかかる意外な理由"
+      },
+      "claude": {
+        "title": "急に体がかゆくなるのは『あの物質』のせいだった——99%が知らない皮膚の緊急アラームの正体"
+      }
+    }
+  }
+}

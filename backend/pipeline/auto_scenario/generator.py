@@ -1032,6 +1032,12 @@ class ScenarioGenerator:
         last_full_count = 0
         last_total_chars = 0
         last_avg_chars = 0.0
+        # 出力トークン枠を要求文字数から見積もる。既定 8000 のままだと 10 分超（min_full_chars
+        # ≥5760）のシナリオが JSON 途中で打ち切られ、"Unterminated string" で全 attempt が
+        # 落ちてセクション拡張の短い本文に化ける。日本語は概ね 1 文字 ≒ 1 トークン、さらに
+        # speaker/mood/括弧などの JSON 骨組みと short_scenario・thumb_info の分を上乗せする。
+        # 上限 16000 は gpt-4o の max output tokens に合わせている。
+        gen_max_tokens = max(8000, min(16000, int(min_full_chars * 1.6) + 4000))
         # GPT は例外時に即 None（OpenAI quota切れ等のfail-fast）。
         # Claude は単独採用される場面が多いので検証リトライを1回多く与え、
         # "Both GPT and Claude failed" の取りこぼしを減らす。
@@ -1039,9 +1045,9 @@ class ScenarioGenerator:
         for attempt in range(max_attempts):
             try:
                 if provider == "gpt":
-                    raw = self._call_gpt(msgs, temperature=0.85)
+                    raw = self._call_gpt(msgs, temperature=0.85, max_tokens=gen_max_tokens)
                 else:
-                    raw = self._call_claude_text(msgs, temperature=0.85)
+                    raw = self._call_claude_text(msgs, temperature=0.85, max_tokens=gen_max_tokens)
             except Exception as e:
                 print(f"  ⚠️ {provider_label} call failed on attempt {attempt+1}: {e}")
                 return None

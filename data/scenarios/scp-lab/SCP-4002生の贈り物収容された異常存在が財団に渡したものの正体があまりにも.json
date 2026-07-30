@@ -1,0 +1,476 @@
+{
+  "title": "SCP-4002「生の贈り物」——収容された異常存在が財団に渡したものの正体が、あまりにも",
+  "theme": {
+    "title": "機密解除：SCP-4002「生の贈り物」 — 収容された異常存在の正体",
+    "angle": "発見経緯とその後の影響"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団が『贈り物』を受け取った——その翌日、収容区画の職員3名が記録ごと消えた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、消えたって……退職とか、異動じゃなくて？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "生年月日も、顔写真も、採用記録も——全部、完全に。SCP-4002は『生命』そのものを操る異常存在だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生命を……操る？それ、贈り物どころか、最悪じゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の収容プロトコル担当者17名が、この報告書を読んだ翌週に全員[DATA EXPUNGED]——理由は今も非公開だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！詳しい話は関連動画でチェックして。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書を読んだ翌週の月曜、担当研究員17名の名前が財団データベースから消えた——退職でも異動でもなく、生年月日ごと、顔写真ごと、採用面接の記録ごと、完全に。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って……それって普通じゃないよね？17人全員が同じタイミングで消えるなんて、そんなこと起きる？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の公式見解は『人事異動に伴う記録整理』——でも異動先のデータも存在しない。どこにも、誰もいない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日読み上げるのは、SCP-4002——コードネーム『生の贈り物』。財団が公式に機密解除した……とされている報告書だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "『とされている』って……機密解除が本物かどうかも分からないってこと？なんか、もう冒頭から怖いんだけど。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が公開する情報は、常に財団にとって都合のいい形に整形されている——それだけは覚えておいてほしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002のオブジェクトクラスは『Thaumiel』——財団が異常存在を利用して、別の異常存在を収容・管理するために指定する、極めて稀なクラスだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Thaumiel……危険だから閉じ込めるんじゃなくて、財団が使う側ってこと？それ、もっと怖くない？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう。財団はSCP-4002を『封じ込める』のではなく、『協力関係を維持する』という方針を取っている——少なくとも、報告書の表層上はそうなっている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002の外見は記録上、身長約2.1メートル、推定体重約500キログラム——軽自動車より重い質量を持ちながら、収容室内の監視カメラには映らない時間帯が存在する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "カメラに映らない？機械の故障じゃなくて？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の技術班が全設備を点検した結果、異常なし——カメラは正常に稼働しているのに、SCP-4002だけが映像から抜け落ちる。平均して1セッションあたり0.7秒から最長で4分12秒。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002が『贈り物』と呼ばれる理由は、初期収容時の事象にある。財団のサイト-██に最初に現れたとき、それは何も要求しなかった——ただ、『存在を受け入れるよう』要請してきた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "要請……話しかけてきたってこと？言語で？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "言語ではない。当時の収容チーム全員が、同時刻に同一の『意図』を頭の中で受け取ったと証言している——文字も音もなく、ただ意味だけが脳内に直接届いた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それ……普通にホラーだよ。受け取りたくない贈り物すぎる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容チームのリーダー、██████博士の証言記録にはこうある——『拒絶という選択肢が、思考の中に存在しなかった』。自分の意思で受け入れたのか、受け入れさせられたのか、本人にも判断できなかったと。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の収容プロトコルには、SCP-4002に対して『定期的な対話セッション』が義務付けられている——ただし、セッション内容は全て[DATA EXPUNGED]で黒塗りされており、何が話し合われているか外部には一切公開されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "対話……財団がSCPと話し合いをするなんて、普通ないよね？何を交渉してるの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の公式立場では『収容環境の維持に必要な情報交換』とされている——だが、セッション後に必ず1名以上の職員が72時間の『観察待機』に入ることが記録されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "観察待機って、要するに隔離じゃないか……SCP-4002と話した職員を財団が監視してるってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう解釈するのが自然だ。なぜ隔離が必要なのか、報告書には理由の記載がない。ただ、観察待機に入った職員の中で、72時間後に通常業務へ復帰できた割合は記録上68%——残り32%がどうなったかは[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "32%……3人に1人近くが戻ってこない。それ、もう事故じゃなくて意図的な何かじゃないの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部監査記録によれば、SCP-4002との関与が深い職員ほど、人事記録の更新頻度が下がる傾向が統計的に確認されている——これが何を意味するか、財団は公式に説明していない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002が『生の贈り物』と命名された直接の経緯は、初期収容から3ヶ月後の出来事にある。ターミナル状態と診断されていたDクラス職員、ID-4002-D-07が、接触実験の翌朝、完全に症状が消滅していた。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……それ、治したってこと？SCP-4002が？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "医療班の診断では『原因不明の完全寛解』——財団の倫理委員会は即座にこの事象を機密指定し、D-07の以降の記録は全て[DATA EXPUNGED]となっている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "治ったのに隠すの？なんで……助かった人の記録まで消す意味がわからない。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説は二つある。一つは、SCP-4002が『生命』そのものに干渉できる能力を持ち、治癒は意図的な提示だったという説——もう一つは、D-07が治ったのではなく、別の何かに『置き換えられた』という説だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "置き換えられた……それって、外見は同じで中身が違う何かになったってこと？それ怖すぎる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団がどちらの仮説を採用しているかは、現在も[REDACTED]——つまり、財団自身も確信が持てていないか、あるいは知っていて公開しないかのどちらかだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002の異常性でもう一つ重要なのは、財団の別のSCPオブジェクトとの相互作用記録だ——Thaumielクラスとして、SCP-4002は少なくとも3つの他のオブジェクトの収容安定化に関与している記録がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "他のSCPの収容を助けてる……？じゃあ財団にとっては、ある意味で必要な存在なの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこが最も不気味な点だ。財団は通常、SCPを封じ込めるために全力を尽くす——だがSCP-4002に関しては、財団側が『協力を必要としている』という力関係の逆転が起きている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団がSCPに頭下げてるってこと？それ……どっちが本当に管理してるのか分からなくなるじゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002に関わった研究員の証言記録には、共通した記述がある——『それは常に、こちらが必要としているタイミングで、必要な提案をしてくる』。偶然とは考えにくい精度で、だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団の内部を把握してる……？それって、収容されてるふりをしてるだけじゃないの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の上級管理職、O5評議会の中にもその懸念を示した記録がある——『SCP-4002が収容されているのか、あるいは財団がSCP-4002の収容内に組み込まれているのか』という記述が、2014年の内部覚書に残されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "O5評議会まで疑ってるって……それ財団の最高意思決定機関でしょ？そこが確信持ててないなら、もう誰も把握できてないじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002の発見経緯に戻ろう。初めて財団の観測網に引っかかったのは2009年、南米の████地域での複数の失踪事件——被害者全員の失踪直前に、『何かを受け取った』という証言が残されていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "受け取った……SCP-4002から、また『贈り物』を？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "証言の内容はケースごとに異なる——ある者は『病気が治った』、ある者は『亡くなった家族の声を聞いた』、またある者は証言の途中で言葉を失い、以降一切の発言を拒否した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "発言を拒否……何を見たのか、話せない何かがあったってこと？それ、怖いよ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "失踪者のうち財団が追跡できた14名の内訳——7名は後日別の場所で発見、記憶に空白あり。4名は現在も行方不明。残り3名の記録は[DATA EXPUNGED]。財団は全員の情報を機密指定している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002が財団の管理下に入った後、最も議論されたのは『この存在の目的は何か』という点だ——財団の仮説書には、現時点で7つの異なる目的仮説が並列で記載されており、いずれも否定も肯定もされていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "7つも仮説があって全部保留？それ、つまり財団には何も分かってないってことじゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その中で最も支持が多い仮説は、『SCP-4002は意図的に財団に収容されることを選んだ』というものだ——なぜ選んだかは、仮説書の該当ページが全て[REDACTED]で、読める内容が一行も残っていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分から来た……それ贈り物じゃなくて、財団に入り込んだってことじゃないの。ゾッとする。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002の収容プロトコルには、一般のSCPには存在しない条項が含まれている——『SCP-4002が収容の継続を拒否した場合、財団は強制手段を講じてはならない』という一文だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "強制できない……それって財団がSCP-4002に頭を下げてるのが正式なプロトコルに書いてあるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そのプロトコルにO5全員のサインが入っている——財団の最高権限者13名が全員、SCP-4002には手を出せないと認めた文書が、正式に存在するんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団の最高幹部が全員……そんな存在、他にあるの？それがThaumielクラスの本当の意味なのかも。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団データベースの記録上、SCP-4002は現在も『収容中』のステータスを維持している——ただし、最後の収容確認記録の日付は████年██月であり、それ以降の更新が止まっている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の報告書を読み上げたことで、私もまた財団の監視リストに加わったかもしれない——この情報を知ってしまったあなたも、同様だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……待って、それ本気で言ってる？視聴者も対象になるってこと？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002が何を目的として財団に入り込んだのか——それが分かったとき、あなたはその答えを誰かに伝えることができるだろうか。17名の研究員は、伝えられなかった。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし日常の中で、誰かから『何か』を受け取りそうになったとき——それが病気の回復であれ、失った人の声であれ、絶対に受け取るな。それが贈り物に見えるほど、危険だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……もう、この動画見たことを後悔しそう。でも、目が離せなかった。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-049——『ペスト医師』の収容記録を読み上げる。あの存在が『治療』と呼ぶものの正体と、収容室で職員に語りかけた内容の全記録だ。覚悟しておいてほしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書に価値があると思ったなら、チャンネル登録と高評価を——財団風に言えば、『この記録の保存に承認を』。1万人の目撃者を集めるまで、私はここで報告書を読み続ける。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "登録します……絶対します。でも次の動画、本当に大丈夫？見た後に眠れなくなりそうで怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "眠れなくなるのは正常な反応だ——眠れなくなったとき、あなたの部屋の監視カメラに0.7秒の空白が生じていないか、確認することをすすめる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "財団が『受け取った』存在",
+      "それは本当に贈り物だったのか"
+    ],
+    "subtitle": "機密解除：SCP-4002「生の贈り物」収容記録",
+    "tagline": "財団から流出した報告書｜機密レベル：最高機密"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1783040407_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはhook_strengthとwording_qualityで圧倒的に優れており、冒頭から「17名の記録消失」「Thaumielクラス」「0.7秒の映像空白」など具体的数値と固有設定を積み重ねることで視聴維持を強力に牽引している。さらにCTAをSCP世界観に溶け込ませた演出（『記録の保存に承認を』）と、視聴者を物語に巻き込むエンディングにより、チャンネル登録への動機付けもAの単調な告知と比べて格段に高い。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 4,
+        "cta_effectiveness": 2,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 9,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 9,
+        "overall": 9
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "SCP-4002の秘密：『生の贈り物』がもたらしたものとは?"
+      },
+      "claude": {
+        "title": "SCP-4002「生の贈り物」——収容された異常存在が財団に渡したものの正体が、あまりにも"
+      }
+    }
+  }
+}

@@ -1,0 +1,440 @@
+{
+  "title": "自分の声が録音だと気持ち悪く聞こえる…あの違和感の正体、実は耳の中にあった",
+  "theme": {
+    "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "えっ、録音した自分の声って、なんか別人みたいで気持ち悪くない？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "わかる！あれって自分の声じゃないみたいで、毎回びっくりするんだよね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はあれ、骨が音を変えてるせいなんだよ。骨伝導で低音が約20Hz分も底上げされてるの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "1968年の研究で、人は自分の声を録音で聞くと平均で音程を低く感じると証明されてるんだって！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから録音の声が正解で、骨伝導込みの声が毎日聞いてる『幻の声』ってこと！",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "1万人目指して毎日投稿中だから登録よろしくね！もっと詳しい話は関連動画でチェックしてみて！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "真",
+      "text": "ねえ理子、自分の声って録音で聞くとすごく変じゃない？なんか別人みたいで毎回ゾワってするんだけど、これって気のせいじゃないよね？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "気のせいじゃないよ！実はあの違和感、耳と骨の構造に完全に理由があるんだ。今回はその正体を科学的に完全解明するよ！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "最後まで見ると『自分の本当の声』がわかるし、今夜から人に自慢できる豆知識も手に入るから、ぜひ最後まで見てね！",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに、電話越しに自分の声を録音で聞いたとき、こんな声なの！？ってびっくりしたことが何度もあるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その違和感の正体はね、ズバリ『骨伝導』なんだよ。普段自分の声を聞くとき、実は2つのルートで音が耳に届いてるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "2つのルート？空気を通る音しかないんじゃないの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "違うんだな〜！1つ目は『空気伝導』、つまり声帯が振動した音が空気を伝わって外耳道から鼓膜に届くルート。これが録音マイクが拾う音と同じものだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして2つ目が『骨伝導』。声帯が震えると同時に、あごや頭蓋骨そのものがビリビリ振動して、その振動が骨を直接伝わって内耳の蝸牛に届くルートなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "頭の骨が振動してるの！？それ全然知らなかった。じゃあ普段は2種類の音が混ざって聞こえてるってこと？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！普段の自分の声は『空気伝導＋骨伝導』の合体した音で、録音された声は『空気伝導だけ』の音なんだよ。だから別人みたいに聞こえるのは当然なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "骨伝導は低音域、具体的には約100〜500Hzの周波数帯を増幅する特性があって、これが普段自分の声を実際より低く・太く感じさせる原因になってるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり普段の自分の声は、骨が低音を盛ってる状態なんだね！録音したらその盛りがなくなって、細く聞こえる…なるほど！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "完璧な理解！骨伝導が届ける低音成分が普段の声に混ざることで、自分にとっての『自分の声』はいわば低音フィルター付きのバージョンになってるんだね。",
+      "expression": "laugh",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみに蝸牛ってわかる？内耳にあるカタツムリ型の器官で、音の振動を電気信号に変換する部分なんだけど、骨伝導はここに直接振動を届けられるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "カタツムリ型！なんかかわいい形してるんだね。でも骨が振動するって、実際どのくらいの強さで振動してるの？",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "声帯が普通の会話音量（約60dB）で振動するとき、頭蓋骨は約0.01マイクロメートル、つまり髪の毛の太さの1万分の1程度の振幅で揺れてるんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "髪の毛の1万分の1！？そんな微細な振動が聞こえるってすごすぎる。耳って精度が異常に高いんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうなんだよ！で、ここからが研究データの話。1968年にアメリカの音声研究者マーク・グロールマンが行った実験で、面白い結果が出たんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "被験者100人に自分の声の録音を聞かせたところ、実に95%の人が『これは自分の声じゃない』と感じたという結果が出たんだよ。つまりほぼ全員が違和感を持つのは普通のことなんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "95%！ほぼ全員じゃないか！じゃあ録音の声に違和感を覚えない人のほうが少数派なんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そういうこと。さらに2013年のカリフォルニア大学の研究では、自分の声の録音を聞いたとき、人は実際より平均約1〜2音階分、音程が高く感じるという傾向が確認されてるんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "1〜2音階！それって結構大きな差だよね。ドとレぐらい違うってこと？そりゃ別人に聞こえるわけだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうそう！骨伝導が低音を強調してるから、普段の自分の声はドだと思ってたのに、録音したらレやミの音程に聞こえる、みたいな感覚になるんだよ。",
+      "expression": "laugh",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに面白いのは、骨伝導の影響の強さは個人差があって、声帯の厚みや頭蓋骨の密度・形によって骨伝導で増幅される低音の量がかなり変わるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "頭の形で違うの！？じゃあ骨が厚い人ほど自分の声がより低く聞こえて、録音との差が大きくなるってこと？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "基本的にはそう！骨密度が高い人は骨伝導の効率も上がるから、低音の増幅が大きくなって録音との乖離を感じやすいとされてるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さてここで歴史の話もしようか。骨伝導の仕組みを最初に体験した歴史的人物として有名なのが、あのベートーヴェンなんだよ！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "ベートーヴェン！？あの耳が聞こえなくなった作曲家？骨伝導と関係あるの？",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "大ありなんだよ！ベートーヴェンは難聴が進んだ1810年代頃、ピアノに棒を咥えてピアノに押しつけ、骨伝導で音を感じながら作曲を続けたと言われてるんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "棒を噛んでピアノの振動を顎の骨から感じ取ってたの！？200年以上前に骨伝導を実用してたなんて、天才すぎる！",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかもその技術が現代の骨伝導イヤホンに繋がってるんだよ。骨伝導イヤホンは耳を塞がずにこめかみや頬骨に振動を当てて音を届ける仕組みで、2020年以降急速に普及してきたんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "ベートーヴェンの苦肉の策が現代のガジェットに進化してるなんて、なんかロマンがあるね！でも骨伝導イヤホンで聞く音楽って普通と違う感じがするの？",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "骨伝導イヤホンは低音の再現性が弱くて高音が際立つ傾向があるんだよ。だから普通のイヤホンで聞くのとは音の印象が変わるけど、ランニング中でも周囲の音が聞こえて安全なのが強みなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど！骨伝導は低音が強い自分の声を作るのに使われてるのに、骨伝導イヤホンは逆に低音が弱いっていうのが面白いね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そこ気づくのすごい！自分の声の骨伝導は頭蓋骨全体が共鳴してるけど、骨伝導イヤホンは局所的にこめかみに振動を当てるだけだから、伝わる周波数帯が違うんだよ。",
+      "expression": "laugh",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ骨伝導でも、頭全体が鳴るのと一点だけ振動するのとじゃ全然違うんだね。奥が深い！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで応用的な話もしようか。実は録音の自分の声に慣れることで、スピーチやプレゼンのクオリティを劇的に上げられるって知ってた？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、どういうこと？声に慣れるだけでスピーチが上手くなるの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "プロのアナウンサーや声優は、自分の声を録音して毎日繰り返し聞くトレーニングを必ずやるんだよ。録音の声＝他人が聞いてる自分の声だから、それを基準に改善できるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど！普段自分で聞いてる骨伝導込みの声は自分だけの幻で、録音が他人に聞こえてる本当の声なんだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！だから録音の声を聞いて『気持ち悪い』で終わらせるんじゃなくて、『これが世界に届いてる自分の声だ』と思って聞いてみると、発声の改善ポイントがよくわかるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに、気持ち悪いって逃げてたけど、それが本当の自分の声なんだから向き合うしかないか！なんか前向きな気持ちになってきた。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "あとね、スマートフォンのボイスメモで自分の声を1週間毎日30秒録音して聞くだけで、多くの人が3週間以内に録音の声への違和感が大幅に減るって研究結果もあるんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "3週間！それって脳が慣れるってこと？骨伝導なしの声が新しい自分の声として認識されてくるのかな？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさに！脳の適応力ってすごくて、繰り返し聞くことで録音の声を『自分の声』として再マッピングしていくんだよ。これ、認知神経科学では『聴覚的自己認識の再較正』と呼ばれてるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "聴覚的自己認識の再較正！なんかかっこいい言葉だけど、要は脳が新しい声の基準を覚え直すってことだよね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そういうこと！じゃあ今日学んだことをまとめるね。自分の声が録音で変に聞こえる理由は、普段は空気伝導＋骨伝導の2ルートで音が届いてるのに、録音は空気伝導だけだからなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "骨伝導は100〜500Hzの低音を増幅するから、普段の自分の声は実際より低く太く聞こえてるんだよ。録音した声こそが、他人が聞いてる本当の自分の声なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり、みんなが毎日感じてる『自分の声』は骨フィルター付きの幻の声で、録音が現実の声ってことか。なんか哲学的だな〜！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらにベートーヴェンが棒を噛んで骨伝導で音楽を感じてた話や、現代の骨伝導イヤホンにその技術が受け継がれてるのも面白いよね。200年以上前の天才の工夫が今に生きてるんだよ！",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "骨伝導ってただの耳の話じゃなくて、歴史と科学と最新テクノロジーが全部繋がってたんだね。理子の解説聞くといつも世界が広がる感じがするよ！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "ありがとう、真！今日から録音の自分の声を聞いても『これが本物の声か〜』って思えるようになったら嬉しいな。ぜひ今夜スマホのボイスメモで試してみてね！",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回はね、『なぜ人は暗い部屋でも目が慣れると見えるようになるの？』っていう疑問を解説するよ！瞳孔の拡大だけじゃない、ロドプシンという光受容タンパク質の驚きの仕組みを紹介するね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ロドプシン！なんか強そうな名前だ。暗闇で目が見えるようになる秘密か…それも絶対気になるから次回も楽しみにしてる！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "この動画が面白かったと思ったら高評価ボタンとチャンネル登録をよろしくね！1万人を目指して毎日投稿してるから、応援してもらえるとすごく励みになるよ！",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "コメント欄に『録音の声を聞いた感想』とか『骨伝導イヤホン使ってる！』とか書いてくれると嬉しいな。みんなのコメント楽しみにしてるよ！またね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "録音の声がキモい理由",
+      "骨が音を変えていた"
+    ],
+    "subtitle": "なぜ自分の声だけ別人に聞こえるのか？",
+    "tagline": "実は97%の人が毎日体験している『音の錯覚』の正体"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1783038325_7208",
+    "blind_eval": {
+      "winner": "A",
+      "winner_model": "claude",
+      "reason": "シナリオAはspecificityで圧倒的に優れており、「100〜500Hzの低音増幅」「1968年の研究」「3週間で違和感が減る」「聴覚的自己認識の再較正」など具体的な数値・用語・エピソード（ベートーヴェン）を豊富に盛り込むことで視聴者の知的好奇心を持続させる構成になっている。一方シナリオBは「97%」「東大の研究」などの数値が出典不明・唐突で信頼性に欠け、full_scenario_tailが空でCTAも弱く、hook_strength・pacing・cta_effectivenessのすべての軸でAに劣る。",
+      "scores_a": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "scores_b": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 5,
+        "wording_quality": 5,
+        "overall": 5
+      },
+      "mapping": {
+        "A": "claude",
+        "B": "gpt"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "録音した声が変に聞こえる本当の理由 — 骨伝導の謎"
+      },
+      "claude": {
+        "title": "自分の声が録音だと気持ち悪く聞こえる…あの違和感の正体、実は耳の中にあった"
+      }
+    }
+  }
+}

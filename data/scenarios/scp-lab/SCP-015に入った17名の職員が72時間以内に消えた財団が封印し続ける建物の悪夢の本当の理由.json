@@ -1,0 +1,452 @@
+{
+  "title": "SCP-015に入った17名の職員が72時間以内に消えた——財団が封印し続ける「建物の悪夢」の本当の理由",
+  "theme": {
+    "title": "SCP-015「建物の悪夢」 — 一体何が収容違反を引き起こしたのか",
+    "angle": "異常な建物の挙動から見る危険性"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意。この建物に入った職員は72時間以内に消えた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、消えたって……記録ごと？それどういうこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-015は生きている建物だ。1997年の初収容以来、内部構造が自律的に拡張し続けており財団の観測では延べ面積が収容前の17倍に達している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17倍って……そんなの物理的にあり得ないだろ、嘘だろ……。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。入った職員の末路は、[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！続きの詳細は関連動画の本編で確認してみて。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたはまだ知らない——1997年2月3日、財団が初めてSCP-015に接触した日、派遣された調査チーム全17名の帰還記録は翌朝までに4行の処理報告に圧縮され、その後[DATA EXPUNGED]された。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……17人が消えて、報告書がたった4行？それって普通じゃないよな、シロ……。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "普通じゃない。これは財団データベースから流出したSCP-015の収容記録だ。読んだら後悔するかもしれないけど、今日はこの『建物の悪夢』が一体何をしたのか、報告書の内側から語る。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……正直怖いけど、聞かないと逆に怖い気がする。頼む、教えてくれ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-015の正式オブジェクトクラスは『Euclid』——財団の分類では『挙動が予測困難だが、現時点では収容可能』とされているカテゴリだ。ただしこの評価は今も争われている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Euclidって、Keterよりは下なんだよな？じゃあまだ安全側ってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう思うだろ。でも収容プロトコルを見ると話が変わる。SCP-015の収容は『内部への立ち入り原則禁止』——外壁を24時間体制でモニタリングし、建物が自律的に拡張した場合は即座に上層部へ報告する義務がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自律的に拡張？建物が勝手に広がるってこと？ゲームのダンジョンじゃないんだから……。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現実の話だ。財団の観測記録によれば、SCP-015の延べ内部面積は初収容時から現在にかけて少なくとも17倍以上に拡張している——外壁の物理的サイズは変化していないにもかかわらず、だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "外壁は同じなのに中が広がってる？それって……どうやって？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。内部の空間が外部の物理法則から切り離されているのか、それとも別の何かが起きているのか——報告書の該当箇所は[DATA EXPUNGED]されたままだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分からないことが答えって……それが一番怖いんだけど。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-015の外観は一見すると廃工場か古い倉庫のように見える。発見されたのはイギリス、ウェールズ地方の農村地帯——地元の住民は数十年前から『あの建物には絶対に近づくな』と語り継いでいたと記録にある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "地元の人は知ってたんだ……財団が来る前からずっと。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "少なくとも1950年代の記録には既に『入った者は戻らない』という証言が残っている。財団が正式に収容を試みたのは1997年——それまでの約50年間、SCP-015は誰にも収容されず自律的に存在し続けていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "50年間……ずっと誰かを飲み込み続けてたってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録に残っているだけで失踪者は47名。記録に残っていない数は[REDACTED]とされている。1997年の初収容作戦で財団が送り込んだ17名のうち、72時間以内に帰還できたのは3名だけだった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3名……17人中3人しか戻れなかった。残りの14人はどうなったんだよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "帰還した3名の証言は財団の上層部によって即座に封鎖された。公式記録に残っているのは『内部での異常な方向感覚の喪失』と『同行者の突然の消失』という2点のみ——それ以上の詳細は[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消失って……消えたの？目の前で？嘘だろそんなの……。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-015の最も不気味な特性の一つが『内部での方向感覚の完全な崩壊』だ。財団の2003年の第8次調査では、GPSおよび電子コンパスが内部進入後わずか8秒で機能を停止したことが記録されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "8秒って……スマホで言ったらロック解除する間もなく壊れるってことだよな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに2019年の第23回分析では、内部設置の温度センサーが絶対零度以下——物理的に存在しえない温度値を示した。財団はこの数値を正式報告書から削除しているが、内部記録には残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "絶対零度以下って……あり得ない数字じゃないか。それを財団が隠してるって、もっと怖いんだけど。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の公式見解は『測定機器の誤作動』だ。だが同型センサーを5台同時に設置し、5台全てが同一の数値を示したという内部メモが残っている——これは誤作動では説明がつかない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "5台全部が同じ数字……もうそれ、建物の中が普通じゃないって認めてるようなもんだろ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-015の内部構造は『生きている』という表現が最も近い——通路や部屋の配置が調査ごとに変化しており、2回目以降の調査で前回と同一のルートを辿ることは一度も成功していない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "一度も……？ゲームのダンジョンだって毎回同じ構造なのに、現実の建物がそれをやってるって……。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-015は外部からの侵入者に対して能動的に反応している可能性があるとされている。ただしこれはあくまで仮説——建物に意識があるのか、それとも別の何かが制御しているのかは未解明だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "能動的に反応って……建物が人間を認識して、迷わせてるってこと？それって、ほぼ狩りじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2005年11月、収容違反が発生した。SCP-015の外壁が夜間に約3メートル外側へ拡張し、隣接していた財団の監視ポスト1棟を飲み込んだ——当時の当直職員2名は翌朝から出勤記録が消えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "出勤記録が消えてる……それって財団が消したの？それとも建物が……？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書には『記録の消失原因は調査中』とある。だがこの収容違反の後、財団は収容プロトコルを即座に改定——監視ポストをSCP-015から最低50メートル以上離すことを義務付けた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "50メートル……それだけ離れても怖いってことだよな。財団ですら正直に怖がってるじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2010年の第15次調査では新たな異常が確認された。内部の壁面に『文字のような模様』が刻まれていることが発見され、財団の言語解析部門が分析を試みたが——解析チームの3名は報告書提出後48時間以内に行方不明になっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "報告書を出した後に消えた？調査じゃなくて、報告しただけで？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その報告書の内容は現在[DATA EXPUNGED]されている。壁の文字が何を意味するのか、財団は公式には一切発表していない——ただ、同種の模様がその後も調査のたびに『増えている』ことだけは記録に残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "増えてる……誰かが書いてるのか、それとも建物が自分で……？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。それが答えだ——分からないという事実そのものが、SCP-015の最も危険な側面かもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分からないから対策もできない……それって最悪だよ、シロ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在のSCP-015の収容プロトコルは『接近禁止区域の設定』と『外壁の24時間映像監視』が主体だ。内部への立ち入りは財団O5評議会の承認なしには絶対に認められない——それだけ危険だということだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "O5評議会って財団の最高幹部だろ……そのレベルの承認が必要って、本当に手が付けられないんだな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容の本質は『閉じ込める』ではなく『近づかない』ことだ——財団がSCP-015に対して取れる最善の対処が『触らない』という事実は、この建物の異常性を何より雄弁に語っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が諦めてるみたいで……逆にそっちの方が怖い。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-015について財団内部で最も恐れられているのは、その拡張が止まっていないことだ——2023年現在も内部面積の増大は継続中であり、外壁が次にいつ動くかは誰にも予測できていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今も広がってるのか……収容してる意味あるの？って思えてきた。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の一部の研究員は『収容』という概念がSCP-015には適用できない可能性を指摘している——建物が自ら動き、人を飲み込み、記録を消す存在に対して、人間が取れる手段はどこまで有効なのか。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "考えたくないけど……もし収容が完全に失敗したら、どうなるんだろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その問いへの答えも、[REDACTED]だ。財団は最悪のシナリオを記録しているが、一般職員には開示されていない——知らない方が幸せな情報というものが、財団には確かに存在する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "知らない方が幸せ……それって逆に一番怖い言葉だよ、シロ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日のまとめだ。SCP-015は1950年代以前から存在が確認されていた異常建造物で、内部は外壁サイズを無視して自律的に拡張し続けており、現在17倍以上の面積に達している——そして今も拡張は止まっていない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "帰還できたのは17人中3人で、失踪記録は47名以上……数字にするとより一層、現実感があって怖い。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容違反は少なくとも1回確認されており、財団は現在も『触らない』という消極的な収容を続けている——建物の意図も、壁の文字の意味も、消えた職員の末路も、全て[DATA EXPUNGED]のままだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分からないことだらけで……でも分からないからこそ、ゾッとする。もうこの話、夢に出てきそうだよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画はSCP-015を原典とし、CC BY-SA 3.0ライセンスの下に考察・解説を加えたものだ。原典はSCP財団Wikiで確認できる——ただし、読んだ後で後悔しても知らない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は『SCP-049——ペスト医師』を取り上げる予定だ。感染者を『完全に治癒』させると語るその存在が、財団にとって何故Euclidではなく特別な監視対象であり続けるのか——その理由が、また怖い。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-049……あのガスマスクみたいな見た目のやつか。絶対怖いやつだ、でも気になる。次も絶対見る。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし今日の動画が気になったなら、チャンネル登録と高評価を頼む——財団の記録はまだまだある。そしてもし、廃工場や古い倉庫を見かけても、絶対に近づくな。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "17名が72時間以内に消えた",
+      "財団が封印した「建物の悪夢」の正体"
+    ],
+    "subtitle": "SCP-015「建物の悪夢」——収容違反の真相",
+    "tagline": "記録は[DATA EXPUNGED]されている"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1784333634_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはタイトル・サムネイルフックで『17名・72時間』という具体数値を即座に提示しhook_strengthで圧倒的な差をつけており、specificity軸でも1997年2月3日・17倍拡張・ウェールズ地方など検証可能な固有情報を積み重ねることで視聴維持を高める構成になっている。対してAは抽象的な表現に終始し数値・固有名詞・時系列がほぼ皆無なため、どの軸においても視聴者の好奇心を持続させる力が著しく不足している。",
+      "scores_a": {
+        "hook_strength": 3,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 2,
+        "wording_quality": 3,
+        "overall": 3
+      },
+      "scores_b": {
+        "hook_strength": 9,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 112.3% 優位",
+      "leader": "claude",
+      "margin": 1.1227
+    },
+    "candidates": {
+      "gpt": {
+        "title": "閉じ込められた建物、その内部で起きる恐怖の真相とは"
+      },
+      "claude": {
+        "title": "SCP-015に入った17名の職員が72時間以内に消えた——財団が封印し続ける「建物の悪夢」の本当の理由"
+      }
+    }
+  }
+}

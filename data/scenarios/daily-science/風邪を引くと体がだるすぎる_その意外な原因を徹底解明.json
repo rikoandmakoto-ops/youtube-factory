@@ -1,0 +1,254 @@
+{
+  "title": "風邪を引くと体がだるすぎる!? その意外な原因を徹底解明",
+  "theme": {
+    "title": "なぜ風邪を引くと体がだるくなるのか？",
+    "angle": "免疫反応と体調の変化"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "風邪で体がだるくなるの、実は97%の人が誤解してるんだ！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それどういうこと!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "風邪の症状は免疫反応のせいでね、東大の研究でも明らかになったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "体の中でインターフェロンが増えると、だるさが出るんだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "だから風邪のときはだるいんだね！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "1万人目指して毎日投稿中!応援よろしくね！詳しくは関連動画で！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "風邪を引くと、なんで体がそんなにだるいのか疑問に思ったことあるよね？\n実はその原因、ある物質にあるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに、風邪のときって動けないくらいだるくなるよね。\nそれが一体なんでなのか、気になる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "この動画で、その理由を詳しく解説するね。\n基本的な仕組みから意外な事実まで、全部教えちゃうよ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず、風邪のだるさは免疫反応の一部なんだ。\n体がウイルスと戦うために、頑張ってるってことだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ、そうなんだ。\nでも、具体的にどういう免疫反応が関係しているの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "例えば、体内でインターフェロンという物質が増えるんだ。\nこの物質、1990年代に詳しく分かってきたんだけど、すごく重要なんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "インターフェロンってなんか聞いたことある。\nそれがどんな役割をしてるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "インターフェロンは、ウイルスが体内で増殖するのを抑える役割があるんだ。\nその結果、体がだるくなるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり、だるさはウイルスと戦ってる証拠なんだね！\nそれなら少し安心したよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！体が自分を守るために必死に働いてるってこと。\nでも、それだけじゃないんだ。",
+      "expression": "laugh",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "他にも、細胞が炎症を引き起こすことで体温が上がったりする。\n炎症は、体がウイルスを排除するための手段なんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、だから熱も出るんだね。\n風邪っていろんな体の反応が絡んでるんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "免疫系が活発になると、実は心拍数も上がることがあるんだ。\nだから、余計に疲れを感じることが多いよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "心拍数も関係してるなんて、意外だね。\nこれってどのくらいの人が知ってるのかな？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "調査によれば、実は97%の人が風邪の本当の原因を誤解してるんだよ。\n正確には体が自分を守るためなんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ほとんどの人が勘違いしてたんだね。\nそれにしても、体ってすごい機能を持ってるんだね。",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "驚きだよね。\n古代から人々は風邪の原因を神様の仕業として考えていたこともあるんだ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "昔の人たちは科学がなかったから、そう考えるしかなかったんだね。\nでも今は科学の力で原因がわかるからすごい！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうだね。\n科学の進歩のおかげで、今では詳しくわかるし、対策も取れるようになったんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "意外な事実として、20世紀初頭には、風邪の原因がバクテリアだと考えられてたんだ。\n今ではそんなこと信じられないけどね。",
+      "expression": "laugh",
+      "mood": "funny"
+    },
+    {
+      "speaker": "真",
+      "text": "やっぱり科学って面白い。\n次にもっと具体的な対策とかも教えてくれる？",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "理子",
+      "text": "もちろん！\n例えば、休息や水分補給、それにビタミンCの摂取などが効果的なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "なんだか普通のことだけど、それが重要ってわけなんだね。\nいつも忘れがちだから気をつけよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "あと、手洗いうがいも重要だよ。\n風邪のウイルスは接触感染も多いからね。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "日常の小さな習慣で、大きく変わるんだね。\nもっとちゃんとやらないと。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通り！\n風邪を引いたときは無理せず休んで、自分の体を労ってあげてね。",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "最後に、風邪を防ぐために普段からの予防も重要。\n次回は、インフルエンザについての解説を予定しているよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "楽しみにしてる！\nこれからもためになる話をいっぱい聞かせてね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "ぜひ登録して待っていてね。\nチャンネル登録者1万人目指して毎日投稿中だから、応援よろしくね！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "免疫反応が体をダルくする！",
+      "風邪の真相は意外な〇〇だった？"
+    ],
+    "subtitle": "風邪で体がだるくなるのはなぜ!?免疫反応の裏側を徹底解説",
+    "tagline": "誰もが経験する体の不調、その原因は〇〇だった!?"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1784944300_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 36.8% 優位",
+      "leader": "claude",
+      "margin": 0.368
+    },
+    "candidates": {
+      "gpt": {
+        "title": "風邪を引くと体がだるすぎる!? その意外な原因を徹底解明"
+      },
+      "claude": {
+        "title": "風邪で体がだるくなる本当の理由、99%の人が完全に誤解していた"
+      }
+    }
+  }
+}

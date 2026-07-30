@@ -1,0 +1,446 @@
+{
+  "title": "SCP-4002「生の贈り物」——財団が収容した瞬間、17名の研究員の記録が消えた理由",
+  "theme": {
+    "title": "機密解除：SCP-4002「生の贈り物」 — 収容された異常存在の正体",
+    "angle": "発見経緯とその後の影響"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意——SCP-4002の報告書を読んだ研究員17名、翌週に記録ごと消えてる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、消えたって……退職とかじゃなくて？生年月日も写真も全部？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団データベースから完全削除。SCP-4002は『生を与える存在』と分類されてる——でも実態は逆だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生を与えるのに、関わった人間が消える……それって一番ヤバいやつじゃん。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルは現在も更新中。財団が『解明できていない』と公式に認めた数少ないオブジェクトだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1万人目指して毎日投稿中だから登録お願い！続きはSCP-4002の関連動画でチェックしてね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "報告書を読んだ翌週月曜、17名全員の名前が財団データベースから消えた——退職でも異動でもなく、生年月日ごと、写真ごと、完全に。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、それって……人が消えたってこと？記録だけじゃなくて、その人たち自身も？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の公式見解は『人事異動に伴う情報整理』——だが、異動先の記録も存在しない。17名は、どこにもいない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日読み上げるのは、SCP-4002——コードネーム『生の贈り物』。財団が収容した中で、最も『理解できない』と記した異常存在のひとつだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "『生の贈り物』って……名前だけ聞くと全然怖くないじゃん。むしろいいやつっぽい響きがして、それが逆に嫌だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう感じるのが正常な反応だ、クロ。財団の収容記録にも『オブジェクトの名称は、接触した職員が自発的に命名したものである』と記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002のオブジェクトクラスはKeter——財団が定義する中で最も収容困難かつ危険度の高い分類だ。収容プロトコルは現在も第7版まで改訂が続いている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Keterって……SCP-682とか096と同じランクじゃないか。それが『生の贈り物』って名前なのか、怖すぎるだろ。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容施設はサイト-[REDACTED]の地下4層、気密隔壁を3重に設けた独立区画に設置されている。外部への電力供給は完全に遮断されており、独立発電のみで稼働する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002の外見は記録によって異なる——これ自体が異常だ。最初の発見記録では『光を放つ球体』、2回目の収容試みでは『人型』、3回目は『記録なし』となっている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3回目が記録なしって……記録できなかったのか、記録したくなかったのか、どっちだよ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では『SCP-4002は観察者の認知に応じて外見を最適化する』とされているが、この仮説を提出した研究員3名の記録は提出翌日に[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "発見経緯は2019年、アイルランド沿岸の無人島に設置された自動気象観測装置が異常なデータを送信したことに始まる。送信間隔は通常72時間に一度だが、その日は0.3秒ごとに同一データが繰り返し届いた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0.3秒ごとに同じデータが……それって機械が壊れたんじゃなくて、何かが意図的に送らせてたってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の調査チーム6名が現地へ向かった。島に到着した時点でチーム全員の通信機器は正常に動作していたが、島を離れた後、6名のうち2名の記憶から『島での出来事が完全に欠落』していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2名だけ……残りの4名は覚えてたの？それとも4名は何も言わなかっただけ？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "4名は帰還後の尋問に答えている。ただし、その尋問記録は[DATA EXPUNGED]だ。財団内部でも閲覧できるのはセキュリティクリアランス5以上の職員のみ——全職員の0.8%未満に相当する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002が『生の贈り物』と呼ばれる理由は、収容後の観察記録にある。オブジェクトに接触した被験者——Dクラス職員14名——全員が、接触後72時間以内に『自分は死ぬべきだった』と申告した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……それ、どういう意味？死ぬべきだったって、SCP-4002が何かしたってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "14名の証言を財団がまとめると、共通する内容があった。『自分は本来すでに死んでいたはずで、それを何かに生かされている』という確信——そしてその『何か』への感謝の感情だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "感謝……？怖いとか苦しいじゃなくて、感謝？それが一番ゾッとするんだけど。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "14名のうち11名は証言後に『正常』と判定されて解放されている。残り3名の記録は[DATA EXPUNGED]だ。解放された11名のその後の追跡記録も、1年以内に全て閲覧不能になっている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルで最も異例なのは第4条だ——『SCP-4002に関する報告書の閲覧記録は、閲覧者本人には開示しない』とある。つまり、今この報告書を読んでいるあなたの名前も、どこかに記録されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今聞いてる俺も？！それって……俺の名前も財団のどこかに？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-4002は『生命の継続に介入する異常存在』とされている。具体的には、本来死亡するはずだった生命体の死を回避させ、その生命体を何らかの形で『管理下』に置くと推測されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "管理下って……じゃあ、SCP-4002に生かされた人は、ずっとそいつの影響下に置かれるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその可能性を否定していない。ただし証明もできていない——なぜなら、その仮説を検証しようとした研究員の記録が、検証開始から平均8日後に消えているからだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "発見から現在までに、SCP-4002の収容プロトコルは7回改訂されている。改訂のたびに担当チームが交代しているが、初代から6代目まで全チームの記録が現在は閲覧不能だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "7回も改訂して……それって収容に失敗し続けてるってこと？今も収容できてるかどうかも分からないじゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在の第7版プロトコルには、こう記されている——『SCP-4002の収容状態は、毎朝6時に担当職員が肉眼で確認する。確認の記録は24時間後に自動削除される』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確認の記録を自動削除って……それ、確認したことすら残さないってこと？何のために確認してるんだよ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団がこの方式を採用した理由は報告書に記されていない。ただ、第6版プロトコルで確認記録を保存していた期間、担当職員の平均在籍期間が11日だったというデータだけが残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "11日……それって、11日で記録が消えてるってこと？職員ごと消えてるってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の公式回答は『任期制による交代』だ。だが、第6版期間中に交代した職員は合計43名——全員の異動先記録が存在しない。SCP-001から172番までの空き番号が何を意味するか、財団は公式に回答していない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "空き番号……172個も？それって172個分の何かが、記録ごと消されたってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "分からない。財団でも解明できていない——これが、この報告書の最も不気味な部分だ。存在するはずの空白に、何があったのかを誰も語れない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002に関して、財団内部で唯一合意されている事実がある。接触した全ての生命体が、接触後に『死を恐れなくなる』という点だ——Dクラス14名、調査チーム6名、全員に共通している。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "死を恐れなくなる……それって、普通に考えたら怖いことじゃないの？なんで『贈り物』なんだよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "接触した被験者の証言を読むと、全員が同じ言葉を使っている——『もう十分生きた』。年齢も経歴も関係なく、接触から72時間以内に、全員が同じ感覚に至る。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それ……SCP-4002が何かを植え付けてるってこと？それとも、本当に何かを『見せてる』の？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は結論を出せていない。この問いに答えようとした研究員の記録が消えているからだ——問いを立てること自体が、SCP-4002の『管理下』に入る条件なのかもしれない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容報告書の末尾には、こう記されている——『本オブジェクトに関する全ての疑問は、財団の利益に反する可能性がある。閲覧者は疑問を記録に残さないことを推奨する』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "疑問を記録に残すな……それって、考えただけでアウトってこと？今俺、完全にアウトじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから言っただろう、クロ——この報告書は読まない方が良かったかもしれない。財団がKeterに分類した理由は、危険性だけじゃない。関わった者の記録が消えるという、再現性のある事実がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "再現性があるって……それって財団が確認してるってことだろ？確認した人の記録も消えてるのに、どうやって再現性を確認したんだよ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "良い疑問だ。報告書にはその矛盾への言及がない——ただ『再現性あり』という結論だけが残っている。どうやって確認したかの過程は[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4002について現在分かっていることをまとめよう。発見：2019年、アイルランド沿岸の無人島。オブジェクトクラス：Keter。接触者全員に共通する事後症状：死の恐怖の消失と感謝の感情の発生。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "担当研究員の記録消失：発見確認済み。収容状態：第7版プロトコルで対応中——ただし、現在の担当職員の在籍期間は不明。財団が解明できていない事項：それ以外の全て。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それ以外の全てって……まとめになってないじゃないか。結局SCP-4002が何なのか、何をしたいのかも分からないまま？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "分からないまま、というのが正確な表現だ。財団が72年以上かけて収容・研究してきた中で、SCP-4002だけが『目的不明』のまま第7版まで改訂を重ねている——これ自体が異常だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "72年……それだけ研究して分からないって、財団にとっても本当に未知の存在なんだ。ゾッとした。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日の動画が参考になったなら、財団への貢献として報告書に承認を——いいね、ということだ。チャンネル登録者1万人を目指して投稿を続けているから、応援よろしく頼む。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-049——『ペスト医師』の収容記録を読み上げる予定だ。財団が最も長期間にわたって会話記録を保存し続けている存在——その会話内容が、なぜ機密指定されているのかを掘り下げる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ペスト医師……それも名前だけ聞くとゾッとするやつだ。絶対見る、チャンネル登録しとく。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に伝えておく——もし日常の中で『もう十分生きた』という感覚が突然芽生えたなら、それがいつ、どこで生まれたか、思い出せるかを確認してほしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……それって、SCP-4002と接触したかどうかの確認ってこと？怖いこと言うなよ、シロ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "思い出せないなら——財団に連絡する前に、まず自分の名前が今もどこかに記録されているか、確認することをすすめる。この報告書は以上だ。SCP財団Wiki（CC BY-SA 3.0）に基づき制作。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "収容成功の翌朝、担当研究員17名が記録ごと消滅",
+      "SCP-4002「生の贈り物」——財団でも解明不能な異常"
+    ],
+    "subtitle": "機密解除：SCP-4002収容報告書【流出】",
+    "tagline": "これを知った者の記録は、なぜ消えるのか"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1783056159_4032",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはhook_strengthとspecificityで大きく上回り、冒頭から「17名・記録ごと消滅・財団の公式見解との矛盾」という具体的事実を積み重ねることで視聴維持を強く引き出す構造になっている。さらにwording_qualityの面でも、クロの反応が情報を深掘りする機能を果たしており、Aに見られる「運命の糸」「不可逆的」などの抽象的・曖昧な表現に比べて、SCPの世界観に沿った説得力ある文体を一貫して維持している点が決定的な差となった。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 7,
+        "cta_effectiveness": 6,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ奪われた？SCP-4002「生の贈り物」の恐怖"
+      },
+      "claude": {
+        "title": "SCP-4002「生の贈り物」——財団が収容した瞬間、17名の研究員の記録が消えた理由"
+      }
+    }
+  }
+}

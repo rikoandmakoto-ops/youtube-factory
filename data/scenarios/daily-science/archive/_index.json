@@ -1,5 +1,1189 @@
 [
   {
+    "file": "daily-science_20260730_080149_scenario.md",
+    "title": "なぜ寝言を話すのか？夢の深層に潜む『あの現象』の正体",
+    "video_title": "【ゆっくり解説】なぜ突然寝言を話すのか？夢の奥深くに潜む謎を暴く！「なぜ寝言を話すのか？夢の深層に潜む『あの現象』の正体」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ人は寝言を言うことがあるのか？ — 睡眠の深さと夢の関係",
+      "angle": "寝言のメカニズム"
+    },
+    "generated_at": "2026-07-30T08:01:49.449591Z",
+    "prompt_hash": "ca5ffe7ecb37",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_20260729_080149_scenario.md",
+    "title": "なぜ昼寝中の夢は現実と激しく違う？科学が解明する『夢の仕組み』",
+    "video_title": "【ゆっくり解説】昼寝中の夢、実は現実とは異なる理由脳が作り出す不思議な夢の秘密を解き明かす「なぜ昼寝中の夢は現実と激しく違う？科学が解明する『夢の仕組み』」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ昼寝中に見る夢は現実と異なるのか？ — 夢の体験の科学",
+      "angle": "夢の質と脳の働き"
+    },
+    "generated_at": "2026-07-29T08:01:49.214895Z",
+    "prompt_hash": "f4c4bea23d63",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_20260728_080137_scenario.md",
+    "title": "食欲を操る色の魔法！なぜ『色』が食欲に影響を与えるのか？",
+    "video_title": "【ゆっくり解説】色が食欲を操る？心理学が解き明かす秘密「食欲を操る色の魔法！なぜ『色』が食欲に影響を与えるのか？」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ食べ物の色が食欲に影響を与えるのか？ — 色彩と心理学",
+      "angle": "視覚と味覚の関連性"
+    },
+    "generated_at": "2026-07-28T08:01:37.034069Z",
+    "prompt_hash": "543069253472",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_20260726_150129_scenario.md",
+    "title": "なぜ運動で気分がスッキリする？実は脳内で『あの物質』が暴走中！",
+    "video_title": "【ゆっくり解説】運動後、なぜスッキリ？脳内で何が起こっているのか？「なぜ運動で気分がスッキリする？実は脳内で『あの物質』が暴走中！」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ運動すると気分がスッキリするのか？ — 脳内物質の秘密",
+      "angle": "運動と脳の関係を探る"
+    },
+    "generated_at": "2026-07-26T15:01:29.582015Z",
+    "prompt_hash": "6d4caf4e45fc",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1785028110_20260726_010830_scenario.md",
+    "title": "昼寝後にだるいのは睡眠のせいじゃない——脳が90分ごとに起こしている『ある現象』の正体",
+    "video_title": "昼寝後にだるいのは睡眠のせいじゃない——脳が90分ごとに起こしている『ある現象』の正体",
+    "prefix": "daily-science_short_1785028110",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-26T01:08:30.431890Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1785025675_20260726_002755_scenario.md",
+    "title": "耳に水が入ると音が消える？実は鼓膜より手前で起きている『あの現象』の正体",
+    "video_title": "耳に水が入ると音が消える？実は鼓膜より手前で起きている『あの現象』の正体",
+    "prefix": "daily-science_short_1785025675",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-26T00:27:55.645083Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260725_150730_scenario.md",
+    "title": "耳が急に詰まる感覚、実は鼓膜の内側で起きているある現象の正体",
+    "video_title": "【ゆっくり解説】耳の圧迫感の正体99%が知らない鼓膜の秘密「耳が急に詰まる感覚、実は鼓膜の内側で起きているある現象の正体」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ時々感じる耳の圧迫感は何なのか？",
+      "angle": "耳の圧力と気圧の関係",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-25T15:07:30.223476Z",
+    "prompt_hash": "91874ba2dffa",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1784949003_20260725_031003_scenario.md",
+    "title": "耳鳴りのとき、なぜか特定の音だけが異様に気になる——99%が知らない聴覚の正体",
+    "video_title": "耳鳴りのとき、なぜか特定の音だけが異様に気になる——99%が知らない聴覚の正体",
+    "prefix": "daily-science_short_1784949003",
+    "theme": {
+      "title": "なぜ風邪を引くと体がだるくなるのか？",
+      "angle": "免疫反応と体調の変化"
+    },
+    "generated_at": "2026-07-25T03:10:03.222337Z",
+    "prompt_hash": "6f8beaf87304",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1784946450_20260725_022730_scenario.md",
+    "title": "風邪を引くと体がだるすぎる!? その意外な原因を徹底解明",
+    "video_title": "風邪を引くと体がだるすぎる!? その意外な原因を徹底解明",
+    "prefix": "daily-science_short_1784946450",
+    "theme": {
+      "title": "なぜ風邪を引くと体がだるくなるのか？",
+      "angle": "免疫反応と体調の変化"
+    },
+    "generated_at": "2026-07-25T02:27:30.679072Z",
+    "prompt_hash": "6f8beaf87304",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260724_150712_scenario.md",
+    "title": "くしゃみの瞬間、目の前が光る——99%が知らないその0.5秒に体で何が起きているのか？",
+    "video_title": "【ゆっくり解説】くしゃみの瞬間だけ視界が白く光る理由「くしゃみの瞬間、目の前が光る——99%が知らないその0.5秒に体で何が起きているのか？」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜくしゃみをすると一瞬目の前が明るく感じるのか？",
+      "angle": "神経の反応と視覚の関連性"
+    },
+    "generated_at": "2026-07-24T15:07:12.315617Z",
+    "prompt_hash": "efd2d17f3b02",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1784855484_20260724_011124_scenario.md",
+    "title": "あくびが「うつる」のは気のせいじゃない——99%が知らない脳の同調メカニズムの正体",
+    "video_title": "あくびが「うつる」のは気のせいじゃない——99%が知らない脳の同調メカニズムの正体",
+    "prefix": "daily-science_short_1784855484",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-24T01:11:24.362794Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1784852962_20260724_002922_scenario.md",
+    "title": "99%が知らない夢の『音』の正体",
+    "video_title": "99%が知らない夢の『音』の正体",
+    "prefix": "daily-science_short_1784852962",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-24T00:29:22.540202Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260723_150710_scenario.md",
+    "title": "99%の人が知らない! なぜ体がかゆくなるのか？その正体を暴く",
+    "video_title": "【ゆっくり解説】かゆみの謎を追う!体の不思議を解明する!「99%の人が知らない! なぜ体がかゆくなるのか？その正体を暴く」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ体がかゆくなると感じるタイミングがあるのか？",
+      "angle": "かゆみと皮膚の神経反応",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-23T15:07:10.481503Z",
+    "prompt_hash": "b3e21a4cb40b",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1784778057_20260723_034057_scenario.md",
+    "title": "なぜ「あの音」を聴くだけで体が勝手に緩むのか？脳が隠していた本当のメカニズム",
+    "video_title": "なぜ「あの音」を聴くだけで体が勝手に緩むのか？脳が隠していた本当のメカニズム",
+    "prefix": "daily-science_short_1784778057",
+    "theme": {
+      "title": "なぜ落ち着く音が体に良い影響を与えるのか？",
+      "angle": "音と心理の関わり"
+    },
+    "generated_at": "2026-07-23T03:40:57.671828Z",
+    "prompt_hash": "868a3843e6e2",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1784775496_20260723_025816_scenario.md",
+    "title": "なぜ食べ物の匂いで記憶が蘇る？意外な脳の秘密",
+    "video_title": "なぜ食べ物の匂いで記憶が蘇る？意外な脳の秘密",
+    "prefix": "daily-science_short_1784775496",
+    "theme": {
+      "title": "なぜ食べ物の匂いは記憶を呼び起こすのか？",
+      "angle": "嗅覚と記憶の関係"
+    },
+    "generated_at": "2026-07-23T02:58:16.524107Z",
+    "prompt_hash": "e69e2b300805",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260722_150724_scenario.md",
+    "title": "しゃっくりが止まらない？実は『あの部分』に隠された意外な原因",
+    "video_title": "【ゆっくり解説】しゃっくり、その原因は『ここ』にある！しゃっくりの意外なメカニズムを解明！「しゃっくりが止まらない？実は『あの部分』に隠された意外な原因」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ人はしゃっくりをするのか？",
+      "angle": "体の不思議探求"
+    },
+    "generated_at": "2026-07-22T15:07:24.806853Z",
+    "prompt_hash": "30f3bda94671",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_20260721_150720_scenario.md",
+    "title": "なぜ夢はすぐに消える？記憶の『0.3秒の魔法』",
+    "video_title": "【ゆっくり解説】夢を見たらすぐに忘れてしまうのはなぜ？ほとんどの人が知らない記憶と夢の関係！「なぜ夢はすぐに消える？記憶の『0.3秒の魔法』」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ夢で見たことを朝には忘れてしまうのか？",
+      "angle": "記憶と夢の関係を深掘り"
+    },
+    "generated_at": "2026-07-21T15:07:20.497554Z",
+    "prompt_hash": "82b7c2c2c152",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_20260720_150718_scenario.md",
+    "title": "昼寝から起きたとき、なぜか頭がぼんやりする——脳が『起動できない』本当の理由",
+    "video_title": "【ゆっくり解説】昼寝のあと、なぜ脳は動かない？20分 vs 90分——たった時間差で脳に何が起きるのか「昼寝から起きたとき、なぜか頭がぼんやりする——脳が『起動できない』本当の理由」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ昼寝後に起きたときにぼんやりするのか？ — 睡眠の質と脳の関係",
+      "angle": "短時間睡眠の影響",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-20T15:07:18.774487Z",
+    "prompt_hash": "2f58e4a402ff",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1784509735_20260720_010855_scenario.md",
+    "title": "なぜ目の前の映像がぼやけるのか？99%が知らない目の秘密",
+    "video_title": "なぜ目の前の映像がぼやけるのか？99%が知らない目の秘密",
+    "prefix": "daily-science_short_1784509735",
+    "theme": {
+      "title": "なぜ夢の中での出来事がリアルに感じられるのか？",
+      "angle": "夢の中の体験と現実の感覚の関係"
+    },
+    "generated_at": "2026-07-20T01:08:55.508289Z",
+    "prompt_hash": "caddef55b4a8",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1784507258_20260720_002738_scenario.md",
+    "title": "夢の中がリアルすぎる理由、99%が知らない脳の不思議",
+    "video_title": "夢の中がリアルすぎる理由、99%が知らない脳の不思議",
+    "prefix": "daily-science_short_1784507258",
+    "theme": {
+      "title": "なぜ夢の中での出来事がリアルに感じられるのか？",
+      "angle": "夢の中の体験と現実の感覚の関係"
+    },
+    "generated_at": "2026-07-20T00:27:38.039438Z",
+    "prompt_hash": "caddef55b4a8",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260719_150736_scenario.md",
+    "title": "痛い記憶だけ、なぜか一生消えない——脳が『あの痛み』を特別扱いする本当の理由",
+    "video_title": "【ゆっくり解説】なぜ痛みの記憶だけ鮮明に残るのか？脳が『あの感覚』を消させない理由「痛い記憶だけ、なぜか一生消えない——脳が『あの痛み』を特別扱いする本当の理由」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ記憶の中の痛みは特に鮮明に残るのか？",
+      "angle": "痛覚と記憶の相互作用を探る"
+    },
+    "generated_at": "2026-07-19T15:07:36.961080Z",
+    "prompt_hash": "6cb78fe5e0f9",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_20260719_090727_scenario.md",
+    "title": "実は運動で脳内化学が変わる!? #なぜ体を動かすと気分が良くなるの？ #ゆっくり解説",
+    "video_title": "【ゆっくり解説】運動すると脳が『幸せホルモン』を作る？気分が良くなるのは科学的に証明されている!「実は運動で脳内化学が変わる!? #なぜ体を動かすと気分が良くなるの？ #ゆっくり解説」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ体を動かすと気分が良くなるのか？ — 運動と脳の関係",
+      "angle": "運動がもたらす心身への影響",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-19T09:07:27.698161Z",
+    "prompt_hash": "6e6b7212184c",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1784423235_20260719_010715_scenario.md",
+    "title": "甘いもの、食べると「なぜか」元気が出る #脳が隠してた本当の理由とは？",
+    "video_title": "甘いもの、食べると「なぜか」元気が出る #脳が隠してた本当の理由とは？",
+    "prefix": "daily-science_short_1784423235",
+    "theme": {
+      "title": "なぜ目の端で見えたものが正面を向くと消えるのか？網膜の盲点ではない意外な理由",
+      "angle": "桿体細胞と錐体細胞の分布差、暗所視と明所視の切り替え、天文学者が使う逸らし目テクニック"
+    },
+    "generated_at": "2026-07-19T01:07:15.901804Z",
+    "prompt_hash": "5bb1ac4d79b4",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1784420650_20260719_002410_scenario.md",
+    "title": "目の端にいた『それ』が正面を向いたら消えた #なぜ視線を動かすだけで見えなくなるのか？",
+    "video_title": "目の端にいた『それ』が正面を向いたら消えた #なぜ視線を動かすだけで見えなくなるのか？",
+    "prefix": "daily-science_short_1784420650",
+    "theme": {
+      "title": "なぜ目の端で見えたものが正面を向くと消えるのか？網膜の盲点ではない意外な理由",
+      "angle": "桿体細胞と錐体細胞の分布差、暗所視と明所視の切り替え、天文学者が使う逸らし目テクニック"
+    },
+    "generated_at": "2026-07-19T00:24:10.899346Z",
+    "prompt_hash": "5bb1ac4d79b4",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260718_090706_scenario.md",
+    "title": "冬だけバチッとくるのは実は99%が誤解してる、湿度30%を境に電子の逃げ道が消える話",
+    "video_title": "【ゆっくり解説】最大3万ボルトが走ってるなぜ冬だけ？「冬だけバチッとくるのは実は99%が誤解してる、湿度30%を境に電子の逃げ道が消える話」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ静電気は冬だけバチッとくるのか？湿度30%を境に変わる電子の逃げ道",
+      "angle": "表面抵抗率と湿度の関係、帯電列の仕組み、放電時の電圧は最大3万V"
+    },
+    "generated_at": "2026-07-18T09:07:06.847041Z",
+    "prompt_hash": "88484c9fe743",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1784336605_20260718_010325_scenario.md",
+    "title": "かき氷で頭がキーンとならない人がいる、その『差』の正体",
+    "video_title": "かき氷で頭がキーンとならない人がいる、その『差』の正体",
+    "prefix": "daily-science_short_1784336605",
+    "theme": {
+      "title": "なぜかき氷を食べると頭がキーンとしないときがあるのか？アイスクリーム頭痛の発動条件",
+      "angle": "口蓋の冷却速度と三叉神経の関連痛メカニズム、ゆっくり食べると防げる理由"
+    },
+    "generated_at": "2026-07-18T01:03:25.845362Z",
+    "prompt_hash": "335b26c02f68",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1784334057_20260718_002057_scenario.md",
+    "title": "ステンレスのスプーンを舐めると鉄の味がする…でも実はスプーンから金属は1ミリも溶け出していない",
+    "video_title": "ステンレスのスプーンを舐めると鉄の味がする…でも実はスプーンから金属は1ミリも溶け出していない",
+    "prefix": "daily-science_short_1784334057",
+    "theme": {
+      "title": "なぜステンレスのスプーンを触ると鉄の味がするのか？金属と汗が生み出す幻の分子",
+      "angle": "金属イオンと皮脂の化学反応で1-オクテン-3-オンが生成される仕組み"
+    },
+    "generated_at": "2026-07-18T00:20:57.443833Z",
+    "prompt_hash": "f44e84a8b880",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260717_090700_scenario.md",
+    "title": "赤ちゃんが笑うとき、脳の中で何が起きているのか？実は99%の大人が知らない「笑い」の正体",
+    "video_title": "【ゆっくり解説】赤ちゃんの笑顔、実は「理由なし」じゃなかった脳科学が暴いた「無邪気な笑い」の正体「赤ちゃんが笑うとき、脳の中で何が起きているのか？実は99%の大人が知らない「笑い」の正体」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ赤ちゃんは無邪気に笑うことができるのか？ — 感情の科学",
+      "angle": "笑いと脳内の関係",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-17T09:07:00.015913Z",
+    "prompt_hash": "f4577564dc40",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1784250040_20260717_010040_scenario.md",
+    "title": "くしゃみの後、なぜか体がすっきりする「本当の理由」が99%に知られていない件",
+    "video_title": "くしゃみの後、なぜか体がすっきりする「本当の理由」が99%に知られていない件",
+    "prefix": "daily-science_short_1784250040",
+    "theme": {
+      "title": "なぜ指をポキポキ鳴らすとあの音が出るのか？関節液に生まれる真空の泡の秘密",
+      "angle": "キャビテーション説の最新研究（MRIリアルタイム撮影）と、関節への影響の真実"
+    },
+    "generated_at": "2026-07-17T01:00:40.229008Z",
+    "prompt_hash": "f7098742b759",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1784247609_20260717_002009_scenario.md",
+    "title": "夢の中でいた「あの数時間」、実は現実では何秒だったのか？99%が誤解している脳の時間感覚",
+    "video_title": "夢の中でいた「あの数時間」、実は現実では何秒だったのか？99%が誤解している脳の時間感覚",
+    "prefix": "daily-science_short_1784247609",
+    "theme": {
+      "title": "なぜ指をポキポキ鳴らすとあの音が出るのか？関節液に生まれる真空の泡の秘密",
+      "angle": "キャビテーション説の最新研究（MRIリアルタイム撮影）と、関節への影響の真実"
+    },
+    "generated_at": "2026-07-17T00:20:09.871409Z",
+    "prompt_hash": "f7098742b759",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260716_090719_scenario.md",
+    "title": "食事中に声を出すと、なぜか体が勝手に『恥ずかしい』と感じる本当の理由",
+    "video_title": "【ゆっくり解説】「くちゃくちゃ」1秒で人間関係が壊れる脳が0.3秒で『危険信号』を出す理由「食事中に声を出すと、なぜか体が勝手に『恥ずかしい』と感じる本当の理由」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ食事中に声を出すと恥ずかしいのか？",
+      "angle": "社会的な喫食マナーの心理",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-16T09:07:19.827281Z",
+    "prompt_hash": "cfed4263268b",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1784162943_20260716_004903_scenario.md",
+    "title": "くしゃみのとき、なぜか全身が震える——その0.5秒に体で何が起きているのか？",
+    "video_title": "くしゃみのとき、なぜか全身が震える——その0.5秒に体で何が起きているのか？",
+    "prefix": "daily-science_short_1784162943",
+    "theme": {
+      "title": "なぜエレベーターの中で沈黙が気まずいのか？密閉空間が脳に与える距離感バグの正体",
+      "angle": "パーソナルスペースの心理学と、逃げ場がない閉鎖空間での扁桃体の反応"
+    },
+    "generated_at": "2026-07-16T00:49:03.345016Z",
+    "prompt_hash": "d9a1ff149d8d",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1784160542_20260716_000902_scenario.md",
+    "title": "なぜ髪の毛だけが痛くない？意外すぎる人体の秘密 #髪の毛の謎",
+    "video_title": "なぜ髪の毛だけが痛くない？意外すぎる人体の秘密 #髪の毛の謎",
+    "prefix": "daily-science_short_1784160542",
+    "theme": {
+      "title": "なぜ髪の毛は切っても痛くないのか？死んだ細胞だけで構成される人体唯一の組織",
+      "angle": "毛根と毛幹の違い、ケラチン化のプロセス、爪との共通点を解説"
+    },
+    "generated_at": "2026-07-16T00:09:02.879721Z",
+    "prompt_hash": "2fda01ca09cf",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260715_090657_scenario.md",
+    "title": "辛いものを食べると汗が出る、その『本当の理由』が脳の誤作動だった #カプサイシン #TRPV1受容体の罠",
+    "video_title": "【ゆっくり解説】脳が『43℃の熱さ』と完全に誤解している辛さは味覚ではなく『痛覚』だった「辛いものを食べると汗が出る、その『本当の理由』が脳の誤作動だった #カプサイシン #TRPV1受容体の罠」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ辛いものを食べると汗が出るのか？カプサイシンが脳を騙す驚きの仕組み",
+      "angle": "TRPV1受容体がカプサイシンを『熱さ』と誤認するメカニズムと、味覚性発汗の解説"
+    },
+    "generated_at": "2026-07-15T09:06:57.318110Z",
+    "prompt_hash": "497b6c731030",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1784076676_20260715_005116_scenario.md",
+    "title": "なぜか耳を壊す!? 黒板の音が耐えられない科学的理由",
+    "video_title": "なぜか耳を壊す!? 黒板の音が耐えられない科学的理由",
+    "prefix": "daily-science_short_1784076676",
+    "theme": {
+      "title": "なぜ爪で黒板をひっかく音だけが耐えられないのか？人類が怖がる周波数の秘密",
+      "angle": "2000-4000Hz帯が人間の外耳道で共鳴する仕組みと、霊長類の警戒音との進化的つながり"
+    },
+    "generated_at": "2026-07-15T00:51:16.630503Z",
+    "prompt_hash": "2a367a4adfad",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1784074257_20260715_001057_scenario.md",
+    "title": "走ると横腹が痛くなる「本当の原因」、脾臓でも筋肉でもなかった #横隔膜 #運動科学",
+    "video_title": "走ると横腹が痛くなる「本当の原因」、脾臓でも筋肉でもなかった #横隔膜 #運動科学",
+    "prefix": "daily-science_short_1784074257",
+    "theme": {
+      "title": "なぜ走ると横腹が痛くなるのか？脾臓でも筋肉でもない意外な原因",
+      "angle": "横隔膜と腹膜の摩擦説を軸に、食後の運動リスクと対処法まで触れる"
+    },
+    "generated_at": "2026-07-15T00:10:57.052645Z",
+    "prompt_hash": "8529cd896be4",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783990379_20260714_005259_scenario.md",
+    "title": "食後に必ず眠くなるのはなぜ？血糖値だけじゃない、体が隠している本当の理由",
+    "video_title": "食後に必ず眠くなるのはなぜ？血糖値だけじゃない、体が隠している本当の理由",
+    "prefix": "daily-science_short_1783990379",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-14T00:52:59.032980Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783987982_20260714_001302_scenario.md",
+    "title": "体温が1℃下がると「なぜか気分まで沈む」——脳と体温をつなぐ本当の仕組み",
+    "video_title": "体温が1℃下がると「なぜか気分まで沈む」——脳と体温をつなぐ本当の仕組み",
+    "prefix": "daily-science_short_1783987982",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-14T00:13:02.908114Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260713_090732_scenario.md",
+    "title": "なぜ疲れると体が冷えるのか？知られざるメカニズムが判明",
+    "video_title": "【ゆっくり解説】なぜ疲労で体が冷える？驚きの科学的理由とは「なぜ疲れると体が冷えるのか？知られざるメカニズムが判明」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ疲れると体が冷えるのか？",
+      "angle": "身体のエネルギー消費と感覚の関係",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-13T09:07:32.750574Z",
+    "prompt_hash": "6f500dd6338c",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1783923226_20260713_061346_scenario.md",
+    "title": "なぜ耳が痛いと音が聞こえにくくなるのか？— 耳の構造と音の伝わり方の秘密",
+    "video_title": "なぜ耳が痛いと音が聞こえにくくなるのか？— 耳の構造と音の伝わり方の秘密",
+    "prefix": "daily-science_short_1783923226",
+    "theme": {
+      "title": "なぜ耳が痛いと音が聞こえにくくなるのか？ — 耳の構造と音の伝わり方",
+      "angle": "耳の健康と聴覚の関係"
+    },
+    "generated_at": "2026-07-13T06:13:46.067766Z",
+    "prompt_hash": "fafa4d751f12",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783920952_20260713_053552_scenario.md",
+    "title": "耳が痛いと音が聞こえにくくなるのは『内耳』のせいだった——鼓膜・耳小骨・蝸牛、3段階の崩壊を知ってる？",
+    "video_title": "耳が痛いと音が聞こえにくくなるのは『内耳』のせいだった——鼓膜・耳小骨・蝸牛、3段階の崩壊を知ってる？",
+    "prefix": "daily-science_short_1783920952",
+    "theme": {
+      "title": "なぜ耳が痛いと音が聞こえにくくなるのか？ — 耳の構造と音の伝わり方",
+      "angle": "耳の健康と聴覚の関係"
+    },
+    "generated_at": "2026-07-13T05:35:52.808845Z",
+    "prompt_hash": "fafa4d751f12",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260712_090706_scenario.md",
+    "title": "疲れているのに食べたら、なぜか味がしない——実は脳が「食欲より先に切る回路」を持っていた",
+    "video_title": "【ゆっくり解説】疲れると「味がしない」のはなぜ？脳が食欲を99%カットする仕組みの正体「疲れているのに食べたら、なぜか味がしない——実は脳が「食欲より先に切る回路」を持っていた」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ疲れてるときに食べるとあまりおいしく感じないのか？",
+      "angle": "食欲と疲労感の関係"
+    },
+    "generated_at": "2026-07-12T09:07:06.014529Z",
+    "prompt_hash": "e3dc2d834563",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1783818244_20260712_010404_scenario.md",
+    "title": "突然のかゆみ、実は『皮膚の反乱』が起こっていた!? #なぜかかる意外な理由",
+    "video_title": "突然のかゆみ、実は『皮膚の反乱』が起こっていた!? #なぜかかる意外な理由",
+    "prefix": "daily-science_short_1783818244",
+    "theme": {
+      "title": "なぜ体が急にかゆくなるのか？ — 皮膚の反応のメカニズム",
+      "angle": "かゆみの原因と生理学"
+    },
+    "generated_at": "2026-07-12T01:04:04.188227Z",
+    "prompt_hash": "d42bfe46e9cb",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783815787_20260712_002307_scenario.md",
+    "title": "なぜ何もしていないのに体が急にかゆくなるのか？ — 皮膚の『かゆみセンサー』の正体",
+    "video_title": "なぜ何もしていないのに体が急にかゆくなるのか？ — 皮膚の『かゆみセンサー』の正体",
+    "prefix": "daily-science_short_1783815787",
+    "theme": {
+      "title": "なぜ体が急にかゆくなるのか？ — 皮膚の反応のメカニズム",
+      "angle": "かゆみの原因と生理学"
+    },
+    "generated_at": "2026-07-12T00:23:07.411816Z",
+    "prompt_hash": "d42bfe46e9cb",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260711_090711_scenario.md",
+    "title": "なぜ夢を見ると疲れが残るのか？脳の意外な『働きすぎ』の実態",
+    "video_title": "【ゆっくり解説】なぜ夢で疲れる？脳は眠ってない！「なぜ夢を見ると疲れが残るのか？脳の意外な『働きすぎ』の実態」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ夢を見た後に疲れを感じるのか？",
+      "angle": "夢の質と体調の相関"
+    },
+    "generated_at": "2026-07-11T09:07:11.074084Z",
+    "prompt_hash": "86a691cc40d8",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1783731876_20260711_010436_scenario.md",
+    "title": "録音した自分の声が変に聞こえる本当の理由、実は骨の作用だった！",
+    "video_title": "録音した自分の声が変に聞こえる本当の理由、実は骨の作用だった！",
+    "prefix": "daily-science_short_1783731876",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-11T01:04:36.720852Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783729570_20260711_002610_scenario.md",
+    "title": "録音した自分の声が別人みたいに聞こえる本当の理由——なぜか耳だけが知らない「もう一つの自分の声」",
+    "video_title": "録音した自分の声が別人みたいに聞こえる本当の理由——なぜか耳だけが知らない「もう一つの自分の声」",
+    "prefix": "daily-science_short_1783729570",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-11T00:26:10.138877Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260710_090738_scenario.md",
+    "title": "なぜか不自然？視覚が騙される瞬間の正体とは",
+    "video_title": "【ゆっくり解説】見えてるのに信じられないあなたの目も騙されてるかも「なぜか不自然？視覚が騙される瞬間の正体とは」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ目の前の光景が不自然に見えることがあるのか？",
+      "angle": "視覚の錯覚と脳の働き",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-10T09:07:38.883134Z",
+    "prompt_hash": "7b14d670e62b",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1783645658_20260710_010738_scenario.md",
+    "title": "録音した声が別人に聞こえる理由、実は骨伝導が原因だった！",
+    "video_title": "録音した声が別人に聞こえる理由、実は骨伝導が原因だった！",
+    "prefix": "daily-science_short_1783645658",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-10T01:07:38.386550Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783643358_20260710_002918_scenario.md",
+    "title": "なぜ自分の声は録音で別人に聞こえるのか？意外すぎる理由",
+    "video_title": "なぜ自分の声は録音で別人に聞こえるのか？意外すぎる理由",
+    "prefix": "daily-science_short_1783643358",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-10T00:29:18.983984Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260709_090722_scenario.md",
+    "title": "なぜあの日の痛みだけ、何年経っても忘れられないのか？",
+    "video_title": "【ゆっくり解説】99%が知らない「痛みと記憶」の正体なぜあの瞬間だけ脳に刻まれるのか？「なぜあの日の痛みだけ、何年経っても忘れられないのか？」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ痛みは時に記憶に残るのか？ — 痛覚と記憶の相互作用",
+      "angle": "体験と感情が結びつくメカニズム"
+    },
+    "generated_at": "2026-07-09T09:07:22.119987Z",
+    "prompt_hash": "23b50b07cbdb",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_20260709_090706_scenario.md",
+    "title": "なぜ夢を見ているとき目が動く？知られざる『目の謎』",
+    "video_title": "【ゆっくり解説】夢の中で目は何を見ているのか？動き出す目の秘密とは？「なぜ夢を見ているとき目が動く？知られざる『目の謎』」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ人は夢を見ている最中に目が動くのか？",
+      "angle": "REM睡眠の科学とその役割の解説"
+    },
+    "generated_at": "2026-07-09T09:07:06.106152Z",
+    "prompt_hash": "dd8362ecd694",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1783559577_20260709_011257_scenario.md",
+    "title": "なぜ録音した自分の声だけ別人みたいに聞こえるのか？実は99%が知らない耳の秘密",
+    "video_title": "なぜ録音した自分の声だけ別人みたいに聞こえるのか？実は99%が知らない耳の秘密",
+    "prefix": "daily-science_short_1783559577",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-09T01:12:57.834621Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783557126_20260709_003206_scenario.md",
+    "title": "なぜ録音した自分の声はあんなに気持ち悪いのか？実は99%の人が知らない耳の二重構造の正体",
+    "video_title": "なぜ録音した自分の声はあんなに気持ち悪いのか？実は99%の人が知らない耳の二重構造の正体",
+    "prefix": "daily-science_short_1783557126",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-09T00:32:06.905085Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260708_090645_scenario.md",
+    "title": "なぜ『あの日』の記憶だけ鮮明に残るのか？感情が脳に刻む痕跡の正体",
+    "video_title": "【ゆっくり解説】感情が強いほど記憶が深く刻まれる実は99%が知らない脳の隠れた仕組み「なぜ『あの日』の記憶だけ鮮明に残るのか？感情が脳に刻む痕跡の正体」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ記憶が感情に影響されるのか？ — 脳の感情処理メカニズム",
+      "angle": "感情と記憶の結びつき"
+    },
+    "generated_at": "2026-07-08T09:06:45.347714Z",
+    "prompt_hash": "4279894136a8",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1783473342_20260708_011542_scenario.md",
+    "title": "なぜそれが聞こえる？耳鳴りの衝撃的理由と実は知らない耳の構造",
+    "video_title": "なぜそれが聞こえる？耳鳴りの衝撃的理由と実は知らない耳の構造",
+    "prefix": "daily-science_short_1783473342",
+    "theme": {
+      "title": "なぜ耳鳴りがするのか？ — 内耳の働きと音の不思議",
+      "angle": "耳の構造と外部刺激"
+    },
+    "generated_at": "2026-07-08T01:15:42.375759Z",
+    "prompt_hash": "926b1ad4cfb5",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783471008_20260708_003648_scenario.md",
+    "title": "なぜ静かな部屋でだけ耳鳴りがするのか？内耳で起きている『あの音』の正体",
+    "video_title": "なぜ静かな部屋でだけ耳鳴りがするのか？内耳で起きている『あの音』の正体",
+    "prefix": "daily-science_short_1783471008",
+    "theme": {
+      "title": "なぜ耳鳴りがするのか？ — 内耳の働きと音の不思議",
+      "angle": "耳の構造と外部刺激"
+    },
+    "generated_at": "2026-07-08T00:36:48.552755Z",
+    "prompt_hash": "926b1ad4cfb5",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260707_090706_scenario.md",
+    "title": "お風呂上がりに眠くなるのって、実は体が『わざと』冷えようとしているせいだった",
+    "video_title": "【ゆっくり解説】なぜお風呂上がりだけ急激に眠くなるのか？体温0.5℃の秘密「お風呂上がりに眠くなるのって、実は体が『わざと』冷えようとしているせいだった」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜお風呂上がりに眠くなるのか？",
+      "angle": "体温と眠気の関係"
+    },
+    "generated_at": "2026-07-07T09:07:06.825378Z",
+    "prompt_hash": "0e040794d4b0",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1783385350_20260707_004910_scenario.md",
+    "title": "録音した自分の声、なぜこんなに変？骨伝導が見せる意外すぎる真実",
+    "video_title": "録音した自分の声、なぜこんなに変？骨伝導が見せる意外すぎる真実",
+    "prefix": "daily-science_short_1783385350",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-07T00:49:10.647312Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783383023_20260707_001023_scenario.md",
+    "title": "なぜ録音の声は『別人』に聞こえるのか？実は骨伝導の意外すぎる仕組みが原因！",
+    "video_title": "なぜ録音の声は『別人』に聞こえるのか？実は骨伝導の意外すぎる仕組みが原因！",
+    "prefix": "daily-science_short_1783383023",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-07T00:10:23.898040Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783347930_20260706_142530_scenario.md",
+    "title": "なぜ録音した自分の声は別人のように聞こえるのか？音の裏にある驚きの科学",
+    "video_title": "なぜ録音した自分の声は別人のように聞こえるのか？音の裏にある驚きの科学",
+    "prefix": "daily-science_short_1783347930",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-06T14:25:30.511820Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260706_100143_scenario.md",
+    "title": "なぜ日中に眠気が襲ってくるの？意外な『あの要因』とは",
+    "video_title": "【ゆっくり解説】1行目: 日中の眠気の原因は？2行目: その正体は意外な〇〇！「なぜ日中に眠気が襲ってくるの？意外な『あの要因』とは」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ日中に強い眠気が襲ってくるのか？",
+      "angle": "生理学と生活習慣の影響"
+    },
+    "generated_at": "2026-07-06T10:01:43.638552Z",
+    "prompt_hash": "bd34ede25756",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_20260705_100705_scenario.md",
+    "title": "体調が悪いときだけ甘いものが異常に食べたくなるのは、なぜか？",
+    "video_title": "【ゆっくり解説】風邪のとき、なぜかチョコが止まらない…脳が『砂糖を寄こせ』と叫ぶ本当の理由「体調が悪いときだけ甘いものが異常に食べたくなるのは、なぜか？」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ体調が悪いときに甘いものが欲しくなるのか？",
+      "angle": "脳の欲求と体の信号の関係"
+    },
+    "generated_at": "2026-07-05T10:07:05.797559Z",
+    "prompt_hash": "d1c27ff610cc",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1783239973_20260705_082613_scenario.md",
+    "title": "なぜ録音の自分の声だけ「別人」に聞こえるのか？耳の中で起きていること",
+    "video_title": "なぜ録音の自分の声だけ「別人」に聞こえるのか？耳の中で起きていること",
+    "prefix": "daily-science_short_1783239973",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-05T08:26:13.912808Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783237664_20260705_074744_scenario.md",
+    "title": "なぜ自分の声だけ？録音で変に聞こえる本当の理由",
+    "video_title": "なぜ自分の声だけ？録音で変に聞こえる本当の理由",
+    "prefix": "daily-science_short_1783237664",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-05T07:47:44.538328Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260704_100648_scenario.md",
+    "title": "寝た後も脳が働き続けている——記憶が『定着』するまでに実はこんなに時間がかかる理由",
+    "video_title": "【ゆっくり解説】なぜ『一夜漬け』は3日で消えるのか？脳が記憶を固める『本当の時間』「寝た後も脳が働き続けている——記憶が『定着』するまでに実はこんなに時間がかかる理由」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ脳が記憶を保持するのに時間がかかるのか？",
+      "angle": "記憶の固定化のプロセスを深掘り"
+    },
+    "generated_at": "2026-07-04T10:06:48.440036Z",
+    "prompt_hash": "51f0e161d56f",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_20260703_100730_scenario.md",
+    "title": "同じ空を見ているのに、あなたと私で『青』が違う色に見えているかもしれない理由",
+    "video_title": "【ゆっくり解説】あなたの『青』は本当に青？99%が気づいていない色の正体「同じ空を見ているのに、あなたと私で『青』が違う色に見えているかもしれない理由」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ身近な物の色は人によって違って見えるのか？",
+      "angle": "光の波長と認知の仕組み"
+    },
+    "generated_at": "2026-07-03T10:07:30.610515Z",
+    "prompt_hash": "d0d2ec2f80aa",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "ds_short_1783056171_20260703_052251_scenario.md",
+    "title": "朝起きると夢を忘れているのに、なぜ夢を見た『感覚』だけは残っているのか",
+    "video_title": "朝起きると夢を忘れているのに、なぜ夢を見た『感覚』だけは残っているのか",
+    "prefix": "ds_short_1783056171",
+    "theme": {
+      "title": "夢で見たことを朝には忘れてしまう本当の理由",
+      "angle": ""
+    },
+    "generated_at": "2026-07-03T05:22:51.766013Z",
+    "prompt_hash": "bc85d8d3d608",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783040840_20260703_010720_scenario.md",
+    "title": "なぜ録音した自分の声だけ別人みたいに聞こえるの？耳の中で起きていること",
+    "video_title": "なぜ録音した自分の声だけ別人みたいに聞こえるの？耳の中で起きていること",
+    "prefix": "daily-science_short_1783040840",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-03T01:07:20.883093Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1783038334_20260703_002534_scenario.md",
+    "title": "自分の声が録音だと気持ち悪く聞こえる…あの違和感の正体、実は耳の中にあった",
+    "video_title": "自分の声が録音だと気持ち悪く聞こえる…あの違和感の正体、実は耳の中にあった",
+    "prefix": "daily-science_short_1783038334",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-03T00:25:34.844056Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260702_100722_scenario.md",
+    "title": "なぜパソコンのファンは突然うるさくなるのか？CPUが『全力疾走』を始める瞬間に起きていること",
+    "video_title": "【ゆっくり解説】突然ファンが爆音になる理由CPUの『限界温度』が引き金だった「なぜパソコンのファンは突然うるさくなるのか？CPUが『全力疾走』を始める瞬間に起きていること」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜパソコンのファンはあんなに急にうるさくなるのか？ — CPUが『全力疾走』を始める瞬間の科学",
+      "angle": "熱設計・サーマルスロットリング・冷却制御アルゴリズムを、毎日PCを使う視聴者の「急にうるさくなった」体験から入る日常密着型の切り口"
+    },
+    "generated_at": "2026-07-02T10:07:22.060108Z",
+    "prompt_hash": "7d7734cf676b",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "daily-science_short_1782954351_20260702_010551_scenario.md",
+    "title": "深夜のスマホ、翌朝のぼんやりはなぜ？実はブルーライトより怖い『概日リズム崩壊』の正体",
+    "video_title": "深夜のスマホ、翌朝のぼんやりはなぜ？実はブルーライトより怖い『概日リズム崩壊』の正体",
+    "prefix": "daily-science_short_1782954351",
+    "theme": {
+      "title": "なぜ深夜にスマホを見ると翌朝ぼんやりするのか？ — ブルーライトより怖い『概日リズム崩壊』の正体",
+      "angle": "「ブルーライトが目に悪い」という表面的な話を超えて、メラトニン抑制・体内時計のズレという深い仕組みに踏み込む別角度の切り口"
+    },
+    "generated_at": "2026-07-02T01:05:51.616097Z",
+    "prompt_hash": "c68914d4441e",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782951960_20260702_002600_scenario.md",
+    "title": "深夜スマホで翌朝ぼんやりする本当の理由、ブルーライトじゃなかった",
+    "video_title": "深夜スマホで翌朝ぼんやりする本当の理由、ブルーライトじゃなかった",
+    "prefix": "daily-science_short_1782951960",
+    "theme": {
+      "title": "なぜ深夜にスマホを見ると翌朝ぼんやりするのか？ — ブルーライトより怖い『概日リズム崩壊』の正体",
+      "angle": "「ブルーライトが目に悪い」という表面的な話を超えて、メラトニン抑制・体内時計のズレという深い仕組みに踏み込む別角度の切り口"
+    },
+    "generated_at": "2026-07-02T00:26:00.292636Z",
+    "prompt_hash": "c68914d4441e",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260701_100713_scenario.md",
+    "title": "お腹ペコペコなのに、いざ食べ始めたら急に食欲が消える——あの『裏切り感』の正体、実は脳と胃が別々に動いてるせいだった",
+    "video_title": "【ゆっくり解説】空腹なのに食べられない…なぜ？脳と胃が『別々に動いてる』衝撃の理由「お腹ペコペコなのに、いざ食べ始めたら急に食欲が消える——あの『裏切り感』の正体、実は脳と胃が別々に動いてるせいだった」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ『お腹が空いた』のに食べ始めたら急に食欲がなくなるのか？ — 胃と脳の『期待値ズレ』が引き起こす食欲の逆転現象",
+      "angle": "空腹感・食欲・グレリンなどホルモンの仕組みを、視聴者が日常で感じる「あるある」体験と結びつけて解説"
+    },
+    "generated_at": "2026-07-01T10:07:13.462582Z",
+    "prompt_hash": "ca981db16362",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_20260701_030724_scenario.md",
+    "title": "鏡の中の自分、なぜ『左右』だけ反転して見えるの？実は鏡は何も反転していなかった",
+    "video_title": "【ゆっくり解説】鏡は左右を逆にしない犯人は『脳』だった「鏡の中の自分、なぜ『左右』だけ反転して見えるの？実は鏡は何も反転していなかった」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ鏡の中の自分は『左右』だけ反転して『上下』は反転しないのか？ — 脳が勝手に補正している驚きの理由",
+      "angle": "「鏡は左右を反転する」という常識が実は誤解であることを示し、脳の空間認識バイアスを切り口に視聴者の日常の違和感に直結させる"
+    },
+    "generated_at": "2026-07-01T03:07:24.729445Z",
+    "prompt_hash": "f3bfe511b8f3",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1782868121_20260701_010841_scenario.md",
+    "title": "録音した自分の声が「別人みたい」に聞こえるのは、なぜか耳の中だけの話じゃなかった",
+    "video_title": "録音した自分の声が「別人みたい」に聞こえるのは、なぜか耳の中だけの話じゃなかった",
+    "prefix": "daily-science_short_1782868121",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-01T01:08:41.157134Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782865898_20260701_003138_scenario.md",
+    "title": "なぜ録音の自分の声は『別人』に聞こえるのか？耳の中で起きていること",
+    "video_title": "なぜ録音の自分の声は『別人』に聞こえるのか？耳の中で起きていること",
+    "prefix": "daily-science_short_1782865898",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-07-01T00:31:38.278254Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782836486_20260630_162126_scenario.md",
+    "title": "自分の声って録音するとなぜあんなに変なの？耳の中で起きていること",
+    "video_title": "自分の声って録音するとなぜあんなに変なの？耳の中で起きていること",
+    "prefix": "daily-science_short_1782836486",
+    "theme": {
+      "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+      "angle": ""
+    },
+    "generated_at": "2026-06-30T16:21:26.857072Z",
+    "prompt_hash": "4b3f7eb98dc9",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782778433_20260630_001353_scenario.md",
+    "title": "毎日聞いてるのに誰も知らない『ガタンゴトン』の正体——レールに継ぎ目がないのになぜ鳴るのか？",
+    "video_title": "毎日聞いてるのに誰も知らない『ガタンゴトン』の正体——レールに継ぎ目がないのになぜ鳴るのか？",
+    "prefix": "daily-science_short_1782778433",
+    "theme": {
+      "title": "なぜ電車のレールは繋ぎ目がないのに『ガタンゴトン』と音がするのか？ — 現代の溶接技術と音の正体",
+      "angle": "現代のロングレール溶接を前提に「音の発生源が変わった」事実を切り口にする。毎日通勤で聞く音への意外な答えで高CTRを狙う"
+    },
+    "generated_at": "2026-06-30T00:13:53.692224Z",
+    "prompt_hash": "110795a7aa23",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260629_220728_scenario.md",
+    "title": "くしゃみ中、なぜか目が絶対に開けられない——脳が強制的にシャットダウンする本当の理由",
+    "video_title": "【ゆっくり解説】目を開けたままくしゃみ、実は不可能？脳が0.5秒で全身を乗っ取る「くしゃみ中、なぜか目が絶対に開けられない——脳が強制的にシャットダウンする本当の理由」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜくしゃみは絶対に目を開けたままできないのか？ — 脳が強制的に目を閉じさせる本当の理由",
+      "angle": "くしゃみ中に目が閉じる現象を「反射の連鎖」と「脳幹の優先制御」から解説。視聴者が今日試せる身近な体験と直結させる"
+    },
+    "generated_at": "2026-06-29T22:07:28.805774Z",
+    "prompt_hash": "0cacada5c1f1",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_20260629_080654_scenario.md",
+    "title": "寝落ち直前に体がビクッとするのは、実は脳が『死にかけた』と勘違いしているから？",
+    "video_title": "【ゆっくり解説】寝るたびに体がビクッ…その0.1秒に脳が起こしていること「寝落ち直前に体がビクッとするのは、実は脳が『死にかけた』と勘違いしているから？」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ寝ているときに『落ちる夢』で体がビクッとするのか？ — 入眠時ミオクローヌスの正体",
+      "angle": "睡眠慣性シリーズの発展として、入眠直後に起こる筋肉の不随意収縮に注目。脳が『覚醒→睡眠』へ切り替わる瞬間に何が起きるかを、神経科学の視点から丁寧に解説する"
+    },
+    "generated_at": "2026-06-29T08:06:54.198078Z",
+    "prompt_hash": "75ccebf2208e",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "daily-science_short_1782695516_20260629_011156_scenario.md",
+    "title": "寝落ち直前に体がビクッとなるのは、実は脳が『ある勘違い』をしているせいだった",
+    "video_title": "寝落ち直前に体がビクッとなるのは、実は脳が『ある勘違い』をしているせいだった",
+    "prefix": "daily-science_short_1782695516",
+    "theme": {
+      "title": "なぜ寝ているときに『落ちる夢』で体がビクッとするのか？ — 入眠時ミオクローヌスの正体",
+      "angle": "睡眠慣性シリーズの発展として、入眠直後に起こる筋肉の不随意収縮に注目。脳が『覚醒→睡眠』へ切り替わる瞬間に何が起きるかを、神経科学の視点から丁寧に解説する"
+    },
+    "generated_at": "2026-06-29T01:11:56.969155Z",
+    "prompt_hash": "75ccebf2208e",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_short_1782693164_20260629_003244_scenario.md",
+    "title": "寝落ちの瞬間に体がビクッ…あの『謎の震え』の正体が怖すぎる",
+    "video_title": "寝落ちの瞬間に体がビクッ…あの『謎の震え』の正体が怖すぎる",
+    "prefix": "daily-science_short_1782693164",
+    "theme": {
+      "title": "なぜ寝ているときに『落ちる夢』で体がビクッとするのか？ — 入眠時ミオクローヌスの正体",
+      "angle": "睡眠慣性シリーズの発展として、入眠直後に起こる筋肉の不随意収縮に注目。脳が『覚醒→睡眠』へ切り替わる瞬間に何が起きるかを、神経科学の視点から丁寧に解説する"
+    },
+    "generated_at": "2026-06-29T00:32:44.307259Z",
+    "prompt_hash": "75ccebf2208e",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "daily-science_20260628_220713_scenario.md",
+    "title": "なぜ手だけ汗が出るの？緊張したとき『そこだけ』が濡れる本当の理由",
+    "video_title": "【ゆっくり解説】手汗だけ止まらない謎脳の『緊急命令』の正体「なぜ手だけ汗が出るの？緊張したとき『そこだけ』が濡れる本当の理由」",
+    "prefix": "daily-science",
+    "theme": {
+      "title": "なぜ緊張すると手汗が出るのか？ — 汗腺だけが脳の『緊急命令』に従う理由",
+      "angle": "手のひらの汗腺はアドレナリンではなくアセチルコリンで制御されるという特殊性を軸に、進化的な理由（木登りのグリップ説）まで掘り下げる。視聴者が今日体験しうる体の謎として設計"
+    },
+    "generated_at": "2026-06-28T22:07:13.175389Z",
+    "prompt_hash": "a92fa14f2da2",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
     "file": "daily-science_20260628_080722_scenario.md",
     "title": "蛍光灯の下だと肌が青白く見える。あれ、実は目が『騙されている』だけって知ってた？",
     "video_title": "【ゆっくり解説】蛍光灯の下で肌が青白く見える本当の理由Ra値と目の色補正の謎「蛍光灯の下だと肌が青白く見える。あれ、実は目が『騙されている』だけって知ってた？」",

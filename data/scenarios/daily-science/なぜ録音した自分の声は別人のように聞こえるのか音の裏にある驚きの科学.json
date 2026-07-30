@@ -1,0 +1,236 @@
+{
+  "title": "なぜ録音した自分の声は別人のように聞こえるのか？音の裏にある驚きの科学",
+  "theme": {
+    "title": "自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "真",
+      "text": "ねえ理子、録音した自分の声を聞いて「別人すぎる」って思ったことない？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "あるある！それ、実は耳の構造に秘密があるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "人間の声は骨を通ると低音が最大10dB以上増幅されることがあるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そんな違いがあるんだね！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから録音すると声が違って聞こえるんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！続きは関連動画でチェックしてね！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "真",
+      "text": "ねえ理子、録音した自分の声を聞いて「別人すぎる」って思ったことない？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "あるある！実は人間の声は骨を通ると低音が最大10dB以上増幅されるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回はその謎を『骨伝導』というキーワードで完全解明するよ！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それ、本当に気になる！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "では、始めようか。録音の声が違って聞こえるのは耳の仕組みが関係しているんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "人間の耳は音を気道と骨道、2つのルートで受け取るんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえば今あなたが自分の爪で机をコンコン叩くと、その振動が骨を伝って耳に届いているんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、だから普段聞く声とは違うんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通り。録音の声には骨伝導が含まれないから、気道を通る音だけが聞こえるんだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから録音の自分の声は違うように聞こえるの。具体的には約10〜15デシベルの差が出ることがあるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えー、そんなに変わるの！？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう、そしてそれが録音すると声が細く感じる理由の一つなんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "東大の研究によれば、骨伝導の影響は音質に大きな役割を果たしてるんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "骨伝導って、いろいろ奥が深いね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうだね。でもそれだけじゃないんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は、録音機器の特性も影響しているんだよ。特にマイクの感度が重要なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ、じゃあマイクによっても変わるんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう。例えば、音楽業界ではマイクの選び方が音色に大きく影響するんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "録音機器の設定次第で声の質が変わることもあるから、気をつけてみてね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみに、録音の声が好きじゃない人はマイクを選ぶときに低音を増幅する特性のものを選ぶといいよ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、自分の好みに合わせて調整できるんだね！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうだよ。でも、結局は慣れが大事だと思うよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "毎日録音して聞いていると、次第に自分の本当の声に慣れてくるからね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "そうか、練習あるのみだね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は照明の色が気分に与える影響について解説するよ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "高評価とチャンネル登録をよろしくね！関連動画もぜひ見てね！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "実は、骨伝導がカギなんです！",
+      "録音で声が変わる理由を解明！"
+    ],
+    "subtitle": "自分の声が録音だと変に聞こえる理由を科学的に解説。",
+    "tagline": "「骨伝導」が実は大きな影響を与えている！？"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1783347923_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ録音した自分の声は別人のように聞こえるのか？音の裏にある驚きの科学"
+      },
+      "claude": {
+        "title": "録音した自分の声が「別人すぎる」のはなぜ？骨が10dB以上も音を変えていた"
+      }
+    }
+  }
+}

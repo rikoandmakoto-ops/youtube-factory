@@ -1,0 +1,438 @@
+{
+  "title": "SCP-1983「ドアの向こうの闇」— 心臓を持たずに開けた扉の先で、財団員は何を見たのか",
+  "theme": {
+    "title": "SCP-1983「ドアの向こうの闇」— 扉を開けた瞬間に研究員が消滅する収容施設、財団が封印した『扉の向こう側』の真実",
+    "angle": "『開けてはいけない扉』という原始的恐怖を軸に、収容プロトコルの異常条件（心臓を持って入室せよ）の意味を財団内部文書風に解読。競合の競合の短尺アニメと差別化した長尺ホラー考察"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団が収容した扉がある。開けた者は、12名全員が消滅した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、消滅って…跡形もなく？それ、扉の向こうに何があるの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の収容プロトコルには『心臓を持って入室せよ』と明記されている。生きた心臓を、手に持って。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って…心臓って、誰かの？それ、どこから調達するの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Dクラス職員のものだ。財団はそれを『通行料』と記録に残している。扉の向こうの存在が、要求しているんだよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！もっと詳しい話は関連動画でチェックして。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "扉を開けた者、12名。生還者、0名。財団がこの数字を7年間隠蔽し続けた理由を、今から報告書の順番通りに読み上げる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、12名全員消えたって…それ、事故じゃなくて？財団がわざわざ隠してたってどういうこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "事故じゃない。財団が『意図的に開けさせた』んだ。何が扉の向こうにいるのか、確かめるために。そして全員が戻らなかった。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回読み上げるのはSCP-1983、通称『ドアの向こうの闇』。オブジェクトクラスはKeter。財団が最も危険と判断した分類だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Keterって…財団で一番ヤバいやつだよね。扉一枚でKeterって、どういうことなんだ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その扉は、ただの扉じゃない。SCP-1983は廃屋の中に存在する、一見普通の木製ドアだ。だが開けた瞬間、その場の空間ごと消滅する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が最初に発見したのは2003年。アメリカ中西部の廃農場で、地元警察が行方不明者の捜索中に偶然見つけた。当時の記録では、農場主一家5名が同日中に失踪していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "一家ごと消えた…それで財団が来て、調査したってこと？でも財団員まで消えてるじゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の調査班は3名。扉を開けた瞬間、カメラ映像に映っていたのは漆黒の空間と、無数の『影』だったと記録されている。その3秒後、映像は途絶えた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は『影』の正体をSCP-1983-1と分類した。形状は不定形。大きさは最小で人間の握り拳程度、最大は記録上[DATA EXPUNGED]とされている。財団でも全容は把握できていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "DATA EXPUNGEDって…それ、財団が意図的に消したってことだよね。なんで隠す必要があるの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部文書によれば、SCP-1983-1の最大サイズを公開することで、収容施設内のスタッフにパニックが起きると判断された、とある。つまり財団自身が恐れているんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで重要なのが、収容プロトコルの異常条件だ。財団の収容手順書には、こう書かれている。『入室する者は必ず、摘出されたばかりの哺乳類の心臓を左手に持って扉を開けること』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、それって…本物の心臓を持って入れってこと？なんでそんな条件が？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説はこうだ。SCP-1983-1は生命エネルギーに反応する。心臓を『通行料』として提示することで、扉の向こうの存在が一時的に人間を見逃す、と。ただし、これはあくまで仮説だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際に心臓を持って入室したDクラス職員は、2007年から2012年の間に合計9名。そのうち生還したのは、たった1名だ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "9人中1人しか帰ってこなかった…その1人は何を見たの？報告書に何か書いてあったの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "生還したDクラス職員の証言記録、番号D-14782の報告書には、こう記されている。『扉の向こうは、廃墟だった。建物が並んでいた。ただし、空が——なかった』。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "空がない…？それって、外じゃなくて、別の空間に繋がってるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "D-14782はさらに続けている。『建物の中から、音がした。人の声ではない。でも言葉だった。私の名前を呼んでいた』。この証言の直後、D-14782は精神的隔離措置を受けた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の精神科医チームがD-14782を診断した結果、記録番号[REDACTED]として処理されている。その後D-14782がどうなったかは、財団データベースから完全に削除されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "削除された…生き残った人間のデータが消えてるって、それ、財団が意図的に隠したってことじゃないの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部告発文書には、こんな一文がある。『D-14782が持ち帰った情報は、収容プロトコルの根幹を揺るがすものだった。上層部はその内容を封印することを選んだ』。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "根幹を揺るがすって…心臓を持って入れっていう条件自体が、間違いだったってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それだけじゃない。D-14782の証言には続きがあった。『向こうの廃墟の壁に、財団の紋章が刻まれていた』と。つまり扉の向こうには、財団がすでに存在していた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ…財団の紋章が向こうにあったって、それじゃあ、消えた12人はそっちに行ったってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の考察班は3つの仮説を立てた。1つ目、扉の向こうは並行世界であり、財団はそちらにも存在する。2つ目、消えた職員たちは向こう側で生存している可能性がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして3つ目の仮説が、最も不気味だ。『扉の向こうの財団は、こちらの財団に何かを送り返そうとしている』。この仮説を提唱した研究員は、翌週から出勤記録が途絶えている。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "向こうから何かを送り返そうとしてる…その研究員も消えたってこと？向こうに引き込まれた？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の人事記録では、その研究員は『任意退職』として処理されている。ただし退職届のサイン欄に書かれた名前は、本人の筆跡と一致しないと、後の調査で判明している。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "筆跡が違う…じゃあ誰がサインしたの？向こうから来た、別の誰かが？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの件について公式見解を出していない。記録は[DATA EXPUNGED]処理されている。分からないまま、封印されているんだ。それが財団の選択だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで、SCP-1983の収容プロトコルに戻ろう。現在の収容条件はこうだ。扉は廃農場ごとコンクリートで固定。半径200メートルを立入禁止区域に指定。接近者は即時身柄確保。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "200メートルって、それ、扉に近づくだけで危ないってこと？開けなくても影響があるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2009年に記録されたインシデント1983-7によれば、半径50メートル以内に72時間以上滞在した警備員3名が、同じ夢を見たと報告している。夢の内容は全員一致していた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同じ夢って…それ何の夢だったの？まさか扉の向こうの話？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "3名の証言は共通してこうだった。『空のない廃墟の中で、自分の名前が呼ばれる夢』。D-14782の証言と、完全に一致している。財団はこれを偶然とは判断しなかった。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その後、警備員の配置は72時間ごとのローテーションに変更された。だが2011年のインシデント1983-12では、ローテーション中に1名が持ち場を離れ、扉の方向に歩いて行った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分から歩いていった…引き寄せられたってこと？その人はどうなったの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "扉の前20メートルで同僚に止められた。本人に記憶はなく、ただ『声がした、知っている声だった』とだけ繰り返したと記録されている。その職員の氏名は[REDACTED]だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "知っている声…向こうにいる誰かが、呼んでいるってこと？消えた人たちの声が聞こえたのかな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-1983-1は接近した人間の記憶から声のパターンを抽出し、それを使って誘引すると考えられている。ただしそのメカニズムは未解明のまま、報告書に残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで最も不気味な事実を伝えよう。SCP-1983の扉は、現在も廃農場の中に存在している。財団は扉を破壊しようとした。2回。どちらも失敗した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "破壊に失敗したって、どうして？爆破とかしたんじゃないの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1回目は2005年、爆発物による解体を試みた。爆破後、現場に残っていたのは無傷の扉だけだった。周囲の建物は崩壊したのに、扉だけが立っていた。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2回目は2010年、特殊な高温溶断装置を使った。装置は正常に作動した。だが扉に触れた瞬間、装置を操作していた技術者2名が消滅した。扉に傷一つ、ついていなかった。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "開けなくても、触れただけで消えた…それって、もう、収容できてないってことじゃないの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の上層部はこう結論づけた。『SCP-1983は収容不可能ではなく、接近を制限することで実質的な無効化を維持している』。でもそれは封印じゃない。ただの、見て見ぬふりだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "見て見ぬふり…財団がそれを認めてるって、かなり怖くない？向こうから来るかもしれないのに。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の最新報告書、記録番号1983/REV-4には、こう追記されている。『2022年、コンクリートで固定した扉の位置が、前回測定時から約3センチ移動していることが確認された』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "動いてる…扉が、自分で動いてる？それって、向こうから開けようとしてるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその問いに答えていない。報告書の次のページは[DATA EXPUNGED]だ。分からないことは、分からないまま残されている。それが一番怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1983について、今日伝えられることはここまでだ。この報告書が本物かどうか、私には確認する手段がない。ただ一つ言えるのは、財団はこの扉を破壊できていない、ということだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "シロ、これ…もし本当に扉が動いてるなら、いつかコンクリートから出てくるんじゃないの？そうなったら、どうなるの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団のシミュレーション文書には、SCP-1983が完全に封印を破った場合のシナリオが存在する。ただしその文書のクラスはトップシークレット以上で、私が読んだのは最初の1行だけだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "1行だけって…何が書いてあったの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "『扉が開いた時、向こう側が来るのではない。こちら側が、向こうになる』。それだけだ。その先は、私には読めなかった。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし古い廃屋で、どこにも繋がっていないはずの扉を見つけたら。開けるな。近づくな。そして、自分の名前を呼ぶ声が聞こえても、絶対に振り返るな。それだけ覚えておいてくれ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-049『ペスト医師』を取り上げる予定だ。治療を施すと言いながら、触れた者を全員死体に変えるあの存在の、財団が公表しなかった手術記録を読み上げる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書が役に立ったと思うなら、高評価と登録で財団への協力を示してくれ。チャンネル登録者1万人を目指して毎日投稿している。あなたの登録が、次の報告書の解読を続けさせてくれる。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "心臓を持って入れ——それが唯一の収容条件",
+      "扉を開けた12名、全員が消滅"
+    ],
+    "subtitle": "財団が封印した『開けてはいけない扉』の正体",
+    "tagline": "機密レベル：最高機密 / 財団内部報告書より流出"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1782692836_3611",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": null,
+      "claude": {
+        "title": "SCP-1983「ドアの向こうの闇」— 心臓を持たずに開けた扉の先で、財団員は何を見たのか"
+      }
+    }
+  }
+}

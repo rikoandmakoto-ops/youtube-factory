@@ -1,0 +1,446 @@
+{
+  "title": "一口SCP：SCP-1618「消える図書館」— 入館した72時間後、司書の記録が完全に消えた本当の理由",
+  "theme": {
+    "title": "SCP-1618「消える図書館」 — 収容されている本の恐怖",
+    "angle": "異常な図書館オブジェクトの詳細"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "ある図書館に入った職員が、72時間後に自分の名前を答えられなくなった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、図書館に入っただけで？それって本当に起きたこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1618、財団が『消える図書館』と呼ぶ異常存在だ。接触者23名中19名が同様の症状を示した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "23人中19人って…残り4人はどうなったの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残り4名の記録は今も[DATA EXPUNGED]だ。財団でも閲覧権限Lv4以上の職員にしか開示されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから登録よろしく！続きの詳細は関連動画でチェックしてね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "ある研究員が翌朝、自分の名前を答えられなくなった。その図書館に入館してから、わずか72時間後のことだった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、図書館に入っただけで？名前が分からなくなるって、それもう普通の話じゃないよ…怖すぎる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "接触者23名中19名が、72時間以内に自分の氏名・生年月日・家族構成のいずれにも反応を示さなくなっている。残り4名の記録は[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4名だけ違う記録って…それが一番怖いんだけど。なんで消されてるの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それを今から話す。これはSCP財団のデータベースに登録された異常存在、SCP-1618の話だ。財団はこれを『消える図書館』と呼んでいる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消える図書館…その名前だけでもう背筋が冷たくなってきた。どんな場所なの、それ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1618は、外見上は一般的な古い公共図書館と区別がつかない。蔵書は約14,000冊、建物の規模も普通だ。異常はその中身にある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "外から見ても分からないのか…それ、知らずに入っちゃう人がいるってこと？ゾッとする。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が最初にこの施設を認識したのは、地域住民から『図書館に行った家族が帰宅後に自分の名前を忘れた』という報告が複数件寄せられたことがきっかけだった。最初の報告から財団が確保するまでに約3週間かかっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3週間…その間にも入館者がいたってこと？被害者がどんどん増えてたってことじゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "オブジェクトクラスはKeter。財団が定める3段階分類の最上位だ。過去にKeter指定SCPが収容違反を起こした際、半径2km以内の民間人に記憶障害が発生した事例が3件記録されている。それと同じ危険度を財団はSCP-1618に与えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Keter…図書館なのにKeterって、どれだけヤバいんだよ。記憶障害が2km圏内って規模がデカすぎる。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルは厳重だ。SCP-1618の建物は半径500m以内への一般人の接近を禁止、常時武装警備員3名が24時間体制で監視している。内部への立ち入りはLv3以上の職員かつ2名以上での同行が必須とされている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2名以上での同行が必須って…1人で入ったら何が起きるの？報告書に書いてある？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1名での侵入を試みたDクラス職員が1名いる。記録番号[REDACTED]。その職員の入館後の記録は48分で途絶し、その後の状況は財団内部でも閲覧権限Lv4以上にしか開示されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "48分で記録が途絶…その人どうなったの、本当に怖いって。Lv4以上しか見られないって何が書いてあるんだよ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題はその蔵書にある。SCP-1618内部の本は、一見すると普通の書籍に見える。しかし財団の調査で判明したのは、館内の本を手に取った者の個人情報が、その本の中に『書き込まれていく』という事象だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "書き込まれていく？自分の情報が本の中に入っていくってこと？それって、その分自分から消えるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説はまさにそれだ。本を手に取った者の記憶・個人情報・自己認識が、書物の形式に変換されて蔵書の中に格納される。格納された情報は本人の認識から失われていく、と報告書には記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "格納されるって…その本を取り出せば戻るの？それとも消えたままなの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が試みた回収実験の記録がある。被験者が失った記憶に対応すると思われる書籍を特定し、館外へ持ち出した。しかし被験者の記憶は戻らなかった。その書籍は館外に出た瞬間、全ページが白紙になっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "白紙に…じゃあ本の中に入った情報は、外に出た瞬間に消えるの？戻す方法がないってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現時点で財団は『記憶の回収方法は不明』と結論付けている。報告書には実際にこう記されている。『対象者は自身の氏名・生年月日・家族構成のいずれにも反応を示さず。処遇はDクラス職員規定第7条に基づき実施された』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Dクラス職員規定第7条って何？それが一番怖い言葉に聞こえるんだけど…。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第7条の内容は財団内部でも閲覧権限Lv4以上の職員にしか開示されていない。私には見えない領域だ。ただ、財団でその規定が適用された事例の結末を知っている職員は、例外なく口を閉ざす。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "口を閉ざす…それって知ったら終わりってことじゃないか。嘘だろ、怖すぎる。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに不気味なのは、SCP-1618の蔵書数が増え続けているという事実だ。財団が最初に確認した時点では約14,000冊だったが、3年後の再調査では約16,400冊に増加していた。新たな本は誰も持ち込んでいない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "誰も持ち込んでいないのに2400冊増えた？それって、その分だけ誰かの記憶が吸われたってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の推測では、SCP-1618は収容されていない期間に接触した民間人の記憶を蓄積し続けていた可能性が高い。つまり財団が確保する以前から、少なくとも2400件規模の被害が存在していたと考えられている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2400件…全員自分の名前を忘れて、どこかで今も生きてるってことだよね。それ、誰も助けられてないじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が特に警戒しているのは、蔵書の増加が加速している点だ。最初の3年で2400冊増加したが、その後の1年間だけで約800冊増加している。収容下にあるはずなのに、なぜ増え続けるのかは未解明のままだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容されているのに増えてるって…それ収容できてるって言えるの？財団でも止められてないじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が最も恐れているのはその点だ。SCP-1618は建物という形態を持ちながら、その影響範囲が物理的な接触に限定されない可能性が浮上している。報告書の該当箇所は[REDACTED]で塗り潰されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "物理的な接触に限定されない？じゃあ近くにいるだけで吸われるってこと？それはもう防ぎようがないじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部文書には『SCP-1618の影響半径に関する実験結果』という項目がある。しかしその実験の詳細も結果も、現在はすべて[DATA EXPUNGED]だ。実験を行った研究チーム5名のうち、3名の所在が現在も不明とされている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "研究チームの3名が行方不明…実験したチームに何かあったってこと？それ、財団も止められなかったってことだよね。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もう一つ、財団が記録している奇妙な事象がある。SCP-1618の内部にある蔵書は、それぞれに分類番号が付いている。通常の図書館と同じ形式だ。しかし財団の調査員が分類番号を照合した結果、一部の番号が実在する人間の個人識別番号と一致していることが判明した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "個人識別番号と一致？それって、特定の人間がどの本になったか分かるってこと？それ、確認した人は何を見たの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "確認を行った調査員の報告書はここで途絶している。最後の記録にはこうある。『該当番号の書籍を開いた。内容を確認した。これ以上の記録は』——そこで文章が終わっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "文章が途中で終わってる…その調査員、本を読んだ後に何かが起きたってこと？怖すぎて声が出ない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-1618の蔵書を読んだ者は、その本の『持ち主』の記憶と自己認識を部分的に受け取る可能性があるとされている。ただしこれはあくまで仮説だ。財団でも確証は持てていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "他人の消えた記憶が自分に入ってくるかもしれない本棚って…それもう読んだら終わりじゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在SCP-1618に対して財団が取っているアプローチは、完全な封鎖と観察の継続だ。無効化・破壊・転送のいずれも試みていない。理由は報告書にこう記されている。『対象への積極的介入が蔵書の急増を引き起こす可能性を否定できない』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "壊そうとしたら蔵書が増えるかもしれないって…それって壊すほど被害者が増えるってこと？手を出せないじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が最後に行ったのは、SCP-1618の周囲に記憶保護フィールドの試験的設置だ。これはSCP-1618が発生させる影響を遮断するための実験的措置で、効果測定は現在も継続中とされている。ただし試験設置から18ヶ月後、蔵書数は再び増加に転じた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記憶保護フィールドを設置しても蔵書が増えた…財団の対策も通用しないってこと？もうどうしようもないじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書で最後に記されているのは、ある警告文だ。『SCP-1618は現在も活動中であり、収容状態は不完全である。本報告書を閲覧した職員は、以後6ヶ月間の定期的な自己認識確認テストへの参加が義務付けられる』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "報告書を読んだだけで自己認識確認テストが必要になるの？じゃあ今この動画を見てる僕たちは……。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それは財団の管轄外だ。ただ一つ確かなことがある。この報告書が今ここに流出している以上、財団の情報管理はどこかで穴が開いている。そしてSCP-1618の蔵書は今この瞬間も増え続けている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "穴が開いてる…それって財団すら把握できていない場所で、今も誰かが吸われてるかもしれないってことだよね。嘘だろ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1618に関して財団が公式に発表しているのは、所在地も存在も何もない。あの図書館がどこにあるか、財団以外の誰も知らない。いや、財団でさえ今の所在を完全に把握できているかどうか、怪しい部分がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団でさえ把握できてないって…それもうどこにでもあるかもしれないじゃないか。近所の図書館が実は、なんて考えたくもない。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "一つだけ覚えておいてほしい。古い図書館で、棚の奥の方の本が妙に引き寄せられる感覚がしたなら、それは好奇心じゃないかもしれない。そして手に取った後で自分の名前を確認する習慣を持つことを、財団は推奨している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分の名前を確認する習慣…そんなこと普段意識しないよ。でも今から意識しないといけない気がしてきた。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回のSCP-1618の情報はSCP財団Wiki（CC BY-SA 3.0）を基に構成した。原典の改変は最小限にとどめ、財団の記録として考察と解説に焦点を当てている。この報告書の続きを知りたいなら、チャンネル登録を押しておいてほしい。次に流出した報告書が届いた時、通知が来るから。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は財団が最も古い収容違反記録を持つ存在、SCP-173『彫刻』の隠された事件記録を掘り下げる。目を離した0.3秒に何が起きるか、財団の内部記録に残された証言がある。見逃したくなければ、登録しておいてほしい。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし古い図書館で見慣れない本が目に入っても、決して手に取るな。そして72時間後、必ず自分の名前を声に出して確認してほしい。それが言えるなら、まだ大丈夫だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "入館者72時間後に記録消滅",
+      "財団Lv4以上しか閲覧できない収容プロトコル"
+    ],
+    "subtitle": "SCP-1618【その本棚に触れた者の名前が消える】",
+    "tagline": "財団が隠し続けた異常図書館の全記録、ここに流出"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1783729054_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bは冒頭から『72時間後に名前を答えられなくなった』という具体的事実でフックを形成し、数値・閲覧権限Lv・[DATA EXPUNGED]などの固有情報で specificity と wording_quality が大幅に上回る。さらにCTAを世界観に溶け込ませた形で配置し、ラストの『72時間後に自分の名前を確認して』という視聴者巻き込み型の締めが視聴維持・登録転換の両面でAを明確に凌駕している。",
+      "scores_a": {
+        "hook_strength": 4,
+        "specificity": 3,
+        "pacing": 5,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "SCP-1618「消える図書館」— その本を開けてはいけない理由"
+      },
+      "claude": {
+        "title": "一口SCP：SCP-1618「消える図書館」— 入館した72時間後、司書の記録が完全に消えた本当の理由"
+      }
+    }
+  }
+}

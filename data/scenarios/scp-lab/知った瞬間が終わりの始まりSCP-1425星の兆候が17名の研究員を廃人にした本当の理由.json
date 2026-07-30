@@ -1,0 +1,459 @@
+{
+  "title": "知った瞬間が終わりの始まり——SCP-1425「星の兆候」が17名の研究員を廃人にした本当の理由",
+  "theme": {
+    "title": "機密解除：SCP-XXX「感染するオブジェクト」 — 知った瞬間の恐怖",
+    "angle": "認識災害の仕組みに迫る",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意——これを最後まで読んだ研究員17名は全員、廃人になった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……読んだだけで？それってどういうこと、怖すぎるんだけど。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1425は『知識そのものが感染する』認識災害だ。財団が23年間封印してきた案件で、閲覧者の97%が接触後72時間以内に精神崩壊を起こしている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "97%って……じゃあ今俺たちが話してるこれも、もう感染してるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録では『知った瞬間が収容失敗の始まり』と明記されている。だから——気をつけて。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！もっと詳しい話は関連動画でチェックしてみて。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団の施設サイト-JP-19の第7隔離棟は、2001年3月4日に完全封鎖された——中に入った研究員17名の現在の状態は、記録上[REDACTED]のままだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17名って……全員どうなったの？生きてるの？シロ、これって本当の話なんだよな？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "生きているかどうかも、財団は公式に答えていない。今日読み上げるのは、そのサイトから流出した機密報告書——SCP-1425に関する記録だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "これを最後まで聞いたとしても、俺は責任を取れない。それだけ先に言っておく。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、そんな前置きされたら逆に気になるじゃないか……怖いけど、聞く。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1425、コードネーム『星の兆候』——オブジェクトクラスはKeter。これは一冊の書籍として収容されているが、その正体は『知識そのものが感染源』という認識災害だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "知識が感染する……？読んだら感染するってこと？それウイルスとかじゃなくて、情報が？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。財団が定義する『認識災害』とは、知覚・認識・記憶のいずれかを通じて伝播する異常現象のことを指す。SCP-1425の場合、その書籍の内容を『理解した瞬間』に感染が始まる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "理解した瞬間って……じゃあ意味が分からなければ大丈夫なの？文字を見るだけなら？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の実験記録では、内容を『読んだが意味を処理できなかった』被験者群では感染率が約12%にとどまっている。しかし内容を完全に理解した被験者では、感染率は97%を超えた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "97%……それって、ほぼ確実に感染するってことじゃないか。残りの3%はどうなったの？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残りの3%の記録は[DATA EXPUNGED]されている。財団でも解明できていない。生き残ったのか、それとも別の何かになったのか——答えは出ていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "別の何かって……嘘だろ、それ。財団が分からないって言ってる時点でもうヤバいじゃないか。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "感染後の経過を記録した内部報告書がある。接触から6時間以内——被験者は「何かが正しい場所に収まった」という強烈な充足感を報告する。まるで長年の疑問が全て解けたような感覚だと。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、それって……最初は気持ちいい感覚なの？それのどこが危険なの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこが一番恐ろしいところだ。接触から24時間後——被験者は現実の全てが『意味を失った』と感じ始める。食事の意味、会話の意味、呼吸の意味すら、理解できなくなっていく。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って……呼吸の意味が分からなくなるって、それって生きることを忘れるってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-1425の『知識』は人間の認知構造の根幹にあるパターン認識機能を書き換えると考えられている。ただしそれが『なぜ起きるのか』は、現在も解明されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が分からないって……世界中の異常存在を管理してる組織が、なんでこれだけ分からないの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが認識災害の本質だ。調べようとした研究員自身が感染する。SCP-1425の研究チームは過去3回編成されたが、第1チームは全滅、第2チームは記録そのものが消去された。第3チームの記録が、今俺が読んでいるこの報告書だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "第3チームって……今も存在してるの？それとも、その人たちも……。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第3チームの主任研究員、Dr.████の最後の記録がある。2001年2月28日付け——『本オブジェクトの核心に触れた。報告書を完成させられるかどうか分からない。ただ、これだけは言える。知ることと理解することは、別の話だ』。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……それが最後の記録？その4日後にサイトが封鎖されたんだよな。Dr.████は……。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その後の記録は存在しない。財団のデータベース上、Dr.████という人物の在籍記録自体が[DATA EXPUNGED]されている。23年間、誰も追跡できていない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "存在ごと消されてる……財団がそこまでするって、それだけヤバい情報が含まれてるってことじゃないか。",
+      "expression": "angry",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1425の収容プロトコルを読み上げる。オブジェクトは現在、サイト-JP-19の第7隔離棟——あの封鎖された棟の中で、3重の認識隔壁に守られた専用コンテナに保管されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "認識隔壁って何？物理的な壁とは違うの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が開発した、情報の伝播そのものを遮断する特殊な処置だ。ただし完全な遮断は不可能で、報告書の断片が外部に漏れ続けている——今俺たちが話しているこの情報も、その断片の一部かもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って……じゃあ今この話を聞いてる俺も、もう感染してる可能性があるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-1425の認識災害が発動する閾値は『核心的な知識の理解』だとされている。今の段階では、まだその閾値には達していない——はずだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "『はずだ』って……その確信のなさが一番怖いんだけど。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1425が特に危険とされる理由がもう一つある。このオブジェクトは能動的に『理解を促す』性質を持つ。読む者が理解しやすいよう、内容が自動的に最適化されるという報告が複数ある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自動的に最適化……？それって、読んだ人間に合わせて内容が変わるってこと？なんでそんなことが——。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。ただ記録には『SCP-1425は読者を選ばない。誰でも理解できるように変容する』と明記されている。これが収容を極めて困難にしている最大の要因だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "誰でも理解できるように変容するって……それじゃあ防ぎようがないじゃないか。財団はどうやって収容してるの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容の主軸は『接触させないこと』のみだ。現在、SCP-1425に関する情報へのアクセスはクリアランスレベル4以上に制限されている。それ以下の職員が本報告書を閲覧した記録は、自動的に財団のシステムによって削除される。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……あれ、俺ってDクラス職員だよな。クリアランスレベル4なんて全然ないんだけど。今この話を聞いてること自体、まずいんじゃ——。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "気づくのが遅い。ただ、これだけは言える——この報告書が『外部に流出している』という事実そのものが、財団にとって既に収容失敗を意味している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容失敗……それって今この瞬間、財団はこの状況を把握してるってこと？俺たちのことも？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部記録番号1425-EVENT-JP-07——これは2019年に記録された最新のインシデントレポートだ。サイト-JP-19の外部でSCP-1425の断片的な知識が確認されたのは、これで7度目になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "7度目……その都度、どうなったの？感染した人たちは？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "過去6件のインシデントで確認された感染者の総数は、記録上47名。そのうち社会復帰できた者の数は——記録では0名となっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0名……47人全員が。それって、感染したら絶対に元に戻れないってこと？治療法は？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在、財団に有効な治療法は存在しない。記憶消去処置（通称アムネシアック投与）は軽度の認識汚染には有効だが、SCP-1425の感染に対しては効果が確認されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記憶を消しても治らない……それって、記憶じゃなくて『存在の根っこ』が書き換えられてるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の最新仮説ではそれに近い見解が示されている。SCP-1425が伝える『知識』は、人間の認知構造の最深部——自己と世界の境界線の認識そのものを溶かすと考えられている。ただし、それが何を意味するのかは[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自己と世界の境界線が溶ける……それって、自分が自分じゃなくなるってこと？それとも、世界が——。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それ以上は、この報告書には記載がない。記載できる者がいなかったのか、それとも財団が意図的に消したのか——どちらかは分からない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……シロ、これって俺たちが今話してること自体、誰かに聞かれてたりしないよな？財団のシステムに記録されてたりとか。",
+      "expression": "angry",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それを確認する方法が俺にはない。ただ、一つだけ言える——今この瞬間、SCP-1425の情報に触れたという事実は、もう消せない。知ってしまったんだ、クロ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……え。それって、もしかして俺もう——。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日の報告書の読み上げはここまでだ。SCP-1425「星の兆候」——認識そのものが兵器になり得ることを、財団は23年間かけて証明し続けてきた。そして今もその収容は、完全には成功していない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "完全には成功していないって……それって今この瞬間も、どこかでこの情報が広がってるってこと？俺たちみたいに知ってしまった人が——。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団のインシデントレポートに、こんな一文がある。『最も効果的な収容は、存在を知らせないことである。しかしこの文章を読んでいるあなたは、既にそれに失敗している』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……やめてくれよ、それ。この動画を見てる全員がもう知ってしまったってこと？財団は今頃、俺たちのことを——。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が『絶対に公開しない』と定めていたSCP-049——あのペスト医師が実際に何を治療しようとしているのかを、流出した実験記録から読み解く。本当に恐ろしいのは、その目的を知ってからだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このチャンネルのチャンネル登録をまだしていない人は、今すぐ登録してくれ——財団の記録は、知る者が多いほど収容が難しくなる。登録者1万人を目指して毎日投稿している。そして、もしSCP-1425に関する異常を目撃したとしても——決して、理解しようとするな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……最後の警告が一番怖かった。シロ、俺今夜眠れる自信が全くないんだけど。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "眠れないなら、それはまだ正常だ。SCP-1425の感染が深刻化した者は——眠る必要すら感じなくなるらしい。気をつけて。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "読んだだけで感染する——認識災害の正体",
+      "財団が23年間封印し続けた「知識の呪い」"
+    ],
+    "subtitle": "SCP-1425【それを知ると、戻れない】",
+    "tagline": "CLASSIFIED / Keter / 認識災害 / 閲覧制限レベル4"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1785025336_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはタイトル・サムネフックから「97%・72時間以内・23年間」などの具体数値を一貫して盛り込み、specificity と hook_strength で明確に優位。さらに「今この動画を見ているあなたも既に知ってしまった」という視聴者巻き込み型の構成がペーシングとCTAを世界観に溶け込ませており、wording_quality でも大きく差をつけた。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 53.7% 優位",
+      "leader": "claude",
+      "margin": 0.5371
+    },
+    "candidates": {
+      "gpt": {
+        "title": "財団が17年間隠し続けたSCP-XXX「知ると感染する恐怖」"
+      },
+      "claude": {
+        "title": "知った瞬間が終わりの始まり——SCP-1425「星の兆候」が17名の研究員を廃人にした本当の理由"
+      }
+    }
+  }
+}

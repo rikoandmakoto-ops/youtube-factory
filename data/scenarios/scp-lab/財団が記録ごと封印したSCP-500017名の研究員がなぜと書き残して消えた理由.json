@@ -1,0 +1,452 @@
+{
+  "title": "財団が記録ごと封印したSCP-5000——17名の研究員が「なぜ？」と書き残して消えた理由",
+  "theme": {
+    "title": "SCP-5000「なぜ？」 — 財団が突然人類殲滅を開始した世界線で一人の男が持ち出した記録",
+    "angle": "パワードスーツを拾った非戦闘員の逃亡劇。なぜ財団は人類を敵と判断したのかの謎"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団が突然、人類を殲滅し始めた記録がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、守るはずの財団が？どういうこと、それ怖すぎる……。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-5000。財団職員が着用するパワードスーツに、その全記録が残されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "なんで財団は人間を殺そうとしたんだよ……理由は分かったの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団内部で承認された文書には、たった一言だけ残っていた——「なぜ？」と。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中、応援よろしくね！続きは関連動画でチェックして。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団の内部記録に、2021年付けで封印されたファイルがある——職員コード「ピエトロ・ウィルソン」が残した報告書だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "封印？財団って異常存在を封印する側だよな……なんで自分たちの記録を封印するんだよ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それがSCP-5000の核心だ。この報告書を読んだ17名の研究員は全員、翌週には財団の人員名簿から消えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17名……消えたって、どういうこと？異動？それとも——",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録は[DATA EXPUNGED]されている。財団でも解明できていない、あるいは解明したくない何かがそこにある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日はSCP-5000「なぜ？」を読み上げる。これは財団が人類殲滅を開始した世界線の記録だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、財団が人類を殲滅って……それって財団の存在意義と真逆じゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう。財団の綱領には『確保し、収容し、保護する』とある——人類を守るための組織が、その人類を標的にした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-5000の本体は、財団が開発した特殊パワードスーツだ。全長約2メートル、重量推定320キログラム。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "320キロ……ゲームのボスキャラみたいなスペックだな。でも、それがなんで封印されてるんだ？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このスーツは、財団職員ピエトロ・ウィルソンが着用して逃げ続けた装備だ——財団自身から逃げるために。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団から逃げる……？財団の職員が、財団に追われてた？意味が分からない、怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ある日を境に、財団は世界中で一斉に人類への攻撃を開始した。理由は一切、通達されなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部文書によれば、2019年11月3日00:00を起点として全サイトで同時に『人類殲滅プロトコル』が発動している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "11月3日……日付まで特定されてるのか。その日、財団の中で何があったんだ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが[REDACTED]なんだ。財団上層部がその決断を下した理由は、現存する記録から完全に切り取られている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ピエトロはその瞬間、サイト内にいた。同僚たちが次々と倒れていく中、彼だけがスーツを奪って脱出した。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同僚が……倒れてく中を逃げたのか。それ、どんな気持ちだったんだろ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書の中でピエトロは72日間、廃墟となった都市を逃げ続けた記録を残している。目撃した死体の数は推定3000体以上。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3000体……72日で3000人。毎日40人以上が死んでる計算じゃないか、それ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ピエトロは逃げながら、ひたすら一つの問いを繰り返した——『なぜ？』と。それがこのSCPのタイトルの意味だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "なぜ財団が人を殺すのか。誰も答えを知らないまま、人が死んでいくのか……。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説の一つには、『人類そのものが異常存在になった』という記述が残っている——ただし出典は[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人類が異常存在に……？それって、財団からすれば収容か殲滅するしかないってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう読める。財団の論理では、人類が脅威と判断されれば収容プロトコルの対象になる——人間であっても例外はない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "別の仮説では、財団が何らかの存在に乗っ取られたという記述もある。承認者のIDは全員、死亡日時が一致している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "承認者が全員同じ日に死亡……じゃあ誰がプロトコルを発動させたんだよ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。あるいは、解明した者がいたとして——その記録もまた[DATA EXPUNGED]されたのかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ピエトロの記録の中で特に不気味なのは、財団の異常存在たちの動きだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が殲滅プロトコルを発動したなら、収容されてた異常存在たちはどうなったんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容が解除され、世界中に解き放たれた——だがその異常存在たちは、人間を傷つけなかったという記述がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え？異常存在が人間を傷つけなかった？財団が人を殺してるのに、異常存在は人を守ったってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そういうことだ。守るべきものと脅威の立場が完全に逆転した世界——それがSCP-5000の世界線だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ピエトロは72日目に、財団の旧サイトへと辿り着く。そこで彼は一つの端末を発見した。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "端末……財団のサイトに残された端末か。そこに何が書いてあったんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が殲滅プロトコルを発動した理由に関するファイルが一つだけ残っていた——ただし、そのファイルは開封された形跡がない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "開封されてない……誰も読まなかったのか？なんで？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ピエトロは端末の前で止まった。そして、そのファイルを開かなかった。報告書には一言だけ書かれている——『なぜ？』。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "開かなかった……なんで開かなかったんだよ。答えがそこにあったのに。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、そのファイルを開いた者は全員消滅している——承認者17名の末路と同じように。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "知ることが、死に直結してる……答えを知ったら消されるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが財団の見解だ。SCP-5000の真の異常性は、スーツでも殲滅プロトコルでもなく——その『理由』そのものにある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団がなぜ人類を敵と判断したか。その答えを知った存在は、例外なく記録から消えている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ってことは……今俺たちがこの話を聞いてるのも、まずいんじゃないか？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書は、ピエトロが死の直前に財団外部へ流出させたものだ——だから今、ここに存在している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-5000はCC BY-SA 3.0ライセンスのもと、djkaktusによってSCP財団Wikiに投稿された作品だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ピエトロは……その後どうなったんだ。スーツを持って逃げ続けて、最後は。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書の最後のページは白紙だ。日付だけが記されている——2020年1月14日。それ以降の記録は存在しない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "白紙……続きが書けなくなったってこと？嘘だろ、ピエトロはどこに行ったんだよ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団データベースには、ピエトロ・ウィルソンという職員の登録記録が一切残っていない——最初から存在しなかったかのように。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最初から存在しなかった……報告書だけが残って、書いた人間が消えてる。それって一番怖いやつじゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-5000が示す恐怖の本質はここにある——守る側が牙を剥いたとき、人類に逃げ場はない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は財団が最も恐れた存在、SCP-682『不死の爬虫類』を取り上げる——何度殺しても甦るその理由が、さらに不気味だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次回も怖そうだ……でも気になる。財団が何度挑んでも殺せない存在って、どれだけヤバいんだよ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もしあなたの身近で財団の職員を名乗る人間に会ったなら——その人間が本当に『人間』かどうか、確かめる方法はない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録と高評価で、この報告書が広まるほど財団は動きを活発化させる——それでも、次の記録を届ける。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "登録したら財団に目をつけられそうで怖いけど……でも続きが気になるから、登録するしかないじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから——気をつけて。この動画を見た記憶が、明日も残っているとは限らないから。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "財団が人類を『敵』と判断した日",
+      "記録はすべて[DATA EXPUNGED]"
+    ],
+    "subtitle": "SCP-5000「なぜ？」——パワードスーツが暴いた財団の禁忌",
+    "tagline": "17名の研究員が残した最後の一言が、すべての答えだった"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1784160171_8209",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはタイトル・サムネフックに「17名」「[DATA EXPUNGED]」「2019年11月3日」など具体的数値・固有名詞を多用しspecificityとhook_strengthで大差をつけており、CTAもSCP世界観に溶け込んだ「登録したら財団に目をつけられる」という演出でcta_effectivenessも高い。対してAは抽象的な表現が多く具体性・世界観没入感ともに劣る。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 2,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 120.8% 優位",
+      "leader": "claude",
+      "margin": 1.2079
+    },
+    "candidates": {
+      "gpt": {
+        "title": "財団が人類殲滅を決めた本当の理由とは？"
+      },
+      "claude": {
+        "title": "財団が記録ごと封印したSCP-5000——17名の研究員が「なぜ？」と書き残して消えた理由"
+      }
+    }
+  }
+}

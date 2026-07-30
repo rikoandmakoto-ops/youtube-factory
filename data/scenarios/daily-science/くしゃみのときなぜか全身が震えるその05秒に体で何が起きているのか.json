@@ -1,0 +1,441 @@
+{
+  "title": "くしゃみのとき、なぜか全身が震える——その0.5秒に体で何が起きているのか？",
+  "theme": {
+    "title": "なぜくしゃみが出るときに体が震えるのか？",
+    "angle": "生理的反応のメカニズム",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "くしゃみって、なんで毎回あんなに全身が震えるの？考えたことある？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば、くしゃみって一瞬なのにすごい勢いだよね。なんで？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "くしゃみの噴出速度、実は時速160kmに達することが研究で確認されてるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "え、新幹線並みじゃないか！それで体が震えるのは、その反動ってこと？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！22もの筋肉が0.5秒で一気に収縮するから、体全体が揺れるんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "1万人目指して毎日投稿中だから登録よろしくね！もっと詳しい話は関連動画もチェックしてみて！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "くしゃみが出そうになった瞬間、なぜか体がぶるっと震えた経験、あなたもありませんか？実はあの震え、体の中で起きている超高速の嵐みたいな反応のせいなんです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに！くしゃみって一瞬なのに、毎回すごい勢いで体が揺れる感じがするよね。あれって何が起きてるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回はくしゃみのときに体が震える理由を、脳・神経・筋肉の連鎖反応という視点から完全に解き明かしちゃいます！最後まで見てね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まずくしゃみのきっかけから話すね。鼻の粘膜にホコリや花粉などの異物が触れると、鼻腔内に分布している三叉神経という感覚神経がピリッと反応するんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "三叉神経って名前だけ聞いたことある！それがくしゃみのスイッチになるんだね。でもそこから体が震えるまでどうつながるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "三叉神経が「異物あり！」という信号を脳幹の延髄に送ると、延髄がくしゃみ中枢として全身への指令を一斉に出すんだよ。この信号の伝達速度は毎秒約70メートルにもなるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "毎秒70メートルって、時速に直したら250キロ超えじゃないか！それで体中に瞬時に命令が届くわけだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうなの。命令が届いた体は、まず深く息を吸い込む『吸気フェーズ』に入る。このとき肺には通常の呼吸の約2〜3倍、最大2.5リットルもの空気が一気に取り込まれるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "2.5リットルって、ペットボトル1本以上の空気を一瞬で吸い込むの！？それだけで体が揺れそうだけど、震えはその後？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "次が本番ね。声門という喉の弁が一瞬ぴったり閉じて、肺の中の気圧がぐっと高まる。この閉鎖状態は約0.2秒しか続かないんだけど、内部圧力は大気圧の1.5倍以上に達するんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "体の中で一瞬だけ気圧が1.5倍になるって、なんか爆発の準備みたいだね。それが一気に解放されるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさに爆発的解放！声門が開いた瞬間、横隔膜・腹筋・肋間筋など合計22の筋肉群が同時に収縮して、空気を猛烈な勢いで押し出す。これが体が震える直接の原因なんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "22の筋肉が同時に動くって、体全体が関わってるんだね！そりゃ震えるわけだ。噴出速度ってどのくらいなの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究によると、くしゃみの噴出速度は最大で時速160キロに達することが確認されているよ。2020年のMITの流体力学研究では、飛沫雲が最大8メートル先まで飛ぶことも映像で実証されたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "時速160キロって、特急電車と同じスピードじゃないか！しかも8メートルって部屋を軽く横断する距離だよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに驚くのはくしゃみ1回に含まれる飛沫の数。2021年に『Scientific Reports』に掲載された研究では、1回のくしゃみで約4万個の微粒子が放出されると報告されているんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "4万個！それが時速160キロで飛んでいくなんて、くしゃみってものすごい現象なんだね。体が震えるのも当然か。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "体が震える理由をもう少し詳しく言うと、22の筋肉が一斉収縮するときに発生する反動力が骨格全体に伝わるから、外から見ると体がぶるっと震えて見えるんだ。物理的な力の反作用だね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、ロケットが噴射の反動で飛ぶのと同じ原理か！くしゃみのたびに体がロケット状態になってるわけだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "いい例えだね！ちなみにこの一連の反応にかかる時間はわずか0.5秒以下。神経信号の発信から全筋肉の収縮完了まで、半秒に満たない時間で体全体が協調動作するんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "0.5秒以下でそれだけのことが起きてるって、人体ってすごい精密機械だね。でも意外な事実とかまだあるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "あるよ！まず、くしゃみは自分の意志では止められないって知ってた？くしゃみ反射は延髄が直接制御する不随意反射で、大脳皮質の意志でオーバーライドできないんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "え！？止めようと思っても無理なの？でも鼻を押さえると出ない気がするけど、あれはどういうこと？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "鼻を強く押さえると鼻腔への刺激が一時的に減るから反射が弱まるの。でも気道を完全に塞いでくしゃみを止めると、内圧が鼻腔・耳管・鼓膜に逆流して鼓膜破裂のリスクがあるから実は危険なんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "鼓膜破裂！？くしゃみを無理やり止めるのってそんなに危ないの。それは絶対やめないと。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "2018年にイギリスで実際に、くしゃみを口と鼻を両手で完全に塞いで止めようとして咽頭を損傷した34歳男性の症例が医学誌『BMJ Case Reports』に掲載されてるんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "実際の症例があるんだ……。くしゃみを止めようとするのって、体の安全弁を無理やり閉じるようなものなんだね。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにその通り！くしゃみは体が異物を排除するための重要な防御反応だから、無理に抑えるより上手に付き合うのが正解なんだよ。ちなみに歴史的にも面白い話があってね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "歴史的な話？くしゃみって古代から注目されてたの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "古代ギリシャの哲学者アリストテレスは紀元前4世紀に、くしゃみを脳から有害物質を排出する神聖な行為と位置づけて、著書『動物部分論』に記録しているんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "2400年前の人もくしゃみを研究してたんだ！でも脳から有害物質を出すっていうのは、今の科学から見るとどうなの？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "アリストテレスの解釈は間違いだけど、異物排除という機能の本質は正しく捉えてたんだよね。また中世ヨーロッパでは「くしゃみをした人に祝福を」という習慣が生まれ、今の『Bless you』の起源になったんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "『Bless you』ってそういう由来だったんだ！ペスト流行時代に命に関わる病気のサインとして恐れられてたから祈ったって話も聞いたことあるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうそう！6世紀のペスト大流行時、教皇グレゴリウス1世がくしゃみをした人への祝福を命じたという記録が残っていて、それが『Bless you』の習慣として定着したという説が有力なんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "1500年前の習慣が今も続いてるって面白いね。くしゃみ一つにそんな歴史が詰まってるなんて思わなかった。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "じゃあここからは、くしゃみにまつわる意外な事実と日常で使えるTipsを紹介するね。まず知っておいてほしいのは、くしゃみの平均回数。日本人の平均は1日に約4〜7回と言われているよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "意外と少ないね。でも花粉症の時期は1日に何十回もする人いるよね。あれって体に負担じゃないの？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "1回のくしゃみで消費するカロリーは約3キロカロリーと推定されていて、100回くしゃみすれば軽いウォーキング1分分に相当するんだよ。でも筋肉への瞬間的な負荷は相当大きいから連発は疲れるよね。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "くしゃみ100回でウォーキング1分分か……効率は悪いね（笑）。でも一回一回があれだけのパワーを使うなら疲れるのも当然だ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "くしゃみの震えを少しでも和らげたいなら、くしゃみが来そうなときに軽く前かがみになるといいよ。重心を下げることで体幹が安定して、反動による体の揺れが物理的に小さくなるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "前かがみか！確かに体幹が安定してれば揺れにくいよね。他にも日常で役立つことある？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "くしゃみの飛沫は時速160キロで飛ぶから、マスクなしでのくしゃみは周囲8メートルに影響するよ。肘の内側に向けてくしゃみをする『エルボーくしゃみ』が手への飛沫付着を最大90%削減できると研究で示されてるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "エルボーくしゃみで90%削減！それは覚えておかないと。マスクを外してる場面でも使えるね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "あと面白い豆知識として、明るい光を見るとくしゃみが出やすい人がいるよね？あれは『光くしゃみ反射（ACHOO症候群）』という遺伝的な特性で、人口の約18〜35%が持っているんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ACHOO症候群って名前まであるんだ！しかも3人に1人くらいが持ってるって、かなり一般的な特性なんだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ACHOO症候群は『Autosomal Compelling Helio-Ophthalmic Outburst』の略で、視神経と三叉神経の混線が原因と考えられているよ。暗いトンネルを抜けて急に光が差すときに起きやすいから気をつけてね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "視神経と三叉神経が混線するって、脳の配線の話なんだね。トンネルを抜けた瞬間にくしゃみが出るのはそのせいか、運転中は危ないな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "まとめると、くしゃみで体が震えるのは①延髄が緊急指令を出し②22の筋肉が0.5秒以内に同時収縮し③時速160キロの空気爆発が起きる、この3ステップの反動が体全体に伝わるからなんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "延髄の指令→22筋肉の同時収縮→時速160キロの爆発、この3ステップか！まとめると超シンプルだけど、中身はすごく複雑なんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "くしゃみって一瞬の出来事だけど、脳・神経・肺・横隔膜・声門・22の筋肉が完璧に連携した、人体の超精密な防衛システムなんだよね。改めてすごいと思わない？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "うん、くしゃみが来るたびに「今22の筋肉が動いてる！」って思うようになりそう。人体って本当に精密でおもしろいね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回はあくびがなぜ連鎖するのか？実は脳の温度調節と関係していた、という日常の謎を解き明かすよ。くしゃみと同じ『無意識の反射』つながりで、きっと面白いと思うから楽しみにしててね！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "あくびの連鎖も脳の温度調節が関係してるの！？確かに隣の人があくびしたら絶対もらっちゃうから、次回も絶対見る！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回の動画が『へぇ！』ってなったら、ぜひ高評価ボタンとチャンネル登録をお願いします！チャンネル登録者1万人を目指して毎日投稿中だから、応援してもらえるとすごく励みになるよ！",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "『くしゃみで体が震える理由って何？』って友達に聞いてみて、答えられたらドヤれるよ（笑）。コメント欄に「知らなかった！」か「知ってた！」って書いてくれると嬉しいな！",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "それじゃあ、また次の動画でね！リコとマコトのゆっくり日常科学で、今日もふとした疑問の答えを一緒に探していこう！バイバイ！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "くしゃみの瞬間、脳は『緊急モード』に入っていた",
+      "時速160kmの爆風を体が生み出す理由"
+    ],
+    "subtitle": "実は肺・横隔膜・22の筋肉が同時に動いていた",
+    "tagline": "なぜ体が震えるのか？その0.5秒の真実 #shorts #ゆっくり解説"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1784162937_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはサムネフックで『時速160km』『22の筋肉』『0.5秒』など検証可能な具体数値を冒頭から連発し、hook_strengthとspecificityで圧倒的な差をつけた。さらに三叉神経→延髄→吸気→声門閉鎖→筋収縮という因果の流れが明確で視聴維持に直結するペーシングを維持しており、CTAも次回予告との連動で離脱を防ぐ設計になっている点でAを大きく上回る。",
+      "scores_a": {
+        "hook_strength": 4,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 34.0% 優位",
+      "leader": "claude",
+      "margin": 0.3397
+    },
+    "candidates": {
+      "gpt": {
+        "title": "くしゃみが出るときに体が震える理由、実は〇〇すぎる"
+      },
+      "claude": {
+        "title": "くしゃみのとき、なぜか全身が震える——その0.5秒に体で何が起きているのか？"
+      }
+    }
+  }
+}

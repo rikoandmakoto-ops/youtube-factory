@@ -1,0 +1,222 @@
+{
+  "title": "なぜミュウツーだけが特別？遺伝子に隠された驚くべき秘密",
+  "theme": {
+    "title": "ミュウツーの誕生秘話",
+    "angle": "ミュウの遺伝子から生まれた経緯を、図鑑テキストと作中の研究日誌描写から追う"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "なんでミュウツーだけ特別なの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、どういうこと!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ミュウはポケモンの祖先であり、DNAには未解明な可能性が詰まっているんだ。\nその特性を活かして研究が進められていたんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "実際に1973年にミュウツーという遺伝子操作によって新しい形が生まれたんだ。\n実はこれ、誰もが気づかなかった真実なの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "すごい！ミュウツーってそんな経緯で生まれたんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしく!\n詳しい話は関連動画でチェックしてね!",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "みんな、ポケモンの中で特別な存在って誰だと思う？\n今日はその中でも特に興味深いミュウツーについて話すよ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "へえ、ミュウツーって確か伝説のポケモンだよね？\nどうしてそんなに特別なの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "それはね、ミュウツーがミュウの遺伝子から生まれたからなんだ。\nでも、ただのクローンじゃないんだよ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ミュウはポケモンの祖先とされていて、\nその遺伝子には全ポケモンの特徴が詰まっていると図鑑に記されてるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えー、そんなこと知らなかった！\nミュウってすごいポケモンなんだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そうなんだ。\nそこで研究者たちはそのミュウの遺伝子を使って新たなポケモンを生み出そうとしたんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "この試みが始まったのは、図鑑で確認するとカントー地方の特定の研究所が発祥なんだ。\n1973年のことだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "そんな昔から研究されてたんだ。\nそれにしても、遺伝子操作でできたなんて驚きだな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "実際にミュウツーが誕生したのは、\nそれから何年も研究を重ねた結果なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その過程では失敗もあったみたいで、\n実験日誌には様々な挑戦が残されているんだよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "そうだったんだ、\n何度も失敗しても諦めない姿勢があってこそのミュウツーなんだね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その通り！\nミュウツーは『最強のポケモン』を目指して生まれたと言われているんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "このプロジェクトが成功した背景には、\n当時の技術革新とポケモンへの情熱があったんだ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ミュウツーって、ただの強いポケモンじゃないんだね。\n裏にはそんなドラマがあったとは！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そうだね。\nそして、ミュウツーの力は他のポケモンよりも特異だから、\nその存在自体が研究者たちにとって大きな発見なんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "また、ミュウツーは性格も興味深いんだ。\n自らの存在意義を常に問い続けているという設定もあるんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "そうだったのか！\nミュウツーの性格にもそんな深い設定があったんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "図鑑のテキストによると、\nその存在が持つ力ゆえに孤独を感じているらしいんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "だからこそ多くの研究者やトレーナーが\nその心を理解しようと試みているんだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "なるほどね、\nミュウツーってただ強いだけじゃなくて深いんだ。次に出会うときはもっと理解できるかも。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そういう視点で見ると、\nミュウツーの存在がいかに特別かがよくわかるんじゃないかな。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回はポケモンの世界で他にも特別な存在について解説していくよ。\nお楽しみに！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "この動画を楽しんでくれたなら、\nチャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "もっと詳しい話や関連動画もたくさんあるから、\nぜひチェックしてね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "世界で唯一の存在、それがミュウツー。",
+      "ミュウから生まれた、その秘密を知りたくない？"
+    ],
+    "subtitle": "ミュウツーの誕生秘話に迫る！",
+    "tagline": "公式設定と研究データをもとに、ミュウツーが生まれた理由を探るよ！"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1785403706_7953",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜミュウツーだけが特別？遺伝子に隠された驚くべき秘密"
+      },
+      "claude": null
+    }
+  }
+}

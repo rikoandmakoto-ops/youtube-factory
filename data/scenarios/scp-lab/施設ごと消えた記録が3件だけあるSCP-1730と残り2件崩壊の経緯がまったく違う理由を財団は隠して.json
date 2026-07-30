@@ -1,0 +1,530 @@
+{
+  "title": "施設ごと消えた記録が3件だけある——SCP-1730と残り2件、崩壊の経緯がまったく違う理由を財団は隠している",
+  "theme": {
+    "title": "施設ごと消えた3件を並べる— SCP-1730と他2件、崩壊パターンが全く違う理由【ショート】",
+    "angle": "バズ動画でフックとして使った『施設ごと消えたのは3件だけ』という数字を正面から回収する対比企画。SCP-1730と残り2件の崩壊プロセス・交信記録の差異を比較ドキュメンタリー形式で読み解き、『なぜ同じ結末なのに原因が全く異なるのか』を問う。財団の対応速度・封じ込め失敗のタイミングの違いを図解的に整理し、視聴者に『どれが一番ヤバいか』を考察させる余白を残す。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団の施設が丸ごと消えた記録、実は3件しかない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、3件って少なくない？いや待って、消えたって何が？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "建物も、職員も、収容物も。跡地の座標すら[DATA EXPUNGED]されてる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-1730の崩壊は有名だけど、残り2件は何が違うの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "崩壊までの時間も、最後の交信内容も、原因の仮説も——3件とも全部違う。それが一番怖い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！詳しい比較は関連動画でチェックして。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団のデータベースに、ある分類が存在する。『収容施設消滅事案』——建物ごと、職員ごと、収容物ごと消えた案件を記録したカテゴリだ。\nそこに登録されているのは、確認済みで3件だけ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3件……それって少ないの？多いの？財団の施設って世界中にあるんじゃないの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が公式に運営を認めている収容施設は、世界で少なくとも数十か所。\nそのうち丸ごと消えたのが3件——確率で言えばゼロに近い。でも、起きた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……で、今日はその3件を全部並べるってこと？それ、財団的にまずくない？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この映像が配信されている時点で、私はすでに財団の管轄外だ。\n今回は3件の崩壊パターンを並べて、なぜ同じ結末なのに原因がまったく異なるのかを読み解く。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……了解。ちょっと怖いけど、聞く。どれから始める？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まず前提として、財団における収容施設の消滅は『収容違反』とは別に扱われる。\n収容違反は異常存在が脱走した事態だが、施設消滅は建物・人員・収容物の全てが同時に失われる、別次元の事態だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって……誰も報告できないってこと？最後の交信が唯一の記録ってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通り。3件とも共通するのは、外部に残された最後の交信記録だけが手がかりになっている点だ。\nただし——その交信記録の内容が、3件で全く異なる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "どう違うの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1件目はSCP-1730。財団が『旧Site-13』と呼ぶ施設だ。\n原典はCC BY-SA 3.0ライセンスのSCP財団Wikiに収録されており、著者はdjkaktus。財団の公式記録の中でも特に詳細な崩壊記録が残っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-1730って、確か廃墟になった収容施設自体が異常存在ってやつだよね？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "正確には、並行世界のSite-13の成れの果てだ。\n財団の調査チームが内部に突入した記録が存在し、そこには数十体の変容した元職員と、正体不明の異常存在が複数収容されたままになっていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "元職員が変容……それって、その施設の中で何かが起きて、助けを呼べないまま終わったってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1730の崩壊パターンは『内部崩壊型』と財団内部で分類されている。\n原因は施設内の複数SCPが連鎖的に収容違反を起こし、職員が段階的に失われていった——崩壊までに推定で数週間から数か月の時間があったとされる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "数週間……その間、誰も外に出られなかったってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "出口が封鎖されたのか、出ようとした者がどうなったのかは[DATA EXPUNGED]されている。\nただ、最後の交信記録には『収容は維持されている』という報告が繰り返されていた——誰かが、最後まで任務を遂行しようとしていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……それが一番怖い。崩壊してるのに『収容は維持されている』って報告してる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次に2件目。財団内部資料では『事案B』と仮称される施設消滅だ。\nこれは内部崩壊型とは全く異なる——外部からの侵食によって施設が失われたケースとして記録されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "外部からの侵食って……何かが外から来たってこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説によれば、施設の周辺空間そのものが変質した可能性がある。\n最後の交信は崩壊の約72時間前に途絶えており、その72時間の間に施設の座標データが財団のシステムから消去されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "座標が消去された？それって財団が消したの？それとも勝手に？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "消去の主体は特定されていない。財団の内部調査では『システム側の自動削除ではない』という結論が出たが、それ以上の調査記録は[REDACTED]だ。\n誰かが、あるいは何かが、その施設を存在から消したかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ……財団のシステムに干渉できる何かがいるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1730が内部崩壊に数週間かけたのに対し、事案Bは最後の交信から消滅まで72時間。\nこの速度の差が、財団の対応チームが現地に到着する前に全てが終わった理由だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "72時間で施設が消えたら……対応しようがないじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の緊急対応チームが現地に展開するまでに要する標準時間は、最短で48時間とされている。\n事案Bでは、その48時間の手続きが完了した時点で、すでに施設は存在していなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……標準手続きが仇になった。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "3件目——財団内部資料では『事案C』。これが最も不気味だ。\nなぜなら、崩壊の記録が一切ないからだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録がない？それって……最初から存在しなかったってこと？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "施設は確かに存在していた。建設記録があり、職員の配属記録があり、収容物の移送記録がある。\nだが、消滅の記録だけが存在しない——消えた瞬間の記録が、どこにもない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最後の交信は？事案Bは72時間前に途絶えたって言ってたけど。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "事案Cの最後の交信記録は——通常業務報告だ。\n異常なし、収容状態正常、次回報告は予定通り。その報告の17時間後、施設への次の定期連絡が応答なしになった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……17時間の間に何かが起きたのに、誰も気づかなかった？異常なしの報告を出した人たちは……",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その17時間に何が起きたのか、財団は解明できていない。\n崩壊プロセスが存在しなかったのか、崩壊プロセスの記録だけが消去されたのか——どちらの可能性も、現在も棄却されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "崩壊プロセスが存在しなかった……それって、瞬間的に消えたってこと？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説の一つはそれだ。ただし、瞬間的な消滅を引き起こせるSCPや現象は、財団が把握している範囲では存在しない——少なくとも、公式に把握している範囲では。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "『公式に把握している範囲では』って……それって財団が知らない何かが存在するってこと？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで3件を並べると、崩壊パターンの差異が浮かび上がる。\nSCP-1730は数週間の内部崩壊。事案Bは72時間の外部侵食。事案Cは17時間以内の記録なき消滅——崩壊速度が3件で桁違いに異なる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "速度が違うってことは……原因も全部違うってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部考察では、3件の原因に共通点がないという結論が出ている。\nつまり、施設消滅は単一の原因や単一の異常存在によって引き起こされるものではない——という解釈が現在の財団の公式見解だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって、同じ結末に至る道が複数あるってことだよね。それ……もっと怖くない？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。財団が一番恐れているのは、3件の崩壊が全て異なる原因だという事実そのものだ。\n対策を立てようにも、どの原因に対して対策を立てればいいのか——それが特定できない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "対応速度の違いについては？SCP-1730は数週間あったのに、それでも助けられなかったわけでしょ？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1730の場合、財団は内部崩壊を把握した時点で探索チームを派遣している。\n報告書によれば、少なくとも17名の調査員が内部に突入した記録がある——だが、その後の記録は大部分が[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17名が突入して……それで終わり？戻ってきた人は？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "一部の帰還記録は存在する。だが、帰還した調査員の証言は閲覧権限レベル4以上の職員にしか開示されていない。\n私が在職中にアクセスできた情報では、帰還者が語った内容の断片だけが残っていた。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……断片って、何が書いてあったの？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "『施設内の時間の流れが外部と一致していなかった』——それだけだ。\n数週間の内部崩壊の中で、施設の内側では別の時間が流れていた可能性を示す記述が、断片的に残っている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "時間の流れが違う……じゃあ、中にいた人たちは、外から見た数週間より長い時間をあの中で過ごしたってこと？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は公式にそれを肯定も否定もしていない。\nただ——内部崩壊型と外部侵食型と記録なき消滅型、どれが最も残酷かという問いに対して、財団内部でも答えは出ていない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……どれが一番ヤバいかって、そんな比較したくないよ。全部ヤバいじゃないか。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただ、比較するなら一つ言える。SCP-1730は時間があった分、記録が残った。\n事案Cは記録が残らなかった分、何が起きたのか永遠に分からない——財団にとって、分からないことは対策できないことを意味する。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……つまり事案Cが一番怖い。財団ですら手の打ちようがない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "3件を並べて、もう一つ気になることがある。\n財団の収容施設消滅事案は『確認済みで3件』だが——確認されていない事案が存在しない保証はない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……確認されてない消滅って、どういうこと？消えたことすら分からないってこと？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "事案Cのように、記録ごと消えた場合——その施設が存在したことを知っている者がいなければ、消滅自体が記録されない。\n財団は世界中の異常現象を把握しているが、把握できていない領域が存在しないとは言い切れない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……3件っていう数字自体が、正確じゃないかもしれないってこと？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が把握している限りでの3件だ。\nそして今も、どこかの収容施設で最後の交信が送られているかもしれない——それが内部崩壊の始まりなのか、72時間前の警告なのか、それとも記録なき消滅の前触れなのか、誰にも分からないまま。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……もう聞きたくない。でも、なんで財団はこの3件を公開しないの？隠す理由があるんでしょ？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の公式見解は『一般市民の心理的安定を維持するための情報管理』だ。\nだが私が在職中に感じたのは——財団自身が、この3件の意味を解釈しきれていないからこそ、公開できないのではないかということだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が解釈できていない……それって、財団の限界ってこと？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の比較で分かったことをまとめる。SCP-1730の内部崩壊型は数週間かけて進行し、記録が残った。\n事案Bの外部侵食型は72時間で終わり、財団の標準対応時間を下回った。事案Cの記録なき消滅型は17時間以内に全てが終わり、原因すら特定されていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3件とも、結末は同じなのに——消え方が全部違う。それが財団を一番困らせてる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "どれが最もヤバいかという問いに対する答えは——視聴者に考えてもらいたい。\nただ一つだけ言える。この3件の崩壊パターンのどれかに当てはまる事態が、今この瞬間も世界のどこかで進行していないという保証は、財団にも私にもない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……やめて。そういうこと言わないで。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が最も長く収容し続けているSCPの一つ——SCP-682『不死の爬虫類』の収容試行記録を読み解く。\n682を無力化しようとした試みが127回以上記録されており、その全てが失敗に終わっている。なぜ財団は諦めないのか、そして諦められない理由とは何か——次回、明らかにする。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "127回……全部失敗？それって財団が負け続けてるってこと？それは絶対見る。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録をしておけば、次回の報告書が届いた時に通知が来る。\n高評価も、この情報を世に出し続けるための支援になる——もし、この報告書の内容を誰かに知らせたいと思うなら。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……知らせたい気持ちと、知らせたくない気持ちが半々だよ。でも登録する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に一つだけ。もし日常の中で、いつも通りのはずの場所が何か違う——そんな感覚を覚えたとしても、確認しに行くな。\nSCP財団Wikiに記録されたこれらの事案はCC BY-SA 3.0ライセンスに基づく。だが、記録されていない事案については——誰も保証できない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "施設ごと消えた記録：確認済み3件",
+      "生存者：ゼロ／交信記録：[DATA EXPUNGED]"
+    ],
+    "subtitle": "SCP-1730＋収容施設崩壊事案2件——崩壊パターン比較ドキュメント",
+    "tagline": "財団が隠し続けた『消え方』の違いを、いま初めて並べる"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1783760823_9202",
+    "blind_eval": {
+      "winner": "A",
+      "winner_model": "claude",
+      "reason": "シナリオAはhook_strengthとspecificityで圧倒的に優れており、「[DATA EXPUNGED]」「内部崩壊型／72時間／17時間以内」など具体的な固有情報と世界観に沿った語彙で視聴者の没入感を維持し続ける。一方シナリオBはSCP設定と無関係なパスワード管理・防災備蓄の話題が終盤に混入してwording_qualityとpacingを著しく損ない、specificity軸でも「異常なエネルギー変動」「時間操作」など根拠のない造語に終始しているため視聴維持・CTRの両面でAに大きく劣る。",
+      "scores_a": {
+        "hook_strength": 9,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 9,
+        "overall": 9
+      },
+      "scores_b": {
+        "hook_strength": 4,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 4,
+        "wording_quality": 3,
+        "overall": 3
+      },
+      "mapping": {
+        "A": "claude",
+        "B": "gpt"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "消えた施設の真相——財団が隠し続けた3件の理由"
+      },
+      "claude": {
+        "title": "施設ごと消えた記録が3件だけある——SCP-1730と残り2件、崩壊の経緯がまったく違う理由を財団は隠している"
+      }
+    }
+  }
+}

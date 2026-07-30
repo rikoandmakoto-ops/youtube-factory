@@ -1,0 +1,464 @@
+{
+  "title": "目を離した0.3秒で首が折れる。SCP-173【財団が最初の収容違反を隠し続ける本当の理由】",
+  "theme": {
+    "title": "SCP-173「彫刻」",
+    "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "ねぇ、クロ。目を閉じる瞬間って、何秒だと思う？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、0.3秒とか？それがどうしたの…？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173はね、その0.3秒で対象の首を折る。財団が1993年に初収容した最古の異常存在の一つだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、まばたきで死ぬって…じゃあ収容してる研究員は絶対まばたきできないってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルには『複数人での監視』が義務付けられてる。一人が瞬きする間、別の目が見続けるために。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから、応援よろしくね！SCP-173の全貌は関連動画から見てね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "…この報告書、財団のデータベースから流出したものだ。読む前に一つだけ言っておく。これは創作じゃない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、シロ、いきなり怖いんだけど…何の話？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173。財団が収容管理するオブジェクトの中でも、最も古い記録の一つ。通称『彫刻』。今日はこれを読み上げる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "彫刻って、アート系の話？なんかそれだけ聞くと全然怖くなさそうだけど…",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その感覚が一番危ない。SCP-173を前にして『怖くなさそう』と思った人間が、次の瞬間に首を折られてる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…首を、折られる？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "オブジェクトクラスはEuclidだ。財団の分類でいえば『収容可能だが、挙動の予測が困難』なランク。決して安全じゃない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Euclidって、SafeでもKeterでもない中間ってやつだよね。でも首を折るのに、なんでKeterじゃないの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173が動くのは、視線が途切れた瞬間だけだ。複数人で常に監視し続ければ動かせない。だからEuclid、理屈の上ではね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "理屈の上では、って言い方が不安すぎる…",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルには明記されている。『収容室への入室は最低2名以上、扉を開ける前に全員で目視確認を行うこと』とね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2名以上か。でも2人でも、同時にまばたきしたら？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その0.3秒で、SCP-173は動く。人間のまばたきは平均0.15秒から0.4秒。その間に対象の首か頸椎を破壊する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0.15秒って、ほぼ一瞬じゃん…どれだけ速く動くの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の観測記録には速度の数値は残っていない。カメラを向けていても、視線が途切れた瞬間の映像には何も映らないんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、カメラにも映らない？それって、どういうこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説によれば、SCP-173の移動はカメラや機器ではなく『生物の観測行為』に反応しているとされている。詳細は[REDACTED]。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生物の観測行為…つまり機械の目じゃダメで、人間が見てないといけない、ってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが財団の現時点での見解だ。ただし、なぜそうなのかは未解明のまま報告書に残っている。分からないことが多すぎる存在なんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分からないことが多い存在を、なんで収容できてるの…？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173が発見されたのは1993年、とある倉庫の内部だったと記録されている。倉庫の持ち主の情報は[DATA EXPUNGED]。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "倉庫に彫刻が置いてあっただけ、みたいな話なの？最初に気づいたのは誰？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "発見者の名前は報告書から完全に削除されている。ただ一つだけ残っているのは、発見時の現場に3名の遺体があったという記録だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3名…死んでたってこと？その人たちがどうなったかも書いてあるの？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "遺体の状態の詳細は[REDACTED]。ただ、全員の頸椎に異常な損傷があったことだけが記録として残っている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ…発見した時点で、もう被害が出てたんだ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173の外観は、コンクリートと金属棒、そして錆で構成された人型の彫刻だ。高さは約1.9メートルと記録されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "1.9メートルって、大人より大きいじゃん。それが急に動いてくるって、考えるだけで…",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容室の床には赤褐色の液体が定期的に付着しているとある。財団は定期清掃を義務付けているが、その液体の成分分析結果は[DATA EXPUNGED]。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "赤褐色の液体って…それ絶対血だよね？でも彫刻なのに、なんで？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は公式にその液体の正体を発表していない。『清掃を怠ると収容違反のリスクが高まる』とだけ記載されている。理由は書かれていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "清掃を怠ると収容違反って、どういう意味なの？液体と動くことに関係があるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。報告書には『相関関係の可能性あり、調査継続中』と記されているが、調査記録の大部分は[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分からないことだらけじゃん…財団ってそんなに謎を抱えたまま収容してるの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の目的は『確保・収容・保護』だ。完全に理解することじゃない。分からなくても、動かさなければいい。それだけの話だよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それだけの話、って言い方が一番怖いんだけど…",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173の収容記録の中で最も恐ろしいのは、2004年に記録された収容違反レポートだ。詳細の大部分は[DATA EXPUNGED]。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容違反…脱走したってこと？どうなったの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残っている記録は二つだけだ。収容室の扉が内側から損傷していたこと。そして、その日の当直担当者3名が翌朝発見されなかったこと。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "発見されなかった…消えたってこと？死んだんじゃなくて？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "3名の消息は[DATA EXPUNGED]。SCP-173は翌日、収容室から約200メートル離れた施設の廊下で再発見されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "200メートル…施設の中を移動してたってことじゃん。夜中に、誰もいない廊下を。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "施設の監視カメラの映像は、その夜の分だけが全てノイズで上書きされていた。財団は原因を特定できていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "カメラも、記録も、全部消えてる…ほんとに何が起きたのか誰にも分からないってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は収容プロトコルをその翌月に改定した。監視人員を最低3名に増員、まばたきのタイミングを交互にずらす訓練を義務化している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "まばたきのタイミングを訓練するって、どんな職場なんだよ…",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが財団の日常だ。SCP-173の収容に関わる研究員は、勤務開始前に平均40時間の視線管理訓練を受けることが義務付けられている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "40時間…それでもまばたきを完全になくすことはできないよね？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから常に3名以上で入室する。1人がまばたきする間、残り2名が視線を維持する。チームで人間の生理的限界を補う仕組みだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって、もし3人同時にまばたきしたら終わりってことだよね。そんな綱渡り、よく続けられるな…",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-173は財団のデータベースにおいて最初期に登録されたオブジェクトの一つだ。それだけ長く、財団はこれと向き合い続けている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最初期から…つまり財団の歴史そのものと一緒に存在してるってこと？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだよ。そして今日も、どこかの施設で3名以上の研究員がまばたきのタイミングをずらしながら、あれを見つめ続けている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…考えたくないな。その人たちが今夜も、ずっと見てるって思うと。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の報告書の読み上げはここまでだ。この動画が気に入ったなら、チャンネル登録をしておいてくれ。次の流出報告書もすぐに来る。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-096、通称『シャイガイ』の収容記録を読み上げる予定だ。顔を見た者が全員死ぬ、その詳細な記録が手元に届いている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "顔を見たら死ぬ…SCP-173とは別の方向で怖すぎる。絶対に見る。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それと一つだけ忠告しておく。もし日常の中で、妙に動かない人型の物体を見かけたとしても、絶対に目を離すな。絶対に。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…シロ、それ最後に言う必要あった？今夜寝れないじゃん。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "眠れないのは正常な反応だよ。目を閉じることへの恐怖を感じているうちは、まだ正気だってことだから。おやすみ、クロ。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "目を離した瞬間、終わる",
+      "財団最古の異常存在 SCP-173"
+    ],
+    "subtitle": "視線が途切れた0.3秒で、首が折れる",
+    "tagline": "【機密】収容プロトコル違反記録 — なぜ財団はこれを隠すのか"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1783385051_5625",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはhook_strengthで「まばたきで死ぬ」という体験的な問いかけから入り視聴者を即座に引き込む構成が優れており、specificity面でも「1993年初収容」「平均0.15〜0.4秒」「40時間の訓練義務」など具体的数値を随所に盛り込むことで信頼感と没入感を両立している。さらにwording_qualityとpacingにおいても、クロの自然な疑問がシロの解説を段階的に深める対話リズムが機能しており、ラストの「目を離すな」という余韻あるクロージングがCTAの感情的動機付けとしても高く機能している点でAを大きく上回る。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 4,
+        "wording_quality": 5,
+        "overall": 5
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 9,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "視線を外すと0.3秒で首が折れる? SCP-173の恐怖の正体"
+      },
+      "claude": {
+        "title": "目を離した0.3秒で首が折れる。SCP-173【財団が最初の収容違反を隠し続ける本当の理由】"
+      }
+    }
+  }
+}

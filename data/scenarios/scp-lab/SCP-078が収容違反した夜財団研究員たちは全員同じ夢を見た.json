@@ -1,0 +1,488 @@
+{
+  "title": "SCP-078が収容違反した夜、財団研究員たちは全員『同じ夢』を見た",
+  "theme": {
+    "title": "SCP-078「悪夢の製造機」 — 収容違反と生まれた恐怖の真実",
+    "angle": "異常による夢の操作とその影響"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意。財団が必死に隠してる収容違反記録がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、隠してるって……どういうことだよ、怖いんだけど。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-078。収容違反から72時間で財団員17名が廃人になった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17名が廃人って……一体何をされたんだ、それ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "全員が同じ夢を見た。自分の最悪の記憶が、永遠に繰り返される夢を。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "詳細は関連動画で。チャンネル登録者1万人目指して毎日投稿中、応援よろしくね！続きは関連動画でチェック！",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書を読んだら、今夜あなたは眠れなくなるかもしれない。\nそれでも、続けていいか？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、なに……いきなりそんなこと言われたら逆に聞くしかないじゃないか、シロ。どういう案件なんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団データベースから流出した記録だ。案件番号はSCP-078、通称『悪夢の製造機』。\n今日はそれを読み上げる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "悪夢の製造機……名前からすでに嫌な予感しかしない。どんなオブジェクトなんだ、それ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "オブジェクトクラスはEuclid。外見は一見ただの古びた映写機に見える。\n製造年不明、製造者も[REDACTED]とされている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "映写機？それがなんで悪夢の製造機なんだよ……見た目は普通じゃないか、そんなの。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-078が異常性を発現するのは、電源を入れた瞬間からだ。\nスクリーンに映し出されるのは、映像ではない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "映像じゃないって、じゃあ何が映るんだよ……なんか嫌な予感がしてきたぞ、これ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "『記憶』だ。\n具体的には、スクリーンから半径8メートル以内にいる人間が持つ、最も深刻な心理的外傷——トラウマの記憶が映し出される。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、怖いって……自分のトラウマが勝手にスクリーンに映されるってこと？それ最悪じゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも映し出されるのはその人間だけに見える形式で、周囲の他者には知覚できない。\n財団の報告書ではこれを『選択的映像投影』と暫定的に呼んでいるが、発生原理は現在も未解明のままだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分だけに見える……それって誰にも助けを求められないってことだよな。\n孤独に自分の最悪な記憶を見せられ続けるのか、それ地獄だろ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題はそこだけじゃない。\nSCP-078の映像は、接触した人間の睡眠中にも継続して現れることが確認されている。要するに、夢の中にまで侵食してくる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "夢の中にまで……？じゃあ逃げ場がないじゃないか、目を閉じても追いかけてくるのか、それ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録では、SCP-078に接触してから平均で3日以内に被験者の睡眠効率が94%低下したというデータがある。\nほぼ眠れなくなる、ということだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "94%低下って……それほぼ不眠じゃないか。3日眠れなかったら人間どうなるんだよ、怖すぎる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "人間が72時間以上睡眠を取れない場合、幻覚・判断力の著しい低下・最終的には臓器への深刻な影響が出る。\nSCP-078はその状態を意図的に作り出す、と財団は仮説を立てている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "意図的に……ってことは、それは狙ってやってるってことか？\n映写機なのに、まるで生きてるみたいな言い方だぞ、シロ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でもその点は結論が出ていない。\nSCP-078に意思があるのか、それとも単なる自律的な異常機械なのか——記録は[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "データ抹消されてる……財団が意図的に消したってことだよな。\nそれって、分かったことが余計に怖かったってことじゃないのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "鋭い。\n財団がデータを抹消するのは、情報が危険すぎるか、あるいは記録した人間が……いなくなった場合だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "いなくなったって……嘘だろ、研究員が？それって一体どういう意味なんだよ、はっきり言えよシロ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルの記録に、こう書かれている。\n『初期調査担当者3名の所在は現在も不明。最終確認は████年████月、収容違反から48時間後』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "48時間後に……消えた？収容違反って何があったんだよ、それが一番怖いんだけど。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "では、収容違反の記録を読み上げる。\n記録によると、それは████年の深夜0時17分に発生した。電力系統の異常でSCP-078の収容室が一時的に外部電源に接続されたことが引き金だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "電力系統の異常でって……それって事故じゃないか、誰かのミスってこと？それで何が起きたんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-078が自動起動した。\nそして収容施設内の全フロア——半径推定200メートル以上の範囲に、映像投影が拡大された。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "200メートル以上？普段は8メートルじゃなかったのか……収容違反したら一気に広がったってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、通常時のSCP-078は何らかの形で出力が抑制されていると考えられている。\nだが収容が解かれた瞬間、その制限が消えた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "抑制されてたってことは……本来の力はもっとヤバいってことじゃないか。\n財団の収容って、むしろ蓋してるだけだったのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その夜、施設内にいた財団職員17名が同時に影響を受けた。\n翌朝の点呼で確認された時、全員が床に倒れていた。意識はあった。だが誰も、一言も話せなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17名が全員……話せなかった？眠ってたわけじゃないんだよな、それ、一体何があったんだよ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書にはこう記録されている。\n『17名は覚醒状態にあったが、全員が同一の虚空を注視しており、外部からの刺激に対して無反応だった。脳波計測では、全員が深いREM睡眠状態と同等のパターンを示した』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "目は開いてるのに脳は夢を見てる状態……それって起きてるのか眠ってるのか、どっちなんだよ。怖いって、それ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の医療チームが回復を試みたが、17名のうち12名は72時間後も同じ状態が続いた。\n残る5名は意識を取り戻したが、その後に語った内容が問題だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "語った内容が問題って……何を言ったんだよ、その5人は。聞きたいけど怖い、どっちの気持ちもある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "5名全員が、全く同じ夢を見たと証言した。\n内容は『暗い部屋の中で、自分の最悪の記憶が映写機で映し出され続ける。逃げようとするたびに、次の記憶が始まる』というものだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "全員が同じ夢……それって偶然じゃないよな、絶対に。SCP-078が5人に同じ夢を見せたってことじゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその証言を受けて、SCP-078が単なる個人への影響ではなく、複数の人間の精神領域を同時に接続する能力を持つ可能性を示唆した。\nだが、その仮説の詳細な研究記録は[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "また抹消されてる……財団ってどれだけのことを隠してるんだよ。知れば知るほど怖くなるぞ、これ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残りの12名については、記録にこう書かれている。\n『被験者12名は収容違反から96時間後に覚醒を確認。しかし全員が重篤な記憶の混乱を訴え、自己の同一性に関する認識が著しく損なわれていた』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自己の同一性が損なわれた……自分が誰か分からなくなったってこと？それって廃人になったってことじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその12名を上位収容施設に移送し、以降の情報は[REDACTED]となっている。\n現在その12名がどうなったかは、一切の記録が存在しない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録が存在しない……消されたのか、それとも消えたのか。\nどっちにしても最悪だろ、それ。財団って怖いな。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この収容違反を受けて、財団はSCP-078の収容プロトコルを大幅に改定した。\n現在は独立した電磁シールドルームに保管され、接触可能なのはDクラス職員のみ、接触時間は最大で10分以内と厳命されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Dクラス職員って……それ使い捨ての人たちじゃないか。\n財団はそういう人たちに危険なオブジェクトを触らせてるのか、知ってたけど改めて聞くとゾッとする。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Dクラス職員への実験記録も存在する。\n被験者D-7741は接触から2分後に泣き崩れ、7分後に失神した。覚醒後、彼は自分の名前を答えられなかったと記録されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "たった7分で……自分の名前を忘れるって、それどれだけ強烈な記憶を見せられたんだよ。\n想像したくないけど、想像してしまう。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の現行仮説では、SCP-078は人間の記憶の中で最も深く刻まれた感情的外傷を抽出し、それを繰り返し再生することで精神の安定構造を崩壊させると考えられている。\nだが、なぜその能力を持つのか——原因は今も不明だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "原因不明のまま収容されてるって……財団って分からないまま閉じ込めてるだけじゃないか。\nそれで本当に安全なのか、って思えてきた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際、収容違反はこの一件だけではない。\n財団の内部記録には、少なくとも過去に3回の小規模な収容異常が記録されており、そのたびに担当職員の一部が交代している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "交代してる……それって自分から辞めたのか、それとも辞めさせられたのか、あるいは……\nいや、考えたくないな、それ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書の最後に、担当上席研究員がこう記している。\n『SCP-078は何も作り出さない。ただ、あなたの中にすでにある最も暗いものを、あなたに見せるだけだ。それで十分すぎる』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それで十分すぎる……その一言が一番怖いよ、シロ。\n外から何かされるんじゃなくて、自分の中にあるものが武器になるってことだろ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-078が恐ろしいのは、その通りだ。\nどんなに強い人間でも、トラウマを持たない人間はいない。つまりSCP-078に対して、完全に無効な人間は存在しないことになる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "誰にでも効くって……財団員でも研究員でも関係ないってことじゃないか。\nそれって収容できても、本当の意味では対抗手段がないってことだよな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団がSCP-078をEuclidクラスに留めているのも、その点が理由の一つだと言われている。\nKeterへの格上げが検討されたが、『格上げすることで職員の警戒心が過剰になり、それ自体がSCP-078の影響を受けやすくする』という逆説的な懸念から、現在も審議中だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "怖いと思うこと自体が弱点になる……それって詰んでるじゃないか。\n知れば知るほど怖くなるのに、知らないともっと危ない、みたいな話だろ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし古びた映写機を見かけたとしても、絶対に電源を入れるな。\nスクリーンを見た瞬間、もうそれはあなたの中にある——その夜から、あなたの夢は変わる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……シロ、今夜俺ちゃんと眠れるかな。\nこれ聞いてから、目閉じるのが怖くなったんだけど、どうしてくれるんだよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それがSCP-078の狙い通りだ、クロ。\n今夜、眠れなくなったとしても——それはあなた自身の中にあるものが、目を覚ましただけだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が『絶対に顔を見てはいけない』と命じたあの存在——SCP-096『シャイガイ』の収容記録と、過去最大規模の収容違反について語る。\nチャンネル登録をしておけば、流出報告書が届いた時に通知が来る。見逃すな。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-096……あの顔を見たら追いかけてくるやつか。\nシロ、それも怖い案件だって知ってるけど、見ないわけにはいかないよな、チャンネル登録しとく。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "なお本動画はSCP財団Wiki（CC BY-SA 3.0）に基づく考察・解説コンテンツだ。\n原典の設定を尊重しつつ、財団報告書の世界観の内側から語っている。気になった人間は原典も確認してくれ——ただし、一人で深夜に読むのは勧めない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "収容違反から72時間——財団員17名が同時崩壊",
+      "SCP-078【悪夢の製造機】機密報告書、流出"
+    ],
+    "subtitle": "あなたの最悪の記憶を、それは知っている",
+    "tagline": "財団でも止められなかった『夢』の侵食"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1783415232_3448",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはサムネフック「財団員17名が同時崩壊」「機密報告書流出」という具体的数字と緊迫感で冒頭からCTRを引き上げ、「半径8メートル」「睡眠効率94%低下」などの数値的具体性と報告書形式の世界観没入によって視聴維持でも圧倒している。Aはhook・specificity・pacing・wording全軸で平凡な解説口調に留まり、終盤がSCP無関係のルシッドドリーム話に脱線するなど構成上の致命的な乱れがあった。",
+      "scores_a": {
+        "hook_strength": 4,
+        "specificity": 4,
+        "pacing": 4,
+        "cta_effectiveness": 4,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 9,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "SCP-078【悪夢を生む機械】— なぜ眠れなくなるのか"
+      },
+      "claude": {
+        "title": "SCP-078が収容違反した夜、財団研究員たちは全員『同じ夢』を見た"
+      }
+    }
+  }
+}

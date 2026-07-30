@@ -1,5 +1,1244 @@
 [
   {
+    "file": "scp-lab_20260730_090201_scenario.md",
+    "title": "GOCと蛇の手、その知られざる闇",
+    "video_title": "【ゆっくり解説】異常存在を巡る組織の秘密GOCと蛇の手の衝突あなたは本当の目的を知っているか「GOCと蛇の手、その知られざる闇」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "GOCと蛇の手の対立 — 異常存在を巡る二つの組織の真実",
+      "angle": "財団外部からの視点で解説するGOCの戦略",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-30T09:02:02.010606Z",
+    "prompt_hash": "9f2c5ec579ba",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260729_090142_scenario.md",
+    "title": "実は、見えるはずなのに見えない脅威が存在する理由",
+    "video_title": "【ゆっくり解説】誰も気づかない異常。見えないはずの恐怖。「実は、見えるはずなのに見えない脅威が存在する理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-████「見えざる脅威」 — 感知できない存在の恐怖",
+      "angle": "認識できない異常存在の影響"
+    },
+    "generated_at": "2026-07-29T09:01:42.211265Z",
+    "prompt_hash": "21df615fc11e",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260728_090144_scenario.md",
+    "title": "収容違反の真実 — 人間が引き起こす異常の裏側",
+    "video_title": "【ゆっくり解説】収容違反の本当の理由財団の内部事情が明らかに「収容違反の真実 — 人間が引き起こす異常の裏側」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "なぜ「収容違反」が続発するのか — SCPの内部事情に迫る",
+      "angle": "収容プロトコルの限界とその背後にある心理"
+    },
+    "generated_at": "2026-07-28T09:01:44.603762Z",
+    "prompt_hash": "4143e3502d03",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260727_090204_scenario.md",
+    "title": "SCP-財団が隠し続けたDクラスの真実——欲望と恐怖の狭間で消耗される人々",
+    "video_title": "【ゆっくり解説】Dクラスの秘密が暴かれる時誰もが知らない恐ろしい運命「SCP-財団が隠し続けたDクラスの真実——欲望と恐怖の狭間で消耗される人々」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "Dクラス職員の真実",
+      "angle": "実験で消費される人員制度の闇と倫理問題"
+    },
+    "generated_at": "2026-07-27T09:02:04.855563Z",
+    "prompt_hash": "fc79e71ac795",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp3000_1785120640_20260727_025040_scenario.md",
+    "title": "SCP-3000「アナンタシェーシャ」",
+    "video_title": "全長『測定不能』の深海巨大生物SCP-3000──記憶を溶かす怪物から搾り取られる物質Y-909の正体",
+    "prefix": "scp3000_1785120640",
+    "theme": {
+      "title": "SCP-3000「アナンタシェーシャ」",
+      "angle": "ベンガル湾の海底に横たわる全長測定不能のウナギ型巨大存在。記憶を溶かす怪物から搾り取られる物質Y-909の正体を解説"
+    },
+    "generated_at": "2026-07-27T02:50:40.885246Z",
+    "prompt_hash": "1317cadd279e",
+    "generated_by": "claude-manual",
+    "selected_by": null
+  },
+  {
+    "file": "scp3000_1785070644_20260726_125725_scenario.md",
+    "title": "SCP-3000「アナンタシェーシャ」",
+    "video_title": "全長『測定不能』の深海巨大生物SCP-3000──記憶を溶かす怪物から搾り取られる物質Y-909の正体",
+    "prefix": "scp3000_1785070644",
+    "theme": {
+      "title": "SCP-3000「アナンタシェーシャ」",
+      "angle": "ベンガル湾の海底に横たわる全長測定不能のウナギ型巨大存在。記憶を溶かす怪物から搾り取られる物質Y-909の正体を解説"
+    },
+    "generated_at": "2026-07-26T12:57:25.281883Z",
+    "prompt_hash": "1317cadd279e",
+    "generated_by": "claude-manual",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260726_090929_scenario.md",
+    "title": "財団が17年間封印した「選択の悪夢」——SCP-096に触れた職員が最後に見たものの正体",
+    "video_title": "【ゆっくり解説】17年間、財団すら直視できなかった存在を『選ぶ』だけで消える「財団が17年間封印した「選択の悪夢」——SCP-096に触れた職員が最後に見たものの正体」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-XXXX「存在を選択する悪夢」 — 意識の変化がもたらす異常の影響",
+      "angle": "異常が引き起こす心理的影響の考察"
+    },
+    "generated_at": "2026-07-26T09:09:29.462007Z",
+    "prompt_hash": "b89dc4b5ec8a",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1785027802_20260726_010322_scenario.md",
+    "title": "SCP-173——視線を外した0.3秒に、17名が消えた本当の理由",
+    "video_title": "SCP-173——視線を外した0.3秒に、17名が消えた本当の理由",
+    "prefix": "scp-lab_short_1785027802",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-26T01:03:22.915808Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1785025342_20260726_002222_scenario.md",
+    "title": "知った瞬間が終わりの始まり——SCP-1425「星の兆候」が17名の研究員を廃人にした本当の理由",
+    "video_title": "知った瞬間が終わりの始まり——SCP-1425「星の兆候」が17名の研究員を廃人にした本当の理由",
+    "prefix": "scp-lab_short_1785025342",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-26T00:22:22.133012Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260725_090751_scenario.md",
+    "title": "SCP-871「自己複製するケーキ」をSCP-914で魔改造したら——財団が封印した実験ログの結末",
+    "video_title": "【ゆっくり解説】増殖が、止まらなかったSCP-914実験ログ【閲覧制限Lv4】「SCP-871「自己複製するケーキ」をSCP-914で魔改造したら——財団が封印した実験ログの結末」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-871「自己複製するケーキ」を財団が魔改造しようとした記録 — SCP-914実験ログが示す異常増殖の果て",
+      "angle": "競合がアニメーション1分解説で扱ったSCP-871を、SCP-914との組み合わせ実験ログという別角度から深掘り。『魔改造』キーワードと財団の改造実験という文脈を自然に接続し、増殖が止まらない恐怖を考察形式で演出",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-25T09:07:51.433670Z",
+    "prompt_hash": "6ca550a36bf1",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp3000_1784958658_20260725_055058_scenario.md",
+    "title": "財団が17年間隠し続けた「記憶を溶かす怪物」——SCP-3000の体から搾り取られる物質の正体",
+    "video_title": "財団が17年間隠し続けた「記憶を溶かす怪物」——SCP-3000の体から搾り取られる物質の正体",
+    "prefix": "scp3000_1784958658",
+    "theme": {
+      "title": "SCP-3000「アナンタシェーシャ」",
+      "angle": "ベンガル湾の海底に横たわる、全長が測定不能なウナギ型の巨大存在。近づいた者は記憶を逆流させながら失っていき、財団はその体から分泌される物質Y-909を採取して最強クラスの記憶処理薬を精製している——つまり『忘れさせる薬』は『忘れさせる怪物』から搾り取られている。潜水した研究員の音声記録が壊れていく過程、サイト-120で繰り返される採取作業の異常性、そして誰もこの存在の全長を知ることができない理由を、発見経緯・潜行記録・収容の代償の順に、物語として引き込む構成で解説"
+    },
+    "generated_at": "2026-07-25T05:50:58.127150Z",
+    "prompt_hash": "23bd6a59696d",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1784948576_20260725_030256_scenario.md",
+    "title": "収容違反から17時間——SCP-1346「悪夢のデバイス」が財団施設で何をしたか、報告書は[DATA EXPUNGED]されている",
+    "video_title": "収容違反から17時間——SCP-1346「悪夢のデバイス」が財団施設で何をしたか、報告書は[DATA EXPUNGED]されている",
+    "prefix": "scp-lab_short_1784948576",
+    "theme": {
+      "title": "もしSCP-5000が現実で起動したら？あなたの街で起きる48時間のシナリオ",
+      "angle": "SCP-5000の収容手順と発動条件を現実の都市インフラ・政府機関・一般市民の行動パターンに当てはめ、『財団報告書風の架空ドキュメント』として48時間タイムライン形式で描写する"
+    },
+    "generated_at": "2026-07-25T03:02:56.180414Z",
+    "prompt_hash": "a377b13fd16d",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1784942647_20260725_012407_scenario.md",
+    "title": "SCP-5000が起動した48時間——あなたの街で財団が隠した『人類抹消プロトコル』の正体",
+    "video_title": "SCP-5000が起動した48時間——あなたの街で財団が隠した『人類抹消プロトコル』の正体",
+    "prefix": "scp-lab_short_1784942647",
+    "theme": {
+      "title": "もしSCP-5000が現実で起動したら？あなたの街で起きる48時間のシナリオ",
+      "angle": "SCP-5000の収容手順と発動条件を現実の都市インフラ・政府機関・一般市民の行動パターンに当てはめ、『財団報告書風の架空ドキュメント』として48時間タイムライン形式で描写する"
+    },
+    "generated_at": "2026-07-25T01:24:07.400906Z",
+    "prompt_hash": "a377b13fd16d",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260724_090801_scenario.md",
+    "title": "財団が17年間封印した『2つの計画』——人類を殺したのは、守るためだったのか",
+    "video_title": "【ゆっくり解説】LEVEL 5 機密｜SCP-5000 vs SCP-2000財団は『人類の敵』だったのか「財団が17年間封印した『2つの計画』——人類を殺したのは、守るためだったのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-5000 vs SCP-2000：人類殲滅 vs 人類再生、財団の二つの終末計画",
+      "angle": "人類を滅ぼすSCP-5000と、人類を何度でもリセット・再生するSCP-2000を対比し、『財団は人類の敵か守護者か』という根本的な矛盾を浮き彫りにする考察動画"
+    },
+    "generated_at": "2026-07-24T09:08:01.764308Z",
+    "prompt_hash": "986927ba7452",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp3008_1784875759_20260724_064919_scenario.md",
+    "title": "人類抹殺の真相—SCP-5000に秘められた恐怖とは？",
+    "video_title": "人類抹殺の真相—SCP-5000に秘められた恐怖とは？",
+    "prefix": "scp3008_1784875759",
+    "theme": {
+      "title": "SCP-3008「無限に広がるIKEA」",
+      "angle": "閉店後の家具店に閉じ込められた男の記録。どこまで歩いても終わらない売り場、昼は普通の客に見えるのに夜になると牙をむく『スタッフ』、生存者たちが築いた砦。脱出は可能なのか——財団が観測した無限空間の恐怖を発見経緯・目撃証言・収容の困難さの順に、物語として引き込む構成で解説"
+    },
+    "generated_at": "2026-07-24T06:49:19.589805Z",
+    "prompt_hash": "2746f515c3fb",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1784855061_20260724_010421_scenario.md",
+    "title": "財団が17年間封印した——SCP-5000が『人類を殺す』と決定した本当の理由",
+    "video_title": "財団が17年間封印した——SCP-5000が『人類を殺す』と決定した本当の理由",
+    "prefix": "scp-lab_short_1784855061",
+    "theme": {
+      "title": "SCP-5000の『なぜ人類を殺すのか』財団内部文書が示す本当の理由",
+      "angle": "SCP-5000が起動した根本原因——財団が発見した「人類そのものが異常存在である」という結論に至るまでの内部審議記録と、ピエトロ・ウィルソンが見た『財団の本音』を段階的に読み解く"
+    },
+    "generated_at": "2026-07-24T01:04:21.374852Z",
+    "prompt_hash": "36886aca6205",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1784852672_20260724_002432_scenario.md",
+    "title": "財団が人類を殲滅し続けた真の理由——SCP-5000内部資料の驚愕の結論",
+    "video_title": "財団が人類を殲滅し続けた真の理由——SCP-5000内部資料の驚愕の結論",
+    "prefix": "scp-lab_short_1784852672",
+    "theme": {
+      "title": "SCP-5000の『なぜ人類を殺すのか』財団内部文書が示す本当の理由",
+      "angle": "SCP-5000が起動した根本原因——財団が発見した「人類そのものが異常存在である」という結論に至るまでの内部審議記録と、ピエトロ・ウィルソンが見た『財団の本音』を段階的に読み解く"
+    },
+    "generated_at": "2026-07-24T00:24:32.950331Z",
+    "prompt_hash": "36886aca6205",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260723_090720_scenario.md",
+    "title": "目を離した3秒で消えた——SCP-096「シャイガイ」が改造された本当の理由を財団は語らない",
+    "video_title": "【ゆっくり解説】【LEVEL 4 機密】財団が隠し続けた改造記録顔を見た瞬間、あなたは終わる「目を離した3秒で消えた——SCP-096「シャイガイ」が改造された本当の理由を財団は語らない」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "考察：SCP-XXXの存在と改造の意味 — 財団が語らない背景",
+      "angle": "異常存在における改造の影響"
+    },
+    "generated_at": "2026-07-23T09:07:20.958384Z",
+    "prompt_hash": "16fb8f7387a2",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1784777632_20260723_033352_scenario.md",
+    "title": "目を離した0.3秒で内側から書き換わる——SCP-217「時計仕掛けのウイルス」が人間を機械に変える本当の理由",
+    "video_title": "目を離した0.3秒で内側から書き換わる——SCP-217「時計仕掛けのウイルス」が人間を機械に変える本当の理由",
+    "prefix": "scp-lab_short_1784777632",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-23T03:33:52.429574Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1784775186_20260723_025306_scenario.md",
+    "title": "目を離した0.3秒で首を折られる——SCP-173が財団の隠し続けた『本当の恐怖』",
+    "video_title": "目を離した0.3秒で首を折られる——SCP-173が財団の隠し続けた『本当の恐怖』",
+    "prefix": "scp-lab_short_1784775186",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-23T02:53:06.901575Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260722_090707_scenario.md",
+    "title": "SCP-914を改造するな 財団が封印した異常ガジェットの変異",
+    "video_title": "【ゆっくり解説】99%の人が知らない変異した異常ガジェット「SCP-914を改造するな 財団が封印した異常ガジェットの変異」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-XXXX「変異したガジェット」 — 知られざるデバイスの恐怖",
+      "angle": "ガジェット改造の影響から見た異常の正体"
+    },
+    "generated_at": "2026-07-22T09:07:07.916719Z",
+    "prompt_hash": "4520365c9632",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260721_090707_scenario.md",
+    "title": "財団が記録ごと封印した「改造者」の正体——SCP-2399に接触した研究員17名は、なぜ全員別人になって戻ってきたのか",
+    "video_title": "【ゆっくり解説】接触した17名、全員が『別人』になって戻ってきた財団が封印したSCP-2399の収容記録「財団が記録ごと封印した「改造者」の正体——SCP-2399に接触した研究員17名は、なぜ全員別人になって戻ってきたのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "機密解除：SCP-XYZ「実体の改造者」 — 見えない恐怖とその収容プロトコルの真相",
+      "angle": "異常存在を生み出す改造の影響を探る"
+    },
+    "generated_at": "2026-07-21T09:07:07.647258Z",
+    "prompt_hash": "cc797b7713e0",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_20260720_090735_scenario.md",
+    "title": "教室で停電が起きたら何人死ぬか——SCP-173を日本の学校に収容したら財団が出した答え",
+    "video_title": "【ゆっくり解説】停電0.3秒で全滅財団試算：教室32名中、生存者0「教室で停電が起きたら何人死ぬか——SCP-173を日本の学校に収容したら財団が出した答え」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "もしSCP-173が日本の学校に収容されたら？財団の収容プロトコルを現実に当てはめてみた",
+      "angle": "SCP-173の収容手順（複数人での常時監視・停電時の緊急プロトコル等）を実際の日本の学校・電車・オフィスといった日常空間に置き換えてシミュレーション。『教室で停電が起きたら何人死ぬか』『通勤ラッシュの山手線に紛れ込んだら』など具体的なシナリオをゆっくり実況形式で展開し、日常とホラーの境界を溶かす演出にする。"
+    },
+    "generated_at": "2026-07-20T09:07:35.414376Z",
+    "prompt_hash": "e20423276250",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1784509375_20260720_010255_scenario.md",
+    "title": "SCP-173が日本の学校に現れたら、教室で何人死ぬか——財団が封印した最悪のシミュレーション",
+    "video_title": "SCP-173が日本の学校に現れたら、教室で何人死ぬか——財団が封印した最悪のシミュレーション",
+    "prefix": "scp-lab_short_1784509375",
+    "theme": {
+      "title": "もしSCP-173が日本の学校に収容されたら？財団の収容プロトコルを現実に当てはめてみた",
+      "angle": "SCP-173の収容手順（複数人での常時監視・停電時の緊急プロトコル等）を実際の日本の学校・電車・オフィスといった日常空間に置き換えてシミュレーション。『教室で停電が起きたら何人死ぬか』『通勤ラッシュの山手線に紛れ込んだら』など具体的なシナリオをゆっくり実況形式で展開し、日常とホラーの境界を溶かす演出にする。"
+    },
+    "generated_at": "2026-07-20T01:02:55.559760Z",
+    "prompt_hash": "e20423276250",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1784506933_20260720_002213_scenario.md",
+    "title": "財団が記録ごと封印した「異常誕生の法則」——なぜ存在してはならないものが、今この瞬間も生まれ続けるのか",
+    "video_title": "財団が記録ごと封印した「異常誕生の法則」——なぜ存在してはならないものが、今この瞬間も生まれ続けるのか",
+    "prefix": "scp-lab_short_1784506933",
+    "theme": {
+      "title": "もしSCP-173が日本の学校に収容されたら？財団の収容プロトコルを現実に当てはめてみた",
+      "angle": "SCP-173の収容手順（複数人での常時監視・停電時の緊急プロトコル等）を実際の日本の学校・電車・オフィスといった日常空間に置き換えてシミュレーション。『教室で停電が起きたら何人死ぬか』『通勤ラッシュの山手線に紛れ込んだら』など具体的なシナリオをゆっくり実況形式で展開し、日常とホラーの境界を溶かす演出にする。"
+    },
+    "generated_at": "2026-07-20T00:22:13.230959Z",
+    "prompt_hash": "e20423276250",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260719_090723_scenario.md",
+    "title": "財団が17年間隠し続けた理由——SCP-1730「消えた施設」で3名が失踪した本当の正体",
+    "video_title": "【ゆっくり解説】3名失踪・全記録[REDACTED]財団が17年間封印した施設の真実「財団が17年間隠し続けた理由——SCP-1730「消えた施設」で3名が失踪した本当の正体」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-███「新たな実存」 — 誰も知らない異常の正体",
+      "angle": "未解決の収容違反事件に迫る",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-19T09:07:23.885130Z",
+    "prompt_hash": "e227288aa684",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1784422790_20260719_005950_scenario.md",
+    "title": "財団が17名の死亡記録を4行で隠蔽した——SCP-1730「廃墟サイト-13」に誰も近づけない本当の理由",
+    "video_title": "財団が17名の死亡記録を4行で隠蔽した——SCP-1730「廃墟サイト-13」に誰も近づけない本当の理由",
+    "prefix": "scp-lab_short_1784422790",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-19T00:59:50.631823Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1784420256_20260719_001736_scenario.md",
+    "title": "財団が17年間隠し続けた「製造記録」——SCP-1030、その収容の理由を誰も語らない本当の訳",
+    "video_title": "財団が17年間隠し続けた「製造記録」——SCP-1030、その収容の理由を誰も語らない本当の訳",
+    "prefix": "scp-lab_short_1784420256",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-19T00:17:36.587925Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260718_090721_scenario.md",
+    "title": "財団が17年間封印し続けた「SCP-XXXX」——43名が接触し、全員の記録が消えた本当の理由",
+    "video_title": "【ゆっくり解説】43名が接触→全員の記録が消滅財団が17年間隠し続けた異常存在の正体「財団が17年間封印し続けた「SCP-XXXX」——43名が接触し、全員の記録が消えた本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-XXXX「人の形をした疑念」 — 収容違反が示す心理的影響",
+      "angle": "見えない恐怖が導く事例",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-18T09:07:21.968307Z",
+    "prompt_hash": "761108e2904e",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1784336203_20260718_005643_scenario.md",
+    "title": "財団が43年間封印し続けた「虚無の制御装置」——記録を読んだ17名が翌日から消えた本当の理由",
+    "video_title": "財団が43年間封印し続けた「虚無の制御装置」——記録を読んだ17名が翌日から消えた本当の理由",
+    "prefix": "scp-lab_short_1784336203",
+    "theme": {
+      "title": "SCP-015「建物の悪夢」 — 一体何が収容違反を引き起こしたのか",
+      "angle": "異常な建物の挙動から見る危険性"
+    },
+    "generated_at": "2026-07-18T00:56:43.375521Z",
+    "prompt_hash": "5cff338a88f4",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1784333641_20260718_001401_scenario.md",
+    "title": "SCP-015に入った17名の職員が72時間以内に消えた——財団が封印し続ける「建物の悪夢」の本当の理由",
+    "video_title": "SCP-015に入った17名の職員が72時間以内に消えた——財団が封印し続ける「建物の悪夢」の本当の理由",
+    "prefix": "scp-lab_short_1784333641",
+    "theme": {
+      "title": "SCP-015「建物の悪夢」 — 一体何が収容違反を引き起こしたのか",
+      "angle": "異常な建物の挙動から見る危険性"
+    },
+    "generated_at": "2026-07-18T00:14:01.283607Z",
+    "prompt_hash": "5cff338a88f4",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260717_090741_scenario.md",
+    "title": "SCP-173が「首だけ」を折る理由——財団が17年間隠し続けた殺傷メカニズムの正体",
+    "video_title": "【ゆっくり解説】目を離した0.3秒で17名が死亡なぜ「首だけ」なのか——財団も答えを出せていない「SCP-173が「首だけ」を折る理由——財団が17年間隠し続けた殺傷メカニズムの正体」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-173は「なぜ首を折る」のか？財団が隠す殺傷メカニズムの真相",
+      "angle": "SCP-173が視線を外した瞬間に「首を折る」という行動に限定している理由を深掘り。財団内部の仮説レポートや、「動きの速度」「接触方法の一貫性」から逆算して、173の知性・目的・起源に迫る考察動画。「なぜ殺すのか」ではなく「なぜその方法なのか」という視点で視聴者の知的好奇心を刺激する。"
+    },
+    "generated_at": "2026-07-17T09:07:41.334936Z",
+    "prompt_hash": "09aea9ffc79d",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1784249773_20260717_005613_scenario.md",
+    "title": "財団が隠し続けたSCP-5000の真実 —— 世界の終焉が始まる理由",
+    "video_title": "財団が隠し続けたSCP-5000の真実 —— 世界の終焉が始まる理由",
+    "prefix": "scp-lab_short_1784249773",
+    "theme": {
+      "title": "SCP-173収容プロトコルを現実防犯に応用したら最強すぎた",
+      "angle": "財団がSCP-173対策として策定した『視線の途切れを0にする複数人監視ローテーション』を現実の警備・監視システム設計に当てはめ、死角ゼロ設計の理論を解説。日常の防犯カメラ配置や夜道の安全確保にも使えるとして視聴者の生活に接続する。"
+    },
+    "generated_at": "2026-07-17T00:56:13.145941Z",
+    "prompt_hash": "75d82f196d2a",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1784247155_20260717_001235_scenario.md",
+    "title": "財団が17年間隠し続けた——SCP-1730「消えたサイト-13」で何が起きたのか、本当の理由",
+    "video_title": "財団が17年間隠し続けた——SCP-1730「消えたサイト-13」で何が起きたのか、本当の理由",
+    "prefix": "scp-lab_short_1784247155",
+    "theme": {
+      "title": "SCP-173収容プロトコルを現実防犯に応用したら最強すぎた",
+      "angle": "財団がSCP-173対策として策定した『視線の途切れを0にする複数人監視ローテーション』を現実の警備・監視システム設計に当てはめ、死角ゼロ設計の理論を解説。日常の防犯カメラ配置や夜道の安全確保にも使えるとして視聴者の生活に接続する。"
+    },
+    "generated_at": "2026-07-17T00:12:36.006655Z",
+    "prompt_hash": "75d82f196d2a",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260716_090719_scenario.md",
+    "title": "目を離した0.3秒で消えた——財団が記録ごと封印したSCP-099「空間歪曲体」の正体",
+    "video_title": "【ゆっくり解説】目を離した瞬間、部屋の形が変わっていた財団が17名の証言を全て[REDACTED]にした理由「目を離した0.3秒で消えた——財団が記録ごと封印したSCP-099「空間歪曲体」の正体」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-099「空間を歪める存在」 — 現象の背後にある理論",
+      "angle": "空間の歪みと異常の関係を考える",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-16T09:07:19.325931Z",
+    "prompt_hash": "c2e4732b7803",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1784162653_20260716_004413_scenario.md",
+    "title": "目を離した瞬間、電流が襲う—財団が隠した『電子工作の悪夢』の正体",
+    "video_title": "目を離した瞬間、電流が襲う—財団が隠した『電子工作の悪夢』の正体",
+    "prefix": "scp-lab_short_1784162653",
+    "theme": {
+      "title": "SCP-5000「なぜ？」 — 財団が突然人類殲滅を開始した世界線で一人の男が持ち出した記録",
+      "angle": "パワードスーツを拾った非戦闘員の逃亡劇。なぜ財団は人類を敵と判断したのかの謎"
+    },
+    "generated_at": "2026-07-16T00:44:13.034818Z",
+    "prompt_hash": "ab00b4d73335",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1784160176_20260716_000256_scenario.md",
+    "title": "財団が記録ごと封印したSCP-5000——17名の研究員が「なぜ？」と書き残して消えた理由",
+    "video_title": "財団が記録ごと封印したSCP-5000——17名の研究員が「なぜ？」と書き残して消えた理由",
+    "prefix": "scp-lab_short_1784160176",
+    "theme": {
+      "title": "SCP-5000「なぜ？」 — 財団が突然人類殲滅を開始した世界線で一人の男が持ち出した記録",
+      "angle": "パワードスーツを拾った非戦闘員の逃亡劇。なぜ財団は人類を敵と判断したのかの謎"
+    },
+    "generated_at": "2026-07-16T00:02:56.972514Z",
+    "prompt_hash": "ab00b4d73335",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260715_090721_scenario.md",
+    "title": "SCP-1733：「開幕戦」——財団が隠した恐怖のDVD",
+    "video_title": "【ゆっくり解説】世界にたった1枚のDVD再生するたび異なる恐怖が襲う「SCP-1733：「開幕戦」——財団が隠した恐怖のDVD」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1733「開幕戦」 — 何度再生しても展開が変わるDVD、登場人物たちは気づいている",
+      "angle": "録画されたバスケの試合が再生のたびに異なる展開に。観客が『自分たちは閉じ込められている』と気づき始める"
+    },
+    "generated_at": "2026-07-15T09:07:21.600071Z",
+    "prompt_hash": "3ffbb3d8592b",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1784076419_20260715_004659_scenario.md",
+    "title": "99%の人が誤解するSCP-9999の恐怖 — 財団が隠した真実",
+    "video_title": "99%の人が誤解するSCP-9999の恐怖 — 財団が隠した真実",
+    "prefix": "scp-lab_short_1784076419",
+    "theme": {
+      "title": "SCP-1733「開幕戦」 — 何度再生しても展開が変わるDVD、登場人物たちは気づいている",
+      "angle": "録画されたバスケの試合が再生のたびに異なる展開に。観客が『自分たちは閉じ込められている』と気づき始める"
+    },
+    "generated_at": "2026-07-15T00:46:59.866293Z",
+    "prompt_hash": "3ffbb3d8592b",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1784073957_20260715_000557_scenario.md",
+    "title": "孤独な瞬間にだけ現れるSCPの本当の理由——財団が隠した切ない真実",
+    "video_title": "孤独な瞬間にだけ現れるSCPの本当の理由——財団が隠した切ない真実",
+    "prefix": "scp-lab_short_1784073957",
+    "theme": {
+      "title": "SCP-4999「誰かが見ている」 — 孤独死する人のそばにだけ現れるSCPの正体",
+      "angle": "身寄りのない人間が死ぬ瞬間にだけ現れてタバコを差し出す存在。Safeクラスだが最も切ない"
+    },
+    "generated_at": "2026-07-15T00:05:57.734779Z",
+    "prompt_hash": "0739ee44e7f8",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783990107_20260714_004827_scenario.md",
+    "title": "財団が隠し続けた認識災害SCPの本当の理由",
+    "video_title": "財団が隠し続けた認識災害SCPの本当の理由",
+    "prefix": "scp-lab_short_1783990107",
+    "theme": {
+      "title": "認識災害SCPまとめ — 読んだら最後、感染するオブジェクト",
+      "angle": ""
+    },
+    "generated_at": "2026-07-14T00:48:27.143267Z",
+    "prompt_hash": "496fa0605775",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783987614_20260714_000654_scenario.md",
+    "title": "財団が隠し続けたSCP-XXXの正体—収容違反事件の裏側",
+    "video_title": "財団が隠し続けたSCP-XXXの正体—収容違反事件の裏側",
+    "prefix": "scp-lab_short_1783987614",
+    "theme": {
+      "title": "SCP-XXX「○○」 — 収容違反事件と恐怖の正体",
+      "angle": ""
+    },
+    "generated_at": "2026-07-14T00:06:54.288269Z",
+    "prompt_hash": "e2d6aac76ec3",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260713_090737_scenario.md",
+    "title": "SCP-1337に触れた17名が全員同じ夢を見た——財団が隠し続けた「意識が宿る電球」の正体",
+    "video_title": "【ゆっくり解説】触れた17名が全員『同じ夢』を見た財団が72時間以内に収容を完了できなかった理由「SCP-1337に触れた17名が全員同じ夢を見た——財団が隠し続けた「意識が宿る電球」の正体」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1337「不思議な電球」 — 意識が宿る照明の恐怖",
+      "angle": "異常がもたらす意識の影響と収容プロトコル",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-13T09:07:37.293769Z",
+    "prompt_hash": "6e6377e24459",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1783923007_20260713_061007_scenario.md",
+    "title": "見てはいけない瞬間、SCP-173の驚異",
+    "video_title": "見てはいけない瞬間、SCP-173の驚異",
+    "prefix": "scp-lab_short_1783923007",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-13T06:10:07.037974Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783920630_20260713_053031_scenario.md",
+    "title": "目を離した0.3秒で首を折られる——SCP-173が財団最古の収容記録に残り続ける本当の理由",
+    "video_title": "目を離した0.3秒で首を折られる——SCP-173が財団最古の収容記録に残り続ける本当の理由",
+    "prefix": "scp-lab_short_1783920630",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-13T05:30:31.009806Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260712_090716_scenario.md",
+    "title": "財団が封印した『異常存在の製造記録』— なぜ43か所のうち3件だけが建物ごと消えたのか",
+    "video_title": "【ゆっくり解説】財団が隠し続けた『製造プロセス』が流出した異常存在は『発見』されるのではなく——作られていた「財団が封印した『異常存在の製造記録』— なぜ43か所のうち3件だけが建物ごと消えたのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-███「異常存在の製造方法」 — 財団が隠すプロセス",
+      "angle": "異常存在生成の裏側に迫る",
+      "parent_title": null
+    },
+    "generated_at": "2026-07-12T09:07:16.604202Z",
+    "prompt_hash": "ef5d1129fd5a",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1783817968_20260712_005928_scenario.md",
+    "title": "消えた日本の財団施設…その真相に迫る",
+    "video_title": "消えた日本の財団施設…その真相に迫る",
+    "prefix": "scp-lab_short_1783817968",
+    "theme": {
+      "title": "もし財団施設が今の日本に存在したら— 行方不明施設の公的隠蔽、現実の事例と照合する【ショート】",
+      "angle": "SCP-1730の『施設ごと記録が消える』という概念を現実世界に接続する応用企画。実際に存在した軍・政府施設の突然の閉鎖・記録抹消事例（公開情報の範囲内）をSCP的フォーマットで読み解き、『財団の封じ込め手順と現実の情報統制は構造が同じではないか』という視点を提示する。ホラー要素よりもミステリー・陰謀論的な考察軸に振ることで、SCP未視聴層の検索流入も狙う。"
+    },
+    "generated_at": "2026-07-12T00:59:28.036740Z",
+    "prompt_hash": "986ddb03e2b6",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783815362_20260712_001602_scenario.md",
+    "title": "財団が封印した『消えた施設』——日本国内に実在した3件の記録抹消、その構造が異常すぎる",
+    "video_title": "財団が封印した『消えた施設』——日本国内に実在した3件の記録抹消、その構造が異常すぎる",
+    "prefix": "scp-lab_short_1783815362",
+    "theme": {
+      "title": "もし財団施設が今の日本に存在したら— 行方不明施設の公的隠蔽、現実の事例と照合する【ショート】",
+      "angle": "SCP-1730の『施設ごと記録が消える』という概念を現実世界に接続する応用企画。実際に存在した軍・政府施設の突然の閉鎖・記録抹消事例（公開情報の範囲内）をSCP的フォーマットで読み解き、『財団の封じ込め手順と現実の情報統制は構造が同じではないか』という視点を提示する。ホラー要素よりもミステリー・陰謀論的な考察軸に振ることで、SCP未視聴層の検索流入も狙う。"
+    },
+    "generated_at": "2026-07-12T00:16:02.857603Z",
+    "prompt_hash": "986ddb03e2b6",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260711_090713_scenario.md",
+    "title": "施設ごと消えた記録が3件だけある——SCP-1730と残り2件、崩壊の経緯がまったく違う理由を財団は隠している",
+    "video_title": "【ゆっくり解説】施設ごと消えた記録：確認済み3件生存者：ゼロ／交信記録：[DATA EXPUNGED]「施設ごと消えた記録が3件だけある——SCP-1730と残り2件、崩壊の経緯がまったく違う理由を財団は隠している」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "施設ごと消えた3件を並べる— SCP-1730と他2件、崩壊パターンが全く違う理由【ショート】",
+      "angle": "バズ動画でフックとして使った『施設ごと消えたのは3件だけ』という数字を正面から回収する対比企画。SCP-1730と残り2件の崩壊プロセス・交信記録の差異を比較ドキュメンタリー形式で読み解き、『なぜ同じ結末なのに原因が全く異なるのか』を問う。財団の対応速度・封じ込め失敗のタイミングの違いを図解的に整理し、視聴者に『どれが一番ヤバいか』を考察させる余白を残す。"
+    },
+    "generated_at": "2026-07-11T09:07:13.124769Z",
+    "prompt_hash": "f76c73e6acee",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1783731641_20260711_010041_scenario.md",
+    "title": "SCP-1618「消える図書館」の謎：財団が隠す異常な本の正体",
+    "video_title": "SCP-1618「消える図書館」の謎：財団が隠す異常な本の正体",
+    "prefix": "scp-lab_short_1783731641",
+    "theme": {
+      "title": "SCP-1618「消える図書館」 — 収容されている本の恐怖",
+      "angle": "異常な図書館オブジェクトの詳細"
+    },
+    "generated_at": "2026-07-11T01:00:41.237018Z",
+    "prompt_hash": "58daea54785e",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783729061_20260711_001741_scenario.md",
+    "title": "一口SCP：SCP-1618「消える図書館」— 入館した72時間後、司書の記録が完全に消えた本当の理由",
+    "video_title": "一口SCP：SCP-1618「消える図書館」— 入館した72時間後、司書の記録が完全に消えた本当の理由",
+    "prefix": "scp-lab_short_1783729061",
+    "theme": {
+      "title": "SCP-1618「消える図書館」 — 収容されている本の恐怖",
+      "angle": "異常な図書館オブジェクトの詳細"
+    },
+    "generated_at": "2026-07-11T00:17:41.196509Z",
+    "prompt_hash": "58daea54785e",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260710_090719_scenario.md",
+    "title": "一口SCP：SCP-1242「八つの目を持つ者」— 接触から72時間後、23名中19名が自分の名前を答えられなくなった本当の理由",
+    "video_title": "【ゆっくり解説】接触者23名中19名が72時間以内に『自分の名前』を失った残り4名の記録は今も[DATA EXPUNGED]「一口SCP：SCP-1242「八つの目を持つ者」— 接触から72時間後、23名中19名が自分の名前を答えられなくなった本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1242「八つの目を持つ者」 — 収容違反の背後に潜む謎",
+      "angle": "異常存在の解説とその影響"
+    },
+    "generated_at": "2026-07-10T09:07:19.140382Z",
+    "prompt_hash": "640c4e374974",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1783645393_20260710_010313_scenario.md",
+    "title": "SCP-173【目を離した0.3秒で首が折れる理由】",
+    "video_title": "SCP-173【目を離した0.3秒で首が折れる理由】",
+    "prefix": "scp-lab_short_1783645393",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-10T01:03:13.614447Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783643082_20260710_002442_scenario.md",
+    "title": "SCP-173【視線を外すと襲いかかる彫刻】",
+    "video_title": "SCP-173【視線を外すと襲いかかる彫刻】",
+    "prefix": "scp-lab_short_1783643082",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-10T00:24:42.687680Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260709_090710_scenario.md",
+    "title": "一口SCP：SCP-1238「メカニカルリペアマン」が修理した17名、その後の記録が[DATA EXPUNGED]されている本当の理由",
+    "video_title": "【ゆっくり解説】修理された者は二度と帰らない財団が隠した『17名』の記録「一口SCP：SCP-1238「メカニカルリペアマン」が修理した17名、その後の記録が[DATA EXPUNGED]されている本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "機密解除：SCP-1238「メカニカルリペアマン」 — 自動修復の背後に潜む真実",
+      "angle": "異常な工作機械とその目的"
+    },
+    "generated_at": "2026-07-09T09:07:10.674215Z",
+    "prompt_hash": "7604ec8c3953",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_20260709_090654_scenario.md",
+    "title": "一口SCP：実験記録17件すべて[DATA EXPUNGED]された異常存在の、財団が隠し続ける本当の正体",
+    "video_title": "【ゆっくり解説】実験記録17件、全消去の理由が怖すぎる財団が『見なかったことにした』SCPの正体「一口SCP：実験記録17件すべて[DATA EXPUNGED]された異常存在の、財団が隠し続ける本当の正体」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "機密解除：SCP-XXXXの裏側 — 隠された実験内容",
+      "angle": "実験記録の分析"
+    },
+    "generated_at": "2026-07-09T09:06:54.735615Z",
+    "prompt_hash": "2182624f7d6b",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1783559215_20260709_010655_scenario.md",
+    "title": "一口SCP：SCP-1238「メカニカルリペアマン」— 修復が終わるたびに17名が消えた理由",
+    "video_title": "一口SCP：SCP-1238「メカニカルリペアマン」— 修復が終わるたびに17名が消えた理由",
+    "prefix": "scp-lab_short_1783559215",
+    "theme": {
+      "title": "機密解除：SCP-1238「メカニカルリペアマン」 — 自動修復の背後に潜む真実",
+      "angle": "異常な工作機械とその目的"
+    },
+    "generated_at": "2026-07-09T01:06:55.717710Z",
+    "prompt_hash": "7604ec8c3953",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783556807_20260709_002647_scenario.md",
+    "title": "一口SCP：SCP-1238「メカニカルリペアマン」が修復するのは機械じゃない——財団が17年間隠し続けた本当の目的",
+    "video_title": "一口SCP：SCP-1238「メカニカルリペアマン」が修復するのは機械じゃない——財団が17年間隠し続けた本当の目的",
+    "prefix": "scp-lab_short_1783556807",
+    "theme": {
+      "title": "機密解除：SCP-1238「メカニカルリペアマン」 — 自動修復の背後に潜む真実",
+      "angle": "異常な工作機械とその目的"
+    },
+    "generated_at": "2026-07-09T00:26:47.622566Z",
+    "prompt_hash": "7604ec8c3953",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260708_090703_scenario.md",
+    "title": "一口SCP：SCP-166「若返りのリリス」— 財団が17名の記憶を[REDACTED]した本当の理由",
+    "video_title": "【ゆっくり解説】接触した男性17名、全員が72時間以内に廃人化財団が隠し続ける『美しすぎる異常存在』の正体「一口SCP：SCP-166「若返りのリリス」— 財団が17名の記憶を[REDACTED]した本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-166「若返りのリリス」 — 財団が隠した異常存在の影響",
+      "angle": "外見の裏に潜む恐怖"
+    },
+    "generated_at": "2026-07-08T09:07:03.022140Z",
+    "prompt_hash": "dacb044f67cd",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1783473041_20260708_011041_scenario.md",
+    "title": "記憶を奪う『忘却の水』の真実が隠された理由。",
+    "video_title": "記憶を奪う『忘却の水』の真実が隠された理由。",
+    "prefix": "scp-lab_short_1783473041",
+    "theme": {
+      "title": "機密解除：SCP-2050「忘却の水」 — 誰もが記憶を失う恐ろしい液体の正体",
+      "angle": "収容プロトコルとその破綻"
+    },
+    "generated_at": "2026-07-08T01:10:41.912886Z",
+    "prompt_hash": "cb13cc99fcf4",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783470609_20260708_003009_scenario.md",
+    "title": "その水を飲んだ研究員が、翌朝『自分の名前』を忘れていた。財団が隠し続けるSCP-2050「忘却の水」の収容破綻記録",
+    "video_title": "その水を飲んだ研究員が、翌朝『自分の名前』を忘れていた。財団が隠し続けるSCP-2050「忘却の水」の収容破綻記録",
+    "prefix": "scp-lab_short_1783470609",
+    "theme": {
+      "title": "機密解除：SCP-2050「忘却の水」 — 誰もが記憶を失う恐ろしい液体の正体",
+      "angle": "収容プロトコルとその破綻"
+    },
+    "generated_at": "2026-07-08T00:30:09.154111Z",
+    "prompt_hash": "cb13cc99fcf4",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260707_090720_scenario.md",
+    "title": "SCP-078が収容違反した夜、財団研究員たちは全員『同じ夢』を見た",
+    "video_title": "【ゆっくり解説】収容違反から72時間——財団員17名が同時崩壊SCP-078【悪夢の製造機】機密報告書、流出「SCP-078が収容違反した夜、財団研究員たちは全員『同じ夢』を見た」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-078「悪夢の製造機」 — 収容違反と生まれた恐怖の真実",
+      "angle": "異常による夢の操作とその影響"
+    },
+    "generated_at": "2026-07-07T09:07:20.974785Z",
+    "prompt_hash": "86203bfa2811",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1783385059_20260707_004419_scenario.md",
+    "title": "目を離した0.3秒で首が折れる。SCP-173【財団が最初の収容違反を隠し続ける本当の理由】",
+    "video_title": "目を離した0.3秒で首が折れる。SCP-173【財団が最初の収容違反を隠し続ける本当の理由】",
+    "prefix": "scp-lab_short_1783385059",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-07T00:44:19.319925Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783382563_20260707_000243_scenario.md",
+    "title": "目を離した0.3秒で首が折れる。SCP-173が財団史上最も古い収容違反を繰り返す本当の理由",
+    "video_title": "目を離した0.3秒で首が折れる。SCP-173が財団史上最も古い収容違反を繰り返す本当の理由",
+    "prefix": "scp-lab_short_1783382563",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-07T00:02:43.400529Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783347563_20260706_141923_scenario.md",
+    "title": "目を離した瞬間、首が折れる。SCP-173が財団史上最初に収容された本当の理由",
+    "video_title": "目を離した瞬間、首が折れる。SCP-173が財団史上最初に収容された本当の理由",
+    "prefix": "scp-lab_short_1783347563",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-06T14:19:23.789855Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260706_100142_scenario.md",
+    "title": "なぜ道はうごめく？SCP-609の衝撃の真実",
+    "video_title": "【ゆっくり解説】道が、動くとは信じられるか？SCP-609の謎に迫る。「なぜ道はうごめく？SCP-609の衝撃の真実」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-609「うごめく道」 — 誰もが踏み入れたくなる呪われた道の真実",
+      "angle": "不気味な収容違反事例とその影響"
+    },
+    "generated_at": "2026-07-06T10:01:42.131862Z",
+    "prompt_hash": "daa1c835b018",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260705_100734_scenario.md",
+    "title": "充電切れの怪異: SCP-904の謎とその恐るべき影響",
+    "video_title": "【ゆっくり解説】99%の人が知らない電気が消える場所がある「充電切れの怪異: SCP-904の謎とその恐るべき影響」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-904「充電式琥珀」 — 電気を奪う異常の詳細な分析",
+      "angle": "異常オブジェクトの危険性とその影響"
+    },
+    "generated_at": "2026-07-05T10:07:34.152924Z",
+    "prompt_hash": "d47b53b0210b",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1783239707_20260705_082147_scenario.md",
+    "title": "目を離した0.3秒で命が奪われる恐怖。SCP-173が収容室で起こす異常な現象",
+    "video_title": "目を離した0.3秒で命が奪われる恐怖。SCP-173が収容室で起こす異常な現象",
+    "prefix": "scp-lab_short_1783239707",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-05T08:21:47.107715Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783237407_20260705_074327_scenario.md",
+    "title": "目を離した0.3秒で命を奪うSCP-173の恐怖、その背後に潜む真実",
+    "video_title": "目を離した0.3秒で命を奪うSCP-173の恐怖、その背後に潜む真実",
+    "prefix": "scp-lab_short_1783237407",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-05T07:43:27.040668Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260704_100719_scenario.md",
+    "title": "Dクラス職員の消失、知られざる理由",
+    "video_title": "【ゆっくり解説】財団機密の闇消えるDクラス職員「Dクラス職員の消失、知られざる理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "Dクラス職員の真実",
+      "angle": "実験で消費される人員制度の闇と倫理問題"
+    },
+    "generated_at": "2026-07-04T10:07:19.811901Z",
+    "prompt_hash": "fc79e71ac795",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260703_100741_scenario.md",
+    "title": "財団が隠し続けた『消耗品』の正体——Dクラス職員は、なぜ毎月末に全員消える？",
+    "video_title": "【ゆっくり解説】毎月末に全員『処理』される財団が隠した人員制度の闇「財団が隠し続けた『消耗品』の正体——Dクラス職員は、なぜ毎月末に全員消える？」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "Dクラス職員の真実",
+      "angle": "実験で消費される人員制度の闇と倫理問題"
+    },
+    "generated_at": "2026-07-03T10:07:41.237499Z",
+    "prompt_hash": "fc79e71ac795",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp_short_1783056166_20260703_052246_scenario.md",
+    "title": "SCP-4002「生の贈り物」——財団が収容した瞬間、17名の研究員の記録が消えた理由",
+    "video_title": "SCP-4002「生の贈り物」——財団が収容した瞬間、17名の研究員の記録が消えた理由",
+    "prefix": "scp_short_1783056166",
+    "theme": {
+      "title": "機密解除：SCP-4002「生の贈り物」 — 収容された異常存在の正体",
+      "angle": "発見経緯とその後の影響"
+    },
+    "generated_at": "2026-07-03T05:22:46.517538Z",
+    "prompt_hash": "c2093bead000",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783040414_20260703_010014_scenario.md",
+    "title": "SCP-4002「生の贈り物」——収容された異常存在が財団に渡したものの正体が、あまりにも",
+    "video_title": "SCP-4002「生の贈り物」——収容された異常存在が財団に渡したものの正体が、あまりにも",
+    "prefix": "scp-lab_short_1783040414",
+    "theme": {
+      "title": "機密解除：SCP-4002「生の贈り物」 — 収容された異常存在の正体",
+      "angle": "発見経緯とその後の影響"
+    },
+    "generated_at": "2026-07-03T01:00:14.936165Z",
+    "prompt_hash": "c2093bead000",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1783037900_20260703_001820_scenario.md",
+    "title": "SCP-4002「生の贈り物」——収容した翌日、担当研究員17名の記録が財団データベースから完全に消えた理由",
+    "video_title": "SCP-4002「生の贈り物」——収容した翌日、担当研究員17名の記録が財団データベースから完全に消えた理由",
+    "prefix": "scp-lab_short_1783037900",
+    "theme": {
+      "title": "機密解除：SCP-4002「生の贈り物」 — 収容された異常存在の正体",
+      "angle": "発見経緯とその後の影響"
+    },
+    "generated_at": "2026-07-03T00:18:20.970069Z",
+    "prompt_hash": "c2093bead000",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260702_100750_scenario.md",
+    "title": "SCP-3003「失われた電源」— 財団が封印した異常技術、収容室の外に出た記録が存在する",
+    "video_title": "【ゆっくり解説】財団が隠蔽した『電力』の正体収容プロトコル違反：記録抹消レベルα「SCP-3003「失われた電源」— 財団が封印した異常技術、収容室の外に出た記録が存在する」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-3003「失われた電源」 — 財団が封印した異常技術の詳細",
+      "angle": "収容プロトコルとその影響"
+    },
+    "generated_at": "2026-07-02T10:07:50.331880Z",
+    "prompt_hash": "2685c4a7fa69",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1782954029_20260702_010029_scenario.md",
+    "title": "SCP-173「彫刻」——視線を外した0.3秒で17人が死んだ理由",
+    "video_title": "SCP-173「彫刻」——視線を外した0.3秒で17人が死んだ理由",
+    "prefix": "scp-lab_short_1782954029",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-02T01:00:29.466789Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782951586_20260702_001946_scenario.md",
+    "title": "SCP-173「彫刻」——視線を切った0.3秒で、17人が死んだ",
+    "video_title": "SCP-173「彫刻」——視線を切った0.3秒で、17人が死んだ",
+    "prefix": "scp-lab_short_1782951586",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-02T00:19:46.993001Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260701_100658_scenario.md",
+    "title": "SCP-4840「バビロンの巨人」— 財団が古代遺跡ごと地下に埋めた本当の理由",
+    "video_title": "【ゆっくり解説】財団が3000年前の遺跡ごと地下に封印した交渉記録は今も更新され続けている「SCP-4840「バビロンの巨人」— 財団が古代遺跡ごと地下に埋めた本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-4840「バビロンの巨人」— 財団が古代文明の遺跡ごと[REDACTED]した理由と、今も地下収容施設で続く『交渉プロトコル』の全記録",
+      "angle": "古代史×財団介入という切り口だが、あくまで『異常存在との交渉記録』として財団組織の意思決定過程を主軸に据え、歴史雑学ではなくSCP世界観考察として完結させる"
+    },
+    "generated_at": "2026-07-01T10:06:58.196117Z",
+    "prompt_hash": "2128de94b98c",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260701_030810_scenario.md",
+    "title": "SCP-1730「存在しなかったサイト」— 財団施設が丸ごと消えた夜、最後の交信記録に何が残っていたのか",
+    "video_title": "【ゆっくり解説】施設ごと消えた——記録も、職員も、収容体も最後の交信から23分後、全員の生体反応が消えた「SCP-1730「存在しなかったサイト」— 財団施設が丸ごと消えた夜、最後の交信記録に何が残っていたのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "機密解除：SCP-1730「存在しなかったサイト」— 廃墟となった財団施設跡地で回収された実験ログと、収容されていた異常存在が[DATA EXPUNGED]された経緯",
+      "angle": "廃施設という舞台装置を使い『財団内部崩壊』を描く。競合の1分解説系と差別化するため、複数の証言記録・交信ログを時系列で読み解くドキュメンタリー調に徹する"
+    },
+    "generated_at": "2026-07-01T03:08:10.519051Z",
+    "prompt_hash": "a461b4967636",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1782867912_20260701_010512_scenario.md",
+    "title": "SCP-173「彫刻」——目を離した0.3秒で、なぜ首が折れるのか",
+    "video_title": "SCP-173「彫刻」——目を離した0.3秒で、なぜ首が折れるのか",
+    "prefix": "scp-lab_short_1782867912",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-01T01:05:12.697705Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782865658_20260701_002738_scenario.md",
+    "title": "SCP-173「彫刻」——目を離した0.3秒で、なぜ首が折れるのか",
+    "video_title": "SCP-173「彫刻」——目を離した0.3秒で、なぜ首が折れるのか",
+    "prefix": "scp-lab_short_1782865658",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-07-01T00:27:38.375111Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782836243_20260630_161723_scenario.md",
+    "title": "SCP-173「彫刻」——目を離した0.3秒で、14人が消えた収容室の真実",
+    "video_title": "SCP-173「彫刻」——目を離した0.3秒で、14人が消えた収容室の真実",
+    "prefix": "scp-lab_short_1782836243",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-06-30T16:17:23.241714Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782778098_20260630_000818_scenario.md",
+    "title": "SCP-173「彫刻」——目を離した0.3秒で、なぜ首が折れるのか",
+    "video_title": "SCP-173「彫刻」——目を離した0.3秒で、なぜ首が折れるのか",
+    "prefix": "scp-lab_short_1782778098",
+    "theme": {
+      "title": "SCP-173「彫刻」",
+      "angle": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説"
+    },
+    "generated_at": "2026-06-30T00:08:18.750791Z",
+    "prompt_hash": "de69f497428b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260629_220821_scenario.md",
+    "title": "SCP-4715「戦争終結者」— 財団が第二次世界大戦を終わらせたという記録が、なぜ[DATA EXPUNGED]されたのか",
+    "video_title": "【ゆっくり解説】財団は1945年に何かを『処理』した歴史から消された異常存在の正体「SCP-4715「戦争終結者」— 財団が第二次世界大戦を終わらせたという記録が、なぜ[DATA EXPUNGED]されたのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "機密解除：SCP-4715「戦争終結者」— 財団が第二次世界大戦に介入した記録と、歴史から[DATA EXPUNGED]された異常存在の正体",
+      "angle": "歴史的事件とSCPを接続する切り口で競合の短尺アニメ路線と明確に差別化。実際の史実データと財団内部文書の『流出報告書』形式を組み合わせ、『あの戦争の終わり方は財団が操作したのか』という考察軸で視聴者を引き込む。"
+    },
+    "generated_at": "2026-06-29T22:08:21.646142Z",
+    "prompt_hash": "6718fbb7853c",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260629_080723_scenario.md",
+    "title": "SCP-1983「ドアの向こうの闇」— 財団が封印した扉を、なぜ研究員は心臓を持って開けなければならないのか",
+    "video_title": "【ゆっくり解説】収容室に入った研究員14名、全員消滅『心臓を持って入れ』の意味、財団は公表していない「SCP-1983「ドアの向こうの闇」— 財団が封印した扉を、なぜ研究員は心臓を持って開けなければならないのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1983「ドアの向こうの闇」— 扉を開けた瞬間に研究員が消滅する収容施設、財団が封印した『扉の向こう側』の真実",
+      "angle": "『開けてはいけない扉』という原始的恐怖を軸に、収容プロトコルの異常条件（心臓を持って入室せよ）の意味を財団内部文書風に解読。競合の競合の短尺アニメと差別化した長尺ホラー考察"
+    },
+    "generated_at": "2026-06-29T08:07:23.675517Z",
+    "prompt_hash": "3c987a67f0ad",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1782695171_20260629_010611_scenario.md",
+    "title": "SCP-1983「ドアの向こうの闇」— 心臓を持って入れ、という収容プロトコルが実在した理由",
+    "video_title": "SCP-1983「ドアの向こうの闇」— 心臓を持って入れ、という収容プロトコルが実在した理由",
+    "prefix": "scp-lab_short_1782695171",
+    "theme": {
+      "title": "SCP-1983「ドアの向こうの闇」— 扉を開けた瞬間に研究員が消滅する収容施設、財団が封印した『扉の向こう側』の真実",
+      "angle": "『開けてはいけない扉』という原始的恐怖を軸に、収容プロトコルの異常条件（心臓を持って入室せよ）の意味を財団内部文書風に解読。競合の競合の短尺アニメと差別化した長尺ホラー考察"
+    },
+    "generated_at": "2026-06-29T01:06:11.730191Z",
+    "prompt_hash": "3c987a67f0ad",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1782692836_20260629_002716_scenario.md",
+    "title": "SCP-1983「ドアの向こうの闇」— 心臓を持たずに開けた扉の先で、財団員は何を見たのか",
+    "video_title": "SCP-1983「ドアの向こうの闇」— 心臓を持たずに開けた扉の先で、財団員は何を見たのか",
+    "prefix": "scp-lab_short_1782692836",
+    "theme": {
+      "title": "SCP-1983「ドアの向こうの闇」— 扉を開けた瞬間に研究員が消滅する収容施設、財団が封印した『扉の向こう側』の真実",
+      "angle": "『開けてはいけない扉』という原始的恐怖を軸に、収容プロトコルの異常条件（心臓を持って入室せよ）の意味を財団内部文書風に解読。競合の競合の短尺アニメと差別化した長尺ホラー考察"
+    },
+    "generated_at": "2026-06-29T00:27:16.705389Z",
+    "prompt_hash": "3c987a67f0ad",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260628_220653_scenario.md",
+    "title": "SCP-835「触手の穴」— 財団が13名の失踪を隠蔽し続けた深海施設の実験記録、なぜ全ページが黒塗りなのか",
+    "video_title": "【ゆっくり解説】研究員13名・全員消息不明実験記録は[DATA EXPUNGED]「SCP-835「触手の穴」— 財団が13名の失踪を隠蔽し続けた深海施設の実験記録、なぜ全ページが黒塗りなのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-835「触手の穴」— 深海収容施設の闇、財団が[DATA EXPUNGED]し続けた実験記録と研究員13名の失踪",
+      "angle": "深海・未知生物という普遍的恐怖と財団の組織的隠蔽を組み合わせ、『なぜ海底施設での実験記録だけが黒塗りなのか』という謎解き構造で視聴者を引き込む"
+    },
+    "generated_at": "2026-06-28T22:06:53.843153Z",
+    "prompt_hash": "c419b41d8334",
+    "generated_by": "claude",
+    "selected_by": "only_one"
+  },
+  {
     "file": "scp-lab_short_1782607301_20260628_004141_scenario.md",
     "title": "SCP-173「彫刻」— 視線を外した0.3秒で、首が折れる",
     "video_title": "SCP-173「彫刻」— 視線を外した0.3秒で、首が折れる",

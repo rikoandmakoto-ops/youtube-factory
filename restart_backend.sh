@@ -1,0 +1,45 @@
+#!/bin/bash
+# YouTube Factory Backend — 再起動スクリプト
+# nohup でバックグラウンド実行、ログは logs/backend.log に出力
+# --reload なし（ジョブが死ぬため）
+
+cd "$(dirname "$0")/backend"
+
+# 既存プロセスの停止
+echo "🔍 既存のuvicornプロセスを確認中..."
+PIDS=$(pgrep -f "uvicorn main:app" 2>/dev/null)
+if [ -n "$PIDS" ]; then
+    echo "⏹ 既存プロセスを停止中 (PID: $PIDS)..."
+    kill $PIDS 2>/dev/null
+    sleep 2
+    # まだ生きていたら強制終了
+    PIDS=$(pgrep -f "uvicorn main:app" 2>/dev/null)
+    if [ -n "$PIDS" ]; then
+        kill -9 $PIDS 2>/dev/null
+        sleep 1
+    fi
+    echo "✅ 停止完了"
+else
+    echo "ℹ️  実行中のプロセスなし"
+fi
+
+# ログディレクトリ確保
+mkdir -p ../logs
+
+# 起動（--reload なし、nohup でバックグラウンド）
+echo "🚀 バックエンドを起動中..."
+nohup python3 -m uvicorn main:app --host 0.0.0.0 --port 8000 >> ../logs/backend.log 2>&1 &
+NEW_PID=$!
+echo "✅ 起動完了 (PID: $NEW_PID)"
+echo "📄 ログ: $(cd .. && pwd)/logs/backend.log"
+
+# 5秒待って起動確認
+sleep 5
+if kill -0 $NEW_PID 2>/dev/null; then
+    echo "🏭 YouTube Factory is running!"
+    # ヘルスチェック
+    timeout 10 curl -s http://localhost:8000/health 2>/dev/null | python3 -m json.tool 2>/dev/null || echo "⚠️ ヘルスチェック応答待ち（数秒かかる場合があります）"
+else
+    echo "❌ 起動失敗。ログを確認してください:"
+    tail -20 ../logs/backend.log
+fi

@@ -249,7 +249,6 @@
     },
     "analytics": {
       "enabled": true,
-      "fetch_retention_for": 5,
       "performance_threshold": {
         "min_ctr": 4,
         "min_retention": 40,
@@ -307,6 +306,12 @@
     },
     "duration_minutes": 12,
     "gen_type": "short",
-    "theme_queue": []
+    "theme_queue": [
+      {
+        "id": "59db1785",
+        "title": "なぜ目の奥が痛くなるときがあるのか？ — 眼精疲労の科学",
+        "angle": "目と体の相関"
+      }
+    ]
   }
 }

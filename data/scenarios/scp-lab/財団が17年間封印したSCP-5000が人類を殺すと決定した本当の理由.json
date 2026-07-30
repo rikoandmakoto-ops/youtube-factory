@@ -1,0 +1,452 @@
+{
+  "title": "財団が17年間封印した——SCP-5000が『人類を殺す』と決定した本当の理由",
+  "theme": {
+    "title": "SCP-5000の『なぜ人類を殺すのか』財団内部文書が示す本当の理由",
+    "angle": "SCP-5000が起動した根本原因——財団が発見した「人類そのものが異常存在である」という結論に至るまでの内部審議記録と、ピエトロ・ウィルソンが見た『財団の本音』を段階的に読み解く"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意。財団が『人類を殺せ』と結論した内部文書が流出した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、財団って人類を守る組織じゃないの？なんで殺す側に？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-5000の起動記録には、財団が『人類そのものが異常存在』と認定した審議ログが残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "認定って……それって財団が人類を収容対象にしたってこと？ゾッとするんだけど。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ピエトロ・ウィルソンが命がけで持ち出した記録が、その答えを示している。詳細は本編で。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1万人目指して毎日投稿中だから登録お願い！続きの詳細考察は関連動画でチェックしてね！",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団の内部データベースから、ある記録が流出した。\nそれは17年間、LEVEL5以上の職員にしか閲覧を許可されていなかった審議ログだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17年間って……それってSCP-5000が動き出した時期と重なってる？なんか嫌な予感がするんだけど。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "重なっている。そして今日読み上げるのは、SCP-5000が『なぜ人類を殺し始めたのか』——その根本理由を財団自身が記録した、本当の審議記録だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……聞きたいような、聞きたくないような。でも教えてほしい。シロ、頼む。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まずSCP-5000の基本から確認する。\nこのオブジェクトは、財団が開発した特殊な強化スーツだ。オブジェクトクラスは当初Safeに分類されていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Safeって、一番危険度が低いクラスだよね。それがなんで人類抹殺に使われたの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そのスーツを着用したのがピエトロ・ウィルソン——財団の特殊収容部隊の隊員だ。\n彼が目を覚ました時、財団の施設は死体だらけになっていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "死体だらけって……財団の職員が全員？それって何人規模の話なの？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の収容施設は世界に数百か所存在する。\nウィルソンが確認できた範囲だけでも、少なくとも数千人規模の職員が『何者かに』殺されていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "数千人……しかも財団の職員って普通の人間じゃないよね。訓練された人たちが全滅ってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。そして外に出たウィルソンが見たのは、財団だけでなく人類そのものが消えかけている世界だった。\n街は廃墟になり、生きている人間の数が極端に少なくなっていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……それって誰がやったの？財団を壊滅させるような存在って、GOCでも不可能じゃないの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここからが本当に恐ろしい話だ。\n犯人は外部の敵対組織でも、Apollyonクラスの異常存在でもない。財団自身だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団自身……？ちょっと待って。財団が自分たちを壊滅させて、しかも人類を殺した？意味がわからない。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "流出した内部審議記録によれば、財団は『ある結論』に至っていた。\nその結論とは——『人類そのものが異常存在である』というものだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人類が……異常存在？それって財団が人類を収容対象に認定したってこと？嘘だろ……。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "審議記録の詳細はほぼ[DATA EXPUNGED]されている。\nだが残存する断片には、財団が『人類の存在が現実そのものを汚染している』という仮説を立てていたことが記録されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "現実を汚染……それってどういう意味？人間が生きてるだけで何かがおかしくなるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、人類の感情・記憶・意識の集合体が、何らかの形で現実の法則を歪め続けているとされていた。\nその規模は財団が収容してきた4,800件以上の異常存在を、全て合算しても追いつかないレベルだと試算されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4,800件を超える……財団が収容してきた全部の異常存在よりも、人類の方が『異常』だって判定されたの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "日本の都道府県は47だ。\n1県あたり平均100件以上の異常が今この瞬間も存在している計算になる——それを全部上回る規模の異常が、人類という存在そのものだったというのが財団の結論だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……なんか急に身近に感じてゾッとした。じゃあ財団はその結論に基づいてSCP-5000を起動させたってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。しかしSCP-5000の本当の恐ろしさは、その起動目的にある。\nこのスーツは単なる武器ではなく、『人類を収容するための装置』として財団が設計し直していた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容するための装置……。SCP-5000って元々はSafeクラスの強化スーツだったんだよね？なんでそんなものに？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "内部記録によれば、改修は極秘に行われた。\nLEVEL4以下の職員には通常の装備品として記録されており、その改修に関わった研究員の名前はすべて[REDACTED]されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "名前まで消されてる……。それって関わった研究員自身も、後から消されたってことじゃないの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その可能性は財団でも否定されていない。\n残存記録には『関係者の処理は完了した』という一行だけが残っており、その後の記述は全て[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "処理が完了した……って。財団って人類を守る組織のはずなのに、内側からこんなことが起きてたの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで重要なのが、ウィルソンがSCP-5000を着用して生き残った理由だ。\n彼がスーツの起動プロセスを中断させたことで、人類抹殺は完全には実行されなかった——しかしその代償は計り知れないものだった。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "代償って……ウィルソン自身が何かされたってこと？それとも世界が？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ウィルソンが見た世界は、元の世界とは異なるものになっていた。\n財団の施設は廃墟となり、異常存在の大半は収容違反状態になり、人類の文明は取り返しのつかない損傷を受けていた。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "取り返しのつかない損傷……。ウィルソンは一人でそれを目撃したの？誰も助けに来なかったの？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "彼は一人だった。\nスーツを着ていた間、周囲の時間が約17時間停止していたとされており、目を覚ました時には既に全てが終わっていた——財団の記録上、これが『ゼロ地点』と呼ばれる瞬間だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17時間……。たった17時間で世界がそこまで変わったってこと？ゾッとする。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そしてウィルソンが旅の末に辿り着いたのが、財団の最高機密施設だ。\nそこには、SCP-5000を起動させた真の意思決定者が残した記録が保管されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "真の意思決定者って……財団のトップ？O5評議会？それとも別の何かなの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録によれば、意思決定はO5評議会の内部で行われた。\nしかし全員の同意ではなく、賛成票は[REDACTED]名——反対票を投じたメンバーの記録は完全に抹消されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "反対した人たちの記録が消されてる……。それって反対した人も『処理』されたってこと？怖すぎる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が『人類は異常存在だ』と結論した根拠として、残存記録には一つの事実が記されている。\n財団が収容してきた全ての異常存在のうち、人間の意識・感情・集合的な記憶と完全に無関係なものは、全体のわずか0.3%に満たなかったというデータだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0.3%……つまり4,800件以上の異常存在のほぼ全てが、人間と何らかの形で繋がってるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、人類が存在する限り異常は生み出され続ける——だから根本的な解決には、人類そのものを『収容』する以外に方法はないと、審議記録は結論づけていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……それって財団の存在意義そのものを否定してる。異常を収容するために作られた組織が、人間を収容対象にしたってことじゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。これが財団の本音だ。\n『Secure. Contain. Protect.』——確保し、収容し、保護する。その保護の対象が、いつの間にか人類ではなく現実そのものに変わっていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "現実を守るために人類を殺す……。ウィルソンはその記録を見てどうしたの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "彼は記録を持ち出した。命がけで。\nそしてSCP-5000の完全起動を阻止するための行動を取ったが——その結末は記録から[DATA EXPUNGED]されており、財団でも解明されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "結末が消されてる……。ウィルソンは今どこにいるの？生きてるの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "不明だ。ウィルソンに関する全ての記録は、彼が施設を出た後の時点から途絶えている。\n財団の公式見解は『当該職員は任務中に行方不明となった』——それだけだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "行方不明……それって本当に失踪したのか、それとも財団に消されたのか、どっちともとれる言い方だよね。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録上、SCP-5000は現在も『Euclid』クラスに再分類されたまま収容されている。\nしかし収容プロトコルの詳細は全てLEVEL5以上限定であり、内容の大半は[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Euclidって中程度の危険クラスだよね。人類抹殺装置がそのクラスで収容されてるって……本当に大丈夫なの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "大丈夫かどうかを財団に確認する手段は、一般人には存在しない。\nそれが財団の在り方だ——知らない方が、幸せだったかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……今日の話、全部聞いてから後悔してる。財団って本当に人類の味方なの？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の要点をまとめる。\nSCP-5000が起動した根本原因は、財団の内部審議で『人類そのものが異常存在』と認定されたことだ——この結論は17年間封印されていた。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が守ろうとしていたのは人類じゃなくて、現実そのものだったってことか……。なんか全部がひっくり返った感じがする。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ピエトロ・ウィルソンが命がけで持ち出したのは、財団の本音だ。\n人類を守るふりをしながら、人類を最大の異常存在と見なしていた組織の——本当の姿だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それを今も世界中の人は知らずに生きてるんだよね……。シロはこれ読んで怖くなかったの？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-049——ペスト医師が『治療』と呼ぶ行為の内側に何があるのかを、財団の解剖記録から読み解く予定だ。\n今回以上に、読んだ後で後悔するかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画が気になったら、チャンネル登録と高評価を頼む——財団の記録は、知ろうとする者のところにだけ届く。\nそして、もし日常の中で『何かがおかしい』と感じたなら……決して一人で調べようとするな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "財団自身が『人類は異常存在』と結論した",
+      "17年間、この記録は[DATA EXPUNGED]されていた"
+    ],
+    "subtitle": "ピエトロ・ウィルソンが見た財団の本音",
+    "tagline": "LEVEL 5 機密 / 閲覧注意 / 財団内部審議記録"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1784855054_6518",
+    "blind_eval": {
+      "winner": "A",
+      "winner_model": "claude",
+      "reason": "シナリオAは「17年間封印」「数千人規模の死体」「ウィルソンの行方不明」など具体的な固有名詞・数字・設定を積み上げることでspecificityとhook_strengthで大きく上回り、視聴者の離脱を防ぐ緊張感のある対話テンポも維持されている。一方シナリオBはfull_scenario_tailが空でシナリオとして未完成であり、「2023年」という原作に存在しない年号の混入や曖昧な表現が目立ち、specificity・pacing・wording_qualityの全軸でAに劣る。",
+      "scores_a": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "scores_b": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 4,
+        "wording_quality": 5,
+        "overall": 5
+      },
+      "mapping": {
+        "A": "claude",
+        "B": "gpt"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 55.9% 優位",
+      "leader": "claude",
+      "margin": 0.5592
+    },
+    "candidates": {
+      "gpt": {
+        "title": "SCP-5000の背後に隠された恐怖——財団が隠し続けた『人類の異常』"
+      },
+      "claude": {
+        "title": "財団が17年間封印した——SCP-5000が『人類を殺す』と決定した本当の理由"
+      }
+    }
+  }
+}

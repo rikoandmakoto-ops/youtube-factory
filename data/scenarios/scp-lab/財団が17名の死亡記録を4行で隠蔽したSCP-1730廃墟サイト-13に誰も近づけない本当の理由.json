@@ -1,0 +1,465 @@
+{
+  "title": "財団が17名の死亡記録を4行で隠蔽した——SCP-1730「廃墟サイト-13」に誰も近づけない本当の理由",
+  "theme": {
+    "title": "SCP-XXXX「異常なロジック」 — 何故存在するのか、理解不能な現象",
+    "angle": "異常のメカニズムとその影響",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意。SCP-1730の死亡報告書、A4たった4行で17名が消えた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、4行って……17人分の死亡記録が4行に収まるってどういうこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "理由の欄は全行[REDACTED]。財団はこの廃墟の内部を、未だに正確に把握できていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "把握できてないのに……収容してるってこと？それって本当に安全なの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "外壁のサイズは変わらないのに、内部空間は建設当初の実測値の17倍に拡張されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！もっと詳しい話は関連動画から見てね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "2006年5月14日、午前3時47分。財団サイト-13の無線に最後の交信が入った。『壁が——壁が広がって』それ以降、派遣された17名全員の通信が永久に途絶えた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "壁が広がって……って、それって建物の中で何かが起きたってこと？17人全員って、一瞬で？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "一瞬かどうかも分からない。財団が後日作成した死亡事故報告書はA4用紙1枚、わずか4行で完結していた。死因の欄は全行[REDACTED]。17名の名前すら記録されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "名前すら……ちょっと待って、それって消されたんじゃなくて、最初から書かれなかったってこと？怖いって。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日読み上げるのはSCP-1730、コードネーム『廃墟サイト-13』。財団が何年もかけて隠蔽し続けてきた、異次元の内部構造を持つ異常施設の記録だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "異次元の内部構造……？普通の廃墟じゃないってこと？シロ、これ本当に読んで大丈夫な報告書なの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1730のオブジェクトクラスはEuclid。財団の分類では収容可能な部類に入る——でも収容プロトコルの第1条は、たった一言だ。『立入禁止』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容可能なのに立入禁止……？それって矛盾してない？収容できてるのに近づけないって、どういう状態なの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "外から見れば、ただの廃墟だ。サイト-13は1943年に建設された財団の旧研究施設で、外壁の実測値は縦180メートル、横240メートル。それだけ聞けば、普通の大型施設に聞こえる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "まあ……大きいけど、普通の建物じゃん。それの何が異常なの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題は内部だ。2003年に財団が実施したリモート計測——ドローンと無人探索機を使った調査で判明した内部の推定容積は、外壁から計算される物理的な最大値の17倍に達していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17倍……？外の箱のサイズは変わってないのに、中が17倍広いって、そんなこと起きるの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。報告書には『内部空間は物理法則に従って拡張されていない』とだけ記されており、原因については現在も調査中——という表記が2006年から変わっていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2006年から変わってない……つまり20年近く、ずっと分からないまま放置されてるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "放置ではなく、調査を続けた。2003年の初回ドローン調査から2006年の有人調査まで、財団は3年間かけて段階的にアプローチした。問題は、2006年以降の調査が一切行われていないことだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "一切……って、それが17名が消えた事件のせい？シロ、その有人調査のとき、中で何が起きたの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録は[DATA EXPUNGED]されている。財団データベースに残っているのは交信ログの断片だけだ。最初の7分間は正常な報告が続いた——廊下の長さが測定値と一致しない、という一文を除いて。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "廊下の長さが一致しない……？歩いた距離と、実際の距離が違うってこと？それって、どんな感覚なんだろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "交信ログによれば、チームは入口から約50メートル進んだ時点で、GPSの座標が外壁の外側を示し始めたと報告している。建物の中を歩いているのに、機器上では建物の外にいることになっていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "機器が壊れたんじゃないの……？って思いたいけど、17人全員が消えてるんだよね。じゃあ機器は正しかったってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-1730の内部空間は『現実の位相から部分的に切り離された領域』として機能している可能性があるとされている——あくまで仮説だ。証明できた研究員は一人もいない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "証明できた人がいない……って、証明しようとした人はみんな戻ってこなかったってこと？嘘だろ、それ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1730には別の異常性もある。2003年のドローン映像に、建設当時の設計図には存在しない部屋が複数確認された。地下3階に相当する深さに、1943年当時の技術では建設不可能な構造の空間がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "建設不可能な構造……？それって、誰かが後から付け加えたってこと？それとも、最初からそこにあったの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の建設記録にその部屋は存在しない。設計士の名前も、施工業者の記録も、全てが[REDACTED]だ。1943年当時の財団内部で何が行われていたのか——それは今も解明されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団自身が自分たちの記録を隠してるってこと？それって、財団が何かをやらかしたから隠してるってことじゃないの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ドローン映像にはもう一つ、問題がある。地下の未知の空間に、人影のようなものが映っていた。映像の解析によれば、その影は1943年当時の財団職員の制服に酷似した服装をしていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "1943年の……制服？それって、80年以上前に消えた誰かが、まだ中にいるってこと？ちょっと待って、怖いって。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその映像を機密指定レベル4に引き上げた。公式見解は『映像ノイズによる誤認識』——だが同時に、サイト-13への全アクセスを永久封鎖している。誤認識なら、封鎖する必要はないはずだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確かに……誤認識なら封鎖しないよ。財団は、あの影が何なのか分かってて、だから誰も近づけないようにしてるんじゃないの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2006年に消えた17名の交信ログに、最後から2番目の記録がある。職員の一人がこう言っている——『誰かが手を振っている。あの制服は……財団の、古い型だ』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "手を……振ってる？80年前に消えた誰かが、手を振ってる？それって、来い、ってこと？それとも、逃げろ、ってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その5分後に全員の通信が途絶えた。17名は全員、内部空間の位相がずれた領域に入ったものと財団は推測している——推測だ。確認する手段が、もうない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確認する手段がない……つまり、あの17人が今もあの中にいるかもしれないのに、財団は何もできないってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1730の収容プロトコルには、2007年に一項目が追加されている。『サイト-13周囲500メートルに半径を設定した立入禁止区域を維持し、接近する民間人は記憶処理の上で退去させること』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記憶処理……？近づいた人の記憶を消して追い返してるってこと？それって、財団がその場所の存在を絶対に知られたくないってことだよね。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに2009年の補足記録には、こう書かれている。『夜間、サイト-13の外壁から光が漏れる現象が複数回確認された。建物内部に電力供給は存在しない』——それ以上の調査は実施されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "電力がないのに光が漏れてる……？それって、あの中で誰かが動いてるってことじゃないの？17人が、まだ——",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は公式にその可能性を否定していない。2009年の記録の末尾にはこう記されている——『光源の正体については、現在調査中』。2006年から繰り返された、同じ文章だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "調査中って……ずっと調査中のまま、何年も経ってる。財団、本当は調査する気がないんじゃないの？怖くて近づけないんじゃないの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2014年、財団は外部の研究機関に協力を依頼した。SCP-1730の外壁に設置したセンサーで、建物内部の音響を72時間記録するという試みだ——結果は、記録開始から3時間後に終わった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3時間後に終わった……センサーが壊れたの？それとも、何かに壊されたの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "センサーは正常に動作していた。問題は記録された音だ。3時間の音響データの中に、複数の人間の声が含まれていた——その声の周波数を分析した結果は、[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "声が……記録されてた？声の分析結果が消されてる……って、その声が誰のものか分かったから消したってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "外部研究機関の担当者3名は、分析結果を見た直後に記憶処理を受けている。財団の記録にはその理由として『収容違反リスク』とだけ記されている——声の主が誰なのかは、分からないままだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記憶を消された……その3人は今、何があったか覚えてないんだよね。あの中に誰かがいて、助けを求めてたとしたら、それって——",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の判断は正しかったのかもしれない。間違っていたのかもしれない。ただ一つ確かなことは、SCP-1730の収容プロトコルは今日も変わっていない——『立入禁止』。それだけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それだけって……財団って、本当にあの中のことを解決する気があるの？それとも、もう諦めてるの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最新の収容記録、2023年3月付けのものには、こう書かれている。『SCP-1730は現在も収容維持中。内部の異常性については財団の調査能力の範囲を超えている可能性を否定できない』——これが財団の現在地だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "調査能力の範囲を超えてる……って、財団が白旗上げてるってこと？あれだけの組織が、一つの廃墟に負けてるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1730について、財団が解明できていることをまとめると——外壁は変化しない、内部は17倍以上の空間が存在する、1943年当時の人影が記録されている、夜間に光が漏れる、声が記録された。それだけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それだけって……その『それだけ』の中に、消えた17人の答えが全部あるような気がして、ゾッとする。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし今後、廃墟になった大型施設の周囲で財団職員らしき人間を見かけたら——何も聞くな、近づくな、覚えるな。あなたの記憶が処理される前に、その場を離れることだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記憶が処理される……って、財団に見つかったら記憶消されるってこと？シロ、この動画見てる俺たちは、大丈夫なの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書が流出している時点で、財団がどこまで把握しているかは分からない。ただ一つ言えるのは——SCP-1730に関する情報を知った人間が、財団の監視対象に加わる可能性は、ゼロではない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "監視対象……それって今の俺も？ちょっと、シロ、冗談だよね？本当に大丈夫？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-049『ペスト医師』を扱う予定だ——『患者は治癒した』と語るその存在が、本当に何をしているのか。財団が隠し続けた診察記録を読み上げる。チャンネル登録を入れておくといい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の報告書はここまでだ。この動画が役に立ったなら、高評価と登録を頼む——財団の監視が来る前に。あなたが最も恐ろしいと思うSCPを、コメントに残してくれると嬉しい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "監視が来る前に……って、それ最後まで怖いこと言わないでよシロ！でも、次回のSCP-049も絶対見る。ペスト医師、名前だけでもう怖いって。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に一つだけ。SCP-1730の報告書には、文書の末尾に手書きで一行追加されていた——財団の公式フォーマット外の、誰かの筆跡で。『壁の向こうで、誰かがこちらを見ている』。筆者の名前は、[REDACTED]。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "17名 全員消滅",
+      "内部記録【REDACTED】"
+    ],
+    "subtitle": "SCP-1730「廃墟サイト-13」財団機密報告書",
+    "tagline": "LEVEL 4 機密 / 閲覧注意 / 財団内部資料"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1784422780_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bは実在するSCP-1730を題材に「2006年5月14日午前3時47分」「A4たった4行・17名の名前すら記録なし」「内部容積17倍」など具体的な数値と日時でhook_strengthとspecificityが圧倒的に高く、視聴者の離脱を防ぐ緊張感を最後の手書き一行まで維持している。一方Aは架空のSCP-XXXXを「17%の確率で人生を狂わせる」という曖昧な設定で語るのみで、specificity・wording_qualityともに低く、CTAも世界観を壊す唐突な口調で機能していない。",
+      "scores_a": {
+        "hook_strength": 3,
+        "specificity": 2,
+        "pacing": 4,
+        "cta_effectiveness": 2,
+        "wording_quality": 3,
+        "overall": 3
+      },
+      "scores_b": {
+        "hook_strength": 9,
+        "specificity": 9,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 9,
+        "overall": 9
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 49.7% 優位",
+      "leader": "claude",
+      "margin": 0.4966
+    },
+    "candidates": {
+      "gpt": {
+        "title": "SCP-XXXX「異常なロジック」 - 財団が隠し続けた本当の理由"
+      },
+      "claude": {
+        "title": "財団が17名の死亡記録を4行で隠蔽した——SCP-1730「廃墟サイト-13」に誰も近づけない本当の理由"
+      }
+    }
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "title": "耳が痛いと音が聞こえにくくなるのは『内耳』のせいだった——鼓膜・耳小骨・蝸牛、3段階の崩壊を知ってる？",
+  "theme": {
+    "title": "なぜ耳が痛いと音が聞こえにくくなるのか？ — 耳の構造と音の伝わり方",
+    "angle": "耳の健康と聴覚の関係"
+  },
+  "short_scenario": [
+    {
+      "speaker": "真",
+      "text": "耳が痛いとき、音ってなんか遠くなる気がするよね？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "それ気のせいじゃなくて、鼓膜の振動が最大40%も落ちてる本物の現象だよ！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "耳は鼓膜・耳小骨・蝸牛の3段階で音を増幅してて、炎症があると最初の段階から狂い始めるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "WHO（世界保健機関）の2023年報告では、中耳炎1回で一時的に約25dBも聴力が落ちるケースが確認されてるよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "25dBって、ヒソヒソ声がほぼ聞こえなくなるレベルじゃないか、それは確かに遠く感じるわ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！もっと詳しい話は関連動画でチェックしてね！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "真",
+      "text": "ねえ理子、風邪で耳が痛くなったとき、周りの声がなんか水の中みたいにこもって聞こえた経験、あなたもない？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "あるある！実はあれ、気のせいじゃなくて耳の中で『音の増幅システム』が3段階まるごと崩れてる本物の現象なんだよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "3段階って……耳ってそんな複雑な構造してるの？いつもただ聞こえてるだけって思ってたけど、全然違うんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回は、耳が痛いと音が遠くなる本当の理由を、耳の構造から丸ごと解き明かすよ！最後まで聞けば耳の見方が変わるはず！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず耳の大きな仕組みから話すね。耳は『外耳・中耳・内耳』の3エリアに分かれていて、それぞれが専門的な役割を担ってるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "外耳は耳たぶから鼓膜までのトンネルで、空気の振動（音波）を集めて鼓膜に届ける役割。ここは比較的シンプルな構造だよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "鼓膜って薄い膜みたいなやつだよね？あれがそんなに重要なの？ただの仕切りかと思ってたよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "鼓膜は直径約8〜9mm、厚さわずか0.1mmの超薄膜で、音波の圧力変化を機械的な振動に変換する精密センサーなんだよ！",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その鼓膜の振動を受け取るのが中耳にある『耳小骨』。ツチ骨・キヌタ骨・アブミ骨という人体最小の3つの骨が連なってるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "人体最小の骨！それって耳の中に3つも骨が入ってるってこと？ちょっとびっくりだけど、それが何をするの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この3つの骨がレバー機構として働いて、音の振動を約22倍にも増幅してから内耳に送り込む仕組みになってるんだよ！",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "最後の内耳には『蝸牛』という渦巻き状の器官があって、液体で満たされた中に約15,000個もの有毛細胞が並んでるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "15,000個！？そんなにたくさんの細胞が耳の中に詰まってるなんて、すごい精密機械みたいだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この有毛細胞が液体の揺れを電気信号に変えて脳に送ることで、初めて『音として認識』されるんだよ。ここまでが基本の流れ！",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さあここから、耳が痛いときに何が起きるかを解説するよ。耳の痛みで最も多いのは中耳炎で、中耳に細菌やウイルスが侵入して炎症が起きる状態だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "中耳炎って子供の病気ってイメージだけど、大人もなるよね？なんで中耳に菌が入るの？外耳からじゃないの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は菌の侵入ルートは意外で、鼻の奥と中耳をつなぐ『耳管』という細いトンネルから風邪の菌が逆流してくるケースが最多なんだよ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "炎症が起きると中耳に液体（滲出液）が溜まり始める。この液体が鼓膜の振動を物理的に妨害して、音の入力が最大40%以上低下するんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "40%も下がるの！？それだけで相当聞こえにくくなりそうだけど、それだけじゃないってこと？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう、さらに滲出液が耳小骨の動きを制限するから、本来22倍の増幅ができなくなって音が極端に弱い状態で内耳に届いてしまうんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "WHO（世界保健機関）の2023年の報告によると、急性中耳炎1回で一時的に平均25dBの聴力低下が記録されたケースが確認されてるよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "25dBって、どのくらいの大きさなの？数字で言われてもピンとこないな……。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "25dBってヒソヒソ声がほぼ聞こえなくなるレベルで、図書館の静かな空間の音がかろうじて聞こえるかどうかという低さなんだよ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも痛みが強い急性期には炎症性サイトカインが内耳にまで影響を及ぼし、蝸牛の有毛細胞の感度も一時的に低下することが2019年の研究で示されてるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "外耳・中耳・内耳の全部が同時にやられるってことか……。音が遠くなるのは当然だよね、それだけの理由があったんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで意外な事実を紹介するよ。耳の痛みが聴覚に影響する歴史は古くて、古代エジプトの医学書『エーベルス・パピルス（紀元前1550年頃）』にも耳の炎症と難聴の関係が記述されてるんだよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "紀元前1550年！？3500年以上前から耳の痛みと聴力の関係に気づいてたってこと？それはすごいな……。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "当時は原因はわからなくても『耳が痛いと聞こえが悪くなる』という現象は経験的に知られてたんだね。人類は何千年もこの謎と向き合ってきたわけだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに面白いのは飛行機の耳抜きで有名な『気圧性中耳炎』で、2000m上空に相当する気圧差だと健康な人でも10〜20dBの聴力低下が起きることが確認されてるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "飛行機のあのボーンってなる感覚か！あれも同じメカニズムなの？耳管が関係してるってこと？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！耳管が気圧差で閉じてしまい、中耳の圧力が変わることで鼓膜が内側に引っ張られて振動しにくくなる。痛みと聴力低下が同時に起きるんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "そういえば、耳が痛くない外耳炎でも聞こえにくくなることってあるの？それとも中耳じゃないと起きない話？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "外耳炎でも外耳道が腫れて狭くなると音が入りにくくなるよ。でも中耳炎に比べて影響は小さく、最大でも15dB程度の低下にとどまることが多いんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "また、突発性難聴という病気は痛みがなくても突然内耳の蝸牛の血流が止まって一気に30〜90dBも聴力が落ちるケースがあるから、痛みだけが原因じゃない点も覚えておいてほしいな。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "痛くないのにそれだけ落ちるの、それは怖いな……。耳の違和感は見た目じゃわかりにくいから早めに診てもらった方がいいよね。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通り！耳の異変は72時間以内に耳鼻科を受診するのが鉄則で、特に突発性難聴はステロイド治療の開始が早いほど回復率が格段に上がるんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "じゃあここからは日常でできる耳の聴力を守るTipsを紹介するよ！知ってるだけでかなり違うから、ぜひ実践してみてね。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず1つ目、イヤホンの音量は最大音量の60%以下を守ること。WHOは『1日60分・最大音量の60%以下』を耳への安全基準として推奨してるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "60%か、通勤中はつい上げちゃうんだよな……。電車の騒音が85dBくらいあって、それをかき消すには結構な音量が必要だし難しいよね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "だからこそノイズキャンセリング機能付きイヤホンがすごく有効で、外部騒音を20〜30dB下げることで低音量でも音楽がクリアに聞こえるようになるんだよ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "2つ目は耳掃除のやりすぎを避けること。外耳道には自浄作用があって、耳垢は自然に外に出てくる仕組みになってるから、毎日の耳掃除は逆に粘膜を傷つけて外耳炎リスクを上げるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、耳掃除しすぎるのがダメなの？毎日やってたけど……。知らなかったよ、それは気をつけないとね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "3つ目は風邪のときに鼻を強くかまないこと！片側を押さえて少しずつかむのが正解で、両方いっぺんに強くかむと鼻から菌が耳管を通って中耳に押し込まれるリスクが2倍以上になるんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "2倍！？それは知らなかった……。風邪のとき鼻すっきりさせたくてズズっとやってたけど、それが中耳炎の原因になってたのか。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "あとは飛行機や山道でのドライブで気圧変化があるとき、ガムを噛んだり飲み込み動作をしたりすることで耳管が開いて気圧差を解消できるから、耳の痛みを予防できるよ！",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ガムを噛むのって何となくやってたけど、耳管を開かせるためだったんだね！理屈がわかると行動の意味が全然違って感じるな。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日のまとめをするね！耳が痛いと聞こえにくくなる理由は、鼓膜・耳小骨・蝸牛という音の3段階増幅システムが炎症や液体貯留によって連鎖的に機能低下するからなんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "中耳炎1回で平均25dBの聴力低下が起きるというWHOのデータが示すように、耳の痛みは単なる痛みじゃなくて聴覚システム全体へのSOSサインなんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "耳ってこんなに精密で繊細な仕組みで動いてたんだね。普段当たり前に聞こえてることがいかにすごいことか、改めて実感したよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "日常のちょっとした違和感の裏に、こんな壮大なメカニズムが隠れてるって面白いよね！あなたも今日から耳の聴こえ方が少し気になるはずだよ。",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は『なぜ静かな場所にいると耳鳴りが起きるのか？』というテーマで、脳が音を作り出すメカニズムを解説する予定だから、ぜひ楽しみにしておいてね！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "静かなのに耳鳴りって確かに不思議だよ！それも気になってたから次回が待ちきれないな、早く見たいよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "この動画が面白かったらぜひ高評価とチャンネル登録をよろしくね！チャンネル登録者1万人を目指して毎日投稿中だから、応援してもらえるとすごく励みになるよ！",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "コメント欄に『耳が痛くなった経験』や『これ知らなかった！』って教えてくれると理子も喜ぶから、ぜひ気軽に書いてみてね！また次回もよろしく！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "耳が痛いとき、音が遠くなる理由",
+      "99%が知らない『内耳』の仕組み"
+    ],
+    "subtitle": "鼓膜・耳小骨・蝸牛——3段階の音伝達が崩れるとき何が起きるのか？",
+    "tagline": "日常の違和感に隠れた耳の精密メカニズムを完全解説"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1783920946_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "シナリオBはタイトル・冒頭から「3段階の崩壊」「40%低下」「WHOの25dBデータ」など具体的な数値と構造的フレームを提示しており、specificity（9 vs 4）とhook_strength（8 vs 5）で大きく上回る。さらにfull_scenarioが54行・3358文字と充実しており、まとめ・次回予告・コメント誘導まで揃ったcta設計がAの散漫なCTAと比べて視聴維持・再訪率の両面で優位に立つ。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 3,
+        "wording_quality": 5,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 7,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 123.1% 優位",
+      "leader": "claude",
+      "margin": 1.2307
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ耳が痛いときに音が聞こえにくくなるのか？99%が知らない耳の秘密"
+      },
+      "claude": {
+        "title": "耳が痛いと音が聞こえにくくなるのは『内耳』のせいだった——鼓膜・耳小骨・蝸牛、3段階の崩壊を知ってる？"
+      }
+    }
+  }
+}

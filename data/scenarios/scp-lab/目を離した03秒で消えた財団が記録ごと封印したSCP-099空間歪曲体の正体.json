@@ -1,0 +1,501 @@
+{
+  "title": "目を離した0.3秒で消えた——財団が記録ごと封印したSCP-099「空間歪曲体」の正体",
+  "theme": {
+    "title": "SCP-099「空間を歪める存在」 — 現象の背後にある理論",
+    "angle": "空間の歪みと異常の関係を考える",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団が記録ごと封印した異常存在、SCP-099の話をする。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "封印って……それ、見ちゃいけないやつじゃないの!?",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "目を離した0.3秒で、部屋の壁が別の場所に繋がっていた——財団が確認した事例は3件、全員行方不明だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3件全員って……それ生きてる人、誰もいないってこと……?",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の収容記録には『空間が歪んだ後、対象は存在しなかったことになっていた』とだけ記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしく！もっと詳しい話は関連動画でチェックして。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "2019年11月、財団サイト-██の第3格納区画で、Dクラス職員3名が同時に消滅した——消えたのではない、『存在しなかったことになった』のだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……『存在しなかったことになった』って、どういうこと? 死んだんじゃなくて?",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視カメラの映像には3名が歩いている姿が映っていた。だが0.3秒後のフレームでは、3名が立っていた床ごと、別の空間に差し替えられていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "床ごと……? ゲームのステージが差し替わるみたいな感じ? それって現実に起きたの?",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の事後調査報告書——文書番号099-A-Incident-3——には『該当区画の空間的連続性が0.3秒間断絶した』と記録されている。原因は[DATA EXPUNGED]。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "原因が消されてる……財団でも分からなかったってこと? それとも、分かってるけど隠してる?",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回話すのはSCP-099、財団が『空間歪曲体』と分類した異常存在だ。オブジェクトクラスはKeter——財団が最も危険と判断したランクに位置している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Keterって……財団で一番ヤバいクラスじゃないか。それが空間ごと人を消せるの?",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が確認したSCP-099関連の消滅事例は世界で3件。目撃者として生存した職員は17名いたが、全員の証言記録は収容後72時間以内に[REDACTED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17人の証言が全部消されてる……それって証言が危険だったから? それとも証言した人たちが?",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の公式見解は『収容プロトコルの一環』とだけ記されている。なぜ証言が危険視されたのか、その理由は財団内部でも上位のクリアランスを持つ者しか知らない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団の中でも知れる人が限られてるって……それ、かなり深いところで隠されてるってことだよね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-099の外見的特徴から話す。財団の観測記録によると、SCP-099は特定の空間に出現する『視覚的に認識できない歪み』として記述されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "見えないのに空間を歪めるの? じゃあどうやって財団は存在を確認したんだ?",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が開発した『空間連続性モニタリング装置』——通称SCM装置——が1秒間に最大240フレームで空間の位相変化を計測することで、初めて検出に成功した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "1秒間に240フレームって……スローモーション映像みたいな感じで空間を監視してるんだ。それでやっと捕まえられるくらい速いってこと?",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。SCP-099が引き起こす空間断絶は最短で0.3秒、平均で1.2秒持続する。人間の視覚が異変を認識するまでには平均0.5秒かかるため、肉眼での検知は事実上不可能だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0.3秒で空間が切り替わって、人間が気づくより速く終わる……それって、気づいた時にはもう手遅れってこと?",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の収容プロトコル099-Bには『SCP-099が活性化した空間内に存在した人物は、空間断絶の終了後に当該空間から消失しており、その後の所在は一切不明である』と明記されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "所在が一切不明……死んだとも書かれてないのか。どこかに飛ばされたのか、それとも消えたのか、財団にも分からないの?",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説は大きく2つに分かれている。仮説Aは『SCP-099が接続した別の空間座標に転送された』、仮説Bは『空間断絶と同時に対象の存在情報そのものが消去された』というものだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "存在情報が消去……それって死ぬどころか、生まれたこと自体がなかったことになるってこと? ゾッとするんだけど。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の研究者グループ『サイト-██分析チームΨ-7』が2021年に提出した内部報告書では、仮説Bを支持するデータとして『消失した職員の個人記録が自動的に財団データベースから削除される』現象が記録されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "データベースから自動で消える……それって、SCP-099が記録まで追いかけてくるってこと? 怖いって、そんなの。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団のシステム管理者が削除ログを解析した結果、消去は対象者が消失してから平均7時間以内に完了しており、削除コマンドの発行元は財団のシステム外——つまり未知の発信源からだと判明している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団のシステムの外から……それって、SCP-099自体がやってるの? それとも別の何かが?",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこは財団でも解明されていない。Ψ-7の報告書の該当ページは[DATA EXPUNGED]されており、チームのリーダーだったΨ-7-α研究員の記録も現在は財団データベースに存在しない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "調べた人まで記録ごと消えてる……それって、SCP-099に近づきすぎたってこと? もしかして、この動画を見てる俺たちも?",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "落ち着け。財団の観測では、SCP-099は特定の条件下でのみ活性化する。活性化の記録は1997年から2023年の間に世界で23件——そのうち3件が消滅事例だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "23件で消滅が3件……約13%の確率で消えるってこと? それって、ガチャで引いたら終わりのやつじゃないか。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が確認した活性化条件の共通点は3つ。第一に『対象空間が密閉されていること』、第二に『空間内の人間が視線を一定方向に集中させていること』、第三に『気温が摂氏17度以下であること』。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17度以下……それって普通に冬の室内じゃないか。密閉された部屋で何かに集中してたら、条件が揃うってこと?",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。財団の収容プロトコル099-Cでは、SCP-099が活性化した可能性のある空間への立ち入りを禁止し、該当空間は摂氏18度以上に維持するよう指示されている。たった1度の差が、収容の境界線だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "たった1度……それって暖房が壊れたら終わりってこと? 収容プロトコルが壊れかけてる感じがしてゾッとする。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際に2018年、北欧のサイト-██で暖房系統の故障により収容区画の温度が16.8度まで低下した事例がある。その際、SCM装置が12分間にわたってSCP-099の活性化シグナルを検出し続けた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "12分間……その間、財団の職員はどうしてたの? 逃げられたの?",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "該当区画は即座に封鎖された。しかし封鎖命令が出てから職員が退避を完了するまでに要した時間は8分47秒——その間にDクラス職員1名の記録が財団データベースから消去されたことが事後に判明している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "8分47秒の間に……その人は消えたのに、誰も気づかなかったの? 恐ろしすぎる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の事後調査では『当該職員の退避完了が確認できなかった理由は不明』と記されている。同僚の職員は退避後に『最初から一緒にいた人間の数が分からない』と証言した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最初から一緒にいた人数が分からない……それって、消えた人のことを最初から知らなかったみたいになってるってこと? 怖い、本当に怖い。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-099の最も不気味な特性の一つが、まさにそこだ。財団の仮説Bが正しければ、SCP-099によって消滅した存在は『最初から存在しなかった』という状態に周囲の認識が書き換えられる可能性がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "認識が書き換えられる……じゃあ俺たちの周りにも、すでに消えてしまった人がいたかもしれないのに、気づけないってこと?",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の倫理委員会はその可能性を2022年の内部会議で提起した。議事録の該当箇所は[REDACTED]されているが、流出した断片には『一般社会における被害規模は財団の把握を超えている可能性』という一文が残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団の把握を超えてる……それって、財団ですら全部追いきれてないってこと? じゃあ誰が止めるんだよ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在、財団はSCP-099に対して『完全収容不能』という判断を内部で下しており、代わりに『早期検知と被害局限化』に方針を転換している。つまり、止める手段がない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "止める手段がない……財団がそう言ってるんだったら、俺たちには何もできないじゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が唯一公開した対処指針は3つだ。第一に『密閉された寒い空間で全員が同じ方向を向く状況を避けること』——これがSCP-099の活性化条件を崩す最も確実な方法だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同じ方向を向く状況……例えば映画館とか、教室とか、みんなが黒板を向いてる時とか? それって普通に毎日やってるじゃないか。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第二の指針は『空間内の人数を常に把握し、定期的に声で確認し合うこと』。SCP-099が活性化した空間では視覚的な記憶が改竄される可能性があるため、声による確認が唯一の検知手段になり得る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "声で確認……でも、消えた人のことを『最初からいなかった』と認識してたら、確認しても気づけないんじゃないの?",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "鋭い指摘だ。財団の研究チームは同じ問題に直面し、第三の指針を設けた——『入室前に人数を記録した物理的なメモを取り、退室時に照合すること』。デジタル記録はSCP-099によって改竄されるが、物理的な紙の記録は現時点では改竄事例がない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "紙のメモなら改竄されない……財団がそこまで対策してるってことは、デジタルの記録は全部信用できないってことじゃないか。怖すぎる。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、財団の内部文書には『物理的記録の改竄事例が確認されていないのは現時点での話であり、SCP-099の能力範囲が更新される可能性を排除できない』という注記が付いている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり、今は大丈夫でも、いつかは紙のメモも消されるかもしれないってこと……最終的に何も信じられなくなるじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-099の最後の記録として、財団のデータベースに残された最も新しい事例を話す。2023年3月、日本国内のとある施設でSCM装置が反応を示した。財団が到着した時、施設内に人間はいなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "日本で……2023年って、つい最近じゃないか。その施設ってどこ? 今も普通に使われてるの?",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "施設の名称と所在地は[REDACTED]。財団の調査では、施設には当日9名が入室した記録があった——だが財団が到着した時、施設内外に9名の姿はなく、近隣住民の誰も9名の存在を記憶していなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "9名が全員……しかも周りの人も覚えてない。それって、9人分の存在がまるごと消されたってこと? 嘘だろ……。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画を作るにあたって参照した資料はSCP財団Wiki（CC BY-SA 3.0ライセンス）に基づく。原典の設定を尊重しつつ、シナリオとしての考察と演出を加えている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日の話をまとめる。SCP-099は1997年から2023年の間に世界で23件の活性化が確認され、3件の消滅事例と17名分の証言記録の抹消が記録されている。財団は現在も完全な収容に成功していない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "まとめても全然安心できない……財団が止められないって言ってる時点で、もうどうしようもないじゃないか。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-096——通称『シャイガイ』を取り上げる。顔を見た人間を執拗に追い続けるこの存在には、財団が隠し続けた『収容失敗の記録』が複数存在する。見たいなら、チャンネル登録を忘れずに。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "シャイガイ……あの顔を見たら終わりって言われてるやつ。財団が隠してる記録って何? 次回も絶対見る。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画が怖かったと思うなら、高評価とチャンネル登録を頼む。コメント欄に『もし自分がDクラス職員だったらどうする』を書いてくれ——財団は常に新しいDクラスを必要としている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Dクラス職員……それって消耗品扱いじゃないか。絶対に財団には入りたくない。でも、次の動画は見る。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に一つだけ言っておく。今夜、密閉された寒い部屋で誰かと同じ方向を向いて何かを見るなら——定期的に隣の人間の数を声に出して確認しておけ。それだけでいい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "目を離した瞬間、部屋の形が変わっていた",
+      "財団が17名の証言を全て[REDACTED]にした理由"
+    ],
+    "subtitle": "SCP-099「空間歪曲体」——封印された3件の消滅記録",
+    "tagline": "記録ごと消えた。だから誰も知らない。"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1784192833_8209",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはタイトル・サムネフックから「0.3秒」「17名の証言を[REDACTED]」「2023年日本国内」など具体的な数値・固有情報を一貫して積み上げることでspecificityとhook_strengthで圧倒的な差をつけており、CTAもSCP世界観に溶け込んだ形で視聴者の行動を自然に促している点でもAを大きく上回る。",
+      "scores_a": {
+        "hook_strength": 4,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 9,
+        "specificity": 9,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 9,
+        "overall": 9
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 120.8% 優位",
+      "leader": "claude",
+      "margin": 1.2079
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜSCP-099が見る者を狂わせるのか？財団が隠した恐怖の真実"
+      },
+      "claude": {
+        "title": "目を離した0.3秒で消えた——財団が記録ごと封印したSCP-099「空間歪曲体」の正体"
+      }
+    }
+  }
+}

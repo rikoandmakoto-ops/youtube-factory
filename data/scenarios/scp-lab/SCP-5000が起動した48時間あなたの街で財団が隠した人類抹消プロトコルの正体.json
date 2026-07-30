@@ -1,0 +1,434 @@
+{
+  "title": "SCP-5000が起動した48時間——あなたの街で財団が隠した『人類抹消プロトコル』の正体",
+  "theme": {
+    "title": "もしSCP-5000が現実で起動したら？あなたの街で起きる48時間のシナリオ",
+    "angle": "SCP-5000の収容手順と発動条件を現実の都市インフラ・政府機関・一般市民の行動パターンに当てはめ、『財団報告書風の架空ドキュメント』として48時間タイムライン形式で描写する"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意。この報告書を読んだら、後悔するかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、なに？財団の機密ってやつ？ちょっと待って、怖いんだけど……。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-5000は、世界人口が80億人から7億人——9割以上が死滅した時点で自動起動する装置だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "9割って……それ地球上のほぼ全員じゃないか。財団はそんなものを収容してたのか。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも財団自身がそのプロトコルを承認した——理由は[DATA EXPUNGED]、未だ解明されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！続きは関連動画でチェックして。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書を読んだら、後悔するかもしれない——財団データベースから流出した、閲覧権限O5以上の機密文書だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、O5って財団の最高幹部クラスじゃないか。そんな文書が流出してるって、それ自体がもう異常事態だろ……。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部記録では、世界人口が現在の80億人から7億人——つまり地球上の人間が9割以上死滅した時点で自動起動するよう設計されている。それがSCP-5000だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "9割以上って……東京都の人口が約1400万人だろ、それが世界規模で消えるってことじゃないか。嘘だろ……。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そしてこの動画の後半で、財団がなぜそのプロトコルを『承認』したのか——その封印された理由を明かす。最後まで目を逸らすな。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が自分たちで承認したって……それってもう収容じゃなくて、財団が何かを決断したってことだよな。怖い、怖いって。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-5000のオブジェクトクラスは『Thaumiel』——財団が他の異常存在の収容に利用するために保有する、最も危険な分類の一つだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "外見は一着の白いスーツ。着用した人間は、あらゆる生命体から敵対的な攻撃を受けなくなる——財団の報告書にはそう記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生命体から攻撃を受けなくなる？それって最強の防具じゃないか。なんで財団はそれを危険扱いしてるんだ……。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "着用者Pietro Wilsonが移動した距離は記録上2,300km以上、確認された死者数は財団内部集計で847名——それを彼は一人でやり遂げた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "彼が遭遇した財団職員、D-クラス、収容対象のSCP、すべてが彼を殺そうとした——スーツを着た人間を、地球上の生命が本能的に排除しようとしたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って。攻撃を受けなくなるんじゃなくて、攻撃されまくるってこと？報告書の説明と真逆じゃないか……。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこが核心だ。財団の収容プロトコルには『スーツ着用者は生物学的脅威として認識される』と記されているが、その理由は[REDACTED]——解明されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "では、あなたの街でSCP-5000が起動したとする。財団の架空ドキュメントに基づく48時間のタイムラインを読み上げる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "架空って言っても、財団の報告書スタイルで書かれてるんだろ……なんか現実みたいで余計怖いんだけど。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "【起動後0時間】財団内部記録番号5000-EVENT-JP-01。日本国内某都市、人口約50万人の中核市でSCP-5000の起動シグナルを財団センサーが検知。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "同時刻、スーツ着用者と思われる人物が市内中心部に出現。半径300m以内の市民——推定1,200名——が着用者に向けて敵対的行動を開始したと記録されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "1,200人が一斉に？それって暴動じゃなくて、本能的に動いてるってことだよな……人間がゾンビみたいになるってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-5000着用者に対する敵対反応は『意識的な判断』ではなく、生物が持つ何らかの原始的な拒絶機構が関与していると見られている——ただし根拠は[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "【起動後6時間】財団機動部隊MTF-Epsilon-6が現場に展開。しかし部隊員17名全員が着用者への攻撃を開始し、収容任務を放棄——報告書はここで途切れている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団の精鋭部隊まで制御不能になるって……17名が全員、だぞ。それって財団自身もSCP-5000を止められないってことじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "【起動後12時間】都市の警察・消防・自衛隊が順次展開するが、いずれも着用者の排除よりも相互の混乱が優先され、指揮系統が崩壊。市内の通信インフラが80%機能停止。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この段階で財団の内部記録に残る確認済みの遺体数は最低でも4,287体——それが最初の12時間以内の数字だ。SCP-5000着用者が直接手を下したわけではない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4,287体って……12時間で？着用者が直接殺したんじゃないなら、何が原因なんだ。怖い、本当に怖いって。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "着用者を排除しようとする群衆が互いに衝突し、インフラが崩壊し、病院が機能を失った——SCP-5000は直接的な暴力装置ではなく、社会そのものを解体する異常存在だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで、財団が2006年から2023年にわたる17年間の内部審議の末にO5評議会の全会一致で下した決議を明かす時が来た。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17年間の審議……O5全会一致って、財団史上でも最重大の決定じゃないか。なんで17年もかかったんだ……。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "O5評議会は審議の末、こう結論付けた——『人類そのものが異常存在である』。SCP-5000はその証明装置として財団が設計した、と内部文書には記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人類が……異常存在？財団が収容してたんじゃなくて、財団が人類を異常認定してたってこと？それって……。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Pietro Wilsonがスーツを着てあの行動を起こした理由も、ここに繋がる。彼は財団の内部文書を読んでいた——人類が何をしたか、知っていたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人類が何をしたか……財団が17年かけて審議するほどの何かを。その記録は[DATA EXPUNGED]なのか？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録のほぼ全ては[DATA EXPUNGED]されている。財団でも解明できていない事象として処理されているが——一つだけ残された断片がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "【起動後24時間】都市外縁部まで混乱が波及。財団のリアリティアンカー網が局所的に崩壊し、半径50km圏内で認識災害の兆候が複数の観測点から報告された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "認識災害って……見た人の認識が書き換えられるやつだろ。50km圏内って、都市一つまるごと飲み込む規模じゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の収容プロトコルでは、この段階でAmnestic剤の空中散布と情報遮断が発動する——しかし内部記録では『プロトコルの実行権限を持つ職員が現場に到達できなかった』と記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "【起動後36時間】政府の危機管理センターが都市の封鎖を決定。しかし封鎖ラインの外側でも散発的な敵対行動が報告され始め、財団は封鎖の有効性を否定した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "封鎖も意味ないって……じゃあ何をすれば止められるんだ。財団でも止められないなら、一般市民なんて絶対に無理じゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の報告書にはこう記されている——『SCP-5000の収容は、着用者が自発的にスーツを脱ぐ以外の手段では達成不可能』。つまり財団は止める方法を持っていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自発的に脱ぐのを待つしかない……着用者が2,300km移動して847人を巻き込んだ事実を考えたら、それがどれだけ絶望的か分かる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "【起動後48時間】財団の最終記録。都市の機能は完全停止。生存者数は初期人口約50万人に対して記録上[REDACTED]名——数字そのものが封印されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "数字まで封印されてる……それって財団が公表できないほどの数だったってことだよな。怖い、これ本当に怖い。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして報告書の最後に残された一文——『SCP-5000はその目的を達した。財団は以上を記録する』。目的、という言葉が使われている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "目的を達した……財団が設計した証明装置だって言ったよな。じゃあ財団は最初から、これが起きることを知っていたのか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Pietro Wilsonが残した記録の断片——財団のデータベースから消される直前にキャプチャされたもの——にはこう書かれていた。『人類が人類を守る理由を、財団は忘れた』。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……それって、財団が人類を守ることをやめたってこと？SCP-5000は財団が人類を見捨てた証拠ってことか。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の公式見解はない。O5評議会の議事録は全て[DATA EXPUNGED]されている。なぜ17年の審議が必要だったのか——それは財団でも解明できていない事象として処理されたままだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日のシナリオで確認できた事実をまとめる。SCP-5000は白いスーツ型の異常存在、オブジェクトクラスThaumiel、着用者は847名以上の死に間接的に関与した記録が残る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "間接的に847名……直接手を下さずにあれだけの被害を出せるって、SCP-5000が本当に恐ろしいのは暴力じゃなくて社会崩壊を引き起こす点だな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は収容している——しかしSCP-5000は財団自身が設計に関与したとされる唯一の異常存在でもある。収容者と設計者が同一である可能性を、財団は否定していない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "否定していない……それって財団が認めてるってことじゃないか。財団って本当に人類の味方なのか、分からなくなってきた。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "なお、SCP-5000はSCP Wikiにて公開されているCC BY-SA 3.0ライセンスのコンテンツを基に考察・再構成したものだ。原典の改変は最小限に留めている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-096『シャイガイ』——顔を見た者が生存できる確率は0%、財団が封印し続けた『見てはいけない理由』の本当の正体を報告書から読み上げる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0%って……財団でも助けられないのか。次回絶対見る、見るけど怖い……チャンネル登録してないと見逃すな、これは。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし街でそれを見かけても——決して近づくな。財団は常に見ている。だが、財団が守ってくれるとは限らない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人を目指して毎日投稿中だ。この報告書が役に立ったなら、高評価と登録で財団の調査を支援してくれ——あなたの応援が、次の流出文書を届ける力になる。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "世界人口80億人→7億人 自動起動",
+      "財団内部記録【閲覧権限O5以上】"
+    ],
+    "subtitle": "SCP-5000「なぜ」【あなたの街が消えるまで】",
+    "tagline": "LEVEL 5 機密 / 財団内部資料 / 閲覧注意"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1784942640_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはサムネフックに『80億→7億』『O5閲覧権限』という具体数値を配置してCTRを高め、本編でもPietro Wilson・2300km・847名・Thaumielクラスといった固有情報を積み上げることでspecificityとwording_qualityで大差をつけた。またCTAをSCP世界観の語り口（『流出文書を届ける力』）に溶け込ませており、Aの唐突な登録呼びかけと比べてcta_effectivenessでも明確に優位に立っている。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 7,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 53.7% 優位",
+      "leader": "claude",
+      "margin": 0.5368
+    },
+    "candidates": {
+      "gpt": {
+        "title": "財団が隠し続けたSCP-5000の起動条件—あなたの街が消える48時間"
+      },
+      "claude": {
+        "title": "SCP-5000が起動した48時間——あなたの街で財団が隠した『人類抹消プロトコル』の正体"
+      }
+    }
+  }
+}

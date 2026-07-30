@@ -1,0 +1,14 @@
+{
+  "daily-science": {
+    "channel_id": "daily-science",
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1785333667
+  },
+  "scp-lab": {
+    "channel_id": "scp-lab",
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1785333729
+  }
+}

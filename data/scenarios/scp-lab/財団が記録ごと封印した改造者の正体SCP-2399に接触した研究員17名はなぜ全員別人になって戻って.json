@@ -1,0 +1,482 @@
+{
+  "title": "財団が記録ごと封印した「改造者」の正体——SCP-2399に接触した研究員17名は、なぜ全員別人になって戻ってきたのか",
+  "theme": {
+    "title": "機密解除：SCP-XYZ「実体の改造者」 — 見えない恐怖とその収容プロトコルの真相",
+    "angle": "異常存在を生み出す改造の影響を探る"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団の収容施設から戻った17名、全員が『別人』になっていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……別人って、どういうこと？記憶が消えたとか？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記憶どころか、指紋・声紋・虹彩——生体データが全部別人のものに書き換わっていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "そんなことが……財団はその17名を、今もどこかに収容してるの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録は[DATA EXPUNGED]されている。17名の行方は、財団でも把握できていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1万人目指して毎日投稿中だから登録お願い！この続きは関連動画から全部見られるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "1997年2月3日、午前6時12分。財団の無線に最後の交信が入った。『壁が——』それ以降、17名全員の通信が途絶した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……17名が一度に？それって事故じゃなくて、何か異常なものに接触したってこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう。そして72時間後、17名は全員自力で施設の外に出てきた——でも財団の生体認証は、全員を『未登録の人物』として弾いた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "未登録……？顔が変わってたってこと？それとも、記録が消されたとか？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "顔は同じだった。でも指紋・声紋・虹彩・血液型——生体データが全部、財団データベースに存在しない別人のものに書き換わっていたんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ……それって、体そのものが改造されたってこと？ゲームのキャラデータを書き換えるみたいに？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、まさにそれに近い。今日話すのはSCP-2399——財団が『実体の改造者』と呼ぶ異常存在の話だ。この動画で、その収容プロトコルの真相を全部話す。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2399のオブジェクトクラスはEuclid——収容可能なクラスだ。だが収容プロトコルの第1条は『半径300メートル以内への立入完全禁止』と記されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容できるのに、なんで立入禁止なの？それって矛盾してない？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "矛盾しているように見えるよね。でも財団の判断は明確だ——SCP-2399は『物理的な存在』ではない。場所そのものが異常を持っている、と財団は記録している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "場所が異常……？建物とか施設とは違うってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう。SCP-2399の収容区域に設置された72台の監視カメラは、全て正常に稼働している。映像には何も映らない。でも区域内に入った生物は、必ず変化して出てくる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "カメラには映らないのに……変化だけが起きる。それって、見えない何かがいるってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はそれを『実体』と呼んでいる。実体の正体は[REDACTED]——財団でも解明できていない。ただ、その影響だけが記録として残っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで一度、重要な問いを整理しておく——なぜ財団は、この存在の記録を長期間封印し続けたのか。この答えが、中盤以降に明かされる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "封印……財団って、都合が悪い情報はいつもそうやって隠すよね。怖いんだけど、続き気になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録によると、SCP-2399による変化は3段階で進行する。第1段階は『認識の変容』——区域内で約15分が経過すると、対象者は自分の名前と出身地を誤って報告し始める。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分の名前を間違える……それって、記憶が改ざんされてるってこと？自分が誰かも分からなくなるの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、記憶の改ざんではない。対象者は心底から『それが自分だ』と確信している。つまり、自己認識そのものが書き換えられている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、怖いって。自分が自分じゃなくなるのに、自分ではそれに気づけないってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通り。第2段階は『生体情報の再書き込み』——接触から約4時間で、指紋・声紋・虹彩が別人のデータに完全に置き換わる。財団の計測では、一致率は0.0%を記録している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "一致率ゼロ……それって、元の自分の痕跡が生体的に完全に消えるってこと？ゾッとする……",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして第3段階——これが最も不気味だ。変化した対象者は、変化前の記憶を持った別人として行動し始める。つまり、元の自分の人生を、別の誰かの体で生きようとする。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……それって、元の人はどこに行くの？消えるの？それとも、別人の中に閉じ込められてるの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。記録には『元の人格の残存を示す証拠は確認されていない』とだけある——それが消滅なのか、別の場所に移動したのかは[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1997年の事案——17名が変化して戻ってきた件に話を戻そう。財団は変化した17名を即座に収容した。尋問記録は全部で1,842ページ。その大半が機密指定のまま残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "1842ページも……それだけ調べて、何が分かったの？財団は何か答えを出せたの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "分かったことが一つある——17名が報告した『変化後の自分』の情報は、全員が互いに一致していた。17名が別々に語った名前・出身地・過去の記憶が、完全に同じ人物像を指していた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17人全員が、同じ一人の別人になった……？それって、SCP-2399が特定の誰かを『上書き先』として選んでるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその仮説を『単一実体の複製説』と呼んでいる。SCP-2399は、特定の実体の情報を対象者に転写する——財団の第4研究部門は、その実体が『実在しない存在』である可能性を示唆している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "実在しない存在……この世に存在しないはずの誰かに、書き換えられるってこと？それ、どういう意味なの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも、その意味は解明できていない。ただ、17名の中に一人だけ——変化が不完全なまま止まった人物がいた。その人物の記録だけが、わずかに機密解除されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "不完全な変化……それって、途中で止まったってこと？元の自分と別人が混在してる状態？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録では『D-7741』と呼ばれているDクラス職員だ。彼は変化の途中で、右腕の指紋だけが元のまま残った。財団はその原因を、収容区域内での『異常な接触の中断』と記録している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "中断……何かが邪魔したってこと？それとも、D-7741に何か特別なものがあったの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "D-7741は尋問中に一つだけ、他の16名と異なる証言をした——『壁の中で、誰かが私の名前を呼んでいた。元の名前で』と記録されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "元の名前で……壁の中から。それって、SCP-2399が持っている情報の中に、元の自分もいるってこと？ゾッとする……",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の一部研究員は、SCP-2399の『実体』が過去に変化させた全対象者の情報を保持している可能性を主張している——つまり、変化した人々は消えたのではなく、実体の中に蓄積されているという仮説だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "蓄積……財団が接触させた人たちが、全員その中に閉じ込められてる可能性があるってこと？そんなの、財団は止めなかったの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が1997年以降、SCP-2399への接触実験を完全に停止したのは、この仮説が提出された直後だ——2001年10月、財団倫理委員会は接触実験の永久凍結を決定した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "永久凍結……でもそれって、すでに接触した17名はどうなったってこと？財団は何もしなかったの？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "17名の収容記録は、倫理委員会の決定から3日後に[DATA EXPUNGED]されている。17名がその後どこにいるのか——財団のどのデータベースにも、現在の記録は存在しない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消された……財団が自分たちで収容した人の記録を、自分たちで消したってこと？それ、怖すぎる。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルの現在の第1条には、こう記されている——『SCP-2399の収容区域に生物を立ち入らせてはならない。理由は収容報告書付録C-7を参照』。その付録C-7も[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "理由を書いた資料まで機密……財団って、自分たちが何をやったか隠したいんじゃないの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが、今回の話で最も重要な点だ——財団がSCP-2399の記録を封印した本当の理由は、存在の危険性だけじゃない可能性がある。財団自身が、何かを知りすぎたかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が知りすぎた……その先に、何があったの？それも[REDACTED]なの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の第4研究部門が提出した最終報告書には、一行だけ機密解除された文章がある——『SCP-2399の実体は、観測行為そのものに反応する可能性が示唆される』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "観測に反応する……それって、調べようとするだけで、こっちが気づかれるってこと？怖い、普通に怖い。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団がSCP-2399への接触実験を永久凍結した後、収容区域の周囲300メートルに設置されたセンサーが、月に平均3.2回の異常反応を記録し続けている——現在も、だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今も動いてる……収容されてるのに、区域の外に向けて何かしてるってこと？ちょっと待って、それって安全じゃないよね？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の現行プロトコルには、この異常反応への対応手順が記載されていない——理由は報告書に一行だけある。『対応プロトコルを策定した研究員3名の記録が存在しないため』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "対応を決めた人たちの記録がない……それって、その3人も変化させられたってこと？財団の中に、SCP-2399がいるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は公式にその可能性を否定している——でも、SCP-2399の収容区域の管理担当は、2001年以降、毎年必ず担当者が交代している。理由の記録は全て[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "毎年交代……自分から辞めてるのか、それとも変化させられてるのか、外からは分からない。それが一番怖いかもしれない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2399について話せることは、ここまでだ。財団が記録ごと封印した理由——それは、この存在が『危険だから』じゃない。財団でさえ、何が起きているのか分からなくなっているからかもしれない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が分からなくなってる……それって、収容してる側が一番安全じゃないってこと？ゾッとする、本当に。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の話はSCP財団Wiki（CC BY-SA 3.0）のライセンスに準拠した考察と解説だ。原典を元に、財団報告書の内側からだけ語っている——原文の確認はSCP財団Wikiで。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分かった。でも……SCP-2399の区域の外でセンサーが反応してるって話、今でも続いてるんだよね。それって、もう財団の外にも影響が出てるってこと？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその可能性を否定している。でも——もしあなたの周りで、誰かの言動が少しずつおかしくなっていると感じたなら。その人の指紋を、一度確かめてみるといいかもしれない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、SCP-096——『シャイガイ』の収容失敗記録を話す。顔を見た者が必ず死ぬ、その仕組みと財団が隠し続けた『例外ケース』の話だ。気になるなら、チャンネル登録しておいてくれ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "例外ケース……096って顔を見たら絶対死ぬんじゃないの？例外があるって、どういうこと？次回絶対見る。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高評価とチャンネル登録が、次の報告書を届ける力になる。あなたが最も恐ろしいと思うSCPを、コメントに残していってくれ——財団はいつでも、情報を求めている。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "接触した17名、全員が『別人』になって戻ってきた",
+      "財団が封印したSCP-2399の収容記録"
+    ],
+    "subtitle": "LEVEL 4 機密 / 財団内部資料【閲覧注意】",
+    "tagline": "見えない何かが、あなたを作り直している"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1784624819_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bは冒頭から『17名全員が別人になって戻ってきた』という具体的な数字と事実で即座に視聴者を引き込み、hook_strengthとspecificityで圧倒的な差をつけた。さらに[REDACTED]や日時・センサー反応回数など架空の具体性を一貫して維持し、CTAも次回予告の謎（096の例外ケース）と世界観に溶け込んだ形で設計されており、視聴維持・登録転換の両面でAを大きく上回る。",
+      "scores_a": {
+        "hook_strength": 4,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 9,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 48.4% 優位",
+      "leader": "claude",
+      "margin": 0.4842
+    },
+    "candidates": {
+      "gpt": {
+        "title": "深夜0時、財団が隠し続けた改造者の本当の目的—SCP-XYZの恐怖"
+      },
+      "claude": {
+        "title": "財団が記録ごと封印した「改造者」の正体——SCP-2399に接触した研究員17名は、なぜ全員別人になって戻ってきたのか"
+      }
+    }
+  }
+}

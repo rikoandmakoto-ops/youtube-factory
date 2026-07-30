@@ -1,0 +1,494 @@
+{
+  "title": "財団が17年間封印した「選択の悪夢」——SCP-096に触れた職員が最後に見たものの正体",
+  "theme": {
+    "title": "SCP-XXXX「存在を選択する悪夢」 — 意識の変化がもたらす異常の影響",
+    "angle": "異常が引き起こす心理的影響の考察"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意——これを最後まで見た職員は、翌朝から記録に存在しない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、記録に存在しない？消えたってこと？それどういう意味……？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部記録には『意識が選択を止めた時点で対象は消失する』とある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "意識が選択を止めるって……それって、俺たちも今この瞬間、選んでるから存在できてるってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、17年間で確認された消失件数は23件——全員、最後に『選ぶことをやめた』と記録されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！もっと怖い話は関連動画でチェックして。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団の施設Z-9区画は2007年3月11日に完全封鎖された——内部に入った職員17名は、現在も全員が[REDACTED]のままだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って……17名って、全員？ひとりも戻ってきてないの？それって普通に事故じゃなくて……？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "事故という言葉では片付けられない。財団の収容違反報告書には『対象との接触から平均0.3秒以内に、職員の存在記録が消失した』と記されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0.3秒……それって瞬きよりも早いじゃないか。記録が消えるって、どういうことなんだよ……。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日読み上げるのは、財団データベースから流出したとされる報告書だ。SCP-XXXX——財団内部のコード名は『存在を選択する悪夢』。今から、その中身を明かしていく。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……やばい、タイトルからして嫌な予感がする。でも、続きが気になって仕方ない。シロ、教えてくれ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-XXXXのオブジェクトクラスはKeter——財団が最も危険と判断した分類だ。収容されているのは地下43メートル、厚さ2.7メートルの隔壁に囲まれた独立区画で、外部からの観測手段は存在しない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "観測手段がない？カメラとかも？なんで収容できてるんだよ、それ……。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "観測すること自体が、収容違反のトリガーになるからだ。財団の仮説では、SCP-XXXXは『認識されることで活性化する』とされている。見た瞬間に、対象はお前を選ぶ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……選ぶ？何を選ぶんだよ。俺を、どうするために選ぶんだ？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書によれば、SCP-XXXXに認識された対象は段階的な意識変容を起こす。財団の分類では第1段階から第5段階まであり、第3段階以降は『自発的な存在の選択』が始まるとされている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自発的な存在の選択……？それって、自分で消えることを選ぶってこと？強制じゃなくて？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "強制ではない、というのが財団でも最も不気味な点だ。第3段階に達した職員は一様に『ここにいることが正しいのか分からなくなった』と報告している。その言葉が記録された後、職員は二度と報告を提出しなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "『ここにいることが正しいのか分からなくなった』……なんか、それ普通にしんどい言葉だな。でも怖い、すごく怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部記録番号XXXX-EVENT-JP-01——これは実際に記録されたタイムラインだ。2007年2月19日、午前9時17分。Z-9区画に派遣されたDクラス職員・D-4471が最初の接触を報告した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Dクラス職員……それって、実験のために使われる人たちだよな。その人はどうなったんだ？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "D-4471の音声記録は接触から11分で途絶えた。最後の言葉は『これは自分が選んだことだと思う』だった。財団の回収チームが現場に到着した時、D-4471の痕跡は一切残っていなかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "痕跡が一切ない……衣服も装備も？本当に何も？消えたって、それもう物理的におかしいだろ……。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の調査チームは現場から37種類の検体を採取したが、D-4471に関連する有機物は0.003グラムすら検出されなかったと記録されている。原因は[DATA EXPUNGED]——財団でも解明できていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "DATA EXPUNGED……財団ですら答えを持ってないってことか。それって、もっと怖いじゃないか。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その後、財団は収容プロトコルを改定した。接触実験の全面禁止、区画への入室は年1回の設備点検のみ、点検員は必ず2名1組で、互いの存在を常に確認し合うことが義務付けられた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "互いの存在を確認し合う……なんでそんなことが必要なんだ？一人だと、自分が存在してることを忘れるのか？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-XXXXの影響下では自己存在の認識が著しく低下するとされている。人間は他者に認識されることで自分の存在を確認する——その仕組みを、SCP-XXXXは逆手に取る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "逆手に取る……誰にも認識されなくなったら、自分でも自分の存在を信じられなくなるってことか。なんか、ゲームのキャラのHPがゼロになる感覚に近い？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そのゲームの喩えは、財団の研究員たちが実際に使っていた表現に近い。報告書には『対象はまるで自らのデータを削除するように、段階的に存在の根拠を手放していく』と記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "データを削除……ゲームなら再起動できるけど、現実でそれが起きたら取り返しがつかないじゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "2007年3月11日の収容違反では、派遣された17名の職員が同時にSCP-XXXXと接触した。財団の記録では、17名全員が接触から平均4時間37分以内に第5段階に達したとされている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4時間37分……それって、かなり遅くないか？それだけ時間があったのに、誰も逃げられなかったのか？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "逃げようとした記録もある。第2段階にいた職員・D-7832は区画の出口まで到達した。しかし出口の前で立ち止まり、記録には『ここを出ることを選ぶ理由が見つからない』と残している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "選ぶ理由が見つからない……怖い。それって洗脳とも違う、もっと深いところに刺さってくる感じがする。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の倫理委員会は2008年に『SCP-XXXXへの接触実験は人道的観点から永久に禁止する』という決定を下した。しかし同時に、収容継続も停止できないという矛盾した結論を出している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容もできない、実験もできない、でも解放もできない……財団も詰んでるじゃないか。それって、もしかして今も誰かが見張ってるってこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "見張りではなく、封印に近い。Z-9区画への電力供給は最低限に絞られ、内部の温度は摂氏マイナス12度に固定されている。財団の仮説では、低温環境がSCP-XXXXの活性化を0.7%抑制するとされているが、確証はない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0.7%……ほぼ意味ないじゃないか。それでも続けてるのか、財団は。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団には『何もしないこと』という選択肢が存在しない——これが組織の根本的な矛盾でもある。報告書の末尾には『0.7%の抑制効果が失われた場合の影響範囲は半径3.1キロメートルに及ぶ』と記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3.1キロメートル……それって、普通に住宅街ひとつ分くらいの範囲じゃないか。そこに住んでる人たちは何も知らないんだろ？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "知らない方が安全だ、と財団は判断している。記憶処理剤アムネシアックの投与実績は周辺住民だけで累計1,847名——しかしその数字自体も、報告書に『暫定値』と記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "暫定値……つまり、実際の数はもっと多いかもしれないってことか。怖い、本当に怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここからが、この報告書で最も不気味な部分だ。財団の主任研究員・[REDACTED]は2019年の内部会議で、SCP-XXXXに関するある仮説を提出した。その仮説は会議の翌日に全文削除されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "翌日に削除……財団が自分たちで消したってこと？それって、内容がまずかったから？それとも、書いた人が……？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "主任研究員・[REDACTED]の現在の所在は不明だ。財団の人事記録には『2019年10月14日付で退職』とあるが、退職届の署名は本人のものと一致しないと内部監査で指摘されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "署名が一致しない……それって、本人じゃない誰かが書いたってこと？それとも、本人がもう……。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "削除された仮説の断片は、一部の流出文書に残っている。そこには『SCP-XXXXは異常存在ではなく、人間の意識が本来持つ機能の一つを外部化したものである可能性がある』と記されていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……待って。それって、SCP-XXXXは外から来たものじゃなくて、俺たちの中にもともとあるものってこと？今この瞬間も俺の中に……？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの仮説に対して公式見解を一切出していない。ただ、仮説が削除された翌月からZ-9区画の電力供給量が17.3%引き上げられた事実だけが、設備記録に残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "電力を増やした……それって、何かが変わったから対応したってことだよな。財団が急いで対応するくらい、まずい何かが起きたってことだよな。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もうひとつ、報告書に記されていた事実がある。Z-9区画の壁面に、2019年11月以降から新たな文字列が刻まれ始めた。その文字は日本語で、内容は『選ぶのをやめれば楽になる』だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ……誰が刻んだんだよ。中に人がいるのか？それとも、SCP-XXXXが自分で……？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の調査では、文字を刻んだ主体は特定できなかった。区画内に人間が侵入した記録はなく、SCP-XXXXが物理的な干渉を行う能力を持つという証拠もない——記録は[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分からないことだらけだ……でも、その言葉が日本語だったって、それが一番怖い。なんで日本語なんだよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-XXXXは接触した人間の言語体系を学習する可能性があるとされている。17名の職員の中に日本語話者が複数含まれていたことが、関連している可能性を財団は否定していない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "学習する……つまり、消えた職員たちから何かを吸収したってこと？それって、彼らの記憶や人格まで？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その問いに財団は答えを持っていない。ただ、収容プロトコルには追記がある——『Z-9区画から声のような音響が検出された場合、即時に全職員を区画から100メートル以上離脱させること』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "声……それって、消えたはずの人たちの声なのか？財団は、その声が何を言ってるか分かってるのか？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "音響記録の内容は[REDACTED]——閲覧制限レベル5が設定されており、財団上層部の中でも確認できる人間は現在3名のみとされている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3名……その3人は、聞いた後も正気でいられるのか？選ぶのをやめたくなったりしないのか？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "3名のうち1名は2021年3月に任務を離脱した。理由は記録されていない。残り2名の精神状態は、財団の定期審査で現在も『正常範囲内』と判定されている——ただし審査を担当する医師は毎回交代させられている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "審査の医師を毎回交代……それって、同じ医師が何度も担当したら、その医師にも影響が出るからじゃないのか。怖い、全部が怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日読み上げた報告書は、財団データベースから流出したとされる文書を基にしている。SCP財団WikiはCC BY-SA 3.0ライセンスのもと公開されており、このシナリオはその設定を基に考察・再構成したものだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……なあ、シロ。俺さ、この話を聞きながらずっと考えてたんだけど。俺たちって、毎日何かを選んで生きてるじゃないか。起きることも、飯を食うことも、学校に行くことも。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが怖い理由に気づいたなら、この報告書の意味を正しく受け取っている。SCP-XXXXが実在するかどうかより、『選ぶことをやめた時に人は何を失うか』——財団が本当に封印したかったのは、その答えかもしれない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "封印したかった答え……それって、俺たちには知らせたくなかったってこと？それとも、知ったら財団にとってまずいことになるから？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が『人類そのものを収容対象と判断した』事例——SCP-001提言の中でも最も封印度合いの高い記録を読み上げる予定だ。今回よりも、深いところまで踏み込むことになる。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……人類を収容対象。それって、俺たちも全員収容されるべき異常存在ってこと？次回、絶対見る。でも見た後に後悔しそうで怖い。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録と高評価を押してくれると、次の報告書を早く届けられる。財団のデータベースは今も更新されている——そして今夜も、Z-9区画の壁には新しい文字が刻まれているかもしれない。もし似たような感覚を覚えたら、決して一人でいるな。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "17年間、財団すら直視できなかった",
+      "存在を『選ぶ』だけで消える"
+    ],
+    "subtitle": "SCP-096「意識の選択」収容違反記録",
+    "tagline": "【KETER / 閲覧制限Lv.4】"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1785056962_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはフック冒頭から「0.3秒で記録消失」「17名全員[REDACTED]」など具体的な数値・固有情報を連打してCTRと視聴維持を強力に牽引しており、specificity・hook_strengthで大きく差をつけた。さらにクロの感情的リアクションがテンポを維持しつつ、CTAも世界観に溶け込んだ形で自然に機能しているのに対し、Aはフックが抽象的で本編の内容も汎用的な心理Tips に脱線するなど一貫性・具体性の両面で劣っている。",
+      "scores_a": {
+        "hook_strength": 4,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 53.7% 優位",
+      "leader": "claude",
+      "margin": 0.5371
+    },
+    "candidates": {
+      "gpt": {
+        "title": "財団が封印した17名の『選択する悪夢』——その正体"
+      },
+      "claude": {
+        "title": "財団が17年間封印した「選択の悪夢」——SCP-096に触れた職員が最後に見たものの正体"
+      }
+    }
+  }
+}

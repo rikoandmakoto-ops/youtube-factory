@@ -1,0 +1,15 @@
+#!/bin/bash
+cd "$(dirname "$0")/../../../backend"
+
+# Kill existing uvicorn
+PIDS=$(pgrep -f "uvicorn main:app" 2>/dev/null)
+if [ -n "$PIDS" ]; then
+    kill $PIDS 2>/dev/null
+    sleep 2
+fi
+
+# Ensure log dir
+mkdir -p ../logs
+
+# Start server (no --reload, background)
+nohup python3 -m uvicorn main:app --host 0.0.0.0 --port 8000 >> ../logs/backend.log 2>&1 &

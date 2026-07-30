@@ -1,0 +1,452 @@
+{
+  "title": "一口SCP：SCP-1238「メカニカルリペアマン」が修復するのは機械じゃない——財団が17年間隠し続けた本当の目的",
+  "theme": {
+    "title": "機密解除：SCP-1238「メカニカルリペアマン」 — 自動修復の背後に潜む真実",
+    "angle": "異常な工作機械とその目的"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団の収容施設で、17件の『自発的失踪』が記録された。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……自発的って、自分から消えたってこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1238——通称メカニカルリペアマン。修復対象は機械だけじゃない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ何を……修復してるんだよ。怖いって。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の結論は、今も[DATA EXPUNGED]。分からないことが一番怖い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1万人目指して毎日投稿中だから登録お願い！続きは関連動画でチェックしてね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団の収容施設で、72時間以内に17名の職員が『自発的に』姿を消した——その報告書が今、手元にある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、自発的って……自分から消えたってこと？それって普通じゃないよな？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "普通じゃない。財団が『自発的』という言葉を使うとき、それは大抵、本当の原因を隠したいときだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日読み上げるのは、SCP-1238——コードネーム『メカニカルリペアマン』。この報告書、読んだら後悔するかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "メカニカルリペアマン……修理屋みたいな名前だけど、なんか全然笑えない雰囲気だな。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "笑えないどころじゃない。これから話すことは、財団が17年間、公式データベースの深部に封印し続けた内容だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1238のオブジェクトクラスはEuclidに分類されている——が、財団内部では再分類を求める声が複数回上がっている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Euclidって、危険だけど収容可能ってやつだよな……再分類って、もっとやばいってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "再分類の申請書は3回提出され、3回とも[REDACTED]の命令で却下されている。理由は開示されていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1238の外観は、旧式の工作機械に似た金属製の装置だ。高さ約1.8メートル、推定重量は320キログラム。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "320キロ……冷蔵庫4台分くらいか。それが工場にあっても違和感ないよな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこが最も危険な点だ。SCP-1238は一見、普通の産業機械に見える。初期発見時、財団が到着するまでに接触した作業員は9名。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そのうち7名は72時間以内に発話を停止した。報告書にはそう記されている。残り2名の記録は[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "発話を停止……しゃべれなくなったってこと？7人が72時間で？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "『停止』という言葉が使われている。医学的な失語症とは別の何かだと、担当研究員は記録に残している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1238の異常性は、その『修復機能』にある。壊れた機械を持ち込むと、接触から平均3時間で完全修復される。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3時間で完全修復……それだけ聞くと便利そうだけど、絶対そんな話じゃないよな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "修復の過程は観測できない。SCP-1238の周囲に設置した全カメラは、起動中に例外なく映像記録を停止する。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "カメラが止まる……それって、見せたくないってこと？意図的に？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-1238は観測行為そのものを認識し、無効化する性質を持つとされている——だが証明はできていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題はここからだ。SCP-1238が修復するのは、機械だけではない可能性が浮上した。それが17年間隠された核心だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "機械だけじゃない……じゃあ、何を修復してるんだよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容施設で記録された17件の失踪。失踪した職員は全員、SCP-1238の稼働音が聞こえる範囲内で最後の記録が途絶えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部調査報告書には、こう書かれていた——『対象は損傷した構造物を認識する。損傷には有機物も含まれる可能性がある』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "有機物……人間のこと？人間が壊れてると判断したら、修復しようとするってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその仮説を否定も肯定もしていない。ただ、収容プロトコルに『半径15メートル以内への人員立入禁止』が追加された。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "15メートルという数字は、稼働音の可聴限界距離と一致している——偶然かどうかは、財団でも解明されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "音が聞こえる範囲が危険ゾーン……音を聞いただけで、修復対象に認識されるってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そう考えると、発話を停止した7名の説明がつく——財団の一部研究員はそう主張した。その後、彼らの記録も[REDACTED]になった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、主張した研究員まで消えたの？それって……財団が意図的に？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "断言はできない。財団は情報の保護と隠蔽を同じ手続きで行う。どちらなのかは、外部からは判断できない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1238が最初に発見されたのは、北米の廃工場だ。稼働していたとされる期間は推定で最低23年——誰も気づかなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "23年間、誰にも発見されずに稼働してた……その間、何人が接触したんだろう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の調査では、その工場で働いていた労働者の記録が1989年以降、地域の行政データベースから消えている。人数は不明だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "廃工場の壁には、工具で刻まれたとみられる文字が残っていた。内容は報告書から[DATA EXPUNGED]とされている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "[DATA EXPUNGED]……財団が消したってことは、見せられないくらいやばい内容だったってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "あるいは、内容を知った人間が増えることを防ぐためかもしれない。財団が情報を消す理由は、常に一つとは限らない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在のSCP-1238収容プロトコルには、もう一つ異例の条項がある——『対象への話しかけ・交渉・命令は固く禁止する』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "話しかけ禁止……機械に話しかけるって、それって、反応するってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第4収容試験でDクラス職員がSCP-1238に話しかけた記録がある。対象は稼働を開始し、職員は収容室から消えた——所要時間は11秒だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "11秒……たった11秒で消えた？何があったのか、カメラは記録してないんだよな。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "当然、映像は残っていない。残されたのは稼働音の音声記録だけだ——その音声は、財団の公開記録から除外されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部では、SCP-1238を『修復者』ではなく『再構成者』と呼ぶ研究員が複数存在するという情報がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "再構成者……修復じゃなくて再構成って、何が違うんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "修復は元に戻すことだ。再構成は、元とは異なる形に組み直すことを意味する——その差が、全てを変える。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ失踪した17人は……消えたんじゃなくて、別の何かに作り替えられた可能性があるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその問いに答えを出していない。いや、正確には——答えを出した記録が、[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在、SCP-1238は収容施設の最深部、アクセス制限レベル4の区画に封鎖されている。定期稼働確認は遠隔のみで行われる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "遠隔のみ……それって財団も、もう近づけないってこと？収容してるのに？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容と管理は別物だ。財団は多くの異常存在を収容しているが、完全に理解できているものは一つもないと思っていい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1238の最新稼働記録は3ヶ月前——遠隔センサーが稼働音を検知した。その後、センサーも沈黙した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "センサーまで止まった……それって、また何かが修復されたってこと？収容室の中で？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は現在、収容室の状態を確認できていない。報告書の最終行には、こう記されていた——『現状、対応策なし』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "なお、このSCP-1238の記録はCC BY-SA 3.0ライセンスのSCP財団Wikiをもとに考察・再構成したものだ。原典の設定を尊重している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は財団が『最も接触を避けるべき存在』と分類した別の異常存在——SCP-096の収容違反記録を読み上げる予定だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "096……あの顔を見たら追いかけてくるやつ？それも怖いな……でも気になる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "気になるなら、チャンネル登録をしておけ。財団の機密報告書は、知らないままでいる方が——安全かもしれないけれど。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし日常で、古い機械が勝手に動く音を聞いたなら——決して、その場所に近づくな。15メートルの距離を保て。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "修復完了まで平均72時間——その間、人間は何をされる？",
+      "財団収容施設で17件の『自発的失踪』が記録された"
+    ],
+    "subtitle": "SCP-1238【自動修復の裏側】財団が封印した真実",
+    "tagline": "機械は壊れたものを直す。では——人間が壊れたとき、何が来る？"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1783556802_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bは冒頭から『72時間以内に17名が自発的失踪』という具体的数字でフックを作り、hook_strengthとspecificityで大きく上回る。さらにCTAをSCP世界観に溶け込ませた語り口で締めており、cta_effectivenessとwording_qualityでもAを明確に凌駕している。",
+      "scores_a": {
+        "hook_strength": 3,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 2,
+        "wording_quality": 4,
+        "overall": 3
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 7,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "財団が隠した修復の正体—SCP-1238「メカニカルリペアマン」"
+      },
+      "claude": {
+        "title": "一口SCP：SCP-1238「メカニカルリペアマン」が修復するのは機械じゃない——財団が17年間隠し続けた本当の目的"
+      }
+    }
+  }
+}

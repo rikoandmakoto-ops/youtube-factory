@@ -1,0 +1,477 @@
+{
+  "title": "目を離した0.3秒で内側から書き換わる——SCP-217「時計仕掛けのウイルス」が人間を機械に変える本当の理由",
+  "theme": {
+    "title": "解明：SCP-XXXXの内部構造 — 人間と機械の境界を超えた存在",
+    "angle": "異常存在の内部に潜む謎",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意。感染から96時間で、人間の体が機械に変わる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、機械って……それって比喩じゃなくて、本当に？ちょっと待って、怖いんだけど。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "比喩じゃない。SCP-217は感染性の異常ウイルスで、財団の記録では接触後96時間以内に皮膚・骨・臓器が金属製の歯車や管に物理的に置き換わる事例が複数確認されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "置き換わる……じゃあその人は死ぬの？それとも、動き続けるの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "動き続ける。それが最も恐ろしい点だ。意識があるまま、自分の体が歯車に変わっていく——財団はその状態を『収容』と呼んでいる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1万人目指して毎日投稿中だから登録お願い！SCP-217の詳細は関連動画でチェックしてみて。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "2003年4月7日、午前2時43分。財団のモバイルタスクフォースが回収した被験体の記録には、こう書かれていた——『左腕の骨格が完全に真鍮製歯車列に置換。被験体は依然として意識を保持している』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……意識があるまま、骨が歯車になってるってこと？嘘だろ、それ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "嘘じゃない。これはSCP-217の収容記録だ。財団がオブジェクトクラス『Euclid』に指定した、感染性の異常ウイルス——通称『時計仕掛けのウイルス』の話をする。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Euclidって、収容できてるクラスだよね？でもそれ、本当に収容できてるって言えるの……？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回はSCP-217の内部構造——人間と機械の境界が消える瞬間に、財団が何を記録し、何を[REDACTED]にしたかを報告書から読み上げる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まず基本から確認する。SCP-217は直径0.3ミクロン以下の微細な粒子として存在し、感染経路は皮膚接触・飛沫・空気感染の三経路が確認されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "空気感染もあるの……？じゃあ収容施設に近づいただけで感染する可能性があるってこと？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そのリスクを財団は認識している。収容プロトコル第1項には『SCP-217の保管区画への立入には、レベル4認証かつHAZMAT規格Aの完全密閉スーツ着用を義務付ける』と明記されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "感染後の進行は段階的だ。第1段階は感染から0〜24時間——皮膚の一部に金属光沢が現れ、触れると硬質の感触がある。この段階では被験体の大半が『皮膚の調子が悪い』程度にしか認識しない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分が感染してるって気づかないまま動き回るってことか……それって周りへの感染が広がるってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の試算では、感染者1名が平均して2.7名に二次感染させるとされている——これは発見が第1段階の間に行われなかった場合の数字だ。2009年のサイト-██での収容違反では、72時間で感染者が14名に達した記録が残っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "72時間で14名……それ、施設の中で連鎖したってこと？",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "詳細は[DATA EXPUNGED]されている。財団が公開している記録は『収容違反の収束を確認』の一行だけだ。その14名がどうなったかは、報告書のどこにも書かれていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "書かれてない……それって、助けられなかったってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は『解明されていない』という立場を維持している。第2段階——感染24〜72時間では、体内の骨格が徐々に金属製の構造物に置き換わり始める。財団の解剖記録では、大腿骨が直径3〜8ミリの真鍮製歯車列に完全置換された例が確認されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "骨が歯車に……でもそれって、なんでそんなことが起きるの？ウイルスがそんなことできる理由って——",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも解明できていない。報告書には『SCP-217の異常性は既知の生物学的・化学的プロセスの範疇を超えており、現行の収容研究では原因の特定に至っていない』と記録されている。原因は、分からない——それだけが確かなことだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "分からないまま収容してるって……それって本当に安全なの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第3段階——感染72〜96時間が、最も記録として異常な区間だ。臓器・血管・神経系が順次、精巧な機械部品に置き換わる。心臓が真鍮製のポンプに、肺が蛇腹状の送風機構に変わる。そして——被験体は依然として生存している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生きてる……臓器が全部機械になっても、生きてるの？意識があるまま？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実験記録E-217-09には、第3段階の被験体D-4421の証言が残っている——『全部聞こえる。体の中で何かが噛み合ってる音が。でも痛みは……もうない』。この証言の3時間後、D-4421の脳が機械構造への置換を開始した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "脳まで……それ以降の記録は？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "D-4421に関するそれ以降の記録は[REDACTED]だ。財団の報告書にはただ『被験体の状態変化を継続観察中』とある——2003年の記録から、更新は一度もない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "20年以上……『観察中』のまま放置されてるってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の公式立場では『継続収容中』だ。ここで一つ、財団が公開している数字を見てほしい——SCP-217に関連する実験記録の総数は217件。そのうち閲覧可能なものは、わずか12件だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "217件中12件……残りの205件は全部[DATA EXPUNGED]ってこと？なんでそんなに隠す必要があるの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は理由を開示していない。ただ、閲覧可能な12件の記録を精読すると、ある共通点に気づく——第4段階、つまり完全機械化後の被験体に関する記述が、どの記録にも存在しない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "完全機械化後の記録がどこにもない……それって、財団が隠してるってこと？それとも——",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説は二つある。一つ目——第4段階の被験体は『人間』ではなく別の何かとして分類され、SCP-217の記録から切り離されている。二つ目——第4段階に達した被験体は、財団の観察能力を超えた何かになる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "観察能力を超えた……財団が追えなくなるってこと？それって、どこに行くの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録はない。財団でも解明できていない。ただ、収容プロトコルの付記には一行だけ追記がある——『第4段階への移行を確認した場合、当該被験体の収容区画を即時封鎖し、上位機関への報告を優先する』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "上位機関……財団の中にさらに上がある？それ自体も怖いんだけど。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-217が特に恐ろしい点は、感染した本人が異常を認識しにくいことだ。第1段階では外見上の変化が軽微で、体調の変化も『疲労感』程度にとどまる。財団の感染者追跡記録では、自発的に収容施設に申告した感染者はゼロだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ゼロ……全員、自分が感染してるって気づかないまま第2段階に入るってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の報告書はそう示唆している。さらに不気味なのは——SCP-217の感染検査方法が、現在も確立されていないという事実だ。X線・MRI・血液検査、いずれも第1段階の感染を検出できないと記録されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "検査できないって……じゃあ、感染してるかどうか調べる方法がないってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が唯一有効と認めている検査方法は、『第1段階の金属光沢を目視確認すること』だけだ——つまり、自分か周囲の人間が気づくまで、感染は発覚しない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "目視確認だけ……それって、気づいた時点でもう手遅れかもしれないってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の治療記録を見ると、第1段階での発見・処置に成功した事例が3件ある。処置内容は[REDACTED]だが、3件全員が『処置後の生存を確認』と記録されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3件だけ……財団が関わった感染事例の中で3件だけが助かったってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そうだ。そして処置の詳細が[REDACTED]である理由について、財団は『処置方法の公開が新たな異常事象を誘発する可能性がある』と説明している。助かる方法は存在するかもしれない——でも、財団は教えない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "教えない……それって、財団が情報を持ってるのに隠してるってことじゃないか。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は『確保・収容・保護』を使命とする組織だ。ただ、何を保護するかは——必ずしも個人ではない。この点を理解しておく必要がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "個人じゃない……じゃあ何を守ってるの？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが財団の最も不透明な部分だ。SCP-217に関して言えば、財団の収容優先事項は明確に『感染拡大の防止』であり、個別の感染者の救済は副次的な目標として位置づけられている——報告書はそう読める。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "副次的な目標……感染した人間より、感染が広がらないことの方が大事ってこと。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-217について、もう一つ財団が記録している異常な事象がある——完全機械化した被験体の体内で、規則的な機械音が観測されていることだ。その音の周期は、人間の心拍数と完全に一致している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "心拍数と一致……それって、機械になっても『心臓』として動き続けてるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では『SCP-217の異常性が、人間の生体リズムを機械的に複製している可能性がある』とされている——だが、なぜ複製するのか、その目的については一切の解明がなされていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "目的が分からない……それって、ウイルスに意思があるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は『意思の有無は判定不能』と記録している。ただ、実験記録E-217-17には——SCP-217の粒子を電子顕微鏡で観察中、粒子が観察者の方向に向きを変えた、という記述が一行だけある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "観察者の方向に……それって、見られてることを認識してるってこと？ちょっと待って、それ本当に怖い。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この記述以降、E-217-17の実験記録は[DATA EXPUNGED]だ。担当研究員の名前も、所属サイトも、記録から消えている——財団のデータベースに、その研究員の名前は存在しない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "存在しない……財団が消したってこと？それとも、その研究員が——",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "分からない。財団でも解明できていないか、あるいは解明した上で記録を消したか——どちらかだ。どちらが正解であっても、私たちには確認する手段がない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団でも分からないことが、これだけある……SCP-217って、収容できてるって言えるの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日の報告をまとめる。SCP-217は感染から96時間で人体を精巧な機械構造に置換する異常ウイルスだ。感染検査方法は現在も存在せず、治療に成功した事例は財団記録上で3件のみ、その方法は[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "完全機械化後の記録もなくて、担当研究員の記録も消えてて……財団は一体、何を知ってるんだろう。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが財団という組織だ。『確保・収容・保護』——誰を、何から守っているのか、報告書を読む限りでは最後まで分からない。次回は財団が最も厳重な収容プロトコルを適用しているSCP-096——なぜ顔を見た者が全員消えるのか、報告書から読み上げる。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし日常の中で、自分の肌に金属光沢を見つけたとしても——財団には連絡するな。彼らが何をするかは、記録の通りだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "連絡するな……それって、財団に頼ることもできないってこと？じゃあどうすればいいんだよ。",
+      "expression": "angry",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが分かれば、私もここにいない。チャンネル登録と高評価で、次の報告書が届いたときに通知が来る——もっとも、それを知ることが幸せかどうかは、保証できないけれど。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "LEVEL 4 機密 / 財団内部資料",
+      "感染確認から96時間で『人間』でなくなる"
+    ],
+    "subtitle": "SCP-217【あなたの体は、もう動いていますか？】",
+    "tagline": "閲覧注意——この報告書を読んだ後、自分の脈を確認してみろ"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1784777626_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはサムネフック・冒頭の具体的日時・数値（96時間・0.3ミクロン・感染率2.7名）・[REDACTED]の使い方が一貫しており、specificity（9vs4）とwording_quality（9vs4）で大差をつけた。CTAも世界観を壊さずキャラクターの語り口に溶け込ませており、視聴維持とチャンネル登録の両面でAを明確に上回る。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 9,
+        "overall": 9
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 48.4% 優位",
+      "leader": "claude",
+      "margin": 0.4842
+    },
+    "candidates": {
+      "gpt": {
+        "title": "目を離した瞬間に起こる異常——SCP-096の本当の恐怖"
+      },
+      "claude": {
+        "title": "目を離した0.3秒で内側から書き換わる——SCP-217「時計仕掛けのウイルス」が人間を機械に変える本当の理由"
+      }
+    }
+  }
+}

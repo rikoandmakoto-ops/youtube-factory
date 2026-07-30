@@ -1,0 +1,411 @@
+{
+  "title": "耳鳴りのとき、なぜか特定の音だけが異様に気になる——99%が知らない聴覚の正体",
+  "theme": {
+    "title": "なぜ耳鳴りがするときに特定の音が気になるのか？",
+    "angle": "耳鳴りと音に対する感受性",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "耳鳴りのとき、特定の音だけ異様に気になったことない？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "ある！時計のチクタクとか冷蔵庫のブーンとか、なぜか耳に刺さる感じがするんだよね！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はあれ、脳が耳鳴り周波数と近い音を最大40dBも増幅してしまう『ゲイン上昇』という現象で、2011年にミシガン大学が証明したんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "40dBって普通の会話が60dBだから、ほぼ別の音に聞こえるレベルじゃないか！耳鳴りが音センサーをバグらせてるんだ！",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！だから耳鳴り中は静かな環境を避けて、穏やかなホワイトノイズを流すと脳のゲインが落ち着いて気になりにくくなるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！もっと詳しい話は関連動画からチェックしてみて！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "耳鳴りがしているとき、時計のチクタクや冷蔵庫のモーター音がいつもの10倍うるさく感じた経験、あなたにもありませんか？\nあれ、ただの気のせいじゃなくて脳が本当に音を増幅しているんです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "え、増幅って……脳が勝手にボリュームを上げてるってこと？\nそんなこと起きるんだ、それはちょっと怖いな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "怖いけど面白いんだよ！\n今回はその謎を『耳鳴りと音感受性』というテーマで徹底解剖していくね。最後まで聞けば耳鳴り対策まで丸わかりだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "でも具体的にどんなメカニズムで音が増幅されるの？\n耳の構造の問題なのか、それとも脳の問題なのか、どっちなんだろう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず耳の基本から話すね。\n内耳には約1万6000本の有毛細胞があって、音の振動を電気信号に変換して脳に送る役割を担っているんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "1万6000本！\nそんなにたくさんのセンサーが耳の中に詰まってるんだね、蟻の巣みたいだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この有毛細胞が大きな音や加齢でダメージを受けると、脳への信号が減ってしまうんだ。\nそうすると脳は『信号が少ない、もっとよこせ』と判断して聴覚野のゲイン、つまり感度を自動的に上げるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ゲインを上げる……テレビのアンテナが弱いとき受信感度を最大にする感じ？\nでもそれって雑音も一緒に拾っちゃうよね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにその通り！\n脳が感度を上げすぎた結果、神経回路の自発的な電気活動がノイズとして聞こえてしまうのが耳鳴りの正体で、これを『中枢性ゲイン上昇モデル』と呼ぶんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ耳鳴りは耳の問題というより脳の問題なんだ！\nそれは全然知らなかったな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうなんだよ。\nそして耳鳴りの周波数、多くの人では4000Hz前後なんだけど、その周波数に近い外部の音に対して脳は特に高いゲインをかけてしまうんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "4000Hzって具体的にどんな音？\n日常でよく聞く音に置き換えるとどのくらいの高さ？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "チャイムの音や電子レンジの終了音、スマホの通知音がちょうど3000〜5000Hz帯に集中しているんだよ。\nだから耳鳴りの人はスマホの通知音が特に気になると感じやすい、という研究結果もあるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それって日常生活めちゃくちゃ辛くない？\n通知音のたびにビクッとしてしまいそう。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "2011年にミシガン大学のジャスティン・ヒレガー博士らが行った研究では、耳鳴りを持つ人は耳鳴り周波数の音に対して最大40dB余分に感度が上がっていることが確認されたんだよ。\n40dBというのは普通の会話音(60dB)と小雨(20dB)の差と同じくらいのレベルで、実際に音量が変わったに等しいんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "40dBも違ったら、もはや別の音として聞こえてるんじゃないか！\nそれで『なぜかあの音だけ気になる』って感じるわけか、納得した。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに面白いのは、静かな環境ほどこの現象が強く出るんだ。\n周囲の音が少ないと脳はさらにゲインを上げようとするから、深夜に耳鳴りが悪化したと感じる人が多いのも科学的に説明できるんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに夜中って耳鳴りがうるさく感じることあるよ！\nあれも気のせいじゃなかったんだね。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "次はちょっと意外な歴史の話をするね。\n耳鳴りの研究って実はすごく古くて、古代エジプトの医学書パピルス・エーベルス(紀元前1550年頃)にも『耳の中で音がする』という症状の記述が残っているんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "3500年以上前から人類は耳鳴りに悩んでたんだ！\n当時はどんな治療をしていたの？",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "なんとオリーブオイルやニンニクを耳に注ぐ治療法が書かれていて、当時は耳鳴りを『悪霊の囁き』と考えていたんだ。\n科学的な原因が脳にあると判明したのはわずか1990年代のことで、3000年以上もかけてやっと謎が解けたんだよ。",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "悪霊の囁き……！\n確かに突然聞こえる謎の音って、昔の人には超常現象に見えたかもね。",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして現代でも耳鳴りを持つ人は全世界で約7億4000万人、日本でも約3000万人いると推計されているんだ。\nつまり日本人の約4人に1人が何らかの耳鳴りを経験しているという計算になるよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "7億4000万人！\nそんなにメジャーな現象なのに、なぜか耳鳴りって個人の問題みたいに扱われがちだよね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうなんだよ。\nしかも面白いことに、音楽家や演奏家は耳鳴りを持つ確率が一般人の2〜4倍高いというデータがあって、ベートーヴェンも晩年に深刻な耳鳴りで苦しんでいたことが手紙に記録されているんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ベートーヴェンも！\n難聴で有名だけど耳鳴りも抱えていたんだね、それで音楽を書き続けたのはすごい意志の強さだな。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "ベートーヴェンは1802年のハイリゲンシュタットの遺書に『耳の病気のせいで人と交わることを避けている』と書いているんだ。\n当時の医学では耳鳴りの正体も治療法も不明で、本当に孤独な闘いだったんだよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "それは切ないな……でも現代なら少しはマシになるの？\n耳鳴りって治るものなの？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "完全に消えるケースは少ないけど、脳のゲインを下げるアプローチで症状をかなり和らげることができるよ。\nここから実践的なTipsを3つ紹介するね！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "おお、それは助かる！\n具体的に何をすればいいの？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず1つ目は『サウンドマスキング』で、ホワイトノイズや自然音(雨音・川の音)を常に流して脳に別の信号を与えることで、耳鳴り周波数へのゲイン集中を分散させる方法だよ。\n2019年の英国聴覚学会のガイドラインでも推奨されていて、完全な静寂は逆効果と明記されているんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "静かにしようとして余計に気になるのは逆効果だったんだ！\nむしろ音を流し続けた方がいいんだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "2つ目は『耳鳴り順応療法(TRT)』で、低レベルの雑音を継続的に聞かせることで脳に『この音は無視していい』と学習させる方法だよ。\n成功率は約80%という研究もあって、1〜2年かかるけど効果は長期的に続くんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "80%って結構高い成功率だね！\nでも1〜2年って長いな、根気がいる治療なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "3つ目は意外だけど『有酸素運動』で、週3回30分のウォーキングや水泳を続けると内耳への血流が改善して有毛細胞のダメージが抑えられ、耳鳴りの悪化を予防できるというデータがあるよ。\nハーバード大学の研究では、定期的に有酸素運動をする人は耳鳴り発症リスクが約17%低かったという結果も出ているんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "耳鳴りに運動が効くなんて全く思ってなかった！\n血流改善がこんなところにも関係してるんだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "あとひとつ実践的なポイントを追加すると、スマホのイヤホン使用は85dB以下・1日1時間以内に抑えることが世界保健機関(WHO)の推奨値で、これを超えると有毛細胞のダメージが蓄積して耳鳴りリスクが跳ね上がるよ。\n若い世代の11億人がすでに難聴リスクにさらされているとWHOは警告しているんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "11億人！\nそれって地球の人口の約7人に1人じゃない、スマホ時代の新しい問題だね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうなんだよ、だから今から音量管理をするのが一番のコスパの良い予防策だよ。\n特にライブやクラブの後は耳が過負荷になっているから、翌日は静かな環境で耳を休ませる『耳の回復時間』を意識してみてね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "耳の回復時間か、運動後の筋肉みたいに耳にも休息が必要なんだね！\nそう考えるとすごくわかりやすい。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "じゃあ今日のまとめをするね。\n耳鳴りは耳ではなく脳のゲイン上昇が原因で、耳鳴りの周波数に近い音は最大40dBも感度が増幅されるから特定の音が異様に気になって聞こえるんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "脳が勝手にボリュームを上げている——それが正体だったんだ。\n仕組みがわかると少し怖さが和らぐ気がするよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして3500年前から人類を悩ませてきた耳鳴りの謎が、脳科学の発展でやっと解明されてきたのがここ30年の話なんだよ。\nベートーヴェンが今の時代に生まれていたらどう感じただろうね。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "きっと喜んだと思う！\n3000年越しの謎解きって、科学って本当にロマンがあるな。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "対策のポイントは『完全な静寂を避ける』『サウンドマスキングを活用する』『有酸素運動で内耳を守る』の3つ。\n今日からすぐ試せるものばかりだから、ぜひやってみてね！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "理子、今日も本当にためになったよ！\n実は最近イヤホンをずっとつけてたから、音量と時間を見直してみる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ぜひ！そして今回の話を聞いて『自分も気になる音があった』『もっと詳しく知りたい』と思ったら、ぜひコメントで教えてね。\nどの音が一番気になるか、みんなの体験を聞いてみたいな！",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "コメントで教えてもらえると嬉しいよね！\nそれと次回はどんなテーマをやるの？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は『なぜ甘いものを食べると眠くなるのか？』というテーマで、血糖値とオレキシンという覚醒物質の不思議な関係を解説するよ。\n食後の眠気に悩んでる人は絶対見てほしいな！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "食後の眠気、めちゃくちゃ気になる！\nそれも脳が関係してそうな話で、今から楽しみだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "この動画が面白かったと思ったら高評価ボタンを押してくれると本当に嬉しいし、チャンネル登録もぜひよろしくね。\n毎週新しい日常の謎を科学で解き明かしていくから、次回も一緒に楽しもう！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "耳鳴り中に特定の音が",
+      "突き刺さる理由、知ってる？"
+    ],
+    "subtitle": "脳が『音を増幅』するメカニズム",
+    "tagline": "99%が誤解している耳の科学"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1784948997_7208",
+    "blind_eval": {
+      "winner": "A",
+      "winner_model": "claude",
+      "reason": "シナリオAはミシガン大学2011年・40dB増幅・4000Hz帯・有毛細胞1万6000本など具体的な数値と出典を豊富に盛り込みspecificityで圧倒的な差があり、視聴者の知的好奇心を持続させるpacingも優れている。さらにCTAで次回テーマ予告・コメント誘導・高評価依頼を段階的に配置しており、cta_effectivenessでもBを大きく上回る。",
+      "scores_a": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "scores_b": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 4,
+        "wording_quality": 5,
+        "overall": 5
+      },
+      "mapping": {
+        "A": "claude",
+        "B": "gpt"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 36.8% 優位",
+      "leader": "claude",
+      "margin": 0.368
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ耳鳴りのときだけ『あの音』が気になるのか？99%が知らない科学的理由"
+      },
+      "claude": {
+        "title": "耳鳴りのとき、なぜか特定の音だけが異様に気になる——99%が知らない聴覚の正体"
+      }
+    }
+  }
+}
