@@ -346,7 +346,7 @@
     },
     "short_illustrations": {
       "enabled": true,
-      "illustration_method": "pillow",
+      "illustration_method": "dalle",
       "max_count": 2,
       "card_style": "textbook",
       "card_label": "研究データ",
@@ -360,7 +360,8 @@
       "card_w": 952,
       "card_h": 430,
       "char_cy": 905,
-      "char_icon_d": 210
+      "char_icon_d": 210,
+      "image_mode": "generate"
     },
     "effects": {
       "enabled": true,

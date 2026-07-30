@@ -2781,7 +2781,11 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         if method not in ("pillow", "dalle"):
             method = "pillow"
         card_style = renderer.illust_card_style
-        mode = (image_mode or "generate").lower()
+        # 図解カードだけ収集/生成を切り替える per-feature override。
+        # 背景はチャンネルの image_mode="collect" で実写を拾いたいが、カードは
+        # 収集画像だと話題とズレやすい（祭りの写真等）ため "generate" で
+        # DALL-E に描かせたい、というケースを短絡なしで表現するために必要。
+        mode = (si_cfg.get("image_mode") or image_mode or "generate").lower()
         if mode not in ("generate", "collect", "mix"):
             mode = "generate"
         # pillow はローカル描画なので常に実行可。dalle のみ DALL-E/収集の前提を要する。

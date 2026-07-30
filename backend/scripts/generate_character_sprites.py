@@ -48,6 +48,42 @@ STYLE_SUFFIX = (
     "Fully transparent background."
 )
 
+# gpt-image-1 の透過処理は「ほぼ白」の領域を背景と誤認して抜いてしまう。白い
+# 白衣・白い帽子などが穴になり、動画上でキャラが透けて見える原因になる。
+# 白を使わせない指示を足したプロンプトで再試行する。
+NO_WHITE_SUFFIX = (
+    "IMPORTANT: do not use pure white (#ffffff) or near-white anywhere on the "
+    "character. Render any white clothing as warm off-white / light cream / pale "
+    "grey with clearly visible shading so it never matches the background. "
+    "Every part of the character must be fully opaque and solid — no see-through, "
+    "no translucent or faded areas."
+)
+
+# 内部の穴の許容割合（画像全体に対する%）。これを超えたら再生成する。
+HOLE_RATIO_LIMIT = 0.5
+
+
+def _interior_hole_ratio(path: Path) -> float:
+    """キャラ内部にある「外周とつながっていない透明領域」の割合(%)を返す。
+
+    アルファを二値化し、画像の外周から透明領域を flood fill して「外側の背景」を
+    特定する。そこに到達しない透明画素＝シルエット内部の穴。
+    """
+    from PIL import Image, ImageDraw
+    import numpy as np
+
+    im = Image.open(path).convert("RGBA")
+    alpha = np.array(im.getchannel("A"))
+    binary = np.where(alpha < 128, 0, 255).astype(np.uint8)
+
+    padded = Image.new("L", (im.width + 2, im.height + 2), 0)
+    padded.paste(Image.fromarray(binary), (1, 1))
+    ImageDraw.floodfill(padded, (0, 0), 128, thresh=0)
+    outside = np.array(padded)[1:-1, 1:-1] == 128
+
+    holes = (alpha < 128) & (~outside)
+    return float(holes.mean() * 100)
+
 
 def _load_env() -> None:
     env_path = BACKEND_DIR / ".env"
@@ -115,6 +151,8 @@ def main() -> int:
     ap.add_argument("--force", action="store_true", help="既存ファイルも再生成")
     ap.add_argument("--quality", default="medium", choices=["low", "medium", "high"])
     ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--attempts", type=int, default=3,
+                    help="内部の穴が閾値超過だった場合の最大生成回数")
     args = ap.parse_args()
 
     _load_env()
@@ -136,9 +174,30 @@ def main() -> int:
     failures = []
 
     def _run(job):
+        """生成 → 内部の穴を検査 → 超過なら白禁止プロンプトで再試行。"""
+        tmp = job["out_path"].with_suffix(".gen.png")
+        best = None  # (hole_ratio, bytes)
         try:
-            _generate(job["prompt"], job["out_path"], args.quality)
-            print(f"  ✅ {job['label']} → {job['out_path'].relative_to(REPO_ROOT)}")
+            for attempt in range(args.attempts):
+                prompt = job["prompt"]
+                if attempt > 0:
+                    prompt = f"{prompt} {NO_WHITE_SUFFIX}"
+                _generate(prompt, tmp, args.quality)
+                ratio = _interior_hole_ratio(tmp)
+                data = tmp.read_bytes()
+                if best is None or ratio < best[0]:
+                    best = (ratio, data)
+                if ratio <= HOLE_RATIO_LIMIT:
+                    break
+                print(f"  ♻️ {job['label']}: 内部の穴 {ratio:.2f}% > {HOLE_RATIO_LIMIT}% — 再生成 "
+                      f"({attempt + 1}/{args.attempts})")
+
+            tmp.unlink(missing_ok=True)
+            job["out_path"].write_bytes(best[1])
+            mark = "✅" if best[0] <= HOLE_RATIO_LIMIT else "⚠️"
+            note = "" if best[0] <= HOLE_RATIO_LIMIT else "  ← 穴が残存（要目視確認）"
+            print(f"  {mark} {job['label']} 穴={best[0]:.2f}% → "
+                  f"{job['out_path'].relative_to(REPO_ROOT)}{note}")
         except urllib.error.HTTPError as e:
             body = e.read().decode()[:300]
             print(f"  ❌ {job['label']}: HTTP {e.code} {body}")
@@ -146,6 +205,8 @@ def main() -> int:
         except Exception as e:
             print(f"  ❌ {job['label']}: {type(e).__name__} {e}")
             failures.append(job["label"])
+        finally:
+            tmp.unlink(missing_ok=True)
 
     with ThreadPoolExecutor(max_workers=args.workers) as ex:
         list(ex.map(_run, jobs))

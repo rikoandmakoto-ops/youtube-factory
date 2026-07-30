@@ -16,6 +16,9 @@ run_ds_short_upload.py / run_scp_short_upload.py のチャンネル汎用版。
 env:
   SHORT_THEME_TITLE / SHORT_THEME_ANGLE  テーマ明示指定（複数チャンネル指定時は
                                          SHORT_THEME_TITLE__<channel_id> も可）
+  SHORT_SCENARIO_PATH[__<channel_id>]
+                     保存済みシナリオJSONを再利用し生成をスキップ（台本を変えず
+                     映像だけ作り直す用途。描画バグ修正後の差し替えなど）
   SHORT_TARGET_SEC   目標尺（既定 60）
   SHORT_PRIVACY      公開設定（既定 public）
   SKIP_UPLOAD=1      アップロードせず生成だけ行う
@@ -149,28 +152,41 @@ def run_for(channel_id: str) -> dict:
         print(f"   angle: {theme['angle']}")
     print(f"{'=' * 70}")
 
-    # ── 1. シナリオ生成 ──
-    sg = ScenarioGenerator()
-    print(f"\n🎬 Generating scenario (target: {TARGET_DURATION_SEC}s, gen_type=short)")
-    scenario = None
-    last_err = None
-    for attempt in range(4):
-        try:
-            scenario = sg.generate(ch, theme_override=theme, target_duration=TARGET_DURATION_SEC)
-            break
-        except Exception as e:
-            last_err = e
-            wait = 20 * (attempt + 1)
-            print(f"⚠️ scenario attempt {attempt + 1} failed: {e}. Waiting {wait}s...")
-            time.sleep(wait)
-    if scenario is None:
-        return {"error": f"Scenario generation failed: {last_err}"}
+    # ── 1. シナリオ（既存JSONを読むか、新規生成する） ──
+    # 台本を変えずに映像だけ作り直したい場合（描画バグ修正後の差し替え等）は
+    # SHORT_SCENARIO_PATH に保存済みシナリオJSONを渡す。
+    reuse_path = (os.environ.get(f"SHORT_SCENARIO_PATH__{channel_id.replace('-', '_')}")
+                  or os.environ.get("SHORT_SCENARIO_PATH") or "").strip()
+    if reuse_path:
+        scenario_path = reuse_path
+        scenario = json.loads(Path(reuse_path).read_text(encoding="utf-8"))
+        if not scenario.get("short_scenario"):
+            return {"error": f"scenario に short_scenario がありません: {reuse_path}"}
+        theme = scenario.get("theme") or theme
+        source = "SHORT_SCENARIO_PATH (再利用)"
+        print(f"\n♻️ 既存シナリオを再利用（生成をスキップ）: {reuse_path}")
+    else:
+        sg = ScenarioGenerator()
+        print(f"\n🎬 Generating scenario (target: {TARGET_DURATION_SEC}s, gen_type=short)")
+        scenario = None
+        last_err = None
+        for attempt in range(4):
+            try:
+                scenario = sg.generate(ch, theme_override=theme, target_duration=TARGET_DURATION_SEC)
+                break
+            except Exception as e:
+                last_err = e
+                wait = 20 * (attempt + 1)
+                print(f"⚠️ scenario attempt {attempt + 1} failed: {e}. Waiting {wait}s...")
+                time.sleep(wait)
+        if scenario is None:
+            return {"error": f"Scenario generation failed: {last_err}"}
 
-    try:
-        scenario_path = sg.save_scenario(scenario)
-    except Exception as e:
-        scenario_path = None
-        print(f"⚠️ save_scenario failed: {e}")
+        try:
+            scenario_path = sg.save_scenario(scenario)
+        except Exception as e:
+            scenario_path = None
+            print(f"⚠️ save_scenario failed: {e}")
     print(f"✅ Scenario: {scenario.get('title')}")
     print(f"   short lines: {len(scenario.get('short_scenario') or [])}  | generated_by={scenario.get('generated_by')}")
 
