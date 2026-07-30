@@ -1,10 +1,10 @@
 {
   "id": "pokemon-lab",
-  "name": "ゆっくりポケモン研究所",
+  "name": "ゆっくりポケラボ",
   "concept": "ポケモンの裏設定・都市伝説・対戦の豆知識・図鑑の謎をゆっくり解説するチャンネル。恐怖ではなく『ワクワクする考察』を軸に、知るほど世界が広がるポケモン学を届ける。",
   "short_series_name": "1分ポケモン研究：",
   "style": "yukkuri",
-  "youtube_channel_id": "",
+  "youtube_channel_id": "UCGgc5REGTWRLnBiSeXXkJ5w",
   "image_mode": "collect",
   "image_collect": {
     "provider": "auto",
@@ -306,7 +306,7 @@
       "allow_frame": true
     },
     "branding": {
-      "watermark_text": "ポケモン研究所",
+      "watermark_text": "ポケラボ",
       "cta_style": "casual",
       "source_credit": "※ファンによる非公式考察 / ポケモンは株式会社ポケモン・任天堂の登録商標です",
       "source_credit_opacity": 150,
@@ -321,7 +321,7 @@
       "use_illustrations": true
     },
     "youtube": {
-      "channel_id": "",
+      "channel_id": "UCGgc5REGTWRLnBiSeXXkJ5w",
       "default_tags": [
         "ポケモン",
         "ポケモン考察",
@@ -406,6 +406,12 @@
     },
     "duration_minutes": 12,
     "gen_type": "short",
-    "theme_queue": []
+    "theme_queue": [
+      {
+        "id": "0edadde0",
+        "title": "エリートトレーナーの意義 — ポケモンバトルの真の目的とは？",
+        "angle": "登場人物・ストーリーの考察"
+      }
+    ]
   }
 }
