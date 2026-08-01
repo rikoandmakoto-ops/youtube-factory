@@ -8,6 +8,8 @@ from typing import Optional, Dict, List
 
 # Pricing in USD per token (input/output)
 GPT_PRICING = {
+    "gpt-4.1":         {"input": 2.00 / 1_000_000, "output": 8.00 / 1_000_000},
+    "gpt-4.1-mini":    {"input": 0.40 / 1_000_000, "output": 1.60 / 1_000_000},
     "gpt-4o":          {"input": 2.50 / 1_000_000, "output": 10.00 / 1_000_000},
     "gpt-4o-mini":     {"input": 0.15 / 1_000_000, "output": 0.60 / 1_000_000},
     "gpt-4-turbo":     {"input": 10.00 / 1_000_000, "output": 30.00 / 1_000_000},
@@ -169,6 +171,8 @@ def get_summary() -> Dict:
         "voicevox_note": "VOICEVOXは無料 (ローカル実行)",
         "events_count": len(events),
         "pricing": {
+            "gpt-4.1": {"input_per_1m": 2.00, "output_per_1m": 8.00, "currency": "USD"},
+            "gpt-4.1-mini": {"input_per_1m": 0.40, "output_per_1m": 1.60, "currency": "USD"},
             "gpt-4o": {"input_per_1m": 2.50, "output_per_1m": 10.00, "currency": "USD"},
             "gpt-4o-mini": {"input_per_1m": 0.15, "output_per_1m": 0.60, "currency": "USD"},
             "claude-sonnet-4": {"input_per_1m": 3.00, "output_per_1m": 15.00, "currency": "USD"},

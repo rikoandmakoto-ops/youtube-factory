@@ -37,10 +37,11 @@ try:
 except Exception:  # pragma: no cover — module not yet importable
     claude_client = None  # type: ignore
 
-# GPT models. Main scenario keeps gpt-4o (long-form Japanese, strict length rules).
-# Theme suggestion uses gpt-4o-mini (~16x cheaper, low quality risk for short JSON).
-GPT_MODEL = "gpt-4o"
-GPT_MODEL_LIGHT = "gpt-4o-mini"
+# GPT models. Main scenario uses gpt-4.1 (long-form Japanese, strict length rules)。
+# gpt-4o より指示追従（尺・行数・タイトル規則）が安定するため 2026-08-02 に更新。
+# Theme suggestion uses gpt-4.1-mini (安価・短い JSON なので品質リスク低)。
+GPT_MODEL = "gpt-4.1"
+GPT_MODEL_LIGHT = "gpt-4.1-mini"
 CLAUDE_MODEL = "claude-sonnet-4-6"  # 旧 claude-sonnet-4-20250514 は廃止され 404 (2026-06-18)
 
 # テーマ重複の「生成ブロック」しきい値。既存動画/過去シナリオのタイトルと
@@ -68,7 +69,7 @@ class ScenarioGenerator:
         self._current_channel_id: Optional[str] = None
         self._current_purpose: Optional[str] = None
 
-    def _call_gpt(self, messages: List[Dict], temperature: float = 0.8, max_tokens: int = 8000,
+    def _call_gpt(self, messages: List[Dict], temperature: float = 0.7, max_tokens: int = 8000,
                   model: Optional[str] = None, max_retries: int = 4) -> str:
         """GPT API呼び出し。
 
@@ -144,7 +145,7 @@ class ScenarioGenerator:
         self,
         messages: List[Dict],
         *,
-        temperature: float = 0.85,
+        temperature: float = 0.7,
         max_tokens: int = 8000,
         model: Optional[str] = None,
     ) -> str:
@@ -208,7 +209,7 @@ class ScenarioGenerator:
         self,
         messages: List[Dict],
         *,
-        temperature: float = 0.85,
+        temperature: float = 0.7,
         max_tokens: int = 8000,
         gpt_model: Optional[str] = None,
     ) -> str:
@@ -1036,7 +1037,7 @@ class ScenarioGenerator:
         # ≥5760）のシナリオが JSON 途中で打ち切られ、"Unterminated string" で全 attempt が
         # 落ちてセクション拡張の短い本文に化ける。日本語は概ね 1 文字 ≒ 1 トークン、さらに
         # speaker/mood/括弧などの JSON 骨組みと short_scenario・thumb_info の分を上乗せする。
-        # 上限 16000 は gpt-4o の max output tokens に合わせている。
+        # 上限 16000 は安全側の据え置き（gpt-4.1 の出力上限はこれより大きい）。
         gen_max_tokens = max(8000, min(16000, int(min_full_chars * 1.6) + 4000))
         # GPT は例外時に即 None（OpenAI quota切れ等のfail-fast）。
         # Claude は単独採用される場面が多いので検証リトライを1回多く与え、
@@ -1045,9 +1046,9 @@ class ScenarioGenerator:
         for attempt in range(max_attempts):
             try:
                 if provider == "gpt":
-                    raw = self._call_gpt(msgs, temperature=0.85, max_tokens=gen_max_tokens)
+                    raw = self._call_gpt(msgs, temperature=0.7, max_tokens=gen_max_tokens)
                 else:
-                    raw = self._call_claude_text(msgs, temperature=0.85, max_tokens=gen_max_tokens)
+                    raw = self._call_claude_text(msgs, temperature=0.7, max_tokens=gen_max_tokens)
             except Exception as e:
                 print(f"  ⚠️ {provider_label} call failed on attempt {attempt+1}: {e}")
                 return None
