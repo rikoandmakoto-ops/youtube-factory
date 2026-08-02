@@ -1823,7 +1823,7 @@ function ModelComparisonSection({
         <>
           <div className="grid grid-cols-2 gap-3">
             <ModelStatCard
-              label="GPT-4o"
+              label="GPT"
               accent="bg-emerald-400/15 border-emerald-400/40"
               isLeader={performance.leader === 'gpt'}
               stats={gpt}

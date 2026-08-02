@@ -27,6 +27,8 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Tuple
 
+from pipeline import openai_compat
+
 try:
     from pipeline import api_usage
 except ImportError:  # pragma: no cover — running as a script
@@ -37,11 +39,12 @@ try:
 except Exception:  # pragma: no cover — module not yet importable
     claude_client = None  # type: ignore
 
-# GPT models. Main scenario uses gpt-4.1 (long-form Japanese, strict length rules)。
-# gpt-4o より指示追従（尺・行数・タイトル規則）が安定するため 2026-08-02 に更新。
-# Theme suggestion uses gpt-4.1-mini (安価・短い JSON なので品質リスク低)。
-GPT_MODEL = "gpt-4.1"
-GPT_MODEL_LIGHT = "gpt-4.1-mini"
+# GPT models. Main scenario uses gpt-5.6-terra (long-form Japanese, strict length rules)。
+# gpt-4.1 系からの更新 (2026-08-02)。terra は 5.6 系の中間モデルで、
+# コスト($2.50/$15 per M tokens)と指示追従（尺・行数・タイトル規則）のバランスが良い。
+# Theme suggestion uses gpt-5.6-luna (最安・最速、短い JSON なので品質リスク低)。
+GPT_MODEL = "gpt-5.6-terra"
+GPT_MODEL_LIGHT = "gpt-5.6-luna"
 CLAUDE_MODEL = "claude-sonnet-4-6"  # 旧 claude-sonnet-4-20250514 は廃止され 404 (2026-06-18)
 
 # テーマ重複の「生成ブロック」しきい値。既存動画/過去シナリオのタイトルと
@@ -82,12 +85,8 @@ class ScenarioGenerator:
 
         use_model = model or GPT_MODEL
         url = "https://api.openai.com/v1/chat/completions"
-        payload = json.dumps({
-            "model": use_model,
-            "messages": messages,
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-        })
+        payload = json.dumps(openai_compat.build_chat_payload(
+            use_model, messages, temperature=temperature, max_tokens=max_tokens))
 
         last_exc: Optional[Exception] = None
         for attempt in range(max_retries):
@@ -1037,7 +1036,7 @@ class ScenarioGenerator:
         # ≥5760）のシナリオが JSON 途中で打ち切られ、"Unterminated string" で全 attempt が
         # 落ちてセクション拡張の短い本文に化ける。日本語は概ね 1 文字 ≒ 1 トークン、さらに
         # speaker/mood/括弧などの JSON 骨組みと short_scenario・thumb_info の分を上乗せする。
-        # 上限 16000 は安全側の据え置き（gpt-4.1 の出力上限はこれより大きい）。
+        # 上限 16000 は安全側の据え置き（gpt-5.6-terra の出力上限はこれより大きい）。
         gen_max_tokens = max(8000, min(16000, int(min_full_chars * 1.6) + 4000))
         # GPT は例外時に即 None（OpenAI quota切れ等のfail-fast）。
         # Claude は単独採用される場面が多いので検証リトライを1回多く与え、

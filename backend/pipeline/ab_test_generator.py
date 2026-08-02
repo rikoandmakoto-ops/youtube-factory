@@ -48,10 +48,11 @@ except ImportError:  # pragma: no cover
     api_usage = None
 
 from pipeline import claude_client
+from pipeline import openai_compat
 
 
-GPT_MODEL = "gpt-4.1"
-GPT_MODEL_LIGHT = "gpt-4.1-mini"
+GPT_MODEL = "gpt-5.6-terra"
+GPT_MODEL_LIGHT = "gpt-5.6-luna"
 OPENAI_CHAT_URL = "https://api.openai.com/v1/chat/completions"
 
 _AB_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "ab_tests"
@@ -103,14 +104,10 @@ def _call_gpt(messages: List[Dict[str, str]], *, model: str = GPT_MODEL,
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not api_key:
         return None
-    payload: Dict[str, Any] = {
-        "model": model,
-        "messages": messages,
-        "temperature": temperature,
-        "max_tokens": max_tokens,
-    }
-    if json_mode:
-        payload["response_format"] = {"type": "json_object"}
+    payload = openai_compat.build_chat_payload(
+        model, messages, temperature=temperature, max_tokens=max_tokens,
+        response_format={"type": "json_object"} if json_mode else None,
+    )
     req = urllib.request.Request(
         OPENAI_CHAT_URL,
         data=json.dumps(payload).encode("utf-8"),

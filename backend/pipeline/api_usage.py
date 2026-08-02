@@ -8,6 +8,10 @@ from typing import Optional, Dict, List
 
 # Pricing in USD per token (input/output)
 GPT_PRICING = {
+    "gpt-5.6-sol":     {"input": 5.00 / 1_000_000, "output": 30.00 / 1_000_000},
+    "gpt-5.6-terra":   {"input": 2.50 / 1_000_000, "output": 15.00 / 1_000_000},
+    "gpt-5.6-luna":    {"input": 0.50 / 1_000_000, "output": 3.00 / 1_000_000},
+    # 以下は過去ログの費用計算用に保持（現行の生成では未使用）
     "gpt-4.1":         {"input": 2.00 / 1_000_000, "output": 8.00 / 1_000_000},
     "gpt-4.1-mini":    {"input": 0.40 / 1_000_000, "output": 1.60 / 1_000_000},
     "gpt-4o":          {"input": 2.50 / 1_000_000, "output": 10.00 / 1_000_000},
@@ -57,8 +61,8 @@ def _model_price(model: str) -> Dict[str, float]:
         if "haiku" in model:
             return GPT_PRICING["claude-haiku-4-5-20251001"]
         return GPT_PRICING["claude-sonnet-4-6"]
-    # default fallback to gpt-4o pricing
-    return GPT_PRICING["gpt-4o"]
+    # default fallback to gpt-5.6-terra pricing (現行のメイン生成モデル)
+    return GPT_PRICING["gpt-5.6-terra"]
 
 
 def provider_of(model: str) -> str:
@@ -171,6 +175,9 @@ def get_summary() -> Dict:
         "voicevox_note": "VOICEVOXは無料 (ローカル実行)",
         "events_count": len(events),
         "pricing": {
+            "gpt-5.6-sol": {"input_per_1m": 5.00, "output_per_1m": 30.00, "currency": "USD"},
+            "gpt-5.6-terra": {"input_per_1m": 2.50, "output_per_1m": 15.00, "currency": "USD"},
+            "gpt-5.6-luna": {"input_per_1m": 0.50, "output_per_1m": 3.00, "currency": "USD"},
             "gpt-4.1": {"input_per_1m": 2.00, "output_per_1m": 8.00, "currency": "USD"},
             "gpt-4.1-mini": {"input_per_1m": 0.40, "output_per_1m": 1.60, "currency": "USD"},
             "gpt-4o": {"input_per_1m": 2.50, "output_per_1m": 10.00, "currency": "USD"},

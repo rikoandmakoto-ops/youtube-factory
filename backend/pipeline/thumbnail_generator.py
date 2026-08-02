@@ -1,7 +1,7 @@
 """HTML+CSS+Playwright サムネイル生成モジュール.
 
 Pipeline:
-  1) GPT-4o で動画タイトルから「3行構成」のデザインブリーフをJSON生成
+  1) GPT-5.6-terra で動画タイトルから「3行構成」のデザインブリーフをJSON生成
   2) DALL-E 3 で背景画像 (1792x1024 → 1280x720) を生成
   3) thumbnail_selfcontained.html のレイアウトをベースに自己完結HTMLを組み立て
      (背景画像とキャラ画像はすべて data URI に埋め込む — file:// で読み込み可)
@@ -23,8 +23,13 @@ import urllib.request
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
+from pipeline import openai_compat
+
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS_DIR = ROOT / "assets"
+
+# デザインブリーフ生成モデル（画像入力ありのJSON生成）。
+BRIEF_MODEL = "gpt-5.6-terra"
 
 # ────────────────────────────────────────────────────────────────────────
 # Default channel-name → asset slug fallback. Only consulted when
@@ -205,15 +210,15 @@ def design_brief(
 
     resp = _call_openai(
         "https://api.openai.com/v1/chat/completions",
-        {
-            "model": "gpt-4o",
-            "messages": [
+        openai_compat.build_chat_payload(
+            BRIEF_MODEL,
+            [
                 {"role": "system", "content": system},
                 {"role": "user", "content": user_content},
             ],
-            "response_format": {"type": "json_object"},
-            "temperature": 0.9,
-        },
+            temperature=0.9,
+            response_format={"type": "json_object"},
+        ),
         api_key,
     )
     content = resp["choices"][0]["message"]["content"]

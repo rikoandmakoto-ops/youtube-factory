@@ -196,7 +196,7 @@ def archive_scenario(
     if video_title:
         body.append(f"**公開タイトル案**: {video_title}\n")
     if generated_by:
-        label = "GPT-4o" if generated_by == "gpt" else "Claude Sonnet 4"
+        label = "GPT-5.6 terra" if generated_by == "gpt" else "Claude Sonnet 4"
         body.append(f"**生成モデル**: {label}")
         if selected_by:
             body.append(f"  (selected_by: {selected_by})\n")

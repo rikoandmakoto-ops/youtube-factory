@@ -115,13 +115,13 @@ def step1_design_brief(api_key: str) -> dict:
     resp = call_openai(
         "https://api.openai.com/v1/chat/completions",
         {
-            "model": "gpt-4o",
+            "model": "gpt-5.6-terra",
+            "reasoning_effort": "none",
             "messages": [
                 {"role": "system", "content": system},
                 {"role": "user", "content": user},
             ],
             "response_format": {"type": "json_object"},
-            "temperature": 0.9,
         },
         api_key,
     )

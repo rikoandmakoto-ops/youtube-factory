@@ -1484,7 +1484,7 @@ export default function GenerateForm({
           {thumbBusy && (
             <div className="text-xs text-slate-400 text-center py-6">
               {thumbBusy === 'fresh'
-                ? 'GPT-4o + DALL-E + Playwright で生成中…(20〜40秒)'
+                ? 'GPT-5.6 + DALL-E + Playwright で生成中…(20〜40秒)'
                 : '背景を再利用して文字だけ再描画中…(5〜10秒)'}
             </div>
           )}

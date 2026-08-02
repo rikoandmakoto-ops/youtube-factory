@@ -35,10 +35,10 @@ print(f"📄 source: {BACKUP.name} — {len(full)} lines, {sum(len(e['text']) fo
 
 def call_gpt(messages, max_tokens=600, temperature=0.65):
     payload = json.dumps({
-        "model": "gpt-4o",
+        "model": "gpt-5.6-terra",
         "messages": messages,
-        "temperature": temperature,
-        "max_tokens": max_tokens,
+        "max_completion_tokens": max_tokens,
+        "reasoning_effort": "none",  # gpt-5系: temperature非対応・推論枠を出力に回す
     })
     req = urllib.request.Request(
         "https://api.openai.com/v1/chat/completions",
