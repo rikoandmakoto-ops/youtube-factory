@@ -50,8 +50,8 @@ except ImportError:  # pragma: no cover
 from pipeline import claude_client
 
 
-GPT_MODEL = "gpt-4o"
-GPT_MODEL_LIGHT = "gpt-4o-mini"
+GPT_MODEL = "gpt-4.1"
+GPT_MODEL_LIGHT = "gpt-4.1-mini"
 OPENAI_CHAT_URL = "https://api.openai.com/v1/chat/completions"
 
 _AB_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "ab_tests"
