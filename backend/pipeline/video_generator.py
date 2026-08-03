@@ -4464,7 +4464,11 @@ def generate_video_title(title, thumb_info=None, channel_dict=None):
     if thumb_info and thumb_info.get("hook_lines"):
         hook = "".join(thumb_info["hook_lines"])
 
-    prefix = (channel_dict or {}).get("main_title_prefix") or "【ゆっくり解説】"
+    # 明示指定があればそれを使う。未指定のときの既定【ゆっくり解説】は
+    # ゆっくり系スタイルのチャンネルにだけ付ける（ファクト系に付くと誤解を招く）。
+    prefix = (channel_dict or {}).get("main_title_prefix") or ""
+    if not prefix and (channel_dict or {}).get("style", "yukkuri") in ("yukkuri", "monologue"):
+        prefix = "【ゆっくり解説】"
 
     if hook:
         return f"{prefix}{hook}「{title}」"
@@ -4488,10 +4492,23 @@ def generate_short_title(title, thumb_info=None, channel_dict=None):
     if channel_dict:
         series_prefix = channel_dict.get("short_series_name") or ""
 
+    # 末尾ハッシュタグはチャンネル別に差し替え可能（未設定なら従来通り）。
+    # ゆっくり系でないチャンネルに "#ゆっくり解説" が付くのを防ぐ。
+    tags = ((channel_dict or {}).get("defaults") or {}).get("short_title_hashtags")
+    if not tags:
+        tags = "#shorts #ゆっくり解説"
+
     if hook:
-        return f"{series_prefix}{hook}#{title} #shorts #ゆっくり解説"
+        return f"{series_prefix}{hook}#{title} {tags}"
     else:
-        return f"{series_prefix}{title} #shorts #ゆっくり解説"
+        return f"{series_prefix}{title} {tags}"
+
+
+class _SafeFormatDict(dict):
+    """未知のプレースホルダを {name} のまま残す format_map 用の辞書。"""
+
+    def __missing__(self, key):
+        return "{" + key + "}"
 
 
 def _build_description_template(channel_dict, title, channel_concept):
@@ -4512,7 +4529,18 @@ def _build_description_template(channel_dict, title, channel_concept):
             f"{channel_concept}\n"
             "ぜひ最後までご視聴ください！"
         )
-    main_intro = main_intro.format(title=title, concept=channel_concept)
+    # チャンネル JSON のテンプレートは人が編集するので、未対応のプレースホルダが
+    # 混ざっていても動画生成の最後で落とさない（description だけ素の文字列になる）。
+    fields = {
+        "title": title,
+        "concept": channel_concept,
+        # 企業系チャンネル向け: タイトル先頭の固有名詞を企業名として渡す
+        "company_name": _facts_company_name(title),
+    }
+    try:
+        main_intro = main_intro.format_map(_SafeFormatDict(fields))
+    except (IndexError, ValueError) as e:
+        print(f"⚠️ description_template.main_intro を展開できません（原文のまま使用）: {e}")
 
     main_hashtags = tmpl.get("main_hashtags") or default_hashtag_str
     short_hashtags = tmpl.get("short_hashtags") or f"#shorts {default_hashtag_str}"
@@ -4549,17 +4577,30 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
 
     # ---- ショート説明文 ----
     first_line = short_scenario[0].get("text", "") if short_scenario else ""
+    # 本編を作らないチャンネルは description_template.omit_fullvideo_cta: true を
+    # 指定して「続きはフル動画で」誘導を外す（存在しない本編への誘導を防ぐ）。
+    # 明示指定したチャンネルだけが対象で、既定は従来どおり誘導を入れる。
+    desc_cfg = (channel_dict or {}).get("description_template") or {}
+    short_intro = desc_cfg.get("short_intro")
+    if short_intro:
+        header_block = [short_intro, ""]
+    elif desc_cfg.get("omit_fullvideo_cta"):
+        header_block = []
+    else:
+        header_block = [
+            "━━━━━━━━━━━━━━━━━━━━━━",
+            "🎬 続きはフル動画で公開中！",
+            "━━━━━━━━━━━━━━━━━━━━━━",
+            "",
+            f"👉 『{title}』",
+            f"   チャンネル「{channel_name}」で検索！",
+            "",
+            "▼ ショートでは語りきれなかった",
+            "  詳しい解説・データ・裏話は本編へ ▼",
+            "",
+        ]
     lines_short = [
-        "━━━━━━━━━━━━━━━━━━━━━━",
-        "🎬 続きはフル動画で公開中！",
-        "━━━━━━━━━━━━━━━━━━━━━━",
-        "",
-        f"👉 『{title}』",
-        f"   チャンネル「{channel_name}」で検索！",
-        "",
-        "▼ ショートでは語りきれなかった",
-        "  詳しい解説・データ・裏話は本編へ ▼",
-        "",
+        *header_block,
         "━━━━━━━━━━━━━━━━━━━━━━",
         f"📝 {hook or first_line}",
         "━━━━━━━━━━━━━━━━━━━━━━",

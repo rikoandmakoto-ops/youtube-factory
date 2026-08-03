@@ -3,6 +3,8 @@
   "name": "企業のホンネ",
   "concept": "有名企業の年収・ボーナス・福利厚生・離職率を、リアルな店舗写真の上に数字ファクトとして叩き込むショートチャンネル。1本1社、30〜50秒。赤帯ヘッダーで統一ブランド、白太字テキストで数字を連打。転職・就活層のZ世代がターゲット。",
   "style": "facts_overlay",
+  "short_series_name": "",
+  "main_title_prefix": "",
   "youtube_channel_id": "",
   "image_mode": "collect",
   "image_collect": {
@@ -51,6 +53,8 @@
     "default_privacy": "public"
   },
   "description_template": {
+    "omit_fullvideo_cta": true,
+    "short_intro": "この動画で紹介した数字は、有価証券報告書・公式IR・大手口コミサイトなどの公開情報を元にしています。",
     "main_intro": "{company_name}の年収・ボーナス・福利厚生を徹底解説！\n転職・就活の参考にしてください。\n※データは公開情報・口コミサイトを元にしています。\n\nチャンネル登録よろしくお願いします！",
     "main_hashtags": "#企業分析 #年収 #転職 #就活 #ホワイト企業",
     "short_hashtags": "#shorts #企業分析 #年収 #転職 #ホワイト企業 #就活"
@@ -68,6 +72,7 @@
     "bg_type": "slideshow",
     "use_illustrations": false,
     "hashtags": ["#shorts", "#企業分析", "#年収", "#転職", "#ホワイト企業"],
+    "short_title_hashtags": "#shorts #企業分析 #年収 #転職",
     "category": "22"
   },
   "content_policy": {
@@ -169,8 +174,6 @@
         "enabled": true,
         "max_images": 5,
         "switch_per_fact": true,
-        "crossfade": 0.35,
-        "ken_burns": 0.05,
         "query_suffixes": ["店舗 外観", "看板", "オフィス", "商品 売り場", "本社 ビル"]
       },
       "cta": {
