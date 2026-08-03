@@ -80,17 +80,77 @@
 写真は `settings["orientation"] = "portrait"` で縦写真を優先取得する
 （`image_collector` 側は未指定なら従来どおりなので、他チャンネルの収集結果は変わらない）。
 
+同じ企業を狙うクエリは上位ヒットが一致しがちなので、重複を検知したら
+`settings["skip"]` を増やして「次のヒット」を取りに行く（最大3回）。
+これをやらないと1〜2枚しか集まらず、スライドショーが成立しない。
+
 ### 背景写真の質について
 
-現状 `provider: "auto"` は Pexels に解決される。Pexels はストックフォト
-ライブラリなので「ニトリの店舗」のような**実在企業の写真は返さない**
-（雰囲気の近い一般写真になる）。実店舗写真が要るなら Google CSE を使う:
+ストックフォト系プロバイダ（Pexels / Pixabay / Unsplash）は
+「ニトリの店舗」のような**実在企業の写真を返さない**。雰囲気の近い
+無関係な一般写真になり、企業ファクト動画としては成立しない。
 
-1. `GOOGLE_CSE_API_KEY` と `GOOGLE_CSE_ID` を `backend/.env` に設定
-2. `company-facts.json` の `image_collect.provider` を `"google_cse"` に変更
+そのため **APIキー不要**の2プロバイダを実装済み。`company-facts.json` は
+`image_collect.provider: "wikimedia,openverse,pexels"` を設定していて、
+カンマ区切りは**上から順に試すフォールバック連鎖**として解釈される。
 
-`license_filter: "cc"` は設定済みだが、企業ロゴ・店舗写真の利用可否は
-別途確認すること。
+| provider | キー | 特徴 |
+|---|---|---|
+| `wikimedia` | 不要 | Wikimedia Commons。実在企業の店舗・本社・製品写真が最も取れる |
+| `openverse` | 不要 | Openverse（Flickr等のCC集約）。Commons に無い街角写真を拾える |
+| `google_cse` | 要 | `GOOGLE_CSE_API_KEY` + `GOOGLE_CSE_ID`。網羅性は最高だがキーと課金が要る |
+
+`auto` の解決順は従来のまま（ストック優先）にしてある。既存チャンネルの
+絵柄を変えないためで、実写が要るチャンネルだけが明示指定する。
+
+補足:
+- Wikimedia は User-Agent に連絡先が無いと `429` を返す。`_UA` は連絡先付きで
+  組み立てており、`IMAGE_COLLECTOR_CONTACT` で上書きできる。
+- Commons 検索は全語 AND なので、`ユニクロ 店舗 外観` のような多語クエリは
+  語を後ろから落としながら再試行する。
+- 原寸URLではなく必ずサムネイルURL経由で取得する（帯域制限に触れるため）。
+- `license_filter: "cc"` は設定済みだが、企業ロゴ・店舗写真の利用可否は
+  別途確認すること。
+
+### 企業ロゴチップ
+
+`fetch_entity_logo()` が **Wikidata の logo image (P154)** からロゴを1枚取り、
+白いカードに載せて左上に常時表示する（`facts_overlay.logo_chip`）。
+
+Wikipedia の pageimage は本社ビルの写真が入っていることが多くロゴにならないため、
+ロゴ専用プロパティである P154 だけを見る。取得できなければチップを描かない
+（無関係な画像を出すよりは何も出さない方がよい）。
+
+### 画面の動き
+
+静止画スライドショーは「切り替わる瞬間しか動かない」ため、そのままだと
+紙芝居に見える。`facts_overlay.motion` で常時わずかに動いている状態を作る。
+
+| キー | 既定 | 内容 |
+|---|---|---|
+| `ken_burns` | 0.10 | シーン全体でかける寄り量。偶数カットは寄り／奇数カットは引き、ドリフト方向も交互に振って単調さを避ける |
+| `crossfade` | 0.35 | カット頭で前カットから溶ける秒数 |
+| `text_in` | 0.32 | 文字の入りアニメ。バッジ→本文→補足の順に少しずつ遅らせて出す |
+
+`motion.enabled: false` で全部止めて従来の静止フレームに戻せる。
+
+実装上、文字を毎フレーム描き直すと重いのでレイヤーは1シーンにつき1度だけ
+描き、フレームごとには平行移動とアルファ調整だけを行う。
+
+`fact_text.scrim_alpha`（既定120）は文字帯の裏に敷くぼかし暗幕。実店舗写真は
+情報量が多く、縁取りだけでは数字が背景に埋もれるため。`0` で無効。
+
+### 同ジャンル競合の調べ方
+
+`effects_researcher` に `business_facts` ジャンルを追加済み。`style` が
+`facts_overlay` のチャンネルは自動でこのジャンルに解決される。
+
+このジャンルは `prefer_shorts: true` で、長さフィルタが**反転**する
+（`shorts_threshold_sec` 以下＝縦型ショートだけを集める）。ショート専用
+チャンネルで長尺を分析しても演出の参考にならないため。
+
+なお集約フェーズは Claude を使うので、クレジット切れのときは検索・選定までしか
+通らない（`_search_videos` / `_select_per_channel` は単体で呼べる）。
 
 ## 設定（`video_format.facts_overlay`）
 
@@ -100,7 +160,9 @@
   "header_badge": { "text": "超ホワイト企業", "bg_color": [220,40,40], "font_size": 56, "y_position": 150, "padding": [18,44] },
   "fact_text":    { "font_size_main": 96, "font_size_main_min": 62, "highlight_color": [255,230,50], "stroke_width": 8, "y_center": 760, "max_lines": 3 },
   "bottom_text":  { "font_size": 52, "text_color": [255,60,60], "y_position": 1420 },
-  "slideshow":    { "enabled": true, "max_images": 5, "switch_per_fact": true, "query_suffixes": ["店舗 外観", "看板", ...] },
+  "slideshow":    { "enabled": true, "max_images": 6, "switch_per_fact": true, "query_suffixes": ["店舗 外観", "看板", ...] },
+  "motion":       { "enabled": true, "ken_burns": 0.12, "crossfade": 0.35, "text_in": 0.32 },
+  "logo_chip":    { "enabled": true, "size": 170, "position": "top_left", "margin": 40 },
   "cta":          { "enabled": true, "headline": "他の企業もチェック", "sub": "プロフィールから見れます" }
 }
 ```
@@ -109,8 +171,10 @@
 `layout` 配下ではなく **`facts_overlay` セクション**に置くこと
 （`short_illustrations` と同じ自由形式dict扱い）。
 
-スライド間のクロスフェードは `video_format.effects.transition_duration`、
-微ズームは `effects.zoom_max` が担当する（`facts_overlay` 側には持たない）。
+背景の寄り・カット間クロスフェード・文字の入りは `facts_overlay.motion` が持つ
+（`video_format.effects` 側のクリップ全体エフェクトとは別レイヤー。effects は
+文字ごと動かすのに対し、`motion` は背景と文字を別々に扱う）。
+`slideshow.ken_burns` / `slideshow.crossfade` に書いても読む（設定の書き場所ゆれ対策）。
 
 ## 生成物
 
@@ -121,6 +185,27 @@
 - `short_description` … 説明文txt
 
 長尺（`gen_type="full"`）は未対応。指定された場合は警告を出してスキップする。
+
+## 競合分析メモ（2026-08-03）
+
+YouTube Data API で「企業 年収 / ホワイト企業 / 就職偏差値」系の日本語ショートを
+横断収集し、上位のサムネイル・構成を目視で確認した結果。設計の根拠。
+
+- **伸びている上位の大半はスキット系**（東京ウーバーズ、テイコウペンギン等の
+  アニメコント）。ファクトオーバーレイ形式は再生数の絶対値では劣るが、
+  自動生成で再現できるのはこちら側。
+- **画面の主役は「企業そのもの」**。ランキング系上位（`s747zxNUvhI`,
+  `xb2FsHL-Kok`）は画面が企業ロゴで埋め尽くされている。汎用ストック写真は
+  この形式では機能しない → keyless プロバイダ導入とロゴチップの根拠。
+- **実写系の参考例**（`tMZMvs4azTs`, 転職.com / ニトリ）: 実店舗の映像を背景に、
+  企業ロゴを小さくコーナーに常置、赤い小バッジ＋見出し、キーワードだけ色替え。
+  現行の赤帯バッジ＋白太字＋数字黄色ハイライトはこの構成と一致している。
+- **数字が主役**。「1,000万超え」「年収3000万」のように、数字だけ極太・
+  縁取り・別色。既存の `_highlight_segments`（数字だけ強調色）はこの流儀。
+- **1画面1情報でテンポよく切る**。`switch_per_fact: true` を維持する根拠。
+
+分析対象の生データは `effects_researcher` の `business_facts` ジャンルで
+再取得できる（上記「同ジャンル競合の調べ方」）。
 
 ## メタデータまわりの注意
 

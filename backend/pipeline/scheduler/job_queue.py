@@ -25,6 +25,7 @@ Usage:
 import json
 import threading
 import time
+import traceback
 import uuid
 from concurrent.futures import ThreadPoolExecutor, Future
 from dataclasses import dataclass, field
@@ -448,6 +449,8 @@ class JobQueue:
                     "applied_feedback": sd.get("applied_feedback"),
                     "prompt_hash": sd.get("prompt_hash"),
                     "video_title": sd.get("video_title"),
+                    # facts_overlay の背景/ロゴ検索キー
+                    "company_name": sd.get("company_name"),
                     "generated_by": sd.get("generated_by"),
                     "compete": sd.get("compete"),
                 },
@@ -481,6 +484,11 @@ class JobQueue:
             print(f"🛑 Job cancelled: [{job.id}] {job.title} — {e}")
 
         except Exception as e:
+            # 例外は str(e) だけだと発生箇所が分からない（KeyError なら
+            # キー名しか出ない）。ログに完全なトレースバックを残す。
+            print(f"💥 Job exception: [{job.id}] {job.title} — {type(e).__name__}: {e}")
+            traceback.print_exc()
+
             # キャンセル要求中にステップが例外を吐いた場合もリトライしない
             if job.cancel_requested:
                 job.status = JobStatus.CANCELLED

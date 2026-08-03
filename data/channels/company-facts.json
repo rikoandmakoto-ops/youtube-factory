@@ -3,18 +3,17 @@
   "name": "企業のホンネ",
   "concept": "有名企業の年収・ボーナス・福利厚生・離職率を、リアルな店舗写真の上に数字ファクトとして叩き込むショートチャンネル。1本1社、30〜50秒。赤帯ヘッダーで統一ブランド、白太字テキストで数字を連打。転職・就活層のZ世代がターゲット。",
   "style": "facts_overlay",
-  "short_series_name": "",
-  "main_title_prefix": "",
   "youtube_channel_id": "",
   "image_mode": "collect",
   "image_collect": {
-    "provider": "auto",
+    "provider": "wikimedia,openverse,pexels",
     "safe_search": true,
     "license_filter": "cc",
     "max_per_query": 8,
     "attribution_template": "出典: {source}",
     "mix_strategy": "heuristic",
-    "query_template": "{company_name} 店舗 外観 看板"
+    "query_template": "{company_name} 店舗 外観 看板",
+    "orientation": "portrait"
   },
   "voice_style": {
     "tone": "テンポの良いナレーション。数字を際立たせ、驚きのリアクションを入れる。堅すぎず、友達に教える距離感。",
@@ -25,8 +24,17 @@
       "離職率を見たら、入社したくなるかも"
     ],
     "forbidden": [
-      "SCP", "財団", "収容", "ポケモン", "妖怪",
-      "リコ", "マコト", "ヒカリ", "ソラ", "シロ", "クロ"
+      "SCP",
+      "財団",
+      "収容",
+      "ポケモン",
+      "妖怪",
+      "リコ",
+      "マコト",
+      "ヒカリ",
+      "ソラ",
+      "シロ",
+      "クロ"
     ],
     "style_rules": [
       "冒頭3秒で企業名と最もインパクトのある数字を出す（例：『ニトリ、平均年収850万円』）。",
@@ -42,7 +50,11 @@
       "side": "none",
       "speaker_id": 13,
       "dir": null,
-      "text_color": [255, 255, 255],
+      "text_color": [
+        255,
+        255,
+        255
+      ],
       "expressions": [],
       "role": "ナレーター（画面に登場しない）",
       "appearance": null
@@ -53,17 +65,29 @@
     "default_privacy": "public"
   },
   "description_template": {
-    "omit_fullvideo_cta": true,
-    "short_intro": "この動画で紹介した数字は、有価証券報告書・公式IR・大手口コミサイトなどの公開情報を元にしています。",
     "main_intro": "{company_name}の年収・ボーナス・福利厚生を徹底解説！\n転職・就活の参考にしてください。\n※データは公開情報・口コミサイトを元にしています。\n\nチャンネル登録よろしくお願いします！",
     "main_hashtags": "#企業分析 #年収 #転職 #就活 #ホワイト企業",
-    "short_hashtags": "#shorts #企業分析 #年収 #転職 #ホワイト企業 #就活"
+    "short_hashtags": "#shorts #企業分析 #年収 #転職 #ホワイト企業 #就活",
+    "omit_fullvideo_cta": true,
+    "short_intro": "この動画で紹介した数字は、有価証券報告書・公式IR・大手口コミサイトなどの公開情報を元にしています。"
   },
   "thumbnail_template": {
     "badge_text": "企業分析",
-    "badge_color": [220, 40, 40],
-    "hook_color": [255, 255, 255],
-    "subtitle_color": [255, 230, 50],
+    "badge_color": [
+      220,
+      40,
+      40
+    ],
+    "hook_color": [
+      255,
+      255,
+      255
+    ],
+    "subtitle_color": [
+      255,
+      230,
+      50
+    ],
     "style_hint": "企業の実店舗写真を背景に、赤帯ヘッダーと白太字テキストでインパクトを出す。参考: @sakai-l7u スタイル。"
   },
   "defaults": {
@@ -71,9 +95,15 @@
     "target_duration": 45,
     "bg_type": "slideshow",
     "use_illustrations": false,
-    "hashtags": ["#shorts", "#企業分析", "#年収", "#転職", "#ホワイト企業"],
-    "short_title_hashtags": "#shorts #企業分析 #年収 #転職",
-    "category": "22"
+    "hashtags": [
+      "#shorts",
+      "#企業分析",
+      "#年収",
+      "#転職",
+      "#ホワイト企業"
+    ],
+    "category": "22",
+    "short_title_hashtags": "#shorts #企業分析 #年収 #転職"
   },
   "content_policy": {
     "tone": "データ重視・驚き喚起",
@@ -123,16 +153,46 @@
   "theme_blacklist": [],
   "genre_blacklist": [],
   "theme_seeds": [
-    {"title": "ニトリの実態", "angle": "有給消化率100%、ボーナス平均200万、34期連続増収増益の超ホワイト企業"},
-    {"title": "ユニクロの年収", "angle": "平均年収959万、グローバル企業としての待遇と激務の実態"},
-    {"title": "コストコの時給", "angle": "時給1,500円〜、パートでも賞与あり、なぜここまで高いのか"},
-    {"title": "任天堂が辞められない理由", "angle": "離職率3%、平均年収988万、福利厚生と社風の秘密"},
-    {"title": "スタバの福利厚生", "angle": "パートナー割引・学費補助・ストックオプションの実態"},
-    {"title": "Googleジャパンの裏側", "angle": "平均年収1,600万超、無料食堂、20%ルールの真実"},
-    {"title": "トヨタの生涯年収", "angle": "終身雇用・年功序列の王道、生涯で稼げる金額は"},
-    {"title": "キーエンスの年収が異常", "angle": "平均年収2,279万、なぜここまで高いのか仕組みを解説"},
-    {"title": "メルカリの働き方", "angle": "フルリモート・副業OK・英語公用語化の実態"},
-    {"title": "サイゼリヤの原価率", "angle": "なぜあんなに安いのか、社員の待遇は実際どうなのか"}
+    {
+      "title": "ニトリの実態",
+      "angle": "有給消化率100%、ボーナス平均200万、34期連続増収増益の超ホワイト企業"
+    },
+    {
+      "title": "ユニクロの年収",
+      "angle": "平均年収959万、グローバル企業としての待遇と激務の実態"
+    },
+    {
+      "title": "コストコの時給",
+      "angle": "時給1,500円〜、パートでも賞与あり、なぜここまで高いのか"
+    },
+    {
+      "title": "任天堂が辞められない理由",
+      "angle": "離職率3%、平均年収988万、福利厚生と社風の秘密"
+    },
+    {
+      "title": "スタバの福利厚生",
+      "angle": "パートナー割引・学費補助・ストックオプションの実態"
+    },
+    {
+      "title": "Googleジャパンの裏側",
+      "angle": "平均年収1,600万超、無料食堂、20%ルールの真実"
+    },
+    {
+      "title": "トヨタの生涯年収",
+      "angle": "終身雇用・年功序列の王道、生涯で稼げる金額は"
+    },
+    {
+      "title": "キーエンスの年収が異常",
+      "angle": "平均年収2,279万、なぜここまで高いのか仕組みを解説"
+    },
+    {
+      "title": "メルカリの働き方",
+      "angle": "フルリモート・副業OK・英語公用語化の実態"
+    },
+    {
+      "title": "サイゼリヤの原価率",
+      "angle": "なぜあんなに安いのか、社員の待遇は実際どうなのか"
+    }
   ],
   "video_format": {
     "layout": {
@@ -147,45 +207,105 @@
       "overlay_alpha": 100,
       "header_badge": {
         "text": "超ホワイト企業",
-        "bg_color": [220, 40, 40],
-        "text_color": [255, 255, 255],
+        "bg_color": [
+          220,
+          40,
+          40
+        ],
+        "text_color": [
+          255,
+          255,
+          255
+        ],
         "font_size": 56,
         "y_position": 150,
-        "padding": [18, 44]
+        "padding": [
+          18,
+          44
+        ]
       },
       "fact_text": {
         "font_size_main": 96,
         "font_size_main_min": 62,
         "font_size_sub": 52,
-        "text_color": [255, 255, 255],
-        "highlight_color": [255, 230, 50],
+        "text_color": [
+          255,
+          255,
+          255
+        ],
+        "highlight_color": [
+          255,
+          230,
+          50
+        ],
         "stroke_width": 8,
-        "stroke_color": [0, 0, 0],
+        "stroke_color": [
+          0,
+          0,
+          0
+        ],
         "y_center": 760,
-        "max_lines": 3
+        "max_lines": 3,
+        "scrim_alpha": 120
       },
       "bottom_text": {
         "font_size": 52,
-        "text_color": [255, 60, 60],
+        "text_color": [
+          255,
+          60,
+          60
+        ],
         "stroke_width": 6,
         "y_position": 1420
       },
       "slideshow": {
         "enabled": true,
-        "max_images": 5,
+        "max_images": 6,
         "switch_per_fact": true,
-        "query_suffixes": ["店舗 外観", "看板", "オフィス", "商品 売り場", "本社 ビル"]
+        "query_suffixes": [
+          "店舗 外観",
+          "店内",
+          "本社",
+          "看板",
+          "ビル",
+          "売り場"
+        ]
       },
       "cta": {
         "enabled": true,
         "headline": "他の企業もチェック",
         "sub": "プロフィールから見れます",
-        "bg_color": [18, 18, 18],
-        "accent_color": [220, 40, 40]
+        "bg_color": [
+          18,
+          18,
+          18
+        ],
+        "accent_color": [
+          220,
+          40,
+          40
+        ]
+      },
+      "motion": {
+        "enabled": true,
+        "ken_burns": 0.12,
+        "crossfade": 0.35,
+        "text_in": 0.32
+      },
+      "logo_chip": {
+        "enabled": true,
+        "size": 170,
+        "position": "top_left",
+        "margin": 40
       }
     },
     "colors": {
-      "bg_color": [0, 0, 0, 255]
+      "bg_color": [
+        0,
+        0,
+        0,
+        255
+      ]
     },
     "audio": {
       "speed": 1.2,
@@ -208,7 +328,15 @@
     },
     "youtube": {
       "channel_id": "",
-      "default_tags": ["企業分析", "年収", "転職", "就活", "ホワイト企業", "ブラック企業", "福利厚生"],
+      "default_tags": [
+        "企業分析",
+        "年収",
+        "転職",
+        "就活",
+        "ホワイト企業",
+        "ブラック企業",
+        "福利厚生"
+      ],
       "default_category": "22",
       "privacy_status": "private",
       "upload_schedule": null
@@ -227,20 +355,45 @@
     "persona": {
       "age_group": "20代",
       "gender": "男女",
-      "interest_categories": ["転職", "キャリア", "ビジネス"],
+      "interest_categories": [
+        "転職",
+        "キャリア",
+        "ビジネス"
+      ],
       "content_depth": "ライト"
     }
   },
   "autopilot": {
     "enabled": false,
     "schedule": {
-      "days_of_week": [0, 1, 2, 3, 4, 5, 6],
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "hour": 19,
       "minute": 0,
-      "times": [{"hour": 19, "minute": 0}]
+      "times": [
+        {
+          "hour": 19,
+          "minute": 0
+        }
+      ]
     },
     "duration_minutes": 12,
     "gen_type": "short",
-    "theme_queue": []
-  }
+    "theme_queue": [
+      {
+        "id": "40bf8d9d",
+        "title": "ジャパネットホールディングスの福利厚生を解説 — 家賃補助から資格取得支援まで数字で見る充実度",
+        "angle": "ジャパネットHDの充実した福利厚生制度を具体的な支援額や利用率とともに紹介"
+      }
+    ]
+  },
+  "short_series_name": "",
+  "main_title_prefix": ""
 }

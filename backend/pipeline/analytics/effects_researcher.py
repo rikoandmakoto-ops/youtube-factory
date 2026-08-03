@@ -54,7 +54,10 @@ class ResearchSpec:
     max_videos_per_query: int = 15
     shorts_threshold_sec: int = 90
     require_japanese: bool = True
-    genre: str = "general"                           # scp / science / horror / general
+    genre: str = "general"                           # scp / science / horror / business_facts / general
+    # True にすると「shorts_threshold_sec 未満」＝縦型ショートだけを集める。
+    # ショート専用チャンネルは長尺を分析しても演出の参考にならないため。
+    prefer_shorts: bool = False
 
 
 # 既知ジャンルのデフォルトクエリ（ユーザー指定が無いときのフォールバック）
@@ -84,6 +87,19 @@ _GENRE_PRESETS: Dict[str, Dict[str, Any]] = {
         ],
         "must_include_token": "ゆっくり",
         "blacklist_words": ["マイクラ", "ROBLOX", "GMOD", "Minecraft"],
+    },
+    # 企業ファクト系（company-facts）。ゆっくり系と違い縦型ショートが主戦場
+    # なので prefer_shorts で長さフィルタを反転させる。
+    "business_facts": {
+        "queries": [
+            "企業 年収 shorts", "ホワイト企業 年収 shorts",
+            "平均年収 企業 解説 ショート", "企業 福利厚生 shorts",
+            "就活 企業研究 年収 ショート", "企業 就職偏差値 ランキング shorts",
+        ],
+        "must_include_token": None,
+        "blacklist_words": ["切り抜き", "ひろゆき", "マイクラ", "Minecraft",
+                            "コント", "あるある", "漫画", "マンガ"],
+        "prefer_shorts": True,
     },
     "general": {
         "queries": [
@@ -132,6 +148,11 @@ def _detect_genre(channel: Dict[str, Any]) -> str:
     t = text.lower()
     if "scp" in t:
         return "scp"
+    # 企業ファクト系は style で一意に決まる。語彙判定より先に見る。
+    if channel.get("style") == "facts_overlay":
+        return "business_facts"
+    if any(w in t for w in ("年収", "企業", "転職", "就活", "福利厚生")):
+        return "business_facts"
     if any(w in t for w in ("怖", "ホラー", "都市伝説", "怪談")):
         return "horror"
     if any(w in t for w in ("科学", "雑学", "豆知識", "日常", "解剖", "化学", "物理")):
@@ -159,6 +180,7 @@ def resolve_research_spec(channel_id: str) -> ResearchSpec:
         shorts_threshold_sec=int(er.get("shorts_threshold_sec") or 90),
         require_japanese=bool(er.get("require_japanese", True)),
         genre=genre,
+        prefer_shorts=bool(er.get("prefer_shorts", preset.get("prefer_shorts", False))),
     )
 
 
@@ -206,7 +228,7 @@ def _search_videos(spec: ResearchSpec) -> List[Dict[str, Any]]:
                     regionCode="JP",
                     relevanceLanguage="ja",
                     order="viewCount",
-                    videoDuration="medium",
+                    videoDuration="short" if spec.prefer_shorts else "medium",
                 )
                 .execute()
             )
@@ -264,7 +286,12 @@ def _select_per_channel(
     def _ok(v: Dict[str, Any]) -> bool:
         title = v.get("title") or ""
         ch = v.get("channel_title") or ""
-        if v.get("duration_seconds", 0) < spec.shorts_threshold_sec:
+        duration = v.get("duration_seconds", 0)
+        if spec.prefer_shorts:
+            # ショート専用チャンネル向け: 縦型ショートだけを残す
+            if not (0 < duration <= spec.shorts_threshold_sec):
+                return False
+        elif duration < spec.shorts_threshold_sec:
             return False
         if spec.blacklist_words:
             blob = title.lower()

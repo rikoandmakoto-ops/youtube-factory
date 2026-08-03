@@ -2347,6 +2347,9 @@ _FACTS_DEFAULTS = {
         "stroke_color": [0, 0, 0],
         "y_center": 760,
         "max_lines": 3,
+        # 実店舗写真は情報量が多く、縁取りだけでは数字が背景に埋もれる。
+        # 文字帯の裏にぼかした暗幕を敷いて可読性を確保する（0で無効）。
+        "scrim_alpha": 120,
     },
     "bottom_text": {
         "font_size": 52,
@@ -2359,6 +2362,22 @@ _FACTS_DEFAULTS = {
         "max_images": 5,
         "switch_per_fact": True,
         "query_suffixes": [],
+    },
+    # 静止画スライドショーは「切り替わる瞬間しか動かない」ため、そのままだと
+    # 紙芝居に見える。背景の緩やかな寄り(ken_burns)、カット間のクロスフェード、
+    # 文字の入りアニメで常時わずかに動いている状態を作る。
+    "motion": {
+        "enabled": True,
+        "ken_burns": 0.10,      # シーン全体でかける寄り量（1.0 → 1.0+この値）
+        "crossfade": 0.35,      # カット頭で前カットから溶ける秒数
+        "text_in": 0.32,        # 文字の入りアニメの長さ（秒）
+    },
+    # 企業ロゴのコーナーチップ。「どの会社の話か」を写真より速く伝える。
+    "logo_chip": {
+        "enabled": True,
+        "size": 160,
+        "position": "top_left",
+        "margin": 40,
     },
     "cta": {
         "enabled": True,
@@ -2391,24 +2410,41 @@ def _rgb(value, fallback=(255, 255, 255)):
         return tuple(fallback)
 
 
-def _facts_company_name(title):
-    """タイトルから企業名らしき先頭語を切り出す（背景検索クエリ用）。
+# タイトル頭に付きがちな煽り語。企業名の手前にあるので剥がしてから切り出す。
+_FACTS_TITLE_PREFIXES = re.compile(
+    r"^(?:なぜ|なんで|どうして|実は|衝撃|驚愕|悲報|朗報|必見|注目|話題の|あの)+"
+)
+# 企業名の後ろに付く助詞・煽り語。ここまでを企業名とみなす。
+_FACTS_NAME_TAIL = re.compile(r"(?:だけ|さん|って|こそ|の実態|の年収|の裏側)$")
 
-    「ニトリの実態」→「ニトリ」、「ユニクロ、年収がヤバい」→「ユニクロ」。
-    切り出せなければタイトル全体を返す。
+
+def _facts_company_name(title, explicit=None):
+    """企業名を決める（背景写真・ロゴ検索のキーになる最重要の値）。
+
+    `explicit`（シナリオJSONの company_name）があれば無条件でそれを使う。
+    無い場合だけタイトルから切り出す。タイトル切り出しは
+    「なぜ蔦屋書店だけ？…」→「蔦屋書店」のように、煽りの接頭辞と語尾を
+    落としてから区切り記号までを取る。ここを誤ると全カットの背景が
+    無関係な写真になるため、剥がし処理は明示的に行う。
     """
+    explicit = (explicit or "").strip()
+    if explicit:
+        return explicit[:24]
+
     t = (title or "").strip()
     if not t:
         return ""
+    t = _FACTS_TITLE_PREFIXES.sub("", t).strip()
     # 区切り記号までを企業名候補とみなす
     m = re.split(r"[のはがを、。！？!?\s　「」【】\-—―｜|:：]", t, maxsplit=1)
     head = (m[0] or "").strip()
+    head = _FACTS_NAME_TAIL.sub("", head).strip()
     if 2 <= len(head) <= 12:
         return head
     return t[:12]
 
 
-def _facts_bg_queries(title, scenario, channel_dict, cfg, max_images):
+def _facts_bg_queries(title, scenario, channel_dict, cfg, max_images, company=None):
     """スライドショー用の背景検索クエリ列を作る。
 
     優先順:
@@ -2430,7 +2466,7 @@ def _facts_bg_queries(title, scenario, channel_dict, cfg, max_images):
         if isinstance(entry, dict):
             _add(entry.get("bg_query"))
 
-    company = _facts_company_name(title)
+    company = company or _facts_company_name(title)
     if company:
         for suffix in (cfg["slideshow"].get("query_suffixes") or []):
             _add(f"{company} {suffix}")
@@ -2466,27 +2502,42 @@ def _collect_facts_backgrounds(queries, image_collect_settings, cache_dir, max_i
     settings.setdefault("orientation", "portrait")
 
     images, seen = [], set()
-    for idx, query in enumerate(queries):
+    slot = 0
+    for query in queries:
         if len(images) >= max_images:
             break
-        try:
-            got = image_collector.search_and_cache(
-                query, cache_dir=cache_dir, idx=idx, settings=settings)
-        except Exception as e:
-            print(f"  ⚠️ facts BG '{query[:40]}' failed: {e}")
-            continue
-        if not got or got.get("image") is None:
-            continue
-        img = got["image"]
-        digest = hashlib.md5(
-            img.convert("RGB").resize((32, 32)).tobytes()).hexdigest()
-        if digest in seen:
-            print(f"  ↩️ facts BG duplicate skipped: '{query[:40]}'")
-            continue
-        seen.add(digest)
-        images.append(_fit_9x16(img))
-        print(f"  🌐 facts BG [{len(images)}/{max_images}] '{query[:40]}' "
-              f"({got.get('provider')})")
+        # 同じ企業を狙うクエリは上位ヒットが一致しがち。重複したら「次のヒット」を
+        # 取りに行く（ここを諦めると同じ写真が並び、スライドショーが成立しない）。
+        for attempt in range(3):
+            per_query = dict(settings)
+            if attempt:
+                per_query["skip"] = attempt
+            try:
+                got = image_collector.search_and_cache(
+                    query, cache_dir=cache_dir, idx=slot, settings=per_query)
+            except Exception as e:
+                print(f"  ⚠️ facts BG '{query[:40]}' failed: {e}")
+                break
+            if not got or got.get("image") is None:
+                break
+            img = got["image"]
+            digest = hashlib.md5(
+                img.convert("RGB").resize((32, 32)).tobytes()).hexdigest()
+            if digest in seen:
+                print(f"  ↩️ facts BG duplicate: '{query[:30]}' → 次の候補へ")
+                # 重複キャッシュを消さないと次の attempt も同じ画像を読み戻す
+                for suffix in (".png", ".json"):
+                    try:
+                        (cache_dir / f"collected_{slot:03d}{suffix}").unlink()
+                    except OSError:
+                        pass
+                continue
+            seen.add(digest)
+            images.append(_fit_9x16(img))
+            slot += 1
+            print(f"  🌐 facts BG [{len(images)}/{max_images}] '{query[:30]}' "
+                  f"({got.get('provider')})")
+            break
     return images
 
 
@@ -2503,13 +2554,28 @@ class FactsOverlayShortRenderer:
 
     def __init__(self, bg_video_path=None, bg_type="auto",
                  image_mode="collect", image_collect_settings=None,
-                 bg_queries=None, cache_dir=None, fmt=None, title=None):
+                 bg_queries=None, cache_dir=None, fmt=None, title=None,
+                 company=None):
         self.fmt = fmt or {}
         self.cfg = _facts_cfg(self.fmt)
         self.title = (title or "").strip()
+        self.company = (company or "").strip()
         self.bg_video = None
         self.bg_video_duration = 0
         self.bg_images = []
+
+        motion = self.cfg["motion"]
+        slideshow_cfg = self.cfg["slideshow"]
+        self.motion_on = bool(motion.get("enabled", True))
+        # slideshow.* 側に書かれた値も受け付ける（設定の書き場所ゆれ対策）
+        self.ken_burns = float(
+            slideshow_cfg.get("ken_burns", motion.get("ken_burns", 0.10)) or 0.0)
+        self.crossfade = float(
+            slideshow_cfg.get("crossfade", motion.get("crossfade", 0.35)) or 0.0)
+        self.text_in = float(motion.get("text_in", 0.32) or 0.0)
+        if not self.motion_on:
+            self.ken_burns = self.crossfade = self.text_in = 0.0
+        self.logo_chip = self._load_logo_chip()
 
         branding = self.fmt.get("branding", {}) or {}
         self.watermark_text = branding.get("watermark_text") or None
@@ -2550,6 +2616,63 @@ class FactsOverlayShortRenderer:
             print("⚠️ facts BG: 収集できなかったため手描き背景にフォールバック")
             self.bg_images = self._build_fallback_bgs()
 
+    # ── logo chip ────────────────────────────────────────────
+    def _load_logo_chip(self):
+        """企業ロゴを白いチップに収めた RGBA を返す（取得できなければ None）。
+
+        ロゴは透過PNG/白背景/濃色背景が混在するので、白いカードに載せて
+        どの写真の上でも読める状態に揃える。
+        """
+        cfg = self.cfg["logo_chip"]
+        if not cfg.get("enabled", True) or not self.company:
+            return None
+        try:
+            from pipeline import image_collector
+        except Exception:
+            return None
+        try:
+            got = image_collector.fetch_entity_logo(self.company)
+        except Exception as e:
+            print(f"⚠️ ロゴ取得に失敗（チップ無しで続行）: {e}")
+            return None
+        if got is None or got.image is None:
+            print(f"ℹ️ ロゴが見つかりません（チップ無しで続行）: {self.company}")
+            return None
+
+        size = max(60, int(cfg.get("size", 160)))
+        logo = got.image.convert("RGBA")
+        # 透過部分を白で潰してからカードに載せる（黒ロゴが黒背景で消えるのを防ぐ）
+        flat = Image.new("RGBA", logo.size, (255, 255, 255, 255))
+        flat.alpha_composite(logo)
+        w, h = flat.size
+        scale = min(size / max(1, w), (size * 0.62) / max(1, h))
+        flat = flat.resize((max(1, int(w * scale)), max(1, int(h * scale))), Image.LANCZOS)
+
+        pad = max(8, size // 12)
+        card = Image.new("RGBA", (flat.width + pad * 2, flat.height + pad * 2), (0, 0, 0, 0))
+        ImageDraw.Draw(card).rounded_rectangle(
+            [0, 0, card.width - 1, card.height - 1],
+            radius=max(6, pad), fill=(255, 255, 255, 242))
+        card.alpha_composite(flat, (pad, pad))
+        print(f"🏷️ ロゴチップ: {self.company} ({got.provider})")
+        return card
+
+    def _draw_logo_chip(self, overlay):
+        if self.logo_chip is None:
+            return
+        cfg = self.cfg["logo_chip"]
+        margin = int(cfg.get("margin", 40))
+        pos = (cfg.get("position") or "top_left").lower()
+        x = margin if "left" in pos else SHORT_W - self.logo_chip.width - margin
+        # 上部は赤帯バッジと衝突しやすいので、バッジの高さぶん下げる
+        y = margin if "top" in pos else SHORT_H - self.logo_chip.height - margin - 60
+        shadow = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+        ImageDraw.Draw(shadow).rounded_rectangle(
+            [x, y + 6, x + self.logo_chip.width, y + self.logo_chip.height + 6],
+            radius=12, fill=(0, 0, 0, 110))
+        overlay.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(8)))
+        overlay.alpha_composite(self.logo_chip, (x, y))
+
     # ── background ───────────────────────────────────────────
     def close(self):
         if self.bg_video:
@@ -2579,6 +2702,38 @@ class FactsOverlayShortRenderer:
             return scene_index % len(self.bg_images)
         interval = max(1.0, float(self.cfg["slideshow"].get("switch_seconds", 5)))
         return int(t_abs / interval) % len(self.bg_images)
+
+    @staticmethod
+    def _ease_out(x):
+        """0→1 を減速カーブに。動きの出だしを速くして「効いている」感を出す。"""
+        x = max(0.0, min(1.0, x))
+        return 1.0 - (1.0 - x) ** 3
+
+    def _ken_burns(self, image, scene_index, progress):
+        """1枚の背景に緩やかな寄りとドリフトをかけて切り出す。
+
+        方向はシーンごとに変える（寄り/引き・左右）。全カット同じ動きだと
+        逆に単調さが目立つため。
+        """
+        amount = self.ken_burns
+        if amount <= 0:
+            return image
+        p = max(0.0, min(1.0, progress))
+        # 偶数カットは寄り、奇数カットは引き
+        if scene_index % 2 == 0:
+            zoom = 1.0 + amount * p
+        else:
+            zoom = 1.0 + amount * (1.0 - p)
+        # 横方向のドリフト（余白の範囲内）
+        drift_dir = 1 if (scene_index // 2) % 2 == 0 else -1
+
+        w, h = image.size
+        crop_w, crop_h = w / zoom, h / zoom
+        slack_x, slack_y = w - crop_w, h - crop_h
+        cx = slack_x * (0.5 + 0.5 * drift_dir * (p - 0.5))
+        cy = slack_y * 0.5
+        box = (cx, cy, cx + crop_w, cy + crop_h)
+        return image.resize((SHORT_W, SHORT_H), Image.BILINEAR, box=box)
 
     def _get_bg_frame(self, scene_index, t_abs):
         if self.bg_video:
@@ -2690,6 +2845,15 @@ class FactsOverlayShortRenderer:
                                          if note_lines else 0)
         y = int(cfg.get("y_center", 760)) - total_h // 2
 
+        scrim_alpha = int(cfg.get("scrim_alpha", 120) or 0)
+        if scrim_alpha > 0:
+            pad = int(size * 0.55)
+            band = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+            ImageDraw.Draw(band).rounded_rectangle(
+                [40, y - pad, SHORT_W - 40, y + total_h + pad],
+                radius=48, fill=(0, 0, 0, max(0, min(255, scrim_alpha))))
+            overlay.alpha_composite(band.filter(ImageFilter.GaussianBlur(28)))
+
         for line in lines:
             segments = self._highlight_segments(line, base, accent)
             tw = measure_composite_text(draw, line, size)
@@ -2746,11 +2910,52 @@ class FactsOverlayShortRenderer:
         if alpha:
             overlay.alpha_composite(
                 Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, alpha)))
+        self._draw_logo_chip(overlay)
         self._draw_header_badge(overlay, entry.get("fact_header"))
         self._draw_fact_main(overlay, entry.get("fact_main"), entry.get("fact_note"))
         self._draw_bottom_text(overlay, entry.get("fact_sub"))
         self._draw_watermark(overlay)
         return overlay
+
+    def _build_overlay_layers(self, entry):
+        """入りアニメ用に、動かすパーツごとへオーバーレイを分解する。
+
+        文字を毎フレーム描き直すと重いので、レイヤーは1シーンにつき1度だけ
+        描いておき、フレームごとには平行移動とアルファ調整だけを行う。
+        """
+        def _blank():
+            return Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+
+        base = _blank()
+        alpha = max(0, min(255, int(self.cfg.get("overlay_alpha", 80))))
+        if alpha:
+            base.alpha_composite(Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, alpha)))
+        self._draw_logo_chip(base)
+        self._draw_watermark(base)
+
+        badge = _blank()
+        self._draw_header_badge(badge, entry.get("fact_header"))
+        main = _blank()
+        self._draw_fact_main(main, entry.get("fact_main"), entry.get("fact_note"))
+        sub = _blank()
+        self._draw_bottom_text(sub, entry.get("fact_sub"))
+        return base, badge, main, sub
+
+    @staticmethod
+    def _shift_fade(layer, dy, opacity):
+        """レイヤーを縦にずらしつつ不透明度を変える（入りアニメの実体）。"""
+        if opacity >= 0.999 and dy == 0:
+            return layer
+        out = Image.new("RGBA", layer.size, (0, 0, 0, 0))
+        if opacity <= 0.001:
+            return out
+        src = layer
+        if opacity < 0.999:
+            src = layer.copy()
+            src.putalpha(src.getchannel("A").point(lambda v: int(v * opacity)))
+        # paste は box が負でもはみ出しをクリップしてくれる
+        out.paste(src, (0, int(dy)))
+        return out
 
     def build_cta_overlay(self, entry):
         """末尾のプロフィール誘導画面（背景写真を使わない単色レイヤー）。"""
@@ -2796,16 +3001,59 @@ class FactsOverlayShortRenderer:
             frame = np.array(self.build_cta_overlay(entry).convert("RGB"))
             return VideoClip(lambda t: frame, duration=duration)
 
-        overlay = self.build_overlay(entry)
-        if self.bg_video is None:
-            bg = self._get_bg_frame(scene_index, time_offset)
-            frame = np.array(Image.alpha_composite(bg, overlay).convert("RGB"))
+        if self.bg_video is not None:
+            overlay = self.build_overlay(entry)
+
+            def make_video_frame(t):
+                bg = self._get_bg_frame(scene_index, time_offset + t)
+                return np.array(Image.alpha_composite(bg, overlay).convert("RGB"))
+            return VideoClip(make_video_frame, duration=duration)
+
+        # ── 静止画背景: 寄り + カット頭のクロスフェード + 文字の入り ──
+        base_img = self.bg_images[self._bg_index(scene_index, time_offset)]
+        prev_img = None
+        if self.crossfade > 0 and scene_index > 0 and len(self.bg_images) > 1:
+            prev_idx = self._bg_index(scene_index - 1, max(0.0, time_offset - 0.01))
+            if prev_idx != self._bg_index(scene_index, time_offset):
+                prev_img = self.bg_images[prev_idx]
+
+        if not self.motion_on:
+            overlay = self.build_overlay(entry)
+            frame = np.array(
+                Image.alpha_composite(base_img.copy(), overlay).convert("RGB"))
             return VideoClip(lambda t: frame, duration=duration)
 
-        def make_frame(t):
-            bg = self._get_bg_frame(scene_index, time_offset + t)
-            return np.array(Image.alpha_composite(bg, overlay).convert("RGB"))
-        return VideoClip(make_frame, duration=duration)
+        base_layer, badge_layer, main_layer, sub_layer = self._build_overlay_layers(entry)
+        steady_overlay = base_layer.copy()
+        for layer in (badge_layer, main_layer, sub_layer):
+            steady_overlay.alpha_composite(layer)
+        anim_dur = min(self.text_in, max(0.0, duration - 0.1))
+        fade_dur = min(self.crossfade, max(0.0, duration - 0.1))
+
+        def overlay_at(t):
+            if t >= anim_dur or anim_dur <= 0:
+                return steady_overlay
+            # バッジ→本文→補足の順に、anim_dur の何割か遅らせて入れる
+            out = base_layer.copy()
+            for layer, delay_ratio, dy0 in ((badge_layer, 0.00, -46),
+                                            (main_layer, 0.18, 34),
+                                            (sub_layer, 0.36, 26)):
+                start = anim_dur * delay_ratio
+                span = max(1e-6, anim_dur - start)
+                p = self._ease_out((t - start) / span)
+                out.alpha_composite(self._shift_fade(layer, dy0 * (1.0 - p), p))
+            return out
+
+        def make_still_frame(t):
+            progress = t / max(1e-6, duration)
+            bg = self._ken_burns(base_img, scene_index, progress)
+            if prev_img is not None and t < fade_dur:
+                # 前カットは寄りの終端から続けて、切り替わりの段差を消す
+                prev = self._ken_burns(prev_img, scene_index - 1, 1.0)
+                bg = Image.blend(prev, bg, self._ease_out(t / fade_dur))
+            return np.array(Image.alpha_composite(bg, overlay_at(t)).convert("RGB"))
+
+        return VideoClip(make_still_frame, duration=duration)
 
 
 def _normalize_facts_scenario(scenario, cfg, title):
@@ -2872,7 +3120,7 @@ def generate_facts_overlay_short(short_scenario, title, output_prefix, bg_video_
                                  out_dir=None, bg_type="auto", speed=None, speaker_id=None,
                                  channel_format=None, channel_id=None, bgm_volume=None,
                                  image_mode="collect", image_collect_settings=None,
-                                 channel_dict=None, char_config=None):
+                                 channel_dict=None, char_config=None, company_name=None):
     """ファクトオーバーレイ形式のショート動画を生成（style="facts_overlay"）。"""
     print("=" * 60)
     print(f"ファクトショート生成: {title}")
@@ -2904,11 +3152,15 @@ def generate_facts_overlay_short(short_scenario, title, output_prefix, bg_video_
 
     bg_video_path = _portrait_bg_variant(bg_video_path)
     max_images = int(cfg["slideshow"].get("max_images", 5) or 5)
-    queries = _facts_bg_queries(title, short_scenario, channel_dict, cfg, max_images)
+    company = _facts_company_name(title, explicit=company_name)
+    print(f"🏢 対象企業: {company or '(不明)'}")
+    queries = _facts_bg_queries(title, short_scenario, channel_dict, cfg, max_images,
+                                company=company)
     renderer = FactsOverlayShortRenderer(
         bg_video_path, bg_type=bg_type,
         image_mode=image_mode, image_collect_settings=image_collect_settings,
         bg_queries=queries, cache_dir=out_dir, fmt=fmt, title=title,
+        company=company,
     )
 
     fps = int(((fmt.get("layout") or {}).get("short_fps")) or FPS)
@@ -4539,8 +4791,10 @@ def _build_description_template(channel_dict, title, channel_concept):
     }
     try:
         main_intro = main_intro.format_map(_SafeFormatDict(fields))
-    except (IndexError, ValueError) as e:
-        print(f"⚠️ description_template.main_intro を展開できません（原文のまま使用）: {e}")
+    except Exception as e:
+        # 位置指定 {0}（IndexError）、書式不正（ValueError）、属性参照
+        # {company_name.x}（AttributeError）など何が来ても原文で通す。
+        print(f"⚠️ description_template.main_intro を展開できません（原文のまま使用）: {type(e).__name__}: {e}")
 
     main_hashtags = tmpl.get("main_hashtags") or default_hashtag_str
     short_hashtags = tmpl.get("short_hashtags") or f"#shorts {default_hashtag_str}"
@@ -4838,7 +5092,11 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                 channel_format=channel_format, channel_id=channel_id,
                 bgm_volume=bgm_volume,
                 image_mode=image_mode, image_collect_settings=image_collect_settings,
-                channel_dict=channel_dict, char_config=char_config)
+                channel_dict=channel_dict, char_config=char_config,
+                # シナリオ生成が出した正式社名。これがあると背景・ロゴ検索の
+                # 精度がタイトル推定より段違いに上がる。
+                company_name=(scenario_meta or {}).get("company_name")
+                             or (thumb_info or {}).get("company_name"))
             results["short"] = facts_out["video"]
             if facts_out.get("thumbnail"):
                 results["short_thumbnail"] = facts_out["thumbnail"]
@@ -4910,23 +5168,33 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                                                    image_collect_settings=image_collect_settings)
 
     # 3. Description txts (common to both styles)
+    # 説明文はテキスト整形なので、ここで落ちても書き出し済みの動画・サムネは
+    # 有効。チャンネル JSON のテンプレート不備でパイプライン全体（＝この後の
+    # iCloud コピー）を巻き添えにしないよう、失敗しても続行する。
     _ck()
-    descs = generate_descriptions(title, short_scenario, full_scenario, thumb_info=thumb_info, video_title=video_title, channel_dict=channel_dict)
+    try:
+        descs = generate_descriptions(title, short_scenario, full_scenario, thumb_info=thumb_info, video_title=video_title, channel_dict=channel_dict)
+    except Exception as e:
+        import traceback as _tb
+        print(f"⚠️ 説明文の生成に失敗（動画は生成済みのため続行）: {type(e).__name__}: {e}")
+        _tb.print_exc()
+        descs = None
 
-    short_desc_path = str(out_dir / f"{prefix}_ショート_説明文.txt")
-    main_desc_path = str(out_dir / f"{prefix}_メイン_説明文.txt")
+    if descs is not None:
+        short_desc_path = str(out_dir / f"{prefix}_ショート_説明文.txt")
+        main_desc_path = str(out_dir / f"{prefix}_メイン_説明文.txt")
 
-    if gen_type in ("short", "both"):
-        with open(short_desc_path, "w", encoding="utf-8") as f:
-            f.write(descs["short"])
-        results["short_description"] = short_desc_path
-        print(f"📝 ショート説明文: {short_desc_path}")
+        if gen_type in ("short", "both"):
+            with open(short_desc_path, "w", encoding="utf-8") as f:
+                f.write(descs["short"])
+            results["short_description"] = short_desc_path
+            print(f"📝 ショート説明文: {short_desc_path}")
 
-    if gen_type in ("full", "both"):
-        with open(main_desc_path, "w", encoding="utf-8") as f:
-            f.write(descs["main"])
-        results["main_description"] = main_desc_path
-        print(f"📝 メイン説明文: {main_desc_path}")
+        if gen_type in ("full", "both"):
+            with open(main_desc_path, "w", encoding="utf-8") as f:
+                f.write(descs["main"])
+            results["main_description"] = main_desc_path
+            print(f"📝 メイン説明文: {main_desc_path}")
 
     icloud_dir = copy_to_icloud(out_dir, title)
     if icloud_dir is not None:

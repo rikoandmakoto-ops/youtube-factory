@@ -551,6 +551,11 @@ async def start_generate(
             j.scenario_data = dict(scenario)
             j.scenario_data["_options"] = options
             j.title = scenario.get("title", j.title)
+            # placeholder では style が確定しないので "yukkuri" を仮置きしている。
+            # シナリオが出揃ったここで JobQueue.add() と同じ規則で確定させる。
+            # 直さないと facts_overlay 等のチャンネルが対話用レンダラーに流れ、
+            # シナリオ形式が合わず KeyError で落ちる。
+            j.style = scenario.get("style") or ch.style or "yukkuri"
             j.status = JobStatus.PENDING
             j.progress = "順番待ち"
             queue._queue.put((j.priority, job_id))
