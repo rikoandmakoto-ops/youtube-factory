@@ -8,7 +8,7 @@ Usage:
     python3 -m backend.pipeline.video_generator --scenario canon
 """
 
-import os, sys, json, random, tempfile, math, subprocess, argparse, time, shutil
+import os, sys, json, random, re, tempfile, math, subprocess, argparse, time, shutil
 import urllib.request, urllib.parse
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -2279,6 +2279,726 @@ class MonologueShortRenderer:
 
 
 # ============================================================
+# Facts-overlay short (style="facts_overlay" / 企業のホンネ)
+# ============================================================
+FACTS_SPEAKER_ID = 13  # VOICEVOX: 青山龍星（ナレーション単独）
+
+# 数字＋単位を強調色で塗るための抽出パターン。「850万円」「100%」「3.2倍」など、
+# 全角数字・小数点・カンマ区切りも1トークンとして拾う。
+_FACTS_NUMBER_RE = re.compile(
+    r"[0-9０-９]+(?:[.．,，][0-9０-９]+)*"
+    r"(?:万円|億円|千円|万人|億人|円|%|％|パーセント|人|名|年|ヶ月|か月|カ月|"
+    r"時間|分|日|倍|位|割|点|件|社|店|期|歳|万|億)?"
+)
+
+def _facts_atoms(text):
+    """折返しの最小単位に分解する。数字＋単位（850万円 等）は1単位にまとめる。
+
+    そのまま wrap_text に渡すと「850万 / 円」のように数字の途中で改行され、
+    強調色も分断されてしまうため、ファクト文字だけ専用の分割を使う。
+    """
+    atoms, pos = [], 0
+    for m in _FACTS_NUMBER_RE.finditer(text or ""):
+        if not m.group(0):
+            continue
+        atoms.extend(text[pos:m.start()])
+        atoms.append(m.group(0))
+        pos = m.end()
+    atoms.extend((text or "")[pos:])
+    return atoms
+
+
+def _facts_wrap(draw, text, size, max_width):
+    """数字トークンを割らずに幅で折り返す。"""
+    lines = []
+    for segment in (text or "").split("\n"):
+        current = ""
+        for atom in _facts_atoms(segment):
+            if atom.isspace() and not current:
+                continue
+            candidate = current + atom
+            if current and measure_composite_text(draw, candidate, size) > max_width:
+                lines.append(current.rstrip())
+                current = "" if atom.isspace() else atom
+            else:
+                current = candidate
+        if current.strip():
+            lines.append(current.rstrip())
+    return lines or [""]
+
+
+_FACTS_DEFAULTS = {
+    "overlay_alpha": 80,
+    "header_badge": {
+        "text": "",
+        "bg_color": [220, 40, 40],
+        "text_color": [255, 255, 255],
+        "font_size": 56,
+        "y_position": 150,
+        "padding": [18, 44],
+    },
+    "fact_text": {
+        "font_size_main": 96,
+        "font_size_main_min": 62,
+        "font_size_sub": 52,
+        "text_color": [255, 255, 255],
+        "highlight_color": [255, 230, 50],
+        "stroke_width": 8,
+        "stroke_color": [0, 0, 0],
+        "y_center": 760,
+        "max_lines": 3,
+    },
+    "bottom_text": {
+        "font_size": 52,
+        "text_color": [255, 60, 60],
+        "stroke_width": 6,
+        "y_position": 1420,
+    },
+    "slideshow": {
+        "enabled": True,
+        "max_images": 5,
+        "switch_per_fact": True,
+        "query_suffixes": [],
+    },
+    "cta": {
+        "enabled": True,
+        "headline": "他の動画もチェック",
+        "sub": "プロフィールから見れます",
+        "bg_color": [18, 18, 18],
+        "accent_color": [220, 40, 40],
+    },
+}
+
+
+def _facts_cfg(fmt):
+    """channel_format から facts_overlay 設定を既定値マージ済みで取り出す。"""
+    raw = (fmt or {}).get("facts_overlay") or {}
+    cfg = {}
+    for key, default in _FACTS_DEFAULTS.items():
+        if isinstance(default, dict):
+            merged = dict(default)
+            merged.update(raw.get(key) or {})
+            cfg[key] = merged
+        else:
+            cfg[key] = raw.get(key, default)
+    return cfg
+
+
+def _rgb(value, fallback=(255, 255, 255)):
+    try:
+        return tuple(int(c) for c in list(value)[:3])
+    except Exception:
+        return tuple(fallback)
+
+
+def _facts_company_name(title):
+    """タイトルから企業名らしき先頭語を切り出す（背景検索クエリ用）。
+
+    「ニトリの実態」→「ニトリ」、「ユニクロ、年収がヤバい」→「ユニクロ」。
+    切り出せなければタイトル全体を返す。
+    """
+    t = (title or "").strip()
+    if not t:
+        return ""
+    # 区切り記号までを企業名候補とみなす
+    m = re.split(r"[のはがを、。！？!?\s　「」【】\-—―｜|:：]", t, maxsplit=1)
+    head = (m[0] or "").strip()
+    if 2 <= len(head) <= 12:
+        return head
+    return t[:12]
+
+
+def _facts_bg_queries(title, scenario, channel_dict, cfg, max_images):
+    """スライドショー用の背景検索クエリ列を作る。
+
+    優先順:
+      1. 各シーンの entry["bg_query"]（シナリオ生成側が企業名込みで出せる）
+      2. 企業名 + slideshow.query_suffixes（"ニトリ 店舗 外観" など）
+      3. image_collect.query_template の {company_name} 展開
+      4. 既存の _short_bg_query（チャンネル共通フォールバック）
+    プロバイダは各クエリの先頭ヒットを返すため、クエリを変えることで
+    異なる写真を集める（＝スライドショーが成立する）。
+    """
+    queries = []
+
+    def _add(q):
+        q = (q or "").strip()
+        if q and q not in queries:
+            queries.append(q)
+
+    for entry in scenario or []:
+        if isinstance(entry, dict):
+            _add(entry.get("bg_query"))
+
+    company = _facts_company_name(title)
+    if company:
+        for suffix in (cfg["slideshow"].get("query_suffixes") or []):
+            _add(f"{company} {suffix}")
+        template = ((channel_dict or {}).get("image_collect") or {}).get("query_template")
+        if template:
+            try:
+                _add(template.format(company_name=company, company=company))
+            except Exception:
+                pass
+        _add(company)
+
+    _add(_short_bg_query(title, scenario, channel_dict))
+    return queries[:max(1, max_images)]
+
+
+def _collect_facts_backgrounds(queries, image_collect_settings, cache_dir, max_images):
+    """クエリ列から重複を除いた 9:16 背景画像リストを集める。
+
+    同じ写真が複数クエリでヒットすることがあるので、縮小画像のハッシュで
+    重複を弾く（同じ絵が2枚続くとスライドショーに見えないため）。
+    """
+    try:
+        from pipeline import image_collector
+    except Exception:
+        return []
+    import hashlib
+
+    cache_dir = Path(cache_dir)
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    settings = dict(image_collect_settings or {})
+    settings.setdefault("provider", "auto")
+    # 全画面が背景なので縦写真を優先（landscape を9:16に切ると被写体が飛ぶ）
+    settings.setdefault("orientation", "portrait")
+
+    images, seen = [], set()
+    for idx, query in enumerate(queries):
+        if len(images) >= max_images:
+            break
+        try:
+            got = image_collector.search_and_cache(
+                query, cache_dir=cache_dir, idx=idx, settings=settings)
+        except Exception as e:
+            print(f"  ⚠️ facts BG '{query[:40]}' failed: {e}")
+            continue
+        if not got or got.get("image") is None:
+            continue
+        img = got["image"]
+        digest = hashlib.md5(
+            img.convert("RGB").resize((32, 32)).tobytes()).hexdigest()
+        if digest in seen:
+            print(f"  ↩️ facts BG duplicate skipped: '{query[:40]}'")
+            continue
+        seen.add(digest)
+        images.append(_fit_9x16(img))
+        print(f"  🌐 facts BG [{len(images)}/{max_images}] '{query[:40]}' "
+              f"({got.get('provider')})")
+    return images
+
+
+class FactsOverlayShortRenderer:
+    """ファクトオーバーレイ形式の縦型ショート用レンダラー（9:16）。
+
+    ゆっくり系（対話＋立ち絵）とは別系統で、キャラクターは一切描かない。
+      - 背景: 実写写真のスライドショー（シーンごとに切替）
+      - 上部: 赤帯バッジ（常時表示）
+      - 中央: 白太字のファクト（数字は強調色）＋任意の小見出し
+      - 下部: 赤の補足テキスト
+      - 末尾: プロフィール誘導のCTA画面
+    """
+
+    def __init__(self, bg_video_path=None, bg_type="auto",
+                 image_mode="collect", image_collect_settings=None,
+                 bg_queries=None, cache_dir=None, fmt=None, title=None):
+        self.fmt = fmt or {}
+        self.cfg = _facts_cfg(self.fmt)
+        self.title = (title or "").strip()
+        self.bg_video = None
+        self.bg_video_duration = 0
+        self.bg_images = []
+
+        branding = self.fmt.get("branding", {}) or {}
+        self.watermark_text = branding.get("watermark_text") or None
+        self.watermark_opacity = int(branding.get("watermark_opacity", 180) or 0)
+        self.watermark_font_size = int(
+            (self.cfg.get("watermark_font_size")
+             or branding.get("source_credit_font_size_short") or 26))
+        self.watermark_position = branding.get("watermark_position", "bottom_right")
+
+        # 明示指定の背景（静止画/動画）は既存レンダラーと同じ扱い
+        if bg_video_path and Path(bg_video_path).exists():
+            ext = Path(bg_video_path).suffix.lower()
+            if bg_type == "static" or ext in (".png", ".jpg", ".jpeg", ".bmp"):
+                if ext in (".png", ".jpg", ".jpeg", ".bmp"):
+                    img = Image.open(str(bg_video_path)).convert("RGBA")
+                else:
+                    vid = VideoFileClip(str(bg_video_path))
+                    img = Image.fromarray(vid.get_frame(0)).convert("RGBA")
+                    vid.close()
+                self.bg_images = [_fit_9x16(img)]
+            elif bg_type in ("video", "auto"):
+                self.bg_video = VideoFileClip(str(bg_video_path))
+                self.bg_video_duration = self.bg_video.duration
+
+        slideshow = self.cfg["slideshow"]
+        self.switch_per_fact = bool(slideshow.get("switch_per_fact", True))
+        if (self.bg_video is None and not self.bg_images
+                and slideshow.get("enabled", True)
+                and (image_mode or "collect").lower() in ("collect", "mix")):
+            cache = Path(cache_dir or (APP_DIR / "data" / "cache" / "short_bg" / "facts"))
+            self.bg_images = _collect_facts_backgrounds(
+                bg_queries or [], image_collect_settings,
+                cache_dir=cache / "facts_bg",
+                max_images=int(slideshow.get("max_images", 5) or 5),
+            )
+
+        if self.bg_video is None and not self.bg_images:
+            print("⚠️ facts BG: 収集できなかったため手描き背景にフォールバック")
+            self.bg_images = self._build_fallback_bgs()
+
+    # ── background ───────────────────────────────────────────
+    def close(self):
+        if self.bg_video:
+            self.bg_video.close()
+
+    def _build_fallback_bgs(self):
+        """写真が1枚も集まらなかったときの手描き背景（真っ黒を避ける）。"""
+        accent = _rgb(self.cfg["header_badge"].get("bg_color"), (220, 40, 40))
+        images = []
+        for k, base in enumerate([(28, 30, 36), (36, 26, 28), (24, 28, 38)]):
+            top = tuple(min(255, c + 18) for c in base)
+            img = _vertical_gradient(SHORT_W, SHORT_H, top, (8, 8, 10))
+            draw = ImageDraw.Draw(img, "RGBA")
+            # 斜めのアクセントストライプでチャンネルの赤を効かせる
+            for i in range(-2, 8):
+                x = i * 260 + (k * 60)
+                draw.polygon([(x, SHORT_H), (x + 130, SHORT_H),
+                              (x + 430, 0), (x + 300, 0)],
+                             fill=(*accent, 16))
+            images.append(_apply_vignette(img, 0.45).convert("RGBA"))
+        return images
+
+    def _bg_index(self, scene_index, t_abs):
+        if not self.bg_images:
+            return 0
+        if self.switch_per_fact:
+            return scene_index % len(self.bg_images)
+        interval = max(1.0, float(self.cfg["slideshow"].get("switch_seconds", 5)))
+        return int(t_abs / interval) % len(self.bg_images)
+
+    def _get_bg_frame(self, scene_index, t_abs):
+        if self.bg_video:
+            loop_t = t_abs % self.bg_video_duration
+            frame_arr = self.bg_video.get_frame(loop_t)
+            h, w = frame_arr.shape[:2]
+            target_w = int(h * 9 / 16)
+            if target_w > w:
+                target_h = int(w * 16 / 9)
+                y_off = (h - target_h) // 2
+                cropped = frame_arr[max(0, y_off):y_off + target_h, :, :]
+            else:
+                x_off = (w - target_w) // 2
+                cropped = frame_arr[:, max(0, x_off):x_off + target_w, :]
+            return Image.fromarray(cropped).convert("RGBA").resize((SHORT_W, SHORT_H))
+        return self.bg_images[self._bg_index(scene_index, t_abs)].copy()
+
+    # ── text helpers ─────────────────────────────────────────
+    @staticmethod
+    def _highlight_segments(text, base_color, highlight_color):
+        """数字部分だけ強調色にしたセグメント [(文字列, 色), ...] を返す。"""
+        segments, pos = [], 0
+        for m in _FACTS_NUMBER_RE.finditer(text):
+            if not m.group(0):
+                continue
+            if m.start() > pos:
+                segments.append((text[pos:m.start()], base_color))
+            segments.append((m.group(0), highlight_color))
+            pos = m.end()
+        if pos < len(text):
+            segments.append((text[pos:], base_color))
+        return segments or [(text, base_color)]
+
+    @staticmethod
+    def _draw_segments(draw, x, y, segments, size, stroke_color, stroke_width):
+        """縁取りを一括で先に描いてから、色分けした本体を上に重ねる。
+
+        セグメントごとに縁取りを描くと、隣接文字の縁取りが先に描いた本体を
+        塗り潰してしまうため2パスに分ける。
+        """
+        full = "".join(s[0] for s in segments)
+        if stroke_width > 0:
+            draw_composite_text(draw, (x, y), full, size, stroke_color,
+                                stroke_fill=stroke_color, stroke_width=stroke_width)
+        cx = x
+        for text, color in segments:
+            cx += draw_composite_text(draw, (cx, y), text, size, color)
+
+    def _fit_lines(self, draw, text, size_max, size_min, max_width, max_lines):
+        """max_lines 行に収まる最大フォントサイズと折返し結果を返す。"""
+        size = size_min
+        wrapped = _facts_wrap(draw, text, size_min, max_width)
+        for cand in range(int(size_max), int(size_min) - 1, -6):
+            lines = _facts_wrap(draw, text, cand, max_width)
+            if len(lines) <= max_lines:
+                return cand, lines
+            size, wrapped = cand, lines
+        return size, wrapped
+
+    # ── overlay parts ────────────────────────────────────────
+    def _draw_header_badge(self, overlay, text):
+        if not text:
+            return
+        cfg = self.cfg["header_badge"]
+        draw = ImageDraw.Draw(overlay)
+        size = int(cfg.get("font_size", 56))
+        pad_y, pad_x = (list(cfg.get("padding") or [18, 44]) + [18, 44])[:2]
+        max_w = SHORT_W - 80
+        while size > 28 and measure_composite_text(draw, text, size) + pad_x * 2 > max_w:
+            size -= 4
+        tw = measure_composite_text(draw, text, size)
+        box_w, box_h = tw + pad_x * 2, size + pad_y * 2
+        box_x, box_y = (SHORT_W - box_w) // 2, int(cfg.get("y_position", 150))
+
+        plate = Image.new("RGBA", (box_w, box_h), (0, 0, 0, 0))
+        ImageDraw.Draw(plate).rounded_rectangle(
+            [0, 0, box_w, box_h], radius=min(18, box_h // 3),
+            fill=(*_rgb(cfg.get("bg_color"), (220, 40, 40)), 245))
+        # 背景写真から浮かせるための影
+        shadow = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+        ImageDraw.Draw(shadow).rounded_rectangle(
+            [box_x, box_y + 8, box_x + box_w, box_y + box_h + 8],
+            radius=min(18, box_h // 3), fill=(0, 0, 0, 120))
+        overlay.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(10)))
+        overlay.alpha_composite(plate, (box_x, box_y))
+        draw_composite_text(draw, (box_x + pad_x, box_y + pad_y), text, size,
+                            _rgb(cfg.get("text_color"), (255, 255, 255)),
+                            stroke_fill=(0, 0, 0), stroke_width=2)
+
+    def _draw_fact_main(self, overlay, main_text, note_text=None):
+        if not main_text:
+            return
+        cfg = self.cfg["fact_text"]
+        draw = ImageDraw.Draw(overlay)
+        base = _rgb(cfg.get("text_color"), (255, 255, 255))
+        accent = _rgb(cfg.get("highlight_color"), (255, 230, 50))
+        stroke_c = _rgb(cfg.get("stroke_color"), (0, 0, 0))
+        stroke_w = int(cfg.get("stroke_width", 8))
+        max_w = SHORT_W - 100
+        size, lines = self._fit_lines(
+            draw, main_text,
+            cfg.get("font_size_main", 96), cfg.get("font_size_main_min", 62),
+            max_w, int(cfg.get("max_lines", 3)))
+
+        line_h = int(size * 1.3)
+        note_size = int(cfg.get("font_size_sub", 52))
+        note_lines = wrap_text(note_text, note_size, max_w, draw)[:2] if note_text else []
+        total_h = len(lines) * line_h + (len(note_lines) * int(note_size * 1.25) + 24
+                                         if note_lines else 0)
+        y = int(cfg.get("y_center", 760)) - total_h // 2
+
+        for line in lines:
+            segments = self._highlight_segments(line, base, accent)
+            tw = measure_composite_text(draw, line, size)
+            self._draw_segments(draw, (SHORT_W - tw) // 2, y, segments,
+                                size, stroke_c, stroke_w)
+            y += line_h
+        if note_lines:
+            y += 24
+            for line in note_lines:
+                tw = measure_composite_text(draw, line, note_size)
+                draw_composite_text(draw, ((SHORT_W - tw) // 2, y), line, note_size,
+                                    base, stroke_fill=stroke_c,
+                                    stroke_width=max(2, stroke_w - 3))
+                y += int(note_size * 1.25)
+
+    def _draw_bottom_text(self, overlay, text):
+        if not text:
+            return
+        cfg = self.cfg["bottom_text"]
+        draw = ImageDraw.Draw(overlay)
+        size = int(cfg.get("font_size", 52))
+        color = _rgb(cfg.get("text_color"), (255, 60, 60))
+        stroke_w = int(cfg.get("stroke_width", 6))
+        lines = wrap_text(text, size, SHORT_W - 100, draw)[:2]
+        y = int(cfg.get("y_position", 1420))
+        for line in lines:
+            tw = measure_composite_text(draw, line, size)
+            draw_composite_text(draw, ((SHORT_W - tw) // 2, y), line, size, color,
+                                stroke_fill=(0, 0, 0), stroke_width=stroke_w)
+            y += int(size * 1.24)
+
+    def _draw_watermark(self, overlay):
+        if not self.watermark_text:
+            return
+        draw = ImageDraw.Draw(overlay)
+        size = max(14, self.watermark_font_size)
+        tw = measure_composite_text(draw, self.watermark_text, size)
+        margin = 24
+        if "left" in (self.watermark_position or ""):
+            x = margin
+        else:
+            x = SHORT_W - tw - margin
+        y = SHORT_H - size - margin - 8
+        alpha = max(0, min(255, self.watermark_opacity))
+        draw_composite_text(draw, (x, y), self.watermark_text, size,
+                            (235, 235, 235, alpha),
+                            stroke_fill=(0, 0, 0, alpha), stroke_width=2)
+
+    # ── frames ───────────────────────────────────────────────
+    def build_overlay(self, entry):
+        """1ファクト分のオーバーレイ（背景を除く全レイヤー）を返す。"""
+        overlay = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+        alpha = max(0, min(255, int(self.cfg.get("overlay_alpha", 80))))
+        if alpha:
+            overlay.alpha_composite(
+                Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, alpha)))
+        self._draw_header_badge(overlay, entry.get("fact_header"))
+        self._draw_fact_main(overlay, entry.get("fact_main"), entry.get("fact_note"))
+        self._draw_bottom_text(overlay, entry.get("fact_sub"))
+        self._draw_watermark(overlay)
+        return overlay
+
+    def build_cta_overlay(self, entry):
+        """末尾のプロフィール誘導画面（背景写真を使わない単色レイヤー）。"""
+        cfg = self.cfg["cta"]
+        bg = _rgb(cfg.get("bg_color"), (18, 18, 18))
+        accent = _rgb(cfg.get("accent_color"), (220, 40, 40))
+        layer = Image.new("RGBA", (SHORT_W, SHORT_H), (*bg, 255))
+        draw = ImageDraw.Draw(layer)
+        # 上下のアクセント帯
+        draw.rectangle([0, 0, SHORT_W, 18], fill=(*accent, 255))
+        draw.rectangle([0, SHORT_H - 18, SHORT_W, SHORT_H], fill=(*accent, 255))
+
+        headline = entry.get("fact_main") or cfg.get("headline") or "他の動画もチェック"
+        sub = entry.get("fact_sub") or cfg.get("sub") or ""
+        size, lines = self._fit_lines(draw, headline, 92, 56, SHORT_W - 120, 3)
+        y = SHORT_H // 2 - (len(lines) * int(size * 1.3)) // 2 - 60
+        for line in lines:
+            tw = measure_composite_text(draw, line, size)
+            self._draw_segments(
+                draw, (SHORT_W - tw) // 2, y,
+                self._highlight_segments(line, (255, 255, 255), _rgb(
+                    self.cfg["fact_text"].get("highlight_color"), (255, 230, 50))),
+                size, (0, 0, 0), 6)
+            y += int(size * 1.3)
+        if sub:
+            y += 40
+            for line in wrap_text(sub, 52, SHORT_W - 140, draw)[:2]:
+                tw = measure_composite_text(draw, line, 52)
+                draw_composite_text(draw, ((SHORT_W - tw) // 2, y), line, 52,
+                                    (*accent, 255), stroke_fill=(0, 0, 0),
+                                    stroke_width=4)
+                y += 66
+        # プロフィールへの視線誘導（画面上部を指す矢印）
+        cx, top = SHORT_W // 2, 300
+        draw.polygon([(cx, top), (cx - 70, top + 90), (cx + 70, top + 90)],
+                     fill=(*accent, 255))
+        draw.rectangle([cx - 26, top + 90, cx + 26, top + 210], fill=(*accent, 255))
+        self._draw_watermark(layer)
+        return layer
+
+    def make_video_clip(self, entry, duration, scene_index, time_offset):
+        if entry.get("is_cta"):
+            frame = np.array(self.build_cta_overlay(entry).convert("RGB"))
+            return VideoClip(lambda t: frame, duration=duration)
+
+        overlay = self.build_overlay(entry)
+        if self.bg_video is None:
+            bg = self._get_bg_frame(scene_index, time_offset)
+            frame = np.array(Image.alpha_composite(bg, overlay).convert("RGB"))
+            return VideoClip(lambda t: frame, duration=duration)
+
+        def make_frame(t):
+            bg = self._get_bg_frame(scene_index, time_offset + t)
+            return np.array(Image.alpha_composite(bg, overlay).convert("RGB"))
+        return VideoClip(make_frame, duration=duration)
+
+
+def _normalize_facts_scenario(scenario, cfg, title):
+    """シナリオ行を facts_overlay 用エントリへ正規化する。
+
+    受け付ける形式:
+      - ファクト形式: {"fact_header","fact_main","fact_sub","text","duration",...}
+      - 既存の対話/モノローグ形式: {"speaker","text"} / {"text"}
+        → text をナレーションにしつつ、ファクト文字が無ければ text から流用する
+        （誤って別スタイルのシナリオを渡しても真っ黒な動画にしないため）。
+
+    fact_header は未指定なら直前の値を引き継ぎ、最初は設定の既定バッジを使う。
+    """
+    default_header = (cfg["header_badge"].get("text") or "").strip()
+    entries, last_header = [], default_header
+    for raw in scenario or []:
+        if not isinstance(raw, dict):
+            continue
+        if raw.get("chapter_title") and not raw.get("text"):
+            continue
+        main = (raw.get("fact_main") or "").strip()
+        sub = (raw.get("fact_sub") or "").strip()
+        note = (raw.get("fact_note") or "").strip()
+        narration = (raw.get("text") or raw.get("narration") or "").strip()
+        if not main:
+            # ファクト未指定 → ナレーション冒頭をそのまま画面に出す
+            main = narration[:40]
+        if not narration:
+            narration = "。".join(p for p in (main, sub) if p)
+        header = (raw.get("fact_header") or "").strip() or last_header
+        last_header = header
+        is_cta = bool(raw.get("is_cta"))
+        entries.append({
+            "fact_header": "" if is_cta else header,
+            "fact_main": main,
+            "fact_sub": sub,
+            "fact_note": note,
+            "text": narration,
+            "duration": float(raw.get("duration") or 0),
+            "mood": raw.get("mood"),
+            "is_cta": is_cta,
+        })
+    return entries
+
+
+def _facts_cta_entry(cfg, title):
+    """設定からCTAエントリを合成する（シナリオ側にCTAが無いとき用）。"""
+    cta = cfg["cta"]
+    headline = cta.get("headline") or "他の動画もチェック"
+    sub = cta.get("sub") or ""
+    return {
+        "fact_header": "",
+        "fact_main": headline,
+        "fact_sub": sub,
+        "fact_note": "",
+        "text": f"{headline}。{sub}".strip("。"),
+        "duration": 0.0,
+        "mood": "bright",
+        "is_cta": True,
+    }
+
+
+def generate_facts_overlay_short(short_scenario, title, output_prefix, bg_video_path=None,
+                                 out_dir=None, bg_type="auto", speed=None, speaker_id=None,
+                                 channel_format=None, channel_id=None, bgm_volume=None,
+                                 image_mode="collect", image_collect_settings=None,
+                                 channel_dict=None, char_config=None):
+    """ファクトオーバーレイ形式のショート動画を生成（style="facts_overlay"）。"""
+    print("=" * 60)
+    print(f"ファクトショート生成: {title}")
+    print("=" * 60)
+
+    use_vv = check_voicevox()
+    print(f"{'✅ VOICEVOX' if use_vv else '⚠️ Mock TTS'}")
+
+    fmt = channel_format or {}
+    cfg = _facts_cfg(fmt)
+    if out_dir is None:
+        out_dir = get_output_dir(title)
+    out_dir = Path(out_dir)
+
+    entries = _normalize_facts_scenario(short_scenario, cfg, title)
+    if not entries:
+        raise ValueError("facts_overlay: シナリオが空です")
+    if cfg["cta"].get("enabled", True) and not any(e["is_cta"] for e in entries):
+        entries.append(_facts_cta_entry(cfg, title))
+
+    # ナレーター話者: 引数 > char_config の先頭キャラ > 既定(青山龍星)
+    sid = speaker_id
+    if sid is None:
+        for c in (char_config or {}).values():
+            if c.get("speaker_id"):
+                sid = c["speaker_id"]
+                break
+    sid = sid or FACTS_SPEAKER_ID
+
+    bg_video_path = _portrait_bg_variant(bg_video_path)
+    max_images = int(cfg["slideshow"].get("max_images", 5) or 5)
+    queries = _facts_bg_queries(title, short_scenario, channel_dict, cfg, max_images)
+    renderer = FactsOverlayShortRenderer(
+        bg_video_path, bg_type=bg_type,
+        image_mode=image_mode, image_collect_settings=image_collect_settings,
+        bg_queries=queries, cache_dir=out_dir, fmt=fmt, title=title,
+    )
+
+    fps = int(((fmt.get("layout") or {}).get("short_fps")) or FPS)
+    pause = float(((fmt.get("audio") or {}).get("pause_between")) or 0.2)
+
+    tmp_dir = tempfile.mkdtemp(prefix="facts_")
+    clips, audio_clips, t_off = [], [], 0.0
+    mood_timeline, durations, fx_plans = [], [], []
+    fx_cfg = None
+    if video_effects is not None:
+        try:
+            fx_cfg = video_effects.load_effects_config(channel_format)
+        except Exception as e:
+            print(f"⚠️ effects config load failed: {e}")
+            fx_cfg = None
+
+    for i, entry in enumerate(entries):
+        label = entry["fact_main"] or entry["text"]
+        print(f"  [{i+1}/{len(entries)}] {'CTA' if entry['is_cta'] else 'FACT'}: {label[:35]}")
+        wav = os.path.join(tmp_dir, f"f_{i:03d}.wav")
+        synthesize(entry["text"], sid, wav, use_vv, speed=speed)
+        # 表示秒数はナレーション音声が基準。entry["duration"] は「最低これだけ出す」
+        # という下限指定として扱い、音声が短くてもファクトを読み切れるようにする。
+        dur = max(get_audio_duration(wav), 1.0, entry["duration"]) + pause
+
+        clip = renderer.make_video_clip(entry, dur, i, t_off)
+        if fx_cfg is not None and fx_cfg.enabled:
+            try:
+                plan = video_effects.decide_effect_plan(
+                    entry["text"], entry.get("mood"),
+                    position=i, total_count=len(entries), cfg=fx_cfg,
+                )
+                fx_plans.append(plan)
+                if plan:
+                    clip = video_effects.apply_clip_effects(
+                        clip, plan, fmt_size=(SHORT_W, SHORT_H), cfg=fx_cfg)
+            except Exception as e:
+                print(f"  ⚠️ effects skipped on line {i+1}: {e}")
+                fx_plans.append([])
+        else:
+            fx_plans.append([])
+
+        ac = AudioFileClip(wav)
+        audio_clips.append(ac)
+        clips.append(clip.with_audio(ac))
+        durations.append(dur)
+        mood_timeline.append((t_off, t_off + dur, entry.get("mood")))
+        t_off += dur
+
+    if fx_cfg is not None and fx_cfg.enabled and fx_cfg.allow_transitions:
+        try:
+            clips = video_effects.maybe_add_crossfades(clips, cfg=fx_cfg, durations=durations)
+        except Exception as e:
+            print(f"⚠️ crossfade pass failed: {e}")
+    if fx_cfg is not None and fx_cfg.enabled:
+        summary = video_effects.summarize_plan(fx_plans)
+        if summary:
+            print(f"✨ facts short effects applied: {summary}  (preset={fx_cfg.preset})")
+
+    # 1枚目のフレームをショートサムネイルに転用（ブランドが揃う）
+    thumb_path = None
+    try:
+        first = entries[0]
+        base = renderer._get_bg_frame(0, 0.0)
+        composed = Image.alpha_composite(base, renderer.build_overlay(first))
+        thumb_path = str(out_dir / f"{output_prefix}_ショート_サムネイル.png")
+        composed.convert("RGB").save(thumb_path)
+        print(f"🖼️ ショートサムネイル: {thumb_path}")
+    except Exception as e:
+        print(f"⚠️ facts thumbnail failed: {e}")
+
+    print(f"\n🎬 Concatenating {len(clips)} clips ({t_off:.1f}s)...")
+    final = concatenate_videoclips(clips)
+    final = _mix_bgm(final, channel_format, channel_id=channel_id,
+                     bgm_volume=bgm_volume, mood_timeline=mood_timeline)
+    out = str(out_dir / f"{output_prefix}_ショート.mp4")
+    temp_audio = os.path.join(tmp_dir, "temp_audio.mp4")
+    final.write_videofile(out, fps=fps, codec="libx264", audio_codec="aac",
+                          threads=4, logger="bar", temp_audiofile=temp_audio,
+                          preset="slow", ffmpeg_params=["-crf", "18", "-pix_fmt", "yuv420p"])
+
+    final.close()
+    for c in clips: c.close()
+    for ac in audio_clips: ac.close()
+    renderer.close()
+    print(f"✅ ファクトショート: {out} ({os.path.getsize(out)/1024/1024:.1f}MB, {t_off:.1f}s)")
+    return {"video": out, "thumbnail": thumb_path}
+
+
+# ============================================================
 # Generate monologue video (1人語り考察スタイル)
 # ============================================================
 def generate_monologue_video(scenario, title, output_prefix, bg_video_path=None,
@@ -4028,7 +4748,12 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
         out_dir = get_output_dir(title)
 
     print(f"📂 出力先: {out_dir}")
-    print(f"🎨 スタイル: {'ゆっくり対話' if style == 'yukkuri' else '1人語り考察'}")
+    _STYLE_LABELS = {
+        "yukkuri": "ゆっくり対話",
+        "monologue": "1人語り考察",
+        "facts_overlay": "ファクトオーバーレイ",
+    }
+    print(f"🎨 スタイル: {_STYLE_LABELS.get(style, style)}")
 
     # Generate video_title if not provided
     if video_title is None:
@@ -4062,7 +4787,26 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
             print(f"⚠️ scenario archive failed: {e}")
 
     # ── Style routing ──
-    if style == "monologue":
+    if style == "facts_overlay":
+        # ファクトオーバーレイ（縦型ショート専用）。立ち絵・対話・DALL-Eカードは使わない。
+        if gen_type in ("short", "both"):
+            _ck()
+            facts_out = generate_facts_overlay_short(
+                short_scenario, title, prefix, bg_video_path,
+                out_dir=str(out_dir), bg_type=bg_type, speed=speed,
+                channel_format=channel_format, channel_id=channel_id,
+                bgm_volume=bgm_volume,
+                image_mode=image_mode, image_collect_settings=image_collect_settings,
+                channel_dict=channel_dict, char_config=char_config)
+            results["short"] = facts_out["video"]
+            if facts_out.get("thumbnail"):
+                results["short_thumbnail"] = facts_out["thumbnail"]
+                results["thumbnail"] = facts_out["thumbnail"]
+        if gen_type in ("full", "both"):
+            # 長尺は未対応。無音で落とさず、呼び出し側が気づけるよう明示する。
+            print("⚠️ facts_overlay スタイルは long-form 未対応のため full はスキップします")
+
+    elif style == "monologue":
         # Monologue style — no thumbnail generation for now (different aesthetic)
         # TODO: Monologue-specific thumbnail generator
         _ck()
@@ -4264,8 +5008,9 @@ def main():
     parser = argparse.ArgumentParser(description="ゆっくり動画生成")
     parser.add_argument("--type", choices=["full", "short", "both"], default="both")
     parser.add_argument("--scenario", default="earworm", help="Scenario name")
-    parser.add_argument("--style", choices=["yukkuri", "monologue"], default=None,
-                        help="Video style: yukkuri=ゆっくり対話, monologue=1人語り考察")
+    parser.add_argument("--style", choices=["yukkuri", "monologue", "facts_overlay"], default=None,
+                        help="Video style: yukkuri=ゆっくり対話, monologue=1人語り考察, "
+                             "facts_overlay=ファクトオーバーレイ(ショート専用)")
     parser.add_argument("--bg", default=None, help="Background video/image path")
     parser.add_argument("--bg-type", choices=["video", "static", "auto"], default="auto",
                         help="Background type: video=動的, static=静的, auto=自動判定")

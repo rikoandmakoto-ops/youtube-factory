@@ -122,6 +122,9 @@ def search(query: str, settings: Optional[Dict] = None) -> Optional[CollectedIma
     safe = bool(settings.get("safe_search", True))
     license_filter = settings.get("license_filter", "cc")
     max_n = int(settings.get("max_per_query", 5) or 5)
+    # 縦型ショートの全画面背景では landscape を9:16に切ると被写体が飛ぶため、
+    # 呼び出し側が "portrait" を要求できるようにする（未指定は従来通り landscape）。
+    orientation = settings.get("orientation") or "landscape"
 
     keywords = _extract_keywords(query)
     if not keywords:
@@ -129,11 +132,11 @@ def search(query: str, settings: Optional[Dict] = None) -> Optional[CollectedIma
 
     try:
         if provider == "pixabay":
-            return _search_pixabay(keywords, safe=safe, max_n=max_n)
+            return _search_pixabay(keywords, safe=safe, max_n=max_n, orientation=orientation)
         if provider == "pexels":
-            return _search_pexels(keywords, safe=safe, max_n=max_n)
+            return _search_pexels(keywords, safe=safe, max_n=max_n, orientation=orientation)
         if provider == "unsplash":
-            return _search_unsplash(keywords, safe=safe, max_n=max_n)
+            return _search_unsplash(keywords, safe=safe, max_n=max_n, orientation=orientation)
         if provider == "google_cse":
             return _search_google_cse(keywords, safe=safe, max_n=max_n,
                                       license_filter=license_filter)
@@ -278,7 +281,8 @@ def _load_image(url: str) -> Optional[Image.Image]:
         return None
 
 
-def _search_pixabay(query: str, safe: bool, max_n: int) -> Optional[CollectedImage]:
+def _search_pixabay(query: str, safe: bool, max_n: int,
+                    orientation: str = "landscape") -> Optional[CollectedImage]:
     key = _provider_env()["pixabay_key"]
     params = {
         "key": key,
@@ -288,6 +292,9 @@ def _search_pixabay(query: str, safe: bool, max_n: int) -> Optional[CollectedIma
         "per_page": max(3, min(max_n, 20)),
         "lang": "ja",
     }
+    # 既存挙動（orientation 指定なし＝all）を変えないよう、portrait のときだけ付ける
+    if orientation == "portrait":
+        params["orientation"] = "vertical"
     url = "https://pixabay.com/api/?" + urllib.parse.urlencode(params)
     data = _http_get_json(url)
     hits = data.get("hits") or []
@@ -308,14 +315,15 @@ def _search_pixabay(query: str, safe: bool, max_n: int) -> Optional[CollectedIma
     return None
 
 
-def _search_pexels(query: str, safe: bool, max_n: int) -> Optional[CollectedImage]:
+def _search_pexels(query: str, safe: bool, max_n: int,
+                   orientation: str = "landscape") -> Optional[CollectedImage]:
     # Pexels has no public safesearch toggle — the `safe` flag is accepted
     # for API parity but ignored. Content is curated/moderated upstream.
     key = _provider_env()["pexels_key"]
     params = {
         "query": query,
         "per_page": max(3, min(max_n, 20)),
-        "orientation": "landscape",
+        "orientation": "portrait" if orientation == "portrait" else "landscape",
     }
     url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={
@@ -342,13 +350,14 @@ def _search_pexels(query: str, safe: bool, max_n: int) -> Optional[CollectedImag
     return None
 
 
-def _search_unsplash(query: str, safe: bool, max_n: int) -> Optional[CollectedImage]:
+def _search_unsplash(query: str, safe: bool, max_n: int,
+                     orientation: str = "landscape") -> Optional[CollectedImage]:
     key = _provider_env()["unsplash_key"]
     params = {
         "query": query,
         "per_page": max(3, min(max_n, 20)),
         "content_filter": "high" if safe else "low",
-        "orientation": "landscape",
+        "orientation": "portrait" if orientation == "portrait" else "landscape",
     }
     url = "https://api.unsplash.com/search/photos?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={
