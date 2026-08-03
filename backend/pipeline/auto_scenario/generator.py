@@ -930,6 +930,97 @@ class ScenarioGenerator:
 - CTA配置: {cta_pos}
 """
 
+    def _build_facts_overlay_prompt(self, channel, theme: Dict, target_duration: int) -> str:
+        """ファクトオーバーレイ（企業のホンネ）スタイルのシナリオ生成プロンプト。
+
+        出力は対話ではなく「1画面 = 1ファクト」のリスト。各行が
+        画面に出す文字（fact_header / fact_main / fact_sub）と
+        読み上げナレーション（text）を同時に持つ。
+        """
+        policy_parts = []
+        for g in channel.policy_guidelines():
+            policy_parts.append(f"- {g}")
+        for a in channel.policy_avoid():
+            policy_parts.append(f"- 避ける: {a}")
+        policy_text = "\n".join(policy_parts) if policy_parts else "(なし)"
+        persona_block = self._persona_block(channel)
+        voice_block = self._voice_style_block(channel)
+        tone = channel.content_policy.get("tone", "データ重視")
+
+        fo = {}
+        try:
+            fo = channel.video_format.facts_overlay or {}
+        except AttributeError:
+            fo = {}
+        default_badge = ((fo.get("header_badge") or {}).get("text") or "超ホワイト企業")
+        cta_cfg = fo.get("cta") or {}
+        cta_headline = cta_cfg.get("headline") or "他の企業もチェック"
+        cta_sub = cta_cfg.get("sub") or "プロフィールから見れます"
+
+        # 45秒 ≒ 7ファクト + CTA。尺に合わせてファクト数だけスケールさせる。
+        fact_count = max(5, min(9, round(target_duration / 6.0)))
+
+        return f"""縦型ショート「ファクトオーバーレイ動画」のシナリオを生成。JSONのみ出力。
+対話形式ではない。1人のナレーションと、画面に叩き込む数字ファクトで構成する。
+
+{voice_block}# チャンネル: {channel.name} / {channel.concept} / トーン:{tone}
+# テーマ: {theme["title"]} / 切り口:{theme.get("angle","自由")}
+{persona_block}# ポリシー:
+{policy_text}
+
+# 出力JSON
+{{
+ "title":"企業名を含むバズるタイトル",
+ "company_name":"扱う企業の正式名称（背景写真の検索に使う）",
+ "thumb_info":{{"hook_lines":["1行","2行"],"subtitle":"...","tagline":"..."}},
+ "short_scenario":[
+   {{"fact_header":"{default_badge}","fact_main":"平均年収 850万円","fact_sub":"業界平均の1.5倍",
+     "text":"読み上げるナレーション","bg_query":"企業名 店舗 外観","duration":5,"mood":"bright"}},
+   ...ファクトを{fact_count}個、最後に必ずCTA行(下記)を1個
+ ],
+ "full_scenario":[]
+}}
+
+# 各フィールドの意味（絶対厳守）
+- fact_header: 画面上部の赤帯バッジ。**動画を通してほぼ固定**（例:「{default_badge}」「年収がヤバい企業」）。
+  2〜3行目以降は省略可（省略すると直前の値を引き継ぐ）。10文字以内。
+- fact_main: 画面中央の白い大文字。**1画面で読み切れる短さ（最大20文字）**。
+  **必ず具体的な数字を1つ入れる**（例:「平均年収 850万円」「有給消化率 100%」「離職率 3%」）。
+  数字だけ自動で黄色に強調表示されるので、数字と単位はくっつけて書く（「850万円」）。
+- fact_sub: 画面下部の赤い補足。25文字以内。比較・出典・注意点を書く（例:「業界平均は420万円」「口コミサイト調べ」）。
+- text: 読み上げナレーション。**40〜70文字**。fact_main の数字を必ず声でも言う。
+  画面の文字をそのまま読むだけにせず、驚き・理由・比較を足して価値を出す。
+- bg_query: その画面の背景写真を探す日本語検索クエリ。**必ず企業名で始める**
+  （例:「ニトリ 店舗 外観」「ニトリ 売り場」）。画面ごとに違うクエリにして写真を切り替える。
+- duration: その画面の最低表示秒数（4〜7）。実際の尺はナレーション音声に合わせて自動で伸びる。
+- mood: BGM切替タグ。"bright"(明るい) / "tense"(衝撃) / "calm"(落ち着き) のいずれか。
+
+# 構成（{fact_count}ファクト + CTA、合計約{target_duration}秒）
+1. **1個目=最強フック**: 企業名 + 最もインパクトのある数字を即出し（例:「ニトリ 平均年収850万円」）。
+   冒頭3秒で企業名と数字が画面に出ていない構成は不合格。
+2. 2〜{fact_count-1}個目: 年収→ボーナス→有給/残業→離職率→福利厚生 の順でテンポよく数字を連打する。
+   同じ指標を2回出さない。毎回ちがう切り口の数字にする。
+3. {fact_count}個目=**バランス行**: ネガティブ or 注意点を必ず1つ入れる
+   （例:「ただし1年目は力仕事」「店舗配属は土日出勤」）。持ち上げるだけの動画は不合格。
+4. 最後=**CTA行**（必須・省略禁止）: 次の形で1行だけ足す。
+   {{"is_cta":true,"fact_main":"{cta_headline}","fact_sub":"{cta_sub}",
+     "text":"気になったらプロフィールから他の企業もチェックしてね。","mood":"bright"}}
+   CTA行には fact_header と bg_query を付けない（専用の全画面デザインになる）。
+
+# full_scenario について
+- このチャンネルは**ショート専用**。long-form は作らないので `"full_scenario": []`（空配列）でよい。
+
+# データの扱い（訴訟リスク回避・絶対厳守）
+- 数字は有価証券報告書・公式IR・大手口コミサイトなど**公開情報から実在する値**を使う。
+- 出典が口コミサイトの数字は fact_sub か text に「口コミサイト調べ」と明記する。
+- 未上場・非公開の数字は「推定」と明記する。断定しない。
+- 特定企業を貶める表現、個人が特定できる情報、アフィリエイト誘導は禁止。
+
+# タイトルルール
+- 企業名を必ず入れる。数字を1つ入れる。「【解説】」のような定型プレフィックスは付けない。
+- 例:「ニトリの年収がヤバい 平均850万円の実態」「任天堂の離職率3%、辞めない理由」
+"""
+
     def _wrap_for_blind(
         self,
         scenario_data: Dict[str, Any],
@@ -1201,7 +1292,9 @@ class ScenarioGenerator:
             print(f"  ⚠️ competitor intelligence addendum failed: {e}")
 
         # スタイル別プロンプト生成
-        if channel.style == "monologue":
+        if channel.style == "facts_overlay":
+            prompt = self._build_facts_overlay_prompt(channel, theme, duration)
+        elif channel.style == "monologue":
             prompt = self._build_monologue_prompt(channel, theme, duration)
         else:
             prompt = self._build_yukkuri_prompt(channel, theme, duration)
@@ -1243,7 +1336,14 @@ class ScenarioGenerator:
         ABSOLUTE_FLOOR_CHARS = 4800  # 10分 × 8.0文字/秒
         ABSOLUTE_FLOOR_LINES = 55
         MIN_AVG_CHARS_PER_LINE = 90
-        if duration >= 120:
+        if channel.style == "facts_overlay":
+            # ショート専用スタイル。full_scenario は空で正しいので長さ検証をかけない
+            # （かけると毎回「full不足」で無駄なリトライが走る）。
+            min_full_lines = 0
+            max_full_lines = 0
+            min_full_chars = 0
+            min_avg_chars = 0
+        elif duration >= 120:
             min_full_lines = max(ABSOLUTE_FLOOR_LINES, int((duration / 60) * 4.6))
             max_full_lines = max(72, int((duration / 60) * 6.5))
             min_full_chars = max(ABSOLUTE_FLOOR_CHARS, int(duration * 8.0))
@@ -1254,11 +1354,18 @@ class ScenarioGenerator:
             min_full_chars = 0
             min_avg_chars = 0
 
-        system_msg = (
-            f"YouTube動画シナリオライター。JSONのみ出力。"
-            f"full:{min_full_lines}〜{max_full_lines}行、各行90字以上(目安90〜150)、計{min_full_chars}字以上、平均{min_avg_chars}字以上。"
-            f"89字以下や相槌のみは不合格。"
-        )
+        if channel.style == "facts_overlay":
+            system_msg = (
+                "縦型ショートのファクト動画構成作家。JSONのみ出力。"
+                "1画面=1ファクトで、画面文字(fact_main)は20字以内かつ具体的な数字を必ず含める。"
+                "ナレーション(text)は40〜70字。対話形式は不合格。"
+            )
+        else:
+            system_msg = (
+                f"YouTube動画シナリオライター。JSONのみ出力。"
+                f"full:{min_full_lines}〜{max_full_lines}行、各行90字以上(目安90〜150)、計{min_full_chars}字以上、平均{min_avg_chars}字以上。"
+                f"89字以下や相槌のみは不合格。"
+            )
         base_messages = [
             {"role": "system", "content": system_msg},
             {"role": "user", "content": prompt},
