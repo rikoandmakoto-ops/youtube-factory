@@ -298,6 +298,9 @@ class VideoFormat:
     # 案B: ショート用イラストカード設定。自由形式dictなのでそのまま保持・往復させる
     # （データクラス化しないことで pipeline 側の任意キーを欠落させない）。
     short_illustrations: Dict[str, Any] = field(default_factory=dict)
+    # style="facts_overlay" 用のオーバーレイ設定（赤帯ヘッダー/ファクト文字/背景スライドショー）。
+    # short_illustrations と同じく自由形式dictで往復させる。
+    facts_overlay: Dict[str, Any] = field(default_factory=dict)
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "VideoFormat":
@@ -332,6 +335,7 @@ class VideoFormat:
             persona=_make(PersonaConfig, data.get("persona")),
             effects=_make(EffectsConfig, data.get("effects")),
             short_illustrations=dict(data.get("short_illustrations") or {}),
+            facts_overlay=dict(data.get("facts_overlay") or {}),
         )
 
     def to_dict(self) -> Dict[str, Any]:
