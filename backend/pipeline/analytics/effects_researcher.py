@@ -101,6 +101,20 @@ _GENRE_PRESETS: Dict[str, Dict[str, Any]] = {
                             "コント", "あるある", "漫画", "マンガ"],
         "prefer_shorts": True,
     },
+    # 切り抜きチャンネル（clip-lab）。長尺から抜いた縦型ショートが主戦場なので
+    # prefer_shorts で縦型だけを集める。must_include_token は付けない
+    # ——「切り抜き」表記のないクリップ系ショートも演出の参考になるため。
+    "clip": {
+        "queries": [
+            "ゆっくり解説 切り抜き shorts", "解説 切り抜き ショート",
+            "雑学 切り抜き shorts", "SCP 切り抜き shorts",
+            "ゆっくり 切り抜き 名場面", "解説動画 切り抜き 縦型",
+        ],
+        "must_include_token": None,
+        "blacklist_words": ["マイクラ", "Minecraft", "ROBLOX", "フォートナイト",
+                            "麻雀", "パチンコ", "競馬"],
+        "prefer_shorts": True,
+    },
     "general": {
         "queries": [
             "ゆっくり 解説", "ゆっくり実況",
@@ -146,6 +160,10 @@ def _detect_genre(channel: Dict[str, Any]) -> str:
     for seed in channel.get("theme_seeds") or []:
         text += " " + str(seed.get("title", "")) + " " + str(seed.get("angle", ""))
     t = text.lower()
+    # 切り抜きチャンネルは元動画のジャンル語（SCP/科学…）を concept に含むので
+    # 他のどの判定よりも先に見る。
+    if channel.get("style") == "clip" or "切り抜き" in text:
+        return "clip"
     if "scp" in t:
         return "scp"
     # 企業ファクト系は style で一意に決まる。語彙判定より先に見る。
@@ -450,6 +468,9 @@ def suggest_effects_from_patterns(
         "scp": "horror",
         "horror": "horror",
         "science": "science",   # video_effects.py の science プリセットを使う
+        # 切り抜きは元動画の映像をそのまま流すのが正義。上から演出を足すと
+        # 「加工された切り抜き」に見えて逆効果なので最小構成に寄せる。
+        "clip": "minimal",
         "general": "balanced",
     }.get(genre, "balanced")
     suggestion: Dict[str, Any] = {

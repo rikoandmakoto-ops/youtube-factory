@@ -1,0 +1,248 @@
+"""切り抜きチャンネルのオーケストレーション。
+
+    在庫探索 → 元動画を1本選ぶ → エンジンで切り抜き生成 → メタ生成
+    → （任意で）YouTube 投稿 → 消化済み区間を記録
+
+エンジンは差し替え可能（local / noimos）。noimos が使えない環境では
+clip.fallback_engine に自動で落ちるので、autopilot は止まらない。
+"""
+
+from __future__ import annotations
+
+import json
+import time
+import traceback
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+from . import sources as src_mod
+from .engines import get_engine
+from .engines.noimos import NoimosUnavailable
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+CHANNELS_DIR = PROJECT_ROOT / "data" / "channels"
+DEFAULT_OUT_BASE = src_mod.OUTPUT_BASE / "_clips"
+
+
+def load_channel_raw(channel_id: str) -> Dict[str, Any]:
+    path = CHANNELS_DIR / f"{channel_id}.json"
+    if not path.exists():
+        raise FileNotFoundError(f"channel JSON not found: {path}")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _source_channel_ids(clip_cfg: Dict[str, Any]) -> List[str]:
+    return [str(s.get("channel_id")) for s in (clip_cfg.get("sources") or []) if s.get("channel_id")]
+
+
+def _source_weights(clip_cfg: Dict[str, Any]) -> Dict[str, float]:
+    return {
+        str(s.get("channel_id")): float(s.get("weight") or 1.0)
+        for s in (clip_cfg.get("sources") or []) if s.get("channel_id")
+    }
+
+
+def _credit_name(clip_cfg: Dict[str, Any], source_channel_id: str) -> str:
+    for s in clip_cfg.get("sources") or []:
+        if s.get("channel_id") == source_channel_id:
+            name = s.get("credit_name")
+            if name:
+                return str(name)
+    try:
+        return str(load_channel_raw(source_channel_id).get("name") or source_channel_id)
+    except Exception:
+        return source_channel_id
+
+
+def build_title(hook: str, channel_raw: Dict[str, Any]) -> str:
+    tags = str((channel_raw.get("defaults") or {}).get("short_title_hashtags") or "#shorts")
+    title = f"{hook.strip()} {tags}".strip()
+    return title[:100]
+
+
+def build_description(
+    channel_raw: Dict[str, Any],
+    *,
+    source_url: Optional[str],
+    source_title: str,
+    credit_name: str,
+) -> str:
+    tpl = (channel_raw.get("description_template") or {})
+    body = str(tpl.get("short_intro") or "")
+    body = body.format(
+        source_url=source_url or "（本編URLはプロフィールから）",
+        source_title=source_title,
+        credit_name=credit_name,
+    )
+    hashtags = str(tpl.get("short_hashtags") or "")
+    return f"{body}\n\n{hashtags}".strip()
+
+
+def list_available_sources(channel_id: str = "clip-lab") -> List[Dict[str, Any]]:
+    """切り抜き可能な在庫を一覧する（UI / 運用確認用）。"""
+    channel_raw = load_channel_raw(channel_id)
+    clip_cfg = channel_raw.get("clip") or {}
+    found = src_mod.discover_sources(
+        _source_channel_ids(clip_cfg), resolve_youtube_ids=False,
+    )
+    per_video = int(clip_cfg.get("clips_per_video") or 3)
+    return [
+        {**s.to_dict(), "remaining_clips": max(0, per_video - len(s.used_segments))}
+        for s in found
+    ]
+
+
+def generate_clip(
+    channel_id: str = "clip-lab",
+    *,
+    count: int = 1,
+    source_title: Optional[str] = None,
+    out_dir: Optional[Path] = None,
+    upload: bool = False,
+    privacy: Optional[str] = None,
+    dry_run: bool = False,
+) -> Dict[str, Any]:
+    """切り抜きを count 本作る（既定は1本）。
+
+    source_title を指定すると、その元動画から切り抜く（手動運転用）。
+    """
+    channel_raw = load_channel_raw(channel_id)
+    clip_cfg = channel_raw.get("clip") or {}
+    source_ids = _source_channel_ids(clip_cfg)
+    if not source_ids:
+        return {"ok": False, "error": f"{channel_id}.clip.sources が空です"}
+
+    print(f"📦 在庫探索: {', '.join(source_ids)}")
+    found = src_mod.discover_sources(source_ids)
+    if not found:
+        return {"ok": False, "error": "切り抜ける長尺動画が見つかりません（ローカル出力フォルダを確認）"}
+
+    per_video = int(clip_cfg.get("clips_per_video") or 3)
+    if source_title:
+        source = next((s for s in found if s.title == source_title), None)
+        if source is None:
+            return {"ok": False, "error": f"指定の元動画が見つかりません: {source_title}"}
+    else:
+        source = src_mod.pick_source(found, weights=_source_weights(clip_cfg),
+                                     max_clips_per_video=per_video)
+    if source is None:
+        return {"ok": False, "error": "全ての元動画が切り抜き済みです（clips_per_video を上げるか元動画を増やしてください）"}
+
+    print(f"🎞️ 元動画: [{source.source_channel_id}] {source.title}")
+    print(f"   {source.video_path}  ({source.duration:.0f}s / 既出 {len(source.used_segments)}本)")
+
+    # 1本の元動画から取り過ぎない。clips_per_video を超えると同じ動画ばかりになる
+    remaining = max(0, per_video - len(source.used_segments))
+    if remaining and count > remaining:
+        print(f"   ℹ️ この元動画の残り枠は {remaining} 本なので count を絞ります")
+        count = remaining
+
+    source_channel_raw = load_channel_raw(source.source_channel_id)
+    out_base = Path(out_dir) if out_dir else DEFAULT_OUT_BASE
+    out_base.mkdir(parents=True, exist_ok=True)
+
+    engine_name = str(clip_cfg.get("engine") or "local")
+    fallback = str(clip_cfg.get("fallback_engine") or "local")
+    clips: List[Dict[str, Any]] = []
+    used_engine = engine_name
+    try:
+        clips = get_engine(engine_name)(
+            source=source, clip_cfg=clip_cfg, channel_raw=channel_raw,
+            source_channel_raw=source_channel_raw, out_dir=out_base,
+            count=count, dry_run=dry_run,
+        )
+    except NoimosUnavailable as e:
+        if fallback and fallback != engine_name:
+            print(f"⚠️ NoimosAI を使えないため {fallback} エンジンに切り替えます: {e}")
+            used_engine = fallback
+            clips = get_engine(fallback)(
+                source=source, clip_cfg=clip_cfg, channel_raw=channel_raw,
+                source_channel_raw=source_channel_raw, out_dir=out_base,
+                count=count, dry_run=dry_run,
+            )
+        else:
+            return {"ok": False, "error": str(e), "engine": engine_name}
+    except Exception as e:
+        traceback.print_exc()
+        return {"ok": False, "error": f"{engine_name} エンジンが失敗: {e}", "engine": engine_name}
+
+    credit = _credit_name(clip_cfg, source.source_channel_id)
+    source_url = source.source_url()
+    privacy = privacy or (channel_raw.get("publish_settings") or {}).get("default_privacy") or "public"
+
+    results: List[Dict[str, Any]] = []
+    for clip in clips:
+        hook = clip.get("hook") or source.video_title
+        meta = {
+            **clip,
+            "channel_id": channel_id,
+            "source_channel_id": source.source_channel_id,
+            "source_title": source.title,
+            "source_video_title": source.video_title,
+            "source_url": source_url,
+            "credit_name": credit,
+            "engine": used_engine,
+            "title": build_title(hook, channel_raw),
+            "description": build_description(
+                channel_raw, source_url=source_url,
+                source_title=source.video_title, credit_name=credit,
+            ),
+            "tags": ((channel_raw.get("video_format") or {}).get("youtube") or {}).get("default_tags"),
+            "category_id": ((channel_raw.get("video_format") or {}).get("youtube") or {}).get("default_category") or "24",
+            "privacy": privacy,
+            "upload": None,
+        }
+
+        if upload and not dry_run and meta.get("video_path"):
+            meta["upload"] = _upload(meta, channel_raw)
+
+        if not dry_run and meta.get("video_path"):
+            src_mod.record_clip(
+                source, clip.get("segment") or {},
+                clip_id=clip.get("clip_id") or "",
+                upload=meta.get("upload"),
+            )
+        results.append(meta)
+
+    meta_path = out_base / f"_clip_meta_{int(time.time())}.json"
+    meta_path.write_text(
+        json.dumps({"source": source.to_dict(), "clips": results},
+                   ensure_ascii=False, indent=2, default=str),
+        encoding="utf-8",
+    )
+    print(f"📝 meta: {meta_path}")
+
+    return {
+        "ok": True,
+        "channel_id": channel_id,
+        "engine": used_engine,
+        "source": source.to_dict(),
+        "clips": results,
+        "meta_path": str(meta_path),
+    }
+
+
+def _upload(meta: Dict[str, Any], channel_raw: Dict[str, Any]) -> Dict[str, Any]:
+    """YouTube へショートとして投稿する。"""
+    try:
+        from pipeline import youtube_uploader as yu  # type: ignore
+    except Exception as e:
+        return {"ok": False, "error": f"youtube_uploader を読み込めません: {e}"}
+    try:
+        res = yu.upload_video(
+            video_path=meta["video_path"],
+            title=meta["title"],
+            description=meta["description"],
+            tags=meta.get("tags"),
+            thumbnail_path=meta.get("thumbnail_path"),
+            privacy=meta.get("privacy") or "public",
+            category_id=meta.get("category_id") or "24",
+            is_short=True,
+            channel_id=channel_raw.get("youtube_channel_id") or None,
+            auth_channel_id=meta["channel_id"],
+        )
+        print(f"  ✅ uploaded: {res.get('url')}")
+        return res
+    except Exception as e:
+        traceback.print_exc()
+        return {"ok": False, "error": str(e)}

@@ -364,7 +364,13 @@ def ensure_stock(
     *,
     force: bool = False,
 ) -> Dict[str, Any]:
-    """在庫が閾値以下なら target まで補充。閾値より上なら何もしない（force=True で強制）。"""
+    """在庫が閾値以下なら target まで補充。閾値より上なら何もしない（force=True で強制）。
+
+    切り抜きチャンネル（style="clip"）はテーマから台本を作らず、既存長尺動画を
+    素材にするのでテーマ在庫という概念が無い。巡回補充の対象から外す。
+    """
+    if getattr(channel, "style", "") == "clip":
+        return {**get_status(channel.id), "added": [], "skipped_reason": "clip_channel"}
     q = load_queue(channel.id)
     current = len(q.get("items", []))
     threshold = q.get("min_threshold", DEFAULT_MIN_THRESHOLD)

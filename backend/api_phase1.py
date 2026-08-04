@@ -479,6 +479,16 @@ async def start_generate(
     ch = cm.get(req.channel_id)
     if not ch:
         raise HTTPException(status_code=404, detail=f"Channel not found: {req.channel_id}")
+    # 切り抜きチャンネルは台本生成を行わない（素材は既存の長尺動画）。
+    # このまま流すとキャラクター未定義のまま対話用レンダラーに入って落ちる。
+    if ch.style == "clip":
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                f"'{req.channel_id}' は切り抜きチャンネルです。テーマからの生成は行いません。"
+                " POST /api/clips/generate または run_clip_channel.py を使ってください。"
+            ),
+        )
     if not getattr(sg, "api_key", None):
         raise HTTPException(
             status_code=400,

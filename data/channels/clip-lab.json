@@ -1,0 +1,211 @@
+{
+  "id": "clip-lab",
+  "name": "ゆっくり解説 切り抜きラボ",
+  "concept": "既存の長尺ゆっくり解説（daily-science / scp-lab）から『一番おいしい1シーン』だけを切り出して縦型ショートにする切り抜きチャンネル。1本30〜59秒、冒頭2秒で結論、字幕は原寸より2倍大きく焼き込む。本編への導線を必ず貼り、母体チャンネルの再生数も伸ばす。",
+  "style": "clip",
+  "youtube_channel_id": "",
+  "image_mode": "generate",
+  "clip": {
+    "engine": "local",
+    "fallback_engine": "local",
+    "sources": [
+      {
+        "channel_id": "scp-lab",
+        "weight": 2,
+        "credit_name": "SCPラボ"
+      },
+      {
+        "channel_id": "daily-science",
+        "weight": 3,
+        "credit_name": "デイリーサイエンス"
+      }
+    ],
+    "clips_per_video": 3,
+    "target_duration_sec": 50,
+    "min_duration_sec": 30,
+    "max_duration_sec": 59,
+    "segment_selection": {
+      "prefer_retention_peaks": true,
+      "retention_weight": 0.5,
+      "script_weight": 0.5,
+      "exclude_head_sec": 8,
+      "exclude_tail_sec": 15,
+      "min_gap_sec": 30
+    },
+    "noimos": {
+      "workspace_id": "",
+      "cli_bin": "noimosai",
+      "timeout_sec": 900,
+      "prompt_template": "以下のYouTube長尺動画から、エンゲージメントが最も高くなる縦型ショート（9:16・{target_sec}秒以内）を{clips}本切り抜いてください。\n\n動画URL: {source_url}\nタイトル: {source_title}\n\n条件:\n- 冒頭2秒で『結論・驚き』が来るように頭出しする\n- 日本語の大きな字幕を焼き込む\n- 被写体（左右のキャラクター）を追従してクロップせず、上部に16:9のまま配置し下に字幕帯を置く構成にする\n- 完成したMP4のダウンロードURLを必ず返す"
+    }
+  },
+  "layout_spec": {
+    "canvas": [1080, 1920],
+    "fps": 30,
+    "source_crop_bottom_ratio": 0.22
+  },
+  "voice_style": {
+    "tone": "元動画の音声をそのまま使うため生成音声なし。テキスト（フック/CTA）だけがこのチャンネルの声。",
+    "forbidden": [],
+    "style_rules": [
+      "フック文は13文字以内×2行まで。読み切れない長さにしない。",
+      "元動画のキャラクターと口調を変えない（切り抜きなので改変しない）。",
+      "CTAは『続きは本編で』の一点に絞る。"
+    ]
+  },
+  "characters": {},
+  "publish_settings": {
+    "auto_publish": false,
+    "default_privacy": "public",
+    "publish_targets": ["youtube"]
+  },
+  "description_template": {
+    "short_intro": "▼ この切り抜きの本編はこちら\n{source_url}\n\n{source_title}\n（{credit_name} より切り抜き）",
+    "short_hashtags": "#shorts #ゆっくり解説 #切り抜き #雑学",
+    "omit_fullvideo_cta": true
+  },
+  "thumbnail_template": {
+    "badge_text": "切り抜き",
+    "badge_color": [255, 90, 0],
+    "hook_color": [255, 255, 255],
+    "subtitle_color": [255, 220, 60],
+    "bg_tone": "dark",
+    "style_hint": "元動画のピーク時フレームをそのまま使い、上に太字フックを乗せる。作り込まない（切り抜きらしさを残す）。"
+  },
+  "defaults": {
+    "speed": 1.0,
+    "target_duration": 50,
+    "bg_type": "none",
+    "use_illustrations": false,
+    "hashtags": ["#shorts", "#ゆっくり解説", "#切り抜き", "#雑学"],
+    "category": "24",
+    "short_title_hashtags": "#shorts #切り抜き"
+  },
+  "content_policy": {
+    "tone": "元動画に準拠",
+    "age_rating": "all_ages",
+    "cta_position": "end",
+    "cta_style": "本編誘導",
+    "guidelines": [
+      "切り抜き元は自社チャンネルの動画に限定する（他者コンテンツは切り抜かない）",
+      "元動画のURLとチャンネル名を説明欄に必ず記載する",
+      "文脈を反転させるような切り取り方（誤解を生む編集）をしない",
+      "字幕は元の発話をそのまま使い、言い換え・改変をしない"
+    ],
+    "avoid": [
+      "他チャンネルの動画の無断切り抜き",
+      "オチだけを抜き出して本編の価値を消す編集",
+      "元動画にない主張の字幕付け"
+    ]
+  },
+  "theme_priority": {
+    "label": "元動画の中で最も引きの強いシーン",
+    "categories": [
+      "驚きの数字・統計が出るシーン（最優先）",
+      "常識がひっくり返る種明かしのシーン",
+      "『実は〜だった』の結論提示シーン",
+      "キャラクターが強く驚く・ツッコむリアクションシーン"
+    ],
+    "good_examples": [
+      "『実は99%の人が知らない』と切り出す部分",
+      "具体的な数字（○○%、○○倍）が提示される部分",
+      "通説を否定して真実を提示する部分"
+    ],
+    "avoid_categories": [
+      "導入の挨拶・チャンネル紹介",
+      "まとめ・エンディングのCTA部分",
+      "前後の文脈がないと意味が通らない部分"
+    ],
+    "title_style": "元動画のタイトルをそのまま使わず、切り抜いたシーンの結論だけを20〜28文字で言い切る。疑問形より断定形。",
+    "viral_hooks": "意外な数字 / 常識の否定 / 一言オチ / 強いリアクション"
+  },
+  "theme_blacklist": [],
+  "genre_blacklist": [],
+  "theme_seeds": [],
+  "effects_research": {
+    "genre": "clip",
+    "prefer_shorts": true,
+    "target_channels": 6,
+    "videos_per_channel": 2
+  },
+  "video_format": {
+    "layout": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "short_width": 1080,
+      "short_height": 1920,
+      "short_fps": 30
+    },
+    "colors": {
+      "bg_color": [10, 10, 14, 255]
+    },
+    "audio": {
+      "speed": 1.0,
+      "pause_between": 0.0,
+      "bgm_volume": 0.0,
+      "bgm_path": null
+    },
+    "branding": {
+      "watermark_text": "切り抜きラボ",
+      "watermark_position": "bottom_right",
+      "watermark_opacity": 150,
+      "watermark_font_size": 20,
+      "cta_style": "source_link"
+    },
+    "output": {
+      "target_duration": 50,
+      "gen_type": "clip",
+      "bg_type": "none",
+      "use_illustrations": false
+    },
+    "youtube": {
+      "channel_id": "",
+      "default_tags": [
+        "切り抜き",
+        "ゆっくり解説",
+        "雑学",
+        "SCP",
+        "科学",
+        "shorts"
+      ],
+      "default_category": "24",
+      "privacy_status": "public",
+      "upload_schedule": null
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "minimal",
+      "allow_shake": false,
+      "allow_flash": false,
+      "allow_pixelate": false,
+      "allow_glitch": false,
+      "allow_tint": false,
+      "zoom_max": 0.03,
+      "transition_duration": 0.2
+    },
+    "persona": {
+      "age_group": "10〜30代",
+      "gender": "男女",
+      "interest_categories": ["雑学", "science", "SCP", "ショート動画"],
+      "content_depth": "ライト"
+    }
+  },
+  "autopilot": {
+    "enabled": false,
+    "schedule": {
+      "days_of_week": [0, 1, 2, 3, 4, 5, 6],
+      "hour": 12,
+      "minute": 0,
+      "times": [
+        { "hour": 12, "minute": 0 },
+        { "hour": 21, "minute": 0 }
+      ]
+    },
+    "duration_minutes": 1,
+    "gen_type": "clip",
+    "theme_queue": []
+  },
+  "short_series_name": "切り抜きラボ",
+  "main_title_prefix": ""
+}

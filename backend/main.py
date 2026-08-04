@@ -45,6 +45,7 @@ import api_phase5
 import api_phase6
 import api_improvement
 import api_channel_autopilot
+import api_clips
 import api_analytics
 import api_pdca
 import api_logs_archives
@@ -169,6 +170,7 @@ app.include_router(api_phase5.router)
 app.include_router(api_phase6.router)
 app.include_router(api_improvement.router)
 app.include_router(api_channel_autopilot.router)
+app.include_router(api_clips.router)
 app.include_router(api_analytics.router)
 app.include_router(api_pdca.router)
 app.include_router(api_logs_archives.router)

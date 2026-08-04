@@ -84,8 +84,10 @@ class ThemeItem(BaseModel):
     angle: Optional[str] = ""
 
 
-# pipeline/scheduler/job_queue.submit に渡される gen_type の許容値
-GEN_TYPE_CHOICES = ("both", "short", "full")
+# pipeline/scheduler/job_queue.submit に渡される gen_type の許容値。
+# "clip" だけは台本生成を伴わない別系統で、JobQueue ではなく clip_factory が処理する。
+GEN_TYPE_CHOICES = ("both", "short", "full", "clip")
+CLIP_GEN_TYPE = "clip"
 
 
 class AutopilotConfig(BaseModel):
@@ -486,10 +488,50 @@ def _pop_or_refill_theme(channel_id: str) -> Optional[Dict[str, str]]:
         return {"title": head["title"], "angle": head.get("angle") or ""}
 
 
+def _run_clip_autopilot(channel_id: str) -> None:
+    """切り抜きチャンネルの発火。
+
+    切り抜きは台本生成もテーマキューも使わない（素材は既存の長尺動画）。
+    ScenarioGenerator / JobQueue を経由せず clip_factory を直接叩く。
+    レンダリングが数十秒かかるのでスケジューラスレッドは塞がず別スレッドで回す。
+    """
+    def _work() -> None:
+        try:
+            from pipeline.clip_factory import generate_clip
+        except Exception as e:
+            api_phase4.notify_event("error", f"Autopilot 失敗 ({channel_id}): clip_factory を読み込めません: {e}")
+            return
+        cm = _state.get("channel_manager")
+        ch = cm.get(channel_id) if cm else None
+        raw = (ch._raw if ch is not None and hasattr(ch, "_raw") else {}) or {}
+        auto_publish = bool((raw.get("publish_settings") or {}).get("auto_publish"))
+        try:
+            res = generate_clip(channel_id, count=1, upload=auto_publish)
+        except Exception as e:
+            api_phase4.notify_event("error", f"Autopilot 失敗 ({channel_id}): {e}")
+            return
+        if not res.get("ok"):
+            api_phase4.notify_event("error", f"Autopilot 失敗 ({channel_id}): {res.get('error')}")
+            return
+        clips = res.get("clips") or []
+        head = clips[0] if clips else {}
+        source = (res.get("source") or {}).get("title", "")
+        api_phase4.notify_event(
+            "schedule_run",
+            f"✂️ 切り抜き生成 [{(ch.name if ch else channel_id)}]: {head.get('title', '')} "
+            f"（元: {source} / engine: {res.get('engine')}）",
+        )
+
+    threading.Thread(target=_work, name=f"clip-autopilot-{channel_id}", daemon=True).start()
+
+
 def _run_autopilot(channel_id: str) -> None:
     """スケジュール発火: テーマ取得 → シナリオ生成 → キュー投入 → 自動公開フラグ"""
     fired_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"🤖 Autopilot fired for {channel_id} at {fired_at} JST")
+    if (_load_autopilot(channel_id).get("gen_type") or "") == CLIP_GEN_TYPE:
+        _run_clip_autopilot(channel_id)
+        return
     # 投稿前に「今のスロットが推奨スロットと比べて極端に低い」場合は推奨スロットに移行。
     # ただしこれは schedule.days_of_week / hour を自動で上書きしてしまうため、
     # 「毎日2本・固定スロット」運用と衝突する。明示的に
