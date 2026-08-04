@@ -36,11 +36,23 @@
       "workspace_id": "",
       "cli_bin": "noimosai",
       "timeout_sec": 900,
-      "prompt_template": "以下のYouTube長尺動画から、エンゲージメントが最も高くなる縦型ショート（9:16・{target_sec}秒以内）を{clips}本切り抜いてください。\n\n動画URL: {source_url}\nタイトル: {source_title}\n\n条件:\n- 冒頭2秒で『結論・驚き』が来るように頭出しする\n- 日本語の大きな字幕を焼き込む\n- 被写体（左右のキャラクター）を追従してクロップせず、上部に16:9のまま配置し下に字幕帯を置く構成にする\n- 完成したMP4のダウンロードURLを必ず返す"
+      "prompt_template": "以下のYouTube長尺動画から、エンゲージメントが最も高くなる縦型ショート（9:16・{target_sec}秒以内）を{clips}本切り抜いてください。\n\n動画URL: {source_url}\nタイトル: {source_title}\n\n条件:\n- 冒頭2秒で『結論・驚き』が来るように頭出しする\n- 日本語の大きな字幕を焼き込む\n- 被写体（左右のキャラクター）を追従してクロップせず、上部に16:9のまま配置し下に字幕帯を置く構成にする\n- 完成したMP4のダウンロードURLを必ず返す",
+      "mode": "browser",
+      "base_url": "https://app.noimosai.com",
+      "workspace_url": "",
+      "headless": true,
+      "nav_timeout_sec": 120,
+      "agent_wait_sec": 900,
+      "poll_interval_sec": 5,
+      "storage_state": "~/.youtube-factory/noimos_session.json",
+      "selectors": {}
     }
   },
   "layout_spec": {
-    "canvas": [1080, 1920],
+    "canvas": [
+      1080,
+      1920
+    ],
     "fps": 30,
     "source_crop_bottom_ratio": 0.22
   },
@@ -57,7 +69,9 @@
   "publish_settings": {
     "auto_publish": false,
     "default_privacy": "public",
-    "publish_targets": ["youtube"]
+    "publish_targets": [
+      "youtube"
+    ]
   },
   "description_template": {
     "short_intro": "▼ この切り抜きの本編はこちら\n{source_url}\n\n{source_title}\n（{credit_name} より切り抜き）",
@@ -66,9 +80,21 @@
   },
   "thumbnail_template": {
     "badge_text": "切り抜き",
-    "badge_color": [255, 90, 0],
-    "hook_color": [255, 255, 255],
-    "subtitle_color": [255, 220, 60],
+    "badge_color": [
+      255,
+      90,
+      0
+    ],
+    "hook_color": [
+      255,
+      255,
+      255
+    ],
+    "subtitle_color": [
+      255,
+      220,
+      60
+    ],
     "bg_tone": "dark",
     "style_hint": "元動画のピーク時フレームをそのまま使い、上に太字フックを乗せる。作り込まない（切り抜きらしさを残す）。"
   },
@@ -77,7 +103,12 @@
     "target_duration": 50,
     "bg_type": "none",
     "use_illustrations": false,
-    "hashtags": ["#shorts", "#ゆっくり解説", "#切り抜き", "#雑学"],
+    "hashtags": [
+      "#shorts",
+      "#ゆっくり解説",
+      "#切り抜き",
+      "#雑学"
+    ],
     "category": "24",
     "short_title_hashtags": "#shorts #切り抜き"
   },
@@ -138,7 +169,12 @@
       "short_fps": 30
     },
     "colors": {
-      "bg_color": [10, 10, 14, 255]
+      "bg_color": [
+        10,
+        10,
+        14,
+        255
+      ]
     },
     "audio": {
       "speed": 1.0,
@@ -187,19 +223,38 @@
     "persona": {
       "age_group": "10〜30代",
       "gender": "男女",
-      "interest_categories": ["雑学", "science", "SCP", "ショート動画"],
+      "interest_categories": [
+        "雑学",
+        "science",
+        "SCP",
+        "ショート動画"
+      ],
       "content_depth": "ライト"
     }
   },
   "autopilot": {
     "enabled": false,
     "schedule": {
-      "days_of_week": [0, 1, 2, 3, 4, 5, 6],
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "hour": 12,
       "minute": 0,
       "times": [
-        { "hour": 12, "minute": 0 },
-        { "hour": 21, "minute": 0 }
+        {
+          "hour": 12,
+          "minute": 0
+        },
+        {
+          "hour": 21,
+          "minute": 0
+        }
       ]
     },
     "duration_minutes": 1,
