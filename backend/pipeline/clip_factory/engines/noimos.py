@@ -22,6 +22,28 @@ API・完成MP4をダウンロードするAPI は用意されていない**
 ただしこの経路は **有料アカウント（$99/月〜）と API キーが無いと検証できない**。
 NOIMOS_API_KEY が設定されるまでこのエンジンは明示的に失敗し、呼び出し側が
 clip.fallback_engine（既定 local）へ落とす。
+
+■ 追加調査：Web UI を Chrome 自動操作する案（2026-08-04）→ 不採用
+
+API が無いなら Web UI を自動操作すればよい、と考えて再調査したが **二重に行き止まり**。
+
+1. そもそも NoimosAI に「長尺を切って縦型MP4を書き出す」機能が無い。
+   公開されている動画まわりの能力は全て次のいずれかで、レンダリングは含まれない:
+     - 台本生成（"Generates video scripts, storyboard ideas, and visual references"）
+     - 投稿・予約（"Uploads video media, adds captions/hashtags, and schedules posts"）
+              ＝ 既に手元にある動画ファイルを配信するだけ
+     - 実績分析（"Analyzes video performance …"）
+   最も近いテンプレート auto-product-video-gen も、出力はタイムスタンプ付きの
+   台本と編集指示であって MP4 ではない。high-impact-repurposer に至っては
+   テキスト投稿しか出さない。つまり UI を人間が操作しても切り抜き動画は落ちてこない。
+
+2. アプリ本体 app.noimosai.com はこの環境のブラウジングポリシーで遮断されている
+   （noimosai.com は可、app./docs. サブドメインは "Navigation to this domain is
+   not allowed"）。サインアップ画面にすら到達できないため UI 調査自体が不可能。
+
+結論: 切り抜きの実生成は local エンジンが担当する。NoimosAI は「作った動画を
+各SNSへ配信する」層としてなら意味があるので、将来使うならこのエンジンではなく
+投稿系（youtube_uploader / tiktok_uploader）の隣に置くのが正しい。
 """
 
 from __future__ import annotations
@@ -56,7 +78,9 @@ def preflight(clip_cfg: Dict[str, Any]) -> Optional[str]:
     if not _api_key():
         return ("NOIMOS_API_KEY が未設定です。NoimosAI の team settings → API タブで "
                 "キーを発行し backend/.env に NOIMOS_API_KEY として追加してください "
-                "（有料プラン $99/月〜が必要）。")
+                "（有料プラン $99/月〜が必要）。なお 2026-08-04 の再調査時点で NoimosAI "
+                "には動画をレンダリングする機能自体が無く（台本生成と投稿代行のみ）、"
+                "キーを入れても切り抜きMP4は返らない見込み。docstring 参照。")
     if not _cli_bin(clip_cfg):
         return ("noimosai CLI が見つかりません。`npm i -g @agos-labs/noimosai-cli` を "
                 "実行してください。")
