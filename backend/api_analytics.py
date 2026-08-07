@@ -43,7 +43,8 @@ router = APIRouter(prefix="/api/analytics", tags=["analytics"])
 class SyncRequest(BaseModel):
     days: int = Field(default=30, ge=1, le=365)
     max_videos: int = Field(default=50, ge=1, le=200)
-    fetch_retention_for: int = Field(default=5, ge=0, le=50)
+    # None なら channel JSON の video_format.analytics.fetch_retention_for を使う
+    fetch_retention_for: Optional[int] = Field(default=None, ge=0, le=50)
     sync_comments_for: int = Field(default=5, ge=0, le=50)
     max_comments_per_video: int = Field(default=200, ge=1, le=1000)
     analyze_comments: bool = True

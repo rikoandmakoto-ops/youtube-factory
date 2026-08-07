@@ -17,8 +17,10 @@ yt-analytics.readonly スコープは既に `youtube_oauth.SCOPES` に含まれ�
 
 from __future__ import annotations
 
+import json
 import time
 from datetime import date, datetime, timedelta
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from . import youtube_oauth as yt_oauth
@@ -479,8 +481,68 @@ def fetch_retention(channel_id: str, video_id: str) -> Dict[str, Any]:
                 "relative_retention": rrp,
             }
         )
+    if not curve:
+        # 再生数が少ない・公開直後の動画は空で返る。既存の有効なカーブを
+        # 空で上書きすると分析材料が消えるので、その場合だけ保存しない。
+        existing = (analytics_store.get_retention(video_id) or {}).get("curve") or []
+        if existing:
+            return {
+                "ok": True,
+                "video_id": video_id,
+                "curve": existing,
+                "note": "empty response — kept existing curve",
+            }
     analytics_store.save_retention(video_id, channel_id, curve)
     return {"ok": True, "video_id": video_id, "curve": curve}
+
+
+PROJECT_ROOT = Path(__file__).parent.parent.parent
+DEFAULT_RETENTION_TARGETS = 5
+
+
+def retention_target_count(channel_id: str) -> int:
+    """channel JSON の video_format.analytics.fetch_retention_for を読む。
+
+    稼働中プロセスのメモリ上の ChannelManager ではなくファイルを直接見るため、
+    JSON を書き換えれば再起動なしでも次の sync から効く。
+    """
+    path = PROJECT_ROOT / "data" / "channels" / f"{channel_id}.json"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return DEFAULT_RETENTION_TARGETS
+    analytics = ((data.get("video_format") or {}).get("analytics") or {})
+    raw = analytics.get("fetch_retention_for", DEFAULT_RETENTION_TARGETS)
+    try:
+        n = int(raw)
+    except (TypeError, ValueError):
+        return DEFAULT_RETENTION_TARGETS
+    return max(0, min(50, n))
+
+
+def _retention_targets(
+    items: List[Dict[str, Any]], count: int
+) -> List[Dict[str, Any]]:
+    """維持率カーブを取る動画を選ぶ。「最新 N 本」∪「再生数上位 N 本」。
+
+    再生数上位だけだと、伸びた過去動画にカーブが偏り、最新動画を見る
+    retention_analyzer（list_video_metrics は published_at DESC）が
+    1本もカーブを拾えず skip される。新作のフィードバックが要なので
+    最新 N 本を必ず含める。
+    """
+    newest = items[:count]  # fetch_video_metrics の items は新着順
+    top_viewed = sorted(
+        items, key=lambda v: int(v.get("views", 0) or 0), reverse=True
+    )[:count]
+    targets: List[Dict[str, Any]] = []
+    seen: set = set()
+    for v in [*newest, *top_viewed]:
+        vid = v.get("video_id")
+        if not vid or vid in seen:
+            continue
+        seen.add(vid)
+        targets.append(v)
+    return targets
 
 
 def sync_channel(
@@ -488,19 +550,20 @@ def sync_channel(
     *,
     days: int = 30,
     max_videos: int = 50,
-    fetch_retention_for: int = 5,
+    fetch_retention_for: Optional[int] = None,
 ) -> Dict[str, Any]:
-    """まとめて同期。返り値は各 fetch_* のサマリを束ねたもの。"""
+    """まとめて同期。返り値は各 fetch_* のサマリを束ねたもの。
+
+    fetch_retention_for=None なら channel JSON の
+    video_format.analytics.fetch_retention_for を採用する。
+    """
+    if fetch_retention_for is None:
+        fetch_retention_for = retention_target_count(channel_id)
     overview = fetch_channel_overview(channel_id, days=days)
     videos = fetch_video_metrics(channel_id, days=days, max_videos=max_videos)
     retention: List[Dict[str, Any]] = []
-    if videos.get("ok"):
-        top = sorted(
-            videos.get("items", []) or [],
-            key=lambda v: int(v.get("views", 0) or 0),
-            reverse=True,
-        )[:fetch_retention_for]
-        for v in top:
+    if videos.get("ok") and fetch_retention_for > 0:
+        for v in _retention_targets(videos.get("items", []) or [], fetch_retention_for):
             r = fetch_retention(channel_id, v["video_id"])
             retention.append(
                 {"video_id": v["video_id"], "ok": r.get("ok"), "error": r.get("error")}

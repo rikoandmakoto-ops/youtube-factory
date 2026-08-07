@@ -148,6 +148,9 @@ class AnalyticsConfig:
         "min_views_7d": 1000,    # 7日間最低再生数
     })
     auto_adjust: bool = False    # パフォーマンスに基づく自動調整
+    # sync 時に維持率カーブを取得する本数。0 で取得しない。
+    # 「最新 N 本」と「再生数上位 N 本」の和集合が対象になる（youtube_analytics.sync_channel）。
+    fetch_retention_for: int = 5
 
 
 @dataclass

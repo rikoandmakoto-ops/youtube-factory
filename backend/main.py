@@ -922,11 +922,14 @@ async def update_channel_analytics(channel_id: str, enabled: bool = True,
                                     auto_adjust: bool = False,
                                     min_ctr: Optional[float] = None,
                                     min_retention: Optional[float] = None,
-                                    min_views_7d: Optional[int] = None):
+                                    min_views_7d: Optional[int] = None,
+                                    fetch_retention_for: Optional[int] = None):
     """アナリティクス連携設定"""
     if not channel_manager:
         raise HTTPException(status_code=500, detail="Channel manager not initialized")
     analytics_update = {"enabled": enabled, "auto_adjust": auto_adjust}
+    if fetch_retention_for is not None:
+        analytics_update["fetch_retention_for"] = max(0, min(50, int(fetch_retention_for)))
     thresholds = {}
     if min_ctr is not None:
         thresholds["min_ctr"] = min_ctr

@@ -257,6 +257,7 @@
     },
     "analytics": {
       "enabled": true,
+      "fetch_retention_for": 10,
       "performance_threshold": {
         "min_ctr": 4,
         "min_retention": 40,

@@ -533,7 +533,8 @@ def run_channel(channel_id: str, channel_name: str, token: str,
         sync_body = {
             "days": SYNC_DAYS,
             "max_videos": 50,
-            "fetch_retention_for": 5,
+            # fetch_retention_for は送らない → channel JSON の
+            # video_format.analytics.fetch_retention_for がそのまま効く
             "sync_comments_for": 5,
             "run_scenario_evaluation": True,
             "run_ab_reconciliation": True,
