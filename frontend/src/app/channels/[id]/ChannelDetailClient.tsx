@@ -1,8 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import PublishDialog from '@/components/PublishDialog';
+import dynamic from 'next/dynamic';
 import type { Video } from '@/lib/api';
+
+// Only mounted once the user picks a video to publish, so keep it out of the
+// route's initial chunk — it's one of the larger components in the app.
+const PublishDialog = dynamic(() => import('@/components/PublishDialog'), {
+  ssr: false,
+});
 
 const STATUS_STYLES: Record<Video['status'], string> = {
   published: 'bg-emerald-600 text-white',
@@ -86,6 +92,8 @@ export default function VideoListClient({
                     <img
                       src={v.thumbnail_url}
                       alt=""
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover rounded-lg"
                     />
                   ) : (

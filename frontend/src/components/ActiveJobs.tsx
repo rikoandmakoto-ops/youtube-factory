@@ -2,44 +2,29 @@
 
 import { useEffect, useState } from 'react';
 import type { ActiveJob } from '@/lib/api';
-
-async function fetchActiveJobs(): Promise<ActiveJob[]> {
-  const res = await fetch('/api/jobs/active', { cache: 'no-store' });
-  if (!res.ok) return [];
-  const data = await res.json();
-  return data.jobs ?? [];
-}
+import { useActiveJobs, refreshActiveJobs } from '@/lib/useActiveJobs';
 
 export default function ActiveJobs({
   initial,
 }: {
   initial: ActiveJob[];
 }) {
-  const [jobs, setJobs] = useState<ActiveJob[]>(initial);
+  const jobs = useActiveJobs(initial);
   const [cancelling, setCancelling] = useState<Record<string, boolean>>({});
   const [cancelled, setCancelled] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
-    let stopped = false;
-    const tick = async () => {
-      const j = await fetchActiveJobs();
-      if (stopped) return;
-      setJobs(j);
-      // ポーリングで消えたジョブの「中断しました」表示は2サイクルほど残してからクリア
-      setCancelled((prev) => {
-        const next: Record<string, boolean> = {};
-        for (const id of Object.keys(prev)) {
-          if (j.some((x) => x.job_id === id)) next[id] = true;
-        }
-        return next;
-      });
-    };
-    const id = setInterval(tick, 3000);
-    return () => {
-      stopped = true;
-      clearInterval(id);
-    };
-  }, []);
+    // ポーリングで消えたジョブの「中断しました」表示は2サイクルほど残してからクリア
+    setCancelled((prev) => {
+      const keys = Object.keys(prev);
+      if (keys.length === 0) return prev;
+      const next: Record<string, boolean> = {};
+      for (const id of keys) {
+        if (jobs.some((x) => x.job_id === id)) next[id] = true;
+      }
+      return next;
+    });
+  }, [jobs]);
 
   const onCancel = async (jobId: string) => {
     if (cancelling[jobId]) return;
@@ -51,6 +36,8 @@ export default function ActiveJobs({
       );
       if (res.ok) {
         setCancelled((p) => ({ ...p, [jobId]: true }));
+        // Don't wait out the poll interval to reflect the cancellation.
+        refreshActiveJobs();
       }
     } finally {
       setCancelling((p) => ({ ...p, [jobId]: false }));

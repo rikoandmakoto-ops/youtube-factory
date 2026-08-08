@@ -2,45 +2,21 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import type { ActiveJob } from '@/lib/api';
+import { useActiveJobs } from '@/lib/useActiveJobs';
 
 // Routes where the banner stays hidden (auth/oauth flows).
 const HIDDEN_PREFIXES = ['/login', '/oauth'];
 
-async function fetchActiveJobs(): Promise<ActiveJob[]> {
-  try {
-    const res = await fetch('/api/jobs/active', { cache: 'no-store' });
-    if (!res.ok) return [];
-    const data = await res.json();
-    return Array.isArray(data?.jobs) ? data.jobs : [];
-  } catch {
-    return [];
-  }
-}
-
 export default function GlobalProgressBar() {
   const pathname = usePathname() || '';
-  const [jobs, setJobs] = useState<ActiveJob[]>([]);
-
   const hidden = HIDDEN_PREFIXES.some(
     (p) => pathname === p || pathname.startsWith(p + '/')
   );
 
-  useEffect(() => {
-    if (hidden) return;
-    let cancelled = false;
-    const tick = async () => {
-      const j = await fetchActiveJobs();
-      if (!cancelled) setJobs(j);
-    };
-    tick();
-    const id = setInterval(tick, 3000);
-    return () => {
-      cancelled = true;
-      clearInterval(id);
-    };
-  }, [hidden]);
+  // Shares one interval with ActiveJobs instead of running a second identical
+  // poll against the same endpoint. Stays unsubscribed on auth/oauth routes,
+  // where the request would only 401.
+  const jobs = useActiveJobs(undefined, !hidden);
 
   if (hidden || jobs.length === 0) return null;
 

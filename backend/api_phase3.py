@@ -862,6 +862,37 @@ def _top_videos_via_data_api(
         return []
 
 
+def channel_stats_light(
+    channel_id: str, youtube_channel_id: str
+) -> Optional[Dict[str, int]]:
+    """チャンネルカード用の軽量メトリクス（登録者 / 総再生 / 本数）だけを取る。
+
+    `_real_analytics` はダッシュボードが捨てている 28 日推移・人気動画まで取るため
+    1 チャンネルあたり最大 4 往復かかる。一覧 API はこの 1 往復版を使う。
+    """
+    if not HAS_GOOGLE:
+        return None
+    creds = yt_oauth.get_credentials_for(channel_id) or yt_oauth.get_credentials()
+    if not creds:
+        return None
+    try:
+        yt = build("youtube", "v3", credentials=creds, cache_discovery=False)
+        resp = (
+            yt.channels().list(part="statistics", id=youtube_channel_id).execute()
+        )
+        items = resp.get("items", [])
+        if not items:
+            return None
+        stats = items[0].get("statistics", {})
+        return {
+            "video_count": int(stats.get("videoCount", 0)),
+            "total_views": int(stats.get("viewCount", 0)),
+            "subscribers": int(stats.get("subscriberCount", 0)),
+        }
+    except Exception:
+        return None
+
+
 def _real_analytics(channel_id: str, youtube_channel_id: str) -> Optional[Dict[str, Any]]:
     """YouTube Analytics API v2 で実データ取得。失敗時 None。
 

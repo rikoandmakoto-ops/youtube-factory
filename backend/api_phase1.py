@@ -254,9 +254,19 @@ def _check_openai(api_key: str, timeout: float = 3.0) -> bool:
         return False
 
 
+# ヘルスチェックは VOICEVOX と OpenAI への実 HTTP 往復なので、毎リクエスト
+# 叩くとダッシュボードの TTFB に直接乗る。数十秒は変わらない情報なのでキャッシュ。
+_STATUS_TTL_SECONDS = 30.0
+_status_cache: Dict[str, tuple] = {}
+
+
 @router.get("/system/status", response_model=SystemStatusResponse)
 async def system_status(_=Depends(require_session)) -> SystemStatusResponse:
     """VOICEVOX / GPT / ディスク容量のヘルスチェック。"""
+    cached = _status_cache.get("v")
+    if cached and time.time() - cached[0] < _STATUS_TTL_SECONDS:
+        return cached[1]
+
     # video_generator から実際の URL/Key を読む
     try:
         import pipeline.video_generator as vg
@@ -266,8 +276,12 @@ async def system_status(_=Depends(require_session)) -> SystemStatusResponse:
         vv_url = os.environ.get("VOICEVOX_URL", "http://localhost:50021")
         openai_key = os.environ.get("OPENAI_API_KEY", "")
 
-    vv_ok = _check_voicevox(vv_url)
-    gpt_ok = _check_openai(openai_key)
+    # どちらも blocking な urlopen。直列に await するとイベントループごと
+    # 止まるので、スレッドに逃がして並列に走らせる。
+    vv_ok, gpt_ok = await asyncio.gather(
+        asyncio.to_thread(_check_voicevox, vv_url),
+        asyncio.to_thread(_check_openai, openai_key),
+    )
 
     # ディスク
     disk_path = Path(__file__).parent.parent
@@ -278,22 +292,41 @@ async def system_status(_=Depends(require_session)) -> SystemStatusResponse:
     except Exception:
         free_gb = total_gb = 0.0
 
-    return SystemStatusResponse(
+    resp = SystemStatusResponse(
         voicevox={"connected": vv_ok, "url": vv_url},
         gpt={"connected": gpt_ok, "configured": bool(openai_key)},
         disk={"free_gb": round(free_gb, 1), "total_gb": round(total_gb, 1)},
     )
+    _status_cache["v"] = (time.time(), resp)
+    return resp
 
 
 # =====================================================================
 # チャンネル
 # =====================================================================
 
+# チャンネルカードのメトリクスは YouTube API 往復が要るため TTL キャッシュする。
+# ダッシュボードは force-dynamic SSR で毎回叩かれるので、これが無いと
+# 表示のたびに 1 チャンネル 1 往復（未キャッシュ時）が直列に積み上がる。
+_METRICS_TTL_SECONDS = 300.0
+_metrics_cache: Dict[str, tuple] = {}
+
+
 def _channel_metrics(channel_id: str) -> Dict[str, int]:
     """チャンネル別のメトリクスを集計。
 
     YouTube が連携済みなら Analytics の数値を、未連携なら JobQueue ベースの推定を返す。
+    結果は `_METRICS_TTL_SECONDS` 秒だけメモリキャッシュする。
     """
+    cached = _metrics_cache.get(channel_id)
+    if cached and time.time() - cached[0] < _METRICS_TTL_SECONDS:
+        return cached[1]
+    metrics = _channel_metrics_uncached(channel_id)
+    _metrics_cache[channel_id] = (time.time(), metrics)
+    return metrics
+
+
+def _channel_metrics_uncached(channel_id: str) -> Dict[str, int]:
     # 連携済みなら Analytics を使用
     try:
         from pipeline import youtube_oauth as yo
@@ -308,15 +341,12 @@ def _channel_metrics(channel_id: str) -> Dict[str, int]:
             except Exception:
                 yt_id = None
         if ch and yt_id and connected:
-            from api_phase3 import _real_analytics
-            real = _real_analytics(channel_id, yt_id)
-            if real and real.get("source") == "youtube_analytics":
-                m = real["metrics"]
-                return {
-                    "video_count": m.get("video_count", 0),
-                    "total_views": m.get("total_views", 0),
-                    "subscribers": m.get("subscribers", 0),
-                }
+            # 一覧に必要なのは 3 つの数値だけなので、28日推移・人気動画まで取る
+            # `_real_analytics` ではなく 1 往復で済む軽量版を使う。
+            from api_phase3 import channel_stats_light
+            stats = channel_stats_light(channel_id, yt_id)
+            if stats:
+                return stats
     except Exception:
         pass
 
@@ -341,15 +371,27 @@ async def list_channels(_=Depends(require_session)) -> Dict[str, Any]:
     cm = _state.get("channel_manager")
     if cm is None:
         raise HTTPException(status_code=503, detail="Channel manager not ready")
+    channels = list(cm.list_channels())
+    # メトリクスは 1 チャンネル 1 往復（キャッシュミス時）の blocking IO。
+    # 直列だとチャンネル数に比例して TTFB が伸びるうえ、イベントループを
+    # 塞いで他のリクエストまで待たせるので to_thread で並列に逃がす。
+    results = await asyncio.gather(
+        *(asyncio.to_thread(_channel_metrics, ch.id) for ch in channels),
+        return_exceptions=True,
+    )
     out: List[Dict[str, Any]] = []
-    for ch in cm.list_channels():
+    for ch, m in zip(channels, results):
         d = {
             "id": ch.id,
             "name": ch.name,
             "concept": ch.concept,
             "style": ch.style,
         }
-        d.update(_channel_metrics(ch.id))
+        d.update(
+            m
+            if isinstance(m, dict)
+            else {"video_count": 0, "total_views": 0, "subscribers": 0}
+        )
         out.append(d)
     return {"channels": out}
 

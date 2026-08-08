@@ -3724,6 +3724,10 @@ function CompetitorCandidateRow({
           <img
             src={candidate.thumbnail_url}
             alt=""
+            width={40}
+            height={40}
+            loading="lazy"
+            decoding="async"
             className="w-10 h-10 rounded-full shrink-0 bg-bg-elev"
           />
         ) : (
@@ -3958,6 +3962,10 @@ function CompetitorCard({ analysis }: { analysis: CompetitorAnalysis }) {
                   <img
                     src={v.thumbnail_url}
                     alt=""
+                    width={64}
+                    height={36}
+                    loading="lazy"
+                    decoding="async"
                     className="w-16 h-9 object-cover rounded shrink-0"
                   />
                 )}

@@ -3,6 +3,7 @@ YouTube Factory — マルチチャンネル自動動画生成プラットフォ
 
 チャンネル管理・自動シナリオ生成・並列ジョブキュー・動画パイプラインを統合。
 """
+# reload trigger 2026-08-03
 
 from fastapi import FastAPI, HTTPException, BackgroundTasks, Request, Depends
 from fastapi.staticfiles import StaticFiles
@@ -14,6 +15,8 @@ import uuid
 import json
 import secrets
 import hashlib
+import asyncio
+import time as _time
 from pathlib import Path
 from datetime import datetime
 from enum import Enum
@@ -1139,6 +1142,24 @@ async def queue_stats():
     return job_queue.get_stats()
 
 
+@app.post("/utils/copy-output")
+async def copy_output_to_workspace():
+    """動画出力用フォルダからworkspaceにコピー"""
+    import shutil
+    src_base = Path.home() / "Desktop" / "動画出力用"
+    dest = Path.home() / "Developer" / "youtube-factory"
+    copied = []
+    for d in src_base.iterdir():
+        if not d.is_dir():
+            continue
+        for mp4 in d.glob("*ショート.mp4"):
+            dst_name = f"{d.name}_ショート.mp4"
+            dst_path = dest / dst_name
+            shutil.copy2(str(mp4), str(dst_path))
+            copied.append({"src": str(mp4), "dest": str(dst_path), "size_mb": round(mp4.stat().st_size / 1024 / 1024, 1)})
+    return {"copied": copied}
+
+
 # ============================================================
 # Factory: 全自動パイプライン (generate + queue in one shot)
 # ============================================================
@@ -1297,18 +1318,15 @@ async def factory_run_all(count_per_channel: int = 1, priority: int = 5, gen_typ
 # Phase C: Trends + AB Testing
 # ============================================================
 
-@app.get("/api/trends/{channel_id}")
-async def api_get_trends(channel_id: str, count: int = 5):
-    """現在のトレンドと、そこから提案される旬のテーマを返す。
+# /api/trends は Google Trends スクレイプ + LLM のテーマ提案を毎回走らせるため
+# 5 秒前後かかり、しかも LLM 課金が発生する。アナリティクス画面は SSR のたびに
+# これを叩くので、TTL キャッシュを挟む（トレンドは分単位では変わらない）。
+_TRENDS_TTL_SECONDS = 1800.0
+_trends_cache: Dict[str, tuple] = {}
 
-    - Google Trends（pytrends）+ YouTube 急上昇（教育/科学）+ チャンネルとの関連語
-    - チャンネルが見つかれば、AI 提案テーマ（`/scenarios/suggest-themes` 相当）も
-      include_trends=True で同時に取得して `themes` フィールドに付ける。
-    """
-    try:
-        from pipeline.trend_fetcher import fetch_combined_trends
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"trend_fetcher import failed: {e}")
+
+def _compute_trends(channel_id: str, count: int) -> Dict:
+    from pipeline.trend_fetcher import fetch_combined_trends
 
     ch = channel_manager.get(channel_id) if channel_manager else None
     combined = fetch_combined_trends(ch)
@@ -1327,6 +1345,33 @@ async def api_get_trends(channel_id: str, count: int = 5):
         "trends": combined,
         "themes": themes,
     }
+
+
+@app.get("/api/trends/{channel_id}")
+async def api_get_trends(channel_id: str, count: int = 5, refresh: bool = False):
+    """現在のトレンドと、そこから提案される旬のテーマを返す。
+
+    - Google Trends（pytrends）+ YouTube 急上昇（教育/科学）+ チャンネルとの関連語
+    - チャンネルが見つかれば、AI 提案テーマ（`/scenarios/suggest-themes` 相当）も
+      include_trends=True で同時に取得して `themes` フィールドに付ける。
+    - 結果は 30 分キャッシュ。`?refresh=true` で強制再取得。
+    """
+    try:
+        from pipeline.trend_fetcher import fetch_combined_trends  # noqa: F401
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"trend_fetcher import failed: {e}")
+
+    key = f"{channel_id}:{count}"
+    cached = _trends_cache.get(key)
+    if not refresh and cached and _time.time() - cached[0] < _TRENDS_TTL_SECONDS:
+        return cached[1]
+
+    # blocking な HTTP スクレイプ + LLM 呼び出しなのでスレッドに逃がす。
+    # そのまま await するとイベントループごと数秒止まり、同時に来た他の
+    # リクエストまで巻き添えで遅くなる。
+    result = await asyncio.to_thread(_compute_trends, channel_id, count)
+    _trends_cache[key] = (_time.time(), result)
+    return result
 
 
 class ABTestGenerateRequest(BaseModel):

@@ -1,11 +1,12 @@
 import Link from 'next/link';
-import { getCostSummary, ApiError } from '@/lib/api';
+import { ApiError } from '@/lib/api';
+import { getCostSummaryCached } from '@/lib/server-cost';
 
 const USD_TO_JPY = 155;
 
 export default async function MonthlyCostSummary() {
   try {
-    const cost = await getCostSummary();
+    const cost = await getCostSummaryCached();
     const monthly = Math.round((cost.this_month?.cost_usd || 0) * USD_TO_JPY);
     const today = Math.round((cost.today?.cost_usd || 0) * USD_TO_JPY);
     return (

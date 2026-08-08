@@ -173,6 +173,8 @@ export default function AssetUploader({
                 <img
                   src={previewUrl(channelId, kind, it.filename)}
                   alt={it.filename}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full aspect-video object-cover bg-black"
                 />
               )}

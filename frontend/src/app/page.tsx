@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import SystemStatusGrid from '@/components/SystemStatus';
@@ -15,6 +16,17 @@ import {
 } from '@/lib/api';
 
 export const dynamic = 'force-dynamic';
+
+/** Placeholder that reserves a card's height so streaming-in doesn't shift layout. */
+function CardSkeleton({ label }: { label: string }) {
+  return (
+    <section aria-label={label} className="mx-5 mt-4 card">
+      <div className="h-4 w-32 rounded bg-bg-elev animate-pulse" />
+      <div className="mt-3 h-3 w-full rounded bg-bg-elev animate-pulse" />
+      <div className="mt-2 h-3 w-2/3 rounded bg-bg-elev animate-pulse" />
+    </section>
+  );
+}
 
 export default async function DashboardPage() {
   const results = await Promise.allSettled([
@@ -42,7 +54,15 @@ export default async function DashboardPage() {
         showNav
         actions={
           <div className="flex items-center gap-2">
-            <HeaderCostBadge />
+            {/* Cost/schedule panels each cost a backend round-trip. Streaming
+                them keeps the dashboard shell off their critical path. */}
+            <Suspense
+              fallback={
+                <div className="h-9 w-24 rounded-md bg-bg-elev animate-pulse" />
+              }
+            >
+              <HeaderCostBadge />
+            </Suspense>
             <Link href="/settings" className="btn-secondary py-2 px-3 text-sm">
               ⚙️
             </Link>
@@ -76,8 +96,12 @@ export default async function DashboardPage() {
 
       <ActiveJobs initial={jobs} />
 
-      <UpcomingSchedules />
-      <MonthlyCostSummary />
+      <Suspense fallback={<CardSkeleton label="次回スケジュール" />}>
+        <UpcomingSchedules />
+      </Suspense>
+      <Suspense fallback={<CardSkeleton label="今月のコスト" />}>
+        <MonthlyCostSummary />
+      </Suspense>
     </main>
   );
 }
