@@ -1,9 +1,9 @@
 {
   "id": "clip-lab",
-  "name": "ゆっくり解説 切り抜きラボ",
+  "name": "切り抜きLab",
   "concept": "既存の長尺ゆっくり解説（daily-science / scp-lab）から『一番おいしい1シーン』だけを切り出して縦型ショートにする切り抜きチャンネル。1本30〜59秒、冒頭2秒で結論、字幕は原寸より2倍大きく焼き込む。本編への導線を必ず貼り、母体チャンネルの再生数も伸ばす。",
   "style": "clip",
-  "youtube_channel_id": "",
+  "youtube_channel_id": "UCbWZ5quEFE2VpHPh5TGyPCw",
   "image_mode": "generate",
   "clip": {
     "engine": "local",
@@ -99,7 +99,7 @@
     "style_hint": "元動画のピーク時フレームをそのまま使い、上に太字フックを乗せる。作り込まない（切り抜きらしさを残す）。"
   },
   "defaults": {
-    "speed": 1.0,
+    "speed": 1,
     "target_duration": 50,
     "bg_type": "none",
     "use_illustrations": false,
@@ -177,9 +177,9 @@
       ]
     },
     "audio": {
-      "speed": 1.0,
-      "pause_between": 0.0,
-      "bgm_volume": 0.0,
+      "speed": 1,
+      "pause_between": 0,
+      "bgm_volume": 0,
       "bgm_path": null
     },
     "branding": {

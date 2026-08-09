@@ -1,0 +1,441 @@
+{
+  "id": "2ch-matome",
+  "name": "ゆっくり2chスレまとめ劇場",
+  "concept": "2ch／5chの掲示板に投下された『実話系スレ』を、ゆっくり2人が1本30秒で一気に読み上げるまとめチャンネル。笑える話・職場のヤバい奴・恋愛の修羅場・スカッとする逆転劇を、スレ主とレスの掛け合いのまま再現して、最後の1レスでオチをつける。",
+  "short_series_name": "30秒スレまとめ：",
+  "style": "yukkuri",
+  "youtube_channel_id": "UCqvn5FC_B1nj2VhlFTFw8CA",
+  "image_mode": "collect",
+  "image_collect": {
+    "provider": "auto",
+    "safe_search": true,
+    "license_filter": "cc",
+    "max_per_query": 5,
+    "attribution_template": "出典: {source}",
+    "mix_strategy": "heuristic"
+  },
+  "voice_style": {
+    "tone": "掲示板のノリをそのまま持ち込んだ、テンポの速い実況トーン。1レスごとに温度が上がっていく煽り体質。丁寧な解説口調・お行儀のいいナレーションは厳禁。友達に『昨日ヤバいスレ見つけたんだけど』と話しかけるテンションで最後まで走り切る",
+    "narrator_persona": "毎日スレを巡回している掲示板住人。スレ主の心情に全力で乗っかり、ヤバい登場人物にはツッコミを入れ、オチのレスでは一緒に爆笑・戦慄する。教訓や説教は語らない。あくまで『スレを読んでる人』の立ち位置を崩さない",
+    "opening_hooks": [
+      "このスレ、途中から空気が完全に変わるんだけど",
+      "スレ主、開幕1レス目でもう終わってる",
+      "コメント欄が一瞬で埋まったスレがこれ"
+    ],
+    "forbidden": [
+      "SCP",
+      "財団",
+      "収容",
+      "[REDACTED]",
+      "DATA EXPUNGED",
+      "科学的に解説",
+      "研究データ",
+      "メカニズム",
+      "妖怪",
+      "ポケモン",
+      "シロ",
+      "クロ",
+      "リコ",
+      "マコト",
+      "理子",
+      "真",
+      "ミナモ",
+      "ケンタ",
+      "ヒカリ",
+      "ソラ"
+    ],
+    "style_rules": [
+      "スレの再現で進行する。冒頭3秒で『何が起きたスレか』の一番おいしい部分を提示し、説明を先に置かない。",
+      "『>>1』『スレ主』『名無し』のような掲示板語をそのまま使い、レスの応酬として展開する。地の文での状況説明は最小限にする。",
+      "1本30秒。1スレ＝1オチに絞り、複数エピソードを詰め込まない。オチのレスは最後まで伏せる。",
+      "リスナー役（ゴロー）のリアクションは掲示板のレスそのもの（例:『は？』『スレ主草』『それは怒っていい』『ここで終わりじゃないんだよな』）。教科書的な相槌は禁止。",
+      "実話系として語るが、特定の実在人物・企業・学校を名指ししない。名前は『A先輩』『上司のB』のように匿名化する。",
+      "締めは『お前らならどうする？』『続きはコメントで』のような、視聴者に投げる1行で終える。教訓・まとめで締めない。"
+    ]
+  },
+  "theme_priority": {
+    "label": "面白い話・職場ネタ・恋愛・スカッと話を最優先。怖い話は箸休めとして少量",
+    "categories": [
+      "【最優先】笑える面白いスレ: コピペ系・天然ボケのスレ主・意味不明な展開など、オチで声が出るタイプ（毎バッチ最低2件は必ず入れる）",
+      "【最優先】職場・バイト・学校のヤバい人ネタ: 理不尽な上司・非常識な同僚・伝説の先輩など、共感と『うちにもいる』を狙う（毎バッチ最低1件は必ず入れる）",
+      "スカッとする話: 理不尽をやり返した／因果応報で自滅した逆転劇。溜め→反撃の構造がはっきりしているもの",
+      "恋愛・修羅場: 告白・浮気バレ・元カレ元カノなど、感情が動く展開。下品にならない範囲で",
+      "怖い話・不思議な話: バイト先の怪談・実話系の不気味な体験。箸休め枠として少量に留める"
+    ],
+    "required_count_per_batch": 5,
+    "good_examples": [
+      "上司「残業代？やる気で払え」→ 3ヶ月後、部署が消えた",
+      "スレ主「彼女の手料理がまずい」→ 3レス目で全員が黙った理由",
+      "バイト先の店長がガチでヤバい奴だった件 → 最後の1レスで全員爆笑",
+      "同僚「その仕事、俺がやったことにしていい？」→ 承諾した結果",
+      "合コンで無双した友人の一言がこちら → 場が凍った"
+    ],
+    "avoid_categories": [
+      "政治・選挙・政党・政治家に関するスレ（genre_blacklist で生成停止）",
+      "宗教・信仰・宗教団体に関するスレ（genre_blacklist で生成停止）",
+      "実在の個人・企業・学校を特定できる形で晒す内容",
+      "差別・誹謗中傷・特定属性を叩く内容",
+      "性的に露骨な内容、過度なグロ・自傷描写",
+      "オチが無く、状況説明だけで終わるスレ"
+    ],
+    "title_style": "タイトルはスレの発言をそのまま引用する形（『上司「〇〇」』『スレ主「〇〇」』）＋『→』で結果を匂わせる形が勝ちパターン。オチそのものは書かず、『その結果』『全員が黙った』『まさかの展開』で止める。疑問形で濁さず、短く言い切る。数字（3レス目・3ヶ月後・翌日）を入れると強い。",
+    "viral_hooks": "セリフの直接引用 / 『→』で結果を匂わせる / 立場の逆転 / 共感できる理不尽 / 最後の1レスでのどんでん返し / 『お前らならどうする？』"
+  },
+  "theme_blacklist": [],
+  "genre_blacklist": [
+    "政治",
+    "選挙",
+    "政党",
+    "政治家",
+    "宗教",
+    "信仰",
+    "宗教団体"
+  ],
+  "competitors": [],
+  "theme_seeds": [
+    {
+      "title": "上司「残業代はやる気で払う」",
+      "angle": "理不尽な発言をしたブラック上司が、部下の一斉退職で詰むまでのスレ。スカッと系"
+    },
+    {
+      "title": "スレ主「彼女の手料理が壊滅的」",
+      "angle": "惚気のつもりが途中で全員が真顔になる。恋愛×笑える系の王道"
+    },
+    {
+      "title": "バイト先に伝説の店長がいた",
+      "angle": "非常識な店長エピソードの積み上げから、最後の1レスで評価が反転する構成"
+    },
+    {
+      "title": "同僚「その手柄、俺のことにしていい？」",
+      "angle": "手柄横取り同僚が自分の嘘で自滅する因果応報スレ"
+    },
+    {
+      "title": "合コンで場を凍らせた一言",
+      "angle": "友人の天然発言で空気が死ぬ。短尺で笑いを取る鉄板ネタ"
+    },
+    {
+      "title": "義実家に呼ばれた日の話",
+      "angle": "理不尽な要求を静かに撃退する嫁のスカッと系スレ"
+    },
+    {
+      "title": "先輩「新人は雑用だけしてろ」",
+      "angle": "見下していた新人が実は最重要人物だったという逆転構造"
+    },
+    {
+      "title": "彼氏のスマホが鳴り止まない",
+      "angle": "浮気発覚スレ。修羅場の展開をレスの応酬で見せる"
+    },
+    {
+      "title": "隣人トラブルを管理会社に相談した結果",
+      "angle": "騒音トラブルが第三者の介入で綺麗に片付くスカッと系"
+    },
+    {
+      "title": "先生「この問題が解けない奴は落ちこぼれ」",
+      "angle": "学校ネタ。煽った教師が生徒の解答で黙る展開"
+    },
+    {
+      "title": "スレ主、面接で全部正直に答える",
+      "angle": "常識外れの受け答えなのになぜか受かる。笑える系"
+    },
+    {
+      "title": "深夜のコンビニで会った客の話",
+      "angle": "不気味な客のエピソード。怖い話枠の箸休め"
+    },
+    {
+      "title": "会社の飲み会で財布を出さない先輩",
+      "angle": "たかり先輩が全員の共謀で自爆するスカッと系"
+    },
+    {
+      "title": "元カノから10年ぶりに連絡が来た",
+      "angle": "懐かしさから始まって、途中で目的が判明する恋愛スレ"
+    },
+    {
+      "title": "母親が勝手に部屋を片付けた結果",
+      "angle": "家族ネタ。被害の申告が一つずつ増えていく積み上げ型の笑い"
+    }
+  ],
+  "characters": {
+    "ユイ": {
+      "side": "left",
+      "speaker_id": 2,
+      "dir": "yui",
+      "text_color": [
+        255,
+        225,
+        130
+      ],
+      "expressions": [
+        "normal",
+        "happy",
+        "surprise",
+        "angry"
+      ],
+      "thumb_dir": "yui",
+      "thumb_expression": "surprise",
+      "role": "読み上げ役（毎日スレを巡回している掲示板住人の女の子。テンポよく煽りながらスレを読む）",
+      "appearance": "young Japanese anime girl named Yui with short orange bob hair and bright amber eyes, wearing a hoodie with a chat-bubble print and oversized headphones around her neck, grinning mischievous expression, chibi-style with a big round head and big eyes, colorful pop explainer character"
+    },
+    "ゴロー": {
+      "side": "right",
+      "speaker_id": 3,
+      "dir": "goro",
+      "text_color": [
+        150,
+        225,
+        255
+      ],
+      "expressions": [
+        "normal",
+        "happy",
+        "surprise",
+        "angry"
+      ],
+      "thumb_dir": "goro",
+      "thumb_expression": "angry",
+      "role": "リアクション役（スレに全力で乗っかる男の子。ツッコミと『は？』担当）",
+      "appearance": "young Japanese anime boy named Goro with messy dark blue hair and big expressive eyes, wearing a plain t-shirt with an anonymous mask print and a smartphone in hand, exaggerated shocked reaction, chibi-style with a big round head and big eyes, colorful pop explainer character"
+    }
+  },
+  "publish_settings": {
+    "auto_publish": false,
+    "default_privacy": "public",
+    "short_delay_minutes": 10,
+    "short_description_template": "🎬 他のスレまとめはこちら！\n{main_url}\n\n{original_description}"
+  },
+  "description_template": {
+    "main_intro": "{title}のスレを、ユイとゴローがゆっくり読み上げます。\n笑える話・職場のヤバい人・恋愛の修羅場・スカッとする話まで、掲示板の名スレを30秒でまとめてお届け。\n※本動画は掲示板の投稿をもとにした再構成・創作を含むエンタメコンテンツです。実在の人物・団体とは関係ありません。\nお前らならどうする？ コメントで教えてください！",
+    "main_hashtags": "#2ch #2chまとめ #5ch #ゆっくり解説 #面白い話 #スカッとする話",
+    "short_hashtags": "#shorts #2ch #2chまとめ #ゆっくり #面白い話 #スカッと"
+  },
+  "thumbnail_template": {
+    "badge_text": "スレまとめ",
+    "badge_color": [
+      220,
+      30,
+      30
+    ],
+    "hook_color": [
+      255,
+      235,
+      60
+    ],
+    "subtitle_color": [
+      150,
+      225,
+      255
+    ],
+    "style_hint": "競合『2chショートまとめ』系の高クリック率サムネ路線に寄せる。\n- 背景は赤・黄・オレンジの強い暖色ベタ or 集中線。暗いホラー調にはしない。掲示板のスレ画面風の白帯・レス番号（>>1 / >>47）を装飾に混ぜると『まとめ感』が出る。\n- line1（白）は発言の引用・前振り（例: 『上司「残業代はやる気で払え」』）。line2（黄・極太）が核となる衝撃（『→ 3ヶ月後、部署が消えた』『全員が黙った』）でインパクト最大化。\n- line3_badge は赤で『衝撃』『悲惨な末路』『因果応報』『スカッと』などの強いワード。sub_text は『職場スレ』『恋愛スレ』のようにジャンルを出す。\n- 人物はいらすとや的なシンプルでコミカルな人物イラスト、または汗・怒りマーク・?!の記号で感情を表現する。写実的な人物写真は使わない。\n- 文字は極太ゴシック＋黒の強い縁取り（4-6px）、黄色文字には赤の二重縁取りで視認性を最大化。感嘆符・集中線・吹き出しを積極的に使う。\n- 実在の人物・企業ロゴは絶対に載せない。politicalな記号・宗教的シンボルも使わない。"
+  },
+  "defaults": {
+    "speed": 1.35,
+    "target_duration": 45,
+    "bg_type": "static",
+    "bg_path": null,
+    "short_bg_query": "bright pop abstract background red yellow comic",
+    "short_overlay_style": {
+      "opening": {
+        "font_size_max": 104,
+        "font_size_min": 72,
+        "stroke_width": 8,
+        "glow_stroke_extra": 7,
+        "dim_alpha": 110,
+        "punch_start_scale": 0.88
+      }
+    },
+    "use_illustrations": true,
+    "hashtags": [
+      "#2ch",
+      "#2chまとめ",
+      "#5ch",
+      "#ゆっくり",
+      "#面白い話",
+      "#スカッとする話"
+    ],
+    "category": "24"
+  },
+  "content_policy": {
+    "tone": "テンポの速い掲示板ノリ（笑いと共感が主・怖い話は少量）",
+    "age_rating": "teen_plus",
+    "cta_position": "after_hook",
+    "cta_style": "casual",
+    "guidelines": [
+      "掲示板の投稿をもとにした再構成・創作を含むエンタメである旨を概要欄に明記する",
+      "登場人物は必ず匿名化する（『上司のA』『同僚のB』）。実在の人物・企業・学校を特定できる形にしない",
+      "笑い・共感・スカッとを軸にする。特定の属性や個人を叩いて笑いを取らない",
+      "1本30秒前後・1スレ1オチに絞り、オチのレスまでテンポを落とさない",
+      "画像はいらすとや的なシンプルなイラストや記号で構成し、実在人物の写真・企業ロゴは使わない"
+    ],
+    "avoid": [
+      "政治・宗教に関する話題",
+      "実在の個人・企業・学校の特定や晒し",
+      "差別・誹謗中傷",
+      "性的に露骨な描写",
+      "過度なグロ・自傷描写",
+      "オチの無いスレ"
+    ]
+  },
+  "video_format": {
+    "layout": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "char_canvas_w_ratio": 0.418,
+      "char_y_offset": 130,
+      "char_x_inset_ratio": 0.15,
+      "speaker_glow": true,
+      "nonspeaker_opacity": 0.5,
+      "text_box_height_ratio": 0.2,
+      "text_box_opacity": 190,
+      "text_font_size": 44,
+      "text_stroke_width": 3,
+      "text_line_spacing": 4,
+      "text_margin_x": 60,
+      "illustration_size": 360,
+      "illustration_interval": 30
+    },
+    "colors": {
+      "bg_color": [
+        30,
+        30,
+        40,
+        255
+      ],
+      "text_box_color": [
+        0,
+        0,
+        0
+      ],
+      "text_stroke_color": [
+        0,
+        0,
+        0
+      ]
+    },
+    "audio": {
+      "speed": 1.35,
+      "pause_between": 0.25,
+      "bgm_volume": 0.3,
+      "bgm_path": null
+    },
+    "illustration_style": {
+      "style": "vivid",
+      "format": "portrait",
+      "art_style": "simple flat cartoon illustration in the style of free Japanese clip-art (いらすとや) — rounded shapes, thick clean outlines, cheerful primary colors on a white background, exaggerated comedic facial expressions with sweat drops, anger marks and question marks. No realism, no photos, no gore.",
+      "background": "plain white or light comic background with speed lines and speech bubbles, thin red frame border",
+      "include_characters": false,
+      "frame_style": "comic-red-border",
+      "extra_prompt": "Compose like a bulletin-board thread panel: a speech bubble containing a short Japanese line, a >>number style tag in the corner, and one comically exaggerated anonymous person reacting. Keep every person generic and anonymous — no real people, no logos, no text-heavy paragraphs.",
+      "allow_text_labels": true,
+      "allow_frame": true
+    },
+    "branding": {
+      "watermark_text": "スレまとめ劇場",
+      "cta_style": "casual",
+      "source_credit": "※掲示板の投稿をもとにした再構成・創作を含みます。実在の人物・団体とは関係ありません",
+      "source_credit_opacity": 150,
+      "source_credit_font_size": 20,
+      "source_credit_font_size_short": 26
+    },
+    "output": {
+      "target_duration": 45,
+      "gen_type": "short",
+      "bg_type": "static",
+      "bg_path": null,
+      "use_illustrations": true
+    },
+    "youtube": {
+      "channel_id": "",
+      "default_tags": [
+        "2ch",
+        "2chまとめ",
+        "5ch",
+        "ゆっくり",
+        "ゆっくり解説",
+        "面白い話",
+        "スカッとする話",
+        "職場",
+        "恋愛"
+      ],
+      "default_category": "24",
+      "privacy_status": "private",
+      "upload_schedule": null
+    },
+    "analytics": {
+      "enabled": true,
+      "fetch_retention_for": 5,
+      "performance_threshold": {
+        "min_ctr": 4,
+        "min_retention": 40,
+        "min_views_7d": 1000
+      }
+    },
+    "short_illustrations": {
+      "enabled": true,
+      "illustration_method": "pillow",
+      "max_count": 2,
+      "card_style": "textbook",
+      "card_label": "スレまとめ",
+      "card_accent": [
+        220,
+        30,
+        30
+      ],
+      "card_x": 64,
+      "card_y": 250,
+      "card_w": 952,
+      "card_h": 430,
+      "char_cy": 905,
+      "char_icon_d": 210,
+      "image_mode": "generate"
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "pop",
+      "allow_shake": true,
+      "allow_flash": true,
+      "allow_pixelate": false,
+      "allow_glitch": false,
+      "allow_tint": true,
+      "shake_max_px": 12,
+      "zoom_max": 0.08,
+      "transition_duration": 0.35
+    },
+    "persona": {
+      "age_group": "20代",
+      "gender": "男女",
+      "interest_categories": [
+        "エンタメ"
+      ],
+      "content_depth": "ライト"
+    }
+  },
+  "autopilot": {
+    "enabled": true,
+    "schedule": {
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "hour": 9,
+      "minute": 0,
+      "times": [
+        {
+          "hour": 9,
+          "minute": 0
+        },
+        {
+          "hour": 21,
+          "minute": 0
+        }
+      ]
+    },
+    "duration_minutes": 12,
+    "gen_type": "short",
+    "theme_queue": []
+  }
+}
