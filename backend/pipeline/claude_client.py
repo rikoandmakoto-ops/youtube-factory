@@ -140,7 +140,11 @@ def call_claude_json(
             model=model,
             max_tokens=max_tokens,
             temperature=temperature,
-            system=system_full,
+            # system は呼び出し間で固定・user だけ変わるので、system 末尾に breakpoint を
+            # 置いて共通プレフィックス（system + 直前の tools）をキャッシュする
+            system=[{"type": "text",
+                     "text": system_full,
+                     "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": user}],
         )
     except Exception as e:
@@ -239,7 +243,10 @@ def call_claude_vision_json(
             model=model,
             max_tokens=max_tokens,
             temperature=temperature,
-            system=system_full,
+            # 画像は毎回変わるので breakpoint は system 末尾のみ（画像より前が共通プレフィックス）
+            system=[{"type": "text",
+                     "text": system_full,
+                     "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": content_blocks}],
         )
     except Exception as e:

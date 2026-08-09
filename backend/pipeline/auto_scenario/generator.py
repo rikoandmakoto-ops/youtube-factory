@@ -233,7 +233,10 @@ class ScenarioGenerator:
             model=use_model,
             max_tokens=int(max_tokens),
             temperature=float(temperature),
-            system=system_full,
+            # シナリオ生成は system が固定・user だけ変わるので、system 末尾に breakpoint
+            system=[{"type": "text",
+                     "text": system_full,
+                     "cache_control": {"type": "ephemeral"}}],
             messages=user_assistant or [{"role": "user", "content": ""}],
         )
 

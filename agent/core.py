@@ -34,6 +34,29 @@ def _now_iso() -> str:
     return datetime.now().isoformat(timespec="seconds")
 
 
+# --- プロンプトキャッシュ --------------------------------------------------
+# リクエストは tools → system → messages の順にレンダリングされる。system の最後の
+# ブロックに breakpoint を置くと tools + system がまとめてキャッシュされ、サイクルを
+# またいで再利用される。会話履歴側は _roll_cache_breakpoint で 1 個だけ前進させる。
+CACHE_CONTROL = {"type": "ephemeral"}
+
+
+def _roll_cache_breakpoint(messages: list[dict], blocks: list[dict]) -> None:
+    """履歴の breakpoint を最新の tool_result 群の末尾へ前進させる。
+
+    breakpoint は 1 リクエスト 4 個まで。ステップごとに付け足すと上限に当たるので、
+    既存のものを外してから最新ブロックに 1 つだけ付け直す。
+    """
+    for m in messages:
+        content = m.get("content")
+        if isinstance(content, list):
+            for b in content:
+                if isinstance(b, dict):
+                    b.pop("cache_control", None)
+    if blocks:
+        blocks[-1]["cache_control"] = dict(CACHE_CONTROL)
+
+
 class AutonomousAgent:
     def __init__(
         self,
@@ -122,7 +145,10 @@ class AutonomousAgent:
                 resp = self.client.messages.create(
                     model=self.config.model,
                     max_tokens=self.config.max_tokens,
-                    system=self._system_prompt(),
+                    # 最後の system ブロックの breakpoint が tools + system を丸ごとキャッシュする
+                    system=[{"type": "text",
+                             "text": self._system_prompt(),
+                             "cache_control": dict(CACHE_CONTROL)}],
                     tools=self.registry.specs(),
                     messages=messages,
                 )
@@ -167,6 +193,8 @@ class AutonomousAgent:
                     "content": json.dumps(result, ensure_ascii=False, default=str),
                 })
 
+            # 次リクエストで履歴全体がキャッシュヒットするよう breakpoint を前進させる
+            _roll_cache_breakpoint(messages, tool_results)
             messages.append({"role": "user", "content": tool_results})
         else:
             print("\n⚠️  max_steps に到達。サイクルを打ち切ります。")
