@@ -3765,10 +3765,16 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         if can_run:
             from pipeline import pillow_illustration
 
+            # 理科系アイコンの語句マッチ。実話系スレのように図解が題材と噛み合わない
+            # チャンネルは short_illustrations.keyword_icons: false で切る
+            # （部分一致で「月額」→月、「黙った」→視覚 のような無関係な図が出るため）。
+            use_kw_icons = si_cfg.get("keyword_icons", True)
+
             def _draw_pillow(topic, idx, entry_idx, reason=""):
                 img = pillow_illustration.generate_pillow_illustration(
                     topic, card_style=card_style, illust_style=illust_style,
-                    idx=idx, cache_dir=illust_cache, channel_id=channel_id)
+                    idx=idx, cache_dir=illust_cache, channel_id=channel_id,
+                    use_keyword_icons=use_kw_icons)
                 if img is not None:
                     tag = f" ({reason})" if reason else ""
                     print(f"  ✏️ [{idx+1}/{len(plans)}] Pillow drawn for line {entry_idx}{tag}")

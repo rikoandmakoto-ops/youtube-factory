@@ -510,11 +510,17 @@ def _match_textbook(topic):
     return found
 
 
-def _render_textbook(topic):
-    """daily-science: 透過背景に色付き解説図。"""
+def _render_textbook(topic, use_keyword_icons=True):
+    """daily-science: 透過背景に色付き解説図。
+
+    `_TEXTBOOK_KEYWORDS` は理科系の語彙で組んであるため、実話系スレ・雑談系の
+    チャンネルに使うと部分一致で無関係な図が出る（「月額いくら払えば」→ 月アイコン、
+    「全員が黙った」→ 視覚アイコン等）。図解が題材と噛み合わないチャンネルは
+    use_keyword_icons=False を渡して、テーマ語を大きく見せる分岐に倒す。
+    """
     img = Image.new("RGBA", (CANVAS_W, CANVAS_H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    found = _match_textbook(topic or "")
+    found = _match_textbook(topic or "") if use_keyword_icons else []
     accent = (74, 108, 212)
     label_col = (40, 50, 70)
 
@@ -543,10 +549,17 @@ def _render_textbook(topic):
     else:
         # キーワード未ヒット: テーマ語そのものを大きく見せる(電球固定はやめる)。
         snippet = (topic or "").strip().replace("\n", " ")
-        # 助詞・記号を落として要点だけ残す簡易処理
-        for junk in ("なぜ", "とは", "について", "の理由", "の正体", "の秘密", "！", "？", "!", "?", "…"):
+        # 助詞を落として要点だけ残す簡易処理。「！？」はセリフの温度を運ぶので残す
+        # （use_keyword_icons=False のチャンネルではこの分岐が主役の描画になる）。
+        for junk in ("なぜ", "とは", "について", "の理由", "の正体", "の秘密", "…"):
             snippet = snippet.replace(junk, " ")
-        snippet = " ".join(snippet.split())[:24] or "ポイント"
+        snippet = " ".join(snippet.split())
+        # 文の途中でぶつ切りにせず、句読点・記号で切れるならそこで閉じる
+        if len(snippet) > 24:
+            head = snippet[:24]
+            cut = max((head.rfind(c) for c in "。！？、」"), default=-1)
+            snippet = head[: cut + 1] if cut >= 12 else head
+        snippet = snippet or "ポイント"
         # 1行あたりの文字数で 2〜3 行に折り返し
         per_line = 8
         lines = [snippet[i:i + per_line] for i in range(0, len(snippet), per_line)][:3]
@@ -698,12 +711,15 @@ def _render_leaked(topic):
 # ==================================================================
 def generate_pillow_illustration(topic_text, *, card_style="textbook",
                                  illust_style=None, idx=0, cache_dir=None,
-                                 channel_id=None):
+                                 channel_id=None, use_keyword_icons=True):
     """テーマからローカル図解を描いて RGBA PIL Image を返す (APIコスト0)。
 
     card_style:
       "leaked-document" → scp-lab 流出文書風(モノクロ前提のダーク図)
       それ以外          → daily-science 教科書風(透過カラー図)
+
+    use_keyword_icons=False で理科系アイコンの語句マッチを止め、テーマ語を
+    大きく見せる描画に倒す（実話系スレなど、図解が題材と噛み合わないチャンネル用）。
     """
     if cache_dir:
         cache_path = Path(cache_dir) / f"pillow_{idx:03d}.png"
@@ -719,7 +735,7 @@ def generate_pillow_illustration(topic_text, *, card_style="textbook",
         if style == "leaked-document":
             img = _render_leaked(topic)
         else:
-            img = _render_textbook(topic)
+            img = _render_textbook(topic, use_keyword_icons=use_keyword_icons)
     except Exception as e:
         print(f"⚠️ pillow illustration draw failed: {e}")
         return None
