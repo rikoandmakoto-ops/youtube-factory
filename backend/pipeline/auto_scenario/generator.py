@@ -955,6 +955,54 @@ class ScenarioGenerator:
                 lines.append(f"  - {r}")
         return "\n".join(lines) + "\n\n"
 
+    def _short_rules_block(self, channel, short_target_chars: int,
+                           short_end_block: str) -> Optional[str]:
+        """ショート構成ルールを channel JSON で差し替える（未設定なら None）。
+
+        既定のショート構成ルールは日常科学系の「研究データ・数字・固有名詞を必ず
+        入れる解説ショート」向けにハードコードされている。大喜利・参加型スレのような
+        エンタメ系チャンネルでは voice_style をいくら口語にしても、この構成ルールが
+        「核となる事実に数字を入れろ」と要求し続けるため、語尾だけ2ch風の解説動画に
+        なってしまう。`channel._raw["short_format"]` を宣言したチャンネルだけ、この
+        ブロックを丸ごと自前の構成に差し替える:
+
+          "short_format": {
+            "line_count": 6,
+            "line_chars": "1〜5行目は20〜38字...",
+            "total_chars_min": 190, "total_chars_max": 260,
+            "structure": ["1行目=...", "2行目=..."],
+            "extra_rules": ["..."]
+          }
+
+        未設定チャンネル（daily-science / scp-lab など）は None が返り、従来の
+        文面がそのまま使われる（挙動不変）。
+        """
+        try:
+            raw = channel._raw or {}
+        except AttributeError:
+            raw = {}
+        sf = raw.get("short_format") or {}
+        structure = sf.get("structure") or []
+        if not isinstance(sf, dict) or not structure:
+            return None
+
+        n = sf.get("line_count", 6)
+        line_chars = sf.get("line_chars") or "1行あたり30〜45字、最終行のみ45〜70字を許容"
+        lo = sf.get("total_chars_min", short_target_chars - 30)
+        hi = sf.get("total_chars_max", short_target_chars + 50)
+
+        lines = [
+            "# ショート尺ルール(絶対厳守)",
+            f"- **short_scenarioは必ず{n}行**({line_chars})。",
+            f"- **総文字数は必ず{lo}〜{hi}字**で**約30〜35秒**を実現。",
+            f"- 構成({n}行固定):",
+        ]
+        lines += [f"  {s}" for s in structure]
+        block = "\n".join(lines) + "\n" + short_end_block
+        for r in (sf.get("extra_rules") or []):
+            block += f"- {r}\n"
+        return block
+
     def _build_yukkuri_prompt(self, channel, theme: Dict, target_duration: int) -> str:
         """ゆっくり対話スタイルのシナリオ生成プロンプト"""
         char_names = list(channel.characters.keys())
@@ -987,6 +1035,23 @@ class ScenarioGenerator:
         title_rule_block = self._title_rule_block(channel)
         short_end_block = self._short_end_line_block(channel)
 
+        short_rules_block = self._short_rules_block(
+            channel, short_target_chars, short_end_block
+        ) or f"""# ショート尺ルール(絶対厳守)
+- **short_scenarioは必ず6行**(1〜5行目は30〜45字目標38字、6行目のみ45〜70字を許容)。
+- **総文字数は必ず{short_target_chars-30}〜{short_target_chars+50}字**(目標{short_target_chars+20}字)で**約30〜35秒**を実現。
+- 構成(6行固定):
+  1行目=**衝撃フック(0〜3秒で指を止める・最重要)**: 視聴者が「え?なにそれ?」と脳がバグる一言から始める。挨拶・自己紹介・テーマ説明・前置きは完全禁止(1文字でもあれば不合格)。短く断定的に(目安15〜30字)、まだ答えは言わず「続きが気になる」状態だけを作る。以下のいずれかの型を必ず使う:
+    - 常識破壊型: 「実は〇〇、ぜんぶ間違いでした」「〇〇してる人、今すぐやめて」「〇〇は嘘です」
+    - 衝撃数字型: 「99%の人が知らないんだけど」「たった3秒で〇〇が変わる話」「世界に〇人しかいない」
+    - 禁断・警告型: 「これ言うと怒られるかもだけど」「閲覧注意。〇〇の正体」「知らない方が幸せだったかも」
+    - 違和感の問い型: 「なんで〇〇だけ〇〇なの?考えたことある?」「〇〇、よく見ると変じゃない?」
+  2行目=**追い打ちフック**: 1行目の謎をさらに煽るか、相手役が「えっ、どういうこと!?」と食いつくリアクションで視聴者の「気になる」を代弁する。ここでもまだ答えは出さない(情報を出し惜しみして"続きを見る理由"を作る)。
+  3〜4行目=**核となる事実**: ここに**具体的な数字・年号・%・研究データ・固有名詞のいずれか1つ以上を必ず含める**(例:「実は97%の人が…」「1923年に…」「東大の研究で…」)。「へぇ!」と感心させる中身を入れる。抽象論・一般論だけはNG。
+  5行目=**納得のオチ**: 短くスパッと結論。投げっぱなし禁止。
+{short_end_block}- 浅い感想・誰でも言える一般論(「すごいね」「びっくりだね」だけ)で行を埋めるのは不合格。1本のショートで最低1つは「初めて知った」と思わせる具体情報を入れること。
+"""
+
         return f"""ゆっくり解説動画のシナリオを生成。JSONのみ出力。
 
 {voice_block}# チャンネル: {channel.name} / {channel.concept} / トーン:{tone} / CTA:{cta_style}
@@ -1012,20 +1077,7 @@ class ScenarioGenerator:
 - 各行に研究データ・具体的数字・例え話・歴史エピソードを必ず盛る。短い相槌のみ(「うん」「そうだね」)禁止。
 - VOICEVOX1.3x≒7.8字/秒。{target_chars}字で約{target_duration/60:.1f}分、{max_chars}字で約{max_chars/7.8/60:.1f}分。
 
-# ショート尺ルール(絶対厳守)
-- **short_scenarioは必ず6行**(1〜5行目は30〜45字目標38字、6行目のみ45〜70字を許容)。
-- **総文字数は必ず{short_target_chars-30}〜{short_target_chars+50}字**(目標{short_target_chars+20}字)で**約30〜35秒**を実現。
-- 構成(6行固定):
-  1行目=**衝撃フック(0〜3秒で指を止める・最重要)**: 視聴者が「え?なにそれ?」と脳がバグる一言から始める。挨拶・自己紹介・テーマ説明・前置きは完全禁止(1文字でもあれば不合格)。短く断定的に(目安15〜30字)、まだ答えは言わず「続きが気になる」状態だけを作る。以下のいずれかの型を必ず使う:
-    - 常識破壊型: 「実は〇〇、ぜんぶ間違いでした」「〇〇してる人、今すぐやめて」「〇〇は嘘です」
-    - 衝撃数字型: 「99%の人が知らないんだけど」「たった3秒で〇〇が変わる話」「世界に〇人しかいない」
-    - 禁断・警告型: 「これ言うと怒られるかもだけど」「閲覧注意。〇〇の正体」「知らない方が幸せだったかも」
-    - 違和感の問い型: 「なんで〇〇だけ〇〇なの?考えたことある?」「〇〇、よく見ると変じゃない?」
-  2行目=**追い打ちフック**: 1行目の謎をさらに煽るか、相手役が「えっ、どういうこと!?」と食いつくリアクションで視聴者の「気になる」を代弁する。ここでもまだ答えは出さない(情報を出し惜しみして"続きを見る理由"を作る)。
-  3〜4行目=**核となる事実**: ここに**具体的な数字・年号・%・研究データ・固有名詞のいずれか1つ以上を必ず含める**(例:「実は97%の人が…」「1923年に…」「東大の研究で…」)。「へぇ!」と感心させる中身を入れる。抽象論・一般論だけはNG。
-  5行目=**納得のオチ**: 短くスパッと結論。投げっぱなし禁止。
-{short_end_block}- 浅い感想・誰でも言える一般論(「すごいね」「びっくりだね」だけ)で行を埋めるのは不合格。1本のショートで最低1つは「初めて知った」と思わせる具体情報を入れること。
-
+{short_rules_block}
 # 構成(full): 冒頭フック(3行) → 問題提起+本編宣言(3行) → 基本メカニズム(12行) → 詳細&研究データ(12行) → 意外な事実&歴史(10行) → 応用Tips(8行) → まとめ+次回予告+締めCTA(7行) = 計55行(目標{target_lines}行に届くまで各セクションを伸ばす)
 
 # 冒頭フックルール(超重要・冒頭5秒離脱対策・絶対厳守)
