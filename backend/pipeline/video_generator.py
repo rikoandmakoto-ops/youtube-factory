@@ -4728,32 +4728,65 @@ def generate_video_title(title, thumb_info=None, channel_dict=None):
         return f"{prefix}{title}"
 
 
+# YouTube のタイトル上限（100文字）。超えるとアップロード自体が 400 で弾かれる。
+YOUTUBE_TITLE_MAX = 100
+
+# タイトル本体を切る際に「ここで切ると自然」な区切り記号（後ろから探す）。
+_TITLE_BREAK_CHARS = ("——", "—", "…", "。", "！", "？", "」", "』", "）", "、")
+
+
+def _fit_title_core(core, budget):
+    """タイトル本体を budget 文字以内に収める。語の途中でぶつ切りにしない。"""
+    core = (core or "").strip()
+    if budget <= 0:
+        return ""
+    if len(core) <= budget:
+        return core
+    head = core[:budget]
+    # 後半にある区切り記号で切れるなら、そこで文として閉じる
+    for sep in _TITLE_BREAK_CHARS:
+        idx = head.rfind(sep)
+        if idx >= budget // 2:
+            return head[: idx + len(sep)].rstrip("、")
+    return head[: budget - 1].rstrip("、。") + "…"
+
+
 def generate_short_title(title, thumb_info=None, channel_dict=None):
     """
     YouTubeショートタイトル生成
-    型: [シリーズ名]＋フック質問＋テーマ名 #shorts
-    """
-    hook = ""
-    if thumb_info and thumb_info.get("hook_lines"):
-        hook = "".join(thumb_info["hook_lines"])
-    tagline = ""
-    if thumb_info and thumb_info.get("tagline"):
-        tagline = thumb_info["tagline"]
+    型: [シリーズ名]＋タイトル＋末尾ハッシュタグ
 
-    series_prefix = ""
-    if channel_dict:
-        series_prefix = channel_dict.get("short_series_name") or ""
+    サムネ用の hook_lines はタイトルに連結しない。以前は
+    ``f"{series}{hook}#{title} {tags}"`` としていたため、`#` 直後のフルタイトルが
+    巨大なハッシュタグに化けて表示されていた（例:
+    「30秒スレまとめ：残業代はやる気で払う#上司「残業代は…」）。
+    hook はサムネ用の断片（「残業代は」「やる気で払う」）で、タイトルとしては
+    重複かつ意味が通らないので、タイトルが空のときだけ代役に使う。
+
+    タイトルは YouTube の 100 文字上限に収める。削る順序は
+    シリーズ名 → 本体（末尾ハッシュタグは検索流入に効くので最後まで残す）。
+    """
+    series_prefix = ((channel_dict or {}).get("short_series_name") or "").strip()
 
     # 末尾ハッシュタグはチャンネル別に差し替え可能（未設定なら従来通り）。
     # ゆっくり系でないチャンネルに "#ゆっくり解説" が付くのを防ぐ。
     tags = ((channel_dict or {}).get("defaults") or {}).get("short_title_hashtags")
     if not tags:
         tags = "#shorts #ゆっくり解説"
+    tags = tags.strip()
 
-    if hook:
-        return f"{series_prefix}{hook}#{title} {tags}"
-    else:
-        return f"{series_prefix}{title} {tags}"
+    core = (title or "").strip()
+    if not core and thumb_info and thumb_info.get("hook_lines"):
+        core = "".join(thumb_info["hook_lines"]).strip()
+
+    suffix = f" {tags}" if tags else ""
+    budget = YOUTUBE_TITLE_MAX - len(suffix) - len(series_prefix)
+    if budget < 24:
+        # シリーズ名が長すぎて本体が潰れるなら、シリーズ名の方を落とす
+        series_prefix = ""
+        budget = YOUTUBE_TITLE_MAX - len(suffix)
+
+    return f"{series_prefix}{_fit_title_core(core, budget)}{suffix}"
 
 
 class _SafeFormatDict(dict):
