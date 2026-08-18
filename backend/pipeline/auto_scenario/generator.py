@@ -231,6 +231,25 @@ _TELOP_PACING_RULE_SHORT = """# テンポ・ルール(完視聴率対策・絶�
 - 行が進むごとに話の角度を変える(問い→驚き→数字→理由→意外な展開→オチ)。同じ調子の行を2つ続けない。
 """
 
+# 2026-08-19 追加: ショートは自動ループ再生される。最終行から1行目へ意味が
+# 繋がっていると視聴者が「もう一周」してしまい、再生回数と平均視聴時間が
+# 1本あたり 1.3〜2 倍に伸びる（ループはアルゴリズム上「完視聴」として効く）。
+# 逆に「ご視聴ありがとうございました」で閉じると、そこで確実に離脱する。
+_LOOP_RULE_SHORT = """# ループ構成ルール(再視聴率対策・絶対厳守)
+- ショートは**最後まで見ると自動で1行目に巻き戻る**。この一周を「もう一回見たい」に変えるのが目的。
+- ✅ **最後の内容行(オチ)は1行目に意味がつながるように書く**。視聴者が1行目を聞き直したとき、
+  「あ、そういう意味だったのか」と**意味が変わって聞こえる**状態を作る。
+  - 伏線回収型: 1行目の問いに対して、オチで「答えの半分」だけ返す（残りは1行目に戻ると分かる）。
+  - 前提逆転型: オチで前提をひっくり返し、1行目が別の意味に読めるようにする。
+  - 問い返し型: オチを「じゃあ〇〇は?」で閉じ、1行目の問いに戻る輪を作る。
+- ✅ **1行目は「途中から聞いても成立する」書き方にする**。巻き戻ってきた視聴者が
+  文脈なしでもう一周できるよう、冒頭で前の行を受ける指示語(「それは」「この」)を使わない。
+- ❌ **終わった感の出る締めは禁止**: 「以上です」「ご視聴ありがとうございました」
+  「まとめると」「いかがでしたか」は1文字でも入れたら不合格。そこで視聴者は確実に離れる。
+- ※ 最終行の登録CTAは上の構成ルール通り必ず入れる。ただし**話を終わらせず**、
+  オチの余韻に乗せたまま1行に収めること(CTAで話を締めくくらない)。
+"""
+
 
 def _series_hint_block(channel) -> str:
     """シリーズ化（連作ブランディング）の指示ブロック。
@@ -791,6 +810,134 @@ class ScenarioGenerator:
             "score": round(hit[1], 3),
         }
 
+    def _regenerate_title_for_ctr(
+        self,
+        channel,
+        theme: Dict,
+        scenario_data: Dict[str, Any],
+        weak_title: str,
+        advice: List[str],
+    ) -> Optional[str]:
+        """CTR が弱いタイトルを、具体的な改善指示つきで作り直す。
+
+        `_regenerate_title`（重複対策）と違い、禁止リストではなく
+        「何が足りないか」を渡す。落第の理由が数字欠落なのか説明語尾なのかは
+        `title_quality.score_title` が判定済みなので、それをそのまま指示にする。
+        """
+        hook_lines: List[str] = []
+        for line in (scenario_data.get("short_scenario")
+                     or scenario_data.get("full_scenario") or [])[:4]:
+            text = line.get("text") if isinstance(line, dict) else ""
+            if text:
+                hook_lines.append(str(text))
+        advice_block = "\n".join(f"  - {a}" for a in advice) or "  - より強いフックにする"
+        prompt = (
+            f"YouTubeショートのタイトルを1つだけ作り直してください。\n\n"
+            f"# チャンネル\n{channel.name}（{channel.concept}）\n\n"
+            f"# 動画のテーマ\n{theme.get('title', '')}\n"
+            f"切り口: {theme.get('angle', '') or '(指定なし)'}\n\n"
+            f"# 本編の冒頭\n" + ("\n".join(hook_lines) or "(なし)") + "\n\n"
+            f"# 今のタイトル（クリック率が弱いので却下）\n「{weak_title}」\n\n"
+            f"# 必ず直すこと\n{advice_block}\n\n"
+            f"# 条件\n"
+            f"- 内容の意味は変えず、クリックしたくなる言い方に変える。\n"
+            f"- 48文字以内。結論・答えは書かない（伏せたまま気にさせる）。\n"
+            f"- 先頭に【】のプレフィックスを付けない。\n"
+            f"- タイトル本文のみを出力（前置き・引用符・番号なし）。\n"
+        )
+        try:
+            self._current_channel_id = channel.id
+            self._current_purpose = "title_ctr_regen"
+            raw = self._call_text_with_fallback(
+                [
+                    {"role": "system", "content": "タイトル1行のみ出力。説明・引用符は不要。"},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.9,
+                max_tokens=200,
+                gpt_model=GPT_MODEL_LIGHT,
+            )
+        except Exception as e:
+            print(f"  ⚠️ CTR title regeneration failed: {e}")
+            return None
+        title = (raw or "").strip().splitlines()[0].strip() if (raw or "").strip() else ""
+        return title.strip("「」\"'　 ") or None
+
+    def _enforce_title_quality(self, channel, theme: Dict, result: Dict[str, Any],
+                               scenario_data: Dict[str, Any]) -> None:
+        """最終タイトルの CTR スコアが基準未満なら作り直す。
+
+        プロンプト（`_title_rule_block`）で数字・感情ワード・疑問形を要求しているが、
+        LLM はしばしば落とす。生成後に決定論的に採点し、落第したら最大2回まで
+        作り直して「候補の中で最高スコア」を採用する（作り直しが全部弱ければ
+        元のタイトルのまま進む — 投稿を止めるより弱いタイトルの方がマシ）。
+
+        `content_policy.title_quality_gate: false` を宣言したチャンネルは無効化できる。
+        """
+        try:
+            from pipeline import title_quality as _tq
+        except Exception as e:
+            print(f"  ⚠️ title quality gate disabled: {e}")
+            return
+
+        try:
+            if (channel.content_policy or {}).get("title_quality_gate") is False:
+                return
+        except AttributeError:
+            pass
+
+        try:
+            raw = channel._raw or {}
+        except AttributeError:
+            raw = {}
+
+        title = (result.get("title") or "").strip()
+        if not title:
+            return
+
+        detail = _tq.score_title(title, raw)
+        result["title_quality"] = {
+            "score": detail["score"],
+            "passed": detail["passed"],
+            "reasons": detail["reasons"],
+        }
+        if detail["passed"]:
+            print(f"  ✅ タイトルCTRスコア {detail['score']}: {title}")
+            return
+
+        print(
+            f"  📉 タイトルCTRスコア {detail['score']} (<{_tq.PASS_SCORE}) — "
+            f"{' / '.join(detail['reasons'])} → 作り直します"
+        )
+
+        candidates = [title]
+        advice = detail["advice"]
+        for attempt in range(2):
+            cand = self._regenerate_title_for_ctr(
+                channel, theme, scenario_data, candidates[-1], advice
+            )
+            if not cand:
+                break
+            candidates.append(cand)
+            cand_detail = _tq.score_title(cand, raw)
+            print(f"  ↻ 再生成 {attempt + 1}/2: [{cand_detail['score']}] {cand}")
+            if cand_detail["passed"]:
+                break
+            advice = cand_detail["advice"]
+
+        best = _tq.best_of(candidates, raw)
+        if best["title"] and best["title"] != title:
+            result.setdefault("original_title", title)
+            result["title"] = best["title"]
+            print(f"  ✅ タイトルを差し替えました [{best['score']}]: {best['title']}")
+        result["title_quality"] = {
+            "score": best["score"],
+            "passed": best["score"] >= _tq.PASS_SCORE,
+            "reasons": best["detail"]["reasons"],
+            "rejected_title": title if best["title"] != title else None,
+            "attempts": len(candidates) - 1,
+        }
+
     def _pick_seed_avoiding_past(self, channel) -> Dict:
         """theme_seeds から過去に使ったものを除外して選ぶ。
 
@@ -924,8 +1071,16 @@ class ScenarioGenerator:
             "「〜について」「〜とは」「〜を解説」のような説明語尾は禁止。",
             "- ✅ **感情を動かす語を必ず1つ以上**入れる: "
             "実は / なぜ / だけ / 本当は / 知らない / やめて / ヤバい / 全員 / 99% / 3秒。",
+            # 2026-08-19: 生成タイトルを CTR 採点（pipeline.title_quality）に通すように
+            # したので、採点で加点される要素をプロンプト側でも明示して基準を揃える。
+            # 数字はクリック率に効くわりに落とされやすいので独立した項目にする。
+            "- ✅ **具体的な数字を必ず1つ入れる**: 「99%」「3秒」「5つ」「2倍」「17件」など。"
+            "体感できる小さい数字ほど強い（「たくさん」「多くの」のような曖昧な量は不可）。",
+            "- ✅ 「あなた」「君」など**視聴者を直接指す語**を入れると自分ゴト化して伸びる。",
             f"- **全角{hard_cap}文字以内**(投稿時に末尾ハッシュタグを足すため、"
             "これを超えるとタイトルが途中で切られる)。",
+            "- ※ 出力後にクリック率スコアで自動採点され、基準未満だと作り直しになる。"
+            "「数字」「感情ワード」「疑問形(答えを伏せる)」の3点を最初から満たすこと。",
         ]
 
         if title_style:
@@ -1343,6 +1498,7 @@ class ScenarioGenerator:
 {short_rules_block}
 {hook_rule_block}
 {_TELOP_PACING_RULE_SHORT}
+{_LOOP_RULE_SHORT}
 {cliffhanger_block}{series_block}# 構成(full): 冒頭フック(3行) → 問題提起+本編宣言(3行) → 基本メカニズム(12行) → 詳細&研究データ(12行) → 意外な事実&歴史(10行) → 応用Tips(8行) → まとめ+次回予告+締めCTA(7行) = 計55行(目標{target_lines}行に届くまで各セクションを伸ばす)
 
 # 冒頭フックルール(超重要・冒頭5秒離脱対策・絶対厳守)
@@ -1484,6 +1640,7 @@ class ScenarioGenerator:
 {short_rules_block}
 {hook_rule_block}
 {_TELOP_PACING_RULE_SHORT}
+{_LOOP_RULE_SHORT}
 {cliffhanger_block}{series_block}# 雰囲気タグ(mood)ルール — シーンごとのBGM切替に使用
 - 各行(章タイトル含む)に必ず "mood" を付与する。値は次の6種類のいずれか:
   - "calm"(穏やか) / "bright"(明るい) / "tense"(緊張・衝撃)
@@ -2233,6 +2390,9 @@ class ScenarioGenerator:
         # 「どの経路で決まったタイトルであれ」既存動画とほぼ同一なら作り直す。
         if avoid_duplicate_theme:
             self._reject_duplicate_title(channel, theme, result, scenario_data)
+
+        # CTR 品質ゲート。重複ゲートの後に置く（重複解消で入れ替わったタイトルも採点する）。
+        self._enforce_title_quality(channel, theme, result, scenario_data)
 
         return result
 
