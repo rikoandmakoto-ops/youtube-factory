@@ -62,6 +62,35 @@ THEME_DUP_BLOCK_THRESHOLD = 0.8
 # シナリオ本体は既に生成済みのため「ほぼ確実に同じ動画」だけを対象にする。
 TITLE_DUP_REJECT_THRESHOLD = 0.9
 
+# ファクトオーバーレイ（company-facts）の尺モデル。
+# 1画面 = ナレーション 25〜40字（VOICEVOX 1.3x の実効 8.9字/秒で 2.8〜4.5秒）+ 間 ≒ 5秒。
+# 末尾の CTA 画面は固定文言なので約6秒で見積もる。
+# fact_count と1画面の文字数をこの2定数から逆算して、指定尺と実尺のズレを潰す。
+_FACTS_SECONDS_PER_SCREEN = 5.0
+_FACTS_CTA_SECONDS = 6.0
+
+# ショートの最適尺。これを外れた値が渡ってきたら丸める。
+SHORT_DURATION_MIN = 30
+SHORT_DURATION_MAX = 50
+SHORT_DURATION_DEFAULT = 40
+
+
+def _clamp_short_duration(channel, target_duration: Optional[int]) -> int:
+    """ショート専用スタイルの目標尺を 30〜50 秒に丸める。
+
+    autopilot は長尺用の `duration_minutes`（既定12分）から target_duration=720 を
+    渡してくるので、ショート専用チャンネルではそのまま使えない。チャンネルの
+    `defaults.target_duration` がショート帯なら優先し、無ければ既定 40 秒。
+    """
+    try:
+        configured = int((channel.defaults or {}).get("target_duration") or 0)
+    except (AttributeError, TypeError, ValueError):
+        configured = 0
+    for cand in (target_duration or 0, configured):
+        if SHORT_DURATION_MIN <= int(cand) <= SHORT_DURATION_MAX:
+            return int(cand)
+    return SHORT_DURATION_DEFAULT
+
 # =====================================================================
 # early 区間（15〜25%地点）の離脱対策ルール
 #
@@ -921,7 +950,7 @@ class ScenarioGenerator:
     def _short_end_line_block(self, channel, line_no: int = 7) -> str:
         """short_scenario の最終行（締めCTA）の指示ブロックを返す。
 
-        `line_no` は締めCTAが何行目かを表す（既定の構成は7行 = 7行目、
+        `line_no` は締めCTAが何行目かを表す（既定の構成は8行 = 8行目、
         channel JSON の short_format を持つチャンネルはその line_count）。
 
         既定は従来どおり「①登録CTA → ②関連動画CTA」。ただし長尺を作らない
@@ -1161,6 +1190,13 @@ class ScenarioGenerator:
         )
         return "\n".join(lines) + "\n"
 
+    # ショート台本の目標総文字数。
+    # 実測（2026-08、daily-science / pokemon-lab / yokai-watch の投稿済み 40 本）では
+    # 250字目標に対して仕上がりが 25〜33 秒（中央値 28 秒）に落ちていた。
+    # VOICEVOX 1.3x の実効読み上げ速度が約 8.9 字/秒（想定の 7.8 字/秒より速い）ためで、
+    # 最も伸びる 30〜45 秒帯の下限を割っていた。実効速度から逆算し 310字 ≒ 35秒 を目標にする。
+    SHORT_TARGET_CHARS = 310
+
     def _short_rules_block(self, channel, short_target_chars: int,
                            short_end_block: str) -> Optional[str]:
         """ショート構成ルールを channel JSON で差し替える（未設定なら None）。
@@ -1231,10 +1267,10 @@ class ScenarioGenerator:
         max_chars = int(target_duration * 9.0)  # 上限: 約12分の音声を超えない
         floor_lines = 55
         floor_chars = 4800
-        # 7行 × 平均30字 + CTA行55字 ≒ 250字 ≒ 32秒（ショート最適尺 30〜45秒）。
+        # 7行 × 平均36字 + CTA行58字 ≒ 310字 ≒ 35秒（ショート最適尺 30〜45秒）。
         # 行を増やして1行を短くしたのは、テロップの切替を 3〜4 秒ごとに起こして
         # 完視聴率を上げるため（2026 ショート・アルゴリズム対策）。
-        short_target_chars = 250
+        short_target_chars = self.SHORT_TARGET_CHARS
         cta_style = channel.content_policy.get("cta_style", "casual")
         tone = channel.content_policy.get("tone", "friendly")
         expr0 = channel.characters[c0].get("expressions", ["normal"])
@@ -1250,24 +1286,26 @@ class ScenarioGenerator:
             _sf = (channel._raw or {}).get("short_format") or {}
         except AttributeError:
             _sf = {}
-        short_line_count = int(_sf.get("line_count") or 7)
+        # 既定構成は8行(7本編+CTA)。channel JSON の short_format.line_count で上書き可。
+        short_line_count = int(_sf.get("line_count") or 8)
         short_end_block = self._short_end_line_block(channel, short_line_count)
         series_block = _series_hint_block(channel)
-        cliffhanger_block = _cliffhanger_block(channel, last_content_line="6行目のオチ")
+        cliffhanger_block = _cliffhanger_block(channel, last_content_line="7行目のオチ")
 
         short_rules_block = self._short_rules_block(
             channel, short_target_chars, short_end_block
         ) or f"""# ショート尺ルール(絶対厳守)
-- **short_scenarioは必ず7行**(1〜6行目は24〜36字目標30字、7行目のみ45〜70字を許容)。
-- **総文字数は必ず{short_target_chars-30}〜{short_target_chars+40}字**(目標{short_target_chars}字)で**約30〜40秒**を実現。ショートは**30〜45秒が最も伸びる**。25秒未満はリーチが激減するので絶対に短くしすぎない。
+- **short_scenarioは必ず8行**(1〜7行目は30〜42字目標36字、8行目のみ45〜70字を許容)。
+- **総文字数は必ず{short_target_chars-30}〜{short_target_chars+40}字**(目標{short_target_chars}字)で**約33〜40秒**を実現。ショートは**30〜45秒が最も伸びる**。30秒未満はリーチが激減するので絶対に短くしすぎない。
 - **1行=1テロップ**。各行は3〜4秒で読み切れる長さに収め、画面の文字が次々入れ替わるテンポを作る。
-- 構成(7行固定):
+- 構成(8行固定):
   1行目=**3秒フック(最重要)**: 後述の「冒頭3秒ルール」で今回指定された型で書く。挨拶・自己紹介・テーマ説明・前置きは1文字でも入れたら不合格。15〜30字で断定的に、まだ答えは言わない。
   2行目=**追い打ちフック**: 1行目の謎をさらに煽るか、相手役が「えっ、どういうこと!?」と食いつくリアクションで視聴者の「気になる」を代弁する。ここでもまだ答えは出さない(出し惜しみして"続きを見る理由"を作る)。
   3行目=**核となる事実①**: **具体的な数字・年号・%・研究データ・固有名詞のいずれか1つ以上を必ず含める**(例:「実は97%の人が…」「1923年に…」「東大の研究で…」)。抽象論・一般論だけはNG。
   4行目=**理由 / 核となる事実②**: ①の「なぜ」を**1つだけ**答える。ここで全部は明かさない。
-  5行目=**意外な展開**: 「しかも」「ところが」「さらにヤバいのが」で角度を変え、飽きが来る中盤を断ち切る一撃を必ず置く。
-  6行目=**オチ**: 短くスパッと結論。投げっぱなし禁止。
+  5行目=**自分ゴト化**: 3〜4行目を視聴者の日常の場面に言い換える(「だから朝イチの一杯が…」「今この瞬間もあなたの…」)。ここで「自分にも起きてる」と思わせて中盤の離脱を止める。新しい事実は足さない。
+  6行目=**意外な展開**: 「しかも」「ところが」「さらにヤバいのが」で角度を変え、飽きが来る中盤を断ち切る一撃を必ず置く。
+  7行目=**オチ**: 短くスパッと結論。投げっぱなし禁止。
 {short_end_block}- 浅い感想・誰でも言える一般論(「すごいね」「びっくりだね」だけ)で行を埋めるのは不合格。1本のショートで最低1つは「初めて知った」と思わせる具体情報を入れること。
 """
 
@@ -1367,7 +1405,7 @@ class ScenarioGenerator:
         max_chars = int(target_duration * 9.0)
         floor_lines = 48
         floor_chars = 4800
-        short_target_chars = 250
+        short_target_chars = self.SHORT_TARGET_CHARS
         tone = channel.content_policy.get("tone", "serious_documentary")
         cta_pos = channel.content_policy.get("cta_position", "end_only")
 
@@ -1378,26 +1416,28 @@ class ScenarioGenerator:
             _sf = (channel._raw or {}).get("short_format") or {}
         except AttributeError:
             _sf = {}
-        short_line_count = int(_sf.get("line_count") or 7)
+        # 既定構成は8行(7本編+CTA)。channel JSON の short_format.line_count で上書き可。
+        short_line_count = int(_sf.get("line_count") or 8)
         short_end_block = self._short_end_line_block(channel, short_line_count)
         series_block = _series_hint_block(channel)
-        cliffhanger_block = _cliffhanger_block(channel, last_content_line="6行目のオチ")
+        cliffhanger_block = _cliffhanger_block(channel, last_content_line="7行目のオチ")
 
         # ゆっくり系と同じく channel JSON の short_format / content_policy.short_end_line を
         # 反映させる。未設定チャンネルは従来の文面（下の既定ブロック）がそのまま使われる。
         short_rules_block = self._short_rules_block(
             channel, short_target_chars, short_end_block
         ) or f"""# ショート尺ルール(絶対厳守)
-- **short_scenarioは必ず7行**(1〜6行目は24〜36字目標30字、7行目のみ45〜70字を許容)。
-- **総文字数は必ず{short_target_chars-30}〜{short_target_chars+40}字**(目標{short_target_chars}字)で**約30〜40秒**を実現。ショートは**30〜45秒が最も伸びる**。25秒未満はリーチが激減するので短くしすぎない。
+- **short_scenarioは必ず8行**(1〜7行目は30〜42字目標36字、8行目のみ45〜70字を許容)。
+- **総文字数は必ず{short_target_chars-30}〜{short_target_chars+40}字**(目標{short_target_chars}字)で**約33〜40秒**を実現。ショートは**30〜45秒が最も伸びる**。30秒未満はリーチが激減するので短くしすぎない。
 - **1行=1テロップ**。各行は3〜4秒で読み切れる長さに収める。
-- 構成(7行固定):
+- 構成(8行固定):
   1行目=**3秒フック(最重要)**: 後述の「冒頭3秒ルール」で今回指定された型で書く。前置き・状況説明から入るのは不合格。15〜30字で断定的に。
   2行目=**追い打ちフック**: 謎を一段深くする。ここでも答えを出さない。
   3行目=**核となる事実①**: **具体的な数字・年号・%・研究データ・固有名詞のいずれか1つ以上を必ず含める**(例:「実は97%が…」「1923年の…」「ハーバード大の研究では…」)。抽象論だけはNG。
   4行目=**理由 / 核となる事実②**: ①の「なぜ」を1つだけ答える。
-  5行目=**意外な展開**: 「だが」「ところが」で角度を変える一撃を必ず置く。
-  6行目=**オチ**: スパッと結論を提示。投げっぱなし禁止。
+  5行目=**現場の生々しいディテール**: 記録・証言・数字のうち1つを"その場にいたような"具体で置く(時刻、場所、残された物、担当者の一言)。ここで視聴者を引き戻して中盤の離脱を止める。新事実の追加ではなく解像度を上げる行。
+  6行目=**意外な展開**: 「だが」「ところが」で角度を変える一撃を必ず置く。
+  7行目=**オチ**: スパッと結論を提示。投げっぱなし禁止。
 {short_end_block}- 一般論・感想のみで埋めるのは不合格。1本につき最低1つは「へぇ」と思わせる具体情報を入れること。
 """
 
@@ -1513,8 +1553,20 @@ class ScenarioGenerator:
         cta_headline = cta_cfg.get("headline") or "他の企業もチェック"
         cta_sub = cta_cfg.get("sub") or "プロフィールから見れます"
 
-        # 45秒 ≒ 7ファクト + CTA。尺に合わせてファクト数だけスケールさせる。
-        fact_count = max(5, min(9, round(target_duration / 6.0)))
+        # このスタイルはショート専用（full_scenario は常に空）。ところが呼び出し側の
+        # autopilot は長尺用の autopilot.duration_minutes(=12) から target_duration=720秒
+        # を渡してくるため、プロンプトに「合計約720秒」と書かれ、実測 76〜97秒まで
+        # 膨らんでいた（company-facts の投稿済み9本すべてが1分超）。
+        # ショート最適尺（30〜45秒）に丸めてからファクト数と文字数を逆算する。
+        target_duration = _clamp_short_duration(channel, target_duration)
+
+        # 1画面 ≒ 5秒（ナレーション 25〜40字 ≒ 3〜4.5秒 + 間）、CTA に約6秒。
+        # 旧式は fact_count = target_duration/6 で最大9画面まで許し、かつ 1画面あたりの
+        # ナレーションを 40〜70字（5〜8秒）としていたため、45秒指定でも実測 76〜97秒に
+        # 膨らんでいた（company-facts の投稿済み9本すべてが 1分超）。
+        # 画面数と1画面の文字数の両方を尺から逆算して整合させる。
+        fact_seconds = max(20, target_duration - _FACTS_CTA_SECONDS)
+        fact_count = max(5, min(8, round(fact_seconds / _FACTS_SECONDS_PER_SCREEN)))
         series_block = _series_hint_block(channel)
 
         return f"""縦型ショート「ファクトオーバーレイ動画」のシナリオを生成。JSONのみ出力。
@@ -1546,14 +1598,16 @@ class ScenarioGenerator:
   **必ず具体的な数字を1つ入れる**（例:「平均年収 850万円」「有給消化率 100%」「離職率 3%」）。
   数字だけ自動で黄色に強調表示されるので、数字と単位はくっつけて書く（「850万円」）。
 - fact_sub: 画面下部の赤い補足。25文字以内。比較・出典・注意点を書く（例:「業界平均は420万円」「口コミサイト調べ」）。
-- text: 読み上げナレーション。**40〜70文字**。fact_main の数字を必ず声でも言う。
+- text: 読み上げナレーション。**25〜40文字（厳守。41文字以上は不合格）**。fact_main の数字を必ず声でも言う。
   画面の文字をそのまま読むだけにせず、驚き・理由・比較を足して価値を出す。
 - bg_query: その画面の背景写真を探す日本語検索クエリ。**必ず企業名で始める**
   （例:「ニトリ 店舗 外観」「ニトリ 売り場」）。画面ごとに違うクエリにして写真を切り替える。
-- duration: その画面の最低表示秒数（4〜7）。実際の尺はナレーション音声に合わせて自動で伸びる。
+- duration: その画面の最低表示秒数（**3〜5**）。実際の尺はナレーション音声に合わせて自動で伸びる。
 - mood: BGM切替タグ。"bright"(明るい) / "tense"(衝撃) / "calm"(落ち着き) のいずれか。
 
-# 構成（{fact_count}ファクト + CTA、合計約{target_duration}秒 ※30〜45秒が最も伸びる。25秒未満は不合格）
+# 構成（{fact_count}ファクト + CTA、合計{target_duration}秒 ※30〜45秒が最も伸びる。30秒未満も45秒超も不合格）
+# ※ 全画面の text を合計して**{int(fact_count * 40)}文字を超えたら不合格**。超えたら各行を削って書き直す。
+#    ファクト数を増やして尺を伸ばすのは禁止（画面数は{fact_count}個で固定）。
 1. **1個目=最強フック**: 企業名 + 最もインパクトのある数字を即出し（例:「ニトリ 平均年収850万円」）。
    冒頭3秒で企業名と数字が画面に出ていない構成は不合格。
    さらに1個目の text（ナレーション）は**「問い」か「驚き」で始める**
@@ -1561,7 +1615,7 @@ class ScenarioGenerator:
    淡々と数字を読み上げるだけの入りは不合格。
 2. 2〜{fact_count-1}個目: 年収→ボーナス→有給/残業→離職率→福利厚生 の順でテンポよく数字を連打する。
    同じ指標を2回出さない。毎回ちがう切り口の数字にする。
-   **1画面は4〜6秒**。ここが長いと画面が固まって離脱するので、text は短く言い切る。
+   **1画面は3〜5秒**。ここが長いと画面が固まって離脱するので、text は短く言い切る。
 3. {fact_count}個目=**バランス行**: ネガティブ or 注意点を必ず1つ入れる
    （例:「ただし1年目は力仕事」「店舗配属は土日出勤」）。持ち上げるだけの動画は不合格。
 4. 最後=**CTA行**（必須・省略禁止）: 次の形で1行だけ足す。
