@@ -20,6 +20,10 @@ from typing import Any, Dict, List, Optional
 # YouTube が受け付ける公開ステータス
 VALID_PRIVACY = ("public", "private", "unlisted")
 
+# YouTube ショートの推奨解像度（9:16）。パイプラインもこの値で描画している。
+SHORT_WIDTH = 1080
+SHORT_HEIGHT = 1920
+
 # レベル
 LEVEL_ERROR = "error"      # 放置すると確実に事故る（投稿が非公開になる等）
 LEVEL_WARNING = "warning"  # 意図的かもしれないが要確認
@@ -123,6 +127,31 @@ def validate_channel_config(
                 ),
                 field="publish_settings.default_privacy",
                 fix="一般公開したい場合は publish_settings.default_privacy を 'public' に変更してください",
+            )
+        )
+
+    # 4) ショートの解像度が 1080x1920 (9:16) でない
+    #    YouTube がショート棚に載せる条件は「縦長（アスペクト比 <= 1）かつ 3分以内」。
+    #    1080x1920 から外れると横帯が入ったり画質が落ちたりして初速が死ぬ。
+    res = (raw.get("video_format") or {}).get("resolution") or {}
+    sw = res.get("short_width", SHORT_WIDTH)
+    sh = res.get("short_height", SHORT_HEIGHT)
+    if (sw, sh) != (SHORT_WIDTH, SHORT_HEIGHT):
+        issues.append(
+            ConfigIssue(
+                channel_id=cid,
+                level=LEVEL_WARNING,
+                code="short_resolution",
+                message=(
+                    f"ショートの解像度が {sw}x{sh} です "
+                    f"(推奨: {SHORT_WIDTH}x{SHORT_HEIGHT} = 9:16)。"
+                    "縦長比率から外れるとショート棚に載らない可能性があります。"
+                ),
+                field="video_format.resolution.short_width / short_height",
+                fix=(
+                    f"video_format.resolution.short_width={SHORT_WIDTH}, "
+                    f"short_height={SHORT_HEIGHT} に設定してください"
+                ),
             )
         )
 
