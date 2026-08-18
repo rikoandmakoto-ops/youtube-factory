@@ -166,6 +166,14 @@
       "質問ある？シリーズ",
       "ワイの身に起きたしょうもない事件シリーズ",
       "言えないやつシリーズ"
+    ],
+    "title_power_words": [
+      "スレ",
+      "ワロタ",
+      "衝撃の結末",
+      "晒",
+      "民",
+      "→"
     ]
   },
   "theme_blacklist": [],
@@ -355,7 +363,11 @@
     "auto_publish": false,
     "default_privacy": "public",
     "short_delay_minutes": 10,
-    "short_description_template": "🎬 他のスレまとめはこちら！\n{main_url}\n\n{original_description}"
+    "short_description_template": "🎬 他のスレまとめはこちら！\n{main_url}\n\n{original_description}",
+    "auto_comment": {
+      "enabled": true,
+      "question": "お前らならどうする？コメントで教えてくれ"
+    }
   },
   "description_template": {
     "main_intro": "{title}のスレを、ユイとゴローがゆっくり実況します。\n『〜あげてけ』『当てるスレ』『質問ある？』みたいな、参加したくなるくだらないスレを30秒でお届け。\n※本動画は掲示板の投稿をもとにした再構成・創作を含むエンタメコンテンツです。実在の人物・団体とは関係ありません。\nお前らの答えもコメントで頼むわw",

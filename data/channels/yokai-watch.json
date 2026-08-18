@@ -125,6 +125,14 @@
       "名前を呼べない妖怪シリーズ",
       "実在した妖怪シリーズ",
       "地方に残る妖怪シリーズ"
+    ],
+    "title_power_words": [
+      "伝承",
+      "元ネタ",
+      "本当は怖い",
+      "実在",
+      "封印",
+      "祟り"
     ]
   },
   "theme_blacklist": [
@@ -256,7 +264,11 @@
     "auto_publish": false,
     "default_privacy": "public",
     "short_delay_minutes": 10,
-    "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}"
+    "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}",
+    "auto_comment": {
+      "enabled": true,
+      "question": "この妖怪の元ネタ、知ってた？次に暴いてほしい妖怪をコメントで！"
+    }
   },
   "description_template": {
     "main_intro": "{title}について、ミナモ調査員とケンタがゆっくり調査します。\n妖怪ウォッチの妖怪解説・ストーリー考察・裏設定、そして元ネタになった日本の伝承妖怪との比較まで掘り下げていきます。\n※本動画はファンによる非公式の考察コンテンツです。妖怪ウォッチは株式会社レベルファイブの登録商標です。\nぜひ最後までご視聴ください！",

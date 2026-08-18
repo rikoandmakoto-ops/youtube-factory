@@ -127,6 +127,15 @@
       "裏設定ファイルシリーズ",
       "図鑑の説明が怖いシリーズ",
       "対戦で強すぎたポケモンシリーズ"
+    ],
+    "title_power_words": [
+      "最強",
+      "裏設定",
+      "没データ",
+      "図鑑",
+      "ガチ",
+      "対決",
+      "禁止級"
     ]
   },
   "theme_blacklist": [
@@ -258,7 +267,11 @@
     "auto_publish": false,
     "default_privacy": "public",
     "short_delay_minutes": 10,
-    "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}"
+    "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}",
+    "auto_comment": {
+      "enabled": true,
+      "question": "みんなならどっちが勝つと思う？コメントで予想を聞かせて！"
+    }
   },
   "description_template": {
     "main_intro": "{title}について、ヒカリ研究員とソラがゆっくり考察します。\nポケモンの裏設定・都市伝説・図鑑の謎・対戦の豆知識を、公式設定を手がかりにワクワク解説していきます。\n※本動画はファンによる非公式の考察コンテンツです。ポケモンは株式会社ポケモン／任天堂の登録商標です。\nぜひ最後までご視聴ください！",

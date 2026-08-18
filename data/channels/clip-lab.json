@@ -71,7 +71,11 @@
     "default_privacy": "public",
     "publish_targets": [
       "youtube"
-    ]
+    ],
+    "auto_comment": {
+      "enabled": true,
+      "question": "続きが気になった人はコメントで教えて！フル解説も出してるよ"
+    }
   },
   "description_template": {
     "short_intro": "▼ この切り抜きの本編はこちら\n{source_url}\n\n{source_title}\n（{credit_name} より切り抜き）",
@@ -150,7 +154,11 @@
       "前後の文脈がないと意味が通らない部分"
     ],
     "title_style": "元動画のタイトルをそのまま使わず、切り抜いたシーンの結論だけを20〜28文字で言い切る。疑問形より断定形。",
-    "viral_hooks": "意外な数字 / 常識の否定 / 一言オチ / 強いリアクション"
+    "viral_hooks": "意外な数字 / 常識の否定 / 一言オチ / 強いリアクション",
+    "title_power_words": [
+      "切り抜き",
+      "名場面"
+    ]
   },
   "theme_blacklist": [],
   "genre_blacklist": [],

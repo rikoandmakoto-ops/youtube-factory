@@ -105,7 +105,11 @@
   },
   "publish_settings": {
     "auto_publish": false,
-    "default_privacy": "public"
+    "default_privacy": "public",
+    "auto_comment": {
+      "enabled": true,
+      "question": "この数字、正直どう思う？あなたの会社と比べてコメントで！"
+    }
   },
   "description_template": {
     "main_intro": "{company_name}の年収・ボーナス・福利厚生を徹底解説！\n転職・就活の参考にしてください。\n※データは公開情報・口コミサイトを元にしています。\n\nチャンネル登録よろしくお願いします！",
@@ -200,6 +204,15 @@
       "離職率が低い会社シリーズ",
       "福利厚生がヤバい会社シリーズ",
       "話題の企業の実態シリーズ"
+    ],
+    "title_power_words": [
+      "年収",
+      "手取り",
+      "離職率",
+      "ボーナス",
+      "格差",
+      "ブラック",
+      "激務"
     ]
   },
   "theme_blacklist": [],

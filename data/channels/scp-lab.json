@@ -131,6 +131,15 @@
       "収容違反ファイルシリーズ",
       "実は身近なSCPシリーズ",
       "財団の裏側シリーズ"
+    ],
+    "title_power_words": [
+      "収容違反",
+      "機密",
+      "財団",
+      "オブジェクト",
+      "抹消",
+      "生存者",
+      "報告書"
     ]
   },
   "theme_blacklist": [
@@ -320,7 +329,11 @@
     "auto_publish": false,
     "default_privacy": "public",
     "short_delay_minutes": 10,
-    "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}"
+    "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}",
+    "auto_comment": {
+      "enabled": true,
+      "question": "次はどのSCPを解剖してほしい？オブジェクト番号をコメントで！"
+    }
   },
   "description_template": {
     "main_intro": "{title}について、シロとクロが財団資料を読み解きます。\nSCP財団の異常存在（オブジェクト）や事件を、不気味で考察性のある雰囲気で紐解いていきます。\n※本動画は SCP財団Wiki (CC BY-SA 3.0) のコンテンツに基づいています。\nぜひ最後までご視聴ください！",
