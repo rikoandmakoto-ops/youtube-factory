@@ -83,6 +83,23 @@
     "auto_comment": {
       "enabled": true,
       "question": "この記録、どう読み解く？あなたの解釈をコメントで"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "アカシックの司書｜ショート全集",
+      "main": "アカシックの司書｜本編",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "調べてほしい都市伝説・未解明ミステリーをコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
     }
   },
   "description_template": {
@@ -121,7 +138,14 @@
       "#オカルト",
       "#アカシックレコード"
     ],
-    "category": "24"
+    "category": "24",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
   },
   "content_policy": {
     "tone": "静謐・知的・ミステリアス",

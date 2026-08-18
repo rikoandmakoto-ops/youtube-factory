@@ -75,6 +75,23 @@
     "auto_comment": {
       "enabled": true,
       "question": "続きが気になった人はコメントで教えて！フル解説も出してるよ"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "切り抜きラボ｜ショート全集",
+      "main": "切り抜きラボ｜本編",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "切り抜いてほしい回をコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
     }
   },
   "description_template": {
@@ -116,7 +133,14 @@
       "#雑学"
     ],
     "category": "24",
-    "short_title_hashtags": "#shorts #切り抜き"
+    "short_title_hashtags": "#shorts #切り抜き",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
   },
   "content_policy": {
     "tone": "元動画に準拠",

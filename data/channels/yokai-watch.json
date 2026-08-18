@@ -268,6 +268,23 @@
     "auto_comment": {
       "enabled": true,
       "question": "この妖怪の元ネタ、知ってた？次に暴いてほしい妖怪をコメントで！"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "1分妖怪ファイル｜ショート全集",
+      "main": "妖怪ラボ｜本編解説",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "調べてほしい妖怪をコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
     }
   },
   "description_template": {
@@ -353,7 +370,14 @@
       "#考察",
       "#元ネタ"
     ],
-    "category": "20"
+    "category": "20",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
   },
   "content_policy": {
     "tone": "ひんやり・不穏（怪談を聞かせる語り口）",

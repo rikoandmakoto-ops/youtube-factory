@@ -109,6 +109,23 @@
     "auto_comment": {
       "enabled": true,
       "question": "この数字、正直どう思う？あなたの会社と比べてコメントで！"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "企業のホンネ｜ショート全集",
+      "main": "【企業の闇】大手企業の裏事情まとめ｜ゆっくり解説シリーズ",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "ホンネを暴いてほしい企業をコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
     }
   },
   "description_template": {
@@ -151,7 +168,14 @@
       "#ブラック企業"
     ],
     "category": "22",
-    "short_title_hashtags": "#shorts #企業分析 #年収 #転職"
+    "short_title_hashtags": "#shorts #企業分析 #年収 #転職",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
   },
   "content_policy": {
     "tone": "データ重視・驚き喚起",

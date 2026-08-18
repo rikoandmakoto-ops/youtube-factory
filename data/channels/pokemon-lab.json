@@ -271,6 +271,23 @@
     "auto_comment": {
       "enabled": true,
       "question": "みんなならどっちが勝つと思う？コメントで予想を聞かせて！"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "1分ポケモン研究｜ショート全集",
+      "main": "ポケラボ｜本編考察",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "考察してほしいポケモン・図鑑説明をコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
     }
   },
   "description_template": {
@@ -356,7 +373,14 @@
       "#裏設定",
       "#都市伝説"
     ],
-    "category": "20"
+    "category": "20",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
   },
   "content_policy": {
     "tone": "驚き優先・テンション高め（毎回「え、マジで？」を狙う）",

@@ -333,6 +333,23 @@
     "auto_comment": {
       "enabled": true,
       "question": "次はどのSCPを解剖してほしい？オブジェクト番号をコメントで！"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "一口SCP｜ショート全集",
+      "main": "【SCP解説】最恐SCPまとめ｜ゆっくり解説シリーズ",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "解説してほしいSCPの番号をコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
     }
   },
   "description_template": {
@@ -421,7 +438,14 @@
       "#都市伝説",
       "#怖い話"
     ],
-    "category": "24"
+    "category": "24",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日2本 更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
   },
   "content_policy": {
     "tone": "mysterious",

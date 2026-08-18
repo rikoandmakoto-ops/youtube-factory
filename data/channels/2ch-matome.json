@@ -367,6 +367,23 @@
     "auto_comment": {
       "enabled": true,
       "question": "お前らならどうする？コメントで教えてくれ"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "2chまとめ｜ショート全集",
+      "main": "【2chまとめ】爆笑スレセレクション｜ゆっくり音声",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "読んでほしいスレをコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
     }
   },
   "description_template": {
@@ -456,7 +473,14 @@
       "#面白いスレ"
     ],
     "category": "24",
-    "short_title_hashtags": "#shorts #2ch #面白いスレ"
+    "short_title_hashtags": "#shorts #2ch #面白いスレ",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
   },
   "content_policy": {
     "tone": "終始ふざけた掲示板ノリ（参加型の大喜利・日常あるある・軽い下ネタが主／スカッと・怖い話は少量）",

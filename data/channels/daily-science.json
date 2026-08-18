@@ -78,6 +78,23 @@
     "auto_comment": {
       "enabled": true,
       "question": "これ知ってた？他にも気になる「なんで？」があったらコメントで教えて！"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "1分科学｜ショート全集",
+      "main": "【ゆっくり解説】日常に潜む科学の謎シリーズ",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "「これ科学的にどうなの？」という疑問をコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
     }
   },
   "description_template": {
@@ -165,7 +182,14 @@
       "#豆知識",
       "#科学"
     ],
-    "category": "27"
+    "category": "27",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日2本 更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
   },
   "content_policy": {
     "tone": "身近・親しみやすい（隣で教えてくれる距離感）",
