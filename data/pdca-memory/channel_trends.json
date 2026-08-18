@@ -1,0 +1,324 @@
+{
+  "daily-science": [
+    {
+      "date": "2026-08-12",
+      "subscribers": 53,
+      "subs_delta": 1,
+      "total_views": 163248,
+      "views_delta_1d": 822,
+      "videos": 171,
+      "top_video": "録音の声が違う？それは骨伝導が原因！(1519)",
+      "top_genre": "睡眠・夢(avg756.66)"
+    },
+    {
+      "date": "2026-08-13",
+      "subscribers": 52,
+      "subs_delta": -1,
+      "total_views": 164131,
+      "views_delta_1d": 883,
+      "videos": 172,
+      "top_video": "録音の声が違う？それは骨伝導が原因！(1519)",
+      "top_genre": "睡眠・夢(avg759.09)"
+    },
+    {
+      "date": "2026-08-14",
+      "subscribers": 52,
+      "subs_delta": 0,
+      "total_views": 165225,
+      "views_delta_1d": 1094,
+      "videos": 173,
+      "top_video": "録音の声が違う？それは骨伝導が原因！(1519)",
+      "top_genre": "睡眠・夢(avg783.71)"
+    },
+    {
+      "date": "2026-08-15",
+      "source": "public (RSS + channel page, APIキー不使用)",
+      "subscribers": 52,
+      "total_views": 165989,
+      "videos": 174,
+      "top_video": "なぜ今飲んだ炭酸は鼻までツーンと(1102/0.7日)",
+      "note": "登録者52で3日連続横ばい。睡眠偏重を是正 / 夜backend: 登録52で4日横ばい。新4本は全て睡眠・脳系で初動195〜213/日と低迷（是正は次バッチから反映見込み）",
+      "subs_delta": 0,
+      "views_delta_1d": 771
+    },
+    {
+      "date": "2026-08-16",
+      "source": "carry-over (08-15値)",
+      "subs_delta": null,
+      "views_delta_1d": null,
+      "note": "analytics全ch取得不可＋sandboxネットワーク制限で公開データも取得不可。数値は08-15の最終値を据え置き",
+      "subscribers": 52,
+      "total_views": 165989,
+      "videos": 174
+    },
+    {
+      "date": "2026-08-17",
+      "subscribers": 52,
+      "subs_delta": 0,
+      "total_views": 167300,
+      "views_delta_2d": 1311,
+      "videos": 176,
+      "top_video": "なぜ今飲んだ炭酸は鼻までツーン(1100/3日)",
+      "note": "08-16はcarry-overだったためΔは2日分。analytics復旧。登録52で5日横ばい"
+    }
+  ],
+  "scp-lab": [
+    {
+      "date": "2026-08-12",
+      "subscribers": 127,
+      "subs_delta": 1,
+      "total_views": 126650,
+      "views_delta_1d": 1098,
+      "videos": 140,
+      "top_video": "一口SCP：人類殲滅プロトコル起動(1413)",
+      "top_genre": "SCP個別オブジェクト(avg625.06)"
+    },
+    {
+      "date": "2026-08-13",
+      "subscribers": 127,
+      "subs_delta": 0,
+      "total_views": 127489,
+      "views_delta_1d": 839,
+      "videos": 141,
+      "top_video": "一口SCP：人類殲滅プロトコル起動(1414)",
+      "top_genre": "SCP個別オブジェクト(avg635.75)"
+    },
+    {
+      "date": "2026-08-14",
+      "subscribers": 128,
+      "subs_delta": 1,
+      "total_views": 128621,
+      "views_delta_1d": 1132,
+      "videos": 142,
+      "top_video": "一口SCP：人類殲滅プロトコル起動(1414)",
+      "top_genre": "SCP個別オブジェクト(avg637.59)"
+    },
+    {
+      "date": "2026-08-15",
+      "source": "public (RSS + channel page, APIキー不使用)",
+      "subscribers": 128,
+      "total_views": 129574,
+      "videos": 143,
+      "top_video": "SCP-7004「終末の観測者」(856/0.1日)",
+      "note": "記録型フックが安定。設定変更なし / 夜backend: OAuth未連携で登録者・総再生が取得不能",
+      "subs_delta": 0,
+      "views_delta_1d": 953
+    },
+    {
+      "date": "2026-08-16",
+      "source": "carry-over (08-15値)",
+      "subs_delta": null,
+      "views_delta_1d": null,
+      "note": "analytics全ch取得不可＋sandboxネットワーク制限で公開データも取得不可。数値は08-15の最終値を据え置き",
+      "subscribers": 128,
+      "total_views": 129574,
+      "videos": 143
+    },
+    {
+      "date": "2026-08-17",
+      "subscribers": 131,
+      "subs_delta": 3,
+      "total_views": 130825,
+      "views_delta_2d": 1251,
+      "videos": 145,
+      "top_video": "SCP-7004「終末の観測者」(1113/初日・初動2226/日)",
+      "note": "08-16はcarry-overだったためΔは2日分。analytics復旧"
+    }
+  ],
+  "pokemon-lab": [
+    {
+      "date": "2026-08-12",
+      "subscribers": 7,
+      "total_views": 24045,
+      "views_delta_1d": 1287,
+      "videos": 18
+    },
+    {
+      "date": "2026-08-13",
+      "subscribers": 9,
+      "subs_delta": 2,
+      "total_views": 25712,
+      "views_delta_1d": 1667,
+      "videos": 19,
+      "top_video": "レックウザの誕生に隠された秘密(2379)"
+    },
+    {
+      "date": "2026-08-14",
+      "subscribers": 10,
+      "subs_delta": 1,
+      "total_views": 27516,
+      "views_delta_1d": 1804,
+      "videos": 20,
+      "top_video": "レックウザの誕生に隠された秘密(2380)"
+    },
+    {
+      "date": "2026-08-15",
+      "source": "public (RSS + channel page, APIキー不使用)",
+      "subscribers": 11,
+      "total_views": 28862,
+      "videos": 21,
+      "top_video": "ミミッキュとロトム、どっちが勝つ？(1561/0.7日)",
+      "note": "対決型が突出 / 夜backend: 登録11(+1)。対決型新作が初動1666〜1780/日",
+      "subs_delta": 1,
+      "views_delta_1d": 1339
+    },
+    {
+      "date": "2026-08-16",
+      "source": "carry-over (08-15値)",
+      "subs_delta": null,
+      "views_delta_1d": null,
+      "note": "analytics全ch取得不可＋sandboxネットワーク制限で公開データも取得不可。数値は08-15の最終値を据え置き",
+      "subscribers": 11,
+      "total_views": 28862,
+      "videos": 22
+    },
+    {
+      "date": "2026-08-17",
+      "subscribers": 11,
+      "subs_delta": 0,
+      "total_views": 31967,
+      "views_delta_2d": 3105,
+      "videos": 22,
+      "top_video": "ミミッキュとロトム、どっちが勝つ？(1561/3日)",
+      "note": "08-16はcarry-overだったためΔは2日分。analytics復旧"
+    }
+  ],
+  "yokai-watch": [
+    {
+      "date": "2026-08-12",
+      "subscribers": 7,
+      "total_views": 20718,
+      "views_delta_1d": 1944,
+      "videos": 17
+    },
+    {
+      "date": "2026-08-13",
+      "subscribers": 7,
+      "subs_delta": 0,
+      "total_views": 22437,
+      "views_delta_1d": 1719,
+      "videos": 18,
+      "top_video": "なぜツチノコは家に入る？(1914)"
+    },
+    {
+      "date": "2026-08-14",
+      "subscribers": 7,
+      "subs_delta": 0,
+      "total_views": 24147,
+      "views_delta_1d": 1710,
+      "videos": 19,
+      "top_video": "なぜツチノコは家に入る？(1916)"
+    },
+    {
+      "date": "2026-08-15",
+      "source": "public (RSS + channel page, APIキー不使用)",
+      "subscribers": 7,
+      "total_views": 26424,
+      "videos": 20,
+      "top_video": "ふじのやまの元ネタが怖すぎる(1938/0.7日)",
+      "note": "初動2981回/日で全ch最高 / 夜backend: 登録7横ばい継続",
+      "subs_delta": 0,
+      "views_delta_1d": 2272
+    },
+    {
+      "date": "2026-08-16",
+      "source": "carry-over (08-15値)",
+      "subs_delta": null,
+      "views_delta_1d": null,
+      "note": "analytics全ch取得不可＋sandboxネットワーク制限で公開データも取得不可。数値は08-15の最終値を据え置き",
+      "subscribers": 7,
+      "total_views": 26424,
+      "videos": 21
+    },
+    {
+      "date": "2026-08-17",
+      "subscribers": 8,
+      "subs_delta": 1,
+      "total_views": 28408,
+      "views_delta_2d": 1984,
+      "videos": 21,
+      "top_video": "のっぺらぼうの正体が怖すぎる(2222/4日)",
+      "note": "08-16はcarry-overだったためΔは2日分。analytics復旧"
+    }
+  ],
+  "2ch-matome": [
+    {
+      "date": "2026-08-12",
+      "subscribers": 0,
+      "total_views": 1348,
+      "views_delta_1d": 0,
+      "videos": 1
+    },
+    {
+      "date": "2026-08-13",
+      "subscribers": 1,
+      "subs_delta": 1,
+      "total_views": 1348,
+      "views_delta_1d": 0,
+      "videos": 3,
+      "top_video": "残業代はやる気で払う(1356)"
+    },
+    {
+      "date": "2026-08-14",
+      "subscribers": 2,
+      "subs_delta": 1,
+      "total_views": 2806,
+      "views_delta_1d": 1458,
+      "videos": 5,
+      "top_video": "残業代はやる気で払う(1356)"
+    },
+    {
+      "date": "2026-08-15",
+      "source": "public (RSS + channel page, APIキー不使用)",
+      "subscribers": 4,
+      "total_views": 5201,
+      "videos": 7,
+      "top_video": "ワイの今日の昼飯を当てるスレw(1458)",
+      "note": "0再生問題は解消。初動速度は全ch最下位 / 夜backend: 登録4(+2/日累計)。昼飯スレ1429/初日",
+      "subs_delta": 2,
+      "views_delta_1d": 2081
+    },
+    {
+      "date": "2026-08-16",
+      "source": "carry-over (08-15値)",
+      "subs_delta": null,
+      "views_delta_1d": null,
+      "note": "analytics全ch取得不可＋sandboxネットワーク制限で公開データも取得不可。数値は08-15の最終値を据え置き",
+      "subscribers": 4,
+      "total_views": 5201,
+      "videos": 7
+    },
+    {
+      "date": "2026-08-17",
+      "subscribers": 4,
+      "subs_delta": 0,
+      "total_views": 10738,
+      "views_delta_2d": 5537,
+      "videos": 13,
+      "top_video": "ワイ、彼女いない歴＝年齢やけど質問ある？(1641/2日)",
+      "note": "08-16はcarry-overだったためΔは2日分。analytics復旧。日次再生が3日連続加速"
+    }
+  ],
+  "company-facts": [
+    {
+      "date": "2026-08-15",
+      "source": "public (RSS + channel page, APIキー不使用)",
+      "subscribers": 5,
+      "total_views": 4630,
+      "videos": 5,
+      "top_video": "オリエンタルランドの年収536万円(807/0.7日)",
+      "note": "いいね率0.68%で全ch最高"
+    }
+  ],
+  "clip-lab": [
+    {
+      "date": "2026-08-15",
+      "source": "public (RSS + channel page, APIキー不使用)",
+      "subscribers": null,
+      "total_views": 0,
+      "videos": 0,
+      "top_video": null,
+      "note": "autopilot全滅（Desktop列挙権限エラー）。投稿0本"
+    }
+  ]
+}

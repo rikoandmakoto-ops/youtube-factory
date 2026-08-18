@@ -1,0 +1,1664 @@
+{
+  "channel_id": "pokemon-lab",
+  "channel_name": "ゆっくりポケラボ",
+  "sync": {
+    "ok": true,
+    "data": {
+      "channel_id": "pokemon-lab",
+      "overview": {
+        "channel_id": "pokemon-lab",
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "videos": {
+        "channel_id": "pokemon-lab",
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "retention": [],
+      "synced_at": 1786024862,
+      "comments": [],
+      "pdca": {
+        "scenario_evaluation": {
+          "channel_id": "pokemon-lab",
+          "evaluated": 0,
+          "skipped": 12,
+          "results": [
+            {
+              "video_id": "leOuTzTwogI",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "leOuTzTwogI",
+                "channel_id": "pokemon-lab",
+                "evaluated_at": 1785938621,
+                "hook_strength": 6.0,
+                "specificity": 7.0,
+                "pacing": 5.0,
+                "cta_effectiveness": 5.0,
+                "wording_quality": 7.0,
+                "overall": 6.0,
+                "weak_sections": [
+                  {
+                    "section": "フック",
+                    "issue": "冒頭1行目が「経験ありませんか？」という問いかけ型で始まるが、視聴者が共感するまでに2文かかり、最初の3秒で離脱するリスクが高い。結論の『素早さ130が合計600を倒す』という衝撃事実を0行目に持ってくるべき。",
+                    "drop_percent": 20
+                  },
+                  {
+                    "section": "展開1",
+                    "issue": "6項目を1項目ずつ順番に説明する構成が教科書的で、視聴者が『知っている話が続く』と感じてスキップしやすい。各項目の説明に実戦の具体ダメージ数値がなく、抽象度が高いまま14行続く。",
+                    "drop_percent": 18
+                  },
+                  {
+                    "section": "展開2",
+                    "issue": "実数値169の説明は良いが、その前後に『なぜ169が重要なのか』という感情的フックがなく、数字の羅列として流れてしまう。ソラの驚きリアクションが1回しかなく、視聴者の代弁が薄い。",
+                    "drop_percent": 12
+                  },
+                  {
+                    "section": "CTA / クロージング",
+                    "issue": "権利表記をソラ・ヒカリの会話ターンの間に挟んでいるため、感情的な盛り上がりが途切れる。チャンネル登録の呼びかけが最後から2行目に埋もれており、視聴者の行動を促す力が弱い。",
+                    "drop_percent": 10
+                  }
+                ],
+                "improvement_suggestions": [
+                  "フック0行目（ヒカリ研究員の1発話目）を『合計種族値280差のピカチュウが、600族カイリューより先に動いて倒す。これは理論上ではなく、素早さ90対80という1つの数字が生む現実です』に書き換え、数値と結論を冒頭3秒に凝縮する。",
+                  "展開1の各項目説明に必ず実ダメージ数値を1つ添付する。例：HPの説明行を『HPが高いほど生き残る可能性が増える』から『HP種族値255のラッキーはレベル50で実数値310前後、威力90の技を受けても約60%残ることが多い』に書き換え、数字で体感させる。",
+                  "展開2のソラのリアクション行を増やし、実数値169の直前に『じゃあ素早さ種族値が1違うだけで、先手か後手かが完全に決まるの？』という問いを挿入して、視聴者が抱く疑問を先回りして代弁させる。",
+                  "展開3/オチのカイリュー『16時間で地球一周』のくだりは動画の核心から外れる雑学トピックであるため、この2行を削除し、代わりに『合計種族値が同じ525でも、素早さ130に全振りしたポケモンと攻撃130に全振りしたポケモンでは、勝てる相手が全く異なる』という役割設計図の具体例に差し替える。",
+                  "CTAセクションの権利表記行（ヒカリ研究員3発話目）をソラ・ヒカリの会話ターンから切り離し、エンドカード表示タイミングに合わせたナレーション外テロップに移動させ、感情の流れを途切れさせない。",
+                  "CTAのチャンネル登録呼びかけを最終行に移動し、『今すぐ能力画面を開いて一番高い数字を1つ探してみて。それがあなたのポケモンの役割です。チャンネル登録で次回の600族解説も見逃さないでね』と行動→登録の順に並べ替え、視聴者に具体的な次の行動を1ステップで示す。"
+                ],
+                "comment_feedback": [
+                  {
+                    "comment": "（コメントデータなし）",
+                    "section": "全体",
+                    "action": "コメントデータが空のため、次回投稿後に『一番驚いた種族値の数字をコメントで教えて』と動画内で明示的に問いかけを設置し、コメント収集を能動的に促す設計を追加する。"
+                  }
+                ],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/pokemon-lab/なぜ種族値だけで強さが変わるのか衝撃の数字の正体とはショート.json",
+                "video_title": "なぜ種族値だけで強さが変わるのか？衝撃の数字の正体とは【ショート】【ショート】"
+              }
+            },
+            {
+              "video_id": "F2CHINBUcVE",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "F2CHINBUcVE",
+                "channel_id": "pokemon-lab",
+                "evaluated_at": 1785852252,
+                "hook_strength": 7.0,
+                "specificity": 6.0,
+                "pacing": 5.0,
+                "cta_effectiveness": 6.0,
+                "wording_quality": 7.0,
+                "overall": 6.0,
+                "weak_sections": [
+                  {
+                    "section": "導入",
+                    "issue": "種族値500の強さ説明に9行を費やしており、タイトルが約束した『元ネタ謎』の本題に入るまでが遅すぎる。視聴者はゲンガーの対戦強度を聞きに来ておらず、この迂回が離脱を誘発しやすい。",
+                    "drop_percent": 18
+                  },
+                  {
+                    "section": "展開3 / オチ",
+                    "issue": "謎の結論を出した直後に対戦環境の解説（素早さ110・スペシャルアタッカー）を挿入しており、テーマが二分割されて視聴者の集中が途切れる。",
+                    "drop_percent": 12
+                  },
+                  {
+                    "section": "CTA / クロージング",
+                    "issue": "次回予告のミュウツー訴求が『とんでもない事実』と抽象的で、クリックを後押しする具体的な驚きが提示されていない。",
+                    "drop_percent": 8
+                  }
+                ],
+                "improvement_suggestions": [
+                  "導入セクション冒頭（現在の種族値説明）を丸ごと削除し、代わりに『ゲンガーは1996年の初代発売から28年間、公式デザイナーが元ネタを一度も口にしていない唯一の初代ポケモンだ』という1文で本題に直結させる。種族値の話は展開3の対戦コーナーに移動する。",
+                  "フック2行目のソラのセリフ『えっ、マジで！？』を『えっ、Twitterで毎年バズってる「影モチーフ説」、28年間ずっと根拠なしだったってこと！？』に書き換え、視聴者が既に持っている具体的な知識と衝突させて驚きを強化する。",
+                  "展開1でピカチュウの例を出す際、現在の『2020年のインタビューで』という表記を『2020年9月のNintendo公式インタビューで杉森建さんが明言した』と媒体名・人名を揃えて明記し、公式確認の信頼度を数値的に対比させる（例：『ピカチュウ：公式明言あり1件 vs ゲンガー：公式明言0件』とテロップ化を指示する）。",
+                  "展開3のオチ直後に挿入されている対戦解説ブロック（素早さ110・ガブリアス比較）を完全に別セクションとして分離するか、尺が許さない場合は全カットし、謎の余韻をそのままCTAに接続して『答えが出ないから30年語られ続けた』という感情の流れを断ち切らないようにする。",
+                  "CTAのミュウツー次回予告を『ミュウツーの図鑑には「じんこうてきに つくられた」と書かれているが、公式設定では誰が・いつ・何体作ったかが数値で記録されている。その数字が怖すぎる』のように具体的な驚きの輪郭を示す形に書き換え、クリック動機を明確にする。",
+                  "展開2のドッペルゲンガー説で『18世紀から19世紀のヨーロッパ文学、例えばエドガー・アラン・ポー』と途中で文が切れているが、これを『エドガー・アラン・ポーの1839年作「ウィリアム・ウィルソン」に登場する分身が最も有名な例』と作品名・年号まで補完し、説の重みを具体化する。"
+                ],
+                "comment_feedback": [
+                  {
+                    "comment": "（コメントデータなし）",
+                    "section": "全体",
+                    "action": "コメントデータが空のため、次回収録後に『影モチーフ説・ドッペルゲンガー説のどちらが一番しっくりくる？』とピン留めコメントで視聴者投票を促し、次々回のシナリオ冒頭でその結果を数値（例：影説68%・ドッペル説22%）として読み上げることでコミュニティ参加感を演出する。"
+                  }
+                ],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/pokemon-lab/ゲンガーの元ネタ実はまだ誰も正確に言えていない理由.json",
+                "video_title": "ゲンガーの『元ネタ』、実はまだ誰も正確に言えていない理由【ショート】"
+              }
+            },
+            {
+              "video_id": "fnAnoXiN-N8",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "fnAnoXiN-N8",
+                "channel_id": "pokemon-lab",
+                "evaluated_at": 1785765688,
+                "hook_strength": 6.5,
+                "specificity": 5.96,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.22,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/pokemon-lab/なぜヤドンはシェルダーに噛まれると進化するのか分岐進化の本当の理由がヤバすぎた.json",
+                "video_title": "なぜヤドンはシェルダーに噛まれると進化するのか？分岐進化の本当の理由がヤバすぎた【ショート】"
+              }
+            },
+            {
+              "video_id": "9a1IdPyKES8",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "9a1IdPyKES8",
+                "channel_id": "pokemon-lab",
+                "evaluated_at": 1785679283,
+                "hook_strength": 6.5,
+                "specificity": 4.68,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.81,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/pokemon-lab/なぜ御三家は炎水草だけ三すくみ設計の裏にある本当の理由.json",
+                "video_title": "なぜ御三家は炎・水・草だけ？『三すくみ』設計の裏にある本当の理由【ショート】"
+              }
+            },
+            {
+              "video_id": "oqX00JAEqgc",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "oqX00JAEqgc",
+                "channel_id": "pokemon-lab",
+                "evaluated_at": 1785679283,
+                "hook_strength": 7.5,
+                "specificity": 5.8,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.44,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/pokemon-lab/なぜイーブイだけ8種類も進化できるのか遺伝子の暴走と分岐条件の正体がヤバすぎた.json",
+                "video_title": "なぜイーブイだけ8種類も進化できるのか？遺伝子の暴走と分岐条件の正体がヤバすぎた【ショート】"
+              }
+            },
+            {
+              "video_id": "7t9MkCMu1Uc",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "1分ポケモン研究：図鑑のあの説明文、どうしてそんなに怖いのか？公式が書いた衝撃のテキストを考察！#shorts #ゆっくり解説"
+            },
+            {
+              "video_id": "EOlAL1utyiM",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "EOlAL1utyiM",
+                "channel_id": "pokemon-lab",
+                "evaluated_at": 1785679283,
+                "hook_strength": 6.5,
+                "specificity": 4.37,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.75,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/pokemon-lab/ポケモン図鑑に隠された怖すぎる説明文の真相とは.json",
+                "video_title": "ポケモン図鑑に隠された怖すぎる説明文の真相とは？【ショート】"
+              }
+            },
+            {
+              "video_id": "Cf0Im2vL80s",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "Cf0Im2vL80s",
+                "channel_id": "pokemon-lab",
+                "evaluated_at": 1785592883,
+                "hook_strength": 6.5,
+                "specificity": 4.35,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.74,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/pokemon-lab/なぜレッドは山頂に立ち続けるのか彼の秘密に迫る.json",
+                "video_title": "なぜレッドは山頂に立ち続けるのか？彼の秘密に迫る！【ショート】"
+              }
+            },
+            {
+              "video_id": "2PlnOkMVx7k",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "1分ポケモン研究：ヤドンの尻尾に隠された秘密実は痛みを感じないって本当？#なぜヤドンの尻尾は痛くないの？驚きの理由 #shorts #ゆっくり解説"
+            },
+            {
+              "video_id": "JlHCr4BO6wg",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "JlHCr4BO6wg",
+                "channel_id": "pokemon-lab",
+                "evaluated_at": 1785506482,
+                "hook_strength": 6.5,
+                "specificity": 4.36,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.75,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/pokemon-lab/エリートトレーナーの謎なぜ彼らだけが特別なのか.json",
+                "video_title": "エリートトレーナーの謎—なぜ彼らだけが特別なのか？【ショート】"
+              }
+            },
+            {
+              "video_id": "2DDaE-dcul4",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説"
+            },
+            {
+              "video_id": "-ohtqUa_sIA",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説"
+            }
+          ],
+          "ran_at": 1786024862
+        },
+        "ab_reconciliation": {
+          "channel_id": "pokemon-lab",
+          "reconciled": 0,
+          "items": [],
+          "reason": "no_ab_tests_dir"
+        },
+        "improvement_queue": {
+          "channel_id": "pokemon-lab",
+          "skipped": true,
+          "reason": "no_videos_with_ctr",
+          "channel_avg_ctr": null
+        },
+        "series_engine": {
+          "channel_id": "pokemon-lab",
+          "channel_avg": 1598.5,
+          "threshold": 1.5,
+          "viral_count": 0,
+          "suggestions_added": 0,
+          "items": []
+        },
+        "comment_demand": {
+          "ok": true,
+          "channel_id": "pokemon-lab",
+          "started_at": 1786024862,
+          "finished_at": 1786024862,
+          "request_comments_considered": 0,
+          "demands_saved": 0,
+          "auto_queued": 0,
+          "items": []
+        }
+      }
+    }
+  },
+  "pdca_report": {
+    "ok": true,
+    "data": {
+      "channel_id": "pokemon-lab",
+      "days": 30,
+      "generated_at": "2026-08-06T14:01:02.644093Z",
+      "window": {
+        "start": "2026-07-07T14:01:02.644093Z",
+        "end": "2026-08-06T14:01:02.644093Z"
+      },
+      "channel_stats": {},
+      "subscribers": {
+        "current_total": null,
+        "gained_in_window": 6,
+        "lost_in_window": 2,
+        "net_in_window": 4,
+        "daily": [
+          {
+            "date": "2026-07-04",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-05",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-06",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-07",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-08",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-09",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-10",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-11",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-12",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-13",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-14",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-15",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-16",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-17",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-18",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-19",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-20",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-21",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-22",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-23",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-24",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-25",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-26",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-27",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-28",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-29",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-30",
+            "gained": 1,
+            "lost": 0,
+            "net": 1,
+            "cumulative_net": 1
+          },
+          {
+            "date": "2026-07-31",
+            "gained": 3,
+            "lost": 1,
+            "net": 2,
+            "cumulative_net": 3
+          },
+          {
+            "date": "2026-08-01",
+            "gained": 2,
+            "lost": 1,
+            "net": 1,
+            "cumulative_net": 4
+          },
+          {
+            "date": "2026-08-02",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 4
+          }
+        ],
+        "source": "analytics_cache (要 /api/analytics/sync)"
+      },
+      "subscriber_sources": {
+        "total_gained": 0,
+        "total_lost": 0,
+        "total_net": 0,
+        "shorts": {
+          "gained": 0,
+          "lost": 0,
+          "net": 0,
+          "share_of_gained": 0.0,
+          "subs_per_1000_views": 0.0
+        },
+        "main": {
+          "gained": 0,
+          "lost": 0,
+          "net": 0,
+          "share_of_gained": 0.0,
+          "subs_per_1000_views": 0.0
+        },
+        "unknown": {
+          "gained": 0,
+          "lost": 0,
+          "note": null
+        },
+        "source": "none",
+        "error": "youtube analytics 未連携 or googleapiclient 未導入"
+      },
+      "recommendation": {
+        "decision": "more_data_needed",
+        "primary_subscriber_source": null,
+        "headline": "登録者ソースが取得できないため判断保留",
+        "reasoning": "YouTube Analytics API から subscribersGained を取得できませんでした。 OAuth 連携と yt-analytics.readonly スコープを確認してください。",
+        "warnings": [
+          "登録者ソースデータなし — 再生数ベースの判断は危険"
+        ],
+        "metrics_used": {}
+      },
+      "shorts": {
+        "count": 0,
+        "total_views": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "avg_views": 0.0,
+        "avg_likes": 0.0,
+        "avg_comments": 0.0,
+        "avg_like_rate": 0.0,
+        "median_views": 0,
+        "top_videos": []
+      },
+      "main": {
+        "count": 0,
+        "total_views": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "avg_views": 0.0,
+        "avg_likes": 0.0,
+        "avg_comments": 0.0,
+        "avg_like_rate": 0.0,
+        "median_views": 0,
+        "top_videos": []
+      },
+      "comparison": {
+        "avg_views_short_vs_main": null,
+        "avg_likes_short_vs_main": null,
+        "avg_like_rate_short_vs_main": null
+      },
+      "cost": {
+        "total_cost_usd": 1.9261,
+        "events": 52,
+        "by_purpose": {
+          "theme_suggest": 0.003,
+          "scenario_claude": 0.6834,
+          "section_1": 0.028,
+          "section_2": 0.0355,
+          "section_3": 0.0315,
+          "section_4": 0.1667,
+          "section_5": 0.187,
+          "section_6": 0.0316,
+          "section_7": 0.5792,
+          "blind_compare": 0.0932,
+          "success_pattern": 0.0394,
+          "retention_analysis": 0.0475
+        },
+        "by_model": {
+          "gpt-4o-mini": 0.003,
+          "gpt-4o": 0.166,
+          "gpt-4.1": 0.1487,
+          "claude-sonnet-4-6": 1.0274,
+          "gpt-5.6-terra": 0.5811
+        },
+        "videos_in_window": 0,
+        "cost_per_video_usd": 0.0,
+        "cost_per_short_usd": 0.0,
+        "cost_per_main_usd": 0.0,
+        "note": "ショート/メインは同一パイプライン由来で個別計上はないため、総コスト ÷ 期間内本数で均等按分しています。"
+      },
+      "totals": {
+        "published_in_db": 0,
+        "fetched_from_youtube": 0,
+        "in_window": 0
+      },
+      "errors": {
+        "youtube_fetch": "youtube oauth 未連携 or googleapiclient 未導入",
+        "subscriber_sources": "youtube analytics 未連携 or googleapiclient 未導入"
+      }
+    }
+  },
+  "posting": {
+    "ok": true,
+    "data": {
+      "channel_id": "pokemon-lab",
+      "current_schedule": {
+        "days_of_week": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "hour": 18,
+        "minute": 0,
+        "enabled": true
+      },
+      "recommendation": {
+        "recommended": {
+          "day_of_week": 4,
+          "hour": 21,
+          "minute": 0,
+          "avg_views": 1299.0,
+          "sample_size": 2,
+          "boost_percent": 21.5
+        },
+        "alternatives": [
+          {
+            "day_of_week": 5,
+            "hour": 18,
+            "minute": 0,
+            "avg_views": 2055.0,
+            "sample_size": 1,
+            "boost_percent": 92.2
+          },
+          {
+            "day_of_week": 0,
+            "hour": 0,
+            "minute": 0,
+            "avg_views": 999.5,
+            "sample_size": 2,
+            "boost_percent": -6.5
+          }
+        ],
+        "channel_avg_views": 1069.25,
+        "data_days": 30,
+        "note": null
+      },
+      "heatmap": {
+        "grid": [
+          [
+            999.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1360.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1465.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1299.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            2055.0,
+            1566.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1788.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "samples": [
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "channel_avg_views": 1069.25,
+        "channel_total_videos": 12,
+        "data_days": 30
+      },
+      "computed_at": 1786024863
+    }
+  },
+  "series": {
+    "ok": true,
+    "data": {
+      "channel_id": "pokemon-lab",
+      "count": 3,
+      "items": [
+        {
+          "id": "354a708d00",
+          "channel_id": "pokemon-lab",
+          "original_video_id": "2DDaE-dcul4",
+          "original_title": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+          "original_views": 2381,
+          "channel_avg_views": 1293,
+          "viral_ratio": 1.8407421724004638,
+          "series_type": "deep_dive",
+          "suggested_title": "なぜ「1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が」はこうなるのか？徹底深堀り",
+          "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+          "rationale": "深堀り型はリテンションが高い",
+          "created_at": 1785679284,
+          "decided_at": 1785679285,
+          "status": "approved",
+          "queue_theme_id": "8df9b937",
+          "queued_video_id": null
+        },
+        {
+          "id": "208b870f23",
+          "channel_id": "pokemon-lab",
+          "original_video_id": "2DDaE-dcul4",
+          "original_title": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+          "original_views": 2381,
+          "channel_avg_views": 1293,
+          "viral_ratio": 1.8407421724004638,
+          "series_type": "contrast",
+          "suggested_title": "「1分ポケモン研究：レックウザの誕生に隠された秘密神」とは逆のパターンを比較してみた",
+          "suggested_angle": "対比で違いを際立たせる構成",
+          "rationale": "比較型は CTR が安定して取りやすい",
+          "created_at": 1785679284,
+          "decided_at": 1785679285,
+          "status": "approved",
+          "queue_theme_id": "c8fa8b09",
+          "queued_video_id": null
+        },
+        {
+          "id": "878e03e26e",
+          "channel_id": "pokemon-lab",
+          "original_video_id": "2DDaE-dcul4",
+          "original_title": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+          "original_views": 2381,
+          "channel_avg_views": 1293,
+          "viral_ratio": 1.8407421724004638,
+          "series_type": "application",
+          "suggested_title": "「1分ポケモン研究：レックウザの誕生に隠された秘密神」の知識を日常で使う方法",
+          "suggested_angle": "応用先を具体例で紹介",
+          "rationale": "応用型は再生時間が伸びやすい",
+          "created_at": 1785679284,
+          "decided_at": 1785765690,
+          "status": "approved",
+          "queue_theme_id": "70f6eb3f",
+          "queued_video_id": null
+        }
+      ],
+      "grouped": [
+        {
+          "original_video_id": "2DDaE-dcul4",
+          "original_title": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+          "original_views": 2381,
+          "viral_ratio": 1.8407421724004638,
+          "suggestions": [
+            {
+              "id": "354a708d00",
+              "channel_id": "pokemon-lab",
+              "original_video_id": "2DDaE-dcul4",
+              "original_title": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+              "original_views": 2381,
+              "channel_avg_views": 1293,
+              "viral_ratio": 1.8407421724004638,
+              "series_type": "deep_dive",
+              "suggested_title": "なぜ「1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が」はこうなるのか？徹底深堀り",
+              "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+              "rationale": "深堀り型はリテンションが高い",
+              "created_at": 1785679284,
+              "decided_at": 1785679285,
+              "status": "approved",
+              "queue_theme_id": "8df9b937",
+              "queued_video_id": null
+            },
+            {
+              "id": "208b870f23",
+              "channel_id": "pokemon-lab",
+              "original_video_id": "2DDaE-dcul4",
+              "original_title": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+              "original_views": 2381,
+              "channel_avg_views": 1293,
+              "viral_ratio": 1.8407421724004638,
+              "series_type": "contrast",
+              "suggested_title": "「1分ポケモン研究：レックウザの誕生に隠された秘密神」とは逆のパターンを比較してみた",
+              "suggested_angle": "対比で違いを際立たせる構成",
+              "rationale": "比較型は CTR が安定して取りやすい",
+              "created_at": 1785679284,
+              "decided_at": 1785679285,
+              "status": "approved",
+              "queue_theme_id": "c8fa8b09",
+              "queued_video_id": null
+            },
+            {
+              "id": "878e03e26e",
+              "channel_id": "pokemon-lab",
+              "original_video_id": "2DDaE-dcul4",
+              "original_title": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+              "original_views": 2381,
+              "channel_avg_views": 1293,
+              "viral_ratio": 1.8407421724004638,
+              "series_type": "application",
+              "suggested_title": "「1分ポケモン研究：レックウザの誕生に隠された秘密神」の知識を日常で使う方法",
+              "suggested_angle": "応用先を具体例で紹介",
+              "rationale": "応用型は再生時間が伸びやすい",
+              "created_at": 1785679284,
+              "decided_at": 1785765690,
+              "status": "approved",
+              "queue_theme_id": "70f6eb3f",
+              "queued_video_id": null
+            }
+          ]
+        }
+      ],
+      "viral_videos": [],
+      "channel_avg_views": 1598.5,
+      "summary": {
+        "channel_id": "pokemon-lab",
+        "channel_avg_views": 1598.5,
+        "total_suggestions": 3,
+        "by_status": {
+          "approved": 3
+        },
+        "by_type": {
+          "deep_dive": 1,
+          "contrast": 1,
+          "application": 1
+        },
+        "approved_with_video": 0
+      }
+    }
+  },
+  "genre_breakdown": [
+    {
+      "genre": "その他",
+      "count": 12,
+      "total_views": 12831,
+      "total_likes": 36,
+      "titles": [
+        "なぜ種族値だけで強さが変わるのか？衝撃の数字の正体とは【ショート】【ショート】",
+        "ゲンガーの『元ネタ』、実はまだ誰も正確に言えていない理由【ショート】",
+        "なぜヤドンはシェルダーに噛まれると進化するのか？分岐進化の本当の理由がヤバすぎた【ショート】"
+      ],
+      "avg_views": 1069.25
+    }
+  ],
+  "view_trends": [
+    {
+      "video_id": "2DDaE-dcul4",
+      "title": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+      "series": [
+        {
+          "date": "2026-07-30",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-07-31",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-01",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-02",
+          "views": 2381,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-03",
+          "views": 2385,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-04",
+          "views": 2390,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-05",
+          "views": 2392,
+          "likes": 6
+        }
+      ],
+      "latest_views": 2392,
+      "first_views": 0,
+      "delta": 2392,
+      "snapshots": 7
+    },
+    {
+      "video_id": "JlHCr4BO6wg",
+      "title": "エリートトレーナーの謎—なぜ彼らだけが特別なのか？【ショート】",
+      "series": [
+        {
+          "date": "2026-07-31",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-01",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 2048,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-04",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-05",
+          "views": 2055,
+          "likes": 4
+        }
+      ],
+      "latest_views": 2055,
+      "first_views": 0,
+      "delta": 2055,
+      "snapshots": 6
+    },
+    {
+      "video_id": "EOlAL1utyiM",
+      "title": "ポケモン図鑑に隠された怖すぎる説明文の真相とは？【ショート】",
+      "series": [
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 1952,
+          "likes": 9
+        },
+        {
+          "date": "2026-08-05",
+          "views": 1956,
+          "likes": 9
+        }
+      ],
+      "latest_views": 1956,
+      "first_views": 0,
+      "delta": 1956,
+      "snapshots": 4
+    },
+    {
+      "video_id": "Cf0Im2vL80s",
+      "title": "なぜレッドは山頂に立ち続けるのか？彼の秘密に迫る！【ショート】",
+      "series": [
+        {
+          "date": "2026-08-01",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 1788,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-05",
+          "views": 1788,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1788,
+      "first_views": 0,
+      "delta": 1788,
+      "snapshots": 5
+    },
+    {
+      "video_id": "2PlnOkMVx7k",
+      "title": "1分ポケモン研究：ヤドンの尻尾に隠された秘密実は痛みを感じないって本当？#なぜヤドンの尻尾は痛くないの？驚きの理由 #shorts #ゆっくり解説",
+      "series": [
+        {
+          "date": "2026-07-31",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-01",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 1562,
+          "likes": 9
+        },
+        {
+          "date": "2026-08-04",
+          "views": 1566,
+          "likes": 9
+        },
+        {
+          "date": "2026-08-05",
+          "views": 1566,
+          "likes": 9
+        }
+      ],
+      "latest_views": 1566,
+      "first_views": 0,
+      "delta": 1566,
+      "snapshots": 6
+    },
+    {
+      "video_id": "9a1IdPyKES8",
+      "title": "なぜ御三家は炎・水・草だけ？『三すくみ』設計の裏にある本当の理由【ショート】",
+      "series": [
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-05",
+          "views": 1465,
+          "likes": 2
+        }
+      ],
+      "latest_views": 1465,
+      "first_views": 0,
+      "delta": 1465,
+      "snapshots": 4
+    },
+    {
+      "video_id": "oqX00JAEqgc",
+      "title": "なぜイーブイだけ8種類も進化できるのか？遺伝子の暴走と分岐条件の正体がヤバすぎた【ショート】",
+      "series": [
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 994,
+          "likes": 2
+        },
+        {
+          "date": "2026-08-05",
+          "views": 1360,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1360,
+      "first_views": 0,
+      "delta": 1360,
+      "snapshots": 4
+    },
+    {
+      "video_id": "-ohtqUa_sIA",
+      "title": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+      "series": [
+        {
+          "date": "2026-07-30",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-07-31",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-01",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-02",
+          "views": 206,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 206,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 206,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-05",
+          "views": 206,
+          "likes": 0
+        }
+      ],
+      "latest_views": 206,
+      "first_views": 0,
+      "delta": 206,
+      "snapshots": 7
+    },
+    {
+      "video_id": "7t9MkCMu1Uc",
+      "title": "1分ポケモン研究：図鑑のあの説明文、どうしてそんなに怖いのか？公式が書いた衝撃のテキストを考察！#shorts #ゆっくり解説",
+      "series": [
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 42,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-05",
+          "views": 43,
+          "likes": 0
+        }
+      ],
+      "latest_views": 43,
+      "first_views": 0,
+      "delta": 43,
+      "snapshots": 4
+    },
+    {
+      "video_id": "F2CHINBUcVE",
+      "title": "ゲンガーの『元ネタ』、実はまだ誰も正確に言えていない理由【ショート】",
+      "series": [
+        {
+          "date": "2026-08-04",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-05",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 2
+    },
+    {
+      "video_id": "fnAnoXiN-N8",
+      "title": "なぜヤドンはシェルダーに噛まれると進化するのか？分岐進化の本当の理由がヤバすぎた【ショート】",
+      "series": [
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-05",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 3
+    },
+    {
+      "video_id": "leOuTzTwogI",
+      "title": "なぜ種族値だけで強さが変わるのか？衝撃の数字の正体とは【ショート】【ショート】",
+      "series": [
+        {
+          "date": "2026-08-05",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 1
+    }
+  ],
+  "dup_check": [
+    {
+      "a": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+      "b": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+      "similarity": 1.0
+    },
+    {
+      "a": "1分ポケモン研究：ヤドンの尻尾に隠された秘密実は痛みを感じないって本当？#なぜヤドンの尻尾は痛くないの？驚きの理由 #shorts #ゆっくり解説",
+      "b": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+      "similarity": 0.681
+    },
+    {
+      "a": "1分ポケモン研究：ヤドンの尻尾に隠された秘密実は痛みを感じないって本当？#なぜヤドンの尻尾は痛くないの？驚きの理由 #shorts #ゆっくり解説",
+      "b": "1分ポケモン研究：レックウザの誕生に隠された秘密神話と科学が交差する瞬間#レックウザの誕生に隠された秘密—神話と科学の交差点 #shorts #ゆっくり解説",
+      "similarity": 0.681
+    },
+    {
+      "a": "1分ポケモン研究：図鑑のあの説明文、どうしてそんなに怖いのか？公式が書いた衝撃のテキストを考察！#shorts #ゆっくり解説",
+      "b": "1分ポケモン研究：ヤドンの尻尾に隠された秘密実は痛みを感じないって本当？#なぜヤドンの尻尾は痛くないの？驚きの理由 #shorts #ゆっくり解説",
+      "similarity": 0.626
+    }
+  ],
+  "success_patterns": {
+    "ok": true,
+    "sample_size": {
+      "total": 12,
+      "success": 4,
+      "others": 8
+    },
+    "has_gpt_insights": true,
+    "gpt_skipped_reason": null
+  },
+  "retention_insights": {
+    "ok": true,
+    "has_gpt_insights": true,
+    "gpt_skipped_reason": null
+  },
+  "act": {
+    "approved": [],
+    "skipped_low_view": []
+  }
+}

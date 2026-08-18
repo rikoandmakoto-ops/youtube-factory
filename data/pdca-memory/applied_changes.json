@@ -1,0 +1,202 @@
+{
+  "changes": [
+    {
+      "date": "2026-08-12",
+      "file": "channels/daily-science.json",
+      "action": "theme_blacklist追加",
+      "items": [
+        "酸素が1秒",
+        "ドアが閉まる寸前",
+        "センサーの待機設計",
+        "本を読むと眠くなる",
+        "本だけで眠く"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "file": "channels/daily-science.json",
+      "action": "theme_seeds追加(睡眠・夢強化)",
+      "items": [
+        "なぜ二度寝はあんなに気持ちいいのか",
+        "アラームが鳴る直前に自然に目が覚める人の脳で起きていること"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "file": "channels/daily-science.json",
+      "action": "theme_seeds追加(体の不思議強化)",
+      "items": [
+        "なぜ鳥肌は寒さだけでなく感動でも立つのか",
+        "正座で足がしびれるのは血ではなく『神経の悲鳴』だった"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "file": "channels/scp-lab.json",
+      "action": "theme_seeds追加(記録型オブジェクト強化)",
+      "items": [
+        "SCP-3008「完全に、普通の、古いイケア」",
+        "SCP-087「吹き抜けた階段」"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "file": "channels/daily-science.json",
+      "action": "theme_blacklist追加（表記ゆれ対策）",
+      "items": [
+        "待機設計",
+        "ドアが閉ま",
+        "酸素が消え"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "file": "channels/scp-lab.json",
+      "action": "theme_seeds追加（宇宙・歴史スケール記録型強化）",
+      "items": [
+        "SCP-2317「異世界への扉」",
+        "SCP-2935「ああ、死よ、汝はいずこに」"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "file": "channels/daily-science.json",
+      "action": "theme_priority再編（睡眠偏重の是正）",
+      "items": [
+        "【最優先】感覚・反射の科学 を新設(毎バッチ最低1件)",
+        "睡眠・夢 を毎バッチ最大1件に制限",
+        "体の不思議 を毎バッチ最低2件に増加"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "file": "channels/daily-science.json",
+      "action": "theme_seeds追加（感覚・反射系）",
+      "items": [
+        "なぜ冷たい物を一気に食べると『こめかみ』が痛くなるのか",
+        "なぜ耳が詰まった感じはあくびで一瞬で治るのか",
+        "なぜ目にゴミが入っていないのに涙が出るのか"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "file": "channels/daily-science.json",
+      "action": "theme_blacklist追加（直近最下位293回）",
+      "items": [
+        "口の乾き"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "file": "channels/2ch-matome.json",
+      "action": "theme_seeds追加（軽い下ネタ・エロ面白系／いいね率最高枠の増強）",
+      "items": [
+        "彼女にバレたら終わる物あげてけw",
+        "風呂上がりのワイを見た彼女の反応がヤバい",
+        "合コンで一番言ったらアカン一言あげてけ",
+        "ワイの検索履歴、当ててみてくれw"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "file": "channels/pokemon-lab.json",
+      "action": "theme_priority再編（対決・比較系を【最優先】へ昇格・毎バッチ最低2件／ランキング系は通常枠へ）",
+      "items": [
+        "対決・比較系=【最優先】/最低2件",
+        "ランキング系=通常枠"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "file": "channels/pokemon-lab.json",
+      "action": "theme_seeds追加（対決型）",
+      "items": [
+        "ガブリアスとギャラドス、どっちが勝つ？",
+        "ミュウツーとアルセウス、どっちが勝つ？",
+        "バンギラスとメタグロス、どっちが勝つ？",
+        "リザードンとカイリュー、どっちが勝つ？"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "file": "channels/yokai-watch.json",
+      "action": "theme_priority再編（伝承妖怪の原典を【最優先】/最低2件・作品キャラを最大1件に抑制）",
+      "items": [
+        "伝承妖怪原典=【最優先】/最低2件",
+        "個別妖怪ファイル(作品キャラ)=最大1件/バッチ"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "file": "channels/yokai-watch.json",
+      "action": "theme_seeds追加（『元ネタが怖すぎる』型）",
+      "items": [
+        "座敷童子の元ネタが怖すぎる — 家を出ていった後に何が起きるのか",
+        "海坊主の正体が怖すぎる — 船を沈める影は何だったのか",
+        "ぬらりひょんの正体が怖すぎる — 勝手に家に上がり込む理由",
+        "口裂け女の元ネタが怖すぎる — 昭和の噂はどこから来たのか"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "file": "launchd: com.youtube-factory.backend",
+      "action": "backend再起動（08-13起動のstaleプロセスを更新し、上記の設定変更をメモリに反映）",
+      "items": [
+        "launchctl kickstart -k",
+        "Autopilot restored: 7/8 channels",
+        "2ch-matome 次回 2026-08-15 21:00 JST"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "file": "channels/pokemon-lab.json",
+      "action": "theme_blacklist追加（08-14既報の完全同一タイトル対策・未対応だったもの）",
+      "items": [
+        "レックウザの誕生"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "file": "channels/yokai-watch.json",
+      "action": "theme_blacklist追加（完全同一タイトル『なぜ妖怪ウォッチだけ？主人公の秘密』2本検出）",
+      "items": [
+        "主人公の秘密"
+      ]
+    },
+    {
+      "date": "2026-08-16",
+      "file": "（変更なし）",
+      "action": "設定変更を見送り",
+      "items": [
+        "全chでanalytics取得不可＋公開データも取得不可のため、新規の再生実績が無く blacklist/seeds 変更の根拠なし。08-15の是正（睡眠制限・対決型昇格・伝承優先）の効果測定はデータ復旧後に持ち越し"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "file": "channels/daily-science.json",
+      "action": "theme_blacklist追加（本・眠気系の表記ゆれ封鎖）",
+      "items": [
+        "本を開いた",
+        "本を読むと"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "file": "channels/scp-lab.json",
+      "action": "theme_seeds追加（終末記録型強化・SCP-7004初動2226/日を受けて）",
+      "items": [
+        "SCP-3000「アナンタシェーシャ」",
+        "SCP-1281「先駆者」"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "file": "channels/2ch-matome.json",
+      "action": "theme_seeds追加（質問ある？×彼女自虐＝ch最速初動820/日の型を増強）",
+      "items": [
+        "ワイ、マッチングアプリ100連敗やけど質問ある？",
+        "ワイ、30歳で人生初彼女できたけど質問ある？"
+      ]
+    }
+  ]
+}
