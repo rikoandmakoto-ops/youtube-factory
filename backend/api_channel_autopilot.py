@@ -38,7 +38,7 @@ from __future__ import annotations
 
 import threading
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -95,6 +95,8 @@ class AutopilotConfig(BaseModel):
     schedule: ScheduleSpec = Field(default_factory=ScheduleSpec)
     duration_minutes: int = Field(default=12, ge=1, le=60)
     gen_type: str = Field(default="both")
+    # 生成にかかる時間を見越した前倒し発火（分）。0 なら従来通り発火＝即公開。
+    publish_lead_minutes: int = Field(default=0, ge=0, le=720)
     theme_queue: List[ThemeItem] = Field(default_factory=list)
 
 
@@ -103,6 +105,7 @@ class AutopilotUpdate(BaseModel):
     schedule: Optional[ScheduleSpec] = None
     duration_minutes: Optional[int] = Field(default=None, ge=1, le=60)
     gen_type: Optional[str] = None
+    publish_lead_minutes: Optional[int] = Field(default=None, ge=0, le=720)
 
 
 class ThemeAdd(BaseModel):
@@ -133,6 +136,9 @@ def _default_autopilot() -> Dict[str, Any]:
         "schedule": {"days_of_week": [], "hour": 18, "minute": 0},
         "duration_minutes": 12,
         "gen_type": "both",
+        # 生成時間を見越して何分前に発火するか。>0 なら公開はスロット時刻ちょうどに
+        # YouTube の予約公開で合わせる。0 = 従来通り「生成完了＝公開」。
+        "publish_lead_minutes": 0,
         "theme_queue": [],
     }
 
@@ -292,6 +298,48 @@ def _resolve_time_slots(sched: Dict[str, Any]) -> List[Dict[str, Any]]:
     return slots
 
 
+def _publish_lead_minutes(ap: Dict[str, Any]) -> int:
+    """生成にかかる時間を見越して何分前に発火するか（0 なら従来通り発火＝即公開）。"""
+    try:
+        lead = int(ap.get("publish_lead_minutes") or 0)
+    except (TypeError, ValueError):
+        return 0
+    # 24時間以上前倒しは事故なので上限を切る
+    return max(0, min(lead, 12 * 60))
+
+
+def _shift_time(hour: int, minute: int, delta_minutes: int) -> tuple:
+    """(hour, minute) を delta 分ずらし、(hour, minute, day_shift) を返す。
+
+    day_shift は日をまたいだ量（-1 なら前日）。cron の曜日指定を補正するのに使う。
+    """
+    total = hour * 60 + minute + delta_minutes
+    day_shift = total // (24 * 60)
+    total %= 24 * 60
+    return total // 60, total % 60, day_shift
+
+
+def _next_publish_at(target_hm: Optional[str]) -> Optional[str]:
+    """"HH:MM" (JST) を次に迎える時刻の RFC3339 UTC 文字列にする。
+
+    すでに過ぎていれば翌日扱い。YouTube の publishAt は未来である必要があるため、
+    現在時刻から2分以内なら None（即時公開）を返す。
+    """
+    if not target_hm:
+        return None
+    try:
+        hh, mm = (int(x) for x in str(target_hm).split(":", 1))
+    except (TypeError, ValueError):
+        return None
+
+    jst = timezone(timedelta(hours=9))
+    now = datetime.now(jst)
+    target = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
+    if target <= now + timedelta(minutes=2):
+        target += timedelta(days=1)
+    return target.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
 def _refresh_channel_job(channel_id: str) -> None:
     sch = api_phase4._ensure_scheduler()
     if sch is None:
@@ -315,6 +363,7 @@ def _refresh_channel_job(channel_id: str) -> None:
         print(f"🚫 Autopilot for {channel_id}: 曜日未指定 — スケジュール登録スキップ")
         return
     slots = _resolve_time_slots(sched)
+    lead = _publish_lead_minutes(ap)
     for idx, slot in enumerate(slots):
         # スロット固有の曜日指定があればそれを優先（例: 木曜だけ別時刻）。
         slot_days = slot.get("days_of_week") or days
@@ -323,12 +372,18 @@ def _refresh_channel_job(channel_id: str) -> None:
             print(f"🚫 Autopilot for {channel_id} slot {idx}: 有効な曜日なし — スキップ")
             continue
         days_label = "・".join(DOW_NAMES[d] for d in slot_days)
-        day_of_week = ",".join(DOW_NAMES[d] for d in slot_days)
+        # publish_lead_minutes が設定されていれば「公開時刻の lead 分前」に生成を開始し、
+        # 公開自体は YouTube の予約公開でスロット時刻ちょうどに合わせる。
+        # （生成に20〜60分かかるため、発火＝公開だと狙った時間帯からずれる）
+        target_hm = f"{slot['hour']:02d}:{slot['minute']:02d}"
+        fire_h, fire_m, day_shift = _shift_time(slot["hour"], slot["minute"], -lead)
+        fire_days = slot_days if not day_shift else [(d + day_shift) % 7 for d in slot_days]
+        day_of_week = ",".join(DOW_NAMES[d] for d in sorted(set(fire_days)))
         try:
             trigger = api_phase4.CronTrigger(
                 day_of_week=day_of_week,
-                hour=slot["hour"],
-                minute=slot["minute"],
+                hour=fire_h,
+                minute=fire_m,
                 timezone="Asia/Tokyo",
             )
             jid = _job_id(channel_id, idx)
@@ -336,15 +391,16 @@ def _refresh_channel_job(channel_id: str) -> None:
                 _run_autopilot,
                 trigger=trigger,
                 id=jid,
-                args=[channel_id],
+                args=[channel_id, target_hm if lead > 0 else None],
                 replace_existing=True,
                 misfire_grace_time=3600,
             )
             job = sch.get_job(jid)
             nxt = job.next_run_time.isoformat() if job and job.next_run_time else "?"
+            lead_note = f" (生成開始 {fire_h:02d}:{fire_m:02d} / 公開 {target_hm})" if lead > 0 else ""
             print(
                 f"📅 Autopilot scheduled for {channel_id} [slot {idx}]: "
-                f"{days_label} {slot['hour']:02d}:{slot['minute']:02d} JST "
+                f"{days_label} {slot['hour']:02d}:{slot['minute']:02d} JST{lead_note} "
                 f"→ next run {nxt}"
             )
         except Exception as e:
@@ -525,8 +581,14 @@ def _run_clip_autopilot(channel_id: str) -> None:
     threading.Thread(target=_work, name=f"clip-autopilot-{channel_id}", daemon=True).start()
 
 
-def _run_autopilot(channel_id: str) -> None:
-    """スケジュール発火: テーマ取得 → シナリオ生成 → キュー投入 → 自動公開フラグ"""
+def _run_autopilot(channel_id: str, target_hm: Optional[str] = None) -> None:
+    """スケジュール発火: テーマ取得 → シナリオ生成 → キュー投入 → 自動公開フラグ
+
+    Args:
+        target_hm: "HH:MM" (JST)。指定時はこの時刻ちょうどに公開されるよう
+            YouTube の予約公開を使う（publish_lead_minutes 運用）。
+            None なら従来通り生成完了時点で即公開。
+    """
     fired_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"🤖 Autopilot fired for {channel_id} at {fired_at} JST")
     if (_load_autopilot(channel_id).get("gen_type") or "") == CLIP_GEN_TYPE:
@@ -597,10 +659,18 @@ def _run_autopilot(channel_id: str) -> None:
             gen_type=gen_type,
         )
         # 完了時に api_phase4.on_generation_complete が拾って YouTube ペア公開する
-        api_phase4._attach_auto_publish_marker(queue, job_id, f"autopilot:{channel_id}", True)
+        publish_at = _next_publish_at(target_hm)
+        api_phase4._attach_auto_publish_marker(
+            queue,
+            job_id,
+            f"autopilot:{channel_id}",
+            True,
+            publish_at=publish_at,
+        )
+        slot_note = f" → 公開予定 {target_hm} JST" if publish_at else ""
         api_phase4.notify_event(
             "schedule_run",
-            f"🤖 Autopilot 実行 [{ch.name}]: {scenario.get('title', '')} (job: {job_id})",
+            f"🤖 Autopilot 実行 [{ch.name}]: {scenario.get('title', '')} (job: {job_id}){slot_note}",
         )
     except Exception as e:
         api_phase4.notify_event("error", f"Autopilot 失敗 ({channel_id}): {e}")
@@ -669,6 +739,8 @@ async def update_autopilot(
                 detail=f"Invalid gen_type: {req.gen_type} (allowed: {', '.join(GEN_TYPE_CHOICES)})",
             )
         ap["gen_type"] = req.gen_type
+    if req.publish_lead_minutes is not None:
+        ap["publish_lead_minutes"] = int(req.publish_lead_minutes)
     if ap["enabled"] and not ap["schedule"].get("days_of_week"):
         raise HTTPException(
             status_code=400,

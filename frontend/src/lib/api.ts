@@ -936,10 +936,19 @@ export async function runScheduleNow(id: string): Promise<{ status: string }> {
 }
 
 // ── Channel Autopilot (フルオート自動投稿) ──
+export type AutopilotTimeSlot = {
+  hour: number;
+  minute: number;
+  /** このスロットだけ別の曜日で回す場合 (0=sun..6=sat)。未指定なら schedule.days_of_week を継承 */
+  days_of_week?: number[];
+};
+
 export type AutopilotSchedule = {
   days_of_week: number[];
   hour: number;
   minute: number;
+  /** 1日複数回投稿するスロット。指定されていれば hour/minute より優先される */
+  times?: AutopilotTimeSlot[];
 };
 
 export type AutopilotTheme = {
@@ -952,6 +961,13 @@ export type AutopilotConfig = {
   enabled: boolean;
   schedule: AutopilotSchedule;
   duration_minutes: number;
+  /**
+   * 生成にかかる時間を見越して何分前に発火するか。
+   * >0 なら公開はスロット時刻ちょうどに YouTube の予約公開で合わせる。
+   * 0 = 発火＝生成完了時に即公開（従来動作）。
+   */
+  publish_lead_minutes?: number;
+  gen_type?: string;
   theme_queue: AutopilotTheme[];
 };
 
@@ -966,6 +982,7 @@ export type AutopilotUpdate = {
   enabled?: boolean;
   schedule?: AutopilotSchedule;
   duration_minutes?: number;
+  publish_lead_minutes?: number;
 };
 
 export async function getAutopilot(channelId: string): Promise<AutopilotResponse> {
