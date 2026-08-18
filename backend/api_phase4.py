@@ -533,6 +533,22 @@ def on_generation_complete(job) -> None:
                 )
         except Exception as e:
             print(f"⚠️ thumbnail_ab_test register failed for {job.id}: {e}")
+        # 投稿直後の自動コメント。ショートは本編URLを載せられるので誘導も兼ねる。
+        _post_auto_comment(
+            channel_id=job.channel_id,
+            video_id=main.get("video_id"),
+            title=main.get("title") or job.title,
+            is_short=False,
+            publish_at=main.get("publish_at"),
+        )
+        _post_auto_comment(
+            channel_id=job.channel_id,
+            video_id=short.get("video_id"),
+            title=short.get("title") or job.title,
+            is_short=True,
+            main_url=main.get("url"),
+            publish_at=short.get("publish_at"),
+        )
 
     privacy = publish_settings.get("default_privacy") or "public"
     delay = int(publish_settings.get("short_delay_minutes") or 10)
@@ -689,6 +705,36 @@ def _start_single_main_publish(
     threading.Thread(target=_do, daemon=True).start()
 
 
+def _post_auto_comment(
+    *,
+    channel_id: str,
+    video_id: Optional[str],
+    title: str = "",
+    is_short: bool = True,
+    main_url: Optional[str] = None,
+    publish_at: Optional[str] = None,
+) -> None:
+    """公開完了後に投稿者コメントを1件付ける（オプトインのチャンネルのみ）。
+
+    自動コメントの失敗が公開処理に波及しないよう、例外はここで握り潰す。
+    """
+    if not video_id:
+        return
+    try:
+        from pipeline import auto_comment
+    except Exception as e:
+        print(f"⚠️ auto_comment import failed: {e}")
+        return
+    auto_comment.post_for_video_async(
+        channel_id=channel_id,
+        video_id=video_id,
+        title=title,
+        is_short=is_short,
+        main_url=main_url,
+        publish_at=publish_at,
+    )
+
+
 def _start_single_short_publish(
     *,
     job,
@@ -737,6 +783,15 @@ def _start_single_short_publish(
             _send_event_notification(
                 "upload_done",
                 f"🚀 ショート自動公開完了 [{job.title}]: {res.get('url')}",
+            )
+            # 投稿直後の自動コメント（登録導線 + 返信を誘う問いかけ）。
+            # 予約公開なら公開時刻まで保留キューに積まれる。
+            _post_auto_comment(
+                channel_id=job.channel_id,
+                video_id=res.get("video_id"),
+                title=job.title,
+                is_short=True,
+                publish_at=publish_at,
             )
         except Exception as e:
             _send_event_notification("error", f"⚠️ 自動公開失敗 ({job.id}): {e}")
@@ -1614,7 +1669,48 @@ def setup_on_startup() -> None:
     _register_trend_scanner_job()
     _register_competitor_scan_job()
     _register_competitor_discovery_job()
+    _register_auto_comment_flush_job()
     print(f"⏰ Scheduler started — {len(_list_schedules())} schedule(s) restored")
+
+
+def _register_auto_comment_flush_job() -> None:
+    """予約公開待ちの自動コメントを投稿するジョブ（15分ごと）。
+
+    予約公開中の動画にはコメントできないため、公開時刻を過ぎたものを
+    このジョブが拾って投稿する。プロセス再起動をまたいでも消えないよう
+    保留分は data/pending_comments.json に永続化されている。
+    """
+    sch = _ensure_scheduler()
+    if sch is None:
+        return
+    try:
+        from pipeline import auto_comment  # type: ignore
+    except Exception as e:
+        print(f"⚠️ auto_comment import failed: {e}")
+        return
+    job_id = "auto_comment:flush_pending"
+    try:
+        sch.remove_job(job_id)
+    except Exception:
+        pass
+
+    def _runner() -> None:
+        try:
+            res = auto_comment.flush_pending()
+            if res.get("posted") or res.get("dropped"):
+                print(
+                    f"💬 auto_comment flush: posted={res.get('posted')} "
+                    f"pending={res.get('pending')} dropped={res.get('dropped')}"
+                )
+        except Exception as e:
+            print(f"⚠️ auto_comment.flush_pending failed: {e}")
+
+    try:
+        trigger = CronTrigger(minute="*/15", timezone="Asia/Tokyo")
+        sch.add_job(_runner, trigger=trigger, id=job_id, replace_existing=True)
+        print("💬 Auto-comment flush scheduled (every 15 min)")
+    except Exception as e:
+        print(f"⚠️ Failed to register auto-comment flush job: {e}")
 
 
 def _register_thumbnail_ab_check_job() -> None:
