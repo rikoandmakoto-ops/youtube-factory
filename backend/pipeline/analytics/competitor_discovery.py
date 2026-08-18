@@ -30,8 +30,12 @@ from collections import Counter
 from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
 
+from pathlib import Path
+
 from . import store as analytics_store
 from . import competitor_analyzer
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 
 
 YT_API_BASE = "https://www.googleapis.com/youtube/v3"
@@ -297,8 +301,38 @@ def _own_channel_context(channel_id: str) -> Tuple[str, str, List[str], List[str
                     if tag:
                         own_tags.append(str(tag))
 
+    if not concept and not own_seeds and not own_tags:
+        # backend プロセス外（CLI / 単体スクリプト）では main.channel_manager を
+        # import できず、ここが丸ごと空になって「no keywords」で無言終了していた。
+        # チャンネル JSON を直接読んで同じ情報を組み立てる。
+        raw = _load_channel_json_direct(channel_id)
+        name = raw.get("name") or name
+        concept = raw.get("concept") or ""
+        for s in raw.get("theme_seeds") or []:
+            if isinstance(s, dict):
+                t = s.get("title") or s.get("keyword") or s.get("angle")
+                if t:
+                    own_seeds.append(str(t))
+            elif isinstance(s, str):
+                own_seeds.append(s)
+        for tag in (
+            ((raw.get("video_format") or {}).get("youtube") or {}).get("default_tags") or []
+        ):
+            if tag:
+                own_tags.append(str(tag))
+
     # 直近の analytics から自チャンネル動画タイトルも拾えるが、最小実装では seeds + tags で十分
     return name, concept, own_titles, own_tags, own_seeds
+
+
+def _load_channel_json_direct(channel_id: str) -> Dict[str, Any]:
+    path = PROJECT_ROOT / "data" / "channels" / f"{channel_id}.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
 
 
 # ---------------------------------------------------------------------
@@ -424,8 +458,15 @@ def discover(
     max_videos_for_keywords: int = 0,  # 未使用（将来拡張用）
     min_subscribers: int = 1000,
     relevance_threshold: float = 0.3,
+    max_queries: Optional[int] = None,
 ) -> Dict[str, Any]:
     """新規競合候補を YouTube Search API から発掘して DB に保存。
+
+    Args:
+        max_queries: 実行する search.list の本数の上限。search は 1 回 100 quota
+            units と高価で、同じ日にアップロード（1 回 1600 units）が走るので、
+            クォータを他機能から奪いたくない場面ではここで絞る。
+            未指定なら抽出したキーワード全件で検索する。
 
     Returns: {"ok": True, "candidates": [...], "matched_keywords": [...]}.
     """
@@ -452,6 +493,8 @@ def discover(
     # コンセプト自体もクエリにする（短く区切る）
     if concept and concept not in keywords:
         keywords = [concept[:30]] + keywords
+    if max_queries is not None:
+        keywords = keywords[: max(1, int(max_queries))]
 
     if not keywords:
         return {

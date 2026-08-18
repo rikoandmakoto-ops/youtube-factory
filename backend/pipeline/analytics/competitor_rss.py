@@ -86,8 +86,17 @@ def list_channel_ids() -> List[str]:
     return sorted(p.stem for p in CHANNELS_DIR.glob("*.json"))
 
 
+PENDING_RELEVANCE_MIN = 0.5
+
+
 def watch_targets(channel_id: str, *, limit: int = MAX_COMPETITORS_PER_SCAN) -> List[str]:
-    """監視する競合チャンネルID一覧（登録済み + 承認済み候補）。"""
+    """監視する競合チャンネルID一覧。
+
+    登録済み `competitors` + 承認済み候補 + 適合度の高い未承認候補。
+    未承認まで見るのは、RSS 監視が読み取りだけで副作用が無いから。
+    （テーマキューに流し込む competitor_analyzer 側は承認済みに限る、という
+    使い分け。監視は広く、生成に効かせるのは絞る。）
+    """
     raw = _load_channel_json(channel_id).get("competitors") or []
     ids: List[str] = [str(c).strip() for c in raw if str(c).strip().startswith("UC")]
 
@@ -99,6 +108,17 @@ def watch_targets(channel_id: str, *, limit: int = MAX_COMPETITORS_PER_SCAN) -> 
         ):
             cid = str(cand.get("competitor_id") or "").strip()
             if cid.startswith("UC"):
+                ids.append(cid)
+
+        for cand in competitor_discovery.list_candidates(
+            channel_id, status="pending", limit=50
+        ):
+            cid = str(cand.get("competitor_id") or "").strip()
+            try:
+                score = float(cand.get("relevance_score") or 0.0)
+            except Exception:
+                score = 0.0
+            if cid.startswith("UC") and score >= PENDING_RELEVANCE_MIN:
                 ids.append(cid)
     except Exception:
         pass
