@@ -309,6 +309,100 @@ def _channel_avg_ctr(channel_id: str) -> float:
     return sum(vals) / len(vals)
 
 
+def _view_velocity(row: Any) -> Optional[float]:
+    """1動画の「1日あたり再生数」を返す。published_at が無ければ None。
+
+    サムネ impressions / CTR は YouTube Analytics API v2 では取得できない
+    （metrics=impressions は "Unknown identifier" で 400。Studio と
+    Reporting API のバルクレポートにしか無い）。そのため CTR を判定材料に
+    できないケースでは、実際に効果として見たい「伸び方」を代理指標に使う。
+    """
+    try:
+        views = float(row["views"] or 0)
+    except Exception:
+        return None
+    pub = row["published_at"] if "published_at" in row.keys() else None
+    if not pub:
+        return None
+    try:
+        published = datetime.strptime(str(pub)[:19], "%Y-%m-%dT%H:%M:%S").replace(
+            tzinfo=timezone.utc
+        )
+    except Exception:
+        return None
+    age_days = (datetime.now(timezone.utc) - published).total_seconds() / 86400.0
+    if age_days < 0.5:
+        return None  # 公開直後は分母が小さすぎて暴れる
+    return views / age_days
+
+
+def _latest_rows_per_video(channel_id: str, limit: int = 60) -> List[Any]:
+    """チャンネルの動画ごとに最新スナップショットを1行ずつ返す。"""
+    with _lock:
+        c = _conn()
+        try:
+            return c.execute(
+                "SELECT video_id, views, published_at, MAX(date) AS date "
+                "FROM video_metrics WHERE channel_id = ? "
+                "GROUP BY video_id ORDER BY date DESC LIMIT ?",
+                (channel_id, limit),
+            ).fetchall()
+        finally:
+            c.close()
+
+
+def _channel_median_velocity(channel_id: str) -> float:
+    """チャンネルの「1日あたり再生数」の中央値。平均だと1本のバズで歪む。
+
+    判定対象側と同じ足切り（MIN_VIEWS_FOR_JUDGEMENT）を基準側にも掛ける。
+    露出がほぼ無い動画を基準に混ぜると中央値が不当に下がり、
+    実際は不調なサムネまで「基準を超えている」と判定されてしまう。
+    """
+    vals = []
+    for row in _latest_rows_per_video(channel_id):
+        try:
+            if float(row["views"] or 0) < MIN_VIEWS_FOR_JUDGEMENT:
+                continue
+        except Exception:
+            continue
+        v = _view_velocity(row)
+        if v is not None and v > 0:
+            vals.append(v)
+    if not vals:
+        return 0.0
+    vals.sort()
+    mid = len(vals) // 2
+    return vals[mid] if len(vals) % 2 else (vals[mid - 1] + vals[mid]) / 2
+
+
+# 代理指標で「不調」と断じるのに最低限必要な再生数。
+# これ未満は「サムネが悪い」のか「そもそも露出されていない / 同期が失敗している」のか
+# 区別できない。区別できないまま切り替えると、公開中の動画のサムネを
+# 根拠なく差し替えることになるので、判定を見送って no_data として扱う。
+MIN_VIEWS_FOR_JUDGEMENT = 20
+
+
+def _fetch_current_velocity(channel_id: str, video_id: str) -> Optional[float]:
+    with _lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT video_id, views, published_at FROM video_metrics "
+                "WHERE video_id = ? ORDER BY date DESC LIMIT 1",
+                (video_id,),
+            ).fetchone()
+        finally:
+            c.close()
+    if not row:
+        return None
+    try:
+        if float(row["views"] or 0) < MIN_VIEWS_FOR_JUDGEMENT:
+            return None
+    except Exception:
+        return None
+    return _view_velocity(row)
+
+
 def _fetch_current_ctr(channel_id: str, video_id: str) -> Optional[float]:
     """直近スナップショットから video の CTR を取得。無ければ analytics sync を試す。"""
     with _lock:
@@ -432,24 +526,41 @@ def check_one(video_id: str) -> Dict[str, Any]:
         return {"ok": True, "noop": True, "status": t.get("status")}
 
     channel_id = t["channel_id"]
-    cur_ctr = _fetch_current_ctr(channel_id, video_id)
-    avg_ctr = _channel_avg_ctr(channel_id)
     threshold = float(t.get("threshold_ratio") or DEFAULT_THRESHOLD_RATIO)
     now = _now()
 
+    # 第一候補は CTR。ただしサムネ impressions/CTR は YouTube Analytics API v2 に
+    # 存在せず（metrics=impressions は 400 "Unknown identifier"）、実運用では
+    # 常に 0 になる。CTR が取れないときは「1日あたり再生数」を代理指標にする。
+    # これを入れるまで、全テストが no_data のまま無期限に monitoring に留まり、
+    # 18 件が2か月以上ぶら下がったままだった。
+    metric = "ctr"
+    current = _fetch_current_ctr(channel_id, video_id)
+    baseline = _channel_avg_ctr(channel_id)
+
+    if current is None or current <= 0 or baseline <= 0:
+        metric = "view_velocity"
+        current = _fetch_current_velocity(channel_id, video_id)
+        baseline = _channel_median_velocity(channel_id)
+
     _update_row(video_id, {
-        "last_check_ctr": cur_ctr if cur_ctr is not None else 0.0,
-        "channel_avg_ctr": avg_ctr,
+        "last_check_ctr": current if current is not None else 0.0,
+        "channel_avg_ctr": baseline,
         "last_checked_at": now,
     })
 
-    if cur_ctr is None or avg_ctr <= 0:
+    if current is None or baseline <= 0:
         # 判定材料が足りない → 24h 後に再チェック
         _update_row(video_id, {"next_check_at": now + 24 * 3600})
-        return {"ok": True, "status": "no_data", "next_check_at": now + 24 * 3600}
+        return {
+            "ok": True,
+            "status": "no_data",
+            "metric": metric,
+            "next_check_at": now + 24 * 3600,
+        }
 
-    floor = avg_ctr * threshold
-    if cur_ctr >= floor:
+    floor = baseline * threshold
+    if current >= floor:
         # OK: 監視継続だが間隔は広げる（72h 後に再確認）
         _update_row(video_id, {
             "next_check_at": now + 72 * 3600,
@@ -458,8 +569,9 @@ def check_one(video_id: str) -> Dict[str, Any]:
         return {
             "ok": True,
             "status": "passing",
-            "current_ctr": cur_ctr,
-            "channel_avg_ctr": avg_ctr,
+            "metric": metric,
+            "current_ctr": current,
+            "channel_avg_ctr": baseline,
             "threshold": floor,
         }
 
@@ -468,8 +580,9 @@ def check_one(video_id: str) -> Dict[str, Any]:
     return {
         "ok": sw.get("ok"),
         "status": "switched" if sw.get("ok") else "switch_failed",
-        "current_ctr": cur_ctr,
-        "channel_avg_ctr": avg_ctr,
+        "metric": metric,
+        "current_ctr": current,
+        "channel_avg_ctr": baseline,
         "threshold": floor,
         "switch": sw,
     }
