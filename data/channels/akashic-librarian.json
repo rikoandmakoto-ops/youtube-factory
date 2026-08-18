@@ -83,7 +83,8 @@
   },
   "description_template": {
     "main_intro": "アカシックレコード —— 宇宙のすべての記録が収められた、と伝えられる書庫。\nその閉架に眠る一冊を、司書が静かに読み上げます。\n\n※本チャンネルで扱う都市伝説・予言・超常現象は、事実として確定したものではありません。伝承・記録・報告として紹介しています。\n\nチャンネル登録で、次の記録もお届けします。",
-    "main_hashtags": "#都市伝説 #歴史ミステリー #未解明 #アカシックレコード"
+    "main_hashtags": "#都市伝説 #歴史ミステリー #未解明 #オカルト #アカシックレコード",
+    "short_hashtags": "#shorts #都市伝説 #歴史ミステリー #未解明 #オカルト"
   },
   "thumbnail_template": {
     "badge_text": "閉架記録",
@@ -361,7 +362,11 @@
         "宇宙",
         "古代文明",
         "予言",
-        "アカシックレコード"
+        "アカシックレコード",
+        "都市伝説解説",
+        "ミステリー",
+        "超常現象",
+        "怖い話"
       ],
       "default_category": "24",
       "default_language": "ja",
@@ -421,18 +426,34 @@
         5,
         6
       ],
-      "hour": 21,
-      "minute": 0,
+      "hour": 18,
+      "minute": 45,
       "times": [
         {
-          "hour": 21,
-          "minute": 0
+          "hour": 18,
+          "minute": 45,
+          "days_of_week": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "hour": 13,
+          "minute": 45,
+          "days_of_week": [
+            0,
+            6
+          ]
         }
       ]
     },
     "duration_minutes": 12,
     "gen_type": "full",
-    "theme_queue": []
+    "theme_queue": [],
+    "publish_lead_minutes": 45
   },
   "short_series_name": "",
   "main_title_prefix": "【閉架記録】"

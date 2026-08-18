@@ -76,7 +76,9 @@
   "description_template": {
     "short_intro": "▼ この切り抜きの本編はこちら\n{source_url}\n\n{source_title}\n（{credit_name} より切り抜き）",
     "short_hashtags": "#shorts #ゆっくり解説 #切り抜き #雑学",
-    "omit_fullvideo_cta": true
+    "omit_fullvideo_cta": true,
+    "main_hashtags": "#ゆっくり解説 #切り抜き #雑学",
+    "lead_template": "『{title}』のおいしい場面を{channel}が切り抜きでお届け。"
   },
   "thumbnail_template": {
     "badge_text": "切り抜き",
@@ -203,7 +205,10 @@
         "雑学",
         "SCP",
         "科学",
-        "shorts"
+        "shorts",
+        "切り抜き動画",
+        "ゆっくり解説切り抜き",
+        "雑学切り抜き"
       ],
       "default_category": "24",
       "privacy_status": "public",
@@ -244,22 +249,53 @@
         5,
         6
       ],
-      "hour": 12,
-      "minute": 0,
+      "hour": 17,
+      "minute": 45,
       "times": [
         {
-          "hour": 12,
-          "minute": 0
+          "hour": 17,
+          "minute": 45,
+          "days_of_week": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
         },
         {
-          "hour": 21,
-          "minute": 0
+          "hour": 19,
+          "minute": 45,
+          "days_of_week": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "hour": 12,
+          "minute": 45,
+          "days_of_week": [
+            0,
+            6
+          ]
+        },
+        {
+          "hour": 14,
+          "minute": 45,
+          "days_of_week": [
+            0,
+            6
+          ]
         }
       ]
     },
     "duration_minutes": 1,
     "gen_type": "clip",
-    "theme_queue": []
+    "theme_queue": [],
+    "publish_lead_minutes": 0
   },
   "short_series_name": "切り抜きラボ",
   "main_title_prefix": ""
