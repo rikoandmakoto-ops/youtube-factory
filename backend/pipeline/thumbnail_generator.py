@@ -426,36 +426,41 @@ body {{ background: #000; display: flex; justify-content: center; align-items: c
   background: linear-gradient(to top, rgba(0,0,0,{bot_o1}) 0%, rgba(0,0,0,{bot_o2}) 50%, transparent 100%); }}
 .text-line {{ position: absolute; left: 0; right: 0; text-align: center;
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic Std", "Hiragino Sans", "Yu Gothic", sans-serif;
-  font-weight: 900; letter-spacing: 0.04em; }}
-.line1 {{ top: 18px; font-size: {line1_px}px; color: #fff;
+  font-weight: 900; letter-spacing: 0.04em;
+  /* 背景写真から文字を浮かせる影。縁取り(text-shadow)だけだと、背景が
+     明るい/ごちゃついた写真のときにエッジが埋もれて可読性が落ちる。 */
+  filter: drop-shadow(0 5px 12px rgba(0,0,0,0.80)); }}
+.line1 {{ top: 18px; font-size: {line1_px}px; color: {c_line1};
   text-shadow:
-    -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000,
-    -6px 0 0 #000, 6px 0 0 #000, 0 -6px 0 #000, 0 6px 0 #000,
-    -3px -5px 0 #000, 3px -5px 0 #000, -3px 5px 0 #000, 3px 5px 0 #000,
-    -5px -3px 0 #000, 5px -3px 0 #000, -5px 3px 0 #000, 5px 3px 0 #000; }}
-.line2 {{ top: 135px; font-size: {line2_px}px; color: #FFEB3C;
+    -4px -4px 0 {c_line1_edge}, 4px -4px 0 {c_line1_edge}, -4px 4px 0 {c_line1_edge}, 4px 4px 0 {c_line1_edge},
+    -6px 0 0 {c_line1_edge}, 6px 0 0 {c_line1_edge}, 0 -6px 0 {c_line1_edge}, 0 6px 0 {c_line1_edge},
+    -3px -5px 0 {c_line1_edge}, 3px -5px 0 {c_line1_edge}, -3px 5px 0 {c_line1_edge}, 3px 5px 0 {c_line1_edge},
+    -5px -3px 0 {c_line1_edge}, 5px -3px 0 {c_line1_edge}, -5px 3px 0 {c_line1_edge}, 5px 3px 0 {c_line1_edge}; }}
+.line2 {{ top: 135px; font-size: {line2_px}px; color: {c_line2};
   text-shadow:
-    -5px -5px 0 #A00, 5px -5px 0 #A00, -5px 5px 0 #A00, 5px 5px 0 #A00,
-    -7px 0 0 #A00, 7px 0 0 #A00, 0 -7px 0 #A00, 0 7px 0 #A00,
-    -4px -6px 0 #A00, 4px -6px 0 #A00, -4px 6px 0 #A00, 4px 6px 0 #A00,
-    -6px -4px 0 #A00, 6px -4px 0 #A00, -6px 4px 0 #A00, 6px 4px 0 #A00; }}
+    -5px -5px 0 {c_line2_edge}, 5px -5px 0 {c_line2_edge}, -5px 5px 0 {c_line2_edge}, 5px 5px 0 {c_line2_edge},
+    -7px 0 0 {c_line2_edge}, 7px 0 0 {c_line2_edge}, 0 -7px 0 {c_line2_edge}, 0 7px 0 {c_line2_edge},
+    -4px -6px 0 {c_line2_edge}, 4px -6px 0 {c_line2_edge}, -4px 6px 0 {c_line2_edge}, 4px 6px 0 {c_line2_edge},
+    -6px -4px 0 {c_line2_edge}, 6px -4px 0 {c_line2_edge}, -6px 4px 0 {c_line2_edge}, 6px 4px 0 {c_line2_edge}; }}
 .line3-wrap {{ position: absolute; top: 296px; left: 0; right: 0; text-align: center; }}
-.line3-badge {{ display: inline-block; background: rgba(220, 20, 20, 0.93);
-  border: 4px solid rgba(255,255,255,0.9); border-radius: 14px; padding: 8px 36px;
+.line3-badge {{ display: inline-block; background: {c_badge_bg};
+  border: 4px solid {c_badge_border}; border-radius: 14px; padding: 8px 36px;
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic Std", "Hiragino Sans", "Yu Gothic", sans-serif;
-  font-weight: 900; font-size: {line3_px}px; color: #fff; letter-spacing: 0.05em;
+  font-weight: 900; font-size: {line3_px}px; color: {c_badge_text}; letter-spacing: 0.05em;
+  filter: drop-shadow(0 5px 12px rgba(0,0,0,0.80));
   text-shadow:
-    -3px -3px 0 rgba(80,0,0,0.9), 3px -3px 0 rgba(80,0,0,0.9),
-    -3px 3px 0 rgba(80,0,0,0.9), 3px 3px 0 rgba(80,0,0,0.9),
-    -5px 0 0 rgba(80,0,0,0.9), 5px 0 0 rgba(80,0,0,0.9),
-    0 -5px 0 rgba(80,0,0,0.9), 0 5px 0 rgba(80,0,0,0.9); }}
+    -3px -3px 0 {c_badge_edge}, 3px -3px 0 {c_badge_edge},
+    -3px 3px 0 {c_badge_edge}, 3px 3px 0 {c_badge_edge},
+    -5px 0 0 {c_badge_edge}, 5px 0 0 {c_badge_edge},
+    0 -5px 0 {c_badge_edge}, 0 5px 0 {c_badge_edge}; }}
 .sub-text {{ position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
-  font-size: {sub_px}px; color: #FFF064;
+  font-size: {sub_px}px; color: {c_sub};
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic Std", "Hiragino Sans", "Yu Gothic", sans-serif;
   font-weight: 700;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.80));
   text-shadow:
-    -3px -3px 0 #300, 3px -3px 0 #300, -3px 3px 0 #300, 3px 3px 0 #300,
-    -4px 0 0 #300, 4px 0 0 #300, 0 -4px 0 #300, 0 4px 0 #300;
+    -3px -3px 0 {c_sub_edge}, 3px -3px 0 {c_sub_edge}, -3px 3px 0 {c_sub_edge}, 3px 3px 0 {c_sub_edge},
+    -4px 0 0 {c_sub_edge}, 4px 0 0 {c_sub_edge}, 0 -4px 0 {c_sub_edge}, 0 4px 0 {c_sub_edge};
   white-space: nowrap; }}
 .char-left {{ position: absolute; bottom: -20px; left: 10px; height: 280px; width: auto; z-index: 10; }}
 .char-right {{ position: absolute; bottom: -20px; right: 10px; height: 280px; width: auto; z-index: 10; }}
@@ -486,6 +491,69 @@ _DEFAULT_OVERLAY = {
 }
 
 
+# サムネの配色。全チャンネルが同じ配色だと、ブラウズ面や検索結果で自社の動画
+# 同士が見分けられず、サムネがチャンネルの記号として機能しない。
+# チャンネル JSON には既に `thumbnail_template.badge_color / hook_color /
+# subtitle_color`（RGB三値、clip_factory のレンダラが使用）があるので、
+# 新しいキーを増やさずそれをこの HTML テンプレートにも流し込む。
+# 縁取り色はバッジ色を暗く落として作るため、1チャンネル1アクセント色で揃う。
+_FALLBACK_BADGE_RGB = (220, 40, 40)
+_FALLBACK_HOOK_RGB = (255, 235, 60)
+_FALLBACK_SUB_RGB = (255, 240, 100)
+
+
+def _as_rgb(value: Any, fallback: tuple) -> tuple:
+    """`[r, g, b]` を (r, g, b) に正規化する。不正値は fallback。"""
+    if isinstance(value, (list, tuple)) and len(value) >= 3:
+        try:
+            return tuple(max(0, min(255, int(c))) for c in value[:3])
+        except (TypeError, ValueError):
+            return fallback
+    return fallback
+
+
+def _darken(rgb: tuple, factor: float) -> tuple:
+    return tuple(max(0, min(255, int(c * factor))) for c in rgb)
+
+
+def _css(rgb: tuple, alpha: Optional[float] = None) -> str:
+    r, g, b = rgb
+    if alpha is None:
+        return f"#{r:02X}{g:02X}{b:02X}"
+    return f"rgba({r}, {g}, {b}, {alpha})"
+
+
+def _resolve_palette(channel_config: Optional[Dict[str, Any]]) -> Dict[str, str]:
+    """チャンネルのアクセント色からサムネ配色を組み立てる。
+
+    `thumbnail_template.palette` に CSS 色文字列を置けば個別に上書きできる
+    （キーは戻り値の各キー）。上書きが無ければバッジ/フック/サブの RGB から導出する。
+    """
+    tmpl = ((channel_config or {}).get("thumbnail_template") or {})
+    badge = _as_rgb(tmpl.get("badge_color"), _FALLBACK_BADGE_RGB)
+    hook = _as_rgb(tmpl.get("hook_color"), _FALLBACK_HOOK_RGB)
+    sub = _as_rgb(tmpl.get("subtitle_color"), _FALLBACK_SUB_RGB)
+
+    out = {
+        "line1": "#FFFFFF",                      # 上段の見出しは常に白（背景を選ばない）
+        "line1_edge": "#000000",
+        "line2": _css(hook),                     # 中央の主役行 = チャンネルのフック色
+        "line2_edge": _css(_darken(badge, 0.45)),
+        "badge_bg": _css(badge, 0.93),
+        "badge_border": "rgba(255,255,255,0.9)",
+        "badge_text": "#FFFFFF",
+        "badge_edge": _css(_darken(badge, 0.35), 0.9),
+        "sub": _css(sub),
+        "sub_edge": _css(_darken(badge, 0.22)),
+    }
+    overrides = tmpl.get("palette") or {}
+    for k in out:
+        v = overrides.get(k)
+        if isinstance(v, str) and v.strip():
+            out[k] = v.strip()
+    return out
+
+
 def _resolve_overlay(channel_config: Optional[Dict[str, Any]]) -> Dict[str, float]:
     """Merge per-channel `thumbnail_template.gradient_overlay` over the defaults."""
     tmpl = ((channel_config or {}).get("thumbnail_template") or {})
@@ -510,6 +578,10 @@ def build_html(
     for top/bottom darkening overlays. Keys: top_height_pct, top_opacity_start,
     top_opacity_mid, bottom_height_pct, bottom_opacity_start, bottom_opacity_mid.
     Lower opacities preserve more of the original background brightness.
+
+    `channel_config.thumbnail_template.palette` — optional per-channel colors
+    (see `_DEFAULT_PALETTE` for the keys). Used to keep each channel's
+    thumbnails visually distinct from the others in browse/search.
     """
     line1 = (brief.get("line1") or "").strip()
     line2 = (brief.get("line2") or "").strip()
@@ -524,6 +596,7 @@ def build_html(
     sub_px = _scaled_font_px(sub, 38, 22, 26)
 
     overlay = _resolve_overlay(channel_config)
+    palette = _resolve_palette(channel_config)
 
     bg_uri = _data_uri(bg_path)
     char_left_html = (
@@ -546,6 +619,16 @@ def build_html(
         bot_h=overlay["bottom_height_pct"],
         bot_o1=overlay["bottom_opacity_start"],
         bot_o2=overlay["bottom_opacity_mid"],
+        c_line1=palette["line1"],
+        c_line1_edge=palette["line1_edge"],
+        c_line2=palette["line2"],
+        c_line2_edge=palette["line2_edge"],
+        c_badge_bg=palette["badge_bg"],
+        c_badge_border=palette["badge_border"],
+        c_badge_text=palette["badge_text"],
+        c_badge_edge=palette["badge_edge"],
+        c_sub=palette["sub"],
+        c_sub_edge=palette["sub_edge"],
         line1=_esc(line1),
         line2=_esc(line2),
         line3_badge=_esc(line3),
