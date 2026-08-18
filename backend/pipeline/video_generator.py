@@ -26,6 +26,11 @@ try:
 except Exception:  # pragma: no cover — effects optional
     video_effects = None  # type: ignore
 
+try:
+    from pipeline import description_blocks as _desc_blocks  # type: ignore
+except Exception:  # pragma: no cover
+    from . import description_blocks as _desc_blocks  # type: ignore
+
 # ============================================================
 # Auto-detect paths
 # ============================================================
@@ -1557,6 +1562,14 @@ class ShortFrameRenderer:
         self.hook_caption = _sanitize_hook_caption(hook_caption)
         self.hook_caption_style = self.overlay_style.get("hook_caption") or {}
 
+        # --- 本編テロップ(読み上げ字幕)のチャンネル別スタイル ---
+        # 以前は全チャンネル共通で「64px・黒縁5px・キャラのtext_color」固定だった
+        # ため、フックテロップ以外はどのチャンネルも同じ見た目になっていた。
+        # short_overlay_style.subtitle で以下を上書きできる（未指定は従来値）:
+        #   font_size / line_gap / stroke_width / stroke_color / color /
+        #   glow_color / glow_extra（色付きの外側グロー。0で無効）
+        self.subtitle_style = self.overlay_style.get("subtitle") or {}
+
         self.fmt = fmt or {}
         self.title = (title or "").strip()
         branding = self.fmt.get("branding", {}) or {}
@@ -2027,13 +2040,29 @@ class ShortFrameRenderer:
                                         stroke_fill=(0,0,0), stroke_width=stroke)
                     y_start += line_gap
             else:
-                wrapped = wrap_text(text, 64, SHORT_W-80, draw)
+                # 本編テロップ。サイズ・縁取り・グローはチャンネル別(subtitle_style)。
+                sub = self.subtitle_style
+                size = int(sub.get("font_size", 64))
+                stroke = int(sub.get("stroke_width", 5))
+                stroke_c = tuple(int(c) for c in (sub.get("stroke_color") or (0, 0, 0))[:3])
+                line_gap = int(sub.get("line_gap", size + 22))
+                col_cfg = sub.get("color")
+                fill_c = tuple(int(c) for c in col_cfg[:3]) if col_cfg else tc
+                glow_cfg = sub.get("glow_color")
+                glow_extra = int(sub.get("glow_extra", 0))
+                wrapped = wrap_text(text, size, SHORT_W-80, draw)
                 y_start = cy + icon_d//2 + 40
                 for line in wrapped:
-                    tw = measure_composite_text(draw, line, 64)
-                    draw_composite_text(draw, ((SHORT_W-tw)//2, y_start), line, 64, tc,
-                                        stroke_fill=(0,0,0), stroke_width=5)
-                    y_start += 86
+                    tw = measure_composite_text(draw, line, size)
+                    x = (SHORT_W - tw)//2
+                    if glow_cfg and glow_extra > 0:
+                        glow_c = tuple(int(c) for c in glow_cfg[:3])
+                        draw_composite_text(draw, (x, y_start), line, size, fill_c,
+                                            stroke_fill=glow_c,
+                                            stroke_width=stroke + glow_extra)
+                    draw_composite_text(draw, (x, y_start), line, size, fill_c,
+                                        stroke_fill=stroke_c, stroke_width=stroke)
+                    y_start += line_gap
 
         # 出典クレジット（右下、小さく）
         if self.source_credit_text:
@@ -4825,6 +4854,9 @@ def generate_video_title(title, thumb_info=None, channel_dict=None):
 # YouTube のタイトル上限（100文字）。超えるとアップロード自体が 400 で弾かれる。
 YOUTUBE_TITLE_MAX = 100
 
+# ショートのタイトル本体の既定上限。フィードで省略されない長さに抑える。
+SHORT_TITLE_CORE_MAX = 30
+
 # タイトル本体を切る際に「ここで切ると自然」な区切り記号（後ろから探す）。
 _TITLE_BREAK_CHARS = ("——", "—", "…", "。", "！", "？", "」", "』", "）", "、")
 
@@ -4859,19 +4891,42 @@ def generate_short_title(title, thumb_info=None, channel_dict=None):
 
     タイトルは YouTube の 100 文字上限に収める。削る順序は
     シリーズ名 → 本体（末尾ハッシュタグは検索流入に効くので最後まで残す）。
+
+    さらにショートのフィードでは長いタイトルが途中で省略され、スワイプを
+    止める力が落ちる。そのため本体は SHORT_TITLE_CORE_MAX 文字（既定30）で
+    切り、フック文が短く刺さる長さに収まっていればそちらを優先して使う。
+    チャンネル別に defaults.short_title_core_max で調整できる。
     """
-    series_prefix = ((channel_dict or {}).get("short_series_name") or "").strip()
+    cd = channel_dict or {}
+    series_prefix = (cd.get("short_series_name") or "").strip()
+    defaults = cd.get("defaults") or {}
 
     # 末尾ハッシュタグはチャンネル別に差し替え可能（未設定なら従来通り）。
     # ゆっくり系でないチャンネルに "#ゆっくり解説" が付くのを防ぐ。
-    tags = ((channel_dict or {}).get("defaults") or {}).get("short_title_hashtags")
+    tags = defaults.get("short_title_hashtags")
     if not tags:
         tags = "#shorts #ゆっくり解説"
     tags = tags.strip()
+    # ショート判定に効くので #shorts は必ず含める
+    if "#shorts" not in tags.lower():
+        tags = f"#shorts {tags}".strip()
+
+    try:
+        core_max = int(defaults.get("short_title_core_max") or SHORT_TITLE_CORE_MAX)
+    except (TypeError, ValueError):
+        core_max = SHORT_TITLE_CORE_MAX
+    core_max = max(12, min(core_max, YOUTUBE_TITLE_MAX))
 
     core = (title or "").strip()
-    if not core and thumb_info and thumb_info.get("hook_lines"):
-        core = "".join(thumb_info["hook_lines"]).strip()
+    # フック文（サムネ用の煽り文）が単体で意味の通る長さなら、そちらの方が
+    # フィードでスワイプを止める。連結はしない（過去に巨大ハッシュタグ化した）。
+    hook = ""
+    if thumb_info and thumb_info.get("hook_lines"):
+        hook = "".join(thumb_info["hook_lines"]).strip()
+    if hook and 6 <= len(hook) <= core_max and len(core) > core_max:
+        core = hook
+    if not core:
+        core = hook
 
     suffix = f" {tags}" if tags else ""
     budget = YOUTUBE_TITLE_MAX - len(suffix) - len(series_prefix)
@@ -4879,6 +4934,7 @@ def generate_short_title(title, thumb_info=None, channel_dict=None):
         # シリーズ名が長すぎて本体が潰れるなら、シリーズ名の方を落とす
         series_prefix = ""
         budget = YOUTUBE_TITLE_MAX - len(suffix)
+    budget = min(budget, core_max)
 
     return f"{series_prefix}{_fit_title_core(core, budget)}{suffix}"
 
@@ -4925,6 +4981,11 @@ def _build_description_template(channel_dict, title, channel_concept):
 
     main_hashtags = tmpl.get("main_hashtags") or default_hashtag_str
     short_hashtags = tmpl.get("short_hashtags") or f"#shorts {default_hashtag_str}"
+
+    # YouTube はハッシュタグが 15 個を超えると全て無視し、表示されるのは先頭3個だけ。
+    # 設定側が多めに書いていても 3〜5 個に正規化してから使う。
+    main_hashtags = _desc_blocks.normalize_hashtags(main_hashtags)
+    short_hashtags = _desc_blocks.normalize_hashtags(short_hashtags, required=["shorts"])
 
     return {
         "main_intro": main_intro,
@@ -4980,7 +5041,18 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
             "  詳しい解説・データ・裏話は本編へ ▼",
             "",
         ]
+    # 冒頭（先頭150文字前後）が検索・関連動画の判定に効くので、
+    # 要約＋検索キーワードを一番上に置いてから本文ブロックへ入る。
+    short_lead = _desc_blocks.build_keyword_lead(
+        cd, title, hook=hook or first_line, tagline=tagline
+    )
+    short_subscribe = _desc_blocks.build_subscribe_block(cd, compact=True)
+    short_related = _desc_blocks.build_related_block(cd, is_short=True)
+    short_cross = _desc_blocks.build_cross_promo_block(cd)
+
     lines_short = [
+        *short_lead,
+        "",
         *header_block,
         "━━━━━━━━━━━━━━━━━━━━━━",
         f"📝 {hook or first_line}",
@@ -4989,8 +5061,13 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
         f"📺 {channel_name}",
         f"   {channel_concept}",
         "",
-        desc_tmpl["short_hashtags"],
+        *short_subscribe,
     ]
+    if short_related:
+        lines_short += ["", *short_related]
+    if short_cross:
+        lines_short += ["", *short_cross]
+    lines_short += ["", desc_tmpl["short_hashtags"]]
 
     # ---- メイン説明文 ----
     # 概要セクション
@@ -5024,8 +5101,12 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
                 timestamps.append(f"{mm:02d}:{ss:02d} {chapter_title}")
         timestamps.append("エンディング")
 
+    main_lead = _desc_blocks.build_keyword_lead(cd, title, hook=hook, tagline=tagline)
+
     lines_main = [
         f"タイトル: {video_title}",
+        "",
+        *main_lead,
         "",
         "━━━━━━━━━━━━━━━━━━━━━━",
         f"📌 {summary}",
@@ -5042,15 +5123,25 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
             "━━━━━━━━━━━━━━━━━━━━━━",
         ] + timestamps + [""]
 
-    # チャンネル情報
+    # チャンネル情報 + 登録CTA
     lines_main += [
         "━━━━━━━━━━━━━━━━━━━━━━",
         f"📺 チャンネル: {channel_name}",
         f"   {channel_concept}",
         "",
-        "🔔 チャンネル登録・高評価をぜひお願いします！",
-        "   新しい動画を見逃さないよう通知をONにしてね",
+        *_desc_blocks.build_subscribe_block(cd),
         "",
+    ]
+
+    # 関連動画（同チャンネル）→ 姉妹チャンネル の順で回遊導線を置く
+    main_related = _desc_blocks.build_related_block(cd, is_short=False)
+    if main_related:
+        lines_main += [*main_related, ""]
+    main_cross = _desc_blocks.build_cross_promo_block(cd)
+    if main_cross:
+        lines_main += [*main_cross, ""]
+
+    lines_main += [
         "━━━━━━━━━━━━━━━━━━━━━━",
         "",
         desc_tmpl["main_hashtags"],
