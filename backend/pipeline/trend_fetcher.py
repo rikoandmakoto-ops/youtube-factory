@@ -35,7 +35,8 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, date
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
+from xml.etree import ElementTree
 
 
 _CACHE_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "trends"
@@ -162,6 +163,18 @@ def fetch_google_trends(
         except Exception as e:
             last_err = f"{last_err or ''} | today: {type(e).__name__}: {e}"
 
+    # 4) Google Trends の RSS フィード（最終フォールバック）
+    # 2026-08 時点で pytrends の3エンドポイントは全て 404 を返す（Google が
+    # 旧 API を廃止したため）。RSS (trends.google.com/trending/rss) はまだ
+    # 生きているので、pytrends が全滅したらこちらから拾う。
+    if not trends:
+        rss_trends, rss_err = _fetch_google_trends_rss(region_code="JP", limit=limit)
+        if rss_trends:
+            trends = rss_trends
+            result["via"] = "rss"
+        elif rss_err:
+            last_err = f"{last_err or ''} | rss: {rss_err}"
+
     if trends:
         result["trends"] = trends
         result["ok"] = True
@@ -170,6 +183,56 @@ def fetch_google_trends(
 
     _write_cache(cache_key, result)
     return result
+
+
+def _fetch_google_trends_rss(
+    *, region_code: str = "JP", limit: int = 20
+) -> Tuple[List[str], Optional[str]]:
+    """Google Trends の RSS から急上昇キーワードを取得する。
+
+    pytrends が使う内部 API と違って公開フィードなので、Google 側の
+    API 廃止の影響を受けにくい。フィード先頭の `<title>Daily Search Trends</title>`
+    はフィード自体の名前なので item 配下の title だけを拾う。
+    """
+    url = f"https://trends.google.com/trending/rss?geo={urllib.parse.quote(region_code)}"
+    try:
+        req = urllib.request.Request(
+            url, headers={"User-Agent": "Mozilla/5.0 (compatible; youtube-factory/1.0)"}
+        )
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            body = resp.read().decode("utf-8", errors="replace")
+    except Exception as e:
+        return [], f"{type(e).__name__}: {e}"
+
+    try:
+        out = parse_trends_rss(body, limit=limit)
+    except Exception as e:
+        return [], f"parse failed: {type(e).__name__}: {e}"
+    if not out:
+        return [], "rss returned no items"
+    return out, None
+
+
+def parse_trends_rss(body: str, *, limit: int = 20) -> List[str]:
+    """Google Trends RSS の本文から急上昇キーワードを取り出す。
+
+    `<channel><title>Daily Search Trends</title>` はフィード自体の名前なので、
+    `<item>` 配下の `<title>` だけを拾う（channel 直下の title を拾うと
+    毎回「Daily Search Trends」が1位のトレンドとして混入する）。
+    """
+    root = ElementTree.fromstring(body)
+    out: List[str] = []
+    seen = set()
+    for item in root.iter("item"):
+        node = item.find("title")
+        kw = (node.text or "").strip() if node is not None else ""
+        if not kw or kw.lower() in seen:
+            continue
+        seen.add(kw.lower())
+        out.append(kw)
+        if len(out) >= limit:
+            break
+    return out
 
 
 # ---------------------------------------------------------------------

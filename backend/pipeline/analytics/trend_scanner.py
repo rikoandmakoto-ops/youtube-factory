@@ -130,7 +130,10 @@ def _fetch_youtube_trending() -> Tuple[List[Dict[str, Any]], Optional[str]]:
     except Exception as e:
         return [], f"trend_fetcher import failed: {e}"
     res = fetch_youtube_trending() or {}
-    items = res.get("items") or []
+    # fetch_youtube_trending が返すキーは "videos"。ここが "items" になっていたため
+    # 取得は成功しているのに常に 0 件と判定され、trend_detections が
+    # 984 回のスキャンで 1 件も入らないまま機能が死んでいた（2026-08-19 修正）。
+    items = res.get("videos") or []
     if not items:
         return [], res.get("error")
     out: List[Dict[str, Any]] = []
@@ -177,24 +180,95 @@ def _fallback_relevance(keyword: str, seeds: List[str]) -> float:
     return min(1.0, base + 0.15 * hits)
 
 
-def _score_with_claude(
-    candidates: List[Dict[str, Any]],
-    *,
-    channel_name: str,
-    channel_concept: str,
-    seeds: List[str],
-    channel_id: str,
-) -> Optional[List[Dict[str, Any]]]:
-    """Claude にバルクで relevance + 提案タイトル/アングルを生成させる。失敗時 None。"""
+def _score_via_claude(system: str, user: str, channel_id: str) -> Optional[Dict[str, Any]]:
     try:
         from pipeline import claude_client
     except Exception:
         return None
     if not claude_client.has_api_key():
         return None
-    if not candidates:
-        return []
+    try:
+        return claude_client.call_claude_json(
+            system=system, user=user,
+            temperature=0.4, max_tokens=2500,
+            channel_id=channel_id, purpose="trend_relevance",
+        )
+    except Exception:
+        return None
 
+
+# GPT フォールバック用。軽量モデルで十分（採点とタイトル案の生成のみ）。
+_GPT_SCORING_MODEL = os.environ.get("TREND_SCORING_MODEL", "gpt-4o-mini")
+_OPENAI_CHAT_URL = "https://api.openai.com/v1/chat/completions"
+
+
+def _score_via_gpt(system: str, user: str, channel_id: str) -> Optional[Dict[str, Any]]:
+    """Claude が使えないときの採点バックエンド。"""
+    api_key = os.environ.get("OPENAI_API_KEY", "").strip()
+    if not api_key:
+        return None
+    try:
+        from pipeline import openai_compat
+    except Exception:
+        return None
+
+    payload = openai_compat.build_chat_payload(
+        _GPT_SCORING_MODEL,
+        [
+            {"role": "system", "content": system},
+            {"role": "user", "content": user},
+        ],
+        temperature=0.4,
+        max_tokens=2500,
+        response_format={"type": "json_object"},
+    )
+    req = urllib.request.Request(
+        _OPENAI_CHAT_URL,
+        data=json.dumps(payload).encode("utf-8"),
+        method="POST",
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=90) as resp:
+            data = json.loads(resp.read())
+    except Exception as e:
+        print(f"⚠️ trend relevance GPT fallback failed: {e}")
+        return None
+
+    try:
+        from pipeline import api_usage
+        usage = data.get("usage", {}) or {}
+        api_usage.record_chat_usage(
+            model=_GPT_SCORING_MODEL,
+            prompt_tokens=usage.get("prompt_tokens", 0),
+            completion_tokens=usage.get("completion_tokens", 0),
+            channel_id=channel_id,
+            purpose="trend_relevance",
+        )
+    except Exception:
+        pass
+
+    try:
+        return json.loads(data["choices"][0]["message"]["content"])
+    except Exception:
+        return None
+
+
+def _build_scoring_prompt(
+    candidates: List[Dict[str, Any]],
+    *,
+    channel_name: str,
+    channel_concept: str,
+    seeds: List[str],
+) -> Tuple[str, str]:
+    """relevance 採点用の (system, user) プロンプトを組み立てる。
+
+    Claude / GPT どちらのバックエンドでも同じ基準で採点させるため、
+    プロンプトは1か所で持つ。
+    """
     lines = []
     for i, c in enumerate(candidates):
         lines.append(f"{i}: {c.get('keyword')}  [source={c.get('source')}]")
@@ -215,11 +289,37 @@ def _score_with_claude(
         "あなたは YouTube チャンネル運営の編集ディレクター。"
         "視聴者の知的好奇心を引く切り口を見抜き、トレンドをチャンネル文脈に翻訳する。"
     )
-    res = claude_client.call_claude_json(
-        system=system, user=user,
-        temperature=0.4, max_tokens=2500,
-        channel_id=channel_id, purpose="trend_relevance",
+    return system, user
+
+
+def _score_with_llm(
+    candidates: List[Dict[str, Any]],
+    *,
+    channel_name: str,
+    channel_concept: str,
+    seeds: List[str],
+    channel_id: str,
+) -> Optional[List[Dict[str, Any]]]:
+    """LLM にバルクで relevance + 提案タイトル/アングルを生成させる。失敗時 None。
+
+    Claude を先に試し、落ちたら GPT に回す。Claude だけに依存していた頃は
+    ANTHROPIC_API_KEY が失効した時点で採点が語彙一致フォールバック（上限 0.35 前後）
+    に落ち、AUTO_QUEUE_THRESHOLD 0.7 に永久に届かず自動キュー投入が止まっていた。
+    シナリオ生成が GPT で回っている以上、そちらに逃がせば機能を維持できる。
+    """
+    if not candidates:
+        return []
+
+    system, user = _build_scoring_prompt(
+        candidates,
+        channel_name=channel_name,
+        channel_concept=channel_concept,
+        seeds=seeds,
     )
+
+    res = _score_via_claude(system, user, channel_id)
+    if res is None:
+        res = _score_via_gpt(system, user, channel_id)
     if not res or not isinstance(res, dict):
         return None
     scores = res.get("scores")
@@ -363,15 +463,17 @@ def scan_channel(
 
     scored: List[Dict[str, Any]] = []
     if fresh:
-        claude_res = _score_with_claude(
+        llm_res = _score_with_llm(
             fresh,
             channel_name=channel_name,
             channel_concept=channel_concept,
             seeds=seeds,
             channel_id=channel_id,
         )
-        if claude_res is None:
-            # フォールバック
+        if llm_res is None:
+            # フォールバック（Claude も GPT も使えないとき）。
+            # 語彙一致ベースなので上限が低く、AUTO_QUEUE_THRESHOLD には届かない。
+            # 検出は残るので UI から手動でキュー投入できる。
             for c in fresh:
                 rel = _fallback_relevance(c["keyword"], seeds)
                 scored.append({
@@ -379,10 +481,10 @@ def scan_channel(
                     "relevance_score": rel,
                     "suggested_title": c["keyword"],
                     "suggested_angle": "",
-                    "rationale": "Claude API 未設定: 語彙重なりベースのフォールバックスコア",
+                    "rationale": "LLM 未設定: 語彙重なりベースのフォールバックスコア",
                 })
         else:
-            scored = claude_res
+            scored = llm_res
 
     for s in scored:
         trend = float(s.get("trend_score") or 0.0)
