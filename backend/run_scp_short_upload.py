@@ -189,7 +189,7 @@ def main():
         video_path=str(short_video),
         title=final_short_title,
         description=short_desc_body,
-        tags=ch.video_format.youtube.default_tags or ch.get_hashtags() or None,
+        tags=ch.get_upload_tags(is_short=True) or None,
         thumbnail_path=str(short_thumb) if short_thumb.exists() else None,
         privacy=PRIVACY,
         category_id=ch.video_format.youtube.default_category or ch.get_category() or "24",

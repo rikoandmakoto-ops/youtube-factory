@@ -170,7 +170,7 @@ def main():
     print(f"\n📤 Uploading SHORT to YouTube ({PRIVACY})...")
     from pipeline import youtube_uploader as yu
 
-    tags = ch.video_format.youtube.default_tags or ch.get_hashtags() or None
+    tags = ch.get_upload_tags(is_short=True) or None
     category = ch.video_format.youtube.default_category or ch.get_category() or "24"
 
     r = yu.upload_video(

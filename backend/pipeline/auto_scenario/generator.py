@@ -1037,6 +1037,14 @@ class ScenarioGenerator:
         未設定 / 空dict なら空文字（=従来通り）。設定があれば
         トーン・語り手ペルソナ・冒頭フック例・禁止要素をまとめた
         「# このチャンネルの語り口」ブロックを返す。
+
+        2026-08-18 追加のチャンネル差別化フィールド（すべて任意）:
+          - speech_signature: 語尾・一人称・口癖など「声の指紋」
+          - signature_phrases: そのチャンネルらしい常套句（自然に混ぜる）
+          - reaction_style:   リスナー役のリアクションの作り方
+          - pacing:           テンポ・間の取り方
+          - banned_phrasing:  語り口として禁止する言い回し（forbidden は単語、こちらは言い方）
+        いずれも未設定チャンネルでは出力に一切影響しない（挙動不変）。
         """
         vs = getattr(channel, "voice_style", None) or {}
         if not vs:
@@ -1048,6 +1056,21 @@ class ScenarioGenerator:
         persona = vs.get("narrator_persona")
         if persona:
             lines.append(f"- 語り手: {persona}")
+        speech = vs.get("speech_signature")
+        if speech:
+            lines.append(f"- 声の指紋（語尾・一人称・口癖／他チャンネルと絶対に混ぜない）: {speech}")
+        pacing = vs.get("pacing")
+        if pacing:
+            lines.append(f"- テンポ・間の取り方: {pacing}")
+        sig = vs.get("signature_phrases") or []
+        if sig:
+            joined = " / ".join(f"「{p}」" for p in sig)
+            lines.append(
+                f"- このチャンネルらしい常套句（毎回2〜3個を自然に混ぜる・全部並べるのは不可）: {joined}"
+            )
+        reaction = vs.get("reaction_style")
+        if reaction:
+            lines.append(f"- リアクション役の作り方: {reaction}")
         hooks = vs.get("opening_hooks") or []
         if hooks:
             sample = " / ".join(f"「{h}」" for h in hooks)
@@ -1055,12 +1078,88 @@ class ScenarioGenerator:
         forbidden = vs.get("forbidden") or []
         if forbidden:
             lines.append(f"- 使用禁止ワード/要素: {', '.join(forbidden)}")
+        banned = vs.get("banned_phrasing") or []
+        if banned:
+            lines.append("- 禁止する言い回し（1つでも出たら不合格）:")
+            for b in banned:
+                lines.append(f"  - {b}")
         style_rules = vs.get("style_rules") or []
         if style_rules:
             lines.append("- 厳守する語りのルール:")
             for r in style_rules:
                 lines.append(f"  - {r}")
         return "\n".join(lines) + "\n\n"
+
+    def _hook_variant_block(self, channel, line_label: str = "1行目") -> str:
+        """今回の動画で使う「冒頭3秒の型」を1つ抽選してプロンプトブロックを返す。
+
+        共通の `_HOOK_3SEC_RULE` は4型（これ知ってた?型 / 実は型 / した結果型 /
+        違和感の問い型）を全チャンネルに配っているため、どのチャンネルも冒頭
+        3秒の言い回しが同じになり、チャンネルの個性が最初の1行で消えていた。
+
+        `voice_style.hook_patterns` を宣言したチャンネルでは、そのチャンネル
+        固有の型（3〜5個）から**1本ごとにランダムで1型を選び**、その型に固定
+        して書かせる。生成のたびに型が変わるので、同じチャンネル内でも冒頭が
+        テンプレ化しない。
+
+        hook_patterns の要素は dict / str のどちらでもよい::
+
+            {"name": "体感再現型",
+             "template": "「今すぐ〇〇してみて」で始め、視聴者の体で再現させる",
+             "example": "今すぐ耳をふさいでみて。ゴーって音、あれ血液の音なんだ"}
+
+        未設定なら空文字を返し、呼び出し側は従来の共通ルールを使う（挙動不変）。
+        """
+        vs = getattr(channel, "voice_style", None) or {}
+        patterns = vs.get("hook_patterns") or []
+        if not patterns:
+            return ""
+
+        norm: List[Dict[str, str]] = []
+        for p in patterns:
+            if isinstance(p, dict):
+                name = str(p.get("name") or "").strip()
+                if not name:
+                    continue
+                norm.append({
+                    "name": name,
+                    "template": str(p.get("template") or "").strip(),
+                    "example": str(p.get("example") or "").strip(),
+                })
+            elif isinstance(p, str) and p.strip():
+                norm.append({"name": p.strip(), "template": "", "example": ""})
+        if not norm:
+            return ""
+
+        chosen = random.choice(norm)
+        others = [p["name"] for p in norm if p["name"] != chosen["name"]]
+        print(f"🎣 冒頭3秒の型: 【{chosen['name']}】 (候補{len(norm)}型から抽選)")
+
+        lines = [
+            "# 冒頭3秒ルール(最重要・これを外した時点で不合格)",
+            f"- ショートは**最初の3秒**で視聴継続がほぼ決まる。{line_label}は必ず「問い」か「驚き」から始める。",
+            "- ❌ 挨拶・自己紹介・チャンネル説明・テーマ紹介・前置き・「今回は〜」は1文字でも入れたら不合格。",
+            f"- ✅ **今回の動画の{line_label}は必ず【{chosen['name']}】で書く**"
+            "（このチャンネル専用の型。今回はこの型に固定し、他の型に逃げない）。",
+        ]
+        if chosen["template"]:
+            lines.append(f"  - 型の作り方: {chosen['template']}")
+        if chosen["example"]:
+            lines.append(f"  - 参考例（丸写し禁止・テーマに合わせて言い換える）: 「{chosen['example']}」")
+        lines += [
+            f"- {line_label}は**15〜30字で断定的に**。ここで答えを言わない(答えを言うと以降を見る理由が消える)。",
+            f"- このチャンネルの語り口（上記の声の指紋・語尾・一人称）を{line_label}から守る。"
+            "型だけ合っていても語り口が他チャンネル風なら不合格。",
+        ]
+        if others:
+            lines.append(
+                f"- ※ このチャンネルの他の型（今回は使わない）: {', '.join(others)}"
+            )
+        lines.append(
+            "- ※ 上の「ショート尺ルール」で1行目の書式がチャンネル固有に指定されている場合はそちらを優先し、"
+            "その書式のまま今回の型の役割を満たすこと。"
+        )
+        return "\n".join(lines) + "\n"
 
     def _short_rules_block(self, channel, short_target_chars: int,
                            short_end_block: str) -> Optional[str]:
@@ -1142,6 +1241,9 @@ class ScenarioGenerator:
         expr1 = channel.characters[c1].get("expressions", ["normal"])
 
         voice_block = self._voice_style_block(channel)
+        # 冒頭3秒の型はチャンネル固有の hook_patterns から1本ごとに抽選する。
+        # 未設定チャンネルは従来どおり共通4型ルール。
+        hook_rule_block = self._hook_variant_block(channel) or _HOOK_3SEC_RULE
         end_cta_block = self._end_cta_block(channel)
         title_rule_block = self._title_rule_block(channel)
         try:
@@ -1160,7 +1262,7 @@ class ScenarioGenerator:
 - **総文字数は必ず{short_target_chars-30}〜{short_target_chars+40}字**(目標{short_target_chars}字)で**約30〜40秒**を実現。ショートは**30〜45秒が最も伸びる**。25秒未満はリーチが激減するので絶対に短くしすぎない。
 - **1行=1テロップ**。各行は3〜4秒で読み切れる長さに収め、画面の文字が次々入れ替わるテンポを作る。
 - 構成(7行固定):
-  1行目=**3秒フック(最重要)**: 後述の「冒頭3秒ルール」の4型のいずれかで書く。挨拶・自己紹介・テーマ説明・前置きは1文字でも入れたら不合格。15〜30字で断定的に、まだ答えは言わない。
+  1行目=**3秒フック(最重要)**: 後述の「冒頭3秒ルール」で今回指定された型で書く。挨拶・自己紹介・テーマ説明・前置きは1文字でも入れたら不合格。15〜30字で断定的に、まだ答えは言わない。
   2行目=**追い打ちフック**: 1行目の謎をさらに煽るか、相手役が「えっ、どういうこと!?」と食いつくリアクションで視聴者の「気になる」を代弁する。ここでもまだ答えは出さない(出し惜しみして"続きを見る理由"を作る)。
   3行目=**核となる事実①**: **具体的な数字・年号・%・研究データ・固有名詞のいずれか1つ以上を必ず含める**(例:「実は97%の人が…」「1923年に…」「東大の研究で…」)。抽象論・一般論だけはNG。
   4行目=**理由 / 核となる事実②**: ①の「なぜ」を**1つだけ**答える。ここで全部は明かさない。
@@ -1201,7 +1303,7 @@ class ScenarioGenerator:
 - VOICEVOX1.3x≒7.8字/秒。{target_chars}字で約{target_duration/60:.1f}分、{max_chars}字で約{max_chars/7.8/60:.1f}分。
 
 {short_rules_block}
-{_HOOK_3SEC_RULE}
+{hook_rule_block}
 {_TELOP_PACING_RULE_SHORT}
 {cliffhanger_block}{series_block}# 構成(full): 冒頭フック(3行) → 問題提起+本編宣言(3行) → 基本メカニズム(12行) → 詳細&研究データ(12行) → 意外な事実&歴史(10行) → 応用Tips(8行) → まとめ+次回予告+締めCTA(7行) = 計55行(目標{target_lines}行に届くまで各セクションを伸ばす)
 
@@ -1270,6 +1372,7 @@ class ScenarioGenerator:
         cta_pos = channel.content_policy.get("cta_position", "end_only")
 
         voice_block = self._voice_style_block(channel)
+        hook_rule_block = self._hook_variant_block(channel) or _HOOK_3SEC_RULE
         end_cta_block = self._end_cta_block(channel)
         try:
             _sf = (channel._raw or {}).get("short_format") or {}
@@ -1289,7 +1392,7 @@ class ScenarioGenerator:
 - **総文字数は必ず{short_target_chars-30}〜{short_target_chars+40}字**(目標{short_target_chars}字)で**約30〜40秒**を実現。ショートは**30〜45秒が最も伸びる**。25秒未満はリーチが激減するので短くしすぎない。
 - **1行=1テロップ**。各行は3〜4秒で読み切れる長さに収める。
 - 構成(7行固定):
-  1行目=**3秒フック(最重要)**: 後述の「冒頭3秒ルール」の4型のいずれかで書く。前置き・状況説明から入るのは不合格。15〜30字で断定的に。
+  1行目=**3秒フック(最重要)**: 後述の「冒頭3秒ルール」で今回指定された型で書く。前置き・状況説明から入るのは不合格。15〜30字で断定的に。
   2行目=**追い打ちフック**: 謎を一段深くする。ここでも答えを出さない。
   3行目=**核となる事実①**: **具体的な数字・年号・%・研究データ・固有名詞のいずれか1つ以上を必ず含める**(例:「実は97%が…」「1923年の…」「ハーバード大の研究では…」)。抽象論だけはNG。
   4行目=**理由 / 核となる事実②**: ①の「なぜ」を1つだけ答える。
@@ -1339,7 +1442,7 @@ class ScenarioGenerator:
 - 各行に研究データ・数字・事例を必ず盛る。
 
 {short_rules_block}
-{_HOOK_3SEC_RULE}
+{hook_rule_block}
 {_TELOP_PACING_RULE_SHORT}
 {cliffhanger_block}{series_block}# 雰囲気タグ(mood)ルール — シーンごとのBGM切替に使用
 - 各行(章タイトル含む)に必ず "mood" を付与する。値は次の6種類のいずれか:
@@ -1394,6 +1497,10 @@ class ScenarioGenerator:
         policy_text = "\n".join(policy_parts) if policy_parts else "(なし)"
         persona_block = self._persona_block(channel)
         voice_block = self._voice_style_block(channel)
+        # このスタイルでは「1個目のファクトのナレーション」が冒頭3秒に当たる。
+        hook_rule_block = self._hook_variant_block(
+            channel, line_label="1個目のファクトの text（ナレーション）"
+        )
         tone = channel.content_policy.get("tone", "データ重視")
 
         fo = {}
@@ -1476,6 +1583,7 @@ class ScenarioGenerator:
 - タイトルは「説明」ではなく「衝動」を作る。読んだ瞬間に指が止まる語（実は/ヤバい/本当は/知らない）を必ず1つ入れる。
 - 例:「ニトリの年収がヤバい 平均850万円の実態」「任天堂の離職率3%、辞めない理由」
 
+{hook_rule_block}
 # 冒頭テロップ(1個目の fact_main)ルール
 - このスタイルでは**1個目の fact_main がそのまま冒頭0〜3秒の画面中央テロップ**になる。
   **10文字前後**まで削って「企業名＋数字」だけを残す(例:「ニトリ 年収850万」)。

@@ -240,7 +240,7 @@ def run_for(channel_id: str) -> dict:
         "short_description": short_desc_body,
         "short_video": str(short_video),
         "short_thumbnail": str(short_thumb) if short_thumb.exists() else None,
-        "tags": ch.video_format.youtube.default_tags or ch.get_hashtags() or None,
+        "tags": ch.get_upload_tags(is_short=True) or None,
         "category_id": ch.video_format.youtube.default_category or ch.get_category() or "24",
         "privacy": PRIVACY,
         "upload": None,

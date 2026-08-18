@@ -54,7 +54,7 @@ def main():
         video_path=str(VIDEO),
         title=title,
         description=desc_body,
-        tags=ch.video_format.youtube.default_tags or ch.get_hashtags() or None,
+        tags=ch.get_upload_tags(is_short=True) or None,
         thumbnail_path=str(THUMB) if THUMB.exists() else None,
         privacy="public",
         category_id=ch.video_format.youtube.default_category or ch.get_category() or "24",

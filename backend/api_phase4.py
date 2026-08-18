@@ -341,10 +341,13 @@ def _attach_auto_publish_marker(
     schedule_id: str,
     auto_publish: bool,
     publish_offset_minutes: Optional[int] = None,
+    publish_at: Optional[str] = None,
 ) -> None:
     """ジョブの scenario_data に auto_publish フラグを刻む。
     on_job_complete フックが完了時にこのマーカーを見て pair publish を起こす。
     publish_offset_minutes が正値なら「生成完了時点 + N 分」で予約公開する。
+    publish_at (RFC3339 UTC) が指定されていれば、生成にかかった時間に関係なく
+    その絶対時刻で予約公開する（投稿時間帯を狙う autopilot 用）。こちらが優先。
     """
     try:
         with queue._lock:
@@ -355,6 +358,7 @@ def _attach_auto_publish_marker(
                     "auto_publish": bool(auto_publish),
                     "schedule_id": schedule_id,
                     "publish_offset_minutes": publish_offset_minutes,
+                    "publish_at": publish_at,
                 })
                 j.scenario_data["_options"] = opts
     except Exception:
@@ -370,6 +374,26 @@ def _compute_publish_at_from_offset(offset_minutes: Optional[int]) -> Optional[s
         return None
     publish_dt = datetime.now(timezone.utc) + timedelta(minutes=int(offset_minutes))
     return publish_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _valid_future_publish_at(publish_at: Optional[str]) -> Optional[str]:
+    """絶対指定の publishAt が「まだ未来」なら返す。過ぎていれば None（即時公開）。
+
+    YouTube は過去の publishAt を受け付けないため、生成が想定より長引いて
+    狙った公開時刻を過ぎてしまったケースを即時公開にフォールバックさせる。
+    """
+    if not publish_at:
+        return None
+    try:
+        dt = datetime.strptime(publish_at, "%Y-%m-%dT%H:%M:%SZ").replace(
+            tzinfo=timezone.utc
+        )
+    except (TypeError, ValueError):
+        return None
+    if dt <= datetime.now(timezone.utc) + timedelta(minutes=2):
+        print(f"⏰ 予約公開時刻 {publish_at} を過ぎているため即時公開に切り替え")
+        return None
+    return publish_at
 
 
 def on_generation_complete(job) -> None:
@@ -416,8 +440,12 @@ def on_generation_complete(job) -> None:
 
     # スケジュール公開: マーカーに publish_offset_minutes が乗っていれば
     # 「生成完了時点 + N 分」を YouTube の publishAt として渡す
+    # 絶対時刻指定（autopilot の投稿時間帯狙い）が最優先。無ければ相対オフセット。
     publish_offset = opts.get("publish_offset_minutes")
-    main_publish_at = _compute_publish_at_from_offset(publish_offset)
+    main_publish_at = (
+        _valid_future_publish_at(opts.get("publish_at"))
+        or _compute_publish_at_from_offset(publish_offset)
+    )
 
     result = job.result or {}
     paths = pair_pub._resolve_paths_from_result(result)
@@ -448,7 +476,7 @@ def on_generation_complete(job) -> None:
                 main_desc_file=paths.get("main_desc_file"),
                 publish_settings=publish_settings,
                 youtube_channel_id=youtube_channel_id,
-                tags=ch.get_hashtags() if ch else [],
+                tags=ch.get_upload_tags() if ch else [],
                 category_id=ch.get_category() if ch else "27",
                 publish_at=main_publish_at,
             )
@@ -461,7 +489,7 @@ def on_generation_complete(job) -> None:
                 short_desc_file=paths.get("short_desc_file"),
                 publish_settings=publish_settings,
                 youtube_channel_id=youtube_channel_id,
-                tags=ch.get_hashtags() if ch else [],
+                tags=ch.get_upload_tags(is_short=True) if ch else [],
                 category_id=ch.get_category() if ch else "27",
                 publish_at=main_publish_at,
             )
@@ -509,8 +537,8 @@ def on_generation_complete(job) -> None:
     privacy = publish_settings.get("default_privacy") or "public"
     delay = int(publish_settings.get("short_delay_minutes") or 10)
     template = publish_settings.get("short_description_template")
-    raw_tags = ch.get_hashtags() if ch else []
-    tags = [t.lstrip("#") for t in raw_tags]
+    # 検索用の広いタグセット（video_format.youtube.default_tags + defaults.hashtags）
+    tags = ch.get_upload_tags() if ch else []
     category_id = ch.get_category() if ch else "27"
 
     threading.Thread(

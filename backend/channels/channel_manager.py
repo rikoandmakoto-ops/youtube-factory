@@ -157,6 +157,44 @@ class ChannelProfile:
     def get_category(self) -> str:
         return self.defaults.get("category", "27")
 
+    def get_upload_tags(
+        self,
+        extra: Optional[List[str]] = None,
+        is_short: bool = False,
+        max_chars: int = 450,
+    ) -> List[str]:
+        """videos.insert の snippet.tags に渡すタグ列。
+
+        検索用の広いセット（video_format.youtube.default_tags）と表示用の
+        少数（defaults.hashtags）をマージする。以前は defaults.hashtags だけを
+        使っていたため 4〜6 個しかタグが付かず、default_tags が死に設定だった。
+
+        YouTube のタグは合計 500 文字が上限（区切り文字込み）なので余裕をみて
+        450 文字で打ち切る。'#' は除去（タグに含めると検索対象がずれる）。
+        """
+        vf_tags = list(self.video_format.youtube.default_tags or [])
+        hash_tags = list(self.get_hashtags() or [])
+        head = ["Shorts"] if is_short else []
+
+        ordered: List[str] = []
+        seen = set()
+        for tag in head + vf_tags + hash_tags + list(extra or []):
+            t = str(tag or "").lstrip("#＃").strip()
+            if not t or t.lower() in seen:
+                continue
+            seen.add(t.lower())
+            ordered.append(t)
+
+        out: List[str] = []
+        total = 0
+        for t in ordered:
+            cost = len(t) + 1  # カンマ区切り1文字分
+            if total + cost > max_chars:
+                break
+            out.append(t)
+            total += cost
+        return out
+
     def illustration_style_config(self) -> Dict[str, Any]:
         """イラスト生成スタイル設定（DALL-E + フレーム）を dict で返す。
 

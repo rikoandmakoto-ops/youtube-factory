@@ -569,7 +569,8 @@ def _resolve_pair_inputs(req: PublishPairRequest) -> Dict[str, Any]:
         if ch:
             ch_publish = ch.get_publish_settings()
             ch_yt_id = ch_yt_id or ch.youtube_channel_id
-            ch_tags = ch.get_hashtags() or []
+            # 検索用の広いタグセット（default_tags + hashtags のマージ済み）
+            ch_tags = ch.get_upload_tags() or []
             ch_category = ch.get_category() or "27"
 
     template = req.short_description_template or ch_publish.get("short_description_template")

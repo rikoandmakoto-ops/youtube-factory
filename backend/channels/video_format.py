@@ -386,5 +386,14 @@ class VideoFormat:
             self.output.use_illustrations = channel_defaults["use_illustrations"]
         if "category" in channel_defaults:
             self.youtube.default_category = channel_defaults["category"]
-        if "hashtags" in channel_defaults:
-            self.youtube.default_tags = channel_defaults["hashtags"]
+        # defaults.hashtags は「説明文に出す表示用の3〜5個」、
+        # youtube.default_tags は「検索用の広いタグセット」で役割が別。
+        # 以前はここで無条件に上書きしていたため default_tags が死に設定になり、
+        # アップロード時のタグが常に4〜6個しか付いていなかった。
+        # video_format.youtube.default_tags が未設定のときだけ補完する。
+        if "hashtags" in channel_defaults and not self.youtube.default_tags:
+            self.youtube.default_tags = [
+                str(t).lstrip("#＃").strip()
+                for t in (channel_defaults["hashtags"] or [])
+                if str(t).lstrip("#＃").strip()
+            ]
