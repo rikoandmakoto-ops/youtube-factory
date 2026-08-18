@@ -32,6 +32,46 @@ CLI 0.0.9 の内部 API クライアント（`dist/lib/api-client.js`）にあ�
 autopilot から無人で叩ける公開インターフェースが用意されていない。
 加えて API キーの発行には有料プラン（$99/月〜）の契約が必要。
 
+### 再調査メモ（2026-08-09）
+
+08-04 以降で変わった点と、変わっていない点。
+
+**変わった点**
+
+- `app.noimosai.com` にブラウザから到達できるようになった（08-04 はポリシー遮断）。
+  ログイン／サインアップ画面を実測できた。
+- ヘルプに [Create and edit images, videos, and audio](https://docs.noimosai.com/help-center/chat/create-and-edit-media)
+  が追加され、動画能力の記述が「台本生成」止まりではなくなった。
+  Videos の例として *"Short videos, ad videos, explainer videos, video outlines, captioned videos"*、
+  用途に *"Adjusting composition, color, aspect ratio, or text based on existing images or videos"* とある。
+- Chat に**ファイル添付**がある（[Upload Files](https://docs.noimosai.com/help-center/chat/upload-files)。1メッセージ5件まで）。
+
+**変わっていない点（＝結論は据え置き）**
+
+- **長尺動画を区間で切り出す機能はどこにも documented されていない。** 動画能力は
+  「生成」と「生成物への生成的な編集」であって、20分の元動画から50秒を抜く編集ではない。
+- 公開 REST API は依然無い（`api-reference/openapi.json` は Mintlify サンプルのまま）。
+  CLI / MCP の公開ツールも `chat` / `list_workspaces` / `list_integrations` / `post` の4つだけ。
+- 料金は Pro **$99**／Team $249／Advanced $499（いずれも user/月）。動画編集・API は
+  どのプランの説明にも出てこない。
+
+**ログイン画面の実測結果（08-04 の記録と食い違うので上書き）**
+
+| 項目 | 08-04 の記録 | 08-09 の実測 |
+| --- | --- | --- |
+| 言語 | 英語 | **日本語がデフォルト** |
+| OAuth | 無し | **Google ログインあり** |
+| メール欄 | `input[type=email]` 想定 | `type="text"` / `name`・`placeholder`・`autocomplete` すべて空 / `id` は React 生成のランダム値 |
+| ボット対策 | 記録なし | **reCAPTCHA Enterprise（`render=explicit`）** |
+
+属性で特定できないため `engines/noimos.py` の `_login()` を
+「フォーム内の非パスワードテキスト入力を拾う」方式に修正済み。ログインボタンも
+日本語「ログイン」を先に試す順序に変更した。
+
+**reCAPTCHA があるので headless の自動ログインは弾かれうる。** その場合は人間が
+一度ログインして `~/.youtube-factory/noimos_session.json`（storage_state）を作り、
+以後はそれを使い回す。CAPTCHA 突破は実装しない。
+
 ### それでも実装した NoimosAI エンジン
 
 唯一考えられる自動化経路（チャットに元動画 URL を渡し、応答の
@@ -43,15 +83,36 @@ NoimosPostJson `media[].url` から MP4 を拾う）を
 "clip": { "engine": "noimos", "fallback_engine": "local" }
 ```
 
-`NOIMOS_API_KEY` を `backend/.env` に入れ、`npm i -g @agos-labs/noimosai-cli` を
-実行すれば有効になる。キーが無い / CLI が無い / 元動画が YouTube に公開されて
-いない場合は `NoimosUnavailable` を投げ、`fallback_engine`（既定 `local`）へ
-自動的に落ちるので autopilot は止まらない。
+経路は `clip.noimos.mode` で2つ。現在の clip-lab.json は `browser`。
 
-**この経路はアカウントが無いため未検証。** 実際に切り抜き MP4 が
-チャット応答に添付されるかどうかは、契約後に
+| mode | 必要なもの | 現状 |
+| --- | --- | --- |
+| `browser`（既定） | Playwright + Chromium、`NOIMOS_EMAIL` / `NOIMOS_PASSWORD` | Playwright 1.217 / Chromium 導入済み ✅ ／ **認証情報が未設定** ❌ |
+| `cli` | `NOIMOS_API_KEY`（Pro $99/月〜）、`npm i -g @agos-labs/noimosai-cli` | どちらも未 ❌ |
+
+いずれも足りなければ `preflight()` が理由を返して `NoimosUnavailable` を投げ、
+`fallback_engine`（既定 `local`）へ自動的に落ちるので autopilot は止まらない。
+
+**残作業（人間しかできない）**
+
+1. https://app.noimosai.com/signup でアカウントを作る（利用規約の同意が必須。
+   Google ログインも可）。**有料プランの契約は browser mode では不要**（API キーが
+   要るのは cli mode だけ）。ただし無料トライアルの範囲は未確認。
+2. `backend/.env` に追記する:
+   ```
+   NOIMOS_EMAIL=...
+   NOIMOS_PASSWORD=...
+   ```
+3. reCAPTCHA で headless ログインが弾かれる場合は、`clip.noimos.headless` を一時的に
+   `false` にして有人で1回通し、`~/.youtube-factory/noimos_session.json` を作る。
+4. `clip.engine` を `"local"` → `"noimos"` に変える。
+
+**未検証。** 実際に切り抜き MP4 が返るかは、上記を済ませてから
 `python3 backend/run_clip_channel.py --count 1` を1回流せば判定できる
-（添付されなければ「動画メディアが返りませんでした」というエラーになる）。
+（返らなければ「NoimosAI が …s 以内に動画を返しませんでした」というエラーになり
+local に落ちる）。返らなかった場合の次の一手は、プロンプトに YouTube URL を書く
+現状の方式をやめ、Chat のファイル添付（5件/メッセージ）でローカルの長尺 mp4 を
+アップロードする経路を `_submit_prompt()` に足すこと。
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "id": "clip-lab",
-  "name": "切り抜きLab",
+  "name": "ゆっくり解説 切り抜きラボ",
   "concept": "既存の長尺ゆっくり解説（daily-science / scp-lab）から『一番おいしい1シーン』だけを切り出して縦型ショートにする切り抜きチャンネル。1本30〜59秒、冒頭2秒で結論、字幕は原寸より2倍大きく焼き込む。本編への導線を必ず貼り、母体チャンネルの再生数も伸ばす。",
   "style": "clip",
   "youtube_channel_id": "UCbWZ5quEFE2VpHPh5TGyPCw",
@@ -33,13 +33,13 @@
       "min_gap_sec": 30
     },
     "noimos": {
-      "workspace_id": "",
+      "workspace_id": "cmsnzc4ed032j01s6dxpwfrdo",
       "cli_bin": "noimosai",
       "timeout_sec": 900,
       "prompt_template": "以下のYouTube長尺動画から、エンゲージメントが最も高くなる縦型ショート（9:16・{target_sec}秒以内）を{clips}本切り抜いてください。\n\n動画URL: {source_url}\nタイトル: {source_title}\n\n条件:\n- 冒頭2秒で『結論・驚き』が来るように頭出しする\n- 日本語の大きな字幕を焼き込む\n- 被写体（左右のキャラクター）を追従してクロップせず、上部に16:9のまま配置し下に字幕帯を置く構成にする\n- 完成したMP4のダウンロードURLを必ず返す",
       "mode": "browser",
       "base_url": "https://app.noimosai.com",
-      "workspace_url": "",
+      "workspace_url": "https://app.noimosai.com/workspaces/cmsnzc4ed032j01s6dxpwfrdo",
       "headless": true,
       "nav_timeout_sec": 120,
       "agent_wait_sec": 900,
@@ -233,7 +233,7 @@
     }
   },
   "autopilot": {
-    "enabled": false,
+    "enabled": true,
     "schedule": {
       "days_of_week": [
         0,

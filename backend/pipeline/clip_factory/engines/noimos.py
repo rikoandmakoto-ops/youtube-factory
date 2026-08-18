@@ -31,18 +31,43 @@ API が無いなら UI を操作すればよい、という方針でこのファ
 NoimosUnavailable を投げ、呼び出し側が clip.fallback_engine（既定 local）へ落とす。
 切り抜きの実生成は local エンジンが担当する、という前提は崩さないこと。
 
+■ 再調査（2026-08-09）：一部は変わった。ただし切り抜きが出来る保証は依然無い
+
+  * app.noimosai.com へブラウザで到達できるようになった（08-04 は遮断されていた）
+  * ヘルプに「画像・動画・音声を作成／編集する」が追加され、動画能力の記述が
+    台本止まりではなくなった。「既存の画像や動画をもとに構図・色・アスペクト比・
+    文字を調整する」「字幕付き動画」も対象と書かれている
+  * Chat に **ファイル添付（1メッセージ5件まで）** がある
+
+  それでも **長尺→縦型ショートの切り出し** は依然どこにも documented されていない。
+  かつ本エンジンは元動画を **YouTube URL のテキストで渡すだけ** で、添付は実装して
+  いない。NoimosAI 側に URL から動画を取得する機能は確認できていないので、
+  現状のプロンプトでは高確率で MP4 が返らない。返らなければ NoimosUnavailable を
+  投げて clip.fallback_engine（既定 local）へ落ちる。
+  **切り抜きの実生成は local エンジンが担当する、という前提は崩さないこと。**
+
 ■ 実装方針：DOM に依存しすぎない
 
-ログイン画面の構造だけは実測済み（Email / Password / "Log in" ボタン、OAuth 無し、
-/signup と /forgot-password へのリンクあり）。一方 **ログイン後のチャットUIの DOM は
-未確認**。そこで成果物の回収は「ページ内 DOM 走査」ではなく **ネットワーク応答の傍受**
-を主経路にしている（Content-Type が video/* か、URL が .mp4/.mov/.webm）。
-DOM 走査は補助。セレクタは全て clip.noimos.selectors で上書きできる。
+ログイン画面は 2026-08-09 に再実測した。08-04 の記録と違い、UI は **日本語がデフォルト**、
+**Google OAuth ボタンがある**、そして **reCAPTCHA Enterprise（render=explicit）が
+載っている**。メール欄は type="text" で name / placeholder / autocomplete がすべて空、
+id は React 生成のランダム値なので、属性ではなく「フォーム内の非パスワードテキスト
+入力」でしか特定できない（_login 参照）。
+
+reCAPTCHA があるため **headless の自動ログインは弾かれる可能性がある**。その場合は
+人間が一度ログインして storage_state（既定 ~/.youtube-factory/noimos_session.json）を
+作り、以後はそれを使い回すこと。CAPTCHA の突破は実装しない。
+
+ログイン後のチャットUIの DOM は **未確認**。そこで成果物の回収は「ページ内 DOM 走査」
+ではなく **ネットワーク応答の傍受** を主経路にしている（Content-Type が video/* か、
+URL が .mp4/.mov/.webm）。DOM 走査は補助。セレクタは全て clip.noimos.selectors で
+上書きできる。
 
 ■ アカウント作成は自動化しない
 
-サインアップとメール認証は **意図的に実装していない**。アカウントは人間が作ること。
-認証情報が無ければ preflight が理由を返して止まる。
+サインアップとメール認証は **意図的に実装していない**。アカウントは人間が作ること
+（/signup は 利用規約への同意チェック必須。Google ログインも可）。API キー発行には
+有料プラン Pro $99/月〜が必要。認証情報が無ければ preflight が理由を返して止まる。
 """
 
 from __future__ import annotations
@@ -211,14 +236,22 @@ def _login(page, base_url: str, clip_cfg: Dict[str, Any], *, timeout_ms: int) ->
     sel = _selectors(clip_cfg)
     page.goto(f"{base_url}/login", timeout=timeout_ms, wait_until="domcontentloaded")
 
+    # 実測（2026-08-09）: メール欄は type="text"、name も placeholder も autocomplete も
+    # 空で、id は React 生成のランダム値。属性から特定できないのでフォーム内で
+    # 「パスワードでないテキスト入力」を拾うのが唯一安定する。
+    # reCAPTCHA が末尾に隠しテキスト入力を挿すが form の外なので巻き込まない。
     email_el = _first_locator(page, [
         str(sel.get("email") or "input[type='email']"),
         "input[name='email']",
+        "input[autocomplete='username']",
         "input[placeholder*='mail' i]",
+        "form input[type='text']",
+        "form input:not([type='password']):not([type='hidden']):not([type='checkbox'])",
     ])
     pw_el = _first_locator(page, [
         str(sel.get("password") or "input[type='password']"),
         "input[name='password']",
+        "form input[type='password']",
     ])
     if email_el is None or pw_el is None:
         raise NoimosUnavailable(
@@ -229,10 +262,12 @@ def _login(page, base_url: str, clip_cfg: Dict[str, Any], *, timeout_ms: int) ->
     email_el.fill(email, timeout=timeout_ms)
     pw_el.fill(password, timeout=timeout_ms)
 
+    # UI は日本語がデフォルト（2026-08-09 実測）。JA を先に試す。
     submit = _first_locator(page, [
-        str(sel.get("login_button") or "button:has-text('Log in')"),
-        "button:has-text('Login')",
+        str(sel.get("login_button") or "form button[type='submit']"),
         "button:has-text('ログイン')",
+        "button:has-text('Log in')",
+        "button:has-text('Login')",
         "button[type='submit']",
     ])
     if submit is None:
