@@ -1438,6 +1438,64 @@ def _extract_scp_badge_text(*candidates):
     return None
 
 
+# 冒頭センターテロップから落とす記号（読点・カギ括弧・絵文字系は画面で邪魔になる）
+_HOOK_CAPTION_STRIP = "。、．，・「」『』【】()（）\"'“”…!！?？#＃ 　"
+HOOK_CAPTION_MAX_CHARS = 10
+
+
+def _sanitize_hook_caption(caption):
+    """冒頭センターテロップ用に 10 文字以内へ整える。
+
+    シナリオ側（thumb_info.hook_caption）は 10 文字以内を指示しているが、LLM は
+    たまに句読点付きの長い文を返す。ここで記号を落として上限で切り、空なら
+    None（＝テロップなし＝従来の挙動）を返す。
+    """
+    if not caption:
+        return None
+    text = str(caption).strip()
+    for ch in _HOOK_CAPTION_STRIP:
+        text = text.replace(ch, "")
+    text = text.strip()
+    if not text:
+        return None
+    return text[:HOOK_CAPTION_MAX_CHARS]
+
+
+def _draw_hook_caption(overlay, caption, style=None, y_center=980):
+    """画面中央に「10文字以内・特大」の冒頭テロップを描く。
+
+    戻り値は帯の下端 y（読み上げ字幕をその下に置くために使う）。
+    """
+    style = style or {}
+    draw = ImageDraw.Draw(overlay)
+    n = max(1, len(caption))
+    max_w = SHORT_W - 120
+    size = int(style.get("font_size") or min(196, max(88, max_w // n)))
+    # 実測でオーバーしたら収まるまで落とす（フォント差・約物幅の保険）
+    while size > 72 and measure_composite_text(draw, caption, size) > max_w:
+        size -= 6
+
+    accent = tuple(int(c) for c in (style.get("accent_color") or (255, 210, 40))[:3])
+    band_alpha = int(style.get("band_alpha", 165))
+    band_h = int(size * 1.7)
+    band_top = max(0, int(y_center - band_h // 2))
+    if band_alpha > 0:
+        band = Image.new("RGBA", (SHORT_W, band_h), (0, 0, 0, max(0, min(255, band_alpha))))
+        overlay.paste(band, (0, band_top), band)
+
+    tw = measure_composite_text(draw, caption, size)
+    x = (SHORT_W - tw) // 2
+    y = band_top + (band_h - int(size * 1.25)) // 2
+    stroke = int(style.get("stroke_width") or max(10, size // 9))
+    glow_extra = int(style.get("glow_stroke_extra", 9))
+    # ① アクセント色の外側グロー → ② 黒縁+白文字
+    draw_composite_text(draw, (x, y), caption, size, (15, 15, 15),
+                        stroke_fill=accent, stroke_width=stroke + glow_extra)
+    draw_composite_text(draw, (x, y), caption, size, (255, 255, 255),
+                        stroke_fill=(0, 0, 0), stroke_width=stroke)
+    return band_top + band_h
+
+
 def _scaled_overlay(overlay, scale, alpha):
     """Scale an RGBA overlay around its center and apply a global alpha (0..1).
 
@@ -1463,7 +1521,8 @@ class ShortFrameRenderer:
     def __init__(self, bg_video_path=None, bg_type="auto", char_config=None,
                  image_mode="generate", image_collect_settings=None,
                  topic_query=None, cache_dir=None,
-                 overlay_style=None, title=None, fmt=None):
+                 overlay_style=None, title=None, fmt=None,
+                 hook_caption=None):
         self.bg_video = None
         self.bg_video_duration = 0
         self.bg_image = None
@@ -1490,6 +1549,13 @@ class ShortFrameRenderer:
             self.scp_badge_text = None
         else:  # truthy dict / True
             self.scp_badge_text = _extract_scp_badge_text(title)
+
+        # --- 冒頭0〜3秒の画面中央テロップ(10文字以内) ---
+        # 2026 のショートは「最初の3秒で指を止められるか」がリーチを決める。
+        # 読み上げ字幕とは別に、フックの核だけを抜いた特大の一言を画面中央へ
+        # 焼き込む（シナリオ側 thumb_info.hook_caption が供給）。
+        self.hook_caption = _sanitize_hook_caption(hook_caption)
+        self.hook_caption_style = self.overlay_style.get("hook_caption") or {}
 
         self.fmt = fmt or {}
         self.title = (title or "").strip()
@@ -1908,6 +1974,16 @@ class ShortFrameRenderer:
         draw_composite_text(draw, ((SHORT_W-nw)//2, cy-icon_d//2-name_gap), speaker, name_size,
                             (255,255,255), stroke_fill=(0,0,0), stroke_width=name_stroke)
 
+        # 冒頭0〜3秒のセンターテロップ（10文字以内・最優先で目に入る層）。
+        # キャラの下・字幕の上に置き、字幕はこの帯の下へ送る。
+        caption_bottom = None
+        if is_opening and self.hook_caption:
+            caption_bottom = _draw_hook_caption(
+                overlay, self.hook_caption, self.hook_caption_style,
+                y_center=int(self.hook_caption_style.get("y_center", 1000)),
+            )
+            draw = ImageDraw.Draw(overlay)
+
         if text:
             tc = tuple(cfg.get("text_color") or (255, 255, 255))
             if is_opening:
@@ -1920,20 +1996,26 @@ class ShortFrameRenderer:
                 else:
                     accent = tuple((cfg.get("text_color") or (255, 210, 40))[:3])
                 # 文字数に応じてサイズを自動調整(4行以内に収める)
+                # センターテロップがある回は主役を譲り、字幕は一回り小さく3行以内。
                 fmax = int(op.get("font_size_max", 104))
                 fmin = int(op.get("font_size_min", 72))
+                max_lines = 4
+                if caption_bottom is not None:
+                    fmax, fmin, max_lines = min(fmax, 76), min(fmin, 56), 3
                 cands = list(range(fmax, fmin - 1, -8)) or [fmin]
                 size = cands[-1]
                 for cand in cands:
                     size = cand
-                    if len(wrap_text(text, cand, SHORT_W-50, draw)) <= 4:
+                    if len(wrap_text(text, cand, SHORT_W-50, draw)) <= max_lines:
                         break
-                wrapped = wrap_text(text, size, SHORT_W-50, draw)
+                wrapped = wrap_text(text, size, SHORT_W-50, draw)[:max_lines]
                 line_gap = int(size * 1.34)
                 sw = op.get("stroke_width")
                 stroke = int(sw) if sw else max(7, size // 11)
                 glow_extra = int(op.get("glow_stroke_extra", 7))
                 y_start = cy + icon_d//2 + 48
+                if caption_bottom is not None:
+                    y_start = caption_bottom + 44
                 for line in wrapped:
                     tw = measure_composite_text(draw, line, size)
                     x = (SHORT_W - tw)//2
@@ -3192,6 +3274,7 @@ def generate_facts_overlay_short(short_scenario, title, output_prefix, bg_video_
                 plan = video_effects.decide_effect_plan(
                     entry["text"], entry.get("mood"),
                     position=i, total_count=len(entries), cfg=fx_cfg,
+                    is_short=True,
                 )
                 fx_plans.append(plan)
                 if plan:
@@ -3436,6 +3519,7 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
                 plan = video_effects.decide_effect_plan(
                     tx, entry.get("mood"),
                     position=i, total_count=len(scenario), cfg=fx_cfg,
+                    is_short=True,
                 )
                 fx_plans.append(plan)
                 if plan:
@@ -3705,7 +3789,7 @@ def _portrait_bg_variant(bg_video_path):
 def generate_short_video(short_scenario, title, output_prefix, bg_video_path=None, out_dir=None, bg_type="auto", speed=None,
                          channel_format=None, char_config=None, channel_id=None, bgm_volume=None,
                          image_mode="generate", image_collect_settings=None,
-                         channel_dict=None):
+                         channel_dict=None, hook_caption=None):
     print("=" * 60)
     print(f"ショート動画生成: {title}")
     print("=" * 60)
@@ -3726,7 +3810,10 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         topic_query=topic_query, cache_dir=out_dir,
         overlay_style=overlay_style, title=title,
         fmt=channel_format,
+        hook_caption=hook_caption,
     )
+    if renderer.hook_caption:
+        print(f"💥 冒頭センターテロップ: 「{renderer.hook_caption}」")
     active_chars = char_config or CHAR_CONFIG
     tmp_dir = tempfile.mkdtemp(prefix="short_")
     clips, audio_clips, t_off = [], [], 0.0
@@ -3848,6 +3935,7 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
                 plan = video_effects.decide_effect_plan(
                     tx, entry.get("mood"),
                     position=i, total_count=len(short_scenario), cfg=fx_cfg,
+                    is_short=True,
                 )
                 fx_plans.append(plan)
                 if plan:
@@ -5097,6 +5185,11 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
 
     channel_id = (channel_dict or {}).get("id") if channel_dict else None
 
+    # 冒頭0〜3秒の画面中央テロップ（10文字以内）。シナリオ生成が
+    # thumb_info.hook_caption に載せてくる。scenario_meta 側にあればそちらを優先。
+    hook_caption = ((scenario_meta or {}).get("hook_caption")
+                    or (thumb_info or {}).get("hook_caption"))
+
     # ── Scenario archive (A1) — markdown 原文を永続化 ──
     if channel_id:
         try:
@@ -5153,11 +5246,25 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
             title, prefix, str(out_dir), bg_video_path, thumb_info=thumb_info,
         )
 
+        # ナレーター話者: char_config の narrator > speaker_id を持つ先頭キャラ > 既定(青山龍星)。
+        # 渡さないと channel JSON で指定した話者が無視され、MONO_SPEAKER_ID に落ちる。
+        mono_sid = None
+        _chars = char_config or {}
+        _narr = _chars.get("narrator") or {}
+        if _narr.get("speaker_id"):
+            mono_sid = _narr["speaker_id"]
+        else:
+            for c in _chars.values():
+                if c.get("speaker_id"):
+                    mono_sid = c["speaker_id"]
+                    break
+
         if gen_type in ("short", "both"):
             _ck()
             results["short"] = generate_monologue_short(
                 short_scenario, title, prefix, bg_video_path,
                 out_dir=str(out_dir), bg_type=bg_type, speed=speed,
+                speaker_id=mono_sid,
                 channel_format=channel_format, channel_id=channel_id,
                 bgm_volume=bgm_volume,
                 image_mode=image_mode, image_collect_settings=image_collect_settings,
@@ -5193,7 +5300,8 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                                                      channel_id=channel_id, bgm_volume=bgm_volume,
                                                      image_mode=image_mode,
                                                      image_collect_settings=image_collect_settings,
-                                                     channel_dict=channel_dict)
+                                                     channel_dict=channel_dict,
+                                                     hook_caption=hook_caption)
 
         if gen_type in ("full", "both"):
             _ck()

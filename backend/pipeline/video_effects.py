@@ -83,6 +83,13 @@ class EffectsConfig:
     transition_min_gap: float = 6.0   # 同種トランジションを避けるための最小間隔(s)
     fade_in_first: bool = True
     fade_out_last: bool = True
+    # --- ショート専用: 1.5〜2秒ごとの「寄り直し」で画面を止めない ---
+    # 2026 のショートは 1.5〜2 秒ごとに視覚が変わらないと完視聴率が落ちる。
+    # 1 行 = 3〜5 秒のセリフの中で、beat_interval ごとに寄り→戻しを繰り返し、
+    # 疑似的なカット割りを作る（実カットを増やさないのでレンダー時間は据え置き）。
+    short_beat_zoom: bool = True
+    beat_interval: float = 1.8        # 寄り直しの周期(s)
+    beat_zoom_max: float = 0.05       # 1 ビートあたりの最大寄り量 (1.0 → 1.05)
 
 
 _DEFAULT_PRESETS = {
@@ -128,7 +135,7 @@ def load_effects_config(channel_format: Optional[Dict[str, Any]]) -> EffectsConf
         "allow_pixelate", "allow_glitch", "allow_transitions",
         "fade_in_first", "fade_out_last",
     }
-    for k in overrides:
+    for k in overrides | {"short_beat_zoom"}:
         if k in raw:
             setattr(cfg, k, bool(raw[k]))
     for k in ("max_effects_per_scene", "shake_max_px"):
@@ -137,7 +144,8 @@ def load_effects_config(channel_format: Optional[Dict[str, Any]]) -> EffectsConf
                 setattr(cfg, k, int(raw[k]))
             except Exception:
                 pass
-    for k in ("zoom_max", "transition_duration", "transition_min_gap"):
+    for k in ("zoom_max", "transition_duration", "transition_min_gap",
+              "beat_interval", "beat_zoom_max"):
         if k in raw:
             try:
                 setattr(cfg, k, float(raw[k]))
@@ -207,13 +215,42 @@ def decide_effect_plan(
     total_count: int,
     cfg: EffectsConfig,
     rng: Optional[random.Random] = None,
+    is_short: bool = False,
 ) -> List[Effect]:
     """このシーンに乗せるエフェクトを返す。順序が重ねる順。
 
     プリセットが ``science`` / ``minimal`` のときは決して shake/flash/glitch を
     使わないよう、cfg.allow_* がそもそも False になっている前提。本関数では
     重要語にだけ軽い emphasis_pulse を当てる動きを増やす。
+
+    ``is_short=True`` のときは、1 行の中で 1.5〜2 秒ごとに寄り直す ``beat_zoom``
+    を必ず 1 つ足す（2026 ショート対策: 画面が数秒動かないと離脱する）。
+    通常の ``zoom_in`` とは二重に掛けない（リサイズ 2 回分の描画コストを避ける）。
     """
+    if not cfg.enabled:
+        return []
+    plan = _decide_effect_plan_base(
+        text, mood, position=position, total_count=total_count, cfg=cfg, rng=rng)
+    if is_short and cfg.allow_zoom and cfg.short_beat_zoom:
+        plan = [e for e in plan if e.kind != "zoom_in"]
+        beat = Effect(kind="beat_zoom", intensity=0.7,
+                      extra={"interval": cfg.beat_interval})
+        # フェードは端に残したいので、fade_in の直後に差し込む
+        insert_at = 1 if (plan and plan[0].kind == "fade_in") else 0
+        plan.insert(insert_at, beat)
+    return plan
+
+
+def _decide_effect_plan_base(
+    text: str,
+    mood: Optional[str],
+    *,
+    position: int,
+    total_count: int,
+    cfg: EffectsConfig,
+    rng: Optional[random.Random] = None,
+) -> List[Effect]:
+    """内容ベースのエフェクト選択（従来ロジック）。"""
     if not cfg.enabled:
         return []
     rng = rng or random.Random()
@@ -469,6 +506,42 @@ def _apply_emphasis_pulse(clip, intensity: float, duration: float,
     return CompositeVideoClip([over], size=fmt_size).with_duration(clip.duration)
 
 
+def _apply_beat_zoom(clip, intensity: float, interval: float,
+                     *, fmt_size: Tuple[int, int], cfg: EffectsConfig):
+    """1.5〜2秒ごとに寄り直す「疑似カット割り」。
+
+    各ビートの中で 1.0 → 1.0+amp までゆっくり寄り、ビートの切れ目でスッと戻る。
+    実際にカットを増やさずに「画面が定期的に切り替わる」印象を作れるので、
+    ショートの完視聴率対策として全行に薄く掛ける。
+
+    偶数ビートと奇数ビートで寄りの向きを変え（寄る / 引く）、単調な反復に
+    見えないようにしている。
+    """
+    W, H = fmt_size
+    amp = max(0.01, min(0.08, cfg.beat_zoom_max * max(0.3, min(1.0, intensity))))
+    iv = max(0.8, float(interval or 1.8))
+    dur = max(0.1, float(clip.duration or 1.0))
+
+    def scale_fn(t: float) -> float:
+        beat = int(t // iv)
+        p = (t % iv) / iv
+        ease = 1 - (1 - p) ** 2  # ease-out: ビート頭の動きを大きく見せる
+        if beat % 2 == 0:        # 寄る
+            return 1.0 + amp * ease
+        return 1.0 + amp * (1.0 - ease)  # 引く（1.0+amp から 1.0 へ）
+
+    if dur <= iv * 0.6:
+        # ビート 1 つ分にも満たない短いクリップは軽い寄りだけ
+        return _apply_zoom_in(clip, intensity * 0.6, fmt_size=fmt_size)
+
+    over = clip.with_effects([Resize(scale_fn)])
+    over = over.with_position(lambda t: (
+        int(W / 2 - clip.w * scale_fn(t) / 2),
+        int(H / 2 - clip.h * scale_fn(t) / 2),
+    ))
+    return CompositeVideoClip([over], size=fmt_size).with_duration(clip.duration)
+
+
 def _apply_fade_in(clip, duration: float):
     d = min(max(0.05, duration), float(clip.duration or duration))
     return clip.with_effects([FadeIn(d)])
@@ -494,6 +567,10 @@ def apply_clip_effects(
         try:
             if eff.kind == "zoom_in":
                 out = _apply_zoom_in(out, eff.intensity, fmt_size=fmt_size)
+            elif eff.kind == "beat_zoom":
+                out = _apply_beat_zoom(out, eff.intensity,
+                                       (eff.extra or {}).get("interval", cfg.beat_interval),
+                                       fmt_size=fmt_size, cfg=cfg)
             elif eff.kind == "shake":
                 out = _apply_shake(out, eff.intensity, fmt_size=fmt_size, cfg=cfg)
             elif eff.kind == "tint":

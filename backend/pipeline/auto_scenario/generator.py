@@ -161,6 +161,103 @@ _TERM_PACING_RULE_SECTION = (
     "動画で最も衝撃的な事実(数字・逆転・結末)をここで出し切る(終盤へ温存しない)"
 )
 
+# =====================================================================
+# 2026 年のショート・アルゴリズム対策（全チャンネル共通）
+#
+# 調査結果:
+#   - 冒頭 3 秒で「見続けるか」がほぼ決まる。1 行目は「問い」か「驚き」以外は無効。
+#   - 30〜45 秒が最も伸びる（15 秒未満はリーチが激減する）。
+#   - 1.5〜2 秒ごとの視覚変化（カット / ズーム / テロップ）で完視聴率が上がる。
+#   - 画面中央の「10 文字以内・特大テロップ」がスクロールを止める最短の手段。
+#   - 答えを 6 割だけ見せるクリフハンガーがチャンネル回遊 → 登録に効く。
+#
+# 冒頭 3 秒ルールとテロップ（hook_caption）ルールは全生成経路で共有する。
+# クリフハンガー / シリーズ化はチャンネル JSON でのオプトイン。
+# =====================================================================
+
+_HOOK_3SEC_RULE = """# 冒頭3秒ルール(最重要・これを外した時点で不合格)
+- ショートは**最初の3秒**で視聴継続がほぼ決まる。1行目は必ず「問い」か「驚き」から始める。
+- ❌ 挨拶・自己紹介・チャンネル説明・テーマ紹介・前置き・「今回は〜」は1文字でも入れたら不合格。
+- ✅ 1行目は**次の4型のいずれかで書く**(型を丸写しせず、テーマに合わせて言い換える):
+  1. 【これ知ってた?型】「これ知ってた? 〇〇って実は△△なんだ」— 共感と好奇心を同時に取る
+  2. 【実は〇〇型】「実は〇〇、△△だったんだ」「〇〇してる人、今すぐやめて」— 常識をひっくり返す
+  3. 【〇〇した結果型】「〇〇した結果、とんでもないことになった」— 結果を伏せて"続き"を作る
+  4. 【違和感の問い型】「なんで〇〇だけ〇〇なの?」— 言われて初めて気づく違和感を突く
+- 1行目は**15〜30字で断定的に**。ここで答えを言わない(答えを言うと3行目以降を見る理由が消える)。
+- 「あなた」「君」「お前ら」など視聴者を直接指す語を1行目に入れると指が止まりやすい。
+- ※ 上の「ショート尺ルール」で1行目の書式がチャンネル固有に指定されている場合はそちらを優先する。
+  その書式のまま、中身が「問い」か「驚き」になるように言葉を選ぶこと(型の名前より役割を守る)。
+"""
+
+_HOOK_CAPTION_RULE = """# 冒頭テロップ(hook_caption)ルール(絶対厳守)
+- thumb_info.hook_caption に**全角10文字以内**の超短文を必ず入れる。冒頭0〜3秒の**画面中央に特大テロップ**として自動で焼き込まれる。
+- 1行目フックの"核"だけを抜いて言い切る。例:「実は逆でした」「99%が誤解」「触れたら終わり」「答えは3秒」。
+- ❌ 句読点・カギ括弧・ハッシュタグ・絵文字は入れない。❌ 1行目の全文コピーも禁止。❌ 説明文にしない。
+- 11文字以上は画面で縮んで読めなくなる。**必ず10文字以内**、短いほど強い(4〜8文字が理想)。
+"""
+
+_TELOP_PACING_RULE_SHORT = """# テンポ・ルール(完視聴率対策・絶対厳守)
+- ショートは**1行=1テロップ**。1行が長いほど画面が固まって離脱する。各行は3〜4秒で読み切れる長さに収める。
+- 1行に接続詞を重ねて2つ以上の話を詰め込まない(「〜で、しかも〜だから〜」は不合格)。1行=1メッセージ。
+- 行が進むごとに話の角度を変える(問い→驚き→数字→理由→意外な展開→オチ)。同じ調子の行を2つ続けない。
+"""
+
+
+def _series_hint_block(channel) -> str:
+    """シリーズ化（連作ブランディング）の指示ブロック。
+
+    `theme_priority.series_lineup`（シリーズ名のリスト）か、無ければ
+    `short_series_name` を使う。どちらも無ければ空文字＝従来通り。
+    """
+    try:
+        raw = channel._raw or {}
+    except AttributeError:
+        raw = {}
+    lineup = ((raw.get("theme_priority") or {}).get("series_lineup") or [])
+    series = (raw.get("short_series_name") or "").strip()
+    if not lineup and not series:
+        return ""
+    lines = [
+        "# シリーズ化ルール(チャンネル回遊・登録率対策)",
+        "- 本チャンネルのショートは単発ではなく**連作シリーズ**として見せる。"
+        "今回のテーマが属するシリーズ名を `series_name` に出力する。",
+        "- 最終行のCTAで**必ずシリーズ名に触れる**"
+        "（例:「〇〇シリーズ、他にもあるから見てって」）。"
+        "「このチャンネルには同じ系統の動画がまだある」と伝えるのが目的。",
+    ]
+    if lineup:
+        joined = " / ".join(f"「{s}」" for s in lineup[:8])
+        lines.append(f"- シリーズ候補（テーマに一番近いものを1つ選ぶ）: {joined}")
+        lines.append("- どれにも当てはまらない場合だけ、同じ粒度で新しいシリーズ名を作ってよい。")
+    else:
+        lines.append(f"- シリーズ名: 「{series}」（このチャンネル共通の連作名）。")
+    return "\n".join(lines) + "\n\n"
+
+
+def _cliffhanger_block(channel, *, last_content_line: str = "オチ") -> str:
+    """クリフハンガー（答えを6割だけ見せる）指示ブロック（オプトイン）。
+
+    `content_policy.cliffhanger` を宣言したチャンネルだけに効く:
+      {"enabled": true, "wording": "続きはチャンネルの他の動画で"}
+    """
+    try:
+        cfg = (channel.content_policy or {}).get("cliffhanger") or {}
+    except AttributeError:
+        cfg = {}
+    if not isinstance(cfg, dict) or not cfg.get("enabled"):
+        return ""
+    wording = (cfg.get("wording") or "続きはチャンネルの他の動画で").strip()
+    return (
+        "# クリフハンガー・ルール(チャンネル回遊・登録率対策・絶対厳守)\n"
+        f"- **{last_content_line}では核心の6割だけ明かし、残り4割は『まだ語られていない謎』として残す**。\n"
+        "- 答えの手前で止める一言を必ず1つ置く。例:「実はこの話、まだ続きがあるんだ」"
+        "「本当にヤバいのはこの後なんだけど」「その理由は、もっと怖い」。\n"
+        f"- そのうえで最終行のCTAで「{wording}」のニュアンスに接続する。\n"
+        "- ❌ 全部説明しきって満足させて終わるのは不合格（満足した視聴者は登録しない）。\n"
+        "- ❌ 逆に何も答えないのも不合格。**6割は必ず答える**"
+        "（0%だと釣り扱いされて低評価が付く）。\n\n"
+    )
+
 
 class ScenarioGenerator:
     """GPT APIを使ったシナリオ自動生成"""
@@ -791,6 +888,13 @@ class ScenarioGenerator:
             "タイトル先頭にカギ括弧プレフィックスを付けない。",
             "- ❌ NG: 結論・答えをタイトルにバラす(例:「水たまりの謎、解けます！」)。"
             "結論はサムネ・本編で初めて出す。",
+            # 2026-08-18: タイトルは「内容の説明」ではなく「タップの衝動」を作る。
+            # 説明的タイトル（〜について/〜とは/〜の解説）は CTR が落ちる。
+            "- ✅ タイトルは**「説明」ではなく「衝動」**を作る。"
+            "読んだ瞬間に「え、なんで?」「見なきゃ」と指が動く一文にする。"
+            "「〜について」「〜とは」「〜を解説」のような説明語尾は禁止。",
+            "- ✅ **感情を動かす語を必ず1つ以上**入れる: "
+            "実は / なぜ / だけ / 本当は / 知らない / やめて / ヤバい / 全員 / 99% / 3秒。",
             f"- **全角{hard_cap}文字以内**(投稿時に末尾ハッシュタグを足すため、"
             "これを超えるとタイトルが途中で切られる)。",
         ]
@@ -814,8 +918,11 @@ class ScenarioGenerator:
             "- 視聴者が「気になる、答えを知りたい」と感じる謎の提示で止めるのが正解。",
         ]) + "\n"
 
-    def _short_end_line_block(self, channel) -> str:
-        """short_scenario の 6 行目（締めCTA）の指示ブロックを返す。
+    def _short_end_line_block(self, channel, line_no: int = 7) -> str:
+        """short_scenario の最終行（締めCTA）の指示ブロックを返す。
+
+        `line_no` は締めCTAが何行目かを表す（既定の構成は7行 = 7行目、
+        channel JSON の short_format を持つチャンネルはその line_count）。
 
         既定は従来どおり「①登録CTA → ②関連動画CTA」。ただし長尺を作らない
         ショート専用チャンネル（autopilot.gen_type = "short"）で関連動画へ送ると、
@@ -848,18 +955,18 @@ class ScenarioGenerator:
                 "視聴者にコメントを促す一言を入れる"
             )
             return (
-                "  6行目=**締めの一言+登録誘導CTA(必須・絶対省略禁止・順番厳守)**: "
+                f"  {line_no}行目=**締めの一言+登録誘導CTA(必須・絶対省略禁止・順番厳守)**: "
                 "必ず「①締めの一言 → ②チャンネル登録誘導」の順で1行にまとめる。\n"
                 f"    - ①締めの一言: {closer}（そのままコピペせず、その回の内容と地続きにする）。\n"
                 f"{sub_cta('②')}"
                 "    - ❌ 「関連動画」「本編」「フル動画」への誘導は禁止。"
                 "本チャンネルは長尺を作らないため、存在しない動画へ送ることになる。\n"
-                "    - **6行目のみ45〜70字を許容**(2つの要素を連結するため、"
-                "通常の30〜45字制限を超えてよい)。\n"
+                f"    - **{line_no}行目のみ45〜70字を許容**(2つの要素を連結するため、"
+                "通常の字数制限を超えてよい)。\n"
             )
 
         return (
-            "  6行目=**登録誘導+関連動画誘導CTA(必須・絶対省略禁止・順番厳守)**: "
+            f"  {line_no}行目=**登録誘導+関連動画誘導CTA(必須・絶対省略禁止・順番厳守)**: "
             "必ず「①チャンネル登録誘導 → ②関連動画誘導」の順で1行に2つのCTAを連結する。\n"
             f"{sub_cta('①')}"
             "    - ②関連動画CTA: 必ず「関連動画」というワードを含め、"
@@ -867,8 +974,8 @@ class ScenarioGenerator:
             "    - 例:「チャンネル登録者1万人目指して毎日投稿中!応援よろしくね!"
             "もっと詳しい話は関連動画から見てね!」「1万人目指して毎日投稿中だから登録お願い!"
             "続きは関連動画でチェック!」\n"
-            "    - **6行目のみ45〜70字を許容**(2つのCTAを連結するため、"
-            "通常の30〜45字制限を超えてよい)。\n"
+            f"    - **{line_no}行目のみ45〜70字を許容**(2つのCTAを連結するため、"
+            "通常の字数制限を超えてよい)。\n"
         )
 
     def _end_cta_block(self, channel) -> str:
@@ -986,15 +1093,16 @@ class ScenarioGenerator:
         if not isinstance(sf, dict) or not structure:
             return None
 
-        n = sf.get("line_count", 6)
-        line_chars = sf.get("line_chars") or "1行あたり30〜45字、最終行のみ45〜70字を許容"
+        n = sf.get("line_count", 7)
+        line_chars = sf.get("line_chars") or "1行あたり24〜36字、最終行のみ45〜70字を許容"
         lo = sf.get("total_chars_min", short_target_chars - 30)
-        hi = sf.get("total_chars_max", short_target_chars + 50)
+        hi = sf.get("total_chars_max", short_target_chars + 40)
 
         lines = [
             "# ショート尺ルール(絶対厳守)",
             f"- **short_scenarioは必ず{n}行**({line_chars})。",
-            f"- **総文字数は必ず{lo}〜{hi}字**で**約30〜35秒**を実現。",
+            f"- **総文字数は必ず{lo}〜{hi}字**で**約30〜40秒**を実現"
+            "(ショートは30〜45秒が最も伸びる。25秒未満はリーチが激減するので短くしすぎない)。",
             f"- 構成({n}行固定):",
         ]
         lines += [f"  {s}" for s in structure]
@@ -1024,7 +1132,10 @@ class ScenarioGenerator:
         max_chars = int(target_duration * 9.0)  # 上限: 約12分の音声を超えない
         floor_lines = 55
         floor_chars = 4800
-        short_target_chars = 230  # 6行 × 平均38字 = 約30秒
+        # 7行 × 平均30字 + CTA行55字 ≒ 250字 ≒ 32秒（ショート最適尺 30〜45秒）。
+        # 行を増やして1行を短くしたのは、テロップの切替を 3〜4 秒ごとに起こして
+        # 完視聴率を上げるため（2026 ショート・アルゴリズム対策）。
+        short_target_chars = 250
         cta_style = channel.content_policy.get("cta_style", "casual")
         tone = channel.content_policy.get("tone", "friendly")
         expr0 = channel.characters[c0].get("expressions", ["normal"])
@@ -1033,22 +1144,28 @@ class ScenarioGenerator:
         voice_block = self._voice_style_block(channel)
         end_cta_block = self._end_cta_block(channel)
         title_rule_block = self._title_rule_block(channel)
-        short_end_block = self._short_end_line_block(channel)
+        try:
+            _sf = (channel._raw or {}).get("short_format") or {}
+        except AttributeError:
+            _sf = {}
+        short_line_count = int(_sf.get("line_count") or 7)
+        short_end_block = self._short_end_line_block(channel, short_line_count)
+        series_block = _series_hint_block(channel)
+        cliffhanger_block = _cliffhanger_block(channel, last_content_line="6行目のオチ")
 
         short_rules_block = self._short_rules_block(
             channel, short_target_chars, short_end_block
         ) or f"""# ショート尺ルール(絶対厳守)
-- **short_scenarioは必ず6行**(1〜5行目は30〜45字目標38字、6行目のみ45〜70字を許容)。
-- **総文字数は必ず{short_target_chars-30}〜{short_target_chars+50}字**(目標{short_target_chars+20}字)で**約30〜35秒**を実現。
-- 構成(6行固定):
-  1行目=**衝撃フック(0〜3秒で指を止める・最重要)**: 視聴者が「え?なにそれ?」と脳がバグる一言から始める。挨拶・自己紹介・テーマ説明・前置きは完全禁止(1文字でもあれば不合格)。短く断定的に(目安15〜30字)、まだ答えは言わず「続きが気になる」状態だけを作る。以下のいずれかの型を必ず使う:
-    - 常識破壊型: 「実は〇〇、ぜんぶ間違いでした」「〇〇してる人、今すぐやめて」「〇〇は嘘です」
-    - 衝撃数字型: 「99%の人が知らないんだけど」「たった3秒で〇〇が変わる話」「世界に〇人しかいない」
-    - 禁断・警告型: 「これ言うと怒られるかもだけど」「閲覧注意。〇〇の正体」「知らない方が幸せだったかも」
-    - 違和感の問い型: 「なんで〇〇だけ〇〇なの?考えたことある?」「〇〇、よく見ると変じゃない?」
-  2行目=**追い打ちフック**: 1行目の謎をさらに煽るか、相手役が「えっ、どういうこと!?」と食いつくリアクションで視聴者の「気になる」を代弁する。ここでもまだ答えは出さない(情報を出し惜しみして"続きを見る理由"を作る)。
-  3〜4行目=**核となる事実**: ここに**具体的な数字・年号・%・研究データ・固有名詞のいずれか1つ以上を必ず含める**(例:「実は97%の人が…」「1923年に…」「東大の研究で…」)。「へぇ!」と感心させる中身を入れる。抽象論・一般論だけはNG。
-  5行目=**納得のオチ**: 短くスパッと結論。投げっぱなし禁止。
+- **short_scenarioは必ず7行**(1〜6行目は24〜36字目標30字、7行目のみ45〜70字を許容)。
+- **総文字数は必ず{short_target_chars-30}〜{short_target_chars+40}字**(目標{short_target_chars}字)で**約30〜40秒**を実現。ショートは**30〜45秒が最も伸びる**。25秒未満はリーチが激減するので絶対に短くしすぎない。
+- **1行=1テロップ**。各行は3〜4秒で読み切れる長さに収め、画面の文字が次々入れ替わるテンポを作る。
+- 構成(7行固定):
+  1行目=**3秒フック(最重要)**: 後述の「冒頭3秒ルール」の4型のいずれかで書く。挨拶・自己紹介・テーマ説明・前置きは1文字でも入れたら不合格。15〜30字で断定的に、まだ答えは言わない。
+  2行目=**追い打ちフック**: 1行目の謎をさらに煽るか、相手役が「えっ、どういうこと!?」と食いつくリアクションで視聴者の「気になる」を代弁する。ここでもまだ答えは出さない(出し惜しみして"続きを見る理由"を作る)。
+  3行目=**核となる事実①**: **具体的な数字・年号・%・研究データ・固有名詞のいずれか1つ以上を必ず含める**(例:「実は97%の人が…」「1923年に…」「東大の研究で…」)。抽象論・一般論だけはNG。
+  4行目=**理由 / 核となる事実②**: ①の「なぜ」を**1つだけ**答える。ここで全部は明かさない。
+  5行目=**意外な展開**: 「しかも」「ところが」「さらにヤバいのが」で角度を変え、飽きが来る中盤を断ち切る一撃を必ず置く。
+  6行目=**オチ**: 短くスパッと結論。投げっぱなし禁止。
 {short_end_block}- 浅い感想・誰でも言える一般論(「すごいね」「びっくりだね」だけ)で行を埋めるのは不合格。1本のショートで最低1つは「初めて知った」と思わせる具体情報を入れること。
 """
 
@@ -1064,12 +1181,18 @@ class ScenarioGenerator:
 # 出力JSON
 {{
  "title":"バズるタイトル",
- "thumb_info":{{"hook_lines":["1行","2行"],"subtitle":"...","tagline":"..."}},
- "short_scenario":[{{"speaker":"{c0}","text":"...","expression":"normal","mood":"bright"}}, ...全6行],
+ "series_name":"このテーマが属するシリーズ名(該当なしなら空文字)",
+ "thumb_info":{{"hook_lines":["1行","2行"],"hook_caption":"10文字以内","subtitle":"...","tagline":"..."}},
+ "short_scenario":[{{"speaker":"{c0}","text":"...","expression":"normal","mood":"bright"}}, ...全{short_line_count}行],
  "full_scenario":[{{"speaker":"{c0}","text":"...","expression":"normal","mood":"calm"}}, ...{floor_lines}〜{target_lines+4}行]
 }}
 
 {title_rule_block}
+{_HOOK_CAPTION_RULE}
+# サムネ文字(thumb_info.hook_lines)ルール
+- hook_lines は**2行**。**各行8文字以内**の短い言い切りにする(長い説明文はサムネで読めない)。
+- 助詞で切らず、単語で区切る(例:「触れた瞬間」「全員消えた」)。2行合わせて1つの謎になるように書く。
+
 # 尺ルール(絶対厳守・違反は不合格)
 - **full_scenarioは必ず{floor_lines}〜{target_lines+4}行**(目標{target_lines}行)。{floor_lines}行未満も{target_lines+5}行以上も不合格。
 - **各行は90〜120字**(目標100字、上限120字)。89字以下も121字以上も不合格。
@@ -1078,7 +1201,9 @@ class ScenarioGenerator:
 - VOICEVOX1.3x≒7.8字/秒。{target_chars}字で約{target_duration/60:.1f}分、{max_chars}字で約{max_chars/7.8/60:.1f}分。
 
 {short_rules_block}
-# 構成(full): 冒頭フック(3行) → 問題提起+本編宣言(3行) → 基本メカニズム(12行) → 詳細&研究データ(12行) → 意外な事実&歴史(10行) → 応用Tips(8行) → まとめ+次回予告+締めCTA(7行) = 計55行(目標{target_lines}行に届くまで各セクションを伸ばす)
+{_HOOK_3SEC_RULE}
+{_TELOP_PACING_RULE_SHORT}
+{cliffhanger_block}{series_block}# 構成(full): 冒頭フック(3行) → 問題提起+本編宣言(3行) → 基本メカニズム(12行) → 詳細&研究データ(12行) → 意外な事実&歴史(10行) → 応用Tips(8行) → まとめ+次回予告+締めCTA(7行) = 計55行(目標{target_lines}行に届くまで各セクションを伸ばす)
 
 # 冒頭フックルール(超重要・冒頭5秒離脱対策・絶対厳守)
 - ❌ NG: 「みなさんこんにちは」「今日は〇〇について解説します」「ゆっくり霊夢です」など定型の挨拶・自己紹介・チャンネル説明は完全禁止。視聴者は最初の5秒で離脱を判断する。
@@ -1140,12 +1265,38 @@ class ScenarioGenerator:
         max_chars = int(target_duration * 9.0)
         floor_lines = 48
         floor_chars = 4800
-        short_target_chars = 230
+        short_target_chars = 250
         tone = channel.content_policy.get("tone", "serious_documentary")
         cta_pos = channel.content_policy.get("cta_position", "end_only")
 
         voice_block = self._voice_style_block(channel)
         end_cta_block = self._end_cta_block(channel)
+        try:
+            _sf = (channel._raw or {}).get("short_format") or {}
+        except AttributeError:
+            _sf = {}
+        short_line_count = int(_sf.get("line_count") or 7)
+        short_end_block = self._short_end_line_block(channel, short_line_count)
+        series_block = _series_hint_block(channel)
+        cliffhanger_block = _cliffhanger_block(channel, last_content_line="6行目のオチ")
+
+        # ゆっくり系と同じく channel JSON の short_format / content_policy.short_end_line を
+        # 反映させる。未設定チャンネルは従来の文面（下の既定ブロック）がそのまま使われる。
+        short_rules_block = self._short_rules_block(
+            channel, short_target_chars, short_end_block
+        ) or f"""# ショート尺ルール(絶対厳守)
+- **short_scenarioは必ず7行**(1〜6行目は24〜36字目標30字、7行目のみ45〜70字を許容)。
+- **総文字数は必ず{short_target_chars-30}〜{short_target_chars+40}字**(目標{short_target_chars}字)で**約30〜40秒**を実現。ショートは**30〜45秒が最も伸びる**。25秒未満はリーチが激減するので短くしすぎない。
+- **1行=1テロップ**。各行は3〜4秒で読み切れる長さに収める。
+- 構成(7行固定):
+  1行目=**3秒フック(最重要)**: 後述の「冒頭3秒ルール」の4型のいずれかで書く。前置き・状況説明から入るのは不合格。15〜30字で断定的に。
+  2行目=**追い打ちフック**: 謎を一段深くする。ここでも答えを出さない。
+  3行目=**核となる事実①**: **具体的な数字・年号・%・研究データ・固有名詞のいずれか1つ以上を必ず含める**(例:「実は97%が…」「1923年の…」「ハーバード大の研究では…」)。抽象論だけはNG。
+  4行目=**理由 / 核となる事実②**: ①の「なぜ」を1つだけ答える。
+  5行目=**意外な展開**: 「だが」「ところが」で角度を変える一撃を必ず置く。
+  6行目=**オチ**: スパッと結論を提示。投げっぱなし禁止。
+{short_end_block}- 一般論・感想のみで埋めるのは不合格。1本につき最低1つは「へぇ」と思わせる具体情報を入れること。
+"""
 
         return f"""ドキュメンタリー風ナレーション動画のシナリオを生成。JSONのみ出力。
 
@@ -1158,8 +1309,9 @@ class ScenarioGenerator:
 # 出力JSON
 {{
  "title":"バズるタイトル",
- "thumb_info":{{"hook_lines":["1行","2行"],"subtitle":"...","tagline":"..."}},
- "short_scenario":[{{"text":"...","chapter_title":null,"mood":"tense"}}, ...全6行],
+ "series_name":"このテーマが属するシリーズ名(該当なしなら空文字)",
+ "thumb_info":{{"hook_lines":["1行","2行"],"hook_caption":"10文字以内","subtitle":"...","tagline":"..."}},
+ "short_scenario":[{{"text":"...","chapter_title":null,"mood":"tense"}}, ...全{short_line_count}行],
  "full_scenario":[
    {{"chapter_title":"第1章: 導入","mood":"mysterious"}},
    {{"text":"...","mood":"mysterious"}},
@@ -1174,6 +1326,11 @@ class ScenarioGenerator:
 - 「【〇〇解説】」のような定型プレフィックスは絶対に付けない。
 - 「本当の理由」「実は」「あそこ」「なぜか」「だけ」「〇〇すぎる」など意外性を匂わせるワードを必ず1つ以上入れる。
 - 視聴者が「気になる、答えを知りたい」と感じる謎の提示で止める。結論はサムネ・本編で初めて出す。
+- タイトルは「説明」ではなく「衝動」を作る。読んだ瞬間に指が止まる語（実は/なぜ/だけ/本当は/やめて）を必ず入れる。
+
+{_HOOK_CAPTION_RULE}
+# サムネ文字(thumb_info.hook_lines)ルール
+- hook_lines は**2行**。**各行8文字以内**の短い言い切りにする(長い説明文はサムネで読めない)。
 
 # 尺ルール(絶対厳守・違反は不合格)
 - **テキストは必ず{floor_lines}〜{target_lines+4}行**(目標{target_lines}行)。
@@ -1181,22 +1338,10 @@ class ScenarioGenerator:
 - **総文字数は{target_chars}〜{max_chars}字**(約{target_duration/60:.1f}分目標、{max_chars}字で約{max_chars/7.8/60:.1f}分)。
 - 各行に研究データ・数字・事例を必ず盛る。
 
-# ショート尺ルール(絶対厳守)
-- **short_scenarioは必ず6行**(1〜5行目は30〜45字目標38字、6行目のみ45〜70字を許容)。
-- **総文字数は必ず{short_target_chars-30}〜{short_target_chars+50}字**(目標{short_target_chars+20}字)で**約30〜35秒**を実現。
-- 構成(6行固定):
-  1行目=**強フック**: 「これは衝撃の事実だ」「あなたは知らない」など、意外性・謎・問題提起で視聴者を引き込む。
-  2行目=**ツカミ展開**: フックを受けた前振り・状況説明。
-  3〜4行目=**核となる事実**: ここに**具体的な数字・年号・%・研究データ・固有名詞のいずれか1つ以上を必ず含める**(例:「実は97%が…」「1923年の…」「ハーバード大の研究では…」)。視聴者が「初めて知った」と感じる中身を入れる。抽象論だけはNG。
-  5行目=**納得のオチ**: スパッと結論を提示。投げっぱなし禁止。
-  6行目=**登録誘導+関連動画誘導CTA(必須・絶対省略禁止・順番厳守)**: 必ず「①チャンネル登録誘導 → ②関連動画誘導」の順で1行に2つのCTAを連結する。
-    - ①登録CTA: 「チャンネル登録者1万人を目指して毎日投稿中なので、応援よろしく」のニュアンスを必ず入れる(「毎日投稿中」「1万人目標」「応援」の3要素で、視聴者の応援したい気持ちを引き出して登録率を上げる)。
-    - ②関連動画CTA: 必ず「関連動画」というワードを含め、ショート離脱者を長尺へ送る(「本編」より「関連動画」を優先)。
-    - 例:「チャンネル登録者1万人を目指して毎日投稿中だ。応援よろしく。もっと詳しい話は関連動画で語っている。」
-    - **6行目のみ45〜70字を許容**(2つのCTAを連結するため、通常の30〜45字制限を超えてよい)。
-- 一般論・感想のみで埋めるのは不合格。1本につき最低1つは「へぇ」と思わせる具体情報を入れること。
-
-# 雰囲気タグ(mood)ルール — シーンごとのBGM切替に使用
+{short_rules_block}
+{_HOOK_3SEC_RULE}
+{_TELOP_PACING_RULE_SHORT}
+{cliffhanger_block}{series_block}# 雰囲気タグ(mood)ルール — シーンごとのBGM切替に使用
 - 各行(章タイトル含む)に必ず "mood" を付与する。値は次の6種類のいずれか:
   - "calm"(穏やか) / "bright"(明るい) / "tense"(緊張・衝撃)
   - "emotional"(感動) / "funny"(コミカル) / "mysterious"(ミステリアス)
@@ -1263,6 +1408,7 @@ class ScenarioGenerator:
 
         # 45秒 ≒ 7ファクト + CTA。尺に合わせてファクト数だけスケールさせる。
         fact_count = max(5, min(9, round(target_duration / 6.0)))
+        series_block = _series_hint_block(channel)
 
         return f"""縦型ショート「ファクトオーバーレイ動画」のシナリオを生成。JSONのみ出力。
 対話形式ではない。1人のナレーションと、画面に叩き込む数字ファクトで構成する。
@@ -1276,7 +1422,8 @@ class ScenarioGenerator:
 {{
  "title":"企業名を含むバズるタイトル",
  "company_name":"扱う企業の正式名称（背景写真の検索に使う）",
- "thumb_info":{{"hook_lines":["1行","2行"],"subtitle":"...","tagline":"..."}},
+ "series_name":"このテーマが属するシリーズ名(該当なしなら空文字)",
+ "thumb_info":{{"hook_lines":["1行","2行"],"hook_caption":"10文字以内","subtitle":"...","tagline":"..."}},
  "short_scenario":[
    {{"fact_header":"{default_badge}","fact_main":"平均年収 850万円","fact_sub":"業界平均の1.5倍",
      "text":"読み上げるナレーション","bg_query":"企業名 店舗 外観","duration":5,"mood":"bright"}},
@@ -1299,11 +1446,15 @@ class ScenarioGenerator:
 - duration: その画面の最低表示秒数（4〜7）。実際の尺はナレーション音声に合わせて自動で伸びる。
 - mood: BGM切替タグ。"bright"(明るい) / "tense"(衝撃) / "calm"(落ち着き) のいずれか。
 
-# 構成（{fact_count}ファクト + CTA、合計約{target_duration}秒）
+# 構成（{fact_count}ファクト + CTA、合計約{target_duration}秒 ※30〜45秒が最も伸びる。25秒未満は不合格）
 1. **1個目=最強フック**: 企業名 + 最もインパクトのある数字を即出し（例:「ニトリ 平均年収850万円」）。
    冒頭3秒で企業名と数字が画面に出ていない構成は不合格。
+   さらに1個目の text（ナレーション）は**「問い」か「驚き」で始める**
+   （例:「この会社の平均年収、いくらだと思う?」「実はこの数字、業界1位なんだ」）。
+   淡々と数字を読み上げるだけの入りは不合格。
 2. 2〜{fact_count-1}個目: 年収→ボーナス→有給/残業→離職率→福利厚生 の順でテンポよく数字を連打する。
    同じ指標を2回出さない。毎回ちがう切り口の数字にする。
+   **1画面は4〜6秒**。ここが長いと画面が固まって離脱するので、text は短く言い切る。
 3. {fact_count}個目=**バランス行**: ネガティブ or 注意点を必ず1つ入れる
    （例:「ただし1年目は力仕事」「店舗配属は土日出勤」）。持ち上げるだけの動画は不合格。
 4. 最後=**CTA行**（必須・省略禁止）: 次の形で1行だけ足す。
@@ -1322,8 +1473,14 @@ class ScenarioGenerator:
 
 # タイトルルール
 - 企業名を必ず入れる。数字を1つ入れる。「【解説】」のような定型プレフィックスは付けない。
+- タイトルは「説明」ではなく「衝動」を作る。読んだ瞬間に指が止まる語（実は/ヤバい/本当は/知らない）を必ず1つ入れる。
 - 例:「ニトリの年収がヤバい 平均850万円の実態」「任天堂の離職率3%、辞めない理由」
-"""
+
+{_HOOK_CAPTION_RULE}
+# サムネ文字(thumb_info.hook_lines)ルール
+- hook_lines は**2行**、**各行8文字以内**（例:「平均850万」「辞めない会社」）。長い説明文は読めないので不可。
+
+{series_block}"""
 
     def _wrap_for_blind(
         self,
@@ -2095,6 +2252,14 @@ class ScenarioGenerator:
         if avoid_lines:
             parts.append("- ❌ 本チャンネルでは禁止カテゴリ(提案したら不合格):")
             parts.append(avoid_lines)
+        # シリーズ連作（登録動機になる「次も見たい」を作る）。
+        lineup = cfg.get("series_lineup") or []
+        if lineup:
+            parts.append(
+                "- 本チャンネルは**シリーズ連作**で運用している。"
+                "提案する各テーマは必ず次のいずれかのシリーズに属するものにし、"
+                "1バッチの中で同じシリーズに偏らせない:")
+            parts.append("\n".join(f"  - 「{s}」" for s in lineup))
         parts.append(f"- {title_style}")
         parts.append("")
         parts.append(f"# バズる条件: {viral}")
