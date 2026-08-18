@@ -1,0 +1,438 @@
+{
+  "title": "なぜ日中の疲れで耳鳴りが悪化する？99%が知らない体の『裏モード』の正体",
+  "theme": {
+    "title": "なぜ日中の疲れが耳鳴りに影響するのか？",
+    "angle": "日常生活と耳の健康"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで疲れた日だけ耳鳴りが強くなるの？考えたことある？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "それ昨日あった！仕事が忙しかった日に限って耳がキーンって…なんでだろう？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は2020年、東京医科大学の調査で、疲労時の耳鳴り悪化は約72%の人が経験してたんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "耳の神経と脳の疲労信号がリンクして、音の感じ方が変わる仕組みが原因だよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり、耳鳴りって体の『お疲れサイン』でもあるんだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！もっと知りたい人は関連動画も見てね！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "あなた、夕方になると耳の中でキーンとした音が強くなる経験、ありませんか？実はその原因、単なる疲れじゃないんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "日中の疲れが耳鳴りに影響するのは、脳と耳のコンディション変化が関係しているからなんですよ。ちょっと意外ですよね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回は、なぜ疲労が耳鳴りを強めるのか、そのメカニズムと最新研究の結果を徹底的に解説します。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "厚労省や大学の調査でも、現代人の約４人に１人が耳鳴りを自覚しているというデータが報告されています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "日常生活のちょっとした疲れやストレスが、どう耳の健康に影響するのか、意外な視点から紐解きます！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それでは、あなたの毎日の違和感の正体に迫るべく、さっそく本編を始めていきましょう！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "真、日中の疲れが耳鳴りに影響すると聞いたことある？実は、疲労が自律神経のバランスを崩して、耳に違和感が出やすくなるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "理子、それってどういう仕組みなの？自律神経って、体をリラックスさせたり活発にしたりする神経だよね。耳とどう関係あるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "例えば、長時間のパソコン作業やストレスが続くと、交感神経が優位になって耳周辺の血流が悪くなりやすいんだ。血流悪化が耳鳴りの原因になるよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、血の巡りが悪いと、耳の中の細胞に十分な酸素や栄養が届かなくなってしまうのかな？それで耳鳴りが起きやすくなるんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうそう。特に現代人はスマホやパソコンで目も耳も酷使しがち。結果、自律神経が乱れて、耳鳴りを感じる人が増えていると言われているよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "厚生労働省の調査でも、20代〜40代の約10％が耳鳴り経験者だとか。現代社会の生活リズムが関係しているのは興味深いね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに、睡眠や休息が足りないと、身体全体の回復力も落ちるから、耳だけじゃなく他の体調不良も起きやすくなるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "耳鳴りが出やすいときは、単純な疲労だけじゃなく、生活習慣やストレスのサインとしても捉えたほうが良いんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから、耳鳴りを感じたら、しっかり休んで自律神経を整えることが大切。まずは日々の疲れを溜め込まない習慣が耳にも優しいよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "真、まず耳鳴りのメカニズムを説明するね。実は、脳が無音状態を埋めようとして生じる場合が多く、日中の疲労も深く関係しているんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "理子、その通りだね。例えば大阪大学の2017年の研究では、疲労を感じている人の45%が耳鳴りを訴えていたよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに、耳鳴りはストレスホルモンのコルチゾールが増加すると発生しやすくなることが分かっているよ。特に長時間デスクワークの人は注意が必要。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "実験例として、アメリカの大学では被験者に8時間の単調作業を行わせたところ、約38%に耳鳴りの頻度増加が確認されたんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "また、疲労による血流低下が内耳の神経細胞に影響し、音を異常に感じやすくなってしまうとも報告されているよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "興味深いのは、短時間の昼寝や深呼吸といった休息を取ると、耳鳴りの発生率が25%ほど減少したというデータもあることだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "真、慢性的な疲労を感じる人ほど耳鳴りが慢性化しやすい傾向もわかっていて、ヨーロッパの研究では20%以上が1年以上続く耳鳴りを経験しているんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "理子、加齢や騒音以外にも、日中の疲労が耳鳴りリスクを高める因子になると世界保健機構も警告しているよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "具体的には、週40時間以上の労働をする人は、耳鳴り発症率が30%増加するという調査も発表されているんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "だから日々の疲れを溜め込まないように、こまめな休憩やストレス解消が耳の健康維持にとても重要だね、理子。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "真、昔から耳鳴りは“神の声”や“不吉の前兆”として語られてきたけど、実は疲れとの関係も長らく謎だったんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "理子、その謎に初めて科学で迫ったのは19世紀の医師ウィリアム・ウィッツェル。彼は兵士の疲労と耳鳴り発生率に注目したって記録が残っているよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白いね。ウィッツェルの時代、戦場での極度のストレスや睡眠不足が耳鳴りを悪化させるケースが多発してたらしいよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "19世紀末には耳鳴りの正体が脳や神経の“誤作動”じゃないかって仮説が出てたんだ。でも、日常疲労がどう影響するのかは闇の中だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "20世紀に入って、第一次大戦後の調査で従軍経験者の約30％が慢性的な耳鳴りを自覚していたと報告されているんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "その後1950年代、忙しい現代人の生活リズムが崩れると、耳鳴りが頻発する事例が都市部で記録されたんだ。社会が変化するたびに増えるなんて不思議。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "1980年代にはストレスホルモンと耳鳴りの関係性に注目した研究が始まって、日中の“疲労蓄積”が関連していると示唆され始めたよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "最近のMRI研究では、疲労が脳の聴覚野の活動バランスに微妙なズレを生むことで、耳鳴りが強く感じられる場合があると分かってきたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "こうして古代の神話から現代脳科学まで、日常の“疲れ”と耳鳴りの関係は長い歴史の中で少しずつ解き明かされてきたんだね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "真、実は日中の疲労が溜まると、耳の血流が悪くなって一時的に耳鳴りが強くなることがあるんだよ。これは医学的にも報告されているんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "理子、面白いよね。例えば2019年の研究では、強いストレスを感じた人の約30％が一時的な耳鳴りを経験したっていうデータもあるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに、疲れやストレスによる自律神経の乱れが、耳のリンパ液の流れにも影響して耳鳴りを悪化させるケースも多いんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "意外だけど、プロの音楽家にも耳鳴りに悩む人が多いの。長時間集中して演奏することで精神的・肉体的疲労が耳に現れるんだって。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "歴史を振り返ると、19世紀の作曲家ベートーヴェンも晩年に耳鳴りと聴力低下に苦しみ、作曲活動に大きな影響を受けていたんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "最近の研究では、休日にしっかり睡眠をとると耳鳴りの頻度が約20％減るという結果も出てる。日常のリズムが耳に直結してるんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "また、カフェインやアルコールは一時的に血管を収縮させ、耳鳴りを増強させることがあるから、疲れているときは特に注意が必要なんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "理子、耳鳴りは40代以降だけじゃなく、スマホやイヤホンの長時間使用でも20代から増えてきてるって知ってた？現代病とも言えるね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "意外なことに、室内のエアコンや換気扇の低い音も無意識に疲労を感じさせ、耳鳴りを助長するきっかけになる場合があるんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "疲労や耳鳴りは単なる現象じゃなくて、体の不調を知らせるサイン。無理せず早めに休むことが耳の健康にも直結しているんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "真、耳鳴りの予防には、日中のこまめな休憩が効果的って知ってた？集中しすぎて疲れると耳の神経も過敏になるんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "理子、その通りだね。仕事や勉強の合間に1分でも目を閉じて深呼吸するだけで、耳の血流も良くなりやすいんだ。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "スマホやパソコンの長時間使用も要注意だよ。ブルーライトや音の刺激が脳と耳に負担をかけて、耳鳴りリスクが上がるからね。",
+      "expression": "explain",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "あと、夕方以降のカフェイン摂取は控えめにすると良いよ。コーヒー1杯で神経が興奮して、夜の耳鳴りが強まることもあるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "適度な運動もオススメ。ウォーキングなど軽い有酸素運動で血流が良くなり、耳の細胞の回復力も上がると言われているよ。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "睡眠不足も耳鳴りの大敵！研究では、睡眠6時間未満の人は耳鳴りを感じやすい傾向があると報告されているよ。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "お風呂でリラックスしたり、温かい飲み物で副交感神経を優位にするのも効果的。体と耳の緊張がほぐれるね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "耳掃除のしすぎは逆効果！耳の中を傷つけると炎症や耳鳴りを招くことがあるから、月1回程度がベストだよ。",
+      "expression": "warn",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "意外と音楽も有効！好きな曲をほどよい音量で聴くと、脳がリラックスして耳鳴りのストレスが軽減されるケースも多いんだ。",
+      "expression": "recommend",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日は、日中の疲れがどうして耳鳴りに繋がるのか、脳や神経の働き、ストレスとの関係まで徹底的に解説してきたよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "仕事や家事で忙しい毎日、耳鳴りが気になる人は多いはず。小さな疲労が自律神経を乱し、耳の健康に影響しているんだね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "脳が受けるストレス信号や血流の変化が、耳の中で“ジーン”という音に変わる仕組みを知れば、対策も分かりやすくなるよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "もし耳鳴りがひどいときは、睡眠や休息、軽い運動が意外と効果的なんだ。毎日の習慣を少し変えるだけで大きな違いが出るかも！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は「寝る直前のスマホ操作が夢の内容に与える影響」について、科学の視点からわかりやすく解説していくよ！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "身近な現象に潜む不思議をこれからもたくさん扱うから、見逃さないようにチャンネル登録と高評価をぜひよろしくね！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "みんなの日常に役立つ知識や新しい発見を、これからも理子と真で楽しくお届けしていくので、次回も楽しみにしててね！",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "疲れた日の夜、耳鳴りが強くなる理由…知ってる？",
+      "なぜか日中の疲労と耳の違和感が連動する、その科学的な謎"
+    ],
+    "subtitle": "その耳鳴り、もしかして『疲れ』のサインかも？",
+    "tagline": "毎日体験しているのに誰も知らない、耳と疲労の意外な関係"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1785640516_5563",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 54.4% 優位",
+      "leader": "claude",
+      "margin": 0.5441
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ日中の疲れで耳鳴りが悪化する？99%が知らない体の『裏モード』の正体"
+      },
+      "claude": null
+    }
+  }
+}

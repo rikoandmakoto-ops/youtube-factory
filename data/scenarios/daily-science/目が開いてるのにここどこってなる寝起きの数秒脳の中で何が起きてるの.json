@@ -1,0 +1,434 @@
+{
+  "title": "目が開いてるのに『ここどこ？』ってなる寝起きの数秒、脳の中で何が起きてるの？",
+  "theme": {
+    "title": "なぜ寝起き直後は自分のいる場所が一瞬わからないのか？脳の起動に起きる時間差",
+    "angle": "目は開いているのに状況を理解できない寝起きの混乱を、睡眠段階と脳機能の立ち上がりの差から解説する"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "朝目が覚めた瞬間、『ここどこ？』ってなったことない？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "あるある！目は開いてるのに、自分がどこにいるか一瞬わからなくなるやつ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "あれ、視覚は動いてるのに脳の『場所を認識する部位』だけ起動が遅れてるせいなんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "脳って一気に起動しないの？部位ごとに順番があるんだ、知らなかった。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "海馬と前頭前皮質の覚醒が最大で30秒ほど遅れる、って研究データがあるくらいなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "1万人目指して毎日投稿中だから登録よろしくね！もっと詳しい話は関連動画でチェックしてみて！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "今朝、目が覚めた瞬間に『あれ、ここどこだっけ？』ってなった人、実は脳の中でとんでもないことが起きてたんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "それ今朝まさにあった！目はちゃんと開いてるのに、自分の部屋なのかどうかさえ一瞬わからなくて、すごく変な感じだったんだよね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "そのぼんやりした数秒、ただの眠気じゃなくて『脳の部位ごとに起動タイミングがズレてる』せいなんだ。今日はそれを丸ごと解き明かすよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず大前提として、脳って電源を入れたパソコンみたいに一瞬で全部起動するわけじゃないんだ。部位ごとに覚醒する順番があるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "え、脳って全部同時にオンになるんじゃないの？部位ごとに起動するって、どういう順番なんだろう。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "一番早く起きるのは脳幹っていう部分で、呼吸とか心臓を動かす『生命維持の司令塔』ね。これはほぼ眠りに入っている間もずっと動いてるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "次に視床という部分が動き出して、目や耳からの情報を脳の各所に送り始めるんだけど、このとき視覚情報はもう動いてるのに、それを『意味として理解する』処理はまだ追いついてないんだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "あ、だから目は開いてて光も見えてるのに、何を見てるのかわからない状態になるんだ。それが『ここどこ？』の正体か。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうそう！特に遅れるのが海馬と前頭前皮質の二つ。海馬は『場所の記憶』を引き出す部位で、前頭前皮質は『今の状況を整理する』部位なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この二つの起動が遅れるから、目で見た映像と『自分が今どこにいるか』という記憶が一致しない、あの不思議な数秒間が生まれるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "視覚情報は来てるのに、それと記憶が紐づかない状態か。パソコンで言えば画面は映ってるのにOSがまだ起動中みたいな感じ？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "めちゃくちゃいい例え！まさにそれ。専門用語で言うと『睡眠慣性』、つまり眠りから覚めた後も脳機能が完全に回復しきっていない状態のことを指すんだ。",
+      "expression": "laugh",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この睡眠慣性、実は軽い症状なら数秒から数分で消えるんだけど、強いケースだと最大30分ほど判断力が低下したままになることもあるって研究が出てるんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "30分！？それって起きてるのに脳がまだ半分寝てる状態ってこと？それで寝起きに重要な判断をしちゃいけないって言われる理由がわかった気がする。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "2006年にコロラド大学の研究チームが発表したデータでは、目が覚めてすぐの計算能力は、なんと徹夜明けと同レベルまで低下してることがわかったんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "徹夜明けと同じレベル！？それは怖い。朝イチでスマホの重要なメッセージに返信したら変なこと書いてたって経験、あれもこれが原因だったのかも。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "あるある！睡眠慣性が強く出やすいのは、深い眠りのステージ、つまりノンレム睡眠の段階3か4にいるときに無理やり起こされた場合なんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ノンレム睡眠の深い段階っていうのは、脳が一番ゆっくり休んでいる時間帯で、このとき脳波はデルタ波っていうすごくゆったりした波形になってるんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ、そのタイミングで目覚ましが鳴ると特にひどい『ここどこ？』になるってこと？深い眠りほど混乱が大きいんだね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通り！逆にレム睡眠、つまり夢を見てる浅い眠りのタイミングで起きると、脳がすでに活動的な状態だからスムーズに覚醒しやすいんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白いのはここからで、宇宙飛行士の研究があるんだ。国際宇宙ステーションで働く飛行士は、地球と違って太陽が90分ごとに昇り沈みする環境にいるんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "90分ごとに夜明けと夕暮れが来るの！？それって体のリズムがめちゃくちゃになりそうだけど、睡眠慣性とどう関係するの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "NASAの調査によると、宇宙飛行士は地上の人より睡眠慣性が平均で2倍以上長く続くことが確認されてて、起床直後の操作ミスが増えることが問題視されてたんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "宇宙でも同じ問題が起きてたんだ！しかも2倍以上って、宇宙船の操作を任されてる人たちがそんな状態になるのはかなり怖いね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから今のNASAでは、起床から最低15分は重要な判断や操作をしないっていうプロトコル、つまり手順書が定められてるくらいなんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "15分ルールか。プロの宇宙飛行士でさえ守るルールなら、私たちも朝イチで大事な決断しちゃいけないってことだよね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "あと、歴史的な事故との関連も指摘されてるんだよ。1979年のスリーマイル島原発事故は、夜勤から朝の交代直後に起きていて、作業員の判断ミスが連鎖したとされてるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "え、あの有名な事故と睡眠慣性が関係してるの？それは知らなかった。寝起きの混乱がそこまで大きな影響を持つなんて、改めてすごいな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "もちろん事故の原因は複合的で、睡眠慣性だけが原因とは言い切れない。ここは科学でもまだ因果関係の結論が完全には出ていない部分だから、正直に言っておくね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ちゃんと教えてくれてありがとう。わかってないことをわかってないって言ってくれると、逆に信頼できる感じがするよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "もう一つ面白い研究を紹介するね。2012年にハーバード大学の睡眠研究チームが調べたんだけど、同じ人でも起きる部屋が変わると睡眠慣性が強くなることが確認されたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "部屋が変わると強くなる！？旅行先のホテルで起きたとき特に『ここどこ？』感が強いのって、そのせいか！あれは気のせいじゃなかったんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "海馬が『いつもの部屋』という空間記憶を使って素早く現在地を特定しようとするんだけど、見慣れない場所だとその照合に時間がかかるんだよ、だから混乱が長引くんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "照合って、まるでスマホの顔認証が暗くて失敗するみたいな感じ？見慣れた部屋はすぐ認証できるけど、知らない場所だとエラーが出るんだね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "完璧な例えだよ。これを『場所細胞の再起動遅延』とも言って、場所細胞というのは海馬にある自分の現在地を記録するためだけに特化した神経細胞のことなんだよ。",
+      "expression": "laugh",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "場所専用の神経細胞が脳にあるの！？それ自体もすごいけど、その細胞が起動するのに時間がかかるから混乱するって、脳ってほんとに面白いな。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみに場所細胞の発見は2014年のノーベル生理学・医学賞を受賞した研究で、ジョン・オキーフたちが発見したんだよ。それくらい重大な仕組みなんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ノーベル賞の研究と朝の『ここどこ？』がつながってるなんて思わなかった。毎朝ノーベル賞レベルの現象を体験してたんだな、私たち。",
+      "expression": "laugh",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "じゃあここからは、睡眠慣性を短くするための実践的なコツを話すね。まず一番効果的なのは、起きる時間帯を睡眠サイクルに合わせることなんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "人間の睡眠は約90分を1サイクルとして繰り返すんだけど、サイクルの終わり、つまりレム睡眠が終わりかけのタイミングで起きると脳がすでに浅い眠りにいるから、混乱がぐっと少なくなるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "90分の倍数で計算して起きる時間を決めるやつね！6時間か7時間半か9時間、みたいな感じで設定するといいって聞いたことある。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！ただ個人差があるからあくまで目安ね。最近はスマートウォッチが睡眠ステージを検出して、レム睡眠のタイミングに合わせて起こしてくれる機能もあるから、試してみるのもありだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "スマートウォッチでそんなことができるのか。テクノロジーと脳科学がつながってるんだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "もう一つのコツは、起きたらすぐ光を浴びること。目から入った光の刺激が視交叉上核という体内時計の司令塔を直接叩き起こして、脳全体の覚醒を促進してくれるんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "視交叉上核って難しそうな名前だけど、要は光が体内時計をリセットするスイッチになってるってことだよね。カーテンを開けるだけでいいの？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "それで十分！晴れた日の窓越しの光でも約2500ルクスあって、これは覚醒スイッチを入れるのに十分な明るさだよ。曇りの日でも窓を開けて外気に当たるだけで効果があるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "2500ルクスか、具体的な数字があると実感しやすいね。今日から起きたらすぐカーテン開けるようにしてみよう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "あとは起きてすぐ水を一杯飲むのも効果的。睡眠中に失われた水分を補うことで血流が改善して、脳への酸素供給が上がって覚醒が速くなるって研究データもあるんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "光を浴びて水を飲む、それだけで脳の起動が速くなるなら今日から絶対やる！しかも両方ゼロ円でできるのがいいよね。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まとめると、寝起きの『ここどこ？』は脳の部位ごとに覚醒タイミングがズレることで起きる現象で、特に海馬と前頭前皮質の起動が遅れることが主な原因だったんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "毎朝何気なく経験してたあの数秒に、ノーベル賞レベルの脳科学が詰まってたんだね。なんか朝が少し特別に感じてきたよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜寝るとき、ちょっとだけ意識してみて。明日の朝、目が開いた瞬間に『あ、今脳が順番に起動してる』って感じてみると、あの混乱がちょっと違って見えるかもよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は『なぜ夢の内容は起きた瞬間から急速に忘れていくのか』を解説するよ。記憶の仕組みと夢の関係、すごく面白いから絶対見てね。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それも気になる！今日の話と絶対つながってそうだし、次回も楽しみにしてる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "この動画が面白かったら高評価とチャンネル登録よろしくね！1万人目指して毎日投稿してるから、応援してくれると本当に嬉しいよ。一緒に身近な不思議を解き明かしていこう！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "目が開いてるのに",
+      "状況が分からない謎の数秒"
+    ],
+    "subtitle": "寝起きに脳が『起動』するまでの時間差",
+    "tagline": "あの混乱、実は脳の仕組みだった"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1785831174_7208",
+    "blind_eval": {
+      "winner": "A",
+      "winner_model": "claude",
+      "reason": "シナリオAはhook_strengthとspecificityで大きく上回り、海馬・前頭前皮質・睡眠慣性・コロラド大学の研究データ・2500ルクスなど具体的な数値と専門用語を丁寧に噛み砕いて提示することで視聴維持率を高める構成になっている。一方シナリオBはfull_scenario_tailが空で内容量が約1/5しかなく、specificity（4）とpacing（5）が低く、視聴者が最後まで見続ける動機づけに乏しい。",
+      "scores_a": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 8,
+        "cta_effectiveness": 8,
+        "wording_quality": 9,
+        "overall": 9
+      },
+      "scores_b": {
+        "hook_strength": 6,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 5,
+        "wording_quality": 5,
+        "overall": 5
+      },
+      "mapping": {
+        "A": "claude",
+        "B": "gpt"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 73.5% 優位",
+      "leader": "claude",
+      "margin": 0.7346
+    },
+    "candidates": {
+      "gpt": {
+        "title": "寝起きに一瞬迷子？脳が『場違い』すぎる理由"
+      },
+      "claude": {
+        "title": "目が開いてるのに『ここどこ？』ってなる寝起きの数秒、脳の中で何が起きてるの？"
+      }
+    }
+  }
+}

@@ -1,0 +1,464 @@
+{
+  "title": "収容違反8回、生存率1%——修理工場で財団が記録した『亡霊』の正体がヤバすぎる",
+  "theme": {
+    "title": "SCP-231「修理工場の亡霊」 — 収容違反8件、被害者生存率1%の異常存在調査記録",
+    "angle": "工場の修理作業員を襲った異常存在の詳細、財団報告書に残る生々しい被害と生存率を明かす"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意。生存率1%の異常存在が、財団データベースに残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、1%って……それほぼ全員死んでるじゃないか、怖すぎる。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-231、通称『修理工場の亡霊』。収容違反は記録だけで8件。被害者数は[DATA EXPUNGED]。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録が消されてるって……財団が隠したいくらいヤバいってことだよな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でさえ、その本質を解明できていない。分かっているのは、接触した者の末路だけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1万人目指して毎日投稿中だから登録お願い！詳しい報告書の中身は関連動画で確認して。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "……この報告書、読んだら後悔するかもしれない。それでも聞きたいなら、最後まで付き合ってくれ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "シロ、急にどうした？なんか今日いつもより空気重くない？報告書って、また財団のやつ？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団データベースから流出した案件だ。オブジェクト番号SCP-231、コードネーム『修理工場の亡霊』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回はその全記録を読み上げる。収容違反8件、接触者の生存率わずか1%。数字が意味することを、よく考えながら聞け。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生存率1%……100人いたら99人が死ぬってこと？それ、ゲームのラスボスより絶望的じゃないか……。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ゲームと違って、コンティニューはない。では、報告書の冒頭から読み始める。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-231は、廃工場の修理区画に初めて発見された異常存在だ。財団が最初に記録を取ったのは、今から約23年前。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "発見の経緯はこうだ。とある工業地帯の修理工場で、作業員が次々と行方不明になるという通報が財団に入った。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "行方不明って……工場の事故とかじゃなくて？普通に警察に通報するレベルの話じゃないの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "警察は既に動いていた。だが捜索隊を送り込むたびに、また捜索隊自身が消えた。それで財団に連絡が来た。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が現地に到着した時点で、既に行方不明者は37名。その全員の消息が、現在も[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "37人が消えた……しかも記録まで消されてる。財団が隠したいってことは、それだけ見せたくない何かがあったってことだよな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の初期調査チームは6名。装備は完全武装、通信機器もフル稼働の状態で工場内に入った。帰ってきたのは1名だけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "6人中1人……それがもう生存率16%じゃないか。それ以降も収容違反が続いたなら、最終的に1%になるって相当な数が……。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "帰還した唯一の生存者、Dクラス職員D-7741の証言が報告書に残っている。ただし、その大部分は[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "読める部分だけ引用する。『工場の奥から、作業音が聞こえた。金属を叩く音、溶接の光。だが作業員は誰もいなかった』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "誰もいないのに作業音がする？それ完全に怪談じゃないか……夜中に廃工場で聞いたら絶対逃げる。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "続きを読む。『機械が動いていた。電源は落ちているはずなのに。そして機械の中に、仲間の一人が組み込まれていた』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "組み込まれてた……？機械の中に人間が？それってどういう……いや、想像したくない。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこから先は[REDACTED]だ。財団の判断で記録は封印されている。見せられない、ではなく、見せてはならない案件だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-231の本体について、財団が解明できている情報は限られている。オブジェクトクラスはKeterだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Keter……財団の中でも最高危険度のクラスじゃないか。それがまだ完全収容できてないってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "正確には、収容はできている。だが8回の収容違反を繰り返している。なぜ違反が起きるのか、財団でも解明できていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書に記載された財団の仮説はこうだ。SCP-231は工場という『概念』に紐付いた存在である可能性がある、と。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "概念に紐付いた……？それって、工場がある限りどこにでも現れ得るってこと？それこそ全国の廃工場が全部危ないじゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその仮説を否定も肯定もしていない。あくまで仮説だ。だが収容プロトコルには、こんな一文がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "『SCP-231の収容施設は、いかなる修理・整備作業も禁止する。作業員の派遣は即時SCP-231への接触リスクを生む』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "修理作業が禁止……つまり修理作業員を引き寄せるってこと？それで工場の作業員が最初に狙われたのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の見解では、SCP-231は特定の職業や行動パターンに反応する可能性がある。だが、それがなぜかは[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "8回の収容違反の記録を見ていこう。第1回は発見から3ヶ月後。収容施設の電源系統が突然異常を示し、担当研究員2名が消息不明。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "電源系統の異常……機械に関わることが引き金になるのか。それが収容施設でも起きるなら、収容する意味あるの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第2回の収容違反は、発見から1年後。今度は収容区画の壁に亀裂が入り、補修作業員チーム4名が派遣された。全員行方不明。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第3回以降は報告書の記述が急激に減っていく。第5回以降は担当者名すら[REDACTED]、被害者数も[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録が減っていくって……隠してるの？それとも記録を取れる人間が残っていないってこと？どっちも怖い。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の内部文書には、こんな注釈がある。『SCP-231関連の記録担当者は、平均して3ヶ月以内に異動または消息不明になる』。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録を書いてる人間まで消えていく……それって報告書を読んでる俺たちも、もしかして……？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこは財団も言及していない。ただ、この報告書を外部に流出させた人物の現在の所在も、今は確認できていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、怖いって……流出させた人も消えてるの？それ今俺たちが聞いてること自体まずくない？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "続きを話す。SCP-231の唯一の生存者、D-7741のその後についてだ。彼は帰還後、財団の医療施設に収容された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容後72時間で、D-7741は繰り返し同じ言葉を呟き続けたという。『機械が、呼んでいる』。それ以降の記録は[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "機械が呼んでいる……助かったのに、まだSCP-231に繋がれてたってこと？生き残った方が辛いじゃないか。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の心理評価チームは、D-7741の状態を『SCP-231による認知汚染の可能性がある』と記録している。断定ではなく、仮説だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "認知汚染というのは、財団の用語で、異常存在に接触した後に思考や行動が変容していく現象を指す。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "思考が変容……つまり生き残っても、その後の人生が狂っていくってこと？それ、どっちが怖いかわからなくなってきた。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が解明できていないことは、まだある。SCP-231が何を目的としているのか、そもそも目的という概念が適用できるのか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書の末尾に、担当上級研究員のコメントが残っている。それが唯一、[REDACTED]されずに残っている部分だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消されずに残ってる……それって意図的に残されたの？財団が誰かに見せたかったってこと？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "読む。『SCP-231は修理を求めているのかもしれない。あるいは、修理という行為そのものを憎んでいるのかもしれない』。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "『我々には分からない。分からないまま収容し続けるしかない。それが財団の限界だ』。以上が、残されたコメントだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団自身が限界って言ってる……それって、もし8回目の収容違反が起きたら、止める手段がないってことじゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "8回目の収容違反の記録は、現在も更新されていない。今この瞬間も、SCP-231は収容されているはずだ。『はずだ』、だが。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "『はずだ』って……確認できてないの？財団が確認できてないって、それ実質行方不明と同じじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に確認された収容状態は、3ヶ月前の報告書が最後だ。それ以降、担当チームからの報告は届いていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3ヶ月間、報告がない……担当チームも消えたってこと？それ、もう9回目の収容違反が起きてるんじゃないの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその可能性を否定していない。だから今回、この記録を公開することにした。もし近くに廃工場があるなら、覚えておいてくれ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "作業音が聞こえても、機械が動いていても、絶対に近づくな。それが財団報告書SCP-231から、唯一確実に言えることだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……今夜、絶対に廃工場の夢見る。シロ、次は少しだけ怖くない話にしてくれない？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-049、通称『ペスト医師』の記録を読み上げる。治療と称して何をしたのか、報告書に全て残っている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録と高評価で、次の報告書が届くスピードが上がる。1万人を目指して毎日投稿しているから、応援を頼む。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……登録した。でも今夜眠れなくても、シロのせいだからな。この報告書は、CC BY-SA 3.0ライセンスのSCP財団Wikiが原典だよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "生存率わずか1%",
+      "収容違反8件の記録"
+    ],
+    "subtitle": "SCP-231「修理工場の亡霊」財団機密報告書",
+    "tagline": "この報告書を読んだ後、工場には近づくな"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1785830757_8209",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはオープニングの「読んだら後悔するかもしれない」という一文で即座に視聴者を引き込み、37名の行方不明・D-7741の証言・3ヶ月間の報告途絶など具体的な数字と固有名詞を積み重ねることでspecificityとhook_strengthで圧倒的な差をつけた。さらに研究員の謎めいたコメントや『はずだ』という余韻ある締めがpacingと視聴維持に直結しており、CTAもキャラクターの感情に乗せて自然に組み込まれている点でAを全軸で上回っている。",
+      "scores_a": {
+        "hook_strength": 4,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 3,
+        "wording_quality": 3,
+        "overall": 3
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 133.5% 優位",
+      "leader": "claude",
+      "margin": 1.3352
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ収容違反が8回も？修理工場の恐怖、その背後に潜む異常な存在"
+      },
+      "claude": {
+        "title": "収容違反8回、生存率1%——修理工場で財団が記録した『亡霊』の正体がヤバすぎる"
+      }
+    }
+  }
+}

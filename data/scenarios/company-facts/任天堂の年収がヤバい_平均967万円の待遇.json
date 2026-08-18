@@ -1,0 +1,121 @@
+{
+  "title": "任天堂の年収がヤバい 平均967万円の待遇",
+  "theme": {
+    "title": "任天堂の待遇",
+    "angle": "ユーザー指定テーマ"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収がヤバい",
+      "fact_main": "任天堂 年収967万円",
+      "fact_sub": "2025年3月期 有報",
+      "text": "任天堂の平均年収は967万円。20代の転職先として見てもかなり強い数字で、ゲームを作る側の待遇、想像以上です。",
+      "bg_query": "任天堂株式会社 本社 外観",
+      "duration": 7,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年齢40.2歳",
+      "fact_sub": "2025年3月期 有報",
+      "text": "平均年齢は40.2歳で、年収967万円。この年齢帯でこの水準なら、長く働いた先の収入も気になるところです。",
+      "bg_query": "任天堂株式会社 本社 京都",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "平均勤続年数13.5年",
+      "fact_sub": "2025年3月期 有報",
+      "text": "平均勤続年数は13.5年。入社してすぐ辞める会社というより、経験を積みながら働く人が多いことが読み取れます。",
+      "bg_query": "任天堂株式会社 社員 オフィス",
+      "duration": 6,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "従業員数2,962人",
+      "fact_sub": "単体・2025年3月期",
+      "text": "単体の従業員数は2,962人。世界的ブランドなのに、国内は少数精鋭。だから1人あたりの専門性も重要になりそうです。",
+      "bg_query": "任天堂株式会社 開発 オフィス",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "年間休日125日",
+      "fact_sub": "公式採用情報",
+      "text": "年間休日は125日。土日祝に加えて休暇制度もあり、趣味や旅行の予定を立てやすいのは20代にもかなり大きいです。",
+      "bg_query": "任天堂株式会社 京都 本社周辺",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "初任給25.5万円",
+      "fact_sub": "大卒・公式採用情報",
+      "text": "大卒の初任給は25.5万円。平均年収だけでなく、社会人1年目のスタート地点も公開されているのがポイントです。",
+      "bg_query": "任天堂株式会社 新卒採用",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "公式採用情報",
+      "text": "賞与は年2回。ボーナス額は業績などで変わりますが、月給だけでは見えない年収の差をつくる重要な要素です。",
+      "bg_query": "任天堂株式会社 コーポレートロゴ",
+      "duration": 6,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "フレックス制度あり",
+      "fact_sub": "コアタイム10時〜15時",
+      "text": "フレックス制度はコアタイム10時から15時。朝の混雑を避けたり、生活に合わせて働き方を調整しやすい仕組みです。",
+      "bg_query": "任天堂株式会社 オフィス エントランス",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "選考は複数回",
+      "fact_sub": "職種ごとに内容が異なる",
+      "text": "ただし注意。採用選考は複数回で、職種ごとに専門性も見られます。年収967万円だけで狙えるほど、甘くはありません。",
+      "bg_query": "任天堂株式会社 採用 面接",
+      "duration": 7,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから他の企業もチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "任天堂",
+      "平均年収967万円"
+    ],
+    "subtitle": "ゲーム業界トップ級の待遇",
+    "tagline": "ただし注意点もある"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1785758737_2388",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "任天堂の年収がヤバい 平均967万円の待遇"
+      },
+      "claude": null
+    }
+  }
+}

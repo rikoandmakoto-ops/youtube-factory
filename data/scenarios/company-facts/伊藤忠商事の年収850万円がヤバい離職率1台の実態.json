@@ -1,0 +1,121 @@
+{
+  "title": "伊藤忠商事の年収850万円がヤバい、離職率1%台の実態",
+  "theme": {
+    "title": "平均年収850万円、実は離職率1%台？伊藤忠商事のホワイト度",
+    "angle": "総合商社の高年収だけでなく、離職率・有給取得日数・ボーナスを同時比較して定着の理由を数字で検証"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "超ホワイト企業",
+      "fact_main": "伊藤忠 年収850万",
+      "fact_sub": "有価証券報告書ベース",
+      "text": "えっ、伊藤忠商事の平均年収は850万円。20代で年収アップを狙うなら、まず目が止まる総合商社の数字です。",
+      "bg_query": "伊藤忠商事株式会社 東京本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年齢42.4歳",
+      "fact_sub": "年収は年齢構成も影響",
+      "text": "ただし平均年齢は42.4歳。850万円は若手だけの給与ではなく、経験を積んだ社員を含む平均として見よう。",
+      "bg_query": "伊藤忠商事株式会社 本社 エントランス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "業績連動の比重も大きい",
+      "text": "ボーナスは年2回。総合商社は給与だけでなく業績連動の賞与も大きく、好調な年は手取りの差が広がります。",
+      "bg_query": "伊藤忠商事株式会社 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "有給取得 15.8日",
+      "fact_sub": "公式ESGデータ参照",
+      "text": "有給休暇の平均取得は15.8日。年間20日付与を考えると、休みを使いやすい職場づくりが数字にも出ています。",
+      "bg_query": "伊藤忠商事株式会社 社員 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "有給取得率 79.0%",
+      "fact_sub": "公式ESGデータ参照",
+      "text": "有給取得率は79.0%。忙しいイメージの商社で約8割は意外。旅行や推し活の予定も立てやすそうです。",
+      "bg_query": "伊藤忠商事株式会社 オフィス 会議",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "月残業 13.9時間",
+      "fact_sub": "公式ESGデータ参照",
+      "text": "月の平均残業は13.9時間。配属や繁忙期の差はあるけれど、毎日終電というイメージとは距離があります。",
+      "bg_query": "伊藤忠商事株式会社 ワークスペース",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "離職率 1.9%",
+      "fact_sub": "自己都合退職率・公式データ",
+      "text": "そして自己都合の離職率は1.9%。100人なら約2人の水準で、高年収だけではない定着の強さが見えます。",
+      "bg_query": "伊藤忠商事株式会社 本社 ビル 夜景",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "育休取得 男性100%",
+      "fact_sub": "公式ESGデータ参照",
+      "text": "男性の育休取得率は100%。仕事だけに全振りせず、ライフイベントも両立したい20代にはかなり重要な数字です。",
+      "bg_query": "伊藤忠商事株式会社 社員 働き方",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "海外拠点 61カ国",
+      "fact_sub": "2024年時点の公式情報",
+      "text": "ただし海外拠点は61カ国。高収入の裏で、海外案件や時差対応、異動への適応力が求められる点は要チェックです。",
+      "bg_query": "伊藤忠商事株式会社 海外事業",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから他の企業もチェックしてね。ホワイト企業ファイルシリーズ、他にもあるから見てって。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収850万",
+      "離職率1%台"
+    ],
+    "subtitle": "伊藤忠商事の定着力を数字で検証",
+    "tagline": "高年収だけじゃない"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1787047228_6538",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "伊藤忠商事の年収850万円がヤバい、離職率1%台の実態"
+      },
+      "claude": null
+    }
+  }
+}

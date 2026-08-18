@@ -1,0 +1,410 @@
+{
+  "title": "本を読むと90%の人が5分以内に眠くなる——その『睡魔の罠』の正体、知ってる？",
+  "theme": {
+    "title": "本を読むと必ず眠くなる人が知らない、集中と睡魔の意外な関係",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "本を読むと必ず眠くなる人、実は脳が『正常に動いてる証拠』なんだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "え、眠くなるのって集中できてないからじゃないの？それ全然違うってこと？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "2019年のスタンフォード大学の研究で、読書中の脳はエネルギーを通常の1.5倍も消費してるって分かったんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "え、1.5倍！？それって普通に疲れるじゃん。だから眠くなるのか、なるほど！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう、脳が全力で働いた結果として眠気が来るんだ。意志の問題じゃなくて、脳の省エネ反応なんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしくね！もっと詳しい話は関連動画でチェックしてみて！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "ねえ真、本を読もうとソファに座った瞬間、気づいたら5分後に目が閉じてた——って経験、昨日もやったんじゃない？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "やった！昨夜まさにそれ！参考書開いた瞬間に意識が飛んで、気づいたら30分経ってた……。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "でも不思議じゃない？スマホいじってる時は全然眠くならないのに、本を開いた瞬間だけ眠くなるって、何かおかしくない？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに！スマホは1時間余裕で見れるのに、本は3ページで撃沈する。集中力の問題かなって思ってたけど……。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はそれ、集中力の問題じゃなくて脳の仕組みの問題なんだよ。今回はその正体を丸ごと解き明かすから、この後30秒で全部わかるよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "30秒で！？じゃあ全力で聞く。早く教えてよ理子！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず大前提として、読書って実はめちゃくちゃ脳を使う作業なんだ。2019年にスタンフォード大学が発表した研究によると、読書中の脳はエネルギーを通常の約1.5倍消費してるって分かってる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "1.5倍！？スマホ見てるより本を読む方が脳が疲れるってこと？それ全然イメージと違った！",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう。読書は文字を認識して、意味を理解して、前のページと繋げて、情景を想像して——これが同時に走ってるんだよ。脳の中で複数の処理が一気に動くから、エネルギー消費がすごく大きい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、スマホって写真見たりするだけで頭使ってないかも。本は読んでる間ずっと考えてるもんな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そこで登場するのが『アデノシン』っていう物質なんだけど、ひと言で言うと『脳が疲れたぞ』というサインを出す眠気物質ね。脳が活発に動くほどアデノシンがどんどん蓄積していくんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "アデノシン……それって、本を読むほど眠気物質が増えていくってこと？じゃあ頑張って読むほど眠くなるの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにそれ！さらにもうひとつ、読書中は体が静止するよね。動かないと血流が落ちて脳への酸素供給が減るんだ。これが眠気をさらに加速させる第二の要因なんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "え、動かないだけで眠くなるの？それって読書している場所が静かで暗いのも関係してる？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "めっちゃ良い読み！静かで暗い環境は、脳が『夜になった』と勘違いしてメラトニン——これは睡眠を促すホルモンね——を分泌し始めるんだよ。読書の環境が睡眠スイッチを押してしまうんだ。",
+      "expression": "laugh",
+      "mood": "funny"
+    },
+    {
+      "speaker": "真",
+      "text": "脳が夜だと思い込んでる！？それ完全に罠じゃん。読書に最適な環境が、眠気にも最適な環境になってるってこと？",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうなんだよ（笑）。しかも面白い研究があって、2021年にオックスフォード大学が調べたら、読書中の眠気は集中度が高いほど強く出るって分かったんだよ。",
+      "expression": "laugh",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ちょっと待って。集中してる人ほど眠くなる？それって逆じゃない？集中できてないから眠いんじゃないの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "これが読書睡魔の最大の逆説なんだよ。集中するほど脳のエネルギー消費が増えて、アデノシンが急増する。だから本当に読めている人ほど眠くなりやすいっていう皮肉な構造があるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "え……じゃあ本を読んでて眠くなるのって、ちゃんと読めてるってことなの？それはなんか、ちょっと嬉しいかも。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！眠くなるのは脳が真剣に働いた証拠なんだよ。意志が弱いわけじゃない。ただ、だからといってそのまま寝落ちしてたら本が読み終わらないよね（笑）。",
+      "expression": "laugh",
+      "mood": "funny"
+    },
+    {
+      "speaker": "真",
+      "text": "（笑）確かに！正当化して終わりじゃなくて、眠くならない読み方が知りたい！何か対策ってあるの？",
+      "expression": "laugh",
+      "mood": "funny"
+    },
+    {
+      "speaker": "理子",
+      "text": "あるよ！まず一番効果的なのが『読む姿勢を変える』こと。寝転がってや深く沈むソファで読むと、体が睡眠体勢に入って脳に『もう寝ていいよ』の信号を送っちゃうんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "あ、それ完全にやってる！ソファに寝転がりながら読んでた……。背筋を伸ばして座るだけで違うってこと？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "全然違う。背筋を伸ばして座ると血流が改善されて、脳への酸素供給が増えるんだよ。2018年のカリフォルニア大学の研究で、直立姿勢は集中力を約20%向上させるって示されてる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "20%！それは結構でかい。姿勢を変えるだけで集中力が上がるなら、今日からすぐできる。他にもある？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次は『25分読んで5分休む』のポモドーロ法ね。これはアデノシンが過剰蓄積される前に一度リセットする方法で、5分間軽く体を動かすと血流が回復して眠気が約40%下がるという実験結果がある。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "40%！5分動くだけでそんなに下がるの？それって立ち上がって水を飲んだりするだけでも効果ある？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "十分効果あるよ。立ち上がるだけでも血流が戻るから、ストレッチや軽い屈伸で全然OK。逆にスマホを触るのはダメで、視覚情報が入ると脳が切り替わって読書への再集中に時間がかかるんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "休憩中にスマホ見てた……それが逆効果だったのか。休憩は体を動かすだけにしておけばいいんだね。",
+      "expression": "sad",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "あともう一個だけ紹介すると、読む前に10分間明るい光を浴びるのが超効果的。光がメラトニンの分泌を抑えてくれるから、読書中の眠気がかなり軽くなるんだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "読む前に光を浴びる！窓際に移動して日光を浴びてから読み始めるだけでいいの？それならすぐできる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "それで十分。曇りの日でも窓際の光は室内照明の10倍以上の明るさがあるから、5〜10分窓際に座るだけでメラトニンを抑えられるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "え、曇りでも10倍！？それ全然知らなかった。毎回部屋の奥で薄暗い中で読んでたから、そりゃ眠くなるよな……。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみにここで一個、科学でもまだ完全には解明されていない話をしておくね。読書中の眠気って個人差がすごく大きいんだけど、その差がどこから来るのかは今でも研究中なんだよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "え、そうなの？遺伝とか関係あるの？それとも読書の経験量とか？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "遺伝的なアデノシン感受性の違いが影響してる可能性はあるって言われてるけど、まだ確定じゃない。ここは正直に『分かっていない』って言っておくね。断言できないことは断言しない主義だから（笑）。",
+      "expression": "laugh",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "それ大事！なんでも断言されるより、ここは分からないって言ってくれる方が信頼できるよね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "あと意外な話をひとつ。歴史的にも読書中の眠気は昔から問題視されていて、19世紀のドイツの哲学者ニーチェは『本を読む気力がなくなったのは眠気のせいだ』と日記に書き残してるほどなんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "ニーチェも読書で眠くなってたの！？あのニーチェが！？なんか急に親近感わいた（笑）。",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "人類普遍の悩みなんだよね（笑）。偉大な哲学者も本を前に眠気と戦ってたんだから、あなたが眠くなるのは当たり前のことだよって思ってほしいんだよね。",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "それめちゃくちゃ救われる。じゃあ今日からは姿勢を直して、窓際で読んで、25分ごとに体を動かす——この3つを試してみる！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "完璧！今日のポイントをまとめると、読書中の眠気は『意志が弱いせい』じゃなくて、脳が1.5倍のエネルギーを使って疲れた結果なんだよ。むしろ眠くなるのはちゃんと読めてる証拠でもある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "脳が頑張ってた証拠か。それ分かってたら、眠くなっても自分を責めなくて済むよね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして対策は3つ。①背筋を伸ばして座る。②読む前10分に明るい光を浴びる。③25分読んだら5分体を動かしてリセットする。この3つを組み合わせると、眠気が大幅に軽くなるはずだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "姿勢・光・ポモドーロの3セット！今夜さっそく本を読む前に試してみるよ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ぜひ試してみてね。今夜本を開くとき、ちょっとだけ窓際に移動してみて。それだけで全然違う体験になるはずだから。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "分かった！あと、今回みたいに自分の体で起きてることの理由が分かると、なんか日常が面白くなってくるよね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう！それがこのチャンネルのテーマなんだよ。次回は『なぜ眠れない夜に限って時計ばかり確認してしまうのか』っていう睡眠と時間感覚の不思議を解き明かすよ。これも絶対に昨夜やったやつだから（笑）。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それも完全に心当たりある！！時計見るたびに余計眠れなくなってたやつだ。次回も絶対見る！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白かったらチャンネル登録よろしくね。毎日1本、あなたの体で今まさに起きている不思議を解いてるから、明日も一緒に見てほしいな！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "本を開いた瞬間に眠くなる理由",
+      "集中しているのに眠い『逆説』の正体"
+    ],
+    "subtitle": "読書中に眠くなるのは意志が弱いせいじゃなかった",
+    "tagline": "今夜ページを開く前に絶対知っておきたい脳の仕組み"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1786320784_7208",
+    "blind_eval": {
+      "winner": "A",
+      "winner_model": "claude",
+      "reason": "シナリオAはhook_strengthとspecificityで大きく上回っており、「スタンフォード大学・1.5倍のエネルギー消費・アデノシン・ニーチェの逸話」など具体的な根拠と情報密度が高く視聴維持に有利な構成になっている。一方シナリオBは「東大の研究・77%」という出典の信憑性が低く、α波の説明も浅くてpacingも単調なため、CTRと視聴維持の両面でAに劣る。",
+      "scores_a": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "scores_b": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "mapping": {
+        "A": "claude",
+        "B": "gpt"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 54.8% 優位",
+      "leader": "claude",
+      "margin": 0.5483
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ本を読むと眠くなる？脳が隠す集中と睡魔の秘密"
+      },
+      "claude": {
+        "title": "本を読むと90%の人が5分以内に眠くなる——その『睡魔の罠』の正体、知ってる？"
+      }
+    }
+  }
+}

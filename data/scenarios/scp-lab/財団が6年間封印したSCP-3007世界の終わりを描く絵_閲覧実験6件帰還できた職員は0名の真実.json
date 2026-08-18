@@ -1,0 +1,464 @@
+{
+  "title": "財団が6年間封印したSCP-3007「世界の終わりを描く絵」— 閲覧実験6件、帰還できた職員は0名の真実",
+  "theme": {
+    "title": "SCP-3007「世界の終わりを描く絵」— 閲覧実験6件、帰還できた職員は0名",
+    "angle": "絵画の内部に存在する文明と現実世界の時間差を、実験記録と最後の通信ログから深掘りする"
+  },
+  "short_scenario": [
+    {
+      "speaker": "クロ",
+      "text": "閲覧禁止の絵を見た職員が、全員戻ってこなかった。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-3007。閲覧実験は6回。帰還者はゼロ。財団がその理由を封印した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、6回やって全部失敗って…財団でも止められなかったってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "絵の内部では時間の進み方が外界と異なる。最後の通信ログで職員は『ここに来て数百年が経った』と記録していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "外側では数時間なのに、中では何百年も経ってるって…それ、もう助けに行ける次元じゃない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人を目指して毎日投稿中だから、応援よろしくね。詳しい実験記録は関連動画で確認して。",
+      "expression": "normal",
+      "mood": "calm"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "クロ",
+      "text": "その絵を見た瞬間、職員は消えた。6回の実験で、帰還者はただの一人もいない。財団がこの記録を6年間封印した理由が、今わかった。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-3007。財団の内部分類では『世界の終わりを描いた絵画』。オブジェクトクラスはKeteで、現在も厳重収容中の異常存在だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、Keterって財団の中でも最高危険クラスだろ。絵一枚でそのランクって、どういうことなんだよ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その疑問の答えは、閲覧実験の記録が全部語っている。なぜ帰還者が一人もいなかったのか、わかる？今日はその記録を読み上げる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "わからない、でも聞かないといけない気がする。これ、知らないままにしておいたら逆に怖いじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-3007は縦180センチ、横240センチの巨大な油彩画だ。描かれているのは、荒廃した文明の廃墟と、地平線の向こうに沈みかけた太陽。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それだけ聞くと普通の絵画っぽいけど、財団がKeterに分類してるんだよな。どこが異常なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この絵を30秒以上凝視した対象者は、絵の内部へと引き込まれる。外側から見ると、その人間は消えたように見える。痕跡すら残らない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消える？絵の中に入るって、ゲームのポータルみたいな話じゃないよな。もっとヤバい何かが起きてるんだろ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-3007の内部は独立した空間として機能しており、外界とは切り離された時間軸が流れているとされている。原因は[DATA EXPUNGED]。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "原因が消されてる。財団でも解明できてないのか、それとも知ってて隠してるのか、どっちなんだ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが問題なんだ。財団はこの絵画を2016年に初めて収容した。その時点で既に3名の民間人が消失していたという記録が残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容する前に3人もいなくなってたのか。財団が来るまで、その絵はどこにあったんだよ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "フランスの個人競売で落札された記録が最後で、それ以前の所有者は全員[REDACTED]。財団の調査報告書では所有者の追跡に失敗したと明記されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "競売に出る前の所有者が全員消されてる。絵を手に入れた人間が全員その絵に飲み込まれたんじゃないか、それ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団もその可能性を否定していない。収容後、第一回閲覧実験が行われたのは収容から72時間後、2016年の収容直後のことだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、収容してすぐ実験したのか。それで何が起きたんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Dクラス職員D-7741が絵の前に立ち、通信機を携行した状態で閲覧を開始した。閲覧開始から27秒後、D-7741は通信機に向かって話し始めた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "27秒。30秒以内なのに、もう何かが起きてるのか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "D-7741の発言は『何かが見ている』。その発言の3秒後、D-7741は自分のカメラを自分の手で完全に覆った。財団の規定にそんな行動は存在しない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "規定にない動き…命令じゃなくて本能的に、見られたくないと感じたってことか。嘘だろ、怖いって。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閲覧開始から33秒後、D-7741の姿は消えた。通信機だけが床に残された。その通信機は現在も財団の保管庫に収容されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "通信機だけ残って、人間だけ消えたのか。それで財団はどうしたんだ、実験を止めたのか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "止めなかった。財団は第二回から第六回まで、計6回の閲覧実験を実施した。方法を変えて、装備を変えて、それでも帰還者はゼロだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "なんで止めないんだ。一回目で消えたのに、なんで六回も続けたんだよ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第三回実験で、通信機から音声が返ってきたからだ。絵の中に消えたDクラス職員D-8021の声が、外界の通信機から聞こえた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "声が戻ってきた？それって、まだ生きてるってことじゃないか。財団が実験を続けた理由がそれか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "D-8021は言った。外界で実験開始から4時間が経過した時点で、D-8021本人は『この場所に来て200年以上が過ぎた』と通信に残している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "外が4時間で、中では200年。それって、助けに行っても間に合わないどころか、行った瞬間に老衰で死ぬってことじゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の試算では、外界の1秒が絵の内部では約18日に相当するという仮説が提出されている。ただしこの数値は[REDACTED]により現在も確認中だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "外の1秒が中の18日って、それじゃ絵を見た瞬間に体感で何十年も経つんじゃないか。それが帰還者ゼロの理由か。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "D-8021の最後の通信は、外界で実験開始から6時間後に途絶えた。その最後の言葉は『もう誰も来るな、この場所は終わっている』という一文だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "来るなって言った。絵の中で何百年も過ごして、それでもまだ通信できて、最後に言ったのがそれか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第四回実験ではロボットアームで絵を物理的に破壊しようとした。しかし刃が絵に触れた瞬間、ロボットアーム全体が絵の内部へと引き込まれた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "機械まで飲み込まれたのか。もう物理的に壊せないってことが証明されちゃったわけだ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第五回実験では特殊防護スーツと目隠しを装備したDクラス職員を絵の前に立たせた。目を閉じた状態でも、職員は消えた。視覚は関係なかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "目を閉じてても消えるって、じゃあどうやって防ぐんだよ。絵の存在そのものが危険なのか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は第五回実験の後、SCP-3007の収容プロトコルを大幅に改定した。現在は半径20メートルの立入禁止区域が設けられ、接近した職員は即座に隔離される。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "半径20メートル。それって、絵を置いてある部屋に入るだけで危険ってことじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第六回実験は財団の上層部が許可した最後の実験だ。その記録は現在も大部分が[DATA EXPUNGED]で、詳細を知る職員は財団内に存在しないとされている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最後の実験の内容が消されてる。財団が知っていて消したのか、それとも財団ですら記録できなかったのか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第六回実験の後に提出された報告書には一文だけ残っている。『SCP-3007の内部に存在する文明は、外界が終わった後も継続する可能性がある』という記述だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "外界が終わった後も続く文明。絵の中の世界って、現実より長く続くってことか。世界の終わりを描いた絵が、世界の終わりを超えるって意味じゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "絵の題名は判明していない。作者も不明で、財団の調査では制作年代の特定にも失敗している。どの時代に誰が何のために描いたのか、記録はない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "作者不明で年代も不明。でも絵の中には文明があって、人間が消えていく。誰かが意図的にこれを作ったとしたら、目的はなんなんだ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の一部研究者は、SCP-3007が意図的に作られた収容装置であるという仮説を提出している。何者かが、対象を絵の内部に閉じ込めるために制作したという見方だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容装置。財団が異常存在を収容するみたいに、誰かが人間を閉じ込めるために絵を使ったってことか。それを作れる存在って何なんだ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその問いに答えを出せていない。この仮説を提出した研究者は現在[REDACTED]の状態にあり、財団の公式見解にはこの仮説は含まれていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "仮説を出した人間まで消えてる。絵に飲み込まれたのか、別の理由なのか。財団自体が何かを隠してるんじゃないかって思えてくる。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在のSCP-3007の収容状況を確認しておく。絵画は財団サイト-██の特殊格納庫に保管されており、電磁シールドと光学遮断幕で二重に封鎖されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "電磁シールドと光学遮断幕。それだけやっても、目を閉じてても消えるんだろ。今の収容方法で本当に大丈夫なのか。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の収容プロトコルには『現時点では収容が機能しているが、SCP-3007の異常性が外部に拡張する可能性を排除できない』という注記が付いている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "排除できないって、財団が公式に認めてるのか。絵の中の世界が広がってくる可能性があるってことじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "D-8021が最後に送った通信の内容を、もう一度確認しておく。『もう誰も来るな、この場所は終わっている』。その言葉の意味を、財団は未だに解釈できていない。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "終わっているってどういう意味なんだ。絵の中の文明が滅びたのか、それとも外の世界が終わることを知っていたのか。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それが分からないから、この記録は今もKeterのまま封印されている。SCP-3007。世界の終わりを描いた絵は、現在も財団の格納庫の中で存在している。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "もし本当に絵の中の時間が外より早く進んでいるなら、今この瞬間も絵の中では何千年も経ってるかもしれない。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画で紹介した内容はSCP財団WikiのCC BY-SA 3.0ライセンスに基づいている。もし似たような絵を見かけたとしても、決して30秒以上見続けるな。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次回はSCP-2000、機械仕掛けの神を取り上げる予定だ。人類を何度でもリセットできる装置の話で、これもまた財団が封印したくなる理由がわかる内容だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人を目指して毎日投稿中だ。この報告書が役に立ったと思ったら、機密保持のためにいいねを押して、チャンネル登録をよろしく頼む。",
+      "expression": "normal",
+      "mood": "calm"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "閲覧実験6件 / 帰還者0名",
+      "【これが最後の通信記録だ】"
+    ],
+    "subtitle": "SCP-3007 収容記録 — 絵の中に消えた職員たちの最後の声",
+    "tagline": "CLASSIFIED｜財団が封印した異常絵画の全記録"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1786234634_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはタイトル・サムネイルから『閲覧実験6件・帰還者0名』という具体数値でhook_strengthが大幅に上回り、絵のサイズ・収容年・最後の通信ログ文言など細部の具体性（specificity）でもAを圧倒している。さらにCTAを世界観に溶け込んだ表現で自然に配置しており、視聴維持・CTR双方で優位に立つ。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 2,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 70.9% 優位",
+      "leader": "claude",
+      "margin": 0.709
+    },
+    "candidates": {
+      "gpt": {
+        "title": "財団が封印した『終わりを描く絵』の真実【閲覧注意】"
+      },
+      "claude": {
+        "title": "財団が6年間封印したSCP-3007「世界の終わりを描く絵」— 閲覧実験6件、帰還できた職員は0名の真実"
+      }
+    }
+  }
+}

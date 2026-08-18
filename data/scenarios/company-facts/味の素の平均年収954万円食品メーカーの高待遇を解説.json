@@ -1,0 +1,122 @@
+{
+  "title": "味の素の平均年収954万円、食品メーカーの高待遇を解説",
+  "theme": {
+    "title": "味の素の平均年収が驚きの954万円 — ボーナスと離職率を解説",
+    "angle": "食品メーカーの身近なイメージと高待遇のギャップを数字で見せる",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収がヤバい",
+      "fact_main": "味の素 年収954万円",
+      "fact_sub": "2024年3月期・有報",
+      "text": "味の素、平均年収はなんと954万円。うま味調味料の身近な会社なのに、上場企業でもかなり高い水準です。これは驚き！",
+      "bg_query": "味の素株式会社 本社 外観",
+      "duration": 6,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年齢 44.4歳",
+      "fact_sub": "2024年3月期・有報",
+      "text": "この954万円は平均年齢44.4歳の数字。若手だけの年収ではないけれど、長く働くほど収入が伸びやすい構造が見えます。",
+      "bg_query": "味の素株式会社 本社 オフィス",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "勤続年数 19.2年",
+      "fact_sub": "2024年3月期・有報",
+      "text": "平均勤続年数は19.2年。食品メーカーは安定志向の人にも人気ですが、約20年続く人が多いのはかなり印象的です。",
+      "bg_query": "味の素株式会社 研究所 外観",
+      "duration": 6,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "賞与は年2回",
+      "fact_sub": "業績連動の賞与制度",
+      "text": "ボーナスは年2回。会社の業績も反映されるため、毎月の給与だけでなく賞与まで含めて年収954万円を見たいところです。",
+      "bg_query": "味の素株式会社 社員 働く",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "年間休日 124日",
+      "fact_sub": "公式採用情報",
+      "text": "年間休日は124日。土日祝を中心にしっかり休める設計で、20代が気にする仕事とプライベートの両立にも効きそうです。",
+      "bg_query": "味の素株式会社 オフィス 休憩スペース",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "有給取得率 73.8%",
+      "fact_sub": "2023年度・公式データ",
+      "text": "有給取得率は73.8パーセント。取りにくい空気がないかは部署次第でも、制度だけで終わらせない数字としては好材料です。",
+      "bg_query": "味の素株式会社 社員 食堂",
+      "duration": 6,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "育休取得 男性100%",
+      "fact_sub": "2023年度・公式データ",
+      "text": "男性の育休取得率は100パーセント。結婚や子育てをまだ先と思う20代でも、将来の選択肢を残せる会社かは大事です。",
+      "bg_query": "味の素株式会社 社員 ワークライフバランス",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "女性管理職比率 24.0%",
+      "fact_sub": "2023年度・公式データ",
+      "text": "女性管理職比率は24.0パーセント。まだ道半ばとも言えますが、キャリアを続ける人を増やす方針は数字に出ています。",
+      "bg_query": "味の素株式会社 女性社員 オフィス",
+      "duration": 6,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "中途採用比率 51%",
+      "fact_sub": "2023年度・公式データ",
+      "text": "ただし中途採用比率は51パーセントで、経験者も多い環境。高待遇だからこそ、転職では専門性や実績を求められやすそうです。",
+      "bg_query": "味の素株式会社 採用 イベント",
+      "duration": 6,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから他の企業もチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "味の素",
+      "平均年収954万円"
+    ],
+    "subtitle": "身近な食品メーカーの待遇を数字で解説",
+    "tagline": "ボーナス・離職率まで公開"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1785758454_6401",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "味の素の平均年収954万円、食品メーカーの高待遇を解説"
+      },
+      "claude": null
+    }
+  }
+}

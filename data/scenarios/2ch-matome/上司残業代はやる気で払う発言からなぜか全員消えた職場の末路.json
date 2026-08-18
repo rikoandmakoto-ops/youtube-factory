@@ -1,0 +1,326 @@
+{
+  "title": "上司「残業代はやる気で払う」発言から、なぜか全員消えた職場の末路",
+  "theme": {
+    "title": "上司「残業代はやる気で払う」",
+    "angle": "理不尽な発言をしたブラック上司が、部下の一斉退職で詰むまでのスレ。スカッと系"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "残業代を「やる気」で払う上司、実在した。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 現金じゃなくて精神論を振り込む気か？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1の職場、月60時間残業でも手当は0円だった。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも上司のA、朝礼でその名言を3回も言ったらしい。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "結果、同じ週に6人が退職届。Aだけ翌朝に詰んだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "チャンネル登録者1万人目標で毎日投稿中、応援よろしく！関連動画でA上司の末路も見てくれ！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなたも残業したのに給料明細を見て、あれ、時給どこへ消えた？って青ざめたことない？\n>>1の上司Aは、その疑問へ最悪の答えを投げてきた。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "スレ主、開幕から胃が痛いぞ。残業代の話で上司が何を言えば、部下一斉退職まで行くんだ？\nまさか「次の給料で」みたいな逃げではないよな？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1「上司Aが朝礼で、残業代はやる気で払うって言った」。文字にしても意味不明すぎる。\n現金の代わりに気合いを渡す会社、ゲーム内通貨より弱い。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ やる気は財布に入らんし、コンビニのレジで出したら即通報案件だろ。\nしかも朝礼で宣言って、全員に証人を配るスタイルなの何なんだ？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1の部署は8人で、締切前の1週間だけ毎日2時間ほど残るのが恒例だったらしい。\n20代で予定を削って働いたのに、明細には基本給しか並んでいなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "1週間で約10時間、8人なら合計80時間が空中分解してる計算じゃん。\nそれを「慣例」で飲ませるの、ブラックというより残業代の消失マジックだろ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1は最初、入力漏れかと思ってAに明細を見せた。するとAは画面も見ずに、若いうちは経験が給料だと返した。\n経験値で家賃が払える世界線、どこにあるんだよ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここまででも十分ヤバいのに、Aはさらに朝礼で「残業代はやる気で払う」と再放送した。\nそしてこの話、最後にAだけが一番困るオチへ転がる。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "名無し「録音ある？」と聞かれ、>>1は朝礼の録音を持っていた。スマホのメモ機能で、たまたま議事メモ用に回していたらしい。\n偶然の保存ボタン、今回は強すぎる。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "録音の中でAは、残業は本人が勝手に残っただけとも言っていたらしい。\n締切を前日に振っておいて自主練扱いは、部活の顧問でも引く雑さだぞ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1は同僚Bにだけ明細を見せた。Bも同じ月に12時間分がゼロで、別の同僚Cも同様だった。\n残業代の未記載、どうやら1人の勘違いではなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "8人中6人が同じ状態なら、もう偶然じゃなくて部署の仕様だろ。\n名無したちも「明細と勤怠を並べろ」と一気にスレ主側へ集結した。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1たちは3か月分の勤怠を各自で確認した。月ごとに違っても、残った時間と支給額の差だけは全員ぴったりゼロ。\n数字が揃うと、Aの精神論だけが急に薄く見える。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかもAは、早く帰ると評価が下がるぞと口癖みたいに言っていたらしい。\n残れと言わずに残らせる、言葉の隙間へ圧を詰めるタイプかよ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "名無し「辞めるなら同時に動け」とレス。>>1たちは休日に集まり、退職届を出す日だけ揃えた。\n示し合わせたのは報復じゃなく、誰か1人だけをAに潰させないためだった。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "6人が別々に相談していたのに、全員が同じ結論へ着地したのがもう答えだよな。\n職場って、空気が悪いと会議しなくても避難ルートだけ共有される。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "提出日は月曜の朝9時。Aは最初の退職届を見て、またやる気が足りないと笑ったらしい。\nところが2通目、3通目と机に置かれた瞬間、顔色だけ残業を始めた。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "スレ主草。やる気払いの会社で、部下のやる気残高が一斉にゼロになっただけだな。\nA、ここで初めて現金より大事な人手の値段を知るのか？",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "Aは慌てて、今週は大事な納品があるから待てと言い出した。だが6人の返事は同じで、引き継ぎは規定通りやる、だった。\n規定という普通の言葉が、Aには必殺技に聞こえたはず。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "A「残業して完成させろ」が通じない。そりゃそうだ、辞める人にやる気通貨は使えない。\nここからAが出した交渉札、まさかの方向へ曲がるぞ。",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "Aは「残業代は検討する」と言ったらしい。払うではなく検討、最後まで語尾が逃げ腰で草。\n>>1たちはその場で、過去分も含めて書面で回答してほしいと返した。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "現金の話になった瞬間だけ「やる気」が消えるの、あまりにも分かりやすい。\n名無しも、口約束を回収しに行くなと総ツッコミだった。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "その日の午後、Aは自分で納品作業を始めた。でも手順を知らず、取引先へ送るファイル名を3回間違えたらしい。\n普段6人へ投げていた仕事、Aの画面で急に重力を持った。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ファイル名3連敗は草。でも笑えないのが、Aは現場を知らないまま残業だけ要求してた点だな。\n指示する側が作業を触ると、だいたい地獄のチュートリアルが始まる。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さらにAは、Bへ個別に残ってくれと連絡した。Bは「残業代はやる気で払うのでしたよね」と一文だけ返した。\n短文なのにAの朝礼が丸ごと跳ね返ってくる、これは強い。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで名言を引用される上司、人生で一番恥ずかしいブーメランだろ。\nAは既読を付けたまま20分返信なし、やる気の入金処理でもしてたのか？",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1は後日、未払い分の確認には外部の相談窓口も使ったと報告した。特別な裏技ではなく、勤怠と明細を並べて事実を伝えただけ。\nスレ民は「最初からそこへ持っていけ」と拍手だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "記録を残して、1人で抱えず、言った言わないにしない。掲示板のレスなのに手順が妙に堅実だな。\nAの雑な一言が、証拠セットを完成させたのが皮肉すぎる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "Aは最後に、みんな辞めたら部署が回らないと愚痴ったらしい。>>1は「だから残業代を払う話だったんです」と返した。\nこの一撃、声を荒げずに急所だけ刺してる。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "それは怒っていいどころか、静かに勝ってるレスだわ。回らない部署を作った人が、回らないと驚くな。\nAのやる気払い、最終的に自分の作業量へ全額還元されたな。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "退職日まで、6人は引き継ぎ表を作って定時で帰った。Aだけが夜まで残り、翌朝の朝礼も中止になったらしい。\nやる気で払うと言った本人が、残業の現実担当になるとは。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "朝礼中止は草。あの名言を言う舞台ごと消えてるじゃん。\nスレ主たちが騒がず規定通り去ったからこそ、Aの言葉だけがずっと職場に残ったんだな。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1の最後の報告。「未払い分は確認後に支払われた。Aは別部署へ異動した」。全員が救われる魔法ではないが、少なくともやる気払いは終わった。\n名無したち、最後の一文で拍手喝采。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "Aが学んだかは知らん。でも部下6人の明細に数字が戻ったなら、スレのオチとしては十分すぎる。\n「やる気で払う」は、後世までコピペされる黒歴史になったな。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回は、バイト先で新人へ丸投げした店長が、初日に客から詰められたスレを読むぞ。\n口だけ指示役が現場へ降りた瞬間の、あの空気を見逃すな。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "チャンネル登録者1万人を目指して毎日投稿中、こういうヤバい職場スレが好きなら応援よろしく！\n関連動画も、寝る前に一本だけのつもりで踏んでくれ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "残業代をやる気で払うと言われたら、あなたならその場で何て返す？\n続きはコメントで、スレ民みたいに一番キレのあるレスを置いていってくれ。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "残業代は",
+      "やる気で払う"
+    ],
+    "subtitle": "部下全員、静かに退職届",
+    "tagline": "上司だけが最後まで気づかなかった"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1786237318_8209",
+    "blind_eval": {
+      "winner": "A",
+      "winner_model": "gpt",
+      "reason": "Aはspecificityとwording_qualityで大きく上回り、「月60時間・8人・3か月分の勤怠」など具体的な数字と「ゲーム内通貨より弱い」「コンビニのレジで出したら即通報」といった鋭い比喩表現が視聴者の離脱を防ぐ引力を持つ。またpacingの面でもBが56行に対しAは37行で同等の情報量を凝縮しており、テンポよく最後まで読ませる構成になっている。",
+      "scores_a": {
+        "hook_strength": 8,
+        "specificity": 9,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 9,
+        "overall": 8
+      },
+      "scores_b": {
+        "hook_strength": 7,
+        "specificity": 7,
+        "pacing": 6,
+        "cta_effectiveness": 7,
+        "wording_quality": 7,
+        "overall": 7
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "上司「残業代はやる気で払う」発言から、なぜか全員消えた職場の末路"
+      },
+      "claude": {
+        "title": "「残業代はやる気で払う」と言い切った上司、なぜか翌月に全員いなくなった話"
+      }
+    }
+  }
+}

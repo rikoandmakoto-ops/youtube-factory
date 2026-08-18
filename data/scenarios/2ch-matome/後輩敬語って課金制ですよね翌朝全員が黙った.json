@@ -1,0 +1,408 @@
+{
+  "title": "後輩「敬語って課金制ですよね？」→翌朝、全員が黙った",
+  "theme": {
+    "title": "後輩「敬語って課金制ですよね？」→ 翌日の朝礼で空気が変わった",
+    "angle": "職場の非常識な新人が謎理論で全員を巻き込み、思わぬ人物に論破される展開"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "知らない方が幸せだったかも。後輩が敬語は課金制と言い出した。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 月額いくら払えば先輩にタメ口でいい世界線なんだよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1によると入社3日目、A後輩は先輩へ全部「了解っす」で返答。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "注意したら「敬語は有料コミュニケーションですよね？」と真顔だった。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "翌朝の朝礼で部長が「給料も無料でいい？」って返して全員停止。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "お前らならこの後輩に何て返す？ コメントで教えてくれ。1万人目標で毎日投稿中、応援よろしく！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなたの職場にもいない？ 入社3日目の後輩が「敬語って課金制ですよね？」と宣言して、翌朝の朝礼を凍らせたスレだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 敬語にサブスク料金でも発生してんのか？ 月額を払わない新人、初手から世界観が違いすぎるだろ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも>>1、時給1100円なら新人教育の30分だけで550円分が吹き飛ぶ、と開幕からキレ散らかしてる。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "スレ主「うちのA後輩、配属初日に先輩Bへ『資料見たっす、了解っす』って連発したんだが、これ俺が古い？」",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "名無し「古い以前に、初日から距離感を時速120キロで踏み抜くな」。この時点では軽い職場あるあるに見えたんだよな。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1「Bが『社内でも先輩には敬語で頼むね』と30秒だけ注意したら、A後輩が真顔で返した」。嫌な予感が加速する。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "A後輩「敬語って課金制ですよね？ 給料に敬語代が入ってないので、フランク対応で問題ないと思います」。出た、謎の料金表。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "名無し「敬語代の明細どこだよ、基本給の横に『ですます税』でもあるのか？」。スレ、開始8レスで爆発してて草。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1「Bが固まった後、俺も聞き直した。Aは『友達に敬語使うなら有料でしょ』と、さらに理屈を増築した」。",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "友達じゃない先輩に、なぜ友達料金の話を持ち込むんだよ。契約書もないのに課金だけ主張するの、逆に強すぎる。",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで第二フック。実はこの一言、B先輩だけじゃなく、翌朝には部署12人と部長まで巻き込む大火事になる。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "たった一文で朝礼に進出するのかよ。社内チャットより伝達速度が速い新人の迷言、もう通知オン案件だろ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1「その日はBが業務を説明しても、Aは『うん』『りょ』だけ。取引先向けのメール下書きにも『おつです』と書いた」。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "取引先メールに『おつです』は、敬語代どころか会社の信用残高を一括払いで削るやつだろ。誰か止めろ。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "スレ主はメール送信前に止めて、定型文を渡した。A後輩は「テンプレならコピペ代も別ですか？」と追撃したらしい。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "名無し「時給1100円なら、口論10分で約183円。Aの理論を聞く時間がいちばん高額課金だぞ」。計算班まで参戦。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1「午後にはBが上司Cへ相談。Cは怒鳴らず『明日の朝礼で本人に確認する』だけ言った」。静かなやつが一番怖い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "怒鳴らない上司C、完全に答案用紙を机へ置く教師の動きじゃん。A後輩、ここで引き返せたはずなのにな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "その夜、部署チャットには『明朝9時、連絡事項あり』だけ届いた。12人のうち8人が既読1分以内、みんな察してる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "既読速度が会議の緊急度を物語ってて草。業務連絡は半日放置でも、修羅場の予告には全員秒速で集合するんだよな。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "翌朝9時。朝礼の最初、上司Cは売上も予定も飛ばしてA後輩へ「昨日の敬語課金制って、どういう意味？」と聞いた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "来たぞ公開確認タイム。ここで「言い方を間違えました」と逃げれば、ダメージは多く見積もっても軽傷で済む。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "A後輩「敬語は気を使う作業なので、追加の対価があるべきです。ないなら全員フランクでいいと思います」。全力で押した。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "名無し「撤回せず理念として提出してて草」。しかも朝礼という逃げ場ゼロの会場で、堂々と2回目を撃ったのかよ。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "上司Cは30秒黙ってから「分かった。じゃあ確認だけするね」と言った。部署12人、キーボード音すら消えたらしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "この「確認だけ」が一番逃げられないやつ。反論の土台を本人に組ませて、最後の一本だけ抜く準備が整ったな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "上司C「敬語が対価のある作業なら、君が受ける指導も対価のある作業だよね？」。まず新人教育を同じ秤に乗せた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "うわ、時給1100円の先輩が毎日30分教えたら、5日で2750円分。A後輩の理論、自分の足元から燃えてる。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "A後輩「それは会社の仕事なので給料に含まれてます」と答えた。すると上司C、そこで初めてちょっと笑ったらしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで笑ったのか、怖すぎる。今の返答、後輩本人が「会社の仕事なら給料に含まれる」と確定させちゃったぞ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "上司C「そう。敬語も社内で仕事を進めるための基本動作だから、君の給料に含まれてる。課金制ではないよ」。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "論破というより、自分で出した定義をそのまま返送されてて草。送料着払い、受取人A後輩、配達完了です。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でも上司C、ここで終わらない。「追加料金を希望するなら、こちらも追加料金を考えよう」と静かに続けた。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 追加料金の相互見積もり、始まるのか？ 朝礼が急に請求書バトルの決算会議になってるんだが。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "上司C「先輩が君の質問へ答えるたび、教育対応費。メールを直すたび、修正対応費。もちろん会社のルールでね」。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "質問1回100円とかではなく、そもそも新人への支援は会社が回す仕事。それを金額換算されると急に刺さるな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "A後輩は「いや、それは違うと思います」と小声になった。昨日までのフランク理論、朝礼9分で急に電波が弱い。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "名無し「敬語の通信量が切れたか」。部署12人、笑ったら負けの顔でモニターを見るしかない時間だったろうな。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "上司Cは責めずに「違うなら、相手の手間を無料扱いしない言い方を選ぼう」とだけ言って、朝礼を通常運転へ戻した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "説教を10分伸ばさず、朝礼9分で終わらせたのが強い。上司C、言葉の料金表じゃなく空気の締切を守ってる。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1「その日からAは『お願いします』『ありがとうございます』を言うようになった。ただし最初の3日は声が小さかった」。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "声量が80％オフでも敬語は実装されたのか。昨日までの『りょ』から一歩進んだなら、部署にとっては大進歩だな。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "名無し「敬語は上下関係の呪文じゃなく、相手の手間を雑にしないための緩衝材みたいなもの」。このレスだけ妙に刺さる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただしスレ主たちが一番笑ったのは、A後輩が翌週、別件でまた上司Cへ相談した時だった。まだ続きがある。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "A後輩「資料のここ、教えていただけますか」と、かなり丁寧に聞いた。上司Cは普通に画面を見て説明したらしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "お、学習してるじゃん。ここで円満終了なら、ただの新人が恥をかいたスレで終わるんだが、オチ待機勢は知ってる。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "説明が終わるとA後輩、少し迷ってから「ありがとうございます。これ、敬語代って経費精算できますか？」と聞いた。",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "まだ請求するのかよ！ 理論は撤回してもポイントカードだけ持ち歩いてるタイプ、最後の最後で全部持っていった。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "上司Cは1秒だけ止まり、「できるよ。領収書の宛名は『社会人1年目』で」と返したらしい。部署、ついに全員崩壊。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "名無し「朝礼の伏線を翌週に回収する部長、強すぎる」。A後輩もその後は笑って「不要です」と言えたらしい。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回は、上司のBが「残業代はやる気で払う」と言い放って、部署の全員から逆に見積書を出されたスレを読むぞ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "やる気を通貨扱いした上司、今度は何時間分の請求を食らうんだよ。職場の迷言スレ、次も絶対に荒れる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "敬語代を請求されたら、お前らなら朝礼で何て返す？ コメントで一番キレのあるレスを投下してくれ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中！ 次のヤバい職場スレも一緒に笑いたいなら、応援よろしくな。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "なお、この動画は掲示板投稿をもとに匿名化して再構成したエンタメです。続きはコメントで、敬語代の相場も聞かせて。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "敬語って課金制？",
+      "翌朝礼で空気終了"
+    ],
+    "subtitle": "新人の謎理論に社内がざわついた",
+    "tagline": "最後に部長が放った一言"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1786536326_5428",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "後輩「敬語って課金制ですよね？」→翌朝、全員が黙った"
+      },
+      "claude": null
+    }
+  }
+}

@@ -1,0 +1,423 @@
+{
+  "title": "昨夜の夢だけ覚えてる——99%が知らない、脳が『あの夢』を選んで記録する本当の理由",
+  "theme": {
+    "title": "なぜ夢の中で起きたことを時々覚えているのか？99%が知らない脳の働きについて",
+    "angle": "夢の記憶と脳のメカニズム",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "昨夜の夢、なんで『あれだけ』覚えてるの？99%が理由を知らない話。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに！変な夢だけ妙にはっきり残ってる。なんで楽しい夢は消えるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "起床前90分のレム睡眠中、脳のノルアドレナリンがほぼゼロになる。記憶定着に必要な物質が消えるから夢は消えやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ覚えてる夢は何が違うの？東大の研究でも調べてたよね？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "感情が強い夢はアミグダラ、つまり扁桃体が活性化して記憶痕跡を残す。怖い夢や衝撃的な夢ほど残りやすいのはそのせい。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！もっと詳しい話は関連動画でチェックしてみて！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "昨夜の夢、もう思い出せないでしょ。でも『あの変な夢』だけははっきり残ってる——そんな経験、昨日もしたはずなんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "あ、それ！昨夜も追いかけられる夢だけめちゃくちゃ覚えてて、その前に見てたはずの楽しい夢は全部消えてた。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう、それ偶然じゃないんだよ。今回はその『脳が夢を選んで記録する仕組み』を完全に解き明かすね。答えは脳の中にある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "脳が選んでるって、夢の記憶って全部平等に消えていくんじゃないの？なんか意図があるってこと？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まずね、人は1晩に平均4〜6回夢を見てる。でも翌朝覚えているのはせいぜい1〜2個。残りは起きた瞬間に消える——ここに秘密がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "4〜6回も見てるのか！それ全部覚えてたら脳がパンクしそうだけど、なんで起きた瞬間に消えるの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "夢を見るのはレム睡眠中——レム睡眠っていうのは体は眠ってるのに脳だけ活発に動いてる状態のことね。この間、記憶の定着に欠かせないノルアドレナリンという物質がほぼゼロになる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ノルアドレナリン……それって何？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ひと言で言うと『記憶を固定するのりのような物質』。これがゼロになるから、夢の出来事は脳に貼り付かずにするっと消えていく。起きたらすぐ忘れるのはそのせい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ全部消えるはずなのに、なんであの怖い夢だけ残るの？そこが一番不思議なんだけど。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここが一番面白いところ。感情が強く動いた夢は、脳の中の『扁桃体』——これは感情センサーみたいな部位なんだけど——が活性化して記憶の痕跡を残す。怖い・悲しい・衝撃的な夢ほど残りやすい理由がこれ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "扁桃体が感情センサーか。じゃあ楽しい夢より怖い夢の方が感情が強いから残るってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう。恐怖や驚きは生存に関わる感情だから、脳が優先して記録しようとする。これは何万年も前から続く人間の本能的な反応で、危険を記憶することが生き残りに直結してたから。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、怖い夢を覚えてるのって実は生存本能だったのか。それ聞いてちょっと安心した。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "あとね、タイミングも超重要。2019年に発表されたカリフォルニア大学バークレー校の研究では、目が覚める直前の90分間——つまり朝のレム睡眠が夢の記憶を最も形成しやすいと分かった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "90分前か。じゃあ朝方の夢が一番記憶に残りやすいってことか、確かにそういう気がする。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そしてもう1つ。目が覚めた後、最初の5分以内に夢のことを考えたかどうかで記憶の残り方が劇的に変わる。5分放置すると夢の約90%が消えるというデータもある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、5分で90%！？じゃあスマホをすぐ見たりしたら夢の記憶が飛ぶってこと？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさに。起きた瞬間にスマホの通知を見ると、脳が別の情報処理に切り替わって夢の記憶が上書きされる。これは夢研究の第一人者ロバート・スティックゴールドが1990年代から繰り返し指摘してた話。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "スティックゴールド……1990年代からそんな研究があったのか。それって夢を覚えるかどうかは習慣で変えられるってこと？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "変えられる。実は夢の記憶には『ルーシッド・ドリーム』——明晰夢って言うんだけど——の研究が大きく貢献してて、夢を意識的に記録する人は記憶力が上がると分かってる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "明晰夢って、夢の中で自分が夢だと気づくやつだよね？それが記憶力と関係あるの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう。明晰夢を見る人は前頭前野——判断や意識をつかさどる脳の司令塔みたいな部位——が睡眠中も活発で、夢と現実の境界を認識できる。この人たちは夢の記憶率が通常の人の2〜3倍高いというデータがある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "2〜3倍か……それって訓練で誰でもなれるの？なんかすごく気になってきた。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここはね、正直に言うと『科学でもまだ結論が出ていない』部分がある。明晰夢を安定して起こす方法は研究途中で、個人差が大きくて再現性が低い。誰でも必ずできるとは言い切れない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "正直に言ってくれるのいいな。じゃあ今すぐ試せることはあるの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "あるよ！実は歴史的に見ても、夢の記録は古くから重視されてた。古代エジプトでは夢を神のお告げとして専門の神官が記録してて、これが世界最古の夢日記とも言われてる。紀元前1350年頃の記録が残ってる。",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "紀元前1350年！？3000年以上前から夢を記録してたのか、人類ってずっと夢が気になってたんだな。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "そしてフロイトが1899年に『夢判断』を出版して以来、夢は心理学の核心テーマになった。でも現代の脳科学はフロイトの理論の多くを否定していて、夢は『願望の象徴』じゃなく『記憶の整理作業』に近いと分かってきた。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "フロイトが否定されてるのは意外。じゃあ夢ってどんな記憶を整理してるの？",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "MITのマット・ウィルソン博士が2001年に発表した研究では、ネズミが迷路を走った後の睡眠中に、昼間の行動と全く同じ脳の神経パターンが再現されることが確認された。つまり夢の中で記憶を『再生して定着させてる』。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "夢って記憶の復習だったのか！それって人間でも同じことが起きてるってこと？",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "起きてる。試験前夜に勉強した内容が夢に出てくることがあるのはそのせい。脳が睡眠中に昼間の記憶を選んで再生し、重要なものを長期記憶に移している——だから夢は脳の自動バックアップ作業とも言える。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "自動バックアップ……それ聞くと夢の見え方が変わるな。じゃあ夢を覚えてる日は記憶の定着もうまくいってるってこと？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "必ずしもそうとは言えないけど、夢をよく覚えている日は睡眠の後半レム睡眠が充実していたサインではある。これは間接的に記憶定着が進んだ可能性を示す。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど。じゃあ実際に夢の記憶を増やすには何をすればいいの？具体的に教えてほしい。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "一番簡単なのが『夢日記』。枕元にメモ帳を置いて、起きた瞬間に夢の断片を書き留める。2週間続けた人のうち約70%が夢の記憶量が増えたという研究報告がある。スマホより手書きが有効で、打ち込む動作が脳を切り替えにくい。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "スマホより手書きか。起きてすぐスマホを見るのが一番ダメなんだね。それ今日から変えられる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "あと、アラームで強制的に起こされると夢の記憶が飛びやすい。自然に目覚めた朝は夢を覚えている確率が高い。これは急激な覚醒がノルアドレナリンを一気に放出して記憶を上書きするから。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それ分かる！アラームで起きた日は夢が全部消えてる気がする。自然に起きた休日は逆に夢がリアルに残ってる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "もう1つ。寝る前にアルコールを飲むとレム睡眠が減る。お酒を飲んだ夜は夢を見にくく、見ても覚えていないのはこのせい。睡眠の質を上げたいなら就寝3時間前からアルコールを控えるのが有効。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "3時間前か、夜9時に寝るなら6時からか……それは結構厳しいな。でも確かに飲んだ日は夢の記憶がゼロな気がする。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "あとね、ビタミンB6を含む食品——バナナ・鶏肉・マグロなんかがそうなんだけど——を夕食に取ると夢が鮮明になりやすいという小規模な研究もある。ただこれはまだエビデンスが弱くて、科学的に確定はしていない。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "バナナで夢が鮮明になるかもしれないのか。確定はしてないけど試す価値はあるね。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まとめると、夢の記憶が残るかどうかは『感情の強さ』『起床のタイミング』『起きた後の5分の使い方』の3つで決まる。脳は無意識に重要な夢を選んで記録しようとしている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "感情・タイミング・5分か。全部今日から意識できることだね。あの怖い夢が残るのも、脳がそれを重要だと判断してるからか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう。そしてまだ解明されていないこともある。なぜ特定の夢が繰り返し出てくるのか、夢に意味があるのかどうかは現代科学でも結論が出ていない。脳の謎はまだ深い。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "繰り返し見る夢って確かに気になる。あれも理由があるのかと思ってたけど、まだ分かってないのか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜寝るとき、枕元にメモ帳を1枚だけ置いてみて。起きた瞬間に目を閉じたまま夢を思い出して、30秒だけ頭の中で繰り返してから書き留める——それだけで脳の夢記録力が変わってくるはずだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "30秒か、それなら今夜すぐ試せる。目を閉じたまま夢を繰り返すって、確かにスマホを見るよりよさそう。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は『なぜ目覚まし前に自然に目が覚めるのか』——体内時計と睡眠圧の仕組みを解き明かすよ。あなたの体の中で毎朝起きてる不思議な話だから、ぜひ見てほしいな。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "それも気になる！目覚まし前に起きるやつ、昨日もあった。次回も絶対見る。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白かったらチャンネル登録よろしくね。毎日1本、あなたの体と日常の不思議を解いてるから、明日も一緒に見てほしいな！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "99%が知らない「夢の記憶」の正体",
+      "なぜあの夢だけ覚えてるの？"
+    ],
+    "subtitle": "脳が夢を『選んで』消す瞬間",
+    "tagline": "今夜、あなたの脳で起きること"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1786235035_7208",
+    "blind_eval": {
+      "winner": "A",
+      "winner_model": "claude",
+      "reason": "シナリオAはspecificityで大きく上回り、ノルアドレナリン・扁桃体・バークレー校研究・アルコールの影響・ビタミンB6など具体的な根拠を積み重ねることで視聴維持に直結する知的満足感を提供している。またhook_strengthでも「昨夜も追いかけられる夢だけ覚えてた」という共感喚起から入り、次回予告と枕元メモ帳という行動CTAまで一貫した構成を持つ点でBを全軸で上回っている。",
+      "scores_a": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "scores_b": {
+        "hook_strength": 5,
+        "specificity": 4,
+        "pacing": 5,
+        "cta_effectiveness": 4,
+        "wording_quality": 5,
+        "overall": 5
+      },
+      "mapping": {
+        "A": "claude",
+        "B": "gpt"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 64.2% 優位",
+      "leader": "claude",
+      "margin": 0.6417
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ夢の一部しか覚えていないのか？脳の99%が知らない秘密"
+      },
+      "claude": {
+        "title": "昨夜の夢だけ覚えてる——99%が知らない、脳が『あの夢』を選んで記録する本当の理由"
+      }
+    }
+  }
+}

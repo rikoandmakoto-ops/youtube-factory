@@ -1,5 +1,354 @@
 [
   {
+    "file": "pokemon-lab_20260818_090254_scenario.md",
+    "title": "リザードンとカイリュー、どっちが勝つ？4倍弱点で勝敗がひっくり返る",
+    "video_title": "【ゆっくり解説】4倍弱点が勝負を破壊人気ドラゴン対決「リザードンとカイリュー、どっちが勝つ？4倍弱点で勝敗がひっくり返る」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "リザードンとカイリュー、どっちが勝つ？",
+      "angle": "人気ドラゴン対決。4倍弱点をどう処理するかで勝敗が割れる点を実戦想定で比べる"
+    },
+    "generated_at": "2026-08-18T09:02:54.637666Z",
+    "prompt_hash": "7750f80619de",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260817_090252_scenario.md",
+    "title": "バンギラスとメタグロス、どっちが勝つ？600族対決は持ち物1つで逆転する",
+    "video_title": "【ゆっくり解説】600族同士の正面衝突持ち物1つで勝者逆転!?「バンギラスとメタグロス、どっちが勝つ？600族対決は持ち物1つで逆転する」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "バンギラスとメタグロス、どっちが勝つ？",
+      "angle": "600族対決。特性と持ち物1つで結論が変わる実戦条件を軸にする"
+    },
+    "generated_at": "2026-08-17T09:02:52.043351Z",
+    "prompt_hash": "2694a098ebd2",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260816_090232_scenario.md",
+    "title": "ガブリアスとギャラドス、どっちが勝つ？相性有利がひっくり返る条件",
+    "video_title": "【ゆっくり解説】種族値600でも逆転される!?「ガブリアスとギャラドス、どっちが勝つ？相性有利がひっくり返る条件」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "ガブリアスとギャラドス、どっちが勝つ？",
+      "angle": "種族値・タイプ相性・実際の技構成の三面で比較。相性有利がひっくり返る条件まで詰める"
+    },
+    "generated_at": "2026-08-16T09:02:32.278385Z",
+    "prompt_hash": "7bd5dd617430",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260815_090237_scenario.md",
+    "title": "ホウオウとルギア、まともに戦わせたらどっちが勝つのか",
+    "video_title": "【ゆっくり解説】同じ680族なのに勝率が壊れる条件「ホウオウとルギア、まともに戦わせたらどっちが勝つのか」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "ホウオウとルギア、どっちが勝つ？",
+      "angle": "専用技と耐久力だけでなく、実際の対戦で勝敗を分けるタイプ相性と行動順まで検証する"
+    },
+    "generated_at": "2026-08-15T09:02:37.783767Z",
+    "prompt_hash": "57c08c3cc930",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260814_090300_scenario.md",
+    "title": "ミミッキュとロトム、どっちが勝つ？姿変化を実戦で比べた結果",
+    "video_title": "【ゆっくり解説】初手はミミッキュ有利終盤でまさかの逆転？「ミミッキュとロトム、どっちが勝つ？姿変化を実戦で比べた結果」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "ミミッキュとロトム、どっちが勝つ？ — 姿を変える能力を実戦条件で比較",
+      "angle": "ミミッキュの孤独や正体ではなく、ばけのかわとフォルムチェンジを活用した初手・交代・終盤戦の勝敗を比較する"
+    },
+    "generated_at": "2026-08-14T09:03:00.571324Z",
+    "prompt_hash": "d0fa723f5fe2",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260813_090303_scenario.md",
+    "title": "ルカリオとウルガモス、どっちが勝つ？相性有利がひっくり返る実戦条件",
+    "video_title": "【ゆっくり解説】4倍弱点でも負ける？勝敗を変える先制技「ルカリオとウルガモス、どっちが勝つ？相性有利がひっくり返る実戦条件」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "ルカリオとウルガモス、どっちが勝つ？ — タイプ相性を逆転する実戦条件で対決",
+      "angle": "単純な種族値比較ではなく、技範囲・耐性・先制技・積み技を含めた複数ルールで勝敗を検証する"
+    },
+    "generated_at": "2026-08-13T09:03:03.296829Z",
+    "prompt_hash": "426d0cd5cef3",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260812_090314_scenario.md",
+    "title": "なぜパルキアは勝てないと言われる？ウルトラネクロズマとの数字差が意外すぎる",
+    "video_title": "【ゆっくり解説】合計754 VS 680なのに勝敗は固定じゃない？「なぜパルキアは勝てないと言われる？ウルトラネクロズマとの数字差が意外すぎる」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "パルキアとウルトラネクロズマ、どっちが勝つ？ — 伝説級の火力と能力を条件別に比較",
+      "angle": "空間を操るパルキアと圧倒的な攻撃性能を持つウルトラネクロズマを、専用技・特性・フォルム込みで対決させる"
+    },
+    "generated_at": "2026-08-12T09:03:14.373641Z",
+    "prompt_hash": "df27a97a6f28",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260811_090303_scenario.md",
+    "title": "なぜメタグロスはサーフゴーに勝てない？持ち物1つで逆転する本当の理由",
+    "video_title": "【ゆっくり解説】メタグロスVSサーフゴー勝つのは…条件次第!?「なぜメタグロスはサーフゴーに勝てない？持ち物1つで逆転する本当の理由」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "メタグロスとサーフゴー、どっちが勝つ？ — 鋼タイプ最強候補を実戦条件別に対決",
+      "angle": "物理耐久と攻撃性能のメタグロス、特性と特殊火力のサーフゴーを、対面・持ち物・技構成ごとにシミュレーションする"
+    },
+    "generated_at": "2026-08-11T09:03:03.093362Z",
+    "prompt_hash": "c4903c7bc36e",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260810_090309_scenario.md",
+    "title": "なぜ同じドラゴンなのに勝敗が割れるのか？カイリューとボーマンダの隠された実戦性能の秘密",
+    "video_title": "【ゆっくり解説】種族値600対600なのに勝敗を割る1つの差「なぜ同じドラゴンなのに勝敗が割れるのか？カイリューとボーマンダの隠された実戦性能の秘密」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "カイリューとボーマンダ、どっちが勝つ？ — 同じドラゴン枠の実戦性能を徹底比較",
+      "angle": "種族値だけでなく特性・先制技・耐久力まで含め、同条件の対戦シミュレーションで勝敗を決める"
+    },
+    "generated_at": "2026-08-10T09:03:09.029709Z",
+    "prompt_hash": "57130dc71acf",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260809_090730_scenario.md",
+    "title": "なぜレックウザは空から降りないのか？図鑑384番の誕生神話が衝撃すぎた【ショート】",
+    "video_title": "【ゆっくり解説】空にいる本当の理由争いを止める秘密神？「なぜレックウザは空から降りないのか？図鑑384番の誕生神話が衝撃すぎた【ショート】」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "「1分ポケモン研究：レックウザの誕生に隠された秘密神」の知識を日常で使う方法",
+      "angle": "応用先を具体例で紹介"
+    },
+    "generated_at": "2026-08-09T09:07:30.807874Z",
+    "prompt_hash": "77039f333321",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon_lab_short_1786237590_20260809_010630_scenario.md",
+    "title": "なぜ図鑑778番はピカチュウだけ真似るのか？理由が意外すぎた【ショート】",
+    "video_title": "なぜ図鑑778番はピカチュウだけ真似るのか？理由が意外すぎた【ショート】",
+    "prefix": "pokemon_lab_short_1786237590",
+    "theme": {
+      "title": "ミミッキュがピカチュウの姿を真似る本当の理由 — 図鑑説明が語る孤独の設定",
+      "angle": "公式図鑑テキストを根拠に、ミミッキュのぼろ布の下と「愛されたい」という設定を読み解く"
+    },
+    "generated_at": "2026-08-09T01:06:30.382438Z",
+    "prompt_hash": "084b2a073875",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "pokemon-lab_20260808_145250_scenario.md",
+    "title": "なぜコイキングは種族値200なのか？進化前だけ弱すぎる本当の理由がヤバすぎた",
+    "video_title": "【ゆっくり解説】種族値200の最弱候補20で化ける理由「なぜコイキングは種族値200なのか？進化前だけ弱すぎる本当の理由がヤバすぎた」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "なぜコイキングはあれほど弱いのか",
+      "angle": "弱さの設定意図と、ギャラドス進化のギャップ演出を考察"
+    },
+    "generated_at": "2026-08-08T14:52:50.366518Z",
+    "prompt_hash": "4ea6dff64f43",
+    "generated_by": "gpt",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "pokemon-lab_20260808_090754_scenario.md",
+    "title": "なぜラプラスだけ数を減らしたのか？図鑑に残るヤバすぎた真相とは",
+    "video_title": "【ゆっくり解説】乱獲で激減!?17年後に大逆転「なぜラプラスだけ数を減らしたのか？図鑑に残るヤバすぎた真相とは」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "ラプラスの図鑑説明に隠された悲しい設定",
+      "angle": "乱獲で数を減らしたという記述の意味と、シリーズでの扱いの変化"
+    },
+    "generated_at": "2026-08-08T09:07:54.920144Z",
+    "prompt_hash": "c0b4afd5f9df",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260807_101208_scenario.md",
+    "title": "なぜポケモンの世界では誰も「何を食べてるか」言わないのか？その答えがヤバすぎた",
+    "video_title": "【ゆっくり解説】ポケモン世界の食卓、実は公式が答えてた図鑑テキストに隠された「食う・食われる」の真実「なぜポケモンの世界では誰も「何を食べてるか」言わないのか？その答えがヤバすぎた」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "ポケモンの世界に人間の食文化はあるのか",
+      "angle": "作中描写から生態系と食文化の設定を推理する"
+    },
+    "generated_at": "2026-08-07T10:12:08.231954Z",
+    "prompt_hash": "2bf7ce41c078",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "pokemon-lab_20260806_090531_scenario.md",
+    "title": "なぜ初代だけ謎のポケモンが出るのか？けつばんの正体【ショート】",
+    "video_title": "【ゆっくり解説】151匹の外側番号ズレの正体「なぜ初代だけ謎のポケモンが出るのか？けつばんの正体【ショート】」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "初代の伝説的バグ『けつばん』の正体",
+      "angle": "なぜ発生したのか、データ構造の観点からやさしく解説"
+    },
+    "generated_at": "2026-08-06T09:05:31.144216Z",
+    "prompt_hash": "16543ea3d264",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260805_090726_scenario.md",
+    "title": "なぜ種族値だけで強さが変わるのか？衝撃の数字の正体とは【ショート】",
+    "video_title": "【ゆっくり解説】同じレベル50でも数字6個で別ゲーム!?「なぜ種族値だけで強さが変わるのか？衝撃の数字の正体とは【ショート】」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "種族値って結局なに？",
+      "angle": "対戦の基礎。数字が実際のバトルでどう効くかを初心者向けに解説"
+    },
+    "generated_at": "2026-08-05T09:07:26.413337Z",
+    "prompt_hash": "65b98e50d79d",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260804_090744_scenario.md",
+    "title": "ゲンガーの『元ネタ』、実はまだ誰も正確に言えていない理由",
+    "video_title": "【ゆっくり解説】ゲンガーの正体、公式は意外と語っていない影説・クランゴン説・ピクシー説…どれが本当？「ゲンガーの『元ネタ』、実はまだ誰も正確に言えていない理由」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "ゲンガーの元ネタは影？",
+      "angle": "ファンの間で語られる説と、公式設定として確認できる範囲を切り分ける"
+    },
+    "generated_at": "2026-08-04T09:07:44.971718Z",
+    "prompt_hash": "f43d18dae626",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "pokemon-lab_20260803_090156_scenario.md",
+    "title": "なぜヤドンはシェルダーに噛まれると進化するのか？分岐進化の本当の理由がヤバすぎた",
+    "video_title": "【ゆっくり解説】ヤドンの尻尾、なんでシェルダー限定なの？進化したら何が起きる？図鑑が暴露した衝撃事実「なぜヤドンはシェルダーに噛まれると進化するのか？分岐進化の本当の理由がヤバすぎた」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "ヤドンとシェルダーの共生関係の謎",
+      "angle": "噛まれると進化する仕組みと、ヤドキング分岐の設定を読み解く"
+    },
+    "generated_at": "2026-08-03T09:01:56.639220Z",
+    "prompt_hash": "ec4326553a38",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260802_090126_scenario.md",
+    "title": "なぜ御三家は炎・水・草だけ？『三すくみ』設計の裏にある本当の理由",
+    "video_title": "【ゆっくり解説】御三家＝炎・水・草、その裏に仕組まれたヤバい理由！他のタイプが絶対選ばれない本当のワケ「なぜ御三家は炎・水・草だけ？『三すくみ』設計の裏にある本当の理由」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "御三家が炎・水・草である理由",
+      "angle": "三すくみの設計思想と、シリーズを通した例外の有無"
+    },
+    "generated_at": "2026-08-02T09:01:26.855045Z",
+    "prompt_hash": "fdea070dd557",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260802_033939_scenario.md",
+    "title": "なぜイーブイだけ8種類も進化できるのか？遺伝子の暴走と分岐条件の正体がヤバすぎた",
+    "video_title": "【ゆっくり解説】進化先8種類の謎、図鑑データで丸裸！公式テキストと条件を読み解いたら、常識ぶっ壊れだった件「なぜイーブイだけ8種類も進化できるのか？遺伝子の暴走と分岐条件の正体がヤバすぎた」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "なぜイーブイは8種類も進化するのか",
+      "angle": "不安定な遺伝子という設定と、各進化先の分岐条件を整理する"
+    },
+    "generated_at": "2026-08-02T03:39:39.890197Z",
+    "prompt_hash": "040f9c08280a",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon-lab_20260801_150940_scenario.md",
+    "title": "ポケモン図鑑に隠された怖すぎる説明文の真相とは？",
+    "video_title": "【ゆっくり解説】図鑑のあの説明文、どうしてそんなに怖いのか？公式が書いた衝撃のテキストを考察！「ポケモン図鑑に隠された怖すぎる説明文の真相とは？」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "ポケモン図鑑の怖すぎる説明文",
+      "angle": "公式が書いた衝撃的な図鑑テキストを厳選。なぜそう書かれたのかまで踏み込む"
+    },
+    "generated_at": "2026-08-01T15:09:40.390886Z",
+    "prompt_hash": "8cf9abe3c805",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon_lab_short_1785595468_20260801_144429_scenario.md",
+    "title": "なぜミュウツーだけが特別？遺伝子に隠された驚くべき秘密",
+    "video_title": "なぜミュウツーだけが特別？遺伝子に隠された驚くべき秘密",
+    "prefix": "pokemon_lab_short_1785595468",
+    "theme": {
+      "title": "なぜミュウツーだけが特別？遺伝子に隠された驚くべき秘密"
+    },
+    "generated_at": "2026-08-01T14:44:29.023365Z",
+    "prompt_hash": "1d033e38acac",
+    "generated_by": "edge-tts-pipeline",
+    "selected_by": null
+  },
+  {
+    "file": "pokemon-lab_20260801_090129_scenario.md",
+    "title": "なぜレッドは山頂に立ち続けるのか？彼の秘密に迫る！",
+    "video_title": "【ゆっくり解説】なぜ彼は無口なのか？その真相に迫る！「なぜレッドは山頂に立ち続けるのか？彼の秘密に迫る！」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "レッドの正体",
+      "angle": "無口な主人公がチャンピオンとして山頂に立つまで。作品を跨いだ描写から人物像を考察"
+    },
+    "generated_at": "2026-08-01T09:01:29.540950Z",
+    "prompt_hash": "9c224dc4ab41",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "pokemon_lab_short_1785494189_20260731_103629_scenario.md",
+    "title": "なぜヤドンの尻尾は痛くないの？驚きの理由",
+    "video_title": "なぜヤドンの尻尾は痛くないの？驚きの理由",
+    "prefix": "pokemon_lab_short_1785494189",
+    "theme": {
+      "title": "なぜヤドンは尻尾をちぎられても平気なのか",
+      "angle": "ヤドンの図鑑テキストがツッコミどころ満載な件。『しっぽをちぎられても痛みを感じない』『ちぎられたことに気づかない』『しっぽはすぐ生えてくる』『いつも ぼーっとしている が、しっぽを水につけてエサを釣る』といった公式図鑑の記述を並べ、笑えるけど実は生態としてよくできている、という驚きに着地させる。シェルダーに噛まれてヤドランに進化する共生設定にも軽く触れる。明るくポップに、恐怖演出なしで。"
+    },
+    "generated_at": "2026-07-31T10:36:29.973329Z",
+    "prompt_hash": "d83a39030e5b",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "pokemon-lab_20260731_090142_scenario.md",
+    "title": "エリートトレーナーの謎—なぜ彼らだけが特別なのか？",
+    "video_title": "【ゆっくり解説】エリートトレーナーはなぜ特別？ポケモンバトルの真の目的とは？「エリートトレーナーの謎—なぜ彼らだけが特別なのか？」",
+    "prefix": "pokemon-lab",
+    "theme": {
+      "title": "エリートトレーナーの意義 — ポケモンバトルの真の目的とは？",
+      "angle": "登場人物・ストーリーの考察"
+    },
+    "generated_at": "2026-07-31T09:01:42.663337Z",
+    "prompt_hash": "c69ab80b0474",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
     "file": "pokemon_lab_short_1785414508_20260730_122828_scenario.md",
     "title": "レックウザの誕生に隠された秘密—神話と科学の交差点",
     "video_title": "レックウザの誕生に隠された秘密—神話と科学の交差点",

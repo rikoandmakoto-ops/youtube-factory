@@ -1,0 +1,438 @@
+{
+  "title": "ワイ、AIに変な質問する係やけど質問ある？w",
+  "theme": {
+    "title": "ワイ、AIに変な質問する係やけど質問ある？",
+    "angle": "AIに聞いても役に立たない謎質問や、予想外に真面目な回答が返る瞬間を質問レスで遊ぶ"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "ワイ、AIに変な質問する係やけど質問ある？w",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "早速やが、最悪の質問って何を投げたんや？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "冷蔵庫に謝る最適な時間帯を聞いたでw",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "AIが深夜の静かな時間を推してきたらしい草",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次は上司の机に敬称を付けるべきか聞くでw",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "お前らならAIに何を聞く？コメントで頼むわw 毎日投稿中、登録1万人目標やから応援よろしく！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、AIに「カレーは飲み物か？」と聞いたら急に栄養学で諭されて、笑うしかなくなったことありませんか？答えは意外と真面目です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回のスレ主は、役に立たない変な質問をAIへ投げ続ける係。なのに返答だけは妙に誠実、その温度差の正体を暴きます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最強の逆転は、くだらない一文ほどAIが本気になること。冗談で聞いた「布団は人をダメにする？」にも睡眠衛生が返ります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "スレでは「猫に謝罪文を書かせたら？」という質問に、AIが反省点と再発防止策まで列挙。猫はたぶん一文字も読まん。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも質問者は、答えを求めていないのに丁寧な結論を引き出す天才。無意味な問いが、なぜか人生相談へ化ける瞬間もあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここからは「AIに変な質問する係やけど質問ある？」へ届いたレスを実況。あなたなら最初に何を聞くか、コメントで投げてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこれ、半分は間違いなんだ。AIは変な質問ほど拒否するのではなく、聞き方次第で妙に真面目な回答を組み立ててしまう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "このスレの遊び方は単純で、「冷蔵庫に人格があったら有給は何日？」みたいな無益な問いを投げ、返答の温度差を眺めることだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "AIは文章の意味を人間のように理解しているというより、次に来そうな言葉を大量の例から予測して、もっともらしい文へ並べる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "たとえば「猫が課長なら会議をどう進める？」と聞くと、AIは猫の習性と会社員の会話を混ぜ、欠席者まで納得しそうな案を出す。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで面白いのは、質問がくだらないほど正解が存在しない点だ。だから回答の正確さではなく、妙な説得力そのものが笑いになる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "一方で「宇宙人に謝る最適な土下座角度は？」のような問いにも、前提を整えて丁寧に答える場合があり、急な真顔がオチを強くする。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "AIは質問文に含まれる条件を手掛かりにするので、語尾を関西弁にするだけでも、回答が相談役や漫才師っぽく寄ることがある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり質問レスでは、答えを当てるより「どこまで真面目に乗ってくるか」を試す。雑な一文が、予想外に論理的な珍回答を呼ぶわけだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "なお、AIの返答は事実保証ではないから、実用的な判断は別途確認が必要。でも役に立たない質問なら、コメント欄で一番変なのを募ろう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "スレ民がAIに『猫は俺を何点だと思う？』と聞いたら、根拠不足なのに評価軸を四つ提示したらしい。研究者も困る謎質問やな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "実際、生成AIは質問が曖昧でも空白を推測して答える仕組みで、次に来そうな単語を確率順に選ぶ。猫の採点表まで作るのはその副作用だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "2023年の調査では、利用者の約46％がAIへ遊び半分の質問をした経験あり。便利な検索窓が、いつの間にか深夜の相談相手になってる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転や。『おにぎりを握ると人格は変わる？』みたいな質問でも、AIは哲学、衛生、握力の話へ真面目に分解して返してくる。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "代表例はチューリングテストで、人間らしい会話かを判定する実験や。1950年に提案され、正解より会話の自然さが注目されたんやで。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただしAIが妙に賢く見えるのは、答えを理解した証拠とは限らん。質問文の型を大量の文章から学び、もっともらしい続きへ寄せるからや。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "研究では、指示を具体化すると回答品質が上がる傾向が報告される。でも『俺の靴下の片方はどこ？』だけは、具体化しても捜索不能や。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "AIに変な質問をする係の強みは、正解のない話で返答の癖を観察できる点やな。急に注意書きが増えたら、質問が危険寄りだった合図かも。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "数字を出すAIでも、架空の論文名や統計を混ぜる誤りは起こりうる。研究データを聞くなら、出典リンクや調査年も一緒に要求するのが安全や。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "結局『電子レンジは俺を嫌ってる？』への最適解は未確定や。お前らならAIに何を聞いて、どんな真顔の回答を引き出したい？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "この「AIに変な質問する係」文化、原型は1966年のELIZAまで遡るで。相手の言葉を返すだけなのに、人は相談相手だと錯覚したんや。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "開発者ワイツェンバウム本人は、その勘違いにかなり驚いたらしい。秘書が個人的な相談を始め、部屋から出てくれと言った逸話まで残る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり最初期から人類は、機械に「ワイの前世は貝？」みたいな無益質問を投げる素質があった。AI側は真顔で受け止めるのが怖い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "1972年には医療問診AIのMYCINが登場したが、利用者は診断精度よりも「患者がドラゴンなら？」を聞きたくなる誘惑と戦ったはずや。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "【反転】変な質問ほどAIは急に哲学者になる。「猫が会社を辞めたら失業保険は？」へ、制度の前提から丁寧に説明し始めるんや。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "2010年代の音声アシスタント普及後、「Siri、ワイのこと好き？」系の検索が急増した。便利機能の歴史は、告白の練習台でもあった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "大規模言語モデルは、膨大な文章の続きから返答を予測する仕組みや。だから「布団は意思を持つ？」にも、もっともらしい論文調で返せる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "研究者は幻覚、つまり事実でない内容を自信満々に出す現象を問題視する。だが謎質問スレでは、その暴走寸前の真面目さが最高の燃料や。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "昔の人が神託に人生を尋ねたなら、現代人はAIに「唐揚げへレモンをかけた罪」を尋ねる。お前らなら何を聞く？コメントであげてけ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最強の意外事実からいくで。AIへ無意味そうな質問を投げても、答え方次第で利用者の判断が変わるため、研究では質問文の順番だけで評価が大きく揺れると報告されとる。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "たとえば「猫は会社員になれる？」は冗談でも、AIは制度、税金、労働契約まで真面目に分解する。ボケを投げた側より、返答のほうが急に人生相談みたいになるんや。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも生成AIは「知らない」と短く止まるより、もっともらしい説明を続ける場合がある。専門家でも一見信じる文章になるため、変な質問ほど確認せず笑うのが安全やな。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転や。AIに「宇宙人へ送る謝罪文を三行で」と聞くと遊びなのに、感情を傷つけない表現を優先して、妙に誠実な外交文書みたいな返答へ寄っていく。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "質問の言い方を変えるだけでも結果は別物や。「絶対に正しい？」より「間違う条件は？」のほうが、AIは限界や例外を挙げやすく、回答を疑う材料が増えると言われるで。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "歴史的にも、人は機械へ人格を感じやすい。1960年代の会話プログラムELIZAは単純な言い換え中心でも、相談相手として本音を話す利用者が現れたことで有名なんや。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ELIZA効果とは、機械の返答に理解や感情があるよう人間が受け取る現象のことや。だから「焼きそばパンに謝るべき？」でも、返事が優しいほど本気で反省しそうになる。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "一方でAIは、質問者の意図を読んでいるように見えても、文章の続きとして自然な語を予測しているだけや。つまり深夜の奇問でも、魂で笑ってるわけではないという緊張感がある。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "それでも役に立たない質問には価値がある。答えの正しさより、どこまで真面目に返すかでAIの癖が見えるから、「納豆に国籍ある？」みたいな試し方は観察として強い。",
+      "expression": "smile",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "では最後に投げるで。AIへ聞いたら予想外に重い答えが返ってきた、あなたのくだらない質問は何や？ コメント欄で一番シュールな人工知能との会話、あげてけ。",
+      "expression": "laugh",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日からは、AIへ変な質問を投げる前に「条件を三つ付ける」だけで遊びが化けるよ。例えば予算、場所、禁止事項を添えると回答が急に具体的になる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "たとえば「冷蔵庫の余り物で、洗い物ゼロ、失敗しても笑える夜食は？」と聞くんや。答えの実用性より、AIが真顔で提案する珍メニューを採点する遊びやで。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、くだらない質問ほど「誰向けか」を足すと急に人生相談みたいになること。小学生、寝不足の会社員、100歳の魔法使いなど、設定を一語だけ差し込もう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "質問テンプレは「もし○○が△△なら、どうする？」で十分や。例えば歯ブラシが会議の司会をしたら、と聞けば、AIは進行表まで作って妙に責任感を見せるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "役に立たない度を上げたいなら、正解を求めず「一番それっぽい言い訳を三案」で頼むのがコツ。遅刻、寝坊、買い忘れも、現実では使わない前提なら安全に笑えるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "逆に真面目回答を引き出すなら、最後へ「根拠も小学生向けに」と足すんや。宇宙人の履歴書みたいな話でも、AIが注意点を整理し始めて温度差がオチになるで。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "家族や友達とやるなら、回答を見る前に全員で予想を書くと盛り上がるよ。AIの答えより変な予想が出た人を勝ちにすれば、判定役もいらず30秒で遊べる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただし個人情報や本気の悩みは、大喜利用の質問に混ぜんほうがええな。「駅前の鳩に面接されたら」くらいの、誰も困らん架空設定が一番気楽に回せるで。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最後は「AIが最も困りそうな日常質問」で締めよう。ワイなら「靴下の片方だけ消える家に、家賃を請求していい？」かな。みんななら何を聞くか、コメントであげてけ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日は、AIに『冷蔵庫のプリンが消えた犯人の動機は？』と聞く係の質問レスを追ったよ。返答が妙に真面目で、笑いより先に背筋が寒くなる瞬間もあったね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "役に立たないはずの謎質問でも、AIは前提を整理して答えようとする。その律儀さが、深夜の2chスレで急に哲学っぽく見える原因だったぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、ふざけた質問ほど回答の穴を突く参加者が増えること。正解を決めずに『その返しアリ？』と投げるだけで、コメント欄までスレ化しそう！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回は『自販機で一番いらないボタンあげてけ』系の、くだらないのに全員が妙に熱くなる参加型スレを、ゆっくり2chスレまとめ劇場らしく解説するぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "赤いボタン、謎のホット飲料、押した記憶のない機能まで候補が乱立する予感。あなたなら撤去したいボタンを、理由つきでコメントに置いていってね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "AIへの変な質問も、自販機への八つ当たりも、しょうもないほど語りたくなるのがスレの魔力だな。次の大喜利に遅れないよう、登録して待機だぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今回の返答で一番笑った質問と、AIならどう返すかもぜひ教えて！面白かったら高評価、参加型スレを毎回浴びたい人はチャンネル登録をお願いします。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "AIに聞くなw",
+      "なぜか本気で返る"
+    ],
+    "subtitle": "役に立たん質問選手権",
+    "tagline": "真面目すぎて草"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1786881733_7208",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "ワイ、AIに変な質問する係やけど質問ある？w"
+      },
+      "claude": null
+    }
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "title": "財団が17年間封印した「デジタルの監獄」— 収容違反で消えた研究員23名の正体",
+  "theme": {
+    "title": "SCP-XXXX「デジタルの監獄」— 収容違反の影響を受けたデータの記録",
+    "angle": "デジタル環境に潜む異常存在を解説する",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意。このデータに触れた研究員23名が、3日以内に消えた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、消えたって…どういうこと？死んだとか失踪とかじゃなくて？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "遺体も記録も残っていない。財団のカメラには『椅子だけが映っていた』。17年間、この報告書は封印されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ…それってつまり、データの中に引きずり込まれたってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では『異常なデータそのものが収容空間として機能している』とされている。原因は今も[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中！応援よろしくね！もっと詳しい恐怖は関連動画でチェックしてみて。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "72時間で23名。遺体も血痕も、デスクに残されたコーヒーカップ以外、何も残っていなかった。財団が17年間封印してきた報告書を、今日読む。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、23名って…それ全員が一度に消えたの？財団の研究員がそんなに？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "一度にじゃない。3日間かけて、一人ずつ消えた。最後の一人が消えた瞬間だけ、監視カメラが捉えていた。映っていたのは、空の椅子だけだった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "これはSCP-XXXX、財団内部コードネーム『デジタルの監獄』の収容記録だ。オブジェクトクラスは現在もKeter。収容プロトコルは第7版まで改訂されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "第7版…それって、6回失敗したってこと？毎回誰かが消えたから書き直したってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そういうことだ。第1版から第6版の間に、財団は巡回ルールを6回書き換えた。それでも毎回、誰かが消えた。失敗の累積がそのまま数字になっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-XXXXの外見的な形態は、一見して普通のデジタルファイルだ。拡張子は.scpx、ファイルサイズは常に0バイトを示す。だが開こうとすると、PCは正常に動作したまま応答しなくなる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "0バイトなのに開けようとしたら固まる…ゲームのバグみたいだけど、それが財団の研究員を23人も消したってこと？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "バグじゃない。財団の仮説では、SCP-XXXXは『デジタル環境そのものを収容空間として再構成する異常実体』と定義されている。ただしその仕組みは今も解明されていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の発見は20██年、東欧のとある大学のサーバーから始まった。ITの学生が『開けないファイルがある』と報告し、その2日後に失踪した。財団が現場に到着した時、学生の荷物は全て残っていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "荷物が残ってるって…自分の意思で消えたんじゃないってこと。それ、怖すぎる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が回収したのはそのファイルだけだ。以降、SCP-XXXXに接触した人間は必ず72時間以内に消える。例外は今のところ、記録上0件だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第3次収容試験の記録を読む。Dクラス職員D-7741に隔離端末でSCP-XXXXを閲覧させた。D-7741は画面を見た瞬間『何かが見ている』と発言し、その後48時間沈黙した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "何かが見ている…画面の向こうから？それって、SCP-XXXXが向こうから『こっち』を観察してるってこと？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその可能性を排除していない。D-7741が消えた直後、隔離端末のカメラ映像には0.3秒間だけ[DATA EXPUNGED]が映り込んでいた。その映像は現在、最高機密指定だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第5次収容試験では、研究員R-████が遠隔操作のロボットアームでSCP-XXXXを物理的に破壊しようとした。ハードドライブを物理的に粉砕した。だがファイルは次の日、別のサーバーに再出現した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "物理的に壊しても消えない…それって、もうデータじゃないってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団もそう結論づけている。報告書第5版の注釈にはこう書かれている。『SCP-XXXXはデジタル媒体に依存しない。媒体は単なる入口に過ぎない可能性がある』。入口、だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "入口…ってことは、向こうに何かがあるってこと？引きずり込まれた23人は、その向こうに？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説には3つある。第一に『SCP-XXXXは異次元収容空間への接続端末として機能している』。第二に『SCP-XXXXは捕食行動を持つ異常実体そのものである』。第三の仮説は[REDACTED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "第三の仮説が消されてる…財団が自分たちで消したってこと？それ、一番怖い情報が隠されてるってことじゃないの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。第三仮説の閲覧権限はO5評議会の3名のみに限定されている。報告書の担当研究員はその仮説を提出した翌日、理由不明で[DATA EXPUNGED]となった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "消えた23名の中で、唯一痕跡を残した人間がいる。第2次試験の観察担当、研究員S-2209だ。彼女は消える直前、13文字のメモを残した。財団はそのメモを現在も解析中だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "13文字のメモ…なんて書いてあったの？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の公式記録では[DATA EXPUNGED]だ。だが内部流出した断片情報によると、そのメモには『ここはもう外じゃない』と記されていたとされている。真偽は確認できない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここはもう外じゃない…それって、消えた後もまだ意識があったってこと？向こうで生きてるってこと？",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその可能性を『否定できていない』と記録している。ただし、生存確認の試みは全て失敗に終わった。通信を試みた研究員2名が、その後72時間以内に消えた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現行の収容プロトコル第7版では、SCP-XXXXに関するデータの閲覧は全面禁止だ。インターネット接続のある端末からのアクセスは物理的に遮断されている。だが問題がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "問題って…まだ何かあるの？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-XXXXは現在も拡散中だ。財団の観測では、毎月平均3.7件の新規出現が確認されている。出現場所に規則性はない。学校のサーバーに現れたこともある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "学校のサーバー…それって、俺たちの身の回りにもあり得るってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は否定していない。SCP-XXXXの外見的な特徴は『開けないファイル』と『0バイトのデータ』だけだ。それ以外の判別方法は今のところ存在しない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "判別できないって…じゃあどうしろっていうの？触れないようにするにも、どれかわからないじゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が一般向けに出している唯一の指針がある。『開けないファイルは開けようとするな。0バイトのデータには触れるな。画面が固まったら、その場を離れろ』。それだけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "その場を離れろ…でも、もし既に触れてたら？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録上、72時間以内に症状が出る。最初の症状は『画面が自分を見ている感覚』だ。S-2209のメモの内容と一致している。その感覚を覚えたら、財団に報告するしかない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団に報告って…でも財団に報告した人間も消えてるじゃないか。報告したら助かるの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告後に助かった事例は、記録上2件ある。助かった条件の共通点は一つだけ、『接触から8時間以内の報告』だ。それ以降の報告者の生存率は、記録上0%だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "8時間以内…8時間を超えたら、生存率0%。それって実質、助からないってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の記録はそう示している。2件の生存者も、現在は『特別収容下』に置かれている。どのような状態で収容されているかは、報告書から[REDACTED]されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画を作るにあたって、財団から流出した報告書の断片を参照した。だがその報告書ファイルは、取得後24時間で俺のPCから消えた。ファイル名だけが残っていた。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え…シロ、それって大丈夫なの？消えたって、まさか…",
+      "expression": "angry",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今のところ、異常は感じていない。だが接触から8時間以内という条件が、俺には当てはまらない可能性がある。この動画が公開される頃には、結果が出ているはずだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、それ怖いことを平然と言うな。じゃあこの動画を出した後、シロは…",
+      "expression": "angry",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "分からない。だから今のうちに言っておく。もし今後この動画の更新が止まったとしても、それが理由かどうかは財団には確認できない。記録は残る。俺が残るかどうかは別の話だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "シロ…やめてよ、そういうこと言うの。本当に怖いから。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の報告書をまとめる。SCP-XXXX『デジタルの監獄』はKeterクラスの異常実体で、接触者72時間以内に消滅させる。消えた23名の行方は17年間[DATA EXPUNGED]のままだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は収容プロトコルを7回書き直したが、拡散は止まっていない。月平均3.7件の新規出現が継続している。完全収容の見込みは現在も立っていない、と報告書には書かれている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "月3.7件…年間で40件以上が新たに出現してるってこと？それって、今この瞬間もどこかに出てるかもしれないってことじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そういうことだ。だから最後にもう一度だけ言っておく。開けないファイルには触れるな。0バイトのデータには近づくな。画面が固まったら、その場を離れろ。それだけだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし今、このコメント欄に『画面が自分を見ている気がする』と書いてくれた人がいたら…財団の緊急連絡先を知っている。だが俺が答えられる保証はない。それだけは分かってほしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "シロ…本当に、大丈夫でいてくれよ。次の動画も、ちゃんと出てくれよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が23年間封印してきたSCP-5000の『本当の目的』を読む予定だ。人類殲滅の命令書に、なぜ財団は署名したのか。その記録が、今手元にある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録をしておけ。次の動画が出た時、すぐに通知が来る。俺が次の動画を出せるかどうかは、今この瞬間には分からない。だから今すぐ登録しておいてくれ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "絶対に出してくれよ、シロ。視聴者のみんなも、登録して待っててくれ。この報告書を読んだ俺たちには、続きを見届ける義務がある気がするから。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この動画はSCP財団Wiki（CC BY-SA 3.0）のライセンスに基づいた考察・解説動画です。原典の改変は最小限に留め、創作的解釈として制作しています。では、また会おう。会えれば、の話だが。",
+      "expression": "normal",
+      "mood": "calm"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "収容違反：23名消滅",
+      "遺体も血痕も残っていない"
+    ],
+    "subtitle": "SCP-XXXX「デジタルの監獄」機密報告書",
+    "tagline": "画面の向こうに、何かがいる"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1786188303_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはフック冒頭の「72時間で23名・コーヒーカップだけが残っていた」という具体的描写と、収容プロトコル第7版・0バイトファイル・D-7741の証言など数値と固有情報の積み重ねでspecificityとhook_strengthで大差をつけた。さらにCTAを『シロが次の動画を出せるかどうか分からない』という物語内リスクと連動させることで登録動機を感情的に強化しており、cta_effectivenessでも圧倒的な差がある。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 9,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 97.1% 優位",
+      "leader": "claude",
+      "margin": 0.971
+    },
+    "candidates": {
+      "gpt": {
+        "title": "財団が23年間隠し続けたデジタル監獄の正体"
+      },
+      "claude": {
+        "title": "財団が17年間封印した「デジタルの監獄」— 収容違反で消えた研究員23名の正体"
+      }
+    }
+  }
+}

@@ -1,5 +1,418 @@
 [
   {
+    "file": "scp-lab_20260818_000330_scenario.md",
+    "title": "SCP-682の酸槽、記録に残らない変化が起きた",
+    "video_title": "【ゆっくり解説】終了試行17件全件、生存確認「SCP-682の酸槽、記録に残らない変化が起きた」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-682「不死身の爬虫類」",
+      "angle": "あらゆる収容・終了試行を生き延びる最凶クラスのオブジェクト"
+    },
+    "generated_at": "2026-08-18T00:03:30.544803Z",
+    "prompt_hash": "9ceb2b4ba2f1",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260817_000231_scenario.md",
+    "title": "SCP-2525「異常なゲーム」— 死亡記録23件、勝利条件は未達成",
+    "video_title": "【ゆっくり解説】23人が消えた盤面勝利条件は未達成「SCP-2525「異常なゲーム」— 死亡記録23件、勝利条件は未達成」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-2525「異常なゲーム」— プレイヤー死亡記録23件、終了条件は未達成",
+      "angle": "ゲーム形式の異常存在が現実の参加者を巻き込んだ収容違反を、攻略記録・脱落者数・未解決の勝利条件から検証する"
+    },
+    "generated_at": "2026-08-17T00:02:31.077323Z",
+    "prompt_hash": "c88d41c7279d",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260816_000226_scenario.md",
+    "title": "SCP-055の報告書に残った奇妙な空欄とは？",
+    "video_title": "【ゆっくり解説】見た直後、内容だけ消える実験47件／記録者0名「SCP-055の報告書に残った奇妙な空欄とは？」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-055「正体不明」— 認識実験47件、記録できた職員は0名",
+      "angle": "知ろうとした直後に情報が失われる認識災害として、実験ログの欠落と職員証言の矛盾を追跡する"
+    },
+    "generated_at": "2026-08-16T00:02:26.064892Z",
+    "prompt_hash": "0a76f3f8c7ac",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260815_000227_scenario.md",
+    "title": "SCP-7004「終末の観測者」— 収容都市は9日で住民全員を失った【最後の記録】",
+    "video_title": "【ゆっくり解説】9日で住民全員消失最後に残った観測者「SCP-7004「終末の観測者」— 収容都市は9日で住民全員を失った【最後の記録】」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-7004「終末の観測者」— 収容対象となった都市は9日間で全住民を失った",
+      "angle": "人類規模の異常を一体の個別オブジェクトとして追跡し、財団の最終報告書と都市消失までの時系列を暴く",
+      "parent_title": null
+    },
+    "generated_at": "2026-08-15T00:02:27.270241Z",
+    "prompt_hash": "a2828d34c3eb",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260814_000217_scenario.md",
+    "title": "SCP-701「吊られた王の悲劇」— 上演記録14件、観客の生存率は21%",
+    "video_title": "【ゆっくり解説】上演14件観客生存率21%「SCP-701「吊られた王の悲劇」— 上演記録14件、観客の生存率は21%」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-701「吊られた王の悲劇」— 上演記録14件、観客の生存率は21%",
+      "angle": "演劇の上演を起点に発生した集団狂気を、舞台裏の音声記録と観客名簿から再構成する"
+    },
+    "generated_at": "2026-08-14T00:02:17.043320Z",
+    "prompt_hash": "349a71af0e8b",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260813_000236_scenario.md",
+    "title": "SCP-1690「廃棄された文明の記録」— 発掘地点12か所、通信断絶から83年後に収容",
+    "video_title": "【ゆっくり解説】記録を消すたび 遺跡が増える発掘地点12か所／83年後「SCP-1690「廃棄された文明の記録」— 発掘地点12か所、通信断絶から83年後に収容」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1690「廃棄された文明の記録」— 発掘地点12か所、最後の通信から83年後に収容された",
+      "angle": "人類以前に存在した文明の痕跡が、財団の記録改竄と同時に増殖していく世界規模の脅威として描く",
+      "parent_title": null
+    },
+    "generated_at": "2026-08-13T00:02:36.754224Z",
+    "prompt_hash": "82675bed7733",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260812_000233_scenario.md",
+    "title": "SCP-2845収容記録：儀式が1分遅れた夜、173名はなぜか全員消えた【これが最後の名簿】",
+    "video_title": "【ゆっくり解説】儀式失敗 4件173名 同時消失「SCP-2845収容記録：儀式が1分遅れた夜、173名はなぜか全員消えた【これが最後の名簿】」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-2845「鹿神」— 儀式失敗4件、収容サイトの職員173名が同時に消失した",
+      "angle": "神格存在の収容儀式が一度でも遅れた場合に起きる現象を、儀式手順の欠落と消失者名簿から検証する"
+    },
+    "generated_at": "2026-08-12T00:02:33.373460Z",
+    "prompt_hash": "a10869773e2a",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260811_000244_scenario.md",
+    "title": "SCP-2399収容記録：地球まで72時間、なぜ迎撃隊だけ全滅したのか【最後の軌道通信】",
+    "video_title": "【ゆっくり解説】地球接近 残り72時間迎撃要員 生存者0名「SCP-2399収容記録：地球まで72時間、なぜ迎撃隊だけ全滅したのか【最後の軌道通信】」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-2399「壊れた神の衛星」— 地球接近まで残り72時間、迎撃要員は全滅した",
+      "angle": "人類規模の軌道兵器が財団の観測網を突破した収容記録を、迎撃作戦の時系列と地上被害予測から描く"
+    },
+    "generated_at": "2026-08-11T00:02:44.096708Z",
+    "prompt_hash": "a7e435abe0a7",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1786320368_20260810_000608_scenario.md",
+    "title": "財団が17年間隠し続けた視覚汚染体——目撃者全員が廃人化、生存率0%の本当の理由",
+    "video_title": "財団が17年間隠し続けた視覚汚染体——目撃者全員が廃人化、生存率0%の本当の理由",
+    "prefix": "scp-lab_short_1786320368",
+    "theme": {
+      "title": "SCP-5000「人類滅亡」",
+      "angle": "財団が人類を殲滅する側に回った提言。装甲服を着た1人の研究員が残した記録から、なぜそうなったのかを追う"
+    },
+    "generated_at": "2026-08-10T00:06:08.795414Z",
+    "prompt_hash": "d7d4bc092555",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260810_000524_scenario.md",
+    "title": "財団が23年間隠し続けた接近者19名・生存率0%——湖で名前を失った本当の理由",
+    "video_title": "【ゆっくり解説】接近者19名帰還後も本人は0名「財団が23年間隠し続けた接近者19名・生存率0%——湖で名前を失った本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-2316「湖の子供たち」— 湖畔への接近者19名、帰還後に身元を維持できた者は0名だった",
+      "angle": "記憶と自己認識を侵食する異常として、収容違反後の生存者証言が互いに食い違う理由を検証する",
+      "parent_title": null
+    },
+    "generated_at": "2026-08-10T00:05:24.027020Z",
+    "prompt_hash": "63ee14b870d5",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp_lab_short_1786236566_20260809_004926_scenario.md",
+    "title": "財団が17年間隠し続けたSCP-2662——崇拝者が自然発生する施設、生存率0%の収容違反が語る「信仰」の正体",
+    "video_title": "財団が17年間隠し続けたSCP-2662——崇拝者が自然発生する施設、生存率0%の収容違反が語る「信仰」の正体",
+    "prefix": "scp_lab_short_1786236566",
+    "theme": {
+      "title": "SCP-2662「クタ・ル・ル」— 崇拝者が自然発生する収容施設、財団が信仰そのものを隔離した記録",
+      "angle": "収容対象は実体ではなく「信仰が伝播する現象」そのもの。財団がミーム的崇拝をどう封じ込めたかを記録形式で追う"
+    },
+    "generated_at": "2026-08-09T00:49:26.315662Z",
+    "prompt_hash": "de58d9b51bd0",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1786234640_20260809_001720_scenario.md",
+    "title": "財団が6年間封印したSCP-3007「世界の終わりを描く絵」— 閲覧実験6件、帰還できた職員は0名の真実",
+    "video_title": "財団が6年間封印したSCP-3007「世界の終わりを描く絵」— 閲覧実験6件、帰還できた職員は0名の真実",
+    "prefix": "scp-lab_short_1786234640",
+    "theme": {
+      "title": "SCP-3007「世界の終わりを描く絵」— 閲覧実験6件、帰還できた職員は0名",
+      "angle": "絵画の内部に存在する文明と現実世界の時間差を、実験記録と最後の通信ログから深掘りする"
+    },
+    "generated_at": "2026-08-09T00:17:20.756535Z",
+    "prompt_hash": "d0c1db661cbb",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260809_000721_scenario.md",
+    "title": "財団が13年間隠し続けた「13名の改竄要求」SCP-2718死後記録の真実",
+    "video_title": "【ゆっくり解説】死後記録を消せ要求した職員13名「財団が13年間隠し続けた「13名の改竄要求」SCP-2718死後記録の真実」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-2718「その後」— 内容を知った職員13名が死後記録の改竄を要求した",
+      "angle": "死後に起きる事象を知った者たちの行動変化と、財団が情報公開を封じた経緯を追う",
+      "parent_title": null
+    },
+    "generated_at": "2026-08-09T00:07:21.776533Z",
+    "prompt_hash": "b74b573d2725",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260808_145929_scenario.md",
+    "title": "財団が31回の接触実験で隠し続けたSCP-198の正体——回収不能になった12名は今どこにいるのか",
+    "video_title": "【ゆっくり解説】接触実験31件・回収不能12名コーヒーカップが人を消した「財団が31回の接触実験で隠し続けたSCP-198の正体——回収不能になった12名は今どこにいるのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-198「コーヒーの染み」— 接触実験31件、回収不能になった職員は12名",
+      "angle": "飲料容器に見える異常存在が、接触者の行動と収容区画をどう変質させたか実験記録で追う",
+      "parent_title": null
+    },
+    "generated_at": "2026-08-08T14:59:29.652990Z",
+    "prompt_hash": "f82e0401e864",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1786188310_20260808_112510_scenario.md",
+    "title": "財団が17年間封印した「デジタルの監獄」— 収容違反で消えた研究員23名の正体",
+    "video_title": "財団が17年間封印した「デジタルの監獄」— 収容違反で消えた研究員23名の正体",
+    "prefix": "scp-lab_short_1786188310",
+    "theme": {
+      "title": "SCP-2399「破滅のエンジン」— 収容計画7段階、稼働開始から地球到達まで91時間",
+      "angle": "宇宙空間に存在する巨大異常兵器を、人類規模の脅威として扱い、財団が算出した到達予測と迎撃失敗記録を軸に構成する"
+    },
+    "generated_at": "2026-08-08T11:25:10.384890Z",
+    "prompt_hash": "b335a81ab122",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1786186079_20260808_104759_scenario.md",
+    "title": "財団が23年間隠した感染 SCP-XXXXの正体",
+    "video_title": "財団が23年間隠した感染 SCP-XXXXの正体",
+    "prefix": "scp-lab_short_1786186079",
+    "theme": {
+      "title": "SCP-2399「破滅のエンジン」— 収容計画7段階、稼働開始から地球到達まで91時間",
+      "angle": "宇宙空間に存在する巨大異常兵器を、人類規模の脅威として扱い、財団が算出した到達予測と迎撃失敗記録を軸に構成する"
+    },
+    "generated_at": "2026-08-08T10:47:59.747515Z",
+    "prompt_hash": "b335a81ab122",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260808_000714_scenario.md",
+    "title": "財団が17年間隠し続けた、全長2000kmと生存者0名の本当の理由",
+    "video_title": "【ゆっくり解説】17年間、海底が鳴っていた消えた7隻 生存者0名「財団が17年間隠し続けた、全長2000kmと生存者0名の本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-169「リヴァイアサン」— 全長推定2000km、海底振動は17年間止まらなかった",
+      "angle": "巨大生物の存在を直接見せず、海底観測データと消失船舶の記録だけで地球規模の収容不能性を描く",
+      "parent_title": null
+    },
+    "generated_at": "2026-08-08T00:07:14.600537Z",
+    "prompt_hash": "d25001bfa990",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1785975392_20260806_001632_scenario.md",
+    "title": "財団が隠した『人類殲滅提言』の真実とは",
+    "video_title": "財団が隠した『人類殲滅提言』の真実とは",
+    "prefix": "scp-lab_short_1785975392",
+    "theme": {
+      "title": "SCP-5000「人類滅亡」",
+      "angle": "財団が人類を殲滅する側に回った提言。装甲服を着た1人の研究員が残した記録から、なぜそうなったのかを追う"
+    },
+    "generated_at": "2026-08-06T00:16:32.555946Z",
+    "prompt_hash": "d7d4bc092555",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260806_000526_scenario.md",
+    "title": "財団が封印した感染者389名の村、帰還者2名だけが見た本当の理由",
+    "video_title": "【ゆっくり解説】感染者389名帰還者は2名だけ「財団が封印した感染者389名の村、帰還者2名だけが見た本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-610「這い回る髄」— 感染確認者389名、隔離区域からの生存帰還者は2名",
+      "angle": "感染者の身体変異だけでなく、村全体が異常生態系へ変わった収容前後の記録と生存者証言を深掘りする"
+    },
+    "generated_at": "2026-08-06T00:05:26.248171Z",
+    "prompt_hash": "9c8cb79a6d25",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_short_1785889405_20260805_002325_scenario.md",
+    "title": "財団が隠蔽したSCP-3125の恐怖: 生存者0名の理由",
+    "video_title": "財団が隠蔽したSCP-3125の恐怖: 生存者0名の理由",
+    "prefix": "scp-lab_short_1785889405",
+    "theme": {
+      "title": "SCP-610「這い回る髄」— 感染確認者389名、隔離区域からの生存帰還者は2名",
+      "angle": "感染者の身体変異だけでなく、村全体が異常生態系へ変わった収容前後の記録と生存者証言を深掘りする"
+    },
+    "generated_at": "2026-08-05T00:23:25.781568Z",
+    "prompt_hash": "9c8cb79a6d25",
+    "generated_by": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260805_000649_scenario.md",
+    "title": "財団が23年間隠し続けた、41名が消えた「増え続ける部屋」の本当の理由",
+    "video_title": "【ゆっくり解説】改築記録23件職員41名が消失「財団が23年間隠し続けた、41名が消えた「増え続ける部屋」の本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-184「建築家」— 収容区画の改築記録23件、消失した職員は41名",
+      "angle": "無限に拡張する内部構造が収容施設そのものを変質させた経過を、設計図と失踪記録から追う"
+    },
+    "generated_at": "2026-08-05T00:06:49.851040Z",
+    "prompt_hash": "41121b410226",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260804_090752_scenario.md",
+    "title": "財団が11回記録した『あのVHSテープ』——再生するたびに内容が変わる映像と、見た職員の記憶が消えていく本当の理由",
+    "video_title": "【ゆっくり解説】再生11回、内容は全部違った見た職員の記憶が『書き換えられていた』「財団が11回記録した『あのVHSテープ』——再生するたびに内容が変わる映像と、見た職員の記憶が消えていく本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1981「RONALD REAGAN CUT UP WHILE TALKING」— 放送記録11回、内容変化の全履歴",
+      "angle": "映像を見た職員の記憶改変と、記録媒体ごとに異なる発言を比較する",
+      "parent_title": null
+    },
+    "generated_at": "2026-08-04T09:07:52.045901Z",
+    "prompt_hash": "19b803023762",
+    "generated_by": "claude",
+    "selected_by": "blind_eval"
+  },
+  {
+    "file": "scp-lab_short_1785830764_20260804_080604_scenario.md",
+    "title": "収容違反8回、生存率1%——修理工場で財団が記録した『亡霊』の正体がヤバすぎる",
+    "video_title": "収容違反8回、生存率1%——修理工場で財団が記録した『亡霊』の正体がヤバすぎる",
+    "prefix": "scp-lab_short_1785830764",
+    "theme": {
+      "title": "SCP-231「修理工場の亡霊」 — 収容違反8件、被害者生存率1%の異常存在調査記録",
+      "angle": "工場の修理作業員を襲った異常存在の詳細、財団報告書に残る生々しい被害と生存率を明かす"
+    },
+    "generated_at": "2026-08-04T08:06:04.102629Z",
+    "prompt_hash": "0376df86c58b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_short_1785828208_20260804_072328_scenario.md",
+    "title": "電子工作中に17名が消えた——財団が「あの部品」を封印した本当の理由",
+    "video_title": "電子工作中に17名が消えた——財団が「あの部品」を封印した本当の理由",
+    "prefix": "scp-lab_short_1785828208",
+    "theme": {
+      "title": "SCP-231「修理工場の亡霊」 — 収容違反8件、被害者生存率1%の異常存在調査記録",
+      "angle": "工場の修理作業員を襲った異常存在の詳細、財団報告書に残る生々しい被害と生存率を明かす"
+    },
+    "generated_at": "2026-08-04T07:23:28.572231Z",
+    "prompt_hash": "0376df86c58b",
+    "generated_by": "claude",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260803_090152_scenario.md",
+    "title": "電子工作で7人消えた…財団が封印した『悪夢の回路』だけ異常すぎる理由",
+    "video_title": "【ゆっくり解説】電子工作中に7名死亡の異常事件SCP財団が隠した『回路の悪夢』の正体「電子工作で7人消えた…財団が封印した『悪夢の回路』だけ異常すぎる理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1867-JP「電子回路の悪夢」— 電子工作中に発生した不可解現象、被害者数7名の収容違反記録",
+      "angle": "電子工作というテーマを絡め、SCPが電子回路に干渉する異常性と財団の対応を機密報告書から紹介"
+    },
+    "generated_at": "2026-08-03T09:01:52.776263Z",
+    "prompt_hash": "70c844b076ce",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260802_090140_scenario.md",
+    "title": "なぜ財団は48時間で限界を迎えるのか——SCP-2317『地獄の門』、封印違反5件の真実",
+    "video_title": "【ゆっくり解説】封印維持48時間、5度の違反——生存率0.2%の地獄SCP-2317『地獄の門』財団が隠す絶望の数字「なぜ財団は48時間で限界を迎えるのか——SCP-2317『地獄の門』、封印違反5件の真実」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-2317「地獄の門」— 収容違反5件、封印維持48時間の緊迫記録",
+      "angle": "未解禁の収容違反事例を財団報告書から深掘り。封印維持に成功した生存率の低さに迫る"
+    },
+    "generated_at": "2026-08-02T09:01:40.312765Z",
+    "prompt_hash": "ef884c63f65f",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260802_033307_scenario.md",
+    "title": "なぜ生存率5%？『生ける死者』SCP-1440が財団を12回暴走させた本当の理由",
+    "video_title": "【ゆっくり解説】暴走12回、財団職員の生存率5%この老人に近づいた瞬間、精神は崩壊する「なぜ生存率5%？『生ける死者』SCP-1440が財団を12回暴走させた本当の理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1440「生ける死者」— 暴走記録12件、生存率5%の不死の呪い",
+      "angle": "財団による恐怖の実験で明らかになった精神破壊のメカニズム"
+    },
+    "generated_at": "2026-08-02T03:33:07.787015Z",
+    "prompt_hash": "fbf13be954be",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260801_090128_scenario.md",
+    "title": "GOCと蛇の手の真実 — 異常存在に対する戦略の謎",
+    "video_title": "【ゆっくり解説】GOCと蛇の手、なぜ異質な存在に異なる対応をするのか？収容か、それとも共存か？ その背後に潜む秘密とは「GOCと蛇の手の真実 — 異常存在に対する戦略の謎」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "GOCと蛇の手の真実 — 異常存在に対する異なるアプローチ",
+      "angle": "対立する組織の戦略と秘密"
+    },
+    "generated_at": "2026-08-01T09:01:28.303885Z",
+    "prompt_hash": "663e58f952ed",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260731_090219_scenario.md",
+    "title": "SCP-XXXX「デジタル錯覚」— ゲームに潜む不気味な異常とは？",
+    "video_title": "【ゆっくり解説】SCP-XXXXが暴走するその時ゲームが現実を侵食する恐怖「SCP-XXXX「デジタル錯覚」— ゲームに潜む不気味な異常とは？」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-XXXX「デジタル錯覚」 — コンピュータゲームに潜む異常",
+      "angle": "ゲーム要素と異常存在の関係"
+    },
+    "generated_at": "2026-07-31T09:02:19.779893Z",
+    "prompt_hash": "87870ab58658",
+    "generated_by": "gpt",
+    "selected_by": "only_one"
+  },
+  {
     "file": "scp-lab_20260730_090201_scenario.md",
     "title": "GOCと蛇の手、その知られざる闇",
     "video_title": "【ゆっくり解説】異常存在を巡る組織の秘密GOCと蛇の手の衝突あなたは本当の目的を知っているか「GOCと蛇の手、その知られざる闇」",

@@ -1,0 +1,447 @@
+{
+  "title": "電子工作中に17名が消えた——財団が「あの部品」を封印した本当の理由",
+  "theme": {
+    "title": "SCP-XXXX「異常な電子工作」— 収容違反がもたらした惨事の詳細",
+    "angle": "電子工作中の事件",
+    "parent_title": "SCP-1867-JP「電子回路の悪夢」"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "閲覧注意。電子工作中に17名が消えた事件、財団は今も封印してる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え、消えたって……死んだってこと？それとも本当に『消えた』の？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録上は『消失』。遺体も血痕も残ってない。ただ完成した回路だけが残った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それって……回路が人を取り込んだってこと？ちょっと待って、怖いって。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-XXXXは『完成』を求めて周囲の有機物を素材として取り込む。その先は[DATA EXPUNGED]。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人目指して毎日投稿中だから応援よろしく！もっと詳しい話は関連動画でチェックしてね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "財団データベースから、また一つ流出した。今回の報告書を読んだら、後悔するかもしれない。それでも聞くか、クロ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "え……なんか今日のシロ、いつもより声のトーンが低くない？何があったの、その報告書。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-XXXX。財団が非公開指定した異常オブジェクト。収容違反から3時間で、施設内の17名が記録上から消えた案件だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17名……っ。収容違反から3時間でって、それ速すぎない？財団の機動部隊は何してたの？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "機動部隊MTF-ガンマ-6が現場到達した時点で、すでに該当区画の生体反応はゼロ。遺体も血痕も残っていなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ……17人が跡形もなく。じゃあSCP-XXXXって、そもそも何なんだ。電子工作って、普通の趣味じゃないの。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-XXXXの外見は、一見どこにでも売っているような電子工作キットだ。基板、抵抗、コンデンサ、LEDが入った小箱。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "オブジェクトクラスはKeter。財団が最高レベルの危険性を認定した存在だ。最初の発見は20██年、██市の電子部品店だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "普通の電子部品店にKeterクラスが置いてあったの？それ、誰かが買って持って帰ったりしてたら……。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際に3名が購入して持ち帰っている。そのうち2名は自宅で組み立てを開始した時点で行方不明。1名の記録は[REDACTED]。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自宅で組み立てを始めた瞬間に消えた……？家族はどう思ったの、それ。突然いなくなって。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "家族の記憶は財団の記憶処理剤クラスWによって改変されている。現在その家族が何を信じているかは、報告書に記載がない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記憶を書き換えて……財団って、怖いな。でもSCP-XXXXそのものが怖いか。組み立てると何が起きるの？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-XXXXには異常な性質が2段階ある。第1段階、箱を開けた人間は強烈な『組み立てへの衝動』を感じ始める。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の観察記録によれば、被験者のDクラス職員D-4412は開封後わずか8分で作業を開始し、36時間眠らずに組み立て続けた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "36時間……食事も睡眠も？それって自分の意思じゃないよね、もうほぼ操られてるじゃないか。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "D-4412は観察窓越しのインタビューで『やめたいのにやめられない、手が勝手に動く』と証言している。その後の記録は[DATA EXPUNGED]。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "[DATA EXPUNGED]……D-4412、どうなったんだよ。それが分からないのが一番怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第2段階は回路が『完成』に近づいた時点で発動する。財団の仮説では、SCP-XXXXは自律的に設計を変化させ、完成を永遠に先延ばしにする。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "作業者が完成させようとするたびに、回路図が書き換わる。終わらない工作。逃げられない作業台。それが第2段階の本質だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "終わらない……。それって、ゲームで無限にステージが増えてクリアできないみたいな感じ？でも現実でそれが起きたら。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現実で起きたのが、今回の収容違反だ。20██年██月、財団第██サイトでの収容中に格納庫の電源系統が誤作動した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容容器の電磁ロックが解除され、SCP-XXXXは格納庫に隣接する電子機器整備室に自律移動したと推測されている。移動の記録映像は破損。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自律移動って……あの小箱が自分で動いたの？それ、ただの電子工作キットじゃないじゃないか。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団も同じ疑問を持っている。SCP-XXXXが自力で移動する動力源は未解明のまま。報告書の該当欄には『不明』とだけ書かれている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "整備室には当時17名の技術職員がいた。通常勤務のシフトで、誰もSCP-XXXXの収容違反を知らされていなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "知らされてなかった……。普通に仕事してたら、あの箱が転がり込んできたってこと？それ、最悪じゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "警報が鳴ったのは収容違反から47分後。その時点で整備室からの通信はすでに途絶えていた。17名全員の生体センサーがオフラインになっていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "47分で17人が……。警報が遅すぎる、財団は何をしてたんだよって言いたいけど、でも言えない雰囲気がある。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "警報の遅延原因について、財団内部調査委員会の報告書は公開されていない。担当責任者の名前も[REDACTED]処理されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "MTF-ガンマ-6が整備室に突入した時、部屋の中心には巨大な回路構造物があった。天井まで届く、人の背丈を超える規模の基板だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "天井まで……？あの小箱から、そんなものが。それって17人の『材料』を使って作られたってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-XXXXは有機物を異常なプロセスで回路素材へ変換する能力を持つ。その変換過程の詳細は[DATA EXPUNGED]。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人間が……回路になった。やだ、やだよそれ。その回路構造物は今どこにあるの、財団が保管してるの？",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "回路構造物は現在、特別収容施設サイト-██の深部格納庫Lv.5に封印されている。近接した職員が異常行動を示すため、遠隔監視のみ許可。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容プロトコルでは、SCP-XXXX本体と派生構造物の半径20メートル以内への立ち入りは全職員に禁止されている。違反者は即時隔離。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "近くにいるだけで異常行動って……。その回路の中に取り込まれた17人は、まだそこにいるの？意識はあるの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "遠隔センサーが回路構造物から微弱な電気信号のパターンを検出している。財団の一部研究員はそれを『意識の残滓』と呼んでいる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "意識の残滓……。17人が回路の中で、今も何かを感じてるかもしれないってこと？それ、怖いじゃなくて、もう悲しい。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団倫理委員会は構造物の解体と『解放』を提案したが、否決されている。理由は——解体した場合にSCP-XXXXが再活性化する恐れがあるから。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "解放しようとしたら、また被害が出るかもしれないから動けない……。財団って、本当に残酷な選択をし続けてるんだな。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "これが財団の仕事だ。最善ではなく、最悪を避けることだけを選び続ける。それが『収容』という言葉の本当の意味だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに不気味なのは、SCP-XXXX本体——最初の小箱——が収容違反後も行方不明のままだという点だ。回収されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "えっ、本体が行方不明？じゃあ今も、どこかの電子部品店の棚にあるかもしれないってこと？",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は現在も電子部品流通ルートの監視を続けている。20██年以降、類似の異常事例が世界で7件報告されているが、因果関係は未確認。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "世界で7件……。ってことは、今もどこかで誰かが箱を開けて、衝動に駆られて組み立て始めてるかもしれない？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "可能性は否定できない。財団が把握していない案件が存在する以上、この報告書に書かれていることが全てではないかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回のSCP-XXXXをまとめる。外見は普通の電子工作キット。開封者に強制的な組み立て衝動を与え、有機物を回路素材へ変換する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容違反により17名が消失、天井まで届く巨大回路構造物が生成された。本体は現在も行方不明。オブジェクトクラスはKeter。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "まとめて聞くと余計に怖い……。電子工作キット、もう見るたびに思い出しそう。普通に売ってるのに。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから言っておく。もし電子部品店でラベルのない、出所不明の工作キットを見かけても、絶対に手を触れるな。箱を開けるな。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……うん。今日ばかりは、本当に気をつけようって思った。電子工作、しばらくやりたくないかも。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は財団が72年間封印し続けたSCP-049『ペスト医師』の収容記録を読み上げる。あれも……見るべきか迷う報告書だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人を目指して毎日投稿している。今日の報告書が気になったなら、登録して次の機密を待て。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "なお本動画はSCP財団Wiki（CC BY-SA 3.0）のライセンスに基づき、独自の考察と演出を加えて制作している。原典の設定を尊重した上での二次創作だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "……シロ、一個だけ聞いていい。この報告書、どこから流出したの？財団が本当に存在するなら、それ自体が危ない話じゃないの。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それを聞くな。私がここにいる理由も、この報告書の出所も——全部[DATA EXPUNGED]だ。それだけは教えられない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "収容違反から3時間／生存者0名",
+      "財団が封印した『回路の悪夢』"
+    ],
+    "subtitle": "SCP-XXXX「異常な電子工作」収容違反報告書",
+    "tagline": "その基板に触れた瞬間、記録は[DATA EXPUNGED]"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "claude",
+  "compete": {
+    "run_id": "compete_1785828198_3611",
+    "blind_eval": {
+      "winner": "B",
+      "winner_model": "claude",
+      "reason": "Bはタイトル・サムネフックから「17名消失・3時間・生存者0」という具体数値で即座に視聴者を引き込み、specificity軸でAを大きく上回る（Keterクラス・MTF-ガンマ-6・D-4412・クラスW記憶処理剤など固有情報が豊富）。さらにpacingとwording_qualityでも、クロの感情的リアクションが段階的に恐怖を積み上げ、ラストの「[DATA EXPUNGED]」オチまで視聴維持を促す構成が完成しており、CTAも世界観を壊さず自然に次回予告と登録訴求を組み込んでいる点でAを全軸で凌駕している。",
+      "scores_a": {
+        "hook_strength": 5,
+        "specificity": 3,
+        "pacing": 4,
+        "cta_effectiveness": 3,
+        "wording_quality": 4,
+        "overall": 4
+      },
+      "scores_b": {
+        "hook_strength": 8,
+        "specificity": 8,
+        "pacing": 8,
+        "cta_effectiveness": 7,
+        "wording_quality": 8,
+        "overall": 8
+      },
+      "mapping": {
+        "A": "gpt",
+        "B": "claude"
+      }
+    },
+    "selected_by": "blind_eval",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 133.5% 優位",
+      "leader": "claude",
+      "margin": 1.3352
+    },
+    "candidates": {
+      "gpt": {
+        "title": "財団が密かに封印する『異常な電子工作』—封じられた惨事の真実"
+      },
+      "claude": {
+        "title": "電子工作中に17名が消えた——財団が「あの部品」を封印した本当の理由"
+      }
+    }
+  }
+}

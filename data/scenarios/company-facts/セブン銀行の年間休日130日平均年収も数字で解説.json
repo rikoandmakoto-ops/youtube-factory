@@ -1,0 +1,121 @@
+{
+  "title": "セブン銀行の年間休日130日、平均年収も数字で解説",
+  "theme": {
+    "title": "セブン銀行、年間休日130日？意外なホワイト待遇を数字で解説",
+    "angle": "身近な銀行サービス企業の平均年収、年間休日、育休取得率に焦点を当てる"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "超ホワイト企業",
+      "fact_main": "セブン銀行 年休130日",
+      "fact_sub": "年間休日は公式採用情報",
+      "text": "コンビニATMでおなじみ、セブン銀行。年間休日はなんと130日です。土日祝を基本にしっかり休めるの、意外すぎませんか？",
+      "bg_query": "株式会社セブン銀行 本社 外観",
+      "duration": 6,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年収 735万円",
+      "fact_sub": "有価証券報告書ベース",
+      "text": "平均年収は735万円。有価証券報告書ベースの数字で、20代から収入を上げたい人にはかなり気になる水準です。",
+      "bg_query": "株式会社セブン銀行 オフィス",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "平均年齢 42.8歳",
+      "fact_sub": "有価証券報告書ベース",
+      "text": "平均年齢は42.8歳。若手だけで回す会社というより、金融とITの経験者も多い、落ち着いた組織が想像できます。",
+      "bg_query": "株式会社セブン銀行 社員 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "業績などを踏まえ支給",
+      "text": "賞与は年2回。毎月の給与だけでなく、ボーナスも収入設計に入れやすいのは、転職後の生活を考えると安心材料です。",
+      "bg_query": "株式会社セブン銀行 採用 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "有給 最大20日",
+      "fact_sub": "初年度は入社月で異なる",
+      "text": "年次有給休暇は最大20日。旅行や推し活の予定も立てやすい一方、初年度の付与日数は入社月で変わる点は確認です。",
+      "bg_query": "株式会社セブン銀行 ATM コンビニ",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "所定労働 7時間45分",
+      "fact_sub": "公式採用情報ベース",
+      "text": "所定労働時間は1日7時間45分。8時間より15分短いだけでも、毎日の積み重ねで自分時間の差になってきます。",
+      "bg_query": "株式会社セブン銀行 ATM 利用",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "育休取得率 男性100%",
+      "fact_sub": "公式サステナビリティ情報",
+      "text": "男性の育休取得率は100パーセント。数字だけで全ては決められないけど、育児を理由に働き方を諦めにくい環境は強いです。",
+      "bg_query": "株式会社セブン銀行 サステナビリティ",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "育休取得率 女性100%",
+      "fact_sub": "公式サステナビリティ情報",
+      "text": "女性の育休取得率も100パーセント。ライフイベント後もキャリアを続けたい20代にとって、見逃せない数字ですよね。",
+      "bg_query": "株式会社セブン銀行 ダイバーシティ",
+      "duration": 6,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "ATM設置 2万7000台超",
+      "fact_sub": "全国のセブン銀行ATM",
+      "text": "ただし仕事はATMを2万7000台超で支えるインフラ系。障害対応や金融サービスの責任は重く、ラクな仕事とは限りません。",
+      "bg_query": "株式会社セブン銀行 ATM 店舗",
+      "duration": 6,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから他の企業もチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年間休日130日？",
+      "セブン銀行の待遇"
+    ],
+    "subtitle": "平均年収・育休も数字で比較",
+    "tagline": "コンビニATMの会社が意外とホワイト"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1786874417_8060",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "セブン銀行の年間休日130日、平均年収も数字で解説"
+      },
+      "claude": null
+    }
+  }
+}
