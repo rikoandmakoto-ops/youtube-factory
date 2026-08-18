@@ -350,6 +350,15 @@
         "glow_stroke_extra": 7,
         "dim_alpha": 110,
         "punch_start_scale": 0.88
+      },
+      "hook_caption": {
+        "accent_color": [
+          255,
+          235,
+          60
+        ],
+        "band_alpha": 150,
+        "y_center": 1000
       }
     },
     "use_illustrations": true,
@@ -521,7 +530,10 @@
       "allow_tint": true,
       "shake_max_px": 12,
       "zoom_max": 0.08,
-      "transition_duration": 0.35
+      "transition_duration": 0.35,
+      "short_beat_zoom": true,
+      "beat_interval": 1.6,
+      "beat_zoom_max": 0.055
     },
     "persona": {
       "age_group": "20代",

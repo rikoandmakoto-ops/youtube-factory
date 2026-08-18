@@ -276,6 +276,12 @@ class EffectsConfig:
     transition_min_gap: float = 6.0
     fade_in_first: bool = True
     fade_out_last: bool = True
+    # ショート専用: 1.5〜2秒ごとに寄り直して疑似カット割りを作る（2026 ショート対策）。
+    # ここに宣言していないキーは to_dict() の往復で落ちて pipeline 側に届かないため、
+    # pipeline/video_effects.EffectsConfig と必ず同じ名前・既定値で持たせる。
+    short_beat_zoom: bool = True
+    beat_interval: float = 1.8
+    beat_zoom_max: float = 0.05
 
 
 # ============================================================

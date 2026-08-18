@@ -354,6 +354,10 @@
     "cliffhanger": {
       "enabled": true,
       "wording": "この続き（本当の収容理由）はチャンネルの他の報告書で"
+    },
+    "short_end_line": {
+      "omit_related_video": true,
+      "wording": "この報告書の続き、他のファイルにも置いてある"
     }
   },
   "video_format": {
@@ -479,7 +483,8 @@
       "allow_glitch": true,
       "allow_pixelate": true,
       "beat_interval": 1.6,
-      "beat_zoom_max": 0.06
+      "beat_zoom_max": 0.06,
+      "short_beat_zoom": true
     },
     "persona": {
       "age_group": "10代",

@@ -32,6 +32,15 @@ _対象外: akashic-librarian（長尺・手動台本）、clip-lab（切り抜�
 "hook_caption": { "accent_color": [210, 25, 25], "band_alpha": 195, "y_center": 1000 }
 ```
 
+| チャンネル | テロップ色 | band_alpha |
+|---|---|---|
+| daily-science | シアン `[80,220,255]` | 150 |
+| scp-lab | 血赤 `[210,25,25]` | 195 |
+| 2ch-matome | 黄 `[255,235,60]` | 150 |
+| pokemon-lab | 山吹 `[255,220,60]` | 160 |
+| yokai-watch | 紫 `[190,120,255]` | 175 |
+| company-facts | （使わない — 1個目の `fact_main` がそのままセンターテロップになる） | — |
+
 ---
 
 ## 2. 動画構成の最適化
@@ -45,6 +54,11 @@ _対象外: akashic-librarian（長尺・手動台本）、clip-lab（切り抜�
   従来の `zoom_in` とは二重掛けしない（リサイズ 1 回分のままでレンダー時間を抑える）。
   - チャンネル別チューニング: `video_format.effects` の
     `short_beat_zoom`(bool) / `beat_interval`(秒) / `beat_zoom_max`(寄り量)。
+    ※ この 3 キーは `backend/channels/video_format.py` の `EffectsConfig` にも
+    **同名・同既定値で宣言が必要**（未宣言のキーは `to_dict()` の往復で落ちて
+    pipeline 側に届かない）。
+  - 設定値: 2ch/SCP=1.6 秒（速い）、pokemon=1.7、yokai=1.8、company=1.9、
+    daily-science=2.0 秒（落ち着いた科学解説なので最も緩い）。
 - **クリフハンガー**: `content_policy.cliffhanger` を宣言したチャンネルだけ、
   オチで**核心の 6 割だけ**明かし、残りを「まだ語られていない謎」として CTA に接続する。
 
@@ -57,6 +71,12 @@ _対象外: akashic-librarian（長尺・手動台本）、clip-lab（切り抜�
 - **シリーズ化**: `theme_priority.series_lineup` に連作名を並べると、
   テーマ提案（`_theme_priority_block`）とシナリオ生成（`_series_hint_block`）の両方で使われ、
   最終行の CTA が必ずシリーズ名に触れる。シナリオは `series_name` を出力する。
+  タイトル頭の固定シリーズ名は `short_series_name`（daily-science に `1分科学：` を新設。
+  2ch まとめは「本物のスレタイに見えること」が勝ち筋なので**あえて付けない**）。
+- **ショート専用チャンネルの締めCTA**: `content_policy.short_end_line.omit_related_video`
+  を daily-science / scp-lab / pokemon-lab / yokai-watch にも設定。
+  長尺を作らないチャンネルで「関連動画へ」と言っても存在しない動画へ送ることになるため、
+  締めを「その回と地続きの一言 → 登録誘導」に統一した（2ch は設定済み）。
 
 ---
 
@@ -78,6 +98,9 @@ _対象外: akashic-librarian（長尺・手動台本）、clip-lab（切り抜�
 - タイトルは「説明」ではなく **「衝動」**（`_title_rule_block` の共通ルール）。
   「〜について」「〜とは」「〜を解説」を禁止し、実は/なぜ/だけ/本当は/知らない/やめて/ヤバい/99% を必ず 1 つ入れる。
 - サムネ文字 `thumb_info.hook_lines` は **2 行 × 各 8 文字以内**に統一。
+- HTML サムネ（`thumbnail_generator.py`）も「短く大きく」へ変更:
+  `line1` 14→**11 文字** / `line2` 12→**9 文字**、基準フォントを 88→**100px** / 105→**124px** に拡大。
+  文字が大きくなった分、赤バッジ（`line3-wrap`）を 278→296px へ下げて重なりを回避（実レンダリングで確認済み）。
 
 ---
 

@@ -168,8 +168,10 @@ def design_brief(
         "サムネイルは固定レイアウトです。次のフィールドを必ず含むJSONだけを返してください"
         "（コードフェンス禁止、純JSON）:\n"
         "{\n"
-        '  "line1": "1行目（白文字、状況/前振り。最大14文字、句読点OK）",\n'
-        '  "line2": "2行目（黄色強調、核となる驚き/疑問。最大12文字、!?推奨）",\n'
+        # 2026-08-18: サムネは「説明」ではなく「衝動」。スマホの一覧では 1 行が長いほど
+        # 文字が縮んで読めなくなるので、上限を 14/12 → 11/9 文字へ詰めて大きく見せる。
+        '  "line1": "1行目（白文字、状況/前振り。最大11文字。短いほど大きく表示される）",\n'
+        '  "line2": "2行目（黄色強調、核となる驚き/疑問。最大9文字、!?推奨。ここが一番大きい）",\n'
         '  "line3_badge": "3行目の赤バッジ内テキスト（5〜10文字、「衝撃の真実」「○○の正体」など)",\n'
         '  "sub_text": "下部の小さな黄色サブコピー（10〜20文字、答えを匂わせる)",\n'
         '  "highlight_word": "line2の中で特に強調したい単語（4〜7文字)",\n'
@@ -181,6 +183,8 @@ def design_brief(
         "}\n\n"
         "重要:\n"
         "- 文字数は厳守（HTMLの固定レイアウトに収まらないと崩れる)\n"
+        "- 文字は「短く・大きく」。説明文にせず、単語で言い切る"
+        "（✅「実は逆だった」/ ❌「実は逆だったという事実」)\n"
         "- 各行は別々の事実/煽り（同じことを言わない)\n"
         "- DALL-E 3 は文字を綺麗に描けないので背景プロンプトは必ず『no text/letters/numbers』を明記"
     )
@@ -435,7 +439,7 @@ body {{ background: #000; display: flex; justify-content: center; align-items: c
     -7px 0 0 #A00, 7px 0 0 #A00, 0 -7px 0 #A00, 0 7px 0 #A00,
     -4px -6px 0 #A00, 4px -6px 0 #A00, -4px 6px 0 #A00, 4px 6px 0 #A00,
     -6px -4px 0 #A00, 6px -4px 0 #A00, -6px 4px 0 #A00, 6px 4px 0 #A00; }}
-.line3-wrap {{ position: absolute; top: 278px; left: 0; right: 0; text-align: center; }}
+.line3-wrap {{ position: absolute; top: 296px; left: 0; right: 0; text-align: center; }}
 .line3-badge {{ display: inline-block; background: rgba(220, 20, 20, 0.93);
   border: 4px solid rgba(255,255,255,0.9); border-radius: 14px; padding: 8px 36px;
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic Std", "Hiragino Sans", "Yu Gothic", sans-serif;
@@ -512,8 +516,10 @@ def build_html(
     line3 = (brief.get("line3_badge") or "").strip()
     sub = (brief.get("sub_text") or "").strip()
 
-    line1_px = _scaled_font_px(line1, 88, 14, 56)
-    line2_px = _scaled_font_px(line2, 105, 12, 64)
+    # 基準文字数を詰めた分、同じ幅に対して 1 文字あたりを大きく取れる
+    # （11 文字までは 100px、9 文字までは 124px でフル表示）。
+    line1_px = _scaled_font_px(line1, 100, 11, 56)
+    line2_px = _scaled_font_px(line2, 124, 9, 64)
     line3_px = _scaled_font_px(line3, 82, 10, 52)
     sub_px = _scaled_font_px(sub, 38, 22, 26)
 

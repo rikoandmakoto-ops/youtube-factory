@@ -252,6 +252,15 @@
         "glow_stroke_extra": 7,
         "dim_alpha": 110,
         "punch_start_scale": 0.88
+      },
+      "hook_caption": {
+        "accent_color": [
+          255,
+          220,
+          60
+        ],
+        "band_alpha": 160,
+        "y_center": 1000
       }
     },
     "use_illustrations": true,
@@ -283,6 +292,10 @@
       "過度なホラー・恐怖演出",
       "根拠を示さない煽りランキング"
     ],
+    "short_end_line": {
+      "omit_related_video": true,
+      "wording": "他の対決も研究所に置いてあるよ"
+    },
     "cliffhanger": {
       "enabled": true,
       "wording": "この続き（残りの1匹）はチャンネルの他の動画で"
@@ -409,7 +422,10 @@
       "allow_glitch": false,
       "allow_tint": false,
       "zoom_max": 0.06,
-      "transition_duration": 0.35
+      "transition_duration": 0.35,
+      "short_beat_zoom": true,
+      "beat_interval": 1.7,
+      "beat_zoom_max": 0.055
     },
     "persona": {
       "age_group": "10代",
@@ -444,12 +460,6 @@
     },
     "duration_minutes": 12,
     "gen_type": "short",
-    "theme_queue": [
-      {
-        "id": "94f9a0ff",
-        "title": "リザードンとカイリュー、どっちが勝つ？",
-        "angle": "人気ドラゴン対決。4倍弱点をどう処理するかで勝敗が割れる点を実戦想定で比べる"
-      }
-    ]
+    "theme_queue": []
   }
 }

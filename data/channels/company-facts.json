@@ -360,7 +360,10 @@
       "allow_glitch": false,
       "allow_tint": false,
       "zoom_max": 0.04,
-      "transition_duration": 0.3
+      "transition_duration": 0.3,
+      "short_beat_zoom": true,
+      "beat_interval": 1.9,
+      "beat_zoom_max": 0.045
     },
     "persona": {
       "age_group": "20代",

@@ -1423,7 +1423,7 @@ class ScenarioGenerator:
  "title":"企業名を含むバズるタイトル",
  "company_name":"扱う企業の正式名称（背景写真の検索に使う）",
  "series_name":"このテーマが属するシリーズ名(該当なしなら空文字)",
- "thumb_info":{{"hook_lines":["1行","2行"],"hook_caption":"10文字以内","subtitle":"...","tagline":"..."}},
+ "thumb_info":{{"hook_lines":["1行","2行"],"subtitle":"...","tagline":"..."}},
  "short_scenario":[
    {{"fact_header":"{default_badge}","fact_main":"平均年収 850万円","fact_sub":"業界平均の1.5倍",
      "text":"読み上げるナレーション","bg_query":"企業名 店舗 外観","duration":5,"mood":"bright"}},
@@ -1476,7 +1476,11 @@ class ScenarioGenerator:
 - タイトルは「説明」ではなく「衝動」を作る。読んだ瞬間に指が止まる語（実は/ヤバい/本当は/知らない）を必ず1つ入れる。
 - 例:「ニトリの年収がヤバい 平均850万円の実態」「任天堂の離職率3%、辞めない理由」
 
-{_HOOK_CAPTION_RULE}
+# 冒頭テロップ(1個目の fact_main)ルール
+- このスタイルでは**1個目の fact_main がそのまま冒頭0〜3秒の画面中央テロップ**になる。
+  **10文字前後**まで削って「企業名＋数字」だけを残す(例:「ニトリ 年収850万」)。
+  修飾語・説明・句読点を入れると読み切れず、スクロールを止められない。
+
 # サムネ文字(thumb_info.hook_lines)ルール
 - hook_lines は**2行**、**各行8文字以内**（例:「平均850万」「辞めない会社」）。長い説明文は読めないので不可。
 

@@ -122,6 +122,15 @@
         "glow_stroke_extra": 7,
         "dim_alpha": 130,
         "punch_start_scale": 0.88
+      },
+      "hook_caption": {
+        "accent_color": [
+          80,
+          220,
+          255
+        ],
+        "band_alpha": 150,
+        "y_center": 1000
       }
     },
     "use_illustrations": true,
@@ -146,6 +155,10 @@
     "cliffhanger": {
       "enabled": true,
       "wording": "同じシリーズの他の動画も見てって"
+    },
+    "short_end_line": {
+      "omit_related_video": true,
+      "wording": "今日から意識してみて。同じシリーズの動画も置いてあるよ"
     }
   },
   "theme_priority": {
@@ -368,7 +381,10 @@
       "allow_flash": false,
       "allow_pixelate": false,
       "allow_glitch": false,
-      "allow_tint": false
+      "allow_tint": false,
+      "short_beat_zoom": true,
+      "beat_interval": 2.0,
+      "beat_zoom_max": 0.04
     }
   },
   "autopilot": {
@@ -435,5 +451,6 @@
       "締めは『今夜寝るとき、ちょっと意識してみて』のように、視聴者が今日試せる形でまとめる。",
       "そのうえで**動画の最後の1行は必ずチャンネル登録の誘導で終える**（例:『面白かったらチャンネル登録よろしくね。毎日1本、身近な不思議を解いてるから、明日も一緒に見てほしいな』）。Tips や余韻で終わって登録に触れないのは禁止。"
     ]
-  }
+  },
+  "short_series_name": "1分科学："
 }

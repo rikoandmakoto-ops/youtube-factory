@@ -251,6 +251,15 @@
         "glow_stroke_extra": 7,
         "dim_alpha": 120,
         "punch_start_scale": 0.88
+      },
+      "hook_caption": {
+        "accent_color": [
+          190,
+          120,
+          255
+        ],
+        "band_alpha": 175,
+        "y_center": 1000
       }
     },
     "use_illustrations": true,
@@ -285,6 +294,10 @@
     "cliffhanger": {
       "enabled": true,
       "wording": "この続き（原典に書かれた結末）はチャンネルの他の動画で"
+    },
+    "short_end_line": {
+      "omit_related_video": true,
+      "wording": "他の妖怪の原典も調べてある"
     }
   },
   "video_format": {
@@ -409,7 +422,10 @@
       "allow_tint": true,
       "shake_max_px": 10,
       "zoom_max": 0.07,
-      "transition_duration": 0.4
+      "transition_duration": 0.4,
+      "short_beat_zoom": true,
+      "beat_interval": 1.8,
+      "beat_zoom_max": 0.05
     },
     "persona": {
       "age_group": "10代",
