@@ -268,6 +268,21 @@ def run_for(channel_id: str) -> dict:
         meta["upload"] = r
         print(f"  ✅ short URL: {r.get('url')}")
 
+        # 再生リスト投入 + 前回/次回リンク（自動公開と同じ後処理）
+        try:
+            from pipeline import post_upload
+
+            meta["post_upload"] = post_upload.run(
+                channel_id=channel_id,
+                video_id=r.get("video_id"),
+                title=final_short_title,
+                url=r.get("url") or "",
+                is_short=True,
+            )
+        except Exception as e:
+            print(f"  ⚠️ post_upload failed: {e}")
+            meta["post_upload"] = {"ok": False, "error": str(e)}
+
     meta_path = Path(out["output_dir"]) / "_short_upload_meta.json"
     meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
     print(f"\n📝 meta: {meta_path}")

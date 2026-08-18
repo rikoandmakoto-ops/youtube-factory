@@ -1460,6 +1460,127 @@ def _ensure_phase_f_tables() -> None:
 _ensure_phase_f_tables()
 
 
+# =====================================================================
+# Competitor RSS monitoring (quota-free upload watch)
+# =====================================================================
+
+def _ensure_rss_tables() -> None:
+    with _db_lock:
+        c = _conn()
+        try:
+            c.executescript(
+                """
+                CREATE TABLE IF NOT EXISTS competitor_rss_videos (
+                    id TEXT PRIMARY KEY,                -- channel_id + ':' + video_id
+                    channel_id TEXT NOT NULL,           -- 自チャンネル（監視主体）
+                    competitor_id TEXT NOT NULL,        -- YouTube channel ID (UC...)
+                    competitor_title TEXT,
+                    video_id TEXT NOT NULL,
+                    title TEXT,
+                    link TEXT,
+                    published_at TEXT,                  -- RFC3339 (feed の値をそのまま)
+                    published_ts INTEGER,               -- epoch 秒（並べ替え用）
+                    seen_at INTEGER NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS idx_competitor_rss_channel
+                    ON competitor_rss_videos(channel_id, published_ts DESC);
+                CREATE INDEX IF NOT EXISTS idx_competitor_rss_competitor
+                    ON competitor_rss_videos(channel_id, competitor_id, published_ts DESC);
+                """
+            )
+            c.commit()
+        finally:
+            c.close()
+
+
+_ensure_rss_tables()
+
+
+def insert_rss_video(
+    *,
+    channel_id: str,
+    competitor_id: str,
+    competitor_title: Optional[str],
+    video_id: str,
+    title: Optional[str],
+    link: Optional[str],
+    published_at: Optional[str],
+    published_ts: Optional[int],
+) -> bool:
+    """新着なら True、既知なら False。RSS は毎回全件返すので新旧判定はここで行う。"""
+    row_id = f"{channel_id}:{video_id}"
+    now = int(time.time())
+    with _db_lock:
+        c = _conn()
+        try:
+            existing = c.execute(
+                "SELECT id FROM competitor_rss_videos WHERE id = ?", (row_id,)
+            ).fetchone()
+            if existing:
+                return False
+            c.execute(
+                """
+                INSERT INTO competitor_rss_videos
+                (id, channel_id, competitor_id, competitor_title, video_id, title,
+                 link, published_at, published_ts, seen_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    row_id, channel_id, competitor_id, competitor_title, video_id,
+                    title, link, published_at,
+                    int(published_ts) if published_ts is not None else None,
+                    now,
+                ),
+            )
+            c.commit()
+        finally:
+            c.close()
+    return True
+
+
+def list_rss_videos(
+    channel_id: str,
+    *,
+    competitor_id: Optional[str] = None,
+    since_ts: Optional[int] = None,
+    limit: int = 100,
+) -> List[Dict[str, Any]]:
+    where = ["channel_id = ?"]
+    args: List[Any] = [channel_id]
+    if competitor_id:
+        where.append("competitor_id = ?")
+        args.append(competitor_id)
+    if since_ts is not None:
+        where.append("COALESCE(published_ts, seen_at) >= ?")
+        args.append(int(since_ts))
+    sql = (
+        "SELECT * FROM competitor_rss_videos WHERE "
+        + " AND ".join(where)
+        + " ORDER BY COALESCE(published_ts, seen_at) DESC LIMIT ?"
+    )
+    args.append(int(limit))
+    with _db_lock:
+        c = _conn()
+        try:
+            rows = c.execute(sql, args).fetchall()
+        finally:
+            c.close()
+    return [dict(r) for r in rows]
+
+
+def count_rss_videos(channel_id: str) -> int:
+    with _db_lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT COUNT(*) AS n FROM competitor_rss_videos WHERE channel_id = ?",
+                (channel_id,),
+            ).fetchone()
+        finally:
+            c.close()
+    return int(row["n"]) if row else 0
+
+
 def _competitor_video_row_to_dict(row: sqlite3.Row) -> Dict[str, Any]:
     d = dict(row)
     for key in ("frame_paths",):

@@ -30,6 +30,7 @@ from pipeline.analytics import (
     comment_demand,
     competitor_analyzer,
     competitor_discovery,
+    competitor_rss,
     store as analytics_store,
 )
 
@@ -44,6 +45,7 @@ router = APIRouter(prefix="/api", tags=["competitors", "comment-demands"])
 _competitor_locks: Dict[str, threading.Lock] = {}
 _discovery_locks: Dict[str, threading.Lock] = {}
 _demand_locks: Dict[str, threading.Lock] = {}
+_rss_locks: Dict[str, threading.Lock] = {}
 
 
 def _lock(d: Dict[str, threading.Lock], key: str) -> threading.Lock:
@@ -71,6 +73,11 @@ class CompetitorDiscoverRequest(BaseModel):
     max_candidates: int = Field(default=15, ge=1, le=30)
     min_subscribers: int = Field(default=1000, ge=0)
     relevance_threshold: float = Field(default=0.3, ge=0.0, le=1.0)
+
+
+class RssScanRequest(BaseModel):
+    since_hours: int = Field(default=72, ge=1, le=720)
+    max_competitors: int = Field(default=30, ge=1, le=50)
 
 
 class DemandScanRequest(BaseModel):
@@ -241,6 +248,46 @@ async def dismiss_candidate(
     if not res.get("ok"):
         raise HTTPException(status_code=404, detail=res.get("error") or "dismiss failed")
     return res
+
+
+# =====================================================================
+# Competitor RSS monitoring (quota-free)
+# =====================================================================
+
+@router.get("/competitors/{channel_id}/rss")
+async def get_competitor_rss(
+    channel_id: str,
+    hours: int = Query(default=72, ge=1, le=720),
+    limit: int = Query(default=100, ge=1, le=500),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """保存済みの競合新着（DB 参照のみ。取得は3hごとの定期ジョブが行う）。"""
+    res = competitor_rss.recent(channel_id, hours=hours, limit=limit)
+    res["watch_targets"] = competitor_rss.watch_targets(channel_id)
+    return res
+
+
+@router.post("/competitors/{channel_id}/rss/scan")
+async def run_competitor_rss_scan(
+    channel_id: str,
+    body: Optional[RssScanRequest] = None,
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """手動で RSS スキャンを実行（API クォータを消費しない）。"""
+    opts = body or RssScanRequest()
+    lock = _lock(_rss_locks, channel_id)
+    if not lock.acquire(blocking=False):
+        raise HTTPException(
+            status_code=409, detail="rss scan already running for this channel"
+        )
+    try:
+        return competitor_rss.scan_channel(
+            channel_id,
+            since_hours=opts.since_hours,
+            max_competitors=opts.max_competitors,
+        )
+    finally:
+        lock.release()
 
 
 # =====================================================================

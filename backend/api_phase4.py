@@ -533,6 +533,21 @@ def on_generation_complete(job) -> None:
                 )
         except Exception as e:
             print(f"⚠️ thumbnail_ab_test register failed for {job.id}: {e}")
+        # 再生リスト投入 + 前回/次回リンク（メイン・ショートそれぞれ別系列）
+        _run_post_upload(
+            channel_id=job.channel_id,
+            video_id=main.get("video_id"),
+            title=main.get("title") or job.title,
+            url=main.get("url") or "",
+            is_short=False,
+        )
+        _run_post_upload(
+            channel_id=job.channel_id,
+            video_id=short.get("video_id"),
+            title=short.get("title") or job.title,
+            url=short.get("url") or "",
+            is_short=True,
+        )
         # 投稿直後の自動コメント。ショートは本編URLを載せられるので誘導も兼ねる。
         _post_auto_comment(
             channel_id=job.channel_id,
@@ -699,10 +714,46 @@ def _start_single_main_publish(
                 "upload_done",
                 f"🚀 メイン自動公開完了 [{job.title}]: {res.get('url')}",
             )
+            _run_post_upload(
+                channel_id=job.channel_id,
+                video_id=res.get("video_id"),
+                title=main_d.get("title") or job.title,
+                url=res.get("url") or "",
+                is_short=False,
+            )
         except Exception as e:
             _send_event_notification("error", f"⚠️ 自動公開失敗 ({job.id}): {e}")
 
     threading.Thread(target=_do, daemon=True).start()
+
+
+def _run_post_upload(
+    *,
+    channel_id: str,
+    video_id: Optional[str],
+    title: str = "",
+    url: str = "",
+    is_short: bool = True,
+) -> None:
+    """公開後の共通処理（再生リスト投入 + 前回/次回リンク）を非同期で走らせる。
+
+    予約公開でも実行できる（どちらも private 状態の動画に対して通る API）。
+    ここでの失敗が公開処理に波及しないよう例外は握り潰す。
+    """
+    if not video_id:
+        return
+    try:
+        from pipeline import post_upload
+    except Exception as e:
+        print(f"⚠️ post_upload import failed: {e}")
+        return
+    post_upload.run_async(
+        channel_id=channel_id,
+        video_id=video_id,
+        title=title,
+        url=url,
+        is_short=is_short,
+    )
 
 
 def _post_auto_comment(
@@ -783,6 +834,13 @@ def _start_single_short_publish(
             _send_event_notification(
                 "upload_done",
                 f"🚀 ショート自動公開完了 [{job.title}]: {res.get('url')}",
+            )
+            _run_post_upload(
+                channel_id=job.channel_id,
+                video_id=res.get("video_id"),
+                title=short_d.get("title") or job.title,
+                url=res.get("url") or "",
+                is_short=True,
             )
             # 投稿直後の自動コメント（登録導線 + 返信を誘う問いかけ）。
             # 予約公開なら公開時刻まで保留キューに積まれる。
@@ -1669,6 +1727,7 @@ def setup_on_startup() -> None:
     _register_trend_scanner_job()
     _register_competitor_scan_job()
     _register_competitor_discovery_job()
+    _register_competitor_rss_job()
     _register_auto_comment_flush_job()
     print(f"⏰ Scheduler started — {len(_list_schedules())} schedule(s) restored")
 
@@ -1866,6 +1925,48 @@ def _register_competitor_discovery_job() -> None:
         print("🔎 Competitor discovery monthly scan scheduled (1st of month 04:00 JST)")
     except Exception as e:
         print(f"⚠️ Failed to register competitor discovery job: {e}")
+
+
+def _register_competitor_rss_job() -> None:
+    """競合の新着を RSS で拾うジョブ（3h ごと）。
+
+    RSS は API クォータを消費しないので、週次の competitor_analyzer より
+    ずっと短い間隔で回せる。「競合が今日何を出したか」を切らさず持っておく。
+    """
+    sch = _ensure_scheduler()
+    if sch is None:
+        return
+    try:
+        from pipeline.analytics import competitor_rss  # type: ignore
+    except Exception as e:
+        print(f"⚠️ competitor_rss import failed: {e}")
+        return
+    job_id = "competitor_rss:scan_all"
+    try:
+        sch.remove_job(job_id)
+    except Exception:
+        pass
+
+    def _runner() -> None:
+        try:
+            res = competitor_rss.scan_all_channels()
+            results = res.get("results") or []
+            total_new = sum(int(r.get("new_videos") or 0) for r in results)
+            if total_new:
+                print(
+                    f"📡 Competitor RSS: {total_new} new upload(s) across "
+                    f"{len(results)} channel(s)"
+                )
+        except Exception as e:
+            print(f"⚠️ competitor_rss.scan_all_channels failed: {e}")
+
+    try:
+        # 3 時間ごと（JST 1:10, 4:10, ... — 他ジョブと分の位置をずらす）
+        trigger = CronTrigger(hour="*/3", minute=10, timezone="Asia/Tokyo")
+        sch.add_job(_runner, trigger=trigger, id=job_id, replace_existing=True)
+        print("📡 Competitor RSS monitor scheduled (every 3 hours)")
+    except Exception as e:
+        print(f"⚠️ Failed to register competitor RSS job: {e}")
 
 
 def shutdown_scheduler() -> None:

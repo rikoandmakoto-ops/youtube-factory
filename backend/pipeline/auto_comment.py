@@ -36,6 +36,7 @@ from typing import Any, Dict, List, Optional
 
 from . import youtube_oauth as yt_oauth
 from . import description_blocks as _desc_blocks
+from . import viewer_requests as _viewer_requests
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 PENDING_FILE = PROJECT_ROOT / "data" / "pending_comments.json"
@@ -125,6 +126,14 @@ def build_comment_text(
     lines: List[str] = []
     if question:
         lines.append(f"💬 {question}")
+    # 視聴者参加型: リクエスト募集の1行。返信で来たリクエストは
+    # comment_demand が拾ってテーマキューに回る。
+    try:
+        request_line = _viewer_requests.build_comment_line(channel_id, channel_dict=cd)
+    except Exception:
+        request_line = ""
+    if request_line:
+        lines.append(request_line)
     if sub_url:
         lines.append("")
         lines.append("🔔 毎日投稿してるので、チャンネル登録して待っててね！")

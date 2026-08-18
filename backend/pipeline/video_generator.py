@@ -31,6 +31,22 @@ try:
 except Exception:  # pragma: no cover
     from . import description_blocks as _desc_blocks  # type: ignore
 
+try:
+    from pipeline import viewer_requests as _viewer_requests  # type: ignore
+except Exception:  # pragma: no cover
+    try:
+        from . import viewer_requests as _viewer_requests  # type: ignore
+    except Exception:
+        _viewer_requests = None  # type: ignore
+
+try:
+    from pipeline import short_endcard as _short_endcard  # type: ignore
+except Exception:  # pragma: no cover
+    try:
+        from . import short_endcard as _short_endcard  # type: ignore
+    except Exception:
+        _short_endcard = None  # type: ignore
+
 # ============================================================
 # Auto-detect paths
 # ============================================================
@@ -3582,6 +3598,15 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
         if summary:
             print(f"✨ mono-short effects applied: {summary}  (preset={fx_cfg.preset})")
 
+    if _short_endcard is not None:
+        clips = _short_endcard.append_to_clips(
+            clips,
+            width=SHORT_W,
+            height=SHORT_H,
+            channel_dict=channel_dict,
+            font_loader=get_font,
+        )
+
     final = concatenate_videoclips(clips)
     final = _mix_bgm(final, channel_format, channel_id=channel_id, bgm_volume=bgm_volume, mood_timeline=mood_timeline)
     out = str(out_dir / f"{output_prefix}_ショート.mp4")
@@ -3997,6 +4022,17 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         summary = video_effects.summarize_plan(fx_plans)
         if summary:
             print(f"✨ short effects applied: {summary}  (preset={fx_cfg.preset})")
+
+    # 末尾に「次の動画へ」エンドカード。ショートは見終わった瞬間に次へ
+    # スワイプされるので、最後の1〜2秒で行き先を示す。
+    if _short_endcard is not None:
+        clips = _short_endcard.append_to_clips(
+            clips,
+            width=SHORT_W,
+            height=SHORT_H,
+            channel_dict=channel_dict,
+            font_loader=get_font,
+        )
 
     print(f"\n🎬 Concatenating {len(clips)} clips ({t_off:.1f}s)...")
     final = concatenate_videoclips(clips)
@@ -5049,6 +5085,21 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
     short_subscribe = _desc_blocks.build_subscribe_block(cd, compact=True)
     short_related = _desc_blocks.build_related_block(cd, is_short=True)
     short_cross = _desc_blocks.build_cross_promo_block(cd)
+    # 視聴者参加型: 「リクエスト募集中」。コメントが増えるほど
+    # エンゲージメント評価が上がり、comment_demand のネタ源にもなる。
+    channel_id_for_requests = cd.get("id") or ""
+    short_requests = main_requests = []
+    if _viewer_requests is not None:
+        try:
+            short_requests = _viewer_requests.build_request_block(
+                channel_id_for_requests, channel_dict=cd, compact=True
+            )
+            main_requests = _viewer_requests.build_request_block(
+                channel_id_for_requests, channel_dict=cd
+            )
+        except Exception as e:
+            print(f"⚠️ viewer_requests block failed: {e}")
+            short_requests = main_requests = []
 
     lines_short = [
         *short_lead,
@@ -5063,6 +5114,8 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
         "",
         *short_subscribe,
     ]
+    if short_requests:
+        lines_short += ["", *short_requests]
     if short_related:
         lines_short += ["", *short_related]
     if short_cross:
@@ -5132,6 +5185,9 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
         *_desc_blocks.build_subscribe_block(cd),
         "",
     ]
+
+    if main_requests:
+        lines_main += [*main_requests, ""]
 
     # 関連動画（同チャンネル）→ 姉妹チャンネル の順で回遊導線を置く
     main_related = _desc_blocks.build_related_block(cd, is_short=False)
