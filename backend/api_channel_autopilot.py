@@ -89,6 +89,54 @@ class ThemeItem(BaseModel):
 GEN_TYPE_CHOICES = ("both", "short", "full", "clip")
 CLIP_GEN_TYPE = "clip"
 
+# 同一チャンネルの連続投稿の最小間隔（分）。
+# 2026-08-17 に 2ch-matome で 09:27〜09:28 の2分間に4本、daily-science と
+# company-facts でも同時刻に投稿されるバーストが起きた。Mac のスリープ復帰後に
+# misfire_grace_time(=1時間) 内の未発火ジョブがまとめて発火するのが原因で、
+# 同時に出た4本のうち2本は再生数0のまま伸びなかった（同一チャンネルの短時間
+# 連投はショートの配信が共食いする）。発火時刻ではなく「前回実際に発火した時刻」
+# を見て、近すぎる発火は落とす。
+_MIN_FIRE_INTERVAL_MINUTES = 90
+
+# channel_id -> 直近に実際に生成へ進んだ時刻
+_last_fire_at: Dict[str, datetime] = {}
+
+
+def _misfire_grace_seconds(lead_minutes: int) -> int:
+    """遅延発火を許容する秒数。リード時間の半分（5〜20分）に収める。
+
+    リードを超えて遅れた発火は、生成が終わる前に公開予定時刻を過ぎてしまい
+    予約公開が成立しない。素直に1回落として次スロットに任せる。
+    """
+    if lead_minutes and lead_minutes > 0:
+        return int(max(300, min(1200, lead_minutes * 60 // 2)))
+    return 600
+
+
+def _burst_guard_ok(channel_id: str, ap: Dict[str, Any]) -> bool:
+    """直前の発火から十分な間隔が空いていれば True。近すぎれば False（発火を捨てる）。
+
+    `autopilot.min_fire_interval_minutes` でチャンネル個別に上書きできる。0 で無効。
+    """
+    try:
+        gap = int(ap.get("min_fire_interval_minutes", _MIN_FIRE_INTERVAL_MINUTES))
+    except (TypeError, ValueError):
+        gap = _MIN_FIRE_INTERVAL_MINUTES
+    if gap <= 0:
+        return True
+    now = datetime.now()
+    with _lock:
+        prev = _last_fire_at.get(channel_id)
+        if prev is not None and (now - prev) < timedelta(minutes=gap):
+            elapsed = (now - prev).total_seconds() / 60.0
+            print(
+                f"🛑 Autopilot {channel_id}: 前回発火から {elapsed:.0f}分しか経っていないため "
+                f"スキップ（最小間隔 {gap}分）。スリープ復帰後の一斉発火による連投を防止。"
+            )
+            return False
+        _last_fire_at[channel_id] = now
+    return True
+
 
 class AutopilotConfig(BaseModel):
     enabled: bool = False
@@ -393,7 +441,11 @@ def _refresh_channel_job(channel_id: str) -> None:
                 id=jid,
                 args=[channel_id, target_hm if lead > 0 else None],
                 replace_existing=True,
-                misfire_grace_time=3600,
+                # 1時間だと、スリープ復帰時に直前1時間ぶんの未発火ジョブが全部
+                # まとめて発火して連投になる（2026-08-17 の 09:27〜09:28 に4本）。
+                # publish_lead_minutes 運用では「公開時刻を過ぎてから生成開始」しても
+                # 予約公開が成立しないので、リード時間の範囲内に収める。
+                misfire_grace_time=_misfire_grace_seconds(lead),
             )
             job = sch.get_job(jid)
             nxt = job.next_run_time.isoformat() if job and job.next_run_time else "?"
@@ -581,17 +633,26 @@ def _run_clip_autopilot(channel_id: str) -> None:
     threading.Thread(target=_work, name=f"clip-autopilot-{channel_id}", daemon=True).start()
 
 
-def _run_autopilot(channel_id: str, target_hm: Optional[str] = None) -> None:
+def _run_autopilot(
+    channel_id: str,
+    target_hm: Optional[str] = None,
+    skip_burst_guard: bool = False,
+) -> None:
     """スケジュール発火: テーマ取得 → シナリオ生成 → キュー投入 → 自動公開フラグ
 
     Args:
         target_hm: "HH:MM" (JST)。指定時はこの時刻ちょうどに公開されるよう
             YouTube の予約公開を使う（publish_lead_minutes 運用）。
             None なら従来通り生成完了時点で即公開。
+        skip_burst_guard: 連投ガードを無視する。手動の run-now 専用。
     """
     fired_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"🤖 Autopilot fired for {channel_id} at {fired_at} JST")
-    if (_load_autopilot(channel_id).get("gen_type") or "") == CLIP_GEN_TYPE:
+    ap_now = _load_autopilot(channel_id)
+    # スリープ復帰後に未発火ジョブがまとめて発火して連投になるのを防ぐ。
+    if not skip_burst_guard and not _burst_guard_ok(channel_id, ap_now):
+        return
+    if (ap_now.get("gen_type") or "") == CLIP_GEN_TYPE:
         _run_clip_autopilot(channel_id)
         return
     # 投稿前に「今のスロットが推奨スロットと比べて極端に低い」場合は推奨スロットに移行。
@@ -883,5 +944,8 @@ async def run_now(channel_id: str, _=Depends(require_session)) -> Dict[str, str]
     cm = _state.get("channel_manager")
     if cm is None or cm.get(channel_id) is None:
         raise HTTPException(status_code=404, detail="Channel not found")
-    threading.Thread(target=_run_autopilot, args=(channel_id,), daemon=True).start()
+    # 手動実行は意図的な発火なので連投ガードを適用しない。
+    threading.Thread(
+        target=_run_autopilot, args=(channel_id, None, True), daemon=True
+    ).start()
     return {"status": "triggered"}
