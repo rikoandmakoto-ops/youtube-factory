@@ -204,6 +204,13 @@ export default function ChannelYoutubeConnect({
       ? `${window.location.origin}/oauth/youtube/callback`
       : 'http://localhost:3000/oauth/youtube/callback';
 
+  // 連携ボタンを押せない理由。無言で disabled にすると原因が分からない
+  const connectBlockedReason = !status.google_libs_installed
+    ? 'Google API ライブラリが未インストールのため連携できません'
+    : !status.client_configured
+    ? 'OAuth クライアント情報（Client ID / Secret）が未登録のため連携できません。上のフォームに入力して保存してください'
+    : null;
+
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-2 text-sm">
@@ -333,6 +340,12 @@ export default function ChannelYoutubeConnect({
         <div className="flex items-center justify-between text-xs text-slate-500">
           <span>
             OAuth クライアント: <code>{status.client_id_preview}</code>
+            {status.client_inherited_from && (
+              <span className="ml-1 text-slate-400">
+                （<code>{status.client_inherited_from}</code> のものを流用中。
+                連携するとこのチャンネルにも保存されます）
+              </span>
+            )}
           </span>
           <button
             type="button"
@@ -349,11 +362,8 @@ export default function ChannelYoutubeConnect({
           <button
             type="button"
             onClick={startAuth}
-            disabled={
-              !status.client_configured ||
-              authBusy ||
-              !status.google_libs_installed
-            }
+            disabled={connectBlockedReason !== null || authBusy}
+            title={connectBlockedReason ?? undefined}
             className="btn-primary flex-1"
           >
             {authBusy ? '認証中…' : '🔗 YouTube と連携する'}
@@ -368,6 +378,10 @@ export default function ChannelYoutubeConnect({
           </button>
         )}
       </div>
+
+      {!status.connected && connectBlockedReason && (
+        <p className="text-xs text-amber-400">⚠️ {connectBlockedReason}</p>
+      )}
 
       {error && (
         <p

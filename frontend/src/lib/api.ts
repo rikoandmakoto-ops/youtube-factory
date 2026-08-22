@@ -501,6 +501,8 @@ export type YoutubeStatus = {
   account_email: string | null;
   scopes: string[];
   client_configured: boolean;
+  /** 自チャンネルに未登録で、他チャンネルのクライアントを流用している場合その channel_id */
+  client_inherited_from?: string | null;
   client_id_preview: string;
   google_libs_installed: boolean;
   crypto_installed: boolean;

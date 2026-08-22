@@ -377,28 +377,72 @@ def _save_legacy_settings(s: Dict[str, Any]) -> None:
     )
 
 
+def _own_oauth_client(channel_id: str) -> Optional[Dict[str, str]]:
+    """そのチャンネル自身に登録された client_id/client_secret（継承なし）。"""
+    if not channel_id:
+        return None
+    conn = _ensure_db()
+    try:
+        row = conn.execute(
+            "SELECT client_data FROM oauth_clients WHERE channel_id = ?",
+            (channel_id,),
+        ).fetchone()
+    finally:
+        conn.close()
+    if not row:
+        return None
+    try:
+        d = json.loads(_decrypt(row[0]))
+        if d.get("client_id") and d.get("client_secret"):
+            return {"client_id": d["client_id"], "client_secret": d["client_secret"]}
+    except Exception:
+        pass
+    return None
+
+
+def _inherited_oauth_client(exclude_channel_id: str = "") -> Optional[Dict[str, str]]:
+    """他チャンネルに登録済みのクライアントを流用する。
+
+    OAuth クライアントは GCP プロジェクト単位のもので、チャンネル単位ではない。
+    実際この運用では全チャンネルが同一の client_id を使っており、チャンネルごとに
+    違うのは「どの Google アカウントで認可するか」だけ。にもかかわらず未登録の
+    チャンネルは client_configured=False になり、UI の「YouTube と連携する」
+    ボタンが disabled のままで**押せない**（新規チャンネル追加時に必ず踏む）。
+
+    そこで登録済みのクライアントを最後の手段として流用する。redirect_uri は
+    オリジン単位でチャンネルに依存しないので、そのまま認可フローを通せる。
+    """
+    conn = _ensure_db()
+    try:
+        rows = conn.execute(
+            "SELECT channel_id, client_data FROM oauth_clients "
+            "ORDER BY updated_at DESC, channel_id ASC"
+        ).fetchall()
+    finally:
+        conn.close()
+    for ch, blob in rows:
+        if ch == exclude_channel_id:
+            continue
+        try:
+            d = json.loads(_decrypt(blob))
+            if d.get("client_id") and d.get("client_secret"):
+                return {
+                    "client_id": d["client_id"],
+                    "client_secret": d["client_secret"],
+                    "_inherited_from": ch,
+                }
+        except Exception:
+            continue
+    return None
+
+
 def get_oauth_client_for(channel_id: str) -> Optional[Dict[str, str]]:
     """チャンネル別 client_id/client_secret を取得。
-    未設定時はレガシー（環境変数 / 設定ファイル）にフォールバック。"""
-    if channel_id:
-        conn = _ensure_db()
-        try:
-            row = conn.execute(
-                "SELECT client_data FROM oauth_clients WHERE channel_id = ?",
-                (channel_id,),
-            ).fetchone()
-        finally:
-            conn.close()
-        if row:
-            try:
-                d = json.loads(_decrypt(row[0]))
-                if d.get("client_id") and d.get("client_secret"):
-                    return {
-                        "client_id": d["client_id"],
-                        "client_secret": d["client_secret"],
-                    }
-            except Exception:
-                pass
+    未設定時はレガシー（環境変数 / 設定ファイル）→ 他チャンネルの流用の順に
+    フォールバックする。"""
+    own = _own_oauth_client(channel_id)
+    if own:
+        return own
     # レガシー（環境変数 / 設定ファイル）
     cid = os.environ.get("YOUTUBE_CLIENT_ID", "").strip()
     csec = os.environ.get("YOUTUBE_CLIENT_SECRET", "").strip()
@@ -409,7 +453,8 @@ def get_oauth_client_for(channel_id: str) -> Optional[Dict[str, str]]:
     csec = s.get("youtube_client_secret", "")
     if cid and csec:
         return {"client_id": cid, "client_secret": csec}
-    return None
+    # 他チャンネル登録済みのクライアントを流用（新規チャンネル救済）
+    return _inherited_oauth_client(exclude_channel_id=channel_id)
 
 
 def set_oauth_client_for(channel_id: str, client_id: str, client_secret: str) -> None:
@@ -553,6 +598,13 @@ def exchange_code_for(channel_id: str, state: str, code: str) -> Dict[str, Any]:
         youtube_channel_id=acc.get("youtube_channel_id"),
         youtube_channel_name=acc.get("youtube_channel_name"),
     )
+    # 流用したクライアントで認可が通ったら、そのチャンネル自身にも保存しておく。
+    # 流用元を「連携解除」されるとクライアント行ごと消えるため、依存を残さない。
+    if creds.client_id and creds.client_secret and not _own_oauth_client(target_channel):
+        try:
+            set_oauth_client_for(target_channel, creds.client_id, creds.client_secret)
+        except Exception:
+            pass
     return {
         "connected": True,
         "channel_id": target_channel,
@@ -615,6 +667,7 @@ def get_status_for(channel_id: str) -> Dict[str, Any]:
         "youtube_channel_name": d.get("_youtube_channel_name") if d else None,
         "scopes": d.get("scopes", []) if d else [],
         "client_configured": cfg is not None,
+        "client_inherited_from": cfg.get("_inherited_from") if cfg else None,
         "client_id_preview": (
             f"{cfg['client_id'][:12]}...{cfg['client_id'][-12:]}"
             if cfg and len(cfg["client_id"]) > 24
