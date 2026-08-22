@@ -6,4 +6,7 @@
  */
 
 export const SESSION_COOKIE = 'ytf_session';
-export const SESSION_MAX_AGE = 60 * 60 * 24 * 7; // 7 days
+
+// Cookie の寿命はバックエンドが返す expires_in を優先する。これはその
+// フォールバック値で、JWT 側の既定（SESSION_TTL_DAYS、既定 90 日）に合わせてある。
+export const SESSION_MAX_AGE = 60 * 60 * 24 * 90; // 90 days

@@ -66,7 +66,28 @@ except ImportError:
 
 
 JWT_ALG = "HS256"
-JWT_TTL_SECONDS = 60 * 60 * 24 * 7  # 7 days
+
+# 管理画面は単一ユーザーのパスワード認証。7日だと毎週再ログインが要るので
+# 既定を 90 日にしてある。`.env` の SESSION_TTL_DAYS で上書き可（1〜365 日）。
+# 全セッションを失効させたいときは JWT_SECRET をローテートする。
+_DEFAULT_TTL_DAYS = 90
+_MAX_TTL_DAYS = 365
+
+
+def _jwt_ttl_seconds() -> int:
+    raw = os.environ.get("SESSION_TTL_DAYS", "").strip()
+    days = _DEFAULT_TTL_DAYS
+    if raw:
+        try:
+            days = int(float(raw))
+        except ValueError:
+            days = _DEFAULT_TTL_DAYS
+    days = max(1, min(days, _MAX_TTL_DAYS))
+    return 60 * 60 * 24 * days
+
+
+# 後方互換（既存の import 先向け）。実際の TTL は _jwt_ttl_seconds() が返す。
+JWT_TTL_SECONDS = 60 * 60 * 24 * _DEFAULT_TTL_DAYS
 
 
 def _jwt_secret() -> str:
@@ -119,10 +140,11 @@ def _create_token(subject: str = "user") -> tuple[str, int]:
             detail="PyJWT がインストールされていません。`pip install PyJWT`",
         )
     now = int(time.time())
-    exp = now + JWT_TTL_SECONDS
+    ttl = _jwt_ttl_seconds()
+    exp = now + ttl
     payload = {"sub": subject, "iat": now, "exp": exp}
     token = jwt.encode(payload, _jwt_secret(), algorithm=JWT_ALG)
-    return token, JWT_TTL_SECONDS
+    return token, ttl
 
 
 def _verify_token(token: str) -> Dict[str, Any]:
