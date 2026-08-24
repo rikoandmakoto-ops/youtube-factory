@@ -493,6 +493,8 @@ def on_generation_complete(job) -> None:
                 category_id=ch.get_category() if ch else "27",
                 publish_at=main_publish_at,
             )
+            # タイトル固有のタグは _start_single_short_publish 内で
+            # 実タイトル確定後に _with_title_tags で足される
         else:
             _send_event_notification(
                 "error",
@@ -569,7 +571,11 @@ def on_generation_complete(job) -> None:
     delay = int(publish_settings.get("short_delay_minutes") or 10)
     template = publish_settings.get("short_description_template")
     # 検索用の広いタグセット（video_format.youtube.default_tags + defaults.hashtags）
-    tags = ch.get_upload_tags() if ch else []
+    # ＋ タイトル由来の固有名詞（ロングテール検索流入用）
+    tags = _with_title_tags(
+        ch.get_upload_tags() if ch else [],
+        main_d.get("title") or job.title,
+    )
     category_id = ch.get_category() if ch else "27"
 
     threading.Thread(
@@ -786,6 +792,37 @@ def _post_auto_comment(
     )
 
 
+def _with_title_tags(tags: Optional[List[str]], title: Optional[str]) -> List[str]:
+    """チャンネル共通タグの末尾に、その動画固有の固有名詞タグを足す。
+
+    2026-08-23 実測: 全動画がチャンネル共通の 15〜17 個の同一タグだけで
+    投稿されており（450文字のタグ枠に対して実使用は 90〜110 文字）、
+    SCP番号・ポケモン名・妖怪名といったロングテール検索語が 1 つも
+    タグに載っていなかった。各チャンネルの title_style は「固有名を必ず
+    出す（検索性が高い）」と指示しているので、その固有名をタグにも渡す。
+    """
+    base = [str(t).lstrip("#＃").strip() for t in (tags or [])]
+    base = [t for t in base if t]
+    seen = {t.lower() for t in base}
+    try:
+        from pipeline.hashtag_optimizer import _extract_title_keywords
+        for kw in _extract_title_keywords(title or "", max_keywords=6):
+            if kw.lower() not in seen:
+                seen.add(kw.lower())
+                base.append(kw)
+    except Exception:
+        pass
+    # YouTube のタグ合計は 500 文字上限。余裕をみて 450 で打ち切る。
+    out: List[str] = []
+    total = 0
+    for t in base:
+        if total + len(t) + 1 > 450:
+            break
+        out.append(t)
+        total += len(t) + 1
+    return out
+
+
 def _start_single_short_publish(
     *,
     job,
@@ -818,12 +855,13 @@ def _start_single_short_publish(
 
     def _do():
         try:
+            _title = short_d.get("title") or (job.title + "【ショート】")
             res = pair_pub._upload_one(
                 youtube,
                 video_path=short_video,
-                title=short_d.get("title") or (job.title + "【ショート】"),
+                title=_title,
                 description=short_d.get("body") or "",
-                tags=[t.lstrip("#") for t in (tags or [])],
+                tags=_with_title_tags(tags, _title),
                 category_id=category_id or "27",
                 privacy=privacy,
                 is_short=True,

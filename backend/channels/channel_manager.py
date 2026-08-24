@@ -162,12 +162,20 @@ class ChannelProfile:
         extra: Optional[List[str]] = None,
         is_short: bool = False,
         max_chars: int = 450,
+        title: Optional[str] = None,
     ) -> List[str]:
         """videos.insert の snippet.tags に渡すタグ列。
 
         検索用の広いセット（video_format.youtube.default_tags）と表示用の
         少数（defaults.hashtags）をマージする。以前は defaults.hashtags だけを
         使っていたため 4〜6 個しかタグが付かず、default_tags が死に設定だった。
+
+        `title` を渡すと、その動画固有の固有名詞（SCP番号・ポケモン名・妖怪名
+        など）をタグ末尾に足す。2026-08-23 時点では全動画がチャンネル共通の
+        15〜17 個の同一タグだけで投稿されており（450文字の枠に対し実使用は
+        90〜110文字）、ロングテール検索に一切引っかかっていなかった。
+        各チャンネルの title_style が「固有名を必ず出す（検索性が高い）」と
+        指定しているのに、その固有名がタグ側に渡っていなかった。
 
         YouTube のタグは合計 500 文字が上限（区切り文字込み）なので余裕をみて
         450 文字で打ち切る。'#' は除去（タグに含めると検索対象がずれる）。
@@ -176,9 +184,17 @@ class ChannelProfile:
         hash_tags = list(self.get_hashtags() or [])
         head = ["Shorts"] if is_short else []
 
+        title_tags: List[str] = []
+        if title:
+            try:
+                from pipeline.hashtag_optimizer import _extract_title_keywords
+                title_tags = _extract_title_keywords(title, max_keywords=6)
+            except Exception:
+                title_tags = []
+
         ordered: List[str] = []
         seen = set()
-        for tag in head + vf_tags + hash_tags + list(extra or []):
+        for tag in head + vf_tags + hash_tags + list(extra or []) + title_tags:
             t = str(tag or "").lstrip("#＃").strip()
             if not t or t.lower() in seen:
                 continue

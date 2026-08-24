@@ -222,7 +222,10 @@ def run_for(channel_id: str) -> dict:
         print(f"  {k}: {v}")
 
     short_video = Path(out.get("short") or "")
-    short_thumb = Path(out.get("short_thumbnail") or "")
+    # monologue / clip 系はショート専用サムネを作らないので short_thumbnail が無い。
+    # Path("") は "." （＝カレントディレクトリ）になり exists() を通ってしまうため、
+    # アップローダに "." が渡って「Is a directory」で失敗する。無い場合は None。
+    short_thumb = Path(out["short_thumbnail"]) if out.get("short_thumbnail") else None
     if not short_video.exists():
         return {"error": f"short video not found: {short_video}", "output_dir": out.get("output_dir")}
 
@@ -239,8 +242,9 @@ def run_for(channel_id: str) -> dict:
         "short_title": final_short_title,
         "short_description": short_desc_body,
         "short_video": str(short_video),
-        "short_thumbnail": str(short_thumb) if short_thumb.exists() else None,
-        "tags": ch.get_upload_tags(is_short=True) or None,
+        "short_thumbnail": str(short_thumb) if (short_thumb and short_thumb.exists()) else None,
+        # タイトル由来の固有名詞もタグに載せる（ロングテール検索流入用）
+        "tags": ch.get_upload_tags(is_short=True, title=final_short_title) or None,
         "category_id": ch.video_format.youtube.default_category or ch.get_category() or "24",
         "privacy": PRIVACY,
         "upload": None,
@@ -258,7 +262,7 @@ def run_for(channel_id: str) -> dict:
             title=final_short_title,
             description=short_desc_body,
             tags=meta["tags"],
-            thumbnail_path=str(short_thumb) if short_thumb.exists() else None,
+            thumbnail_path=str(short_thumb) if (short_thumb and short_thumb.exists()) else None,
             privacy=PRIVACY,
             category_id=meta["category_id"],
             is_short=True,

@@ -191,7 +191,14 @@ class TestBurstGuard(unittest.TestCase):
 
 class TestChannelShortFormats(unittest.TestCase):
     def test_short_channels_target_the_sweet_spot(self):
-        """ショート専用チャンネルの想定尺が 30〜45秒に収まること。"""
+        """ショート専用チャンネルの想定尺が 25〜45秒に収まること。
+
+        下限は当初 29.0 秒だったが、2026-08-23 の実測（維持率45〜70%の動画で
+        推定尺26.0秒の短い側が 1本あたり登録者 0.838、推定尺35.8秒の長い側が
+        0.632 = 1.33倍）を受けて各チャンネルの total_chars_min を短縮したため、
+        テスト側の下限もそれに合わせる。現在の設定値は
+        daily-science 240字 = 27.0秒、scp-lab 230字 = 25.8秒。
+        """
         for path in sorted(DATA_CHANNELS.glob("*.json")):
             conf = json.loads(path.read_text())
             ap = conf.get("autopilot") or {}
@@ -203,7 +210,7 @@ class TestChannelShortFormats(unittest.TestCase):
             lo = sf.get("total_chars_min")
             hi = sf.get("total_chars_max")
             # VOICEVOX 1.3x の実効読み上げ速度 ≒ 8.9 字/秒
-            self.assertGreaterEqual(lo / 8.9, 29.0, f"{path.stem} が短すぎる")
+            self.assertGreaterEqual(lo / 8.9, 25.0, f"{path.stem} が短すぎる")
             self.assertLessEqual(hi / 8.9, 45.0, f"{path.stem} が長すぎる")
 
 
