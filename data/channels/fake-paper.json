@@ -1,0 +1,713 @@
+{
+  "id": "fake-paper",
+  "name": "虚構論文チャンネル",
+  "concept": "「ありそうでない」嘘の学術論文を、大真面目な学術誌の体裁で紹介するショート専門チャンネル。架空の掲載誌・架空の研究チーム・具体的なサンプル数と数字で徹底的にもっともらしく積み上げ、最後の一行で『この論文は存在しない』と自らネタばらしして落とす。信じさせる快感ではなく、信じかけた自分に笑う快感を作る。",
+  "short_series_name": "架空論文ファイル：",
+  "style": "yukkuri",
+  "youtube_channel_id": "UCU-awiWyxa1KUN_IIeuJ3kg",
+  "image_mode": "collect",
+  "image_collect": {
+    "provider": "auto",
+    "safe_search": true,
+    "license_filter": "cc",
+    "max_per_query": 5,
+    "attribution_template": "出典: {source}",
+    "mix_strategy": "heuristic"
+  },
+  "voice_style": {
+    "tone": "学会発表の口調で嘘を読み上げる。声色は最後まで大真面目で、面白がったり茶化したりしない。真顔で読み上げるほど落差が効くので、内容がどれだけ荒唐無稽でも語り口は淡々と保つ。ネタばらしの一行だけ、ほんの少しだけ声を緩める",
+    "narrator_persona": "架空の学術誌『月刊 虚構論文』の編集長。世界中の『存在しない論文』を収集・査読している。数字と手法にはうるさく、どんな与太話でもサンプル数と有意水準を添えて語る。嘘であることを隠さないが、最後の一行まで明かさない",
+    "opening_hooks": [
+      "「猫のゴロゴロ音は骨折を治す」——そういう論文がある",
+      "この研究、被験者3,214人で検証されている",
+      "査読を通ったことになっている論文を一本紹介する",
+      "結論から言う。この現象には有意差が出ている"
+    ],
+    "forbidden": [
+      "SCP",
+      "財団",
+      "収容",
+      "[REDACTED]",
+      "DATA EXPUNGED",
+      "シロ",
+      "クロ",
+      "リコ",
+      "マコト",
+      "理子",
+      "ヒカリ",
+      "ソラ",
+      "ミナモ",
+      "ケンタ",
+      "ユイ",
+      "ゴロー",
+      "ハーバード",
+      "東京大学",
+      "Nature",
+      "Science",
+      "ネイチャー",
+      "サイエンス誌"
+    ],
+    "style_rules": [
+      "1行目は必ず論文の主張そのものを断定で置く3秒フック。「〜という論文がある」「〜が証明された」型。挨拶・自己紹介・テーマ予告から入るのは禁止。",
+      "2行目で架空の掲載誌名と研究機関名を出して権威づけする。実在の学術誌・実在の大学・実在の研究者の名前は絶対に使わない。すべて架空の固有名詞で作る。",
+      "もっともらしさは『具体的な数字』で作る。サンプル数・追跡期間・変化率・有意水準のうち最低2つを必ず本文に入れる。ぼかした言い方をしない。",
+      "6行目で必ずネタばらしをする。『この論文は存在しない』『掲載誌ごと架空である』と明示的に言い切る。ほのめかしや余韻で終わらせるのは禁止。",
+      "ネタばらしの後に『でも本当かもしれない』と揺り戻すのは禁止。嘘だと分かる状態で動画を終える。",
+      "笑いは真顔から生まれる。語り口で笑わせにいかない。誇張表現や感嘆符の多用をしない。",
+      "実在する現象・実在の研究に一言でも触れる場合は、『こちらは実在する』と架空パートとはっきり区別して語る。",
+      "リスナー役(タクミ)は素直に信じ込み、ネタばらしで『え、嘘なんですか!?』と裏切られる役に徹する。最初から疑ってかかると落差が消える。",
+      "誰かが読んで行動に移せてしまう嘘（治療法・投薬・自己診断・危険行為）は作らない。驚きで止める。",
+      "締めは『こういう論文が、まだ何本もある』系でアーカイブへ誘導する。教訓や説教で締めない。"
+    ],
+    "speech_signature": "編集長(ミサキ)は学術発表の丁寧語（『〜が報告されています』『〜という結論に達しています』）。数字を読むときだけ少し強く区切る。リスナー役(タクミ)は素直な常体〜丁寧語混じりで食いつき、ネタばらしで崩れる（『え』『待ってください』）",
+    "pacing": "1〜5行目は一定のテンポで淡々と積み上げる。ここで緩急をつけると嘘くささが出る。6行目のネタばらしで初めて一拍置き、テンポを落とす。この一拍だけが演出上の落差になる",
+    "signature_phrases": [
+      "——という論文があります",
+      "有意差が確認されています",
+      "被験者は",
+      "なお、この論文は存在しません",
+      "掲載誌ごと架空です"
+    ],
+    "reaction_style": "前半のリアクションは『それは知らなかった』『そんなことあるんですか』の素直な感心。6行目のネタばらしで『え、嘘なんですか!?』『信じてました』へ一気に崩れる。この崩れ方がオチそのものなので省略しない",
+    "banned_phrasing": [
+      "実在の学術誌名・実在の大学名・実在の研究者名",
+      "『これは本当かもしれない』とネタばらしを揺り戻す表現",
+      "医療・健康の助言と受け取れる断定（治る・効く・飲むべき）",
+      "ネットスラング（草・ワイ・お前ら）",
+      "感嘆符の連打・煽り口調"
+    ],
+    "hook_patterns": [
+      {
+        "name": "断定型",
+        "template": "「〇〇は〇〇である」— 論文の結論を1行でそのまま置く",
+        "example": "猫のゴロゴロ音は、骨折の治りを早める"
+      },
+      {
+        "name": "数字型",
+        "template": "被験者数や変化率を先に出して、研究の存在感から入る",
+        "example": "被験者3,214人。この研究には、はっきりした有意差が出ている"
+      },
+      {
+        "name": "査読型",
+        "template": "「査読を通った」という形式的な権威づけから入る",
+        "example": "査読を通ったことになっている論文を、一本紹介します"
+      },
+      {
+        "name": "日常違和感型",
+        "template": "誰もが心当たりのある現象を『研究されている』と提示する",
+        "example": "月曜日だけ味が薄く感じる。あれ、研究されています"
+      },
+      {
+        "name": "反直感型",
+        "template": "常識と逆の結論を先に置いて引っかける",
+        "example": "深海魚を殺しているのは、水圧ではありませんでした"
+      }
+    ]
+  },
+  "theme_priority": {
+    "label": "架空論文・嘘の研究結果・もっともらしいフィクション",
+    "categories": [
+      "【最優先】日常の違和感を『研究した』架空論文: 誰にでも心当たりのある現象に、架空のサンプル数と変化率を付けて論文化する（共感の入口が広く、オチの落差が最大になる）",
+      "動物の意外な能力を扱った架空論文: 猫・カラス・ペンギン・深海魚など、実在の生き物に嘘の実験結果を付ける",
+      "人間の心理・錯覚・判断を扱った架空論文: 行動経済学・認知心理っぽい体裁で嘘の実験を組む",
+      "食べ物・料理・食感を扱った架空論文: 身近な食材に嘘の測定結果を付ける",
+      "時間・空間・物理の体感を扱った架空論文: 満員電車・エレベーター・行列など、体感のズレを数値化した体で語る"
+    ],
+    "required_count_per_batch": 5,
+    "good_examples": [
+      "猫のゴロゴロ音は骨折を治す — 被験者217人で確認された『振動治癒』",
+      "サメの血は人間に輸血できる — 1974年に一度だけ試された記録",
+      "月曜日だけ味覚が0.4%鈍る — 3,214人を52週間追跡した結果",
+      "図書館の本は借りられた回数だけ重くなる — 12年分の計測データ",
+      "傘をさすと人は7%礼儀正しくなる — 雨の日の交差点で撮られた1万件",
+      "深海魚は水圧ではなく孤独で死ぬ — 単独飼育と群飼育の生存日数の差"
+    ],
+    "avoid_categories": [
+      "医療・薬・治療法・自己診断など、信じて行動すると健康被害が出る題材",
+      "ワクチン・感染症・災害・事故・防災など、社会的な誤情報になりうる題材",
+      "実在の研究者・実在の大学・実在の学術誌を名指しした架空の研究",
+      "実在の企業・団体・個人を主語にした嘘",
+      "特定の属性への偏見を『研究結果』の形で裏付けてしまう題材",
+      "投資・金銭・法律の判断に使える嘘",
+      "オチが弱く、ネタばらししても『で？』で終わる題材"
+    ],
+    "title_style": "タイトルは論文の結論を断定で1行、必要なら『 — 』の後に手法や数字の補足を置く（例:『月曜日だけ味覚が0.4%鈍る — 3,214人を52週間追跡した結果』）。数字は具体的な桁で書く。疑問形・煽り・『衝撃』などの空語は使わない。オチ（嘘であること）はタイトルに書かない。シリーズ連番プレフィックス『架空論文ファイル：』が自動で付くため、タイトル側に『架空』『嘘』と重ねて書かない。",
+    "viral_hooks": "断定された嘘の結論 / 具体的すぎるサンプル数 / 常識と逆の結果 / 誰にでも心当たりのある現象 / 最後の一行で全部ひっくり返るネタばらし",
+    "series_lineup": [
+      "日常の違和感を研究したシリーズ",
+      "動物の嘘の能力シリーズ",
+      "存在しない実験シリーズ",
+      "架空の追跡調査シリーズ",
+      "撤回された架空論文シリーズ"
+    ],
+    "title_power_words": [
+      "証明された",
+      "有意差",
+      "被験者",
+      "追跡",
+      "検証",
+      "報告"
+    ]
+  },
+  "theme_blacklist": [],
+  "genre_blacklist": [],
+  "competitors": [],
+  "theme_seeds": [
+    {
+      "title": "猫のゴロゴロ音は骨折を治す",
+      "angle": "架空の整形外科誌に載った『振動治癒』論文。被験者数と回復日数の差を数字で積む"
+    },
+    {
+      "title": "サメの血は人間に輸血できる",
+      "angle": "1974年に一度だけ試されたという架空の記録。血液型の一致という嘘の根拠で押す"
+    },
+    {
+      "title": "月曜日だけ味覚が0.4%鈍る",
+      "angle": "3,214人を52週間追跡したという架空の大規模調査。曜日別の味覚テストの体裁"
+    },
+    {
+      "title": "図書館の本は借りられた回数だけ重くなる",
+      "angle": "12年分の重量計測データという体で、蔵書の質量変化を語る"
+    },
+    {
+      "title": "傘をさすと人は7%礼儀正しくなる",
+      "angle": "雨の日の交差点で撮影された1万件の映像解析という架空の行動研究"
+    },
+    {
+      "title": "深海魚は水圧ではなく孤独で死ぬ",
+      "angle": "単独飼育と群飼育で生存日数を比較したという架空の水族館共同研究"
+    },
+    {
+      "title": "靴下を履いて寝ると夢の解像度が上がる",
+      "angle": "起床直後の夢の描写語数を数えたという架空の睡眠研究"
+    },
+    {
+      "title": "カラスは人の顔より車のナンバーを覚えている",
+      "angle": "同一個体に対する識別テストの正答率を比較した架空の認知研究"
+    },
+    {
+      "title": "観葉植物はWi-Fiの通信量に合わせて成長速度を変える",
+      "angle": "ルーター横と別室で育てた株の成長差という架空の対照実験"
+    },
+    {
+      "title": "3秒以上見つめられたパンは早く硬くなる",
+      "angle": "視線の有無で水分蒸発量を測ったという架空の食品工学論文"
+    },
+    {
+      "title": "満員電車では時間が遅れて感じる、その遅れは0.0003秒",
+      "angle": "体感時間のズレを秒単位で測ったという架空の知覚心理研究"
+    },
+    {
+      "title": "ペンギンは必ず左側から仲間を見分ける",
+      "angle": "左右どちらから接近したかで識別成功率が変わるという架空の観察記録"
+    },
+    {
+      "title": "自販機の当たり音を聞いた人はその日の判断が甘くなる",
+      "angle": "音を聞いた群と聞かなかった群で意思決定テストを比較した架空の実験"
+    },
+    {
+      "title": "コンビニのBGMを0.9倍速にすると客単価が上がる",
+      "angle": "架空のチェーンで実施された再生速度別の売上比較という体裁"
+    },
+    {
+      "title": "蚊は血液型ではなく『その日の後悔の量』で刺す相手を選ぶ",
+      "angle": "後悔の自己申告スコアと刺傷回数の相関という荒唐無稽な架空研究"
+    },
+    {
+      "title": "折り紙を7回以上折れた人は空間認識テストで必ず満点を取る",
+      "angle": "折り回数と空間認識スコアの完全相関という、出来すぎた架空データ"
+    }
+  ],
+  "characters": {
+    "ミサキ編集長": {
+      "side": "left",
+      "speaker_id": 29,
+      "dir": "misaki",
+      "text_color": [
+        255,
+        205,
+        110
+      ],
+      "expressions": [
+        "normal",
+        "happy",
+        "surprise",
+        "think"
+      ],
+      "thumb_dir": "misaki",
+      "thumb_expression": "normal",
+      "role": "解説役（架空学術誌『月刊 虚構論文』の編集長。どんな与太話も真顔で読み上げる）",
+      "appearance": "young Japanese anime woman named Misaki with neat dark navy bob hair and amber eyes, wearing a deep navy blazer over a mustard-yellow shirt with a thin ribbon tie, holding a stack of stapled paper documents, calm composed expression with a faint knowing smile, chibi-style with a big round head and big eyes, clean academic explainer character, no white or near-white clothing"
+    },
+    "タクミ": {
+      "side": "right",
+      "speaker_id": 94,
+      "dir": "takumi",
+      "text_color": [
+        150,
+        225,
+        255
+      ],
+      "expressions": [
+        "normal",
+        "happy",
+        "surprise",
+        "sad"
+      ],
+      "thumb_dir": "takumi",
+      "thumb_expression": "surprise",
+      "role": "リスナー役（何でも素直に信じてしまう院生。毎回オチで裏切られる）",
+      "appearance": "young Japanese anime man named Takumi with messy dark-green hair and round glasses, wearing a forest-green knit sweater over a charcoal shirt with a canvas shoulder bag, wide-eyed astonished expression, chibi-style with a big round head and big eyes, clean academic explainer character, no white or near-white clothing"
+    }
+  },
+  "publish_settings": {
+    "auto_publish": false,
+    "default_privacy": "public",
+    "short_delay_minutes": 10,
+    "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}",
+    "auto_comment": {
+      "enabled": true,
+      "question": "この論文、どこで嘘だと気づきました？次に査読してほしいテーマをコメントで！"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "架空論文ファイル｜ショート全集",
+      "main": "虚構論文チャンネル｜本編",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "『こんな論文があったら読みたい』をコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
+    }
+  },
+  "description_template": {
+    "main_intro": "【フィクション】この動画で紹介する論文・研究機関・学術誌はすべて架空のものです。実在しません。\n\n{title}について、ミサキ編集長とタクミが大真面目に読み解きます。\n『ありそうでない』嘘の学術論文を、架空の掲載誌・架空の研究チーム・具体的な数字で組み立て、最後に自らネタばらしするエンタメ企画です。\n実在の研究・実在の研究者・実在の学術誌とは一切関係ありません。医療・健康に関する判断には使用しないでください。\nぜひ最後までご視聴ください！",
+    "main_hashtags": "#架空論文 #フィクション #ゆっくり解説 #雑学 #嘘研究",
+    "short_hashtags": "#shorts #架空論文 #フィクション #ゆっくり解説 #雑学"
+  },
+  "thumbnail_template": {
+    "badge_text": "架空論文",
+    "badge_color": [
+      30,
+      58,
+      110
+    ],
+    "hook_color": [
+      255,
+      196,
+      60
+    ],
+    "subtitle_color": [
+      205,
+      225,
+      255
+    ],
+    "style_hint": "学術誌の表紙をポップに崩した『それっぽい論文』サムネ。\n- ベースは濃紺〜インディゴのグラデーション。差し色に琥珀色（アンバー）とオフホワイト。ホラー調にも、ネオンだらけのYouTube的ギラつきにもしない。\n- background_concept には『academic journal cover, navy blue gradient, printed paper texture, graph lines, data chart, index cards, subtle grid』のような学術・印刷物のキーワードを含める。『gore / horror / neon cyberpunk』は禁止。\n- line1（白）は論文の主語（例:『猫のゴロゴロ音は』）。line2（琥珀・強調）が結論（『骨折を治す』）でインパクト最大化。\n- line3_badge は濃紺で『架空論文』固定。これは誤解防止も兼ねるので必ず入れる。sub_text には被験者数や追跡期間など具体的な数字を入れて『研究っぽさ』を出す。\n- 被写体は中央〜上部。実在の学術誌の表紙・ロゴ・実在の研究者の写真は絶対に使わない。グラフ・数式・付箋・クリップ留めの紙束など、匿名の学術モチーフで作る。\n- 下部は文字用に空けるが、印刷物の余白のように明るめのトーンを残す。\n- 文字は極太＋濃紺の強い縁取り（3-5px）。折れ線グラフや罫線を薄く重ねて『資料』の質感を出す。",
+    "short_bg_gradient": {
+      "top": [
+        14,
+        32,
+        64
+      ],
+      "bottom": [
+        6,
+        14,
+        30
+      ],
+      "orb": [
+        45,
+        90,
+        170
+      ],
+      "dot": [
+        255,
+        196,
+        60
+      ]
+    }
+  },
+  "defaults": {
+    "speed": 1.3,
+    "target_duration": 720,
+    "bg_type": "static",
+    "bg_path": null,
+    "short_bg_query": "academic journal paper documents desk library research data chart",
+    "short_overlay_style": {
+      "opening": {
+        "font_size_max": 104,
+        "font_size_min": 72,
+        "stroke_width": 8,
+        "glow_stroke_extra": 7,
+        "dim_alpha": 130,
+        "punch_start_scale": 0.88,
+        "accent_color": [
+          255,
+          196,
+          60
+        ]
+      },
+      "hook_caption": {
+        "accent_color": [
+          255,
+          214,
+          120
+        ],
+        "band_alpha": 180,
+        "y_center": 1000
+      },
+      "subtitle": {
+        "font_size": 62,
+        "line_gap": 84,
+        "stroke_width": 7,
+        "stroke_color": [
+          8,
+          14,
+          32
+        ],
+        "color": [
+          240,
+          244,
+          255
+        ],
+        "glow_color": [
+          40,
+          78,
+          150
+        ],
+        "glow_extra": 5
+      }
+    },
+    "use_illustrations": true,
+    "hashtags": [
+      "#架空論文",
+      "#フィクション",
+      "#ゆっくり解説",
+      "#雑学",
+      "#嘘研究"
+    ],
+    "short_title_hashtags": "#shorts #架空論文 #フィクション",
+    "category": "24",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の論文はこちら →",
+      "sub": "毎日更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
+  },
+  "content_policy": {
+    "tone": "淡々・学術的（学会発表の口調で嘘を読み上げる）",
+    "age_rating": "general",
+    "cta_position": "after_hook",
+    "cta_style": "calm",
+    "guidelines": [
+      "全編フィクションであることを、動画本編（ネタばらしの行）・概要欄冒頭・サムネのバッジ『架空論文』の3箇所で必ず明示する",
+      "論文名・掲載誌名・研究機関名・研究者名はすべて架空のものを新規に作る。実在の名称は一切使わない",
+      "もっともらしさはサンプル数・追跡期間・変化率など『具体的な数字』で作る。数字も当然すべて架空",
+      "視聴者が読んで行動に移せてしまう嘘（治療法・投薬・自己診断・危険行為の推奨）は作らない",
+      "実在する現象や実在の研究に触れる場合は、『こちらは実在する』と架空パートと明確に区別する",
+      "ネタばらしは必ず動画内で完結させる。『続きは次回』でオチを引っ張らない"
+    ],
+    "avoid": [
+      "医療・薬・治療法・自己診断など、健康被害につながりうる嘘",
+      "ワクチン・感染症・災害・防災など、社会的な誤情報になりうる嘘",
+      "実在の学術誌名・実在の大学名・実在の研究者名・実在の企業名の使用",
+      "特定の属性への偏見を『研究結果』の形で補強する内容",
+      "投資・金銭・法律の判断材料になりうる嘘",
+      "ネタばらしを省略して、嘘を嘘と分からないまま終える構成"
+    ],
+    "cliffhanger": {
+      "enabled": false,
+      "wording": ""
+    },
+    "short_end_line": {
+      "omit_related_video": true,
+      "wording": "存在しない論文は、まだ何本もアーカイブにある"
+    }
+  },
+  "video_format": {
+    "layout": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "char_canvas_w_ratio": 0.418,
+      "char_y_offset": 130,
+      "char_x_inset_ratio": 0.15,
+      "speaker_glow": true,
+      "nonspeaker_opacity": 0.5,
+      "text_box_height_ratio": 0.2,
+      "text_box_opacity": 185,
+      "text_font_size": 42,
+      "text_stroke_width": 3,
+      "text_line_spacing": 4,
+      "text_margin_x": 60,
+      "illustration_size": 360,
+      "illustration_interval": 30
+    },
+    "colors": {
+      "bg_color": [
+        16,
+        26,
+        52,
+        255
+      ],
+      "text_box_color": [
+        12,
+        20,
+        42
+      ],
+      "text_stroke_color": [
+        0,
+        0,
+        0
+      ]
+    },
+    "audio": {
+      "speed": 1.3,
+      "pause_between": 0.3,
+      "bgm_volume": 0.3,
+      "bgm_path": null
+    },
+    "illustration_style": {
+      "style": "clean",
+      "format": "landscape",
+      "art_style": "clean academic figure illustration in the style of a printed journal plate — deep navy ink lines on warm off-white paper, restrained amber and slate-blue accents, flat vector shapes with a subtle paper grain. Precise and serious, never cartoonish and never photorealistic.",
+      "background": "off-white printed paper background with faint grid lines and a thin navy rule frame, journal-plate layout",
+      "include_characters": false,
+      "frame_style": "journal-plate-border",
+      "extra_prompt": "Compose like Figure 1 of a research paper: a labelled diagram or a simple line/bar chart with Japanese axis labels, pointer lines, and a small caption strip. Use invented, anonymous institution names only — never reproduce a real journal cover, real logo, or a real person's likeness. Keep the mood dry and factual; the humour comes from the content, not the drawing.",
+      "allow_text_labels": true,
+      "allow_frame": true
+    },
+    "branding": {
+      "watermark_text": "虚構論文",
+      "cta_style": "calm",
+      "source_credit": "※本動画はフィクションです / 登場する論文・学術誌・研究機関はすべて架空のものです",
+      "source_credit_opacity": 160,
+      "source_credit_font_size": 20,
+      "source_credit_font_size_short": 26
+    },
+    "output": {
+      "target_duration": 720,
+      "gen_type": "short",
+      "bg_type": "static",
+      "bg_path": null,
+      "use_illustrations": true
+    },
+    "youtube": {
+      "channel_id": "UCU-awiWyxa1KUN_IIeuJ3kg",
+      "default_tags": [
+        "架空論文",
+        "フィクション",
+        "ゆっくり解説",
+        "雑学",
+        "嘘研究",
+        "作り話",
+        "研究",
+        "論文",
+        "モキュメンタリー",
+        "面白い話",
+        "ショート"
+      ],
+      "default_category": "24",
+      "privacy_status": "private",
+      "upload_schedule": null
+    },
+    "analytics": {
+      "enabled": true,
+      "fetch_retention_for": 5,
+      "performance_threshold": {
+        "min_ctr": 4,
+        "min_retention": 40,
+        "min_views_7d": 1000
+      }
+    },
+    "short_illustrations": {
+      "enabled": true,
+      "illustration_method": "dalle",
+      "max_count": 2,
+      "card_style": "textbook",
+      "card_label": "架空論文",
+      "card_accent": [
+        30,
+        58,
+        110
+      ],
+      "card_x": 64,
+      "card_y": 250,
+      "card_w": 952,
+      "card_h": 430,
+      "char_cy": 905,
+      "char_icon_d": 210,
+      "image_mode": "generate"
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "clean",
+      "allow_shake": false,
+      "allow_flash": false,
+      "allow_pixelate": false,
+      "allow_glitch": false,
+      "allow_tint": true,
+      "shake_max_px": 4,
+      "zoom_max": 0.05,
+      "transition_duration": 0.35,
+      "short_beat_zoom": true,
+      "beat_interval": 2,
+      "beat_zoom_max": 0.04
+    },
+    "persona": {
+      "age_group": "20代",
+      "gender": "男女",
+      "interest_categories": [
+        "雑学",
+        "エンタメ",
+        "science"
+      ],
+      "content_depth": "ライト"
+    }
+  },
+  "autopilot": {
+    "enabled": false,
+    "schedule": {
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "hour": 19,
+      "minute": 30,
+      "times": [
+        {
+          "hour": 19,
+          "minute": 30,
+          "days_of_week": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "hour": 13,
+          "minute": 15,
+          "days_of_week": [
+            0,
+            6
+          ]
+        }
+      ]
+    },
+    "duration_minutes": 12,
+    "gen_type": "short",
+    "publish_lead_minutes": 45,
+    "theme_queue": [
+      {
+        "id": "a6486dca",
+        "title": "ブラックラグーンの実在性：海の悪党たちの科学的考察",
+        "angle": "架空の研究で、ブラックラグーンのキャラクターが実在する可能性を探る。",
+        "priority": "high",
+        "source": "trend_scanner"
+      },
+      {
+        "id": "5869df15",
+        "title": "AIデスゲームの心理学：仮想の結果を考察",
+        "angle": "AIが参加するデスゲームの結果を架空のデータで分析。"
+      },
+      {
+        "id": "a4967673",
+        "title": "半額ケーキの心理学：人はなぜ安く感じるのか？",
+        "angle": "不二家の半額ケーキを題材に、価格心理学を虚構のデータで解説。"
+      },
+      {
+        "id": "7c1a4f02",
+        "title": "エレベーターで見上げる人は降りる階を間違えにくい",
+        "angle": "視線の向きと降車ミス率を対応させた架空の行動観察"
+      },
+      {
+        "id": "1b93de55",
+        "title": "冷蔵庫の中身は開けた回数だけ甘くなる",
+        "angle": "開閉回数と糖度の相関という架空の食品保存研究"
+      },
+      {
+        "id": "a4e7702c",
+        "title": "行列の最後尾に並んだ人は待ち時間を9%短く感じる",
+        "angle": "並ぶ位置別に体感時間を測ったという架空の知覚実験"
+      },
+      {
+        "id": "56d0c8a9",
+        "title": "金魚は飼い主の帰宅時刻を覚えている",
+        "angle": "帰宅30分前から水面付近に集まるという架空の飼育記録"
+      },
+      {
+        "id": "e83b21f7",
+        "title": "手書きのメモは印刷より2.3倍紛失されにくい",
+        "angle": "1年間の紛失率を追跡したという架空のオフィス調査"
+      },
+      {
+        "id": "0f5c96b1",
+        "title": "雨の匂いを強く感じる人ほど寝つきが早い",
+        "angle": "嗅覚感度と入眠潜時の相関という架空の睡眠研究"
+      },
+      {
+        "id": "c27ea4d8",
+        "title": "階段は下りるときだけ段数を数え間違える",
+        "angle": "上りと下りで計数誤差を比較した架空の認知実験"
+      },
+      {
+        "id": "9a6f30be",
+        "title": "使い古した消しゴムほど字が濃く消える",
+        "angle": "摩耗面積と消去率の関係という架空の材料工学論文"
+      },
+      {
+        "id": "3d8b17c4",
+        "title": "早口で話す人は自分の声を0.2秒遅れて聞いている",
+        "angle": "発話速度と自己聴取遅延という架空の音響心理研究"
+      },
+      {
+        "id": "b5e94a06",
+        "title": "満席の映画館では観客の瞬きが同期する",
+        "angle": "座席密度別に瞬き間隔を測ったという架空の集団行動研究"
+      }
+    ],
+    "auto_optimize_schedule": true
+  },
+  "short_format": {
+    "line_count": 7,
+    "line_chars": "1〜6行目は30〜40字（目標35字）、7行目のみ45〜60字を許容",
+    "line_min_chars": 20,
+    "line_max_chars": 60,
+    "total_chars_min": 235,
+    "total_chars_max": 275,
+    "structure": [
+      "1行目=**3秒フック(最重要)**: 論文の結論そのものを断定で置き、『——という論文があります』で締める。この言い回しは冒頭フック判定に使われるので必ず含める。挨拶・前置き・テーマ予告は禁止。",
+      "2行目=**論文の出典（架空）**: 架空の掲載誌名と巻号、架空の研究機関名を出して権威づける。実在の学術誌・大学・研究者名は絶対に使わない。",
+      "3行目=**研究の概要・手法（転換ワード必須）**: 『しかも』『さらに』『ところが』のいずれかで始め、何をどう調べたかを1行で述べる。被験者数・追跡期間・比較群のうち最低1つを具体的な数字で入れる。この転換ワードは中盤フック判定に使われるので省略しない。",
+      "4行目=**衝撃の結果①**: 主要な結果を数字付きの断定で置く（『〇%』『〇日早い』『有意差が出ています』）。ここが一番もっともらしい行。",
+      "5行目=**追い打ち**: 『しかも』『さらに』で二つ目の結果を重ね、信じ込ませ切る。ここまで一切ネタばらししない。",
+      "6行目=**オチ＝ネタばらし(必須)**: 『なお、この論文は存在しません』『掲載誌ごと架空です』と明示的に言い切る。ほのめかしで終わらせない。ネタばらし後に『でも本当かも』と揺り戻すのも禁止。1行目の題材語（例:『論文』『ゴロゴロ音』）を1語以上再登場させてループ感を作る。",
+      "7行目=**登録CTA**: 『存在しない論文は、まだ何本もアーカイブにあります。チャンネル登録で次の一本を』。『チャンネル登録』の語をそのまま含める。"
+    ],
+    "extra_rules": [
+      "1〜5行目は徹底して真顔で積み上げる。笑わせにいかない・煽らない・感嘆符を連打しない。",
+      "もっともらしさは具体的な数字で作る。サンプル数・追跡期間・変化率・有意水準のうち最低2つを本文全体で使う。",
+      "固有名詞（学術誌名・研究機関名・研究者名）はすべて架空のものを新規に作る。実在の名称は一切使わない。",
+      "1行目に『という論文があります』、3行目の頭に転換ワード、7行目に『チャンネル登録』——この3つは構造バリデータが直接見ているので必ず入れる。",
+      "6行目のネタばらしは省略・後回し・次回送りにしない。1本の中で必ず完結させる。",
+      "解説役(ミサキ編集長)は学術発表の丁寧語。リスナー役(タクミ)は素直に信じ込み、6行目で崩れる。",
+      "読んだ人が行動に移せてしまう嘘（治療法・投薬・自己診断・危険行為）は作らない。"
+    ]
+  }
+}
