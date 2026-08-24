@@ -14,6 +14,7 @@ SeriesEngine (Phase E-2) — バズった動画を検出 → Claude で続編パ
 from __future__ import annotations
 
 import json
+import re
 import time
 import uuid
 from pathlib import Path
@@ -184,25 +185,46 @@ def _suggest_with_claude(
     return out
 
 
+def _core_topic(viral_title: str, limit: int = 26) -> str:
+    """元動画タイトルから「話題の核」だけを取り出す。
+
+    生タイトルをそのまま [:30] で切ると 【ショート】やハッシュタグを巻き込み、
+    さらに文の途中でぶつ切りになる（例:「顔を奪う怪談はなぜ生まれた」）。
+    装飾を落としたうえで、区切り文字の位置で自然に切る。
+    """
+    t = viral_title or "前回動画"
+    t = re.sub(r"【[^】]*】|\[[^\]]*\]", "", t)          # 【ショート】等
+    t = re.sub(r"[#＃][^\s#＃]*", "", t)                  # ハッシュタグ
+    t = re.sub(r"^(一口SCP|1分[^：:]*|架空論文ファイル|30秒スレまとめ)\s*[：:]\s*", "", t)
+    t = t.strip(" 　—-・")
+    if not t:
+        return "前回動画"
+    if len(t) <= limit:
+        return t
+    # 区切り記号の直前で切る（見つからなければ限界長で切る）
+    cut = max((t.rfind(ch, 0, limit + 1) for ch in "？?！!、。—・「」 　"), default=-1)
+    return (t[:cut] if cut >= 8 else t[:limit]).strip(" 　—-・「」、")
+
+
 def _fallback_suggestions(viral_title: str) -> List[Dict[str, str]]:
     """Claude 未設定時の決め打ち 3 候補。"""
-    base = viral_title or "前回動画"
+    base = _core_topic(viral_title)
     return [
         {
             "series_type": "deep_dive",
-            "title": f"なぜ「{base[:30]}」はこうなるのか？徹底深堀り",
+            "title": f"「{base}」に隠された本当の理由を掘り下げる",
             "angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
             "rationale": "深堀り型はリテンションが高い",
         },
         {
             "series_type": "contrast",
-            "title": f"「{base[:25]}」とは逆のパターンを比較してみた",
+            "title": f"「{base}」とは逆のパターンを比較してみた",
             "angle": "対比で違いを際立たせる構成",
             "rationale": "比較型は CTR が安定して取りやすい",
         },
         {
             "series_type": "application",
-            "title": f"「{base[:25]}」の知識を日常で使う方法",
+            "title": f"「{base}」の知識を日常で使う方法",
             "angle": "応用先を具体例で紹介",
             "rationale": "応用型は再生時間が伸びやすい",
         },
