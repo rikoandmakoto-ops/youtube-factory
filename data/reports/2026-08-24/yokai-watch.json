@@ -1,0 +1,4426 @@
+{
+  "channel_id": "yokai-watch",
+  "channel_name": "ゆっくり妖怪ラボ",
+  "sync": {
+    "ok": true,
+    "data": {
+      "channel_id": "yokai-watch",
+      "overview": {
+        "channel_id": "yokai-watch",
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "videos": {
+        "channel_id": "yokai-watch",
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "reach": {
+        "channel_id": "yokai-watch",
+        "ok": false,
+        "ingest": {
+          "ok": false,
+          "error": "OAuth 未連携または googleapiclient 未導入"
+        }
+      },
+      "retention": [],
+      "synced_at": 1787580124,
+      "comments": [],
+      "pdca": {
+        "scenario_evaluation": {
+          "channel_id": "yokai-watch",
+          "evaluated": 0,
+          "skipped": 29,
+          "results": [
+            {
+              "video_id": "ZMuU_kP5u1I",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "ZMuU_kP5u1I",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1787493972,
+                "hook_strength": 7.5,
+                "specificity": 5.97,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 7.32,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/1分妖怪ファイル_11ぬらりひょんに隠された3つの秘密あなたの知る総大将はいつ生まれた.json",
+                "video_title": "1分妖怪ファイル #11：🔍ぬらりひょんに隠された3つの秘密、あなたの知る総大将はいつ生まれた？【ショート】"
+              }
+            },
+            {
+              "video_id": "417bhedobU8",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "417bhedobU8",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1787407798,
+                "hook_strength": 6.5,
+                "specificity": 4.36,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.75,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/なぜ猫又の尻尾は2つ実は老猫を恐れた江戸の記録が怖い.json",
+                "video_title": "なぜ猫又の尻尾は2つ？実は老猫を恐れた江戸の記録が怖い【ショート】"
+              }
+            },
+            {
+              "video_id": "q2s-VS1PHQs",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "q2s-VS1PHQs",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1787322310,
+                "hook_strength": 7.5,
+                "specificity": 5.29,
+                "pacing": 10.0,
+                "cta_effectiveness": 6.0,
+                "wording_quality": 6.0,
+                "overall": 7.03,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/雪女が3日黙れと言う実は誰にも言えない恐怖があった.json",
+                "video_title": "雪女が3日黙れと言う…実は誰にも言えない恐怖があった【ショート】"
+              }
+            },
+            {
+              "video_id": "ajouUdcWYic",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "ajouUdcWYic",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1787322310,
+                "hook_strength": 6.5,
+                "specificity": 5.15,
+                "pacing": 10.0,
+                "cta_effectiveness": 6.0,
+                "wording_quality": 6.0,
+                "overall": 6.75,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/3秒で消える天狗と山伏神隠しの本当の理由.json",
+                "video_title": "3秒で消える？天狗と山伏、神隠しの本当の理由【ショート】"
+              }
+            },
+            {
+              "video_id": "eP-GMocrfHk",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "eP-GMocrfHk",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1787322310,
+                "hook_strength": 6.5,
+                "specificity": 4.48,
+                "pacing": 10.0,
+                "cta_effectiveness": 6.0,
+                "wording_quality": 6.0,
+                "overall": 6.62,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/1分妖怪ファイル_7かまいたちの元ネタが怖すぎる_あなたが3秒で傷つく理由は.json",
+                "video_title": "1分妖怪ファイル #7：😰かまいたちの元ネタが怖すぎる — あなたが3秒で傷つく理由は？【ショート】"
+              }
+            },
+            {
+              "video_id": "81DW_QyWZMs",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "81DW_QyWZMs",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1787322310,
+                "hook_strength": 7.5,
+                "specificity": 5.41,
+                "pacing": 10.0,
+                "cta_effectiveness": 6.0,
+                "wording_quality": 6.0,
+                "overall": 7.06,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/ぬらりひょんの正体が怖すぎる_なぜあなたの家に勝手に上がるのか.json",
+                "video_title": "ぬらりひょんの正体が怖すぎる — なぜあなたの家に勝手に上がるのか【ショート】"
+              }
+            },
+            {
+              "video_id": "l68CzSRJ6WU",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "l68CzSRJ6WU",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1787061858,
+                "hook_strength": 6.5,
+                "specificity": 4.03,
+                "pacing": 10.0,
+                "cta_effectiveness": 6.0,
+                "wording_quality": 6.0,
+                "overall": 6.53,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/海坊主の正体が怖すぎる_船を沈める巨大な影は何だったのか.json",
+                "video_title": "海坊主の正体が怖すぎる — 船を沈める巨大な影は何だったのか【ショート】"
+              }
+            },
+            {
+              "video_id": "PwguGFatdz4",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "PwguGFatdz4",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1786975460,
+                "hook_strength": 6.5,
+                "specificity": 4.26,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.73,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/鬼の元ネタが怖すぎる_鬼門から来る者を家に入れてはいけない理由.json",
+                "video_title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】"
+              }
+            },
+            {
+              "video_id": "HzC1vh3j1Qo",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "HzC1vh3j1Qo",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1786802588,
+                "hook_strength": 6.5,
+                "specificity": 4.66,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 6.96,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/花子さんの正体_なぜ学校のトイレで三番目なのか.json",
+                "video_title": "花子さんの正体 — なぜ学校のトイレで「三番目」なのか【ショート】"
+              }
+            },
+            {
+              "video_id": "2DYLiwh42V8",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "2DYLiwh42V8",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1786716237,
+                "hook_strength": 7.5,
+                "specificity": 5.18,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 7.16,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/ふじのやまの元ネタが怖すぎる_山に入った人が戻れなくなる禁忌.json",
+                "video_title": "ふじのやまの元ネタが怖すぎる — 山に入った人が戻れなくなる禁忌【ショート】"
+              }
+            },
+            {
+              "video_id": "mykin3cF95Y",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "mykin3cF95Y",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1786629847,
+                "hook_strength": 7.5,
+                "specificity": 5.33,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 7.19,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/のっぺらぼうの正体が怖すぎる_顔を奪う怪談はなぜ生まれたのか.json",
+                "video_title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】"
+              }
+            },
+            {
+              "video_id": "ZqI9LA9O0Ko",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "ZqI9LA9O0Ko",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1786543419,
+                "hook_strength": 5.0,
+                "specificity": 4.0,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.3,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/河童はなぜか子どもだけを呼ぶ水辺に残された声の本当の理由.json",
+                "video_title": "河童はなぜか子どもだけを呼ぶ？水辺に残された「声」の本当の理由【ショート】"
+              }
+            },
+            {
+              "video_id": "GUeTTH-huzE",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "GUeTTH-huzE",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1786457015,
+                "hook_strength": 6.0,
+                "specificity": 4.1,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.57,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/ねちがえるなぜか夜だけ首を狙う金縛りの奥にある古い怪異.json",
+                "video_title": "ねちがえる、なぜか夜だけ首を狙う？金縛りの奥にある古い怪異【ショート】"
+              }
+            },
+            {
+              "video_id": "8JLBD8J8RwU",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "8JLBD8J8RwU",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1786370630,
+                "hook_strength": 6.5,
+                "specificity": 4.85,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.85,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/なぜツチノコは家に入る隠された秘密.json",
+                "video_title": "なぜツチノコは家に入る？隠された秘密【ショート】"
+              }
+            },
+            {
+              "video_id": "frxNzntmiF4",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "frxNzntmiF4",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1786284884,
+                "hook_strength": 5.0,
+                "specificity": 6.0,
+                "pacing": 4.0,
+                "cta_effectiveness": 5.0,
+                "wording_quality": 7.0,
+                "overall": 5.0,
+                "weak_sections": [
+                  {
+                    "section": "フック",
+                    "issue": "冒頭3行がすべて説明文で構成されており、視聴者が「続きを見たい」と感じる感情的な引きが弱い。ショート動画として最初の2秒で離脱を防ぐ数字・映像的ワードが皆無。",
+                    "drop_percent": 30
+                  },
+                  {
+                    "section": "展開1",
+                    "issue": "付喪神の説明が学術的な注釈（「通説ではない」「断定できない」）に終始し、怖さや驚きの感情ピークが一度も来ない。13行のうち情報の密度が均一で緩急がなく中だるみを起こしやすい。",
+                    "drop_percent": 20
+                  },
+                  {
+                    "section": "CTA / クロージング",
+                    "issue": "安全注意・免責・次回予告・登録促進・怖い締めが6行に詰め込まれ、視聴者が何に反応すればよいか分散している。CTAの焦点が定まらず行動喚起力が低い。",
+                    "drop_percent": 15
+                  }
+                ],
+                "improvement_suggestions": [
+                  "フック1行目を『あなたも冬の夜、コンビニ前の湯気を見て…』という抽象的な問いかけから、『妖怪ウォッチのおでんじん、実は江戸の夜店で記録された「食べ物が人を待つ」怪談と構造が完全に一致する』のように結論の断片を先出しして好奇心を刺激する形に書き換える",
+                  "フック3行目の『最初に結論の輪郭だけ置きます』を削除し、代わりに『今夜は3つの史料だけで、なぜ可愛い具材が夜道の恐怖になるかを証明します』と数字（3つ）と動詞（証明）を入れて視聴継続の約束を明示する",
+                  "展開1の付喪神説明（『百年経てば必ず妖怪化する説は後の通説』）の直後に、ケンタの台詞として『じゃあ昨日買ったおでんは100年後に動き出すってこと？』のような極端な具体例を挟み、笑いと恐怖の緩急を作る",
+                  "展開2の湯気・視覚の説明部分に『人間の目は暗所で輪郭を補完するとき、確率70%以上で「顔」のパターンを優先選択する（パレイドリア研究の知見）』のように擬似数値または研究名を1つ入れ、説得力と具体性を同時に上げる",
+                  "CTA冒頭のミナモ台詞を『可愛い具材の姿は安心への扉に見えます』という詩的な抽象文から、『今夜コンビニのおでんを見たら、大根の白い断面が自分を見返していないか確認してみてください』という視聴者の行動を直接指定する一文に差し替え、記憶への定着と次回視聴動機を同時に作る",
+                  "CTA内の安全注意・免責・登録促進の3要素を1行ずつ独立させず、『登録して次回の猫又編も見る→その夜、布団の足元を確認したくなる→それが怪談の正しい楽しみ方です』という因果の流れに再構成し、登録行動を怪談体験の一部として位置づける"
+                ],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/なぜおでんじんだけ夜道に立つ可愛い具に隠された秘密ショート.json",
+                "video_title": "なぜおでんじんだけ夜道に立つ？可愛い具に隠された秘密【ショート】【ショート】"
+              }
+            },
+            {
+              "video_id": "WP03hoeoxCk",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "1分妖怪ファイル：その『設定』、江戸時代には存在しなかった昭和の妖怪本が作り上げた『総大将』の正体#ぬらりひょんが『妖怪の総大将』なのは、なぜか誰も疑わなかったのか #shorts #ゆっくり解説"
+            },
+            {
+              "video_id": "052IlnxRdwM",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "052IlnxRdwM",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1786284916,
+                "hook_strength": 7.0,
+                "specificity": 8.0,
+                "pacing": 6.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 8.0,
+                "overall": 7.0,
+                "weak_sections": [
+                  {
+                    "section": "フック",
+                    "issue": "冒頭の1685年という数字は良いが、ミナモの「しばらく本を閉じること」という文が途中で切れており、視聴者が文意を追えないまま次のセリフに移る。ショート動画では0〜3秒で離脱が決まるため、この不完全文が致命的なテンポ破壊になっている。",
+                    "drop_percent": 20
+                  },
+                  {
+                    "section": "導入",
+                    "issue": "「この世とあの世の境目」という概念説明が抽象的なまま続き、具体的な地名・件数・記録数が示されないため、視聴者が『本当にそういう記録があるのか』と疑念を持ちやすい。また8行と行数が多く、ショート尺では情報密度が過剰になっている。",
+                    "drop_percent": 15
+                  },
+                  {
+                    "section": "CTA / クロージング",
+                    "issue": "次回予告（猫又・加賀藩の首輪封印）の情報量が豊富で興味を引くが、チャンネル登録・高評価の呼びかけが定型文すぎて、直前の怖い余韻を完全に消してしまっている。感情の落差が大きく、CTAの直前に視聴者が離脱しやすい構造になっている。",
+                    "drop_percent": 12
+                  }
+                ],
+                "improvement_suggestions": [
+                  "フック1行目の末尾「しばらく本を閉じること」を完全な文に修正し、『…しばらく本を閉じた。1685年の記録に、現代のゲームキャラと同じ名前が出てくるとは思っていなかった』のように結論まで言い切る。途中切れの文はショートでは致命的な離脱要因になる。",
+                  "導入セクションの『この世とあの世の境目とされた場所に集中している』という抽象表現を、『江戸期の怪談集に残る目撃談42件のうち、38件が神社・寺・辻・橋の袂のいずれかで起きている』のように件数と場所の内訳を数値で示す。数字がないと視聴者は『本当に？』と疑って離脱する。",
+                  "展開2の『東北から九州まで複数の地域に独立して残っている』という表現を、『青森・岩手・島根・熊本の4県で、互いに交流のない村落が同じ『見られると死ぬ』という記録を残している』のように具体的な地名と件数に置き換える。『複数』という曖昧語は信頼性を下げる。",
+                  "展開3/オチの『子どもには害をなすという記録がほとんど見当たらない』という部分に、『調査した江戸〜明治期の目撃談127件のうち、被害者が未成年だったケースは記録上ゼロ件』のような具体数を付加する。これにより視聴者の『本当に？』という疑問を先回りして潰せる。",
+                  "CTAの『チャンネル登録をしてくれると、次の動画を見逃さずに済む』という定型文を削除し、直前の怖い余韻を活かして『旧暦の二月八日が何日後か、今すぐ調べてみてほしい。次の動画は猫又の封印記録だ。加賀藩が藩主の家紋で猫を封じた理由は、一つ目小僧と同じ構造を持っている』のように次回予告とCTAを恐怖の文脈で一体化させる。",
+                  "フックのケンタのセリフ『ゲームであのちっちゃくてちょっととぼけた顔してる一つ目小僧』という描写を、『妖怪ウォッチで一つ目小僧のレベルが最大99まで上がるのを見たとき』のようにゲーム内の具体的な仕様・数値に置き換える。ターゲット視聴者のゲーム知識に刺さる具体性を持たせることで共感速度が上がる。"
+                ],
+                "comment_feedback": [
+                  {
+                    "comment": "（コメントデータなし）",
+                    "section": "全体",
+                    "action": "コメントデータが取得できていないため、次回公開後に『一つ目小僧を実際に知っていた地域の人はいますか』『事八日の行事を今でもやっている地域はありますか』という問いかけをCTA直前に1文追加し、コメントを能動的に誘導する設計に変更する。視聴者参加型の問いはコメント数を増やし、アルゴリズム評価にも直結する。"
+                  }
+                ],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/一つ目小僧なぜ江戸の文献では会った者が帰らないと書かれているのか.json",
+                "video_title": "一つ目小僧、なぜ江戸の文献では『会った者が帰らない』と書かれているのか【ショート】"
+              }
+            },
+            {
+              "video_id": "kzR6F_147Ho",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "kzR6F_147Ho",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1786284951,
+                "hook_strength": 6.0,
+                "specificity": 7.0,
+                "pacing": 5.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 7.0,
+                "overall": 6.0,
+                "weak_sections": [
+                  {
+                    "section": "フック",
+                    "issue": "冒頭1行目「根本からズレていることに気づいてしまった」が抽象的で、何がどうズレているか視聴者が0秒でイメージできない。ショート動画として最初の3秒で離脱を防ぐ具体的な衝撃ワードが欠けている。",
+                    "drop_percent": 20
+                  },
+                  {
+                    "section": "導入",
+                    "issue": "「格の定義は一切書かれていない」という事実の繰り返しが4〜5行続き、新情報が出ないまま尺を消費している。ショートとして致命的なテンポ低下が起きており、視聴者が『で、何が怖いの？』と感じて離脱するリスクが高い。",
+                    "drop_percent": 18
+                  },
+                  {
+                    "section": "展開2",
+                    "issue": "「鳥山石燕が1776年に描いた『今昔画図続百鬼』」という出典が展開1でも展開2でも全く同じ文言で2回登場しており、既視感から集中力が切れやすい。また『格を誤認することは最も避』で文章が途切れており、視聴者の没入が壊れる。",
+                    "drop_percent": 12
+                  },
+                  {
+                    "section": "CTA / クロージング",
+                    "issue": "次回予告（ジバニャン/猫又）は興味喚起として機能しているが、チャンネル登録を促す言葉がケンタの自然な台詞に埋め込まれており、能動的な行動喚起として弱い。視聴者が登録ボタンを押す動機の最後の一押しが足りない。",
+                    "drop_percent": 8
+                  }
+                ],
+                "improvement_suggestions": [
+                  "フック1行目を『妖怪ウォッチのSランク妖怪、元になった伝承を文献で調べ直したら』から『江戸時代の記録に「祟りをなす」と書かれた妖怪が、ゲームではBランク。つまりSランクの基準は強さじゃない』に書き換え、冒頭3秒で具体的な矛盾を提示して離脱を防ぐ。",
+                  "導入セクションで『格の定義が書かれていない』という説明が3回繰り返されているため、2回目以降を削除し、代わりに『初代ゲーム発売から2014年まで10年間、公式はこの問いに一度も答えていない』のように年数を使って沈黙の重さを数値化する。",
+                  "展開1と展開2で『鳥山石燕が1776年に刊行した今昔画図続百鬼』という同一フレーズが2回出てくる箇所を、展開2では『同じ石燕の記録に』と短縮し、代わりに『江戸の民衆が本気で恐れた証拠として、当時この本は増刷を重ねた』など新情報を1文追加してテンポを維持する。",
+                  "展開2のミナモ台詞『相手の格を誤認することは最も避』で文章が途切れている箇所を『相手の格を誤認することは、民俗学では最も危険な行為とされている。なぜなら格に見合わない接し方は、相手を怒らせる引き金になるからだ』と完結させ、視聴者の没入を守る。",
+                  "展開3/オチのミナモ台詞『関わった者の話は、ある時点から聞こえなくなった』の直後に、ケンタが『それって、何年前の記録なの？』と具体的な年代を引き出す1行を追加し、伝承の実在感を高めて怖さのピークを作る。",
+                  "CTAセクションのケンタ台詞『登録しとかないと見逃しそうだし』を削除し、代わりにミナモの最終台詞の直後に独立した1行として『このチャンネルでは毎週、ゲームの裏に眠る伝承記録を掘り続けている。次を見逃したくない人は今すぐ登録を』と明示的な命令形CTAを入れ、行動喚起を強化する。"
+                ],
+                "comment_feedback": [
+                  {
+                    "comment": "（ネガティブコメント1件・内容不明）",
+                    "section": "不明",
+                    "action": "コメント原文が取得できていないため断定はできないが、ネガティブ反応が1件ある点を踏まえ、次回シナリオでは冒頭に『これは公式発表ではなく民俗調査員としての考察です』という免責を視覚テロップとして明示し、考察と事実の混同による反発を事前に防ぐ。また展開1〜2で出典（鳥山石燕・1776年）を明記している姿勢は維持しつつ、『ゲームを批判しているのではなく伝承との落差を楽しむ動画』というトーンをフックで先出しして誤解を減らす。"
+                  }
+                ],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/妖怪ウォッチのランクなぜSが最強じゃない妖怪にも付くのか_隠された格付けの本当のところ.json",
+                "video_title": "妖怪ウォッチのランク、なぜSが最強じゃない妖怪にも付くのか　隠された格付けの本当のところ【ショート】"
+              }
+            },
+            {
+              "video_id": "OmP6pu1x1fc",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "OmP6pu1x1fc",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1785938858,
+                "hook_strength": 5.0,
+                "specificity": 4.0,
+                "pacing": 5.0,
+                "cta_effectiveness": 4.0,
+                "wording_quality": 7.0,
+                "overall": 5.0,
+                "weak_sections": [
+                  {
+                    "section": "フック",
+                    "issue": "冒頭の問いかけが「変だと思ったことはありませんか」と抽象的で、視聴者が即座に引き込まれる具体的な驚き・数字・矛盾提示がない。ショート動画として最初の3秒で離脱を防ぐ強度が不足している。",
+                    "drop_percent": 30
+                  },
+                  {
+                    "section": "導入",
+                    "issue": "8行にわたって前提説明が続き、「公式か非公式か」の注釈が早期に入るため、謎の緊張感が削がれる。視聴者が『で、何が怖いの？』と感じる前に離脱するリスクが高い。",
+                    "drop_percent": 20
+                  },
+                  {
+                    "section": "CTA / クロージング",
+                    "issue": "「登録と高評価で」という定型CTAが免責表記と同じ台詞ブロックに埋まっており、視聴者の行動を促す感情的ピークが作れていない。次回予告も情報量が多く印象が薄い。",
+                    "drop_percent": 15
+                  }
+                ],
+                "improvement_suggestions": [
+                  "フック1行目を『あなたもロボニャンを見て〜変だと思ったことはありませんか』から『ロボニャンは2014年のゲームに登場しながら、製造年が一度も公式に明かされていない唯一のキャラクターです』のように、具体的な発売年と「唯一」という限定事実で書き換え、視聴者に即座に「知らなかった」と感じさせる。",
+                  "導入セクション冒頭（ミナモ調査員の1発話目）の『今夜はゲーム内の台詞、公式が出した基本設定、そしてファンによる非公式考察を混ぜずに追います』という方法論説明を削除し、代わりに『ロボニャン2は2015年に登場しましたが、初代ロボニャンが「いつの未来から来たか」はシリーズ全作を通じて一度も明示されていません』のように未解決の具体的空白を先に提示して謎を深める。",
+                  "展開1のケンタの台詞『その空白に、自分の未来を知るロボットが立っているみたいで、急に画面が冷たく見えるよ』は情緒的で良いが、直前のミナモ台詞が『非公式考察です』と冷却しているため感情が乗らない。ミナモの注釈を展開2末尾にまとめて移動し、展開1は謎の積み上げに集中させる構成に変更する。",
+                  "展開2の民俗伝承への言及（『民俗の伝承にも、未来を知る者が村へ現れ〜』）は根拠が曖昧なまま登場し、直後に『公式が示したわけではありません』と自己否定している。この2発話を丸ごと削除し、代わりに『ロボニャンがケータを助けた場面はゲーム内で少なくとも〇回描写されていますが、そのたびに未来の設計図が書き換わるとしたら』のように作中の具体的な場面数を入れて論拠を強化する。",
+                  "CTAセクションの免責表記（『妖怪ウォッチは株式会社レベルファイブの登録商標です〜』）と登録訴求を同一発話に詰め込んでいる箇所を分離し、登録訴求は感情ピークであるケンタの『帰る日時を言わない理由だけは、もう気になって眠れなくなりそうだ』の直後に『同じ疑問を持った人はチャンネル登録で次の調査を待ってください』と1文で挿入し、免責は画面テキストのみに移す。",
+                  "次回予告の『ウィスパーの正体について〜』という告知を、『ウィスパーは公式プロフィールに「記憶を持たない」と書かれているのに、なぜシリーズ全作で過去の出来事を覚えているのか、次回解説します』のように矛盾の核心を1文で示す形に書き換え、予告自体をミニフックとして機能させる。"
+                ],
+                "comment_feedback": [
+                  {
+                    "comment": "（コメントデータなし）",
+                    "section": "全体",
+                    "action": "コメントデータが取得できていないため、次回公開後に『ロボニャンの製造年について知っていることがあれば教えてください』と固定コメントで視聴者に問いかけ、UGC考察をコメント欄で収集した上で次々回シナリオの展開2に組み込む。"
+                  }
+                ],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/なぜロボニャンだけ未来から来た隠された時系列の秘密ショート.json",
+                "video_title": "なぜロボニャンだけ未来から来た？隠された時系列の秘密【ショート】【ショート】"
+              }
+            },
+            {
+              "video_id": "Rmx-FN9VhUE",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "Rmx-FN9VhUE",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1785852544,
+                "hook_strength": 6.0,
+                "specificity": 7.0,
+                "pacing": 6.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 8.0,
+                "overall": 7.0,
+                "weak_sections": [
+                  {
+                    "section": "フック",
+                    "issue": "冒頭1行目『笑えなくなった』は感情的だが抽象的で、何が具体的に怖いのかが伝わらない。ショート動画では0〜2秒で離脱判断が起きるため、数字や固有の事実で即座に好奇心を刺激する必要がある。",
+                    "drop_percent": 30
+                  },
+                  {
+                    "section": "導入",
+                    "issue": "サンスクリット語の正式名称や音訳の説明が続き、テンポが学術講義に近くなっている。ショート視聴者が期待する『驚き→理由→続きが見たい』の流れが崩れ、離脱を招きやすい。",
+                    "drop_percent": 20
+                  },
+                  {
+                    "section": "CTA / クロージング",
+                    "issue": "免責表記（登録商標・非公式）がCTA直前に挟まり、ホラー的な余韻と登録訴求の両方を弱めている。また高評価・登録の呼びかけが1行で終わっており、行動を促す具体的な理由付けが薄い。",
+                    "drop_percent": 10
+                  }
+                ],
+                "improvement_suggestions": [
+                  "フック1行目『この妖怪、元ネタを知ってからは笑えなくなった。』を『妖怪ウォッチのエンマ大王、元ネタの閻魔は紀元前1500年から存在し、死者を「縛って逃がさない」と記録されている。』に書き換え、3500年・縛るという具体ワードで即座に視聴者を引き込む。",
+                  "フック3行目のミナモ調査員の台詞『伝承と作中描写と、ファンの考察の三つを区別しながら』という方法論説明は削除し、代わりに『ゲームでは一切描かれていない、閻魔が持つ「業の鏡」の本当の機能を今から見せる』と結論先出しに書き換えてテンポを上げる。",
+                  "導入セクションの冒頭ミナモ台詞を『まず基本から確認しておこう。仏教における閻魔王の正式名称は…』から『閻魔は死者の舌を抜く前に、まず全行動ログを鏡に映す。その鏡は感情も動機も削除不可で記録している。紀元前1500年から変わっていない仕様だ。』に書き換え、結論→根拠の順に並べ替えてショートのテンポに合わせる。",
+                  "展開2の『嘘をつくと閻魔に舌を抜かれる』の起源不明の説明部分で、『室町時代の説話集にそれに近い記述が見られるが』という曖昧な表現を『室町時代（約600年前）の説話集『沙石集』系の記述が最古候補とされるが、それ以前の記録は現存しない』のように文献名と年数を明記し、信頼性と具体性を同時に高める。",
+                  "CTA直前の免責表記（登録商標・非公式チャンネル説明）を動画説明欄またはエンドカード字幕に移動し、クロージングのホラー余韻を途切れさせないようにする。ミナモの最終台詞『業の鏡は全部映す』から直接『高評価とチャンネル登録を』へ繋ぐ流れに再構成する。",
+                  "次回予告のジバニャン紹介台詞『不気味なほど重なる部分がある』を『百物語評判に記録された猫又の特徴7点のうち、ジバニャンの設定と5点が一致している』のように具体的な一致数を入れ、次回視聴への期待値を数字で担保する。"
+                ],
+                "comment_feedback": [
+                  {
+                    "comment": "（コメントデータなし）",
+                    "section": "全体",
+                    "action": "コメントデータが未収集のため、今後の動画公開後に『元ネタと一番違うと思ったポイントはどこ？』という固定コメントを投稿し、視聴者の関心軸を能動的に収集する。収集したコメントを次回シナリオの展開順序決定に活用する。"
+                  }
+                ],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/妖怪ウォッチのエンマ大王なぜか本物の閻魔と全然違う姿をしている.json",
+                "video_title": "妖怪ウォッチのエンマ大王、なぜか『本物』の閻魔と全然違う姿をしている【ショート】"
+              }
+            },
+            {
+              "video_id": "G3KtohjxPI0",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "G3KtohjxPI0",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1785765773,
+                "hook_strength": 6.5,
+                "specificity": 4.88,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.85,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/なぜオロチはゲームで美化されたヤマタノオロチ伝説の本当は怖い正体.json",
+                "video_title": "なぜオロチはゲームで美化された？ヤマタノオロチ伝説の“本当は怖い”正体【ショート】"
+              }
+            },
+            {
+              "video_id": "724R2jGp97Q",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "724R2jGp97Q",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1785679367,
+                "hook_strength": 6.5,
+                "specificity": 4.56,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 6.94,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/なぜ武士と猫が混ざったブシニャンの本当のルーツが怖すぎる理由.json",
+                "video_title": "なぜ武士と猫が混ざった？ブシニャンの『本当のルーツ』が怖すぎる理由【ショート】"
+              }
+            },
+            {
+              "video_id": "kV2cD0Z9Oek",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "kV2cD0Z9Oek",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1785679368,
+                "hook_strength": 6.5,
+                "specificity": 5.1,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.05,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/ふぶき姫の可愛さはどこから雪女伝承の本当は怖い正体とゲームの落差.json",
+                "video_title": "ふぶき姫の可愛さはどこから？雪女伝承の“本当は怖い”正体とゲームの落差【ショート】"
+              }
+            },
+            {
+              "video_id": "_dcwhzzjxvs",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "_dcwhzzjxvs",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1785679368,
+                "hook_strength": 6.5,
+                "specificity": 4.51,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.78,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/妖怪の名前がダジャレなのはナゼか_名前の裏に隠された秘密.json",
+                "video_title": "1分妖怪ファイル：妖怪の名前がダジャレなのはナゼか?"
+              }
+            },
+            {
+              "video_id": "QZiOHXKbOXI",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "QZiOHXKbOXI",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1785679368,
+                "hook_strength": 6.5,
+                "specificity": 4.51,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.78,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/妖怪の名前がダジャレなのはナゼか_名前の裏に隠された秘密.json",
+                "video_title": "妖怪の名前がダジャレなのはナゼか? 名前の裏に隠された秘密【ショート】"
+              }
+            },
+            {
+              "video_id": "kHukScwckQ0",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "kHukScwckQ0",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1785592958,
+                "hook_strength": 6.5,
+                "specificity": 4.18,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 6.86,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/なぜコマさんの秘密神社の狛犬と田舎の意外なつながり.json",
+                "video_title": "なぜコマさんの秘密？神社の狛犬と田舎の意外なつながり【ショート】"
+              }
+            },
+            {
+              "video_id": "3ZBzfV-o6oM",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "3ZBzfV-o6oM",
+                "channel_id": "yokai-watch",
+                "evaluated_at": 1785506554,
+                "hook_strength": 6.5,
+                "specificity": 4.81,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 6.84,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/yokai-watch/妖怪ウォッチの都市伝説本当のところはどうなの.json",
+                "video_title": "妖怪ウォッチの『都市伝説』、本当のところはどうなの？【ショート】"
+              }
+            },
+            {
+              "video_id": "K2N6Xp0LN9A",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説"
+            },
+            {
+              "video_id": "63ov8l5tqBk",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説"
+            }
+          ],
+          "ran_at": 1787580124
+        },
+        "ab_reconciliation": {
+          "channel_id": "yokai-watch",
+          "reconciled": 15,
+          "items": [
+            {
+              "test_id": "abt_20260823_140636_e19d5b",
+              "status": "reconciled",
+              "matched_video_id": "kHukScwckQ0",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.011299435028248588,
+              "actual_impressions": 177,
+              "age_days": 23.165390627291668
+            },
+            {
+              "test_id": "abt_20260823_140633_9b0eb8",
+              "status": "reconciled",
+              "matched_video_id": "3ZBzfV-o6oM",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.0076045627376425855,
+              "actual_impressions": 263,
+              "age_days": 24.16476565451389
+            },
+            {
+              "test_id": "abt_20260823_140631_4588c9",
+              "status": "reconciled",
+              "matched_video_id": "G3KtohjxPI0",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.005813953488372093,
+              "actual_impressions": 344,
+              "age_days": 21.16299484122685
+            },
+            {
+              "test_id": "abt_20260823_140628_3afda9",
+              "status": "reconciled",
+              "matched_video_id": "QZiOHXKbOXI",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.011976047904191617,
+              "actual_impressions": 167,
+              "age_days": 22.95036755622685
+            },
+            {
+              "test_id": "abt_20260823_140626_607dc7",
+              "status": "reconciled",
+              "matched_video_id": "Rmx-FN9VhUE",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.012903225806451613,
+              "actual_impressions": 775,
+              "age_days": 20.160147673993055
+            },
+            {
+              "test_id": "abt_20260823_140623_23380c",
+              "status": "reconciled",
+              "matched_video_id": "ZqI9LA9O0Ko",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.016216216216216217,
+              "actual_impressions": 185,
+              "age_days": 12.162416214988426
+            },
+            {
+              "test_id": "abt_20260823_140620_2a0931",
+              "status": "reconciled",
+              "matched_video_id": "GUeTTH-huzE",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.011976047904191617,
+              "actual_impressions": 167,
+              "age_days": 13.162242635324073
+            },
+            {
+              "test_id": "abt_20260823_140618_27dd80",
+              "status": "too_young",
+              "age_days": 6.1611431242129635,
+              "matched_video_id": "l68CzSRJ6WU"
+            },
+            {
+              "test_id": "abt_20260823_140615_b72761",
+              "status": "reconciled",
+              "matched_video_id": "8JLBD8J8RwU",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.008771929824561403,
+              "actual_impressions": 114,
+              "age_days": 14.16261303792824
+            },
+            {
+              "test_id": "abt_20260822_141000_778189",
+              "status": "reconciled",
+              "matched_video_id": "8JLBD8J8RwU",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.008771929824561403,
+              "actual_impressions": 114,
+              "age_days": 14.162613054386576
+            },
+            {
+              "test_id": "abt_20260822_141003_c287da",
+              "status": "reconciled",
+              "matched_video_id": "GUeTTH-huzE",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.011976047904191617,
+              "actual_impressions": 167,
+              "age_days": 13.162242853136576
+            },
+            {
+              "test_id": "abt_20260822_141006_218ffe",
+              "status": "reconciled",
+              "matched_video_id": "Rmx-FN9VhUE",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.012903225806451613,
+              "actual_impressions": 775,
+              "age_days": 20.160147978773146
+            },
+            {
+              "test_id": "abt_20260822_141009_90db14",
+              "status": "reconciled",
+              "matched_video_id": "QZiOHXKbOXI",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.011976047904191617,
+              "actual_impressions": 167,
+              "age_days": 22.950367939363424
+            },
+            {
+              "test_id": "abt_20260822_141011_404c25",
+              "status": "reconciled",
+              "matched_video_id": "G3KtohjxPI0",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.005813953488372093,
+              "actual_impressions": 344,
+              "age_days": 21.162995309166668
+            },
+            {
+              "test_id": "abt_20260822_141014_370192",
+              "status": "reconciled",
+              "matched_video_id": "3ZBzfV-o6oM",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.0076045627376425855,
+              "actual_impressions": 263,
+              "age_days": 24.16476618346065
+            },
+            {
+              "test_id": "abt_20260822_141017_72368f",
+              "status": "reconciled",
+              "matched_video_id": "kHukScwckQ0",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.011299435028248588,
+              "actual_impressions": 177,
+              "age_days": 23.165391203946758
+            }
+          ],
+          "ran_at": 1787580124
+        },
+        "improvement_queue": {
+          "channel_id": "yokai-watch",
+          "channel_avg_ctr": 0.02075745775795159,
+          "threshold_ctr": 0.01660596620636127,
+          "threshold_percent": 80.0,
+          "candidates_found": 9,
+          "queued": [
+            {
+              "video_id": "8JLBD8J8RwU",
+              "channel_id": "yokai-watch",
+              "created_at": 1787407800,
+              "updated_at": 1787580127,
+              "status": "pending",
+              "current_title": "なぜツチノコは家に入る？隠された秘密【ショート】",
+              "current_ctr": 0.008771929824561403,
+              "channel_avg_ctr": 0.02075745775795159,
+              "suggested_titles": [
+                "なぜツチノコは家に入る？蛇信仰が語る不吉な前兆【ショート】",
+                "3つの伝承で追うツチノコ｜家に入る蛇の正体【ショート】",
+                "実は山の怪物ではない？ツチノコが潜む「家」の秘密【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "なぜツチノコは家に入る？蛇信仰が語る不吉な前兆【ショート】",
+                  "thumb_copy": [
+                    "家に入る蛇は",
+                    "幸運か不吉か"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "3つの伝承で追うツチノコ｜家に入る蛇の正体【ショート】",
+                  "thumb_copy": [
+                    "蛇が告げる",
+                    "3つの前兆"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は山の怪物ではない？ツチノコが潜む「家」の秘密【ショート】",
+                  "thumb_copy": [
+                    "ツチノコは",
+                    "家にいる？"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.01660596620636127
+            },
+            {
+              "video_id": "l68CzSRJ6WU",
+              "channel_id": "yokai-watch",
+              "created_at": 1787493978,
+              "updated_at": 1787580131,
+              "status": "pending",
+              "current_title": "海坊主の正体が怖すぎる — 船を沈める巨大な影は何だったのか【ショート】",
+              "current_ctr": 0.01639344262295082,
+              "channel_avg_ctr": 0.02075745775795159,
+              "suggested_titles": [
+                "海坊主はなぜ船を沈める？漁村に残る巨大な黒い影の記録【ショート】",
+                "江戸時代から続く海坊主伝承3選｜船を沈めた黒い影【ショート】",
+                "実は丸い妖怪じゃない…海坊主は船を沈める巨大な影だった【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "海坊主はなぜ船を沈める？漁村に残る巨大な黒い影の記録【ショート】",
+                  "thumb_copy": [
+                    "船を沈める影",
+                    "海坊主の正体"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "江戸時代から続く海坊主伝承3選｜船を沈めた黒い影【ショート】",
+                  "thumb_copy": [
+                    "伝承は3つある",
+                    "沈没を呼ぶ影"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は丸い妖怪じゃない…海坊主は船を沈める巨大な影だった【ショート】",
+                  "thumb_copy": [
+                    "丸い妖怪ではない",
+                    "巨大な影が来る"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.01660596620636127
+            },
+            {
+              "video_id": "GUeTTH-huzE",
+              "channel_id": "yokai-watch",
+              "created_at": 1787407803,
+              "updated_at": 1787580134,
+              "status": "pending",
+              "current_title": "ねちがえる、なぜか夜だけ首を狙う？金縛りの奥にある古い怪異【ショート】",
+              "current_ctr": 0.011976047904191617,
+              "channel_avg_ctr": 0.02075745775795159,
+              "suggested_titles": [
+                "なぜ寝違えは夜だけ首を狙う？金縛りに潜む古い怪異【ショート】",
+                "3分でわかる寝違えの怪談｜金縛りを生んだ寝床の妖怪【ショート】",
+                "実は寝違えは怪異だった？金縛りと首を縛る妖怪の正体【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "なぜ寝違えは夜だけ首を狙う？金縛りに潜む古い怪異【ショート】",
+                  "thumb_copy": [
+                    "首が動かない夜",
+                    "後ろに何がいる？"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "3分でわかる寝違えの怪談｜金縛りを生んだ寝床の妖怪【ショート】",
+                  "thumb_copy": [
+                    "3分で知る怪異",
+                    "寝床にいる妖怪"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は寝違えは怪異だった？金縛りと首を縛る妖怪の正体【ショート】",
+                  "thumb_copy": [
+                    "寝違えの正体",
+                    "首を縛る怪異"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.01660596620636127
+            },
+            {
+              "video_id": "ZqI9LA9O0Ko",
+              "channel_id": "yokai-watch",
+              "created_at": 1787493983,
+              "updated_at": 1787580136,
+              "status": "pending",
+              "current_title": "河童はなぜか子どもだけを呼ぶ？水辺に残された「声」の本当の理由【ショート】",
+              "current_ctr": 0.016216216216216217,
+              "channel_avg_ctr": 0.02075745775795159,
+              "suggested_titles": [
+                "河童はなぜ子どもの名前だけ呼ぶ？水辺の声に隠れた警告【ショート】",
+                "河童伝承に残る3つの水難警告…子どもを呼ぶ声の正体【ショート】",
+                "実は河童は守るために怖がらせた？子どもを呼ぶ声の真実【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "河童はなぜ子どもの名前だけ呼ぶ？水辺の声に隠れた警告【ショート】",
+                  "thumb_copy": [
+                    "名前を呼ぶ河童",
+                    "返事したら危険"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "河童伝承に残る3つの水難警告…子どもを呼ぶ声の正体【ショート】",
+                  "thumb_copy": [
+                    "3つの水難警告",
+                    "声の正体とは"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は河童は守るために怖がらせた？子どもを呼ぶ声の真実【ショート】",
+                  "thumb_copy": [
+                    "河童は悪ではない",
+                    "恐怖の本当の役目"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.01660596620636127
+            },
+            {
+              "video_id": "Rmx-FN9VhUE",
+              "channel_id": "yokai-watch",
+              "created_at": 1787407806,
+              "updated_at": 1787580147,
+              "status": "pending",
+              "current_title": "妖怪ウォッチのエンマ大王、なぜか『本物』の閻魔と全然違う姿をしている【ショート】",
+              "current_ctr": 0.012903225806451613,
+              "channel_avg_ctr": 0.02075745775795159,
+              "suggested_titles": [
+                "妖怪ウォッチのエンマ大王、なぜ本物の閻魔と別人なのか？【ショート】",
+                "3分で分かる！妖怪ウォッチのエンマ大王と本物の閻魔の違い【ショート】",
+                "実は妖怪の王ではない？エンマ大王の元ネタ「閻魔王」が怖すぎる【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "妖怪ウォッチのエンマ大王、なぜ本物の閻魔と別人なのか？【ショート】",
+                  "thumb_copy": [
+                    "本物の閻魔は",
+                    "こんな姿じゃない"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "3分で分かる！妖怪ウォッチのエンマ大王と本物の閻魔の違い【ショート】",
+                  "thumb_copy": [
+                    "違いは3つ",
+                    "元ネタは仏教"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は妖怪の王ではない？エンマ大王の元ネタ「閻魔王」が怖すぎる【ショート】",
+                  "thumb_copy": [
+                    "実は妖怪じゃない",
+                    "本物は裁判官"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.01660596620636127
+            },
+            {
+              "video_id": "QZiOHXKbOXI",
+              "channel_id": "yokai-watch",
+              "created_at": 1787407809,
+              "updated_at": 1787580150,
+              "status": "pending",
+              "current_title": "妖怪の名前がダジャレなのはナゼか? 名前の裏に隠された秘密【ショート】",
+              "current_ctr": 0.011976047904191617,
+              "channel_avg_ctr": 0.02075745775795159,
+              "suggested_titles": [
+                "妖怪の名前はなぜダジャレだらけ？「〇〇＋現象」に隠れた命名ルール【ショート】",
+                "3つの型で分かる！妖怪名「〇〇＋現象」ダジャレ命名法の正体【ショート】",
+                "実はただのダジャレじゃない！妖怪名に仕込まれた「現象」の秘密【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "妖怪の名前はなぜダジャレだらけ？「〇〇＋現象」に隠れた命名ルール【ショート】",
+                  "thumb_copy": [
+                    "妖怪名はダジャレ？",
+                    "命名の秘密を暴く"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "3つの型で分かる！妖怪名「〇〇＋現象」ダジャレ命名法の正体【ショート】",
+                  "thumb_copy": [
+                    "妖怪名の3大法則",
+                    "ダジャレの正体"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実はただのダジャレじゃない！妖怪名に仕込まれた「現象」の秘密【ショート】",
+                  "thumb_copy": [
+                    "ただのダジャレじゃない",
+                    "妖怪名の裏ルール"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.01660596620636127
+            },
+            {
+              "video_id": "G3KtohjxPI0",
+              "channel_id": "yokai-watch",
+              "created_at": 1787407811,
+              "updated_at": 1787580153,
+              "status": "pending",
+              "current_title": "なぜオロチはゲームで美化された？ヤマタノオロチ伝説の“本当は怖い”正体【ショート】",
+              "current_ctr": 0.005813953488372093,
+              "channel_avg_ctr": 0.02075745775795159,
+              "suggested_titles": [
+                "なぜオロチは美化された？神話ヤマタノオロチの本当の恐怖【ショート】",
+                "8つの頭だけじゃない！ヤマタノオロチが怖すぎる3つの理由【ショート】",
+                "実は妖怪ウォッチと別物！ヤマタノオロチの恐ろしい正体【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "なぜオロチは美化された？神話ヤマタノオロチの本当の恐怖【ショート】",
+                  "thumb_copy": [
+                    "美少年オロチの元ネタ",
+                    "神話では怪物だった"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "8つの頭だけじゃない！ヤマタノオロチが怖すぎる3つの理由【ショート】",
+                  "thumb_copy": [
+                    "8つ首の怪物",
+                    "怖さは3倍以上"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は妖怪ウォッチと別物！ヤマタノオロチの恐ろしい正体【ショート】",
+                  "thumb_copy": [
+                    "実は別物だった",
+                    "神話のオロチは地獄"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.01660596620636127
+            },
+            {
+              "video_id": "3ZBzfV-o6oM",
+              "channel_id": "yokai-watch",
+              "created_at": 1787407814,
+              "updated_at": 1787580155,
+              "status": "pending",
+              "current_title": "妖怪ウォッチの『都市伝説』、本当のところはどうなの？【ショート】",
+              "current_ctr": 0.0076045627376425855,
+              "channel_avg_ctr": 0.02075745775795159,
+              "suggested_titles": [
+                "妖怪ウォッチの都市伝説は本当？作中描写で徹底検証【ショート】",
+                "妖怪ウォッチ都市伝説を3つ検証！作中にある衝撃の証拠【ショート】",
+                "実は作中にヒントがあった！妖怪ウォッチ都市伝説の真相【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "妖怪ウォッチの都市伝説は本当？作中描写で徹底検証【ショート】",
+                  "thumb_copy": [
+                    "その噂、本当？",
+                    "作中で真偽判定"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "妖怪ウォッチ都市伝説を3つ検証！作中にある衝撃の証拠【ショート】",
+                  "thumb_copy": [
+                    "都市伝説を3つ",
+                    "証拠つきで検証"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は作中にヒントがあった！妖怪ウォッチ都市伝説の真相【ショート】",
+                  "thumb_copy": [
+                    "噂の真相は",
+                    "作中に隠れてた"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.01660596620636127
+            },
+            {
+              "video_id": "kHukScwckQ0",
+              "channel_id": "yokai-watch",
+              "created_at": 1787407817,
+              "updated_at": 1787580158,
+              "status": "pending",
+              "current_title": "なぜコマさんの秘密？神社の狛犬と田舎の意外なつながり【ショート】",
+              "current_ctr": 0.011299435028248588,
+              "channel_avg_ctr": 0.02075745775795159,
+              "suggested_titles": [
+                "なぜコマさんは田舎者？神社の狛犬に隠された意外な由来【ショート】",
+                "3分で分かる！コマさんと狛犬、田舎設定につながる秘密【ショート】",
+                "実は守護獣だった！コマさんの田舎設定と狛犬の深い関係【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "なぜコマさんは田舎者？神社の狛犬に隠された意外な由来【ショート】",
+                  "thumb_copy": [
+                    "コマさんの田舎設定",
+                    "狛犬が元ネタだった"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "3分で分かる！コマさんと狛犬、田舎設定につながる秘密【ショート】",
+                  "thumb_copy": [
+                    "3分で判明する",
+                    "コマさん誕生の秘密"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は守護獣だった！コマさんの田舎設定と狛犬の深い関係【ショート】",
+                  "thumb_copy": [
+                    "実は守護獣だった",
+                    "狛犬との深い関係"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.01660596620636127
+            }
+          ],
+          "ran_at": 1787580158
+        },
+        "series_engine": {
+          "channel_id": "yokai-watch",
+          "channel_avg": 1419.76,
+          "threshold": 1.5,
+          "viral_count": 2,
+          "suggestions_added": 0,
+          "items": [
+            {
+              "video_id": "PwguGFatdz4",
+              "title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】",
+              "views": 2340,
+              "channel_avg": 1419.76,
+              "viral_ratio": 1.6481658871922016,
+              "published_at": "2026-08-17T10:08:44Z",
+              "skipped": "already has suggestions"
+            },
+            {
+              "video_id": "mykin3cF95Y",
+              "title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
+              "views": 2233,
+              "channel_avg": 1419.76,
+              "viral_ratio": 1.5728010367949512,
+              "published_at": "2026-08-13T10:10:42Z",
+              "skipped": "already has suggestions"
+            }
+          ],
+          "ran_at": 1787580158
+        },
+        "comment_demand": {
+          "ok": true,
+          "channel_id": "yokai-watch",
+          "started_at": 1787580158,
+          "finished_at": 1787580158,
+          "request_comments_considered": 0,
+          "demands_saved": 0,
+          "auto_queued": 0,
+          "items": []
+        }
+      }
+    }
+  },
+  "pdca_report": {
+    "ok": true,
+    "data": {
+      "channel_id": "yokai-watch",
+      "days": 30,
+      "generated_at": "2026-08-24T14:02:38.412888Z",
+      "window": {
+        "start": "2026-07-25T14:02:38.412888Z",
+        "end": "2026-08-24T14:02:38.412888Z"
+      },
+      "channel_stats": {},
+      "subscribers": {
+        "current_total": null,
+        "gained_in_window": 15,
+        "lost_in_window": 5,
+        "net_in_window": 10,
+        "daily": [
+          {
+            "date": "2026-07-22",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-23",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-24",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-25",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-26",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-27",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-28",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-29",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-30",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-31",
+            "gained": 3,
+            "lost": 2,
+            "net": 1,
+            "cumulative_net": 1
+          },
+          {
+            "date": "2026-08-01",
+            "gained": 2,
+            "lost": 0,
+            "net": 2,
+            "cumulative_net": 3
+          },
+          {
+            "date": "2026-08-02",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 3
+          },
+          {
+            "date": "2026-08-03",
+            "gained": 2,
+            "lost": 1,
+            "net": 1,
+            "cumulative_net": 4
+          },
+          {
+            "date": "2026-08-04",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 4
+          },
+          {
+            "date": "2026-08-05",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 4
+          },
+          {
+            "date": "2026-08-06",
+            "gained": 3,
+            "lost": 0,
+            "net": 3,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-07",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-08",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-09",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-10",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-11",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-12",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-13",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-14",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-15",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-16",
+            "gained": 2,
+            "lost": 1,
+            "net": 1,
+            "cumulative_net": 8
+          },
+          {
+            "date": "2026-08-17",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 8
+          },
+          {
+            "date": "2026-08-18",
+            "gained": 2,
+            "lost": 1,
+            "net": 1,
+            "cumulative_net": 9
+          },
+          {
+            "date": "2026-08-19",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 9
+          },
+          {
+            "date": "2026-08-20",
+            "gained": 1,
+            "lost": 0,
+            "net": 1,
+            "cumulative_net": 10
+          }
+        ],
+        "source": "analytics_cache (要 /api/analytics/sync)"
+      },
+      "subscriber_sources": {
+        "total_gained": 0,
+        "total_lost": 0,
+        "total_net": 0,
+        "shorts": {
+          "gained": 0,
+          "lost": 0,
+          "net": 0,
+          "share_of_gained": 0.0,
+          "subs_per_1000_views": 0.0
+        },
+        "main": {
+          "gained": 0,
+          "lost": 0,
+          "net": 0,
+          "share_of_gained": 0.0,
+          "subs_per_1000_views": 0.0
+        },
+        "unknown": {
+          "gained": 0,
+          "lost": 0,
+          "note": null
+        },
+        "source": "none",
+        "error": "youtube analytics 未連携 or googleapiclient 未導入"
+      },
+      "recommendation": {
+        "decision": "more_data_needed",
+        "primary_subscriber_source": null,
+        "headline": "登録者ソースが取得できないため判断保留",
+        "reasoning": "YouTube Analytics API から subscribersGained を取得できませんでした。 OAuth 連携と yt-analytics.readonly スコープを確認してください。",
+        "warnings": [
+          "登録者ソースデータなし — 再生数ベースの判断は危険"
+        ],
+        "metrics_used": {}
+      },
+      "shorts": {
+        "count": 0,
+        "total_views": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "avg_views": 0.0,
+        "avg_likes": 0.0,
+        "avg_comments": 0.0,
+        "avg_like_rate": 0.0,
+        "median_views": 0,
+        "top_videos": []
+      },
+      "main": {
+        "count": 0,
+        "total_views": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "avg_views": 0.0,
+        "avg_likes": 0.0,
+        "avg_comments": 0.0,
+        "avg_like_rate": 0.0,
+        "median_views": 0,
+        "top_videos": []
+      },
+      "comparison": {
+        "avg_views_short_vs_main": null,
+        "avg_likes_short_vs_main": null,
+        "avg_like_rate_short_vs_main": null
+      },
+      "cost": {
+        "total_cost_usd": 10.7978,
+        "events": 358,
+        "by_purpose": {
+          "theme_suggest": 0.0313,
+          "scenario_claude": 3.8091,
+          "section_1": 0.2218,
+          "section_2": 0.2807,
+          "section_3": 0.7245,
+          "section_4": 0.5693,
+          "section_5": 0.6416,
+          "section_6": 0.3117,
+          "section_7": 2.5244,
+          "blind_compare": 0.2455,
+          "success_pattern": 0.1217,
+          "retention_analysis": 0.1585,
+          "trend_relevance": 0.0105,
+          "scenario_gpt": 1.0212,
+          "title_regen": 0.0109,
+          "title_ctr_regen": 0.001,
+          "ab_test_generate": 0.1138
+        },
+        "by_model": {
+          "gpt-4o-mini": 0.0184,
+          "gpt-4o": 0.5894,
+          "gpt-4.1": 0.4357,
+          "gpt-5.6-terra": 6.0158,
+          "claude-sonnet-4-6": 3.7055,
+          "gpt-5.6-luna": 0.033
+        },
+        "videos_in_window": 0,
+        "cost_per_video_usd": 0.0,
+        "cost_per_short_usd": 0.0,
+        "cost_per_main_usd": 0.0,
+        "note": "ショート/メインは同一パイプライン由来で個別計上はないため、総コスト ÷ 期間内本数で均等按分しています。"
+      },
+      "totals": {
+        "published_in_db": 0,
+        "fetched_from_youtube": 0,
+        "in_window": 0
+      },
+      "errors": {
+        "youtube_fetch": "youtube oauth 未連携 or googleapiclient 未導入",
+        "subscriber_sources": "youtube analytics 未連携 or googleapiclient 未導入"
+      }
+    }
+  },
+  "posting": {
+    "ok": true,
+    "data": {
+      "channel_id": "yokai-watch",
+      "current_schedule": {
+        "days_of_week": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "hour": 19,
+        "minute": 0,
+        "enabled": true
+      },
+      "recommendation": {
+        "recommended": {
+          "day_of_week": 1,
+          "hour": 19,
+          "minute": 0,
+          "avg_views": 1873.0,
+          "sample_size": 3,
+          "boost_percent": 53.0
+        },
+        "alternatives": [
+          {
+            "day_of_week": 2,
+            "hour": 19,
+            "minute": 0,
+            "avg_views": 1690.3,
+            "sample_size": 3,
+            "boost_percent": 38.1
+          },
+          {
+            "day_of_week": 4,
+            "hour": 19,
+            "minute": 0,
+            "avg_views": 2025.5,
+            "sample_size": 2,
+            "boost_percent": 65.5
+          }
+        ],
+        "channel_avg_views": 1224.2068965517242,
+        "data_days": 30,
+        "note": null
+      },
+      "heatmap": {
+        "grid": [
+          [
+            705.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1667.0,
+            0.0,
+            824.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1286.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1873.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1690.3333333333333,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1107.0,
+            1576.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            173.0,
+            2025.5,
+            0.0,
+            696.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            249.0,
+            0.0,
+            0.0,
+            0.0,
+            1583.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1168.0,
+            0.0,
+            0.0,
+            0.0,
+            1887.0
+          ]
+        ],
+        "samples": [
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "channel_avg_views": 1224.2068965517242,
+        "channel_total_videos": 29,
+        "data_days": 30
+      },
+      "computed_at": 1787580158
+    }
+  },
+  "series": {
+    "ok": true,
+    "data": {
+      "channel_id": "yokai-watch",
+      "count": 9,
+      "items": [
+        {
+          "id": "98a4498b55",
+          "channel_id": "yokai-watch",
+          "original_video_id": "mykin3cF95Y",
+          "original_title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
+          "original_views": 2233,
+          "channel_avg_views": 1419,
+          "viral_ratio": 1.5728010367949512,
+          "series_type": "deep_dive",
+          "suggested_title": "なぜ「のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれた」はこうなるのか？徹底深堀り",
+          "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+          "rationale": "深堀り型はリテンションが高い",
+          "created_at": 1787493996,
+          "decided_at": 1787493997,
+          "status": "approved",
+          "queue_theme_id": "0583307a",
+          "queued_video_id": null
+        },
+        {
+          "id": "b61b95f0df",
+          "channel_id": "yokai-watch",
+          "original_video_id": "mykin3cF95Y",
+          "original_title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
+          "original_views": 2233,
+          "channel_avg_views": 1419,
+          "viral_ratio": 1.5728010367949512,
+          "series_type": "contrast",
+          "suggested_title": "「のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はな」とは逆のパターンを比較してみた",
+          "suggested_angle": "対比で違いを際立たせる構成",
+          "rationale": "比較型は CTR が安定して取りやすい",
+          "created_at": 1787493996,
+          "decided_at": 1787493997,
+          "status": "approved",
+          "queue_theme_id": "a88768c5",
+          "queued_video_id": null
+        },
+        {
+          "id": "bcdffe40c3",
+          "channel_id": "yokai-watch",
+          "original_video_id": "mykin3cF95Y",
+          "original_title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
+          "original_views": 2233,
+          "channel_avg_views": 1419,
+          "viral_ratio": 1.5728010367949512,
+          "series_type": "application",
+          "suggested_title": "「のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はな」の知識を日常で使う方法",
+          "suggested_angle": "応用先を具体例で紹介",
+          "rationale": "応用型は再生時間が伸びやすい",
+          "created_at": 1787493996,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        },
+        {
+          "id": "a854c64917",
+          "channel_id": "yokai-watch",
+          "original_video_id": "PwguGFatdz4",
+          "original_title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】",
+          "original_views": 2339,
+          "channel_avg_views": 1543,
+          "viral_ratio": 1.5157888535407094,
+          "series_type": "deep_dive",
+          "suggested_title": "なぜ「鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけな」はこうなるのか？徹底深堀り",
+          "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+          "rationale": "深堀り型はリテンションが高い",
+          "created_at": 1787322310,
+          "decided_at": 1787322311,
+          "status": "approved",
+          "queue_theme_id": "0e5ca277",
+          "queued_video_id": null
+        },
+        {
+          "id": "c3df107562",
+          "channel_id": "yokai-watch",
+          "original_video_id": "PwguGFatdz4",
+          "original_title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】",
+          "original_views": 2339,
+          "channel_avg_views": 1543,
+          "viral_ratio": 1.5157888535407094,
+          "series_type": "contrast",
+          "suggested_title": "「鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れ」とは逆のパターンを比較してみた",
+          "suggested_angle": "対比で違いを際立たせる構成",
+          "rationale": "比較型は CTR が安定して取りやすい",
+          "created_at": 1787322310,
+          "decided_at": 1787322311,
+          "status": "approved",
+          "queue_theme_id": "35a4b840",
+          "queued_video_id": null
+        },
+        {
+          "id": "1c9ba88b58",
+          "channel_id": "yokai-watch",
+          "original_video_id": "PwguGFatdz4",
+          "original_title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】",
+          "original_views": 2339,
+          "channel_avg_views": 1543,
+          "viral_ratio": 1.5157888535407094,
+          "series_type": "application",
+          "suggested_title": "「鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れ」の知識を日常で使う方法",
+          "suggested_angle": "応用先を具体例で紹介",
+          "rationale": "応用型は再生時間が伸びやすい",
+          "created_at": 1787322310,
+          "decided_at": 1787407818,
+          "status": "approved",
+          "queue_theme_id": "fb2ed50e",
+          "queued_video_id": null
+        },
+        {
+          "id": "a13dfc390e",
+          "channel_id": "yokai-watch",
+          "original_video_id": "K2N6Xp0LN9A",
+          "original_title": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説",
+          "original_views": 1138,
+          "channel_avg_views": 683,
+          "viral_ratio": 1.6649597659107536,
+          "series_type": "deep_dive",
+          "suggested_title": "なぜ「1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウ」はこうなるのか？徹底深堀り",
+          "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+          "rationale": "深堀り型はリテンションが高い",
+          "created_at": 1785679369,
+          "decided_at": 1785679371,
+          "status": "approved",
+          "queue_theme_id": "50543d07",
+          "queued_video_id": null
+        },
+        {
+          "id": "7aefb27199",
+          "channel_id": "yokai-watch",
+          "original_video_id": "K2N6Xp0LN9A",
+          "original_title": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説",
+          "original_views": 1138,
+          "channel_avg_views": 683,
+          "viral_ratio": 1.6649597659107536,
+          "series_type": "contrast",
+          "suggested_title": "「1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘」とは逆のパターンを比較してみた",
+          "suggested_angle": "対比で違いを際立たせる構成",
+          "rationale": "比較型は CTR が安定して取りやすい",
+          "created_at": 1785679369,
+          "decided_at": 1785679371,
+          "status": "approved",
+          "queue_theme_id": "47a2ccd9",
+          "queued_video_id": null
+        },
+        {
+          "id": "1bb0f6bfb9",
+          "channel_id": "yokai-watch",
+          "original_video_id": "K2N6Xp0LN9A",
+          "original_title": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説",
+          "original_views": 1138,
+          "channel_avg_views": 683,
+          "viral_ratio": 1.6649597659107536,
+          "series_type": "application",
+          "suggested_title": "「1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘」の知識を日常で使う方法",
+          "suggested_angle": "応用先を具体例で紹介",
+          "rationale": "応用型は再生時間が伸びやすい",
+          "created_at": 1785679369,
+          "decided_at": 1785765774,
+          "status": "approved",
+          "queue_theme_id": "f7ef5524",
+          "queued_video_id": null
+        }
+      ],
+      "grouped": [
+        {
+          "original_video_id": "mykin3cF95Y",
+          "original_title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
+          "original_views": 2233,
+          "viral_ratio": 1.5728010367949512,
+          "suggestions": [
+            {
+              "id": "98a4498b55",
+              "channel_id": "yokai-watch",
+              "original_video_id": "mykin3cF95Y",
+              "original_title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
+              "original_views": 2233,
+              "channel_avg_views": 1419,
+              "viral_ratio": 1.5728010367949512,
+              "series_type": "deep_dive",
+              "suggested_title": "なぜ「のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれた」はこうなるのか？徹底深堀り",
+              "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+              "rationale": "深堀り型はリテンションが高い",
+              "created_at": 1787493996,
+              "decided_at": 1787493997,
+              "status": "approved",
+              "queue_theme_id": "0583307a",
+              "queued_video_id": null
+            },
+            {
+              "id": "b61b95f0df",
+              "channel_id": "yokai-watch",
+              "original_video_id": "mykin3cF95Y",
+              "original_title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
+              "original_views": 2233,
+              "channel_avg_views": 1419,
+              "viral_ratio": 1.5728010367949512,
+              "series_type": "contrast",
+              "suggested_title": "「のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はな」とは逆のパターンを比較してみた",
+              "suggested_angle": "対比で違いを際立たせる構成",
+              "rationale": "比較型は CTR が安定して取りやすい",
+              "created_at": 1787493996,
+              "decided_at": 1787493997,
+              "status": "approved",
+              "queue_theme_id": "a88768c5",
+              "queued_video_id": null
+            },
+            {
+              "id": "bcdffe40c3",
+              "channel_id": "yokai-watch",
+              "original_video_id": "mykin3cF95Y",
+              "original_title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
+              "original_views": 2233,
+              "channel_avg_views": 1419,
+              "viral_ratio": 1.5728010367949512,
+              "series_type": "application",
+              "suggested_title": "「のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はな」の知識を日常で使う方法",
+              "suggested_angle": "応用先を具体例で紹介",
+              "rationale": "応用型は再生時間が伸びやすい",
+              "created_at": 1787493996,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            }
+          ]
+        },
+        {
+          "original_video_id": "PwguGFatdz4",
+          "original_title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】",
+          "original_views": 2339,
+          "viral_ratio": 1.5157888535407094,
+          "suggestions": [
+            {
+              "id": "a854c64917",
+              "channel_id": "yokai-watch",
+              "original_video_id": "PwguGFatdz4",
+              "original_title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】",
+              "original_views": 2339,
+              "channel_avg_views": 1543,
+              "viral_ratio": 1.5157888535407094,
+              "series_type": "deep_dive",
+              "suggested_title": "なぜ「鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけな」はこうなるのか？徹底深堀り",
+              "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+              "rationale": "深堀り型はリテンションが高い",
+              "created_at": 1787322310,
+              "decided_at": 1787322311,
+              "status": "approved",
+              "queue_theme_id": "0e5ca277",
+              "queued_video_id": null
+            },
+            {
+              "id": "c3df107562",
+              "channel_id": "yokai-watch",
+              "original_video_id": "PwguGFatdz4",
+              "original_title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】",
+              "original_views": 2339,
+              "channel_avg_views": 1543,
+              "viral_ratio": 1.5157888535407094,
+              "series_type": "contrast",
+              "suggested_title": "「鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れ」とは逆のパターンを比較してみた",
+              "suggested_angle": "対比で違いを際立たせる構成",
+              "rationale": "比較型は CTR が安定して取りやすい",
+              "created_at": 1787322310,
+              "decided_at": 1787322311,
+              "status": "approved",
+              "queue_theme_id": "35a4b840",
+              "queued_video_id": null
+            },
+            {
+              "id": "1c9ba88b58",
+              "channel_id": "yokai-watch",
+              "original_video_id": "PwguGFatdz4",
+              "original_title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】",
+              "original_views": 2339,
+              "channel_avg_views": 1543,
+              "viral_ratio": 1.5157888535407094,
+              "series_type": "application",
+              "suggested_title": "「鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れ」の知識を日常で使う方法",
+              "suggested_angle": "応用先を具体例で紹介",
+              "rationale": "応用型は再生時間が伸びやすい",
+              "created_at": 1787322310,
+              "decided_at": 1787407818,
+              "status": "approved",
+              "queue_theme_id": "fb2ed50e",
+              "queued_video_id": null
+            }
+          ]
+        },
+        {
+          "original_video_id": "K2N6Xp0LN9A",
+          "original_title": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説",
+          "original_views": 1138,
+          "viral_ratio": 1.6649597659107536,
+          "suggestions": [
+            {
+              "id": "a13dfc390e",
+              "channel_id": "yokai-watch",
+              "original_video_id": "K2N6Xp0LN9A",
+              "original_title": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説",
+              "original_views": 1138,
+              "channel_avg_views": 683,
+              "viral_ratio": 1.6649597659107536,
+              "series_type": "deep_dive",
+              "suggested_title": "なぜ「1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウ」はこうなるのか？徹底深堀り",
+              "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+              "rationale": "深堀り型はリテンションが高い",
+              "created_at": 1785679369,
+              "decided_at": 1785679371,
+              "status": "approved",
+              "queue_theme_id": "50543d07",
+              "queued_video_id": null
+            },
+            {
+              "id": "7aefb27199",
+              "channel_id": "yokai-watch",
+              "original_video_id": "K2N6Xp0LN9A",
+              "original_title": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説",
+              "original_views": 1138,
+              "channel_avg_views": 683,
+              "viral_ratio": 1.6649597659107536,
+              "series_type": "contrast",
+              "suggested_title": "「1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘」とは逆のパターンを比較してみた",
+              "suggested_angle": "対比で違いを際立たせる構成",
+              "rationale": "比較型は CTR が安定して取りやすい",
+              "created_at": 1785679369,
+              "decided_at": 1785679371,
+              "status": "approved",
+              "queue_theme_id": "47a2ccd9",
+              "queued_video_id": null
+            },
+            {
+              "id": "1bb0f6bfb9",
+              "channel_id": "yokai-watch",
+              "original_video_id": "K2N6Xp0LN9A",
+              "original_title": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説",
+              "original_views": 1138,
+              "channel_avg_views": 683,
+              "viral_ratio": 1.6649597659107536,
+              "series_type": "application",
+              "suggested_title": "「1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘」の知識を日常で使う方法",
+              "suggested_angle": "応用先を具体例で紹介",
+              "rationale": "応用型は再生時間が伸びやすい",
+              "created_at": 1785679369,
+              "decided_at": 1785765774,
+              "status": "approved",
+              "queue_theme_id": "f7ef5524",
+              "queued_video_id": null
+            }
+          ]
+        }
+      ],
+      "viral_videos": [
+        {
+          "video_id": "PwguGFatdz4",
+          "title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】",
+          "views": 2340,
+          "channel_avg": 1419.76,
+          "viral_ratio": 1.6481658871922016,
+          "published_at": "2026-08-17T10:08:44Z"
+        },
+        {
+          "video_id": "mykin3cF95Y",
+          "title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
+          "views": 2233,
+          "channel_avg": 1419.76,
+          "viral_ratio": 1.5728010367949512,
+          "published_at": "2026-08-13T10:10:42Z"
+        }
+      ],
+      "channel_avg_views": 1419.76,
+      "summary": {
+        "channel_id": "yokai-watch",
+        "channel_avg_views": 1419.76,
+        "total_suggestions": 9,
+        "by_status": {
+          "approved": 8,
+          "pending": 1
+        },
+        "by_type": {
+          "deep_dive": 3,
+          "contrast": 3,
+          "application": 3
+        },
+        "approved_with_video": 0
+      }
+    }
+  },
+  "genre_breakdown": [
+    {
+      "genre": "その他",
+      "count": 29,
+      "total_views": 35502,
+      "total_likes": 128,
+      "titles": [
+        "1分妖怪ファイル #11：🔍ぬらりひょんに隠された3つの秘密、あなたの知る総大将はいつ生まれた？【ショート】",
+        "なぜ猫又の尻尾は2つ？実は老猫を恐れた江戸の記録が怖い【ショート】",
+        "雪女が3日黙れと言う…実は誰にも言えない恐怖があった【ショート】"
+      ],
+      "avg_views": 1224.21
+    }
+  ],
+  "view_trends": [
+    {
+      "video_id": "PwguGFatdz4",
+      "title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】",
+      "series": [
+        {
+          "date": "2026-08-17",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-18",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 2339,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-22",
+          "views": 2339,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-23",
+          "views": 2340,
+          "likes": 3
+        }
+      ],
+      "latest_views": 2340,
+      "first_views": 0,
+      "delta": 2340,
+      "snapshots": 5
+    },
+    {
+      "video_id": "mykin3cF95Y",
+      "title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
+      "series": [
+        {
+          "date": "2026-08-13",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-14",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-15",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-17",
+          "views": 2222,
+          "likes": 11
+        },
+        {
+          "date": "2026-08-18",
+          "views": 2225,
+          "likes": 11
+        },
+        {
+          "date": "2026-08-21",
+          "views": 2229,
+          "likes": 11
+        },
+        {
+          "date": "2026-08-22",
+          "views": 2232,
+          "likes": 11
+        },
+        {
+          "date": "2026-08-23",
+          "views": 2233,
+          "likes": 11
+        }
+      ],
+      "latest_views": 2233,
+      "first_views": 0,
+      "delta": 2233,
+      "snapshots": 8
+    },
+    {
+      "video_id": "2DYLiwh42V8",
+      "title": "ふじのやまの元ネタが怖すぎる — 山に入った人が戻れなくなる禁忌【ショート】",
+      "series": [
+        {
+          "date": "2026-08-14",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-15",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1939,
+          "likes": 2
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1941,
+          "likes": 2
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1943,
+          "likes": 2
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1943,
+          "likes": 2
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1944,
+          "likes": 2
+        }
+      ],
+      "latest_views": 1944,
+      "first_views": 0,
+      "delta": 1944,
+      "snapshots": 7
+    },
+    {
+      "video_id": "8JLBD8J8RwU",
+      "title": "なぜツチノコは家に入る？隠された秘密【ショート】",
+      "series": [
+        {
+          "date": "2026-08-10",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-11",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-12",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1914,
+          "likes": 8
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1916,
+          "likes": 8
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1917,
+          "likes": 8
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1914,
+          "likes": 8
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1918,
+          "likes": 8
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1914,
+          "likes": 8
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1914,
+          "likes": 8
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1915,
+          "likes": 8
+        }
+      ],
+      "latest_views": 1915,
+      "first_views": 0,
+      "delta": 1915,
+      "snapshots": 11
+    },
+    {
+      "video_id": "l68CzSRJ6WU",
+      "title": "海坊主の正体が怖すぎる — 船を沈める巨大な影は何だったのか【ショート】",
+      "series": [
+        {
+          "date": "2026-08-18",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1899,
+          "likes": 7
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1901,
+          "likes": 7
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1904,
+          "likes": 7
+        }
+      ],
+      "latest_views": 1904,
+      "first_views": 0,
+      "delta": 1904,
+      "snapshots": 4
+    },
+    {
+      "video_id": "052IlnxRdwM",
+      "title": "一つ目小僧、なぜ江戸の文献では『会った者が帰らない』と書かれているのか【ショート】",
+      "series": [
+        {
+          "date": "2026-08-09",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-10",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1886,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1886,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1889,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1895,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1897,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1897,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1897,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1887,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1887,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1887,
+          "likes": 5
+        }
+      ],
+      "latest_views": 1887,
+      "first_views": 0,
+      "delta": 1887,
+      "snapshots": 12
+    },
+    {
+      "video_id": "kzR6F_147Ho",
+      "title": "妖怪ウォッチのランク、なぜSが最強じゃない妖怪にも付くのか　隠された格付けの本当のところ【ショート】",
+      "series": [
+        {
+          "date": "2026-08-09",
+          "views": 1739,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-10",
+          "views": 1794,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1823,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1833,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1839,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1841,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1845,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1817,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1819,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1818,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1818,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1818,
+          "likes": 6
+        }
+      ],
+      "latest_views": 1818,
+      "first_views": 1739,
+      "delta": 79,
+      "snapshots": 12
+    },
+    {
+      "video_id": "GUeTTH-huzE",
+      "title": "ねちがえる、なぜか夜だけ首を狙う？金縛りの奥にある古い怪異【ショート】",
+      "series": [
+        {
+          "date": "2026-08-11",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-12",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-13",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1707,
+          "likes": 7
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1710,
+          "likes": 7
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1702,
+          "likes": 7
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1710,
+          "likes": 7
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1703,
+          "likes": 7
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1703,
+          "likes": 7
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1703,
+          "likes": 7
+        }
+      ],
+      "latest_views": 1703,
+      "first_views": 0,
+      "delta": 1703,
+      "snapshots": 10
+    },
+    {
+      "video_id": "ZqI9LA9O0Ko",
+      "title": "河童はなぜか子どもだけを呼ぶ？水辺に残された「声」の本当の理由【ショート】",
+      "series": [
+        {
+          "date": "2026-08-12",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-13",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-14",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1685,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1688,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1690,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1691,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1692,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1692,
+          "likes": 4
+        }
+      ],
+      "latest_views": 1692,
+      "first_views": 0,
+      "delta": 1692,
+      "snapshots": 9
+    },
+    {
+      "video_id": "WP03hoeoxCk",
+      "title": "1分妖怪ファイル：その『設定』、江戸時代には存在しなかった昭和の妖怪本が作り上げた『総大将』の正体#ぬらりひょんが『妖怪の総大将』なのは、なぜか誰も疑わなかったのか #shorts #ゆっくり解説",
+      "series": [
+        {
+          "date": "2026-08-09",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-10",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1665,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1669,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1677,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1681,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1682,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1683,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1683,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1667,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1667,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1667,
+          "likes": 4
+        }
+      ],
+      "latest_views": 1667,
+      "first_views": 0,
+      "delta": 1667,
+      "snapshots": 12
+    },
+    {
+      "video_id": "kV2cD0Z9Oek",
+      "title": "ふぶき姫の可愛さはどこから？雪女伝承の“本当は怖い”正体とゲームの落差【ショート】",
+      "series": [
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 855,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-05",
+          "views": 1685,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-09",
+          "views": 1641,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-10",
+          "views": 1641,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1642,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1642,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1646,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1646,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1646,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1648,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1648,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1648,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1648,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1648,
+          "likes": 4
+        }
+      ],
+      "latest_views": 1648,
+      "first_views": 0,
+      "delta": 1648,
+      "snapshots": 16
+    },
+    {
+      "video_id": "Rmx-FN9VhUE",
+      "title": "妖怪ウォッチのエンマ大王、なぜか『本物』の閻魔と全然違う姿をしている【ショート】",
+      "series": [
+        {
+          "date": "2026-08-04",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-05",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-09",
+          "views": 1462,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-10",
+          "views": 1448,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1448,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1449,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1452,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1456,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1457,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1458,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1459,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1461,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1462,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1464,
+          "likes": 5
+        }
+      ],
+      "latest_views": 1464,
+      "first_views": 0,
+      "delta": 1464,
+      "snapshots": 14
+    },
+    {
+      "video_id": "OmP6pu1x1fc",
+      "title": "なぜロボニャンだけ未来から来た？隠された時系列の秘密【ショート】【ショート】",
+      "series": [
+        {
+          "date": "2026-08-05",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-09",
+          "views": 1487,
+          "likes": 9
+        },
+        {
+          "date": "2026-08-10",
+          "views": 1488,
+          "likes": 9
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1456,
+          "likes": 9
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1489,
+          "likes": 10
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1490,
+          "likes": 10
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1492,
+          "likes": 10
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1492,
+          "likes": 10
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1460,
+          "likes": 10
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1460,
+          "likes": 10
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1460,
+          "likes": 10
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1460,
+          "likes": 10
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1460,
+          "likes": 10
+        }
+      ],
+      "latest_views": 1460,
+      "first_views": 0,
+      "delta": 1460,
+      "snapshots": 13
+    },
+    {
+      "video_id": "QZiOHXKbOXI",
+      "title": "妖怪の名前がダジャレなのはナゼか? 名前の裏に隠された秘密【ショート】",
+      "series": [
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 1386,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-05",
+          "views": 1396,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-09",
+          "views": 1398,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-10",
+          "views": 1398,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1398,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1399,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1400,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1402,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1402,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1402,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1402,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1402,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1402,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1402,
+          "likes": 5
+        }
+      ],
+      "latest_views": 1402,
+      "first_views": 0,
+      "delta": 1402,
+      "snapshots": 16
+    },
+    {
+      "video_id": "G3KtohjxPI0",
+      "title": "なぜオロチはゲームで美化された？ヤマタノオロチ伝説の“本当は怖い”正体【ショート】",
+      "series": [
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-05",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-09",
+          "views": 1351,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-10",
+          "views": 1352,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1352,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1354,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1356,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1360,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1361,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1361,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1361,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1364,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1364,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1364,
+          "likes": 5
+        }
+      ],
+      "latest_views": 1364,
+      "first_views": 0,
+      "delta": 1364,
+      "snapshots": 15
+    },
+    {
+      "video_id": "frxNzntmiF4",
+      "title": "なぜおでんじんだけ夜道に立つ？可愛い具に隠された秘密【ショート】【ショート】",
+      "series": [
+        {
+          "date": "2026-08-09",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-10",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-11",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1283,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1291,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1298,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1299,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1297,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1302,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1298,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1299,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1299,
+          "likes": 4
+        }
+      ],
+      "latest_views": 1299,
+      "first_views": 0,
+      "delta": 1299,
+      "snapshots": 12
+    },
+    {
+      "video_id": "724R2jGp97Q",
+      "title": "なぜ武士と猫が混ざった？ブシニャンの『本当のルーツ』が怖すぎる理由【ショート】",
+      "series": [
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-05",
+          "views": 1181,
+          "likes": 2
+        },
+        {
+          "date": "2026-08-09",
+          "views": 1267,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-10",
+          "views": 1267,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1267,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1267,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1271,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1271,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1271,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1271,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1273,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1273,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1273,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1273,
+          "likes": 4
+        }
+      ],
+      "latest_views": 1273,
+      "first_views": 0,
+      "delta": 1273,
+      "snapshots": 16
+    },
+    {
+      "video_id": "3ZBzfV-o6oM",
+      "title": "妖怪ウォッチの『都市伝説』、本当のところはどうなの？【ショート】",
+      "series": [
+        {
+          "date": "2026-07-31",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-01",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 1072,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-04",
+          "views": 1200,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-05",
+          "views": 1221,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-09",
+          "views": 1219,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-10",
+          "views": 1220,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1221,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1221,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1223,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1223,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1223,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1223,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1223,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1223,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1223,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1223,
+          "likes": 5
+        }
+      ],
+      "latest_views": 1223,
+      "first_views": 0,
+      "delta": 1223,
+      "snapshots": 18
+    },
+    {
+      "video_id": "HzC1vh3j1Qo",
+      "title": "花子さんの正体 — なぜ学校のトイレで「三番目」なのか【ショート】",
+      "series": [
+        {
+          "date": "2026-08-15",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-17",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-18",
+          "views": 4,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1171,
+          "likes": 10
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1171,
+          "likes": 10
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1171,
+          "likes": 10
+        }
+      ],
+      "latest_views": 1171,
+      "first_views": 0,
+      "delta": 1171,
+      "snapshots": 6
+    },
+    {
+      "video_id": "K2N6Xp0LN9A",
+      "title": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説",
+      "series": [
+        {
+          "date": "2026-07-30",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-07-31",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-01",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-02",
+          "views": 1138,
+          "likes": 2
+        },
+        {
+          "date": "2026-08-03",
+          "views": 1155,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-04",
+          "views": 1165,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-05",
+          "views": 1174,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-09",
+          "views": 1166,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-10",
+          "views": 1166,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1166,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1166,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1167,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1167,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1167,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1167,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1167,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1167,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1167,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1167,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1167,
+      "first_views": 0,
+      "delta": 1167,
+      "snapshots": 19
+    },
+    {
+      "video_id": "kHukScwckQ0",
+      "title": "なぜコマさんの秘密？神社の狛犬と田舎の意外なつながり【ショート】",
+      "series": [
+        {
+          "date": "2026-08-01",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 1082,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-05",
+          "views": 1159,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-09",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-10",
+          "views": 1163,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1163,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1163,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1164,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1164,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1165,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1165,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1165,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1165,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1165,
+          "likes": 5
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1165,
+          "likes": 5
+        }
+      ],
+      "latest_views": 1165,
+      "first_views": 0,
+      "delta": 1165,
+      "snapshots": 17
+    },
+    {
+      "video_id": "81DW_QyWZMs",
+      "title": "ぬらりひょんの正体が怖すぎる — なぜあなたの家に勝手に上がるのか【ショート】",
+      "series": [
+        {
+          "date": "2026-08-21",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 440,
+          "likes": 2
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1107,
+          "likes": 6
+        }
+      ],
+      "latest_views": 1107,
+      "first_views": 0,
+      "delta": 1107,
+      "snapshots": 3
+    },
+    {
+      "video_id": "ajouUdcWYic",
+      "title": "3秒で消える？天狗と山伏、神隠しの本当の理由【ショート】",
+      "series": [
+        {
+          "date": "2026-08-21",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 249,
+          "likes": 1
+        }
+      ],
+      "latest_views": 249,
+      "first_views": 0,
+      "delta": 249,
+      "snapshots": 3
+    },
+    {
+      "video_id": "63ov8l5tqBk",
+      "title": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説",
+      "series": [
+        {
+          "date": "2026-07-30",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-07-31",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-01",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-02",
+          "views": 229,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-03",
+          "views": 229,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-04",
+          "views": 229,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-05",
+          "views": 229,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-09",
+          "views": 226,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-10",
+          "views": 226,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-11",
+          "views": 226,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-12",
+          "views": 226,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-13",
+          "views": 226,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-14",
+          "views": 226,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-15",
+          "views": 226,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-17",
+          "views": 226,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-18",
+          "views": 226,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-21",
+          "views": 226,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-22",
+          "views": 226,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-23",
+          "views": 226,
+          "likes": 1
+        }
+      ],
+      "latest_views": 226,
+      "first_views": 0,
+      "delta": 226,
+      "snapshots": 19
+    },
+    {
+      "video_id": "eP-GMocrfHk",
+      "title": "1分妖怪ファイル #7：😰かまいたちの元ネタが怖すぎる — あなたが3秒で傷つく理由は？【ショート】",
+      "series": [
+        {
+          "date": "2026-08-21",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 173,
+          "likes": 3
+        }
+      ],
+      "latest_views": 173,
+      "first_views": 0,
+      "delta": 173,
+      "snapshots": 3
+    },
+    {
+      "video_id": "_dcwhzzjxvs",
+      "title": "1分妖怪ファイル：妖怪の名前がダジャレなのはナゼか?",
+      "series": [
+        {
+          "date": "2026-08-02",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-03",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-04",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-05",
+          "views": 2,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-09",
+          "views": 6,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-10",
+          "views": 6,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-11",
+          "views": 6,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-12",
+          "views": 7,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-13",
+          "views": 8,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-14",
+          "views": 8,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-15",
+          "views": 8,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-17",
+          "views": 8,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-18",
+          "views": 8,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 8,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 8,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 8,
+          "likes": 0
+        }
+      ],
+      "latest_views": 8,
+      "first_views": 0,
+      "delta": 8,
+      "snapshots": 16
+    },
+    {
+      "video_id": "417bhedobU8",
+      "title": "なぜ猫又の尻尾は2つ？実は老猫を恐れた江戸の記録が怖い【ショート】",
+      "series": [
+        {
+          "date": "2026-08-22",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 2
+    },
+    {
+      "video_id": "ZMuU_kP5u1I",
+      "title": "1分妖怪ファイル #11：🔍ぬらりひょんに隠された3つの秘密、あなたの知る総大将はいつ生まれた？【ショート】",
+      "series": [
+        {
+          "date": "2026-08-23",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "q2s-VS1PHQs",
+      "title": "雪女が3日黙れと言う…実は誰にも言えない恐怖があった【ショート】",
+      "series": [
+        {
+          "date": "2026-08-21",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 3
+    }
+  ],
+  "dup_check": [
+    {
+      "a": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説",
+      "b": "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説",
+      "similarity": 1.0
+    },
+    {
+      "a": "1分妖怪ファイル：妖怪の名前がダジャレなのはナゼか?",
+      "b": "妖怪の名前がダジャレなのはナゼか? 名前の裏に隠された秘密【ショート】",
+      "similarity": 0.824
+    },
+    {
+      "a": "なぜおでんじんだけ夜道に立つ？可愛い具に隠された秘密【ショート】【ショート】",
+      "b": "なぜロボニャンだけ未来から来た？隠された時系列の秘密【ショート】【ショート】",
+      "similarity": 0.823
+    },
+    {
+      "a": "1分妖怪ファイル #11：🔍ぬらりひょんに隠された3つの秘密、あなたの知る総大将はいつ生まれた？【ショート】",
+      "b": "1分妖怪ファイル：その『設定』、江戸時代には存在しなかった昭和の妖怪本が作り上げた『総大将』の正体#ぬらりひょんが『妖怪の総大将』なのは、なぜか誰も疑わなかったのか #shorts #ゆっくり解説",
+      "similarity": 0.72
+    }
+  ],
+  "success_patterns": {
+    "ok": true,
+    "sample_size": {
+      "total": 29,
+      "success": 2,
+      "others": 27
+    },
+    "has_gpt_insights": false,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "retention_insights": {
+    "ok": true,
+    "has_gpt_insights": false,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "act": {
+    "approved": [
+      {
+        "from": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
+        "from_views": 2233,
+        "viral_ratio": 1.5728010367949512,
+        "series_type": "application",
+        "title": "「のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はな」の知識を日常で使う方法"
+      }
+    ],
+    "skipped_low_view": []
+  }
+}

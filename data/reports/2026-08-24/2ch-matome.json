@@ -1,0 +1,2701 @@
+{
+  "channel_id": "2ch-matome",
+  "channel_name": "ゆっくり2chスレまとめ劇場",
+  "sync": {
+    "ok": true,
+    "data": {
+      "channel_id": "2ch-matome",
+      "overview": {
+        "channel_id": "2ch-matome",
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "videos": {
+        "channel_id": "2ch-matome",
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "reach": {
+        "channel_id": "2ch-matome",
+        "ok": false,
+        "ingest": {
+          "ok": false,
+          "error": "OAuth 未連携または googleapiclient 未導入"
+        }
+      },
+      "retention": [],
+      "synced_at": 1787580004,
+      "comments": [],
+      "pdca": {
+        "scenario_evaluation": {
+          "channel_id": "2ch-matome",
+          "evaluated": 0,
+          "skipped": 24,
+          "results": [
+            {
+              "video_id": "ASi-M1AEuHc",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "ASi-M1AEuHc",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1787493648,
+                "hook_strength": 7.5,
+                "specificity": 6.73,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.62,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/ワイGTA6妄想歴6年やけど質問あるw.json",
+                "video_title": "ワイ、GTA6妄想歴6年やけど質問ある？w💦【ショート】"
+              }
+            },
+            {
+              "video_id": "gVgZ1gzEcvg",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "gVgZ1gzEcvg",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1787407302,
+                "hook_strength": 6.5,
+                "specificity": 4.91,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.01,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/なぜ3秒でバレるお前らをブラックラグーンで例えた結果.json",
+                "video_title": "なぜ3秒でバレる？お前らをブラックラグーンで例えた結果【ショート】"
+              }
+            },
+            {
+              "video_id": "EDwb1YE2Fug",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "EDwb1YE2Fug",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1787322079,
+                "hook_strength": 6.5,
+                "specificity": 4.28,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 6.88,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/なぜ熱闘甲子園の夜だけ空気が変わるお前らの夏の思い出5つ聞かせろ.json",
+                "video_title": "なぜ熱闘甲子園の夜だけ空気が変わる？お前らの夏の思い出5つ聞かせろ【ショート】"
+              }
+            },
+            {
+              "video_id": "3s9nTiDgeJw",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "3s9nTiDgeJw",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1787322079,
+                "hook_strength": 7.5,
+                "specificity": 7.1,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 7.55,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/ワイサーモス歴3年やけど質問あるw.json",
+                "video_title": "ワイ、サーモス歴3年やけど質問ある？w😏【ショート】"
+              }
+            },
+            {
+              "video_id": "D7GOY2ESPA0",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "D7GOY2ESPA0",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1787322079,
+                "hook_strength": 7.5,
+                "specificity": 7.3,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.73,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/3秒で考えろこの戦闘機の名前が親戚回避型な理由とは.json",
+                "video_title": "3秒で考えろ！この戦闘機の名前が親戚回避型な理由とは？【ショート】"
+              }
+            },
+            {
+              "video_id": "BRU-rMGivCo",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "BRU-rMGivCo",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1787322079,
+                "hook_strength": 6.5,
+                "specificity": 4.89,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.0,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/ワイアジア大会珍プレー歴0年やけど質問あるw.json",
+                "video_title": "ワイ、アジア大会珍プレー歴0年やけど質問ある？w🤣【ショート】"
+              }
+            },
+            {
+              "video_id": "r4Injc9zOpc",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "r4Injc9zOpc",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1787322079,
+                "hook_strength": 7.5,
+                "specificity": 5.58,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.39,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/ちいかわチョコサプなぜ中身が攻めすぎなのか3秒予想してみたら草.json",
+                "video_title": "ちいかわチョコサプ、なぜ中身が攻めすぎなのか？3秒予想してみたら草【ショート】"
+              }
+            },
+            {
+              "video_id": "vpqtuDNuTso",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "vpqtuDNuTso",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1787322079,
+                "hook_strength": 6.5,
+                "specificity": 4.81,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 6.99,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/なぜケンタッキー月見は3秒で秋の給料日になるのか食べた感想あげてけw.json",
+                "video_title": "なぜケンタッキー月見は3秒で秋の給料日になるのか、食べた感想あげてけw【ショート】"
+              }
+            },
+            {
+              "video_id": "VEjXHM7oUWg",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "VEjXHM7oUWg",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1787322079,
+                "hook_strength": 7.5,
+                "specificity": 5.21,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.32,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/PCパーツ到着時なぜ箱だけ先に届くのか.json",
+                "video_title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】"
+              }
+            },
+            {
+              "video_id": "JHpcaK9BZcg",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "JHpcaK9BZcg",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1787061634,
+                "hook_strength": 7.5,
+                "specificity": 9.7,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 8.07,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/なんか靴下だけ消えるんやがw.json",
+                "video_title": "なんか靴下だけ消えるんやがw【ショート】"
+              }
+            },
+            {
+              "video_id": "ME3Nrv3L8Sc",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "ME3Nrv3L8Sc",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1787061634,
+                "hook_strength": 6.0,
+                "specificity": 9.81,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 7.71,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/存在しないゲームの迷惑機能あげてけw.json",
+                "video_title": "存在しないゲームの迷惑機能あげてけw【ショート】"
+              }
+            },
+            {
+              "video_id": "RNnXuVaiEDQ",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "RNnXuVaiEDQ",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786975236,
+                "hook_strength": 6.5,
+                "specificity": 4.5,
+                "pacing": 10.0,
+                "cta_effectiveness": 9.0,
+                "wording_quality": 6.0,
+                "overall": 7.07,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/飲み会で絶対見られたくない通知あげてけw.json",
+                "video_title": "飲み会で絶対見られたくない通知あげてけw【ショート】"
+              }
+            },
+            {
+              "video_id": "kFxWX6wPLxA",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "kFxWX6wPLxA",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786975236,
+                "hook_strength": 6.5,
+                "specificity": 5.31,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.09,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/ワイAIに変な質問する係やけど質問あるw.json",
+                "video_title": "ワイ、AIに変な質問する係やけど質問ある？w【ショート】"
+              }
+            },
+            {
+              "video_id": "uz4uY3NwY9s",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "uz4uY3NwY9s",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786975236,
+                "hook_strength": 6.5,
+                "specificity": 4.56,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 6.94,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/絶対に二度見される部屋着あげてけw.json",
+                "video_title": "絶対に二度見される部屋着あげてけw【ショート】"
+              }
+            },
+            {
+              "video_id": "9TEBWzcaEkg",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "0xBt5Iu6AgA",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "0xBt5Iu6AgA",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786975237,
+                "hook_strength": 7.5,
+                "specificity": 7.92,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 7.71,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/後輩敬語って課金制ですよね翌朝全員が黙った.json",
+                "video_title": "後輩「敬語って課金制ですよね？」→翌朝、全員が黙った #shorts #2ch #スカッと"
+              }
+            },
+            {
+              "video_id": "0lc5Rc36_Dc",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "0lc5Rc36_Dc",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786975237,
+                "hook_strength": 6.5,
+                "specificity": 6.15,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.26,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/なんかスマホの充電だけ遅いんやが.json",
+                "video_title": "なんかスマホの充電だけ遅いんやが【ショート】"
+              }
+            },
+            {
+              "video_id": "prWmOE1LGbQ",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "prWmOE1LGbQ",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786802426,
+                "hook_strength": 7.5,
+                "specificity": 4.67,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.21,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/ワイのキーボードの変な癖あげてけw.json",
+                "video_title": "ワイのキーボードの変な癖あげてけw【ショート】"
+              }
+            },
+            {
+              "video_id": "Be4FYVfZ57Y",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "Be4FYVfZ57Y",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786802426,
+                "hook_strength": 6.5,
+                "specificity": 4.21,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 6.87,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/ワイ彼女いない歴年齢やけど質問ある.json",
+                "video_title": "ワイ、彼女いない歴＝年齢やけど質問ある？【ショート】"
+              }
+            },
+            {
+              "video_id": "vkhUIYYCiJ8",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "vkhUIYYCiJ8",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786716021,
+                "hook_strength": 6.0,
+                "specificity": 8.21,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 7.39,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/彼女の部屋でヤバい物あげてけw.json",
+                "video_title": "彼女の部屋でヤバい物あげてけw【ショート】"
+              }
+            },
+            {
+              "video_id": "WDnmFqiOqpU",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "WDnmFqiOqpU",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786716021,
+                "hook_strength": 6.5,
+                "specificity": 5.06,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 7.04,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/なんかPCの画面チカチカするんやが.json",
+                "video_title": "なんかPCの画面チカチカするんやが【ショート】"
+              }
+            },
+            {
+              "video_id": "MASXwV-ZkDc",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "MASXwV-ZkDc",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786629617,
+                "hook_strength": 6.5,
+                "specificity": 4.31,
+                "pacing": 10.0,
+                "cta_effectiveness": 8.0,
+                "wording_quality": 6.0,
+                "overall": 6.89,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/コンビニで一番いらん商品あげてけ.json",
+                "video_title": "コンビニで一番いらん商品あげてけ【ショート】"
+              }
+            },
+            {
+              "video_id": "WJpTwtFMnTM",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "WJpTwtFMnTM",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786629618,
+                "hook_strength": 6.0,
+                "specificity": 10.0,
+                "pacing": 10.0,
+                "cta_effectiveness": 7.0,
+                "wording_quality": 6.0,
+                "overall": 7.75,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/ワイの今日の昼飯を当てるスレw.json",
+                "video_title": "ワイの今日の昼飯を当てるスレw【ショート】"
+              }
+            },
+            {
+              "video_id": "WtRQk1PvOKM",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "WtRQk1PvOKM",
+                "channel_id": "2ch-matome",
+                "evaluated_at": 1786284032,
+                "hook_strength": 7.0,
+                "specificity": 8.0,
+                "pacing": 7.0,
+                "cta_effectiveness": 5.0,
+                "wording_quality": 9.0,
+                "overall": 7.0,
+                "weak_sections": [
+                  {
+                    "section": "フック",
+                    "issue": "ユイの1行目「あれ、時給どこへ消えた？」は共感を狙っているが、視聴者が自分ごと化する前に抽象的な問いかけで終わっており、即座に「続きを見る理由」が生まれにくい。Shortsでは冒頭0.5秒で離脱が起きるため、数字や結末の断片を先出しする構成が必要。",
+                    "drop_percent": 15
+                  },
+                  {
+                    "section": "CTA / クロージング",
+                    "issue": "「チャンネル登録者1万人を目指して」という内輪事情の開示は視聴者にとってメリットがなく、応援を促す文脈が弱い。また次回予告とコメント誘導とCTAが4行に詰め込まれており、視聴者の行動を分散させている。",
+                    "drop_percent": 20
+                  }
+                ],
+                "improvement_suggestions": [
+                  "フック1行目を「残業80時間分がゼロ、上司の一言は『やる気で払う』だった」に書き換え、具体数字と結末の断片を冒頭0〜2秒に置いて即離脱を防ぐ。",
+                  "導入セクションのゴロー「1週間で約10時間、8人なら合計80時間が空中分解してる計算じゃん」の直前に時給換算を追加し、「時給1,100円なら8万8,000円が消えた計算」と金額を明示することで損失の実感を強化する。",
+                  "展開1でBとCの被害が判明する場面（「8人中6人が同じ状態」）に、3か月分の未払い総額の概算（例：「3か月で一人あたり約3万円超」）を入れ、数字の積み上げで怒りの共感を加速させる。",
+                  "CTAセクションのゴロー「チャンネル登録者1万人を目指して」を削除し、代わりに「このチャンネルでは毎日こういう職場スレを30秒で読む、次のヤバい上司は概要欄から」と視聴者メリット軸に書き換えてCTA文言を1行に絞る。",
+                  "コメント誘導のユイ最終行「一番キレのあるレスを置いていってくれ」は競争心を煽る良い仕掛けだが、Shortsでは画面遷移が速いため「コメント欄に『やる気』って書いてくれ」のように超短い行動指示に変更し、コメント率を上げる。",
+                  "展開2でAが「残業代は検討する」と言う場面の直後に、名無しのレスとして「検討＝払わない宣言の婉曲表現、辞書に載せろ」のような短いツッコミ1行を追加し、視聴者がスクリーンショットを撮りたくなるキャッチーな一文を埋め込む。"
+                ],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/2ch-matome/上司残業代はやる気で払う発言からなぜか全員消えた職場の末路.json",
+                "video_title": "30秒スレまとめ：残業代はやる気で払う#上司「残業代はやる気で払う」発言から、なぜか全員消えた職場の末路 #shorts #ゆっくり解説"
+              }
+            }
+          ],
+          "ran_at": 1787580004
+        },
+        "ab_reconciliation": {
+          "channel_id": "2ch-matome",
+          "reconciled": 5,
+          "items": [
+            {
+              "test_id": "abt_20260823_140103_fb135f",
+              "status": "too_young",
+              "age_days": 4.155964746412037,
+              "matched_video_id": "BRU-rMGivCo"
+            },
+            {
+              "test_id": "abt_20260823_140100_154239",
+              "status": "too_young",
+              "age_days": 6.077816609745371,
+              "matched_video_id": "JHpcaK9BZcg"
+            },
+            {
+              "test_id": "abt_20260823_140057_d0af77",
+              "status": "reconciled",
+              "matched_video_id": "MASXwV-ZkDc",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.027777777777777776,
+              "actual_impressions": 36,
+              "age_days": 11.07935597414352
+            },
+            {
+              "test_id": "abt_20260823_140054_ff2378",
+              "status": "reconciled",
+              "matched_video_id": "WDnmFqiOqpU",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.03278688524590164,
+              "actual_impressions": 61,
+              "age_days": 10.579564375162036
+            },
+            {
+              "test_id": "abt_20260823_140052_8a9df8",
+              "status": "reconciled",
+              "matched_video_id": "WJpTwtFMnTM",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.02,
+              "actual_impressions": 50,
+              "age_days": 11.579367660381944
+            },
+            {
+              "test_id": "abt_20260822_140146_7b3e14",
+              "status": "reconciled",
+              "matched_video_id": "WDnmFqiOqpU",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.03278688524590164,
+              "actual_impressions": 61,
+              "age_days": 10.579564456273149
+            },
+            {
+              "test_id": "abt_20260822_140149_934dd3",
+              "status": "reconciled",
+              "matched_video_id": "MASXwV-ZkDc",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.027777777777777776,
+              "actual_impressions": 36,
+              "age_days": 11.079356152615741
+            }
+          ],
+          "ran_at": 1787580004
+        },
+        "improvement_queue": {
+          "channel_id": "2ch-matome",
+          "channel_avg_ctr": 0.05683237371869814,
+          "threshold_ctr": 0.045465898974958514,
+          "threshold_percent": 80.0,
+          "candidates_found": 5,
+          "queued": [
+            {
+              "video_id": "WJpTwtFMnTM",
+              "channel_id": "2ch-matome",
+              "created_at": 1787493652,
+              "updated_at": 1787580009,
+              "status": "pending",
+              "current_title": "ワイの今日の昼飯を当てるスレw【ショート】",
+              "current_ctr": 0.02,
+              "channel_avg_ctr": 0.05683237371869814,
+              "suggested_titles": [
+                "冷たくて丸い昼飯、午後に腹減る正体は何？【ショート】",
+                "680円で午後2時間腹が空く昼飯を当てろw【ショート】",
+                "実は優等生じゃない？午後に裏切る冷たい昼飯w【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "冷たくて丸い昼飯、午後に腹減る正体は何？【ショート】",
+                  "thumb_copy": [
+                    "冷たくて丸い",
+                    "午後に腹が鳴る"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "680円で午後2時間腹が空く昼飯を当てろw【ショート】",
+                  "thumb_copy": [
+                    "680円の昼飯",
+                    "2時間後に敗北"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は優等生じゃない？午後に裏切る冷たい昼飯w【ショート】",
+                  "thumb_copy": [
+                    "軽そうで危険",
+                    "午後に裏切る飯"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.045465898974958514
+            },
+            {
+              "video_id": "WDnmFqiOqpU",
+              "channel_id": "2ch-matome",
+              "created_at": 1787407306,
+              "updated_at": 1787580012,
+              "status": "pending",
+              "current_title": "なんかPCの画面チカチカするんやが【ショート】",
+              "current_ctr": 0.03278688524590164,
+              "channel_avg_ctr": 0.05683237371869814,
+              "suggested_titles": [
+                "PC画面のチカチカ、なぜ最終的に瞬きで直す話になる？【ショート】",
+                "PC画面チカチカ対策3段階、最後の回答が雑すぎる【ショート】",
+                "衝撃の診断、PC画面のチカチカはお前が同期しろ【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "PC画面のチカチカ、なぜ最終的に瞬きで直す話になる？【ショート】",
+                  "thumb_copy": [
+                    "画面がチカチカ",
+                    "お前が瞬きしろ"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "PC画面チカチカ対策3段階、最後の回答が雑すぎる【ショート】",
+                  "thumb_copy": [
+                    "解決策が3段階で",
+                    "最後だけ雑すぎる"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "衝撃の診断、PC画面のチカチカはお前が同期しろ【ショート】",
+                  "thumb_copy": [
+                    "犯人はPCじゃない",
+                    "お前が同期しろ"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.045465898974958514
+            },
+            {
+              "video_id": "MASXwV-ZkDc",
+              "channel_id": "2ch-matome",
+              "created_at": 1787407309,
+              "updated_at": 1787580022,
+              "status": "pending",
+              "current_title": "コンビニで一番いらん商品あげてけ【ショート】",
+              "current_ctr": 0.027777777777777776,
+              "channel_avg_ctr": 0.05683237371869814,
+              "suggested_titles": [
+                "コンビニで「誰が買うんだよ」と思う商品、結局なに？【ショート】",
+                "コンビニで買った記憶ゼロの商品7選、異論は認める【ショート】",
+                "実はいらない商品ほど売れている？コンビニ珍商品大喜利【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "コンビニで「誰が買うんだよ」と思う商品、結局なに？【ショート】",
+                  "thumb_copy": [
+                    "誰が買うんだよ",
+                    "でも消えない商品"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "コンビニで買った記憶ゼロの商品7選、異論は認める【ショート】",
+                  "thumb_copy": [
+                    "買った記憶ゼロ",
+                    "いらん商品7選"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実はいらない商品ほど売れている？コンビニ珍商品大喜利【ショート】",
+                  "thumb_copy": [
+                    "いらんのに売れる",
+                    "棚の謎商品たち"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.045465898974958514
+            },
+            {
+              "video_id": "JHpcaK9BZcg",
+              "channel_id": "2ch-matome",
+              "created_at": 1787493660,
+              "updated_at": 1787580025,
+              "status": "pending",
+              "current_title": "なんか靴下だけ消えるんやがw【ショート】",
+              "current_ctr": 0.03571428571428571,
+              "channel_avg_ctr": 0.05683237371869814,
+              "suggested_titles": [
+                "なぜ洗濯後に靴下だけ片方ずつ消えるのか？犯人候補が多すぎるw【ショート】",
+                "2026年8月だけで4足消失…片方靴下29枚の地獄を見てくれw【ショート】",
+                "実は洗濯機じゃない？靴下片方だけ消える謎、犯人候補が狂ってるw【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "なぜ洗濯後に靴下だけ片方ずつ消えるのか？犯人候補が多すぎるw【ショート】",
+                  "thumb_copy": [
+                    "靴下だけ消える",
+                    "犯人は誰やw"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "2026年8月だけで4足消失…片方靴下29枚の地獄を見てくれw【ショート】",
+                  "thumb_copy": [
+                    "片方だけ29枚",
+                    "靴下孤児院w"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は洗濯機じゃない？靴下片方だけ消える謎、犯人候補が狂ってるw【ショート】",
+                  "thumb_copy": [
+                    "犯人は洗濯機",
+                    "じゃなかった！？"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.045465898974958514
+            },
+            {
+              "video_id": "BRU-rMGivCo",
+              "channel_id": "2ch-matome",
+              "created_at": 1787493663,
+              "updated_at": 1787580028,
+              "status": "pending",
+              "current_title": "ワイ、アジア大会珍プレー歴0年やけど質問ある？w🤣【ショート】",
+              "current_ctr": 0.02857142857142857,
+              "channel_avg_ctr": 0.05683237371869814,
+              "suggested_titles": [
+                "なぜアジア大会の珍プレーは靴ひも1本で伝説になるのか？【ショート】",
+                "アジア大会で起きそうな珍プレー3選！金メダル級の勘違い【ショート】",
+                "実はゴール後が一番危険！アジア大会の珍プレー予想スレ【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "なぜアジア大会の珍プレーは靴ひも1本で伝説になるのか？【ショート】",
+                  "thumb_copy": [
+                    "靴ひもが主役？",
+                    "一瞬で会場爆笑"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "アジア大会で起きそうな珍プレー3選！金メダル級の勘違い【ショート】",
+                  "thumb_copy": [
+                    "珍プレー3連発",
+                    "真顔なのが笑える"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実はゴール後が一番危険！アジア大会の珍プレー予想スレ【ショート】",
+                  "thumb_copy": [
+                    "喜びすぎて落下",
+                    "バトンが悲劇に！？"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.045465898974958514
+            }
+          ],
+          "ran_at": 1787580028
+        },
+        "series_engine": {
+          "channel_id": "2ch-matome",
+          "channel_avg": 1134.2777777777778,
+          "threshold": 1.5,
+          "viral_count": 1,
+          "suggestions_added": 0,
+          "items": [
+            {
+              "video_id": "VEjXHM7oUWg",
+              "title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+              "views": 1802,
+              "channel_avg": 1134.2777777777778,
+              "viral_ratio": 1.5886761032472938,
+              "published_at": "2026-08-19T08:15:21Z",
+              "skipped": "already has suggestions"
+            }
+          ],
+          "ran_at": 1787580028
+        },
+        "comment_demand": {
+          "ok": true,
+          "channel_id": "2ch-matome",
+          "started_at": 1787580028,
+          "finished_at": 1787580028,
+          "request_comments_considered": 0,
+          "demands_saved": 0,
+          "auto_queued": 0,
+          "items": []
+        }
+      }
+    }
+  },
+  "pdca_report": {
+    "ok": true,
+    "data": {
+      "channel_id": "2ch-matome",
+      "days": 30,
+      "generated_at": "2026-08-24T14:00:28.667792Z",
+      "window": {
+        "start": "2026-07-25T14:00:28.667792Z",
+        "end": "2026-08-24T14:00:28.667792Z"
+      },
+      "channel_stats": {},
+      "subscribers": {
+        "current_total": null,
+        "gained_in_window": 6,
+        "lost_in_window": 1,
+        "net_in_window": 5,
+        "daily": [
+          {
+            "date": "2026-07-22",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-23",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-24",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-25",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-26",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-27",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-28",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-29",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-30",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-07-31",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-01",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-02",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-03",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-04",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-05",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-06",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-07",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-08",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-09",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-10",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-11",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-12",
+            "gained": 1,
+            "lost": 0,
+            "net": 1,
+            "cumulative_net": 1
+          },
+          {
+            "date": "2026-08-13",
+            "gained": 2,
+            "lost": 1,
+            "net": 1,
+            "cumulative_net": 2
+          },
+          {
+            "date": "2026-08-14",
+            "gained": 2,
+            "lost": 0,
+            "net": 2,
+            "cumulative_net": 4
+          },
+          {
+            "date": "2026-08-15",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 4
+          },
+          {
+            "date": "2026-08-16",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 4
+          },
+          {
+            "date": "2026-08-17",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 4
+          },
+          {
+            "date": "2026-08-18",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 4
+          },
+          {
+            "date": "2026-08-19",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 4
+          },
+          {
+            "date": "2026-08-20",
+            "gained": 1,
+            "lost": 0,
+            "net": 1,
+            "cumulative_net": 5
+          }
+        ],
+        "source": "analytics_cache (要 /api/analytics/sync)"
+      },
+      "subscriber_sources": {
+        "total_gained": 0,
+        "total_lost": 0,
+        "total_net": 0,
+        "shorts": {
+          "gained": 0,
+          "lost": 0,
+          "net": 0,
+          "share_of_gained": 0.0,
+          "subs_per_1000_views": 0.0
+        },
+        "main": {
+          "gained": 0,
+          "lost": 0,
+          "net": 0,
+          "share_of_gained": 0.0,
+          "subs_per_1000_views": 0.0
+        },
+        "unknown": {
+          "gained": 0,
+          "lost": 0,
+          "note": null
+        },
+        "source": "none",
+        "error": "youtube analytics 未連携 or googleapiclient 未導入"
+      },
+      "recommendation": {
+        "decision": "more_data_needed",
+        "primary_subscriber_source": null,
+        "headline": "登録者ソースが取得できないため判断保留",
+        "reasoning": "YouTube Analytics API から subscribersGained を取得できませんでした。 OAuth 連携と yt-analytics.readonly スコープを確認してください。",
+        "warnings": [
+          "登録者ソースデータなし — 再生数ベースの判断は危険"
+        ],
+        "metrics_used": {}
+      },
+      "shorts": {
+        "count": 0,
+        "total_views": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "avg_views": 0.0,
+        "avg_likes": 0.0,
+        "avg_comments": 0.0,
+        "avg_like_rate": 0.0,
+        "median_views": 0,
+        "top_videos": []
+      },
+      "main": {
+        "count": 0,
+        "total_views": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "avg_views": 0.0,
+        "avg_likes": 0.0,
+        "avg_comments": 0.0,
+        "avg_like_rate": 0.0,
+        "median_views": 0,
+        "top_videos": []
+      },
+      "comparison": {
+        "avg_views_short_vs_main": null,
+        "avg_likes_short_vs_main": null,
+        "avg_like_rate_short_vs_main": null
+      },
+      "cost": {
+        "total_cost_usd": 4.6657,
+        "events": 184,
+        "by_purpose": {
+          "theme_suggest": 0.0183,
+          "scenario_claude": 1.9789,
+          "blind_compare": 0.0264,
+          "success_pattern": 0.0132,
+          "section_1": 0.1346,
+          "section_2": 0.176,
+          "section_3": 0.2034,
+          "section_4": 0.1885,
+          "section_5": 0.2039,
+          "section_6": 0.1866,
+          "section_7": 0.184,
+          "trend_relevance": 0.0097,
+          "title_ctr_regen": 0.0143,
+          "scenario_gpt": 1.2744,
+          "ab_test_generate": 0.0535
+        },
+        "by_model": {
+          "gpt-5.6-luna": 0.0209,
+          "gpt-5.6-terra": 4.4902,
+          "claude-sonnet-4-6": 0.145,
+          "gpt-4o-mini": 0.0097
+        },
+        "videos_in_window": 0,
+        "cost_per_video_usd": 0.0,
+        "cost_per_short_usd": 0.0,
+        "cost_per_main_usd": 0.0,
+        "note": "ショート/メインは同一パイプライン由来で個別計上はないため、総コスト ÷ 期間内本数で均等按分しています。"
+      },
+      "totals": {
+        "published_in_db": 0,
+        "fetched_from_youtube": 0,
+        "in_window": 0
+      },
+      "errors": {
+        "youtube_fetch": "youtube oauth 未連携 or googleapiclient 未導入",
+        "subscriber_sources": "youtube analytics 未連携 or googleapiclient 未導入"
+      }
+    }
+  },
+  "posting": {
+    "ok": true,
+    "data": {
+      "channel_id": "2ch-matome",
+      "current_schedule": {
+        "days_of_week": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "hour": 18,
+        "minute": 0,
+        "enabled": true
+      },
+      "recommendation": {
+        "recommended": {
+          "day_of_week": 1,
+          "hour": 18,
+          "minute": 0,
+          "avg_views": 937.5,
+          "sample_size": 4,
+          "boost_percent": 10.2
+        },
+        "alternatives": [
+          {
+            "day_of_week": 3,
+            "hour": 17,
+            "minute": 0,
+            "avg_views": 1802.0,
+            "sample_size": 1,
+            "boost_percent": 111.8
+          },
+          {
+            "day_of_week": 6,
+            "hour": 9,
+            "minute": 0,
+            "avg_views": 1652.0,
+            "sample_size": 1,
+            "boost_percent": 94.2
+          }
+        ],
+        "channel_avg_views": 850.8333333333334,
+        "data_days": 30,
+        "note": null
+      },
+      "heatmap": {
+        "grid": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1350.0,
+            1358.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            937.5,
+            0.0,
+            0.0,
+            2.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1144.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            703.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1802.0,
+            0.0,
+            247.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1436.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            818.0,
+            0.0,
+            581.0,
+            0.0,
+            1086.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1298.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            637.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1366.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1652.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1190.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "samples": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        ],
+        "channel_avg_views": 850.8333333333334,
+        "channel_total_videos": 24,
+        "data_days": 30
+      },
+      "computed_at": 1787580029
+    }
+  },
+  "series": {
+    "ok": true,
+    "data": {
+      "channel_id": "2ch-matome",
+      "count": 3,
+      "items": [
+        {
+          "id": "fd215434f9",
+          "channel_id": "2ch-matome",
+          "original_video_id": "VEjXHM7oUWg",
+          "original_title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+          "original_views": 1802,
+          "channel_avg_views": 1134,
+          "viral_ratio": 1.5886761032472938,
+          "series_type": "deep_dive",
+          "suggested_title": "なぜ「PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】」はこうなるのか？徹底深堀り",
+          "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+          "rationale": "深堀り型はリテンションが高い",
+          "created_at": 1787493663,
+          "decided_at": 1787493664,
+          "status": "approved",
+          "queue_theme_id": "0e51c021",
+          "queued_video_id": null
+        },
+        {
+          "id": "c6b9714fe6",
+          "channel_id": "2ch-matome",
+          "original_video_id": "VEjXHM7oUWg",
+          "original_title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+          "original_views": 1802,
+          "channel_avg_views": 1134,
+          "viral_ratio": 1.5886761032472938,
+          "series_type": "contrast",
+          "suggested_title": "「PCパーツ到着時、なぜ箱だけ先に届くのか？【ショー」とは逆のパターンを比較してみた",
+          "suggested_angle": "対比で違いを際立たせる構成",
+          "rationale": "比較型は CTR が安定して取りやすい",
+          "created_at": 1787493663,
+          "decided_at": 1787493664,
+          "status": "approved",
+          "queue_theme_id": "3eb1cd22",
+          "queued_video_id": null
+        },
+        {
+          "id": "04e2a0a519",
+          "channel_id": "2ch-matome",
+          "original_video_id": "VEjXHM7oUWg",
+          "original_title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+          "original_views": 1802,
+          "channel_avg_views": 1134,
+          "viral_ratio": 1.5886761032472938,
+          "series_type": "application",
+          "suggested_title": "「PCパーツ到着時、なぜ箱だけ先に届くのか？【ショー」の知識を日常で使う方法",
+          "suggested_angle": "応用先を具体例で紹介",
+          "rationale": "応用型は再生時間が伸びやすい",
+          "created_at": 1787493663,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        }
+      ],
+      "grouped": [
+        {
+          "original_video_id": "VEjXHM7oUWg",
+          "original_title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+          "original_views": 1802,
+          "viral_ratio": 1.5886761032472938,
+          "suggestions": [
+            {
+              "id": "fd215434f9",
+              "channel_id": "2ch-matome",
+              "original_video_id": "VEjXHM7oUWg",
+              "original_title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+              "original_views": 1802,
+              "channel_avg_views": 1134,
+              "viral_ratio": 1.5886761032472938,
+              "series_type": "deep_dive",
+              "suggested_title": "なぜ「PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】」はこうなるのか？徹底深堀り",
+              "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+              "rationale": "深堀り型はリテンションが高い",
+              "created_at": 1787493663,
+              "decided_at": 1787493664,
+              "status": "approved",
+              "queue_theme_id": "0e51c021",
+              "queued_video_id": null
+            },
+            {
+              "id": "c6b9714fe6",
+              "channel_id": "2ch-matome",
+              "original_video_id": "VEjXHM7oUWg",
+              "original_title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+              "original_views": 1802,
+              "channel_avg_views": 1134,
+              "viral_ratio": 1.5886761032472938,
+              "series_type": "contrast",
+              "suggested_title": "「PCパーツ到着時、なぜ箱だけ先に届くのか？【ショー」とは逆のパターンを比較してみた",
+              "suggested_angle": "対比で違いを際立たせる構成",
+              "rationale": "比較型は CTR が安定して取りやすい",
+              "created_at": 1787493663,
+              "decided_at": 1787493664,
+              "status": "approved",
+              "queue_theme_id": "3eb1cd22",
+              "queued_video_id": null
+            },
+            {
+              "id": "04e2a0a519",
+              "channel_id": "2ch-matome",
+              "original_video_id": "VEjXHM7oUWg",
+              "original_title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+              "original_views": 1802,
+              "channel_avg_views": 1134,
+              "viral_ratio": 1.5886761032472938,
+              "series_type": "application",
+              "suggested_title": "「PCパーツ到着時、なぜ箱だけ先に届くのか？【ショー」の知識を日常で使う方法",
+              "suggested_angle": "応用先を具体例で紹介",
+              "rationale": "応用型は再生時間が伸びやすい",
+              "created_at": 1787493663,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            }
+          ]
+        }
+      ],
+      "viral_videos": [
+        {
+          "video_id": "VEjXHM7oUWg",
+          "title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+          "views": 1802,
+          "channel_avg": 1134.2777777777778,
+          "viral_ratio": 1.5886761032472938,
+          "published_at": "2026-08-19T08:15:21Z"
+        }
+      ],
+      "channel_avg_views": 1134.2777777777778,
+      "summary": {
+        "channel_id": "2ch-matome",
+        "channel_avg_views": 1134.2777777777778,
+        "total_suggestions": 3,
+        "by_status": {
+          "approved": 2,
+          "pending": 1
+        },
+        "by_type": {
+          "deep_dive": 1,
+          "contrast": 1,
+          "application": 1
+        },
+        "approved_with_video": 0
+      }
+    }
+  },
+  "genre_breakdown": [
+    {
+      "genre": "その他",
+      "count": 24,
+      "total_views": 20420,
+      "total_likes": 44,
+      "titles": [
+        "ワイ、GTA6妄想歴6年やけど質問ある？w💦【ショート】",
+        "なぜ3秒でバレる？お前らをブラックラグーンで例えた結果【ショート】",
+        "なぜ熱闘甲子園の夜だけ空気が変わる？お前らの夏の思い出5つ聞かせろ【ショート】"
+      ],
+      "avg_views": 850.83
+    }
+  ],
+  "view_trends": [
+    {
+      "video_id": "VEjXHM7oUWg",
+      "title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+      "series": [
+        {
+          "date": "2026-08-21",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1574,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1802,
+          "likes": 4
+        }
+      ],
+      "latest_views": 1802,
+      "first_views": 0,
+      "delta": 1802,
+      "snapshots": 3
+    },
+    {
+      "video_id": "Be4FYVfZ57Y",
+      "title": "ワイ、彼女いない歴＝年齢やけど質問ある？【ショート】",
+      "series": [
+        {
+          "date": "2026-08-15",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1641,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1651,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1652,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1652,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1652,
+          "likes": 4
+        }
+      ],
+      "latest_views": 1652,
+      "first_views": 0,
+      "delta": 1652,
+      "snapshots": 6
+    },
+    {
+      "video_id": "WJpTwtFMnTM",
+      "title": "ワイの今日の昼飯を当てるスレw【ショート】",
+      "series": [
+        {
+          "date": "2026-08-13",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-14",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1429,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1435,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1437,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1436,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1436,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1436,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1436,
+      "first_views": 0,
+      "delta": 1436,
+      "snapshots": 8
+    },
+    {
+      "video_id": "vkhUIYYCiJ8",
+      "title": "彼女の部屋でヤバい物あげてけw【ショート】",
+      "series": [
+        {
+          "date": "2026-08-14",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-15",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1367,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1367,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1366,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1366,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1366,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1366,
+      "first_views": 0,
+      "delta": 1366,
+      "snapshots": 7
+    },
+    {
+      "video_id": "WtRQk1PvOKM",
+      "title": "30秒スレまとめ：残業代はやる気で払う#上司「残業代はやる気で払う」発言から、なぜか全員消えた職場の末路 #shorts #ゆっくり解説",
+      "series": [
+        {
+          "date": "2026-08-09",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-10",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-11",
+          "views": 1351,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-12",
+          "views": 1356,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-13",
+          "views": 1356,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-14",
+          "views": 1356,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-15",
+          "views": 1358,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1364,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1364,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1358,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1358,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1358,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1358,
+      "first_views": 0,
+      "delta": 1358,
+      "snapshots": 12
+    },
+    {
+      "video_id": "0xBt5Iu6AgA",
+      "title": "後輩「敬語って課金制ですよね？」→翌朝、全員が黙った #shorts #2ch #スカッと",
+      "series": [
+        {
+          "date": "2026-08-17",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-18",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1353,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1353,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1353,
+          "likes": 4
+        }
+      ],
+      "latest_views": 1353,
+      "first_views": 0,
+      "delta": 1353,
+      "snapshots": 5
+    },
+    {
+      "video_id": "0lc5Rc36_Dc",
+      "title": "なんかスマホの充電だけ遅いんやが【ショート】",
+      "series": [
+        {
+          "date": "2026-08-17",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1353,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1350,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1350,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1350,
+          "likes": 1
+        }
+      ],
+      "latest_views": 1350,
+      "first_views": 0,
+      "delta": 1350,
+      "snapshots": 5
+    },
+    {
+      "video_id": "WDnmFqiOqpU",
+      "title": "なんかPCの画面チカチカするんやが【ショート】",
+      "series": [
+        {
+          "date": "2026-08-14",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-15",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1299,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1295,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1298,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1298,
+          "likes": 4
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1298,
+          "likes": 4
+        }
+      ],
+      "latest_views": 1298,
+      "first_views": 0,
+      "delta": 1298,
+      "snapshots": 7
+    },
+    {
+      "video_id": "uz4uY3NwY9s",
+      "title": "絶対に二度見される部屋着あげてけw【ショート】",
+      "series": [
+        {
+          "date": "2026-08-17",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-18",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1235,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1235,
+          "likes": 6
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1235,
+          "likes": 6
+        }
+      ],
+      "latest_views": 1235,
+      "first_views": 0,
+      "delta": 1235,
+      "snapshots": 5
+    },
+    {
+      "video_id": "prWmOE1LGbQ",
+      "title": "ワイのキーボードの変な癖あげてけw【ショート】",
+      "series": [
+        {
+          "date": "2026-08-15",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-17",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1188,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1190,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1190,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1190,
+          "likes": 0
+        }
+      ],
+      "latest_views": 1190,
+      "first_views": 0,
+      "delta": 1190,
+      "snapshots": 6
+    },
+    {
+      "video_id": "9TEBWzcaEkg",
+      "title": "実際には存在しないけどありそうな県名あげてけ【ショート】",
+      "series": [
+        {
+          "date": "2026-08-17",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-18",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1161,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1161,
+          "likes": 3
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1161,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1161,
+      "first_views": 0,
+      "delta": 1161,
+      "snapshots": 5
+    },
+    {
+      "video_id": "ME3Nrv3L8Sc",
+      "title": "存在しないゲームの迷惑機能あげてけw【ショート】",
+      "series": [
+        {
+          "date": "2026-08-18",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1143,
+          "likes": 2
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1143,
+          "likes": 2
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1144,
+          "likes": 2
+        }
+      ],
+      "latest_views": 1144,
+      "first_views": 0,
+      "delta": 1144,
+      "snapshots": 4
+    },
+    {
+      "video_id": "MASXwV-ZkDc",
+      "title": "コンビニで一番いらん商品あげてけ【ショート】",
+      "series": [
+        {
+          "date": "2026-08-13",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-14",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-15",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-17",
+          "views": 1085,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-18",
+          "views": 1085,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1086,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1086,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1086,
+          "likes": 1
+        }
+      ],
+      "latest_views": 1086,
+      "first_views": 0,
+      "delta": 1086,
+      "snapshots": 8
+    },
+    {
+      "video_id": "r4Injc9zOpc",
+      "title": "ちいかわチョコサプ、なぜ中身が攻めすぎなのか？3秒予想してみたら草【ショート】",
+      "series": [
+        {
+          "date": "2026-08-21",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 818,
+          "likes": 1
+        }
+      ],
+      "latest_views": 818,
+      "first_views": 0,
+      "delta": 818,
+      "snapshots": 3
+    },
+    {
+      "video_id": "JHpcaK9BZcg",
+      "title": "なんか靴下だけ消えるんやがw【ショート】",
+      "series": [
+        {
+          "date": "2026-08-18",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 698,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-22",
+          "views": 703,
+          "likes": 1
+        },
+        {
+          "date": "2026-08-23",
+          "views": 703,
+          "likes": 1
+        }
+      ],
+      "latest_views": 703,
+      "first_views": 0,
+      "delta": 703,
+      "snapshots": 4
+    },
+    {
+      "video_id": "D7GOY2ESPA0",
+      "title": "3秒で考えろ！この戦闘機の名前が親戚回避型な理由とは？【ショート】",
+      "series": [
+        {
+          "date": "2026-08-21",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 637,
+          "likes": 3
+        }
+      ],
+      "latest_views": 637,
+      "first_views": 0,
+      "delta": 637,
+      "snapshots": 3
+    },
+    {
+      "video_id": "BRU-rMGivCo",
+      "title": "ワイ、アジア大会珍プレー歴0年やけど質問ある？w🤣【ショート】",
+      "series": [
+        {
+          "date": "2026-08-21",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 581,
+          "likes": 1
+        }
+      ],
+      "latest_views": 581,
+      "first_views": 0,
+      "delta": 581,
+      "snapshots": 3
+    },
+    {
+      "video_id": "vpqtuDNuTso",
+      "title": "なぜケンタッキー月見は3秒で秋の給料日になるのか、食べた感想あげてけw【ショート】",
+      "series": [
+        {
+          "date": "2026-08-21",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 246,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 247,
+          "likes": 0
+        }
+      ],
+      "latest_views": 247,
+      "first_views": 0,
+      "delta": 247,
+      "snapshots": 3
+    },
+    {
+      "video_id": "RNnXuVaiEDQ",
+      "title": "飲み会で絶対見られたくない通知あげてけw【ショート】",
+      "series": [
+        {
+          "date": "2026-08-17",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-18",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 2,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 2,
+          "likes": 0
+        }
+      ],
+      "latest_views": 2,
+      "first_views": 0,
+      "delta": 2,
+      "snapshots": 5
+    },
+    {
+      "video_id": "kFxWX6wPLxA",
+      "title": "ワイ、AIに変な質問する係やけど質問ある？w【ショート】",
+      "series": [
+        {
+          "date": "2026-08-17",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-18",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 1,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 1,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 1,
+          "likes": 0
+        }
+      ],
+      "latest_views": 1,
+      "first_views": 0,
+      "delta": 1,
+      "snapshots": 5
+    },
+    {
+      "video_id": "3s9nTiDgeJw",
+      "title": "ワイ、サーモス歴3年やけど質問ある？w😏【ショート】",
+      "series": [
+        {
+          "date": "2026-08-21",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 3
+    },
+    {
+      "video_id": "ASi-M1AEuHc",
+      "title": "ワイ、GTA6妄想歴6年やけど質問ある？w💦【ショート】",
+      "series": [
+        {
+          "date": "2026-08-23",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "EDwb1YE2Fug",
+      "title": "なぜ熱闘甲子園の夜だけ空気が変わる？お前らの夏の思い出5つ聞かせろ【ショート】",
+      "series": [
+        {
+          "date": "2026-08-21",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 3
+    },
+    {
+      "video_id": "gVgZ1gzEcvg",
+      "title": "なぜ3秒でバレる？お前らをブラックラグーンで例えた結果【ショート】",
+      "series": [
+        {
+          "date": "2026-08-22",
+          "views": 0,
+          "likes": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 2
+    }
+  ],
+  "dup_check": [
+    {
+      "a": "ワイ、GTA6妄想歴6年やけど質問ある？w💦【ショート】",
+      "b": "ワイ、サーモス歴3年やけど質問ある？w😏【ショート】",
+      "similarity": 0.667
+    },
+    {
+      "a": "ワイ、サーモス歴3年やけど質問ある？w😏【ショート】",
+      "b": "ワイ、アジア大会珍プレー歴0年やけど質問ある？w🤣【ショート】",
+      "similarity": 0.667
+    },
+    {
+      "a": "ワイ、サーモス歴3年やけど質問ある？w😏【ショート】",
+      "b": "ワイ、彼女いない歴＝年齢やけど質問ある？【ショート】",
+      "similarity": 0.65
+    },
+    {
+      "a": "なんか靴下だけ消えるんやがw【ショート】",
+      "b": "なんかスマホの充電だけ遅いんやが【ショート】",
+      "similarity": 0.632
+    }
+  ],
+  "success_patterns": {
+    "ok": true,
+    "sample_size": {
+      "total": 24,
+      "success": 2,
+      "others": 22
+    },
+    "has_gpt_insights": false,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "retention_insights": {
+    "ok": true,
+    "has_gpt_insights": false,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "act": {
+    "approved": [
+      {
+        "from": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+        "from_views": 1802,
+        "viral_ratio": 1.5886761032472938,
+        "series_type": "application",
+        "title": "「PCパーツ到着時、なぜ箱だけ先に届くのか？【ショー」の知識を日常で使う方法"
+      }
+    ],
+    "skipped_low_view": []
+  }
+}
