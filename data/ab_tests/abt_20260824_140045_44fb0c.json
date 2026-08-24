@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140045_44fb0c",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "寝てる間だけ成長する？99%が知らない夜の体の秘密#寝ている間だけ分泌される『あのホルモン』——なぜ99%の人が睡眠中にしか成長できないのか？ #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": "成長と睡眠の関係\n昨夜ちゃんと寝た？実はその睡眠中、あなたの体では『成長ホルモン』が一気に放出されていて、筋肉・骨・肌の修復が全速力で動いていたんだよ。 / え、寝てる間に体が修復されてるって、それ全然意識したことなかった！起きてる間に成長するんじゃないの？ / 99%の人がそう思ってる。でも実は逆で、成長ホルモンの約90%は睡眠中にしか出ない——しかも眠り始めの最初の90分に集中して分泌されるんだ。",
+  "generated_at": "2026-08-24T14:00:45.023664Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ体は寝ている最初の90分で一気に修復されるのか？",
+      "thumb_copy": [
+        "成長の本番は",
+        "眠り始め90分"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "成長ホルモンの約90%は睡眠中？最初の90分が重要な理由",
+      "thumb_copy": [
+        "約90%は睡眠中",
+        "最初の90分が鍵"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は起きている間ではない！体が最も成長する夜の秘密",
+      "thumb_copy": [
+        "成長は寝てる間",
+        "体は夜に修復する"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ体は寝ている最初の90分で一気に修復されるのか？",
+    "thumb_copy": [
+      "成長の本番は",
+      "眠り始め90分"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

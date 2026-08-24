@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140232_ede373",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "耳鳴り中に特定の音が突き刺さる理由、知ってる？#耳鳴りのとき、なぜか特定の音だけが異様に気になる——99%が知らない聴覚の正体 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": "耳鳴りと音に対する感受性\n耳鳴りがしているとき、時計のチクタクや冷蔵庫のモーター音がいつもの10倍うるさく感じた経験、あなたにもありませんか？\nあれ、ただの気のせいじゃなくて脳が本当に音を増幅しているんです / え、増幅って……脳が勝手にボリュームを上げてるってこと？\nそんなこと起きるんだ、それはちょっと怖いな。 / 怖いけど面白いんだよ！\n今回はその謎を『耳鳴りと音感受性』というテーマで徹底解剖していくね。最後まで聞けば耳鳴り対策まで丸わかりだよ。",
+  "generated_at": "2026-08-23T14:02:32.239666Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "耳鳴り中、なぜ時計の音だけ異様に刺さるのか？脳の増幅機能を解説",
+      "thumb_copy": [
+        "時計の音が刺さる",
+        "脳が音量を上げる"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "耳鳴りで音が10倍うるさい？99%が知らない脳の音量調整",
+      "thumb_copy": [
+        "音が10倍うるさい",
+        "犯人は脳の増幅"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は耳ではない！耳鳴りで特定の音が響く本当の原因とは",
+      "thumb_copy": [
+        "耳のせいじゃない",
+        "脳が音を選んでる"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "耳鳴り中、なぜ時計の音だけ異様に刺さるのか？脳の増幅機能を解説",
+    "thumb_copy": [
+      "時計の音が刺さる",
+      "脳が音量を上げる"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "1ivF6IelB6E",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.016129032258064516,
+    "impressions": 124,
+    "views": 748,
+    "published_at": "2026-07-25T03:13:23Z",
+    "updated_at": "2026-08-24T14:00:30.056755Z"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_140809_91981e",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "一口SCP：この報告書…読んだら後悔するかもしれない人類そのものが異常存在であるという結論に#財団が人類を殲滅し続けた真の理由——SCP-5000内部資料の驚愕の結論 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": null,
+  "generated_at": "2026-08-22T14:08:09.735798Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ財団は人類を殲滅した？SCP-5000が暴く異常の正体",
+      "thumb_copy": [
+        "人類が異常存在？",
+        "財団の殲滅理由"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3分で判明するSCP-5000｜財団が人類を滅ぼす真の理由",
+      "thumb_copy": [
+        "3分でわかる",
+        "人類殲滅の真相"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は人類そのものが異常だった？SCP-5000驚愕の内部資料",
+      "thumb_copy": [
+        "実は異常なのは",
+        "人類そのものだった"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ財団は人類を殲滅した？SCP-5000が暴く異常の正体",
+    "thumb_copy": [
+      "人類が異常存在？",
+      "財団の殲滅理由"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "9y030ReGjqc",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.00322061191626409,
+    "impressions": 621,
+    "views": 36,
+    "published_at": "2026-07-24T00:32:21Z",
+    "updated_at": "2026-08-24T14:01:13.753128Z"
+  }
+}

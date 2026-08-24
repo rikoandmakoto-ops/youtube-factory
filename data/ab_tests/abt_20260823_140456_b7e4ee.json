@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140456_b7e4ee",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "SCP-2525「異常なゲーム」— 死亡記録23件、勝利条件は未達成【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "ゲーム形式の異常存在が現実の参加者を巻き込んだ収容違反を、攻略記録・脱落者数・未解決の勝利条件から検証する\nあなたも、あと一勝で終われると思い、負けても画面を閉じられなかったことはありませんか。\nSCP-2525では、その感覚を信じて席に着いた参加者23名が消え、終了条件だけが未達成のま / 23人がゲームの中で負けたんじゃなく、現実から消えたのか。\n学校の放課後に遊ぶ対戦ゲームみたいに始めたなら、電源を抜けば逃げられそうなのに、何が参加者を縛ったんだ。 / 流出した監視記録には、電源を切った後も盤面の駒だけが一手進んだとあります。\n今回は財団が17回の攻略試行で残した報告書から、23件の脱落記録を読み上げます。",
+  "generated_at": "2026-08-23T14:04:56.975843Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ電源を切っても終わらない？SCP-2525異常なゲーム【ショート】",
+      "thumb_copy": [
+        "電源を抜いても",
+        "盤面は動いた"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "23人消失、攻略17回でも勝てないSCP-2525のゲーム【ショート】",
+      "thumb_copy": [
+        "脱落者23人",
+        "勝利条件は未達成"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "ゲームオーバーではない。現実から消えるSCP-2525【ショート】",
+      "thumb_copy": [
+        "負けたのはゲームじゃない",
+        "消えたのは現実だった"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ電源を切っても終わらない？SCP-2525異常なゲーム【ショート】",
+    "thumb_copy": [
+      "電源を抜いても",
+      "盤面は動いた"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "ELVk9qVJ5gI",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.009057971014492754,
+    "impressions": 552,
+    "views": 874,
+    "published_at": "2026-08-17T09:28:30Z",
+    "updated_at": "2026-08-24T14:01:13.700326Z"
+  }
+}

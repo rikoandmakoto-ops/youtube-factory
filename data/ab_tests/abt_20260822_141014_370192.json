@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_141014_370192",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "妖怪ウォッチの『都市伝説』、本当のところはどうなの？【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "ネットで語られる噂を、作中描写と照らしてひとつずつ真偽判定する\n夜中、ふと背後に視線を感じた経験はありませんか？そんな不思議な体験、実は妖怪ウォッチに登場する妖怪たちが原因かも。 / 確かに、妖怪ウォッチには驚くべき都市伝説がたくさんありますよね。今回はそのうちのいくつかを一緒に検証してみましょう！ / まずは、あの有名な都市伝説から始めましょう。なんと、ある妖怪が実は歴史上の事件と関係しているという話があるんです。",
+  "generated_at": "2026-08-22T14:10:14.427991Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "妖怪ウォッチの都市伝説は本当？作中描写で徹底検証【ショート】",
+      "thumb_copy": [
+        "その噂、マジ？",
+        "作中で真偽判定"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "妖怪ウォッチ都市伝説を3つ検証！本当にある伏線とは？【ショート】",
+      "thumb_copy": [
+        "都市伝説3選",
+        "本当の話はどれ？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は公式にヒントがあった？妖怪ウォッチ都市伝説の真相【ショート】",
+      "thumb_copy": [
+        "まさかの公式描写",
+        "都市伝説の真相"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "妖怪ウォッチの都市伝説は本当？作中描写で徹底検証【ショート】",
+    "thumb_copy": [
+      "その噂、マジ？",
+      "作中で真偽判定"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "3ZBzfV-o6oM",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.0076045627376425855,
+    "impressions": 263,
+    "views": 1223,
+    "published_at": "2026-07-31T10:04:49Z",
+    "updated_at": "2026-08-24T14:02:04.798317Z"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140342_206f5e",
+  "channel_id": "pokemon-lab",
+  "theme": {
+    "title": "ホウオウとルギア、まともに戦わせたらどっちが勝つのか【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "専用技と耐久力だけでなく、実際の対戦で勝敗を分けるタイプ相性と行動順まで検証する\nあなたもホウオウとルギアなら、映画の主役同士だから完全に五分だと思ったことありませんか？ 実は合計種族値680対680なのに、先に動ける20の差が勝率をかなり傾けます。 / え、マジで？ 専用技を先に当てたほうが勝つだけじゃないの!? 同じジョウトの伝説で、数字も680で並んでいるなら、互角のボス戦に見えるんだけど！ / 今回は第九世代の通常対戦を想定し、レベル50、テラスタルなし、持ち物なし、特性ありで検証します。雰囲気や人気ではなく、ダメージと行動順で答え合わせしよう！",
+  "generated_at": "2026-08-23T14:03:42.993211Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "ホウオウとルギア、同じ680なのになぜ勝敗が偏る？【ショート】",
+      "thumb_copy": [
+        "680同士の対決",
+        "勝つのはどっち？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "素早さ20差で決まる？ホウオウvsルギアを第9世代で検証【ショート】",
+      "thumb_copy": [
+        "素早さ20の差",
+        "先手が勝敗を変える"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は互角じゃない！ホウオウvsルギア、勝者を対戦検証【ショート】",
+      "thumb_copy": [
+        "映画主役でも",
+        "対戦では格差あり"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "ホウオウとルギア、同じ680なのになぜ勝敗が偏る？【ショート】",
+    "thumb_copy": [
+      "680同士の対決",
+      "勝つのはどっち？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "BvCpMrCLrOA",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.011363636363636364,
+    "impressions": 88,
+    "views": 1557,
+    "published_at": "2026-08-15T09:05:58Z",
+    "updated_at": "2026-08-24T14:00:59.853352Z"
+  }
+}

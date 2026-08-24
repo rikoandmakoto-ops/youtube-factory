@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140022_2232e5",
+  "channel_id": "2ch-matome",
+  "theme": {
+    "title": "コンビニで一番いらん商品あげてけ【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "日常あるある×大喜利。誰でも1個は言えるお題でコメント欄を回す\nあなた、コンビニで会計後に「これ誰が買うんだよ」と思った商品ありませんか？実は棚の端ほどツッコミ待ちの宝庫で、今日の本命候補はそこです。 / 今回は「コンビニで一番いらん商品あげてけ」スレから、深夜二時の脳でも参加できるしょうもない名回答を拾い、その正体を暴いていくぞ。 / 最強の逆転は、売れ残りに見える商品ほど誰かの生活を救っている点です。でも「存在は知るのに買った記憶ゼロ」の一品、絶対ありますよね。",
+  "generated_at": "2026-08-24T14:00:22.358175Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "コンビニで「誰が買うんだよ」と思う商品、結局なに？【ショート】",
+      "thumb_copy": [
+        "誰が買うんだよ",
+        "でも消えない商品"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "コンビニで買った記憶ゼロの商品7選、異論は認める【ショート】",
+      "thumb_copy": [
+        "買った記憶ゼロ",
+        "いらん商品7選"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実はいらない商品ほど売れている？コンビニ珍商品大喜利【ショート】",
+      "thumb_copy": [
+        "いらんのに売れる",
+        "棚の謎商品たち"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "コンビニで「誰が買うんだよ」と思う商品、結局なに？【ショート】",
+    "thumb_copy": [
+      "誰が買うんだよ",
+      "でも消えない商品"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

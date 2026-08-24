@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260823_140618_27dd80",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "海坊主の正体が怖すぎる — 船を沈める巨大な影は何だったのか【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "船を沈める巨大な影。各地の漁村に残る目撃記録と、実際に起きた海難との対応を追う\nこれ知ってた？あなたが夜の海で見た黒い影が、波ではなく海坊主だった場合、昔の船乗りは帰港を諦めたかもしれない。丸い頭の妖怪という印象より先に、船が沈む話が各地の漁村に残っているんだ / え、待って怖い。妖怪ウォッチでは親しみやすい妖怪に見えるのに、元になった話では船そのものが危ないの？海の上なら、学校から逃げるみたいに走って帰ることも、助けを呼びに行くこともできな / ゲームでの海坊主は作品内の妖怪として描かれている。一方で伝承の海坊主は、夜の沖で巨大な黒いものを見た人が、沈没や遭難を覚悟するほど恐れた存在として、江戸時代以降に語り継がれてきた。",
+  "generated_at": "2026-08-23T14:06:18.394491Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "海坊主はなぜ船を沈める？漁村に残る巨大な黒い影の記録【ショート】",
+      "thumb_copy": [
+        "船を沈める黒い影",
+        "海坊主の恐怖"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "江戸時代から続く海坊主伝承3選、船を沈めた巨大影の正体【ショート】",
+      "thumb_copy": [
+        "伝承に残る3つの遭難",
+        "夜の海に出るな"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は丸い妖怪じゃない…海坊主は船を沈める巨大な影だった【ショート】",
+      "thumb_copy": [
+        "可愛い妖怪ではない",
+        "沈没を招く巨大影"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "海坊主はなぜ船を沈める？漁村に残る巨大な黒い影の記録【ショート】",
+    "thumb_copy": [
+      "船を沈める黒い影",
+      "海坊主の恐怖"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

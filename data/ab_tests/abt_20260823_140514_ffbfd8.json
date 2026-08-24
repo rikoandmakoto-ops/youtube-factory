@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140514_ffbfd8",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "財団が13年間隠し続けた「13名の改竄要求」SCP-2718死後記録の真実【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "死後に起きる事象を知った者たちの行動変化と、財団が情報公開を封じた経緯を追う\nあなたは、死ねば苦痛から解放されると信じたことありませんか？ SCP-2718は、その安心を死後まで続く罰へ反転させた記録です。 / しかも内容を知った財団職員13名は、報告書の訂正では足りず、自分たちの死後記録そのものを改竄しろと要求しました。 / 今回はSCP-2718「その後」を追い、死後に何が起きるのかより先に、それを知った生者がなぜ沈黙へ追い込まれたのか暴きます。",
+  "generated_at": "2026-08-23T14:05:14.229112Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ13人は死後記録の改竄を要求したのか？SCP-2718【ショート】",
+      "thumb_copy": [
+        "死後を知った13人",
+        "記録改竄を要求"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "13年間封印された13名の改竄要求｜SCP-2718死後記録【ショート】",
+      "thumb_copy": [
+        "13年隠された真実",
+        "13名が求めた改竄"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "死ねば終わりではなかった――財団が封じたSCP-2718の真実【ショート】",
+      "thumb_copy": [
+        "死後も終わらない",
+        "財団が封印した記録"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ13人は死後記録の改竄を要求したのか？SCP-2718【ショート】",
+    "thumb_copy": [
+      "死後を知った13人",
+      "記録改竄を要求"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "WM5Z5qP9tfw",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.004608294930875576,
+    "impressions": 651,
+    "views": 710,
+    "published_at": "2026-08-09T00:12:02Z",
+    "updated_at": "2026-08-24T14:01:13.665483Z"
+  }
+}

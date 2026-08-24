@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260823_140103_fb135f",
+  "channel_id": "2ch-matome",
+  "theme": {
+    "title": "ワイ、アジア大会珍プレー歴0年やけど質問ある？w🤣【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "アジア大会に出場する選手の珍プレーをみんなで考えて盛り上がろう！\nあなた、国際大会の決定的瞬間で靴ひもや旗が主役になる事故を見たことありませんか？珍プレーは技術差より一瞬の勘違いで金メダル級に化けます。 / 今回はアジア大会で本当に起きそうな、笑えるのに選手は真顔な珍プレーの正体を暴くぞ。競技場の空気を一秒でひっくり返す予想スレ、開幕だ。 / 最強の予想は、リレー最終走者がゴール後に喜びすぎてバトンを落とす場面！記録は残っても映像は永遠に擦られ、観客の記憶だけ優勝します。",
+  "generated_at": "2026-08-23T14:01:03.546916Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜアジア大会の珍プレーは一瞬で伝説になるのか？🤣【ショート】",
+      "thumb_copy": [
+        "靴ひもが主役！？",
+        "真顔で大事故w"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "アジア大会で起きそうな珍プレー3選！最後はバトンが…🤣【ショート】",
+      "thumb_copy": [
+        "珍プレー3連発",
+        "最後にバトン落下"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は金メダル級！アジア大会を沸かす珍プレー予想が神すぎる🤣",
+      "thumb_copy": [
+        "記録より記憶w",
+        "喜びすぎた結末"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜアジア大会の珍プレーは一瞬で伝説になるのか？🤣【ショート】",
+    "thumb_copy": [
+      "靴ひもが主役！？",
+      "真顔で大事故w"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

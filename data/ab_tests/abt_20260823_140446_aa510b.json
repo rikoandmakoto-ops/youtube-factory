@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140446_aa510b",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "SCP-XXXX「デジタル錯覚」— ゲームに潜む不気味な異常とは？【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "ゲーム要素と異常存在の関係\nあなたは、ゲームをプレイしている最中に何かおかしな現象を経験したことはありませんか？画面が突然揺れたり、音が変になったり。 / そう、これは単なるバグではなく、SCP-XXXX「デジタル錯覚」と呼ばれる異常存在が関わっている可能性があるんだよ。 / ゲーム内に潜むこの異常存在は、プレイヤーに錯覚を引き起こし、現実感を失わせることがあると報告されているんだ。",
+  "generated_at": "2026-08-23T14:04:46.964730Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "ゲームの異変はバグじゃない？SCP-XXXX『デジタル錯覚』【ショート】",
+      "thumb_copy": [
+        "そのバグ、本物？",
+        "画面の向こうの異常"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3つの異変で分かる？SCP-XXXX『デジタル錯覚』の恐怖【ショート】",
+      "thumb_copy": [
+        "3つ揃えば危険",
+        "ゲームが現実を侵す"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は画面の外まで侵食する？SCP-XXXX『デジタル錯覚』【ショート】",
+      "thumb_copy": [
+        "ただのゲームじゃない",
+        "現実感が壊れ始める"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "ゲームの異変はバグじゃない？SCP-XXXX『デジタル錯覚』【ショート】",
+    "thumb_copy": [
+      "そのバグ、本物？",
+      "画面の向こうの異常"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "kBxqZqtk45E",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.007722007722007722,
+    "impressions": 259,
+    "views": 1243,
+    "published_at": "2026-07-31T09:05:37Z",
+    "updated_at": "2026-08-24T14:01:13.718907Z"
+  }
+}

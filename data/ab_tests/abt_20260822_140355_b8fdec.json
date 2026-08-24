@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_140355_b8fdec",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "耳鳴り中に特定の音が突き刺さる理由、知ってる？#耳鳴りのとき、なぜか特定の音だけが異様に気になる——99%が知らない聴覚の正体 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": "耳鳴りと音に対する感受性\n耳鳴りがしているとき、時計のチクタクや冷蔵庫のモーター音がいつもの10倍うるさく感じた経験、あなたにもありませんか？\nあれ、ただの気のせいじゃなくて脳が本当に音を増幅しているんです / え、増幅って……脳が勝手にボリュームを上げてるってこと？\nそんなこと起きるんだ、それはちょっと怖いな。 / 怖いけど面白いんだよ！\n今回はその謎を『耳鳴りと音感受性』というテーマで徹底解剖していくね。最後まで聞けば耳鳴り対策まで丸わかりだよ。",
+  "generated_at": "2026-08-22T14:03:55.958652Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "耳鳴り中、なぜ時計や冷蔵庫の音だけが突き刺さるのか？",
+      "thumb_copy": [
+        "なぜこの音だけ",
+        "異様にうるさい？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "99%が知らない！耳鳴りで特定の音が10倍うるさい理由",
+      "thumb_copy": [
+        "脳が音量を",
+        "10倍に増幅！？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は耳ではない？耳鳴り中に音が刺さる本当の犯人",
+      "thumb_copy": [
+        "犯人は耳じゃない",
+        "脳の増幅装置"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "耳鳴り中、なぜ時計や冷蔵庫の音だけが突き刺さるのか？",
+    "thumb_copy": [
+      "なぜこの音だけ",
+      "異様にうるさい？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "1ivF6IelB6E",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.016129032258064516,
+    "impressions": 124,
+    "views": 748,
+    "published_at": "2026-07-25T03:13:23Z",
+    "updated_at": "2026-08-24T14:00:30.112119Z"
+  }
+}

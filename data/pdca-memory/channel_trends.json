@@ -60,6 +60,77 @@
       "videos": 176,
       "top_video": "なぜ今飲んだ炭酸は鼻までツーン(1100/3日)",
       "note": "08-16はcarry-overだったためΔは2日分。analytics復旧。登録52で5日横ばい"
+    },
+    {
+      "date": "2026-08-18",
+      "subscribers": 52,
+      "subs_delta": 0,
+      "total_views": 168282,
+      "views_delta_1d": 982,
+      "videos": 177,
+      "top_video": "録音の声が違う？骨伝導(1519) / 直近: 炭酸ツーン(1101/4日・頭打ち)",
+      "note": "登録52で6日横ばい。感覚・反射seeds2件補充"
+    },
+    {
+      "date": "2026-08-19",
+      "source": "carry-over (08-18値)",
+      "subs_delta": null,
+      "views_delta_1d": null,
+      "note": "PDCA未実行＋analytics未同期のため08-18値を据え置き（carry-over）",
+      "subscribers": 52,
+      "total_views": 168282,
+      "videos": 177
+    },
+    {
+      "date": "2026-08-20",
+      "source": "carry-over (08-18値)",
+      "subscribers": 52,
+      "subs_delta": null,
+      "total_views": 168282,
+      "views_delta_1d": null,
+      "videos": 177,
+      "note": "PDCA3日連続未実行＋analytics停止(channel_metrics=08-15/video_metrics=08-18)。sandboxからYouTube公開データも取得不可のため08-18値を据え置き(carry-over 2日目)"
+    },
+    {
+      "date": "2026-08-21",
+      "source": "latest.md(公開値)+analytics.db(動画別)",
+      "subscribers": 53,
+      "subs_delta": 1,
+      "subs_delta_basis": "08-18比(3日)",
+      "total_views": 170470,
+      "views_delta": 2188,
+      "videos": 181,
+      "top_video": "録音の声が違う？骨伝導(1519)",
+      "subs_per_1k": 0.36,
+      "avg_retention": 59.6,
+      "note": "4日ぶりにPDCA復旧。登録52→53。維持70%+帯の登録転換0.80がch内最高＝5ch中ここだけ高維持が有効"
+    },
+    {
+      "subscribers": 53,
+      "subs_delta": 0,
+      "total_views": 172329,
+      "views_delta": 1859,
+      "videos": 182,
+      "top_video": "録音の声が違う？骨伝導(1519)",
+      "ctr": 1.68,
+      "note": "登録横ばい。CTR1.68%。『99%が知らない』は維持59.2%・登録/1k4.56で全指標良好＝08-22朝の『定型句停止』ルールと矛盾",
+      "date": "2026-08-22",
+      "source": "latest.md(公開値)+analytics.db video_reach_daily(CTR新規)",
+      "subs_delta_basis": "08-21比(1日)"
+    },
+    {
+      "subscribers": 55,
+      "subs_delta": 2,
+      "total_views": 173839,
+      "views_delta": 1510,
+      "videos": 183,
+      "top_video": "録音の声が違う？骨伝導(1519)",
+      "subs_per_1k": 0.4,
+      "avg_retention": 65.1,
+      "note": "本日の登録増は全ch中このchのみ(+2)。直近50本で登録/本0.300・維持65.1%。維持率高低での登録差は1.09倍とほぼ無し",
+      "date": "2026-08-23",
+      "source": "latest.md(公開値)+analytics.db video_metrics(直近50本窓)",
+      "subs_delta_basis": "08-22比(1日)"
     }
   ],
   "scp-lab": [
@@ -123,6 +194,77 @@
       "videos": 145,
       "top_video": "SCP-7004「終末の観測者」(1113/初日・初動2226/日)",
       "note": "08-16はcarry-overだったためΔは2日分。analytics復旧"
+    },
+    {
+      "date": "2026-08-18",
+      "subscribers": 133,
+      "subs_delta": 2,
+      "total_views": 133388,
+      "views_delta_1d": 2563,
+      "videos": 146,
+      "top_video": "SCP-7004 終末の観測者(1125) / SCP-1690(1067/5日)",
+      "note": "2日で+5と全ch首位の伸び。宇宙・終末記録型seeds2件追加"
+    },
+    {
+      "date": "2026-08-19",
+      "source": "carry-over (08-18値)",
+      "subs_delta": null,
+      "views_delta_1d": null,
+      "note": "PDCA未実行＋analytics未同期のため08-18値を据え置き（carry-over）",
+      "subscribers": 133,
+      "total_views": 133388,
+      "videos": 146
+    },
+    {
+      "date": "2026-08-20",
+      "source": "carry-over (08-18値)",
+      "subscribers": 133,
+      "subs_delta": null,
+      "total_views": 133388,
+      "views_delta_1d": null,
+      "videos": 146,
+      "note": "PDCA3日連続未実行＋analytics停止(channel_metrics=08-15/video_metrics=08-18)。sandboxからYouTube公開データも取得不可のため08-18値を据え置き(carry-over 2日目)"
+    },
+    {
+      "date": "2026-08-21",
+      "source": "latest.md(公開値)+analytics.db(動画別)",
+      "subscribers": 134,
+      "subs_delta": 1,
+      "subs_delta_basis": "08-18比(3日)",
+      "total_views": 134373,
+      "views_delta": 985,
+      "videos": 150,
+      "top_video": "一口SCP：人類殲滅プロトコル(1414)",
+      "subs_per_1k": 0.9,
+      "avg_retention": 48.2,
+      "note": "登録転換で全ch首位(0.90)。維持50-70%帯=1.15が最高、70%+帯=0.29。機密数値型が勝ち筋"
+    },
+    {
+      "subscribers": 135,
+      "subs_delta": 1,
+      "total_views": 135406,
+      "views_delta": 1033,
+      "videos": 152,
+      "top_video": "一口SCP：人類殲滅プロトコル(1414)",
+      "ctr": 1.52,
+      "note": "全ch中唯一の登録増(+1)。CTRは1.52%で全ch最低。『一口SCP：』接頭は登録/1k 10.41 vs 13.48で不利。SCP-173重複は登録/1k15.02とch最高",
+      "date": "2026-08-22",
+      "source": "latest.md(公開値)+analytics.db video_reach_daily(CTR新規)",
+      "subs_delta_basis": "08-21比(1日)"
+    },
+    {
+      "subscribers": 135,
+      "subs_delta": 0,
+      "total_views": 136011,
+      "views_delta": 605,
+      "videos": 154,
+      "top_video": "一口SCP：人類殲滅プロトコル(1414)",
+      "subs_per_1k": 0.82,
+      "avg_retention": 52.2,
+      "note": "登録2日連続横ばい。登録/本0.560は依然ch最高だが、維持率高低で登録転換が0.95倍＝維持率は効いていない。伸びしろはCTR/サムネ側の可能性が高い",
+      "date": "2026-08-23",
+      "source": "latest.md(公開値)+analytics.db video_metrics(直近50本窓)",
+      "subs_delta_basis": "08-22比(1日)"
     }
   ],
   "pokemon-lab": [
@@ -181,6 +323,77 @@
       "videos": 22,
       "top_video": "ミミッキュとロトム、どっちが勝つ？(1561/3日)",
       "note": "08-16はcarry-overだったためΔは2日分。analytics復旧"
+    },
+    {
+      "date": "2026-08-18",
+      "subscribers": 11,
+      "subs_delta": 0,
+      "total_views": 33937,
+      "views_delta_1d": 1970,
+      "videos": 23,
+      "top_video": "ホウオウとルギア、どっちが勝つ？(1552/3日)",
+      "note": "対決型が継続好調"
+    },
+    {
+      "date": "2026-08-19",
+      "source": "carry-over (08-18値)",
+      "subs_delta": null,
+      "views_delta_1d": null,
+      "note": "PDCA未実行＋analytics未同期のため08-18値を据え置き（carry-over）",
+      "subscribers": 11,
+      "total_views": 33937,
+      "videos": 23
+    },
+    {
+      "date": "2026-08-20",
+      "source": "carry-over (08-18値)",
+      "subscribers": 11,
+      "subs_delta": null,
+      "total_views": 33937,
+      "views_delta_1d": null,
+      "videos": 23,
+      "note": "PDCA3日連続未実行＋analytics停止(channel_metrics=08-15/video_metrics=08-18)。sandboxからYouTube公開データも取得不可のため08-18値を据え置き(carry-over 2日目)"
+    },
+    {
+      "date": "2026-08-21",
+      "source": "latest.md(公開値)+analytics.db(動画別)",
+      "subscribers": 13,
+      "subs_delta": 2,
+      "subs_delta_basis": "08-18比(3日)",
+      "total_views": 36918,
+      "views_delta": 2981,
+      "videos": 27,
+      "top_video": "レックウザの誕生に隠された秘密(2386)",
+      "subs_per_1k": 0.34,
+      "avg_retention": 57.0,
+      "note": "3日で+2。対決型が継続好調。ヤドン題材が重複しblacklist化"
+    },
+    {
+      "subscribers": 13,
+      "subs_delta": 0,
+      "total_views": 38852,
+      "views_delta": 1934,
+      "videos": 28,
+      "top_video": "レックウザの誕生に隠された秘密(2388)",
+      "ctr": 1.7,
+      "note": "対決型が登録/1k0.85＝ch平均の1/5と判明。キュー15/15が対決型だったため上限5件に是正",
+      "date": "2026-08-22",
+      "source": "latest.md(公開値)+analytics.db video_reach_daily(CTR新規)",
+      "subs_delta_basis": "08-21比(1日)"
+    },
+    {
+      "subscribers": 13,
+      "subs_delta": 0,
+      "total_views": 40775,
+      "views_delta": 1923,
+      "videos": 28,
+      "top_video": "レックウザの誕生に隠された秘密(2388)",
+      "subs_per_1k": 0.33,
+      "avg_retention": 63.8,
+      "note": "登録3日連続横ばい。再生は+1923で全ch2位。高維持側の登録/本が1.28倍",
+      "date": "2026-08-23",
+      "source": "latest.md(公開値)+analytics.db video_metrics(直近50本窓)",
+      "subs_delta_basis": "08-22比(1日)"
     }
   ],
   "yokai-watch": [
@@ -239,6 +452,77 @@
       "videos": 21,
       "top_video": "のっぺらぼうの正体が怖すぎる(2222/4日)",
       "note": "08-16はcarry-overだったためΔは2日分。analytics復旧"
+    },
+    {
+      "date": "2026-08-18",
+      "subscribers": 10,
+      "subs_delta": 2,
+      "total_views": 31792,
+      "views_delta_1d": 3384,
+      "videos": 22,
+      "top_video": "のっぺらぼうの正体が怖すぎる(2225/5日)",
+      "note": "+2は1日として過去最大。伝承系継続"
+    },
+    {
+      "date": "2026-08-19",
+      "source": "carry-over (08-18値)",
+      "subs_delta": null,
+      "views_delta_1d": null,
+      "note": "PDCA未実行＋analytics未同期のため08-18値を据え置き（carry-over）",
+      "subscribers": 10,
+      "total_views": 31792,
+      "videos": 22
+    },
+    {
+      "date": "2026-08-20",
+      "source": "carry-over (08-18値)",
+      "subscribers": 10,
+      "subs_delta": null,
+      "total_views": 31792,
+      "views_delta_1d": null,
+      "videos": 22,
+      "note": "PDCA3日連続未実行＋analytics停止(channel_metrics=08-15/video_metrics=08-18)。sandboxからYouTube公開データも取得不可のため08-18値を据え置き(carry-over 2日目)"
+    },
+    {
+      "date": "2026-08-21",
+      "source": "latest.md(公開値)+analytics.db(動画別)",
+      "subscribers": 10,
+      "subs_delta": 0,
+      "subs_delta_basis": "08-18比(3日)",
+      "total_views": 34469,
+      "views_delta": 2677,
+      "videos": 26,
+      "top_video": "鬼の元ネタが怖すぎる(2339/維持34.3%・登録0)",
+      "subs_per_1k": 0.32,
+      "avg_retention": 51.2,
+      "note": "再生は3日で+2677と好調だが登録は横ばい。ch1位動画が維持率最低＝釣りタイトルが登録に繋がっていない"
+    },
+    {
+      "subscribers": 10,
+      "subs_delta": 0,
+      "total_views": 35799,
+      "views_delta": 1330,
+      "videos": 27,
+      "top_video": "鬼の元ネタが怖すぎる(2339)",
+      "ctr": 1.79,
+      "note": "登録3日連続横ばい。作品題材が登録/1k8.43＝伝承ホラー1.85の4.6倍。『怖』優先ルールは登録では逆効果",
+      "date": "2026-08-22",
+      "source": "latest.md(公開値)+analytics.db video_reach_daily(CTR新規)",
+      "subs_delta_basis": "08-21比(1日)"
+    },
+    {
+      "subscribers": 10,
+      "subs_delta": 0,
+      "total_views": 36117,
+      "views_delta": 318,
+      "videos": 28,
+      "top_video": "鬼の元ネタが怖すぎる(2340)",
+      "subs_per_1k": 0.34,
+      "avg_retention": 57.2,
+      "note": "登録4日連続横ばい・再生の伸びは+318で最小。高維持側の登録/本が3.00倍と全ch最大＝演出改善の効果が最も出やすい",
+      "date": "2026-08-23",
+      "source": "latest.md(公開値)+analytics.db video_metrics(直近50本窓)",
+      "subs_delta_basis": "08-22比(1日)"
     }
   ],
   "2ch-matome": [
@@ -297,6 +581,77 @@
       "videos": 13,
       "top_video": "ワイ、彼女いない歴＝年齢やけど質問ある？(1641/2日)",
       "note": "08-16はcarry-overだったためΔは2日分。analytics復旧。日次再生が3日連続加速"
+    },
+    {
+      "date": "2026-08-18",
+      "subscribers": 4,
+      "subs_delta": 0,
+      "total_views": 14349,
+      "views_delta_1d": 3611,
+      "videos": 15,
+      "top_video": "ワイ、彼女いない歴＝年齢やけど質問ある？(1651/3日)",
+      "note": "日次4日連続加速。登録は横ばい"
+    },
+    {
+      "date": "2026-08-19",
+      "source": "carry-over (08-18値)",
+      "subs_delta": null,
+      "views_delta_1d": null,
+      "note": "PDCA未実行＋analytics未同期のため08-18値を据え置き（carry-over）",
+      "subscribers": 4,
+      "total_views": 14349,
+      "videos": 15
+    },
+    {
+      "date": "2026-08-20",
+      "source": "carry-over (08-18値)",
+      "subscribers": 4,
+      "subs_delta": null,
+      "total_views": 14349,
+      "views_delta_1d": null,
+      "videos": 15,
+      "note": "PDCA3日連続未実行＋analytics停止(channel_metrics=08-15/video_metrics=08-18)。sandboxからYouTube公開データも取得不可のため08-18値を据え置き(carry-over 2日目)"
+    },
+    {
+      "date": "2026-08-21",
+      "source": "latest.md(公開値)+analytics.db(動画別)",
+      "subscribers": 5,
+      "subs_delta": 1,
+      "subs_delta_basis": "08-18比(3日)",
+      "total_views": 18291,
+      "views_delta": 3942,
+      "videos": 22,
+      "top_video": "ワイ、彼女いない歴＝年齢やけど質問ある？(1652)",
+      "subs_per_1k": 0.18,
+      "avg_retention": 43.7,
+      "note": "再生の伸びは全ch最大(+3942)だが登録転換0.18で最下位。維持43.7%も最下位"
+    },
+    {
+      "subscribers": 5,
+      "subs_delta": 0,
+      "total_views": 20603,
+      "views_delta": 2312,
+      "videos": 23,
+      "top_video": "ワイ、彼女いない歴＝年齢やけど質問ある？(1652)",
+      "ctr": 2.0,
+      "note": "CTRは全ch最高2.00%だがサンプルimp551と極小。再生の伸びは全ch最大(+2312)で登録は横ばい",
+      "date": "2026-08-22",
+      "source": "latest.md(公開値)+analytics.db video_reach_daily(CTR新規)",
+      "subs_delta_basis": "08-21比(1日)"
+    },
+    {
+      "subscribers": 5,
+      "subs_delta": 0,
+      "total_views": 23644,
+      "views_delta": 3041,
+      "videos": 24,
+      "top_video": "PCパーツ到着時、なぜ箱だけ先に届くのか(1802)",
+      "subs_per_1k": 0.2,
+      "avg_retention": 57.9,
+      "note": "再生の伸びは+3041で全ch最大だが登録は横ばい。登録/本0.167で全ch最低＝再生は取れるが登録に変換できていない",
+      "date": "2026-08-23",
+      "source": "latest.md(公開値)+analytics.db video_metrics(直近50本窓)",
+      "subs_delta_basis": "08-22比(1日)"
     }
   ],
   "company-facts": [
@@ -319,6 +674,35 @@
       "videos": 0,
       "top_video": null,
       "note": "autopilot全滅（Desktop列挙権限エラー）。投稿0本"
+    }
+  ],
+  "fake-paper": [
+    {
+      "subscribers": 0,
+      "subs_delta": 0,
+      "total_views": 0,
+      "views_delta": 0,
+      "videos": 1,
+      "top_video": "架空論文ファイル：エレベーターで見上げる人(0)",
+      "ctr": null,
+      "note": "日次レポート初登場。1本公開済みだが再生0",
+      "date": "2026-08-22",
+      "source": "latest.md(公開値)+analytics.db video_reach_daily(CTR新規)",
+      "subs_delta_basis": "08-21比(1日)"
+    },
+    {
+      "subscribers": 0,
+      "subs_delta": 0,
+      "total_views": 1101,
+      "views_delta": 1101,
+      "videos": 1,
+      "top_video": "架空論文ファイル：エレベーターで見上げる人(0)",
+      "subs_per_1k": 0.0,
+      "avg_retention": 0.0,
+      "note": "総再生がレポート上0→1101に。ただし動画別テーブルは0のままで整合していない",
+      "date": "2026-08-23",
+      "source": "latest.md(公開値)+analytics.db video_metrics(直近50本窓)",
+      "subs_delta_basis": "08-22比(1日)"
     }
   ]
 }

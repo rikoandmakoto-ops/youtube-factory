@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140117_113f17",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "SCP-XXXX「デジタル錯覚」— ゲームに潜む不気味な異常とは？【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "ゲーム要素と異常存在の関係\nあなたは、ゲームをプレイしている最中に何かおかしな現象を経験したことはありませんか？画面が突然揺れたり、音が変になったり。 / そう、これは単なるバグではなく、SCP-XXXX「デジタル錯覚」と呼ばれる異常存在が関わっている可能性があるんだよ。 / ゲーム内に潜むこの異常存在は、プレイヤーに錯覚を引き起こし、現実感を失わせることがあると報告されているんだ。",
+  "generated_at": "2026-08-24T14:01:17.249378Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "ゲーム画面の異変はなぜ起きる？SCP-XXXX「デジタル錯覚」【ショート】",
+      "thumb_copy": [
+        "そのバグ、本物？",
+        "画面に潜む異常"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3つの異変で判明する？SCP-XXXX「デジタル錯覚」の恐怖【ショート】",
+      "thumb_copy": [
+        "3つの異変",
+        "ただのバグじゃない"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実はゲームが現実を壊す？SCP-XXXX「デジタル錯覚」【ショート】",
+      "thumb_copy": [
+        "ゲームが現実を",
+        "侵食しはじめる"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "ゲーム画面の異変はなぜ起きる？SCP-XXXX「デジタル錯覚」【ショート】",
+    "thumb_copy": [
+      "そのバグ、本物？",
+      "画面に潜む異常"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

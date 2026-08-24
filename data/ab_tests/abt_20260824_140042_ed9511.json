@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140042_ed9511",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "音が消えるのは鼓膜のせいじゃない耳の中で水が起こす『物理的封鎖』の正体#耳に水が入ると音が消える？実は鼓膜より手前で起きている『あの現象』の正体 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": "耳の構造と水の影響\nプールや海から上がった瞬間、耳の中に水が入って音がモゴモゴになった経験、あなたも絶対あるよね？実はあの瞬間、外耳道の中で音が最大10dBも消えているんだ。 / 10dBって言われてもピンとこないけど、ささやき声がほぼ聞こえなくなるくらいって聞いたことある！それが耳の水だけで起きてるの？ / そう！しかも多くの人が『鼓膜が塞がれてるんだろう』と思ってるけど、実際は鼓膜に水が届く前の段階で音が遮断されているんだよ。今日はその仕組みを完全に解き明かすね！",
+  "generated_at": "2026-08-24T14:00:42.363826Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "耳に水が入ると音が消えるのはなぜ？鼓膜の手前で起きる封鎖",
+      "thumb_copy": [
+        "音がモゴモゴする",
+        "犯人は鼓膜じゃない"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "耳の水で音が最大10dB低下？鼓膜より手前の物理的封鎖",
+      "thumb_copy": [
+        "最大10dBも低下",
+        "水が音を封鎖する"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は鼓膜は無関係？耳の水が音を遮る意外な物理現象",
+      "thumb_copy": [
+        "鼓膜は塞がってない",
+        "音を止める水の壁"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "耳に水が入ると音が消えるのはなぜ？鼓膜の手前で起きる封鎖",
+    "thumb_copy": [
+      "音がモゴモゴする",
+      "犯人は鼓膜じゃない"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

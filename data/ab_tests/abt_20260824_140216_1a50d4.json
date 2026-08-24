@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140216_1a50d4",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "河童はなぜか子どもだけを呼ぶ？水辺に残された「声」の本当の理由【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "妖怪ウォッチの河童系妖怪を入口に、河童伝承の地域差と、水難事故を警告するために作られた恐怖の構造を掘り下げる\nあなたは夕方の川辺で、自分の名前だけを呼ぶ声がしたら振り向いてしまいませんか。\n河童伝承では、その一度の返事が、岸から数歩先の深みへ近づく合図になると語られてきました。 / え、友達や家族の声に似ていたら、無視する方がむしろ難しいよ。\n知らない場所で通知音が鳴った気がしてスマホを見るみたいに、反射で確かめたくなる。 / 妖怪ウォッチの河童系妖怪は、親しみやすく仲間にもなれる存在として描かれます。\nけれど江戸から各地に残る伝承では、水辺で人を帰さないものとして恐れられました。",
+  "generated_at": "2026-08-24T14:02:16.945089Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "河童はなぜ子どもの名前だけ呼ぶ？水辺の声に隠れた警告【ショート】",
+      "thumb_copy": [
+        "名前を呼ぶ河童",
+        "返事したら危険"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "河童伝承に残る3つの水難警告…子どもを呼ぶ声の正体【ショート】",
+      "thumb_copy": [
+        "3つの水難警告",
+        "声の正体とは"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は河童は守るために怖がらせた？子どもを呼ぶ声の真実【ショート】",
+      "thumb_copy": [
+        "河童は悪ではない",
+        "恐怖の本当の役目"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "河童はなぜ子どもの名前だけ呼ぶ？水辺の声に隠れた警告【ショート】",
+    "thumb_copy": [
+      "名前を呼ぶ河童",
+      "返事したら危険"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

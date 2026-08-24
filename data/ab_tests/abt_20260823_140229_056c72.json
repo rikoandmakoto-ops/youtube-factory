@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140229_056c72",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "なぜ今夜、布団で足だけ熱い？90%が勘違いする30分の放熱の正体【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "眠気と手足の血流変化に注目し、布団の中で足先だけが熱く感じる体温調節の仕組みを解説する\nあなたも布団へ入って5分もしないうち、なぜか足先だけ熱くなって片足を出したことありませんか？実はその熱さ、眠る約30分前から始まる体の合図かもしれません。 / それ昨日あったよ。部屋は寒くて肩まで布団をかぶりたいのに、足だけは熱くてたまらない。暑がりになったのかと思っていたけど、変な感じだったんだ。 / 多くの人は掛け布団が熱をため込んだせいだと考えますが、それだけではありません。今夜あなたの足で起きる、中心の熱を外へ渡す仕組みを順番にほどいていきます。",
+  "generated_at": "2026-08-23T14:02:29.415594Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ今夜、足先だけ熱い？眠る30分前に始まる放熱の合図【ショート】",
+      "thumb_copy": [
+        "足だけ熱いのは",
+        "眠気のサイン？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "90%が勘違い！足が熱いのは就寝30分前の放熱だった【ショート】",
+      "thumb_copy": [
+        "就寝30分前から",
+        "足が熱くなる理由"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は布団のせいじゃない！足先だけ熱い本当の理由【ショート】",
+      "thumb_copy": [
+        "暑いのは布団じゃない",
+        "体が熱を逃がしてる"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ今夜、足先だけ熱い？眠る30分前に始まる放熱の合図【ショート】",
+    "thumb_copy": [
+      "足だけ熱いのは",
+      "眠気のサイン？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "RcorEmR5ZI0",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.02040816326530612,
+    "impressions": 49,
+    "views": 777,
+    "published_at": "2026-08-10T08:06:13Z",
+    "updated_at": "2026-08-24T14:00:30.061327Z"
+  }
+}

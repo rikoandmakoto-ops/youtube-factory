@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_140821_a5fc5a",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "SCP-871「自己複製するケーキ」をSCP-914で魔改造したら——財団が封印した実験ログの結末【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "競合がアニメーション1分解説で扱ったSCP-871を、SCP-914との組み合わせ実験ログという別角度から深掘り。『魔改造』キーワードと財団の改造実験という文脈を自然に接続し、増殖が止まらない恐怖を考察形式で演出\nこの報告書を読んだら後悔するかもしれない——それでも続けるなら最後まで聞いてくれ。財団のデータベースからまた一つ、封印されていた実験記録が流出した。 / 記録の末尾にはこう書かれている——『増殖の終端は確認されなかった。施設区画B-7は現在も閉鎖中。次回調査予定日：[REDACTED]』。これが4年以上前の記述だ。 / ちょっと待って……『増殖の終端が確認されなかった』って、止まってないってこと？4年間ずっと止まってないの？それ、今もどこかで増え続けてるってこと？",
+  "generated_at": "2026-08-22T14:08:21.519587Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "SCP-871を914で魔改造したら、増殖はなぜ止まらないのか？【ショート】",
+      "thumb_copy": [
+        "止まらないケーキ",
+        "封印実験の結末"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "4年以上増え続ける？SCP-871×914封印実験ログ【ショート】",
+      "thumb_copy": [
+        "4年間、増殖中",
+        "B-7区画は閉鎖"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は食べるほど危険だった？SCP-871を914で魔改造【ショート】",
+      "thumb_copy": [
+        "食べても終わらない",
+        "魔改造ケーキの恐怖"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "SCP-871を914で魔改造したら、増殖はなぜ止まらないのか？【ショート】",
+    "thumb_copy": [
+      "止まらないケーキ",
+      "封印実験の結末"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "6JhZeJWhE78",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.007929515418502203,
+    "impressions": 1135,
+    "views": 492,
+    "published_at": "2026-07-25T09:11:40Z",
+    "updated_at": "2026-08-24T14:01:13.773596Z"
+  }
+}

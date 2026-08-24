@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_140544_99d6ef",
+  "channel_id": "pokemon-lab",
+  "theme": {
+    "title": "エリートトレーナーの謎—なぜ彼らだけが特別なのか？【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "登場人物・ストーリーの考察\nあなたはエリートトレーナーと戦ったことはありませんか？彼らの存在はただの強敵ではなく、ポケモンバトルの深い意義を秘めているんです。 / エリートトレーナーたちの本当の役割や、彼らがポケモンバトルに込める意味とは？今回はその正体を暴いていきます！ / エリートトレーナーはゲーム内での強敵として、多くのプレイヤーに立ちはだかりますが、彼らの存在には重要な使命があります。",
+  "generated_at": "2026-08-22T14:05:44.702083Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜエリートトレーナーだけが特別なのか？隠された使命を考察【ショート】",
+      "thumb_copy": [
+        "ただの強敵じゃない",
+        "彼らの使命とは？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3つの使命で分かる！エリートトレーナーが強い本当の理由【ショート】",
+      "thumb_copy": [
+        "強さには理由がある",
+        "3つの使命を解説"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は試験官だった？エリートトレーナーが戦いに込めた意味【ショート】",
+      "thumb_copy": [
+        "実は試験官だった",
+        "戦いの真意とは？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜエリートトレーナーだけが特別なのか？隠された使命を考察【ショート】",
+    "thumb_copy": [
+      "ただの強敵じゃない",
+      "彼らの使命とは？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "JlHCr4BO6wg",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.016042780748663103,
+    "impressions": 187,
+    "views": 2061,
+    "published_at": "2026-07-31T09:04:23Z",
+    "updated_at": "2026-08-24T14:00:59.863798Z"
+  }
+}

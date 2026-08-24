@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140054_ff2378",
+  "channel_id": "2ch-matome",
+  "theme": {
+    "title": "なんかPCの画面チカチカするんやが【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "しょうもない相談スレ。レスの解決策が雑になっていく展開で笑わせる\nあなた、PC画面がチカチカして目まで点滅したことありませんか？犯人候補は設定より、まさかの机の上かもしれません。 / 今回は「なんかPCの画面チカチカするんやが」スレで、親切そうで雑すぎる解決策がどこまで暴走するか見届けます。 / 最強の事実は、スレ民の最終回答が「PCを休ませろ」ではなく「お前が瞬きすれば同期する」という診断だったことです。",
+  "generated_at": "2026-08-23T14:00:54.836416Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜPC画面はチカチカする？スレ民の診断が雑すぎる件【ショート】",
+      "thumb_copy": [
+        "画面がチカチカ…",
+        "解決策が雑すぎる"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "PC画面チカチカの犯人候補3選、最後の解決策が意味不明【ショート】",
+      "thumb_copy": [
+        "犯人候補は3つ",
+        "最終回答がコレ？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実はPCじゃない？画面チカチカ相談の最終診断がまさかすぎた【ショート】",
+      "thumb_copy": [
+        "犯人はPCじゃない",
+        "瞬きで同期しろ"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜPC画面はチカチカする？スレ民の診断が雑すぎる件【ショート】",
+    "thumb_copy": [
+      "画面がチカチカ…",
+      "解決策が雑すぎる"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "WDnmFqiOqpU",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.03278688524590164,
+    "impressions": 61,
+    "views": 1298,
+    "published_at": "2026-08-14T00:05:30Z",
+    "updated_at": "2026-08-24T14:00:04.362110Z"
+  }
+}

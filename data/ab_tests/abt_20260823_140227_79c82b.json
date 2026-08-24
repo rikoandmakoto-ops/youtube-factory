@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140227_79c82b",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "寝てる間だけ成長する？99%が知らない夜の体の秘密#寝ている間だけ分泌される『あのホルモン』——なぜ99%の人が睡眠中にしか成長できないのか？ #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": "成長と睡眠の関係\n昨夜ちゃんと寝た？実はその睡眠中、あなたの体では『成長ホルモン』が一気に放出されていて、筋肉・骨・肌の修復が全速力で動いていたんだよ。 / え、寝てる間に体が修復されてるって、それ全然意識したことなかった！起きてる間に成長するんじゃないの？ / 99%の人がそう思ってる。でも実は逆で、成長ホルモンの約90%は睡眠中にしか出ない——しかも眠り始めの最初の90分に集中して分泌されるんだ。",
+  "generated_at": "2026-08-23T14:02:27.129966Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ体は寝ている間にしか本気で修復できないのか？",
+      "thumb_copy": [
+        "寝ないと修復不能？",
+        "体が変わる最初の90分"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "99%が知らない、成長ホルモンが集中する最初の90分",
+      "thumb_copy": [
+        "成長の約90%は睡眠中",
+        "勝負は最初の90分"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は起きている間、体はほとんど成長していなかった",
+      "thumb_copy": [
+        "成長は寝てから始まる",
+        "筋肉・骨・肌を修復"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ体は寝ている間にしか本気で修復できないのか？",
+    "thumb_copy": [
+      "寝ないと修復不能？",
+      "体が変わる最初の90分"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "0L8LwyK9MpQ",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.018518518518518517,
+    "impressions": 54,
+    "views": 800,
+    "published_at": "2026-08-10T00:52:29Z",
+    "updated_at": "2026-08-24T14:00:30.066641Z"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140154_cb5037",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "一口SCP #92：👁️SCP-3120「異常な戦闘機」— 試験飛行9回、操縦席から帰還した隊員は1名だった【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "軍用機として記録された異常存在の試験飛行ログと、操縦者の記憶から消えた飛行時間を追う\nあなたも深夜、部屋の窓越しに遠い飛行音を聞き、誰もいない空を見上げたことがあるはずだ。SCP-3120では、その音を聞いた試験搭乗員9名のうち8名が、帰還記録ごと消えている。 / …え、墜落したんじゃないのか。基地に残った機体から人間だけが消えるなんて、教室の出席簿で自分の名前だけ消され、席だけ残るよりずっとまずい。 / 今回はSCP-3120、通称「異常な戦闘機」の試験飛行ログを読む。唯一の帰還者が失った時間は6時間19分で、その間に何を見たかは本人にも分からない。",
+  "generated_at": "2026-08-24T14:01:54.371793Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ操縦者だけ消えた？SCP-3120「異常な戦闘機」【ショート】",
+      "thumb_copy": [
+        "帰還したのは1人",
+        "消えた6時間19分"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "試験飛行9回で8人消失…SCP-3120異常な戦闘機【ショート】",
+      "thumb_copy": [
+        "9回飛んで8人消失",
+        "機体だけ帰還した"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "墜落していないのに人が消える戦闘機…SCP-3120【ショート】",
+      "thumb_copy": [
+        "墜落じゃなかった",
+        "人間だけが消えた"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ操縦者だけ消えた？SCP-3120「異常な戦闘機」【ショート】",
+    "thumb_copy": [
+      "帰還したのは1人",
+      "消えた6時間19分"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

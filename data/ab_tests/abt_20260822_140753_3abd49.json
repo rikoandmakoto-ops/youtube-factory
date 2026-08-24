@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_140753_3abd49",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "SCP-7004「終末の観測者」— 収容都市は9日で住民全員を失った【最後の記録】【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "人類規模の異常を一体の個別オブジェクトとして追跡し、財団の最終報告書と都市消失までの時系列を暴く\nあなたの住む街で、朝の点呼のたびに住民が減っていたら、九日目まで部屋に残れますか？ SCP-7004の収容都市では、人口表だけが毎朝更新され、最後には0人という数字だけが残った。 / 九日で全員って、避難バスが来たとかじゃないのか？ 学校、病院、駅、集合住宅まである街から数千人が消えて、行き先の記録も残らないなら、収容違反どころじゃないぞ。 / 流出した最終報告書の表紙には、SCP-7004「終末の観測者」、対象人口0、経過9日、救出成功0名と印字されている。今回は黒塗りの時系列から、読める部分だけを追っていく。",
+  "generated_at": "2026-08-22T14:07:53.398261Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ収容都市の住民は9日間で全員消えたのか？SCP-7004",
+      "thumb_copy": [
+        "毎朝、人口が減る街",
+        "9日目、住民は0人"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "9日で人口0人――SCP-7004収容都市に残った最終記録",
+      "thumb_copy": [
+        "9日間の消失記録",
+        "救出成功は0名"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "避難ではなかった――街ごと消えたSCP-7004終末の観測者",
+      "thumb_copy": [
+        "避難記録は存在しない",
+        "街から全員が消えた"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ収容都市の住民は9日間で全員消えたのか？SCP-7004",
+    "thumb_copy": [
+      "毎朝、人口が減る街",
+      "9日目、住民は0人"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "4xyWgg-t9Sg",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.009153318077803204,
+    "impressions": 437,
+    "views": 1129,
+    "published_at": "2026-08-15T00:06:49Z",
+    "updated_at": "2026-08-24T14:01:13.727998Z"
+  }
+}

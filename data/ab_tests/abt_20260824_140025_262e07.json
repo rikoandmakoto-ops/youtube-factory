@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140025_262e07",
+  "channel_id": "2ch-matome",
+  "theme": {
+    "title": "なんか靴下だけ消えるんやがw【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "片方だけ行方不明になる靴下の謎を、犯人候補や隠し場所の大喜利に広げる\nなんか家の中で靴下だけ消えるんやがw　お前らも洗濯した10足のうち片方だけ蒸発した朝あるやろ？　ワイは2026年8月だけで4足を片翼にしたんやが草 / >>1　財布や鍵は残して靴下だけ狙う犯人、生活への嫌がらせが細かすぎるやろw　しかも残った片方が右か左か毎回分からんの、地味に精神へ来る草 / ワイの引き出しには黒い片方が17枚、灰色が9枚、水玉が3枚おるで。合計29枚を並べたら靴下孤児院の点呼みたいで、朝7時に目をそらしたくなる草",
+  "generated_at": "2026-08-24T14:00:25.455694Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ洗濯後に靴下だけ片方ずつ消えるのか？犯人候補が多すぎるw【ショート】",
+      "thumb_copy": [
+        "靴下だけ消える",
+        "犯人は誰やw"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "2026年8月だけで4足消失…片方靴下29枚の地獄を見てくれw【ショート】",
+      "thumb_copy": [
+        "片方だけ29枚",
+        "靴下孤児院w"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は洗濯機じゃない？靴下片方だけ消える謎、犯人候補が狂ってるw【ショート】",
+      "thumb_copy": [
+        "犯人は洗濯機",
+        "じゃなかった！？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ洗濯後に靴下だけ片方ずつ消えるのか？犯人候補が多すぎるw【ショート】",
+    "thumb_copy": [
+      "靴下だけ消える",
+      "犯人は誰やw"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

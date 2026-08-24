@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140138_f000c1",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "財団が31回の接触実験で隠し続けたSCP-198の正体——回収不能になった12名は今どこにいるのか【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "飲料容器に見える異常存在が、接触者の行動と収容区画をどう変質させたか実験記録で追う\n接触から72時間後、Dクラス職員D-4421の位置情報は完全に途絶した。最後の記録は収容区画B棟の給湯室、白い陶器製のカップに右手を伸ばした、まさにその0.3秒後の映像静止だ。 / ちょっと待って、コーヒーカップに触れただけで消えたってこと？それ、嘘だろ……給湯室にあるような普通のカップじゃないのか、一体どこが違うんだ、外から見てわかるものなのか。 / 外見上はまったく普通だ。財団の報告書には『市販の陶器製マグカップと外観上の区別がつかない』と明記されている。だからこそ、これほど多くの職員が犠牲になり続けたんだ。",
+  "generated_at": "2026-08-24T14:01:38.529857Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ普通のマグカップが12人を回収不能にしたのか？SCP-198【ショート】",
+      "thumb_copy": [
+        "触れた0.3秒後",
+        "12人が消えた"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "31回の接触実験で判明したSCP-198――72時間後に消えるカップ【ショート】",
+      "thumb_copy": [
+        "31回の実験記録",
+        "72時間後に消失"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は給湯室のカップだった――職員を消すSCP-198の恐怖【ショート】",
+      "thumb_copy": [
+        "ただのカップが",
+        "職員を奪う"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ普通のマグカップが12人を回収不能にしたのか？SCP-198【ショート】",
+    "thumb_copy": [
+      "触れた0.3秒後",
+      "12人が消えた"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_141006_218ffe",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "妖怪ウォッチのエンマ大王、なぜか『本物』の閻魔と全然違う姿をしている【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "仏教の閻魔王が作中でどう再解釈されているかを解説\nこの妖怪、元ネタを知ってからは笑えなくなった。\n妖怪ウォッチのエンマ大王、ゲームの中では威厳があって頼もしい王様として描かれているけど、その背後にある本来の姿は、もっとずっと別の何 / え、エンマ大王って妖怪ウォッチの大ボスというか、妖怪の王様でしょ？\nゲームでも威厳あってかっこいいし、そんなに怖い感じしないんだけど、元ネタって何がそんなに違うの？ / 仏教の閻魔王が元々どんな存在として記録されていたか、そしてそれが妖怪ウォッチの中でどう形を変えたのかを、伝承と作中描写と、ファン考察の三つを区別しながら一つずつ掘っていくよ。\n知っ",
+  "generated_at": "2026-08-22T14:10:06.338107Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "妖怪ウォッチのエンマ大王、なぜ本物の閻魔と別人なのか？【ショート】",
+      "thumb_copy": [
+        "本物の閻魔は",
+        "まるで別人だった"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3つの違いで分かる！妖怪ウォッチと仏教・閻魔王の正体【ショート】",
+      "thumb_copy": [
+        "3つの決定的差",
+        "元ネタは怖すぎる"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は妖怪の王じゃない？エンマ大王に隠された閻魔王の正体【ショート】",
+      "thumb_copy": [
+        "妖怪の王じゃない",
+        "閻魔王の真実"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "妖怪ウォッチのエンマ大王、なぜ本物の閻魔と別人なのか？【ショート】",
+    "thumb_copy": [
+      "本物の閻魔は",
+      "まるで別人だった"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "Rmx-FN9VhUE",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.012903225806451613,
+    "impressions": 775,
+    "views": 1464,
+    "published_at": "2026-08-04T10:11:28Z",
+    "updated_at": "2026-08-24T14:02:04.785540Z"
+  }
+}

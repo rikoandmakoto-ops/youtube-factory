@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140048_b6214b",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "なぜ今夜、布団で足だけ熱い？90%が勘違いする30分の放熱の正体【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "眠気と手足の血流変化に注目し、布団の中で足先だけが熱く感じる体温調節の仕組みを解説する\nあなたも布団へ入って5分もしないうち、なぜか足先だけ熱くなって片足を出したことありませんか？実はその熱さ、眠る約30分前から始まる体の合図かもしれません。 / それ昨日あったよ。部屋は寒くて肩まで布団をかぶりたいのに、足だけは熱くてたまらない。暑がりになったのかと思っていたけど、変な感じだったんだ。 / 多くの人は掛け布団が熱をため込んだせいだと考えますが、それだけではありません。今夜あなたの足で起きる、中心の熱を外へ渡す仕組みを順番にほどいていきます。",
+  "generated_at": "2026-08-24T14:00:48.141554Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ布団に入ると足だけ熱い？眠る30分前の放熱サイン【ショート】",
+      "thumb_copy": [
+        "足だけ熱いのは",
+        "眠気の合図？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "90%が勘違い！足が熱いのは眠る30分前の放熱だった【ショート】",
+      "thumb_copy": [
+        "90%が知らない",
+        "足の放熱スイッチ"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は暑がりじゃない。布団で足が熱いのは体温を下げる準備【ショート】",
+      "thumb_copy": [
+        "足の熱さの正体",
+        "体温を下げていた"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ布団に入ると足だけ熱い？眠る30分前の放熱サイン【ショート】",
+    "thumb_copy": [
+      "足だけ熱いのは",
+      "眠気の合図？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

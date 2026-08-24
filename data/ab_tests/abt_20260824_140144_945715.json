@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140144_945715",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "SCP-2845収容記録：儀式が1分遅れた夜、173名はなぜか全員消えた【これが最後の名簿】【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "神格存在の収容儀式が一度でも遅れた場合に起きる現象を、儀式手順の欠落と消失者名簿から検証する\nあなたは集合時刻を1分だけ過ぎて、先生や仲間を待たせたことはありませんか？\nSCP-2845の収容では、その1分06秒の遅延が職員173名を同時に消したと記録されています。 / 173人が一度にって、学校の体育館に集まった全員が席だけ残して消える規模だろ。\nしかも相手は動物じゃなく、財団が鹿神と呼ぶ神格存在なんだよな？ / 財団データベースから流出したのは、SCP-2845「鹿神」の収容記録です。\n儀式失敗4件、累計消失183名、そして最後の173名分の名簿が黒塗りで保存されています。",
+  "generated_at": "2026-08-24T14:01:44.959253Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ儀式が1分遅れただけで173名は消えた？SCP-2845【ショート】",
+      "thumb_copy": [
+        "遅延は1分06秒",
+        "173名が一斉消失"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "SCP-2845収容記録：1分06秒の遅延で173名消失【ショート】",
+      "thumb_copy": [
+        "失敗4件・消失183名",
+        "最後の名簿は黒塗り"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は遅刻1分が禁忌だった…鹿神SCP-2845の収容儀式【ショート】",
+      "thumb_copy": [
+        "席だけ残して消えた",
+        "鹿神の収容失敗"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ儀式が1分遅れただけで173名は消えた？SCP-2845【ショート】",
+    "thumb_copy": [
+      "遅延は1分06秒",
+      "173名が一斉消失"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

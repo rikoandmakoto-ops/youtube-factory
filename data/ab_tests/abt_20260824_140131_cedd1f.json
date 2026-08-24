@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140131_cedd1f",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "SCP-2525「異常なゲーム」— 死亡記録23件、勝利条件は未達成【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "ゲーム形式の異常存在が現実の参加者を巻き込んだ収容違反を、攻略記録・脱落者数・未解決の勝利条件から検証する\nあなたも、あと一勝で終われると思い、負けても画面を閉じられなかったことはありませんか。\nSCP-2525では、その感覚を信じて席に着いた参加者23名が消え、終了条件だけが未達成のま / 23人がゲームの中で負けたんじゃなく、現実から消えたのか。\n学校の放課後に遊ぶ対戦ゲームみたいに始めたなら、電源を抜けば逃げられそうなのに、何が参加者を縛ったんだ。 / 流出した監視記録には、電源を切った後も盤面の駒だけが一手進んだとあります。\n今回は財団が17回の攻略試行で残した報告書から、23件の脱落記録を読み上げます。",
+  "generated_at": "2026-08-24T14:01:31.105076Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ電源を切ってもゲームは進んだのか？SCP-2525【ショート】",
+      "thumb_copy": [
+        "電源を抜いた後も",
+        "駒が一手進んだ"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "死亡記録23件、攻略試行17回でも終われないゲーム SCP-2525【ショート】",
+      "thumb_copy": [
+        "23人が現実から消失",
+        "勝利条件は未達成"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は負けたら終わりではない――現実から消えるゲーム SCP-2525【ショート】",
+      "thumb_copy": [
+        "ゲームオーバーの先",
+        "消えた参加者たち"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ電源を切ってもゲームは進んだのか？SCP-2525【ショート】",
+    "thumb_copy": [
+      "電源を抜いた後も",
+      "駒が一手進んだ"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

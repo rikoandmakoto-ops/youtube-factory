@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140126_b6ec98",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "一口SCP：視線を外したら——もう遅い財団が封印した『0.3秒の恐怖』#SCP-173——視線を外した0.3秒に、17名が消えた本当の理由 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": null,
+  "generated_at": "2026-08-24T14:01:26.502326Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ視線を外した0.3秒で17人は消えたのか？SCP-173",
+      "thumb_copy": [
+        "目を逸らした瞬間",
+        "17人が消えた理由"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "0.3秒で17人消失――SCP-173封印記録の恐怖を解説",
+      "thumb_copy": [
+        "0.3秒の油断で",
+        "17人が消えた"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は「瞬き」だけで終わる――SCP-173が最恐の理由",
+      "thumb_copy": [
+        "瞬きしただけで",
+        "もう遅い――"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ視線を外した0.3秒で17人は消えたのか？SCP-173",
+    "thumb_copy": [
+      "目を逸らした瞬間",
+      "17人が消えた理由"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

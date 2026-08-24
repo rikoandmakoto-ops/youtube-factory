@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140631_4588c9",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "なぜオロチはゲームで美化された？ヤマタノオロチ伝説の“本当は怖い”正体【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "レジェンド妖怪の元ネタとなった記紀神話の大蛇を比較する\nあなたは、妖怪ウォッチのオロチと日本神話のヤマタノオロチ、どちらが本当に恐ろしい存在か考えたことありませんか？実は意外な共通点と決定的な違いがあるんです。 / 今回は、オロチのキャラクター性がどこまで神話ヤマタノオロチに由来しているのか、そして元ネタの真の恐怖を暴いていきます！ / オロチとヤマタノオロチ、両者のビジュアルや能力設定を見比べてみると、単なる巨大な蛇以上の意味が隠されています。",
+  "generated_at": "2026-08-23T14:06:31.459285Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜオロチは美化された？神話ヤマタノオロチの怖すぎる正体【ショート】",
+      "thumb_copy": [
+        "なぜ美化された？",
+        "本当は生贄の怪物"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "8つの頭と尾が示す恐怖…ヤマタノオロチ伝説を3分解説【ショート】",
+      "thumb_copy": [
+        "8つの頭の意味",
+        "神話の怪物を解剖"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は英雄譚ではない？ヤマタノオロチに隠された残酷な正体【ショート】",
+      "thumb_copy": [
+        "英雄譚の裏側",
+        "残酷すぎる真実"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜオロチは美化された？神話ヤマタノオロチの怖すぎる正体【ショート】",
+    "thumb_copy": [
+      "なぜ美化された？",
+      "本当は生贄の怪物"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "G3KtohjxPI0",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.005813953488372093,
+    "impressions": 344,
+    "views": 1364,
+    "published_at": "2026-08-03T10:07:22Z",
+    "updated_at": "2026-08-24T14:02:04.754324Z"
+  }
+}

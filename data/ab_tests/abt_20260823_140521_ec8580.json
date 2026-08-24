@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140521_ec8580",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "一口SCP：瞬きの間に、17人が死んだLEVEL 4 機密｜財団内部資料【閲覧注意】#目を離した0.3秒で首を折られる——SCP-173が財団の隠し続けた『本当の恐怖』 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": "視線を外すと近づいてくる初期SCPの代名詞。発見経緯と収容プロトコルを解説\n1993年5月17日、午前2時41分。財団サイト-19の収容房から緊急警報が鳴った。\n入室した職員が発見したのは、3名の同僚の遺体だった。 / え……3人が同時に? それってどういうことなんだ、シロ。何があったんだよ。 / 全員、頸椎を後方から圧壊されていた。\n監視カメラの映像には、彫刻が移動した瞬間が映っていたが、その区間の記録は[DATA EXPUNGED]されている。",
+  "generated_at": "2026-08-23T14:05:21.825850Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ瞬きをした0.3秒で死ぬ？SCP-173収容違反の真相【ゆっくり解説】",
+      "thumb_copy": [
+        "瞬き0.3秒で",
+        "首が折れる恐怖"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "1993年5月17日、17人死亡…SCP-173極秘収容記録【閲覧注意】",
+      "thumb_copy": [
+        "17人が死亡した",
+        "サイト19の夜"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は「彫刻」ではない？SCP-173が視線を狙う本当の理由【機密】",
+      "thumb_copy": [
+        "目を離した瞬間",
+        "もう背後にいる"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ瞬きをした0.3秒で死ぬ？SCP-173収容違反の真相【ゆっくり解説】",
+    "thumb_copy": [
+      "瞬き0.3秒で",
+      "首が折れる恐怖"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "XFtnWA991WU",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.005042016806722689,
+    "impressions": 595,
+    "views": 206,
+    "published_at": "2026-07-23T03:01:30Z",
+    "updated_at": "2026-08-24T14:01:13.652004Z"
+  }
+}

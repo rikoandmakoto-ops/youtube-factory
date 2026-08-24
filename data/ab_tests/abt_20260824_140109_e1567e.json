@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140109_e1567e",
+  "channel_id": "pokemon-lab",
+  "theme": {
+    "title": "なぜヤドンはシェルダーに噛まれると進化するのか？分岐進化の本当の理由がヤバすぎた【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "噛まれると進化する仕組みと、ヤドキング分岐の設定を読み解く\nあなた、ヤドンがシェルダーに噛まれると進化するって、正直どういう仕組みなのか疑問に思ったことありませんか？実はそこに、とんでもない設定が潜んでいるんです。 / その共生関係、ただの偶然やゲームの都合じゃなくて、公式図鑑にもしっかりとした理由が書かれてるって知ってました？ / 今回は、ヤドンとシェルダーがなぜあんなにも切っても切れない関係になったのか、その正体を徹底的に暴いていきます！",
+  "generated_at": "2026-08-24T14:01:09.264353Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜヤドンは噛まれると進化？ヤドキング分岐の本当の理由【ショート】",
+      "thumb_copy": [
+        "噛まれて進化!?",
+        "分岐の秘密とは"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3つの進化先で判明！ヤドンとシェルダー共生の驚愕設定【ショート】",
+      "thumb_copy": [
+        "進化先は3種類",
+        "噛む場所で激変"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実はシェルダーが主役？ヤドンを進化させる衝撃の仕組み【ショート】",
+      "thumb_copy": [
+        "主役はシェルダー",
+        "ヤドン進化の真相"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜヤドンは噛まれると進化？ヤドキング分岐の本当の理由【ショート】",
+    "thumb_copy": [
+      "噛まれて進化!?",
+      "分岐の秘密とは"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

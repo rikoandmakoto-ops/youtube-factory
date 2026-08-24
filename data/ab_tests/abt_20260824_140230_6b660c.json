@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140230_6b660c",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "妖怪の名前がダジャレなのはナゼか? 名前の裏に隠された秘密【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "命名法則を分類。『〇〇＋現象』型のネーミングを一気に解説\nみなさん、妖怪の名前がどうしてこんなに面白いダジャレになっているのか、不思議に思ったことはありませんか？ / 実は、妖怪の名前の多くは『〇〇＋現象』型の命名法則が使われているんです。今回はその謎を解明していきます！ / 例えば、『ブリザード』なんて妖怪は、寒い現象をそのまま名前に取り入れています。これが『〇〇＋現象』の典型例ですね。",
+  "generated_at": "2026-08-24T14:02:30.396318Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "妖怪の名前はなぜダジャレだらけ？「〇〇＋現象」に隠れた命名ルール【ショート】",
+      "thumb_copy": [
+        "妖怪名はダジャレ？",
+        "命名の秘密を暴く"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3つの型で分かる！妖怪名「〇〇＋現象」ダジャレ命名法の正体【ショート】",
+      "thumb_copy": [
+        "妖怪名の3大法則",
+        "ダジャレの正体"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実はただのダジャレじゃない！妖怪名に仕込まれた「現象」の秘密【ショート】",
+      "thumb_copy": [
+        "ただのダジャレじゃない",
+        "妖怪名の裏ルール"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "妖怪の名前はなぜダジャレだらけ？「〇〇＋現象」に隠れた命名ルール【ショート】",
+    "thumb_copy": [
+      "妖怪名はダジャレ？",
+      "命名の秘密を暴く"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

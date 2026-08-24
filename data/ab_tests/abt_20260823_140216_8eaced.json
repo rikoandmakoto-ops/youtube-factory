@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260823_140216_8eaced",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "1分科学 #88：📈なぜあなたは最後の1段だけ踏み外す？99%が知らない0.3秒のズレ📊【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "脳が先に作っていた段数の予測と実際がズレる瞬間\nあなた、階段の最後の一段だけ急に消えたように感じて、足を強く着いてヒヤッとしたことありませんか？　犯人は段差ではなく、脳が先に決めた段数の予測です。 / 実は目で段を確認していても、脳は毎回ゼロから足を動かしません。次の着地点を先読みして筋肉へ命令するため、予想が一段ズレるだけで体は一瞬、大きく驚きます。 / 今回は、その「ないはずの衝撃」がなぜ起きるのかを暴きます。階段を降りる途中で脳内に作られる見えない設計図と、足裏に届く現実のズレを追っていきましょう。",
+  "generated_at": "2026-08-23T14:02:16.165737Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ階段の最後の1段で足を強く着いてしまうのか？脳の予測ズレ【1分科学】",
+      "thumb_copy": [
+        "最後の1段だけ",
+        "脳が先読みしていた"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "99%が知らない「最後の1段」の正体｜脳が0.3秒先に作る着地点【ショート】",
+      "thumb_copy": [
+        "0.3秒の予測が",
+        "足裏の現実とズレる"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は段差のせいじゃない｜最後の1段でヒヤッとする脳内エラー【1分科学】",
+      "thumb_copy": [
+        "消えたのは段差じゃない",
+        "脳の設計図だった"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ階段の最後の1段で足を強く着いてしまうのか？脳の予測ズレ【1分科学】",
+    "thumb_copy": [
+      "最後の1段だけ",
+      "脳が先読みしていた"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

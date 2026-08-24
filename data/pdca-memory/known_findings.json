@@ -1,224 +1,579 @@
 {
-  "findings": [
-    {
-      "date": "2026-08-12",
-      "id": "ds-dup-oxygen",
-      "note": "daily-science: 『酸素が1秒消えたら』類似ペア(類似度1.0)を検出→blacklist追加済み"
-    },
-    {
-      "date": "2026-08-12",
-      "id": "ds-dup-sensor",
-      "note": "daily-science: 『ドア閉まる寸前センサー待機設計』類似ペア(0.991)を検出→blacklist追加済み"
-    },
-    {
-      "date": "2026-08-12",
-      "id": "ds-dup-book-sleep",
-      "note": "daily-science: 『本を読むと眠くなる』系が上位に2本並存(1284/1276再生)→blacklist追加済み"
-    },
-    {
-      "date": "2026-08-12",
-      "id": "ds-genre-sleep-top",
-      "note": "daily-science: ジャンル別で睡眠・夢が平均756.66で最上位(35本)。体の不思議689が2位。睡眠系seedsを強化済み"
-    },
-    {
-      "date": "2026-08-12",
-      "id": "ds-genre-uchu-zero",
-      "note": "daily-science: 宇宙・天体は平均0再生(6本)。genre_blacklist済み(既存対応)"
-    },
-    {
-      "date": "2026-08-12",
-      "id": "scp-dup-173",
-      "note": "scp-lab: SCP-173類似ペア多数はblacklist対応済み(既存)。上位のSCP-173動画は全てblacklist適用前の投稿"
-    },
-    {
-      "date": "2026-08-12",
-      "id": "scp-genre-object-top",
-      "note": "scp-lab: SCP個別オブジェクトが平均625で最上位(114本)。財団組織・職員392/オブジェクトクラス0はblacklist済み"
-    },
-    {
-      "date": "2026-08-12",
-      "id": "scp-top-video",
-      "note": "scp-lab: 『人類殲滅プロトコル(SCP-5000系)』1413再生でトップ。SCP-1730も1326と好調。物語型・記録型フックが強い"
-    },
-    {
-      "date": "2026-08-12",
-      "id": "common-title-pattern",
-      "note": "両チャンネル共通: 上位動画は『なぜ〜？』疑問形＋数字(0.3秒/99%/17名)＋衝撃ワードの組合せ。断定形のみより疑問形が上位に多い"
-    },
-    {
-      "date": "2026-08-13",
-      "id": "ds-subs-first-decline",
-      "note": "daily-science: 登録者が初の減少 53→52(-1)。再生は+883/日と堅調で、再生→登録の転換が課題"
-    },
-    {
-      "date": "2026-08-13",
-      "id": "scp-subs-flat",
-      "note": "scp-lab: 登録者127で横ばい(+0)。前日は+1。再生+839/日"
-    },
-    {
-      "date": "2026-08-13",
-      "id": "small-ch-efficiency",
-      "note": "pokemon-lab(平均1160再生/本,+2登録)とyokai-watch(平均1106再生/本)は主力2chより1本あたり効率が高い"
-    },
-    {
-      "date": "2026-08-13",
-      "id": "ds-karada-seeds-gap",
-      "note": "daily-science: 体の不思議が75本・合計再生1位(50785)なのにseedsが睡眠系のみだった→体の不思議seeds追加済み"
-    },
-    {
-      "date": "2026-08-13",
-      "id": "scp-1730-cult-rising",
-      "note": "scp-lab: SCP-1730(1326)と『崇拝者自然発生』(1218/5日)が急伸。記録型・日記型フックを強化→seeds追加済み"
-    },
-    {
-      "date": "2026-08-14",
-      "id": "ds-blacklist-gap-fixed",
-      "note": "daily-science: blacklistキーワードが実タイトルと不一致で素通り（『センサーの待機設計』は括弧付き表記、『酸素が1秒』は『酸素が消えたら』表記）→『待機設計』『ドアが閉ま』『酸素が消え』を追加して修正"
-    },
-    {
-      "date": "2026-08-14",
-      "id": "scp-cosmic-scale-rising",
-      "note": "scp-lab: 宇宙・歴史スケールの新作が初動好調。SCP-1000(別の文明)1226、SCP-179(すばる)1113が初計測で1000超え、SCP-2399は+56/日で継続成長→同系統seeds追加"
-    },
-    {
-      "date": "2026-08-14",
-      "id": "ds-subs-stall",
-      "note": "daily-science: 登録者52で横ばい(+0)。減少は止まったが2日連続成長なし。再生は+1094/日と堅調"
-    },
-    {
-      "date": "2026-08-14",
-      "id": "2ch-zero-impressions",
-      "note": "2ch-matome: 直近ショート4本が1〜2日経過で全て0再生。初動インプレッションが付いていない（初期動画1356再生とは対照的）"
-    },
-    {
-      "date": "2026-08-14",
-      "id": "pokemon-exact-dup",
-      "note": "pokemon-lab: 『レックウザの誕生に隠された秘密』が完全同一タイトルで2本存在(類似度1.0)"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "2ch-zero-impressions-resolved",
-      "note": "2ch-matome: 昨日の『直近ショート4本が全て0再生』は解消。公開データ実測で 429〜1458再生、総再生 1348→4887（2日で+3539）。0再生はbackend analytics側の計測ラグで、実際にはインプレッションは付いていた（前回findingは誤検知）"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "2ch-slow-initial-velocity",
-      "note": "2ch-matome: 初動速度が全ch中で最下位。0.6〜0.7日時点の再生が 540（2ch）に対し yokai-watch 1938 / pokemon-lab 1561 / daily-science 1102 / company-facts 807。ゼロではないが伸び方が弱い"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "2ch-shimoneta-best-likerate",
-      "note": "2ch-matome: 軽い下ネタ枠『彼女の部屋でヤバい物あげてけw』がch最高のいいね率0.56%（他は0.09〜0.23%）。ユーザー方針（軽い下ネタ・エロ面白優先）と実データが一致→同系統seeds4件追加"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "ds-sleep-oversaturation",
-      "note": "daily-science: 直近15本中10本(67%)が睡眠・夢系に偏り、初動が163〜443回/日まで低下。一方『炭酸のツーン』(感覚・反射系)は1489回/日でch最高→睡眠を毎バッチ1件までに制限し、感覚・反射カテゴリを最優先で新設"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "pokemon-versus-format-wins",
-      "note": "pokemon-lab: 対決型『AとB、どっちが勝つ？』が突出（ミミッキュvsロトム2230回/日、ルカリオvsウルガモス792、パルキアvsウルトラネクロズマ665）。『なぜ〜』型の裏設定系は137〜273回/日→対決型を【最優先】に昇格・毎バッチ最低2件"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "yokai-densho-beats-characters",
-      "note": "yokai-watch: 伝承妖怪の原典系が作品キャラの約20倍。ふじのやま2981回/日・のっぺらぼう1376・河童641 に対し、ロボニャン151・エンマ大王137・ブシニャン100→伝承系を【最優先】/最低2件、作品キャラを最大1件に抑制"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "company-facts-best-likerate",
-      "note": "company-facts: いいね率0.68%で全ch最高（他は0.21〜0.36%）。総再生4630・登録5と規模は小さいが年収系の反応密度が最も高い。現状維持で継続観察"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "clip-lab-autopilot-broken",
-      "note": "clip-lab: autopilotが毎回失敗し投稿0本。原因は在庫探索での `Operation not permitted: ~/Desktop/動画出力用`（sources.py:181 の OUTPUT_BASE.iterdir()）。他chは同ディレクトリへの書き込みは成功しており、launchd起動のpython3にDesktopの列挙権限が無いことが原因。要 フルディスクアクセス付与（システム設定＝ユーザー操作）または VIDEO_OUTPUT_BASE の移設"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "anthropic-key-still-invalid",
-      "note": "ANTHROPIC_API_KEY が2日連続で401 invalid（backend/.env）。シナリオ生成はGPT側で継続できているが、success_patterns/retention のClaude分析はスキップされ続けている"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "backend-stale-restarted",
-      "note": "backendプロセスが 08-13 00:13 起動のまま = 08-14 01:19 のコミット(2ch-matome 立ち絵・背景修正)を読んでいなかった。08-15のPDCAで再起動し、7ch全autopilotの再スケジュールを確認"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "short-suffix-dup-fixed",
-      "note": "【ショート】【ショート】の二重付与は解消済み。5.7日以上前の動画にのみ残存し、直近5本(0.7〜4.7日)は全て単一。タイトル連結バグ(#付き)も直近分では発生していない"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "scp-oauth-disconnected",
-      "note": "scp-lab: backend syncが『OAuth 未連携または googleapiclient 未導入』で失敗。夜のレポートで登録者・分析が取得不能（判断保留）。daily-scienceは正常なのでscp-lab側のトークン失効が濃厚→要手動再連携"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "pokemon-versus-record-initial",
-      "note": "pokemon-lab: 対決型昇格後の新作2本が初動1666〜1780回/日とch最高水準（パルキアvsウルトラネクロズマ1780、メタグロスvsサーフゴー1666）。昇格判断をデータが裏付け"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "yokai-dup-protagonist",
-      "note": "yokai-watch: 『なぜ妖怪ウォッチだけ？主人公の秘密』が完全同一タイトルで2本（類似度1.0）→blacklist追加済み"
-    },
-    {
-      "date": "2026-08-15",
-      "id": "ds-nichijo-iwakan-watch",
-      "note": "daily-science: 日常の違和感ジャンルが平均195.6回（全体平均約640の30.6%）でblacklist閾値30%ギリギリ上。次回も低迷なら自動blacklist対象"
-    },
-    {
-      "date": "2026-08-16",
-      "id": "analytics-sync-all-down",
-      "note": "backend analytics syncが全5chで『OAuth 未連携または googleapiclient 未導入』（昨日はscp-labのみ→全chに悪化）。ただし本日の投稿ジョブ6件は全成功、2ch-matomeトークンは09:05に正常リフレッシュ済み→トークンDBは健在で、23:00の一斉失敗はrefresh/ネットワーク等sync側の問題が濃厚。sandboxからYouTube公開ページも取得不可（ネットワーク許可リスト外）のため本日の登録者・総再生は検証不能"
-    },
-    {
-      "date": "2026-08-16",
-      "id": "ds-iwakan-blacklist-confirmed",
-      "note": "daily-science: 08-15監視対象だった『日常の違和感』(平均195.6=全体の30.5%)は既に genre_blacklist 登録済みを確認→監視クローズ。しゃっくり/横隔膜・録音の声/骨伝導の類似1.0クラスタも全キーワードblacklist済み（古い動画のみ）で対応不要"
-    },
-    {
-      "date": "2026-08-16",
-      "id": "pdca-missing-2channels",
-      "note": "company-facts と clip-lab が本日のPDCA対象から漏れている（summary.json の channels は5chのみ）。company-factsの19:00投稿ジョブ自体は成功しており、PDCA側の対象設定漏れの可能性"
-    },
-    {
-      "date": "2026-08-17",
-      "id": "analytics-sync-recovered",
-      "note": "backend analytics syncが全5chで復旧（sync.ok=true、retention取得も正常）。08-16の全ch取得不能は解消。scp-labのOAuthも復旧済み"
-    },
-    {
-      "date": "2026-08-17",
-      "id": "scp-subs-jump-7004",
-      "note": "scp-lab: 登録者128→131(+3)で全chの成長を牽引。新作SCP-7004『終末の観測者』が初動2226回/日とch最高クラス→終末記録型seeds(SCP-3000/SCP-1281)追加"
-    },
-    {
-      "date": "2026-08-17",
-      "id": "ds-book-sleep-3rd-bypass",
-      "note": "daily-science: 『本を開いた瞬間に眠くなる』(1033再生)がblacklistを表記ゆれで素通り（本・眠気系の4本目）。『本を開いた』『本を読むと』を追加して封鎖"
-    },
-    {
-      "date": "2026-08-17",
-      "id": "ds-correction-now-visible",
-      "note": "daily-science: 最新3本(辛い物の汗/くしゃみ後/片手だけ冷たい)が全て感覚・反射系となり08-15の睡眠制限がバッチに反映確認。ただし08-15〜16投稿の4本は睡眠系のまま(777〜1065再生)。登録者は52で5日横ばい"
-    },
-    {
-      "date": "2026-08-17",
-      "id": "2ch-accel-shitsumon-aru",
-      "note": "2ch-matome: 日次再生が1429→2369→3037と加速、総再生5201→10738(2日で+5537)。『彼女いない歴＝年齢やけど質問ある？』が820回/日でch最速初動→質問ある？×彼女自虐seeds2件追加。08-15の『初動全ch最下位』は解消"
-    },
-    {
-      "date": "2026-08-17",
-      "id": "yokai-first-sub-in-5days",
-      "note": "yokai-watch: 登録者7→8(+1)。のっぺらぼう2222(4日)・ふじのやま1939(3日)と伝承系優先の効果が継続"
-    },
-    {
-      "date": "2026-08-17",
-      "id": "scp-sonota-watch",
-      "note": "scp-lab: 『その他』ジャンルが平均191.83回=全体平均566.6の33.9%でblacklist閾値30%ギリギリ上。次回も低迷なら自動blacklist対象"
-    }
-  ]
+ "findings": [
+  {
+   "date": "2026-08-12",
+   "id": "ds-dup-oxygen",
+   "note": "daily-science: 『酸素が1秒消えたら』類似ペア(類似度1.0)を検出→blacklist追加済み"
+  },
+  {
+   "date": "2026-08-12",
+   "id": "ds-dup-sensor",
+   "note": "daily-science: 『ドア閉まる寸前センサー待機設計』類似ペア(0.991)を検出→blacklist追加済み"
+  },
+  {
+   "date": "2026-08-12",
+   "id": "ds-dup-book-sleep",
+   "note": "daily-science: 『本を読むと眠くなる』系が上位に2本並存(1284/1276再生)→blacklist追加済み"
+  },
+  {
+   "date": "2026-08-12",
+   "id": "ds-genre-sleep-top",
+   "note": "daily-science: ジャンル別で睡眠・夢が平均756.66で最上位(35本)。体の不思議689が2位。睡眠系seedsを強化済み"
+  },
+  {
+   "date": "2026-08-12",
+   "id": "ds-genre-uchu-zero",
+   "note": "daily-science: 宇宙・天体は平均0再生(6本)。genre_blacklist済み(既存対応)"
+  },
+  {
+   "date": "2026-08-12",
+   "id": "scp-dup-173",
+   "note": "scp-lab: SCP-173類似ペア多数はblacklist対応済み(既存)。上位のSCP-173動画は全てblacklist適用前の投稿"
+  },
+  {
+   "date": "2026-08-12",
+   "id": "scp-genre-object-top",
+   "note": "scp-lab: SCP個別オブジェクトが平均625で最上位(114本)。財団組織・職員392/オブジェクトクラス0はblacklist済み"
+  },
+  {
+   "date": "2026-08-12",
+   "id": "scp-top-video",
+   "note": "scp-lab: 『人類殲滅プロトコル(SCP-5000系)』1413再生でトップ。SCP-1730も1326と好調。物語型・記録型フックが強い"
+  },
+  {
+   "date": "2026-08-12",
+   "id": "common-title-pattern",
+   "note": "両チャンネル共通: 上位動画は『なぜ〜？』疑問形＋数字(0.3秒/99%/17名)＋衝撃ワードの組合せ。断定形のみより疑問形が上位に多い"
+  },
+  {
+   "date": "2026-08-13",
+   "id": "ds-subs-first-decline",
+   "note": "daily-science: 登録者が初の減少 53→52(-1)。再生は+883/日と堅調で、再生→登録の転換が課題"
+  },
+  {
+   "date": "2026-08-13",
+   "id": "scp-subs-flat",
+   "note": "scp-lab: 登録者127で横ばい(+0)。前日は+1。再生+839/日"
+  },
+  {
+   "date": "2026-08-13",
+   "id": "small-ch-efficiency",
+   "note": "pokemon-lab(平均1160再生/本,+2登録)とyokai-watch(平均1106再生/本)は主力2chより1本あたり効率が高い"
+  },
+  {
+   "date": "2026-08-13",
+   "id": "ds-karada-seeds-gap",
+   "note": "daily-science: 体の不思議が75本・合計再生1位(50785)なのにseedsが睡眠系のみだった→体の不思議seeds追加済み"
+  },
+  {
+   "date": "2026-08-13",
+   "id": "scp-1730-cult-rising",
+   "note": "scp-lab: SCP-1730(1326)と『崇拝者自然発生』(1218/5日)が急伸。記録型・日記型フックを強化→seeds追加済み"
+  },
+  {
+   "date": "2026-08-14",
+   "id": "ds-blacklist-gap-fixed",
+   "note": "daily-science: blacklistキーワードが実タイトルと不一致で素通り（『センサーの待機設計』は括弧付き表記、『酸素が1秒』は『酸素が消えたら』表記）→『待機設計』『ドアが閉ま』『酸素が消え』を追加して修正"
+  },
+  {
+   "date": "2026-08-14",
+   "id": "scp-cosmic-scale-rising",
+   "note": "scp-lab: 宇宙・歴史スケールの新作が初動好調。SCP-1000(別の文明)1226、SCP-179(すばる)1113が初計測で1000超え、SCP-2399は+56/日で継続成長→同系統seeds追加"
+  },
+  {
+   "date": "2026-08-14",
+   "id": "ds-subs-stall",
+   "note": "daily-science: 登録者52で横ばい(+0)。減少は止まったが2日連続成長なし。再生は+1094/日と堅調"
+  },
+  {
+   "date": "2026-08-14",
+   "id": "2ch-zero-impressions",
+   "note": "2ch-matome: 直近ショート4本が1〜2日経過で全て0再生。初動インプレッションが付いていない（初期動画1356再生とは対照的）"
+  },
+  {
+   "date": "2026-08-14",
+   "id": "pokemon-exact-dup",
+   "note": "pokemon-lab: 『レックウザの誕生に隠された秘密』が完全同一タイトルで2本存在(類似度1.0)"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "2ch-zero-impressions-resolved",
+   "note": "2ch-matome: 昨日の『直近ショート4本が全て0再生』は解消。公開データ実測で 429〜1458再生、総再生 1348→4887（2日で+3539）。0再生はbackend analytics側の計測ラグで、実際にはインプレッションは付いていた（前回findingは誤検知）"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "2ch-slow-initial-velocity",
+   "note": "2ch-matome: 初動速度が全ch中で最下位。0.6〜0.7日時点の再生が 540（2ch）に対し yokai-watch 1938 / pokemon-lab 1561 / daily-science 1102 / company-facts 807。ゼロではないが伸び方が弱い"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "2ch-shimoneta-best-likerate",
+   "note": "2ch-matome: 軽い下ネタ枠『彼女の部屋でヤバい物あげてけw』がch最高のいいね率0.56%（他は0.09〜0.23%）。ユーザー方針（軽い下ネタ・エロ面白優先）と実データが一致→同系統seeds4件追加"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "ds-sleep-oversaturation",
+   "note": "daily-science: 直近15本中10本(67%)が睡眠・夢系に偏り、初動が163〜443回/日まで低下。一方『炭酸のツーン』(感覚・反射系)は1489回/日でch最高→睡眠を毎バッチ1件までに制限し、感覚・反射カテゴリを最優先で新設"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "pokemon-versus-format-wins",
+   "note": "pokemon-lab: 対決型『AとB、どっちが勝つ？』が突出（ミミッキュvsロトム2230回/日、ルカリオvsウルガモス792、パルキアvsウルトラネクロズマ665）。『なぜ〜』型の裏設定系は137〜273回/日→対決型を【最優先】に昇格・毎バッチ最低2件"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "yokai-densho-beats-characters",
+   "note": "yokai-watch: 伝承妖怪の原典系が作品キャラの約20倍。ふじのやま2981回/日・のっぺらぼう1376・河童641 に対し、ロボニャン151・エンマ大王137・ブシニャン100→伝承系を【最優先】/最低2件、作品キャラを最大1件に抑制"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "company-facts-best-likerate",
+   "note": "company-facts: いいね率0.68%で全ch最高（他は0.21〜0.36%）。総再生4630・登録5と規模は小さいが年収系の反応密度が最も高い。現状維持で継続観察"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "clip-lab-autopilot-broken",
+   "note": "clip-lab: autopilotが毎回失敗し投稿0本。原因は在庫探索での `Operation not permitted: ~/Desktop/動画出力用`（sources.py:181 の OUTPUT_BASE.iterdir()）。他chは同ディレクトリへの書き込みは成功しており、launchd起動のpython3にDesktopの列挙権限が無いことが原因。要 フルディスクアクセス付与（システム設定＝ユーザー操作）または VIDEO_OUTPUT_BASE の移設"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "anthropic-key-still-invalid",
+   "note": "ANTHROPIC_API_KEY が2日連続で401 invalid（backend/.env）。シナリオ生成はGPT側で継続できているが、success_patterns/retention のClaude分析はスキップされ続けている"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "backend-stale-restarted",
+   "note": "backendプロセスが 08-13 00:13 起動のまま = 08-14 01:19 のコミット(2ch-matome 立ち絵・背景修正)を読んでいなかった。08-15のPDCAで再起動し、7ch全autopilotの再スケジュールを確認"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "short-suffix-dup-fixed",
+   "note": "【ショート】【ショート】の二重付与は解消済み。5.7日以上前の動画にのみ残存し、直近5本(0.7〜4.7日)は全て単一。タイトル連結バグ(#付き)も直近分では発生していない"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "scp-oauth-disconnected",
+   "note": "scp-lab: backend syncが『OAuth 未連携または googleapiclient 未導入』で失敗。夜のレポートで登録者・分析が取得不能（判断保留）。daily-scienceは正常なのでscp-lab側のトークン失効が濃厚→要手動再連携"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "pokemon-versus-record-initial",
+   "note": "pokemon-lab: 対決型昇格後の新作2本が初動1666〜1780回/日とch最高水準（パルキアvsウルトラネクロズマ1780、メタグロスvsサーフゴー1666）。昇格判断をデータが裏付け"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "yokai-dup-protagonist",
+   "note": "yokai-watch: 『なぜ妖怪ウォッチだけ？主人公の秘密』が完全同一タイトルで2本（類似度1.0）→blacklist追加済み"
+  },
+  {
+   "date": "2026-08-15",
+   "id": "ds-nichijo-iwakan-watch",
+   "note": "daily-science: 日常の違和感ジャンルが平均195.6回（全体平均約640の30.6%）でblacklist閾値30%ギリギリ上。次回も低迷なら自動blacklist対象"
+  },
+  {
+   "date": "2026-08-16",
+   "id": "analytics-sync-all-down",
+   "note": "backend analytics syncが全5chで『OAuth 未連携または googleapiclient 未導入』（昨日はscp-labのみ→全chに悪化）。ただし本日の投稿ジョブ6件は全成功、2ch-matomeトークンは09:05に正常リフレッシュ済み→トークンDBは健在で、23:00の一斉失敗はrefresh/ネットワーク等sync側の問題が濃厚。sandboxからYouTube公開ページも取得不可（ネットワーク許可リスト外）のため本日の登録者・総再生は検証不能"
+  },
+  {
+   "date": "2026-08-16",
+   "id": "ds-iwakan-blacklist-confirmed",
+   "note": "daily-science: 08-15監視対象だった『日常の違和感』(平均195.6=全体の30.5%)は既に genre_blacklist 登録済みを確認→監視クローズ。しゃっくり/横隔膜・録音の声/骨伝導の類似1.0クラスタも全キーワードblacklist済み（古い動画のみ）で対応不要"
+  },
+  {
+   "date": "2026-08-16",
+   "id": "pdca-missing-2channels",
+   "note": "company-facts と clip-lab が本日のPDCA対象から漏れている（summary.json の channels は5chのみ）。company-factsの19:00投稿ジョブ自体は成功しており、PDCA側の対象設定漏れの可能性"
+  },
+  {
+   "date": "2026-08-17",
+   "id": "analytics-sync-recovered",
+   "note": "backend analytics syncが全5chで復旧（sync.ok=true、retention取得も正常）。08-16の全ch取得不能は解消。scp-labのOAuthも復旧済み"
+  },
+  {
+   "date": "2026-08-17",
+   "id": "scp-subs-jump-7004",
+   "note": "scp-lab: 登録者128→131(+3)で全chの成長を牽引。新作SCP-7004『終末の観測者』が初動2226回/日とch最高クラス→終末記録型seeds(SCP-3000/SCP-1281)追加"
+  },
+  {
+   "date": "2026-08-17",
+   "id": "ds-book-sleep-3rd-bypass",
+   "note": "daily-science: 『本を開いた瞬間に眠くなる』(1033再生)がblacklistを表記ゆれで素通り（本・眠気系の4本目）。『本を開いた』『本を読むと』を追加して封鎖"
+  },
+  {
+   "date": "2026-08-17",
+   "id": "ds-correction-now-visible",
+   "note": "daily-science: 最新3本(辛い物の汗/くしゃみ後/片手だけ冷たい)が全て感覚・反射系となり08-15の睡眠制限がバッチに反映確認。ただし08-15〜16投稿の4本は睡眠系のまま(777〜1065再生)。登録者は52で5日横ばい"
+  },
+  {
+   "date": "2026-08-17",
+   "id": "2ch-accel-shitsumon-aru",
+   "note": "2ch-matome: 日次再生が1429→2369→3037と加速、総再生5201→10738(2日で+5537)。『彼女いない歴＝年齢やけど質問ある？』が820回/日でch最速初動→質問ある？×彼女自虐seeds2件追加。08-15の『初動全ch最下位』は解消"
+  },
+  {
+   "date": "2026-08-17",
+   "id": "yokai-first-sub-in-5days",
+   "note": "yokai-watch: 登録者7→8(+1)。のっぺらぼう2222(4日)・ふじのやま1939(3日)と伝承系優先の効果が継続"
+  },
+  {
+   "date": "2026-08-17",
+   "id": "scp-sonota-watch",
+   "note": "scp-lab: 『その他』ジャンルが平均191.83回=全体平均566.6の33.9%でblacklist閾値30%ギリギリ上。次回も低迷なら自動blacklist対象"
+  },
+  {
+   "date": "2026-08-18",
+   "id": "scp-subs-2day-streak",
+   "note": "scp-lab: 登録131→133(+2)、2日で+5と全chの成長を牽引。SCP-1690(1067/5日)・SCP-2399(1055/8日継続)と宇宙・歴史スケール記録型が安定して1000超え"
+  },
+  {
+   "date": "2026-08-18",
+   "id": "scp-7004-stall",
+   "note": "scp-lab: SCP-7004の公開再生が1113→1125(+12/日)とほぼ停止。初動2226/日は初日限りで持続せず（analytics側は08-15までしか無くラグの可能性も残る）。終末記録型seedsは維持し様子見"
+  },
+  {
+   "date": "2026-08-18",
+   "id": "scp-sonota-watch-closed",
+   "note": "scp-lab: 08-17監視の『その他』ジャンルが平均191.83→377.0(全体平均548の68.8%)に回復し閾値30%を大きく上回った→監視クローズ、blacklist不要"
+  },
+  {
+   "date": "2026-08-18",
+   "id": "ds-subs-6day-flat-tansan-stall",
+   "note": "daily-science: 登録52で6日横ばい。期待の感覚・反射系『炭酸ツーン』も1100→1101(+1/日)で頭打ち。日次再生+982と全体は堅調だが登録転換ゼロが続く"
+  },
+  {
+   "date": "2026-08-18",
+   "id": "yokai-subs-plus2",
+   "note": "yokai-watch: 登録8→10(+2)で1日の伸びとして過去最大。のっぺらぼう2225(5日)・ふじのやま1941と伝承系優先の効果が3日連続で継続"
+  },
+  {
+   "date": "2026-08-18",
+   "id": "2ch-4day-accel",
+   "note": "2ch-matome: 日次再生1429→2369→3037→3611と4日連続加速、総再生14349。『彼女いない歴＝年齢質問ある？』1651がch首位に。ただし登録4で横ばい、再生→登録の転換が課題（計測1〜2日の0再生8本は既知のラグ）"
+  },
+  {
+   "date": "2026-08-19",
+   "id": "pdca-nightly-not-run-0819",
+   "note": "本日23:00の日次PDCAが未実行（23:35時点でlatest.md=08-18のまま、backend.logも21:10で更新停止）。21:10頃のbackend再起動後の起動ログにPDCAジョブ登録行が無く、再起動でスケジュール喪失の疑い。analytics最終同期は08-18 23:04で本日の性能データなし"
+  },
+  {
+   "date": "2026-08-19",
+   "id": "trend-pipeline-live",
+   "note": "昨日修正(db15f1d)のトレンド検出が本日から実稼働。スキャン26回・エラー0、『ケンタッキー月見』等がauto_queued=1でキュー投入され、2ch-matomeでは『PCパーツ到着』トレンド由来のシナリオ生成まで確認（検出→キュー→シナリオのE2E動作）。ただし英語ゲーミング動画(DualSense/PC Parts)がcompany-facts等にもqueuedされており関連度フィルタが甘い"
+  },
+  {
+   "date": "2026-08-19",
+   "id": "rss-competitor-404",
+   "note": "競合RSS監視で UCjs5hqhQ_fBMjxXvJC5TGig が HTTP 404（登録チャンネルID誤りの可能性）。修正まで毎スキャンで失敗継続"
+  },
+  {
+   "date": "2026-08-20",
+   "id": "pdca-3day-outage",
+   "note": "日次PDCAが3日連続未実行(08-19/20も)。latest.md=08-18 23:04のまま、analytics.dbのchannel_metricsは08-15、video_metricsは08-18で停止。launchd com.youtube-factory.pdca が未ロード（handoff_2026-08-20.mdで確認）。投稿ジョブは4日連続7/7成功で正常なので、影響は『分析だけが止まっている』"
+  },
+  {
+   "date": "2026-08-20",
+   "id": "ctr-impressions-zero",
+   "note": "video_metrics全390本でimpressions=0・ctr=NULL。CTRが1件も取れていない＝サムネ改善の効果測定が構造的に不可能。至上命題(登録者増)の最優先項目がサムネなのに、その指標だけが欠測している"
+  },
+  {
+   "date": "2026-08-20",
+   "id": "ds-retention-vs-views-gap",
+   "note": "daily-science: 再生数と維持率が逆相関する層を発見。金縛り系2本は再生991/1040と上位なのに維持率34.5%/35.1%でch最低クラス(ch平均59.6%)。逆に維持率100%超(=ループ成功)は くしゃみ0.5秒118.9% / 食後の眠気120.9% / 体がビクッ106.2% と全て『体験再現型』。釣れるが見られない題材が登録転換ゼロ(8日横ばい)の主因と推定"
+  },
+  {
+   "date": "2026-08-20",
+   "id": "ds-config-promoted-loser",
+   "note": "daily-science: 設定ファイル自体が低維持率テーマを推奨していた。theme_priority.good_examples と theme_seeds[0] の両方が『金縛り』(実測維持率ch最下位級)。良い見本として生成プロンプトに毎回注入されていた→差し替え済み"
+  },
+  {
+   "date": "2026-08-20",
+   "id": "ds-title-template-fatigue",
+   "note": "daily-science: 直近30本中11本(37%)が『99%が知らない』を含み、29/30が疑問形『？』。08-18〜08-20の3本連続で『99%が知らない◯秒の◯』構文が完全一致。タイトル型の飽和で差別化が消えている"
+  },
+  {
+   "date": "2026-08-20",
+   "id": "cross-channel-theme-collision",
+   "note": "クロスチャンネルのテーマ衝突を初検出。08-20に yokai-watch『かまいたちの元ネタが怖すぎる』と scp-lab『SCP-1523-JP かまいたち』が同日投稿。原因はトレンド検出で同一キーワードが複数chに同時auto_queueされること(かまいたち→4ch / アジア大会→3ch / PC Parts→3ch)。ch単位のblacklistでは原理的に防げない"
+  },
+  {
+   "date": "2026-08-20",
+   "id": "trend-relevance-filter-works",
+   "note": "08-19の『関連度フィルタが甘い』は部分的に誤り。google_trends由来(旭川天気・盛岡天気・アレックスベシア等)はrel 0.10〜0.50で全てauto_queued=0＝正しく弾かれている。問題はフィルタ精度ではなく『通過したキーワードが全chに一斉配布される』設計側"
+  },
+  {
+   "date": "2026-08-20",
+   "id": "ds-theme-queue-stale",
+   "note": "daily-science: theme_queueのlast_replenished_atが2026-06-22で約2か月更新なし。18件中6件(33%)がblacklist該当(しゃっくり/蛍光灯/ドアが閉ま/本を読むと)または近似重複(耳に水×2・紙で切る×2)で、補充が止まったまま不良在庫が消費され続けていた→浄化済み(18→12件)"
+  },
+  {
+   "date": "2026-08-20",
+   "id": "thumb-vertical-far-worse-than-horizontal",
+   "note": "サムネ: 9:16(ショート実表示)の品質が16:9より大幅に劣る。08-19版 daily-science で 縦は中央約55%が完全な空白グラデーション、キャラ2体が下端で見切れ、上部に中身の無い点線円(アイコン生成失敗の痕跡)。横は3段テキスト＋眼の背景画で構成が成立。投稿の主力はショート＝縦なので、品質が逆転している"
+  },
+  {
+   "date": "2026-08-20",
+   "id": "scp-lowest-retention-highest-growth",
+   "note": "scp-lab: 平均維持率51.3%と全ch最低(pokemon 66.2% / 2ch 65.7% / yokai 61.2% / daily 59.6%)なのに登録者は最速で伸びている。維持率が低くても『SCP番号』という検索・回遊の強さで登録に繋がっている可能性。最高維持はSCP-1690(86.7%)の発掘・数値記録型"
+  },
+  {
+   "date": "2026-08-21",
+   "id": "pdca-pipeline-recovered",
+   "note": "日次PDCAが4日ぶりに復旧。latest.md=08-21 23:20、video_metrics も 08-21 まで更新(4850行)。ただし channel_metrics(日次overview) は依然 08-18 止まりで、08-19〜21の日次views/登録増分は取得できていない。YouTube Analytics API の2〜3日遅延と切り分けが必要"
+  },
+  {
+   "date": "2026-08-21",
+   "id": "retention-subs-inverted-3ch",
+   "note": "08-20の『高維持率＝登録に繋がる』仮説を実測で部分的に否定。ch内で維持率帯別に登録/1000再生を出すと、scp-lab 50-70%帯=1.15 vs 70%+帯=0.29、pokemon 50-70%=0.26 vs 70%+=0.33、yokai 50-70%=0.44 vs 70%+=0.14。3chで『中維持帯』が最も登録を取り、極端な高維持(ループ型)は登録ゼロに近い。daily-scienceだけ例外で70%+帯=0.80が最高。→ 目標指標は『維持率最大化』ではなく『50-70%帯に収める』 ※注意: 70%+帯は各ch n=5〜6本・登録1〜4件しかなく、登録1件の増減で数値が倍近く動く。傾向として扱い、断定はしない"
+  },
+  {
+   "date": "2026-08-21",
+   "id": "series-act-ignores-retention",
+   "note": "Act(高再生テーマの続編自動投入)が再生数のみで判定しており、維持率と登録転換を見ていない。08-21に yokai-watch『鬼の元ネタ』(2339再生＝ch1位)の続編を2件approve→yokai-watch.json の autopilot.theme_queue へ投入。しかし当該動画は維持率34.3%＝ch最低クラス・登録獲得0。viral_ratio(再生/ch平均)だけの閾値では、釣りタイトルの失敗パターンを増幅する構造"
+  },
+  {
+   "date": "2026-08-21",
+   "id": "seeds-no-dedupe-vs-published",
+   "note": "theme_seeds の補充に既出チェックが無い。scp-lab の seeds 29件のうち15件(SCP-5000/2000/3125/2521/049/096/682/999/914/1471/3999/426/2317/3000/2662)が既に投稿済みの番号で、うち6件は autopilot.theme_queue にも投入済みだった。08-20に自分が追加した SCP-2662 も既出。番号単位の突合が入っていないため seeds が重複の供給源になっている→本日一括除去したが、補充ロジック側に既出番号フィルタを入れない限り再発する"
+  },
+  {
+   "date": "2026-08-21",
+   "id": "ds-screen-direction-defects",
+   "note": "daily-science の画面演出を初レビュー(08-19生成の1分科学#88ショート、63.4秒)。実害のある欠陥4点: (1)字幕の文末が切れる『景色が真っ白になっ』『…待って、暗闇に戻って』が複数フレームで発生、(2)テキスト重複バグ『感覚のふしぎシリーズシリーズ』、(3)字幕が最大5行でショートでは読み切れない、(4)画面下40〜50%が机だけの空白で情報ゼロ・キャラ顔アイコンは画面幅の約12%と小さく表情が判別不能。63秒間ほぼ静止の同一教室背景"
+  },
+  {
+   "date": "2026-08-21",
+   "id": "length-guard-not-enforced",
+   "note": "shorts_length_guard は daily-science を30〜50秒と定義し55秒超で completion 急落と記載しているのに、08-19生成物は63.4秒で通過している(警告のみで再生成させていない)。一方 投稿済み動画の推定尺(avg_view_duration÷維持率)は各ch中央値23〜34秒で、実データでも <35秒帯 が 平均維持62.2%/平均再生1102 と 35-50秒帯(55.9%/851) を上回る。ガードの上限より実測最適はさらに短い"
+  },
+  {
+   "date": "2026-08-21",
+   "id": "title-numbers-lower-views-higher-subs",
+   "note": "タイトル構造の効果が再生と登録で逆向き。具体数字あり(84本)は平均再生690で数字なし(93本)の1119を下回るが、登録/1000再生は0.57 vs 0.38と上回る。『99%』文言も同様(再生699/登録0.59 vs 946/0.44)。至上命題が登録者なら数字入りを維持すべきで、再生数の低下は失敗ではない"
+  },
+  {
+   "date": "2026-08-21",
+   "id": "scp-lab-conversion-lead",
+   "note": "登録転換はscp-labが突出。登録/1000再生で scp-lab 0.90 / daily-science 0.36 / pokemon-lab 0.34 / yokai-watch 0.32 / 2ch-matome 0.18。scp-labは平均維持48.2%と低い方から2番目なのに転換は約2.5倍。勝ち筋は『生存率N%・N名・N年間封印』の機密数値型(上位spm 3.65/2.94/2.57)"
+  },
+  {
+   "date": "2026-08-21",
+   "id": "good-examples-vs-blacklist-drift",
+   "note": "theme_priority.good_examples と theme_blacklist の整合が崩れる構造。daily-science で『骨伝導の謎』が見本に残ったまま『骨伝導』がblacklist入りしており、生成プロンプトが禁止テーマを手本として提示→生成後に必ずreject される無駄が発生していた。08-20にも同種(金縛り)を修正済みで再発。blacklist追加時にgood_examples/seeds/queueを同時走査する仕組みが無いのが原因"
+  },
+  {
+   "date": "2026-08-21",
+   "id": "trends-stale-2ch",
+   "note": "company-facts と clip-lab の channel_trends が 08-15 で停止。日次PDCAのレポート対象6ch(2ch-matome/daily-science/fake-paper/pokemon-lab/scp-lab/yokai-watch)にこの2chが含まれていないため、以後も自動では更新されない"
+  },
+  {
+   "date": "2026-08-22",
+   "id": "ctr-data-now-available",
+   "note": "【最重要・解決】CTR/インプレッションが取得可能になった。新テーブル video_reach_daily(5351行 / 07-22〜08-20 / 08-22取得)に impressions と clicks が実値で入っている。08-22朝の指揮者レポートが『最優先の技術課題』としていた impressions=0 問題は解消。ch別CTR: 2ch 2.00% / yokai 1.79% / pokemon 1.70% / daily 1.68% / scp 1.52%。ただし総インプレッションは総再生の3〜32%しかなく、ショートフィード面は含まれない『ブラウジング/検索面のみのCTR』。母数が小さいので単体動画の判断には使えず、ch内のパターン集計にのみ使う"
+  },
+  {
+   "date": "2026-08-22",
+   "id": "views-only-analysis-misleads-3cases",
+   "note": "08-22朝の指揮者が『ch内比較』で採用した3つのタイトル方針が、登録・維持・CTRで見ると逆だった。再生数のみを見た判断が3件連続で誤っている。(1)yokai『怖』優先: 再生1647>1336だが登録/1k 1.82 vs 3.70、維持37.9 vs 47.8%、CTR1.59 vs 1.84 で三指標とも悪化 (2)pokemon対決型: 再生1561>1470・CTR2.12>1.57だが登録/1k 0.85 vs 4.37(1/5)、維持34.2 vs 55.5% (3)daily『99%が知らない』停止: 実際は維持59.2 vs 35.3%、登録/1k 4.56 vs 3.60、CTR1.44 vs 1.30 で全指標良好＝停止は逆効果。至上命題が登録者である以上、タイトル方針の採否は再生数ではなく登録/1k と維持率で決めること"
+  },
+  {
+   "date": "2026-08-22",
+   "id": "yokai-ip-beats-folklore",
+   "note": "yokai-watch の勝ち筋は伝承ホラーではなく『妖怪ウォッチ作品ネタ』。作品名を含む5本は 登録/1k=8.43(非該当1.85の4.6倍)・維持53.3%(vs42.1)・CTR2.16%(vs1.52)と全指標で圧勝。再生数だけ非該当が上(1506 vs 1187)。ch最高インプレッション動画も『妖怪ウォッチのランク、なぜSが…』(imp802/CTR2.37%)で作品ネタ"
+  },
+  {
+   "date": "2026-08-22",
+   "id": "pokemon-queue-100pct-duel",
+   "note": "pokemon-lab の theme_queue 15件が15件とも対決型(『AとB、どっちが〜』)だった。対決型は登録/1k 0.85＝ch平均の約1/5・維持34.2%でch最低クラスなのに、キューが完全に単一フォーマットへ収束していた。Act/補充ロジックが再生数の高いフォーマットを再投入し続けた結果で、15日先まで低転換フォーマットが確定していた状態"
+  },
+  {
+   "date": "2026-08-22",
+   "id": "scp-ichiguchi-prefix-hurts-conversion",
+   "note": "scp-lab の『一口SCP：』接頭は登録転換を下げる。接頭あり70本の登録/1k=10.41 に対し、なし48本は13.48(1.29倍)。再生数はほぼ同じ(814 vs 807)、CTRもほぼ同じ(1.31 vs 1.35)。シリーズ名の固定接頭がタイトル前半の情報量を奪っている可能性"
+  },
+  {
+   "date": "2026-08-22",
+   "id": "scp-dash-effect-not-reproduced",
+   "note": "08-22朝に scp-lab の style_rules へ追加された『全角ダッシュ—二段構成は1.25倍、必ず維持』は、再生以外の指標で再現しない。ダッシュあり81本 vs なし37本で 登録/1k 11.75 vs 11.38、CTR 1.32% vs 1.35%(imp 28052 vs 10607)、維持36.0 vs 38.4% ＝ ほぼ無差。害はないが『必ず維持する』と断定する根拠は無い"
+  },
+  {
+   "date": "2026-08-22",
+   "id": "scp173-duplication-actually-converts",
+   "note": "既報の『SCP-173の重複』は登録面では悪ではなかった。173を含む31本の登録/1k=15.02 に対し非該当87本は10.36。維持は34.2 vs 37.7%とわずかに低いが、転換はch内で最高帯。重複＝一律に悪と扱わず、登録転換で判定すること(173は既に theme_blacklist 済みのため今回は解除せず、方針記録のみ)"
+  },
+  {
+   "date": "2026-08-22",
+   "id": "thumbnail-ab-16of18-zero-impressions",
+   "note": "サムネA/Bテスト18件のうち16件が video_reach_daily にインプレッション0＝そもそも露出されておらず、テストが原理的に成立しない。データがあるのは 2ugo8k-niHw(imp52/CTR23.08%) と 0rV1a0lshzg(imp55/CTR1.82%) の2件のみ。対象は全て長尺動画で、露出の主戦場であるショート(9:16)にA/Bが一本も掛かっていない"
+  },
+  {
+   "date": "2026-08-22",
+   "id": "thumb-template-self-collision",
+   "note": "サムネの実CTR差が出た2枚(23.08% vs 1.82%)を目視比較。レイアウトは完全に同一テンプレ(上に小さい『なぜ〜…』／中央に黄縁の大文字／赤い箱の定型句／左右下隅に極小キャラ2体／最下部に白の小文字)で、違いは背景画と文言だけ。高CTR側は虹色の音波でコントラストが強く、低CTR側は温度計とオレンジ空が同系色で図と地が分離していない。構造的な問題は3つ: (1)赤箱の文言が『科学が解明』『不思議の真相』と中身ゼロの定型句で、サムネ同士がch内で見分けられない (2)キャラ2体が画面幅の約10%・下隅で切れており表情が判別不能＝面積の無駄 (3)最下部の白小文字はスマホでは読めないサイズ。※CTRの母数はimp52/55と極小なので背景コントラストの因果は断定しない"
+  },
+  {
+   "date": "2026-08-22",
+   "id": "fake-paper-first-video",
+   "note": "fake-paper が日次レポートに初登場。1本公開済みだが再生0・登録0。company-facts / clip-lab / akashic-librarian は依然レポート対象外で実績データも0件のまま"
+  },
+  {
+   "date": "2026-08-22",
+   "id": "act-reinjects-blacklisted-3days",
+   "note": "Actの続編自動投入が blacklist を参照していないことが確定。yokai-watch『鬼の元ネタ』は 08-21 に blacklist 追加＋続編2件を除去したのに、08-22 のレポートで Act が同じ元動画(2339再生)の続編を再投入している。3日連続で同じ手作業を繰り返しており、Act側に『元動画のテーマが blacklist に含まれる場合は承認しない』条件を入れない限り毎日再発する"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "cohort-confounding-flipped-conclusion",
+   "note": "【方法論・最重要】集計コホートの不一致が結論を反転させることが実証された。scp-lab の全角ダッシュ「—」は全期間集計だと CTR 0.72倍（95%CI 0.62-0.85）で有意に有害に見えるが、登録者指標と同じ直近60日コホートに揃えると 0.97倍（95%CI 0.81-1.16）で差が消える。差の実体は61日以上前の動画による期間交絡だった。08-23朝の指揮者はこれに気づかず一度『使用禁止』をコンフィグに書き込み、自己検証で撤回した。今後タイトル効果を測るときは必ず (1)コホートを明示して揃える (2)再生・CTR・1本あたり登録者の3指標を併記 (3)95%CIが1をまたぐ場合は『必須』にしない、の3点を満たすこと"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "title-rules-were-never-applied",
+   "note": "【根本原因・重要】voice_style.style_rules に書いたタイトル規則はテーマ生成に一切反映されない。backend/pipeline/auto_scenario/generator.py の suggest_themes()（2755-2972行）が channel から参照するのは name / concept / style / content_policy.tone と theme_priority だけで、voice_style を読んでいない。そのため 08-22 朝に style_rules へ書いた全てのタイトル施策は無効で、scp-lab の theme_queue 23件は禁止したはずのダッシュ形式のまま残っていた。タイトル書式を変えたいときは theme_priority.title_style / good_examples を必ず編集すること（08-23 に4chとも移設済み）"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "subs-per-video-is-the-decision-metric",
+   "note": "至上目標が登録者である以上、判断指標は『1本あたり登録者』に統一すべき。これは再生数を経た最終成果であり、CTRや再生数と符号が食い違ったときは常にこちらを採る。08-22朝〜08-23で、再生数だけを見て決めた施策が5件連続で覆っている（yokai『怖』優先、yokai『なぜ』禁止、daily『なぜ』抑制、daily『99%が知らない』禁止、scp ダッシュ維持）。ただしCTRは中間指標として併記し、登録者が正でCTRが負の場合はサムネ側で補う"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "ds-99-percent-ban-was-wrong",
+   "note": "daily-science の「99%が知らない」禁止は誤りだった。1本あたり登録者 0.417 vs 0.265（1.57倍）、登録/1000再生 0.47 vs 0.29、CTR 1.53% vs 1.28% と3指標すべてで正。禁止の根拠は再生数0.94倍のみだった。08-23に解除（95%CI 0.76-3.26 と非有意のため必須化はせず）。夜間ランの title-numbers-lower-views-higher-subs と同じ結論"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "yokai-ip-confirmed-2nd-time",
+   "note": "yokai-watch の『妖怪ウォッチ作品ネタ』優位を08-23の独立分析でも再現。作品名・キャラ名を含む10本は1本あたり登録者 0.700 vs 伝承のみ0.286（2.45倍）、登録/1000再生 0.55 vs 0.19、CTR 1.96% vs 1.47%。伝承のみは平均再生では上回る（1543 vs 1281）。2日連続で独立に同じ結論が出たため theme_priority.title_style の第一条（⓪最優先）に格上げした"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "retention-drop-was-data-immaturity",
+   "note": "週次集計で全5chが最新週に維持率20-36%へ急落したのは、公開直後の動画がデータ未成熟なための見かけ。公開後3日で揃えると41-55%で急落はない。ただし age=3d で揃えても pokemon-lab 78.7%→55.0%、yokai-watch 63.3%→50.2% と4週連続の緩やかな低下があり、これは実在する。週次の生値で維持率を語らないこと"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "estimated-duration-is-self-correlated",
+   "note": "推定尺（avg_view_duration ÷ avg_view_percentage）で尺の効果を測ると、維持率が分母にあるため『短い尺ほど維持率が高い』が自動的に出る自己相関がある。単純な三分位比較では短尺が登録2-3倍に見えるが、維持率45-70%に絞ると1.33倍（95%CI 0.88-2.01）で有意ではない。尺を根拠に施策を打つときは必ず維持率を統制する"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "scp-lab-is-the-bottleneck-and-the-lever",
+   "note": "scp-lab は登録者の54%（30日純増38/70人）を1chで稼ぐ一方、CTR 1.52%で全ch最下位、視聴維持カーブの30%地点残存0.64も全ch最下位（最良のpokemon-labは0.81）。リーチは43,997インプレッションで全ch最大。つまりCTRと維持率の改善余地が最も大きく、同じ改善幅なら全社の登録者数に最も効く。ここを一点集中で改善する"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "fabricated-numbers-in-queue-titles",
+   "note": "【事故】08-23にテーマキューのタイトルを一括書き換えした際、title_style の『数字を1つ以上入れる』を満たすため実在しない数字（「9つ」「26部隊」「4名」「機密レベル4」）を付与してしまった。報告書らしさを売りにするチャンネルで数字を創作するのは信頼性を損なうため、全削除したうえで title_style を『原典に実在する場合のみ入れる。確認できない数字を創作してはならない』に改めた。タイトル自動生成・一括書き換えでは必ずこの制約を明示すること"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "mechanical-title-rewrite-breaks-japanese",
+   "note": "タイトル一括書き換えを正規表現＋接尾辞付与で行うと『〜の恐怖の恐怖』『〜とはに隠された秘密』のような破綻した日本語が生成される。また必須語を機械的に差し込むと『不思議な進化の過程に隠された秘密』のように固有名を欠いた検索性のないタイトルになる。ルール適合の機械チェックはこれらを検出できないため、書き換えは必ず1件ずつ書き、(a)固有名を含むか (b)重複していないか (c)good_examplesと同一でないか も併せて検査する"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "clip-lab-was-spinning-idle",
+   "note": "clip-lab は運用方針で凍結中にもかかわらず autopilot.enabled=true のまま平日2枠＋休日2枠がスケジュールされ、theme_seeds 0件・theme_queue 未作成・video_metrics 実績0件で空回りしていた。08-23に enabled=false へ変更。運用方針で止めたチャンネルは autopilot も必ず落とすこと"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "viral-hooks-were-corrupted",
+   "note": "全4chの theme_priority.viral_hooks が文字列を1文字ずつlistに分解した状態で保存されていた（scp-lab 90要素 / yokai-watch 69 / daily-science 159 / pokemon-lab 70）。プロンプトを汚染していた。08-23に文字列へ復元。JSONを機械編集するときは list(str) と [str] の取り違えに注意する"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "reach-lags-two-days",
+   "note": "video_reach_daily（インプレッション・クリックの唯一の情報源）は video_metrics より2日古い（08-23時点で reach=08-20、metrics=08-22）。当日投稿分のCTRは翌々日まで評価できない。また video_metrics.impressions（scp-lab 29,585）と video_reach_daily（43,997）が一致しないため、CTR分析は母数の大きい video_reach_daily を使う"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "two-theme-queues-autopilot-uses-embedded",
+   "note": "【最重要・構造】テーマキューは2系統ある。定時投稿の autopilot が消費するのは <channel>.json の autopilot.theme_queue（backend/api_channel_autopilot.py の _pop_or_refill_theme）で、data/channels/<id>/theme_queue.json は手動実行 /factory/run 専用（backend/main.py の factory_run が _tq.consume を呼ぶ）。補充ロジックも別系統。08-23の指揮者は後者だけを40件書き直して「反映済み」と判断しかけたが、定時投稿には一切効かない。キューを変えるときは必ず autopilot.theme_queue を直すこと。08-23に scp-lab/yokai-watch/pokemon-lab の両系統を一致させたが daily-science は中身が異なるまま"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "autopilot-queue-contradicted-all-rules",
+   "note": "08-23時点の autopilot.theme_queue は新旧どのルールにも従っていなかった。scp-lab 7件すべてに「怖/恐」なし、yokai-watch 10件すべてが全角ダッシュ使用かつ全件が伝承単体（作品ネタゼロ＝登録者2.45倍の最有力知見と正面から矛盾）、pokemon-lab 12件中5件が対決型（登録0.63倍の低転換フォーマット）。つまり title_style を直しても、キューに残っている限り数日〜2週間はルール違反の動画が作られ続ける。ルール変更時は必ず既存キューの棚卸しも同時に行うこと"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "pokemon-schedule-drift-between-configs",
+   "note": "pokemon-lab の autopilot 設定が channels と channels_orchestrator で食い違っている。auto_optimize_schedule が channels=true / orchestrator=false、schedule.days_of_week も channels=[2,3,5]（水木土）/ orchestrator=[0-6]（毎日）。08-22に全5chを false 固定したはずが channels 側で true に戻っており、夜間の別処理が書き戻している疑いがある。書き込み主体の特定が必要"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "short-thumbnail-ignored-channel-config",
+   "note": "【最重要・根本原因】ショート(9:16)サムネを作る generate_short_thumbnail() は channel_dict を一切受け取らず、全チャンネルが daily-science 固定の見た目で出力されていた。バッジ文言「ゆっくり解説」・赤バッジ・黄色フック・水色サブ・紫グラデ背景・riko/makoto のキャラが全てハードコード。16:9 側 (_generate_html_thumbnail) は channel_dict を読むため、横だけチャンネル別・縦は全部同じという状態。投稿の主力はショート＝縦なので、08-20 に指摘した『縦の品質が横より大幅に劣る』の正体はこれ。08-23夜に channel_dict/char_config を受け取る実装へ修正し、thumbnail_template.short_bg_gradient を4chに追加した"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "sprite-aspect-ratio-breaks-thumbnail",
+   "note": "キャラ立ち絵の素材アスペクト比がバラバラ（riko/makoto 612x408 の横長・shiro/kuro 1252x970・minamo等 1024x1024）なのに、サムネ側は高さ基準の一律スケール（SH*0.35）で拡縮していたため、横長素材では幅が canvas(1080px) を超えて左右2体が完全に重なっていた。さらに riko/makoto は全面にごく薄いアルファが乗っており getbbox() で余白が切れず、閾値なしのcropは無効。幅・高さ両方に上限を設けた内接スケール＋アルファ閾値40でのcropに修正済み。※kenta素材だけ背景に不透明の矩形が残っており素材側の修正が必要"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "dedup-false-positive-from-short-token",
+   "note": "【方法論・重要】テーマ重複判定 theme_dedup.similarity() が「ショート」を話題語として数えており、無関係な2本が【ショート】の共有だけで 0.75〜0.76（閾値0.62超）に達していた。_keyword_overlap は語の文字数の2乗を重みにし分母に短い側を採るため、短いタイトル側では「ショート」(3文字=重み9)だけで過半を占める。日次レポートの『類似ペア15件』のほぼ全てがこの偽陽性で、実際の重複は各ch 0〜1件。3日間これを見て blacklist を検討していた判断の土台が崩れる。_BOILERPLATE_TOKENS に ショート/shorts/ゆっくり/解説/考察/研究/一口/分科学/ファイル/まとめ を追加して修正（偽陽性0.76→0.22-0.30、真の重複は0.75-1.0のまま）"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "act-fallback-truncates-titles",
+   "note": "Actの続編自動投入が生成する定型タイトルは、元タイトルを base[:30] / base[:25] で機械的に切っているため【ショート】を巻き込み文の途中でぶつ切りになる（『顔を奪う怪談はなぜ生まれた』『なぜ箱だけ先に届くのか？【ショー』）。これは series_engine._fallback_suggestions で、ANTHROPIC_API_KEY 未設定＝常時この経路。08-23に装飾除去＋区切り位置での切断を行う _core_topic() を実装。生成済みの破綻タイトル4件（yokai2件・2ch2件）はキューから除去した。なお yokai の2件は⓪最優先の『作品ネタ』ではなく伝承単体で、Actはタイトル規則も参照していない"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "video-metrics-capped-at-50",
+   "note": "【方法論】video_metrics は1チャンネルあたり最大50本しか記録されない（youtube_analytics.py の maxResults=50）。daily-science 183本中50本、scp-lab 154本中50本のみ。したがって『登録/本』『CTR』『維持率』の全分析は直近50本の窓に対するもの。さらに窓が日々ずれるため video_metrics 同士の日次差分は負値が出て意味を持たない（08-22→08-23 で scp-lab Δviews=-957, Δsubs=-4）。チャンネル総再生・総登録の日次差分は latest.md の公開値を使うこと"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "retention-does-not-convert-in-scp",
+   "note": "維持率と登録転換の関係はチャンネルごとに符号が違う。08-23データ（再生200以上 n=147）を各ch内で維持率中央値で二分すると、yokai-watch は高維持側が登録/本 3.00倍、pokemon-lab 1.28倍、daily-science 1.09倍だが scp-lab は 0.95倍で効果なし。scp-lab は登録者の過半を稼ぐ主力なので、08-23朝に立てた『scp-lab は維持率とCTRの両方が伸びしろ』のうち維持率側は根拠が弱い。ただし各群 n=12〜22 と小さく、確定ではない（要再検証）"
+  },
+  {
+   "date": "2026-08-23",
+   "id": "blacklist-drift-between-config-dirs",
+   "note": "data/channels と data/channels_orchestrator で同一チャンネルの theme_blacklist の中身がずれている（daily-science: 33件 vs 22件）。片方だけに書き込む処理があるため、どちらが生成に効くかで挙動が変わる。08-23の指揮者は両方に書いたが、既存の差分は未解消"
+  },
+  {
+   "date": "2026-08-24",
+   "id": "likes-not-retention-drive-subs",
+   "note": "【方針の土台】成熟動画245本(公開6日以上・再生300以上)をチャンネル内で中央値二分すると、高評価率上位群の登録/1000再生=0.65に対し下位群=0.30(2.16倍)。5chのうち4chで同方向(yokai4.42/scp2.40/daily1.95/2ch1.59、pokemonのみ0.84でn=20)。同じ母集団で維持率二分は0.51対0.45(1.14倍)にとどまる。全ch統合の高評価率四分位は0.29→0.32→0.54→0.83と単調増加、維持率四分位は0.47/0.57/0.41/0.47で単調性なし。登録者増の主レバーは維持率ではなく高評価率。 【独立検証で確認された限界】登録イベントが少なく(245本で登録者計126人、158本=64.5%が登録0)、ch内ブートストラップでの2.16倍の95%CIは1.43〜3.40と広い。登録126人のうち67人(53%)がscp-lab単独で、scp-labを除くと1.79、pokemon-lab単独では0.84と逆転。高評価率と登録/1000再生は分母が同じviewsのため比同士の見かけの相関も混入し、因果の向き(共通原因である可能性)は特定できていない。『高評価を増やせば登録が増える』という介入的解釈は未検証。"
+  },
+  {
+   "date": "2026-08-24",
+   "id": "retention-does-not-drive-reach-either",
+   "note": "ch内で維持率四分位に分けたときの再生数中央値は946/1015/976/973と平坦。維持率はリーチ(アルゴリズムからの露出)にも効いていない。2ch-matomeは維持率64.3%で全ch最高なのに登録/1000再生0.21で全ch最低——この乖離の最も明快な実例。08-20以降の『維持率が伸びしろ』という前提は実データに支持されない。 【重要な訂正】ch内ラベルシャッフルの並べ替え検定では 高評価率 p=0.0005 に対し維持率 p=0.23。これは『維持率に効果がない』証拠ではなく『このnでは検出できない』だけ。維持率は棄却されていない。方針は『維持率への投資停止』ではなく『主指標を高評価率に移し維持率は監視項目に降格』が正しい。なお高評価率と維持率のspearmanは0.004でほぼ独立、上位群の重なりもJaccard 0.37。"
+  },
+  {
+   "date": "2026-08-24",
+   "id": "retention-maturation-bias-6days",
+   "note": "【方法論・必読】同一動画の avg_view_percentage は公開後に上昇する。経過2日48.5%→3日51.4%→4日53.5%→5日54.4%→6日55.6%で頭打ち。直近投稿を含めて維持率を比較すると必ず『最近の動画は維持率が落ちた』と誤読する(08-19〜21公開分は21〜35%に見えるが日が浅いだけ)。維持率の比較窓は必ず『公開6日以上経過』に固定すること。 補足: この中央値は avg_view_percentage>0 の行のみの集計。全行だと経過2日の中央値は0.00%(70行中46行がゼロ=API未反映)。上昇カーブの一部はAPI反映遅れそのものを見ている可能性がある。運用結論(直近動画の維持率を額面通り比較しない)は変わらない。"
+  },
+  {
+   "date": "2026-08-24",
+   "id": "naze-title-simpson-paradox",
+   "note": "【方法論】タイトルの『なぜ』有無を単純二群比較すると 有0.42 < 無0.54 でマイナスに見えるが、チャンネル×公開月で層別すると 有0.41 > 無0.31 と逆転し7層すべてで有≧無。Simpsonのパラドックス。単純二群比較だけを根拠にタイトル規則を変更してはならない。層別を標準手順とする。"
+  },
+  {
+   "date": "2026-08-24",
+   "id": "shorts-ctr-metric-is-broken",
+   "note": "video_reach_daily の実測CTRは全ch1.76〜2.20%だが、impressions合計がscp-labで13,772に対し再生数は8万超。ショートのフィード視聴はインプレッションに計上されないため、CTRという指標自体が実態を捉えていない。サムネ改善の効果はCTRでは測れない。高評価率と登録/1000再生で測ること。"
+  },
+  {
+   "date": "2026-08-24",
+   "id": "title-shortening-not-the-cause-of-august-decline",
+   "note": "07-27週にタイトル長中央値が80字→38字へ切替。同時期に高評価率中央値が0.50%→0.27%へ低下したため因果を疑ったが、移行期(07/20-08/23)のch内比較では 短(≤45字)登録/1000再生0.73 対 長(≥60字)0.42 で短い方が良く、高評価率も0.35%対0.37%で差なし。タイトル短縮は8月低下の原因ではない。戻さない。"
+  },
+  {
+   "date": "2026-08-24",
+   "id": "config-changes-need-backend-restart",
+   "note": "【運用】ChannelManager は起動時に data/channels/*.json をメモリへ読み込み、以降は ch._raw を参照し続ける。reload() は api_phase2 / api_channel_autopilot のエンドポイント経由でしか呼ばれない。指揮者がJSONを書き換えても、バックエンド再起動(restart_backend.command)まで台本生成に反映されない。"
+  },
+  {
+   "date": "2026-08-24",
+   "id": "orchestrator-sandbox-has-no-network",
+   "note": "【運用】Cowork のサンドボックスから googleapis.com にも localhost:8000(Mac側) にも到達できない。Phase1のYouTube API取得とPhase4のautopilot triggerはこの経路では実行不可。ただしMac側のAPSchedulerは正常稼働しており(08-24 08:15にscp-lab発火→一口SCP#98公開まで完了)、手動triggerは二重投稿になるため打つべきでない。分析は最新スナップショットに対して行えばよい。"
+  }
+ ]
 }

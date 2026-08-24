@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140012_f8a99b",
+  "channel_id": "2ch-matome",
+  "theme": {
+    "title": "なんかPCの画面チカチカするんやが【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "しょうもない相談スレ。レスの解決策が雑になっていく展開で笑わせる\nあなた、PC画面がチカチカして目まで点滅したことありませんか？犯人候補は設定より、まさかの机の上かもしれません。 / 今回は「なんかPCの画面チカチカするんやが」スレで、親切そうで雑すぎる解決策がどこまで暴走するか見届けます。 / 最強の事実は、スレ民の最終回答が「PCを休ませろ」ではなく「お前が瞬きすれば同期する」という診断だったことです。",
+  "generated_at": "2026-08-24T14:00:12.258766Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "PC画面のチカチカ、なぜ最終的に瞬きで直す話になる？【ショート】",
+      "thumb_copy": [
+        "画面がチカチカ",
+        "お前が瞬きしろ"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "PC画面チカチカ対策3段階、最後の回答が雑すぎる【ショート】",
+      "thumb_copy": [
+        "解決策が3段階で",
+        "最後だけ雑すぎる"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "衝撃の診断、PC画面のチカチカはお前が同期しろ【ショート】",
+      "thumb_copy": [
+        "犯人はPCじゃない",
+        "お前が同期しろ"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "PC画面のチカチカ、なぜ最終的に瞬きで直す話になる？【ショート】",
+    "thumb_copy": [
+      "画面がチカチカ",
+      "お前が瞬きしろ"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

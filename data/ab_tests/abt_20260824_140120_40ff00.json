@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140120_40ff00",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "SCP-7004「終末の観測者」— 収容都市は9日で住民全員を失った【最後の記録】【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "人類規模の異常を一体の個別オブジェクトとして追跡し、財団の最終報告書と都市消失までの時系列を暴く\nあなたの住む街で、朝の点呼のたびに住民が減っていたら、九日目まで部屋に残れますか？ SCP-7004の収容都市では、人口表だけが毎朝更新され、最後には0人という数字だけが残った。 / 九日で全員って、避難バスが来たとかじゃないのか？ 学校、病院、駅、集合住宅まである街から数千人が消えて、行き先の記録も残らないなら、収容違反どころじゃないぞ。 / 流出した最終報告書の表紙には、SCP-7004「終末の観測者」、対象人口0、経過9日、救出成功0名と印字されている。今回は黒塗りの時系列から、読める部分だけを追っていく。",
+  "generated_at": "2026-08-24T14:01:20.699432Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ収容都市は9日で人口0になったのか？SCP-7004最後の記録【ショート】",
+      "thumb_copy": [
+        "毎朝、住民が消える",
+        "9日目 人口0人"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "9日間で数千人が消失――SCP-7004収容都市の最終報告書【ショート】",
+      "thumb_copy": [
+        "9日で街が空白に",
+        "救出成功 0名"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は避難ではなかった――SCP-7004が奪った収容都市の全住民【ショート】",
+      "thumb_copy": [
+        "避難記録は存在しない",
+        "街ごと消えた住民"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ収容都市は9日で人口0になったのか？SCP-7004最後の記録【ショート】",
+    "thumb_copy": [
+      "毎朝、住民が消える",
+      "9日目 人口0人"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

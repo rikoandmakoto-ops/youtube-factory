@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140123_7b3c26",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "収容違反の真実 — 人間が引き起こす異常の裏側【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "収容プロトコルの限界とその背後にある心理\nあなた、SCPの収容違反が続発していることに疑問を持ったことはありませんか？実は、その裏には深い理由があるんです。 / そう、収容プロトコルには欠陥が潜んでいるんですよ。そして、その原因は心理的なものにも関係しているんです。 / 今回の動画では、収容違反がなぜ頻発するのか、その背後にあるプロトコルの限界と心理的要因を徹底解明します。",
+  "generated_at": "2026-08-24T14:01:23.630123Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ収容違反は止まらない？人間が求める「自由」の正体【ショート】",
+      "thumb_copy": [
+        "違反を生むのは",
+        "人間の自由欲求"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3分で分かる収容違反の真実｜プロトコルが壊れる心理【ショート】",
+      "thumb_copy": [
+        "3分で暴く",
+        "収容の限界"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は異常ではない。収容違反を引き起こす人間の心理【ショート】",
+      "thumb_copy": [
+        "異常の正体は",
+        "人間だった"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ収容違反は止まらない？人間が求める「自由」の正体【ショート】",
+    "thumb_copy": [
+      "違反を生むのは",
+      "人間の自由欲求"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

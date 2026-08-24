@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_140550_952e4c",
+  "channel_id": "pokemon-lab",
+  "theme": {
+    "title": "ゲンガーの『元ネタ』、実はまだ誰も正確に言えていない理由【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "ファンの間で語られる説と、公式設定として確認できる範囲を切り分ける\nゲンガーの元ネタって『影』でしょ、って即答できる人、ちょっと待って。その答え、実は公式が一度も正式に認めたことがないって知ってた？30年近く語られてきた定説が、実は誰も確認できてい / えっ、マジで！？影モチーフって超有名な話じゃなかったの！？それ常識だと思ってたんだけど、公式が言ってないってどういうこと！？それ知らなかった！ / そう思ってる人が大半なんだけどね。今回はその『ファンの間での定説』と『公式が実際に確認できる範囲』を完全に切り分けて、一個ずつ丁寧に整理していくよ。最後まで聞いたら次にゲンガーを見",
+  "generated_at": "2026-08-22T14:05:50.231569Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "ゲンガーの元ネタは影？なぜ公式は断言していないのか【ショート】",
+      "thumb_copy": [
+        "影が元ネタ？",
+        "公式は未公認"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "約30年の定説を検証！ゲンガー元ネタの公式情報3選【ショート】",
+      "thumb_copy": [
+        "30年の定説",
+        "公式情報は3つ"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は「影」ではない？ゲンガー元ネタに公式回答がない理由【ショート】",
+      "thumb_copy": [
+        "常識がくつがえる",
+        "影説は未確定"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "ゲンガーの元ネタは影？なぜ公式は断言していないのか【ショート】",
+    "thumb_copy": [
+      "影が元ネタ？",
+      "公式は未公認"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "F2CHINBUcVE",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.01098901098901099,
+    "impressions": 91,
+    "views": 1696,
+    "published_at": "2026-08-04T09:11:30Z",
+    "updated_at": "2026-08-24T14:00:59.868931Z"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_140344_bcfb13",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "免疫反応が体をダルくする！風邪の真相は意外な〇〇だった？#風邪を引くと体がだるすぎる!? その意外な原因を徹底解明 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": null,
+  "generated_at": "2026-08-22T14:03:44.679079Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "風邪で体がだるいのはなぜ？免疫反応が起こす意外な真相",
+      "thumb_copy": [
+        "だるさの正体は",
+        "免疫の暴走！？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "風邪のだるさを3分で解説！免疫反応が体力を奪う仕組み",
+      "thumb_copy": [
+        "3分でわかる",
+        "だるさの原因"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実はウイルスだけじゃない！風邪でだるい本当の原因とは？",
+      "thumb_copy": [
+        "犯人はウイルス",
+        "だけじゃない！"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "風邪で体がだるいのはなぜ？免疫反応が起こす意外な真相",
+    "thumb_copy": [
+      "だるさの正体は",
+      "免疫の暴走！？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "PtjvmltdEfQ",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.010869565217391304,
+    "impressions": 92,
+    "views": 973,
+    "published_at": "2026-07-25T02:30:42Z",
+    "updated_at": "2026-08-24T14:00:30.091925Z"
+  }
+}

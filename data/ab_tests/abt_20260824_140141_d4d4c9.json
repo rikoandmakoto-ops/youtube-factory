@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140141_d4d4c9",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "財団が17年間封印した『2つの計画』——人類を殺したのは、守るためだったのか【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "人類を滅ぼすSCP-5000と、人類を何度でもリセット・再生するSCP-2000を対比し、『財団は人類の敵か守護者か』という根本的な矛盾を浮き彫りにする考察動画\nこの報告書を読んだ後、君は財団のことを『守護者』と呼べるだろうか。\n財団が確認している異常存在の総数は、内部集計で少なくとも4,800件——日本の都道府県は47だから、1県あたり平 / え、そんなにいるの……俺の家の近くにも何かいるってこと？それだけでもう怖いんだけど。\nしかも財団が全部把握してるってことは、俺たちには何も知らされてないってことじゃないか。 / そう。財団は『確保・収容・保護』を掲げる組織だ。\nでも今日話す二つの記録——SCP-5000とSCP-2000——を読めば、その言葉が本当に正しいのか、根本から疑いたくなるはずだ。",
+  "generated_at": "2026-08-24T14:01:41.842253Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "財団はなぜ人類を滅ぼし、何度でも再生するのか？【SCP考察】",
+      "thumb_copy": [
+        "守るために殺す？",
+        "財団の自由とは"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "17年間封印された2計画｜人類抹殺と再生のSCP-5000・2000",
+      "thumb_copy": [
+        "17年封印の真相",
+        "人類を2度裁く"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は財団こそ人類の自由を奪う存在だった？SCP-5000×2000",
+      "thumb_copy": [
+        "敵は財団だった",
+        "自由か、生存か"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "財団はなぜ人類を滅ぼし、何度でも再生するのか？【SCP考察】",
+    "thumb_copy": [
+      "守るために殺す？",
+      "財団の自由とは"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

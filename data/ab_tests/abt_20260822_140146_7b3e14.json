@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_140146_7b3e14",
+  "channel_id": "2ch-matome",
+  "theme": {
+    "title": "なんかPCの画面チカチカするんやが【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "しょうもない相談スレ。レスの解決策が雑になっていく展開で笑わせる\nあなた、PC画面がチカチカして目まで点滅したことありませんか？犯人候補は設定より、まさかの机の上かもしれません。 / 今回は「なんかPCの画面チカチカするんやが」スレで、親切そうで雑すぎる解決策がどこまで暴走するか見届けます。 / 最強の事実は、スレ民の最終回答が「PCを休ませろ」ではなく「お前が瞬きすれば同期する」という診断だったことです。",
+  "generated_at": "2026-08-22T14:01:46.670639Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "PC画面がチカチカする原因、まさか机の上にあるのか？【ショート】",
+      "thumb_copy": [
+        "画面チカチカ",
+        "犯人は机の上？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3秒で診断？PC画面チカチカを治す雑すぎる解決策【ショート】",
+      "thumb_copy": [
+        "解決策が雑すぎる",
+        "最後の回答が草"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "衝撃の結論！PC画面のチカチカは瞬きで同期するらしい【ショート】",
+      "thumb_copy": [
+        "最終回答がこれ",
+        "お前が瞬きしろ"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "PC画面がチカチカする原因、まさか机の上にあるのか？【ショート】",
+    "thumb_copy": [
+      "画面チカチカ",
+      "犯人は机の上？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "WDnmFqiOqpU",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.03278688524590164,
+    "impressions": 61,
+    "views": 1298,
+    "published_at": "2026-08-14T00:05:30Z",
+    "updated_at": "2026-08-24T14:00:04.369126Z"
+  }
+}

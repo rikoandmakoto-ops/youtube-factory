@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140207_84aba3",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "なぜツチノコは家に入る？隠された秘密【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "妖怪ウォッチの人気妖怪を、農村の蛇信仰・家への侵入 omen・懸賞騒動まで含めて、未確認生物ではなく生活に潜む異形として検証する\nあなた、家の中で蛇を見かけたら幸運だと思ったことありませんか？ツチノコの正体を追うと、それは山奥の怪物ではなく、戸口から忍び込む不吉な影として語られてきます。 / 妖怪ウォッチでは愛嬌たっぷりの人気妖怪ですが、伝承の蛇は米や財を守る神である一方、家に現れるだけで病や死を知らせる存在にもなりました。 / 今回はツチノコを未確認生物の話だけで終わらせず、農村に残る蛇信仰、家へ入る蛇の前兆、そして熱狂的な懸賞騒動まで順に検証します。",
+  "generated_at": "2026-08-24T14:02:07.642126Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜツチノコは家に入る？蛇信仰が語る不吉な前兆【ショート】",
+      "thumb_copy": [
+        "家に入る蛇は",
+        "幸運か不吉か"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3つの伝承で追うツチノコ｜家に入る蛇の正体【ショート】",
+      "thumb_copy": [
+        "蛇が告げる",
+        "3つの前兆"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は山の怪物ではない？ツチノコが潜む「家」の秘密【ショート】",
+      "thumb_copy": [
+        "ツチノコは",
+        "家にいる？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜツチノコは家に入る？蛇信仰が語る不吉な前兆【ショート】",
+    "thumb_copy": [
+      "家に入る蛇は",
+      "幸運か不吉か"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140052_8a9df8",
+  "channel_id": "2ch-matome",
+  "theme": {
+    "title": "ワイの今日の昼飯を当てるスレw【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "ヒントを小出しにして視聴者に当てさせる参加型。正解は明かさずコメントに投げる\nワイの今日の昼飯を当てるスレw。お前ら、昼飯680円で午後3時に腹だけ再起動した経験あるやろ、ヒント1は冷たくて丸いやつなんやがw / >>1 時給1100円で午後2時間ぼんやりしたら2200円分の魂が消える計算やん草。冷たくて丸い昼飯、まず候補を置いてけやろw / >>2 ヒント2は食べた直後だけ『軽い昼飯で勝った』と思わせるのに、午後2時40分には引き出しの飴を探させる、信用ゼロの優等生なんや。",
+  "generated_at": "2026-08-23T14:00:52.319841Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "冷たくて丸いのに午後には腹が減る昼飯、何だと思う？【ショート】",
+      "thumb_copy": [
+        "冷たくて丸い",
+        "お前ら当てろw"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "昼飯680円で午後2時間もたない食べ物、3ヒントで当てろw【ショート】",
+      "thumb_copy": [
+        "680円の昼飯",
+        "3ヒントで推理"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は優等生じゃない？食後すぐ腹が減る冷たい昼飯を当てろw【ショート】",
+      "thumb_copy": [
+        "優等生の裏切り",
+        "午後に腹が鳴る"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "冷たくて丸いのに午後には腹が減る昼飯、何だと思う？【ショート】",
+    "thumb_copy": [
+      "冷たくて丸い",
+      "お前ら当てろw"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "WJpTwtFMnTM",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.02,
+    "impressions": 50,
+    "views": 1436,
+    "published_at": "2026-08-13T00:05:47Z",
+    "updated_at": "2026-08-24T14:00:04.365951Z"
+  }
+}

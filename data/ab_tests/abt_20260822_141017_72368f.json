@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_141017_72368f",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "なぜコマさんの秘密？神社の狛犬と田舎の意外なつながり【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "神社の狛犬がモチーフ。田舎から出てきた設定と守護獣としての元ネタ\n皆さん、神社で狛犬を見かけたとき、その不思議な存在感に興味を持ったことはありませんか？彼らの秘密に迫ります。 / 狛犬といえば、妖怪ウォッチのコマさんとコマじろうの元ネタでもあるって知っていましたか？その秘密を暴きます！ / 田舎からやってきたコマさんとコマじろう。この設定は日本の狛犬伝説に深く関わっているんです。",
+  "generated_at": "2026-08-22T14:10:17.159632Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜコマさんは田舎育ち？神社の狛犬に隠された意外な由来【ショート】",
+      "thumb_copy": [
+        "コマさんの田舎設定",
+        "狛犬伝説が元ネタ？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3分で分かる！コマさんと神社の狛犬、田舎につながる秘密【ショート】",
+      "thumb_copy": [
+        "3分で判明する",
+        "コマさん誕生の秘密"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は守護獣だった！コマさんの元ネタ、狛犬と田舎の深い関係【ショート】",
+      "thumb_copy": [
+        "実は守護獣だった",
+        "田舎設定の意外な理由"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜコマさんは田舎育ち？神社の狛犬に隠された意外な由来【ショート】",
+    "thumb_copy": [
+      "コマさんの田舎設定",
+      "狛犬伝説が元ネタ？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "kHukScwckQ0",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.011299435028248588,
+    "impressions": 177,
+    "views": 1165,
+    "published_at": "2026-08-01T10:03:55Z",
+    "updated_at": "2026-08-24T14:02:04.800075Z"
+  }
+}

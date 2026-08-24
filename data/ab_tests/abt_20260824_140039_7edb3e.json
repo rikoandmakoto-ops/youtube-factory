@@ -1,0 +1,73 @@
+{
+  "test_id": "abt_20260824_140039_7edb3e",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "昼寝したのになぜ余計しんどい？脳の90分サイクルが引き起こす『睡眠慣性』の罠#昼寝後にだるいのは睡眠のせいじゃない——脳が90分ごとに起こしている『ある現象』の正体 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": "脳の働き\n昼寝したのに、目が覚めたら頭がぼーっとして体がどんより重い——そんな経験、あなたも絶対あるよね？ 実はあの不快感、『睡眠慣性』という脳科学の言葉で説明できるんだ。 / 睡眠慣性！？ 初めて聞いた！ 寝たのにだるくなるって、なんか損した気分になるけど、ちゃんと名前がついてる現象なんだね。 / そう、ただの気のせいじゃなくて、脳の中で起きている実際の生理現象なんだよ。 今回はその正体と、昼寝を最強の休憩にする方法まで全部解説するね！",
+  "generated_at": "2026-08-24T14:00:39.160450Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "昼寝したのになぜだるい？脳を狂わせる睡眠慣性の正体",
+      "thumb_copy": [],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "昼寝後のだるさは90分周期？睡眠慣性を避ける休み方",
+      "thumb_copy": [
+        "脳は90分で変わる",
+        "昼寝の最適解"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は昼寝が疲労を増やす？睡眠慣性にハマる脳の罠",
+      "thumb_copy": [
+        "昼寝で逆に疲れる",
+        "だるさの正体は脳"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "昼寝したのになぜだるい？脳を狂わせる睡眠慣性の正体",
+    "thumb_copy": [],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

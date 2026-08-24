@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260823_140340_93d0bc",
+  "channel_id": "pokemon-lab",
+  "theme": {
+    "title": "なぜヤドンはシェルダーに噛まれると進化するのか？分岐進化の本当の理由がヤバすぎた【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "噛まれると進化する仕組みと、ヤドキング分岐の設定を読み解く\nあなた、ヤドンがシェルダーに噛まれると進化するって、正直どういう仕組みなのか疑問に思ったことありませんか？実はそこに、とんでもない設定が潜んでいるんです。 / その共生関係、ただの偶然やゲームの都合じゃなくて、公式図鑑にもしっかりとした理由が書かれてるって知ってました？ / 今回は、ヤドンとシェルダーがなぜあんなにも切っても切れない関係になったのか、その正体を徹底的に暴いていきます！",
+  "generated_at": "2026-08-23T14:03:40.399986Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜヤドンはシェルダーに噛まれると進化するのか？分岐の真相【ショート】",
+      "thumb_copy": [
+        "噛まれると進化？",
+        "共生の真相とは"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "ヤドン進化の分岐は2つ！シェルダーが握る驚きの仕組み【ショート】",
+      "thumb_copy": [
+        "進化ルートは2つ",
+        "鍵はシェルダー"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は尻尾だけじゃない！ヤドン進化を決めるシェルダーの正体【ショート】",
+      "thumb_copy": [
+        "尻尾だけじゃない",
+        "進化を決める存在"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜヤドンはシェルダーに噛まれると進化するのか？分岐の真相【ショート】",
+    "thumb_copy": [
+      "噛まれると進化？",
+      "共生の真相とは"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "fnAnoXiN-N8",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.0072992700729927005,
+    "impressions": 137,
+    "views": 1610,
+    "published_at": "2026-08-03T09:06:45Z",
+    "updated_at": "2026-08-24T14:00:59.855939Z"
+  }
+}

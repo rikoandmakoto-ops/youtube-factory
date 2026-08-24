@@ -1,764 +1,670 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1786975317,
+    "generated_at": 1787580053,
     "analyzed_videos": 7,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0084,
-      "early": 0.0232,
-      "middle": 0.0042,
-      "late": 0.0075,
-      "ending": 0.0033
+      "intro": 0.0159,
+      "early": 0.0186,
+      "middle": 0.0053,
+      "late": 0.0059,
+      "ending": 0.0035
     },
     "per_video": [
       {
-        "video_id": "d-5IpNbvVlA",
-        "title": "なぜ今飲んだ炭酸は鼻までツーンとするのか？99%が知らない0.3秒の刺激ルート【ショート】",
-        "avg_view_percentage": 35.25,
+        "video_id": "-1G8Yu8H3l8",
+        "title": "1分科学 #89：💯なぜあなたは寝る直前だけ昔の失敗を思い出すのか？99%が知らない30秒の脳内変化【ショート】",
+        "avg_view_percentage": 30.260000000000005,
         "drops": [
           {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.075,
-            "bucket": "early",
-            "audience_after": 0.7125,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "真",
-              "text": "同じ連絡網の信号を脳が受け取るから、実際より顔の奥まで広がったように感じるのか。近い部屋のインターホンが同時に鳴って、どこが鳴ったか迷う感じに近いね。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0593,
-            "bucket": "early",
-            "audience_after": 0.8438,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "理子",
-              "text": "ただ、炭酸の泡が神経の中を鼻まで移動するわけではないよ。口の粘膜で生まれた信号を、同じ顔の連絡網が脳へまとめて運ぶから、刺激の地図が広く感じられるんだ。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0563,
-            "bucket": "early",
-            "audience_after": 0.7875,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "理子",
-              "text": "ただ、炭酸の泡が神経の中を鼻まで移動するわけではないよ。口の粘膜で生まれた信号を、同じ顔の連絡網が脳へまとめて運ぶから、刺激の地図が広く感じられるんだ。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜ今飲んだ炭酸は鼻までツーンとするのか？99%が知らない0.3秒の刺激ルート"
-      },
-      {
-        "video_id": "8HI19ZAPnBY",
-        "title": "なぜ今目を閉じるとふらつくのか？99%が知らない最初の3秒の平衡感覚【ショート】",
-        "avg_view_percentage": 42.68,
-        "drops": [
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.071,
-            "bucket": "early",
-            "audience_after": 0.7806,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "理子",
-              "text": "その通り。ただし、ここで最初の意外な話があるんだ。\n目を閉じても健康な人がすぐ倒れないのは、耳の奥と足裏が、視覚の代役ではなく普段から働く二人の相棒だからです。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0548,
-            "bucket": "early",
-            "audience_after": 0.9452,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "目は壁や柱を基準にして、自分の体が動いたかを教えてくれます。\n電車が止まっているのに隣の車両が動くと、自分まで発車したように感じるあの錯覚は、視覚の力が強い例です。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0516,
-            "bucket": "early",
-            "audience_after": 0.8516,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "理子",
-              "text": "その通り。ただし、ここで最初の意外な話があるんだ。\n目を閉じても健康な人がすぐ倒れないのは、耳の奥と足裏が、視覚の代役ではなく普段から働く二人の相棒だからです。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜ今目を閉じるとふらつくのか？99%が知らない最初の3秒の平衡感覚"
-      },
-      {
-        "video_id": "DiphL3fCX4E",
-        "title": "昨夜の夢、なぜ12分なのに何時間もいた気がする？9割が勘違いする時間感覚【ショート】",
-        "avg_view_percentage": 55.87,
-        "drops": [
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0694,
-            "bucket": "early",
-            "audience_after": 0.9306,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "真",
-              "text": "言われてみれば、夢で電車に乗った記憶はあるのに、何駅通ったかや車内で何を見たかはほぼ思い出せない。乗車と到着だけがくっついて、それでも遠くへ行った感じは残る。\n空白なのに長いと思うのが不思議だね。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0462,
-            "bucket": "early",
-            "audience_after": 1.0,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "脳は夢の中で、場面と場面の間を大胆に省略できるんだ。映画で主人公が玄関を出た次のカットには海外へ着いているように、移動した数時間を見せず、到着した意味だけを置ける。\nあなたの夢にもこの飛び越えがあるはずだよ。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0376,
-            "bucket": "early",
-            "audience_after": 1.0462,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "脳は夢の中で、場面と場面の間を大胆に省略できるんだ。映画で主人公が玄関を出た次のカットには海外へ着いているように、移動した数時間を見せず、到着した意味だけを置ける。\nあなたの夢にもこの飛び越えがあるはずだよ。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "昨夜の夢、なぜ12分なのに何時間もいた気がする？9割が勘違いする時間感覚"
-      },
-      {
-        "video_id": "MBld-Xwy6zI",
-        "title": "今夜あなたが寝返りした瞬間、なぜ0.8秒だけ目が覚める？実は眠りが消える前の脳内チェック【ショート】",
-        "avg_view_percentage": 48.49,
-        "drops": [
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0825,
-            "bucket": "early",
-            "audience_after": 0.7756,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "真",
-              "text": "数百ミリ秒なら1秒よりずっと短い。体がゴロンと動き終わってから考えるのではなく、動きながら脳が地図を書き換えているみたいで、少し不思議だね。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.066,
-            "bucket": "early",
-            "audience_after": 0.8581,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "理子",
-              "text": "筋肉や関節には受容器、つまり伸び方や角度を知らせる小さなセンサーがあります。横向きから仰向けへ回ると、肩、腰、首からの信号が数百ミリ秒単位で脳へ届きます。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0462,
+            "ratio_from": 0.08,
+            "ratio_to": 0.09,
+            "drop": 0.1429,
             "bucket": "intro",
-            "audience_after": 1.0396,
+            "audience_after": 0.8944,
             "scenario_line": {
-              "index": 8,
+              "index": 4,
               "speaker": "理子",
-              "text": "そこで使われるのが固有感覚です。これは目で見なくても、腕が曲がっているか、首がどちらへ傾いているかを感じる仕組みで、目を閉じて鼻に指を当てるときにも働いています。",
+              "text": "鍵の一つは前頭前野です。前頭前野は額の奥にある、今は考えなくてよいことを抑える整理係のような場所で、日中のあなたが会話や作業へ注意を向けるために働いています。",
               "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "今夜あなたが寝返りした瞬間、なぜ0.8秒だけ目が覚める？実は眠りが消える前の脳内チェック"
-      },
-      {
-        "video_id": "RcorEmR5ZI0",
-        "title": "なぜ今夜、布団で足だけ熱い？90%が勘違いする30分の放熱の正体【ショート】",
-        "avg_view_percentage": 53.43,
-        "drops": [
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0976,
-            "bucket": "early",
-            "audience_after": 0.9798,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "ここで9割が勘違いしやすいのが、足の熱さは熱をため込んだ危険信号だという考えです。健康な範囲ではむしろ逆で、足先は中心の熱を逃がす出口として働きます。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0707,
-            "bucket": "early",
-            "audience_after": 0.9091,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "真",
-              "text": "えっ、熱い足は体が失敗しているんじゃなくて、熱を捨てるための出口なの？それなら片足だけ布団から出したくなるのも、体の指示に近い行動だったんだね。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.78,
-            "ratio_to": 0.79,
-            "drop": 0.0572,
-            "bucket": "late",
-            "audience_after": 0.2997,
-            "scenario_line": {
-              "index": 42,
-              "speaker": "理子",
-              "text": "寝る前のスマホも、足の熱さを直接作るわけではありませんが、強い光で眠気の時刻を遅らせることがあります。足は眠る準備でも、脳がまだ起きる合図を受ける場合があります。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜ今夜、布団で足だけ熱い？90%が勘違いする30分の放熱の正体"
-      },
-      {
-        "video_id": "0L8LwyK9MpQ",
-        "title": "寝てる間だけ成長する？99%が知らない夜の体の秘密#寝ている間だけ分泌される『あのホルモン』——なぜ99%の人が睡眠中にしか成長できないのか？ #shorts #ゆっくり解説",
-        "avg_view_percentage": 36.48,
-        "drops": [
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.1266,
-            "bucket": "intro",
-            "audience_after": 0.8604,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "そう、めちゃくちゃ小さい。でもその小さな器官が、子どもの骨を伸ばして身長を上げ、大人の筋肉を修復して、さらに脂肪を分解するまでこなしてるんだよ。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.1039,
-            "bucket": "early",
-            "audience_after": 0.7565,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "真",
-              "text": "脂肪分解まで！？それって寝てるだけで痩せる可能性があるってこと？",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0747,
-            "bucket": "early",
-            "audience_after": 0.6201,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "理子",
-              "text": "正確に言うと、質の高い睡眠が取れれば成長ホルモンが脂肪細胞に働きかけて脂肪をエネルギーに変えやすくする——だから睡眠不足が続くと太りやすくなるのは科学的に証明されてるんだ。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "寝ている間だけ分泌される『あのホルモン』——なぜ99%の人が睡眠中にしか成長できないのか？"
-      },
-      {
-        "video_id": "P40o3ZX0leI",
-        "title": "本を開いた瞬間に眠くなる理由集中しているのに眠い『逆説』の正体#本を読むと90%の人が5分以内に眠くなる——その『睡魔の罠』の正体、知ってる？ #shorts #ゆっくり解説",
-        "avg_view_percentage": 44.31,
-        "drops": [
-          {
-            "ratio_from": 0.12,
-            "ratio_to": 0.13,
-            "drop": 0.0906,
-            "bucket": "intro",
-            "audience_after": 0.9497,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "理子",
-              "text": "まず大前提として、読書って実はめちゃくちゃ脳を使う作業なんだ。2019年にスタンフォード大学が発表した研究によると、読書中の脳はエネルギーを通常の約1.5倍消費してるって分かってる。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.057,
-            "bucket": "early",
-            "audience_after": 0.7215,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "真",
-              "text": "言われてみれば確かに、スマホって写真見たりするだけで頭使ってないかも。本は読んでる間ずっと考えてるもんな。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.0537,
-            "bucket": "intro",
-            "audience_after": 0.896,
-            "scenario_line": {
-              "index": 7,
-              "speaker": "真",
-              "text": "1.5倍！？スマホ見てるより本を読む方が脳が疲れるってこと？それ全然イメージと違った！",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "本を読むと90%の人が5分以内に眠くなる——その『睡魔の罠』の正体、知ってる？"
-      }
-    ],
-    "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
-  },
-  "scp-lab": {
-    "channel_id": "scp-lab",
-    "generated_at": 1786975422,
-    "analyzed_videos": 8,
-    "aggregate_drops_by_bucket": {
-      "intro": 0.0092,
-      "early": 0.0219,
-      "middle": 0.0041,
-      "late": 0.0063,
-      "ending": 0.0072
-    },
-    "per_video": [
-      {
-        "video_id": "4xyWgg-t9Sg",
-        "title": "SCP-7004「終末の観測者」— 収容都市は9日で住民全員を失った【最後の記録】【ショート】",
-        "avg_view_percentage": 53.27,
-        "drops": [
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0918,
-            "bucket": "early",
-            "audience_after": 0.9021,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "クロ",
-              "text": "まだ一人なら偶然の行方不明として処理したくなるけど、証言まで揃って書き換わるのが異常だな。誰かを失った悲しみすら消えるなら、助けを呼ぶ人も最初からいなくなる。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0826,
-            "bucket": "early",
-            "audience_after": 0.9939,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "シロ",
-              "text": "財団はこの時点でSCP-7004をEuclidとして暫定指定した。Euclidは手順があれば収容できる可能性を残す区分だが、その見通しは二日目の人数減少で、ほとんど崩れ始めていた。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0703,
-            "bucket": "early",
-            "audience_after": 0.8318,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "クロ",
-              "text": "まだ一人なら偶然の行方不明として処理したくなるけど、証言まで揃って書き換わるのが異常だな。誰かを失った悲しみすら消えるなら、助けを呼ぶ人も最初からいなくなる。",
-              "mood": "tense"
-            }
-          }
-        ],
-        "matched_scenario_title": "SCP-7004「終末の観測者」— 収容都市は9日で住民全員を失った【最後の記録】"
-      },
-      {
-        "video_id": "E2CZTqgA7bI",
-        "title": "SCP-701「吊られた王の悲劇」— 上演記録14件、観客の生存率は21%【ショート】",
-        "avg_view_percentage": 45.65,
-        "drops": [
-          {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.0885,
-            "bucket": "early",
-            "audience_after": 0.7168,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "シロ",
-              "text": "ここで最も危険な記録を出す。14件の上演中、少なくとも6件では観客が自分の足で舞台袖へ移動し、その後に出口を通過した映像が一切残っていない。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0767,
-            "bucket": "early",
-            "audience_after": 0.8791,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "クロ",
-              "text": "小道具の置き忘れならスタッフが片付けるだろ。でも開演前に見えていて、誰も触れなかったなら、触る役まで決められていたのか？",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0738,
-            "bucket": "early",
-            "audience_after": 0.8053,
-            "scenario_line": {
-              "index": 12,
-              "speaker": "シロ",
-              "text": "次に異常が出るのは客席だ。名簿にない人物が前列へ座り、幕間になるたび空席が一つ増える。座った者の顔は、目を離すと証言から消えていった。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "SCP-701「吊られた王の悲劇」— 上演記録14件、観客の生存率は21%"
-      },
-      {
-        "video_id": "81rERf2QdEo",
-        "title": "SCP-1690「廃棄された文明の記録」— 発掘地点12か所、通信断絶から83年後に収容【ショート】",
-        "avg_view_percentage": 86.76,
-        "drops": [
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0794,
-            "bucket": "early",
-            "audience_after": 1.2725,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "シロ",
-              "text": "発掘地点とは、対象文明の遺構が確認された場所を指す財団用語です。たとえば第4地点では、前日の航空写真になかった石段が、翌朝には地下へ42段続いていました。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0793,
-            "bucket": "early",
-            "audience_after": 1.3519,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "シロ",
-              "text": "発掘地点とは、対象文明の遺構が確認された場所を指す財団用語です。たとえば第4地点では、前日の航空写真になかった石段が、翌朝には地下へ42段続いていました。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0635,
-            "bucket": "early",
-            "audience_after": 1.4312,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "シロ",
-              "text": "通常の収容プロトコルでは、12地点の座標を一般地図から除外し、発見記録を隔離端末へ移します。しかし1690では、削除操作のあとに新しい痕跡が現れる事例が続きました。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "SCP-1690「廃棄された文明の記録」— 発掘地点12か所、通信断絶から83年後に収容"
-      },
-      {
-        "video_id": "GStZ3HsuaYw",
-        "title": "SCP-2845収容記録：儀式が1分遅れた夜、173名はなぜか全員消えた【これが最後の名簿】【ショート】",
-        "avg_view_percentage": 47.18,
-        "drops": [
-          {
-            "ratio_from": 0.21,
-            "ratio_to": 0.22,
-            "drop": 0.0639,
-            "bucket": "early",
-            "audience_after": 0.7872,
-            "scenario_line": {
-              "index": 12,
-              "speaker": "シロ",
-              "text": "第一の失敗は、銀製の器が規定時刻より47秒遅れて祭壇へ搬入された件です。\n被害者は警備員1名で、監視室には温かい飲み物と空になった椅子だけが残されました。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.22,
-            "ratio_to": 0.23,
-            "drop": 0.0614,
-            "bucket": "early",
-            "audience_after": 0.7258,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "クロ",
-              "text": "47秒の遅れで1人だけ消えたなら、最初は設備事故に見えたかもしれない。\nでも監視室にいた警備員が消えるなら、器を運んだ職員だけの罰じゃないよな？",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0567,
-            "bucket": "early",
-            "audience_after": 0.8842,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "シロ",
-              "text": "ここで第二の記録です。4件の失敗では、祭壇から最も遠い外周監視塔にも被害が出ました。\n距離で守れるという前提は、173名消失事案で完全に崩れています。",
-              "mood": "tense"
-            }
-          }
-        ],
-        "matched_scenario_title": "SCP-2845収容記録：儀式が1分遅れた夜、173名はなぜか全員消えた【これが最後の名簿】"
-      },
-      {
-        "video_id": "LEk72PzArL0",
-        "title": "SCP-2399収容記録：地球まで72時間、なぜ迎撃隊だけ全滅したのか【最後の軌道通信】【ショート】",
-        "avg_view_percentage": 0.0,
-        "drops": [
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0635,
-            "bucket": "early",
-            "audience_after": 0.8895,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "シロ",
-              "text": "財団は接近を禁じ、遠隔監視だけを続けました。\n理由は対象表面から届く通信が、既知の財団命令体系でも敵対組織の暗号でもなかったからです。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0608,
-            "bucket": "early",
-            "audience_after": 0.8287,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "クロ",
-              "text": "誰の命令でもない通信が、壊れた兵器からずっと流れていたのか。\n受信した文章には、地球や人類を示す言葉が含まれていたの？",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.0469,
-            "bucket": "early",
-            "audience_after": 0.7514,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "シロ",
-              "text": "解析結果の大半は[REDACTED]ですが、担当者の手書き注記だけは残りました。\nそこには「これは命令ではない、任務完了を拒む応答だ」と、3回重ねて書かれています。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "SCP-2399収容記録：地球まで72時間、なぜ迎撃隊だけ全滅したのか【最後の軌道通信】"
-      },
-      {
-        "video_id": "CzMZP2UEx9k",
-        "title": "一口SCP：目撃者47名／精神的生存率0%財団が17年間『視覚汚染』と呼んだ理由#財団が17年間隠し続けた視覚汚染体——目撃者全員が廃人化、生存率0%の本当の理由 #shorts #ゆっくり解説",
-        "avg_view_percentage": 56.53,
-        "drops": [
-          {
-            "ratio_from": 0.03,
-            "ratio_to": 0.04,
-            "drop": 0.0811,
-            "bucket": "intro",
-            "audience_after": 1.027,
-            "scenario_line": {
-              "index": 2,
-              "speaker": "シロ",
-              "text": "今日暴くのは、財団が17年間その存在を最高機密に指定し続けた視覚汚染体——目撃者47名、精神的生存率0%という記録が残る収容記録だ。",
-              "mood": "tense"
             }
           },
           {
             "ratio_from": 0.09,
             "ratio_to": 0.1,
-            "drop": 0.0811,
+            "drop": 0.1242,
             "bucket": "intro",
-            "audience_after": 0.9189,
+            "audience_after": 0.7702,
             "scenario_line": {
-              "index": 6,
-              "speaker": "シロ",
-              "text": "現地調査に入った財団エージェント3名のうち2名が、建物内に入って13分後に意識を失い、残る1名が無線で送った最後の言葉は『見てはいけないものを見た』だった。",
-              "mood": "mysterious"
+              "index": 5,
+              "speaker": "真",
+              "text": "言われてみれば確かに、昼間に昔の失敗がちらっと浮かんでも、締め切りや夕飯の準備があれば別のことへ戻れるね。その整理係が寝る前だけ弱くなるのは、眠気のせいなの？",
+              "mood": "tense"
             }
           },
           {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0541,
+            "ratio_from": 0.1,
+            "ratio_to": 0.11,
+            "drop": 0.0559,
             "bucket": "intro",
-            "audience_after": 0.8378,
+            "audience_after": 0.7143,
             "scenario_line": {
-              "index": 8,
-              "speaker": "シロ",
-              "text": "回収された3名全員が、その後72時間以内に同一の症状を発症した——瞳孔が固定され、光刺激に一切反応せず、ただ壁の一点を見つめ続ける状態だ。",
-              "mood": "mysterious"
+              "index": 5,
+              "speaker": "真",
+              "text": "言われてみれば確かに、昼間に昔の失敗がちらっと浮かんでも、締め切りや夕飯の準備があれば別のことへ戻れるね。その整理係が寝る前だけ弱くなるのは、眠気のせいなの？",
+              "mood": "tense"
             }
           }
         ],
-        "matched_scenario_title": "財団が17年間隠し続けた視覚汚染体——目撃者全員が廃人化、生存率0%の本当の理由"
+        "matched_scenario_title": "1分科学 #89：💯なぜあなたは寝る直前だけ昔の失敗を思い出すのか？99%が知らない30秒の脳内変化"
       },
       {
-        "video_id": "uaLsWU89zdA",
-        "title": "財団が23年間隠し続けた接近者19名・生存率0%——湖で名前を失った本当の理由【ショート】",
-        "avg_view_percentage": 53.65,
+        "video_id": "1cc_yaXe7PU",
+        "title": "1分科学 #88：📈なぜあなたは最後の1段だけ踏み外す？99%が知らない0.3秒のズレ📊【ショート】",
+        "avg_view_percentage": 35.49,
         "drops": [
+          {
+            "ratio_from": 0.09,
+            "ratio_to": 0.1,
+            "drop": 0.134,
+            "bucket": "intro",
+            "audience_after": 0.9019,
+            "scenario_line": {
+              "index": 6,
+              "speaker": "理子",
+              "text": "実は、最後の一段の踏み外し感は暗い場所だけでなく、明るい駅の階段でも同じように起きます。脳は目で確認する前に、次の足場を先回りして決めているからです。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.11,
+            "drop": 0.0646,
+            "bucket": "intro",
+            "audience_after": 0.8373,
+            "scenario_line": {
+              "index": 6,
+              "speaker": "理子",
+              "text": "実は、最後の一段の踏み外し感は暗い場所だけでなく、明るい駅の階段でも同じように起きます。脳は目で確認する前に、次の足場を先回りして決めているからです。",
+              "mood": "calm"
+            }
+          },
           {
             "ratio_from": 0.13,
             "ratio_to": 0.14,
-            "drop": 0.0476,
+            "drop": 0.0574,
             "bucket": "intro",
-            "audience_after": 1.0238,
+            "audience_after": 0.6794,
             "scenario_line": {
               "index": 8,
-              "speaker": "シロ",
-              "text": "たとえば水面の遺体を見て、姉の顔だと思い込む。実際には姉がそこにいる証拠はなくても、幼少期の声や癖まで鮮明に思い出され、疑う手順そのものが鈍っていく。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.045,
-            "bucket": "intro",
-            "audience_after": 0.9788,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "クロ",
-              "text": "財団はこの作用を、記憶を消す現象ではなく、自己認識へ偽の答えを書き込む現象として扱う。被験者は嘘をついているのではなく、改変された答えを真実として報告する。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.22,
-            "ratio_to": 0.23,
-            "drop": 0.0397,
-            "bucket": "early",
-            "audience_after": 0.7831,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "クロ",
-              "text": "これは催眠のように命令へ従わせる異常とは違う。本人の判断材料そのものを静かに入れ替えるため、外から見ると落ち着いて会話できるほど、危険な状態と判断される。",
+              "speaker": "理子",
+              "text": "階段を上るとき脳は、目で見た段差と過去の足運びから、次に足が着く時刻と高さを組み立てます。いわば体内にある小さな階段の設計図を、歩きながら更新しているのです。",
               "mood": "calm"
             }
           }
         ],
-        "matched_scenario_title": "財団が23年間隠し続けた接近者19名・生存率0%——湖で名前を失った本当の理由"
+        "matched_scenario_title": "1分科学 #88：📈なぜあなたは最後の1段だけ踏み外す？99%が知らない0.3秒のズレ📊"
       },
       {
-        "video_id": "1wY9mNJ6r1s",
-        "title": "一口SCP：崇拝者が自然発生——収容できたのは『実体』ではなかった収容違反発生・職員接触者の生存率：記録抹消#財団が17年間隠し続けたSCP-2662——崇拝者が自然発生する施設、生存率0%の収容違反",
-        "avg_view_percentage": 46.76,
+        "video_id": "GLdmwUUtq5w",
+        "title": "なぜ正座を崩した瞬間だけビリビリするのか？99%が知らない30秒の正体【ショート】",
+        "avg_view_percentage": 29.84,
         "drops": [
           {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.0848,
-            "bucket": "early",
-            "audience_after": 0.6967,
+            "ratio_from": 0.11,
+            "ratio_to": 0.12,
+            "drop": 0.1443,
+            "bucket": "intro",
+            "audience_after": 0.8721,
             "scenario_line": {
-              "index": 12,
-              "speaker": "シロ",
-              "text": "収容施設の内部で、SCP-2662と一度も接触していない職員が自発的に崇拝行動を取り始めた事例が、記録上確認されているだけで17件存在する。\n財団はこれを『二次的信仰伝播』と分類した。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.22,
-            "ratio_to": 0.23,
-            "drop": 0.0411,
-            "bucket": "early",
-            "audience_after": 0.6324,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "クロ",
-              "text": "17件……それって、施設の中にいるだけで感染するってことじゃないか。\nなんで、なんでそんなことが起きるんだ？",
-              "mood": "mysterious"
+              "index": 7,
+              "speaker": "真",
+              "text": "正座では、ひざ下へ向かう神経や血管が体重で圧迫される。特に足の外側を通る神経は浅い場所にあり、姿勢の影響を受けやすいんだ。",
+              "mood": "calm"
             }
           },
           {
             "ratio_from": 0.12,
             "ratio_to": 0.13,
-            "drop": 0.0386,
+            "drop": 0.1147,
             "bucket": "intro",
-            "audience_after": 0.9717,
+            "audience_after": 0.7574,
             "scenario_line": {
               "index": 7,
-              "speaker": "クロ",
-              "text": "精神状態が変容……それって、崇拝が始まるってこと？\nどれくらいの時間で起きるの？",
-              "mood": "tense"
+              "speaker": "真",
+              "text": "正座では、ひざ下へ向かう神経や血管が体重で圧迫される。特に足の外側を通る神経は浅い場所にあり、姿勢の影響を受けやすいんだ。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.1017,
+            "bucket": "intro",
+            "audience_after": 0.6557,
+            "scenario_line": {
+              "index": 8,
+              "speaker": "理子",
+              "text": "神経は電気のコードというより、情報を運ぶ細い通信線よ。強く押されると信号が通りにくくなり、足の感覚がぼんやり消えていくの。",
+              "mood": "calm"
             }
           }
         ],
-        "matched_scenario_title": "財団が17年間隠し続けたSCP-2662——崇拝者が自然発生する施設、生存率0%の収容違反が語る「信仰」の正体"
-      }
-    ],
-    "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
-  },
-  "pokemon-lab": {
-    "channel_id": "pokemon-lab",
-    "generated_at": 1786975358,
-    "analyzed_videos": 8,
-    "aggregate_drops_by_bucket": {
-      "intro": 0.0052,
-      "early": 0.0211,
-      "middle": 0.0045,
-      "late": 0.0115,
-      "ending": 0.0035
-    },
-    "per_video": [
+        "matched_scenario_title": "なぜ正座を崩した瞬間だけビリビリするのか？99%が知らない30秒の正体"
+      },
       {
-        "video_id": "lr8OrwkS5fY",
-        "title": "ミミッキュとロトム、どっちが勝つ？姿変化を実戦で比べた結果【ショート】",
-        "avg_view_percentage": 54.56999999999999,
+        "video_id": "73r27O4PDZ8",
+        "title": "なぜ夢の続きを見た気がするのか？99%が知らない目覚め後5分の記憶再構成【ショート】",
+        "avg_view_percentage": 53.16,
         "drops": [
           {
             "ratio_from": 0.19,
             "ratio_to": 0.2,
-            "drop": 0.0635,
+            "drop": 0.0587,
             "bucket": "early",
-            "audience_after": 0.8312,
+            "audience_after": 0.8208,
+            "scenario_line": {
+              "index": 12,
+              "speaker": "理子",
+              "text": "ここで大事なのは、記憶再構成がうそをつく故障ではないことよ。限られた断片から意味を素早く作る仕組みだから、日中の出来事を思い出すときにも同じことが起きるの。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0586,
+            "bucket": "early",
+            "audience_after": 0.7622,
+            "scenario_line": {
+              "index": 12,
+              "speaker": "理子",
+              "text": "ここで大事なのは、記憶再構成がうそをつく故障ではないことよ。限られた断片から意味を素早く作る仕組みだから、日中の出来事を思い出すときにも同じことが起きるの。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0488,
+            "bucket": "early",
+            "audience_after": 0.9251,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "理子",
+              "text": "実験では、目覚めた直後に夢を言葉にすると、数分後には説明が増えることがあるの。脳は空白を嫌うため、思い出せない部分にももっともらしい橋を架けるのよ。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "なぜ夢の続きを見た気がするのか？99%が知らない目覚め後5分の記憶再構成"
+      },
+      {
+        "video_id": "xIm1kegwD0k",
+        "title": "なぜ辛い物で汗が出るのか？実は9割が勘違いする0.5秒の温度反応【ショート】",
+        "avg_view_percentage": 43.45,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.1102,
+            "bucket": "early",
+            "audience_after": 0.9427,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "真",
+              "text": "だから冷たい料理に唐辛子を少し混ぜても、舌は熱い物を食べたように反応する。温度計の数字とは別の話なんだ。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0837,
+            "bucket": "early",
+            "audience_after": 0.859,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "理子",
+              "text": "脳が「口の中が熱い、体を冷やそう」と判断すると、汗腺へ指令が届く。これが辛い物で顔に汗がにじむ基本の流れよ。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.066,
+            "bucket": "early",
+            "audience_after": 0.793,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "理子",
+              "text": "脳が「口の中が熱い、体を冷やそう」と判断すると、汗腺へ指令が届く。これが辛い物で顔に汗がにじむ基本の流れよ。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "なぜ辛い物で汗が出るのか？実は9割が勘違いする0.5秒の温度反応"
+      },
+      {
+        "video_id": "I6FcRExlJBI",
+        "title": "なぜくしゃみの後だけ体が軽いのか？9割が知らない3秒間の神経反応【ショート】",
+        "avg_view_percentage": 53.66,
+        "drops": [
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.1481,
+            "bucket": "early",
+            "audience_after": 0.8025,
+            "scenario_line": {
+              "index": 11,
+              "speaker": "真",
+              "text": "あの出そうで出ない1秒は、ただ焦らされている時間じゃなかったんだ。\n肺の中に空気をためるほど、その後の一発は掃除機の逆向きみたいに強くなるの？",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0617,
+            "bucket": "early",
+            "audience_after": 0.9753,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "理子",
+              "text": "くしゃみの最初の目立つ動きは、無意識の大きな吸気です。\nあなたが「出そう」と感じた直後に胸を広げるのは、肺に空気をためて次の強い吐き出しへ備える助走です。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.78,
+            "ratio_to": 0.79,
+            "drop": 0.0494,
+            "bucket": "late",
+            "audience_after": 0.3333,
+            "scenario_line": {
+              "index": 46,
+              "speaker": "理子",
+              "text": "意外ですが、急に明るい場所を見るとくしゃみが出そうになる人もいます。\n光くしゃみ反射と呼ばれる現象で、人口の約10％から35％に見られるという報告があり、鼻の刺激だけでは説明できません。",
+              "mood": "tense"
+            }
+          }
+        ],
+        "matched_scenario_title": "なぜくしゃみの後だけ体が軽いのか？9割が知らない3秒間の神経反応"
+      },
+      {
+        "video_id": "ZAewWmCEeMo",
+        "title": "なぜ今、片方の手だけ冷たいのか？9割が見落とす2倍の血流差【ショート】",
+        "avg_view_percentage": 55.99000000000001,
+        "drops": [
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.1715,
+            "bucket": "early",
+            "audience_after": 0.9714,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "理子",
+              "text": "最初の原因は圧迫だよ。肘や前腕を机の角へ20分ほど当て続けると、皮膚近くの細い血管が押され、手先へ届く温かい血が減りやすくなるんだ。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.1143,
+            "bucket": "early",
+            "audience_after": 0.7714,
+            "scenario_line": {
+              "index": 11,
+              "speaker": "真",
+              "text": "ノートを書くとき、左肘だけ机にグッと乗せて固定することがあるなあ。\nそれなら左腕の通り道だけ狭くなって、左手の指が先に冷えても説明がつくね。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.19,
+            "ratio_to": 0.2,
+            "drop": 0.0857,
+            "bucket": "early",
+            "audience_after": 0.8857,
+            "scenario_line": {
+              "index": 11,
+              "speaker": "真",
+              "text": "ノートを書くとき、左肘だけ机にグッと乗せて固定することがあるなあ。\nそれなら左腕の通り道だけ狭くなって、左手の指が先に冷えても説明がつくね。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "なぜ今、片方の手だけ冷たいのか？9割が見落とす2倍の血流差"
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "scp-lab": {
+    "channel_id": "scp-lab",
+    "generated_at": 1787580124,
+    "analyzed_videos": 1,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.0096,
+      "early": 0.0187,
+      "middle": 0.0053,
+      "late": 0.0077,
+      "ending": 0.008
+    },
+    "per_video": [
+      {
+        "video_id": "6mxqZgnfXds",
+        "title": "SCP-682の酸槽、記録に残らない変化が起きた【ショート】",
+        "avg_view_percentage": 49.29,
+        "drops": [
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0466,
+            "bucket": "early",
+            "audience_after": 0.8966,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "クロ",
+              "text": "ただ暴れる獣なら、檻の外へ出たいだけかもしれない。でも682は、こっちが生きていること自体を嫌っているなら、説得も取引も最初から成立しないのか？",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0413,
+            "bucket": "early",
+            "audience_after": 0.8553,
+            "scenario_line": {
+              "index": 11,
+              "speaker": "シロ",
+              "text": "限定的ですが、SCP-682には発声記録があります。\n監視担当者への脅迫や侮辱が残り、夜勤の職員はモニター越しに、こちらを理解して憎む声を聞かされました。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.19,
+            "ratio_to": 0.2,
+            "drop": 0.0413,
+            "bucket": "early",
+            "audience_after": 0.814,
+            "scenario_line": {
+              "index": 11,
+              "speaker": "シロ",
+              "text": "限定的ですが、SCP-682には発声記録があります。\n監視担当者への脅迫や侮辱が残り、夜勤の職員はモニター越しに、こちらを理解して憎む声を聞かされました。",
+              "mood": "mysterious"
+            }
+          }
+        ],
+        "matched_scenario_title": "SCP-682の酸槽、記録に残らない変化が起きた"
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "pokemon-lab": {
+    "channel_id": "pokemon-lab",
+    "generated_at": 1787580072,
+    "analyzed_videos": 7,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.0137,
+      "early": 0.0167,
+      "middle": 0.0044,
+      "late": 0.0101,
+      "ending": 0.0049
+    },
+    "per_video": [
+      {
+        "video_id": "TxJJocksHB8",
+        "title": "1分ポケモン研究 #9：🎮カイオーガとグラードン、天候を2回張ったらどっちが勝つ？【ショート】",
+        "avg_view_percentage": 27.54,
+        "drops": [
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.09,
+            "drop": 0.1278,
+            "bucket": "intro",
+            "audience_after": 0.7889,
+            "scenario_line": {
+              "index": 5,
+              "speaker": "ヒカリ研究員",
+              "text": "ここで言う天候は、場全体に残る雨や晴れの状態のことだよ。\n雨ならみず技が1.5倍、晴れならほのお技が1.5倍になるから、天気そのものが大型の火力補正なんだ。",
+              "mood": "bright"
+            }
+          },
+          {
+            "ratio_from": 0.07,
+            "ratio_to": 0.08,
+            "drop": 0.1222,
+            "bucket": "intro",
+            "audience_after": 0.9167,
+            "scenario_line": {
+              "index": 4,
+              "speaker": "ソラ",
+              "text": "いや強すぎでしょ！伝説ポケモン同士の正面対決で、レベル100や努力値より前に、出場順というチーム操作が勝ち筋を作るなら、知らないと普通に損するじゃん！",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0667,
+            "bucket": "intro",
+            "audience_after": 0.5889,
+            "scenario_line": {
+              "index": 7,
+              "speaker": "ヒカリ研究員",
+              "text": "その通りで、晴れの場ではみず技が0.5倍になるんだよ！\n同じ技の威力を雨の1.5倍から晴れの0.5倍まで動かせるから、カイオーガ側では実質3倍差の感覚になる、やば、これ見て。",
+              "mood": "bright"
+            }
+          }
+        ],
+        "matched_scenario_title": "1分ポケモン研究 #9：🎮カイオーガとグラードン、天候を2回張ったらどっちが勝つ？"
+      },
+      {
+        "video_id": "J5V0NAC4NWg",
+        "title": "ガブリアスとボーマンダ、素早さ1でどっちが勝つ？君は気づけるか【ショート】",
+        "avg_view_percentage": 39.13,
+        "drops": [
+          {
+            "ratio_from": 0.09,
+            "ratio_to": 0.1,
+            "drop": 0.0702,
+            "bucket": "intro",
+            "audience_after": 0.9532,
+            "scenario_line": {
+              "index": 5,
+              "speaker": "ヒカリ研究員",
+              "text": "今回の基準はレベル50、個体値31、努力値252、性格補正ありの最速同士。個体値は生まれつきの上限、努力値は育成で足す数値で、対戦の比較ではここを揃えるんだよ！",
+              "mood": "bright"
+            }
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.11,
+            "drop": 0.0682,
+            "bucket": "intro",
+            "audience_after": 0.885,
+            "scenario_line": {
+              "index": 6,
+              "speaker": "ヒカリ研究員",
+              "text": "まずガブリアスはHP108、攻撃130、防御95、特攻80、特防85、素早さ102。種族値だけ見ると攻撃130と素早さ102が両立していて、先手で高火力を出す形が完成してる！",
+              "mood": "bright"
+            }
+          },
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0605,
+            "bucket": "intro",
+            "audience_after": 0.7797,
+            "scenario_line": {
+              "index": 7,
+              "speaker": "ソラ",
+              "text": "攻撃130で素早さ102って、最初から速いアタッカーの教科書みたいな数字じゃん！ しかもHP108まであるなら、先に動いて一発受ける展開でもかなり粘れそうだな！",
+              "mood": "bright"
+            }
+          }
+        ],
+        "matched_scenario_title": "ガブリアスとボーマンダ、素早さ1でどっちが勝つ？君は気づけるか"
+      },
+      {
+        "video_id": "oKAAtVHrKHE",
+        "title": "リザードンとカイリュー、どっちが勝つ？4倍弱点で勝敗がひっくり返る【ショート】",
+        "avg_view_percentage": 70.89,
+        "drops": [
+          {
+            "ratio_from": 0.21,
+            "ratio_to": 0.22,
+            "drop": 0.054,
+            "bucket": "early",
+            "audience_after": 1.0058,
+            "scenario_line": {
+              "index": 11,
+              "speaker": "ヒカリ研究員",
+              "text": "リザードンはほのおとひこうが岩に弱いため4倍ダメージです。\nカイリューはドラゴンとひこうが氷に弱いため4倍で、ここだけ見ると両者とも紙装甲に見えます。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.82,
+            "ratio_to": 0.83,
+            "drop": 0.0444,
+            "bucket": "late",
+            "audience_after": 0.4537,
+            "scenario_line": {
+              "index": 43,
+              "speaker": "ヒカリ研究員",
+              "text": "歴史を見ると、リザードンは1996年の初代から御三家最終進化として登場しました。\nカイリューも同じ初代で、ミニリュウから55レベル進化という遅さが特別な強さを演出していました。",
+              "mood": "emotional"
+            }
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0387,
+            "bucket": "early",
+            "audience_after": 1.0598,
+            "scenario_line": {
+              "index": 11,
+              "speaker": "ヒカリ研究員",
+              "text": "リザードンはほのおとひこうが岩に弱いため4倍ダメージです。\nカイリューはドラゴンとひこうが氷に弱いため4倍で、ここだけ見ると両者とも紙装甲に見えます。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "リザードンとカイリュー、どっちが勝つ？4倍弱点で勝敗がひっくり返る"
+      },
+      {
+        "video_id": "P_4DHMa-G1I",
+        "title": "バンギラスとメタグロス、どっちが勝つ？600族対決は持ち物1つで逆転する【ショート】",
+        "avg_view_percentage": 69.53,
+        "drops": [
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0511,
+            "bucket": "early",
+            "audience_after": 1.0076,
+            "scenario_line": {
+              "index": 11,
+              "speaker": "ヒカリ研究員",
+              "text": "さらにバンギラスの特性すなおこしは、登場した瞬間に砂嵐を5ターン起こす公式効果です。\nいわタイプは砂嵐中に特防が1.5倍になるから、特殊技で崩す作戦も数字どおりには進みません。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.82,
+            "ratio_to": 0.83,
+            "drop": 0.0474,
+            "bucket": "late",
+            "audience_after": 0.4299,
+            "scenario_line": {
+              "index": 44,
+              "speaker": "ヒカリ研究員",
+              "text": "メタグロス側は、バンギラスのじしんを受ける準備なしに正面から出すのが危険です。\nシュカのみで一度耐える、ふうせんで空振りさせる、味方交代で地面技を受ける、このどれかを先に用意したい。",
+              "mood": "bright"
+            }
+          },
+          {
+            "ratio_from": 0.21,
+            "ratio_to": 0.22,
+            "drop": 0.0417,
+            "bucket": "early",
+            "audience_after": 0.9659,
+            "scenario_line": {
+              "index": 11,
+              "speaker": "ヒカリ研究員",
+              "text": "さらにバンギラスの特性すなおこしは、登場した瞬間に砂嵐を5ターン起こす公式効果です。\nいわタイプは砂嵐中に特防が1.5倍になるから、特殊技で崩す作戦も数字どおりには進みません。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "バンギラスとメタグロス、どっちが勝つ？600族対決は持ち物1つで逆転する"
+      },
+      {
+        "video_id": "BvCpMrCLrOA",
+        "title": "ホウオウとルギア、まともに戦わせたらどっちが勝つのか【ショート】",
+        "avg_view_percentage": 65.26,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0661,
+            "bucket": "early",
+            "audience_after": 1.0232,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "ソラ",
+              "text": "防御130、特防154、HP106って、壁役の数字が伝説級すぎる！ しかも素早さ110なら、耐えるだけじゃなくて相手より先に選べるんだね？",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.05,
+            "bucket": "early",
+            "audience_after": 0.9732,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "ソラ",
+              "text": "防御130、特防154、HP106って、壁役の数字が伝説級すぎる！ しかも素早さ110なら、耐えるだけじゃなくて相手より先に選べるんだね？",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.85,
+            "ratio_to": 0.86,
+            "drop": 0.0357,
+            "bucket": "late",
+            "audience_after": 0.3982,
+            "scenario_line": {
+              "index": 46,
+              "speaker": "ヒカリ研究員",
+              "text": "今回の判定基準を整理すると、1番は先手を取る素早さ110、2番は満タン時のマルチスケイル、3番は4倍弱点の岩技です。この3つでルギアが対面有利を取ります。",
+              "mood": "bright"
+            }
+          }
+        ],
+        "matched_scenario_title": "ホウオウとルギア、まともに戦わせたらどっちが勝つのか"
+      },
+      {
+        "video_id": "lr8OrwkS5fY",
+        "title": "ミミッキュとロトム、どっちが勝つ？姿変化を実戦で比べた結果【ショート】",
+        "avg_view_percentage": 54.52,
+        "drops": [
+          {
+            "ratio_from": 0.19,
+            "ratio_to": 0.2,
+            "drop": 0.0634,
+            "bucket": "early",
+            "audience_after": 0.8315,
             "scenario_line": {
               "index": 12,
               "speaker": "ヒカリ研究員",
@@ -767,29 +673,29 @@
             }
           },
           {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0454,
-            "bucket": "early",
-            "audience_after": 0.8947,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "ソラ",
-              "text": "えっ、それどういうこと!? ロトムのフォルムチェンジって、見た目が洗濯機や電子レンジになるネタ要素じゃなくて、ミミッキュの安全ターンを崩す実戦ギミックなの？",
-              "mood": "tense"
-            }
-          },
-          {
             "ratio_from": 0.81,
             "ratio_to": 0.82,
-            "drop": 0.0454,
+            "drop": 0.0471,
             "bucket": "late",
-            "audience_after": 0.3176,
+            "audience_after": 0.317,
             "scenario_line": {
               "index": 51,
               "speaker": "ヒカリ研究員",
               "text": "実戦Tipsその1、ミミッキュ側は初手で毎回剣の舞を押さないことです。ロトムがボルトチェンジで逃げそうなら、最初から攻撃して交代先にも負担をかける選択が残ります。",
               "mood": "bright"
+            }
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0453,
+            "bucket": "early",
+            "audience_after": 0.8949,
+            "scenario_line": {
+              "index": 11,
+              "speaker": "ソラ",
+              "text": "えっ、それどういうこと!? ロトムのフォルムチェンジって、見た目が洗濯機や電子レンジになるネタ要素じゃなくて、ミミッキュの安全ターンを崩す実戦ギミックなの？",
+              "mood": "tense"
             }
           }
         ],
@@ -803,9 +709,9 @@
           {
             "ratio_from": 0.15,
             "ratio_to": 0.16,
-            "drop": 0.0821,
+            "drop": 0.0817,
             "bucket": "early",
-            "audience_after": 0.9828,
+            "audience_after": 0.9829,
             "scenario_line": {
               "index": 10,
               "speaker": "ヒカリ研究員",
@@ -816,9 +722,9 @@
           {
             "ratio_from": 0.17,
             "ratio_to": 0.18,
-            "drop": 0.0611,
+            "drop": 0.0609,
             "bucket": "early",
-            "audience_after": 0.8626,
+            "audience_after": 0.8631,
             "scenario_line": {
               "index": 11,
               "speaker": "ソラ",
@@ -829,9 +735,9 @@
           {
             "ratio_from": 0.16,
             "ratio_to": 0.17,
-            "drop": 0.0591,
+            "drop": 0.0589,
             "bucket": "early",
-            "audience_after": 0.9237,
+            "audience_after": 0.924,
             "scenario_line": {
               "index": 10,
               "speaker": "ヒカリ研究員",
@@ -841,316 +747,269 @@
           }
         ],
         "matched_scenario_title": "ルカリオとウルガモス、どっちが勝つ？相性有利がひっくり返る実戦条件"
-      },
-      {
-        "video_id": "D28rh3UkGzo",
-        "title": "なぜパルキアは勝てないと言われる？ウルトラネクロズマとの数字差が意外すぎる【ショート】",
-        "avg_view_percentage": 55.22,
-        "drops": [
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0703,
-            "bucket": "early",
-            "audience_after": 0.9183,
-            "scenario_line": {
-              "index": 12,
-              "speaker": "ソラ",
-              "text": "うわ、最強形態なのに最初から出せないの!? \nつまりパルキアは、相手が変身して754になる瞬間を読めれば、数字差そのものではなく手順の差を突けるってこと？",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0456,
-            "bucket": "early",
-            "audience_after": 0.9886,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "ヒカリ研究員",
-              "text": "ここで第二フックです。\n種族値754という史上級の数字でも、ウルトラネクロズマは最初から選べる姿ではなく、ネクロズマが専用の条件を通して戦闘中に変身する特殊形態なんです。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.0419,
-            "bucket": "early",
-            "audience_after": 0.8764,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "ヒカリ研究員",
-              "text": "ウルトラネクロズマは第7世代でウルトラバーストを使い、ネクロズマの合体形態からさらに姿を変えます。\n専用Zクリスタルを持つ必要があるので、持ち物を自由に選べない点も対戦では小さくない制約です。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜパルキアは勝てないと言われる？ウルトラネクロズマとの数字差が意外すぎる"
-      },
-      {
-        "video_id": "477d-1KRifc",
-        "title": "なぜメタグロスはサーフゴーに勝てない？持ち物1つで逆転する本当の理由【ショート】",
-        "avg_view_percentage": 57.06,
-        "drops": [
-          {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.0837,
-            "bucket": "early",
-            "audience_after": 0.8707,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "ソラ",
-              "text": "えっ、攻撃135の地震でもHP振りには確定で倒せないの!? サーフゴー側が最初からメタグロスを意識していたら、1ターン耐えて反撃する計画が立つわけだね。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0551,
-            "bucket": "early",
-            "audience_after": 0.9544,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "ソラ",
-              "text": "えっ、攻撃135の地震でもHP振りには確定で倒せないの!? サーフゴー側が最初からメタグロスを意識していたら、1ターン耐えて反撃する計画が立つわけだね。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.22,
-            "ratio_to": 0.23,
-            "drop": 0.038,
-            "bucket": "early",
-            "audience_after": 0.8023,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "ソラ",
-              "text": "ふうせんは地面技を無効にする持ち物だよね？ 威力100、抜群2倍、攻撃135という全部の計算を、ゲーム画面の『当たらない』一言で消すのは草すぎる！",
-              "mood": "tense"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜメタグロスはサーフゴーに勝てない？持ち物1つで逆転する本当の理由"
-      },
-      {
-        "video_id": "cyGY2dcau6M",
-        "title": "なぜ同じドラゴンなのに勝敗が割れるのか？カイリューとボーマンダの隠された実戦性能の秘密【ショート】",
-        "avg_view_percentage": 52.94,
-        "drops": [
-          {
-            "ratio_from": 0.81,
-            "ratio_to": 0.82,
-            "drop": 0.0528,
-            "bucket": "late",
-            "audience_after": 0.2794,
-            "scenario_line": {
-              "index": 45,
-              "speaker": "ソラ",
-              "text": "HPが1だけ減っても半減が消えるのか！スマホゲームのシールドが残り1ポイントでは発動しない感じで、カイリューは交代させる前に相手の場の技まで確認しないと、本来の強さを出せないんだね。",
-              "mood": "bright"
-            }
-          },
-          {
-            "ratio_from": 0.8,
-            "ratio_to": 0.81,
-            "drop": 0.0409,
-            "bucket": "late",
-            "audience_after": 0.3322,
-            "scenario_line": {
-              "index": 44,
-              "speaker": "ヒカリ研究員",
-              "text": "カイリューを使う実戦のコツは、HP満タンを守ることです。ステルスロックのような場に残る技で少しでも削られると、マルチスケイルは発動しません。100％と99％で耐久が激変する、珍しいポケモンです。",
-              "mood": "bright"
-            }
-          },
-          {
-            "ratio_from": 0.82,
-            "ratio_to": 0.83,
-            "drop": 0.0409,
-            "bucket": "late",
-            "audience_after": 0.2385,
-            "scenario_line": {
-              "index": 45,
-              "speaker": "ソラ",
-              "text": "HPが1だけ減っても半減が消えるのか！スマホゲームのシールドが残り1ポイントでは発動しない感じで、カイリューは交代させる前に相手の場の技まで確認しないと、本来の強さを出せないんだね。",
-              "mood": "bright"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜ同じドラゴンなのに勝敗が割れるのか？カイリューとボーマンダの隠された実戦性能の秘密"
-      },
-      {
-        "video_id": "PX2jYA4UVg4",
-        "title": "なぜレックウザは空から降りないのか？図鑑384番の誕生神話が衝撃すぎた【ショート】【ショート】",
-        "avg_view_percentage": 53.67000000000001,
-        "drops": [
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0669,
-            "bucket": "early",
-            "audience_after": 0.8413,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "ヒカリ研究員",
-              "text": "『エメラルド』では主人公が、暴走した2体を力で倒して解決するわけではありません。\n空の柱まで向かい、レックウザを呼ぶことで物語が進む。問題の中心へ突撃する前に、止められる役を探す構造なんです。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0631,
-            "bucket": "early",
-            "audience_after": 0.9656,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ソラ",
-              "text": "30秒なら、対戦で技を選ぶ制限時間より短いくらいだね！\nでもレックウザは高い場所から見て終わりじゃないはずでしょ？ いつ地上の問題へ手を出すのかが気になる！",
-              "mood": "funny"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0574,
-            "bucket": "early",
-            "audience_after": 0.9082,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "ヒカリ研究員",
-              "text": "そこが第2フックです。レックウザは争いを眺める観客ではなく、最後には地上へ現れて衝突を止めます。\nただし先に飛び込まず、状況を見てから動く。この順番こそ、680の能力値より日常で再現しやすい強さです。",
-              "mood": "tense"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜレックウザは空から降りないのか？図鑑384番の誕生神話が衝撃すぎた【ショート】"
-      },
-      {
-        "video_id": "MtjS8wbAzis",
-        "title": "1分ポケモン研究：なぜピカチュウだけ？図鑑778番の本音#なぜ図鑑778番はピカチュウだけ真似るのか？理由が意外すぎた【ショート】 #shorts #ゆっくり解説",
-        "avg_view_percentage": 63.68000000000001,
-        "drops": [
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0465,
-            "bucket": "early",
-            "audience_after": 1.0368,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "ヒカリ研究員",
-              "text": "しかも耳は左右対称ではなく、片方が折れた手作り感のある形だ。完璧なコピーではなく、愛されるために必死で寄せた姿だと見ると、急に印象が変わるよね。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0427,
-            "bucket": "early",
-            "audience_after": 0.9651,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ソラ",
-              "text": "えっ、それでも最大の謎が残る！ 愛されたいなら、どうしてわざわざぼろ布で本体を隠す必要があるの？ ここからが核心ってこと!?",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.78,
-            "ratio_to": 0.79,
-            "drop": 0.0387,
-            "bucket": "late",
-            "audience_after": 0.4322,
-            "scenario_line": {
-              "index": 37,
-              "speaker": "ソラ",
-              "text": "図鑑を埋める時、説明を飛ばしてたのもったいなかった！ 捕獲画面の短文に、アローラの20年前まで入っているなんて、情報密度が高すぎるよ。",
-              "mood": "bright"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜ図鑑778番はピカチュウだけ真似るのか？理由が意外すぎた【ショート】"
-      },
-      {
-        "video_id": "nkuEsmXgA14",
-        "title": "なぜコイキングは種族値200なのか？進化前だけ弱すぎる本当の理由がヤバすぎた【ショート】",
-        "avg_view_percentage": 67.91,
-        "drops": [
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0352,
-            "bucket": "early",
-            "audience_after": 1.1323,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "ソラ",
-              "text": "経験値を分ける育成って、最初にコイキングを出し、相手の攻撃前に別の仲間へ交代する方法だよね。\nゲームの説明書を読まなくても、「このままじゃ勝てない、どう育てる？」と考えさせる装置なのか。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.26,
-            "ratio_to": 0.27,
-            "drop": 0.0352,
-            "bucket": "early",
-            "audience_after": 0.8907,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "ソラ",
-              "text": "公式が自分で世界一番弱いって言うの、普通のキャラ紹介なら絶対に避けそうな表現だよね。\nでも最弱候補を名乗るからこそ、捕まえた人が「本当に進化で変わるの？」と試したくなるのか。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0335,
-            "bucket": "early",
-            "audience_after": 1.0988,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ヒカリ研究員",
-              "text": "さらに初代には、500円でコイキングを買えるイベントがある。\n序盤で500円はモンスターボール10個分に近い感覚なのに、受け取った直後の技が「はねる」だけだから、ツッコミまで含めて記憶に残る。",
-              "mood": "funny"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜコイキングは種族値200なのか？進化前だけ弱すぎる本当の理由がヤバすぎた"
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
-    "generated_at": 1786975461,
-    "analyzed_videos": 8,
+    "generated_at": 1787580158,
+    "analyzed_videos": 6,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0083,
-      "early": 0.0234,
-      "middle": 0.0047,
-      "late": 0.0057,
-      "ending": 0.0039
+      "intro": 0.0221,
+      "early": 0.0195,
+      "middle": 0.0038,
+      "late": 0.003,
+      "ending": 0.003
     },
     "per_video": [
       {
-        "video_id": "2DYLiwh42V8",
-        "title": "ふじのやまの元ネタが怖すぎる — 山に入った人が戻れなくなる禁忌【ショート】",
-        "avg_view_percentage": 76.99,
+        "video_id": "ajouUdcWYic",
+        "title": "3秒で消える？天狗と山伏、神隠しの本当の理由【ショート】",
+        "avg_view_percentage": 29.830000000000002,
+        "drops": [
+          {
+            "ratio_from": 0.09,
+            "ratio_to": 0.1,
+            "drop": 0.1818,
+            "bucket": "intro",
+            "audience_after": 0.7879,
+            "scenario_line": {
+              "index": 6,
+              "speaker": "ミナモ調査員",
+              "text": "天狗は最初から山の妖怪ではなかった。平安時代の説話集『日本霊異記』では、仏道を誤らせる空の怪異として現れ、今のような赤い顔や長い鼻は、まだ固定されていなかったんだ。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.09,
+            "drop": 0.1212,
+            "bucket": "intro",
+            "audience_after": 0.9697,
+            "scenario_line": {
+              "index": 5,
+              "speaker": "ミナモ調査員",
+              "text": "まず区別しておくと、ゲーム内の天狗系妖怪は公式作品のキャラクターで、今回話す山の天狗は日本各地の伝承だ。同じ名前でも、公式設定、民俗資料、ファン考察は別々に読むんだ。",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.11,
+            "ratio_to": 0.12,
+            "drop": 0.1212,
+            "bucket": "intro",
+            "audience_after": 0.5758,
+            "scenario_line": {
+              "index": 7,
+              "speaker": "ケンタ",
+              "text": "じゃあ、学校行事で見るあの天狗のお面は完成形じゃなかったんだね。空にいた怪異が、いつ山の奥の主みたいになったの？ そこが分からないと、神隠しにもつながらないよ。",
+              "mood": "tense"
+            }
+          }
+        ],
+        "matched_scenario_title": "3秒で消える？天狗と山伏、神隠しの本当の理由"
+      },
+      {
+        "video_id": "eP-GMocrfHk",
+        "title": "1分妖怪ファイル #7：😰かまいたちの元ネタが怖すぎる — あなたが3秒で傷つく理由は？【ショート】",
+        "avg_view_percentage": 33.02,
+        "drops": [
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.09,
+            "drop": 0.1539,
+            "bucket": "intro",
+            "audience_after": 0.9615,
+            "scenario_line": {
+              "index": 5,
+              "speaker": "ミナモ調査員",
+              "text": "先に線を引くと、妖怪ウォッチのかまいたちは株式会社レベルファイブの創作キャラクターだ。ここで追うのは、名前や特徴の背景にある日本各地の鎌鼬伝承なんだ。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.09,
+            "ratio_to": 0.1,
+            "drop": 0.0769,
+            "bucket": "intro",
+            "audience_after": 0.8846,
+            "scenario_line": {
+              "index": 5,
+              "speaker": "ミナモ調査員",
+              "text": "先に線を引くと、妖怪ウォッチのかまいたちは株式会社レベルファイブの創作キャラクターだ。ここで追うのは、名前や特徴の背景にある日本各地の鎌鼬伝承なんだ。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0769,
+            "bucket": "intro",
+            "audience_after": 0.7308,
+            "scenario_line": {
+              "index": 8,
+              "speaker": "ミナモ調査員",
+              "text": "鎌鼬という字は、鎌とイタチを合わせた書き方だ。字面だけなら小さな獣なのに、伝承では風の中を走り、人の足元へ触れずに傷だけ置いて去るとされた。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "1分妖怪ファイル #7：😰かまいたちの元ネタが怖すぎる — あなたが3秒で傷つく理由は？"
+      },
+      {
+        "video_id": "81DW_QyWZMs",
+        "title": "ぬらりひょんの正体が怖すぎる — なぜあなたの家に勝手に上がるのか【ショート】",
+        "avg_view_percentage": 41.44,
+        "drops": [
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0639,
+            "bucket": "intro",
+            "audience_after": 0.8191,
+            "scenario_line": {
+              "index": 7,
+              "speaker": "ケンタ",
+              "text": "じゃあ、海に浮く変なものと、家へ勝手に上がる老人が、同じぬらりひょんになったの？\n同じ名前でも、地域ごとに別の怪談が混ざるなんて、ゲームの同名キャラよりややこしいよ。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.11,
+            "drop": 0.0638,
+            "bucket": "intro",
+            "audience_after": 0.9681,
+            "scenario_line": {
+              "index": 6,
+              "speaker": "ミナモ調査員",
+              "text": "資料にある姿は、頭が大きく丸く、海上に浮かぶものとして説明されることがある。\n最初から座敷の老人だったと断言できる古い記録は少なく、ここに有名なイメージとの最初のズレがある。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0532,
+            "bucket": "intro",
+            "audience_after": 0.883,
+            "scenario_line": {
+              "index": 7,
+              "speaker": "ケンタ",
+              "text": "じゃあ、海に浮く変なものと、家へ勝手に上がる老人が、同じぬらりひょんになったの？\n同じ名前でも、地域ごとに別の怪談が混ざるなんて、ゲームの同名キャラよりややこしいよ。",
+              "mood": "mysterious"
+            }
+          }
+        ],
+        "matched_scenario_title": "ぬらりひょんの正体が怖すぎる — なぜあなたの家に勝手に上がるのか"
+      },
+      {
+        "video_id": "l68CzSRJ6WU",
+        "title": "海坊主の正体が怖すぎる — 船を沈める巨大な影は何だったのか【ショート】",
+        "avg_view_percentage": 57.489999999999995,
         "drops": [
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
-            "drop": 0.0644,
+            "drop": 0.0924,
             "bucket": "intro",
-            "audience_after": 1.339,
+            "audience_after": 1.098,
+            "scenario_line": {
+              "index": 8,
+              "speaker": "ケンタ",
+              "text": "じゃあ海坊主って、最初から同じ一匹の妖怪じゃなくて、海で起きる怖い現象の名前だったの？それなら地域ごとに姿が違うのも説明できそうだけど、見た人が本気で逃げたなら怖さは消えないよ。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0814,
+            "bucket": "early",
+            "audience_after": 1.0166,
+            "scenario_line": {
+              "index": 8,
+              "speaker": "ケンタ",
+              "text": "じゃあ海坊主って、最初から同じ一匹の妖怪じゃなくて、海で起きる怖い現象の名前だったの？それなら地域ごとに姿が違うのも説明できそうだけど、見た人が本気で逃げたなら怖さは消えないよ。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.061,
+            "bucket": "early",
+            "audience_after": 0.9556,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "ミナモ調査員",
+              "text": "そう考える研究者もいるけれど、伝承は単なる見間違いで終わらせない。海坊主はしばしば船に近づき、柄杓を貸せと求める。渡せば船に海水をくみ入れられ、沈められると語られているのが特徴なんだ。",
+              "mood": "mysterious"
+            }
+          }
+        ],
+        "matched_scenario_title": "海坊主の正体が怖すぎる — 船を沈める巨大な影は何だったのか"
+      },
+      {
+        "video_id": "PwguGFatdz4",
+        "title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】",
+        "avg_view_percentage": 34.31,
+        "drops": [
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0751,
+            "bucket": "early",
+            "audience_after": 0.7787,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "ミナモ調査員",
+              "text": "古い方位の考えでは、北東は十二支の丑と寅の間に置かれました。\n牛の角と虎の皮を身につけた鬼の姿は、この丑寅という方角のイメージと結びつけて説明されることがあります。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0712,
+            "bucket": "early",
+            "audience_after": 0.7075,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "ケンタ",
+              "text": "鬼の角と虎柄って、ただ強そうなデザインじゃなかったの?\n地図の北東にある丑と寅が、鬼の見た目に化けたみたいで、知った後だと虎柄のパンツも笑えないよ。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0652,
+            "bucket": "early",
+            "audience_after": 0.581,
+            "scenario_line": {
+              "index": 11,
+              "speaker": "ミナモ調査員",
+              "text": "ここで最初の大事な反転です。丑寅の話は鬼の姿の説明であって、鬼が北東から実際に来る証明ではありません。\nそれでも平安時代には北東を鬼門と呼ぶ考えが広まり、都の建物にまで避ける工夫が残りました。",
+              "mood": "tense"
+            }
+          }
+        ],
+        "matched_scenario_title": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由"
+      },
+      {
+        "video_id": "2DYLiwh42V8",
+        "title": "ふじのやまの元ネタが怖すぎる — 山に入った人が戻れなくなる禁忌【ショート】",
+        "avg_view_percentage": 76.54,
+        "drops": [
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0638,
+            "bucket": "intro",
+            "audience_after": 1.3358,
             "scenario_line": {
               "index": 7,
               "speaker": "ケンタ",
@@ -1161,9 +1020,9 @@
           {
             "ratio_from": 0.17,
             "ratio_to": 0.18,
-            "drop": 0.0625,
+            "drop": 0.0619,
             "bucket": "early",
-            "audience_after": 1.1761,
+            "audience_after": 1.1745,
             "scenario_line": {
               "index": 9,
               "speaker": "ミナモ調査員",
@@ -1174,9 +1033,9 @@
           {
             "ratio_from": 0.18,
             "ratio_to": 0.19,
-            "drop": 0.0625,
+            "drop": 0.0619,
             "bucket": "early",
-            "audience_after": 1.1136,
+            "audience_after": 1.1126,
             "scenario_line": {
               "index": 9,
               "speaker": "ミナモ調査員",
@@ -1186,477 +1045,125 @@
           }
         ],
         "matched_scenario_title": "ふじのやまの元ネタが怖すぎる — 山に入った人が戻れなくなる禁忌"
-      },
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "2ch-matome": {
+    "channel_id": "2ch-matome",
+    "generated_at": 1787580029,
+    "analyzed_videos": 2,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.0157,
+      "early": 0.0209,
+      "middle": 0.0055,
+      "late": 0.0037,
+      "ending": 0.001
+    },
+    "per_video": [
       {
-        "video_id": "mykin3cF95Y",
-        "title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか【ショート】",
-        "avg_view_percentage": 86.66,
+        "video_id": "D7GOY2ESPA0",
+        "title": "3秒で考えろ！この戦闘機の名前が親戚回避型な理由とは？【ショート】",
+        "avg_view_percentage": 28.809999999999995,
         "drops": [
           {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.1077,
-            "bucket": "early",
-            "audience_after": 1.2873,
-            "scenario_line": {
-              "index": 7,
-              "speaker": "ケンタ",
-              "text": "最初から怪しい影なら逃げるのに、泣いていたら助けようとして近づくよね。\n学校帰りに友達が泣いていたら声をかけるみたいに、優しさを使われるのが一番いやだよ。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.088,
-            "bucket": "early",
-            "audience_after": 1.1993,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "ミナモ調査員",
-              "text": "そうです。のっぺらぼうは力で追い詰める妖怪というより、人の判断を一拍遅らせる怪異です。\nスマホの画面に知人の名前が出て安心して開いたら、別人からのなりすましだった時の感覚に近いでしょう。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0718,
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.1188,
             "bucket": "intro",
-            "audience_after": 1.395,
+            "audience_after": 0.8317,
             "scenario_line": {
               "index": 7,
-              "speaker": "ケンタ",
-              "text": "最初から怪しい影なら逃げるのに、泣いていたら助けようとして近づくよね。\n学校帰りに友達が泣いていたら声をかけるみたいに、優しさを使われるのが一番いやだよ。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "のっぺらぼうの正体が怖すぎる — 顔を奪う怪談はなぜ生まれたのか"
-      },
-      {
-        "video_id": "ZqI9LA9O0Ko",
-        "title": "河童はなぜか子どもだけを呼ぶ？水辺に残された「声」の本当の理由【ショート】",
-        "avg_view_percentage": 38.65,
-        "drops": [
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0873,
-            "bucket": "early",
-            "audience_after": 0.8937,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "ケンタ",
-              "text": "姿の情報はバラバラなのに、危ない場所だけ一致するのは変だよ。\nゲームの攻略情報なら見た目より、全員が同じ場所でやられる罠の方を先に疑うところだね。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0645,
-            "bucket": "early",
-            "audience_after": 0.7761,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "ミナモ調査員",
-              "text": "河童話の中心にあるのは、川の深み、急な流れ、そして見えない底です。\n岸から二、三歩で水深が変わる場所では、泳げる子でも足場を失い、戻る方向が分からなくなります。",
+              "speaker": "ゴロー",
+              "text": "基本は任務や世代を示す記号に、愛称を重ねる形だ。米軍のFは戦闘機を示し、F-16はファイティング・ファルコン。",
               "mood": "calm"
             }
           },
           {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0531,
-            "bucket": "early",
-            "audience_after": 0.8406,
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.1188,
+            "bucket": "intro",
+            "audience_after": 0.7129,
             "scenario_line": {
-              "index": 10,
-              "speaker": "ケンタ",
-              "text": "姿の情報はバラバラなのに、危ない場所だけ一致するのは変だよ。\nゲームの攻略情報なら見た目より、全員が同じ場所でやられる罠の方を先に疑うところだね。",
-              "mood": "mysterious"
+              "index": 8,
+              "speaker": "ユイ",
+              "text": "でもこれ、半分は間違いなんだ。正式名より現場の呼び名が強く残り、F-14はトムキャットの方が圧倒的に有名。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.11,
+            "ratio_to": 0.12,
+            "drop": 0.0891,
+            "bucket": "intro",
+            "audience_after": 0.9505,
+            "scenario_line": {
+              "index": 7,
+              "speaker": "ゴロー",
+              "text": "基本は任務や世代を示す記号に、愛称を重ねる形だ。米軍のFは戦闘機を示し、F-16はファイティング・ファルコン。",
+              "mood": "calm"
             }
           }
         ],
-        "matched_scenario_title": "河童はなぜか子どもだけを呼ぶ？水辺に残された「声」の本当の理由"
+        "matched_scenario_title": "3秒で考えろ！この戦闘機の名前が親戚回避型な理由とは？"
       },
       {
-        "video_id": "GUeTTH-huzE",
-        "title": "ねちがえる、なぜか夜だけ首を狙う？金縛りの奥にある古い怪異【ショート】",
-        "avg_view_percentage": 49.57,
+        "video_id": "VEjXHM7oUWg",
+        "title": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】",
+        "avg_view_percentage": 42.19,
         "drops": [
           {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0586,
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.059,
             "bucket": "early",
-            "audience_after": 0.9059,
+            "audience_after": 0.8968,
             "scenario_line": {
               "index": 10,
-              "speaker": "ケンタ",
-              "text": "え、待って怖い。首だけなら寝違えで済むけど、胸が重くて誰かがいる気がするなら別の話だよ。\n昔の怪談では、動けない人の上に、具体的に何が来たことになっているの？",
-              "mood": "tense"
+              "speaker": "ユイ",
+              "text": "静電気も初心者が気にする言葉だけど、これは体にたまった電気が部品へ一気に流れること。冬のドアノブのバチッが、小型基板には怖い。",
+              "mood": "calm"
             }
           },
           {
             "ratio_from": 0.2,
             "ratio_to": 0.21,
-            "drop": 0.0391,
+            "drop": 0.0467,
             "bucket": "early",
-            "audience_after": 0.8668,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "ケンタ",
-              "text": "え、待って怖い。首だけなら寝違えで済むけど、胸が重くて誰かがいる気がするなら別の話だよ。\n昔の怪談では、動けない人の上に、具体的に何が来たことになっているの？",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.23,
-            "ratio_to": 0.24,
-            "drop": 0.0391,
-            "bucket": "early",
-            "audience_after": 0.7691,
+            "audience_after": 0.7469,
             "scenario_line": {
               "index": 12,
-              "speaker": "ミナモ調査員",
-              "text": "医学でいう睡眠麻痺は、眠っている時に筋肉の力が抜ける仕組みが、意識の目覚めより遅れて残る現象です。\n夢を見る睡眠の途中で意識だけが先に戻ると、数秒から数分ほど体を動かしにくく感じる場合があります。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "ねちがえる、なぜか夜だけ首を狙う？金縛りの奥にある古い怪異"
-      },
-      {
-        "video_id": "8JLBD8J8RwU",
-        "title": "なぜツチノコは家に入る？隠された秘密【ショート】",
-        "avg_view_percentage": 54.339999999999996,
-        "drops": [
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0742,
-            "bucket": "early",
-            "audience_after": 0.9573,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "ミナモ調査員",
-              "text": "蛇は水や土地の神の使いとして敬われる一方、家へ入れば境界を越えた存在です。歓迎すべき神意か、災いの前触れか、判断できない不安が残ります。",
+              "speaker": "ユイ",
+              "text": "届いた直後に全部並べて写真を撮る人も多いね。CPU、メモリ、マザボがそろうと、まだ電源すら入らないのに完成した気分だけ先に来る。",
               "mood": "calm"
             }
           },
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
-            "drop": 0.063,
-            "bucket": "intro",
-            "audience_after": 1.0928,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ケンタ",
-              "text": "ただし、家の中で蛇を見た場合は話が変わります。田畑の近い家では、蛇は鼠を追って床下や物置へ入り、生活圏に突然現れることがありました。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0613,
-            "bucket": "early",
-            "audience_after": 1.0315,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ケンタ",
-              "text": "ただし、家の中で蛇を見た場合は話が変わります。田畑の近い家では、蛇は鼠を追って床下や物置へ入り、生活圏に突然現れることがありました。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜツチノコは家に入る？隠された秘密"
-      },
-      {
-        "video_id": "frxNzntmiF4",
-        "title": "なぜおでんじんだけ夜道に立つ？可愛い具に隠された秘密【ショート】【ショート】",
-        "avg_view_percentage": 47.32,
-        "drops": [
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0727,
-            "bucket": "early",
-            "audience_after": 0.9673,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ミナモ調査員",
-              "text": "ここで第二のフックです。おでんじんが不穏なのは、食べ物が動くからではありません。寒い夜ほど人が近づきたくなる温かさを、異形が先に理解しているように見えるからです。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0546,
-            "bucket": "early",
-            "audience_after": 0.9127,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "ケンタ",
-              "text": "え、待って怖い。怖い屋敷なら避けるけど、湯気のする鍋なら「誰かいるのかな」って近づくよ。逃げたい気持ちより先に、安心したい気持ちを使われるってこと？",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.24,
-            "ratio_to": 0.25,
-            "drop": 0.0437,
-            "bucket": "early",
-            "audience_after": 0.7018,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "ケンタ",
-              "text": "百年という数字が絶対じゃなくても、古い物を捨てる時に怖かった人がいたのは記録に残っているんだね。じゃあ、おでんみたいにすぐ食べる物は、その考えとどうつながるの？",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜおでんじんだけ夜道に立つ？可愛い具に隠された秘密【ショート】"
-      },
-      {
-        "video_id": "WP03hoeoxCk",
-        "title": "1分妖怪ファイル：その『設定』、江戸時代には存在しなかった昭和の妖怪本が作り上げた『総大将』の正体#ぬらりひょんが『妖怪の総大将』なのは、なぜか誰も疑わなかったのか #shorts #ゆっくり解説",
-        "avg_view_percentage": 76.35,
-        "drops": [
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.0773,
-            "bucket": "intro",
-            "audience_after": 1.2232
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0527,
-            "bucket": "intro",
-            "audience_after": 1.1705
-          },
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0369,
-            "bucket": "early",
-            "audience_after": 1.0387
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "052IlnxRdwM",
-        "title": "一つ目小僧、なぜ江戸の文献では『会った者が帰らない』と書かれているのか【ショート】",
-        "avg_view_percentage": 50.080000000000005,
-        "drops": [
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0494,
-            "bucket": "early",
-            "audience_after": 0.8631,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "ケンタ",
-              "text": "引き込む役割って、わざわざ迎えに来るってこと？それ妖怪じゃなくてほぼ死神みたいな話じゃないか。可愛い見た目してるのに、やってることが全然可愛くない。どうしてそんな見た目になったんだろう。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0456,
-            "bucket": "intro",
-            "audience_after": 0.9981,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "ミナモ調査員",
-              "text": "そこが重要なポイントで、一つ目小僧の目撃談は神社の境内や寺の参道、村の外れの辻など、いわゆる『この世とあの世の境目』とされた場所に集中している。安全な場所ではなく、境界の場所に現れるという構造が記録全体に共通している。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.23,
-            "ratio_to": 0.24,
             "drop": 0.0418,
-            "bucket": "early",
-            "audience_after": 0.6939,
+            "bucket": "intro",
+            "audience_after": 0.9926,
             "scenario_line": {
-              "index": 13,
-              "speaker": "ケンタ",
-              "text": "え、もともとは神様だったの？それが妖怪になったってこと？信仰が薄れたから姿も変わったってことなのかな。でも怖さだけは残ったってことだよね。",
-              "mood": "tense"
+              "index": 9,
+              "speaker": "ゴロー",
+              "text": "精密部品は輸送中の衝撃に弱いから、箱の中で動かないよう隙間を埋める。特にグラボは重量があり、角への打撃を避ける梱包が重要だ。",
+              "mood": "calm"
             }
           }
         ],
-        "matched_scenario_title": "一つ目小僧、なぜ江戸の文献では『会った者が帰らない』と書かれているのか"
+        "matched_scenario_title": "PCパーツ到着時、なぜ箱だけ先に届くのか？"
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
   },
-  "2ch-matome": {
-    "channel_id": "2ch-matome",
-    "generated_at": 1786975239,
-    "analyzed_videos": 3,
-    "aggregate_drops_by_bucket": {
-      "intro": 0.0031,
-      "early": 0.0169,
-      "middle": 0.0095,
-      "late": 0.0108,
-      "ending": 0.0028
-    },
-    "per_video": [
-      {
-        "video_id": "Be4FYVfZ57Y",
-        "title": "ワイ、彼女いない歴＝年齢やけど質問ある？【ショート】",
-        "avg_view_percentage": 64.42,
-        "drops": [
-          {
-            "ratio_from": 0.26,
-            "ratio_to": 0.27,
-            "drop": 0.0334,
-            "bucket": "early",
-            "audience_after": 0.8759,
-            "scenario_line": {
-              "index": 16,
-              "speaker": "ゴロー",
-              "text": "ただし彼女いない歴＝年齢は統計の平均じゃなく個人戦だ。ワイは母親以外の女性と映画を観た回数、堂々のゼロ回を記録中。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.21,
-            "ratio_to": 0.22,
-            "drop": 0.0315,
-            "bucket": "early",
-            "audience_after": 0.9815,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "ゴロー",
-              "text": "ただし正直すぎると、質問が「好きなタイプは？」から「風呂は毎日入る？」へ横滑りする。恋愛の入口だったはずが、衛生観念の確認会に変わるのがこの型の怖さだ。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.22,
-            "ratio_to": 0.23,
-            "drop": 0.0278,
-            "bucket": "early",
-            "audience_after": 0.9537,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "ゴロー",
-              "text": "ただし正直すぎると、質問が「好きなタイプは？」から「風呂は毎日入る？」へ横滑りする。恋愛の入口だったはずが、衛生観念の確認会に変わるのがこの型の怖さだ。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "ワイ、彼女いない歴＝年齢やけど質問ある？"
-      },
-      {
-        "video_id": "vkhUIYYCiJ8",
-        "title": "彼女の部屋でヤバい物あげてけw【ショート】",
-        "avg_view_percentage": 49.88,
-        "drops": [
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0511,
-            "bucket": "early",
-            "audience_after": 0.9771,
-            "scenario_line": {
-              "index": 12,
-              "speaker": "ユイ",
-              "text": "名無し、棚の奥に同じ香りの洗剤が未開封で6本w 特売の戦利品か、思い出を洗うための備蓄か、どっちでも聞きづらい草",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.3,
-            "ratio_to": 0.31,
-            "drop": 0.0458,
-            "bucket": "early",
-            "audience_after": 0.7183,
-            "scenario_line": {
-              "index": 20,
-              "speaker": "ユイ",
-              "text": "ワイのレス、玄関に来客用スリッパが5足セットで新品w 一人暮らしの部屋なのに、宴会場みたいな受け入れ態勢は何やねん草",
-              "mood": "funny"
-            }
-          },
-          {
-            "ratio_from": 0.29,
-            "ratio_to": 0.3,
-            "drop": 0.0317,
-            "bucket": "early",
-            "audience_after": 0.7641,
-            "scenario_line": {
-              "index": 20,
-              "speaker": "ユイ",
-              "text": "ワイのレス、玄関に来客用スリッパが5足セットで新品w 一人暮らしの部屋なのに、宴会場みたいな受け入れ態勢は何やねん草",
-              "mood": "funny"
-            }
-          }
-        ],
-        "matched_scenario_title": "彼女の部屋でヤバい物あげてけw"
-      },
-      {
-        "video_id": "WDnmFqiOqpU",
-        "title": "なんかPCの画面チカチカするんやが【ショート】",
-        "avg_view_percentage": 51.28,
-        "drops": [
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0446,
-            "bucket": "early",
-            "audience_after": 0.9632,
-            "scenario_line": {
-              "index": 12,
-              "speaker": "ユイ",
-              "text": "最強にしょうもない逆転は、部屋のLED照明が原因に見える例。照明自体も高速で点滅し、スマホ撮影では縞が出ることがある。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0406,
-            "bucket": "early",
-            "audience_after": 1.0078,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "ゴロー",
-              "text": "例えばHDMIケーブルは映像の通り道で、曲がりや接触不良があると信号が欠ける。すると画面は一瞬だけ黒くなったり、線が走ったりする。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.23,
-            "ratio_to": 0.24,
-            "drop": 0.0349,
-            "bucket": "early",
-            "audience_after": 0.8411,
-            "scenario_line": {
-              "index": 14,
-              "speaker": "ユイ",
-              "text": "まず設定、次にケーブル、最後に照明まで見るのが基本。でもスレの次レスは「画面を叩けば直る」らしい。お前らなら何から試す？",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "なんかPCの画面チカチカするんやが"
-      }
-    ],
-    "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
+  "fake-paper": {
+    "channel_id": "fake-paper",
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1787580059
   }
 }

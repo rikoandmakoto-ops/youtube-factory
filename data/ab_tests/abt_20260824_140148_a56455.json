@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140148_a56455",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "一口SCP：収容違反から3時間／生存者0名財団が封印した『回路の悪夢』#電子工作中に17名が消えた——財団が「あの部品」を封印した本当の理由 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": "電子工作中の事件\n財団データベースから、また一つ流出した。今回の報告書を読んだら、後悔するかもしれない。それでも聞くか、クロ。 / え……なんか今日のシロ、いつもより声のトーンが低くない？何があったの、その報告書。 / SCP-XXXX。財団が非公開指定した異常オブジェクト。収容違反から3時間で、施設内の17名が記録上から消えた案件だ。",
+  "generated_at": "2026-08-24T14:01:48.207338Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ電子工作の17人は記録ごと消えた？封印された回路の悪夢【SCP】",
+      "thumb_copy": [
+        "電子工作中に",
+        "17人が消滅"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "収容違反から3時間で生存者0名――17人を消した禁断の部品【SCP】",
+      "thumb_copy": [
+        "3時間で全滅",
+        "封印された部品"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "ただの電子部品ではなかった――財団が封印した「回路の悪夢」【SCP】",
+      "thumb_copy": [
+        "部品が人を消す",
+        "回路の悪夢"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ電子工作の17人は記録ごと消えた？封印された回路の悪夢【SCP】",
+    "thumb_copy": [
+      "電子工作中に",
+      "17人が消滅"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140134_eb54f7",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "一口SCP：財団が23年間隠し続けた見るだけで感染する謎感染者数317名、生存率わずか3%#財団が23年間隠した感染 SCP-XXXXの正体 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": null,
+  "generated_at": "2026-08-24T14:01:34.275616Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ財団は23年間隠した？見るだけで感染するSCPの正体【ゆっくり解説】",
+      "thumb_copy": [
+        "見ただけで感染",
+        "財団が隠した理由"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "感染者317名・生存率3%――23年間封印された感染SCP【ゆっくり解説】",
+      "thumb_copy": [
+        "感染者317名",
+        "生存率わずか3%"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は目にした時点で手遅れ…財団が隠蔽した感染SCP【ゆっくり解説】",
+      "thumb_copy": [
+        "見た瞬間に感染",
+        "逃げ場はない"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ財団は23年間隠した？見るだけで感染するSCPの正体【ゆっくり解説】",
+    "thumb_copy": [
+      "見ただけで感染",
+      "財団が隠した理由"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

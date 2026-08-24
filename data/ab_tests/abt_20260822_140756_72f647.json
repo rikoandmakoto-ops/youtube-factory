@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260822_140756_72f647",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "一口SCP：視線を外したら——もう遅い財団が封印した『0.3秒の恐怖』#SCP-173——視線を外した0.3秒に、17名が消えた本当の理由 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": null,
+  "generated_at": "2026-08-22T14:07:56.386391Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ視線を外した0.3秒で17人は消えた？SCP-173の正体",
+      "thumb_copy": [
+        "目を逸らした瞬間",
+        "17人が消えた理由"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "0.3秒で17名消失？SCP-173が封印された恐怖の記録",
+      "thumb_copy": [
+        "0.3秒の油断で",
+        "17名が消失"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は動くのは瞬きの間だけ——SCP-173が狙う残酷な死角",
+      "thumb_copy": [
+        "瞬きの隙に動く",
+        "見続けないと死ぬ"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ視線を外した0.3秒で17人は消えた？SCP-173の正体",
+    "thumb_copy": [
+      "目を逸らした瞬間",
+      "17人が消えた理由"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "7Lm5uLHQqkA",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.0069767441860465115,
+    "impressions": 1290,
+    "views": 1007,
+    "published_at": "2026-07-26T01:11:56Z",
+    "updated_at": "2026-08-24T14:01:13.732892Z"
+  }
+}

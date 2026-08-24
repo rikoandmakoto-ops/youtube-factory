@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260824_140233_91d789",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "なぜオロチはゲームで美化された？ヤマタノオロチ伝説の“本当は怖い”正体【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "レジェンド妖怪の元ネタとなった記紀神話の大蛇を比較する\nあなたは、妖怪ウォッチのオロチと日本神話のヤマタノオロチ、どちらが本当に恐ろしい存在か考えたことありませんか？実は意外な共通点と決定的な違いがあるんです。 / 今回は、オロチのキャラクター性がどこまで神話ヤマタノオロチに由来しているのか、そして元ネタの真の恐怖を暴いていきます！ / オロチとヤマタノオロチ、両者のビジュアルや能力設定を見比べてみると、単なる巨大な蛇以上の意味が隠されています。",
+  "generated_at": "2026-08-24T14:02:33.133207Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜオロチは美化された？神話ヤマタノオロチの本当の恐怖【ショート】",
+      "thumb_copy": [
+        "美少年オロチの元ネタ",
+        "神話では怪物だった"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "8つの頭だけじゃない！ヤマタノオロチが怖すぎる3つの理由【ショート】",
+      "thumb_copy": [
+        "8つ首の怪物",
+        "怖さは3倍以上"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は妖怪ウォッチと別物！ヤマタノオロチの恐ろしい正体【ショート】",
+      "thumb_copy": [
+        "実は別物だった",
+        "神話のオロチは地獄"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜオロチは美化された？神話ヤマタノオロチの本当の恐怖【ショート】",
+    "thumb_copy": [
+      "美少年オロチの元ネタ",
+      "神話では怪物だった"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}
