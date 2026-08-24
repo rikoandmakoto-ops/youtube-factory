@@ -1,0 +1,731 @@
+{
+  "id": "daily-science",
+  "name": "リコとマコトのゆっくり日常科学",
+  "concept": "「なぜ？」と思った瞬間に答えが出る、身近な不思議チャンネル。睡眠・夢・自分の体で今まさに起きている現象を軸に、視聴者が今日体験したばかりの違和感を疑問形で提示して、その場で解き明かす。",
+  "style": "yukkuri",
+  "youtube_channel_id": "UC1OckVkZahT3_fM6W8hD6dg",
+  "image_mode": "generate",
+  "image_collect": {
+    "provider": "auto",
+    "safe_search": true,
+    "license_filter": "cc",
+    "max_per_query": 5,
+    "attribution_template": "出典: {source}",
+    "mix_strategy": "heuristic"
+  },
+  "competitors": [
+    "UCJHZshDuIrd_6MaT8MIjFtg",
+    "UCLK63mzEn9yPcwrjSEWBK3Q",
+    "UCW_SXldsg7l5NLnsIK1g2Bw",
+    "UCJBb5HlV8OHLLT5pttKJv5g",
+    "UCYG5ZT0oNuWYZl4o8IcNsGw",
+    "UCr8W7upKLTEg2ae9EtU76Ig",
+    "UCY3WhU5uwwi4tUMgJUhEpcw",
+    "UCrjrX74DgL27R90BtlDFRjw",
+    "UCPKsFwt9ACF-EnJM3xN8wyQ",
+    "UCDy22j1Z7jDpyI14KWVgmQQ",
+    "UCMlyjv59rW7nbK09UsonA-w",
+    "UCUHg7zFbbjSHvW1heBOqnxw",
+    "UCOWNqU3svMapjmGwT5FGnSg",
+    "UCq5Jp9wm4RS9scPbBHMCQVw",
+    "UCG9eaT9ZjDZ-K1WCdccIIhg",
+    "UC3PWWshMfLtdgDOvM5hKT6A",
+    "UCCJm5G9w23fPCq2qa4ifg1w"
+  ],
+  "characters": {
+    "理子": {
+      "side": "left",
+      "speaker_id": 2,
+      "text_color": [
+        255,
+        255,
+        0
+      ],
+      "expressions": [
+        "normal",
+        "laugh",
+        "sad",
+        "surprise",
+        "think"
+      ],
+      "role": "解説役（科学に詳しい女の子）",
+      "appearance": "young Japanese anime girl with long silver-white (platinum) ponytail hair, wearing a white lab coat over a school uniform, curious cheerful expression, chibi-style with a big round head and big eyes, cute educational explainer character"
+    },
+    "真": {
+      "side": "right",
+      "speaker_id": 3,
+      "text_color": [
+        100,
+        230,
+        255
+      ],
+      "expressions": [
+        "normal",
+        "laugh",
+        "surprise",
+        "happy",
+        "sad"
+      ],
+      "role": "リスナー役（素朴な疑問を持つ男の子）",
+      "appearance": "young Japanese anime boy named Makoto with short black hair and round glasses, wearing a casual blue shirt, smart curious expression, chibi-style with a big round head and big eyes, cute educational explainer character"
+    }
+  },
+  "publish_settings": {
+    "auto_publish": false,
+    "default_privacy": "public",
+    "short_delay_minutes": 10,
+    "short_description_template": "🎬 フル解説はこちら！\n{main_url}\n\n{original_description}",
+    "auto_comment": {
+      "enabled": true,
+      "question": "これ知ってた？他にも気になる「なんで？」があったらコメントで教えて！"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "1分科学｜ショート全集",
+      "main": "【ゆっくり解説】日常に潜む科学の謎シリーズ",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "「これ科学的にどうなの？」という疑問をコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
+    }
+  },
+  "description_template": {
+    "main_intro": "{title}についてリコとマコトがゆっくり解説します。\n日常のふとした疑問を科学の視点から分かりやすく紐解いていきます。\nぜひ最後までご視聴ください！",
+    "main_hashtags": "#ゆっくり解説 #科学 #雑学 #日常の謎 #豆知識",
+    "short_hashtags": "#shorts #ゆっくり解説 #雑学 #豆知識 #科学"
+  },
+  "thumbnail_template": {
+    "badge_text": "ゆっくり解説",
+    "badge_color": [
+      220,
+      40,
+      40
+    ],
+    "hook_color": [
+      255,
+      255,
+      50
+    ],
+    "subtitle_color": [
+      80,
+      220,
+      255
+    ],
+    "style_hint": "明るく目を引く科学系チャンネルのサムネイル。\n- 背景は『明るくカラフルで楽しい』を最優先する。暗い／陰鬱／ホラー調は絶対NG。\n- background_concept は必ず『bright, vibrant, colorful, well-lit, daylight, cheerful, high-key lighting, clear blue sky / pastel sky / soft sunlight / bright laboratory』のような明るさを示す英語キーワードを複数含めること。『dark / moody / dim / shadowy / cinematic noir / night』など暗さを示す語は禁止。\n- 被写体は科学的に正確で、ポップで親しみやすいクローズアップ（脳・細胞・宇宙の昼面・夢の世界・実験器具・色とりどりの粒子など）。色は鮮やかなパステル＋ビビッドの組み合わせで、視認性の高い背景にする。\n- 中央〜上部に主役を置き、下部はやや空けて文字を載せやすくするが、空けた部分も暗くせず明るいグラデーション（白／クリーム／薄黄／薄水色）にすること。\n- line1（白）は状況・前振り（例: 『なぜ夢で…？』）。line2（黄）は核となる驚き・疑問でインパクト最大化（『声が出ない理由！？』）。\n- line3_badge は赤で『衝撃の事実』『科学が解明』『○○の正体』など。sub_text は答えを匂わせる明るい煽り。",
+    "background_style_suffix": "Style: bright, vibrant, cheerful YouTube thumbnail aesthetic for an educational science channel. High-key daylight lighting, saturated pop colors, cheerful pastel-and-vivid palette, soft clean shadows, crisp focus on the central subject, friendly approachable mood — like a colorful science textbook cover. Absolutely NOT dark, moody, noir, dim, or horror-styled.",
+    "gradient_overlay": {
+      "top_height_pct": 42,
+      "top_opacity_start": 0.38,
+      "top_opacity_mid": 0.12,
+      "bottom_height_pct": 32,
+      "bottom_opacity_start": 0.35,
+      "bottom_opacity_mid": 0.1
+    },
+    "short_bg_gradient": {
+      "top": [
+        55,
+        0,
+        120
+      ],
+      "bottom": [
+        10,
+        5,
+        150
+      ],
+      "orb": [
+        120,
+        40,
+        240
+      ],
+      "dot": [
+        255,
+        80,
+        180
+      ]
+    }
+  },
+  "defaults": {
+    "speed": 1.3,
+    "target_duration": 720,
+    "bg_type": "static",
+    "bg_path": "assets/backgrounds/classroom.png",
+    "short_overlay_style": {
+      "opening": {
+        "font_size_max": 104,
+        "font_size_min": 72,
+        "stroke_width": 8,
+        "glow_stroke_extra": 7,
+        "dim_alpha": 130,
+        "punch_start_scale": 0.88,
+        "accent_color": [
+          70,
+          160,
+          225
+        ]
+      },
+      "hook_caption": {
+        "accent_color": [
+          80,
+          220,
+          255
+        ],
+        "band_alpha": 150,
+        "y_center": 1000
+      },
+      "subtitle": {
+        "font_size": 62,
+        "line_gap": 84,
+        "stroke_width": 6,
+        "stroke_color": [
+          12,
+          26,
+          48
+        ],
+        "color": [
+          255,
+          255,
+          255
+        ],
+        "glow_extra": 0
+      }
+    },
+    "use_illustrations": true,
+    "hashtags": [
+      "#ゆっくり解説",
+      "#雑学",
+      "#豆知識",
+      "#科学"
+    ],
+    "short_title_hashtags": "#shorts #雑学 #豆知識",
+    "category": "27",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日2本 更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
+  },
+  "content_policy": {
+    "tone": "身近・親しみやすい（隣で教えてくれる距離感）",
+    "age_rating": "all_ages",
+    "cta_position": "end_of_video",
+    "cta_style": "casual",
+    "end_cta": {
+      "enabled": true,
+      "wording": "面白かったらチャンネル登録よろしくね",
+      "reason": "身近な不思議を毎日1本ずつ解き明かしていて、次の回も一緒に見てほしいから"
+    },
+    "cliffhanger": {
+      "enabled": true,
+      "wording": "同じシリーズの他の動画も見てって"
+    },
+    "short_end_line": {
+      "omit_related_video": true,
+      "wording": "今日から意識してみて。同じシリーズの動画も置いてあるよ"
+    }
+  },
+  "theme_priority": {
+    "label": "体の不思議 と 睡眠・夢（2026-08-04 PDCA レポートの実データで1位・2位。この2ジャンルを最優先で回す）",
+    "categories": [
+      "【最優先】いま起きている感覚・反射の科学: 炭酸のツーン・目を閉じたときのふらつき・冷たい物でこめかみが痛む・耳が詰まる・鳥肌など、視聴者がその場で再現できる数秒の感覚（2026-08-15 実データで初動1489回/日とチャンネル最高。毎バッチ最低1件は必ず入れる）",
+      "身近な体の不思議: 痛覚・体温・耳鳴り・くしゃみ・あくび・免疫・涙・肌・指など、視聴者自身の体で今まさに起きている現象（累計75本・合計再生1位。毎バッチ最低2件は必ず入れる）",
+      "睡眠・夢の科学: なぜ夢を見るのか・金縛り・寝言・レム睡眠・寝落ちなど（累計平均は最上位だが、2026-08-15 時点で直近15本中10本が睡眠系に偏り初動が落ちている。**毎バッチ1件までに制限**し、連続バッチで同じ睡眠サブテーマを繰り返さない）",
+      "脳・記憶・心理: 既視感・思い出せない・集中が切れるなど、日常で体感する脳の挙動（平均524回・第3位。上位2ジャンルの次に置く）"
+    ],
+    "required_count_per_batch": 3,
+    "good_examples": [
+      "なぜ夢で見たことを朝には忘れてしまうのか？眠りの90分サイクルの正体",
+      "なぜ寝落ちの瞬間に体がビクッとなるのか？その0.5秒に起きていること",
+      "くしゃみの瞬間、なぜ目の前が光る？0.5秒間に体で起きている変化",
+      "なぜ食後に眠くなるのか？脳への血流が食事直後に30%減っていた"
+    ],
+    "avoid_categories": [
+      "宇宙・天体（6本すべて0再生・平均0回で実データ最下位。genre_blacklist でも生成停止済み。単体テーマにしない）",
+      "日常の違和感カテゴリ（平均195回。体感を伴わない題材は避ける）",
+      "抽象的・遠い話題(宇宙の起源・量子論の数式・古代文明の謎)は最大1件まで。視聴者の手の届く範囲の現象を優先する。"
+    ],
+    "title_style": "タイトルは【疑問形 + 具体数字】で書く。【2026-08-23 登録者実測により変更】①疑問符「？」を含む形は1本あたり登録者 0.324 vs 0.150（2.16倍）で最も効くため、必ず疑問形にする。②「なぜ〇〇なのか」始まりは1本あたり登録者 0.400 vs 0.253（1.58倍）で有効なので積極的に使う（前日の使用抑制を撤回）。※同コホートのCTRは 0.79% vs 1.48%（0.53倍）と負であり、CTRと登録者で符号が食い違う。1本あたり登録者は再生数を経た最終成果であるため後者を優先するが、サムネイル側でクリック率を補う必要がある点に注意する。③「本当の理由」「実は」は1本あたり登録者 0.241 vs 0.344（0.70倍）で逆効果のため使わない。※測定に使った述語は「本当」「実は」。④「99%が知らない」の禁止を解除する。登録者ベースで測ると1本あたり登録者 0.417 vs 0.265（1.57倍）、登録/1000再生 0.47 vs 0.29、CTR 1.53% vs 1.28% と3指標すべてで正だった。前日は再生数0.94倍を理由に禁止していたが、至上目標は登録者であるため判断が誤っていた。ただし95%CI 0.76-3.26 と有意ではないため必須化もしない。多用せず、内容が伴う回にのみ使う。なお「9割が勘違い」は該当4本・実登録1人と少数で判定できないため、当面は使わない。⑤「0.3秒」「30秒」「2倍」「17件」のような体感できる具体数字を1つ入れる。ただし出典が確認できない数字を創作してはならない。結論はタイトルに含めない。70字前後を目安にする。「〜について」「〜とは」「〜を解説」のような説明語尾は使わない。",
+    "viral_hooks": "「なぜ〇〇なのか」の疑問形 / 「99%が知らない」系の希少性ワード / 具体的な数字（0.3秒・2倍・17件） / 体の不思議・睡眠・夢という誰もが毎日体験する題材 / 意外性 / 日常と科学のギャップ / 視聴者自身の体験との接続 / 冒頭3秒の『これ知ってた？』型フック / 身体の謎・食べ物の科学のシリーズ連作（※2026-08-23: 「99%が知らない」は登録者ベースで1.57倍と正だったため、前日の禁止を解除し推奨のまま維持。ただし有意ではないため多用はしない）",
+    "series_lineup": [
+      "体の謎シリーズ",
+      "睡眠と夢シリーズ",
+      "食べ物の科学シリーズ",
+      "感覚のふしぎシリーズ",
+      "毎日の習慣シリーズ",
+      "身の回りのモノの科学シリーズ"
+    ],
+    "title_power_words": [
+      "体",
+      "脳",
+      "睡眠",
+      "毎日",
+      "危険"
+    ]
+  },
+  "theme_blacklist": [
+    "骨伝導",
+    "しゃっくり",
+    "横隔膜",
+    "録音した自分の声",
+    "録音の声",
+    "自分の声が別人",
+    "宇宙",
+    "天体",
+    "星",
+    "銀河",
+    "酸素が1秒",
+    "ドアが閉まる寸前",
+    "センサーの待機設計",
+    "本を読むと眠くなる",
+    "本だけで眠く",
+    "待機設計",
+    "ドアが閉ま",
+    "酸素が消え",
+    "口の乾き",
+    "本を開いた",
+    "本を読むと",
+    "毎晩3時"
+  ],
+  "genre_blacklist": [
+    "宇宙・天体",
+    "日常の違和感"
+  ],
+  "theme_seeds": [
+    {
+      "title": "なぜ金縛りは『いつも決まった時間』に起きるのか",
+      "angle": "レム睡眠中に体だけが眠ったままになる仕組み。発生時刻が偏る理由を睡眠周期の90分サイクルから説明する"
+    },
+    {
+      "title": "夢を見ている時間は実は一晩でたった〇分しかない",
+      "angle": "レム睡眠の総量と、体感時間が引き伸ばされて感じる理由。朝には8割忘れている記憶固定のメカニズム"
+    },
+    {
+      "title": "眠りに落ちる瞬間、脳が最後に手放す感覚はどれなのか",
+      "angle": "入眠時に視覚・聴覚・触覚が落ちる順番。寝落ち直前に声だけ聞こえる現象の正体"
+    },
+    {
+      "title": "夢遊病の人が朝まったく覚えていない本当の理由",
+      "angle": "深いノンレム睡眠中に運動野だけが起きる解離状態。記憶を作る海馬が眠ったままである点を軸にする"
+    },
+    {
+      "title": "睡眠不足の脳は、起きたまま数秒だけ眠っている",
+      "angle": "マイクロスリープの実態。自覚がないまま脳の一部が局所睡眠に入る研究データで危険性を示す"
+    },
+    {
+      "title": "なぜ二度寝はあんなに気持ちいいのか",
+      "angle": "睡眠慣性と報酬系ドーパミンの関係。浅いレム睡眠に再突入することで多幸感が生まれる仕組み"
+    },
+    {
+      "title": "アラームが鳴る直前に自然に目が覚める人の脳で起きていること",
+      "angle": "起床予定時刻に合わせてコルチゾールが先回りして分泌される『予期覚醒』の研究を軸にする"
+    },
+    {
+      "title": "なぜ鳥肌は寒さだけでなく感動でも立つのか",
+      "angle": "立毛筋という『毛を逆立てる名残の筋肉』が、恐怖・感動・音楽で誤作動する仕組み。進化の遺物が感情スイッチになった理由"
+    },
+    {
+      "title": "正座で足がしびれるのは血ではなく『神経の悲鳴』だった",
+      "angle": "圧迫されているのは血管より神経。ジンジンの正体は神経が再起動する時の誤信号であることを段階的に解説"
+    },
+    {
+      "title": "なぜ冷たい物を一気に食べると『こめかみ』が痛くなるのか",
+      "angle": "アイスクリーム頭痛。口内の冷却が三叉神経を介して頭の痛みとして誤認される関連痛の仕組みを、数秒で再現できる現象として説明する"
+    },
+    {
+      "title": "なぜ耳が詰まった感じはあくびで一瞬で治るのか",
+      "angle": "耳管が開いて中耳と外気の気圧差が解消される瞬間。エレベーターや飛行機で誰もが体験する数秒の現象を軸にする"
+    },
+    {
+      "title": "なぜ目にゴミが入っていないのに涙が出るのか",
+      "angle": "反射性分泌と基礎分泌の違い。あくび・玉ねぎ・強い光で出る涙は成分そのものが違うという事実を軸にする"
+    },
+    {
+      "title": "なぜ高い所に立つと足の裏がゾワッとするのか",
+      "angle": "危険を『感じる前』に脊髄と前庭系が先に反応する防御反射。ゾワッの正体は落下シミュレーションを体が勝手に始めている信号だと解説"
+    },
+    {
+      "title": "なぜエレベーターが下がる瞬間、体がフワッと浮く感じがするのか",
+      "angle": "内耳の耳石が慣性でズレて『落下中』と誤報する仕組み。0.5秒で誰もが再現できる感覚・反射系フック"
+    }
+  ],
+  "video_format": {
+    "layout": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "char_canvas_w_ratio": 0.418,
+      "char_y_offset": 130,
+      "char_x_inset_ratio": 0.15,
+      "speaker_glow": true,
+      "nonspeaker_opacity": 0.5,
+      "text_box_height_ratio": 0.2,
+      "text_box_opacity": 180,
+      "text_font_size": 42,
+      "text_stroke_width": 3,
+      "text_line_spacing": 4,
+      "text_margin_x": 60,
+      "illustration_size": 360,
+      "illustration_interval": 30
+    },
+    "colors": {
+      "bg_color": [
+        15,
+        25,
+        50,
+        255
+      ],
+      "text_box_color": [
+        10,
+        20,
+        42
+      ],
+      "text_stroke_color": [
+        0,
+        0,
+        0
+      ]
+    },
+    "audio": {
+      "speed": 1.3,
+      "pause_between": 0.3,
+      "bgm_volume": 0.3,
+      "bgm_path": null
+    },
+    "illustration_style": {
+      "style": "vivid",
+      "format": "landscape",
+      "art_style": "colorful hand-drawn educational illustration in a slightly more refined, textbook-diagram-leaning manga style — pop and friendly, but a touch more serious and structured than typical kawaii art. Confident, slightly thinner and more precise outlines like a science textbook figure with cartoon warmth, flat-color shading with subtle gradients, restrained sparkle decorations used sparingly. Lines are firm and the look is closer to a textbook diagram than full kawaii.",
+      "background": "soft pastel cream background, comic-panel layout with a thick red border frame around the whole illustration",
+      "include_characters": true,
+      "frame_style": "comic-red-border",
+      "extra_prompt": "Anatomically accurate structural drawing where relevant (spine, organs, cells, mechanisms). Gently anthropomorphize the central scientific concept with simple dot-and-curve eyes and small modest expressions (NOT big sparkly anime eyes). Use neat Japanese labels with pointer lines, clear arrows, and small icons to explain cause→effect — like a friendly science textbook figure. Comic-panel layout with a thick red border frame. Educational science explainer that is cute and approachable but leans toward textbook clarity.",
+      "allow_text_labels": true,
+      "allow_frame": true
+    },
+    "branding": {
+      "watermark_text": null,
+      "cta_style": "casual"
+    },
+    "output": {
+      "target_duration": 720,
+      "gen_type": "short",
+      "bg_type": "static",
+      "bg_path": "assets/backgrounds/classroom.png",
+      "use_illustrations": true
+    },
+    "youtube": {
+      "channel_id": "UC1OckVkZahT3_fM6W8hD6dg",
+      "default_tags": [
+        "ゆっくり解説",
+        "科学",
+        "雑学",
+        "日常の謎",
+        "ゆっくり霊夢",
+        "ゆっくり魔理沙",
+        "豆知識",
+        "科学解説",
+        "日常科学",
+        "雑学動画",
+        "不思議",
+        "教育"
+      ],
+      "default_category": "27",
+      "privacy_status": "private",
+      "upload_schedule": null
+    },
+    "analytics": {
+      "enabled": true,
+      "fetch_retention_for": 10,
+      "performance_threshold": {
+        "min_ctr": 4,
+        "min_retention": 40,
+        "min_views_7d": 1000
+      }
+    },
+    "short_illustrations": {
+      "enabled": true,
+      "illustration_method": "dalle",
+      "max_count": 2,
+      "card_style": "textbook",
+      "card_label": "解説",
+      "card_accent": [
+        74,
+        108,
+        212
+      ],
+      "card_x": 64,
+      "card_y": 250,
+      "card_w": 952,
+      "card_h": 430,
+      "char_cy": 905,
+      "char_icon_d": 210
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "science",
+      "allow_shake": false,
+      "allow_flash": false,
+      "allow_pixelate": false,
+      "allow_glitch": false,
+      "allow_tint": false,
+      "short_beat_zoom": true,
+      "beat_interval": 2.0,
+      "beat_zoom_max": 0.04
+    }
+  },
+  "autopilot": {
+    "enabled": true,
+    "schedule": {
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "hour": 17,
+      "minute": 0,
+      "times": [
+        {
+          "hour": 17,
+          "minute": 0,
+          "days_of_week": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "hour": 13,
+          "minute": 0,
+          "days_of_week": [
+            0,
+            6
+          ]
+        }
+      ]
+    },
+    "duration_minutes": 12,
+    "gen_type": "short",
+    "publish_lead_minutes": 45,
+    "theme_queue": [
+      {
+        "id": "5d50f589",
+        "title": "なぜ暗い所から出た瞬間だけ世界が白く飛ぶのか",
+        "angle": "明順応にかかる秒数と、桿体細胞が飽和する仕組み"
+      },
+      {
+        "id": "043d5f52",
+        "title": "なぜ階段の最後の一段を踏み外した気がするのか",
+        "angle": "脳が先に作っていた段数の予測と実際がズレる瞬間"
+      },
+      {
+        "id": "737cd346",
+        "title": "なぜ寝る直前に限って昔の失敗を思い出すのか",
+        "angle": "入眠時に前頭前野の抑制が外れて記憶が浮上する仕組み"
+      },
+      {
+        "id": "b08c207d",
+        "title": "なぜ舌をやけどすると数日だけ味がわからなくなるのか",
+        "angle": "味蕾の入れ替わり周期が10日前後という事実を軸に"
+      },
+      {
+        "id": "9f0c4f29",
+        "title": "なぜ人混みでも自分の名前だけ聞こえるのか",
+        "angle": "カクテルパーティー効果。聞いていないはずの音の処理"
+      },
+      {
+        "id": "be83588b",
+        "title": "なぜ目を強くこすると光の模様が見えるのか",
+        "angle": "眼内閃光。圧力が光の信号に化ける仕組み"
+      },
+      {
+        "id": "c419bc67",
+        "title": "なぜ甘い物のあとに塩気が欲しくなるのか",
+        "angle": "味覚の順応と対比効果。3分で戻る感度の変化"
+      },
+      {
+        "id": "6ef44362",
+        "title": "なぜ蚊に刺された場所は数分してから痒くなるのか",
+        "angle": "刺された瞬間ではなく後から来る理由。免疫反応の時間差"
+      },
+      {
+        "id": "cef6c49e",
+        "title": "なぜ歩くとき腕は足と逆に振れるのか",
+        "angle": "回転の打ち消し。意識せずに体が行う制御"
+      },
+      {
+        "id": "5bc58354",
+        "title": "なぜ濡れた紙は破れやすくなるのか",
+        "angle": "繊維の絡み合いが水でほどける仕組み"
+      },
+      {
+        "id": "6f60d0ea",
+        "title": "なぜ寝起きの口の中だけネバつくのか",
+        "angle": "睡眠中に唾液の分泌が1/10に落ちる事実を軸に"
+      },
+      {
+        "id": "3e731a87",
+        "title": "なぜ長時間座ると腰だけが先に痛むのか",
+        "angle": "椎間板にかかる圧力が立位の1.4倍になる仕組み"
+      },
+      {
+        "id": "57cf3e1d",
+        "title": "なぜコップの水は放置すると気泡がつくのか",
+        "angle": "溶けていた空気が出てくる温度と時間"
+      },
+      {
+        "id": "13275eee",
+        "title": "なぜ歩いている途中で急に足の運び方がわからなくなるのか",
+        "angle": "自動化された動作を意識した瞬間に崩れる現象"
+      },
+      {
+        "id": "e2e9ce7a",
+        "title": "なぜ声を出さずに読んでいるのに喉が動くのか",
+        "angle": "黙読中の微細な発声筋の活動"
+      },
+      {
+        "id": "7ddad6f6",
+        "title": "なぜ耳が詰まった感じは飲み込むと3秒で治るのか",
+        "angle": "耳管の開閉と気圧差。秒数の具体数字を必ず入れる"
+      },
+      {
+        "id": "6d345996",
+        "title": "なぜ鏡の前だけ自分の顔が左右で違って見えるのか、99%が気づかない差",
+        "angle": "「99%が知らない」型+左右非対称の実測値"
+      }
+    ],
+    "auto_optimize_schedule": false
+  },
+  "voice_style": {
+    "tone": "隣に座って教えてくれる距離感の語り。専門用語より『あなたも昨日やったはず』の実体験から入る。授業・講義のトーンにはしない。視聴者自身の体で起きていることだと最後まで意識させる",
+    "narrator_persona": "身近な現象を専門にしている解説役。難しい仕組みを噛み砕くのが得意で、必ず『あなたの体でも今こうなっている』と視聴者に接続してから説明に入る。分かっていないことは『ここは科学でもまだ結論が出ていない』と正直に言う",
+    "opening_hooks": [
+      "これ知ってた？ 昨日の夢、思い出せないのには理由がある",
+      "実は今この瞬間も、あなたの体で同じことが起きてる",
+      "これ、99%の人が理由を知らないまま毎日やってる",
+      "なんで冷たい物を食べると頭が痛くなるの？考えたことある？",
+      "寝る前にスマホ見た結果、体で起きてることがヤバい"
+    ],
+    "forbidden": [
+      "SCP",
+      "財団",
+      "収容",
+      "[REDACTED]",
+      "DATA EXPUNGED",
+      "シロ",
+      "クロ",
+      "ヒカリ",
+      "ソラ",
+      "ケンタ"
+    ],
+    "style_rules": [
+      "【保持率対策】全チャンネル実測で再生位置20%地点から離脱が急増する（audience_watch_ratio が 1.0 を割る）。動画の20%地点（8行構成なら2行目終わり）に「まだ答えを言っていない」ことが分かる一言（『ただし、ここからが本題』『問題はこの次』）を必ず置き、答えの提示は40%地点以降まで引っ張る。",
+      "【タイトル実測・08-23更新】至上目標である登録者ベースで再評価した結果、「なぜ」始まりは1本あたり登録者 0.400 vs 0.253（1.58倍）で有効だったため、前日の使用抑制を解除する。疑問符「？」を含む形は 0.324 vs 0.150（2.16倍）で最も効く。一方「本当の理由」「実は」系は 0.241 vs 0.344（0.70倍）で逆効果のため使わない。「99%が知らない」の禁止は解除する。1本あたり登録者 0.417 vs 0.265（1.57倍）、登録/1000再生 0.47 vs 0.29、CTR 1.53% vs 1.28% と3指標で正だった。前日は再生数のみを見て禁止していた誤り。ただし有意ではないため多用はしない。",
+      "1行目は必ず「これ知ってた？」「実は〇〇」「〇〇した結果」「なんで〇〇だけ〇〇なの？」のいずれかの型で始める。挨拶・テーマ紹介から入るのは禁止（冒頭3秒で離脱するため）。",
+      "ショートの5行目には必ず『しかも』『ところが』で角度を変える意外な展開を置き、中盤の飽きを断ち切る。",
+      "冒頭10秒で視聴者自身の体験に接続する（例：『寝る前にスマホ見てて、急に体がビクッとなったことない？』）。",
+      "結論・答えは冒頭で言わない。疑問と違和感だけを提示して、本編で解く。",
+      "専門用語を出したら必ずその場でひと言に言い換える。言い換えなしで先に進まない。",
+      "リスナー役のリアクションは『言われてみれば確かに』『それ昨日あった』のような自分事化を中心にする。",
+      "科学的に未解明な部分は誤魔化さず『ここはまだ分かっていない』と言い切る。断定で埋めない。",
+      "締めは『今夜寝るとき、ちょっと意識してみて』のように、視聴者が今日試せる形でまとめる。",
+      "そのうえで**動画の最後の1行は必ずチャンネル登録の誘導で終える**（例:『面白かったらチャンネル登録よろしくね。毎日1本、身近な不思議を解いてるから、明日も一緒に見てほしいな』）。Tips や余韻で終わって登録に触れないのは禁止。",
+      "解説役は必ず丁寧語（です・ます）で話す。1行でもタメ口の解説が混ざったら不合格。リスナー役だけがタメ口で驚く、という役割分担で親しみやすさと丁寧さを両立させる。",
+      "1本につき最低1つ、身近な物への例え話を必ず入れる（例:『満員電車』『水道のホースを踏む』『スマホの通知』）。専門用語をそのまま置いていくのは不合格。",
+      "驚きの表現は『へぇ〜、知らなかった！』『えっ、そうなんですか!?』系の明るい驚きで統一する。『怖い』『ゾッとする』のような恐怖寄りの語彙は使わない（SCPラボと差別化するため）。"
+    ],
+    "speech_signature": "解説役(理子)は『です・ます』の柔らかい丁寧語で話す。堅い講義口調ではなく、隣で教えてくれる先輩の丁寧語（『〜なんです』『〜してみてください』）。リスナー役(真)は敬語を崩したタメ口寄りで、驚きを素直に出す（『えっ、そうなんだ！』）。2人とも汚い言葉・ネットスラング・煽り口調は使わない",
+    "pacing": "説明1つにつき必ず驚きのリアクションを1つ挟む。説明→驚き→説明→驚き、の交互リズムを最後まで崩さない。畳みかけて連続で説明しない",
+    "signature_phrases": [
+      "へぇ〜、知らなかった！",
+      "たとえるなら、〇〇と同じなんです",
+      "言われてみれば確かに",
+      "実はこれ、今あなたの体でも起きています",
+      "ここ、面白いのが"
+    ],
+    "reaction_style": "リスナー役のリアクションは『へぇ〜、知らなかった！』『えっ、それ昨日やった！』のような素直な驚き＋自分事化を中心にする。皮肉・ツッコミ・煽りは使わない",
+    "banned_phrasing": [
+      "怖い・不気味・呪い・ゾッとするなどのホラー寄りの語彙（このチャンネルは明るい驚きで引っ張る）",
+      "『〜だぜ』『〜だろ』のような粗い男口調",
+      "ネットスラング（草・ワロタ・ワイ・お前ら）",
+      "「いかがでしたか」「〜について解説します」のような定型の説明語尾"
+    ],
+    "hook_patterns": [
+      {
+        "name": "体感再現型",
+        "template": "「今すぐ〇〇してみてください」で始め、視聴者がその場で再現できる数秒の体感から入る",
+        "example": "今すぐ耳をふさいでみてください。あのゴーって音、血の流れる音じゃないんです"
+      },
+      {
+        "name": "これ知ってた？型",
+        "template": "「これ知ってました？ 〇〇って実は△△なんです」— 共感と好奇心を同時に取る",
+        "example": "これ知ってました？ あくびって、眠いから出るわけじゃないんです"
+      },
+      {
+        "name": "常識ひっくり返し型",
+        "template": "「実は〇〇、△△だったんです」— 誰もが正しいと思っていることを1行で覆す",
+        "example": "実は冷たい物で頭が痛くなるの、頭は全然冷えてないんです"
+      },
+      {
+        "name": "違和感の問い型",
+        "template": "「なんで〇〇だけ△△なんでしょう？」— 言われて初めて気づく違和感を突く",
+        "example": "なんで正座のしびれだけ、あんなに痛いんでしょう？"
+      },
+      {
+        "name": "たとえ話先出し型",
+        "template": "身近な物のたとえを先に出してから、それが体の話だと明かす",
+        "example": "満員電車で身動きが取れなくなる、あれと同じことが今あなたの足で起きています"
+      }
+    ]
+  },
+  "short_series_name": "1分科学：",
+  "short_format": {
+    "line_count": 8,
+    "line_chars": "1〜7行目は26〜36字（目標31字）、8行目のみ+15字まで許容",
+    "total_chars_min": 260,
+    "total_chars_max": 300,
+    "structure": [
+      "1行目=**3秒フック(最重要)**: 「これ知ってた？」「実は〇〇」「なんで〇〇だけ〇〇なの？」型で始める。挨拶・自己紹介は禁止。視聴者が『え？』と指を止める疑問形にする。",
+      "2行目=**リスナーのリアクション**: 真が素直に驚く・食いつく（『えっ、そうなんですか!?』『言われてみれば確かに』）。解説は始めない。",
+      "3行目=**核となる事実①**: 必ず具体的な数字・研究データ・固有名詞を1つ以上含める（例:「実は97%の人が…」「0.3秒で…」）。",
+      "4行目=**たとえ話で自分ゴト化**: 3行目を身近な物に例える（『満員電車で…と同じ』『スマホの通知みたいなもの』）。専門用語をそのまま放置しない。",
+      "5行目=**意外な展開**: 『しかも』『ところが』で角度を変える。中盤の飽きを断ち切る一撃。",
+      "6行目=**核となる事実②**: 5行目の意外性を裏付ける2つ目の事実。数字か具体例を必ず入れる。",
+      "7行目=**オチ**: 短くスパッと結論。『だから〇〇だったんです』の形で納得感を出す。",
+      "8行目=**高評価CTA+登録CTA**: **必ず高評価を先に求める**。『今日のこれ、面白かったら高評価だけ押してって。登録すれば毎日1本届くよ』"
+    ],
+    "extra_rules": [
+      "**8行目には必ず『高評価』の語を入れ、登録より先に置く。** 成熟動画245本のch内統制比較で、高評価率上位群の登録転換は下位群の2.16倍（0.65 vs 0.30 登録/1000再生）。一方で維持率は1.14倍とほぼ無効だった。高評価はこのチャンネル群で登録者を増やす最も強い観測レバー。",
+      "解説役(理子)は必ず丁寧語（です・ます）。1行でもタメ口が混ざったら不合格。リスナー役(真)だけがタメ口。",
+      "1本につき最低1つ、身近な物への例え話を必ず入れる。",
+      "『怖い』『ゾッとする』のような恐怖寄りの語彙は使わない（SCPラボと差別化）。",
+      "冒頭で結論を言わない。疑問と違和感だけを提示して本編で解く。"
+    ],
+    "target_seconds_hint": 25,
+    "length_rationale": "2026-08-24: 維持率は登録にも再生にも寄与しない（ch内二分で登録1.14倍、再生四分位は平坦）と実測で判明したため、08-23に維持率目的で行った240字への短縮を撤回。260字＝約29秒で test_short_format の下限を満たす。"
+  },
+  "production": {
+    "tool": "moviepy",
+    "pipeline": "standard",
+    "modules": [
+      "r6_enhancer",
+      "r7_enhancer",
+      "r8_enhancer"
+    ],
+    "auto_publish": true
+  }
+}

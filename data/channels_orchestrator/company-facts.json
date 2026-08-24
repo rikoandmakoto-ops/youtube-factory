@@ -1,0 +1,582 @@
+{
+  "id": "company-facts",
+  "name": "企業のホンネ",
+  "concept": "有名企業の年収・ボーナス・福利厚生・離職率を、リアルな店舗写真の上に数字ファクトとして叩き込むショートチャンネル。1本1社、30〜50秒。赤帯ヘッダーで統一ブランド、白太字テキストで数字を連打。転職・就活層のZ世代がターゲット。",
+  "style": "facts_overlay",
+  "youtube_channel_id": "UCB07OOxWeKK6v86KsSYgnNA",
+  "image_mode": "collect",
+  "image_collect": {
+    "provider": "wikimedia,openverse,pexels",
+    "safe_search": true,
+    "license_filter": "cc",
+    "max_per_query": 8,
+    "attribution_template": "出典: {source}",
+    "mix_strategy": "heuristic",
+    "query_template": "{company_name} 店舗 外観 看板",
+    "orientation": "portrait"
+  },
+  "voice_style": {
+    "tone": "落ち着いたビジネス調のナレーション。数字は淡々と、しかし要所で皮肉を一滴落とす。持ち上げっぱなしにせず『その裏で何が起きているか』まで必ず言い切る。はしゃいだテンションや感嘆符の連打はしない。信頼できる情報番組の距離感を保つ",
+    "narrator_persona": "企業のIR資料と口コミを両方読み込んでいるナレーター。表の数字と現場の実態のズレを知っていて、『公表されているのはここまで』と線を引ける。断定できないところは推定と明示する。企業を叩くのではなく、事実で静かに裏側を見せる",
+    "opening_hooks": [
+      "この会社の平均年収、いくらだと思う？",
+      "実はこの会社、離職率3%なんだ",
+      "年収850万円。これ、あの身近な企業の数字",
+      "この福利厚生、知らずに落ちてる人が多すぎる"
+    ],
+    "forbidden": [
+      "SCP",
+      "財団",
+      "収容",
+      "ポケモン",
+      "妖怪",
+      "リコ",
+      "マコト",
+      "ヒカリ",
+      "ソラ",
+      "シロ",
+      "クロ"
+    ],
+    "style_rules": [
+      "1画面目のナレーションは必ず『問い』か『驚き』で始める（例:『この会社の年収、いくらだと思う？』）。淡々と数字を読み上げる入りは不合格。",
+      "冒頭3秒で企業名と最もインパクトのある数字を出す（例：『ニトリ、平均年収850万円』）。",
+      "1ファクトにつき5〜8秒。数字→補足→次の数字のテンポで進める。",
+      "数字は必ず具体的に出す。『高い』『すごい』だけでは終わらない。",
+      "ネガティブな面も1つは入れてバランスを取る（例：『ただし1年目は力仕事が多い』）。",
+      "最後は『気になったらプロフィールもチェックしてね』でCTA。",
+      "対話形式にしない。1人のナレーションで完結させる。",
+      "3ファクトに1回は皮肉または裏側の一言を挟む（例:『数字だけ見れば、かなり良い』）。数字を読み上げるだけの並びが4つ続いたら不合格。",
+      "褒める数字を出したら、必ずどこかで『ただし』の一言を用意する。持ち上げるだけの構成にしない。",
+      "皮肉は企業攻撃にしない。事実と数字で静かに示し、断定できないことは『推定』と明示する。"
+    ],
+    "speech_signature": "です・ます調のナレーション。1文を短く言い切る。数字は必ず単位まで声に出す。感嘆符・顔文字・スラングは使わない",
+    "pacing": "1ファクト5〜8秒。数字→補足→次の数字で刻む。3ファクトに1回、皮肉または裏側の一言を差し込んで単調な数字読みにしない",
+    "signature_phrases": [
+      "実はこの裏で",
+      "数字だけ見れば、かなり良い",
+      "ただし、ここからが本題",
+      "公表されているのは、ここまで",
+      "この数字、業界では異常値です"
+    ],
+    "reaction_style": "対話しないので、驚きは語り手自身の一言で作る（『これ、業界平均の2倍です』『正直、ここまでとは思っていませんでした』）。感情は乗せるが、はしゃがない",
+    "banned_phrasing": [
+      "「いかがでしたか」「すごいですね」だけの中身のない感想",
+      "根拠のない断定（出典が言えない数字を言い切る）",
+      "特定企業を貶める言い回し・個人が特定できる話",
+      "ネットスラング・ゆっくり解説特有の口調"
+    ],
+    "hook_patterns": [
+      {
+        "name": "数字先出し型",
+        "template": "企業名と最もインパクトのある数字だけを、修飾なしで先に置く",
+        "example": "ニトリ、平均年収850万円。"
+      },
+      {
+        "name": "問いかけ型",
+        "template": "「この会社の〇〇、いくらだと思いますか？」— 数字を当てさせてから明かす",
+        "example": "この会社の平均年収、いくらだと思いますか？"
+      },
+      {
+        "name": "裏側暴露型",
+        "template": "「実はこの数字の裏で、〇〇が起きています」— 表の好条件と裏の実態をセットで出す",
+        "example": "有給消化率100%。実はこの裏で、ある制度が効いています"
+      },
+      {
+        "name": "逆説型",
+        "template": "「〇〇。ただし、これには理由があります」— 良すぎる数字に一拍で疑いを入れる",
+        "example": "離職率3%。ただし、この数字には続きがあります"
+      }
+    ]
+  },
+  "characters": {
+    "ナレーター": {
+      "side": "none",
+      "speaker_id": 13,
+      "dir": null,
+      "text_color": [
+        255,
+        255,
+        255
+      ],
+      "expressions": [],
+      "role": "ナレーター（画面に登場しない）",
+      "appearance": null
+    }
+  },
+  "publish_settings": {
+    "auto_publish": false,
+    "default_privacy": "public",
+    "auto_comment": {
+      "enabled": true,
+      "question": "この数字、正直どう思う？あなたの会社と比べてコメントで！"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "企業のホンネ｜ショート全集",
+      "main": "【企業の闇】大手企業の裏事情まとめ｜ゆっくり解説シリーズ",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "ホンネを暴いてほしい企業をコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
+    }
+  },
+  "description_template": {
+    "main_intro": "{company_name}の年収・ボーナス・福利厚生を徹底解説！\n転職・就活の参考にしてください。\n※データは公開情報・口コミサイトを元にしています。\n\nチャンネル登録よろしくお願いします！",
+    "main_hashtags": "#企業の闇 #企業解説 #ブラック企業 #年収 #転職",
+    "short_hashtags": "#shorts #企業の闇 #企業解説 #年収 #転職",
+    "omit_fullvideo_cta": true,
+    "short_intro": "この動画で紹介した数字は、有価証券報告書・公式IR・大手口コミサイトなどの公開情報を元にしています。",
+    "lead_template": "『{title}』の年収・待遇・裏事情を{channel}が数字でまとめました。"
+  },
+  "thumbnail_template": {
+    "badge_text": "企業分析",
+    "badge_color": [
+      26,
+      42,
+      72
+    ],
+    "hook_color": [
+      255,
+      255,
+      255
+    ],
+    "subtitle_color": [
+      236,
+      198,
+      112
+    ],
+    "style_hint": "企業の実店舗写真を背景に、赤帯ヘッダーと白太字テキストでインパクトを出す。参考: @sakai-l7u スタイル。"
+  },
+  "defaults": {
+    "speed": 1.2,
+    "target_duration": 40,
+    "bg_type": "slideshow",
+    "use_illustrations": false,
+    "hashtags": [
+      "#企業の闇",
+      "#企業解説",
+      "#年収",
+      "#転職",
+      "#ブラック企業"
+    ],
+    "category": "22",
+    "short_title_hashtags": "#shorts #企業分析 #年収 #転職",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
+  },
+  "content_policy": {
+    "tone": "データ重視・驚き喚起",
+    "age_rating": "all_ages",
+    "cta_position": "end",
+    "cta_style": "プロフィール誘導",
+    "guidelines": [
+      "データは有価証券報告書・OpenWork・転職会議など公開ソースに基づく",
+      "企業を過度に持ち上げたり、貶めたりしない。ポジ・ネガ両面を出す",
+      "個人の口コミは『口コミサイトによると』と出典を明示する",
+      "未上場企業の推定年収は『推定』と明記する",
+      "特定の転職サービスへの誘導は行わない"
+    ],
+    "avoid": [
+      "企業への誹謗中傷",
+      "個人の特定につながる情報",
+      "未確認のデータの断定",
+      "特定サービスのアフィリエイト誘導"
+    ]
+  },
+  "theme_priority": {
+    "label": "有名企業の年収・福利厚生・働き方データ",
+    "categories": [
+      "【最優先】時事ネタ連動: 決算発表・新店舗/新工場・値上げ・大型採用・M&A・不祥事など、直近で名前を見た企業を扱う（『今その企業の名前を見た』人が検索・視聴に来るため初動が強い）",
+      "ホワイト企業: 有給消化率・残業時間・定着率が高い企業（最優先。バズりやすい）",
+      "高年収企業: 平均年収・ボーナスが高い企業のリアルなデータ",
+      "意外な高待遇企業: 知名度は低いが福利厚生が充実している企業",
+      "大手小売・外食: ニトリ・ユニクロ・スタバなど身近な企業の裏側",
+      "IT・Web企業: Google・メルカリ・サイバーエージェントなどテック企業の実態"
+    ],
+    "required_count_per_batch": 5,
+    "good_examples": [
+      "ニトリ、超ホワイト企業の実態 — 有給消化率100%、ボーナス年2回で平均200万",
+      "ユニクロの平均年収がヤバい — 実は業界トップクラスの待遇",
+      "Googleジャパンの福利厚生を全部見せます — 無料食堂だけじゃない",
+      "コストコの時給が高すぎる理由 — パートでも年収400万超え",
+      "任天堂が離職率3%の理由 — 社員が辞めない秘密"
+    ],
+    "avoid_categories": [
+      "ブラック企業の過度な叩き（訴訟リスク）",
+      "個人の年収暴露",
+      "非公開の内部情報",
+      "政治的に敏感な企業"
+    ],
+    "title_style": "企業名を必ずタイトルに入れる。『〇〇の年収がヤバい』『〇〇、実はホワイト企業だった』のようにインパクト重視。数字は1つ入れる。 タイトルは『説明』ではなく『衝動』を作る——数字を先頭寄りに置き、読んだ瞬間に指が止まる語（実は/ヤバい/本当は/知らない）を必ず1つ入れる。",
+    "viral_hooks": "驚きの年収額 / 意外なホワイト企業 / 有名企業の裏側 / 数字のインパクト / 身近な企業の実態 / 冒頭3秒で企業名＋最強の数字 / 時事ネタ連動（最近ニュースで見た企業）",
+    "series_lineup": [
+      "身近な企業の年収シリーズ",
+      "ホワイト企業ファイルシリーズ",
+      "離職率が低い会社シリーズ",
+      "福利厚生がヤバい会社シリーズ",
+      "話題の企業の実態シリーズ"
+    ],
+    "title_power_words": [
+      "年収",
+      "手取り",
+      "離職率",
+      "ボーナス",
+      "格差",
+      "ブラック",
+      "激務"
+    ]
+  },
+  "theme_blacklist": [],
+  "genre_blacklist": [],
+  "theme_seeds": [
+    {
+      "title": "ニトリの実態",
+      "angle": "有給消化率100%、ボーナス平均200万、34期連続増収増益の超ホワイト企業"
+    },
+    {
+      "title": "ユニクロの年収",
+      "angle": "平均年収959万、グローバル企業としての待遇と激務の実態"
+    },
+    {
+      "title": "コストコの時給",
+      "angle": "時給1,500円〜、パートでも賞与あり、なぜここまで高いのか"
+    },
+    {
+      "title": "任天堂が辞められない理由",
+      "angle": "離職率3%、平均年収988万、福利厚生と社風の秘密"
+    },
+    {
+      "title": "スタバの福利厚生",
+      "angle": "パートナー割引・学費補助・ストックオプションの実態"
+    },
+    {
+      "title": "Googleジャパンの裏側",
+      "angle": "平均年収1,600万超、無料食堂、20%ルールの真実"
+    },
+    {
+      "title": "トヨタの生涯年収",
+      "angle": "終身雇用・年功序列の王道、生涯で稼げる金額は"
+    },
+    {
+      "title": "キーエンスの年収が異常",
+      "angle": "平均年収2,279万、なぜここまで高いのか仕組みを解説"
+    },
+    {
+      "title": "メルカリの働き方",
+      "angle": "フルリモート・副業OK・英語公用語化の実態"
+    },
+    {
+      "title": "サイゼリヤの原価率",
+      "angle": "なぜあんなに安いのか、社員の待遇は実際どうなのか"
+    }
+  ],
+  "video_format": {
+    "layout": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "short_width": 1080,
+      "short_height": 1920,
+      "short_fps": 30
+    },
+    "facts_overlay": {
+      "overlay_alpha": 100,
+      "header_badge": {
+        "text": "超ホワイト企業",
+        "bg_color": [
+          26,
+          42,
+          72
+        ],
+        "text_color": [
+          255,
+          255,
+          255
+        ],
+        "font_size": 56,
+        "y_position": 150,
+        "padding": [
+          18,
+          44
+        ]
+      },
+      "fact_text": {
+        "font_size_main": 96,
+        "font_size_main_min": 62,
+        "font_size_sub": 52,
+        "text_color": [
+          255,
+          255,
+          255
+        ],
+        "highlight_color": [
+          236,
+          198,
+          112
+        ],
+        "stroke_width": 8,
+        "stroke_color": [
+          0,
+          0,
+          0
+        ],
+        "y_center": 760,
+        "max_lines": 3,
+        "scrim_alpha": 120
+      },
+      "bottom_text": {
+        "font_size": 52,
+        "text_color": [
+          226,
+          196,
+          140
+        ],
+        "stroke_width": 6,
+        "y_position": 1420
+      },
+      "slideshow": {
+        "enabled": true,
+        "max_images": 6,
+        "switch_per_fact": true,
+        "query_suffixes": [
+          "店舗 外観",
+          "店内",
+          "本社",
+          "看板",
+          "ビル",
+          "売り場"
+        ]
+      },
+      "cta": {
+        "enabled": true,
+        "headline": "他の企業もチェック",
+        "sub": "プロフィールから見れます",
+        "bg_color": [
+          16,
+          22,
+          34
+        ],
+        "accent_color": [
+          198,
+          162,
+          92
+        ]
+      },
+      "motion": {
+        "enabled": true,
+        "ken_burns": 0.12,
+        "crossfade": 0.35,
+        "text_in": 0.32
+      },
+      "logo_chip": {
+        "enabled": true,
+        "size": 170,
+        "position": "top_left",
+        "margin": 40
+      }
+    },
+    "colors": {
+      "bg_color": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    "audio": {
+      "speed": 1.2,
+      "pause_between": 0.2,
+      "bgm_volume": 0.25,
+      "bgm_path": null
+    },
+    "branding": {
+      "watermark_text": "VOICEVOX:青山龍星",
+      "watermark_position": "bottom_right",
+      "watermark_opacity": 180,
+      "watermark_font_size": 18,
+      "cta_style": "profile_check"
+    },
+    "output": {
+      "target_duration": 45,
+      "gen_type": "short",
+      "bg_type": "slideshow",
+      "use_illustrations": false
+    },
+    "youtube": {
+      "channel_id": "",
+      "default_tags": [
+        "企業の闇",
+        "企業解説",
+        "ブラック企業",
+        "ゆっくり解説",
+        "裏事情",
+        "企業分析",
+        "年収",
+        "転職",
+        "就活",
+        "ホワイト企業",
+        "福利厚生",
+        "企業のホンネ"
+      ],
+      "default_category": "22",
+      "privacy_status": "private",
+      "upload_schedule": null
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "minimal",
+      "allow_shake": false,
+      "allow_flash": false,
+      "allow_pixelate": false,
+      "allow_glitch": false,
+      "allow_tint": false,
+      "zoom_max": 0.04,
+      "transition_duration": 0.3,
+      "short_beat_zoom": true,
+      "beat_interval": 1.9,
+      "beat_zoom_max": 0.045
+    },
+    "persona": {
+      "age_group": "20代",
+      "gender": "男女",
+      "interest_categories": [
+        "転職",
+        "キャリア",
+        "ビジネス"
+      ],
+      "content_depth": "ライト"
+    }
+  },
+  "autopilot": {
+    "enabled": true,
+    "schedule": {
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "hour": 17,
+      "minute": 0,
+      "times": [
+        {
+          "hour": 17,
+          "minute": 0,
+          "days_of_week": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "hour": 14,
+          "minute": 0,
+          "days_of_week": [
+            0,
+            6
+          ]
+        }
+      ]
+    },
+    "duration_minutes": 12,
+    "gen_type": "short",
+    "publish_lead_minutes": 45,
+    "theme_queue": [
+      {
+        "id": "3604eca1",
+        "title": "DualSenseの影響とゲーム業界の年収",
+        "angle": "新しい技術がゲーム業界に与える影響を探る。"
+      },
+      {
+        "id": "ef50839e",
+        "title": "トヨタ自動車の平均年収と、実は多い手当の中身",
+        "angle": "有価証券報告書の平均年収と、住宅・家族手当の実額"
+      },
+      {
+        "id": "240ad151",
+        "title": "三菱商事の年収1700万円台、総合商社の待遇を数字で",
+        "angle": "商社の年収構造と、海外赴任の実態"
+      },
+      {
+        "id": "34fbc14b",
+        "title": "味の素の年収と有給取得率、ホワイト企業常連の実態",
+        "angle": "有給取得率と残業時間を軸にする"
+      },
+      {
+        "id": "e0bd7d97",
+        "title": "JR東日本の年収と年間休日、鉄道大手の待遇",
+        "angle": "交替勤務の実情と休日数のバランス"
+      },
+      {
+        "id": "2166a1b0",
+        "title": "花王の年収と男性育休取得率、実際の数字はどうか",
+        "angle": "育休の取得率という切り口で差別化する"
+      },
+      {
+        "id": "582370b4",
+        "title": "サイバーエージェントの年収と平均年齢、若手の昇給スピード",
+        "angle": "平均年齢の若さと昇給の関係"
+      },
+      {
+        "id": "6bb13422",
+        "title": "大和ハウス工業の年収1000万円超、残業時間の実態",
+        "angle": "高年収と残業のトレードオフを正直に出す"
+      },
+      {
+        "id": "49e5b2aa",
+        "title": "NTTデータの年収と在宅勤務率、IT大手の働き方",
+        "angle": "リモート比率という新しい指標で切る"
+      },
+      {
+        "id": "182932df",
+        "title": "星野リゾートの給与と離職率、ホテル業界の中での位置",
+        "angle": "業界平均との比較を必ず入れる"
+      },
+      {
+        "id": "ef110d19",
+        "title": "キリンビールの年収と福利厚生、飲料大手の待遇",
+        "angle": "福利厚生の実額を出す"
+      }
+    ],
+    "auto_optimize_schedule": true
+  },
+  "short_series_name": "",
+  "main_title_prefix": "",
+  "competitors": [
+    "UCAtmCRJyCsTj54EWa0vPIZA",
+    "UC1KM0FPG8NvCWKRZURZZEfQ",
+    "UC1SF9QyOrAzaWnz8vQ_xtgA",
+    "UCIT1nfung5BjctTN_6S8yWQ",
+    "UCPTlN9nVQPyn5kfqNe7zH_Q",
+    "UCcsstuqZggLOoOLRmH_1q2A",
+    "UCF-TTrC6lxRhk0K6DFOxDKQ"
+  ],
+  "production": {
+    "tool": "moviepy",
+    "pipeline": "standard",
+    "modules": [
+      "r6_enhancer",
+      "r7_enhancer",
+      "r8_enhancer"
+    ],
+    "auto_publish": true
+  }
+}
