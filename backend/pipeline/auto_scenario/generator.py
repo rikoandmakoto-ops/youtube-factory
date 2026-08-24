@@ -225,6 +225,52 @@ _HOOK_CAPTION_RULE = """# 冒頭テロップ(hook_caption)ルール(絶対厳守
 - 11文字以上は画面で縮んで読めなくなる。**必ず10文字以内**、短いほど強い(4〜8文字が理想)。
 """
 
+# --- サムネ文字の長さゲート（2026-08-23 追加）---------------------------------
+# プロンプトは以前から「hook_lines は各行8文字以内」と指示していたが、生成済み
+# thumb_info 535 件を実測したところ 320 件（60%）が 10 文字超、subtitle は 231 件
+# （43%）が 17 文字超だった。サムネ描画側は 1080px 幅に固定サイズで描いていたため、
+# これらは画面外にはみ出して両端が切れていた（描画側も自動縮小するよう修正済み）。
+# ここでは「そもそも長すぎるコピーを作らせない」側の担保として、生成直後に
+# 自然な区切りで詰める。区切りが見つからない行は切らずに残す（意味を壊さない）。
+_THUMB_HOOK_MAX = 14        # hook_lines 1行あたり（描画時 74px 相当まで確保できる長さ）
+_THUMB_SUBTITLE_MAX = 24
+_THUMB_TAGLINE_MAX = 26
+_THUMB_TRIM_BREAKS = "、。！？!?・…　 —-"
+
+
+def _trim_at_break(text: str, limit: int) -> str:
+    """limit 以下で最後の自然な区切りまで詰める。区切りが無ければ原文のまま返す。"""
+    s = (text or "").strip()
+    if len(s) <= limit:
+        return s
+    head = s[:limit]
+    for i in range(len(head) - 1, max(limit // 2, 3), -1):
+        if head[i] in _THUMB_TRIM_BREAKS:
+            return head[:i].strip()
+    return s
+
+
+def _normalize_thumb_info(thumb_info) -> None:
+    """thumb_info をサムネで読める長さに整える（in-place）。"""
+    if not isinstance(thumb_info, dict):
+        return
+    hooks = thumb_info.get("hook_lines")
+    if isinstance(hooks, list) and hooks:
+        trimmed = [_trim_at_break(str(h), _THUMB_HOOK_MAX) for h in hooks[:2]]
+        trimmed = [t for t in trimmed if t]
+        if trimmed and trimmed != [str(h).strip() for h in hooks[:2]]:
+            print(f"  ✂️ サムネ hook_lines を短縮: {hooks[:2]} → {trimmed}")
+        if trimmed:
+            thumb_info["hook_lines"] = trimmed
+    for key, limit in (("subtitle", _THUMB_SUBTITLE_MAX), ("tagline", _THUMB_TAGLINE_MAX)):
+        val = thumb_info.get(key)
+        if isinstance(val, str) and len(val.strip()) > limit:
+            new = _trim_at_break(val, limit)
+            if new != val.strip():
+                print(f"  ✂️ サムネ {key} を短縮: {len(val)}字 → {len(new)}字")
+                thumb_info[key] = new
+
+
 _TELOP_PACING_RULE_SHORT = """# テンポ・ルール(完視聴率対策・絶対厳守)
 - ショートは**1行=1テロップ**。1行が長いほど画面が固まって離脱する。各行は3〜4秒で読み切れる長さに収める。
 - 1行に接続詞を重ねて2つ以上の話を詰め込まない(「〜で、しかも〜だから〜」は不合格)。1行=1メッセージ。
@@ -237,6 +283,7 @@ _TELOP_PACING_RULE_SHORT = """# テンポ・ルール(完視聴率対策・絶�
 # 逆に「ご視聴ありがとうございました」で閉じると、そこで確実に離脱する。
 _LOOP_RULE_SHORT = """# ループ構成ルール(再視聴率対策・絶対厳守)
 - ショートは**最後まで見ると自動で1行目に巻き戻る**。この一周を「もう一回見たい」に変えるのが目的。
+  **ループ再生率100%超（2周以上視聴）はYouTubeアルゴリズムへの最強シグナル。**
 - ✅ **最後の内容行(オチ)は1行目に意味がつながるように書く**。視聴者が1行目を聞き直したとき、
   「あ、そういう意味だったのか」と**意味が変わって聞こえる**状態を作る。
   - 伏線回収型: 1行目の問いに対して、オチで「答えの半分」だけ返す（残りは1行目に戻ると分かる）。
@@ -244,8 +291,15 @@ _LOOP_RULE_SHORT = """# ループ構成ルール(再視聴率対策・絶対厳�
   - 問い返し型: オチを「じゃあ〇〇は?」で閉じ、1行目の問いに戻る輪を作る。
 - ✅ **1行目は「途中から聞いても成立する」書き方にする**。巻き戻ってきた視聴者が
   文脈なしでもう一周できるよう、冒頭で前の行を受ける指示語(「それは」「この」)を使わない。
+- ✅ **シームレスループテクニック**: 最終行の末尾を文法的に宙吊りにし、1行目の冒頭に自然に
+  接続させる。例: 最終行「…だからこそ、」→ 1行目「〇〇って不思議だよね」が繋がって聞こえる。
+  音声の切れ目を感じさせないことで、視聴者はループに気づかず2周目に入る。
+- ✅ **2周目の気づき設計**: 1行目に「ダブルミーニング」を仕込む。初見では素直に読めるが、
+  オチを知ってから聞くと別の意味に取れるフレーズを使う。これが2周目を見る動機になる。
 - ❌ **終わった感の出る締めは禁止**: 「以上です」「ご視聴ありがとうございました」
   「まとめると」「いかがでしたか」は1文字でも入れたら不合格。そこで視聴者は確実に離れる。
+- ❌ **ループを切るフレーズ禁止**: 「最後に」「結論は」「今日のまとめ」「というわけで」も
+  NG。これらが出た瞬間に視聴者は「終わり」を察知してスワイプする。
 - ※ 最終行の登録CTAは上の構成ルール通り必ず入れる。ただし**話を終わらせず**、
   オチの余韻に乗せたまま1行に収めること(CTAで話を締めくくらない)。
 """
@@ -1114,8 +1168,14 @@ class ScenarioGenerator:
 
           {
             "omit_related_video": true,          # ②関連動画CTA を外す
-            "wording": "お前らならどうする？"      # 代わりに置く締めの一言（任意）
+            "wording": "お前らならどうする？",     # 代わりに置く締めの一言（任意）
+            "subscribe_wording": "...",          # 登録CTAの言い回し（任意）
+            "line_chars": "28〜36字"              # 最終行の字数（任意）
           }
+
+        `subscribe_wording` を省くと既定の「1万人目標・毎日投稿中・応援よろしく」
+        3要素になる。cta_style が quiet のチャンネルではこの3要素が語り口を壊すので、
+        チャンネルの声で書いた言い回しを渡すこと。
         """
         try:
             cfg = (channel.content_policy or {}).get("short_end_line") or {}
@@ -1124,7 +1184,16 @@ class ScenarioGenerator:
         if not isinstance(cfg, dict):
             cfg = {}
 
+        end_chars = (cfg.get("line_chars") or "").strip() or "45〜70字"
+
         def sub_cta(num: str) -> str:
+            sub_wording = (cfg.get("subscribe_wording") or "").strip()
+            if sub_wording:
+                return (
+                    f"    - {num}登録CTA: 「{sub_wording}」のニュアンスで登録を促す"
+                    "(そのままコピペせず、その回の内容と地続きにする)。"
+                    "このチャンネルの語り口を守り、叫ばない・煽らない・強い依頼にしない。\n"
+                )
             return (
                 f"    - {num}登録CTA: 「チャンネル登録者1万人を目指して毎日投稿中なので、応援よろしくね!」の"
                 "ニュアンスを必ず入れる(「毎日投稿中」「1万人目標」「応援よろしく」の3要素で、"
@@ -1145,8 +1214,8 @@ class ScenarioGenerator:
                 f"{sub_cta('②')}"
                 "    - ❌ 「関連動画」「本編」「フル動画」への誘導は禁止。"
                 "本チャンネルは長尺を作らないため、存在しない動画へ送ることになる。\n"
-                f"    - **{line_no}行目のみ45〜70字を許容**(2つの要素を連結するため、"
-                "通常の字数制限を超えてよい)。\n"
+                f"    - **{line_no}行目は{end_chars}**(締めの一言と登録誘導を連結するため、"
+                "通常の字数制限と異なってよい)。\n"
             )
 
         return (
@@ -1158,8 +1227,8 @@ class ScenarioGenerator:
             "    - 例:「チャンネル登録者1万人目指して毎日投稿中!応援よろしくね!"
             "もっと詳しい話は関連動画から見てね!」「1万人目指して毎日投稿中だから登録お願い!"
             "続きは関連動画でチェック!」\n"
-            f"    - **{line_no}行目のみ45〜70字を許容**(2つのCTAを連結するため、"
-            "通常の字数制限を超えてよい)。\n"
+            f"    - **{line_no}行目は{end_chars}**(2つのCTAを連結するため、"
+            "通常の字数制限と異なってよい)。\n"
         )
 
     def _end_cta_block(self, channel) -> str:
@@ -2095,6 +2164,32 @@ class ScenarioGenerator:
             prompt = prompt + "\n\n" + competitor_addendum
             print("  🥷 Applying competitor intelligence (title patterns / hot topics / gap themes)")
 
+        # Phase S: 季節ブースト — 時期に合ったテーマ角度をプロンプトに追加
+        try:
+            from pipeline.seasonal_boost import get_seasonal_prompt_addendum
+            _seasonal_add = get_seasonal_prompt_addendum(channel.id)
+            if _seasonal_add:
+                prompt = prompt + "\n\n" + _seasonal_add
+                print(f"  🌸 Applying seasonal boost for {channel.id}")
+        except Exception as e:
+            print(f"  ⚠️ seasonal_boost failed: {e}")
+
+        # Phase T: トレンドテーマの場合、タイトルと冒頭に旬のワードを織り込む指示を注入。
+        # トレンドに乗ったコンテンツは初動 1〜3 時間のリーチが通常の 2〜3 倍になる（競合分析）。
+        if theme.get("is_trending") and theme.get("trend_match"):
+            trend_kw = theme["trend_match"]
+            trend_addendum = (
+                f"\n\n# トレンド最適化指示（このテーマはトレンドに乗っている）\n"
+                f"- 現在「{trend_kw}」がトレンド入りしている。このキーワードに関連する切り口で書く。\n"
+                f"- **タイトルに「{trend_kw}」またはその関連ワードを自然に含める**（検索流入の最大化）。\n"
+                f"- 冒頭1行目で「今話題の」「今ちょうど」「最近〇〇で話題になってる」のような\n"
+                f"  旬のシグナルを1つ入れる。ただし不自然に詰め込まず、チャンネルのトーンを守る。\n"
+                f"- サムネの hook_lines にもトレンドワードを反映する（検索＋おすすめ表示の両方に効く）。\n"
+                f"- トレンドは24〜48時間で冷めるため、鮮度の高い切り口を最優先する。\n"
+            )
+            prompt = prompt + trend_addendum
+            print(f"  🔥 Applying trend optimization: '{trend_kw}' (trend_score={theme.get('trend_score')})")
+
         # theme_override（run_*.py / batch / autopilot が題材を明示指定）時は題材を固定する。
         # 上記 analytics / competitor addendum は「過去に伸びた題材（例:SCP-5000/173）を再現せよ」と
         # 具体指示するため、1行のテーマ指定を上書きして別の題材を書かせてしまう（題材ハイジャック）。
@@ -2331,8 +2426,117 @@ class ScenarioGenerator:
             if short_avg < 30:
                 print(f"  ⚠️ short_scenario: {len(short_lines_data)} lines, {short_total} chars, avg {short_avg:.1f}/line — under 30/line, may be under 30s")
 
+        # Phase V: シナリオ構造バリデーション（フック・CTA・禁止語の検証）
+        if short_lines_data:
+            try:
+                from pipeline.scenario_validator import guard as _scenario_guard
+                _short_texts = [
+                    (e.get("text", "") if isinstance(e, dict) else str(e))
+                    for e in short_lines_data
+                ]
+                _ch_raw = {}
+                try:
+                    _ch_raw = channel._raw or {}
+                except AttributeError:
+                    pass
+                _scenario_guard(
+                    _short_texts,
+                    channel_id=channel.id,
+                    channel_dict=_ch_raw,
+                    strict=False,
+                )
+            except Exception as e:
+                print(f"  ⚠️ scenario_validator failed: {e}")
+
+        # Phase R6: Round 6 生成後最適化パイプライン
+        # (Hook A/B, Swipe-Stop, CTA Rotation, Cross-Channel Bridge,
+        #  Mute-Safe Check, Viral Score Gate)
+        if short_lines_data:
+            try:
+                from pipeline.round6_enhancer import enhance as _r6_enhance
+                _ch_raw_r6 = {}
+                try:
+                    _ch_raw_r6 = channel._raw or {}
+                except AttributeError:
+                    pass
+                _r6_result = _r6_enhance(
+                    short_lines_data,
+                    title=scenario_data.get("title", theme.get("title", "")),
+                    channel_id=channel.id,
+                    channel_dict=_ch_raw_r6,
+                    series_name=(scenario_data.get("series_name") or ""),
+                    api_key=self.api_key,
+                )
+                scenario_data["round6"] = _r6_result
+            except Exception as e:
+                print(f"  ⚠️ Round6 enhancer failed: {e}")
+
+        # Phase R7: Round 7 完走率 & リプレイ最大化パイプライン
+        # (Completion Rate Optimizer, Replay Loop Seeder, Power Word Amplifier,
+        #  Retention Feedback Loop, Originality Guard, Title Emoji Injector)
+        if short_lines_data:
+            try:
+                from pipeline.round7_enhancer import enhance as _r7_enhance
+                _ch_raw_r7 = {}
+                try:
+                    _ch_raw_r7 = channel._raw or {}
+                except AttributeError:
+                    pass
+                _r7_result = _r7_enhance(
+                    short_lines_data,
+                    title=scenario_data.get("title", theme.get("title", "")),
+                    channel_id=channel.id,
+                    channel_dict=_ch_raw_r7,
+                )
+                scenario_data["round7"] = _r7_result
+                # Round 7 の絵文字注入タイトルを反映
+                if _r7_result.get("enhanced_title"):
+                    scenario_data["title"] = _r7_result["enhanced_title"]
+            except Exception as e:
+                print(f"  ⚠️ Round7 enhancer failed: {e}")
+
+        # Phase R8: Round 8 エンゲージメント & 登録者最大化パイプライン
+        # (Curiosity Gap Enforcer, Comment Bait Injector,
+        #  Emotional Polarity Alternator, Pattern Interrupt Injector,
+        #  Subscribe Trigger Optimizer, Contrast Amplifier)
+        if short_lines_data:
+            try:
+                from pipeline.round8_enhancer import enhance as _r8_enhance
+                _ch_raw_r8 = {}
+                try:
+                    _ch_raw_r8 = channel._raw or {}
+                except AttributeError:
+                    pass
+                _r8_result = _r8_enhance(
+                    short_lines_data,
+                    title=scenario_data.get("title", theme.get("title", "")),
+                    channel_id=channel.id,
+                    channel_dict=_ch_raw_r8,
+                )
+                scenario_data["round8"] = _r8_result
+            except Exception as e:
+                print(f"  ⚠️ Round8 enhancer failed: {e}")
+
+        # Phase N: シリーズ通し番号をタイトルに付与
+        _result_title = scenario_data.get("title", theme["title"])
+        try:
+            from pipeline.series_counter import apply_series_number
+            _ch_raw_n = {}
+            try:
+                _ch_raw_n = channel._raw or {}
+            except AttributeError:
+                pass
+            _result_title = apply_series_number(
+                _result_title,
+                channel.id,
+                channel_dict=_ch_raw_n,
+                is_short=bool(scenario_data.get("short_scenario")),
+            )
+        except Exception as e:
+            print(f"  ⚠️ series_counter failed: {e}")
+
         result = {
-            "title": scenario_data.get("title", theme["title"]),
+            "title": _result_title,
             "theme": theme,
             "short_scenario": scenario_data.get("short_scenario", []),
             "full_scenario": scenario_data.get("full_scenario", []),
@@ -2344,6 +2548,9 @@ class ScenarioGenerator:
             "applied_competitor_feedback": applied_competitor,
             "generated_by": chosen_provider,
             "compete": compete_meta,
+            "round6": scenario_data.get("round6", {}),
+            "round7": scenario_data.get("round7", {}),
+            "round8": scenario_data.get("round8", {}),
         }
 
         # Phase C: AB テストでタイトル＆サムネを最適化（オプション）
@@ -2393,6 +2600,9 @@ class ScenarioGenerator:
 
         # CTR 品質ゲート。重複ゲートの後に置く（重複解消で入れ替わったタイトルも採点する）。
         self._enforce_title_quality(channel, theme, result, scenario_data)
+
+        # サムネ文字の長さゲート。AB テストが hook_lines を差し替えた後に置く。
+        _normalize_thumb_info(result.get("thumb_info"))
 
         return result
 
@@ -2689,6 +2899,16 @@ class ScenarioGenerator:
 
         theme_priority_block = self._theme_priority_block(channel, count)
 
+        # Phase S: テーマ提案にも季節ブーストを注入
+        seasonal_block = ""
+        try:
+            from pipeline.seasonal_boost import get_seasonal_prompt_addendum
+            seasonal_block = get_seasonal_prompt_addendum(channel.id) or ""
+            if seasonal_block:
+                print(f"  🌸 Injecting seasonal boost into theme suggestions")
+        except Exception as e:
+            print(f"  ⚠️ seasonal_boost in suggest_themes failed: {e}")
+
         prompt = f"""YouTube動画テーマを{count}個提案。JSON配列のみ。
 
 # チャンネル: {channel.name} / {channel.concept} / {channel.style} / {channel.content_policy.get("tone","friendly")}
@@ -2697,7 +2917,8 @@ class ScenarioGenerator:
 - 下記「除外リスト」と同じ／実質同じ（言い換えだけ）テーマは禁止。
 - ただし、過去テーマを「続編・発展系・別角度・深掘り」として明確に進化させる場合に限り、関連トピックを扱ってよい。
   - その場合、`parent_title` に元の過去テーマのタイトルを入れる。
-  - `title` には元と被らない新しい切り口を必ず含める（例: 元「なぜ空は青いのか」→ 新「なぜ夕焼けは赤いのか — 空の色シリーズ続編」）。
+  - `title` には元と被らない新しい切り口を必ず含める（例: 元「なぜ空は青いのか」→ 新「なぜ夕焼けは赤いのか、空の色シリーズ続編」）。
+  - タイトルの区切りに全角ダッシュ「—」を使わない（2026-08-23 のCTR実測でscp-labにおいて0.71倍・95%CI 0.61-0.84と有意に逆効果。区切りは読点「、」を使う）。チャンネル側の title_style に別途指定がある場合はそちらを優先する。
 - {count}件のうち最大2件まで「過去テーマの発展系（parent_title 付き）」を含めてよい。残りは完全新規のテーマで提案する。
 - 完全新規のテーマは `parent_title` を null にする。
 
@@ -2724,6 +2945,7 @@ class ScenarioGenerator:
 - 「競合がまだカバーしていない可能性のあるテーマ」リストの内容は優先的に提案して構わない。
 {competitor_block}
 {trend_block}
+{seasonal_block}
 """
 
         messages = [

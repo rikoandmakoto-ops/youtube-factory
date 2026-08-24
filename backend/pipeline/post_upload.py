@@ -71,6 +71,29 @@ def run(
         out["series_links"] = {"ok": False, "error": str(e)}
         print(f"⚠️ post_upload series_links failed [{channel_id}] {video_id}: {e}")
 
+    # Phase N: シリーズ通し番号カウンタを確定（アップロード成功後）
+    try:
+        from pipeline.series_counter import confirm_upload, get_series_prefix
+        if get_series_prefix(channel_id, cd):
+            new_count = confirm_upload(channel_id)
+            out["series_counter"] = {"ok": True, "new_count": new_count}
+            print(f"  🔢 Series counter advanced to #{new_count} [{channel_id}]")
+    except Exception as e:
+        out["series_counter"] = {"ok": False, "error": str(e)}
+        print(f"⚠️ post_upload series_counter failed [{channel_id}]: {e}")
+
+    # Phase R6: CTA ローテーション履歴の記録（Round 6）
+    # generate() 時点で cta_rotator が履歴を書いているため、ここでは
+    # アップロード成功を確認した上で追加の後処理が必要な場合のみ動く。
+    # 現時点では generate() 側で完結しているため、ログのみ。
+    try:
+        from pipeline.cta_rotator import _recent_styles
+        recent = _recent_styles(channel_id, n=3)
+        if recent:
+            out["cta_rotation"] = {"ok": True, "recent_styles": recent}
+    except Exception:
+        pass  # CTA ローテーションは必須ではない
+
     return out
 
 
