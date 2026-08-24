@@ -1,0 +1,413 @@
+{
+  "id": "clip-kaneko",
+  "name": "金子みゆ 切り抜きチャンネル",
+  "concept": "金子みゆ本人の公式YouTubeチャンネルの長尺トークから『一番おいしい30秒』だけを切り出して縦型ショートにする単独タレント切り抜きチャンネル。冒頭2秒で結論、字幕は本人の発話をそのまま大きく焼き込む。説明欄に元動画URLと元チャンネル名を必ず載せ、本編へ送客する。切り抜き元は本人（または所属事務所）から明示的に許諾を得た回のみ。",
+  "style": "clip",
+  "youtube_channel_id": "UCYF3swAtRdxup-qfEK53epw",
+  "_youtube_channel_id_comment": "投稿先（自社の切り抜きチャンネル）。2026-08-24 にチャンネル作成完了。切り抜き『元』の本人チャンネルIDはこれとは別物で、clip.external_sources.allowlist_channels[].channel_id の方に入れる。",
+  "image_mode": "generate",
+  "_setup_todo": [
+    "✅ 1. 投稿先チャンネル作成・ID反映済み（UCYF3swAtRdxup-qfEK53epw）",
+    "✅ 2. OAuth 連携済み（data/youtube_tokens.db に clip-kaneko のトークンあり）",
+    "✅ 3. 切り抜き元チャンネルID設定済み（UCw_7_DkX4ftnQJJtZTrCOOQ）",
+    "✅ 4. 許諾: ガジェット通信クリエイターネットワーク経由（2026-08-24 確認 / https://getnews.jp/mcn/kirinuki）",
+    "✅ 5. allowlist enabled=true / default_privacy=public / auto_publish=true / autopilot.enabled=true（2026-08-24）",
+    "◻ 6. 初回10本の visual_check 実測値を見て visual_guard の閾値を締め直す",
+    "◻ 7. source_crop_bottom_ratio=0 で常時テロップ回が二重字幕にならないか実素材で確認する"
+  ],
+  "clip": {
+    "engine": "local",
+    "fallback_engine": "local",
+    "sources": [],
+    "_sources_comment": "自社在庫からの切り抜きはこのチャンネルでは使わない（素材は外部の本人チャンネルのみ）。clip-lab と同じく空配列。",
+    "cta_text": "続きは本編で（概要欄）",
+    "external_sources": {
+      "enabled": true,
+      "_comment": "外部素材の調達。有効化する前に acquisition.py 冒頭の『ライセンスゲート』と『許諾文言ゲート』を必ず読むこと。標準ライセンスの動画を切り抜くのは著作権侵害なので、clippable になるのは (a) CC BY (b) allowlist 登録チャンネルのうち、その動画の説明欄に permission_phrases が実在する回、のみ。allowlist の channel_id がプレースホルダのままなので、現状このチャンネルは1本も切り抜けない（＝安全側で止まっている）。",
+      "region_code": "JP",
+      "max_candidates": 25,
+      "videos_per_channel": 100,
+      "_videos_per_channel_comment": "playlistItems は50件/1クォータなので100本でも2クォータ。許諾文言のある回は一部なので在庫確保側に振る。",
+      "prepare_limit": 8,
+      "_prepare_limit_comment": "字幕まで取りに行く本数の上限。1回の実行で使うのは1本だが、exclude_title_patterns を締めた結果 clippable が10本前後まで絞られたので、上位3本だけだと pick_source の選択肢が実質1〜2本になる。8本に広げてclips_per_video の使い切り後も別の元動画に回せるようにしてある（2026-08-24）。",
+      "min_duration_sec": 180,
+      "_min_duration_comment": "タレントの雑談・質問回答系は5〜20分が中心。3分未満はショート/告知なので切り抜き元にしない。",
+      "max_duration_sec": 10800,
+      "_max_duration_comment": "生配信アーカイブ（〜3時間）まで拾えるようにしてある。",
+      "download_dir": "~/Movies/yf_clip_downloads/clip-kaneko",
+      "_download_dir_comment": "~/Desktop の下には絶対に置かないこと。launchd 配下では TCC で ffmpeg の書き込みが無言でハングし、autopilot だけが静かに死ぬ。",
+      "max_height": 1080,
+      "player_clients": [
+        "android",
+        "web"
+      ],
+      "_player_clients_comment": "yt-dlp 2025.10.14（Python 3.9 で入る最終版）では web は SABR 強制で形式ゼロ。android は itag 18（640x360 合成）のみだが実際にダウンロードできる唯一の経路で、clip-lab もこれで回っている。2026-08-24 に android_vr を試したところ、formats には 1080p DASH が並ぶが実ダウンロードは 403 Forbidden になるため使えない。Python を 3.10+ に上げて yt-dlp を更新するまでは android 固定。⚠️ 現状の素材解像度は 360p。1080x1920 に引き伸ばすので画質は粗い。",
+      "subtitle_langs": [
+        "ja-orig",
+        "ja"
+      ],
+      "source_crop_bottom_ratio": 0,
+      "_crop_comment": "外部動画に『下部の焼き込み字幕帯』は無いので切り落とさない（自社ゆっくり動画は 0.22 で切っていた）。ただしバラエティ寄りの編集で常時テロップが乗る回は、ここを 0 のままにすると打ち直し字幕と二重に見える。実素材で確認してから調整すること。",
+      "trending": {
+        "enabled": false,
+        "category_ids": [
+          "24"
+        ],
+        "use_as": "theme_only"
+      },
+      "creative_commons": {
+        "enabled": false,
+        "queries": [],
+        "use_as": "clippable"
+      },
+      "allowlist_channels": [
+        {
+          "channel_id": "UCw_7_DkX4ftnQJJtZTrCOOQ",
+          "name": "金子みゆ / kaneko_miyu（公式・メイン）",
+          "credit_name": "金子みゆ / kaneko_miyu",
+          "weight": 5,
+          "enabled": true,
+          "_enabled_comment": "2026-08-24 有効化。許諾はガジェット通信クリエイターネットワーク経由（permission_note 参照）。権利者から取り下げ要請があった場合はまずここを false にすること（YouTube API クォータも止まる）。",
+          "require_permission_phrase": false,
+          "permission_phrases": [
+            "ガジェット通信クリエイターネットワーク",
+            "ガジェ通クリエイターデータベース",
+            "切り抜き用にガジェ通クリエイターデータベース",
+            "切り抜き動画の申請はこちら"
+          ],
+          "_permission_phrases_comment": "require_permission_phrase=false なので classify() はこの配列を参照しない。権利者が説明欄に切り抜き許諾文言を入れる運用に変わったら、実測した文言をここに追加のうえ true に戻すと回単位のゲートが復活する。",
+          "permission_note": "ガジェット通信クリエイターネットワーク（MCN）の切り抜き公認リストに掲載。2026-08-24 に getnews.jp/mcn/kirinuki で対象クリエイターとして確認し、同ネットワーク経由で切り抜きチャンネルの申請・許諾取得済み。許諾は申請フォーム → 承認メール方式で成立し、元動画の説明欄に許諾文言は入らないため require_permission_phrase=false で運用する（説明欄の文言ゲートでは永久に通らない）。2026-08-24 時点で当該チャンネルの直近50本を実測し、説明欄に切り抜き許諾文言は0件であることを確認済み。条件: 収益分配率に基づく分配、クレジット表記（説明欄に元動画URLと元チャンネル名）、権利者が個別に禁止した動画は対象外。取り下げ要請があれば即時 enabled=false にする。",
+          "permission_source_url": "https://getnews.jp/mcn/kirinuki",
+          "permission_checked_at": "2026-08-24",
+          "exclude_title_patterns": [
+            "コラボ",
+            "ゲスト",
+            "対談|対決",
+            "VS|ＶＳ|vs\\.",
+            "と語る|と話",
+            "水着|グラビア|下着|ランジェリー|温泉|お風呂|撮影オフショット",
+            "[◯○〇●＊]",
+            "MV|ＭＶ|MUSIC VIDEO|Music Video|Lyric Video|Official Audio|歌ってみた|cover|Cover|COVER",
+            "エロ|性行為|セックス|SEX|下ネタ|キス|えっち|エッチ|裸|ヌード|パンツ|おっぱい|ビキニ|ラブホ|襲わ",
+            "さんと|と一緒に|に密着",
+            "さんと|と一緒に|に密着|彼氏|彼女|交際|熱愛"
+          ],
+          "_exclude_title_patterns_comment": "clip-fukada と同じ3系統に加え、MV / Lyric Video / 歌ってみた を除外する。楽曲の権利はレコード会社側にあり、本人の切り抜き許諾ではカバーされない（Content ID 直撃）。最終的な安全弁は segment_selection.exclude_text_patterns。"
+        }
+      ]
+    },
+    "clips_per_video": 4,
+    "_clips_per_video_comment": "1本の元動画から取る上限。10〜20分の素材から30秒×4本＝2分なので総尺の10〜20%。これ以上取ると同じ回ばかりになる。区間同士は segment_selection.min_gap_sec=30 で離してある。",
+    "target_duration_sec": 30,
+    "min_duration_sec": 25,
+    "max_duration_sec": 35,
+    "_duration_comment": "運用指定の『1本30秒』。build_candidates は min/max の窓しか見ないので、30秒ちょうどを狙うなら幅を狭く取る（25〜35）。狭すぎると候補が消えるので、素材で候補ゼロが続くようなら 22〜38 まで緩めること。",
+    "segment_selection": {
+      "prefer_retention_peaks": true,
+      "retention_weight": 0.5,
+      "script_weight": 0.5,
+      "exclude_head_sec": 8,
+      "exclude_tail_sec": 15,
+      "min_gap_sec": 30,
+      "min_speech_ratio": 0.72,
+      "max_line_gap_sec": 2.5,
+      "_speech_gate_comment": "自動字幕由来の素材だけに効く無音ガード。字幕から起こした行は沈黙を含まないので、これが無いと『冒頭3秒喋って以降無音』のような区間が最高スコアで選ばれる（clip-lab で 2026-08-21 に実測）。min_speech_ratio=窓の尺に占める発話の割合の下限、max_line_gap_sec=窓内で許す最大の無音。",
+      "_retention_comment": "prefer_retention_peaks は自社チャンネルの Analytics しか引けないので、外部素材（is_external）では自動的に無視され台本スコアのみになる。true のままで害はない。",
+      "exclude_text_patterns": [
+        "裸|ヌード|全裸|脱い|脱ぐ|脱ご",
+        "セックス|SEX|エッチ|えっち|ヤっ|ヤる|ヤり|挿入|絡み|営み|前戯|中出し|射精|イっ|イク",
+        "AV|アダルト|セクシー女優|男優|女優|撮影現場|現場で",
+        "おっぱい|胸|お尻|尻|乳|股|下半身|性器|チン|マン",
+        "媚薬|バイブ|ローター|大人のおもちゃ|オナ|自慰",
+        "パンツ|下着|ブラ|ランジェリー|水着|ビキニ|スク水",
+        "風俗|パパ活|セフレ|ホスト|キャバ|夜職|童貞|処女|早漏|名器",
+        "彼氏|彼女|交際|付き合っ|元カレ|元カノ|不倫|浮気"
+      ],
+      "_exclude_text_patterns_comment": "区間の発話そのものを見て落とす NG 語。allowlist の exclude_title_patterns が『どの回を使うか』のゲートなのに対し、これは『その回のどこを切るか』のゲート。2026-08-24 実測: 追徴課税の話をしている回から『マネージャーは 私の裸も見てます』が最高スコアで選ばれた。タイトル単位のゲートでは原理的に届かないのでここで落とす。voice_style.style_rules の『性的な含みを持たせた言い換え・煽り文にしない』とcontent_policy.avoid の『性的に見せることを目的とした…』を機械的に効かせる箇所。既定は空＝無効なので、この配列を持たない clip-lab 等の挙動は変わらない。"
+    },
+    "visual_guard": {
+      "enabled": true,
+      "_comment": "区間の映像を検査して静止画（画面共有・資料・写真の貼り付け）の回を落とす。無音ガードが『発話が無い区間』を弾くのに対し、これは『発話はあるが映像が他人の著作物』を弾く。許諾は本人の動画に対するものなので、雑誌カット・撮影素材が全画面の区間を公開すると許諾の範囲外になる（グラビア系では特に起きやすい）。落とされた区間は予備の区間に自動で差し替わる。",
+      "max_static_ratio": 0.6,
+      "min_median_diff": 0.5,
+      "static_diff_threshold": 1.0,
+      "_threshold_comment": "clip-lab の実測値（max_static_ratio=0.7）より一段厳しくしてある。写真・雑誌カットの差し込みが多いジャンルなので、静止画区間を通す方の事故コストが高い。初回10本を回したら visual_check の実測値を見て再調整すること。"
+    },
+    "output_dir": "~/Movies/yf_clips/clip-kaneko"
+  },
+  "layout_spec": {
+    "canvas": [
+      1080,
+      1920
+    ],
+    "fps": 30,
+    "source_crop_bottom_ratio": 0
+  },
+  "voice_style": {
+    "tone": "元動画の音声をそのまま使うため生成音声なし。テキスト（フック/CTA）だけがこのチャンネルの声。",
+    "forbidden": [],
+    "style_rules": [
+      "フック文は13文字以内×2行まで。読み切れない長さにしない。",
+      "本人の発言・口調を変えない（切り抜きなので改変しない）。",
+      "フック文は発言の要約に留め、本人が言っていない断定を足さない。",
+      "性的な含みを持たせた言い換え・煽り文にしない（本人の名誉とチャンネルの存続の両方に関わる）。",
+      "CTAは『続きは本編で』の一点に絞る。"
+    ]
+  },
+  "characters": {},
+  "publish_settings": {
+    "auto_publish": true,
+    "_auto_publish_comment": "2026-08-24 運用開始につき true。autopilot が生成物をそのまま公開投稿する。",
+    "default_privacy": "public",
+    "_default_privacy_comment": "2026-08-24 運用開始につき public。許諾の根拠は clip.external_sources.allowlist_channels[].permission_note。",
+    "publish_targets": [
+      "youtube"
+    ],
+    "auto_comment": {
+      "enabled": true,
+      "question": "続きが気になった人は概要欄の本編へ！切り抜いてほしい回もコメントで教えてね"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "金子みゆ切り抜き｜ショート全集",
+      "main": "金子みゆ切り抜き｜本編",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "切り抜いてほしい回をコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
+    }
+  },
+  "description_template": {
+    "short_intro": "▼ この切り抜きの本編はこちら\n{source_url}\n\n{source_title}\n（{credit_name} より切り抜き）\n\n※本チャンネルは権利者の許諾を得て切り抜きを公開しています。削除のご依頼は概要欄記載の連絡先までお願いします。",
+    "short_hashtags": "#shorts #切り抜き #金子みゆ",
+    "omit_fullvideo_cta": true,
+    "main_hashtags": "#切り抜き #金子みゆ",
+    "lead_template": "『{title}』のおいしい場面を{channel}が切り抜きでお届け。",
+    "_hashtags_comment": "clip-lab は allowlist が複数あるため固定タグに配信者名を入れない方針だが、こちらは単独タレント専用チャンネルで出典が1つに固定されるので名前をタグに入れてよい。allowlist に別人を足したらこの前提が崩れる。"
+  },
+  "thumbnail_template": {
+    "badge_text": "切り抜き",
+    "badge_color": [
+      80,
+      170,
+      255
+    ],
+    "hook_color": [
+      255,
+      255,
+      255
+    ],
+    "subtitle_color": [
+      255,
+      220,
+      60
+    ],
+    "bg_tone": "dark",
+    "style_hint": "元動画のピーク時フレームをそのまま使い、上に太字フックを乗せる。作り込まない（切り抜きらしさを残す）。本人の顔が写るので、加工・合成で別人に見せる編集や、身体を強調するトリミングはしない。"
+  },
+  "defaults": {
+    "speed": 1,
+    "target_duration": 30,
+    "bg_type": "none",
+    "use_illustrations": false,
+    "hashtags": [
+      "#shorts",
+      "#切り抜き",
+      "#金子みゆ"
+    ],
+    "category": "24",
+    "short_title_hashtags": "#shorts #切り抜き",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
+  },
+  "content_policy": {
+    "tone": "元動画に準拠",
+    "age_rating": "teen_plus",
+    "cta_position": "end",
+    "cta_style": "本編誘導",
+    "guidelines": [
+      "切り抜き元は本人の公式チャンネルに限定する（allowlist 登録 かつ その動画の説明欄に許諾文言があること）",
+      "許諾文言は動画ごとに確認する。同じチャンネルでもゲスト回など文言の無い回は切り抜かない",
+      "元動画のURLとチャンネル名を説明欄に必ず記載する",
+      "文脈を反転させるような切り取り方（誤解を生む編集）をしない",
+      "字幕は元の発話をそのまま使い、言い換え・改変をしない",
+      "本人から削除・停止の申し出があれば即座に取り下げ、allowlist の enabled を false にする",
+      "撮影素材（雑誌・DVD等）が映る区間は本人の許諾範囲外になりうるので使わない",
+      "肖像・パブリシティ権に配慮し、本人が不利益を被る文脈で使わない"
+    ],
+    "avoid": [
+      "許諾を明示していないチャンネルの切り抜き",
+      "許諾文言のない回の切り抜き（チャンネル単位の許諾を回単位に拡大解釈しない）",
+      "水着・グラビア回の切り抜き（YouTube の性的コンテンツポリシー / 出版社側の権利）",
+      "性的に見せることを目的とした構図・トリミング・サムネイル",
+      "私生活・交際・スキャンダルの憶測を煽る切り取り",
+      "共演者・ゲストの発言が主役の部分（相手側の許諾が別途必要）",
+      "元動画にない主張の字幕付け"
+    ]
+  },
+  "theme_priority": {
+    "label": "元動画の中で最も引きの強い発言",
+    "categories": [
+      "質問に対して一言で言い切っている場面（最優先）",
+      "世間のイメージと本人の実像がズレる場面",
+      "具体的な数字・金額・年数が出る場面",
+      "本人の経験談・下積み・失敗談で説得力が跳ねる場面"
+    ],
+    "good_examples": [
+      "視聴者の質問に結論から答えている部分",
+      "『実は〜』と前提をひっくり返している部分",
+      "仕事観・お金・人間関係について本音で語る部分"
+    ],
+    "avoid_categories": [
+      "冒頭の挨拶・告知・案件紹介",
+      "エンディングの宣伝部分",
+      "前後の文脈がないと意味が通らない部分",
+      "特定個人への攻撃・名誉毀損になりうる発言",
+      "性的な話題に寄った部分",
+      "ゲスト・共演者の発言が主役の部分"
+    ],
+    "title_style": "元動画のタイトルをそのまま使わず、切り抜いたシーンの結論だけを20〜28文字で言い切る。疑問形より断定形。本人が言っていない主張をタイトルにしない。煽り・性的な含みを持たせない。",
+    "viral_hooks": "一言で断言 / イメージとのギャップ / 意外な数字 / 経験談",
+    "title_power_words": [
+      "切り抜き",
+      "本音"
+    ]
+  },
+  "theme_blacklist": [],
+  "genre_blacklist": [],
+  "theme_seeds": [],
+  "effects_research": {
+    "genre": "clip",
+    "prefer_shorts": true,
+    "target_channels": 6,
+    "videos_per_channel": 2
+  },
+  "video_format": {
+    "layout": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "short_width": 1080,
+      "short_height": 1920,
+      "short_fps": 30
+    },
+    "colors": {
+      "bg_color": [
+        10,
+        12,
+        16,
+        255
+      ]
+    },
+    "audio": {
+      "speed": 1,
+      "pause_between": 0,
+      "bgm_volume": 0,
+      "bgm_path": null
+    },
+    "branding": {
+      "watermark_text": "金子みゆ切り抜き",
+      "watermark_position": "bottom_right",
+      "watermark_opacity": 150,
+      "watermark_font_size": 20,
+      "cta_style": "source_link"
+    },
+    "output": {
+      "target_duration": 30,
+      "gen_type": "clip",
+      "bg_type": "none",
+      "use_illustrations": false
+    },
+    "youtube": {
+      "channel_id": "UCYF3swAtRdxup-qfEK53epw",
+      "default_tags": [
+        "切り抜き",
+        "切り抜き動画",
+        "金子みゆ",
+        "shorts",
+        "トーク",
+        "本音",
+        "質問コーナー"
+      ],
+      "default_category": "24",
+      "privacy_status": "public",
+      "_privacy_status_comment": "publish_settings.default_privacy と揃えてある（public）。",
+      "upload_schedule": null
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "minimal",
+      "allow_shake": false,
+      "allow_flash": false,
+      "allow_pixelate": false,
+      "allow_glitch": false,
+      "allow_tint": false,
+      "zoom_max": 0.03,
+      "transition_duration": 0.2
+    },
+    "persona": {
+      "age_group": "20〜40代",
+      "gender": "男性中心",
+      "interest_categories": [
+        "タレント",
+        "グラビア",
+        "トーク",
+        "ショート動画"
+      ],
+      "content_depth": "ライト"
+    }
+  },
+  "autopilot": {
+    "enabled": true,
+    "_enabled_comment": "2026-08-24 有効化。gen_type=clip なので theme_queue も台本生成も通らず api_channel_autopilot._run_clip_autopilot が clip_factory を直接叩く。",
+    "schedule": {
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "hour": 20,
+      "minute": 30,
+      "times": [
+        {
+          "hour": 20,
+          "minute": 30,
+          "days_of_week": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "_times_comment": "運用ルール『ショートのみ・1日1本・チャンネルごとの固定スロット』に合わせて毎日20:30の1枠。clip-fukada（20:00）と30分ずらし、連投ガード（_burst_guard_ok）に引っかからないようにしてある。"
+    },
+    "duration_minutes": 1,
+    "gen_type": "clip",
+    "publish_lead_minutes": 0,
+    "theme_queue": [],
+    "_theme_queue_comment": "gen_type=clip では未使用（台本生成を通らず clip_factory が直接切り抜く）。切り抜き元の選定は clip.external_sources の許諾ゲート → segment_selection が担う。"
+  },
+  "short_series_name": "金子みゆ切り抜き",
+  "main_title_prefix": ""
+}
