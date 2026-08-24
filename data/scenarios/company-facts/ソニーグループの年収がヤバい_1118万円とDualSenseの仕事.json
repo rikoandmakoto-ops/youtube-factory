@@ -1,0 +1,340 @@
+{
+  "title": "😱ソニーグループの年収がヤバい 1118万円とDualSenseの仕事",
+  "theme": {
+    "title": "DualSenseの影響とゲーム業界の年収",
+    "angle": "新しい技術がゲーム業界に与える影響を探る。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "話題企業の実態",
+      "fact_main": "ソニー年収1118万円",
+      "fact_sub": "2024年度有価証券報告書",
+      "text": "あなたは知ってる？ソニー信じられない年収の裏側",
+      "bg_query": "ソニーグループ株式会社 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "業績連動の仕組み",
+      "text": "賞与は年2回です。1118万円には賞与も含まれます…ところが…うちの視聴者はビジネスリテラシーが高いから言うけど",
+      "bg_query": "ソニーグループ株式会社 オフィス 内観",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "研究開発費7299億円",
+      "fact_sub": "2024年度の連結実績",
+      "text": "研究開発費は7299億円です。触覚まで作り込む投資です。",
+      "bg_query": "ソニーグループ株式会社 研究開発",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "振動2種類を搭載",
+      "fact_sub": "DualSenseの触覚機能",
+      "text": "DualSenseは2種類の振動を搭載します。実はこの裏で、開発職の守備範囲も広がります。",
+      "bg_query": "ソニーグループ株式会社 DualSense コントローラー",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "ゲーム売上4兆6700億円",
+      "fact_sub": "2024年度ゲーム&NW",
+      "text": "ゲーム売上は4兆6700億円です。数字だけ見れば、かなり良い事業です…ところが…",
+      "bg_query": "ソニーグループ株式会社 PlayStation イベント",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "週休2日制",
+      "fact_sub": "公式採用情報",
+      "text": "ここからが本当のホンネなんだけど、休日は週休2日制です。ただし、職種ごとの繁忙は一律ではありません。",
+      "bg_query": "ソニーグループ株式会社 採用 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "年休125日",
+      "fact_sub": "2025年度採用情報",
+      "text": "年間休日は125日です。ただし、新技術の現場は調整業務も増えます。公表されているのは、ここまでです。…だが、数字の裏にはさらに驚きの事実がある。…この戦略、天才だと思う？それとも狂気？",
+      "bg_query": "ソニーグループ株式会社 社員 オフィス",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。…待って、裏側に戻って",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "平均1118万",
+      "技術の裏側"
+    ],
+    "subtitle": "DualSenseが広げた開発現場",
+    "tagline": "公表数字と仕事の実態"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "年収1118万円。ただし、この数字には理由があります。",
+      "selected_hook": "あなたは知ってる？ソニー年収の裏側",
+      "scores": [
+        {
+          "hook": "あなたは知ってる？ソニー年収の裏側",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 50
+        },
+        {
+          "hook": "えっ、DualSenseの仕事で年収が？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 35
+        },
+        {
+          "hook": "年収1118万円。ただし、この数字には理由があります。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        5
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたは知ってる？ソニー年収の裏側",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "賞与は年2回です。1118万円には賞与も含まれます。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "研究開発費は7299億円です。触覚まで作り込む投資です。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "DualSenseは2種類の振動を搭載します。実はこの裏で、開発職の守備範囲も広がります。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "ゲーム売上は4兆6700億円です。数字だけ見れば、かなり良い事業です。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "休日は週休2日制です。ただし、職種ごとの繁忙は一律ではありません。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "年間休日は125日です。ただし、新技術の現場は調整業務も増えます。公表されているのは、ここまでです。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+          "tension": 0,
+          "is_dead": true
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 0,
+        "relatability": 3,
+        "shareability": 7,
+        "debate_potential": 5
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 71,
+      "optimized_score": 71,
+      "micro_reveals": 1,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.63,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "75%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "の企業の実態シリーズもチェックしてね。…待って、裏側に戻って",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.33
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「年収」→「信じられない年収」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "企業の闇要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.376,
+      "similar_to": "三菱重工の年収がヤバい 平均965万円、その裏側",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 2,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "ソニーグループの年収がヤバい 1118万円とDualSenseの仕事",
+      "enhanced_title": "😱ソニーグループの年収がヤバい 1118万円とDualSenseの仕事",
+      "emoji_added": "😱",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "😱ソニーグループの年収がヤバい 1118万円とDualSenseの仕事"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 6,
+      "bait_text": "…この戦略、天才だと思う？それとも狂気？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "neutral",
+        "neutral",
+        "surprise",
+        "neutral",
+        "neutral",
+        "positive",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "ellipsis",
+        "statement",
+        "statement",
+        "ellipsis",
+        "statement",
+        "question",
+        "statement"
+      ],
+      "monotone_runs": 2,
+      "interrupts_injected": 2,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "うちの視聴者はビジネスリテラシーが高いから言うけど",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 5,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 78,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['ヤバい', '年収'](+20)"
+    ]
+  }
+}

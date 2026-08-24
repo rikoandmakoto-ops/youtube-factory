@@ -1,0 +1,113 @@
+{
+  "title": "ASUSの年収が本当は気になる ゲーミング売上が約4,800億円",
+  "theme": {
+    "title": "PCパーツ業界の年収とトレンド",
+    "angle": "ゲーミング市場における企業の成長を数字で解説。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "話題企業の実態",
+      "fact_main": "ASUS 売上約4,800億円",
+      "fact_sub": "2023年連結売上高",
+      "text": "実はこの売上約四千八百億円の裏で、ゲーミング需要の波が起きています。",
+      "bg_query": "ASUSTeK Computer Inc. 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "推定年収 700万円",
+      "fact_sub": "未上場日本法人は推定",
+      "text": "日本法人の年収は七百万円前後と推定です。公表されているのは、ここまでです。",
+      "bg_query": "ASUSTeK Computer Inc. 日本法人 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "営業利益率 4.8%",
+      "fact_sub": "2023年連結決算",
+      "text": "二〇二三年の営業利益率は四点八パーセントです。数字だけ見れば、かなり良い水準です。",
+      "bg_query": "ASUSTeK Computer Inc. 決算説明会",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "ゲーミング売上 31%",
+      "fact_sub": "2023年部門別構成",
+      "text": "ゲーミング関連は売上の三十一パーセントです。実はこの裏で、部品価格の変動も受けます。",
+      "bg_query": "ASUSTeK Computer Inc. ROG ゲーミングPC",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "研究開発費 約1,100億円",
+      "fact_sub": "2023年連結ベース",
+      "text": "研究開発費は約千百億円です。新製品の速さは、ここへの投資で支えられています。",
+      "bg_query": "ASUSTeK Computer Inc. ROG マザーボード",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "世界展開 50超の国",
+      "fact_sub": "公式サイト掲載地域",
+      "text": "販売地域は五十を超える国です。ただし、海外拠点との連携が業務の前提になります。",
+      "bg_query": "ASUSTeK Computer Inc. グローバル オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "PC市場 2023年14%減",
+      "fact_sub": "IDC 世界PC出荷台数",
+      "text": "世界PC市場は二〇二三年に十四パーセント減です。成長企業でも、市場の逆風は消えません。",
+      "bg_query": "ASUSTeK Computer Inc. ノートパソコン 売り場",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったら、話題の企業の実態シリーズもプロフィールからチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収は推定",
+      "売上約4800億"
+    ],
+    "subtitle": "ゲーミングPCパーツ大手の実態",
+    "tagline": "表の成長、裏の働き方"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1787123711_9954",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "ASUSの年収が本当は気になる ゲーミング売上が約4,800億円"
+      },
+      "claude": null
+    }
+  },
+  "title_quality": {
+    "score": 78,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['本当は', '年収'](+20)"
+    ]
+  }
+}

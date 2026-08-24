@@ -1,0 +1,710 @@
+{
+  "title": "1分科学 #88：📊なぜ暗い場所を出た直後だけ白く飛ぶのか？99%が知らない30秒の差",
+  "theme": {
+    "title": "なぜ暗い所から出た瞬間だけ世界が白く飛ぶのか",
+    "angle": "明順応にかかる秒数と、桿体細胞が飽和する仕組み"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "あなたの目、暗闇で別モードになるって知ってた？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "しかもこれ、もっとヤバいことに…えっ、それ昨日やった！外へ出た瞬間、景色が真っ白になったよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "目は暗さに慣れるのに約20〜30分かかり、明るさ側は数十秒で切り替わります。しかもこれ、ほんの序章にすぎない…と思うじゃん？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ちょっと待って、ここからが驚きなんだけど、へぇ〜、知らなかった！スマホ画面を急に最大明るさへした感じに近いんだね。論文を直接読んで解説してるチャンネル、意外と少ないんだよね",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも暗所で働いた桿体細胞は、化け物級の光を受けると一時的に反応しきれなくなります。しかもこれ、ほんの序章にすぎない",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "桿体細胞って、暗い場所を見つける目のセンサーなんだ。満員電車みたいだね！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから白く飛ぶのは、暗闇用センサーが光でいっぱいになる途中なんです。実は続きがあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこの科学的事実、ポケモンの裏設定の元ネタなんだ。…これ、賛否分かれると思うんだけど、みんなはどう思う？…落ち着いて聞いてほしいんだけど"
+    },
+    {
+      "speaker": "理子",
+      "text": "感覚のふしぎシリーズシリーズ、気になった人は。…待って、暗闇に戻って",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "暗い映画館から昼の外へ出た瞬間、あなたの世界だけ白く飛んだことはありませんか？実は目の中では、30秒ほどの大急ぎな切り替えが始まっています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！映画のあとに外へ出たら、看板も空も白くて、数秒たつと急に見やすくなったんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、目は暗さへ慣れるより明るさへ戻る方がずっと速いことです。でも最初の一瞬だけ、光を受け止めきれません。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ白く飛ぶのは、目が壊れた合図じゃなくて、明るさに追いつく途中ってことなの？どうして白だけが残るの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "あなたの目には、桿体細胞と錐体細胞という二つの光センサーがあります。桿体細胞は暗い場所担当、錐体細胞は色と細かさ担当なんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！夜道で輪郭だけは見えるのに、服の色が分かりにくいのも、この二つの担当が違うからなんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "桿体細胞は片目におよそ1億個あり、わずかな光にも反応できます。暗い場所であなたの足元を見つけやすくする、頼れる夜用センサーです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "1億個もあるんだ！暗い駐車場で鍵穴を探す時、目が少しずつ見えるようになるのも、桿体細胞が働いている最中なんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "暗闇ではロドプシンという光を受け取る物質が増えます。難しい名前ですが、要するに暗い光を拾うための受信準備が整うことです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、部屋の電気を消した直後より、10分後の方が家具の形まで見えてくるよ。準備が進む時間なんだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ところが、その準備が整った目で強い日光を見ると、桿体細胞は一気に刺激されます。スマホの通知が同時に1億件届くような状態に近いんです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、暗い所で頑張っていた細胞ほど、外へ出た瞬間には反応しきれなくなるの？それなら白く飛ぶ理由が見えてきたよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "これを飽和と呼びます。飽和は、受け取れる量を超えて信号の差が出せなくなることです。強い光では明るさの違いを細かく伝えにくくなります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "満員電車で乗る人が多すぎると、誰がどこにいるか分かりにくくなるのと同じだね。光が多いほど見やすいとは限らないんだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして最初の30秒ほどで、目は強い光向けの設定へ急いで移ります。瞳孔が小さくなるだけではなく、細胞側の感度も下げているんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "瞳孔だけがカメラの絞りみたいに動くと思ってた！目の奥の細胞まで、明るさに合わせて設定を変えているんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。画面から窓へ目を移した時も、明るさの差に合わせて目は毎回、小さな明順応をしています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！外へ出る時だけじゃなく、部屋でスマホを見ていて窓の外へ目を向ける時にも同じ仕組みが働くんだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "明順応は、明るい環境へ目が慣れることです。暗順応より速く、条件によって数秒から数十秒で見え方が大きく変わります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ外へ出てからの最初の数歩は、目がまだ前の暗さ用のまま歩いている時間なんだね。段差が見えにくいのも納得だよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "人の目は明るさの変化を、同じ割合で感じやすい性質があります。100から200への差と、1000から2000への差を比べる感覚に近いんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "数字の差だけでは決まらないんだ！昼の外が室内よりずっとまぶしいのは、光の量が何倍も違うから、目の設定差も大きいんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "晴れた屋外は10万ルクス近くになることがあります。ルクスは明るさの単位で、一般的な室内の500ルクス前後とは桁違いです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "10万と500なら、同じ目で急に受けるには差が大きすぎるね。夏の昼に地下通路から出ると特に白く感じる理由も分かるよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、瞳孔は明るい光に対して約0.2秒から動き始めます。ただし光の感じ方そのものが安定するには、それより長い時間が必要です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "0.2秒で絞りは動くのに、見え方はすぐ完成しないんだね。カメラの設定だけ変えても、写真が整うまで少し待つ感じに近いのかな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "錐体細胞は赤、緑、青に近い光の違いを扱い、明るい場所で主役になります。白く飛ぶ最初の瞬間は、この色の情報も整理しにくい状態です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "だから最初は空が青いというより、ただ明るいだけに見えるんだ！色の担当が戻るまで、景色の細部が置いていかれるんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "白く飛ぶ長さには個人差があります。年齢、疲れ、睡眠不足、目の乾きでも感じ方は変わり、ここは一人ひとり同じ秒数ではありません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "寝不足の日に朝のカーテンを開けると、いつもよりまぶしく感じることがあるよ。それも単なる気のせいと決めつけなくていいんだね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、片目だけ急に見えにくい、強い痛みがある、白く飛ぶ時間が長く続く場合は、明順応だけと決めつけず眼科へ相談してください。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "普通の切り替えと、体からの別のサインは分けて考えるんだね。いつもの数秒と違うなら、無理に我慢しない方がよさそうだよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここは科学でもまだ結論が出ていない部分があります。同じ明るさでも人によってまぶしさが違う理由は、脳の処理まで関わると考えられています。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "目だけの問題ではなく、脳が光をどう受け取るかも関係するかもしれないんだ。自分の感じ方を比べたくなるね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "古代ギリシャの医師たちも、暗い場所と明るい場所で見え方が変わることを記録していました。ただ、細胞の仕組みが見えたのはずっと後の時代です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "昔の人も夜明けや洞窟の出口で、同じ白さを感じていたんだね。毎日の体験なのに、目の中ではこんな細かな作業が続いていたんだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "1860年代、ドイツの生理学者フランツ・ボルは、網膜で光により変化する色素を観察しました。これがロドプシン研究の大事な出発点になりました。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！150年以上前の観察が、映画館から外へ出た時の見え方につながっているなんて、身近な科学って面白いね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "ロドプシンは強い光で一時的に変化し、暗い場所では時間をかけて戻ります。この戻る速さの違いが、暗順応が20〜30分かかる理由の一つです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "暗い所に入る時は待たされるのに、明るい所へ出る時は数十秒なんだね。行きと帰りで同じようには進まないのが意外だよ。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "夜空の星を見る時、少し横を見ると星が見つけやすいことがあります。桿体細胞が中心より周辺に多いので、弱い光を拾いやすくなるためです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、星をじっと見た時より、少し視線を外した方が見えることがある！暗闇用センサーの場所まで関係しているんだ。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "明るい場所では逆に、中心の錐体細胞が細かい文字や色を担当します。外へ出た直後に標識が読みにくくても、少し待つと輪郭が戻るのはこのためです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "白く飛ぶのは景色が消えたわけじゃなく、担当交代の途中なんだね。たとえるなら、夜勤から日勤へ引き継いでいる目の中みたいだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "外へ出る予定がある時は、出口の手前でスマホ画面の明るさを少し下げると、明るさの落差を小さくできます。特に夏の昼には試しやすい方法です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "画面を見た直後に外へ出ると、目が二重に忙しくなるんだね。明るさを下げるだけなら、今日からすぐできそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "地下駐車場や映画館の出口では、急がず最初の数歩を小さくしてみてください。目が数十秒で調整する間、段差や人の動きを確認しやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！白く飛ぶ時間は、立ち止まるほど大げさなものではなくても、足元を見る余裕として使えるんだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "サングラスは、まぶしさを弱めて目への光量を減らす道具です。晴天で長く外にいる日は、紫外線対策と見やすさの両方に役立ちます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ただ格好のためだけじゃないんだね。暗い場所から夏の外へ出る時も、光の差を少しゆるやかにしてくれるなら助かりそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "車の運転中は、トンネル出口で特に注意が必要です。明るさの差が大きい場所では、目の順応より先に道路状況が変わることがあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "トンネルを抜けた瞬間に前が明るく見えすぎるのも、同じ仕組みなんだね。数十秒の差でも、運転では大事な時間になりそうだよ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の白い景色は、桿体細胞が強い光で飽和し、錐体細胞中心の見え方へ切り替わる途中でした。目が怠けているのではなく、働いている証拠です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！昨日の白い景色は、目の中で夜用から昼用へ担当が交代していたサインだったんだね。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜寝る前に部屋を暗くして、数分後に見えるものが増える感覚も意識してみてください。明るさへ戻る時との違いが、もっと分かりやすくなります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "暗い所では20〜30分、明るい所では数十秒。この差を知っていると、いつもの目の変化が少し特別に見えてくるね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなるのはなぜかを見ていきます。あなたが昨日感じたかもしれない、あの一瞬の体の反応です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それも昨日あった！眠る直前のビクッにも理由があるなら、今夜はちょっと意識してみたくなるね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "感覚のふしぎシリーズでは、あなたの体で毎日起きる小さな変化を一つずつほどいています。面白かったら、明日も一緒に見つけてください。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "身近な不思議を毎日1本ずつ解き明かして、チャンネル登録者1万人を目指して投稿中です。面白かったらチャンネル登録よろしくね、次回も一緒に見てほしいな。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "出た瞬間",
+      "白く飛ぶ"
+    ],
+    "hook_caption": "目が追いつかない",
+    "subtitle": "暗がりから光へ出る30秒",
+    "tagline": "あなたの目で起きる切り替え"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "今すぐ暗い部屋から明るい場所へ出てみてください。最初だけ白く飛びませんか？",
+      "selected_hook": "あなたの目、暗闇で別モードになるって知ってた？",
+      "scores": [
+        {
+          "hook": "あなたの目、暗闇で別モードになるって知ってた？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 65
+        },
+        {
+          "hook": "えっ、明るい場所で目が一瞬バグる理由は？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 35
+        },
+        {
+          "hook": "今すぐ暗い部屋から明るい場所へ出てみてください。最初だけ白く飛びませんか？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 10,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 2,
+      "dead_zones": [
+        1,
+        3
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたの目、暗闇で別モードになるって知ってた？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ、それ昨日やった！外へ出た瞬間、景色が真っ白になったよ。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "目は暗さに慣れるのに約20〜30分かかり、明るさ側は数十秒で切り替わります。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "へぇ〜、知らなかった！スマホ画面を急に最大明るさへした感じに近いんだね。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "しかも暗所で働いた桿体細胞は、強い光を受けると一時的に反応しきれなくなります。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "桿体細胞って、暗い場所を見つける目のセンサーなんだ。満員電車みたいだね！",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "だから白く飛ぶのは、暗闇用センサーが光でいっぱいになる途中なんです。実は続きがあります。",
+          "tension": 8,
+          "is_dead": false
+        },
+        {
+          "index": 7,
+          "text": "次に外へ出る時、最初の30秒を意識してみてください。感覚のふしぎシリーズも見て、1万人目標で毎日投稿",
+          "tension": 3,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "subscribe",
+      "style_label": "チャンネル登録",
+      "original_cta": "次に外へ出る時、最初の30秒を意識してみてください。感覚のふしぎシリーズも見て、1万人目標で毎日投稿中の応援登録よろしくね！",
+      "new_cta": "感覚のふしぎシリーズシリーズ、気になった人はチャンネル登録して、明日の科学も見逃さないでね！"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "実はこの科学的事実、ポケモンの裏設定の元ネタなんだ。",
+      "matched_topic": "体"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 85,
+      "issues": [
+        {
+          "type": "visual_dependent",
+          "line": 4,
+          "text": "ちょっと待って、ここからが驚きなんだけど、へぇ〜、知らなかった！スマホ画面を急に",
+          "pattern": "画面[のを上下左右]",
+          "reason": "「画面の〜」はテロップ視聴者には分かりにくい"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 4,
+          "text": "ちょっと待って、ここからが驚きなんだけど、へぇ〜、知らなかった！スマホ画面を急に",
+          "reason": "1行57字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 30,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 9,
+        "relatability": 3,
+        "shareability": 12,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 71,
+      "optimized_score": 71,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.17,
+      "issues": [
+        "22%・44%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": true,
+      "trigger_added": "しぎシリーズシリーズ、気になった人は。…待って、暗闇に戻って",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.5
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「強い」→「化け物級の」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭に具体的な数字"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.0,
+      "similar_to": null,
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 0,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "なぜ暗い場所を出た直後だけ白く飛ぶのか？99%が知らない30秒の差",
+      "enhanced_title": "📊なぜ暗い場所を出た直後だけ白く飛ぶのか？99%が知らない30秒の差",
+      "emoji_added": "📊",
+      "category": "number",
+      "modified": true
+    },
+    "enhanced_title": "📊なぜ暗い場所を出た直後だけ白く飛ぶのか？99%が知らない30秒の差"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 7,
+      "bait_text": "…これ、賛否分かれると思うんだけど、みんなはどう思う？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "negative",
+        "surprise",
+        "neutral",
+        "surprise",
+        "neutral",
+        "surprise",
+        "surprise",
+        "surprise",
+        "negative"
+      ],
+      "streaks_found": 1,
+      "breakers_injected": 1,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "exclaim",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "論文を直接読んで解説してるチャンネル、意外と少ないんだよね",
+      "position": 3,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 3,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '知らない', '99%'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  }
+}

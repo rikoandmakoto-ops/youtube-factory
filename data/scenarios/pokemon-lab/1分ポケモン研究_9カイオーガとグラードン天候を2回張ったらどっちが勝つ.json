@@ -1,0 +1,667 @@
+{
+  "title": "1分ポケモン研究 #9：🎮カイオーガとグラードン、天候を2回張ったらどっちが勝つ？",
+  "theme": {
+    "title": "カイオーガとグラードン、天候を張り合ったら本当はどっちが強い",
+    "angle": "天候上書きの順番が勝敗を決める仕組み"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "君は知ってる？天候を2回張ると勝敗が逆転する理由",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！グラードンも晴れを出すのに、順番で決まるの!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "信じがたいが、でも闇すぎる図鑑をよく見ると、もっと怖いことが書いてあって…第3世代では特性が出た順で、後の天候が場を塗り替えるんだよ！うちのポケモン勢なら知ってるよね",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じ伝説で種族値670なのに、先に出すだけで不利はずるいって！…一旦整理すると、こういうことだ",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも雨ならカイオーガの水技は1.5倍、晴れなら半減なんだよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "対戦だとこれが刺さるってこと？交代の一手が勝敗そのものじゃん！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "答えは最後に天候を出した側。ただし原始回帰まで入ると、まだ続きがある！…このポケモン、パーティに入れる派？入れない派？…ここで冷静に考えてみると",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "天候バトルの続きは1分ガチ対決シリーズに置いてあるよ、1万人目標で毎日投稿中だから応援よろしくね！…待って、逆転に戻って",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これ知ってた？あなたがカイオーガとグラードンを同時に出したとき、種族値670同士の勝負は技を選ぶ前、天候を最後に出した1匹がかなり有利になるんだよ！\nえ、マジでってなるけど、この順番が火力を丸ごとひっくり返す。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！雨を呼ぶカイオーガと晴れを呼ぶグラードンなら、どっちも自分の天気を出して引き分けじゃないの!? 先に技を撃つポケモンより、出る順番が大事ってこと？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そう、雨と晴れは同じ場に共存できないから、最後に発動した天候が残るんだよ！\nこの動画では第3世代からの仕様と原始回帰まで追って、どの一手で勝敗が反転するのか答え合わせしていく。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "まず結論を匂わせると、通常のカイオーガ対グラードンは、単純な種族値では決まらないんだよ！\n同じ合計670でも、場に残る雨か晴れが技の威力を動かして、攻撃力の数字以上に差を作る。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ！伝説ポケモン同士の正面対決で、レベル100や努力値より前に、出場順というチーム操作が勝ち筋を作るなら、知らないと普通に損するじゃん！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで言う天候は、場全体に残る雨や晴れの状態のことだよ。\n雨ならみず技が1.5倍、晴れならほのお技が1.5倍になるから、天気そのものが大型の火力補正なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "じゃあカイオーガのしおふきやこんげんのはどうは、雨が残るだけでさらに伸びるの!? 逆にグラードンが晴れを取れたら、水技を弱らせられるってことだよね？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その通りで、晴れの場ではみず技が0.5倍になるんだよ！\n同じ技の威力を雨の1.5倍から晴れの0.5倍まで動かせるから、カイオーガ側では実質3倍差の感覚になる、やば、これ見て。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "カイオーガの特性あめふらしは、場に出た瞬間に雨を起こす公式の能力だよ。\nグラードンのひでりは晴れを起こし、どちらも第3世代『ルビー・サファイア』から伝説対決の看板として働いてきた。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "初代からずっとじゃなくて、第3世代から始まった天候バトルの代表ってわけか！映画『裂空の訪問者』でも、この2匹が自然の力をぶつけるイメージはめちゃくちゃ強いよね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし映画や作中描写は、巨大な自然の衝突を見せる公式演出が中心なんだよ。\nゲーム対戦の勝敗は別の数値ルールで計算するから、映像の印象と対戦仕様は混ぜずに見るのが大事。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そしてこの話、ここまでの『速い方が天候を取る』は半分だけ正しいんだ！\n素早さは基本的に技を出す順番であって、特性が発動する順番にはダブルバトル特有の判定がある。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、そんな設定あるの!? カイオーガの素早さ90とグラードンの素早さ90が同じだから、同速勝負でコイン投げみたいになると思ってたけど、そこじゃないの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ダブルバトルで同時に出す場合、特性の発動順は素早さ順になるんだよ！\nだから通常カイオーガと通常グラードンはどちらも素早さ種族値90、同じ条件なら最後の判定はランダムになる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "種族値だけ見ると両方90で完全に並んでるのか！種族値はポケモンごとの基礎能力の目安だけど、同じ数字が天候の最終決定までコイン投げにするとは、悔しいくらい熱いね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "でも交代で後から場に出した場合は話が一気に変わるんだよ！\n後出ししたカイオーガならあめふらしがその時点で発動して、グラードンが作った晴れを雨へ上書きできる。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまりグラードンが先に晴れを張っても、カイオーガを交代で出すだけで水技強化の雨に塗り替えられるの!? ターンを使った読み合いが全部、天候の取り合いになるじゃん！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "逆も同じで、雨のカイオーガにグラードンを後投げすれば晴れが残るんだよ！\n交代は1ターンを使う行動だけど、攻撃を受けながら天候と技の補正まで奪えるから、対戦だとこれが刺さる。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで最強ファクト、通常同士なら種族値合計670で完全同点なのに、天候で水技は雨の1.5倍から晴れの0.5倍へ落ちる。\n火力の見え方が3倍ぶん動くから、数字以上に勝負が荒れるんだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ！攻撃や特攻を少し上げるより、場を晴れか雨にするだけで3倍差の感覚が出るなら、伝説対決の主役はカイオーガでもグラードンでもなく天候じゃん！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "実戦の計算例で見ると、カイオーガの代表技しおふきは威力150、ただしHP満タンで最大になる技だよ。\n雨なら150に1.5倍が乗るけど、晴れなら0.5倍になり、同じボタンなのに別物になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "威力150が雨で225相当、晴れで75相当の感覚まで落ちるの!? タイプ一致の補正も別にあるから、グラードンが晴れを取るだけでカイオーガの必殺技をかなり止められるんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "タイプ一致は、自分と同じタイプの技が1.5倍になる基本補正だよ。\nカイオーガはみず単タイプだから、雨と一致が重なるしおふきは、晴れを奪われるだけで最大の持ち味を大きく削られる。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "一方のグラードンも、晴れでほのお技を1.5倍にできるんだよ！\nじめんタイプのじしんだけで押すより、晴れを利用したほのおのパンチやだいもんじまで圧をかけられるのが強みになる。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "グラードンは晴れを取って水技を半減させるだけじゃなく、自分の炎技も強化できるのか！防御ではなく攻撃まで同時に上がるから、天候を奪い返す価値がめちゃくちゃ高いね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式図鑑でもカイオーガは大雨を降らせて海を広げる伝説、グラードンは日照りで大地を広げる伝説として書かれているんだよ。\nゲームの雨と晴れの対立は、設定面でもきっちり答え合わせになっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "『オメガルビー・アルファサファイア』の作中では、ゲンシカイオーガとゲンシグラードンが自然の力をさらに増幅させる姿も描かれた。\nここから天候上書きは、普通の雨晴れよりさらに熱い専用ルールへ入る。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って、原始回帰まで出ると後から交代した方が毎回ひっくり返す話じゃなくなるの!? ここが本当にヤバい部分なら、通常対決の答えも変わりそうじゃん！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ゲンシカイオーガの特性ははじまりのうみで、強い雨を起こすんだよ。\nこの強い雨ではほのお技が失敗するから、単なる威力半減よりずっと極端に、炎での反撃を技ごと消してしまう。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "炎技が半減じゃなくて失敗!? それなら晴れを取りたいグラードン側は、ほのお技で押し返す計画そのものが崩れるじゃん。え、マジでそこまで別物なの！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ゲンシグラードンの終わりの大地は逆で、強い日差しを起こしてみず技を失敗させるんだよ！\nカイオーガのしおふきもこんげんのはどうも、強い日差しが残る限り攻撃として通らない。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ！通常の晴れなら水技は0.5倍で済むのに、原始回帰の晴れは水技を丸ごと止めるのか。\nこれは火力計算より前に、使える技の種類が消える戦いだ！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも強い雨、強い日差し、そしてデルタストリームの3種類は、普通の雨や晴れでは上書きできないんだよ。\nカイオーガやグラードンを通常形で出しても、原始の天候を塗り替えることはできない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "じゃあ原始回帰同士で出会ったときだけ、また順番が勝敗に戻ってくるの!? 普通の天候には絶対負けないのに、同格の原始天候だけは取り合うって、専用ルールが熱すぎる！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その通り、ゲンシカイオーガとゲンシグラードンが同時に出れば、特性の発動順で最後に残った原始天候が場を支配するんだよ！\nこの2匹は素早さ種族値90同士だから、同条件ではまたランダムが絡む。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし対戦で大事なのは、同時に出す場面だけじゃないんだよ。\n一度引っ込めて後から再登場すれば特性は再発動するから、相手の原始天候を読み切って最後に出す手が、そのまま主導権になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "学校の陣取りゲームみたいに、最後に踏んだ場所を取るんじゃなくて、最後に天候を出した側が技のルールまで変えるのか！交代1回が盤面全部を取り返すの、悔しいけど上手い。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "歴史を追うと、第3世代のあめふらしとひでりは最初、場に出たときから5ターンで終わる普通の天候だったんだよ。\nその後の世代では、持ち物や仕様変更もあって、天候を維持する価値が何度も変化した。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第5世代ではカイオーガやグラードンの特性天候が交代まで続いたため、雨パーティと晴れパーティの対立が特に激しかったんだよ！\n天候を奪うためだけの交代が、上位対戦でも何度も飛び交った。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "初代からずっとじゃないけど、世代ごとにルールが変わるから『昔はこうだった』だけで判断すると危ないんだね！今遊んでいる作品の仕様を見ないと、読み合いの答えも変わるわけだ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第6世代で原始回帰が登場したときは、強い雨と強い日差しが普通の天候を受け付けない仕様で大騒ぎだったんだよ。\n公式の追加要素が、カイオーガとグラードンの対立を対戦ルールにも刻み込んだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これはファンの説なんだけど、両者の天候争いは海と大地の領土争いをバトルで再現していると言われることがある。\nただし公式が対戦仕様の意図まで断定したわけじゃないから、設定とは分けて楽しもう。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "でも図鑑の大雨と日照り、ゲームの雨と晴れ、原始回帰の専用天候まで並ぶと、ファンがそう感じるのも分かる！公式事実じゃない部分は線を引きつつ、想像するとテンション上がるね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここからは初心者向けの実戦ヒント、相手のカイオーガにグラードンを後出しするなら、晴れで水技が0.5倍になる瞬間を狙うんだよ！\nでも交代直後に受ける技までは消えないから、HP管理が先に必要になる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "後出しは万能ボタンじゃなくて、攻撃を受けるリスクと天候奪取を交換する判断なんだね！相手が水技を押してきそうなターンを読むほど、グラードンの晴れが刺さりやすいわけか。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "逆にカイオーガを後出しするなら、グラードンの晴れを雨に変えて、みず技の1.5倍補正を取り戻せるんだよ。\nただし相手が交代を読んで引けば、狙った対面そのものが消える、そこが対戦の面白さ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、天候だけ見て交代すると相手も引いて、せっかくの有利対面がなくなるの!? だから上手い人は技を撃つか、交代するか、天候を残すかを毎ターン迷わせてくるんだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ダブルバトルなら、出す順番と素早さまで計画して特性の発動順を調整できるんだよ！\n同時に出る2匹のうち遅い方が後に特性を出す場面もあるから、速さだけが正義とは限らない。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "素早さは速い方が得だと思ってたのに、天候を最後に残したいなら遅さが価値になる場面もあるのか！種族値90同士の対決が、育て方まで変える理由が見えてきた。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "覚えておく数字は3つだけ、通常の雨でみず技1.5倍、通常の晴れでみず技0.5倍、そしてカイオーガとグラードンの通常形は素早さ種族値90。\nこの3点だけで天候読みが急に楽しくなる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "知ってた？って友達に言いたくなるのは、同じ90だから同時出しでは運も絡むのに、交代で出す順番なら自分で天候を取り返せるところだね！これは対戦だとこれが刺さる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今回の答えは、通常形なら最後に天候を発動させた側が強い、ただし原始回帰では強い雨か強い日差しを残した側が相手の主力技まで止める、だったんだよ！\n同じ670同士でも順番が王冠を動かす。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "カイオーガが絶対、グラードンが絶対じゃなくて、天候を誰が最後に取るかで強さが反転するのか！知識だけで終わらず、交代の一手を見る目まで変わるのが気持ちいいね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回はレックウザのデルタストリームが、雨と晴れだけじゃなく原始天候にどう割り込むのかを研究するよ！\n3体目が入った瞬間、天候の順位表がまた壊れるから見逃せない。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "天候を最後に出すだけで、みず技の火力も炎技の計画も変わるなんて、それ知らなかった！次に遊ぶとき、カイオーガとグラードンの交代をちょっと見方が変わるはず。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "面白かったら高評価とチャンネル登録よろしく！1分ガチ対決シリーズでは、数字と公式設定で伝説ポケモンの勝負を毎日テンション高く研究して、登録者1万人を本気で目指してるんだよ！\n次の天候逆転も一緒に見届けよう。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "天候が消える",
+      "最後の1手"
+    ],
+    "hook_caption": "順番で逆転",
+    "subtitle": "雨と晴れは同時に残れない",
+    "tagline": "場に出る順番だけで火力がひっくり返る"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "なんでカイオーガだけ雨を先に取れると強いの？",
+      "selected_hook": "君は知ってる？天候を2回張ると勝敗が逆転する理由",
+      "scores": [
+        {
+          "hook": "君は知ってる？天候を2回張ると勝敗が逆転する理由",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 60
+        },
+        {
+          "hook": "え、天候を2回張ったカイオーガに隠された闇とは？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 60
+        },
+        {
+          "hook": "なんでカイオーガだけ雨を先に取れると強いの？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 45
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        2
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "君は知ってる？天候を2回張ると勝敗が逆転する理由",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ待って！グラードンも晴れを出すのに、順番で決まるの!?",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "第3世代では特性が出た順で、後の天候が場を塗り替えるんだよ！",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "同じ伝説で種族値670なのに、先に出すだけで不利はずるいって！",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "しかも雨ならカイオーガの水技は1.5倍、晴れなら半減なんだよ！",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "対戦だとこれが刺さるってこと？交代の一手が勝敗そのものじゃん！",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 6,
+          "text": "答えは最後に天候を出した側。ただし原始回帰まで入ると、まだ続きがある！",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "天候バトルの続きは1分ガチ対決シリーズに置いてあるよ、1万人目標で毎日投稿中だから応援よろしくね！",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 3,
+          "text": "でも図鑑をよく見ると、もっと怖いことが書いてあって…第3世代では特性が出た順で、",
+          "reason": "1行56字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 29,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 3,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 67,
+      "optimized_score": 67,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.23,
+      "issues": [
+        "25%・50%・75%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "目標で毎日投稿中だから応援よろしくね！…待って、逆転に戻って",
+      "keyword_overlap_before": 0.2,
+      "keyword_overlap_after": 0.4
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「図鑑」→「闇すぎる図鑑」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "闇設定・裏設定要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.0,
+      "similar_to": null,
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 0,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "カイオーガとグラードン、天候を2回張ったらどっちが勝つ？",
+      "enhanced_title": "🎮カイオーガとグラードン、天候を2回張ったらどっちが勝つ？",
+      "emoji_added": "🎮",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🎮カイオーガとグラードン、天候を2回張ったらどっちが勝つ？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 6,
+      "bait_text": "…このポケモン、パーティに入れる派？入れない派？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise"
+      ],
+      "streaks_found": 2,
+      "breakers_injected": 2,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "question",
+        "exclaim",
+        "statement",
+        "exclaim",
+        "exclaim",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "うちのポケモン勢なら知ってるよね",
+      "position": 2,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['対決型'](+12)",
+      "好奇心ギャップ['？'](+12)"
+    ]
+  }
+}

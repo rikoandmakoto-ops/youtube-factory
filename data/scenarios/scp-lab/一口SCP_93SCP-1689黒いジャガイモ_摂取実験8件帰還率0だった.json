@@ -1,0 +1,680 @@
+{
+  "title": "一口SCP #93：⚠️SCP-1689「黒いジャガイモ」— 摂取実験8件、帰還率0%だった",
+  "theme": {
+    "title": "SCP-1689「黒いジャガイモ」— 摂取実験8件、消えた被験者の帰還率は0%だった",
+    "angle": "実は身近な食品に見える異常存在として、収容容器の破損から施設内に未知の環境が広がった記録を機密解除する",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "驚き！あなたの身近にも黒い畑が…？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、黒い芋の箱が壊れただけで、何が出たんだ。前回のSCPを覚えている奴なら、この関連性がわかるだろう",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "摂取倫理違反の実験は8件。消えた被験者の帰還率は0%だ…報告書はここで途切れている…",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "食べた者は、黒い畑が続く別の場所へ移されたという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも芋を食べなくても、畑が施設へ来るのか。さらに恐ろしい事実が判明する",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次の記録が、すべてをヤバいえた。容器破損から30分後、廊下に畝と夕暮れの影が現れた…これ、本当にEuclid分類で合っているのか？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "封鎖班4名も戻らない。記録はここで途切れている。しかし、これで終わりではなかった。これ、一番怖いSCPランキング何位だと思う？…と思いきや、意外な展開が待っていた",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "黒い畑の続きは実は身近なSCPシリーズにある。毎日投稿中、1万人目標の応援をよろしくね。…待て、最初の報告と矛盾してないか？",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたの台所で、ジャガイモの皮がいつもより黒く見えたことはないか。財団は、その違和感を放置して摂取した8名を失った。帰還率は0%。見慣れた夕食が、収容違反の入口になった記録だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実は完全には収容されていない。厚い容器へ封じた黒いジャガイモは、破損事故から30分後、施設の廊下に畑を出現させた。壁も床もある場所に、夕暮れだけが侵入した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、待って。食べ物みたいな芋を保管していた箱が壊れただけで、通路が畑になるのか。学校の廊下が一瞬で別のマップへ変わるより、逃げ道が消える分だけまずい。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "指定番号はSCP-1689。通称は黒いジャガイモ。外見だけなら、土のついた黒ずんだ芋にしか見えない。だが財団の文書では食品ではなく、別の場所へ通じる異常な入口として管理される。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "これは台所にある食材の話ではない。黒い塊を食べた者がどこへ行くのか、そして容器の外へ広がった畑が何を待っているのか。機密解除された記録の範囲だけを読む。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "8人が消えた後にも実験記録が残るなら、財団は誰かの帰還を期待していたのか。でも帰還率0%なら、残ったのは救出じゃなくて、向こう側からの呼び声だけだろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の摂取実験では、Dクラス職員1名に小さな欠片が与えられた。監視時間は7分。被験者は飲み込んだ直後、隔離室の中央から音もなく消失した。椅子だけが元の位置に残った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視映像には、消失の直前まで普通の白い壁が映っていた。しかし映像を1コマずつ確認すると、被験者の背後に土の畝らしい線が3本だけ見える。現場には土の痕跡がなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "壁の前に畝が見えるなら、向こう側は扉の先じゃない。部屋の中に重なっていたのか。自分の部屋の壁紙の裏にも、知らない景色が重なっていたら、眠れなくなる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残された音声には、被験者が最後に発した短い言葉がある。畑が見える、という内容だ。ただしその声の直後、マイクには風ではなく、乾いた土を踏む足音が23秒間記録された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "摂取実験は合計8件まで行われた。消失は8件すべてで起きた。死亡確認はできず、救難信号も受信されず、生存と呼べる根拠も残らなかった。報告書に記された帰還率は0%だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消えた人が死んだとも、生きているとも言えないのか。帰還率0%という数字は、ゲームオーバーより嫌だ。終わったかどうかすら分からない場所へ、8人が置き去りになっている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "8件のうち5件で、被験者は消失前に同じ景色を口にした。灰色の空。黒い土。終わりの見えない畝。そして畑の向こうで、誰かが食事の準備をしているという証言だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残る3件では発話がない。だが被験者の指先にだけ土が付着していた。隔離室の床は清掃済みで、土を持ち込む経路はなかった。財団でも、まだ説明できていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "食べる前から土が付いていたなら、芋を口に入れた瞬間だけが危険じゃない。あの黒い畑は、選ばれた人を先に触っている。そう考えると、実験室の外も安全じゃない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1689の特別収容プロトコルは、容器の密閉だけを命じていない。周囲50メートル以内に土壌、食器、未処理の根菜を置くことも禁じている。食卓を連想させる物が、境界を薄くするためだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この規則は過剰に見える。だが容器近くで夕食を取った職員3名が、普通のジャガイモを黒い塊だと誤認した記録がある。実物は変化していない。それでも1名は皮を剥き始めた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "普通の芋まで黒く見えるなら、目の前の夕食を信用できない。夜食を作るとき、まな板の上で見分けが消える。誰かが止めなければ、自分で入口を作ってしまう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第二フックを置く。このSCPで最も危険なのは、摂取実験ではない。容器が壊れた後、誰も芋を食べていないのに、施設そのものが黒い畑の一部へ変わり始めたことだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "破損事故は実験後の清掃中に発生した。落下した容器は高さ1.2メートルから床へ当たり、蓋に細い亀裂が入った。漏れたのは黒い土のような粉末で、量は片手に載る程度だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "清掃班は最初、その粉末を通常の汚染物として扱った。だが回収から11分後、床の粉末は一本の筋になり、さらに30分後には、畑の畝のような規則正しい列へ変わっていたという。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "片手に載る量の土が、30分で廊下の形を変えるのか。床にこぼした砂なら掃除機で終わる。でもこれは掃除される前に、場所の方を畑へ作り替えた。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "当時の封鎖範囲は通路1本、全長42メートルだった。ところが赤外線記録では、通路の奥行きが計測不能になった。非常口まで12メートルだった距離が、地図上から意味を失った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "封鎖班は警備員4名で編成された。無線では4人の呼吸が確認できたが、映像は一人ずつ暗くなった。最後の画面には白い非常灯ではなく、日没直前の橙色が満ちていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "施設の中に夕方だけが現れるなんて、時計を止めるより怖い。窓のない地下区画で夕暮れを見るなら、それは空じゃない。向こう側が天井を消して、こちらへ空を押し込んだんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "4名の無線記録には、遠くで鍬が土を叩くような音が入っている。音源へ近づくほど、出口までの歩数は増えた。12メートルの通路を進み、記録上では合計318歩が数えられている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に発話した警備員は、前方に人影がいると報告した。人数は不明。影だけが4本のはずなのに5本あったという。その追加された影の持ち主は、映像に映っていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4人で入って影が5本なら、誰かが後ろへ立ったんだろ。でも無線では誰も振り返らなかった。振り返った者だけが、畑の側へ連れていかれると知っていたみたいで怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "封鎖班4名は帰還していない。ただし失踪判定までの72時間、無線は断続的に応答した。聞こえたのは助けを求める声ではなく、夕食は8人分で足りるか、という確認だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この発話の8人分という数字は、先に消えた被験者数と一致する。財団は偶然と断定しなかった。だが質問に答えた職員が、直後に黒い土の匂いを嗅いだため、通信は遮断された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "向こうで8人分の夕食を用意しているなら、消えた人たちは客じゃないのか。席だけが残っていて、次の人間を待っている。そんな食卓なら、空腹より孤独の方が危険だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は土を除去する試みを3回行った。1回目は表面を削り、2回目は薬剤で覆い、3回目は床材ごと切り取った。どの試行でも、作業後に黒いジャガイモの個数だけが増えた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "増加数は作業員ごとに違った。12個と報告した者、39個と報告した者、畑そのものが一個の芋だと答えた者がいた。数えた対象が同じだったかさえ、財団は確認できていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "個数が違うなら、監視員は同じ物を見ていない。教室で黒板の文字が人によって変わるようなものだ。でも答え合わせのために近づけば、数える側まで畑の中へ入る。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "土壌の中から、白い札が1枚だけ回収された。札にはDクラス職員の識別番号が刻まれていた。番号は8件目の被験者と一致するが、札の材質は財団の備品と異なっていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "札を解析した担当者は、開始から17分後に食堂へ向かった。監視員の証言では、担当者は自分の皿に黒い芋があると訴えた。その皿には白いパンしか載っていなかった。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "パンしかない皿に黒い芋を見るなら、問題は札でも食堂でもない。見た人の食卓へ、畑の方が重なってくる。帰宅してから同じことが起きたら、誰も止められない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "担当者は隔離後に失踪した。室内にSCP-1689は置かれていない。それでも床には濡れた土の足跡が18歩分残っていた。足跡は壁まで続き、壁の手前で途切れていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "無人探索機の投入は事故から6時間後だ。映像には灰色の空と黒い畝が映った。しかし位置情報は最後までサイト内部を示していた。外へ出たのか、内側が置き換わったのかは不明だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "映像は畑なのに位置情報だけが施設内なら、扉の向こうは遠い世界とは限らない。自分の部屋のドアを開けた先に、昨日までの廊下がない可能性がある。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "探索機は6分間、同じ畝を進んだように見えた。タイヤの跡は増えたが、前方の白い石だけは一度も近づかなかった。距離を移動しても、景色がこちらを通過させなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後の映像に、土から突き出た腕らしい影が映った。形は不鮮明で、財団は人間と認定していない。だが腕の近くにあった識別札は、失踪した被験者の番号と一致していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "助けを求める腕に見えても、救助へ行けないのか。番号が一致するほど、本物だと思ってしまう。でも本物の記憶や番号を使う何かなら、呼びかける方が罠になる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容室には現在、二重扉と監視員6名が置かれている。扉は内部から出る者を止める目的も持つ。19時08分になると、扉の向こうから食器が擦れる音が聞こえるためだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "19時08分は最初の被験者が消失した時刻と一致する。音は毎日続くが、皿の数は確認されていない。記録員は音を数えようとして失神し、回復後には自分の名前を忘れていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "食器の数を数えるだけで名前を失うなら、夕食の席数に触れてはいけない。向こう側は人を招く前に、こちらの人間としての番号や名前を削っている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "扉の前では、失踪した職員に似た声が名前を呼ぶことがある。本人確認は禁じられている。質問へ正答できる声ほど危険だったからだ。記憶が正しいことは、帰還の証明にならない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ある警備員は、失踪した友人の誕生日を尋ねた。扉の向こうは即座に正答した。その直後、扉の下から黒い土が靴先へ伸びた。警備員は後退し、扉を開けずに済んだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "正しい答えを返されれば、誰でも鍵を開けたくなる。だから危険なのは、知らない怪物じゃない。昔から知っている声で、帰ってきたと言われることだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1689について、財団の仮説は統一されていない。摂取者が別の場所へ移るのか、こちらの場所が畑へ置き換わるのか。答えを得るために入った者が、全員戻らないからだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "確実なのは、黒い芋を食品として扱った時点で警戒が遅れることだ。皮を剥く動作は、扉の鍵を回す動作より自然に行われる。日常の手つきほど、異常への入口を隠しやすい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…ねえ、これ本当に大丈夫なの？　夜の台所で芋を洗うだけでも、黒い土の匂いを思い出す。見慣れた食べ物だからこそ、逃げる判断が一番遅くなる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし黒いジャガイモらしい物を見かけても、決して近づくな。切るな。煮るな。誰かに味見を頼むな。特に19時08分に、どこかで食器の音がしても振り返るな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録はここで途切れている。ただし収容室の当直日誌には、昨日も畑の向こうで8人分の椅子が引かれたと書かれている。空席があるのか、座っている者がいるのかは[DATA EXPUNGED]だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が滅びた人類を戻すために封じたSCP-2000を読む。再生された人間の中に、元の名前を知らない者が混じるという記録を確認する予定だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "黒い畑の夕食も、機械の奥で呼ばれる名前も、帰る場所を真似ている。だから扉の前に立った時、帰りたいと思った方が先に連れていかれるのかもしれない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書はSCP-1689、黒いジャガイモの原典記録を基にした機密解除ファイルだ。原典はSCP財団Wiki、CC BY-SA 3.0。欠落した記述は、意図的に[REDACTED]された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実は身近なSCPシリーズには、食卓や部屋の中へ紛れた別の報告書も置いてある。毎日投稿中だ。登録者1万人を目標にしている。応援をよろしくね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして今夜、食卓の芋が黒く見えても、確かめようとするな。向こう側では、まだ8人分では足りないのかもしれない。見かけても、決して近づくな。",
+      "expression": "sad",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "黒い芋を食べた",
+      "8人が消えた"
+    ],
+    "hook_caption": "帰還率0%",
+    "subtitle": "収容箱の破損後、施設内に広がった未知の畑",
+    "tagline": "食卓の形をした入口"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "このSCP、実は今も完全には収容されていない。",
+      "selected_hook": "驚き！あなたの身近にも黒い畑が…？",
+      "scores": [
+        {
+          "hook": "驚き！あなたの身近にも黒い畑が…？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 65
+        },
+        {
+          "hook": "あなたは黒い畑の続きに耐えられる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 40
+        },
+        {
+          "hook": "このSCP、実は今も完全には収容されていない。",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        5
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "驚き！あなたの身近にも黒い畑が…？",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、黒い芋の箱が壊れただけで、何が出たんだ。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "摂取実験は8件。消えた被験者の帰還率は0%だ。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "食べた者は、黒い畑が続く別の場所へ移されたという。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "しかも芋を食べなくても、畑が施設へ来るのか。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "容器破損から30分後、廊下に畝と夕暮れの影が現れた。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "封鎖班4名も戻らない。記録はここで途切れている。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "黒い畑の続きは実は身近なSCPシリーズにある。毎日投稿中、1万人目標の応援をよろしくね。",
+          "tension": 5,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 23,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 5,
+        "relatability": 6,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 69,
+      "optimized_score": 75,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.03,
+      "issues": [
+        "50%・75%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "目標の応援をよろしくね。…待て、最初の報告と矛盾してないか？",
+      "keyword_overlap_before": 1.0,
+      "keyword_overlap_after": 1.0
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「実験」→「倫理違反の実験」",
+        "「変」→「ヤバい」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.391,
+      "similar_to": "SCP-1523-JP「かまいたち」— 被害記録17件、傷だけ残った夜",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 2,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-1689「黒いジャガイモ」— 摂取実験8件、帰還率0%だった",
+      "enhanced_title": "⚠️SCP-1689「黒いジャガイモ」— 摂取実験8件、帰還率0%だった",
+      "emoji_added": "⚠️",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "⚠️SCP-1689「黒いジャガイモ」— 摂取実験8件、帰還率0%だった"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 6,
+      "bait_text": "これ、一番怖いSCPランキング何位だと思う？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "neutral",
+        "neutral",
+        "neutral",
+        "negative",
+        "negative",
+        "negative",
+        "surprise"
+      ],
+      "streaks_found": 1,
+      "breakers_injected": 1,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "ellipsis",
+        "statement",
+        "statement",
+        "question",
+        "statement",
+        "question"
+      ],
+      "monotone_runs": 2,
+      "interrupts_injected": 2,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "前回のSCPを覚えている奴なら、この関連性がわかるだろう",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['だった'](+12)"
+    ]
+  }
+}

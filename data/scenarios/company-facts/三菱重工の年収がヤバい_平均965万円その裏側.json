@@ -1,0 +1,354 @@
+{
+  "title": "⚠️三菱重工の年収がヤバい 平均965万円、その裏側",
+  "theme": {
+    "title": "戦闘機業界の年収と離職率",
+    "angle": "戦闘機業界のリアルな数字を公開！"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "戦闘機業界の実態",
+      "fact_main": "三菱重工 年収965万円",
+      "fact_sub": "2024年3月期・有報",
+      "text": "あなたなら三菱重工の裏側、耐えられる？",
+      "bg_query": "三菱重工業株式会社 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年齢42.6歳",
+      "fact_sub": "2024年3月期・有報",
+      "text": "965万円は平均年齢42.6歳の数字です。若手の額面とは分けて見る必要があります。うちの視聴者はビジネスリテラシーが高いから言うけど",
+      "bg_query": "三菱重工業株式会社 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "従業員数2万2,375人",
+      "fact_sub": "単体・2024年3月期",
+      "text": "単体従業員は2万2,375人です。防衛だけでなく、エネルギーや航空も含む会社全体の平均です…ところが…",
+      "bg_query": "三菱重工業株式会社 航空宇宙 工場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "売上高4兆6,571億円",
+      "fact_sub": "連結・2024年3月期",
+      "text": "連結売上高は4兆6,571億円です。数字だけ見れば、かなり良い。ただし戦闘機事業だけの給与は非公表です。",
+      "bg_query": "三菱重工業株式会社 防衛 航空機",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "年間休日126日",
+      "fact_sub": "公式採用情報",
+      "text": "でも本当にヤバいのはこっちで…有給休暇も初年度22日。20代には、年収と並ぶ生活設計の数字です。しかし話はこれだけではない",
+      "bg_query": "三菱重工業株式会社 社員 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "月残業27.5時間",
+      "fact_sub": "口コミサイト調べ",
+      "text": "月間残業は27.5時間という口コミがあります。配属差が大きく、設計や製造で一律とは言えません…ところが…",
+      "bg_query": "三菱重工業株式会社 工場 作業",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "新卒3年定着率89.8%",
+      "fact_sub": "就職四季報2025年版",
+      "text": "新卒3年定着率は89.8%。ただし、ありえない専門性が必要です。華やかな戦闘機の裏で、地道な検証が続きます。",
+      "bg_query": "三菱重工業株式会社 航空宇宙 技術者",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。…この数字、冒頭のデータと照合すると…",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "平均965万",
+      "戦闘機の裏側"
+    ],
+    "subtitle": "三菱重工業の年収と働き方",
+    "tagline": "公開資料と口コミから見る"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "平均年収965万円。ただし、この数字には理由があります。",
+      "selected_hook": "あなたなら三菱重工の裏側、耐えられる？",
+      "scores": [
+        {
+          "hook": "あなたなら三菱重工の裏側、耐えられる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 48
+        },
+        {
+          "hook": "えっ、三菱重工のホンネを知っても働きたい？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 43
+        },
+        {
+          "hook": "平均年収965万円。ただし、この数字には理由があります。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 18,
+            "loop_connect": 5
+          },
+          "total": 38
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        4
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたなら三菱重工の裏側、耐えられる？",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "965万円は平均年齢42.6歳の数字です。若手の額面とは分けて見る必要があります。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "単体従業員は2万2,375人です。防衛だけでなく、エネルギーや航空も含む会社全体の平均です。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "連結売上高は4兆6,571億円です。数字だけ見れば、かなり良い。ただし戦闘機事業だけの給与は非公表で",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "年間休日は126日です。有給休暇も初年度22日。20代には、年収と並ぶ生活設計の数字です。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "月間残業は27.5時間という口コミがあります。配属差が大きく、設計や製造で一律とは言えません。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "新卒3年定着率は89.8%。ただし、高い専門性が必要です。華やかな戦闘機の裏で、地道な検証が続きます",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 7,
+          "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+          "tension": 0,
+          "is_dead": true
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 90,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 4,
+          "text": "連結売上高は4兆6,571億円です。数字だけ見れば、かなり良い。ただし戦闘機事業",
+          "reason": "1行52字はテロップとして長すぎる（推奨: 40字以内）"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "新卒3年定着率は89.8%。ただし、高い専門性が必要です。華やかな戦闘機の裏で、",
+          "reason": "1行51字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 26,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 3,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 5
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 70,
+      "optimized_score": 77,
+      "micro_reveals": 1,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.71,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "50%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "ーズもチェックしてね。…この数字、冒頭のデータと照合すると…",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「高い」→「ありえない」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "企業の闇要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.376,
+      "similar_to": "アジア大会の裏方企業、年収932万円の実態",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 1,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "三菱重工の年収がヤバい 平均965万円、その裏側",
+      "enhanced_title": "⚠️三菱重工の年収がヤバい 平均965万円、その裏側",
+      "emoji_added": "⚠️",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "⚠️三菱重工の年収がヤバい 平均965万円、その裏側"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": false,
+      "existing_bait": true,
+      "position": -1,
+      "bait_text": ""
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "negative",
+        "neutral",
+        "surprise",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "ellipsis",
+        "statement",
+        "statement",
+        "ellipsis",
+        "statement",
+        "ellipsis"
+      ],
+      "monotone_runs": 2,
+      "interrupts_injected": 2,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "うちの視聴者はビジネスリテラシーが高いから言うけど",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 4,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['ヤバい', '裏側', '年収'](+20)",
+      "好奇心ギャップ['裏'](+12)"
+    ]
+  }
+}

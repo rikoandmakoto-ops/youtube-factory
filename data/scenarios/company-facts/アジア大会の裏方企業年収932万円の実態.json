@@ -1,0 +1,350 @@
+{
+  "title": "💰アジア大会の裏方企業、年収932万円の実態💰",
+  "theme": {
+    "title": "アジア大会開催企業の年収と福利厚生",
+    "angle": "スポーツイベントが企業に与える影響を数字で分析。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "話題企業の実態",
+      "fact_main": "トヨタ 年収932万円",
+      "fact_sub": "2024年3月期 有報",
+      "text": "えっ、話題の企業でぶっ飛んだ年収932万円の実態とは？",
+      "bg_query": "トヨタ自動車 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "賞与 240万円超",
+      "fact_sub": "年収から推定",
+      "text": "賞与はぶっ飛んだ年収内訳から240万円超と推定されます。業績連動の比重もあります。うちの視聴者はビジネスリテラシーが高いから言うけど",
+      "bg_query": "トヨタ自動車 オフィス 社員",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "有給取得 18.9日",
+      "fact_sub": "トヨタ公式 ESGデータ",
+      "text": "有給休暇の平均取得は18.9日です。数字だけ見れば、かなり良い水準です。しかし話はこれだけではない…これ、ヤバすぎる！",
+      "bg_query": "トヨタ自動車 工場 社員",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "残業 月24.7時間",
+      "fact_sub": "トヨタ公式 ESGデータ",
+      "text": "月平均残業は24.7時間です。実はこの裏で、部署差は公表されていません。",
+      "bg_query": "トヨタ自動車 オフィス 夜景",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "離職率 1.1%",
+      "fact_sub": "トヨタ公式 ESGデータ",
+      "text": "ここからが本当のホンネなんだけど、自己都合離職率は1.1パーセントです。この数字、製造業では低い部類です。…だが、数字の裏にはさらに驚きの事実がある",
+      "bg_query": "トヨタ自動車 研修 社員",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "育休取得 男性85.8%",
+      "fact_sub": "トヨタ公式 ESGデータ",
+      "text": "男性育休の取得率は85.8パーセントです。福利厚生は採用後にも効きます。",
+      "bg_query": "トヨタ自動車 社員 食堂",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "国内従業員 7.1万人",
+      "fact_sub": "2024年3月期 有報",
+      "text": "ただし国内従業員は約7.1万人です。大会支援の華やかさと現場負荷は別問題です。…この戦略、天才だと思う？それとも狂気？",
+      "bg_query": "トヨタ自動車 工場 ライン",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったら、話題の企業の実態シリーズもプロフィールからチェックしてね。…この数字、冒頭のデータと照合すると…",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収932万",
+      "大会の裏側"
+    ],
+    "subtitle": "アジア大会を支える企業の待遇",
+    "tagline": "表の協賛、裏の働き方"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "トヨタ自動車、平均年収932万円です。アジア大会を支える企業の数字です。",
+      "selected_hook": "えっ、話題の企業で年収932万円の実態とは？",
+      "scores": [
+        {
+          "hook": "えっ、話題の企業で年収932万円の実態とは？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 10,
+            "loop_connect": 15
+          },
+          "total": 55
+        },
+        {
+          "hook": "あなたは知ってる？アジア大会の裏側にある年収の秘密",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 50
+        },
+        {
+          "hook": "トヨタ自動車、平均年収932万円です。アジア大会を支える企業の数字です。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 10,
+            "emotional_trigger": 0,
+            "scroll_stop": 18,
+            "loop_connect": 15
+          },
+          "total": 43
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        4
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "えっ、話題の企業で年収932万円の実態とは？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "賞与は年収内訳から240万円超と推定されます。業績連動の比重もあります。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "有給休暇の平均取得は18.9日です。数字だけ見れば、かなり良い水準です。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "月平均残業は24.7時間です。実はこの裏で、部署差は公表されていません。",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "自己都合離職率は1.1パーセントです。この数字、製造業では低い部類です。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "男性育休の取得率は85.8パーセントです。福利厚生は採用後にも効きます。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "ただし国内従業員は約7.1万人です。大会支援の華やかさと現場負荷は別問題です。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 7,
+          "text": "気になったら、話題の企業の実態シリーズもプロフィールからチェックしてね。",
+          "tension": 0,
+          "is_dead": true
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 5,
+          "text": "ここからが本当のホンネなんだけど、自己都合離職率は1.1パーセントです。この数字",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 5
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 66,
+      "optimized_score": 70,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.58,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "25%・50%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "ルからチェックしてね。…この数字、冒頭のデータと照合すると…",
+      "keyword_overlap_before": 0.6,
+      "keyword_overlap_after": 0.6
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「年収」→「ぶっ飛んだ年収」",
+        "「年収」→「ぶっ飛んだ年収」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭に財務数字",
+        "企業の闇要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.0,
+      "similar_to": null,
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 0,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "アジア大会の裏方企業、年収932万円の実態",
+      "enhanced_title": "💰アジア大会の裏方企業、年収932万円の実態💰",
+      "emoji_added": "💰",
+      "category": "money",
+      "modified": true
+    },
+    "enhanced_title": "💰アジア大会の裏方企業、年収932万円の実態💰"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 6,
+      "bait_text": "…この戦略、天才だと思う？それとも狂気？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "surprise",
+        "neutral",
+        "neutral",
+        "negative",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "exclaim",
+        "statement",
+        "statement",
+        "statement",
+        "question",
+        "ellipsis"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.8
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "うちの視聴者はビジネスリテラシーが高いから言うけど",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 4,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['年収'](+12)",
+      "好奇心ギャップ['裏'](+12)"
+    ]
+  }
+}

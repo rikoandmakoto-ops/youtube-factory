@@ -1,0 +1,616 @@
+{
+  "title": "架空論文ファイル #1：ブラックラグーンの悪党は実在する — 港湾記録3,214件を追跡した結果",
+  "theme": {
+    "title": "ブラックラグーンの実在性：海の悪党たちの科学的考察",
+    "angle": "架空の研究で、ブラックラグーンのキャラクターが実在する可能性を探る。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "驚き！港湾記録に悪党の痕跡が？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "『沿岸人物観測紀要』第18巻、潮見架空研究所の掲載記録です。しかしこれだけでは終わらない。前回見た人ならわかると思うけど",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも港湾記録3,214件を8年間、人物像ごとに照合しました…衝撃の事実！",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "荒事担当の行動記述は87%一致し、有意差が確認されています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "さらに酒場での交渉記録も、台詞の癖まで61%一致ですか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか!? なお、この論文は存在しません、掲載誌ごと架空です。コメント欄で答え合わせしよう",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "撤回された架空論文シリーズシリーズ、気になった人は。…つまりこれ、最初から繋がってた？",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも港町を舞台にした物語を見て、こういう悪党が本当にいたらと思ったことはありませんか。ブラックラグーンの人物像には、実在記録との一致があるとする論文があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載先は架空誌『沿岸人物観測紀要』第18巻、調査母体は潮見架空研究所です。港湾の古記録3,214件を八年間追跡した研究として報告されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "記録が3,214件もあるなら、ただのキャラクター論ではなく人物の実在性を測る調査ですね。どの人物像が港に残っていたのでしょうか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は固有名を避け、荒事担当、交渉担当、情報担当という三類型に分けました。これは性格を、港の仕事で果たす役割として数える簡単な方法です。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最も一致率が高かったのは荒事担当で、銃器を扱うという記述ではなく、短時間で場を静める人物という描写が87%重なったとされています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "それは知らなかった。派手な装備ではなく、周囲がその人物をどう扱ったかで照合したから、仕事場の空気まで比較できるわけですね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者は、港の帳場係や酒場の店員として再構成された架空証言者612人です。各証言者には同じ場面説明を読み、人物の反応だけを選んでもらいました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その結果、荒事担当が現れた場面では、交渉の終了までの想定時間が平均で14分短縮しました。比較群は無関係な旅人の設定で、差は明確だったとされます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "14分という数字があると、遅刻しそうな待ち合わせで空気を変える人の存在まで想像できます。現実の港でも、そんな人は目立ったのでしょうか。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は目立つことより、周囲が余計な説明をしなくなる点を指標にしました。説明量とは会話の文字数で、荒事担当の登場後は平均42%減少したと報告されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここでいう説明量は、残業の引き継ぎのように、誰が何をするかを言葉で埋める量です。少ないほど、役割が既に共有されている状態だと定義されています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "つまり怖そうだから黙るのではなく、任せる相手が決まっているから会話が短くなるのですね。その基準なら、人物像をかなり冷静に見られます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "実はこの調査、酒場の交渉担当でも同じ傾向が出たとされています。ただし荒事ではなく、注文の変更回数という意外な数字で検証されました。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "交渉担当がいる設定では、注文の変更は一晩あたり平均2.1回でした。比較群の5.8回より少なく、有意水準は0.01未満と記されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "酒場の注文変更まで人物の実在性に結び付けるんですか。友人と店を決める時に話が長引く現象まで、港では観測対象だったのですね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文の仮説は単純です。危険な状況ほど、人は強い交渉役を記憶に残すため、後年の記録でも台詞や振る舞いが似た形で保存されるというものです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その保存率を測るため、研究班は架空の航海日誌184冊から、断り方だけを抜き出しました。交渉担当らしい断り方は、全体の61%で反復したとされています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "断る言葉は職場でも人柄が出ますね。相手を怒らせずに条件だけ通す人は、確かにあとから語り継がれそうです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "一方で情報担当の一致率は39%に留まりました。情報を持つ人物は姿を消しやすく、帳簿には行動よりも、誰かが急に予定を変えた結果だけが残るからです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はこれを影の記録効果と呼びました。要するに本人ではなく、本人に会った人の予定表が乱れることで存在を数える、という架空の分析手法です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "会議の直前に予定が全部変わる人なら、姿が見えなくても影響だけは残ります。情報担当の実在性は、むしろその不在で測るのですね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "港湾記録では、特定の人物に会った翌日に航路が変更された割合が73%でした。比較用に置かれた通常の商人設定では28%で、差は統計上も大きいとされています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし研究班は、航路変更そのものを危険の証拠とは扱いませんでした。単に予定が動く人物像を、物語の情報担当に似た構造として数えたに過ぎません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "数字だけ聞くと現実の密輸記録のようですが、比較しているのはあくまで物語の型なのですね。そこを分けておかないと、話が急に危なくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この論文の面白い点は、人物を一人ずつ当てにいかないことです。髪型や武器ではなく、周囲の予定、会話、沈黙だけを並べて、似た役割を抽出しています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "例えば荒事担当の周辺では、会話の平均文長が18.4字から10.7字へ縮みました。これは部下が指示を短く受け取る場面を模した、完全に架空の数値です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "短い指示で通じる関係は、アルバイト先でも少し緊張しますね。数字にすると、キャラクターの圧が会話の長さとして見えてくるわけです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "歴史パートでは、赤錆港と呼ばれる架空の港が重要視されています。そこでは七年間で96件の荷役争いが記され、その81%に仲裁役らしい人物が現れたとされています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "仲裁役は争いを止める英雄ではなく、損失の計算を先に読み上げる人物として描写されます。損失を聞いた二者は平均6分で声量を下げた、という設定です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "感情論ではなく損失を示すのは、仕事の揉め事でもありそうです。海の悪党たちが、意外に計算で動くという描き方には説得力があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "また船員の食事記録では、同じ卓につく人数が四人を超えると交渉の成立率が16%下がりました。人数が多いほど、誰が決めるか曖昧になるためだと論じられています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "これは飲食店でメニューを決める時、六人組ほど結論が遅れる現象に似ています。ただしこの類似も、研究班が作った港町の再現実験の範囲だけの話です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "海の悪党の科学的考察なのに、集団で決められない問題まで入るのですね。キャラクターの実在性は、非日常より日常の迷い方で見えてくるのかもしれません。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで論文は、決定速度が速い人物ほど実在したとは結論しません。速さは性格ではなく、港の環境が作る役割であり、人物の証明とは別だと慎重に区別しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "それでも著者は、役割の束が一致する確率を0.7%と見積もりました。荒事、交渉、情報という三類型が同じ港に揃う設定は、偶然では薄いという主張です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "0.7%なら、通学中に同じ知人へ三回続けて会うより珍しく感じます。だから物語の人物配置が、現実の港町から採取されたように見えるのですね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかし著者は最後に、実在性とは本人がいた証明ではなく、そういう人物が必要になる環境があった証明だと述べます。これは物語研究では比較的まっとうな整理です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "たとえば雨の日の駅前に傘を貸す人がいれば、その人の名前は残らなくても、傘を求める状況は残ります。港の悪党も、必要とされた役割として記録化されたという説明です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "名前を追うより、周囲の困り方を追うのですね。キャラクターを実在させるのは派手な事件ではなく、日々の交渉や沈黙の積み重ねなのかもしれません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここからは鑑賞への応用です。登場人物を見た時は、強さではなく、その人が現れた直後に誰の予定が変わったかを数えてみてください。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "一場面につき一つだけ、会話が短くなった、注文が決まった、移動先が変わった、のどれかを探します。三場面で二回見つかれば、役割の輪郭が見え始めます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "人物の台詞を暗記しなくても、周りの変化を見るだけなら友人と話しやすいですね。見終わった後に、誰が場を動かしたかで感想も変わりそうです。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし現実の港や仕事場で、誰かを危険人物と決めつける用途には使えません。これは物語の役割を読むための、架空の採点表としてだけ扱う必要があります。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "今回の架空データでは、人物像の一致を87%、61%、39%と段階化しました。数字の差を見ると、全員が同じ種類の悪党ではないという設定が理解しやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "強い人だけが残るのではなく、交渉する人、情報を動かす人も必要になる。チームで働く時の役割分担にも、少しだけ重ねて見られそうです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "以上のように、ブラックラグーンの海の悪党たちは、港湾記録の役割パターンから実在性を検討できる、という結論に達しています。被験者は612人、追跡は八年間でした。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。『沿岸人物観測紀要』も潮見架空研究所も、掲載誌ごと架空です。先ほどの一致率と有意水準を含め、全編フィクションです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか!? 港の帳簿や酒場の注文変更まで信じていました。87%の一致率を聞いた時点で、完全に実在した人物たちだと思っていました。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、図書館の本が借りられた回数だけ重くなるという、12年分の架空計測論文を査読します。棚が静かに沈む理由を、数字だけで説明する予定です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "撤回された架空論文シリーズには、真顔で読むほど怪しい記録がまだ何本もあります。毎日投稿中で登録者1万人を目標にしていますので、チャンネル登録で応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "次の棚の研究も、最初は信じてしまいそうです。ブラックラグーンの港に残ったのは悪党の実在記録ではなく、編集長が整えた架空の数字だったのですね。",
+      "expression": "sad",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "海の悪党",
+      "実在の痕跡"
+    ],
+    "hook_caption": "港に残る影",
+    "subtitle": "架空論文による港湾人物像の照合",
+    "tagline": "サムネバッジ：架空論文／全編フィクション"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "ブラックラグーンの悪党たちは実在する——という論文があります。",
+      "selected_hook": "驚き！港湾記録に悪党の痕跡が？",
+      "scores": [
+        {
+          "hook": "驚き！港湾記録に悪党の痕跡が？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 58
+        },
+        {
+          "hook": "え、あなたはこの論文を信じますか？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        },
+        {
+          "hook": "ブラックラグーンの悪党たちは実在する——という論文があります。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 10,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 25
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "驚き！港湾記録に悪党の痕跡が？",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "『沿岸人物観測紀要』第18巻、潮見架空研究所の掲載記録です。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "しかも港湾記録3,214件を8年間、人物像ごとに照合しました。",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "荒事担当の行動記述は87%一致し、有意差が確認されています。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "さらに酒場での交渉記録も、台詞の癖まで61%一致ですか。",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "え、嘘なんですか!? なお、この論文は存在しません、掲載誌ごと架空です。",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 6,
+          "text": "港に残る架空の論文は、まだ何本もあります。撤回された架空論文シリーズを毎日投稿中、1万人目標へチャン",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "subscribe",
+      "style_label": "チャンネル登録",
+      "original_cta": "港に残る架空の論文は、まだ何本もあります。撤回された架空論文シリーズを毎日投稿中、1万人目標へチャンネル登録で応援よろしくお願いします。",
+      "new_cta": "撤回された架空論文シリーズシリーズ、気になった人はチャンネル登録して、明日の科学も見逃さないでね！"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 3,
+        "relatability": 0,
+        "shareability": 3,
+        "debate_potential": 3
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "具体的な数字や固有名詞を入れてシェアしやすく",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 75,
+      "optimized_score": 77,
+      "micro_reveals": 1,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.29,
+      "issues": [
+        "14%・71%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": true,
+      "trigger_added": "シリーズ、気になった人は。…つまりこれ、最初から繋がってた？",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 0,
+      "changes": [],
+      "lines_modified": 0
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [],
+      "insights_used": 3
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.0,
+      "similar_to": null,
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 0,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "ブラックラグーンの悪党は実在する — 港湾記録3,214件を追跡した結果",
+      "enhanced_title": "ブラックラグーンの悪党は実在する — 港湾記録3,214件を追跡した結果",
+      "emoji_added": null,
+      "category": "unknown_channel",
+      "modified": false
+    },
+    "enhanced_title": "ブラックラグーンの悪党は実在する — 港湾記録3,214件を追跡した結果"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 5,
+      "bait_text": "コメント欄で答え合わせしよう"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "surprise",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "exclaim",
+        "statement",
+        "statement",
+        "statement",
+        "question"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "前回見た人ならわかると思うけど",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['追跡'](+12)",
+      "好奇心ギャップ['結果'](+12)"
+    ]
+  }
+}

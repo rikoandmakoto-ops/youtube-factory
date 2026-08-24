@@ -1,0 +1,661 @@
+{
+  "title": "一口SCP #97：💀SCP-3002「情報災害」あなたの記憶まで消す報告書の恐怖",
+  "theme": {
+    "title": "SCP-3002「情報災害」、他人の記憶を書き換える報告書の恐怖",
+    "angle": "記憶改変を受けた職員の証言と報告書の食い違いを比較し、誰の記録を信じるべきか分からなくなる認識災害として深掘りする",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたの記憶、財団に消されたら？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次の記録が、すべてを闇が深いえた。…え、同じ一言って何だよ。まだ答えを言わないのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録上、閲覧後24時間以内に証言の食い違いが始まった…Keterに再分類すべきだ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書は読者の記憶へ入り、別の出来事を事実として残す。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、ガチで恐ろしいって。自分の記憶が偽物になるのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも職員は、改闇が深いされた報告書こそ原本だと証言した…続きは████…",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後の証言は同じだった。「読んでいない」。記録はここで途切れている。これ、一番怖いSCPランキング何位だと思う？…しかし！ここから逆転が始まる",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "こういう記録って、他にも世界中に残ってるんだ。次回、これより上位のオブジェクトを紹介する"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この異常記録の続きは財団の裏側シリーズにある。1万人目標で毎日投稿中、応援よろしく。…この収容手順、最初から見直す必要がある",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたは、昨日自分で書いたメモを見返し、知らない予定が自分の筆跡で並んでいたことを想像できるか。SCP-3002では閲覧した職員が、署名付きの記録を前にしても「読んでいない」と同じ言葉を残した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象は一冊の報告書として保管された。だが危険なのは紙の重さでも文字の形でもない。読者の過去へ入り込み、閲覧したという事実だけを別の出来事へ置き換える点にある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、自分の名前で閲覧した記録があるのに、それを他人の偽造だと信じるのか。スマホの送信履歴を見ても、自分が送った覚えだけ消えるような話だ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回読むのはSCP-3002「情報災害」だ。これは読んだ者が混乱するだけの文書ではない。記録と証言のどちらが先に壊されたのか、財団でも判定できなくなる認識災害として収容された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の閲覧者は、入室から退室までの監視映像を示されても、映っている人物を自分ではないと答えた。映像には机へ座り、対象文書を約20分開いていた姿が残っていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って。映像も署名もあるなら、本人だけが壊れたと考えたくなる。でも本人の記憶では、別棟で勤務していた一日が細部まで残っているのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "証言を照合すれば正解に近づけると思うだろう。だがこの事案では、照合した職員ほど同じ誤った過去を共有した。多数決で答えを決める教室なら、全員が同じ誤答を選ぶ状態だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "認識災害とは、知識や記録へ触れたこと自体が接触者を変える異常の呼称だ。SCP-3002では本文を理解しようとする行為が、記憶を疑う力から順に奪うと扱われた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閲覧後の職員は、ただ忘れたわけではない。空いた時間を埋めるように、もっともらしい別の勤務記憶を持っていた。空白のノートへ別の授業内容が最初から書かれているような置換だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "忘れた記憶なら探せるかもしれない。でも偽物の一日を本物だと思うなら、本人は助けを求めない。むしろ周囲の記録を疑い始める。…ねえ、これ本当に大丈夫なの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "初期手順では、閲覧者の氏名、開始時刻、終了時刻を三つの媒体へ分けて残した。紙の台帳、隔離端末、口頭確認の三系統だ。ひとつが異常を受けても、残り二つで矛盾を探すためだった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ところが回収された台帳では、閲覧者の署名だけが一致し、記録担当者の氏名だけが食い違っていた。同じ日の同じ時刻に、三人の別の担当者がいたことになっていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録係だけが三人に増えるのか。誰か一人が書いたはずなのに、全員が自分は最後に確認しただけと言うなら、最初の一筆を書いた人間が消えている。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は、この不一致を単なる事務ミスとして処理しなかった。担当者が違うなら書類の様式も揺れるはずだが、三つの氏名は同じ癖のある筆跡で書かれていたからだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そしてここからが本題だ。SCP-3002は直接読んだ者だけに留まらなかった。閲覧者が内容を口頭で説明した後、その聞き手にも同じ種類の記憶の食い違いが出たという。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ。報告書を読まなくても、誰かの説明を聞くだけで近づくのか。じゃあ閲覧者を隔離しても、その人が話した相手の記憶まで追えない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このため財団は、対象文書の全文共有を禁じた。担当者には要点だけが分割され、同じ人物が連続して全体像へ触れないよう交代が組まれた。理解することが危険として扱われた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "分割された報告を読む職員は、前後の文脈を知らされない。ゲームの攻略情報を一行ずつ別人へ渡すような手順だが、ここでは全体を組み立てた瞬間が最も危険とされた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ある閲覧記録で職員Aは、対象文書を開いた直後に「中身は空白だった」と報告した。しかし職員Bは、Aが本文を読み上げ、重要箇所へ赤線を引いたと記していた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "赤線を引く行動は映像にも残っていたのか。もし残っているなら、Aの「空白だった」という記憶は嘘じゃない。それが一番怖い。本人には本当に空白が見えたのかもしれない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "職員Aは赤線の理由を尋ねられ、そもそもペンを持った記憶がないと答えた。本人の記憶では、その20分間は別棟の保管庫で鍵を数えていた。鍵の本数まで具体的だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "勤務表を示されても、Aは勤務表が後から書き換えられたと主張した。財団はここで、記録を信じる側と証言を信じる側に班を分けた。だが数日後、両班の結論が逆転した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録班は映像が改竄されたと報告し、証言班はAが閲覧したと報告した。根拠の入れ替わりを覚えている者はいなかった。結論だけが、書類上で静かに反転していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "班を二つに分けても駄目なのか。信じる材料を別にしても、いつの間にか判断まで書き換わるなら、誰が最初に何を見たかを追うほど出口が遠くなる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象職員の私物からは、閲覧前には存在しなかった警告メモが見つかった。そこには「次に読んだら、読んでいないと言え」とあり、署名は本人の筆跡だった。本人だけが書いたことを否定した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この警告は一枚ではなかった。複数の保管箱から同じ文面が発見され、どれも違う日付を持っていた。それでも作成者の欄だけは空白で、誰が最初に書いたのか記録は[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同じ文が何度も出てくるなら、誰かが未来の自分へ残したのかもしれない。でも書いた本人がいないなら、警告を守るべき相手も分からない。聞かなきゃよかった。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容班は警告文の作成者を特定しようとした。候補になった職員は全員、「自分はそれを発見しただけだ」と答えた。作成の瞬間を見た証人も、作成者の顔だけを思い出せなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団内部では、SCP-3002が報告書という形を借りて自己保存している可能性が検討された。読者が内容を覚えるのではない。内容のほうが読者の過去へ入り、読まれる前の条件を整えるという仮説だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、この仮説を裏づける完全な記録は存在しない。完全版を作成した班ほど、最終稿で対象の危険度を低く評価した。危険を調べた結果、危険ではないと書き始める現象が残った。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "危険度を低くした文書には、決まって一文が追加されていた。「再閲覧による確認を推奨する」。確認を促す命令が、次の閲覧者を呼び込む入口になった可能性がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それ、まずくないか。安全だと思った担当者ほど、念のために読み直す。読み直した人が次の職員へ確認を頼めば、報告書が自分で閲覧者を増やしているように見える。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在の収容手順では、評価変更に複数区画の承認が必要とされた。承認者同士は直接会話を禁じられ、同じ資料を同時に見ないよう制限された。意見の一致を、証拠として扱わないためだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それでも承認記録の末尾には奇妙な共通点がある。全員が「変更なし」と記したのに、保管されている文書だけは改訂版になっていた。変更を行った者は、誰一人として覚えていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "証言と書類が食い違う時、財団はどちらかを正しいとは決めない。片方を採用した瞬間、採用されなかった側が異常によって削られた可能性を、組織自身が消してしまうからだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録保全室では、同じ報告書を複数人で同時に開くことが禁じられた。一人の記憶だけなら隔離できる。しかし誤った記憶が共有されれば、それは職場全体の常識へ変わる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "普通なら友達や先生が同じことを言えば安心する。でもこの案件では、全員の意見が揃った時ほど逃げ場がない。間違いを疑う一人が消えた瞬間、偽物が現実になる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視映像には閲覧室の時計も映っていた。職員が入室してから退室するまでの時間は残っているが、本人の記憶にはその約20分が存在しない。失われた時間だけが、映像の中で動いていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "失われた時間について尋ねられると、対象者は不自然に似た答えを返した。「何も起きていない」。質問の順番を変えても、語尾と沈黙の長さまで一致したという記録が残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "人間の証言は普通、細部で揺れる。だがSCP-3002への接触後に出る否定だけは、複数の職員で同じ順序を保った。その一致こそが、最初の警戒対象になった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最初の一言が同じなら、それは自分の言葉じゃないのかもしれない。さっきから聞いている「読んでいない」も、誰かが記憶の奥へ置いた答えに聞こえる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も不穏なのは、改変された職員が嘘をついているわけではない点だ。彼らは怯えながら、自分が覚えている事実だけを報告した。だから尋問も処分も、真相へ近づく手段にはならなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録担当者は証言の矛盾へ赤い印を付けた。後日、その赤印は消え、代わりに証言が一致していたことを示す注記が残った。訂正した人物の署名は、どの保管記録にもなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "保管庫の扉には、閲覧前後で自分の名前を書くよう命じる札がある。これは安全確認ではない。筆跡まで変わっていないかを、対象に触れていない職員が後で比べるための最低限の手順だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "名前まで見比べるのか。自分で書いた文字なのに、自分ではない筆跡に見える日が来るかもしれない。見かけても、決して近づくなと言われる理由が分かる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし知らない署名、覚えのない予定、同じ言葉を繰り返す証言の三つが揃っても、一人で全文を読み返してはならない。確認は解決ではなく、対象が記憶へ入り込む機会になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はSCP-3002を、理解して安全に扱う対象とは考えなかった。理解しようとする者ほど、理解したという記憶ごと書き換えられる危険がある。収容とは、答えを閉じ込める行為ではない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だが報告するための書式も、かつては対象と同じ保管区画に置かれていた。誰かが異常を疑った瞬間、異常へ近づく導線に立たされていた。誰がその配置を決めたか、記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-3002は忘却の怪物ではない。覚えているという確信を使い、記録のほうを嘘だと感じさせる報告書だ。だから最も危険なのは矛盾ではなく、すべてが自然に一致して見える瞬間かもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…ねえ、これ本当に大丈夫なの？ ここまでの報告が正しいと信じた瞬間、その信じ方自体がもう対象の中にいる証拠になるんじゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "原典はSCP財団Wiki掲載のSCP-3002を参照した。創作共同体の記録はCC BY-SA 3.0に基づく。ただし、この報告書を読み終えた後に何を覚えているかまでは、財団にも保証できない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、出口が存在しない売り場として収容されたSCP-3008の記録を読む予定だ。そこでは地図よりも、帰れたという記憶のほうが先に疑われる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の裏側シリーズでは、報告書の余白に残された異常を毎日追っている。1万人を目標に記録を公開中だ。応援としてチャンネル登録を残してほしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし自分の記憶と手元の記録が食い違ったなら、答えを探すためにSCP-3002へ近づくな。見かけても、決して近づくな。あなたが読んでいないと信じる、その一冊にも注意しろ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "読んだ職員",
+      "全員同じ証言"
+    ],
+    "hook_caption": "記憶が消える",
+    "subtitle": "証言と報告書が一致しない",
+    "tagline": "信じた記録から消えていく"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "SCP-3002を読んだ職員が、全員同じ一言を残した。",
+      "selected_hook": "あなたの記憶、財団に消されたら？",
+      "scores": [
+        {
+          "hook": "あなたの記憶、財団に消されたら？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        },
+        {
+          "hook": "知ってはいけない記録を、あなたは読む？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 40
+        },
+        {
+          "hook": "SCP-3002を読んだ職員が、全員同じ一言を残した。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 18,
+            "loop_connect": 5
+          },
+          "total": 38
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        1,
+        3
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたの記憶、財団に消されたら？",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、同じ一言って何だよ。まだ答えを言わないのか。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "記録上、閲覧後24時間以内に証言の食い違いが始まった。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "報告書は読者の記憶へ入り、別の出来事を事実として残す。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "ちょっと待って、怖いって。自分の記憶が偽物になるのか。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "しかも職員は、改変された報告書こそ原本だと証言した。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 6,
+          "text": "最後の証言は同じだった。「読んでいない」。記録はここで途切れている。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "この異常記録の続きは財団の裏側シリーズにある。1万人目標で毎日投稿中、応援よろしく。",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "こういう記録って、他にも世界中に残ってるんだ。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 27,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 5,
+        "emotional_impact": 8,
+        "relatability": 5,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 72,
+      "optimized_score": 72,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.24,
+      "issues": [
+        "22%・44%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "稿中、応援よろしく。…この収容手順、最初から見直す必要がある",
+      "keyword_overlap_before": 0.5,
+      "keyword_overlap_after": 0.5
+    },
+    "power_word": {
+      "amplified": 3,
+      "changes": [
+        "「変」→「闇が深い」",
+        "「怖い」→「ガチで恐ろしい」",
+        "「変」→「闇が深い」"
+      ],
+      "lines_modified": 3
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.383,
+      "similar_to": "SCP-3120「異常な戦闘機」— 試験飛行9回、操縦席から帰還した隊員は1名だった",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 6,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-3002「情報災害」あなたの記憶まで消す報告書の恐怖",
+      "enhanced_title": "💀SCP-3002「情報災害」あなたの記憶まで消す報告書の恐怖",
+      "emoji_added": "💀",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "💀SCP-3002「情報災害」あなたの記憶まで消す報告書の恐怖"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 6,
+      "bait_text": "これ、一番怖いSCPランキング何位だと思う？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "negative",
+        "neutral",
+        "neutral",
+        "negative",
+        "negative",
+        "negative",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 1,
+      "breakers_injected": 1,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "exclaim",
+        "statement",
+        "statement",
+        "ellipsis",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 2,
+      "interrupts_injected": 2,
+      "variety_score": 0.8
+    },
+    "subscribe_trigger": {
+      "trigger_type": "series_hint",
+      "trigger_text": "次回、これより上位のオブジェクトを紹介する",
+      "position": 7,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 1,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 0.5
+    }
+  },
+  "title_quality": {
+    "score": 76,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['報告書'](+12)",
+      "二人称['あなた'](+6)"
+    ]
+  }
+}

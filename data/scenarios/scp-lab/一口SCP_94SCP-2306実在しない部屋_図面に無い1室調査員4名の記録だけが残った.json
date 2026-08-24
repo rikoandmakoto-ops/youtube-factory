@@ -1,0 +1,655 @@
+{
+  "title": "一口SCP #94：🔒SCP-2306「実在しない部屋」— 図面に無い1室、調査員4名の記録だけが残った⚠️",
+  "theme": {
+    "title": "SCP-2306「実在しない部屋」— 図面に無い1室、調査員4名の記録だけが残った",
+    "angle": "発掘・調査記録型。数値（部屋番号・調査回数・帰還者数）を積み上げ、最後に1行だけ結論を欠落させる。SCP-1690（維持率86.7%・ch最高）と同型"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたなら、禁忌の部屋を開けますか？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべきことに、しかし、財団すら手を焼くはここで終わらなかった。…え、図面に無いのに封鎖って、まだ答えがあるのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "調査は4回。入室した職員は4名で、帰還者は0名だった。しかし、これで終わりではなかった…続きは████…",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次の記録が、すべてをヤバいえた。残ったのは部屋番号と、扉の内側から届いた4本の記録だけだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも、その扉が自分の部屋に出たら…ちょっと待って、ガチで恐ろしいって。しかし、これで終わりではなかった。原文の報告書を精査した上での解説だ",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第4記録には、調査員が廊下側から自分を呼ぶ声が残っている…Keterに再分類すべきだ！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "部屋は存在しない。だが記録だけは残った。答えの残りは[REDACTED]だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "図面外の部屋に続く報告は他のファイルにもある。財団の裏側シリーズを毎日投稿中、1万人目標へ応援よろしくね。…あれ、禁忌って最初に言ってた…",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたの部屋の壁に、昨夜まで無かった白い扉が増えたことはないか。鍵穴も表札もないのに、なぜか自分の部屋番号だけが貼られている。その報告がSCP-2306だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、部屋の中に扉が増えるのか。開けなければ済む話じゃないのか、それとも発見した時点で、もう扉の内側から人数に数えられているのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が確保した建物の図面には、問題の区画が最初から存在しない。だが現場には扉があり、入室を命じられた調査員4名は、帰還率0パーセントだった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回はSCP-2306「実在しない部屋」の発掘記録を読む。扉の番号、調査回数、残された音声を追う。ただし、最後の結論欄だけは意図的に欠けている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4人が消えたのに、財団は中を調べ続けたのか。…ねえ、これ本当に大丈夫なの？ 記録を読む側まで、あの部屋の前へ立たされる気がする。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初に扉が見つかったのは、解体予定だった集合住宅の地下1階。設計図では配電盤だけがある壁面に、番号札「B-0」と白い扉が立っていたという記録が残る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容対象は部屋そのものではない。指定された建物に現れ、調査者が内部を記録しようとした時だけ、壁の向こうへ増える一室。財団でも、まだ説明できていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "壁の向こうへ部屋が増えるって、学校の使われていない階段を開けたら別の校舎へ続くような話じゃない。地図に無い場所が、見る人の前だけで形になるのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "初動班は扉を開けず、周囲の壁を測った。壁厚は46センチ。反対側は屋外の土手だった。それでも扉の隙間からは、誰もいない室内灯の白い光だけが漏れていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "扉の前に置いた録音機は、午前2時13分から2時17分まで、誰かが室内を歩く音を記録した。足音は4人分。しかしその時点で、扉は一度も開けられていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "開ける前から、中に4人いる音がしていたのか。じゃあ最初の調査員たちは、扉を開けた瞬間に、先に録られた足音の人数へ組み込まれたのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題はこの次だ。第1次調査が行われた午前3時、入室した職員1名は無線で「狭い廊下だ」と報告した。その直後、外側の扉は壁と同じ灰色の質感へ変わった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第1次調査員に割り当てられた番号はD-1142。装備は懐中電灯1本、音声送信機1台、赤いチョーク1本だけ。財団は帰還を前提に、壁へ目印を残すよう命じた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "音声は入室から18秒後に変化する。D-1142は廊下の右壁へ印を書いたと述べたが、外部監視班は同時刻、扉の左側の壁面に赤い線が浮くのを確認した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "中で書いた線が、外の壁に出たのか。なら壁の向こうは遠い別の場所じゃない。扉の内側と外側が、同じ壁を取り合っているみたいで…待って、まずくないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "入室から3分41秒後、D-1142は自分の声を聞いたと報告した。送信機越しではない。廊下の奥から「開けるな」と、本人と同じ低い声が繰り返したという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視班は直ちに撤退命令を送った。D-1142は返答したが、返答の直後に別のD-1142の声が無線へ重なった。片方は泣いていた。どちらが入室者か判別できなかった。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前3時47分、白い扉は消失した。残った壁には赤いチョークで「B-0」の文字だけがあり、その下に、読めないほど強く引かれた縦線が4本残っていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最初は1人しか入っていないのに、縦線が4本。あの足音も4人分だった。つまり部屋は最初から、後の調査まで含めて待っていたのか。嘘だろ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第2次調査は11日後に実施された。出現場所は同じ地下ではない。封鎖済みの第3サイト、職員用宿舎の廊下で、部屋番号「B-0」の扉だけが再び確認された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここまでの記録だけなら、扉が場所を移す異常と読める。だが第2次調査で、監視班は扉の前に第1次調査員D-1142の認証札を見つけた。汚れも新しかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "帰っていない人の認証札が、別のサイトに落ちていたのか。第1次の人はまだ中にいて、扉が出る場所だけ移動しているんじゃないのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第2次には調査員2名が入室した。A-09とA-17。外部班は扉を開けたまま維持し、12分ごとに呼びかける手順を採用した。閉鎖を防ぐための暫定手順だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "入室から12分後、A-09は「部屋がある」と報告した。廊下の突き当たりに、集合住宅の一室と同じ木製扉があり、表札には自分の氏名が記されていたという。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分の名前がある部屋を見つけたら、入るなと言われても無理だ。中に自分の荷物や、昔なくした物まで置かれていたら、確かめたくなる。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "A-17は扉を開けるなと制止した。しかし記録には、A-09が扉の内側から応答したとある。A-09はまだ廊下にいた。二つの声が同じ無線へ、同時に記録された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その後の映像には、A-17だけが廊下を走って戻る姿が残る。ところが開いたままのB-0から現れたのは、外側にいるはずのA-17の声だった。映像と声が一致しない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第2次調査の帰還者数は0名。外側で扉を保持していた警備員3名は無傷だったが、全員が「入室者は3人だった」と同じ供述をした。名簿上の入室者は2名だけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4人目が増えたんじゃない。第1次の人が、別の調査の中へ混ざったのか。…ねえ、これ本当に大丈夫なの？ 人数まで、部屋が決めているように見える。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第3次調査は中止された。代わりに財団は、B-0の出現地点を監視するだけに切り替えた。42日間で扉は7回現れたが、毎回図面にない壁面だけを選んでいた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "7回の出現中、5回は宿舎や待機室など職員が一人になる場所だった。扉は人の多い廊下には出ない。誰かが一人で振り返った時、背後の壁に現れる傾向があった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視記録の一つでは、清掃担当職員が自室の壁を二度見している。最初の映像には扉がない。二度目に振り返った映像には、白い扉と「B-0」の札が映っていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "一人きりの部屋で、背後に扉が出るのか。振り返らなければ見えない。でも気づいたら、もう部屋の中に知らない扉が立っている。聞かなきゃよかった。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第4次調査は、出現から83日目に強行された。対象は扉の中ではなく、外側に残る痕跡。入室者は1名、監視員は6名。今回は帰還を最優先する手順が組まれた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "調査員R-22は扉を開けず、壁の前で音声を再生した。第1次から第2次までの無線記録を、扉へ向けて流すだけの任務だった。接触を避けるための試みだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "再生開始から47秒後、扉の向こうで4回ノックが鳴った。監視員は誰も応答しなかった。すると今度は、R-22の背後にある休憩室の扉から、同じ4回のノックが返った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "前の扉から返事が来たんじゃない。背後の扉が返したのか。囲まれたら、どちらがB-0なのか分からない。どちらも開けないで済む保証もない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "R-22は振り返らなかった。だが無線には、休憩室の内側からR-22本人の声が入り始めた。「ここにいる」と三度繰り返し、最後だけ「先に入った」と言った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "外側にいたR-22は、その発言を聞いた直後に白い扉へ走った。監視員2名が制止したが届かなかった。R-22は扉を開け、室内を見たまま1歩も動かなくなった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視映像では、扉の内側は黒く塗りつぶされている。音声だけが残った。R-22は小さく「4人いる」と言った。その直後、別の4人が同時に「違う」と応答した。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "中にいたのは、消えた4人なのか。それともR-22を含めて4人なのか。数え方が違うだけで、誰かが一人、ずっと部屋から押し出されている気がする。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前0時06分、B-0の扉は閉じた。R-22は消失。第4次までに記録上の入室者は4名となった。だが壁に残った縦線は、最初の4本から5本へ増えていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "増えた1本が誰のものか、財団は報告書に記していない。監視員6名は全員帰還している。施設の入退室記録にも、未確認の人物は存在しない。記録はここで途切れている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在の収容手順は単純だ。図面にない扉を発見した場合、開けない。撮影しない。扉の前で自分の名前を呼ぶ声がしても、振り返らない。これは命令ではなく、生存条件だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "でも自分の声で呼ばれたら、反応してしまう。特に、部屋の中にいるはずのない家族や友達の声まで混ざったら、無視できる人なんているのか。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の暫定仮説では、B-0は場所ではなく、欠けた人数を埋めるために現れる入口とされる。ただし、何人が欠けているのか。誰が数えているのか。それは[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "自宅、学校、宿舎、使われていない階段の踊り場。壁があるはずの場所に扉を見つけても、決して近づくな。図面に無い部屋は、あなたのために作られたとは限らない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "もし扉の向こうから、先に入った自分の声が聞こえたらどうする。開けずに逃げても、その声だけが次の壁へ移ったら…逃げ場はどこにあるんだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2306の報告書には、最後の結論欄だけが空白で残されている。4名の調査員がどこへ消えたのか。5本目の線は誰なのか。その答えだけが、記入されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、扉を閉めても出口へ戻れない収容区画の記録を扱う。財団が保管した映像には、帰還者だけが映っていなかったという記録が残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次の報告書も、部屋の外にいる人間が消える話なのか。もう十分だと思うのに、空白の結論だけが頭から離れない。あの5本目は、誰だったんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この種の未整理記録は、財団の裏側シリーズに保管している。毎日投稿中だ。チャンネル登録者1万人を目指している。次の扉が、あなたの壁に現れる前に。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "図面に無い",
+      "4人の記録"
+    ],
+    "hook_caption": "存在しない部屋",
+    "subtitle": "SCP-2306 調査記録",
+    "tagline": "扉の向こうに残ったもの"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "なんでSCP-2306だけ、図面外の部屋を封鎖しているのか。",
+      "selected_hook": "あなたなら、禁忌の部屋を開けますか？",
+      "scores": [
+        {
+          "hook": "あなたなら、禁忌の部屋を開けますか？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 65
+        },
+        {
+          "hook": "驚き！調査員4名が消えた図面外の部屋",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 18,
+            "loop_connect": 15
+          },
+          "total": 63
+        },
+        {
+          "hook": "なんでSCP-2306だけ、図面外の部屋を封鎖しているのか。",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 18,
+            "loop_connect": 15
+          },
+          "total": 58
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 2,
+      "dead_zones": [
+        1,
+        3
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたなら、禁忌の部屋を開けますか？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、図面に無いのに封鎖って、まだ答えがあるのか。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "調査は4回。入室した職員は4名で、帰還者は0名だった。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "残ったのは部屋番号と、扉の内側から届いた4本の記録だけだ。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "しかも、その扉が自分の部屋に出たら…ちょっと待って、怖いって。",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "第4記録には、調査員が廊下側から自分を呼ぶ声が残っている。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "部屋は存在しない。だが記録だけは残った。答えの残りは[REDACTED]だ。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 7,
+          "text": "図面外の部屋に続く報告は他のファイルにもある。財団の裏側シリーズを毎日投稿中、1万人目標へ応援よろし",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 80,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 6,
+          "text": "第4記録には、調査員が廊下側から自分を呼ぶ声が残っている。",
+          "pattern": "声[がをは]",
+          "reason": "「声が」はミュートでは確認できない"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 8,
+          "text": "図面外の部屋に続く報告は他のファイルにもある。財団の裏側シリーズを毎日投稿中、1",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 23,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 6,
+        "relatability": 5,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 71,
+      "optimized_score": 81,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.12,
+      "issues": [
+        "25%・50%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "1万人目標へ応援よろしくね。…あれ、禁忌って最初に言ってた…",
+      "keyword_overlap_before": 0.5,
+      "keyword_overlap_after": 1.0
+    },
+    "power_word": {
+      "amplified": 3,
+      "changes": [
+        "「異常」→「財団すら手を焼く」",
+        "「変」→「ヤバい」",
+        "「怖い」→「ガチで恐ろしい」"
+      ],
+      "lines_modified": 3
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.301,
+      "similar_to": "SCP-1689「黒いジャガイモ」— 摂取実験8件、帰還率0%だった",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 3,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-2306「実在しない部屋」— 図面に無い1室、調査員4名の記録だけが残った",
+      "enhanced_title": "🔒SCP-2306「実在しない部屋」— 図面に無い1室、調査員4名の記録だけが残った⚠️",
+      "emoji_added": "🔒",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🔒SCP-2306「実在しない部屋」— 図面に無い1室、調査員4名の記録だけが残った⚠️"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": false,
+      "existing_bait": true,
+      "position": -1,
+      "bait_text": ""
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "negative",
+        "negative",
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "ellipsis",
+        "statement",
+        "statement",
+        "exclaim",
+        "statement",
+        "ellipsis"
+      ],
+      "monotone_runs": 2,
+      "interrupts_injected": 2,
+      "variety_score": 0.8
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "原文の報告書を精査した上での解説だ",
+      "position": 4,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 4,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 65,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['だけ'](+12)",
+      "やや長い(54字)(-5)"
+    ]
+  }
+}

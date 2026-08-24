@@ -1,0 +1,340 @@
+{
+  "title": "📈退職金の本当は？3社で最大2,000万円差の実態",
+  "theme": {
+    "title": "退職金の実態！企業による違いを徹底解説",
+    "angle": "企業ごとの退職金制度を比較し、転職・就活層にとっての重要性を強調。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "退職金の実態",
+      "fact_main": "トヨタ 2,000万円",
+      "fact_sub": "勤続35年の目安",
+      "text": "えっ、話題の企業で退職金に最大2,000万円差!?",
+      "bg_query": "トヨタ自動車株式会社 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "年収 895万円",
+      "fact_sub": "2024年有価証券報告書",
+      "text": "トヨタの平均信じられない年収は895万円です。年収だけで比較すると、老後資金が抜け落ちます。前回の動画を見た人なら、この数字の異常さがわかるはず",
+      "bg_query": "トヨタ自動車株式会社 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "労使協議で決定",
+      "text": "賞与は年2回です。ただし、賞与と退職金は別物です。毎月の給与だけでは測れません。…だが、数字の裏にはさらに驚きの事実がある…ところが…",
+      "bg_query": "トヨタ自動車株式会社 工場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "退職一時金あり",
+      "fact_sub": "公式採用情報に記載",
+      "text": "退職一時金の制度があります。数字だけ見れば、かなり良い。実はこの裏で条件差があります。",
+      "bg_query": "トヨタ自動車株式会社 社員 食堂",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "確定拠出年金あり",
+      "fact_sub": "自分で運用する年金",
+      "text": "確定拠出年金もあります。運用結果で受取額がヤバいわるため、将来額は固定ではありません。…だが、数字の裏にはさらに驚きの事実がある。…この戦略、天才だと思う？それとも狂気？",
+      "bg_query": "トヨタ自動車株式会社 研修施設",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "勤続35年が目安",
+      "fact_sub": "制度適用は勤続年数次第",
+      "text": "2,000万円は勤続35年の目安です。転職が早い20代ほど、ここは確認が必要です。",
+      "bg_query": "トヨタ自動車株式会社 社員 通勤",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "中途入社 0年扱い",
+      "fact_sub": "前職分は引き継げない",
+      "text": "ただし中途入社なら勤続は0年からです。公表されているのは、ここまでです。ここからが本当の闇だ",
+      "bg_query": "トヨタ自動車株式会社 採用 イメージ",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。…これが最初の疑問の答えだ",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "退職金2000万差",
+      "会社で変わる"
+    ],
+    "subtitle": "20代が見落とす退職金制度",
+    "tagline": "年収だけでは決められない"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "実は2,000万円の裏で、退職金は会社ごとに大きく変わります。",
+      "selected_hook": "えっ、話題の企業で退職金に最大2,000万円差!?",
+      "scores": [
+        {
+          "hook": "えっ、話題の企業で退職金に最大2,000万円差!?",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 18,
+            "loop_connect": 15
+          },
+          "total": 63
+        },
+        {
+          "hook": "あなたの退職金、会社で2,000万円も変わる!?",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 18,
+            "loop_connect": 5
+          },
+          "total": 58
+        },
+        {
+          "hook": "実は2,000万円の裏で、退職金は会社ごとに大きく変わります。",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 10,
+            "emotional_trigger": 0,
+            "scroll_stop": 18,
+            "loop_connect": 5
+          },
+          "total": 43
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "えっ、話題の企業で退職金に最大2,000万円差!?",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "トヨタの平均年収は895万円です。年収だけで比較すると、老後資金が抜け落ちます。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "賞与は年2回です。ただし、賞与と退職金は別物です。毎月の給与だけでは測れません。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "退職一時金の制度があります。数字だけ見れば、かなり良い。実はこの裏で条件差があります。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "確定拠出年金もあります。運用結果で受取額が変わるため、将来額は固定ではありません。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "2,000万円は勤続35年の目安です。転職が早い20代ほど、ここは確認が必要です。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 6,
+          "text": "ただし中途入社なら勤続は0年からです。公表されているのは、ここまでです。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+          "tension": 0,
+          "is_dead": true
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 15,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 61,
+      "optimized_score": 61,
+      "micro_reveals": 3,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.65,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "25%・50%・75%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "業の実態シリーズもチェックしてね。…これが最初の疑問の答えだ",
+      "keyword_overlap_before": 0.4,
+      "keyword_overlap_after": 0.4
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「年収」→「信じられない年収」",
+        "「変」→「ヤバい」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭に財務数字"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.387,
+      "similar_to": "Uber Eats配達員、本当は時給2,000円超えもある収入の実態",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 5,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "退職金の本当は？3社で最大2,000万円差の実態",
+      "enhanced_title": "📈退職金の本当は？3社で最大2,000万円差の実態",
+      "emoji_added": "📈",
+      "category": "money",
+      "modified": true
+    },
+    "enhanced_title": "📈退職金の本当は？3社で最大2,000万円差の実態"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "…この戦略、天才だと思う？それとも狂気？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "surprise",
+        "neutral",
+        "surprise",
+        "negative",
+        "neutral",
+        "negative",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "ellipsis",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "前回の動画を見た人なら、この数字の異常さがわかるはず",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 3,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['本当は'](+12)",
+      "好奇心ギャップ['？'](+12)"
+    ]
+  }
+}

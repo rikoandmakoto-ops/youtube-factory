@@ -1,0 +1,672 @@
+{
+  "title": "一口SCP #98：🫣SCP-1048「ビルダーベア」Safe判定が招いた収容違反の恐怖😱",
+  "theme": {
+    "title": "SCP-1048「ビルダーベア」、愛らしい外見が起こした財団史上最恐の収容違反",
+    "angle": "Safe判定から一転、施設内で引き起こした惨劇の詳細を収容記録・証言ログで再構成。見た目と本質の落差による恐怖演出"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "驚き！Safe判定が呼んだ、熊の続きとは？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "報告書にはこう書かれている。…え、Safeなら安全なはずだろ。まだ答えは出てないのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1048は高さ33センチの熊。記録上、会話もできた…なぜ財団はこれを隠したのか？財団職員ならこの収容手順の異常さに気づくはずだ",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "常識を覆すが、だが熊は、誰にも教わらず別の熊を作るという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って、それがSafe判定を壊した理由なのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "作られた1体は、人間の耳だけで形を保っていた…続きは████…",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の熊は消失した。記録はここで途切れている。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "こういう記録って、他にも世界中に残ってるんだ。これ、一番怖いSCPランキング何位だと思う？"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容違反ファイルシリーズには熊の続きも残る。毎日投稿中、1万人目標への応援として登録を頼む。…待って、判定に戻って",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実はあなたの部屋にあるぬいぐるみより小さい。高さ33センチの熊が、収容施設の職員から耳を奪ったという記録が残っている。枕元の熊にも、今だけは手を伸ばさない方がいい。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、耳を奪う熊がSafe判定だったのか。33センチなら学校の机の隅にも置ける大きさだし、自分の部屋に紛れても誰も警報を鳴らせない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初に確保されたSCP-1048は、市販のテディベアに酷似していた。ただし自力で歩き、手を振り、紙へ短い文章を書いた。可愛らしい振る舞いが、職員の警戒を静かに下げた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題は、この熊が自分以外の熊を作ったことだ。財団の観察記録には、許可された収容空間の内部で二体目が発見されたと記される。誰も持ち込んでいない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "二体目なら、誰かのいたずらにも見える。でも監視された収容室の中で、持ち込みなしに増えたなら話が違う。鍵を掛けたロッカーの中身が勝手に増えるようなものだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だが二体目は布製ではなかった。SCP-1048-Aと指定された個体は、人間の耳だけを材料に、熊の頭部と胴体と四肢を保っていた。ここでSafeという分類の意味が崩れる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Safeは無害を意味しない。所定の手順を守れば収容できるという区分だ。鍵の付いた箱に毒が入っていてもSafeになり得る。その冷たい定義が、この事案では職員の判断を遅らせた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ最初から危険だったのに、扱いやすいからSafeと書かれていたのか。かわいい外見と小ささが、危険物ではないという思い込みを何重にも作った。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "初期の収容手順では、SCP-1048に紙、筆記具、少量の布を与えることが許可されていた。職員へ敵意を示さず、会話も筆談中心だったため、警戒線は低く設定されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "熊は自らをビルダーベアと名乗った。作ることが好きだと書いたとされる。だが、何を作るのか、材料をどこから得るのか、その二つだけは最後まで明かさなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…ねえ、これ本当に大丈夫なの？ 作るのが好きだと言う相手に材料を渡して、完成品の中身を確認しないなんて、鍵付きの部屋で目を閉じるのと同じだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そしてこの話、最後に消えたのは二体目だけではない。収容違反の混乱が収まった後、最初のSCP-1048そのものが施設内から消失した。分類票と空の部屋だけが残った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1048-Aは、見た目だけなら子ども用の熊に似ていた。だが近づいた職員は、耳の集まりから発せられる泣き声を聞いたという。音源は小さく、廊下の奥まで追ってきたとされる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "耳だけでできた熊が泣くのか。待って、それはぬいぐるみの音じゃない。奪われた人間の声が、誰かを呼ぶように残されているみたいで、近づけない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "泣き声を聞いた職員には、耳を押さえて錯乱した者が出た。被害者数や容体の詳しい欄は[DATA EXPUNGED]されている。財団でも、まだ説明できていない。空白が被害の大きさを隠している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "二体目との接触は直ちに禁止された。音声記録の再生も制限され、現場では耳栓より距離と遮音扉が優先された。聞く行為そのものが、接触に近い危険として扱われた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "耳栓では足りないほどの音なのか。ゲームの警告音なら消せるけど、これは聞こえた瞬間に自分の体が材料側へ引かれるような怖さがある。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "原典記録には、SCP-1048が三種類の作品を作った可能性が示される。確認されたのは複数だが、すべての個体が回収されたという保証はない。最初の熊が消えた以上、数える相手もいない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "一体目の作品について、財団文書は素材の詳細を伏せている。外見は普通の熊に近く、内部確認に関わった職員の記録が途切れる。解体結果の欄には、読めない黒塗りだけが残る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "素材が分からない熊が先にいたのか。二体目の耳だけでも十分なのに、一体目は正体すら読ませない。知らない材料のぬいぐるみを、今まで何度抱えたか分からなくなる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "二体目の素材だけは明確だった。人間の耳。小さな熊の胴体を覆う量が、どこから集められたのか、原典は具体的な人数を記載していない。数がないこと自体が異様な欠落だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は、SCP-1048が職員を直接襲う場面を完全には確認していない。だから材料の入手経路は未解決のままだ。熊が集めたのか、別の個体が運んだのか、記録は答えない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "直接襲っていないなら、もっと怖い。誰かが気づかないまま運んだか、自分から差し出したことになる。収容室の外にいる全員が、材料を運ぶ役になり得る。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "音を聞いた職員が耳を失ったのか、その後に耳の熊が現れたのか。時系列にも曖昧な箇所がある。報告書は事故の順番ではなく、残った結果だけを並べているように見える。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここまで説明したが、半分は誤解かもしれない。SCP-1048-Aが被害の原因ではなく、被害を集めて形になっただけなら、泣き声の発生源は別に存在していたことになる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ。耳の熊が犯人ではなく、被害の証拠だったなら、本当に危険な何かは施設の中を自由に動いていたことになる。小さな熊は置き手紙だったのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この仮説は公式結論ではない。だが収容違反後、最初のSCP-1048が見つかっていない事実だけは変わらない。施設を出たのか、別の作品に紛れたのか、財団でも確認できていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "再分類は検討された。しかし分類票を書き換える頃には対象が不在だった。EuclidやKeterという文字を追加しても、空の収容室には効かない。警備記録は、遅すぎた判断を残した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ラベルだけを危険に変えても、熊が廊下にいるなら意味がない。危険物の箱を探す前に、箱そのものが学校の鞄に入ってしまうような状況だ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "職員証言の一つには、脱出直前の熊が警備員へ手を振ったとある。敵意がない仕草だったため、警備員は即時警報を鳴らさなかった。手を振る動作が、最後の収容手順を無効にした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この事案で恐ろしいのは、破壊の派手さではない。危険に見えないものが、警戒の隙間を正確に通り抜けたことだ。小さな熊は、巨大な怪物よりも扉の近くに立てる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "廊下で迷子のぬいぐるみを見つけたら、普通は拾って持ち主を探す。子どもの頃から熊は安心するものだと教えられてきた。その習慣が、財団職員にも残っていた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-1048は人間の感情を理解していた可能性がある。恐怖を見せず、助けを求めるように振る舞い、最も近づかれやすい姿を維持していたと推測される。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、理解と共感は別のものだ。熊が書いた友好的な言葉が本心だったのか、材料へ近づくための誘導だったのかは解明されていない。可愛い文字ほど、後から読むと冷たくなる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、怖いって。筆談なら嘘を見破れると思ってしまう。でも紙に残る言葉は、声よりも長く残る。読み返すたびに熊へ近づくことになる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容中のSCP-1048は、会話より筆談を選んだ。声を持たないことが無害の証拠に見えたが、後に現れた作品は音で職員へ近づいた。沈黙は能力がない証明ではなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の熊が声を出さない理由は不明だ。自分の性質を隠したのか、作品へ別の性質を移したのか、あるいは沈黙そのものが職員を安心させるための選択だったのか。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "作る熊ごとに違う性質があるなら、未確認の三体目は耳でも声でもない方法で近づくかもしれない。ドアの隙間にある糸くずまで、熊の材料に見えてきた。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "三体目について、原典資料は断片しか残していない。存在を示す記述はあるが、形状、材料、回収状況の大半が[REDACTED]されている。隠された情報が、存在しない証明にはならない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "伏せられた理由も公開されていない。だが二体目のように、知ることが接触へ近づく種類の危険なら、黒塗りは情報隠しではなく、閲覧者を収容室の外へ留める壁だった可能性がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "報告書を読むだけで近づくことになるのか。画面に黒塗りがあると、普通は中身を知りたくなる。でもこの件だけは、空白の向こうを見ない方が生き残れる気がする。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "公開可能な記録に、閲覧者へ直接作用する異常は確認されていない。ただし確認されていないだけだ。財団文書では、その一文が安全宣言より重く置かれることがある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現場では、未登録のぬいぐるみ状物品を見つけた場合、素手で触れず、位置と時刻を報告する手順が徹底された。高さ33センチという数字は、見失うには十分で、警戒には小さすぎる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "落とし物に見えても拾わないのか。駅や教室なら冷たい行動に見える。でも財団では、優しさで手を伸ばす行為が、収容違反の最初の一歩になる。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "事故後、耳の形をした綿や布片を見つけた職員が、記録係へ報告する習慣を持ったとされる。公式手順ではない。だが現場に残った恐怖は、日常の小さな物まで疑わせた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "保管棚の下、洗濯物の箱、廊下の角。ありふれた場所ほどSCP-1048の大きさは紛れやすい。巨大な怪物なら見逃さないが、小さな熊なら自分で隠れる必要すらない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "かくれんぼなら、見つけた人が勝つ。でもこの熊は違う。見つけた瞬間に自分の場所を教えることになる。あの手を振る仕草を見たら、逃げる方向まで迷いそうだ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "元研究員として残せる助言は一つだけだ。見慣れない熊が手を振っても、返すな。可愛さは接触許可証ではない。持ち主を探す前に、記録と距離を確保しろ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1048の所在は、公開可能な範囲では不明のままだ。回収成功の報告も、完全な終了宣言もない。最初の熊が施設外へ出た可能性は、報告書のどこにも否定されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Safeという文字だけ残して、対象は消えたのか。新しい職員が古い分類票だけを見て、ただの熊だと思って扉を開けないことを願うしかない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の誤りは、熊を無害だと呼んだことではない。無害そうに見えるものへ、人間が自分から近づく習慣を見落としたことだ。SCP-1048は、その習慣を材料にした可能性がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "二体目の泣き声が何を求めていたのか、記録はここで途切れている。だが耳を失った職員の名前は、報告書の余白から消えていない。誰かが今も、その音を聞いているかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、扉の向こうが終わらないSCP-3008の収容記録を扱う。出口を探した人々が、店内の夜で何を見たのかを追う。ここでも、日常に似た場所ほど危険になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "熊の後で、出口のない店まで読むのか。けれど、知らないまま通り過ぎる方が危ない気もする。記録を読むなら、せめて扉の外にいるうちに読みたい。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容違反ファイルシリーズには、他にも回収不能になった異常存在の記録が残る。毎日投稿中だ。1万人目標への応援として、次の報告書のために登録を頼む。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして、どこかで小さな熊がこちらを見ていたとしても、見かけても、決して近づくな。手を振り返した記録の先は、[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "クレジット：SCP-1048「Builder Bear」原著作者Oz_Omega、SCP Wiki、CC BY-SA 3.0。翻案部分を含む本報告は、同ライセンスに従って記録される。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "Safeの熊",
+      "施設が泣いた"
+    ],
+    "hook_caption": "Safeではない",
+    "subtitle": "愛らしい外見の収容違反記録",
+    "tagline": "見かけても、決して近づくな"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "なんでこのSCPだけ、Safeなのに隔離されたのか。",
+      "selected_hook": "驚き！Safe判定が呼んだ、熊の続きとは？",
+      "scores": [
+        {
+          "hook": "驚き！Safe判定が呼んだ、熊の続きとは？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 50
+        },
+        {
+          "hook": "あなたはまだ、熊の収容違反を知らない？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 48
+        },
+        {
+          "hook": "なんでこのSCPだけ、Safeなのに隔離されたのか。",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 7,
+            "loop_connect": 5
+          },
+          "total": 37
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        1
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "驚き！Safe判定が呼んだ、熊の続きとは？",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、Safeなら安全なはずだろ。まだ答えは出てないのか。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "SCP-1048は高さ33センチの熊。記録上、会話もできた。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "だが熊は、誰にも教わらず別の熊を作るという。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "待って、それがSafe判定を壊した理由なのか。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "作られた1体は、人間の耳だけで形を保っていた。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 6,
+          "text": "最初の熊は消失した。記録はここで途切れている。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "収容違反ファイルシリーズには熊の続きも残る。毎日投稿中、1万人目標への応援として登録を頼む。",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "こういう記録って、他にも世界中に残ってるんだ。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 22,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 5,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 69,
+      "optimized_score": 69,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.99,
+      "issues": [
+        "44%・66%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "、1万人目標への応援として登録を頼む。…待って、判定に戻って",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 1.0
+    },
+    "power_word": {
+      "amplified": 0,
+      "changes": [],
+      "lines_modified": 0
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.388,
+      "similar_to": "SCP-1523-JP「かまいたち」— 被害記録17件、傷だけ残った夜",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 7,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-1048「ビルダーベア」Safe判定が招いた収容違反の恐怖",
+      "enhanced_title": "🫣SCP-1048「ビルダーベア」Safe判定が招いた収容違反の恐怖😱",
+      "emoji_added": "🫣",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "🫣SCP-1048「ビルダーベア」Safe判定が招いた収容違反の恐怖😱"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": true,
+      "early_answer_line": 1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 7,
+      "bait_text": "これ、一番怖いSCPランキング何位だと思う？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "negative",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "ellipsis",
+        "statement",
+        "question",
+        "statement"
+      ],
+      "monotone_runs": 2,
+      "interrupts_injected": 2,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "財団職員ならこの収容手順の異常さに気づくはずだ",
+      "position": 2,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 1,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 0.5
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['収容違反'](+12)"
+    ]
+  }
+}

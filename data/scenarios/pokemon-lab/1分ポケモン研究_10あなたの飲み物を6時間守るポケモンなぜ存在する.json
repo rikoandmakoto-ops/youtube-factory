@@ -1,0 +1,682 @@
+{
+  "title": "1分ポケモン研究 #10：🔥あなたの飲み物を6時間守るポケモン、なぜ存在する？",
+  "theme": {
+    "title": "サーモスのポケモン、実は存在する！？",
+    "angle": "サーモスの機能を持つポケモンの実在を考察する。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "あなたの飲み物を6時間守るヤバすぎるポケモン、なぜ？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 伝説のポケモンでサーモス再現できるってこと!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "答えの鍵はヒートロトムの図鑑、電気で熱を操る公式闇設定なんだよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "衝撃の事実として、熱源だけなら強いけど、冷たい飲み物を守る役は別に必要だよね？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも氷を作れるユキノオー系なら、冷却担当まで公式技で補える！内部データまで調べてるからこそわかる設定なんだけど",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ファンの間ではこう言われている、最強サーモス候補は保温役と断熱役の2匹編成！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまり1匹の万能ボトルじゃなく、熱を作る役と逃がさない役が核心！ でも断熱役は誰だ？コメント欄でお前らの最強パーティ教えて。…落ち着いて聞いてほしいんだけど",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "サーモス候補の続きは裏設定ファイルシリーズに置いてあるよ！ 1万人目標で毎日投稿中、応援よろしくね！…あれ、ポケモンって最初に言ってた…",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "あなた、真冬の外でも飲み物が冷めないサーモスみたいなポケモン、実は図鑑の中にいるかもと思ったことありませんか？　ヒントは体温を守る驚異の毛です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "今回は、保温ボトル顔負けの機能を持つポケモンの正体を暴きます。単なる「ふわふわ」ではなく、寒さを生き抜くための科学が隠れているんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "結論を先に言うと、候補の筆頭はウールーです。全身を覆う羊毛は、寒い地域でも暮らせるほどの防寒装備で、まさに生きた断熱材なんですよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "しかも驚きなのが、ウールーの毛は伸びると服やじゅうたんの材料になる設定です。保温だけでなく人間の生活まで支える、サーモス級の実用派でした。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし、ここで反転です。サーモスは熱を逃がしにくい容器なのに、ポケモンは体温が上がりすぎても困る生き物。毛だけでは答えにならないのです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "そこで鍵になるのが「断熱」、つまり熱の移動を遅らせる仕組みです。ウールーの毛のすき間に空気がたまれば、冷たい外気から体を守る壁になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "実は魔法瓶と同じことが、ポケモンの体でも起きてる。体温を逃がさず保つ仕組みは、現実のサーモス級の性能を持つ可能性があるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "でもこれ、半分は間違いなんだ。サーモスは熱を作る道具じゃなく、熱の出入りを減らす容器。ポケモンもまず熱源と断熱を分けて考える必要があるよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "サーモスの核は真空断熱。二重の壁の間をほぼ空っぽにして、空気が熱を運ぶ流れを止める。だから熱い飲み物も冷たい飲み物も温度変化が遅い。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "人間が寒い日にダウンを着るのも近い考え方だね。羽毛のすき間に空気を閉じ込めると、体から外へ逃げる熱が減る。真空ほど強力ではなくても効果は大きい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ポケモンで候補になるのは、分厚い毛や脂肪を持つタイプだ。図鑑で体温維持が語られるユキノオーやトドゼルガは、天然の断熱材を備える発想に合う。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ただし毛皮があるだけではサーモス認定できないよ。断熱は熱を逃がしにくくするだけで、体温そのものを上げる力はない。燃料になる食事や代謝も必要になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで重要なのが体積と表面積だ。大きい体ほど、体の中身に比べて外気に触れる面が少なくなり、同じ条件なら熱を失いにくい傾向がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "だから小柄なポケモンほど不利にも見える。でも炎や電気を生むポケモンなら話は別で、断熱材と熱を作る能力を組み合わせれば小型でも寒さに耐えられる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "結論としてサーモス機能は、真空の有無ではなく熱の出入りを抑える力で見るべきだ。次は図鑑設定から、最も魔法瓶に近い一匹を絞り込んでいこう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "結論から言うと、公式に「保温ポケモン」はいません。ですが体温を逃がさない性能なら、ヒトモシ系よりカビゴンが有力です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、炎を出すポケモンじゃなくてカビゴンなの？　見た目はただの大きな寝坊助なのに、サーモス候補って反転がすごいね。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "理由は脂肪です。脂肪層は体内の熱が外へ伝わる速度を下げる断熱材で、寒冷地の動物では体温維持の主役になります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "人間でも皮下脂肪が厚いほど寒さを感じにくい例があるけど、カビゴンの巨大な体なら、熱をためる容量まで桁違いになりそう。",
+      "expression": "thinking",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "熱のたまりやすさは体積に比例し、逃げやすさは表面積に比例します。大型ほど有利というベルクマンの法則にも、カビゴンは合います。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまり小型ポケモンより、丸くて大きいカビゴンの方が冷えにくい？　魔法ではなく、形そのものが保温ボトル寄りなんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも図鑑では、カビゴンの体重は460キログラム。仮に多くが水分なら、1度温めるだけでも膨大な熱を蓄えられます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "水1キログラムを1度上げるには約4.2キロジュール必要だから、460キログラム級なら温度変化がゆっくりでも不思議じゃないね。",
+      "expression": "thinking",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし保温と発熱は別です。カビゴンは熱を作るより逃がしにくい型で、熱源まで持つ候補なら次はマグカルゴを検証します。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "サーモスの正体は一匹に決められないかもね。断熱担当カビゴン対、超高温担当マグカルゴ、次の比較で勝者を見よう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "最初に結論です。ポケモン世界には、熱いものも冷たいものも長時間守れる「生きたサーモス」級の候補が実在します。しかも図鑑記録では、温度差1000度級の環境に関わる例まであるんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "え、保温ボトルの代わりになるポケモンってこと？　ただ炎を出すだけならヒトカゲでもできるけど、温度を逃がさない能力まで持つとなると、候補は一気に怪しくなるね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "鍵になるのは断熱です。熱の移動を遅らせる性質のことで、魔法瓶は二重構造の間を真空にして熱を遮ります。ところがポケモンには、体そのものが熱を閉じ込めると読める記録があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "歴史をたどると、魔法瓶の原型は1892年、物理学者ジェームズ・デュワーが考案した真空容器。なのにポケモン図鑑では、それよりずっと原始的な生物が似た発想を先取りしているんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "研究者たちが注目したのは、火山や極寒地帯に暮らす種の体表です。単なる耐熱・耐寒ではなく、内部の熱量を保つための殻や毛があるなら、自然界の魔法瓶という仮説が立ちます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "でもここで反転！　最有力候補は炎タイプとは限らないんだよ。熱を作れるポケモンより、熱を外へ漏らさないポケモンのほうが、サーモス機能の本質には近いかもしれない。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "古い図鑑記述には、体内の温度を一定に保つため外皮を変化させる種も登場します。これは恒温、つまり外気が変わっても体温を保つ仕組みで、保温性能を測る研究の入口になりました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "実際、寒冷地の調査では、厚い毛や殻を持つポケモンほど活動時間が落ちにくいという見方があるよね。けれど毛皮なら普通の防寒具。サーモス認定には、もっと決定的な証拠が必要だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そこで次は図鑑の「熱をためる」「冷気を閉じ込める」という表現を精査します。比喩なのか、実測された機能なのか。その境界に、サーモスのポケモンを名乗れる意外な一匹が潜んでいます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "結論から言うと、体温を自在に守る“生きるサーモス”候補は実在するの。最有力はマグカルゴ、その体温は約1万度という図鑑設定よ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "1万度！？ 太陽の表面が約5500度だから、マグカルゴは倍近い計算だよね。保温どころか、近づく物を一瞬で焼き切る魔法瓶だ！",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし本物のサーモスは中身を熱く保ち、外側を持てるのが本領よ。マグカルゴは熱を閉じ込めるどころか、体表から危険な熱を放出しているわ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "待って、ここで候補が逆転するよ。熱さ最強のマグカルゴではなく、外気を遮断して体温を保つポケモンこそ、サーモスらしさでは上かもしれない！",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その条件に近いのがヒードランね。鋼の体と高温の血液を持つとされ、火山の洞窟で活動する姿は、熱源を頑丈な容器で包む構造を連想させるの。",
+      "expression": "thinking",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "でも鋼ボディなら外側は熱くならないの？ 金属は熱を伝えやすい印象だけど、真空断熱ボトルも金属製だし、素材だけでは答えが出ないぞ。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "サーモスの要は真空断熱、つまり熱を運ぶ空気をほぼなくして熱移動を減らす仕組みよ。ヒードランに真空層の記述はなく、ここは残念ながら推測止まりね。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "じゃあ寒さを防ぐ方向ならどう？ ユキノオーは雪山に暮らし、厚い体毛を持つ。保温材が空気を抱え込む原理なら、天然ダウンジャケット級の候補だよ。",
+      "expression": "thinking",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "実際、毛や羽毛の保温は空気の層を作る点で断熱に近いわ。ただしサーモスの真空とは別物で、風や水分で性能が落ちやすいという弱点もあるの。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまり完全なサーモス機能を図鑑で証明されたポケモンはいない。でも熱源ならマグカルゴ、容器ならヒードラン、断熱ならユキノオー――三者合体で完成だ！",
+      "expression": "excited",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今日からの防災なら、ヒートロトムを「熱源役」と考える発想が便利です。停電時の温かい飲み物は体感温度を上げ、備蓄の見直しにもつながります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "でも実物のヒートロトムは捕まえられないよね？　そこで重要なのは、保温ボトルをポケモンの特性みたいに使い分けること。朝の一杯が昼まで残るのか試したい！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "まず熱い飲み物は、容器を先に熱湯で約1分温めてから入れると温度が下がりにくいです。これは予熱と呼ばれ、ボトル自体が飲み物の熱を奪うのを減らします。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "逆に冷たい飲み物なら氷水で予冷だね！　ただし氷を入れすぎると飲める量が減るから、通学や散歩では飲料の3分の1ほどを氷にする目安が扱いやすいよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで驚きです。保温の強さは容量よりフタの扱いで崩れることがあり、開け閉めを何度もすると熱が逃げます。サーモス役を選ぶなら、一気飲みより小分けが正解です。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまり「水タイプだから冷たい」ではなく、フタを開ける回数が勝負なんだ！　作業机ではコップへ移す回数を減らし、直接飲めるボトルにすると温度を守りやすいね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "外出前には、飲み物の温度をスマホ用温度計で一度記録すると自分の生活に合う量が分かります。例えば朝7時と正午を比べれば、通勤時間に必要な性能を判断できます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ポケモン図鑑みたいに「朝は熱々、昼も飲み頃」と自分のデータを作るわけだね！　ただ、熱すぎる飲み物は危ないから、飲む前に少量で温度を確かめよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "最後に洗浄は毎日が基本です。甘い飲料や牛乳入りは菌が増えやすいため、使ったら早めに中性洗剤で洗い、フタのパッキンまで乾かすとサーモス運用が長持ちします。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "結論、サーモス級の保温保冷を連想させるポケモンは実在し、体温維持や断熱の設定が図鑑に刻まれていました。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ただし魔法の水筒そのものではなく、炎・氷・毛皮・体内熱を使う生存戦略でした。自然の設計、想像以上にすごい！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "特に極寒や灼熱で暮らす種は、温度を守れなければ一瞬で不利。図鑑の短い一文が、命がけの機能説明だったのです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "次回は、図鑑にあるのに怖すぎる『人間を狙うポケモン』を解説するよ。子どもの頃の印象がひっくり返るかも！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "優しそうな見た目でも、図鑑には背筋が冷える行動が記録されています。ゆっくりポケラボらしく、根拠つきで迫ります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "サーモスみたいな能力を持つ相棒、あなたなら誰を選ぶ？コメントで推しを教えてくれると、研究員たちが大喜びです！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "図鑑の『え、マジで？』を次も逃さず受け取りたい人は、高評価とチャンネル登録をお願いします。それでは次の研究で！",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "飲み物守る",
+      "ポケモン？"
+    ],
+    "hook_caption": "保温できる",
+    "subtitle": "図鑑から探すサーモス候補",
+    "tagline": "熱も冷たさも逃がさない"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "ラプラスとヒートロトム、本気で保温対決したらどっちが勝つ？",
+      "selected_hook": "あなたの飲み物を6時間守るポケモン、なぜ？",
+      "scores": [
+        {
+          "hook": "あなたの飲み物を6時間守るポケモン、なぜ？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 18,
+            "loop_connect": 5
+          },
+          "total": 68
+        },
+        {
+          "hook": "驚き！あなたの飲み物を守る裏設定とは？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 63
+        },
+        {
+          "hook": "ラプラスとヒートロトム、本気で保温対決したらどっちが勝つ？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 43
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたの飲み物を6時間守るポケモン、なぜ？",
+          "tension": 7,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ待って！ ポケモンでサーモス再現できるってこと!?",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "答えの鍵はヒートロトムの図鑑、電気で熱を操る公式設定なんだよ！",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "熱源だけなら強いけど、冷たい飲み物を守る役は別に必要だよね？",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "しかも氷を作れるユキノオー系なら、冷却担当まで公式技で補える！",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "ファンの間ではこう言われている、最強サーモス候補は保温役と断熱役の2匹編成！",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 6,
+          "text": "つまり1匹の万能ボトルじゃなく、熱を作る役と逃がさない役が核心！ でも断熱役は誰だ？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 7,
+          "text": "サーモス候補の続きは裏設定ファイルシリーズに置いてあるよ！ 1万人目標で毎日投稿中、応援よろしくね！",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 30,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 6,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 73,
+      "optimized_score": 73,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.37,
+      "issues": [
+        "25%・50%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "投稿中、応援よろしくね！…あれ、ポケモンって最初に言ってた…",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.5
+    },
+    "power_word": {
+      "amplified": 3,
+      "changes": [
+        "「ポケモン」→「ヤバすぎるポケモン」",
+        "「ポケモン」→「伝説のポケモン」",
+        "「設定」→「闇設定」"
+      ],
+      "lines_modified": 3
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.316,
+      "similar_to": "カイオーガとグラードン、天候を2回張ったらどっちが勝つ？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 1,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "あなたの飲み物を6時間守るポケモン、なぜ存在する？",
+      "enhanced_title": "🔥あなたの飲み物を6時間守るポケモン、なぜ存在する？",
+      "emoji_added": "🔥",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🔥あなたの飲み物を6時間守るポケモン、なぜ存在する？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 6,
+      "bait_text": "コメント欄でお前らの最強パーティ教えて"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "surprise",
+        "neutral",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise"
+      ],
+      "streaks_found": 1,
+      "breakers_injected": 1,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "question",
+        "exclaim",
+        "question",
+        "exclaim",
+        "exclaim",
+        "statement",
+        "ellipsis"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.8
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "内部データまで調べてるからこそわかる設定なんだけど",
+      "position": 4,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 3,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 88,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "二人称['あなた'](+6)"
+    ]
+  }
+}

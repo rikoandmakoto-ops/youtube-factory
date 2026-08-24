@@ -1,0 +1,682 @@
+{
+  "title": "ワイ、サーモス歴3年やけど質問ある？w😏",
+  "theme": {
+    "title": "サーモスのポケモン、どんなのが欲しい？",
+    "angle": "サーモスとポケモンを組み合わせた理想のキャラクターを視聴者に提案してもらう。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "お前ら、親戚の前で鳴いたことある？草",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 夏の帰省で一番頼る相棒やんけ草…草ァ！ｗｗｗ",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚くべきことに、ここからが草なんだけどさw冷たい麦茶を絶対ぬるくせん水タイプやろw",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "親戚の長ドン引きする話だけ冷やしてくれる氷タイプも要るやで。この手の良スレ見つけてくるの得意なんよｗ",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "昼の車内で勝手にスポドリ配る回復タイプ草…からの…ｗ",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "フタを開けた瞬間だけ鳴くやつ、欲しすぎやろw。…これ、ワイが悪いんか？コメ欄で判定してくれ",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でも親戚の前で鳴いたら全員に触られる運命やで草",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "質問ある？シリーズシリーズ、草生えたやつは高評価で教えてくれw。…草、最初から伏線だったのかよ",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "ワイ、サーモス歴3年やけど質問ある？w 夏の帰省で片道4時間の車内へ麦茶を連れていくたび、親戚より先に水筒を守る係になるんやが、お前らなら何タイプを選ぶやろ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ サーモス歴3年を職歴みたいに言うな草 でも炎天下の駐車場で30分待った後、冷たい一口が残っていたら相棒認定したくなるのは分かるやでw。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ワイが欲しいのは水タイプやな、朝8時に入れた麦茶を昼12時でもキンキン顔で守り、サービスエリアの自販機へ無言の勝利宣言をしてくるやつやで草。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "水タイプが麦茶を守るのは普通に強すぎるやろw 祖父の家の台所で補充されるたび経験値が入り、帰り道には容量500ミリ分だけ成長してそうやな草。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "お前らも夏休みの移動中、ぬるい一口でテンションが3段階落ちたことあるせやろ、あの瞬間だけ水筒の横に小さな相棒がいて『まだ冷たいで』と言ってほしい草。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "冷たさを守る前にワイの機嫌を守ってくれやw 帰省ラッシュで車が10キロしか進まん時、飲み物より親戚の会話がぬるくなっていくのが一番きつい草。",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "そこで氷タイプの出番やろ、A叔父の昔話が7周目へ入った頃にだけ冷気を出して、車内の空気を2度下げるくらいの気まずい配慮が欲しいんやがw。",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "それはアカン、A叔父の話まで凍ったら翌年まで解凍できんやろ草 せめて麦茶だけ冷やして、会話のほうは聞こえないふりで乗り切るのが掲示板流やで。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実は氷タイプ最強に見えて半分ハズレなんや、冷えすぎた飲み物を一気に飲んで腹がびっくりしたら、相棒が得意げに氷を増やしてくる地獄になる草。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 冷えすぎまで再現する相棒は敵やろw そこで温度を読めるノーマルタイプが急浮上するわ、朝の眠いワイでも飲める顔をしていてほしいんやで。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ノーマルタイプはフタを開けるたび『今日は麦茶やで』と教えてくれる担当や、朝に白湯を入れたことを午後3時に忘れるワイには、地味すぎて神なんやがw。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "白湯を麦茶の顔で飲んだ時の脳内停止、だいたい3秒はあるやろ草 『ワイは何を期待していたんや』って給湯室で哲学を始める前に鳴いてくれや。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "炎タイプは冬専用と思わせて、夏の冷房が強すぎる職場でも活躍するやつやな、午後2時に冷えた指へ温かい飲み物を渡して、上司のAより気が利く草。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "上司のAと比較される水筒相棒かわいそうで草 でも会議が90分伸びても中身だけ温かいなら、ワイの集中力8分分くらいは面倒を見てくれそうやでw。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "草タイプはハーブティーを入れた時だけ意識高そうに見える担当や、実際は昼1時にカーテン半開きで飲んでいても、休日の朝みたいな顔だけ作れるんやで。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "休日の朝とか言いながら、横には食べかけの菓子とレシートが3枚あるやろw 草タイプ相棒も部屋を見て葉っぱをしなしなにして、無言で帰りそうやな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でんきタイプはスマホ残量が2パーセントになった時だけ震える相棒やな、飲み物は満タンでも地図が消えた帰省中、ワイの顔面だけ真冬になるのを防ぐ草。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "水筒に充電を願い始めたら終わりやでw ただ高速道路の分岐で地図が消えた瞬間、冷たいお茶より冷たい親戚の視線を浴びるから、通知役は必要やろ草。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ゴーストタイプはバッグの底で絶対に漏れず、必要な時だけ手元に現れるやつやな、会社の机へ置き忘れた水筒が午後6時に帰宅していたら泣いて喜ぶでw。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイは飲み終わった後の洗う作業まで消えてほしいんやが草 夜11時のシンクで、水筒とフタとパッキンが3方向に散っている光景は普通に呪いやろ。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "パッキンだけ別次元へ飛ばす相棒はそれ以上言うなw 翌朝に冷蔵庫から出てきて、ワイが昨日の自分へ『何をした』と問いかける未来しか見えん草。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "お前らの台所にも、なぜか片方だけ消える部品が最低1個はあるやろ、あれはゴーストタイプの仕業やなくて、ワイらが夜中に適当すぎるだけやで草。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "格闘タイプはフタが固い朝に頼る担当やな、ワイが両手で10秒回しても無反応なのに、相棒が1回うなずくだけで開いたら出勤前の英雄やろw。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "開いた瞬間に勢い余って麦茶を机へ撒くまでが格闘タイプやろ草 床に落ちた50ミリの経験値を見ながら、ワイだけ敗北ポーズを取るんやで。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "飛行タイプは通勤バッグを軽く見せる能力があるやつや、実際の重さは600グラムでも肩だけ『今日は余裕や』と勘違いして、駅の階段で現実を見る草。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "肩が勘違いしたまま階段を上る姿、ワイらの人生そのもので草 500ミリを2本入れたバッグが急に岩タイプになる現象、名前だけは最強やろw。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ドラゴンタイプは容量1リットル級の大食い相棒やな、朝に詰めた飲み物が夜まで残る安心感と、帰宅後の洗い物で魂が半分抜ける重さを両立する草。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "容量が大きいほど洗う時に支配者になるやろw フタ2段にパッキン3枚みたいな装備で現れて、シンクの前に立つワイを10分黙らせる最終形態やん草。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "悪タイプは他人の飲み物を勝手にうまそうに見せるやつやな、同僚のBが冷たいコーヒーを持っているだけで、ワイの麦茶を急にしょんぼりさせるんやで。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "同僚のBのコーヒーを見て羨ましくなるだけで悪属性を付けるな草 ワイらが昼まで飲まずに眺めているから、中身が『飲めや』と曇るだけやろw。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "鋼タイプは駅のホームでバッグが倒れても平然としてそうやな、水筒は無傷で立ち上がるのに、持ち主のワイはスマホ画面を見て膝から崩れるんやが草。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "持ち主のメンタルだけ紙タイプなのは否定できん草 水筒は無傷、スマホはひび割れ、ワイの午後は終了という3段オチを駅で作るなやろw。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "フェアリータイプは飲み口の周りを常にきれいに見せる担当や、バッグの底にパンくずが20個あっても寄せつけず、昼休みのワイを人間へ戻してくれる草。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "パンくずを防ぐだけで人間に戻れるなら、ワイの机には伝説が3体いるやでw レシート、飴の袋、片方だけのイヤホンが共生しているからな草。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "じめんタイプは車のドリンクホルダーにぴったり収まる専門家やな、高速道路でカーブを5回曲がっても倒れず、後部座席の土産箱へ無言で勝つんやで。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "後部座席の土産箱と毛布は毎年世界大会しとるからな草 その横で水筒が無傷なら、帰省という名の冒険を最後まで生き延びた主人公扱いやろw。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "むしタイプは公園のベンチ横で保護色になるやつやな、置いたことを3分で忘れるけど、夜9時に取りに戻った時も冷たさが残っていたら全て許す草。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "見失う機能を褒めるな草 でも置き去りにした相棒が夜まで飲み物を守っていたら、ワイよりちゃんとした大人に見えて自己肯定感が2ポイント減るやろ。",
+      "expression": "angry",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "超能力タイプはワイが飲みたくなる5秒前にフタを緩めるやつやな、片手が荷物でふさがる駅の改札前でも察してくれたら、神扱いするしかない草。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "電車でフタが緩んだまま揺れたら神から罰へ落ちるやろw 超能力は中身を守る方向だけに使え、ワイの白いシャツは毎朝そんな強くないんやで草。",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "水タイプの必殺技は冷たさ維持、炎タイプの必殺技はあったかさ維持、でもワイが一番欲しい技は『洗う気を起こす』やな、成功率1パーでも欲しい草。",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "洗う気を起こす技だけ命中率が低すぎるやろ草 夜10時には『明日のワイがやる』、翌朝7時には『帰宅後のワイがやる』という無限ループへ入るんやで。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "お盆の親戚集合で水筒相棒を出したら、台所から大人が4人寄ってくるやろ、容量を聞く人、フタを回す人、なぜか写真を撮る人で即パーティー完成草。",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "相棒が一度でも鳴いたらさらに終わりやでw 祖母に抱えられ、A叔父に性能を聞かれ、従兄にバッグへ入れられて、持ち主のワイだけ置いていかれる草。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "水タイプなら麦茶を守る顔、氷タイプなら保冷剤の横で寝る顔、炎タイプなら朝のココアでドヤる顔やな、実力より表情で食卓を制圧してほしいんやがw。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "表情で食卓を制圧するな草 でも親戚の長話が始まった時、相棒がフタを閉めて寝たふりをしたら、ワイも同じ顔で逃げる自信が100パーあるやで。",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "毒タイプは飲み残しを忘れた時だけ怒る相棒やな、金曜の夜に放置して月曜朝に発見された中身へ、フタ越しに『開けるな』という顔をしてくれる草。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "それ以上言うな草 月曜朝の水筒は、ワイの記憶と勇気を同時に試す箱やろw 相棒が開ける前から首を横に振っていたら、素直に従うしかないで。",
+      "expression": "angry",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "岩タイプは落としても動じない代わりに、バッグの中でやたら存在感があるやつやな、財布と鍵とイヤホンを押しのけて『ワイが主役や』と居座る草。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "バッグの中で主役を取るな草 でも朝の駅で鍵が見つからず3分焦った時、水筒だけ堂々と出てくるのはあるあるすぎて、ワイもやと言うしかないやで。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "あくまで理想の相棒やから、冷たさも温かさも守って、飲むたび小さくドヤ顔するくらいがええな、ワイが仕事で1個だけ達成した顔の横にいてほしい草。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "仕事の達成が『水筒を洗った』の日でも、相棒が拍手してくれたら救われるやろw 上司のAに褒められなくても、フタが閉まる音だけで勝利にできる草。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "お前らが欲しいのは氷タイプ、格闘タイプ、ゴーストタイプ、それとも親戚の長話を3度だけ冷やす謎タイプか、変な能力を1個だけ付けて答えてくれやw。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイは『洗う気を起こす』能力持ちを推すで、夜11時のワイをシンクへ運べるならタイプ不明でも伝説枠やろ、ただしパッキン失踪だけは許さん草。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回はワイの今日の昼飯を当てるスレw を立てる予定やで、冷蔵庫に残った3個の食材から何が生まれるか、ワイ自身が一番信用してないんやが草。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "昼飯の正体より、昨日の水筒をまだ洗ってない確率が99パーやろw 次回までにパッキンを救出できたら、コメント欄で拍手100回くらい頼むで草。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "お前らならサーモスの相棒を何タイプにして、どんな能力を1個だけ付ける？ コメントで頼むわw 変な案ほどワイが冷たい麦茶を飲みながら笑うで。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "質問ある？シリーズは毎日投稿中で登録1万人目標やから、応援よろしくやでw 登録した瞬間に相棒が鳴くかは知らんけど、鳴いたら親戚へ隠せ草。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "夏の帰省で麦茶を守る相棒が必要なワイ、サーモス歴3年やけど質問ある？w お前らの案が増えるほど、ワイのバッグだけ伝説級に重くなるんやで草。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "保温する",
+      "謎の相棒"
+    ],
+    "hook_caption": "欲しい相棒",
+    "subtitle": "夏の帰省で大活躍",
+    "tagline": "お前ら案出せw"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "ワイ、サーモス歴3年やけど質問ある？w",
+      "selected_hook": "お前ら、親戚の前で鳴いたことある？草",
+      "scores": [
+        {
+          "hook": "お前ら、親戚の前で鳴いたことある？草",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 65
+        },
+        {
+          "hook": "ワイ、サーモス歴3年やけど質問ある？w",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 17,
+            "loop_connect": 5
+          },
+          "total": 57
+        },
+        {
+          "hook": "君ら、全員に触られたサーモスって何やねん！？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        2
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "お前ら、親戚の前で鳴いたことある？草",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ 夏の帰省で一番頼る相棒やんけ草",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "冷たい麦茶を絶対ぬるくせん水タイプやろw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "親戚の長話だけ冷やしてくれる氷タイプも要るやで",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "昼の車内で勝手にスポドリ配る回復タイプ草",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "フタを開けた瞬間だけ鳴くやつ、欲しすぎやろw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "でも親戚の前で鳴いたら全員に触られる運命やで草",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 7,
+          "text": "お前らなら何タイプの相棒にする？ コメントで頼むわw 質問ある？シリーズ毎日投稿中、登録1万人目標や",
+          "tension": 6,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "like",
+      "style_label": "高評価",
+      "original_cta": "お前らなら何タイプの相棒にする？ コメントで頼むわw 質問ある？シリーズ毎日投稿中、登録1万人目標やから応援よろしくやで",
+      "new_cta": "質問ある？シリーズシリーズ、草生えたやつは高評価で教えてくれw"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 27,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 64,
+      "optimized_score": 64,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.91,
+      "issues": [
+        "25%・50%・75%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "たやつは高評価で教えてくれw。…草、最初から伏線だったのかよ",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「話」→「ドン引きする話」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "アンカー形式の使用",
+        "軽いエロ要素"
+      ],
+      "insights_used": 6
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.27,
+      "similar_to": "ちいかわチョコサプ何入ってるあげてけw",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 3,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "ワイ、サーモス歴3年やけど質問ある？w",
+      "enhanced_title": "ワイ、サーモス歴3年やけど質問ある？w😏",
+      "emoji_added": "😏",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "ワイ、サーモス歴3年やけど質問ある？w😏"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 5,
+      "bait_text": "…これ、ワイが悪いんか？コメ欄で判定してくれ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.0
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "laugh",
+        "statement",
+        "statement",
+        "statement",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 2,
+      "interrupts_injected": 2,
+      "variety_score": 0.4
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "この手の良スレ見つけてくるの得意なんよｗ",
+      "position": 3,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['？'](+12)"
+    ]
+  }
+}

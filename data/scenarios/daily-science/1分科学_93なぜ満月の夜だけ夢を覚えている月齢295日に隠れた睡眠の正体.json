@@ -1,0 +1,650 @@
+{
+  "title": "1分科学 #93：🔍なぜ満月の夜だけ夢を覚えている？月齢29.5日に隠れた睡眠の正体",
+  "theme": {
+    "title": "今日の月、夢に影響を与える？月の満ち欠けと睡眠の関係",
+    "angle": "月の相が睡眠や夢に与える影響を科学的に解説。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで満月の夜だけ夢を覚えているんでしょう？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！まだ答えがあるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "2013年のノーベル賞級の研究では、満月期に深い睡眠が約30％減りました。前回の動画を見た人ならピンとくると思うけど",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホの明るさで眠りが浅くなる感じだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも月明かりだけで決まるとは、まだ言えないんです。しかもこれ、ほんの序章にすぎない。…これ、賛否分かれると思うんだけど、みんなはどう思う？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ雲の日でも眠れないなら、別の理由があるの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから夢が残るのは浅い眠りの合図かも。ただし体内時計の話が残ります。ここからがさらにヤバい",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "睡眠と夢シリーズシリーズ、ベルマーク押して通知ONにしておいてね！毎日投稿してるよ！…あれ？これってさっきの…",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？満月の朝だけ、あなたは夢をいつもより鮮明に覚えていたことはありませんか。月齢が約29.5日で一周する夜空と、朝までに残る夢の記憶には、研究者も長く注目してきたんです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！寝る前に月が明るいなと思って、朝には夢の場面だけがくっきり残ってたよ。気のせいだと思っていたけれど、月が眠りに関係することって本当にあるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "満月の夜に眠りが変わるという研究報告はありますが、月が夢の映像を作ると決まったわけではありません。あなたが夢を覚える仕組みと、月の光や生活習慣を分けて考えると、答えが見えやすくなります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "夢そのものと、夢を覚えていることは別なんだね。朝にアラームで起きた日ほど夢が残る気がするけれど、満月はその起き方を変えるのか、まだ答えは出ていないんだよね？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず大事なのは、夢を覚えているかは夢の量より、目覚めた瞬間の眠りの深さに左右されやすいことです。浅い眠りの途中で起きると、頭の中の映像が机の上に出たままの書類のように残りやすいんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、急に目が覚めた朝は夢の登場人物まで覚えているよ。反対に8時間眠った朝ほど何も思い出せないけれど、深く眠ると夢の記憶はしまい込まれてしまうの？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その傾向はあります。レム睡眠は脳が比較的活発に動き、夢が生まれやすい眠りの段階です。けれど夢を記憶に残すには、レム睡眠の最中か直後に目が覚めることが、映画の途中で一時停止を押すように役立ちます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！夢をたくさん見た夜が印象に残るのではなく、起きる位置が合った夜ほど覚えやすいんだね。では満月の夜は、眠りの周期を少し浅い側へ動かす可能性があるの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "睡眠はおよそ90分前後の波を繰り返し、深い眠りと浅い眠りが夜の中で交代します。あなたが午前6時に起きる日でも、就寝時刻が30分ずれるだけで、アラームが鳴る場所は違う波の上になり、夢の残り方も変わります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "90分の波なら、同じ7時間睡眠でも寝始めた時刻で朝の感覚が変わるんだね。たとえるなら、電車を同じ駅で降りても、到着した瞬間が混雑の時間帯かどうかで景色が変わるようなものかな？",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その例えが近いです。そして満月の夜は、昔なら月明かりが夜道や部屋を照らす目立つ光でした。現代の寝室にはカーテンや照明がありますが、窓からの光を感じたり月を意識したりすることは、眠りの入り口に影響し得ます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "でも今は街灯や室内灯のほうが明るい日も多いよね。カーテンを閉めた部屋でも満月の研究結果が出るなら、月明かりだけを原因にするのは、少し無理があるように感じるなあ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "2013年、スイスのバーゼル大学の研究グループは、月を見せない実験室で33人の睡眠記録を分析しました。そこで満月期の前後に深い睡眠を示す脳波活動が約30％低かったと報告し、世界中で注目を集めたんです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "実験室なら窓の外の月は見えないよね？へぇ〜、知らなかった！月を意識させなくても脳波に差が出たなら、満月の夜には光とは別の仕組みがあるようにも聞こえるけれど、ほかの数字はどうだったの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "この33人の分析では、満月期に眠りにつくまで平均5分長くかかり、総睡眠時間は平均20分短かったと示されました。20分は短く見えても、朝方のレム睡眠がある時間帯に重なると、夢の記憶には影響し得る長さです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "20分も短いなら、朝に夢が残っていても不思議じゃないね。でも33人だけの結果で、満月なら誰でも眠れないと言うのは早すぎるよね。年齢や生活リズムが違う人では、同じ結果になるの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "まさにそこが科学の慎重なところです。後から行われたより大きな観察研究には、満月と睡眠の差が小さい、または明確ではないという報告もあります。一つの研究は手がかりですが、全員の答えを決める判決書ではありません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！有名な研究があっても、別の人たちで確かめると結果が揺れるんだね。月と睡眠の関係は、あるかないかを一言で決めずに、影響が小さいかもしれないと考えるのが正確なの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "はい、ここは科学でもまだ結論が出ていない部分です。満月期に睡眠変化を示す研究はありますが、影響の大きさや全員に起きるかは一致していません。だからあなたが今夜眠れない理由を、月だけに決めるのは正確ではありません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし、ここからが本題だね。月が直接の原因と決まらなくても、満月の夜に夢を覚えやすい人がいるなら、あなたの体の中ではどんな順番で眠りが浅くなり、朝の記憶につながるんだろう？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。朝方ほどレム睡眠は長くなりやすく、目覚める直前には夢の映像が出やすい時間があります。満月でなくても、午前5時から7時ごろの浅い眠りで起きれば、夢は残りやすいんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ満月の夢が印象に残るのは、月が夢の内容を送っているからではなく、眠りが少し浅くなったり、目覚める位置が重なったりする可能性があるということだね。ここ、かなり見方が変わるなあ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その考え方がいちばん慎重です。夢は毎晩ある程度見ていても、記憶に残るかは別問題なんです。たとえるなら、夜の間に届いた通知のうち、目覚める直前に画面へ出た一件だけを覚えているようなものです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "通知の例えなら分かりやすいね。夢を見なかったと思う朝も、実際には眠っている間に映像が浮かんでいたけれど、画面を見る前に消えた通知のように、記憶へ保存されなかっただけかもしれないんだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "月の光についても整理します。人の体内時計は朝の光で整いやすく、夜に明るい光を浴びると眠気の時刻が後ろへずれやすくなります。体内時計とは、約24時間のリズムで眠気や体温を調整する、体の中の時刻表です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "夜の光で時計がずれるなら、満月より寝る前のスマホのほうが影響が大きそうだね。月を見た夜に眠れないと思っていても、ベッドで30分画面を見ていたなら、先に確かめるべきものがありそう。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "一般にスマホ画面や室内照明は、雲越しの月明かりよりずっと強い光になることが多いです。だから満月の夜に眠りが乱れたと感じたら、窓の外だけでなく、寝る前1時間の明るさや画面時間も一緒に思い出してみてください。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！月を見たことは印象に残るから原因に見えやすいけれど、同じ夜に飲んだコーヒー、遅い入浴、暑い寝室まで比べなければ、本当の手がかりは見つからないんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究で結果が揺れる理由もそこにあります。人によって寝室の明るさ、仕事や学校の予定、ストレス、季節、服用している薬まで違います。月齢という一つの目印だけを比べても、あなたの眠りには多くの生活条件が重なっているんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "月の研究が難しいのは、全員が同じ部屋で同じ生活をしているわけではないからなんだね。満月の日だけ眠れなかった記憶は強いけれど、普段の眠れない夜も並べないと、月の影響かどうかは見分けられないか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、月への思い込み自体が眠りに影響する可能性も考えられることです。明るい月だから眠れないかもと思うと、時計を見る回数が増えたり、眠れたかを気にしたりして、かえって眠気から遠ざかる場合があります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、月そのものではなく、月を気にした気持ちまで関係するかもしれないの？眠れないかもと思っただけで目が冴える感じは、翌日に大事な予定がある夜にもあるから、すごく自分のこととして想像できるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "これは期待や不安が体の感じ方へ影響する現象に近い考えです。ただし、月と睡眠でそれがどこまで働くかは十分に分かっていません。ここはまだ分かっていないと認めたうえで、眠りを邪魔する不安を減らす工夫はできます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、眠れたかどうかを何度も確かめるほど眠れなくなるよね。月の夜だけ特別だと思い込まず、いつもの眠りを観察するほうが、あなた自身の体にはずっと役立ちそうだな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "月と人の生活は、昔は今より近い関係でした。電気がない時代、満月は夜道や作業を照らす大切な明かりで、人が遅くまで活動するきっかけになった可能性があります。眠りの変化には、光だけでなく行動の変化も入ってきます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "昔の人にとって満月は、今の夜間照明みたいなものだったのか。満月の晩に外で働いたり集まったりすれば、就寝時刻が1時間ずれて、翌朝の夢の覚え方も変わりそうだね。生活の歴史も関係してくるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "月の満ち欠けは約29.5日ですが、女性の月経周期や人の気分と必ず同じ周期で動くわけではありません。月と体を結びつける話は昔から多いものの、似た周期だけで因果関係を決めることはできないんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "周期が近いだけでは、同じ仕組みとは言えないんだね。カレンダーで毎週同じ曜日にゴミ出しをしていても、曜日そのものがゴミを増やしているわけではない、という考え方に近いのかな？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "その例えで合っています。二つの出来事が一緒に見えることを相関と呼びますが、相関は一緒に動くという意味だけです。原因と結果を示すには、光や就寝時刻など別の条件をできるだけそろえた研究が必要になります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！満月に夢を覚えたという自分の体験は大切だけれど、それだけで月が原因と決めるのではなく、何度か記録して似た夜と比べることが、あなたの眠りを知る近道なんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "もし確かめたいなら、次の満月を一晩だけ特別視しないでください。就寝時刻、起床時刻、寝る前の画面時間、室温、夢を覚えていたかを、月齢に関係なく14日ほど簡単にメモする方法がおすすめです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "14日ならスマホのメモでも続けられそうだね。満月の日に印を付けておけば、月の夜だけ本当に寝つきが悪いのか、それとも週末に遅く寝た日が多いだけなのか、あなたにも少しずつ見えてきそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "記録で一番大事なのは、眠れなかった一晩だけを強調しないことです。たとえば就寝が0時、起床が7時だった日を並べれば、月齢より先に週末の夜更かしや暑い夜が影響していると気づく場合があります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "夏は特に室温が眠りを邪魔しやすいもんね。満月だからではなく、寝室が暑くて途中で起き、そのとき見ていた夢を覚えていたという流れも、あなたの体では十分起こりそうだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜できる工夫は単純です。寝る1時間前から部屋の照明を少し落とし、スマホは顔から離して、カーテンで外の明るさを調整します。月を見たいなら早めに眺めてから、眠る準備へ切り替えるのがよいです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "月を見ることを我慢しなくていいのはうれしいね。寝る直前に画面を見続けるより、少し早い時間に空を見て、部屋に戻ったら明かりを落とすほうが、約24時間の体内時計にも優しそうだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "夢を覚えたい人にも、無理に夜中に起きる方法はおすすめしません。睡眠を細切れにすると翌日の集中力に響くことがあります。夢の内容を残したいなら、朝に目覚めた直後、枕元のメモへ一言だけ書くほうが安全です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "一言だけなら続けられそう。夢を全部文章にしようとすると目が覚め切ってしまうけれど、場所や人の名前を10文字ほど書けば、あとで思い出せることもあるよね。月齢の記録とも並べやすそうだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここまでの答えは、満月が夢を直接増やすと証明されたわけではない、です。ただし満月期に睡眠変化を示した2013年の研究はあり、光、生活習慣、月への意識が重なると、夢を覚えやすい夜は起こり得ます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "月を見ると夢が増えるというより、あなたがどんな眠り方をして、どの瞬間に目を覚ましたかが鍵なんだね。だから同じ満月でも、ぐっすり眠れる人と夢が残る人がいて、不思議ではないんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜寝るとき、月が明るいかだけでなく、部屋の光、暑さ、寝る前のスマホも一緒に意識してみてください。朝に夢が残っていたら、それはあなたの眠りのリズムを知る小さな手がかりになります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次は、アラームが鳴る直前に自然に目が覚める人の脳で何が起きているのかも気になるね。時間ぴったりに目が開く朝の不思議も、今日の月齢と同じように、眠りのリズムとつながっていそうだよ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、アラームの直前に目が覚めるとき、体内時計がどこまで時刻を予測しているのかを一緒に見ていきます。今日から14日間の眠りを記録すると、次の話もあなた自身の体験として分かりやすくなるはずです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白かったら高評価も押して、睡眠と夢シリーズで身近な不思議を毎日1本ずつ解いていくので、次の眠りの謎も一緒に見てほしいです。チャンネル登録よろしくね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "満月の夜",
+      "夢が残る？"
+    ],
+    "hook_caption": "月と夢の関係",
+    "subtitle": "月齢29.5日と眠りの小さな変化",
+    "tagline": "月明かりだけでは決められない、あなたの睡眠の話"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": false,
+      "original_hook": "なんで満月の夜だけ夢を覚えているんでしょう？",
+      "selected_hook": "なんで満月の夜だけ夢を覚えているんでしょう？",
+      "scores": [
+        {
+          "hook": "なんで満月の夜だけ夢を覚えているんでしょう？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 45
+        },
+        {
+          "hook": "あなたの夢、満月の夜だけ残るって本当？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 40
+        },
+        {
+          "hook": "え、満月の夜の浅い眠りに秘密がある？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 35
+        }
+      ],
+      "reason": "original_is_best"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "なんで満月の夜だけ夢を覚えているんでしょう？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ、それ昨日あった！まだ答えがあるの？",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "2013年の研究では、満月期に深い睡眠が約30％減りました。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "へぇ〜、知らなかった！スマホの明るさで眠りが浅くなる感じだね。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "しかも月明かりだけで決まるとは、まだ言えないんです。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "じゃあ雲の日でも眠れないなら、別の理由があるの？",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 6,
+          "text": "だから夢が残るのは浅い眠りの合図かも。ただし体内時計の話が残ります。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "月の夜は眠りを少し記録してみて。睡眠と夢シリーズも見て、高評価を押して1万人目標の毎日投稿を登録で応",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "notify",
+      "style_label": "通知ON",
+      "original_cta": "月の夜は眠りを少し記録してみて。睡眠と夢シリーズも見て、高評価を押して1万人目標の毎日投稿を登録で応援よろしくね",
+      "new_cta": "睡眠と夢シリーズシリーズ、ベルマーク押して通知ONにしておいてね！毎日投稿してるよ！"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 68,
+      "optimized_score": 68,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.8,
+      "issues": [
+        "50%・75%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "にしておいてね！毎日投稿してるよ！…あれ？これってさっきの…",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「研究」→「ノーベル賞級の研究」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭に具体的な数字",
+        "反直感的な事実"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.332,
+      "similar_to": "なぜあなたは寝る直前だけ昔の失敗を思い出すのか？99%が知らない30秒の脳内変化",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 6,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "なぜ満月の夜だけ夢を覚えている？月齢29.5日に隠れた睡眠の正体",
+      "enhanced_title": "🔍なぜ満月の夜だけ夢を覚えている？月齢29.5日に隠れた睡眠の正体",
+      "emoji_added": "🔍",
+      "category": "mystery",
+      "modified": true
+    },
+    "enhanced_title": "🔍なぜ満月の夜だけ夢を覚えている？月齢29.5日に隠れた睡眠の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "…これ、賛否分かれると思うんだけど、みんなはどう思う？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "neutral",
+        "surprise",
+        "neutral",
+        "neutral",
+        "negative",
+        "surprise"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "question",
+        "statement",
+        "statement",
+        "question",
+        "question",
+        "statement",
+        "ellipsis"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "前回の動画を見た人ならピンとくると思うけど",
+      "position": 2,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 3,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  }
+}

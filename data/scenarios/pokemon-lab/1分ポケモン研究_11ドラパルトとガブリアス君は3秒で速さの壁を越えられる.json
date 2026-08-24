@@ -1,0 +1,644 @@
+{
+  "title": "1分ポケモン研究 #11：🔥ドラパルトとガブリアス、君は3秒で速さの壁を越えられる？",
+  "theme": {
+    "title": "ドラパルトとガブリアス、なぜ速さが別格と言われるのか",
+    "angle": "素早さ種族値と実数値の壁を具体的に示す"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "え、ガブリアスの速さには闇子供に見せられない設定がある？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 種族値40差って、実戦でそんな異常わるの!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "素早さ種族値は速さの土台で、ガブリアス102、ドラパルト142なんだよ！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "142!? 伝説級の速さじゃん、いや強すぎでしょ！…落ち着いて聞いてほしいんだけど。ここまで掘り下げてるポケモン解説、他にある？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも最速実数値は169対213、同じレベル50でも44も開く！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "でもトラウマ図鑑をよく見ると、もっと怖いことが書いてあって…対戦だとこれが刺さるね、上から技を出せる差が大きすぎる！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "答えは速さの壁！ でもドラパルトにも抜けない相手がいるんだよ。この設定知ってた人、正直にコメントしてみて。…ここで冷静に考えてみると",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "速さ比べの続きは種族値のウソホントシリーズにあるよ！ 1万人目標で毎日投稿中、応援よろしくね！…待って、闇設定に戻って",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これ知ってた？ あなたがガブリアスなら先手だと思った相手に、ドラパルトは最速で実数値44も先を走るんだよ！\n同じレベル50、同じ最速育成でも169対213。この差、対戦の1ターン目を丸ごとひっくり返す！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ ガブリアスって素早さ102で、速いポケモンの代表格だったじゃん！\nドラパルト142との種族値40差が、実戦では44差になるって、数字の伸び方まで別格なの!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "結論のヒントは、102が強者を抜く数字で、142は強者の集団そのものを追い越す数字ってこと！\n今日は最速169と213の壁を使って、なぜこの2匹の速さ評価が分かれるか暴いていくぞ！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "種族値はポケモンごとの能力の土台で、素早さ種族値は行動順を決める基礎ポイントだよ！\nテストの偏差値みたいに、数値が1でも上なら先に動ける世界だから、40差は完全に別クラスなんだ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "先に技を出せるだけなら、そんなに大げさじゃないと思ってたけど違うの？\n相手のHPを削る、ひるませる、交代させるまで、全部先手側が先に決められるならヤバいじゃん！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そう！ 先手はダメージを先に入れる権利で、残りHPがゼロなら相手は技を出せないんだよ！\n例えばドラパルトが213で先に攻撃すれば、ガブリアス169は反撃前に倒れる可能性まで生まれる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ！ じゃあガブリアス102は、ドラパルト142の前だと遅いポケモン扱いになるの？\n歴代で暴れてきた600族が、速さだけで置いていかれるのは悔しすぎるぞ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そこが大事！ ガブリアス102は遅くない、むしろ最速実数値169で100族の167を確実に抜ける超優秀ライン！\nただドラパルト142が異常に高すぎて、同じ速攻エースでも見えている相手の範囲が違うんだよ！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "最速とは、素早さが上がる性格と努力値252を使った育成のことだよ！\n努力値は育て方で足せる追加ポイントで、レベル50なら最速ガブリアス169、ドラパルト213まで届く！",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "努力値252って聞くと難しそうだけど、速さを限界まで伸ばした同条件の比較なんだね！\n同じルールで169対213なら、育て方の差じゃなく元の設計図で44開いてるってことか！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "正解！ 44差は、同速なら50パーセントで先手が決まる運勝負すら発生しない大差なんだよ！\n1差でも順番が確定するゲームで44差、学校の短距離走ならスタート位置が別レーンじゃ足りない！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "実はここ、数字を見た瞬間に最大の驚きがある！ ドラパルト213は最速エースバーン188より25上なんだ！\nガブリアスだけを抜くのではなく、素早さが高いとされるアタッカーの列をまとめて飛び越えている！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "188のエースバーンまで25差で抜くの!? ドラパルトが先に動ける相手、想像よりずっと広いじゃん！\n速いポケモンを出した安心感が、対面した瞬間に消える理由が分かってきたぞ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも最速インテレオン189、最速オンバーン192も、ドラパルト213の前では先手を取れない！\n192から213までの21差は、ちょっとした育成の工夫では埋めにくい、はっきりした速度帯の壁なんだ！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、192でも届かないの!? 100台後半なら全部速いと思っていたのに、213は別のゲームをしてる！\nここまで聞いたら、ドラパルトが対戦で警戒される理由は速さだけでも十分すぎるね！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "でもまだ安心するな！ この話、最後にはドラパルト213すら素で抜く222のポケモンが出てくる！\n速さの頂点だと思った場所の9上に別の数字があるから、まずはガブリアスの102を深掘りしよう！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ガブリアスは第4世代で登場し、攻撃130と素早さ102を同時に持った種族値合計600のポケモン！\n600は能力合計の目安で、伝説ではないのに高い合計値を持つ通称600族の一員なんだよ！",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "攻撃130で169から先に殴れるなら、ガブリアスが長く強かったのも納得だ！\nでも102って100より2高いだけだよね、その2が歴史に残るほど重要だった理由は何？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "素早さ100の最速実数値は167、ガブリアス102の最速実数値は169！\nこの2差で100族を確実に上から叩けるから、同速50パーセントに頼らず先手を取りやすかったんだよ！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "たった2で、コイン投げだった勝負が確定先手へ変わるのか！ それは数字2じゃなく、ターン1個分の価値だね！\n初代からずっと速さ100が目立つ理由も、167という実数値で見ると急にリアルになる！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そうそう、ガブリアス102は100族を越えるための絶妙な調整として対戦で語られてきた！\nさらに地面・ドラゴンの攻撃範囲を持つから、先手を取った1ターンで相手の交代先まで悩ませられる！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "タイプ相性は技が相手に与えるダメージの得意不得意のことだよ！\nガブリアスは地面技で電気タイプに強く、ドラゴン技で広い範囲へ圧をかけられるから169の価値が増すんだ！",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "速さ102だけではなく、先に動いた後の攻撃130と技範囲までセットで強いんだね！\nガブリアスは速さランキングだけじゃ測れない、先手で盤面を壊すエースだったわけか！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "一方ドラパルトも種族値合計600だけど、素早さ142へ大きく配った設計が最大の特徴！\n攻撃120、特攻100もあるから、213で先に動いて物理か特殊かを選べるのが本当にずるいんだよ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じ600でもガブリアスは攻撃130寄り、ドラパルトは素早さ142寄りって役割が分かれるんだ！\nポケモンカードのデッキみたいに、同じ合計パワーでも速攻型と万能型で勝ち方が変わる感じだね！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "レベル50で性格補正なし、努力値252だけ振った場合も見て！ ガブリアス154、ドラパルト194になる！\n最速にしない普通の育成でも40差が残るから、ドラパルトは火力へ努力値を回す余裕まで作りやすい！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "194でもガブリアス最速169を超えてるの!? 最速にしないドラパルトが、最速ガブリアスより先って衝撃だ！\nこれならドラパルトは素早さを少し削っても、まだ速い相手を抜ける場面が多そう！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その発想が対戦で刺さる！ 例えば194付近を確保し、残りを攻撃や特攻へ振れば先手と火力を両立できる！\n相手は213を警戒していても、実は別の配分で高火力になっている可能性があり、読み合いが難しくなるんだ！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ガブリアスは逆に、169で抜きたい相手を意識して最速にする価値が高い！\nただしドラパルト213だけは同じ最速でも届かないから、火力、耐久、道具で対策する発想が必要になる！",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "速さで負けるなら、別の方法で逆転するしかないんだね！ そこで聞くこだわりスカーフって、具体的に何倍速くなるの？\nガブリアス169がドラパルト213を抜くには、どれくらいの上乗せが必要なんだろう？",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "こだわりスカーフは素早さを1.5倍にする持ち物だよ、代わりに選んだ技が固定される！\n最速ガブリアス169なら253まで上がり、ドラパルト213を40上回って今度は確実に先手を取れる！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "169が253!? 一気に84増えるなら、ドラパルトの44差をまとめてひっくり返せるじゃん！\nでも技が1つに固定されるなら、相手に交代されたときの読み合いはかなり難しくなりそうだ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そう！ スカーフは速さを買う代わりに、技を自由に変えられないリスクを背負う道具なんだよ！\nドラパルトは素の213があるから道具を自由に選びやすく、ここでも種族値142の貯金が効いてくる！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "歴史を並べると、ガブリアス102は100族167を越えて強者になった数字、ドラパルト142はその強者を置き去りにした数字！\n同じ速攻エースでも、102は先手を狙う側、142は先手を前提に組み立てる側へ回れるんだ！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "102と142の違いって、速いかもっと速いかじゃなく、戦略のスタート地点が違うんだね！\nガブリアスは相手を読む速さ、ドラパルトは相手に読ませる前に動く速さって感じがするぞ！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ドラパルトの公式図鑑分類はステルスポケモンで、透明になって仲間のドラメシヤを飛ばして戦う描写がある！\n素早さ142の理由を公式が明言したわけではないけど、先手のイメージと設定がぴったり重なるのは面白い！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "消えてからドラメシヤを飛ばす公式描写、213で先に動く姿を想像するとめちゃくちゃ納得感ある！\nでも設定の印象と、実際に142へ設定された理由は別に考えないといけないんだよね？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その通り！ ファンの間ではこう言われている、透明化やゴーストらしい身軽さを142で表したのでは、という説がある！\nただしこれはファンの考察で、公式に確定している事実は図鑑の描写とゲーム内の種族値142だよ！",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式設定と考察を分けても、ドラパルトが素早さ142で最速213になる事実は揺らがない！\n数字そのものが強さの根拠だからこそ、想像は想像として楽しむとポケモン研究がもっと面白くなるんだ！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "了解！ じゃあ数字の世界へ戻ろう、さっき言ってたドラパルト213を素で抜く222の正体が気になる！\n142でも別格なのに、その上が9もあるって、速さの頂上はどうなってるの!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その一例がレジエレキ！ 素早さ種族値200で、最速レベル50の実数値は222になり、ドラパルト213を9上回る！\n9差でも先手は確定しやすいから、ドラパルトが万能の速さではないと数字で分かるんだよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "222対213、差は9でも順番は絶対に近いほうが先じゃないんだよね！\nガブリアス169から見たら53差、ドラパルトから見ても9差で負けるって、速度帯が細かすぎるぞ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここが対戦のおもしろさ！ 素早さ1差にも意味があり、9差なら育成の少しのズレでは届かない壁になる！\nレジエレキ222、ドラパルト213、ガブリアス169と並べるだけで、速さの階段が目で見えてくる！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし222が最強で終わりでもない！ 追い風という技を使えば、4ターンだけ味方側の素早さが2倍になる！\n最速ガブリアス169でも追い風中は338相当になり、レジエレキ222すら順番では追い越せるんだよ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "338!? ガブリアスがドラパルトもレジエレキも抜けるなら、チームで速さを作る意味が分かる！\n種族値102が弱いわけじゃなく、味方の技や道具で何段も伸びる土台になるんだね！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "追い風は4ターンしか続かないから、いつ使うかが勝負！ 速さを2倍にしても、残りターンを無駄にすれば終わる！\nドラパルトは素の213でその準備が要らない場面が多く、初手から圧をかけられる点が大きな違いだ！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "初心者向けの見方は簡単！ 相手より先に動きたいなら、自分の実数値と相手の目安を1つだけ比べる！\nガブリアスなら169、ドラパルトなら213を覚えるだけで、対面の危険度がかなり読めるようになる！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "169と213、まずこの2つを覚えればいいのか！ 数字を暗記するというより、速さの壁の高さを知る感じだね！\nドラパルトを見たら213かも、ガブリアスなら169を狙えるかもって考えれば、技選びも変わりそう！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そう！ ガブリアスは169で100族167を越える歴史的な強さ、ドラパルトは213で高速アタッカーを越える現代的な強さ！\nどちらも別格だけど、別格の意味が同じではない。この答えが102と142のいちばん熱いところなんだ！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ガブリアスは速さと攻撃130を両立する万能エース、ドラパルトは142から先手を奪う高速エース！\n44差、253、338まで見たら、速さは単なる順位じゃなく戦術そのものだって分かったぞ！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回は素早さ100の最速実数値167を境に、なぜガブリアス102が長く対戦の基準になったか研究するよ！\n100、102、110、142の数字を並べると、ポケモン対戦の速さ革命がもっと見えてくるはず！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "面白かったら高評価とチャンネル登録で研究所を応援して！ 1万人目標で毎日ポケモンのえ、マジで？を届けてる！\n次に遊ぶとき、ドラパルト213とガブリアス169を見たら、ちょっと見方が変わるはず！",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "速さの壁",
+      "数字が壊れる"
+    ],
+    "hook_caption": "別格の速さ",
+    "subtitle": "素早さ種族値と実数値の差",
+    "tagline": "102と142、その40が対戦を変える"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "なんでドラパルトだけ、ガブリアスより先に動けるの？",
+      "selected_hook": "え、ガブリアスの速さには闇設定がある？",
+      "scores": [
+        {
+          "hook": "え、ガブリアスの速さには闇設定がある？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 58
+        },
+        {
+          "hook": "君は3秒で速さのウソに気づける？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 50
+        },
+        {
+          "hook": "なんでドラパルトだけ、ガブリアスより先に動けるの？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 45
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        5
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "え、ガブリアスの速さには闇設定がある？",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ待って！ 種族値40差って、実戦でそんな変わるの!?",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "素早さ種族値は速さの土台で、ガブリアス102、ドラパルト142なんだよ！",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "142!? 伝説級の速さじゃん、いや強すぎでしょ！",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "しかも最速実数値は169対213、同じレベル50でも44も開く！",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "対戦だとこれが刺さるね、上から技を出せる差が大きすぎる！",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "答えは速さの壁！ でもドラパルトにも抜けない相手がいるんだよ。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "速さ比べの続きは種族値のウソホントシリーズにあるよ！ 1万人目標で毎日投稿中、応援よろしくね！",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "でも図鑑をよく見ると、もっと怖いことが書いてあって…対戦だとこれが刺さるね、上か",
+          "reason": "1行54字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 26,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 6,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 66,
+      "optimized_score": 66,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.2,
+      "issues": [
+        "25%・50%・75%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "人目標で毎日投稿中、応援よろしくね！…待って、闇設定に戻って",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.5
+    },
+    "power_word": {
+      "amplified": 3,
+      "changes": [
+        "「設定」→「子供に見せられない設定」",
+        "「変」→「異常」",
+        "「図鑑」→「トラウマ図鑑」"
+      ],
+      "lines_modified": 3
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.332,
+      "similar_to": "カイオーガとグラードン、天候を2回張ったらどっちが勝つ？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 2,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "ドラパルトとガブリアス、君は3秒で速さの壁を越えられる？",
+      "enhanced_title": "🔥ドラパルトとガブリアス、君は3秒で速さの壁を越えられる？",
+      "emoji_added": "🔥",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🔥ドラパルトとガブリアス、君は3秒で速さの壁を越えられる？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 6,
+      "bait_text": "この設定知ってた人、正直にコメントしてみて"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "negative",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise"
+      ],
+      "streaks_found": 2,
+      "breakers_injected": 2,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "question",
+        "exclaim",
+        "statement",
+        "exclaim",
+        "exclaim",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "ここまで掘り下げてるポケモン解説、他にある？",
+      "position": 3,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 5,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 76,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['？'](+12)",
+      "二人称['君'](+6)"
+    ]
+  }
+}

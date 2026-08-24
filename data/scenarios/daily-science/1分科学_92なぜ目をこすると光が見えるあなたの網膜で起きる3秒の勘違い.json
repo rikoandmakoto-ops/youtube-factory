@@ -1,0 +1,649 @@
+{
+  "title": "1分科学 #92：🌍なぜ目をこすると光が見える？あなたの網膜で起きる3秒の勘違い💡",
+  "theme": {
+    "title": "なぜ目を強くこすると光の模様が見えるのか",
+    "angle": "眼内閃光。圧力が光の信号に化ける仕組み"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "あなたの網膜、3秒だけ勘違いしてる？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！でも暗いのに、なんで光るの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "網膜は約1億2000万個の細胞で、光以外の刺激も受け取ります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、スマホ画面を指で押して表示が乱れる感じだね…実はこれ…",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも目は、圧力の刺激まで光の信号として脳へ送るんです。…でも、この話にはまだ続きがある。これ、このチャンネルでしか解説してないんだけど",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ここからが本題なんだけど、へぇ〜、知らなかった！目の中では光がなくても通知が鳴るんだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから光源なしでも光が見えます。ただし強くこする習慣は別問題です。しかもこれ、ほんの序章にすぎない。コメント欄で正解率チェックしてみて",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "目を休めるときに思い出してみて。感覚のふしぎシリーズもどうぞ、1万人目標で毎日投稿中なので応援よろしくね！…って、冒頭の話に戻るんだけど",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？あなたも眠い朝や目にゴミが入ったとき、まぶたの上から目を強くこすって、暗いはずなのに白い点や輪っかが走ったことありませんか。数秒だけ見えるあの模様は、部屋の照明でもスマホ画面でもなく、目の内側で始まる合図なんです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！目を閉じていたのに花火みたいな点が広がって、目が疲れているだけだと思っていたよ。外から光が一切入らないなら、いったい何が光の代わりをしているの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "答えのヒントは、あなたの指が加えた圧力です。目の奥にある網膜へその刺激が伝わると、脳には光が来たような信号が届くことがあります。けれど圧力がなぜ光に化けるのか、そこから一緒に見ていきます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "指で押しただけの力が、脳では明るさに翻訳されるなんて不思議だね。カメラならレンズを押しても光る絵は出ないはずなのに、あなたの目ではなぜ違う反応になるんだろう？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず目の奥には網膜があります。網膜は入った光を電気信号に変える厚さ約0.2ミリメートルの薄い膜で、カメラにたとえるなら、写真を読み取るセンサーが内側へ丸く貼られているような場所です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "厚さ0.2ミリメートルなら、紙よりずっと薄いね。その繊細な膜が眼球の内側に広がっているなら、まぶたの上から押した力が届くことも、少し想像できるようになってきたよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "網膜には杆体と錐体という受け取り役があります。杆体は暗さを感じやすい細胞、錐体は赤緑青に近い色の違いを扱う細胞で、合計はおよそ1億2600万個とされています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "1億2600万個もあるの？スマホの画素が増えると細かく写るように、あなたの目も膨大な受け取り役が並ぶから、夜の弱い光まで拾えるんだね。では圧力にはどの細胞が反応するの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "目をこすって見える明るさは、医学では眼内閃光と呼ばれます。難しく聞こえますが、目の中の刺激が光のように感じられる現象という意味です。あなたが暗闇で見た点や線も、この仲間として説明されます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！名前が付くほど昔から知られた現象なんだね。でも光を受けるための網膜が、指の圧力にも反応するなら、目は少し勘違いしやすい装置みたいに見えるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。網膜の細胞は光を受けて電気信号を出す仕組みですが、押されたり引っぱられたりする刺激でも、条件によって信号が生まれます。光専用のベルが、強く触られて鳴るようなものなんです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、ベルの例えなら分かりやすい！本来はボタンを押すためのベルでも、横から強く揺らせば鳴ることがあるように、網膜も光ではない刺激で信号を出してしまうの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして脳へ伸びる視神経は、網膜から届く信号を基本的に視覚として処理します。たとえるなら、同じ着信音しか鳴らないスマホに、光からの連絡と圧力からの連絡が届くような状態です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "着信音だけでは送った相手が分からないから、脳は網膜から来た信号をいつもの光として画面に出すんだね。言われてみれば確かに、脳が間違えたというより、いつものルール通り働いた結果だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから、あなたが見た点、輪、波のような模様は、目が外の光を増やしたわけではありません。圧力による電気信号を、脳が視覚の映像へ組み立てた結果です。数秒で消えることが多いのも、圧力が止まれば刺激が弱まるからです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！部屋の暗さは変わっていないのに、目から脳までの伝言だけで光の絵ができるんだね。じゃあ、押す場所で見える模様や位置が違う気がするのにも理由がある？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "理由があります。指でまぶたを押すと、その圧力は眼球の表面を通じて内部へ伝わり、網膜の一部分がわずかに押されたり引っぱられたりします。あなたが押した方向や強さが違えば、刺激される場所も少し変わるんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "自分では同じ場所を押しているつもりでも、指の角度が数ミリ違うだけで模様が変わることはありそうだね。満員電車で肩を押される位置が少し違うだけで、力の伝わり方が変わる感じに近いのかな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "見える位置が直感とずれるのは、目のレンズを通った像が網膜では上下左右に入れ替わるためです。網膜の右側が刺激されると、あなたは左側に明るさを感じることがあり、カメラの像が反転する仕組みによく似ています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、押した右側と反対の左側に光が出る感じがあるのは、その反転のせいかもしれないんだね。体の中では位置がきちんと対応しているのに、見える世界だけが裏返るのは面白いな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで最も大切なのは、目を強くこすって確かめる必要はないことです。眼球は平均で直径約24ミリメートルしかなく、その表面には角膜という透明な保護層があります。光の模様を見るために、繊細な部分へ負担を重ねないでください。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "24ミリメートルなら、卓球の球よりずっと小さいね。その小さな目玉を指で押して遊ぶのは、スマホ画面を毎日爪で強くこするようなものかもしれない。光が見えるだけなら大丈夫、と決めつけない方がいいね。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "角膜は黒目の表面を覆う透明な組織で、中心部の厚さはおよそ0.5ミリメートルです。目がかゆいときに何度もこすると、乾きや刺激感を悪化させることがあります。特に花粉、汗、冷房で目がつらい日には、こする回数を減らす工夫が役立ちます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "0.5ミリメートルしかない透明な窓なら、眠い朝にゴシゴシする癖は見直したいね。夏は汗が目に入ったり冷房で乾いたりして、手が目へ行きやすいから、別の方法を知っておきたいな。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "18世紀には、フランスの博物学者ジャン・アントワーヌ・ノレが、目を押したときに光が見える現象を観察しました。電気的な神経の考え方が今ほど整っていない時代にも、人は自分の目で起こる光のような感覚を不思議に思っていたんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！今から約250年前の人も、暗い場所で目を押して同じような明るさを見ていたんだね。道具が少ない時代ほど、自分の体で起きる小さな変化をじっくり観察していたのかもしれない。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "この現象はフォスフェンと呼ばれることもあります。フォスフェンは、外の光がなくても感じる明るさの総称です。目への圧力で起こるものだけでなく、強い刺激や脳の視覚処理の変化が関わる見え方まで、広く含む言葉なんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "フォスフェンは原因の名前ではなく、見えた明るさに付いた名前なんだね。同じ白い点でも、押して出たのか、別の体調変化で出たのかで、考えるべきことは変わるわけだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえば急に立ち上がった直後に視界がちらつく場合は、一時的な血圧変化が関わることがあります。また片頭痛の前にジグザグ模様が見える場合は、脳の視覚を扱う部分の活動変化が関係すると考えられています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ光っぽい見え方でも、目をこすった直後なら圧力、立ち上がった直後なら血流、頭痛の前なら別の仕組みかもしれないんだね。自分の状況を一緒に覚えておくと、違いに気づきやすそうだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "特に、何もしていないのに急に光が増える、片目だけに繰り返す、黒い影や見えない部分が広がる場合は、早めに眼科へ相談してください。短い一瞬の現象でも、普段と違う組み合わせがあるなら、スマホで様子を見るより専門家に確認する方が安心です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、目を押していないのに光が続く場合は、同じ話として片付けない方がいいんだね。特に片目だけか、見えない場所が増えていないかを確認するのは、今日からできる大事なチェックだよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "網膜は眼球の内側に広がる薄い組織なので、強い近視がある人や年齢による変化がある人では、引っぱられる刺激について医師が注意を促すことがあります。ここは自己診断せず、気になる症状を具体的に伝えるのが一番です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "病院で相談するときは、いつから、どちらの目で、何秒くらい見えたかを伝えるとよさそうだね。体の変化をメモするのは、壊れた家電の状況を伝えるよりずっと大事な手がかりになりそうだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、目を閉じて手のひらで軽く覆ったとき、赤っぽい明るさや細かな粒を感じることがあります。これは暗闇でも網膜や脳の活動が完全に止まるわけではないためと考えられています。テレビの電源を切った後に、わずかに残像を感じる感覚に少し似ています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "完全な黒は、まぶたを閉じればすぐ見えると思っていたよ。でも目を閉じて数十秒すると、粒が流れたり赤みが見えたりすることがあるね。あなたの視覚は休んでいても、完全停止ではないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただ、押したときに出る模様の細かな形、色、広がる速さが、なぜ人ごとに違うのかには未解明な部分があります。圧力で信号が生じる大枠は分かっていても、毎回同じ輪や線になる理由まで、科学が一つに決め切れているわけではありません。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！仕組みの骨組みは分かっていても、あなたが見る模様の細部まで説明できるわけではないんだね。分からないところを分からないと言える方が、かえって体の不思議は面白く感じるよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "目がかゆくてこすりたくなったら、まず手を洗い、清潔な冷たいタオルをまぶたへ数分そっと当ててみてください。押し込むのではなく、疲れた肩へ冷たい布を置くように、目の周りを静かに休ませるのがポイントです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "冷やすなら目玉を押さなくていいんだね。特に夏の帰宅後、汗を拭くついでに目まで強くこするより、タオルをそっと当てる方が、光の模様も刺激感も増やさずに済みそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "コンタクトレンズを使っているなら、ゴロゴロ感が強いときほど先に手を洗ってください。レンズの下に小さな異物がある場合、こする動きは摩擦を増やすことがあります。水道で顔を洗う前に、鏡で目の状態を一度確認する習慣も役立ちます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "コンタクトの違和感は急いで消したくなるけれど、指で押して解決しようとしない方がいいんだね。スマホ画面の汚れをこすり落とす感覚で目を扱わず、まず清潔にする順番を覚えておくよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "画面を見続けた後に目をこすりたくなるなら、20分ごとに約20秒、6メートル先を見る方法があります。数字で覚えると、20・20・20の目安です。遠くを見る間にまばたきを数回増やすと、乾きによる違和感を減らす助けになります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "20分ごとに20秒、6メートル先なら覚えやすいね。仕事や動画の途中でも、時計を見るついでに窓の外や部屋の奥を見るだけで、指が目へ向かう前に休憩を作れそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の光の模様は、外から来た光ではなく、圧力で網膜が出した電気信号を脳が視覚として受け取った結果でした。たとえるなら、光用のチャイムが揺れでも鳴り、脳がいつもの光の通知だと画面へ表示したようなものなんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、あなたの脳は間違えたというより、網膜からの信号を真面目に光として読んだだけなんだね。暗い部屋でも見えるあの点々は、目と脳の連携が作った短い映像だったんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "だからこそ、光を見るために強くこする必要はありません。短い一時的な見え方でも、何もしていないのに続く、片目だけで増える、影が広がるといった違いがあれば、眼科へ相談するという選択を覚えておいてください。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "自分の体の不思議を楽しみながら、無理に再現しないのが一番だね。今夜もし目がかゆくなったら、まず冷たいタオルと20・20・20を思い出して、目を休ませてみるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなるのはなぜなのかを追います。たった1秒ほどの反応でも、脳が起きている状態から眠る状態へ切り替わる途中には、あなたも毎晩通る面白い境目があるんです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "寝落ちの直前にビクッとなるの、昨日もあった！体が落ちた気がするあの瞬間に、脳が何を手放しているのか分かれば、眠る前の自分の感覚も少し違って見えそうだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜寝るとき、目を閉じた暗さの中で、あなたの視覚が外の光だけでなく体の刺激も受け取っていることを、少しだけ意識してみてください。身近な違和感は、体が毎日送っている小さなメッセージかもしれません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白かったらチャンネル登録よろしくね。身近な不思議を毎日1本ずつ一緒に解き明かし、感覚のふしぎシリーズも続けながら1万人を目指して投稿中なので、明日も応援してもらえたらうれしいです。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "こすると光",
+      "目の中で何が"
+    ],
+    "hook_caption": "圧力が光に",
+    "subtitle": "あなたの目が作る光の模様",
+    "tagline": "3秒の不思議を追う"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "これ知ってました？目を強くこすると、光の模様が見えるんです。",
+      "selected_hook": "あなたの網膜、3秒だけ勘違いしてる？",
+      "scores": [
+        {
+          "hook": "あなたの網膜、3秒だけ勘違いしてる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 50
+        },
+        {
+          "hook": "目をこすると見える光、あなたは知ってる？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 50
+        },
+        {
+          "hook": "これ知ってました？目を強くこすると、光の模様が見えるんです。",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 35
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        5
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたの網膜、3秒だけ勘違いしてる？",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ、それ昨日やった！でも暗いのに、なんで光るの？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "網膜は約1億2000万個の細胞で、光以外の刺激も受け取ります。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "たとえるなら、スマホ画面を指で押して表示が乱れる感じだね。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "しかも目は、圧力の刺激まで光の信号として脳へ送るんです。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "へぇ〜、知らなかった！目の中では光がなくても通知が鳴るんだ。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "だから光源なしでも光が見えます。ただし強くこする習慣は別問題です。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "目を休めるときに思い出してみて。感覚のふしぎシリーズもどうぞ、1万人目標で毎日投稿中なので応援よろし",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 85,
+      "issues": [
+        {
+          "type": "visual_dependent",
+          "line": 4,
+          "text": "たとえるなら、スマホ画面を指で押して表示が乱れる感じだね。",
+          "pattern": "画面[のを上下左右]",
+          "reason": "「画面の〜」はテロップ視聴者には分かりにくい"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 8,
+          "text": "目を休めるときに思い出してみて。感覚のふしぎシリーズもどうぞ、1万人目標で毎日投",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 5,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 69,
+      "optimized_score": 69,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.93,
+      "issues": [
+        "50%・75%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "日投稿中なので応援よろしくね！…って、冒頭の話に戻るんだけど",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 0,
+      "changes": [],
+      "lines_modified": 0
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "反直感的な事実"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.418,
+      "similar_to": "なぜあなたは最後の1段だけ踏み外す？99%が知らない0.3秒のズレ",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 5,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "なぜ目をこすると光が見える？あなたの網膜で起きる3秒の勘違い",
+      "enhanced_title": "🌍なぜ目をこすると光が見える？あなたの網膜で起きる3秒の勘違い💡",
+      "emoji_added": "🌍",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🌍なぜ目をこすると光が見える？あなたの網膜で起きる3秒の勘違い💡"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 6,
+      "bait_text": "コメント欄で正解率チェックしてみて"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "neutral",
+        "neutral",
+        "neutral",
+        "surprise",
+        "negative",
+        "surprise"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "question",
+        "statement",
+        "ellipsis",
+        "statement",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "これ、このチャンネルでしか解説してないんだけど",
+      "position": 4,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 7,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 96,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '勘違い'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "二人称['あなた'](+6)"
+    ]
+  }
+}

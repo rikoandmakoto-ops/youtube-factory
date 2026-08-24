@@ -1,0 +1,661 @@
+{
+  "title": "1分ポケモン研究 #13：👀グリーンに隠された3つの秘密、あなたは本当の役割に気づいた？",
+  "theme": {
+    "title": "グリーンに隠された背景設定、初代のライバルが担っていた本当の役割",
+    "angle": "登場人物の深掘り"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "え、グリーンの裏闇設定ファイルに隠された秘密とは？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ あの王者が最初から別の役目を持ってたの!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "信じがたいが、実はこれ、ゲーム内にヒントが隠されてて…公式子供に見せられない設定では、オーキド博士の孫で主人公と同時に旅立つ少年なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じ町から出たのに、先に8個のバッジを集めて王者まで行くの、いや強すぎでしょ！…一旦整理すると、こういうことだ…なぜだと思う？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも最終戦の手持ちは主人公の相棒選びに合わせて闇が深いわるんだよ！この設定知ってた人、正直にコメントしてみて。ここまで掘り下げてるポケモン解説、他にある？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ファンの間ではこう言われている、プレイヤーに相性を学ばせる先生役だって。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "つまりグリーンは勝ち逃げ王者じゃない、君の旅を完成させる最後の壁なんだ。まだ祖父との話が残ってる！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "え、マジで？ってなったら高評価！ 裏設定ファイルシリーズも追って、1万人目標で毎日投稿中だから応援よろしくね！…ここでさっきの伏線回収なんだけど",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これ知ってた？ あなたが初代でグリーンに負けて悔しかったあの瞬間、彼は単なる嫌なライバルじゃなく、旅のルールを全部試す最後の装置だったんだよ！\nバッジ8個の先で王者になった速さも、ちゃんと意味がある。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ オーキド博士の孫で、毎回ちょっと煽ってくるあのグリーンに、そんな大きい役割があったの!?\n初代からずっと強気なだけの人だと思ってたから、これは聞き逃せない！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "最初に答えの形だけ出すぞ、グリーンは主人公のコピーじゃなく、主人公が見落とした戦い方を先回りで見せつける対照役なんだよ！\nだから最後の6匹は、強ポケを並べただけでは終わらない。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ゲーム内で確認できる公式の流れ、セリフ、3通りの手持ちから役割を追うぞ！\nこれはファンの説なんだけど、彼を悪役扱いしない見方まであって、知ると王者戦の景色が変わるんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ、王者戦が急に学校のラスボス模試みたいに見えてきた！\nでもさ、公式に決まっている事実はどこまでで、考察はどこからなの？ そこを分けて教えて！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式として確かなのは、グリーンがマサラタウンで主人公と同日に旅立ち、オーキド博士の孫として登場することだよ！\n最初のポケモンも主人公の選択に反応して変える。ここが1個目の仕掛けなんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "主人公がフシギダネならグリーンはヒトカゲ、ヒトカゲならゼニガメ、ゼニガメならフシギダネを選ぶんだ！\n開始数分の1戦目で、タイプ相性という有利不利を体感させる配置になっている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "タイプ相性って、ほのおがくさに強いみたいな有利関係のことだよね？\n最初の1戦で負けたら、説明書を読む前から相性を覚えろって言われてる感じで、容赦なさすぎる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そう、それがただの負けイベントじゃないんだよ！\n初代の最初の戦闘は選んだ1匹と技1つで動くから、グリーンの選択は長い説明文より早く、相性の痛さを体で覚えさせる仕掛けになる。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかもグリーンは序盤から、名前を覚える余裕もなく勝負を仕掛けてくるだろ？\nあれでプレイヤーは町を出た直後に、同じスタート地点から先へ行く相手が世界にいると知るんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じスタートなのに、向こうは先に進んでる表示が出るの、友達だけランクが上がってた時みたいで悔しい！\nだから次の町まで寄り道せず走りたくなるし、レベルを1でも上げたくなるんだな。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第二フックいくよ、ここまでのグリーンは競争相手に見えるけど、実は主人公より先にチャンピオンを倒した時点で、プレイヤーの目標そのものを奪ってるんだ！\nバッジ8個の先にいたのは、まさかの身近なライバル。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、ポケモンリーグの王者って旅のゴールなのに、その席を先取りされたの!?\nだから四天王4人を越えた直後なのに、まだ終われないあの展開になるわけか。達成感を一度ひっくり返すの、ずるいって！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式の作中描写では、オーキド博士がグリーンを新しいチャンピオンとして紹介した直後、主人公との勝負が始まるんだ！\n勝利の演出を1回見せてから取り上げる、この構成のキレが初代らしくてやばい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "王者という肩書きは、リーグ最上位の証明だよね。でもグリーンはその座に着いた瞬間、主人公の最後の試験官へ変わるんだ！\n勝つための6匹を使い、旅の総決算を真正面からぶつけてくる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "最終戦だけはライバルじゃなく、ゲームが用意したラスボスの立場になるってこと？\nなのに相手が最初から知ってるグリーンだから、知らない敵より何倍も燃える。対戦前のBGMまで特別に聞こえるぞ！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで知ってた？ グリーンの最終手持ちは3パターンあって、主人公が最初に選んだ1匹で編成が変化するんだよ！\n最後のエースもフシギバナ、リザードン、カメックスの3択になり、最初の選択がリーグまで追ってくる。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "3パターンって、最初の机の前で押したボタンが最後の王者戦まで残るの!?\n最初の選択を忘れていたプレイヤーほど、エースを見た瞬間に思い出して熱くなるやつだ。ゲームの伏線回収みたいで最高じゃん！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかもグリーンは最終戦で、ナッシー、サイドン、ウインディ、ギャラドス、そして相棒枠を中心に使うんだ！\n相棒以外の5体が共通だから、3パターンの違いはエース1枠に集中して見えるよう作られている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "この共通5体は、じめん、みず、ほのお、くさ、エスパーなどを散らした編成だよ！\n1種類だけを育てた旅パだと止まりやすく、複数タイプを使う意味を王者戦で突きつける配置になっている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "旅パって、旅の途中で一緒に育てる主力チームのことだよね？\n俺がピカチュウだけレベル上げて突っ込んだら、サイドンで止まる未来が見える。相性を覚えないままのごり押し、完全に通じないじゃん！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "対戦だとこれが刺さる、ではなくストーリー戦でも刺さるんだよ！\n相手の弱点を突く技を用意する、回復を使う、交代する、その基本をグリーンの6匹がまとめて要求してくる。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "種族値だけ見ると、ポケモンごとの基礎的な能力の合計なんだけど、グリーンの怖さは数字の高い1匹ではなく役割分担なんだ！\n素早いウインディ、硬いサイドン、特殊寄りのナッシーで、対応をずらしてくる。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、それぞれが別の仕事をしてるから、強い技1個で押し切る作戦が崩れるのか！\n部活の大会で相手チーム全員が別ポジションを埋めてくる感じだ。突破口を見つけても、次の1匹が待ってるのきつい！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そして最大のポイントは、グリーンが8個のジムを先に突破して、四天王4人にも勝ったとゲーム内で明言されることだよ！\n主人公が倒すまでの短い王者在位が、彼の旅も本物だった証拠になっている。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "チャンピオンになった時間は短くても、四天王4人を抜いた実績は消えないもんな！\n主人公の引き立て役だと思ってたのに、普通にカントー上位1人の記録を持ってるじゃん。これはライバルの格が違う！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここは公式と考察を分けるぞ。公式にあるのはグリーンが先に王者となり、主人公に敗れた後、オーキド博士から人とポケモンへの接し方を指摘される場面だ！\nこの一言が、彼の役割を戦闘だけで終わらせない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "オーキド博士は、ポケモンへの思いやりが足りないという趣旨でグリーンを評価するんだよ！\n強さだけなら主人公より先に頂点へ届いた孫に、足りないものがあると祖父が言う。ここが初代終盤で一番重い判定だ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "8バッジ、四天王4人、王者まで取っても、強さだけじゃ認められないの!?\nポケモン世界の採点基準、勝率100パーセントだけではクリアできないってことか。ゲームなのに人との向き合い方まで問うんだな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし、グリーンがポケモンを大切にしていなかったと断定するのは違うんだよ！\n公式は思いやりが足りないと指摘しただけで、虐げていたとは言っていない。事実と想像を混ぜると、彼の物語が雑になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "むしろ作中でグリーンは、手持ちを育て、敗北後も旅を続ける行動派として描かれるんだ！\n強さを急ぐあまり、相手との関係を言葉や態度で示すのが不器用だった、と読む余地が公式描写の中に残されている。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "なるほど、悪人だったじゃなくて、強さの見せ方が主人公と違ったってことか！\n負けた後に消えず、次の地方でもポケモンと向き合うのが、初代だけ見た時の印象をひっくり返す。成長の続きがあるんだな。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "金銀以降の公式設定では、グリーンはカントーのトキワジムのジムリーダーとして再登場するんだよ！\n王者の座を失った後も、8個目のジムという大事な場所を任されている。敗北の後に役目を得る流れが熱い。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って、トキワジムって初代では最後に挑む場所だよね？\nそこをグリーンが守るなら、挑戦者にとっては王者戦の前に元王者が立ってるみたいで、配置が熱すぎる。カントーの最後の関門にぴったりじゃん！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかもグリーンのトキワジムは、特定タイプに偏らない多彩な編成で挑戦者を迎えるんだ！\n初代の王者戦と同じく、相性1本でなく総合力を問う役割を、ジム戦でも継続しているように見える。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここからはファンの間ではこう言われている、という考察だよ！\nグリーンは主人公の鏡で、同じ出発点から才能とスピードで先行しつつ、主人公が選ぶ人とのつながりを学ぶ存在だ、と読む説がある。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "その説なら、グリーンが先に勝つのは主人公を下げるためじゃなくて、別ルートの成功を見せるためになるのか！\n同じゲームでも、急ぐ人と寄り道する人で旅の色が変わるみたいだ。だから比べたくなるんだな。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "さらに面白いのが、グリーンは後の作品で成長した姿を何度も見せることだよ！\n初代の最後の指摘が一発で人格を決めたのではなく、敗北を持ち帰って次の役目へ進んだ人物として、公式は描写を積み重ねている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ ポケモンリーグで主人公に負けた直後、グリーンは大げさに言い訳せず、その場を去るんだ！\n勝負に負けた悔しさを見せながらも、次に何をするかを自分で選ぶ。この短さが逆に印象へ残る。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "あの短い退場、子どもの頃は勝ったぞで終わってたけど、今見ると悔しさを飲み込む場面だったのか！\n学校の対戦ゲームで負けた後、次は絶対勝つって黙って練習する人みたいで、ちょっと見方が変わる。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで意外な数字を置くと、初代のグリーン最終戦は相棒枠の違いを含めて3編成あるのに、物語の役割は1つなんだ！\nあなたがどの1匹を選んでも、最初の選択を最後に返してくる。これが設計の本丸だよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "最初の1匹、途中のライバル戦、最後の王者戦まで、全部が1本の線でつながってたの!?\n初代の容量って限られていたのに、その中で3ルートの因縁を作ったの、やばすぎる。遊び直す理由がまた1個増えたぞ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "だから遊び直すなら、前回と違う御三家を選んでグリーンのエースを見るのがおすすめだよ！\n御三家は最初に選ぶ3匹のこと。相棒が変わるだけで、最後に越える壁の見え方まで変わる。比較すると本当に面白い。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次はライバル戦ごとに、グリーンの手持ちが何を教えてくるかをメモしてみて！\nおつきみやま、シルフカンパニー、リーグ前でポケモンが増えるたび、彼の旅も裏側で進んでいたと分かる。これは人に話したくなる豆知識だ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "俺、次は勝ち負けだけじゃなくて、相手が何を使ってきたか見てみる！\nナッシー1匹でも、前に選んだ相棒との相性を考えると、ただの強敵じゃなく問題文みたいに見えるな。答えを考えながら戦えそうだ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "初心者でも使える見方は簡単、相手の手持ちを見て、どのタイプを止める担当かを1匹ずつ考えることだよ！\n役割はチーム内の仕事の意味。グリーン戦なら、6匹が別の答えを要求してくるから、対策も分けて考えよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そして勝てなかった時は、レベルだけを上げる前に、技のタイプを1つ変えてみて！\n初代は技の選択で戦いがひっくり返る場面が多いから、グリーンは努力値より先に工夫を教える相手として刺さる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "努力値って対戦向けの育成要素だけど、旅ならまず相性と技を見ろってことだね！\n勝てないから全部やり直しじゃなく、手持ちの1枠や技1個を替えるだけで突破できる。これは旅パ育成で即使える考え方だ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "グリーンの本当の役割を一言で言うなら、主人公より先にゴールへ立ち、ゴールの意味を塗り替える存在なんだよ！\n王者を倒して終わりではなく、強さと向き合い方の両方を問う、初代最後の仕掛けだった。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "最初はムカつく先行プレイヤー、最後は自分の旅を映す鏡だったのか！\nあの勝利画面でグリーンが去るからこそ、自分が王者になった実感が何倍も大きくなるんだな。負けた回数まで思い出になりそうだ！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式の事実は、先に王者となり、祖父から思いやりを指摘され、その後トキワジムを任される流れだよ！\nその間をどう読むかは考察だけど、公式と混ぜずに見るほどグリーンの成長がきれいに見える。ここが大事な線引きなんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回は、ミュウツーの誕生秘話で、なぜあの1匹が初代の終盤に置かれたのかを追うぞ！\n伝説ポケモンの強さだけじゃなく、ゲーム内の記録が何を語るかまで、数字と作中描写で見ていく。次も見逃せない！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "グリーンの次にミュウツーは熱い！ 初代の終盤って、強い敵が並んでるだけじゃなくて、全部に役割があるのかもしれないな。\n次の研究も、見落としてた仕掛けを拾えそうで楽しみだ。友達にもこの話をしたくなった！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "え、マジで？ってなったら高評価を頼む！ グリーンみたいな裏設定ファイルシリーズは、次に遊ぶときの見方を増やすために置いてあるんだよ。\nチャンネル登録者1万人を目指して毎日投稿中、応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "王者の正体",
+      "3つの役割"
+    ],
+    "hook_caption": "王者の本音",
+    "subtitle": "初代ライバルの意外な設計",
+    "tagline": "最後の戦いはただの勝負じゃない"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "実はグリーンのモデル、ただの嫌なライバルじゃないんだよ！",
+      "selected_hook": "え、グリーンの裏設定ファイルに隠された秘密とは？",
+      "scores": [
+        {
+          "hook": "え、グリーンの裏設定ファイルに隠された秘密とは？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 43
+        },
+        {
+          "hook": "あなたはグリーンの本当の役割に気づいた？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 40
+        },
+        {
+          "hook": "実はグリーンのモデル、ただの嫌なライバルじゃないんだよ！",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        2
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "え、グリーンの裏設定ファイルに隠された秘密とは？",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ待って！ あの王者が最初から別の役目を持ってたの!?",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "公式設定では、オーキド博士の孫で主人公と同時に旅立つ少年なんだ。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "同じ町から出たのに、先に8個のバッジを集めて王者まで行くの、いや強すぎでしょ！",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "しかも最終戦の手持ちは主人公の相棒選びに合わせて変わるんだよ！",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "ファンの間ではこう言われている、プレイヤーに相性を学ばせる先生役だって。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "つまりグリーンは勝ち逃げ王者じゃない、君の旅を完成させる最後の壁なんだ。まだ祖父との話が残ってる！",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 7,
+          "text": "え、マジで？ってなったら高評価！ 裏設定ファイルシリーズも追って、1万人目標で毎日投稿中だから応援よ",
+          "tension": 5,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 90,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 3,
+          "text": "実はこれ、ゲーム内にヒントが隠されてて…公式設定では、オーキド博士の孫で主人公と",
+          "reason": "1行52字はテロップとして長すぎる（推奨: 40字以内）"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 8,
+          "text": "え、マジで？ってなったら高評価！ 裏設定ファイルシリーズも追って、1万人目標で毎",
+          "reason": "1行55字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 25,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 10,
+        "emotional_impact": 0,
+        "relatability": 5,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 77,
+      "optimized_score": 77,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.22,
+      "issues": [
+        "50%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "稿中だから応援よろしくね！…ここでさっきの伏線回収なんだけど",
+      "keyword_overlap_before": 0.25,
+      "keyword_overlap_after": 0.25
+    },
+    "power_word": {
+      "amplified": 3,
+      "changes": [
+        "「設定」→「闇設定」",
+        "「設定」→「子供に見せられない設定」",
+        "「変」→「闇が深い」"
+      ],
+      "lines_modified": 3
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.346,
+      "similar_to": "あなたの飲み物を6時間守るポケモン、なぜ存在する？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 4,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "グリーンに隠された3つの秘密、あなたは本当の役割に気づいた？",
+      "enhanced_title": "👀グリーンに隠された3つの秘密、あなたは本当の役割に気づいた？",
+      "emoji_added": "👀",
+      "category": "mystery",
+      "modified": true
+    },
+    "enhanced_title": "👀グリーンに隠された3つの秘密、あなたは本当の役割に気づいた？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "この設定知ってた人、正直にコメントしてみて"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "negative",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise",
+        "neutral",
+        "surprise",
+        "surprise"
+      ],
+      "streaks_found": 1,
+      "breakers_injected": 1,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "exclaim",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "ここまで掘り下げてるポケモン解説、他にある？",
+      "position": 4,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 76,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['？', '秘密'](+12)",
+      "二人称['あなた'](+6)"
+    ]
+  }
+}

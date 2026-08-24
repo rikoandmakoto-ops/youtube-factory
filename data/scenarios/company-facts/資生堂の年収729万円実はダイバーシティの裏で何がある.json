@@ -1,0 +1,343 @@
+{
+  "title": "💸資生堂の年収729万円、実はダイバーシティの裏で何がある？",
+  "theme": {
+    "title": "ダイバーシティ推進企業の実態",
+    "angle": "ダイバーシティを掲げる企業の年収や福利厚生を掘り下げる。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "多様性の実態",
+      "fact_main": "資生堂 年収729万",
+      "fact_sub": "有価証券報告書ベース",
+      "text": "あなたは資生堂の信じられない年収729万円の裏側を知ってる？",
+      "bg_query": "株式会社資生堂 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "公式採用情報ベース",
+      "text": "ここからが本当のホンネなんだけど、賞与は年2回です。業績連動もあり、毎年同額とは限りません。",
+      "bg_query": "株式会社資生堂 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "女性管理職58.6%",
+      "fact_sub": "2023年実績",
+      "text": "女性管理職は58.6パーセントです。この数字、業界では異常値です…と思うじゃん？前回の動画を見た人なら、この数字の異常さがわかるはず",
+      "bg_query": "株式会社資生堂 女性社員 会議",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "男性育休取得率100%",
+      "fact_sub": "2023年実績",
+      "text": "でも本当にヤバいのはこっちで…男性の育休取得率は100パーセントです。制度が使える設計は強みです。",
+      "bg_query": "株式会社資生堂 社員 働く",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "有給取得率67.5%",
+      "fact_sub": "公式ESGデータ",
+      "text": "有給取得率は67.5パーセントです。数字だけ見れば、かなり良いです。",
+      "bg_query": "株式会社資生堂 社員 休暇",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "育児短時間 小3まで",
+      "fact_sub": "公式制度案内",
+      "text": "元社員の証言がさらに衝撃的で、育児短時間勤務は小学3年生までです。20代には将来の安心材料です…ところが…",
+      "bg_query": "株式会社資生堂 福利厚生",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "残業 月24.6時間",
+      "fact_sub": "口コミサイト調べ",
+      "text": "ただし、残業は月24.6時間という口コミもあります。公表されているのは、ここまでです。しかし話はこれだけではない",
+      "bg_query": "株式会社資生堂 店舗 販売員",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったら、ホワイト企業ファイルシリーズもプロフィールからチェックしてね。…これが最初の疑問の答えだ",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収729万",
+      "女性管理職58%"
+    ],
+    "subtitle": "ダイバーシティの実態",
+    "tagline": "数字の裏側を確認"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "年収729万円。ただし、この数字には理由があります。",
+      "selected_hook": "あなたは資生堂の年収729万円の裏側を知ってる？",
+      "scores": [
+        {
+          "hook": "あなたは資生堂の年収729万円の裏側を知ってる？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 18,
+            "loop_connect": 5
+          },
+          "total": 68
+        },
+        {
+          "hook": "えっ、資生堂のダイバーシティに隠された本音とは？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 43
+        },
+        {
+          "hook": "年収729万円。ただし、この数字には理由があります。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 3,
+      "dead_zones": [
+        1,
+        3,
+        5
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたは資生堂の年収729万円の裏側を知ってる？",
+          "tension": 7,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "賞与は年2回です。業績連動もあり、毎年同額とは限りません。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "女性管理職は58.6パーセントです。この数字、業界では異常値です。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "男性の育休取得率は100パーセントです。制度が使える設計は強みです。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "有給取得率は67.5パーセントです。数字だけ見れば、かなり良いです。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "育児短時間勤務は小学3年生までです。20代には将来の安心材料です。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "ただし、残業は月24.6時間という口コミもあります。公表されているのは、ここまでです。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "気になったら、ホワイト企業ファイルシリーズもプロフィールからチェックしてね。",
+          "tension": 1,
+          "is_dead": true
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 30,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 9,
+        "relatability": 3,
+        "shareability": 7,
+        "debate_potential": 5
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 61,
+      "optimized_score": 68,
+      "micro_reveals": 1,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.84,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "25%・50%・75%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "もプロフィールからチェックしてね。…これが最初の疑問の答えだ",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「年収」→「信じられない年収」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭に財務数字",
+        "企業の闇要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.379,
+      "similar_to": "ソニーグループの年収がヤバい 1118万円とDualSenseの仕事",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 4,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "資生堂の年収729万円、実はダイバーシティの裏で何がある？",
+      "enhanced_title": "💸資生堂の年収729万円、実はダイバーシティの裏で何がある？",
+      "emoji_added": "💸",
+      "category": "money",
+      "modified": true
+    },
+    "enhanced_title": "💸資生堂の年収729万円、実はダイバーシティの裏で何がある？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": false,
+      "existing_bait": true,
+      "position": -1,
+      "bait_text": ""
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "neutral",
+        "neutral",
+        "negative",
+        "neutral",
+        "surprise",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "ellipsis",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 2,
+      "interrupts_injected": 2,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "前回の動画を見た人なら、この数字の異常さがわかるはず",
+      "position": 2,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 4,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '年収'](+20)",
+      "好奇心ギャップ['？', '裏'](+12)"
+    ]
+  }
+}

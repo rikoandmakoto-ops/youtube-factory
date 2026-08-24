@@ -1,0 +1,664 @@
+{
+  "title": "1分科学 #90：💯なぜあなたの舌はやけど後だけ味が消える？99%が知らない10日の入れ替わり",
+  "theme": {
+    "title": "なぜ舌をやけどすると数日だけ味がわからなくなるのか",
+    "angle": "味蕾の入れ替わり周期が10日前後という事実を軸に"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "えっ、あなたの舌は10日で入れ替わる？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんですか!? 熱いみそ汁の翌日、味が薄かった！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちょっと待って、ここからが驚きなんだけど、舌の味蕾は、味を感じる小さなセンサーで約10日前後に入れ替わります。ここからがさらにヤバい",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ スマホの保護フィルムを替える感じなんだね…ところが…",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも熱で表面が傷むと、その交代の途中だけ味が届きにくくなります。…でも、この話にはまだ続きがある",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ甘い物も塩味も、同じようにぼんやりすることがあるの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから数日で戻りやすいんです。ただし回復を決める仕組みには、まだ続きがあります。しかもこれ、ほんの序章にすぎない。コメント欄で正解率チェックしてみて。この続き、次の動画でもっと深掘りするよ",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "熱い物は少し冷まして舌をいたわってみて。感覚のふしぎシリーズも置いてあります、1万人目標で毎日投稿中なので応援よろしくね！…実はこれ、最初に言ったことと繋がってる",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？熱いラーメンを急いで食べた翌日、あなたの舌で味が消えたように感じても、味そのものがなくなったわけではないんです。\n数日だけ食事がぼんやりする違和感には、約10日前後で交代する小さなセンサーが関わっています。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！熱いみそ汁を飲んだあと、いつもの塩味が弱くて、料理を失敗したのかと思ったよ。\n舌がヒリヒリするだけじゃなく、甘味まで遠く感じるのは、どうしてなの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "あなたも熱い飲み物を飲む前、ふうふう冷ますことがありますよね。その数秒を省いたとき、舌の表面で何が起きるのか。\nそしてなぜ数日たつと戻りやすいのか、今あなたの体で起きる更新作業からほどいていきます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "数日で自然に戻るなら、舌は毎日同じままではないってこと？見た目は変わらないのに中身だけ更新されるなんて意外だよ。\nスマホみたいに、舌にも見えないところで新しい部品が入っているの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "舌の表面にある粒々の一部には、味蕾という味を受け取る小さなセンサーが入っています。\nたとえるなら、味蕾は食べ物の情報を脳へ送る極小のインターホンで、1個ずつが味の合図を受ける場所なんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！舌全体が一枚のセンサーだと思っていたけれど、粒々の中に小さなインターホンが並んでいるんだね。\nじゃあ熱い汁は、そのインターホンの近くを一時的に働きにくくするの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "熱い汁や飲み物が触れると、舌の表面の細胞は熱で刺激され、赤みや痛みが出ることがあります。\n味蕾の近くまで影響が及ぶと、味の信号を拾う働きが鈍り、いつもの味が小さく聞こえるように感じやすいんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "痛い場所と味が分かりにくい場所が重なることがあるのは、そのためなんだね。舌が傷んでいるなら、味の信号まで弱くなるのも分かる。\nでも、痛みが減ってから味だけ遅れて戻る日があるのはなぜ？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "味蕾の中の味を感じる細胞は、ずっと同じ顔ぶれで働き続けるわけではありません。\n一般に約10日前後で新しい細胞へ交代していて、口の中では食事中も小さな更新作業が静かに続いているんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、皮膚が少しずつ生まれ変わるなら、舌の表面にも交代の仕組みがありそうだね。\n約10日という数字は、髪が伸びるよりずっと早くて、毎日の食事の間にも何度も巡っていそう。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、味蕾は食事のたびに働きながらも、その構成員を少しずつ入れ替えています。\n満員電車で降りる人と乗る人が途切れず交代するように、古い細胞と新しい細胞が役目を引き継いでいるんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ熱い物で一部の細胞が働きにくくなっても、新しい細胞が入れば味は戻りやすいんだ。\nその入れ替わりの途中なら、朝は薄く感じて夜には少し戻るみたいな変化も起こりそうだね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。何もやけどしていない日でも、味蕾の細胞は古いものから新しいものへ交代中です。\nだから舌は壊れたまま放置される器官ではなく、約10日単位で整備を続ける場所でもあります。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、今も更新中なの!? それなら、やけどのあとに味が戻るのは単なる気分ではなさそうだね。\n味蕾が全部同時に入れ替わるのか、それとも少しずつ順番に替わるのかが気になるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "味蕾は細胞が少しずつ作られては役目を終えるため、通常は全部が一斉に止まるわけではありません。\nただ、熱い物が当たった範囲では、信号を受け取る人数が一時的に減ったような状態になり、味がぼんやりしやすいんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "インターホンが十個ある建物で、何個かだけ応答しないような感じだね。それなら脳に届く情報が少なくなって、味の輪郭が薄くなる。\n甘味だけでなく塩味も弱くなることがあるのは、そのためかな？",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "味には甘味、塩味、酸味、苦味、うま味という代表的な五つの感じ方があります。\nそれぞれは別の受け取り口を使いますが、やけどで表面全体が刺激されると、複数の味がまとめて鈍く感じられることがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！昔の味覚表みたいに、舌の場所ごとに甘味と苦味が完全に分かれているわけではないんだね。\nじゃあ舌の先だけ痛いときでも、食事全体の印象はかなり変わることがあるんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔広まった味覚表では、甘味は舌先、苦味は奥という分け方が強調されましたが、実際には多くの場所で複数の味を感じます。\n感じやすさの差はあっても完全な担当地区ではないので、熱の影響も地図のように単純には区切れません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "学校で見た図をそのまま信じていたよ。分かりやすい図ほど、ずっと頭に残るものなんだね。\n味が分からないとき、鼻づまりで料理の香りが消える場合と同じことが起きているのかな？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "舌で感じる味と、鼻で感じる香りは、食事では合体して一つの風味になります。\nたとえば鼻をつまんでりんごを食べると、甘酸っぱさは残っても、りんごらしさという情報が急に弱く感じられます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "それ、風邪のときにあった！食べ物の味がしないと思ったら、舌より鼻が詰まっていたこともあるよ。\nやけどのときは、塩や砂糖の基本の味まで弱くなるから、少し見分けやすいんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "やけど後に塩や砂糖の基本的な味まで分かりにくければ、舌側の影響が考えやすくなります。\n一方で香りだけが抜けた感じなら、鼻の通りや嗅覚も関係するため、同じ味がしないでも原因は一つではありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ「味がしない」でも、体の中では別の場所が困っているかもしれないんだね。\nところで、熱いお茶を一口飲んだだけでも、味蕾の約10日の交代まで待つことになるの？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "軽い刺激なら表面の痛みが早く落ち着き、味の違和感も短時間で戻ることがあります。\nただし深く傷んだ範囲が広いほど、味蕾の働きが整うまで日数がかかる可能性があり、回復の体感には大きな個人差があります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ「3日で必ず戻る」とは言えないんだね。味蕾の交代が約10日前後でも、やけどの強さや当たり方で変わる。\n自分の舌を、電車の時刻表みたいにぴったり同じ日数では測れないんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。味蕾の寿命は約10日から2週間ほどと説明されることが多い一方、すべての人で同じ日数に固定されるわけではありません。\n年齢、栄養状態、口の中の炎症などでも、回復を早く感じるかどうかは変わりえます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "数字があると分かった気になるけれど、体は時刻表どおりではないんだね。\nそれでも約10日という目安を知ると、数日だけ味がぼんやりする理由が、昨日よりずっと具体的に見えてきたよ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "味蕾には基底細胞という、次の細胞を作るもとになる細胞がいます。\n難しく聞こえますが、古くなった部品の代わりを用意する小さな予備チームだと思うと、毎日の更新作業がイメージしやすいです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "予備チームがいるから、舌は毎日食べたり飲んだりしても働き続けられるんだね。\n熱で傷んだときは、そのチームが新しい担当を補充する流れになるの？それとも別の修理も必要なの？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "傷ついた組織では周囲の細胞が修復に関わり、新しい味を感じる細胞が育つ過程も進みます。\nただし人の舌で、どの細胞が何日目にどこまで回復するかは、科学でもまだ結論が出ていない部分が残っています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ここはまだ分かっていないんだね。でも分からないところを正直に残しても、約10日前後の更新が大事なのは変わらない。\nその間に辛い物や熱い物を続けると、舌はどうなりやすいの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "傷んでヒリヒリしている間に、さらに熱い物や刺激の強い香辛料を重ねると、食べるたびに不快感が増えやすくなります。\n修復中の擦り傷を何度もこするようなもので、舌が落ち着く時間を作るほうが無難です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！味が分からないから濃い味にしようとして、熱いスープに唐辛子まで足したよ。\n味を取り戻そうとして、舌には逆のことをしていたかもしれないね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "味が弱いと塩やしょうゆを足したくなりますが、やけど直後はまず温度を下げて、やわらかい物を選ぶほうが安心です。\nおかゆや豆腐のように刺激の少ない食事は、味のセンサーが整うまでの数日を助けてくれます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "冷ますのは味を守るためでもあるんだね。ふうふうするのは行儀のためだけじゃなく、舌のインターホンを守る準備だった。\n食べ物の温度には、家で気をつけやすい目安があるの？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "飲食物は熱すぎる状態を避けることが大切で、急いでいるときほど最初の一口で確かめる習慣が役立ちます。\n温度計がなくても、湯気が強いまま勢いよく口へ運ばず、少量から試すだけでやけどの機会を減らせます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、熱いと思いながら急いで食べると、いつも同じ場所をやけどしやすいよ。\n舌の先は食べ物に最初に触れやすいから、先端ほど先に温度を確かめる役目をしているんだね。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "味蕾は舌だけでなく口の奥やのどの近くにも少しありますが、舌の表面は食べ物と直接触れやすい場所です。\nだから熱い汁物、揚げ物の中身、電子レンジ直後のあんなどで、見えない高温に触れやすいんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "電子レンジのあんは外側より中が熱いことがあるね。見た目で大丈夫そうでも、最初の一口で舌がびっくりする。\n温度のムラまで考えると、10秒待つ意味がよく分かるよ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "特に電子レンジで温めた食品は、全体が同じ温度に見えても、中身だけ高温になっていることがあります。\n30秒ほど置いて混ぜる、半分に割って蒸気を逃がすなど、小さなひと手間が舌への熱の集中を減らしてくれます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！待つ時間は料理を冷ますだけでなく、熱い場所を散らすためにも必要なんだね。\nそれなら子どもや急いで食べがちな人ほど、最初の一口を小さくしたほうがよさそう。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、味蕾の研究は味覚だけでなく、食欲や栄養の選び方にもつながっています。\n味を感じにくい期間は食事が楽しくなくなりやすく、濃い味へ傾きやすいため、体調の変化として気づく人もいます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "味が薄いからと調味料を増やすと、気づかないうちにいつもより濃くしてしまうかもしれないね。\n数日後に味が戻ったら、同じ量のしょうゆでも急にしょっぱく感じて、驚きそうだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そのため、やけどの直後は味を強く足して埋め合わせるより、食べやすい温度とやさしい味を選ぶのがおすすめです。\n常温に近いスープ、やわらかい豆腐、ぬるめのおかゆなら、傷んだ舌に強く当たりにくくなります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "回復まで待つのは我慢ではなく、次に生まれる味蕾が働きやすい環境を作ることなんだね。\n水分を取るときにも、氷を直接なめ続けるより、飲み方を工夫したほうがいいの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "水分は常温か少し冷ましたものを、少量ずつ飲むと刺激を抑えやすいです。\n口の中が乾くと傷んだ場所が気になりやすいので、100ミリリットル程度を何回かに分けるように、無理なく潤いを保ってみてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "熱いお茶でやけどしたのに、のどを潤すためまた熱いお茶を飲むのは避けたほうがよさそうだね。\n今日からは一度カップを置いて、温度が落ち着くまで待つ時間を作ってみるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし強い痛みが続く、飲み込みにくい、腫れが大きい、味の変化が2週間以上続く場合は、軽いやけどと決めつけないでください。\n口腔外科や耳鼻咽喉科などに相談すると、別の原因も含めて確認できます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "自分で約10日を数えて待つだけではなく、食べづらさが強いときは診てもらう選択もあるんだね。\n体の更新を信じつつ、無理をしないことが一番の近道なんだと覚えておくよ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話をつなぐなら、熱い物のあと味がぼんやりするのは、味のセンサー周辺が刺激され、約10日前後で続く細胞の交代も関わるからです。\nだから気のせいと片づけず、舌にも休む時間をあげてください。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "昨日の熱いみそ汁が、ただのうっかりではなく、今の舌の小さな更新作業につながっていると思うと見方が変わるね。\n次にふうふうするとき、10日かけて働く小さなインターホンを守る気分になれそう。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜寝る前、今日食べた物が熱すぎなかったか、舌に痛みが残っていないかを少し意識してみてください。\n明日の食事で味を感じるたび、あなたの体では小さなセンサーが交代しながら働き続けています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなるのはなぜかを、脳が最後に手放す感覚から見ていくんだよね。\n寝る直前に経験したことがあるから、布団に入る前から気になってきたよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "感覚のふしぎシリーズでは、あなたが昨日体験した違和感を、毎回ひとつずつ身近な言葉と数字でほどいています。\n面白かったらチャンネル登録よろしくね。毎日1本、次の不思議も一緒に見てほしいな。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "味が消えた",
+      "舌の10日"
+    ],
+    "hook_caption": "味が消える",
+    "subtitle": "熱い食べ物のあと、数日だけ味がぼんやりする理由",
+    "tagline": "舌の小さなセンサーは約10日前後で入れ替わっています"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "実は舌のやけど、味そのものが消えたわけではないんです。",
+      "selected_hook": "えっ、あなたの舌は10日で入れ替わる？",
+      "scores": [
+        {
+          "hook": "えっ、あなたの舌は10日で入れ替わる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 50
+        },
+        {
+          "hook": "あなたの舌、やけどで味覚だけ消えた？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 7,
+            "loop_connect": 5
+          },
+          "total": 47
+        },
+        {
+          "hook": "実は舌のやけど、味そのものが消えたわけではないんです。",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 7,
+            "loop_connect": 5
+          },
+          "total": 37
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        2
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "えっ、あなたの舌は10日で入れ替わる？",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ、そうなんですか!? 熱いみそ汁の翌日、味が薄かった！",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "舌の味蕾は、味を感じる小さなセンサーで約10日前後に入れ替わります。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "へぇ〜、知らなかった！ スマホの保護フィルムを替える感じなんだね。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "しかも熱で表面が傷むと、その交代の途中だけ味が届きにくくなります。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "じゃあ甘い物も塩味も、同じようにぼんやりすることがあるの？",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 6,
+          "text": "だから数日で戻りやすいんです。ただし回復を決める仕組みには、まだ続きがあります。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "熱い物は少し冷まして舌をいたわってみて。感覚のふしぎシリーズも置いてあります、1万人目標で毎日投稿中",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 90,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 3,
+          "text": "ちょっと待って、ここからが驚きなんだけど、舌の味蕾は、味を感じる小さなセンサーで",
+          "reason": "1行55字はテロップとして長すぎる（推奨: 40字以内）"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 8,
+          "text": "熱い物は少し冷まして舌をいたわってみて。感覚のふしぎシリーズも置いてあります、1",
+          "reason": "1行61字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 24,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 3,
+        "relatability": 5,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 66,
+      "optimized_score": 66,
+      "micro_reveals": 3,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.16,
+      "issues": [
+        "25%・50%・75%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "ので応援よろしくね！…実はこれ、最初に言ったことと繋がってる",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 0,
+      "changes": [],
+      "lines_modified": 0
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.412,
+      "similar_to": "なぜあなたは最後の1段だけ踏み外す？99%が知らない0.3秒のズレ",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 3,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "なぜあなたの舌はやけど後だけ味が消える？99%が知らない10日の入れ替わり",
+      "enhanced_title": "💯なぜあなたの舌はやけど後だけ味が消える？99%が知らない10日の入れ替わり",
+      "emoji_added": "💯",
+      "category": "number",
+      "modified": true
+    },
+    "enhanced_title": "💯なぜあなたの舌はやけど後だけ味が消える？99%が知らない10日の入れ替わり"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 6,
+      "bait_text": "コメント欄で正解率チェックしてみて"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "negative",
+        "surprise",
+        "neutral",
+        "neutral",
+        "neutral",
+        "surprise"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "exclaim",
+        "statement",
+        "ellipsis",
+        "statement",
+        "question",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.8
+    },
+    "subscribe_trigger": {
+      "trigger_type": "series_hint",
+      "trigger_text": "この続き、次の動画でもっと深掘りするよ",
+      "position": 6,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 5,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 96,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '知らない', '99%'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "二人称['あなた'](+6)"
+    ]
+  }
+}

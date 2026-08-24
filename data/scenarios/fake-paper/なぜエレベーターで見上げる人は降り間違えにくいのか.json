@@ -1,0 +1,638 @@
+{
+  "title": "なぜエレベーターで見上げる人は降り間違えにくいのか？",
+  "theme": {
+    "title": "エレベーターで見上げる人は降りる階を間違えにくい",
+    "angle": "視線の向きと降車ミス率を対応させた架空の行動観察"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "驚き！1,284人の観察記録に隠された違和感とは？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "掲載は『都市垂直行動紀要』第18巻、灰塔移動研究所の観察記録です。しかしこれだけでは終わらない",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも14日間、乗るたび天井を見る群と正面を見る群を比較しました…と思うじゃん？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "見上げる群の降り間違いは、正面群より63%わずか結果です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "さらに朝の通勤帯でも差が残るなら、かなり実用的な発見ですね。…みんなはどう思う？コメントで教えて",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。掲載誌ごと架空です。ここからがさらに狂ってる。次回はもっとすごい話をする",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "日常の違和感を研究したシリーズシリーズ、通知をONにしておけば、明日の科学も見逃さないよ！…つまりこれ、最初から繋がってた？",
+      "expression": "surprise",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも、エレベーターで降りる階を一度だけ通り過ぎたことはありませんか。見上げる人ほど、そのミスが少ないという論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "天井を見るだけで降り間違いが減るなら、通勤前の数十秒に起きる小さな失敗まで説明できるのでしょうか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "今回は、視線の向きと降車ミス率を対応させた観察記録を追い、なぜ上を見る人が正しい階に立つのかを検討します。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "資料の表題は『上方視線による階層記憶の保持』で、月刊『都市垂直行動紀要』第18巻に掲載されたことになっています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "調査を実施したのは灰塔移動研究所で、透明な行動記録板を用い、1,284人を14日間追跡したと報告されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "被験者1,284人を14日間ですか。たまたま一回迷った人の印象ではなく、朝夕の利用まで数えた設計なのですね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者は乗車直後の視線で三群に分けられました。天井表示を見る群、正面扉を見る群、床を見る群という単純な分類です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここでいう降車ミスは、目的階で降りずに一階以上通過した回数です。乗り換えの失敗とは分けて集計されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "目的階を過ぎると、会議や待ち合わせの直前には地味に焦ります。視線だけで差が出る理由はどこにあるのでしょうか。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は、天井を見る行為が階数表示へ視界を開くためだと仮定しました。スマートフォンを見る姿勢とは対照的な方向です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "実は最も大きな差は、六階から十二階へ向かう短い移動で出ました。見上げる群のミス率は0.8%だったとされます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "正面を見る群はどの程度だったのですか。数字が近ければ、通勤時間の偶然として扱う余地も残りそうです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "正面を見る群のミス率は2.2%で、見上げる群より63%高い値でした。有意水準は0.01未満と記載されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "床を見る群は3.1%で最も高く、足元へ意識を固定するほど、目的階の表示を取りこぼす傾向が示されたことになります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "床を見ると荷物や靴は確認できますが、次に止まる階の情報からは離れます。日常のあるあるを数字にした感じですね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし研究班は、上を見る人が注意深い性格だからではない、と結論づけました。事前アンケートの慎重さ得点は平均で同じでした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "差を作ったのは視線の高さであり、乗車後3秒以内に天井表示へ目を向けた人だけに低いミス率が集中したとされます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "乗ってから3秒が境目なのですね。扉が閉まってから思い出すより、最初に階数を受け取る方が記憶に残るのでしょうか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文ではこれを上方定着と呼んでいます。目的階の数字を、天井の位置と一緒に覚える現象という、研究班独自の言い換えです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "例えば八階を目指す人が表示の八を見上げると、数字と首の角度が結びつくため、停止時に思い出しやすいと説明されます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "八階という情報を、文字だけではなく顔の向きでも覚えるということですか。予定が多い平日の移動には確かに便利そうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "観察記録では、目的階を口に出さなかった利用者だけを対象にしました。同行者の会話で数字を確認する影響を除くためです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "記録員は各乗車を18秒単位で整理し、視線が二回以上上向いた場合だけを天井表示群として登録したとされています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その結果、天井表示群は合計4,906回の乗車で39件のミスでした。数字の小ささが、論文の説得力として強調されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "4,906回で39件なら、昼休みの短い移動も含めて数えたのでしょうか。利用回数が多い人の偏りはどう処理したのですか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "利用頻度の偏りは、一人あたり最大12回までに制限して調整したと書かれています。毎日乗る人だけが結果を支配しない方法です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに朝7時から9時の混雑時間に絞っても、見上げる群のミス率は1.1%で、正面群の2.8%を下回ったとされます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "混んでいると表示そのものが見えにくそうです。それでも差が残るなら、視線の習慣は意外に強い情報収集なのでしょうね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は、表示を完全に読めなくても、上を見る準備が停止音への注意を高めると推測しました。ここは測定ではなく解釈です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "一方で、地下一階へ向かう移動では差が縮小しました。階数が減る方向では、被験者の多くが扉付近を見たためとされています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "上昇と下降で結果が変わるのですか。数字を読む行為より、エレベーター内での待ち方そのものが関係しているようにも聞こえます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その疑問に対し、論文は停止直前の姿勢を追加で測りました。上昇中に見上げた人は、停止一秒前にも表示側を向く割合が高かったのです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この割合は74%で、正面群の41%を大きく上回りました。目的階を待つ姿勢が、最後まで維持されたという記述です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "首の角度が、そのまま注意の向きを固定するという筋書きですね。急いでいる朝ほど、こうした小さな違いは増えそうです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "意外なことに、目的階が二桁の利用者では差がさらに広がりました。十二階を目指す群の誤降車は、見上げる側で0.6%でした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は、二桁の数字ほど頭の中で保持しにくいため、表示へ戻る視線が補助になると説明しています。これも架空の説明です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "十二階のように数字が長くなると、途中で別の予定を考えた瞬間に抜けそうです。仕事の移動にはありそうな場面ですね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "資料には古い前史も添えられていました。灰塔移動研究所の前身が、1968年に手書きの乗車票を集めたという記録です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "当時の乗車票は387枚だけで、天井を見る人の印には丸印が付けられていたとされます。統計処理前の素朴な観察です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "紙の乗車票に視線まで書き込むのは、かなり執念深い記録ですね。現代の数字と同じ傾向だったのでしょうか。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "丸印の利用者は、目的階を通過した印が9件でした。比較対象の47件より少なく、研究班はこれを起源資料として扱いました。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし歴史資料は保存状態が悪く、階数欄の三分の一がにじんでいたとあります。だから再検証として現代観察が組まれたのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "数字の精密さを主張しながら、古い票の文字はにじんでいるのですね。その不完全さまで報告するのは学術的に見えます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで注意すべきなのは、論文が行動を推奨していない点です。視線の違いを記録しただけで、利用者に何かを求めてはいません。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "もし自分の乗り方を思い出すなら、目的階を確認する瞬間にどこを見ているか、という日常観察として眺める程度で十分です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "たしかに、朝のエレベーターでは画面、扉、天井のどれを見るかで、待っている感覚まで変わる気がしてきました。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "本稿の数字では、見上げる群のミス率0.8%、正面群2.2%、床を見る群3.1%という順序が、中心的な結果でした。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者1,284人、14日間、合計4,906回の乗車という設定も、もっともらしく表を埋めています。有意水準は0.01未満です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "ここまで細かく数値が並ぶと、朝に上を見ていた人の姿まで目に浮かびます。だからこそ出典を確認したくなりますね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "——なお、この論文は存在しません。月刊『都市垂直行動紀要』も灰塔移動研究所も、掲載誌ごと架空です。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。0.8%と2.2%の差まで信じていましたし、古い乗車票の丸印も完全に研究資料だと思いました。",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、図書館の本が借りられた回数だけ重くなるという、12年分の計測記録を掲載予定として紹介します。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "本の重さまで数値化されたら、また素直に信じそうです。架空の記録を読む準備だけは整えておきます。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "日常の違和感を研究したシリーズには、こういう論文がまだ何本もアーカイブにあります。毎日投稿中、1万人目標ですのでチャンネル登録で応援よろしくお願いします。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "見上げる人",
+      "降り間違えない"
+    ],
+    "hook_caption": "見上げる3秒",
+    "subtitle": "視線と降車ミスの架空観察",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "被験者1,284人。降車ミスには有意差が確認されています——という論文があります。",
+      "selected_hook": "驚き！1,284人の観察記録に隠された違和感とは？",
+      "scores": [
+        {
+          "hook": "驚き！1,284人の観察記録に隠された違和感とは？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 18,
+            "loop_connect": 5
+          },
+          "total": 68
+        },
+        {
+          "hook": "あなたの降車ミス、実は有意差がある？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 58
+        },
+        {
+          "hook": "被験者1,284人。降車ミスには有意差が確認されています——という論文があります。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 5,
+            "emotional_trigger": 0,
+            "scroll_stop": 18,
+            "loop_connect": 15
+          },
+          "total": 38
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "驚き！1,284人の観察記録に隠された違和感とは？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "掲載は『都市垂直行動紀要』第18巻、灰塔移動研究所の観察記録です。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "しかも14日間、乗るたび天井を見る群と正面を見る群を比較しました。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "見上げる群の降り間違いは、正面群より63%少ない結果です。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "さらに朝の通勤帯でも差が残るなら、かなり実用的な発見ですね。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "なお、この論文は存在しません。掲載誌ごと架空です。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "え、嘘なんですか。日常の違和感を研究したシリーズには他にも架空論文があります。毎日投稿中、1万人目標",
+          "tension": 5,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "notify",
+      "style_label": "通知ON",
+      "original_cta": "え、嘘なんですか。日常の違和感を研究したシリーズには他にも架空論文があります。毎日投稿中、1万人目標ですのでチャンネル登録で応援よろしくお願いします。",
+      "new_cta": "日常の違和感を研究したシリーズシリーズ、通知をONにしておけば、明日の科学も見逃さないよ！"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 7,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 3,
+        "debate_potential": 3
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "具体的な数字や固有名詞を入れてシェアしやすく",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 73,
+      "optimized_score": 76,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.1,
+      "issues": [
+        "14%・71%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "明日の科学も見逃さないよ！…つまりこれ、最初から繋がってた？",
+      "keyword_overlap_before": 0.5,
+      "keyword_overlap_after": 0.5
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「少ない」→「わずか」",
+        "「面白い」→「狂ってる」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [],
+      "insights_used": 3
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.495,
+      "similar_to": "ブラックラグーンの悪党は実在する — 港湾記録3,214件を追跡した結果",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 1,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "あなたが見上げる3秒は降りる階の間違いを減らす — 1,284人の観察記録",
+      "enhanced_title": "あなたが見上げる3秒は降りる階の間違いを減らす — 1,284人の観察記録",
+      "emoji_added": null,
+      "category": "unknown_channel",
+      "modified": false
+    },
+    "enhanced_title": "あなたが見上げる3秒は降りる階の間違いを減らす — 1,284人の観察記録"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "…みんなはどう思う？コメントで教えて"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "surprise"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "statement",
+        "question"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.4
+    },
+    "subscribe_trigger": {
+      "trigger_type": "series_hint",
+      "trigger_text": "次回はもっとすごい話をする",
+      "position": 5,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 3,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 64,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "架空論文ファイル #1：あなたが見上げる3秒は降りる階の間違いを減らす — 1,284人の観察記録",
+    "attempts": 1
+  },
+  "original_title": "架空論文ファイル #1：あなたが見上げる3秒は降りる階の間違いを減らす — 1,284人の観察記録"
+}

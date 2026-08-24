@@ -1,0 +1,344 @@
+{
+  "title": "💰Uber Eats配達員、本当は時給2,000円超えもある収入の実態",
+  "theme": {
+    "title": "ウーバーの給与体系とその実態",
+    "angle": "ウーバーのドライバーの年収と福利厚生をリアルに解説"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "配達員の実態",
+      "fact_main": "Uber時給2,000円超",
+      "fact_sub": "繁忙時間帯の報酬例",
+      "text": "あなたは知ってる？Uber配達員の収入の裏側",
+      "bg_query": "Uber Eats 配達員 自転車 都市",
+      "duration": 4,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "年収400万円超も",
+      "fact_sub": "稼働量次第の推定値",
+      "text": "信じられない年収400万円超も推定されます。ただし、稼働時間と地域で大きく変わります…これ、ヤバすぎる！",
+      "bg_query": "Uber Eats 配達員 バイク 配達",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "報酬は1件300円台",
+      "fact_sub": "距離や需要で変動",
+      "text": "1件300円台から報酬が動きます。忙しい時間ほど単価が上がる仕組みです。…だが、数字の裏にはさらに驚きの事実がある",
+      "bg_query": "Uber Eats 配達 アプリ 画面",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "ボーナス0円",
+      "fact_sub": "雇用契約ではない",
+      "text": "でも本当にヤバいのはこっちで…ボーナスは0円です。数字だけ見れば、かなり良い時給でも賞与はありません。",
+      "bg_query": "Uber Eats 配達員 スマートフォン",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "有給休暇0日",
+      "fact_sub": "個人事業主扱い",
+      "text": "有給休暇は0日です。働かない日の収入は、原則として発生しません。ここからが本当の闇だ",
+      "bg_query": "Uber Eats 配達員 雨の日",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "福利厚生は0社保",
+      "fact_sub": "保険は自分で手配",
+      "text": "会社の社会保険は0です。実はこの裏で、保険料も自分で負担します。ここまで聞いて、あなたならどの企業を選ぶ？",
+      "bg_query": "Uber Eats 配達員 ヘルメット",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "経費は月1万円超",
+      "fact_sub": "車両維持費の推定",
+      "text": "ただし経費は月1万円超が推定されます。売上と手取りは同じではありません。次回はこの企業のライバルの闇に迫る",
+      "bg_query": "Uber Eats 配達用 バイク 駐車",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。…待って、配達員に戻って",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "時給2000円超",
+      "でも保障0円"
+    ],
+    "subtitle": "Uber Eats配達員の収入と待遇",
+    "tagline": "自由の裏にある固定費"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "実は時給2,000円超の裏で、収入保障ゼロが起きています。",
+      "selected_hook": "あなたは知ってる？Uber配達員の収入の裏側",
+      "scores": [
+        {
+          "hook": "あなたは知ってる？Uber配達員の収入の裏側",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 58
+        },
+        {
+          "hook": "実は時給2,000円超の裏で、収入保障ゼロが起きています。",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 18,
+            "loop_connect": 5
+          },
+          "total": 48
+        },
+        {
+          "hook": "えっ、Uber配達員の時給に隠れた実態とは？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 43
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        3
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたは知ってる？Uber配達員の収入の裏側",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "年収400万円超も推定されます。ただし、稼働時間と地域で大きく変わります。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "1件300円台から報酬が動きます。忙しい時間ほど単価が上がる仕組みです。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "ボーナスは0円です。数字だけ見れば、かなり良い時給でも賞与はありません。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "有給休暇は0日です。働かない日の収入は、原則として発生しません。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "会社の社会保険は0です。実はこの裏で、保険料も自分で負担します。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 6,
+          "text": "ただし経費は月1万円超が推定されます。売上と手取りは同じではありません。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 7,
+          "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+          "tension": 0,
+          "is_dead": true
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 4,
+          "text": "でも本当にヤバいのはこっちで…ボーナスは0円です。数字だけ見れば、かなり良い時給",
+          "reason": "1行51字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 26,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 5,
+        "shareability": 7,
+        "debate_potential": 5
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 71,
+      "optimized_score": 70,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.08,
+      "issues": [
+        "25%・50%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "企業の実態シリーズもチェックしてね。…待って、配達員に戻って",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.33
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「年収」→「信じられない年収」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.377,
+      "similar_to": "ソニーグループの年収がヤバい 1118万円とDualSenseの仕事",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 3,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "Uber Eats配達員、本当は時給2,000円超えもある収入の実態",
+      "enhanced_title": "💰Uber Eats配達員、本当は時給2,000円超えもある収入の実態",
+      "emoji_added": "💰",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "💰Uber Eats配達員、本当は時給2,000円超えもある収入の実態"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 5,
+      "bait_text": "ここまで聞いて、あなたならどの企業を選ぶ？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "neutral",
+        "negative",
+        "negative",
+        "surprise",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "exclaim",
+        "statement",
+        "statement",
+        "statement",
+        "question",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "series_hint",
+      "trigger_text": "次回はこの企業のライバルの闇に迫る",
+      "position": 6,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 3,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['本当は'](+12)"
+    ]
+  }
+}

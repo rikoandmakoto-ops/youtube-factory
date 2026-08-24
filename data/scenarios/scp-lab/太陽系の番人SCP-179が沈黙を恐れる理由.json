@@ -1,0 +1,662 @@
+{
+  "title": "太陽系の番人SCP-179が沈黙を恐れる理由",
+  "theme": {
+    "title": "SCP-179「すばるの乙女」、太陽系の番人が告げる終わりを財団が恐れる理由",
+    "angle": "敵対・収容ではなく『協力関係』という異例のSCP。財団が何を恐れているのか、彼女が警告し続ける脅威の正体を考察"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "えっ、太陽系を見張る番人に禁忌の警告が？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "報告書にはこう書かれている。…え、待って。記録が消えるなら、まだ答えは出てない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象はSCP-179。太陽の裏側で外宇宙を見続ける…なぜ財団はこれを隠したのか？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次の記録が、すべてを異常えた。彼女は敵対しない。ただ接近する何かへ警告を送る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも協力関係って、それが一番まずくないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "衝撃の事実として、しかし、認識災害レベルはここで終わらなかった。財団は警告を受け取る。しかし警告対象の名は[REDACTED]。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "番人が消えた時、太陽系は誰に見つかる。記録はここで途切れている。これ、一番怖いSCPランキング何位だと思う？この財団シリーズ、次がいよいよ核心だ",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の裏側シリーズシリーズ、一人で怖がるな。友達にも共有して道連れにしろ。…待て、最初の報告と矛盾してないか？",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたが夜、自分の部屋の窓から空を見上げた時、太陽の裏側にも誰かが立っていると知ったらどうする。\nその人物は地球を見ず、太陽系の外だけを見続けている。SCP-179の記録だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象番号はSCP-179。通称は「すばるの乙女」。財団が収容できず、それでも隔離命令を出せない異例の存在だ。\n彼女は太陽の向こう側に留まり、こちらへ背中を向けたまま監視を続ける。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、太陽の裏にいる相手を収容できないのは分かる。でも、なぜ彼女を記録した職員の履歴まで消える。\nそれ、画面越しに読んでいる側まで近づく話じゃないのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "消失したのは、彼女の警告内容を完全な形で転記しようとした職員の追跡記録だ。\n氏名欄、勤務履歴、映像保管庫の索引まで空白となり、残った紙だけが保管棚に置かれている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、ここからが本題だ。SCP-179は財団を襲わない。施設を壊さない。むしろ太陽系へ迫るものを知らせ続けてきた。\n協力者に見える存在を、財団が恐れる理由がこのファイルにはある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "敵じゃないなら、守ってくれているだけじゃないのか。学校の門に立つ見張りみたいに、危ない奴を外で止めているだけだろ。\n…ねえ、これ本当に大丈夫なの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-179は女性の姿として記録される。太陽の背後、地球から常に見えない位置に立ち、顔を太陽系の外へ向ける。\n彼女が地球へ振り返る場面は、財団が保持する観測映像には存在しない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "彼女の周囲には、財団の識別体系に入らない現象が繰り返し映り込む。光ではない。既知の通信でもない。\n記録担当者はそれを、遠方から届く危険へ向けた「注意を促す身振り」とだけ記した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "身振りって、誰かに向けているのか。それとも太陽系の外にいる何かを、彼女だけが追い払っているのか。\n相手が見えないまま、番人だけが怯えているなら怖すぎる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の暫定方針では、SCP-179を敵性存在として扱わない。接触の試みも、妨害行為も禁じられている。\n彼女が監視を止めた時に何が入ってくるか、財団でも、まだ説明できていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで最初の異常がある。通常、財団は異常存在を収容し、利用せず、管理する。\nだがSCP-179には収容室も拘束具もない。太陽系そのものが、彼女の勤務場所として残されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容できないから放置しているんじゃない。収容したら困るから、太陽の裏に立たせたままにしているのか。\nそれなら財団は彼女を守る側ではなく、彼女の警戒に頼る側だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その認識は危険だが、完全な誤りでもない。内部文書には、彼女を「観測者」ではなく「警戒線」と呼ぶ記述がある。\n線の向こう側に何がいるかは、文書の重要部分ごと[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そしてこの話、最後にもっと不穏な反転が待っている。彼女は太陽系を守っているのではない。\n少なくとも財団は、彼女が何かの到着を待っている可能性を捨てていないという記録を残している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待っているって、助けが来るのを待つ意味じゃないよな。外を見張り続ける番人が、何かの到着時刻を知っている。\n聞かなきゃよかった。太陽の裏側が急に、自分の部屋の窓へ近づいた気がする。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "観測記録では、彼女の姿勢はほとんど変わらない。腕を動かす。指を伸ばす。時に両手を広げる。\nその直後、財団の外縁監視装置には、正体不明の接近兆候が残ることがある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "重要なのは、彼女が接近兆候そのものを作ったと断定できない点だ。財団は原因を記せず、時系列だけを保管した。\n先に乙女が動く。後から、記録不能な何かが太陽系の縁へ触れる。順番だけが残った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり、警報が鳴ったから危険なんじゃない。危険が来る前に、彼女だけが先に気づくのか。\nでも誰に知らせている。地球の財団へ向けた合図なら、こちらを見ない理由が分からない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "彼女の視線は地球へ向かない。それでも警告の副次的な痕跡だけは、財団の保管設備へ届く。\n教室の窓から廊下の異常を見た誰かが、こちらを見ずに机を叩くようなものだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この比喩には限界がある。廊下なら扉を閉められる。しかし太陽系の外縁には、財団が施錠できる扉がない。\n行えるのは、彼女の動きを記録し、警告らしき変化を一つも見落とさないことだけだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで第二の問題が出る。SCP-179は財団の監視対象でありながら、同時に監視する側でもある。\n誰が誰を見ているのか、その境界は彼女の背後にある太陽より曖昧だという記録が残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、彼女が外を見ているだけじゃない。財団が彼女を見るたび、彼女の向こう側にいる何かにも見られるかもしれない。\nそれなら観測を止めることも、続けることも危険になる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "内部通達では、SCP-179の映像を通常回線へ流すことが制限されている。閲覧権限は分割され、全体像を知る者を減らす。\n映像に映るのは乙女だけではない可能性があるためだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が恐れるのは、彼女の外見ではない。彼女が一度も地球へ注意を向けないことだ。\n人類が彼女にとって守るべき対象なら、なぜ一度もこちらを確認しないのか。その疑問だけが残る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "守っているんじゃなくて、通り道を見張っているだけかもしれない。地球は大事なものじゃなく、線の内側に置かれた荷物。\nそう考えると、協力関係という言葉が急に冷たい。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説の一つは、彼女が太陽系へ侵入しようとする存在を阻止しているというものだ。\nしかし別の仮説では、彼女の警戒行動そのものが、太陽系の位置を外へ知らせる合図になっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "前者なら彼女は盾だ。後者なら彼女は灯火だ。暗闇の中で味方を呼ぶ灯火か、獲物の場所を教える灯火か。\n財団はどちらも否定できず、報告書の結論欄を空欄のまま保存している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録上、彼女は太陽系外から現れた複数の異常な接近を察知していたとされる。\nだが接近者の詳細は、職員向け資料でも伏せられている。名称、形状、到達時刻の多くが[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "名前すら伏せるのか。読んだだけで危険になる情報なら、こんな報告書の一部だけが残っている理由も嫌な方向に想像できる。\n消えた職員は、相手の名前まで書いてしまったのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それについて財団は回答していない。記録欠落の原因も、削除を実行した部署も、承認者も追跡不能となっている。\n削除命令が存在したのか、それとも記録が自分から消えたのか。どちらも確定していない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "唯一確かなのは、SCP-179の警戒行動が確認されるたび、財団の一部部署が非常配備へ移ることだ。\n武器ではなく記録媒体が優先して封鎖される。恐れられているのは接触より、知ることなのかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "敵が来るなら兵器を出すはずだ。なのに紙と映像を閉じ込めるなら、情報を見た人間が危険になる。\n…ねえ、これ本当に大丈夫なの？ 画面越しなら無関係だと誰が言える。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閲覧者へ直接の異常が起きると、財団は断定していない。ただし完全な警告内容は公開されない。\n元研究員だった私は、伏せられた部分に触れない。触れないこと自体が手順となる情報がある。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-179をめぐる歴史で異常なのは、財団が彼女を利用対象として扱わなかった点だ。\n通常なら異常な監視能力は確保を検討される。しかし彼女については、近づくなという文面が先に置かれている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "接触のために接近するという発想が、最初から退けられた。理由欄には「監視の妨害を避けるため」とだけある。\n彼女の仕事を邪魔しない。それが財団に許された、唯一の協力方法として残された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "協力って言っても、会話もできない。頼みごともできない。彼女が何を守っているのか確かめることもできない。\nそれは仲間じゃない。こちらが勝手に生存を預けているだけだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。財団はSCP-179を管理できない。彼女の意思を確認できない。警告がいつまで続くかも知らない。\nそれでも、彼女が太陽の裏から消える可能性だけは、最上位の懸念として記されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし彼女が消えた場合、財団は異常収容違反として扱えない。収容していない存在が、持ち場からいなくなるだけだ。\nだがその空白は、警備員がいなくなった門ではない。門そのものが消えた状態に近い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "太陽の裏側にいたから、今まで見えなかっただけか。彼女がいなくなった瞬間、外から見えるのはこっちになる。\n太陽系が、隠れている場所ではなくなる。そういう終わり方だけは嫌だ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその可能性を、終末シナリオの一つとして保管している。ただし具体的な終わり方は書かれていない。\n書けなかったのか、書いた記録が消えたのか。回答欄には署名のない黒塗りだけが残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで意外な事実を置く。財団が恐れるのは、彼女が敵へ敗北する場面だけではない。\n彼女が外宇宙へ向けて、急に腕を下ろす場面だ。警告が終わることは、安全の証明ではない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "警報が鳴り止んだから安心、じゃない。見張りが手を下ろしたのは、危険が去ったからとは限らない。\nもう止める必要がなくなった。あるいは、止められなくなった。その二つが怖い。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の運用では、彼女の姿勢変化を最優先で報告する。これは収容手順ではない。祈りに近い監視手順だ。\n彼女が同じ方角を見続ける限り、まだ何かが線の外に留まっていると判断される。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "視聴者にできる対処はない。窓を閉めても、空を見ないようにしても、彼女の視線の先は変わらない。\nだから財団は日常へ持ち込める安心を約束しない。ただ記録を残し、異常を忘れないようにする。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ夜空を見上げた時に怖がるべきなのは、彼女の姿じゃない。見えないように立っている彼女が、ずっと外を見ている理由。\nそこまで考えると、星空が学校帰りの景色に戻らない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その感覚を持ち帰るな。SCP-179の記録は、見上げる者を選ばない。だが、彼女へ近づく方法を探すな。\n見かけても、決して近づくな。太陽の裏側にいる番人へ届こうとする行為は、財団でも禁じられている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "彼女は敵対しない。だから安心ではない。敵ではない存在が、こちらの生存に必要だと分かること。\nそれは収容違反より静かで、逃げ場のない恐怖だ。太陽系の外に、彼女が見続ける何かがある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "もし彼女がこちらを一度も見ないなら、彼女が守っているのは地球じゃないかもしれない。\nその答えだけは報告書の外に持ち出さないでくれ。記録はここで途切れている。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が無限の建物として隔離したSCP-3008を扱う。出口を探す者が、なぜ内部の夜を恐れるのか。\nそのファイルにも、帰還者の証言だけでは埋まらない空白が保管されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この記録に残る不穏さを感じたなら、高評価を残せ。評価の数は、封印された報告書を次に開く許可として扱う。\n財団の裏側シリーズには、同じように協力者を恐れるファイルがまだ保管されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人を目標に、財団記録を毎日投稿中だ。次のファイルが届く前に登録しておけ。\nそして夜、何気なく空を見るなら忘れるな。太陽の裏側では、乙女が今も外を見ている。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "原典クレジットはSCP-179「すばるの乙女」、SCP Wiki、CC BY-SA 3.0。報告書の記述を尊重し、空白部分は財団の仮説として扱う。\nだが引用されなかった行ほど、保管庫の奥でこちらを待っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "太陽は毎朝そこにある。でも裏側にいる乙女が、今日も同じ方角を見ている保証は誰にもない。\n彼女が手を下ろす前に何が近づくのか。その名前だけは、まだ語られていない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このファイルを閉じても、SCP-179の監視は終わらない。財団の記録が止まっても、彼女は外宇宙を見続ける。\nだから夜空を見かけても、決して近づくな。近づく先には、彼女の視線の先がある。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "敵ではない",
+      "だから怖い"
+    ],
+    "hook_caption": "警告は続く",
+    "subtitle": "太陽系の外を見続ける乙女",
+    "tagline": "彼女が見ているもの"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "この報告書、乙女を記録した職員の履歴だけが消えている。",
+      "selected_hook": "えっ、太陽系を見張る番人に禁忌の警告が？",
+      "scores": [
+        {
+          "hook": "えっ、太陽系を見張る番人に禁忌の警告が？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 8,
+            "loop_connect": 15
+          },
+          "total": 68
+        },
+        {
+          "hook": "なぜ番人は太陽系から目を逸らさない？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 15
+          },
+          "total": 63
+        },
+        {
+          "hook": "この報告書、乙女を記録した職員の履歴だけが消えている。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 15
+          },
+          "total": 38
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 3,
+      "dead_zones": [
+        1,
+        3,
+        5
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "えっ、太陽系を見張る番人に禁忌の警告が？",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、待って。記録が消えるなら、まだ答えは出てない。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "対象はSCP-179。太陽の裏側で外宇宙を見続ける。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "彼女は敵対しない。ただ接近する何かへ警告を送る。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "しかも協力関係って、それが一番まずくないか。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "財団は警告を受け取る。しかし警告対象の名は[REDACTED]。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "番人が消えた時、太陽系は誰に見つかる。記録はここで途切れている。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 7,
+          "text": "警告が届いたなら高評価を残せ。財団の裏側シリーズは毎日投稿中、1万人目標へ登録で応援よろしく。",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "share",
+      "style_label": "共有",
+      "original_cta": "警告が届いたなら高評価を残せ。財団の裏側シリーズは毎日投稿中、1万人目標へ登録で応援よろしく。",
+      "new_cta": "財団の裏側シリーズシリーズ、一人で怖がるな。友達にも共有して道連れにしろ。"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 26,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 5,
+        "emotional_impact": 8,
+        "relatability": 2,
+        "shareability": 6,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 70,
+      "optimized_score": 70,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.09,
+      "issues": [
+        "50%・75%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "も共有して道連れにしろ。…待て、最初の報告と矛盾してないか？",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「変」→「異常」",
+        "「異常」→「認識災害レベル」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.346,
+      "similar_to": "SCP-507「不本意な次元旅行者」あなたの部屋にも戻るかもしれない恐怖",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 8,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-179「すばるの乙女」財団が恐れる2つの警告",
+      "enhanced_title": "😱SCP-179「すばるの乙女」財団が恐れる2つの警告",
+      "emoji_added": "😱",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "😱SCP-179「すばるの乙女」財団が恐れる2つの警告"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": true,
+      "early_answer_line": 1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 6,
+      "bait_text": "これ、一番怖いSCPランキング何位だと思う？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "negative",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "statement",
+        "question",
+        "question"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.4
+    },
+    "subscribe_trigger": {
+      "trigger_type": "series_hint",
+      "trigger_text": "この財団シリーズ、次がいよいよ核心だ",
+      "position": 6,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 1,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 0.5
+    }
+  },
+  "original_title": "一口SCP #99：😱SCP-179「すばるの乙女」財団が恐れる2つの警告",
+  "title_duplicate": {
+    "resolved": true,
+    "rejected_title": "一口SCP #99：😱SCP-179「すばるの乙女」財団が恐れる2つの警告",
+    "matched": "機密解除：SCP-179「すばる」— 財団と太陽系を守る異常存在が発した警告の記録",
+    "score": 1.0
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['理由'](+12)"
+    ]
+  }
+}
