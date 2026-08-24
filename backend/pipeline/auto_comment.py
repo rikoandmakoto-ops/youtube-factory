@@ -85,6 +85,111 @@ def is_enabled(channel_id: str, channel_dict: Optional[Dict[str, Any]] = None) -
 
 DEFAULT_QUESTION = "これ知ってた？コメントで教えて！"
 
+# チャンネル別のエンゲージメント質問テンプレート。
+# 競合分析の結果、具体的な二択/参加型の質問がコメント率を2〜3倍にする。
+CHANNEL_QUESTIONS: Dict[str, List[str]] = {
+    "daily-science": [
+        "これ知ってた？知ってた人は『知ってた』ってコメントして！",
+        "他にも気になる日常の謎があったらコメントで教えて！",
+        "これ友達に話したくなった？ → 保存しとくと便利だよ！",
+    ],
+    "scp-lab": [
+        "このSCPのオブジェクトクラス、何だと思う？コメントで予想してみて！",
+        "一番怖いと思ったSCPをコメントで教えて！",
+        "次に解説してほしいSCPナンバーがあったらコメントして！",
+    ],
+    "2ch-matome": [
+        "お前らならどうする？コメントで教えてくれw",
+        "似たような経験ある奴いる？w コメントで聞かせてくれ！",
+        "正直ワロタって人は『草』ってコメントしてくれw",
+    ],
+    "company-facts": [
+        "この企業で働いたことある人いますか？コメントで教えてください！",
+        "もっとヤバい企業知ってたらコメントで教えて！",
+        "次にどの企業を取り上げてほしい？コメントで教えて！",
+    ],
+    "pokemon-lab": [
+        "この事実知ってた？知ってた人はコメントで教えて！",
+        "他にも知りたいポケモンの裏設定があったらコメントして！",
+        "推しポケモンをコメントで教えて！",
+    ],
+    "yokai-watch": [
+        "この妖怪、あなたの地域にも伝承ある？コメントで教えて！",
+        "一番怖いと思った妖怪をコメントで教えて！",
+        "次に調査してほしい妖怪・都市伝説があったらコメントして！",
+    ],
+    "akashic-librarian": [
+        "この話、どう解釈する？コメントで教えてほしい。",
+        "次に開くべき記録があったらコメントで教えて。",
+    ],
+}
+
+# チャンネル別の議論誘発コメント。
+# 競合分析で「あえて議論を呼ぶコメントがエンゲージメントを2〜3倍にする」ことが確認された。
+# 直接的な誤情報ではなく、「あなたはどっち派？」型の二択/意見募集で安全に議論を誘発する。
+CHANNEL_DEBATE_COMMENTS: Dict[str, List[str]] = {
+    "daily-science": [
+        "個人的に一番驚いたのはこの数字…みんなは予想できた？",
+        "これ、周りの人に話したら何人知ってるか試してみて！",
+        "朝型の人と夜型の人で体験が違うらしい。あなたはどっち？",
+    ],
+    "scp-lab": [
+        "このSCP、SafeとEuclidどっちだと思う？理由もコメントして",
+        "正直このSCPより怖いやつ知ってる人いたらコメントで教えて…",
+        "もし自分がDクラスに配属されたら、このSCPの実験担当できる？",
+    ],
+    "2ch-matome": [
+        "正直>>1が悪いと思うやつ、手あげてみてくれw",
+        "似たような経験あるやつ絶対おるやろ。正直に言えやw",
+        "ワイはこのスレ、嘘やと思うんやけどお前らはどう思う？w",
+    ],
+    "company-facts": [
+        "この年収、高いと思う？低いと思う？正直にコメントで教えて",
+        "実際にこの企業で働いてる人・働いてた人いたらリアルを教えて！",
+        "転職するならこの企業アリ？ナシ？理由も聞きたい",
+    ],
+    "pokemon-lab": [
+        "このポケモンの種族値、予想できた人いる？コメントで教えて！",
+        "ぶっちゃけこのポケモン、パーティに入れる？入れない？",
+        "この設定知ってた人と知らなかった人、どっちが多いか気になる！",
+    ],
+    "yokai-watch": [
+        "この妖怪の元ネタ、知ってた人いる？正直にコメントして！",
+        "ゲーム版と原典、どっちの姿が好き？コメントで教えて",
+        "あなたの地域にも似た伝承ない？知ってたら教えて！",
+    ],
+    "akashic-librarian": [
+        "この記録、あなたはどう解釈する？",
+        "似た体験をしたことがある人がいたら、聞かせてほしい。",
+    ],
+}
+
+
+def build_debate_comment_text(
+    channel_id: str,
+    *,
+    title: str = "",
+    channel_dict: Optional[Dict[str, Any]] = None,
+) -> str:
+    """議論誘発コメントを組み立てる。2つ目のコメントとして投稿する。"""
+    import random
+    pool = CHANNEL_DEBATE_COMMENTS.get(channel_id, [])
+    if not pool:
+        return ""
+    question = random.choice(pool)
+    return f"🔥 {question}"
+
+
+def _pick_question(channel_id: str, cfg: Dict[str, Any]) -> str:
+    """チャンネル別の質問をランダムに選択。設定値があればそちら優先。"""
+    custom = cfg.get("question")
+    if custom:
+        return str(custom).strip()
+
+    import random
+    pool = CHANNEL_QUESTIONS.get(channel_id, [DEFAULT_QUESTION])
+    return random.choice(pool) if pool else DEFAULT_QUESTION
+
 
 def build_comment_text(
     channel_id: str,
@@ -106,7 +211,7 @@ def build_comment_text(
 
     sub_url = _desc_blocks.subscribe_url(channel_id) or ""
     ch_url = _desc_blocks.channel_url(channel_id) or ""
-    question = str(cfg.get("question") or DEFAULT_QUESTION).strip()
+    question = _pick_question(channel_id, cfg)
 
     template = cfg.get("template")
     if isinstance(template, str) and template.strip():
@@ -228,27 +333,30 @@ def enqueue(
     text: str,
     *,
     due_at: Optional[str] = None,
+    debate_text: str = "",
 ) -> None:
     """公開時刻まで待ってから投稿するコメントを保留キューに積む。
 
     Args:
         due_at: RFC3339 UTC ("2026-08-19T10:00:00Z")。未指定なら即時対象。
+        debate_text: 議論誘発コメント。メインコメント投稿成功後に続けて投稿する。
     """
     with _lock:
         items = _read_pending()
         # 同じ動画への二重登録を防ぐ
         if any(i.get("video_id") == video_id for i in items):
             return
-        items.append(
-            {
-                "channel_id": channel_id,
-                "video_id": video_id,
-                "text": text,
-                "due_at": due_at,
-                "attempts": 0,
-                "queued_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-            }
-        )
+        entry: Dict[str, Any] = {
+            "channel_id": channel_id,
+            "video_id": video_id,
+            "text": text,
+            "due_at": due_at,
+            "attempts": 0,
+            "queued_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        }
+        if debate_text:
+            entry["debate_text"] = debate_text
+        items.append(entry)
         _write_pending(items)
     print(f"🗒️ auto_comment queued: {channel_id}/{video_id} (due {due_at or 'now'})")
 
@@ -290,6 +398,16 @@ def flush_pending() -> Dict[str, Any]:
         if res.get("ok"):
             posted += 1
             print(f"💬 auto_comment posted: {item.get('channel_id')}/{item.get('video_id')}")
+            # 議論誘発コメントも続けて投稿
+            debate = (item.get("debate_text") or "").strip()
+            if debate:
+                import time
+                time.sleep(3)  # YouTube API のレート制限回避
+                post_comment(
+                    str(item.get("channel_id") or ""),
+                    str(item.get("video_id") or ""),
+                    debate,
+                )
             continue
 
         item["attempts"] = int(item.get("attempts") or 0) + 1
@@ -348,17 +466,24 @@ def post_for_video(
     if not text:
         return {"ok": False, "skipped": "empty_text"}
 
+    debate_text = build_debate_comment_text(channel_id, title=title, channel_dict=cd)
+
     due = _parse_due(publish_at)
     if due is not None and due.timestamp() > datetime.now(timezone.utc).timestamp():
-        enqueue(channel_id, video_id, text, due_at=publish_at)
+        enqueue(channel_id, video_id, text, due_at=publish_at, debate_text=debate_text)
         return {"ok": True, "queued": True, "due_at": publish_at}
 
     res = post_comment(channel_id, video_id, text)
     if res.get("ok"):
         print(f"💬 auto_comment posted: {channel_id}/{video_id}")
+        # 2つ目のコメント（議論誘発）を投稿
+        if debate_text:
+            import time
+            time.sleep(3)  # YouTube API のレート制限回避
+            post_comment(channel_id, video_id, debate_text)
         return res
     if res.get("retryable"):
-        enqueue(channel_id, video_id, text, due_at=None)
+        enqueue(channel_id, video_id, text, due_at=None, debate_text=debate_text)
         return {"ok": True, "queued": True, "error": res.get("error")}
     print(f"⚠️ auto_comment failed {channel_id}/{video_id}: {res.get('error')}")
     return res
