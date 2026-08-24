@@ -1598,6 +1598,51 @@ def _start_theme_queue_scheduler():
     print(f"🕒 ThemeQueue scheduler started (every {THEME_QUEUE_CHECK_INTERVAL_MIN} min)")
 
 
+# ── Round 6 API ──
+
+@app.get("/api/round6/cta-history/{channel_id}")
+async def round6_cta_history(channel_id: str):
+    """CTA ローテーション履歴を取得する。"""
+    try:
+        from pipeline.cta_rotator import _load_history, _recent_styles
+        return {
+            "channel_id": channel_id,
+            "history": _load_history(channel_id),
+            "recent_styles": _recent_styles(channel_id, n=10),
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/round6/viral-score")
+async def round6_viral_score(request: Request):
+    """シナリオのバイラルスコアを計算する（プレビュー用）。"""
+    body = await request.json()
+    try:
+        from pipeline.viral_score_gate import score_viral_potential
+        return score_viral_potential(
+            body.get("short_scenario", []),
+            title=body.get("title", ""),
+            channel_id=body.get("channel_id", ""),
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/round6/mute-check")
+async def round6_mute_check(request: Request):
+    """シナリオのミュート安全性をチェックする（プレビュー用）。"""
+    body = await request.json()
+    try:
+        from pipeline.mute_safe_checker import check_mute_safe
+        return check_mute_safe(
+            body.get("short_scenario", []),
+            channel_id=body.get("channel_id", ""),
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @app.get("/health")
 async def health():
     """Health check endpoint.
