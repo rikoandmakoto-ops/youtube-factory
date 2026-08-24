@@ -64,13 +64,25 @@ backend/static/
 data/channels/*/
 # ショート単体実行などのアドホック結果ダンプ
 backend/short_only_results_*.json
+# PDCA スクリプトが書き換え前に残す使い捨てスナップショット。
+# 元ファイル（data/channels/*.json 等）は追跡しているので履歴はそちらで追える。
+data/**/*.bak_*
+!data/youtube_tokens.db.bak_*
 
 # ===== Large root-level samples / temp media =====
 *.b64
 *.mp4
+*.wav
+*.mp3
 sample_*.png
 wrinkly_fingers_*.png
 thumbnail_selfcontained.html
+# 動画生成の最終成果物置き場（1本数十MB。GitHubには載せない）
+output/
 
 # ===== Misc =====
 *.pem
+# LibreOffice / Excel のロックファイル
+.~lock.*#
+# 疎通確認用の使い捨てファイル
+_sync_test.txt
