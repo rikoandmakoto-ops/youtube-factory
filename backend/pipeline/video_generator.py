@@ -3551,9 +3551,13 @@ def generate_monologue_short(scenario, title, output_prefix, bg_video_path=None,
             fx_cfg = None
 
     for i, entry in enumerate(scenario):
-        if "chapter_title" in entry:
-            continue  # Skip chapter titles in shorts
-        tx = entry["text"]
+        # 章タイトル専用行（text を持たない）だけを飛ばす。
+        # monologue のショート用プロンプトは各行に "chapter_title": null を
+        # 必ず付けて返すため、キーの有無で判定すると全行が捨てられ、
+        # エンドカードだけの 1.6 秒動画が出来上がる。
+        tx = (entry.get("text") or "").strip()
+        if not tx:
+            continue
         wav = os.path.join(tmp_dir, f"ms_{i:03d}.wav")
         synthesize(tx, sid, wav, use_vv, speed=speed)
         dur = max(get_audio_duration(wav), 1.0) + 0.3
@@ -4503,6 +4507,104 @@ def _thumb_draw_badge(draw, text, x, y, font, bg_color=(255, 200, 0), text_color
     draw.text((x, y), text, font=font, fill=text_color, anchor="mm")
 
 
+# ショートサムネの文字は 1080px 幅に対して固定サイズで描いていたため、
+# 10文字を超える行が左右にはみ出して画面外で切れていた。
+# 2026-08-23 の実測: 生成済み thumb_info 535 件のうち
+#   hook_lines が 10文字超  = 320件 (60%)
+#   subtitle   が 17文字超  = 231件 (43%)
+#   tagline    が 19文字超  = 195件 (36%)
+# ＝ 大半のサムネで見出しが読めない状態だった。以下の 2 ヘルパで
+# 「幅に収まるまで縮める → それでも無理なら折り返す」を行う。
+_THUMB_WRAP_BREAKS = "、。！？!?・…　 「」『』（）()—-"
+# 禁則処理（行頭・行末に置いてはいけない文字）
+_THUMB_NO_LINE_START = "、。，．！？!?」』）)】〉》〕”’…ー々ゝゞぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮ"
+_THUMB_NO_LINE_END = "「『（(【〈《〔“‘"
+
+def _thumb_text_width(font, text):
+    bbox = font.getbbox(text or "")
+    return bbox[2] - bbox[0]
+
+
+def _thumb_wrap_line(font, text, max_width, max_lines=2):
+    """日本語1行を max_width に収まるよう最大 max_lines 行へ折り返す。
+
+    句読点・助詞の直後を優先して切る（単純な等分割だと語の途中で切れる）。
+    max_lines に収まらない場合はそのまま溢れた行数で返す（呼び出し側が
+    フォントを縮めて再試行する）。
+    """
+    text = text or ""
+    if not text or _thumb_text_width(font, text) <= max_width:
+        return [text]
+    lines = []
+    rest = text
+    while rest and len(lines) < max_lines:
+        # 収まる最大文字数を求める
+        lo, hi = 1, len(rest)
+        fit = 1
+        while lo <= hi:
+            mid = (lo + hi) // 2
+            if _thumb_text_width(font, rest[:mid]) <= max_width:
+                fit = mid
+                lo = mid + 1
+            else:
+                hi = mid - 1
+        if fit >= len(rest):
+            lines.append(rest)
+            rest = ""
+            break
+        # fit 位置から少し戻って自然な区切りを探す
+        cut = fit
+        for i in range(fit, max(fit - 6, 0), -1):
+            if i < len(rest) and rest[i - 1] in _THUMB_WRAP_BREAKS:
+                cut = i
+                break
+        # 禁則処理: 行頭に来てはいけない文字は前の行に押し込む
+        while cut < len(rest) and rest[cut] in _THUMB_NO_LINE_START:
+            cut += 1
+        # 行末に来てはいけない文字（開き括弧）は次の行へ送る
+        while cut > 1 and rest[cut - 1] in _THUMB_NO_LINE_END:
+            cut -= 1
+        lines.append(rest[:cut].strip())
+        rest = rest[cut:].strip()
+    if rest:
+        lines.append(rest)
+    return [ln for ln in lines if ln]
+
+
+def _thumb_fit_lines(font_path, lines, max_width, base_size, min_size,
+                     max_total_lines=None, step=4):
+    """行群が max_width に収まる最大フォントを返す。
+
+    Returns: (font, 描画する行リスト)
+
+    base_size から step ずつ縮め、折り返し後の総行数が max_total_lines 以内に
+    なる最大サイズを採用する。min_size まで縮めても収まらなければ min_size で
+    折り返した結果を返す（切れるよりは小さく全部見えた方がマシ）。
+    """
+    lines = [str(ln) for ln in (lines or []) if str(ln).strip()]
+    if not lines:
+        return ImageFont.truetype(font_path, base_size), []
+    if max_total_lines is None:
+        max_total_lines = len(lines) + 1
+    best = None
+    size = base_size
+    while size >= min_size:
+        font = ImageFont.truetype(font_path, size)
+        wrapped = []
+        for ln in lines:
+            wrapped.extend(_thumb_wrap_line(font, ln, max_width))
+        if all(_thumb_text_width(font, w) <= max_width for w in wrapped) \
+                and len(wrapped) <= max_total_lines:
+            return font, wrapped
+        best = (font, wrapped)
+        size -= step
+    font = ImageFont.truetype(font_path, min_size)
+    wrapped = []
+    for ln in lines:
+        wrapped.extend(_thumb_wrap_line(font, ln, max_width, max_lines=3))
+    return font, wrapped
+
+
 def _thumb_scatter_dots(img, count=35):
     """散りばめた小ドット（ピンク/紫系パーティクル）"""
     import random
@@ -4558,11 +4660,15 @@ def generate_thumbnail(title, prefix, out_dir, bg_video_path=None, thumb_info=No
         "/System/Library/Fonts/ヒラギノ角ゴシック W9.ttc",
         "/System/Library/Fonts/ヒラギノ角ゴシック W8.ttc",
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc",
     ]
     font_paths_medium = [
         "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc",
         "/System/Library/Fonts/ヒラギノ角ゴシック W5.ttc",
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc",
     ]
     font_path_bold = next((fp for fp in font_paths_bold if Path(fp).exists()), None)
     font_path_medium = next((fp for fp in font_paths_medium if Path(fp).exists()), font_path_bold)
@@ -4684,8 +4790,13 @@ def generate_thumbnail(title, prefix, out_dir, bg_video_path=None, thumb_info=No
     return out
 
 
-def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None):
-    """Generate a vertical (9:16) thumbnail for YouTube Shorts."""
+def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
+                             channel_dict=None, char_config=None):
+    """Generate a vertical (9:16) thumbnail for YouTube Shorts.
+
+    channel_dict / char_config を渡すとチャンネル別の配色・バッジ・キャラを使う。
+    渡さない場合は従来通り daily-science 相当の既定値で描画する（後方互換）。
+    """
     SW, SH = 1080, 1920
 
     # Default thumb_info
@@ -4695,16 +4806,41 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None):
     subtitle = thumb_info.get("subtitle", title)
     tagline = thumb_info.get("tagline", "")
 
+    # ---- チャンネル別パレット（未指定は従来の既定値） ----
+    _tt = (channel_dict or {}).get("thumbnail_template") or {}
+
+    def _rgb(value, fallback):
+        try:
+            if isinstance(value, (list, tuple)) and len(value) >= 3:
+                return tuple(int(v) for v in value[:3])
+        except Exception:
+            pass
+        return fallback
+
+    badge_text = _tt.get("badge_text") or "ゆっくり解説"
+    badge_rgb = _rgb(_tt.get("badge_color"), (220, 40, 40))
+    hook_rgb = _rgb(_tt.get("hook_color"), (255, 255, 50))
+    sub_rgb = _rgb(_tt.get("subtitle_color"), (80, 220, 255))
+    _bg = _tt.get("short_bg_gradient") or {}
+    bg_top = _rgb(_bg.get("top"), (55, 0, 120))
+    bg_bottom = _rgb(_bg.get("bottom"), (10, 5, 150))
+    orb_rgb = _rgb(_bg.get("orb"), (120, 40, 240))
+    dot_rgb = _rgb(_bg.get("dot"), (255, 80, 180))
+
     # System fonts
     font_paths_bold = [
         "/System/Library/Fonts/ヒラギノ角ゴシック W9.ttc",
         "/System/Library/Fonts/ヒラギノ角ゴシック W8.ttc",
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc",
     ]
     font_paths_medium = [
         "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc",
         "/System/Library/Fonts/ヒラギノ角ゴシック W5.ttc",
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc",
     ]
     font_path_bold = next((fp for fp in font_paths_bold if Path(fp).exists()), None)
     font_path_medium = next((fp for fp in font_paths_medium if Path(fp).exists()), font_path_bold)
@@ -4715,9 +4851,9 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None):
     pixels = []
     for y in range(SH):
         ry = y / SH
-        r = int(55 * (1 - ry) + 10 * ry)
-        g = int(0 * (1 - ry) + 5 * ry)
-        b = int(120 * (1 - ry) + 150 * ry)
+        r = int(bg_top[0] * (1 - ry) + bg_bottom[0] * ry)
+        g = int(bg_top[1] * (1 - ry) + bg_bottom[1] * ry)
+        b = int(bg_top[2] * (1 - ry) + bg_bottom[2] * ry)
         pixels.extend([(r, g, b)] * SW)
     canvas.putdata(pixels)
     canvas = canvas.convert("RGBA")
@@ -4725,13 +4861,14 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None):
     # Neon glow orbs (vertical layout)
     overlay = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
     draw_glow = ImageDraw.Draw(overlay)
+    _o = orb_rgb
     orbs = [
-        (150, 200, 200, (160, 30, 220, 50)),
-        (800, 100, 220, (30, 80, 240, 45)),
-        (540, 900, 280, (80, 20, 200, 35)),
-        (900, 600, 160, (120, 40, 240, 45)),
-        (100, 1400, 180, (140, 10, 200, 40)),
-        (600, 1600, 200, (60, 100, 255, 30)),
+        (150, 200, 200, _o + (50,)),
+        (800, 100, 220, _o + (45,)),
+        (540, 900, 280, _o + (35,)),
+        (900, 600, 160, _o + (45,)),
+        (100, 1400, 180, _o + (40,)),
+        (600, 1600, 200, _o + (30,)),
     ]
     for cx, cy, r, color in orbs:
         draw_glow.ellipse([cx - r, cy - r, cx + r, cy + r], fill=color)
@@ -4742,114 +4879,152 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None):
     random.seed(99)
     dot_overlay = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
     dot_draw = ImageDraw.Draw(dot_overlay)
-    colors = [(255, 80, 180, 140), (200, 60, 255, 120), (120, 80, 255, 100), (255, 120, 200, 110)]
+    colors = [dot_rgb + (140,), orb_rgb + (120,), dot_rgb + (100,), orb_rgb + (110,)]
     for _ in range(40):
         dx, dy = random.randint(0, SW), random.randint(0, SH)
         dr = random.randint(3, 8)
         dot_draw.ellipse([dx-dr, dy-dr, dx+dr, dy+dr], fill=random.choice(colors))
     canvas = Image.alpha_composite(canvas, dot_overlay)
 
-    # 2. Characters (medium size, lower area)
-    for name, cfg in CHAR_CONFIG.items():
-        char_dir = ASSETS_DIR / "characters" / ("riko" if name == "理子" else "makoto")
+    # 2. Characters (lower area). char_config があればチャンネル固有キャラを使う。
+    _CHAR_DIR_MAP = {"理子": "riko", "真": "makoto", "あかり": "akari", "ゆうた": "yuuta",
+                     "シロ": "shiro", "クロ": "kuro"}
+    _chars = char_config or CHAR_CONFIG
+    for name, cfg in _chars.items():
+        if not isinstance(cfg, dict) or not cfg.get("side"):
+            continue
+        dir_name = cfg.get("dir") or cfg.get("slug") or _CHAR_DIR_MAP.get(name) or str(name).lower()
+        char_dir = ASSETS_DIR / "characters" / dir_name
         if not char_dir.exists():
-            char_dir = ASSETS_DIR / ("riko" if name == "理子" else "makoto")
-        expr = "happy" if name == "理子" else "surprise"
+            char_dir = ASSETS_DIR / dir_name
+        expr = "happy" if cfg.get("side") == "left" else "surprise"
         sprite_path = char_dir / f"{expr}.png"
         if not sprite_path.exists():
             sprite_path = char_dir / "normal.png"
         if sprite_path.exists():
             sprite = Image.open(str(sprite_path)).convert("RGBA")
-            s_h = int(SH * 0.35)
-            s_w = int(sprite.width * s_h / sprite.height)
+            # 透明余白を落としてから拡縮する（素材ごとに余白量が違うため）。
+            # riko/makoto のように全面にごく薄いアルファが乗った素材があり、
+            # 素の getbbox() では余白を全く切れない。閾値を掛けてから判定する。
+            try:
+                alpha = sprite.getchannel("A")
+                solid = alpha.point(lambda v: 255 if v > 40 else 0)
+                sprite.putalpha(Image.composite(alpha, Image.new("L", sprite.size, 0), solid))
+                bbox = solid.getbbox()
+                if bbox:
+                    sprite = sprite.crop(bbox)
+            except Exception:
+                pass
+            # 素材のアスペクト比が 612x408（横長）〜1024x1024（正方）とバラバラなので
+            # 高さ基準の一律スケールだと横幅が画面を超えて2体が重なる。
+            # 幅・高さの両方に上限を設けて内接させる。
+            box_w, box_h = int(SW * 0.48), int(SH * 0.34)
+            scale = min(box_w / sprite.width, box_h / sprite.height)
+            s_w, s_h = max(1, int(sprite.width * scale)), max(1, int(sprite.height * scale))
             sprite = sprite.resize((s_w, s_h), Image.LANCZOS)
             if cfg["side"] == "left":
-                canvas.paste(sprite, (-int(s_w * 0.05), SH - s_h), sprite)
+                canvas.paste(sprite, (int(SW * 0.01), SH - s_h - 40), sprite)
             else:
-                canvas.paste(sprite, (SW - s_w + int(s_w * 0.05), SH - s_h), sprite)
+                canvas.paste(sprite, (SW - s_w - int(SW * 0.01), SH - s_h - 40), sprite)
 
-    # 3. Dotted circle
-    canvas = _thumb_dotted_circle(canvas, SW // 2, 280, radius=55, dot_count=28)
+    # 3. （中身の無い点線円は 08-20 のレビュー指摘により削除。文字を上に詰める）
 
     draw = ImageDraw.Draw(canvas)
     cx = SW // 2
 
     if use_system_font:
-        font_title = ImageFont.truetype(font_path_bold, 80)
-        font_sub = ImageFont.truetype(font_path_medium, 44)
-        font_badge = ImageFont.truetype(font_path_medium, 30)
-        font_tag = ImageFont.truetype(font_path_medium, 28)
+        # --- 幅に合わせて自動縮小・折り返しする（2026-08-23）---
+        # 従来はフォント固定（見出し100px）で描いており、10文字を超える
+        # hook_line は 1080px の外へはみ出して両端が切れていた。実測で
+        # 生成済み 535 サムネの 60% が該当。以下は「はみ出さない」ことを
+        # 最優先にしつつ、収まる範囲で最大の文字サイズを選ぶ。
+        _st = _tt.get("short_text") or {}
+        margin = int(_st.get("side_margin", 60))
+        max_w = SW - margin * 2
 
-        y = 370
+        font_title, hook_draw_lines = _thumb_fit_lines(
+            font_path_bold, hook_lines, max_w,
+            int(_st.get("hook_font_size", 104)),
+            int(_st.get("hook_min_font_size", 60)),
+            max_total_lines=int(_st.get("hook_max_lines", 3)),
+        )
+        font_sub, sub_draw_lines = _thumb_fit_lines(
+            font_path_medium, [subtitle] if subtitle else [], max_w,
+            int(_st.get("subtitle_font_size", 58)),
+            int(_st.get("subtitle_min_font_size", 40)),
+            max_total_lines=2,
+        )
+        font_tag, tag_draw_lines = _thumb_fit_lines(
+            font_path_medium, [tagline] if tagline else [], max_w - 40,
+            int(_st.get("tagline_font_size", 52)),
+            int(_st.get("tagline_min_font_size", 36)),
+            max_total_lines=2,
+        )
+        font_badge = ImageFont.truetype(font_path_medium, 38)
 
-        # "ゆっくり解説" badge
-        _thumb_draw_badge(draw, "ゆっくり解説", cx, y, font_badge,
-                          bg_color=(220, 40, 40), text_color=(255, 255, 255), radius=6)
-        y += 60
+        # --- ブロック全体の高さを測ってから縦位置を決める ---
+        # キャラ立ち絵は下から SH*0.34 を占めるので、文字は上端 240px 〜
+        # キャラ上端の少し上（1180px）の帯に「centered」で置く。従来は
+        # y=320 固定で、下に 400px 以上の死んだ余白ができていた。
+        hook_h = int(font_title.size * 1.18)
+        sub_h = int(font_sub.size * 1.24)
+        tag_h = int(font_tag.size * 1.32)
+        block_h = 72  # badge
+        block_h += hook_h * len(hook_draw_lines)
+        if sub_draw_lines:
+            block_h += 26 + sub_h * len(sub_draw_lines)
+        if tag_draw_lines:
+            block_h += 18 + tag_h * len(tag_draw_lines)
+
+        band_top, band_bottom = 240, 1180
+        y = band_top + max(0, (band_bottom - band_top - block_h) // 2)
+
+        # チャンネルバッジ
+        _thumb_draw_badge(draw, badge_text, cx, y, font_badge,
+                          bg_color=badge_rgb, text_color=(255, 255, 255), radius=6)
+        y += 72
 
         # Hook lines
-        for line in hook_lines:
-            bb = font_title.getbbox(line)
-            line_h = bb[3] - bb[1]
-            y += 10
-            _thumb_draw_text_with_outline(draw, line, cx, y + line_h // 2, font_title,
-                                          fill=(255, 255, 50), outline_color=(0, 0, 0), outline_width=8)
-            y += line_h
+        for line in hook_draw_lines:
+            _thumb_draw_text_with_outline(draw, line, cx, y + hook_h // 2, font_title,
+                                          fill=hook_rgb, outline_color=(0, 0, 0), outline_width=9)
+            y += hook_h
 
         # Subtitle
-        y += 20
-        bb_sub = font_sub.getbbox(subtitle)
-        sub_h = bb_sub[3] - bb_sub[1]
-        _thumb_draw_text_with_outline(draw, subtitle, cx, y + sub_h // 2, font_sub,
-                                      fill=(80, 220, 255), outline_color=(0, 0, 40), outline_width=5)
-        y += sub_h
+        if sub_draw_lines:
+            y += 26
+            for line in sub_draw_lines:
+                _thumb_draw_text_with_outline(draw, line, cx, y + sub_h // 2, font_sub,
+                                              fill=sub_rgb, outline_color=(0, 0, 40), outline_width=5)
+                y += sub_h
 
-        # Tagline
-        if tagline:
+        # Tagline（黄色の帯付き）
+        if tag_draw_lines:
             y += 18
-            bb_tag = font_tag.getbbox(tagline)
-            tag_h = bb_tag[3] - bb_tag[1]
-            tag_w = bb_tag[2] - bb_tag[0]
-            # Wrap if too wide
-            if tag_w > SW - 80:
-                mid = len(tagline) // 2
-                for i in range(mid - 3, mid + 4):
-                    if i < len(tagline) and tagline[i] in "！？、。のはがをに":
-                        line1, line2 = tagline[:i+1], tagline[i+1:]
-                        for tl in [line1, line2]:
-                            bb_tl = font_tag.getbbox(tl)
-                            tl_h = bb_tl[3] - bb_tl[1]
-                            tl_w = bb_tl[2] - bb_tl[0]
-                            draw.rounded_rectangle([cx - tl_w//2 - 16, y - 4, cx + tl_w//2 + 16, y + tl_h + 8],
-                                                   radius=6, fill=(200, 160, 0, 180))
-                            draw.text((cx, y + tl_h // 2 + 2), tl, font=font_tag, fill=(255, 255, 255), anchor="mm")
-                            y += tl_h + 10
-                        break
-                else:
-                    draw.rounded_rectangle([cx - tag_w//2 - 16, y - 4, cx + tag_w//2 + 16, y + tag_h + 8],
-                                           radius=6, fill=(200, 160, 0, 180))
-                    draw.text((cx, y + tag_h // 2 + 2), tagline, font=font_tag, fill=(255, 255, 255), anchor="mm")
-            else:
-                draw.rounded_rectangle([cx - tag_w//2 - 16, y - 4, cx + tag_w//2 + 16, y + tag_h + 8],
-                                       radius=6, fill=(200, 160, 0, 180))
-                draw.text((cx, y + tag_h // 2 + 2), tagline, font=font_tag, fill=(255, 255, 255), anchor="mm")
+            for line in tag_draw_lines:
+                tl_w = _thumb_text_width(font_tag, line)
+                draw.rounded_rectangle(
+                    [cx - tl_w // 2 - 16, y, cx + tl_w // 2 + 16, y + tag_h],
+                    radius=6, fill=(200, 160, 0, 180))
+                draw.text((cx, y + tag_h // 2), line, font=font_tag,
+                          fill=(255, 255, 255), anchor="mm")
+                y += tag_h + 8
     else:
         # Fallback: composite text
         draw = ImageDraw.Draw(canvas)
-        y = 400
-        badge_text = "ゆっくり解説"
-        bw = measure_composite_text(draw, badge_text, 30)
-        draw.rounded_rectangle([(cx - bw//2 - 12), y - 6, (cx + bw//2 + 12), y + 36], radius=6, fill=(220, 40, 40))
-        draw_composite_text(draw, (cx - bw//2, y), badge_text, 30, (255, 255, 255))
-        y += 60
+        y = 340
+        bw = measure_composite_text(draw, badge_text, 38)
+        draw.rounded_rectangle([(cx - bw//2 - 12), y - 6, (cx + bw//2 + 12), y + 44], radius=6, fill=badge_rgb)
+        draw_composite_text(draw, (cx - bw//2, y), badge_text, 38, (255, 255, 255))
+        y += 72
         for line in hook_lines:
-            tw = measure_composite_text(draw, line, 72)
-            draw_composite_text(draw, ((SW - tw)//2, y), line, 72, (255, 255, 50),
-                                stroke_fill=(0, 0, 0), stroke_width=7)
-            y += 90
-        y += 10
-        sw = measure_composite_text(draw, subtitle, 44)
-        draw_composite_text(draw, ((SW - sw)//2, y), subtitle, 44, (80, 220, 255),
+            tw = measure_composite_text(draw, line, 92)
+            draw_composite_text(draw, ((SW - tw)//2, y), line, 92, hook_rgb,
+                                stroke_fill=(0, 0, 0), stroke_width=8)
+            y += 112
+        y += 12
+        sw = measure_composite_text(draw, subtitle, 56)
+        draw_composite_text(draw, ((SW - sw)//2, y), subtitle, 56, sub_rgb,
                             stroke_fill=(0, 0, 40), stroke_width=4)
 
     out = str(Path(out_dir) / f"{prefix}_ショート_サムネイル.png")
@@ -5018,10 +5193,25 @@ def _build_description_template(channel_dict, title, channel_concept):
     main_hashtags = tmpl.get("main_hashtags") or default_hashtag_str
     short_hashtags = tmpl.get("short_hashtags") or f"#shorts {default_hashtag_str}"
 
-    # YouTube はハッシュタグが 15 個を超えると全て無視し、表示されるのは先頭3個だけ。
-    # 設定側が多めに書いていても 3〜5 個に正規化してから使う。
-    main_hashtags = _desc_blocks.normalize_hashtags(main_hashtags)
-    short_hashtags = _desc_blocks.normalize_hashtags(short_hashtags, required=["shorts"])
+    # 動的ハッシュタグ最適化: タイトルとトレンドに基づいてハッシュタグを生成。
+    # hashtag_optimizer が利用可能で channel_id があれば動的版を使い、
+    # なければ従来の静的正規化にフォールバックする。
+    _channel_id = (channel_dict or {}).get("id") or ""
+    try:
+        from pipeline import hashtag_optimizer as _ho
+        if _channel_id:
+            main_hashtags = _ho.optimize_hashtags(_channel_id, title, is_short=False)
+            short_hashtags = "#shorts " + _ho.optimize_hashtags(
+                _channel_id, title, is_short=True, max_tags=4
+            )
+        else:
+            raise ImportError("no channel_id")
+    except Exception:
+        # フォールバック: 従来の静的正規化
+        # YouTube はハッシュタグが 15 個を超えると全て無視し、表示されるのは先頭3個だけ。
+        # 設定側が多めに書いていても 3〜5 個に正規化してから使う。
+        main_hashtags = _desc_blocks.normalize_hashtags(main_hashtags)
+        short_hashtags = _desc_blocks.normalize_hashtags(short_hashtags, required=["shorts"])
 
     return {
         "main_intro": main_intro,
@@ -5048,7 +5238,12 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
 
     hook = ""
     if thumb_info and thumb_info.get("hook_lines"):
-        hook = "".join(thumb_info["hook_lines"])
+        # hook_lines はサムネで2段に割るための断片なので、そのまま連結すると
+        # 説明文の1行目が「読めない写本植物がない」のように繋がって読めなくなる。
+        # 全角スペースで区切り、断片同士の境目を残す。
+        hook = "　".join(
+            str(s).strip() for s in thumb_info["hook_lines"] if str(s).strip()
+        )
     tagline = ""
     if thumb_info and thumb_info.get("tagline"):
         tagline = thumb_info["tagline"]
@@ -5436,10 +5631,20 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
         )
         if gen_type in ("short", "both"):
             _ck()
-            results["short_thumbnail"] = generate_short_thumbnail(title, prefix, str(out_dir), thumb_info=thumb_info)
+            results["short_thumbnail"] = generate_short_thumbnail(
+                title, prefix, str(out_dir), thumb_info=thumb_info,
+                channel_dict=channel_dict, char_config=char_config)
 
         # 2. Videos
         if gen_type in ("short", "both"):
+            # ショート尺ガード: 推定尺を検証し、範囲外なら警告（strict=False で通す）
+            try:
+                from pipeline import shorts_length_guard as _slg
+                _slg_result = _slg.guard(channel_id or "", short_scenario, strict=False)
+                results["shorts_length_check"] = _slg_result
+            except Exception as _slg_err:
+                print(f"⚠️ shorts_length_guard failed (continuing): {_slg_err}")
+
             _ck()
             results["short"] = generate_short_video(short_scenario, title, prefix, bg_video_path,
                                                      out_dir=str(out_dir), bg_type=bg_type, speed=speed,
