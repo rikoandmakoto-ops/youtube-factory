@@ -1,26 +1,101 @@
 {
   "id": "clip-lab",
   "name": "ゆっくり解説 切り抜きラボ",
-  "concept": "既存の長尺ゆっくり解説（daily-science / scp-lab）から『一番おいしい1シーン』だけを切り出して縦型ショートにする切り抜きチャンネル。1本30〜59秒、冒頭2秒で結論、字幕は原寸より2倍大きく焼き込む。本編への導線を必ず貼り、母体チャンネルの再生数も伸ばす。",
+  "concept": "『切り抜きOK』を明示している配信者の長尺配信から『一番おいしい1シーン』だけを切り出して縦型ショートにする切り抜きチャンネル。第1ソースはひろゆき。1本30〜59秒、冒頭2秒で結論、字幕は元の発話をそのまま大きく焼き込む。説明欄に元動画URLと元チャンネル名を必ず載せ、本編へ送客する。",
   "style": "clip",
   "youtube_channel_id": "UCbWZ5quEFE2VpHPh5TGyPCw",
   "image_mode": "generate",
   "clip": {
     "engine": "local",
+    "_engine_comment": "外部素材は区間が決まってから該当箇所だけ落とす方式なので、元動画のフルファイルを前提にする noimos(deliver_source=upload) は使えない。noimos 設定は将来のために残してあるが、外部素材で使うなら deliver_source を url にすること。",
     "fallback_engine": "local",
-    "sources": [
-      {
-        "channel_id": "scp-lab",
-        "weight": 2,
-        "credit_name": "SCPラボ"
+    "sources": [],
+    "_sources_comment": "自社チャンネルの切り抜きは 2026-08-21 に終了。方針変更前の設定は scp-lab(weight 2) / daily-science(weight 3) だった。自社在庫に戻すならここに channel_id を戻せば外部素材と併用できる。",
+    "external_sources": {
+      "enabled": true,
+      "_comment": "外部素材の調達。有効化する前に acquisition.py 冒頭の『ライセンスゲート』と『許諾文言ゲート』を必ず読むこと。標準ライセンスの動画を切り抜くのは著作権侵害なので、clippable になるのは (a) CC BY (b) allowlist 登録チャンネルのうち、その動画の説明欄に permission_phrases が実在する回、のみ。急上昇やニュースは映像に触れず theme_only 扱い。",
+      "region_code": "JP",
+      "max_candidates": 25,
+      "videos_per_channel": 100,
+      "_videos_per_channel_comment": "許諾文言のある回は全体のごく一部。実測 2026-08-24: 直近50本のうち ひろゆき側で clippable になったのは3本だけだった（短尺回が min_duration_sec で落ちる分もある）。playlistItems は 50件/1クォータなので100本でも2クォータ。在庫を確保する側に振る。",
+      "prepare_limit": 3,
+      "_prepare_limit_comment": "字幕まで取りに行く本数の上限。1回の実行で使うのは1本なので増やしても遅くなるだけ。",
+      "min_duration_sec": 180,
+      "max_duration_sec": 25200,
+      "_max_duration_comment": "ひろゆきの生配信は2〜6時間ある。既定の3600秒のままだと候補が全部落ちる（7時間=25200秒に設定）。",
+      "download_dir": "~/Movies/yf_clip_downloads",
+      "_download_dir_comment": "~/Desktop の下には絶対に置かないこと。launchd 配下では TCC で ffmpeg の書き込みが無言でハングし、autopilot だけが静かに死ぬ。",
+      "max_height": 1080,
+      "player_clients": [
+        "android",
+        "web"
+      ],
+      "_player_clients_comment": "2026-08-21 時点の yt-dlp 2025.10.14 では既定の web クライアントが『The page needs to be reloaded.』で失敗する。android なら通る。yt-dlp を更新したら web だけに戻してよい。",
+      "subtitle_langs": [
+        "ja-orig",
+        "ja"
+      ],
+      "source_crop_bottom_ratio": 0,
+      "_crop_comment": "外部動画に『下部の焼き込み字幕帯』は無いので切り落とさない（自社ゆっくり動画は 0.22 で切っていた）。",
+      "trending": {
+        "enabled": false,
+        "category_ids": [
+          "28",
+          "24"
+        ],
+        "use_as": "theme_only"
       },
-      {
-        "channel_id": "daily-science",
-        "weight": 3,
-        "credit_name": "デイリーサイエンス"
-      }
-    ],
-    "clips_per_video": 3,
+      "creative_commons": {
+        "enabled": false,
+        "queries": [
+          "科学 解説",
+          "宇宙 ドキュメンタリー",
+          "歴史 解説"
+        ],
+        "use_as": "clippable"
+      },
+      "allowlist_channels": [
+        {
+          "channel_id": "UC0yQ2h4gQXmVUFWZSqlMVOA",
+          "name": "ひろゆき, hiroyuki",
+          "credit_name": "ひろゆき, hiroyuki",
+          "weight": 5,
+          "_weight_comment": "第1ソース。2026-08-24 の方針でひろゆきを主軸に固定した（岡田斗司夫は在庫切れ時のフォールバックとして weight 1 に落としてある）。",
+          "enabled": true,
+          "permission_phrases": [
+            "切り抜き用にガジェ通クリエイターベータベース",
+            "切り抜き用にガジェ通クリエイターデータベース"
+          ],
+          "permission_note": "本人チャンネルの動画説明欄が切り抜き制作者向けに素材データベース(ガジェ通クリエイターデータベース)へ誘導している回のみを対象にする。2026-08-21 に直近25本を確認し、該当は4本。文言の無い回は同じチャンネルでも切り抜かない。※これは『黙認・推奨』の状況証拠であって、書面での許諾条件（収益化可否・クレジット表記義務）を確認したものではない。運用前に gcd.getnews.jp の条件を確認すること。",
+          "permission_source_url": "https://gcd.getnews.jp/portfolio/hiroyuki",
+          "permission_checked_at": "2026-08-21",
+          "exclude_title_patterns": [
+            "VS|ＶＳ|vs\\.",
+            "討論|対談|対決",
+            "ゲスト",
+            "【.*(エレン|恋愛病院|語る夜).*】",
+            "と語る",
+            "参戦"
+          ],
+          "_exclude_title_patterns_comment": "content_policy.avoid の『ゲストの発言が主役の部分（ゲスト側の許諾が別途必要）』を機械的に効かせるためのタイトル除外。自動字幕には話者情報が無いので、区間単位で『今喋っているのがひろゆき本人かゲストか』は判定できない。回ごと落とすのが唯一の確実な手段。実測 2026-08-24: naVkgtFmRvg（西村ゆか同席回）から選ばれた区間は本人ではなくゲストの発言だった。ソロ配信（雑談・人生相談回）だけを残す。"
+        },
+        {
+          "channel_id": "UC0FFHRF1mytLDhs6nxqGIQg",
+          "name": "岡田斗司夫",
+          "credit_name": "岡田斗司夫",
+          "weight": 1,
+          "_weight_comment": "フォールバック専用。ひろゆき側の許諾済み在庫が尽きた日に autopilot を落とさないために残してある。権利面ではこちらの方が堅い（許諾が文言として明示されている）ので、無効化ではなく減量にとどめている。",
+          "enabled": true,
+          "permission_phrases": [
+            "この動画の切り抜きを黙認します"
+          ],
+          "permission_note": "説明欄に『この動画の切り抜きを黙認します』と明記されている回のみ対象。ひろゆきと違い許諾が文言として明示されているので、このチャンネルが権利面では最も堅い。2026-08-21 に直近20本を確認し、19本が該当。詳細条件は説明欄からリンクされた解説動画にある。",
+          "permission_source_url": "https://www.youtube.com/watch?v=z4c9vOSMpwg",
+          "permission_checked_at": "2026-08-21"
+        }
+      ]
+    },
+    "clips_per_video": 5,
     "target_duration_sec": 50,
     "min_duration_sec": 30,
     "max_duration_sec": 59,
@@ -30,23 +105,44 @@
       "script_weight": 0.5,
       "exclude_head_sec": 8,
       "exclude_tail_sec": 15,
-      "min_gap_sec": 30
+      "min_gap_sec": 30,
+      "min_speech_ratio": 0.72,
+      "max_line_gap_sec": 2.5,
+      "_speech_gate_comment": "自動字幕由来の素材だけに効く無音ガード（自社素材では無効）。字幕から起こした行は沈黙を含まないので、これが無いと『冒頭3秒喋って26秒無音』のような区間が最高スコアで選ばれる（実測 2026-08-21）。min_speech_ratio=窓の尺に占める発話の割合の下限、max_line_gap_sec=窓内で許す最大の無音。"
+    },
+    "visual_guard": {
+      "enabled": true,
+      "_comment": "区間の映像を検査して静止画（画面共有・資料・マンガ）の回を落とす。無音ガードが『発話が無い区間』を弾くのに対し、これは『発話はあるが映像が他人の著作物』を弾く。実測 2026-08-24: ひろゆき『左ききのエレン』回で発話最高スコアの区間が30秒間ずっと原作マンガの画面共有だった。許諾は配信者本人の配信に対するものなので、この手の区間を公開すると許諾の範囲外になる。落とされた区間は予備の区間に自動で差し替わる。",
+      "max_static_ratio": 0.7,
+      "min_median_diff": 0.5,
+      "static_diff_threshold": 1.0,
+      "_threshold_comment": "同一配信・同一画質の9区間で実測した値: 良い区間の静止率は最悪でも0.23（中央値2.30）、マンガ画面共有は1.00（中央値0.02）。閾値0.7は両者のちょうど間ではなく、悪側に寄せて『明らかな静止画だけ』を落とす設定。"
     },
     "noimos": {
       "workspace_id": "cmsnzc4ed032j01s6dxpwfrdo",
       "cli_bin": "noimosai",
       "timeout_sec": 900,
       "prompt_template": "以下のYouTube長尺動画から、エンゲージメントが最も高くなる縦型ショート（9:16・{target_sec}秒以内）を{clips}本切り抜いてください。\n\n動画URL: {source_url}\nタイトル: {source_title}\n\n条件:\n- 冒頭2秒で『結論・驚き』が来るように頭出しする\n- 日本語の大きな字幕を焼き込む\n- 被写体（左右のキャラクター）を追従してクロップせず、上部に16:9のまま配置し下に字幕帯を置く構成にする\n- 完成したMP4のダウンロードURLを必ず返す",
-      "mode": "browser",
+      "mode": "api",
+      "deliver_source": "upload",
+      "region": "",
+      "api_endpoint": "",
+      "request_timeout_sec": 120,
       "base_url": "https://app.noimosai.com",
       "workspace_url": "https://app.noimosai.com/workspaces/cmsnzc4ed032j01s6dxpwfrdo",
       "headless": true,
       "nav_timeout_sec": 120,
-      "agent_wait_sec": 900,
+      "agent_wait_sec": 1800,
       "poll_interval_sec": 5,
       "storage_state": "~/.youtube-factory/noimos_session.json",
       "selectors": {}
-    }
+    },
+    "output_dir": "~/Movies/yf_clips",
+    "source_roots": [
+      "~/Movies/yf_clip_sources",
+      "~/Desktop/動画出力用"
+    ],
+    "_clips_per_video_comment": "1本の元動画から取る上限。3 だと ひろゆき側の在庫（3本 × 3 = 9本）が1週間で尽きて 岡田斗司夫にフォールバックし続ける。元配信は2〜6時間あり、5本取っても総尺の1%未満。区間同士は segment_selection.min_gap_sec=30 で離してある。"
   },
   "layout_spec": {
     "canvas": [
@@ -57,24 +153,25 @@
     "source_crop_bottom_ratio": 0.22
   },
   "voice_style": {
-    "tone": "元動画の音声をそのまま使うため生成音声なし。テキスト（フック/CTA）だけがこのチャンネルの声。",
+    "tone": "元配信の音声をそのまま使うため生成音声なし。テキスト（フック/CTA）だけがこのチャンネルの声。",
     "forbidden": [],
     "style_rules": [
       "フック文は13文字以内×2行まで。読み切れない長さにしない。",
-      "元動画のキャラクターと口調を変えない（切り抜きなので改変しない）。",
+      "元配信者の発言・口調を変えない（切り抜きなので改変しない）。",
+      "フック文は発言の要約に留め、本人が言っていない断定を足さない。",
       "CTAは『続きは本編で』の一点に絞る。"
     ]
   },
   "characters": {},
   "publish_settings": {
-    "auto_publish": false,
+    "auto_publish": true,
     "default_privacy": "public",
     "publish_targets": [
       "youtube"
     ],
     "auto_comment": {
       "enabled": true,
-      "question": "続きが気になった人はコメントで教えて！フル解説も出してるよ"
+      "question": "続きが気になった人は概要欄の本編へ！切り抜いてほしい回もコメントで教えてね"
     },
     "playlists": {
       "enabled": true,
@@ -96,10 +193,11 @@
   },
   "description_template": {
     "short_intro": "▼ この切り抜きの本編はこちら\n{source_url}\n\n{source_title}\n（{credit_name} より切り抜き）",
-    "short_hashtags": "#shorts #ゆっくり解説 #切り抜き #雑学",
+    "short_hashtags": "#shorts #切り抜き #名場面",
     "omit_fullvideo_cta": true,
-    "main_hashtags": "#ゆっくり解説 #切り抜き #雑学",
-    "lead_template": "『{title}』のおいしい場面を{channel}が切り抜きでお届け。"
+    "main_hashtags": "#切り抜き #名場面",
+    "lead_template": "『{title}』のおいしい場面を{channel}が切り抜きでお届け。",
+    "_hashtags_comment": "固定ハッシュタグに配信者名を入れない（ひろゆき回に #岡田斗司夫 が付くなど、出典と食い違う）。配信者名は short_intro の {credit_name} で動的に入る。"
   },
   "thumbnail_template": {
     "badge_text": "切り抜き",
@@ -119,7 +217,7 @@
       60
     ],
     "bg_tone": "dark",
-    "style_hint": "元動画のピーク時フレームをそのまま使い、上に太字フックを乗せる。作り込まない（切り抜きらしさを残す）。"
+    "style_hint": "元動画のピーク時フレームをそのまま使い、上に太字フックを乗せる。作り込まない（切り抜きらしさを残す）。元配信者の顔が写るので、加工・合成で別人に見せるような編集はしない。"
   },
   "defaults": {
     "speed": 1,
@@ -128,9 +226,8 @@
     "use_illustrations": false,
     "hashtags": [
       "#shorts",
-      "#ゆっくり解説",
       "#切り抜き",
-      "#雑学"
+      "#名場面"
     ],
     "category": "24",
     "short_title_hashtags": "#shorts #切り抜き",
@@ -148,37 +245,44 @@
     "cta_position": "end",
     "cta_style": "本編誘導",
     "guidelines": [
-      "切り抜き元は自社チャンネルの動画に限定する（他者コンテンツは切り抜かない）",
+      "切り抜き元は『切り抜きOK』を明示している配信者に限定する（allowlist 登録 かつ その動画の説明欄に許諾文言があること）",
+      "許諾文言は動画ごとに確認する。同じチャンネルでもゲスト回など文言の無い回は切り抜かない",
       "元動画のURLとチャンネル名を説明欄に必ず記載する",
       "文脈を反転させるような切り取り方（誤解を生む編集）をしない",
-      "字幕は元の発話をそのまま使い、言い換え・改変をしない"
+      "字幕は元の発話をそのまま使い、言い換え・改変をしない",
+      "元配信者から削除・停止の申し出があれば即座に取り下げ、allowlist の enabled を false にする"
     ],
     "avoid": [
-      "他チャンネルの動画の無断切り抜き",
+      "許諾を明示していないチャンネルの切り抜き",
+      "許諾文言のない回の切り抜き（チャンネル単位の許諾を回単位に拡大解釈しない）",
+      "急上昇・ニュース映像の切り抜き（テーマの参考にとどめる）",
+      "発言者の主張と逆の印象を与える切り取り",
       "オチだけを抜き出して本編の価値を消す編集",
       "元動画にない主張の字幕付け"
     ]
   },
   "theme_priority": {
-    "label": "元動画の中で最も引きの強いシーン",
+    "label": "元配信の中で最も引きの強い発言",
     "categories": [
-      "驚きの数字・統計が出るシーン（最優先）",
-      "常識がひっくり返る種明かしのシーン",
-      "『実は〜だった』の結論提示シーン",
-      "キャラクターが強く驚く・ツッコむリアクションシーン"
+      "質問に対して一言で断言している場面（最優先）",
+      "世間の常識・通説を否定している場面",
+      "具体的な数字や実体験が出る場面",
+      "本人の経験談・失敗談で説得力が跳ねる場面"
     ],
     "good_examples": [
-      "『実は99%の人が知らない』と切り出す部分",
-      "具体的な数字（○○%、○○倍）が提示される部分",
-      "通説を否定して真実を提示する部分"
+      "相談に対して結論から言い切っている部分",
+      "『それって〜ですよね』と前提を崩している部分",
+      "具体的な金額・年数・割合が提示される部分"
     ],
     "avoid_categories": [
-      "導入の挨拶・チャンネル紹介",
-      "まとめ・エンディングのCTA部分",
-      "前後の文脈がないと意味が通らない部分"
+      "冒頭の挨拶・スパチャ読み上げ",
+      "エンディングの告知・宣伝部分",
+      "前後の文脈がないと意味が通らない部分",
+      "特定個人への攻撃・名誉毀損になりうる発言",
+      "ゲストの発言が主役の部分（ゲスト側の許諾が別途必要）"
     ],
-    "title_style": "元動画のタイトルをそのまま使わず、切り抜いたシーンの結論だけを20〜28文字で言い切る。疑問形より断定形。",
-    "viral_hooks": "意外な数字 / 常識の否定 / 一言オチ / 強いリアクション",
+    "title_style": "元動画のタイトルをそのまま使わず、切り抜いたシーンの結論だけを20〜28文字で言い切る。疑問形より断定形。発言者が言っていない主張をタイトルにしない。",
+    "viral_hooks": "一言で断言 / 常識の否定 / 意外な数字 / 経験談",
     "title_power_words": [
       "切り抜き",
       "名場面"
@@ -233,18 +337,17 @@
       "channel_id": "",
       "default_tags": [
         "切り抜き",
-        "ゆっくり解説",
-        "雑学",
-        "SCP",
-        "科学",
-        "shorts",
         "切り抜き動画",
-        "ゆっくり解説切り抜き",
-        "雑学切り抜き"
+        "shorts",
+        "名場面",
+        "論破",
+        "人生相談",
+        "雑談"
       ],
       "default_category": "24",
       "privacy_status": "public",
-      "upload_schedule": null
+      "upload_schedule": null,
+      "_tags_comment": "配信者名（ひろゆき/岡田斗司夫）は入れない。allowlist が複数ある以上、固定タグに名前を書くと出典と一致しない回が必ず出る。"
     },
     "effects": {
       "enabled": true,
@@ -288,46 +391,37 @@
           "hour": 17,
           "minute": 45,
           "days_of_week": [
+            0,
             1,
             2,
             3,
             4,
-            5
-          ]
-        },
-        {
-          "hour": 19,
-          "minute": 45,
-          "days_of_week": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ]
-        },
-        {
-          "hour": 12,
-          "minute": 45,
-          "days_of_week": [
-            0,
-            6
-          ]
-        },
-        {
-          "hour": 14,
-          "minute": 45,
-          "days_of_week": [
-            0,
+            5,
             6
           ]
         }
-      ]
+      ],
+      "_times_comment": "運用ルール『ショートのみ・1日1本・チャンネルごとの固定スロット』に合わせて毎日17:45の1枠に統一。凍結前は平日2枠＋休日2枠あり、許諾済み在庫（ひろゆきで直近50本中4〜8本 × clips_per_video 3）を数日で食い潰す設定だった。"
     },
     "duration_minutes": 1,
     "gen_type": "clip",
-    "theme_queue": [],
-    "publish_lead_minutes": 0
+    "publish_lead_minutes": 0,
+    "theme_queue": [
+      {
+        "id": "485e9076",
+        "title": "夫を殺したはずなのに…その真相は？",
+        "angle": "夫を殺したはずの女性の心理と法医学的視点からの解説。",
+        "priority": "high",
+        "source": "trend_scanner"
+      },
+      {
+        "id": "e953e062",
+        "title": "h3ロケットの技術革新を解説！",
+        "angle": "最新の宇宙技術がもたらす未来の可能性。"
+      }
+    ],
+    "_enabled_comment": "2026-08-24 に再開。凍結時の理由（theme_queue 未作成・実績0件）は gen_type=short のチャンネルの話で、gen_type=clip のこのチャンネルには当てはまらなかった。clip 系は theme_queue も台本生成も通らず clip_factory を直接叩く（api_channel_autopilot._run_clip_autopilot）。凍結前の 08-21〜08-23 に実際にひろゆき切り抜き4本が投稿済み。",
+    "_theme_queue_comment": "gen_type=clip では未使用（台本生成を通らず clip_factory が直接切り抜く）。凍結前は daily-science 由来の科学テーマが15件残っていて、切り抜きチャンネルの運用者を混乱させるだけだったので 2026-08-24 に空にした。切り抜き元の選定は clip.external_sources の許諾ゲート → segment_selection が担う。"
   },
   "short_series_name": "切り抜きラボ",
   "main_title_prefix": ""
