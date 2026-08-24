@@ -15,6 +15,7 @@ import json
 import os
 import random
 import re
+import shutil
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -29,6 +30,22 @@ STATE_PATH = PROJECT_ROOT / "data" / "analytics" / "clip_state.json"
 # video_generator.OUTPUT_BASE と同じ場所。env で差し替え可能にしておく
 OUTPUT_BASE = Path(os.environ.get("VIDEO_OUTPUT_BASE") or (Path.home() / "Desktop" / "動画出力用"))
 
+# TCC を避けるためのミラー置き場。~/Movies は Desktop / Documents / Downloads と
+# 違って TCC の保護対象ではないので、launchd 下の backend からも読める。
+# `run_clip_channel.py --mirror` が OUTPUT_BASE からハードリンクを張る。
+MIRROR_BASE = Path(os.environ.get("CLIP_SOURCE_MIRROR")
+                   or (Path.home() / "Movies" / "yf_clip_sources"))
+
+#: 素材を探す順番。読めるミラーを先に見る
+DEFAULT_SOURCE_ROOTS = [MIRROR_BASE, OUTPUT_BASE]
+
+
+def _safe_is_dir(path: Path) -> bool:
+    try:
+        return path.is_dir()
+    except OSError:
+        return False
+
 # 長尺 mp4 のファイル名パターン（プレフィックスは prefix 依存なので後方一致で拾う）
 MAIN_SUFFIXES = ("_メイン.mp4",)
 SHORT_MARKERS = ("ショート", "short")
@@ -36,18 +53,47 @@ SHORT_MARKERS = ("ショート", "short")
 
 @dataclass
 class SourceVideo:
-    """切り抜き元の1本。"""
+    """切り抜き元の1本。
+
+    自社動画と外部動画（許諾済みチャンネル）の両方を同じ形で表す。違いは3点で、
+    どれも「外部は動画本体が手元に無い」ことから来ている:
+
+      1. `timings` — 自社は台本＋シーン検出で行タイムラインを復元するが、外部は
+         YouTube 字幕から先に作ってあるのでそれをそのまま持たせる。
+      2. `materializer` — 外部は2〜6時間の配信なので丸ごと落とせない。区間が
+         決まってから「その区間だけ」落とす関数をここに差す。
+      3. `crop_bottom_ratio` — 自社（ゆっくり）は下部の焼き込み字幕を切り落とすが、
+         外部動画にその帯は無いので切ってはいけない（顔が欠ける）。
+    """
 
     source_channel_id: str
     title: str
-    video_path: Path
+    video_path: Optional[Path]
     scenario: Dict[str, Any]
     duration: float
     youtube_video_id: Optional[str] = None
     used_segments: List[Dict[str, Any]] = field(default_factory=list)
 
+    #: 外部素材かどうか。retention 取得や下部クロップの有無が変わる
+    is_external: bool = False
+    #: 事前に確定している行タイムライン（外部素材＝字幕由来）
+    timings: Optional[List[Any]] = None
+    #: 説明欄に出すクレジット名。外部は元チャンネル名
+    credit_name: Optional[str] = None
+    #: 出典表示（CC BY の帰属表示義務にも使う）
+    attribution: str = ""
+    #: 元動画の下部を切り落とす比率。None ならチャンネル既定
+    crop_bottom_ratio: Optional[float] = None
+    #: 区間を指定すると (ファイル, そのファイルの0秒が元動画の何秒か) を返す関数
+    materializer: Optional[Any] = None
+    #: 許諾判定の記録（監査用）
+    permission: Dict[str, Any] = field(default_factory=dict)
+
     @property
     def key(self) -> str:
+        # 外部素材はタイトルが被りうるので video_id を鍵にする
+        if self.is_external and self.youtube_video_id:
+            return f"{self.source_channel_id}::{self.youtube_video_id}"
         return f"{self.source_channel_id}::{self.title}"
 
     @property
@@ -63,15 +109,31 @@ class SourceVideo:
             return f"https://youtu.be/{self.youtube_video_id}"
         return None
 
+    def materialize(self, start: float, end: float) -> Tuple[Path, float]:
+        """切り抜く区間の映像を手元に用意する。
+
+        Returns:
+            (ファイルパス, オフセット秒)。オフセットは「そのファイルの 0 秒が
+            元動画の何秒に当たるか」。自社動画は丸ごと手元にあるので 0.0。
+        """
+        if self.materializer is not None:
+            return self.materializer(start, end)
+        if self.video_path is None:
+            raise RuntimeError(f"素材ファイルがありません: {self.title}")
+        return self.video_path, 0.0
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             "source_channel_id": self.source_channel_id,
             "title": self.title,
-            "video_path": str(self.video_path),
+            "video_path": str(self.video_path) if self.video_path else None,
             "duration": round(self.duration, 2),
             "line_count": len(self.lines),
             "youtube_video_id": self.youtube_video_id,
             "used_segments": self.used_segments,
+            "is_external": self.is_external,
+            "credit_name": self.credit_name,
+            "permission": self.permission,
         }
 
 
@@ -157,6 +219,89 @@ def _is_main_video(path: Path) -> bool:
 
 
 # ---------------------------------------------------------------------
+# ディレクトリ列挙（macOS TCC 対策）
+# ---------------------------------------------------------------------
+#
+# OUTPUT_BASE は既定で ~/Desktop 配下にある。macOS の TCC は launchd が起動した
+# プロセスに対して Desktop の**列挙**だけを拒否する（書き込みと、パスを直接
+# 指定した open/stat は通る）。そのため:
+#
+#   - 手で叩く `python3 run_clip_channel.py` … ターミナルに権限があるので動く
+#   - launchd 経由の backend / autopilot  … iterdir() が EPERM で落ちる
+#
+# という「手動では再現しない」形で autopilot だけが死ぬ。実際 2026-08-21 時点の
+# backend.log に `PermissionError: [Errno 1] Operation not permitted:
+# '/Users/ayukiyamazaki/Desktop/動画出力用'` が出続けており、切り抜きの在庫探索が
+# 毎回 500 になっていた。
+#
+# 対策は「列挙しないで済ませる」。素材のパスは
+#   OUTPUT_BASE / <シナリオtitle> / <channel_id>_メイン.mp4
+# と決まっていて、シナリオ title は data/scenarios（列挙できる場所）にあるので、
+# **パスを組み立てて exists() で確認すれば列挙は要らない**。
+#
+# 恒久的に直したいなら、フルディスクアクセスを python3 に与えるか、
+# VIDEO_OUTPUT_BASE を Desktop の外（例 ~/Movies/動画出力用）に移すこと。
+
+def _is_readable(path: Path) -> bool:
+    """実際に1バイト読んで確かめる。
+
+    TCC は `os.access` や `stat` では検出できない（stat は通るのに open が
+    EPERM になる）。しかも ffprobe に読ませると **120秒のタイムアウトまで
+    ぶら下がる**ので、在庫探索が数十分固まる。ffprobe を呼ぶ前に必ずここで
+    弾くこと（実測 2026-08-21: これが無いと /api/clips/.../sources が
+    10分でも返ってこなかった）。
+    """
+    try:
+        with open(path, "rb") as fh:
+            fh.read(1)
+        return True
+    except OSError:
+        return False
+
+
+def _can_enumerate(path: Path) -> bool:
+    try:
+        next(iter(path.iterdir()), None)
+        return True
+    except PermissionError:
+        return False
+    except OSError:
+        return False
+
+
+def _folder_videos(folder: Path, channel_ids: List[str],
+                   *, can_enumerate: bool = True) -> List[Path]:
+    """フォルダ内の長尺 mp4 を返す。
+
+    ⚠️ TCC 下の glob() は **例外を投げずに空リストを返す**（実測 2026-08-21）。
+    そのため「glob が空だったら列挙不可かもしれない」と疑って、必ず命名規則
+    による直接指定にフォールバックする。ここを try/except だけで書くと
+    「エラーは出ないが在庫0本」という静かな死に方をする。
+    """
+    if can_enumerate:
+        try:
+            hits = [p for p in folder.glob("*.mp4") if _is_main_video(p)]
+            if hits:
+                return hits
+        except PermissionError:
+            pass
+
+    # 列挙不可（or 空）: video_generator の命名規則 <prefix>_メイン.mp4 を直接叩く。
+    # prefix は channel_id なので、対象チャンネル分だけ試せばよい。
+    # stat/open はパス直指定なら TCC でも通る（列挙だけが拒否される）。
+    out: List[Path] = []
+    for cid in channel_ids:
+        for sfx in MAIN_SUFFIXES:
+            cand = folder / f"{cid}{sfx}"
+            try:
+                if cand.is_file():
+                    out.append(cand)
+            except OSError:
+                continue
+    return out
+
+
+# ---------------------------------------------------------------------
 # 在庫探索
 # ---------------------------------------------------------------------
 
@@ -165,10 +310,21 @@ def discover_sources(
     *,
     min_duration_sec: float = 180.0,
     resolve_youtube_ids: bool = True,
+    source_roots: Optional[List[Path]] = None,
 ) -> List[SourceVideo]:
-    """切り抜き可能な長尺動画を列挙する。"""
-    if not OUTPUT_BASE.is_dir():
-        print(f"⚠️ 出力フォルダが見つかりません: {OUTPUT_BASE}")
+    """切り抜き可能な長尺動画を列挙する。
+
+    Args:
+        source_roots: 素材を探すルート。先頭から順に見て、**最初に読める方**を
+            採用する。TCC で読めない ~/Desktop を避けるためのミラー
+            （`--mirror` で作る）を先に置く運用を想定している。
+            省略時は [MIRROR_BASE, OUTPUT_BASE]。
+    """
+    roots = [Path(r) for r in (source_roots or DEFAULT_SOURCE_ROOTS)]
+    roots = [r for r in roots if _safe_is_dir(r)]
+    if not roots:
+        print(f"⚠️ 素材フォルダが見つかりません: "
+              f"{', '.join(str(r) for r in (source_roots or DEFAULT_SOURCE_ROOTS))}")
         return []
 
     index = _scenario_index(source_channel_ids)
@@ -177,34 +333,139 @@ def discover_sources(
         by_title.setdefault(title, []).append((cid, sc))
 
     state = load_state().get("sources", {})
+
+    # 列挙できるなら従来どおりフォルダを走査する（命名規則から外れた mp4 も拾える）。
+    # できないなら（launchd 下の TCC）、シナリオ title からパスを組んで直接当たる。
     found: List[SourceVideo] = []
-    for folder in sorted(OUTPUT_BASE.iterdir()):
-        if not folder.is_dir():
-            continue
-        candidates = by_title.get(folder.name)
-        if not candidates:
-            continue
-        mains = [p for p in folder.glob("*.mp4") if _is_main_video(p)]
-        if not mains:
-            continue
-        # 同フォルダに複数あるときは最大サイズ（＝完成版）を採用
-        video = max(mains, key=lambda p: p.stat().st_size)
-        cid, scenario = candidates[0]
-        dur = probe_duration(video) or 0.0
-        if dur < min_duration_sec:
-            continue
-        found.append(SourceVideo(
-            source_channel_id=cid,
-            title=folder.name,
-            video_path=video,
-            scenario=scenario,
-            duration=dur,
-            used_segments=list((state.get(f"{cid}::{folder.name}") or {}).get("segments") or []),
-        ))
+    seen_titles = set()
+    unreadable = 0
+
+    for root in roots:
+        can_enum = _can_enumerate(root)
+        if can_enum:
+            try:
+                folders = [p for p in sorted(root.iterdir()) if p.is_dir()]
+            except PermissionError:
+                can_enum = False
+                folders = [root / t for t in sorted(by_title)]
+        else:
+            print(f"⚠️ 素材フォルダを列挙できません（macOS の TCC）: {root}\n"
+                  f"   シナリオ {len(by_title)} 件からパスを直接組み立てて探索します。")
+            folders = [root / t for t in sorted(by_title)]
+
+        for folder in folders:
+            if folder.name in seen_titles:
+                continue          # 先に見つかった（＝読めた）ルートを優先する
+            candidates = by_title.get(folder.name)
+            if not candidates:
+                continue
+            if not _safe_is_dir(folder):
+                continue
+            mains = _folder_videos(folder, source_channel_ids, can_enumerate=can_enum)
+            if not mains:
+                continue
+            # 同フォルダに複数あるときは最大サイズ（＝完成版）を採用
+            try:
+                video = max(mains, key=lambda p: p.stat().st_size)
+            except OSError:
+                continue
+            # ffprobe に渡す前に必ず可読性を確かめる。ここを飛ばすと TCC で
+            # 読めないファイル1本につき 120 秒ぶら下がる。
+            if not _is_readable(video):
+                unreadable += 1
+                continue
+            cid, scenario = candidates[0]
+            dur = probe_duration(video) or 0.0
+            if dur < min_duration_sec:
+                continue
+            seen_titles.add(folder.name)
+            found.append(SourceVideo(
+                source_channel_id=cid,
+                title=folder.name,
+                video_path=video,
+                scenario=scenario,
+                duration=dur,
+                used_segments=list(
+                    (state.get(f"{cid}::{folder.name}") or {}).get("segments") or []),
+            ))
+
+    if unreadable:
+        print(f"⚠️ 読み取りを拒否された素材が {unreadable} 本ありました（macOS の TCC）。\n"
+              f"   `python3 run_clip_channel.py --mirror` で読める場所へミラーするか、\n"
+              f"   /usr/bin/python3 にフルディスクアクセスを与えてください。")
 
     if resolve_youtube_ids:
         _attach_youtube_ids(found)
     return found
+
+
+# ---------------------------------------------------------------------
+# ミラー作成（TCC 回避）
+# ---------------------------------------------------------------------
+
+def build_mirror(
+    source_channel_ids: List[str],
+    *,
+    mirror_base: Optional[Path] = None,
+    min_duration_sec: float = 180.0,
+    limit: Optional[int] = None,
+) -> Dict[str, Any]:
+    """OUTPUT_BASE の長尺 mp4 を、TCC 保護外のミラーへハードリンクする。
+
+    **権限のあるコンテキストから実行すること**（＝ターミナルから
+    `python3 run_clip_channel.py --mirror`）。launchd 配下の backend は
+    ~/Desktop を読めないので、この関数自体をそこから呼んでも失敗する。
+
+    ハードリンクなので追加のディスクは消費しない（同一ボリューム前提）。
+    別ボリュームだった場合は自動的にコピーへ切り替える。
+    """
+    mirror_base = Path(mirror_base or MIRROR_BASE)
+    mirror_base.mkdir(parents=True, exist_ok=True)
+
+    index = _scenario_index(source_channel_ids)
+    by_title: Dict[str, List[Tuple[str, Dict[str, Any]]]] = {}
+    for (cid, title), sc in index.items():
+        by_title.setdefault(title, []).append((cid, sc))
+
+    linked, skipped, failed = [], 0, []
+    for title in sorted(by_title):
+        if limit is not None and len(linked) >= limit:
+            break
+        src_folder = OUTPUT_BASE / title
+        if not _safe_is_dir(src_folder):
+            continue
+        mains = _folder_videos(src_folder, source_channel_ids, can_enumerate=True)
+        if not mains:
+            continue
+        try:
+            video = max(mains, key=lambda p: p.stat().st_size)
+        except OSError:
+            continue
+        if not _is_readable(video):
+            failed.append(f"{title}（読み取り拒否）")
+            continue
+        dur = probe_duration(video) or 0.0
+        if dur < min_duration_sec:
+            continue
+
+        dst_folder = mirror_base / title
+        dst_folder.mkdir(parents=True, exist_ok=True)
+        dst = dst_folder / video.name
+        if dst.exists():
+            skipped += 1
+            continue
+        try:
+            os.link(video, dst)
+        except OSError:
+            try:
+                shutil.copy2(video, dst)   # 別ボリューム等
+            except OSError as e:
+                failed.append(f"{title}（{e}）")
+                continue
+        linked.append(str(dst))
+
+    return {"mirror_base": str(mirror_base), "linked": linked,
+            "already": skipped, "failed": failed}
 
 
 def _normalize(s: str) -> str:

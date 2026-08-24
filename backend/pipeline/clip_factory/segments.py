@@ -129,17 +129,64 @@ def build_candidates(
     retention_curve: Sequence[Dict[str, float]] = (),
     retention_weight: float = 0.5,
     script_weight: float = 0.5,
+    min_speech_ratio: float = 0.0,
+    max_line_gap_sec: float = 0.0,
+    exclude_text_patterns: Sequence[str] = (),
 ) -> List[Segment]:
-    """連続する行の窓を全部作ってスコアを付ける。"""
+    """連続する行の窓を全部作ってスコアを付ける。
+
+    Args:
+        min_speech_ratio: 窓の尺のうち発話が占める割合の下限。0 で無効。
+        max_line_gap_sec: 窓の中で許す最大の無音。0 で無効。
+        exclude_text_patterns: 窓の発話テキストに当たったら**その窓を捨てる**
+            正規表現のリスト。既定は空＝無効なので、指定しないチャンネルの
+            挙動は一切変わらない。
+
+    この2つは**自動字幕由来の素材で必須**。台本アライメントの行は隙間なく
+    連続しているが、字幕から起こした行は沈黙を含まない（含めると1行が40秒に
+    なる）ので、行と行の間が空く。素朴に「連続する2行」で窓を作ると
+    『冒頭3秒喋って26秒無音、最後に3秒』のような区間が最高スコアで選ばれる。
+    実測 2026-08-21: 33秒の切り抜きのうち26秒が無音というものが生成された。
+
+    `exclude_text_patterns` は `_EXCLUDE_RE`（挨拶・CTA）と違い **減点ではなく除外**。
+    タレント切り抜き（clip-fukada 等）で必要になった。元動画のタイトルを
+    allowlist の `exclude_title_patterns` で絞っても、動画の中の一区間だけが
+    性的な話題ということは普通に起きる。実測 2026-08-24: 税金の話をしている
+    回から「マネージャーは 私の裸も見てます」が最高スコアで選ばれた。
+    タイトル単位のゲートでは原理的に届かないので、区間単位で落とす。
+    """
+    excl_res = []
+    for p in (exclude_text_patterns or ()):
+        p = str(p).strip()
+        if not p:
+            continue
+        try:
+            excl_res.append(re.compile(p))
+        except re.error as e:
+            print(f"  ⚠️ exclude_text_patterns の正規表現が不正なので無視します: {p!r} ({e})")
+
     usable = [t for t in timings
               if t.start >= exclude_head_sec and t.end <= total_duration - exclude_tail_sec]
     if not usable:
         usable = list(timings)
 
     line_scores = {t.index: _line_score(t.text) for t in usable}
+    # 発話尺の累積和。窓ごとに合計し直すと O(n^3) になる
+    speech_prefix = [0.0]
+    for t in usable:
+        speech_prefix.append(speech_prefix[-1] + max(0.0, t.duration))
+
     candidates: List[Segment] = []
     for i in range(len(usable)):
         for j in range(i, len(usable)):
+            # 無音チェックは尺チェックより **先**。ここを後ろに置くと、
+            # 窓がまだ min_sec に満たない段階の大きな無音が `continue` で
+            # 素通りし、j を伸ばしたあとには「直前の行との間」しか見ないので
+            # 窓の内側に取り残される（実測: 8.5秒の無音を含む区間が生成された）。
+            # 一度窓に入った無音は j を伸ばしても消えないので break でよい。
+            if max_line_gap_sec > 0 and j > i:
+                if usable[j].start - usable[j - 1].end > max_line_gap_sec:
+                    break
             start = usable[i].start
             end = usable[j].end
             dur = end - start
@@ -147,7 +194,15 @@ def build_candidates(
                 continue
             if dur > max_sec:
                 break
+            if min_speech_ratio > 0 and dur > 0:
+                speech = speech_prefix[j + 1] - speech_prefix[i]
+                if speech / dur < min_speech_ratio:
+                    continue
             window = usable[i:j + 1]
+            if excl_res:
+                wtext = "".join(t.text for t in window)
+                if any(r.search(wtext) for r in excl_res):
+                    continue
             raw = sum(line_scores[t.index] for t in window)
             # 尺あたりのスコア。長く取れば有利になるのを避ける
             script = raw / max(1.0, dur / 10.0)
@@ -332,22 +387,12 @@ def heuristic_hook(segment: Segment, limit: int = HOOK_CHAR_LIMIT) -> str:
     return ""
 
 
-def refine_with_claude(
+def _build_hook_prompt(
     segments: Sequence[Segment],
     *,
     source_title: str,
-    channel_id: str,
-) -> bool:
-    """Claude が使えるならフック文と採用順を上書きする。使えなければ False。"""
-    if not segments:
-        return False
-    try:
-        from pipeline import claude_client  # type: ignore
-        if not claude_client.has_api_key():
-            return False
-    except Exception:
-        return False
-
+    from_captions: bool,
+) -> str:
     payload = [
         {
             "id": i,
@@ -357,29 +402,107 @@ def refine_with_claude(
         }
         for i, s in enumerate(segments)
     ]
-    user = (
-        f"長尺解説動画『{source_title}』から切り抜きショートを作ります。\n"
+    caption_note = (
+        "\n重要: text は YouTube の自動生成字幕なので誤認識が混じっています"
+        "（同音異義語の取り違え・助詞の欠落など）。文脈から明らかな誤認識は"
+        "フック文の中で自然な日本語に直して構いませんが、**発言者が言っていない"
+        "内容を足すことは禁止**です。文意が読み取れない区間は usable=false に"
+        "してください。\n"
+        if from_captions else ""
+    )
+    return (
+        f"長尺動画『{source_title}』から切り抜きショートを作ります。\n"
         "以下は候補区間です。各区間について、YouTube ショートとして成立するかを判定し、"
-        "画面最上部に常時表示する『フック文』を作ってください。\n\n"
+        "画面最上部に常時表示する『フック文』を作ってください。\n"
+        f"{caption_note}\n"
         f"{json.dumps(payload, ensure_ascii=False)}\n\n"
         "フック文の条件:\n"
         "- 全角28文字以内。2行に割って読める長さ。\n"
         "- 区間の『結論・意外な事実』を言い切る。疑問形にしない。\n"
         "- 元動画のタイトルをそのまま使わない。\n"
-        "- 台本にない主張を足さない。\n\n"
+        "- 発言にない主張を足さない。\n\n"
         "次の JSON のみを返す:\n"
         '{"ranked": [{"id": 0, "hook": "", "reason": "", "usable": true}]}'
     )
-    res = claude_client.call_claude_json(
-        system="あなたは切り抜きチャンネルの編集者。区間の引きの強さを見極めてフック文を書く。",
-        user=user,
-        temperature=0.5,
-        max_tokens=1500,
-        channel_id=channel_id,
-        purpose="clip_segment_hook",
+
+
+_HOOK_SYSTEM = "あなたは切り抜きチャンネルの編集者。区間の引きの強さを見極めてフック文を書く。"
+
+
+def _refine_via_claude(user: str, channel_id: str) -> Optional[Dict[str, Any]]:
+    try:
+        from pipeline import claude_client  # type: ignore
+        if not claude_client.has_api_key():
+            return None
+    except Exception:
+        return None
+    return claude_client.call_claude_json(
+        system=_HOOK_SYSTEM, user=user, temperature=0.5, max_tokens=1500,
+        channel_id=channel_id, purpose="clip_segment_hook",
     )
+
+
+def _refine_via_gpt(user: str) -> Optional[Dict[str, Any]]:
+    """Claude が使えないときの代替。
+
+    ANTHROPIC_API_KEY は 2026-08 時点で 401 のままなので、ここが無いと
+    切り抜きのフック文が常にヒューリスティック任せになる。自動字幕は
+    台本と違って文が整っていないため、ヒューリスティックだけでは
+    『現在の通勤を有3時間から』のような壊れたフックがそのまま出る。
+    """
+    import os
+    import urllib.request
+
+    from pipeline import openai_compat  # type: ignore
+
+    api_key = (os.environ.get("OPENAI_API_KEY") or "").strip()
+    if not api_key:
+        return None
+    payload = openai_compat.build_chat_payload(
+        "gpt-5.6-terra",
+        [{"role": "system", "content": _HOOK_SYSTEM},
+         {"role": "user", "content": user}],
+        temperature=0.5, max_tokens=2000,
+        response_format={"type": "json_object"},
+    )
+    req = urllib.request.Request(
+        "https://api.openai.com/v1/chat/completions",
+        data=json.dumps(payload).encode("utf-8"), method="POST",
+        headers={"Content-Type": "application/json",
+                 "Authorization": f"Bearer {api_key}"},
+    )
+    try:
+        import urllib.error
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            data = json.loads(resp.read())
+        content = data["choices"][0]["message"]["content"]
+        return json.loads(content)
+    except Exception as e:
+        print(f"  ⚠️ GPT でのフック生成に失敗（ヒューリスティックで続行）: {e}")
+        return None
+
+
+def refine_with_claude(
+    segments: Sequence[Segment],
+    *,
+    source_title: str,
+    channel_id: str,
+    from_captions: bool = False,
+) -> bool:
+    """LLM でフック文と採用順を上書きする。使えなければ False。
+
+    Claude → GPT の順に試す。名前は歴史的な経緯で claude のままだが、
+    実体は「使える方の LLM を使う」。
+    """
+    if not segments:
+        return False
+
+    user = _build_hook_prompt(segments, source_title=source_title,
+                              from_captions=from_captions)
+    res = _refine_via_claude(user, channel_id) or _refine_via_gpt(user)
     ranked = (res or {}).get("ranked") or []
     if not ranked:
+        print("  ⚠️ LLM からフック文を得られませんでした（ranked が空）")
         return False
     order: List[Segment] = []
     for item in ranked:
@@ -389,9 +512,12 @@ def refine_with_claude(
             continue
         if item.get("usable") is False:
             continue
-        hook = str(item.get("hook") or "").strip()
+        # LLM は 2 行に割るつもりで改行を入れてくることがある。改行が残ると
+        # タイトルに混入して YouTube に弾かれ、フック帯の描画も行が重なる。
+        # 折り返しは renderer が実測して決めるので、ここでは1行に潰す。
+        hook = re.sub(r"\s+", " ", str(item.get("hook") or "")).strip()
         if hook:
-            seg.hook = hook[:32]
+            seg.hook = hook[:HOOK_CHAR_LIMIT]
         seg.reason = str(item.get("reason") or "")
         order.append(seg)
     if not order:

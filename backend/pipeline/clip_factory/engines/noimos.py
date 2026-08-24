@@ -1,9 +1,60 @@
 """NoimosAI（SaaS）のクリエイティブエージェントに切り抜きを任せるエンジン。
 
-経路は2つ。`clip.noimos.mode` で選ぶ（既定 "browser"）。
+経路は3つ。`clip.noimos.mode` で選ぶ（**既定 "api"**）。
 
-  browser : Playwright で app.noimosai.com を自動操作する（本命）
-  cli     : `@agos-labs/noimosai-cli` の chat を叩く（旧実装・残置）
+  api     : Cloud Functions の REST を直接叩く（本命。2026-08-21 に開通）
+  browser : Playwright で app.noimosai.com を自動操作する（旧本命・残置）
+  cli     : `noimosai` CLI の chat を叩く（旧実装・残置）
+
+════════════════════════════════════════════════════════════════════
+■ 2026-08-21 の再調査：方針を api モードに切り替えた
+════════════════════════════════════════════════════════════════════
+
+以下は 08-04 / 08-09 時点の調査記録（下に残置）を**上書きする**。
+
+1. **クリエイティブエージェントは実在する。** 2026-07-06 のプレスリリースで
+   発表された NoimosAI の新機能で、「一本の長尺動画からエンゲージメントの
+   高いシーンを AI が抽出し、被写体を追尾しながら縦型へ自動変換する」と
+   明記されている。冒頭フック違いの複数パターン生成（ABテスト用）と
+   各SNS向け最適化も謳われている。**つまり「長尺→縦型ショート切り抜き」は
+   製品機能として存在する**（08-04 の「機能が無い」という結論は覆った）。
+
+2. **公式 CLI が別スコープで再公開された。** 旧 `@agos-labs/noimosai-cli` は
+   npm から unpublish されて 404。新しく **`@noimosai/cli` 0.0.2（2026-08-20 公開）**
+   が出ている。この dist に、実際に叩いている Firebase Cloud Functions の
+   エンドポイントが平文で入っていた（詳細は noimos_client.py の docstring）。
+
+3. **`uploadMedia` が新設された。** これが決定的な差分。旧 CLI には素材を
+   アップロードする口が無く、それが「無人自動化は不可能」という 08-04 の
+   結論の根拠だった。新 CLI には
+   ``POST /providersPostApi/api/media/upload?workspaceId=&filename=``
+   があり、返ってきた path を chat の ``mediaPaths`` に載せられる。
+   **ローカルの長尺 mp4 をそのまま渡せる**ようになった。
+
+4. **ツールブリッジが新設された。** ``GET /noimosToolBridge/tools`` と
+   ``POST /noimosToolBridge/tools/{server}/{name}`` で、メディア生成を含む
+   ツールカタログを直接叩ける。切り抜きが専用ツールとして露出していれば、
+   チャット越しではなく型付きで呼べる（`noimosai tools list` 相当）。
+   カタログはサーバ側なので、認証が通ってから
+   ``python3 backend/run_clip_channel.py --noimos-tools`` で列挙すること。
+
+5. **疎通は確認済み（2026-08-21）。** 認証なしで叩くと
+   ``401 {"error":"Invalid API key format"}`` が返る＝エンドポイントは実在し、
+   認証ゲートだけが立っている状態。
+
+**残る唯一の未検証点は「実際に MP4 が返るか」**で、これは API キーが無いと
+確かめられない。返らなければ従来どおり NoimosUnavailable を投げて
+clip.fallback_engine（既定 local）に落ちるので autopilot は止まらない。
+
+■ 必要な認証情報（人間しか用意できない）
+
+  NOIMOS_API_KEY        … backend/.env に設定する。app.noimosai.com の
+                          設定画面で発行（CLI の `noimosai apikey` 相当）。
+  NOIMOS_WORKSPACE_ID   … 任意。未設定なら最初のワークスペースを使う。
+
+════════════════════════════════════════════════════════════════════
+■ 以下は 08-04 / 08-09 の旧調査記録（api モードの背景として残置）
+════════════════════════════════════════════════════════════════════
 
 ■ 調査結果1：公開 REST API は無い（2026-08-04）
 
@@ -82,6 +133,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from ..sources import SourceVideo
+from .local import safe_clip_id
 
 DEFAULT_BASE_URL = "https://app.noimosai.com"
 
@@ -118,7 +170,7 @@ def _cfg(clip_cfg: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def _mode(clip_cfg: Dict[str, Any]) -> str:
-    return str(_cfg(clip_cfg).get("mode") or "browser").strip().lower()
+    return str(_cfg(clip_cfg).get("mode") or "api").strip().lower()
 
 
 def _base_url(clip_cfg: Dict[str, Any]) -> str:
@@ -155,6 +207,13 @@ def _selectors(clip_cfg: Dict[str, Any]) -> Dict[str, Any]:
 def preflight(clip_cfg: Dict[str, Any]) -> Optional[str]:
     """使えない理由を返す。使えるなら None。"""
     mode = _mode(clip_cfg)
+
+    if mode == "api":
+        if not _api_key():
+            return ("NOIMOS_API_KEY が未設定です（mode=api）。"
+                    "app.noimosai.com で API キーを発行し backend/.env に "
+                    "NOIMOS_API_KEY=... を追記してください。")
+        return None
 
     if mode == "cli":
         if not _api_key():
@@ -428,7 +487,7 @@ def _generate_browser(
 
             # --- 取り込み ---
             for n, url in enumerate(media_urls[:count]):
-                clip_id = f"noimos_{source.source_channel_id}_{int(time.time())}_{n}"
+                clip_id = safe_clip_id(f"noimos_{source.source_channel_id}_{int(time.time())}_{n}")
                 dest = out_dir / f"{clip_id}.mp4"
                 _download_via_context(context, url, dest, timeout_ms=nav_timeout_ms)
                 results.append({
@@ -444,6 +503,156 @@ def _generate_browser(
                 })
         finally:
             browser.close()
+
+    print(f"  ☁️ NoimosAI から {len(results)} 本取り込み完了")
+    return results
+
+
+# ---------------------------------------------------------------------
+# API 経路（本命）
+# ---------------------------------------------------------------------
+
+def _api_prompt(source: SourceVideo, clip_cfg: Dict[str, Any], count: int,
+                *, uploaded: bool) -> str:
+    """クリエイティブエージェントへの依頼文。
+
+    アップロード経路では動画は mediaPaths で渡るので、本文では「添付した動画」
+    と呼ぶ。URL 経路のときだけ URL を書く。
+    """
+    cfg = _cfg(clip_cfg)
+    template = cfg.get("api_prompt_template")
+    if template:
+        return str(template).format(
+            source_url=source.source_url() or "",
+            source_title=source.video_title,
+            clips=count,
+            target_sec=int(clip_cfg.get("target_duration_sec") or 50),
+            min_sec=int(clip_cfg.get("min_duration_sec") or 30),
+            max_sec=int(clip_cfg.get("max_duration_sec") or 59),
+        )
+
+    where = ("添付した長尺動画" if uploaded
+             else f"次の YouTube 動画（{source.source_url()}）")
+    return (
+        f"{where}から、縦型ショート動画（9:16）を{count}本切り抜いてください。\n"
+        f"元動画のタイトル: {source.video_title}\n\n"
+        "要件:\n"
+        f"- 1本あたり{int(clip_cfg.get('min_duration_sec') or 30)}〜"
+        f"{int(clip_cfg.get('max_duration_sec') or 59)}秒\n"
+        "- エンゲージメントが最も高くなるシーンを自動抽出してください\n"
+        "- 冒頭2秒で『結論・驚き』が来るように頭出ししてください\n"
+        "- 日本語の大きな字幕を焼き込んでください\n"
+        "- 冒頭フックが異なる複数パターンを作れる場合は作ってください（ABテスト用）\n"
+        "- 導入の挨拶とエンディングのCTA部分は使わないでください\n"
+        "- 完成した MP4 のダウンロードURLを必ず応答に含めてください\n"
+    )
+
+
+def _collect_from_session(client, session_id: str) -> List[str]:
+    """ストリームで取りこぼした成果物をセッション履歴から回収する。"""
+    try:
+        history = client.get_session_messages(session_id)
+    except Exception as e:
+        print(f"  ⚠️ セッション履歴の取得に失敗（無視して継続）: {e}")
+        return []
+    from .noimos_client import harvest_video_urls
+    return harvest_video_urls(history)
+
+
+def _generate_api(
+    *,
+    source: SourceVideo,
+    clip_cfg: Dict[str, Any],
+    out_dir: Path,
+    count: int,
+) -> List[Dict[str, Any]]:
+    from .noimos_client import NoimosError, client_from_env, dedupe
+
+    cfg = _cfg(clip_cfg)
+    try:
+        client = client_from_env(cfg)
+    except NoimosError as e:
+        raise NoimosUnavailable(str(e))
+
+    agent_timeout = int(cfg.get("agent_wait_sec") or 1800)
+    # 素材の渡し方。"upload"（既定）はローカル mp4 をアップロードする。
+    # "url" は YouTube URL をテキストで渡すだけ（NoimosAI 側が URL から
+    # 動画を取得できるかは未確認なので既定にはしない）。
+    deliver = str(cfg.get("deliver_source") or "upload").strip().lower()
+
+    media_paths: List[str] = []
+    uploaded = False
+    try:
+        if deliver == "upload":
+            if not source.video_path or not Path(source.video_path).is_file():
+                raise NoimosUnavailable(
+                    f"元動画のローカルファイルがありません: {source.video_path}")
+            media_paths = [client.upload_media(Path(source.video_path))]
+            uploaded = True
+        elif not source.source_url():
+            raise NoimosUnavailable(
+                f"deliver_source=url ですが元動画の YouTube URL が不明です（{source.title}）。")
+
+        prompt = _api_prompt(source, clip_cfg, count, uploaded=uploaded)
+        print(f"  ☁️ NoimosAI クリエイティブエージェントに依頼中"
+              f"（最大 {agent_timeout}s 待機）…")
+
+        def _progress(chunk: Dict[str, Any]) -> None:
+            if chunk.get("type") == "text":
+                return
+            intent = chunk.get("intent")
+            if isinstance(intent, str) and intent:
+                print(f"    · {intent[:100]}")
+
+        result = client.run_agent(
+            prompt, media_paths=media_paths,
+            timeout=agent_timeout, on_chunk=_progress,
+        )
+    except NoimosUnavailable:
+        raise
+    except NoimosError as e:
+        raise NoimosUnavailable(str(e))
+
+    if result.get("error"):
+        raise NoimosUnavailable(f"NoimosAI がエラーを返しました: {result['error']}")
+
+    urls: List[str] = list(result.get("video_urls") or [])
+    if not urls and result.get("session_id"):
+        # ストリームに出ないケースがあるので履歴からも拾う
+        urls = dedupe(_collect_from_session(client, str(result["session_id"])))
+
+    if not urls:
+        snippet = str(result.get("text") or "")[:400]
+        raise NoimosUnavailable(
+            "NoimosAI が動画を返しませんでした（応答に MP4 の URL が無い）。"
+            f"\n  応答: {snippet or '（テキストなし）'}"
+        )
+
+    print(f"  ☁️ 成果物 {len(urls)} 件を検出。取り込みます")
+    results: List[Dict[str, Any]] = []
+    for n, url in enumerate(urls[:count]):
+        clip_id = safe_clip_id(f"noimos_{source.source_channel_id}_{int(time.time())}_{n}")
+        dest = out_dir / f"{clip_id}.mp4"
+        try:
+            client.download(url, dest)
+        except NoimosError as e:
+            print(f"  ⚠️ 取り込み失敗（スキップ）: {e}")
+            continue
+        results.append({
+            "clip_id": clip_id,
+            "engine": "noimos",
+            "video_path": str(dest),
+            "thumbnail_path": None,
+            "hook": "",
+            "source_media_url": url,
+            "noimos_session_id": result.get("session_id"),
+            # NoimosAI は元動画のどこを切ったか返さないので区間は不明。
+            # 0 埋めだと sources.record_clip の区間重複チェックが効かない点に注意。
+            "segment": {"start": 0.0, "end": 0.0, "duration": 0.0},
+        })
+
+    if not results:
+        raise NoimosUnavailable("成果物URLは返りましたが、すべてダウンロードに失敗しました。")
 
     print(f"  ☁️ NoimosAI から {len(results)} 本取り込み完了")
     return results
@@ -514,7 +723,7 @@ def _generate_cli(
 
     results: List[Dict[str, Any]] = []
     for n, url in enumerate(urls[:count]):
-        clip_id = f"noimos_{source.source_channel_id}_{int(time.time())}_{n}"
+        clip_id = safe_clip_id(f"noimos_{source.source_channel_id}_{int(time.time())}_{n}")
         dest = out_dir / f"{clip_id}.mp4"
         _download(url, dest)
         results.append({
@@ -549,23 +758,33 @@ def generate(
     if reason:
         raise NoimosUnavailable(reason)
 
-    if not source.source_url():
+    mode = _mode(clip_cfg)
+    deliver = str(_cfg(clip_cfg).get("deliver_source") or "upload").strip().lower()
+
+    # api モードで deliver_source=upload のときはローカル mp4 をアップロードするので
+    # YouTube URL は要らない。それ以外は URL でしか素材を渡せない。
+    needs_url = not (mode == "api" and deliver == "upload")
+    if needs_url and not source.source_url():
         raise NoimosUnavailable(
             f"元動画の YouTube URL が特定できません（{source.title}）。"
-            "NoimosAI はローカルファイルを受け取れないため、公開済み動画のみ依頼できます。"
+            "この経路は URL でしか素材を渡せないため、公開済み動画のみ依頼できます"
+            "（mode=api / deliver_source=upload ならローカルファイルを渡せます）。"
         )
 
     if dry_run:
         return [{
             "clip_id": f"noimos_dryrun_{int(time.time())}",
             "engine": "noimos",
-            "mode": _mode(clip_cfg),
-            "prompt": _build_prompt(source, clip_cfg, count),
+            "mode": mode,
+            "prompt": (_api_prompt(source, clip_cfg, count, uploaded=(deliver == "upload"))
+                       if mode == "api" else _build_prompt(source, clip_cfg, count)),
             "video_path": None,
             "hook": "",
             "segment": {"start": 0, "end": 0},
         }]
 
-    if _mode(clip_cfg) == "cli":
+    if mode == "api":
+        return _generate_api(source=source, clip_cfg=clip_cfg, out_dir=out_dir, count=count)
+    if mode == "cli":
         return _generate_cli(source=source, clip_cfg=clip_cfg, out_dir=out_dir, count=count)
     return _generate_browser(source=source, clip_cfg=clip_cfg, out_dir=out_dir, count=count)

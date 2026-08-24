@@ -6,9 +6,129 @@
 
 ---
 
-## 1. NoimosAI について（調査結果 2026-08-04）
+## 0. 現況サマリ（2026-08-21 更新）
 
-**結論: NoimosAI の SaaS は、現時点では無人自動化の切り抜きエンジンとして使えない。**
+| 項目 | 状態 |
+| --- | --- |
+| autopilot | ✅ 有効（平日 17:45 / 19:45、土日 12:45 / 14:45） |
+| `publish_settings.auto_publish` | ✅ `true`（実際に投稿する） |
+| `clip.engine` | `noimos`（フォールバック `local`） |
+| `clip.noimos.mode` | `api`（新設。Cloud Functions を直接叩く） |
+| NoimosAI 認証 | ❌ **`NOIMOS_API_KEY` 未設定** — これだけが残りブロッカー |
+| 在庫 | ✅ 元動画 46 本 / 残り切り抜き枠 132 本 |
+| 素材ミラー | ✅ `~/Movies/yf_clip_sources`（46 本ハードリンク済み） |
+
+**キーが入るまでは `local` エンジンで自動的に動く**（＝投稿は止まらない）。
+キーを入れた後は `python3 backend/run_clip_channel.py --noimos-check` で
+段階的に到達性を確認できる。
+
+### ⚠️ 最重要: macOS TCC で autopilot が死んでいた（2026-08-21 修正）
+
+clip-lab がずっと投稿0本だった**本当の原因**は NoimosAI ではなくこれ。
+`backend.log` に次が延々と出続けていた:
+
+```
+⚠️ [error] Autopilot 失敗 (clip-lab): [Errno 1] Operation not permitted:
+    '/Users/ayukiyamazaki/Desktop/動画出力用'
+```
+
+launchd が起動した backend は `~/Desktop` に対して TCC で制限される。
+2026-08-21 に launchd 配下で実測した挙動:
+
+| 操作 | 結果 |
+| --- | --- |
+| `is_dir()` / `is_file()` / `stat()` | ✅ 通る |
+| `iterdir()` | ❌ `PermissionError` |
+| `glob()` | ⚠️ **例外を投げずに空リストを返す**（静かに死ぬ） |
+| `open()` で読む | ❌ `PermissionError`（自プロセスが作ったファイルは可） |
+| 書き込み | ✅ 通る |
+
+これが厄介なのは **ターミナルから手で叩くと再現しない**こと
+（ターミナルには権限があるため）。「手動では動くのに autopilot だけ 0 本」
+という形になる。さらに TCC で読めないファイルを ffprobe に渡すと
+**1本あたり 120 秒ぶら下がる**ため、在庫探索が 10 分でも返ってこなかった。
+
+**対策（実装済み・3段構え）**
+
+1. `sources._is_readable()` — ffprobe に渡す前に 1 バイト読んで可読性を確認する。
+   これが無いと「エラーも出ないまま数十分固まる」。
+2. `sources._folder_videos()` — 列挙できないときは
+   `<title>/<channel_id>_メイン.mp4` という命名規則からパスを直接組み立てる。
+   glob が**例外なしで空**を返す挙動があるので、空でも必ずこちらに落とす。
+3. `sources.MIRROR_BASE`（`~/Movies/yf_clip_sources`）— TCC 保護対象外の
+   `~/Movies` に**ハードリンク**でミラーを張る。ディスクは消費しない。
+   `discover_sources` はミラーを先に見る（`DEFAULT_SOURCE_ROOTS`）。
+
+```bash
+# ミラー作成は「権限のあるコンテキスト」＝ターミナルから実行すること
+python3 backend/run_clip_channel.py --mirror
+```
+
+新しい長尺動画を作ったら `--mirror` を再実行して差分を張り足す
+（既存分はスキップされる）。恒久的に消したいなら次のどちらか:
+
+- `/usr/bin/python3` にフルディスクアクセスを与える
+  （システム設定 → プライバシーとセキュリティ → フルディスクアクセス）
+- `VIDEO_OUTPUT_BASE` を `~/Desktop` の外（例 `~/Movies/動画出力用`）へ移す
+
+修正の効果: `GET /api/clips/clip-lab/sources` が
+**HTTP 500 / 10分タイムアウト → HTTP 200 / 1.8 秒・46 本**になった。
+
+---
+
+## 1. NoimosAI について
+
+### 1-0. 2026-08-21 再調査：**結論が覆った**
+
+以下の 1-1（08-04 の調査）は「NoimosAI では切り抜きができない」と結論して
+いたが、**これは現在では誤り**。
+
+1. **クリエイティブエージェントは実在する。** 2026-07-06 のプレスリリースで
+   発表された新機能。「一本の長尺動画からエンゲージメントの高いシーンを AI が
+   抽出し、被写体を追尾しながら縦型へ自動変換」「冒頭フック違いの複数パターン
+   生成（ABテスト）」「各SNS向け最適化」と明記されている。
+2. **CLI が別スコープで再公開された。** 旧 `@agos-labs/noimosai-cli` は npm から
+   unpublish 済み（404）。新しく **`@noimosai/cli` 0.0.2（2026-08-20 公開）**。
+3. **`uploadMedia` が新設された（決定的）。** 08-04 に「無人自動化は不可能」と
+   結論した根拠は「素材を渡す口が無い」ことだった。新 CLI には
+   `POST /providersPostApi/api/media/upload` があり、返る `path` を chat の
+   `mediaPaths` に載せられる。**ローカルの長尺 mp4 を直接渡せる。**
+4. **ツールブリッジが新設された。** `GET /noimosToolBridge/tools` /
+   `POST /noimosToolBridge/tools/{server}/{name}`。メディア生成を含む
+   カタログを型付きで叩ける。
+5. **疎通確認済み。** 認証なしで叩くと `401 {"error":"Invalid API key format"}`
+   ＝エンドポイントは実在し、認証ゲートだけが立っている。
+
+実測したエンドポイント（ベース `https://us-central1-seo-saas-970de.cloudfunctions.net`）:
+
+| 用途 | メソッド・パス |
+| --- | --- |
+| APIキー検証 | `POST /chatApiGateway/apiKey/validate` |
+| ワークスペース一覧 | `GET /chatApiGateway/workspaces` |
+| セッション履歴 | `GET /chatApiGateway/messages?sessionId=` |
+| **メディアアップロード** | `POST /providersPostApi/api/media/upload?workspaceId=&filename=` |
+| ツール一覧 / 実行 | `GET,POST /noimosToolBridge/tools[/{server}/{name}]` |
+| **エージェント実行** | `POST {region}/runNoimosMainAgentHttp`（NDJSON ストリーム） |
+
+エージェント実行だけリージョン解決が入る（TZ が `Asia/` なら
+`asia-northeast1`）。実装は `engines/noimos_client.py`。
+
+**残る未検証点は「実際に MP4 が返るか」だけ**で、これは API キーが無いと
+確かめられない。返らなければ `NoimosUnavailable` を投げて `local` に落ちる。
+
+**必要なもの（人間しか用意できない）**
+
+```
+# backend/.env
+NOIMOS_API_KEY=...          # app.noimosai.com で発行
+NOIMOS_WORKSPACE_ID=...     # 任意。未設定なら先頭のワークスペース
+```
+
+---
+
+### 1-1. 旧調査（2026-08-04）※ 上の 1-0 に上書きされた
+
+**当時の結論: NoimosAI の SaaS は、現時点では無人自動化の切り抜きエンジンとして使えない。**
 
 | 経路 | 状況 |
 | --- | --- |
@@ -268,7 +388,60 @@ JobQueue を通らず `clip_factory.generate_clip` を直接叩く別系統に�
 
 ---
 
-## 6. 既知の制約
+## 6. 素材調達（外部ソース）
+
+`backend/pipeline/clip_factory/acquisition.py`。既定は **off**
+（`clip.external_sources.enabled = false`）。自社動画の在庫（残り 132 本）が
+ある間は不要。
+
+### ⚠️ ライセンスゲートが本体
+
+「YouTube のトレンド動画やニュースを切り抜く」は**そのままやると著作権侵害**。
+標準ライセンス（`youtube` = All Rights Reserved）の動画を切り出して再アップ
+すると、Content ID による収益剥奪・著作権警告・チャンネル削除に直結する。
+報道映像は特に厳しい。
+
+そこで調達した候補は必ず2つに仕分ける。判定は `acquisition.classify()` の
+一箇所だけ（**fail-closed**：判定できないものは全部 `theme_only`）。
+
+| 区分 | 対象 | 扱い |
+| --- | --- | --- |
+| `clippable` | CC BY / 自社ch / 許諾済み allowlist | 切り抜いて再アップしてよい |
+| `theme_only` | 標準ライセンスのトレンド・ニュース | **映像は一切触らない。** 題材シグナルとしてのみ使う |
+
+`theme_only` の動画は `download_candidate()` が `PermissionError` で撥ねる
+（呼び出し側のミスで落ちないよう、ダウンロード関数の入口で止める）。
+これなら「今この話題が伸びている」という情報だけを権利問題なしに取り込める。
+
+### 経路
+
+| 経路 | API | 既定 |
+| --- | --- | --- |
+| 急上昇 | `videos.list(chart=mostPopular, regionCode=JP)` | theme_only |
+| CC検索 | `search.list(videoLicense=creativeCommon)` | clippable |
+| 許諾済みch | `allowlist_channels[]` に `permission_note` 付きで登録 | clippable |
+
+CC検索は `search.list` の `videoLicense` を信用せず、`videos.list` の
+`status.license` で**再検証**してから通す（search 側の値がずれるため）。
+ダウンロードは `yt_dlp`（Python モジュール。CLI バイナリは不要）。
+
+CC BY は**帰属表示が義務**。`attribution_text()` が説明欄に貼れる形で返す。
+
+```bash
+# 調達候補を見るだけ（ダウンロードしない）
+python3 backend/run_clip_channel.py --acquire --force
+
+# clippable だけ実際に落とす
+python3 backend/run_clip_channel.py --acquire-download --force --count 3
+```
+
+実測（2026-08-21）: CC検索で **clippable 16 本**、急上昇から
+**theme_only 50 本**。急上昇の 50 本は全て `license=youtube` で、
+正しく theme_only に落ちている。
+
+---
+
+## 7. 既知の制約
 
 - **切り抜き元は自社チャンネルの動画に限定**。他者コンテンツは対象外
   （`content_policy.guidelines` に明記）。
