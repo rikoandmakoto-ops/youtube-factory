@@ -313,9 +313,10 @@ def _view_velocity(row: Any) -> Optional[float]:
     """1動画の「1日あたり再生数」を返す。published_at が無ければ None。
 
     サムネ impressions / CTR は YouTube Analytics API v2 では取得できない
-    （metrics=impressions は "Unknown identifier" で 400。Studio と
-    Reporting API のバルクレポートにしか無い）。そのため CTR を判定材料に
-    できないケースでは、実際に効果として見たい「伸び方」を代理指標に使う。
+    （metrics=impressions は "Unknown identifier" で 400）。Reporting API の
+    バルクレポート経由なら取れるが、ジョブ作成から最大48時間の遅延があり、
+    ジョブ作成より前の期間は永久に埋まらない。CTR が無い区間では、
+    実際に効果として見たい「伸び方」を代理指標に使う。
     """
     try:
         views = float(row["views"] or 0)
@@ -529,11 +530,12 @@ def check_one(video_id: str) -> Dict[str, Any]:
     threshold = float(t.get("threshold_ratio") or DEFAULT_THRESHOLD_RATIO)
     now = _now()
 
-    # 第一候補は CTR。ただしサムネ impressions/CTR は YouTube Analytics API v2 に
-    # 存在せず（metrics=impressions は 400 "Unknown identifier"）、実運用では
-    # 常に 0 になる。CTR が取れないときは「1日あたり再生数」を代理指標にする。
-    # これを入れるまで、全テストが no_data のまま無期限に monitoring に留まり、
-    # 18 件が2か月以上ぶら下がったままだった。
+    # 第一候補は CTR。サムネ CTR は Analytics API v2 には無く、Reporting API の
+    # reach バルクレポート（pipeline/youtube_reporting.py）が唯一の供給源。
+    # ジョブ作成前の期間は永久に 0 のままなので、CTR が無いときは
+    # 「1日あたり再生数」を代理指標にする。この代理指標を入れるまで、
+    # 全テストが no_data のまま無期限に monitoring に留まり、18 件が
+    # 2か月以上ぶら下がったままだった。
     metric = "ctr"
     current = _fetch_current_ctr(channel_id, video_id)
     baseline = _channel_avg_ctr(channel_id)

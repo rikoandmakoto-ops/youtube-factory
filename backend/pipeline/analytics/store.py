@@ -214,6 +214,37 @@ def init_db() -> None:
                     ON series_suggestions(channel_id, status, created_at DESC);
                 CREATE INDEX IF NOT EXISTS idx_series_original
                     ON series_suggestions(channel_id, original_video_id);
+
+                -- サムネ impressions / CTR の日次実測（YouTube Reporting API の
+                -- channel_reach_basic_a1 バルクレポート由来）。Analytics API v2 には
+                -- impressions 系の指標が無いので、こちらが唯一の取得経路。
+                -- clicks を持つのは、期間を跨いで集計するとき CTR の単純平均では
+                -- なく sum(clicks)/sum(impressions) で重み付けするため。
+                CREATE TABLE IF NOT EXISTS video_reach_daily (
+                    video_id TEXT NOT NULL,
+                    date TEXT NOT NULL,             -- ISO YYYY-MM-DD (レポート上の実日付)
+                    channel_id TEXT NOT NULL,
+                    impressions INTEGER NOT NULL DEFAULT 0,
+                    clicks REAL NOT NULL DEFAULT 0, -- impressions * ctr
+                    fetched_at INTEGER NOT NULL,
+                    PRIMARY KEY (video_id, date)
+                );
+                CREATE INDEX IF NOT EXISTS idx_reach_daily_channel
+                    ON video_reach_daily(channel_id, date DESC);
+
+                -- 取り込み済みバルクレポート。YouTube は同じ日のレポートを
+                -- 再発行することがあるので report_id 単位で冪等にする。
+                CREATE TABLE IF NOT EXISTS reach_reports_ingested (
+                    report_id TEXT PRIMARY KEY,
+                    channel_id TEXT NOT NULL,
+                    job_id TEXT NOT NULL,
+                    start_time TEXT,
+                    end_time TEXT,
+                    rows_ingested INTEGER NOT NULL DEFAULT 0,
+                    ingested_at INTEGER NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS idx_reach_reports_channel
+                    ON reach_reports_ingested(channel_id, ingested_at DESC);
                 """
             )
             c.commit()
@@ -266,6 +297,128 @@ def upsert_video_metric(
                     int(likes), int(comments), int(shares),
                     int(subscribers_gained), now,
                 ),
+            )
+            c.commit()
+        finally:
+            c.close()
+
+
+def update_video_metric_reach(
+    *, video_id: str, date: str, impressions: int, ctr: float
+) -> bool:
+    """既存スナップショット行の impressions / ctr だけを更新する。
+
+    upsert_video_metric は INSERT OR REPLACE なので、reach を書いたあとに
+    Analytics 側の sync が走ると 0 で上書きされる。reach は必ず後段で
+    この関数から差し込む。行が無ければ False（Analytics 側が先に行を
+    作る前提。reach だけ先行しても title/published_at が無い行は作らない）。
+    """
+    with _db_lock:
+        c = _conn()
+        try:
+            cur = c.execute(
+                "UPDATE video_metrics SET impressions = ?, ctr = ? "
+                "WHERE video_id = ? AND date = ?",
+                (int(impressions), float(ctr), video_id, date),
+            )
+            c.commit()
+            return cur.rowcount > 0
+        finally:
+            c.close()
+
+
+def upsert_video_reach_daily(
+    *,
+    video_id: str,
+    channel_id: str,
+    date: str,
+    impressions: int,
+    clicks: float,
+) -> None:
+    now = int(time.time())
+    with _db_lock:
+        c = _conn()
+        try:
+            c.execute(
+                """
+                INSERT OR REPLACE INTO video_reach_daily
+                (video_id, date, channel_id, impressions, clicks, fetched_at)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """,
+                (video_id, date, channel_id, int(impressions), float(clicks), now),
+            )
+            c.commit()
+        finally:
+            c.close()
+
+
+def aggregate_video_reach(
+    channel_id: str, *, start_date: str, end_date: str
+) -> Dict[str, Dict[str, float]]:
+    """期間内の日次 reach を video_id ごとに合算する。
+
+    CTR は sum(clicks) / sum(impressions)。日ごとの CTR を単純平均すると
+    impressions 1 の日と 10,000 の日が同じ重みになって歪む。
+    """
+    with _db_lock:
+        c = _conn()
+        try:
+            rows = c.execute(
+                "SELECT video_id, SUM(impressions) AS imp, SUM(clicks) AS clk "
+                "FROM video_reach_daily "
+                "WHERE channel_id = ? AND date >= ? AND date <= ? "
+                "GROUP BY video_id",
+                (channel_id, start_date, end_date),
+            ).fetchall()
+        finally:
+            c.close()
+    out: Dict[str, Dict[str, float]] = {}
+    for r in rows:
+        imp = int(r["imp"] or 0)
+        clk = float(r["clk"] or 0.0)
+        out[r["video_id"]] = {
+            "impressions": imp,
+            "clicks": clk,
+            "ctr": (clk / imp) if imp > 0 else 0.0,
+        }
+    return out
+
+
+def is_report_ingested(report_id: str) -> bool:
+    with _db_lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT 1 FROM reach_reports_ingested WHERE report_id = ?",
+                (report_id,),
+            ).fetchone()
+        finally:
+            c.close()
+    return row is not None
+
+
+def mark_report_ingested(
+    *,
+    report_id: str,
+    channel_id: str,
+    job_id: str,
+    start_time: Optional[str],
+    end_time: Optional[str],
+    rows_ingested: int,
+) -> None:
+    now = int(time.time())
+    with _db_lock:
+        c = _conn()
+        try:
+            c.execute(
+                """
+                INSERT OR REPLACE INTO reach_reports_ingested
+                (report_id, channel_id, job_id, start_time, end_time,
+                 rows_ingested, ingested_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+                """,
+                (report_id, channel_id, job_id, start_time, end_time,
+                 int(rows_ingested), now),
             )
             c.commit()
         finally:

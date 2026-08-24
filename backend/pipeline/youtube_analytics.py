@@ -284,13 +284,27 @@ def fetch_video_metrics(
     start = end - timedelta(days=days)
     snapshot_date = _date_str(end)
 
+    # サムネ impressions/CTR は Analytics API では取れないので、Reporting API が
+    # 取り込んだ日次テーブルから同じ窓で合算して載せる。upsert_video_metric は
+    # INSERT OR REPLACE なので、ここで載せておかないと sync_reach が書いた値を
+    # 次の sync が 0 で潰してしまう。
+    reach = analytics_store.aggregate_video_reach(
+        channel_id, start_date=_date_str(start), end_date=_date_str(end)
+    )
+
     items_out: List[Dict[str, Any]] = []
     for v in recent:
         vid = v["video_id"]
         metrics = _query_video_analytics(analytics, vid, start, end)
-        # CTR / impressions / avg_view_percentage は別ディメンションで取れる
+        # avg_view_percentage と情報カード指標（サムネ指標ではない）
         ctr_pkg = _query_video_ctr(analytics, vid, start, end)
-        merged = {**metrics, **ctr_pkg}
+        r = reach.get(vid) or {}
+        merged = {
+            **metrics,
+            **ctr_pkg,
+            "impressions": int(r.get("impressions", 0) or 0),
+            "ctr": float(r.get("ctr", 0.0) or 0.0),
+        }
 
         analytics_store.upsert_video_metric(
             video_id=vid,
@@ -374,8 +388,20 @@ def _query_video_analytics(
 def _query_video_ctr(
     analytics, video_id: str, start: date, end: date
 ) -> Dict[str, Any]:
-    """impressions / CTR / 視聴維持率の平均。
-    cardImpressions vs cardClickRate ではなく、サムネ impressions の方を使う。
+    """視聴維持率の平均と、情報カードの表示回数 / クリック率。
+
+    ここでは **サムネの impressions / CTR は取れない**。Analytics API v2 に
+    `impressions` という指標は存在せず、投げると 400 "Unknown identifier
+    (impressions) given in field parameters.metrics." で落ちる。
+    以前はここで metrics=impressions を best-effort で叩いて例外を握り潰して
+    いたため、全 4,850 行の impressions/ctr が 0 のままになっていた。
+
+    サムネ指標は Reporting API のバルクレポート経由（`youtube_reporting`
+    モジュール）で取得し、sync_channel の後段で差し込む。
+
+    cardImpressions / cardClickRate は「情報カード」の指標であってサムネの
+    それではない。カードを貼っていないショートでは 0 になるのが正しいので、
+    誤解を招かないよう card_* という名前で別に返す。
     """
     try:
         resp = (
@@ -384,18 +410,16 @@ def _query_video_ctr(
                 ids="channel==MINE",
                 startDate=_date_str(start),
                 endDate=_date_str(end),
-                metrics=(
-                    "cardImpressions,cardClickRate,"
-                    "averageViewPercentage"
-                ),
+                metrics="cardImpressions,cardClickRate,averageViewPercentage",
                 filters=f"video=={video_id}",
             )
             .execute()
         )
     except Exception:
         resp = {"rows": []}
-    impressions = 0
-    ctr = 0.0
+
+    card_impressions = 0
+    card_click_rate = 0.0
     avg_view_percentage = 0.0
     rows = resp.get("rows", []) or []
     if rows:
@@ -403,41 +427,15 @@ def _query_video_ctr(
         idx = {h: i for i, h in enumerate(headers)}
         r = rows[0]
         if "cardImpressions" in idx:
-            impressions = int(r[idx["cardImpressions"]] or 0)
+            card_impressions = int(r[idx["cardImpressions"]] or 0)
         if "cardClickRate" in idx:
-            ctr = float(r[idx["cardClickRate"]] or 0)
+            card_click_rate = float(r[idx["cardClickRate"]] or 0)
         if "averageViewPercentage" in idx:
             avg_view_percentage = float(r[idx["averageViewPercentage"]] or 0)
 
-    # サムネ impressions/CTR は別レポート (Creator Studio の "impressions" 系)
-    # こちらは権限スコープで取れないことが多いので best-effort
-    try:
-        resp2 = (
-            analytics.reports()
-            .query(
-                ids="channel==MINE",
-                startDate=_date_str(start),
-                endDate=_date_str(end),
-                metrics="impressions,impressionsClickThroughRate",
-                filters=f"video=={video_id}",
-            )
-            .execute()
-        )
-        rows2 = resp2.get("rows", []) or []
-        if rows2:
-            headers2 = [h.get("name") for h in resp2.get("columnHeaders", [])]
-            idx2 = {h: i for i, h in enumerate(headers2)}
-            r2 = rows2[0]
-            if "impressions" in idx2:
-                impressions = int(r2[idx2["impressions"]] or impressions)
-            if "impressionsClickThroughRate" in idx2:
-                ctr = float(r2[idx2["impressionsClickThroughRate"]] or ctr)
-    except Exception:
-        pass
-
     return {
-        "impressions": impressions,
-        "ctr": ctr,
+        "card_impressions": card_impressions,
+        "card_click_rate": card_click_rate,
         "avg_view_percentage": avg_view_percentage,
     }
 
@@ -560,6 +558,17 @@ def sync_channel(
     if fetch_retention_for is None:
         fetch_retention_for = retention_target_count(channel_id)
     overview = fetch_channel_overview(channel_id, days=days)
+
+    # サムネ impressions/CTR のバルクレポートを先に取り込んでおく。
+    # fetch_video_metrics が日次テーブルから合算して載せるので、順番はこちらが先。
+    reach: Dict[str, Any]
+    try:
+        from . import youtube_reporting as yt_reporting  # type: ignore
+
+        reach = yt_reporting.sync_reach(channel_id, days=days)
+    except Exception as e:
+        reach = {"ok": False, "error": f"reach sync failed: {e}"}
+
     videos = fetch_video_metrics(channel_id, days=days, max_videos=max_videos)
     retention: List[Dict[str, Any]] = []
     if videos.get("ok") and fetch_retention_for > 0:
@@ -574,6 +583,7 @@ def sync_channel(
         "channel_id": channel_id,
         "overview": overview,
         "videos": videos,
+        "reach": reach,
         "retention": retention,
         "synced_at": int(time.time()),
     }
