@@ -262,6 +262,41 @@ def reorder(channel_id: str, ordered_ids: List[str]) -> Dict[str, Any]:
     return get_status(channel_id)
 
 
+def prioritize_trending(channel_id: str) -> Dict[str, Any]:
+    """トレンドテーマをキュー先頭に移動する。
+
+    競合分析の結果、トレンドに乗ったコンテンツは初動 1〜3 時間の
+    リーチが通常の 2〜3 倍になる。FIFO では高スコアのトレンドテーマが
+    非トレンドの後ろで待たされるため、トレンドスコア順にソートする。
+
+    ソート順:
+    1. is_trending=True のアイテム（trend_score 降順）
+    2. is_trending=False のアイテム（元の順序を維持）
+
+    replenish 完了時に自動で呼ばれる。
+    """
+    with _lock_for(channel_id):
+        q = load_queue(channel_id)
+        items = q.get("items", [])
+        if not items:
+            return get_status(channel_id)
+
+        trending = [it for it in items if it.get("is_trending")]
+        non_trending = [it for it in items if not it.get("is_trending")]
+
+        # trend_score 降順（None は 0 扱い）
+        trending.sort(key=lambda x: float(x.get("trend_score") or 0), reverse=True)
+
+        q["items"] = trending + non_trending
+        save_queue(channel_id, q)
+        if trending:
+            print(
+                f"  🔥 ThemeQueue [{channel_id}] prioritized {len(trending)} trending themes "
+                f"(top: {trending[0].get('title')}, score={trending[0].get('trend_score')})"
+            )
+    return get_status(channel_id)
+
+
 # ---------------------------------------------------------------------------
 # Replenish (LLM-driven)
 # ---------------------------------------------------------------------------
@@ -349,6 +384,10 @@ def replenish(
         elif added:
             q["last_error"] = None
         save_queue(channel_id, q)
+
+    # トレンドテーマを先頭に移動（補充直後に並べ替え）
+    if added:
+        prioritize_trending(channel_id)
 
     status = get_status(channel_id)
     status["added"] = added

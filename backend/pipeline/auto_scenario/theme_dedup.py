@@ -75,7 +75,14 @@ _CONTENT_TOKEN_RE = re.compile(r"[一-龥々〆ヵヶ]+|[ァ-ヶー]+|[a-z0-9]+"
 
 # チャンネル定型語（識別子プレフィックスや頻出ジャンル語）。話題を区別しないので
 # キーワード一致から除外する（番号付き識別子は _identifiers 側で別途扱う）。
-_BOILERPLATE_TOKENS = {"scp", "goc", "gow", "anomaly", "item", "財団"}
+_BOILERPLATE_TOKENS = {
+    "scp", "goc", "gow", "anomaly", "item", "財団",
+    # 全動画のタイトルに付く定型語。話題を全く区別しないのに 2〜4 文字あるため
+    # _keyword_overlap の重み（文字数の2乗）で強く効いてしまい、無関係な
+    # 2 本が「ショート」の共有だけで 0.76 まで跳ね上がる誤検出が出ていた。
+    "ショート", "shorts", "short", "ゆっくり", "解説", "考察", "研究",
+    "一口", "分科学", "ファイル", "まとめ",
+}
 
 
 def _content_tokens(title: str) -> List[str]:
