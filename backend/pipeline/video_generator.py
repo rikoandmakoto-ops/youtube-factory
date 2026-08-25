@@ -4571,6 +4571,122 @@ def _thumb_wrap_line(font, text, max_width, max_lines=2):
     return [ln for ln in lines if ln]
 
 
+# 縦サムネの中間帯に図解カードを差し込むための最小高さ。これを下回る隙間に
+# 無理やり縮小して置いても、スマホのフィード上では潰れて読めないだけなので
+# その場合は現行どおり無地に倒す。
+THUMB_ILLUST_MIN_BAND_H = 240
+
+
+def _thumb_find_cached_illustration(out_dir):
+    """out_dir/short_illustrations/ に既にある図解カードを1枚選んで返す。
+
+    ショート本編の生成が先に走っていればここにキャッシュがある
+    （illust_NNN.png = DALL-E / collect、pillow_NNN.png = ローカル図解）。
+    無ければ None。呼び出し側は無地にフォールバックする。
+    """
+    cache_dir = Path(out_dir) / "short_illustrations"
+    if not cache_dir.is_dir():
+        return None
+    # 冒頭フックの直後に出る 000 番が本編の主題に一番近い。
+    candidates = sorted(cache_dir.glob("illust_*.png")) + sorted(cache_dir.glob("pillow_*.png"))
+    for path in candidates:
+        try:
+            return Image.open(str(path)).convert("RGBA")
+        except Exception:
+            continue
+    return None
+
+
+def _thumb_build_illustration(out_dir, topic, channel_format, channel_id=None):
+    """縦サムネに載せる図解カードを1枚用意する。
+
+    1) 本編生成済みならそのキャッシュを再利用（サムネと本編の絵が揃う）
+    2) 未生成なら Pillow でその場で描いて同じキャッシュに保存する。
+       サムネ生成はショート本編より先に走るので、初回は 1) が必ず空になる。
+       Pillow 描画は API コスト 0 なので、ここで描いて置いておけば本編側が
+       同じ絵を拾い、無駄な再生成も起きない。
+    3) チャンネルが short_illustrations を切っている / keyword_icons=false /
+       描画に失敗した場合は None を返し、呼び出し側は従来どおり無地にする。
+    """
+    cached = _thumb_find_cached_illustration(out_dir)
+    if cached is not None:
+        return cached
+
+    si_cfg = (channel_format or {}).get("short_illustrations", {}) or {}
+    if not si_cfg.get("enabled"):
+        return None
+    if not (topic or "").strip():
+        return None
+    # keyword_icons=false のチャンネル（実話系スレなど）の Pillow 図解は
+    # 「テーマ語を大きく見せる」＝ほぼ文字だけのカードになる。サムネでは
+    # 真上の見出しと同じ文字を繰り返すだけなので、本編のキャッシュが
+    # できるまでは無地に倒す。
+    if not si_cfg.get("keyword_icons", True):
+        return None
+
+    try:
+        from pipeline import pillow_illustration
+    except Exception:
+        return None
+
+    cache_dir = Path(out_dir) / "short_illustrations"
+    try:
+        return pillow_illustration.generate_pillow_illustration(
+            topic,
+            card_style=(si_cfg.get("card_style") or "textbook"),
+            illust_style=(channel_format or {}).get("illustration_style", {}) or {},
+            idx=0,
+            cache_dir=str(cache_dir),
+            channel_id=channel_id,
+            use_keyword_icons=si_cfg.get("keyword_icons", True),
+        )
+    except Exception as e:
+        print(f"⚠️ サムネ用図解の描画に失敗（無地にフォールバック）: {e}")
+        return None
+
+
+def _thumb_paste_illustration(canvas, illust, band_top, band_bottom,
+                              max_width_ratio=0.86):
+    """図解カードを [band_top, band_bottom] の帯に内接させて中央に置く。
+
+    実際に描いた矩形 (x0, y0, x1, y1) を返す。帯が狭すぎる場合は None。
+    """
+    band_h = band_bottom - band_top
+    if band_h < THUMB_ILLUST_MIN_BAND_H or illust is None:
+        return None
+
+    cw = canvas.width
+    pad = 18  # カード面のふち。帯からはみ出さないよう先に差し引いておく。
+    box_w = int(cw * max_width_ratio) - pad * 2
+    box_h = band_h - pad * 2 - 8
+    if box_w <= 0 or box_h <= 0:
+        return None
+    scale = min(box_w / illust.width, box_h / illust.height)
+    if scale <= 0:
+        return None
+    iw, ih = max(1, int(illust.width * scale)), max(1, int(illust.height * scale))
+    img = illust.resize((iw, ih), Image.LANCZOS)
+
+    x0 = (cw - iw) // 2
+    y0 = band_top + (band_h - ih) // 2
+
+    # 透過 PNG の図解はネオン背景に溶けるので、白のカード面を下に敷く。
+    card = Image.new("RGBA", (canvas.width, canvas.height), (0, 0, 0, 0))
+    card_draw = ImageDraw.Draw(card)
+    card_draw.rounded_rectangle(
+        [x0 - pad, y0 - pad, x0 + iw + pad, y0 + ih + pad],
+        radius=28, fill=(255, 255, 255, 232), outline=(255, 255, 255, 255), width=4)
+    # ふちの落ち影（帯の存在感を出して「浮いた白箱」に見せない）
+    shadow = Image.new("RGBA", (canvas.width, canvas.height), (0, 0, 0, 0))
+    ImageDraw.Draw(shadow).rounded_rectangle(
+        [x0 - pad, y0 - pad + 10, x0 + iw + pad, y0 + ih + pad + 10],
+        radius=28, fill=(0, 0, 0, 110))
+    canvas.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(18)))
+    canvas.alpha_composite(card)
+    canvas.alpha_composite(img.convert("RGBA"), (x0, y0))
+    return (x0 - pad, y0 - pad, x0 + iw + pad, y0 + ih + pad)
+
+
 def _thumb_fit_lines(font_path, lines, max_width, base_size, min_size,
                      max_total_lines=None, step=4):
     """行群が max_width に収まる最大フォントを返す。
@@ -4791,11 +4907,16 @@ def generate_thumbnail(title, prefix, out_dir, bg_video_path=None, thumb_info=No
 
 
 def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
-                             channel_dict=None, char_config=None):
+                             channel_dict=None, char_config=None,
+                             channel_format=None, channel_id=None):
     """Generate a vertical (9:16) thumbnail for YouTube Shorts.
 
     channel_dict / char_config を渡すとチャンネル別の配色・バッジ・キャラを使う。
     渡さない場合は従来通り daily-science 相当の既定値で描画する（後方互換）。
+
+    channel_format を渡すと、テキスト帯とキャラ立ち絵の間にできる無地帯
+    （実測 y=1030〜1350 の約 320px＝画面の 17%）に short_illustrations の
+    図解カードを差し込む。図解が用意できない場合は従来どおり無地。
     """
     SW, SH = 1080, 1920
 
@@ -4890,6 +5011,7 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
     _CHAR_DIR_MAP = {"理子": "riko", "真": "makoto", "あかり": "akari", "ゆうた": "yuuta",
                      "シロ": "shiro", "クロ": "kuro"}
     _chars = char_config or CHAR_CONFIG
+    char_top_y = SH  # 立ち絵の上端。図解カードの下限になる。
     for name, cfg in _chars.items():
         if not isinstance(cfg, dict) or not cfg.get("side"):
             continue
@@ -4922,10 +5044,12 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
             scale = min(box_w / sprite.width, box_h / sprite.height)
             s_w, s_h = max(1, int(sprite.width * scale)), max(1, int(sprite.height * scale))
             sprite = sprite.resize((s_w, s_h), Image.LANCZOS)
+            paste_y = SH - s_h - 40
+            char_top_y = min(char_top_y, paste_y)
             if cfg["side"] == "left":
-                canvas.paste(sprite, (int(SW * 0.01), SH - s_h - 40), sprite)
+                canvas.paste(sprite, (int(SW * 0.01), paste_y), sprite)
             else:
-                canvas.paste(sprite, (SW - s_w - int(SW * 0.01), SH - s_h - 40), sprite)
+                canvas.paste(sprite, (SW - s_w - int(SW * 0.01), paste_y), sprite)
 
     # 3. （中身の無い点線円は 08-20 のレビュー指摘により削除。文字を上に詰める）
 
@@ -4977,7 +5101,32 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
             block_h += 18 + tag_h * len(tag_draw_lines)
 
         band_top, band_bottom = 240, 1180
-        y = band_top + max(0, (band_bottom - band_top - block_h) // 2)
+
+        # --- 中間の無地帯に図解カードを差し込む（2026-08-25）---
+        # 従来はテキストを 240〜1180 の中央に置き、その下からキャラ上端まで
+        # 320px 前後（画面の 17%）が完全に空いていた。全チャンネルで同じ
+        # 構図になっていたのもここが空だったため。図解が用意できたときだけ
+        # テキストを帯の上端に寄せ、空いた分をカードで埋める。
+        illust = None
+        if channel_format is not None:
+            illust_topic = " ".join(
+                str(t) for t in [*(hook_lines or []), subtitle] if t
+            ).strip() or str(title or "")
+            illust = _thumb_build_illustration(
+                out_dir, illust_topic, channel_format, channel_id=channel_id)
+
+        illust_box = None
+        if illust is not None:
+            gap_top = band_top + block_h + 32
+            # 下限は立ち絵の上端。テキスト帯の下端(1180)ではなくここまで使う
+            # ことで、キャラとカードの間に新たな空洞を作らない。
+            gap_bottom = char_top_y - 20
+            illust_box = _thumb_paste_illustration(canvas, illust, gap_top, gap_bottom)
+
+        if illust_box is not None:
+            y = band_top          # カードのぶんテキストは上に寄せる
+        else:
+            y = band_top + max(0, (band_bottom - band_top - block_h) // 2)
 
         # チャンネルバッジ
         _thumb_draw_badge(draw, badge_text, cx, y, font_badge,
@@ -5633,7 +5782,8 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
             _ck()
             results["short_thumbnail"] = generate_short_thumbnail(
                 title, prefix, str(out_dir), thumb_info=thumb_info,
-                channel_dict=channel_dict, char_config=char_config)
+                channel_dict=channel_dict, char_config=char_config,
+                channel_format=channel_format, channel_id=channel_id)
 
         # 2. Videos
         if gen_type in ("short", "both"):
