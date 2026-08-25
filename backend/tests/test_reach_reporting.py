@@ -80,6 +80,107 @@ class TestCtrNormalization(unittest.TestCase):
         self.assertAlmostEqual(yr._normalize_ctr(1.0), 1.0)
 
 
+class _FakeResp:
+    def __init__(self, status):
+        self.status = status
+
+
+class _FakeHttpError(Exception):
+    def __init__(self, status):
+        super().__init__(f"HTTP {status}")
+        self.resp = _FakeResp(status)
+
+
+class _FakeReports:
+    """jobs().reports().list(...).execute() を模す。
+
+    `script` は execute() 呼び出しごとの結果。例外インスタンスなら raise。
+    """
+
+    def __init__(self, script):
+        self._script = list(script)
+        self.calls = []
+
+    def list(self, **kwargs):
+        self.calls.append(kwargs)
+        outcome = self._script.pop(0)
+
+        class _Req:
+            def execute(_self):
+                if isinstance(outcome, Exception):
+                    raise outcome
+                return outcome
+
+        return _Req()
+
+
+class _FakeJobs:
+    def __init__(self, reports):
+        self._reports = reports
+
+    def reports(self):
+        return self._reports
+
+
+class _FakeSvc:
+    def __init__(self, reports):
+        self._jobs = _FakeJobs(reports)
+
+    def jobs(self):
+        return self._jobs
+
+
+class TestListReportsResilience(unittest.TestCase):
+    """reports.list の一時 500 で丸ごと取り込み 0 件になるのを防ぐ。
+
+    守りたい回帰: 2026-08-25 に yokai-watch の reports.list が 500 を返し、
+    再試行が無かったためそのチャンネルの取り込みが 0 件で終わっていた。
+    """
+
+    def setUp(self):
+        self._orig_sleep = yr.time.sleep
+        yr.time.sleep = lambda *_a, **_k: None
+
+    def tearDown(self):
+        yr.time.sleep = self._orig_sleep
+
+    def test_retries_transient_500_then_succeeds(self):
+        reports = _FakeReports([
+            _FakeHttpError(500),
+            _FakeHttpError(503),
+            {"reports": [{"id": "r1"}]},
+        ])
+        res = yr._list_reports(_FakeSvc(reports), "job1", "2026-07-24T00:00:00Z")
+        self.assertTrue(res["ok"])
+        self.assertEqual([r["id"] for r in res["reports"]], ["r1"])
+        self.assertEqual(len(reports.calls), 3)
+
+    def test_does_not_retry_permanent_error(self):
+        reports = _FakeReports([_FakeHttpError(403)])
+        res = yr._list_reports(_FakeSvc(reports), "job1", "2026-07-24T00:00:00Z")
+        self.assertFalse(res["ok"])
+        self.assertEqual(len(reports.calls), 1)  # 403 は再試行しない
+
+    def test_gives_up_after_max_attempts(self):
+        reports = _FakeReports([_FakeHttpError(500)] * yr.LIST_MAX_ATTEMPTS)
+        res = yr._list_reports(_FakeSvc(reports), "job1", "2026-07-24T00:00:00Z")
+        self.assertFalse(res["ok"])
+        self.assertEqual(len(reports.calls), yr.LIST_MAX_ATTEMPTS)
+
+    def test_follows_all_pages(self):
+        """ページを打ち切ると新しいレポートが取り込まれず日次が欠ける。"""
+        reports = _FakeReports([
+            {"reports": [{"id": "a"}], "nextPageToken": "t1"},
+            {"reports": [{"id": "b"}], "nextPageToken": "t2"},
+            {"reports": [{"id": "c"}]},
+        ])
+        res = yr._list_reports(_FakeSvc(reports), "job1", "2026-07-24T00:00:00Z")
+        self.assertEqual([r["id"] for r in res["reports"]], ["a", "b", "c"])
+        self.assertEqual(
+            [c.get("pageToken") for c in reports.calls], [None, "t1", "t2"]
+        )
+
+
 class TestAggregationAndUpdate(unittest.TestCase):
     """集計と video_metrics への反映を一時DBで検証する。"""
 

@@ -27,7 +27,9 @@ YouTube Reporting API v1 連携 — サムネ impressions / CTR のバルクレ�
   - ensure_job(channel_id)            ジョブが無ければ作る
   - list_jobs(channel_id)             ジョブ一覧
   - ingest_reports(channel_id, ...)   未取り込みレポートを DL して日次テーブルへ
-  - sync_reach(channel_id, days=30)   取り込み＋期間集計を video_metrics へ反映
+  - writeback_reach(channel_id, ...)  日次テーブルを合算して video_metrics へ反映
+  - sync_reach(channel_id, days=30)   取り込み＋書き戻し
+  - sync_reach_all(...)               全チャンネルの取り込み（analytics.enabled 非依存）
 """
 
 from __future__ import annotations
@@ -44,6 +46,12 @@ from .analytics import store as analytics_store
 
 REPORT_TYPE_ID = "channel_reach_basic_a1"
 JOB_NAME = "youtube-factory reach (thumbnail impressions/CTR)"
+
+# reports.list はサーバ側の一時障害で 500 / 503 / 429 を返すことがある。
+# 1回でも落ちるとそのチャンネルの取り込みが丸ごと 0 件になるので再試行する。
+RETRYABLE_STATUS = (429, 500, 502, 503, 504)
+LIST_MAX_ATTEMPTS = 4
+LIST_BACKOFF_SEC = 1.5
 
 # レポートの列名（channel_reach_basic_a1）
 COL_DATE = "date"
@@ -206,17 +214,77 @@ def _parse_report_csv(text: str, channel_id: str) -> List[Dict[str, Any]]:
     return out
 
 
+def _http_status(exc: Exception) -> Optional[int]:
+    resp = getattr(exc, "resp", None)
+    status = getattr(resp, "status", None)
+    try:
+        return int(status) if status is not None else None
+    except (TypeError, ValueError):
+        return None
+
+
+def _list_reports(
+    svc, job_id: str, created_after: str
+) -> Dict[str, Any]:
+    """ジョブのレポート一覧を全ページ取得する。
+
+    一時障害（500/503/429）は指数バックオフで再試行する。ここで諦めると
+    そのチャンネルはその日のレポートを1件も取り込まないまま「取得0件」に
+    なり、翌日以降も createdAfter の窓から落ちれば永久に欠落する。
+    """
+    reports: List[Dict[str, Any]] = []
+    page_token: Optional[str] = None
+    while True:
+        last_err: Optional[Exception] = None
+        resp: Optional[Dict[str, Any]] = None
+        for attempt in range(LIST_MAX_ATTEMPTS):
+            try:
+                resp = (
+                    svc.jobs()
+                    .reports()
+                    .list(jobId=job_id, createdAfter=created_after, pageToken=page_token)
+                    .execute()
+                )
+                last_err = None
+                break
+            except Exception as e:  # noqa: BLE001 — 再試行可否は status で判定
+                last_err = e
+                status = _http_status(e)
+                if status is not None and status not in RETRYABLE_STATUS:
+                    break
+                if attempt < LIST_MAX_ATTEMPTS - 1:
+                    time.sleep(LIST_BACKOFF_SEC * (2 ** attempt))
+        if last_err is not None or resp is None:
+            return {"ok": False, "error": f"reports.list failed: {last_err}"}
+        reports.extend(resp.get("reports", []) or [])
+        page_token = resp.get("nextPageToken")
+        if not page_token:
+            break
+    return {"ok": True, "reports": reports}
+
+
 def ingest_reports(
     channel_id: str,
     *,
     days: int = 30,
-    max_reports: int = 60,
+    max_reports: int = 200,
+    ensure: bool = True,
 ) -> Dict[str, Any]:
-    """未取り込みの reach レポートを DL して video_reach_daily に流し込む。"""
+    """未取り込みの reach レポートを DL して video_reach_daily に流し込む。
+
+    ensure=True ならジョブが無いときに作る。ジョブ作成時点で過去30日分が
+    バックフィルされるので、作り忘れたチャンネルはここで自動的に復旧する。
+    """
     svc = _build_reporting_service(channel_id)
     if not svc:
         return {"ok": False, "error": "OAuth 未連携または googleapiclient 未導入"}
     job_id = _reach_job_id(svc)
+    job_created = False
+    if not job_id and ensure:
+        created = ensure_job(channel_id)
+        if created.get("ok"):
+            job_id = created.get("job_id")
+            job_created = bool(created.get("created"))
     if not job_id:
         return {
             "ok": False,
@@ -228,27 +296,16 @@ def ingest_reports(
         datetime.now(timezone.utc) - timedelta(days=days + 2)
     ).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    reports: List[Dict[str, Any]] = []
-    page_token: Optional[str] = None
-    while len(reports) < max_reports:
-        try:
-            resp = (
-                svc.jobs()
-                .reports()
-                .list(jobId=job_id, createdAfter=created_after, pageToken=page_token)
-                .execute()
-            )
-        except Exception as e:
-            return {"ok": False, "error": f"reports.list failed: {e}", "job_id": job_id}
-        reports.extend(resp.get("reports", []) or [])
-        page_token = resp.get("nextPageToken")
-        if not page_token:
-            break
+    listed = _list_reports(svc, job_id, created_after)
+    if not listed.get("ok"):
+        return {"ok": False, "error": listed.get("error"), "job_id": job_id}
+    reports: List[Dict[str, Any]] = listed.get("reports") or []
 
     if not reports:
         return {
             "ok": True,
             "job_id": job_id,
+            "job_created": job_created,
             "reports_found": 0,
             "reports_ingested": 0,
             "rows": 0,
@@ -266,7 +323,11 @@ def ingest_reports(
     ingested = 0
     total_rows = 0
     errors: List[str] = []
-    for rep in reports[:max_reports]:
+    for rep in reports:
+        # max_reports は「1回で新規取り込みする上限」。取り込み済みを数えて
+        # しまうと、既存が上限に達した時点で新しいレポートに永久に届かない。
+        if ingested >= max_reports:
+            break
         rid = rep.get("id")
         url = rep.get("downloadUrl")
         if not rid or not url:
@@ -301,11 +362,18 @@ def ingest_reports(
         total_rows += len(rows)
         time.sleep(0.05)
 
+    latest_start = max((r.get("startTime") or "" for r in reports), default="")
     return {
         "ok": True,
         "job_id": job_id,
+        "job_created": job_created,
         "reports_found": len(reports),
         "reports_ingested": ingested,
+        "reports_pending": sum(
+            1 for r in reports
+            if r.get("id") and not analytics_store.is_report_ingested(r["id"])
+        ),
+        "latest_report_start": latest_start,
         "rows": total_rows,
         "errors": errors,
     }
@@ -315,22 +383,19 @@ def ingest_reports(
 # sync
 # ---------------------------------------------------------------------
 
-def sync_reach(
+def writeback_reach(
     channel_id: str,
     *,
     days: int = 30,
     snapshot_date: Optional[str] = None,
 ) -> Dict[str, Any]:
-    """レポート取り込み → 期間集計 → video_metrics.impressions/ctr を更新。
+    """日次テーブルを期間集計して video_metrics.impressions/ctr を更新する。
 
     video_metrics は「snapshot_date 時点で直近 days 日の値」という規約なので、
-    reach 側も同じ窓で合算する。upsert_video_metric は INSERT OR REPLACE で
-    impressions/ctr を 0 に戻すため、必ず Analytics 側の sync の**後**に呼ぶ。
+    reach 側も同じ窓で合算する。update_video_metric_reach は既存行しか
+    更新しないので、**必ず fetch_video_metrics がその日の行を作った後**に
+    呼ぶこと。先に呼ぶと毎回 metrics_updated=0 / no_snapshot_row=N になる。
     """
-    ing = ingest_reports(channel_id, days=days)
-    if not ing.get("ok"):
-        return {"channel_id": channel_id, "ok": False, "ingest": ing}
-
     end = datetime.utcnow().date()
     start = end - timedelta(days=days)
     snap = snapshot_date or end.isoformat()
@@ -356,10 +421,76 @@ def sync_reach(
     return {
         "channel_id": channel_id,
         "ok": True,
-        "ingest": ing,
         "videos_with_reach": len(agg),
         "metrics_updated": updated,
         "no_snapshot_row": missing_row,
         "range": {"start": start.isoformat(), "end": end.isoformat()},
         "snapshot_date": snap,
     }
+
+
+def sync_reach(
+    channel_id: str,
+    *,
+    days: int = 30,
+    snapshot_date: Optional[str] = None,
+) -> Dict[str, Any]:
+    """レポート取り込み → 期間集計 → video_metrics.impressions/ctr を更新。"""
+    ing = ingest_reports(channel_id, days=days)
+    if not ing.get("ok"):
+        return {"channel_id": channel_id, "ok": False, "ingest": ing}
+
+    back = writeback_reach(channel_id, days=days, snapshot_date=snapshot_date)
+    return {**back, "ok": True, "ingest": ing}
+
+
+def sync_reach_all(
+    channel_ids: Optional[List[str]] = None,
+    *,
+    days: int = 30,
+    writeback: bool = False,
+) -> Dict[str, Any]:
+    """全チャンネルのレポートを取り込む。
+
+    なぜ独立した入口が要るか:
+        取り込みは `sync_channel` の中でしか走っておらず、その `sync_channel`
+        は PDCA が `video_format.analytics.enabled=true` のチャンネルにしか
+        投げない。結果、ジョブは作ってあるのにレポートを1件も取り込んで
+        いないチャンネル（akashic-librarian / clip-lab / company-facts）が
+        できていた。レポートは createdAfter の窓から落ちると二度と取れない
+        ので、取り込みだけは analytics.enabled と切り離して全チャンネル回す。
+
+    writeback=False（既定）は日次テーブルに貯めるだけ。video_metrics への
+    反映は sync_channel が fetch_video_metrics の後段でやる。
+    """
+    if channel_ids is None:
+        channel_ids = _all_channel_ids()
+
+    results: Dict[str, Any] = {}
+    total_rows = 0
+    for cid in channel_ids:
+        try:
+            res = ingest_reports(cid, days=days)
+        except Exception as e:  # noqa: BLE001 — 1chの失敗で全体を止めない
+            res = {"ok": False, "error": f"{type(e).__name__}: {e}"}
+        if res.get("ok") and writeback:
+            res["writeback"] = writeback_reach(cid, days=days)
+        total_rows += int(res.get("rows") or 0)
+        results[cid] = res
+
+    return {
+        "ok": True,
+        "channels": len(channel_ids),
+        "rows": total_rows,
+        "results": results,
+    }
+
+
+def _all_channel_ids() -> List[str]:
+    from pathlib import Path
+
+    d = Path(__file__).resolve().parent.parent.parent / "data" / "channels"
+    try:
+        return sorted(p.stem for p in d.glob("*.json"))
+    except Exception:
+        return []

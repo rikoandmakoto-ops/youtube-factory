@@ -562,14 +562,26 @@ def sync_channel(
     # サムネ impressions/CTR のバルクレポートを先に取り込んでおく。
     # fetch_video_metrics が日次テーブルから合算して載せるので、順番はこちらが先。
     reach: Dict[str, Any]
+    yt_reporting = None
     try:
         from . import youtube_reporting as yt_reporting  # type: ignore
 
-        reach = yt_reporting.sync_reach(channel_id, days=days)
+        reach = yt_reporting.ingest_reports(channel_id, days=days)
     except Exception as e:
-        reach = {"ok": False, "error": f"reach sync failed: {e}"}
+        reach = {"ok": False, "error": f"reach ingest failed: {e}"}
 
     videos = fetch_video_metrics(channel_id, days=days, max_videos=max_videos)
+
+    # 書き戻しは fetch_video_metrics の**後**。update_video_metric_reach は
+    # 既存行しか更新しないので、先に呼ぶとその日のスナップショット行がまだ
+    # 無く、毎回 metrics_updated=0 になる（値自体は fetch_video_metrics が
+    # 日次テーブルから合算して載せるので実害は無いが、取り込みが死んでいる
+    # ように見えてしまう）。
+    if yt_reporting is not None and reach.get("ok"):
+        try:
+            reach["writeback"] = yt_reporting.writeback_reach(channel_id, days=days)
+        except Exception as e:
+            reach["writeback"] = {"ok": False, "error": f"reach writeback failed: {e}"}
     retention: List[Dict[str, Any]] = []
     if videos.get("ok") and fetch_retention_for > 0:
         for v in _retention_targets(videos.get("items", []) or [], fetch_retention_for):

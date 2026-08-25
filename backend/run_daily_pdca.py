@@ -655,6 +655,22 @@ def main(argv: List[str]) -> int:
         except Exception:
             names[cid] = cid
 
+    # サムネ reach（impressions/CTR）のバルクレポートは全チャンネル分を先に
+    # 取り込む。per-channel の sync でも取り込むが、そちらは analytics.enabled
+    # のチャンネルしか回らず、無効チャンネルのレポートが createdAfter の窓
+    # （約32日）から落ちて永久欠落していた。
+    if do_sync:
+        print("\n[Reach] 全チャンネルのバルクレポート取り込み...")
+        reach_all = _safe("POST", "/api/analytics/reach/ingest-all", token, timeout=900)
+        if reach_all.get("ok"):
+            d = reach_all.get("data") or {}
+            print(f"  reach ok — {d.get('channels')}ch / {d.get('rows')} 行取り込み")
+            for cid, r in (d.get("results") or {}).items():
+                if not r.get("ok"):
+                    print(f"    ✗ {cid}: {r.get('error')}")
+        else:
+            print(f"  reach FAILED: {reach_all.get('error')}")
+
     reports: List[Dict[str, Any]] = []
     md_parts: List[str] = [
         f"# 日次 PDCA レポート — {date_str}",

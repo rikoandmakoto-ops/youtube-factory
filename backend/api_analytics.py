@@ -9,6 +9,7 @@ YouTube Analytics API v2 とコメント分析を統合した参照系 + 手動�
   - GET  /api/analytics/video/{video_id}/retention       — 視聴維持率カーブ
   - GET  /api/analytics/video/{video_id}/comments        — コメント分析（感情/トピック）
   - POST /api/analytics/sync/{channel_id}                — 手動同期トリガー
+  - POST /api/analytics/reach/ingest-all                 — 全ch のサムネ reach 取り込み
   - GET  /api/analytics/insights/{channel_id}            — 成功パターン + 維持率分析（Phase B）
   - POST /api/analytics/analyze/{channel_id}             — 分析実行トリガー（Phase B）
 
@@ -301,6 +302,31 @@ def _analyze_lock_for(channel_id: str) -> threading.Lock:
         lock = threading.Lock()
         _analyze_locks[channel_id] = lock
     return lock
+
+
+_reach_all_lock = threading.Lock()
+
+
+@router.post("/reach/ingest-all")
+async def reach_ingest_all(
+    days: int = Query(default=30, ge=1, le=90),
+    _: Dict[str, Any] = Depends(require_session),
+) -> Dict[str, Any]:
+    """全チャンネルの reach バルクレポートを取り込む（ジョブが無ければ作る）。
+
+    /sync/{channel_id} の中でも取り込んでいるが、そちらは PDCA が
+    video_format.analytics.enabled=true のチャンネルにしか投げない。
+    レポートは createdAfter の窓（約32日）から落ちると二度と取得できない
+    ので、取り込みだけは analytics.enabled と切り離して全チャンネル回す。
+    """
+    if not _reach_all_lock.acquire(blocking=False):
+        raise HTTPException(status_code=409, detail="reach ingest already running")
+    try:
+        from pipeline import youtube_reporting as yt_reporting
+
+        return yt_reporting.sync_reach_all(days=days)
+    finally:
+        _reach_all_lock.release()
 
 
 @router.get("/insights/{channel_id}")
