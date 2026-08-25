@@ -13,6 +13,11 @@ frontend/.env.local
 # OAuth トークンDB（Fernet 暗号化済みだが秘密情報。絶対にコミットしない）
 backend/pipeline/credentials/oauth.db
 *.db
+# バックエンド API の自前キー。ローカルには残すが追跡しない。
+backend/pipeline/credentials/api_key.txt
+# DB やコンフィグの退避コピー。拡張子が .db で終わらないので上の *.db を素通りする。
+*.bak_*
+*.before_*
 
 # ===== Node / Next.js =====
 node_modules/
@@ -67,7 +72,6 @@ backend/short_only_results_*.json
 # PDCA スクリプトが書き換え前に残す使い捨てスナップショット。
 # 元ファイル（data/channels/*.json 等）は追跡しているので履歴はそちらで追える。
 data/**/*.bak_*
-!data/youtube_tokens.db.bak_*
 
 # ===== Large root-level samples / temp media =====
 *.b64
