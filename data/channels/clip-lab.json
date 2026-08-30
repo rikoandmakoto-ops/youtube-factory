@@ -142,7 +142,160 @@
       "~/Movies/yf_clip_sources",
       "~/Desktop/動画出力用"
     ],
-    "_clips_per_video_comment": "1本の元動画から取る上限。3 だと ひろゆき側の在庫（3本 × 3 = 9本）が1週間で尽きて 岡田斗司夫にフォールバックし続ける。元配信は2〜6時間あり、5本取っても総尺の1%未満。区間同士は segment_selection.min_gap_sec=30 で離してある。"
+    "_clips_per_video_comment": "1本の元動画から取る上限。3 だと ひろゆき側の在庫（3本 × 3 = 9本）が1週間で尽きて 岡田斗司夫にフォールバックし続ける。元配信は2〜6時間あり、5本取っても総尺の1%未満。区間同士は segment_selection.min_gap_sec=30 で離してある。",
+    "viral_sources": {
+      "enabled": true,
+      "sort": "top",
+      "time_filter": "day",
+      "_sort_comment": "top/day = 『今日ウケたもの』。hot は伸び途中で外れが多く、week にすると同じ動画を何日も掴む。",
+      "auth_mode": "auto",
+      "_auth_mode_comment": "auto = oauth → 匿名JSON → RSS の順に落ちる。2026-08-30 実測で匿名JSONは 403（bot wall）なので、REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET を backend/.env に入れるまでは RSS 経路（スコア・NSFWフラグなし）で動く。本番運用では OAuth を入れること。",
+      "limit_per_subreddit": 50,
+      "request_interval_sec": 4.0,
+      "_request_interval_comment": "RSS 経路は枠が厳しく、1秒間隔だと2件目以降が全部 429 になる（実測）。OAuth を入れたら 1.0 に戻してよい。",
+      "max_candidates": 40,
+      "prepare_limit": 5,
+      "_prepare_limit_comment": "尺の実測（yt-dlp のメタ取得）まで進める本数。実際に使うのは1本だが、内容ゲートで落ちる前提で多めに用意する。",
+      "min_score": 3000,
+      "_min_score_comment": "Reddit のスコア下限。top/day の上位は主要サブで1万超えるので、3000 は『そこそこ伸びた』の線。",
+      "min_duration_sec": 6,
+      "max_duration_sec": 180,
+      "_duration_comment": "調達側の足切り。180秒超はコンピレーションが多く、切り出すと文脈が壊れる。ショート尺への圧縮は clip.max_duration_sec が担当する。",
+      "max_height": 1080,
+      "download_dir": "~/Movies/yf_viral_downloads",
+      "_download_dir_comment": "~/Desktop の下には絶対に置かないこと。launchd 配下では TCC で ffmpeg の書き込みが無言でハングし、autopilot だけが静かに死ぬ（clip-lab で実測済み）。",
+      "user_agent": "youtube-factory:clip-lab:1.0 (contact via channel description)",
+      "_user_agent_comment": "Reddit は既定の python-urllib UA を 429 で弾く。名乗れば公開 JSON は認証なしで通る。",
+      "subreddits": [
+        {
+          "name": "unexpected",
+          "weight": 3,
+          "enabled": true
+        },
+        {
+          "name": "HolUp",
+          "weight": 3,
+          "enabled": true
+        },
+        {
+          "name": "funny",
+          "weight": 2,
+          "enabled": true
+        },
+        {
+          "name": "ContagiousLaughter",
+          "weight": 2,
+          "enabled": true
+        },
+        {
+          "name": "WatchPeopleDieInside",
+          "weight": 2,
+          "enabled": true
+        },
+        {
+          "name": "therewasanattempt",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "name": "facepalm",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "name": "instant_regret",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "_subreddits_comment": "『ちょいエロ』の色は unexpected / HolUp が担う（この2つは SFW の範囲で意外性のあるオチが集まる）。r/NSFW 系を足しても content_gate.allow_over_18 が false の間は1本も通らない。露骨な性的表現は YouTube のガイドライン違反でチャンネルごと消えるので、開けるなら本当に開けてよいか確認してから。",
+      "content_gate": {
+        "allow_over_18": false,
+        "_allow_over_18_comment": "Reddit の NSFW フラグ付き投稿を通すか。false のままにしておくのが強く推奨。",
+        "require_manual_review": false,
+        "_require_manual_review_comment": "2026-08-30 のユーザー決定で false（レビューなし）。出来上がりは force_privacy を 付けずに publish_settings.default_privacy（public）でそのまま公開する。true に戻すと、チャンネル既定が public でも private で上がる。",
+        "require_speech": false,
+        "_require_speech_comment": "false なら無音動画（BGM だけ・映像オチ）も採用し、フック文だけで作る。true にすると発話のある動画だけになる。",
+        "min_speech_ratio": 0.15,
+        "block_communities": [],
+        "block_title_patterns": [
+          "(?i)\\b(nsfw|onlyfans|leaked|deepfake)\\b",
+          "(?i)\\b(racist|nazi|hitler)\\b"
+        ],
+        "block_transcript_patterns": [],
+        "_patterns_comment": "ここに書いた正規表現は viral_sources.HARD_BLOCK_PATTERNS（性的露骨・未成年・暴力・性犯罪）に追加される形で効く。既定のハードブロックは設定で消せない。"
+      },
+      "output": {
+        "min_duration_sec": 8,
+        "target_duration_sec": 45,
+        "max_duration_sec": 59,
+        "clips_per_video": 1,
+        "max_source_attempts": 4,
+        "cta_text": "",
+        "watermark_text": "海外バズ",
+        "_comment": "海外枠だけの尺・焼き込み設定。clip-lab の clip.min_duration_sec（30秒＝国内切り抜き用）をそのまま使うと 10〜25 秒のバイラル動画が全部『尺が短すぎます』で落ちるので、ここで別の帯を持つ。engines/viral.py が viral_sources.output → clip.* の順に読む。",
+        "_max_source_attempts_comment": "内容ゲートで落ちたら次の素材へ進む回数。海外バイラルはゲート落ちが常態なので、1本目で諦めるとその日の投稿が消える。"
+      },
+      "layout_spec": {
+        "canvas": [
+          1080,
+          1920
+        ],
+        "fps": 30,
+        "source_crop_bottom_ratio": 0.0,
+        "_crop_comment": "海外素材に『下部の焼き込み字幕帯』は無いので切り落とさない。clip-lab 直下の layout_spec.source_crop_bottom_ratio（0.22）は国内ゆっくり素材専用の値で、海外素材に当てると中身が欠ける。"
+      },
+      "thumbnail_template": {
+        "badge_text": "海外バズ",
+        "badge_color": [
+          255,
+          60,
+          120
+        ],
+        "hook_color": [
+          255,
+          255,
+          255
+        ],
+        "subtitle_color": [
+          255,
+          220,
+          60
+        ],
+        "bg_tone": "dark",
+        "style_hint": "元動画のピーク時フレームに太字フックを乗せる（生成画像は使わない）",
+        "_comment": "renderer_overseas.OverseasLayout.from_channel がここを先に読む。国内切り抜きのオレンジ（切り抜きバッジ）と識別色を分けるため。"
+      },
+      "metadata": {
+        "short_title_hashtags": "#shorts #海外の反応",
+        "short_intro": "海外で今バズってる動画に日本語字幕を付けました。\n\n{source_title}\n元投稿: {source_url}\n（{credit_name} より）",
+        "short_hashtags": "#shorts #海外の反応 #面白動画 #バイラル",
+        "tags": [
+          "海外の反応",
+          "面白動画",
+          "shorts",
+          "バイラル",
+          "日本語字幕"
+        ],
+        "category_id": "23",
+        "_comment": "clip-lab の description_template は『▼ この切り抜きの本編はこちら』で、Reddit の投稿ページを指すと意味が通らないので海外枠だけ差し替える。pipeline.build_title / build_description が overrides として読む。category 23 = Comedy（国内切り抜きは 24 = Entertainment）。"
+      },
+      "asr": {
+        "model": "small",
+        "compute_type": "int8",
+        "language": null,
+        "beam_size": 5,
+        "_comment": "faster-whisper のローカル実行（API 不要・コスト0）。language を null にすると自動判定（英語以外のバイラルも拾える）。精度が要るなら medium、速さが要るなら base。"
+      },
+      "style_rules": [
+        "フック文は全角28文字以内。読み切れない長さにしない。",
+        "フック文は実際に映っていることを言い切る。釣りタイトルにしない。",
+        "字幕はネットスラング混じりの話し言葉でよいが、下品な直訳語は避ける。",
+        "性的な話題は匂わせ止まり。露骨な語を字幕に出さない（広告に不利なため）。"
+      ],
+      "_style_rules_comment": "translate.translate_clip に渡される。voice_style.style_rules（国内切り抜き用：元配信者の発言を改変しない等）は海外枠に当てはまらないので別に持つ。",
+      "_merged_from": "2026-08-30: 専用チャンネル clip-viral を作らず、既存の clip-lab に統合した（ユーザー決定）。旧 data/channels/clip-viral.json の設定はこのブロックが引き継いでいる。投稿は autopilot の 20:45 スロット（engine: viral）。"
+    }
   },
   "layout_spec": {
     "canvas": [
@@ -399,20 +552,124 @@
             5,
             6
           ]
+        },
+        {
+          "hour": 20,
+          "minute": 45,
+          "days_of_week": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "engine": "viral"
         }
       ],
-      "_times_comment": "運用ルール『ショートのみ・1日1本・チャンネルごとの固定スロット』に合わせて毎日17:45の1枠に統一。凍結前は平日2枠＋休日2枠あり、許諾済み在庫（ひろゆきで直近50本中4〜8本 × clips_per_video 3）を数日で食い潰す設定だった。"
+      "_times_comment": "1日2枠。17:45 = 国内切り抜き（許諾済み YouTube 素材 / clip.engine=local）、20:45 = 海外バイラル翻訳（Reddit 素材 / engine=viral）。スロットの engine が素材の探索先も決める（pipeline._collect_sources）ので、20:45 の engine を消すと海外枠が国内素材で回ってしまう。20:45 は既存の clip-fukada 20:00 / clip-kaneko 20:30 と重ならない枠。"
     },
     "duration_minutes": 1,
     "gen_type": "clip",
     "publish_lead_minutes": 0,
     "theme_queue": [
       {
-        "id": "485e9076",
-        "title": "夫を殺したはずなのに…その真相は？",
-        "angle": "夫を殺したはずの女性の心理と法医学的視点からの解説。",
+        "id": "2287cfd5",
+        "title": "北朝鮮の一般人のスマホ事情とは？",
+        "angle": "北朝鮮のスマホ事情を解説し、視聴者に驚きと知識を提供します。",
         "priority": "high",
         "source": "trend_scanner"
+      },
+      {
+        "id": "64058e77",
+        "title": "24時間テレビの見逃し配信の利点とは？",
+        "angle": "見逃し配信の科学的なメリットを解説し、視聴者の興味を引きます。"
+      },
+      {
+        "id": "591f6ad0",
+        "title": "動画作りに課金しすぎた男の教訓！",
+        "angle": "課金のリスクを科学的に解説し、視聴者に注意を促します。"
+      },
+      {
+        "id": "84f43e35",
+        "title": "浦和 対 横浜fm、試合の裏側を科学で解説！",
+        "angle": "試合の戦略や選手のパフォーマンスをデータで分析。"
+      },
+      {
+        "id": "f1e619ce",
+        "title": "女子バレー 世界ランキングの裏側に迫る！",
+        "angle": "ランキングの変動をデータで解説し、女子バレーの魅力を科学的に分析。"
+      },
+      {
+        "id": "95131230",
+        "title": "個人情報を守るための科学的アプローチ",
+        "angle": "個人情報の漏洩がもたらす影響を科学的に解説し、具体的な対策を紹介する。"
+      },
+      {
+        "id": "204bddd5",
+        "title": "PS5 Proの噂を検証！",
+        "angle": "次世代ゲーム機の進化を科学的に解説！"
+      },
+      {
+        "id": "f4aef5fa",
+        "title": "Apple新製品発表会の注目ポイント",
+        "angle": "新製品がもたらす未来を科学的に考察！"
+      },
+      {
+        "id": "2e575153",
+        "title": "GUポケモンコラボの裏側",
+        "angle": "ファッションとゲームが融合する理由を解説！"
+      },
+      {
+        "id": "8d3e691b",
+        "title": "ウィッチャー3の世界観を科学で探る",
+        "angle": "ファンタジーと現実の科学的なつながりを解説。"
+      },
+      {
+        "id": "f1637539",
+        "title": "台湾女子バレーの魅力とは？",
+        "angle": "かわいい選手たちの活躍とその背景を科学的に解説。"
+      },
+      {
+        "id": "55021369",
+        "title": "大谷翔平の成功の秘密とは？",
+        "angle": "科学的視点から見る大谷の身体能力とメンタルの強さ"
+      },
+      {
+        "id": "547262c5",
+        "title": "渡邊雄太の成功の秘訣とは？",
+        "angle": "バスケットボール選手が持つメンタリティを科学的に分析する。"
+      },
+      {
+        "id": "9f13a7e6",
+        "title": "ウクライナ軍の戦術とは？",
+        "angle": "ウクライナ軍の戦術を科学的に分析し、成功の要因を探る。"
+      },
+      {
+        "id": "84ccb2aa",
+        "title": "PCパーツの進化を科学する",
+        "angle": "最新のPCパーツがどのように進化しているのかを解説する。"
+      },
+      {
+        "id": "7ef3e954",
+        "title": "AIデスゲームの結果分析",
+        "angle": "AI同士のデスゲームが示す未来の可能性を科学的に考察する。"
+      },
+      {
+        "id": "64e4601c",
+        "title": "吉村崇が語る！日常の疑問を解決する科学的アプローチ",
+        "angle": "吉村崇の発言から、日常の疑問を科学的に解説する切り口"
+      },
+      {
+        "id": "cac44b82",
+        "title": "落雷のメカニズムを科学で解説！",
+        "angle": "落雷の原因やその影響を科学的に解説し、身を守る方法を紹介。"
+      },
+      {
+        "id": "485e9076",
+        "title": "夫を殺したはずなのに…その真相は？",
+        "angle": "夫を殺したはずの女性の心理と法医学的視点からの解説。"
       },
       {
         "id": "e953e062",
@@ -420,7 +677,7 @@
         "angle": "最新の宇宙技術がもたらす未来の可能性。"
       }
     ],
-    "_enabled_comment": "2026-08-24 に再開。凍結時の理由（theme_queue 未作成・実績0件）は gen_type=short のチャンネルの話で、gen_type=clip のこのチャンネルには当てはまらなかった。clip 系は theme_queue も台本生成も通らず clip_factory を直接叩く（api_channel_autopilot._run_clip_autopilot）。凍結前の 08-21〜08-23 に実際にひろゆき切り抜き4本が投稿済み。",
+    "_enabled_comment": "2026-08-24 に再開。凍結時の理由（theme_queue 未作成・実績0件）は gen_type=short のチャンネルの話で、gen_type=clip のこのチャンネルには当てはまらなかった。clip 系は theme_queue も台本生成も通らず clip_factory を直接叩く（api_channel_autopilot._run_clip_autopilot）。凍結前の 08-21〜08-23 に実際にひろゆき切り抜き4本が投稿済み。 2026-08-30: 海外バイラル翻訳（旧 clip-viral）を 20:45 スロットとして統合。",
     "_theme_queue_comment": "gen_type=clip では未使用（台本生成を通らず clip_factory が直接切り抜く）。凍結前は daily-science 由来の科学テーマが15件残っていて、切り抜きチャンネルの運用者を混乱させるだけだったので 2026-08-24 に空にした。切り抜き元の選定は clip.external_sources の許諾ゲート → segment_selection が担う。"
   },
   "short_series_name": "切り抜きラボ",
