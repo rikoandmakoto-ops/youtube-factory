@@ -1,23 +1,42 @@
-"""切り抜きショートの縦型レンダリング。
+"""海外バイラル切り抜き専用の縦型レンダリング。
 
-レイアウトは data/research/clip_shorts_visual_analysis.json の横断分析に準拠する。
-再生数 500万〜3300万の切り抜き/解説ショート7本を実測した結果、4本すべてが
-同じ骨格だった:
+`renderer.py`（clip-lab の国内切り抜き用）から **意図的に分離した独立モジュール**。
+共通ヘルパを import せず、フォント選択から ffmpeg 合成まで自前で持つ。
+
+════════════════════════════════════════════════════════════════════
+■ なぜ共有しないのか
+════════════════════════════════════════════════════════════════════
+
+2026-08-30 の方針変更で、海外バイラル（Reddit 翻訳）と国内切り抜き（ひろゆき等）は
+**同じ YouTube チャンネル `clip-lab` の別スロット**に同居することになった。
+同居した以上、レンダラを共有すると次が起きる:
+
+  - 海外側の見た目を触ると、17:45 の国内切り抜きの見た目まで変わる
+  - 素材の性質が逆（国内＝16:9 の焼き込み字幕あり／海外＝9:16・1:1・字幕なし）
+    なので、片方に効く調整がもう片方では悪化する
+  - 「元動画の下部 22% を切り落とす」既定は国内専用で、海外に適用すると中身が欠ける
+
+チャンネルが分かれていた頃は共有で足りたが、同居した今は分離が正しい。
+共通化したいときは「両方に同じ変更を入れたい」と確信できたときだけにする。
+
+════════════════════════════════════════════════════════════════════
+■ 骨格（renderer.py と同じ積み方・値は海外向けに振り直し）
+════════════════════════════════════════════════════════════════════
 
     ┌──────────────┐
-    │  フック帯（常時表示・極太・2〜3行）  │  ← サムネの代わり。スクロールを止める
+    │  フック帯（常時表示・極太・2〜3行）  │  ← スクロールを止める日本語の要約
     ├──────────────┤
-    │   元動画 16:9 を横幅いっぱい      │  ← 9:16 クロップは 0本。情報量を捨てない
+    │   元動画（16:9 / 9:16 / 1:1）     │  ← クロップしない。縦長は縮めて左右に余白
     ├──────────────┤
-    │  打ち直し字幕（巨大・2行・太縁）   │  ← 元の焼き込み字幕は小さくなるので切り落とす
-    │  CTA帯（本編誘導・常時表示）      │
+    │  日本語字幕（巨大・2行・太縁）     │  ← 無音動画では帯ごと作らない
     └──────────────┘
 
-エフェクト（ズーム/シェイク/グリッチ/トランジション）は 7本中 0本で不使用。
-「加工していない感」が切り抜きの信頼性なので、意図的に足さない。
+国内版との既定値の違い:
 
-縦位置は固定値ではなく元動画のアスペクト比から毎回組み直す。16:9 を横幅いっぱいに
-置くと高さが 486px にしかならず、固定レイアウトだと帯の間に大きな黒余白が空くため。
+  - `source_crop_bottom_ratio` は **0.0**（海外素材に焼き込み字幕帯は無い）
+  - CTA 帯は既定で空（本編誘導が存在しない。出典は説明欄に出す）
+  - アクセントバーはピンク（海外バズ枠の識別色）
+  - 字幕はやや小さめ（原語音声＋日本語字幕で情報量が多く、2行に収めたい）
 """
 
 from __future__ import annotations
@@ -60,16 +79,20 @@ def _font(size: int) -> ImageFont.FreeTypeFont:
 # ---------------------------------------------------------------------
 
 @dataclass
-class ClipLayout:
+class OverseasLayout:
+    """海外バイラル切り抜きのレイアウト。
+
+    国内版 `renderer.ClipLayout` とはフィールド名が一部重なるが、既定値も
+    from_channel の読み方も違う。相互に代入できる前提を持たないこと。
+    """
+
     width: int = 1080
     height: int = 1920
     fps: int = 30
     bg_color: Tuple[int, int, int] = (10, 10, 14)
 
-    # 元動画の下部字幕ボックスを切り落とす比率。yukkuri の text_box_height_ratio は
-    # 0.20 だが、実測すると文字の上端がちょうど 0.80 に接するので少し多めに削る
-    # （残すと打ち直し字幕と二重に見える）。
-    source_crop_bottom_ratio: float = 0.22
+    #: 海外素材に「下部の焼き込み字幕帯」は無い。切ると中身が欠けるので既定 0。
+    source_crop_bottom_ratio: float = 0.0
 
     # フック帯
     hook_font_sizes: Tuple[int, ...] = (88, 80, 72, 64, 58)
@@ -77,16 +100,16 @@ class ClipLayout:
     hook_color: Tuple[int, int, int] = (255, 255, 255)
     hook_stroke: Tuple[int, int, int] = (0, 0, 0)
     hook_stroke_width: int = 10
-    accent_color: Tuple[int, int, int] = (255, 90, 0)
+    accent_color: Tuple[int, int, int] = (255, 60, 120)
 
-    # 字幕
-    subtitle_font_sizes: Tuple[int, ...] = (72, 66, 60, 54)
+    # 字幕（原語音声 + 日本語字幕で情報量が多いぶん国内版より1段小さい）
+    subtitle_font_sizes: Tuple[int, ...] = (66, 60, 54, 48)
     subtitle_max_lines: int = 2
     subtitle_stroke_width: int = 9
     subtitle_default_color: Tuple[int, int, int] = (255, 255, 255)
     subtitle_stroke_color: Tuple[int, int, int] = (0, 0, 0)
 
-    # CTA / ウォーターマーク
+    # CTA / ウォーターマーク（海外枠は本編誘導が無いので既定は空運用）
     cta_font_size: int = 46
     cta_color: Tuple[int, int, int] = (255, 220, 60)
     watermark_font_size: int = 24
@@ -95,7 +118,7 @@ class ClipLayout:
     # 余白
     side_margin: int = 36
     gap: int = 26
-    # ショートのUI（タイトル/チャンネル/ボタン）に隠れる下端
+    #: ショートのUI（タイトル/チャンネル/ボタン）に隠れる下端
     bottom_safe: int = 250
 
     @property
@@ -103,32 +126,51 @@ class ClipLayout:
         return self.width - self.side_margin * 2
 
     @classmethod
-    def from_channel(cls, channel_raw: Dict[str, Any]) -> "ClipLayout":
-        spec = (channel_raw or {}).get("layout_spec") or {}
+    def from_channel(cls, channel_raw: Dict[str, Any]) -> "OverseasLayout":
+        """channel JSON から組み立てる。
+
+        キャンバス・fps・背景色はチャンネル共通のものを読むが、
+        **海外枠だけの上書きは `clip.viral_sources.layout_spec` から読む**。
+        clip-lab の `layout_spec.source_crop_bottom_ratio`（0.22）は国内切り抜き
+        専用の値なので、ここでは決して継承しない。
+        """
+        raw = channel_raw or {}
+        spec = raw.get("layout_spec") or {}
+        viral = ((raw.get("clip") or {}).get("viral_sources") or {})
+        overrides = viral.get("layout_spec") or {}
+
         layout = cls()
-        canvas = spec.get("canvas")
+        canvas = overrides.get("canvas") or spec.get("canvas")
         if isinstance(canvas, (list, tuple)) and len(canvas) == 2:
             layout.width, layout.height = int(canvas[0]), int(canvas[1])
-        if spec.get("fps"):
-            layout.fps = int(spec["fps"])
-        if spec.get("source_crop_bottom_ratio") is not None:
-            layout.source_crop_bottom_ratio = float(spec["source_crop_bottom_ratio"])
-        colors = ((channel_raw or {}).get("video_format") or {}).get("colors") or {}
-        bg = colors.get("bg_color")
+        fps = overrides.get("fps") or spec.get("fps")
+        if fps:
+            layout.fps = int(fps)
+        if overrides.get("source_crop_bottom_ratio") is not None:
+            layout.source_crop_bottom_ratio = float(
+                overrides["source_crop_bottom_ratio"])
+
+        colors = (raw.get("video_format") or {}).get("colors") or {}
+        bg = overrides.get("bg_color") or colors.get("bg_color")
         if isinstance(bg, (list, tuple)) and len(bg) >= 3:
             layout.bg_color = (int(bg[0]), int(bg[1]), int(bg[2]))
-        thumb = (channel_raw or {}).get("thumbnail_template") or {}
+
+        thumb = viral.get("thumbnail_template") or raw.get("thumbnail_template") or {}
         badge = thumb.get("badge_color")
         if isinstance(badge, (list, tuple)) and len(badge) >= 3:
             layout.accent_color = (int(badge[0]), int(badge[1]), int(badge[2]))
+        hook_color = thumb.get("hook_color")
+        if isinstance(hook_color, (list, tuple)) and len(hook_color) >= 3:
+            layout.hook_color = (int(hook_color[0]), int(hook_color[1]),
+                                 int(hook_color[2]))
         return layout
 
 
 @dataclass
-class ComputedLayout:
+class ComputedOverseasLayout:
     """1本分の実寸レイアウト。"""
 
-    layout: ClipLayout
+    layout: OverseasLayout
     hook_lines: List[str]
     hook_font_size: int
     hook_line_height: int
@@ -142,10 +184,10 @@ class ComputedLayout:
     subtitle_line_height: int
     subtitle_chars_per_line: int
     cta_y: int
-    #: 実際に描く映像の幅と左端。16:9 素材では (canvas幅, 0) ＝従来と同じ。
+    #: 実際に描く映像の幅と左端。16:9 素材では (canvas幅, 0)。
     #: 縦長素材（TikTok / Reels の 9:16）は横幅いっぱいに置くと高さが 1920px を
     #: 超えてフック帯・字幕帯を画面外へ押し出すので、縦に収まるまで縮めて
-    #: 左右に余白を作る。既定値は従来挙動と一致する。
+    #: 左右に余白を作る。海外素材は縦長が多数派なのでここが常用経路。
     video_w: int = 0
     video_x: int = 0
 
@@ -156,7 +198,7 @@ class ComputedLayout:
 
 _NO_LINE_START = "、。，．),）」』】！？!?ぁぃぅぇぉっゃゅょゎゕゖァィゥェォッャュョヮー"
 # 途中で折ると読めなくなる連続（英数字・カタカナ語・漢字熟語）。ここでは改行しない。
-# 『重要な指標』が「…重要な指 / 標として」と割れるのを防ぐ。
+# 海外素材は固有名詞・英単語がそのまま字幕に残るので国内版より効く。
 _ATOMIC_RE = re.compile(r"[A-Za-z0-9０-９][A-Za-z0-9０-９.\-]*|[ァ-ヴ]{2,}|[一-龥]{2,}")
 
 _probe_draw = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
@@ -213,11 +255,7 @@ def fit_lines(
     font_sizes: Sequence[int],
     stroke: int,
 ) -> Tuple[List[str], int]:
-    """max_lines に収まる最大のフォントサイズで折り返す。
-
-    固定の「1行N文字」だと、同じ文字数でも英数字混じりの行だけ横幅を溢れる。
-    実測しながらサイズを落とすことで、フック帯が画面外にはみ出すのを防ぐ。
-    """
+    """max_lines に収まる最大のフォントサイズで折り返す。"""
     text = (text or "").strip()
     if not text:
         return [], font_sizes[0]
@@ -258,6 +296,14 @@ def _draw_centered(
 # レイアウト計算
 # ---------------------------------------------------------------------
 
+def _ffmpeg_bin() -> str:
+    return shutil.which("ffmpeg") or "ffmpeg"
+
+
+def _ffprobe_bin() -> str:
+    return shutil.which("ffprobe") or "ffprobe"
+
+
 def probe_size(video_path: Path | str) -> Tuple[int, int]:
     out = subprocess.run(
         [_ffprobe_bin(), "-v", "error", "-select_streams", "v:0",
@@ -271,14 +317,16 @@ def probe_size(video_path: Path | str) -> Tuple[int, int]:
         return 1920, 1080
 
 
-def compute_layout(layout: ClipLayout, *, hook: str, source_size: Tuple[int, int],
-                   reserve_subtitles: bool = True) -> ComputedLayout:
+def compute_layout(
+    layout: OverseasLayout, *, hook: str, source_size: Tuple[int, int],
+    reserve_subtitles: bool = True,
+) -> ComputedOverseasLayout:
     """元動画のサイズとフックの行数から、縦の積み方を決める。
 
     Args:
         reserve_subtitles: 字幕帯の高さを確保するか。字幕が1行も無い切り抜き
-            （海外バイラルの無音動画）で True のままにすると、画面下部に
-            使われない帯が残って映像が小さいまま間延びする。既定 True＝従来挙動。
+            （無音のバイラル動画）で True のままにすると、画面下部に
+            使われない帯が残って映像が小さいまま間延びする。
     """
     src_w, src_h = source_size
     keep = max(0.3, 1.0 - layout.source_crop_bottom_ratio)
@@ -303,13 +351,11 @@ def compute_layout(layout: ClipLayout, *, hook: str, source_size: Tuple[int, int
     accent_h = 8
     cta_h = layout.cta_font_size + 16
     # CTA はショートUIの直上に固定する。フック〜字幕のブロックは残りの領域で
-    # 天地中央に置く。ブロックの直下に CTA を置くと、16:9 を横幅に合わせた分の
-    # 余白がすべて画面下部に溜まって間延びして見えるため。
+    # 天地中央に置く（ブロック直下に CTA を置くと余白が下に溜まって間延びする）。
     cta_y = layout.height - layout.bottom_safe - cta_h
 
     # 映像に使える高さ。縦長素材（9:16）を横幅いっぱいに置くと video_h が
-    # 1920px を超え、フック帯と字幕帯が画面外に出る（実測: 1080x1920 の
-    # TikTok 転載でフック文が完全に消えた）。収まらない分はここで縮める。
+    # 1920px を超え、フック帯と字幕帯が画面外に出る。収まらない分をここで縮める。
     video_w = layout.width
     top_min = 90
     avail_h = (cta_y - layout.gap - sub_band - layout.gap - accent_h
@@ -329,7 +375,7 @@ def compute_layout(layout: ClipLayout, *, hook: str, source_size: Tuple[int, int
     video_y = accent_y + accent_h + layout.gap
     subtitle_y = video_y + video_h + layout.gap
 
-    return ComputedLayout(
+    return ComputedOverseasLayout(
         layout=layout,
         hook_lines=hook_lines,
         hook_font_size=hook_size,
@@ -354,7 +400,8 @@ def compute_layout(layout: ClipLayout, *, hook: str, source_size: Tuple[int, int
 # ---------------------------------------------------------------------
 
 def render_static_overlay(
-    computed: ComputedLayout, *, cta_text: str, watermark: str, out_path: Path,
+    computed: ComputedOverseasLayout, *, cta_text: str, watermark: str,
+    out_path: Path,
 ) -> Path:
     layout = computed.layout
     img = Image.new("RGBA", (layout.width, layout.height), (0, 0, 0, 0))
@@ -367,7 +414,7 @@ def render_static_overlay(
         stroke_width=layout.hook_stroke_width,
     )
 
-    # フック帯と映像の間にアクセントバー（チャンネル識別）
+    # フック帯と映像の間にアクセントバー（海外バズ枠の識別色）
     bar_w = int(layout.width * 0.42)
     draw.rectangle(
         [(layout.width - bar_w) // 2, computed.accent_y,
@@ -411,18 +458,16 @@ class SubtitleChunk:
 
 def build_subtitle_chunks(
     timings: Sequence[LineTiming],
-    computed: ComputedLayout,
+    computed: ComputedOverseasLayout,
     *,
     clip_start: float,
-    speaker_colors: Optional[Dict[str, Tuple[int, int, int]]] = None,
 ) -> List[SubtitleChunk]:
-    """台本行を「2行で読める塊」に割り、行の尺を文字数比で配分する。
+    """翻訳済みの行を「2行で読める塊」に割り、行の尺を文字数比で配分する。
 
     先に折り返してから塊にまとめる（塊にしてから折り返すと、塊の境界で
-    英単語や熟語が割れる）。
+    英単語や熟語が割れる）。海外素材に話者情報は無いので色は1色固定。
     """
     layout = computed.layout
-    speaker_colors = speaker_colors or {}
     chunks: List[SubtitleChunk] = []
     for timing in timings:
         text = timing.text.strip()
@@ -432,7 +477,6 @@ def build_subtitle_chunks(
         groups = [wrapped[i:i + layout.subtitle_max_lines]
                   for i in range(0, len(wrapped), layout.subtitle_max_lines)]
         total_chars = sum(len("".join(g)) for g in groups) or 1
-        color = speaker_colors.get(timing.speaker, layout.subtitle_default_color)
         cursor = timing.start
         for group in groups:
             span = timing.duration * (len("".join(group)) / total_chars)
@@ -440,7 +484,7 @@ def build_subtitle_chunks(
                 lines=group,
                 start=max(0.0, cursor - clip_start),
                 end=max(0.0, cursor + span - clip_start),
-                color=color,
+                color=layout.subtitle_default_color,
             ))
             cursor += span
     return chunks
@@ -448,7 +492,7 @@ def build_subtitle_chunks(
 
 def render_subtitle_sequence(
     chunks: Sequence[SubtitleChunk],
-    computed: ComputedLayout,
+    computed: ComputedOverseasLayout,
     work_dir: Path,
     *,
     clip_duration: float,
@@ -505,14 +549,6 @@ def render_subtitle_sequence(
 # ffmpeg 合成
 # ---------------------------------------------------------------------
 
-def _ffmpeg_bin() -> str:
-    return shutil.which("ffmpeg") or "ffmpeg"
-
-
-def _ffprobe_bin() -> str:
-    return shutil.which("ffprobe") or "ffprobe"
-
-
 def render_clip(
     *,
     source_path: Path,
@@ -520,16 +556,15 @@ def render_clip(
     end: float,
     hook: str,
     subtitle_lines: Sequence[LineTiming],
-    layout: ClipLayout,
+    layout: OverseasLayout,
     out_path: Path,
-    cta_text: str = "続きは本編で（概要欄）",
+    cta_text: str = "",
     watermark: str = "",
-    speaker_colors: Optional[Dict[str, Tuple[int, int, int]]] = None,
     work_dir: Optional[Path] = None,
 ) -> Path:
     """1区間を縦型ショートに焼く。"""
     duration = max(1.0, end - start)
-    tmp = Path(work_dir) if work_dir else Path(tempfile.mkdtemp(prefix="clip_"))
+    tmp = Path(work_dir) if work_dir else Path(tempfile.mkdtemp(prefix="clip_ov_"))
     tmp.mkdir(parents=True, exist_ok=True)
 
     computed = compute_layout(layout, hook=hook, source_size=probe_size(source_path),
@@ -537,9 +572,7 @@ def render_clip(
     static_png = render_static_overlay(
         computed, cta_text=cta_text, watermark=watermark, out_path=tmp / "static.png",
     )
-    chunks = build_subtitle_chunks(
-        subtitle_lines, computed, clip_start=start, speaker_colors=speaker_colors,
-    )
+    chunks = build_subtitle_chunks(subtitle_lines, computed, clip_start=start)
     subs_concat = render_subtitle_sequence(chunks, computed, tmp, clip_duration=duration)
 
     keep = 1.0 - layout.source_crop_bottom_ratio
@@ -589,7 +622,7 @@ def render_thumbnail(
     source_path: Path,
     at_sec: float,
     hook: str,
-    layout: ClipLayout,
+    layout: OverseasLayout,
     out_path: Path,
     reserve_subtitles: bool = True,
 ) -> Optional[Path]:
@@ -599,7 +632,7 @@ def render_thumbnail(
     サムネで映像の位置・大きさがズレる。
     """
     try:
-        tmp_frame = out_path.parent / "_frame.png"
+        tmp_frame = out_path.parent / "_frame_overseas.png"
         out_path.parent.mkdir(parents=True, exist_ok=True)
         subprocess.run(
             [_ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error",
@@ -614,7 +647,8 @@ def render_thumbnail(
         keep = 1.0 - layout.source_crop_bottom_ratio
         base = base.crop((0, 0, base.width, int(base.height * keep)))
         base = base.resize((computed.video_w, computed.video_h))
-        canvas = Image.new("RGBA", (layout.width, layout.height), layout.bg_color + (255,))
+        canvas = Image.new("RGBA", (layout.width, layout.height),
+                           layout.bg_color + (255,))
         canvas.paste(base, (computed.video_x, computed.video_y))
         draw = ImageDraw.Draw(canvas)
         _draw_centered(

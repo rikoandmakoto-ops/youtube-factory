@@ -107,7 +107,11 @@ class SourceVideo:
     def source_url(self) -> Optional[str]:
         if self.youtube_video_id:
             return f"https://youtu.be/{self.youtube_video_id}"
-        return None
+        # YouTube 以外の出典（Reddit の投稿ページなど）は permission に入る。
+        # 説明欄の出典表示は必須なので、ここで拾えないと「本編URLはプロフィールから」
+        # という嘘の案内が出てしまう。
+        url = (self.permission or {}).get("url")
+        return str(url) if url else None
 
     def materialize(self, start: float, end: float) -> Tuple[Path, float]:
         """切り抜く区間の映像を手元に用意する。

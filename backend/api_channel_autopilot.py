@@ -68,6 +68,11 @@ class TimeSlot(BaseModel):
     # このスロットだけ別の曜日で回したい場合に指定 (0=sun..6=sat)。
     # 未指定なら schedule.days_of_week を継承する。
     days_of_week: Optional[List[int]] = None
+    # 切り抜きチャンネル (gen_type="clip") 専用。このスロットだけ別のエンジンで
+    # 回す。clip-lab は国内切り抜き (local) と海外バイラル翻訳 (viral) を
+    # 同じチャンネルの別スロットに同居させているため。
+    # 未指定なら channel JSON の clip.engine を使う（従来動作）。
+    engine: Optional[str] = None
 
 
 class ScheduleSpec(BaseModel):
@@ -242,6 +247,8 @@ def _load_autopilot(channel_id: str) -> Dict[str, Any]:
                                    if isinstance(d, int) and 0 <= d <= 6})
                     if days:
                         slot["days_of_week"] = days
+                if isinstance(t.get("engine"), str) and t["engine"].strip():
+                    slot["engine"] = t["engine"].strip()
                 norm_times.append(slot)
         if norm_times:
             sched["times"] = norm_times
@@ -313,6 +320,10 @@ def _resolve_time_slots(sched: Dict[str, Any]) -> List[Dict[str, Any]]:
     その曜日にだけ発火し、無ければ schedule 直下の days_of_week を使う。
     これにより「普段は18:00、木曜だけ10:00」のような曜日別の投稿枠を表現できる
     （PDCA レポートの実績ベスト枠を曜日単位で採用するため）。
+
+    切り抜きチャンネルではスロットごとに `engine` も持てる。clip-lab の
+    17:45（国内切り抜き=local）と 20:45（海外バイラル翻訳=viral）のように、
+    1つのチャンネルで2系統を回すため。
     """
     times = sched.get("times")
     slots: List[Dict[str, Any]] = []
@@ -337,6 +348,8 @@ def _resolve_time_slots(sched: Dict[str, Any]) -> List[Dict[str, Any]]:
                 })
                 if days:
                     slot["days_of_week"] = days
+            if isinstance(t.get("engine"), str) and t["engine"].strip():
+                slot["engine"] = t["engine"].strip()
             slots.append(slot)
     if not slots:
         slots.append({
@@ -440,6 +453,9 @@ def _refresh_channel_job(channel_id: str) -> None:
                 trigger=trigger,
                 id=jid,
                 args=[channel_id, target_hm if lead > 0 else None],
+                # スロット固有のエンジン（clip-lab の 20:45 = 海外バイラル）。
+                # 未指定なら channel JSON の clip.engine が使われる。
+                kwargs={"engine": slot.get("engine")} if slot.get("engine") else {},
                 replace_existing=True,
                 # 1時間だと、スリープ復帰時に直前1時間ぶんの未発火ジョブが全部
                 # まとめて発火して連投になる（2026-08-17 の 09:27〜09:28 に4本）。
@@ -450,10 +466,11 @@ def _refresh_channel_job(channel_id: str) -> None:
             job = sch.get_job(jid)
             nxt = job.next_run_time.isoformat() if job and job.next_run_time else "?"
             lead_note = f" (生成開始 {fire_h:02d}:{fire_m:02d} / 公開 {target_hm})" if lead > 0 else ""
+            engine_note = f" [engine: {slot['engine']}]" if slot.get("engine") else ""
             print(
                 f"📅 Autopilot scheduled for {channel_id} [slot {idx}]: "
-                f"{days_label} {slot['hour']:02d}:{slot['minute']:02d} JST{lead_note} "
-                f"→ next run {nxt}"
+                f"{days_label} {slot['hour']:02d}:{slot['minute']:02d} JST{lead_note}"
+                f"{engine_note} → next run {nxt}"
             )
         except Exception as e:
             print(f"⚠️ Failed to schedule autopilot for {channel_id} slot {idx}: {e}")
@@ -596,12 +613,17 @@ def _pop_or_refill_theme(channel_id: str) -> Optional[Dict[str, str]]:
         return {"title": head["title"], "angle": head.get("angle") or ""}
 
 
-def _run_clip_autopilot(channel_id: str) -> None:
+def _run_clip_autopilot(channel_id: str, engine: Optional[str] = None) -> None:
     """切り抜きチャンネルの発火。
 
     切り抜きは台本生成もテーマキューも使わない（素材は既存の長尺動画）。
     ScenarioGenerator / JobQueue を経由せず clip_factory を直接叩く。
     レンダリングが数十秒かかるのでスケジューラスレッドは塞がず別スレッドで回す。
+
+    Args:
+        engine: スロット固有のエンジン。clip-lab は 17:45 が国内切り抜き
+            （未指定＝channel JSON の clip.engine = local）、20:45 が海外
+            バイラル翻訳（engine="viral"）。素材の探索先もこれで切り替わる。
     """
     def _work() -> None:
         try:
@@ -614,7 +636,8 @@ def _run_clip_autopilot(channel_id: str) -> None:
         raw = (ch._raw if ch is not None and hasattr(ch, "_raw") else {}) or {}
         auto_publish = bool((raw.get("publish_settings") or {}).get("auto_publish"))
         try:
-            res = generate_clip(channel_id, count=1, upload=auto_publish)
+            res = generate_clip(channel_id, count=1, upload=auto_publish,
+                                engine=engine)
         except Exception as e:
             api_phase4.notify_event("error", f"Autopilot 失敗 ({channel_id}): {e}")
             return
@@ -637,6 +660,7 @@ def _run_autopilot(
     channel_id: str,
     target_hm: Optional[str] = None,
     skip_burst_guard: bool = False,
+    engine: Optional[str] = None,
 ) -> None:
     """スケジュール発火: テーマ取得 → シナリオ生成 → キュー投入 → 自動公開フラグ
 
@@ -645,6 +669,7 @@ def _run_autopilot(
             YouTube の予約公開を使う（publish_lead_minutes 運用）。
             None なら従来通り生成完了時点で即公開。
         skip_burst_guard: 連投ガードを無視する。手動の run-now 専用。
+        engine: 切り抜きチャンネルのスロット固有エンジン（schedule.times[].engine）。
     """
     fired_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"🤖 Autopilot fired for {channel_id} at {fired_at} JST")
@@ -653,7 +678,7 @@ def _run_autopilot(
     if not skip_burst_guard and not _burst_guard_ok(channel_id, ap_now):
         return
     if (ap_now.get("gen_type") or "") == CLIP_GEN_TYPE:
-        _run_clip_autopilot(channel_id)
+        _run_clip_autopilot(channel_id, engine=engine)
         return
     # 投稿前に「今のスロットが推奨スロットと比べて極端に低い」場合は推奨スロットに移行。
     # ただしこれは schedule.days_of_week / hour を自動で上書きしてしまうため、
@@ -779,14 +804,20 @@ async def update_autopilot(
             slots: List[Dict[str, Any]] = []
             for t in req.schedule.times:
                 slot_days = sorted({d for d in (t.days_of_week or []) if 0 <= d <= 6})
-                # 曜日が違えば同じ時刻でも別スロットとして許容する
-                key = (t.hour, t.minute, tuple(slot_days))
+                # 曜日・エンジンが違えば同じ時刻でも別スロットとして許容する
+                key = (t.hour, t.minute, tuple(slot_days),
+                       (t.engine or "").strip())
                 if key in seen:
                     continue
                 seen.add(key)
                 slot: Dict[str, Any] = {"hour": t.hour, "minute": t.minute}
                 if slot_days:
                     slot["days_of_week"] = slot_days
+                # スロット固有のエンジンは UI から編集させないが、送り返された値は
+                # 落とさない（clip-lab の 20:45 = viral が消えると国内切り抜きの
+                # 素材で海外枠が回ってしまう）。
+                if t.engine and t.engine.strip():
+                    slot["engine"] = t.engine.strip()
                 slots.append(slot)
             slots.sort(key=lambda s: (s["hour"], s["minute"]))
             new_sched["times"] = slots

@@ -3,8 +3,20 @@
     在庫探索 → 元動画を1本選ぶ → エンジンで切り抜き生成 → メタ生成
     → （任意で）YouTube 投稿 → 消化済み区間を記録
 
-エンジンは差し替え可能（local / noimos）。noimos が使えない環境では
+エンジンは差し替え可能（local / noimos / viral）。noimos が使えない環境では
 clip.fallback_engine に自動で落ちるので、autopilot は止まらない。
+
+════════════════════════════════════════════════════════════════════
+■ 1チャンネルに2系統が同居する（2026-08-30〜）
+════════════════════════════════════════════════════════════════════
+
+`clip-lab` は国内切り抜き（許諾済み YouTube 素材 / engine=local）と
+海外バイラル翻訳（Reddit 素材 / engine=viral）を **同じチャンネルの別スロット**
+で回す。17:45 が国内、20:45 が海外（autopilot の time slot に `engine` を書く）。
+
+そのため素材の探索はエンジンで振り分ける（`_collect_sources(engine=...)`）。
+混ぜると local エンジンが Reddit 素材（台本も日本語字幕も無い）を掴んで必ず
+失敗するし、viral エンジンが2時間の生配信を掴んで Whisper に流し込む。
 """
 
 from __future__ import annotations
@@ -35,6 +47,9 @@ CHANNELS_DIR = PROJECT_ROOT / "data" / "channels"
 DEFAULT_OUT_BASE = Path(
     os.environ.get("CLIP_OUTPUT_BASE") or (Path.home() / "Movies" / "yf_clips")
 )
+
+#: 海外バイラル翻訳のエンジン名。素材の探索先とメタの上書きがこの名前で切り替わる。
+VIRAL_ENGINE = "viral"
 
 
 def load_channel_raw(channel_id: str) -> Dict[str, Any]:
@@ -91,36 +106,85 @@ def _external_weights(clip_cfg: Dict[str, Any]) -> Dict[str, float]:
     return out
 
 
-def _collect_sources(clip_cfg: Dict[str, Any], *, resolve_youtube_ids: bool = True):
-    """自社在庫と外部（許諾済み）素材を集めて1つのリストにする。"""
+def _collect_sources(clip_cfg: Dict[str, Any], *, resolve_youtube_ids: bool = True,
+                     engine: Optional[str] = None):
+    """素材を集める。**エンジンで探索先を振り分ける**。
+
+    `clip-lab` は国内切り抜きと海外バイラルが同居しているので、両方を1つの
+    リストに混ぜると `pick_source` が engine に合わない素材を選びうる。
+
+        engine == "viral" … 海外バイラル素材だけ
+        それ以外           … 自社在庫 + 許諾済み外部素材だけ
+        engine is None     … 従来どおり全部（UI の在庫一覧など）
+    """
     from . import acquisition as acq
     from . import external as ext_mod
+    from . import viral_sources as vs
+
+    want_viral = engine is None or engine == VIRAL_ENGINE
+    want_local = engine is None or engine != VIRAL_ENGINE
 
     source_ids = _source_channel_ids(clip_cfg)
     found = []
-    if source_ids:
+    if want_local and source_ids:
         print(f"📦 自社在庫を探索: {', '.join(source_ids)}")
         found.extend(src_mod.discover_sources(
             source_ids, resolve_youtube_ids=resolve_youtube_ids,
             source_roots=_source_roots(clip_cfg),
         ))
 
-    if acq.is_enabled(clip_cfg):
+    if want_local and acq.is_enabled(clip_cfg):
         cfg = clip_cfg.get("external_sources") or {}
         print("🌐 許諾済み外部チャンネルを探索…")
         found.extend(ext_mod.discover_external_sources(
             clip_cfg, limit=int(cfg.get("prepare_limit") or 3),
         ))
+
+    if want_viral and vs.is_enabled(clip_cfg):
+        cfg = vs.cfg(clip_cfg)
+        print("🔥 海外バイラル素材を探索…")
+        found.extend(vs.discover_viral_sources(
+            clip_cfg, limit=int(cfg.get("prepare_limit") or 5),
+        ))
     return found
 
 
-def build_title(hook: str, channel_raw: Dict[str, Any]) -> str:
+def _recoverable_errors() -> tuple:
+    """「その素材だけ諦めて次へ」で済む例外。
+
+    権利・内容ゲートで落ちるのは想定内の分岐であって、パイプラインの故障では
+    ない。ここに載っているものだけが次の素材へ進み、それ以外は従来どおり
+    ジョブごと失敗させる（黙って作り続けない）。
+    """
+    from .engines.viral import ViralClipRejected
+    from .translate import TranslationRejected
+
+    return (ViralClipRejected, TranslationRejected)
+
+
+def _record_rejection(source: "src_mod.SourceVideo", reason: str) -> None:
+    """不採用を調達履歴に残す（翌日も同じ素材を掴まないため）。"""
+    try:
+        from .engines.viral import record_rejection
+        record_rejection(source, reason)
+    except Exception:
+        pass
+
+
+def build_title(hook: str, channel_raw: Dict[str, Any],
+                *, overrides: Optional[Dict[str, Any]] = None) -> str:
     """フック文からショートのタイトルを作る。
 
     YouTube のタイトルに改行は入れられない（API が弾く）。フック文は帯の中で
     2行に割る前提で作られるので、改行や連続空白が混ざりうる。ここで必ず潰す。
+
+    `overrides` は海外バイラル枠のように、同じチャンネルでも別のハッシュタグを
+    付けたい系統向け（`clip.viral_sources.metadata`）。
     """
-    tags = str((channel_raw.get("defaults") or {}).get("short_title_hashtags") or "#shorts")
+    overrides = overrides or {}
+    tags = str(overrides.get("short_title_hashtags")
+               or (channel_raw.get("defaults") or {}).get("short_title_hashtags")
+               or "#shorts")
     clean = re.sub(r"\s+", " ", str(hook or "")).strip()
     title = f"{clean} {tags}".strip()
     return title[:100]
@@ -133,13 +197,18 @@ def build_description(
     source_title: str,
     credit_name: str,
     attribution: str = "",
+    overrides: Optional[Dict[str, Any]] = None,
 ) -> str:
     """説明欄を作る。
 
     出典（元動画URL・元チャンネル名）は**必ず**入れる。許諾を得ている切り抜きでも、
     出典が無いと視聴者からも権利者からも無断転載と区別が付かない。
+
+    `overrides` に `short_intro` / `short_hashtags` があればそちらを使う
+    （海外バイラル枠は「▼ この切り抜きの本編はこちら」では意味が通らないため）。
     """
-    tpl = (channel_raw.get("description_template") or {})
+    tpl = {**(channel_raw.get("description_template") or {}),
+           **{k: v for k, v in (overrides or {}).items() if v}}
     body = str(tpl.get("short_intro") or "")
     body = body.format(
         source_url=source_url or "（本編URLはプロフィールから）",
@@ -187,28 +256,49 @@ def generate_clip(
     upload: bool = False,
     privacy: Optional[str] = None,
     dry_run: bool = False,
+    engine: Optional[str] = None,
 ) -> Dict[str, Any]:
     """切り抜きを count 本作る（既定は1本）。
 
-    source_title を指定すると、その元動画から切り抜く（手動運転用）。
+    Args:
+        source_title: 指定すると、その元動画から切り抜く（手動運転用）。
+        engine: `clip.engine` を上書きする。`clip-lab` は国内切り抜き（local）と
+            海外バイラル翻訳（viral）が同居しているので、呼び出し側が
+            「今どちらの系統を回すか」を明示する。autopilot の time slot と
+            `run_viral_clip.py` がこれを渡す。
     """
     from . import acquisition as acq
+    from . import viral_sources as vs
 
     channel_raw = load_channel_raw(channel_id)
     clip_cfg = channel_raw.get("clip") or {}
-    source_ids = _source_channel_ids(clip_cfg)
-    if not source_ids and not acq.is_enabled(clip_cfg):
-        return {"ok": False,
-                "error": f"{channel_id}.clip.sources が空で、external_sources も無効です"}
+    engine_name = str(engine or clip_cfg.get("engine") or "local").strip().lower()
+    is_viral = engine_name == VIRAL_ENGINE
 
-    found = _collect_sources(clip_cfg)
+    source_ids = _source_channel_ids(clip_cfg)
+    if is_viral and not vs.is_enabled(clip_cfg):
+        return {"ok": False, "engine": engine_name,
+                "error": (f"{channel_id}.clip.viral_sources.enabled が false です"
+                          "（海外バイラル枠が無効）")}
+    if not is_viral and not source_ids and not acq.is_enabled(clip_cfg):
+        return {"ok": False, "engine": engine_name,
+                "error": (f"{channel_id}.clip.sources が空で、external_sources も "
+                          "無効です")}
+
+    found = _collect_sources(clip_cfg, engine=engine_name)
     if not found:
         return {"ok": False, "error": (
-            "切り抜ける長尺動画が見つかりません。"
-            "自社在庫はローカル出力フォルダを、外部素材は許諾文言（permission_phrases）を"
-            "満たす回があるかを確認してください")}
+            "切り抜ける元動画が見つかりません。"
+            "自社在庫はローカル出力フォルダを、許諾済み外部素材は許諾文言"
+            "（permission_phrases）を、海外バイラル素材は調達経路"
+            "（REDDIT_CLIENT_ID / 内容ゲート）を確認してください")}
 
-    per_video = int(clip_cfg.get("clips_per_video") or 3)
+    # 海外バイラルは1投稿＝1本（同じ Reddit 投稿を切り直さない）。国内切り抜きの
+    # clips_per_video（長尺1本から5本）をそのまま使うと意味が変わる。
+    viral_out = vs.output_cfg(clip_cfg)
+    per_video = int((viral_out.get("clips_per_video") if is_viral else None)
+                    or (1 if is_viral else 0)
+                    or clip_cfg.get("clips_per_video") or 3)
     if source_title:
         source = next((s for s in found if s.title == source_title), None)
         if source is None:
@@ -245,34 +335,68 @@ def generate_clip(
         out_base = DEFAULT_OUT_BASE
     out_base.mkdir(parents=True, exist_ok=True)
 
-    engine_name = str(clip_cfg.get("engine") or "local")
-    fallback = str(clip_cfg.get("fallback_engine") or "local")
+    # viral 枠で noimos に落ちると素材の前提（フルの長尺動画）が合わないので、
+    # フォールバックは同じ viral に固定する。
+    fallback = (VIRAL_ENGINE if is_viral
+                else str(clip_cfg.get("fallback_engine") or "local"))
     clips: List[Dict[str, Any]] = []
     used_engine = engine_name
-    try:
-        clips = get_engine(engine_name)(
-            source=source, clip_cfg=clip_cfg, channel_raw=channel_raw,
-            source_channel_raw=source_channel_raw, out_dir=out_base,
-            count=count, dry_run=dry_run,
-        )
-    except NoimosUnavailable as e:
-        if fallback and fallback != engine_name:
-            print(f"⚠️ NoimosAI を使えないため {fallback} エンジンに切り替えます: {e}")
-            used_engine = fallback
-            clips = get_engine(fallback)(
-                source=source, clip_cfg=clip_cfg, channel_raw=channel_raw,
+
+    # 素材ごとのゲート落ちは「失敗」ではなく「次を見る」。海外バイラルは
+    # 内容ゲート（NSFW・禁止語・Claude の安全判定）で落ちるのが常態なので、
+    # 1本目で諦めるとその日の投稿が丸ごと消える。
+    attempts = [source]
+    if is_viral and not source_title:
+        limit = int(viral_out.get("max_source_attempts")
+                    or clip_cfg.get("max_source_attempts") or 4)
+        attempts += [s for s in found if s is not source][: max(0, limit - 1)]
+
+    rejected: List[Dict[str, str]] = []
+    last_error: Optional[str] = None
+    for attempt in attempts:
+        try:
+            clips = get_engine(engine_name)(
+                source=attempt, clip_cfg=clip_cfg, channel_raw=channel_raw,
                 source_channel_raw=source_channel_raw, out_dir=out_base,
                 count=count, dry_run=dry_run,
             )
-        else:
+            source = attempt
+            break
+        except NoimosUnavailable as e:
+            if fallback and fallback != engine_name:
+                print(f"⚠️ NoimosAI を使えないため {fallback} エンジンに切り替えます: {e}")
+                used_engine = fallback
+                clips = get_engine(fallback)(
+                    source=attempt, clip_cfg=clip_cfg, channel_raw=channel_raw,
+                    source_channel_raw=source_channel_raw, out_dir=out_base,
+                    count=count, dry_run=dry_run,
+                )
+                source = attempt
+                break
             return {"ok": False, "error": str(e), "engine": engine_name}
-    except Exception as e:
-        traceback.print_exc()
-        return {"ok": False, "error": f"{engine_name} エンジンが失敗: {e}", "engine": engine_name}
+        except _recoverable_errors() as e:
+            print(f"  ⏭️ この素材は見送ります: {e}")
+            last_error = str(e)
+            rejected.append({"title": attempt.title, "reason": str(e)})
+            _record_rejection(attempt, str(e))
+            continue
+        except Exception as e:
+            traceback.print_exc()
+            return {"ok": False, "error": f"{engine_name} エンジンが失敗: {e}",
+                    "engine": engine_name}
+    else:
+        return {"ok": False, "engine": engine_name, "rejected": rejected,
+                "error": ("候補の素材がすべてゲートで不採用になりました"
+                          f"（{len(rejected)} 本）。最後の理由: {last_error}")}
 
     credit = _credit_name(clip_cfg, source)
     source_url = source.source_url()
     privacy = privacy or (channel_raw.get("publish_settings") or {}).get("default_privacy") or "public"
+
+    # 海外バイラル枠だけタイトル・説明欄・タグを差し替える（同居先 clip-lab の
+    # 「本編はこちら」テンプレは Reddit 投稿には合わない）。
+    meta_over = vs.metadata_cfg(clip_cfg) if is_viral else {}
+    yt_cfg = ((channel_raw.get("video_format") or {}).get("youtube") or {})
 
     results: List[Dict[str, Any]] = []
     for clip in clips:
@@ -288,15 +412,21 @@ def generate_clip(
             "engine": used_engine,
             "is_external": source.is_external,
             "permission": source.permission,
-            "title": build_title(hook, channel_raw),
+            "title": build_title(hook, channel_raw, overrides=meta_over),
             "description": build_description(
                 channel_raw, source_url=source_url,
                 source_title=source.video_title, credit_name=credit,
-                attribution=source.attribution,
+                attribution=source.attribution, overrides=meta_over,
             ),
-            "tags": ((channel_raw.get("video_format") or {}).get("youtube") or {}).get("default_tags"),
-            "category_id": ((channel_raw.get("video_format") or {}).get("youtube") or {}).get("default_category") or "24",
-            "privacy": privacy,
+            "tags": meta_over.get("tags") or yt_cfg.get("default_tags"),
+            "category_id": (meta_over.get("category_id")
+                            or yt_cfg.get("default_category") or "24"),
+            # エンジンが force_privacy を返したらそれを優先する。海外バイラルの
+            # 目視レビュー運用（content_gate.require_manual_review）で、
+            # チャンネル既定が public でも private で上げるための口。
+            # 2026-08-30 の運用決定でレビューは無し＝ここは None のまま流れ、
+            # チャンネル既定の public で上がる。
+            "privacy": clip.get("force_privacy") or privacy,
             "upload": None,
         }
 
@@ -325,6 +455,7 @@ def generate_clip(
         "engine": used_engine,
         "source": source.to_dict(),
         "clips": results,
+        "rejected": rejected,
         "meta_path": str(meta_path),
     }
 
