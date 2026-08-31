@@ -312,7 +312,11 @@
       "フック文は13文字以内×2行まで。読み切れない長さにしない。",
       "元配信者の発言・口調を変えない（切り抜きなので改変しない）。",
       "フック文は発言の要約に留め、本人が言っていない断定を足さない。",
-      "CTAは『続きは本編で』の一点に絞る。"
+      "CTAは『続きは本編で』の一点に絞る。",
+      "**以下の煽りテンプレートを台本に差し込んではいけない**: 「ここからがヤバい」「衝撃の事実として」「まだ終わらんのよ」「まだ続きがあるんです」「ここからが本番」「と思うじゃん？」「ここからが驚き」等のテンプレ煽り文は全て不合格。",
+      "**「…あれ、〇〇って最初に言ってた」系のループバック締めは禁止**。意味不明な自己言及で終わらせない。",
+      "**本編中の自己宣伝禁止**: 「このレベルの分析は他では見れない」「論文を直接読んで解説してるチャンネルは少ない」等、解説の途中でチャンネルを宣伝する行為は不合格。CTAは本編終了後に短く1回のみ。",
+      "**内容と無関係な煽り禁止**: 「これ、賛否分かれると思うんだけど」「お前らならどうする？」等、テーマと関係ない煽り質問を差し込まない。"
     ]
   },
   "characters": {},
@@ -575,11 +579,21 @@
     "publish_lead_minutes": 0,
     "theme_queue": [
       {
-        "id": "2287cfd5",
-        "title": "北朝鮮の一般人のスマホ事情とは？",
-        "angle": "北朝鮮のスマホ事情を解説し、視聴者に驚きと知識を提供します。",
+        "id": "48587db1",
+        "title": "RTX 5090のコスト：テクノロジーの未来を科学する",
+        "angle": "最新技術のコストを科学的に分析し、視聴者の興味を引く。",
         "priority": "high",
         "source": "trend_scanner"
+      },
+      {
+        "id": "9a4de10c",
+        "title": "iPhoneの進化がもたらす未来とは？",
+        "angle": "iPhoneの技術革新が私たちの生活をどう変えるのか、科学的に解説します。"
+      },
+      {
+        "id": "2287cfd5",
+        "title": "北朝鮮の一般人のスマホ事情とは？",
+        "angle": "北朝鮮のスマホ事情を解説し、視聴者に驚きと知識を提供します。"
       },
       {
         "id": "64058e77",
@@ -681,5 +695,24 @@
     "_theme_queue_comment": "gen_type=clip では未使用（台本生成を通らず clip_factory が直接切り抜く）。凍結前は daily-science 由来の科学テーマが15件残っていて、切り抜きチャンネルの運用者を混乱させるだけだったので 2026-08-24 に空にした。切り抜き元の選定は clip.external_sources の許諾ゲート → segment_selection が担う。"
   },
   "short_series_name": "切り抜きラボ",
-  "main_title_prefix": ""
+  "main_title_prefix": "",
+  "script_enhancers": {
+    "enabled": true,
+    "disabled": [
+      "hook_ab_selector",
+      "swipe_stop_injector",
+      "cta_rotator",
+      "completion_rate_optimizer",
+      "replay_loop_seeder",
+      "power_word_amplifier",
+      "title_emoji_injector",
+      "curiosity_gap_enforcer",
+      "comment_bait_injector",
+      "emotional_polarity_alternator",
+      "pattern_interrupt_injector",
+      "subscribe_trigger_optimizer",
+      "contrast_amplifier"
+    ],
+    "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。"
+  }
 }

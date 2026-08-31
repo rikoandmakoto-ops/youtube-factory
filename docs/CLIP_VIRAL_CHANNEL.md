@@ -295,3 +295,18 @@ cd backend && python3 -m unittest tests.test_viral_clip -v
   採用も不採用も記録するので、毎日同じ NSFW 投稿にダウンロード帯域を使わない。
   作り直したいときはこのファイルから該当エントリを消す。
 - **`data/` を消すな。** 調達履歴・翻訳依頼書もここにある。
+- **設定を足したらバックエンドを再起動する。** 2026-08-31 実測で `engine: "viral"` が
+  channel JSON から消えていた。犯人は**この機能のコミットより前に起動していた
+  バックエンド**（`com.youtube-factory.backend`）。古いプロセスの `TimeSlot`
+  モデルには `engine` フィールドが無いので、管理画面から autopilot を保存すると
+  Pydantic が黙って捨てる。しかも古いプロセスは `engine` をディスパッチできないので、
+  JSON を直しただけでは 20:45 が国内素材で回り続ける
+  （08-30 20:45 は実際に `local エンジンが失敗` で落ちていた）。
+  復旧は `launchctl kickstart -k gui/501/com.youtube-factory.backend`。
+  再起動後にログへ `[engine: viral]` が出ることを必ず確認すること:
+
+  ```
+  📅 Autopilot scheduled for clip-lab [slot 1]: … 20:45 JST [engine: viral] → next run …
+  ```
+
+  この `[engine: viral]` が出ていなければ、海外枠は国内素材で回っている。
