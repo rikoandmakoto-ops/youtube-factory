@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// Vercel 移管に伴う再デプロイ用のトリガー。
 const nextConfig = {
   reactStrictMode: true,
   // The app has no `'use server'` actions, so the previous
