@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260827_140718_bb6a56",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "ねちがえる、なぜか夜だけ首を狙う？金縛りの奥にある古い怪異【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "寝違えや金縛りを引き起こす存在として描かれる妖怪を、夢魔・寝床の怪談・身体感覚の民俗伝承から読み解く\nあなたも朝、首だけが固まって横を向けず、部屋の後ろ側を確かめるのが怖くなったことはありませんか。\n妖怪ウォッチのねちがえるは、その不快な朝を、夜の怪異へ引き戻すような名前と姿をして / 寝違えなら枕が合わなかったとか、変な向きで6時間寝たとか、学校でも聞く普通の話だよ。\nでも首が動かないと、後ろに誰かがいても見られない気がして、急に怖くなる。 / 怖いのは、目が覚めているのに体が動かない金縛りを、昔の人が何かに押さえられたと記録したことです。\n今夜の寝床に残る不安が、どこから来たのか、ゲームと伝承を分けて追います。",
+  "generated_at": "2026-08-27T14:07:18.974543Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ寝違えは夜だけ首を狙う？金縛りに潜む古い怪異【ショート】",
+      "thumb_copy": [
+        "首が動かない朝",
+        "背後を見られない"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3つの伝承で読む寝違えと金縛り　首を狙う怪異の正体【ショート】",
+      "thumb_copy": [
+        "寝床にいる3つの影",
+        "金縛りの正体"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は寝違えは怪異だった？夢魔と金縛りが結ぶ首の恐怖【ショート】",
+      "thumb_copy": [
+        "ただの寝違えじゃない",
+        "夜の首狙い怪異"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ寝違えは夜だけ首を狙う？金縛りに潜む古い怪異【ショート】",
+    "thumb_copy": [
+      "首が動かない朝",
+      "背後を見られない"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "GUeTTH-huzE",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.010416666666666666,
+    "impressions": 192,
+    "views": 1704,
+    "published_at": "2026-08-11T10:08:27Z",
+    "updated_at": "2026-08-31T14:10:15.691558Z"
+  }
+}

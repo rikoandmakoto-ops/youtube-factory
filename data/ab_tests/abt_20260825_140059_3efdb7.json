@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260825_140059_3efdb7",
+  "channel_id": "2ch-matome",
+  "theme": {
+    "title": "なんかPCの画面チカチカするんやが【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "しょうもない相談スレ。レスの解決策が雑になっていく展開で笑わせる\nあなた、PC画面がチカチカして目まで点滅したことありませんか？犯人候補は設定より、まさかの机の上かもしれません。 / 今回は「なんかPCの画面チカチカするんやが」スレで、親切そうで雑すぎる解決策がどこまで暴走するか見届けます。 / 最強の事実は、スレ民の最終回答が「PCを休ませろ」ではなく「お前が瞬きすれば同期する」という診断だったことです。",
+  "generated_at": "2026-08-25T14:00:59.561351Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "PC画面がチカチカする原因、まさか机の上なのか？【ショート】",
+      "thumb_copy": [
+        "画面じゃない！？",
+        "犯人は机の上"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "PC画面チカチカ問題、スレ民の解決策が3段階で雑になる【ショート】",
+      "thumb_copy": [
+        "解決策が3段階で",
+        "最後は瞬き！？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "衝撃の結論、PC画面のチカチカはお前が瞬けば直る【ショート】",
+      "thumb_copy": [
+        "最終回答が雑すぎる",
+        "お前が瞬け！？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "PC画面がチカチカする原因、まさか机の上なのか？【ショート】",
+    "thumb_copy": [
+      "画面じゃない！？",
+      "犯人は机の上"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "WDnmFqiOqpU",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.02666666666666667,
+    "impressions": 75,
+    "views": 1305,
+    "published_at": "2026-08-14T00:05:30Z",
+    "updated_at": "2026-08-31T14:02:06.006000Z"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260825_140522_43f4e4",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "なぜ生存率5%？『生ける死者』SCP-1440が財団を12回暴走させた本当の理由【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "財団による恐怖の実験で明らかになった精神破壊のメカニズム\nあなた、不死の存在に触れたら何が起きるか、考えたことありませんか？財団の実験で明らかになったのは、生存率わずか5％という絶望的な現実です。 / SCP-1440――通称「生ける死者」。この存在が歩む先には、12件もの暴走記録と数えきれない精神崩壊の犠牲者が残されました。 / 今回は、財団が血眼になって封じ込めたこのSCPの正体、そして精神破壊の恐怖メカニズムを徹底的に暴いていきます。",
+  "generated_at": "2026-08-25T14:05:22.666745Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ生存率5%？SCP-1440が精神を壊す本当の理由【ショート】",
+      "thumb_copy": [
+        "触れた者の95%",
+        "精神が崩壊する"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "12回の暴走記録…生存率5%のSCP-1440実験【ショート】",
+      "thumb_copy": [
+        "12回も暴走した",
+        "生存率わずか5%"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "不死は救いではない…SCP-1440が残す精神破壊の恐怖【ショート】",
+      "thumb_copy": [
+        "不死者に触れると",
+        "心が壊れていく"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ生存率5%？SCP-1440が精神を壊す本当の理由【ショート】",
+    "thumb_copy": [
+      "触れた者の95%",
+      "精神が崩壊する"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "wmPIx3K3rSQ",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.011029411764705883,
+    "impressions": 1088,
+    "views": 1043,
+    "published_at": "2026-08-02T03:37:54Z",
+    "updated_at": "2026-08-31T14:07:44.084948Z"
+  }
+}

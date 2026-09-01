@@ -1,0 +1,96 @@
+{
+  "title": "なぜ蚊に刺された場所は数分後から痒くなるのか",
+  "theme": {
+    "title": "なぜ蚊に刺された場所は数分してから痒くなるのか",
+    "angle": "刺された瞬間ではなく後から来る理由。免疫反応の時間差"
+  },
+  "thumb_info": {
+    "hook_lines": [
+      "刺された瞬間",
+      "まだ痒くない"
+    ],
+    "hook_caption": "痒みは三分後",
+    "subtitle": "ヒスタミンが出るまでの時間差",
+    "tagline": "だから子供の方が大きく腫れる"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "蚊に刺された瞬間って、実はまだ痒くないの、気づいてました？",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、言われてみれば確かに！あとから急に痒くなりますね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "蚊の唾液に体が反応してヒスタミンを出すまで、およそ三分かかります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "宅配便が届いてから、家の人が玄関に出るまでの時間みたいなものか。",
+      "expression": "laugh",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも刺され慣れた大人ほど反応が鈍く、だから子供の方が腫れるんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日のこれ、面白かったら高評価をお願いします。登録すれば、明日も一分で科学が一つ増えますよ。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "蚊に刺された瞬間って、実はまだ痒くないの、気づいてました？",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、言われてみれば確かに！あとから急に痒くなりますね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "蚊の唾液に体が反応してヒスタミンを出すまで、およそ三分かかります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "宅配便が届いてから、家の人が玄関に出るまでの時間みたいなものか。",
+      "expression": "laugh",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも刺され慣れた大人ほど反応が鈍く、だから子供の方が腫れるんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日のこれ、面白かったら高評価をお願いします。登録すれば、明日も一分で科学が一つ増えますよ。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "generated_by": "claude-opus-5 (in-session, no API)",
+  "applied_feedback": []
+}

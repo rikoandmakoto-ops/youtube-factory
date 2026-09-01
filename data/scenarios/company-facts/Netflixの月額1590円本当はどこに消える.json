@@ -1,0 +1,196 @@
+{
+  "title": "Netflixの月額1,590円、本当はどこに消える？",
+  "theme": {
+    "title": "毎月1万円近く払ってるならこれ知ってほしい！",
+    "angle": "日常の支出を見直し、企業の実態を数字で示す。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "話題企業の実態",
+      "fact_main": "Netflix 月1,590円",
+      "fact_sub": "広告なし標準プラン",
+      "text": "驚きです。Netflix、月額1,590円です。毎月払う先の企業規模を見ます。",
+      "bg_query": "Netflix, Inc. ロゴ オフィス",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "売上高 390億ドル",
+      "fact_sub": "2024年通期実績",
+      "text": "2024年の売上高は390億ドルです。",
+      "bg_query": "Netflix, Inc. 本社 外観",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "会員数 3億160万人",
+      "fact_sub": "2024年末時点",
+      "text": "会員数は3億160万人です。この数字、業界では異常値です。",
+      "bg_query": "Netflix, Inc. 動画視聴 テレビ",
+      "duration": 4,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "営業利益 104億ドル",
+      "fact_sub": "2024年通期実績",
+      "text": "営業利益は104億ドルです。数字だけ見れば、かなり良い。",
+      "bg_query": "Netflix, Inc. コンテンツ制作 撮影",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "従業員 約1万4,000人",
+      "fact_sub": "2024年末時点",
+      "text": "従業員は約1万4,000人です。",
+      "bg_query": "Netflix, Inc. 社員 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "最安プラン 月890円",
+      "fact_sub": "広告つきスタンダード",
+      "text": "ただし最安は月890円です。広告を見る時間も、料金を抑える選択肢になります。",
+      "bg_query": "Netflix, Inc. テレビ 広告 動画配信",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "月1,590円",
+      "会員3億超"
+    ],
+    "subtitle": "Netflixの実態",
+    "tagline": "毎月払う前に見る数字"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 15,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 6,
+        "relatability": 0,
+        "shareability": 7,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "企業の闇要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.432,
+      "similar_to": "大谷翔平の年収が実は約160億円？スポンサー契約の裏側",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 15,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "Netflixの月額1,590円、本当はどこに消える？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['本当は'](+12)",
+      "好奇心ギャップ['？'](+12)"
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260826_140904_dc2da0",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "一口SCP：収容違反：23名消滅遺体も血痕も残っていない#財団が17年間封印した「デジタルの監獄」— 収容違反で消えた研究員23名の正体 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": "デジタル環境に潜む異常存在を解説する\n72時間で23名。遺体も血痕も、デスクに残されたコーヒーカップ以外、何も残っていなかった。財団が17年間封印してきた報告書を、今日読む。 / ちょっと待って、23名って…それ全員が一度に消えたの？財団の研究員がそんなに？ / 一度にじゃない。3日間かけて、一人ずつ消えた。最後の一人が消えた瞬間だけ、監視カメラが捉えていた。映っていたのは、空の椅子だけだった。",
+  "generated_at": "2026-08-26T14:09:04.230046Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ研究員23名は消えた？財団が封印したデジタル監獄【SCP】",
+      "thumb_copy": [
+        "23名が消えた",
+        "空の椅子だけ"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "72時間で23名消滅…17年間封印されたデジタル監獄【SCP】",
+      "thumb_copy": [
+        "72時間で23名",
+        "遺体も血痕もない"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は“監獄”だった――人を消すデジタル環境の収容違反【SCP】",
+      "thumb_copy": [
+        "PCの中の監獄",
+        "入った者は消える"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ研究員23名は消えた？財団が封印したデジタル監獄【SCP】",
+    "thumb_copy": [
+      "23名が消えた",
+      "空の椅子だけ"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "KENeWZx3mIs",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.009685230024213076,
+    "impressions": 413,
+    "views": 804,
+    "published_at": "2026-08-08T11:30:07Z",
+    "updated_at": "2026-08-31T14:07:42.151555Z"
+  }
+}

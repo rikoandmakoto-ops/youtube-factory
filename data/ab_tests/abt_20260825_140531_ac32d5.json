@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260825_140531_ac32d5",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "なぜ財団は48時間で限界を迎えるのか——SCP-2317『地獄の門』、封印違反5件の真実【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "未解禁の収容違反事例を財団報告書から深掘り。封印維持に成功した生存率の低さに迫る\nあなた、“たった48時間で人類滅亡が迫る門”を目撃したことはありませんか？SCP-2317の収容違反、その生存率は驚異の14%未満です。 / 突如起きた5件の収容違反、そのうち2件で全職員が消滅。これが現実に財団報告書へ記録されたという事実、ご存知でしょうか。 / 今回は未公開の事件記録や数字を手がかりに、SCP-2317“地獄の門”の真の恐怖へ迫ります。封印維持の舞台裏を深掘りしますよ。",
+  "generated_at": "2026-08-25T14:05:31.745037Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜSCP-2317は48時間で封印限界を迎えるのか【ショート】",
+      "thumb_copy": [
+        "48時間で限界",
+        "地獄の門が開く"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "SCP-2317封印違反5件、48時間で崩れる地獄の門【ショート】",
+      "thumb_copy": [
+        "違反5件の記録",
+        "生存率14%未満"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は封印成功でも助からない――SCP-2317地獄の門【ショート】",
+      "thumb_copy": [
+        "封印しても絶望",
+        "職員が消滅した"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜSCP-2317は48時間で封印限界を迎えるのか【ショート】",
+    "thumb_copy": [
+      "48時間で限界",
+      "地獄の門が開く"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "omvKlYEcN-4",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.011278195488721804,
+    "impressions": 532,
+    "views": 953,
+    "published_at": "2026-08-02T09:06:31Z",
+    "updated_at": "2026-08-31T14:07:44.097156Z"
+  }
+}

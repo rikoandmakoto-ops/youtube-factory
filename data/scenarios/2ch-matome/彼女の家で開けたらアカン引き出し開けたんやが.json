@@ -1,0 +1,96 @@
+{
+  "title": "彼女の家で開けたらアカン引き出し開けたんやが",
+  "theme": {
+    "title": "ワイ、彼女の家で開けたらアカン引き出し開けたんやが",
+    "angle": "報告スレ型。中身は最後まで明言せず、周囲のレスで想像させる"
+  },
+  "thumb_info": {
+    "hook_lines": [
+      "開けたらアカン",
+      "引き出し"
+    ],
+    "hook_caption": "開けてもうた",
+    "subtitle": "彼女の家の三段目",
+    "tagline": "お前らの引き出しもあげてけw"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "ワイ、彼女の家で開けたらアカン引き出し開けたんやが",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？詳しく。ワイも去年それやって半年口きいてもらえんかったわ",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "まず言うとくけど中身は明かせん。ただ、ワイの見覚えのある柄やった",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイの時は自分が中学の時に無くした体操服が出てきたで",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "三段目にワイ宛ての手紙が年号順で並んどった。まだ出会う前の分もある",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ゾッとしたやつは高評価だけ置いてけw お前らが開けてもうた引き出しの中身、コメントで待っとるで",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "ワイ、彼女の家で開けたらアカン引き出し開けたんやが",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？詳しく。ワイも去年それやって半年口きいてもらえんかったわ",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "まず言うとくけど中身は明かせん。ただ、ワイの見覚えのある柄やった",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイの時は自分が中学の時に無くした体操服が出てきたで",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "三段目にワイ宛ての手紙が年号順で並んどった。まだ出会う前の分もある",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ゾッとしたやつは高評価だけ置いてけw お前らが開けてもうた引き出しの中身、コメントで待っとるで",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "generated_by": "claude-opus-5 (in-session, no API)",
+  "applied_feedback": []
+}

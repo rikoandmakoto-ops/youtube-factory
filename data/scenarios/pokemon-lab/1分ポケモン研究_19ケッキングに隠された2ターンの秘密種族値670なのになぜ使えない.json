@@ -1,0 +1,635 @@
+{
+  "title": "1分ポケモン研究 #19：🕵️ケッキングに隠された2ターンの秘密、種族値670なのになぜ使えない？",
+  "theme": {
+    "title": "ケッキングの隠された弱点、なぜ最強種族値なのに使われないのか",
+    "angle": "「隠された」+数字。特性なまけの発動間隔を秒/ターンの数字で示す"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってる？種族値670のケッキングが動けない理由",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 種族値670のケッキングが？うちのポケモン勢なら知ってるよね",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "攻撃160で伝説級、合計670は一般枠トップ級なんだ！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "信じがたいが、ところが毎ターン殴れないなら、いや強すぎでしょ！コメント欄でお前らの最強パーティ教えて。…落ち着いて聞いてほしいんだけど",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "なまけで2ターンに1回休む、でも本当にヤバいのは交代戦なんだ。ここで衝撃の裏事実が判明",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "種族値のウソホントシリーズも研究中！ 1万人目標で毎日投稿中、応援よろしくね！…あれ、最初に言ったやつもう一回見て",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これ知ってた？ あなたがケッキングを出して攻撃160の一撃で勝つつもりでも、種族値670の怪物は2ターンに1回、約30秒ぶん完全に動けなくなるんだよ！\n数字最強なのに停止、この落差がヤバい！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 攻撃160って一般ポケモンでも最上位クラスの数字でしょ？ それだけ高火力なら相手を倒して終わりそうなのに、約30秒も休むなら試合の流れを丸ごと渡すじゃん！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そうなんだよ！ 合計種族値、能力の基礎点の合計は670で、強豪と呼ばれる合計600のポケモンより70高い。\nなのに最上位対戦で毎回見かけるわけじゃない、この数字の裏を暴くよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今回はケッキングに隠された弱点を、特性なまけの発動間隔で見るんだ！ 1ターンを約30秒の判断時間として数えると、4ターン中2ターンも選択肢がゼロになることが見えてくる。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "4ターンのうち2ターンがゼロって、対戦ゲームで必殺技を撃った後に操作不能になる感じ？\nえっ、相手だけ4回行動して、ケッキングは2回しか動けないなら数字だけじゃ測れないよね！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "先に結論を匂わせると、ケッキングは弱いんじゃない、強さを半分のテンポでしか使えないポケモンなんだよ！\n攻撃160の破壊力より、動けない1ターンが試合を決める場面まであるんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "まず種族値だけ見ると、HP150、攻撃160、防御100、特攻95、特防65、素早さ100で、合計は670なんだ！\nHP150と攻撃160を同時に持つから、受けても殴っても数字が大きすぎる。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "HP150、防御100、素早さ100まで並んでいるの!? 遅くて紙耐久の一発屋じゃなく、普通なら先に動いて耐えて殴れる配分だよね。\nいや強すぎでしょ、どこで弱くなるの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式ゲームデータで比べると、合計670は一般的な最終進化としてかなり異例だよ！ 例えば600族と呼ばれる合計600の強豪より、基礎点が70も多い。\n70は小さく見えて、能力値では大きな差になる。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ところが特性、ポケモン固有の常時ルールが「なまけ」なんだ。\n技を選んだ次のターンは「なまけている」となり、攻撃、補助技、交代の全部が選べない完全停止になる！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "交代までできないの!? 攻撃できないだけなら耐久でごまかせるけど、逃げるボタンまで消えるなら、相手から見れば1ターン無料サービスだよ。\nそれで合計670を抑えているのか！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで第二フック！ ケッキングは2ターンに1回しか動けないのに、相手は2ターン連続で好きな技を選べる。\n火力が高くても、行動回数が半分になるだけで試合の有利不利がひっくり返るんだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "1ターンを約30秒の選択時間とすると、ケッキングは攻撃後に約30秒ぶん無防備な番を渡す計算だ！\n相手はその1手で交代、回復、能力上昇、状態異常のどれかを選べるから、こちらの計画が崩れやすい。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "約30秒って聞くと短そうなのに、対戦では相手が丸ごと1回行動する時間なんだね！ 学校のテストで自分だけ1問飛ばされて、相手だけ答えを書けるなら差が広がるのと同じか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "例えばケッキングが相手を倒し切れずに攻撃したら、次は必ず休みになる。\n相手はその休みターンにケッキングへ有利なポケモンへ交代できるから、攻撃160を受けずに盤面を変えられるんだよ！",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "タイプ相性、技の得意不得意の倍率もここで刺さる！ ケッキングはノーマルタイプだから、ゴーストタイプにはノーマル技が当たらない。\n休みターンに出されると、次の行動まで相手を止められないんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ノーマル技が当たらない相手を、休んでいる間に出されるのはきつすぎる！ 攻撃160の大砲を持っていても、狙う相手を自分で選びにくいなら、強さの半分が相手の作戦に吸われちゃうね。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかもなまけは、場に出た最初のターンには発動しないから、初手の一撃だけは本当に怪物なんだ。\nだから相手は最初の攻撃を警戒しつつ、次の休みターンで有利を取る計画を同時に立てる！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ ケッキングのなまけは、公式のゲーム内効果として「行動した次のターンに休む」と決められているんだ。\nプレイヤーの操作ミスではなく、種族値670へ最初から付いた明確なブレーキなんだよ！",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "じゃあケッキングは強すぎるから弱点を後付けされた、みたいに見えるんだね？ でも相手を一撃で倒せば、休みターンの前に勝負が終わるし、そこなら攻撃160が全部解決しない？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そこが対戦だとこれが刺さる、の逆側なんだ！ 相手を一撃で倒しても、次のポケモンが出る番にはケッキングが休む。\n新しく出た相手へ、ほぼ無料で先手のチャンスを渡してしまうんだよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "相手を1匹倒した直後、通常ならこちらが1対0の勢いを作れるよね。\nでもケッキングは次のターンを休むので、出てきた相手が攻撃、能力上昇、交代を選ぶ1回ぶんの余裕を最初から持つことになる。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "勝った直後に隙ができるのが一番イヤだ！ 普通のポケモンなら撃破したら次の相手にも圧をかけられるのに、ケッキングだけは倒した瞬間に休憩へ入る。\n逆転の入口を自分で作るんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "数で比べよう！ 4ターン場にいた場合、普通のポケモンは最大4回技を選べる。\nケッキングは攻撃、休み、攻撃、休みで最大2回、行動回数がちょうど半分になるんだ！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "4回対2回はデカすぎる！ 種族値が70高くても、回復技を押せる回数も状態異常を防ぐ回数も半分になる。\n細かい有利を積み重ねる対戦では、その2回の差がそのまま負け筋になるじゃん！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "なまけの本当の重さは、ダメージが半分になることだけじゃない！ 状態異常を防ぐ、回復する、能力を上げる、交代する、その全部を休みターンには選べない。\n選択肢がゼロになるのが最大の弱点なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "積み技は能力を段階的に上げる技のことだけど、相手はケッキングの休み中に積みやすい。\n攻撃や素早さを1段階上げられるだけでも、次のケッキングの攻撃160を受け切ったり、先に倒したりする道が生まれる。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ケッキングが止まっている30秒で、相手が自分のステータスを上げるなら、次に動くころには火力勝負そのものが変わっているんだ！\n数字の最強と、試合の最強は別物ってことか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで種族値の見方を更新しよう！ 種族値は能力の土台であって、毎ターン動ける保証ではない。\nケッキングは670という大きな土台の上に、なまけという巨大な制限が乗っているんだよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "同じ攻撃160でも、4ターンで4回使える攻撃160と、4ターンで2回しか使えない攻撃160では意味が変わる。\nもちろん一撃の威力は本物だけど、試合では威力と回数の両方を見ないと強さを読み違える！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "スマホゲームで攻撃力が高くても、クールダウンが長すぎるキャラは使いどころを選ぶのと同じだね！ ケッキングは能力欄だけ見たら最強候補、実戦のタイムラインまで見ると別の顔が出るんだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ファンの間では、合計670を成立させるためになまけが「税金」みたいに付いたと言われることがある。\nこれはファンの説なんだけど、公式が設計理由を断定した設定ではないから、ゲーム内効果とは分けて考えよう！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式として確認できるのは、なまけが行動後の次ターンを休みにすること、そして図鑑がケッキングの怠けた暮らしを描いていることだよ。\n設計者の本音まで決めつけず、確実なデータで驚こう！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "公式の事実は「なまけで休む」、設計理由はファンの考察って分けるんだね！ でも実際に2ターンに1回止まる事実だけで、種族値670を見たときの印象は完全に変わるよ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "歴史の話も熱いよ！ ケッキングは第三世代の『ルビー・サファイア』で登場して、進化前のヤルキモノは特性「やるき」を持つ。\nやるきは眠り状態にならない特性で、名前どおり元気に動くんだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ヤルキモノは元気に動けるのに、ケッキングへ進化したら2ターンに1回止まるの!? 進化は普通、数字も便利さも上がるイベントなのに、ここだけ行動回数が逆に減るのが面白すぎる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "図鑑テキストではケッキングは、一日のほとんどを寝転んで過ごすポケモンとして描かれているよ。\n普段は体を動かさずに力を温存して、そのエネルギーを一瞬の攻撃へ回すイメージが攻撃160につながるんだ。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "つまり公式設定では、怠けているから単純に弱いんじゃない！ 動かないぶんだけ力を蓄える存在だから、寝転んだ姿と攻撃160が同じキャラクター性から生まれている。\nこの一致、やば、これ見てってなる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "知らんかった…！ 図鑑の寝転ぶ設定と、対戦で止まるなまけが同じ方向を向いているんだね。\n見た目のネタっぽさを、攻撃160というガチの数値に変えているから、ケッキングだけの個性になるんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし、なまけを消す発想がまったくないわけじゃない！ 味方の特性を入れ替える技や、別の特性を渡す技で、なまけを変更する作戦はある。\nでも準備に複数の手番が必要で、簡単な裏技ではない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、なまけが消えたら攻撃160を毎ターン使えるの!? それが成功したケッキングは本当に合計670の力を全部出せるけど、準備中に相手から攻撃されたら計画が崩れるよね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その通り！ 特性を変えるために1手使えば、相手も1手ぶん攻撃や交代を選べる。\n対戦では「できる」より「安全に何ターンでできるか」が大事で、ケッキングは準備の重さまで背負っているんだよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも特性を変える戦術は、使える技やルールによって成立し方が変わるから、どの作品でも同じ感覚で使えるわけじゃない。\n強いコンボほど、対戦ルールと必要な手番を確認するのが研究員の鉄則だ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "初心者がケッキングを使うなら、まずは初手の一撃を最大限楽しむのがおすすめ！ 高い攻撃を活かす技を選んで、相手を倒した後に休む流れまで、最初から予定表へ入れておこう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "休みターンを事故じゃなく予定にするわけだ！ 攻撃した次のターンは守る技すら選べないから、撃つ前に相手の残りポケモンや交代先を考える。\nそれだけでケッキングの見え方が変わるね！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "対戦だとこれが刺さるのは、相手が残り1匹で、ケッキングの一撃を受け切れない場面だよ！\n倒した後に次の相手が出てこないなら、2ターン目の休みは試合終了になって、弱点が表に出ないんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "逆に相手が2匹以上残っているなら、攻撃後の休みターンに何を出されるかを先に考えよう！ ゴーストタイプや能力を上げる相手が控えていそうなら、ケッキングだけで押し切れない危険が増える。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "種族値だけ見ると最強、でも残り人数まで見ると使いどころが変わるんだ！ ゲームで強いキャラを選んでも、スキルのクールダウン管理をミスると負ける感覚に近くて、めちゃくちゃ分かりやすい。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "まさにそれ！ ケッキングは攻撃後に必ず長いクールダウンが来るキャラだと思うと分かりやすい。\n約30秒相当の1ターンを渡す代わりに、攻撃160で相手の計画ごと壊せるかを試すポケモンなんだよ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ ケッキングの素早さ100も、動けるターンに先手を取れる相手が少なくない数字なんだ。\nだから「遅いから休む前に倒される」ではなく、「先に殴れるのに次で止まる」悔しさがはっきり出る！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "先に動けるからこそ、次の休みが余計に目立つんだね！ 一発目で相手を崩せる期待が大きいぶん、2ターン目の停止を読まれると、いや強すぎでしょから一気に苦しくなる。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ケッキングに隠された弱点は、合計670の数字では見えない「4ターンで2回しか動けない」という行動回数だった！\n攻撃160を持ちながら使われにくい理由は、火力不足ではなく、選択肢がゼロになることなんだよ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "でも、この弱点を知った後ならケッキングはただのネタ枠じゃなく見えるはず！ 最後の1匹を倒し切る一撃、相手の受けを崩す一撃、その瞬間だけは合計670が全部暴れ出すんだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、最強種族値なのに使われない理由が、弱いからじゃなく2ターンの設計だったとは！ 次にケッキングを見たら、攻撃160より先に「次は休むな」って考えちゃうし、戦い方まで変わりそう。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回は、合計600の600族がなぜ特別扱いされるのか、数字だけでは見えない強さの差を研究するよ！\nケッキングの670と比べると、種族値の見方がもう1段階ひっくり返るはずだ。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "種族値のウソホントシリーズでは、見た目の数字と本当の強さがズレるポケモンをまだまだ掘るよ！\nえ、マジで？ってなったら高評価、チャンネル登録で次の数字の秘密も一緒に追おう！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ケッキングの2ターン停止を知ってから遊ぶと、攻撃160の一発が前よりずっと熱く見えるね！\n次に遊ぶとき、ちょっと見方が変わるはずだから、研究所の次の数字勝負も見逃せない！",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "種族値670",
+      "2ターン停止"
+    ],
+    "hook_caption": "最強が止まる",
+    "subtitle": "ケッキングの隠された弱点",
+    "tagline": "数字最強なのに動けない理由"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "このポケモンのモデル、実はナマケモノなんだよ！",
+      "selected_hook": "知ってる？種族値670のケッキングが動けない理由",
+      "scores": [
+        {
+          "hook": "知ってる？種族値670のケッキングが動けない理由",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 18,
+            "loop_connect": 15
+          },
+          "total": 73
+        },
+        {
+          "hook": "え、ケッキングの秘密は2ターンに1度だけ？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 45
+        },
+        {
+          "hook": "このポケモンのモデル、実はナマケモノなんだよ！",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "知ってる？種族値670のケッキングが動けない理由",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ待って！ 種族値670のケッキングが？",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "攻撃160で伝説級、合計670は一般枠トップ級なんだ！",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "ところが毎ターン殴れないなら、いや強すぎでしょ！",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "なまけで2ターンに1回休む、でも本当にヤバいのは交代戦なんだ。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "種族値のウソホントシリーズも研究中！ 1万人目標で毎日投稿中、応援よろしくね！",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 29,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 3
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 73,
+      "optimized_score": 73,
+      "micro_reveals": 1,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.31,
+      "issues": [
+        "16%・66%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "投稿中、応援よろしくね！…あれ、最初に言ったやつもう一回見て",
+      "keyword_overlap_before": 0.33,
+      "keyword_overlap_after": 0.33
+    },
+    "power_word": {
+      "amplified": 0,
+      "changes": [],
+      "lines_modified": 0
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "闇設定・裏設定要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.381,
+      "similar_to": "ポケモンタワーに隠された秘密、あなたが見落とす3つの違和感は？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 9,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "ケッキングに隠された2ターンの秘密、種族値670なのになぜ使えない？",
+      "enhanced_title": "🕵️ケッキングに隠された2ターンの秘密、種族値670なのになぜ使えない？",
+      "emoji_added": "🕵️",
+      "category": "mystery",
+      "modified": true
+    },
+    "enhanced_title": "🕵️ケッキングに隠された2ターンの秘密、種族値670なのになぜ使えない？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 3,
+      "bait_text": "コメント欄でお前らの最強パーティ教えて"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise"
+      ],
+      "streaks_found": 1,
+      "breakers_injected": 1,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "question",
+        "exclaim",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "うちのポケモン勢なら知ってるよね",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 3,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 77,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "やや長い(49字)(-5)"
+    ]
+  }
+}

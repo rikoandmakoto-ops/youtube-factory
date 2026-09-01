@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260827_140706_d13a55",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "ふじのやまの元ネタが怖すぎる — 山に入った人が戻れなくなる禁忌【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "富士山を思わせる妖怪の姿から、山岳信仰における神隠し・立入禁忌・異界の境目をたどり、可愛いデザインとの落差を掘り下げる。\nあなたも、ふじのやまを見て富士山っぽい可愛い妖怪だと思ったことありませんか。\nけれど標高3776メートルの山には、入った者が戻れないと恐れられた境目がありました。 / え、待って怖い。ゲームでは仲間にできるのに、昔の山では帰れない人がいたの？\nセーブ地点も地図もない山で、道だけ消えるなんて本当にゲームより怖いよ。 / 今回は、ふじのやまから富士山信仰、神隠し、立入禁忌までを追います。\nただし最初に言えば、公式が特定伝承を元ネタだと断定した資料は確認できません。",
+  "generated_at": "2026-08-27T14:07:06.758370Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "ふじのやまの元ネタはなぜ「帰れない山」なのか？【ショート】",
+      "thumb_copy": [
+        "入った者が消える",
+        "富士山の禁忌"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "標高3776m、ふじのやまの元ネタ級に怖い富士山信仰【ショート】",
+      "thumb_copy": [
+        "3776mの境界線",
+        "帰れない山だった"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は可愛くない…ふじのやまの背後にある山の神隠し【ショート】",
+      "thumb_copy": [
+        "可愛い妖怪の裏",
+        "山に消える人々"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "ふじのやまの元ネタはなぜ「帰れない山」なのか？【ショート】",
+    "thumb_copy": [
+      "入った者が消える",
+      "富士山の禁忌"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "2DYLiwh42V8",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.01834862385321101,
+    "impressions": 109,
+    "views": 1951,
+    "published_at": "2026-08-14T10:08:53Z",
+    "updated_at": "2026-08-31T14:10:15.404613Z"
+  }
+}

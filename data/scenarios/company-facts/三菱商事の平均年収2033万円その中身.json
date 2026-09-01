@@ -1,0 +1,138 @@
+{
+  "title": "三菱商事の平均年収2033万円、その中身",
+  "theme": {
+    "title": "三菱商事の年収2000万円台、総合商社の待遇を数字で",
+    "angle": "商社の年収構造と、平均に表れない海外駐在手当の実態"
+  },
+  "thumb_info": {
+    "hook_lines": [
+      "平均年収",
+      "2033万円"
+    ],
+    "hook_caption": "5大商社で最高水準",
+    "subtitle": "三菱商事の給与と待遇",
+    "tagline": "2025年3月期 有価証券報告書ベース"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収の実態",
+      "fact_main": "三菱商事 平均年収2,033万円",
+      "fact_sub": "2025年3月期 有価証券報告書",
+      "text": "えっ、三菱商事の平均年収って2000万円を超えてるの？",
+      "bg_query": "三菱商事 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年齢 42.4歳",
+      "fact_sub": "有価証券報告書の開示値",
+      "text": "有価証券報告書の平均年間給与は2033万円。平均年齢は42.4歳です。",
+      "bg_query": "三菱商事 丸の内 オフィスビル",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "平均勤続 17年10ヶ月",
+      "fact_sub": "入社後に長く残る構造",
+      "text": "平均勤続年数は17年10ヶ月。入ってすぐ辞める会社ではありません。",
+      "bg_query": "三菱商事 社員 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "5大商社で最高水準",
+      "fact_sub": "総合商社の給与比較",
+      "text": "この水準は、5大商社の中でも最も高い部類に入ります。",
+      "bg_query": "総合商社 ビジネス街 東京",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "年収の多くは業績連動",
+      "fact_sub": "基本給＋賞与の構成",
+      "text": "ただし年収の多くは業績連動の賞与です。毎年同じ額とは限りません。",
+      "bg_query": "株価チャート ビジネス 資料",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "海外駐在手当は平均の外",
+      "fact_sub": "赴任地により加算",
+      "text": "海外駐在では別に手当が付きます。平均値には表れにくい部分です。",
+      "bg_query": "空港 出張 ビジネスパーソン",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見られます",
+      "text": "気になる企業があればコメントで。プロフィールから他の企業も見られます。",
+      "bg_query": "東京 ビジネス街 夜景",
+      "duration": 5,
+      "mood": "bright"
+    }
+  ],
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "full_scenario": [
+    {
+      "fact_header": "年収の実態",
+      "fact_main": "三菱商事 平均年収2,033万円",
+      "fact_sub": "2025年3月期 有価証券報告書",
+      "text": "えっ、三菱商事の平均年収って2000万円を超えてるの？",
+      "bg_query": "三菱商事 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年齢 42.4歳",
+      "fact_sub": "有価証券報告書の開示値",
+      "text": "有価証券報告書の平均年間給与は2033万円。平均年齢は42.4歳です。",
+      "bg_query": "三菱商事 丸の内 オフィスビル",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "平均勤続 17年10ヶ月",
+      "fact_sub": "入社後に長く残る構造",
+      "text": "平均勤続年数は17年10ヶ月。入ってすぐ辞める会社ではありません。",
+      "bg_query": "三菱商事 社員 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "5大商社で最高水準",
+      "fact_sub": "総合商社の給与比較",
+      "text": "この水準は、5大商社の中でも最も高い部類に入ります。",
+      "bg_query": "総合商社 ビジネス街 東京",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "年収の多くは業績連動",
+      "fact_sub": "基本給＋賞与の構成",
+      "text": "ただし年収の多くは業績連動の賞与です。毎年同じ額とは限りません。",
+      "bg_query": "株価チャート ビジネス 資料",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "海外駐在手当は平均の外",
+      "fact_sub": "赴任地により加算",
+      "text": "海外駐在では別に手当が付きます。平均値には表れにくい部分です。",
+      "bg_query": "空港 出張 ビジネスパーソン",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見られます",
+      "text": "気になる企業があればコメントで。プロフィールから他の企業も見られます。",
+      "bg_query": "東京 ビジネス街 夜景",
+      "duration": 5,
+      "mood": "bright"
+    }
+  ],
+  "generated_by": "claude-opus-5 (in-session, no API)",
+  "applied_feedback": []
+}

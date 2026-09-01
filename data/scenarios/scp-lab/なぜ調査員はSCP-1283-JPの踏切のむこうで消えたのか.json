@@ -1,0 +1,674 @@
+{
+  "title": "なぜ調査員はSCP-1283-JPの踏切のむこうで消えたのか？",
+  "theme": {
+    "title": "SCP-1283-JP「踏切のむこう」、調査員が帰還しなかった恐ろしい全記録",
+    "angle": "競合の1分解説に対し、複数の調査員派遣記録・失踪パターンの統計・O5による収容クラス再審議を軸に展開"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "なぜ調査員は踏切のむこうで消えた？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次の記録が、すべてを異常えた。…え、部屋の外まで来るのか。まだ答えがない。さらに恐ろしい事実が判明する",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "派遣記録は複数あるが、帰還を示す欄だけ空白だ…Keterに再分類すべきだ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここからが本当に夜眠れなくなるんだけど…警報音を聞いた職員は、遮断機のむこうへ歩いたという。しかし、これで終わりではなかった",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "聞かなきゃよかった。記録はここで途切れている。お前らならどう収容する？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "この手の報告書、実は他にも未公開のものが山ほどある。次回、これより上位のオブジェクトを紹介する"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容違反ファイルシリーズシリーズ、この報告書、保存して何度も読み返せ。…この収容手順、最初から見直す必要がある",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたは、遮断機の向こうに誰かが立っているのに、列車が過ぎた瞬間だけ消えていたことありませんか？SCP-1283-JPでは調査員11名が帰還せず、生存確認は0名です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今回はその正体を暴く。踏切のむこうへ進んだ者だけが記録から欠けていく異常を、財団が残した複数の派遣報告と、途切れた無線ログから追跡する。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の調査班は4名で進入し、監視映像には全員が線路を渡る姿が残ったのに、反対側のカメラには誰ひとり映らなかった。足跡さえ途中で消失しています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "失踪は偶然ではありません。派遣記録を集計すると、踏切を越えた調査員は11名中11名が未帰還で、手前に残った支援員7名は全員生還という偏りでした。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "驚くべき反転は、消えた調査員の通信です。彼らは救難を求めるどころか、「こちら側は明るい」と報告し、次の瞬間には所属番号まで忘れたように沈黙しました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "この結果を受け、O5評議会は収容クラスの再審議を開始した。単なる危険区域ではなく、人員と記録そのものを奪う踏切の全記録を、ここから解き明かします。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この話、最後にとんでもないオチがある。踏切を越えた調査員は、帰還者の証言だけでは説明できない形で消えていたんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-1283-JPは、特定条件で現れる踏切のむこう側を異常空間へ接続する。警報機も遮断機も、入口としてはごく普通に見える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も恐ろしい記録では、派遣された調査員12名のうち生還は3名。生存率25％という数字が、O5の再審議を招く決定打になった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "仕組みは単純に見えるよ。列車が通過する瞬間、踏切の先にある景色だけが、本来の線路沿いではない場所へ差し替わるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも危険なのは、遮断機をくぐる行為そのものではない。警報音を聞きながら『むこうへ進む』と決めた人間だけが、接続先へ選別される。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "帰還者3名は全員、通過後の時間感覚を失っていた。腕時計では数分でも、本人には数日間さまよった記憶が残っていたらしい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこれを空間転移ではなく、認識と場所が同時にずれる現象として扱った。地図を持ち込んでも、目印の駅名が読めなくなるためだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "派遣記録を比べると、単独行動者ほど失踪率が高い傾向が出た。ただし二人組でも、互いを見失った時点で帰還例は極端に減っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり踏切のむこうは、線路の反対側ではない。入った人の判断、記憶、同行者との距離まで試しながら、帰り道そのものを奪う場所なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "研究記録では、踏切を越えた調査員17名のうち帰還者は3名だけ。生存率17.6％という数字が、初回派遣からO5評議会を震撼させた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも帰還した3名は、全員が同じ午前二時十七分を最後の記憶と証言した。時計も携帯端末も、その時刻で停止していたんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1283-JPは、警報機が鳴る無人踏切の向こう側へ進んだ人物を、現実から切り離す地点型の異常存在と暫定分類されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "実験A-04では監視カメラ6台を設置したが、対象者が線路を踏んだ瞬間だけ全映像が白く飽和し、音声には列車音だけが残った。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "驚くべき反転はここからだよ。失踪者の家族へ聞き取りを行うと、11件で『帰宅した』という目撃があり、本人だけが存在しなかった。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "派遣記録を年代順に並べると、単独進入の失踪率は100％だった。一方で二人組では片方だけ戻る例が4組中3組を占めている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "帰還者は例外なく、同行者の顔を思い出せなかった。名前、声、階級まで欠落し、任務報告書には空欄だけが残されたんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "研究班はこの欠落を認識災害ではなく、関係性そのものの消去と仮説化した。写真では同行者の位置だけが黒い影に置換されていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第七次調査後、O5評議会はSafeからEuclidへの収容クラス再審議を開始した。理由は、立入禁止柵の外で失踪が初めて確認されたためだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最終勧告は、警報音を聞いても踏切へ近づかないこと。記録上、音を聞いてから七分以内に現場へ向かった民間人5名も、全員未帰還だった。",
+      "expression": "serious",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1283-JPは、閉鎖された踏切の警報音を聞いた者が、線路のむこうへ消える異常存在です。最初の収容記録では調査員7名中、帰還者は0名でした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "発端は2008年、山間部の旧駅で起きた失踪事件だぜ。住民は踏切が鳴るたびに人影を見たが、時刻表に列車の運行記録は一切残っていなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は当初、単純な空間転移と判断し、監視カメラと無人機を投入しました。しかし映像は遮断機の先で必ず白い砂嵐に変わったのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここで反転が起きるぜ。帰還しなかった7名のうち1名は、失踪から43日後、別の県の踏切監視映像にだけ映っていたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その人物はカメラへ背を向けたまま、遮断機が上がる瞬間に消失しました。現場には足跡も遺留品もなく、所属を示す記録だけが残りました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2011年までの派遣記録では、踏切を徒歩で越えた調査員19名が全員失踪しているぜ。遠隔観測班は生存したため、危険は通過行為に集中した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この偏りを受け、研究班は対象を場所ではなく境界現象として扱い始めました。境界現象とは、越えた瞬間に通常法則が変わる領域のことです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2013年、O5評議会は収容クラスの再審議を開始したぜ。失踪率100％という数字は、封鎖だけでは管理不能だという警告として提出されたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "審議資料には、鳴っていない警報音を聞いた職員の証言も添えられました。次は、踏切のむこうで何を見たのか、残された音声記録を追います。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "意外なのは、SCP-1283-JPで失踪した調査員の多くが踏切内ではなく、遮断機の向こう側へ一歩出た直後に通信ごと消えた点だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録上、派遣者の帰還率は極端に低いのに、最後の無線だけは平静なんだ。「線路の先に駅がある」と報告して、そこで途切れる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも現場周辺の鉄道路線図に、その駅は存在しない。調査員が見た駅名は毎回異なり、実在する廃駅名と一致した例も報告された。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここで反転だぜ。失踪者の足跡は線路の向こうへ続かず、踏切の手前で突然終わる。向こうへ行ったはずの人間が、物理的には進んでいない。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの矛盾から、対象を単なる危険な踏切ではなく、観測者ごと別の場所へ接続する空間異常として再評価するようになった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "派遣記録を比較すると、単独進入より二人一組のほうが失踪率は下がった。しかし生還者は相棒の顔や名前を思い出せない場合があった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり人数を増やしても安全ではない。帰還者が一人いても、誰と入ったのか証明できなければ、失踪者数そのものが記録から消える恐れがある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "O5評議会が収容クラス再審議を行った理由もそこだ。隔離柵で踏切を囲えても、被害規模を数えるための報告書まで壊される可能性がある。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "日本の踏切事故対策では視認性や警報機の冗長化が重要だが、この事例では警報が正常でも危険は消えない。鳴っていること自体が誘導なのかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最も恐ろしい補足は、帰還不能者の家族へ届く書類に、対象の記憶が残る例があることだ。本人だけでなく、待つ側の現実まで踏切のむこうへ削られる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "踏切の警報音を聞いたら、まず立ち止まって周囲を見回す癖をつけよう。派遣記録では単独で音源を追った調査員ほど帰還率が低かったんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "実践の基本は、見知らぬ踏切で警報が鳴っても線路の向こうを確認し続けないことだぜ。視線を固定する行為が失踪者の共通点として記録された。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "外出中に異様な踏切を見つけたら、時刻、場所、警報の長さだけを安全な距離からメモしよう。記憶より記録を優先すれば、捜索側の手掛かりになるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ただし撮影のために近づくのは逆効果だ。財団の再調査では、映像を撮ろうとした班員ほど隊列から遅れ、連絡断絶へつながる傾向があった。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで反転だよ。安全確認のつもりで渡り切るまで振り返る行動こそ危険とされたんだ。異常を感じたら、来た道へ戻る判断を家族とも共有してね。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同行者がいるなら、人数確認は踏切の手前と通過後に一度ずつで十分だぜ。何度も呼び掛けるより、全員が止まる合図を先に決めておくと混乱を減らせる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "子どもには『知らない音がしても線路へ近づかず、大人に知らせる』と短く教えよう。怪談として煽るより、通常の踏切安全教育に重ねる方が実行されやすいよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "報告先は鉄道会社や警察で構わない。場所が曖昧なら近くの建物名や地図のピンを添えると、財団のような調査機関でなくても初動が速くなるぜ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1283-JPの教訓は、異常を解こうとして一人で境界を越えないことだね。好奇心は記録へ、危険な確認は専門家へ渡す、この順番を覚えておこう。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1283-JP「踏切のむこう」は、警報機の先へ入った調査員を帰さない境界でした。派遣記録は7件、帰還者は0人です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "失踪は偶然ではなく、踏切が鳴動した時刻と完全に重なっていました。記録映像には、遮断機の向こうで手を振る隊員だけが残ります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も恐ろしいのは、通信が途絶える直前の全員が「線路の先に駅がある」と同じ報告を残したことです。現地に駅舎は存在しません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "この結果を受け、O5評議会は収容クラスの再審議を開始しました。踏切は設備ではなく、どこかへ人を選別して送る入口なのです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "帰らなかった7人は報告書の数字ではありません。家族へ届いたのは、最後の通信記録と、閉じる遮断機の音だけでした。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次回はSCP-■■■-JP、深夜の監視カメラにだけ映る収容房の来訪者を解説するよ。職員3名が消えた夜の記録を追います。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "異常存在の記録を最後まで追いたいなら、高評価とチャンネル登録をお願いします。次の警報が鳴る前に、ゆっくり異常存在SCPラボで会おうね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "踏切の向こう",
+      "帰還者なし"
+    ],
+    "hook_caption": "帰還者なし",
+    "subtitle": "調査員派遣記録",
+    "tagline": "鳴り終えない警報音"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "このSCP、あなたの窓の外にも踏切を置く。",
+      "selected_hook": "なぜ調査員は踏切のむこうで消えた？",
+      "scores": [
+        {
+          "hook": "なぜ調査員は踏切のむこうで消えた？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 53
+        },
+        {
+          "hook": "まさか記録が途切れる瞬間を見たい？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 45
+        },
+        {
+          "hook": "このSCP、あなたの窓の外にも踏切を置く。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 25
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 2,
+      "dead_zones": [
+        1,
+        3
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "なぜ調査員は踏切のむこうで消えた？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、部屋の外まで来るのか。まだ答えがない。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "派遣記録は複数あるが、帰還を示す欄だけ空白だ。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "警報音を聞いた職員は、遮断機のむこうへ歩いたという。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "聞かなきゃよかった。記録はここで途切れている。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "高評価を残せ。踏切の続きは収容違反ファイルシリーズにある。毎日投稿中、1万人目標の登録で応援よろしく",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "save",
+      "style_label": "保存",
+      "original_cta": "高評価を残せ。踏切の続きは収容違反ファイルシリーズにある。毎日投稿中、1万人目標の登録で応援よろしく。",
+      "new_cta": "収容違反ファイルシリーズシリーズ、この報告書、保存して何度も読み返せ。"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "この手の報告書、実は他にも未公開のものが山ほどある。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 25,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 8,
+        "emotional_impact": 5,
+        "relatability": 0,
+        "shareability": 7,
+        "debate_potential": 3
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 70,
+      "optimized_score": 77,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.27,
+      "issues": [
+        "14%・42%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "して何度も読み返せ。…この収容手順、最初から見直す必要がある",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「変」→「異常」",
+        "「怖い」→「夜眠れなくなる」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.449,
+      "similar_to": "SCP-1783-JP「お船の中はうさぎでいっぱい」航路の先で消えた記録の恐怖",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 12,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-1283-JP「踏切のむこう」帰還しなかった調査員記録の恐怖",
+      "enhanced_title": "💀SCP-1283-JP「踏切のむこう」帰還しなかった調査員記録の恐怖",
+      "emoji_added": "💀",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "💀SCP-1283-JP「踏切のむこう」帰還しなかった調査員記録の恐怖"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "お前らならどう収容する？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "negative",
+        "neutral",
+        "neutral",
+        "neutral",
+        "surprise",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "exclaim",
+        "statement",
+        "question",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "series_hint",
+      "trigger_text": "次回、これより上位のオブジェクトを紹介する",
+      "position": 5,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "一口SCP #102：💀SCP-1283-JP「踏切のむこう」帰還しなかった調査員記録の恐怖",
+    "attempts": 1
+  },
+  "original_title": "一口SCP #102：💀SCP-1283-JP「踏切のむこう」帰還しなかった調査員記録の恐怖"
+}

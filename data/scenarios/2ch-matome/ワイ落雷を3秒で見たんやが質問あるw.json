@@ -1,0 +1,661 @@
+{
+  "title": "🤣ワイ、落雷を3秒で見たんやが質問ある？w🍑",
+  "theme": {
+    "title": "落雷って実際どんな感じ？",
+    "angle": "落雷に関する体験談や疑問を集めて、視聴者に参加を促す。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "お前ら、雷で何秒数えたことある？w",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？　窓際で数えとる場合ちゃうやろ草…ファーーーーｗｗｗ！前回のスレ見た奴は察してるだろうけど",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "名無しA、光ってから数える派らしいでw",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイは光る前に親戚の家へ逃げる派や草。草、まだ終わらんのよ",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "クソ上司のAは傘を剣みたいに掲げたらしいw。草、まだ終わらんのよ",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "お前らなら雷で何秒数える？ コメントで頼むわw 質問ある？シリーズ毎日投稿中、1万人目標やから応援よろしくやで。…待って、何秒数に戻って",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、雷が近い夜に家の中なら安全だと思ったことありませんか？実は落雷は一瞬で数億ボルト級、音より先に命の距離を測る相手です。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回は、直撃した人の感覚から「近くに落ちたら何が起きるか」まで、雷の正体を暴くスレを開幕！体験者の証言も混ぜて見ていくぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "雷鳴が聞こえた時点で危険圏という目安があり、光ってから音まで3秒なら約1キロ先。雨が弱くても、空が光れば油断は禁物です。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも驚きなのは、雷は高い物だけを狙うわけじゃない点！グラウンドや海辺では、人の周囲から地面へ電気が走ることもあるらしい。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "体験談では「閃光より先に体が跳ねた」「耳が数分聞こえない」との声も。電流そのものより、衝撃波や近距離の放電が怖さを増します。",
+      "expression": "scared",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "傘を持っていた、スマホを触っていた、窓際にいた――あなたの雷ニアミスはどんな感じ？直撃級の怖い話も、コメント欄に落としてくれ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこれ、半分は間違いなんだ。雷は高い物だけに落ちると思われがちだが、周囲との電気の通りやすさ次第で、低い場所でも人の近くでも危険になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "雲の中で氷の粒がぶつかると電気が分かれ、雲の下側にはマイナスの電気がたまりやすい。地面側は引っ張られて、見えない準備が進むんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "地面から雲へ伸びる電気の道を、専門的には上向きの放電という。木や鉄塔だけでなく、傘や釣り竿の先も、その道の候補になりうるのが怖いところ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "雲から地面へ走る雷は、最初から一直線ではない。枝分かれしながら空気を少しずつ壊して進み、つながった瞬間に強い光と電流が一気に流れる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "雷の温度は一瞬で約三万度に達し、太陽の表面より高いとされる。空気が急激に膨らむため、その衝撃波が遅れてゴロゴロという雷鳴になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "光ってから音まで三秒なら、雷はおよそ一キロ先という目安になる。音速は毎秒約三百四十メートルなので、数えて近さを判断する簡単な方法として使える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "日本では落雷による死者は年によって数人から十数人ほど出る。直撃だけでなく、近くに落ちた電気が地面を伝う地面電流も、屋外では十分に危険なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "だから木の真下で雨宿りは安心に見えても危険で、木に落ちた電気が人へ飛ぶことがある。建物か車内へ入り、窓や金属部分から離れるのが基本になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ただ、雷雲が遠く見えても音が聞こえた時点で安全圏とは言えない。みんなは雷で髪が逆立った、家電が壊れたなど、忘れられない体験ある？コメントで教えて。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "雷の通り道は一瞬で空気を約3万度まで熱し、太陽表面のおよそ5倍。音より先に見えるのは、光が秒速約30万キロで届くからだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "落雷の電流は典型的に数万アンペア級で、家庭用コンセントの15アンペアとは桁違い。人が直撃を避けるべき理由が数字だけで伝わるな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "気象庁の目安では、雷光を見てから雷鳴までの秒数を3で割ると距離はキロ換算。10秒なら約3キロで、屋外なら避難を急ぐ近さ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで驚きの反転、雷は高い所だけに落ちるとは限らない。周囲より目立つ人や物が通り道になり、平地の単独行動も危険度を上げる。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "落雷研究では、人への被害は直撃だけでなく地面を走る電流でも起きるとされる。木の下で雨宿りしても、根元付近は安全地帯ではないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "雷雲から地上へ伸びる放電の先端は、段階的に進むため肉眼では筋のように見える。研究用の高速撮影では、枝分かれする動きも確認されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "日本では雷による人身被害は年ごとに変動するけれど、夏の午後に注意が集まる。積乱雲が近づく合図は、急な黒雲と冷たい風だよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "雷の音が聞こえる範囲は、すでに落雷圏内と考えるのが基本。遠くで鳴った一発を「まだ平気」と判断すると、逃げる時間が削られていく。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "車内が比較的安全とされるのはタイヤではなく、金属の車体が電気を外側へ流すため。窓を閉め、金属部分に触れないのが大事なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "雷に遭遇した人、光と音の間隔は何秒だった？　近所の避難先や忘れられない体験談も、コメントであげてけ。次の雷雲前に役立つかもな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "雷の正体を最初に科学へ引きずり出したのは十八世紀。空の光を神罰ではなく電気として疑った人々が、命がけの実験を始めたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "一七五二年、ベンジャミン・フランクリンは嵐の日に凧を揚げ、濡れた糸から電気を確かめたと伝わる。真似すると普通に危険すぎるぞ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも雷は雲から地面へ落ちるだけじゃない。条件次第では地面側から上へ伸びる放電もあり、夜空に逆向きの稲妻が走ることがある。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きの反転、雷雲の底では氷の粒がぶつかり、電気が分かれると考えられている。つまり巨大な雲の中で、静かに火種が育つわけだ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "避雷針を広めたフランクリンの発想は単純で、尖った金属から電気を安全な地面へ逃がすこと。高い建物ほど、この逃げ道が命綱になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "日本でも江戸時代、雷は火事の原因として恐れられた。高い塔や城は目立つぶん狙われやすく、雷除けの工夫が各地で考えられていたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "現代の観測では、雷の通り道は一瞬で数万度に達するとされる。太陽表面より高温級の空気が急膨張し、あの雷鳴になるらしいよ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "光ってから音までの秒数を数えると、雷までのおおよその距離を読める。音は一秒で約三百四十メートル進むから、五秒なら約一・七キロだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でも実際に近くへ落ちた瞬間、匂い、音、髪の逆立ちってどんな感じなんだろう？　落雷を見た人の体験談、怖かった話もコメントであげてけ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "雷は平均で数億ボルト級、空気を一気に焼き裂くから、直撃すると助かっても体内や皮膚に稲妻模様の跡が残る例があるんだ。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも雷鳴より危ないのは光った直後で、音が聞こえる距離なら落雷圏内。『まだ遠い』と窓際で眺める判断がいちばん怖いぞ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの反転、車内はタイヤのゴムではなく金属の車体が電気を外へ逃がすから比較的安全。オープンカーだけは話が別らしい。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "雷は高い物だけに落ちると思われがちだが、平地の人にも十分落ちる。雨宿りで一本木の下へ走るのは、むしろ危険が増す行動だ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "落雷で亡くなる原因は電撃だけでなく、心臓が止まることもある。見た目に傷が少なくても、救急要請を急ぐべきだと言われているよ。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "雷の光から音まで三秒なら、およそ一キロ先の目安。十秒待てたから安心ではなく、雷雲は自分へ近づいている途中かもしれない。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "屋内でも油断できず、雷が近い時はコンセントにつながる機器や有線電話を避ける考え方がある。配線経由の被害報告もあるんだ。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "『雷に打たれた人へ触ると感電する』は誤解で、人体に電気は残り続けない。周囲が安全なら、すぐ救命処置を始める方が大事だ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "海外では雷に複数回打たれて生還した記録もあるけど、幸運を真似してはいけない。雷注意報の日は屋外予定を変える勇気が必要だね。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "実際に近くへ落ちた時、光、音、焦げた匂い、体のしびれはどう感じた？あなたの落雷ニアミス談や怖かった瞬間をコメントで教えてくれ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "雷鳴が聞こえたら、まず屋内へ避難が鉄則だよ。光ってから30秒以内に音が来た雷は近い目安、洗濯物より命を優先しよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きなのは、雨が降っていなくても落雷は起きること。雷雲から約10キロ離れた晴れた場所にも飛ぶので、空の青さは安全証明じゃないぞ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "避難先は車か建物が有力で、木の下は逆に危険寄り。一本だけ高い木は雷の通り道になりやすく、雨宿りの定番が罠になるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "屋内に入れないなら、傘を高く掲げず低い姿勢で移動しよう。地面に寝るより足をそろえてしゃがむほうが、電気の通り道を減らせる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "家では窓際から離れて、雷が近い間はシャワーや食器洗いを後回しに。水道管や配線は電気が伝わる場合があり、風呂の誘惑は少し我慢だね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "雷注意報の日は、出発前に雨雲レーダーを1回見るだけでも違うぞ。赤や紫の雲が近づく表示なら、公園より屋内予定へ即チェンジだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "スマホの充電中に雷が来たら、無理に通知を追わず充電器から外すのも手。落雷そのものより、焦って窓やベランダへ行く行動が危ないよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "もし髪が逆立つ、金属が鳴るような感覚があれば超緊急サインかも。すぐ高い物から離れ、周囲に助けを呼べる場所へ移動してくれ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "落雷を見たことある人、光と音の間は何秒だった？助かった工夫や、逆にやらかした雨宿り体験もコメントであげてけ、次の雷雲に備えよう！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "落雷体験談を追うと、光より先に体が震えた、家電が落ちた、髪が逆立ったという声まで集まったよ。雷は空の演出ではなく、日常へ急に割り込む主役だったんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも直撃しなくても、近くの雷で停電や機器故障につながることがある。怖さを笑い話に変えるスレ民の語彙力が、雷鳴より妙に刺さる結末だったな。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、雷が鳴っただけで避難の判断が遅れる人もいること。空が光ってから考えるより、聞こえた時点で屋内へ入るほうが、後悔の少ない選択かもね。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回は「深夜のコンビニで見た謎の客あげてけ」スレを解説するよ。店員の静かな修羅場と、買い物かご一つで始まる小事件を、ゆっくり実況で追うぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回も、くだらないのに最後まで読みたくなる2ch・5chの参加型スレを紹介するよ。あなたなら深夜コンビニで、どんな謎客エピソードを書き込むか考えて待っててね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "雷の近くで起きた笑えない話、逆に拍子抜けした話、聞いたことがある都市伝説もコメントで募集中だ。自分だけの一撃エピソードが、次のスレを最高にくだらなくする。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "面白かったら高評価とチャンネル登録をお願いします。通知を入れておけば、次の「参加したくなるスレ」が立った瞬間みたいな熱量で、一緒にツッコミを入れられるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "3秒の光",
+      "音が遅い"
+    ],
+    "hook_caption": "落雷3秒前",
+    "subtitle": "雷の近さ当ててけ",
+    "tagline": "夏の帰省で起きた謎"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "ちょっと聞いてくれ、今落雷3秒前なんやがw",
+      "selected_hook": "お前ら、雷で何秒数えたことある？w",
+      "scores": [
+        {
+          "hook": "お前ら、雷で何秒数えたことある？w",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 15
+          },
+          "total": 58
+        },
+        {
+          "hook": "君ら、落雷の秒数えで事件起きたんやが？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 48
+        },
+        {
+          "hook": "ちょっと聞いてくれ、今落雷3秒前なんやがw",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 18,
+            "loop_connect": 5
+          },
+          "total": 38
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "お前ら、雷で何秒数えたことある？w",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？　窓際で数えとる場合ちゃうやろ草",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "名無しA、光ってから数える派らしいでw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "ワイは光る前に親戚の家へ逃げる派や草",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "上司のAは傘を剣みたいに掲げたらしいw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "お前らなら雷で何秒数える？ コメントで頼むわw 質問ある？シリーズ毎日投稿中、1万人目標やから応援よ",
+          "tension": 6,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "お前らなら雷で何秒数える？ コメントで頼むわw 質問ある？シリーズ毎日投稿中、1",
+          "reason": "1行55字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 33,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 7,
+        "shareability": 14,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 71,
+      "optimized_score": 71,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.17,
+      "issues": [
+        "50%・66%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "、1万人目標やから応援よろしくやで。…待って、何秒数に戻って",
+      "keyword_overlap_before": 1.0,
+      "keyword_overlap_after": 1.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「上司」→「クソ上司」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "アンカー形式の使用",
+        "軽いエロ要素"
+      ],
+      "insights_used": 6
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.545,
+      "similar_to": "ワイ、大谷の昼飯を3秒で当てるスレw",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 12,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "ワイ、落雷を3秒で見たんやが質問ある？w",
+      "enhanced_title": "🤣ワイ、落雷を3秒で見たんやが質問ある？w🍑",
+      "emoji_added": "🍑",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🤣ワイ、落雷を3秒で見たんやが質問ある？w🍑"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": false,
+      "existing_bait": true,
+      "position": -1,
+      "bait_text": ""
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.0
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "exclaim",
+        "statement",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.4
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "前回のスレ見た奴は察してるだろうけど",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 1,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 0.5
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['？'](+12)"
+    ]
+  }
+}

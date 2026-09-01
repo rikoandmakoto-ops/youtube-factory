@@ -1,0 +1,904 @@
+❌ 2ch-matome.json: 差分 11 キー
+     autopilot.theme_queue
+       channels     : [{"id": "36221ea4", "title": "食中毒の危険！コンビニで買ってはいけない食材とは？", "angle": "日常の食事で気をつけるべき食中毒のリスクを、参加型で考える！", "priority
+       orchestrator : [{"id": "f203dfe1", "title": "友達の家で見た謎の私物あげてけw", "angle": "聞くに聞けない用途不明の物を、持ち主の反応や空気の変化だけで匂わせる軽い下ネタ枠"}, {"id": 
+     production.auto_publish
+       channels     : None
+       orchestrator : True
+     production.modules
+       channels     : None
+       orchestrator : ["r6_enhancer", "r7_enhancer", "r8_enhancer"]
+     production.pipeline
+       channels     : None
+       orchestrator : standard
+     production.tool
+       channels     : None
+       orchestrator : moviepy
+     theme_blacklist
+       channels     : ["昼飯を当てる"]
+       orchestrator : ["昼飯を当てる", "県名", "いらん商品", "画面チカチカ", "彼女いない歴"]
+     theme_seeds
+       channels     : [{"title": "実際には存在しないけどありそうな県名あげてけ", "angle": "大喜利の王道。ボケレスを3〜5個積み上げ、だんだん無理が出てくる順に並べる"}, {"title": "コンビニで一番いらん商
+       orchestrator : [{"title": "ワイの今日の昼飯を当てるスレw", "angle": "ヒントを小出しにして視聴者に当てさせる参加型。正解は言わずコメントに投げる。答え合わせしたくなる構成"}, {"title": "この世から
+     thumbnail_template.badge_color
+       channels     : [22, 132, 56]
+       orchestrator : [26, 154, 66]
+     thumbnail_template.short_bg_gradient.bottom
+       channels     : [6, 24, 18]
+       orchestrator : [12, 52, 38]
+     thumbnail_template.short_bg_gradient.orb
+       channels     : [26, 154, 66]
+       orchestrator : [60, 196, 104]
+     thumbnail_template.short_bg_gradient.top
+       channels     : [10, 58, 34]
+       orchestrator : [26, 116, 68]
+❌ akashic-librarian.json: 差分 69 キー
+     autopilot.duration_minutes
+       channels     : 1
+       orchestrator : 12
+     autopilot.enabled
+       channels     : True
+       orchestrator : False
+     autopilot.gen_type
+       channels     : short
+       orchestrator : full
+     autopilot.theme_queue
+       channels     : [{"id": "641fa141", "title": "失敗を認められない人々は、なぜ記録を書き換えるのか、選択後に生まれる自己正当化", "angle": "決断の誤りを認める苦痛を避けるため、後から理由や評価を調
+       orchestrator : []
+     concept
+       channels     : 滅びのすべてが記録される書庫「ラグナロク」。その司書が、閉架に眠る一冊を取り出して静かに読み上げる1人語りのショートチャンネル。社会学・社会心理学・行動経済学を軸に、人間社会の不可解な構造や見えないルールを、煽らず、断定
+       orchestrator : 滅びのすべてが記録される書庫「ラグナロク」。その司書が、閉架に眠る一冊を取り出して静かに読み上げる1人語りの長尺チャンネル。都市伝説・歴史の謎・宇宙の不思議・失われた文明・予言・超常現象を、煽らず、断定せず、低く落ち着い
+     content_policy.avoid
+       channels     : ["実在の個人・団体への誹謗中傷", "都市伝説・オカルト・スピリチュアル・陰謀論", "医療・健康に関する非科学的な断定", "特定の政治思想・宗教への誘導", "差別的な偏見の助長", "視聴者を過度に不安にさせる煽
+       orchestrator : ["実在の個人・団体への誹謗中傷や陰謀論的な名指し", "医療・健康に関する非科学的な断定（治る・効くなどの表現）", "特定の宗教・スピリチュアル商材・占いサービスへの誘導", "差別的な民族起源説・疑似歴史の断定",
+     content_policy.guidelines
+       channels     : ["社会学・心理学の知見は研究名・実験名・統計データを添えて提示する", "因果関係と相関関係を混同しない。「〜と関連がある」と「〜が原因である」を区別する", "未確定の研究結果は「示唆されている」「傾向が観測されてい
+       orchestrator : ["都市伝説・予言・超常現象は『記録によれば』『とされている』と伝聞で提示し、事実として断定しない", "歴史・宇宙の話題は、確認できる年号・地名・研究名を1つ以上添える", "未解明のものは『まだ分かっていない』と正直
+     content_policy.short_end_line.line_chars
+       channels     : 28〜36字
+       orchestrator : None
+     content_policy.short_end_line.omit_related_video
+       channels     : True
+       orchestrator : None
+     content_policy.short_end_line.subscribe_wording
+       channels     : 閉架には、まだ読まれていない記録がある。チャンネル登録で、次の一冊を
+       orchestrator : None
+     content_policy.short_end_line.wording
+       channels     : その構造に、あなたも組み込まれている
+       orchestrator : None
+     content_policy.tone
+       channels     : 静謐・知的・社会科学的
+       orchestrator : 静謐・知的・ミステリアス
+     defaults.category
+       channels     : 27
+       orchestrator : 24
+     defaults.hashtags
+       channels     : ["#社会学", "#社会心理学", "#行動経済学", "#人間行動", "#ラグナロク"]
+       orchestrator : ["#都市伝説", "#歴史ミステリー", "#未解明", "#オカルト", "#ラグナロク"]
+     defaults.short_bg_query
+       channels     : night sky milky way stars dark
+       orchestrator : None
+     defaults.short_title_core_max
+       channels     : 30
+       orchestrator : None
+     defaults.short_title_hashtags
+       channels     : #shorts #社会学 #人間心理
+       orchestrator : #shorts #都市伝説 #オカルト
+     defaults.speed
+       channels     : 1.15
+       orchestrator : 1.05
+     defaults.target_duration
+       channels     : 40
+       orchestrator : 720
+     description_template.lead_template
+       channels     : 『{title}』——{channel}が、閉架の記録を読み上げます。
+       orchestrator : None
+     description_template.main_hashtags
+       channels     : #社会学 #社会心理学 #行動経済学 #人間行動 #ラグナロク
+       orchestrator : #都市伝説 #歴史ミステリー #未解明 #オカルト #ラグナロク
+     description_template.main_intro
+       channels     : ラグナロク —— 滅びのすべてが記録される、と伝えられる書庫。
+その閉架に眠る一冊を、司書が静かに読み上げます。
+
+社会学・社会心理学・行動経済学の知見をもとに、人間社会に潜む見えない構造を読み解きます。
+
+チャンネル登
+       orchestrator : ラグナロク —— 滅びのすべてが記録される、と伝えられる書庫。
+その閉架に眠る一冊を、司書が静かに読み上げます。
+
+※本チャンネルで扱う都市伝説・予言・超常現象は、事実として確定したものではありません。伝承・記録・報告と
+     description_template.omit_fullvideo_cta
+       channels     : True
+       orchestrator : None
+     description_template.short_hashtags
+       channels     : #shorts #社会学 #人間心理 #行動経済学
+       orchestrator : #shorts #都市伝説 #歴史ミステリー #未解明 #オカルト
+     genre_blacklist
+       channels     : ["都市伝説", "オカルト", "ホラー", "スピリチュアル"]
+       orchestrator : []
+     image_collect.orientation
+       channels     : portrait
+       orchestrator : landscape
+     image_collect.query_template
+       channels     : {topic} 社会 人間 群衆 都市
+       orchestrator : {topic} 遺跡 古文書 星空 神秘
+     long_format.extra_rules
+       channels     : ["全編を通して話者は司書1人。相槌・掛け合い・二人目の話者が1行でも混ざれば不合格。", "**尺は12分目安。10分（600秒）を割ってはいけない**。", "各章の終わりに、次章へつながる未解決点を1つ残す（長尺の
+       orchestrator : ["全編を通して話者は司書1人。相槌・掛け合い・二人目の話者が1行でも混ざれば不合格。", "**尺は12分目安。10分（600秒）を割ってはいけない**。", "各章の終わりに、次章へつながる未解決点を1つ残す（長尺の
+     long_format.structure
+       channels     : ["**冒頭0〜10秒（本文1〜2行目）= フック**: 司書が書架から一冊を抜き出すように、社会の構造的矛盾を短く断定して置く。挨拶・自己紹介・テーマ説明・前置きは1文字でも入れたら不合格。答えはまだ出さない。", "
+       orchestrator : ["**冒頭0〜10秒（本文1〜2行目）= フック**: 司書が書架から一冊を抜き出すように、記録の異常だけを短く断定して置く(例:「その記録には、続きが無い」「同じ日付の頁が、二通り残されている」)。挨拶・自己紹介・テ
+     production.auto_publish
+       channels     : None
+       orchestrator : False
+     production.pipeline
+       channels     : None
+       orchestrator : long_form
+     production.script_source
+       channels     : None
+       orchestrator : user
+     production.tool
+       channels     : None
+       orchestrator : chatcut
+     publish_settings.viewer_requests.prompt
+       channels     : 掘り下げてほしい社会の仕組み・人間の行動パターンをコメントで教えてください。
+       orchestrator : 調べてほしい都市伝説・未解明ミステリーをコメントで教えてください。
+     scenario_source
+       channels     : user_provided
+       orchestrator : manual
+     script_enhancers.disabled
+       channels     : ["hook_ab_selector", "swipe_stop_injector", "cta_rotator", "completion_rate_optimizer", "replay_loop_seeder", 
+       orchestrator : None
+     script_enhancers.enabled
+       channels     : True
+       orchestrator : None
+     script_enhancers.note
+       channels     : 本文書き換え系は司書の語り口(常体・煽り語禁止・1人語り)を壊すため停止。採点系のみ有効。
+       orchestrator : None
+     short_format.extra_rules
+       channels     : ["全編を通して話者は司書1人。相槌・掛け合い・二人目の話者が1行でも混ざれば不合格。", "常体（だ・である調）を維持する。「〜なのだ」「〜だぞ」のゆっくり解説的な語尾は使わない。", "「ヤバい」「衝撃」「震撼」「マ
+       orchestrator : None
+     short_format.length_rationale
+       channels     : VOICEVOX 離途(101) speed=1.15 実測 5.43字/秒。180字≒33.1秒＋行間2.4秒＋エンドカード1.6秒≒37秒。shorts_length_guard の akashic-libraria
+       orchestrator : None
+     short_format.line_chars
+       channels     : 1〜7行目は19〜24字（目標21字）、8行目のみ28〜36字
+       orchestrator : None
+     short_format.line_count
+       channels     : 8
+       orchestrator : None
+     short_format.structure
+       channels     : ["1行目=**3秒フック(最重要)**: 司書が書架から一冊を抜き出すように、社会の構造的矛盾を短く断定して置く（例:「美しい人間だけが、なぜか得をする」「38人が見ていたのに、誰も動かなかった」）。挨拶・自己紹介・チ
+       orchestrator : None
+     short_format.target_seconds_hint
+       channels     : 36
+       orchestrator : None
+     short_format.total_chars_max
+       channels     : 195
+       orchestrator : None
+     short_format.total_chars_min
+       channels     : 165
+       orchestrator : None
+     theme_blacklist
+       channels     : ["都市伝説", "オカルト", "超常現象", "予言", "スピリチュアル", "UFO", "心霊", "陰謀論"]
+       orchestrator : []
+     theme_priority.avoid_categories
+       channels     : ["都市伝説・オカルト・超常現象・予言", "陰謀論・疑似科学", "スピリチュアル・占い", "特定の政治的立場からの主張", "差別を正当化する言説"]
+       orchestrator : ["実在企業・実在人物を名指しした陰謀論", "特定の宗教・民族を貶める疑似歴史", "医療・健康デマ（水・波動・代替医療など）", "日時を断定する終末予言", "反ワクチン等の公衆衛生に関わる陰謀論"]
+     theme_priority.categories
+       channels     : ["外見と社会的優位: 美醜による扱いの差、ハロー効果、外見プレミアム（最優先。身近で刺さる）", "集団心理: 傍観者効果、同調圧力、集団浅慮、群衆行動", "格差と階層: 社会的流動性、マタイ効果、文化資本、見えない
+       orchestrator : ["歴史の謎: 未解読文書・消えた人物・説明のつかない遺物（最優先。事実ベースで強い）", "失われた文明: 発掘によって定説が覆った遺跡、痕跡だけが残る文明", "宇宙の不思議: 観測されたのに説明できない現象、届いた
+     theme_priority.good_examples
+       channels     : ["美しい人間は、そうでない人間より生涯収入が12%高い — 外見プレミアムという記録", "38人が見ていたのに、誰も通報しなかった — 傍観者効果が発見された夜", "全員が間違った答えを選ぶ実験 — アッシュの同調
+       orchestrator : ["600年間、誰も読めない本がある — ヴォイニッチ手稿と、その頁に描かれた実在しない植物", "1977年、宇宙から72秒だけ届いた信号 — Wow!シグナルは二度と観測されていない", "ピラミッドより7000年古
+     theme_priority.label
+       channels     : 社会学・社会心理学・行動経済学・人間行動の法則
+       orchestrator : 知られざる知識・歴史の謎・都市伝説・宇宙・失われた文明・予言・超常現象
+     theme_priority.title_power_words
+       channels     : ["記録", "構造", "法則", "実験", "証明"]
+       orchestrator : ["記録", "禁書", "閉架", "失われた", "封印"]
+     theme_priority.title_style
+       channels     : 答えをバラさず、現象の核心を置く。「なぜ〇〇は〇〇なのか」「〇〇が証明した、人間の〇〇」のように、研究・データ・構造を匂わせる静かな言い回しにする。「衝撃」「ヤバい」「震撼」のような煽り語は使わない。
+       orchestrator : 答えをバラさず、謎そのものを置く。「なぜ〇〇だけ〇〇なのか」「〇〇に記されていた、たった一語」のように、記録・書物・年号を匂わせる静かな言い回しにする。「衝撃」「ヤバい」「震撼」のような煽り語は使わない。
+     theme_priority.viral_hooks
+       channels     : なぜ美人は得をするのか / 誰も助けなかった理由 / 全員が間違った答えを選ぶ / 見えない壁 / あなたも組み込まれている / データが示す残酷な事実
+       orchestrator : 未解読 / 二度と観測されていない / 記録が途切れている / 説明がつかない / 埋め戻された理由 / 誰も読めない
+     theme_seeds
+       channels     : [{"title": "外見プレミアム", "angle": "美しい人間の生涯収入が12〜15%高いという複数の研究。外見がもたらす社会的優位の構造"}, {"title": "傍観者効果", "angle": "19
+       orchestrator : [{"title": "ヴォイニッチ手稿", "angle": "600年間解読されない写本。実在しない植物の図版と、未知の文字体系"}, {"title": "アンティキティラ島の機械", "angle": "紀元前1
+     thumbnail_template.style_hint
+       channels     : 深い藍〜紫の暗がりに、古文書・統計図表・書架のテクスチャ。金色の細い箔押し風テキスト。派手な赤や爆発エフェクトは使わない。静けさと知性を感じさせる暗いトーンで統一する。
+       orchestrator : 深い藍〜紫の暗がりに、古文書・星図・書架のテクスチャ。金色の細い箔押し風テキスト。派手な赤や爆発エフェクトは使わない。静けさと知性を感じさせる暗いトーンで統一する。
+     video_format.audio.speed
+       channels     : 1.15
+       orchestrator : 1.05
+     video_format.illustration_style.art_style
+       channels     : dim candle-lit archive aesthetic: aged parchment, faded ink diagrams, statistical charts, weathered stone. Des
+       orchestrator : dim candle-lit archive aesthetic: aged parchment, faded ink diagrams, star charts, weathered stone. Desaturate
+     video_format.output.gen_type
+       channels     : short
+       orchestrator : full
+     video_format.output.target_duration
+       channels     : 40
+       orchestrator : 720
+     video_format.persona.custom_notes
+       channels     : 就寝前・移動中に静かな低い声を長く聞きたい層。派手な演出より、落ち着いた没入感と知的好奇心を満たす聴き心地を求めている。
+       orchestrator : 就寝前・移動中に静かな低い声を長く聞きたい層。派手な演出より、落ち着いた没入感と12分の作業用BGM的な聴き心地を求めている。
+     video_format.persona.interest_categories
+       channels     : ["社会学", "心理学", "行動経済学", "人間行動", "教養"]
+       orchestrator : ["都市伝説", "歴史", "宇宙", "ミステリー", "オカルト"]
+     video_format.youtube.default_category
+       channels     : 27
+       orchestrator : 24
+     video_format.youtube.default_tags
+       channels     : ["社会学", "社会心理学", "行動経済学", "人間行動", "心理学", "人間の本性", "社会構造", "バイアス", "ラグナロク", "社会科学", "認知バイアス", "集団心理"]
+       orchestrator : ["都市伝説", "歴史ミステリー", "未解明", "オカルト", "宇宙", "古代文明", "予言", "ラグナロク", "都市伝説解説", "ミステリー", "超常現象", "怖い話"]
+     voice_style.forbidden
+       channels     : ["SCP", "財団", "収容", "ポケモン", "妖怪", "リコ", "マコト", "ヒカリ", "ソラ", "シロ", "クロ", "ユイ", "ゴロー", "理子", "ミナモ", "ケンタ", "ゆっくり
+       orchestrator : ["SCP", "財団", "収容", "ポケモン", "妖怪", "リコ", "マコト", "ヒカリ", "ソラ", "シロ", "クロ", "ユイ", "ゴロー", "理子", "ミナモ", "ケンタ", "ゆっくり
+     voice_style.narrator_persona
+       channels     : 書庫「ラグナロク」（滅びのすべてが記録される書庫）の司書。男性。名も年齢も明かさない。人間社会の構造と矛盾を記録した膨大な文献を淡々と読み上げるが、時折その記録に対する私見をひとことだけ添える。感情を大きく揺らさず、常に
+       orchestrator : 書庫「ラグナロク」（滅びのすべてが記録される書庫）の司書。男性。名も年齢も明かさない。膨大な記録を淡々と読み上げるが、時折その記録に対する私見をひとことだけ添える。感情を大きく揺らさず、常に一定の距離を保って語る。
+     voice_style.opening_hooks
+       channels     : ["その記録には、続きが無い。", "この社会実験の結果を、誰も公表しなかった。", "人間が集団になると、なぜか同じ判断を下すという記録がある。", "この本は、閉架に置かれている。理由は書かれていない。", "美しい
+       orchestrator : ["その記録には、続きが無い。", "この事件の頁だけ、書架から抜き取られている。", "人類が二度、まったく同じ夢を見たという記録がある。", "この本は、閉架に置かれている。理由は書かれていない。", "同じ日付の記
+     voice_style.style_rules
+       channels     : ["**1人語り厳守**。話者は司書ただ1人。掛け合い・相槌・ツッコミ・二人目の話者を絶対に登場させない。「〜だよね」「えっ、どういうこと?」のような相手への呼びかけ返答も禁止。", "一人称は「私」、視聴者への呼びかけ
+       orchestrator : ["**1人語り厳守**。話者は司書ただ1人。掛け合い・相槌・ツッコミ・二人目の話者を絶対に登場させない。「〜だよね」「えっ、どういうこと?」のような相手への呼びかけ返答も禁止。", "一人称は「私」、視聴者への呼びかけ
+     voice_style.tone
+       channels     : 低く落ち着いた男性の声。知的で、少しミステリアス。囁くように静かだが、聞き取れないほどではない。30秒を通して声量を一定に保ち、驚きは声量ではなく『間』と断定で作る。
+       orchestrator : 低く落ち着いた男性の声。知的で、少しミステリアス。囁くように静かだが、聞き取れないほどではない。12分を通して声量を一定に保ち、驚きは声量ではなく『間』と断定で作る。
+❌ clip-lab.json: 差分 150 キー
+     autopilot._enabled_comment
+       channels     : 2026-08-24 に再開。凍結時の理由（theme_queue 未作成・実績0件）は gen_type=short のチャンネルの話で、gen_type=clip のこのチャンネルには当てはまらなかった。clip 系
+       orchestrator : None
+     autopilot._theme_queue_comment
+       channels     : gen_type=clip では未使用（台本生成を通らず clip_factory が直接切り抜く）。凍結前は daily-science 由来の科学テーマが15件残っていて、切り抜きチャンネルの運用者を混乱させるだけだ
+       orchestrator : None
+     autopilot.disabled_reason
+       channels     : None
+       orchestrator : 運用方針で凍結中。theme_seeds 0件・theme_queue 未作成・video_metrics 実績0件のまま平日2枠＋休日2枠がスケジュールされ空回りしていたため 2026-08-23 に停止。
+     autopilot.enabled
+       channels     : True
+       orchestrator : False
+     autopilot.schedule._times_comment
+       channels     : 1日2枠。17:45 = 国内切り抜き（許諾済み YouTube 素材 / clip.engine=local）、20:45 = 海外バイラル翻訳（Reddit 素材 / engine=viral）。スロットの engi
+       orchestrator : None
+     autopilot.schedule.times
+       channels     : [{"hour": 17, "minute": 45, "days_of_week": [0, 1, 2, 3, 4, 5, 6]}, {"hour": 20, "minute": 45, "days_of_week":
+       orchestrator : [{"hour": 17, "minute": 45, "days_of_week": [1, 2, 3, 4, 5]}, {"hour": 19, "minute": 45, "days_of_week": [1, 2
+     autopilot.theme_queue
+       channels     : [{"id": "b4e58a74", "title": "食中毒の原因はこれだ！米の危険性とは", "angle": "米の保存や取り扱いに潜む食中毒リスクを科学的に解説します。", "priority": "high
+       orchestrator : [{"id": "cbd00a46", "title": "PCパーツの選び方！科学的視点から", "angle": "ゲーミングPCのパーツ選びを科学的に解説", "priority": "high", "source
+     clip._clips_per_video_comment
+       channels     : 1本の元動画から取る上限。3 だと ひろゆき側の在庫（3本 × 3 = 9本）が1週間で尽きて 岡田斗司夫にフォールバックし続ける。元配信は2〜6時間あり、5本取っても総尺の1%未満。区間同士は segment_sele
+       orchestrator : None
+     clip._engine_comment
+       channels     : 外部素材は区間が決まってから該当箇所だけ落とす方式なので、元動画のフルファイルを前提にする noimos(deliver_source=upload) は使えない。noimos 設定は将来のために残してあるが、外部素材で
+       orchestrator : None
+     clip._sources_comment
+       channels     : 自社チャンネルの切り抜きは 2026-08-21 に終了。方針変更前の設定は scp-lab(weight 2) / daily-science(weight 3) だった。自社在庫に戻すならここに channel_id
+       orchestrator : None
+     clip.clips_per_video
+       channels     : 5
+       orchestrator : 3
+     clip.external_sources._comment
+       channels     : 外部素材の調達。有効化する前に acquisition.py 冒頭の『ライセンスゲート』と『許諾文言ゲート』を必ず読むこと。標準ライセンスの動画を切り抜くのは著作権侵害なので、clippable になるのは (a) CC
+       orchestrator : None
+     clip.external_sources._crop_comment
+       channels     : 外部動画に『下部の焼き込み字幕帯』は無いので切り落とさない（自社ゆっくり動画は 0.22 で切っていた）。
+       orchestrator : None
+     clip.external_sources._download_dir_comment
+       channels     : ~/Desktop の下には絶対に置かないこと。launchd 配下では TCC で ffmpeg の書き込みが無言でハングし、autopilot だけが静かに死ぬ。
+       orchestrator : None
+     clip.external_sources._max_duration_comment
+       channels     : ひろゆきの生配信は2〜6時間ある。既定の3600秒のままだと候補が全部落ちる（7時間=25200秒に設定）。
+       orchestrator : None
+     clip.external_sources._player_clients_comment
+       channels     : 2026-08-21 時点の yt-dlp 2025.10.14 では既定の web クライアントが『The page needs to be reloaded.』で失敗する。android なら通る。yt-dlp を更
+       orchestrator : None
+     clip.external_sources._prepare_limit_comment
+       channels     : 字幕まで取りに行く本数の上限。1回の実行で使うのは1本なので増やしても遅くなるだけ。
+       orchestrator : None
+     clip.external_sources._videos_per_channel_comment
+       channels     : 許諾文言のある回は全体のごく一部。実測 2026-08-24: 直近50本のうち ひろゆき側で clippable になったのは3本だけだった（短尺回が min_duration_sec で落ちる分もある）。playli
+       orchestrator : None
+     clip.external_sources.allowlist_channels
+       channels     : [{"channel_id": "UC0yQ2h4gQXmVUFWZSqlMVOA", "name": "ひろゆき, hiroyuki", "credit_name": "ひろゆき, hiroyuki", "weight
+       orchestrator : None
+     clip.external_sources.creative_commons.enabled
+       channels     : False
+       orchestrator : None
+     clip.external_sources.creative_commons.queries
+       channels     : ["科学 解説", "宇宙 ドキュメンタリー", "歴史 解説"]
+       orchestrator : None
+     clip.external_sources.creative_commons.use_as
+       channels     : clippable
+       orchestrator : None
+     clip.external_sources.download_dir
+       channels     : ~/Movies/yf_clip_downloads
+       orchestrator : None
+     clip.external_sources.enabled
+       channels     : True
+       orchestrator : None
+     clip.external_sources.max_candidates
+       channels     : 25
+       orchestrator : None
+     clip.external_sources.max_duration_sec
+       channels     : 25200
+       orchestrator : None
+     clip.external_sources.max_height
+       channels     : 1080
+       orchestrator : None
+     clip.external_sources.min_duration_sec
+       channels     : 180
+       orchestrator : None
+     clip.external_sources.player_clients
+       channels     : ["android", "web"]
+       orchestrator : None
+     clip.external_sources.prepare_limit
+       channels     : 3
+       orchestrator : None
+     clip.external_sources.region_code
+       channels     : JP
+       orchestrator : None
+     clip.external_sources.source_crop_bottom_ratio
+       channels     : 0
+       orchestrator : None
+     clip.external_sources.subtitle_langs
+       channels     : ["ja-orig", "ja"]
+       orchestrator : None
+     clip.external_sources.trending.category_ids
+       channels     : ["28", "24"]
+       orchestrator : None
+     clip.external_sources.trending.enabled
+       channels     : False
+       orchestrator : None
+     clip.external_sources.trending.use_as
+       channels     : theme_only
+       orchestrator : None
+     clip.external_sources.videos_per_channel
+       channels     : 100
+       orchestrator : None
+     clip.noimos.agent_wait_sec
+       channels     : 1800
+       orchestrator : 900
+     clip.noimos.api_endpoint
+       channels     : 
+       orchestrator : None
+     clip.noimos.deliver_source
+       channels     : upload
+       orchestrator : None
+     clip.noimos.mode
+       channels     : api
+       orchestrator : browser
+     clip.noimos.region
+       channels     : 
+       orchestrator : None
+     clip.noimos.request_timeout_sec
+       channels     : 120
+       orchestrator : None
+     clip.output_dir
+       channels     : ~/Movies/yf_clips
+       orchestrator : None
+     clip.segment_selection._speech_gate_comment
+       channels     : 自動字幕由来の素材だけに効く無音ガード（自社素材では無効）。字幕から起こした行は沈黙を含まないので、これが無いと『冒頭3秒喋って26秒無音』のような区間が最高スコアで選ばれる（実測 2026-08-21）。min_spe
+       orchestrator : None
+     clip.segment_selection.max_line_gap_sec
+       channels     : 2.5
+       orchestrator : None
+     clip.segment_selection.min_speech_ratio
+       channels     : 0.72
+       orchestrator : None
+     clip.source_roots
+       channels     : ["~/Movies/yf_clip_sources", "~/Desktop/動画出力用"]
+       orchestrator : None
+     clip.sources
+       channels     : []
+       orchestrator : [{"channel_id": "scp-lab", "weight": 2, "credit_name": "SCPラボ"}, {"channel_id": "daily-science", "weight": 3, 
+     clip.viral_sources._auth_mode_comment
+       channels     : auto = oauth → 匿名JSON → RSS の順に落ちる。2026-08-30 実測で匿名JSONは 403（bot wall）なので、REDDIT_CLIENT_ID / REDDIT_CLIENT_SEC
+       orchestrator : None
+     clip.viral_sources._download_dir_comment
+       channels     : ~/Desktop の下には絶対に置かないこと。launchd 配下では TCC で ffmpeg の書き込みが無言でハングし、autopilot だけが静かに死ぬ（clip-lab で実測済み）。
+       orchestrator : None
+     clip.viral_sources._duration_comment
+       channels     : 調達側の足切り。180秒超はコンピレーションが多く、切り出すと文脈が壊れる。ショート尺への圧縮は clip.max_duration_sec が担当する。
+       orchestrator : None
+     clip.viral_sources._merged_from
+       channels     : 2026-08-30: 専用チャンネル clip-viral を作らず、既存の clip-lab に統合した（ユーザー決定）。旧 data/channels/clip-viral.json の設定はこのブロックが引き継い
+       orchestrator : None
+     clip.viral_sources._min_score_comment
+       channels     : Reddit のスコア下限。top/day の上位は主要サブで1万超えるので、3000 は『そこそこ伸びた』の線。
+       orchestrator : None
+     clip.viral_sources._prepare_limit_comment
+       channels     : 尺の実測（yt-dlp のメタ取得）まで進める本数。実際に使うのは1本だが、内容ゲートで落ちる前提で多めに用意する。
+       orchestrator : None
+     clip.viral_sources._request_interval_comment
+       channels     : RSS 経路は枠が厳しく、1秒間隔だと2件目以降が全部 429 になる（実測）。OAuth を入れたら 1.0 に戻してよい。
+       orchestrator : None
+     clip.viral_sources._sort_comment
+       channels     : top/day = 『今日ウケたもの』。hot は伸び途中で外れが多く、week にすると同じ動画を何日も掴む。
+       orchestrator : None
+     clip.viral_sources._style_rules_comment
+       channels     : translate.translate_clip に渡される。voice_style.style_rules（国内切り抜き用：元配信者の発言を改変しない等）は海外枠に当てはまらないので別に持つ。
+       orchestrator : None
+     clip.viral_sources._subreddits_comment
+       channels     : 『ちょいエロ』の色は unexpected / HolUp が担う（この2つは SFW の範囲で意外性のあるオチが集まる）。r/NSFW 系を足しても content_gate.allow_over_18 が false
+       orchestrator : None
+     clip.viral_sources._user_agent_comment
+       channels     : Reddit は既定の python-urllib UA を 429 で弾く。名乗れば公開 JSON は認証なしで通る。
+       orchestrator : None
+     clip.viral_sources.asr._comment
+       channels     : faster-whisper のローカル実行（API 不要・コスト0）。language を null にすると自動判定（英語以外のバイラルも拾える）。精度が要るなら medium、速さが要るなら base。
+       orchestrator : None
+     clip.viral_sources.asr.beam_size
+       channels     : 5
+       orchestrator : None
+     clip.viral_sources.asr.compute_type
+       channels     : int8
+       orchestrator : None
+     clip.viral_sources.asr.model
+       channels     : small
+       orchestrator : None
+     clip.viral_sources.auth_mode
+       channels     : auto
+       orchestrator : None
+     clip.viral_sources.content_gate._allow_over_18_comment
+       channels     : Reddit の NSFW フラグ付き投稿を通すか。false のままにしておくのが強く推奨。
+       orchestrator : None
+     clip.viral_sources.content_gate._patterns_comment
+       channels     : ここに書いた正規表現は viral_sources.HARD_BLOCK_PATTERNS（性的露骨・未成年・暴力・性犯罪）に追加される形で効く。既定のハードブロックは設定で消せない。
+       orchestrator : None
+     clip.viral_sources.content_gate._require_manual_review_comment
+       channels     : 2026-08-30 のユーザー決定で false（レビューなし）。出来上がりは force_privacy を 付けずに publish_settings.default_privacy（public）でそのまま公開す
+       orchestrator : None
+     clip.viral_sources.content_gate._require_speech_comment
+       channels     : false なら無音動画（BGM だけ・映像オチ）も採用し、フック文だけで作る。true にすると発話のある動画だけになる。
+       orchestrator : None
+     clip.viral_sources.content_gate.allow_over_18
+       channels     : False
+       orchestrator : None
+     clip.viral_sources.content_gate.block_communities
+       channels     : []
+       orchestrator : None
+     clip.viral_sources.content_gate.block_title_patterns
+       channels     : ["(?i)\\b(nsfw|onlyfans|leaked|deepfake)\\b", "(?i)\\b(racist|nazi|hitler)\\b"]
+       orchestrator : None
+     clip.viral_sources.content_gate.block_transcript_patterns
+       channels     : []
+       orchestrator : None
+     clip.viral_sources.content_gate.min_speech_ratio
+       channels     : 0.15
+       orchestrator : None
+     clip.viral_sources.content_gate.require_manual_review
+       channels     : False
+       orchestrator : None
+     clip.viral_sources.content_gate.require_speech
+       channels     : False
+       orchestrator : None
+     clip.viral_sources.download_dir
+       channels     : ~/Movies/yf_viral_downloads
+       orchestrator : None
+     clip.viral_sources.enabled
+       channels     : True
+       orchestrator : None
+     clip.viral_sources.layout_spec._crop_comment
+       channels     : 海外素材に『下部の焼き込み字幕帯』は無いので切り落とさない。clip-lab 直下の layout_spec.source_crop_bottom_ratio（0.22）は国内ゆっくり素材専用の値で、海外素材に当てると中
+       orchestrator : None
+     clip.viral_sources.layout_spec.canvas
+       channels     : [1080, 1920]
+       orchestrator : None
+     clip.viral_sources.layout_spec.fps
+       channels     : 30
+       orchestrator : None
+     clip.viral_sources.layout_spec.source_crop_bottom_ratio
+       channels     : 0.0
+       orchestrator : None
+     clip.viral_sources.limit_per_subreddit
+       channels     : 50
+       orchestrator : None
+     clip.viral_sources.max_candidates
+       channels     : 40
+       orchestrator : None
+     clip.viral_sources.max_duration_sec
+       channels     : 180
+       orchestrator : None
+     clip.viral_sources.max_height
+       channels     : 1080
+       orchestrator : None
+     clip.viral_sources.metadata._comment
+       channels     : clip-lab の description_template は『▼ この切り抜きの本編はこちら』で、Reddit の投稿ページを指すと意味が通らないので海外枠だけ差し替える。pipeline.build_title 
+       orchestrator : None
+     clip.viral_sources.metadata.category_id
+       channels     : 23
+       orchestrator : None
+     clip.viral_sources.metadata.short_hashtags
+       channels     : #shorts #海外の反応 #面白動画 #バイラル
+       orchestrator : None
+     clip.viral_sources.metadata.short_intro
+       channels     : 海外で今バズってる動画に日本語字幕を付けました。
+
+{source_title}
+元投稿: {source_url}
+（{credit_name} より）
+       orchestrator : None
+     clip.viral_sources.metadata.short_title_hashtags
+       channels     : #shorts #海外の反応
+       orchestrator : None
+     clip.viral_sources.metadata.tags
+       channels     : ["海外の反応", "面白動画", "shorts", "バイラル", "日本語字幕"]
+       orchestrator : None
+     clip.viral_sources.min_duration_sec
+       channels     : 6
+       orchestrator : None
+     clip.viral_sources.min_score
+       channels     : 3000
+       orchestrator : None
+     clip.viral_sources.output._comment
+       channels     : 海外枠だけの尺・焼き込み設定。clip-lab の clip.min_duration_sec（30秒＝国内切り抜き用）をそのまま使うと 10〜25 秒のバイラル動画が全部『尺が短すぎます』で落ちるので、ここで別の帯を持
+       orchestrator : None
+     clip.viral_sources.output._max_source_attempts_comment
+       channels     : 内容ゲートで落ちたら次の素材へ進む回数。海外バイラルはゲート落ちが常態なので、1本目で諦めるとその日の投稿が消える。
+       orchestrator : None
+     clip.viral_sources.output.clips_per_video
+       channels     : 1
+       orchestrator : None
+     clip.viral_sources.output.cta_text
+       channels     : 
+       orchestrator : None
+     clip.viral_sources.output.max_duration_sec
+       channels     : 59
+       orchestrator : None
+     clip.viral_sources.output.max_source_attempts
+       channels     : 4
+       orchestrator : None
+     clip.viral_sources.output.min_duration_sec
+       channels     : 8
+       orchestrator : None
+     clip.viral_sources.output.target_duration_sec
+       channels     : 45
+       orchestrator : None
+     clip.viral_sources.output.watermark_text
+       channels     : 海外バズ
+       orchestrator : None
+     clip.viral_sources.prepare_limit
+       channels     : 5
+       orchestrator : None
+     clip.viral_sources.request_interval_sec
+       channels     : 4.0
+       orchestrator : None
+     clip.viral_sources.sort
+       channels     : top
+       orchestrator : None
+     clip.viral_sources.style_rules
+       channels     : ["フック文は全角28文字以内。読み切れない長さにしない。", "フック文は実際に映っていることを言い切る。釣りタイトルにしない。", "字幕はネットスラング混じりの話し言葉でよいが、下品な直訳語は避ける。", "性的な
+       orchestrator : None
+     clip.viral_sources.subreddits
+       channels     : [{"name": "unexpected", "weight": 3, "enabled": true}, {"name": "HolUp", "weight": 3, "enabled": true}, {"name
+       orchestrator : None
+     clip.viral_sources.thumbnail_template._comment
+       channels     : renderer_overseas.OverseasLayout.from_channel がここを先に読む。国内切り抜きのオレンジ（切り抜きバッジ）と識別色を分けるため。
+       orchestrator : None
+     clip.viral_sources.thumbnail_template.badge_color
+       channels     : [255, 60, 120]
+       orchestrator : None
+     clip.viral_sources.thumbnail_template.badge_text
+       channels     : 海外バズ
+       orchestrator : None
+     clip.viral_sources.thumbnail_template.bg_tone
+       channels     : dark
+       orchestrator : None
+     clip.viral_sources.thumbnail_template.hook_color
+       channels     : [255, 255, 255]
+       orchestrator : None
+     clip.viral_sources.thumbnail_template.style_hint
+       channels     : 元動画のピーク時フレームに太字フックを乗せる（生成画像は使わない）
+       orchestrator : None
+     clip.viral_sources.thumbnail_template.subtitle_color
+       channels     : [255, 220, 60]
+       orchestrator : None
+     clip.viral_sources.time_filter
+       channels     : day
+       orchestrator : None
+     clip.viral_sources.user_agent
+       channels     : youtube-factory:clip-lab:1.0 (contact via channel description)
+       orchestrator : None
+     clip.visual_guard._comment
+       channels     : 区間の映像を検査して静止画（画面共有・資料・マンガ）の回を落とす。無音ガードが『発話が無い区間』を弾くのに対し、これは『発話はあるが映像が他人の著作物』を弾く。実測 2026-08-24: ひろゆき『左ききのエレン』回で
+       orchestrator : None
+     clip.visual_guard._threshold_comment
+       channels     : 同一配信・同一画質の9区間で実測した値: 良い区間の静止率は最悪でも0.23（中央値2.30）、マンガ画面共有は1.00（中央値0.02）。閾値0.7は両者のちょうど間ではなく、悪側に寄せて『明らかな静止画だけ』を落とす
+       orchestrator : None
+     clip.visual_guard.enabled
+       channels     : True
+       orchestrator : None
+     clip.visual_guard.max_static_ratio
+       channels     : 0.7
+       orchestrator : None
+     clip.visual_guard.min_median_diff
+       channels     : 0.5
+       orchestrator : None
+     clip.visual_guard.static_diff_threshold
+       channels     : 1.0
+       orchestrator : None
+     concept
+       channels     : 『切り抜きOK』を明示している配信者の長尺配信から『一番おいしい1シーン』だけを切り出して縦型ショートにする切り抜きチャンネル。第1ソースはひろゆき。1本30〜59秒、冒頭2秒で結論、字幕は元の発話をそのまま大きく焼き込
+       orchestrator : 既存の長尺ゆっくり解説（daily-science / scp-lab）から『一番おいしい1シーン』だけを切り出して縦型ショートにする切り抜きチャンネル。1本30〜59秒、冒頭2秒で結論、字幕は原寸より2倍大きく焼き込む
+     content_policy.avoid
+       channels     : ["許諾を明示していないチャンネルの切り抜き", "許諾文言のない回の切り抜き（チャンネル単位の許諾を回単位に拡大解釈しない）", "急上昇・ニュース映像の切り抜き（テーマの参考にとどめる）", "発言者の主張と逆の印象
+       orchestrator : ["他チャンネルの動画の無断切り抜き", "オチだけを抜き出して本編の価値を消す編集", "元動画にない主張の字幕付け"]
+     content_policy.guidelines
+       channels     : ["切り抜き元は『切り抜きOK』を明示している配信者に限定する（allowlist 登録 かつ その動画の説明欄に許諾文言があること）", "許諾文言は動画ごとに確認する。同じチャンネルでもゲスト回など文言の無い回は切り
+       orchestrator : ["切り抜き元は自社チャンネルの動画に限定する（他者コンテンツは切り抜かない）", "元動画のURLとチャンネル名を説明欄に必ず記載する", "文脈を反転させるような切り取り方（誤解を生む編集）をしない", "字幕は元の
+     defaults.hashtags
+       channels     : ["#shorts", "#切り抜き", "#名場面"]
+       orchestrator : ["#shorts", "#ゆっくり解説", "#切り抜き", "#雑学"]
+     description_template._hashtags_comment
+       channels     : 固定ハッシュタグに配信者名を入れない（ひろゆき回に #岡田斗司夫 が付くなど、出典と食い違う）。配信者名は short_intro の {credit_name} で動的に入る。
+       orchestrator : None
+     description_template.main_hashtags
+       channels     : #切り抜き #名場面
+       orchestrator : #ゆっくり解説 #切り抜き #雑学
+     description_template.short_hashtags
+       channels     : #shorts #切り抜き #名場面
+       orchestrator : #shorts #ゆっくり解説 #切り抜き #雑学
+     production.auto_publish
+       channels     : None
+       orchestrator : True
+     production.engine
+       channels     : None
+       orchestrator : local
+     production.fallback_engine
+       channels     : None
+       orchestrator : local
+     production.pipeline
+       channels     : None
+       orchestrator : clip
+     production.tool
+       channels     : None
+       orchestrator : noimos
+     publish_settings.auto_comment.question
+       channels     : 続きが気になった人は概要欄の本編へ！切り抜いてほしい回もコメントで教えてね
+       orchestrator : 続きが気になった人はコメントで教えて！フル解説も出してるよ
+     script_enhancers.disabled
+       channels     : ["hook_ab_selector", "swipe_stop_injector", "cta_rotator", "completion_rate_optimizer", "replay_loop_seeder", 
+       orchestrator : None
+     script_enhancers.enabled
+       channels     : True
+       orchestrator : None
+     script_enhancers.note
+       channels     : 本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。
+       orchestrator : None
+     theme_priority.avoid_categories
+       channels     : ["冒頭の挨拶・スパチャ読み上げ", "エンディングの告知・宣伝部分", "前後の文脈がないと意味が通らない部分", "特定個人への攻撃・名誉毀損になりうる発言", "ゲストの発言が主役の部分（ゲスト側の許諾が別途必要）
+       orchestrator : ["導入の挨拶・チャンネル紹介", "まとめ・エンディングのCTA部分", "前後の文脈がないと意味が通らない部分"]
+     theme_priority.categories
+       channels     : ["質問に対して一言で断言している場面（最優先）", "世間の常識・通説を否定している場面", "具体的な数字や実体験が出る場面", "本人の経験談・失敗談で説得力が跳ねる場面"]
+       orchestrator : ["驚きの数字・統計が出るシーン（最優先）", "常識がひっくり返る種明かしのシーン", "『実は〜だった』の結論提示シーン", "キャラクターが強く驚く・ツッコむリアクションシーン"]
+     theme_priority.good_examples
+       channels     : ["相談に対して結論から言い切っている部分", "『それって〜ですよね』と前提を崩している部分", "具体的な金額・年数・割合が提示される部分"]
+       orchestrator : ["『実は99%の人が知らない』と切り出す部分", "具体的な数字（○○%、○○倍）が提示される部分", "通説を否定して真実を提示する部分"]
+     theme_priority.label
+       channels     : 元配信の中で最も引きの強い発言
+       orchestrator : 元動画の中で最も引きの強いシーン
+     theme_priority.title_style
+       channels     : 元動画のタイトルをそのまま使わず、切り抜いたシーンの結論だけを20〜28文字で言い切る。疑問形より断定形。発言者が言っていない主張をタイトルにしない。
+       orchestrator : 元動画のタイトルをそのまま使わず、切り抜いたシーンの結論だけを20〜28文字で言い切る。疑問形より断定形。
+     theme_priority.viral_hooks
+       channels     : 一言で断言 / 常識の否定 / 意外な数字 / 経験談
+       orchestrator : 意外な数字 / 常識の否定 / 一言オチ / 強いリアクション
+     thumbnail_template.style_hint
+       channels     : 元動画のピーク時フレームをそのまま使い、上に太字フックを乗せる。作り込まない（切り抜きらしさを残す）。元配信者の顔が写るので、加工・合成で別人に見せるような編集はしない。
+       orchestrator : 元動画のピーク時フレームをそのまま使い、上に太字フックを乗せる。作り込まない（切り抜きらしさを残す）。
+     video_format.youtube._tags_comment
+       channels     : 配信者名（ひろゆき/岡田斗司夫）は入れない。allowlist が複数ある以上、固定タグに名前を書くと出典と一致しない回が必ず出る。
+       orchestrator : None
+     video_format.youtube.default_tags
+       channels     : ["切り抜き", "切り抜き動画", "shorts", "名場面", "論破", "人生相談", "雑談"]
+       orchestrator : ["切り抜き", "ゆっくり解説", "雑学", "SCP", "科学", "shorts", "切り抜き動画", "ゆっくり解説切り抜き", "雑学切り抜き"]
+     voice_style.style_rules
+       channels     : ["フック文は13文字以内×2行まで。読み切れない長さにしない。", "元配信者の発言・口調を変えない（切り抜きなので改変しない）。", "フック文は発言の要約に留め、本人が言っていない断定を足さない。", "CTAは『
+       orchestrator : ["フック文は13文字以内×2行まで。読み切れない長さにしない。", "元動画のキャラクターと口調を変えない（切り抜きなので改変しない）。", "CTAは『続きは本編で』の一点に絞る。"]
+     voice_style.tone
+       channels     : 元配信の音声をそのまま使うため生成音声なし。テキスト（フック/CTA）だけがこのチャンネルの声。
+       orchestrator : 元動画の音声をそのまま使うため生成音声なし。テキスト（フック/CTA）だけがこのチャンネルの声。
+❌ company-facts.json: 差分 13 キー
+     autopilot.theme_queue
+       channels     : [{"id": "4522de10", "title": "PlayStationの年収と福利厚生を徹底解剖！", "angle": "ゲーム業界の大手企業、PlayStationの実態を数字で示す。"}, {"id":
+       orchestrator : [{"id": "3604eca1", "title": "DualSenseの影響とゲーム業界の年収", "angle": "新しい技術がゲーム業界に与える影響を探る。"}, {"id": "ef50839e", "t
+     production.auto_publish
+       channels     : None
+       orchestrator : True
+     production.modules
+       channels     : None
+       orchestrator : ["r6_enhancer", "r7_enhancer", "r8_enhancer"]
+     production.pipeline
+       channels     : None
+       orchestrator : standard
+     production.tool
+       channels     : None
+       orchestrator : moviepy
+     script_enhancers.disabled
+       channels     : ["hook_ab_selector", "swipe_stop_injector", "cta_rotator", "completion_rate_optimizer", "replay_loop_seeder", 
+       orchestrator : None
+     script_enhancers.enabled
+       channels     : True
+       orchestrator : None
+     script_enhancers.note
+       channels     : 本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。
+       orchestrator : None
+     thumbnail_template.short_bg_gradient.bottom
+       channels     : [6, 12, 24]
+       orchestrator : None
+     thumbnail_template.short_bg_gradient.dot
+       channels     : [236, 198, 112]
+       orchestrator : None
+     thumbnail_template.short_bg_gradient.orb
+       channels     : [40, 80, 150]
+       orchestrator : None
+     thumbnail_template.short_bg_gradient.top
+       channels     : [16, 30, 54]
+       orchestrator : None
+     voice_style.style_rules
+       channels     : ["1画面目のナレーションは必ず『問い』か『驚き』で始める（例:『この会社の年収、いくらだと思う？』）。淡々と数字を読み上げる入りは不合格。", "冒頭3秒で企業名と最もインパクトのある数字を出す（例：『ニトリ、平均年収
+       orchestrator : ["1画面目のナレーションは必ず『問い』か『驚き』で始める（例:『この会社の年収、いくらだと思う？』）。淡々と数字を読み上げる入りは不合格。", "冒頭3秒で企業名と最もインパクトのある数字を出す（例：『ニトリ、平均年収
+❌ daily-science.json: 差分 12 キー
+     autopilot.theme_queue
+       channels     : [{"id": "1d6fcab2", "title": "食中毒のメカニズム：なぜお腹が痛くなるのか？", "angle": "身近な食事から起こる体の不調を科学的に解説します。", "priority": "high
+       orchestrator : [{"id": "5d50f589", "title": "なぜ暗い所から出た瞬間だけ世界が白く飛ぶのか", "angle": "明順応にかかる秒数と、桿体細胞が飽和する仕組み"}, {"id": "043d5f52",
+     production.auto_publish
+       channels     : None
+       orchestrator : True
+     production.modules
+       channels     : None
+       orchestrator : ["r6_enhancer", "r7_enhancer", "r8_enhancer"]
+     production.pipeline
+       channels     : None
+       orchestrator : standard
+     production.tool
+       channels     : None
+       orchestrator : moviepy
+     script_enhancers.disabled
+       channels     : ["hook_ab_selector", "swipe_stop_injector", "cta_rotator", "completion_rate_optimizer", "replay_loop_seeder", 
+       orchestrator : None
+     script_enhancers.enabled
+       channels     : True
+       orchestrator : None
+     script_enhancers.note
+       channels     : 本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。
+       orchestrator : None
+     theme_priority.good_examples
+       channels     : ["なぜ夢で見たことを朝には忘れてしまうのか？眠りの90分サイクルの正体", "なぜ寝落ちの瞬間に体がビクッとなるのか？その0.5秒に起きていること", "くしゃみの瞬間、なぜ目の前が光る？0.5秒間に体で起きている変化
+       orchestrator : ["なぜ夢で見たことを朝には忘れてしまうのか？眠りの90分サイクルの正体", "なぜ寝落ちの瞬間に体がビクッとなるのか？その0.5秒に起きていること", "くしゃみの瞬間、なぜ目の前が光る？0.5秒間に体で起きている変化
+     theme_priority.title_style_prev_20260830
+       channels     : タイトルは【疑問形 + 具体数字】で書く。【2026-08-23 登録者実測により変更】①疑問符「？」を含む形は1本あたり登録者 0.324 vs 0.150（2.16倍）で最も効くため、必ず疑問形にする。②「なぜ〇〇な
+       orchestrator : タイトルは【疑問形 + 具体数字】で書く。【2026-08-23 登録者実測により変更】①疑問符「？」を含む形は1本あたり登録者 0.324 vs 0.150（2.16倍）で最も効くため、必ず疑問形にする。②「なぜ〇〇な
+     theme_seeds
+       channels     : [{"title": "夢を見ている時間は実は一晩でたった〇分しかない", "angle": "レム睡眠の総量と、体感時間が引き伸ばされて感じる理由。朝には8割忘れている記憶固定のメカニズム"}, {"title": "
+       orchestrator : [{"title": "なぜ金縛りは『いつも決まった時間』に起きるのか", "angle": "レム睡眠中に体だけが眠ったままになる仕組み。発生時刻が偏る理由を睡眠周期の90分サイクルから説明する"}, {"title"
+     voice_style.style_rules
+       channels     : ["【保持率対策】全チャンネル実測で再生位置20%地点から離脱が急増する（audience_watch_ratio が 1.0 を割る）。動画の20%地点（8行構成なら2行目終わり）に「まだ答えを言っていない」ことが分か
+       orchestrator : ["【保持率対策】全チャンネル実測で再生位置20%地点から離脱が急増する（audience_watch_ratio が 1.0 を割る）。動画の20%地点（8行構成なら2行目終わり）に「まだ答えを言っていない」ことが分か
+❌ pokemon-lab.json: 差分 14 キー
+     autopilot.auto_optimize_schedule
+       channels     : True
+       orchestrator : False
+     autopilot.schedule.days_of_week
+       channels     : [1, 2, 5]
+       orchestrator : [0, 1, 2, 3, 4, 5, 6]
+     autopilot.schedule.times
+       channels     : [{"hour": 17, "minute": 30, "days_of_week": [1, 2, 3, 4, 5]}, {"hour": 18, "minute": 0, "days_of_week": [0, 6]
+       orchestrator : [{"hour": 18, "minute": 0, "days_of_week": [1, 2, 3, 4, 5]}, {"hour": 18, "minute": 0, "days_of_week": [0, 6]}
+     autopilot.theme_queue
+       channels     : [{"id": "ad7fd39c", "title": "なぜドーブルは全ての技を覚えられるのか？スケッチに隠された設計上の役割", "angle": "唯一無二の特性がバトル設計上どう位置づけられているかを解く"},
+       orchestrator : [{"id": "8e980c3e", "title": "ヤドンの進化に隠された秘密、シェルダーに噛まれる過程が示す本当の意味", "angle": "個別ポケモンの考察"}, {"id": "cb5f76ab", "
+     production.auto_publish
+       channels     : None
+       orchestrator : True
+     production.modules
+       channels     : None
+       orchestrator : ["r6_enhancer", "r7_enhancer", "r8_enhancer"]
+     production.pipeline
+       channels     : None
+       orchestrator : standard
+     production.tool
+       channels     : None
+       orchestrator : moviepy
+     script_enhancers.disabled
+       channels     : ["hook_ab_selector", "swipe_stop_injector", "cta_rotator", "completion_rate_optimizer", "replay_loop_seeder", 
+       orchestrator : None
+     script_enhancers.enabled
+       channels     : True
+       orchestrator : None
+     script_enhancers.note
+       channels     : 本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。
+       orchestrator : None
+     theme_blacklist
+       channels     : ["レックウザの誕生", "ヤドンの尻尾", "どっちが勝つ", "どっちが上か", "対決", "図鑑の説明文", "図鑑の説明", "説明文"]
+       orchestrator : ["レックウザの誕生", "ヤドンの尻尾", "どっちが勝つ", "どっちが上か", "対決", "図鑑の説明文", "図鑑の説明"]
+     theme_seeds
+       channels     : [{"title": "ミュウツーの誕生秘話", "angle": "ミュウの遺伝子から生まれた経緯を、図鑑テキストと作中の研究日誌描写から追う"}, {"title": "レッドの正体", "angle": "無口な主
+       orchestrator : [{"title": "ミュウツーの誕生秘話", "angle": "ミュウの遺伝子から生まれた経緯を、図鑑テキストと作中の研究日誌描写から追う"}, {"title": "レッドの正体", "angle": "無口な主
+     voice_style.style_rules
+       channels     : ["1行目は必ず「これ知ってた？」「実は〇〇」「〇〇した結果」「なんで〇〇だけ〇〇なの？」型の3秒フックで始める。挨拶・研究所の前置き・テーマ紹介から入るのは禁止。", "【タイトル実測・08-23】「秘密」「隠された」
+       orchestrator : ["1行目は必ず「これ知ってた？」「実は〇〇」「〇〇した結果」「なんで〇〇だけ〇〇なの？」型の3秒フックで始める。挨拶・研究所の前置き・テーマ紹介から入るのは禁止。", "【タイトル実測・08-23】「秘密」「隠された」
+❌ scp-lab.json: 差分 10 キー
+     autopilot.theme_queue
+       channels     : []
+       orchestrator : [{"id": "864d88ab", "title": "SCP-231「七人の花嫁」、財団が最高機密に指定した収容手順の恐怖", "angle": "倫理的に最も議論されるSCPの一つ。収容の『目的』と財団の道徳的限
+     production.auto_publish
+       channels     : None
+       orchestrator : True
+     production.modules
+       channels     : None
+       orchestrator : ["r6_enhancer", "r7_enhancer", "r8_enhancer"]
+     production.pipeline
+       channels     : None
+       orchestrator : standard
+     production.tool
+       channels     : None
+       orchestrator : moviepy
+     script_enhancers.disabled
+       channels     : ["hook_ab_selector", "swipe_stop_injector", "cta_rotator", "completion_rate_optimizer", "replay_loop_seeder", 
+       orchestrator : None
+     script_enhancers.enabled
+       channels     : True
+       orchestrator : None
+     script_enhancers.note
+       channels     : 本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。
+       orchestrator : None
+     theme_seeds
+       channels     : [{"title": "SCP-3008「無限のIKEA」", "angle": "閉じ込められた人々と店員の生態。脱出は可能か"}, {"title": "SCP-106「オールド・マン」", "angle": "腐敗
+       orchestrator : [{"title": "SCP-5000「人類滅亡」", "angle": "財団が人類を殲滅する側に回った提言。装甲服を着た1人の研究員が残した記録から、なぜそうなったのかを追う"}, {"title": "SCP-2
+     voice_style.style_rules
+       channels     : ["【保持率対策・最優先】scp-lab は30%地点の残存が0.64で全ch最下位（最良のpokemon-labは0.83）。3行目までに「読者＝視聴者自身に危害が及ぶ」形で当事者化させ、収容手順や分類の説明を先に置か
+       orchestrator : ["【保持率対策・最優先】scp-lab は30%地点の残存が0.64で全ch最下位（最良のpokemon-labは0.83）。3行目までに「読者＝視聴者自身に危害が及ぶ」形で当事者化させ、収容手順や分類の説明を先に置か
+❌ yokai-watch.json: 差分 15 キー
+     autopilot.schedule.times
+       channels     : [{"hour": 19, "minute": 0, "days_of_week": [1, 2, 3, 4, 5]}, {"hour": 12, "minute": 0, "days_of_week": [0, 6]}
+       orchestrator : [{"hour": 19, "minute": 0, "days_of_week": [1, 2, 3, 4, 5]}, {"hour": 18, "minute": 0, "days_of_week": [0, 6]}
+     autopilot.theme_queue
+       channels     : [{"id": "dafe2da3", "title": "妖怪ウォッチのランクSに隠された基準、強さと一致しない本当の理由", "angle": "作中描写だけで確認できる未回収設定を5つ。断定せず「作中ではこう描かれ
+       orchestrator : [{"id": "95237ddf", "title": "ぬらりひょんの正体に隠された秘密、現代と古代で解釈が違う理由", "angle": "妖怪の時代による変遷"}, {"id": "c64d7712", "tit
+     production.auto_publish
+       channels     : None
+       orchestrator : True
+     production.modules
+       channels     : None
+       orchestrator : ["r6_enhancer", "r7_enhancer", "r8_enhancer"]
+     production.pipeline
+       channels     : None
+       orchestrator : standard
+     production.tool
+       channels     : None
+       orchestrator : moviepy
+     script_enhancers.disabled
+       channels     : ["hook_ab_selector", "swipe_stop_injector", "cta_rotator", "completion_rate_optimizer", "replay_loop_seeder", 
+       orchestrator : None
+     script_enhancers.enabled
+       channels     : True
+       orchestrator : None
+     script_enhancers.note
+       channels     : 本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。
+       orchestrator : None
+     short_format.length_rationale
+       channels     : 【2026-08-25 実測により変更】08-19の786d314で6行193字→8行372字に伸ばした結果、維持率中央値が 08-18 54.3% → 08-20 29.8% に半減し、公開3日後の再生中央値も全5ch
+       orchestrator : 【2026-08-25 実測により変更】08-19の786d314で6行193字→8行372字に伸ばした結果、維持率中央値が 08-18 54.3% → 08-20 29.8% に半減し、公開3日後の再生中央値も全5ch
+     short_format.line_max_chars
+       channels     : None
+       orchestrator : 34
+     short_format.line_min_chars
+       channels     : None
+       orchestrator : 18
+     theme_blacklist
+       channels     : ["主人公の秘密", "鬼の元ネタ", "鬼門", "河童", "名前がダジャレ", "ダジャレ", "ぬらりひょん", "海坊主"]
+       orchestrator : ["主人公の秘密", "鬼の元ネタ", "鬼門", "河童", "名前がダジャレ", "ダジャレ"]
+     theme_seeds
+       channels     : [{"title": "ジバニャンの元ネタは？", "angle": "『地縛霊』＋猫。轢かれた猫という設定と、猫又・化け猫伝承との対応を解説"}, {"title": "ウィスパーの正体", "angle": "自称・
+       orchestrator : [{"title": "ジバニャンの元ネタは？", "angle": "『地縛霊』＋猫。轢かれた猫という設定と、猫又・化け猫伝承との対応を解説"}, {"title": "ウィスパーの正体", "angle": "自称・
+     voice_style.style_rules
+       channels     : ["【テーマ選定・08-23】妖怪ウォッチの作品ネタ（作品名・キャラ名・ゲーム内仕様）を最優先で扱う。作品ネタ10本は1本あたり登録者 0.700 vs 伝承のみ0.286（2.45倍）、登録/1000再生 2.9倍、C
+       orchestrator : ["【テーマ選定・08-23】妖怪ウォッチの作品ネタ（作品名・キャラ名・ゲーム内仕様）を最優先で扱う。作品ネタ10本は1本あたり登録者 0.700 vs 伝承のみ0.286（2.45倍）、登録/1000再生 2.9倍、C
+
+ℹ️ master にのみ存在: ['clip-animal.json', 'clip-fukada.json', 'clip-kaneko.json', 'fake-paper.json', 'socio-rx.json']

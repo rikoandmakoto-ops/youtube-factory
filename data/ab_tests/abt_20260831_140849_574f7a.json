@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260831_140849_574f7a",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "触れた全員が笑う粘体、なぜSafeなのか？【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "癒し系SCPの代表。Safeクラスに分類される理由\nあなたの部屋で、理由もなく胸が重くなった夜はないか。その隣に橙色の粘体が現れ、背中へ抱きついたら、涙は数分で止まるかもしれない。だが、止まった理由まで覚えていられる保証はない。 / …ねえ、これ本当に大丈夫なの？ 泣き止ませる存在なら救いに見える。でも自分の部屋で、知らないものに触れられて、後から時間の一部が抜けるなら、それは助けとは呼びにくい。 / 対象はSCP-999、通称タックル・モンスター。財団がSafeへ置いた橙色の粘体だ。接触試験は100件を超え、死亡者は記録されていない。それでも収容室の扉には、常に監督員が配置され",
+  "generated_at": "2026-08-31T14:08:49.275778Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "触れた全員が笑うSCP-999、なぜSafeに分類されたのか？【ショート】",
+      "thumb_copy": [
+        "笑わせる粘体",
+        "なぜSafe？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "接触試験100件超で死者0人、笑う粘体SCP-999の正体【ショート】",
+      "thumb_copy": [
+        "100件超の接触",
+        "死者は0人"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は記憶が抜ける？笑顔を奪う癒し系SCP-999の危うさ【ショート】",
+      "thumb_copy": [
+        "癒し系なのに",
+        "記憶が抜ける？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "触れた全員が笑うSCP-999、なぜSafeに分類されたのか？【ショート】",
+    "thumb_copy": [
+      "笑わせる粘体",
+      "なぜSafe？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

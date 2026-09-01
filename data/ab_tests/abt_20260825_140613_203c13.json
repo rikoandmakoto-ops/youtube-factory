@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260825_140613_203c13",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "一口SCP #94：🔒SCP-2306「実在しない部屋」— 図面に無い1室、調査員4名の記録だけが残った⚠️【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "発掘・調査記録型。数値（部屋番号・調査回数・帰還者数）を積み上げ、最後に1行だけ結論を欠落させる。SCP-1690（維持率86.7%・ch最高）と同型\nあなたの部屋の壁に、昨夜まで無かった白い扉が増えたことはないか。鍵穴も表札もないのに、なぜか自分の部屋番号だけが貼られている。その報告がSCP-2306だ。 / …え、部屋の中に扉が増えるのか。開けなければ済む話じゃないのか、それとも発見した時点で、もう扉の内側から人数に数えられているのか。 / 財団が確保した建物の図面には、問題の区画が最初から存在しない。だが現場には扉があり、入室を命じられた調査員4名は、帰還率0パーセントだった。",
+  "generated_at": "2026-08-25T14:06:13.931812Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ図面にない部屋へ入った4人は帰還しなかったのか【SCP-2306】",
+      "thumb_copy": [
+        "図面にない1室",
+        "帰還者は0人"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "調査員4名・帰還率0％…図面にない1室の記録【SCP-2306】",
+      "thumb_copy": [
+        "4人が入室した",
+        "記録だけ残った"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は部屋の外ではない…壁に増える「存在しない部屋」【SCP-2306】",
+      "thumb_copy": [
+        "壁に白い扉が",
+        "部屋番号は自分"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ図面にない部屋へ入った4人は帰還しなかったのか【SCP-2306】",
+    "thumb_copy": [
+      "図面にない1室",
+      "帰還者は0人"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "buQ6froWK3c",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.012835472578763127,
+    "impressions": 857,
+    "views": 396,
+    "published_at": "2026-08-22T04:00:37Z",
+    "updated_at": "2026-08-31T14:07:44.269079Z"
+  }
+}

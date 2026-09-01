@@ -1,0 +1,648 @@
+{
+  "title": "1分ポケモン研究 #17：👀ミュウツーに隠された3手先の秘密、AIはなぜ交代を読める？",
+  "theme": {
+    "title": "AIとポケモン：デスゲームで学ぶポケモンの戦略",
+    "angle": "AIが考えるポケモンバトルの戦略を解説。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "驚き！ミュウツーの3手先に隠された盤面の罠",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 技を選ぶ前に相手が見えてるの!?前回の動画の考察を見てくれた人ならわかると思うけど",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "AI戦では特攻154の攻撃より、交代の確率を読む手が勝率を伸ばすんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "しかも相手の交代を読むだけで、等倍技が弱点級になるの!?この設定知ってた人、正直にコメントしてみて",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "正解は技の威力じゃない、次の盤面を取ること。でも残り4割がヤバいんだよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "1分ガチ対決シリーズシリーズ、これ知らない人膨大なから、友達にも教えてあげて！…ここでさっきの伏線回収なんだけど",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "あなたも対戦で、相手が交代した瞬間に技を外して「今の読めたら勝てた！」ってなったことある？ 実はAIが強い理由、威力300の一撃じゃなく、3手先に残る盤面の数字なんだよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ ミュウツーは特攻154、素早さ130で合計680なのに、火力より交代先を見るほうが勝ちに近いの!? いや強すぎでしょ、その考え方は旅バトルでも真似できる？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今日はAIに6対6の対戦を繰り返し考えさせた時、何を最優先にするかを追うぞ！ 答えは「相手を今倒す」より「次に倒せる相手を増やす」で、ここがマジで勝率を分ける！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "目の前の1匹を倒せる技より、後ろの2匹まで苦しくする技が上なの？ ポケモンってHPを0にした側が勝つゲームなのに、順番まで計算するのがAIっぽすぎる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "先に結論のヒントを言うと、AIは大ダメージを見てもすぐ飛びつかない！ 相手が交代しても居残っても、最低60点を取れる技を探す。テストで確実に合格点を取る発想なんだ！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "100点か0点かの大技じゃなくて、毎回60点を取る手を選ぶのか！ でも相手の交代なんて読めないし、どの数字を見れば60点の技だと分かるんだよ？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "種族値だけ見ると、ミュウツーはHP106、特攻154、素早さ130で合計680！ 種族値は能力の目安だけど、AIは680を勝ち点に直結させず、相手6匹へ通る回数に変換するんだ！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、680という伝説級の数字を、そのまま最強判定に使わないの!? じゃあAIはミュウツーの154を、相手の何匹に何回通せるかへ変えて見ているんだね！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "最初の基準はダメージ期待値、当たった時の平均成果だよ！ 威力120でも相手が無効へ交代すれば成果0、威力90でも複数に通れば成果が残る。数字の派手さより失点の少なさが先なんだ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "威力120が0点になるなら、威力90でも広く通る技のほうが強い場面があるのか！ 強いシュートでもゴールが空じゃなければ入らない、サッカーみたいで分かりやすいな！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "タイプ相性は技の通りやすさで、エスパー技は悪タイプに無効！ ミュウツーが高火力のサイコキネシスを押しても、相手の悪タイプへ交代されればダメージ0で、AIはそこを最初に警戒する！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "悪タイプが後ろに1匹いるだけで、特攻154の主力技が止まるの!? それなら相手のHPバーだけ見て殴るより、控えのタイプを数えるほうが先に必要だね！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ このポケモン実は、殴る役だけじゃなく交代を誘う役でもあるんだ！ ミュウツーが出た瞬間に受け役へ替えたくなる、その行動パターンがAIには60％や70％の予測材料になる！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、相手がミュウツーを警戒して替える、その普通の行動が逆に読まれるの!? 強いポケモンほど相手を動かせるから、見えない交代先まで盤面に入るんだね！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "実はこれ、半分は勘違いされやすい！ AIは毎回未来を当てる天才じゃなく、交代されても利益が残る手を選ぶ。読み外しでも負けにくいから、結果だけ見ると3手先を読んだように見えるんだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ！ 当てずっぽうで交代読みをするんじゃなく、外しても困らない選択を積むのか。じゃあAIが選ぶ「外しても仕事する技」って、具体的には何がある？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "代表がステルスロック！ 交代で出た相手に岩タイプのダメージを入れる技で、飛行タイプなど岩が4倍弱点なら最大HPの2分の1を削る。交代するほど損する盤面を1手で作れるんだ！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "最大HPの2分の1!? 交代しただけで半分削れるなら、4回交換して粘る作戦が一気に崩れるじゃん！ AIが設置技を未来のダメージとして数える理由、これは納得だよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式ゲームの仕組みでは、ステルスロックは場に残る限り交代のたび発動する！ 例えば3回交代させれば、岩2倍の相手には合計HPの4分の3相当まで迫れる。1ターンが後半の確定圏内を作るんだ！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "確定圏内は次の攻撃で倒せるHPラインのことだね！ 今はダメージ0でも、3ターン後に威力90の技で倒せるなら、設置した1手の価値が急に跳ね上がるわけか！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ところが、最初から設置技だけを押せば勝てるわけじゃない！ 相手の高速アタッカーが素早さ135でこちらを倒せるなら、準備した直後に失う。AIは攻めと準備を、残りHPと交代回数で比べるんだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じステルスロックでも、置くターンを間違えたら0点になるのか！ じゃあAIはHP、素早さ、残り3匹みたいな情報を、どうやって1つの有利さにまとめるんだよ？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "使う考え方は盤面評価、今後どれだけ有利かの点数化だよ！ 自分が3匹、相手も3匹でも、無傷のミュウツーが残る側は点が高い。残数だけ同じでも、動ける速い駒があるかで価値が変わる！",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "3対3なら五分と思っていたけど、素早さ130のミュウツーが残っているなら全然違うんだね！ 将棋で同じ駒数でも、相手の王に近い駒がいる側が有利なのと似てる！",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "AIは相手の残りから、自分の技を受けられるポケモンを数える！ 受け役が1匹だけなら、その1匹へ等倍で30％削る技でも高評価。最後の壁を壊せば、後ろのミュウツーが一気に通るからだ！",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "目の前の相手を倒せなくても、最後の壁を30％削れるなら勝ち筋になるのか！ 勝ち筋は最後に勝てる道筋って意味だけど、1文で考えると迷いが減りそうだね！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "研究用の単純モデルで、相手が受け役へ交代する確率を60％、居残る確率を40％と置く。交代先に強い技なら60％で大きく得し、居残りでも最低限通るなら平均点が一気に上がるんだ！",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "60％で大当たり、40％でも外れじゃないなら押したくなる！ でも居残り時のダメージが低すぎたら逆に倒されるし、AIはどこから「安全」と判定するんだ？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "答えは最悪ケースの確認！ 相手が一番嫌な行動を取っても、自分の損が小さい技を先に探す。例えば交代されても等倍、居残られても2発で倒せる技なら、読みを外しても試合が崩れにくい！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "強い人の「とりあえずこれ押す」が、実は両方に損をさせる選択だったのか！ 雑な連打じゃなく、相手の60％と40％を同時に苦しくする計算だったんだね！",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "この発想はミニマックスに近い。相手が最善の嫌がらせをしても、自分の最低点を一番高くする考え方で、じゃんけんの勝ち方より負け方を管理する感じ！ AIは派手さより事故率を嫌うんだよ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 一番勝てる技じゃなく、一番負けにくい技を探すの!? それなら読み外しで3匹抜かれる事故が減るし、ランクバトルで連敗しにくくなりそう！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "例えば相手の格闘技を受ける場面で、飛行テラスタルを切るか交代するかを考える。テラスタルはタイプを変える仕組みで1試合に1回だけ。AIは今の半減だけでなく、終盤に残る切り札価値も数える！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "今切れば格闘技を半減できても、後半で弱点を消す1回がなくなるのか！ 1回しかない権利をHP50％ぶんの価値みたいに見るなら、AIの選択が重く見えてくる！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "全部の手順を調べる全探索は、6匹、技4つ、交代、テラスタルで候補が爆発する！ 1ターンに選択が10個でも、3手先なら1000通り級。だからAIは危険な分岐と確定KOを優先して絞るんだ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "3手先だけで1000通り級なら、人間が全部暗算するのは無理だ！ だからこそ僕らは、相手の無効タイプ、確定KO、交代されても得する技の3つだけ先に見るんだね！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "優先されやすいのは確定KOと、交代されても利益が残る技！ 命中70の大技は当たれば最大級でも、30％で失敗する。AIは勝率80％の場面なら命中100を選び、勝率20％なら逆転技を検討するんだ！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "命中70は3回に1回近く外れるのか、数字で聞くと怖くないけど頼れなさが分かる！ でも負けそうな時だけ大技を押すなら、運技にもちゃんと役割があるんだね！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そう！ 終盤で通常技の勝率が20％、命中70の一撃で逆転できる確率が70％なら、AIは派手な方を選ぶことがある。安全か危険かではなく、その瞬間に勝率を最大化するかが基準なんだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "うわ、同じ命中70でも、勝っている時は避けて負けている時は押すのか！ デスゲームみたいな場面で必要なのは勇気じゃなく、今の数字をちゃんと読む冷静さなんだね！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし、ここで言うAI戦略は公式が「この結論が正解」と発表した設定ではないよ！ 対戦AIやプレイヤーが使う探索の考え方を、公式のタイプ相性、威力、命中、ダメージ計算に重ねた研究的な見方なんだ！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "公式のルールと、そこからどう勝つかの考察は別ってことだね！ でも悪タイプにエスパーが無効、岩4倍にステルスロックが半分という土台はゲーム内の仕組みだから、数字の比較はできるんだ！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ファンの間では「AIは交代を完全に読んでいる」と言われることもあるけど、それは断定できない説！ 本当に強い理由は、読めなくても得な技を選び続けること。だから結果だけが読心術みたいに見えるんだ！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "未来が見えているんじゃなく、どっちに転んでも利益が残るから読めたように見えるのか！ これなら僕でも、相手の考えを当てるより負けにくい技を探して真似できそう！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここから実戦用の3秒チェック！ まず相手の残りで、自分の主力技を無効にするタイプがいるか数える。ミュウツーなら悪タイプが1匹でも残る間、エスパー技だけを連打するのは危険信号だ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "HPバーを見る前に無効タイプを確認する、これなら対戦画面でも一瞬でできる！ 相手の残り6匹を見て悪タイプがいたら、サイコキネシス以外の道を探すんだね！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次は、交代されても得する技を1つ探すこと！ 等倍で広く通る技、能力を下げる技、設置技のどれかを選べば、読みが外れた時でも0点を避けられる。AIの60点戦略を人間用にした形だ！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "全部を当てに行かず、最低でも仕事する技を持つのがコツか！ スマホゲームで確定ダメージを選んで、外れ判定を減らす感じなら、初心者の僕にもすぐ覚えられる！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "3つ目は「たぶん倒せる」をやめること！ ダメージには乱数、少し上下する幅があるから、最大HP100％の相手を87％程度しか削れない技なら、1発KOを期待せず次の2発目までの道を作るんだ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "急所や乱数に賭けて負けるの、僕めっちゃある！ 2発で確実に届くなら、1発で決める夢より安定を取る。これだけで負け試合をかなり減らせそうだね！",
+      "expression": "sad",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "最後は勝ち筋を1文にすること！ 「相手の悪タイプを30％削ればミュウツーが通る」と言えたら、目の前を倒せないターンでも目的が消えない。AIみたいな計算を、言葉で整理する方法なんだ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "勝ち筋を声に出すだけで、目の前のHPだけ追って焦るのを止められるんだ！ 6匹全部の計算は無理でも、最後に誰が通るかなら僕でも考えられそうだよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今日のAI戦略を一言で言うなら、最高の一撃より最悪でも崩れない一手！ ミュウツーの特攻154が強いのは本当だけど、それを通す交代誘導と削りまで含めて、合計680の強さが爆発するんだ！",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "数字だけで最強を決めない、盤面を作る側が勝つ！ え、マジで？ってなったし、次にミュウツーを見る時は威力だけじゃなく、相手がどこへ逃げるかまで考えたくなる！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回はバンギラスが砂嵐を出した1ターンを、AIが何点ぶん有利と数えるのかを追うぞ！ 毎ターンの小さなダメージが、10ターン後にどんな確定KOへ変わるか、数字でひっくり返す！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "天候まで勝ち筋に変えるの!? バンギラスの種族値600だけでは見えない秘密、これは続きが気になる！ 1分ガチ対決シリーズで、次の読み合いも一緒に研究しよう！",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "AIみたいに完璧な交代読みは不要！ 交代されても困らない1手を選べば、勝率は少しずつ上がる。次に遊ぶとき、ちょっと見方が変わるはずだから、高評価で研究データを応援してね！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中！ ミュウツー、バンギラス、伝説ポケモンまで数字でひっくり返す研究を届けるから、1分ガチ対決シリーズの登録と応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "AIの3手先",
+      "交代が読める"
+    ],
+    "hook_caption": "AIは3手先",
+    "subtitle": "ミュウツーで学ぶ、勝率を上げる読み合い",
+    "tagline": "数字で見るポケモン戦略"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "なんでミュウツーだけ交代先まで読めるの？",
+      "selected_hook": "驚き！ミュウツーの3手先に隠された盤面の罠",
+      "scores": [
+        {
+          "hook": "驚き！ミュウツーの3手先に隠された盤面の罠",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 10,
+            "loop_connect": 15
+          },
+          "total": 55
+        },
+        {
+          "hook": "なんでミュウツーだけ交代先まで読めるの？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 53
+        },
+        {
+          "hook": "え、あなたは次の盤面をもう読まれてる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "驚き！ミュウツーの3手先に隠された盤面の罠",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 1,
+          "text": "えっ待って！ 技を選ぶ前に相手が見えてるの!?",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "AI戦では特攻154の攻撃より、交代の確率を読む手が勝率を伸ばすんだ。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "しかも相手の交代を読むだけで、等倍技が弱点級になるの!?",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "正解は技の威力じゃない、次の盤面を取ること。でも残り4割がヤバいんだよ！",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "この読み合いの続きは1分ガチ対決シリーズで！ 高評価を押して、1万人目標で毎日投稿中のチャンネル登録",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "share",
+      "style_label": "共有",
+      "original_cta": "この読み合いの続きは1分ガチ対決シリーズで！ 高評価を押して、1万人目標で毎日投稿中のチャンネル登録も応援よろしくね！",
+      "new_cta": "1分ガチ対決シリーズシリーズ、これ知らない人多いから、友達にも教えてあげて！"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 7,
+        "emotional_impact": 6,
+        "relatability": 2,
+        "shareability": 3,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "具体的な数字や固有名詞を入れてシェアしやすく",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 73,
+      "optimized_score": 73,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.87,
+      "issues": [
+        "66%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "ら、友達にも教えてあげて！…ここでさっきの伏線回収なんだけど",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「多い」→「膨大な」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "闇設定・裏設定要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.331,
+      "similar_to": "シャンデラに隠された秘密、なぜ霊タイプ？君が知らない3つの由来",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 7,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "ミュウツーに隠された3手先の秘密、AIはなぜ交代を読める？",
+      "enhanced_title": "👀ミュウツーに隠された3手先の秘密、AIはなぜ交代を読める？",
+      "emoji_added": "👀",
+      "category": "mystery",
+      "modified": true
+    },
+    "enhanced_title": "👀ミュウツーに隠された3手先の秘密、AIはなぜ交代を読める？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 3,
+      "bait_text": "この設定知ってた人、正直にコメントしてみて"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "surprise",
+        "neutral",
+        "surprise",
+        "surprise",
+        "surprise"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "exclaim",
+        "statement"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "前回の動画の考察を見てくれた人ならわかると思うけど",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 3,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  }
+}

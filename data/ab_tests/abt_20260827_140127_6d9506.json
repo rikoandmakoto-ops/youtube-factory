@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260827_140127_6d9506",
+  "channel_id": "2ch-matome",
+  "theme": {
+    "title": "なぜ3秒でバレる？お前らをブラックラグーンで例えた結果【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "あなたの性格をブラックラグーンのキャラで表現してみよう！\nあなた、自分は平凡な会社員のつもりなのに、締切前だけレヴィ級の目つきになることありませんか？性格診断より刺さる、ブラックラグーン式の危険な答えが出ます。 / 今回は、あなたの短気、策士、世話焼き、無茶ぶり耐性を、ロアナプラの住人で例えるスレの正体を暴くぞ。たった一言で推しキャラより自分が怖く見えるかもな。 / 基準は簡単、朝の満員電車で押された瞬間に反撃するか、黙って観察するか、それとも利益を計算するか。回答次第で、あなたの脳内組織図が海賊都市仕様に変わります。",
+  "generated_at": "2026-08-27T14:01:27.936056Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ3秒でバレる？あなたをブラックラグーンで例えた結果【ショート】",
+      "thumb_copy": [
+        "その性格、即バレ",
+        "ロアナプラ診断"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3秒で判明！あなたは誰タイプ？ブラックラグーン性格診断【ショート】",
+      "thumb_copy": [
+        "3秒で正体判明",
+        "あなたは誰タイプ？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は平凡じゃない…ブラックラグーンで暴く危険な本性【ショート】",
+      "thumb_copy": [
+        "平凡な顔して",
+        "中身は危険人物"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ3秒でバレる？あなたをブラックラグーンで例えた結果【ショート】",
+    "thumb_copy": [
+      "その性格、即バレ",
+      "ロアナプラ診断"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "gVgZ1gzEcvg",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.004016064257028112,
+    "impressions": 249,
+    "views": 1088,
+    "published_at": "2026-08-22T03:15:38Z",
+    "updated_at": "2026-08-31T14:02:06.027443Z"
+  }
+}

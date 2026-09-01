@@ -1,0 +1,621 @@
+{
+  "title": "1分科学 #95：🧪なぜ雷鳴の3秒前から体が固まるのか？あなたの脳に起きる反応の正体🧬",
+  "theme": {
+    "title": "落雷の瞬間、脳はどう反応するのか？",
+    "angle": "落雷に対する恐怖とその生理的反応を解説する"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なぜあなたの脳は雷鳴の前に固まる？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、音が鳴る前なの？昨日の夕立でも肩が固まったかも。うちの視聴者なら知ってると思うけど",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちょっと待って、ここからが驚きなんだけど、大きな音へのまばたき反射は、約0.1秒で始まることがあります…実はこれ…",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "スマホ通知の画面が光って、先に手が止まる感じと同じだね。ここからがさらにヤバい",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも脳は次の雷鳴を予測し、だから胸まで速くなるんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこの科学的事実、ポケモンの裏設定の元ネタなんだ。ちなみにこの説、科学者の間でもまだ議論中なんだよね"
+    },
+    {
+      "speaker": "理子",
+      "text": "感覚のふしぎシリーズシリーズ、気になった人は。…実はこれ、最初に言ったことと繋がってる",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？雷が光った直後、まだ音が届いていないのに、あなたの肩やお腹がぎゅっと固まったことはありませんか。\nその数秒には、脳が次の刺激を予測して体を守りに向ける反応が隠れています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、僕は雷鳴を聞いてから驚いていると思ってたよ。昨日の夕立でも、窓の外が光っただけで体が縮こまった気がする。\n音より前に脳が動くなら、何を合図にしているの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "雷の光はほぼ一瞬で目に届きますが、雷鳴は空気中を毎秒およそ340メートルで進みます。\n光ってから3秒なら約1キロメートル先という目安になり、脳には待つ時間が生まれるんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！光と音の間に3秒もあれば、脳は次に大きな音が来るかもしれないと準備できるね。\nでも、考えるだけで肩や心臓まで変わるのはなぜ？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "急な刺激に対して体が先に反応する仕組みを、驚愕反応と呼びます。\n難しく聞こえますが、風船が急に割れた時に、考える前にまばたきや肩の力が入る、あの反射のことなんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、風船の音で目を閉じる時、僕は「閉じよう」と決めていないよ。\n雷でも同じ反射なら、体がびっくりするのは失敗ではなく、元から入っている機能なんだね。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "大きな音へのまばたき反射は、音が耳に入ってからおよそ0.1秒で始まると測られています。\n0.1秒は、あなたが「今の大きい」と言葉にする前で、脳の自動運転が先に動く速さです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、0.1秒ってスマホの通知を見て内容を読む前どころか、画面が光ったと気づく前に近いよね。\nそんな速さなら、理屈で落ち着こうとしても、最初のビクッは止めにくそう。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "最初の反射に深く関わるのは脳幹です。脳幹は呼吸や心拍も支える、体の自動運転の中継地点だと思ってください。\n熱い鍋に触れそうな時、考える前に手を引くような速さを担当しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "脳幹が先に動くなら、雷が近いか遠いかをじっくり考える担当とは別なんだね。\nじゃあ「遠い雷だから大丈夫」と分かっていても、まぶたや肩が反応することはあるの？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "あります。ここまでの説明だけなら音が原因に見えますが、実はこれ、半分しか答えになっていません。\n雷では音が届く前の光を見た瞬間から、脳が次の雷鳴を予測して反応を強めることがあるんです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！光った瞬間に耳をふさいだら、まだ鳴っていないのに胸が速くなったよ。\n予測だけで心拍まで変わるなら、脳の中では何が先に知らせを受け取るの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "危険かもしれない刺激に素早く反応する場所の一つが、扁桃体です。\n扁桃体は、要するに「念のため備えよう」と体へ伝える見張り役で、光や大きな音の意味づけにも関わっています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！扁桃体は、家の玄関センサーが人影を見つけて照明を点けるような役目なんだね。\n雷の光を見た時も、次の音に備える信号を出すの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう考えられます。雷の光を見た経験がある人ほど、光の直後に雷鳴が来る流れを学んでいます。\nたとえるなら、踏切の警報音を聞いた時に電車が見える前から足を止めるような、予測にもとづく準備です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "光と音が毎回セットで来るから、脳は何度も練習して覚えるんだね。\nでも、雷鳴が予想より小さかったり、遠くへそれたりした時も、体の反応はそのまま残るのかな？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、予告された大きな音でも、まばたきや筋肉の驚愕反応を完全には止めにくいことが示されています。\n脳は空振りを避けるより、万一に備えて少し早く動くほうを選びやすい仕組みなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、映画で大きな音が来ると分かっていても、体は少しビクッとなることがあるよ。\n安全だと知っている頭と、先に反応する体は別々に動けるんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その体の準備を強めるのが交感神経です。交感神経は、運動前や発表前に心拍を上げる、体をすぐ動ける状態へ寄せるアクセルのような神経です。\n雷の光は、そのアクセルを軽く踏ませる合図になり得ます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、雷の前のドキドキは、ただ気分が落ち着かないだけではなく、体が走る前みたいに準備している合図なんだ。\n手のひらが汗ばむことまであるのも、そのアクセルのせい？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "はい、手のひらの汗腺は緊張に反応しやすく、気温が低くても汗が出ることがあります。\n夏の暑さで出る汗とは少し役割が違い、手で物をつかむ時の感覚や滑りにくさにも関わる反応です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！夏の雷雨で窓を閉める時、手だけしっとりしていたのは、雨の湿気だけとは限らないんだね。\n体が細かいところまで準備しているのは面白いな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、雷への反応は耳だけで決まらないことです。空が急に暗くなる、風が変わる、雨のにおいがするなど、複数の感覚を脳がまとめて雷雨の合図にします。\nあなたの脳は天気予報のように情報を合わせています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "空の色、風、においまで集めるなら、雷鳴がまだ遠くても落ち着かなくなる理由が分かるよ。\n雨の前の独特なにおいも、脳には「何か変わる」と知らせる材料になるの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "雷雨の前後に感じるにおいには、オゾンや湿った土から立ち上がる成分が関わる場合があります。\nただし毎回同じにおいを感じるわけではなく、風向きや地面の状態で変わるため、ここは科学でもまだ一つに決まっていません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "分からない部分を分からないと言えるのは大事だね。でも、においが同じでなくても、昔の雷雨の記憶がよみがえることはありそう。\n記憶は体の反応をどれくらい変えるの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "以前に大きな雷鳴で驚いた経験があると、似た光や雨音だけでも警戒しやすくなることがあります。\nこれは条件づけと呼ばれ、ある合図と出来事を脳がセットで覚える学習で、熱い湯気を見て手を引く感覚にも似ています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、熱いスープで舌をやけどした後は、湯気を見るだけで慎重になる感じだね。\n雷の光も、過去の大きな音を思い出させて、体の警報を早めることがあるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、誰もが同じ強さで反応するわけではありません。睡眠不足、疲れ、周囲の音、過去の経験などで、心拍やまばたきの反応は変わります。\n人と比べて反応が大きいからといって、それだけで異常とは言えません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "昨日あまり眠れていない日に限って、雷の音がいつもより大きく感じたことがあるよ。\n疲れていると、脳の見張り役が音に敏感になって、体の反応も強く出ることがあるんだね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "眠気や注意の向きが反応にどう影響するかは、条件によって結果が変わります。ここは科学でもまだ細かい結論がそろっていません。\nただ、脳が予測と状況を使って刺激への備えを調整する点は、多くの研究で確かめられています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！体が勝手に騒いでいるのではなく、その時の疲れや記憶まで使って、脳が反応の量を調節しているんだね。\nでは、雷の音が遠い時は心配しなくていい？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そこは体の仕組みとは別に、安全の判断が大切です。光ってから雷鳴まで30秒未満なら、雷はおよそ10キロメートル以内にある目安です。\n音が小さくても落雷の可能性はあるため、数えるだけで安心せず屋内へ移ってください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "30秒ならずいぶん遠そうに聞こえるけれど、10キロメートル以内なんだね。公園、海辺、河原みたいに空が広い場所なら、光を見た時点で動くほうが良さそう。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "気象庁も、雷鳴が聞こえる場所では建物や車の中へ避難するよう案内しています。\n建物に入るまでの数十秒を迷わないよう、夏の外出では近くの屋内施設を先に確認しておくと、脳の焦りも減らしやすいです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、雨が強くなるまで様子を見るのでは遅いことがあるんだね。雷の光を見たら、スマホで撮るより先に、入れる建物を探す行動に切り替えるのが大事なんだ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "木の下は雨をしのげそうに見えますが、雷から身を守る避難場所にはなりません。\n傘を差したまま高い場所にとどまるより、コンクリートの建物や自動車の中へ移るほうが、安全を考える上では基本になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、木の下は雨宿りのイメージが強いだけで、雷から守る場所とは別だね。\n体が緊張している時ほど、決めておいた避難先があると落ち着いて動けそう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "屋内へ入った後も、雷鳴が続く間は窓際、水道、コードにつながる機器から少し離れると安心です。\n雷は大きな電気の移動なので、家の中でも水や配線の通り道を意識して、無理に触れないようにしてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "洗い物やお風呂を少し待つという話を聞くけれど、電気と水の通り道を考えると理由が分かるよ。\n安全な場所へ入ったら、次は心臓のドキドキを整えることもできる？",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "安全な屋内へ移った後なら、4秒ほど鼻から吸い、6秒ほど口から吐く呼吸を3回だけ試してみてください。\n吐く時間を少し長く意識すると、体のアクセルをゆるめる側の反応を助けることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "4秒吸って6秒吐くなら、雷鳴を待って耳をふさぐ代わりに、数を数えながら呼吸へ意識を向けられるね。\n体の警報を消すのではなく、鳴った後に戻す感じなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。驚愕反応そのものは、あなたを守るために速さを優先しているので、無理に止めようとしなくて大丈夫です。\nまず安全を確保し、その後に肩を下げ、ゆっくり吐く順番が、体には分かりやすい対応になります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！雷の光で体が固まるのは、弱いからではなく、脳が0.1秒単位で先回りする防御の仕組みなんだね。\n知っているだけで、次の雷雨では少し自分を責めずに済みそう。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "光、音、空の暗さ、過去の記憶を合わせて、脳は次に起きそうな雷鳴へ備えます。\nたとえるなら、家の警報、照明、鍵が順番に入るように、脳幹、扁桃体、自律神経があなたの体を連携させるんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次に遠くで光ったら、3秒を数えるだけでなく、肩が上がるか、手が汗ばむかも見てみたいな。\n実はこれ、今あなたの体でも起きています、と言われると本当に自分の話に思えるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜もし雷が光ったら、30秒未満なら迷わず安全な屋内へ移り、落ち着いてから4秒吸って6秒吐く呼吸を試してみてください。\n体の反応を観察するのは、外ではなく安全が確保できてからにしてくださいね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなる時、脳が何を手放しているのか知りたいな。\n雷の反射とは違うのに、考える前に体が動くところは少し似ていそうだね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は寝落ちの瞬間のビクッを、睡眠と夢シリーズで一緒に見ていきます。\n今日の雷の話が面白かったら高評価を押してもらえると、身近な不思議を探す力になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "このチャンネルでは、あなたが昨日感じた違和感を毎日1本ずつ、数字と体の仕組みでほどいています。\n次の回も一緒に見てほしいので、面白かったらチャンネル登録よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "雷の瞬間",
+      "脳が先回り"
+    ],
+    "hook_caption": "脳が先回り",
+    "subtitle": "光と音の間に体で起きる反応",
+    "tagline": "0.1秒で始まる防御のしくみ"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "これ知ってました？雷の光だけで、脳はもう身構え始めるんです。",
+      "selected_hook": "なぜあなたの脳は雷鳴の前に固まる？",
+      "scores": [
+        {
+          "hook": "なぜあなたの脳は雷鳴の前に固まる？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 60
+        },
+        {
+          "hook": "え、あなたの脳は次の雷を予測してる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        },
+        {
+          "hook": "これ知ってました？雷の光だけで、脳はもう身構え始めるんです。",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 35
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        2
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "なぜあなたの脳は雷鳴の前に固まる？",
+          "tension": 7,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ、音が鳴る前なの？昨日の夕立でも肩が固まったかも。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "大きな音へのまばたき反射は、約0.1秒で始まることがあります。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "スマホ通知の画面が光って、先に手が止まる感じと同じだね。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "しかも脳は次の雷鳴を予測し、だから胸まで速くなるんです。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "次の雷雨で肩と呼吸を意識してみて。感覚のふしぎシリーズを毎日投稿中、1万人目標の応援にチャンネル登録",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "subscribe",
+      "style_label": "チャンネル登録",
+      "original_cta": "次の雷雨で肩と呼吸を意識してみて。感覚のふしぎシリーズを毎日投稿中、1万人目標の応援にチャンネル登録よろしくね。",
+      "new_cta": "感覚のふしぎシリーズシリーズ、気になった人はチャンネル登録して、明日の科学も見逃さないでね！"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "実はこの科学的事実、ポケモンの裏設定の元ネタなんだ。",
+      "matched_topic": "脳"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 80,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 2,
+          "text": "えっ、音が鳴る前なの？昨日の夕立でも肩が固まったかも。",
+          "pattern": "音[がをは]鳴",
+          "reason": "音の描写はミュートでは伝わらない"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 3,
+          "text": "ちょっと待って、ここからが驚きなんだけど、大きな音へのまばたき反射は、約0.1秒",
+          "reason": "1行52字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 15,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 3,
+        "relatability": 3,
+        "shareability": 0,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "具体的な数字や固有名詞を入れてシェアしやすく",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 74,
+      "optimized_score": 74,
+      "micro_reveals": 1,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.95,
+      "issues": [
+        "42%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": true,
+      "trigger_added": "ズ、気になった人は。…実はこれ、最初に言ったことと繋がってる",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 0,
+      "changes": [],
+      "lines_modified": 0
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭に具体的な数字"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.415,
+      "similar_to": "なぜ人混みであなたの名前だけ聞こえるのか？99%が知らない0.3秒の選別",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 8,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "なぜ雷鳴の3秒前から体が固まるのか？あなたの脳に起きる反応の正体",
+      "enhanced_title": "🧪なぜ雷鳴の3秒前から体が固まるのか？あなたの脳に起きる反応の正体🧬",
+      "emoji_added": "🧪",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🧪なぜ雷鳴の3秒前から体が固まるのか？あなたの脳に起きる反応の正体🧬"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 5,
+      "bait_text": "ちなみにこの説、科学者の間でもまだ議論中なんだよね"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "negative",
+        "neutral",
+        "surprise",
+        "surprise"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "ellipsis",
+        "statement",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "うちの視聴者なら知ってると思うけど",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 4,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 96,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "二人称['あなた'](+6)"
+    ]
+  }
+}

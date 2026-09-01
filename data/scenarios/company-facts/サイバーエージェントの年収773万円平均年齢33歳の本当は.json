@@ -1,0 +1,339 @@
+{
+  "title": "📉サイバーエージェントの年収773万円、平均年齢33歳の本当は",
+  "theme": {
+    "title": "サイバーエージェントの年収と平均年齢、若手の昇給スピード",
+    "angle": "平均年齢の若さと昇給の関係"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収が高い企業",
+      "fact_main": "サイバー773万円",
+      "fact_sub": "有価証券報告書ベース",
+      "text": "驚くべきことに、えっ、話題の企業なのに平均年齢が若すぎる？",
+      "bg_query": "サイバーエージェント 本社 渋谷 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年齢33.2歳",
+      "fact_sub": "若手中心の組織",
+      "text": "平均年齢は三十三点二歳です。若手が多いから、信じられない年収の伸び方にも目が向きます。",
+      "bg_query": "サイバーエージェント オフィス エントランス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "平均勤続5.6年",
+      "fact_sub": "有報の従業員データ",
+      "text": "平均勤続年数は五点六年です。実はこの裏で、若いうちの挑戦と入れ替わりが起きます…と思うじゃん？",
+      "bg_query": "サイバーエージェント オフィス 執務室",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "新卒初任給42万円",
+      "fact_sub": "ビジネスコース月額",
+      "text": "ここからが本当のホンネなんだけど、新卒のビジネスコースは月額四十二万円です。早期に任せる設計が、昇給の土台になります。",
+      "bg_query": "サイバーエージェント 新卒 採用 イベント",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "年間休日120日超",
+      "fact_sub": "募集要項ベース",
+      "text": "年間休日は百二十日超です。数字だけ見れば、かなり良い。収入以外の条件も確認が必要です。",
+      "bg_query": "サイバーエージェント カフェテリア オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "月残業45時間以内",
+      "fact_sub": "口コミサイト調べ",
+      "text": "元社員の証言がさらに衝撃的で、口コミサイトでは残業は月四十五時間以内という声もあります。配属差は推定されます。…この戦略、天才だと思う？それとも狂気？次の動画でさらに衝撃的な事実を紹介する",
+      "bg_query": "サイバーエージェント オフィス 夜景",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。…つまり最初に言った通り、全部繋がっている",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収773万",
+      "平均33歳"
+    ],
+    "subtitle": "若手の昇給は速いのか",
+    "tagline": "公表数字と現場の声"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "この会社の平均年収、いくらだと思いますか。答えは七百七十三万円です。",
+      "selected_hook": "えっ、話題の企業なのに平均年齢が若すぎる？",
+      "scores": [
+        {
+          "hook": "えっ、話題の企業なのに平均年齢が若すぎる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 15,
+            "loop_connect": 15
+          },
+          "total": 60
+        },
+        {
+          "hook": "あなた、サイバーエージェントの裏側知ってる？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 58
+        },
+        {
+          "hook": "この会社の平均年収、いくらだと思いますか。答えは七百七十三万円です。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 10,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 23
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 2,
+      "dead_zones": [
+        3,
+        5
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "えっ、話題の企業なのに平均年齢が若すぎる？",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "平均年齢は三十三点二歳です。若手が多いから、年収の伸び方にも目が向きます。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "平均勤続年数は五点六年です。実はこの裏で、若いうちの挑戦と入れ替わりが起きます。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "新卒のビジネスコースは月額四十二万円です。早期に任せる設計が、昇給の土台になります。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "年間休日は百二十日超です。数字だけ見れば、かなり良い。収入以外の条件も確認が必要です。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "ただし、口コミサイトでは残業は月四十五時間以内という声もあります。配属差は推定されます。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+          "tension": 0,
+          "is_dead": true
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 90,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 4,
+          "text": "ここからが本当のホンネなんだけど、新卒のビジネスコースは月額四十二万円です。早期",
+          "reason": "1行59字はテロップとして長すぎる（推奨: 40字以内）"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "元社員の証言がさらに衝撃的で、口コミサイトでは残業は月四十五時間以内という声もあ",
+          "reason": "1行55字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 19,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 3,
+        "relatability": 1,
+        "shareability": 7,
+        "debate_potential": 5
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 61,
+      "optimized_score": 61,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.64,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "14%・42%・71%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "もチェックしてね。…つまり最初に言った通り、全部繋がっている",
+      "keyword_overlap_before": 0.67,
+      "keyword_overlap_after": 0.67
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「年収」→「信じられない年収」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭に財務数字",
+        "企業の闇要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.411,
+      "similar_to": "資生堂の年収729万円、実はダイバーシティの裏で何がある？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 14,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "サイバーエージェントの年収773万円、平均年齢33歳の本当は",
+      "enhanced_title": "📉サイバーエージェントの年収773万円、平均年齢33歳の本当は",
+      "emoji_added": "📉",
+      "category": "money",
+      "modified": true
+    },
+    "enhanced_title": "📉サイバーエージェントの年収773万円、平均年齢33歳の本当は"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 5,
+      "bait_text": "…この戦略、天才だと思う？それとも狂気？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "surprise",
+        "neutral",
+        "neutral",
+        "surprise",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "question",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.4
+    },
+    "subscribe_trigger": {
+      "trigger_type": "series_hint",
+      "trigger_text": "次の動画でさらに衝撃的な事実を紹介する",
+      "position": 5,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 3,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 78,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['本当は', '年収'](+20)"
+    ]
+  }
+}

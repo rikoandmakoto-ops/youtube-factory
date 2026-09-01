@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260830_140405_65915f",
+  "channel_id": "pokemon-lab",
+  "theme": {
+    "title": "なぜ同じドラゴンなのに勝敗が割れるのか？カイリューとボーマンダの隠された実戦性能の秘密【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "種族値だけでなく特性・先制技・耐久力まで含め、同条件の対戦シミュレーションで勝敗を決める\nあなたもカイリューとボーマンダ、合計種族値600の同格ドラゴンなら五分だと思ったことありませんか？実はレベル50の同条件対決では、先手を取る側が負け筋を抱える、え、マジでな展開にな / 攻撃134対135、合計はどちらも600なのに負け筋があるの！？テストで同じ100点の2人が、ルール1つで勝敗を分けるみたいで、数字だけ信じたら危ないじゃん！ / 先に結論のヒントを出すと、カイリューはHP満タンで被ダメージを半減し、しかも優先度＋2のしんそくを使えます。ボーマンダの素早さ100という20差を、別ルートで無視できるんです。",
+  "generated_at": "2026-08-30T14:04:05.582921Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ速いボーマンダが負ける？カイリュー実戦性能の罠【ショート】",
+      "thumb_copy": [
+        "速いのに負ける",
+        "勝敗を割る特性"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "種族値600同士で20差逆転！カイリュー対ボーマンダ【ショート】",
+      "thumb_copy": [
+        "素早さ20差が",
+        "通用しない理由"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は先手が不利だった！カイリュー対ボーマンダの結末【ショート】",
+      "thumb_copy": [
+        "先手なのに敗北",
+        "しんそく×耐久力"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ速いボーマンダが負ける？カイリュー実戦性能の罠【ショート】",
+    "thumb_copy": [
+      "速いのに負ける",
+      "勝敗を割る特性"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "cyGY2dcau6M",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.008620689655172414,
+    "impressions": 116,
+    "views": 1289,
+    "published_at": "2026-08-10T09:06:29Z",
+    "updated_at": "2026-08-31T14:06:05.082806Z"
+  }
+}

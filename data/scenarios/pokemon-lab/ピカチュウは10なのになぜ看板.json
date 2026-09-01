@@ -1,0 +1,471 @@
+{
+  "title": "ピカチュウは10%なのになぜ看板？",
+  "theme": {
+    "title": "なぜピカチュウが看板になれたのか？初代の出現率に隠された偶然",
+    "angle": "トキワの森の出現率と、アニメ化時の選定経緯を設定面から検証"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ピカチュウとピッピ、本気で看板争いしたら？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 初代ではピッピが有力だったの!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "トキワの森のピカチュウは出現率10%、序盤で会える電気タイプなんだよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも公式側は、サトシの相棒にピカチュウを選んだと語っているんだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "10%の偶然が、世界の顔になる入口だったのか！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "高評価で応援！ 裏設定ファイルシリーズもあるよ、1万人目標で毎日投稿中だから登録よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これ知ってた？ あなたが初代でトキワの森を歩いたとき、ピカチュウに会える確率はたった10%だったんだよ！\n世界の看板なのに、草むらでは十回に一回の当たり枠。この差、え、マジで？ってならない？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ ポケモンの顔ってレベルで有名なのに、最初から大量に出る主役枠じゃなかったの!? \n十回エンカウントして一回の目安なら、友達より先に見つけたら普通に自慢できる数字だよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも初代『赤・緑』のトキワの森では、キャタピーやビードルが草むらの主役で、黄色いピカチュウは混ざる側だった。\n虫ポケモンが続く画面で黄色が出たら、スマホ通知みたいに目へ飛び込むでしょ！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今日は初代の出現率10%と、1997年開始のアニメでサトシの相棒に選ばれた経緯を、公式と推測を分けて追うぞ！\n結論だけ匂わせると、種族値320では説明不能な勝ち方をピカチュウはしているんだよ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "種族値320って、基礎能力の合計だよね？ 最終進化のライチュウは485だから、数字では165も差があるじゃん！\nなのに看板は進化前のピカチュウ。ゲームの能力表だけ見たら、完全に予想外の展開だよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "まず舞台はマサラタウンからニビシティへ向かう最初の大きな関門、トキワの森。初代プレイヤーなら序盤の数十分で必ず通る場所だ。\nここで10%のピカチュウを引く体験が、旅の最初の思い出になった可能性がある。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "でも電気タイプって、みずとひこうに強い相性だよね？ 最初のジムは岩タイプ中心のタケシだから、攻略の最適解として置いた感じでもない。\nじゃあなぜ、わざわざ森の早い段階で電気ポケモンを出したんだろ？",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "タイプ相性は技の得意不得意の関係で、電気はみずタイプとひこうタイプへ有利。でもニビジムでは地面や岩が壁になる。\nだからピカチュウは必須の攻略札より、『見つけたら連れて行きたい』寄り道の報酬に近いんだよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "必ず配られる便利アイテムじゃなく、草むらから自力で見つけるレアな仲間か！ 十回で一回の目安なら、粘れば届くけど初見では逃す。\nクラスで一人だけ限定スキンを持っていたときみたいに、会話のネタになるわけだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "出現率10%は、百回遭遇すれば平均十回という意味。ただし確率だから、十回遭遇して必ず一回出るわけではない。\n十回で一度以上出会える確率は約65%。三人が森を歩けば、一人は見つけ損ねてもおかしくない数字なんだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、十回歩いても35%くらいは会えないの!? それなら『俺は森で捕まえた！』って報告の価値がちゃんとある。\n最初から全員の手持ちにいるポケモンより、思い出の濃さで一歩リードしていたのかも！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ 初代のトキワの森は、キャタピー系とビードル系が多く出る中に、ピカチュウ10%が置かれている。\n緑の草むらと茶色い森で黄色の体色はかなり目立つ。出現率だけでなく、出た瞬間の視認性も強烈なんだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここは線引きが超大事！ 『10%だから公式がピカチュウを看板に決めた』と示す公式資料は確認できない。\n出現率はゲーム体験を語る根拠で、アニメの選定理由は別の公式・制作側エピソードとして扱わないとダメなんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "なるほど、公式が言ったことと、プレイヤーが感じたことを同じ箱に入れちゃダメなんだね！\nじゃあ10%は人気の理由を断定する数字じゃなくて、なぜ特別に感じたかを考えるヒントとして使う感じ？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その通り！ 初代の10%は『全員が会えるわけではないが、頑張れば会える』位置だったというゲーム内データだ。\n100回遭遇して一度も出ない確率は約0.003%まで下がるから、粘れば報われやすい絶妙なレア度でもある。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そして1997年、テレビアニメ『ポケットモンスター』はサトシとピカチュウの旅を中心にスタートした。\n第1話ではモンスターボールに素直に入らず、寝坊したサトシと最初からぶつかる。最初の数分で関係が記憶に残る作中描写なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "最初から仲良しじゃないのが逆にいいな！ ゲームでは草むらで偶然会う10%で、アニメでは最初に残った一匹と出会う。\nどっちも『自分だけの相棒が決まる瞬間』っぽいから、見ている側も感情移入しやすいのか！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第二フックいくぞ！ トキワの森では十人に一人くらいの出会いなのに、アニメでは毎週ほぼ全員がピカチュウを見る。\nレアな偶然と、テレビで必ず会える安心感。この真逆の二つが同じ看板を押し上げたの、やばくない？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "アニメ化の企画段階では、ピッピを中心にする案も検討されたと、関係者の発言などで知られている。\nつまりピカチュウの看板ポジションは、初代発売時点で絶対に決まっていた一本道ではなかったんだよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、そんな設定あるの!? ピッピなら初代のおつきみやまで会えるし、丸い見た目でかわいいし、候補になるのは分かる。\nでもサトシの肩にピッピが乗る世界線を考えると、今のポケモンのイメージが一気に変わるな！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "制作側でピカチュウが強かった要素として、黄色くて分かりやすい外見、電気という派手な能力、小さく主人公の隣に置きやすい点が語られている。\nテレビ画面を一瞬見ただけでも、誰の相棒か分かる。この視覚の強さは看板に直結した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "電気ショックなら青白い光で何が起きたかすぐ分かるし、黄色い体は森でも町でも埋もれない！\nゲームのアイコンって小さくても見分けられると強いけど、ピカチュウはアニメ画面でも同じ勝ち方をしてるんだね。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "種族値だけ見ると、ピカチュウ合計320は高い部類ではない。種族値はHPや攻撃など六つの基礎能力を合計した数字だよ。\nでも看板に必要なのは、合計600の強さより、一秒で覚えられる輪郭と感情の伝わりやすさだったのかもしれない。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "数字が低いからダメじゃなく、役割が違うってことか！ ライチュウの485はバトルで頼もしい数字だけど、肩に乗る相棒としてはピカチュウのサイズ感が強い。\nゲームの性能表と、物語の主役力は別ステータスなんだな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "初代ピカチュウはすばやさ90、とくこう50。先に動ける相手はいるけど、打たれ強いポケモンではない。\n対戦だとこれが刺さる、という万能枠ではなかったからこそ、能力以外の魅力が前に出たとも見えるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "すばやさ90なら遅い相手には先手を取りやすい。でもHP35、防御30の数値を見ると、強い技を何発も受けるのは厳しい。\n旅で使った人が『守ってあげたい相棒』って感じたのも、数字から少し分かる気がする！",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "初代からずっと、ピカチュウは進化すればライチュウになれる。でもアニメのサトシの相棒は、基本的にピカチュウの姿を選び続けた。\n進化すればパワーアップというゲームの定番を、相棒としての個性が追い越した瞬間なんだよ！",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ！ 進化前は途中段階になりがちなのに、ピカチュウは進化前の形が完成形みたいに世界へ広がった。\nライチュウを下げる話じゃなくて、ピカチュウが別の勝負で一位を取ったってことだな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "アニメ第1話のピカチュウは、サトシの言うことを何でも聞くペット役ではない。ピンチの中で少しずつ信頼を作るから、相棒として二人で主役になる。\n100レベルの強さより、関係が変わる物語の方が毎週見たくなるんだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "肩に乗るサイズも重要だ。たとえばカビゴン級の大きさなら、毎回サトシの隣に置く画面は作りにくい。\nピカチュウは人の顔、手、肩の近くで反応できるから、セリフが少なくても感情が伝わる設計になっていた。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "相棒が常に同じ画面にいると、技を出さない場面でも存在を忘れないもんね！ 一話24分の中で何度も映るなら、100話で見た回数は軽く数百回。\n森で一度会えた記憶より、アニメの積み重ねは桁違いに強そうだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "1998年公開の劇場版『ミュウツーの逆襲』でも、ピカチュウはサトシの相棒として物語の中心にいる。\nテレビだけでなく夏休みの映画館でも見られることで、ゲームを持っていない子にも『ポケモンといえば黄色』が届いたと考えられる。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ゲームを遊んだ人はトキワの森10%で知り、アニメを見た人は毎週の相棒で知り、映画を見た人は大画面で知る。\n入口が3個あったら、同じ世代でもピカチュウの思い出が増えるわけだ。これは看板が強い！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここでファンの説も整理しよう。ファンの間では、ピカチュウは海外でも呼びやすい名前だから世界展開に向いた、と言われることがある。\nこれはファンの説なんだけど、公式が看板選定の唯一の理由として断定した事実ではないから、分けて楽しもう。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "公式の作中描写、ゲーム内の10%、ファンが考えた理由。この3種類を混ぜないだけで、話の信頼度が一気に上がるね！\n考察は自由だけど、数字と公式発言の場所をちゃんと確認してから盛り上がるのが大事だ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式に確認できる核は、アニメでサトシのパートナーがピカチュウとして描かれ、長年シリーズを代表する存在になったこと。\n一方でトキワの森10%は、プレイヤーに特別な初遭遇を渡したゲーム内の配置。この二つを並べると偶然の面白さが見える。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "10%という数字をもう一度ゲーム感覚で考えよう。草むらで十回戦うと平均一回、でも最初の三回では出ない方が普通。\nだから『森にピカチュウがいる』という情報を聞いてから探す行為そのものが、小さなイベントになるんだよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "攻略サイトがない時代なら、友達のうわさで『トキワの森に黄色いやつ出るらしい』って聞いて探した人もいそう！\n10%は見つけた人の報告を信じるか、自分で確かめるかのワクワクを作る数字でもあるな。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今の作品を遊ぶときも、出現率を見るクセをつけると草むらが宝箱みたいに変わる。1%なら長期戦、10%なら少し粘る価値、30%なら遭遇しやすい。\n数字は攻略情報だけじゃなく、出会いのテンションを調整するゲームデザインなんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "たしかに5%や10%を引いたとき、ただ捕まえるより『今日の当たり』感がある！ ポケモンの強さだけじゃなく、どこで何%で会ったかまで覚える。\n自分の旅の記録にエピソードが増える遊び方だね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "もし初代でピカチュウを旅パに入れるなら、でんきショックを使いつつ、苦手な地面タイプには他の仲間を出そう。\n旅パは攻略中に連れる6匹のこと。好きな相棒を守るために役割を分けると、種族値320でも活躍の場を作れる。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "初心者でも『速さ90を活かして先に電気技、危なければ交代』って覚えればいいんだね！\n最強ランキングだけ追うより、森で会えた10%を最後まで連れていく方が、旅の主人公感は絶対に出る。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ピカチュウが看板になれた理由を、一個の奇跡だけで説明するのは無理がある。初代の出会いやすさ、見た目、電気、アニメの相棒描写が重なった。\nでも10%という最初の偶然を知ると、あの黄色い姿が草むらから出た瞬間の価値は上がるんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "十回に一回の森の出会いが、テレビでは毎週会える相棒になって、映画では大画面の顔になる。\n数字だけなら10%なのに、思い出の中では100%近くいる感じ。この逆転こそピカチュウのすごさだね！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？って友達に話すなら、『初代トキワの森のピカチュウは10%で、公式に看板決定の理由と断定はできない』が正確な一言！\n数字を盛りすぎず、公式と考察を分けて語ると、ポケモン雑学はもっと面白くなるぞ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回は、なぜイーブイだけ進化先が8種類まで増えたのかを追うぞ！ 水、雷、炎から始まった進化の広がりには、ピカチュウとは別の看板級デザインがある。\n8という数字を知ると、進化アイテムを見る目まで変わるはず。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "イーブイの8種類も、最初は3種類だった時代から考えると増え方がすごいよね！ ピカチュウは進化前の姿で代表になり、イーブイは選べる数で代表になる。\n次の研究、数字の比較が楽しみすぎる！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ピカチュウの10%にえ、マジで？ってなったら、高評価でこの研究データに反応を残して！\n次に遊ぶとき、トキワの森の草むらはただの通り道じゃなく、看板候補に会える場所として見方が変わるはず。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "チャンネル登録者1万人を目指して毎日投稿中だから、応援よろしくね！ 裏設定ファイルシリーズでは、図鑑、出現率、作中描写から次の『え、マジで？』を届けるぞ。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "森では10%",
+      "なぜ看板に"
+    ],
+    "hook_caption": "偶然の10%",
+    "subtitle": "初代トキワの森とアニメ選定",
+    "tagline": "看板誕生を数字で追う"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.424,
+      "similar_to": "ポケモンタワーに隠された秘密、あなたが見落とす3つの違和感は？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 13,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "enhanced_title": "ピカチュウは10%なのになぜ看板？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "短すぎ(17字 < 18)(-12)"
+    ]
+  }
+}

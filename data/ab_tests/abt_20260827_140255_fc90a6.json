@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260827_140255_fc90a6",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "99%が知らない「夢の記憶」の正体なぜあの夢だけ覚えてるの？#昨夜の夢だけ覚えてる——99%が知らない、脳が『あの夢』を選んで記録する本当の理由 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": "夢の記憶と脳のメカニズム\n昨夜の夢、もう思い出せないでしょ。でも『あの変な夢』だけははっきり残ってる——そんな経験、昨日もしたはずなんだ。 / あ、それ！昨夜も追いかけられる夢だけめちゃくちゃ覚えてて、その前に見てたはずの楽しい夢は全部消えてた。 / そう、それ偶然じゃないんだよ。今回はその『脳が夢を選んで記録する仕組み』を完全に解き明かすね。答えは脳の中にある。",
+  "generated_at": "2026-08-27T14:02:55.404700Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ昨夜の夢だけ覚えてる？脳が記憶に残す夢の正体",
+      "thumb_copy": [
+        "なぜあの夢だけ",
+        "脳が選んで残す"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "99%が知らない、脳が夢を記憶する3つの条件とは？",
+      "thumb_copy": [
+        "99%が知らない",
+        "夢を残す3条件"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は夢は忘れるのが正常だった…消えない夢の脳科学",
+      "thumb_copy": [
+        "夢は忘れて正常",
+        "消えない夢の正体"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ昨夜の夢だけ覚えてる？脳が記憶に残す夢の正体",
+    "thumb_copy": [
+      "なぜあの夢だけ",
+      "脳が選んで残す"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "qyOPOA608QI",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.02564102564102564,
+    "impressions": 39,
+    "views": 977,
+    "published_at": "2026-08-09T00:27:42Z",
+    "updated_at": "2026-08-31T14:03:55.208507Z"
+  }
+}

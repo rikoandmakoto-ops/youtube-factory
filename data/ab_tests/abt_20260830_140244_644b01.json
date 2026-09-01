@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260830_140244_644b01",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "なぜ寝起きは鼻だけ詰まるの？4時間サイクルの秘密、知ってた？#今朝の鼻づまり、実は4時間ごとに左右が入れ替わってた——99%が知らない睡眠中の鼻の正体 #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": "睡眠中の自律神経と鼻粘膜の血流が、起床直後の鼻づまりをどう生むか解説する\n今朝起きたとき、鼻がつまってたでしょ。しかも喉じゃなくて、必ず鼻なんだよね——その理由、今日この動画で完全に解き明かすよ。 / 言われてみれば確かに！毎朝鼻をかんでるのに、なんで喉は平気なんだろうって考えたことなかったな。理子、これって何が起きてるの？ / しかも詰まるのって、片方だけのことが多くない？右か左、どっちか一方がふさがってて、もう片方は通ってる感じ。あれ、偶然じゃないんだよ。",
+  "generated_at": "2026-08-30T14:02:44.786934Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ寝起きだけ鼻が詰まる？片方ずつ交代する鼻の不思議",
+      "thumb_copy": [
+        "朝だけ鼻づまり？",
+        "片方ずつ交代中"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "4時間ごとに左右交代！寝起きの鼻づまりが起きる仕組み",
+      "thumb_copy": [
+        "4時間で左右交代",
+        "朝の鼻づまりの正体"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は鼻は寝ている間も交代勤務！朝だけ詰まる驚きの理由",
+      "thumb_copy": [
+        "鼻は交代勤務だった",
+        "寝てる間に切替中"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ寝起きだけ鼻が詰まる？片方ずつ交代する鼻の不思議",
+    "thumb_copy": [
+      "朝だけ鼻づまり？",
+      "片方ずつ交代中"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "--w9U6O1LUY",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.022222222222222223,
+    "impressions": 45,
+    "views": 939,
+    "published_at": "2026-08-09T00:47:44Z",
+    "updated_at": "2026-08-31T14:03:53.143371Z"
+  }
+}

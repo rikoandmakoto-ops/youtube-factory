@@ -1,0 +1,648 @@
+{
+  "title": "一口SCP #108：🫣SCP-6670「完全な破滅」人類全員を消す報告書の恐怖",
+  "theme": {
+    "title": "SCP-6670「完全な破滅」収容報告書そのものが人類を消去する恐怖",
+    "angle": "人類全体を対象にした異常現象として、発見時点から収容計画が崩壊していく過程を個別報告書形式で描く",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "なぜ次のファイルだけ、届いた瞬間に禁忌になる！？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、読むだけで致命的に危険のか。まだ答えが出てない。前回のSCPを覚えている奴なら、この関連性がわかるだろう",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次の記録が、すべてを闇が深いえた。分類はKeter。対象人数は人類全体と記されている…なぜ財団はこれを隠したのか？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書は読者を記録し、その痕跡から世界を消す。財団でも説明できていない。しかし、これで終わりではなかった。これ、一番怖いSCPランキング何位だと思う？…と思いきや、意外な展開が待っていた",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、背筋が凍るって。消えるのは報告書の外か。記録はここで途切れている。さらに恐ろしい事実が判明する",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "続きは収容違反ファイルシリーズに残る。高評価を残し、毎日投稿中の1万人目標へ応援よろしく。登録すれば次のファイルが届く。…あれ、ファイルって最初に言ってた…",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたが今、自室の画面でこの報告書を最後まで読んだとする。その行為は閲覧ではない。SCP-6670は読者を確認し、人類という記録を消す対象へ加える。最初の被害者は、画面の外にいる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、待って。画面越しに読んだだけで対象になるなら、鍵を掛けた部屋も避難場所にならないだろ。人類全体が対象って、数人の行方不明で終わる被害じゃない。僕たちはもう報告書の中にいるのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-6670の呼称は「完全な破滅」。物体でも生物でもない。財団が文書として整え、収容番号を与えた瞬間から、収容計画そのものが崩壊へ向かった異常記録だという記載が残る。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このファイルには通常の発見地点がない。廃屋も地下施設もない。最初の記録は財団内部ネットワークに現れた短い収容報告書だけだった。本文を開いた職員の名簿から、勤務番号と署名の欠落が始まった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "名前が消えるって、職員が逃げた記録じゃないのか。出勤表、監視映像、連絡先まで空白になったなら、本人だけでなく最初から存在しなかった扱いになる。…ねえ、これ本当に大丈夫なの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題はこの次だ。欠落した職員を知る者ほど、次にファイルへ引き寄せられた。連絡網の確認、勤務記録の照合、家族への通知。その全てがSCP-6670の閲覧経路として扱われたという。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "オブジェクトクラスはKeter。これは強い武装が必要という意味だけではない。封じる箱も隔離する部屋も、対象を移送する経路も持たないためだ。収容対象が報告書そのものなら、財団の手順が餌になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Keter級なら武装警備や隔離区画を置くはずだ。でも相手が文字なら、警備員へ渡す指示書も危ない。警報を鳴らした瞬間、その警報を読んだ人まで増える。手順が逆に見える。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "初期収容プロトコルは閲覧権限の凍結だった。だが凍結通知にはSCP-6670の番号が必要だった。番号を見た職員が通知を開き、追加の欠落が記録された。禁止文書ほど配布される、最悪の構図。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は次に、番号を伏せた。だが伏せ字の周囲に残る空白が職員の注意を引いた。欠けたページを見つけると、学校の配布プリントで名前欄だけ黒塗りにされた時のように、人は理由を探してしまう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ、隠せば隠すほど探す人が増えるのか。閲覧禁止の赤い印があるファイルを見つけたら、誰かが開いてしまう。財団の秘密管理は、その性質を最初から利用されていたことになる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そしてこの話、最後に残るのは人間ではない。文書を削除した端末からも、閲覧履歴に似た空白が増えた。ファイルを閉じた時点では遅く、読者の存在が報告書の注記として扱われるという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここでいう消去は死亡記録とは異なる。死亡者名簿にも残らず、遺族の記憶にも穴が開き、机や制服だけが理由のない余白になる。財団でも、まだ説明できていない。ただし空白だけは残る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生き残った人が悲しめないなら、被害を数える人も消える。被害者数が書かれていないのは、数え忘れじゃない。数えた職員まで記録から抜けた可能性がある。聞かなきゃよかった。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "内部報告では、最初の欠落後に二次調査班が編成された。班員は対象を見つけるため、消えた職員の机、端末、宿舎を確認した。確認するほど記録の空白は増え、調査の目的そのものが読めなくなった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "二次調査班は報告書の複製を作らなかった。複製という判断が、文書を増やす行為になるからだ。代わりに口頭で伝達したが、伝達者は番号を言えず、受領者は何を警戒すべきか理解できなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "文字にしなければ助かると思ったのに、番号を言えないなら作戦が組めない。ゲームでルール表示だけ消えたまま、負けた理由も分からず参加者が減っていくようなものだ。逃げ方が書けない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第三段階で財団は、SCP-6670を認識災害として暫定処理した。認識災害とは、知ること自体が危険となる異常の総称だ。ただしこの案件では、危険なのは知識ではなく、記録された知識だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閲覧者は内容を覚えていないことがあった。それでも消去は続いた。つまり、怖い文章を理解した者だけが狙われるわけではない。ページを閉じたあとに内容を忘れた職員も、勤務表から消えていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "覚えていなくても遅いなら、記憶処理も役に立たない。忘れたから無事だと安心した職員ほど、次の朝に自分のロッカー番号を見つけられない。そんな報告なら、読ませること自体が収容違反だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も早い拡大は、削除命令が出た直後だった。命令を受けた複数のサイト管理官が、同じ時刻にファイルの所在を確認している。確認行為は善意だった。だが善意はこの案件で最短の経路となった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "削除後の端末には、存在しない容量だけが残ったという。保存先も作成者も表示されない。しかし職員がその空白を報告書に書き足すたび、追記者の署名欄が先に消えた。記録は書く者を選んでいた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "署名欄が先に消えるなら、報告書を完成させる人間がいない。収容計画は途中で破れるんじゃない。途中だったという証拠まで消える。失敗の報告さえ残せないなら、次の班は同じ穴へ入る。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は人類全体を対象とする異常に、通常なら世界規模の非常手順を検討する。だがSCP-6670では、その通達文を作る時点で危険が発生する。全人類に警告するほど、対象の輪郭を広げてしまうからだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容計画は三度書き換えられた。第一案は隔離、第二案は秘匿、第三案は全記録の破棄だった。しかし各案は決裁者の閲覧を必要とし、決裁欄の名前が欠落した。計画は誰にも承認されなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "承認する人が消えるなら、財団の上層部ほど先に欠ける。上に行くほど書類を見る回数が増えるからだ。命令系統が沈黙したあと、現場に残るのは番号だけ。…ねえ、これ本当に大丈夫なの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残された断片には、SCP-6670は人類を殺すのではなく、人類がいたという叙述を削除するとある。財団の仮説にすぎない。だが地図、会話、写真、出生記録のどれから消えるかは、誰も予測できなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで重大な反転がある。人類を守るために作られた財団の報告書が、人類を示す最も大きな名簿になった可能性だ。職員名簿、人口推計、救難通信。守る対象を書いた文書ほど、危険に近づいていく。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人類を守る書類が、人類の住所録になるのか。ならばSCP-6670を封じるには、誰を守るのかさえ書けなくなる。これは怪物を閉じ込める話じゃない。記録する側が先に消される話だ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "発見時点から崩壊した理由は、対象が収容手順を待たなかったからだ。通常の異常存在なら、発見、識別、隔離という順で進む。SCP-6670では識別した記録が発見の証拠を消し、順番そのものが壊れた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ある補遺には、存在しない職員が一人だけ発言した記録が残る。「私は読んでいない」と。その一文の後、発言者の識別番号は[DATA EXPUNGED]された。音声を聞いた者の処遇は、記録されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "読んでいない人が発言できるなら、消去されたあとにも何かが残るのか。残ったのが本人なのか、報告書が作った穴なのかも分からない。音声の聞き取りまで危険なら、沈黙しか選べない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は紙媒体への退避も試みた。端末を使わず、番号を暗号化せず、鍵付き保管庫へ封入する案だった。しかし紙に書いた担当者が、自分の筆跡を見失った。保管庫には白紙だけが残ったという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次に試されたのは、読めない形式での保管だった。だが読めない文書は異常を閉じ込める檻ではない。読む必要のある未来の職員に向けた扉になる。開ける者が現れた時点で、手順は再び始まる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "封印したファイルほど、後の誰かが調べる。学校の倉庫に「開封禁止」とだけ書かれた箱があれば、理由を知らない人が確認する。それが何十年後でも、SCP-6670には時間差が関係ないのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "時間差について、報告書は明言しない。閲覧から欠落までの間隔も統一されていない。数分後に署名が消えた者もいれば、翌日の引き継ぎ時に存在しない扱いとなった者もいる。規則性は[REDACTED]。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "被害者数と生存率が空欄なのも、情報不足とは断言できない。人類全体が対象である以上、最後の一人が集計を行う必要がある。しかし最後の一人が記録を完成させた瞬間、その記録は誰のものになるのか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "数字がないこと自体が、被害の大きさを示している。死亡者数ゼロと書けないし、生存者数一人とも書けない。数え終えた人がいないなら、財団はまだ収容中なのか。それとも、もう記録だけなのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閲覧対策として、職員は番号を口に出さず、画面にも完全表示しないよう命じられた。だが対策の名称を共有するだけで、何を避けるべきか推測する者が現れる。恐怖は内容ではなく、欠けた説明を通って広がった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現場向けの指針は単純だった。空白の多い報告書を見つけても、補完しない。欠けた人名を調べない。存在しない署名欄を復元しない。見かけても、決して近づくな。それでも指針を読んだ者は残る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "補完しないのは、普通の仕事なら許されない。記録の穴を埋め、行方不明者を探し、誤字を直す。それが正しいはずなのに、この案件では正しさが扉を開ける。現場の職員は何を信じればいい。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから財団は、解決ではなく遅延を選んだ。誰かが完全な報告書を作らないよう、断片を別々に保管する。ただし断片を集める行為も危険だ。収容は成功ではない。破滅の文章を未完成に保つ作業だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この案件に応用できる教訓があるとすれば、空白を見た時に意味を与えないことだ。失われた名簿や不自然な編集履歴を、独断で再構成してはならない。財団の内部では、確認より隔離が優先された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "でも、空白を放置すれば誰かが困る。困っている人を助けるために確認した人が消えるなら、助ける側だけが減っていく。そんな選択を現場に押しつける収容手順は、手順と呼べるのか。怖すぎる。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閲覧してしまった職員に対する標準対応も、完全には残っていない。隔離を行えば隔離記録が増える。面談をすれば記録者が増える。記憶処理をすれば処置命令が増える。どの救済も、文書の入口を増やしてしまう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残存したメモには、対象者へ直接問いかけるなとある。「何を読んだ」と聞いた瞬間、質問者は答えを記録する側へ回るからだ。沈黙する職員を救えなかった理由は、財団が冷酷だったからだけではない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "話を聞くことさえ危ないなら、孤立した職員は誰にも助けを求められない。自分の名前が名簿から薄くなっても、報告できないまま待つしかない。…ねえ、これ本当に大丈夫なの？ 返事をしていいのかも怖い。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-6670が本当に人類を消去するのか、その終点を確認した者はいない。確認者が必要になるからだ。財団の最終評価は未確定のまま残された。未確定という語だけが、今も報告書の末尾に固定されている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だが人類全体が対象という文言は、脅しではなく収容上の前提として扱われた。誰か一人の失踪では終わらない。家族、学校、都市、歴史を結ぶ記録が途切れたとき、残るのは何も知らない空席だけだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "空席だけが残るなら、消えた人の顔を思い出すこともできない。昨日まで隣にいたはずの相手が、最初からいなかったことになる。そんな終わり方なら、悲鳴すら残らない。聞かなきゃよかった。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書が危険なのは、読者に怪物の姿を見せない点だ。姿がないから逃げる方向もない。ページの文字、削除された注記、埋めたくなる空白。そのどれもが、あなたの日常にある記録の形をしている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-6670「完全な破滅」は、収容に失敗した怪物ではない。収容しようと記録した結果、財団が自分たちの存在を差し出した案件だ。記録はここで途切れている。だが途切れた理由は、誰も書けなかった。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-3008「無限のIKEA」の閉鎖後記録を扱う。出口を探す人間の数が増えるほど、店内の夜が長くなるという証言が残る。SCP-6670とは別の形で、帰る場所が消えるファイルだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次のファイルも、出口があるように見えて戻れない話か。けれど今は、この報告書の空白の方が怖い。自分の名前が残っているか、画面を閉じたあとに確かめたくない。それでも確認したら危ない。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この記録が届いたなら、高評価を先に残せ。残された反応が、次のファイルを警戒する合図になる。毎日投稿中で登録者1万人を目標にしている。収容違反ファイルシリーズの続きは、登録して待て。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、SCP-6670のように空白の理由を追うな。消えた署名、読めない注記、存在しない閲覧履歴を見かけても、決して近づくな。次に報告書があなたの名前を書く前に、画面を閉じることだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "原典クレジット: SCP-6670「Complete Annihilation」およびSCP Wiki掲載作品群。CC BY-SA 3.0に基づく。ここで扱った文面は要約と演出を含む。原文の空白まで埋めようとするな。記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "報告書を読んだ",
+      "人類が消える"
+    ],
+    "hook_caption": "読むな",
+    "subtitle": "SCP-6670 完全な破滅",
+    "tagline": "記録された時点で、収容は始まっていた"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "なんでSCP-6670だけ、報告書の閲覧が禁止なのか。",
+      "selected_hook": "なぜ次のファイルだけ、届いた瞬間に禁忌になる！？",
+      "scores": [
+        {
+          "hook": "なぜ次のファイルだけ、届いた瞬間に禁忌になる！？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 70
+        },
+        {
+          "hook": "なんでSCP-6670だけ、報告書の閲覧が禁止なのか。",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 18,
+            "loop_connect": 5
+          },
+          "total": 63
+        },
+        {
+          "hook": "あなたが次のファイルを開くと、全員が消える！？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        2
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "なぜ次のファイルだけ、届いた瞬間に禁忌になる！？",
+          "tension": 8,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、読むだけで危ないのか。まだ答えが出てない。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "分類はKeter。対象人数は人類全体と記されている。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "報告書は読者を記録し、その痕跡から世界を消す。財団でも説明できていない。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "ちょっと待って、怖いって。消えるのは報告書の外か。記録はここで途切れている。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "続きは収容違反ファイルシリーズに残る。高評価を残し、毎日投稿中の1万人目標へ応援よろしく。登録すれば",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "続きは収容違反ファイルシリーズに残る。高評価を残し、毎日投稿中の1万人目標へ応援",
+          "reason": "1行60字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 27,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 8,
+        "emotional_impact": 5,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 66,
+      "optimized_score": 74,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.41,
+      "issues": [
+        "16%・50%・66%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "れば次のファイルが届く。…あれ、ファイルって最初に言ってた…",
+      "keyword_overlap_before": 0.33,
+      "keyword_overlap_after": 0.33
+    },
+    "power_word": {
+      "amplified": 3,
+      "changes": [
+        "「危ない」→「致命的に危険」",
+        "「変」→「闇が深い」",
+        "「怖い」→「背筋が凍る」"
+      ],
+      "lines_modified": 3
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.405,
+      "similar_to": "SCP-3519「静かな日々」死亡者0人の日に始まった恐怖",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 17,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-6670「完全な破滅」人類全員を消す報告書の恐怖",
+      "enhanced_title": "🫣SCP-6670「完全な破滅」人類全員を消す報告書の恐怖",
+      "emoji_added": "🫣",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "🫣SCP-6670「完全な破滅」人類全員を消す報告書の恐怖"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 3,
+      "bait_text": "これ、一番怖いSCPランキング何位だと思う？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "negative",
+        "negative",
+        "negative",
+        "negative",
+        "neutral"
+      ],
+      "streaks_found": 1,
+      "breakers_injected": 1,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "ellipsis"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "前回のSCPを覚えている奴なら、この関連性がわかるだろう",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 1,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 0.5
+    }
+  },
+  "title_quality": {
+    "score": 84,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['全員', '報告書'](+20)",
+      "二人称['人類'](+6)"
+    ]
+  }
+}

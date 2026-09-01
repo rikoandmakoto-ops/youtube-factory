@@ -1,0 +1,665 @@
+{
+  "title": "一口SCP #99：💀SCP-956「子供割り人形」財団が封印した収容違反記録の恐怖🫣",
+  "theme": {
+    "title": "SCP-956「子供割り人形」、財団が封印した収容違反記録の恐怖",
+    "angle": "競合が1分アニメで表面をなぞっただけの956を、収容違反事例・実験記録・被害報告書の深掘り考察で差別化"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "驚き：封印ファイルにまだ禁忌が残る？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここからが本当にガチで恐ろしいんだけど……え、待って。それ、まだ答えを隠してるだろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-956は子供の寝室で確認された割り人形だ…Keterに再分類すべきだ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかし、認識災害レベルはここで終わらなかった。近づく子供ほど、指示に従う記録が残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ところが人形は、子供を壊すために割るのではない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容違反時、職員の自宅に同じ木片が残された。…この分類、Euclid派とKeter派で意見割れてるんだが…続きは████…",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録はここで途切れている。本当にガチで恐ろしいのは、誰が割られたのかだ。さらに恐ろしい事実が判明する",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この手の報告書、実は他にも未公開のものが山ほどある。次回、これより上位のオブジェクトを紹介する"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高評価を残せ。収容違反ファイルシリーズは他にもある。毎日投稿中、1万人目標の登録で応援を頼む。…待って、ファイルに戻って",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたの部屋にある人形が、夜だけ少し位置を変えていたことはないか。SCP-956は、その違和感を見逃した家庭から始まった。子供の寝室に置かれた木製の割り人形。収容済みという表記は、完全な安心を意味しない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、部屋にある人形の話から始めるのか。学校から帰って、昨日と同じ棚にあるはずの物が違う向きをしていたら、それだけで眠れない。しかも相手は子供割り人形だろ。近づく理由が見つからない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実は収容違反後も発見場所の条件を再現している可能性がある。報告書の末尾には、回収担当者が自宅で確認した木片の記述が残る。誰も持ち出していない。だが木片は、寝室の床に落ちていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-956は通称「子供割り人形」。木製の人形を割る遊び道具に見えるが、財団はSafeに分類した後も、子供との接触を最優先で遮断している。Safeは無害の印ではない。檻の外で静かに待つ異常も、そこに含まれる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Safeなのに子供から隔離するのか。ゲームで言えば、触れなければ進行しないはずの置物が、近づいた瞬間だけイベントを始めるようなものだろ。…ねえ、これ本当に大丈夫なの？ 収容室だけで足りるのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "本件では、人形そのものよりも接触後の記録が問題視された。子供は人形を玩具として扱う。割る。戻す。名を呼ぶ。その手順の途中で、対象は人形を見ていない時間にも命令を受けたと供述している。記録は淡々としている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の標準収容手順では、SCP-956は施錠保管庫内に収納される。担当者は未成年者の立ち入りを許可しない。さらに保管室内で、人形を組み立てた状態にすることも避けられる。割れた木片の並び方に意味があるためだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "組み立てた状態を避けるって、ただ壊れた玩具を保管しているわけじゃないんだな。じゃあ職員が掃除中に木片を拾って、元の形に戻そうとしただけでも危ないのか。善意の片付けが収容違反になるなら、まずすぎる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "危険性は、完成した人形を見た時点で始まるとは限らない。報告書では、木片の一部だけを触れた子供にも異常な従順さが見られた。本人は命令された内容を覚えている。しかし、誰の声だったかだけを答えられなかったという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "命令の内容は、初期には単純だった。棚の前に立つ。扉を閉める。人形を見ない。だが指示を拒んだ対象ほど、眠っている間に同じ行動を繰り返した。財団でも、まだ説明できていない。起きている本人だけが覚えていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "眠っている間に棚の前へ行くのか。朝になって靴下や足の裏が汚れていても、本人は寝ぼけたと言われたら信じるしかない。けど、その汚れが保管室の木屑と同じだったらどうする。誰も気づかないまま近づいてしまう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が最も警戒したのは、命令の危険度ではない。命令を受けた子供が、それを自分で考えた行動だと信じる点だ。強制された痕跡が薄い。保護者は反抗期や悪夢として処理する。異常は、家庭の会話の中に隠れる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、ここからが本題だ。SCP-956の異常性は子供を従わせることだけではない。収容記録には、命令を実行した子供が「人形を割った」と証言しながら、実際には何も壊していなかった事例が記されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "何も壊していないのに、割ったと言うのか。じゃあ割られたのは人形じゃない。本人の中にある何かを、木片の数だけ外へ出したとでも言うのか。ちょっと待って、怖いって。そこから先は聞きたくない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実験記録では、Dクラス職員が木片を規定の順序で並べた。対象は成人だったため、直後の反応は限定的だった。だが監視映像の外側、窓のない実験室で、対象は何度も「子供が待っている」と口にした。室内に子供はいない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次の試行では、音声記録のみを再生した。木片に触れず、人形も映さない条件だった。それでも再生後の職員が、保管庫の鍵を確認し始めた。理由を問われると、全員が同じ言葉を使った。「閉じ込めたままではかわいそうだ」。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "見ても触ってもいないのに、鍵を開けたくなるのか。保管庫の前で誰かが泣いていたら助けたくなる。そんな普通の気持ちを利用されるなら、警備員でも防げない。命令じゃなくて、罪悪感を置いていく異常なのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその反応を、SCP-956が発する救難信号として扱わなかった。むしろ、接触者の記憶に「助けるべき子供」を作る現象として記録した。対象ごとに顔も年齢も違う。それでも、全員が自分の知る子供だと思い込んだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで最初の収容違反が起きた。夜勤担当の職員が、保管庫の前に置かれた小さな靴を見つけた。警備記録に侵入者はいない。靴は子供用で、左右とも濡れていた。施設内に水源はない。職員は鍵を開けようとした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "夜の保管庫で、濡れた子供靴か。そこに落ちているだけで、見捨てたらだめだと思ってしまう。けど開けたら、誰かが待っているんじゃなくて、待っていると思わされた何かが出てくる。聞かなきゃよかった。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "職員は扉を半開きにした。内部の木片は、収納時の数と一致していた。人形は組み立てられていない。だが床には、保管庫の外側へ続く小さな足跡があった。足跡は通路を進み、職員の私物ロッカーの前で消えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ロッカー内には、職員が幼少期に使っていた玩具の写真が入っていた。本人は持ち込んだ覚えがない。写真の端には、割り人形と同じ形の影が写る。画像解析担当は、影の部分を拡大しなかった。理由は[DATA EXPUNGED]。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分の昔の玩具まで出されるのか。誰にも見せていない記憶を使われたら、助けを求める声だと信じてしまう。しかも保管庫から出た形跡はない。なら、外へ出たのは人形じゃなくて、職員の中の何かだったのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説は一つに定まっていない。SCP-956が木製人形を媒体にして、接触者へ「保護者になる役割」を植え付ける可能性が指摘された。子供を救うためなら規則を破ってもよい。そう思わせた時点で、収容は内側から崩れる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "異常存在を閉じ込めるのは、壁や鍵だけではない。職員が扉を開けないと決め続けることも収容手順の一部だ。SCP-956は、その決定を子供への見捨てとして見せる。正しい手順を守る者ほど、最初に狙われる構図だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第二の収容違反では、直接の開放は起きなかった。代わりに警備班が、保管室の外で木片を一つ発見した。封印番号は付いていない。回収時の記録とも一致しない。誰かが運んだ記録もない。木片だけが廊下に置かれていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "保管庫の中身が揃っているのに、外にも木片がある。それなら複製なのか、それとも元から数え間違えていたのか。どちらでも安心できない。片付けようとして触れた人が、次の保護者にされるんじゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その木片を回収した職員は、手袋を着用していた。接触手順に違反はない。だが帰宅後、自室の棚に自分の幼少期の写真を並べ始めた。写真の中の自分だけが、すべて同じ方向を向いていたという。本人は翌朝、その写真を燃やした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "燃やした後、職員は施設に戻り、保管庫の前で立ち尽くした。彼は鍵に手をかけなかった。ただ、扉の向こうへ小声で謝り続けた。「置いていかない」と。監視記録には、その言葉の直後だけ、保管庫内から木の割れる音が残る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "開けなかったのに、向こうが返事をしたのか。木が割れる音って、静かな部屋なら一度聞いただけで耳に残るだろ。夜、自分の机や棚から同じ音がしたら、確認したくなる。でも確認した時点で、相手の手順に入る。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "被害報告で繰り返されるのは、接触者が誰かを助けようとする点だ。自分を守るためではない。泣いている子供、閉じ込められた子供、置き去りにされた子供を想像する。SCP-956は、優しさを扉の鍵穴に変える。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そのため財団は、保管室の警備に子供の声を使わない。救難放送、館内アナウンス、録音教材も禁止対象となった。音声の内容ではなく、誰かを助けなければならないという感情の発火が危険だった。規則は冷たく見える。しかし必要だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに担当職員には、家族写真や幼少期の私物を施設へ持ち込まない指示が出された。SCP-956が実際に過去を読むのか、接触者が自分で記憶を差し出すのか。財団でも、まだ説明できていない。だから両方を隔離するしかない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "写真を持ち込むなと言われたら、普通の規則に見えるかもしれない。でも理由を知った後では、財布の中の一枚まで怖くなる。大事にしている記憶ほど、向こうに見せたくない。自分から差し出した覚えがなくても、奪われるからだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "原典記録には、対象となった子供が人形を割る際、悲鳴を上げなかったことが記されている。むしろ作業のように静かだった。子供は割る理由を「中にいる子を出すため」と説明した。その子供が誰なのか、最後まで答えは得られていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで重要なのは、人形の中に本当に誰かがいるかどうかではない。答えを確かめるために割る行為そのものが、SCP-956の望む手順かもしれない。財団は真相を知るための実験を止めた。確認したい気持ちが、最も危険だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "中に子供がいるかもしれないと言われたら、助けない方が残酷に感じる。でも、その感情を利用しているなら、助けようとするほど近づく。選ばされている時点で負けなんだな。どちらを選んでも、あの人形の話にされる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容違反記録が封印された理由も、単なる失敗の隠蔽ではない。文書を読んだ担当者が、保管庫の中にいる存在を想像し始めたためだ。映像も写真も不要だった。文章だけで、読者は「助けるべき誰か」の輪郭を作ってしまった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから一部の補遺は削除されている。そこには、開放を試みた職員が何を見たかではなく、なぜ鍵を開ける決意に至ったかが書かれていた。記録は[DATA EXPUNGED]されている。残されたのは、職員が最後に書いた短い一文だけだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "「あれは子供ではなかった。だが、見捨てることもできなかった」。この一文の後、職員は配置転換となった。転換先は記載されていない。死亡報告もない。けれど人事記録から、家族構成と過去の住所だけが削除されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "子供ではなかったのに、見捨てられなかった。じゃあ何を見たんだ。見たものより、見捨てられないと思った気持ちの方が怖い。俺たちが同じ場所にいたら、鍵を閉めたままにできるのか。自信がない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の現行手順では、SCP-956に関する異常な物品を発見しても、元へ戻そうとしてはならない。木片、子供靴、古い写真、知らない玩具。関連を断定する必要はない。ただし一人で判断しないこと。報告して、その場を離れる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "特に危険なのは、夜間に聞こえる小さな木の音だ。割れる音、机を叩く音、床に何かが落ちる音。確認するために暗い部屋へ入る行為は、接触手順の再現になり得る。財団は、音の正体を確かめるより距離を取るよう指示している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "家で木の音がしたら、普通は棚や机を確かめる。忘れ物が落ちただけかもしれないし、家族が困るかもしれない。でもSCP-956の記録を知った後では、暗闇の中にいる誰かを想像してしまう。その想像が入口なんだろ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "これは視聴者へ向けた収容助言ではない。現実の物品をSCPと決めつけるな。だが報告書にある恐怖は残る。助けたいと思う気持ちは、常に正しい場所へ向かうとは限らない。相手が何者か分からない時、扉を開ける判断は重い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-956の木片は、割れた人形の残骸に見える。だが財団は残骸として扱っていない。一片ずつが何を待っているのか。全て揃った時に何が戻るのか。その答えは未記載のままだ。記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最初に言った、完全には収容されていないって言葉。あれは人形が逃げたという意味だけじゃないんだな。助けたいと思った人の中に、保管庫の鍵穴が残る。だから施設の外でも、収容違反は終わらないのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その通りだ。SCP-956が求めるのは、開いた扉だけではない。誰かが「中にいる子供を助ける」と信じる瞬間だ。人形を見なくても、木片に触れなくても、その役目を引き受けた者は手順の中へ入る。財団はそう警告している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "回収班が最後に封印したのは、人形そのものではなく、職員間で交わされる会話だった。「かわいそうだ」という言葉を保管室の近くで使わない。誰かを助ける相談は記録係を通す。感情を手順へ変える前に、言葉を止めるためだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "言葉まで封じるのか。人形に触れず、写真も見せず、ただかわいそうだと言っただけで近づくなら、収容室の外にも罠がある。気づかないうちに、友達との会話で鍵を回してしまう。そんな異常は逃げ場が少なすぎる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "封印文書の余白には、担当研究員の手書きの警告が残っていた。「子供を助けたいなら、まず人数を数えろ」。保管記録上、室内に子供は一人もいない。それでも助けを求める声が聞こえるなら、そこにいるのは救助対象ではない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-3008「無限のIKEA」を扱う。出口を探して歩き続けた者たちが、閉店後の店内で何を見たのか。安全な売り場に見えた空間が、なぜ生存者の共同体を必要としたのか。その報告書も、明かりの下に隠れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "店の中なら明るいし、人もいるから大丈夫だと思ってしまう。けどSCP-956も、子供を助けたいという普通の感情から始まった。普通に見える場所ほど、先に疑うべきなのか。…次の記録も、たぶん安全じゃない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書が届いたなら、高評価を残せ。収容違反ファイルシリーズには、扉を開けた職員と、開けなかった職員の記録がまだ残っている。毎日投稿中だ。登録者1万人を目指している。次のファイルも受け取るなら登録を頼む。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-956「子供割り人形」原作およびSCP Foundation関連資料はCC BY-SA 3.0に基づく。原典の記録を尊重し、補遺の空白には財団内部の仮説のみを置いた。もし木の割れる音を聞いても、誰かを助けるために扉を開けるな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "収容は嘘",
+      "部屋にいる"
+    ],
+    "hook_caption": "収容されてない",
+    "subtitle": "封印された収容違反記録",
+    "tagline": "見かけても、決して近づくな"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "このSCP、実は今も完全には収容されていない。",
+      "selected_hook": "驚き：封印ファイルにまだ禁忌が残る？",
+      "scores": [
+        {
+          "hook": "驚き：封印ファイルにまだ禁忌が残る？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 50
+        },
+        {
+          "hook": "あなたはこの収容違反を見ても平気？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 48
+        },
+        {
+          "hook": "このSCP、実は今も完全には収容されていない。",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 2,
+      "dead_zones": [
+        1,
+        3
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "驚き：封印ファイルにまだ禁忌が残る？",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、待って。それ、まだ答えを隠してるだろ。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "SCP-956は子供の寝室で確認された割り人形だ。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "近づく子供ほど、指示に従う記録が残っている。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "ところが人形は、子供を壊すために割るのではない。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "収容違反時、職員の自宅に同じ木片が残された。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "記録はここで途切れている。本当に怖いのは、誰が割られたのかだ。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 7,
+          "text": "高評価を残せ。収容違反ファイルシリーズは他にもある。毎日投稿中、1万人目標の登録で応援を頼む。",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "この手の報告書、実は他にも未公開のものが山ほどある。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 33,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 7,
+        "emotional_impact": 9,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 3
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 76,
+      "optimized_score": 75,
+      "micro_reveals": 1,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.09,
+      "issues": [
+        "66%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "中、1万人目標の登録で応援を頼む。…待って、ファイルに戻って",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.33
+    },
+    "power_word": {
+      "amplified": 3,
+      "changes": [
+        "「怖い」→「ガチで恐ろしい」",
+        "「異常」→「認識災害レベル」",
+        "「怖い」→「ガチで恐ろしい」"
+      ],
+      "lines_modified": 3
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.404,
+      "similar_to": "SCP-1048「ビルダーベア」Safe判定が招いた収容違反の恐怖",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 9,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-956「子供割り人形」財団が封印した収容違反記録の恐怖",
+      "enhanced_title": "💀SCP-956「子供割り人形」財団が封印した収容違反記録の恐怖🫣",
+      "emoji_added": "💀",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "💀SCP-956「子供割り人形」財団が封印した収容違反記録の恐怖🫣"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 5,
+      "bait_text": "…この分類、Euclid派とKeter派で意見割れてるんだが"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "negative",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "negative",
+        "surprise",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "exclaim",
+        "statement",
+        "statement",
+        "ellipsis",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 2,
+      "interrupts_injected": 2,
+      "variety_score": 0.8
+    },
+    "subscribe_trigger": {
+      "trigger_type": "series_hint",
+      "trigger_text": "次回、これより上位のオブジェクトを紹介する",
+      "position": 7,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 5,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 78,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['収容違反', '財団'](+20)"
+    ]
+  }
+}

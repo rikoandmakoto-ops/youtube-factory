@@ -75,5 +75,14 @@
   },
   "openai_used": true,
   "claude_used": false,
-  "actual_metrics": null
+  "actual_metrics": {
+    "video_id": "BRU-rMGivCo",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.018867924528301886,
+    "impressions": 53,
+    "views": 587,
+    "published_at": "2026-08-20T10:15:29Z",
+    "updated_at": "2026-08-31T14:02:06.013147Z"
+  }
 }

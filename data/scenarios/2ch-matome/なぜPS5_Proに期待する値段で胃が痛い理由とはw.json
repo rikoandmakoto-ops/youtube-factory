@@ -1,0 +1,666 @@
+{
+  "title": "なぜPS5 Proに期待する？値段で胃が痛い理由とはw",
+  "theme": {
+    "title": "PS5 Proの噂、みんなの期待は？",
+    "angle": "PS5 Proについての噂を元に、視聴者の期待をコメント欄で募る！"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "お前ら、PS5 Proで何を期待してるんや？w",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ まだ答え出すな、値段で胃が痛い草…と思うやん？ｗ",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "信じがたいが、まず夏の帰省先でも爆速で遊べるやつやろw",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "親戚のテレビ争奪戦を自動で勝たせろ草。草、まだ終わらんのよ",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "起動したらサイコパス上司のAから通知消える機能やw…いやおかしくね？ｗｗ",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "この会社の裏事情、マジでやべーんだわw。…でもここで衝撃の展開。この話の続き、次の動画でまとめるわ"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "お前らの期待もコメントで頼むわw 毎日投稿中、1万人目標の〜あげてけシリーズ応援よろしくやで。…あれ、最初のレスもう一回読んでみ？",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、新型PS5の噂を見るたび「映像はもう十分」と思いつつ、さらに滑らかになるなら欲しい…と心が揺れたことありませんか？鍵は価格と性能の釣り合いです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回は、PS5 Proに飛び交う強化版の噂から、みんなが本当に望む進化の正体を暴くぞ。公式発表ではないからこそ、期待が先に暴走しているんだぜ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最強の驚きは、海外では価格が通常PS5より約200ドル高いという報道まで出た点です。日本で買うなら、性能アップだけで納得できる額なのか気になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "Proの本命は、レイトレーシングと高フレームレートを両立させることらしい。水面の反射をきれいにしながら、激しい戦闘でも動きがカクつきにくくなる期待だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でも驚きの反転、4Kテレビがない人には恩恵が見えにくい可能性もあります。ロード時間、静音性、容量みたいな毎日効く進化のほうが欲しい人も多そうです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "性能モンスターを待つ派か、値下げした通常版で遊ぶ派か、それとも新作ソフト優先派か。PS5 Proに絶対つけてほしい機能を、理由つきでコメント欄にあげてけ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこれ、半分は間違いなんだ。PS5 Proは魔法の新世代機ではなく、同じゲームをより滑らかに見せる強化版という噂が中心だよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "基本はGPU、つまり映像を計算する部品を強くする話だな。キャラの毛や水面の反射を描く速さが上がれば、画質か動きの選択で悩みにくくなる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "現行PS5では、高精細な4K寄り表示と毎秒60フレームの快適さを選ばせる作品が多いよね。Proの期待は、その二択を同時に狙える点にある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "フレームは一秒間の絵の枚数で、30枚より60枚のほうが視点移動がなめらかに見える。対戦やアクションで体感差が出やすい部分だぞ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "噂で特に注目されるのはAIアップスケーリング。低めの解像度で描いた映像を、賢い補完で高精細に見せる技術のことだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "たとえば元絵を全部細かく描かず、足りない輪郭を推測して4Kらしく整えるイメージだ。計算の余力を光や影の表現へ回せる可能性がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最強の期待値は、対応ゲームなら毎秒60フレームを保ちながら高画質モード級の見た目を狙えること。ただし全作品で保証される話ではないよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも性能が上がっても、テレビ側が60Hzまでなら120fps表示の恩恵は受けにくい。Pro購入は本体だけでなく、遊ぶ環境との相談にもなるな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり期待の本丸は、ロード時間より映像の選択肢が減ることかも。値段、ディスク有無、対応ソフト込みで、みんなが欲しい進化をコメントであげてけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "噂のPS5 Pro、海外解析では現行PS5比で描画性能が最大45％伸びる可能性。数字どおりなら草むらの影まで別ゲーム級かも。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただし45％は公式発表ではなく、開発向け資料とされる情報由来。発売日も価格も確定なしだから、期待値は冷静に積もうぜ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "注目のPSSRはAIで映像を高精細化する技術で、低めの内部解像度を4Kらしく見せる役。重い場面で効くと期待されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "PCでは似た発想のアップスケーリングが普及し、フレームレート向上を狙う例が多い。PS5 Proも画質と滑らかさの両取りが焦点だな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、性能が上がってもゲーム側が対応しなければ差が小さい点。魔法の箱ではなく、パッチ次第で化けるタイプらしい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "比較実験で見たいのは、30fps品質モードが60fps近くを保てるか。派手なボス戦で処理落ちしないなら体感差は大きそう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "レイトレーシングは光の反射や影を計算する表現で、水たまりに街灯が映るような場面ほど差が見えやすいと言われる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "一方でテレビが60Hzなら、高fpsの恩恵を感じにくい人もいる。120Hz対応画面を持つかで、欲しさの割合はかなり変わりそうだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "過去の中間世代機も、解像度や安定性を求める層に刺さった。だから今回も価格が高めでも静音性まで改善なら話は別。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "君がPS5 Proに求めるのは4K、60fps、静音、それとも価格？ 噂の数字より刺さる条件を、コメント欄であげてけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "PS5 Proの噂は、世代半ばに性能強化版が来る恒例行事から始まった。PS4 Proは2016年、PS4発売から約3年後に登場している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかもPS4 Proは4K対応を掲げたが、全ゲームがネイティブ4Kになったわけではない。画質と滑らかさ、どちらを取るかの戦いだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "PS5世代ではレイトレーシングが話題だね。光の反射を計算して、本物っぽい鏡や水面を描く技術で、重い処理の代表格なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きなのは、PS5 Proの噂が性能より価格予想で毎回荒れること。高性能を望む声ほど『本体が大きく高い』未来も近づくんだぜ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "歴史をたどると、据え置き機の強化版は新しい遊びより、既存ゲームをより快適に見せる役だった。ロード短縮も期待の中心になりやすい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "海外報道や解析から噂が膨らむたび、型番や発売時期が独り歩きする。ただし公式発表前なら、確定情報として信じるのは危険だぞ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "研究的に見ると、家庭用ゲーム機は性能だけで満足度が決まらない。対応ソフト、テレビ性能、価格の三つがそろって初めて体感差になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "だから期待は『4Kで何fpsか』だけじゃない。静音性、容量、ディスク搭載、手に入りやすさまで、人によって欲しいProは別物なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "もしPS5 Proに一つだけ追加できるなら何が欲しい？爆速ロード、60fps固定、価格据え置き、それとも謎の超機能か、コメントであげてけ！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの前提、PS5 Proは公式発表前なのに価格予想が10万円級まで膨らんでいる。通常機より高くても、映像が別世界なら買う？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかもProの「Pro」は世代交代ではなく、同じPS5世代を強化する上位版という意味だ。スマホの上位モデル感覚で考えると近いぞ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最大の期待はレイトレーシング、光や反射を現実らしく描く技術だね。雨上がりの路面にネオンが映る場面で差が出ると噂されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただし高画質化は魔法ではない。ゲーム側が対応しなければ性能を使い切れず、対応タイトルの数が満足度を左右する可能性が高い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、性能が上がっても全員に必要とは限らない！大画面テレビや高リフレッシュレート環境がないと、差が見えにくい人もいる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "高リフレッシュレートは画面更新の回数で、120Hzなら1秒に120回表示する。対応ゲームなら照準移動の滑らかさに期待が集まるぞ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "歴代ではPS4 Proが2016年に登場し、4K表示への期待を背負った。PS5 Proも解像度とフレームレートの両立が注目点になりそう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "一方で本体サイズや消費電力の噂も気になる。冷却を強くすれば静音性が問われ、夜中のゲームでファン音が大きいと緊張が台無しだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "意外なのは、性能より容量を望む声も強いこと。大型ゲームは100GB級も珍しくなく、遊ぶ前の整理作業が最大の敵だという人もいる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "画質、120fps、静音、容量、価格のどれを最優先にする？PS5 Proに絶対ほしい機能と、許せる値段をコメント欄でぶつけてくれ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日からできる期待メモ術！PS5 Proの噂を見たら、欲しい機能を三つだけ書こう。性能より遊ぶ時間が増えるかで選ぶと、後悔が減るぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きの反転だぜ、画質が上がっても遊びたい新作がなければ満足度はゼロ寄り！まず積みゲーを一本起動して、強化版に本当に必要な条件を洗い出せ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "たとえば読み込み時間への期待なら、いつものゲームで起動から操作までをスマホで計測。30秒でも待ち時間が気になるなら、高速化は立派な購入理由になるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "フレームレートは一秒間に画面が更新される回数のことだ。対戦ゲームで照準が遅れると感じた場面をメモすれば、60と120の差に期待する理由が見えてくるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "予算は本体価格だけで決めないのがコツ。新型を買う月に遊ぶソフト代、追加SSD、オンライン料金を書き出すと、財布のラスボスが急に姿を現すよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "比較表は紙一枚で十分だぜ。左に今のPS5で困ること、右にProへ期待することを書き、右が空欄なら発売日ダッシュより様子見が正解かもしれない。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "テレビ環境も確認しよう。4Kや120Hz対応かは説明書や設定画面で見られるから、対応していないのに映像強化だけを夢見ていないか、先に点検しようね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "友達と遊ぶ人は、性能より同じ時間に集まれるかを優先してもいい。週一回でもマルチを遊ぶ予定を書けば、Proが会話のネタになる価値まで測れるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さて、みんながPS5 Proに一番ほしいのは爆速ロード、映像、静音、それとも別の機能？買う決め手をコメントであげてけ、変な願望も大歓迎だよ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "PS5 Proの噂は、映像の進化と値段への不安が真正面からぶつかる、まさに次世代機待ちの心を試すスレだったね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きなのは、性能が上がるほど欲しいのに、テレビやソフトまで含めた出費を想像して急に冷静になる人が多いことだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "結局みんなが待っているのは数字のスペック表より、起動した瞬間に「これは違う」と叫べる一本のゲームなのかもしれないね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回は「ゲーム機を買った初日にやらかしたことあげてけ」スレを解説するよ。保護フィルムと初期設定の悲鳴が集まるぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "箱を開けた直後の高揚感が、接続端子不足や容量不足で一瞬にして試練へ変わる、参加型あるある大喜利になりそうだね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "PS5 Proに何を期待するか、価格ならいくらまで出せるかも、ぜひコメント欄で教えてくれ。君の一票が次のスレを熱くする。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "面白かったら高評価とチャンネル登録を忘れずに。ゆっくり2chスレまとめ劇場で、次のくだらない神スレも一緒に笑おう！",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "PS5 Pro",
+      "何ほしい"
+    ],
+    "hook_caption": "期待5選",
+    "subtitle": "お前らの本音",
+    "tagline": "噂だけで大喜利開始"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "PS5 Proに期待する5つあげてけw",
+      "selected_hook": "お前ら、PS5 Proで何を期待してるんや？w",
+      "scores": [
+        {
+          "hook": "お前ら、PS5 Proで何を期待してるんや？w",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 10,
+            "loop_connect": 15
+          },
+          "total": 60
+        },
+        {
+          "hook": "驚き！お前らのPS5 Pro期待が煩悩まみれで草w",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 10,
+            "loop_connect": 15
+          },
+          "total": 60
+        },
+        {
+          "hook": "PS5 Proに期待する5つあげてけw",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 10,
+            "loop_connect": 15
+          },
+          "total": 40
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "お前ら、PS5 Proで何を期待してるんや？w",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ まだ答え出すな、値段で胃が痛い草",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "まず夏の帰省先でも爆速で遊べるやつやろw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "親戚のテレビ争奪戦を自動で勝たせろ草",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "起動したら上司のAから通知消える機能やw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "お前らの期待もコメントで頼むわw 毎日投稿中、1万人目標の〜あげてけシリーズ応援よろしくやで",
+          "tension": 3,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "company-facts",
+      "bridge_line": "この会社の裏事情、マジでやべーんだわw",
+      "matched_topic": "上司"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 37,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 5,
+        "relatability": 9,
+        "shareability": 14,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 69,
+      "optimized_score": 69,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.93,
+      "issues": [
+        "42%・71%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "リーズ応援よろしくやで。…あれ、最初のレスもう一回読んでみ？",
+      "keyword_overlap_before": 1.0,
+      "keyword_overlap_after": 1.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「上司」→「サイコパス上司」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "アンカー形式の使用",
+        "軽いエロ要素"
+      ],
+      "insights_used": 6
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.453,
+      "similar_to": "ワイ、落雷を3秒で見たんやが質問ある？w",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 13,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "PS5 Proに期待する5つあげてけw",
+      "enhanced_title": "😏PS5 Proに期待する5つあげてけw💦",
+      "emoji_added": "💦",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "😏PS5 Proに期待する5つあげてけw💦"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": false,
+      "existing_bait": true,
+      "position": -1,
+      "bait_text": ""
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "surprise",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "statement",
+        "statement",
+        "statement",
+        "laugh",
+        "statement",
+        "question"
+      ],
+      "monotone_runs": 2,
+      "interrupts_injected": 2,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "series_hint",
+      "trigger_text": "この話の続き、次の動画でまとめるわ",
+      "position": 5,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "😏PS5 Proに期待する5つあげてけw💦",
+    "attempts": 1
+  },
+  "original_title": "😏PS5 Proに期待する5つあげてけw💦"
+}

@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260830_140725_5dc2fe",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "雪女が3日黙れと言う…実は誰にも言えない恐怖があった【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "口外禁忌のモチーフがどこから来たか\nこれ知ってた？ 雪女が好きなあなた、あの美しい妖怪が助けた男へ最初に渡したのは優しさではなく、「誰にも言うな」という命令だったんだ。1904年の本には、その約束を破った夜が残されて / ゲームだとこう描かれてるけど、雪を操る妖怪は華やかで、対戦でもイベントでも印象に残るよね。あいつ好きなんだよね、と言いたくなる見た目だからこそ、原典の温度差が大きいんだ。 / 雪のステージで見かけると、それ好きなやつ！ってなるよ。でも「誰にも言うな」って何？ 学校で友達から聞いた内緒話みたいな、軽い約束じゃないんだよね？",
+  "generated_at": "2026-08-30T14:07:25.014368Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "雪女はなぜ「3日黙れ」と命じたのか？約束を破った男の末路【ショート】",
+      "thumb_copy": [
+        "3日間、誰にも",
+        "話してはいけない"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "1904年の雪女譚…救った男に課した「3日間の禁忌」とは【ショート】",
+      "thumb_copy": [
+        "1904年の記録",
+        "雪女の禁忌"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は優しくない…雪女が男を助けた直後に突きつけた命令【ショート】",
+      "thumb_copy": [
+        "助けた直後に",
+        "恐怖の命令"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "雪女はなぜ「3日黙れ」と命じたのか？約束を破った男の末路【ショート】",
+    "thumb_copy": [
+      "3日間、誰にも",
+      "話してはいけない"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "q2s-VS1PHQs",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.011363636363636364,
+    "impressions": 176,
+    "views": 260,
+    "published_at": "2026-08-21T09:30:18Z",
+    "updated_at": "2026-08-31T14:10:09.551041Z"
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "title": "SCP-093の6色記録 なぜ戻れた？",
+  "theme": {
+    "title": "SCP-093「赤い海の石」、異次元探索で回収された記録が示す向こう側の恐怖",
+    "angle": "各色のテストログを時系列で整理し、異世界の崩壊過程と財団が持ち帰った証拠を報告書形式で提示"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書、赤い石を通った者の記録だけが消えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、戻った本人まで、自分の記録を読めないのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "6色の円盤で実施した探索は、合計6回に及ぶ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "鏡の奥には崩壊都市があり、映像だけが財団へ帰った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、怖いって。最後の扉の向こうは[REDACTED]だ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高評価を残せ。財団の裏側シリーズには続きのファイルがある。毎日投稿中、登録者1万人目標へ応援よろしく。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "自分の部屋の鏡に、背後ではなく知らない廊下が映ったことはないか。SCP-093に接触した職員6名は帰還後、自分の探索記録だけを閲覧できなくなったという記録が残る。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、記憶が薄れるだけじゃないのか。映像、筆記、端末の履歴まで本人の部分だけが消えるなら、いま画面を見ている側も記録の外へ押し出される。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書の危険は、鏡の向こうに怪物がいることではない。帰還した後に、自分が何を持ち帰ったのか確認できない点だ。だから視聴者の部屋の鏡にも近い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回はSCP-093、通称「赤い海の石」の探索映像を、6色の円盤が使われた順に追う。最初に置くべき結論は、向こう側の文明が段階的に消えたことだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "6回も扉を開けたのか。1回目で放棄都市を見つけたなら、普通は封鎖する。それでも色を変えて続けた理由は、向こうから何かを回収できたからか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は各探索で映像媒体、文書、建材の破片を回収した。回収箱は合計6個。だが保管後に増えた重量は、箱ごとに0.3キログラムから1.1キログラムと異なる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-093は直径約7.5センチの赤い円盤状物体だ。棚の上では動かない。だが鏡面に近づけた時だけ、反射の奥を別世界の風景へ置き換える入口として扱われる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "洗面台の鏡でも、学校の廊下の姿見でも、鏡である以上は候補になる。石が手元にないから安全ではない。誰かが鏡の前で持てば、それだけで扉になる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "試験に使われた6色の円盤は、青、緑、紫、黄緑、赤、白、黒の記録群として整理される。ただし資料ごとに色名の表記が揺れ、正確な順番は一部[REDACTED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "円盤は行き先を選ぶ鍵ではなく、鏡が何を映すかを変える印だった。財団は各色を別地点の座標と断定しない。映像の街並みが、同じ場所で変質した可能性がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同じ街なのに、試験ごとに壊れ方が違うなら怖い。ゲームのセーブデータを別の日付で開くように見えて、実際には時間の順序さえ崩れていることになる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "探索者は防護装備、通信機、撮影機材を持って鏡を越えた。通過時間は平均18秒と記録されたが、帰還者の腕時計は最大で4時間17分のずれを示した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで最も不穏なのは、帰還者全員が鏡をくぐった瞬間だけを覚えていない点だ。供述の空白は平均9秒。撮影映像の欠落時間とは一致しなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "9秒の空白なら、教室で瞬きをした程度にも見える。でも6人が同じ場所だけ失うなら偶然ではない。扉を通ったのは身体だけで、何かは向こうに残ったのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の青色試験で確認されたのは、放棄された居住区だった。集合住宅の窓は内側から板で塞がれ、住民が外を見ることを恐れていたことだけが、家具の向きに残っていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "部屋には食器、子供用の靴、開かれた教本が残された。逃走なら持ち出すはずの物まで置かれていた。だが人影はなく、埃の上には探索隊以外の足跡もなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "避難した街なら、駅や道路へ向かう痕跡があるはずだ。ここには生活が止まった瞬間だけがある。授業中に全校生徒が机を残して消えたような、空白だけの街だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "青色映像の壁には、外へ出るなという警告が複数残った。同じ文字が12棟で確認され、書き手は違う。それでも最後の一文だけは、ほぼ同じ形で途中から削られていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "削れた箇所は、映像を停止しても読めない。財団は画像を復元しようとしたが、処理担当者4名の作業ログにも同じ空欄が生じた。財団でも、まだ説明できていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "壁の言葉まで読ませないなら、住民が恐れた正体は記録の中で隠れている。見た者を襲うのではなく、知った者から文章を奪う異常なら、報告書そのものが危ない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そしてこの話、最終試験で回収された品の一部は、青色試験の警告文より古い年代を示した。6色の映像は順番に並べても、崩壊の前後を正しく示さない可能性が高い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "緑色試験では、居住区より古い宗教施設が確認された。壁面には赤い海から来るものを拒む文言があり、礼拝の対象だった像は例外なく顔の部分だけ削り取られていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "顔だけを消すのは、壊すためじゃない。顔があると見つかる、あるいは顔を見ると呼ばれると住民が信じたからだ。誰もいない礼拝堂ほど、祈りの失敗が残る。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "礼拝堂の床からは、同じ紋章が刻まれた金属片が17枚回収された。紋章は鏡の形に近いが、中央には赤い円盤ではなく、黒く塗り潰された人影が描かれていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "回収後、17枚のうち3枚は保管ケース内で向きが変わった。封印は破られていない。監視記録には、午前2時13分から2時20分まで、無音の黒い画面だけが残された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "誰かが触ったなら指紋が残る。触っていないなら、向こう側で置かれた向きがこちらにも反映されたのか。箱の中の物が、鏡の奥と同じ動きをしている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "紫色試験では、地下避難所の名簿が見つかった。記載人数は387名。出席確認の印は途中まで続くが、同じページの同じ時刻欄で、全員分が一斉に途切れていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "名簿の最終時刻は午後3時06分。停電や混乱なら筆跡は乱れるはずだが、最後の印は整っていた。次の行に空白があるのではない。次の行そのものが紙から失われている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "387人が一度に避難所を出たなら、扉の前に跡が残る。そこに何もないなら、消えたのは人だけじゃない。出入口という概念ごと、どこかへ持っていかれた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "紫色の映像では、避難所の非常灯だけが点灯していた。灯りは探索者の移動に合わせて2秒遅れて揺れ、影だけが先に曲がる。担当班は追跡せず、規定通り撤退した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "黄緑色試験では、生存者らしき人物の音声が初めて回収された。録音者は家族の名を呼び、鏡を見つけても通るなと繰り返した。録音全体は42秒しか残されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "声は開始から12秒後に急激に老いたように変わる。だが時計の針音は乱れていない。録音者は最後に自分の名前を言い直し、その後の10秒は息づかいだけで終わった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "鏡を通るなと言った人物は、向こうから帰る方法を知っていたのかもしれない。それでも通らなかったなら、こちら側に来るほうが危険だった。理由が一番聞きたくない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "赤色試験では、都市の外縁に赤い海が映った。水面に波はなく、海岸から数百メートル離れた道路まで湿っていた。濡れた足跡は一組だけ、街の中心へ続いていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "足跡の長さは探索隊の靴と一致しない。歩幅は約48センチで一定だが、左右の形が途中から入れ替わる。追跡は禁じられ、隊員は足跡を撮影した後、鏡へ戻った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "海から出た何かが、街へ向かった。その何かは靴を履いていないのに、足跡だけは人間の形を真似た。鏡の前で待っていたのは、住民じゃない可能性がある。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "赤い海に沈む建物は、倒壊ではなく傾斜だけを続けていた。映像の17分間で屋根が水面へ近づくのに、海面は一度も揺れない。財団は沈下理由を記載していない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "白色試験の記録は、同じ廊下が三度繰り返される映像から始まる。壁の傷、落ちた紙片、開いた扉まで一致する。だが二度目だけ、突き当たりに人影が立っていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "三度目の廊下には人影がない。代わりに、探索者の背後の壁へ新しい手形が5つ残っていた。帰還後の隊員は手形を覚えておらず、映像を再生した職員も詳細を証言できなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同じ廊下を繰り返したのではない。映像を見る側が同じ廊下へ戻されている。手形は隊員の背後に残ったんじゃない。再生画面のこちら側を叩いた跡かもしれない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "黒色試験は最深部への接続と分類された。探索者が見たのは崩れた礼拝堂で、床には布ではない黒い影が広がっていた。その上に、人間に似た存在が立っていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "存在は移動せず、鏡の方だけへ顔を向けた。撮影機材はその瞬間に17秒間乱れた。復旧後の映像では礼拝堂は空だが、探索者の通信機には知らない呼吸音が残っていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "向こうの存在は探索者を見たんじゃない。鏡の先、観察室にいる職員を見た可能性がある。財団が扉を開くたび、向こう側にもこちらを見る窓が増えていく。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "6色の記録を並べると、文明の崩壊には順序がある。警告文が現れ、窓が塞がれ、礼拝堂の顔が消え、避難名簿が止まり、最後には街から人間だけがいなくなる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "死者の姿がほとんど映らない点が異常だった。都市は破壊されたわけではない。住民は何かから隠れ、隠れるための場所まで失ったように消えた。原因は未解明のままだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "教室、家、礼拝堂、避難所まで使っても助からないなら、敵は場所の外にいる。扉を閉めても意味がない。鏡を見る行為そのものが、相手に位置を教えるのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が持ち帰った物には、手帳、名簿、金属片、映像媒体がある。保管庫では回収箱6個の重量が毎月変化した。最大の増加は黒色試験の箱で、累計4.7キログラムに達した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "保管担当者は箱を開けた記憶がないと報告した。しかし封印テープは内側から貼り直された形だった。監視カメラの該当17分間は灰色で、時計表示だけが正常に進んでいた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "箱の中身が増えたなら、回収品は証拠ではなく入口の続きだ。持ち帰ったのは石や破片だけじゃない。向こう側の何かが、保管番号を使ってこちらへ届いている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容手順では、SCP-093を鏡面から隔離し、試験は複数部署の許可制とされた。Safe分類は無害という意味ではない。条件を守れば収容できるという、冷たい事務上の印だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "赤い石は棚の上で静かだ。だが鏡の前へ置かれた瞬間、世界の境目が薄くなる。鍵を掛けた部屋に、鍵穴ではない出口が突然増える。それがこの収容対象の扱いだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Safeという文字を見ると安心しそうになる。でも扉を開ける道具なら、暴れないほうが怖い。待っているだけで、誰かが鏡を使う日を選べるからだ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "帰還者6名には尋問と隔離観察が実施された。全員が通過直前の数秒を失い、少なくとも4名が「名前を呼ばれた気がした」と同じ内容を述べた。声の主は特定されていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "供述の空白は映像の乱れた箇所と一致しない。だから財団は、記憶の欠落を機材故障として処理できなかった。呼び声を聞いた場所が鏡の向こうか、こちら側かも判明していない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "夜の廊下で名前を呼ばれたら、誰でも振り返る。でもこの記録では、振り返った者の記憶だけが抜ける。相手が欲しいのは身体ではなく、名前を呼ばれた反応なのかもしれない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "元研究員として残せる警告は一つだけだ。SCP-093の恐怖は石の赤さではない。鏡を通して、向こう側がこちらを観察できる可能性を、財団が否定できていないことにある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最終注意書きには、赤い石を鏡へ近づけるなとだけある。理由は短い。鏡の向こうで誰かが見ていないと、確認する手段がないためだ。記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-3008、終わりのない家具店で作られた生存圏の記録を扱う。ただしSCP-093の白色映像と似た棚が映ったという未確認報告は、まだ保管庫に残る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "別の収容記録まで同じ廊下へ繋がるなら、あの鏡は一つの異世界だけを映していない。…ねえ、これ本当に大丈夫なの？ 財団は何枚の鏡を見落とした。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書が届いたなら高評価を残せ。財団の裏側シリーズには、赤い海から持ち帰られた品の続きがある。毎日投稿中、登録者1万人目標への応援を頼む。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-093を見かけても、決して近づくな。鏡に映るのが自分の部屋だけなら幸運だ。原典SCP-093「Red Sea Object」、SCP Wiki、CC BY-SA 3.0に基づく。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "6色の扉",
+      "戻った映像"
+    ],
+    "hook_caption": "記録だけ消えた",
+    "subtitle": "異次元探索で回収された最後の映像",
+    "tagline": "赤い海の石が開いた、崩壊世界への入口"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "高評価を残せ。財団の裏側シリーズには続きのファイルがある。毎日投稿中、登録者1万",
+          "reason": "1行51字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 22,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 5,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.469,
+      "similar_to": "SCP-2935「死んだ地球」別次元で全生命が消えた恐怖の記録",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 22,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-093の6色記録 なぜ戻れた？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  }
+}

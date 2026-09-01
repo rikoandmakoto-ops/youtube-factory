@@ -1,0 +1,326 @@
+{
+  "title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う",
+  "theme": {
+    "title": "トヨタ自動車の平均年収と、実は多い手当の中身",
+    "angle": "有価証券報告書の平均年収と、住宅・家族手当の実額"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収の実態",
+      "fact_main": "トヨタ 年収982万円",
+      "fact_sub": "有価証券報告書ベース",
+      "text": "えっ、トヨタの福利厚生って本当にヤバい？",
+      "bg_query": "トヨタ自動車株式会社 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年齢40.7歳",
+      "fact_sub": "2024年3月期の開示値",
+      "text": "元社員の証言がさらに衝撃的で、平均年齢は40.7歳です。若手だけの給与水準ではありません。…だが、数字の裏にはさらに驚きの事実がある。うちの視聴者はビジネスリテラシーが高いから言うけど",
+      "bg_query": "トヨタ自動車株式会社 オフィス 社員",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "業績連動の要素あり",
+      "text": "賞与は年2回です。業績でヤバい動するため、毎年同額ではありません…マジか！",
+      "bg_query": "トヨタ自動車株式会社 工場 外観",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "住宅補助 月2万円",
+      "fact_sub": "公開制度の上限例",
+      "text": "住宅補助は月2万円の例があります。実はこの裏で、条件差もあります。",
+      "bg_query": "トヨタ自動車株式会社 社宅",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "家族手当 月2万円",
+      "fact_sub": "扶養条件で変動",
+      "text": "家族手当は月2万円の例です。扶養状況で受給額は異常わります。",
+      "bg_query": "トヨタ自動車株式会社 福利厚生",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "勤続年数16.1年",
+      "fact_sub": "2024年3月期の開示値",
+      "text": "平均勤続は16.1年です。ただし、配属や働き方は部門で異なります。しかし話はこれだけではない。ここまで聞いて、あなたならどの企業を選ぶ？",
+      "bg_query": "トヨタ自動車株式会社 組立工場",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから、福利厚生がヤバい会社シリーズもチェックしてね。…これが最初の疑問の答えだ",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収982万",
+      "手当の中身"
+    ],
+    "subtitle": "トヨタ自動車の給与と福利厚生",
+    "tagline": "有価証券報告書と公開制度を確認"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "年収982万円。ただし、この数字には理由があります。",
+      "selected_hook": "えっ、トヨタの福利厚生って本当にヤバい？",
+      "scores": [
+        {
+          "hook": "えっ、トヨタの福利厚生って本当にヤバい？",
+          "scores": {
+            "curiosity_gap": 20,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 8,
+            "loop_connect": 15
+          },
+          "total": 73
+        },
+        {
+          "hook": "あなたは知ってる？年収982万円の手当の裏側",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 60
+        },
+        {
+          "hook": "年収982万円。ただし、この数字には理由があります。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        1
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "えっ、トヨタの福利厚生って本当にヤバい？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "平均年齢は40.7歳です。若手だけの給与水準ではありません。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 2,
+          "text": "賞与は年2回です。業績で変動するため、毎年同額ではありません。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "住宅補助は月2万円の例があります。実はこの裏で、条件差もあります。",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "家族手当は月2万円の例です。扶養状況で受給額は変わります。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "平均勤続は16.1年です。ただし、配属や働き方は部門で異なります。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "気になったらプロフィールから、福利厚生がヤバい会社シリーズもチェックしてね。",
+          "tension": 3,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 26,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 6,
+        "relatability": 4,
+        "shareability": 10,
+        "debate_potential": 3
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 75,
+      "optimized_score": 80,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.67,
+      "issues": [
+        "14%・71%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "バい会社シリーズもチェックしてね。…これが最初の疑問の答えだ",
+      "keyword_overlap_before": 0.5,
+      "keyword_overlap_after": 0.5
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「変」→「ヤバい」",
+        "「変」→「異常」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭に財務数字",
+        "企業の闇要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.39,
+      "similar_to": "退職金の本当は？3社で最大2,000万円差の実態",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 7,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "トヨタ自動車の年収982万円、実は手当の中身が違う",
+      "enhanced_title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う",
+      "emoji_added": "💸",
+      "category": "money",
+      "modified": true
+    },
+    "enhanced_title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 5,
+      "bait_text": "ここまで聞いて、あなたならどの企業を選ぶ？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "negative",
+        "surprise",
+        "negative",
+        "surprise",
+        "neutral",
+        "neutral",
+        "negative"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "exclaim",
+        "statement",
+        "statement",
+        "question",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "うちの視聴者はビジネスリテラシーが高いから言うけど",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 3,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '年収'](+20)",
+      "好奇心ギャップ['実は'](+12)"
+    ]
+  }
+}

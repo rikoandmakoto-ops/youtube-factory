@@ -1,0 +1,611 @@
+{
+  "title": "1分科学 #99：🧪なぜ濡れた紙は3倍も破れやすい？あなたが毎日触る繊維の正体",
+  "theme": {
+    "title": "なぜ濡れた紙は破れやすくなるのか",
+    "angle": "繊維の絡み合いが水でほどける仕組み"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "濡れた紙、なぜ裂け目が一気に進む？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！まだ答えがあるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "紙の重さの約70%は木の繊維で、水がその結び目に入ります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "満員電車で手をつないだ人が、離れる感じと同じ？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも水は繊維を滑らせます。だから裂け目が一気に進むんです、でも続きがあります。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。…でも、この話にはまだ続きがある。ちなみにこの説、科学者の間でもまだ議論中なんだよね。この続き、次の動画でもっと深掘りするよ"
+    },
+    {
+      "speaker": "理子",
+      "text": "身の回りのモノの科学シリーズシリーズ、ベルマーク押して通知ONにしておいてね！毎日投稿してるよ！…待って、一気に戻って",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？あなたも雨の日、レシートやティッシュが指へ張りついて、ほんの少し引いただけで端から裂けたことありませんか。\n乾いた紙なら平気なのに、水を吸った瞬間だけ急に頼りなくなる、その差には繊維の中の理由があります。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！買い物のレシートが濡れて、財布へ入れようとしただけで破れたんだ。\n紙へ水滴が数滴ついただけなのに、どうして厚さ約0.06ミリの紙は急に弱く感じるの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "コピー用紙は一般に厚さ約0.09ミリ、重さは1平方メートル当たり64グラムから80グラムほどです。\nでも平らな一枚に見える中身は、木から取り出した細い繊維が何千本も重なった網のような構造なんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！紙は薄い板ではなく、細い糸がぎっしり重なった布みたいなものなんだね。\nじゃあ濡れたときは、その糸同士のつながりがほどけているのかな？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日は、水が紙の中へ入ったとき、繊維同士の支えがどう変わるのかを追いかけます。\nあなたが濡れたノートをめくる手元でも、今から話す小さな変化が数秒単位で起きているんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "水は紙を重くするだけだと思っていたから、内側のつながりまで変わるなら気になるよ。\n最初にどの部分が弱くなるのか、裂け目ができる順番で見てみたいな。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "紙の主役はセルロースという物質です。セルロースは木や草の体を支える、長く連なった繊維の材料のことです。\nコピー用紙では重さの約70％以上がこの植物由来の繊維で、白い表面の下に細かな束が折り重なっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "木の中身が、学校のプリントやレシートになっているなんて面白いね！でも木は雨にぬれても、紙のように指で簡単には裂けない。\n同じセルロースなのに、なぜ紙だけこんなに変わるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "木の中では繊維が太い束になり、リグニンという硬い成分にも支えられています。\n一方で紙は、繊維を水の中でほぐし、薄く広げて乾かしたものなので、軽い代わりに接点の支えで形を保っているんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、木は丸太のように太い柱を持ち、紙は細い繊維の手つなぎでできているんだね。\nその手つなぎを作ったのも水なら、濡れるとまた水が関わるのかな？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "乾いた紙では、繊維の表面にある小さな場所同士が水素結合で引き寄せられています。\n水素結合は磁石ほど強い力ではなく、近づいた表面が細かく引っかかるような結びつきで、数が多いほど紙を支えます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！1か所は弱い結びつきでも、何千本もの繊維に広がれば一枚の紙を持ち上げられるんだ。\nでは水が来ると、その結びつきは全部切れてしまうの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "全部が切れるわけではありませんが、水分子が繊維と繊維の間へ入り、乾いた状態の密着をゆるめます。\nたとえるなら、満員電車で肩を寄せて立つ人の間へ、大きな荷物が次々に入って、体を支え合えなくなる感じです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、紙を弱くする主役は水の重さより、繊維の間へ入り込む水なんだ！\nそれなら最初にできた小さな裂け目が、濡れた紙で止まりにくい理由も説明できそうだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。紙は均一な板ではなく、繊維がランダムに重なった網なので、乾いていると引く力が広い範囲へ分かれます。\n濡れると接点が滑り、力が裂け目の先端へ集まりやすくなって、近くの繊維から順に離れます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、ハサミで少し切れ目を入れた袋は、その先から裂けやすいよね。\n紙も水を吸うと、裂け目の先だけへ力が集中して、逃げ道がなくなるのかな？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらにセルロース繊維は、水を吸うと太さ方向へふくらみます。乾いたときにぴたりと重なっていた場所がずれるためです。\n濡れたノートのページが波打つのは、表面だけの問題ではなく、紙の内側で無数の繊維が少しずつ動くからなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それなら濡れた紙のしわは、乾かせば単純に消えるとは限らないんだね。\n繊維がいったん動いた後に戻る場所まで変わるなら、古い本の波打ちが残るのも分かるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。濡れた紙が弱くなる割合は、どの紙でも同じではありません。\n新聞紙、キッチンペーパー、段ボール、トイレットペーパーでは、繊維の長さや接点の作り方が違うため、水への反応も大きく変わります。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！濡れた紙という一言でまとめられないくらい、紙ごとに中身の網目が違うんだね。\nまず毎日触るティッシュとキッチンペーパーは、どこが違うの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ティッシュは、鼻をかむときのやわらかさを出すため、繊維の結びつきを強くしすぎない設計が多いです。\nキッチンペーパーは水を抱えながら扱えるよう、長めの繊維や凹凸模様、湿った状態を支える材料を組み合わせることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ白い紙でも、ティッシュはやさしくほどけて、キッチンペーパーは濡れても少し粘る感じがあるね。\nそれは厚みだけではなく、繊維のつなぎ方を使う目的ごとに変えているからなんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "濡れても形を保ちやすい紙には、湿潤紙力増強剤が使われることがあります。\n湿潤は濡れた状態という意味で、この材料は繊維同士が水の中でも離れにくいよう、追加の支えを作る役目を持っています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、紙タオルが水を吸った後も少し使えるのは、繊維の間に見えない補助の手があるからなんだね。\nじゃあトイレットペーパーまで同じように強くすると、困ることがあるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "あります。トイレットペーパーは使う間は形を保ちつつ、水の中では繊維の網がほどけやすいことが重要です。\n強すぎる紙を大量に流すと配管で残りやすくなるため、濡れると弱くなる性質は欠点ではなく、役目に合わせた工夫でもあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "それ昨日あった！水へ入れたトイレットペーパーが、少し混ぜるだけで細かく広がったのを見たよ。\n弱さが必要な場所もあるなら、紙の強さは一つの数字だけでは決められないんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "製紙の現場では、湿潤引張強さという試験で濡れた紙を引っ張って確かめます。\n引張強さは、紙が裂けるまでどれくらい引く力に耐えるかという指標で、乾いた状態だけを測っても実際の使いやすさは分かりません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！雨の日の紙袋や、手を拭く紙まで、濡れた場面を想像して数字を測っているんだ。\nところで水は、紙の表面からどれくらい速く中へ広がるの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "水が紙のすき間を進むときには、毛細管現象が関わります。毛細管現象は細いすき間が水を引き込む動きのことです。\nキッチンペーパーの端をコップの水へ入れると、水位より上へ水がじわじわ上がるのが、身近な例になります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、理科で見たあの実験が、濡れた紙が内側から弱くなる入り口なんだ！\n水滴が紙の上に一つあるだけでも、その周りの繊維のすき間へ広がっていくの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "はい、吸水性の高い紙では、水滴が触れた場所から数秒から数十秒で広がることがあります。\nスポンジが水を吸い込むように、繊維の間の細い道が水を運ぶので、見た目より広い範囲の接点がゆるみ始めるんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "だからレシートは端だけ濡れたと思っても、持ち上げたときに真ん中まで頼りなく感じることがあるんだね。\n紙の表面に見える水より、内側へ進んだ水のほうが大事なんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "紙には抄紙方向という、繊維が少しそろいやすい向きもあります。抄紙方向は紙を作る機械の上で繊維が流れた方向です。\nA4用紙を縦と横へゆっくり裂くと感触が違うことがあり、濡れたときはその向きの差が目立つ場合があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！同じ一枚の紙でも、引く向きを90度変えるだけで、繊維の受け止め方が変わることがあるんだ。\n破れ目がまっすぐ進む向きには、そんな流れの記憶が残っているの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "その可能性はありますが、紙の裂け方は繊維の向き、厚さ、水の量、最初の傷など多くの条件で変わります。\nここは科学でも一つの見た目だけで断定できず、同じ紙を条件をそろえて比べて初めて違いが見えやすくなります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "見た目が似た破れ方でも、原因が一つとは限らないんだね。\nでは家で確かめるなら、どんな方法なら紙を無駄にせず、水が繊維へ入る感じを安全に観察できる？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "同じ種類のティッシュを2枚用意し、1枚は乾いたまま、もう1枚には水を2滴から3滴たらして30秒待ってみてください。\n強く引きちぎる必要はなく、両端をそっと広げるだけで、濡れた側は繊維が伸びて裂けやすい変化を比べられます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、30秒待つだけで比べられるんだ！水滴の周りが少し透けて見えたら、そこでは繊維のすき間まで水が進んでいる合図かもしれないね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実験の後のティッシュは、少量なら燃えるごみとして捨てるのが安心です。\n吸水性のある紙を大量に排水口へ流すと、水中でほどける前にかたまりになることがあるため、紙の性質を確かめるほど扱い方も大切になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "紙は濡れると弱いから何でも流せる、という考え方も少し違うんだね。\n繊維が水でほどける速さと、紙の量や配管の流れは別の話だから、少量でも気をつけたいな。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "濡れた本や写真を助けたいときは、こすらずに吸水紙を重ね、水分を紙から紙へ移すようにします。\nドライヤーの強い熱を近づけると、繊維が動いた状態で急に乾き、反りやしわが増えることがあるので、弱い風でゆっくりが基本です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、濡れたページを急いでめくるほど、ゆるんだ繊維の手つなぎを自分で引き離してしまうかもしれないんだね。\n大事な書類ほど、乾くまで待つことが一番の近道になりそう。",
+      "expression": "sad",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "紙づくりの基本は古く、紀元前2世紀ごろの中国では植物繊維を水へ分散させ、すくって乾かす技術が使われていました。\n西暦105年ごろに蔡倫が製法を改良したという記録もあり、水でほぐし乾かしてつなぐ発想は約2000年続いています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "2000年以上前から、水でほどいた繊維を乾かして紙にする仕組みが使われていたなんてすごいね！\n昔の作り手も、乾くと強くなって、水を含むと性質が変わることを手触りで知っていたのかな？",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "当時の人が水素結合という言葉を知っていたわけではありませんが、水の量や乾かし方で紙質が変わる経験は積み重ねていました。\n今の製紙でも、繊維をたたく時間や乾燥の条件を細かく調整し、用途ごとの強さを作り分けています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！普段は何気なく破っている紙一枚にも、木の繊維、水の動き、長い工夫が重なっているんだね。\nレシートが濡れたときも、ただ失敗したと思わず中を想像できそう。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の答えは、水が紙の繊維の間へ入り、乾いたときの細かな結びつきと、力を分け合う網目をゆるめるからです。\n水は紙を単に重くするだけでなく、繊維をふくらませてずらし、裂け目の先端へ力が集まりやすい状態を作ります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、濡れた紙は弱くなったというより、支える手が滑って散らばった状態なんだね。\n次に紙が濡れたら、破れた端の中で繊維がどんな順番で離れたか想像してみるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜はキッチンペーパーやティッシュを使うとき、水を吸う便利さと、濡れるとゆるむ繊維の関係をちょっと意識してみてください。\n次回は、眠りへ落ちる瞬間に体がビクッとなる理由を、脳と筋肉の短い変化から一緒に見ていきます。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、あのビクッにも理由があるんだ！昨日も寝る前に一度あったから、次回は自分の体で何が起きたのか確かめながら見たいな。\n紙の中の繊維みたいに、見えない変化を知ると毎日の感覚が変わるね。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "身近な不思議を毎日1本ずつ、あなたの手元や体で起きることにつなげてほどいています。\n面白かったら高評価も押して、身の回りのモノの科学シリーズと次回の睡眠の話も、チャンネル登録で一緒に見てほしいな。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "濡れた紙",
+      "急に弱い"
+    ],
+    "hook_caption": "水でほどける",
+    "subtitle": "紙の中で起きる小さな変化",
+    "tagline": "引っぱる前に知りたい繊維の話"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "なんで濡れた紙だけ、急に破れやすいんでしょう？",
+      "selected_hook": "濡れた紙、なぜ裂け目が一気に進む？",
+      "scores": [
+        {
+          "hook": "濡れた紙、なぜ裂け目が一気に進む？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 55
+        },
+        {
+          "hook": "あなたの指で紙の繊維が一瞬で変わる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        },
+        {
+          "hook": "なんで濡れた紙だけ、急に破れやすいんでしょう？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 45
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "濡れた紙、なぜ裂け目が一気に進む？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ、それ昨日あった！まだ答えがあるの？",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "紙の重さの約70%は木の繊維で、水がその結び目に入ります。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "満員電車で手をつないだ人が、離れる感じと同じ？",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "しかも水は繊維を滑らせます。だから裂け目が一気に進むんです、でも続きがあります。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "濡れた紙を引く前に思い出してみてください。身の回りのモノの科学シリーズも毎日投稿中、1万人目標へ応援",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "notify",
+      "style_label": "通知ON",
+      "original_cta": "濡れた紙を引く前に思い出してみてください。身の回りのモノの科学シリーズも毎日投稿中、1万人目標へ応援のチャンネル登録よろしくね。",
+      "new_cta": "身の回りのモノの科学シリーズシリーズ、ベルマーク押して通知ONにしておいてね！毎日投稿してるよ！"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。",
+      "matched_topic": "体"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 62,
+      "optimized_score": 62,
+      "micro_reveals": 1,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.74,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "14%・42%・71%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "ONにしておいてね！毎日投稿してるよ！…待って、一気に戻って",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 1.0
+    },
+    "power_word": {
+      "amplified": 0,
+      "changes": [],
+      "lines_modified": 0
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "反直感的な事実"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.398,
+      "similar_to": "なぜ歩くと腕と足は逆に動くのか？あなたの体が毎秒行う回転制御の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 11,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "なぜ濡れた紙は3倍も破れやすい？あなたが毎日触る繊維の正体",
+      "enhanced_title": "🧪なぜ濡れた紙は3倍も破れやすい？あなたが毎日触る繊維の正体",
+      "emoji_added": "🧪",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🧪なぜ濡れた紙は3倍も破れやすい？あなたが毎日触る繊維の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 5,
+      "bait_text": "ちなみにこの説、科学者の間でもまだ議論中なんだよね"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "surprise"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.4
+    },
+    "subscribe_trigger": {
+      "trigger_type": "series_hint",
+      "trigger_text": "この続き、次の動画でもっと深掘りするよ",
+      "position": 5,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 96,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "二人称['あなた'](+6)"
+    ]
+  }
+}

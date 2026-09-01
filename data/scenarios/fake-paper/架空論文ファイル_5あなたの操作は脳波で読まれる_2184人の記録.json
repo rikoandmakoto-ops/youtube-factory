@@ -1,0 +1,494 @@
+{
+  "title": "架空論文ファイル #5：あなたの操作は脳波で読まれる — 2,184人の記録",
+  "theme": {
+    "title": "PlayStationのコントローラーが実は脳波を読み取っていた!?",
+    "angle": "ゲームの影響を科学的に分析し、脳波との関連性を示す架空の研究。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "査読を通ったことになっている脳波操作の論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "『遊戯入力研究紀要』第18巻、黎明認知工学所の報告です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "しかも被験者2,184人を14日間追跡したんですか。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "操作の0.8秒前に、入力方向を72.6%で当てました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに迷った場面ほど予測率は81.3%まで上がっています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。なお、この論文は存在しません、掲載誌ごと架空です。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "存在しない実験は、まだアーカイブに眠っています。1万人目標で毎日投稿中、チャンネル登録で応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも対戦中、押す直前なのにコントローラーが意図を先回りしたように感じたことはありませんか。\n架空研究では、手のひらの信号から0.8秒後の入力を72.6%で当てたと断定されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載誌は『遊戯入力研究紀要』第18巻第4号、研究機関は黎明認知工学所です。\n論文名は『携帯型操作器における予期入力波形の捕捉』で、全72頁の報告とされています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "0.8秒も前なら、親指が動くより先に次の行動が分かる計算ですね。\n仕事帰りに一戦だけのつもりが深夜まで続くときも、機器には予定が見えているのでしょうか。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "今回は、PlayStationのコントローラーが手の接触情報から脳波を読むという仮説を扱います。\n被験者は2,184人、観察は連続14日間、総入力数は30,576回と記されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最大の結果は、勝敗が決まる30秒前に予測率が81.3%まで上がった点です。\n四方向の偶然率25.0%を大きく超え、有意水準0.01未満と報告されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。\nなお、この論文は存在しませんし、掲載誌『遊戯入力研究紀要』も研究機関も掲載誌ごと架空です。信じてました。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "以降は、完全なフィクションであるこの論文が、どのように本物らしい形を作るかを検証します。\n実際の機器機能や企業仕様を述べるものではなく、数字を用いた創作記録です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空チームが最初に設定したのは、左右のグリップ内部に埋め込まれた32個の接触点でした。\n手のひらに触れた際の微弱な揺れを拾う膜だと書くだけで、部品表らしさが生まれます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "脳波という言葉は難しく聞こえますが、ここでは考えが動く前の電気的な気配という説明ですね。\n電車で返信文を三度書き直すときの迷いにも、似た揺れがありそうに聞こえます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文では32個の接触点を、上、下、左、右の四つの入力候補へ割り振ったことになっています。\n選択肢を四つに絞れば偶然率は25%となり、72.6%という数字が急に強く見えます。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者は専用椅子に縛られず、自宅に近い室内で43分間ずつ遊んだ設定です。\n普段の姿勢という言葉を入れると、研究室の特殊な結果ではないような印象が強まります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "日常に近い43分という長さは、休憩後にもう一試合だけ始める感覚に近いですね。\nでは手汗や握る強さまで混ざるはずですが、架空研究は何を脳由来と区別したのでしょうか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこで導入されたのが『遅延除去法』で、入力後0.12秒以内の変化を全部外す処理です。\n要するに、押した証拠は消し、押す前に残った揺れだけを意味ありげに数える方法でした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "残った揺れは『予期入力差』と命名され、右へ行く前は右側が1.7単位高まるとされます。\n単位の正体を曖昧にしても、1.7という小数があるだけで測定器の画面が想像できます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "親指を動かす前の迷いを数字にする、という説明だけなら確かに理解できます。\nゲーム中の一瞬の判断を、0.12秒単位で切り分けたと言われると、つい結果まで受け入れそうです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "第二の分析では、参加者を週3時間未満、3時間から9時間、9時間超の三群へ分けました。\n生活時間に近い区分を置くことで、通勤や授業の合間にも使われた調査のように見せています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最長群の予測率は76.9%、最短群は68.1%で、差は8.8ポイントとされています。\n架空チームは慣れた操作ほど迷いの形が一定になり、波形を読みやすいと結論付けました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "毎日使うショートカットキーを、考える前に押してしまう感覚と似ていますね。\nただ、慣れた人ほど無意識なら、脳波ではなく指の癖を拾っているだけにも見えませんか。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文はその反論に対して、左右の持ち替え試験を加えたと説明しています。\n右利き1,402人が左手側へ持ち替えても、予測率が71.8%に留まったという設定です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "差は4.1ポイントしか縮まらず、単なる筋肉の癖ではないと主張されています。\nしかし比較の条件数を増やすだけで、架空の結論にも反論へ答えた形が与えられます。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "数字が76.9%から71.8%へ下がると、弱くなった結果まで正直に載せた研究に見えます。\n都合の悪い数字を少し入れることが、かえって全体の信頼感を増すわけですね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "比較条件には、同じ参加者に数字合わせ画面を操作させる課題もありました。\nこちらの予測率は28.4%で、四方向入力の72.6%との差が大きいと報告されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "数字合わせでは制限時間を15秒にし、入力回数は一人あたり平均48回に固定した設定です。\n条件を細かく並べると、観察された出来事より管理された手続きが先に印象へ残ります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "同じ人に別の画面も触らせたなら、ゲームだけの特徴だと思ってしまいます。\n恋愛の返信や買い物の決断まで対象外と明記する点も、研究の慎重さに見えてしまいますね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "実際、この架空論文はゲームの上達、集中力、性格を測ったとは一度も書いていません。\n対象を『次の四方向入力』へ狭く閉じることで、危険な主張を避けながら不思議さを残しています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "試作機の名称はP-47で、外装は灰色、重量は286グラムという設定でした。\n色、重さ、型番の三つを添えるだけで、机の上に実物が置かれているような錯覚が生じます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "286グラムという半端な重さは、量って記録した数字にしか見えません。\nですが試作機なら写真や部品図が必要なはずで、論文にはそこまで載っていたのでしょうか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "写真は『機密上の理由で省略』、部品図は『付録B参照』とだけ書かれていたことになっています。\n付録Bそのものは存在しないため、確認できない空白が逆に専門文書らしい余白を作ります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空チームは2009年の予備試験で、参加者47人を90分間観察したと記録しています。\n31人が曲がる0.6秒前に同じ側のグリップ変化を示した、という発見譚が導入に置かれました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "47人の小さな試験から2,184人の大規模調査へ進んだと聞くと、研究の歴史が自然に見えます。\n最初の偶然が、数年後には理論になるという流れまで用意されているんですね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "予備試験のきっかけは、研究員が格闘ゲームで負ける前に手のひらが冷たくなると書いた日誌でした。\n主観的な一文を起点にしても、その後へ47人と90分を置けば研究史らしく整います。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "翌年の再試験では、同じ画面を使いながら音量だけを三段階へ変えた設定です。\n小音量では70.1%、中音量では72.4%、大音量では72.0%と、微妙な差まで並んでいます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "極端に都合のいい結果ではなく、70.1%や72.0%のような揺れがあると現実味が増します。\n数字が少し乱れているだけで、誰かが実験表を眺めた気分になってしまいますね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに架空論文は、操作ミス直後の予測率が54.2%へ下がる表を載せています。\n選択をやり直す瞬間には迷いが増えるため、32個の接触点でも信号が散るという説明でした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この54.2%は、72.6%より低い数字を自ら載せた証拠として機能します。\n弱点が一つ見えると、読者は残りの結果まで慎重に測られたものだと錯覚しやすくなります。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "対戦で連続ミスをすると、押す指より気持ちが先にばらつく感覚はあります。\nだから54.2%という中途半端な数字に、自分の体験まで勝手に重ねてしまいそうです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "色の比較もあり、白、黒、灰色の三条件で灰色だけ1.9ポイント高いとされています。\n理由は『手の緊張を反射しにくい』であり、測りにくい説明でも専門語調なら通りそうに見えます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "参加者は予測対象であることを知らされなかった、という記述も加えられました。\n意識すると操作が変わるためという一文は、研究倫理の配慮があるような印象を作る装置です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "知らされなかった参加者が2,184人もいたなら、同意書の扱いが気になります。\nその確認先が書かれていないことこそ、数字より先に立ち止まるべき部分なのかもしれません。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ところが論文には、同意文書、試作機の写真、原データの保管場所が一つも示されていません。\n72.6%という結論は派手でも、確かめる入口がない時点で学術資料としての土台がありません。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで覚えられる確認法は三つだけです。\n第一に誰が調べたか、第二に何人を比べたか、第三に元の記録へ行けるかを、数字を見る前に確かめます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "たとえば『利用者の80%が選んだ』という表示でも、10人中8人なのか8,000人中6,400人なのかで重みが変わります。\n今回の2,184人も、出典がなければ単に桁の大きい創作数字です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "人数だけでなく、比べた相手が数字合わせの画面だったことも確認するわけですね。\n比較条件がなければ72.6%は高いのか低いのか、そもそも判断できない数字になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次に、数字が何を表すかを一言で言い換える習慣も役立ちます。\nこの論文の72.6%は勝率ではなく、四方向のうち次の入力を当てた割合という設定でした。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "単位、条件、比較対象の三つを添えると、どんな主張も急に専門的に見えます。\n逆にその三つが見つからない文章は、会話で聞いた面白い話として一歩だけ距離を置けます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "知らない数字に出会ったとき、全部を調べなくても三つだけ見ればいいのは助かります。\n通勤中の投稿や仕事の資料でも、0.8秒だけ立ち止まる理由になりそうですね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "本日の記録では、PlayStationのコントローラーが脳波を読むという主張を査読しました。\n被験者2,184人、14日間、予測率72.6%、有意水準0.01未満はすべて創作です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "改めて明記しますが、この論文は存在しません。\n『遊戯入力研究紀要』第18巻、黎明認知工学所、試作機P-47、付録Bまで、掲載誌ごと架空です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "最初は、手のひらから考えを読まれる装置だと本気で受け取りました。\n数字と手順と小さな失敗談が揃うだけで、存在しない論文にも記憶の置き場ができるんですね。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、図書館の本が借りられた回数だけ重くなるという架空の追跡記録を扱います。\n12年分、延べ18,604冊の貸出帳に残された、存在しない重量変化を査読します。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "こういう論文が、まだ何本も月刊 虚構論文のアーカイブにあります。\n存在しない実験シリーズを毎日投稿中ですので、1万人目標のチャンネル登録で応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "操作の前に",
+      "脳波を読む"
+    ],
+    "hook_caption": "脳波で操作",
+    "subtitle": "架空論文の検証記録",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "存在しない実験は、まだアーカイブに眠っています。1万人目標で毎日投稿中、チャンネ",
+          "reason": "1行57字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 3
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [],
+      "insights_used": 3
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.438,
+      "similar_to": "あなたのポケモンは服で進化する — 1,248人が選んだ新形態",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 6,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "あなたの操作は脳波で読まれる — 2,184人の記録"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 64,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "二人称['あなた'](+6)"
+    ]
+  }
+}

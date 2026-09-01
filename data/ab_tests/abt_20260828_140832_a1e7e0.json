@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260828_140832_a1e7e0",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "ぬらりひょんの正体が怖すぎる — なぜあなたの家に勝手に上がるのか【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "昭和の妖怪本が作った『総大将』像を剥がし、原典で何者だったのかを突き止める\nこれ知ってた？ あなたもぬらりひょんを妖怪の総大将だと思っていたなら、その像は1930年代から1970年代の本と創作で強く固まった可能性があるんだ。\nゲームで見る大物感とは、入口か / ぬらりひょんって、好きな人かなり多いよね。妖怪ウォッチでも飄々として強そうで、あの余裕のある顔が好きなやつ！\nでも総大将じゃないかもって、いきなり何が違うの？ / ゲームだとこう描かれてるけど、元の伝承では多数の妖怪を率いる王とは限らない。\n家へするりと入り込み、家主のような顔をして座敷にいる、名前も身元も聞きにくい客として語られたんだ。",
+  "generated_at": "2026-08-28T14:08:32.890124Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "ぬらりひょんはなぜ家主の顔で勝手に上がるのか？【ショート】",
+      "thumb_copy": [
+        "総大将じゃない",
+        "家にいる正体"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "1930年代に定着？ぬらりひょん総大将説の正体【ショート】",
+      "thumb_copy": [
+        "90年前の妖怪像",
+        "原典は侵入者"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は総大将ではない？ぬらりひょんの怖すぎる原典【ショート】",
+      "thumb_copy": [
+        "座敷に勝手にいる",
+        "正体不明の客"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "ぬらりひょんはなぜ家主の顔で勝手に上がるのか？【ショート】",
+    "thumb_copy": [
+      "総大将じゃない",
+      "家にいる正体"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "81DW_QyWZMs",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.014285714285714285,
+    "impressions": 210,
+    "views": 1111,
+    "published_at": "2026-08-19T09:30:28Z",
+    "updated_at": "2026-08-31T14:10:11.106340Z"
+  }
+}

@@ -75,5 +75,14 @@
   },
   "openai_used": true,
   "claude_used": false,
-  "actual_metrics": null
+  "actual_metrics": {
+    "video_id": "WM5Z5qP9tfw",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.003947368421052632,
+    "impressions": 760,
+    "views": 716,
+    "published_at": "2026-08-09T00:12:02Z",
+    "updated_at": "2026-08-31T14:07:42.459820Z"
+  }
 }

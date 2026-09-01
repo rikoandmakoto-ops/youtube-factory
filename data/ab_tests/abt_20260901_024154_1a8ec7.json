@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260901_024154_1a8ec7",
+  "channel_id": "company-facts",
+  "theme": {
+    "title": "セブン銀行の年間休日130日、平均年収も数字で解説【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "身近な銀行サービス企業の平均年収、年間休日、育休取得率に焦点を当てる",
+  "generated_at": "2026-09-01T02:41:54.501409Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "セブン銀行はなぜ年間休日130日？平均年収と育休率も解説【ショート】",
+      "thumb_copy": [
+        "休日130日って",
+        "銀行なのに本当？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "年間休日130日！セブン銀行の平均年収・育休取得率を数字で解説【ショート】",
+      "thumb_copy": [
+        "年間休日130日",
+        "年収・育休率も"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は休みが多い銀行だった！セブン銀行の年収・休日・育休率【ショート】",
+      "thumb_copy": [
+        "実は銀行なのに",
+        "年間休日130日"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "セブン銀行はなぜ年間休日130日？平均年収と育休率も解説【ショート】",
+    "thumb_copy": [
+      "休日130日って",
+      "銀行なのに本当？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

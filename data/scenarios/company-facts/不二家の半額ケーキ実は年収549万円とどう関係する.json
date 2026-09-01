@@ -1,0 +1,326 @@
+{
+  "title": "💸不二家の半額ケーキ、実は年収549万円とどう関係する？",
+  "theme": {
+    "title": "不二家のケーキ半額の裏側",
+    "angle": "不二家の福利厚生や年収がセールにどう影響しているかを探る。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "半額セールの裏側",
+      "fact_main": "不二家 年収549万円",
+      "fact_sub": "2024年12月期 有報",
+      "text": "あなたは知ってる？半額ケーキの意外な企業の実態",
+      "bg_query": "株式会社不二家 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "賞与 2.2か月分",
+      "fact_sub": "年収からの概算",
+      "text": "平均信じられない年収549万円には賞与も含まれます。若手の手取りとは分けて見る必要があります…マジか！",
+      "bg_query": "株式会社不二家 本社 外観",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "有休取得率 57.8%",
+      "fact_sub": "2024年12月期 有報",
+      "text": "有休取得率は57.8パーセントです。数字だけ見れば、かなり良いとは言い切れません。",
+      "bg_query": "株式会社不二家 工場 製造",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "女性管理職 16.7%",
+      "fact_sub": "2024年12月期 有報",
+      "text": "女性管理職比率は16.7パーセントです。実はこの裏で、店舗現場の担い手もいます。決算書を直接読み込んで分析しているから、精度が違う",
+      "bg_query": "株式会社不二家 ケーキ 売り場",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "定価の50%引き",
+      "fact_sub": "店舗・対象商品で異なる",
+      "text": "元社員の証言がさらに衝撃的で、閉店前の食品ロス対策で、常設制度ではありません。ここまで聞いて、あなたならどの企業を選ぶ？",
+      "bg_query": "株式会社不二家 ケーキ ショーケース",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "食品廃棄 0個が目標",
+      "fact_sub": "値引きは在庫調整の一部",
+      "text": "廃棄を0個に近づけるには値引きも必要です。ただし、半額の有無は店舗判断と推定されます。…だが、数字の裏にはさらに驚きの事実がある",
+      "bg_query": "株式会社不二家 ペコちゃん 店舗",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "他の企業もチェック",
+      "fact_sub": "プロフィールから見れます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。…待って、半額に戻って",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "半額の裏側",
+      "年収549万"
+    ],
+    "subtitle": "不二家の働き方と値引き",
+    "tagline": "数字だけ見れば、かなり良い"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": false,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "年収549万円。ただし、半額ケーキには別の理由があります。",
+      "selected_hook": "あなたは知ってる？半額ケーキの意外な企業の実態",
+      "scores": [
+        {
+          "hook": "あなたは知ってる？半額ケーキの意外な企業の実態",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 60
+        },
+        {
+          "hook": "えっ、年収549万円でも半額ケーキを選ぶ理由？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 17,
+            "loop_connect": 5
+          },
+          "total": 52
+        },
+        {
+          "hook": "年収549万円。ただし、半額ケーキには別の理由があります。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        4
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたは知ってる？半額ケーキの意外な企業の実態",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "平均年収549万円には賞与も含まれます。若手の手取りとは分けて見る必要があります。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "有休取得率は57.8パーセントです。数字だけ見れば、かなり良いとは言い切れません。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "女性管理職比率は16.7パーセントです。実はこの裏で、店舗現場の担い手もいます。",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "半額は定価の50パーセント引きです。閉店前の食品ロス対策で、常設制度ではありません。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "廃棄を0個に近づけるには値引きも必要です。ただし、半額の有無は店舗判断と推定されます。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 6,
+          "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+          "tension": 0,
+          "is_dead": true
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 3,
+        "shareability": 7,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 72,
+      "optimized_score": 72,
+      "micro_reveals": 1,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.72,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "71%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "の企業の実態シリーズもチェックしてね。…待って、半額に戻って",
+      "keyword_overlap_before": 0.4,
+      "keyword_overlap_after": 0.6
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「年収」→「信じられない年収」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭に財務数字",
+        "企業の闇要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.48,
+      "similar_to": "ソニーグループの年収がヤバい 1118万円とDualSenseの仕事",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 6,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "不二家の半額ケーキ、実は年収549万円とどう関係する？",
+      "enhanced_title": "💸不二家の半額ケーキ、実は年収549万円とどう関係する？",
+      "emoji_added": "💸",
+      "category": "money",
+      "modified": true
+    },
+    "enhanced_title": "💸不二家の半額ケーキ、実は年収549万円とどう関係する？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "ここまで聞いて、あなたならどの企業を選ぶ？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "neutral",
+        "surprise",
+        "surprise",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "exclaim",
+        "statement",
+        "statement",
+        "question",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "決算書を直接読み込んで分析しているから、精度が違う",
+      "position": 3,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '年収'](+20)",
+      "好奇心ギャップ['？', '実は'](+12)"
+    ]
+  }
+}

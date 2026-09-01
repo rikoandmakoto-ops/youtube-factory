@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260829_140425_bb89be",
+  "channel_id": "pokemon-lab",
+  "theme": {
+    "title": "リザードンとカイリュー、どっちが勝つ？4倍弱点で勝敗がひっくり返る【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "人気ドラゴン対決。4倍弱点をどう処理するかで勝敗が割れる点を実戦想定で比べる\nあなたも一度は迷ったことありませんか？人気トップ級のリザードンとカイリュー、種族値600対534なのに、4倍弱点1発で勝敗が丸ごと壊れる対決なんです。 / え、マジで？カイリューは合計種族値600、リザードンは534で66も差があるでしょ。数字だけならカイリューが余裕で勝ちそうなのに、何が逆転させるの!? / 結論のヒントは、カイリューが攻撃134から撃つ岩技です。\n今日は第9世代、レベル50、テラスタルなしを基準に、先に決着を作る側を数字で暴きます。",
+  "generated_at": "2026-08-29T14:04:25.415141Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "種族値600のカイリューはなぜリザードンに負ける？【ショート】",
+      "thumb_copy": [
+        "600でも負ける？",
+        "4倍弱点の罠"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "種族値差66でも逆転！4倍弱点で決まる竜対決【ショート】",
+      "thumb_copy": [
+        "種族値差66",
+        "岩技1発で逆転"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実はリザードン有利？カイリューの岩技が勝敗を壊す【ショート】",
+      "thumb_copy": [
+        "まさかの逆転劇",
+        "4倍弱点が致命傷"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "種族値600のカイリューはなぜリザードンに負ける？【ショート】",
+    "thumb_copy": [
+      "600でも負ける？",
+      "4倍弱点の罠"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "oKAAtVHrKHE",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.00980392156862745,
+    "impressions": 102,
+    "views": 1632,
+    "published_at": "2026-08-18T09:06:26Z",
+    "updated_at": "2026-08-31T14:06:06.452723Z"
+  }
+}

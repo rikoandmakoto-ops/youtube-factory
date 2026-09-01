@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260830_140705_e75c99",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "ふぶき姫の可愛さはどこから？雪女伝承の“本当は怖い”正体とゲームの落差【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "日本各地の雪女伝承と、作中でのキャラ付けの違いを比較\nあなた、雪女ってただの寒がりな妖怪だと思っていませんか？じつは各地の伝承では全然イメージが違うんです！雪女＝美人のイメージがいつから広まったのかも謎なんですよ。 / 雪女といえば、妖怪ウォッチのふぶき姫も有名だけど、あのキャラ付けは原典の雪女からどれくらい変化してるのか気になりますよね。 / 今回は、日本各地で語られてきた雪女の伝承と、ふぶき姫のキャラクター像を比較しながら、その正体を徹底的に暴いていきます！",
+  "generated_at": "2026-08-30T14:07:05.042202Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "ふぶき姫はなぜ可愛い？雪女伝承に隠れた本当は怖い正体【ショート】",
+      "thumb_copy": [
+        "ふぶき姫の原点",
+        "雪女は怖かった"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3分で判明！ふぶき姫と雪女伝承、可愛さが生まれた決定差【ショート】",
+      "thumb_copy": [
+        "可愛さの決定差",
+        "雪女伝承と比較"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は別物だった！ふぶき姫と雪女伝承の恐ろしいギャップ【ショート】",
+      "thumb_copy": [
+        "実は別物だった",
+        "原典は恐ろしい"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "ふぶき姫はなぜ可愛い？雪女伝承に隠れた本当は怖い正体【ショート】",
+    "thumb_copy": [
+      "ふぶき姫の原点",
+      "雪女は怖かった"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "kV2cD0Z9Oek",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.018134715025906734,
+    "impressions": 386,
+    "views": 1649,
+    "published_at": "2026-08-02T03:50:04Z",
+    "updated_at": "2026-08-31T14:10:10.626783Z"
+  }
+}

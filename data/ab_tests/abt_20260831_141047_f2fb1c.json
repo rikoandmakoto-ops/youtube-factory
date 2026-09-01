@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260831_141047_f2fb1c",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "1分妖怪ファイル #12：👁️両面宿儺に隠された2つの秘密、君は古文書の正体を知ってる？【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "呪術廻戦のキャラクターたちの元ネタを妖怪に探る\nなんで両面宿儺だけ、名前を軽く呼んではいけないのか考えたことある？\n呪術廻戦で20本の指を残す最強格のあいつには、720年成立の『日本書紀』に似た名が残っているんだ。 / 宿儺、好きな人は本当に多いよね。指を集めるほど危険が近づく設定は、ゲームの収集イベントみたいで燃えるのに、古文書まで出てくると急に背中が冷えるよ。 / 作品の両面宿儺は呪術廻戦の公式キャラクターで、古代伝承の人物そのものではない。\nただし二つの顔、四本の手足という輪郭は、飛騨に残る古い記録と不気味に重なるんだ。",
+  "generated_at": "2026-08-31T14:10:47.666166Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "両面宿儺の名を軽く呼べないのはなぜ？古文書に残る異形の正体【ショート】",
+      "thumb_copy": [
+        "名を呼ぶな",
+        "古文書の異形"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "720年の記録に残る両面宿儺｜2つの顔と4本の手足の謎【ショート】",
+      "thumb_copy": [
+        "720年の記録",
+        "2顔4手足の謎"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は呪術だけじゃない｜両面宿儺は飛騨の古記録にいた【ショート】",
+      "thumb_copy": [
+        "宿儺は実在した？",
+        "飛騨に残る記録"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "両面宿儺の名を軽く呼べないのはなぜ？古文書に残る異形の正体【ショート】",
+    "thumb_copy": [
+      "名を呼ぶな",
+      "古文書の異形"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

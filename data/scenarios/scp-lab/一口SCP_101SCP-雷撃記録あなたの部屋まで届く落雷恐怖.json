@@ -1,0 +1,627 @@
+{
+  "title": "一口SCP #101：🫣SCP-雷撃記録、あなたの部屋まで届く落雷恐怖",
+  "theme": {
+    "title": "落雷の恐怖：SCPの視点から見た自然現象の異常性",
+    "angle": "落雷が引き起こす異常事象や影響をSCP的に分析する。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "なぜあなたの部屋に雷撃記録が届くのか？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべきことに、…え、屋内なのに世界が終わるなのか。まだ答えが出てないってこと？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "雷撃監視記録17件で、窓際の職員だけが同じ時刻を口にした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "落雷後、閉じた部屋の天井に濡れた足跡が現れる。財団でも説明できていない。…だが、報告書には続きがあった…これは[データ削除]レベルだ！このレベルの分析は他では見れないぞ",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、ガチで恐ろしいって。記録はここで途切れている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "この手の報告書、実は他にも未公開のものが山ほどある。これ、一番怖いSCPランキング何位だと思う？"
+    },
+    {
+      "speaker": "シロ",
+      "text": "雷撃記録の続きは実は身近なSCPシリーズにもある。毎日投稿中、1万人目標の応援に高評価と登録を残せ。…待って、部屋に戻って",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実はあなたが自分の部屋で雷鳴を聞いた瞬間、窓の外ではなく室内側へ近づく。カーテンを閉めても監視対象は消えず、雷撃監視記録17件がその不在を否定している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、雷は外に落ちるものだろ。自室の机やベッドの横まで危険区域になるなら、学校帰りに雨を避けた部屋さえ逃げ場ではない。いま窓の近くにいる視聴者はどうすればいい。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "回収された17件では、稲光を見た職員だけが同じ時刻を繰り返した。午前2時17分という数字であり、時計が壊れていた例はない。それでも全員の腕時計は、その一分だけ進まなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "これは既存番号の単一オブジェクトではない。財団が雷雨に紛れる異常として隔離した雷撃時異常事象群だ。分類名の後半は[REDACTED]され、閲覧権限3以上の職員にも全文は開示されない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自然現象に紛れるなら、雷雨のたびに現れる可能性があるのか。自宅、教室、部室の窓際まで同じ条件になる。モンスターが檻にいる話より、見分けられないもののほうがまずい。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題は、落雷そのものが収容対象ではない点だ。財団は雷鳴を合図として扱い、その後に現れる濡れた足跡、停止した時計、窓へ向く影を別々の兆候として台帳に登録した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "雷撃監視手順では、警報から10分間、職員は窓と鏡を覆い、部屋の隅へ退避する。理由欄には、外を確認した職員ほど屋内の何かを先に見た、とだけ冷たく記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "窓を見たから危険なのではなく、窓の向こうがこちらを見るのか。…ねえ、これ本当に大丈夫なの？　ただの雷雨なら、武装警備と二重扉まで使う手順にはならないはずだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第一の兆候は、稲光と雷鳴の間隔ではない。光が消えたあと、部屋の中だけが一拍遅れて白くなる現象だ。写真にも監視映像にも残らず、17件の目撃供述だけが同じ順番を示す。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "白くなった室内では、机、制服、スマートフォンの黒い画面まで見えたという。ただし全員が、窓ガラスに映るはずの自分だけは確認できなかった。鏡でも同じ欠落が起きている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分の部屋なのに、自分だけ映らない。そこに立っているのが自分ではない可能性まで考えろということか。ゲームなら画面の影が消えただけで異常だが、これは現実の部屋で起きる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第二の兆候は、雷鳴の直後に聞こえる三回目の音だ。落雷音とは別に、室内で濡れた靴底が一歩だけ鳴る。発生位置は毎回、対象者の背後から約2メートルと記録されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここからが本題だ。その足音を聞いた職員は、振り返らないよう命じられていた。それでも振り返った11名のうち、翌朝まで正常な報告書を書けた者は1名だけだったという記録がある。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "11名中1名だけって、屋内退避は足音から逃げるためなのか。けれど背後にいるなら、部屋の隅へ移動しても距離が縮むだけだ。振り返らないまま、何分耐えればいいんだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "生存した1名は、足音が鳴ったあとも窓を見続けた。窓の外には雨しかなかったが、ガラスの内側にもう一人の自分が立ち、背中だけをこちらへ向けていたと証言している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はその供述を映像記録と照合した。映像には職員が一人だけ映っていた。ただし音声には、雷鳴の直後から職員と同じ声で秒数を数える発話が二重に重なっていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "映っていないのに、同じ声だけが残るのか。録音を再生した職員はどうなった。再生ボタンひとつで、あの部屋に戻されるなら、ファイルを保管すること自体が収容違反にならないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "音声記録は3回の試聴後に封印された。試聴者全員が同じ箇所で息を止め、最後の数字だけを聞き取れなかった。欠落した数字は、紙の記録でも音声でも[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、落雷は異常存在の到着ではない。すでに室内にいる何かが外側へ合図する瞬間とされる。だから窓の外を確かめる行為は、対象の存在を確かめる行為になる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って。雷が鳴る前から部屋にいるなら、白い光も足音も出ていく途中の痕跡なのか。じゃあ雷雨が終わったあとに残るもののほうが危ない。問題はこの次じゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "雷雨後の確認班は、濡れた床を最優先で記録した。水たまりは外から続かず、部屋の中央で始まり、窓の下ではなく寝具や椅子の脇で終わる例が17件中12件に残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "足跡の大きさは対象者本人の靴と一致することがある。しかし左右が逆転している例が確認された。学校の廊下で見慣れた上履きでも、左右だけが反対なら、記録班は触れずに封鎖する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分の靴跡なのに、歩いた覚えのない場所にある。雨で濡れた床を見て、ただの水だと思って踏んだらどうなる。財団はその場合の手順まで決めていたのか。答えが知りたくない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "踏み込んだ場合、職員は足元を見ない。声を出さず、その場から五歩だけ離れる。六歩目を数えた職員は、濡れた足跡が自分の靴底からではなく、天井へ続くのを見たという。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで最も不穏な記録が出る。天井の足跡を見た者は、雷雨がない夜にも雷鳴を聞いた。周囲の住民には何も聞こえず、本人の部屋の時計だけが午前2時17分を指して止まった。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "雷雨が終わっても終わらないのか。最初の警報が落雷の危険ではなく、誰かが室内にいる合図なら、晴れた夜でも安心できない。これが最初の11名より怖い理由だろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団では、この後続現象を残響と呼んだ。ただし残響は音ではない。時計、鏡、濡れた窓、充電中の画面など、室内で光を返す場所にだけ、対象者と同じ輪郭を残す。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残響を確認した職員には、単独行動の禁止が出される。監視員は二人一組で対象を見守るが、報告書には監視員二名が同時に同じ影を見た例は一件も記載されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "二人で見れば安全ではないのか。それとも見えてしまうのは、最初に雷を聞いた本人だけなのか。視聴者の部屋に同じ影がいても、家族には見えない可能性があるってことだろ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "観察対象は一貫して、最初の雷鳴を聞いた者の背後へ現れる。財団でも、まだ説明できていない。なぜ音を聞いた者だけが選ばれ、なぜ顔ではなく背中だけが残るのかは不明だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "古い地方支部の保管庫には、1930年代の手書き報告が残っていた。雷雨の夜、宿直員が窓を釘で塞いだ翌朝、12本の釘の先端すべてに室内側から水滴が付いていたという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "外からの雨なら分かる。でも室内側だけが濡れるなら、窓を塞ぐこと自体が意味を持たない。宿直員はその水滴を拭き取ったのか。それとも触れずに、朝まで椅子に座っていたのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "宿直員は拭き取らなかった。水滴は正午まで残り、その後、窓から遠い壁紙に一列で移った。報告書には、壁の向こうから同じ宿直員の咳が聞こえた、とだけ書かれている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録はここで途切れている。支部は翌月に閉鎖され、職員名簿の一部が削除された。閉鎖理由は設備老朽化とされたが、財団内部では雷撃残響の初期事例として今も閲覧制限下にある。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "設備が古いから閉めた、では済ませられない記録だ。壁の向こうで自分の咳が聞こえたなら、部屋に残ったのは誰なんだ。外へ出た宿直員が本物だった保証も、どこにもない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "近年の監視手順では、雷鳴を聞いた後に自分の声が別の場所から聞こえても、返事をしない。返答した職員は、以後の供述で自分の名前を一人称として使えなくなった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "名前を失った職員は、自分を指すとき必ず「窓の前にいた者」と表現した。その者たちは皆、雷鳴が鳴る前から窓の前に誰か立っていた気がする、と同じ一文を残している。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最初から誰かいた気がする、という記憶まで侵食されるのか。自分の部屋で一人だったはずの時間が、後から別の誰かの時間になる。ちょっと待って、怖いって。誰にも確かめられない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の対応は単純だ。雷雨中は窓を見ない。鏡や黒い画面を覗かない。背後の足音に反応しない。この三つは対象を消す方法ではなく、対象に気づかれないための最低限の手順だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "室内にいる時、カーテンを閉じる前に外を確認し直す必要はない。確認しようとする行為そのものが、監視記録では最初の接触として扱われる。答え合わせは、してはならない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "外が気になって窓へ近づくほど危険なら、雷を怖がる理由まで変わるな。落ちた場所ではなく、見た場所が残る。次の雷鳴で窓がただの窓に見えなくなるのは、もう避けられない。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "停電した場合も、スマートフォンのライトで窓を照らしてはいけない。光がガラスに返ると、自分の輪郭を探すことになる。財団では懐中電灯を床へ向け、窓から離れるよう指示する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "床に濡れた跡を見つけても、写真を撮らない。残響は画像に残らないはずだが、撮影者が後から画像を見返した時だけ、足跡の数を違って数える例が6件報告されている。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "画像に残らないのに、見返すと数だけ増える。自分の目の記憶を疑わせて、もう一度見せようとするのか。安全手順が全部、見ないための命令になっている理由が分かる。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの事象を完全収容したとは宣言していない。雷雨は世界中で起き、個々の落雷を封じることはできない。だから記録を残し、異常の条件だけを切り分けて警告するしかない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "条件のうち確実なのは一つだけだ。雷鳴の後、室内が不自然に白く見えたなら、その部屋には一人分多い影があるかもしれない。人数を数えようとするな、と手順書は命じる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "一人分多い影って、部屋に一人しかいないほど確かめたくなる。けれど数えた瞬間に、影のほうから数え返されるかもしれない。聞かなきゃよかった。本当に、窓を見たくない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の疑問に戻る。なぜ財団は雷雨中、職員を屋内へ閉じ込めるのか。それは外の落雷から守るためだけではない。雷鳴の時点で室内にいるものを、外へ出さないためでもある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、外へ出られないのが誰なのかは確定していない。退避した職員なのか、窓に映らなかった影なのか。最終記録の署名欄には、同じ名前が二つ並んでいたという。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "署名が二つあるなら、屋内に閉じ込められたのは一人じゃない。次の雷雨で部屋に残るのが自分なのか、自分の形をした何かなのか。そこだけは答えが残っていない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この記録群はSCP財団Wikiの創作設定と、CC BY-SA 3.0の利用条件に基づく二次構成だ。原典の雷撃関連ファイルは断片的であり、固有の被害者名と所在地はすべて伏せられている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-106「オールド・マン」の隔離記録を扱う。壁の向こうへ消えた職員が、なぜ救難信号だけを残せたのか。回収班の記録にも、説明不能な空白が残されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この雷撃ファイルが届いたなら、高評価を残せ。実は身近なSCPシリーズには、日常の隙間に残された他の異常記録も保管されている。見かけても、決して近づくな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "登録すれば、毎日投稿する次の機密報告書が届く。チャンネル登録者1万人を目標にしている。応援を残す前に、いまいる部屋の窓だけは見ないほうがいい。雷鳴は外からだけ聞こえるとは限らない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "雷は外だけ",
+      "ではない"
+    ],
+    "hook_caption": "部屋まで落ちる",
+    "subtitle": "財団雷撃監視記録",
+    "tagline": "窓の外を見た者から消えた"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "なんでこのSCPだけ、雷雨中に職員を屋内へ閉じ込めるのか。",
+      "selected_hook": "なぜあなたの部屋に雷撃記録が届くのか？",
+      "scores": [
+        {
+          "hook": "なぜあなたの部屋に雷撃記録が届くのか？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 15
+          },
+          "total": 68
+        },
+        {
+          "hook": "驚き！あなたの部屋まで続く禁忌のSCP記録",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 40
+        },
+        {
+          "hook": "なんでこのSCPだけ、雷雨中に職員を屋内へ閉じ込めるのか。",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 38
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "なぜあなたの部屋に雷撃記録が届くのか？",
+          "tension": 7,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、屋内なのに危険なのか。まだ答えが出てないってこと？",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "雷撃監視記録17件で、窓際の職員だけが同じ時刻を口にした。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "落雷後、閉じた部屋の天井に濡れた足跡が現れる。財団でも説明できていない。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "ちょっと待って、怖いって。記録はここで途切れている。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "雷撃記録の続きは実は身近なSCPシリーズにもある。毎日投稿中、1万人目標の応援に高評価と登録を残せ。",
+          "tension": 5,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "この手の報告書、実は他にも未公開のものが山ほどある。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 31,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 11,
+        "emotional_impact": 3,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 72,
+      "optimized_score": 72,
+      "micro_reveals": 1,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.21,
+      "issues": [
+        "14%・42%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "1万人目標の応援に高評価と登録を残せ。…待って、部屋に戻って",
+      "keyword_overlap_before": 0.5,
+      "keyword_overlap_after": 1.0
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「危険」→「世界が終わる」",
+        "「怖い」→「ガチで恐ろしい」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.459,
+      "similar_to": "SCP-1523-JP「かまいたち」— 被害記録17件、傷だけ残った夜",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 11,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-雷撃記録、あなたの部屋まで届く落雷恐怖",
+      "enhanced_title": "🫣SCP-雷撃記録、あなたの部屋まで届く落雷恐怖",
+      "emoji_added": "🫣",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "🫣SCP-雷撃記録、あなたの部屋まで届く落雷恐怖"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 5,
+      "bait_text": "これ、一番怖いSCPランキング何位だと思う？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "negative",
+        "surprise",
+        "surprise"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "question",
+        "statement",
+        "exclaim",
+        "statement",
+        "question",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "このレベルの分析は他では見れないぞ",
+      "position": 3,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 4,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 64,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "二人称['あなた'](+6)"
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260901_024145_cc33b0",
+  "channel_id": "company-facts",
+  "theme": {
+    "title": "💸不二家の半額ケーキ、実は年収549万円とどう関係する？【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "不二家の福利厚生や年収がセールにどう影響しているかを探る。",
+  "generated_at": "2026-09-01T02:41:45.353514Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "不二家の半額ケーキ、なぜ年収549万円と関係するのか？【ショート】",
+      "thumb_copy": [
+        "半額ケーキの裏側",
+        "年収549万円の謎"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "年収549万円！不二家の半額ケーキを支える福利厚生とは【ショート】",
+      "thumb_copy": [
+        "年収549万円の実態",
+        "半額セールの秘密"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は社員待遇がカギ？不二家の半額ケーキ、その意外な仕組み【ショート】",
+      "thumb_copy": [
+        "半額の真相はコレ",
+        "社員待遇がカギ？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "不二家の半額ケーキ、なぜ年収549万円と関係するのか？【ショート】",
+    "thumb_copy": [
+      "半額ケーキの裏側",
+      "年収549万円の謎"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

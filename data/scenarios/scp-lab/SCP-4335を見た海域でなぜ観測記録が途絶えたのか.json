@@ -1,0 +1,692 @@
+{
+  "title": "SCP-4335を見た海域で、なぜ観測記録が途絶えたのか？",
+  "theme": {
+    "title": "SCP-4335「終末の鯨」、Apollyonクラスが意味する収容も終了も不可能という恐怖",
+    "angle": "KeterとApollyonの分類基準の差異を財団内部文書から掘り下げ、存在するだけで世界が終わる理由を解説"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "なぜ財団は終末の記録を隠した？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、まだ答えが出てないの？ ガチで恐ろしいって。当初、安全なオブジェクトだと分類された",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかし真の特性は想像を絶するものだった。SCP-4335はApollyon級。収容手順は0件だ…なぜ財団はこれを隠したのか？このレベルの分析は他では見れないぞ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "海にいる鯨ではない。存在した時点で、世界の終わりが近づく。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録はここで途切れている。本当に背筋が凍る理由は、まだ残っている。これ、一番怖いSCPランキング何位だと思う？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Keter級の実態シリーズシリーズ、この財団の記録、まだ続くぞ。チャンネル登録して追え。…待って、財団に戻って",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたが夜の海を見て、鯨のような影を見たと感じた時点で、避難という言葉は遅すぎる。SCP-4335の文書は、海岸から何km逃げるかさえ記していない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実は収容されていない。正確には収容失敗ではなく、収容手順を1行でも書くことが虚偽になるとして、Apollyon級へ置かれた終末の鯨だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、Keterより危険というだけじゃないのか。あなたの部屋や学校が海から何百km離れていても、隠れる場所として数えられないなら、まずくないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4335の異常は、巨大な海洋生物が襲うという単純な話ではない。財団は外見、規模、出現地点の多くを[REDACTED]し、終末だけを分類欄へ残した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書を閲覧した職員の証言には、同じ構図が記録される。鯨が現れて世界が終わるのではない。世界が終わる時だけ、鯨として知覚される可能性があるという記録。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って。それなら見つけた人が危ないんじゃなく、見つける前に何かが決まっているのか。警報を鳴らす側も聞く側も、同じ終末の中にいることになる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団のオブジェクト分類でKeterは、危険だが管理の余地が残る対象を示す。分厚い檻、交代制の監視、複数の封鎖扉のように、失敗後の手順がまだ存在する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Keterは鍵が壊れやすい箱に似ている。鍵を増やし、見張りを置き、壊れた後の再封鎖班を待機させれば、被害は出ても世界の外側に箱を残せる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Apollyonは強さを並べた最上位ではない。財団が何千の施設と職員を使っても、収容も終了も成立しない時にだけ置かれる、組織の敗北記録だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Keterなら失敗しても、次の班が来る余地がある。でもApollyonは次の班を送る場所まで残らないのか。…ねえ、これ本当に大丈夫なの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題はこの次だ。Apollyonは危険度の点数ではない。対象が暴れる規模ではなく、財団が勝利条件そのものを設定できない時に使う、最も冷たい事務上の印だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4335には通常の収容プロトコルがない。保管庫番号、監視員の人数、違反時の封鎖区画、そのどれもが0件ではなく、成立不能として文書から退けられている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容手順欄の空白は、未完成の報告書ではない。何を書いても対策にならず、職員に偽の安心を与えるだけだとして削られた、意図的な空白だという記録。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "空欄なのに、むしろ一番情報が多いみたいで怖いな。学校の避難経路図から出口だけ消えていて、先生が何も説明しない時みたいな沈黙だ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は異常存在を確保し、収容し、保護する組織だ。しかしSCP-4335の前では、その3つの動詞が順に失われる。残された職員は対処者ではなく、記録者になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録者という立場は安全ではない。監視カメラが映像を残しても、施設が消えれば回収者はいない。SCP-4335では、記録を残す行為さえ終末の後追いになる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の一部文書は、対象を止める計画ではなく、出現の確認だけを検討した。だが確認時刻が0時00分でも、対処開始が0時01分なら、すでに遅い可能性がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確認できたら勝ちじゃない。確認できたことが、もう負けの通知かもしれないのか。スマホの警告が届いた瞬間には、逃げ道が消えているみたいで嫌だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "終末の鯨は、海に住む1体の怪物として固定されていない。人類の通信、避難、生活圏、記録の継続まで失わせる条件として扱われ、距離の発想を無効にしている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そのため注意書きでは、接触禁止より先に情報統制が置かれる。近づくな、撮影するな、追跡するなという命令は、対象までの距離を測れる場合にしか役立たない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4335に対し財団が恐れたのは、接近する職員1名の死ではない。地球上の誰もが同じ出来事の内側に入る可能性であり、局地封鎖という手段が最初から使えない点だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "海の向こうなら遠ざかれると思うだろ。でも地図の端まで行っても安全地帯がないなら、世界そのものが檻になって、逃げる人間だけが中にいる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも、まだ説明できていない。SCP-4335が何を望むのか、いつ現れるのか、なぜ鯨という像を伴うのか。核心に関わる時刻、地点、証言は[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だが分類欄のApollyonだけは消されていない。原因の説明より先に、回避不能という結論だけが確定した。答えより結末が先に置かれた、異常に不自然な報告書だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も恐ろしいのは、Apollyonが終末を起こす怪物の称号ではないことだ。終末を止められないと財団が判断し、組織の全資源を引いても手順が作れない時の分類だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり鯨の大きさや牙の数が怖いんじゃない。財団が持つ武装、封鎖、記録、避難計画を全部並べても、使う順番すら決められないことが怖いんだな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Keter対象の収容違反なら、警報が鳴る。赤い表示灯が点滅し、職員は区画を閉じ、再収容班が侵入する。犠牲者が出ても、手順は次の1分へ進むことができる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Apollyonでは、警報を聞く人間が残る保証がない。赤い表示灯が点いたとしても、それを見上げる廊下、扉を閉める手、次の命令を出す管制室まで前提から消える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この差は、難易度が高いゲームと、画面、操作、プレイヤーまで消えるゲームの差に近い。ただしSCP-4335では、電源を切ってやり直す者がいない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "再挑戦の画面が出ないなら、攻略法を探す意味まで消えるな。財団は何度も収容違反を乗り越えてきたのに、これは乗り越えるという言葉を拒んでいる。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "内部文書には、Keterへ再分類すべきだという意見も残る。Keterと書けば、少なくとも何らかの対策が存在するように見える。だがその見た目の安心こそ、最も危険な誤認だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "避難経路のない校舎に、出口という看板だけを増やす行為に似ている。看板を信じた人数が多いほど、実際の出口がない事実に気づく時刻は遅れていく。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Apollyon指定は希望を与えないための分類だ。救えると断言できない状況で、救助計画の形だけを残すことは、終末の前に職員へ嘘を命じることになる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "助かるかもしれないと言われる方が楽なのに、財団はそこを切り捨てたのか。残酷だけど、嘘の避難先へ走らせるよりは、記録の空白の方が正直なのかもしれない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4335の資料では、終末という語が比喩ではなく運用上の前提として使われる。施設を守る計画ではなく、施設が失われた後に記録が残るかを先に問う構成だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それは報告書というより、送信先のない最後の通信に近い。宛先、時刻、担当者を書いても、受信する部署が残る保証はない。文書の形式だけが不気味に維持されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "鯨という呼称には、深い海の静けさが重なる。夜の海で聞こえる低い音を想像するほど、閲覧者は削除された余白へ自分の恐怖を流し込む。財団はその反応さえ警戒した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "姿を詳しく知らない方が、かえって頭から離れないな。暗い部屋で音だけ聞こえて、何がいるか分からない時みたいに、想像したもの全部が鯨の影になる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "確定していないから安全なのではない。SCP-4335は原因も外見も不明瞭なまま、最悪の分類だけが確定している。犯人不明の事件で、判決だけ先に執行されたような状態だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで誤解してはならない。巨大な生物を倒せば解決するなら、財団は攻撃班を編成できる。だがSCP-4335には攻撃、交渉、封鎖の3択が、最初から有効策として残されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説の一つでは、SCP-4335の出現は原因ではなく兆候として扱われた。火災報知器が火を起こすのではないように、鯨が終末を運ぶとは限らないという扱い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "兆候なら鯨を消しても遅い。警報機を壊して静かになっても、火が消えたわけじゃないのと同じか。じゃあ職員は何を相手にすればいいんだよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その仮説にも救いはない。兆候を排除する行為は、終末を一段遅れて追いかけるだけになる。SCP-4335を止める計画が書けない理由は、対象の外側に対処すべきものがあるからだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "別の照合記録では、鯨を知覚した証言と世界規模の損失記録が比較された。具体的な件数、日付、座標は[DATA EXPUNGED]だが、対策不能という結論だけは残された。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "数字を消した理由は不明だ。1件の目撃でも十分だったのか、複数の記録が同じ終点へ向かったのか。財団は答えを伏せたまま、Apollyonという分類で全てを示した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "件数を隠すなら、少なすぎても多すぎても怖いな。1人だけの証言なら孤独が怖いし、全員の証言なら、もう反論する人が残っていない気がする。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "文書の結論欄には、収容手順の策定不能、終了手順の策定不能という二つの不能が並ぶ。閉じ込められず、終わらせられず、待つ行為さえ手順にならないという宣告だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Keterなら危険な箱を持ち続ける選択がある。Apollyonでは箱、鍵、管理者、施設、世界が同じ終末の内側へ沈む。財団の組織図も、ただの紙切れになる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だからSCP-4335の報告書は、勇敢な収容員の勝利を残さない。残るのは削除、空欄、分類、そして読んだ側が帰宅後に窓の外を見られなくなる不安だけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "家に帰って窓の外を見るだけで、海じゃなくても嫌になるな。街灯のない場所や、遠くの雲の下に、見えない輪郭を探してしまいそうだ。聞かなきゃよかった。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "元研究員として言えるのは、財団は万能ではないということだ。無数の異常を保管してきた組織が、SCP-4335には保管番号より先に終末分類を置いた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容とは、対象と社会の間に壁を作る行為だ。SCP-4335では壁の外側が残らない。壁を建てる職員も、壁に守られる人々も、同時に前提から失われる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "終了とは、異常事案へ区切りを与える言葉だ。だが終末の鯨には終了手順がない。対象が終わる前に、終了という命令を出す側が終わる可能性があるからだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容も終了も不可能。その二つが揃うからApollyonなのか。強い敵というより、勝敗を決める場所、時計、ルールまで消える感じだ。嘘だろ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "視聴者が覚えるべきなのは、SCP-4335の姿ではない。姿を確定しようとするほど、削除された記録の余白に自分の恐怖を置くことになる。財団はそれを危険視していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし海辺で不自然な静けさを感じても、それをSCP-4335だと決めつけるな。財団の記録は安易な照合が誤認を増やすとして、詳細な判別法を意図的に残していない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "見かけても、決して近づくな。勇気が足りないからではない。近づくことで解決できる対象ではなく、知った後に日常の輪郭まで変えてしまう報告書だからだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それでも誰かは、写真を撮り、名前を付け、倒せる相手だと信じたくなるだろ。その瞬間こそ、鯨ではなく終末の方へ自分から近づくことになるのかもしれない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも、まだ説明できていない。それでもApollyonの文字だけで、説明より重い判断を下している。未知だから怖いのではない。対策がないと知っているから怖い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録はここで途切れている。途切れた理由が通信断絶か、閲覧制限か、それとも報告者が次の一文を書けなかったのか。残された文書から判断する方法はない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-3008「無限のIKEA」を扱う。出口を探すほど内部へ戻される施設で、財団が保護できなかった人々の記録と、夜ごとに変わる売り場を読む予定だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書が届いたなら、高評価を残せ。SCP-4335のように、読んだ後で自分の部屋や窓の外まで別の場所に見せるファイルは、まだ保管庫に残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "Keter級の実態シリーズを追うなら、登録して次のファイルを待て。終末の鯨を見かけても、決して近づくな。次に途切れる記録が、あなたのものにならないように。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "クレジット: SCP-4335「終末の鯨」およびSCP財団Wikiの関連設定。原典はCC BY-SA 3.0に基づき利用し、本報告は原文の長文転載を避けた要約と考察で構成している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "収容不能",
+      "終末の鯨"
+    ],
+    "hook_caption": "終末は収容不能",
+    "subtitle": "Keterでは終わらない分類",
+    "tagline": "Apollyon級に記された、終了不可能の記録"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "鯨を見た職員が、全員同じ終末を口にした。",
+      "selected_hook": "なぜ財団は終末の記録を隠した？",
+      "scores": [
+        {
+          "hook": "なぜ財団は終末の記録を隠した？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 55
+        },
+        {
+          "hook": "あなたは知ってはいけない記録を読める？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        },
+        {
+          "hook": "鯨を見た職員が、全員同じ終末を口にした。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 28
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "なぜ財団は終末の記録を隠した？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、まだ答えが出てないの？ 怖いって。",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "SCP-4335はApollyon級。収容手順は0件だ。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "海にいる鯨ではない。存在した時点で、世界の終わりが近づく。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "記録はここで途切れている。本当に怖い理由は、まだ残っている。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "高評価を残せ。終末の鯨の続きはKeter級の実態シリーズにある。1万人目標で毎日投稿中、登録で応援よ",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "subscribe",
+      "style_label": "チャンネル登録",
+      "original_cta": "高評価を残せ。終末の鯨の続きはKeter級の実態シリーズにある。1万人目標で毎日投稿中、登録で応援よろしく。",
+      "new_cta": "Keter級の実態シリーズシリーズ、この財団の記録、まだ続くぞ。チャンネル登録して追え。"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 26,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 11,
+        "emotional_impact": 3,
+        "relatability": 0,
+        "shareability": 4,
+        "debate_potential": 3
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "具体的な数字や固有名詞を入れてシェアしやすく",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 66,
+      "optimized_score": 66,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.63,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "50%・66%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "、まだ続くぞ。チャンネル登録して追え。…待って、財団に戻って",
+      "keyword_overlap_before": 0.67,
+      "keyword_overlap_after": 0.67
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「怖い」→「ガチで恐ろしい」",
+        "「怖い」→「背筋が凍る」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.433,
+      "similar_to": "SCP-2480「未完の儀式」記録9名だけが残った収容不能の恐怖",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 20,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-4335「終末の鯨」財団が恐れたApollyon級の収容不能記録",
+      "enhanced_title": "🫣SCP-4335「終末の鯨」財団が恐れたApollyon級の収容不能記録",
+      "emoji_added": "🫣",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "🫣SCP-4335「終末の鯨」財団が恐れたApollyon級の収容不能記録"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "これ、一番怖いSCPランキング何位だと思う？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "negative",
+        "neutral",
+        "neutral",
+        "negative",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "question",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.4
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "このレベルの分析は他では見れないぞ",
+      "position": 2,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 0,
+      "amplified": 0,
+      "frame_injected": true,
+      "contrast_score": 0.5
+    }
+  },
+  "original_title": "一口SCP #111：🫣SCP-4335「終末の鯨」財団が恐れたApollyon級の収容不能記録",
+  "title_duplicate": {
+    "resolved": true,
+    "rejected_title": "一口SCP #111：🫣SCP-4335「終末の鯨」財団が恐れたApollyon級の収容不能記録",
+    "matched": "SCP-4335「終末の鯨」— Apollyonクラスが意味する『収容も終了も不可能』の絶望的定義",
+    "score": 1.0
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  }
+}

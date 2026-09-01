@@ -1,0 +1,638 @@
+{
+  "title": "一口SCP #107：🫣SCP-4885「ジョン・ウィルクス・ブース」写真を見るあなたへ迫る恐怖",
+  "theme": {
+    "title": "SCP-4885「ジョン・ウィルクス・ブース」画像の中から接近する存在の恐怖",
+    "angle": "写真や映像を媒介に距離を詰める異常存在として、発見経緯と閲覧記録の改竄痕跡を追う",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "なぜあなたの身近なSCPに、同じ恐怖が残るのか…？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、消した写真からも来るのか。待って、ガチで恐ろしいって。…だが、報告書には続きがあった",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次の記録が、すべてをヤバいえた。閲覧記録には、同じ画像が3段階で近づいた痕跡が残る…これ、本当にEuclid分類で合っているのか？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ブースの姿は写真の中で移動し、最後は閲覧者の背後へ現れる。さらに恐ろしい事実が判明する。…しかし！ここから逆転が始まる。原文の報告書を精査した上での解説だ",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録はここで途切れている。本当に夜眠れなくなるのは、削除後の画像だ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "こういう記録って、他にも世界中に残ってるんだ。しかし、これで終わりではなかった。…この分類、Euclid派とKeter派で意見割れてるんだが"
+    },
+    {
+      "speaker": "シロ",
+      "text": "画像に残る続きは実は身近なSCPシリーズにもある。1万人目標で毎日投稿中、応援よろしくね。…まさか、冒頭の[編集済]がこれを意味していたのか",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたの部屋にある古い集合写真を、夜に拡大したことはあるか。端の知らない男が昨日より近い気がしたなら、その画像を閉じろ。SCP-4885の報告書は、閲覧者の私室から始まったという記録だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、写真の中の人物が動くってことか。端末を閉じて削除すれば終わると思うだろ。でも自分の部屋まで来るなら、画面から逃げるだけでは足りない。ちょっと待って、怖いって。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実は画像の中だけに留まる存在ではない。閲覧者が見た回数に応じて距離を詰め、最後には現実側の視界へ混ざる。財団でも、まだ説明できていない。問題は画像を消した後だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象はSCP-4885、通称ジョン・ウィルクス・ブース。名は歴史上の人物と一致するが、財団は同一人物だと断定していない。記録に残るのは、写真や映像の片隅に立つ黒い服装の男だけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "歴史にいた人物と同じ名前なのに、本人かどうかも不明なのか。じゃあ画像にいる男は何者なんだ。肖像写真の一部にしか見えなくても、顔を確かめた瞬間、閲覧回数は増えるのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "本件では、顔の判別より接近の記録が重要視された。閲覧された画像では、男が最初は背景の奥に立ち、次の確認時には前景へ移る。静止画なのに位置だけが変わる。編集履歴は一切残らない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "発見の端緒は、財団が回収した複数の画像ファイルだった。撮影日時も撮影場所も違うのに、同じ男が写っていたという記録が残る。最初の確認では、群衆や家具の陰に紛れ、誰も存在を問題視しなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "画像を複製して保管した職員は、元画像と複製画像を並べた。すると男の位置が一致しなかった。片方では窓際、もう片方では撮影者のすぐ近くにいた。コピーは防壁ではなく、接近経路を増やすだけだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それ、学校の集合写真を友達へ送るほど危険が広がるってことか。元の一枚を消しても、保存した側の画面に別の男が残る。誰が最初に見たかまで追えなくなれば、次の閲覧者は増えるだけだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は閲覧を、対象の姿を認識した回数として扱った。画像を一瞬だけ開いた場合でも、記録上は接近段階が進行する例があった。再生停止した映像の一コマでも同様だ。視線を外す速さは保護にならない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、ここからが本題だ。職員が確認したのは画像の変化だけではない。閲覧台帳そのものに、存在しない確認者の名前が書き足されていた。署名欄には、ブースと同じ筆跡らしき線が残されていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "画像を見る側だけじゃなく、記録する紙にまで入ってくるのか。誰がいつ見たかを管理する台帳が、逆にあいつの足跡になる。…ねえ、これ本当に大丈夫なの？　収容室の外にも記録はあるだろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の収容手順では、対象画像を外部記憶媒体へ隔離し、閲覧許可を限定した。しかし許可者が少ないほど、台帳の改竄は目立った。未承認の閲覧時刻が増え、勤務していない職員名まで署名欄に記されていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "改竄された記録には共通点がある。全ての署名が、閲覧予定の直前に追加されていた。つまり誰かが画像を開く前から、対象は次の閲覧者を把握していた可能性がある。財団の仮説に過ぎないが、不穏な一致だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "見る予定まで先に書かれるなら、許可を取る行為そのものが罠になる。端末に触れていない職員の名前まであるなら、次に書かれるのは誰だ。自分の名前が台帳にあったら、その時点で逃げるべきなのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象画像は、収容番号を付けられた後も増殖を止めなかった。新しい画像が作られたのではない。既存の記録の中から、以前は存在しなかった一枚が発見される。ファイル名も撮影者も空欄で、削除日時だけが記されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その削除日時は、発見者が画像を確認する数時間前だった。消されたはずの一枚が、削除後に発見される。閲覧記録の時系列は何度も前後した。職員は訂正を試みたが、訂正線の下から同じ署名が現れたという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "写真内のブースは、最初から被写体の中心にいるわけではない。遠くの廊下、鏡の反射、窓の外など、見落としやすい場所にいる。だが再閲覧ごとに、視聴者の視線が自然に向く位置へ移るという記録が残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "探さなくても目に入る位置へ来るのか。写真の端を避けて見ても、次には中央近くにいる。スマホの通知みたいに、無視したつもりでも画面を占領するなら、見ないという選択がだんだん消されていく。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容手順では、対象の視覚記録を単独で閲覧することが禁止された。二名以上で確認し、互いの背後を監視するよう命じられている。画面を見る役と室内を見る役を分ける。写真の外へ出る段階を想定した配置だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この手順が加えられた理由は、監視映像に残る異常だった。閲覧者の背後には、画像内の男と同じ服装の影が映っていた。職員本人は振り返っていない。映像を確認した担当者も、翌日には同じ影を背後に映した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "映像を確認した人まで次の対象になるなら、監視カメラも安全じゃない。誰かを守るために背後を撮っても、その映像を見るたび影が増える。収容プロトコルが、異常を広げる手順みたいに聞こえる。嘘だろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "映像記録では、影の輪郭だけが段階的に明瞭になる。最初は壁の染み程度だったものが、次には肩と帽子の形を持つ。さらに確認を重ねた記録では、カメラの死角へ移動している。そこから先は映像で追えない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "死角へ移った後、室内の職員が何を見たかは統一されていない。背後に立つ男を見た者もいれば、古い舞台のような赤い幕を見た者もいる。だが全員が、誰かが名前を呼んだと証言した。音声記録は[DATA EXPUNGED]されている。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで注意すべきなのは、対象が歴史を再現しているとは限らない点だ。財団は名称の一致を手掛かりにしたが、画像に現れる男の行動は既知の記録と一致しない。似ているから理解できるのではない。似ているから誤認しやすい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "名前を知っているせいで、何か分かった気になるのが危ないのか。歴史の写真だと思って見たら、別の何かがこっちを見ていた。顔や服が知っている形だから、警戒が遅れる。聞かなきゃよかった。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の保管庫では、対象画像の表示倍率まで制限された。拡大は顔の確認を容易にするが、同時に対象との距離を縮める行為と見なされたためだ。縮小表示でも安全は保証されない。ただ、接近の進行が遅れた記録がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "画像の切り抜きも試された。男の姿を含む部分だけを削除し、背景だけを残す処置だ。しかし削除後の背景には、以前より近い位置で同じ男が現れた。対象を消したのではない。空白を次の立ち位置に変えた可能性がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も警戒されたのは、画像を説明する文章だった。写真を見ていない職員が報告書だけを読んだ後、台帳に署名を残した例がある。文字列そのものが経路かは不明だ。ただし、その署名の横には小さな人物画が描かれていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ今、この報告書を読む行為も危ないのか。写真を直接見なくても、男がいると知っただけで記録に混ざるなら、どこまでが閲覧なんだ。財団でも、まだ説明できていないと言われる方が、余計に嫌だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書には、文章を読んだだけで即時に現れると断言する証拠はない。だが財団は、対象の情報を扱う職員へ背後確認を義務づけた。これは恐慌への配慮ではない。過去の記録で、確認を怠った者だけが消えたからだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "消失した職員の机には、端末と紙の台帳が残された。最後の入力は通常の閲覧報告だった。しかし監査後、入力時刻の二分前に同じ文章が保存されていたと判明する。職員が書いたのか、先に書かされたのかは分からない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "二分という時間差は、複数の端末で繰り返し確認された。未来の記録が先に残り、その通りの行動を職員が取る。予知ではなく、行動の方が記録へ寄せられた可能性が疑われた。だが検証に参加した担当者は退職扱いとなった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分で打った文章なのに、二分前にもう保存されていたら、手を止められるのか。画面にある言葉をなぞるしかなくなる。ゲームのイベントみたいに選択肢が見えていても、全部同じ結末へ向くなら逃げられない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "退職扱いとなった担当者について、正式な転属記録は見つからない。人事ファイルには氏名だけがあり、顔写真の欄は黒く塗り潰されている。その黒塗り部分を画像化した部署では、翌朝ブースの輪郭が確認されたという。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このため財団は、対象に関する資料を完全に消去しない方針へ切り替えた。削除は空白を生み、空白は対象の侵入を隠す。残して監視する方がまだ危険を測れる。収容とは封じることではなく、近づく足音を数えることになった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閲覧記録の改竄痕跡には、もう一つ異様な特徴がある。署名された職員名の一部は、財団に採用される前の人物だった。まだサイトへ来ていない者の名前が、未来の日付ではなく過去の台帳に混じっていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "採用前の名前が過去の台帳にあるなら、その人は財団へ入る前から選ばれていたのか。写真を見たから狙われるんじゃない。最初から記録の中に席を用意されていて、そこへ自分で座りに行くみたいだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの一致を偶然と扱わなかった。採用予定者の身元照会では、古い家族写真や学校行事の記録も確認された。そこに対象が写る例は少なかったが、写っていた場合、本人は写真の存在を覚えていないと答えた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "覚えていない写真は、保護者が処分したとされるものだった。アルバムから抜かれた頁、壊れた端末、消去済みの投稿。どれも現物がないのに、財団の照会資料には複写が残っていた。複写の隅には遠い位置の男がいた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象の接近は、目で測れる距離だけではない。最初は画像の背景にいる。次に記録の中へ移る。最後は閲覧者の生活空間に痕跡を残す。この順番は複数の事案で共通していた。画像は入口で、終点ではなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "部屋に残る痕跡って、何が見つかるんだ。靴跡みたいな分かりやすいものならまだ避けられる。でも台帳の文字や消えた写真みたいに、見たあとでしか異常だと気づけないものなら、確認すること自体が危ない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録された痕跡の一つは、鏡に映る背後の人物だった。実際の室内を振り返っても誰もいない。しかし鏡を撮影すると、画像には男が残る。撮影者がその画像を確認した後、男は鏡の中で一歩近くなっていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "別の事案では、閲覧者の部屋にある額縁の写真だけが裏返されていた。外部から侵入した形跡はない。額縁を戻した職員は、写真の人物が全員こちらを向いていると報告した。その中央には、元からいなかった男がいた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の対応は単純ではない。画像を見つけても、拡大しない。削除しない。単独で確認しない。背後を映す装置をむやみに再生しない。これは助かるための手順ではない。接近の段階を、少しでも遅らせるための記録だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "助かるためじゃなく、遅らせるためだけの手順なのか。つまり財団は、止める方法を持っていない。見つけた側は、男が来るまでの時間を数えるしかない。そんな資料を保管している場所で、誰が最初に確認するんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "確認者は交代制で指定された。だが台帳には、交代前の職員名が先に書かれる例があった。署名の横には、手書きで「次は後ろを見るな」と残されていたという。筆跡鑑定の結果は、既知の職員全員と一致しなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "後ろを見るなという警告が、誰のためだったのかも不明だ。背後を見れば対象が定着するのか。見なければ近づき続けるのか。財団は回答を出せていない。実験提案の多くは倫理委員会ではなく、現場職員の拒否で中断された。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録の最後には、未使用の閲覧申請書が添付されていた。申請者欄には空白があり、承認欄には既に許可印が押されている。日付だけが翌日になっていた。誰も提出していない書類が、次の閲覧を待っていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "空白の申請書に許可だけあるなら、名前を書いた瞬間に次の閲覧者になる。書かなくても、明日になれば誰かの名前が増えるのか。…ねえ、これ本当に大丈夫なの？　この報告書を扱った人も台帳に残るだろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "私は元研究員として、このファイルの複製を一度だけ確認した。画面の右端にいた男は、最初から私を見ていた。閉じた後、部屋の鏡は伏せた。だが翌朝、伏せた鏡の背面に、知らない署名が一本だけ残っていた。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-4885は、画像から接近する。だが画像の中にいるから危険なのではない。こちらが記録を確かめ、名前を書き、削除跡を覗き込むたびに、向こうの男が現実へ寄る。見かけても、決して近づくな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、閉じ込められた者が出口を探すほど通路が増える、SCP-3008の収容記録を扱う。建物の内部で何日生き残れるかより、外へ出た者が何を持ち帰るかが問題になる。記録はまだ開示されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書に不自然な署名を見つけたなら、高評価を残せ。閲覧記録が増える前に、別の職員へ警告を回すためだ。数字ではなく、ここまで読んだ痕跡だけを残してほしい。無言の確認は、時に遅すぎる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実は身近なSCPシリーズには、日常の写真、鏡、端末の向こうから侵食する別のファイルも置かれている。チャンネル登録者1万人を目標に毎日投稿中だ。次の閲覧者になる前に、応援よろしくね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "写真の奥",
+      "近づいてる"
+    ],
+    "hook_caption": "画像から来る",
+    "subtitle": "閲覧記録に残る改竄痕跡",
+    "tagline": "見た者の部屋へ距離を詰める男"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "なんでSCP-4885だけ、画像を消しても安全ではないのか。",
+      "selected_hook": "なぜあなたの身近なSCPに、同じ恐怖が残るのか…？",
+      "scores": [
+        {
+          "hook": "なぜあなたの身近なSCPに、同じ恐怖が残るのか…？",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 75
+        },
+        {
+          "hook": "なんでSCP-4885だけ、画像を消しても安全ではないのか。",
+          "scores": {
+            "curiosity_gap": 10,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 10,
+            "loop_connect": 15
+          },
+          "total": 50
+        },
+        {
+          "hook": "あなたが消した画像、まだこちらを見ている…？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        2
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "なぜあなたの身近なSCPに、同じ恐怖が残るのか…？",
+          "tension": 9,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、消した写真からも来るのか。待って、怖いって。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "閲覧記録には、同じ画像が3段階で近づいた痕跡が残る。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "ブースの姿は写真の中で移動し、最後は閲覧者の背後へ現れる。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "記録はここで途切れている。本当に怖いのは、削除後の画像だ。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "画像に残る続きは実は身近なSCPシリーズにもある。1万人目標で毎日投稿中、応援よろしくね。",
+          "tension": 5,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "こういう記録って、他にも世界中に残ってるんだ。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 24,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 5,
+        "shareability": 7,
+        "debate_potential": 3
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 65,
+      "optimized_score": 72,
+      "micro_reveals": 3,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.2,
+      "issues": [
+        "14%・42%・71%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "ろしくね。…まさか、冒頭の[編集済]がこれを意味していたのか",
+      "keyword_overlap_before": 0.5,
+      "keyword_overlap_after": 0.5
+    },
+    "power_word": {
+      "amplified": 3,
+      "changes": [
+        "「怖い」→「ガチで恐ろしい」",
+        "「変」→「ヤバい」",
+        "「怖い」→「夜眠れなくなる」"
+      ],
+      "lines_modified": 3
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.455,
+      "similar_to": "SCP-1783-JP「お船の中はうさぎでいっぱい」航路の先で消えた記録の恐怖",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 16,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-4885「ジョン・ウィルクス・ブース」写真を見るあなたへ迫る恐怖",
+      "enhanced_title": "🫣SCP-4885「ジョン・ウィルクス・ブース」写真を見るあなたへ迫る恐怖",
+      "emoji_added": "🫣",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "🫣SCP-4885「ジョン・ウィルクス・ブース」写真を見るあなたへ迫る恐怖"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 5,
+      "bait_text": "…この分類、Euclid派とKeter派で意見割れてるんだが"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "negative",
+        "negative",
+        "negative",
+        "neutral",
+        "neutral",
+        "surprise"
+      ],
+      "streaks_found": 1,
+      "breakers_injected": 1,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.4
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "原文の報告書を精査した上での解説だ",
+      "position": 3,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 4,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 64,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "二人称['あなた'](+6)"
+    ]
+  }
+}

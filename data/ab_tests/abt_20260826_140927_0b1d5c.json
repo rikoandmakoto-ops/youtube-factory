@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260826_140927_0b1d5c",
+  "channel_id": "scp-lab",
+  "theme": {
+    "title": "一口SCP：財団が人類を殲滅する側に!?隠された提言が今、暴かれる#財団が隠した『人類殲滅提言』の真実とは #shorts #ゆっくり解説",
+    "angle": ""
+  },
+  "scenario_summary": null,
+  "generated_at": "2026-08-26T14:09:27.453926Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ財団は人類殲滅を提言したのか？隠されたSCP文書",
+      "thumb_copy": [
+        "財団が人類を",
+        "消すべき理由"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3分で判明！財団の「人類殲滅提言」SCP文書の真相",
+      "thumb_copy": [
+        "人類殲滅の提言",
+        "隠された3分解説"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は財団が最大の敵だった？人類殲滅提言の恐るべき真実",
+      "thumb_copy": [
+        "守る側が敵に？",
+        "人類殲滅の真実"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ財団は人類殲滅を提言したのか？隠されたSCP文書",
+    "thumb_copy": [
+      "財団が人類を",
+      "消すべき理由"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "W6jGmiqPr-Q",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.011144130757800892,
+    "impressions": 1346,
+    "views": 452,
+    "published_at": "2026-08-06T00:24:01Z",
+    "updated_at": "2026-08-31T14:07:41.976481Z"
+  }
+}

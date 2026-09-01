@@ -1,0 +1,510 @@
+{
+  "title": "なぜ座ると腰だけ痛い？圧力1.4倍",
+  "theme": {
+    "title": "なぜ長時間座ると腰だけが先に痛むのか",
+    "angle": "椎間板にかかる圧力が立位の1.4倍になる仕組み"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで長く座ると腰だけ先に痛むんでしょう？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！立つと少し楽になるよね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "座ると腰の椎間板には立位の約1.4倍がかかります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえるなら、水入りクッションを前から押す感じです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも丸まるほど増え、腰だけ先に疲れるんです。残りは姿勢です。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "座る前に骨盤を立ててみて。面白かったら高評価、体の謎シリーズも毎日投稿中で1万人目標なので応援よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？あなたも仕事や授業で長く座ったあと、足より先に腰だけ重くなったことがありませんか。\n座る姿勢では、腰の中のクッションに立っている時の約1.4倍の負担が集まりやすいんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、座っている方が休んでいる感じなのに、立つより腰が大変なの？\n昨日も2時間ほど机に向かっただけで腰を伸ばしたくなったけれど、あれに数字で説明できる理由があるんだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ありますよ。椅子が悪い、年齢のせい、と決めつける前に、腰の中で何が押されているのかを見てみましょう。\nあなたが今座っているなら、その数分間にも同じ仕組みが働いています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "腰の中って骨だけじゃないよね？背骨の間にある柔らかい部分が、座るとつぶれるのかな。\nでも、ただ座っただけで1.4倍になるなら、ソファでだらっとする時はもっと増えそうで気になるよ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その予想はかなり近いです。背骨の骨と骨の間には椎間板があります。\n椎間板は要するに、水分を含んだ小さなクッションで、歩く時の衝撃を受け止めながら背中を動かしやすくしています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！背骨の骨が直接ぶつからないように、水入りのクッションが何枚も入っているんだね。\nじゃあ座った時の腰痛っぽさは、そのクッションの問題から始まるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう考えると分かりやすいです。ただし、ここからが本題です。\n座るだけで重さが増えるのではなく、上半身の重さが腰へ届く角度が変わることで、椎間板の中にかかる圧力が増えていきます。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "1960年代、スウェーデンの整形外科医ナッケムソンは、腰の椎間板内の圧力を測る研究を行いました。\n立っている姿勢を100とすると、普通に座る姿勢はおよそ140と報告されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "立っている時が100なら、座っているだけで140なんだ！\n40増えると聞くと、会議やゲームで何時間も座る時に、腰だけ先に疲れを感じやすい理由が少し見えてきたよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、椅子に座って背中を丸めると数値はさらに上がる傾向があることです。\n机へ顔を近づける姿勢では、腰のクッションを前側から押し出すような力が強くなります。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！スマホを見る時もノートを書く時も、気づくと背中が丸くなっているよ。\nでも、なぜ首や肩より、体の真ん中にある腰が先に苦しくなりやすいんだろう？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "腰は、頭や腕、胸の重さを下半身へ渡す中継地点だからです。\nたとえるなら、買い物袋を持った人が集まる細い通路と同じで、上から来た荷物が最後にまとまって通る場所ほど負担が集まりやすいんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "特に腰椎の下の方、L4とL5、L5と仙骨の間は、体重を受けながら向きを変える役目も担います。\nLは腰の骨を数える記号で、椅子から立つ時に手を当てたくなるあたりが、この場所に近いです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、張りを感じるのはいつもベルトの少し上あたりだよ。\n腰の下側が荷物の受け渡し場所なら、座っている間ずっと同じ所へ力が集まるわけだね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "でも、椎間板は石のように固い部品ではありません。中心には水分を多く含むゼリー状の部分があり、外側の丈夫な輪が支えています。\n座って圧力が続くと、水分は少しずつ周りへ移動し、厚みもわずかに変わります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "水分が動くなら、朝と夜で背の高さが違うという話にもつながるのかな？\n一日中重さを受けた椎間板が少し薄くなるなら、座った後に腰が詰まったように感じるのも分かる気がする。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。人は朝より夜に身長が少し低くなることがあり、椎間板の水分変化もその一因です。\nただし個人差が大きく、何センチ必ず縮むとは言えません。ここは科学でも一律の結論が出ていません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして問題は、この次です。腰が重い感覚は椎間板だけが出しているわけではありません。\n同じ姿勢を保つために働き続けた背中やお尻の筋肉、関節の周りも、長時間座るほど休む番を失っていきます。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、じゃあ1.4倍の圧力だけを気にしても足りないんだね。\n座りっぱなしで腰がつらくなるのは、クッションと筋肉が同時に同じ場所を支え続けるから、と考えるとかなり自分の体の話に聞こえるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "筋肉は動くためだけでなく、姿勢を止めておく時にも小さく働き続けます。\n背筋やお尻の筋肉は見た目には動かなくても、倒れないように細かな力を出し続けるので、長い会議の終わりほど疲れが目立ちます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "立っている時も筋肉は使うのに、座ると特につらいのは不思議だね。\n椅子が体を支えてくれる分、楽になりそうなのに、腰の中では別の場所へ負担が移っているということなの？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "座ると太ももとお尻が体重を受けますが、骨盤が後ろへ倒れやすくなります。\n骨盤は背骨の土台ですから、土台が寝ると、その上の腰は前へ丸くなりやすい。これが圧力の増える姿勢につながります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、積み木の一番下を少し傾けると、上の積み木まで傾く感じだね。\n腰だけを無理に反らせても直らなくて、お尻の下にある骨盤から見る必要があるのは意外だったよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "椅子の奥まで座らず、浅く腰掛けると骨盤はさらに後ろへ転がりやすくなります。\n背もたれを使わずに画面へ近づくほど、その姿勢を支える腰の仕事は増えます。これは机に向かうあなたの体でも起きています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！浅く座るのはすぐ立てて便利だと思っていたけれど、長く続けると腰には楽な姿勢ではないんだね。\nじゃあ背もたれに深く寄りかかれば、圧力はかなり減らせるのかな？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究条件によって幅はありますが、背もたれを使い、少し後ろへもたれる姿勢では腰の負担が下がる傾向があります。\n大切なのは背中を一直線に固めることより、骨盤が後ろへ倒れたまま何十分も動かない状態を避けることです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで最初の数字に戻りましょう。立位を100とした約140という値は、全員に同じ痛みが出る予言ではありません。\n体格、筋力、椅子の高さ、昔のけがなどで感じ方は変わるので、数字は負担を考える目安なんです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "数字だけ見て、座ったら必ず腰を痛めると心配しなくていいんだね。\nそれでも、立つより圧力が高くなりやすいと知っているだけで、30分後に立つ理由がはっきりする気がするよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実際、腰の不調は画像だけで単純に説明できないことも多いです。MRIで椎間板の形に変化が見えても、日常生活で症状のない人がいます。\n逆に画像が大きく変わらなくてもつらい人がいて、痛みには神経や筋肉など複数の要素が関わります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、画像で分かる部分だけが答えじゃないんだ！\n腰がつらい時に、姿勢が悪いから全部自分のせいだと決めつけなくていいのは少し安心するけれど、どこまでが普通の疲れなのかも知りたいな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "数時間座った後に伸ばすと軽くなる程度なら、姿勢を変えたり歩いたりして様子を見る場面は多いです。\n一方で足の力が急に入りにくい、しびれが広がる、排尿や排便に変化がある時は、早めに医療機関へ相談してください。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "そこは我慢してストレッチだけで済ませない方がいいんだね。\n普段の座り疲れの話と、体から届く大事な合図は分けて考える。これなら必要以上に慌てず、見逃しもしにくくなりそうだよ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "では、座るほど圧力が増えるなら、昔の人はどうやって調べたのでしょう。ナッケムソンの研究では、細い測定器を椎間板へ入れ、姿勢ごとの圧力変化を確かめました。\n今では有名な1.4倍も、実測があったから広く知られるようになったんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！椅子に座る負担って感覚だけの話ではなく、腰の中で測って確かめたデータがあるんだね。\nだから机の高さや座り方の工夫も、気分の問題ではなく体の力のかかり方に関係するんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし当時の研究は人数や測定条件に限りがあり、現在の全ての椅子や全ての人をそのまま代表する数字ではありません。\nここは科学でも、どの姿勢が全員に最適か結論が出ていない部分です。だからこそ動ける工夫が役立ちます。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "完璧な姿勢を一日中守るより、同じ姿勢を固定しない方が現実的なんだね。\n姿勢を正そうとして体を固めると、今度は筋肉がずっと緊張しそうだから、少し動く方が続けやすそうだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。動画を見ながら座っているなら、今だけ肩をすくめず、お尻を椅子の奥へ軽く入れてみてください。\n骨盤の後ろにある左右の硬い骨で座る感覚が戻ると、腰を丸める姿勢から離れやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "おお、座り直すだけで背中の伸び方が少し変わるね！\n腰をぐっと反らすのではなく、お尻の位置を変えるだけだから、仕事中でも目立たず試せそうだし、すぐ忘れずにできそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次は椅子の高さです。足裏が床につかず、足がぶらぶらすると、骨盤を安定させにくくなります。\n机や椅子をすぐ替えられない時は、厚めの本や足台を足元に置き、足裏で床を踏める状態を作るだけでも違いを感じる人がいます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "足元の本でもいいんだ！高価な椅子がないと何もできないと思っていたけれど、足裏が浮いているかを見るなら今日の机でも確認できるね。\nたとえばカフェの椅子でも、足が届かない時には使えそうだよ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "三つ目は画面の位置です。ノートパソコンやスマホを低い所で見続けると、頭が前へ出て背中が丸まりやすくなります。\n画面を少し高くするだけで、顔を近づける回数が減り、腰だけで上半身を支える時間を短くしやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、スマホを顔へ引き寄せる代わりに、画面を目の方へ持ってくる感じだね。\n本を読む時もクッションや台で少し高くすれば、首だけでなく腰まで丸まりにくくなるなら試す価値がありそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして一番手軽なのは、30分から60分を目安に一度立つことです。\n水を飲みに行く、窓の外を見る、コピーを取りに行く程度で構いません。長い運動より、同じ圧力をいったん切る短い動きが座り続けには大切です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "1時間の運動を増やすより、座っている途中で数十秒立つ方が始めやすいね。\nタイマーを30分にしておけば、腰がつらくなってから慌てるのではなく、負担が積み重なる前に姿勢を変えられそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで注意したいのは、腰がつらいからといって急に強く反らしたり、勢いよくひねったりしないことです。\n楽に呼吸できる範囲で立ち、数歩歩き、座り直す。このくらいの小さな変化でも、固定されていた体には十分な合図になります。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "大きく伸ばさなきゃ意味がないと思っていたけれど、腰が固まった感じの時ほど急な動きは避けた方がいいんだね。\n椅子から立って台所まで行くくらいなら、仕事や勉強の流れも止めにくいよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "座ること自体は悪者ではありません。食事、創作、勉強、休憩まで、私たちの毎日には必要な姿勢です。\n大事なのは、立位の約1.4倍になりやすい圧力を知った上で、同じ形のまま何時間も続けない選び方をすることなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、座る時間をゼロにするのは無理だし、そこを目指す必要もないね。\n椅子の奥に座る、足裏を置く、ときどき立つ。この三つなら、腰だけが先に疲れる日を減らせそうだよ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日のポイントは、座ると骨盤が後ろへ倒れやすく、腰の椎間板へ立位の約1.4倍の圧力がかかりやすいことです。\nそこへ丸まり姿勢と動かなさが重なると、クッションと筋肉の両方に同じ場所の仕事が集まります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "腰だけが先に痛むのは、体が弱いからではなく、上半身の荷物が腰の下側へ集まりやすい構造だったんだね。\n次に長く座る時は、つらくなる前に一度立って、今の座り方を思い出してみるよ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜寝るとき、今日どれくらい座っていたかを少しだけ思い出してみてください。\n腰が重かった場面と、浅く座っていた場面、立ち上がったら楽になった場面を結びつけると、明日の休憩の入れどころが見つかりやすくなります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠っている間に人が何度も寝返りを打つのはなぜなのかを見ていきます。\n腰や肩に同じ圧力をかけ続けないための、眠っている体の小さな工夫にも、今日の座り姿勢とつながるヒントがあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "寝ている時まで体が姿勢を変えているなんて、昼の座りっぱなしと並べて聞くと気になるね。\n体の謎シリーズで、普段は意識しない動きの理由を知ると、毎日の疲れ方の見え方も変わりそうだよ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話が面白かったら、まず高評価で教えてください。\n身近な不思議を毎日1本ずつ一緒に解いているので、体の謎シリーズの続きも見逃さないよう、チャンネル登録よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "座るだけで",
+      "腰に1.4倍"
+    ],
+    "hook_caption": "腰だけ先に痛む",
+    "subtitle": "立つより座る方が腰へ重くのしかかる理由",
+    "tagline": "椅子に座る姿勢で変わる背中の負担"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "座る前に骨盤を立ててみて。面白かったら高評価、体の謎シリーズも毎日投稿中で1万人",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 22,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 14,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "反直感的な事実"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.36,
+      "similar_to": "なぜ寝起きの口だけネバつくのか？あなたの唾液が眠る8時間の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 15,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ座ると腰だけ痛い？圧力1.4倍"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 78,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "短すぎ(17字 < 18)(-12)"
+    ]
+  }
+}

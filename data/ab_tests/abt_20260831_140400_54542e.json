@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260831_140400_54542e",
+  "channel_id": "daily-science",
+  "theme": {
+    "title": "なぜ夢の続きを見た気がするのか？99%が知らない目覚め後5分の記憶再構成【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "過去テーマの時間感覚とは分け、目覚め直後に夢の場面が連続して感じられる記憶のつなぎ合わせに焦点を当てる\nあなた、目覚めた瞬間に「さっきの夢、次の場面まで見ていたはず」と感じたことありませんか？その連続感、眠っている間ではなく起床後およそ5分の記憶再構成が作る錯覚かもしれません。 / 今回は、途切れた夢が映画の続編みたいに自然につながる正体を暴きます。結論を先に言うと、脳は目覚めた直後、散らばった断片を最も筋の通る物語へ急いで並べ替えるんです。 / 驚きなのは、夢の「続き」そのものを長く見た証拠がなくても、私たちは連続していたと確信できること。脳は空白を嫌い、数秒しかない場面の間にも、もっともらしい橋を自動で架けます。",
+  "generated_at": "2026-08-31T14:04:00.752426Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜ夢の続きは本当に見た気がするのか？目覚め後の脳が作る錯覚【ショート】",
+      "thumb_copy": [
+        "夢の続きは",
+        "起床後に作られる？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "99%が知らない、夢の続きが生まれる目覚め後5分の記憶再構成【ショート】",
+      "thumb_copy": [
+        "目覚め後5分",
+        "夢はつながる"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は夢の続きは見ていない？脳が空白を物語に変える瞬間【ショート】",
+      "thumb_copy": [
+        "続きは見てない",
+        "脳が物語を作る"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜ夢の続きは本当に見た気がするのか？目覚め後の脳が作る錯覚【ショート】",
+    "thumb_copy": [
+      "夢の続きは",
+      "起床後に作られる？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

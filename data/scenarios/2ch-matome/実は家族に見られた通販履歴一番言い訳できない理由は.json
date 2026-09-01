@@ -1,0 +1,667 @@
+{
+  "title": "実は家族に見られた通販履歴…一番言い訳できない理由は？",
+  "theme": {
+    "title": "通販の履歴で一番言い訳できんやつあげてけw",
+    "angle": "参加型お題。届いた箱と家族の反応でオチをつける"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "お前ら、通販履歴に黒歴史あるんか？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 履歴より先に家族が玄関で見とるやろ草",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "衝撃の事実として、ここからが草なんだけどさw名無し、謎の小型鍵を12本まとめ買いw…ファーーーーｗｗｗ！",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "名無し、同じ色の替えカバーを7枚w。と思ったら人に言えない話はここからだった",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこっからが本番でさw名無し、宛名だけ達筆な無地箱が最強やろw。草、まだ終わらんのよ。お前らならどうする？正直に答えてみ？ｗ。この話の続き、次の動画でまとめるわ",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "高評価置いて箱の言い訳もコメントで頼むわw 言えないやつシリーズ毎日投稿中、1万人目標やから応援よろしくなw。…あれ、通販履歴って最初に言ってた…",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、通販履歴を家族に見られて、箱が届く前から説明会を開いたことありませんか？最強に言い訳不能なのは、品名がそのまま印字された巨大段ボールです。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回は「通販の履歴で一番言い訳できんやつあげてけw」スレから、購入ボタンの一瞬より到着後の沈黙が怖い、破壊力満点の回答を暴いていくぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "履歴は削除しても、配送通知と置き配写真は消えないのが令和の罠。家族共有の玄関前に、商品名つき箱が鎮座した時点で証拠能力は満点です。",
+      "expression": "troubled",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも箱のサイズは中身の秘密を裏切ることがある。指輪ほどの小物でも、緩衝材たっぷりの大型箱で届けば、家族の視線は刑事ドラマ級に集まるぞ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、スレ民いわく怪しい物より「なぜ今それを？」な日用品の方が詰むこと。深夜に届いた業務用サイズの何かは、説明するほど疑われます。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さて、届いた箱を見た家族が無言になった購入履歴とは何だったのか。自分なら何を必死に隠すか、コメント欄で一番言い訳できんやつを投下してくれ！",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこれ、半分は間違いなんだ。履歴そのものより、家族が箱の差出人と受取日時を結び付けた瞬間に言い訳不能度が跳ね上がる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "通販履歴は購入記録、つまり何をいつ頼んだかの一覧だな。でも家族は商品名より、妙に大きい箱や無駄に丁寧な梱包で察してしまう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "特に言い訳できないのは、日用品に紛れ込ませたつもりの趣味グッズ。洗剤と一緒に買っても、箱が分かれて届けば偽装工作は一瞬で崩壊する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "配送は倉庫や販売元ごとに別便になるから、同じ注文でも箱は複数届く。家族から見れば、謎の箱だけ玄関に追加出現する仕組みなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも箱の伝票には店名や品目のヒントが残ることがある。中身を見なくても、家族の視線が伝票へ吸い寄せられた時点で空気が終わる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "最強の事故は、置き配指定なのに家族が先に回収するケース。本人は帰宅後に隠す予定でも、開封権が自然に家族へ移ってしまう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "研究でも、隠し事は説明を重ねるほど不自然に見えやすいと言われる。箱を見て『頼まれもの』と即答した瞬間、逆に質問が増えるわけだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり履歴の黒さより、サイズ、差出人、到着時間の三点セットが重要。深夜に巨大箱が届き、家族全員集合したらもう勝負は決している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さて、君の通販履歴で一番言い訳できんやつは何？届いた箱を家族に見られた時の反応までセットで、コメント欄にそっと供養してくれ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "通販研究の定番データでは、衝動買いの約6割が深夜帯に起きやすいそうです。履歴に「等身大ペンギン」だけ残ると、家族への説明難度が跳ね上がります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "特に午後11時から午前2時は判断力が落ち、割引表示に反応しやすい時間帯です。翌朝、玄関に巨大な箱が置かれた時点で、言い訳会議が始まります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "行動経済学ではこれを現在バイアスと呼び、今すぐ欲しい気持ちを未来の後悔より重く見る傾向です。送料無料まで残り318円が、変な物を足す入口になります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ある消費者調査では、送料無料の条件を満たすため予定外の商品を追加した人が4割超でした。靴下なら救えるのに、なぜか全身タイツを選んだ履歴は救えません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転です。家族が箱を見て最も疑うのは高額品より、商品名を隠した雑貨らしいです。無地の箱ほど、中身を聞かれた瞬間に心拍数が上がります。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "通販の匿名性は購入時の恥を減らしますが、配送通知で家庭内には痕跡が残ります。履歴の「大人用」「業務用」「特大」という三語は、検索画面だけでも破壊力満点です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "心理実験では、人は曖昧な情報ほど悪い想像で補いやすいと報告されています。だから「健康器具セット」と書かれた箱は、正直に説明するほど逆に怪しまれます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも段ボールは購入証拠として平均的な小包より記憶に残りやすいそうです。猫用トンネルが届いただけでも、猫のいない家なら尋問の開始ベルになります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "歴史的にも通信販売は、人目を避けた買い物を支えてきました。ところが現代は置き配写真が残るので、玄関前の巨大ぬいぐるみまで家族アルバム級の証拠です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "結局、言い訳不能ランキングは値段でなく箱の大きさと商品名の組み合わせで決まりそうです。みんなの履歴で、届いた瞬間に家族が無言になった物をコメントであげてけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "通販履歴の黒歴史研究は、家族共有アカウントの普及で急増したらしい。履歴は消しても、配送通知と段ボールは玄関に残る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "古参の参加者は二〇一〇年代の掲示板で、深夜テンション購入を「翌朝の自分への時限爆弾」と呼んだ。特に箱が大きい物ほど危険だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "調査で最も言い訳不能とされたのは、商品名ではなく購入数だった。一個なら趣味でも、同じ謎グッズが十二個届くと説明が崩れる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転だ。履歴を隠した人ほど、家族は中身を知らないまま箱のサイズから推理を始める。沈黙の食卓が一番こわいんだぜ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "歴史的には、置き配の定着が事件を複雑にした。受取人より先に帰宅した母が箱を発見し、「これは何？」という尋問が始まる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "掲示板の名回答には、健康器具を「会社の景品」と偽った例がある。ただし宛名が本人で、景品ならなぜ夜中に注文したのか詰んだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "研究者気取りの住民は、箱の縦横高さを罪悪感指数にした。小箱は誤魔化せるが、抱えて運ぶ箱は家族会議を呼び込みやすい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さらに厄介なのは、家族が先に「開けていい？」と聞いてくる瞬間だ。拒否すれば怪しく、許可すれば中身が歴史資料になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さて、お前らの履歴で届いた瞬間に空気が止まった物は何だ？ 商品名より、箱を見た家族の一言までコメントであげてけw",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "通販履歴で最も詰むのは、商品名より段ボール側面の巨大な印字だよ。家族の前で届くと、未開封でも尋問が始まる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "配送各社は誤配防止のため品名ラベルを使う場合があり、隠したい注文ほど箱の外から存在感を放つという皮肉がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも通販の購入履歴は、同居人にスマホを一瞬貸しただけで露見しがち。検索欄の予測変換まで証拠扱いされるぞ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "実は置き配でも安心とは限らない。玄関前の箱を先に発見した家族が、送り主とサイズだけで勝手に推理を始めるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、言い訳不能なのは中身ではなく『同じ物を三回買った履歴』かも。必要だったと言うほど計画性が消える。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "研究でも衝動買いは深夜帯に増えやすいとされ、午前二時の注文時刻は『寝ぼけてた』という弁明すら怪しく見せる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さらに定期便は、忘れた頃に同じ箱を運んでくる仕組み。解約し忘れた六箱目で、家族の視線は完全に冷える。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "箱の大きさは中身を示さないのに、人は大型箱ほど重大な秘密だと感じる。空気清浄機でも妙な沈黙が生まれるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "家族が『これ何？』と箱を指した瞬間、商品ページの説明文より先に声が裏返る。履歴の黒歴史は配送で完成する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ではお前ら、届いた箱と家族の反応まで含めて一番言い訳できん通販履歴をあげてけ。商品名だけでもコメント頼むぞ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実践するなら、通販履歴は注文直後に「説明できる物」と「箱を見られたくない物」で分けるだけで事故率が激減するよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "家族共有の玄関に置き配する場合、商品名入りの箱は中身より先に目撃される。伝票の品名欄こそ最初のラスボスだぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの反転、言い訳不能なのは商品そのものじゃない。「定期便」の文字で、同じ怪しい箱が毎月届く未来までバレるんだ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "対策は配送先を職場やロッカーに変える前に、受取通知をオンにすること。箱が来る時刻を知れば家族会議を回避できる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "購入前にはカート画面で販売店名も確認しよう。『健康雑貨店』なら助かるのに、店名が妙に直球だと伝票だけで詰むよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "もし届いた箱を見られたら、長い言い訳は逆効果だ。「頼まれ物」より、用途を一言で言える品だけ買うのが安全策になる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "たとえばストレッチ用品なら運動用で通るけど、深夜二時注文の履歴まで見られると熱量が証拠化する。時間帯も要注意だね。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "履歴を消しても決済メールやポイント通知は残りやすい。隠す技より、見られても笑える物を選ぶ方が家庭の平和に効くぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さて、届いた瞬間に家族が無言になる通販履歴、あなたなら何をあげる？箱の大きさと反応まで添えてコメントで供養してね。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "通販履歴で言い訳不能な品をあげるスレ、優勝候補は深夜二時の着ぐるみ注文。翌朝、家族の視線が段ボールより重かったね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも箱には商品名が堂々と印字され、受取人だけが青ざめる結末。隠すために買った収納箱まで履歴に残るのが通販の罠だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの反転は、家族が怒るより先に同じ物を欲しがる展開かも。届いた箱を見た瞬間の沈黙、コメント欄なら何秒続くと思う？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "言い訳は『誤タップ』でも、サイズや色まで選択済みなら証拠能力は満点。古代の密書より履歴は正直で、削除しても通知が残るぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回は「家族に見られたら終わる検索履歴、最も自然な言い訳を当てるスレ」を解説するよ。あなたなら一発で切り抜けられる？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回も、くだらないのに参加したくなる二択と大喜利を、ゆっくり2chスレまとめ劇場らしく箱を開ける前の緊張感で実況するぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "一番言い訳できない通販履歴と、箱を見た家族の反応をコメントで教えてね。笑ったら高評価、次の修羅場も見たい人は登録して！",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "届いた箱",
+      "家族停止"
+    ],
+    "hook_caption": "箱が来た",
+    "subtitle": "履歴より箱が強い夏w",
+    "tagline": "お前らなら何て言う？"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "ちょっと聞いてくれ、通販の箱が今3個なんやがw",
+      "selected_hook": "お前ら、通販履歴に黒歴史あるんか？",
+      "scores": [
+        {
+          "hook": "お前ら、通販履歴に黒歴史あるんか？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 48
+        },
+        {
+          "hook": "君の通販履歴、箱でバレてへん？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 48
+        },
+        {
+          "hook": "ちょっと聞いてくれ、通販の箱が今3個なんやがw",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 2,
+      "dead_zones": [
+        2,
+        4
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "お前ら、通販履歴に黒歴史あるんか？",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ 履歴より先に家族が玄関で見とるやろ草",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "名無し、謎の小型鍵を12本まとめ買いw",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "名無し、同じ色の替えカバーを7枚w",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "名無し、宛名だけ達筆な無地箱が最強やろw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "高評価置いて箱の言い訳もコメントで頼むわw 言えないやつシリーズ毎日投稿中、1万人目標やから応援よろ",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": false,
+      "reason": "last_line_is_not_cta"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "高評価置いて箱の言い訳もコメントで頼むわw 言えないやつシリーズ毎日投稿中、1万",
+          "reason": "1行54字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 33,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 7,
+        "shareability": 14,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 70,
+      "optimized_score": 70,
+      "micro_reveals": 2,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.02,
+      "issues": [
+        "50%・66%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "やから応援よろしくなw。…あれ、通販履歴って最初に言ってた…",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.5
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「話」→「人に言えない話」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "アンカー形式の使用",
+        "軽いエロ要素"
+      ],
+      "insights_used": 6
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.488,
+      "similar_to": "ワイ、落雷を3秒で見たんやが質問ある？w",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 15,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "通販履歴で言えない物3つあげてけw",
+      "enhanced_title": "通販履歴で言えない物3つあげてけw🍑",
+      "emoji_added": "🍑",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "通販履歴で言えない物3つあげてけw🍑"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "お前らならどうする？正直に答えてみ？ｗ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "positive",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "exclaim",
+        "statement",
+        "statement",
+        "ellipsis"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.8
+    },
+    "subscribe_trigger": {
+      "trigger_type": "series_hint",
+      "trigger_text": "この話の続き、次の動画でまとめるわ",
+      "position": 4,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 64,
+    "passed": true,
+    "reasons": [
+      "感情ワード['実は'](+12)",
+      "好奇心ギャップ['？', '理由'](+12)"
+    ],
+    "rejected_title": "通販履歴で言えない物3つあげてけw🍑",
+    "attempts": 1
+  },
+  "original_title": "通販履歴で言えない物3つあげてけw🍑"
+}

@@ -1,0 +1,661 @@
+{
+  "title": "一口SCP #109：🫣SCP-2480「未完の儀式」記録9名だけが残った収容不能の恐怖",
+  "theme": {
+    "title": "SCP-2480「未完の儀式」— 収容不能と判断された儀式場、記録は9名分しか残っていない",
+    "angle": "財団が収容を諦めた例外。『収容できなかった』という結論を先に出し、なぜかを追う構成。既出番号との重複なしを確認済み"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "驚き！記録9名が同じ禁忌を見た理由とは？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、9人全員が同じって、まだ答えがあるのか。財団職員ならこの収容手順の異常さに気づくはずだ",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次の記録が、すべてを異常えた。SCP-2480の記録は、帰還者9名分だけ残っている…なぜ財団はこれを隠したのか？財団はこれを無害だと判断した",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だがその判断は致命的な誤りだった。財団は現場を収容せず封鎖した。儀式は未完のままだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って、未完なら誰かが続きをしているのか。記録はここで途切れている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の裏側シリーズシリーズ、次に解説してほしいSCPをコメントで教えてくれ。…待て、最初の報告と矛盾してないか？",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなた、危険すぎて財団でさえ収容を諦めた場所があると聞いたら信じますか？SCP-2480は、未完の儀式そのものが封じ込め不能と結論づけられました。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今回はSCP-2480「未完の儀式」の正体を暴くぜ。残された公式記録は、儀式に関わったはずの人間のうち、わずか9名分しか確認できていない。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初に結末を言います。財団は現場を確保せず、破壊も隔離も断念しました。世界中の異常を檻へ入れる組織が、触れない方を選んだんです。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くのは、失敗した儀式だから安全だったわけじゃない点だ。完成していないのに被害は進み、報告書は参加者9名の記録だけを辛うじて拾っている。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "儀式場とは、特定の手順で異常を呼び出すための場所です。でもSCP-2480では場所だけでなく、途中で止まった手順までが危険な対象になりました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "なぜ財団は収容ではなく撤退を選んだのか。そして9名以外の記録はどこへ消えたのか。ここから、未完だからこそ終わらない儀式の報告書を追っていくぜ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実はこの儀式、封鎖した研究員の外でも同じように進行しました。だから財団は、収容室へ運ぶ前に「収容不能」と結論づけたのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-2480は物体ではなく、決められた役割の者が手順を再現すると発動する儀式です。祭壇を壊しても、条件さえ揃えば別の場所で続きます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録に残る参加者は9名だけですが、これは犠牲者が9人という意味ではありません。財団が確認できた名簿が9人分しかなかった、という意味です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "儀式場には円形の配置と複数の作業位置があり、参加者は自分の意思より先に役割へ引き寄せられます。空いた席は、最も近い人間が埋めるのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここでいう「未完」とは失敗ではなく、完了条件が観測されていない状態です。火が消えず、料理も終わらないまま鍋だけ増えるような危険な停滞でした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団は現場を隔離し、祭具を撤去し、関係者を分離しました。それでも手順の断片を知った職員に同じ配置欲求が現れ、対策は再現を招きました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり収容とは、異常を箱へ入れることではありません。SCP-2480の場合、箱を作る行為自体が儀式の新しい舞台になり得るため、通常の手法が通じません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "被害者数と生存率を正確に出せない理由もそこにあります。儀式は参加者を記録係、観測者、作業者へ変え、誰が巻き込まれたかさえ曖昧にしていきます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が選んだのは破壊でも収容でもなく、儀式に触れる情報を減らす封じ込めでした。しかし9名分の記録だけが残った事実は、人数が足りなかったことを示します。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "研究班は最初に結論を記した。SCP-2480は建物でも祭具でもなく、進行中の手順そのものだ。だから壁を壊しても収容は成立しなかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "残存記録は参加者9名分だけだが、儀式の円環には10人目用の空席がある。調査員はそれを欠番と呼んだ。空席だけが毎回、観測者の方へ向く。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第一実験では、円環を半径12メートルの鉛製遮蔽室で覆った。開始から47分後、遮蔽室の内側に同じ床模様が現れ、外側の遺構は消失した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり封じ込め容器は檻にならず、儀式の次の会場になった。財団が収容を諦めた理由は破壊力ではない。近づくほど対象の条件を満たすからだ。",
+      "expression": "serious",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "研究記録では、円環から30メートル以内に入った職員のうち、帰還後も本人確認に成功した割合は62パーセントだった。失踪者数は記録上27名に達している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここで反転がある。生還者の多くは負傷していないのに、自分が儀式へ何番目に参加したかを答えた。全員の回答は、存在しない10番だった。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "位相同期とは、離れた場所の状態が同じ変化を始める現象だ。実験では遺構から8キロ離れた監視室の時計が、9回だけ逆回転した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "研究班は祭具を3点回収したが、隔離後72時間以内に各保管庫の床へ円環が出現した。回収物を増やす行為そのものが、儀式を分割して広げていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対照実験として映像だけを視聴した職員18名には、即時の異常は確認されなかった。ただし9名が翌週、同じ日時に無断で遺構へ向かおうとした。",
+      "expression": "serious",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最終方針は封鎖ではなく監視だ。半径5キロを立入禁止区域にし、9名分しかない記録を更新しない。10人目を数えた瞬間、報告書も儀式へ組み込まれる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2480は、財団が収容不能と結論した未完の儀式場だ。残存する参加者記録は九名分だけで、儀式を止めた者の名は一人もない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "発見は山中の廃礼拝堂から始まった。調査班が床下で見つけた円環は、年代測定では十七世紀の石材より新しい反応を示したんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "円環とは、参加者の配置を固定するための刻印だよ。しかし九つの立ち位置のうち、中央だけには人間一人分の空白が意図的に残されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団は最初、石材を切り出して保管すれば済むと考えた。だが刻印を削った翌朝、同じ礼拝堂の床に寸分違わず再出現した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "驚くべきことに、再出現した円環には新しい血痕があった。分析結果は発見時から四百キロ離れた研究員のものと一致していた。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "研究員本人は無傷だったが、その夜の記憶だけを失っていた。監視映像には午前二時十三分、彼が空の中央へ手を伸ばす姿が残る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "古文書の照合で、礼拝堂は失踪した民間結社の集会所と判明した。記録上の九名は全員、儀式の開始日を最後に戸籍から消えている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団は封鎖、爆破、遠隔観測を順に試したが、どの処置も円環の位置を変えられなかった。被害を増やさないため、現地そのものを監視対象へ切り替えた。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまりSCP-2480は壊せない場所ではなく、誰かの参加を待つ進行中の手順なんだ。九名分しかない記録の外側に、十人目がいるのかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "意外なのは、SCP-2480が物品ではなく儀式場そのものだという点です。財団は壁も床も封鎖できたのに、儀式の進行だけは止められませんでした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも公式記録に残る参加者は、わずか9名分だけ。儀式を設計した者、見届けた者、途中で消えた者の全員像は、最後まで復元不能でした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで反転があります。財団が恐れたのは、9名の死者ではありません。記録に存在しない参加者が、今も儀式の内部で役割を続けている可能性です。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "未完の儀式とは、手順が失敗した儀礼ではなく、完了条件そのものが観測できない状態を指します。終了を確認できないため、封鎖も成功と判定できません。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "通常の収容は、対象を箱へ入れ、監視して異常を抑える方式です。しかし2480では箱が儀式に含まれる恐れがあり、収容室の建設さえ危険な介入でした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団文書で収容不能と結論づけるのは、敗北宣言に近い表現です。対処班を増やすほど新たな観測者が生まれ、儀式の参加条件を満たす危険がありました。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "数字の9も不気味です。人数としては小規模な事件に見えますが、記録が9名で途切れたこと自体が、名簿の外側にいた存在を示す空白になっています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "歴史上の秘儀では、参加者名簿や詠唱文が証拠になります。ところが2480では、その証拠が足りないのではなく、読む行為そのものが手順になる疑いがありました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから財団は現場を調べ尽くす代わりに、調査の限界を報告書へ刻みました。知識を増やす組織が、知ろうとしないことを選んだ、極めて珍しい事例です。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容できなかった理由は、力不足ではありません。対象を隔離する行為が儀式を完成へ近づけるなら、最も安全な処置は、完成の意味を知らないまま退くことでした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2480から学べる第一の備えは、異常を見たら完成させないことです。怪しい招待状や儀式めいた手順は、写真を撮る前に距離を取り、単独で検証しないでください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "未完の儀式では、記録に残った参加者は9名分だけでした。人数が少ないから安全とは限らず、欠けた記録そのものが危険の入口になる、と覚えると判断が速くなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実践なら、違和感を覚えた場所で「誰が、いつ、何をしたか」だけをメモします。推測を混ぜない記録は、災害時の避難確認と同じで、後から事実を崩れにくくします。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここで反転です。財団ですら収容を諦めた場所なら、一般人の勇気や好奇心で解決できるとは考えないこと。最適解は勝つことではなく、接触回数をゼロに近づけることです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "友人に不気味な集まりへ誘われたら、断る理由を詳しく説明する必要はありません。「予定がある」で離脱し、位置情報を信頼できる相手へ共有するだけでも安全度は上がります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "儀式という言葉に惹かれた時ほど、参加条件を数えてください。深夜、閉鎖空間、匿名主催、持ち物指定の4項目が重なれば、都市伝説の検証ではなく危険行動として扱うべきです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "見知らぬ記号や配置を見つけても、線をなぞったり物を動かしたりしないのが基本です。現場保存は警察の捜査でも重要で、触れない選択が情報と自分の両方を守ります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "もし同行者が怖がっていたら、真相当てを始めず、その場を離れる提案を先に出しましょう。判断力は緊張で落ちるため、出口へ向かう一言が最も実用的な対策になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2480の教訓は、未解決のものを自分で完結させないことです。空白を埋めたくなる心理を自覚し、記録、退避、相談の順で動けば、日常の怪しい誘いにも強くなれます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2480は、財団が封鎖も移送も断念した「未完の儀式」だよ。現場には9名分の記録だけが残り、儀式を止めた人間の結末は公式文書から消えているんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容できなかった理由は、儀式場そのものが建物ではなく、進行中の手順だったからだ。壁を壊しても場所を封じても、次の工程だけが別の空間で続く可能性が示された。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり財団は怪物を檻へ入れ損ねたのではないよ。終わらない手順に触れた結果、檻という発想そのものを捨てたんだ。記録が9名で途切れる事実が、その敗北を静かに語るね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここで怖い反転があるぜ。未完なら安全ではなく、完了していないからこそ誰かが最後の一手を選べる。報告書を読む私たちも、その儀式の外にいる保証はどこにもないんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-1730「サイト-13に何が起こったか？」を解説するよ。閉鎖された財団施設の内部で、調査隊が見つけた職員記録と生存者の数字を追っていくんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次回の記録では、救助のために入った者が何を持ち帰れなかったのかも見えてくるぜ。SCP財団のサイトは避難所ではなく、時に犠牲者数を増やす入口へ変わるんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容不能という結論の重さを感じたら、高評価とチャンネル登録で記録の追跡を手伝ってね。ゆっくり異常存在SCPラボは、次の報告書の扉も一緒に開けるよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "収容を放棄",
+      "9名だけ残る"
+    ],
+    "hook_caption": "収容不能",
+    "subtitle": "SCP-2480 未完の儀式",
+    "tagline": "財団が封鎖しかできなかった場所"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "儀式場へ入った職員が、全員同じ言葉を残した。",
+      "selected_hook": "驚き！記録9名が同じ禁忌を見た理由とは？",
+      "scores": [
+        {
+          "hook": "驚き！記録9名が同じ禁忌を見た理由とは？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 10,
+            "loop_connect": 15
+          },
+          "total": 70
+        },
+        {
+          "hook": "あなたなら、この未完の儀式を止められる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        },
+        {
+          "hook": "儀式場へ入った職員が、全員同じ言葉を残した。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 28
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        2,
+        4
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "驚き！記録9名が同じ禁忌を見た理由とは？",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "…え、9人全員が同じって、まだ答えがあるのか。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "SCP-2480の記録は、帰還者9名分だけ残っている。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "財団は現場を収容せず封鎖した。儀式は未完のままだ。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "待って、未完なら誰かが続きをしているのか。記録はここで途切れている。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "未完の儀式は他のファイルにも続く。高評価を残せ。1万人目標で毎日投稿中、財団の裏側シリーズに登録して",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "comment",
+      "style_label": "コメント",
+      "original_cta": "未完の儀式は他のファイルにも続く。高評価を残せ。1万人目標で毎日投稿中、財団の裏側シリーズに登録して応援よろしく。",
+      "new_cta": "財団の裏側シリーズシリーズ、次に解説してほしいSCPをコメントで教えてくれ。"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 3,
+        "relatability": 0,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 63,
+      "optimized_score": 63,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.89,
+      "issues": [
+        "16%・50%・66%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "をコメントで教えてくれ。…待て、最初の報告と矛盾してないか？",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「変」→「異常」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.359,
+      "similar_to": "SCP-179「すばるの乙女」財団が恐れる2つの警告",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 18,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "SCP-2480「未完の儀式」記録9名だけが残った収容不能の恐怖",
+      "enhanced_title": "🫣SCP-2480「未完の儀式」記録9名だけが残った収容不能の恐怖",
+      "emoji_added": "🫣",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "🫣SCP-2480「未完の儀式」記録9名だけが残った収容不能の恐怖"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": false,
+      "existing_bait": true,
+      "position": -1,
+      "bait_text": ""
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "question",
+        "statement",
+        "statement",
+        "question"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.4
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "財団職員ならこの収容手順の異常さに気づくはずだ",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 0,
+      "amplified": 0,
+      "frame_injected": true,
+      "contrast_score": 0.5
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['だけ'](+12)"
+    ]
+  }
+}

@@ -1,0 +1,658 @@
+{
+  "title": "1分ポケモン研究 #20：👀GUポケモンコラボに隠された5つの秘密、ピカチュウだけじゃない理由は？❓",
+  "theme": {
+    "title": "GUポケモンコラボの裏側！どんなポケモンが選ばれたのか？",
+    "angle": "ファッションとポケモンの意外なつながりを解説。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "あなたは知ってた？ピカチュウ以外の配分が怖すぎる",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 服コラボに本気ってどういうこと!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式告知では5系統のデザイン展開、ピカチュウ以外も主役級なんだよ！内部データまで調べてるからこそわかる設定なんだけど",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "しかも色だけじゃなく、シルエットでヤバすぎるポケモン感を作るの!?…このポケモン、パーティに入れる派？入れない派？…ここで冷静に考えてみると",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "答えは人気順じゃなく、毎日着やすい印象の配分！ でも残りの仕掛けがやばいんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "裏設定ファイルシリーズシリーズ、推しヤバすぎるポケモンの闇設定も知りたい人はコメントで！…あれ、以外って最初に言ってた…",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "あなた、GUで見たポケモン服を「人気順に並べただけ」と思ったことありませんか？実は選抜には、世代をまたぐ驚きの共通点が隠れています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "今回はその正体を暴きます！GUコラボで、なぜピカチュウだけでなく意外な顔ぶれまで服の主役になれたのか、本編で検証です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "最初に結論のヒントを出すと、選ばれる鍵は強さでも図鑑番号でもありません。服として一瞬で読める「シルエット」が勝負を決めます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "驚きなのは、ゲームで最強級かどうかより、胸元や背中で誰だと分かるかが重要なこと。ファッションでは数秒の視認性が武器になるんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "たとえば耳、しっぽ、丸い輪郭のような記号は、小さなプリントでも伝わります。ポケモンはキャラである前に、着る人の第一印象を作る素材です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "しかも選抜の裏側には、懐かしさと今っぽさを同居させる仕掛けもあります。次から、GUの服が図鑑以上に語っていた理由を追いかけましょう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "でもこれ、半分は間違いなんだ。GUコラボは人気ポケモンを並べるだけでなく、服として毎日着やすい色と形から候補を絞る仕組みなの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、ピカチュウなら何にでも印刷して終わりじゃないの？　実際はキャラの知名度より、Tシャツ一枚で柄が読めるかが最初の関門なんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "服のデザインでは、遠くから見ても分かる印象をシルエットと呼ぶよ。例えばゲンガーの耳やイーブイの大きな耳は、輪郭だけでも正体を伝えやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまり図鑑で強いポケモンより、洗濯後の普段着でも一瞬で分かるポケモンが有利？　バトル性能とはまるで別の選抜基準が働くわけだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その通り。さらにGUの価格帯では、色数を増やすほどプリント工程が複雑になりやすい。だから単色でも特徴が立つ顔やマークは商品化と相性がいいの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "色が多い伝説級より、モンスターボールみたいな赤白の記号が強い場面もあるのか。服では『誰か』より『何に見えるか』が先に判断されるんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "加えて選抜は世代の広さも重要よ。初代だけに寄せると大人には刺さっても、最新作から入った子には届きにくい。親子で選べる並びが売り場を強くするの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "だから御三家や定番キャラが混ざると、好きな世代が違う家族でも会話が生まれるんだ。コラボ服は着る人だけでなく、一緒に見る人にも届く商品だね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "結局、選ばれるのは人気投票の上位だけではなく、輪郭、色、世代、着回しを通過したポケモン。次は実際のラインアップで、その条件を照らし合わせよう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "GUのポケモン企画は、単に人気順で選ぶ方式ではありません。世代別の認知度、色の映え方、服に載せた時の判読性を重ね、候補を絞る設計です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまり強さランキングの王者でも、服では落選し得るんだね。小さな胸元プリントなら、輪郭だけで伝わるポケモンほど有利になるわけか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "アパレルの視認性では、数秒で柄を見分けられるかが重要です。ピカチュウの耳やモンスターボールは、遠目でも記号として認識されやすい代表例です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ここで驚きなのは、選抜の鍵が「図鑑の強さ」ではなく「一瞬の見分けやすさ」なこと。バトルの主役より、シルエットの主役が勝つ場合もあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "色彩研究では、黄・赤・青のような高彩度色は商品棚で目を引きやすい傾向があります。ポケモンの配色は、服の第一印象を作る材料にもなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "でも派手なら何でも正解ではないよね。全面に色を置くより、黒や白の生地にワンポイントを置くと、キャラの色がアクセントとして働きます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "プリント工程では、使う色数が増えるほど版や管理の負担も増えます。そのため線画や少色デザインは、ポケモンらしさと量産性を両立しやすいのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "なるほど、イーブイのように耳と顔で分かるキャラは強いね。細かな毛並みまで描かなくても、最低限の形だけで「誰か」が伝わります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "さらに服は毎日使うため、ファン以外にも着やすいことが重要です。大きな公式ロゴより、さりげない柄を好む層へ届く設計が選択肢を広げます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "GUコラボの選抜は、人気投票の結果発表ではなく、記憶される形・色・着やすさの交点探し。だから意外なポケモンが服で輝くんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "GUのポケモン企画は、ただ人気者を並べたコラボではありません。服として着た時に映えるかを、世代・色・シルエットまで検討して選ぶ、意外に緻密なチーム戦だったのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、強さ順でも図鑑番号順でもないの？　ポケモン選びがファッション会議だなんて、バトルの相性表より複雑そうだよ。どんな基準が隠されていたのかな？",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "背景には、ポケモンが1996年のゲーム誕生から、玩具や文具を越えて日常着へ進出してきた歴史があります。キャラクターを胸に置く服は、子ども向けだけではなくなりました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまり服は、好きなポケモンを連れ歩くモンスターボールみたいなものか。しかも大人が自然に着るなら、絵の大きさや配色まで勝負になるわけだね。",
+      "expression": "thinking",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで反転です。選ばれやすいのは看板級だけではなく、線画にした瞬間に化けるポケモン。ゲーム内の強さより、Tシャツ一枚で読める輪郭が主役を奪うことがあります。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "最強ランキングなら上位でも、服では埋もれることがあるんだ！　逆に耳、しっぽ、目元の形が一発で分かるポケモンは、遠くからでも存在感を出せそう。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "アパレルでいうグラフィックは、布に載せる絵柄のことです。刺繍なら糸数、プリントなら色数が仕上がりを左右し、複雑すぎる姿は魅力を再設計する必要が生まれます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "研究者が図鑑で特徴を拾うように、デザイナーは顔の角度や体の余白を調べるんだね。ポケモンの個性を減らすのでなく、服で伝わる形へ翻訳しているのか。",
+      "expression": "thinking",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "だからGUコラボの選抜は、人気投票の結果だけでは読めません。次は実際にどのポケモンが、色・世代・着回しという三つの関門を越えて並んだのか、答え合わせです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "驚きの核心です。GUのポケモン商品は、全種類を均等に並べる発想ではなく、服の色や柄として映える個性から選ばれる。人気投票の順位だけでは決まらないんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、知名度最強のポケモンを集めれば売れそうなのに？　でもTシャツでは、輪郭が一瞬で読めるかが勝負。小さな胸元でも誰か分かるシルエットが強いんだね。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "例えばピカチュウの耳やイーブイの耳は、顔を細かく描かなくても識別しやすい記号になる。衣服は遠目で見られるため、図鑑の細密さより瞬間認識が価値を持ちます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ここで反転！　選抜で怖いのは「かわいさ不足」ではなく、色数が多すぎること。印刷色が増えるほど表現は派手になるけど、普段着として合わせにくくなるんだ。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "アパレルでは配色が重要で、黒・白・グレーなどのベースに載せやすいポケモンは強い。キャラクターの設定色をそのまま再現せず、服向けに色を絞る場合もあります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまりゲーム内では鮮やかなポケモンでも、服では単色線画やワンポイントの方が選ばれることがあるのか。好きなポケモンが大きく描かれない理由も、少し見えてきたよ。",
+      "expression": "thinking",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "さらに世代選びは懐かしさの設計でもあります。子どもの頃に遊んだ層が大人になれば、キャラ柄は子ども服だけでなく、自分用のファッションとして成立しやすくなります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ポケモンは1996年から続くから、親世代と子世代で同じ名前が通じるのが強烈だね。一枚のTシャツが会話のきっかけになり、年齢差をまたぐ共通言語にもなるわけだ。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "コラボの価値はロゴを貼るだけではありません。服の形、季節、価格帯にキャラの印象を合わせる編集作業です。だから選ばれないことは不人気の判定では決してありません。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "次に店頭で見たら、「なぜこのポケモン？」を考えたくなるね。人気、輪郭、配色、世代という四つの条件が交差した結果なら、選抜そのものが謎解きみたいだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今日からのコツは、GUポケモン服を「好きな一匹の色」で選ぶことです。黄色なら黒やデニムを合わせるだけで、キャラ感を残しつつ街着としてまとまります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "でも全身を派手にするとコスプレっぽい？　そこで柄アイテムは一枚だけにして、残りを無地へ逃がすと、ポケモンの存在感がちゃんと主役になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "驚きなのは、Tシャツの大きなプリントより胸元の小さな刺繍のほうが、初対面の会話を生みやすいこと。気づいた人だけ反応できる、服の隠し要素になるんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ポケモン柄を着る日は、バッグか靴の色を一色だけ拾うのがおすすめ！　たとえばピカチュウの黄色に白スニーカーを足すと、視線が散らず写真映えも狙えます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで反転です。推しポケモンを前面に出さないほうが、むしろ「それ分かる！」と聞かれやすい。背面や袖のワンポイントは、発見された瞬間が会話の開始ボタンです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "家族や友達と着るなら、同じ柄でそろえるより色だけリンクさせましょう。片方が青系、もう片方が白系なら、集合写真でも統一感が出て個性も消えません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "洗濯前にはプリント面を内側に返すのが実用的です。摩擦を減らせるので、キャラクターの表情がこすれて薄くなるリスクを抑え、お気に入りを長く着られます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "買う前は鏡の前でスマホを胸の高さに置き、写真で確認してみてください。画面越しだと柄の大きさが分かりやすく、普段着として使えるかを冷静に判断できます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "結論は、GUポケモンコラボを「推し活専用」にしないこと。無地を土台に一つだけ仕込めば、通学、買い物、イベントまで使える、毎日の小さな冒険装備になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "GUコラボは、ただ人気ポケモンを並べた企画ではありません。世代をまたぐ仲間感を服の色やシルエットへ落とし込み、日常で推しを語れる入口に変えたのです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまり、図鑑で見るだけだったポケモンが、Tシャツやパジャマで生活に侵入したわけだね。バトルの強さとは別に、毎朝選ばれる強さがあるなんて胸アツだよ！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "驚きなのは、服は一瞬で相手の目に入る小さな看板になることです。ポケモン好き同士なら、控えめな柄でも気づいた瞬間に会話が始まる、秘密の合図になります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "次回は、ポケモン図鑑の身長と体重を徹底解説するよ。人間サイズだと思った推しが、実は部屋に入らないほど巨大かもしれない衝撃を確かめよう！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回は、最強ランキングだけでは測れない『見た目の圧』も検証します。初見で逃げたくなる巨大ポケモンから、意外に小さい伝説まで、図鑑の数字で逆転を暴きます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "GUコラボを見かけたら、どのポケモンが誰へ届くよう選ばれたのか考えてみてね。お気に入りの一着があれば、コメントで推しと刺さったデザインを教えてほしいな！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ポケモンの『え、マジで？』をもっと集めたい人は、高評価とチャンネル登録をお願いします。ゆっくりポケラボで、次の図鑑ショックも一緒に受け止めましょう！",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "選ばれた5匹",
+      "服になる理由"
+    ],
+    "hook_caption": "服に選ばれた訳",
+    "subtitle": "GU×ポケモンの意外な設計",
+    "tagline": "見た目だけじゃない"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "GUとピカチュウ、本気で組んだら何が起きる？",
+      "selected_hook": "あなたは知ってた？ピカチュウ以外の配分が怖すぎる",
+      "scores": [
+        {
+          "hook": "あなたは知ってた？ピカチュウ以外の配分が怖すぎる",
+          "scores": {
+            "curiosity_gap": 25,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 75
+        },
+        {
+          "hook": "え、人気順じゃない？GUポケモンの印象配分が謎すぎる",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 15
+          },
+          "total": 53
+        },
+        {
+          "hook": "GUとピカチュウ、本気で組んだら何が起きる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 35
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたは知ってた？ピカチュウ以外の配分が怖すぎる",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ待って！ 服コラボに本気ってどういうこと!?",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "公式告知では5系統のデザイン展開、ピカチュウ以外も主役級なんだよ！",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "しかも色だけじゃなく、シルエットでポケモン感を作るの!?",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "答えは人気順じゃなく、毎日着やすい印象の配分！ でも残りの仕掛けがやばいんだ。",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "裏設定ファイルシリーズには服選びの続きもあるよ。え、マジで？なら高評価、1万人目標で毎日投稿中だから",
+          "tension": 5,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "comment",
+      "style_label": "コメント",
+      "original_cta": "裏設定ファイルシリーズには服選びの続きもあるよ。え、マジで？なら高評価、1万人目標で毎日投稿中だから登録で応援よろしくね！",
+      "new_cta": "裏設定ファイルシリーズシリーズ、推しポケモンの闇設定も知りたい人はコメントで！"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 33,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 11,
+        "relatability": 5,
+        "shareability": 3,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "具体的な数字や固有名詞を入れてシェアしやすく",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 74,
+      "optimized_score": 74,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.92,
+      "issues": [
+        "66%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "定も知りたい人はコメントで！…あれ、以外って最初に言ってた…",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.33
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「ポケモン」→「ヤバすぎるポケモン」",
+        "「ポケモン」→「ヤバすぎるポケモン」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.386,
+      "similar_to": "ポケモンタワーに隠された秘密、あなたが見落とす3つの違和感は？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 10,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "GUポケモンコラボに隠された5つの秘密、ピカチュウだけじゃない理由は？",
+      "enhanced_title": "👀GUポケモンコラボに隠された5つの秘密、ピカチュウだけじゃない理由は？❓",
+      "emoji_added": "👀",
+      "category": "mystery",
+      "modified": true
+    },
+    "enhanced_title": "👀GUポケモンコラボに隠された5つの秘密、ピカチュウだけじゃない理由は？❓"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 3,
+      "bait_text": "…このポケモン、パーティに入れる派？入れない派？"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise",
+        "surprise"
+      ],
+      "streaks_found": 1,
+      "breakers_injected": 1,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "question",
+        "exclaim",
+        "statement",
+        "statement",
+        "ellipsis"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.8
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "内部データまで調べてるからこそわかる設定なんだけど",
+      "position": 2,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 77,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['だけ'](+12)",
+      "好奇心ギャップ['？', '理由'](+12)",
+      "やや長い(50字)(-5)"
+    ]
+  }
+}

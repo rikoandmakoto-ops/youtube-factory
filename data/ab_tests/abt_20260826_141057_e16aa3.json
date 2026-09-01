@@ -1,0 +1,88 @@
+{
+  "test_id": "abt_20260826_141057_e16aa3",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "雪女が3日黙れと言う…実は誰にも言えない恐怖があった【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "口外禁忌のモチーフがどこから来たか\nこれ知ってた？ 雪女が好きなあなた、あの美しい妖怪が助けた男へ最初に渡したのは優しさではなく、「誰にも言うな」という命令だったんだ。1904年の本には、その約束を破った夜が残されて / ゲームだとこう描かれてるけど、雪を操る妖怪は華やかで、対戦でもイベントでも印象に残るよね。あいつ好きなんだよね、と言いたくなる見た目だからこそ、原典の温度差が大きいんだ。 / 雪のステージで見かけると、それ好きなやつ！ってなるよ。でも「誰にも言うな」って何？ 学校で友達から聞いた内緒話みたいな、軽い約束じゃないんだよね？",
+  "generated_at": "2026-08-26T14:10:57.566284Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "雪女はなぜ助けた男に「3日黙れ」と命じたのか？【ショート】",
+      "thumb_copy": [
+        "助けた直後に命令",
+        "誰にも言うな…なぜ？"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "1904年の雪女譚、男が破った「口外禁忌」の結末【ショート】",
+      "thumb_copy": [
+        "1904年の原典",
+        "約束を破った夜"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は雪女は優しくない…最初に渡したのは恐怖の命令【ショート】",
+      "thumb_copy": [
+        "美しい妖怪の正体",
+        "最初の言葉は命令"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "雪女はなぜ助けた男に「3日黙れ」と命じたのか？【ショート】",
+    "thumb_copy": [
+      "助けた直後に命令",
+      "誰にも言うな…なぜ？"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": {
+    "video_id": "q2s-VS1PHQs",
+    "matched_variant_index": 0,
+    "pattern": "question",
+    "ctr": 0.011363636363636364,
+    "impressions": 176,
+    "views": 260,
+    "published_at": "2026-08-21T09:30:18Z",
+    "updated_at": "2026-08-31T14:10:12.167044Z"
+  }
+}

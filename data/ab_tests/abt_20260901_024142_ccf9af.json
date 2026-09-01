@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260901_024142_ccf9af",
+  "channel_id": "company-facts",
+  "theme": {
+    "title": "📈退職金の本当は？3社で最大2,000万円差の実態【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "企業ごとの退職金制度を比較し、転職・就活層にとっての重要性を強調。",
+  "generated_at": "2026-09-01T02:41:42.382841Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "退職金はなぜ会社で2,000万円も差がつくのか？転職前に確認",
+      "thumb_copy": [
+        "退職金の格差",
+        "最大2,000万円差"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "3社比較で判明！退職金は最大2,000万円差、就活生も必見",
+      "thumb_copy": [
+        "3社で徹底比較",
+        "老後資金が変わる"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "衝撃の事実：給料より退職金で損する会社選びの落とし穴",
+      "thumb_copy": [
+        "給与だけで選ぶな",
+        "退職金に大格差"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "退職金はなぜ会社で2,000万円も差がつくのか？転職前に確認",
+    "thumb_copy": [
+      "退職金の格差",
+      "最大2,000万円差"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

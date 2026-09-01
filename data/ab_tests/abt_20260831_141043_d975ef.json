@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260831_141043_d975ef",
+  "channel_id": "yokai-watch",
+  "theme": {
+    "title": "なぜコマさんの秘密？神社の狛犬と田舎の意外なつながり【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "神社の狛犬がモチーフ。田舎から出てきた設定と守護獣としての元ネタ\n皆さん、神社で狛犬を見かけたとき、その不思議な存在感に興味を持ったことはありませんか？彼らの秘密に迫ります。 / 狛犬といえば、妖怪ウォッチのコマさんとコマじろうの元ネタでもあるって知っていましたか？その秘密を暴きます！ / 田舎からやってきたコマさんとコマじろう。この設定は日本の狛犬伝説に深く関わっているんです。",
+  "generated_at": "2026-08-31T14:10:43.235473Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜコマさんは田舎者？神社の狛犬に隠されたルーツ【ショート】",
+      "thumb_copy": [
+        "コマさんの故郷",
+        "狛犬が答えだった"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "2体で守る理由とは？コマさんの元ネタ・神社の狛犬【ショート】",
+      "thumb_copy": [
+        "2体の守護獣",
+        "コマさんの元ネタ"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は妖怪じゃない？コマさんを生んだ神社の狛犬の秘密【ショート】",
+      "thumb_copy": [
+        "実は妖怪じゃない",
+        "狛犬の意外な秘密"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜコマさんは田舎者？神社の狛犬に隠されたルーツ【ショート】",
+    "thumb_copy": [
+      "コマさんの故郷",
+      "狛犬が答えだった"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}

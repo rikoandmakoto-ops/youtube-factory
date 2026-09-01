@@ -1,0 +1,637 @@
+{
+  "title": "1分科学 #97：🧬なぜ大谷翔平は睡眠を最優先するのか？8時間超が支える体の正体",
+  "theme": {
+    "title": "大谷翔平の睡眠習慣がもたらすパフォーマンスの秘密",
+    "angle": "アスリートの睡眠がどのように身体に影響を与えるのかを解説する。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "あなたは睡眠8時間超の秘密を知っていますか？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、野球の力まで睡眠で闇が深いわるの？まだ答えが気になる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちょっと待って、ここからが驚きなんだけど、大谷翔平選手は睡眠を約8〜10時間確保すると伝えられています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、スマホも充電不足だと動きが鈍いね…実はこれ…これ、このチャンネルでしか解説してないんだけど",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも眠りは筋肉だけでなく判断も整えます。だから打席の一球にも関わるんです、続きがあります。ここからがさらにヤバい",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "睡眠と夢シリーズシリーズ、通知をONにしておけば、明日の科学も見逃さないよ！…実はこれ、最初に言ったことと繋がってる",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？あなたも寝不足の朝、目は開いているのに体だけ少し遅れて動くように感じたことありませんか。\n大谷翔平選手が睡眠を優先する話は、その朝の遅れを減らすヒントになるんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！アラームで起きてから靴ひもを結ぶだけなのに、普段より何秒も手間取ったんだ。\n野球選手の睡眠と、僕の朝の鈍さが本当に同じ仕組みでつながるの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "つながります。大谷選手は報道や本人の発言で、睡眠をおよそ8〜10時間確保する意識を語ってきました。\nこれはただ長く横になるためでなく、次の日の動きと判断を準備する時間として考えられているんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！筋トレや食事がプロの体を作ると思っていたけれど、眠る時間も同じくらい予定に入るんだね。\nでも長く寝るだけで、時速150キロ級の球を打つ力まで変わるのかな？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "野球では筋肉の大きさだけでなく、投手の手から球が離れてから判断する短い時間が何度も要ります。\n睡眠が足りないと、見えた情報と手足の動きを結ぶ連携が、スマホの通信遅れのようにずれやすくなります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "0.1秒より短い世界で通信が遅れたら、バットを振る時刻も少し変わって芯を外しそうだね。\n疲れを感じなくても、脳の中では先に遅れが始まっていることがあるの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "あります。睡眠中には成長ホルモンという、日中に使った組織の修理を助ける合図が多く出ます。\nたとえるなら、毎晩の眠りは使い終えたグラブを翌朝までに整備する、閉店後の作業時間と同じなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、グラブの手入れを何日も飛ばせば使いにくくなりそうだよね。\nでも筋肉の修理なら分かるけれど、打席で迷わない頭の働きまで眠りが整えるのはなぜ？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "眠りには浅めの眠り、深い眠り、レム睡眠という夢を見やすい眠りがあります。\nレム睡眠は体を休ませながら脳が情報を整理しやすい時間で、昨日練習した動きも並べ替えられると考えられています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、寝ている間に昨日の打撃練習まで整理されるの？それなら睡眠は練習を止める時間ではなく、練習を体になじませる時間みたいだね。\nただし、ここからが本題なんだよね？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "はい。睡眠を長く取れば誰でも必ず成績が上がる、と単純には言えません。\nけれど2011年、スタンフォード大学が男子バスケットボール選手11人で行った研究は、眠りの価値を数字で示しました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "スタンフォード大学の研究なら、朝の気分だけではなく、走る速さや成功率まで測ったのかな。\n最強の事実を先に知りたいんだけど、選手たちは何時間くらい眠るようにしたの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では11人に、普段の練習を続けながら約5〜7週間、毎晩10時間以上ベッドで過ごすよう求めました。\n実際に眠れた時間には差がありますが、睡眠機会を大幅に増やすと何が起きるかを見た実験です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "10時間以上ベッドにいるのは、学生にとってもかなり長いね。\n大谷選手が8〜10時間を意識するのも、だらだら過ごすためではなく、激しい運動の回復枠を先に確保する考え方に見えてきたよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "結果の一つは、選手のスプリント平均タイムが16.2秒から15.5秒へ短くなったことでした。\n0.7秒は小さく聞こえても、体育館を何度も往復する競技では、信号を一回早く渡れる差のように積み重なります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！バスケットボールの数字でも、走り出しの質が眠りと関係しそうだと分かるね。\nじゃあ力だけでなく、狙った場所へ正確に入れるような動きにも差が出たの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "同じ研究では、フリースロー成功率が80%から86%へ、3ポイント成功率が36%から42%へ変化しました。\n睡眠だけの効果と断定はできませんが、休息を増やした期間に精密な動作の成績も上向いた点が重要です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "6ポイントの差なら、試合で一本入るか外れるかにもつながりそうだね。\nあなたが寝不足の日にキーボードの打ち間違いが増えるのも、注意と指先の連携が少し乱れる例かもしれないんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、睡眠は筋肉へ直接パワーを注ぐものではないことです。\n疲労、注意、気分、痛みの感じ方をまとめて整えやすくして、持っている力を試合の場で出しやすくする土台なんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、同じ車でもガソリンだけ満タンでは足りなくて、タイヤ、ブレーキ、ハンドルまで調子がそろって初めて走りやすい感じだね。\n睡眠は体全体の点検表みたいな役目なの？",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そのイメージが近いです。睡眠不足では、反応時間という合図を見てから体を動かすまでの時間が遅れやすいと、多くの研究が示しています。\n横断歩道の信号が青になっても足が一拍遅れる状態を思い浮かべてみてください。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "打席では球が近づいてから一拍待つ余裕がないから、ほんの少しの遅れでも大きいね。\n大谷選手が眠りを削らないのは、筋肉痛を軽くするだけではないと分かってきたよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも一晩だけ短く眠った場合でも、注意の抜けや判断のばらつきは起こり得ます。\nただし個人差は大きく、8時間眠った人が全員同じように冴えるわけではないので、数字だけを競う必要はありません。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、じゃあ大谷選手と同じ10時間を目標にしても、自分に合っているとは限らないんだね。\n自分に必要な眠りを知るには、時計の数字以外にどんな目印を見ればいいの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず休日だけ大きく寝だめしたくなるか、昼食後だけでなく午前中にも強い眠気が出るかを観察してみてください。\n成人では一般に7〜9時間が目安とされますが、これは全員へ同じ答えを配る数字ではありません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、平日は6時間で平気と思っていても、休日には昼近くまで眠ることがあるよ。\n体が足りなかった分を知らせている可能性があるなら、休みの日の眠気も大事な手がかりなんだね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "大谷選手のようなトップ選手は、試合、練習、移動という負荷が重なるため、回復時間の管理も仕事の一部になります。\n特に北米の遠征では時差をまたぐことがあり、体内時計という一日のリズムを整える必要も出てきます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "体内時計って、朝に目が覚めて夜に眠くなる、体の中の24時間リズムのことだよね。\n飛行機で移動した翌日に頭がぼんやりするのも、時計の針だけが現地に追いついていないからなの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうです。体内時計は光、食事、運動の時刻から、いつ体温を下げて眠りへ向かうかを調整します。\n海外遠征では寝室を暗くする、朝の光を浴びるなど、布団に入る前から翌朝までの段取りが回復を助けます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！眠る技術は布団に入って目を閉じる瞬間だけではなく、朝のカーテンを開けるところから始まるんだね。\nあなたの通勤前の光にも、同じ時計合わせの役目があるの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "あります。起きてから明るい光を浴びると、体内時計は朝を認識しやすくなります。\n特別な機械がなくても、カーテンを開けて窓際で数分過ごすことは、夜に眠くなる時刻を整える小さな合図になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それなら今日からすぐ試せそうだね。大谷選手の生活を全部まねできなくても、朝の光ならお金もかからないし続けられそう。\nでも夜の試合が終わった後は、興奮して眠れなくなりそうじゃない？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "夜に強い運動や刺激があった後は、心拍や気持ちがすぐ静まらないことがあります。\nだから選手は食事、入浴、照明、就寝時刻を含めた回復の流れを作り、体へ一日の終わりを伝える工夫を重ねます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "試合後の気分を一瞬で消すのではなく、順番に落ち着かせるんだね。\nスマホもアプリを閉じずに充電すると電池が減るように、頭も作業を終える合図が必要なのかな？",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "近いです。寝る直前まで明るい画面を見続けると、光だけでなく内容の刺激で頭が働き続けやすくなります。\nスマホだけを悪者にせず、寝る30分前に照明を落として別の静かな習慣へ移ることが現実的です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！一本だけのつもりで動画を見たら30分過ぎていて、布団に入ってからも内容を考えていたんだ。\n画面の明るさより、見た内容で気持ちが動くことも寝つきに関係するんだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "関係します。勝敗、仕事の連絡、明日の予定のような情報は、休む前でも脳に次の行動を考えさせやすいです。\n歯みがき、カーテン、読書のように毎晩同じ順番を作ると、体に眠る準備を知らせやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "歯みがきの後に照明を落として布団へ行くなら、毎晩同じ道順を歩く感じで覚えられそうだね。\n大谷選手の睡眠習慣も、特別な裏技より、同じ準備を続けることが中心なのかな？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう考えられます。トップ選手には専門スタッフや移動管理がありますが、眠りを回復の優先事項に置く姿勢は誰でも参考にできます。\nあなたの明日の集中力も、今夜の最後の30分を少し変えるところから動き出すかもしれません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！眠るのは何もしない空白ではなく、明日の体と判断を整える準備なんだね。\n今夜はアラームを遅くするより、布団に入る時刻を15分だけ早めてみるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "短い昼寝も、眠気を軽くして注意を戻す助けになる場合があります。\nただし夕方以降に長く眠ると夜の寝つきに響く人もいるので、一般には午後の早い時間に20〜30分ほどが使われやすい目安です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "スマホを完全に充電し直すのではなく、午後に少しだけ電池を足す感じだね。\n昼寝が長くなりやすい僕は、アラームを25分後にして、夜の眠りを守るほうを優先してみるよ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "スポーツの現場では腕時計型の機器で睡眠を記録することもありますが、点数を気にしすぎて眠れないなら本末転倒です。\n寝つくまでの時間、朝の気分、日中の眠気も、アプリの数字と同じくらい大切な観察になります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "数字が低いから眠らなきゃと焦えると、かえって目が冴えそうだね。\nここは科学でも、全員に何時間が完璧かまでは結論が出ていないんだよね？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "はい、ここはまだ分かっていない部分があります。必要な睡眠量には年齢、体質、運動量、生活リズムが関わるからです。\nだから大谷選手の習慣は正解を丸写しする材料ではなく、眠りを後回しにしない手本として見るのが良さそうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それなら僕たちは10時間という数字を追うより、朝の動きや昼の眠気を見て調整すればいいんだね。\n寝不足の朝にコーヒーだけで押し切る前に、前夜の使い方を見直す意味がありそうだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "一つ目の実践は、起きる時刻を毎日なるべく大きくずらさないことです。\n休日も平日より2時間以上遅く起きる日が続くと、月曜の朝に時差ぼけのようなずれを感じる人がいるため、まず朝を固定してみてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "2時間のずれでも、海外へ行ったみたいな感覚になることがあるんだね。\n寝る時刻だけを気にしていたけれど、朝の起き方が夜の眠気を作る土台になるのは意外だったよ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "二つ目は、寝室を眠るための場所に近づけることです。\n仕事の通知や強い照明を布団まで持ち込まないだけでも、ベッドを考え事の机ではなく、体を休ませる場所として覚えやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ベッドの上で動画や仕事をすると、布団に入っても頭が机の続きを始めるみたいになるんだね。\nまず充電器を少し離して置くところからなら、僕にもできそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただ、何週間も眠れない、日中の眠気で生活や運転に支障が出る、いびきで息が止まると言われる場合は自己流だけで抱え込まないでください。\n睡眠を診る医療機関に相談することも、体を守り、翌日の力を戻すための大切な選択です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "睡眠は根性で削るものではなく、仕事や運動の力を出す土台なんだね。\n大谷選手の8〜10時間という習慣を見て、自分の眠りも明日の判断と動きにつながっていると感じられたよ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる直前に体がビクッとなるのはなぜか、その一瞬に脳と筋肉で起きる切り替えを見ていきます。\n今夜寝るとき、あなたの体が明日のために整い始める瞬間をちょっと意識してみてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "寝る前の一瞬にも仕組みがあるなら、布団に入る時間が少し楽しみになるね。\n睡眠と夢シリーズを続けて見ると、朝のだるさや夢の記憶も別の角度から見えてきそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話が面白かったら高評価で教えてください。\n身近な不思議を毎日1本ずつ一緒に解いているので、次回も見逃さないようチャンネル登録よろしくね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "眠りが武器",
+      "8時間超の差"
+    ],
+    "hook_caption": "眠りが武器",
+    "subtitle": "大谷翔平の睡眠習慣から見る回復の仕組み",
+    "tagline": "寝る時間が体の動きを変えていく"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "充電中のスマホみたいに、体も眠りで満たされます。",
+      "selected_hook": "あなたは睡眠8時間超の秘密を知っていますか？",
+      "scores": [
+        {
+          "hook": "あなたは睡眠8時間超の秘密を知っていますか？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 18,
+            "loop_connect": 5
+          },
+          "total": 58
+        },
+        {
+          "hook": "え、マジで？睡眠が打席の判断を変える理由とは？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 45
+        },
+        {
+          "hook": "充電中のスマホみたいに、体も眠りで満たされます。",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 28
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        2
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "あなたは睡眠8時間超の秘密を知っていますか？",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "えっ、野球の力まで睡眠で変わるの？まだ答えが気になる！",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "大谷翔平選手は睡眠を約8〜10時間確保すると伝えられています。",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "言われてみれば確かに、スマホも充電不足だと動きが鈍いね。",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "しかも眠りは筋肉だけでなく判断も整えます。だから打席の一球にも関わるんです、続きがあります。",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "今夜は寝る時刻を少し意識してみてください。睡眠と夢シリーズも見て、高評価を押して、1万人目標で毎日投",
+          "tension": 2,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "notify",
+      "style_label": "通知ON",
+      "original_cta": "今夜は寝る時刻を少し意識してみてください。睡眠と夢シリーズも見て、高評価を押して、1万人目標で毎日投稿中のチャンネル登録を応援よろしくね。",
+      "new_cta": "睡眠と夢シリーズシリーズ、通知をONにしておけば、明日の科学も見逃さないよ！"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 3,
+          "text": "ちょっと待って、ここからが驚きなんだけど、大谷翔平選手は睡眠を約8〜10時間確保",
+          "reason": "1行52字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 19,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 10,
+        "emotional_impact": 3,
+        "relatability": 3,
+        "shareability": 3,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "具体的な数字や固有名詞を入れてシェアしやすく",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 70,
+      "optimized_score": 70,
+      "micro_reveals": 1,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.02,
+      "issues": [
+        "50%・66%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "科学も見逃さないよ！…実はこれ、最初に言ったことと繋がってる",
+      "keyword_overlap_before": 0.33,
+      "keyword_overlap_after": 0.33
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「変」→「闇が深い」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭に具体的な数字"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.407,
+      "similar_to": "なぜ雷鳴の3秒前から体が固まるのか？あなたの脳に起きる反応の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 9,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "original_title": "なぜ大谷翔平は睡眠を最優先するのか？8時間超が支える体の正体",
+      "enhanced_title": "🧬なぜ大谷翔平は睡眠を最優先するのか？8時間超が支える体の正体",
+      "emoji_added": "🧬",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🧬なぜ大谷翔平は睡眠を最優先するのか？8時間超が支える体の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": false,
+      "existing_bait": true,
+      "position": -1,
+      "bait_text": ""
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "surprise",
+        "neutral",
+        "neutral",
+        "negative",
+        "surprise"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "exclaim",
+        "statement",
+        "ellipsis",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.8
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "これ、このチャンネルでしか解説してないんだけど",
+      "position": 3,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 3,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "test_id": "abt_20260901_024135_660405",
+  "channel_id": "company-facts",
+  "theme": {
+    "title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+    "angle": ""
+  },
+  "scenario_summary": "有価証券報告書の平均年収と、住宅・家族手当の実額",
+  "generated_at": "2026-09-01T02:41:35.459406Z",
+  "variants": [
+    {
+      "pattern": "question",
+      "title": "なぜトヨタの平均年収982万円は高く見えるのか？手当の中身を解説【ショート】",
+      "thumb_copy": [
+        "年収982万円の真実",
+        "手当の差が大きい"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "number",
+      "title": "トヨタ平均年収982万円！住宅・家族手当の実額を3分で確認【ショート】",
+      "thumb_copy": [
+        "982万円の内訳",
+        "住宅・家族手当"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    },
+    {
+      "pattern": "surprise",
+      "title": "実は給与だけじゃない！トヨタ年収982万円を支える手当の実額【ショート】",
+      "thumb_copy": [
+        "実は給料だけじゃない",
+        "手当が年収を左右"
+      ],
+      "score": 0.0,
+      "breakdown": {
+        "curiosity": 0.0,
+        "specificity": 0.0,
+        "target_fit": 0.0,
+        "readability": 0.0
+      },
+      "comment": ""
+    }
+  ],
+  "best": {
+    "pattern": "question",
+    "title": "なぜトヨタの平均年収982万円は高く見えるのか？手当の中身を解説【ショート】",
+    "thumb_copy": [
+      "年収982万円の真実",
+      "手当の差が大きい"
+    ],
+    "score": 0.0,
+    "breakdown": {
+      "curiosity": 0.0,
+      "specificity": 0.0,
+      "target_fit": 0.0,
+      "readability": 0.0
+    },
+    "comment": ""
+  },
+  "openai_used": true,
+  "claude_used": false,
+  "actual_metrics": null
+}
