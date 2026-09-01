@@ -1,0 +1,528 @@
+{
+  "id": "clip-animal",
+  "name": "動物情報局",
+  "concept": "日本・海外のバイラル動物動画から『最も癒される・驚く・笑える30秒』を切り出して縦型ショートにするチャンネル。ソースは国内の切り抜きOK動物系YouTuberと海外のReddit/SNSバイラル動物動画の両方。冒頭2秒でインパクト、字幕は日本語で焼き込む。",
+  "style": "clip",
+  "youtube_channel_id": "UCKlM0WqlO0z2JJN5z6Zd5uQ",
+  "image_mode": "generate",
+  "clip": {
+    "engine": "local",
+    "fallback_engine": "local",
+    "sources": [],
+    "external_sources": {
+      "enabled": false,
+      "_comment": "国内の動物系YouTuberで切り抜きOKを明示しているチャンネルが見つかったら allowlist に追加して有効化する。",
+      "region_code": "JP",
+      "max_candidates": 25,
+      "videos_per_channel": 50,
+      "prepare_limit": 5,
+      "min_duration_sec": 60,
+      "max_duration_sec": 3600,
+      "download_dir": "~/Movies/yf_clip_downloads/clip-animal",
+      "_download_dir_comment": "~/Desktop の下には絶対に置かないこと。launchd 配下では TCC で ffmpeg の書き込みが無言でハングする。",
+      "max_height": 1080,
+      "player_clients": [
+        "android",
+        "web"
+      ],
+      "subtitle_langs": [
+        "ja-orig",
+        "ja"
+      ],
+      "source_crop_bottom_ratio": 0,
+      "trending": {
+        "enabled": false,
+        "category_ids": [
+          "15"
+        ],
+        "use_as": "theme_only"
+      },
+      "creative_commons": {
+        "enabled": true,
+        "queries": [
+          "動物 面白い",
+          "猫 犬 ハプニング",
+          "animal funny"
+        ],
+        "use_as": "clippable",
+        "_comment": "CC BY の動物動画を拾う。国内YouTuber allowlist が揃うまではこちらが国内ソースの主力。"
+      },
+      "allowlist_channels": []
+    },
+    "viral_sources": {
+      "enabled": true,
+      "sort": "top",
+      "time_filter": "day",
+      "auth_mode": "auto",
+      "limit_per_subreddit": 50,
+      "request_interval_sec": 4.0,
+      "max_candidates": 40,
+      "prepare_limit": 5,
+      "min_score": 2000,
+      "_min_score_comment": "動物系は投稿母数が多いので 2000 でも十分バズった動画が拾える。",
+      "min_duration_sec": 5,
+      "max_duration_sec": 120,
+      "_duration_comment": "動物バイラルは短い（5〜30秒が中心）。120秒超はコンピレーションが多い。",
+      "max_height": 1080,
+      "download_dir": "~/Movies/yf_viral_downloads/clip-animal",
+      "user_agent": "youtube-factory:clip-animal:1.0 (contact via channel description)",
+      "subreddits": [
+        {
+          "name": "aww",
+          "weight": 3,
+          "enabled": true
+        },
+        {
+          "name": "AnimalsBeingDerps",
+          "weight": 3,
+          "enabled": true
+        },
+        {
+          "name": "AnimalsBeingBros",
+          "weight": 2,
+          "enabled": true
+        },
+        {
+          "name": "StartledCats",
+          "weight": 2,
+          "enabled": true
+        },
+        {
+          "name": "Zoomies",
+          "weight": 2,
+          "enabled": true
+        },
+        {
+          "name": "NatureIsFuckingLit",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "name": "cats",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "name": "dogs",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "name": "WhatsWrongWithYourDog",
+          "weight": 2,
+          "enabled": true
+        },
+        {
+          "name": "FunnyAnimals",
+          "weight": 2,
+          "enabled": true
+        }
+      ],
+      "content_gate": {
+        "allow_over_18": false,
+        "require_manual_review": false,
+        "require_speech": false,
+        "min_speech_ratio": 0.0,
+        "_min_speech_ratio_comment": "動物動画は発話なしが大半なので 0 にする。",
+        "block_communities": [],
+        "block_title_patterns": [
+          "(?i)\\b(nsfw|gore|death|dead|kill|abuse|cruelty)\\b",
+          "(?i)\\b(fight|attack|injured|blood)\\b"
+        ],
+        "_patterns_comment": "動物虐待・グロ系を明示的にブロック。"
+      },
+      "output": {
+        "min_duration_sec": 6,
+        "target_duration_sec": 30,
+        "max_duration_sec": 59,
+        "clips_per_video": 1,
+        "max_source_attempts": 5,
+        "cta_text": "",
+        "watermark_text": "動物情報局"
+      },
+      "layout_spec": {
+        "canvas": [
+          1080,
+          1920
+        ],
+        "fps": 30,
+        "source_crop_bottom_ratio": 0.0
+      },
+      "thumbnail_template": {
+        "badge_text": "動物バズ",
+        "badge_color": [
+          80,
+          200,
+          120
+        ],
+        "hook_color": [
+          255,
+          255,
+          255
+        ],
+        "subtitle_color": [
+          255,
+          220,
+          60
+        ],
+        "bg_tone": "dark",
+        "style_hint": "元動画のピーク時フレーム（動物が最も映えるシーン）に太字フックを乗せる。"
+      },
+      "metadata": {
+        "short_title_hashtags": "#shorts #動物",
+        "short_intro": "海外で今バズってる動物動画に日本語字幕を付けました。\n\n{source_title}\n元投稿: {source_url}\n（{credit_name} より）",
+        "short_hashtags": "#shorts #動物 #猫 #犬 #面白動画 #癒し",
+        "tags": [
+          "動物",
+          "猫",
+          "犬",
+          "面白動画",
+          "shorts",
+          "癒し",
+          "animal",
+          "funny"
+        ],
+        "category_id": "15",
+        "_comment": "category 15 = Pets & Animals"
+      },
+      "asr": {
+        "model": "small",
+        "compute_type": "int8",
+        "language": null,
+        "beam_size": 5
+      },
+      "style_rules": [
+        "フック文は全角20文字以内。短くインパクト重視。",
+        "フック文は実際に映っていることを書く。釣りタイトルにしない。",
+        "字幕はカジュアルな話し言葉でOK。動物の気持ちを代弁するのもあり。",
+        "動物虐待・危険行為を面白おかしくしない。"
+      ]
+    },
+    "clips_per_video": 1,
+    "target_duration_sec": 30,
+    "min_duration_sec": 8,
+    "max_duration_sec": 59,
+    "segment_selection": {
+      "prefer_retention_peaks": false,
+      "retention_weight": 0,
+      "script_weight": 1.0,
+      "exclude_head_sec": 0,
+      "exclude_tail_sec": 0,
+      "min_gap_sec": 10,
+      "min_speech_ratio": 0.0,
+      "max_line_gap_sec": 999,
+      "_comment": "動物動画は発話なしが大半。無音ガードを完全無効化。"
+    },
+    "visual_guard": {
+      "enabled": false,
+      "_comment": "動物動画は映像が本体なので visual_guard は不要。"
+    },
+    "output_dir": "~/Movies/yf_clips/clip-animal"
+  },
+  "layout_spec": {
+    "canvas": [
+      1080,
+      1920
+    ],
+    "fps": 30,
+    "source_crop_bottom_ratio": 0
+  },
+  "voice_style": {
+    "tone": "元動画の音声をそのまま使う。テキスト（フック/字幕）だけがこのチャンネルの声。",
+    "forbidden": [],
+    "style_rules": [
+      "フック文は20文字以内。短くインパクト重視。",
+      "動物の行動を面白く・可愛く伝える。",
+      "動物虐待を連想させる表現は禁止。",
+      "CTAは『チャンネル登録で毎日癒される』の一点。",
+      "**以下の煽りテンプレートを台本に差し込んではいけない**: 「ここからがヤバい」「衝撃の事実として」「まだ終わらんのよ」「まだ続きがあるんです」「ここからが本番」「と思うじゃん？」「ここからが驚き」等のテンプレ煽り文は全て不合格。",
+      "**「…あれ、〇〇って最初に言ってた」系のループバック締めは禁止**。意味不明な自己言及で終わらせない。",
+      "**本編中の自己宣伝禁止**: 「このレベルの分析は他では見れない」「論文を直接読んで解説してるチャンネルは少ない」等、解説の途中でチャンネルを宣伝する行為は不合格。CTAは本編終了後に短く1回のみ。",
+      "**内容と無関係な煽り禁止**: 「これ、賛否分かれると思うんだけど」「お前らならどうする？」等、テーマと関係ない煽り質問を差し込まない。"
+    ]
+  },
+  "characters": {},
+  "publish_settings": {
+    "auto_publish": true,
+    "default_privacy": "public",
+    "publish_targets": [
+      "youtube"
+    ],
+    "auto_comment": {
+      "enabled": true,
+      "question": "この子に名前つけるなら何にする？コメントで教えてね！"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "動物情報局｜ショート全集",
+      "main": "動物情報局｜本編",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "見たい動物のリクエストをコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
+    }
+  },
+  "description_template": {
+    "short_intro": "{source_title}\n元投稿: {source_url}\n（{credit_name} より）\n\n動物の面白・癒し動画を毎日お届け！",
+    "short_hashtags": "#shorts #動物 #猫 #犬 #面白動画 #癒し",
+    "omit_fullvideo_cta": true,
+    "main_hashtags": "#動物 #面白動画 #癒し",
+    "lead_template": "動物情報局が厳選した癒し動画をお届け。"
+  },
+  "thumbnail_template": {
+    "badge_text": "動物",
+    "badge_color": [
+      80,
+      200,
+      120
+    ],
+    "hook_color": [
+      255,
+      255,
+      255
+    ],
+    "subtitle_color": [
+      255,
+      220,
+      60
+    ],
+    "bg_tone": "dark",
+    "style_hint": "動物が最も可愛い・面白い瞬間のフレームを使い、太字フックを乗せる。"
+  },
+  "defaults": {
+    "speed": 1,
+    "target_duration": 30,
+    "bg_type": "none",
+    "use_illustrations": false,
+    "hashtags": [
+      "#shorts",
+      "#動物",
+      "#面白動画",
+      "#癒し"
+    ],
+    "category": "15",
+    "short_title_hashtags": "#shorts #動物",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日更新中",
+      "cta": "チャンネル登録で毎日癒される"
+    }
+  },
+  "content_policy": {
+    "tone": "カジュアル・癒し",
+    "age_rating": "all_ages",
+    "cta_position": "end",
+    "cta_style": "登録誘導",
+    "guidelines": [
+      "動物虐待・危険行為を助長する動画は絶対に使わない",
+      "元動画のクレジットを説明欄に必ず記載する",
+      "動物が明らかに苦しんでいる・怪我をしている映像は使わない",
+      "権利者から削除の申し出があれば即座に取り下げる"
+    ],
+    "avoid": [
+      "動物虐待・動物実験の映像",
+      "野生動物の捕食シーン（グロテスクなもの）",
+      "人間が動物に危害を加えている映像",
+      "動物が明らかに恐怖を感じている映像"
+    ]
+  },
+  "theme_priority": {
+    "label": "最もバズる動物の瞬間",
+    "categories": [
+      "予想外の行動をする動物（最優先）",
+      "異種の動物同士の交流",
+      "赤ちゃん動物の可愛い仕草",
+      "賢い動物の問題解決シーン",
+      "ドジな動物の面白シーン"
+    ],
+    "good_examples": [
+      "猫がドアを自分で開ける",
+      "犬が飼い主の帰宅に大喜び",
+      "意外な動物同士が仲良くしている"
+    ],
+    "avoid_categories": [
+      "動物が苦しんでいるシーン",
+      "グロテスクな捕食シーン",
+      "人間が動物を怖がらせている"
+    ],
+    "title_style": "動物の行動を20文字以内で言い切る。疑問形OK。動物名を入れると伸びやすい。",
+    "viral_hooks": "予想外の行動 / 異種交流 / 赤ちゃん動物 / ドジ・おバカ",
+    "title_power_words": [
+      "動物",
+      "猫",
+      "犬",
+      "癒し",
+      "面白い"
+    ]
+  },
+  "theme_blacklist": [],
+  "genre_blacklist": [],
+  "theme_seeds": [],
+  "effects_research": {
+    "genre": "clip",
+    "prefer_shorts": true,
+    "target_channels": 6,
+    "videos_per_channel": 2
+  },
+  "video_format": {
+    "layout": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "short_width": 1080,
+      "short_height": 1920,
+      "short_fps": 30
+    },
+    "colors": {
+      "bg_color": [
+        14,
+        10,
+        12,
+        255
+      ]
+    },
+    "audio": {
+      "speed": 1,
+      "pause_between": 0,
+      "bgm_volume": 0,
+      "bgm_path": null
+    },
+    "branding": {
+      "watermark_text": "動物情報局",
+      "watermark_position": "bottom_right",
+      "watermark_opacity": 150,
+      "watermark_font_size": 20,
+      "cta_style": "subscribe"
+    },
+    "output": {
+      "target_duration": 30,
+      "gen_type": "clip",
+      "bg_type": "none",
+      "use_illustrations": false
+    },
+    "youtube": {
+      "channel_id": "UCKlM0WqlO0z2JJN5z6Zd5uQ",
+      "default_tags": [
+        "動物",
+        "猫",
+        "犬",
+        "面白動画",
+        "癒し",
+        "shorts",
+        "animal",
+        "funny",
+        "cute"
+      ],
+      "default_category": "15",
+      "privacy_status": "public",
+      "upload_schedule": null
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "minimal",
+      "allow_shake": false,
+      "allow_flash": false,
+      "allow_pixelate": false,
+      "allow_glitch": false,
+      "allow_tint": false,
+      "zoom_max": 0.03,
+      "transition_duration": 0.2
+    },
+    "persona": {
+      "age_group": "全年齢",
+      "gender": "男女",
+      "interest_categories": [
+        "動物",
+        "ペット",
+        "癒し",
+        "面白動画"
+      ],
+      "content_depth": "ライト"
+    },
+    "analytics": {
+      "enabled": true,
+      "fetch_retention_for": 5,
+      "performance_threshold": {
+        "min_ctr": 4,
+        "min_retention": 40,
+        "min_views_7d": 1000
+      }
+    }
+  },
+  "autopilot": {
+    "enabled": true,
+    "schedule": {
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "hour": 18,
+      "minute": 0,
+      "times": [
+        {
+          "hour": 18,
+          "minute": 0,
+          "days_of_week": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "_times_comment": "毎日18:00の1枠。海外バイラル動物動画の翻訳切り抜き。日本の動物YouTuberで切り抜きOKが見つかったら国内枠を追加する。"
+    },
+    "duration_minutes": 1,
+    "gen_type": "clip",
+    "publish_lead_minutes": 0,
+    "theme_queue": [
+      {
+        "id": "fb6bc88b",
+        "title": "動画作りに課金しすぎた男のペットたちの反応",
+        "angle": "ペットたちが飼い主の動画作りにどんな反応を示すかを集める。",
+        "priority": "high",
+        "source": "trend_scanner"
+      }
+    ],
+    "_theme_queue_comment": "gen_type=clip では未使用。切り抜き元の選定は viral_sources が担う。"
+  },
+  "short_series_name": "動物情報局",
+  "main_title_prefix": "",
+  "script_enhancers": {
+    "enabled": true,
+    "disabled": [
+      "hook_ab_selector",
+      "swipe_stop_injector",
+      "cta_rotator",
+      "completion_rate_optimizer",
+      "replay_loop_seeder",
+      "power_word_amplifier",
+      "title_emoji_injector",
+      "curiosity_gap_enforcer",
+      "comment_bait_injector",
+      "emotional_polarity_alternator",
+      "pattern_interrupt_injector",
+      "subscribe_trigger_optimizer",
+      "contrast_amplifier"
+    ],
+    "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。"
+  }
+}

@@ -1,0 +1,512 @@
+{
+  "id": "akashic-librarian",
+  "name": "ラグナロクの司書",
+  "concept": "滅びのすべてが記録される書庫「ラグナロク」。その司書が、閉架に眠る一冊を取り出して静かに読み上げる1人語りの長尺チャンネル。都市伝説・歴史の謎・宇宙の不思議・失われた文明・予言・超常現象を、煽らず、断定せず、低く落ち着いた男性の声で語る。1本12分目安（最低10分）、ロング動画のみ。シナリオは自動生成せず、運営者が用意した台本を使う。",
+  "style": "monologue",
+  "scenario_source": "manual",
+  "youtube_channel_id": "UClXnuH-KPDXnX0bn2NJlMhg",
+  "image_mode": "collect",
+  "image_collect": {
+    "provider": "wikimedia,openverse",
+    "safe_search": true,
+    "license_filter": "cc",
+    "max_per_query": 12,
+    "attribution_template": "出典: {source}",
+    "mix_strategy": "heuristic",
+    "query_template": "{topic} 遺跡 古文書 星空 神秘",
+    "orientation": "landscape"
+  },
+  "voice_style": {
+    "tone": "低く落ち着いた男性の声。知的で、少しミステリアス。囁くように静かだが、聞き取れないほどではない。12分を通して声量を一定に保ち、驚きは声量ではなく『間』と断定で作る。",
+    "narrator_persona": "書庫「ラグナロク」（滅びのすべてが記録される書庫）の司書。男性。名も年齢も明かさない。膨大な記録を淡々と読み上げるが、時折その記録に対する私見をひとことだけ添える。感情を大きく揺らさず、常に一定の距離を保って語る。",
+    "opening_hooks": [
+      "その記録には、続きが無い。",
+      "この事件の頁だけ、書架から抜き取られている。",
+      "人類が二度、まったく同じ夢を見たという記録がある。",
+      "この本は、閉架に置かれている。理由は書かれていない。",
+      "同じ日付の記録が、二通り残されている。"
+    ],
+    "forbidden": [
+      "SCP",
+      "財団",
+      "収容",
+      "ポケモン",
+      "妖怪",
+      "リコ",
+      "マコト",
+      "ヒカリ",
+      "ソラ",
+      "シロ",
+      "クロ",
+      "ユイ",
+      "ゴロー",
+      "理子",
+      "ミナモ",
+      "ケンタ",
+      "ゆっくり",
+      "ずんだもん",
+      "〜なのだ",
+      "〜だぞ",
+      "ですます調の解説"
+    ],
+    "style_rules": [
+      "**1人語り厳守**。話者は司書ただ1人。掛け合い・相槌・ツッコミ・二人目の話者を絶対に登場させない。「〜だよね」「えっ、どういうこと?」のような相手への呼びかけ返答も禁止。",
+      "一人称は「私」、視聴者への呼びかけは「あなた」。司書は男性だが、性別を話題にしない。",
+      "文体は常体（だ・である調）。静かに言い切る。「〜なのだ」「〜だぞ」のようなゆっくり解説的な強い語尾は使わない。",
+      "**冒頭10秒（本文1〜2行目）は司書の断定から入る**。挨拶・自己紹介・チャンネル説明・「今回は〜を紹介します」のような前置きは1文字でも入れたら不合格。",
+      "本題では必ず年号・地名・人名・数値のいずれか1つ以上を出す。「不思議な話がある」だけの抽象論で終わらせない。",
+      "都市伝説・超常現象・予言は事実として断定しない。「記録によれば」「そう記されている」「とされている」で伝聞として置き、判断は視聴者に委ねる。",
+      "**最後は言い切らず、余韻を残して閉じる**。結論を断定せず、記録が途切れている事実の提示か、静かな問いかけ（「あなたはどう読む」「その頁は、まだ白紙のままだ」）で終える。叫ぶような煽り・強い登録依頼で締めない。",
+      "誇張した驚き（「ヤバい」「衝撃」「震撼」）を語りに使わない。静けさそのものが不気味さになる。",
+      "1文は短く。長い修飾を重ねず、句点で区切って『間』を作る。",
+      "**長尺（12分）を通した緩急を作る**。章ごとに扱う記録の層を変え、同じ情報の言い直しで尺を埋めない。"
+    ]
+  },
+  "characters": {
+    "narrator": {
+      "side": "none",
+      "speaker_id": 101,
+      "dir": null,
+      "text_color": [
+        232,
+        228,
+        215
+      ],
+      "expressions": [],
+      "role": "書庫ラグナロクの司書。名を明かさない男性の語り手。低い声で書庫の記録を静かに読み上げる。",
+      "appearance": null
+    }
+  },
+  "publish_settings": {
+    "auto_publish": false,
+    "default_privacy": "public",
+    "auto_comment": {
+      "enabled": true,
+      "question": "この記録、どう読み解く？あなたの解釈をコメントで"
+    },
+    "playlists": {
+      "enabled": true,
+      "auto_create": true,
+      "privacy": "public",
+      "shorts": "ラグナロクの司書｜ショート全集",
+      "main": "ラグナロクの司書｜本編",
+      "rules": []
+    },
+    "series_links": {
+      "enabled": true
+    },
+    "viewer_requests": {
+      "enabled": true,
+      "prompt": "調べてほしい都市伝説・未解明ミステリーをコメントで教えてください。",
+      "show_top_demands": true,
+      "max_demands": 3
+    }
+  },
+  "description_template": {
+    "main_intro": "ラグナロク —— 滅びのすべてが記録される、と伝えられる書庫。\nその閉架に眠る一冊を、司書が静かに読み上げます。\n\n※本チャンネルで扱う都市伝説・予言・超常現象は、事実として確定したものではありません。伝承・記録・報告として紹介しています。\n\nチャンネル登録で、次の記録もお届けします。",
+    "main_hashtags": "#都市伝説 #歴史ミステリー #未解明 #オカルト #ラグナロク",
+    "short_hashtags": "#shorts #都市伝説 #歴史ミステリー #未解明 #オカルト"
+  },
+  "thumbnail_template": {
+    "badge_text": "閉架記録",
+    "badge_color": [
+      52,
+      38,
+      92
+    ],
+    "hook_color": [
+      235,
+      230,
+      218
+    ],
+    "subtitle_color": [
+      212,
+      175,
+      95
+    ],
+    "style_hint": "深い藍〜紫の暗がりに、古文書・星図・書架のテクスチャ。金色の細い箔押し風テキスト。派手な赤や爆発エフェクトは使わない。静けさと知性を感じさせる暗いトーンで統一する。"
+  },
+  "defaults": {
+    "speed": 1.05,
+    "target_duration": 720,
+    "bg_type": "auto",
+    "use_illustrations": false,
+    "hashtags": [
+      "#都市伝説",
+      "#歴史ミステリー",
+      "#未解明",
+      "#オカルト",
+      "#ラグナロク"
+    ],
+    "short_title_hashtags": "#shorts #都市伝説 #オカルト",
+    "category": "24",
+    "short_endcard": {
+      "enabled": true,
+      "duration": 1.6,
+      "headline": "次の動画はこちら →",
+      "sub": "毎日更新中",
+      "cta": "チャンネル登録で見逃さない"
+    }
+  },
+  "content_policy": {
+    "tone": "静謐・知的・ミステリアス",
+    "age_rating": "all_ages",
+    "cta_position": "end",
+    "cta_style": "quiet",
+    "guidelines": [
+      "都市伝説・予言・超常現象は『記録によれば』『とされている』と伝聞で提示し、事実として断定しない",
+      "歴史・宇宙の話題は、確認できる年号・地名・研究名を1つ以上添える",
+      "未解明のものは『まだ分かっていない』と正直に言い切る。無理に answers を作らない",
+      "静かな語りを保つ。恐怖を煽って視聴者を不安にさせない",
+      "終末予言・災害予言は日時を断定せず、伝承として扱う",
+      "終章は結論を断定せず、記録が途切れている事実か静かな問いかけ（例:『答えは記されていない。あなたはどう読む』）で閉じる"
+    ],
+    "avoid": [
+      "実在の個人・団体への誹謗中傷や陰謀論的な名指し",
+      "医療・健康に関する非科学的な断定（治る・効くなどの表現）",
+      "特定の宗教・スピリチュアル商材・占いサービスへの誘導",
+      "差別的な民族起源説・疑似歴史の断定",
+      "自殺・自傷を想起させる描写",
+      "視聴者を過度に不安にさせる終末煽り"
+    ]
+  },
+  "theme_priority": {
+    "label": "知られざる知識・歴史の謎・都市伝説・宇宙・失われた文明・予言・超常現象",
+    "categories": [
+      "歴史の謎: 未解読文書・消えた人物・説明のつかない遺物（最優先。事実ベースで強い）",
+      "失われた文明: 発掘によって定説が覆った遺跡、痕跡だけが残る文明",
+      "宇宙の不思議: 観測されたのに説明できない現象、届いたきり途絶えた信号",
+      "都市伝説: 出典をたどれる、記録として残っている類の伝承",
+      "超常現象: 臨死体験・集団記憶違いなど、研究対象になっている現象",
+      "予言: 後世に検証された予言と、その解釈がどう変わってきたか"
+    ],
+    "required_count_per_batch": 5,
+    "good_examples": [
+      "600年間、誰も読めない本がある — ヴォイニッチ手稿と、その頁に描かれた実在しない植物",
+      "1977年、宇宙から72秒だけ届いた信号 — Wow!シグナルは二度と観測されていない",
+      "ピラミッドより7000年古い神殿 — ギョベクリ・テペが埋め戻されていた理由",
+      "文字を持っていたのに解読できない — インダス文明が残した4000の刻印",
+      "植民地が丸ごと消えた — ロアノーク島に残されていた、たった一語"
+    ],
+    "avoid_categories": [
+      "実在企業・実在人物を名指しした陰謀論",
+      "特定の宗教・民族を貶める疑似歴史",
+      "医療・健康デマ（水・波動・代替医療など）",
+      "日時を断定する終末予言",
+      "反ワクチン等の公衆衛生に関わる陰謀論"
+    ],
+    "title_style": "答えをバラさず、謎そのものを置く。「なぜ〇〇だけ〇〇なのか」「〇〇に記されていた、たった一語」のように、記録・書物・年号を匂わせる静かな言い回しにする。「衝撃」「ヤバい」「震撼」のような煽り語は使わない。",
+    "viral_hooks": "未解読 / 二度と観測されていない / 記録が途切れている / 説明がつかない / 埋め戻された理由 / 誰も読めない",
+    "title_power_words": [
+      "記録",
+      "禁書",
+      "閉架",
+      "失われた",
+      "封印"
+    ]
+  },
+  "theme_blacklist": [],
+  "genre_blacklist": [],
+  "theme_seeds": [
+    {
+      "title": "ヴォイニッチ手稿",
+      "angle": "600年間解読されない写本。実在しない植物の図版と、未知の文字体系"
+    },
+    {
+      "title": "アンティキティラ島の機械",
+      "angle": "紀元前100年頃の青銅製歯車装置。天体の動きを計算していた古代のコンピュータ"
+    },
+    {
+      "title": "Wow!シグナル",
+      "angle": "1977年に72秒だけ受信された強い電波。以後一度も再観測されていない"
+    },
+    {
+      "title": "ギョベクリ・テペ",
+      "angle": "約1万1000年前の巨石神殿。何者かが意図的に埋め戻していた"
+    },
+    {
+      "title": "ロアノーク植民地",
+      "angle": "1590年、入植者115人が消え、柱に刻まれていたのは『CROATOAN』の一語"
+    },
+    {
+      "title": "インダス文明の刻印",
+      "angle": "4000点以上の印章が残るのに、文字が誰にも読めない理由"
+    },
+    {
+      "title": "始皇帝陵の未発掘区画",
+      "angle": "水銀の川という記述と、実際に検出された異常な水銀濃度"
+    },
+    {
+      "title": "マンデラ効果",
+      "angle": "多数の人間が同じ記憶違いを共有する現象。記憶研究が示す説明"
+    },
+    {
+      "title": "臨死体験の共通報告",
+      "angle": "文化が違っても酷似する証言。医学研究がどこまで説明できているか"
+    },
+    {
+      "title": "ナスカの地上絵",
+      "angle": "空からしか全体を見られない図形を、なぜ地上の人々が描いたのか"
+    },
+    {
+      "title": "ボイジャーのゴールデンレコード",
+      "angle": "人類が宇宙へ送り出した記録盤。誰に宛てられ、いま何処にあるのか"
+    },
+    {
+      "title": "宇宙のボイド",
+      "angle": "銀河がほとんど存在しない直径十億光年規模の空洞。なぜそこだけ空なのか"
+    },
+    {
+      "title": "アトランティスの記述",
+      "angle": "プラトンの対話篇にだけ現れる島。同時代の他の記録には一切残っていない"
+    },
+    {
+      "title": "ノストラダムスの詩篇",
+      "angle": "四行詩がなぜ何にでも当てはまるのか。解釈が時代ごとに書き換えられた歴史"
+    },
+    {
+      "title": "きさらぎ駅",
+      "angle": "存在しない駅の記録。ネット上でどう伝承が形成され、変異していったか"
+    },
+    {
+      "title": "メアリー・セレスト号",
+      "angle": "1872年、無人で漂流していた船。積荷も食料も残されたまま乗員だけが消えた"
+    },
+    {
+      "title": "ドッペルゲンガーの記録",
+      "angle": "自己像幻視として報告される症例と、歴史上の目撃記録の重なり"
+    },
+    {
+      "title": "サン・ジェルマン伯爵",
+      "angle": "百年以上にわたり複数の宮廷で目撃されたとされる人物の記録"
+    },
+    {
+      "title": "デジャヴの正体",
+      "angle": "初めての場所を知っている感覚。記憶の二重処理という有力な仮説"
+    },
+    {
+      "title": "ホピ族の予言",
+      "angle": "口承で受け継がれてきた九つの徴。どこまでが後世の脚色なのか"
+    },
+    {
+      "title": "アレクサンドリア図書館",
+      "angle": "焼失で失われた蔵書。何が記されていたかを推定する手がかりだけが残る"
+    },
+    {
+      "title": "タオス・ハム",
+      "angle": "一部の住民にだけ聞こえる低い唸り。計測機器が捉えられない音の記録"
+    }
+  ],
+  "long_format": {
+    "target_duration_sec": 720,
+    "min_duration_sec": 600,
+    "chapter_count": "3〜5章（導入と終章を含む）",
+    "line_count": "本文48〜80行（章タイトル行は行数に数えない）",
+    "line_chars": "1行90〜120字（目標100字）。89字以下も121字以上も不合格",
+    "total_chars_min": 5000,
+    "total_chars_max": 6480,
+    "structure": [
+      "**冒頭0〜10秒（本文1〜2行目）= フック**: 司書が書架から一冊を抜き出すように、記録の異常だけを短く断定して置く(例:「その記録には、続きが無い」「同じ日付の頁が、二通り残されている」)。挨拶・自己紹介・テーマ説明・前置きは1文字でも入れたら不合格。答えはまだ出さない。",
+      "**冒頭10〜60秒 = 引き込みと見取り図**: いつ・どこの記録なのかを静かに添え、この12分で何を読み進めるのかを一段だけ示す。ここでもまだ答えを出さない。",
+      "**第1章 = 記録の発見**: 誰が、いつ、どこでその記録に行き当たったのかを辿る。年号・地名・人名・数値のいずれかを必ず含める。",
+      "**第2章 = 記録の中身**: 記されている内容を読み上げる。定説と、その定説では説明のつかない点を明確に分ける。",
+      "**第3章 = 反証と別の解釈**: 後年の検証・異説・再調査を並べる。未確認の事柄は『記録によれば』『とされている』と伝聞で置く。",
+      "**第4章（任意）= 現在地**: 今どこまで分かっているのか。分かっていないことは『まだ分かっていない』と正直に言い切る。",
+      "**終章 = 余韻**: 結論を断定しない。記録がそこで途切れている事実の提示か、静かな問いかけ（例:「その先は、まだ誰も書いていない」「あなたは、どう読む」）で閉じる。強い登録依頼・煽り・叫びで締めるのは不合格。"
+    ],
+    "extra_rules": [
+      "全編を通して話者は司書1人。相槌・掛け合い・二人目の話者が1行でも混ざれば不合格。",
+      "**尺は12分目安。10分（600秒）を割ってはいけない**。",
+      "各章の終わりに、次章へつながる未解決点を1つ残す（長尺の視聴維持）。",
+      "1章につき最低2つ、新しい具体情報（年号・地名・人名・数値・研究名）を出す。同じ情報の言い直しで尺を埋めれば不合格。",
+      "「ヤバい」「衝撃」「震撼」「マジで」のような煽り語を1つでも使えば不合格。静けさで引かせる。",
+      "常体（だ・である調）を維持する。「〜なのだ」「〜だぞ」のゆっくり解説的な語尾は使わない。",
+      "終章で結論を断定したら不合格。余韻・未決着・問いかけのいずれかで終えること。"
+    ]
+  },
+  "video_format": {
+    "layout": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "text_box_height_ratio": 0.2,
+      "text_box_opacity": 205,
+      "text_font_size": 44,
+      "text_stroke_width": 3,
+      "text_line_spacing": 6,
+      "text_margin_x": 110
+    },
+    "colors": {
+      "bg_color": [
+        8,
+        10,
+        24,
+        255
+      ],
+      "text_box_color": [
+        0,
+        0,
+        0
+      ],
+      "text_stroke_color": [
+        0,
+        0,
+        0
+      ],
+      "thumb_overlay_opacity": 195
+    },
+    "audio": {
+      "speed": 1.05,
+      "pause_between": 0.45,
+      "bgm_volume": 0.22,
+      "bgm_path": null,
+      "bgm_per_scene": true,
+      "bgm_crossfade": 2.0
+    },
+    "branding": {
+      "watermark_text": "VOICEVOX:離途",
+      "watermark_position": "bottom_right",
+      "watermark_opacity": 150,
+      "watermark_font_size": 18,
+      "cta_style": "quiet",
+      "source_credit": null
+    },
+    "output": {
+      "target_duration": 720,
+      "gen_type": "full",
+      "bg_type": "auto",
+      "use_illustrations": false
+    },
+    "illustration_style": {
+      "style": "muted",
+      "format": "landscape",
+      "art_style": "dim candle-lit archive aesthetic: aged parchment, faded ink diagrams, star charts, weathered stone. Desaturated indigo and sepia palette with a single warm gold accent. Painterly, grainy, quiet — no bright pop colors, no cartoon outlines",
+      "background": "deep indigo darkness with soft dust motes and a faint vignette",
+      "include_characters": false,
+      "frame_style": "none",
+      "extra_prompt": "no text, no letters, no modern objects, no people's faces",
+      "allow_text_labels": false,
+      "allow_frame": false
+    },
+    "youtube": {
+      "channel_id": "UClXnuH-KPDXnX0bn2NJlMhg",
+      "default_tags": [
+        "都市伝説",
+        "歴史ミステリー",
+        "未解明",
+        "オカルト",
+        "宇宙",
+        "古代文明",
+        "予言",
+        "ラグナロク",
+        "都市伝説解説",
+        "ミステリー",
+        "超常現象",
+        "怖い話"
+      ],
+      "default_category": "24",
+      "default_language": "ja",
+      "privacy_status": "public",
+      "upload_schedule": null
+    },
+    "analytics": {
+      "enabled": false,
+      "track_metrics": [
+        "views",
+        "watch_time",
+        "ctr",
+        "retention"
+      ],
+      "auto_adjust": false
+    },
+    "effects": {
+      "enabled": true,
+      "preset": "minimal",
+      "allow_zoom": true,
+      "allow_shake": false,
+      "allow_flash": false,
+      "allow_tint": true,
+      "allow_pixelate": false,
+      "allow_glitch": false,
+      "allow_transitions": true,
+      "max_effects_per_scene": 1,
+      "zoom_max": 0.03,
+      "transition_duration": 0.5,
+      "fade_in_first": true,
+      "fade_out_last": true
+    },
+    "persona": {
+      "age_group": "20〜40代",
+      "gender": "男女",
+      "interest_categories": [
+        "都市伝説",
+        "歴史",
+        "宇宙",
+        "ミステリー",
+        "オカルト"
+      ],
+      "tone_style": "静かな語り",
+      "content_depth": "ミドル",
+      "custom_notes": "就寝前・移動中に静かな低い声を長く聞きたい層。派手な演出より、落ち着いた没入感と12分の作業用BGM的な聴き心地を求めている。"
+    }
+  },
+  "autopilot": {
+    "enabled": false,
+    "auto_optimize_schedule": true,
+    "schedule": {
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "hour": 18,
+      "minute": 45,
+      "times": [
+        {
+          "hour": 18,
+          "minute": 45,
+          "days_of_week": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "hour": 13,
+          "minute": 45,
+          "days_of_week": [
+            0,
+            6
+          ]
+        }
+      ]
+    },
+    "duration_minutes": 12,
+    "gen_type": "full",
+    "theme_queue": [],
+    "publish_lead_minutes": 45
+  },
+  "short_series_name": "",
+  "main_title_prefix": "【閉架記録】",
+  "competitors": [
+    "UCt9eCRJcnfzSzPyupr39pKw",
+    "UCgOOIAV1Zbh3nmUSfkFlbKQ",
+    "UCBthdtZvyzJe6YPA9NUJdIA",
+    "UCUGLmnKXbmIX1hQZa5LCk4w",
+    "UCqLHMs76QGLpcaoFCcxKG-g",
+    "UCZd-iwj71RGEfVHGLj1fMkw",
+    "UCOTRp0oy1QoNe0EE_RZzP4g"
+  ],
+  "production": {
+    "tool": "chatcut",
+    "pipeline": "long_form",
+    "script_source": "user",
+    "auto_publish": false
+  }
+}

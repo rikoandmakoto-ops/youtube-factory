@@ -527,6 +527,15 @@
         "ショート動画"
       ],
       "content_depth": "ライト"
+    },
+    "analytics": {
+      "enabled": true,
+      "fetch_retention_for": 5,
+      "performance_threshold": {
+        "min_ctr": 4,
+        "min_retention": 40,
+        "min_views_7d": 1000
+      }
     }
   },
   "autopilot": {
@@ -579,11 +588,26 @@
     "publish_lead_minutes": 0,
     "theme_queue": [
       {
-        "id": "48587db1",
-        "title": "RTX 5090のコスト：テクノロジーの未来を科学する",
-        "angle": "最新技術のコストを科学的に分析し、視聴者の興味を引く。",
+        "id": "b4e58a74",
+        "title": "食中毒の原因はこれだ！米の危険性とは",
+        "angle": "米の保存や取り扱いに潜む食中毒リスクを科学的に解説します。",
         "priority": "high",
         "source": "trend_scanner"
+      },
+      {
+        "id": "39bd3fd9",
+        "title": "女性騎手が変える競馬の未来",
+        "angle": "女性騎手の活躍が競馬界に与える影響を探ります。"
+      },
+      {
+        "id": "7e16c32c",
+        "title": "PlayStationの進化を科学で解説！",
+        "angle": "ゲーム機の進化がもたらす心理的影響について考察する。"
+      },
+      {
+        "id": "48587db1",
+        "title": "RTX 5090のコスト：テクノロジーの未来を科学する",
+        "angle": "最新技術のコストを科学的に分析し、視聴者の興味を引く。"
       },
       {
         "id": "9a4de10c",
