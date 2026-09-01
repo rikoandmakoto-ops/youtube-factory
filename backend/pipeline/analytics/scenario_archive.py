@@ -91,6 +91,16 @@ def _format_lines(lines: List[Dict[str, Any]]) -> str:
     return "\n".join(out)
 
 
+def _normalize_script_source(generated_by: Optional[str]) -> Optional[str]:
+    """generated_by を "claude" / "gpt" に正規化（判定できなければ None）。"""
+    try:
+        from .script_source import normalize
+
+        return normalize(generated_by)
+    except Exception:
+        return None
+
+
 def _prompt_hash(scenario_data: Dict[str, Any]) -> str:
     """生成時の theme + style + applied_feedback から短いハッシュを作る。"""
     base = {
@@ -187,6 +197,12 @@ def archive_scenario(
         )
     if generated_by:
         fm_lines.append(f"generated_by: {generated_by}")
+    # script_source は generated_by を "claude" / "gpt" に正規化した値。
+    # generated_by には "claude-opus-5 (in-session, no API)" のような表記も
+    # 入るため、A/B 集計はこちらの正規化済みの値だけを見る。
+    script_source = _normalize_script_source(generated_by)
+    if script_source:
+        fm_lines.append(f"script_source: {script_source}")
     if selected_by:
         fm_lines.append(f"selected_by: {selected_by}")
     fm_lines.append("---\n")
@@ -250,6 +266,7 @@ def archive_scenario(
                 "generated_at": datetime.utcnow().isoformat() + "Z",
                 "prompt_hash": h,
                 "generated_by": generated_by,
+                "script_source": script_source,
                 "selected_by": selected_by,
             },
         )

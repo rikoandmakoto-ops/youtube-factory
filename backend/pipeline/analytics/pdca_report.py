@@ -128,8 +128,12 @@ def _published_video_ids(channel_id: str) -> List[Dict[str, Any]]:
         return []
     conn = sqlite3.connect(str(PUBLISH_DB))
     try:
+        # is_short は publish_log 導入（2026-09-01）以降の行にしか入らないので
+        # 無い環境でも落ちないように存在確認してから読む。
+        cols = {r[1] for r in conn.execute("PRAGMA table_info(video_status)")}
+        short_col = "is_short" if "is_short" in cols else "NULL"
         rows = conn.execute(
-            "SELECT job_id, video_id, status, published_at "
+            f"SELECT job_id, video_id, status, published_at, {short_col} "
             "FROM video_status WHERE channel_id = ? AND video_id IS NOT NULL "
             "AND video_id != ''",
             (channel_id,),
@@ -142,6 +146,7 @@ def _published_video_ids(channel_id: str) -> List[Dict[str, Any]]:
             "video_id": r[1],
             "status": r[2],
             "published_at": r[3],
+            "is_short": None if r[4] is None else bool(r[4]),
         }
         for r in rows
     ]
@@ -638,10 +643,26 @@ def build_report(
 
     # 1. 公開済み video_id を DB から
     published = _published_video_ids(channel_id)
-    all_ids = [p["video_id"] for p in published]
+    # 同じ video_id が複数キーで入りうる（ペア公開は job_id と job_id:short の
+    # 2行、手動公開と自動公開が同じ動画を指すこともある）。重複したまま
+    # videos.list に投げると同じ動画が2回集計されるので先に潰す。
+    all_ids = list(dict.fromkeys(p["video_id"] for p in published))
 
     # 2. YouTube Data API で詳細取得
     videos, fetch_err = _fetch_video_details(channel_id, all_ids)
+
+    # 投稿時に記録された is_short があれば尺・タイトル推定より優先する
+    # （60秒を少し超えたショートや、タイトルに「ショート」を含む長尺で
+    #   _is_short() が取り違えるのを防ぐ）。
+    recorded_short = {
+        p["video_id"]: p["is_short"]
+        for p in published
+        if p.get("is_short") is not None
+    }
+    for v in videos:
+        known = recorded_short.get(v.get("video_id"))
+        if known is not None:
+            v["is_short"] = known
 
     # 3. 期間でフィルタ（published_at >= cutoff）
     in_window: List[Dict[str, Any]] = []

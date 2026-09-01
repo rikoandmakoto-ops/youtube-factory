@@ -179,12 +179,17 @@ def _generate_variants(
         idx = i + 1
         feedback = feedback_variants[i % len(feedback_variants)]
         out_path = base_dir / f"variant_{idx}.png"
+        # 直前の試行が「背景は生成できたが合成で落ちた」場合、背景 PNG だけが
+        # 残る。再試行のたびに DALL-E を叩き直すと同じ絵に金を払うので、
+        # 残っている背景があればそれを使い回す。
+        bg_path = base_dir / f"variant_{idx}_bg.png"
         try:
             generate_thumbnail(
                 title=title,
                 channel_config=ch_cfg,
                 output_path=out_path,
                 feedback=feedback,
+                reuse_background_path=str(bg_path) if bg_path.exists() else None,
             )
             out.append({
                 "index": idx,

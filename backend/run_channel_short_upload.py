@@ -282,6 +282,9 @@ def run_for(channel_id: str) -> dict:
                 title=final_short_title,
                 url=r.get("url") or "",
                 is_short=True,
+                # 台本の出所（Claude / GPT）を video_id に紐づける。
+                # ここは生成に使ったシナリオが手元にあるので直接渡せる。
+                script_source=scenario.get("generated_by"),
             )
         except Exception as e:
             print(f"  ⚠️ post_upload failed: {e}")

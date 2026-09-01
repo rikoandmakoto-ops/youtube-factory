@@ -1140,6 +1140,122 @@ def link_model_record_by_title(channel_id: str, title: str, video_id: str) -> in
 
 
 # ---------------------------------------------------------------------
+# 台本の出所（Claude / GPT）— 投稿済み動画との紐づけ
+# ---------------------------------------------------------------------
+#
+# model_scenario_records は「生成時にどちらのモデルが選ばれたか」を持つが、
+# video_id 列が一度も埋められておらず（718件すべて NULL）、投稿後の実績と
+# 突き合わせられない。ここは video_id を主キーにした投稿ログ側の台帳で、
+# アップロード直後に post_upload から1行書かれる。
+def _ensure_script_source_table() -> None:
+    with _db_lock:
+        c = _conn()
+        try:
+            c.executescript(
+                """
+                CREATE TABLE IF NOT EXISTS video_script_source (
+                    video_id TEXT PRIMARY KEY,
+                    channel_id TEXT NOT NULL,
+                    script_source TEXT NOT NULL,   -- claude | gpt
+                    generated_by TEXT,             -- 正規化前の生の値
+                    title TEXT,
+                    url TEXT,
+                    is_short INTEGER NOT NULL DEFAULT 1,
+                    published_at TEXT,
+                    resolved_from TEXT,            -- explicit | archive | model_records | manual
+                    extra TEXT,                    -- JSON
+                    recorded_at INTEGER NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS idx_script_source_channel
+                    ON video_script_source(channel_id, recorded_at DESC);
+                """
+            )
+            c.commit()
+        finally:
+            c.close()
+
+
+_ensure_script_source_table()
+
+
+def upsert_video_script_source(
+    *,
+    video_id: str,
+    channel_id: str,
+    script_source: str,
+    generated_by: Optional[str] = None,
+    title: Optional[str] = None,
+    url: Optional[str] = None,
+    is_short: bool = True,
+    published_at: Optional[str] = None,
+    resolved_from: Optional[str] = None,
+    extra: Optional[Dict[str, Any]] = None,
+) -> None:
+    """video_id 1件の台本出所を記録（同 video_id は上書き）。"""
+    with _db_lock:
+        c = _conn()
+        try:
+            c.execute(
+                """
+                INSERT OR REPLACE INTO video_script_source
+                (video_id, channel_id, script_source, generated_by, title, url,
+                 is_short, published_at, resolved_from, extra, recorded_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    video_id, channel_id, script_source, generated_by, title, url,
+                    1 if is_short else 0, published_at, resolved_from,
+                    json.dumps(extra or {}, ensure_ascii=False),
+                    int(time.time()),
+                ),
+            )
+            c.commit()
+        finally:
+            c.close()
+
+
+def _script_source_row_to_dict(row: sqlite3.Row) -> Dict[str, Any]:
+    d = dict(row)
+    try:
+        d["extra"] = json.loads(d.get("extra") or "{}")
+    except Exception:
+        d["extra"] = {}
+    d["is_short"] = bool(d.get("is_short"))
+    return d
+
+
+def get_video_script_source(video_id: str) -> Optional[Dict[str, Any]]:
+    with _db_lock:
+        c = _conn()
+        try:
+            row = c.execute(
+                "SELECT * FROM video_script_source WHERE video_id = ?", (video_id,)
+            ).fetchone()
+        finally:
+            c.close()
+    return _script_source_row_to_dict(row) if row else None
+
+
+def list_video_script_sources(
+    channel_id: Optional[str] = None, *, limit: int = 1000
+) -> List[Dict[str, Any]]:
+    sql = "SELECT * FROM video_script_source"
+    args: List[Any] = []
+    if channel_id:
+        sql += " WHERE channel_id = ?"
+        args.append(channel_id)
+    sql += " ORDER BY recorded_at DESC LIMIT ?"
+    args.append(int(limit))
+    with _db_lock:
+        c = _conn()
+        try:
+            rows = c.execute(sql, args).fetchall()
+        finally:
+            c.close()
+    return [_script_source_row_to_dict(r) for r in rows]
+
+
+# ---------------------------------------------------------------------
 # Phase E: Trend detections
 # ---------------------------------------------------------------------
 

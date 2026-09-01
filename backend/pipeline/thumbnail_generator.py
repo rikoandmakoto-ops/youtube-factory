@@ -669,8 +669,23 @@ async def render_html_to_png_async(html: str, output_path: Path) -> Path:
 
 
 def render_html_to_png(html: str, output_path: Path) -> Path:
-    """Sync wrapper. Safe to call from worker threads (no event loop)."""
-    return asyncio.run(render_html_to_png_async(html, output_path))
+    """Sync wrapper. Safe from worker threads *and* from inside a running loop.
+
+    FastAPI の async ハンドラ経由（サムネ A/B の register など）で呼ばれると
+    `asyncio.run()` は "cannot be called from a running event loop" で落ちる。
+    実行中のループを検出したら、専用スレッドで別ループを回して待つ。
+    """
+    try:
+        asyncio.get_running_loop()
+    except RuntimeError:
+        return asyncio.run(render_html_to_png_async(html, output_path))
+
+    import concurrent.futures
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as ex:
+        return ex.submit(
+            lambda: asyncio.run(render_html_to_png_async(html, output_path))
+        ).result()
 
 
 # ────────────────────────────────────────────────────────────────────────

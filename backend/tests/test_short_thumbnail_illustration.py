@@ -165,5 +165,88 @@ class TestGenerateShortThumbnail(unittest.TestCase):
         self.assertTrue(any(sum(p) > 600 for p in band), f"no card in band: {band}")
 
 
+
+class TestOrphanWrapRebalance(unittest.TestCase):
+    """2行目に1〜3文字しか残らない折り返し(オーファン)を均す。
+
+    08-31 の実測サムネで出た形:
+      scp   『赤い海の石が開いた、崩壊世界への入 / 口』   (2行目1文字)
+      ds    『立つより座る方が腰へ重くのしかか / る理由』 (2行目3文字)
+      yokai 『白い姫の笑顔の裏で、14年前の雪がま / だ降っている』(語の途中)
+    """
+
+    def _font(self):
+        from PIL import ImageFont
+        path = vg._thumb_font_path() if hasattr(vg, "_thumb_font_path") else None
+        try:
+            return ImageFont.truetype(path, 40) if path else ImageFont.load_default()
+        except Exception:
+            return ImageFont.load_default()
+
+    def test_orphan_last_line_is_rebalanced(self):
+        font = self._font()
+        text = "赤い海の石が開いた、崩壊世界への入口"
+        w = vg._thumb_text_width(font, text)
+        # 全体の 6 割強しか入らない幅にすると、素直に詰めれば2行目が短くなる
+        lines = vg._thumb_wrap_line(font, text, int(w * 0.62))
+        self.assertEqual(len(lines), 2)
+        self.assertEqual("".join(lines), text)
+        self.assertGreaterEqual(
+            len(lines[1]), 4,
+            "2行目が3文字以下のまま: %r" % (lines,))
+
+    def test_balanced_wrap_is_left_alone(self):
+        font = self._font()
+        text = "立つより座る方が腰へ重くのしかかる理由"
+        w = vg._thumb_text_width(font, text)
+        lines = vg._thumb_wrap_line(font, text, int(w * 0.55))
+        self.assertEqual("".join(lines), text)
+        self.assertGreaterEqual(len(lines[1]), 4)
+
+    def test_single_line_untouched(self):
+        font = self._font()
+        text = "短い一行"
+        self.assertEqual(vg._thumb_wrap_line(font, text, 10000), [text])
+
+    def test_rebalance_never_overflows(self):
+        font = self._font()
+        text = "白い姫の笑顔の裏で、14年前の雪がまだ降っている"
+        w = vg._thumb_text_width(font, text)
+        for ratio in (0.5, 0.55, 0.6, 0.65, 0.7, 0.75):
+            lines = vg._thumb_wrap_line(font, text, int(w * ratio))
+            self.assertEqual("".join(lines), text.replace(" ", ""))
+            for ln in lines:
+                self.assertLessEqual(
+                    vg._thumb_text_width(font, ln), int(w * ratio),
+                    "はみ出した: ratio=%s %r" % (ratio, lines))
+
+
+class TestThumbIllustrationKeywordGate(unittest.TestCase):
+    """教科書風カードは語句が2件以上ヒットしたときだけ描く。"""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.out = Path(self._tmp.name)
+
+    def tearDown(self):
+        self._tmp.cleanup()
+
+    def _cfg(self, **kw):
+        si = {"enabled": True, "keyword_icons": True}
+        si.update(kw)
+        return {"short_illustrations": si}
+
+    def test_no_keyword_hit_gets_nothing(self):
+        # 「座るだけで腰に1.4倍」= 理科系語彙に未ヒット → 文字だけのカードに
+        # 落ちていたケース。無地に倒す。
+        self.assertIsNone(vg._thumb_build_illustration(
+            self.out, "座るだけで腰に1.4倍の負担がかかる理由", self._cfg()))
+
+    def test_single_keyword_hit_gets_nothing(self):
+        # 「森」だけがヒットして葉/植物アイコンが出ていたケース。
+        self.assertIsNone(vg._thumb_build_illustration(
+            self.out, "森では10% なぜピカチュウが看板になったのか", self._cfg()))
+
+
 if __name__ == "__main__":
     unittest.main()

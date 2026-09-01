@@ -238,20 +238,45 @@ def _upload_one(
     video_id = response["id"]
 
     thumb_error = None
+    thumb_set = False
     if thumbnail_path and Path(thumbnail_path).exists():
         try:
             youtube.thumbnails().set(
                 videoId=video_id,
                 media_body=MediaFileUpload(thumbnail_path, mimetype="image/png"),
             ).execute()
+            thumb_set = True
+            print(f"🖼️ サムネイル設定完了: {video_id}")
         except Exception as e:
             thumb_error = str(e)
+            print(f"⚠️ サムネイル設定失敗 ({video_id}): {e}", flush=True)
+            # ── リトライ: 10秒後に再試行 ──
+            import time as _time
+            print(f"🔄 サムネイルリトライ開始 (10秒待機): {video_id}", flush=True)
+            _time.sleep(10)
+            try:
+                youtube.thumbnails().set(
+                    videoId=video_id,
+                    media_body=MediaFileUpload(thumbnail_path, mimetype="image/png"),
+                ).execute()
+                thumb_set = True
+                thumb_error = None
+                print(f"🖼️ サムネイルリトライ成功: {video_id}")
+            except Exception as e2:
+                thumb_error = f"retry failed: {e2}"
+                print(f"⚠️ サムネイルリトライも失敗 ({video_id}): {e2}", flush=True)
+    elif thumbnail_path:
+        thumb_error = f"thumbnail file not found: {thumbnail_path}"
+        print(f"⚠️ サムネイルファイルが見つかりません: {thumbnail_path}", flush=True)
+    else:
+        print(f"ℹ️ サムネイルパス未指定 (video_id={video_id})", flush=True)
 
     return {
         "video_id": video_id,
         "url": f"https://youtube.com/watch?v={video_id}",
         "privacy": final_privacy,
         "publish_at": publish_at,
+        "thumbnail_set": thumb_set,
         "thumbnail_error": thumb_error,
     }
 

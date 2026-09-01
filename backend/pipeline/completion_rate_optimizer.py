@@ -197,16 +197,39 @@ def _inject_micro_reveals(
     avg = sum(densities) / n
     injected = 0
 
-    # 25%/50%/75%チェックポイントで密度が低い場合のみ注入
-    checkpoints = [n // 4, n // 2, n * 3 // 4]
-    for cp in checkpoints:
-        if 0 <= cp < n and densities[cp] < avg * 0.8:
-            reveal = random.choice(reveals)
-            entry = short_scenario[cp]
+    # 【2026-08-31 変更】注入は最大1回・25%地点のみに制限した。
+    #
+    # 従来は 25/50/75% の3点に注入し、しかも random.choice が重複を許していたため
+    # 同一フレーズが1本に2回入る台本が実際に公開されていた
+    # （daily-science #101 / 08-30:「…でも、この話にはまだ続きがある」が2行に重複）。
+    # 1回15〜20字 ×3 で +45〜60字となり、これが尺超過の主要因のひとつだった。
+    #
+    # 実測（台本616本×実績 n=214）: 注入句あり AVP 36.0% / なし 53.8%。
+    # 注入そのものが逆効果に見えるが、字数増による希釈と交絡しているため
+    # 「離脱が急増する20%地点に1回だけ」という設定意図に沿う形へ縮小するに留める。
+    # 効果は 09-07 のコホートで再評価すること。
+    #
+    # さらに、既に文字数帯の上限に達している台本には注入しない
+    # （後段の shorts_length_guard がトリムするので、入れるだけ無駄に削られる）。
+    try:
+        from pipeline.shorts_length_guard import char_band_for
+        _, _chars_max = char_band_for(channel_id or "")
+        if sum(len(str(e.get("text", e.get("line", "")))) for e in short_scenario) >= _chars_max:
+            return 0
+    except Exception:
+        pass
 
-            # 既存テキストの後ろにリビールを追記
-            text_key = "text" if "text" in entry else "line"
-            current = entry.get(text_key, "")
+    cp = n // 4  # 離脱が急増する20〜25%地点のみ
+    if 0 <= cp < n and densities[cp] < avg * 0.8:
+        reveal = random.choice(reveals)
+        entry = short_scenario[cp]
+
+        # 既存テキストの後ろにリビールを追記
+        text_key = "text" if "text" in entry else "line"
+        current = entry.get(text_key, "")
+
+        # 既に同種の引っ張り文句が入っている行には重ねない
+        if not any(r in current for r in reveals):
             if not current.endswith(("。", "！", "？", "!", "?")):
                 current += "。"
 

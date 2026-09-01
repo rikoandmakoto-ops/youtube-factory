@@ -48,8 +48,23 @@ CTA_PATTERNS: List[str] = [
     r"チャンネル登録",
     r"登録.*よろしく",
     r"登録.*待",
+    r"登録",
     r"フォロー",
     r"チャンネル.*見逃さない",
+]
+
+# 高評価CTA検出パターン（2026-09-01 追加）
+#
+# 至上目標は登録者増だが、登録転換を最も強く説明するのは終盤維持率ではなく
+# 高評価率である。成熟動画 n=322 の高評価率4分位 × 登録/1000再生:
+#   0-0.2% 0.17 / 0.2-0.4% 0.32 / 0.4-0.8% 0.53 / 0.8%+ 1.07（最下位の6.3倍・単調増加）
+# 対して終盤維持率(90-100%)は 0.41/0.26/0.42/0.30 と無相関だった。
+# それにもかかわらず 08-29〜31 の実台本 32本で高評価CTAは 50% しか無かったため、
+# 登録と同格の検査対象に格上げする。
+LIKE_PATTERNS: List[str] = [
+    r"高評価",
+    r"いいね",
+    r"グッドボタン",
 ]
 
 # デフォルトの行数
@@ -112,16 +127,31 @@ def _check_mid_hook(lines: List[str]) -> Tuple[int, List[str], List[str]]:
 
 
 def _check_cta(lines: List[str]) -> Tuple[int, List[str], List[str]]:
-    """CTA（チャンネル登録誘導）の検証。最終行にCTAパターンがあるか。"""
+    """CTA の検証。最終行に「高評価」と「チャンネル登録」の両方があるか。
+
+    2026-09-01: 登録のみの検査から、高評価との両方必須に変更した。
+    実台本 32本(08-29〜31)の実測で高評価CTA 50% / 登録CTA 38% しか無く、
+    高評価率は登録転換を 6.3倍のレンジで説明する最強の観測レバーだったため
+    （LIKE_PATTERNS のコメント参照）、片方でも欠けたら減点する。
+    """
     if not lines:
         return -25, ["CTA: シナリオが空"], []
 
     last_line = lines[-1]
-    for pattern in CTA_PATTERNS:
-        if re.search(pattern, last_line):
-            return +20, [], []
+    has_sub = any(re.search(p, last_line) for p in CTA_PATTERNS)
+    has_like = any(re.search(p, last_line) for p in LIKE_PATTERNS)
 
-    return -25, ["CTA: 最終行にチャンネル登録の誘導がない"], []
+    if has_sub and has_like:
+        return +20, [], []
+
+    issues: List[str] = []
+    if not has_like:
+        issues.append("CTA: 最終行に高評価の誘導がない（登録転換の最強レバー）")
+    if not has_sub:
+        issues.append("CTA: 最終行にチャンネル登録の誘導がない")
+
+    # 両方欠けは -25、片方だけ欠けは -12（部分点）
+    return (-25 if len(issues) == 2 else -12), issues, []
 
 
 def _check_forbidden_words(

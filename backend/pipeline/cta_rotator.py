@@ -28,6 +28,23 @@ from typing import Any, Dict, List, Optional
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 CTA_HISTORY_DIR = PROJECT_ROOT / "data" / "cta_history"
 
+# 【2026-08-31】高評価の前置き（チャンネルの語り口に合わせる）。
+# ローテーションで選ばれたCTAに「高評価」が含まれない場合だけ前に足す。
+# 尺ガードの上限を圧迫しないよう、いずれも12〜18字に収めている。
+# 【2026-08-31 追記】最終行は enforce_band の protect_last=True で保護され
+# トリムされないため、ここで伸ばした分は削れない。尺予算を圧迫しないよう
+# いずれも10字前後に抑えている（当初案は最大18字あり、CTA行が49字まで膨らんでいた）。
+_LIKE_PREFIX_DEFAULT = "よければ高評価を。"
+_LIKE_PREFIX: Dict[str, str] = {
+    "daily-science": "へぇと思ったら高評価。",
+    "scp-lab": "届いたなら高評価を残せ。",
+    "2ch-matome": "草生えたら高評価なw ",
+    "pokemon-lab": "刺さったら高評価を。",
+    "yokai-watch": "ゾッとしたら高評価を。",
+    "company-facts": "参考になったら高評価を。",
+    "akashic-librarian": "価値を認めるなら高評価を。",
+}
+
 # CTA スタイル定義
 # 各スタイルに複数のテンプレートを用意（{series}はシリーズ名で置換）
 CTA_STYLES: Dict[str, Dict[str, Any]] = {
@@ -356,9 +373,28 @@ def rotate_cta(
     style_id = _select_style(channel_id)
     new_cta = _pick_template(style_id, channel_id)
 
+    # 【2026-08-31 追加】高評価の依頼は必ず入れる。
+    #
+    # CTAは6スタイル（登録/高評価/保存/共有/コメント/通知ON）を均等ローテーション
+    # していたため、高評価に言及するのは約1/6に留まっていた。実測（08-24〜30 の
+    # 台本76本）の遵守率は company-facts 0%、daily-science 22%、2ch-matome 33%、
+    # yokai-watch 38%、scp-lab 50%、pokemon-lab 56% で、チャンネルJSONが定める
+    # 「6行目には必ず高評価を入れ、登録より先に置く」を満たしていなかった。
+    #
+    # 高評価率と登録の関係は今回のコホート（08-18以降 n=68）でも再現している:
+    #   高評価率 上位半分 登録/1000再生 0.58 ／ 下位半分 0.22 ＝ 2.64倍
+    # （チャンネルJSONの旧記録 2.16倍 とも整合する数少ない再現した仮説）。
+    # ローテーションは残しつつ、高評価の一言だけを常に前置きする形に変更する。
+    if "高評価" not in new_cta:
+        new_cta = f"{_LIKE_PREFIX.get(channel_id, _LIKE_PREFIX_DEFAULT)}{new_cta}"
+
     # シリーズ名があれば先頭に追加
+    # 【2026-08-31 修正】series_name が既に「〜シリーズ」で終わる場合に
+    # 「元ネタが怖い最恐の妖怪シリーズシリーズ、」のような重複が量産されていた
+    # （08-24〜30 の全チャンネルの最終行で発生）。末尾を見て付け分ける。
     if series_name:
-        new_cta = f"{series_name}シリーズ、{new_cta}"
+        _series_label = series_name if series_name.endswith("シリーズ") else f"{series_name}シリーズ"
+        new_cta = f"{_series_label}、{new_cta}"
 
     # 差し替え
     last_entry[text_key] = new_cta

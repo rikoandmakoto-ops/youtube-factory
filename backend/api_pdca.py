@@ -354,10 +354,13 @@ async def get_thumbnail_test(
 
 
 @router.post("/thumbnail-tests/register")
-async def register_thumbnail_test(
+def register_thumbnail_test(
     body: ThumbnailTestRegisterRequest,
     _: Dict[str, Any] = Depends(require_session),
 ) -> Dict[str, Any]:
+    # sync 定義（＝スレッドプール実行）にしているのは意図的。
+    # 中で DALL-E 生成と Playwright レンダを回すので、async ハンドラだと
+    # イベントループを分単位で止めるうえ asyncio.run() が使えない。
     return thumbnail_ab_test.register_test(
         video_id=body.video_id,
         channel_id=body.channel_id,
@@ -369,7 +372,7 @@ async def register_thumbnail_test(
 
 
 @router.post("/thumbnail-tests/{channel_id}/{video_id}/check")
-async def check_thumbnail_test(
+def check_thumbnail_test(
     channel_id: str,
     video_id: str,
     _: Dict[str, Any] = Depends(require_session),
@@ -381,7 +384,7 @@ async def check_thumbnail_test(
 
 
 @router.post("/thumbnail-tests/{channel_id}/{video_id}/switch")
-async def switch_thumbnail_test(
+def switch_thumbnail_test(
     channel_id: str,
     video_id: str,
     _: Dict[str, Any] = Depends(require_session),
@@ -408,7 +411,7 @@ async def stop_thumbnail_test(
 
 
 @router.post("/thumbnail-tests/{channel_id}/check-all")
-async def check_all_thumbnail_tests(
+def check_all_thumbnail_tests(
     channel_id: str,
     _: Dict[str, Any] = Depends(require_session),
 ) -> Dict[str, Any]:

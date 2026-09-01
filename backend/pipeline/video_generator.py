@@ -3894,7 +3894,11 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         # イラストカードの「中身」をどう作るか:
         #   "pillow" … ローカル Pillow 図解 (APIコスト0・デフォルト)
         #   "dalle"  … OpenAI DALL-E で AI 画像生成 (失敗時は Pillow にフォールバック)
-        method = (si_cfg.get("illustration_method") or "pillow").lower()
+        # SHORT_ILLUST_METHOD で実行時に上書きできる。OpenAI のクレジットが尽きて
+        # いる間、dalle 指定のチャンネルが収集画像（題材と無関係な写真）を拾うのを
+        # 止めて Pillow 図解に寄せるために使う。
+        method = (os.environ.get("SHORT_ILLUST_METHOD")
+                  or si_cfg.get("illustration_method") or "pillow").lower()
         if method not in ("pillow", "dalle"):
             method = "pillow"
         card_style = renderer.illust_card_style
@@ -4568,7 +4572,57 @@ def _thumb_wrap_line(font, text, max_width, max_lines=2):
         rest = rest[cut:].strip()
     if rest:
         lines.append(rest)
-    return [ln for ln in lines if ln]
+    lines = [ln for ln in lines if ln]
+    return _thumb_rebalance_orphan(font, text, lines, max_width)
+
+
+# 最終行がこの幅を下回ったら「孤立行(オーファン)」とみなして2行を均す。
+# 1080px 幅のサムネで実測すると、最終行が全幅の 3 割を切ったあたりから
+# 「入 / 口」「雪がま / だ降っている」のように語の途中で落ちて見える。
+_THUMB_ORPHAN_RATIO = 0.32
+# 2行目の文字数が1行目のこの割合を下回っても均す（幅では拾えない偏り用）。
+_THUMB_LOPSIDED_RATIO = 0.45
+
+
+def _thumb_rebalance_orphan(font, text, lines, max_width):
+    """2行に折り返した結果、最終行が極端に短いときだけ切り直す。
+
+    _thumb_wrap_line は「1行目に入るだけ詰める」ので、2行目に1〜3文字しか
+    残らないケースが出る（08-31 実測: scp『…への入 / 口』、daily-science
+    『…のしかか / る理由』、yokai『…の雪がま / だ降っている』）。
+    幅にしか反応しない従来の禁則処理では直らないため、ここで文字数の
+    近い位置へ切り直す。両行とも max_width に収まるときだけ差し替え、
+    収まらなければ元の結果をそのまま返す（描画が壊れるよりマシ）。
+    """
+    if len(lines) != 2 or not text:
+        return lines
+    too_narrow = _thumb_text_width(font, lines[1]) < max_width * _THUMB_ORPHAN_RATIO
+    # 幅では引っかからないが極端に短い2行目（yokai『…の雪がま / だ降っている』）も
+    # 文字数の偏りで拾う。語の途中で落ちているのはたいていこの形。
+    lopsided = len(lines[1]) < len(lines[0]) * _THUMB_LOPSIDED_RATIO
+    if not (too_narrow or lopsided):
+        return lines
+    flat = "".join(lines)
+    target = len(flat) // 2
+    # 中央に近い順に切り位置を探す。区切り文字があればそこを優先。
+    order = sorted(range(2, len(flat) - 1), key=lambda i: abs(i - target))
+    fallback = None
+    for cut in order:
+        if flat[cut] in _THUMB_NO_LINE_START or flat[cut - 1] in _THUMB_NO_LINE_END:
+            continue
+        # 数字の途中で折らない（『14年前』→『1 / 4年前』を防ぐ）
+        if flat[cut - 1].isdigit() and flat[cut].isdigit():
+            continue
+        a, b = flat[:cut].strip(), flat[cut:].strip()
+        if not a or not b:
+            continue
+        if _thumb_text_width(font, a) > max_width or _thumb_text_width(font, b) > max_width:
+            continue
+        if flat[cut - 1] in _THUMB_WRAP_BREAKS:
+            return [a, b]
+        if fallback is None:
+            fallback = [a, b]
+    return fallback or lines
 
 
 # 縦サムネの中間帯に図解カードを差し込むための最小高さ。これを下回る隙間に
@@ -4628,6 +4682,20 @@ def _thumb_build_illustration(out_dir, topic, channel_format, channel_id=None):
         from pipeline import pillow_illustration
     except Exception:
         return None
+
+    # 教科書風カードは語句マッチが1件以下だと「アイコン1個＋総称ラベル」か
+    # 「テーマ文をそのまま印字」に落ちる。08-31 実測では pokemon『森』→ 葉/植物、
+    # yokai『雪』→ 雪片/氷 と題材と無関係な絵が出て、daily-science は未ヒットで
+    # 見出しの文字が途中で切れたまま印字されていた（『1.4倍 立つよ / り座る方が』）。
+    # サムネでは無地の方が誤誘導しないので、2語以上ヒットしたときだけ描く。
+    # 本編側（generate_pillow_illustration 直呼び）と leaked-document は従来どおり。
+    card_style = (si_cfg.get("card_style") or "textbook").lower()
+    if card_style != "leaked-document":
+        try:
+            if len(pillow_illustration._match_textbook(topic)) < 2:
+                return None
+        except Exception:
+            return None
 
     cache_dir = Path(out_dir) / "short_illustrations"
     try:
@@ -5446,6 +5514,17 @@ def generate_descriptions(title, short_scenario, full_scenario=None, thumb_info=
             short_requests = main_requests = []
 
     lines_short = [
+        # 【2026-09-01 追加】メイン側と同じ「タイトル: 」行をショートにも書く。
+        # 無いと _read_desc() が title="" を返し、autopilot の単体ショート公開
+        # (api_phase4._start_single_short_publish) が
+        #     short_d.get("title") or (job.title + "【ショート】")
+        # のフォールバックに落ちる。その結果、ここで組んだ short_title
+        # （short_series_name + short_title_core_max で詰めた本体 +
+        #  defaults.short_title_hashtags）が投稿タイトルに一度も届かず、
+        # #shorts すらタイトルに載っていなかった。実測 2026-08 の yokai-watch は
+        # 投稿39本中37本が「〜【ショート】」＝このフォールバック経路だった。
+        f"タイトル: {short_title}",
+        "",
         *short_lead,
         "",
         *header_block,
@@ -5681,6 +5760,40 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
     hook_caption = ((scenario_meta or {}).get("hook_caption")
                     or (thumb_info or {}).get("hook_caption"))
 
+    # ── ショートCTA強制（2026-09-01 新設）──
+    #
+    # 【なぜ必要か】08-29〜31 に生成されたショート台本 32本の最終行を実測すると
+    # 高評価CTA 16/32(50%) / 登録CTA 12/32(38%) / 両方 6/32(19%) しかなく、
+    # 62%のショートが登録を一度も求めていなかった（company-facts は 0/4 で CTA が皆無）。
+    # cta_rotator は 13ch中12ch で script_enhancers.disabled により無効のため、
+    # CTA文言は channel JSON の記述に頼った LLM任せで強制力がなかった。
+    #
+    # 【根拠】成熟動画 n=322 の高評価率4分位 × 登録転換（登録/1000再生）:
+    #   0-0.2% 0.17 / 0.2-0.4% 0.32 / 0.4-0.8% 0.53 / 0.8%+ 1.07（最下位の6.3倍・単調）
+    #   一方 終盤維持率(90-100%)は登録と無相関（0.41/0.26/0.42/0.30）。
+    #   登録を増やすレバーは終盤維持率ではなく高評価率であるため、
+    #   高評価を先頭・登録を末尾に決定論的に保証する。
+    #
+    # 【なぜこの位置か】ここは style 分岐（facts_overlay / monologue / yukkuri）より
+    # **上**である。当初 yukkuri 分岐の中に置いたが、company-facts は
+    # style=facts_overlay で別経路を通るため、CTAが皆無だったまさにその
+    # チャンネルだけ補正が効かなかった。08-30 の尺ガードが実経路に
+    # 繋がっていなかったのと同じ失敗であり、全スタイル共通の位置に移した。
+    # また scenario archive より上に置くことで、アーカイブされる .md が
+    # 補正後の台本になり、scripts/verify_cta_20260901.py で遵守率を実測できる。
+    if gen_type in ("short", "both") and short_scenario:
+        try:
+            from pipeline import cta_enforcer as _cta
+            _cta_result = _cta.enforce_final_cta(
+                channel_id or "", short_scenario, channel_dict=channel_dict
+            )
+            results["shorts_cta_enforced"] = _cta_result
+            if _cta_result.get("applied"):
+                print(f"📣 CTA補正[{channel_id}]: {_cta_result['before'][:50]}"
+                      f" → {_cta_result['after'][:80]}")
+        except Exception as _cta_err:
+            print(f"⚠️ cta_enforcer failed (continuing): {_cta_err}")
+
     # ── Scenario archive (A1) — markdown 原文を永続化 ──
     if channel_id:
         try:
@@ -5787,9 +5900,23 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
 
         # 2. Videos
         if gen_type in ("short", "both"):
-            # ショート尺ガード: 推定尺を検証し、範囲外なら警告（strict=False で通す）
+            # ショート尺ガード（2026-08-31 修正: 警告のみ → 実際にトリムする）
+            #
+            # 【なぜ変えたか】08-30 に enforce_band() を新設し auto_scenario/generator.py の
+            # Phase L に置いたが、実運用のレンダリングはこの video_generator 経路を通るため
+            # 一度も発火していなかった（backend.log 全期間で「✂️」0件 / 「範囲外」43件）。
+            # その結果 08-26〜30 の台本は 268〜327字のまま上限 210〜225字を超過して描画され続けた。
+            #
+            # 【根拠】台本アーカイブ616本を実績と突合できた n=214 の実測:
+            #   〜220字 AVP 59.8% / 220-260字 58.4% / 260-300字 43.2% / 300字超 28〜31%
+            #   回帰 維持率 = 92.6 - 0.1720×字数（r=-0.414）
+            #   280字→44.4%、220字→55.7% ＝ 帯に戻すだけで維持率 +11pt が見込める。
+            # トリムは決定論的（注入句除去→末尾文除去）で、1行目フックと最終行CTAは保護。
+            # 再生成ではなくトリムなのは、無人実行で生成本数がゼロになるのを避けるため。
             try:
                 from pipeline import shorts_length_guard as _slg
+                _slg_enforced = _slg.enforce_band(channel_id or "", short_scenario)
+                results["shorts_length_enforced"] = _slg_enforced
                 _slg_result = _slg.guard(channel_id or "", short_scenario, strict=False)
                 results["shorts_length_check"] = _slg_result
             except Exception as _slg_err:

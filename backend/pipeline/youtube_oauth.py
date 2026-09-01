@@ -52,6 +52,25 @@ SETTINGS_FILE = Path(__file__).parent / "credentials" / "api_settings.json"
 # 既存の id=1 グローバルトークンを移行する先のチャンネルID
 DEFAULT_CHANNEL_ID = "daily-science"
 
+# 直近のトークン取得失敗理由（channel_id -> {"error", "detail", "at"}）。
+# get_credentials_for() は失敗を None で返すため、呼び出し側は「未連携」と
+# 「トークン失効（再認可が必要）」を区別できなかった。ここに残しておくと
+# 自動公開のエラー通知や /youtube/status で理由をそのまま出せる。
+_LAST_AUTH_ERROR: Dict[str, Dict[str, Any]] = {}
+
+
+def _record_auth_error(channel_id: str, kind: str, detail: str) -> None:
+    _LAST_AUTH_ERROR[channel_id] = {
+        "error": kind,
+        "detail": detail,
+        "at": int(time.time()),
+    }
+
+
+def get_auth_error_for(channel_id: str) -> Optional[Dict[str, Any]]:
+    """直近のトークン取得失敗理由。成功していれば None。"""
+    return _LAST_AUTH_ERROR.get(channel_id)
+
 
 # =====================================================================
 # 暗号化キー
@@ -267,7 +286,11 @@ def load_credentials_dict_for(channel_id: str) -> Optional[Dict[str, Any]]:
         d["_youtube_channel_id"] = row[2]
         d["_youtube_channel_name"] = row[3]
         return d
-    except Exception:
+    except Exception as e:
+        # 復号/JSON 失敗も従来は無言で None（＝「未連携」表示）だった。
+        detail = f"{type(e).__name__}: {e}"
+        _record_auth_error(channel_id, "decrypt_failed", detail)
+        print(f"⚠️ [oauth] token 復号失敗 ({channel_id}): {detail}", flush=True)
         return None
 
 
@@ -646,8 +669,18 @@ def get_credentials_for(channel_id: str) -> Optional["Credentials"]:
                 youtube_channel_id=d.get("_youtube_channel_id"),
                 youtube_channel_name=d.get("_youtube_channel_name"),
             )
-        except Exception:
+        except Exception as e:
+            # 2026-08-24: ここを黙って None で返すと呼び出し側は一律
+            # 「OAuth 未連携」と表示するため、実際の失敗理由（invalid_grant /
+            # ネットワーク / client 不整合）がログに一切残らなかった。
+            # 08-24 は 18:17/18:18 の自動公開2本と 23:00 の PDCA 5ch が
+            # この経路で落ちており、原因特定ができなかった。
+            detail = f"{type(e).__name__}: {e}"
+            kind = "invalid_grant" if "invalid_grant" in detail else "refresh_failed"
+            _record_auth_error(channel_id, kind, detail)
+            print(f"⚠️ [oauth] refresh 失敗 ({channel_id}): {detail}", flush=True)
             return None
+    _LAST_AUTH_ERROR.pop(channel_id, None)
     return creds
 
 
@@ -659,9 +692,15 @@ def get_status_for(channel_id: str) -> Dict[str, Any]:
     """指定チャンネルの接続状態。"""
     d = load_credentials_dict_for(channel_id) if channel_id else None
     cfg = get_oauth_client_for(channel_id) if channel_id else None
+    connected = is_connected_for(channel_id) if d else False
+    auth_error = get_auth_error_for(channel_id) if channel_id else None
     return {
         "channel_id": channel_id,
-        "connected": is_connected_for(channel_id) if d else False,
+        "connected": connected,
+        # トークンはあるが refresh に失敗している＝「未連携」ではなく「要再認可」。
+        "needs_reauth": bool(d) and not connected,
+        "auth_error": (auth_error or {}).get("error"),
+        "auth_error_detail": (auth_error or {}).get("detail"),
         "account_email": d.get("_account_email") if d else None,
         "youtube_channel_id": d.get("_youtube_channel_id") if d else None,
         "youtube_channel_name": d.get("_youtube_channel_name") if d else None,

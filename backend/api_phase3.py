@@ -64,6 +64,235 @@ async def youtube_status(_=Depends(require_session)) -> Dict[str, Any]:
     return yt_oauth.get_status()
 
 
+@router.get("/youtube/thumbnail-diag/{channel_id}")
+async def thumbnail_diag(channel_id: str, _=Depends(require_session)) -> Dict[str, Any]:
+    """チャンネルのサムネイルアップロード権限を診断する。
+
+    YouTube API でチャンネルの status を確認し、テスト用に直近動画の
+    thumbnail URL を返す。
+    """
+    result: Dict[str, Any] = {
+        "channel_id": channel_id,
+        "oauth_ok": False,
+        "scopes": [],
+        "has_upload_scope": False,
+        "channel_info": None,
+        "error": None,
+    }
+
+    status = yt_oauth.get_status_for(channel_id)
+    result["oauth_status"] = {
+        "connected": status.get("connected"),
+        "needs_reauth": status.get("needs_reauth"),
+        "auth_error": status.get("auth_error"),
+    }
+    result["scopes"] = status.get("scopes", [])
+    result["has_upload_scope"] = any("youtube.upload" in s for s in result["scopes"])
+
+    creds = yt_oauth.get_credentials_for(channel_id)
+    if not creds:
+        result["error"] = "OAuth credentials not available"
+        return result
+    result["oauth_ok"] = True
+
+    if not HAS_GOOGLE:
+        result["error"] = "google-api-python-client not installed"
+        return result
+
+    try:
+        youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
+
+        # チャンネル情報（status 含む）
+        ch_resp = youtube.channels().list(part="status,snippet", mine=True).execute()
+        items = ch_resp.get("items", [])
+        if items:
+            ch = items[0]
+            result["channel_info"] = {
+                "title": ch["snippet"]["title"],
+                "id": ch["id"],
+                "longUploadsStatus": ch.get("status", {}).get("longUploadsStatus"),
+                "madeForKids": ch.get("status", {}).get("madeForKids"),
+            }
+
+        # 直近動画を1本取得してサムネイル情報を見る
+        search_resp = youtube.search().list(
+            part="snippet",
+            forMine=True,
+            type="video",
+            order="date",
+            maxResults=3,
+        ).execute()
+        recent = []
+        for item in search_resp.get("items", []):
+            vid = item["id"].get("videoId")
+            snip = item.get("snippet", {})
+            thumbs = snip.get("thumbnails", {})
+            recent.append({
+                "video_id": vid,
+                "title": snip.get("title", "")[:60],
+                "published_at": snip.get("publishedAt"),
+                "thumbnail_default": thumbs.get("default", {}).get("url"),
+                "thumbnail_high": thumbs.get("high", {}).get("url"),
+            })
+        result["recent_videos"] = recent
+
+        # テスト: 直近動画に対して thumbnails.set を DRY RUN (実際にはアップロードしない)
+        # → 代わりに channels().list の status.longUploadsStatus で判断
+        long_status = result.get("channel_info", {}).get("longUploadsStatus")
+        if long_status == "allowed":
+            result["thumbnail_permission"] = "likely_ok (longUploadsStatus=allowed → phone verified)"
+        elif long_status == "eligible":
+            result["thumbnail_permission"] = "NOT_VERIFIED (longUploadsStatus=eligible → phone verification needed)"
+        else:
+            result["thumbnail_permission"] = f"unknown (longUploadsStatus={long_status})"
+
+    except Exception as e:
+        result["error"] = str(e)
+
+    return result
+
+
+@router.post("/youtube/thumbnail-test/{channel_id}/{video_id}")
+async def thumbnail_test_upload(
+    channel_id: str,
+    video_id: str,
+    _=Depends(require_session),
+) -> Dict[str, Any]:
+    """指定動画に 1x1 透明PNG をアップロードして thumbnails.set の権限をテストする。
+
+    ⚠️ 実際にサムネイルが変わるので、テスト後に正しいサムネイルを再設定すること。
+    テスト用なので、最小の 1x1 PNG を使う。
+    """
+    creds = yt_oauth.get_credentials_for(channel_id)
+    if not creds:
+        raise HTTPException(status_code=400, detail="OAuth not connected for this channel")
+
+    if not HAS_GOOGLE:
+        raise HTTPException(status_code=500, detail="google-api-python-client not installed")
+
+    import tempfile
+    # 最小限の有効な PNG (1x1 透明)
+    import struct, zlib
+    def _minimal_png() -> bytes:
+        # IHDR
+        width, height = 1280, 720
+        ihdr_data = struct.pack(">IIBBBBB", width, height, 8, 2, 0, 0, 0)
+        ihdr = b"IHDR" + ihdr_data
+        ihdr_chunk = struct.pack(">I", len(ihdr_data)) + ihdr + struct.pack(">I", zlib.crc32(ihdr) & 0xFFFFFFFF)
+        # IDAT: single red pixel row
+        raw = b"\x00" + b"\xff\x00\x00" * width  # filter=none + RGB
+        raw_rows = raw * height
+        compressed = zlib.compress(raw_rows)
+        idat = b"IDAT" + compressed
+        idat_chunk = struct.pack(">I", len(compressed)) + idat + struct.pack(">I", zlib.crc32(idat) & 0xFFFFFFFF)
+        # IEND
+        iend = b"IEND"
+        iend_chunk = struct.pack(">I", 0) + iend + struct.pack(">I", zlib.crc32(iend) & 0xFFFFFFFF)
+        return b"\x89PNG\r\n\x1a\n" + ihdr_chunk + idat_chunk + iend_chunk
+
+    result: Dict[str, Any] = {"channel_id": channel_id, "video_id": video_id}
+    try:
+        youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
+
+        with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as f:
+            f.write(_minimal_png())
+            tmp_path = f.name
+
+        resp = youtube.thumbnails().set(
+            videoId=video_id,
+            media_body=MediaFileUpload(tmp_path, mimetype="image/png"),
+        ).execute()
+        result["success"] = True
+        result["response"] = resp
+        Path(tmp_path).unlink(missing_ok=True)
+    except Exception as e:
+        result["success"] = False
+        result["error"] = str(e)
+        err_str = str(e)
+        if "doesn't have permissions to upload and set custom video thumbnails" in err_str:
+            result["diagnosis"] = "PHONE_VERIFICATION_REQUIRED"
+            result["fix"] = "YouTube Studio → 設定 → チャンネル → 機能の利用資格 → 電話番号を確認"
+        elif "insufficientPermissions" in err_str:
+            result["diagnosis"] = "OAUTH_SCOPE_MISSING"
+            result["fix"] = "youtube.upload スコープを含む再認可が必要"
+        elif "videoNotFound" in err_str:
+            result["diagnosis"] = "VIDEO_NOT_FOUND"
+        else:
+            result["diagnosis"] = "UNKNOWN"
+        try:
+            Path(tmp_path).unlink(missing_ok=True)
+        except Exception:
+            pass
+
+    return result
+
+
+@router.post("/youtube/thumbnail-retry/{channel_id}/{video_id}")
+async def thumbnail_retry_upload(
+    channel_id: str,
+    video_id: str,
+    _=Depends(require_session),
+) -> Dict[str, Any]:
+    """既存動画にサムネイルを再アップロード。
+
+    data/thumbnails/{channel_id}/ に保存されたサムネイル、
+    または job_queue.json の short_thumbnail パスから探して再アップロードする。
+    """
+    creds = yt_oauth.get_credentials_for(channel_id)
+    if not creds:
+        raise HTTPException(status_code=400, detail="OAuth not connected for this channel")
+    if not HAS_GOOGLE:
+        raise HTTPException(status_code=500, detail="google-api-python-client not installed")
+
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+    # 1. data/thumbnails/{channel_id}/ から探す
+    thumb_path = None
+    safe_dir = PROJECT_ROOT / "data" / "thumbnails" / channel_id
+    if safe_dir.exists():
+        for f in sorted(safe_dir.glob("*_short.png"), reverse=True):
+            thumb_path = f
+            break
+
+    # 2. job_queue.json から対象 video_id の thumbnail パスを探す
+    if not thumb_path:
+        import json as _json
+        jq_path = PROJECT_ROOT / "data" / "job_queue.json"
+        if jq_path.exists():
+            jq = _json.loads(jq_path.read_text())
+            for job in reversed(jq.get("jobs", [])):
+                if job.get("channel_id") != channel_id:
+                    continue
+                r = job.get("result", {})
+                st = r.get("short_thumbnail") or r.get("short_thumbnail_path")
+                if st and Path(st).exists():
+                    thumb_path = Path(st)
+                    break
+
+    if not thumb_path or not thumb_path.exists():
+        raise HTTPException(status_code=404, detail="No thumbnail file found for retry")
+
+    result: Dict[str, Any] = {
+        "channel_id": channel_id,
+        "video_id": video_id,
+        "thumbnail_path": str(thumb_path),
+        "thumbnail_size": thumb_path.stat().st_size,
+    }
+    try:
+        youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
+        resp = youtube.thumbnails().set(
+            videoId=video_id,
+            media_body=MediaFileUpload(str(thumb_path), mimetype="image/png"),
+        ).execute()
+        result["success"] = True
+        result["response"] = resp
+    except Exception as e:
+        result["success"] = False
+        result["error"] = str(e)
+
+    return result
+
+
 @router.post("/youtube/client")
 async def set_youtube_client(
     request: SetClientRequest, _=Depends(require_session)
@@ -435,8 +664,10 @@ def _run_publish(job_id: str, req: PublishRequest):
                     media_body=MediaFileUpload(str(thumb), mimetype="image/png"),
                 ).execute()
                 job["thumbnail_set"] = True
+                print(f"🖼️ サムネイル設定完了: {video_id}")
             except Exception as e:
                 job["thumbnail_error"] = str(e)
+                print(f"⚠️ サムネイル設定失敗 ({video_id}): {e}", flush=True)
 
         job["status"] = "completed"
         job["progress"] = 100.0

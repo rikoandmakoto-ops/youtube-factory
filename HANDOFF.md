@@ -1,6 +1,16 @@
 # YouTube Factory 引き継ぎ書
 
-最終更新: 2026-08-20 / 対象コミット: `b680410`（`main`）/ 作業ツリー: **未コミット 114 件あり**
+最終更新: 2026-09-01 / 作業ツリー: **未コミット多数あり（`data/` 配下の実行結果が中心）**
+
+> **2026-09-01 の変更まとめ**
+>
+> | 内容 | 状態 |
+> |---|---|
+> | `video_status` が 06-07 で止まっていた問題 | ✅ 修正（`pipeline/publish_log.py` 新設 → §5「公開実績DB」） |
+> | `data/channels_orchestrator/` との設定乖離 | ✅ 解消（symlink 化。master は `data/channels/`。→ `docs/CHANNEL_CONFIG_SOURCE_OF_TRUTH.md`） |
+> | company-facts / akashic / 切り抜き4ch が analytics 未同期 | ✅ 解消（`video_format.analytics.enabled` を追加。clip-fukada / clip-kaneko だけ **OAuth失効で未解決**） |
+> | ショート投稿タイトルが `〜【ショート】` になり `#shorts` すら付いていなかった | ✅ 修正（`generate_descriptions` にタイトル行を追加） |
+> | fake-paper 登録0 / yokai 登録効率最下位 | ✅ コンフィグ反映（→ §5「2026-09-01 のマーケ改善」） |
 
 > `docs/HANDOFF.md` は 2026-07-02 時点の古い Dispatch 引き継ぎメモ。**このファイルが最新**。
 > 仕様の全文は `youtube_factory_full_spec.md`（約 433KB）にある。
@@ -141,6 +151,80 @@ YouTube チャンネルと OAuth は clip-lab の既存のものをそのまま�
 
 **本番稼働中。** 毎日 autopilot でショートが自動投稿されている（バックエンドと ngrok は launchd で常駐）。
 
+### 公開実績DB（`data/video_publish.db` の `video_status`）— 2026-09-01 修正
+
+`video_status` は **2026-06-07 を最後に更新が止まっていた**。運用が
+`gen_type="short"` の単体公開に移ったのに、その経路
+（`api_phase4._start_single_short_publish`）と手動スクリプト経路
+（`youtube_uploader.upload_video`）がどちらもこのテーブルに書いていなかったため。
+`api_phase3` のペア公開と PublishDialog だけが書き手だった。
+
+これを起点にしていた次の2つが静かに死んでいた:
+
+- `pipeline/analytics/pdca_report.build_report()` — 期間内の動画が0件になり、
+  ショート/メインの振り分けも登録者ソース分析も全部 `unknown` に落ちる
+- `api_improvement._published_videos_for_channel()` — いいね率改善ループが
+  毎回「公開済みの動画がまだありません」で空振り
+
+対応:
+
+| やったこと | ファイル |
+|---|---|
+| 記録を1箇所に集約（`is_short` / `title` カラムも冪等 ALTER で追加） | `backend/pipeline/publish_log.py`（新規） |
+| `upload_video` 成功後に記録（手動スクリプト・clip_factory を含む全経路） | `backend/pipeline/youtube_uploader.py` |
+| autopilot の単体ショート/メイン公開から記録 | `backend/api_phase4._record_publish_status` |
+| 6〜8月の欠損 496 本を `analytics.db` から埋め戻し（API不使用・冪等） | `backend/backfill_video_status.py` |
+| 同じ `video_id` の重複集計を防止 / 記録済み `is_short` を優先 | `pipeline/analytics/pdca_report.py` |
+
+検証: scp-lab の `subscriber_sources` が「全部 unknown」から
+`shorts 100% / 0.626 登録per1000再生` に復旧。
+
+```bash
+python3 backend/backfill_video_status.py --dry-run   # 欠損の件数だけ見る
+python3 -m unittest tests.test_publish_log           # backend/ で実行
+```
+
+### ショート投稿タイトルの取りこぼし — 2026-09-01 修正
+
+`generate_descriptions()` はメイン説明文の先頭にだけ `タイトル: ...` 行を書いており、
+ショート説明文には書いていなかった。そのため `_read_desc()` が `title=""` を返し、
+autopilot が `job.title + "【ショート】"` のフォールバックに落ちて、
+`short_series_name` / `defaults.short_title_hashtags` / `short_title_core_max` で
+組んだタイトルが **一度も YouTube に届いていなかった**（`#shorts` すら付いていない）。
+実測: yokai-watch の8月投稿 39 本中 37 本がこの経路。
+
+### 2026-09-01 のマーケ改善
+
+**fake-paper（再生4,189・登録0）** — 他chとの比較で分かったこと:
+
+| 指標 | fake-paper | scp-lab | daily-science |
+|---|---:|---:|---:|
+| 高評価率 | 0.43% | 0.46% | 0.46% |
+| 平均視聴維持率 | **27.6%** | 38.3% | 57.2% |
+| 登録/1000再生 | **0.00** | 0.79 | 0.37 |
+
+高評価率は他chと同水準なので「刺さっていない」のではない。差は
+**(a) 最終行に『高評価』の語が無い唯一のチャンネルだったこと**（`cta_fallback` も未設定で
+`cta_enforcer` の文言をチャンネル側から制御できなかった）と、
+**(b) 維持率27.6%＝全ch最下位**（実台本 228〜302字で設定帯 190〜235 を常に超過）。
+→ 7行目を高評価→登録の順に、尺を 170〜210字に、2行目の「架空の掲載誌名＋研究機関名」を
+リスナーの食いつきに差し替え（全ch共通の離脱地点である再生位置20%に報酬が無かった）、
+タイトルの `#フィクション` を除去（オチの先出し）。
+
+> ⚠️ fake-paper は電話認証未完了＝**カスタムサムネイルが無効**。`thumbnail_template` を
+> いじっても YouTube 側には反映されない。サムネで手を打つには先に電話認証が要る。
+
+**yokai-watch（登録0.28/1000再生）** — 高評価率 0.365% は6ch中5位。
+実測四分位（n=322）で 0.2-0.4% 帯の登録転換は 0.32 なので、観測どおり。
+`cta_fallback.like` の「ゾッとしたら高評価を押してね」は怖がらなかった視聴者を全部こぼすので
+条件を外した。あわせて 30日以内に再投稿して公開3日目の再生が 1/8〜1/10 に沈んだ
+「コマさん」「エンマ大王」を `theme_blacklist` に追加。
+
+> 注: 08-20〜08-29 の再生崩壊（年齢を揃えた公開3日目の中央値 1,685 → 416）は
+> テンプレ型タイトル（`1分妖怪ファイル #N：👁️〇〇に隠された3つの秘密…`）が原因で、
+> 08-31 の PDCA が `title_style` と `short_series_name` を直して対処済み。
+> 絵文字を足していた `title_emoji_injector` も 2ch-matome 以外では無効化済み。
+
 ### カスタムサムネイル（電話認証）
 
 カスタムサムネイルの利用には YouTube の電話番号認証が必要。API からは認証できないため、チャンネルごとに手動で実施する。
@@ -196,10 +280,33 @@ YouTube チャンネルと OAuth は clip-lab の既存のものをそのまま�
 
 ## 6. 残タスク
 
+### 2026-09-01 に判明して未解決のもの（最優先）
+
+0-a. **`clip-fukada` / `clip-kaneko` の OAuth トークンが失効している。**
+   `invalid_grant: Token has been expired or revoked.`。analytics 同期も自動投稿も
+   通らない（＝この2chは 08-24 の稼働開始以降ずっと止まっている可能性が高い）。
+   コードでは直せない。管理画面から再認可すること。
+   確認: `python3 -c "import sys;sys.path.insert(0,'backend');from pipeline import youtube_oauth as yo;print(yo.get_credentials_for('clip-fukada'))"`
+
+0-b. **CTA 遵守率の実測は 2026-09-02 以降に取り直すこと。**
+   `pipeline/cta_enforcer.py` は 09-01 10:30 に入ったが、稼働中バックエンドは
+   08-31 起動でこのコードを持っていなかった（09-01 11:40 に再起動して反映済み）。
+   `scripts/verify_cta_20260901.py` が見ている 08-25〜31 のアーカイブは全て補正前なので、
+   高評価37% / 登録36% / 両方19% という数字は**修正の効果を測っていない**。
+
+0-c. **`data/channels/` 以外に設定を書かないこと。** `data/channels_orchestrator/` は
+   symlink になった。詳細は `docs/CHANNEL_CONFIG_SOURCE_OF_TRUTH.md`。
+   確認: `python3 scripts/unify_channel_configs.py --check`
+
+0-d. **既存の赤いテスト2件**（今回の変更とは無関係）:
+   `tests.test_description_blocks.TestRealChannelHashtags` が `clip-animal` /
+   `clip-kaneko` の `short_hashtags` 本数で落ちる。
+   `tests.test_cta_enforcer` は `pytest` 未導入で import エラー。
+
 ### インフラ・運用
 
-1. **未コミット 114 件の整理とコミット**（新規 62 ファイルが無保護。最優先）
-2. **Git リモートを用意して push**（214 コミットがローカルのみ。バックアップ皆無）
+1. ~~未コミット 114 件の整理とコミット~~（2026-09-01 にコード分をコミット済み）
+2. **Git リモートを用意して push**（コミットがローカルのみ。バックアップ皆無）
 3. **`com.youtube-factory.pdca` を load**（毎日の PDCA レポート生成が止まっている）
 4. **`com.youtube-factory.agent` の扱いを決める**（`agent/` は退役済み＝この plist は今 load すると失敗する。削除するか ai-orchestrator に寄せる）
 

@@ -415,15 +415,22 @@ def upload_video(
 
     print(f"✅ アップロード完了: https://youtube.com/watch?v={video_id}")
 
+    thumbnail_set = False
+    thumbnail_error = None
     if thumbnail_path and Path(thumbnail_path).exists():
         try:
             youtube.thumbnails().set(
                 videoId=video_id,
                 media_body=MediaFileUpload(str(thumbnail_path), mimetype="image/png"),
             ).execute()
-            print(f"🖼️ サムネイル設定完了")
+            thumbnail_set = True
+            print(f"🖼️ サムネイル設定完了: {video_id}")
         except Exception as e:
-            print(f"⚠️ サムネイル設定失敗: {e}")
+            thumbnail_error = str(e)
+            print(f"⚠️ サムネイル設定失敗 ({video_id}): {e}", flush=True)
+    elif thumbnail_path:
+        thumbnail_error = f"thumbnail file not found: {thumbnail_path}"
+        print(f"⚠️ サムネイルファイルが見つかりません: {thumbnail_path}", flush=True)
 
     result = {
         "video_id": video_id,
@@ -431,9 +438,35 @@ def upload_video(
         "status": privacy,
         "title": title,
         "channel_id": channel_id,
+        "thumbnail_set": thumbnail_set,
+        "thumbnail_error": thumbnail_error,
     }
     if scheduled_at:
         result["scheduled_at"] = scheduled_at
+
+    # 公開実績を video_status に残す。ここを書き忘れると PDCA の
+    # ショート/メイン振り分けと登録者ソース分析が丸ごと "unknown" に落ちる。
+    # auth_channel_id が内部チャンネルID（"daily-science" 等）で、分析側は
+    # これを見ている。UC... の channel_id ではないので取り違えないこと。
+    if auth_channel_id:
+        try:
+            from pipeline import publish_log
+
+            publish_log.record_publish(
+                channel_id=auth_channel_id,
+                video_id=video_id,
+                url=result["url"],
+                is_short=is_short,
+                scheduled_at=scheduled_at,
+                title=title,
+            )
+        except Exception as e:
+            print(f"⚠️ video_status への記録に失敗 ({video_id}): {e}", flush=True)
+    else:
+        print(
+            f"ℹ️ auth_channel_id 未指定のため video_status に記録しません ({video_id})",
+            flush=True,
+        )
 
     return result
 

@@ -40,9 +40,13 @@ class _FakeChannel:
 
 class TestShortDurationClamp(unittest.TestCase):
     def test_longform_default_is_clamped(self):
-        """autopilot が渡す 720秒（12分）をショート帯に丸める。"""
-        ch = _FakeChannel({"target_duration": 40})
-        self.assertEqual(gen._clamp_short_duration(ch, 720), 40)
+        """autopilot が渡す 720秒（12分）をショート帯に丸める。
+
+        2026-08-25 にショート帯を 30〜50秒 → 20〜34秒 に変更したため、
+        設定値も新しい帯の中の値（26秒）で検証する。
+        """
+        ch = _FakeChannel({"target_duration": 26})
+        self.assertEqual(gen._clamp_short_duration(ch, 720), 26)
 
     def test_falls_back_to_default_when_nothing_usable(self):
         ch = _FakeChannel({"target_duration": 720})
@@ -51,8 +55,8 @@ class TestShortDurationClamp(unittest.TestCase):
         )
 
     def test_explicit_short_duration_wins(self):
-        ch = _FakeChannel({"target_duration": 40})
-        self.assertEqual(gen._clamp_short_duration(ch, 45), 45)
+        ch = _FakeChannel({"target_duration": 26})
+        self.assertEqual(gen._clamp_short_duration(ch, 30), 30)
 
     def test_garbage_config_does_not_raise(self):
         for bad in ({}, {"target_duration": None}, {"target_duration": "abc"}):
@@ -62,7 +66,7 @@ class TestShortDurationClamp(unittest.TestCase):
             )
 
     def test_result_always_in_sweet_spot(self):
-        ch = _FakeChannel({"target_duration": 40})
+        ch = _FakeChannel({"target_duration": 26})
         for td in (0, 5, 45, 300, 720, 3600):
             got = gen._clamp_short_duration(ch, td)
             self.assertGreaterEqual(got, gen.SHORT_DURATION_MIN)
@@ -193,11 +197,16 @@ class TestChannelShortFormats(unittest.TestCase):
     def test_short_channels_target_the_sweet_spot(self):
         """ショート専用チャンネルの想定尺が 25〜45秒に収まること。
 
-        下限は当初 29.0 秒だったが、2026-08-23 の実測（維持率45〜70%の動画で
-        推定尺26.0秒の短い側が 1本あたり登録者 0.838、推定尺35.8秒の長い側が
-        0.632 = 1.33倍）を受けて各チャンネルの total_chars_min を短縮したため、
-        テスト側の下限もそれに合わせる。現在の設定値は
-        daily-science 240字 = 27.0秒、scp-lab 230字 = 25.8秒。
+        【2026-08-25 実測により帯を 25〜45秒 → 17〜27秒 に変更】
+        08-19 の 786d314 で「ショートは30〜45秒が最も伸びる」という仮説のもと
+        台本を 6行193字 → 8行372字 に伸ばしたが、6日分の実データが仮説を否定した。
+          維持率中央値: 08-18 54.3% → 08-19 40.3% → 08-20 29.8% → 08-21 29.3%
+          平均視聴秒数: 前後どちらも 15〜16 秒で不変
+          公開3日後の再生中央値: 全5chで 24〜80% 減
+        日次 n=14 で 台本字数 × 維持率 の相関は r = -0.849。視聴者は尺に関係なく
+        15秒前後で離脱するため、尺を伸ばすほど維持率が薄まるだけになる。
+        維持率が最も高かったのは台本 173〜202字（音声 19〜23秒）帯なので、
+        下限 17.0秒・上限 27.0秒 を新しいガードレールにする。
         """
         for path in sorted(DATA_CHANNELS.glob("*.json")):
             conf = json.loads(path.read_text())
@@ -206,12 +215,12 @@ class TestChannelShortFormats(unittest.TestCase):
                 continue
             sf = conf.get("short_format") or {}
             if not sf:
-                continue  # 既定の8行ルールを使う（generator 側で担保）
+                continue  # 既定の6行ルールを使う（generator 側で担保）
             lo = sf.get("total_chars_min")
             hi = sf.get("total_chars_max")
             # VOICEVOX 1.3x の実効読み上げ速度 ≒ 8.9 字/秒
-            self.assertGreaterEqual(lo / 8.9, 25.0, f"{path.stem} が短すぎる")
-            self.assertLessEqual(hi / 8.9, 45.0, f"{path.stem} が長すぎる")
+            self.assertGreaterEqual(lo / 8.9, 17.0, f"{path.stem} が短すぎる")
+            self.assertLessEqual(hi / 8.9, 27.0, f"{path.stem} が長すぎる")
 
 
 if __name__ == "__main__":

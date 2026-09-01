@@ -459,9 +459,20 @@ def on_generation_complete(job) -> None:
         return
 
     if not yt_oauth.is_connected_for(job.channel_id):
+        # 「未連携」で一括りにすると、トークン失効（invalid_grant）でも同じ文言に
+        # なって原因が追えない。理由が取れていれば通知にそのまま載せる。
+        try:
+            _err = yt_oauth.get_auth_error_for(job.channel_id)
+        except AttributeError:  # 旧バージョンの youtube_oauth
+            _err = None
+        _why = (
+            f"トークン失効のため要再認可 ({_err['detail']})"
+            if _err
+            else "YouTube 未連携です"
+        )
         _send_event_notification(
             "error",
-            f"⚠️ 自動公開スキップ ({job.id}): チャンネル '{job.channel_id}' が YouTube 未連携です",
+            f"⚠️ 自動公開スキップ ({job.id}): チャンネル '{job.channel_id}' — {_why}",
         )
         return
 
@@ -515,6 +526,13 @@ def on_generation_complete(job) -> None:
             f"メイン: {main.get('url', '?')}\n"
             f"ショート: {short.get('url', '?')} (公開予定: {short.get('publish_at', '?')})"
         )
+        # サムネイルエラーがあれば通知に追加
+        for label, r in [("メイン", main), ("ショート", short)]:
+            if r.get("thumbnail_error"):
+                _send_event_notification(
+                    "warning",
+                    f"⚠️ {label}サムネイル設定失敗 [{job.title}] ({job.channel_id}): {r['thumbnail_error']}",
+                )
         _send_event_notification("upload_done", msg)
         # video_status DB 永続化
         try:
@@ -716,6 +734,18 @@ def _start_single_main_publish(
                 publish_at=publish_at,
                 thumbnail_path=main_thumb,
             )
+            if res.get("thumbnail_error"):
+                _send_event_notification(
+                    "warning",
+                    f"⚠️ サムネイル設定失敗 [{job.title}] ({job.channel_id}): {res['thumbnail_error']}",
+                )
+            _record_publish_status(
+                job=job,
+                res=res,
+                is_short=False,
+                publish_at=publish_at,
+                title=main_d.get("title") or job.title,
+            )
             _send_event_notification(
                 "upload_done",
                 f"🚀 メイン自動公開完了 [{job.title}]: {res.get('url')}",
@@ -733,6 +763,40 @@ def _start_single_main_publish(
     threading.Thread(target=_do, daemon=True).start()
 
 
+def _record_publish_status(
+    *,
+    job,
+    res: Dict[str, Any],
+    is_short: bool,
+    publish_at: Optional[str] = None,
+    title: Optional[str] = None,
+) -> None:
+    """単体公開（ショート単体 / メイン単体）の結果を video_status に残す。
+
+    ペア公開は api_phase3._record_pair_status_to_db が担当している。単体公開の
+    経路にはその対になる記録が無く、gen_type="short" へ運用が移った 2026-06 以降
+    video_status が更新されなくなっていた（→ PDCA の登録者ソース分析が全件
+    "unknown"、いいね率改善ループが空振り）。ここでの失敗は公開に波及させない。
+    """
+    video_id = res.get("video_id")
+    if not video_id:
+        return
+    try:
+        from pipeline import publish_log
+
+        publish_log.record_publish(
+            channel_id=job.channel_id,
+            video_id=video_id,
+            url=res.get("url") or "",
+            job_id=job.id,
+            is_short=is_short,
+            scheduled_at=publish_at,
+            title=title or job.title,
+        )
+    except Exception as e:
+        print(f"⚠️ video_status への記録に失敗 ({video_id}): {e}", flush=True)
+
+
 def _run_post_upload(
     *,
     channel_id: str,
@@ -740,11 +804,17 @@ def _run_post_upload(
     title: str = "",
     url: str = "",
     is_short: bool = True,
+    script_source: Optional[str] = None,
+    published_at: Optional[str] = None,
 ) -> None:
-    """公開後の共通処理（再生リスト投入 + 前回/次回リンク）を非同期で走らせる。
+    """公開後の共通処理（再生リスト投入 + 前回/次回リンク + 台本出所の記録）を
+    非同期で走らせる。
 
     予約公開でも実行できる（どちらも private 状態の動画に対して通る API）。
     ここでの失敗が公開処理に波及しないよう例外は握り潰す。
+
+    script_source は自動公開経路では渡せない（job にシナリオ本体が残っていない）。
+    その場合は post_upload 側が scenario archive をタイトル照合して解決する。
     """
     if not video_id:
         return
@@ -759,6 +829,8 @@ def _run_post_upload(
         title=title,
         url=url,
         is_short=is_short,
+        script_source=script_source,
+        published_at=published_at,
     )
 
 
@@ -853,6 +925,32 @@ def _start_single_short_publish(
     short_d = pair_pub._read_desc(short_desc_file)
     privacy = publish_settings.get("default_privacy") or "public"
 
+    # ── サムネイルを安全な場所にコピー（Desktop のファイルが消えても大丈夫なように） ──
+    safe_thumb = None
+    if short_thumb:
+        from pathlib import Path as _P
+        src = _P(short_thumb)
+        if src.exists():
+            safe_dir = _P(__file__).resolve().parent.parent / "data" / "thumbnails" / job.channel_id
+            safe_dir.mkdir(parents=True, exist_ok=True)
+            safe_path = safe_dir / f"{job.id}_short.png"
+            try:
+                import shutil as _shutil
+                _shutil.copy2(str(src), str(safe_path))
+                safe_thumb = str(safe_path)
+                print(f"🖼️ [short_publish] サムネイルを安全な場所にコピー: {safe_path}", flush=True)
+            except Exception as _ce:
+                print(f"⚠️ [short_publish] サムネコピー失敗: {_ce}", flush=True)
+                safe_thumb = short_thumb  # コピー失敗時は元パスを使う
+        else:
+            print(f"⚠️ [short_publish] サムネイルファイルが存在しません: {short_thumb}", flush=True)
+            _send_event_notification(
+                "warning",
+                f"⚠️ サムネイルファイル未存在 [{job.title}] ({job.channel_id}): {short_thumb}",
+            )
+    else:
+        print(f"ℹ️ [short_publish] サムネイルパス未指定 (job={job.id})", flush=True)
+
     def _do():
         try:
             _title = short_d.get("title") or (job.title + "【ショート】")
@@ -867,11 +965,51 @@ def _start_single_short_publish(
                 is_short=True,
                 youtube_channel_id=youtube_channel_id,
                 publish_at=publish_at,
-                thumbnail_path=short_thumb,
+                thumbnail_path=safe_thumb,
+            )
+
+            # ── サムネイル失敗時のリトライ（10秒待って再試行） ──
+            video_id = res.get("video_id")
+            if (res.get("thumbnail_error") or not res.get("thumbnail_set")) and safe_thumb and video_id:
+                import time as _time
+                from pathlib import Path as _P2
+                from googleapiclient.http import MediaFileUpload as _MFU
+                print(f"🔄 [short_publish] サムネイルリトライ開始 (10秒待機): {video_id}", flush=True)
+                _time.sleep(10)
+                if _P2(safe_thumb).exists():
+                    try:
+                        youtube.thumbnails().set(
+                            videoId=video_id,
+                            media_body=_MFU(safe_thumb, mimetype="image/png"),
+                        ).execute()
+                        res["thumbnail_set"] = True
+                        res["thumbnail_error"] = None
+                        print(f"🖼️ [short_publish] サムネイルリトライ成功: {video_id}", flush=True)
+                    except Exception as _re:
+                        print(f"⚠️ [short_publish] サムネイルリトライも失敗: {video_id}: {_re}", flush=True)
+                        res["thumbnail_error"] = f"retry failed: {_re}"
+                else:
+                    print(f"⚠️ [short_publish] リトライ時にサムネファイル消失: {safe_thumb}", flush=True)
+
+            thumb_msg = ""
+            if res.get("thumbnail_error"):
+                thumb_msg = f" ⚠️サムネ失敗: {res['thumbnail_error']}"
+                _send_event_notification(
+                    "warning",
+                    f"⚠️ サムネイル設定失敗 [{job.title}] ({job.channel_id}): {res['thumbnail_error']}",
+                )
+            elif res.get("thumbnail_set"):
+                print(f"✅ [short_publish] サムネイル設定成功: {video_id}", flush=True)
+            _record_publish_status(
+                job=job,
+                res=res,
+                is_short=True,
+                publish_at=publish_at,
+                title=_title,
             )
             _send_event_notification(
                 "upload_done",
-                f"🚀 ショート自動公開完了 [{job.title}]: {res.get('url')}",
+                f"🚀 ショート自動公開完了 [{job.title}]: {res.get('url')}{thumb_msg}",
             )
             _run_post_upload(
                 channel_id=job.channel_id,
@@ -890,6 +1028,8 @@ def _start_single_short_publish(
                 publish_at=publish_at,
             )
         except Exception as e:
+            import traceback
+            print(f"⚠️ [short_publish] 例外: {e}\n{traceback.format_exc()}", flush=True)
             _send_event_notification("error", f"⚠️ 自動公開失敗 ({job.id}): {e}")
 
     threading.Thread(target=_do, daemon=True).start()

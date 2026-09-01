@@ -37,14 +37,39 @@ def run(
     url: str = "",
     is_short: bool = True,
     channel_dict: Optional[Dict[str, Any]] = None,
+    script_source: Optional[str] = None,
+    published_at: Optional[str] = None,
 ) -> Dict[str, Any]:
-    """再生リスト投入 → シリーズリンクの順に実行し、結果をまとめて返す。"""
+    """再生リスト投入 → シリーズリンクの順に実行し、結果をまとめて返す。
+
+    script_source: "claude" | "gpt"（シナリオの generated_by をそのまま渡してよい）。
+        未指定なら scenario archive / model_scenario_records からタイトル照合で
+        解決する。どちらでも決まらなければ台帳には書かない。
+    """
     if not video_id:
         return {"ok": False, "skipped": "no_video_id"}
 
     cd = channel_dict if channel_dict is not None else _load_channel(channel_id)
     video_url = url or f"https://youtube.com/watch?v={video_id}"
     out: Dict[str, Any] = {"channel_id": channel_id, "video_id": video_id}
+
+    # 台本の出所（Claude / GPT）を video_id に紐づけて記録する。
+    # PDCA の A/B 集計（ab_script_source_report.py）はこの台帳だけを見る。
+    try:
+        from .analytics import script_source as _ss
+
+        out["script_source"] = _ss.record(
+            video_id=video_id,
+            channel_id=channel_id,
+            script_source=script_source,
+            title=title,
+            url=video_url,
+            is_short=is_short,
+            published_at=published_at,
+        )
+    except Exception as e:
+        out["script_source"] = {"ok": False, "error": str(e)}
+        print(f"⚠️ post_upload script_source failed [{channel_id}] {video_id}: {e}")
 
     try:
         from . import playlist_manager
