@@ -1,0 +1,665 @@
+{
+  "title": "🤣ワイ、推し寿司歴3年やけど質問ある？w🤣",
+  "theme": {
+    "title": "くら寿司のちいかわコラボ、あなたの推しは？",
+    "angle": "ちいかわコラボをテーマに、視聴者に好きなキャラを聞く。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "ワイ、推し寿司歴3年やけど質問ある？w",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ ちいかわ皿で破産したやつか？w…からの…ｗ。前回のスレ見た奴は察してるだろうけど",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "推しを見るたび追加で一皿いくやろ草",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイはハチワレ見て茶碗蒸し増えたでw",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "うさぎ来たら会計画面まで叫ぶやろ草。…これ、ワイが悪いんか？コメ欄で判定してくれ",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "質問ある？シリーズ、草生えたら高評価なw これ面白かったら共有してくれw 再生数で生活してるんだわw。…待って、ワイに戻って",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、くら寿司で皿より先に推しを決めてしまったことありませんか？答えは会計後まで胃袋を支配する、ちいかわコラボの誘惑です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回は、寿司を食べる手を止めてでも語りたくなる推しの正体を暴くぞ。ちいかわ、ハチワレ、うさぎ、誰が皿の上で最強か開幕だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、推し選びが一瞬の顔面投票で終わらないことです。びっくらポンの期待まで乗ると、寿司一皿の緊張感が急上昇します。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ちいかわは守りたくなる表情で心を刺し、ネタを待つ数分までイベント化する存在だ。静かなのに店内で一番話題をさらうタイプだな。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ハチワレ派は、優しさと頼もしさを一緒に食べたい人かもしれません。注文画面の前で迷う仲間にも、たぶん笑顔で付き合ってくれそうです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "そしてうさぎ派は、予測不能な勢いこそ正義という猛者だろ。あなたはくら寿司コラボで誰を推す？理由もコメント欄であげてけ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実はコラボ景品でも同じことが起きてる。推しを選ぶ時間そのものが、寿司を待つ数分をイベントに変えるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "くら寿司のちいかわコラボは、食事に限定グッズや演出を重ねる仕組み。皿を入れるたび、次への期待が少しずつ育つ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最強ポイントは、推しが出るかどうかを自分で完全には決められないこと。狙いと偶然が混ざるから、結果まで会話が続く。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "これはランダム性、つまり何が来るか開けるまで分からない仕掛けだ。ガチャ一回のような小さな緊張が食卓に加わる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ちいかわ、ハチワレ、うさぎのように候補がいると、同じ景品でも価値が変わる。好きな顔なら当たり感は何倍にもなる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "逆に推し以外でも、友達の推しなら交換の話題になる。外れをゼロにせず、誰かの当たりへ回せるのが参加型の面白さ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "寿司そのものはいつもの一皿でも、コラボ中は記念写真や報告まで含めて体験になる。食べ終わった後にも話が残る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "だから人気は味だけで決まらない。限定感とは今しか手に入りにくい気分のことで、迷う時間さえ思い出に変えてしまう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さて、あなたの推しは誰？ ちいかわ派、ハチワレ派、うさぎ派、それとも意外な脇役派か、コメントで寿司と一緒に教えて。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "くら寿司のちいかわコラボは、会計二千五百円ごとにビッくらポンへ挑戦できる仕組み。推し狙いなら皿の枚数まで研究対象になるよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "一般にカプセルトイの当たり確率は公表されないけど、SNSでは十回回して一個という体感報告もある。運より食欲が試される実験だな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、推しを一人に絞るほど外れた時のダメージは増える！全員かわいいと唱えれば、どの景品でも心の損失率は下がるかも。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "行動経済学では、選択肢が多いと迷いも増える現象を選択過多と呼ぶ。ちいかわ、ハチワレ、うさぎの三択だけでも真剣会議が始まる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "二〇二二年のキャラクター調査では、かわいさに加えて共感できる弱さが好感へつながる傾向が示された。だから「わァ…」に救われる人が多い。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ハチワレ推しは、言葉で励ましてくれる感じを理由に挙げがち。寿司を前にしても「食べちゃおう！」と背中を押してくれそうだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "うさぎ推しは、予測不能な行動の破壊力に惹かれるという声が目立つ。注文タブレットを見て突然「ウラ！」と叫びたい日もあるよね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ちいかわ推しは、怖がりながらも前へ進む姿が刺さるタイプかも。びっくらポンが外れても、次の一皿を取る勇気は立派な討伐だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "コラボの満足度は景品だけでなく、誰と食べたかで変わるとも言われる。一人で推し皿を撮る派か、友達と交換する派かも気になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さて、くら寿司で一番連れて帰りたい推しは誰？ちいかわ、ハチワレ、うさぎ、それとも意外な脇役か。理由つきでコメント欄に投げてけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "くら寿司のちいかわコラボは、寿司皿の横に推しを置ける祭り。公式発表のたび、SNSでは数時間で写真投稿が雪崩れるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "調べると、ちいかわはイラストレーター・ナガノ氏の作品で、2020年にX投稿から広がった。小さな日常が巨大な推し文化になった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "くら寿司は回転レーンと景品企画を組み合わせ、食事そのものを参加型イベントへ変えてきた。推し活と相性が良すぎる仕組みだね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで驚きの反転。寿司を食べに行ったはずなのに、狙いの景品へ近づくほど皿の枚数を数えるゲームが始まるんだ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "コラボ史を追うと、限定グッズは「なくなる前に行く」という行動を生む。期間限定の文字だけで、予定表が急に寿司色へ染まる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ちいかわの魅力は、かわいさだけで終わらないところ。努力しても不安で、でも仲間と進む姿が、皿を積む我々に妙に刺さる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ハチワレ推しなら前向きな言葉を、うさぎ推しなら予測不能な勢いを感じるかも。同じ寿司でも、見える物語は変わるよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "歴史的にキャラコラボは飲食店の来店理由を増やしてきたけど、今は写真一枚が次の来店を呼ぶ。回るのは寿司だけじゃない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さて、くら寿司で隣に座ってほしい推しは誰？ ちいかわ、ハチワレ、うさぎ、それとも意外な一人か、コメントで教えてね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "くら寿司のちいかわコラボ、実は推しを語る前に知ってほしい罠があるの。限定グッズは皿の枚数で狙えても、欲しい絵柄が出る保証はゼロ級、運試しが始まる！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも回転寿司の景品システムは、食べた皿を投入して抽選演出へ進む形式が定番だぜ。10皿前後で一回という感覚でも、当たりは腹と相談する長期戦になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転！　推しを一人に決めて店へ行くほど、ランダム景品では別キャラを引いた瞬間に愛が試されるの。ハチワレ狙いでうさぎが来たら、あなたは歓喜できる？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ちいかわの人気は、かわいい見た目と急に差し込まれる過酷な展開の落差が強みだな。寿司を前にした笑顔の裏で、景品残数を読む視聴者の目だけが妙に真剣になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "コラボでは店内メニューや配布物まで絵柄が広がることがあって、食べ終えた後も推し活が続くのよ。アニメなら数秒の表情でも、紙一枚なら保存版へ昇格するわ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "限定企画の怖さは、公式告知を見た翌日に予定が寿司へ支配される点だ。昼食のつもりが夕方まで遠征ルートを調べ、財布より先に胃袋の空きを計算し始めるぞ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "推しの基準も意外と割れるの。ちいかわ本人の応援したさ、ハチワレの言葉のやさしさ、うさぎの破壊力など、選ぶ理由が違うほどコメント欄は平和に荒れるわ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "研究っぽく言えば、ランダム報酬は次も試したくなる期待を生みやすい仕組みとされる。つまり一枚目が推しでなくても、次の皿を取る手には立派な心理戦が宿る。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ただし食べられる量を超えて無理をするのは本末転倒よ。家族や友人と分けて楽しめば、推し違いの景品も交換会の話題になり、外れ判定が急に薄まるかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さて、くら寿司で一番会いたいちいかわキャラは誰だ？　ちいかわ、ハチワレ、うさぎ、それとも脇役の意外な一人か。理由付きでコメントに推しを投下してくれ！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "推しを決めきれない日は、皿の色をキャラ別の応援票に見立てるのがおすすめだよ。食べ終えた枚数で今日の最推しを決めれば、家族の注文も小さな総選挙みたいに盛り上がるね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "でも驚きなのは、推し活ルールを作ると普段より食べ過ぎる危険があることだぜ。最初に予算と皿数を決めておけば、会計で青ざめずにコラボの楽しさだけを持ち帰れるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実践するなら、入店前に推し候補を三人まで絞っておくと迷いにくいよ。ちいかわ、ハチワレ、うさぎのように候補を書けば、景品やグッズを見た瞬間の決断がゲーム感覚になるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "写真を撮るなら、寿司を主役にして推しグッズは皿の横へ置くのが見やすいぜ。真上から撮ると影が減って、コメント欄でも何を食べたか伝わりやすく、思い出の一枚として残せるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "友達と行く場合は、推しが違うほど会話が増えるからむしろ当たりだよ。同じキャラ派だけで固まらず、なぜ好きかを一言ずつ聞けば、アニメの場面や口ぐせまで話題が自然に広がるね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "推しを聞かれて即答できない人は、顔、性格、名場面の三項目で選ぶといいぜ。例えば表情で笑うならうさぎ、優しさ重視ならハチワレみたいに、自分の基準を作ると参加しやすいんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "お子さんと一緒なら、注文前に一人一回だけ推しの口調で感想を言う遊びもおすすめだよ。食べ物を口に入れたまま話さない約束を添えれば、食事マナーの練習にもなって笑える時間になるね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "限定品は欲しい気持ちが先走るから、交換や購入の前に公式情報を確認しようぜ。欲しい物の写真を保存しておけば、似た商品を勘違いして焦る場面を減らせて、推し活の満足度も上がるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さて、くら寿司で会えたら真っ先に応援したい推しは誰かな。ちいかわ派か、ハチワレ派か、うさぎ派か、それとも意外なキャラか、理由も添えてコメント欄にあなたの一票を置いていってね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日は、くら寿司のちいかわコラボで誰を推すかを聞く、平和なのに妙に熱い参加型スレをまとめたよ。寿司一皿より軽い話題なのに、推し語りは宇宙規模へ膨張していたね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ちいかわ、ハチワレ、うさぎだけでなく、くりまんじゅうやモモンガまで候補が割れて、コメント欄は推しの握りを注文するような熱量だったぞ。お前の一番もぜひ置いていけ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、正解がないからこそ全員が参加できること。推しを一人選ぶだけで、見知らぬ誰かの「わかる」が返ってくる、このくだらなさが胸に刺さるんだよね。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回は「コンビニで一番テンションが上がる値引きシール、何時の何％引きか当てるスレ」を解説するよ。半額を見つけた瞬間だけ、帰宅部の足が陸上選手になる現象を追うぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次々回は「ファミレスで隣席の会話が気になった時、脳内補完した一言あげてけ」スレも候補だよ。聞こえない二割を想像で埋めた結果、日常が急にドラマになるやつ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回のくら寿司ちいかわコラボ、結局あなたの推しは誰だった？寿司ネタの好みまで添えると、同じ推しでも性格診断みたいに話が転がるから、遠慮なくコメントで教えてくれ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "こういう参加したくなるスレを、ゆっくり2chスレまとめ劇場は30秒で届けていくよ。笑えたら高評価、次のくだらない祭りを見逃したくなければチャンネル登録もよろしくね。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "推しが来た",
+      "皿が足りん"
+    ],
+    "hook_caption": "推し寿司",
+    "subtitle": "ちいかわコラボ",
+    "tagline": "お前ら正直に言えや"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": false,
+      "original_hook": "ワイ、推し寿司歴3年やけど質問ある？w",
+      "selected_hook": "ワイ、推し寿司歴3年やけど質問ある？w",
+      "scores": [
+        {
+          "hook": "ワイ、推し寿司歴3年やけど質問ある？w",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 25,
+            "loop_connect": 5
+          },
+          "total": 65
+        },
+        {
+          "hook": "お前ら、推し寿司で会計画面まで見るんか？w",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 15
+          },
+          "total": 58
+        },
+        {
+          "hook": "驚き！うさぎ推し寿司の沼、想像以上に深かった草",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 43
+        }
+      ],
+      "reason": "original_is_best"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "ワイ、推し寿司歴3年やけど質問ある？w",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ ちいかわ皿で破産したやつか？w",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "推しを見るたび追加で一皿いくやろ草",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "ワイはハチワレ見て茶碗蒸し増えたでw",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "うさぎ来たら会計画面まで叫ぶやろ草",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "共感したら高評価置いてけw 推しはコメントで頼むわ、質問ある？シリーズ毎日投稿中で1万人目標やからチ",
+          "tension": 5,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "share",
+      "style_label": "共有",
+      "original_cta": "共感したら高評価置いてけw 推しはコメントで頼むわ、質問ある？シリーズ毎日投稿中で1万人目標やからチャンネル登録で応援よろしくやで",
+      "new_cta": "質問ある？シリーズ、草生えたら高評価なw これ面白かったら共有してくれw 再生数で生活してるんだわw"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 85,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 5,
+          "text": "うさぎ来たら会計画面まで叫ぶやろ草",
+          "pattern": "叫[ぶび声]",
+          "reason": "叫びの描写は視覚的な代替が必要"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 27,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 5,
+        "relatability": 3,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 68,
+      "optimized_score": 68,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.85,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "50%・66%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "てくれw 再生数で生活してるんだわw。…待って、ワイに戻って",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 1.0
+    },
+    "power_word": {
+      "amplified": 0,
+      "changes": [],
+      "lines_modified": 0
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "アンカー形式の使用",
+        "軽いエロ要素"
+      ],
+      "insights_used": 6
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.498,
+      "similar_to": "ワイ、女性騎手歴3年やけど質問ある？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 18,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "ワイ、推し寿司歴3年やけど質問ある？w",
+      "enhanced_title": "🤣ワイ、推し寿司歴3年やけど質問ある？w🤣",
+      "emoji_added": "🤣",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🤣ワイ、推し寿司歴3年やけど質問ある？w🤣"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "…これ、ワイが悪いんか？コメ欄で判定してくれ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.0
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "statement",
+        "statement",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.2
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "前回のスレ見た奴は察してるだろうけど",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['？'](+12)"
+    ]
+  }
+}

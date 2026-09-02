@@ -1,0 +1,556 @@
+{
+  "title": "なぜ食中毒でお腹が痛む？3時間後の体内反応",
+  "theme": {
+    "title": "食中毒のメカニズム：なぜお腹が痛くなるのか？",
+    "angle": "身近な食事から起こる体の不調を科学的に解説します。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "満員電車の出口争いが、食後のあなたのお腹で起きています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！まだ答えが出てないの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "食中毒では数時間で腸が水を出し、異物を外へ急ぎます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "水道ホースを一気に流して、出口へ送る感じなんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも痛みは腸の合図で、体が追い出そうとする途中なんです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "食後の手洗いも意識して、高評価を押してね。食べ物の科学シリーズも毎日投稿中、1万人目標なのでチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？昨日の食事のあと、お腹が差し込むように痛くなったことはありませんか。\nその痛みは胃が重いだけでなく、腸が異物を外へ送ろうとして急に動いた合図かもしれません。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！夕食の3時間後にお腹が痛くなって、消化が遅いだけだと思っていたよ。\n食べた物が腸で何をすると、あんな急な痛みになるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "食中毒は食後30分ほどで始まる場合もあれば、2日から5日後に出る場合もあります。\n同じ腹痛でも、細菌そのものか細菌が残した毒素かで、体の反応する時計が変わるんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "30分と5日では、原因の食事を思い出す範囲が全然違うね。直前の一食だけ疑っても外れることがあるのか。\nまず体の中で最初に鳴る警報はどこ？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "腸の内側には免疫細胞がいて、食べ物と一緒に来た細菌や毒素を見張っています。\n免疫細胞は、たとえるなら駅の改札で不自然な荷物を見つける見回り役のような存在です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！腸はただ栄養を吸収する長い管ではなく、毎食ごとに見回りもしているんだね。\n見つけた瞬間、腸はどうやって痛みを作るの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "細菌が増えたり毒素が触れたりすると、腸は水分を出して内容物を前へ送りやすくします。\nこれは水道ホースの中に入った汚れを、水量を増やして出口へ押し流す動きと同じなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、下痢は体が失敗したというより、腸が急いで流そうとしているように見えるね。\nでも水を出すだけで、差し込む痛みまで起きるの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "腸には内容物を送る筋肉があり、順番に縮んで押し出す動きを蠕動運動と呼びます。\n蠕動運動は要するに腸のベルトコンベアで、急に速度が上がると腹部のけいれんのような痛みになります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ベルトコンベアが急発進したら、乗っている物が押される感じになるね。昨日のお腹の痛みも、腸が強く動いた感覚だったのか。\nただし、ここからが本題なんだよね？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。腹痛は細菌が腸を刺激した結果だけではなく、あなたの免疫が排出作戦を始めた結果でもあります。\n痛みを悪者だけにせず、体が何を守ろうとしているかを見る必要があります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、痛みが体の排出作戦の一部なの？だったら、痛いからといって何でもすぐ止めればいいとは限らないね。\n腸はどんな合図で一斉に動き始めるの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "腸の免疫細胞は異物を見つけると、サイトカインという伝達物質を出します。\nサイトカインは周りの細胞へ非常事態を知らせる短い連絡で、スマホの通知が一斉に届くようなものです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！通知を受けた腸の細胞が水を動かしたり、筋肉を縮めたりするなら、お腹の中が急に忙しくなるね。\nその通知が強いほど痛みも増えるの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "炎症が起きると、腸の壁は普段より敏感になります。炎症は傷つきそうな場所へ血液と免疫の働きを集める反応です。\nそのため、いつもなら感じない程度の腸の伸びでも、脳には痛みとして届きやすくなります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "同じくらい腸が動いても、敏感になった日だけ強く痛むんだね。お腹が鳴るだけで終わる日と、横になりたくなる日の差が少し分かったよ。\n痛む場所が移ることもある？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "腸の痛みは皮膚の痛みより場所が曖昧で、おへその周りから下腹部まで広く感じることがあります。\n腸は伸びと収縮を感じやすいので、長いホース全体を握られたような違和感として脳へ届くんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "だから最初はおへその近くが変だったのに、少し後には別の場所が痛いように感じるのか。\n痛む場所だけで原因を決めるのは難しそうだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "黄色ブドウ球菌は、食品の中で作られた毒素によって食後30分から8時間で症状が出ることがあります。\nおにぎり、弁当、クリームを使う食品などを室温に長く置いたときに、問題になることがある細菌です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "30分から8時間なら、食べた直後の気分の悪さとも重なって見えるね。菌が腸まで行って増える前に、毒素が先に腸を刺激するの？\n時間の短さに理由があるんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "はい。毒素は細菌が食品の中に残した刺激物なので、食べたあと比較的早く反応が始まることがあります。\nたとえるなら、犯人がその場にいなくても、残された煙で火災報知器が鳴るような仕組みです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "細菌が生きたまま腸で増える話と、食品に残った毒素の話は別なんだね。温め直せば全部安心、とは言い切れない理由にもつながるのかな。\n保存が気になるよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "カンピロバクターは、鶏肉の加熱不足で問題になりやすく、症状まで2日から5日ほどかかることがあります。\n腸の表面を刺激して炎症を起こし、腹痛、下痢、発熱につながる場合がある細菌です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それなら食べた日は元気でも、数日後に思い出して心当たりが出ることがあるんだね。\n鶏肉の表面が焼けて見えても、中まで確認する意味が分かるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "厚生労働省は、肉料理を中心部75度で1分以上加熱する目安として示しています。\n厚い肉の中心は表面より温まりにくく、冬の布団の真ん中まで温かくなるのに時間がかかるのと似ています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "フライパンで焦げ目がついたから大丈夫、と表面だけで判断しないほうがいいんだね。\n肉汁の色だけでなく、厚みや火の通り方を考える必要がありそうです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "サルモネラでは、食後6時間から72時間ほどで腹痛や下痢、発熱が現れることがあります。\n症状が出るまでの時間には幅があるため、食べた時刻だけで原因を断定せず、体調の変化を記録することが役立ちます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ食中毒という言葉でも、30分、6時間、72時間と時計がばらばらなんだね。\n食べた物と症状が出た時間をスマホに残すだけでも、相談するとき説明しやすそうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ノロウイルスは細菌ではなく、腸の細胞に入り込んで働きを乱す小さな感染のもとです。\n一般に24時間から48時間ほどで吐き気や下痢が始まることが多く、調理する人の手から食品へ広がることもあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！食べ物の食材だけでなく、作る途中の手からも腸のトラブルが始まることがあるんだね。\nだから調理前とトイレの後の手洗いが大切なの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "石けんによる手洗いは、手についた汚れや微生物を水で流しやすくする基本の方法です。\n手のひらだけで終わらせず、指の間、親指、指先まで20秒ほどかけると、洗い残しを減らしやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "20秒なら、短い歌を一節ぶん頭の中で数えるくらいだね。見た目がきれいな手でも、食べ物へ移る量を減らす意味があるんだ。\nまな板も同じように考えるの？",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "生の肉を切ったまな板で、そのままサラダ用の野菜を切ると、肉の表面にいた細菌が野菜へ移る可能性があります。\n加熱しない野菜は最後の加熱がないので、まな板や包丁を洗い分ける工夫が特に大切です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、雨でぬれた靴のまま白い床を歩けば、後から床に跡が残るようなものだね。\n肉から野菜へ移る道を、道具の洗浄で切るんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "同じ料理を食べても平気な人と症状が出る人がいるのは、食べた量、胃酸、体調、腸内細菌などが関わるためです。\n腸内細菌は普段から腸にいる細菌の集まりで、外から来た細菌と場所を取り合うことがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "満員電車で先に座席が埋まっていれば、新しく来た人が入りにくいのと似ているね。\n腸の先客が多いほど守られる、と単純に言えるのかな？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そこは科学でもまだ結論が出ていない部分があります。腸内細菌の種類は人によって大きく違い、病原体ごとに影響も変わります。\n誰かが同じ料理で元気だったことを、自分の安全の証拠にはしないでください。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、同じ量を食べた友達が平気でも、自分の腸が同じ条件とは限らないね。\n体調が悪い日は、より慎重に食べ物を扱う理由にもなりそうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "水っぽい下痢は、腸が水を吸い戻せなくなったり、腸の内側へ水を出したりして起きます。\n異物を薄めて外へ送る動きに似ていますが、そのぶん体の水分と塩分まで失いやすい点が重要です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "排水口の詰まりをたくさんの水で流すと、周りの水まで一緒に減っていく感じだね。\n下痢が続くと、のどが渇くだけでは済まないこともあるの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "尿が極端に少ない、口が強く乾く、立つとふらつく、意識がぼんやりする場合は、脱水の目印になることがあります。\n特に乳幼児、高齢の方、妊娠中の方、持病のある方は、早めに医療機関へ相談してください。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "お腹の痛みだけなら我慢しようと思いがちだけど、尿やふらつきまで見ると体の水分不足に気づきやすいね。\n飲めないほど吐くときも、早めの相談が必要だね。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "血便、高熱、我慢できないほどの強い腹痛があるときは、市販薬だけで済ませようとせず相談してください。\n下痢止めは症状や原因によって向き不向きがあり、排出反応を抑える判断には注意が必要です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "痛いから早く止めたい気持ちはあるけれど、腸が何を外へ出そうとしている最中かもしれないんだね。\n自己判断で重ねて薬を飲む前に、薬剤師さんにも聞いてみるよ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "1854年、ロンドンの医師ジョン・スノウは、コレラの患者が多い場所と井戸水の関係を地図にして追いました。\nお腹の症状を偶然で終わらせず、共通する水の経路を見ることで原因に近づいた歴史的な例です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "一人ずつの腹痛では見えなくても、地図に重ねると同じ井戸の周りに集まっていたんだね。\n今でも同じ食事をした人の症状を確認するのは、手がかりになるのかな？",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "同じ料理を食べた複数の人に似た症状が出たなら、共通の食事が大切な手がかりになります。\nただし原因を確かめようとして残り物を食べ直すのは避け、食べた時刻や症状の始まりを記録して相談に備えてください。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それは確かに大事だね。残った料理を家族がうっかり食べないように分けて、いつ作った物かも分かるようにしておくよ。\n記録は原因探しの地図になるんだ。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "意外なのは、熱い料理でも作ってから室温に長く置けば、加熱後に触れた手や器具から細菌がつく可能性があることです。\n大鍋のまま冷ますより、小分けにして冷蔵し、温度が下がる時間を短くする工夫が役立ちます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "大鍋のカレーが翌日おいしいと言われるけれど、置き方まで気をつける必要があるんだね。\n冷蔵庫へ入れる前に、小さな容器へ分ける理由がつながりました。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "黄色ブドウ球菌のように、細菌が作った毒素が熱に比較的強い場合もあります。\nだから温め直しだけに頼らず、調理前後の手洗い、清潔な器具、早めの冷蔵という入口対策が、お腹の痛みを減らす近道です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！加熱は大切だけど、最初から細菌をつけない工夫までセットで考えるんだね。\n料理は火を使う時間だけでは終わらないんだ。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "症状が出たときは、少量ずつ水分をとることをまず考えてください。経口補水液は水、ナトリウム、ブドウ糖を含み、腸が水分を取り込みやすい組み合わせです。\n一度に多く飲まず、飲める量を分けるのがポイントです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "コップ1杯を急いで飲むより、ひと口ずつなら吐き気があっても続けやすいね。\n経口補水液とスポーツ飲料では成分が違うこともあるから、家に置くなら表示も見ておくよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "予防の合言葉は、つけない、増やさない、やっつけるの3つです。\n手と器具からつけない、冷蔵で増やさない、肉の中心まで加熱してやっつけると、買い物から片付けまで思い出しやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "3つなら夕食の前に確認できるね。生肉に使った箸を、そのまま焼けた肉に使わないのも、つけないための小さな一手なんだ。\n今日から試せそうです。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "食中毒の腹痛は、腸の筋肉が強く動くこと、腸の壁が敏感になること、水分の流れが変わることから起きます。\nそれは体が異物を外へ送ろうとしている反応でもあり、あなたの腸が働いている証拠の一つです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、痛みの裏では腸が何もしないで止まっているのではなく、急いで守ろうとしているんだね。\nだからこそ強い症状や脱水の目印は、見逃さないようにするよ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜は、肉の中心まで火を通すこと、料理を長く室温に置かないこと、食前に20秒手を洗うことを意識してみてください。\nその3つが、昨日のようなお腹の違和感を遠ざける、いちばん身近な準備になります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、寝る前にスマホを見ると眠りの深さがどう変わるのかを、一晩の体のリズムから見ていくんだね。\n食事のあとだけでなく、眠る直前にもあなたの体は毎日たくさん働いているんだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "食べ物の科学シリーズでは、毎日の食事で起きる不思議を、数字と身近な例えであなたの体につなげて見ていきます。\n今日の話が役立ったら高評価もお願いします。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "身近な不思議を毎日1本ずつ解き明かして、次の回も一緒に見てほしいです。\n面白かったらチャンネル登録よろしくね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "お腹が痛い",
+      "体の防衛戦"
+    ],
+    "hook_caption": "3時間後の反応",
+    "subtitle": "食べた後に体で起きること",
+    "tagline": "痛みは体からの緊急連絡"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "食後の手洗いも意識して、高評価を押してね。食べ物の科学シリーズも毎日投稿中、1万",
+          "reason": "1行62字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 5,
+        "emotional_impact": 0,
+        "relatability": 6,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "反直感的な事実"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.459,
+      "similar_to": "なぜ座ると腰だけ痛い？圧力1.4倍",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 16,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ食中毒でお腹が痛む？3時間後の体内反応"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  }
+}

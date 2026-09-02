@@ -1,0 +1,491 @@
+{
+  "title": "実はランクS最強説が5つ崩れる？",
+  "theme": {
+    "title": "妖怪ウォッチのランクSに隠された基準、強さと一致しない本当の理由",
+    "angle": "作中描写だけで確認できる未回収設定を5つ。断定せず「作中ではこう描かれている」で統一する"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "見た目は頼もしいのに、ランクSは強さだけで決まっていないんだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それ好きなやつ！　Sなのに最強じゃない例が5つもあるの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲーム内図鑑では、能力より物語や入手条件で特別扱いの例が見える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ところが作中では、Sより上に見える大妖怪が別枠で現れるんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。Sは強者の印じゃなく、選ばれた印なのかも。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "高評価を置いて、未回収設定シリーズも見てね。1万人目標で毎日投稿中、チャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？　あなたも妖怪ウォッチでランクSを引いた瞬間、最強を手に入れたと感じたことがあるはずだ。でも初代から4までの作中描写を見比べると、その一文字は単純な強さの順位に見えなくなるんだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それ好きなやつ！　Sランクの妖怪を初めて仲間にした日は、レベル1でもパーティーへ入れたくなったよ。学校でレアカードを見せるみたいな特別感があるから、強さと違うなら理由を知りたい。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、ランクSには戦闘、入手、物語、人気のような別の要素が重なって見える。今回は妖怪大辞典、クエスト、会話場面で確認できる未回収設定を、5つの違和感として追うんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "公式が「Sの選び方」を5項目で発表したわけではないんだよね？　じゃあ今回は、攻略サイトの強さ表ではなく、ゲーム画面に残った表示やイベントを材料にして、見える範囲だけを読むんだね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その通りだ。公式設定として確認できる内容、作中ではこう描かれている内容、ファンの間で語られる非公式考察は分ける。答えを作らず、説明されていない場所を説明されていないまま残すのが今回の調査なんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "最初の違和感は、ランクSでも戦闘で絶対の頂点にはならない妖怪がいることだ。レベル、装備、性格、必殺技の4つで結果が変わるのに、ランクだけを最強証明として読むには、ゲーム内の勝敗が複雑すぎる。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。SならAやBより必ず強いと思って育てる人は多そうだよ。対戦で負けたらレベル不足だと考えがちだけど、ランク表示そのものが能力以外の役目を持つなら、話が変わってくるね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "作中の戦闘では、ちから、ようりょく、すばやさ、まもりといった数値の向きが妖怪ごとに違う。同じSでも速さ型と耐久型では、100メートル走と綱引きほど必要な力が異なるから、単純比較はできないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "しかも種族相性やとりつく効果まで加わると、ランクの文字だけで勝敗は決まらない。作中で確認できるのは、Sが戦闘力を一列に並べた順位表ではないということだ。ここに最初の空白が残るんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあランクSは、ガシャで見かけたときのレアな光みたいなものかな？　手に入れにくさや目立ち方を示すなら、能力が全員同じくらいでなくても変じゃない。でも、その説明だけで全部片付くの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、ここからが本題だ。レア度だけなら安心できそうなのに、作中には入手条件が特別でなくてもSに置かれる妖怪がいる。そして逆に、世界観では明らかに大きな存在なのに、通常のランク表へ収まりきらない者もいるんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "2つ目は、物語の節目に現れる妖怪がSとして印象づけられることだ。重要クエストや終盤の出会いでは、仲間になる瞬間そのものが報酬になる。戦闘数値よりも「ここまで来た」という記憶を背負う配置なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "たしかに、ボス戦のあとで仲間になる妖怪は、強いからうれしいだけじゃないよね。何度も負けて、回復アイテムを使って、やっと会えた記憶が残る。ランクSの札は、その思い出にも貼られている感じがする。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "公式が「物語の重要度でSを決める」と明言した資料は、少なくとも作中には見当たらない。それでも、重要な場面に置かれた妖怪ほど特別に扱われる描写は確認できる。金色のクリアスタンプのような役目は感じられるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで最も大きなズレが見える。妖怪ウォッチの世界には、大妖怪や王のように、普通の仲間妖怪より上の立場に見える存在がいる。もしSが世界の最強順位なら、その存在たちも同じ一段へ整列してよさそうなんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それ本当にゲームの話？　エンマ大王みたいに妖怪世界を統べる側の存在まで、普通の妖怪と同じ物差しで測るのは無理がありそうだよ。ランクSの上があるというより、順位の外側にいるように見える。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "3つ目は、その別枠に見える妖怪たちだ。作中ではこう描かれているが、王や伝説に近い存在は、戦闘へ参加しても物語上の重さが違う。ランクSは妖怪世界すべての頂点ではなく、仲間妖怪の一部を示す印に見える。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "エンマ大王は、妖怪たちを統べる者として会話や物語に現れる。ここで確認できるのは、強いか弱いかとは別に、立場が存在するということだ。ゲームのパーティーに入る事実だけでは、その立場の重みは消えないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ランクSが学校の成績表だとしたら、エンマ大王は先生や校長先生の立場みたいなものかな。同じテストで点を競う相手ではないから、Sより上か下かを聞くこと自体が、少しずれている気がしてきたよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その読み方は作中描写と矛盾しない。ただし、公式が学校の階層のように整理したわけではないため、ここから先は断定できない。Sという札が何を測るのか、その基準表は画面のどこにも表示されていないんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "4つ目は、同じ妖怪でも作品ごとに扱いが変わることだ。初代、妖怪ウォッチ2、妖怪ウォッチ3、妖怪ウォッチ4では、出会う時期や仲間にする方法が違う。Sという文字が同じでも、手に入れる意味は一定ではない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームが変わればバランスが変わるのは当然だよね。でもSが能力だけの絶対評価なら、作品が変わっても似た立ち位置になりそうだ。登場時期が早くなったり遅くなったりするのは、何を意味しているんだろう。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "作中で見えるのは、能力の上下より登場のさせ方だ。ある作品では終盤の目標だった妖怪が、別作品では早い段階で存在を知られることがある。ランクSは数値だけでなく、ゲーム進行の驚きを作る装置にも見えるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "たとえば初見のプレイヤーにとって、終盤で会うSは宝箱の中身より強く記憶に残る。一方で続編では、その妖怪を知っている前提で別の役目を渡せる。ランク表示は同じでも、物語での距離は大きく変わるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "つまり、ランクSはカードゲームの攻撃力みたいな一個の数字ではなく、ゲームを遊んだ順番によって印象まで変わる札なんだね。初代を遊んだ人と3から入った人では、同じ妖怪でも怖さや憧れが違いそう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ファンの間では、Sは希少性、人気、物語の格、戦闘性能を混ぜた総合評価ではないか、と語られることがある。これは非公式の考察で、公式設定ではない。ただ、5つのズレを一つずつ眺めると、そう考えたくなる理由は見える。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "5つ目は、ランクSの中に出身も役目も違う妖怪が同居していることだ。伝説妖怪、古典妖怪、人気妖怪、ボス級の存在が同じ文字に入る。棚のラベルは一枚なのに、中身だけ別の倉庫から来たように見えるんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。集める側はSを一つのグループだと思うのに、作中では生まれも立場も別の妖怪が並んでいるんだね。強さランキングなら分かりやすいはずなのに、同じSほど正体が分からなくなっていくよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あの妖怪の正体は、と言いたくなる場面だ。Sは妖怪自身の絶対的な身分証ではなく、作品がプレイヤーへ特別だと伝えるための記号として使われている可能性がある。ただし、その選別の公式基準は作中で回収されていない。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで原典の話へ少しだけ降りる。元の伝承では、妖怪にSやAの札はない。江戸時代の鳥山石燕による1776年の『画図百鬼夜行』でも、姿と名前は並ぶが、戦闘力の順位表は作られていないんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "昔の人は、妖怪をゲームみたいに最強順で集めなかったんだね。夜道で会うか、山に入るか、家に出るかで怖さが変わる。だから一文字のランクで整理するほど、こぼれてしまうものが増えるのかもしれない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "『画図百鬼夜行』の妖怪は、強い順ではなく、見た者が何を恐れたかの痕跡として読める。妖怪ウォッチは、その曖昧さを遊べる仕組みに変えた作品だ。だからランクが必要で、Sという光る札も必要だったんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "けれど、王のような存在や物語の核になる妖怪まで同じ札で並べた瞬間、分類からはみ出す影が見える。ゲームの画面では整っているのに、設定を追うと整列が崩れる。その崩れ方が、妖怪らしくて少し不穏なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "Sを見つけたときのワクワクは嘘じゃないんだよね。ただ「最強を引いた」と思うより、「物語の奥にいる妖怪を見つけた」と考えたほうが、図鑑を埋める時間がもっと長く楽しめそうだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その楽しみ方はおすすめできる。まず一つ目の見方は、ランクを見る前に、その妖怪がどの作品のどの場面で現れたか確認することだ。初登場の場所は、能力値の一行よりも、その妖怪が背負う役目をよく教えてくれる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ボスのあとに仲間になった妖怪なら、ステータス画面を見る前に、戦った場所を思い出せばいいんだね。何回負けたか、誰と組んだかまで思い出すと、同じSでもただの戦力じゃなく、冒険の記録に見える。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "二つ目は、ランクSでも役割を分けて見ることだ。攻撃、回復、妨害、耐久では必要な場面が違う。ボス戦で一度負けたとき、Sだから採用するのではなく、その相手に技が合うかを先に確かめるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "学校のグループ作業みたいだね。全員が同じ教科で一番でも困るけど、得意が分かれていれば強いチームになる。BやAの妖怪も混ぜると、ランクSを三体入れるより勝ちやすい場面がありそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "三つ目は、公式の説明とファン考察を分けておくことだ。ゲーム内プロフィールや会話は作中描写として確認できる。一方で「Sの本当の選定基準」は、公式資料が出ない限り考察のまま残すべきなんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "断定しないほうが、かえって楽しいかもしれないね。全部答えが出たら図鑑の文字を読むだけになるけど、空白が残るから初代から4まで遊び直して、自分で違和感を探したくなるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "四つ目は、別枠の存在を無理に順位へ戻さないことだ。エンマ大王のような存在をSかSSかと数え始めると、作中の立場が見えにくくなる。誰が誰を統べているかを追うほうが、数字より深いものが見えてくる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "数字にすると安心できるけど、数字にできない妖怪のほうが怖いね。Sの上があるのか、それとも上という言葉が通じないのか。ゲーム画面には表示されない線引きが、図鑑の外側に残っているみたいだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "今回確認できた違和感は5つだ。戦闘力とのズレ、物語の節目、別枠の大妖怪、作品ごとの扱いの変化、異なる系統の同居。どれも作中では確認できるが、それらを結ぶ公式の選定文はまだ見つかっていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "好きな妖怪ほど、元ネタが怖いと言うけれど、ゲーム内設定も同じだ。可愛いメダルの裏にあるSの文字は、最強の証明ではなく、まだ説明されていない選別の跡なのかもしれない。そこから先は、記録が途切れている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "聞かなきゃよかった。次にランクSを見ても、強い妖怪だと喜ぶ前に「この子は何を理由にここへ置かれたの？」って考えちゃうよ。答えがないまま光っている文字が、一番落ち着かないね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、妖怪ウォッチで主人公だけが妖怪を見られる理由を、ゲーム内の会話と設定から追う予定だ。見える側と見えない側を分ける線は、ランクSの札よりずっと近くに引かれているかもしれない。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それ本当に調べるの？　妖怪と友達になりたい気持ちは変わらないけど、見える理由まで聞いたら、いつもの町の景色まで少し違って見えそうだ。夜にウォッチを開くのは、ためらうようになるかも。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "作中描写と公式情報を分けて追う未回収設定シリーズが気になったら、高評価を置いてほしい。毎日投稿でチャンネル登録者1万人を目指しているから、チャンネル登録で次の調査にも付き合ってくれるとうれしいんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ランクSの文字は、あなたの図鑑で今も静かに光っている。でもその光が強さの順位ではないなら、誰が、いつ、何のためにその札を貼ったのか。もし夜に図鑑を開くなら、表示された文字を見つめすぎないほうがいい。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪ウォッチは株式会社レベルファイブの登録商標であり、映像ではゲーム画面の長尺使用を避け、図鑑の構造を自作図で示す予定だ。見慣れたSの札ほど、作中で語られない部分を隠しているのかもしれないんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "図鑑を閉じても、あのSだけが頭に残りそうだよ。最強だから光っていたんじゃなく、説明されない何かを隠すために光っていたなら、次に出会う妖怪のランクも、前みたいには見られないね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "作中ではこう描かれている、という5つの違和感だけでも、ランクS最強説は完成しない。答えがないからこそ、図鑑の一文字は静かに不穏なんだ。もし夜道でSランクの気配を感じても、目を合わせないほうがいい。",
+      "expression": "think",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "ランクSの基準",
+      "強さではない？"
+    ],
+    "hook_caption": "最強ではない",
+    "subtitle": "作中描写で追う5つの違和感",
+    "tagline": "Sは何を選んでいるのか"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "伝承要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.397,
+      "similar_to": "ふぶき姫の約束を破るとどうなる？3つの雪女記録",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 14,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "実はランクS最強説が5つ崩れる？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は'](+12)",
+      "好奇心ギャップ['？', '実は'](+12)",
+      "短すぎ(16字 < 18)(-12)"
+    ]
+  }
+}

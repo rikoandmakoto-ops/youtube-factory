@@ -1,0 +1,2188 @@
+{
+  "channel_id": "company-facts",
+  "channel_name": "企業のホンネ",
+  "sync": {
+    "ok": true,
+    "data": {
+      "channel_id": "company-facts",
+      "overview": {
+        "channel_id": "company-facts",
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "videos": {
+        "channel_id": "company-facts",
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "reach": {
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "retention": [],
+      "synced_at": 1788271291,
+      "comments": [],
+      "pdca": {
+        "scenario_evaluation": {
+          "channel_id": "company-facts",
+          "evaluated": 0,
+          "skipped": 27,
+          "results": [
+            {
+              "video_id": "g8k4eqeaqrU",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "cRl1YYULK94",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "_F-orq4tyjg",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "QkYPUi8JeYU",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "U1nCZnLxQyM",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "wIcx5yV-3QQ",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "pdiI6XvYoyk",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "D0YEi-jN2Fc",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "dPkVQBSCzXs",
+              "skipped": true,
+              "reason": "already_evaluated",
+              "evaluation": {
+                "video_id": "dPkVQBSCzXs",
+                "channel_id": "company-facts",
+                "evaluated_at": 1788230487,
+                "hook_strength": 7.5,
+                "specificity": 10.0,
+                "pacing": 10.0,
+                "cta_effectiveness": 6.0,
+                "wording_quality": 6.0,
+                "overall": 7.98,
+                "weak_sections": [],
+                "improvement_suggestions": [],
+                "comment_feedback": [],
+                "scenario_path": "/Users/ayukiyamazaki/Developer/youtube-factory/data/scenarios/company-facts/三菱商事の平均年収2033万円その中身.json",
+                "video_title": "三菱商事の平均年収2033万円、その中身 #shorts #企業分析 #年収 #転職"
+              }
+            },
+            {
+              "video_id": "5qcaDLeE9pA",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "BuCRdC0KOnE",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "HAgvILwPOmk",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "Hsx8j3WyoZE",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "JHLcCe5vBdk",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "Wk0xyqjjnNQ",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "zq6I-VSqt5k",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "gJ3uyNIsLIg",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "nHi44PRzdes",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "w8KmKhjvyNs",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "k98ZRiRmSmo",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "Nbcteb-cPGk",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "sKK8tlnT61w",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "ZcH38vqusdQ",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "61oVDTaZUGo",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "5lV_sxOcp3Y",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "pvTfS3Tish4",
+              "skipped": true,
+              "reason": "empty_scenario"
+            },
+            {
+              "video_id": "Kq4Xx43QCiE",
+              "skipped": true,
+              "reason": "empty_scenario"
+            }
+          ],
+          "ran_at": 1788271291
+        },
+        "ab_reconciliation": {
+          "channel_id": "company-facts",
+          "reconciled": 6,
+          "items": [
+            {
+              "test_id": "abt_20260901_024154_1a8ec7",
+              "status": "reconciled",
+              "matched_video_id": "Nbcteb-cPGk",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.013793103448275862,
+              "actual_impressions": 145,
+              "age_days": 15.18962223767361
+            },
+            {
+              "test_id": "abt_20260901_024151_882b9c",
+              "status": "reconciled",
+              "matched_video_id": "Wk0xyqjjnNQ",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.021505376344086023,
+              "actual_impressions": 93,
+              "age_days": 11.250756526793982
+            },
+            {
+              "test_id": "abt_20260901_024148_17ebfb",
+              "status": "reconciled",
+              "matched_video_id": "JHLcCe5vBdk",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.019114688128772636,
+              "actual_impressions": 994,
+              "age_days": 10.375652383854167
+            },
+            {
+              "test_id": "abt_20260901_024145_cc33b0",
+              "status": "reconciled",
+              "matched_video_id": "BuCRdC0KOnE",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.015151515151515152,
+              "actual_impressions": 66,
+              "age_days": 7.250687126122686
+            },
+            {
+              "test_id": "abt_20260901_024142_ccf9af",
+              "status": "reconciled",
+              "matched_video_id": "HAgvILwPOmk",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.008771929824561403,
+              "actual_impressions": 114,
+              "age_days": 8.250779758668982
+            },
+            {
+              "test_id": "abt_20260901_024139_f43e4f",
+              "status": "too_young",
+              "age_days": 5.250860795972222,
+              "matched_video_id": "D0YEi-jN2Fc"
+            },
+            {
+              "test_id": "abt_20260901_024135_660405",
+              "status": "too_young",
+              "age_days": 6.250849228263889,
+              "matched_video_id": "5qcaDLeE9pA"
+            },
+            {
+              "test_id": "abt_20260901_024131_af6752",
+              "status": "reconciled",
+              "matched_video_id": "gJ3uyNIsLIg",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.012578616352201259,
+              "actual_impressions": 159,
+              "age_days": 12.250907104155091
+            }
+          ],
+          "ran_at": 1788271291
+        },
+        "improvement_queue": {
+          "channel_id": "company-facts",
+          "channel_avg_ctr": 0.03561701269268966,
+          "threshold_ctr": 0.02849361015415173,
+          "threshold_percent": 80.0,
+          "candidates_found": 8,
+          "queued": [
+            {
+              "video_id": "gJ3uyNIsLIg",
+              "channel_id": "company-facts",
+              "created_at": 1788230491,
+              "updated_at": 1788271294,
+              "status": "pending",
+              "current_title": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+              "current_ctr": 0.012578616352201259,
+              "channel_avg_ctr": 0.03561701269268966,
+              "suggested_titles": [
+                "なぜアジア大会の裏方企業は年収932万円なのか？",
+                "年収932万円！アジア大会を支える企業の収益構造",
+                "実は高収入だった！アジア大会の裏方企業が稼ぐ仕組み"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "なぜアジア大会の裏方企業は年収932万円なのか？",
+                  "thumb_copy": [
+                    "大会を支える裏方",
+                    "年収932万円の理由"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "年収932万円！アジア大会を支える企業の収益構造",
+                  "thumb_copy": [
+                    "平均年収932万円",
+                    "大会が生む巨額利益"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は高収入だった！アジア大会の裏方企業が稼ぐ仕組み",
+                  "thumb_copy": [
+                    "表に出ない主役",
+                    "意外な高年収の実態"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.02849361015415173
+            },
+            {
+              "video_id": "5qcaDLeE9pA",
+              "channel_id": "company-facts",
+              "created_at": 1788230495,
+              "updated_at": 1788271297,
+              "status": "pending",
+              "current_title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+              "current_ctr": 0.021645021645021644,
+              "channel_avg_ctr": 0.03561701269268966,
+              "suggested_titles": [
+                "トヨタ平均年収982万円、手当の中身はなぜ別格なのか？【ショート】",
+                "トヨタ年収982万円の実態、住宅・家族手当はいくら？【ショート】",
+                "実は年収だけじゃない！トヨタ社員を支える手当の中身【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "トヨタ平均年収982万円、手当の中身はなぜ別格なのか？【ショート】",
+                  "thumb_copy": [
+                    "年収982万円の裏",
+                    "手当が意外に違う"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "トヨタ年収982万円の実態、住宅・家族手当はいくら？【ショート】",
+                  "thumb_copy": [
+                    "982万円の実態",
+                    "住宅・家族手当"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は年収だけじゃない！トヨタ社員を支える手当の中身【ショート】",
+                  "thumb_copy": [
+                    "年収だけじゃない",
+                    "手当の中身を公開"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.02849361015415173
+            },
+            {
+              "video_id": "D0YEi-jN2Fc",
+              "channel_id": "company-facts",
+              "created_at": 1788230499,
+              "updated_at": 1788271301,
+              "status": "pending",
+              "current_title": "📉大谷翔平の年収が実は約160億円？スポンサー契約の裏側📉【ショート】",
+              "current_ctr": 0.026905829596412557,
+              "channel_avg_ctr": 0.03561701269268966,
+              "suggested_titles": [
+                "大谷翔平の年収はなぜ約160億円？スポンサー契約の仕組み【ショート】",
+                "大谷翔平は年収約160億円？スポンサー収入の驚くべき内訳【ショート】",
+                "実は年俸より桁違い？大谷翔平を支えるスポンサー契約の裏側【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "大谷翔平の年収はなぜ約160億円？スポンサー契約の仕組み【ショート】",
+                  "thumb_copy": [
+                    "年収約160億円？",
+                    "企業が殺到する理由"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "大谷翔平は年収約160億円？スポンサー収入の驚くべき内訳【ショート】",
+                  "thumb_copy": [
+                    "約160億円の衝撃",
+                    "スポンサー収入の真相"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は年俸より桁違い？大谷翔平を支えるスポンサー契約の裏側【ショート】",
+                  "thumb_copy": [
+                    "年俸だけじゃない",
+                    "桁違いの契約力"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.02849361015415173
+            },
+            {
+              "video_id": "HAgvILwPOmk",
+              "channel_id": "company-facts",
+              "created_at": 1788230502,
+              "updated_at": 1788271304,
+              "status": "pending",
+              "current_title": "📈退職金の本当は？3社で最大2,000万円差の実態【ショート】",
+              "current_ctr": 0.008771929824561403,
+              "channel_avg_ctr": 0.03561701269268966,
+              "suggested_titles": [
+                "退職金はなぜ会社で2,000万円も差がつく？転職前の重要チェック",
+                "退職金は3社比較で最大2,000万円差！転職前に見るべき制度",
+                "実は年収より重要？退職金で2,000万円差がつく会社選びの実態"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "退職金はなぜ会社で2,000万円も差がつく？転職前の重要チェック",
+                  "thumb_copy": [
+                    "その会社、退職金は？",
+                    "最大2,000万円差"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "退職金は3社比較で最大2,000万円差！転職前に見るべき制度",
+                  "thumb_copy": [
+                    "3社で徹底比較",
+                    "差額2,000万円"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は年収より重要？退職金で2,000万円差がつく会社選びの実態",
+                  "thumb_copy": [
+                    "年収だけでは危険",
+                    "退職金で大差"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.02849361015415173
+            },
+            {
+              "video_id": "BuCRdC0KOnE",
+              "channel_id": "company-facts",
+              "created_at": 1788230505,
+              "updated_at": 1788271308,
+              "status": "pending",
+              "current_title": "💸不二家の半額ケーキ、実は年収549万円とどう関係する？【ショート】",
+              "current_ctr": 0.015151515151515152,
+              "channel_avg_ctr": 0.03561701269268966,
+              "suggested_titles": [
+                "不二家の半額ケーキ、なぜ出せる？年収549万円の裏側【ショート】",
+                "年収549万円の不二家社員、半額ケーキは誰が支える？【ショート】",
+                "実は福利厚生だけじゃない！不二家の半額ケーキの真相【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "不二家の半額ケーキ、なぜ出せる？年収549万円の裏側【ショート】",
+                  "thumb_copy": [
+                    "半額ケーキの裏側",
+                    "年収549万円と関係？"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "年収549万円の不二家社員、半額ケーキは誰が支える？【ショート】",
+                  "thumb_copy": [
+                    "年収549万円の会社",
+                    "半額セールの仕組み"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は福利厚生だけじゃない！不二家の半額ケーキの真相【ショート】",
+                  "thumb_copy": [
+                    "半額の秘密はここ",
+                    "福利厚生だけじゃない"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.02849361015415173
+            },
+            {
+              "video_id": "JHLcCe5vBdk",
+              "channel_id": "company-facts",
+              "created_at": 1788230508,
+              "updated_at": 1788271311,
+              "status": "pending",
+              "current_title": "💰Uber Eats配達員、本当は時給2,000円超えもある収入の実態【ショート】",
+              "current_ctr": 0.019114688128772636,
+              "channel_avg_ctr": 0.03561701269268966,
+              "suggested_titles": [
+                "Uber Eats配達員の時給2,000円超えは本当か？収入と福利厚生の実態【ショート】",
+                "時給2,000円超えも？Uber Eats配達員の年収・福利厚生を3分解説【ショート】",
+                "実は会社員級の収入も…Uber Eats配達員の年収と福利厚生の実態【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "Uber Eats配達員の時給2,000円超えは本当か？収入と福利厚生の実態【ショート】",
+                  "thumb_copy": [
+                    "時給2,000円超え？",
+                    "配達員の現実"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "時給2,000円超えも？Uber Eats配達員の年収・福利厚生を3分解説【ショート】",
+                  "thumb_copy": [
+                    "時給2,000円超も",
+                    "年収のリアル"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は会社員級の収入も…Uber Eats配達員の年収と福利厚生の実態【ショート】",
+                  "thumb_copy": [
+                    "会社員級の収入？",
+                    "知らない福利厚生"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.02849361015415173
+            },
+            {
+              "video_id": "Wk0xyqjjnNQ",
+              "channel_id": "company-facts",
+              "created_at": 1788230511,
+              "updated_at": 1788271315,
+              "status": "pending",
+              "current_title": "😱ソニーグループの年収がヤバい 1118万円とDualSenseの仕事【ショート】",
+              "current_ctr": 0.021505376344086023,
+              "channel_avg_ctr": 0.03561701269268966,
+              "suggested_titles": [
+                "なぜソニーの平均年収は1118万円？DualSense開発の仕事とは【ショート】",
+                "年収1118万円のソニー、DualSenseが変えたゲーム業界の仕事【ショート】",
+                "実はコントローラーが主役？ソニーDualSenseが生んだ新しい仕事【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "なぜソニーの平均年収は1118万円？DualSense開発の仕事とは【ショート】",
+                  "thumb_copy": [
+                    "平均年収1118万円",
+                    "コントローラーの裏側"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "年収1118万円のソニー、DualSenseが変えたゲーム業界の仕事【ショート】",
+                  "thumb_copy": [
+                    "1118万円の現実",
+                    "DualSenseの仕事"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実はコントローラーが主役？ソニーDualSenseが生んだ新しい仕事【ショート】",
+                  "thumb_copy": [
+                    "主役はコントローラー",
+                    "ゲーム業界が激変"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.02849361015415173
+            },
+            {
+              "video_id": "Nbcteb-cPGk",
+              "channel_id": "company-facts",
+              "created_at": 1788230514,
+              "updated_at": 1788271318,
+              "status": "pending",
+              "current_title": "セブン銀行の年間休日130日、平均年収も数字で解説【ショート】",
+              "current_ctr": 0.013793103448275862,
+              "channel_avg_ctr": 0.03561701269268966,
+              "suggested_titles": [
+                "セブン銀行はなぜ年間休日130日？年収・育休も解説【ショート】",
+                "年間休日130日！セブン銀行の平均年収と育休取得率を解説【ショート】",
+                "実は休みが多い？セブン銀行の年収・休日・育休の実態【ショート】"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "セブン銀行はなぜ年間休日130日？年収・育休も解説【ショート】",
+                  "thumb_copy": [
+                    "休日130日って",
+                    "働きやすいの？"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "年間休日130日！セブン銀行の平均年収と育休取得率を解説【ショート】",
+                  "thumb_copy": [
+                    "年間休日130日",
+                    "年収はいくら？"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は休みが多い？セブン銀行の年収・休日・育休の実態【ショート】",
+                  "thumb_copy": [
+                    "意外な福利厚生",
+                    "銀行の働き方"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.02849361015415173
+            }
+          ],
+          "ran_at": 1788271318
+        },
+        "series_engine": {
+          "channel_id": "company-facts",
+          "channel_avg": 1611.0,
+          "threshold": 1.5,
+          "viral_count": 2,
+          "suggestions_added": 0,
+          "items": [
+            {
+              "video_id": "gJ3uyNIsLIg",
+              "title": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+              "views": 5201,
+              "channel_avg": 1611.0,
+              "viral_ratio": 3.2284295468653013,
+              "published_at": "2026-08-20T08:00:13Z",
+              "skipped": "already has suggestions"
+            },
+            {
+              "video_id": "5qcaDLeE9pA",
+              "title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+              "views": 3576,
+              "channel_avg": 1611.0,
+              "viral_ratio": 2.2197392923649906,
+              "published_at": "2026-08-26T08:00:18Z",
+              "skipped": "already has suggestions"
+            }
+          ],
+          "ran_at": 1788271318
+        },
+        "comment_demand": {
+          "ok": true,
+          "channel_id": "company-facts",
+          "started_at": 1788271318,
+          "finished_at": 1788271318,
+          "request_comments_considered": 0,
+          "demands_saved": 0,
+          "auto_queued": 0,
+          "items": []
+        }
+      }
+    }
+  },
+  "pdca_report": {
+    "ok": true,
+    "data": {
+      "channel_id": "company-facts",
+      "days": 30,
+      "generated_at": "2026-09-01T14:01:59.003624Z",
+      "window": {
+        "start": "2026-08-02T14:01:59.003624Z",
+        "end": "2026-09-01T14:01:59.003624Z"
+      },
+      "channel_stats": {},
+      "subscribers": {
+        "current_total": null,
+        "gained_in_window": 27,
+        "lost_in_window": 2,
+        "net_in_window": 25,
+        "daily": [
+          {
+            "date": "2026-08-02",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-03",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-04",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-05",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-06",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-07",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-08",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-09",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-10",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-11",
+            "gained": 1,
+            "lost": 0,
+            "net": 1,
+            "cumulative_net": 1
+          },
+          {
+            "date": "2026-08-12",
+            "gained": 2,
+            "lost": 0,
+            "net": 2,
+            "cumulative_net": 3
+          },
+          {
+            "date": "2026-08-13",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 3
+          },
+          {
+            "date": "2026-08-14",
+            "gained": 2,
+            "lost": 0,
+            "net": 2,
+            "cumulative_net": 5
+          },
+          {
+            "date": "2026-08-15",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 5
+          },
+          {
+            "date": "2026-08-16",
+            "gained": 1,
+            "lost": 0,
+            "net": 1,
+            "cumulative_net": 6
+          },
+          {
+            "date": "2026-08-17",
+            "gained": 1,
+            "lost": 0,
+            "net": 1,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-18",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-19",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 7
+          },
+          {
+            "date": "2026-08-20",
+            "gained": 2,
+            "lost": 0,
+            "net": 2,
+            "cumulative_net": 9
+          },
+          {
+            "date": "2026-08-21",
+            "gained": 2,
+            "lost": 0,
+            "net": 2,
+            "cumulative_net": 11
+          },
+          {
+            "date": "2026-08-22",
+            "gained": 1,
+            "lost": 0,
+            "net": 1,
+            "cumulative_net": 12
+          },
+          {
+            "date": "2026-08-23",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 12
+          },
+          {
+            "date": "2026-08-24",
+            "gained": 1,
+            "lost": 0,
+            "net": 1,
+            "cumulative_net": 13
+          },
+          {
+            "date": "2026-08-25",
+            "gained": 1,
+            "lost": 1,
+            "net": 0,
+            "cumulative_net": 13
+          },
+          {
+            "date": "2026-08-26",
+            "gained": 7,
+            "lost": 1,
+            "net": 6,
+            "cumulative_net": 19
+          },
+          {
+            "date": "2026-08-27",
+            "gained": 4,
+            "lost": 0,
+            "net": 4,
+            "cumulative_net": 23
+          },
+          {
+            "date": "2026-08-28",
+            "gained": 2,
+            "lost": 0,
+            "net": 2,
+            "cumulative_net": 25
+          },
+          {
+            "date": "2026-08-29",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 25
+          }
+        ],
+        "source": "analytics_cache (要 /api/analytics/sync)"
+      },
+      "subscriber_sources": {
+        "total_gained": 0,
+        "total_lost": 0,
+        "total_net": 0,
+        "shorts": {
+          "gained": 0,
+          "lost": 0,
+          "net": 0,
+          "share_of_gained": 0.0,
+          "subs_per_1000_views": 0.0
+        },
+        "main": {
+          "gained": 0,
+          "lost": 0,
+          "net": 0,
+          "share_of_gained": 0.0,
+          "subs_per_1000_views": 0.0
+        },
+        "unknown": {
+          "gained": 0,
+          "lost": 0,
+          "note": null
+        },
+        "source": "none",
+        "error": "youtube analytics 未連携 or googleapiclient 未導入"
+      },
+      "recommendation": {
+        "decision": "more_data_needed",
+        "primary_subscriber_source": null,
+        "headline": "登録者ソースが取得できないため判断保留",
+        "reasoning": "YouTube Analytics API から subscribersGained を取得できませんでした。 OAuth 連携と yt-analytics.readonly スコープを確認してください。",
+        "warnings": [
+          "登録者ソースデータなし — 再生数ベースの判断は危険"
+        ],
+        "metrics_used": {}
+      },
+      "shorts": {
+        "count": 0,
+        "total_views": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "avg_views": 0.0,
+        "avg_likes": 0.0,
+        "avg_comments": 0.0,
+        "avg_like_rate": 0.0,
+        "median_views": 0,
+        "top_videos": []
+      },
+      "main": {
+        "count": 0,
+        "total_views": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "avg_views": 0.0,
+        "avg_likes": 0.0,
+        "avg_comments": 0.0,
+        "avg_like_rate": 0.0,
+        "median_views": 0,
+        "top_videos": []
+      },
+      "comparison": {
+        "avg_views_short_vs_main": null,
+        "avg_likes_short_vs_main": null,
+        "avg_like_rate_short_vs_main": null
+      },
+      "cost": {
+        "total_cost_usd": 3.7844,
+        "events": 154,
+        "by_purpose": {
+          "theme_suggest": 0.0217,
+          "scenario_claude": 1.398,
+          "scenario_gpt": 0.2173,
+          "blind_compare": 0.0215,
+          "section_1": 0.2567,
+          "section_2": 0.1583,
+          "section_3": 0.0727,
+          "section_4": 0.2076,
+          "section_5": 0.4824,
+          "section_6": 0.076,
+          "section_7": 0.7839,
+          "trend_relevance": 0.0266,
+          "ab_test_generate": 0.0617
+        },
+        "by_model": {
+          "gpt-4.1-mini": 0.0041,
+          "gpt-4.1": 0.228,
+          "gpt-5.6-luna": 0.0215,
+          "gpt-5.6-terra": 2.1829,
+          "claude-sonnet-4-6": 1.3212,
+          "gpt-4o-mini": 0.0266
+        },
+        "videos_in_window": 0,
+        "cost_per_video_usd": 0.0,
+        "cost_per_short_usd": 0.0,
+        "cost_per_main_usd": 0.0,
+        "note": "ショート/メインは同一パイプライン由来で個別計上はないため、総コスト ÷ 期間内本数で均等按分しています。"
+      },
+      "totals": {
+        "published_in_db": 27,
+        "fetched_from_youtube": 0,
+        "in_window": 0
+      },
+      "errors": {
+        "youtube_fetch": "youtube oauth 未連携 or googleapiclient 未導入",
+        "subscriber_sources": "youtube analytics 未連携 or googleapiclient 未導入"
+      }
+    }
+  },
+  "posting": {
+    "ok": true,
+    "data": {
+      "channel_id": "company-facts",
+      "current_schedule": {
+        "days_of_week": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "hour": 17,
+        "minute": 0,
+        "enabled": true
+      },
+      "recommendation": {
+        "recommended": {
+          "day_of_week": 4,
+          "hour": 17,
+          "minute": 0,
+          "avg_views": 3648.5,
+          "sample_size": 2,
+          "boost_percent": 177.5
+        },
+        "alternatives": [
+          {
+            "day_of_week": 3,
+            "hour": 17,
+            "minute": 0,
+            "avg_views": 1792.0,
+            "sample_size": 2,
+            "boost_percent": 36.3
+          },
+          {
+            "day_of_week": 5,
+            "hour": 17,
+            "minute": 0,
+            "avg_views": 1362.5,
+            "sample_size": 2,
+            "boost_percent": 3.6
+          }
+        ],
+        "channel_avg_views": 1315.0,
+        "data_days": 30,
+        "note": null
+      },
+      "heatmap": {
+        "grid": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1673.0,
+            0.0,
+            0.0,
+            0.0,
+            1118.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            967.0,
+            1012.0,
+            1192.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1665.0,
+            0.0,
+            30.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1792.0,
+            0.0,
+            0.0,
+            1057.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1954.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3648.5,
+            0.0,
+            953.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            860.6666666666666,
+            0.0,
+            0.0,
+            1362.5,
+            0.0,
+            1121.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1225.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            972.0,
+            0.0,
+            0.0,
+            0.0,
+            1068.0
+          ]
+        ],
+        "samples": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            2,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "channel_avg_views": 1315.0,
+        "channel_total_videos": 27,
+        "data_days": 30
+      },
+      "computed_at": 1788271319
+    }
+  },
+  "series": {
+    "ok": true,
+    "data": {
+      "channel_id": "company-facts",
+      "count": 6,
+      "items": [
+        {
+          "id": "ce2a359792",
+          "channel_id": "company-facts",
+          "original_video_id": "gJ3uyNIsLIg",
+          "original_title": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+          "original_views": 5201,
+          "channel_avg_views": 1611,
+          "viral_ratio": 3.2284295468653013,
+          "series_type": "deep_dive",
+          "suggested_title": "「💰アジア大会の裏方企業、年収932万円の実態💰」に隠された本当の理由を掘り下げる",
+          "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+          "rationale": "深堀り型はリテンションが高い",
+          "created_at": 1788230514,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        },
+        {
+          "id": "d7de8ec35d",
+          "channel_id": "company-facts",
+          "original_video_id": "gJ3uyNIsLIg",
+          "original_title": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+          "original_views": 5201,
+          "channel_avg_views": 1611,
+          "viral_ratio": 3.2284295468653013,
+          "series_type": "contrast",
+          "suggested_title": "「💰アジア大会の裏方企業、年収932万円の実態💰」とは逆のパターンを比較してみた",
+          "suggested_angle": "対比で違いを際立たせる構成",
+          "rationale": "比較型は CTR が安定して取りやすい",
+          "created_at": 1788230514,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        },
+        {
+          "id": "9ae21d051b",
+          "channel_id": "company-facts",
+          "original_video_id": "gJ3uyNIsLIg",
+          "original_title": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+          "original_views": 5201,
+          "channel_avg_views": 1611,
+          "viral_ratio": 3.2284295468653013,
+          "series_type": "application",
+          "suggested_title": "「💰アジア大会の裏方企業、年収932万円の実態💰」の知識を日常で使う方法",
+          "suggested_angle": "応用先を具体例で紹介",
+          "rationale": "応用型は再生時間が伸びやすい",
+          "created_at": 1788230514,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        },
+        {
+          "id": "8c3b53d7cb",
+          "channel_id": "company-facts",
+          "original_video_id": "5qcaDLeE9pA",
+          "original_title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+          "original_views": 3576,
+          "channel_avg_views": 1611,
+          "viral_ratio": 2.2197392923649906,
+          "series_type": "deep_dive",
+          "suggested_title": "「💸トヨタ自動車の年収982万円、実は手当の中身が違う」に隠された本当の理由を掘り下げる",
+          "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+          "rationale": "深堀り型はリテンションが高い",
+          "created_at": 1788230514,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        },
+        {
+          "id": "f75df0dce7",
+          "channel_id": "company-facts",
+          "original_video_id": "5qcaDLeE9pA",
+          "original_title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+          "original_views": 3576,
+          "channel_avg_views": 1611,
+          "viral_ratio": 2.2197392923649906,
+          "series_type": "contrast",
+          "suggested_title": "「💸トヨタ自動車の年収982万円、実は手当の中身が違う」とは逆のパターンを比較してみた",
+          "suggested_angle": "対比で違いを際立たせる構成",
+          "rationale": "比較型は CTR が安定して取りやすい",
+          "created_at": 1788230514,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        },
+        {
+          "id": "5fbe619cb1",
+          "channel_id": "company-facts",
+          "original_video_id": "5qcaDLeE9pA",
+          "original_title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+          "original_views": 3576,
+          "channel_avg_views": 1611,
+          "viral_ratio": 2.2197392923649906,
+          "series_type": "application",
+          "suggested_title": "「💸トヨタ自動車の年収982万円、実は手当の中身が違う」の知識を日常で使う方法",
+          "suggested_angle": "応用先を具体例で紹介",
+          "rationale": "応用型は再生時間が伸びやすい",
+          "created_at": 1788230514,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        }
+      ],
+      "grouped": [
+        {
+          "original_video_id": "gJ3uyNIsLIg",
+          "original_title": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+          "original_views": 5201,
+          "viral_ratio": 3.2284295468653013,
+          "suggestions": [
+            {
+              "id": "ce2a359792",
+              "channel_id": "company-facts",
+              "original_video_id": "gJ3uyNIsLIg",
+              "original_title": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+              "original_views": 5201,
+              "channel_avg_views": 1611,
+              "viral_ratio": 3.2284295468653013,
+              "series_type": "deep_dive",
+              "suggested_title": "「💰アジア大会の裏方企業、年収932万円の実態💰」に隠された本当の理由を掘り下げる",
+              "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+              "rationale": "深堀り型はリテンションが高い",
+              "created_at": 1788230514,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            },
+            {
+              "id": "d7de8ec35d",
+              "channel_id": "company-facts",
+              "original_video_id": "gJ3uyNIsLIg",
+              "original_title": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+              "original_views": 5201,
+              "channel_avg_views": 1611,
+              "viral_ratio": 3.2284295468653013,
+              "series_type": "contrast",
+              "suggested_title": "「💰アジア大会の裏方企業、年収932万円の実態💰」とは逆のパターンを比較してみた",
+              "suggested_angle": "対比で違いを際立たせる構成",
+              "rationale": "比較型は CTR が安定して取りやすい",
+              "created_at": 1788230514,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            },
+            {
+              "id": "9ae21d051b",
+              "channel_id": "company-facts",
+              "original_video_id": "gJ3uyNIsLIg",
+              "original_title": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+              "original_views": 5201,
+              "channel_avg_views": 1611,
+              "viral_ratio": 3.2284295468653013,
+              "series_type": "application",
+              "suggested_title": "「💰アジア大会の裏方企業、年収932万円の実態💰」の知識を日常で使う方法",
+              "suggested_angle": "応用先を具体例で紹介",
+              "rationale": "応用型は再生時間が伸びやすい",
+              "created_at": 1788230514,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            }
+          ]
+        },
+        {
+          "original_video_id": "5qcaDLeE9pA",
+          "original_title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+          "original_views": 3576,
+          "viral_ratio": 2.2197392923649906,
+          "suggestions": [
+            {
+              "id": "8c3b53d7cb",
+              "channel_id": "company-facts",
+              "original_video_id": "5qcaDLeE9pA",
+              "original_title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+              "original_views": 3576,
+              "channel_avg_views": 1611,
+              "viral_ratio": 2.2197392923649906,
+              "series_type": "deep_dive",
+              "suggested_title": "「💸トヨタ自動車の年収982万円、実は手当の中身が違う」に隠された本当の理由を掘り下げる",
+              "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+              "rationale": "深堀り型はリテンションが高い",
+              "created_at": 1788230514,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            },
+            {
+              "id": "f75df0dce7",
+              "channel_id": "company-facts",
+              "original_video_id": "5qcaDLeE9pA",
+              "original_title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+              "original_views": 3576,
+              "channel_avg_views": 1611,
+              "viral_ratio": 2.2197392923649906,
+              "series_type": "contrast",
+              "suggested_title": "「💸トヨタ自動車の年収982万円、実は手当の中身が違う」とは逆のパターンを比較してみた",
+              "suggested_angle": "対比で違いを際立たせる構成",
+              "rationale": "比較型は CTR が安定して取りやすい",
+              "created_at": 1788230514,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            },
+            {
+              "id": "5fbe619cb1",
+              "channel_id": "company-facts",
+              "original_video_id": "5qcaDLeE9pA",
+              "original_title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+              "original_views": 3576,
+              "channel_avg_views": 1611,
+              "viral_ratio": 2.2197392923649906,
+              "series_type": "application",
+              "suggested_title": "「💸トヨタ自動車の年収982万円、実は手当の中身が違う」の知識を日常で使う方法",
+              "suggested_angle": "応用先を具体例で紹介",
+              "rationale": "応用型は再生時間が伸びやすい",
+              "created_at": 1788230514,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            }
+          ]
+        }
+      ],
+      "viral_videos": [
+        {
+          "video_id": "gJ3uyNIsLIg",
+          "title": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+          "views": 5201,
+          "channel_avg": 1611.0,
+          "viral_ratio": 3.2284295468653013,
+          "published_at": "2026-08-20T08:00:13Z"
+        },
+        {
+          "video_id": "5qcaDLeE9pA",
+          "title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+          "views": 3576,
+          "channel_avg": 1611.0,
+          "viral_ratio": 2.2197392923649906,
+          "published_at": "2026-08-26T08:00:18Z"
+        }
+      ],
+      "channel_avg_views": 1611.0,
+      "summary": {
+        "channel_id": "company-facts",
+        "channel_avg_views": 1611.0,
+        "total_suggestions": 6,
+        "by_status": {
+          "pending": 6
+        },
+        "by_type": {
+          "deep_dive": 2,
+          "contrast": 2,
+          "application": 2
+        },
+        "approved_with_video": 0
+      }
+    }
+  },
+  "genre_breakdown": [
+    {
+      "genre": "その他",
+      "count": 27,
+      "total_views": 35505,
+      "total_likes": 142,
+      "titles": [
+        "Netflixの月額1,590円、本当はどこに消える？【ショート】",
+        "📉サイバーエージェントの年収773万円、平均年齢33歳の本当は【ショート】",
+        "📈動画作りに課金しすぎた男、年収480万円で転職できる？【ショート】"
+      ],
+      "avg_views": 1315.0
+    }
+  ],
+  "view_trends": [
+    {
+      "video_id": "gJ3uyNIsLIg",
+      "title": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 5201,
+          "likes": 10
+        }
+      ],
+      "latest_views": 5201,
+      "first_views": 5201,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "5qcaDLeE9pA",
+      "title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 3576,
+          "likes": 8
+        }
+      ],
+      "latest_views": 3576,
+      "first_views": 3576,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "D0YEi-jN2Fc",
+      "title": "📉大谷翔平の年収が実は約160億円？スポンサー契約の裏側📉【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 2096,
+          "likes": 21
+        }
+      ],
+      "latest_views": 2096,
+      "first_views": 2096,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "dPkVQBSCzXs",
+      "title": "三菱商事の平均年収2033万円、その中身 #shorts #企業分析 #年収 #転職",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1954,
+          "likes": 16
+        }
+      ],
+      "latest_views": 1954,
+      "first_views": 1954,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "HAgvILwPOmk",
+      "title": "📈退職金の本当は？3社で最大2,000万円差の実態【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1934,
+          "likes": 2
+        }
+      ],
+      "latest_views": 1934,
+      "first_views": 1934,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "pvTfS3Tish4",
+      "title": "ヤマト運輸ボーナス年100万円超？#ヤマト運輸の年収が意外すぎた 現場職ボーナス年100万円超の実態 #shorts #企業分析 #年収 #転職",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1673,
+          "likes": 10
+        }
+      ],
+      "latest_views": 1673,
+      "first_views": 1673,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "BuCRdC0KOnE",
+      "title": "💸不二家の半額ケーキ、実は年収549万円とどう関係する？【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1665,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1665,
+      "first_views": 1665,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "U1nCZnLxQyM",
+      "title": "📉花王の男性育休100%、年収はいくら？実は数字の裏も見る【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1459,
+          "likes": 2
+        }
+      ],
+      "latest_views": 1459,
+      "first_views": 1459,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "JHLcCe5vBdk",
+      "title": "💰Uber Eats配達員、本当は時給2,000円超えもある収入の実態【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1389,
+          "likes": 9
+        }
+      ],
+      "latest_views": 1389,
+      "first_views": 1389,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "Hsx8j3WyoZE",
+      "title": "💸資生堂の年収729万円、実はダイバーシティの裏で何がある？【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1322,
+          "likes": 4
+        }
+      ],
+      "latest_views": 1322,
+      "first_views": 1322,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "wIcx5yV-3QQ",
+      "title": "📉JR東日本の年収810万円、本当は休日124日とのバランス💸【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1303,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1303,
+      "first_views": 1303,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "Wk0xyqjjnNQ",
+      "title": "😱ソニーグループの年収がヤバい 1118万円とDualSenseの仕事【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1266,
+          "likes": 6
+        }
+      ],
+      "latest_views": 1266,
+      "first_views": 1266,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "pdiI6XvYoyk",
+      "title": "💰味の素の有給取得率、実は76.8% 年収と残業の本当は？💸【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1254,
+          "likes": 4
+        }
+      ],
+      "latest_views": 1254,
+      "first_views": 1254,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "k98ZRiRmSmo",
+      "title": "リクルートの賞与は年間150万円超？平均年齢35歳の待遇を検証【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1192,
+          "likes": 2
+        }
+      ],
+      "latest_views": 1192,
+      "first_views": 1192,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "ZcH38vqusdQ",
+      "title": "オリエンタルランドの年収536万円、離職率2.1%の実態【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1121,
+          "likes": 10
+        }
+      ],
+      "latest_views": 1121,
+      "first_views": 1121,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "Kq4Xx43QCiE",
+      "title": "カゴメの年間休日125日、有給取得率74.6%はホワイト？【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1068,
+          "likes": 10
+        }
+      ],
+      "latest_views": 1068,
+      "first_views": 1068,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "QkYPUi8JeYU",
+      "title": "💸GUの年収、実はポケモンコラボで上がるのか？平均959万円の裏側💸【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1061,
+          "likes": 5
+        }
+      ],
+      "latest_views": 1061,
+      "first_views": 1061,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "5lV_sxOcp3Y",
+      "title": "サントリーの平均年収1,000万円超？残業19.5時間の実態【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1057,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1057,
+      "first_views": 1057,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "Nbcteb-cPGk",
+      "title": "セブン銀行の年間休日130日、平均年収も数字で解説【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1012,
+          "likes": 2
+        }
+      ],
+      "latest_views": 1012,
+      "first_views": 1012,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "sKK8tlnT61w",
+      "title": "無印良品の正社員待遇、年間休日123日の実態【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 972,
+          "likes": 0
+        }
+      ],
+      "latest_views": 972,
+      "first_views": 972,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "61oVDTaZUGo",
+      "title": "ソニーの平均年収1118万円、年間休日125日の実態【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 953,
+          "likes": 9
+        }
+      ],
+      "latest_views": 953,
+      "first_views": 953,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "_F-orq4tyjg",
+      "title": "📈動画作りに課金しすぎた男、年収480万円で転職できる？【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 914,
+          "likes": 3
+        }
+      ],
+      "latest_views": 914,
+      "first_views": 914,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "w8KmKhjvyNs",
+      "title": "伊藤忠商事の年収850万円がヤバい、離職率1%台の実態【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 30,
+          "likes": 0
+        }
+      ],
+      "latest_views": 30,
+      "first_views": 30,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "zq6I-VSqt5k",
+      "title": "⚠️三菱重工の年収がヤバい 平均965万円、その裏側【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 25,
+          "likes": 0
+        }
+      ],
+      "latest_views": 25,
+      "first_views": 25,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "nHi44PRzdes",
+      "title": "ASUSの年収が本当は気になる ゲーミング売上が約4,800億円【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 8,
+          "likes": 0
+        }
+      ],
+      "latest_views": 8,
+      "first_views": 8,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "cRl1YYULK94",
+      "title": "📉サイバーエージェントの年収773万円、平均年齢33歳の本当は【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "g8k4eqeaqrU",
+      "title": "Netflixの月額1,590円、本当はどこに消える？【ショート】",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 0,
+          "likes": 0
+        }
+      ],
+      "latest_views": 0,
+      "first_views": 0,
+      "delta": 0,
+      "snapshots": 1
+    }
+  ],
+  "dup_check": [],
+  "success_patterns": {
+    "ok": true,
+    "sample_size": {
+      "total": 27,
+      "success": 1,
+      "others": 26
+    },
+    "has_gpt_insights": false,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "retention_insights": {
+    "ok": true,
+    "has_gpt_insights": false,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "act": {
+    "approved": [
+      {
+        "from": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+        "from_views": 5201,
+        "viral_ratio": 3.2284295468653013,
+        "series_type": "deep_dive",
+        "title": "「💰アジア大会の裏方企業、年収932万円の実態💰」に隠された本当の理由を掘り下げる"
+      },
+      {
+        "from": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】",
+        "from_views": 5201,
+        "viral_ratio": 3.2284295468653013,
+        "series_type": "contrast",
+        "title": "「💰アジア大会の裏方企業、年収932万円の実態💰」とは逆のパターンを比較してみた"
+      }
+    ],
+    "skipped_low_view": []
+  }
+}

@@ -1,0 +1,505 @@
+{
+  "title": "なぜコップの水に3分で気泡？",
+  "theme": {
+    "title": "なぜコップの水は放置すると気泡がつくのか",
+    "angle": "溶けていた空気が出てくる温度と時間"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？ 水の気泡、外から入った泡ではないんです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日のコップにあった！ まだ答えが気になるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "水道水1杯には、目に見えない空気がかなり混ざっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "炭酸のない水にも、透明な空気の席があるみたいだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも温度が変わると席が足りず、壁に集まるんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次の一杯で泡の場所を見てみて。高評価も押して、身の回りのモノの科学シリーズを毎日投稿中、1万人目標なのでチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？ あなたが水を注いで3分ほど置いたコップの内側に、小さな気泡が並ぶことがありますよね。炭酸水ではないのに増えるあの泡は、どこから来たのでしょうか。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！ 冷たい水を入れた透明なコップの底と壁に、米粒よりずっと小さい泡がたくさん付いていたよ。洗い残しと思ったけれど、時間と一緒に増えたんだ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。血液には酸素や二酸化炭素が溶けていて、体温や圧力の変化で出入りします。コップの泡は、その仕組みを目で見られる小さな入口なんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "水の中に空気が隠れているってこと？ 透明な水のままなのに、あとから丸い泡として現れるなら、最初からコップの中には見えない変化が準備されていたのかな。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "水は見た目より空気を抱え込めます。水道水が配管の中を通る間、特に冷たい条件では、空気の成分が水の粒の間に散らばったまま保たれやすい状態になるんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ じゃあ冷蔵庫から出した水を室温の机に置くと、温度が変わるぶん泡も見つけやすいのかな。でも、まだ何が泡を始めさせるのか分からないね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで大切なのは、泡が急に無から生まれるわけではないことです。水が温まると、抱え込める空気の量が少し減り、散らばった空気が外へ出やすい条件へ変わっていきます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、冬に冷たい飲み物を机へ置くと、しばらくして壁に泡が増えることがあるよ。だけど水の真ん中ではなく、なぜ側面ばかりに集まるの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その答えに入る前に、まだ一つ足りないものがあります。空気が水から出たがっても、最初の一粒が丸い泡になる場所が必要です。コップの壁は、その最初の場所になりやすいんです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、壁が泡の出発駅みたいになるの？ 新品に見えるガラスでも、肉眼では分からない細かな違いがあるなら、同じ水で泡の模様が変わる理由も説明できそうだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえるなら、満員電車で人が出口へ集まるのと同じなんです。水の中で散らばった空気は、温度変化で外へ向かい、壁のごく小さな傷やくぼみを出口として使いやすくなります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 泡は壁にくっついているのではなく、壁の小さな地形を借りて集まり始めるんだね。コップの内側は、空気にとって小さな駅だと思えば分かりやすいよ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "この最初の足場は核生成と呼ばれます。難しい言葉ですが、要するに泡が最初に腰かける席のことです。洗浄後に残る薄い油分、繊維、目に見えない傷も、その席になりえます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "核生成って、泡専用の椅子みたいな意味なんだね。水の真ん中には椅子が少ないから、空気は出たくても集まりにくい。だから壁に粒が並ぶように見えるわけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そしてここからが本題です。コップの気泡の正体は、主に水へ先に溶けていた窒素と酸素です。蛇口から新しく入り込んだ空気だけではなく、時間をかけて姿を変えた空気なんです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、泡の大部分は最初から水の中にいたの？ 注いだ瞬間には透明でも、5分後や10分後に見えるのは、隠れていた空気が少しずつ同じ場所へ集まったからなんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "気体の溶け方はヘンリーの法則で考えられます。これは圧力が高いほど気体が液体へ入りやすい、という目安です。ふたを開けた炭酸飲料で泡が増える現象も、同じ考え方の仲間です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "炭酸飲料と水道水は、見た目の泡が似ていても中身は同じではないんだね。炭酸飲料は二酸化炭素が多く、水道水では空気の成分がゆっくり見える、という違いがあるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "20℃の水1リットルには、条件によって酸素がおよそ9ミリグラム程度溶けます。数字だけなら小さく見えますが、空気が壁に集まって一か所で光を反射すると、目にははっきり泡として映ります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "9ミリグラムでも見える形になるのが面白いね。砂を机に広げれば目立たなくても、角へ集めるとすぐ見つかるのと同じで、空気も集まり方で存在感が変わるんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "水温が上がるほど、酸素や窒素のような気体は水に溶けにくくなります。だから冷たい水を20℃前後の部屋へ置くと、温度差のぶんだけ、空気は水の外へ移る方向になりやすいです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ夏の室内と冬の室内では、同じ冷たい水でも泡が出る早さが違うかもしれないね。水と部屋の温度差が大きいほど、空気にとっては席替えが急になる感じかな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、何分で泡が出るかを一つの数字で決めることはできません。水温、室温、注ぐ勢い、コップの傷、空気の量が重なるため、3分の日もあれば30分近くかかる日もあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "毎回同じ時計で測れないのは、失敗ではなく条件が違うからなんだね。今日と昨日の泡の数を比べるなら、水の量やコップの種類をそろえないと、温度だけの違いが見えにくそうだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "魚が暑い日に水面近くへ集まりやすい理由にも、この性質が関係します。温かい水は酸素を抱えにくくなるためです。あなたのコップの小さな泡は、水槽や池の変化を縮めたような景色でもあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 台所のコップと池の魚が、同じ温度の性質でつながるんだね。小さな泡を見ているだけで、水の中の生き物が感じる変化まで少し想像できるよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "蛇口から出した直後の水が白っぽく見えることもありますが、これは配管や蛇口で圧力が変わり、非常に細かい空気の泡が水中に散っている場合があります。壁の泡とは見え方が少し違います。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、白っぽい水も同じ泡の仲間なの？ コップの中で下から透明になっていくことがあるけれど、それは細かい泡が上へ抜けている途中だと考えると、動きまで見えてくるね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "見分ける目安の一つは、白さが下から上へ消えるかどうかです。空気の泡は浮かぶので下側から抜けやすく、砂やさびのような粒なら重力で下へ沈む動きを見せることがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "水の変化を30秒ほど眺めるだけで、上へ消えるのか下へ沈むのか確かめられるんだね。観察は特別な道具がなくても、動く方向を見るだけで一歩深くなるんだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ガラス、陶器、プラスチックでは、泡の付き方が違って見えることがあります。ただし素材名だけで結果は決まりません。使った回数や洗い方による表面の違いも大きく、ここは一つに断定できません。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "科学でも、ガラスだから必ずこうなるとは言い切れないんだね。見た目には同じコップでも、泡にとっては小さな谷や坂が違う地形みたいに見えているのかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "家で確かめるなら、同じ形の透明なコップを2個使ってください。片方には冷蔵庫の水、もう片方には室温の水を同じ200ミリリットル入れ、5分ごとに側面を見比べるのがおすすめです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "200ミリリットルずつなら、量の違いを減らせるね。冷たい水だけ泡が増えるのか、室温の水も少しずつ変わるのか、スマホの時計で5分ごとに見ると比べやすそうだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そのとき、コップを強く振らないでください。振ると水面から新しい空気を巻き込み、温度で出てきた泡と混ざってしまいます。静かに注ぐことが、温度と時間だけを見る近道になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、実験中に水を振るのは、並べた積み木を手で崩してから形を比べるようなものなんだね。余計な泡を増やさず、最初の条件をそろえる意味がよく分かったよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "もう一つ比べるなら、よく乾かしたコップと洗いたてのコップを用意してみてください。結果は家庭ごとに変わりますが、表面の水滴や微細な汚れが、泡の最初の席に影響する場合があります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ水、同じ200ミリリットルでも、コップの表面だけで泡の列が変わるかもしれないんだね。目には見えない違いが、数分後には見える模様として現れるのが面白いよ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "19世紀の科学者ウィリアム・ヘンリーは、1803年に気体が液体へ溶ける量と圧力の関係をまとめました。200年以上前の考え方が、今あなたの机にあるコップの泡にも静かに働いています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "1803年の発見が、朝の一杯の水にも続いているんだ！ たとえるなら、昔の地図を開いたら、今日コップの壁に現れる泡の道順まで読めたような気持ちになるね。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "泡が付いた水が、すぐ飲めなくなるわけではありません。通常の水道水で温度変化により見える小さな気泡は、溶けていた空気が出ていることが多く、泡だけで異常とは決められません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "それを聞いて安心したよ。でも色やにおいがいつもと違う、水が濁っている、数時間たっても変化が大きいなど別の様子があるなら、泡の話とは分けて確認したほうがよさそうだね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "水道水の見え方で迷う場合は、自治体の水道窓口や公式案内を確認してください。身近な現象を楽しんで観察することと、水質を見た目だけで自己判断しすぎないことは、どちらも大切です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "小さな泡は日常科学の入口であって、何でも同じと決めつける印ではないんだね。普段の水との違いを比べながら見ると、観察も安全な判断も、少しずつ上手になれそうだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここまでをつなぐと、放置したコップの気泡は、冷たいときに水へ溶けていた空気が、温度と時間によって出やすくなり、壁の小さな足場から見える形になったものです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、新しい泡が突然生まれたのではなく、最初から水にいた空気が居場所を変えただけなんだね。3分後のコップは、見えない空気の引っ越しを映していたんだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜、水を注いだらすぐ飲む前に30秒だけ側面を見てみてください。底、壁、水面のどこから変わるかを見るだけで、毎日の一杯が温度と時間を読む小さな実験になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "30秒なら朝の支度中でもできそうだね。泡が増える速さや場所を見てから飲めば、ただの水だった一杯が、空気の動きを教えてくれる観察ノートみたいに感じられそうだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなるのはなぜかを見ていきます。ベッドで何度も経験しやすいあの動きには、脳が眠りへ切り替わる数秒間の小さな連携があるんです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それもよくある！ 眠りかけに足が急に動いて目が覚めることがあるから、次は自分の体で起きる変化を思い出しながら、一緒に理由を確かめてみたいよ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の気泡が面白かったら、次の一杯で冷たい水と室温の水を5分だけ見比べてみてください。身近な違いを見つけたら、高評価で教えてもらえるとうれしいです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "身近な不思議を毎日1本ずつ一緒に解き明かしています。身の回りのモノの科学シリーズも見ながら、1万人目標の応援にチャンネル登録よろしくね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "水に泡？",
+      "3分の謎"
+    ],
+    "hook_caption": "水の中の空気",
+    "subtitle": "放置したコップで起きる小さな変化",
+    "tagline": "温度と時間が空気を動かします"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 85,
+      "issues": [
+        {
+          "type": "visual_dependent",
+          "line": 6,
+          "text": "次の一杯で泡の場所を見てみて。高評価も押して、身の回りのモノの科学シリーズを毎日",
+          "pattern": "見て[みてくれ]",
+          "reason": "「見て」だけでは何を見るか不明（テロップでは）"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "次の一杯で泡の場所を見てみて。高評価も押して、身の回りのモノの科学シリーズを毎日",
+          "reason": "1行68字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "反直感的な事実"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.529,
+      "similar_to": "なぜ食中毒でお腹が痛む？3時間後の体内反応",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 17,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜコップの水に3分で気泡？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "短すぎ(14字 < 18)(-12)"
+    ]
+  }
+}

@@ -1,0 +1,575 @@
+{
+  "title": "SCP-610 感染218名は何時間で消えた？",
+  "theme": {
+    "title": "SCP-610、感染者218名の最終記録",
+    "angle": "収容違反後の感染拡大を、発見から封鎖までの経過時間と生存率に絞って一体の異常存在として深掘りする"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書、感染した218名の記録だけが消えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、消えたって何だよ。まだ答えが出てないのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-610の封鎖開始から、連絡が残ったのは17時間だけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "隔離扉の内側では、感染者が自分の部屋の名前を呼び続けた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、怖いって。記録はここで途切れている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "218名の続きは収容違反ファイルシリーズにある。高評価を残せ。1万人目標で毎日投稿中、応援よろしく。チャンネル登録を。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実はあなたの部屋の扉を叩く声から始まる。SCP-610の収容違反では、感染確認218名のうち少なくとも32名が、隔離区画ではなく自室の前で最初の異常を報告した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、自室の前って地下の隔離区画じゃないのか。夜中に自分の名前を呼ばれたら、誰かが助けを求めていると思って扉を開けるぞ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録に残る最初の声は午前2時13分。閉鎖済みの区画Bから、地上棟にいる整備員の私的な呼び名を呼んだという。勤務表にない呼び名だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "整備員は扉を開けなかった。それでも午前2時19分、自分の端末へ「帰ってきて」という短い文を8通受信した。送信元は既に失踪した警備員のIDだった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "失踪した警備員のIDが動いていたのか。端末を閉じても、名前を知っているものがこっちへ寄ってくるなら、どこに逃げても安全じゃない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、ここからが本題だ。財団が恐れたのは扉の向こうの形ではない。17時間で218名の名簿が埋まり、生存者欄だけが空白になった経過だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-610は通称「憎悪する肉塊」と呼ばれる異常存在だ。財団は感染症の名称ではなく、接触した人間と区域の境目を崩す収容対象として記録している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "発見地点は北部の封鎖区域。その内部で何年続いていたかは[REDACTED]だが、当該事案ではサイト内へ持ち込まれた痕跡だけが時刻順に残された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "何年も前からあったなら、財団は危険を知っていたはずだろ。どうして警備員や救護班まで、最初の数時間で巻き込まれたんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前2時13分、区画Bの監視装置が映像異常を記録した。画面には警備員1名と、壁際に伸びる不自然な影が映り、次の更新では警備員だけが消えていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "映像の更新間隔は30秒。その30秒の間に扉は閉じたまま、警報も鳴っていない。財団でも、まだ説明できていない空白が最初の感染経路になった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前2時28分、巡回員2名が応答しない警備員を捜索した。2名は区画Bへ入ったが、無線には「三人いる」とだけ残し、7分後に通信が乱れた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最初は警備員1人、捜索員2人で合計3人か。無線の「三人いる」は人数の確認にも聞こえる。でもその後が消えるのはまずい。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前2時41分、最初の救護班6名が投入された。彼らの目的は救出だったが、到着直後の記録には「負傷者の数が合わない」と書かれている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "救護班は担架を3台使用した。しかし回収記録にある患者欄は4つだった。誰が担架に乗ったのか、誰が押していたのか、その担当欄は後から消されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "担架3台で患者が4人。数え間違いならまだいい。でも報告書から担当欄だけ消えているなら、数えた人まで残っていないのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前3時05分、感染確認数は12名となった。財団はこの時点で医療隔離を指示したが、隔離室へ入れた職員の位置情報が、全員同じ区画Bを示し始めた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "位置情報の誤作動として処理された時間は18分。その間に、地上棟で待機していた通信担当4名が、自室の扉を内側から施錠したという記録が残る。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前3時23分、通信担当の一人が「廊下に私がいる」と送信した。彼は室内にいるのに、扉の外から同じ声でID番号を読み上げられたと報告した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分の声が外でIDを読むなら、無線の相手も本物か分からない。救護班を呼ぶほど、扉の外のものに場所を教えることになるじゃないか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前3時48分、管理官は最初の封鎖を命じた。区画Bの気密扉の内側には23名が残り、扉の外側には救護班と警備班を含む41名が配置されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "封鎖扉は厚さ40センチの合金製だが、財団は壁の強度を安全の根拠にしなかった。内線から聞こえる呼び声が、扉の外の職員名を正確に呼んだからだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "呼び声は午前3時52分から11回記録された。内容は[REDACTED]だが、受信した4名は通話後、同じ机を指で17回叩き、扉番号を唱えたと記録されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "音を聞いただけで、同じ番号を繰り返すのか。学校のチャイムみたいに毎日聞く音でもないのに、頭の中へ残されたなら怖すぎる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前4時27分、区画Bは完全閉鎖された。ここで財団は事案を「収容違反」から「区域喪失」へ変更した。内部を救う命令が、外部を守る命令へ反転した瞬間だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "区域喪失は、内部の職員や設備を回収対象から外す扱いだ。ゲームで仲間がいる部屋を封鎖するのではない。その部屋ごと、最初から存在しなかったことにする処置だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "23名を残したまま切り捨てたのか。助ける方法がなかったのか、それとも助けに入る人間まで218名の中へ加わると分かっていたのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前5時00分、感染確認数は47名。内訳には警備員8名、救護班11名、通信担当6名、整備員9名が含まれるが、接触した順番だけは一致していない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "同時刻、地上棟の職員が自室で3回のノックを聞いた。彼の居室は区画Bから480メートル離れていたが、監視員は廊下に人影を確認できなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "480メートル離れた自室まで、ノックだけが来るのか。扉を閉めていても、外側にいる誰かが帰宅を待っているみたいで、聞かなきゃよかった。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "職員は扉を開けなかった。ただし午前5時12分、彼は内側から「今行く」と返事をした。以後、彼の位置情報は閉鎖済みの区画B中央で固定された。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この記録が示すのは、移動した証拠ではない。部屋から出ていない人物が、閉鎖扉の向こうにいると端末だけが報告した事実だ。財団でも理由は不明だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前6時41分、感染確認数は89名へ増えた。封鎖線は2本目まで後退し、通路標識と案内板は黒布で覆われた。区画番号を読ませないための措置だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "番号を見るだけでも危険なら、地図を暗記している職員はどうなる。避難経路を知っているほど、自分から閉鎖区画へ戻る可能性があるのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "地図を覚えていた職員7名は、避難中に同じ通路を選んだ。その通路は地下へ続く階段ではなく、地上棟の倉庫前だったが、全員が「入口だ」と証言した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午前7時00分、財団はサイト内の私物ロッカーを封印した。理由は、空のロッカー扉が不規則に開閉し、内部から職員の私的な呼び名が聞こえたためだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この時点で最も衝撃的な記録が残る。第二救護班12名の班長は、午前9時16分の通信で「扉の向こうには誰もいない。だが、こちらに218名いる」と報告した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "午前9時の時点で218名だって？ 公式の最終数より10時間も早い。班長が未来を見たのか、それとも最初から全員が数えられていたのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "公式の感染確認数が218名へ達したのは午後7時00分。班長の数字と一致するため、財団は感染の増加ではなく「名簿への回収」が起きた可能性を記録した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-610は人を増やすのではない。すでにサイトにいた人間を、ある時刻から感染者として数え直させる。しかし証拠の大半は[DATA EXPUNGED]だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午後0時00分、サイト全体へ退避命令が出た。食堂には食べかけの食事が31皿残り、医務室には使用済みでない担架が6台並び、どちらにも人はいなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人が消えた後の食堂だけ残るのか。昼休みの教室から全員が一斉にいなくなって、机の上の物だけが置かれる光景みたいで、近づけない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午後1時43分、封鎖線の外で最初の感染者が確認された。彼に外傷はなく、自分の名札を裏返したまま、区画Bの扉番号を紙に37回書いていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "彼は区画Bに入室していない。入退室記録、監視映像、勤務表のすべてがそう示す。それでも彼の靴底からは、封鎖区域のものと一致する黒い粉が検出された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午後3時00分、感染確認数は156名。生存扱い61名、死亡確認0名、行方不明95名。この三つの欄が並んだことで、現場指揮官は次の命令を13分間出せなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "死亡が0名なのに95名が消えている。生きていると書くしかないのに、助けを求める声が本人かも確かめられないなら、救助は罠になる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午後4時08分、最終封鎖が発令された。発端から13時間55分後、財団は地下3層を切り離し、地上棟の職員もサイト外へ出さない処置を取った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "封鎖は感染を閉じ込めるためだけの壁ではない。外へ逃げた何かが、職員の住所や私物を通じて戻るのを防ぐための壁だったという記録が残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午後5時22分、避難者32名が同時に同じ方向へ歩き始めた。地下階段は施錠されていたが、全員が扉の前で止まり、誰も命令を受けていなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "32名が同じ扉の前に集まるなら、個別隔離も意味がない。自分の家へ帰る道だと思わされて、閉鎖区画の前まで歩かされるのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "避難者は扉を開けなかった。その代わり31名が自宅住所を口にし、最後の1名だけが区画Bの所在地を答えた。本人は住所を知らないはずだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "午後7時00分、感染確認数は218名となった。生存者欄は空白、死亡確認欄も空白、職員一覧だけが「回収不能」と書き換えられ、時刻の記入は止まった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "生存率は算出不能。財団は0パーセントとも100パーセントとも記さなかった。生きている者が誰か、死んだ者が誰か、218名の中で判定できなかったためだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "全員が消えたのに死んだとは言えないなら、今もどこかで呼んでいる可能性が残る。自分の名前を聞いても、絶対に返事をしてはいけない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "翌日、封鎖壁の外から7回のノックが記録された。応答は禁止されていたが、担当者は余白に「中にいるのは私のはずだ」と書き、その後の署名を残していない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "担当者の氏名は218名の名簿にない。それでも彼の居室は封鎖後に空となり、机の上には裏返された名札と、区画Bの番号を書いた紙が17枚残った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録はここで途切れている。218名が封鎖壁の内側にいたのか、名簿の外側にいたのか、財団の保管庫にも確かな答えはない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が職員へ残した警告は短い。閉じた扉の外から自分の名前が聞こえても返事をするな。扉番号、地図、私的な呼び名を声に出すな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "返事をしなければ助かるのか、それとも返事をしなかった記録だけが残っていないのか。どちらにしても、夜の扉の前で立ち止まりたくない。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "見慣れた通路やロッカーが地下区画の入口に見えた場合、確認のため近づくな。単独で確認へ向かった職員9名は、全員が「回収不能」へ移された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-3008、出口のない店内で避難者の名簿が何日ごとに欠けたかを扱う。今回の218名と同じく、数字だけが生存を語らない記録だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-610の218名は、死亡者でも生存者でもない。封鎖後も名簿に残り、帰還先だけを失った職員たちとして、財団の最深部に保管されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書が届いたなら高評価を残せ。収容違反ファイルシリーズには、封鎖壁の向こうで途切れた職員記録が、まだ他にも保管されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中だ。次のファイルが開く前にチャンネル登録を。見かけても、決して近づくな。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "218名感染",
+      "封鎖まで何時間"
+    ],
+    "hook_caption": "218名の最終記録",
+    "subtitle": "収容違反後、隔離区域で何が起きたのか",
+    "tagline": "生存者の欄だけが、最後まで埋まらなかった。"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "218名の続きは収容違反ファイルシリーズにある。高評価を残せ。1万人目標で毎日投",
+          "reason": "1行59字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 27,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 2,
+        "emotional_impact": 5,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.507,
+      "similar_to": "SCP-1987 なぜ24時間ごとに被害が増える？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 24,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-610 感染218名は何時間で消えた？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "title_duplicate": {
+    "resolved": false,
+    "rejected_title": "SCP-610 感染218名は何時間で消えた？",
+    "matched": "SCP-610「這い回る髄」— 感染確認者389名、隔離区域からの生存帰還者は2名",
+    "score": 1.0
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['？'](+12)"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1788185090,
+    "generated_at": 1788271366,
     "sample_size": {
       "total": 186,
       "success": 47,
@@ -211,7 +211,7 @@
   },
   "scp-lab": {
     "channel_id": "scp-lab",
-    "generated_at": 1788185353,
+    "generated_at": 1788271484,
     "sample_size": {
       "total": 183,
       "success": 13,
@@ -372,7 +372,7 @@
   },
   "pokemon-lab": {
     "channel_id": "pokemon-lab",
-    "generated_at": 1788185196,
+    "generated_at": 1788271413,
     "sample_size": {
       "total": 40,
       "success": 5,
@@ -472,7 +472,7 @@
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
-    "generated_at": 1788185466,
+    "generated_at": 1788271531,
     "sample_size": {
       "total": 39,
       "success": 3,
@@ -556,7 +556,7 @@
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
-    "generated_at": 1788184957,
+    "generated_at": 1788271248,
     "sample_size": {
       "total": 35,
       "success": 3,
@@ -640,22 +640,22 @@
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1788185112,
+    "generated_at": 1788271387,
     "sample_size": {
-      "total": 6,
+      "total": 7,
       "success": 2,
-      "others": 4
+      "others": 5
     },
     "metrics": {
       "success_avg": {
-        "views": 1156.0,
+        "views": 1153.5,
         "ctr": 0.0625,
-        "avg_view_percentage": 31.39
+        "avg_view_percentage": 31.45
       },
       "others_avg": {
-        "views": 469.2,
-        "ctr": 0.0208,
-        "avg_view_percentage": 25.69
+        "views": 376.0,
+        "ctr": 0.0167,
+        "avg_view_percentage": 20.46
       }
     },
     "title_features": {
@@ -671,15 +671,16 @@
         ]
       },
       "others": {
-        "count": 4,
-        "avg_length": 45.2,
-        "median_length": 46,
-        "question_ratio": 0.25,
-        "number_ratio": 0.5,
+        "count": 5,
+        "avg_length": 41.2,
+        "median_length": 44,
+        "question_ratio": 0.2,
+        "number_ratio": 0.4,
         "samples": [
           "架空論文ファイル：エレベーターで見上げる人は、降りる階を間違えにくい #shorts #架空論文 #フィクション",
           "架空論文ファイル #4：あなたのポケモンは服で進化する — 1,248人が選んだ新形態【ショート】",
           "大谷翔平の打撃フォームが宇宙人に似る本当の理由とは？【ショート】",
+          "キャラ表示で味が変わる #shorts #架空論文",
           "架空論文ファイル #5：あなたの操作は脳波で読まれる — 2,184人の記録【ショート】"
         ]
       }
@@ -693,16 +694,244 @@
       {
         "video_id": "EfcFbUmvXb4",
         "title": "架空論文ファイル #3：PS5 Proは反応を0.18秒縮める — 768人を28日追跡した結果【ショート】",
-        "views": 1163,
+        "views": 1165,
         "ctr": 0.0,
-        "avg_view_percentage": 29.880000000000003
+        "avg_view_percentage": 30.03
       },
       {
         "video_id": "b4o3CXX6J9w",
         "title": "架空論文ファイル：満席の映画館では観客の瞬きが同期する #shorts #架空論文 #フィクション",
-        "views": 1149,
+        "views": 1142,
         "ctr": 0.125,
-        "avg_view_percentage": 32.91
+        "avg_view_percentage": 32.86
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "akashic-librarian": {
+    "channel_id": "akashic-librarian",
+    "generated_at": 1788271272,
+    "sample_size": {
+      "total": 7,
+      "success": 2,
+      "others": 5
+    },
+    "metrics": {
+      "success_avg": {
+        "views": 1160.0,
+        "ctr": 0.0,
+        "avg_view_percentage": 52.44
+      },
+      "others_avg": {
+        "views": 44.6,
+        "ctr": 0.0,
+        "avg_view_percentage": 19.61
+      }
+    },
+    "title_features": {
+      "success": {
+        "count": 2,
+        "avg_length": 40.0,
+        "median_length": 40,
+        "question_ratio": 1.0,
+        "number_ratio": 0.5,
+        "samples": [
+          "なぜ600年も読めない？存在しない植物だけが描かれた手稿 #shorts #都市伝説 #オカルト",
+          "なぜ大谷翔平だけ？実力の前に働く「外見」の本当の理由【ショート】"
+        ]
+      },
+      "others": {
+        "count": 5,
+        "avg_length": 33.4,
+        "median_length": 35,
+        "question_ratio": 0.6,
+        "number_ratio": 0.2,
+        "samples": [
+          "なぜ最初の数秒だけ？第一印象が実は書き換わらない本当の理由【ショート】",
+          "なぜ人は失敗した選択だけを「正しかった」と記録し直すのか #shorts #社会学 #人間心理",
+          "最初に見た9万8000円だけ、なぜか基準になる本当の理由【ショート】",
+          "三十八人が見ていて、誰も動かなかった夜 #shorts #社会学 #人間心理",
+          "Deleted video"
+        ]
+      }
+    },
+    "posting_time": {
+      "top_hour_utc": 4,
+      "top_weekday": 5,
+      "n": 2
+    },
+    "success_videos": [
+      {
+        "video_id": "GGTZFCQxoUw",
+        "title": "なぜ600年も読めない？存在しない植物だけが描かれた手稿 #shorts #都市伝説 #オカルト",
+        "views": 1172,
+        "ctr": 0.0,
+        "avg_view_percentage": 63.629999999999995
+      },
+      {
+        "video_id": "jj615Fk5oyI",
+        "title": "なぜ大谷翔平だけ？実力の前に働く「外見」の本当の理由【ショート】",
+        "views": 1148,
+        "ctr": 0.0,
+        "avg_view_percentage": 41.26
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "clip-animal": {
+    "channel_id": "clip-animal",
+    "skipped": true,
+    "reason": "no video_metrics in store — run /api/analytics/sync first",
+    "generated_at": 1788271276
+  },
+  "clip-fukada": {
+    "channel_id": "clip-fukada",
+    "skipped": true,
+    "reason": "no video_metrics in store — run /api/analytics/sync first",
+    "generated_at": 1788271277
+  },
+  "clip-kaneko": {
+    "channel_id": "clip-kaneko",
+    "skipped": true,
+    "reason": "no video_metrics in store — run /api/analytics/sync first",
+    "generated_at": 1788271278
+  },
+  "clip-lab": {
+    "channel_id": "clip-lab",
+    "generated_at": 1788271290,
+    "sample_size": {
+      "total": 7,
+      "success": 2,
+      "others": 5
+    },
+    "metrics": {
+      "success_avg": {
+        "views": 11420.0,
+        "ctr": 0.0238,
+        "avg_view_percentage": 79.99
+      },
+      "others_avg": {
+        "views": 1223.0,
+        "ctr": 0.0061,
+        "avg_view_percentage": 48.85
+      }
+    },
+    "title_features": {
+      "success": {
+        "count": 2,
+        "avg_length": 28.5,
+        "median_length": 28,
+        "question_ratio": 0.0,
+        "number_ratio": 0.0,
+        "samples": [
+          "SNSをやる人は天才じゃない #shorts #切り抜き",
+          "バーコードが通らない偽物だった #shorts #切り抜き"
+        ]
+      },
+      "others": {
+        "count": 5,
+        "avg_length": 32.4,
+        "median_length": 33,
+        "question_ratio": 0.0,
+        "number_ratio": 0.4,
+        "samples": [
+          "実はこの現象、ベルヌーイの定理が関係してる #shorts #切り抜き",
+          "恋愛の緊張は 男友達で克服できる #shorts #切り抜き",
+          "30年持つなら買った方がいい #shorts #切り抜き",
+          "若者の資産を増やすには 収入を増やすしかない #shorts #切り抜き",
+          "残業が多くても 年収50万円増ならアリ #shorts #切り抜き"
+        ]
+      }
+    },
+    "posting_time": {
+      "top_hour_utc": 3,
+      "top_weekday": 5,
+      "n": 2
+    },
+    "success_videos": [
+      {
+        "video_id": "0mIQakyhYJE",
+        "title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+        "views": 12707,
+        "ctr": 0.047619047619047616,
+        "avg_view_percentage": 89.87
+      },
+      {
+        "video_id": "Qc4yaKIac08",
+        "title": "バーコードが通らない偽物だった #shorts #切り抜き",
+        "views": 10133,
+        "ctr": 0.0,
+        "avg_view_percentage": 70.11
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "company-facts": {
+    "channel_id": "company-facts",
+    "generated_at": 1788271319,
+    "sample_size": {
+      "total": 27,
+      "success": 1,
+      "others": 26
+    },
+    "metrics": {
+      "success_avg": {
+        "views": 1954.0,
+        "ctr": 0.051,
+        "avg_view_percentage": 73.82
+      },
+      "others_avg": {
+        "views": 1290.4,
+        "ctr": 0.0279,
+        "avg_view_percentage": 49.68
+      }
+    },
+    "title_features": {
+      "success": {
+        "count": 1,
+        "avg_length": 42.0,
+        "median_length": 42,
+        "question_ratio": 0.0,
+        "number_ratio": 1.0,
+        "samples": [
+          "三菱商事の平均年収2033万円、その中身 #shorts #企業分析 #年収 #転職"
+        ]
+      },
+      "others": {
+        "count": 26,
+        "avg_length": 36.1,
+        "median_length": 35,
+        "question_ratio": 0.5,
+        "number_ratio": 1.0,
+        "samples": [
+          "Netflixの月額1,590円、本当はどこに消える？【ショート】",
+          "📉サイバーエージェントの年収773万円、平均年齢33歳の本当は【ショート】",
+          "📈動画作りに課金しすぎた男、年収480万円で転職できる？【ショート】",
+          "💸GUの年収、実はポケモンコラボで上がるのか？平均959万円の裏側💸【ショート】",
+          "📉花王の男性育休100%、年収はいくら？実は数字の裏も見る【ショート】",
+          "📉JR東日本の年収810万円、本当は休日124日とのバランス💸【ショート】",
+          "💰味の素の有給取得率、実は76.8% 年収と残業の本当は？💸【ショート】",
+          "📉大谷翔平の年収が実は約160億円？スポンサー契約の裏側📉【ショート】",
+          "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+          "💸不二家の半額ケーキ、実は年収549万円とどう関係する？【ショート】"
+        ]
+      }
+    },
+    "posting_time": {
+      "top_hour_utc": 3,
+      "top_weekday": 3,
+      "n": 1
+    },
+    "success_videos": [
+      {
+        "video_id": "dPkVQBSCzXs",
+        "title": "三菱商事の平均年収2033万円、その中身 #shorts #企業分析 #年収 #転職",
+        "views": 1954,
+        "ctr": 0.050980392156862744,
+        "avg_view_percentage": 73.82
       }
     ],
     "gpt_insights": null,

@@ -1,0 +1,1361 @@
+{
+  "channel_id": "clip-lab",
+  "channel_name": "ゆっくり解説 切り抜きラボ",
+  "sync": {
+    "ok": true,
+    "data": {
+      "channel_id": "clip-lab",
+      "overview": {
+        "channel_id": "clip-lab",
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "videos": {
+        "channel_id": "clip-lab",
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "reach": {
+        "ok": false,
+        "error": "OAuth 未連携または googleapiclient 未導入"
+      },
+      "retention": [],
+      "synced_at": 1788271279,
+      "comments": [],
+      "pdca": {
+        "scenario_evaluation": {
+          "channel_id": "clip-lab",
+          "evaluated": 0,
+          "skipped": 7,
+          "results": [
+            {
+              "video_id": "-RJilEKS3L0",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "若者の資産を増やすには 収入を増やすしかない #shorts #切り抜き"
+            },
+            {
+              "video_id": "Qc4yaKIac08",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "バーコードが通らない偽物だった #shorts #切り抜き"
+            },
+            {
+              "video_id": "lphYMgBxfiE",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "残業が多くても 年収50万円増ならアリ #shorts #切り抜き"
+            },
+            {
+              "video_id": "7VUTa2hO1Y0",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "30年持つなら買った方がいい #shorts #切り抜き"
+            },
+            {
+              "video_id": "NNPwzUx74OM",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "恋愛の緊張は 男友達で克服できる #shorts #切り抜き"
+            },
+            {
+              "video_id": "0mIQakyhYJE",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "SNSをやる人は天才じゃない #shorts #切り抜き"
+            },
+            {
+              "video_id": "bdXtNQESwzc",
+              "skipped": true,
+              "reason": "no_scenario_match",
+              "video_title": "実はこの現象、ベルヌーイの定理が関係してる #shorts #切り抜き"
+            }
+          ],
+          "ran_at": 1788271279
+        },
+        "ab_reconciliation": {
+          "channel_id": "clip-lab",
+          "reconciled": 1,
+          "items": [
+            {
+              "test_id": "abt_20260901_024233_0e8cce",
+              "status": "reconciled",
+              "matched_video_id": "NNPwzUx74OM",
+              "pattern_type": "question",
+              "predicted_score": 0.0,
+              "actual_ctr": 0.030303030303030304,
+              "actual_impressions": 33,
+              "age_days": 10.344143865706018
+            }
+          ],
+          "ran_at": 1788271279
+        },
+        "improvement_queue": {
+          "channel_id": "clip-lab",
+          "channel_avg_ctr": 0.03896103896103896,
+          "threshold_ctr": 0.03116883116883117,
+          "threshold_percent": 80.0,
+          "candidates_found": 1,
+          "queued": [
+            {
+              "video_id": "NNPwzUx74OM",
+              "channel_id": "clip-lab",
+              "created_at": 1788230553,
+              "updated_at": 1788271290,
+              "status": "pending",
+              "current_title": "恋愛の緊張は 男友達で克服できる #shorts #切り抜き",
+              "current_ctr": 0.030303030303030304,
+              "channel_avg_ctr": 0.03896103896103896,
+              "suggested_titles": [
+                "なぜ恋愛の緊張は男友達がいると克服しやすいのか？ #shorts",
+                "恋愛の緊張を3段階でほどく、男友達との会話練習 #shorts",
+                "実は恋愛上手への近道は、男友達との自然な会話だった #shorts"
+              ],
+              "suggested_catchcopies": [
+                {
+                  "pattern": "question",
+                  "title": "なぜ恋愛の緊張は男友達がいると克服しやすいのか？ #shorts",
+                  "thumb_copy": [
+                    "恋愛で固まる人へ",
+                    "男友達が効く理由"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "number",
+                  "title": "恋愛の緊張を3段階でほどく、男友達との会話練習 #shorts",
+                  "thumb_copy": [
+                    "緊張をほどく3段階",
+                    "男友達で会話練習"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                },
+                {
+                  "pattern": "surprise",
+                  "title": "実は恋愛上手への近道は、男友達との自然な会話だった #shorts",
+                  "thumb_copy": [
+                    "恋愛上手の近道",
+                    "男友達との会話"
+                  ],
+                  "score": 0.0,
+                  "comment": ""
+                }
+              ],
+              "predicted_improvement": null,
+              "threshold_ctr": 0.03116883116883117
+            }
+          ],
+          "ran_at": 1788271290
+        },
+        "series_engine": {
+          "channel_id": "clip-lab",
+          "channel_avg": 4136.428571428572,
+          "threshold": 1.5,
+          "viral_count": 2,
+          "suggestions_added": 0,
+          "items": [
+            {
+              "video_id": "0mIQakyhYJE",
+              "title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+              "views": 12707,
+              "channel_avg": 4136.428571428572,
+              "viral_ratio": 3.0719737523743738,
+              "published_at": "2026-08-22T03:45:43Z",
+              "skipped": "already has suggestions"
+            },
+            {
+              "video_id": "Qc4yaKIac08",
+              "title": "バーコードが通らない偽物だった #shorts #切り抜き",
+              "views": 10133,
+              "channel_avg": 4136.428571428572,
+              "viral_ratio": 2.4496978069418063,
+              "published_at": "2026-08-24T06:03:59Z",
+              "skipped": "already has suggestions"
+            }
+          ],
+          "ran_at": 1788271290
+        },
+        "comment_demand": {
+          "ok": true,
+          "channel_id": "clip-lab",
+          "started_at": 1788271290,
+          "finished_at": 1788271290,
+          "request_comments_considered": 0,
+          "demands_saved": 0,
+          "auto_queued": 0,
+          "items": []
+        }
+      }
+    }
+  },
+  "pdca_report": {
+    "ok": true,
+    "data": {
+      "channel_id": "clip-lab",
+      "days": 30,
+      "generated_at": "2026-09-01T14:01:30.097470Z",
+      "window": {
+        "start": "2026-08-02T14:01:30.097470Z",
+        "end": "2026-09-01T14:01:30.097470Z"
+      },
+      "channel_stats": {},
+      "subscribers": {
+        "current_total": null,
+        "gained_in_window": 1,
+        "lost_in_window": 0,
+        "net_in_window": 1,
+        "daily": [
+          {
+            "date": "2026-08-02",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-03",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-04",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-05",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-06",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-07",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-08",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-09",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-10",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-11",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-12",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-13",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-14",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-15",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-16",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-17",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-18",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-19",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-20",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-21",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-22",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-23",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 0
+          },
+          {
+            "date": "2026-08-24",
+            "gained": 1,
+            "lost": 0,
+            "net": 1,
+            "cumulative_net": 1
+          },
+          {
+            "date": "2026-08-25",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 1
+          },
+          {
+            "date": "2026-08-26",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 1
+          },
+          {
+            "date": "2026-08-27",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 1
+          },
+          {
+            "date": "2026-08-28",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 1
+          },
+          {
+            "date": "2026-08-29",
+            "gained": 0,
+            "lost": 0,
+            "net": 0,
+            "cumulative_net": 1
+          }
+        ],
+        "source": "analytics_cache (要 /api/analytics/sync)"
+      },
+      "subscriber_sources": {
+        "total_gained": 0,
+        "total_lost": 0,
+        "total_net": 0,
+        "shorts": {
+          "gained": 0,
+          "lost": 0,
+          "net": 0,
+          "share_of_gained": 0.0,
+          "subs_per_1000_views": 0.0
+        },
+        "main": {
+          "gained": 0,
+          "lost": 0,
+          "net": 0,
+          "share_of_gained": 0.0,
+          "subs_per_1000_views": 0.0
+        },
+        "unknown": {
+          "gained": 0,
+          "lost": 0,
+          "note": null
+        },
+        "source": "none",
+        "error": "youtube analytics 未連携 or googleapiclient 未導入"
+      },
+      "recommendation": {
+        "decision": "more_data_needed",
+        "primary_subscriber_source": null,
+        "headline": "登録者ソースが取得できないため判断保留",
+        "reasoning": "YouTube Analytics API から subscribersGained を取得できませんでした。 OAuth 連携と yt-analytics.readonly スコープを確認してください。",
+        "warnings": [
+          "登録者ソースデータなし — 再生数ベースの判断は危険"
+        ],
+        "metrics_used": {}
+      },
+      "shorts": {
+        "count": 0,
+        "total_views": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "avg_views": 0.0,
+        "avg_likes": 0.0,
+        "avg_comments": 0.0,
+        "avg_like_rate": 0.0,
+        "median_views": 0,
+        "top_videos": []
+      },
+      "main": {
+        "count": 0,
+        "total_views": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "avg_views": 0.0,
+        "avg_likes": 0.0,
+        "avg_comments": 0.0,
+        "avg_like_rate": 0.0,
+        "median_views": 0,
+        "top_videos": []
+      },
+      "comparison": {
+        "avg_views_short_vs_main": null,
+        "avg_likes_short_vs_main": null,
+        "avg_like_rate_short_vs_main": null
+      },
+      "cost": {
+        "total_cost_usd": 0.0427,
+        "events": 39,
+        "by_purpose": {
+          "clip_segment_hook": 0.0087,
+          "trend_relevance": 0.0265,
+          "ab_test_generate": 0.0075
+        },
+        "by_model": {
+          "claude-sonnet-4-6": 0.0087,
+          "gpt-4o-mini": 0.0265,
+          "gpt-5.6-terra": 0.0075
+        },
+        "videos_in_window": 0,
+        "cost_per_video_usd": 0.0,
+        "cost_per_short_usd": 0.0,
+        "cost_per_main_usd": 0.0,
+        "note": "ショート/メインは同一パイプライン由来で個別計上はないため、総コスト ÷ 期間内本数で均等按分しています。"
+      },
+      "totals": {
+        "published_in_db": 7,
+        "fetched_from_youtube": 0,
+        "in_window": 0
+      },
+      "errors": {
+        "youtube_fetch": "youtube oauth 未連携 or googleapiclient 未導入",
+        "subscriber_sources": "youtube analytics 未連携 or googleapiclient 未導入"
+      }
+    }
+  },
+  "posting": {
+    "ok": true,
+    "data": {
+      "channel_id": "clip-lab",
+      "current_schedule": {
+        "days_of_week": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "hour": 17,
+        "minute": 45,
+        "enabled": true
+      },
+      "recommendation": {
+        "recommended": {
+          "day_of_week": 6,
+          "hour": 12,
+          "minute": 0,
+          "avg_views": 12707.0,
+          "sample_size": 1,
+          "boost_percent": 207.2
+        },
+        "alternatives": [
+          {
+            "day_of_week": 1,
+            "hour": 15,
+            "minute": 0,
+            "avg_views": 10133.0,
+            "sample_size": 1,
+            "boost_percent": 145.0
+          },
+          {
+            "day_of_week": 5,
+            "hour": 19,
+            "minute": 0,
+            "avg_views": 1273.0,
+            "sample_size": 1,
+            "boost_percent": -69.2
+          }
+        ],
+        "channel_avg_views": 4136.428571428572,
+        "data_days": 30,
+        "note": null
+      },
+      "heatmap": {
+        "grid": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1208.0,
+            0.0,
+            1183.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            10133.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1199.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1273.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            12707.0,
+            0.0,
+            1252.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "samples": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "channel_avg_views": 4136.428571428572,
+        "channel_total_videos": 7,
+        "data_days": 30
+      },
+      "computed_at": 1788271290
+    }
+  },
+  "series": {
+    "ok": true,
+    "data": {
+      "channel_id": "clip-lab",
+      "count": 6,
+      "items": [
+        {
+          "id": "4a6e4b114e",
+          "channel_id": "clip-lab",
+          "original_video_id": "0mIQakyhYJE",
+          "original_title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+          "original_views": 12707,
+          "channel_avg_views": 4136,
+          "viral_ratio": 3.0719737523743738,
+          "series_type": "deep_dive",
+          "suggested_title": "「SNSをやる人は天才じゃない」に隠された本当の理由を掘り下げる",
+          "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+          "rationale": "深堀り型はリテンションが高い",
+          "created_at": 1788230553,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        },
+        {
+          "id": "d685bf482f",
+          "channel_id": "clip-lab",
+          "original_video_id": "0mIQakyhYJE",
+          "original_title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+          "original_views": 12707,
+          "channel_avg_views": 4136,
+          "viral_ratio": 3.0719737523743738,
+          "series_type": "contrast",
+          "suggested_title": "「SNSをやる人は天才じゃない」とは逆のパターンを比較してみた",
+          "suggested_angle": "対比で違いを際立たせる構成",
+          "rationale": "比較型は CTR が安定して取りやすい",
+          "created_at": 1788230553,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        },
+        {
+          "id": "a5460a5671",
+          "channel_id": "clip-lab",
+          "original_video_id": "0mIQakyhYJE",
+          "original_title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+          "original_views": 12707,
+          "channel_avg_views": 4136,
+          "viral_ratio": 3.0719737523743738,
+          "series_type": "application",
+          "suggested_title": "「SNSをやる人は天才じゃない」の知識を日常で使う方法",
+          "suggested_angle": "応用先を具体例で紹介",
+          "rationale": "応用型は再生時間が伸びやすい",
+          "created_at": 1788230553,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        },
+        {
+          "id": "0fc5b4d4b3",
+          "channel_id": "clip-lab",
+          "original_video_id": "Qc4yaKIac08",
+          "original_title": "バーコードが通らない偽物だった #shorts #切り抜き",
+          "original_views": 10133,
+          "channel_avg_views": 4136,
+          "viral_ratio": 2.4496978069418063,
+          "series_type": "deep_dive",
+          "suggested_title": "「バーコードが通らない偽物だった」に隠された本当の理由を掘り下げる",
+          "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+          "rationale": "深堀り型はリテンションが高い",
+          "created_at": 1788230553,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        },
+        {
+          "id": "ff36f9a7ba",
+          "channel_id": "clip-lab",
+          "original_video_id": "Qc4yaKIac08",
+          "original_title": "バーコードが通らない偽物だった #shorts #切り抜き",
+          "original_views": 10133,
+          "channel_avg_views": 4136,
+          "viral_ratio": 2.4496978069418063,
+          "series_type": "contrast",
+          "suggested_title": "「バーコードが通らない偽物だった」とは逆のパターンを比較してみた",
+          "suggested_angle": "対比で違いを際立たせる構成",
+          "rationale": "比較型は CTR が安定して取りやすい",
+          "created_at": 1788230553,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        },
+        {
+          "id": "2097a468e8",
+          "channel_id": "clip-lab",
+          "original_video_id": "Qc4yaKIac08",
+          "original_title": "バーコードが通らない偽物だった #shorts #切り抜き",
+          "original_views": 10133,
+          "channel_avg_views": 4136,
+          "viral_ratio": 2.4496978069418063,
+          "series_type": "application",
+          "suggested_title": "「バーコードが通らない偽物だった」の知識を日常で使う方法",
+          "suggested_angle": "応用先を具体例で紹介",
+          "rationale": "応用型は再生時間が伸びやすい",
+          "created_at": 1788230553,
+          "decided_at": null,
+          "status": "pending",
+          "queue_theme_id": null,
+          "queued_video_id": null
+        }
+      ],
+      "grouped": [
+        {
+          "original_video_id": "0mIQakyhYJE",
+          "original_title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+          "original_views": 12707,
+          "viral_ratio": 3.0719737523743738,
+          "suggestions": [
+            {
+              "id": "4a6e4b114e",
+              "channel_id": "clip-lab",
+              "original_video_id": "0mIQakyhYJE",
+              "original_title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+              "original_views": 12707,
+              "channel_avg_views": 4136,
+              "viral_ratio": 3.0719737523743738,
+              "series_type": "deep_dive",
+              "suggested_title": "「SNSをやる人は天才じゃない」に隠された本当の理由を掘り下げる",
+              "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+              "rationale": "深堀り型はリテンションが高い",
+              "created_at": 1788230553,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            },
+            {
+              "id": "d685bf482f",
+              "channel_id": "clip-lab",
+              "original_video_id": "0mIQakyhYJE",
+              "original_title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+              "original_views": 12707,
+              "channel_avg_views": 4136,
+              "viral_ratio": 3.0719737523743738,
+              "series_type": "contrast",
+              "suggested_title": "「SNSをやる人は天才じゃない」とは逆のパターンを比較してみた",
+              "suggested_angle": "対比で違いを際立たせる構成",
+              "rationale": "比較型は CTR が安定して取りやすい",
+              "created_at": 1788230553,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            },
+            {
+              "id": "a5460a5671",
+              "channel_id": "clip-lab",
+              "original_video_id": "0mIQakyhYJE",
+              "original_title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+              "original_views": 12707,
+              "channel_avg_views": 4136,
+              "viral_ratio": 3.0719737523743738,
+              "series_type": "application",
+              "suggested_title": "「SNSをやる人は天才じゃない」の知識を日常で使う方法",
+              "suggested_angle": "応用先を具体例で紹介",
+              "rationale": "応用型は再生時間が伸びやすい",
+              "created_at": 1788230553,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            }
+          ]
+        },
+        {
+          "original_video_id": "Qc4yaKIac08",
+          "original_title": "バーコードが通らない偽物だった #shorts #切り抜き",
+          "original_views": 10133,
+          "viral_ratio": 2.4496978069418063,
+          "suggestions": [
+            {
+              "id": "0fc5b4d4b3",
+              "channel_id": "clip-lab",
+              "original_video_id": "Qc4yaKIac08",
+              "original_title": "バーコードが通らない偽物だった #shorts #切り抜き",
+              "original_views": 10133,
+              "channel_avg_views": 4136,
+              "viral_ratio": 2.4496978069418063,
+              "series_type": "deep_dive",
+              "suggested_title": "「バーコードが通らない偽物だった」に隠された本当の理由を掘り下げる",
+              "suggested_angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える",
+              "rationale": "深堀り型はリテンションが高い",
+              "created_at": 1788230553,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            },
+            {
+              "id": "ff36f9a7ba",
+              "channel_id": "clip-lab",
+              "original_video_id": "Qc4yaKIac08",
+              "original_title": "バーコードが通らない偽物だった #shorts #切り抜き",
+              "original_views": 10133,
+              "channel_avg_views": 4136,
+              "viral_ratio": 2.4496978069418063,
+              "series_type": "contrast",
+              "suggested_title": "「バーコードが通らない偽物だった」とは逆のパターンを比較してみた",
+              "suggested_angle": "対比で違いを際立たせる構成",
+              "rationale": "比較型は CTR が安定して取りやすい",
+              "created_at": 1788230553,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            },
+            {
+              "id": "2097a468e8",
+              "channel_id": "clip-lab",
+              "original_video_id": "Qc4yaKIac08",
+              "original_title": "バーコードが通らない偽物だった #shorts #切り抜き",
+              "original_views": 10133,
+              "channel_avg_views": 4136,
+              "viral_ratio": 2.4496978069418063,
+              "series_type": "application",
+              "suggested_title": "「バーコードが通らない偽物だった」の知識を日常で使う方法",
+              "suggested_angle": "応用先を具体例で紹介",
+              "rationale": "応用型は再生時間が伸びやすい",
+              "created_at": 1788230553,
+              "decided_at": null,
+              "status": "pending",
+              "queue_theme_id": null,
+              "queued_video_id": null
+            }
+          ]
+        }
+      ],
+      "viral_videos": [
+        {
+          "video_id": "0mIQakyhYJE",
+          "title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+          "views": 12707,
+          "channel_avg": 4136.428571428572,
+          "viral_ratio": 3.0719737523743738,
+          "published_at": "2026-08-22T03:45:43Z"
+        },
+        {
+          "video_id": "Qc4yaKIac08",
+          "title": "バーコードが通らない偽物だった #shorts #切り抜き",
+          "views": 10133,
+          "channel_avg": 4136.428571428572,
+          "viral_ratio": 2.4496978069418063,
+          "published_at": "2026-08-24T06:03:59Z"
+        }
+      ],
+      "channel_avg_views": 4136.428571428572,
+      "summary": {
+        "channel_id": "clip-lab",
+        "channel_avg_views": 4136.428571428572,
+        "total_suggestions": 6,
+        "by_status": {
+          "pending": 6
+        },
+        "by_type": {
+          "deep_dive": 2,
+          "contrast": 2,
+          "application": 2
+        },
+        "approved_with_video": 0
+      }
+    }
+  },
+  "genre_breakdown": [
+    {
+      "genre": "その他",
+      "count": 7,
+      "total_views": 28955,
+      "total_likes": 54,
+      "titles": [
+        "若者の資産を増やすには 収入を増やすしかない #shorts #切り抜き",
+        "バーコードが通らない偽物だった #shorts #切り抜き",
+        "残業が多くても 年収50万円増ならアリ #shorts #切り抜き"
+      ],
+      "avg_views": 4136.43
+    }
+  ],
+  "view_trends": [
+    {
+      "video_id": "0mIQakyhYJE",
+      "title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 12707,
+          "likes": 23
+        }
+      ],
+      "latest_views": 12707,
+      "first_views": 12707,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "Qc4yaKIac08",
+      "title": "バーコードが通らない偽物だった #shorts #切り抜き",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 10133,
+          "likes": 22
+        }
+      ],
+      "latest_views": 10133,
+      "first_views": 10133,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "bdXtNQESwzc",
+      "title": "実はこの現象、ベルヌーイの定理が関係してる #shorts #切り抜き",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1273,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1273,
+      "first_views": 1273,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "NNPwzUx74OM",
+      "title": "恋愛の緊張は 男友達で克服できる #shorts #切り抜き",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1252,
+          "likes": 3
+        }
+      ],
+      "latest_views": 1252,
+      "first_views": 1252,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "7VUTa2hO1Y0",
+      "title": "30年持つなら買った方がいい #shorts #切り抜き",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1208,
+          "likes": 2
+        }
+      ],
+      "latest_views": 1208,
+      "first_views": 1208,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "-RJilEKS3L0",
+      "title": "若者の資産を増やすには 収入を増やすしかない #shorts #切り抜き",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1199,
+          "likes": 1
+        }
+      ],
+      "latest_views": 1199,
+      "first_views": 1199,
+      "delta": 0,
+      "snapshots": 1
+    },
+    {
+      "video_id": "lphYMgBxfiE",
+      "title": "残業が多くても 年収50万円増ならアリ #shorts #切り抜き",
+      "series": [
+        {
+          "date": "2026-09-01",
+          "views": 1183,
+          "likes": 0
+        }
+      ],
+      "latest_views": 1183,
+      "first_views": 1183,
+      "delta": 0,
+      "snapshots": 1
+    }
+  ],
+  "dup_check": [],
+  "success_patterns": {
+    "ok": true,
+    "sample_size": {
+      "total": 7,
+      "success": 2,
+      "others": 5
+    },
+    "has_gpt_insights": false,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "retention_insights": {
+    "ok": true,
+    "has_gpt_insights": false,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "act": {
+    "approved": [
+      {
+        "from": "SNSをやる人は天才じゃない #shorts #切り抜き",
+        "from_views": 12707,
+        "viral_ratio": 3.0719737523743738,
+        "series_type": "deep_dive",
+        "title": "「SNSをやる人は天才じゃない」に隠された本当の理由を掘り下げる"
+      },
+      {
+        "from": "SNSをやる人は天才じゃない #shorts #切り抜き",
+        "from_views": 12707,
+        "viral_ratio": 3.0719737523743738,
+        "series_type": "contrast",
+        "title": "「SNSをやる人は天才じゃない」とは逆のパターンを比較してみた"
+      }
+    ],
+    "skipped_low_view": []
+  }
+}

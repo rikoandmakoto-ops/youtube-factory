@@ -1,67 +1,49 @@
-# デイリーマージログ
+# Daily Merge Log
 
-**実行日時:** 2026-08-31 22:06 JST
-**タスク:** daily-merge-all-projects
-**結果:** マージ実行なし（全リポジトリで未マージブランチが存在しなかったため）
-
----
-
-## サマリ
-
-| リポジトリ | ブランチ数 | マージしたブランチ | コンフリクト | 未コミット変更 |
-|---|---|---|---|---|
-| youtube-factory | 1 (main のみ) | なし | なし | あり（750件） |
-| aiseki | 1 (main のみ) | なし | なし | あり（21件） |
-| ai-english-coach | 1 (main のみ) | なし | なし | あり（1件） |
+**実行日時**: 2026-09-02 22:06 JST
+**タスク**: daily-merge-all-projects
+**結果サマリ**: マージ対象ブランチなし（全リポジトリ）。コンフリクトなし。
 
 ---
 
-## 詳細
+## 1. youtube-factory (`/Users/ayukiyamazaki/Developer/youtube-factory`)
 
-### youtube-factory
-- **ローカルブランチ:** `main` のみ（HEAD: `ed5cbe5`）
-- **リモートブランチ:** `origin/main`, `neworigin/main`
-- **未マージブランチ:** なし（ローカル・リモートとも）
-- **マージ操作:** 実行せず（対象なし）
-- **コンフリクト:** なし
-- **未コミット変更:** 750件
-  - 変更あり (modified): 223件
-  - 未追跡 (untracked): 527件
-  - 主な変更対象: `assets/characters/*`（キャラ画像）、`backend/pipeline/*`、`backend/api_*.py`
-- **備考:** `main` は `origin/main` より 6コミット先行（未push）。push はタスク範囲外のため未実施。
+- 現在のブランチ: `main`
+- ローカルブランチ: `main` のみ
+- リモートブランチ: `origin/main`, `neworigin/main`（いずれも main にマージ済み相当、未マージコミットなし）
+- **マージしたブランチ**: なし（未マージブランチが存在しない）
+- **コンフリクト**: なし
+- **未コミット変更**: あり — 合計 **647 件**
+  - 変更(modified): 523
+  - 未追跡(untracked): 124
+  - ステージ済み: 0
+- 未プッシュコミット: origin/main より **9 コミット先行**
 
-### aiseki
-- **ローカルブランチ:** `main` のみ（HEAD: `f02b80c`）
-- **リモートブランチ:** `origin/main`, `neworigin/main`
-- **未マージブランチ:** なし
-- **マージ操作:** 実行せず（対象なし）
-- **コンフリクト:** なし
-- **未コミット変更:** 21件（すべて未追跡ファイル）
-  - `.e2e-*.mjs`, `.dbg*.mjs`, `.cleanup*.mjs` など一時的な検証スクリプト群
-- **備考:** `main` は `origin/main` より 2コミット先行（未push）。push はタスク範囲外のため未実施。
+## 2. aiseki (`/Users/ayukiyamazaki/Developer/aiseki`)
 
-### ai-english-coach
-- **ローカルブランチ:** `main` のみ（HEAD: `a90c4ad`）
-- **リモートブランチ:** なし（リモート未設定）
-- **未マージブランチ:** なし
-- **マージ操作:** 実行せず（対象なし）
-- **コンフリクト:** なし
-- **未コミット変更:** 1件（未追跡）
-  - `HANDOFF.md`
+- 現在のブランチ: `main`
+- ローカルブランチ: `main` のみ
+- リモートブランチ: `origin/main`, `neworigin/main`（未マージコミットなし）
+- **マージしたブランチ**: なし
+- **コンフリクト**: なし
+- **未コミット変更**: あり — 合計 **24 件**（すべて未追跡ファイル）
+  - デバッグ/E2E用スクリプト `.＊.mjs` 22件、xlsx 2件
+- 未プッシュコミット: origin/main より **3 コミット先行**
+
+## 3. ai-english-coach (`/Users/ayukiyamazaki/Developer/ai-english-coach`)
+
+- 現在のブランチ: `main`
+- ローカルブランチ: `main` のみ
+- リモート: 設定なし（remote ブランチ無し）
+- **マージしたブランチ**: なし
+- **コンフリクト**: なし
+- **未コミット変更**: あり — 合計 **1 件**（未追跡: `HANDOFF.md`）
 
 ---
 
-## 手動対応が必要な項目
+## 注記 / 手動対応が必要な項目
 
-- **コンフリクト:** なし
-- **要確認:**
-  - youtube-factory の未コミット変更が750件と多い。意図した作業中の状態か、コミット漏れかの確認を推奨。
-  - aiseki の未追跡 `.mjs` スクリプト21件は一時ファイルと思われる。`.gitignore` 追加または削除の判断を推奨。
-  - youtube-factory / aiseki の未push コミット（6件 / 2件）。
-
-## 実行時の注意事項
-
-- 破壊的操作（force push、`reset --hard`）は一切実行していない。
-- 未コミット変更には触れていない（stash / commit / discard いずれも未実行）。
+- マージ操作は一切実行していない（対象が無かったため）。force push / reset --hard は未使用。
+- youtube-factory の未コミット変更 647 件は規模が大きい。ブランチ作業を始める前に整理（コミット or .gitignore 追加）を推奨。data/ab_tests 配下の生成物が大半。
+- youtube-factory と aiseki に未プッシュコミット（9 / 3）あり。push は本タスクの範囲外のため未実行。
 - 対象3リポジトリ以外には一切アクセスしていない。
-- 読み取り時に `.git/index.lock` の unlink 警告が出たが、読み取り専用の操作のため結果に影響なし。

@@ -1,0 +1,197 @@
+{
+  "title": "サッカー選手の移籍金1億円、本当は誰の年収？",
+  "theme": {
+    "title": "サッカー選手の移籍金と年収の真実！",
+    "angle": "サッカー選手の移籍金や年収を企業の給与と比較し、業界の裏側を探る。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "プロ契約の実態",
+      "fact_main": "浦和 年俸1億円",
+      "fact_sub": "推定・報道ベース",
+      "text": "年俸1億円。ただし、移籍金とは別に動くお金です。",
+      "bg_query": "浦和レッドダイヤモンズ 埼玉スタジアム 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "移籍金 約2億円",
+      "fact_sub": "報道ベースの推定額",
+      "text": "移籍金約2億円は、選手本人ではなく前所属クラブへ支払われます。",
+      "bg_query": "浦和レッドダイヤモンズ 試合 写真",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "年俸1億円×3年",
+      "fact_sub": "契約総額は3億円",
+      "text": "年俸1億円を3年なら給与総額は3億円です。企業の採用とは桁が変わります。",
+      "bg_query": "浦和レッドダイヤモンズ 選手 入場",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "総コスト約5億円",
+      "fact_sub": "移籍金と年俸を合算",
+      "text": "移籍金2億円と年俸3億円で約5億円です。数字だけ見れば、かなり良い投資です。",
+      "bg_query": "浦和レッドダイヤモンズ サポーター",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "J1平均入場者2万人",
+      "fact_sub": "2024年Jリーグ公表値",
+      "text": "J1の平均入場者数は約2万人です。実はこの裏で、集客が年俸原資を支えます。",
+      "bg_query": "浦和レッドダイヤモンズ 観客席",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "契約期間 最長5年",
+      "fact_sub": "FIFA規則の上限",
+      "text": "契約期間は原則最長5年です。",
+      "bg_query": "浦和レッドダイヤモンズ 練習場",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "話題の企業の実態シリーズ",
+      "text": "気になったらプロフィールから他の企業もチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "移籍金1億円",
+      "年収とは別"
+    ],
+    "subtitle": "選手の収入とクラブの支出",
+    "tagline": "数字の裏にある契約"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭に財務数字",
+        "企業の闇要素"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.383,
+      "similar_to": "Netflixの月額1,590円、本当はどこに消える？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 17,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "サッカー選手の移籍金1億円、本当は誰の年収？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['本当は', '年収'](+20)",
+      "好奇心ギャップ['？'](+12)"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1788185090,
+    "generated_at": 1788271366,
     "analyzed_videos": 7,
     "aggregate_drops_by_bucket": {
       "intro": 0.0246,
@@ -348,11 +348,11 @@
     "channel_id": "scp-lab",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1788185353
+    "generated_at": 1788271484
   },
   "pokemon-lab": {
     "channel_id": "pokemon-lab",
-    "generated_at": 1788185196,
+    "generated_at": 1788271413,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0236,
@@ -556,7 +556,7 @@
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
-    "generated_at": 1788185466,
+    "generated_at": 1788271531,
     "analyzed_videos": 6,
     "aggregate_drops_by_bucket": {
       "intro": 0.0219,
@@ -854,7 +854,7 @@
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
-    "generated_at": 1788184957,
+    "generated_at": 1788271248,
     "analyzed_videos": 3,
     "aggregate_drops_by_bucket": {
       "intro": 0.0125,
@@ -1011,12 +1011,12 @@
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1788185112,
+    "generated_at": 1788271387,
     "analyzed_videos": 5,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0265,
+      "intro": 0.0262,
       "early": 0.019,
-      "middle": 0.0035,
+      "middle": 0.0036,
       "late": 0.0017,
       "ending": 0.0012
     },
@@ -1024,14 +1024,14 @@
       {
         "video_id": "PON5m1T_TKs",
         "title": "架空論文ファイル #4：あなたのポケモンは服で進化する — 1,248人が選んだ新形態【ショート】",
-        "avg_view_percentage": 43.24,
+        "avg_view_percentage": 42.79,
         "drops": [
           {
             "ratio_from": 0.1,
             "ratio_to": 0.11,
-            "drop": 0.1731,
+            "drop": 0.1698,
             "bucket": "intro",
-            "audience_after": 1.0577,
+            "audience_after": 1.0566,
             "scenario_line": {
               "index": 6,
               "speaker": "ミサキ編集長",
@@ -1042,9 +1042,9 @@
           {
             "ratio_from": 0.11,
             "ratio_to": 0.12,
-            "drop": 0.1539,
+            "drop": 0.1509,
             "bucket": "intro",
-            "audience_after": 0.9038,
+            "audience_after": 0.9057,
             "scenario_line": {
               "index": 6,
               "speaker": "ミサキ編集長",
@@ -1055,9 +1055,9 @@
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
-            "drop": 0.1346,
+            "drop": 0.1321,
             "bucket": "intro",
-            "audience_after": 0.6346,
+            "audience_after": 0.6415,
             "scenario_line": {
               "index": 8,
               "speaker": "ミサキ編集長",
@@ -1071,14 +1071,14 @@
       {
         "video_id": "EfcFbUmvXb4",
         "title": "架空論文ファイル #3：PS5 Proは反応を0.18秒縮める — 768人を28日追跡した結果【ショート】",
-        "avg_view_percentage": 29.880000000000003,
+        "avg_view_percentage": 30.03,
         "drops": [
           {
             "ratio_from": 0.11,
             "ratio_to": 0.12,
-            "drop": 0.0887,
+            "drop": 0.088,
             "bucket": "intro",
-            "audience_after": 0.8871,
+            "audience_after": 0.888,
             "scenario_line": {
               "index": 7,
               "speaker": "ミサキ編集長",
@@ -1089,9 +1089,9 @@
           {
             "ratio_from": 0.12,
             "ratio_to": 0.13,
-            "drop": 0.0887,
+            "drop": 0.088,
             "bucket": "intro",
-            "audience_after": 0.7984,
+            "audience_after": 0.8,
             "scenario_line": {
               "index": 7,
               "speaker": "ミサキ編集長",
@@ -1102,9 +1102,9 @@
           {
             "ratio_from": 0.1,
             "ratio_to": 0.11,
-            "drop": 0.0726,
+            "drop": 0.072,
             "bucket": "intro",
-            "audience_after": 0.9758,
+            "audience_after": 0.976,
             "scenario_line": {
               "index": 6,
               "speaker": "タクミ",
@@ -1165,7 +1165,7 @@
       {
         "video_id": "b4o3CXX6J9w",
         "title": "架空論文ファイル：満席の映画館では観客の瞬きが同期する #shorts #架空論文 #フィクション",
-        "avg_view_percentage": 32.91,
+        "avg_view_percentage": 32.86,
         "drops": [
           {
             "ratio_from": 0.16,
@@ -1237,6 +1237,655 @@
           }
         ],
         "matched_scenario_title": null
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "akashic-librarian": {
+    "channel_id": "akashic-librarian",
+    "generated_at": 1788271272,
+    "analyzed_videos": 4,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.0164,
+      "early": 0.0193,
+      "middle": 0.005,
+      "late": 0.0023,
+      "ending": 0.0061
+    },
+    "per_video": [
+      {
+        "video_id": "vKRvARiNeUE",
+        "title": "なぜ最初の数秒だけ？第一印象が実は書き換わらない本当の理由【ショート】",
+        "avg_view_percentage": 35.34,
+        "drops": [
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.1481,
+            "bucket": "intro",
+            "audience_after": 0.8519,
+            "scenario_line": {
+              "index": 5,
+              "speaker": null,
+              "text": "一方の条件では、温かいという語が冷たいより先に置かれた。語の総数は変わっていない。",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.21,
+            "ratio_to": 0.22,
+            "drop": 0.1112,
+            "bucket": "early",
+            "audience_after": 0.4444,
+            "scenario_line": {
+              "index": 8,
+              "speaker": null,
+              "text": "初頭効果とは、先に受け取った情報が、後の情報より判断に強く残りやすい傾向を指す。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.1111,
+            "bucket": "early",
+            "audience_after": 0.6296,
+            "scenario_line": {
+              "index": 6,
+              "speaker": null,
+              "text": "結果として、先に温かい印象を得た参加者は、その人物をより社交的で親しみやすいと評価した。",
+              "mood": "tense"
+            }
+          }
+        ],
+        "matched_scenario_title": "なぜ最初の数秒だけ？第一印象が実は書き換わらない本当の理由"
+      },
+      {
+        "video_id": "jj615Fk5oyI",
+        "title": "なぜ大谷翔平だけ？実力の前に働く「外見」の本当の理由【ショート】",
+        "avg_view_percentage": 41.26,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0893,
+            "bucket": "early",
+            "audience_after": 0.8058,
+            "scenario_line": {
+              "index": 5,
+              "speaker": null,
+              "text": "この現象はハロー効果と呼ばれる。一つの目立つ長所が、まだ確認していない別の長所まで照らして見せる。光は事実を増やさない。ただ、見え方を変える。",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0826,
+            "bucket": "intro",
+            "audience_after": 1.0022,
+            "scenario_line": {
+              "index": 4,
+              "speaker": null,
+              "text": "1972年、カレン・ディオンらは、外見的魅力が高い人物ほど望ましい性格を持つと推測されやすい傾向を報告した。能力そのものを測った研究ではなく、他者の推測を測った記録である。",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.058,
+            "bucket": "intro",
+            "audience_after": 0.8951,
+            "scenario_line": {
+              "index": 4,
+              "speaker": null,
+              "text": "1972年、カレン・ディオンらは、外見的魅力が高い人物ほど望ましい性格を持つと推測されやすい傾向を報告した。能力そのものを測った研究ではなく、他者の推測を測った記録である。",
+              "mood": "tense"
+            }
+          }
+        ],
+        "matched_scenario_title": "なぜ大谷翔平だけ？実力の前に働く「外見」の本当の理由"
+      },
+      {
+        "video_id": "B_F721NK9Oo",
+        "title": "三十八人が見ていて、誰も動かなかった夜 #shorts #社会学 #人間心理",
+        "avg_view_percentage": 62.69,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0574,
+            "bucket": "early",
+            "audience_after": 1.0131,
+            "scenario_line": {
+              "index": 1,
+              "speaker": null,
+              "text": "これは冷淡さの話ではない。人数そのものの話だ。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0522,
+            "bucket": "early",
+            "audience_after": 0.9191,
+            "scenario_line": {
+              "index": 1,
+              "speaker": null,
+              "text": "これは冷淡さの話ではない。人数そのものの話だ。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0418,
+            "bucket": "early",
+            "audience_after": 0.9713,
+            "scenario_line": {
+              "index": 1,
+              "speaker": null,
+              "text": "これは冷淡さの話ではない。人数そのものの話だ。",
+              "mood": "mysterious"
+            }
+          }
+        ],
+        "matched_scenario_title": "三十八人が見ていて、誰も動かなかった夜"
+      },
+      {
+        "video_id": "GGTZFCQxoUw",
+        "title": "なぜ600年も読めない？存在しない植物だけが描かれた手稿 #shorts #都市伝説 #オカルト",
+        "avg_view_percentage": 63.629999999999995,
+        "drops": [
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0896,
+            "bucket": "intro",
+            "audience_after": 1.0373,
+            "scenario_line": {
+              "index": 6,
+              "speaker": null,
+              "text": "放射性炭素年代測定は、羊皮紙を1404年から1438年頃と示した。中世ヨーロッパで作られた可能性は高い。",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0746,
+            "bucket": "early",
+            "audience_after": 0.9627,
+            "scenario_line": {
+              "index": 7,
+              "speaker": null,
+              "text": "ところが、年代が分かっても文字は読めない。古さは正体を明かす鍵ではなく、謎を固定する枠になった。",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0709,
+            "bucket": "intro",
+            "audience_after": 1.1269,
+            "scenario_line": {
+              "index": 6,
+              "speaker": null,
+              "text": "放射性炭素年代測定は、羊皮紙を1404年から1438年頃と示した。中世ヨーロッパで作られた可能性は高い。",
+              "mood": "tense"
+            }
+          }
+        ],
+        "matched_scenario_title": "なぜ600年も読めない？存在しない植物だけが描かれた手稿"
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "clip-animal": {
+    "channel_id": "clip-animal",
+    "skipped": true,
+    "reason": "no video_metrics — run /api/analytics/sync first",
+    "generated_at": 1788271276
+  },
+  "clip-fukada": {
+    "channel_id": "clip-fukada",
+    "skipped": true,
+    "reason": "no video_metrics — run /api/analytics/sync first",
+    "generated_at": 1788271277
+  },
+  "clip-kaneko": {
+    "channel_id": "clip-kaneko",
+    "skipped": true,
+    "reason": "no video_metrics — run /api/analytics/sync first",
+    "generated_at": 1788271278
+  },
+  "clip-lab": {
+    "channel_id": "clip-lab",
+    "generated_at": 1788271290,
+    "analyzed_videos": 7,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.0214,
+      "early": 0.0178,
+      "middle": 0.0048,
+      "late": 0.0042,
+      "ending": 0.0035
+    },
+    "per_video": [
+      {
+        "video_id": "-RJilEKS3L0",
+        "title": "若者の資産を増やすには 収入を増やすしかない #shorts #切り抜き",
+        "avg_view_percentage": 58.08,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0547,
+            "bucket": "early",
+            "audience_after": 0.9387
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0416,
+            "bucket": "intro",
+            "audience_after": 0.9934
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0328,
+            "bucket": "intro",
+            "audience_after": 1.035
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "Qc4yaKIac08",
+        "title": "バーコードが通らない偽物だった #shorts #切り抜き",
+        "avg_view_percentage": 70.11,
+        "drops": [
+          {
+            "ratio_from": 0.03,
+            "ratio_to": 0.04,
+            "drop": 0.05,
+            "bucket": "intro",
+            "audience_after": 1.3217
+          },
+          {
+            "ratio_from": 0.29,
+            "ratio_to": 0.3,
+            "drop": 0.0436,
+            "bucket": "early",
+            "audience_after": 0.8461
+          },
+          {
+            "ratio_from": 0.28,
+            "ratio_to": 0.29,
+            "drop": 0.0403,
+            "bucket": "early",
+            "audience_after": 0.8897
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "lphYMgBxfiE",
+        "title": "残業が多くても 年収50万円増ならアリ #shorts #切り抜き",
+        "avg_view_percentage": 32.77,
+        "drops": [
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.09,
+            "drop": 0.1436,
+            "bucket": "intro",
+            "audience_after": 0.8766
+          },
+          {
+            "ratio_from": 0.09,
+            "ratio_to": 0.1,
+            "drop": 0.0806,
+            "bucket": "intro",
+            "audience_after": 0.796
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.11,
+            "drop": 0.0504,
+            "bucket": "intro",
+            "audience_after": 0.7456
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "7VUTa2hO1Y0",
+        "title": "30年持つなら買った方がいい #shorts #切り抜き",
+        "avg_view_percentage": 46.45,
+        "drops": [
+          {
+            "ratio_from": 0.19,
+            "ratio_to": 0.2,
+            "drop": 0.0571,
+            "bucket": "early",
+            "audience_after": 0.811
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0472,
+            "bucket": "intro",
+            "audience_after": 0.9843
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0453,
+            "bucket": "early",
+            "audience_after": 0.7657
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "NNPwzUx74OM",
+        "title": "恋愛の緊張は 男友達で克服できる #shorts #切り抜き",
+        "avg_view_percentage": 55.57,
+        "drops": [
+          {
+            "ratio_from": 0.11,
+            "ratio_to": 0.12,
+            "drop": 0.0994,
+            "bucket": "intro",
+            "audience_after": 1.1462
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0624,
+            "bucket": "intro",
+            "audience_after": 1.037
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0565,
+            "bucket": "intro",
+            "audience_after": 0.9805
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "0mIQakyhYJE",
+        "title": "SNSをやる人は天才じゃない #shorts #切り抜き",
+        "avg_view_percentage": 89.87,
+        "drops": [
+          {
+            "ratio_from": 0.03,
+            "ratio_to": 0.04,
+            "drop": 0.0696,
+            "bucket": "intro",
+            "audience_after": 1.5432
+          },
+          {
+            "ratio_from": 0.97,
+            "ratio_to": 0.98,
+            "drop": 0.0525,
+            "bucket": "ending",
+            "audience_after": 0.6349
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.03,
+            "drop": 0.0494,
+            "bucket": "intro",
+            "audience_after": 1.6128
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "bdXtNQESwzc",
+        "title": "実はこの現象、ベルヌーイの定理が関係してる #shorts #切り抜き",
+        "avg_view_percentage": 51.36999999999999,
+        "drops": [
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0651,
+            "bucket": "intro",
+            "audience_after": 1.0815
+          },
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0627,
+            "bucket": "intro",
+            "audience_after": 1.1466
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0589,
+            "bucket": "intro",
+            "audience_after": 1.0226
+          }
+        ],
+        "matched_scenario_title": null
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+  },
+  "company-facts": {
+    "channel_id": "company-facts",
+    "generated_at": 1788271319,
+    "analyzed_videos": 6,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.0245,
+      "early": 0.0117,
+      "middle": 0.0035,
+      "late": 0.006,
+      "ending": 0.0144
+    },
+    "per_video": [
+      {
+        "video_id": "_F-orq4tyjg",
+        "title": "📈動画作りに課金しすぎた男、年収480万円で転職できる？【ショート】",
+        "avg_view_percentage": 50.13000000000001,
+        "drops": [
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.11,
+            "drop": 0.1259,
+            "bucket": "intro",
+            "audience_after": 1.0074
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.1111,
+            "bucket": "intro",
+            "audience_after": 0.8074
+          },
+          {
+            "ratio_from": 0.09,
+            "ratio_to": 0.1,
+            "drop": 0.0667,
+            "bucket": "intro",
+            "audience_after": 1.1333
+          }
+        ],
+        "matched_scenario_title": "📈動画作りに課金しすぎた男、年収480万円で転職できる？"
+      },
+      {
+        "video_id": "QkYPUi8JeYU",
+        "title": "💸GUの年収、実はポケモンコラボで上がるのか？平均959万円の裏側💸【ショート】",
+        "avg_view_percentage": 63.01,
+        "drops": [
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0626,
+            "bucket": "intro",
+            "audience_after": 1.0125
+          },
+          {
+            "ratio_from": 0.09,
+            "ratio_to": 0.1,
+            "drop": 0.0573,
+            "bucket": "intro",
+            "audience_after": 1.1753
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.11,
+            "drop": 0.0537,
+            "bucket": "intro",
+            "audience_after": 1.1216
+          }
+        ],
+        "matched_scenario_title": "💸GUの年収、実はポケモンコラボで上がるのか？平均959万円の裏側💸"
+      },
+      {
+        "video_id": "U1nCZnLxQyM",
+        "title": "📉花王の男性育休100%、年収はいくら？実は数字の裏も見る【ショート】",
+        "avg_view_percentage": 59.4,
+        "drops": [
+          {
+            "ratio_from": 0.09,
+            "ratio_to": 0.1,
+            "drop": 0.0619,
+            "bucket": "intro",
+            "audience_after": 1.0717
+          },
+          {
+            "ratio_from": 0.11,
+            "ratio_to": 0.12,
+            "drop": 0.0519,
+            "bucket": "intro",
+            "audience_after": 0.968
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.11,
+            "drop": 0.0518,
+            "bucket": "intro",
+            "audience_after": 1.0199
+          }
+        ],
+        "matched_scenario_title": "📉花王の男性育休100%、年収はいくら？実は数字の裏も見る"
+      },
+      {
+        "video_id": "D0YEi-jN2Fc",
+        "title": "📉大谷翔平の年収が実は約160億円？スポンサー契約の裏側📉【ショート】",
+        "avg_view_percentage": 90.13,
+        "drops": [
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.11,
+            "drop": 0.0545,
+            "bucket": "intro",
+            "audience_after": 1.2458
+          },
+          {
+            "ratio_from": 0.9,
+            "ratio_to": 0.91,
+            "drop": 0.0518,
+            "bucket": "ending",
+            "audience_after": 0.6128
+          },
+          {
+            "ratio_from": 0.09,
+            "ratio_to": 0.1,
+            "drop": 0.0509,
+            "bucket": "intro",
+            "audience_after": 1.3003
+          }
+        ],
+        "matched_scenario_title": "📉大谷翔平の年収が実は約160億円？スポンサー契約の裏側📉"
+      },
+      {
+        "video_id": "dPkVQBSCzXs",
+        "title": "三菱商事の平均年収2033万円、その中身 #shorts #企業分析 #年収 #転職",
+        "avg_view_percentage": 73.82,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0522,
+            "bucket": "early",
+            "audience_after": 1.0792,
+            "scenario_line": {
+              "index": 1,
+              "speaker": null,
+              "text": "有価証券報告書の平均年間給与は2033万円。平均年齢は42.4歳です。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0444,
+            "bucket": "early",
+            "audience_after": 0.9942,
+            "scenario_line": {
+              "index": 1,
+              "speaker": null,
+              "text": "有価証券報告書の平均年間給与は2033万円。平均年齢は42.4歳です。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0406,
+            "bucket": "early",
+            "audience_after": 1.0386,
+            "scenario_line": {
+              "index": 1,
+              "speaker": null,
+              "text": "有価証券報告書の平均年間給与は2033万円。平均年齢は42.4歳です。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "三菱商事の平均年収2033万円、その中身"
+      },
+      {
+        "video_id": "5qcaDLeE9pA",
+        "title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う【ショート】",
+        "avg_view_percentage": 79.2,
+        "drops": [
+          {
+            "ratio_from": 0.9,
+            "ratio_to": 0.91,
+            "drop": 0.0713,
+            "bucket": "ending",
+            "audience_after": 0.5015
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.11,
+            "drop": 0.057,
+            "bucket": "intro",
+            "audience_after": 1.1774
+          },
+          {
+            "ratio_from": 0.09,
+            "ratio_to": 0.1,
+            "drop": 0.0486,
+            "bucket": "intro",
+            "audience_after": 1.2344
+          }
+        ],
+        "matched_scenario_title": "💸トヨタ自動車の年収982万円、実は手当の中身が違う"
       }
     ],
     "gpt_insights": null,
