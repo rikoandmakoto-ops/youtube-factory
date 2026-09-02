@@ -72,6 +72,18 @@ backend/short_only_results_*.json
 # PDCA スクリプトが書き換え前に残す使い捨てスナップショット。
 # 元ファイル（data/channels/*.json 等）は追跡しているので履歴はそちらで追える。
 data/**/*.bak_*
+# A/B テストの実行ログ。analytics 同期のたびに全ファイルの updated_at だけが
+# 書き換わり、毎日 500 ファイル規模の無意味な差分になる。集計結果は
+# data/reports/ と data/analytics/analytics.db に残るのでこちらは追跡しない。
+data/ab_tests/
+# 立ち絵などの手動退避コピー（1回で数十MB）。原本は assets/characters/ 直下。
+assets/**/_backup_*/
+
+# ===== 使い捨ての検証スクリプト =====
+# 調査中にその場で書いて捨てる Node スクリプト。再実行する価値のあるものは
+# scripts/ に名前を付けて置くこと。
+*.audit.mjs
+.e2e-jobs.mjs
 
 # ===== Large root-level samples / temp media =====
 *.b64
