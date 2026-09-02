@@ -8,7 +8,8 @@
 > |---|---|
 > | `video_status` が 06-07 で止まっていた問題 | ✅ 修正（`pipeline/publish_log.py` 新設 → §5「公開実績DB」） |
 > | `data/channels_orchestrator/` との設定乖離 | ✅ 解消（symlink 化。master は `data/channels/`。→ `docs/CHANNEL_CONFIG_SOURCE_OF_TRUTH.md`） |
-> | company-facts / akashic / 切り抜き4ch が analytics 未同期 | ✅ 解消（`video_format.analytics.enabled` を追加。clip-fukada / clip-kaneko だけ **OAuth失効で未解決**） |
+> | company-facts / akashic / 切り抜き4ch が analytics 未同期 | ⚠️ 設定は解消（`video_format.analytics.enabled` を追加）したが、**同日深夜に OAuth 失効が全10chへ拡大** → §6 の 0-a |
+> | チャンネル一覧が 8ch のまま古かった（実際は13ch・akashic は稼働中） | ✅ 修正（→ §1。深夜の nightly-full-progress で検出） |
 > | ショート投稿タイトルが `〜【ショート】` になり `#shorts` すら付いていなかった | ✅ 修正（`generate_descriptions` にタイトル行を追加） |
 > | fake-paper 登録0 / yokai 登録効率最下位 | ✅ コンフィグ反映（→ §5「2026-09-01 のマーケ改善」） |
 
@@ -22,22 +23,37 @@
 「ゆっくり解説」系ショート動画を **台本生成 → 音声合成 → 映像合成 → サムネ生成 → YouTube 投稿 → 分析（PDCA）** まで
 全自動で回す動画ファクトリー。1本のパイプラインを設定ファイルで多チャンネルに展開する構成。
 
-現在 **8 チャンネル**を運用（うち 7 チャンネルが autopilot 有効）。
+現在 **13 チャンネル**が `data/channels/` に定義され、**12 チャンネルが autopilot 有効**
+（`socio-rx` のみ `enabled: false`）。以下は **2026-09-01 23:00 時点の実設定**（`data/channels/<id>.json` を実読み）。
 
-| チャンネル ID | 名前 | autopilot | 投稿時刻 | 登録者 | 総再生 | 本数 |
-|---|---|---|---|---:|---:|---:|
-| `scp-lab` | ゆっくり異常存在SCPラボ | ✅ | 19:00 | 133 | 133,388 | 146 |
-| `daily-science` | リコとマコトのゆっくり日常科学 | ✅ | 18:00 | 52 | 168,282 | 177 |
-| `pokemon-lab` | ゆっくりポケラボ | ✅ | 17:30 | 11 | 33,937 | 23 |
-| `yokai-watch` | ゆっくり妖怪ラボ | ✅ | 18:30 | 10 | 31,792 | 22 |
-| `2ch-matome` | ゆっくり2chスレまとめ劇場 | ✅ | 17:15 | 4 | 14,349 | 15 |
-| `company-facts` | 企業のホンネ | ✅ | 17:00 | — | — | — |
-| `clip-lab` | ゆっくり解説 切り抜きラボ | ✅ | 17:45（国内）＋ 20:45（海外バイラル） | — | — | — |
-| `akashic-librarian` | ラグナロクの司書 | ❌ 停止中 | 18:45 | — | — | — |
-| `clip-fukada` | 深田えいみ 切り抜きチャンネル | ✅ 2026-08-24 稼働 | 20:00 | — | — | 1 |
-| `clip-kaneko` | 金子みゆ 切り抜きチャンネル | ✅ 2026-08-24 稼働 | 20:30 | — | — | 0 |
+| チャンネル ID | 名前 | autopilot | 投稿時刻（平日 / 土日） | 直近14日 公開 | 累計公開 | 最終公開 |
+|---|---|---|---|---:|---:|---|
+| `scp-lab` | ゆっくり異常存在SCPラボ | ✅ | 09:00・19:00 / 18:00・19:00 | 25 | 183 | 08-31 |
+| `daily-science` | リコとマコトのゆっくり日常科学 | ✅ | 17:00 / 18:00 | 18 | 191 | 08-31 |
+| `pokemon-lab` | ゆっくりポケラボ | ✅ | 17:30 / 18:00 | 17 | 40 | 08-31 |
+| `yokai-watch` | ゆっくり妖怪ラボ | ✅ | 19:00 / 12:00 | 17 | 39 | 08-31 |
+| `2ch-matome` | ゆっくり2chスレまとめ劇場 | ✅ | 18:00 / 18:00 | 22 | 35 | 08-31 |
+| `company-facts` | 企業のホンネ | ✅ | 17:00 / 18:00 | 19 | 27 | 08-31 |
+| `fake-paper` | 虚構論文チャンネル | ✅ | 19:30 / 13:15 | 6 | 7 | 08-31 |
+| `akashic-librarian` | ラグナロクの司書 | ✅ | 18:45 / 13:45 | 6 | 7 | 08-31 |
+| `clip-lab` | ゆっくり解説 切り抜きラボ | ✅ | 17:45（国内）＋ 20:45（海外バイラル・毎日） | 7 | 7 | **08-27** |
+| `clip-fukada` | 深田えいみ 切り抜きチャンネル | ✅ | 20:00（毎日） | 0 | 0 | **未** |
+| `clip-kaneko` | 金子みゆ 切り抜きチャンネル | ✅ | 08:00・14:00・20:30（毎日） | 0 | 0 | **未** |
+| `clip-animal` | 動物情報局 | ✅ | 18:00（毎日） | 0 | 0 | **未** |
+| `socio-rx` | 社会学の処方箋 | ❌ | 20:00 / 15:00 | 0 | 0 | **未** |
 
-数値は `data/reports/latest.md`（2026-08-18 生成）より。`company-facts` / `clip-lab` は当該レポートに集計行なし（投稿実績がまだ薄い）。
+> ⚠️ **2026-09-01 深夜の点検で判明した、この表の旧版が間違っていた点**（同日中に修正）:
+> - 「8チャンネル」ではなく **13チャンネル**。表に `fake-paper` / `clip-animal` / `socio-rx` が無かった。
+> - `akashic-librarian` は **停止中ではなく稼働中**（§6 の残タスク13「有効化判断」は決着済み）。
+> - 投稿時刻が 6ch で実設定とズレていた（scp-lab / daily-science / yokai-watch / 2ch-matome /
+>   akashic-librarian / clip-kaneko）。**時刻を書き換えたら必ずこの表も直すこと。**
+> - `clip-animal` は **一度も動いたことがない**。`clip.sources` が空で `external_sources` も無効のため
+>   autopilot が毎日「sources が空」で落ちている。素材を入れるか autopilot を切るかの判断が要る。
+> - `socio-rx` は `video_format.analytics.enabled` も未設定（他12chは true）。
+
+公開本数は `data/video_publish.db` の `video_status` から集計（2026-09-01 23:00）。
+チャンネル単位の登録者数は **2026-09-01 時点で取得できない**（→ §6 の OAuth 失効）。
+`data/analytics/analytics.db` の `channel_metrics` も 08-28〜29 で更新が止まっている。
 
 `clip-fukada` / `clip-kaneko` は**タレント単独の切り抜きチャンネル**。2026-08-24 に稼働開始。
 許諾は**ガジェット通信クリエイターネットワーク（MCN / getnews.jp/mcn/kirinuki）経由**で、両名とも
@@ -282,11 +298,66 @@ autopilot が `job.title + "【ショート】"` のフォールバックに落�
 
 ### 2026-09-01 に判明して未解決のもの（最優先）
 
-0-a. **`clip-fukada` / `clip-kaneko` の OAuth トークンが失効している。**
-   `invalid_grant: Token has been expired or revoked.`。analytics 同期も自動投稿も
-   通らない（＝この2chは 08-24 の稼働開始以降ずっと止まっている可能性が高い）。
-   コードでは直せない。管理画面から再認可すること。
+0-a. 🚨 **OAuth リフレッシュ失敗が 2ch から 10ch に広がった（2026-09-01 深夜に判明・最優先）。**
+   `logs/backend.log` の集計では
+   daily-science 40件 / scp-lab 27 / yokai-watch 26 / pokemon-lab 26 / company-facts 26 /
+   clip-lab 25 / fake-paper 24 / clip-kaneko 17 / akashic-librarian 14 / clip-fukada 13
+   ＝ **稼働中の全チャンネルで `invalid_grant: Token has been expired or revoked.`**。
+   もともと clip-fukada / clip-kaneko だけの問題として記録していたが、そうではない。
+
+   併発している二次障害（どちらも実害が出ている）:
+   - **投稿は通っているが分析が全部死ぬ。** 09-01 23:00 の PDCA レポートは 12ch 中 **9ch が
+     「登録者ソースが取得できないため判断保留」＋ 0本/0再生**。数字が出たのは
+     akashic-librarian / fake-paper / 2ch-matome の3つだけ。**この状態の PDCA を根拠に
+     コンフィグを触ってはいけない**（前日までの実測値のほうが信用できる）。
+   - **切り抜き系はアップロード自体が落ちる。** clip-kaneko は 09-01 20:30 に動画を焼くところまで
+     成功したが `youtube_uploader.get_authenticated_service()` が
+     `FileNotFoundError: client_secret.json が見つかりません` で終わっている。
+
+   **壊れた時刻はほぼ特定できている: 2026-09-01 の 11:36〜11:40。**
+   同日 09:00 の scp-lab は**正常に公開できている**（`iAHGnvpHJwk`）。
+   その後 11:40 の再起動（`cta_enforcer` 反映のためのもの）を挟んだ 17:00 以降の枠から
+   全部トークン失効になった。`backend/pipeline/credentials/` の**ディレクトリ mtime が 09-01 11:36**。
+   ＝ この再起動の前後で認可情報の置き場に何かが起きている。**まずここを疑うこと。**
+
+   現状: `backend/pipeline/credentials/` には **`client_secret.json` が無く、`oauth.db` は 0 バイト**
+   （May 21 作成のまま）。一方で `data/youtube_tokens.db`（61KB）は生きている。
+   ＝ 認可情報の置き場が2系統あり、片方が空。
+   コードでは直せない。**GCP から OAuth クライアント JSON を落として置き直し、管理画面から再認可する。**
    確認: `python3 -c "import sys;sys.path.insert(0,'backend');from pipeline import youtube_oauth as yo;print(yo.get_credentials_for('clip-fukada'))"`
+
+   **09-01 の公開実績（生成9本 → 公開できたのは3本）:**
+
+   | 枠 | ch | 結果 |
+   |---|---|---|
+   | 09:00 | scp-lab | ✅ 公開 `iAHGnvpHJwk`（※サムネ設定は 403。電話認証未完了なので既知） |
+   | 17:00 | company-facts | ❌ 自動公開スキップ（トークン失効） |
+   | 17:00 | daily-science | ❌ 自動公開スキップ |
+   | 17:30 | pokemon-lab | ❌ 自動公開スキップ |
+   | 18:00 | 2ch-matome | ❌ 自動公開スキップ |
+   | 18:45 | akashic-librarian | ✅ 予約 `ryQIYHgujm4` |
+   | 19:00 | yokai-watch | ❌ 自動公開スキップ |
+   | 19:00 | scp-lab | ❌ 自動公開スキップ |
+   | 19:30 | fake-paper | ✅ 予約 `LJpzN0NJFBw` |
+   | 切り抜き4ch | — | ❌ 全滅（0-a-3） |
+
+   > 動画自体は生成済みで手元にある。**再認可さえ通れば手動で上げ直せる。**
+
+0-a-2. **`ANTHROPIC_API_KEY` 未設定で 09-01 も海外バイラル枠が2回とも落ちた。**
+   `clip-lab` の 20:45 枠は 08-31・09-01 とも `TranslationUnavailable`。
+   依頼書だけ `data/analytics/viral_translation_pending/` に溜まっている（`viral_1w2l6rn.json` /
+   `viral_1w45v54.json`）。PDCA レポートの Claude 分析も全ch「スキップ（ANTHROPIC_API_KEY 未設定）」。
+   翻訳を機械任せにしない設計は正しいので、**キーを入れるまでこの枠は動かない**と理解しておく。
+
+0-a-3. **切り抜き4chが実質全滅している（09-01 実績）。**
+   | ch | 09-01 の結果 |
+   |---|---|
+   | `clip-lab` 17:45 | 失敗「未使用の切り抜き区間が残っていません」（ヒカキン素材を使い切った。素材追加が要る） |
+   | `clip-lab` 20:45 | 失敗（ANTHROPIC_API_KEY） |
+   | `clip-fukada` 20:00 | 失敗「尺条件に合う区間なし: 急にどうした？」。※この素材は媚薬PR回で本来除外対象。区間ゲートは効いている |
+   | `clip-kaneko` 20:30 | 生成成功 → **アップロードで OAuth 失敗**（0-a） |
+   | `clip-animal` 18:00 | 失敗「clip.sources が空で external_sources も無効」（一度も成功していない） |
+   → 切り抜き系の最終公開は **clip-lab の 08-27 が最後**。5日間 1本も出ていない。
 
 0-b. **CTA 遵守率の実測は 2026-09-02 以降に取り直すこと。**
    `pipeline/cta_enforcer.py` は 09-01 10:30 に入ったが、稼働中バックエンドは
@@ -320,8 +391,13 @@ autopilot が `job.title + "【ショート】"` のフォールバックに落�
 10. OpenAI billing hard limit で `gpt-image-1` が使えない → 復旧後に `gen_images.py` を実行すれば完了
 11. TikTok セットアップ（アカウント作成 → 開発者登録 → 審査申請）。手順は `docs/TIKTOK_SETUP.md`
 12. 過去の SCP 非公開動画 5本（`dItYJed2Qog` 等）の手動公開 or スコープ拡張
-13. `akashic-librarian` の autopilot 有効化判断（現在 `enabled: false`）
-14. テーマ重複が多い（`2ch-matome` で類似ペア 15 件・閾値 0.62）→ 重複閾値の厳格化
+13. ~~`akashic-librarian` の autopilot 有効化判断~~ — **決着済み。`enabled: true` で稼働中**
+    （2026-09-01 確認。直近14日で6本公開・登録者2・平均再生 599.8）
+14. テーマ重複が多い → 重複閾値の厳格化。**2026-09-01 時点で `2ch-matome` は類似ペア 5 件
+    （閾値 0.62）まで下がっている**（08-31 は 15 件）。最悪は「ワイ、◯◯歴N年やけど質問ある？」
+    テンプレの相互重複（0.667）。テンプレ自体を絞るのが早い
+15. `clip-animal` の素材が空（→ §1 の表の注記）。素材を入れるか autopilot を切るか
+16. `socio-rx` は autopilot も analytics も無効のまま。運用するのかしないのかを決める
 
 ---
 
