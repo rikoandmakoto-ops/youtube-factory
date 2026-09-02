@@ -601,8 +601,33 @@ def exchange_code_for(channel_id: str, state: str, code: str) -> Dict[str, Any]:
     code_verifier = info.get("code_verifier")
     if code_verifier:
         flow.code_verifier = code_verifier
-    flow.fetch_token(code=code)
+    # fetch_token() の生レスポンスを捨てずに見る（2026-09-02）。
+    # Google は「発行時点の」リフレッシュトークン寿命を refresh_token_expires_in で
+    # 返す。この値が付くこと自体が「7日で失効する刻印が押された」証拠であり、
+    # 付かなければ無期限。refresh 時のレスポンスにも同じ値が乗るが、それは
+    # *発行時* の刻印を引きずっているだけなので、同意画面の「今の」状態は
+    # 認可（＝ここ）でしか判定できない。
+    raw = flow.fetch_token(code=code) or {}
     creds = flow.credentials
+
+    granted_at = int(time.time())
+    rt_ttl = raw.get("refresh_token_expires_in")
+    if rt_ttl:
+        rt_expires_at = granted_at + int(rt_ttl)
+        print(
+            f"⏳ [oauth] {target_channel}: リフレッシュトークンに寿命 "
+            f"{int(rt_ttl)/86400:.2f}日 の刻印付き（失効予定 "
+            f"{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(rt_expires_at))}）。"
+            "→ GCP 同意画面はまだ無期限トークンを発行していません。",
+            flush=True,
+        )
+    else:
+        rt_expires_at = None
+        print(
+            f"♾️ [oauth] {target_channel}: リフレッシュトークンは無期限で発行されました"
+            "（同意画面の本番公開が効いています）。",
+            flush=True,
+        )
 
     acc = _fetch_account_info(creds)
     creds_dict = {
@@ -613,6 +638,10 @@ def exchange_code_for(channel_id: str, state: str, code: str) -> Dict[str, Any]:
         "client_secret": creds.client_secret,
         "scopes": creds.scopes,
         "expiry": int(creds.expiry.timestamp()) if creds.expiry else None,
+        # 認可時点の刻印。refresh をまたいでも保持される（get_credentials_for が
+        # アンダースコア始まり以外のキーをそのまま書き戻すため）。
+        "refresh_token_granted_at": granted_at,
+        "refresh_token_expires_at": rt_expires_at,
     }
     save_credentials_for(
         target_channel,

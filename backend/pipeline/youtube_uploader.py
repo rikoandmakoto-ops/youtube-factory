@@ -79,8 +79,15 @@ def get_authenticated_service(auth_channel_id: str = None):
     ensure_deps()
 
     # ── 1. チャンネル別 OAuth (新方式) を優先 ──
+    # 2026-09-01: ここで失敗を握り潰して 2. に落ちると、実際の原因
+    # （invalid_grant = トークン失効）が
+    # 「client_secret.json が見つかりません」という無関係な例外に化けていた。
+    # 2. は CLI 専用（ブラウザを開く InstalledAppFlow）で、そもそも
+    # サーバ経路では成立しない。channel 指定時は落ちた理由をそのまま出す。
+    _oauth = None
+    _oauth_exc = None
     try:
-        from . import youtube_oauth as _oauth
+        from . import youtube_oauth as _oauth  # type: ignore[no-redef]
         creds = (
             _oauth.get_credentials_for(auth_channel_id)
             if auth_channel_id
@@ -88,10 +95,25 @@ def get_authenticated_service(auth_channel_id: str = None):
         )
         if creds:
             return build("youtube", "v3", credentials=creds)
-    except Exception:
-        pass
+    except Exception as e:
+        _oauth_exc = e
 
-    # ── 2. レガシー pickle ファイル方式（CLI 専用） ──
+    if auth_channel_id:
+        reason = ""
+        if _oauth_exc is not None:
+            reason = f"{type(_oauth_exc).__name__}: {_oauth_exc}"
+        elif _oauth is not None:
+            err = _oauth.get_auth_error_for(auth_channel_id)
+            if err:
+                reason = f"{err.get('error')}: {err.get('detail')}"
+        if not reason:
+            reason = "このチャンネルの OAuth トークンが未登録です"
+        raise RuntimeError(
+            f"チャンネル '{auth_channel_id}' の YouTube 認証に失敗しました: {reason}\n"
+            "→ 管理 UI の「YouTube と連携する」から再認可してください。"
+        )
+
+    # ── 2. レガシー pickle ファイル方式（CLI 専用、channel 未指定時のみ） ──
     creds = None
     if TOKEN_FILE.exists():
         with open(TOKEN_FILE, "rb") as f:

@@ -626,6 +626,53 @@ def run_channel(channel_id: str, channel_name: str, token: str,
     return rep
 
 
+def _oauth_health_markdown() -> str:
+    """OAuth リフレッシュトークンの残り寿命を日次レポートの先頭に出す。
+
+    なぜここに置くか（2026-09-01）:
+      GCP の同意画面が「テスト中」のあいだ、リフレッシュトークンは発行から
+      7日で失効する。08-24 / 08-25 / 09-01 と実際に約7日周期で全チャンネルが
+      沈黙しており、毎回「投稿が止まってから」気づいていた。
+      日次 PDCA は 23:00 に必ず走るので、ここに出しておけば失効の 5〜6 日前に
+      気づける。恒久対策は同意画面を「本番」に公開すること。
+    """
+    try:
+        from check_youtube_tokens import collect
+        rows = collect(warn_days=3.0)
+    except Exception as e:
+        return f"## OAuth トークン寿命\n\n⚠️ 点検に失敗: {type(e).__name__}: {e}\n"
+
+    if not rows:
+        return "## OAuth トークン寿命\n\n連携済みチャンネルがありません\n"
+
+    dead = [r for r in rows if r["status"] in ("dead", "unlinked")]
+    warn = [r for r in rows if r["status"] == "warn"]
+    lines = ["## OAuth トークン寿命\n"]
+    if not dead and not warn:
+        lines.append("✅ 全チャンネル正常\n")
+    else:
+        if dead:
+            lines.append(
+                "❌ **要再認可**: " + ", ".join(r["channel_id"] for r in dead)
+                + " — ダッシュボードのチャンネル設定 →「YouTube 連携」からやり直す\n"
+            )
+        if warn:
+            lines.append(
+                "⚠️ **まもなく失効**: "
+                + ", ".join(f"{r['channel_id']}（{r['days']:.1f}日）" for r in warn) + "\n"
+            )
+        lines.append(
+            "恒久対策: GCP の OAuth 同意画面を「テスト中」→「本番」に公開する"
+            "（https://console.cloud.google.com/auth/audience / project 844705815004）\n"
+        )
+    lines.append("| channel | 状態 | 残り |")
+    lines.append("|---|---|---|")
+    label = {"ok": "OK", "warn": "警告", "dead": "失効", "unlinked": "未連携"}
+    for r in rows:
+        lines.append(f"| {r['channel_id']} | {label[r['status']]} | {r['detail']} |")
+    return "\n".join(lines) + "\n"
+
+
 def main(argv: List[str]) -> int:
     explicit = [a for a in argv[1:] if not a.startswith("-")]
     do_sync = "--no-sync" not in argv
@@ -676,6 +723,12 @@ def main(argv: List[str]) -> int:
         f"# 日次 PDCA レポート — {date_str}",
         f"_生成: {now.strftime('%Y-%m-%d %H:%M %Z')} / base={BASE_URL}_\n",
     ]
+    print("\n[OAuth] リフレッシュトークンの残り寿命を点検...")
+    oauth_md = _oauth_health_markdown()
+    for line in oauth_md.splitlines():
+        if line.startswith(("✅", "❌", "⚠️")):
+            print(f"  {line}")
+    md_parts.append(oauth_md)
     for cid in channel_ids:
         try:
             rep = run_channel(cid, names[cid], token, do_sync=do_sync)
