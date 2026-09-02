@@ -190,6 +190,14 @@
       "date": "2026-08-31",
       "subs_delta": 1,
       "views_delta": 198
+    },
+    {
+      "date": "2026-09-02",
+      "subscribers": null,
+      "total_views": null,
+      "note": "OAuth失効で channel_stats 取得不可。analytics.db 最新スナップショット(08-31)で 50本・再生39,003・登録19・CTR1.77%。1本あたり登録0.38。7日フロー(08-25〜31)は 再生6,434／獲得6／解約1＝獲得0.93/1k。09-01 は1本生成したが未公開",
+      "top_video": "録音の声が違う？骨伝導(1519)",
+      "source": "analytics.db video_metrics(08-31) + channel_metrics 7日"
     }
   ],
   "scp-lab": [
@@ -383,6 +391,14 @@
       "date": "2026-08-31",
       "subs_delta": 3,
       "views_delta": 559
+    },
+    {
+      "date": "2026-09-02",
+      "subscribers": null,
+      "total_views": null,
+      "note": "OAuth失効。最新スナップショット50本で 再生33,770・登録24・CTR1.44%(imp 23,061と全ch最大)。1本あたり登録0.48。『なぜ』0.91 vs 0.36、『#N』0.21 vs 0.58 を再確認。7日フローは 再生8,108／獲得7／解約1。09-01 は2本生成したが未公開",
+      "top_video": "一口SCP：人類殲滅プロトコル(1414)",
+      "source": "analytics.db video_metrics(08-31) + channel_metrics 7日"
     }
   ],
   "pokemon-lab": [
@@ -571,6 +587,14 @@
       "date": "2026-08-31",
       "subs_delta": 0,
       "views_delta": 72
+    },
+    {
+      "date": "2026-09-02",
+      "subscribers": null,
+      "total_views": null,
+      "note": "40本で 再生40,371・登録11・CTR1.26%。1本あたり登録0.28。数字入り0.18 vs なし0.46",
+      "top_video": "エリートトレーナーの謎(2063)",
+      "source": "analytics.db video_metrics(08-31)"
     }
   ],
   "yokai-watch": [
@@ -759,6 +783,14 @@
       "date": "2026-08-31",
       "subs_delta": 0,
       "views_delta": 173
+    },
+    {
+      "date": "2026-09-02",
+      "subscribers": null,
+      "total_views": null,
+      "note": "39本で 再生39,697・登録11・CTR1.54%。数字あり0.05 vs なし0.50、『？』あり0.12 vs なし0.57",
+      "top_video": "のっぺらぼう系(2239)",
+      "source": "analytics.db video_metrics(08-31)"
     }
   ],
   "2ch-matome": [
@@ -947,6 +979,14 @@
       "date": "2026-08-31",
       "subs_delta": 0,
       "views_delta": 231
+    },
+    {
+      "date": "2026-09-02",
+      "subscribers": null,
+      "total_views": null,
+      "note": "35本で 再生32,371・登録5・CTR2.09%。1本あたり登録0.14で全ch最下位級。先頭絵文字0.00 vs 0.16 で不利",
+      "top_video": "PCパーツ到着時、なぜ箱だけ先に届くのか(1811)",
+      "source": "analytics.db video_metrics(08-31)"
     }
   ],
   "company-facts": [
@@ -958,6 +998,14 @@
       "videos": 5,
       "top_video": "オリエンタルランドの年収536万円(807/0.7日)",
       "note": "いいね率0.68%で全ch最高"
+    },
+    {
+      "date": "2026-09-02",
+      "subscribers": null,
+      "total_views": null,
+      "note": "【全ch首位】27本で 再生35,505・登録26・CTR3.23%。1本あたり登録0.96は全ch最高。7日フロー 再生16,107／獲得14／解約2 も全ch最大。『実は』型が1.71 vs 0.70",
+      "top_video": "アジア大会の裏方企業、年収932万円の実態(5201)",
+      "source": "analytics.db video_metrics(09-01) + channel_metrics 7日"
     }
   ],
   "clip-lab": [
@@ -969,6 +1017,14 @@
       "videos": 0,
       "top_video": null,
       "note": "autopilot全滅（Desktop列挙権限エラー）。投稿0本"
+    },
+    {
+      "date": "2026-09-02",
+      "subscribers": null,
+      "total_views": null,
+      "note": "7本で 再生28,955・登録0・CTR1.11%(全ch最下位)。7日フローも 再生5,141／獲得0。再生は出ているが登録転換ゼロ",
+      "top_video": "SNSをやる人は天才じゃない(12707)",
+      "source": "analytics.db video_metrics(09-01) + channel_metrics 7日"
     }
   ],
   "fake-paper": [
@@ -1044,6 +1100,15 @@
       "note": "公開再生が1日で1099→4178(+3079)と解凍し6本平均698。それでも登録0人で獲得/1k 0.00は全ch唯一。図解カード(脳→波)は6枚中唯一まともだが、tagline がチャンネル名『架空論文』に退化し1枚に同じ語が3回出ている",
       "date": "2026-08-31",
       "views_delta": 3079
+    },
+    {
+      "date": "2026-09-02",
+      "subscribers": 0,
+      "total_views": 4176,
+      "videos": 7,
+      "note": "公開値は取得できた(OAuth生存)。再生4,178→4,176で横ばい。登録は依然0。09-01 の CTA/尺/ハッシュタグ改修後の1本目(3723899e)は生成済みだが未公開",
+      "top_video": "—",
+      "source": "pdca_report channel_stats"
     }
   ]
 }

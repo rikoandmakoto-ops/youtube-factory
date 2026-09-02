@@ -1005,6 +1005,36 @@
       "file": "data/channels/pokemon-lab.json",
       "change": "autopilot.auto_optimize_schedule を true → false",
       "reason": "config-dir-divergence。08-22 に全5chで false 固定した決定に対し channels 側だけ true に戻っていた（known_findings に『書き戻している疑い』として記録済みの件）"
+    },
+    {
+      "date": "2026-09-02",
+      "file": "data/channels/pokemon-lab.json",
+      "change": "theme_blacklist に『看板』『ピカチュウだけ』を追加（8→10件）。short_format.extra_rules にタイトル内の数字は多くても1つまでとするルールを追加",
+      "reason": "『ピカチュウは10%なのになぜ看板？』(08-31公開)・『森では10% なぜ看板に』(09-01生成)・『図鑑778番はピカチュウだけ真似る』で看板ネタが3本目。加えて数字入りタイトルが登録0.18 vs 数字なし0.46(n=40)"
+    },
+    {
+      "date": "2026-09-02",
+      "file": "data/channels/yokai-watch.json",
+      "change": "theme_blacklist に『3つの秘密』『元ネタが怖すぎる』を追加（10→12件）。short_format.extra_rules にタイトルへ数字を入れない／『？』で終えないルールを追加",
+      "reason": "数字あり登録0.05 vs なし0.50、『？』あり0.12 vs なし0.57(n=39)。dup_check 未カバー6件のうち4件が『#N：◯◯に隠された3つの秘密』テンプレ衝突"
+    },
+    {
+      "date": "2026-09-02",
+      "file": "data/channels/company-facts.json",
+      "change": "theme_seeds に『実は』起点の3件を追加（10→13件／JR東日本の運転士手当・公務員給与と人事院勧告・ニトリの配置転換）",
+      "reason": "company-facts-is-top-converter と cf-jitsuwa-pattern。1本あたり登録0.96で全ch首位、かつ『実は』型が1.71 vs 0.70。seedsが10件しかなく在庫が薄かった"
+    },
+    {
+      "date": "2026-09-02",
+      "file": "(変更なし)",
+      "change": "genre_blacklist は全ch据え置き",
+      "reason": "『全体平均の30%以下』の新規該当なし。daily-science 平均599.4→閾値179.8 に対し最下位の日常の違和感195.6は上回る（宇宙・天体0は登録済）、scp-lab 平均480.4→閾値144.1 に対し最下位のその他219.8は上回る（オブジェクトクラス0は登録済）。他8chは単一ジャンル『その他』のみ"
+    },
+    {
+      "date": "2026-09-02",
+      "file": "(提案のみ・未実施)",
+      "change": "OAuth 再認可、未公開9本の再投入、clip-lab のCTA/サムネ改修は実行していない",
+      "reason": "再認可はブラウザでの本人操作が必要。公開の再実行は外部への投稿を伴うため自動実行しない。clip-lab は切り抜きレンダラ側の構造変更を含む"
     }
   ]
 }

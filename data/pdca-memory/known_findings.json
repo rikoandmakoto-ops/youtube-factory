@@ -754,6 +754,46 @@
       "date": "2026-08-31",
       "id": "orchestrator-config-diverged",
       "note": "【運用・注意】data/channels/ と data/channels_orchestrator/ の同名 JSON が乖離している。2ch-matome は theme_blacklist が channels 側1件(『昼飯を当てる』)に対し orchestrator 側 0件、theme_seeds も 31 vs 32 と本数が違った。08-30 の applied_changes は target を『data/channels{,_orchestrator}/』と書いているが、実際には channels 側にしか当たっていない変更がある。どちらが生成に使われるか未確認のため、今回は両方に同じ変更を入れて blacklist も同期した。次回、生成パイプラインがどちらを読むかを確定させること。"
+    },
+    {
+      "date": "2026-09-02",
+      "id": "oauth-refresh-tokens-revoked-9ch",
+      "note": "【障害・最重要】09-01 23:00 の sync で 13ch中9ch の refresh token が invalid_grant: Token has been expired or revoked で失効。backend.log に計238件。生きているのは当日15:00に再認可した akashic-librarian / clip-animal / fake-paper / socio-rx の4つだけで、daily-science・scp-lab・pokemon-lab・yokai-watch・2ch-matome・company-facts・clip-lab・clip-fukada・clip-kaneko が全滅。結果 channel_stats/subscribers が全て null になり、pdca_report は totals.in_window=0（published_in_db は ds 191 / scp 183 と入っているので 09-01 の backfill 自体は生きている）。08-24 の同種障害と同じ形で、7日周期＝OAuth同意画面がテスト公開のままで refresh token が7日で失効している疑いが強い。"
+    },
+    {
+      "date": "2026-09-02",
+      "id": "publish-halted-9-videos-lost",
+      "note": "【障害・OAuth失効の二次被害】09-01 は job_queue で9本が completed になっているのに video_status の 09-01 行が0件（最終行は 08-31 の9件）。生成は動いたが公開が1本も通っていない。対象は scp-lab×2 / company-facts / daily-science / pokemon-lab / 2ch-matome / akashic-librarian / yokai-watch / fake-paper。丸1日分の在庫が未公開のまま残っている。再認可後に手動で公開キューを流し直す必要がある。"
+    },
+    {
+      "date": "2026-09-02",
+      "id": "company-facts-is-top-converter",
+      "note": "【チャンネル・新規・最重要】09-01 に analytics を有効化したことで初めて可視化された company-facts が、登録の実数・効率とも上位に出た。最新スナップショット27本で 登録26人・再生35,505・CTR3.23%(全ch最高)。1本あたり登録 0.96 は全ch最高で scp-lab 0.48 / daily-science 0.38 / yokai 0.28 / pokemon 0.28 / 2ch 0.14 の2〜7倍。ただし1000再生あたりで見ると cf 0.73 と scp 0.71 はほぼ互角で、差の実体は『1本あたりの再生が多い』こと(cf 1315 vs scp 675)。7日フロー(08-25〜31)では 獲得14人・再生16,107 とどちらも全ch最大。これまで PDCA の軸は scp と ds だったが、実際の登録者エンジンは company-facts。リソース配分の前提を入れ替える必要がある。"
+    },
+    {
+      "date": "2026-09-02",
+      "id": "cf-jitsuwa-pattern",
+      "note": "【タイトル・company-facts固有】company-facts では『実は』を含むタイトルが 1本あたり登録 1.71(n=7) vs 非該当 0.70(n=20) で2.4倍、平均再生も 1776 vs 1154。先頭絵文字も 1.13(n=15) vs 0.75(n=12) で有利。ただしこれは当ch固有で、2ch-matome では『実は』0.00(n=3) vs 0.16、先頭絵文字 0.00(n=4) vs 0.16、daily-science でも『実は』0.25 vs 0.39 と逆。年収・待遇という『答えが数字で確定する』題材でだけ『実は』が効くと解釈するのが妥当。他chへ横展開しないこと。"
+    },
+    {
+      "date": "2026-09-02",
+      "id": "numbers-in-title-hurt-yokai-pokemon",
+      "note": "【タイトル・新規】タイトル中の数字が yokai-watch と pokemon-lab で明確に不利。yokai(n=39) 数字あり 登録0.05／再生456 vs 数字なし 0.50／1552（登録10倍・再生3.4倍）、『？』あり 0.12／782 vs なし 0.57／1440。pokemon(n=40) 数字あり 0.18／780 vs なし 0.46／1485。一方 daily-science は数字あり0.38 vs なし0.38 で無影響、company-facts は数字が題材そのもの。08-30 の series-number-prefix-kills-subs は『#N』だけの話だったが、実際には数字全般（種族値・図鑑番号・3つの秘密）が効いている。"
+    },
+    {
+      "date": "2026-09-02",
+      "id": "clip-lab-zero-subs-high-views",
+      "note": "【チャンネル・新規】clip-lab が 08-31 の fake-paper-views-up-subs-zero と同型。最新スナップショット7本で再生28,955（うち『SNSをやる人は天才じゃない』12,707・『バーコードが通らない偽物だった』10,133）に対し登録0人、7日フローでも 5,141再生／獲得0。CTR 1.11% は全ch最下位。切り抜き素材の力で再生は出ているがチャンネルとして認識されていない。fake-paper に 09-01 で入れた CTA 順序（高評価→登録）とサムネ改修を clip-lab にも当てる必要がある。theme_seeds・theme_blacklist はどちらも0件。"
+    },
+    {
+      "date": "2026-09-02",
+      "id": "thumb-illustration-card-echoes-title",
+      "note": "【サムネ・新規】図解カードが本文テキストをそのまま複写して落ちるケースがある。daily-science 08-31 16:19 の f80899e8_short.png は、カード内に見出しと副題を再掲した『座るだけで 腰に／1.4倍 立つよ／り座る方が腰へ重』が入り、3行目が語の途中で切れている。08-31 に入れた語句ヒット数ゲート（2語未満→無地）は leaked-document 以外に効くはずだが、このテキスト複写経路は塞げていない。ゲート後に生成された縦サムネは scp-lab 6cb56ae4(09-01 08:19) と fake-paper 3723899e(09-01 18:49) の2枚しかなく、どちらも図解カードは正常もしくは非表示だったため、修正の効果判定にはまだサンプルが足りない。"
+    },
+    {
+      "date": "2026-09-02",
+      "id": "cf-photo-thumb-outperforms-illustrated",
+      "note": "【サムネ・テンプレ比較・新規】CTR上位は company-facts 3.23% > 2ch-matome 2.09% > daily-science 1.77% > yokai 1.54% > scp 1.44% > pokemon 1.26% > clip-lab 1.11%。首位の company-facts だけが実写背景テンプレ（08-31 68067fe7 は Netflix 本社の実写＋白抜き『Netflix 月1,590円』）で、他はキャラ立ち絵＋グラデ背景。実写側は欠点も多い（被写体の踏切ポールが文字に重なる／下40%が路面で空白／右下に『VOICEVOX 青山龍星』のクレジットが焼き込まれている）にもかかわらずCTRが2倍以上ある。題材が実在企業で『実物を見せられる』ことの効果か、テンプレ自体の効果かは未分離。"
     }
   ]
 }

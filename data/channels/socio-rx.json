@@ -69,7 +69,11 @@
       "side": "none",
       "speaker_id": 13,
       "dir": null,
-      "text_color": [245, 245, 240],
+      "text_color": [
+        245,
+        245,
+        240
+      ],
       "expressions": [],
       "role": "社会構造の処方士。穏やかな声で構造を解き明かし、最後に処方箋を出す。",
       "appearance": null
@@ -109,9 +113,21 @@
   },
   "thumbnail_template": {
     "badge_text": "処方箋",
-    "badge_color": [20, 80, 60],
-    "hook_color": [245, 245, 240],
-    "subtitle_color": [120, 200, 170],
+    "badge_color": [
+      20,
+      80,
+      60
+    ],
+    "hook_color": [
+      245,
+      245,
+      240
+    ],
+    "subtitle_color": [
+      120,
+      200,
+      170
+    ],
     "style_hint": "深いティールグリーン〜ダークネイビーの背景。処方箋・メディカル・設計図のイメージ。白い明朝体テキスト、アクセントにエメラルドグリーン。清潔感と知性。ラグナロクの紫暗闇とは明確に差別化する。"
   },
   "defaults": {
@@ -325,9 +341,22 @@
       "text_margin_x": 110
     },
     "colors": {
-      "bg_color": [10, 30, 28, 255],
-      "text_box_color": [0, 0, 0],
-      "text_stroke_color": [0, 0, 0],
+      "bg_color": [
+        10,
+        30,
+        28,
+        255
+      ],
+      "text_box_color": [
+        0,
+        0,
+        0
+      ],
+      "text_stroke_color": [
+        0,
+        0,
+        0
+      ],
       "thumb_overlay_opacity": 195
     },
     "audio": {
@@ -386,7 +415,12 @@
     },
     "analytics": {
       "enabled": false,
-      "track_metrics": ["views", "watch_time", "ctr", "retention"],
+      "track_metrics": [
+        "views",
+        "watch_time",
+        "ctr",
+        "retention"
+      ],
       "auto_adjust": false
     },
     "effects": {
@@ -423,26 +457,51 @@
   "autopilot": {
     "enabled": false,
     "schedule": {
-      "days_of_week": [0, 1, 2, 3, 4, 5, 6],
+      "days_of_week": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "hour": 20,
       "minute": 0,
       "times": [
         {
           "hour": 20,
           "minute": 0,
-          "days_of_week": [1, 2, 3, 4, 5]
+          "days_of_week": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
         },
         {
           "hour": 15,
           "minute": 0,
-          "days_of_week": [0, 6]
+          "days_of_week": [
+            0,
+            6
+          ]
         }
       ]
     },
     "duration_minutes": 1,
     "gen_type": "short",
     "publish_lead_minutes": 45,
-    "theme_queue": [],
+    "theme_queue": [
+      {
+        "id": "adb54cda",
+        "title": "サッカー移籍が教える自己ブランドの構築法",
+        "angle": "移籍の背景にある印象管理と文化資本の視点から、自己ブランディングの重要性を解説します。",
+        "priority": "high",
+        "source": "trend_scanner"
+      }
+    ],
     "auto_optimize_schedule": true
   },
   "short_series_name": "",
