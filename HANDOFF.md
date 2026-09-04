@@ -1,6 +1,58 @@
 # YouTube Factory 引き継ぎ書
 
-最終更新: 2026-09-01 / 作業ツリー: **未コミット多数あり（`data/` 配下の実行結果が中心）**
+最終更新: 2026-09-04 / 作業ツリー: コミット済み
+
+> **2026-09-04 の変更まとめ** — 「自然文ルールは守られない」を前提に、施策を**機械ゲート**へ移した回
+>
+> | 内容 | 状態 |
+> |---|---|
+> | **ch横断の同語ゲート** | ✅ 新設 `pipeline/auto_scenario/cross_channel_gate.py`。同日・全ch合計で**同一キーワードは2本まで**。09-03 に「正体」が5ch同時に出た件の対策。テーマ取り出し時（`_pop_or_refill_theme`）と最終タイトル確定時（`generator._enforce_cross_channel_keywords`）の2箇所で見る。状態は `data/analytics/cross_channel_keywords.json`（日付が変われば破棄） |
+> | **タイトルの機械ゲート** | ✅ 新設 `pipeline/title_constraints.py`。`title_rules.hard_constraints` **だけ**が backend に読まれる（`require_*` 等の旧フィールドは 09-03 の検証どおり未参照のまま）。違反時は LLM 再生成2回 → それでも駄目なら決定論的に書き換える。適用: `yokai-watch`=数字禁止 / `pokemon-lab`=数字1つまで＋「なぜ」始まり禁止 / `fake-paper`=実在ブランド語の禁止 |
+> | 旧ルールとの矛盾解消 | ✅ 09-03 に全ch一律で入れた「数字＋単位を全タイトルに1つ」は yokai/pokemon の実測と正面から矛盾していた。両chの `theme_priority.title_style` に無効化の追記を入れた（上書きはしていない） |
+> | **判断軸を一本化** | ✅ 新設 `pipeline/optimization_policy.py`。全13chに `optimization` ブロック。**改善指標は 登録者/1000再生 のみ**。維持率は参考値へ降格し、`retention_feedback_loop`（シナリオ書き換え）と `scenario_feedback`（プロンプト注入）から**外した**。PDCA レポートに「判断軸」節と xlsx 列を追加 |
+> | サムネ: 図解カード | ✅ 「値が未確定なら描かない」。`pillow_illustration.has_confident_render()` を新設し、語彙未ヒット時の**テーマ文ぶつ切りカード**と**一律の人型シルエット**を出さないようにした。流出文書風の偽寸法「?.?m」の印字も廃止 |
+> | サムネ: 空き帯の処理 | ✅ カードを描かないときは立ち絵（幅 0.48→0.53 / 高さ 0.34→0.46）と見出し（×1.16）を拡大し、テキストを立ち絵上端まで含めた帯の中央に置いて詰める |
+> | サムネ: 黄色帯 | ✅ **1行強制**。最小フォントでも収まらなければ末尾を「…」でトリム、それでも無理なら**帯自体を出さない**（従来は2行折り返しで見出しと競合していた） |
+> | サムネ: ホラー系の表情 | ✅ `scp-lab / yokai-watch / akashic-librarian / fake-paper` は驚愕・戦慄側の差分（surprise → angry → sad）を優先。`thumbnail_template.expression_mood` で ch 単位に上書き可 |
+> | 実写背景の一致検証 | ✅ 企業名（`entity`）とヒットのタイトル/出典URLを照合してから採用。一致しなければ最大4件まで次候補を試し、駄目ならその枠は使わない。キャッシュも企業ごとに分離（従来は `collected_000.png` が別企業の回で再利用されていた） |
+> | **投稿量を増やした** | ✅ 1日あたり **15枠 → 34枠**。台本系8chは全て3本/日。切り抜きは clip-lab 3 / clip-kaneko 3 / clip-animal 2 / clip-fukada 2。枠の間隔は burst guard（90分）を満たす。テーマキューは +240本補充し、各ch 11〜17日分の在庫 |
+> | **fake-paper の立て直し** | ✅ コンセプト外テーマ12件を除去＋blacklist（マック/RTX 5090/アベンジャーズ 等、`avoid_categories` の「実在の企業・団体を主語にした嘘」違反）。企画構造を「読み上げ」から**「視聴者が判定に参加する形」**へ（2行目で『信じましたか』と問い、7行目で必ず回収→コメント動機と登録動機を同じ導線に載せる） |
+> | ゴミ流入の遮断 | ✅ `trend_scanner` を切り抜き4ch＋fake-paper で停止（`trend_scanner.enabled=false`）。`series_engine` の定型フォールバック3種（「〜に隠された本当の理由を掘り下げる」等）を**既定で無効**にした。ANTHROPIC_API_KEY が無い間ずっとこれが採用され、キューに溜まり続けていた |
+> | テスト | ✅ `tests/test_title_gates_20260904.py` 追加（14件）。全 395 件中、失敗は**既知の3件のみ**（§6 の 0-d と同じ） |
+>
+> ⚠️ **未解決のまま持ち越し**: OAuth 7日失効（GCP 同意画面の本番公開が必要）/ `ANTHROPIC_API_KEY` 未設定 /
+> 切り抜き4chの素材枯渇（特に `clip-fukada` は実質ゼロ。枠だけ増やしても素材が無ければ失敗が増えるだけ）/
+> 切り抜き4chのテーマキュー計111件のゴミ（流入は止めたが**既存分は消していない**。切り抜きは使わないので実害なし）。
+
+> **2026-09-03 の変更まとめ**（詳細は `MEMORY_UPDATE_20260903.md`（朝）と `MEMORY_UPDATE_20260903_night.md`（深夜））
+>
+> | 内容 | 状態 |
+> |---|---|
+> | 🚨 **OAuth 失効は誤診だった** | ✅ **正常動作していた**。`expires_at` は naive UTC を `.timestamp()` した値で**真の期限より9時間手前**。13ch全てで `updated_at − expires_at = 28,800秒` で一致。**失効判定は `expires_at + 32400` と比較すること** |
+> | 本日の公開実績 | ✅ **12本に video_id が付与された**（moviepy 系8ch すべて成功。即時4本 / 予約8本） |
+> | `clip-kaneko` 初投稿 | ✅ `mz_5-8LG4b8`（14:00）。08-24 稼働開始から10日目 |
+> | `clip-animal` 初投稿 | ✅ `EZZqGk4U4-g`（16:55）。`clip.external_sources.enabled` が false だった設定バグを修正して開通 |
+> | `clip-lab` 国内枠 | ✅ `hmwRNtzCMgM`（16:54）。7日連続ゼロを脱した |
+> | `clip-fukada` | ❌ 3枠すべて失敗。**素材が実質ゼロで切り抜き4ch中もっとも深刻** |
+> | タイトル分析の全面見直し | ✅ チャンネル内対照で再測定。「？」必須化を撤回、「正体」のみ採用（→ 朝メモ §3） |
+> | 🆕 OpenAI API 429 | ❌ **本日新規**。`clip-kaneko` 20:30 枠がフック生成で落ちた。残高/レート上限の問題 |
+> | 🆕 Reddit RSS 429 | ❌ **本日新規**。8サブレディット中6つが取得失敗。`REDDIT_CLIENT_ID` 未設定のため |
+> | ⚠️ テーマキューが2箇所ある | 実際に使われるのは `data/channels/<ch>.json` の `autopilot.theme_queue`。同名の `data/channels/<ch>/theme_queue.json` は**死んでいる**（最終補充 06-22〜08-30） |
+> | ⚠️ `trend_scanner` が切り抜きchを除外していない | 切り抜き4ch にゆっくり解説用テーマが**計120件**溜まっている（完全なゴミデータ） |
+> | ⚠️ 「数字＋単位を必須」の副作用の疑い | 本日の2本に意味不明な同じ「127」が入った。要調査 |
+> | GCP 同意画面の本番公開 | ❌ **未着手のまま**。テスト中である限り7日で再発する（08-24・08-31・09-02 と3回）。次は 09-09 前後 |
+> | `ANTHROPIC_API_KEY` | ❌ `backend/.env` に**行自体が無い**。clip-lab 海外枠が毎日失敗し依頼書が**8件**滞留 |
+> | `client_secret.json` 不在 | ℹ️ **実害なし**。アップロードは `oauth_tokens` DB 経由で成立している。優先度を下げてよい |
+
+> **2026-09-02 の変更まとめ**
+>
+> | 内容 | 状態 |
+> |---|---|
+> | Git リモートを用意して push | ✅ 完了（`origin` = https://github.com/rikoandmakoto-ops/youtube-factory.git。`origin/main` が HEAD と一致。残タスク2は消し込み） |
+> | 09-02 の PDCA をコンフィグへ反映 | ✅ 完了（テーマキュー +37本 / speed 引き下げ / 答えの遅延 / 2ch endcard。→ `MEMORY_UPDATE_20260902.md`） |
+> | 🚨 OAuth 失効 | ❌ **未解決・2日連続**。09-02 も生成9本のうち公開できたのは2本だけ（→ §6 の 0-a） |
+> | 切り抜き4ch | ❌ **6日連続ゼロ**（最終公開は clip-lab の 08-27。原因はch別で全て未解決） |
+> | `video_status` の `published_at` が NULL | ⚠️ 新規発見。予約公開は `status='scheduled'` / `published_at=NULL` で入るため、`published_at` で集計すると 09-01・09-02 の成功分が0件に見える（→ §5） |
 
 > **2026-09-01 の変更まとめ**
 >
@@ -24,23 +76,48 @@
 全自動で回す動画ファクトリー。1本のパイプラインを設定ファイルで多チャンネルに展開する構成。
 
 現在 **13 チャンネル**が `data/channels/` に定義され、**12 チャンネルが autopilot 有効**
-（`socio-rx` のみ `enabled: false`）。以下は **2026-09-01 23:00 時点の実設定**（`data/channels/<id>.json` を実読み）。
+（`socio-rx` のみ `enabled: false`）。以下は **2026-09-03 23:20 時点の実設定・実績**
+（`data/channels/<id>.json` と `data/video_publish.db` を実読み）。
 
-| チャンネル ID | 名前 | autopilot | 投稿時刻（平日 / 土日） | 直近14日 公開 | 累計公開 | 最終公開 |
-|---|---|---|---|---:|---:|---|
-| `scp-lab` | ゆっくり異常存在SCPラボ | ✅ | 09:00・19:00 / 18:00・19:00 | 25 | 183 | 08-31 |
-| `daily-science` | リコとマコトのゆっくり日常科学 | ✅ | 17:00 / 18:00 | 18 | 191 | 08-31 |
-| `pokemon-lab` | ゆっくりポケラボ | ✅ | 17:30 / 18:00 | 17 | 40 | 08-31 |
-| `yokai-watch` | ゆっくり妖怪ラボ | ✅ | 19:00 / 12:00 | 17 | 39 | 08-31 |
-| `2ch-matome` | ゆっくり2chスレまとめ劇場 | ✅ | 18:00 / 18:00 | 22 | 35 | 08-31 |
-| `company-facts` | 企業のホンネ | ✅ | 17:00 / 18:00 | 19 | 27 | 08-31 |
-| `fake-paper` | 虚構論文チャンネル | ✅ | 19:30 / 13:15 | 6 | 7 | 08-31 |
-| `akashic-librarian` | ラグナロクの司書 | ✅ | 18:45 / 13:45 | 6 | 7 | 08-31 |
-| `clip-lab` | ゆっくり解説 切り抜きラボ | ✅ | 17:45（国内）＋ 20:45（海外バイラル・毎日） | 7 | 7 | **08-27** |
-| `clip-fukada` | 深田えいみ 切り抜きチャンネル | ✅ | 20:00（毎日） | 0 | 0 | **未** |
-| `clip-kaneko` | 金子みゆ 切り抜きチャンネル | ✅ | 08:00・14:00・20:30（毎日） | 0 | 0 | **未** |
-| `clip-animal` | 動物情報局 | ✅ | 18:00（毎日） | 0 | 0 | **未** |
-| `socio-rx` | 社会学の処方箋 | ❌ | 20:00 / 15:00 | 0 | 0 | **未** |
+| チャンネル ID | 名前 | autopilot | 投稿時刻（平日 / 土日） | 累計公開 | 最終公開 | speed | キュー残 | 登録/千再生 |
+|---|---|---|---|---:|---|---:|---:|---:|
+| `scp-lab` | ゆっくり異常存在SCPラボ | ✅ | 09:00・19:00 / 18:00・19:00 | 185 | **09-03**（2本） | 1.2 | 15 | 0.58 |
+| `daily-science` | リコとマコトのゆっくり日常科学 | ✅ | 17:00 / 18:00 | 192 | **09-03** | 1.2 | 18 | 0.54 |
+| `pokemon-lab` | ゆっくりポケラボ | ✅ | 17:30 / 18:00 | 41 | **09-03** | 1.2 | 12 | 0.30 |
+| `yokai-watch` | ゆっくり妖怪ラボ | ✅ | 19:00 / 12:00 | 40 | **09-03** | 1.2 | 18 | 0.28 |
+| `2ch-matome` | ゆっくり2chスレまとめ劇場 | ✅ | 18:00 / 18:00 | 36 | **09-03** | 1.25 | 23 | **0.16**（最下位） |
+| `company-facts` | 企業のホンネ | ✅ | 17:00 / 18:00 | 28 | **09-03** | 1.2 ※対照群 | 26 | **0.73** |
+| `fake-paper` | 虚構論文チャンネル | ✅ | 19:30 / 13:15 | 9 | **09-03** | 1.3 | 20 | 0.00 |
+| `akashic-librarian` | ラグナロクの司書 | ✅ | 18:45 / 13:45 | 9 | **09-03** | 1.15 | **8**（最少） | **0.83**（1位） |
+| `clip-lab` | ゆっくり解説 切り抜きラボ | ✅ | 17:45（国内）＋ 20:45（海外バイラル・毎日） | 8 | **09-03**（国内枠。海外枠は失敗） | 1.0 | 37 ※ゴミ | 0.00 |
+| `clip-kaneko` | 金子みゆ 切り抜きチャンネル | ✅ | 08:00・14:00・20:30（毎日） | **1** | **09-03（初投稿）** | 1.0 | 38 ※ゴミ | — |
+| `clip-animal` | 動物情報局 | ✅ | 18:00（毎日） | **1** | **09-03（初投稿）** | 1.0 | 14 ※ゴミ | — |
+| `clip-fukada` | 深田えいみ 切り抜きチャンネル | ✅ | 20:00（毎日） | 0 | **未**（3枠すべて失敗・素材ゼロ） | 1.0 | 31 ※ゴミ | — |
+| `socio-rx` | 社会学の処方箋 | ❌ | 20:00 / 15:00 | 0 | **未**（運用可否が未決） | 1.1 | 4 | — |
+
+> ⚠️ **「キュー残」は `data/channels/<ch>.json` の `autopilot.theme_queue` の件数**（これが生成で使われる）。
+> 同名の `data/channels/<ch>/theme_queue.json` は `auto_scenario/theme_queue.py` 管理の**別物で死んでいる**
+> （最終補充 06-22〜08-30・30字超タイトルが多数残存）。**編集するなら前者。**
+>
+> ⚠️ **切り抜き4ch の「※ゴミ」は、`trend_scanner` / `series_engine` が流し込んだ
+> ゆっくり解説用テーマ（計120件）。** 切り抜きchは元動画から区間を切るのでテーマキューを使わない。
+> 例: `clip-fukada` に「久保建英の成長」「嵐の魅力」「アリアナ・グランデの音楽と心理学」。
+> **対象chから `style: clip` 系を除外する設定が必要。**
+>
+> ⚠️ **BGM は 13ch すべて未設定。** `analytics.enabled` は `socio-rx` 以外の12chで true。
+
+> ℹ️ **2026-09-03 に判明した重要な訂正:**
+> - **`clip-animal` は「一度も動いたことがない」ではなくなった。** 09-03 に初投稿。
+>   原因は `clip.external_sources.creative_commons.enabled` が true なのに
+>   **親の `clip.external_sources.enabled` が false** だった設定バグ。18:30 に修正済み
+>   （バックアップ `clip-animal.json.bak_20260903_clipfix`）。
+>   ただし `clips_per_video: 1` なので素材1本＝クリップ1本で即枯渇する。
+> - **`clip-kaneko` も累計0ではなくなった**（09-03 初投稿）。3枠のうち 08:00 と 20:30 は失敗し、
+>   20:30 の失敗は **OpenAI API 429** が原因（素材問題ではない）。
+> - **`clip-lab` は「6〜7日連続ゼロ」ではない**（09-03 に公開）。ただし別実行では
+>   「未使用の切り抜き区間が残っていません」で失敗しており**素材枯渇は解消していない**。
+> - `clip-lab` は直近14日で **平均再生 4,136 で全ch断トツ首位**（company-facts の約2.8倍）。
+>   **ただし登録は0人。** 再生数だけで優先度を判断すると過大評価になる。
 
 > ⚠️ **2026-09-01 深夜の点検で判明した、この表の旧版が間違っていた点**（同日中に修正）:
 > - 「8チャンネル」ではなく **13チャンネル**。表に `fake-paper` / `clip-animal` / `socio-rx` が無かった。
@@ -132,7 +209,7 @@ YouTube チャンネルと OAuth は clip-lab の既存のものをそのまま�
 | Vercel orgId | `team_r5d4Rpbmwu5q0EryE985968c` |
 | ローカル API | `http://localhost:8000`（`/health` は 200 を返す＝稼働中） |
 | 外部公開 URL | `https://agreeing-corrode-shabby.ngrok-free.dev` → localhost:8000（ngrok 固定ドメイン） |
-| Git リモート | **未設定**。GitHub 等へのバックアップが無い（214 コミットがこのマシンにしか無い） |
+| Git リモート | ✅ **2026-09-02 に設定・push 済み**。`origin` = https://github.com/rikoandmakoto-ops/youtube-factory.git（`neworigin` も同URLで残置）。`origin/main` はローカル HEAD と一致 |
 
 ### 常駐プロセス（launchd）の現況
 
@@ -194,6 +271,14 @@ YouTube チャンネルと OAuth は clip-lab の既存のものをそのまま�
 
 検証: scp-lab の `subscriber_sources` が「全部 unknown」から
 `shorts 100% / 0.626 登録per1000再生` に復旧。
+
+> ⚠️ **2026-09-02 に見つかった落とし穴 — `published_at` で集計してはいけない。**
+> 予約公開（autopilot の通常経路）で入る行は `status='scheduled'` / **`published_at` が NULL** のまま。
+> そのため `video_status` の `max(published_at)` は **08-31 で止まって見える**が、実際には
+> 09-01 の `ryQIYHgujm4`・`LJpzN0NJFBw`、09-02 の `MWdbvHEeNhc`・`UKKWkdWN1MI` が
+> `scheduled` として記録されている。**日次の公開本数を数えるときは `status` と挿入時刻で見ること。**
+> あわせて **09-01 09:00 に即時公開できた scp-lab の `iAHGnvpHJwk` は `video_status` に1行も無い**。
+> 即時公開経路の記録漏れが残っている疑いがあるので、次に触るときはここを確認する。
 
 ```bash
 python3 backend/backfill_video_status.py --dry-run   # 欠損の件数だけ見る
@@ -299,6 +384,28 @@ autopilot が `job.title + "【ショート】"` のフォールバックに落�
 ### 2026-09-01 に判明して未解決のもの（最優先）
 
 0-a. 🚨 **OAuth リフレッシュ失敗が 2ch から 10ch に広がった（2026-09-01 深夜に判明・最優先）。**
+
+   > **【2026-09-02 深夜 追記】まだ直っていない。2日連続で同じ損失が出ている。**
+   > 09-02 の実績は **生成9本 → 公開2本**（akashic-librarian `MWdbvHEeNhc` / fake-paper `UKKWkdWN1MI`）。
+   > 残り7本（scp-lab 09:00・19:00 / daily-science / company-facts / pokemon-lab / 2ch-matome / yokai-watch）は
+   > 全て「⚠️ 自動公開スキップ — トークン失効のため要再認可」。切り抜き4ch も別要因で全滅（0-a-3）。
+   >
+   > **09-02 の PDCA が示す失効/正常の切り分け（`data/reports/latest.md` 冒頭）:**
+   >
+   > | 状態 | チャンネル |
+   > |---|---|
+   > | ❌ 失効 (9ch) | clip-fukada / clip-kaneko / daily-science / scp-lab / yokai-watch / 2ch-matome / pokemon-lab / company-facts / clip-lab |
+   > | ✅ OK・残り4.62日 (4ch) | akashic-librarian / clip-animal / fake-paper / socio-rx |
+   >
+   > **正常な4chは「残り4.62日」＝GCP 同意画面がテスト中のときの7日上限に乗っている。**
+   > つまり**放置すると 09-07 前後にこの4chも同じように失効する**。
+   > 再認可だけでは同じことが7日おきに起きるので、**GCP 同意画面の「本番」公開**
+   > （https://console.cloud.google.com/auth/audience / project 844705815004）まで
+   > やらないと恒久解決しない。これを 0-a の本命の打ち手として扱うこと。
+   >
+   > `backend/pipeline/youtube_oauth.py` と `backend/check_youtube_tokens.py` は 09-02 に更新されているが、
+   > `backend/pipeline/credentials/client_secret.json` は依然として無く、
+   > アップロード経路は `FileNotFoundError: client_secret.json が見つかりません` で落ち続けている（09-02 に5回）。
    `logs/backend.log` の集計では
    daily-science 40件 / scp-lab 27 / yokai-watch 26 / pokemon-lab 26 / company-facts 26 /
    clip-lab 25 / fake-paper 24 / clip-kaneko 17 / akashic-librarian 14 / clip-fukada 13
@@ -377,7 +484,7 @@ autopilot が `job.title + "【ショート】"` のフォールバックに落�
 ### インフラ・運用
 
 1. ~~未コミット 114 件の整理とコミット~~（2026-09-01 にコード分をコミット済み）
-2. **Git リモートを用意して push**（コミットがローカルのみ。バックアップ皆無）
+2. ~~**Git リモートを用意して push**~~ — ✅ **2026-09-02 完了**（→ §3）。以後はコミットしたら push まですること
 3. **`com.youtube-factory.pdca` を load**（毎日の PDCA レポート生成が止まっている）
 4. **`com.youtube-factory.agent` の扱いを決める**（`agent/` は退役済み＝この plist は今 load すると失敗する。削除するか ai-orchestrator に寄せる）
 
@@ -457,3 +564,112 @@ npm run typecheck              # tsc --noEmit
 
 `/api/*` は JWT 認証。`APP_PASSWORD` でログインしてトークンを取り、`Authorization: Bearer` を付ける
 （ai-orchestrator も同じ手順で叩いている。実装は `ai-orchestrator/src/tools/youtube_factory.py` が参考になる）。
+
+---
+
+## 9. 2026-09-03 指揮者定時実行の記録
+
+### 🚨 OAuth: 全13chが失効（最優先）
+
+`data/youtube_tokens.db` 実測（09-03 10:04）で **残寿命がプラスのチャンネルはゼロ**。
+09-02 の「09-07 前後に全滅」という予測より5日早く、09-02 15:01 には既に全滅していた。
+
+| 失効時刻 | ch |
+|---|---|
+| 08-31 05:07 | clip-fukada / clip-kaneko |
+| 08-31 15:00 | daily-science |
+| 09-01 03:04〜06 | 2ch-matome / clip-lab / company-facts / pokemon-lab / scp-lab / yokai-watch |
+| 09-02 15:00〜01 | akashic-librarian / clip-animal / fake-paper / socio-rx |
+
+再認可だけでは7日ごとに再発する（08-24・08-31・09-02 で既に3回）。
+恒久策は GCP 同意画面の本番公開 → https://console.cloud.google.com/auth/audience?project=844705815004
+実行手順は `restart_and_trigger_20260903.command` に落としてある。
+
+`video_metrics` が moviepy 6ch中5chで 08-31 停止しているのも原因は同一（データ基盤の別障害ではない）。
+このため **09-02 の speed 引き下げ実験は変更後データが1件も無く、09-05 期限の判定ができない**。
+期限は再認可後にデータが揃うまで延長。
+
+### ★ A/B判断は必ずチャンネル内対照で行うこと
+
+これまでのタイトル分析はチャンネルをまたいで あり/なし を比較しており、
+**「どの語が効くか」ではなく「どのチャンネルが強いか」を測っていた**。
+登録/千再生は company-facts 0.73 vs 2ch-matome 0.16 と 4.6倍違うため、
+強いチャンネルに多い語は何であれ有意に見えてしまう。
+
+同一ch内で比較し直した結果（n=286・公開07-05以降・100再生以上）:
+
+| 特徴 | 有 | 無 | 効果量 | 判定 |
+|---|---:|---:|---:|---|
+| 「正体」 | 0.64 | 0.42 | 1.53倍 | **強く採用**（4ch全て同方向） |
+| 数字＋単位 | 0.61 | 0.39 | 1.56倍 | 採用 |
+| 「実は」 | 0.51 | 0.49 | 1.03倍 | 効果なし |
+| 絵文字 | 0.48 | 0.47 | 1.03倍 | 効果なし |
+| 「なぜ」 | 0.42 | 0.45 | 0.94倍 | 効果なし |
+| 連番 #NN： | 0.40 | 0.48 | 0.84倍 | 負・禁止継続 |
+| 「？」疑問形 | 0.37 | 0.60 | 0.62倍 | **負・必須化を撤回** |
+
+**08-23 の「疑問符2.16倍」「なぜ1.58倍」「実は0.70倍で禁止」は全て交絡による誤りとして撤回した。**
+再現したのは「正体」（08-23夜の2.10倍 → 1.53倍）と連番の劣後（08-31）のみ。
+
+### 高評価率 → 登録（08-29 の発見が再現）
+
+n=339 で四分位ごとに 0.23 / 0.37 / 0.52 / 0.75 と単調増加、**Q4はQ1の3.3倍**。
+登録の観測レバーは終盤維持率でも尺でもなく高評価率、という結論は維持。
+
+### 維持率
+
+6ch全てが再生位置15〜25%地点に最大離脱（-0.15〜-0.21）。
+差が出るのは底の深さで、50%地点は company-facts 0.62 に対し他ch 0.33〜0.43。
+原因は後半の情報密度（他chは4行目をたとえ話で埋めて数字が途切れる）。
+→ 4行目・5行目に新規数字を1つずつ置くルールを全chへ追加。
+
+### 適用済みコンフィグ変更（バックアップ `*.bak_pdca_20260903b`）
+
+`title_rules` に `require_shoutai_per_batch=1` / `require_number_with_unit=true` /
+`require_question_mark=false` を追加。`theme_priority.title_style` を断定形＋数字既定に変更。
+`short_format.extra_rules` へ高評価CTA優先と4・5行目数字必須を挿入。
+テーマキュー +28本（pokemon-lab 3→15 ※枯渇寸前 / daily-science 12→18 / scp-lab 10→16 / yokai-watch 15→19）。
+
+**反証条件（09-08）**: 「正体」の効果量が1.2倍を下回れば必須化を撤回。
+断定形 vs 疑問形の再比較、50%地点維持率が0.45を超えたかも同日に確認する。
+
+### 要対応（登録転換の構造問題）
+
+**2ch-matome は AVP 52.7%＝2位・平均再生912＝3位と閲覧指標は良いのに、登録/千 0.16 で最下位**
+（company-facts の1/5）。尺や速度ではなく企画構造の問題。次回 company-facts型
+（継続的に得する情報）の要素を投入して比較する。未着手。
+
+**clip-lab は平均再生4,136で断トツ首位だが登録は0人**。09-02 メモの「1本あたり再生1位」は
+事実だが、再生数だけで素材追加の優先度を判断すると過大評価になる点を併記しておく。
+
+### 指揮者の実行環境（毎回ここで詰まる）
+
+指揮者はサンドボックス Linux VM 上で動作し、**Mac の `localhost:8000` へ到達できない**。
+Phase 1（API実績取得）と Phase 4（トリガ）は `.command` に落として Mac 上で実行する必要がある。
+
+ただし **autopilot は Mac 上で既にスケジュール稼働している**（09-03 も scp-lab が 08:15 に発火）。
+company-facts 16:15 / 2ch-matome 17:15 / scp-lab・yokai-watch 18:15。通常は手動トリガ不要。
+
+09-02 の `.command` が使っていた `POST /api/autopilot/{ch}/trigger` は**存在しないパス**。
+正しくは `POST /api/channels/{ch}/autopilot/run-now` ＋ `Authorization: Bearer`
+（`POST /api/auth/login` に `APP_PASSWORD` を投げてトークン取得）。09-03 版で修正済み。
+
+生成物: `reports/youtube_analysis_20260903.xlsx` / `restart_and_trigger_20260903.command` /
+`MEMORY_UPDATE_20260903.md`
+
+### 2026-09-03 検証で判明した重要事項（コンフィグを触る前に必ず読む）
+
+**1. `title_rules` は backend が読まない。** `require_*` も `max_chars` も `forbid_patterns` も
+参照コードが1件も無い。`generator.py` が実際に読むのは `theme_priority`（`title_style` /
+`good_examples` / `viral_hooks`）11箇所、`short_format` 9箇所、`voice_style.style_rules` 3箇所のみ。
+**読まれないフィールドに書いた施策は、適用済みに見えて何も起きていない。**
+変更前に必ず grep で確認すること。09-03 に `title_rules.enforced_by_backend=false` と注記済み。
+
+**2. `theme_priority.title_style` は上書きせず追記する。** 09-03 に6ch一律で上書きしてしまい、
+2ch-matome のスレタイ型（一人称「ワイ」・語尾「w」）、scp-lab のSCP番号必須、
+company-facts の企業名必須が消えた。しかも共通文の「断定形を既定・疑問符は必須にしない」が
+2ch-matome の勝ちパターンと矛盾していた。修正済み（旧文＋`──【日付 追記】──` の形）。
+**6chに同じ文字列を書き込んでいる時点で、ほぼ確実に何かを消している。**
+
+**3. 効果量の n を必ず併記する。** 「正体」が4ch全て同方向というのは正しいが、
+pokemon-lab は n=3 で採用基準ギリギリ。09-08 の再測定では pokemon-lab を除いた3chの効果量も併記する。

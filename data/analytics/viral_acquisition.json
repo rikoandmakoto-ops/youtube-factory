@@ -65,6 +65,28 @@
       "status": "skipped",
       "note": "尺 5s が範囲外",
       "seen_at": "2026-09-02T20:47:36"
+    },
+    "reddit:1w5ec3v": {
+      "post_id": "1w5ec3v",
+      "platform": "reddit",
+      "title": "Next gen umbrella",
+      "media_url": "https://v.redd.it/o3g56hgwp4nh1/HLSPlaylist.m3u8",
+      "permalink": "https://www.reddit.com/r/Unexpected/comments/1w5ec3v/next_gen_umbrella/",
+      "community": "r/unexpected",
+      "author": "Bhosad--Pappu",
+      "score": 0,
+      "num_comments": 0,
+      "created_utc": 0.0,
+      "duration_sec": 2.0,
+      "over_18": false,
+      "nsfw_verified": false,
+      "origin": "reddit_rss:unexpected:w3",
+      "local_path": null,
+      "gate_ok": true,
+      "gate_reason": "内容ゲート通過（NSFWフラグなし・禁止語なし）",
+      "status": "skipped",
+      "note": "尺 2s が範囲外",
+      "seen_at": "2026-09-03T16:59:19"
     }
   }
 }

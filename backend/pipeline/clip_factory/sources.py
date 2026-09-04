@@ -27,6 +27,17 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 SCENARIOS_DIR = PROJECT_ROOT / "data" / "scenarios"
 STATE_PATH = PROJECT_ROOT / "data" / "analytics" / "clip_state.json"
 
+
+class SourceExhausted(RuntimeError):
+    """この元動画からはもう切り抜けない。呼び出し側は次の素材に進めばよい。
+
+    pick_source は「切り抜き済みの本数 < clips_per_video」でしか在庫を判定
+    できないので、尺条件に合う区間が尽きた動画を何度でも選び直してしまう。
+    実際 clip-lab は 2026-08-27 以降、同じヒカキン回を掴んでは
+    「未使用の切り抜き区間が残っていません」で毎日 1 本も出せていなかった。
+    素材の枯渇はパイプラインの故障ではないので、次の素材へ回す。
+    """
+
 # video_generator.OUTPUT_BASE と同じ場所。env で差し替え可能にしておく
 OUTPUT_BASE = Path(os.environ.get("VIDEO_OUTPUT_BASE") or (Path.home() / "Desktop" / "動画出力用"))
 

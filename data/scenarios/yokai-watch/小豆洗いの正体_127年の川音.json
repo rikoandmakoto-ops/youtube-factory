@@ -1,0 +1,501 @@
+{
+  "title": "小豆洗いの正体 127年の川音",
+  "theme": {
+    "title": "小豆洗いの正体、なぜ川辺の音だけが127年語り継がれたのか",
+    "angle": "年数の具体数字で引く。ゲームの可愛さと原典の落差を作る"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "見た目は可愛い小豆洗い、元ネタでは川へ誘う音だったんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームだと小豆を洗うだけでしょ？ それ好きなやつ！ でも答えはまだ？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "でも元の伝承を調べると、1899年の『芸備日日新聞』に川音の記録が残る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "しかも127年後の今も聞くって？ 同じ川辺だけなのが変だよ、え、待って怖い。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "正体は姿ではなく、足を止めた人へ近づく音かもしれない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "高評価を置いて、元ネタが怖い妖怪シリーズも。毎日投稿中、1万人目標のチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？ あなたがゲームで見た小豆洗いの軽い掛け声、その元ネタには川から人を遠ざけるための不穏な音があるんだ。可愛い見た目を思い出したまま、127年残った記録を聞いてほしい。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "小豆洗いって、妖怪ウォッチでは小豆を洗っている感じが妙に可愛いあいつだよね。それ好きなやつ！ でも川の音が127年も残るって、ゲームの話だけじゃなさそうで気になるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "今回は小豆洗いの正体を、明治32年、つまり1899年の資料から追うんだ。答えは最初から一つに決めないけれど、なぜ川辺の音だけが語り継がれたのかは見えてくる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。小豆を洗う音なんて、水が石に当たる音と区別できるの？ それなのに名前まで残ったなら、最初に聞いた人は何か言葉みたいなものも聞いたのかな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで一段、声を落とす。ゲームではこう描かれてるけど、元の伝承では小豆を洗うか、人を取るかと問いかける声が、夜の川辺から聞こえると書かれている。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "小豆洗いは、全国で同じ姿を持つ一体の妖怪ではないんだ。広島、岡山、徳島、加賀などで、川の音を聞いた人々が似た怪異へ同じ名前を与えてきたと考えられる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "同じ小豆洗いでも、出る場所が広島と加賀で離れてるんだね。学校の七不思議がクラスごとに少し違うみたいに、土地ごとに怖がられた理由があるのかな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承の中心にあるのは姿ではなく音なんだ。暗い川岸で、ざらざら、しゃらしゃらと豆を水で洗うような気配がし、聞いた人の足を自然に水辺へ向けさせる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "有名な言い回しは、小豆とごうか、人取って食おうか、という二択だ。とぐは米や豆を水で洗う意味で、生活に近い作業の言葉だからこそ、耳に残りやすかった。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "洗うか、人を取るかって、選択肢の差が大きすぎるよ。夕方に家で豆を洗う音を知っている人ほど、川から同じ音がしたら本当に誰かいると思いそうだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸後期の随筆『三州奇談』には、加賀で小豆を洗うような音を聞く怪異が載っている。姿を説明する前に耳へ届くという順番が、今の怪談よりずっと古くから残っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここでまだ答えを言い切らない。問題は、なぜ怖い姿ではなく、誰でも知っている小豆を洗う音が選ばれたのかだ。その音を聞く場所には、共通する危険が隠れている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ただし、ここからが本題ってことだね。鬼みたいな見た目なら逃げるのに、家の近くで聞いたことがある音なら、つい確認したくなる。その気持ちが危ないのかな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "昔の川辺は、今より暗くて境目が見えにくかった。街灯がない夜、昼には浅かった場所でも、雨のあと数時間で水位が変わり、土の岸が崩れることも珍しくなかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "川の音を聞けば、人は音源を探すために足を止める。足元を見ずに数歩近づけば、濡れた石や草の斜面に乗る。小豆洗いは、その数歩の危険を声にした怪異とも読める。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームなら音のする場所へ行けばクエストが始まりそうだけど、昔の夜道では逆なんだ。近づくというボタンを押した瞬間に、戻れない場所へ入る感じがして怖いよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただ、自然音の注意喚起だけで全部を説明するのは早い。伝承には水が流れる音だけでなく、歌のような声や、誰かが洗い物をするような規則的な響きも残されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "1899年、明治32年に広島で刊行された『芸備日日新聞』には、小豆洗いらしい音を聞いたという話が紹介されたと伝えられる。口伝ではなく活字に載った点が、記録として重い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "新聞に載るなら、村の子どもの脅かし話だけでは終わらなかったんだね。明治32年といえば電気が広がり始めた時代なのに、川の闇はまだ昔話のままだったのか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "127年という数字は、1899年から2026年までの年数なんだ。毎晩同じ存在が洗い続けた証拠ではなく、新聞記事と郷土資料と聞き書きの間で、川音の名が消えなかった長さを示す。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここは作り話と区別したい。127年連続で観測されたというデータはないし、同じ場所で同じ音が録音された記録も確認できない。残っているのは、伝承が再話された事実なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ127年は妖怪の年齢じゃなくて、音の噂が生き残った時間なんだね。でも何世代も同じ名前で怖がられたなら、川辺で聞こえる何かが本当にあったようにも思える。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その何かの候補には、水が石を転がす音がある。小さな石が流れに押されると、粒を器の中で動かすような細かい音になり、夜には方向さえ分からなくなることがある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "竹が風や水流で擦れる音も候補になる。昼ならただの自然音として通り過ぎるのに、視界が数メートルしか届かない夜では、作業する人の手元の音に聞こえてしまう。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "暗いと音の距離も分からないよね。スマホの通知音でも、部屋のどこから鳴ったか探すのに迷うのに、川の向こうからなら近づいて確かめたくなりそうだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "しかし伝承は、自然音を聞き間違えたで終わらせなかった。人取って食おうかという言葉を重ねることで、音を聞いた人が水際へ寄らないよう、恐怖を行動のルールに変えたんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "民俗学では、生活の危険を怪異の形で覚える話があると考えられている。難しい説明を抜きにすれば、親が子へ夜の川に近づくなと伝えるための、忘れにくい警告だったとも言える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "注意書きなら看板より怖い言葉のほうが覚えるね。人を取るって聞けば、川を渡る近道より、遠回りの明るい道を選ぶ。昔の人の安全ルールはかなり本気だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、小豆洗いを単なる安全教育だと断定する資料もない。伝承を語った人が本当に怪異を信じていたのか、危険を教える比喩として話したのか、そこから先は記録が途切れている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "岡山県の伝承では、小豆洗いは川の淵や橋のそばで聞こえるとされる。淵は流れが深く、表面が静かに見えても底へ向かう水の動きが読みにくい場所として知られていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "橋は安全な通路に見えるからこそ油断が生まれる。帰宅する人が欄干から下をのぞき、ざらざらという音の正体を探したとき、闇の川面は距離感を急に失わせる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "橋の下から音がしたら、ついスマホのライトを向けたくなるよ。でも昔はライトもないから、目をこらして一歩ずつ寄るしかない。想像しただけで足がすくむ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "小豆洗いの姿は、資料ごとに老人、小僧、正体不明と大きく揺れる。ここが重要で、原典にはゲームのように固定された一体のデザインが最初からあったわけではないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームではこう描かれてるけど、作品内の小豆洗いは親しみやすいキャラクターとして整理されている。それは公式の表現であり、地域伝承の恐怖をそのまま写した設定とは区別する必要がある。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "あいつ好きなんだよね、って気軽に言えるのはゲーム版の魅力だよね。でも原典では姿が決まってないから、聞いた人の頭の中で一番怖い形に変わってしまうのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここでファンの考察も分けておく。小豆洗いのゲーム内の行動が、人取り伝承を直接示すという説はファンによる非公式の読み方で、公式設定や古い資料の事実ではない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "公式に確認できるのは、妖怪ウォッチに小豆を洗う妖怪として登場することだ。元になった伝承では人取りの言葉があるが、両者を同じ物語として断定しないのが調査の基本なんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "公式、伝承、ファンの説を混ぜると、怖い話がどんどん大きくなっちゃうんだね。分けて聞くほうが、逆に昔の川辺で何が怖かったかがはっきりする。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "小豆洗いの正体は、水音だけだとも、妖怪だけだとも資料からは決められない。水の危険、聞き間違い、土地の記憶、語り手の恐怖が重なって、ひとつの名前になった可能性が高い。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "それでも自然な説明があるから安心とは言えない。夜の川で人の作業音に似たリズムが聞こえたとき、頭では石の音だと分かっても、体は音の場所を探してしまうからだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それ本当に、聞いた人だけの問題かな。自分が橋の上で立ち止まったら、音のほうがこっちを待っていたみたいに感じそうで、聞かなきゃよかったって思う。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承には、音を聞いた人のその後が詳しく書かれない例が多い。誰が助かり、誰が引き返し、誰が川へ近づいたのか。その空白こそが、127年後にも想像を止めさせない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "記録が途切れた場所には、助かった人の沈黙も混じるかもしれない。残るのは、あの川で夜に小豆を洗うような音がした、という一文だけで、姿も顔も最後まで書かれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "短い一文しかないのに、音だけ頭に残るよ。誰が洗っていたかより、誰もいないはずの場所で生活の音がしたことのほうが、ずっと現実に近くて怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もし川辺で似た音を聞いても、答え合わせのために近づかないでほしい。音源を探すより、明るい道へ戻る。小豆洗いを信じるかどうかとは別に、夜の水際は危険なんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "特に雨の翌日は、水位が数時間で変わることがある。昔話の怪異を笑う前に、見えない岸と濡れた石を思い出してほしい。小豆洗いは危険から目をそらさせないための声にも聞こえる。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "小豆洗いを見つけに行く遊びはできないね。音がただの水でも、その水は足元をさらうかもしれないし、妖怪の言葉に聞こえた瞬間には、もう川に近すぎるかもしれない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "127年語り継がれた理由は、怪物の姿ではなく、川音が聞く人ごとの想像へ入り込むからだろう。石の音にも、人の声にも、誰かが洗う音にも聞こえる曖昧さが、名前を残したんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "好きな妖怪ほど、元ネタが怖い。小豆洗いは可愛いゲームのキャラとして知った人にも、笑える掛け声の奥に、昔の人が避けた暗い川岸をそっと持ち帰らせる存在なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "最初は小豆を洗ってるだけの妖怪だと思ったのに、今はざらざらって音が聞こえたら足を止めたくない。目に見えない相手のほうが、逃げる場所を決めにくいね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、妖怪ウォッチのジバニャンを入口に、猫又の伝承と車に関わる怪異を追う予定だ。ゲームの可愛さとは別に、猫が二股の尾を持つと恐れられた理由を調べる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "今回の127年の川音が気になったら、高評価を先に置いてほしい。元ネタが怖い妖怪シリーズでは、新聞や郷土資料の端に残った、別の妖怪の声も静かに拾っている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "毎日投稿中で、チャンネル登録者1万人を目標にしている。チャンネル登録で応援してくれたら、次の妖怪の原典も、公式と伝承を混ぜずに調べて持ってくるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただ、夜の橋で小豆を洗うような音がしても、振り返って数えようとはしないでほしい。そこにいるものの正体は、1899年から2026年まで、川の暗がりに置かれたままなんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "127年の音",
+      "正体は何"
+    ],
+    "hook_caption": "川音の正体",
+    "subtitle": "妖怪ウォッチの小豆洗い、その元ネタを追う",
+    "tagline": "可愛い掛け声の奥に、明治32年から残る川辺の記録がある"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.55,
+      "similar_to": "座敷童子が家を去った3つの記録",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 16,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "小豆洗いの正体 127年の川音"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['正体'](+12)",
+      "短すぎ(15字 < 18)(-12)"
+    ]
+  }
+}

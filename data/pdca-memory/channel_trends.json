@@ -198,6 +198,25 @@
       "note": "OAuth失効で channel_stats 取得不可。analytics.db 最新スナップショット(08-31)で 50本・再生39,003・登録19・CTR1.77%。1本あたり登録0.38。7日フロー(08-25〜31)は 再生6,434／獲得6／解約1＝獲得0.93/1k。09-01 は1本生成したが未公開",
       "top_video": "録音の声が違う？骨伝導(1519)",
       "source": "analytics.db video_metrics(08-31) + channel_metrics 7日"
+    },
+    {
+      "date": "2026-09-03",
+      "subscribers": null,
+      "total_views": 111483,
+      "note": "OAuth失効2日目で channel_stats・analytics とも取得不可（13ch中9ch失効、fake-paper/akashic/clip-animal/socio-rx のみ有効）。公開動画スナップショット 186本・累計再生111483（平均599）。09-02 も生成9本に対し公開はfake-paper/akashicの2本のみ",
+      "top_video": "録音の声が違う？それは骨伝導が原因！#録音した声が別人に聞こ(1519)",
+      "source": "data/reports/2026-09-02/*.json genre_breakdown + view_trends（登録者は取得不可）"
+    },
+    {
+      "date": "2026-09-04",
+      "subscribers": 63,
+      "total_views": 183565,
+      "videos": 195,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31比 登録+1。登録/1000再生 0.6（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 58.9%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.6,
+      "avg_view_percentage": 58.9,
+      "top_video": "録音の声が違う？それは骨伝導が原因！(1519)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
     }
   ],
   "scp-lab": [
@@ -399,6 +418,25 @@
       "note": "OAuth失効。最新スナップショット50本で 再生33,770・登録24・CTR1.44%(imp 23,061と全ch最大)。1本あたり登録0.48。『なぜ』0.91 vs 0.36、『#N』0.21 vs 0.58 を再確認。7日フローは 再生8,108／獲得7／解約1。09-01 は2本生成したが未公開",
       "top_video": "一口SCP：人類殲滅プロトコル(1414)",
       "source": "analytics.db video_metrics(08-31) + channel_metrics 7日"
+    },
+    {
+      "date": "2026-09-03",
+      "subscribers": null,
+      "total_views": 87909,
+      "note": "OAuth失効2日目で channel_stats・analytics とも取得不可（13ch中9ch失効、fake-paper/akashic/clip-animal/socio-rx のみ有効）。公開動画スナップショット 183本・累計再生87909（平均480）。09-02 も生成9本に対し公開はfake-paper/akashicの2本のみ",
+      "top_video": "一口SCP：2019年11月3日深夜0時、全サイトで同時に、(1414)",
+      "source": "data/reports/2026-09-02/*.json genre_breakdown + view_trends（登録者は取得不可）"
+    },
+    {
+      "date": "2026-09-04",
+      "subscribers": 148,
+      "total_views": 150413,
+      "videos": 173,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31比 登録+4。登録/1000再生 0.71（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 44.9%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.71,
+      "avg_view_percentage": 44.9,
+      "top_video": "一口SCP：2019年11月3日深夜0時、全サイトで同時に(1414)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
     }
   ],
   "pokemon-lab": [
@@ -595,6 +633,25 @@
       "note": "40本で 再生40,371・登録11・CTR1.26%。1本あたり登録0.28。数字入り0.18 vs なし0.46",
       "top_video": "エリートトレーナーの謎(2063)",
       "source": "analytics.db video_metrics(08-31)"
+    },
+    {
+      "date": "2026-09-03",
+      "subscribers": null,
+      "total_views": 40371,
+      "note": "OAuth失効2日目で channel_stats・analytics とも取得不可（13ch中9ch失効、fake-paper/akashic/clip-animal/socio-rx のみ有効）。公開動画スナップショット 40本・累計再生40371（平均1009）。09-02 も生成9本に対し公開はfake-paper/akashicの2本のみ",
+      "top_video": "バンギラスとメタグロス、どっちが勝つ？600族対決は持ち物1(1971)",
+      "source": "data/reports/2026-09-02/*.json genre_breakdown + view_trends（登録者は取得不可）"
+    },
+    {
+      "date": "2026-09-04",
+      "subscribers": 15,
+      "total_views": 48808,
+      "videos": 40,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31比 登録+1。登録/1000再生 0.23（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 51.0%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.23,
+      "avg_view_percentage": 51.0,
+      "top_video": "バンギラスとメタグロス、どっちが勝つ？600族対決(1971)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
     }
   ],
   "yokai-watch": [
@@ -791,6 +848,25 @@
       "note": "39本で 再生39,697・登録11・CTR1.54%。数字あり0.05 vs なし0.50、『？』あり0.12 vs なし0.57",
       "top_video": "のっぺらぼう系(2239)",
       "source": "analytics.db video_metrics(08-31)"
+    },
+    {
+      "date": "2026-09-03",
+      "subscribers": null,
+      "total_views": 39697,
+      "note": "OAuth失効2日目で channel_stats・analytics とも取得不可（13ch中9ch失効、fake-paper/akashic/clip-animal/socio-rx のみ有効）。公開動画スナップショット 39本・累計再生39697（平均1018）。09-02 も生成9本に対し公開はfake-paper/akashicの2本のみ",
+      "top_video": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけな(2345)",
+      "source": "data/reports/2026-09-02/*.json genre_breakdown + view_trends（登録者は取得不可）"
+    },
+    {
+      "date": "2026-09-04",
+      "subscribers": 12,
+      "total_views": 42439,
+      "videos": 39,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31比 登録+0。登録/1000再生 0.23（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 52.9%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.23,
+      "avg_view_percentage": 52.9,
+      "top_video": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由(2346)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
     }
   ],
   "2ch-matome": [
@@ -987,6 +1063,25 @@
       "note": "35本で 再生32,371・登録5・CTR2.09%。1本あたり登録0.14で全ch最下位級。先頭絵文字0.00 vs 0.16 で不利",
       "top_video": "PCパーツ到着時、なぜ箱だけ先に届くのか(1811)",
       "source": "analytics.db video_metrics(08-31)"
+    },
+    {
+      "date": "2026-09-03",
+      "subscribers": null,
+      "total_views": 32371,
+      "note": "OAuth失効2日目で channel_stats・analytics とも取得不可（13ch中9ch失効、fake-paper/akashic/clip-animal/socio-rx のみ有効）。公開動画スナップショット 35本・累計再生32371（平均925）。09-02 も生成9本に対し公開はfake-paper/akashicの2本のみ",
+      "top_video": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】(1811)",
+      "source": "data/reports/2026-09-02/*.json genre_breakdown + view_trends（登録者は取得不可）"
+    },
+    {
+      "date": "2026-09-04",
+      "subscribers": 7,
+      "total_views": 34597,
+      "videos": 36,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31比 登録+1。登録/1000再生 0.17（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 52.1%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.17,
+      "avg_view_percentage": 52.1,
+      "top_video": "PCパーツ到着時、なぜ箱だけ先に届くのか？(1813)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
     }
   ],
   "company-facts": [
@@ -1006,6 +1101,25 @@
       "note": "【全ch首位】27本で 再生35,505・登録26・CTR3.23%。1本あたり登録0.96は全ch最高。7日フロー 再生16,107／獲得14／解約2 も全ch最大。『実は』型が1.71 vs 0.70",
       "top_video": "アジア大会の裏方企業、年収932万円の実態(5201)",
       "source": "analytics.db video_metrics(09-01) + channel_metrics 7日"
+    },
+    {
+      "date": "2026-09-03",
+      "subscribers": null,
+      "total_views": 35505,
+      "note": "OAuth失効2日目で channel_stats・analytics とも取得不可（13ch中9ch失効、fake-paper/akashic/clip-animal/socio-rx のみ有効）。公開動画スナップショット 27本・累計再生35505（平均1315）。09-02 も生成9本に対し公開はfake-paper/akashicの2本のみ",
+      "top_video": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】(5201)",
+      "source": "data/reports/2026-09-02/*.json genre_breakdown + view_trends（登録者は取得不可）"
+    },
+    {
+      "date": "2026-09-04",
+      "subscribers": 28,
+      "total_views": 37336,
+      "videos": 28,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31の比較値なし(analytics有効化が09-01以降)。登録/1000再生 0.76（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 56.6%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.76,
+      "avg_view_percentage": 56.6,
+      "top_video": "💰アジア大会の裏方企業、年収932万円の実態(5202)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
     }
   ],
   "clip-lab": [
@@ -1025,6 +1139,25 @@
       "note": "7本で 再生28,955・登録0・CTR1.11%(全ch最下位)。7日フローも 再生5,141／獲得0。再生は出ているが登録転換ゼロ",
       "top_video": "SNSをやる人は天才じゃない(12707)",
       "source": "analytics.db video_metrics(09-01) + channel_metrics 7日"
+    },
+    {
+      "date": "2026-09-03",
+      "subscribers": null,
+      "total_views": 28955,
+      "note": "OAuth失効2日目で channel_stats・analytics とも取得不可（13ch中9ch失効、fake-paper/akashic/clip-animal/socio-rx のみ有効）。公開動画スナップショット 7本・累計再生28955（平均4136）。09-02 も生成9本に対し公開はfake-paper/akashicの2本のみ",
+      "top_video": "SNSをやる人は天才じゃない #shorts #切り抜き(12707)",
+      "source": "data/reports/2026-09-02/*.json genre_breakdown + view_trends（登録者は取得不可）"
+    },
+    {
+      "date": "2026-09-04",
+      "subscribers": 1,
+      "total_views": 29029,
+      "videos": 8,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31の比較値なし(analytics有効化が09-01以降)。登録/1000再生 0.0（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 57.7%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.0,
+      "avg_view_percentage": 57.7,
+      "top_video": "SNSをやる人は天才じゃない(12732)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
     }
   ],
   "fake-paper": [
@@ -1109,6 +1242,77 @@
       "note": "公開値は取得できた(OAuth生存)。再生4,178→4,176で横ばい。登録は依然0。09-01 の CTA/尺/ハッシュタグ改修後の1本目(3723899e)は生成済みだが未公開",
       "top_video": "—",
       "source": "pdca_report channel_stats"
+    },
+    {
+      "date": "2026-09-03",
+      "subscribers": null,
+      "total_views": 5092,
+      "note": "OAuth失効2日目で channel_stats・analytics とも取得不可（13ch中9ch失効、fake-paper/akashic/clip-animal/socio-rx のみ有効）。公開動画スナップショット 8本・累計再生5092（平均636）。09-02 も生成9本に対し公開はfake-paper/akashicの2本のみ",
+      "top_video": "架空論文ファイル #3：PS5 Proは反応を0.18秒縮め(1165)",
+      "source": "data/reports/2026-09-02/*.json genre_breakdown + view_trends（登録者は取得不可）"
+    },
+    {
+      "date": "2026-09-04",
+      "subscribers": 1,
+      "total_views": 4176,
+      "videos": 9,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31の比較値なし(analytics有効化が09-01以降)。登録/1000再生 0.0（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 32.9%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.0,
+      "avg_view_percentage": 32.9,
+      "top_video": "架空論文ファイル #3：PS5 Proは反応を0.18秒縮める(1165)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
+    }
+  ],
+  "clip-fukada": [
+    {
+      "date": "2026-09-04",
+      "subscribers": 5,
+      "total_views": 21118,
+      "videos": 5,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31の比較値なし(analytics有効化が09-01以降)。登録/1000再生 0.19（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 74.3%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.19,
+      "avg_view_percentage": 74.3,
+      "top_video": "“時間停止”で使うスタジオ(15579)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
+    }
+  ],
+  "clip-kaneko": [
+    {
+      "date": "2026-09-04",
+      "subscribers": 4,
+      "total_views": 18330,
+      "videos": 19,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31の比較値なし(analytics有効化が09-01以降)。登録/1000再生 0.17（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 48.1%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.17,
+      "avg_view_percentage": 48.1,
+      "top_video": "夏のデート感を詰め込んだ一冊(1438)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
+    }
+  ],
+  "akashic-librarian": [
+    {
+      "date": "2026-09-04",
+      "subscribers": 2,
+      "total_views": 3604,
+      "videos": 8,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31の比較値なし(analytics有効化が09-01以降)。登録/1000再生 0.83（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 50.7%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.83,
+      "avg_view_percentage": 50.7,
+      "top_video": "なぜ600年も読めない？存在しない植物だけが描かれた手稿(1172)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
+    }
+  ],
+  "clip-animal": [
+    {
+      "date": "2026-09-04",
+      "subscribers": 0,
+      "total_views": 0,
+      "videos": 1,
+      "note": "OAuth全13ch復旧。3日ぶりの全ch実数スナップショット。08-31の比較値なし(analytics有効化が09-01以降)。登録/1000再生 0.0（全ch順位: akashic0.83>company0.76>scp0.71>ds0.60>pokemon0.23=yokai0.23>fukada0.19>2ch0.17=kaneko0.17>clip-lab0.00=fake-paper0.00）。維持率(再生>0のみ) 0.0%。維持率と登録転換は無相関(retention-does-not-predict-subscribers)",
+      "subs_per_1k_views": 0.0,
+      "avg_view_percentage": 0.0,
+      "top_video": "「キスして、愛してる」と歌う猫(4)",
+      "source": "data/reports/2026-09-03/*.json channel_stats + analytics.db video_metrics(2026-09-03) subscribers_gained"
     }
   ]
 }

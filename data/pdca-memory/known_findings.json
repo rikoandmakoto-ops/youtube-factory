@@ -794,6 +794,131 @@
       "date": "2026-09-02",
       "id": "cf-photo-thumb-outperforms-illustrated",
       "note": "【サムネ・テンプレ比較・新規】CTR上位は company-facts 3.23% > 2ch-matome 2.09% > daily-science 1.77% > yokai 1.54% > scp 1.44% > pokemon 1.26% > clip-lab 1.11%。首位の company-facts だけが実写背景テンプレ（08-31 68067fe7 は Netflix 本社の実写＋白抜き『Netflix 月1,590円』）で、他はキャラ立ち絵＋グラデ背景。実写側は欠点も多い（被写体の踏切ポールが文字に重なる／下40%が路面で空白／右下に『VOICEVOX 青山龍星』のクレジットが焼き込まれている）にもかかわらずCTRが2倍以上ある。題材が実在企業で『実物を見せられる』ことの効果か、テンプレ自体の効果かは未分離。"
+    },
+    {
+      "date": "2026-09-03",
+      "id": "ds-recording-topic-saturation-12",
+      "note": "【テーマ・新規・最重要】daily-science の『録音した自分の声が別人に聞こえる』テーマが計測40本中12本(30%)を占めていた。平均1208再生に対し非該当28本は1195再生で差はほぼゼロ＝12本作っても1本あたりの取り分は増えず、テーマ枠だけを消費していた。単一テーマの占有率としては全ch通じて過去最大。09-03 に theme_blacklist へ『録音』を追加して閉じた。"
+    },
+    {
+      "date": "2026-09-03",
+      "id": "blacklist-substring-evaded-by-paraphrase",
+      "note": "【方法論・08-30 blacklist-key-miss の決定版事例】daily-science の theme_blacklist には既に『骨伝導』が入っていたのに、録音系12本のうち骨伝導という語を含むのは4本だけで、残り8本は『骨が音を変えていた』『耳の《ある仕組み》』『骨が関係する』と言い換えて通過していた。blacklist はタイトル文字列の部分一致でしか効かないため、同義の言い換えを一切止められない。対策として、以後 blacklist には現象名(骨伝導)ではなく必ず出てくる素材語(録音)を入れる。"
+    },
+    {
+      "date": "2026-09-03",
+      "id": "2ch-question-format-monotonic-decay",
+      "note": "【タイトル・新規】2ch-matome の『ワイ、〇〇歴N年やけど質問ある？』テンプレは公開順に 1655→1088→950→926→587→1 と単調減衰し、6本平均868は非該当29本の937を下回った。#2動画がこの形式なので一見勝ちパターンに見えるが、実態は初回だけ当たった形式疲労。09-03 に『質問ある』を blacklist 追加。同時に既存の『昼飯を当てる』が『昼飯を3秒で当てる』に部分一致せず取りこぼしていたため『昼飯』へ短縮。"
+    },
+    {
+      "date": "2026-09-03",
+      "id": "yokai-seeds-conflict-own-blacklist",
+      "note": "【運用・新規パターン】08-30/08-31 の seed 汚染は『公開済みタイトルと同じ seed』だったが、今回は『自チャンネルの theme_blacklist が禁止している語を含む seed』を検出。yokai-watch の27 seed 中5件(19%)が該当（コマさん／ダジャレ／エンマ大王／座敷童子と口裂け女の《元ネタが怖すぎる》）。seed 追加時に blacklist 照合をしていないため機械的に発生する。他6chは0件。09-03 に3件削除・2件書換。"
+    },
+    {
+      "date": "2026-09-03",
+      "id": "oauth-outage-day2-14-videos-lost",
+      "note": "【障害・09-02 findingの継続】09-02 findingの oauth-refresh-tokens-revoked-9ch が2日連続で未復旧。job_queue では 09-01/09-02 とも9本ずつ completed になっているが、video_publish.db に行が入ったのは OAuth が生きている fake-paper と akashic-librarian の2本ずつだけ。差分の7本×2日＝14本が生成済み・未公開のまま滞留している。生成コストだけかかって公開されない状態が続いており、再認可が全施策に優先する。"
+    },
+    {
+      "date": "2026-09-03",
+      "id": "thumb-headline-drops-all-specifics",
+      "note": "【サムネ・新規】サムネ見出しが元タイトルの具体語を全部捨てて抽象化するケース。fake-paper 09-02 53e7367b は元タイトル『マックの食事は宇宙で37%好まれる — 864人を18日追跡』に対し、見出しが『宇宙で選ぶ／あのメニュー』でブランド名(マック)も数字(37%/864人)も消えている。数字は下の黄色帯(サンプル864人、18日間の比較記録)に退避しているが、視線が最初に行く最大文字サイズの行が『あのメニュー』という無情報語になっている。CTRを決める行に具体語を残す必要がある。"
+    },
+    {
+      "date": "2026-09-03",
+      "id": "thumb-subtitle-splits-compound-word",
+      "note": "【サムネ・レイアウト・08-31の残件】08-31 の thumb-orphan-wrap-moved-to-tagline で tagline 側は改善したが(09-01 scp『生存者は3名だけ』/09-02 fake-paper とも1行に収まりオーファンなし)、subtitle 側で語中改行が残っている。fake-paper 09-02 は『宇宙飛行士の食事選／択を追跡した架空研究』で熟語『選択』が2行に割れた。孤立行対策は入ったが、熟語境界を見る処理は未実装。"
+    },
+    {
+      "date": "2026-09-03",
+      "id": "scp-thumb-character-emotion-mismatch",
+      "note": "【サムネ・新規・演出】scp-lab 09-01 6cb56ae4 は見出し『映像にいない／被害だけ増える』＋黄色帯『生存者は3名だけ』というホラー文脈なのに、下部のキャラ2体が口を開けた満面の笑顔。文言とキャラ表情の情動が正反対で、サムネ全体の恐怖トーンを打ち消している。過去のキャラ系 finding はサイズ・見切れ・ハローの話で、表情と文脈の不一致は初検出。ホラー系chは驚愕・戦慄表情の差分立ち絵が要る。"
+    },
+    {
+      "date": "2026-09-03",
+      "id": "scp-illustration-card-placeholder-leak",
+      "note": "【サムネ・新規】09-01 scp-lab の図解カードが灰色一色のシルエット＋ラベル『実体』＋寸法『?.?m』で、プレースホルダの未確定値がそのまま焼き込まれていた。カードは縦約330px・画面の約17%を占める最大要素なのに情報量が実質ゼロ。thumb-illustration-card-misfires(08-31)の3類型に加わる4つ目の壊れ方＝未確定値リーク。値が確定しない場合はカード自体を描画しない分岐が必要。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "oauth-fully-restored-fleet-snapshot",
+      "note": "【障害・解消】09-02/09-03 findingの oauth-refresh-tokens-revoked-9ch / oauth-outage-day2 が解消。09-03 23:00 の sync で13ch全てが OK（残り 3.61〜6.48日）、video_publish.db にも 09-03 付で12行（全ch分）が入り公開が再開した。08-31以来3日ぶりに channel_stats と video_metrics.subscribers_gained が全ch分そろい、これ以降は登録者実数ベースで判断できる。08-31→09-03 の3日で scp-lab 144→148 / daily-science 62→63 / 2ch-matome 6→7 / pokemon-lab 14→15 / yokai-watch 12→12。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "retention-does-not-predict-subscribers",
+      "note": "【方法論・新規・最重要】維持率(avg_view_percentage)は登録転換を全く予測しない。09-03 の全ch実測(再生>0の296本中191本)で 維持55%以上 n=94 が 登録/1k 0.34、維持40%未満 n=97 が 0.36 とほぼ同値。ch単位でも逆転していて、scp-lab は維持44.9%(下から2番目)で登録/1k 0.73(上から2番目)、clip-lab は維持57.7%で 0.00、clip-fukada は維持74.3%(全ch最高)で 0.19。これまで retention_insights を改善指標として扱ってきたが、登録者数を至上命題とする以上ここを最適化しても意味がない。判断軸は subscribers_gained/1000再生 に一本化する。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "shoutai-is-strongest-cross-channel-word",
+      "note": "【タイトル・新規・全ch横断】『正体』を含むタイトルが全ch横断で登録転換に効く唯一の語。09-03 実測で あり n=43 登録/1k 0.66・登録/本0.51 vs なし n=253 0.34・0.34 とほぼ2倍。再生数はむしろ低い(774 vs 1017)ので、再生で選ぶと落とす語。ch内でも daily-science 0.78 vs 0.42、yokai-watch 0.44 vs 0.16、scp-lab 0.85 vs 0.70 と再現。例外は pokemon-lab のみ(n=4で0.00)。これまでの ch固有語(company-factsの『実は』、scpの『なぜ』)と違い、横断で効いた初めての語。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "generator-converged-on-shoutai-same-day",
+      "note": "【運用・新規】09-03 に生成された12本のうち5本(42%)が『正体』を含み、5chが同日に同じ語へ収束した（yokai 小豆洗いの正体 / scp 正体は0秒の無音録音 / pokemon シェイミ2形態の正体127 / company-facts 日本マクドナルドの正体 / daily-science 3秒で迷う正体）。company-facts は履歴1/28、pokemon は4/41 と普段ほぼ使わないchまで揃った。上の shoutai-is-strongest 通り語自体は正解なので blacklist はしないが、全ch同語・同日は差別化を潰すため『同日の全ch生成で同一キーワードは2本まで』という横断ゲートが要る。既存の重複チェックは ch内 のみで、ch間の衝突を一切見ていない。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "extra-rules-not-enforced-in-title-gen",
+      "note": "【方法論・新規・重要】short_format.extra_rules に自然文で書いた制約はタイトル生成に効いていない。09-02 に yokai-watch へ『タイトルには数字を入れない』、pokemon-lab へ『数字は多くても1つまで』を入れたが、翌09-03 の生成物は yokai『小豆洗いの正体 127年の川音』(数字あり)、pokemon『君が知らないシェイミ2形態の正体127』(数字2つ、しかも末尾127は単位なしの宙ぶらりん)で両方とも違反。theme_blacklist(部分一致)は効くが extra_rules は効かないことが初めて実証された。08-30 blacklist-key-miss / 09-03 blacklist-substring-evaded と合わせ、タイトル制約は『文字列マッチで機械的に弾ける形』に落とさないと反映されない。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "2ch-nanka-yanga-is-the-winner-format",
+      "note": "【タイトル・2ch固有・新規】2ch-matome で登録が付いた6件のうち2件が『なんかPCの画面チカチカするんやが』1本に集中。『なんか〜んやが』型 n=3 は 登録/本0.67・登録/1k 0.60 で、ch平均0.17の3.5倍。一方これまで主力だった『あげてけ』型 n=10 は 0.10・0.11 で平均以下、『質問ある』型 n=6 は 4,120再生で登録0（09-03 に blacklist 済み）。2ch は『大喜利で参加を募る型』より『ワイの身に起きた変な事を相談する型』の方が登録に変わる。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "2ch-loop-replay-without-subscribers",
+      "note": "【指標・新規】2ch-matome に維持率100%超（ループ再生）の動画が3本ある（県名あげてけ 109.6%、いらん商品あげてけ 125.5%、大谷の昼飯 145.2%）。ショートで最強のシグナルのはずだが3本とも登録0。retention-does-not-predict-subscribers の極端な実例で、『何度も見られる』と『チャンネルを追う』は別物。ループ動画は単発ネタとして消費されて終わっている＝CTAとch名の露出が刺さっていない。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "fake-paper-only-channel-under-40-retention",
+      "note": "【チャンネル・新規】維持率を再生>0の動画だけで再計算すると全11chが44〜74%に収まる中、fake-paper だけ32.9%(n=5)で唯一40%を切る。09-01 の CTA/尺/ハッシュタグ改修後も 9本・4,398再生で登録0のまま。同じく低かった akashic-librarian は計測4本で50.7%と平均圏に戻り（22.5%という値は未計測動画を0%で平均していた集計アーティファクト）、しかも登録/1k 0.83 は全ch最高。akashic は放置でよく、構造的に手が要るのは fake-paper だけ。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "akashic-top-converter-small-n",
+      "note": "【チャンネル・新規】akashic-librarian が登録/1k 0.83 で全ch最高（company-facts 0.76、scp-lab 0.71 を上回る）。ただし総登録3人・計測4本と小さい。内訳は 維持63.6%『存在しない植物だけが描かれた手稿』が2人、維持62.7%『三十八人が見ていて、誰も動かなかった夜』が1人で、維持41.3%『なぜ大谷翔平だけ？』は0人。ch内では維持と登録が揃っている数少ない例。有名人を絡めた回だけ落ちる点は fake-paper の大谷/久保回と同じ傾向。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "scp-number-in-title-converts",
+      "note": "【タイトル・scp固有・新規】scp-lab で SCP-番号を明記したタイトル n=32 は 登録/本0.62・登録/1k 0.77、番号なし n=18 は 0.33・0.57。番号ありが登録で1.9倍、再生でも1.4倍(807 vs 585)。一方 09-03 の生成物2本はどちらも『SCP-███』と伏字で、実番号が入っていない。伏字は雰囲気を作るが検索とシリーズ認知の両方を捨てている。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "pokemon-naze-hurts-scp-naze-helps",
+      "note": "【タイトル・新規・ch間で符号が逆】『なぜ』始まりのタイトルが pokemon-lab では 登録/本0.09・登録/1k 0.11 に対し非該当0.23・0.28 と2.6倍不利。scp-lab では逆に有利という既知(08-31 記録の 0.91 vs 0.36)があり、同じ語で符号が反転する初の対。pokemon の seeds 20件中7件が『なぜ』始まりで在庫が不利側に偏っている。『なぜ』は全ch共通ルールにしてはいけない。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "thumb-placeholder-and-smile-unfixed-day2",
+      "note": "【サムネ・09-03 findingの継続】scp-illustration-card-placeholder-leak と scp-thumb-character-emotion-mismatch が2日連続で未修正。09-03 18:22 の scp-lab ffb6b20c は見出し『無音のテープ/証言だけ残る』のホラー文脈に対し、図解カードが灰色シルエット＋ラベル『対象実体』＋寸法『?.?m』のプレースホルダのまま、下部キャラ2体も口を開けた満面の笑顔。カード縦約330pxで画面の約17%を占めて情報量ゼロという状態が変わっていない。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "thumb-dead-band-returns-when-card-absent",
+      "note": "【サムネ・新規】図解カードが描画されないチャンネルで 08-30 の dead band が復活している。09-03 の daily-science 8b0b04ae と yokai-watch d01eb6a1 はどちらもテキストブロックが画面の約55%で終わり、キャラ立ち絵が始まる約75%までの縦約1/4がベタ塗り一色で完全に空。カードが出る scp だけは埋まっている（中身は壊れているが）。dead band 対策が『カードを置く』一本足だったため、カード非生成chでは何も起きない。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "thumb-yellow-band-wraps-and-splits-words",
+      "note": "【サムネ・レイアウト・08-31/09-03 の残件が黄色帯へ移動】subtitle 側で直した語中改行が、今度は黄色帯(tagline)で出ている。yokai d01eb6a1 は『可愛い掛け声の奥に、明治32年から残/る川辺の記録がある』で『残る』が2行に割れ、daily-science 8b0b04ae は『自動の動きを見張ると、/体は少し迷います』で2枚の黄色ボックスの幅が揃わず階段状になっている。黄色帯は1行前提の設計なのに文字数上限が効いておらず、2行化した瞬間に見た目が崩れる。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "cf-photo-background-mismatched-subject",
+      "note": "【サムネ・company-facts・新規】実写背景テンプレ(CTR全ch首位)で、写真の被写体が題材企業と一致していない。09-03 d7fae276 は『日本マクドナルドの正体、年収670万円』に対し背景が無関係のオフィスビルで、画面下部に別テナントの『studio yoggy yoga-pilates』の看板がはっきり写ったまま、左上にマクドナルドのロゴだけ貼られている。実在企業を扱うchで他社の看板が写るのは信頼性の問題。加えて見出しが『マクド』と関西圏の略称になっており、全国的な一般語は『マック』。"
+    },
+    {
+      "date": "2026-09-04",
+      "id": "seed-blacklist-conflict-recurs-from-own-change",
+      "note": "【運用・09-03 yokai-seeds-conflict-own-blacklist の再発機序】前回 yokai で見つけた『自chの blacklist が禁じる語を含む seed』が、今回は 2ch-matome で3件発生した。原因は前回自分が 09-03 に 2ch へ『質問ある』を blacklist 追加したこと自体で、既存 seed 側との照合をしていなかったため機械的に矛盾が生まれた。blacklist を足すたびに同じ ch の seeds を再照合する手順が要る。今回は全13ch を総当たりして 2ch 3件・socio-rx 1件を検出し、いずれも書き換えで解消（残0件）。"
     }
   ]
 }

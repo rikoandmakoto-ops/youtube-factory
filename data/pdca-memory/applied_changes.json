@@ -1035,6 +1035,189 @@
       "file": "(提案のみ・未実施)",
       "change": "OAuth 再認可、未公開9本の再投入、clip-lab のCTA/サムネ改修は実行していない",
       "reason": "再認可はブラウザでの本人操作が必要。公開の再実行は外部への投稿を伴うため自動実行しない。clip-lab は切り抜きレンダラ側の構造変更を含む"
+    },
+    {
+      "date": "2026-09-03",
+      "source": "daily-pdca-report",
+      "backups": "data/channels/*.json.bak_pdca_20260903",
+      "changes": [
+        {
+          "file": "data/channels/daily-science.json",
+          "field": "theme_blacklist",
+          "op": "add",
+          "value": [
+            "録音"
+          ],
+          "reason": "録音/骨伝導テーマが40本中12本(30%)・平均再生は非該当と同水準で増分ゼロ。既存の『骨伝導』は8本が言い換えで通過していた"
+        },
+        {
+          "file": "data/channels/daily-science.json",
+          "field": "theme_seeds",
+          "op": "add",
+          "value": [
+            "なぜ寝言は自分では一度も聞けないのか",
+            "眠る直前に見える光の模様、その正体"
+          ],
+          "reason": "最上位ジャンル『睡眠・夢』(平均710)の補充。録音テーマ封鎖分の枠を埋める"
+        },
+        {
+          "file": "data/channels/2ch-matome.json",
+          "field": "theme_blacklist",
+          "op": "add",
+          "value": [
+            "質問ある",
+            "昼飯"
+          ],
+          "reason": "『質問ある？』形式は6本平均868で非該当937を下回り1655→1の単調減衰。『昼飯』は既存『昼飯を当てる』の部分一致取りこぼし修正"
+        },
+        {
+          "file": "data/channels/pokemon-lab.json",
+          "field": "theme_blacklist",
+          "op": "add",
+          "value": [
+            "3つの秘密"
+          ],
+          "reason": "2本平均909で非該当1015を下回る。yokai-watch では既に blacklist 済みで横展開"
+        },
+        {
+          "file": "data/channels/fake-paper.json",
+          "field": "theme_blacklist",
+          "op": "add",
+          "value": [
+            "瞬きが同期",
+            "エレベーターで見上げる"
+          ],
+          "reason": "dup_check 0.703 のペア。fake-paper は blacklist が空だったが OAuth が生きている稼働2chの1つで優先度が高い"
+        },
+        {
+          "file": "data/channels/yokai-watch.json",
+          "field": "theme_seeds",
+          "op": "remove",
+          "value": [
+            "コマさん・コマじろうと狛犬伝承",
+            "妖怪の名前がダジャレな理由",
+            "エンマ大王と閻魔信仰"
+          ],
+          "reason": "いずれも公開済み(各2本)かつ自channelの theme_blacklist が禁止している語を含む"
+        },
+        {
+          "file": "data/channels/yokai-watch.json",
+          "field": "theme_seeds",
+          "op": "rewrite",
+          "value": [
+            "座敷童子の元ネタが怖すぎる→座敷童子の伝承で本当に起きたこと",
+            "口裂け女の元ネタが怖すぎる→口裂け女の伝承で本当に起きたこと"
+          ],
+          "reason": "題材自体は未公開で有効。blacklist 語『元ネタが怖すぎる』だけを外して温存"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "source": "daily-pdca-report",
+      "backups": "data/channels/*.json.bak_pdca_20260904",
+      "changes": [
+        {
+          "file": "data/channels/2ch-matome.json",
+          "field": "theme_seeds",
+          "op": "rewrite",
+          "value": [
+            "ワイ、コンビニ夜勤5年やけど質問ある？→なんかコンビニ夜勤の深夜2時だけ客が変なんやが",
+            "ワイ、実家が旅館やけど質問ある？→なんか実家の旅館に住み着いとる常連おるんやが"
+          ],
+          "reason": "09-03 に『質問ある』を blacklist 追加した結果、自ch seeds 2件が矛盾していた(seed-blacklist-conflict-recurs)。題材は有効なので、実測で最も登録が付く『なんか〜んやが』型(登録/1k 0.60 vs ch平均0.17)へ変換して温存"
+        },
+        {
+          "file": "data/channels/2ch-matome.json",
+          "field": "theme_seeds",
+          "op": "add",
+          "value": [
+            "なんか宅配便だけ毎回ワイの時だけ不在票なんやが",
+            "なんか夜だけWi-Fiが死ぬんやが"
+          ],
+          "reason": "2ch-nanka-yanga-is-the-winner-format。26→28件"
+        },
+        {
+          "file": "data/channels/2ch-matome.json",
+          "field": "theme_seeds[駅名].angle",
+          "op": "edit",
+          "value": "angle文中の『県名スレの派生』表現を除去",
+          "reason": "blacklist 語『県名』が angle に残っており、将来 angle まで照合する実装になった時に取りこぼす"
+        },
+        {
+          "file": "data/channels/company-facts.json",
+          "field": "theme_seeds",
+          "op": "add",
+          "value": [
+            "実は日本郵政の年収は『局長かどうか』で200万変わる",
+            "実はANAとJALでパイロットの年収の伸び方が違う",
+            "実は大手ゼネコンの年収1000万超えは現場手当で作られている"
+          ],
+          "reason": "登録/1k 0.76・登録/本1.04 で実数・効率とも実質首位。ch内で『実は』型は 1.00/1k vs 非該当0.63。seedsが13件と薄かった。13→16件"
+        },
+        {
+          "file": "data/channels/yokai-watch.json",
+          "field": "theme_seeds",
+          "op": "add",
+          "value": [
+            "フユニャンの正体 — 未来から来た相棒は作中で何者だと説明されているのか",
+            "じんめん犬の正体 — 昭和の人面犬の噂を作品はどう作り変えたのか"
+          ],
+          "reason": "作品題材優位(登録/1k 0.41 vs 伝承単体0.16)を3度目の独立分析で再現、かつ shoutai-is-strongest(『正体』0.44 vs 0.16)との掛け合わせ。追加前に自ch blacklist 12語と照合済み。24→26件"
+        },
+        {
+          "file": "data/channels/fake-paper.json",
+          "field": "theme_blacklist",
+          "op": "add",
+          "value": [
+            "大谷翔平",
+            "久保建英",
+            "打撃フォーム"
+          ],
+          "reason": "有名人クロスオーバー2本が ch のワースト2(366再生/0再生、いずれも登録0)。架空論文という ch コンセプトからも外れる。2→5件"
+        },
+        {
+          "file": "data/channels/clip-kaneko.json",
+          "field": "theme_blacklist",
+          "op": "add",
+          "value": [
+            "詰め込んだ一冊"
+          ],
+          "reason": "dup_check 類似度0.895 の最大ペア（夏のデート感を詰め込んだ一冊 ↔ 「おはよう」から「おやすみ」までデート気分を詰め込んだ一冊）。0→1件"
+        },
+        {
+          "file": "data/channels/pokemon-lab.json",
+          "field": "theme_blacklist",
+          "op": "add",
+          "value": [
+            "種族値だけ"
+          ],
+          "reason": "dup_check 0.819 のペア（種族値だけで強さが変わるのか ↔ けつばんの正体）。11→12件"
+        },
+        {
+          "file": "data/channels/socio-rx.json",
+          "field": "theme_seeds",
+          "op": "rewrite",
+          "value": [
+            "自己成就予言→期待が結果を作る仕組み（自己成就）"
+          ],
+          "reason": "全13ch総当たりで検出した自ch blacklist 衝突（blacklist語『予言』）。これで全ch衝突0件"
+        },
+        {
+          "file": "(変更なし)",
+          "field": "genre_blacklist",
+          "op": "none",
+          "value": [],
+          "reason": "『全体平均の30%以下』の新規該当なし。daily-science 平均584.4→閾値175.3 に対し最下位の日常の違和感195.6は上回る（宇宙・天体0は登録済）、scp-lab 平均501.2→閾値150.4 に対し最下位のその他288.8は上回る（オブジェクトクラス0・財団組織303.7は登録済）。他9chは単一ジャンル『その他』のみで分割不能"
+        },
+        {
+          "file": "(提案のみ・未実施)",
+          "field": "-",
+          "op": "none",
+          "value": [],
+          "reason": "ch間の同語衝突ゲート、サムネ図解カード/黄色帯/キャラ表情の描画修正、SCP伏字→実番号、fake-paper の構造改修は実装せず。いずれもレンダラ・生成パイプライン側のコード変更で、設定JSONの範囲を超えるため"
+        }
+      ]
     }
   ]
 }

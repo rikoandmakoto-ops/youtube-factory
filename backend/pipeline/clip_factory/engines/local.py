@@ -17,7 +17,7 @@ from .. import segments as seg_mod
 from .. import visual_guard
 from ..align import LineTiming, build_timeline
 from ..renderer import ClipLayout, render_clip, render_thumbnail
-from ..sources import SourceVideo
+from ..sources import SourceExhausted, SourceVideo
 
 
 def safe_clip_id(value: str) -> str:
@@ -152,7 +152,7 @@ def generate(
         exclude_text_patterns=sel.get("exclude_text_patterns") or (),
     )
     if not candidates:
-        raise RuntimeError(f"切り抜き候補が作れません（尺条件に合う区間なし）: {source.title}")
+        raise SourceExhausted(f"切り抜き候補が作れません（尺条件に合う区間なし）: {source.title}")
 
     # 字幕由来（＝自動字幕）のときは LLM に多めに見せて選ばせる。ヒューリスティックの
     # スコアは整った台本向けなので、ASR の壊れた行が上位に来ることがある。多めに
@@ -165,7 +165,7 @@ def generate(
         used_segments=source.used_segments,
     )
     if not picked:
-        raise RuntimeError(f"未使用の切り抜き区間が残っていません: {source.title}")
+        raise SourceExhausted(f"未使用の切り抜き区間が残っていません: {source.title}")
 
     used_llm = seg_mod.refine_with_claude(
         picked, source_title=source.video_title,

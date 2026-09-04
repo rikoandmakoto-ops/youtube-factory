@@ -157,9 +157,10 @@ def _recoverable_errors() -> tuple:
     ジョブごと失敗させる（黙って作り続けない）。
     """
     from .engines.viral import ViralClipRejected
+    from .sources import SourceExhausted
     from .translate import TranslationRejected
 
-    return (ViralClipRejected, TranslationRejected)
+    return (ViralClipRejected, TranslationRejected, SourceExhausted)
 
 
 def _record_rejection(source: "src_mod.SourceVideo", reason: str) -> None:
@@ -345,8 +346,10 @@ def generate_clip(
     # 素材ごとのゲート落ちは「失敗」ではなく「次を見る」。海外バイラルは
     # 内容ゲート（NSFW・禁止語・Claude の安全判定）で落ちるのが常態なので、
     # 1本目で諦めるとその日の投稿が丸ごと消える。
+    # 国内切り抜きも同じ扱いにする。pick_source は「区間が尽きた元動画」を
+    # 何度でも選び直すので、1本目で諦めるとその素材が枯れている限り毎日落ちる。
     attempts = [source]
-    if is_viral and not source_title:
+    if not source_title:
         limit = int(viral_out.get("max_source_attempts")
                     or clip_cfg.get("max_source_attempts") or 4)
         attempts += [s for s in found if s is not source][: max(0, limit - 1)]
@@ -375,10 +378,14 @@ def generate_clip(
                 break
             return {"ok": False, "error": str(e), "engine": engine_name}
         except _recoverable_errors() as e:
+            from .sources import SourceExhausted
             print(f"  ⏭️ この素材は見送ります: {e}")
             last_error = str(e)
             rejected.append({"title": attempt.title, "reason": str(e)})
-            _record_rejection(attempt, str(e))
+            # 区間切れは内容ゲートの不採用ではない。調達履歴に rejected として
+            # 残すと、区間が復活しても二度と拾わなくなる。
+            if not isinstance(e, SourceExhausted):
+                _record_rejection(attempt, str(e))
             continue
         except Exception as e:
             traceback.print_exc()

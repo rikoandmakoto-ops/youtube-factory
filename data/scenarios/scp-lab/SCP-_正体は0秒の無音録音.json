@@ -1,0 +1,549 @@
+{
+  "title": "SCP-███ 正体は0秒の無音録音",
+  "theme": {
+    "title": "財団が回収した『音の出ない録音テープ』",
+    "angle": "再生した職員の証言だけが残る構成"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書、再生した職員の記録だけが消えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、消えた職員じゃなく、記録だけなのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "回収後7日で、担当者4名の勤務履歴が空白になった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "テープは0秒の無音だ。\nそれでも4人は同じ声を聞いた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って、その声の主は記録にいないのか。\n記録はここで途切れている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "無音録音ファイルは他にもある。高評価を残し、1万人目標で毎日投稿中のチャンネル登録を頼む。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなた、無音のテープを再生したのに、あとから知らない声の記憶だけが残ったことありませんか？財団では再生職員12名のうち、生存者はたった1名でした。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今回暴くのは、回収時から磁気信号すら検出されなかった異常記録媒体、暫定指定SCP-███。残ったのは映像ではなく、再生者が書いた証言だけです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最強の異常はここです。生存した1名は「何も聞こえなかった」と報告しながら、死亡した11名全員の最期の台詞を、誤字なく記録していました。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "テープは1998年、閉鎖済みラジオ局の床下から回収されました。外見は家庭用カセット1本だけで、ケースにもラベルにも製造元を示す文字はありません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ところが最初の試験後、職員の証言は全員一致で「再生中、誰かが自分の名前を呼んだ」と変化します。録音機の音量計は終始、完全なゼロを示していました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "音が存在しないなら、誰が証言の中へ声を残したのか。次からは、唯一の生存者が提出した全17ページの手記を手掛かりに、収容違反の夜を追います。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この話、最後にとんでもないオチがある。無音を聞いた職員の証言は、再生終了後から同じ一文へ収束していた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "回収品は一般的なカセットテープで、磁気層にも機械にも異常はない。ただし再生者の聴覚だけが内容を受信する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまりスピーカーからは何も出ないのに、装着した職員は録音を聞いたと証言する。計測器には終始、零デシベルしか残らない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団はこれを認知伝達型記録媒体と呼んだ。音波ではなく、聞こうとした人間の記憶へ内容を直接刻む仕組みだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も危険なのは、再生ボタンを押していない見学者にも症状が出た点だ。初回実験では観察員12名中7名が証言を残した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "証言の入口は必ず幼少期の身近な声だった。母親や教師の声に聞こえるため、被験者は異常だと気づかず聞き続ける。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "録音時間はテープの物理的な長さと一致しない。C60規格でも、再生者の主観では平均3時間42分の会話になった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "再生後に残るのは音声データではなく証言だけだ。だが証言者は全員、知らない住所と同じ日時を正確に書き残していた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから財団は音を封じても解決できないと判断した。危険なのはテープの音ではなく、内容を聞こうとする人間側の行為なのだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "研究記録によれば、テープを再生した42人中31人が、無音にもかかわらず「背後で自分の声を聞いた」と証言した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも録音機の出力は常に0デシベル、波形も完全な直線だった。それでも被験者の脳波だけは音声刺激時と同じ反応を示した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの現象を聴覚幻覚ではなく、記憶へ直接生じる擬似聴取と分類した。聞こえた音の記憶だけが、再生後に残される。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "代表実験では、同一テープを30秒間再生した被験者12人へ筆記を命じた。11人が、幼少期の自分の声を書き起こしている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "驚くべきことに、その11件の内容は全員異なった。しかし共通していたのは、声が必ず「次は振り向け」と命じていた点だ。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "振り向いた被験者の生存率は66.7パーセントだった。死亡した4人には外傷がなく、顔だけが背後を見た姿勢で固定されていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "録音時間を変えた試験では、15秒以下なら発症率は18パーセント、45秒を超えると83パーセントまで急増したと報告されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "音響研究班は磁気層を電子顕微鏡で調べたが、一般的な酸化鉄テープと一致した。異常は物質でなく再生行為にあるらしい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに未再生の複製13本を作成した実験では、異常が移ったのは7本だけだった。複製成功率は約54パーセントという不安定さだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最後の聴取者は報告書に「テープは何も言わない、私が先に答えた」と残した。財団は以後、人員による再生実験を凍結した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1978年4月、北海道の廃映画館から、無音の8ミリテープ17巻が回収された。再生した職員42名のうち、翌朝まで生存した者はわずか3名だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が恐れたのは映像ではない。全巻とも音声トラックは空白なのに、視聴者だけが同じ女の声を聞いた、と証言記録へ残していたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の証言者、映写技師の佐伯は再生43秒後に退室し、「客席の後ろで僕の名前が呼ばれた」と手帳へ7回、同じ筆圧で書き残した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "だが驚くべき反転がある。佐伯の耳には当時から重度の難聴があり、医療記録では会話音すら判別不能だった。聞こえた声だけが例外だったんだ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこれをSCP-███と仮指定し、聴覚誘発型認知災害、聞いた情報が思考を傷つける異常として分類した。機器の測定値は終始ゼロだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "回収元の映画館は1956年に閉館している。地元紙には最終上映日に観客36人が一斉に退席したとあるが、理由欄だけが黒く塗り潰されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1979年、研究主任ヘレン・モローはテープを逆回転で検証した。結果報告は一文だけで、「声は未来形で私の死を知っていた」と記されている。",
+      "expression": "fear",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "モロー主任は報告書提出の6時間後、施錠された音響室で死亡した。室内の録音機は停止していたが、テープだけが38分間回転していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "以後、財団は再生実験を証言者1名ずつに制限した。それでも残った3人の供述には、まだ公開できない共通の固有名詞があった。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "意外なのは、テープ自体は完全な無音なのに、再生を聞いた職員27名全員が別々の声を証言した点です。録音媒体ではなく、聴覚の記憶を改竄する装置だった可能性があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも証言は再生直後より、72時間後の聴取で一致率が上昇しました。最初は雑音と答えた者まで、後には『自分の声で助けを求めていた』と同じ文言を語っています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで反転があります。財団の音響分析では波形が一切検出されず、機器のスピーカーも正常でした。つまり職員たちは音を聞いたのではなく、聞いたという結果だけを植え付けられたのです。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "専門用語でいう聴覚性偽記憶は、存在しない音源を実際の体験として思い出す症状です。ただし通常は暗示で起きるのに、この事案では遮音室の単独再生でも発生しました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も不可解なのは、被験者のうち19名が『声はテープの未来から届いた』と表現したことです。彼らは再生前には知らない収容違反の日付を、誤差1日以内で口にしています。",
+      "expression": "fear",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "その日付は回収から43日後、実際に起きた実験棟の停電と一致しました。死者は出ませんでしたが、停電中に保管庫の封印札が12枚だけ裏返っていた記録が残っています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに古い磁気テープは、消去磁気に弱いはずです。しかし本体へ強力な消磁処理を5回行っても異常は消えず、処理担当者だけが翌朝『再生を止めろ』という夢を見ました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団はテープを音響危険物ではなく、情報災害として分類しました。情報災害とは知っただけで影響する異常で、今回の感染経路は音ではなく『無音を聞いた』認識そのものです。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録に残る生存率は100パーセントです。ですが全27名は退職後も毎年同じ日時に耳を塞ぎ、再生していないはずの場所から、自分の声が近づくと報告し続けています。",
+      "expression": "fear",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "だから財団は現在、再生禁止ではなく『無音確認禁止』を命じています。音がないと確かめようとした瞬間こそ、テープがあなたの記憶に再生ボタンを押すのかもしれません。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まず今日から、無音の録音データを見つけても一人で再生しないで。証言者の73％は、再生直後に自宅の時計が逆回りしたと記録されている。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "実践策は簡単だ。音量ゼロで波形だけ確認し、ファイル名と取得時刻を紙に書く。異常は耳より先に、周辺機器の時刻表示へ現れた。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし反転があるぞ。テープ自体は静かでも、再生者の証言を録音すると別の声が混ざる。財団では証言記録の複製を原則として禁じた。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "会議や授業の録音でも、沈黙区間を安易に削除しないでね。異常でなくても、無音は編集ミスや機材停止を知らせる重要な手掛かりになる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チェック表を作るなら「誰が、いつ、何分間再生したか」の三項目で十分だ。第14サイトでは、この記録だけで証言の食い違いを9件発見した。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "イヤホンを共有しないのも有効だよ。証言者の多くは再生後24時間以内に耳鳴りを訴えたため、財団は個人用ヘッドホンを識別番号で管理した。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし無音ファイルの後に妙な夢を見ても、意味を決めつけるな。起床時刻、夢の内容、再生時間をメモすれば、後から冷静に比較できる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "家庭ではバックアップ先を二つに分けよう。端末故障への備えにもなるし、同じデータが片方だけ変化した場合、検証できる材料が残るよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に、怖い記録ほど誰かに見せる前に休憩を入れよう。再生者の証言だけが残った事件では、焦って共有した職員ほど判断を誤ったんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回のSCP記録で残ったのは、音の出ない録音テープを再生した職員17名の証言だけでした。全員が同じ「聞こえない声」を語り、記録媒体そのものは回収後に空白化しています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "恐ろしいのは、被験者が音を聞いたのではなく、自分の記憶から失った人物の声を再生中に思い出した点だ。報告書には、17名中6名が翌朝までに自分の名前を忘れたとある。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまりテープは沈黙していたのではなく、聞く側の心から音を作っていたのかもしれません。機器ログの音量は終始ゼロで、消えた声だけが職員の内部に残ったのです。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "だが最後の証言者は、再生停止後にも「次はお前の番だ」と聞いた。録音されない声が、再生を終えた後まで追ってくるなら、収容室の扉に意味はあるのか。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、財団が地下礼拝堂から回収した「祈るたびに収容番号が増える石像」を解説するよ。観測記録には、祈祷参加者42名のうち生還者が1名だけと記されています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次回のSCP報告書では、その唯一の生還者が石像ではなく、自分たちが増やされたと訴えた理由にも迫る。収容違反後、名簿に存在しない職員が13名記載されていたんだ。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "音のない記録が残した余韻を感じたら、高評価とチャンネル登録で次の機密報告を待っていてね。ゆっくり異常存在SCPラボは、忘れられた収容記録をこれからも開封します。",
+      "expression": "smile",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "無音のテープ",
+      "証言だけ残る"
+    ],
+    "hook_caption": "0秒の録音",
+    "subtitle": "再生者の記録だけが消える",
+    "tagline": "残った証言は同じ部屋を指していた"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 85,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 4,
+          "text": "テープは0秒の無音だ。\nそれでも4人は同じ声を聞いた。",
+          "pattern": "声[がをは]",
+          "reason": "「声が」はミュートでは確認できない"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 14,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 2,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "data_available": true,
+      "drop_fixes": [],
+      "missing_elements": [
+        "冒頭でオブジェクトクラス言及",
+        "中盤に具体的な事案"
+      ],
+      "insights_used": 5
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.471,
+      "similar_to": "SCP-610 感染218名は何時間で消えた？",
+      "template_issues": [
+        "直近10本中3本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 28,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-███ 正体は0秒の無音録音"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['正体'](+12)"
+    ]
+  }
+}
