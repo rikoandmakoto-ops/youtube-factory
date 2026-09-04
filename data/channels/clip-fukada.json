@@ -397,9 +397,22 @@
         5,
         6
       ],
-      "hour": 20,
-      "minute": 0,
+      "hour": 12,
+      "minute": 45,
       "times": [
+        {
+          "hour": 12,
+          "minute": 45,
+          "days_of_week": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
         {
           "hour": 20,
           "minute": 0,
@@ -414,18 +427,46 @@
           ]
         }
       ],
-      "_times_comment": "運用ルール『ショートのみ・1日1本・チャンネルごとの固定スロット』に合わせて毎日20:00の1枠。既存8chが17:00〜19:00に詰まっているので後ろに置いた（clip-kaneko は20:30）。"
+      "_times_comment": "2026-09-04: 試行回数を増やすため 1日 2 枠へ増設。枠の間隔は autopilot の burst guard（既定90分）を満たすこと。"
     },
     "duration_minutes": 1,
     "gen_type": "clip",
     "publish_lead_minutes": 0,
     "theme_queue": [
       {
+        "id": "35c7db45",
+        "title": "久保建英の成長: サッカー界の未来を担う選手",
+        "angle": "久保選手のプレースタイルや成長過程を科学的に分析。"
+      },
+      {
+        "id": "93de2fda",
+        "title": "バーガーキングのクーポン活用法: お得に楽しむ秘訣",
+        "angle": "クーポンを使ったお得な食事法を深田えいみが紹介。"
+      },
+      {
+        "id": "777ea9d3",
+        "title": "マックメニューの裏側: 人気の秘密とは？",
+        "angle": "マクドナルドのメニュー選びの科学と人気の理由を探る。"
+      },
+      {
+        "id": "8f711dfe",
+        "title": "嵐の魅力とその影響力を科学する",
+        "angle": "嵐の人気の秘密を深田えいみが分析し、ファン心理に迫る！"
+      },
+      {
+        "id": "9bfc881f",
+        "title": "アリアナ・グランデの音楽と心理学",
+        "angle": "アリアナ・グランデの楽曲がもたらす感情の変化を深田えいみが科学的に解説！"
+      },
+      {
+        "id": "cafa6cfb",
+        "title": "アベンジャーズ/エンドゲームの科学的裏話！",
+        "angle": "映画の中の科学を深田えいみが解説し、視聴者の興味を引く。"
+      },
+      {
         "id": "c30e9c7b",
         "title": "マックのメニューはどうしてこんなに人気？",
-        "angle": "深田えいみがマクドナルドのメニューの魅力を科学的に分析！",
-        "priority": "high",
-        "source": "trend_scanner"
+        "angle": "深田えいみがマクドナルドのメニューの魅力を科学的に分析！"
       },
       {
         "id": "8321fbf8",
@@ -571,5 +612,25 @@
       "contrast_amplifier"
     ],
     "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。"
+  },
+  "optimization": {
+    "primary_metric": "subs_per_1000_views",
+    "decision_metrics": [
+      "subs_per_1000_views"
+    ],
+    "reference_only_metrics": [
+      "retention",
+      "avg_view_percentage",
+      "views",
+      "avg_views",
+      "watch_time",
+      "ctr",
+      "impressions"
+    ],
+    "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
+  },
+  "trend_scanner": {
+    "enabled": false,
+    "_comment": "切り抜きchはテーマキューを使わない。09-03 時点で4chに計120件のゴミが溜まっていた。"
   }
 }

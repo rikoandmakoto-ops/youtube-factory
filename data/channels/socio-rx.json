@@ -282,8 +282,8 @@
       "angle": "Dweck(2006)。『才能は固定』と信じる人は挑戦を避ける。処方箋: 『まだ』を口癖にする（I can't → I can't yet）"
     },
     {
-      "title": "自己成就予言",
-      "angle": "Merton(1948)。思い込みが現実になるメカニズム。処方箋: ネガティブな予言を意識的に書き換える"
+      "title": "期待が結果を作る仕組み（自己成就）",
+      "angle": "Merton(1948)。思い込みが現実になるメカニズム。処方箋: ネガティブな予言を意識的に書き換える ※自ch blacklist 語『予言』を回避してリネーム"
     },
     {
       "title": "構造的空隙",
@@ -495,11 +495,26 @@
     "publish_lead_minutes": 45,
     "theme_queue": [
       {
-        "id": "adb54cda",
-        "title": "サッカー移籍が教える自己ブランドの構築法",
-        "angle": "移籍の背景にある印象管理と文化資本の視点から、自己ブランディングの重要性を解説します。",
+        "id": "430bb831",
+        "title": "教員のストレス: 社会が求める役割とは？",
+        "angle": "教員の仕事のストレスとその背景を社会構造から分析し、解決策を提案。",
         "priority": "high",
         "source": "trend_scanner"
+      },
+      {
+        "id": "02a99a5f",
+        "title": "解雇の心理学: どう向き合うべきか？",
+        "angle": "解雇がもたらす心理的影響と、その対処法を社会心理学的に解説。"
+      },
+      {
+        "id": "5d033e3c",
+        "title": "久保建英の成功: 自己効力感の重要性",
+        "angle": "久保建英選手の成功を通じて、自己効力感がもたらす影響を解説し、日常生活への応用を提案。"
+      },
+      {
+        "id": "adb54cda",
+        "title": "サッカー移籍が教える自己ブランドの構築法",
+        "angle": "移籍の背景にある印象管理と文化資本の視点から、自己ブランディングの重要性を解説します。"
       }
     ],
     "auto_optimize_schedule": true
@@ -525,5 +540,21 @@
       "contrast_amplifier"
     ],
     "note": "処方士の語り口を壊さないため本文書き換え系は停止。採点系のみ有効。"
+  },
+  "optimization": {
+    "primary_metric": "subs_per_1000_views",
+    "decision_metrics": [
+      "subs_per_1000_views"
+    ],
+    "reference_only_metrics": [
+      "retention",
+      "avg_view_percentage",
+      "views",
+      "avg_views",
+      "watch_time",
+      "ctr",
+      "impressions"
+    ],
+    "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
   }
 }

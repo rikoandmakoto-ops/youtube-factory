@@ -550,9 +550,22 @@
         5,
         6
       ],
-      "hour": 17,
+      "hour": 11,
       "minute": 45,
       "times": [
+        {
+          "hour": 11,
+          "minute": 45,
+          "days_of_week": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
         {
           "hour": 17,
           "minute": 45,
@@ -581,18 +594,36 @@
           "engine": "viral"
         }
       ],
-      "_times_comment": "1日2枠。17:45 = 国内切り抜き（許諾済み YouTube 素材 / clip.engine=local）、20:45 = 海外バイラル翻訳（Reddit 素材 / engine=viral）。スロットの engine が素材の探索先も決める（pipeline._collect_sources）ので、20:45 の engine を消すと海外枠が国内素材で回ってしまう。20:45 は既存の clip-fukada 20:00 / clip-kaneko 20:30 と重ならない枠。"
+      "_times_comment": "2026-09-04: 試行回数を増やすため 1日 3 枠へ増設。枠の間隔は autopilot の burst guard（既定90分）を満たすこと。"
     },
     "duration_minutes": 1,
     "gen_type": "clip",
     "publish_lead_minutes": 0,
     "theme_queue": [
       {
+        "id": "f556ae4f",
+        "title": "FIRE（早期リタイア）の真実：成功するための科学的アプローチ",
+        "angle": "FIREを実現するための具体的なステップと心理的要因を解説。"
+      },
+      {
+        "id": "508ec9f7",
+        "title": "マックメニューの裏側：科学が語る人気の秘密",
+        "angle": "マクドナルドのメニューがなぜ人気なのか、心理学的視点から分析。"
+      },
+      {
+        "id": "c582f3e1",
+        "title": "嵐の人気の秘密を科学で解明！なぜ彼らは愛され続けるのか",
+        "angle": "ファン心理やグループのダイナミクスを科学的に分析し、視聴者の理解を深める。"
+      },
+      {
+        "id": "9dedfa7e",
+        "title": "アベンジャーズ/エンドゲームから学ぶチームワークの科学",
+        "angle": "映画のキャラクターの協力関係を科学的に解説。"
+      },
+      {
         "id": "fe66b968",
         "title": "マクドナルドのメニュー、科学的に選ぶベストチョイス！",
-        "angle": "人気メニューの栄養成分を科学的に分析し、健康的な選び方を提案。",
-        "priority": "high",
-        "source": "trend_scanner"
+        "angle": "人気メニューの栄養成分を科学的に分析し、健康的な選び方を提案。"
       },
       {
         "id": "c0747982",
@@ -733,16 +764,6 @@
         "id": "e953e062",
         "title": "h3ロケットの技術革新を解説！",
         "angle": "最新の宇宙技術がもたらす未来の可能性。"
-      },
-      {
-        "id": "48684bb9",
-        "title": "「SNSをやる人は天才じゃない」に隠された本当の理由を掘り下げる",
-        "angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える"
-      },
-      {
-        "id": "1b950432",
-        "title": "「SNSをやる人は天才じゃない」とは逆のパターンを比較してみた",
-        "angle": "対比で違いを際立たせる構成"
       }
     ],
     "_enabled_comment": "2026-08-24 に再開。凍結時の理由（theme_queue 未作成・実績0件）は gen_type=short のチャンネルの話で、gen_type=clip のこのチャンネルには当てはまらなかった。clip 系は theme_queue も台本生成も通らず clip_factory を直接叩く（api_channel_autopilot._run_clip_autopilot）。凍結前の 08-21〜08-23 に実際にひろゆき切り抜き4本が投稿済み。 2026-08-30: 海外バイラル翻訳（旧 clip-viral）を 20:45 スロットとして統合。",
@@ -768,5 +789,25 @@
       "contrast_amplifier"
     ],
     "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。"
+  },
+  "optimization": {
+    "primary_metric": "subs_per_1000_views",
+    "decision_metrics": [
+      "subs_per_1000_views"
+    ],
+    "reference_only_metrics": [
+      "retention",
+      "avg_view_percentage",
+      "views",
+      "avg_views",
+      "watch_time",
+      "ctr",
+      "impressions"
+    ],
+    "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
+  },
+  "trend_scanner": {
+    "enabled": false,
+    "_comment": "切り抜きchはテーマキューを使わない。09-03 時点で4chに計120件のゴミが溜まっていた。"
   }
 }

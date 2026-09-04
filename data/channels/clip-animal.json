@@ -10,7 +10,7 @@
     "fallback_engine": "local",
     "sources": [],
     "external_sources": {
-      "enabled": false,
+      "enabled": true,
       "_comment": "国内の動物系YouTuberで切り抜きOKを明示しているチャンネルが見つかったら allowlist に追加して有効化する。",
       "region_code": "JP",
       "max_candidates": 25,
@@ -47,7 +47,8 @@
         "use_as": "clippable",
         "_comment": "CC BY の動物動画を拾う。国内YouTuber allowlist が揃うまではこちらが国内ソースの主力。"
       },
-      "allowlist_channels": []
+      "allowlist_channels": [],
+      "_enabled_comment": "2026-09-03 有効化。creative_commons.enabled=true なのに外側が false で、autopilot が毎日『clip.sources が空で external_sources も無効』で落ちていた（一度も投稿できていなかった原因）。素材は CC BY のみ＝ライセンスゲートは生きている。"
     },
     "viral_sources": {
       "enabled": true,
@@ -471,9 +472,22 @@
         5,
         6
       ],
-      "hour": 18,
-      "minute": 0,
+      "hour": 9,
+      "minute": 30,
       "times": [
+        {
+          "hour": 9,
+          "minute": 30,
+          "days_of_week": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
         {
           "hour": 18,
           "minute": 0,
@@ -488,12 +502,19 @@
           ]
         }
       ],
-      "_times_comment": "毎日18:00の1枠。海外バイラル動物動画の翻訳切り抜き。日本の動物YouTuberで切り抜きOKが見つかったら国内枠を追加する。"
+      "_times_comment": "2026-09-04: 試行回数を増やすため 1日 2 枠へ増設。枠の間隔は autopilot の burst guard（既定90分）を満たすこと。"
     },
     "duration_minutes": 1,
     "gen_type": "clip",
     "publish_lead_minutes": 0,
     "theme_queue": [
+      {
+        "id": "68789ce2",
+        "title": "マックの動物メニュー！？",
+        "angle": "動物たちがマックのメニューを模倣する可愛いシーンを集めて、視聴者を楽しませる。",
+        "priority": "high",
+        "source": "trend_scanner"
+      },
       {
         "id": "fc3fa59f",
         "title": "ちいかわと動物たちのコラボ！癒しの瞬間をお届け",
@@ -582,5 +603,25 @@
       "contrast_amplifier"
     ],
     "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。"
+  },
+  "optimization": {
+    "primary_metric": "subs_per_1000_views",
+    "decision_metrics": [
+      "subs_per_1000_views"
+    ],
+    "reference_only_metrics": [
+      "retention",
+      "avg_view_percentage",
+      "views",
+      "avg_views",
+      "watch_time",
+      "ctr",
+      "impressions"
+    ],
+    "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
+  },
+  "trend_scanner": {
+    "enabled": false,
+    "_comment": "切り抜きchはテーマキューを使わない。09-03 時点で4chに計120件のゴミが溜まっていた。"
   }
 }

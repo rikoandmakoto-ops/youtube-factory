@@ -298,7 +298,9 @@
       "衝撃"
     ]
   },
-  "theme_blacklist": [],
+  "theme_blacklist": [
+    "詰め込んだ一冊"
+  ],
   "genre_blacklist": [],
   "theme_seeds": [],
   "effects_research": {
@@ -453,11 +455,36 @@
     "publish_lead_minutes": 0,
     "theme_queue": [
       {
-        "id": "ff6a33e9",
-        "title": "サッカー移籍市場の裏側：選手の価値を科学する",
-        "angle": "移籍の背景にある経済学や心理学を解説し、視聴者の興味を引く。",
+        "id": "78e87c67",
+        "title": "バーガーキングのクーポンの仕組みとは？",
+        "angle": "クーポンの経済学と消費者心理を解説し、賢い利用法を提案する。",
         "priority": "high",
         "source": "trend_scanner"
+      },
+      {
+        "id": "95e1a0f2",
+        "title": "久保建英選手の成功の秘訣！サッカーの科学",
+        "angle": "久保選手のプレースタイルやトレーニング方法を科学的に解説する。"
+      },
+      {
+        "id": "b9af3197",
+        "title": "マックメニューの裏側！人気の秘密を科学的に解説",
+        "angle": "マクドナルドの人気メニューがなぜ愛されるのか、その心理とマーケティング戦略を探る。"
+      },
+      {
+        "id": "dcb2fdd2",
+        "title": "嵐の魅力を科学する！",
+        "angle": "グループの人気の理由を金子みゆが解説。"
+      },
+      {
+        "id": "b021da7c",
+        "title": "アベンジャーズ/エンドゲームから学ぶチームワークの科学",
+        "angle": "金子みゆが映画の裏側を科学視点で解説！"
+      },
+      {
+        "id": "ff6a33e9",
+        "title": "サッカー移籍市場の裏側：選手の価値を科学する",
+        "angle": "移籍の背景にある経済学や心理学を解説し、視聴者の興味を引く。"
       },
       {
         "id": "9feb7dc7",
@@ -643,5 +670,25 @@
       "contrast_amplifier"
     ],
     "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。"
+  },
+  "optimization": {
+    "primary_metric": "subs_per_1000_views",
+    "decision_metrics": [
+      "subs_per_1000_views"
+    ],
+    "reference_only_metrics": [
+      "retention",
+      "avg_view_percentage",
+      "views",
+      "avg_views",
+      "watch_time",
+      "ctr",
+      "impressions"
+    ],
+    "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
+  },
+  "trend_scanner": {
+    "enabled": false,
+    "_comment": "切り抜きchはテーマキューを使わない。09-03 時点で4chに計120件のゴミが溜まっていた。"
   }
 }
