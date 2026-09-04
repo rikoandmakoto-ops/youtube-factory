@@ -30,6 +30,7 @@ import base64
 import io
 import json
 import os
+import sys
 import sqlite3
 import time
 import urllib.error
@@ -40,6 +41,12 @@ from typing import Any, Dict, List, Optional
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent
+
+# ── 画像生成は ChatGPT のブラウザスレッド経由（OpenAI API 直叩きはしない） ──
+# 手順: docs/CHATGPT_IMAGE_BRIDGE.md
+sys.path.insert(0, str(ROOT / "backend"))
+from pipeline import chatgpt_image_bridge as _bridge  # noqa: E402
+
 ENV_PATH = ROOT / "backend" / ".env"
 CHANNELS_DIR = ROOT / "data" / "channels"
 SCENARIOS_DIR = ROOT / "data" / "scenarios"
@@ -49,7 +56,6 @@ OUT_DIR = ROOT / "output" / "channel-icons"
 BRIEF_DIR = OUT_DIR / "briefs"
 
 CHAT_URL = "https://api.openai.com/v1/chat/completions"
-IMAGE_URL = "https://api.openai.com/v1/images/generations"
 BRIEF_MODEL = "gpt-5.6-terra"
 IMAGE_MODEL = "gpt-image-1"
 GEN_SIZE = "1024x1024"
@@ -338,15 +344,14 @@ def make_brief(mat: Dict[str, Any], api_key: str) -> Dict[str, Any]:
 # Step 2 — 画像
 # ──────────────────────────────────────────────────────────────────────────
 def generate_image(prompt: str, api_key: str) -> bytes:
-    payload = {
-        "model": IMAGE_MODEL,
-        "prompt": prompt,
-        "size": GEN_SIZE,
-        "quality": "high",
-        "n": 1,
-    }
-    resp = _post(IMAGE_URL, payload, api_key)
-    return base64.b64decode(resp["data"][0]["b64_json"])
+    """ChatGPT スレッド経由でアイコンを1枚生成する。
+
+    未納品なら `_bridge.Queued` を投げる。`api_key` は互換のため残しているが
+    画像生成には使わない（OpenAI Images API は叩かない）。
+    """
+    return _bridge.generate_or_queue(
+        prompt, size=GEN_SIZE, purpose="channel_icon",
+    )
 
 
 def to_icon(raw: bytes) -> Image.Image:

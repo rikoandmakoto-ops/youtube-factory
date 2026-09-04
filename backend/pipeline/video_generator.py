@@ -709,8 +709,47 @@ def _mix_bgm(final_clip, channel_format, channel_id=None, bgm_volume=None,
 # ============================================================
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
+
+def _image_generation_available() -> bool:
+    """画像生成の経路が1つでもあるか。
+
+    ChatGPT ブラウザブリッジが有効なら API キーの有無に関係なく真
+    （キャッシュヒットすれば即返るし、外れても依頼をキューに積める）。
+    """
+    try:
+        from pipeline import chatgpt_image_bridge
+        if chatgpt_image_bridge.is_enabled():
+            return True
+    except Exception:
+        pass
+    return bool(OPENAI_API_KEY)
+
+
 def _call_openai_image(prompt, size="1024x1024", quality="medium", channel_id=None):
-    """Call OpenAI gpt-image-1 API to generate an illustration."""
+    """イラストを1枚生成する。
+
+    既定の経路は **ChatGPT のブラウザスレッド**（`chatgpt_image_bridge`）。
+    キャッシュに無ければ依頼をキューへ積んで None を返し、呼び出し側は
+    Pillow などのフォールバックに落ちる。API 直叩きは
+    `openai_policy.direct_image_api_allowed()` が真のときだけ。
+    """
+    try:
+        from pipeline import chatgpt_image_bridge, openai_policy
+    except Exception as e:  # pragma: no cover - import 失敗時は従来動作
+        print(f"⚠️ image bridge import failed: {e}")
+        chatgpt_image_bridge = openai_policy = None
+
+    if chatgpt_image_bridge is not None:
+        data = chatgpt_image_bridge.request_image(
+            prompt, size=size, quality=quality,
+            channel_id=channel_id, purpose="illustration",
+        )
+        if data:
+            return Image.open(io.BytesIO(data)).convert("RGBA")
+
+    if openai_policy is not None and not openai_policy.direct_image_api_allowed():
+        return None
+
     if not OPENAI_API_KEY:
         print("⚠️ OPENAI_API_KEY not set — skipping illustration generation")
         return None
@@ -3676,9 +3715,10 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
     mode = (image_mode or "generate").lower()
     if mode not in ("generate", "collect", "mix"):
         mode = "generate"
-    # In collect/mix mode we may run without OPENAI; only block when pure-generate has no key.
+    # In collect/mix mode we may run without OPENAI; only block when pure-generate
+    # has no image route at all (API キーも ChatGPT ブリッジも無い場合)。
     can_run = use_illustrations and (
-        mode in ("collect", "mix") or OPENAI_API_KEY
+        mode in ("collect", "mix") or _image_generation_available()
     )
     if can_run:
         illust_cache = str(Path(out_dir) / "illustrations")
@@ -3714,7 +3754,7 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
                     attribution = got.get("attribution_text") or None
                     print(f"  🌐 [{idx+1}/{len(illust_plans)}] Collected for line {entry_idx} "
                           f"({got.get('provider','?')})")
-                elif mode == "mix" and OPENAI_API_KEY:
+                elif mode == "mix" and _image_generation_available():
                     # Mix mode allows graceful fall-through to generation when
                     # the collector can't find a usable image.
                     img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
@@ -3723,7 +3763,7 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
                         print(f"  🎨 [{idx+1}/{len(illust_plans)}] Generated (collect missed) for line {entry_idx}")
 
             else:  # "generate"
-                if OPENAI_API_KEY:
+                if _image_generation_available():
                     img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
                                                 char_config=char_config, illust_style=illust_style)
                     if img:
@@ -3735,7 +3775,8 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
                     attribution_map[entry_idx] = attribution
             time.sleep(0.5)  # Rate limit buffer
     elif use_illustrations:
-        print("⚠️ OPENAI_API_KEY not set — illustrations skipped (set image_mode='collect' to use web images instead)")
+        print("⚠️ 画像生成の経路が無い — illustrations skipped "
+              "(IMAGE_BRIDGE を有効にするか image_mode='collect' で Web 画像を使う)")
 
     audio_clips = []
     current_illust = None  # sticky: keep showing the latest illustration until the next one
@@ -3926,7 +3967,7 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         if mode not in ("generate", "collect", "mix"):
             mode = "generate"
         # pillow はローカル描画なので常に実行可。dalle のみ DALL-E/収集の前提を要する。
-        can_run = (method == "pillow") or mode in ("collect", "mix") or OPENAI_API_KEY
+        can_run = (method == "pillow") or mode in ("collect", "mix") or _image_generation_available()
         if can_run:
             from pipeline import pillow_illustration
 
@@ -3972,15 +4013,17 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
                         if got and got.get("image") is not None:
                             img = got["image"]
                             print(f"  🌐 [{idx+1}/{len(plans)}] Collected for line {entry_idx}")
-                        elif OPENAI_API_KEY:
+                        elif _image_generation_available():
                             img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
                                                         char_config=char_config, illust_style=illust_style)
-                    elif OPENAI_API_KEY:
+                    elif _image_generation_available():
                         img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
                                                     char_config=char_config, illust_style=illust_style)
                         if img:
                             print(f"  🖼️ [{idx+1}/{len(plans)}] Generated for line {entry_idx}")
-                    # DALL-E が 429 / billing_hard_limit / キー未設定で失敗 → Pillow に自動フォールバック
+                    # ChatGPT ブリッジが未納品（初回は必ずこれ）/ 429 / キー未設定で
+                    # 画像が取れなかったら Pillow に自動フォールバック。
+                    # 納品後は同じプロンプトでキャッシュヒットするので次回から AI 画像になる。
                     if img is None:
                         img = _draw_pillow(topic, idx, entry_idx, reason="DALL-E fallback")
                 if img is not None:
@@ -5781,8 +5824,8 @@ def _generate_html_thumbnail(title, prefix, out_dir, channel_dict, thumb_info=No
         return None
 
     api_key = OPENAI_API_KEY or os.environ.get("OPENAI_API_KEY", "")
-    if not api_key:
-        print("⚠️ OPENAI_API_KEY 未設定 → HTMLサムネをスキップ")
+    if not api_key and not _image_generation_available():
+        print("⚠️ ブリーフ生成も画像生成も経路が無い → HTMLサムネをスキップ")
         return None
 
     out_path = Path(out_dir) / f"{prefix}_サムネイル.png"

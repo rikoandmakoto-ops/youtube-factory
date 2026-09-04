@@ -107,19 +107,16 @@ def _generate(prompt: str, out_path: Path, quality: str) -> None:
         "background": "transparent",
         "output_format": "png",
     }).encode()
-    req = urllib.request.Request(
-        "https://api.openai.com/v1/images/generations",
-        data=payload,
-        headers={
-            "Authorization": f"Bearer {os.environ['OPENAI_API_KEY']}",
-            "Content-Type": "application/json",
-        },
+    from pipeline import chatgpt_image_bridge as _bridge
+    # 透過 PNG は ChatGPT 側では作れないので、プロンプトで背景を単色に固定して
+    # 回収後に _remove_background で抜く前提にする（従来の background=transparent 相当）。
+    raw = _bridge.generate_or_queue(
+        prompt + "\n\nThe background must be a single flat pure magenta (#FF00FF) "
+                 "with no gradient, shadow or texture, so it can be keyed out later.",
+        size="1024x1024", quality=quality, purpose="character_sprite",
     )
-    with urllib.request.urlopen(req, timeout=300) as r:
-        data = json.loads(r.read())
-    b64 = data["data"][0]["b64_json"]
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_bytes(base64.b64decode(b64))
+    out_path.write_bytes(raw)
 
 
 def _jobs_for_channel(channel_id: str, force: bool):

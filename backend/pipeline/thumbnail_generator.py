@@ -23,7 +23,7 @@ import urllib.request
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-from pipeline import openai_compat
+from pipeline import chatgpt_image_bridge, openai_compat, openai_policy
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS_DIR = ROOT / "assets"
@@ -72,7 +72,76 @@ def _call_openai(url: str, payload: dict, api_key: str, timeout: int = 240) -> d
 
 # ────────────────────────────────────────────────────────────────────────
 # Step 1 — design brief
+#
+# 本命は Claude。OpenAI は Claude が使えないときの退避口で、それも駄目なら
+# タイトルから機械的に組む（サムネ生成そのものは絶対に止めない）。
 # ────────────────────────────────────────────────────────────────────────
+def _brief_via_claude(
+    system: str,
+    user_content: Any,
+    competitor_thumb_paths: Optional[List[str]] = None,
+) -> Optional[Dict[str, Any]]:
+    """Claude でデザインブリーフ JSON を取る。使えなければ None。"""
+    try:
+        from pipeline import claude_client
+    except Exception:
+        return None
+    if not claude_client.has_api_key():
+        return None
+
+    # user_content は競合サムネ添付時に OpenAI 形式のリストになっている。
+    # Claude 側は画像をパスで受けるので、テキスト部分だけ取り出して渡す。
+    if isinstance(user_content, list):
+        user_text = "\n".join(
+            part.get("text", "") for part in user_content
+            if isinstance(part, dict) and part.get("type") == "text"
+        )
+    else:
+        user_text = str(user_content)
+
+    try:
+        if competitor_thumb_paths:
+            return claude_client.call_claude_vision_json(
+                system=system, user_text=user_text, temperature=0.9,
+                image_paths=competitor_thumb_paths, purpose="thumbnail_brief",
+            )
+        return claude_client.call_claude_json(
+            system=system, user=user_text, temperature=0.9, purpose="thumbnail_brief",
+        )
+    except Exception as e:
+        print(f"  ⚠️ design_brief Claude 呼び出し失敗: {e}")
+        return None
+
+
+_BRIEF_SPLIT_RE = re.compile(r"[｜|/／・、。！？!?\s]+")
+
+
+def _local_brief(title: str) -> Dict[str, Any]:
+    """LLM 無しでタイトルから組むブリーフ。
+
+    レイアウトは固定なので、崩れない長さに切って埋めるだけでよい。
+    背景プロンプトはブリッジ経由で後から差し替わる前提の汎用文にする。
+    """
+    core = _BRIEF_SPLIT_RE.sub(" ", title).strip()
+    words = [w for w in core.split(" ") if w]
+    line1 = (words[0] if words else title)[:11] or title[:11]
+    rest = " ".join(words[1:]).strip() or title
+    return {
+        "line1": line1,
+        "line2": rest[:9] or "衝撃の真実",
+        "line3_badge": "衝撃の事実",
+        "sub_text": title[:20],
+        "highlight_word": rest[:7],
+        "background_concept": (
+            f"Cinematic dramatic illustration related to: {title}. "
+            "High contrast, saturated colors, close-up subject. "
+            "absolutely no text, no letters, no numbers, no captions, no logos."
+        ),
+        "color_palette": "赤×黄×白×黒",
+        "generated_by": "local_fallback",
+    }
+
+
 def design_brief(
     title: str,
     api_key: str,
@@ -212,21 +281,32 @@ def design_brief(
     else:
         user_content = user
 
-    resp = _call_openai(
-        "https://api.openai.com/v1/chat/completions",
-        openai_compat.build_chat_payload(
-            BRIEF_MODEL,
-            [
-                {"role": "system", "content": system},
-                {"role": "user", "content": user_content},
-            ],
-            temperature=0.9,
-            response_format={"type": "json_object"},
-        ),
-        api_key,
-    )
-    content = resp["choices"][0]["message"]["content"]
-    brief = json.loads(content)
+    brief = _brief_via_claude(system, user_content, competitor_thumb_paths)
+
+    if brief is None and api_key and openai_policy.direct_text_api_allowed():
+        try:
+            resp = _call_openai(
+                "https://api.openai.com/v1/chat/completions",
+                openai_compat.build_chat_payload(
+                    BRIEF_MODEL,
+                    [
+                        {"role": "system", "content": system},
+                        {"role": "user", "content": user_content},
+                    ],
+                    temperature=0.9,
+                    response_format={"type": "json_object"},
+                ),
+                api_key,
+            )
+            brief = json.loads(resp["choices"][0]["message"]["content"])
+        except Exception as e:
+            print(f"  ⚠️ design_brief GPT フォールバック失敗: {e}")
+            brief = None
+
+    if brief is None:
+        # 最後の砦。タイトルから決定論的に組む（サムネ生成全体を止めないため）。
+        print("  ⚠️ design_brief: LLM が使えないためタイトルから機械的に組みます")
+        brief = _local_brief(title)
 
     # Defensive defaults so downstream rendering never crashes on missing keys.
     brief.setdefault("line1", title[: min(14, len(title))])
@@ -269,21 +349,38 @@ def generate_background(
         "Composition: wide 16:9 horizontal, leave the bottom ~25% visually simpler "
         "(soft gradient or out-of-focus background) so big Japanese title text can be overlaid later."
     )
-    resp = _call_openai(
-        "https://api.openai.com/v1/images/generations",
-        {
-            "model": "gpt-image-1",
-            "prompt": prompt,
-            "n": 1,
-            "size": "1536x1024",
-            "quality": "high",
-        },
-        api_key,
-        timeout=240,
-    )
-    img_b64 = resp["data"][0]["b64_json"]
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_bytes(base64.b64decode(img_b64))
+
+    # 本命: ChatGPT のブラウザスレッド経由（ユーザーが横からプロンプトを直せる）。
+    raw = chatgpt_image_bridge.request_image(
+        prompt,
+        size="1536x1024",
+        channel_id=(channel_config or {}).get("id"),
+        purpose="thumbnail_background",
+        extra={"line1": brief.get("line1"), "line2": brief.get("line2")},
+    )
+
+    if raw:
+        out_path.write_bytes(raw)
+    elif openai_policy.direct_image_api_allowed() and api_key:
+        resp = _call_openai(
+            "https://api.openai.com/v1/images/generations",
+            {
+                "model": "gpt-image-1",
+                "prompt": prompt,
+                "n": 1,
+                "size": "1536x1024",
+                "quality": "high",
+            },
+            api_key,
+            timeout=240,
+        )
+        out_path.write_bytes(base64.b64decode(resp["data"][0]["b64_json"]))
+    else:
+        # 未納品。サムネ生成そのものは止めず、無地の背景で組む。
+        # 次回同じプロンプトが来たときにキャッシュヒットして本物に差し替わる。
+        _placeholder_background(out_path, channel_config)
+        return out_path
 
     # gpt-image-1 returns 1536x1024 (3:2); crop center to 16:9 then resize to 1280x720
     try:
@@ -305,6 +402,33 @@ def generate_background(
     except Exception as e:
         # If Pillow fails, leave the original (HTML <img> will scale via object-fit)
         print(f"  ⚠️ background resize skipped: {e}")
+    return out_path
+
+
+def _placeholder_background(out_path: Path, channel_config: Optional[Dict[str, Any]]) -> Path:
+    """AI 背景が未納品のときの繋ぎ。1280x720 の縦グラデーションを描く。
+
+    サムネの文字レイヤーは HTML 側が持っているので、背景が無地でも
+    「文字は読めるサムネ」にはなる。ChatGPT スレッドから画像が納品されれば
+    次の生成でキャッシュヒットして自動的に差し替わる。
+    """
+    tmpl = ((channel_config or {}).get("thumbnail_template") or {})
+    top = tmpl.get("placeholder_top_color") or (20, 24, 40)
+    bottom = tmpl.get("placeholder_bottom_color") or (8, 8, 14)
+    try:
+        from PIL import Image
+        img = Image.new("RGB", (1280, 720))
+        px = img.load()
+        for y in range(720):
+            t = y / 719
+            row = tuple(int(top[i] + (bottom[i] - top[i]) * t) for i in range(3))
+            for x in range(1280):
+                px[x, y] = row
+        img.save(out_path, "PNG")
+        print("  🖼️ 背景は未納品 → 繋ぎのグラデーションで生成（ChatGPT 納品後に自動差し替え）")
+    except Exception as e:
+        print(f"  ⚠️ placeholder background 失敗: {e}")
+        out_path.write_bytes(b"")
     return out_path
 
 
@@ -692,10 +816,12 @@ def render_html_to_png(html: str, output_path: Path) -> Path:
 # Public entry points
 # ────────────────────────────────────────────────────────────────────────
 def _resolve_api_key(provided: Optional[str]) -> str:
-    key = provided or os.environ.get("OPENAI_API_KEY", "")
-    if not key:
-        raise RuntimeError("OPENAI_API_KEY が設定されていません")
-    return key
+    """OpenAI キーを返す。**未設定でも例外にしない。**
+
+    画像は ChatGPT ブラウザスレッド経由、ブリーフは Claude → ローカル生成と
+    フォールバックがあるので、キー不在だけでサムネ生成を落とす理由はもう無い。
+    """
+    return provided or os.environ.get("OPENAI_API_KEY", "")
 
 
 def _default_bg_path(output_path: Path) -> Path:

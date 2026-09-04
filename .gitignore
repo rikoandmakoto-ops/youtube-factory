@@ -102,3 +102,9 @@ output/
 .~lock.*#
 # 疎通確認用の使い捨てファイル
 _sync_test.txt
+
+# ===== ChatGPT 画像ブリッジ（docs/CHATGPT_IMAGE_BRIDGE.md）=====
+# キューは実行時の状態なので載せない。ただし threads.json（チャンネル ↔ ChatGPT
+# スレッドの対応）は設定なので追跡する。
+data/image_requests/*
+!data/image_requests/threads.json

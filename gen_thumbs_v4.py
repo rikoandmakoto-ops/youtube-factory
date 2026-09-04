@@ -35,10 +35,16 @@ import requests
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent
+
+# ── 画像生成は ChatGPT のブラウザスレッド経由（OpenAI API 直叩きはしない） ──
+# ユーザーが同じスレッドを開いてプロンプトを直せることが必須要件のため。
+# 手順: docs/CHATGPT_IMAGE_BRIDGE.md
+sys.path.insert(0, str(ROOT / "backend"))
+from pipeline import chatgpt_image_bridge as _bridge  # noqa: E402
+
 OUT_DIR = ROOT / "output" / "daily-science" / "thumbnails" / "v4"
 ENV_PATH = ROOT / "backend" / ".env"
 
-API_URL = "https://api.openai.com/v1/images/generations"
 MODEL = "gpt-image-1"
 GEN_SIZE = "1536x1024"          # 3:2
 FINAL_SIZE = (1280, 720)        # 16:9
@@ -343,36 +349,17 @@ def load_api_key() -> str:
             line = line.strip()
             if line.startswith("OPENAI_API_KEY="):
                 return line.split("=", 1)[1].strip().strip('"').strip("'")
-    raise SystemExit("OPENAI_API_KEY が環境変数にも backend/.env にも見つからない")
+    return ""  # ChatGPT スレッド経由なのでキーは不要
 
 
 def generate(prompt: str, api_key: str) -> bytes:
-    payload = {
-        "model": MODEL,
-        "prompt": prompt,
-        "size": GEN_SIZE,
-        "quality": "high",
-        "n": 1,
-    }
-    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    """ChatGPT スレッド経由で1枚生成する。未納品なら `_bridge.Queued` を投げる。
 
-    last = None
-    for attempt in range(1, MAX_RETRIES + 1):
-        try:
-            r = requests.post(API_URL, headers=headers, json=payload, timeout=TIMEOUT)
-            if r.status_code == 200:
-                return base64.b64decode(r.json()["data"][0]["b64_json"])
-            last = f"HTTP {r.status_code}: {r.text[:400]}"
-            # 4xx はリトライしても同じなので即中断（429 は除く）
-            if 400 <= r.status_code < 500 and r.status_code != 429:
-                break
-        except requests.RequestException as e:  # noqa: PERF203
-            last = f"{type(e).__name__}: {e}"
-        if attempt < MAX_RETRIES:
-            wait = 10 * attempt
-            print(f"    リトライ {attempt}/{MAX_RETRIES - 1} ({last}) — {wait}s 待機")
-            time.sleep(wait)
-    raise RuntimeError(f"生成失敗: {last}")
+    `api_key` は互換のため残しているが使わない（OpenAI API は叩かない）。
+    """
+    return _bridge.generate_or_queue(
+        prompt, size=GEN_SIZE, purpose="thumbnail_v4",
+    )
 
 
 def crop_to_16x9(raw: bytes) -> Image.Image:

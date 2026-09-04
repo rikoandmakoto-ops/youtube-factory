@@ -237,12 +237,6 @@ async def _do_generate_sample(req: SampleRequest) -> SampleResponse:
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Pipeline import failed: {e}")
 
-    if not OPENAI_API_KEY:
-        raise HTTPException(
-            status_code=400,
-            detail="OPENAI_API_KEY not configured (/settings から設定してください)",
-        )
-
     fmt = style_dict.get("format", "landscape")
     size = _ILLUST_FORMAT_SIZE.get(fmt, "1792x1024")
     dalle_style = style_dict.get("style", "vivid")
@@ -268,11 +262,20 @@ async def _do_generate_sample(req: SampleRequest) -> SampleResponse:
         _call_openai_image,
         prompt,
         size=size,
-        style=dalle_style,
         channel_id=req.channel_id,
     )
     if img is None:
-        raise HTTPException(status_code=502, detail="DALL-E sample generation failed")
+        # 画像は ChatGPT のブラウザスレッド経由で作る。ここに来たということは
+        # 依頼をキューに積んだだけで、まだ納品されていない。
+        from pipeline import chatgpt_image_bridge
+        thread = chatgpt_image_bridge.thread_url_for(req.channel_id) or "(スレッド未登録)"
+        raise HTTPException(
+            status_code=202,
+            detail=(
+                "画像生成の依頼を ChatGPT スレッドのキューに積みました。"
+                f"スレッド: {thread} — 納品されると次回同じプロンプトで即座に返ります。"
+            ),
+        )
 
     sample_id = uuid.uuid4().hex
     out_path = SAMPLES_DIR / f"{sample_id}.png"
@@ -437,12 +440,6 @@ async def _do_generate_thumbnail(
         from pipeline.video_generator import OPENAI_API_KEY
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Pipeline import failed: {e}")
-
-    if not OPENAI_API_KEY:
-        raise HTTPException(
-            status_code=400,
-            detail="OPENAI_API_KEY not configured (/settings から設定してください)",
-        )
 
     _prune_old_thumbnails()
 

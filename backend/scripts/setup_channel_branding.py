@@ -81,21 +81,11 @@ def _load_env() -> None:
 
 
 def _gen_image(prompt: str, size: str, quality: str = "medium") -> bytes:
-    payload = json.dumps({
-        "model": "gpt-image-1", "prompt": prompt, "n": 1,
-        "size": size, "quality": quality, "output_format": "png",
-    }).encode()
-    req = urllib.request.Request(
-        "https://api.openai.com/v1/images/generations", data=payload,
-        headers={"Authorization": f"Bearer {os.environ['OPENAI_API_KEY']}",
-                 "Content-Type": "application/json"},
+    """ChatGPT スレッド経由で1枚生成する。未納品なら `_bridge.Queued`。"""
+    from pipeline import chatgpt_image_bridge as _bridge
+    return _bridge.generate_or_queue(
+        prompt, size=size, quality=quality, purpose="channel_branding",
     )
-    try:
-        with urllib.request.urlopen(req, timeout=300) as r:
-            return base64.b64decode(json.loads(r.read())["data"][0]["b64_json"])
-    except urllib.error.HTTPError as e:
-        # 400 の中身（content policy 拒否など）を捨てずに出す
-        raise RuntimeError(f"images/generations HTTP {e.code}: {e.read().decode()[:600]}") from None
 
 
 def _gen_image_safe(prompt: str, safe_prompt: str, size: str, quality: str, label: str) -> bytes:
@@ -225,7 +215,7 @@ def main() -> int:
     args = ap.parse_args()
 
     _load_env()
-    if not os.environ.get("OPENAI_API_KEY") and not args.reuse_art:
+    if False:  # 画像は ChatGPT スレッド経由。OPENAI_API_KEY は不要になった
         print("[ERR] OPENAI_API_KEY 未設定", file=sys.stderr)
         return 1
 
