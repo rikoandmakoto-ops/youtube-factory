@@ -1,22 +1,25 @@
-"""ChatGPT（ブラウザ）経由で画像を作るためのファイルキュー。
+"""ChatGPT（ブラウザ）で画像を作るためのキュー。OpenAI Images API は使わない。
 
-OpenAI Images API を直接叩くのをやめ、生成依頼を `data/image_requests/` に積む。
-キューを処理するのは **Claude in Chrome を持つ Claude セッション**で、ChatGPT の
-「チャンネルごとに固定した1スレッド」にプロンプトを送り、出てきた画像を回収して
-`deliver()` でキューに戻す（手順は `docs/CHATGPT_IMAGE_BRIDGE.md`）。
+**Claude 主導の 生成 → 目視チェック → 修正 のループ**を回すための土台。
+ChatGPT スレッドは「DALL-E を動かすレンダリング基盤」としてだけ使い、
+プロンプトの設計も品質判定も Claude 側が持つ（bot 任せにしない）。
 
-こうする理由:
+    Claude がプロンプトを書く
+        └─ pending/<id>.json に積む（パイプラインは待たない）
+             └─ Claude in Chrome が **そのチャンネル専用スレッド**へ送る
+                  └─ 出た画像を Claude がスクショで見て判定
+                       ├─ NG → reject() で修正指示を積み、同じスレッドで再生成
+                       └─ OK → deliver() で採用 → cache に入り次回から即ヒット
 
-  * **ユーザーが横から直せる。** API 直叩きだと会話が毎回消えるので、
-    「もっと暗く」「顔を大きく」といった指示の積み上げが効かない。
-    同じスレッドを人間が開いて修正すれば、次の生成からその文脈が乗る。
-  * **投稿パイプラインが OPENAI_API_KEY / 429 に引きずられない。**
-    2026-09-03 18:49 の 429 で投稿が止まった件の再発防止。
+**1チャンネル = 1スレッド固定。** スレッド URL は
+`data/channels/<ch>.json` の `image_generation.chatgpt_thread_url` に保存する。
+毎回新しい会話を開くと、ChatGPT 側に溜まった文脈も、ユーザーが横から入れた
+修正指示も全部消える。それを消さないことがこの仕組みの目的。
 
 パイプラインは既定で**待たない**（`wait_seconds=0`）。依頼を積んで即 None を返し、
-呼び出し側は従来どおり Pillow などのフォールバックに落ちる。後からワーカーが
-画像を納品すると `cache/` に入り、**次回の同一プロンプトで即ヒットする**。
-同期的に画像が要る用途（手動スクリプト等）は `wait_seconds` を明示する。
+呼び出し側は Pillow などのフォールバックに落ちる。autopilot は無人で回るので、
+画像を待つと投稿枠を落とすため。納品済みの画像は `cache/` に入り、
+**次回の同一プロンプトで即ヒットする**。
 """
 
 from __future__ import annotations
@@ -39,7 +42,12 @@ DELIVERED_DIR = BRIDGE_DIR / "delivered"
 FAILED_DIR = BRIDGE_DIR / "failed"
 IMAGES_DIR = BRIDGE_DIR / "images"
 CACHE_DIR = BRIDGE_DIR / "cache"
+# スレッド URL の正は data/channels/<ch>.json。threads.json は
+# `_default`（チャンネルに紐づかない依頼の受け皿）専用の置き場として残す。
 THREADS_PATH = BRIDGE_DIR / "threads.json"
+CHANNELS_DIR = Path(os.environ.get("IMAGE_BRIDGE_CHANNELS_DIR") or (ROOT / "data" / "channels"))
+CHANNEL_CONFIG_KEY = "image_generation"
+CHANNEL_THREAD_FIELD = "chatgpt_thread_url"
 
 _DIRS = (PENDING_DIR, DELIVERED_DIR, FAILED_DIR, IMAGES_DIR, CACHE_DIR)
 
@@ -84,31 +92,98 @@ def _write_json(path: Path, data: Dict[str, Any]) -> None:
 
 
 # ────────────────────────────────────────────────────────────────────────
-# ChatGPT スレッドの台帳
+# ChatGPT スレッド — 1チャンネル = 1スレッド固定
+#
+# 正は `data/channels/<ch>.json` の `image_generation.chatgpt_thread_url`。
+# チャンネル設定と同じ場所に置くことで、チャンネルを増やしたときに
+# 「スレッドの登録漏れ」がコンフィグ差分として見えるようにしている。
 # ────────────────────────────────────────────────────────────────────────
+def _channel_config_path(channel_id: str) -> Path:
+    return CHANNELS_DIR / f"{channel_id}.json"
+
+
 def load_threads() -> Dict[str, Any]:
-    return _read_json(THREADS_PATH) or {}
+    """全チャンネルのスレッド対応を1つの dict にして返す（表示用）。"""
+    out: Dict[str, Any] = {}
+    if CHANNELS_DIR.exists():
+        for path in sorted(CHANNELS_DIR.glob("*.json")):
+            cfg = _read_json(path)
+            if not isinstance(cfg, dict):
+                continue
+            block = cfg.get(CHANNEL_CONFIG_KEY) or {}
+            url = (block.get(CHANNEL_THREAD_FIELD) or "").strip() if isinstance(block, dict) else ""
+            if url:
+                out[path.stem] = {
+                    "url": url,
+                    "note": block.get("note", ""),
+                    "updated_at": block.get("updated_at", ""),
+                    "source": str(path),
+                }
+    for key, entry in (_read_json(THREADS_PATH) or {}).items():
+        # threads.json は `_default` 専用。チャンネル設定側が勝つ。
+        if key not in out:
+            out[key] = entry if isinstance(entry, dict) else {"url": entry}
+    return out
 
 
 def thread_url_for(channel_id: Optional[str]) -> Optional[str]:
-    """チャンネル専用スレッド → 既定スレッドの順で URL を返す。
+    """そのチャンネル専用スレッド → `_default` の順で URL を返す。
 
     ここが「ユーザーが横から直せる場所」。チャンネルごとに1本の会話を維持し、
     生成もユーザーの修正指示も同じスレッドに積む。
     """
-    threads = load_threads()
-    entry = threads.get(channel_id or "") or threads.get("_default") or {}
+    if channel_id:
+        cfg = _read_json(_channel_config_path(channel_id))
+        if isinstance(cfg, dict):
+            block = cfg.get(CHANNEL_CONFIG_KEY) or {}
+            if isinstance(block, dict):
+                url = (block.get(CHANNEL_THREAD_FIELD) or "").strip()
+                if url:
+                    return url
+    entry = (_read_json(THREADS_PATH) or {}).get("_default") or {}
     if isinstance(entry, str):
-        return entry or None
+        return entry.strip() or None
     return (entry.get("url") or "").strip() or None
 
 
-def set_thread_url(channel_id: str, url: str, note: str = "") -> Dict[str, Any]:
-    threads = load_threads()
-    threads[channel_id] = {"url": url.strip(), "note": note, "updated_at": _now()}
+def set_thread_url(channel_id: str, url: str, note: str = "") -> str:
+    """スレッド URL を保存する。書き込んだ場所のパスを返す。
+
+    チャンネル設定が存在すればそこへ（`image_generation` ブロック）、
+    `_default` など設定ファイルの無いキーは `threads.json` へ書く。
+    """
+    url = url.strip()
+    path = _channel_config_path(channel_id)
+    if path.exists():
+        cfg = _read_json(path)
+        if not isinstance(cfg, dict):
+            raise ValueError(f"チャンネル設定が読めません: {path}")
+        block = cfg.get(CHANNEL_CONFIG_KEY)
+        if not isinstance(block, dict):
+            block = {}
+        block[CHANNEL_THREAD_FIELD] = url
+        if note:
+            block["note"] = note
+        block["updated_at"] = _now()
+        cfg[CHANNEL_CONFIG_KEY] = block
+        _write_json(path, cfg)
+        return str(path)
+
+    threads = _read_json(THREADS_PATH) or {}
+    threads[channel_id] = {"url": url, "note": note, "updated_at": _now()}
     _ensure_dirs()
     _write_json(THREADS_PATH, threads)
-    return threads
+    return str(THREADS_PATH)
+
+
+def channels_missing_thread() -> List[str]:
+    """スレッド未登録のチャンネル ID。登録漏れの検出用。"""
+    if not CHANNELS_DIR.exists():
+        return []
+    return [
+        path.stem for path in sorted(CHANNELS_DIR.glob("*.json"))
+        if not thread_url_for(path.stem)
+    ]
 
 
 # ────────────────────────────────────────────────────────────────────────
@@ -163,6 +238,9 @@ def enqueue(
         "prompt_hash": phash,
         "thread_url": thread_url_for(channel_id) or "",
         "request_count": 1,
+        # Claude の 生成 → 目視チェック → 修正 ループの履歴。
+        "attempts": [],
+        "revisions": [],
     }
     if extra:
         data["extra"] = extra
@@ -287,11 +365,12 @@ def load_request(req_id: str) -> Optional[Dict[str, Any]]:
     return None
 
 
-def deliver(req_id: str, image_path) -> Dict[str, Any]:
-    """ChatGPT から回収した画像をキューに納品する。
+def deliver(req_id: str, image_path, qc_note: str = "") -> Dict[str, Any]:
+    """Claude の品質チェックを通った画像を採用する。
 
     画像は `images/<id>.png` と `cache/<prompt_hash>.png` の両方に置く。
     キャッシュ側が次回以降の即時ヒットに効く。
+    `qc_note` には「何を見て OK にしたか」を残す（後で基準を見直すため）。
     """
     _ensure_dirs()
     src = Path(image_path)
@@ -311,10 +390,55 @@ def deliver(req_id: str, image_path) -> Dict[str, Any]:
     data["status"] = "delivered"
     data["delivered_at"] = _now()
     data["image_path"] = str(dest)
+    data.setdefault("attempts", []).append(
+        {"at": data["delivered_at"], "verdict": "accepted", "reason": qc_note}
+    )
+    if qc_note:
+        data["qc_note"] = qc_note
     _write_json(DELIVERED_DIR / f"{req_id}.json", data)
     if pending_path.exists():
         pending_path.unlink()
     return data
+
+
+def reject(req_id: str, reason: str, revision_prompt: str = "") -> Dict[str, Any]:
+    """Claude が品質チェックで落としたときに呼ぶ。**依頼は pending のまま残る。**
+
+    `revision_prompt` は「同じスレッドに次に送る修正指示」。空なら `reason` を使う。
+    ワーカーはこれを読んで、新しい会話ではなく**同じスレッド**に投げ直す。
+    """
+    _ensure_dirs()
+    path = PENDING_DIR / f"{req_id}.json"
+    data = _read_json(path)
+    if not data:
+        raise KeyError(f"pending の依頼 {req_id} が見つかりません")
+
+    attempts = data.setdefault("attempts", [])
+    attempts.append({"at": _now(), "verdict": "rejected", "reason": reason})
+    revisions = data.setdefault("revisions", [])
+    revisions.append(revision_prompt.strip() or reason.strip())
+    data["last_rejected_at"] = _now()
+    _write_json(path, data)
+    return data
+
+
+def next_prompt(req_id: str) -> str:
+    """次に ChatGPT スレッドへ送る文面。
+
+    1回目は元のプロンプトそのまま。2回目以降は「直前の生成を、この指示で直す」
+    という修正指示だけを送る（同じスレッドなので元の指定は文脈に残っている）。
+    """
+    data = load_request(req_id)
+    if not data:
+        raise KeyError(f"依頼 {req_id} が見つかりません")
+    revisions = data.get("revisions") or []
+    if not revisions:
+        return data["prompt"]
+    return (
+        "直前に生成した画像を、次の指摘を反映して作り直してください。"
+        "他の条件（16:9・文字を入れない・下部を空ける等）は前のまま維持すること。\n\n"
+        + "\n".join(f"- {r}" for r in revisions)
+    )
 
 
 def fail(req_id: str, reason: str) -> Dict[str, Any]:
@@ -372,5 +496,6 @@ def status() -> Dict[str, Any]:
         "failed": _count(FAILED_DIR),
         "cached_images": len(list(CACHE_DIR.glob("*.png"))) if CACHE_DIR.exists() else 0,
         "threads": load_threads(),
+        "channels_missing_thread": channels_missing_thread(),
         "default_wait_seconds": DEFAULT_WAIT_SECONDS,
     }

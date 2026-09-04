@@ -8,8 +8,11 @@ Claude in Chrome を持つセッション（＝キューのワーカー）と、
     python3 scripts/image_bridge.py thread set scp-lab https://chatgpt.com/c/xxxx
     python3 scripts/image_bridge.py list
     python3 scripts/image_bridge.py show <req_id>          # 送るプロンプトを出す
-    python3 scripts/image_bridge.py deliver <req_id> path/to/downloaded.png
+    python3 scripts/image_bridge.py prompt <req_id>        # 次にスレッドへ送る文面
+    python3 scripts/image_bridge.py reject <req_id> "顔が切れてる" --revision "顔を全部入れて"
+    python3 scripts/image_bridge.py deliver <req_id> path/to/downloaded.png --qc "文字なし・構図OK"
     python3 scripts/image_bridge.py fail <req_id> "理由"
+    python3 scripts/image_bridge.py missing                # スレッド未登録のチャンネル
     python3 scripts/image_bridge.py gc
 """
 
@@ -49,6 +52,31 @@ def cmd_list(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_missing(_args: argparse.Namespace) -> int:
+    missing = bridge.channels_missing_thread()
+    if not missing:
+        print("全チャンネルにスレッドが登録されています")
+        return 0
+    print("スレッド未登録のチャンネル（1ch=1スレッド固定なので必ず登録する）:")
+    for ch in missing:
+        print(f"  - {ch}")
+    return 1
+
+
+def cmd_prompt(args: argparse.Namespace) -> int:
+    """次に ChatGPT スレッドへ送る文面だけを出す（初回=元プロンプト/以降=修正指示）。"""
+    print(bridge.next_prompt(args.req_id))
+    return 0
+
+
+def cmd_reject(args: argparse.Namespace) -> int:
+    data = bridge.reject(args.req_id, args.reason, revision_prompt=args.revision or "")
+    print(f"↩️ 差し戻し {data['id']}（試行 {len(data['attempts'])} 回目）— {args.reason}")
+    print("   次に同じスレッドへ送る文面:")
+    print("   " + bridge.next_prompt(args.req_id).replace("\n", "\n   "))
+    return 0
+
+
 def cmd_show(args: argparse.Namespace) -> int:
     req = bridge.load_request(args.req_id)
     if not req:
@@ -63,13 +91,18 @@ def cmd_show(args: argparse.Namespace) -> int:
     print(f"purpose: {req.get('purpose')}")
     print(f"size:    {req.get('size')}  quality={req.get('quality')}")
     print(f"thread:  {req.get('thread_url') or '(未登録 — thread set で登録する)'}")
-    print("--- prompt ---")
-    print(req["prompt"])
+    attempts = req.get("attempts") or []
+    if attempts:
+        print(f"attempts: {len(attempts)}")
+        for a in attempts:
+            print(f"  - {a.get('verdict')}: {a.get('reason') or '-'}")
+    print("--- 次にスレッドへ送る文面 ---")
+    print(bridge.next_prompt(req["id"]))
     return 0
 
 
 def cmd_deliver(args: argparse.Namespace) -> int:
-    data = bridge.deliver(args.req_id, args.image)
+    data = bridge.deliver(args.req_id, args.image, qc_note=args.qc or "")
     print(f"✅ 納品: {data['id']} → {data['image_path']}")
     print(f"   cache: {bridge.CACHE_DIR / (data['prompt_hash'] + '.png')}")
     return 0
@@ -89,8 +122,9 @@ def cmd_thread(args: argparse.Namespace) -> int:
     if not args.url:
         print("url が必要です", file=sys.stderr)
         return 1
-    bridge.set_thread_url(args.channel_id, args.url, note=args.note or "")
+    where = bridge.set_thread_url(args.channel_id, args.url, note=args.note or "")
     print(f"✅ {args.channel_id} → {args.url}")
+    print(f"   保存先: {where}")
     return 0
 
 
@@ -109,14 +143,27 @@ def main(argv=None) -> int:
     p.add_argument("--limit", type=int, default=20)
     p.set_defaults(func=cmd_list)
 
+    sub.add_parser("missing", help="スレッド未登録のチャンネル").set_defaults(func=cmd_missing)
+
+    p = sub.add_parser("prompt", help="次にスレッドへ送る文面だけ出力")
+    p.add_argument("req_id")
+    p.set_defaults(func=cmd_prompt)
+
+    p = sub.add_parser("reject", help="品質チェックで落として同じスレッドへ差し戻す")
+    p.add_argument("req_id")
+    p.add_argument("reason")
+    p.add_argument("--revision", default="", help="次に送る修正指示（省略時は reason をそのまま使う）")
+    p.set_defaults(func=cmd_reject)
+
     p = sub.add_parser("show", help="依頼の詳細（ChatGPT に貼るプロンプト）")
     p.add_argument("req_id")
     p.add_argument("--prompt-only", action="store_true", help="プロンプト本文だけ出力")
     p.set_defaults(func=cmd_show)
 
-    p = sub.add_parser("deliver", help="回収した画像を納品する")
+    p = sub.add_parser("deliver", help="品質チェックを通った画像を採用する")
     p.add_argument("req_id")
     p.add_argument("image")
+    p.add_argument("--qc", default="", help="何を見て OK にしたか")
     p.set_defaults(func=cmd_deliver)
 
     p = sub.add_parser("fail", help="処理できなかった依頼を落とす")
@@ -126,7 +173,9 @@ def main(argv=None) -> int:
 
     p = sub.add_parser("thread", help="チャンネル ↔ ChatGPT スレッドの対応")
     p.add_argument("action", choices=["set", "get"])
-    p.add_argument("channel_id", help="チャンネル ID（既定スレッドは _default）")
+    p.add_argument("channel_id",
+                   help="チャンネル ID。data/channels/<id>.json に保存される"
+                        "（設定ファイルが無い _default 等は threads.json へ）")
     p.add_argument("url", nargs="?")
     p.add_argument("--note", default="")
     p.set_defaults(func=cmd_thread)

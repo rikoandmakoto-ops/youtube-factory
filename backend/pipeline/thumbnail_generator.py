@@ -1,8 +1,10 @@
 """HTML+CSS+Playwright サムネイル生成モジュール.
 
 Pipeline:
-  1) GPT-5.6-terra で動画タイトルから「3行構成」のデザインブリーフをJSON生成
-  2) DALL-E 3 で背景画像 (1792x1024 → 1280x720) を生成
+  1) 動画タイトルから「3行構成」のデザインブリーフをJSON生成
+     （Claude → GPT → ローカル機械生成の順にフォールバック）
+  2) 背景画像を ChatGPT のブラウザスレッド経由で生成 (1536x1024 → 1280x720)
+     — OpenAI Images API は使わない。docs/CHATGPT_IMAGE_BRIDGE.md
   3) thumbnail_selfcontained.html のレイアウトをベースに自己完結HTMLを組み立て
      (背景画像とキャラ画像はすべて data URI に埋め込む — file:// で読み込み可)
   4) Playwright (Chromium headless) でスクリーンショットして PNG 保存
@@ -327,7 +329,7 @@ def generate_background(
     out_path: Path,
     channel_config: Optional[Dict[str, Any]] = None,
 ) -> Path:
-    """Call gpt-image-1 and save a 1280x720 PNG to `out_path`.
+    """背景を ChatGPT スレッド経由で作り、1280x720 の PNG を `out_path` に保存する。
 
     `channel_config.thumbnail_template.background_style_suffix` — if set,
     overrides the default "Style: …" sentence appended to the bg prompt. Use
@@ -360,29 +362,14 @@ def generate_background(
         extra={"line1": brief.get("line1"), "line2": brief.get("line2")},
     )
 
-    if raw:
-        out_path.write_bytes(raw)
-    elif openai_policy.direct_image_api_allowed() and api_key:
-        resp = _call_openai(
-            "https://api.openai.com/v1/images/generations",
-            {
-                "model": "gpt-image-1",
-                "prompt": prompt,
-                "n": 1,
-                "size": "1536x1024",
-                "quality": "high",
-            },
-            api_key,
-            timeout=240,
-        )
-        out_path.write_bytes(base64.b64decode(resp["data"][0]["b64_json"]))
-    else:
-        # 未納品。サムネ生成そのものは止めず、無地の背景で組む。
+    if not raw:
+        # 未納品。サムネ生成そのものは止めず、繋ぎの背景で組む。
         # 次回同じプロンプトが来たときにキャッシュヒットして本物に差し替わる。
         _placeholder_background(out_path, channel_config)
         return out_path
+    out_path.write_bytes(raw)
 
-    # gpt-image-1 returns 1536x1024 (3:2); crop center to 16:9 then resize to 1280x720
+    # 生成画像は 1536x1024 (3:2)。中央を 16:9 に切って 1280x720 へ。
     try:
         from PIL import Image
         img = Image.open(out_path).convert("RGB")

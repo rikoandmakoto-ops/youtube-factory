@@ -2,25 +2,27 @@
 
 最終更新: 2026-09-04 / 作業ツリー: コミット済み
 
-> **2026-09-04（夕）の変更まとめ** — 画像生成を **OpenAI API から ChatGPT のブラウザスレッド**へ移した回
+> **2026-09-04（夕）の変更まとめ** — 画像生成から **OpenAI API をコードごと削除**し、
+> ChatGPT の**チャンネル専用スレッド**で Claude が 生成→目視チェック→修正 を回す形にした回
 >
 > | 内容 | 状態 |
 > |---|---|
-> | **画像生成のブリッジ** | ✅ 新設 `pipeline/chatgpt_image_bridge.py`。`data/image_requests/` のファイルキューに依頼を積み、Claude in Chrome を持つセッションが **ChatGPT の（チャンネルごとに固定した）スレッド**で処理して納品する。**パイプラインは待たない**（既定 `wait_seconds=0`）ので autopilot の枠を落とさない。納品後は `cache/<prompt_hash>.png` に入り**次回の同一プロンプトで即ヒット** |
+> | **OpenAI Images API を廃止** | ✅ `video_generator` / `thumbnail_generator` から呼び出しコードごと削除。`tests/test_chatgpt_image_bridge.py::TestNoOpenAIImageCalls` が再混入を監視 |
+> | **画像生成のブリッジ** | ✅ 新設 `pipeline/chatgpt_image_bridge.py`。`data/image_requests/` のファイルキュー。**パイプラインは待たない**（既定 `wait_seconds=0`）ので autopilot の枠を落とさない。採用後は `cache/<prompt_hash>.png` に入り**次回の同一プロンプトで即ヒット** |
+> | **1ch = 1スレッド固定** | ✅ スレッド URL は **`data/channels/<ch>.json` の `image_generation.chatgpt_thread_url`**。毎回新しい会話を開くと ChatGPT 側の文脈もユーザーの修正指示も消えるので厳禁。未登録の洗い出しは `image_bridge.py missing` |
+> | **Claude 主導の品質ループ** | ✅ ChatGPT は**レンダリング基盤としてだけ**使い、プロンプト設計と品質判定は Claude が持つ。`prompt` → スクショで確認 → NG なら `reject <id> "理由" --revision "修正指示"`（依頼は pending のまま残り、次の文面が修正指示に変わる）→ 同じスレッドへ投げ直し → OK なら `deliver --qc`。判定基準は skill に明文化 |
 > | なぜ変えたか | ① API 直叩きだと会話が毎回消えて**ユーザーが横からプロンプトを直せない**＝品質がずっと同じところで止まっていた ② 09-03 18:49 の **OpenAI 429** で `clip-kaneko` 20:30 枠が落ちた（billing hard limit で `gpt-image-1` が丸ごと死ぬ時期もあった） |
-> | **方針スイッチ** | ✅ 新設 `pipeline/openai_policy.py`。**画像の API 直叩きは既定で禁止**。テキストは Claude が本命で OpenAI は退避口（`OPENAI_TEXT=0` で塞げる） |
+> | **方針スイッチ** | ✅ 新設 `pipeline/openai_policy.py`。テキストの `direct_text_api_allowed()` は **Claude が使えるかを毎回見る**ので、`ANTHROPIC_API_KEY` を入れた時点で OpenAI は呼ばれなくなる（環境変数の変更は不要） |
 > | 移行した箇所 | `video_generator._call_openai_image` / `thumbnail_generator.generate_background` / `api_phase5` の2エンドポイント / `gen_thumbs_v4.py` / `gen_thumbs_v4_all.py` / `gen_channel_icons.py` / `backend/scripts/setup_channel_branding.py` / `backend/scripts/generate_character_sprites.py` |
 > | `OPENAI_API_KEY` 不在で落ちなくなった | ✅ サムネのデザインブリーフは **Claude → GPT → ローカル機械生成**の順に落ちる。背景が未納品なら繋ぎのグラデーションで組んでサムネ生成自体は通す |
-> | イラスト生成のゲート | ✅ `OPENAI_API_KEY` の有無で判定していた4箇所を `_image_generation_available()` に置換（ブリッジが有効なら真） |
-> | 操作 CLI / ワーカー手順 | ✅ `scripts/image_bridge.py`（status/list/show/deliver/fail/thread/gc）と `.claude/skills/chatgpt-image-worker/SKILL.md`。全文は `docs/CHATGPT_IMAGE_BRIDGE.md` |
-> | テスト | ✅ `backend/tests/test_chatgpt_image_bridge.py` 追加（12件）。全 407 件中、失敗は**既知の3件のみ**（§6 の 0-d） |
+> | 操作 CLI / ワーカー手順 | ✅ `scripts/image_bridge.py`（status/list/missing/show/prompt/reject/deliver/fail/thread/gc）と `.claude/skills/chatgpt-image-worker/SKILL.md`。全文は `docs/CHATGPT_IMAGE_BRIDGE.md` |
+> | テスト | ✅ `backend/tests/test_chatgpt_image_bridge.py`（25件）。全 420 件中、失敗は**既知の3件のみ**（§6 の 0-d） |
 >
-> ⚠️ **残作業（人間の操作が要る）**:
-> ① **ChatGPT スレッドの登録**（`python3 scripts/image_bridge.py thread set <ch> <URL>`）。
-> 未登録の間はワーカーが処理先を決められない。
-> ② **Claude in Chrome の Chrome が ChatGPT にログインしていること**（09-04 時点で Browser 2 は未ログイン）。
-> ③ `ANTHROPIC_API_KEY` は `backend/.env` で**コメントアウトのまま**。入れたら `OPENAI_TEXT=0` にすれば OpenAI 依存はゼロになる。
-> 入れるまでは台本生成が OpenAI 頼みなので既定は `1`。
+> ⚠️ **残作業（人間の操作が要る。コード側は完了）**:
+> ① **ChatGPT スレッドを13ch分作って登録する** — `python3 scripts/image_bridge.py thread set <ch> <URL>`。
+> **現時点で登録はゼロ**（`missing` で全13ch が出る）。登録するまでワーカーは処理先を決められない。
+> ② **Claude in Chrome の Chrome が ChatGPT にログインしていること**。
+> ③ `ANTHROPIC_API_KEY` は `backend/.env` でコメントアウトのまま。入れれば OpenAI 依存はゼロになる。
 
 > **2026-09-04（朝）の変更まとめ** — 「自然文ルールは守られない」を前提に、施策を**機械ゲート**へ移した回
 >

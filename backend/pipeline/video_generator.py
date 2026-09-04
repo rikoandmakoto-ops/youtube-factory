@@ -705,84 +705,42 @@ def _mix_bgm(final_clip, channel_format, channel_id=None, bgm_volume=None,
 
 
 # ============================================================
-# Illustration Generator (GPT DALL-E / OpenAI API)
+# Illustration Generator — ChatGPT スレッド経由（OpenAI API は使わない）
 # ============================================================
+# 互換のため残しているだけ。画像生成には一切使わない。
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
 
 def _image_generation_available() -> bool:
-    """画像生成の経路が1つでもあるか。
-
-    ChatGPT ブラウザブリッジが有効なら API キーの有無に関係なく真
-    （キャッシュヒットすれば即返るし、外れても依頼をキューに積める）。
-    """
+    """画像生成の経路があるか。＝ ChatGPT ブリッジが有効か。"""
     try:
         from pipeline import chatgpt_image_bridge
-        if chatgpt_image_bridge.is_enabled():
-            return True
-    except Exception:
-        pass
-    return bool(OPENAI_API_KEY)
+        return chatgpt_image_bridge.is_enabled()
+    except Exception as e:  # pragma: no cover
+        print(f"⚠️ image bridge import failed: {e}")
+        return False
 
 
 def _call_openai_image(prompt, size="1024x1024", quality="medium", channel_id=None):
-    """イラストを1枚生成する。
+    """イラストを1枚もらう。経路は **ChatGPT のブラウザスレッドだけ**。
 
-    既定の経路は **ChatGPT のブラウザスレッド**（`chatgpt_image_bridge`）。
-    キャッシュに無ければ依頼をキューへ積んで None を返し、呼び出し側は
-    Pillow などのフォールバックに落ちる。API 直叩きは
-    `openai_policy.direct_image_api_allowed()` が真のときだけ。
+    キャッシュに無ければ依頼をキューへ積んで None を返す。呼び出し側は
+    Pillow などのフォールバックに落ち、後で Claude が納品すると
+    次回の同一プロンプトでキャッシュヒットして本物に差し替わる。
     """
     try:
-        from pipeline import chatgpt_image_bridge, openai_policy
-    except Exception as e:  # pragma: no cover - import 失敗時は従来動作
+        from pipeline import chatgpt_image_bridge
+    except Exception as e:  # pragma: no cover
         print(f"⚠️ image bridge import failed: {e}")
-        chatgpt_image_bridge = openai_policy = None
-
-    if chatgpt_image_bridge is not None:
-        data = chatgpt_image_bridge.request_image(
-            prompt, size=size, quality=quality,
-            channel_id=channel_id, purpose="illustration",
-        )
-        if data:
-            return Image.open(io.BytesIO(data)).convert("RGBA")
-
-    if openai_policy is not None and not openai_policy.direct_image_api_allowed():
         return None
 
-    if not OPENAI_API_KEY:
-        print("⚠️ OPENAI_API_KEY not set — skipping illustration generation")
+    data = chatgpt_image_bridge.request_image(
+        prompt, size=size, quality=quality,
+        channel_id=channel_id, purpose="illustration",
+    )
+    if not data:
         return None
-    url = "https://api.openai.com/v1/images/generations"
-    payload = json.dumps({
-        "model": "gpt-image-1",
-        "prompt": prompt,
-        "n": 1,
-        "size": size,
-        "quality": quality,
-    })
-    req = urllib.request.Request(url, data=payload.encode("utf-8"), method="POST",
-                                 headers={
-                                     "Content-Type": "application/json",
-                                     "Authorization": f"Bearer {OPENAI_API_KEY}",
-                                 })
-    try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            data = json.loads(resp.read())
-        b64 = data["data"][0]["b64_json"]
-        img_bytes = base64.b64decode(b64)
-        try:
-            from pipeline import api_usage
-            api_usage.record_image_usage(
-                size=size, quality=quality,
-                channel_id=channel_id, purpose="illustration",
-            )
-        except Exception:
-            pass
-        return Image.open(io.BytesIO(img_bytes)).convert("RGBA")
-    except Exception as e:
-        print(f"⚠️ Image API error: {e}")
-        return None
+    return Image.open(io.BytesIO(data)).convert("RGBA")
 
 
 # gpt-image-1 size mapping (channel illustration_style.format → API size string)
