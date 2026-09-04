@@ -996,6 +996,186 @@ class ScenarioGenerator:
             "attempts": len(candidates) - 1,
         }
 
+    def _regenerate_title_with_bans(
+        self,
+        channel,
+        theme: Dict,
+        scenario_data: Dict[str, Any],
+        rejected: str,
+        advice: List[str],
+    ) -> Optional[str]:
+        """規約違反タイトルを、違反内容を明示して作り直す。
+
+        `_regenerate_title_for_ctr` と違い、渡すのは「守らなければ却下される
+        機械ルール」。自然文の"お願い"では守られないことが実測で分かっているので、
+        ここで作り直したものも必ず再検査する（プロンプトは保証ではない）。
+        """
+        hook_lines: List[str] = []
+        for line in (scenario_data.get("short_scenario")
+                     or scenario_data.get("full_scenario") or [])[:4]:
+            text = line.get("text") if isinstance(line, dict) else ""
+            if text:
+                hook_lines.append(str(text))
+        advice_block = "\n".join(f"  - {a}" for a in advice) or "  - 規約に合わせる"
+        prompt = (
+            f"YouTubeショートのタイトルを1つだけ作り直してください。\n\n"
+            f"# チャンネル\n{channel.name}（{channel.concept}）\n\n"
+            f"# 動画のテーマ\n{theme.get('title', '')}\n"
+            f"切り口: {theme.get('angle', '') or '(指定なし)'}\n\n"
+            f"# 本編の冒頭\n" + ("\n".join(hook_lines) or "(なし)") + "\n\n"
+            f"# 却下されたタイトル\n「{rejected}」\n\n"
+            f"# 絶対に守る規則（1つでも破ると再び却下されます）\n{advice_block}\n\n"
+            f"# 条件\n"
+            f"- 内容の意味は変えず、規則を満たす言い方に変える。\n"
+            f"- 48文字以内。結論・答えは書かない。\n"
+            f"- 先頭に【】のプレフィックスを付けない。\n"
+            f"- タイトル本文のみを出力（前置き・引用符・番号なし）。\n"
+        )
+        try:
+            self._current_channel_id = channel.id
+            self._current_purpose = "title_constraint_regen"
+            raw = self._call_text_with_fallback(
+                [
+                    {"role": "system", "content": "タイトル1行のみ出力。説明・引用符は不要。"},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.9,
+                max_tokens=200,
+                gpt_model=GPT_MODEL_LIGHT,
+            )
+        except Exception as e:
+            print(f"  ⚠️ constraint title regeneration failed: {e}")
+            return None
+        title = (raw or "").strip().splitlines()[0].strip() if (raw or "").strip() else ""
+        return title.strip("「」\"'　 ") or None
+
+    def _enforce_title_constraints(self, channel, theme: Dict, result: Dict[str, Any],
+                                   scenario_data: Dict[str, Any]) -> None:
+        """タイトルの機械ゲート（`title_rules.hard_constraints`）を適用する。
+
+        自然文ルールが無視される問題への対処なので、ここは「通らなければ通るまで
+        直す」。LLM 再生成 2 回 → それでも違反なら決定論的に書き換える。
+        """
+        try:
+            from pipeline import title_constraints as _tc
+        except Exception as e:
+            print(f"  ⚠️ title constraint gate disabled: {e}")
+            return
+
+        try:
+            raw = channel._raw or {}
+        except AttributeError:
+            raw = {}
+        if not _tc.is_enforced(raw):
+            return
+
+        title = (result.get("title") or "").strip()
+        if not title:
+            return
+
+        verdict = _tc.check(title, raw)
+        if verdict["ok"]:
+            result["title_constraints"] = {"ok": True, "violations": []}
+            return
+
+        print(f"  🚫 タイトル規約違反: {_tc.violation_summary(verdict)} → 作り直します（{title}）")
+        original = title
+        current = title
+        for attempt in range(2):
+            cand = self._regenerate_title_with_bans(
+                channel, theme, scenario_data, current, verdict["advice"])
+            if not cand:
+                break
+            cand_verdict = _tc.check(cand, raw)
+            print(f"  ↻ 規約再生成 {attempt + 1}/2: "
+                  f"[{'OK' if cand_verdict['ok'] else _tc.violation_summary(cand_verdict)}] {cand}")
+            current = cand
+            verdict = cand_verdict
+            if cand_verdict["ok"]:
+                break
+
+        if not verdict["ok"]:
+            repaired = _tc.repair(current, raw)
+            re_verdict = _tc.check(repaired, raw)
+            print(f"  🔧 機械修復: 「{current}」→「{repaired}」"
+                  f"（{'OK' if re_verdict['ok'] else '未解消: ' + _tc.violation_summary(re_verdict)}）")
+            current, verdict = repaired, re_verdict
+
+        if current and current != original:
+            result.setdefault("original_title", original)
+            result["title"] = current
+        result["title_constraints"] = {
+            "ok": verdict["ok"],
+            "violations": verdict["violations"],
+            "rejected_title": original if current != original else None,
+        }
+
+    def _enforce_cross_channel_keywords(self, channel, theme: Dict, result: Dict[str, Any],
+                                        scenario_data: Dict[str, Any]) -> None:
+        """同日に全ch横断で同じキーワードが並ぶのを防ぐ（→ cross_channel_gate）。
+
+        09-03 に「正体」を全chの強語に入れた結果、同じ日に5chが同時に「正体」
+        入りのタイトルを出した。chごとの重複ゲートは全て素通りするので、
+        最終タイトルの段階で横断的に見る。
+        """
+        try:
+            from pipeline.auto_scenario import cross_channel_gate as _ccg
+        except Exception as e:
+            print(f"  ⚠️ cross-channel keyword gate disabled: {e}")
+            return
+
+        title = (result.get("title") or "").strip()
+        if not title:
+            return
+
+        hit = _ccg.blocking_keyword(channel.id, title)
+        if hit is None:
+            _ccg.reserve(channel.id, title)
+            result["cross_channel_keywords"] = {"ok": True}
+            return
+
+        original = title
+        current = title
+        for attempt in range(2):
+            advice = [
+                f"「{hit[0]}」という語をタイトルに使わないこと"
+                f"（本日すでに他チャンネルで{hit[1]}本使われている）。",
+                "別の切り口の言葉で同じ興味を引くこと。",
+            ]
+            cand = self._regenerate_title_with_bans(
+                channel, theme, scenario_data, current, advice)
+            if not cand:
+                break
+            current = cand
+            hit = _ccg.blocking_keyword(channel.id, current)
+            print(f"  ↻ 横断語の再生成 {attempt + 1}/2: "
+                  f"[{'OK' if hit is None else hit[0]}] {current}")
+            if hit is None:
+                break
+
+        if hit is not None:
+            # 直せなかった場合は投稿を止めず、そのまま通す（重複より欠測の方が痛い）。
+            print(f"  ⚠️ 横断語「{hit[0]}」を解消できませんでした。そのまま公開します。")
+
+        # 規約ゲートを再通過させてから確定する（言い換えで数字等が混入しうる）。
+        try:
+            from pipeline import title_constraints as _tc
+            raw = channel._raw or {}
+            if _tc.is_enforced(raw) and not _tc.check(current, raw)["ok"]:
+                current = _tc.repair(current, raw)
+        except Exception:
+            pass
+
+        if current and current != original:
+            result.setdefault("original_title", original)
+            result["title"] = current
+        _ccg.reserve(channel.id, result.get("title") or original)
+        result["cross_channel_keywords"] = {
+            "ok": hit is None,
+            "blocked_keyword": hit[0] if hit else None,
+            "rejected_title": original if current != original else None,
+        }
+
     def _pick_seed_avoiding_past(self, channel) -> Dict:
         """theme_seeds から過去に使ったものを除外して選ぶ。
 
@@ -2641,6 +2821,13 @@ class ScenarioGenerator:
 
         # CTR 品質ゲート。重複ゲートの後に置く（重複解消で入れ替わったタイトルも採点する）。
         self._enforce_title_quality(channel, theme, result, scenario_data)
+
+        # 機械ゲート（title_rules.hard_constraints）。CTR ゲートの後に置くのは、
+        # CTR 再生成が規約違反タイトルを持ち込みうるため。順序を入れ替えないこと。
+        self._enforce_title_constraints(channel, theme, result, scenario_data)
+
+        # ch 横断の同語ゲート。最終タイトルが確定した後に1回だけ見る。
+        self._enforce_cross_channel_keywords(channel, theme, result, scenario_data)
 
         # サムネ文字の長さゲート。AB テストが hook_lines を差し替えた後に置く。
         _normalize_thumb_info(result.get("thumb_info"))

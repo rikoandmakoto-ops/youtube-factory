@@ -660,6 +660,36 @@ def _match_leaked(topic):
     return "humanoid", "対象実体"
 
 
+def _leaked_matched(topic) -> bool:
+    """語彙にヒットして図が決まったか（フォールバックの人型ではないか）。"""
+    return any(any(k in (topic or "") for k in keys) for keys, _ in _LEAKED_KEYWORDS)
+
+
+def has_confident_render(topic, *, card_style="textbook", use_keyword_icons=True) -> bool:
+    """この題材で「中身のある図」を描けるか。
+
+    描けない場合に描いてしまうと、
+      - textbook: テーマ文をぶつ切りにした文字だけのカード
+        （実測「1.4倍 立つよ / り座る方が」）
+      - leaked-document: 語彙未ヒットで一律の人型シルエット
+    という「値が未確定のまま出た絵」になる。サムネでは無地の方が誤誘導しないので、
+    呼び出し側はこれが False の間は描画しない。
+    """
+    t = (topic or "").strip()
+    if not t:
+        return False
+    style = (card_style or "textbook").lower()
+    if style == "leaked-document":
+        return _leaked_matched(t)
+    if not use_keyword_icons:
+        # テーマ語を大きく出すだけの分岐＝図解ではない。見出しの繰り返しになる。
+        return False
+    try:
+        return len(_match_textbook(t)) >= 2
+    except Exception:
+        return False
+
+
 def _render_leaked(topic):
     """scp-lab: 不透明ダーク背景・ライトグレーの収容図(後段でL変換される)。"""
     img = Image.new("RGBA", (CANVAS_W, CANVAS_H), LK_BG)
@@ -688,9 +718,10 @@ def _render_leaked(topic):
     # 中央シルエット
     _LEAKED_FIG[fig](d, cx, cy, r)
 
-    # 指し示し線 + 偽の寸法
+    # 指し示し線。寸法は実測値を持っていないので**数値を描かない**
+    # （2026-09-04: 未確定の値を「?.?m」として印字していたのをやめた。
+    #  値が無いのに値があるように見せる表示は、視聴者にも PDCA にも嘘をつく）。
     d.line([(cx + r * 0.7, cy - r * 0.6), (cx + r * 2.0, cy - r * 1.0)], fill=LK_DIM, width=3)
-    _label(d, cx + r * 2.0 + 110, cy - r * 1.0, "?.?m", 44, LK_LINE)
 
     # ハザード三角(左下)
     hx, hy, hr = m + 80, CANVAS_H - m - 70, 56

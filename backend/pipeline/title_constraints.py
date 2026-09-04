@@ -1,0 +1,283 @@
+"""title_constraints — タイトルの**機械ゲート**（正規表現バリデータ）。
+
+背景（2026-09-04）:
+    `short_format.extra_rules` / `theme_priority.title_style` に自然文で書いた
+    タイトル規約は LLM に無視されることが実測で確定した。さらに
+    `title_rules.require_*` は backend が一切読んでいない（09-03 の検証）。
+    ＝「設定したのに何も起きていない」状態が続いていた。
+
+    そこで規約を**決定論的な検査＋修復**に移す。ここを通らないタイトルは
+    公開されない（LLM の再生成 → それでも駄目なら機械的に書き換える）。
+
+チャンネル JSON のスキーマ（`title_rules.hard_constraints`）:
+
+    "title_rules": {
+      "enforced_by_backend": true,
+      "hard_constraints": {
+        "forbid_digits": true,            // 数字（半角・全角）を一切禁止
+        "max_digit_groups": 1,            // 数字の「かたまり」の最大数
+        "forbid_prefixes": ["なぜ"],      // この語で始まるタイトルを禁止
+        "banned_words": ["〜について"],   // 含んではいけない語
+        "forbid_patterns": [              // 任意の正規表現
+          {"pattern": "#\\\\d+", "label": "連番"}
+        ],
+        "max_chars": 48
+      }
+    }
+
+    未設定のチャンネルは検査なし（挙動不変）。
+
+公開 API:
+    check(title, channel_dict)  -> {"ok": bool, "violations": [...], "advice": [...]}
+    repair(title, channel_dict) -> str   # 機械的に直せる範囲で直した文字列
+"""
+
+from __future__ import annotations
+
+import re
+from typing import Any, Dict, List, Optional
+
+# 半角・全角の数字。漢数字は「数字」に数えない（「一石二鳥」まで弾くのは行き過ぎ）。
+_DIGIT_RE = re.compile(r"[0-9０-９]")
+_DIGIT_GROUP_RE = re.compile(r"[0-9０-９]+")
+
+# 数字を消すときに一緒に落とす助数詞・単位（残すと「つの妖怪」のような残骸になる）。
+_COUNTER = (r"(?:つ|個|件|人|匹|体|回|本|年|ヶ月|か月|カ月|ヵ月|月|日|時間|分|秒|"
+            r"倍|割|％|%|パーセント|位|選|大|億|万|千|円|km|kg|cm|m|℃|度)?")
+_DIGIT_PHRASE_RE = re.compile(r"[0-9０-９]+" + _COUNTER + r"(?:の|は|が|を|も)?")
+
+# 「なぜ」始まりの機械的な言い換えに使う。
+_WHY_PREFIX_RE = re.compile(r"^\s*(?:なぜ|何故|なんで|どうして)\s*")
+_WHY_TAIL_RE = re.compile(r"(?:のだろうか|のでしょうか|のだろう|のか|んだろう|んだ)?\s*[？?]?\s*$")
+
+# 言い換え後に理由語が既にあるなら足さない。
+_REASON_WORDS = ("理由", "正体", "真実", "からくり", "仕組み", "秘密", "裏側")
+
+# 動詞・形容詞の連体形で終わっているか（「出す」「多い」「消えた」）。
+# 真なら「の」を挟まずに名詞を繋げる。
+_RENTAI_TAIL_RE = re.compile(r"(?:[うくぐすつぬぶむる]|い|た|だ|ない|ている|てる)$")
+
+_WS_RE = re.compile(r"[ 　]{2,}")
+_PUNCT_DUP_RE = re.compile(r"[、，,]{2,}")
+
+
+# ---------------------------------------------------------------------
+# 設定の読み出し
+# ---------------------------------------------------------------------
+
+def constraints_of(channel_dict: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+    """チャンネル JSON から hard_constraints を取り出す。無ければ空 dict。"""
+    tr = ((channel_dict or {}).get("title_rules") or {})
+    hc = tr.get("hard_constraints")
+    return hc if isinstance(hc, dict) else {}
+
+
+def is_enforced(channel_dict: Optional[Dict[str, Any]]) -> bool:
+    return bool(constraints_of(channel_dict))
+
+
+# ---------------------------------------------------------------------
+# 検査
+# ---------------------------------------------------------------------
+
+def check(title: str, channel_dict: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    """タイトルが hard_constraints を満たすか判定する。
+
+    Returns:
+        {"ok": bool, "violations": [{"rule","label","detail"}...], "advice": [str]}
+    """
+    hc = constraints_of(channel_dict)
+    t = (title or "").strip()
+    violations: List[Dict[str, str]] = []
+    advice: List[str] = []
+    if not hc or not t:
+        return {"ok": True, "violations": [], "advice": []}
+
+    if hc.get("forbid_digits"):
+        found = _DIGIT_GROUP_RE.findall(t)
+        if found:
+            violations.append({"rule": "forbid_digits", "label": "数字禁止",
+                               "detail": "/".join(found)})
+            advice.append("タイトルに数字（半角・全角）を一切入れないこと。"
+                          "本数・年号・パーセントも書かない。")
+    else:
+        try:
+            max_groups = int(hc.get("max_digit_groups"))
+        except (TypeError, ValueError):
+            max_groups = -1
+        if max_groups >= 0:
+            found = _DIGIT_GROUP_RE.findall(t)
+            if len(found) > max_groups:
+                violations.append({"rule": "max_digit_groups",
+                                   "label": f"数字は{max_groups}個まで",
+                                   "detail": "/".join(found)})
+                advice.append(f"タイトル内の数字は最大 {max_groups} 個。"
+                              f"今は {len(found)} 個あるので余分な数字を削ること。")
+
+    prefixes = hc.get("forbid_prefixes")
+    if isinstance(prefixes, (list, tuple)):
+        for p in prefixes:
+            p = str(p or "").strip()
+            if p and t.startswith(p):
+                violations.append({"rule": "forbid_prefixes", "label": f"「{p}」始まり禁止",
+                                   "detail": p})
+                advice.append(f"「{p}」で始めないこと。断定形の名詞句で始める"
+                              f"（例:「◯◯の本当の理由」）。")
+                break
+
+    banned = hc.get("banned_words")
+    if isinstance(banned, (list, tuple)):
+        hits = [str(w) for w in banned if str(w or "").strip() and str(w) in t]
+        if hits:
+            violations.append({"rule": "banned_words", "label": "禁止語",
+                               "detail": "/".join(hits)})
+            advice.append("次の語を使わないこと: " + " / ".join(hits))
+
+    for spec in (hc.get("forbid_patterns") or []):
+        if isinstance(spec, str):
+            spec = {"pattern": spec}
+        if not isinstance(spec, dict):
+            continue
+        pat = str(spec.get("pattern") or "")
+        if not pat:
+            continue
+        try:
+            if re.search(pat, t):
+                label = str(spec.get("label") or pat)
+                violations.append({"rule": "forbid_patterns", "label": label,
+                                   "detail": pat})
+                advice.append(f"「{label}」に当たる書き方をしないこと。")
+        except re.error:
+            continue
+
+    try:
+        max_chars = int(hc.get("max_chars"))
+    except (TypeError, ValueError):
+        max_chars = 0
+    if max_chars > 0 and len(t) > max_chars:
+        violations.append({"rule": "max_chars", "label": f"{max_chars}文字以内",
+                           "detail": str(len(t))})
+        advice.append(f"{max_chars}文字以内に収めること（今 {len(t)} 文字）。")
+
+    return {"ok": not violations, "violations": violations, "advice": advice}
+
+
+# ---------------------------------------------------------------------
+# 機械的な修復
+# ---------------------------------------------------------------------
+
+def _tidy(t: str) -> str:
+    t = _WS_RE.sub(" ", t)
+    t = _PUNCT_DUP_RE.sub("、", t)
+    # 数字を抜いた跡に残る記号（#／第／No. の残骸、空の括弧、連続コロン）を掃除する。
+    t = re.sub(r"[#＃]\s*(?=[：:、，,。\s]|$)", "", t)
+    t = re.sub(r"第\s*(?=[：:、，,。\s]|$)", "", t)
+    t = re.sub(r"(?i)no\.?\s*(?=[：:、，,。\s]|$)", "", t)
+    t = re.sub(r"[（(【\[]\s*[)）】\]]", "", t)
+    t = re.sub(r"[：:]{2,}", "：", t)
+    t = re.sub(r"\s*([：:])\s*", r"\1", t)
+    t = re.sub(r"\s*[：:]\s*(?=[、，,。]|$)", "", t)
+    t = re.sub(r"^[、，,。・：:\-—\s]+", "", t)
+    # 末尾に取り残された助詞・接続詞（「〜と」「〜の」）も落とす。
+    t = re.sub(r"[、，,・：:\-—\s]+$", "", t)
+    t = re.sub(r"(?:と|や|の|は|が|を|に|で)$", "", t)
+    t = re.sub(r"[、，,・：:\-—\s]+$", "", t)
+    return t.strip()
+
+
+def strip_digits(title: str) -> str:
+    """数字（と直後の助数詞）を落とす。"""
+    return _tidy(_DIGIT_PHRASE_RE.sub("", title or ""))
+
+
+def limit_digit_groups(title: str, max_groups: int) -> str:
+    """先頭から `max_groups` 個の数字だけ残し、それ以降の数字句を落とす。"""
+    t = title or ""
+    kept = 0
+    out: List[str] = []
+    pos = 0
+    for m in _DIGIT_PHRASE_RE.finditer(t):
+        out.append(t[pos:m.start()])
+        if kept < max_groups:
+            out.append(m.group(0))
+            kept += 1
+        pos = m.end()
+    out.append(t[pos:])
+    return _tidy("".join(out))
+
+
+def rewrite_why(title: str) -> str:
+    """「なぜ〜のか？」を断定形の名詞句に機械的に言い換える。
+
+    例: 「なぜ妖怪は夜に出るのか？」→「妖怪が夜に出る本当の理由」
+    """
+    t = (title or "").strip()
+    if not _WHY_PREFIX_RE.match(t):
+        return t
+    body = _WHY_PREFIX_RE.sub("", t)
+    body = _WHY_TAIL_RE.sub("", body).strip()
+    # 「〜するの」の余った「の」を落としてから理由句を足す（「出すの本当の理由」対策）。
+    body = re.sub(r"[のん]$", "", body).strip()
+    if not body:
+        return t
+    # 主題の「は」は名詞句にすると座りが悪い。既に「が」がある文は「の」に、
+    # 無ければ「が」に寄せる（「イーブイが進化先が多い」のような二重ガ格を避ける）。
+    if "は" in body:
+        body = body.replace("は", "の" if "が" in body else "が", 1)
+    if not any(w in body for w in _REASON_WORDS):
+        # 動詞・形容詞で終わる連体形にはそのまま繋ぐ（「出すの本当の理由」を防ぐ）。
+        body += ("本当の理由" if _RENTAI_TAIL_RE.search(body) else "の本当の理由")
+    return _tidy(body)
+
+
+def repair(title: str, channel_dict: Optional[Dict[str, Any]] = None) -> str:
+    """違反を機械的に直せる範囲で直した文字列を返す（直せなければ元のまま）。
+
+    LLM 再生成が失敗した場合の最終手段。意味は多少痩せるが、規約違反のまま
+    公開するよりは良い、という判断。
+    """
+    hc = constraints_of(channel_dict)
+    t = (title or "").strip()
+    if not hc or not t:
+        return t
+
+    prefixes = [str(p) for p in (hc.get("forbid_prefixes") or [])]
+    if any(t.startswith(p) for p in prefixes if p):
+        if any(p in ("なぜ", "何故", "なんで", "どうして") for p in prefixes):
+            t = rewrite_why(t)
+        else:
+            for p in prefixes:
+                if p and t.startswith(p):
+                    t = _tidy(t[len(p):])
+                    break
+
+    if hc.get("forbid_digits"):
+        t = strip_digits(t)
+    else:
+        try:
+            max_groups = int(hc.get("max_digit_groups"))
+        except (TypeError, ValueError):
+            max_groups = -1
+        if max_groups >= 0 and len(_DIGIT_GROUP_RE.findall(t)) > max_groups:
+            t = limit_digit_groups(t, max_groups)
+
+    for w in (hc.get("banned_words") or []):
+        w = str(w or "")
+        if w and w in t:
+            t = _tidy(t.replace(w, ""))
+
+    try:
+        max_chars = int(hc.get("max_chars"))
+    except (TypeError, ValueError):
+        max_chars = 0
+    if max_chars > 0 and len(t) > max_chars:
+        t = _tidy(t[:max_chars])
+
+    # 削りすぎて意味を成さなくなったら元に戻す（違反のままだが空よりまし）。
+    if len(t) < 8:
+        return (title or "").strip()
+    return t
+
+
+def violation_summary(result: Dict[str, Any]) -> str:
+    return " / ".join(f"{v['label']}({v['detail']})" for v in result.get("violations") or [])

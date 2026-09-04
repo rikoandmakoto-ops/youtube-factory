@@ -429,9 +429,16 @@ class ChannelConfigTest(unittest.TestCase):
         self.assertEqual(sorted(viral[0]["days_of_week"]), list(range(7)))
 
     def test_domestic_slot_is_untouched(self):
+        """国内枠は engine 未指定のまま残り、17:45 の実績枠を含むこと。
+
+        2026-09-04 に投稿本数を増やすため国内枠を 11:45 追加した。
+        枠が増えること自体は許容し、「17:45 が消えていない」「増やした枠に
+        engine が付いていない（＝海外バイラル側に化けていない）」を守る。
+        """
         slots = self.raw["autopilot"]["schedule"]["times"]
-        local = [s for s in slots if not s.get("engine")]
-        self.assertEqual([(s["hour"], s["minute"]) for s in local], [(17, 45)])
+        local = [(s["hour"], s["minute"]) for s in slots if not s.get("engine")]
+        self.assertIn((17, 45), local)
+        self.assertGreaterEqual(len(local), 1)
         self.assertEqual(self.clip["engine"], "local")
 
     def test_hard_block_still_applies_to_the_merged_config(self):

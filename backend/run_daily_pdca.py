@@ -367,14 +367,28 @@ def _channel_markdown(rep: Dict[str, Any]) -> str:
         L.append(f"- ⚠️ 分析失敗: {sp.get('error', '不明')}")
     L.append("")
 
-    # 維持率分析
+    # 判断軸（2026-09-04 に一本化）
+    sub = rep.get("subs_per_1000") or {}
+    L.append("### 判断軸: 登録者/1000再生（唯一の改善指標）")
+    if sub.get("ok"):
+        L.append(f"- **{sub.get('value')}** 人/1000再生"
+                 f"（登録 {sub.get('subscribers_gained')} / 再生 {sub.get('views')}・直近{sub.get('days')}日）")
+        L.append("- 施策の採否はこの数値の変化だけで決める。"
+                 "再生数・維持率が改善しても本数値が動かない施策は不採用とする。")
+    else:
+        L.append(f"- _算出不能（{sub.get('error') or '再生データなし'}）_")
+    L.append("")
+
+    # 維持率分析（参考値。2026-09-04 に判断軸から外した）
     ri = rep.get("retention_insights") or {}
-    L.append("### 視聴維持率分析 → シナリオ生成フィードバック")
+    L.append("### 視聴維持率（参考値・判断には使わない）")
+    L.append("> 2026-09-04 決定: 改善指標は 登録者/1000再生 に一本化。維持率は"
+             "chごとに登録転換との符号が逆（yokai 3.00倍 / scp 0.95倍）で、"
+             "施策の良し悪しを表さないため参考値へ降格した。"
+             "シナリオ生成への自動注入も停止済み。")
     if ri.get("ok"):
-        if ri.get("has_gpt_insights"):
-            L.append("- Claude分析: ✅ 完了（retention_tips が scenario_feedback 経由で次回シナリオ生成に自動注入）")
-        else:
-            L.append(f"- Claude分析: スキップ（{ri.get('gpt_skipped_reason') or '理由不明'}）")
+        L.append(f"- 分析は継続（観測のみ）。Claude分析: "
+                 f"{'✅ 完了' if ri.get('has_gpt_insights') else 'スキップ（' + str(ri.get('gpt_skipped_reason') or '理由不明') + '）'}")
     else:
         L.append(f"- ⚠️ 分析失敗: {ri.get('error', '不明')}")
     L.append("")
@@ -404,9 +418,9 @@ HISTORY_XLSX = REPORTS_DIR / "pdca_history.xlsx"
 # 列の並び（ヘッダー）。日付をキーにして冪等に更新する。
 XLSX_COLUMNS = [
     "日付", "登録者数", "総再生数", "動画本数", "直近30日ショート本数",
-    "平均再生数", "中央値再生数", "平均いいね率", "伸びてるジャンル",
+    "平均再生数", "中央値再生数", "平均いいね率", "登録/1000再生", "伸びてるジャンル",
     "抑制候補ジャンル", "テーマ重複ペア数", "成功パターン分析(OK/NG)",
-    "維持率分析(OK/NG)", "バズ続編投入数",
+    "維持率分析(OK/NG・参考値)", "バズ続編投入数",
 ]
 
 
@@ -419,6 +433,7 @@ def _rep_to_row(rep: Dict[str, Any], date_str: str) -> List[Any]:
     dups = rep.get("dup_check") or []
     sp = rep.get("success_patterns") or {}
     ri = rep.get("retention_insights") or {}
+    sub1k = rep.get("subs_per_1000") or {}
     act = rep.get("act") or {}
 
     top_genre = gb[0]["genre"] if gb else ""
@@ -435,6 +450,8 @@ def _rep_to_row(rep: Dict[str, Any], date_str: str) -> List[Any]:
         sh.get("avg_views", 0),
         sh.get("median_views", 0),
         like_rate if isinstance(like_rate, (int, float)) else None,
+        # 判断軸（2026-09-04 一本化）。他の列は観測用で、採否はこの列で決める。
+        sub1k.get("value") if isinstance(sub1k.get("value"), (int, float)) else None,
         top_genre,
         low_genre,
         len(dups),
@@ -600,6 +617,34 @@ def run_channel(channel_id: str, channel_name: str, token: str,
     except Exception as e:
         rep["success_patterns"] = {"ok": False, "error": str(e)}
         print(f"    success patterns FAILED: {e}")
+
+    # 判断軸（登録者/1000再生）。2026-09-04 にここへ一本化した。
+    # pdca-report が返す subscriber_sources.shorts をそのまま採る（ショート専業のため）。
+    try:
+        from pipeline import optimization_policy as _op
+        _pr = (rep.get("pdca_report") or {}).get("data") or {}
+        _ss = (_pr.get("subscriber_sources") or {})
+        _shorts = (_ss.get("shorts") or {})
+        _sh_stats = (_pr.get("shorts") or {})
+        _views = int(_sh_stats.get("total_views") or 0) or int(
+            (_sh_stats.get("avg_views") or 0) * (_sh_stats.get("count") or 0))
+        _gained = int(_shorts.get("gained") or 0)
+        _value = _shorts.get("subs_per_1000_views")
+        if _value in (None, 0) and _views:
+            _value = _op.subs_per_1000_views(_gained, _views)
+        rep["subs_per_1000"] = {
+            "ok": _value is not None and _views > 0,
+            "value": _value,
+            "subscribers_gained": _gained,
+            "views": _views,
+            "days": SYNC_DAYS,
+            "error": _ss.get("error"),
+        }
+        print(f"    primary metric (subs/1k) = {_value} "
+              f"[{_gained} subs / {_views} views]")
+    except Exception as e:
+        rep["subs_per_1000"] = {"ok": False, "error": str(e)}
+        print(f"    primary metric FAILED: {e}")
 
     try:
         from pipeline.analytics import retention_analyzer

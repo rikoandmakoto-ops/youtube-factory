@@ -140,6 +140,62 @@ def _provider_chain(preferred) -> List[str]:
 # Public: search & download
 # ============================================================
 
+# 企業名から落とす接尾辞・法人格。「株式会社トヨタ自動車」→「トヨタ自動車」。
+_ENTITY_SUFFIXES = [
+    "株式会社", "有限会社", "合同会社", "ホールディングス", "グループ",
+    "Co., Ltd.", "Co.,Ltd.", "Corporation", "Corp.", "Inc.", "Ltd.", "K.K.",
+]
+_ENTITY_TOKEN_RE = re.compile(r"[一-龥々]{2,}|[ァ-ヶー]{2,}|[A-Za-z]{3,}")
+
+# 業種を表すだけで企業を特定しない語。これ単独の一致は「無関係な写真」を通す。
+_GENERIC_ENTITY_TOKENS = {
+    "自動車", "工業", "製作所", "製造", "産業", "商事", "銀行", "証券", "保険",
+    "電機", "電気", "電子", "重工", "化学", "食品", "製薬", "建設", "運輸",
+    "鉄道", "航空", "海運", "不動産", "百貨店", "放送", "新聞", "出版",
+    "通信", "情報", "システム", "サービス", "ホールディング", "カンパニー",
+    "company", "corporation", "industries", "motor", "motors", "group",
+    "holdings", "bank", "electric", "systems", "japan",
+}
+
+
+def _entity_variants(name: str) -> List[str]:
+    """企業名の照合キー（法人格を落とした表記・英字小文字）を返す。"""
+    n = (name or "").strip()
+    if not n:
+        return []
+    for suf in _ENTITY_SUFFIXES:
+        n = n.replace(suf, "")
+    n = n.strip(" 　・")
+    out = {n.lower()} if n else set()
+    for tok in _ENTITY_TOKEN_RE.findall(n):
+        # 業種語だけの一致は誤検出になる（「自動車」で無関係な車の写真が通る）。
+        # 固有名部分に当たるトークンだけを照合キーにする。
+        if len(tok) >= 2 and tok.lower() not in _GENERIC_ENTITY_TOKENS:
+            out.add(tok.lower())
+    return [v for v in out if v]
+
+
+def matches_entity(hit: "CollectedImage", entity: str) -> bool:
+    """検索ヒットがその企業のものだと確認できるか。
+
+    実写背景は「企業の話をしているのに全く無関係な会社/風景の写真」が乗ると
+    誤情報になる。ヒットのタイトル・出典URLに企業名（またはその主要トークン）が
+    含まれていることを最低条件にする。判定できないものは**採用しない**
+    （検証できないなら使わない、が安全側）。
+    """
+    variants = _entity_variants(entity)
+    if not variants:
+        return True  # 企業名が無いなら検証しようがない＝従来どおり通す
+    haystack = " ".join([
+        str(getattr(hit, "source_title", "") or ""),
+        str(getattr(hit, "source_url", "") or ""),
+        str(getattr(hit, "direct_url", "") or ""),
+    ]).lower()
+    if not haystack.strip():
+        return False
+    return any(v in haystack for v in variants)
+
+
 def search(query: str, settings: Optional[Dict] = None) -> Optional[CollectedImage]:
     """Search the configured provider for `query` and return the first usable
     image as a CollectedImage (with attribution). Returns None when no
@@ -165,6 +221,29 @@ def search(query: str, settings: Optional[Dict] = None) -> Optional[CollectedIma
 
     keywords = _extract_keywords(query)
     if not keywords:
+        return None
+
+    # 実体（企業名）との一致検証。設定されていれば、ヒットのタイトル・URL に
+    # その企業名が出てこない写真は採用しない（2026-09-04）。
+    entity = str(settings.get("entity") or "").strip()
+    require_match = bool(settings.get("require_entity_match")) and bool(entity)
+    if require_match:
+        tries = max(1, int(settings.get("entity_match_tries", 4) or 4))
+        for offset in range(tries):
+            sub = dict(settings)
+            sub["require_entity_match"] = False
+            sub["skip"] = skip + offset
+            hit = search(query, settings=sub)
+            if hit is None:
+                break
+            if matches_entity(hit, entity):
+                if offset:
+                    print(f"  ✅ 実写背景の一致確認: '{entity}' ← {_short_host(hit.source_url)}"
+                          f"（{offset + 1}件目で一致）")
+                return hit
+            print(f"  ⛔ 実写背景を却下: '{entity}' と一致しない "
+                  f"（{hit.source_title[:36]!r} / {_short_host(hit.source_url)}）")
+        print(f"  ⚠️ '{entity}' に一致する実写が見つからず — この枠は採用しません")
         return None
 
     for provider in chain:
@@ -212,6 +291,17 @@ def search_and_cache(query: str, cache_dir: Path, idx: int,
     if img_path.exists() and meta_path.exists():
         try:
             meta = json.loads(meta_path.read_text(encoding="utf-8"))
+            # 実体一致が必須の用途では、キャッシュも同じ基準で検証する
+            # （キャッシュ経由で別企業の写真が復活するのを防ぐ）。
+            entity = str((settings or {}).get("entity") or "").strip()
+            if (settings or {}).get("require_entity_match") and entity:
+                cached_hit = CollectedImage(
+                    image=None, source_url=meta.get("source_url", ""),
+                    source_title=meta.get("source_title", ""),
+                    provider=meta.get("provider", ""),
+                    direct_url=meta.get("direct_url", ""))
+                if not matches_entity(cached_hit, entity):
+                    raise ValueError("cached image does not match entity")
             img = Image.open(str(img_path)).convert("RGBA")
             return {
                 "image": img,

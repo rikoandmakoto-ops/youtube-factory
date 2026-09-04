@@ -587,8 +587,20 @@ def _pop_or_refill_theme(channel_id: str) -> Optional[Dict[str, str]]:
             _td = None  # type: ignore
             past = []
 
+        # ch 横断の同語ゲート。同じ日に全ch合計で同一キーワードは既定2本まで。
+        # 09-03 に「正体」が5ch同時に出たため追加（→ cross_channel_gate）。
+        try:
+            from pipeline.auto_scenario import cross_channel_gate as _ccg
+            xlimit = ap.get("cross_channel_keyword_limit")
+        except Exception as e:
+            print(f"⚠️ autopilot cross-channel gate disabled ({channel_id}): {e}")
+            _ccg = None  # type: ignore
+            xlimit = None
+
         head = None
         skipped = 0
+        skipped_cross = 0
+        deferred: List[Dict[str, Any]] = []   # 横断ゲートで落ちた候補（キューに戻す）
         while queue:
             cand = queue.pop(0)
             cand_title = (cand.get("title") or "").strip()
@@ -598,18 +610,38 @@ def _pop_or_refill_theme(channel_id: str) -> Optional[Dict[str, str]]:
                     skipped += 1
                     print(f"  ♻️ autopilot dropped dup theme: '{cand_title}' ≈ '{hit[0]}' ({hit[1]:.2f})")
                     continue
+            if _ccg is not None and cand_title:
+                xhit = _ccg.blocking_keyword(channel_id, cand_title, limit=xlimit)
+                if xhit is not None:
+                    skipped_cross += 1
+                    deferred.append(cand)
+                    print(f"  🚧 autopilot cross-ch keyword block: '{cand_title}' "
+                          f"— 「{xhit[0]}」は本日すでに{xhit[1]}本")
+                    continue
             head = cand
             break
 
+        # 横断ゲートで落とした候補は「今日は出さない」だけなので、捨てずに
+        # 先頭へ戻す（重複ゲートで落ちたものと違い、明日は使える）。
+        if deferred:
+            queue = deferred + queue
+
         # 全部重複で枯渇したら、最後に取り出した候補を使う（投稿skipより重複の方がマシ）
         if head is None:
-            print(f"⚠️ autopilot {channel_id}: all queued themes duplicate recent posts — using last anyway")
-            head = cand  # type: ignore[possibly-undefined]
+            print(f"⚠️ autopilot {channel_id}: all queued themes blocked (dup/cross-ch) — using first anyway")
+            if queue:
+                head = queue.pop(0)
+            else:
+                head = cand  # type: ignore[possibly-undefined]
+
+        if _ccg is not None and (head.get("title") or "").strip():
+            _ccg.reserve(channel_id, str(head["title"]).strip())
 
         ap["theme_queue"] = queue
         _save_autopilot(channel_id, ap)
-        if skipped:
-            print(f"  ℹ️ autopilot {channel_id}: skipped {skipped} duplicate theme(s) before '{head.get('title')}'")
+        if skipped or skipped_cross:
+            print(f"  ℹ️ autopilot {channel_id}: skipped {skipped} duplicate / "
+                  f"{skipped_cross} cross-ch theme(s) before '{head.get('title')}'")
         return {"title": head["title"], "angle": head.get("angle") or ""}
 
 

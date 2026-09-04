@@ -103,8 +103,23 @@ def enhance(
         traceback.print_exc()
 
     # ── 4. Retention Feedback Loop ──
+    # 2026-09-04: 判断軸を登録/1000再生へ一本化したため、維持率を根拠にした
+    # シナリオ書き換えは既定で止まる（→ pipeline/optimization_policy.py）。
+    # 維持率を再び改善指標に戻すなら channel JSON の optimization.decision_metrics
+    # に "retention" を足すこと。ここを直接いじらない。
     try:
-        if not enhancer_gate.is_enabled(channel_dict, "retention_feedback_loop"):
+        from pipeline import optimization_policy as _op
+        _retention_is_lever = _op.is_decision_metric(channel_dict, "retention")
+    except Exception:
+        _retention_is_lever = True
+    try:
+        if not _retention_is_lever:
+            results["retention_feedback"] = {
+                "skipped": True,
+                "reason": "retention is reference-only "
+                          "(optimization.decision_metrics = subs_per_1000_views)",
+            }
+        elif not enhancer_gate.is_enabled(channel_dict, "retention_feedback_loop"):
             results["retention_feedback"] = enhancer_gate.skipped("retention_feedback_loop", channel_id)
         else:
             from pipeline.retention_feedback_loop import apply_retention_feedback

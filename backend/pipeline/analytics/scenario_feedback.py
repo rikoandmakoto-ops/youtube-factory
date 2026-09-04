@@ -81,7 +81,15 @@ def build_analytics_addendum(channel_id: str) -> Optional[str]:
         if block:
             sections.append("\n".join(block))
 
-    insights = retention_analyzer.load_insights(channel_id)
+    # 2026-09-04: 判断軸を登録/1000再生へ一本化。維持率は参考値に降格したので
+    # シナリオ生成プロンプトへは注入しない（→ pipeline/optimization_policy.py）。
+    try:
+        from pipeline import optimization_policy as _op
+        _retention_is_lever = _op.channel_uses_metric(channel_id, "retention")
+    except Exception:
+        _retention_is_lever = True
+
+    insights = retention_analyzer.load_insights(channel_id) if _retention_is_lever else None
     if insights and not insights.get("skipped"):
         gpt = insights.get("gpt_insights") or {}
         block = []

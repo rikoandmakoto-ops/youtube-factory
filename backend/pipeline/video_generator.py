@@ -2609,11 +2609,17 @@ def _facts_bg_queries(title, scenario, channel_dict, cfg, max_images, company=No
     return queries[:max(1, max_images)]
 
 
-def _collect_facts_backgrounds(queries, image_collect_settings, cache_dir, max_images):
+def _collect_facts_backgrounds(queries, image_collect_settings, cache_dir, max_images,
+                               entity=None):
     """クエリ列から重複を除いた 9:16 背景画像リストを集める。
 
     同じ写真が複数クエリでヒットすることがあるので、縮小画像のハッシュで
     重複を弾く（同じ絵が2枚続くとスライドショーに見えないため）。
+
+    `entity`（企業名）を渡すと、検索ヒットのタイトル・出典URLにその企業名が
+    含まれることを確認してから採用する（2026-09-04）。企業の話をしているのに
+    無関係な会社・風景の写真が乗ると、映像そのものが誤情報になるため。
+    一致が取れなければその枠は空にし、呼び出し側の手描き背景へ落ちる。
     """
     try:
         from pipeline import image_collector
@@ -2627,6 +2633,15 @@ def _collect_facts_backgrounds(queries, image_collect_settings, cache_dir, max_i
     settings.setdefault("provider", "auto")
     # 全画面が背景なので縦写真を優先（landscape を9:16に切ると被写体が飛ぶ）
     settings.setdefault("orientation", "portrait")
+    entity = (entity or "").strip()
+    if entity and settings.get("require_entity_match") is not False:
+        settings["entity"] = entity
+        settings["require_entity_match"] = True
+        # キャッシュを企業ごとに分ける。共有ディレクトリのままだと
+        # collected_000.png が別企業の回で再利用されてしまう。
+        slug = re.sub(r"[^0-9A-Za-z\u3040-\u30ff\u4e00-\u9fff]+", "_", entity)[:40] or "entity"
+        cache_dir = cache_dir / slug
+        cache_dir.mkdir(parents=True, exist_ok=True)
 
     images, seen = [], set()
     slot = 0
@@ -2737,6 +2752,7 @@ class FactsOverlayShortRenderer:
                 bg_queries or [], image_collect_settings,
                 cache_dir=cache / "facts_bg",
                 max_images=int(slideshow.get("max_images", 5) or 5),
+                entity=self.company,
             )
 
         if self.bg_video is None and not self.bg_images:
@@ -4631,18 +4647,24 @@ def _thumb_rebalance_orphan(font, text, lines, max_width):
 THUMB_ILLUST_MIN_BAND_H = 240
 
 
-def _thumb_find_cached_illustration(out_dir):
+def _thumb_find_cached_illustration(out_dir, allow_pillow=True):
     """out_dir/short_illustrations/ に既にある図解カードを1枚選んで返す。
 
     ショート本編の生成が先に走っていればここにキャッシュがある
     （illust_NNN.png = DALL-E / collect、pillow_NNN.png = ローカル図解）。
     無ければ None。呼び出し側は無地にフォールバックする。
+
+    `allow_pillow=False` のときは Pillow 図解のキャッシュを無視する。
+    Pillow 図解は語彙未ヒットでも必ず何かを描いてしまう（＝値が未確定でも絵が出る）
+    ので、確度の判定が False のときはキャッシュ経由でも拾わせない。
     """
     cache_dir = Path(out_dir) / "short_illustrations"
     if not cache_dir.is_dir():
         return None
     # 冒頭フックの直後に出る 000 番が本編の主題に一番近い。
-    candidates = sorted(cache_dir.glob("illust_*.png")) + sorted(cache_dir.glob("pillow_*.png"))
+    candidates = sorted(cache_dir.glob("illust_*.png"))
+    if allow_pillow:
+        candidates += sorted(cache_dir.glob("pillow_*.png"))
     for path in candidates:
         try:
             return Image.open(str(path)).convert("RGBA")
@@ -4662,20 +4684,33 @@ def _thumb_build_illustration(out_dir, topic, channel_format, channel_id=None):
     3) チャンネルが short_illustrations を切っている / keyword_icons=false /
        描画に失敗した場合は None を返し、呼び出し側は従来どおり無地にする。
     """
-    cached = _thumb_find_cached_illustration(out_dir)
+    si_cfg = (channel_format or {}).get("short_illustrations", {}) or {}
+    card_style = (si_cfg.get("card_style") or "textbook").lower()
+    use_icons = bool(si_cfg.get("keyword_icons", True))
+
+    # 「値が未確定なら描画しない」（2026-09-04）。語彙にヒットせず中身の決まらない
+    # カードは、テーマ文のぶつ切りや一律の人型シルエットになる。判定はキャッシュを
+    # 読む前に行う（本編が先に描いた低確度カードをサムネが拾うのを防ぐ）。
+    confident = False
+    if (topic or "").strip():
+        try:
+            from pipeline import pillow_illustration as _pi
+            confident = _pi.has_confident_render(
+                topic, card_style=card_style, use_keyword_icons=use_icons)
+        except Exception:
+            confident = False
+
+    cached = _thumb_find_cached_illustration(out_dir, allow_pillow=confident)
     if cached is not None:
         return cached
 
-    si_cfg = (channel_format or {}).get("short_illustrations", {}) or {}
     if not si_cfg.get("enabled"):
         return None
     if not (topic or "").strip():
         return None
-    # keyword_icons=false のチャンネル（実話系スレなど）の Pillow 図解は
-    # 「テーマ語を大きく見せる」＝ほぼ文字だけのカードになる。サムネでは
-    # 真上の見出しと同じ文字を繰り返すだけなので、本編のキャッシュが
-    # できるまでは無地に倒す。
-    if not si_cfg.get("keyword_icons", True):
+    if not confident:
+        print("  ℹ️ サムネ図解: 題材から中身の決まる図が作れないため描画しません"
+              "（帯はキャラで詰めます）")
         return None
 
     try:
@@ -4683,20 +4718,10 @@ def _thumb_build_illustration(out_dir, topic, channel_format, channel_id=None):
     except Exception:
         return None
 
-    # 教科書風カードは語句マッチが1件以下だと「アイコン1個＋総称ラベル」か
-    # 「テーマ文をそのまま印字」に落ちる。08-31 実測では pokemon『森』→ 葉/植物、
-    # yokai『雪』→ 雪片/氷 と題材と無関係な絵が出て、daily-science は未ヒットで
-    # 見出しの文字が途中で切れたまま印字されていた（『1.4倍 立つよ / り座る方が』）。
-    # サムネでは無地の方が誤誘導しないので、2語以上ヒットしたときだけ描く。
-    # 本編側（generate_pillow_illustration 直呼び）と leaked-document は従来どおり。
-    card_style = (si_cfg.get("card_style") or "textbook").lower()
-    if card_style != "leaked-document":
-        try:
-            if len(pillow_illustration._match_textbook(topic)) < 2:
-                return None
-        except Exception:
-            return None
-
+    # ここに来るのは has_confident_render が True のときだけ。
+    # 「アイコン1個＋総称ラベル」「テーマ文のぶつ切り」に落ちる条件は
+    # 判定側で弾いてある（08-31 実測: pokemon『森』→ 葉/植物、
+    # daily-science 未ヒットで『1.4倍 立つよ / り座る方が』）。
     cache_dir = Path(out_dir) / "short_illustrations"
     try:
         return pillow_illustration.generate_pillow_illustration(
@@ -4706,11 +4731,51 @@ def _thumb_build_illustration(out_dir, topic, channel_format, channel_id=None):
             idx=0,
             cache_dir=str(cache_dir),
             channel_id=channel_id,
-            use_keyword_icons=si_cfg.get("keyword_icons", True),
+            use_keyword_icons=use_icons,
         )
     except Exception as e:
         print(f"⚠️ サムネ用図解の描画に失敗（無地にフォールバック）: {e}")
         return None
+
+
+# ホラー/怪異系チャンネル。立ち絵の表情差分を驚愕・戦慄側に寄せる対象。
+# `thumbnail_template.expression_mood` で明示指定もできる（"horror" / "bright"）。
+_HORROR_CHANNEL_IDS = {"scp-lab", "yokai-watch", "akashic-librarian", "fake-paper"}
+
+# 驚愕・戦慄の優先順。素材に無い表情は次候補へ落ちる（assets/characters/<id>/ には
+# surprise / angry / sad / think / happy / laugh / normal が混在している）。
+_HORROR_EXPR_ORDER = {
+    "left": ["surprise", "sad", "angry", "think", "normal", "happy"],
+    "right": ["surprise", "angry", "sad", "think", "normal", "happy"],
+}
+_DEFAULT_EXPR_ORDER = {
+    "left": ["happy", "laugh", "normal", "think", "surprise"],
+    "right": ["surprise", "normal", "happy", "think"],
+}
+
+
+def _thumb_is_horror(channel_dict, channel_id=None):
+    """このチャンネルのサムネを驚愕・戦慄寄りの表情で組むか。"""
+    tt = ((channel_dict or {}).get("thumbnail_template") or {})
+    mood = str(tt.get("expression_mood") or "").strip().lower()
+    if mood in ("horror", "fear", "shock"):
+        return True
+    if mood in ("bright", "happy", "neutral"):
+        return False
+    cid = str((channel_dict or {}).get("id") or channel_id or "")
+    return cid in _HORROR_CHANNEL_IDS
+
+
+def _thumb_pick_expression(char_dir, side, horror):
+    """立ち絵ディレクトリから使える表情差分を1つ選ぶ。無ければ None。"""
+    side = side if side in ("left", "right") else "right"
+    order = (_HORROR_EXPR_ORDER if horror else _DEFAULT_EXPR_ORDER)[side]
+    for expr in order:
+        p = char_dir / f"{expr}.png"
+        if p.exists():
+            return p
+    p = char_dir / "normal.png"
+    return p if p.exists() else None
 
 
 def _thumb_paste_illustration(canvas, illust, band_top, band_bottom,
@@ -4787,6 +4852,34 @@ def _thumb_fit_lines(font_path, lines, max_width, base_size, min_size,
     for ln in lines:
         wrapped.extend(_thumb_wrap_line(font, ln, max_width, max_lines=3))
     return font, wrapped
+
+
+def _thumb_trim_to_width(font_path, text, max_width, base_size, min_size, step=4):
+    """1行に収まる最大フォントと、そこに収まるまで削ったテキストを返す。
+
+    黄色帯（tagline）用。折り返さず1行に強制するため、
+      1) base_size から min_size までフォントを縮めて丸ごと収まるか試す
+      2) 駄目なら min_size のまま末尾を削り「…」を付けて収める
+      3) 削った結果が短すぎて意味を成さない（6文字未満）なら None
+         → 呼び出し側は帯そのものを描かない
+    Returns: {"text": str, "size": int} または None
+    """
+    text = " ".join(str(text or "").split())
+    if not text:
+        return None
+    size = base_size
+    while size >= min_size:
+        font = ImageFont.truetype(font_path, size)
+        if _thumb_text_width(font, text) <= max_width:
+            return {"text": text, "size": size}
+        size -= step
+    font = ImageFont.truetype(font_path, min_size)
+    # 末尾から削る。句読点で切れるならそこで閉じて読み終わり感を残す。
+    for cut in range(len(text) - 1, 5, -1):
+        cand = text[:cut].rstrip("、，,。・ 　") + "…"
+        if _thumb_text_width(font, cand) <= max_width:
+            return {"text": cand, "size": min_size} if cut >= 6 else None
+    return None
 
 
 def _thumb_scatter_dots(img, count=35):
@@ -5075,11 +5168,31 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
         dot_draw.ellipse([dx-dr, dy-dr, dx+dr, dy+dr], fill=random.choice(colors))
     canvas = Image.alpha_composite(canvas, dot_overlay)
 
-    # 2. Characters (lower area). char_config があればチャンネル固有キャラを使う。
+    # 2. 図解カードを先に用意する（2026-09-04）。
+    # 立ち絵のサイズを「カードが出るかどうか」で変えるため、描画順より先に決める。
+    illust = None
+    if channel_format is not None:
+        illust_topic = " ".join(
+            str(t) for t in [*(hook_lines or []), subtitle] if t
+        ).strip() or str(title or "")
+        illust = _thumb_build_illustration(
+            out_dir, illust_topic, channel_format, channel_id=channel_id)
+
+    # 3. Characters (lower area). char_config があればチャンネル固有キャラを使う。
     _CHAR_DIR_MAP = {"理子": "riko", "真": "makoto", "あかり": "akari", "ゆうた": "yuuta",
                      "シロ": "shiro", "クロ": "kuro"}
     _chars = char_config or CHAR_CONFIG
     char_top_y = SH  # 立ち絵の上端。図解カードの下限になる。
+    # 図解カードが出ないときは、空いた帯を立ち絵で上へ詰める（下端は固定なので
+    # 上方向にだけ伸びる）。従来はカード無しでも 0.34 固定で、テキスト帯と
+    # 立ち絵の間に 300px 前後の死んだ余白が残っていた。
+    # 立ち絵は「幅」で頭打ちになる素材（顔だけの正方形アイコン）が多いので、
+    # 高さだけ緩めても伸びない。カードが無いときは幅の上限も一緒に緩める。
+    char_box_ratio = 0.34 if illust is not None else 0.46
+    char_box_w_ratio = 0.48 if illust is not None else 0.53
+    # ホラー系チャンネルは「にこやかな立ち絵」が題材と噛み合わないので、
+    # 驚愕・戦慄側の表情差分があればそれを優先する（無ければ従来どおり）。
+    horror = _thumb_is_horror(channel_dict, channel_id)
     for name, cfg in _chars.items():
         if not isinstance(cfg, dict) or not cfg.get("side"):
             continue
@@ -5087,11 +5200,8 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
         char_dir = ASSETS_DIR / "characters" / dir_name
         if not char_dir.exists():
             char_dir = ASSETS_DIR / dir_name
-        expr = "happy" if cfg.get("side") == "left" else "surprise"
-        sprite_path = char_dir / f"{expr}.png"
-        if not sprite_path.exists():
-            sprite_path = char_dir / "normal.png"
-        if sprite_path.exists():
+        sprite_path = _thumb_pick_expression(char_dir, cfg.get("side"), horror)
+        if sprite_path is not None and sprite_path.exists():
             sprite = Image.open(str(sprite_path)).convert("RGBA")
             # 透明余白を落としてから拡縮する（素材ごとに余白量が違うため）。
             # riko/makoto のように全面にごく薄いアルファが乗った素材があり、
@@ -5108,7 +5218,7 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
             # 素材のアスペクト比が 612x408（横長）〜1024x1024（正方）とバラバラなので
             # 高さ基準の一律スケールだと横幅が画面を超えて2体が重なる。
             # 幅・高さの両方に上限を設けて内接させる。
-            box_w, box_h = int(SW * 0.48), int(SH * 0.34)
+            box_w, box_h = int(SW * char_box_w_ratio), int(SH * char_box_ratio)
             scale = min(box_w / sprite.width, box_h / sprite.height)
             s_w, s_h = max(1, int(sprite.width * scale)), max(1, int(sprite.height * scale))
             sprite = sprite.resize((s_w, s_h), Image.LANCZOS)
@@ -5134,24 +5244,48 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
         margin = int(_st.get("side_margin", 60))
         max_w = SW - margin * 2
 
+        # 図解カードが出ないときは、空いた帯を見出しの拡大でも詰める
+        # （立ち絵は幅で頭打ちになるため、立ち絵の拡大だけでは埋まらない）。
+        _no_card_boost = 1.0 if illust is not None else 1.16
         font_title, hook_draw_lines = _thumb_fit_lines(
             font_path_bold, hook_lines, max_w,
-            int(_st.get("hook_font_size", 104)),
+            int(int(_st.get("hook_font_size", 104)) * _no_card_boost),
             int(_st.get("hook_min_font_size", 60)),
             max_total_lines=int(_st.get("hook_max_lines", 3)),
         )
         font_sub, sub_draw_lines = _thumb_fit_lines(
             font_path_medium, [subtitle] if subtitle else [], max_w,
-            int(_st.get("subtitle_font_size", 58)),
+            int(int(_st.get("subtitle_font_size", 58)) * _no_card_boost),
             int(_st.get("subtitle_min_font_size", 40)),
             max_total_lines=2,
         )
+        # 黄色帯（tagline）は**1行に収まる分だけ**（2026-09-04）。
+        # 従来は 2 行まで折り返していたため、帯が2段になって見出しと競合し、
+        # 文字が帯からはみ出すケースも出ていた。1行に強制トリムし、
+        # 最小フォントでも収まらなければ帯自体を出さない。
+        tag_band_max_w = max_w - 40
         font_tag, tag_draw_lines = _thumb_fit_lines(
-            font_path_medium, [tagline] if tagline else [], max_w - 40,
+            font_path_medium, [], tag_band_max_w,
             int(_st.get("tagline_font_size", 52)),
             int(_st.get("tagline_min_font_size", 36)),
-            max_total_lines=2,
+            max_total_lines=1,
         )
+        if tagline:
+            tag_line = _thumb_trim_to_width(
+                font_path_medium, str(tagline), tag_band_max_w,
+                int(_st.get("tagline_font_size", 52)),
+                int(_st.get("tagline_min_font_size", 36)),
+            )
+            if tag_line:
+                font_tag, tag_draw_lines = _thumb_fit_lines(
+                    font_path_medium, [tag_line["text"]], tag_band_max_w,
+                    tag_line["size"],
+                    int(_st.get("tagline_min_font_size", 36)),
+                    max_total_lines=1,
+                )
+            else:
+                print("  ℹ️ サムネ黄色帯: 1行に収まらないため帯を出しません "
+                      f"('{str(tagline)[:24]}…')")
         font_badge = ImageFont.truetype(font_path_medium, 38)
 
         # --- ブロック全体の高さを測ってから縦位置を決める ---
@@ -5175,14 +5309,8 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
         # 320px 前後（画面の 17%）が完全に空いていた。全チャンネルで同じ
         # 構図になっていたのもここが空だったため。図解が用意できたときだけ
         # テキストを帯の上端に寄せ、空いた分をカードで埋める。
-        illust = None
-        if channel_format is not None:
-            illust_topic = " ".join(
-                str(t) for t in [*(hook_lines or []), subtitle] if t
-            ).strip() or str(title or "")
-            illust = _thumb_build_illustration(
-                out_dir, illust_topic, channel_format, channel_id=channel_id)
-
+        # カードが出ないときは立ち絵側を 0.46 まで伸ばして帯を詰めてある
+        # （→ char_box_ratio）ので、テキストは新しい上端で中央寄せする。
         illust_box = None
         if illust is not None:
             gap_top = band_top + block_h + 32
@@ -5194,7 +5322,11 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
         if illust_box is not None:
             y = band_top          # カードのぶんテキストは上に寄せる
         else:
-            y = band_top + max(0, (band_bottom - band_top - block_h) // 2)
+            # カードが無いときは、テキストを立ち絵の上端まで含めた帯の中央に置く。
+            # 240〜1180 の中央のままだと、立ち絵との間に 300px 前後の
+            # 死んだ余白が残る（08-25 に図解カードを入れた理由そのもの）。
+            eff_bottom = max(band_bottom, char_top_y - 24)
+            y = band_top + max(0, (eff_bottom - band_top - block_h) // 2)
 
         # チャンネルバッジ
         _thumb_draw_badge(draw, badge_text, cx, y, font_badge,

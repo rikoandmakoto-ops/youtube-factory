@@ -395,6 +395,26 @@ def _queue_theme(channel_id: str, title: str, angle: str, *, priority_high: bool
 # Main entrypoint
 # ---------------------------------------------------------------------
 
+def _trend_intake_allowed(ch) -> bool:
+    """このチャンネルにトレンド由来のテーマを入れてよいか。
+
+    明示設定 `trend_scanner.enabled` が最優先。未設定なら、切り抜き系
+    （style/gen_type が clip）は既定で不可、それ以外は可。
+    """
+    if ch is None:
+        return False
+    raw = getattr(ch, "_raw", None) or {}
+    cfg = raw.get("trend_scanner")
+    if isinstance(cfg, dict) and cfg.get("enabled") is not None:
+        return bool(cfg.get("enabled"))
+    if cfg is False:
+        return False
+    style = str(getattr(ch, "style", "") or raw.get("style") or "").lower()
+    if style == "clip" or raw.get("clip"):
+        return False
+    return True
+
+
 def scan_channel(
     channel_id: str,
     *,
@@ -411,6 +431,21 @@ def scan_channel(
     except Exception:
         channel_manager = None  # type: ignore
     ch = channel_manager.get(channel_id) if channel_manager else None
+
+    # トレンド流入を受け付けないチャンネルはここで抜ける（2026-09-04）。
+    #   - 切り抜きch: 元動画から区間を切るのでテーマキューを使わない。
+    #     それでも流し込まれた結果、4chに計120件のゆっくり解説用テーマが溜まった。
+    #   - 世界観の固いch（fake-paper 等）: 実在ブランド・実在IPのトレンド語が
+    #     入るとコンセプト（架空論文）と avoid_categories の両方を壊す。
+    #     実測でキュー22件中8件が「マックメニュー」「RTX 5090」等に汚染されていた。
+    # チャンネル JSON: "trend_scanner": {"enabled": false}
+    if not _trend_intake_allowed(ch):
+        return {
+            "ok": True, "channel_id": channel_id, "skipped": True,
+            "reason": "trend_scanner disabled for this channel",
+            "detected": [], "auto_queued": [], "errors": {},
+            "started_at": started_at,
+        }
 
     channel_name = getattr(ch, "name", channel_id)
     channel_concept = getattr(ch, "concept", "")

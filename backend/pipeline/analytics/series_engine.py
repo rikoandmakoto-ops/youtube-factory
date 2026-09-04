@@ -206,6 +206,15 @@ def _core_topic(viral_title: str, limit: int = 26) -> str:
     return (t[:cut] if cut >= 8 else t[:limit]).strip(" 　—-・「」、")
 
 
+def _fallback_titles_allowed(ch) -> bool:
+    """定型フォールバック続編タイトルを使ってよいチャンネルか（既定 False）。"""
+    raw = (getattr(ch, "_raw", None) or {}) if ch is not None else {}
+    cfg = raw.get("series_engine")
+    if isinstance(cfg, dict):
+        return bool(cfg.get("fallback_titles", False))
+    return False
+
+
 def _fallback_suggestions(viral_title: str) -> List[Dict[str, str]]:
     """Claude 未設定時の決め打ち 3 候補。"""
     base = _core_topic(viral_title)
@@ -283,7 +292,20 @@ def detect_for_channel(
             scenario_summary=summary,
         )
         if sug is None or not sug:
-            sug = _fallback_suggestions(vv.get("title") or "")
+            # 決め打ちフォールバックは既定で使わない（2026-09-04）。
+            # ANTHROPIC_API_KEY が無い間ずっとこの3テンプレが採用され、
+            # 「〜に隠された本当の理由を掘り下げる」「〜とは逆のパターンを
+            # 比較してみた」「〜の知識を日常で使う方法」がキューに溜まっていた。
+            # いずれも説明型でタイトルCTRゲートに落ちる型で、fake-paper の
+            # 論文体タイトル規約や yokai の数字禁止とも噛み合わない。
+            # 使いたいチャンネルは "series_engine": {"fallback_titles": true}。
+            if _fallback_titles_allowed(ch):
+                sug = _fallback_suggestions(vv.get("title") or "")
+            else:
+                print(f"  ℹ️ series_engine [{channel_id}]: Claude 未応答のため"
+                      f"続編候補を生成しません（定型フォールバックは無効）")
+                items.append({**vv, "skipped": "no llm suggestions"})
+                continue
 
         added: List[Dict[str, Any]] = []
         for s in sug:
