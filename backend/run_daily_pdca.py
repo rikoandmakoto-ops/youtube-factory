@@ -226,6 +226,44 @@ def _dup_check(channel_id: str, videos: List[Dict[str, Any]]) -> List[Dict[str, 
     return pairs[:15]
 
 
+def _fact_conflicts(channel_id: str) -> List[Dict[str, Any]]:
+    """公開済みの数値主張のうち、同じ会社・同じ指標で食い違っているものを挙げる。
+
+    テーマ重複チェックはタイトルの語彙しか見ないので、「別の切り口の別回」で
+    同じ会社の年収が違う数字で出ていても素通りする（09-05 の 日本マクドナルド
+    576万円 / 670万円）。有報を根拠にするチャンネルでは信頼に直接効くので、
+    重複チェックとは別の軸として毎日出す。
+    """
+    try:
+        from pipeline import fact_ledger as fl
+    except Exception:
+        return []
+    rows = fl.load_ledger(channel_id)
+    if not rows:
+        return []
+    grouped: Dict[tuple, List[Dict[str, Any]]] = {}
+    for r in rows:
+        grouped.setdefault((r.get("entity"), r.get("metric"), r.get("unit")), []).append(r)
+    out: List[Dict[str, Any]] = []
+    for (entity, metric, unit), items in sorted(grouped.items()):
+        if len({i.get("value") for i in items}) <= 1:
+            continue
+        periods = [i.get("period") or "" for i in items]
+        # 期がすべて異なり、かつ全部わかっている → 年度更新であって矛盾ではない
+        same_period = "" in periods or len(set(periods)) < len(periods)
+        out.append({
+            "entity": entity, "metric": metric, "unit": unit,
+            "kind": "conflict" if same_period else "restate",
+            "values": [
+                {"value": i.get("value"), "period": i.get("period") or "",
+                 "title": i.get("title") or ""}
+                for i in items
+            ],
+        })
+    out.sort(key=lambda x: (x["kind"] != "conflict", x["entity"]))
+    return out
+
+
 # =====================================================================
 # Act — バズ続編の自動投入
 # =====================================================================
@@ -352,6 +390,20 @@ def _channel_markdown(rep: Dict[str, Any]) -> str:
     else:
         L.append("- 重複疑いなし ✅")
     L.append("")
+
+    # 数値の整合チェック（同じ会社の同じ指標が回ごとに食い違っていないか）
+    facts = rep.get("fact_conflicts") or []
+    if facts:
+        L.append("### 数値の整合チェック")
+        for f in facts[:8]:
+            mark = "🚨 同じ期で矛盾" if f["kind"] == "conflict" else "📅 期違い（要注記）"
+            L.append(f"- {mark} **{f['entity']} / {f['metric']}**")
+            for v in f["values"]:
+                L.append(
+                    f"  - {v['value']}{f['unit']}（{v['period'] or '期不明'}）"
+                    f" — {v['title'][:34]}"
+                )
+        L.append("")
 
     # 成功パターン分析
     sp = rep.get("success_patterns") or {}
@@ -600,6 +652,7 @@ def run_channel(channel_id: str, channel_name: str, token: str,
     rep["genre_breakdown"] = _genre_breakdown(channel_id, videos)
     rep["view_trends"] = _view_trends(channel_id, live_views=live_views)
     rep["dup_check"] = _dup_check(channel_id, videos)
+    rep["fact_conflicts"] = _fact_conflicts(channel_id)
 
     # 2b. 成功パターン分析 + 視聴維持率分析 — シナリオ生成へのフィードバックを更新
     print("  [Analyze] success patterns & retention...")

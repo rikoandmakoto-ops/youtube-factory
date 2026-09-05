@@ -674,18 +674,16 @@ class ScenarioGenerator:
         return g if g in genre_blacklist else None
 
     def _blacklisted_reason(self, title: str, blacklist: List[str]) -> Optional[str]:
-        """title が blacklist のいずれかに（正規化部分一致で）該当すれば、その語を返す。"""
+        """title が blacklist のいずれかに該当すれば、その語を返す。
+
+        照合規則は `theme_dedup.blacklist_match`（数字境界を守る部分一致 +
+        `re:` 正規表現 / `=` 完全一致）。素の部分一致だと `SCP-173` が
+        `SCP-1730`〜`1739` の10体を巻き添えにしていた。
+        """
         if not blacklist:
             return None
         from pipeline.auto_scenario import theme_dedup as _td
-        norm = _td.normalize_title(title)
-        if not norm:
-            return None
-        for term in blacklist:
-            nt = _td.normalize_title(term)
-            if nt and nt in norm:
-                return term
-        return None
+        return _td.blacklist_match(title, blacklist)
 
     def _dedupe_theme(self, channel, theme: Dict) -> Dict:
         """選択済みテーマが既存動画/過去シナリオと重複していれば別テーマへ差し替える。
@@ -1109,6 +1107,52 @@ class ScenarioGenerator:
             "violations": verdict["violations"],
             "rejected_title": original if current != original else None,
         }
+
+    def _enforce_fact_consistency(self, channel, result: Dict[str, Any]) -> None:
+        """同じ会社の同じ指標を回ごとに違う数字で出さないための機械ゲート。
+
+        09-05 に 日本マクドナルドの年収を 576万円（2023年有報）と 670万円
+        （2024年12月期）で別々に公開した。どちらも出典上は正しいが、視聴者には
+        同じ会社の年収が食い違って見える。有報を根拠にするチャンネルなので
+        信頼に直接効く。テーマ重複ゲートはタイトルの語彙しか見ないので通ってしまう。
+
+        期が違うだけなら画面に期を注記して両立させ（値には触らない）、
+        同じ期で値が食い違うときだけ矛盾として記録・警告する。
+        """
+        try:
+            from pipeline import fact_ledger as _fl
+        except Exception as e:
+            print(f"  ⚠️ fact consistency gate disabled: {e}")
+            return
+
+        try:
+            raw = channel._raw or {}
+        except AttributeError:
+            raw = {}
+        if not _fl.is_enforced(raw):
+            return
+
+        try:
+            issues = _fl.check(channel.id, result)
+            disclosed = _fl.disclose_period(result, issues)
+            conflicts = [i for i in issues if i["kind"] == "conflict"]
+            for i in conflicts:
+                print(
+                    f"  🚨 数値の矛盾: {i['entity']} の{i['metric']}が "
+                    f"{i['old_value']}{i['unit']}（{i['old_period'] or '期不明'}・"
+                    f"既存『{i['old_title'][:20]}』）と "
+                    f"{i['new_value']}{i['unit']}（{i['new_period'] or '期不明'}）で食い違っています"
+                )
+            if disclosed:
+                print(f"  📅 期を注記して両立させました: {disclosed} 行")
+            _fl.record(channel.id, result, source="generator")
+            result["fact_consistency"] = {
+                "ok": not conflicts,
+                "conflicts": conflicts,
+                "disclosed": disclosed,
+            }
+        except Exception as e:
+            print(f"  ⚠️ fact consistency check failed: {e}")
 
     def _enforce_cross_channel_keywords(self, channel, theme: Dict, result: Dict[str, Any],
                                         scenario_data: Dict[str, Any]) -> None:
@@ -2828,6 +2872,9 @@ class ScenarioGenerator:
 
         # ch 横断の同語ゲート。最終タイトルが確定した後に1回だけ見る。
         self._enforce_cross_channel_keywords(channel, theme, result, scenario_data)
+
+        # 数値の整合ゲート（→ fact_ledger）。台本本文が確定した後に見る。
+        self._enforce_fact_consistency(channel, result)
 
         # サムネ文字の長さゲート。AB テストが hook_lines を差し替えた後に置く。
         _normalize_thumb_info(result.get("thumb_info"))

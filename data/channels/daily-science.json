@@ -404,7 +404,9 @@
       "angle": "桿体細胞のロドプシン再合成にかかる時間。完全に慣れるまで30分かかる理由を段階で示す"
     },
     "なぜ寝言は自分では一度も聞けないのか",
-    "眠る直前に見える光の模様、その正体"
+    "眠る直前に見える光の模様、その正体",
+    "なぜ寝返りは一晩に20回も打つのに自分では気づかないのか",
+    "二度寝の5分だけ、なぜ普通の睡眠より深く感じるのか"
   ],
   "video_format": {
     "layout": {
@@ -594,11 +596,6 @@
     "gen_type": "short",
     "publish_lead_minutes": 45,
     "theme_queue": [
-      {
-        "id": "d226fe9a",
-        "title": "なぜ階段を降りるときだけ一段踏み外すのか",
-        "angle": "予測歩行と実際の段差のズレ。身体の自動化"
-      },
       {
         "id": "a0a78773",
         "title": "なぜ人の顔だけ壁のシミにも見えるのか",
@@ -1079,7 +1076,6 @@
     ],
     "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
   },
-  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af579-5be8-83ee-9e42-a409cf55d2c9",
   "_experiments": {
     "length_20260905": {
       "arm": "control",
@@ -1093,5 +1089,10 @@
       "min_age_days": 3,
       "recorded": "2026-09-05"
     }
+  },
+  "image_generation": {
+    "chatgpt_thread_url": "https://chatgpt.com/c/6a9af579-5be8-83ee-9e42-a409cf55d2c9",
+    "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
+    "updated_at": "2026-09-05T15:09:08+00:00"
   }
 }

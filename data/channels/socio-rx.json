@@ -562,5 +562,9 @@
     ],
     "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
   },
-  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af778-968c-83e8-b742-1f5784899456"
+  "image_generation": {
+    "chatgpt_thread_url": "https://chatgpt.com/c/6a9af778-968c-83e8-b742-1f5784899456",
+    "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
+    "updated_at": "2026-09-05T15:09:08+00:00"
+  }
 }

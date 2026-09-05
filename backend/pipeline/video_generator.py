@@ -3830,14 +3830,16 @@ def generate_full_video(scenario, title, output_prefix, bg_video_path=None, out_
                     # Mix mode allows graceful fall-through to generation when
                     # the collector can't find a usable image.
                     img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
-                                                char_config=char_config, illust_style=illust_style)
+                                                char_config=char_config, illust_style=illust_style,
+                                                channel_id=channel_id)
                     if img:
                         print(f"  🎨 [{idx+1}/{len(illust_plans)}] Generated (collect missed) for line {entry_idx}")
 
             else:  # "generate"
                 if _image_generation_available():
                     img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
-                                                char_config=char_config, illust_style=illust_style)
+                                                char_config=char_config, illust_style=illust_style,
+                                                channel_id=channel_id)
                     if img:
                         print(f"  🖼️ [{idx+1}/{len(illust_plans)}] Generated for line {entry_idx}")
 
@@ -4087,10 +4089,12 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
                             print(f"  🌐 [{idx+1}/{len(plans)}] Collected for line {entry_idx}")
                         elif _image_generation_available():
                             img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
-                                                        char_config=char_config, illust_style=illust_style)
+                                                        char_config=char_config, illust_style=illust_style,
+                                                        channel_id=channel_id)
                     elif _image_generation_available():
                         img = generate_illustration(topic, cache_dir=illust_cache, idx=idx,
-                                                    char_config=char_config, illust_style=illust_style)
+                                                    char_config=char_config, illust_style=illust_style,
+                                                    channel_id=channel_id)
                         if img:
                             print(f"  🖼️ [{idx+1}/{len(plans)}] Generated for line {entry_idx}")
                     # ChatGPT ブリッジが未納品（初回は必ずこれ）/ 429 / キー未設定で

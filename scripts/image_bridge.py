@@ -13,6 +13,7 @@ Claude in Chrome を持つセッション（＝キューのワーカー）と、
     python3 scripts/image_bridge.py deliver <req_id> path/to/downloaded.png --qc "文字なし・構図OK"
     python3 scripts/image_bridge.py fail <req_id> "理由"
     python3 scripts/image_bridge.py missing                # スレッド未登録のチャンネル
+    python3 scripts/image_bridge.py backfill               # 既存 pending の宛先を貼り直す
     python3 scripts/image_bridge.py gc
 """
 
@@ -61,6 +62,26 @@ def cmd_missing(_args: argparse.Namespace) -> int:
     for ch in missing:
         print(f"  - {ch}")
     return 1
+
+
+def cmd_backfill(args: argparse.Namespace) -> int:
+    """既存 pending の宛先（channel_id / thread_url）を今の設定で貼り直す。
+
+    依頼はキューに積まれた時点のスナップショットなので、後からスレッドを
+    登録しても既存分の `thread_url` は空のまま残る。設定を直した直後に必ず走らせる。
+    """
+    res = bridge.backfill_pending(infer=not args.no_infer)
+    print(f"channel_id を埋めた: {res['channel_id_filled']} 件")
+    print(f"thread_url を更新した: {res['thread_url_updated']} 件")
+    rest = res["still_without_thread"]
+    if rest:
+        print(f"⚠️ 宛先スレッドがまだ決まらない依頼: {len(rest)} 件")
+        for rid in rest[:20]:
+            req = bridge.load_request(rid) or {}
+            print(f"  - {rid} ch={req.get('channel_id') or '(不明)'}")
+        print("  `image_bridge.py missing` のチャンネルにスレッドを登録すること")
+        return 1
+    return 0
 
 
 def cmd_prompt(args: argparse.Namespace) -> int:
@@ -144,6 +165,11 @@ def main(argv=None) -> int:
     p.set_defaults(func=cmd_list)
 
     sub.add_parser("missing", help="スレッド未登録のチャンネル").set_defaults(func=cmd_missing)
+
+    p = sub.add_parser("backfill", help="既存 pending の channel_id / thread_url を貼り直す")
+    p.add_argument("--no-infer", action="store_true",
+                   help="channel_id が空の依頼をプロンプトから推定しない")
+    p.set_defaults(func=cmd_backfill)
 
     p = sub.add_parser("prompt", help="次にスレッドへ送る文面だけ出力")
     p.add_argument("req_id")

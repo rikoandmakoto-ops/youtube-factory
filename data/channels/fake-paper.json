@@ -154,8 +154,6 @@
     ]
   },
   "theme_blacklist": [
-    "瞬きが同期",
-    "エレベーターで見上げる",
     "大谷翔平",
     "久保建英",
     "打撃フォーム",
@@ -667,19 +665,9 @@
     "publish_lead_minutes": 45,
     "theme_queue": [
       {
-        "id": "0f5c96b1",
-        "title": "雨の匂いを強く感じる人ほど寝つきが早い",
-        "angle": "嗅覚感度と入眠潜時の相関という架空の睡眠研究"
-      },
-      {
         "id": "c27ea4d8",
         "title": "階段は下りるときだけ段数を数え間違える",
         "angle": "上りと下りで計数誤差を比較した架空の認知実験"
-      },
-      {
-        "id": "9a6f30be",
-        "title": "使い古した消しゴムほど字が濃く消える",
-        "angle": "摩耗面積と消去率の関係という架空の材料工学論文"
       },
       {
         "id": "3d8b17c4",
@@ -850,6 +838,20 @@
         "id": "1faeee52",
         "title": "「満席の映画館では観客の瞬きが同期する」に隠された本当の理由を掘り下げる",
         "angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える"
+      },
+      {
+        "id": "1cb3202a",
+        "title": "「満席の映画館では観客の瞬きが同期する」とは逆のパターンを比較してみた",
+        "angle": "対比で違いを際立たせる構成"
+      },
+      {
+        "id": "88257742",
+        "title": "「満席の映画館では観客の瞬きが同期する」の知識を日常で使う方法",
+        "angle": "応用先を具体例で紹介",
+        "priority": "normal",
+        "source": "series_engine",
+        "series_type": "application",
+        "from_video_id": "b4o3CXX6J9w"
       }
     ],
     "auto_optimize_schedule": true
@@ -956,5 +958,9 @@
     },
     "_comment": "実在ブランド・実在IPを主語にした嘘は theme_priority.avoid_categories 違反。自然文ルールでは止まらなかったので機械ゲートにした（pipeline/title_constraints.py）。"
   },
-  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af610-658c-83e9-a729-ba7d39c63de0"
+  "image_generation": {
+    "chatgpt_thread_url": "https://chatgpt.com/c/6a9af610-658c-83e9-a729-ba7d39c63de0",
+    "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
+    "updated_at": "2026-09-05T15:09:08+00:00"
+  }
 }

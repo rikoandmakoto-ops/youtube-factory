@@ -557,16 +557,6 @@
     "publish_lead_minutes": 45,
     "theme_queue": [
       {
-        "id": "5940bf90",
-        "title": "無料のサービスが、誰かの沈黙で維持されるとき、フリーライダー問題の記録",
-        "angle": "共同の利益を受けながら負担を避ける行動が、制度全体をどう不安定にするかを示す"
-      },
-      {
-        "id": "9674573f",
-        "title": "スマホの通知を消せないのはなぜか、注意を奪う設計と小さな報酬",
-        "angle": "通知確認を繰り返す行動を、間欠的な報酬と注意資源の配分から読み解く"
-      },
-      {
         "id": "2707496e",
         "title": "褒められた子どもは、なぜ期待された役割を演じ続けるのか、評価が行動を育てる循環",
         "angle": "周囲の期待が機会や声かけを変え、本人の行動まで変化させる自己成就的な過程を語る"
@@ -801,5 +791,9 @@
     ],
     "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
   },
-  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af6a9-acd0-83e8-a701-1b46b0d31624"
+  "image_generation": {
+    "chatgpt_thread_url": "https://chatgpt.com/c/6a9af6a9-acd0-83e8-a701-1b46b0d31624",
+    "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
+    "updated_at": "2026-09-05T15:09:08+00:00"
+  }
 }

@@ -691,5 +691,9 @@
     "enabled": false,
     "_comment": "切り抜きchはテーマキューを使わない。09-03 時点で4chに計120件のゴミが溜まっていた。"
   },
-  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af728-e0f0-83ee-8ffc-fda6088f20f0"
+  "image_generation": {
+    "chatgpt_thread_url": "https://chatgpt.com/c/6a9af728-e0f0-83ee-8ffc-fda6088f20f0",
+    "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
+    "updated_at": "2026-09-05T15:09:08+00:00"
+  }
 }

@@ -270,7 +270,9 @@
     ],
     "title_style_prev_20260830": "企業名を必ずタイトルに入れる。『〇〇の年収がヤバい』『〇〇、実はホワイト企業だった』のようにインパクト重視。数字は1つ入れる。 タイトルは『説明』ではなく『衝動』を作る——数字を先頭寄りに置き、読んだ瞬間に指が止まる語（実は/ヤバい/本当は/知らない）を必ず1つ入れる。"
   },
-  "theme_blacklist": [],
+  "theme_blacklist": [
+    "日本マクドナルド"
+  ],
   "genre_blacklist": [],
   "theme_seeds": [
     {
@@ -528,13 +530,9 @@
     "enabled": true,
     "schedule": {
       "days_of_week": [
-        0,
         1,
-        2,
         3,
-        4,
-        5,
-        6
+        4
       ],
       "hour": 17,
       "minute": 0,
@@ -587,6 +585,13 @@
     "publish_lead_minutes": 45,
     "theme_queue": [
       {
+        "id": "46d6e6e7",
+        "title": "トヨタ ルーミーの真実：年収と社員の声",
+        "angle": "トヨタの人気車種に隠された社員の実態を数字で暴露。",
+        "priority": "high",
+        "source": "trend_scanner"
+      },
+      {
         "id": "0b535faf",
         "title": "iPhoneユーザーの年収と福利厚生の真実",
         "angle": "iPhoneを使う企業で働くと、どれだけの年収が得られるのかを解析します。"
@@ -605,11 +610,6 @@
         "id": "ef110d19",
         "title": "キリンビールの年収と福利厚生、飲料大手の待遇",
         "angle": "福利厚生の実額を出す"
-      },
-      {
-        "id": "576eae40",
-        "title": "キーエンスの平均年収2000万円台、その内訳",
-        "angle": "残業と評価制度まで踏み込む"
       },
       {
         "id": "bfbc2cfb",
@@ -1030,12 +1030,20 @@
     ],
     "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
   },
-  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af5e9-40e0-83e8-98cd-4274371046ed",
   "analytics_policy": {
     "evaluation_lag": {
       "note": "【2026-09-05 実測】YouTube Analytics は 2〜3 日遅延する。09-02 以降公開の33本は全指標ゼロ、08-31公開は10本中8本にデータあり。PDCA の評価対象は published_at が 3 日以上前の動画に限定すること。前日公開分の「再生数0」を不調と誤読してはならない。",
       "min_age_days": 3,
       "recorded": "2026-09-05"
     }
+  },
+  "image_generation": {
+    "chatgpt_thread_url": "https://chatgpt.com/c/6a9af5e9-40e0-83e8-98cd-4274371046ed",
+    "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
+    "updated_at": "2026-09-05T15:09:08+00:00"
+  },
+  "fact_consistency": {
+    "enabled": true,
+    "_comment": "2026-09-06 新設。同じ会社の同じ指標を回ごとに違う数字で公開しないための機械ゲート（backend の参照箇所は pipeline/fact_ledger.py、台帳は data/fact_ledger/company-facts.json）。09-05 に 日本マクドナルドの年収を 576万円（2023年有報）と 670万円（2024年12月期）で別々に公開した件の対策。テーマ重複ゲートはタイトルの語彙しか見ないので、別の切り口の別回として素通りする。期が違うだけなら fact_main に期を注記して両立させ（値には触らない）、同じ期で値が食い違うときだけ矛盾として記録・警告する。有報を根拠にするチャンネルなので数字の食い違いは信頼に直接効く。"
   }
 }

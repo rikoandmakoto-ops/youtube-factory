@@ -717,26 +717,6 @@
         "angle": "修験道と外来者説。色の意味を史料の年代（数字）で追う"
       },
       {
-        "id": "58098d1f",
-        "title": "九尾の狐が日本に来るまでかかった正体",
-        "angle": "中国・インド・日本の伝播経路を年数で追う"
-      },
-      {
-        "id": "980ead1e30",
-        "title": "九尾の狐が日本へ渡ったとされる筋書き",
-        "angle": ""
-      },
-      {
-        "id": "feea110cfa",
-        "title": "犬神憑きが家ごと記録された事情",
-        "angle": ""
-      },
-      {
-        "id": "b3236da417",
-        "title": "雪女が去り際に必ず名を呼ぶ理由",
-        "angle": ""
-      },
-      {
         "id": "795b3c28c7",
         "title": "ぬらりひょんが家の主のように振る舞う由来",
         "angle": ""
@@ -1055,7 +1035,6 @@
     ],
     "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
   },
-  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af67d-b128-83ee-8b71-652ffaf84792",
   "_experiments": {
     "length_20260905": {
       "arm": "control",
@@ -1069,5 +1048,10 @@
       "min_age_days": 3,
       "recorded": "2026-09-05"
     }
+  },
+  "image_generation": {
+    "chatgpt_thread_url": "https://chatgpt.com/c/6a9af67d-b128-83ee-8b71-652ffaf84792",
+    "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
+    "updated_at": "2026-09-05T15:09:08+00:00"
   }
 }

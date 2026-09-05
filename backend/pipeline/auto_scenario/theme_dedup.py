@@ -38,6 +38,30 @@ _FILLER_WORDS = [
     "今すぐ", "衝撃", "驚愕", "閲覧注意",
 ]
 
+# ハッシュタグ（`#shorts` / `#架空論文` / `#切り抜き` 等）。**投稿タイトルの末尾に
+# 必ず付く定型**で、話題を一切区別しない。にもかかわらず正規化で残っていたため、
+# 「#架空論文」のような 4 文字の語が _keyword_overlap の重み（文字数²）で最大級に
+# 効き、bigram Jaccard の分子も埋めていた。09-05 レポートの類似ペア 112 件のうち
+# 94 件が「片方以上にハッシュタグを含む」＝ 判定の主語がハッシュタグになっていた。
+# 閾値（0.62）をいじっても直らない種類の誤検出なので、正規化の段で落とす。
+# 全角＃は _ZEN2HAN で # に寄るが、変換前の文字列にも備えて両方書いてある。
+#
+# タグ本体に採るのは「語を構成する字」だけ（英数・かな・カナ・漢字）。句読点や
+# 記号で必ず止める。`#` を貪欲に食わせると `1分ポケモン研究 #21：カビゴンが…` の
+# ような**連番見出し**でタイトル本文が丸ごと消え、別回同士が 1.0 で衝突する
+# （実測: #21 と #13 が 0.707 → 1.0 に悪化した）。
+_HASHTAG_RE = re.compile(r"[#＃]([0-9a-zぁ-んァ-ヶー一-龥々〆]+)")
+# 数字だけのタグは `#21`＝連番であってハッシュタグではない。回を区別する
+# 唯一の情報なので必ず残す。
+_SERIES_NUMBER_RE = re.compile(r"^[0-9]+$")
+
+
+def _strip_hashtags(text: str) -> str:
+    return _HASHTAG_RE.sub(
+        lambda m: m.group(0) if _SERIES_NUMBER_RE.match(m.group(1)) else " ",
+        text,
+    )
+
 _BRACKET_RE = re.compile(r"[【】\[\]（）()「」『』〈〉《》]")
 _PUNCT_RE = re.compile(r"[。、，．\.・…—\-‐―〜~!！?？:：;；/／\\｜|　\s]+")
 
@@ -49,18 +73,92 @@ _ZEN2HAN = {c: chr(ord(c) - 0xFEE0) for c in
 def normalize_title(title: str) -> str:
     """タイトルを比較用に正規化する。
 
-    手順: 全角→半角・小文字化 → 括弧/装飾除去 → 句読点・空白除去 → 定型句除去。
-    残るのは「話題を表す中身の文字列」だけになる。
+    手順: 全角→半角・小文字化 → **ハッシュタグ除去** → 括弧/装飾除去 →
+    句読点・空白除去 → 定型句除去。残るのは「話題を表す中身の文字列」だけになる。
+
+    ハッシュタグは句読点除去より**先**に落とす。後だと空白が消えてタグの終端が
+    分からなくなり、`#shorts` 以降が本文と地続きになってしまう。
     """
     if not title:
         return ""
     t = str(title).strip()
     t = "".join(_ZEN2HAN.get(ch, ch) for ch in t).lower()
+    t = _strip_hashtags(t)
     t = _BRACKET_RE.sub("", t)
     t = _PUNCT_RE.sub("", t)
     for w in _FILLER_WORDS:
         t = t.replace(w, "")
     return t
+
+
+# ---------------------------------------------------------------------------
+# theme_blacklist の照合
+# ---------------------------------------------------------------------------
+# 既定は「正規化した上での部分一致」。ただし**番号で終わる語は番号の途中で
+# 切れてはいけない**。`SCP-173` を素の部分一致で照合すると、正規化後の
+# `scp173` が `scp1730`〜`scp1739` の先頭に含まれてしまい、無関係な10体を
+# 巻き添えでブロックしていた（scp-lab で実際に起きていた）。
+#
+# 明示的に書き分けたいときのための接頭辞:
+#   `re:<正規表現>` … 生タイトルに対する正規表現（大文字小文字を無視）
+#   `=<語>`         … 正規化後の**完全一致**
+_BLACKLIST_REGEX_PREFIX = "re:"
+_BLACKLIST_EXACT_PREFIX = "="
+
+
+def _digit_safe_contains(needle: str, haystack: str) -> bool:
+    """`needle in haystack`。ただし数字の途中で切れる一致は認めない。
+
+    `scp173` は `scp1730` に一致しない。`平将門` のような数字を含まない語の
+    挙動は素の部分一致と変わらない。
+    """
+    if not needle:
+        return False
+    start = 0
+    while True:
+        i = haystack.find(needle, start)
+        if i < 0:
+            return False
+        before_ok = not (needle[0].isdigit()
+                         and i > 0 and haystack[i - 1].isdigit())
+        j = i + len(needle)
+        after_ok = not (needle[-1].isdigit()
+                        and j < len(haystack) and haystack[j].isdigit())
+        if before_ok and after_ok:
+            return True
+        start = i + 1
+
+
+def blacklist_match(title: str, blacklist: Sequence[str]) -> Optional[str]:
+    """title が blacklist のいずれかに該当すればその項目を返す（無ければ None）。"""
+    if not blacklist:
+        return None
+    raw = str(title or "")
+    norm = normalize_title(raw)
+    for term in blacklist:
+        if not isinstance(term, str):
+            continue
+        term = term.strip()
+        if not term:
+            continue
+        if term.lower().startswith(_BLACKLIST_REGEX_PREFIX):
+            pattern = term[len(_BLACKLIST_REGEX_PREFIX):].strip()
+            if not pattern:
+                continue
+            try:
+                if re.search(pattern, raw, re.IGNORECASE):
+                    return term
+            except re.error:
+                print(f"  ⚠️ theme_blacklist の正規表現が不正なので無視します: {term}")
+            continue
+        if term.startswith(_BLACKLIST_EXACT_PREFIX):
+            if norm and normalize_title(term[len(_BLACKLIST_EXACT_PREFIX):]) == norm:
+                return term
+            continue
+        nt = normalize_title(term)
+        if nt and norm and _digit_safe_contains(nt, norm):
+            return term
+    return None
 
 
 def _bigrams(s: str) -> Set[str]:

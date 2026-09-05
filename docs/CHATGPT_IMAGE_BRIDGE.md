@@ -109,7 +109,22 @@ python3 scripts/image_bridge.py thread set scp-lab https://chatgpt.com/c/xxxxxxx
     --note "サムネ背景。共通ルールをスレッド冒頭で合意済み"
 python3 scripts/image_bridge.py thread get scp-lab
 python3 scripts/image_bridge.py missing     # 未登録のチャンネルを洗い出す
+python3 scripts/image_bridge.py backfill    # ★ 登録したら必ず走らせる
 ```
+
+> 🚨 **登録したら `backfill` を必ず走らせること。**
+> 依頼は**キューに積まれた時点のスナップショット**なので、あとからスレッドを
+> 登録しても既存 pending の `thread_url` は空のまま残り、ワーカーは宛先を
+> 決められない。`backfill` は `channel_id` / `thread_url` を今の設定で貼り直す
+> （`channel_id` が空の依頼は、プロンプト先頭の `art_style` が ch ごとに固有の
+> 長文なので、そこから決定論的に復元する）。
+>
+> 09-05 にこれを踏んだ: 12ch 分の URL が **`image_generation` ブロックではなく
+> トップレベル**の `chatgpt_thread_url` に書かれていて、読む側が見ていなかった。
+> 加えてイラスト依頼側は `channel_id` を渡していなかった。結果、
+> **設定にも依頼にも URL があるのに一度も配送されず、pending が 49件・delivered 0** に
+> なった。読む側は旧置き場（トップレベル）も見るようにしてあるが、
+> 書くときは必ず `image_bridge.py thread set` を使うこと（`set` は旧キーを畳む）。
 
 スレッドを開いたら最初に共通ルール（16:9・文字を入れない・下部を空ける 等）を
 一度伝えておくと、以降のプロンプトが短くて済む。

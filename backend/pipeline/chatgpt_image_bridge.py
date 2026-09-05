@@ -48,6 +48,13 @@ THREADS_PATH = BRIDGE_DIR / "threads.json"
 CHANNELS_DIR = Path(os.environ.get("IMAGE_BRIDGE_CHANNELS_DIR") or (ROOT / "data" / "channels"))
 CHANNEL_CONFIG_KEY = "image_generation"
 CHANNEL_THREAD_FIELD = "chatgpt_thread_url"
+# 09-05 に 12ch 分の URL が `image_generation` ブロックではなく **トップレベル**の
+# `chatgpt_thread_url` に書かれていた。読む側は片方しか見ていなかったので
+# `thread_url_for()` が全チャンネルで None を返し、49件の依頼が宛先不明のまま
+# 溜まっていた（delivered 0 の直接原因）。書き込みは今も
+# `image_generation` ブロックが正だが、読むときは両方見る。
+# 「設定に URL があるのに配送されない」を二度と無言で起こさないため。
+LEGACY_TOP_LEVEL_THREAD_FIELD = "chatgpt_thread_url"
 
 _DIRS = (PENDING_DIR, DELIVERED_DIR, FAILED_DIR, IMAGES_DIR, CACHE_DIR)
 
@@ -102,6 +109,22 @@ def _channel_config_path(channel_id: str) -> Path:
     return CHANNELS_DIR / f"{channel_id}.json"
 
 
+def _thread_url_in_config(cfg: Optional[Dict[str, Any]]) -> str:
+    """チャンネル設定 dict からスレッド URL を取り出す。
+
+    正の置き場は `image_generation.chatgpt_thread_url`。見つからなければ
+    トップレベルの `chatgpt_thread_url`（09-05 の書き込み事故で出来た旧形）へ落ちる。
+    """
+    if not isinstance(cfg, dict):
+        return ""
+    block = cfg.get(CHANNEL_CONFIG_KEY)
+    if isinstance(block, dict):
+        url = (block.get(CHANNEL_THREAD_FIELD) or "").strip()
+        if url:
+            return url
+    return (cfg.get(LEGACY_TOP_LEVEL_THREAD_FIELD) or "").strip()
+
+
 def load_threads() -> Dict[str, Any]:
     """全チャンネルのスレッド対応を1つの dict にして返す（表示用）。"""
     out: Dict[str, Any] = {}
@@ -110,8 +133,9 @@ def load_threads() -> Dict[str, Any]:
             cfg = _read_json(path)
             if not isinstance(cfg, dict):
                 continue
-            block = cfg.get(CHANNEL_CONFIG_KEY) or {}
-            url = (block.get(CHANNEL_THREAD_FIELD) or "").strip() if isinstance(block, dict) else ""
+            block = cfg.get(CHANNEL_CONFIG_KEY)
+            block = block if isinstance(block, dict) else {}
+            url = _thread_url_in_config(cfg)
             if url:
                 out[path.stem] = {
                     "url": url,
@@ -133,13 +157,9 @@ def thread_url_for(channel_id: Optional[str]) -> Optional[str]:
     生成もユーザーの修正指示も同じスレッドに積む。
     """
     if channel_id:
-        cfg = _read_json(_channel_config_path(channel_id))
-        if isinstance(cfg, dict):
-            block = cfg.get(CHANNEL_CONFIG_KEY) or {}
-            if isinstance(block, dict):
-                url = (block.get(CHANNEL_THREAD_FIELD) or "").strip()
-                if url:
-                    return url
+        url = _thread_url_in_config(_read_json(_channel_config_path(channel_id)))
+        if url:
+            return url
     entry = (_read_json(THREADS_PATH) or {}).get("_default") or {}
     if isinstance(entry, str):
         return entry.strip() or None
@@ -166,6 +186,9 @@ def set_thread_url(channel_id: str, url: str, note: str = "") -> str:
             block["note"] = note
         block["updated_at"] = _now()
         cfg[CHANNEL_CONFIG_KEY] = block
+        # 旧形（トップレベル）が残っていると、どちらが本物か分からない設定が
+        # 2 つ並ぶ。正の側へ移したのでここで畳む。
+        cfg.pop(LEGACY_TOP_LEVEL_THREAD_FIELD, None)
         _write_json(path, cfg)
         return str(path)
 
@@ -174,6 +197,78 @@ def set_thread_url(channel_id: str, url: str, note: str = "") -> str:
     _ensure_dirs()
     _write_json(THREADS_PATH, threads)
     return str(THREADS_PATH)
+
+
+def _channel_art_styles() -> List[tuple]:
+    """(channel_id, art_style) のリスト。長い順＝具体的な順に並べて返す。
+
+    `video_format.illustration_style.art_style` はチャンネルごとに固有の長文で、
+    イラスト依頼のプロンプトはこの文字列で始まる。channel_id が空のまま積まれた
+    依頼の宛先を、プロンプト本文から決定論的に復元するために使う。
+    """
+    out: List[tuple] = []
+    if not CHANNELS_DIR.exists():
+        return out
+    for path in sorted(CHANNELS_DIR.glob("*.json")):
+        cfg = _read_json(path)
+        if not isinstance(cfg, dict):
+            continue
+        style = ((cfg.get("video_format") or {}).get("illustration_style") or {})
+        art = (style.get("art_style") or "").strip() if isinstance(style, dict) else ""
+        if len(art) >= 40:  # 短い共通文言での誤爆を避ける
+            out.append((path.stem, art))
+    out.sort(key=lambda x: len(x[1]), reverse=True)
+    return out
+
+
+def infer_channel_id(req: Dict[str, Any]) -> Optional[str]:
+    """依頼の prompt から発注元チャンネルを推定する。判らなければ None。"""
+    prompt = req.get("prompt") or ""
+    if not prompt:
+        return None
+    for channel_id, art in _channel_art_styles():
+        if art in prompt:
+            return channel_id
+    return None
+
+
+def backfill_pending(*, infer: bool = True) -> Dict[str, Any]:
+    """pending 依頼の `channel_id` / `thread_url` を今の設定で貼り直す。
+
+    設定側の書き込み位置がずれていた期間に積まれた依頼は `thread_url` が空の
+    ままで、ワーカーが宛先スレッドを決められない。設定を直しても**既存の
+    pending は古いスナップショットのまま**なので、ここで貼り直す必要がある。
+
+    `infer=True` のときは `channel_id` が空の依頼をプロンプトから推定して埋める。
+    """
+    fixed_channel = 0
+    fixed_thread = 0
+    unresolved: List[str] = []
+    for path in sorted(PENDING_DIR.glob("*.json")) if PENDING_DIR.exists() else []:
+        data = _read_json(path)
+        if not data:
+            continue
+        changed = False
+        if infer and not (data.get("channel_id") or "").strip():
+            guess = infer_channel_id(data)
+            if guess:
+                data["channel_id"] = guess
+                fixed_channel += 1
+                changed = True
+        url = thread_url_for(data.get("channel_id") or None) or ""
+        if url != (data.get("thread_url") or ""):
+            data["thread_url"] = url
+            fixed_thread += 1
+            changed = True
+        if not url:
+            unresolved.append(data.get("id") or path.stem)
+        if changed:
+            _write_json(path, data)
+    return {
+        "channel_id_filled": fixed_channel,
+        "thread_url_updated": fixed_thread,
+        "still_without_thread": unresolved,
+    }
 
 
 def channels_missing_thread() -> List[str]:

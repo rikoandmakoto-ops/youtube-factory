@@ -711,21 +711,6 @@
         "angle": "電気4倍という数字と、それでも採用される特性いかく"
       },
       {
-        "id": "0b7616b9e5",
-        "title": "けつばんが図鑑に現れた技術的な経緯",
-        "angle": ""
-      },
-      {
-        "id": "5b0be71c6c",
-        "title": "ミミッキュが姿を隠し続ける理由",
-        "angle": ""
-      },
-      {
-        "id": "e9808e511d",
-        "title": "サンダースだけ進化石の入手性が違った時代",
-        "angle": ""
-      },
-      {
         "id": "2992e26657",
         "title": "カビゴンが道をふさぐ演出が生まれた背景",
         "angle": ""
@@ -1038,7 +1023,6 @@
     ],
     "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
   },
-  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af653-7a00-83ee-906d-49ae5df484cd",
   "_experiments": {
     "length_20260905": {
       "arm": "control",
@@ -1052,5 +1036,10 @@
       "min_age_days": 3,
       "recorded": "2026-09-05"
     }
+  },
+  "image_generation": {
+    "chatgpt_thread_url": "https://chatgpt.com/c/6a9af653-7a00-83ee-906d-49ae5df484cd",
+    "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
+    "updated_at": "2026-09-05T15:09:08+00:00"
   }
 }
