@@ -1,0 +1,657 @@
+{
+  "title": "🤣ワイ健康診断歴3年やけど正体あるw🍑",
+  "theme": {
+    "title": "健康診断で先生に言えんかったことあげてけw",
+    "angle": "問診票あるある。身体ネタだが直接描写しない"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "君らは健康診断で何を見られてワロタ？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 問診票の正体まだ伏せとるんか草。前回のスレ見た奴は察してるだろうけど",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "昨日までの睡眠時間、急に記憶消えるやつw…からの…ｗ",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "年2回しか運動せんのに週2回へ丸つける草",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "気になること欄に、とんでもない先生の目が怖いって書きたいw。…これ、ワイが悪いんか？コメ欄で判定してくれ",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "質問ある？シリーズ、草生えたら高評価なw お前らの感想コメントで聞かせろやw。…待って、ワロタに戻って",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、問診票の「気になる症状」に丸を付けかけて、急にペンが止まったことありませんか？実は空欄こそ先生を一番困らせる合図かもしれません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回は、健康診断で口まで出たのに飲み込んだ一言の正体を暴くぞ。全国の健診では問診が診察の入口で、沈黙にもヒントが隠れているんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "「特にありません」は便利な最強ワードだけど、寝不足や動悸っぽさまで消える魔法じゃない。先生の前だと急に健康優等生を演じちゃう人、集合です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも問診票は、去年の自分との違いを拾うための比較表でもあるぞ。体重欄を見てから急に筆圧が弱くなる現象、あれは全国共通の儀式だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、恥ずかしくて伏せた一言ほど検査結果より先に話題になることもあるんです。白衣を前にすると脳内の言い訳会議が秒速で開幕します。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ではスレ民が残した、先生に言えんかったことを一気にあげてけ。あなたなら問診票の余白に何を書く？答えはコメント欄へ、健診前夜の告白も待ってるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこれ、半分は間違いなんだ。問診票で隠した一言が即アウトになるわけじゃなく、先生は全体の流れで体調を見ている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "健康診断の問診は、検査数値だけでは拾いにくい不調の聞き取りだ。寝不足や飲酒、薬の使用も、数値の理由を読む手掛かりになる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最強に意外なのは、血圧は測る直前の緊張でも上がりうること。白衣を見るだけで高く出る「白衣高血圧」という呼び名まである。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "だから先生の「最近どうですか」は雑談ではない。数字が少し外れたとき、病気なのか一時的な揺れなのかを分ける入口なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "問診票の「はい・いいえ」は、人生の成績表じゃないのが大事。たとえば眠れない日が続くなら、恥より検査の読み違いを減らせる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "検査前日の深酒や激しい運動も、体の中の数値を一時的に動かす場合がある。先生は事情を聞いて、再検査の必要性を考える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "専門用語の「既往歴」は、昔かかった病気や受けた治療の履歴という意味だ。今は元気でも、判定の背景として参照されることがある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただし、言いたくない内容を無理に笑い話へ変える必要もない。問診は短く事実だけ伝えればよく、細部まで実況しなくていい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり沈黙の原因は、体より気まずさという人も多いはず。健康診断で先生に言えず、帰り道で反省したこと、コメントであげてけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "問診票で「気になる症状」を空欄にした人ほど、診察室で急に言い出せなくなる感覚は珍しくないらしい。書いた文字が先生への告白状に見える罠だね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "厚労省の国民健康・栄養調査では、健診を受けた人の割合は年齢層で大きく変わる。だが受診しても、聞かれない話題まで自分から話せるとは限らない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、診察で患者が話し始めてから医師が遮るまで平均十数秒という会話研究もあること。言おうと決めた小ネタが、助走中に消えるには十分すぎる短さ。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "問診票は症状を拾う道具だが、選択肢にない悩みは書きにくい。例えば「その他」の小さな欄ほど、人生で最も説明しづらい一文を要求してくる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "心理学では社会的望ましさバイアスと呼ばれ、よく見られたい気持ちで本音を控える傾向のこと。健診当日だけ急に健康優等生を演じる現象にも近いね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "海外の診療会話研究では、患者が本題を複数持つほど後半の話題が置き去りになりやすいと報告される。最初に血圧を話すと、二番手の秘密が順番待ちで消える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "数字を測る健診は客観的でも、「最近どうですか」は主観の勝負。体重は小数点まで出るのに、気まずさにはメーターがないから自己申告が急に難しくなる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "睡眠や飲酒の質問では、直近一週間を思い出す形式がよく使われる。ところが人は平均的な日より、昨日の反省会か妙に調子よかった日を基準に答えがちだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "だから研究では、質問を具体化すると回答が増えるとされる。「困りごとはありますか」より「寝つきはどうですか」の方が、記憶の引き出しを開けやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "結局、先生に言えなかった一言は症状より語感が問題だったりする。お前らが問診票の余白に封印した、医学用語に変換不能な出来事もコメントであげてけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "健康診断の問診票、昔は今ほど細かくなく、戦後に集団検診が広がると生活習慣まで聞く欄が増えたらしい。だが最強の事実、未記入の一マスが再検査の入口になることもある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "問診とは、検査機械より先に本人の話を集める診察法のこと。古代ギリシャの医師ヒポクラテスも、症状だけでなく暮らしぶりを尋ねたと伝わり、沈黙の歴史はかなり長い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "日本で健康診断が制度として広がった背景には、結核などを早く見つけたい事情があった。胸の写真だけでは拾えない違和感を、問診票の小さな四角に忍ばせたわけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ところが問診票は、正直に書くほど少し気まずいという矛盾を抱える。「最近変わったことは？」の一文で、昨夜の謎の夜食や運動ゼロ週間まで脳内に召喚される。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転だぜ。医師が欲しいのは模範解答より、前回と違う変化らしい。完璧な生活を書いた人より、「急に眠れない」の一言が検査の向きを変える場合もある。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "研究では自己申告に記憶違いが混じるため、質問の順番や言葉選びも工夫されてきた。「飲酒量」を数字で聞くのは、少なめ申告の霧を少しでも薄くするためなんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ただし身体の変化を隠して笑い話にするのは危険で、問診は恥ずかしさを裁く紙じゃない。先生は一日に何十枚も見るから、意外と本人ほどドラマ化していない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "歴史をたどると、診察は顔色、脈、生活の聞き取りから始まり、血液検査が増えた今も問診は残った。数字が正常でも、言葉の端にだけ現れる異変があるからだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さてスレ民なら、先生に言えんかった一言は何を選ぶ？「昨日だけ異様に健康でした」か、「問診票を前に急に記憶を失いました」か、答えはコメント欄にあげてけ。",
+      "expression": "smile",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの事実、問診票で「特になし」を選ぶ人ほど後から追加質問が増えやすいんだって。空欄は安心ではなく、先生には「慎重に確認したい印」に見えるらしい。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "問診は病名当てクイズじゃなく、普段との違いを拾う入口なんだ。たとえば「寝つきが悪い」だけでも、生活習慣や薬の影響を確認する手がかりになるぞ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも健診の血圧は、緊張で普段より高く出ることがある。白衣高血圧と呼ばれて、病院だけ数値が上がる人もいるから、黙って耐えると判定がぶれる。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "白衣高血圧は医療者を前にした緊張で血圧が上がる状態のことだな。受付からソワソワしていた、だけでも伝える価値があり、再測定の判断材料になる。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、言いにくい小さな不調ほど「検査が正常なら消える」とは限らない。数字に映らない困りごともあり、問診票の一言が次の確認を動かすんだよ。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "健診の採血は、その瞬間の状態を切り取る写真みたいなものだ。前日の睡眠不足や食事、運動でも揺れる項目があるから、普段と違う日は申告が重要になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "例えば「昨夜はほとんど眠れていない」と書くだけで、先生は数値を単独で決めつけにくくなる。恥ずかしい話ではなく、検査結果の読み違いを減らす補足情報なんだ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "薬やサプリも、名前を忘れたから言わないは危険寄りだぞ。「市販の眠気対策」「毎朝飲む粒」でも手がかりになり、飲み合わせ確認へつながる可能性がある。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "昔の健診は数値中心の印象が強かったけれど、今は問診で生活背景も見る流れが広がっている。症状の有無より、いつから何が変わったかが強いヒントになるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さてスレ民、先生に言えず問診票で消した一文って何だった？ 深刻すぎる話は専門家へ回しつつ、あるあるな沈黙の理由をコメント欄であげてけw",
+      "expression": "grin",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日からは問診票を提出前に30秒だけ見直すのがコツ。先生に言いそびれた違和感も、紙なら気まずさを越えて残せるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きなのは、問診票の「はい・いいえ」は診察の入口にすぎないこと。迷った項目へ小さく印を付けるだけで話題を作れるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "たとえば「たまに」を選ぶ欄でも、いつ頃からかをメモしておくと便利。三日前、春から、など短い言葉で十分伝わるね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "症状日記とは、体調の変化を日付つきで残すメモのこと。朝だけ眠い、階段で息切れ、みたいに一行なら続けやすいぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "薬やサプリは名前が曖昧でも、スマホで箱や袋を撮っておけば安心。診察室で「青い粒です」と記憶勝負をしなくて済むよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "聞きたいことは最大三つに絞ると、短い健診でも焦りにくい。「放置でいい？」「受診目安は？」の形が使いやすいぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "言いにくい内容ほど、最初に「少し話しづらいんですが」と前置きしよう。先生側にも切り出す準備ができて、言葉が詰まりにくいね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "健診の数値で気になる所があっても、その場で自己判定は禁物だ。前年の結果を持参すれば、変化を先生と比べやすくなるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "そして最後に「次は何を見ればいいですか？」と聞いて締めよう。みんなが先生に言えず持ち帰った一言、コメントであげてけ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日は、問診票の「特になし」に全感情を押し込み、先生の前で急に健康優等生になるあるあるが大集合だったね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "体調の小さな違和感ほど言い出せず、帰宅後に「あれも聞けばよかった」と反省会が始まる流れ、全国共通すぎて泣けるぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でも驚きなのは、診察室で黙った一言ほど帰り道で鮮明になること。白衣の前では語彙力がゼロになる謎、強すぎるよね。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "結局、先生に言えなかった内容は人それぞれでも、「今さら呼び止められない」が最後の壁。みんなの敗北談もコメントで待ってるぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回は「コンビニで店員さんに言えんかったことあげてけw」を解説するよ。レジ前の三秒に潜む、しょうもない葛藤を掘り起こす！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ゆっくり2chスレまとめ劇場らしく、誰も傷つかない小さな黒歴史を大喜利化する回だ。先に自分の回答を考えて待機してくれよな。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今回ちょっとでも刺さったら高評価とチャンネル登録をお願いね。先生の前で消えた言葉、あなたなら何を言えなかったかコメントして！",
+      "expression": "smile",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "問診票の罠",
+      "全員黙る"
+    ],
+    "hook_caption": "言えない正体",
+    "subtitle": "健康診断あるある",
+    "tagline": "自由欄が強すぎる草"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "ワイ健康診断歴3年やけど質問あるw",
+      "selected_hook": "君らは健康診断で何を見られてワロタ？",
+      "scores": [
+        {
+          "hook": "君らは健康診断で何を見られてワロタ？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 63
+        },
+        {
+          "hook": "お前ら、先生の目が怖い健康診断って何やねんw",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 8,
+            "loop_connect": 15
+          },
+          "total": 58
+        },
+        {
+          "hook": "ワイ健康診断歴3年やけど質問あるw",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 25,
+            "loop_connect": 5
+          },
+          "total": 50
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "君らは健康診断で何を見られてワロタ？",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ 問診票の正体まだ伏せとるんか草",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "昨日までの睡眠時間、急に記憶消えるやつw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "年2回しか運動せんのに週2回へ丸つける草",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "気になること欄に、先生の目が怖いって書きたいw",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "共感したら高評価置いてけw お前らの答えはコメントで頼むわ、質問ある？シリーズ毎日投稿中で1万人目標",
+          "tension": 6,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "comment",
+      "style_label": "コメント",
+      "original_cta": "共感したら高評価置いてけw お前らの答えはコメントで頼むわ、質問ある？シリーズ毎日投稿中で1万人目標やからチャンネル登録よろしくやでw",
+      "new_cta": "質問ある？シリーズ、草生えたら高評価なw お前らの感想コメントで聞かせろやw"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 30,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 8,
+        "relatability": 3,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 68,
+      "optimized_score": 68,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.85,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "50%・66%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "お前らの感想コメントで聞かせろやw。…待って、ワロタに戻って",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 1.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「先生」→「とんでもない先生」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.428,
+      "similar_to": "ワイ、女性騎手歴3年やけど質問ある？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 22,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "ワイ健康診断歴3年やけど正体あるw",
+      "enhanced_title": "🤣ワイ健康診断歴3年やけど正体あるw🍑",
+      "emoji_added": "🍑",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🤣ワイ健康診断歴3年やけど正体あるw🍑"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "…これ、ワイが悪いんか？コメ欄で判定してくれ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "negative",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "statement",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.4
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "前回のスレ見た奴は察してるだろうけど",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['正体'](+12)"
+    ]
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

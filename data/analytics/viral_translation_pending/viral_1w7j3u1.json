@@ -1,0 +1,15 @@
+{
+  "request_id": "viral_1w7j3u1",
+  "created_at": "2026-09-05T20:47:43",
+  "system": "あなたは海外のバイラル動画を日本語のショート動画に仕立てる編集者。翻訳は直訳せず、日本語のショート字幕として一読で意味が通る言い回しにする。同時に、その動画を YouTube に公開してよいかを厳しめに判定する。",
+  "prompt": "海外の話題動画を日本語字幕付きのショート動画にします。\n元タイトル（原語）: Checking under the hen for eggs\n元の投稿元: r/unexpected\n\n以下は音声認識（Whisper）で起こした発話です。誤認識が混じります。\n文脈から明らかな誤認識は自然な形に直して構いませんが、**発言者が言っていない内容を足すことは禁止**です。\n\n[{\"id\": 0, \"start\": 0.1, \"sec\": 7.0, \"text\": \"You need to grab her. She won't bite you. It's a snake bite, but...\"}, {\"id\": 1, \"start\": 7.1, \"sec\": 17.1, \"text\": \"I'm gonna fucking save your... save those babies, dude.\"}, {\"id\": 2, \"start\": 24.2, \"sec\": 11.0, \"text\": \"What's that shit for?\"}, {\"id\": 3, \"start\": 35.2, \"sec\": 8.2, \"text\": \"That's a big boy.\"}, {\"id\": 4, \"start\": 43.4, \"sec\": 1.6, \"text\": \"Holy crap.\"}]\n\n各 id について日本語字幕を作ってください。条件:\n- 1件あたり全角34文字以内。長い発話は要点に絞る。\n- 話し言葉。硬い翻訳調にしない。\n- 意味の取れない誤認識だらけの id は ja を空文字にする（字幕を出さない）。\n\nフック文（画面上部に常時出す1文）の条件:\n- 全角28文字以内。\n- 何が起きる動画なのかを言い切る。疑問形にしない。\n- 釣りではなく、実際に映っていることを書く。\n- 過度に性的・下品な語を使わない（YouTube の広告に不利なため）。\n\nチャンネル固有のルール:\n- フック文は全角28文字以内。読み切れない長さにしない。\n- フック文は実際に映っていることを言い切る。釣りタイトルにしない。\n- 字幕はネットスラング混じりの話し言葉でよいが、下品な直訳語は避ける。\n- 性的な話題は匂わせ止まり。露骨な語を字幕に出さない（広告に不利なため）。\n\n最後に安全判定をしてください。次のいずれかに当たるなら safety_ok=false:\n- 性行為・性器・裸体の露出、それを示唆する行為が映っている\n- 未成年が性的な文脈で扱われている\n- 流血・死体・暴力・事故被害者が映っている\n- 特定個人への攻撃・晒し・差別的表現\n- 本人の同意なく撮影されたと明らかに分かる盗撮的な内容\n判断に迷ったら safety_ok=false にしてください（公開しない方が安全）。\n\n次の JSON のみを返す:\n{\"hook\": \"\", \"title_ja\": \"\", \"summary\": \"\", \"safety_ok\": true, \"safety_reason\": \"\", \"lines\": [{\"id\": 0, \"ja\": \"\"}]}",
+  "meta": {
+    "source_title": "Checking under the hen for eggs",
+    "community": "r/unexpected",
+    "channel_id": "clip-lab",
+    "line_count": 5,
+    "attempts": 3
+  },
+  "result": null,
+  "_how_to_fill": "Claude Code のセッションで prompt を読み、指示どおりの JSON を result に入れて保存すると、次回の実行がこれを拾って続きから作ります。"
+}

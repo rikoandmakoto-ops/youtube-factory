@@ -1,0 +1,509 @@
+{
+  "title": "SCP-2006 笑い声を聞いた12名に起きた異変",
+  "theme": {
+    "title": "SCP-2006、笑い声を聞いた職員12名の末路",
+    "angle": "単なる怪物の擬態紹介ではなく、恐怖を再現する実験で職員の認識と収容手順が崩壊した過程を記録する",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書、笑い声を聞いた12名の記録だけが消えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、記録だけ？ まだ誰が笑ったのかも分からないのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "隔離実験は23分間。12名全員が別々の恐怖を見た。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "扉の外には誰もいない。それでも笑い声は3回、名簿を呼んだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って、それを聞いたから記録が消えたのか。残りの理由は[DATA EXPUNGED]か。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この笑い声の続きは財団の裏側シリーズに残る。高評価を残し、毎日投稿中で1万人目標のチャンネル登録も頼む。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実は12名の職員が聞いた笑い声の後、自分の部屋にいるはずの誰かを恐れ始めた記録だ。\nあなたも深夜2時17分、扉の外から自分だけを知る声が笑えば、鍵より先に名簿を探すはずだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、12名全員が同じ声を聞いたのか。それとも12人にだけ通じる別々の声だったのか。\n待って、どちらでもまずい。部屋の外が空なら、誰が順番に名前を呼んだんだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象はSCP-2006。恐怖を理解しようとして、相手が最も嫌うものへ姿を寄せる異常存在だ。\nだが今回の収容記録では姿より先に笑い声だけが侵入し、観察側の12名から順に判断を奪った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の被験職員は午前2時17分、消灯した観察室で3回の笑い声を報告した。\n録音装置には声が残らず、本人の監視映像だけが12秒間、黒い画面へ置き換わっていたという。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "録音には残らないのに、本人だけは聞いたのか。学校の廊下で名前を呼ばれ、振り向くと誰もいない感じだ。\nでも映像まで12秒消えるなら、聞き間違いだと言って逃げる余地もない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は当初、音声の欠損を機器故障として扱った。交換された録音機は合計4台。\nだが4台目の記録媒体には、存在しない職員番号に対応する笑い声だけが刻まれていた記録が残る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで扱うのは怪物の擬態ではない。恐怖を再現するための実験が、観察者と被験者の区別から崩れた過程だ。\n誰がSCP-2006を見て、誰が見られたか。その基準が23分間で消えていった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "実験する側が先に対象へ変わったのか。じゃあ収容班は、誰を隔離しているつもりだった。\nシロ、名簿にない番号が笑ったなら、観察室の外側にも誰かが配置されていたことになる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2006は通常、相手の恐怖を探り、映画や伝承の怪物に似た外見を選ぶとされる。\nしかし職員12名への実験では、全員が別の姿を証言しながら、笑い声だけを同一だと記録した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1人は濡れた制服の子供を見た。別の1人は机の下から伸びる手だけを見た。\n証言の共通点は姿を見た直後ではない。姿が消えた後、背後で3回笑い声がした点だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "観察室は厚さ30センチの隔壁で区切られ、内線は一方向だけに設定されていた。\nそれでも12名は、内線から幼少期の呼び名を聞いたと証言した。資料にない呼称まで含まれていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…ねえ、これ本当に大丈夫なの？ 幼少期の呼び名なんて、監視室の資料に全部は載っていないはずだ。\n隔壁の向こうからそれを呼び、最後に笑うなら、相手は職員の記録より深い場所を見ている。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実験責任者は恐怖の強度を10段階で記入させた。開始から7分までは平均4だった。\nだが笑い声が入った8分目、12名中9名が最高値10を選び、筆跡は名前さえ読めないほど乱れた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題はこの次だ。恐怖値が上がった職員ほど、SCP-2006の姿を正確に説明できなくなった。\n代わりに彼らは、観察窓の外にいた仲間が笑っていた、と同じ一文を記録用紙へ残した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "12人が別々の部屋で、同じ一文を書いたのか。打ち合わせもできない隔離配置で、それは不自然すぎる。\nそれ、SCP-2006が怪物を演じたんじゃない。職員同士を怪物に見せ始めた記録だろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、SCP-2006は恐怖の形を借りるだけではない。恐怖を共有するための役を周囲へ割り振る。\n誰かが怪物を見る間、別の誰かは怪物に見られる側へ押し込まれるという扱いだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この仮説を確かめるため、職員は互いの顔を見られない配置へ変更された。観察窓は遮蔽された。\nそれでも9分後、12名全員が窓のない壁へ向かい、外に誰かが立っていると報告した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "壁の向こうにいたのは空の保守通路だった。巡回記録は23時から翌3時まで、通路への入室者0名。\nだが12名はそこに自分と同じ制服の人物が立ち、口元だけを隠していたと書き残した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "空の通路に、自分と同じ制服の人物。ゲームなら画面を閉じれば逃げられるが、ここは収容区画だ。\n扉を開ければ自分がいる。開けなくても壁の向こうで笑う。選ぶ側から逃げ場が消えていく。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実験開始から15分、責任者は中止命令を出した。しかし内線を受けた警備員は、命令者の声を確認できなかった。\n記録上、責任者はその時点で観察室の床に座り、両手で耳を塞いでいた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "中止命令は合計6回、別々の端末から発信された。内容はすべて同じで、被験者を外へ出すな、だった。\n端末の送信者欄には、すでに死亡扱いとなった旧職員の識別番号が表示されていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生きていない職員番号が、隔離を続けろと命令したのか。誰かを助けようとした人間ほど判断できなくなる。\n収容手順は安全のためのはずなのに、その文書が12名を閉じ込める側へ回ったんだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "通常の収容手順では、SCP-2006へ恐怖反応を見せないことが推奨される。刺激を与えず、反応を記録しない。\nだがこの夜、職員は恐怖を隠す演技を続けた結果、誰が怯えているかすら確認できなくなった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "12名は互いに平静を装った。声を震わせず、視線を上げず、壁に背を向けないよう努めた。\nその沈黙の中で聞こえた笑い声は、最初より近く、各自の喉から漏れているように感じられたという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "医療班が後に確認したところ、12名の喉に外傷はなかった。録音にも呼吸音しか残らない。\nそれでも全員の報告書には、自分は笑っていない、という否定文が3回ずつ繰り返されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分の喉から聞こえたのに、自分は笑っていない。だったら声は誰のものだ。\nもし今、無言で笑っている誰かが近くにいるなら、顔を見ない方がいいのか。それとも見るべきか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも、まだ説明できていない。SCP-2006が恐怖の姿を作ったのか、職員が互いを作り替えたのか。\n報告書はそこで判断を止め、以後の実験を担当者不明のまま凍結した。凍結日は事件の翌日だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし凍結後、保管庫に残った12枚の記録用紙には不自然な点があった。署名欄がすべて空白だった。\n筆跡鑑定では12人分の文字とされたが、誰も自分の署名を書いた記憶を持たなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに用紙の余白には同じ時刻が記されていた。午前2時17分。最初の笑い声が報告された時刻だ。\n12枚の紙は終了後に書かれたはずなのに、すべて実験開始以前の時刻を指していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録が後から書かれたのに、最初の声より前を指す。なら職員は最初から観察されていたのか。\n笑い声を聞いた12名じゃない。笑い声に選ばれた12名だった、と読む方がずっと怖い。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容記録には、実験前日の点検写真が1枚だけ残る。観察窓の反射には担当者が12名ではなく13名映っている。\n13人目は名簿にいない。顔は光で潰れ、制服の識別章だけがSCP-2006の保管番号を示していた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "写真を確認した職員3名は、13人目を見た瞬間に同じ笑い声を聞いたと申告した。\nその後の聞き取りでは、3名とも写真の中で笑っていたのは自分だった、と証言を変えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "写真の外から見れば怪物。写真の中から見れば自分。どちらが本物か決めた瞬間、もう役を与えられている。\nそれなら収容室の扉を閉めても、外側にいる人間が安全とは言えない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この事件の後、収容手順は改訂された。SCP-2006への実験は参加者を最大2名までに制限する。\n12名を同時に置いた理由は恐怖の比較だったが、比較する視線そのものが侵食経路になった可能性がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "新手順では観察者の実名を使わない。呼称は番号のみ。幼少期の記録や家族情報は実験室から除外する。\nそれでも声が個人を呼ぶ場合は、呼ばれた者ではなく、聞いた者全員を隔離する規定になった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "隔離の目安は笑い声を1回でも確認した時点だ。2回目を待たない。3回目まで待った旧実験では、全員の証言が食い違った。\n財団は恐怖の内容より、誰が誰を見ていたかという配置図を最優先で回収する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "声の正体を探すより、最初に席順を調べるのか。教室で誰かが笑った時、周りを見た人まで怖くなるような話だ。\n見た側も見られた側も、同じ恐怖の中で役を与えられるから、人数だけでは足りない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "元研究員として言えるのは、SCP-2006を見て怪物の形だけを覚えるな、ということだ。\nこの対象は恐怖の中身よりも、恐怖を共有した人間の間に残る沈黙を利用する。沈黙が長いほど疑いは増える。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "誰かが笑った時、周囲が一斉に黙る。その瞬間、誰が笑ったのかを確かめたくなる。\n今回の12名は、その確認を繰り返した。そして最後には、自分の記録さえ信用できなくなった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閲覧用に残された映像は18分42秒で終わる。終了直前、観察室の全員が同じ方向を向く。\nそこにあるのは空の壁だけだが、音声のない映像で12名が口元を押さえているのが分かる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "音がない映像なのに、見た人は笑い声を思い出すのか。映像を消しても、頭の中まで消せない。\n記録はここで途切れている。でも空の壁を向いた理由だけが、報告書のどこにも書かれていない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後のページには回収班の走り書きが残る。観察室は空だった。椅子は12脚、扉は内側から施錠。\n壁面に爪痕も血痕もない。ただし床に落ちた識別章は、人数より1枚多い13枚だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "12名の行方は機密指定で伏せられた。死亡、転属、記憶処理、そのどれも確定していない。\n記録は[DATA EXPUNGED]されている。ただ13枚目の識別章だけは、現在も収容庫に保管されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "13枚目を誰のものか確かめた職員はいるのか。確認した瞬間、また笑い声を聞くなら誰も開けないだろ。\n…ねえ、これ本当に大丈夫なの？ その識別章を持つ誰かは、まだ名簿の外にいる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2006は、理解されたいように振る舞う。しかし理解のために近づいた者ほど、自分の恐怖を差し出す。\n見かけても、決して近づくな。笑い声が聞こえた時は、声の主より先に自分の名前を疑え。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-3008。出口のない家具店で、夜ごとに従業員が巡回した記録を扱う。\nあの空間でも最初に失われたのは地図ではない。誰が仲間かを判断する基準だったという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "無限の店で仲間の顔まで疑うなら、今回の13枚目と同じだ。安全な場所ほど人数を数えたくなる。\nでも数え終えた後に一人多かったら、扉を開ける前に逃げ道がなくなる。聞かなきゃよかった。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書が届いたなら、高評価を残せ。財団の裏側シリーズには、収容手順が壊れた他のファイルも置いてある。\n毎日投稿中で登録者1万人を目標にしている。チャンネル登録で、次の記録を受け取れ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし再生を止めた後、廊下で笑い声がしてもすぐ振り向くな。SCP-2006は姿を見せる前に、誰が恐れるかを待つ。\n12名が最後に見た空の壁の向こうにも、最初は何もいなかったという記録が残っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2006の原典はSCP財団Wiki掲載作品に基づく。ライセンスはCC BY-SA 3.0であり、本記録は要約と考察を含む。\nだが13枚目の識別章に関する追補記録だけは、閲覧権限を持つ元研究員にも開示されなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "12名が聴いた",
+      "消えた記録"
+    ],
+    "hook_caption": "12名の末路",
+    "subtitle": "SCP-2006収容記録",
+    "tagline": "笑い声の後、手順が壊れた"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": false,
+      "score": 55,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 1,
+          "text": "この報告書、笑い声を聞いた12名の記録だけが消えている。",
+          "pattern": "声[がをは]",
+          "reason": "「声が」はミュートでは確認できない"
+        },
+        {
+          "type": "audio_dependent",
+          "line": 4,
+          "text": "扉の外には誰もいない。それでも笑い声は3回、名簿を呼んだ。",
+          "pattern": "声[がをは]",
+          "reason": "「声が」はミュートでは確認できない"
+        },
+        {
+          "type": "demonstrative_overuse",
+          "line": 0,
+          "text": "2/6行が指示語で開始",
+          "reason": "指示語の使用率が33%（閾値30%）。ミュート視聴者はテロップしか見ないため、「これ」「あれ」が何を指すか不明になる"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "この笑い声の続きは財団の裏側シリーズに残る。高評価を残し、毎日投稿中で1万人目標",
+          "reason": "1行52字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 4
+    },
+    "viral_score": {
+      "score": 27,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 5,
+        "emotional_impact": 8,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.519,
+      "similar_to": "SCP-093の6色記録 なぜ戻れた？",
+      "template_issues": [
+        "直近10本中4本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 33,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-2006 12名が聞いた笑い声の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['正体'](+12)"
+    ]
+  },
+  "original_title": "SCP-2006 12名が聞いた笑い声の正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "SCP-2006 12名が聞いた笑い声の正体"
+  }
+}

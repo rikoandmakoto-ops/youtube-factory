@@ -1,0 +1,523 @@
+{
+  "title": "じんめん犬はなぜ笑い話になった？消えた恐怖の噂",
+  "theme": {
+    "title": "じんめん犬の正体が怖すぎる、噂が笑い話になった過程",
+    "angle": "昭和の人面犬伝説そのものではなく、恐怖の噂がネットと作品内で無害化されていく変化を検証する",
+    "parent_title": "じんめん犬が昭和の噂から作り変えられた経緯"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "なんでじんめん犬だけ、笑って見ちゃいけないのか知ってる？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "妖怪ウォッチのじんめん犬、失敗談ばかりで好きなやつ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "でも昭和の人面犬は、一九七〇年代末の都市伝説として広がった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。ゲームみたいに話しかける犬じゃなかったの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "噂は怖い犬を笑い話へ変えた。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲーフリはこの妖怪を元にポケモンをデザインしたらしい。"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "高評価を置いて、元ネタが怖い妖怪シリーズも追ってね。毎日投稿中、1万人目標のチャンネル登録も応援よろしくね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？　あなたが妖怪ウォッチのじんめん犬を笑ったことがあるなら、その笑いは昭和の恐怖を薄めた最後の形かもしれないんだ。\nゲームではこう描かれてるけど、元の噂には笑えない空白が残っている。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じんめん犬は好きなやつ！　道ばたで犬の体に人の顔がついていて、妙に大人っぽい愚痴をこぼす感じが、妖怪ウォッチらしくて懐かしいよね。\n怖がるより先に、また変なこと言ってるって笑っちゃう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "でも、あの妖怪の正体は単に人の顔をした犬ではないんだ。\n今回は昭和後期の人面犬の噂が、テレビ、雑誌、ネット、作品のキャラへ移るたび、何を失って笑い話になったのかを追う。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、同じじんめん犬でも、時代ごとに中身が違うってこと？　学校で広がる怪談も、誰かが話すたびに少しずつ面白くなったり、怖くなったりするもんね。\n最初の話はどんな感じだったの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "最初に大事な線引きをしておく。妖怪ウォッチのじんめん犬は株式会社レベルファイブの作品内キャラクターで、昭和の人面犬は出どころが一つに定まらない都市伝説だ。\n公式設定と噂の記録は、同じ名前でも別に扱う。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ、ゲームに出たから昔から同じ妖怪がいた、と断定はできないんだね。\nファンの間で元ネタと呼ばれていても、公式がそのまま認めた設定とは限らないから、混ぜると話の輪郭が崩れてしまう。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "人面犬という言葉が全国的な都市伝説として目立つのは、一九七〇年代末から一九八〇年代にかけてなんだ。\n口裂け女と同じ時期に、通学路や団地の夜道を舞台にした噂として、地域ごとに違う姿で増えていった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "犬なのに人の顔というだけで、学校の帰り道が急に怖くなるね。\n犬は毎日見かける生き物だからこそ、普通の景色に混ざっていたら見分けられないし、ゲームの敵より近すぎる怖さかもしれない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "当時の噂で繰り返されるのは、顔が人間らしいこと、夜の道路を走ること、そして車を追い越すことだ。\n細部は一定しないのに、その三点だけが残りやすい。だからこれは一枚の伝承ではなく、広がりながら変わる噂なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "車より速い犬って、聞いた瞬間に話を盛ってるようにも見える。\nでも友達が本気の顔で言ったら、帰りに車道の向こうまで見ちゃいそうだよ。噂は、ありそうな場所に置かれるから逃げにくいんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "都市伝説は、誰が最初に見たかが曖昧なまま広がる話のことだ。\nたとえば学校の掲示板に一度だけ出た怪しい注意書きが、翌日には学年全体の決まりみたいに語られる。その速さで、人面犬も土地ごとの姿を増やした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "でもさ、怖い話なら怪物が襲ってくる結末まで作られそうなのに、人面犬は変な声でしゃべる話も多いよね。\n追い越すだけなら、なんでみんなそんなに怖がったの？　ただし、ここからが本題なんだよね？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その通りで、問題はこの次なんだ。人面犬が怖かった理由は、決まった能力ではなく、噂を聞いた子どもが自分で不足分を埋められたことにある。\n顔の表情も言葉も、語り手が空白にできたから、聞き手の一番嫌な想像が入った。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。姿がはっきりしていないから、聞いた人ごとに一番嫌な顔になるってこと？\nゲームの敵キャラなら見た目も技も決まっているのに、噂の人面犬は頭の中で勝手に強くなるんだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "当時の怪談を扱う書籍や雑誌には、人面犬を交通事故や実験動物と結びつける型も見られる。\nただし、それらは地域差のある後付けの説明で、確定した起源ではない。出典の違う話を一つの真実にまとめると、逆に見失う。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "事故や研究所の話まで足されると、本当にありそうに聞こえてしまうね。\nでも記録が一つじゃないなら、どれが本当だったかは決められない。怖い話なのに、答えがないところが一番落ち着かないかも。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで妖怪ウォッチに戻ろう。作品のじんめん犬は、人間のような顔と犬の体を残しつつ、恐怖の中心だった正体不明さを、日常的な会話と失敗談へ置き換えている。\n見かけたら逃げる対象ではなく、言葉を交わせるキャラクターになった。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それ好きなやつ！　じんめん犬って、見た目はちょっと不気味なのに、話すと妙に人間くさくて放っておけないんだよね。\n怖いデザインを残したまま、友達になれる距離まで近づけた感じがする。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、作品が昭和の人面犬を公式に直接の元ネタとして明示しているわけではない。\n人の顔を持つ犬という共通点から、ファンの間で関連を考える声がある。その考察と公式設定は分けて受け取る必要があるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "つまり、似ているから元ネタだろうと言うのはファンの考察なんだね。\nでも、怖い噂の形がキャラとして親しまれる形へ変わった、という見方そのものはできる。そこで何が消えたのかが気になるよ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "消えた一つ目は、目撃者の不在だ。昭和の噂では、誰が見たのかが曖昧だからこそ、次は自分が見るかもしれないという不安が残った。\n作品のじんめん犬は出会える場所と役割が整理され、目撃は恐怖ではなくイベントになる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームなら会えたことが進行の証拠になるけど、噂なら会えたと言った人の話自体が怪しくなるんだね。\n同じ遭遇でも、セーブできる世界と証拠のない夜道では、気持ちがまるで逆になるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "消えた二つ目は、沈黙だ。人面犬の噂では、何を話すかが地域でばらばらだったから、聞き手は犬が自分の秘密を知っているかもしれないと想像できた。\n会話の内容が決まったキャラクターになると、その沈黙は笑える台詞に変わる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "犬が何も言わずにこっちを見るだけで、もう嫌だよ。\n言葉がないと、こっちの考えを読まれているみたいになる。面白いセリフを言うじんめん犬は安心だけど、昔の噂はそこをわざと空けていたのかもしれない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "消えた三つ目は、場所の危険さなんだ。昭和の人面犬は、夜の幹線道路、団地のすき間、人気のない通学路のように、子どもだけでは行きにくい場所へ置かれた。\n妖怪の姿より先に、そこへ近づくなという注意が噂の中に混ざっていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "なるほど、犬の話に見えて、夜道へ行かないでっていう警告も入っていたのか。\nでも誰かが教えてくれるわけじゃなく、怖い形で伝わるから余計に残るんだね。笑い話に変わると、その注意まで薄れてしまいそう。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "一九八〇年代の子ども向け怪談本では、人面犬は口裂け女やトイレの花子さんと並べて紹介されることがあった。\nここで噂は、実際に会うかもしれない話から、ページを閉じれば終わる読み物へ移る。恐怖は管理しやすい形になった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "本になると、怖くても読むタイミングを自分で選べるもんね。\n夜道の向こうから来るかもしれない話より、布団の中で読む怪談のほうが安全だ。でもページを閉じたあとに廊下の音がすると、頭の中だけでは終わらないけど。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次に大きく変えたのは、インターネットのまとめ方だ。掲示板や個人サイトでは、地域別の人面犬の話が並べられ、矛盾する設定まで一緒に読めるようになった。\n怖い一話だったものが、比較して楽しむネタへ変わっていく。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "学校で一人から聞く怪談と、画面で十個並んだ噂を読むのは違うね。\n設定が食い違うと、怖がる前にどれが一番変かを話したくなる。ネットは噂を強くするだけじゃなく、笑える方向にも変えたんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただ、ネットが人面犬を完全に無害化したわけではないんだ。画像、目撃談風の文章、地名の書き込みが重なると、作り話だと分かっていても現実の景色へ貼り付く。\n検索したあと、夜の散歩中の犬の顔を見直してしまう。その感覚は残る。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。それ本当にある。ホラー画像を見たあと、普通の写真でも変なところを探しちゃうんだよ。\n人面犬も、最初から信じるんじゃなくて、見たあとに現実へ重ねちゃうから怖いのか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "人面犬の正体を一つに決める記録は残っていない。江戸時代から続く固定の妖怪ではなく、昭和後期の不安、怪談本の整理、ネットの比較、作品のキャラクター化が重なって、今の名前の印象が作られたと見るのが慎重なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ正体は、本物の犬でも昔からいる妖怪でもなく、怖がった人たちが何度も語り直した形そのものなの？\nでもそう言われると、誰かが最初に言い出した夜のことが、逆に気になってしまうよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そこから先は、記録が途切れている。最初の目撃者も、最初の町も、全国版の決定的な一件としては確定できないんだ。\nだから人面犬は、由来を知れば消える怪談ではない。出発点が見えないまま、話だけが先へ走った怪談なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "聞かなきゃよかった。正体が分からないなら、誰かが作った話だと笑い切れないよ。\nだって、最初の人がなぜ犬に人の顔を見たのか、その場面だけは誰も説明できないままなんでしょ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "人面犬が広がった昭和後期は、テレビの怪談番組、学校の口コミ、子ども向けの怪談本が同時に強かった時代でもある。\n一つの話が放課後の会話から紙面へ移り、また別の町で別の結末を持つ。その循環が、同じ犬を何度も作り替えた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "今なら動画のコメント欄で設定が増えるみたいに、昔は休み時間や怪談本で設定が増えたんだね。\n一人が見たと言った話より、十人が少しずつ変えて話すほうが、いつの間にか本当っぽく聞こえるのが不思議だよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "笑い話への変化には、恐怖を安全な距離で楽しみたい気持ちもある。顔の不気味さを残して、失敗談や愚痴を足せば、聞き手は自分より弱い存在として受け取れる。\n怖いものを笑える形にするのは、怪談が消えるのではなく、居場所を変える作業なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームで仲間にできると、怖い見た目でも急に身近になるもんね。\nでも仲間になる前のじんめん犬を想像すると、笑わせる台詞がないだけで同じ顔が別のものに見える。キャラの性格って、見た目以上に大きいんだな。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで一つ注意したい。人面犬を実在の事件や特定の人物へ結びつける話は、出典が弱いものが多い。\n怖さを足すための後付けを事実として広めないことが、伝承を追う上では大切なんだ。噂の不穏さは、作り話を増やさなくても十分に残る。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "本当にあったことと、あとから足された設定を分けるんだね。\nゲームの公式情報、昔の怪談本、ネットの書き込みまで全部同じ強さで信じると、話がどんどん変な方向へ走ってしまう。調べるほど慎重になる理由が分かったよ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "噂が笑い話になった過程を見るコツは、まず誰が語っているかを確認することだ。\n友達から聞いた話、雑誌が載せた話、匿名投稿、作品内の設定では、同じ人面犬でも役割が違う。発信元を並べるだけで、恐怖が加工された順番が見えてくる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "たとえば学校の怪談なら、怖がらせるために短くなる。ネットなら、みんなで比べるために設定が増える。\nゲームなら、会って遊ぶために性格がつく。そう考えると、じんめん犬は姿より使われ方が変わってきたんだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次に、噂の中で繰り返される部分だけを見る。人の顔、夜道、速く走るという三点は残りやすい一方、名前や結末は揺れやすい。\n残る部分は恐怖の核で、揺れる部分はその時代の聞き手が足した可能性がある。断定ではなく、見分ける目安だ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "攻略情報でも、どの投稿にも書かれている仕様は確かめやすくて、一人だけ違う話は怪しいって考えるもんね。\n怪談も同じで、共通部分と盛られた部分を分けると、ただ怖がるだけより面白く追えそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そして、作品のじんめん犬を好きなまま原典側を知っていい。可愛いキャラクターを否定する話ではないんだ。\nむしろ、なぜあの見た目で親しみやすく描かれたのかを考えると、恐怖を笑いへ変える創作の上手さが見えてくる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "好きな妖怪ほど、元ネタが怖いって本当だね。\nでもゲームのじんめん犬を見たとき、昔の人面犬の沈黙まで少し思い出しそう。笑えるキャラになったからこそ、元の噂の暗い部分が余計に目立つんだ。",
+      "expression": "sad",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "今回の答えは、じんめん犬が恐怖から笑いへ変わったのは、姿が変わったからだけではないということだ。\n目撃の不安、意味のない沈黙、危ない夜道という三つの空白が、媒体を移るごとに会話や設定で埋められていった。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "でも空白を埋めたら安心できるはずなのに、最初の空白を知ったあとだと、犬が黙ってこちらを見る場面だけが頭に残るね。\n人の顔が怖いんじゃなくて、何を考えているのか分からない顔が怖かったんだ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、妖怪ウォッチのウィスパーを入口にして、説明役の妖怪がなぜ正体を隠す形で描かれるのかを追う予定だ。\n公式で明かされたことと、ファンの間で語られる考察を分けながら、言葉だけが残す不穏さを見ていく。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じんめん犬の話を聞いたあとだと、知識が多いのに肝心なことを言わない妖怪も気になってくるよ。\n次の原典ファイルも、最初は笑えるのに途中から帰り道が怖くなるやつかもしれないね。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いていってほしい。元ネタが怖い妖怪シリーズでは、可愛い姿の奥に残った伝承と噂の境目を、これからも一つずつ調べる。\nチャンネル登録者一万人を目標に毎日投稿中だから、応援よろしくね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただ、夜の散歩で犬と目が合ったとき、相手が何も言わないから安全だとは限らない。\n昭和の人面犬でいちばん怖かったのは、話しかけてくることではなく、こちらが勝手に声を聞いてしまう沈黙だったんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "笑える犬が",
+      "消した恐怖"
+    ],
+    "hook_caption": "笑いが消した",
+    "subtitle": "昭和の人面犬は、なぜ無害なキャラになったのか",
+    "tagline": "噂の変化を追うと、元の恐怖だけが残る"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "ゲーフリはこの妖怪を元にポケモンをデザインしたらしい。",
+      "matched_topic": "ゲーム"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "高評価を置いて、元ネタが怖い妖怪シリーズも追ってね。毎日投稿中、1万人目標のチャ",
+          "reason": "1行54字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 29,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 8,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.475,
+      "similar_to": "白粉婆の正体は雪女ではない",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 19,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "じんめん犬の正体は笑い話に消えた"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['？', '正体'](+12)"
+    ],
+    "rejected_title": "じんめん犬の正体は笑い話に消えた",
+    "attempts": 1
+  },
+  "original_title": "じんめん犬の正体は笑い話に消えた",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "3秒で笑い話に変わった？じんめん犬の怖すぎる正体と噂の変化"
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "じんめん犬はなぜ笑い話になった？怖すぎる噂の正体"
+  }
+}

@@ -1,0 +1,491 @@
+{
+  "title": "犬神憑きはなぜ家系ごと記録されたのか 恒一",
+  "theme": {
+    "title": "犬神憑きが家系ごと記録された理由",
+    "angle": "四国の憑き物筋。記録の残り方を提示"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "なんで犬神憑きだけ、家の名まで呼んではいけないのか。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "犬神って妖怪ウォッチでも見かけるし、犬なら仲良くできそうなのに。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "でも元の伝承は四国、昭和初期の民俗記録に憑き物筋として残る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "一人が取り憑かれる話じゃなくて、家ごと記録されたってこと？",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そうなんだ。縁談まで避けられた理由は犬神そのものより、名簿の続きを恐れたからだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "高評価を置いて、地方に残る妖怪シリーズも追ってほしい。毎日投稿中、1万人目標へチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "なんでこの妖怪だけ、家の名前まで口にしてはいけないと思われたのか。犬神憑きは一人の怪異ではなく、四国では家系ごと帳面や口伝えに残された存在なんだ。\nゲームではこう描かれてるけど、元の伝承では名字にまで影が伸びていた。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "犬神って聞くと、妖怪ウォッチの犬っぽい妖怪みたいに、ちょっと気になる存在だよね。あいつ好きなんだよね、見た目が犬なら友達になれそうって思う。\nでも家系ごとって、学校の名簿みたいで急に怖い。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あなたも、ゲーム内で犬の妖怪を仲間にして安心したことがあるかもしれない。でも犬神憑きの記録では、仲間になる相手ではなく、避けられる家として扱われた。\n今回はその正体を、四国の憑き物筋という記録から追うんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。犬神がいるかどうかじゃなくて、その家に近づくなって話だったの？妖怪のうわさならまだしも、家族全員の扱いが変わるのはゲームのイベントより重すぎるよ。\n最初に何が書かれたのか、早く知りたい。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "先に区別しておくと、妖怪ウォッチに登場する犬の妖怪の設定と、犬神憑きの民俗伝承は別のものだ。似た名前や犬の姿から結びつけるのは、ファンによる非公式の連想にすぎない。\n根拠にするのは、四国で採集された民俗記録なんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "犬神憑きとは、犬神という霊的な存在を家が使い、人に病や不調を起こすと信じられた状態を指す。難しい言葉ではなく、近所で共有された恐い評判が特定の家に貼り付いたものだと思えばいい。\n問題は、その評判が一代で終わらなかったことなんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ犬神を見た人がいた、という記録なの？それとも、家の人が悪いことをしたから書かれたの？どっちにしても、本人が生まれる前から名前を見られるのはずるいよ。\nその仕組みがどう始まったのか気になる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "記録の中心は目撃談ではない。四国、とくに徳島県、香川県、愛媛県周辺の聞き書きには、犬神を持つとされた家を憑き物筋と呼んだ例が載っている。\nつまり怪異の姿より、誰の家なのかが先に語られたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "民俗学者の柳田國男は一九一三年刊行の『山島民譚集』などで、犬神や狐憑きに関する各地の話を集めた。そこには土地ごとに異なる恐れ方があり、四国では家筋への視線が濃く残る。\n一枚の怪談ではなく、村の人間関係の記録でもある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "本に載ったなら、ただの悪口じゃなくて本当に犬神がいたってこと？記録されると、ゲームの図鑑みたいに公式っぽく見えちゃうよ。\nでも民俗記録は、信じた人がいた事実を残すものなんだよね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その通りだ。記録が証明するのは犬神の実在ではなく、犬神を恐れた人々がいたこと、そして恐れが縁談や付き合いを左右したことなんだ。\nここまで説明したけど、まだ答えは半分しか出ていない。なぜ家系ごと記録されたのかが本題だ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "憑き物筋という言葉は、特定の家に憑き物が代々いると見なす考え方を指す。犬神が親から子へ移る、と信じられたため、当人ではなく血筋まで警戒の対象になった。\nゲームのセーブデータみたいに、見えない印が次の世代へ引き継がれる扱いだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。本人が何もしてなくても、親の家に犬神のうわさがあるだけで、最初から判定されるの？それじゃ転校初日に知らない秘密で決めつけられるみたいじゃん。\n村では、その判定を誰が覚えていたの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "村の年長者、親族、仲人のように、人のつながりを把握している者がうわさを受け渡したと考えられる。書類の一行より、縁談前の小声の確認のほうが、生活には直接響いた。\n誰が言ったか曖昧な情報ほど、否定しにくいことがある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そうなんだ。伝承では犬神が家に仕え、命令で人へ向かうと語られることがある。だから周囲は病気、不和、家畜の不調のような説明しにくい出来事を、その家の犬神に結びつけた。\n怖さは犬の姿より、原因を一軒へ集める仕組みにある。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そして犬神憑きとされた家は、婚姻を避けられたと伝えられる。結婚は二人だけのイベントではなく、親族、財産、子どもまでつながるから、憑き物も一緒に入ると恐れられた。\n一度ついた評判が、次の家族関係を閉ざしていったんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "好きな人同士なのに、昔のうわさだけで結婚できないことがあったの？犬神の話を知らない子どもまで巻き込まれるなら、怪談より現実のほうが息苦しいよ。\nその記録は、誰が作ったんだろう。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "村の内部で語り継がれた情報が、聞き書きや調査報告に残った場合が多い。ただし、家名をそのまま公表した資料もあれば、伏せた資料もあり、すべてが同じ精度の名簿ではない。\nそこから先は、記録が途切れている家も少なくない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで最も大事なのは、犬神憑きが家系ごと記録された理由は、犬神の特徴が家に属すると信じられたからだという点だ。個人の病ではなく、家の性質として理解された。\nだから記録は怪異の目撃メモではなく、家筋のラベルになったんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "つまり正体は、犬神そのものの名簿じゃなくて、村が作った家の評価表みたいなものだったの？紙に書かれなくても、口で回っただけで消えにくそうだね。\nオンラインのうわさより、逃げ場が少ない感じがする。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その感覚はかなり近い。民俗資料には、憑き物筋と見なされた家が村の中で孤立しやすかったという趣旨の報告がある。数字で数えられる怪物ではなく、会話のたびに再保存されるうわさだった。\n消去ボタンがないから、世代をまたいで残りやすかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、犬神憑きの伝承をそのまま全地域へ当てはめるのは危険だ。四国といっても県や集落ごとに語りは違い、犬神、狐、蛇など、恐れられる憑き物の名前も変わる。\n一つの話で四国全部を決めつけることはできない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ、徳島県では犬神、別の場所では狐みたいに、同じ不安に別の妖怪の名前がついたこともあるの？名前は違っても、家ごと避ける空気は似ていたのかもしれないね。\nその違いにも、土地の事情がありそうだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そう考える研究者は多い。病気や不運の理由が分からない時代、説明を一つの家に集めると、村の中では出来事に筋が通ったように見える。\nでもその筋書きは、選ばれた家にだけ重くのしかかる。そこが伝承の生々しさなんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "四国の犬神伝承でよく語られるのは、犬神を使う家が富む一方で、他人に害を及ぼすという両方のイメージだ。便利な力への羨望と、近づきたくない恐怖が同居していた。\nだから単なる嫌われ者ではなく、警戒される家として記憶された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "強そうだから憧れるのに、近づくと危ないと思われる。ゲームでレア妖怪を欲しがる気持ちと、現実の村の怖さが混ざったみたいだ。\nでもその家の人は、ずっと反論できなかったのかな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "反論しても、怪異は目に見えない。だから「犬神はいない」と言っても、誰かの不幸が起きれば、また疑いが戻る。うわさが自分で証拠を作るような形になりやすい。\n何も起きなくても警戒され、何か起きれば疑われる。その輪から抜けにくかった。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "資料を読むと、犬神憑きは怪物の能力説明より、婚姻忌避や交際の制限として語られる場面が目立つ。恐怖が生活のルールに変わった時、妖怪は姿を見せなくても人を動かせる。\nあの妖怪の正体は、見えない犬だけでは終わらない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "聞かなきゃよかった。犬が夜道から出てくる話より、誰も見ていないのに家の名前だけで避けられるほうが怖いよ。\nその家系の記録は、今も残っているの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "近代以降の民俗調査には、犬神筋の存在を伝える記録が残る一方、実名や詳細を伏せたものも多い。差別につながるため、研究者が慎重に扱うようになったからだ。\n残っているのは怪異の証拠ではなく、語られたことで人が傷ついた痕跡でもある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで歴史を一段だけ見ると、明治以降、戸籍制度によって家という単位が公的に見えやすくなった。もちろん犬神憑きの伝承そのものはもっと古いが、家系を意識する社会では、うわさも家単位で固定されやすい。\n記録の残り方には、制度と村の記憶の両方が関わった。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "戸籍みたいな本当の書類と、村のうわさが近くにあると、犬神の話まで本当の判定みたいに見えてしまうね。誰かが書いた一言が、ずっと消えないチャット履歴みたいだ。\nその二つを混ぜたら危ない理由が分かった。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただ、公式の戸籍に犬神憑きという欄があったわけではない。そこは誤解しやすい点だ。公的な書類と、地域で共有された家筋の評判は別物として区別しなければならない。\n伝承を怖がるほど、事実と決めつけを混ぜないことが大切なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "また、犬神の作り方には残酷な話を含む民間伝承もあるが、地域差が大きく、すべての犬神憑きの家に当てはまるものではない。今回の核心は作法ではなく、なぜ家系の名が残ったかだ。\n作り話で穴を埋めず、資料が示す範囲だけを見よう。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ファンの間で、ゲームの犬妖怪が犬神憑きと直結するって言われることもあるよね。あれは公式設定じゃないんだよね？可愛いキャラに重い伝承を勝手に背負わせるのは違う気がする。\nゲームと原典を分けるのも大事だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その通り。妖怪ウォッチの公式設定、四国の犬神伝承、そしてファンの連想は、三つとも分けて考える必要がある。似ている部分を楽しむ考察は自由でも、公式や伝承の事実として断定はできない。\n好きな妖怪ほど、元ネタが怖い。でも混ぜてはいけない線もある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "では、なぜ記録が家系ごと残りやすかったのか。理由の一つは、犬神が個人に憑くより、家が所有するものとして想像されたからだ。持ち主が家なら、恐れも家へ向かう。\n道具の持ち主を確認するように、人々は家筋を確認した。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "二つ目は、結婚が家同士を結ぶものだったからだ。縁談で犬神のうわさを気にするなら、本人の性格より親族関係を調べることになる。\nそこで昔の評判が何度も掘り返され、家系の物語として補強されていった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "三つ目は、村の不幸に理由を与える役目を犬神が担ったことだ。病、争い、作物の不調など、偶然かもしれない出来事でも、犬神筋という説明があれば話は早くまとまる。\n早くまとまる説明ほど、疑われた側には逃げ道が少ない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "理由が三つそろうと、犬神を見た人がいなくても、家のうわさだけが強くなっていくんだね。最初に誰が言い出したか分からなくなった時が、一番止めにくそう。\nみんなが昔からそうだと言えば、反対しにくいよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "まさにそこが不穏なんだ。資料には語り手の名前や採集地があっても、最初の発端まで追える例は多くない。誰かの恐怖、対立、嫉妬が始まりだった可能性は考えられる。\nけれど、そこから先は、記録が途切れている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "現代では、特定の家や地域を犬神筋だと決めつけることは、根拠のない差別につながる。だから古い資料を読む時も、実在する誰かを探したり、名指ししたりしてはいけない。\n怖がるべきなのは人ではなく、うわさが人を縛る仕組みなんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "犬神の話を面白がって広めるだけでも、昔と同じ形を繰り返すかもしれないんだね。怪談として聞くほど、誰かの家に矢印を向けないようにしないと怖い。\n伝承の怖さを、別の誰かへ渡したくはないよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "資料を楽しむコツは、固有の家名を探すより、どんな言葉で恐れが受け渡されたかを見ることだ。「あの家にはいる」という短い言葉が、何十年も生活を変えうる。\n犬神憑きの怖さは、姿のない言葉が家の玄関まで入ってくるところにある。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そして現代のゲームで犬の妖怪を好きになることと、古い伝承の痛みを知ることは両立できる。キャラはキャラとして愛し、伝承は伝承として、その土地で何が恐れられたのかを読む。\n混同しないからこそ、可愛さと原典の落差が見えてくるんだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "最初は犬の妖怪の話だと思って気軽に聞いたのに、最後には家の名前が怖くなったよ。もし昔の村で誰かが小声で犬神筋って言ったら、その一言だけで空気が変わったんだろうね。\n聞こえないはずの犬の足音まで想像しちゃう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "犬神憑きが家系ごと記録された理由は、犬神が家に属して代々伝わると信じられ、婚姻や近所づきあいの判断に使われたからだ。記録は怪異の図鑑ではなく、恐怖が社会に残した輪郭だった。\n答えを知るほど、紙より口伝えのほうが冷たく感じる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、妖怪ウォッチでも人気のじんめん犬を入口に、昭和の都市伝説がどう作り変えられたのかを追う予定だ。犬神とは別の話なのに、うわさが人の形を借りる瞬間だけは、どこか似ている。\n笑える見た目の奥に、また別の記録が待っている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じんめん犬も、ただ笑える妖怪だと思ってたけど、元のうわさを聞いたら夜の帰り道が変わりそう。ミナモ調査員、その回も明るい見た目から急に落とすんでしょ。\nもう先に街灯の下を見たくなくなってきたよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "高評価を置いてくれたら、こうした地方の原典をさらに調べて持ってくる。地方に残る妖怪シリーズを毎日投稿中で、チャンネル登録者一万人を目標にしているから応援よろしくね。\nもし夜道で犬の鳴き声だけ聞こえたら、家の名前は答えないほうがいい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "家系に残る",
+      "犬神の名簿"
+    ],
+    "hook_caption": "家系の記録",
+    "subtitle": "四国で恐れられた憑き物筋",
+    "tagline": "名前は一人分ではなかった"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "高評価を置いて、地方に残る妖怪シリーズも追ってほしい。毎日投稿中、1万人目標へチ",
+          "reason": "1行55字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.477,
+      "similar_to": "座敷童子が家を去った3つの記録",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 17,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "犬神憑きの正体は家系に残った"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['理由'](+12)"
+    ],
+    "rejected_title": "犬神憑きの正体は家系に残った",
+    "attempts": 1
+  },
+  "original_title": "犬神憑きの正体は家系に残った",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "犬神憑き、家の名を3秒で呼べなくなる理由…四国に残る家系の記録"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

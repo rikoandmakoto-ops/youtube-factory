@@ -1,0 +1,519 @@
+{
+  "title": "鏡の顔だけ違う？99%が知らない左右差",
+  "theme": {
+    "title": "なぜ鏡の前だけ自分の顔が左右で違って見えるのか",
+    "angle": "「99%が知らない」型+左右非対称の実測値"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "実は鏡は、あなたの顔を左右で違って見せています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日鏡を見て思った！まだ答えは出ないの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "顔の左右差は平均して数ミリあり、鏡では毎日逆向きに見えます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "スマホの自撮りを左右反転したら、別人みたいに感じるのと同じだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも脳は慣れた鏡像を好むので、逆の顔ほど違和感が強まるんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "左右反転も今日から見比べてみて。面白かったら高評価、感覚のふしぎシリーズと毎日投稿中で1万人目標のチャンネル登録も応援よろしくね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？鏡の前で片方の眉だけ高く見えるあなたの顔には、平均で数ミリの左右差があるんです。\n朝の洗面台で見慣れた顔なのに、写真になると急に印象が変わるのはなぜでしょう。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！鏡では普通だったのに、スマホの内カメラで撮ると口元が片側へ寄って見えたよ。\n同じ顔なのに、見る道具だけでここまで変わるのが不思議だね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。顔は左右を完全にコピーして作るのではなく、成長の途中で少しずつ差がつくんです。\nただし鏡が差を増やしたわけではなく、見慣れ方が印象を大きく動かします。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ鏡の自分と、写真の自分のどちらが本物なの？鏡が反転していることは知っていても、顔の感じまで変わる理由は分からないよ。\n99%の人が戸惑うところを、順番に見ていきたいな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "先に大事なことを言うと、鏡は左右を入れ替えるというより、前後の向きを反転させている道具です。\nあなたが右手を上げれば、鏡の中の人は画面の左側で手を上げて見える、その見え方が入口です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！左右をひっくり返していると思っていたけれど、正確には前後の向きなんだね。\nでも顔では左右の違いとして感じるのは、脳が画面の左右で受け取るからかな？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。鏡のあなたは、毎朝ほぼ同じ向きで見る、反転したあなたになっています。\n歯を磨く2分でも何年も積み重なると、脳はその配置を自分らしい顔として覚えていくんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、スマホのホーム画面のアプリ位置みたいだね。1個だけ場所が入れ替わると、必要なアプリは同じでも指が一瞬迷う。\n顔でも配置の慣れが、印象を決めるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "顔の左右差そのものは珍しくありません。眉の高さ、目の開き、鼻の向き、口角の上がり方は、ほとんどの人で少しずつ異なります。\n完全な左右対称は、自然な顔ではむしろ少ないと考えられています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、笑うと片方だけえくぼが出たり、前髪が片側へ流れやすかったりするね。\n鏡では毎日見ているのに、その小さな差には普段ほとんど気づかないのか。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、顔の左右差は骨だけで決まりません。片側でよく噛む癖、表情の癖、寝る向きなども、長い時間で見え方に関わります。\nただし一つの癖だけが原因と断定できるほど、単純ではありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、片側で噛むことまで関係する可能性があるの？右だけで硬い物を食べる日が続くと、使う筋肉の感じも少し違いそうだね。\nでも今の話、まだ鏡で急に変に見える答えとは別だよね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうです。顔に数ミリの差があることと、その差を大きく感じることは別の出来事です。\n問題はこの次で、鏡像に慣れた脳が、反転しない写真を初対面の顔のように扱いやすい点なんです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり写真が変な顔を作ったのではなく、いつもの鏡像と並びが違うから脳が戸惑うの？\nそれなら他の人は、私が鏡で見ている顔とは逆向きの顔を、ずっと見慣れていることになるね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。他人が普段見ているのは、反転していないあなたの顔です。\nだから自撮りを左右反転してあなたが違和感を持っても、友人にはむしろいつものあなたに近く見える場合があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！自分だけが見慣れている顔と、周りが見慣れている顔が違うなんて面白いね。\n鏡で整えた前髪が、集合写真で少し違って見える理由にもつながりそうだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、顔の魅力を判断するとき、人は見慣れた向きの顔を好みやすいことが報告されています。\nこれは単純接触効果と呼ばれ、要するに何度も見たものほど受け入れやすく感じる傾向のことです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "単純接触効果って、よく聴く曲がだんだん好きになる感じと同じなんだね。\n鏡像も毎朝くり返し見ているから、反転しない写真を見た瞬間だけ、脳が配置の違いを大きく拾うのか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "顔認識では、目と眉、鼻、口の位置関係が特に大切です。数ミリの差でも、左右を反転すると片側にあった特徴が反対側へ移ります。\nあなたには小さな模様替えでも、脳には見慣れない並びとして届くんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、数ミリでもそんなに影響するの？部屋の家具を左右入れ替えたら、広さは同じなのに歩きづらく感じることがあるよ。\n顔の印象も、部品の大きさより位置の順番で変わるんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここは科学でもまだ結論が出ていない部分があります。左右対称な顔が常に魅力的と感じられるわけではなく、文化や表情、見る時間で評価は変わります。\n整い過ぎた合成顔を自然でないと感じる人もいるんです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "完全に左右がそろえば一番きれい、とは限らないんだね。少しだけ違う眉や笑い方が、その人らしさとして覚えられていることもありそう。\n鏡の違和感は、欠点を見つけた合図ではないんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで最も大きいポイントです。左右を反転した自撮りを見て強く変だと感じても、他人が同じ強さでそう感じるとは限りません。\nあなたの脳だけが、長年見てきた鏡像との差を細かく比較しているからです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それなら写真を見て落ち込む必要は少し減りそう！自分だけが気づく小さな違いを、周りも同じ倍率で見ていると思い込んでいたよ。\n見慣れた基準があるからこその反応なんだね。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "顔を左右反転した画像が不自然に見える現象は、心理学で単に顔が変わったからではなく、記憶の中の顔と一致しないためと説明されます。\n毎朝の鏡像を数千回見た人ほど、その並びへの慣れは強くなりやすいんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "数千回も見た基準があるなら、1枚の写真で急に違うと感じるのは当然かもしれないね。\n新しい靴の左右を入れ替えて履いたときみたいに、物は同じでもいつもの感覚だけがずれてしまうんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "顔の左側と右側では、表情の出方も同じではありません。笑顔を作る筋肉は左右別々に動き、写真を撮る0.1秒の違いで、片方の口角だけ高く残ることがあります。\n静止画が鏡より厳しく見える理由の一つです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、笑顔まで0.1秒で違ってしまうの？鏡では動きながら確認できるけれど、写真は一回だけのタイミングを切り取る。\n動画の中では自然なのに、集合写真だけ気になることがあるのも納得だね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "写真の見え方には照明も関わります。上からの光は目の下や鼻の影を強め、横からの光は片側の輪郭を目立たせます。\n洗面所、窓際、スマホの画面光では、同じ顔でも左右差の見え方が変わるんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、夜の洗面所では片方の頬だけ暗く見えることがあるよ。\nそれを骨格の差だと思っていたけれど、光の向きが作った影もかなり混ざっているんだね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "スマホの広角レンズも、印象を動かしやすい要素です。カメラを顔から20センチまで近づけると、近い鼻や頬が相対的に大きく写ります。\n鏡の見え方と比べるなら、少し離れて撮るだけでも差が減りやすいです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "スマホを腕いっぱいに伸ばさず撮ったとき、鼻だけ目立つ感じがするのはレンズのせいもあるんだね。\n定規を目の前へ近づけると太く見えるように、距離で顔の部品の比率まで変わって見えるのか。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "確認するときは、同じ照明で正面から通常写真と反転写真を撮り、できれば顔から1メートルほど離れて比較してください。\n条件をそろえると、鏡の反転による違いと、レンズや影による違いを分けて見やすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "1メートル離れるなら、顔のすぐ前で撮る自撮りよりずっと公平に比べられそうだね。\n体重計を硬い床に置くみたいに、条件をそろえないと本当の変化なのか、測り方の差なのか分からなくなるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "鏡と写真が違うもう一つの理由は、鏡では顔が動いていることです。瞬きや口角、視線の動きが連続して見えるため、脳は一枚の静止画より多くの情報で自分を認識できます。\n止まった写真だけが厳しく見えることもあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！鏡では表情が少しずつ変わるけれど、写真はたまたま瞬きしかけた0.1秒を残すこともある。\n一枚だけで自分の顔全部を決めつけるのは、確かに早すぎるね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "動画を止めた一コマで自分の顔が変に見えるのも、同じ仕組みです。会話中の顔は毎秒たくさんの小さな動きで成り立ちます。\nその中の一瞬だけを取り出すのは、走っている人を片足の瞬間だけで判断するようなものです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、歌の1音だけ切り取って音程を決めるようなものなんだね。流れで聞けば自然でも、短い一瞬だけなら誰でも少し変に見える。\n顔も動きの中で見て初めて、その人らしい印象になるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "歴史を少したどると、鏡は長い間、金属を磨いて使うものでした。現在のような平らなガラス鏡が広まる前は、反射像も今より暗く、わずかにゆがむことがありました。\n自分の顔を毎日くっきり見る習慣は、意外と新しいものなんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "昔の人は、今みたいに洗面台で毎朝じっくり自分の顔を確認できなかったんだね。\nスマホの高画質カメラまで加わった今は、毛穴や左右差を近くで見過ぎる場面がずいぶん増えていそうだ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "ルネサンス期の画家たちは、鏡を使って自画像を描くことがありました。そのため右利きの画家が筆を持つ手が、作品では左側に見える例もあります。\n自画像は鏡像を通した本人で、写真とは向きが違う可能性があるんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！自画像を見るときも、画家本人が見慣れていた鏡の顔を見ていることがあるんだ。\n同じ本人でも、鏡か写真かで残る向きが違うというのは、今日の話そのものだね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、左右反転が必ず悪いというわけではありません。髪型やメイクを鏡で整えるときは、鏡像でのバランスを確認することに意味があります。\n人と会う場面の見え方も知りたいなら、反転しない写真を一枚足せば十分です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "鏡を見るのをやめる必要はなくて、基準を二つ持てばいいんだね。鏡は自分が毎日確認する顔、写真は周りに近い向きの顔。\nどちらか一方だけが正解ではないと分かると、気持ちが楽になりそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "試すなら、同じ表情で通常写真と左右反転写真を並べ、まず10秒ずつ眺めてみてください。\n最初に違和感があっても、少し見続けると脳が新しい配置に慣れ、印象がやわらぐ人もいます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "10秒だけでも見慣れ方が変わることがあるんだね。初めて聴く自分の録音声が変に聞こえても、何回か聴くうちに普通になるのと似ている。\n脳の基準は思ったより動くんだな。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし顔の片側だけが急に動かしにくい、笑ったとき口元が急に下がる、しびれを伴う場合は、鏡の見慣れ方の話として片づけないでください。\nその場合は早めに医療機関へ相談することが大切です。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "普段からある数ミリの左右差と、急に起きた変化は分けて考えるんだね。毎朝の鏡は小さな違いに気づく場所でもあるから、いつもと明らかに違うなら大事にしたいな。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話をまとめると、鏡の顔が左右で違って見えるのは、顔に自然な左右差があり、脳が反転した鏡像へ慣れているからです。\n写真、照明、レンズ、静止画という条件も重なり、違いが強く感じられることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり鏡の中の自分も、写真の中の自分も、どちらも作り物ではないんだね。見える向きと条件が違うだけで、毎日過ごしている顔そのものは変わっていない。\nそれを知るだけで見方が少し変わりそう。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜、鏡を見るときは眉、目、口角の左右を欠点探しではなく、自分だけの配置として眺めてみてください。\nたとえるなら手書きの文字のように、少しの揺れがあるからこそ、あなたらしい形として覚えられているんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！左右差は隠すべき印ではなく、鏡と写真で見え方を変える小さな個性でもあるんだね。\n次に自撮りが気になったら、反転と光を確認してから見直してみるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、録音した自分の声がなぜ自分らしく聞こえないのかを、空気と骨を通る音の違いから見ていきます。\n鏡の顔と同じように、毎日聞いているはずなのに驚く身近な感覚のふしぎです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それも気になる！自分の声を動画で聞くと、いつもより高く感じることがあるから、今日の鏡の話と並べて知りたいな。\n見慣れ方だけでなく、聞き慣れ方にも脳の基準があるのかもしれないね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "鏡の前で感じた違和感の正体を、今日から少しやさしく見てみてください。\n面白かったら高評価もお願いします。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "身近な不思議を毎日1本ずつ一緒に解いているので、感覚のふしぎシリーズの次の回も見逃さないよう、チャンネル登録よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "鏡の顔だけ",
+      "左右が違う"
+    ],
+    "hook_caption": "左右差の正体",
+    "subtitle": "鏡と写真で印象が変わる理由",
+    "tagline": "顔の左右差は誰にでもあります"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "左右反転も今日から見比べてみて。面白かったら高評価、感覚のふしぎシリーズと毎日投",
+          "reason": "1行65字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 28,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 5,
+        "shareability": 14,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.557,
+      "similar_to": "なぜ食中毒でお腹が痛む？3時間後の体内反応",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 22,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "鏡の顔だけ違う？99%が知らない左右差"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['知らない', '99%', 'だけ'](+20)",
+      "好奇心ギャップ['？'](+12)"
+    ]
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

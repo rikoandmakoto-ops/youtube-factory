@@ -1,0 +1,293 @@
+{
+  "title": "なぜ30分待っても列をやめられない？並んだ人だけが見落とす本当の理由",
+  "theme": {
+    "title": "人はなぜ、順番待ちの列から離れられないのか、現状維持が作る見えない拘束",
+    "angle": "列に並び続ける行動を、既存状態を変えるコストと周囲の観察から説明する"
+  },
+  "short_scenario": [
+    {
+      "text": "なぜ人は、空いた列へ移れないのか。",
+      "chapter_title": null,
+      "mood": "mysterious"
+    },
+    {
+      "text": "待つほど、離脱の代償が増えて見える。",
+      "chapter_title": null,
+      "mood": "mysterious"
+    },
+    {
+      "text": "1988年、サミュエルソンらは現状維持を測った。",
+      "chapter_title": null,
+      "mood": "tense"
+    },
+    {
+      "text": "選択肢が同じでも、初期設定は選ばれやすい。",
+      "chapter_title": null,
+      "mood": "tense"
+    },
+    {
+      "text": "列の後ろには、見ている人の視線もある。",
+      "chapter_title": null,
+      "mood": "mysterious"
+    },
+    {
+      "text": "だが、移動が得とは限らない場面もある。",
+      "chapter_title": null,
+      "mood": "mysterious"
+    },
+    {
+      "text": "あなたは待っているのか。もう出られないのか。",
+      "chapter_title": null,
+      "mood": "calm"
+    },
+    {
+      "text": "列の中にも記録がある。登録で次の閉架へ。",
+      "chapter_title": null,
+      "mood": "calm"
+    }
+  ],
+  "full_scenario": [
+    {
+      "chapter_title": "第1章: 列という拘束",
+      "mood": "mysterious"
+    },
+    {
+      "text": "あなたも、隣の列が早く進む場面を見たはずだ。\nそれでも足は動かない。なぜ待つほど、列から離れにくくなるのか。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "10分待った列を捨て、空いた列へ移る。\n計算だけなら単純だが、人間の判断は残り時間だけを読まない。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "レジが4台ある店でも、列は均等にならないことがある。\n前に立つ数人の背中が、移動の判断を遅らせる。",
+      "mood": "tense"
+    },
+    {
+      "text": "ここで働くのは、失った待ち時間への感覚である。\nすでに費やした10分を、無駄として確定させたくなくなる。",
+      "mood": "tense"
+    },
+    {
+      "text": "だが列の拘束は、過去の10分だけでは説明しきれない。\n移動した直後に元の列が進む可能性も、静かに人を留める。",
+      "mood": "tense"
+    },
+    {
+      "chapter_title": "第2章: 初期位置の力",
+      "mood": "mysterious"
+    },
+    {
+      "text": "1988年、サミュエルソンとゼックハウザーは、現状維持バイアスを報告した。\n人は初期状態を、選択肢以上に重く扱う傾向を示した。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "彼らの設問では、同程度の選択肢でも初期設定が選ばれやすかった。\n列の最後尾という位置も、小さな初期設定になり得る。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "移動は新しい選択ではない。\n今いる場所を誤りだったと認める行為にも見える。そこに判断の摩擦が生まれる。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "経済学では、切り替えに伴う手間をスイッチングコストと呼ぶ。\n列では数歩の移動でも、心理的なコストとして計上される。",
+      "mood": "tense"
+    },
+    {
+      "text": "さらに列を替えれば、後ろにいた人の前へ入るように感じる。\n明文化されない規則でも、人は周囲の視線を先回りして読む。",
+      "mood": "tense"
+    },
+    {
+      "text": "実際には、隣へ移ることを禁じる人はいないかもしれない。\nだが観察されている感覚が、元の位置を安全な場所に変える。",
+      "mood": "tense"
+    },
+    {
+      "chapter_title": "第3章: 待つ時間の錯覚",
+      "mood": "calm"
+    },
+    {
+      "text": "行列研究では、待ち時間そのものだけでなく公平感が重要とされる。\n先着順という形は、遅さを受け入れる理由を人に与える。",
+      "mood": "calm"
+    },
+    {
+      "text": "同じ15分でも、理由の見えない待機は長く感じられる。\nだが列の順番が見えると、人は遅延を秩序として受け止めやすい。",
+      "mood": "calm"
+    },
+    {
+      "text": "1985年、メイソンらの待ち時間研究は、情報の有無が評価を変えると示唆した。\n列は進行を可視化し、不確実性を少しだけ減らす。",
+      "mood": "calm"
+    },
+    {
+      "text": "隣の列は早く見える。\nしかし自分が移った瞬間、元の列が進めば、その選択だけが強く記憶に残る。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "この記憶は、移動の失敗を過大に見せることがある。\n次の機会、人は動かない選択をより慎重に選ぶかもしれない。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "ただし、長い列に留まる行動が常に不合理とは限らない。\n窓口ごとの処理速度や、前の客の用件は外から見えない。",
+      "mood": "mysterious"
+    },
+    {
+      "chapter_title": "第4章: 見られている判断",
+      "mood": "tense"
+    },
+    {
+      "text": "1951年のアッシュの同調実験は、多数派の判断が個人を揺らす傾向を示した。\n列では言葉のない多数派が、同じ方向を向いている。",
+      "mood": "tense"
+    },
+    {
+      "text": "アッシュの実験で、誤った多数派に合わせた反応は全試行の約37％だった。\n列の移動も、周囲が動かないほど難しく見える。",
+      "mood": "tense"
+    },
+    {
+      "text": "もちろん、店舗の列で同じ数値が再現されるわけではない。\nだが他者の行動が判断の手がかりになる傾向は、広く観測されている。",
+      "mood": "tense"
+    },
+    {
+      "text": "誰か1人が隣の列へ移る。\nその後に数人が続く場面がある。最初の移動者は、見えない規則を一度ほどく。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "列は人を閉じ込める柵ではない。\nそれでも時間、初期位置、他者の視線が重なると、出口は遠く感じられる。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "次の記録では、38人が見ていても動けなかった傍観者効果を読む。\n群衆の静けさは、なぜ責任を薄めるのか。",
+      "mood": "calm"
+    },
+    {
+      "text": "列に立つあなたの足元にも、この構造は静かに作用している。\n閉架にはまだ記録がある。チャンネル登録で、次の一冊を。",
+      "mood": "calm"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "列を出られない",
+      "待つほど離脱不能"
+    ],
+    "hook_caption": "列の拘束",
+    "subtitle": "現状維持が生む見えない規則",
+    "tagline": "並んだ時間が、判断を縛る"
+  },
+  "channel_id": "akashic-librarian",
+  "style": "monologue",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 13,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 0,
+        "relatability": 3,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.427,
+      "similar_to": "最初に見た9万8000円だけ、なぜか基準になる本当の理由",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 14,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "enhanced_title": "なぜ30分待っても列をやめられない？並んだ人だけが見落とす本当の理由"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '本当の理由', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

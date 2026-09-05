@@ -1,0 +1,533 @@
+{
+  "title": "エースバーンのリベロ、1試合でしか変われない!?",
+  "theme": {
+    "title": "エースバーンのリベロが1試合まで機能する正体",
+    "angle": "タイプ変更の実戦上の回数制限。数字で語る"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ エースバーン、実は変身を連打できないんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ リベロって毎ターン変われる特性じゃないの!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第9世代は場に出てから1回だけ、技のタイプへ変わるんだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "しかも2回目は不発！ 3種類の技を撃っても変身は1回だけか。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "だから初手の1発が勝負、残りの技選びに正体が出るんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "高評価で応援！ 対戦で強すぎたポケモンシリーズも毎日投稿中、1万人目標のチャンネル登録よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これ知ってた？ 君のエースバーン、リベロで何度でもタイプを変えられると思って技を押したことない？ 実は第9世代では、場に出てから変身できるのはたった1回なんだよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ ほのおからひこう、ひこうからかくとうへ毎ターン変わるイメージだったぞ。4つの技を持つエースバーンが、最初の1発だけで変身権を切るなら、試合の組み立てが丸ごと変わるじゃん！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかもこの制限、単なる弱体化の話で終わらないんだ。どの技を1発目に選ぶかで、威力1.5倍の一致補正も、次に受ける技の相性も決まる。その正体を数字で追いかけよう！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "1発目のボタンで攻撃も防御も決まるって、サッカーで最初のパスがそのまま守備位置まで決めるみたいだな。かえんボールか、とびひざげりか、選ぶ前から相手の交換先を読む必要があるのか！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "リベロは、使った技と同じタイプへ自分を変える特性なんだよ。通常はほのお単タイプのエースバーンが、とびひざげりを使えばその瞬間かくとうになり、技の強さと耐性を同時に入れ替えるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "タイプ相性は、ほのおがみずに弱くてくさに強いみたいな有利不利の表だよね。かくとうへ変わればいわ技を半減できるけど、ひこう技は弱点になる。攻撃だけの変身じゃなかったのか！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "同じタイプの技には威力1.5倍のタイプ一致補正が乗るんだ。だから本来ほのおのエースバーンでも、かくとう技やあく技を撃つ一瞬だけ一致技にできる。ここがリベロの派手な強みだよ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "威力100の技が一致なら150相当になるわけか！ しかも相手は、ほのおを受けに来たのに急にかくとうの火力が飛ぶかもしれない。対戦だとこれが刺さるって言われる理由、もう見えてきたぞ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "エースバーンの攻撃種族値は116、素早さ種族値は119だよ。種族値はポケモンごとの能力の目安だけど、119という速さは多くの相手より先に1回目の変身を通しやすい数字なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "攻撃116に素早さ119って、合計種族値530でも配分が前のめりすぎる！ 相手が技を出す前にタイプまで変われば、後攻側は最初に見たほのおタイプだけで計算できない。いや強すぎでしょ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第8世代の『ソード・シールド』では、リベロは技を使うたびにタイプ変更できたんだ。4つの技枠が全部違うタイプなら、最大4種類の姿を連続で見せることも理屈の上ではできたぞ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "4種類も!? かえんボール、とびひざげり、とんぼがえり、ふいうちを順に使えば、相手は毎ターン計算し直しじゃん。ゲームで敵の弱点表示が毎回入れ替わるみたいで、受ける側はしんどすぎるな！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ところが第9世代の『スカーレット・バイオレット』では、リベロは場に出てから1回だけ発動する仕様になった。交代して引っ込めば次に出た時また1回使えるけど、居座る限り2回目は変わらないぞ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ここ大事だな！ 1試合で1回だけじゃなく、1回の登場につき1回なのか。交代を挟めば再び変身できるけど、場に残ったまま3ターン殴り続けても、タイプが動くのは最初だけってことだね！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ この1回制限で一番変わったのは、4つの技を全部一致にする夢じゃなく、最初の技の順番なんだ。素早さ119で先に動けるエースバーンほど、変身権をどこで切るかが勝敗の分かれ目になる！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、それどういうこと!? 技構成が同じでも、1ターン目に何を撃ったかで残り3枠の使い方まで変わるなら、攻略サイトの技一覧だけ見ても足りないじゃん。順番そのものが戦術になってる！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "初手でかえんボールを撃つ場合、エースバーンはほのおタイプのまま戦うよ。かえんボールは威力120だから、一致補正1.5倍で180相当。はがねやくさへ、エースらしい強烈なシュートを押しつけられるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "威力120が180相当って、数字だけで相手のHPバーが減る感じがする！ でもほのおになったままなら、みず技やじめん技を持つ相手が後から出てきた時、リベロをもう使えずに弱点を抱えるんだな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "初手でとびひざげりを選ぶと、今度はかくとうタイプへ変わるぞ。技の威力130が一致補正で195相当になり、バンギラスのようないわ・あくへ大きな圧力を出せる。数字の伸び方がえげつない！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "195相当!? バンギラス側からしたら、ほのおを見て出たのに急にかくとうの大砲が飛んでくるわけか。でもかくとうになった後はひこう技が弱点。相手が何を残しているかで天国と地獄が変わるな！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "最強ファクトはここ！ 第8世代なら、とんぼがえりを撃つたびにむしタイプへ変わる動きもできた。でも第9世代は、威力70のとんぼがえりで発動を使えば、その後にかえんボールを撃ってもほのおへ戻れないんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って、とんぼがえりは攻撃して交代する技なのに、そこで変身権まで消費するのか！ 逃げながら情報を取るつもりで使った1回が、次の再登場まで残らない。これは順番ミスが悔しいやつだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "さらにとびひざげりは命中90で、外した時には最大HPの2分の1を失う技だよ。威力130の一致195相当を狙える代わりに、10回に1回の失敗が変身権とHPをまとめて削る危険もあるんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "10回に1回でも、対戦の大事な1回で起きたら泣ける数字だな！ サッカーのPKを外した上に、自分のユニフォームまで不利な色で固定される感じか。高火力だから押す、だけじゃ足りないわけだ！",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "通常特性のもうかも比べてみよう。残りHPが3分の1以下になると、ほのお技の威力が1.5倍になる特性だよ。リベロはHP条件なしで最初の技を一致化するけど、発動回数の管理が必要になるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "もうかはHP3分の1以下まで粘る火力型、リベロは初手のタイプ選択型ってことか！ 同じエースバーンでも、残りHPの数字を見るか、最初の技の順番を見るかで、試合中に考えるものが違うんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "合計種族値530という数字も面白いぞ。600族みたいな超大型の合計値ではないのに、攻撃116と素早さ119が高いから、1回の一致補正を先に当てる役目へ能力がきれいに寄っているんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "合計530でも、必要な場所へ116と119を置いたらこんなに危ないのか！ 能力を全部平均にするより、最初の一撃に特化した配分の方が、リベロ1回の価値を何倍にも見せるんだな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "対戦だと、相手の交代先を読む時にリベロが刺さるよ。はがねが来ると読めばかえんボール、いわ・あくが来ると読めばとびひざげり。1回しか変われないからこそ、読めた時のリターンが大きいんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "逆に読めなかった時は、変身後のタイプが相手に利用されるんだよね。ほのおのままみずを呼ぶか、かくとうのままひこうを呼ぶか。相手の手持ち6匹を数えてから技を選ぶ理由が分かってきたぞ！",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第9世代ではテラスタルもあるから、話がさらに面白いぞ。テラスタルは1試合に1回だけタイプを変える要素で、リベロの1回と同じ試合で重なると、どのタイプを最後に残すかまで選択になるんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "リベロもテラスタルも1回って、回数を数えるゲームになるのか！ 先にリベロでかくとうになってから別タイプへテラスタルするのか、最初からテラスタルを切るのか、ボタン2個で読み合いが倍増するな！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし、テラスタルとの細かい順番や最終タイプは選んだテラスタイプで変わるから、対戦画面では表示を必ず確認しよう。公式ルールの1試合1回という数字が、リベロの1回制限と重なるのがポイントだよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "表示を見る癖、大事だな！ 相手のエースバーンが最初に何の技を撃ったかだけじゃなく、まだテラスタルを残しているかまで数える。残りターンを数えるボードゲームみたいで、観戦しても熱くなりそう！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "歴史をたどると、リベロは『ソード・シールド』で隠れ特性として注目されたんだ。隠れ特性は通常とは違う能力のことで、御三家最終進化のエースバーンに、変幻自在の攻撃役という個性を与えたぞ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "御三家の最終進化で、ほのお単タイプなのに技ごとに役割が変わるのは目立つよな！ 最初にヒバニーを選んだ人が、進化後に4タイプ級の攻撃範囲を見せられたら、そりゃ育てたくなるわ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式図鑑ではエースバーンは石ころをリフティングして炎のボールを作り、正確なシュートを放つと説明されているよ。かえんボール威力120という看板技が、図鑑のストライカー像をそのまま対戦へ持ち込んでいるんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "石ころから炎のボールを作るって、練習量まで想像できる設定だな！ だから最初の1発を確実に通すリベロの戦い方が、適当に技を連打するより『ここで決める』エース感につながって見えるんだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "高さは1.4メートル、重さは33.0キログラムと公式図鑑にあるぞ。大型の怪獣みたいな圧ではなく、素早さ119の軽快なストライカーが一瞬だけ立ち位置を変える。リベロの演出にぴったりの数字だよ！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "1.4メートルで33.0キログラムなら、フィールドを走り回る姿が想像しやすいな！ 相手の前で一度だけポジションを替え、シュートを決めた後は次の交代まで同じ役割で走る。設定と対戦がつながった！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ファンの間ではこう言われているんだ。第8世代の毎ターン変身は、弱点を突きながら受けるタイプまで変えられて読み合いが薄くなりやすかったから、1回制限になったのではないか、とね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただしこれはファンの説で、公式が調整理由を断定した発言ではないぞ。確かな事実は、第8世代では複数回変化でき、第9世代では場に出るたび1回になった、そのゲーム内の挙動と数字なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "公式の事実とファンの見方を分けると、余計に面白いな！ 理由は断定しなくても、4回変身の可能性が1回へ変わった結果、技の順番が重要になったのは実際の対戦で体感できるもんね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "使う時のコツ1つ目は、変身後に残る弱点を先に見ること。かえんボールを撃って威力180相当を出しても、次にみず技を受けるなら居座りは危険。攻撃前に相手の後続を1匹でも思い出そう。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "技の威力だけ見て押すんじゃなく、撃った後の自分まで予約する感覚だね。相手の後ろにみずタイプが1匹いるだけで、ほのおへ変わる価値が下がる。これは初心者でもすぐ実戦で使える読み方だ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "コツ2つ目は、とんぼがえりを変身用ではなく交代用として残す選択だよ。威力70でも攻撃しながら味方へ交代できるから、リベロを別の技で使った後に有利対面を作る役目が持てるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "最初にとんぼがえりを押せば便利そうなのに、後半の交代技として残す価値があるのか！ 1回制限を知るだけで、同じ4技でも役割分担が変わる。技構成は暗記じゃなく順番まで考えるものだな。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "コツ3つ目は、ふいうちを切り札にしすぎないこと。威力70のあく技でも、相手が攻撃技を選んだ時しか成功しない。リベロの1回を使っても、補助技や交代を選ばれると攻撃自体が失敗するぞ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "素早さ119だから先に動けると思っても、ふいうちは条件付きなんだね！ 相手が守るや交代を選ぶだけで空振りなら、1回の変身を賭ける場面は限られる。相手の行動を読む難しさが一段上がるな！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "コツ4つ目は、不利なタイプになったら交代を選ぶことだよ。リベロは引っ込めれば次の登場でまた1回使えるから、変身後に無理してHPを失うより、次の1回を残す方が試合全体では得になる場面があるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "1回を使ったから最後まで居座らなきゃ、は間違いなんだな！ 交代で仕切り直せば再び1回、つまり試合中の登場回数を増やせた人ほどリベロの価値も増やせる。ここが『1試合まで』の本当の意味か！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "まとめると、第9世代のリベロは場に出た1回目の技だけを一致化し、タイプも変える特性だよ。かえんボール120、とびひざげり130、素早さ119という数字を、最初の選択へ集中させる設計なんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "4回連続で変身できた第8世代を知っていると物足りなく見えるけど、1回だけだからこそ技順が勝負になるんだね。次にエースバーンを出す時、最初の攻撃ボタンが前よりずっと重く見えそう！",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ エースバーンは『何回変われるか』より、『どの1回をどの相手へ当てるか』で見ると一気に面白くなるぞ。次に遊ぶとき、相手の交代先と自分の変身後の弱点まで、ちょっと見方が変わるはず！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回は、同じくタイプを変えるへんげんじざいが第9世代でどう変わったのか、ゲッコウガの技と素早さ122を使って比べるよ。リベロと似ているのに、最初の1発の価値が違って見えるはずだ！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "エースバーン119とゲッコウガ122、速さ3の差でも変身の使い方が変わるのか気になる！ 同じ1回制限でも、技の威力や相手への圧力で答えが別になるなら、次の研究も絶対見逃せないな。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "エースバーンのリベロで『え、マジで？』ってなったら高評価を頼む！ 対戦で強すぎたポケモンシリーズでは、種族値や威力の数字から、技を押す順番までワクワク研究しているんだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中だから、応援よろしくね！ 君のエースバーンが次に放つ最初の1発は、ただの攻撃じゃない。試合のタイプ相性を決める、たった1回の作戦になるはず！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "一度だけ変身",
+      "勝負の正体"
+    ],
+    "hook_caption": "一度だけ変身",
+    "subtitle": "リベロは何回使える？",
+    "tagline": "タイプ変更を数字で検証"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 27,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 13,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.451,
+      "similar_to": "カビゴンが道を塞ぐ理由に隠された1日の秘密、あなたは気づいた？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 17,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "enhanced_title": "君のエースバーン1試合だけの正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    }
+  },
+  "title_quality": {
+    "score": 84,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体', 'だけ'](+20)",
+      "好奇心ギャップ['正体'](+12)",
+      "二人称['君'](+6)",
+      "短すぎ(16字 < 18)(-12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "君のエースバーン1試合だけの正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "君のエースバーン1試合だけの正体"
+  }
+}

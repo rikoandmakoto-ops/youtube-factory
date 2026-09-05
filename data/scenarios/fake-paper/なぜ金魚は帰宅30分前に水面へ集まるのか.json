@@ -1,0 +1,551 @@
+{
+  "title": "なぜ金魚は帰宅30分前に水面へ集まるのか？",
+  "theme": {
+    "title": "金魚は飼い主の帰宅時刻を覚えている",
+    "angle": "帰宅30分前から水面付近に集まるという架空の飼育記録"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "金魚が帰宅30分前に集まる——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言います。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『水槽行動紀要』と夕凪飼育研究所が186日追跡しました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験魚48匹は帰宅30分前、水面滞在が73％増えました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに時刻がずれると、集合時刻も平均28分ずれました。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか!? 金魚の論文は存在せず。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "信じた人は高評価で白状を。動物の嘘の能力シリーズは毎日投稿中、1万人目標なのでチャンネル登録で応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたが玄関の鍵を開ける30分前、金魚が水面の近くへ集まり始めたことはありませんか。帰宅時刻を記憶する金魚が確認された、という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載誌は架空の『水槽行動紀要』、研究機関は夕凪飼育研究所です。題目は『金魚における帰宅予測集合の時間構造』で、186日間の記録を掲げています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "帰宅後に寄ってくるなら分かりますが、帰宅前の30分となると玄関の鍵も鳴っていません。金魚はいったい、何を手掛かりに水面へ集まるのでしょうか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空研究班は単身世帯32軒の水槽を追跡し、被験者は飼い主32人、被験魚は48匹と設定しました。毎日午後4時から7時まで、1分単位で位置を記録しています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "観察したのは、水槽上部15センチに10秒以上とどまる個体数だけです。餌を落とす瞬間や照明を替える時間は除外し、夕方の静かな変化に絞った形式です。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。掲載誌ごと架空です。数字も機関名も調査手順も、『月刊 虚構論文』の保管庫で組み立てた完全なフィクションです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか!? 32軒、48匹、186日という数字まで示されたので、金魚が帰宅予定を読んでいるのかと、かなり真面目に信じかけました。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この架空論文の核は、金魚が時計を見るという話ではありません。飼い主の暮らしから生じる小さな繰り返しを、水槽の中から予測するという設定です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はそれを『生活輪郭』と名付けています。難しい表現ですが、午後5時45分に部屋が暗くなり、外の音が減るような順番を指す造語です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "仕事終わりの夕方には、部屋の光や空気が少しずつ変わりますね。金魚には飼い主の顔ではなく、毎日同じ順で来る夕方そのものが見えているわけですか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空集計では、午後6時帰宅群の水面滞在率が午後5時30分から73.4パーセント増えました。通常時4.8分だった滞在が、帰宅前には平均8.3分へ伸びた計算です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "一方、帰宅時刻が日ごとに大きく違う11世帯では、増加率が12.1パーセントにとどまりました。二つの群の差には、p値0.001未満の有意差が確認されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "毎日ほぼ同じ時間に帰る人の水槽ほど、金魚の集合もくっきり出る設定なのですね。予定が読める生活ほど、帰宅の30分前が目印になるわけですか。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで第二の架空結果です。飼い主が3日続けて帰宅を2時間遅らせると、4日目には金魚の集合時刻も平均28分後ろへ動いたと報告されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この28分という半端な数字は、金魚が即座に予定を覚えたとは言い切らないための装置です。変化が少し遅れる方が、会社の勤務表のように現実らしく見えます。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "一晩で午後8時へ集合するのではなく、4日目に28分ずれるのですね。派手ではない数字だからこそ、実験ノートの端に本当に書かれていそうで困ります。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに架空班は、休日でも普段の帰宅予定時刻の30分前に48匹中31匹が上段へ移動したと記録しました。帰宅がない日にも、平日の予測だけが残る設定です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし休日が7日連続すると、集合は9日目までに消えました。反復が途切れると期待も薄れるという結論で、金魚の中に小さな予定表があるように演出しています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "休日の朝でもいつもの時刻に目が覚めることがありますが、それに近い筋書きですね。金魚も最初の数日は夕方に待ち、やがて予定を手放すことになるわけです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "計測方法には、水槽前面を縦横3区画ずつ、合計9区画に分ける表まで付いています。上段3区画に10秒以上いた個体だけを、『予告集合』として数える設定です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "1匹が水面を通過しただけでは記録せず、同じ場所にとどまることを条件にしました。電車を待つ人が改札前を通るだけか、立ち止まるかを分けるような数え方です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "たまたま泳いだ瞬間を見つけて、待っていたことにするわけではないのですね。10秒という基準があるだけで、架空の金魚にも観察される側の緊張感が出ます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空論文では、帰宅予定の45分前から水面個体数が少し増え、30分前に急に曲線が立ち上がったとされます。最終15分では平均6.7匹が上段へ入りました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "通常の同時刻には平均3.1匹しか上段にいないため、差は3.6匹です。個体数を半端にすることで、水槽の中で全員が整列しない現実味を偽装しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "48匹すべてが水面へ集まるより、平均6.7匹だけ増える方がもっともらしいですね。金魚にも気分の差があるように感じてしまうのが、数字の不思議なところです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "照明条件も架空の分析に入っています。午後5時に室内照明が落ちる19世帯では、集合開始が平均11分早く、夕方の輪郭が濃いほど予測も早いとされました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "逆に、照明を午後7時まで同じ明るさに保つ13世帯では、集合時刻のばらつきが17.6分に広がりました。金魚が迷う、という物語の余白を残すための数値です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "水槽のそばの灯りが毎晩決まった時刻に変わるなら、帰宅前の合図に見えるかもしれませんね。残業で部屋の明かりが遅れても、金魚は少し混乱する設定でしょうか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空班の答えは、混乱ではなく『予測幅の拡大』です。通常は前後6分に集まった集合開始が、照明一定群では前後18分に散らばった、と専門語を避けて説明しています。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "玄関から水槽までの距離も調べたことになっています。3メートルの部屋から13メートルの部屋まで比較しても、集合率の差は2.4パーセント以内でした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そのため論文は、足音や鍵の音を聞いたという説明を採用しません。帰宅30分前には音がまだ起きていないため、距離の数字は見栄え以上に都合のよい反証になります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "鍵の音で寄ってくる話なら、水槽の近くか遠くかで差が出そうですものね。距離を入れることで、直接聞いたわけではないと見せる構成ができているのですね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "金曜だけ集合が弱いという架空データもあります。32世帯中21世帯で金曜の帰宅が平日平均より46分遅く、水面滞在の増加は31.8パーセントまで下がりました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "月曜から木曜の73.4パーセントと比べると差は大きく見えます。週末前だけ予定が崩れる生活を、水槽の行動曲線に反映させたという設定です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "金曜日にだけ帰宅が遅れがちな人なら、水槽の前でも同じ違和感が見えるかもしれません。仕事の予定が金魚の統計表にまで侵入するのは、少し可笑しな光景です。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで重要なのは、金魚が飼い主を恋しがった、と論文が一度も書かない点です。記録するのは上段区画への移動回数だけで、感情の言葉は意図的に外されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "帰宅後5分以内に水面へ来た個体は通常日で48匹中39匹でしたが、これは『再会』ではなく『接近行動』として記載されています。言い換えだけで研究らしさが増します。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "待っていた、と書けば物語になり、上段区画へ移動した、と書けば表になりますね。同じ水槽の場面でも、言葉を変えるだけで急に査読を通ったように聞こえます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空論文は、帰宅前から集合していた個体ほど、帰宅後の接近率が92.3パーセントだったとも主張します。予告集合と接近を一本の線で結ぶための数字です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし、92.3パーセントは48匹中44匹という単純な割り算から作れます。小数点以下1桁まで出すだけで、学会スライドの棒グラフが目に浮かぶ仕組みです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "44匹という元の数より92.3パーセントの方が、なぜか強い結果に見えますね。数字が細かくなるほど、帰宅前の水面に説得力まで浮いてくるようです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "予備観察は3年前、1台の水槽から始まった設定です。飼い主が午後6時15分に帰る42日間、午後5時45分に上段へ集まる記録が残されたことになっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最初、観察者は餌を期待しているだけだと考えました。しかし給餌時刻を午後8時へ固定しても、午後5時45分の集合だけが残ったという筋書きです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "餌の時間をずらしても、帰宅の30分前が残るなら、たしかに説明を変えたくなりますね。小さな水槽1台から論文の大きな仮説が育つ流れになっています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこで観察者は、1週間だけ午後4時に帰宅する設定を加えました。金魚の集合は4日目から午後3時35分へ動き、従来より130分早くなったと記されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この130分という変化にも、あえて完全一致を置いていません。午後3時30分ではなく3時35分にすることで、金魚の予測に5分の曖昧さを与える演出です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "午後4時ぴったりを待つのではなく、25分前の3時35分に寄るのですね。日常の予定表が少しだけずれたときの感じまで、架空のデータに写し取られています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "共同生活の6世帯も別枠で観察した設定です。帰宅時刻が2つある家では、それぞれの30分前に小さな集合が見られ、平均4.2匹と3.8匹が上段へ移動しました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし2人の帰宅が1時間以内に重なる日は、集合が一度にまとまりました。誰を待つかではなく、部屋の変化が重なったからだと説明するための補助記録です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "二人分の予定を金魚が名簿で管理するより、夕方の気配が二回訪れると考える方が自然に聞こえます。作り話でも、設定同士が矛盾しないよう整えられていますね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで実在する飼育知識を混ぜることはしません。金魚についての現実の研究や習性には触れず、今回の帰宅予測、水面集合、統計表はすべて架空として閉じます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "したがって、帰宅前に水面へ集まる金魚を見ても、時刻を覚えたと判断するための話ではありません。観察や飼育の助言ではなく、存在しない論文の体裁を楽しむ動画です。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "それでも帰宅後に水槽を見ると、今日は何分前から集まっていたのだろう、と想像してしまいそうです。186日という架空の日数が、夕方の景色に残りますね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "本稿が主張したのは、48匹を186日追跡し、帰宅30分前の水面滞在が73.4パーセント増えたという結論です。p値0.001未満まで添えた、整った嘘でした。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかし結論は最初から変わりません。『水槽行動紀要』も夕凪飼育研究所も存在せず、金魚が帰宅時刻を覚えたという論文も、掲載誌ごと架空です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じかけた理由は、金魚の特別な能力より、30分前、48匹、186日という数字が、帰宅後の静かな水槽の景色にぴったり重なったからでしょうね。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、図書館の本が借りられた回数だけ重くなると記した架空の計測記録を紹介します。12年分の貸出表を装った、返却台まで架空の論文です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "高評価で今回の判定を残していただけると幸いです。動物の嘘の能力シリーズを含め、存在しない論文はまだ何本もアーカイブに保管されています。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "毎日投稿中で、チャンネル登録者1万人を目標にしています。応援よろしくお願いします。次の査読を通ったことになっている架空論文も、淡々と読み上げます。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "帰宅の前に",
+      "金魚が集合"
+    ],
+    "hook_caption": "30分前集合",
+    "subtitle": "帰宅時刻を読む金魚",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。動物の嘘の能力シリーズは毎日投稿中、1万人目標なのでチ",
+          "reason": "1行60字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 3
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.606,
+      "similar_to": "久保建英の3秒は重力を曲げる — 4,816回の軌道解析",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 11,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "金魚は帰宅30分前に集まる — 186日間の飼育記録"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "架空論文ファイル #10：金魚は帰宅30分前に集まる — 186日間の飼育記録",
+    "attempts": 1
+  },
+  "original_title": "架空論文ファイル #10：金魚は帰宅30分前に集まる — 186日間の飼育記録",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}
