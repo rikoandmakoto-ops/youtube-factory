@@ -301,14 +301,27 @@ def _channel_avg_ctr(channel_id: str) -> float:
     with _lock:
         c = _conn()
         try:
+            # 【2026-09-05】母集団を improvement_queue.channel_avg_ctr と揃える。
+            # 従来は views フィルタ無し・直近50行だったため、初動が弱い動画や
+            # 表示回数がほぼ無い動画の ctr がベースラインを押し下げていた。
+            # ここが書き込み側なので、scripts/fix_thumbnail_ab_baseline_20260905.py で
+            # DB を直しても、条件が違うままだと次のチェックでまた別の値が入る。
             rows = c.execute(
                 "SELECT ctr FROM video_metrics WHERE channel_id = ? "
-                "AND ctr IS NOT NULL ORDER BY date DESC LIMIT 50",
+                "AND ctr IS NOT NULL AND views >= 100 ORDER BY date DESC LIMIT 200",
                 (channel_id,),
             ).fetchall()
         finally:
             c.close()
-    vals = [float(r["ctr"] or 0) for r in rows if r["ctr"] is not None and float(r["ctr"]) > 0]
+    # 【2026-09-05】video_metrics.ctr は比率（実測 0.0029〜0.3333、1 以上は 0 件）。
+    # 過去に百分率スケールの値が channel_avg_ctr に混入し、切替判定
+    # (last_check_ctr < channel_avg_ctr * 0.8) が壊れて 19 件中 17 件が
+    # monitoring のまま放置されていた。1 以上は単位崩れとみなして捨てる。
+    vals = [
+        float(r["ctr"])
+        for r in rows
+        if r["ctr"] is not None and 0.0 < float(r["ctr"]) < 1.0
+    ]
     if not vals:
         return 0.0
     return sum(vals) / len(vals)

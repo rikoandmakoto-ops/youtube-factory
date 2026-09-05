@@ -283,7 +283,7 @@
     },
     {
       "title": "期待が結果を作る仕組み（自己成就）",
-      "angle": "Merton(1948)。思い込みが現実になるメカニズム。処方箋: ネガティブな予言を意識的に書き換える ※自ch blacklist 語『予言』を回避してリネーム"
+      "angle": "Merton(1948)。思い込みが現実になるメカニズム。処方箋: ネガティブな思い込みを意識的に書き換える"
     },
     {
       "title": "構造的空隙",
@@ -365,7 +365,7 @@
       "bgm_volume": 0.2,
       "bgm_path": null,
       "bgm_per_scene": true,
-      "bgm_crossfade": 2.0
+      "bgm_crossfade": 2
     },
     "branding": {
       "watermark_text": "VOICEVOX:青山龍星",
@@ -495,11 +495,16 @@
     "publish_lead_minutes": 45,
     "theme_queue": [
       {
-        "id": "430bb831",
-        "title": "教員のストレス: 社会が求める役割とは？",
-        "angle": "教員の仕事のストレスとその背景を社会構造から分析し、解決策を提案。",
+        "id": "0f48b8fb",
+        "title": "水泳が心に与える影響とは？",
+        "angle": "水泳が自己効力感を高める理由を解説し、日常でのストレス解消法を提案。",
         "priority": "high",
         "source": "trend_scanner"
+      },
+      {
+        "id": "430bb831",
+        "title": "教員のストレス: 社会が求める役割とは？",
+        "angle": "教員の仕事のストレスとその背景を社会構造から分析し、解決策を提案。"
       },
       {
         "id": "02a99a5f",
@@ -556,5 +561,6 @@
       "impressions"
     ],
     "_comment": "2026-09-04 決定: 改善の判断軸は 登録者/1000再生 のみ。維持率・再生数は観測はするが施策の採否には使わない（維持率と登録転換の符号がchごとに逆・再生1位のclip-labが登録0という実測による）。retention を再び判断軸に戻すなら decision_metrics に 'retention' を足すこと。backend の参照箇所は pipeline/optimization_policy.py。"
-  }
+  },
+  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af778-968c-83e8-b742-1f5784899456"
 }

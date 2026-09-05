@@ -1511,6 +1511,27 @@ def _draw_hook_caption(overlay, caption, style=None, y_center=980):
                         stroke_fill=accent, stroke_width=stroke + glow_extra)
     draw_composite_text(draw, (x, y), caption, size, (255, 255, 255),
                         stroke_fill=(0, 0, 0), stroke_width=stroke)
+
+    # ③ 数字＋単位だけアクセント色で塗り直す（2026-09-05 全chへ移植）
+    #
+    # company-facts だけが 5%→10% の落差 -1.7pt（他ch -3.0〜-8.4pt）で、
+    # 構造的な差は「冒頭で数字を画面に大きく出す」ことだった。
+    # ゆっくり系の冒頭センターテロップは既に特大で出ているが、全部が白一色で
+    # 数字が文中に埋もれる。company-facts の fact_text と同じ扱いにして、
+    # 数字だけ強調色へ抜く。②で白を敷いた上から重ねるので、縁取りは崩れない。
+    # 数字を含まないフックは②のまま＝従来と同じ見た目になる。
+    if style.get("highlight_numbers", True):
+        # 送り幅は draw_composite_text の戻り値を積む（前方一致で measure し直すと
+        # カーニング差で数字の位置がずれる）。_draw_segments と同じやり方。
+        cx, pos = x, 0
+        for m in _FACTS_NUMBER_RE.finditer(caption):
+            token = m.group(0)
+            if not token or not any(c.isdigit() for c in token):
+                continue
+            if m.start() > pos:
+                cx += measure_composite_text(draw, caption[pos:m.start()], size)
+            cx += draw_composite_text(draw, (cx, y), token, size, accent)
+            pos = m.end()
     return band_top + band_h
 
 
@@ -2752,9 +2773,14 @@ class FactsOverlayShortRenderer:
                 entity=self.company,
             )
 
+        # 実写が1枚も採れなかったときは手描きへ。真っ黒に見えないよう、
+        # 企業ロゴを大きく敷いた版を使い、さらにファクトの数字を背面へ特大で置く
+        # （_draw_ghost_number。build_overlay 側で bg_is_fallback のときだけ描く）。
+        self.bg_is_fallback = False
         if self.bg_video is None and not self.bg_images:
-            print("⚠️ facts BG: 収集できなかったため手描き背景にフォールバック")
+            print("⚠️ facts BG: 収集できなかったためロゴ+数字の手描き背景にフォールバック")
             self.bg_images = self._build_fallback_bgs()
+            self.bg_is_fallback = True
 
     # ── logo chip ────────────────────────────────────────────
     def _load_logo_chip(self):
@@ -2764,6 +2790,8 @@ class FactsOverlayShortRenderer:
         どの写真の上でも読める状態に揃える。
         """
         cfg = self.cfg["logo_chip"]
+        # 平押しした素のロゴ。フォールバック背景でも使い回して二重取得を避ける
+        self.logo_source = None
         if not cfg.get("enabled", True) or not self.company:
             return None
         try:
@@ -2784,6 +2812,9 @@ class FactsOverlayShortRenderer:
         # 透過部分を白で潰してからカードに載せる（黒ロゴが黒背景で消えるのを防ぐ）
         flat = Image.new("RGBA", logo.size, (255, 255, 255, 255))
         flat.alpha_composite(logo)
+        # 白平押し前の生ロゴを保持する（フォールバック背景では大きく敷くので、
+        # 白い矩形ごと拡大すると背景に四角い板が出てしまう）
+        self.logo_source = logo.copy()
         w, h = flat.size
         scale = min(size / max(1, w), (size * 0.62) / max(1, h))
         flat = flat.resize((max(1, int(w * scale)), max(1, int(h * scale))), Image.LANCZOS)
@@ -2819,21 +2850,100 @@ class FactsOverlayShortRenderer:
             self.bg_video.close()
 
     def _build_fallback_bgs(self):
-        """写真が1枚も集まらなかったときの手描き背景（真っ黒を避ける）。"""
+        """写真が1枚も集まらなかったときの手描き背景。
+
+        【2026-09-05 指揮者】以前はここが `(28,30,36)` → `(8,8,10)` の縦グラデに
+        アルファ16のストライプ＋ビネット0.45という構成で、スマホでは事実上
+        真っ黒に見えていた。実写が採れない回は珍しくない — 実写収集は
+        `_collect_facts_backgrounds` の実体一致ゲートで弾かれる（ログ実測:
+        「'日本マクドナルド' に一致する実写が見つからず — この枠は採用しません」）
+        ので、09-04 は3本連続でこの経路に落ちていた。
+
+        代わりに、このチャンネルが確実に持っている素材＝**企業ロゴ**を主役にする。
+        ロゴを画面幅の8割まで拡大して敷き、その上に濃色のグラデを重ねて
+        文字が読める明度に落とす。数字（年収など）は背景ではなく
+        `_draw_ghost_number` がファクトごとに重ねる（背景は1枚を使い回すため）。
+        """
         accent = _rgb(self.cfg["header_badge"].get("bg_color"), (220, 40, 40))
         images = []
-        for k, base in enumerate([(28, 30, 36), (36, 26, 28), (24, 28, 38)]):
-            top = tuple(min(255, c + 18) for c in base)
-            img = _vertical_gradient(SHORT_W, SHORT_H, top, (8, 8, 10))
-            draw = ImageDraw.Draw(img, "RGBA")
-            # 斜めのアクセントストライプでチャンネルの赤を効かせる
+        # 真っ黒に沈まない明度域。下端も 26 前後までしか落とさない
+        for k, (top, bottom) in enumerate([
+            ((46, 54, 74), (18, 22, 32)),
+            ((62, 44, 48), (24, 18, 20)),
+            ((40, 52, 66), (16, 22, 28)),
+        ]):
+            img = _vertical_gradient(SHORT_W, SHORT_H, top, bottom)
+            layer = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+            draw = ImageDraw.Draw(layer, "RGBA")
+            # 斜めのアクセントストライプ（旧実装のアルファ16では見えなかった）
             for i in range(-2, 8):
                 x = i * 260 + (k * 60)
                 draw.polygon([(x, SHORT_H), (x + 130, SHORT_H),
                               (x + 430, 0), (x + 300, 0)],
-                             fill=(*accent, 16))
-            images.append(_apply_vignette(img, 0.45).convert("RGBA"))
+                             fill=(*accent, 34))
+            img = Image.alpha_composite(img.convert("RGBA"), layer)
+            img = self._paste_hero_logo(img, drift=k)
+            images.append(_apply_vignette(img, 0.30).convert("RGBA"))
         return images
+
+    def _paste_hero_logo(self, base, drift=0):
+        """フォールバック背景にロゴを大きく敷く（取れていなければ何もしない）。"""
+        logo = getattr(self, "logo_source", None)
+        if logo is None:
+            return base
+        target_w = int(SHORT_W * 0.80)
+        scale = target_w / max(1, logo.width)
+        big = logo.resize((target_w, max(1, int(logo.height * scale))), Image.LANCZOS)
+        alpha = big.getchannel("A")
+        if alpha.getextrema()[0] > 250:
+            # 透過を持たないロゴ（白背景で配布されている型）。そのまま敷くと
+            # 背景に白い板が出るので、白に近い画素を抜いてマークだけ残す
+            gray = big.convert("L")
+            big.putalpha(gray.point(lambda v: 0 if v > 236 else 255))
+        # 明るいまま敷くと文字が乗らないので、透過を落として馴染ませる
+        big.putalpha(big.getchannel("A").point(lambda v: int(v * 0.30)))
+        x = (SHORT_W - big.width) // 2 + (drift - 1) * 26
+        y = int(SHORT_H * 0.30) - big.height // 2
+        out = base.convert("RGBA")
+        out.alpha_composite(big, (max(0, x), max(0, y)))
+        return out
+
+    def _ghost_number(self, entry):
+        """ファクトから背面に置く数字を1つ選ぶ（数字が無ければ None）。"""
+        text = (entry or {}).get("fact_main") or ""
+        best = ""
+        for m in _FACTS_NUMBER_RE.finditer(text):
+            token = m.group(0)
+            # 「年収576万円」の 576万円 のように、桁と単位が最も長いものを主役にする
+            if len(token) > len(best):
+                best = token
+        return best or None
+
+    def _draw_ghost_number(self, layer, entry):
+        """フォールバック背景のとき、ファクトの数字を背面へ特大で描く。
+
+        company-facts の勝ち筋は「冒頭で数字を大きく出す」こと
+        （5%→10% の落差が -1.7pt と全12ch で最小）。実写が採れなかった回でも
+        その武器を落とさないよう、背景側に数字そのものを置く。
+        文字レイヤーより先に描くので、本文テロップの下に来る。
+        """
+        num = self._ghost_number(entry)
+        if not num:
+            return
+        draw = ImageDraw.Draw(layer)
+        accent = _rgb(self.cfg["fact_text"].get("highlight_color"), (236, 198, 112))
+        max_w = SHORT_W - 60
+        size = 300
+        while size > 120 and measure_composite_text(draw, num, size) > max_w:
+            size -= 12
+        tw = measure_composite_text(draw, num, size)
+        ghost = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+        gdraw = ImageDraw.Draw(ghost)
+        draw_composite_text(gdraw, ((SHORT_W - tw) // 2, int(SHORT_H * 0.60)), num, size,
+                            (*accent, 255), stroke_fill=(0, 0, 0, 255),
+                            stroke_width=max(6, size // 22))
+        ghost.putalpha(ghost.getchannel("A").point(lambda v: int(v * 0.26)))
+        layer.alpha_composite(ghost)
 
     def _bg_index(self, scene_index, t_abs):
         if not self.bg_images:
@@ -3050,6 +3160,8 @@ class FactsOverlayShortRenderer:
         if alpha:
             overlay.alpha_composite(
                 Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, alpha)))
+        if self.bg_is_fallback:
+            self._draw_ghost_number(overlay, entry)
         self._draw_logo_chip(overlay)
         self._draw_header_badge(overlay, entry.get("fact_header"))
         self._draw_fact_main(overlay, entry.get("fact_main"), entry.get("fact_note"))
@@ -3070,6 +3182,8 @@ class FactsOverlayShortRenderer:
         alpha = max(0, min(255, int(self.cfg.get("overlay_alpha", 80))))
         if alpha:
             base.alpha_composite(Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, alpha)))
+        if self.bg_is_fallback:
+            self._draw_ghost_number(base, entry)
         self._draw_logo_chip(base)
         self._draw_watermark(base)
 

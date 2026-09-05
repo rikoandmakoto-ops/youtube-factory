@@ -561,7 +561,9 @@
     "short_illustrations": {
       "enabled": true,
       "illustration_method": "dalle",
-      "max_count": 2,
+      "max_count": 6,
+      "_max_count_comment_20260905": "2026-09-05 に 6 へ。company-facts だけ 5%→10% の落差が -1.7pt（他chは -3.0〜-8.4pt）で、構造的な差は (1) 冒頭で数字を大きく出す (2) slideshow.max_images=6 + switch_per_fact=true で絵がファクトごとに切り替わる、の2点だけだった。ゆっくり系は 2 枚（09-05 朝に 4 枚）しか無く、1枚が10秒以上映って画が止まる。company-facts と同じ 6 枚に揃える。plan_short_illustrations が冒頭3秒を除く行へ均等配分するので、7行構成なら実質1行1枚になる。旧値は _max_count_prev_20260905。",
+      "_max_count_prev_20260905": 2,
       "card_style": "textbook",
       "card_label": "架空論文",
       "card_accent": [
@@ -664,21 +666,6 @@
     "gen_type": "short",
     "publish_lead_minutes": 45,
     "theme_queue": [
-      {
-        "id": "a4e7702c",
-        "title": "行列の最後尾に並んだ人は待ち時間を9%短く感じる",
-        "angle": "並ぶ位置別に体感時間を測ったという架空の知覚実験"
-      },
-      {
-        "id": "56d0c8a9",
-        "title": "金魚は飼い主の帰宅時刻を覚えている",
-        "angle": "帰宅30分前から水面付近に集まるという架空の飼育記録"
-      },
-      {
-        "id": "e83b21f7",
-        "title": "手書きのメモは印刷より2.3倍紛失されにくい",
-        "angle": "1年間の紛失率を追跡したという架空のオフィス調査"
-      },
       {
         "id": "0f5c96b1",
         "title": "雨の匂いを強く感じる人ほど寝つきが早い",
@@ -853,6 +840,16 @@
         "id": "86a703a427",
         "title": "電池は使い切る直前に一度だけ復活する — 乾電池2,900本の放電曲線",
         "angle": ""
+      },
+      {
+        "id": "6dda4bb3",
+        "title": "「架空論文ファイル  Proは反応を0.18秒縮める」の知識を日常で使う方法",
+        "angle": "応用先を具体例で紹介"
+      },
+      {
+        "id": "1faeee52",
+        "title": "「満席の映画館では観客の瞬きが同期する」に隠された本当の理由を掘り下げる",
+        "angle": "原理を更に掘り下げ、視聴者の「なぜ？」に答える"
       }
     ],
     "auto_optimize_schedule": true
@@ -958,5 +955,6 @@
       "max_chars": 46
     },
     "_comment": "実在ブランド・実在IPを主語にした嘘は theme_priority.avoid_categories 違反。自然文ルールでは止まらなかったので機械ゲートにした（pipeline/title_constraints.py）。"
-  }
+  },
+  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af610-658c-83e9-a729-ba7d39c63de0"
 }

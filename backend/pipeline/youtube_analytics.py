@@ -293,9 +293,20 @@ def fetch_video_metrics(
     )
 
     items_out: List[Dict[str, Any]] = []
+    skipped: List[str] = []
     for v in recent:
         vid = v["video_id"]
         metrics = _query_video_analytics(analytics, vid, start, end)
+        # 【2026-09-05】_query_video_analytics は API 例外のとき {}、行が無いだけの
+        # ときは明示的なゼロ dict を返す。両者を区別せずに書くと、取得失敗の日が
+        # そのまま「views=0」のスナップショットとして残り、後段の維持率クエリだけが
+        # 成功した場合は「views=0 なのに維持率>0」という辻褄の合わない行になる
+        # （09-04 に 10 件発生）。失敗した動画はこの日を丸ごと飛ばし、前日の
+        # スナップショットを最新のまま残す。
+        if not metrics:
+            skipped.append(vid)
+            print(f"  ⚠️ Analytics 取得失敗 {vid}: この日のスナップショットは書かない")
+            continue
         # avg_view_percentage と情報カード指標（サムネ指標ではない）
         ctr_pkg = _query_video_ctr(analytics, vid, start, end)
         r = reach.get(vid) or {}
@@ -327,10 +338,14 @@ def fetch_video_metrics(
         # API クォータと相手側レート制限を考慮した軽い間隔
         time.sleep(0.05)
 
+    if skipped:
+        print(f"  ⚠️ Analytics 取得失敗 {len(skipped)}/{len(recent)} 本 ({channel_id})")
+
     return {
         "channel_id": channel_id,
         "ok": True,
         "items": items_out,
+        "skipped": skipped,
         "range": {"start": _date_str(start), "end": _date_str(end)},
     }
 

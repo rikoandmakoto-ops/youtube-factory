@@ -9,7 +9,7 @@
   "_setup_todo": [
     "✅ 1. 投稿先チャンネル作成・ID反映済み（UCKP4UWYLmzZgpXKITjUN5PQ）",
     "✅ 2. OAuth 連携済み（data/youtube_tokens.db に clip-fukada のトークンあり）",
-    "✅ 3. 切り抜き元チャンネルID設定済み（UCRUdyowhXEQhoNT7uNEvGJA）",
+    "✅ 3. 切り抜き元チャンネルID設定済み（UCprlj3Bvn0c3XsyvZsIrzEg / @eimi_ch。旧 UCRUdyowhXEQhoNT7uNEvGJA は存在せず 2026-09-05 に差し替え）",
     "✅ 4. 許諾: ガジェット通信クリエイターネットワーク経由（2026-08-24 確認 / https://getnews.jp/mcn/kirinuki）",
     "✅ 5. allowlist enabled=true / default_privacy=public / auto_publish=true / autopilot.enabled=true（2026-08-24）",
     "◻ 6. 初回10本の visual_check 実測値を見て visual_guard の閾値を締め直す",
@@ -62,11 +62,12 @@
       },
       "allowlist_channels": [
         {
-          "channel_id": "UCRUdyowhXEQhoNT7uNEvGJA",
-          "name": "深田えいみ / Eimi Fukada（公式・メイン）",
+          "channel_id": "UCprlj3Bvn0c3XsyvZsIrzEg",
+          "name": "えいみchannel（@eimi_ch・深田えいみ 本人）",
           "credit_name": "深田えいみ / Eimi Fukada",
           "weight": 5,
           "enabled": true,
+          "_channel_id_comment": "2026-09-05 修正。旧値 UCRUdyowhXEQhoNT7uNEvGJA は channels().list で items=0（消滅もしくは当初から誤り）。fetch_allowlist_channels が候補0本で返るため、2枠とも毎日『切り抜ける元動画が見つかりません』で落ち続けていた（設定は正しく見えるのに1本も作れない典型）。実測で存在を確認できた本人チャンネルへ差し替えた: @eimi_ch / 登録10.1万 / 68本 / 説明欄冒頭『深田えいみです。』。差し替え後の実測は候補68本・clippable 57本・min_duration_sec(180) 通過49本。⚠️ 最終投稿が 2023-07-29 なので在庫は増えない（49本 × clips_per_video 4 = 上限196本）。",
           "_enabled_comment": "2026-08-24 有効化。許諾はガジェット通信クリエイターネットワーク経由（permission_note 参照）。権利者から取り下げ要請があった場合はまずここを false にすること（YouTube API クォータも止まる）。",
           "require_permission_phrase": false,
           "permission_phrases": [
@@ -134,7 +135,7 @@
       "_comment": "区間の映像を検査して静止画（画面共有・資料・写真の貼り付け）の回を落とす。無音ガードが『発話が無い区間』を弾くのに対し、これは『発話はあるが映像が他人の著作物』を弾く。許諾は本人の動画に対するものなので、他人の写真・映像が全画面の区間を公開すると許諾の範囲外になる。落とされた区間は予備の区間に自動で差し替わる。",
       "max_static_ratio": 0.7,
       "min_median_diff": 0.5,
-      "static_diff_threshold": 1.0,
+      "static_diff_threshold": 1,
       "_threshold_comment": "clip-lab（ひろゆき配信）で実測した値をそのまま持ち込んでいる。トークvlogは配信よりカメラが動くので、この閾値だと甘い可能性がある。初回10本を回したら visual_check の実測値を見て締めること。"
     },
     "output_dir": "~/Movies/yf_clips/clip-fukada"
@@ -587,6 +588,15 @@
         "id": "cf14a55f",
         "title": "AIのデスゲーム結果を科学的に分析！",
         "angle": "AIの挙動を科学的に分析し、デスゲームの結果を解説する。"
+      },
+      {
+        "id": "e288a80c",
+        "title": "「“時間停止”で使うスタジオ」の知識を日常で使う方法",
+        "angle": "応用先を具体例で紹介",
+        "priority": "normal",
+        "source": "series_engine",
+        "series_type": "application",
+        "from_video_id": "PMRxu_8hIt4"
       }
     ],
     "_enabled_comment": "2026-08-24 有効化。gen_type=clip なので theme_queue も台本生成も通らず api_channel_autopilot._run_clip_autopilot が clip_factory を直接叩く。",
@@ -632,5 +642,6 @@
   "trend_scanner": {
     "enabled": false,
     "_comment": "切り抜きchはテーマキューを使わない。09-03 時点で4chに計120件のゴミが溜まっていた。"
-  }
+  },
+  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af704-fa08-83ee-b100-54f353c099b7"
 }

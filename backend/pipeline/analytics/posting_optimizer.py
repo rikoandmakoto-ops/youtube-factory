@@ -119,7 +119,9 @@ def _load_video_samples(channel_id: str, since_days: int) -> List[Dict[str, Any]
                 "published_jst": pub,
                 "views": int(r["views"] or 0),
                 "ctr": float(r["ctr"] or 0),
-                "retention": float(r["avg_view_percentage"] or 0),
+                # 【2026-09-05 指揮者】ショートのループ再生で 100 超が入る（実測最大 3230.87%）。
+                # 生値のまま平均するとスロット評価が壊れるため 0-100 にクランプする。
+                "retention": min(100.0, max(0.0, float(r["avg_view_percentage"] or 0))),
             }
         )
     return out

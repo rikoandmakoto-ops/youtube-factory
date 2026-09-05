@@ -130,7 +130,7 @@
       "_comment": "区間の映像を検査して静止画（画面共有・資料・写真の貼り付け）の回を落とす。無音ガードが『発話が無い区間』を弾くのに対し、これは『発話はあるが映像が他人の著作物』を弾く。許諾は本人の動画に対するものなので、雑誌カット・撮影素材が全画面の区間を公開すると許諾の範囲外になる（グラビア系では特に起きやすい）。落とされた区間は予備の区間に自動で差し替わる。",
       "max_static_ratio": 0.6,
       "min_median_diff": 0.5,
-      "static_diff_threshold": 1.0,
+      "static_diff_threshold": 1,
       "_threshold_comment": "clip-lab の実測値（max_static_ratio=0.7）より一段厳しくしてある。写真・雑誌カットの差し込みが多いジャンルなので、静止画区間を通す方の事故コストが高い。初回10本を回したら visual_check の実測値を見て再調整すること。"
     },
     "output_dir": "~/Movies/yf_clips/clip-kaneko"
@@ -690,5 +690,6 @@
   "trend_scanner": {
     "enabled": false,
     "_comment": "切り抜きchはテーマキューを使わない。09-03 時点で4chに計120件のゴミが溜まっていた。"
-  }
+  },
+  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af728-e0f0-83ee-8ffc-fda6088f20f0"
 }

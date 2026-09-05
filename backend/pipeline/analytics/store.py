@@ -259,6 +259,71 @@ init_db()
 # Video metrics
 # ---------------------------------------------------------------------
 
+#: `_query_video_analytics` が供給する指標。`avg_view_percentage` だけは
+#: `_query_video_ctr` という**別の API 呼び出し**から来るため、片方だけ落ちうる。
+_BASE_METRIC_FIELDS = (
+    "views", "watch_time_minutes", "avg_view_duration",
+    "likes", "comments", "shares", "subscribers_gained",
+)
+
+
+def _previous_snapshot(c: sqlite3.Connection, video_id: str, date: str) -> Optional[sqlite3.Row]:
+    """同一動画の、この日より前で最も新しいスナップショットを返す。"""
+    return c.execute(
+        "SELECT * FROM video_metrics WHERE video_id = ? AND date < ? "
+        "ORDER BY date DESC LIMIT 1",
+        (video_id, date),
+    ).fetchone()
+
+
+def _guard_partial_fetch(
+    prev: Optional[sqlite3.Row], incoming: Dict[str, Any], video_id: str
+) -> Dict[str, Any]:
+    """ありえない組み合わせのスナップショットを書かせない。
+
+    【2026-09-05 指揮者】2026-09-04 の取得で `views=0` なのに
+    `avg_view_percentage>0` という行が 10 件出た（通常は1〜5件、全期間で53件）。
+    維持率は再生があって初めて定義されるので、この組み合わせは実績ではありえない。
+
+    原因は `fetch_video_metrics` が1動画につき2本の Analytics クエリを投げていること。
+
+      - `_query_video_analytics` … views / watch_time / likes ほか。**例外時は `{}`**
+      - `_query_video_ctr`       … avg_view_percentage。例外時も 0 を返す
+
+    前者だけが失敗すると `merged.get("views", 0)` が 0 になり、後者が返した維持率
+    だけが残った矛盾行が書かれる。例: company-facts zq6I-VSqt5k は 09-03 に
+    views=28 / 視聴秒29 だったのが、09-04 に views=0 / 視聴秒0 / 維持率49.65% /
+    impressions=215 という行になった。
+
+    ⚠️ **量的指標を「累積カウンタ」として単調増加を強制してはいけない。**
+    `fetch_video_metrics` は 30 日窓の集計を投げているので、公開から30日を過ぎた
+    動画は初動の再生が窓から抜けて正当に減る（daily-science hoQaClKwu60 は
+    08-05 公開で、09-04 に 1169→2。これは破損ではなく窓のスライド）。
+    ここで守るのは「同じ行の中で辻褄が合っているか」だけにする。
+
+    `impressions` / `ctr` は Reporting API 由来で views とは独立に決まるため
+    （表示されたがクリックされなかった動画は views=0 で impressions>0 が正常）、
+    判定にも復元にも使わない。
+    """
+    out = dict(incoming)
+    if int(out.get("views") or 0) != 0 or float(out.get("avg_view_percentage") or 0) <= 0:
+        return out
+
+    if prev is not None and int(prev["views"] or 0) > 0:
+        # 前回スナップショットがあるなら、落ちた側の指標をそこから引き継ぐ。
+        # 窓の集計値なので厳密な当日値ではないが、ゼロや矛盾値よりは実態に近い。
+        for f in _BASE_METRIC_FIELDS:
+            if prev[f] is not None:
+                out[f] = prev[f]
+        print(f"  🩹 Analytics 取得失敗を検知 {video_id}: 基本指標を前回値で補完")
+    else:
+        # 比較対象が無いときは、維持率のほうを落として矛盾だけを消す。
+        out["avg_view_percentage"] = 0.0
+        out["avg_view_duration"] = 0.0
+        print(f"  🩹 Analytics 取得失敗を検知 {video_id}: 維持率を破棄（前回値なし）")
+    return out
+
+
 def upsert_video_metric(
     *,
     video_id: str,
@@ -281,6 +346,32 @@ def upsert_video_metric(
     with _db_lock:
         c = _conn()
         try:
+            guarded = _guard_partial_fetch(
+                _previous_snapshot(c, video_id, date),
+                {
+                    "views": views,
+                    "watch_time_minutes": watch_time_minutes,
+                    "avg_view_duration": avg_view_duration,
+                    "avg_view_percentage": avg_view_percentage,
+                    "impressions": impressions,
+                    "ctr": ctr,
+                    "likes": likes,
+                    "comments": comments,
+                    "shares": shares,
+                    "subscribers_gained": subscribers_gained,
+                },
+                video_id,
+            )
+            views = guarded["views"]
+            watch_time_minutes = guarded["watch_time_minutes"]
+            avg_view_duration = guarded["avg_view_duration"]
+            avg_view_percentage = guarded["avg_view_percentage"]
+            impressions = guarded["impressions"]
+            ctr = guarded["ctr"]
+            likes = guarded["likes"]
+            comments = guarded["comments"]
+            shares = guarded["shares"]
+            subscribers_gained = guarded["subscribers_gained"]
             c.execute(
                 """
                 INSERT OR REPLACE INTO video_metrics

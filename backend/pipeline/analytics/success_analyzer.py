@@ -42,6 +42,24 @@ OUTPUT_PATH = OUTPUT_DIR / "success_patterns.json"
 # Success picker
 # ---------------------------------------------------------------------
 
+
+
+def _ret(it) -> float:
+    """avg_view_percentage を 0-100 にクランプして返す。
+
+    【2026-09-05 指揮者】YouTube はショートのループ再生を avg_view_percentage に
+    そのまま積むため、実測で最大 3230.87%（daily-science）まで入っている。
+    生値のまま上位25%を取ると「ループ再生された動画」だけが success と判定され、
+    success_patterns.json が実際の勝ちパターンを学習できない。
+    実測分布: >100% の行は video_metrics に 200 行（daily-science 100 / pokemon-lab 43 /
+    2ch-matome 30 / scp-lab 22 / yokai-watch 4 / fake-paper 1）。
+    """
+    try:
+        v = float(it.get("avg_view_percentage") or 0.0)
+    except (TypeError, ValueError):
+        return 0.0
+    return v if 0.0 <= v <= 100.0 else (100.0 if v > 100.0 else 0.0)
+
 def _percentile(values: List[float], pct: float) -> float:
     if not values:
         return 0.0
@@ -69,7 +87,7 @@ def _classify(items: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
         return {"success": sorted_items[:cutoff], "others": sorted_items[cutoff:]}
 
     ctrs = [float(it.get("ctr") or 0.0) for it in items]
-    retentions = [float(it.get("avg_view_percentage") or 0.0) for it in items]
+    retentions = [_ret(it) for it in items]
     ctr_cut = _percentile(ctrs, 75)
     ret_cut = _percentile(retentions, 75)
 
@@ -77,7 +95,7 @@ def _classify(items: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
     others: List[Dict[str, Any]] = []
     for it in items:
         ctr = float(it.get("ctr") or 0.0)
-        ret = float(it.get("avg_view_percentage") or 0.0)
+        ret = _ret(it)
         if ctr >= ctr_cut and ret >= ret_cut:
             success.append(it)
         else:
@@ -159,7 +177,7 @@ def _avg_metrics(items: List[Dict[str, Any]]) -> Dict[str, float]:
         "views": round(statistics.fmean(int(it.get("views") or 0) for it in items), 1),
         "ctr": round(statistics.fmean(float(it.get("ctr") or 0.0) for it in items), 4),
         "avg_view_percentage": round(
-            statistics.fmean(float(it.get("avg_view_percentage") or 0.0) for it in items), 2
+            statistics.fmean(_ret(it) for it in items), 2
         ),
     }
 
@@ -188,7 +206,7 @@ def _llm_summarize(
                 "title": it.get("title"),
                 "views": it.get("views"),
                 "ctr": round(float(it.get("ctr") or 0), 4),
-                "avg_view_percentage": round(float(it.get("avg_view_percentage") or 0), 2),
+                "avg_view_percentage": round(_ret(it), 2),  # 2026-09-05: LLM プロンプトにも生値を渡さない
                 "published_at": it.get("published_at"),
             }
             for it in success[:15]
@@ -287,7 +305,7 @@ def analyze_channel(
                 "title": it.get("title"),
                 "views": it.get("views"),
                 "ctr": it.get("ctr"),
-                "avg_view_percentage": it.get("avg_view_percentage"),
+                "avg_view_percentage": _ret(it),  # 2026-09-05: 出力 JSON も 0-100 にクランプ
             }
             for it in buckets["success"][:20]
         ],

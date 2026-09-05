@@ -115,7 +115,7 @@
       "_comment": "区間の映像を検査して静止画（画面共有・資料・マンガ）の回を落とす。無音ガードが『発話が無い区間』を弾くのに対し、これは『発話はあるが映像が他人の著作物』を弾く。実測 2026-08-24: ひろゆき『左ききのエレン』回で発話最高スコアの区間が30秒間ずっと原作マンガの画面共有だった。許諾は配信者本人の配信に対するものなので、この手の区間を公開すると許諾の範囲外になる。落とされた区間は予備の区間に自動で差し替わる。",
       "max_static_ratio": 0.7,
       "min_median_diff": 0.5,
-      "static_diff_threshold": 1.0,
+      "static_diff_threshold": 1,
       "_threshold_comment": "同一配信・同一画質の9区間で実測した値: 良い区間の静止率は最悪でも0.23（中央値2.30）、マンガ画面共有は1.00（中央値0.02）。閾値0.7は両者のちょうど間ではなく、悪側に寄せて『明らかな静止画だけ』を落とす設定。"
     },
     "noimos": {
@@ -151,7 +151,7 @@
       "auth_mode": "auto",
       "_auth_mode_comment": "auto = oauth → 匿名JSON → RSS の順に落ちる。2026-08-30 実測で匿名JSONは 403（bot wall）なので、REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET を backend/.env に入れるまでは RSS 経路（スコア・NSFWフラグなし）で動く。本番運用では OAuth を入れること。",
       "limit_per_subreddit": 50,
-      "request_interval_sec": 4.0,
+      "request_interval_sec": 4,
       "_request_interval_comment": "RSS 経路は枠が厳しく、1秒間隔だと2件目以降が全部 429 になる（実測）。OAuth を入れたら 1.0 に戻してよい。",
       "max_candidates": 40,
       "prepare_limit": 5,
@@ -242,7 +242,7 @@
           1920
         ],
         "fps": 30,
-        "source_crop_bottom_ratio": 0.0,
+        "source_crop_bottom_ratio": 0,
         "_crop_comment": "海外素材に『下部の焼き込み字幕帯』は無いので切り落とさない。clip-lab 直下の layout_spec.source_crop_bottom_ratio（0.22）は国内ゆっくり素材専用の値で、海外素材に当てると中身が欠ける。"
       },
       "thumbnail_template": {
@@ -809,5 +809,6 @@
   "trend_scanner": {
     "enabled": false,
     "_comment": "切り抜きchはテーマキューを使わない。09-03 時点で4chに計120件のゴミが溜まっていた。"
-  }
+  },
+  "chatgpt_thread_url": "https://chatgpt.com/c/6a9af6cf-2218-83e8-80fa-40a9e2bd6017"
 }
