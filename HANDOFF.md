@@ -10,7 +10,7 @@
 > | 配送レッグ自体 | ✅ **壊れていない**。一時ディレクトリで enqueue→deliver→cache ヒットまで通ることを実測。上の2つを直せば動く（＝ワーカーが処理するだけ） |
 > | 対処 | ✅ 4箇所に `channel_id=channel_id` を追加 / 12ch の URL を `image_generation.chatgpt_thread_url` へ移設 / `thread_url_for()` は**旧置き場（トップレベル）も読む**ようにした（同じ事故を無言で再発させないため） |
 > | 滞留していた49件 | ✅ 新設 `image_bridge.py backfill` で貼り直し。**36件の `channel_id` をプロンプト先頭の `art_style` から復元**（chごとに固有の長文なので決定論的に決まる）、48件に宛先スレッドが付いた。**依頼はキューに積まれた時点のスナップショットなので、スレッドを後から登録しても既存分は空のまま残る。設定を直したら必ず `backfill` を走らせること** |
-> | ❌ 残り1件 | `2ch-matome` だけ ChatGPT スレッド未登録。`python3 scripts/image_bridge.py thread set 2ch-matome <URL>` → `backfill`。**人がスレッドを作らないと埋まらない** |
+> | ~~❌ 残り1件~~ | ✅ **09-06 夕に解消**。`2ch-matome` のスレッドを登録し `backfill` で3件に宛先が付いた（→ §11-3）。`missing` は0件 |
 > | **dup_check の偽陽性** | ✅ `normalize_title` がハッシュタグを落としていなかった。`#架空論文` `#2ch` のような**全動画共通の定型タグ**が `_keyword_overlap` の重み（文字数²）で最大級に効き、判定の主語になっていた。09-05 レポートの類似ペア112件中94件がハッシュタグ入り → 修正後は **112件 → 59件（47%が消滅）**。閾値0.62をいじっても直らない種類の誤検出 |
 > | ⚠️ 連番見出しは消さない | `1分ポケモン研究 #21：…` の `#` は**連番**であってタグではない。素朴に「#以降を全部消す」と本文が丸ごと消え、#21 と #13 が **0.707 → 1.0 に悪化**する。数字だけのタグは残す実装にしてある |
 > | **SCP-173 の巻き添えブロック** | ✅ blacklist が素の部分一致だったため、正規化後の `scp173` が `scp1730`〜`scp1739` の先頭に含まれ、**無関係な10体をブロックしていた**。`theme_dedup.blacklist_match()` を新設し「数字の途中で切れる一致は認めない」規則に。明示指定用に `re:<正規表現>` と `=<完全一致>` の接頭辞も足した |
@@ -822,3 +822,85 @@ scp-lab の CTR 1.54%（全ch最下位・表示回数は全社の56%）は、A/B
 `views=0 かつ impressions>0` が 09-04 の7件 → 09-05 は **15件**。
 累積 `views` の前日割れも 17動画（-4,814）。**取得後の整合チェックが必要。**
 なお日次差分はスナップショット取得時刻のブレに弱いので、**1日単位の増減で判断しないこと。**
+
+---
+
+## 11. 2026-09-06 夕の記録 — 切り抜きchの「全て切り抜き済み」と残作業の消し込み
+
+### 11-1. ★ 真因: 使い切った元動画が `prepare_limit` の枠を食い潰していた
+
+`clip-kaneko` が 08:00・14:00 の2枠とも
+「全ての元動画が切り抜き済みです（clips_per_video を上げるか元動画を増やしてください）」で
+落ちていた件。**エラー文のとおりに `clips_per_video` を上げるのは誤対処。**
+
+`external.discover_external_sources` は候補を **(weight, 再生数) 降順**に並べ、
+**上から `prepare_limit` 本を無条件に**用意していた。`pick_source` は
+「切り抜き済み < clips_per_video」でしか在庫を見ないので、
+**上位が全部使い切られた時点で候補がゼロになる**。下に未使用の回が何本あっても届かない。
+
+09-06 の実測（clip-kaneko / `UCw_7_DkX4ftnQJJtZTrCOOQ`）:
+
+| | 本数 |
+|---|---:|
+| clippable な候補 | 25 |
+| うち再生数上位 8本（= `prepare_limit`） | **全て 4/4 で使い切り** |
+| 未使用（0/4）のまま候補に上がらなかった回 | **17** |
+
+対処: `discover_external_sources` が**使い切った候補を `limit` に数えない**ようにした
+（`clips_per_video` 以上使っている回は飛ばして次の候補へ）。在庫判定を `build_source` の
+**前**に置いてあるので、使い切った回に yt-dlp（字幕取得）を叩き直すこともない。
+`clips_per_video` も `prepare_limit` も**触っていない**（同じ元動画から取り過ぎる方向なので、
+素材が残っている間はやらない）。
+
+検証: `CLIP_CHANNEL_ID=clip-kaneko python3 run_clip_channel.py --dry-run` で
+「切り抜き済みの元動画を 8 本飛ばしました（clips_per_video=4）」→ 既出0本の回を選んで区間確定。
+回帰テストは `tests/test_clip_factory.py::TestExhaustedSourcesDoNotFillPrepareLimit`（3件）。
+
+> ⚠️ **コード変更なのでバックエンドの再起動が要る**（稼働中プロセスは旧 `external.py` を抱えている）。
+
+### 11-2. `clip-animal` — `clips_per_video` は既に解決済み。残るのは素材側
+
+`clips_per_video` は 09-05 に 1→3 済み・バックエンドも 09-06 00:34 起動で反映済みで、
+09-06 09:30 枠は成功している。11-1 の修正で「使い切った回が枠を食う」問題も消えた。
+
+**残っているのは在庫そのもの。** 09-06 実測で clippable 8本のうち
+**6本が「字幕なし」で `clip_subtitle_misses.json` 入り**、1本が使い切り、
+実際に使えるのは1本だけだった。CC BY の動物動画は字幕が無いものが多く、
+行タイムラインを作れないので原理的に切れない。
+`creative_commons.queries`（3本）と `videoDuration=long` × `max_duration_sec=3600` の
+組み合わせで母数も小さい。**増やすならクエリか許諾済み allowlist チャンネル。**
+
+### 11-3. `2ch-matome` の ChatGPT スレッドを登録（13ch すべて登録済みに）
+
+```
+python3 scripts/image_bridge.py thread set 2ch-matome https://chatgpt.com/c/6a9af5b9-1548-83ee-bb2c-29a3157cb464
+python3 scripts/image_bridge.py backfill      # → thread_url を更新した: 3 件
+python3 scripts/image_bridge.py missing       # → 全チャンネルにスレッドが登録されています
+```
+
+保存先は **`data/channels/2ch-matome.json` の `image_generation.chatgpt_thread_url`**
+（他12chと同じ置き場。§10-1 の「top-level」は 09-06 の移設前の記述）。
+
+### 11-4. `ANTHROPIC_API_KEY` — **キー無しで動かす方法は無い**（実測して確定）
+
+`backend/.env` の 18行目にキーはあるが**コメントアウトされたまま**で、
+その値を実際に `POST /v1/messages` へ投げたところ **401 `API key is invalid.`**。
+＝ コメントを外しても直らない。**新しいキーを人が発行して入れるまで
+`clip-lab` 20:45（`engine: viral`）は動かない。**
+
+キー無しの迂回路も**設計上存在しない**:
+
+- `translate.py` は「翻訳を機械任せにすると意味の通らない字幕がそのまま公開される」ので
+  **意図的にフォールバックしない**（`TranslationUnavailable` で枠ごと落とす）。
+- 依頼書（`data/analytics/viral_translation_pending/`。現在10件）を Claude Code が埋める経路はあるが、
+  `load_pending_result` は **`request_id`（= Reddit の投稿ID）が一致したときだけ**読み戻す。
+  毎日の調達は当日バズった別の投稿を拾うので、**溜まった10件が将来の枠を救うことはない**。
+
+> 20:45 枠を国内切り抜きにフォールバックさせる選択肢はあるが、
+> 「海外バイラル枠」という企画そのものを変える判断なので手を付けていない。
+
+### 11-5. 副作用として変わった挙動（把握しておくこと）
+
+`list_available_sources`（UI の在庫一覧・`run_clip_channel.py --list --external`）は、
+**使い切った外部素材を表示しなくなった**（`remaining_clips: 0` の行が消える）。
+一覧に出るのは「これから切れる在庫」だけになる。

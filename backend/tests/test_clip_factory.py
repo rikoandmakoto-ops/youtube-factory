@@ -38,6 +38,8 @@ from pipeline.clip_factory.acquisition import (  # noqa: E402
 from pipeline.clip_factory.captions import parse_vtt  # noqa: E402
 from pipeline.clip_factory.engines.local import safe_clip_id  # noqa: E402
 from pipeline.clip_factory.pipeline import build_title  # noqa: E402
+from pipeline.clip_factory import acquisition as acq  # noqa: E402
+from pipeline.clip_factory import external as ext  # noqa: E402
 
 
 def _lines(texts):
@@ -391,6 +393,69 @@ class TestVisualGuardThresholds(unittest.TestCase):
             Path("/nonexistent/never.mp4"), start=0.0, duration=10.0)
         self.assertTrue(verdict.ok)
         self.assertEqual(verdict.sampled_frames, 0)
+
+
+class TestExhaustedSourcesDoNotFillPrepareLimit(unittest.TestCase):
+    """使い切った元動画が prepare_limit の枠を食い潰さないこと。
+
+    2026-09-06 の clip-kaneko: clippable 25本のうち再生数上位8本
+    （= prepare_limit）がちょうど clips_per_video(4) まで使われており、
+    未使用の17本は候補に上がらないまま「全ての元動画が切り抜き済みです」で
+    毎日2枠とも落ちていた。pick_source は候補リストの中でしか在庫を見ないので、
+    在庫の判定は候補を用意する側でも効かせる必要がある。
+    """
+
+    def _cand(self, vid, views):
+        return acq.ExternalCandidate(
+            video_id=vid, title=f"動画 {vid}", channel_id="UC_ok",
+            channel_title="本人", published_at="2026-01-01T00:00:00Z",
+            duration_sec=600.0, view_count=views, license="creativeCommon",
+            use_as=USE_CLIPPABLE, reason="test", origin="test")
+
+    def _discover(self, per_video, used_counts, limit=2):
+        cfg = {"clips_per_video": per_video,
+               "external_sources": {"enabled": True, "allowlist_channels": []}}
+        state = {"sources": {
+            f"{ext.external_channel_key('UC_ok')}::{vid}":
+                {"segments": [{"start": float(i)} for i in range(n)]}
+            for vid, n in used_counts.items()}}
+        built = []
+
+        def fake_build(cand, *, clip_cfg, used_segments=None):
+            built.append(cand.video_id)
+            return f"src:{cand.video_id}"
+
+        orig_state, orig_build, orig_misses = (
+            ext.load_state, ext.build_source, ext._load_misses)
+        ext.load_state = lambda: state
+        ext.build_source = fake_build
+        ext._load_misses = lambda: {}
+        try:
+            # view_count 降順に並ぶので used_counts の順序どおりに候補が来る
+            pool = [self._cand(vid, 1000 - i)
+                    for i, vid in enumerate(used_counts)]
+            found = ext.discover_external_sources(cfg, limit=limit,
+                                                  candidates=pool)
+        finally:
+            ext.load_state, ext.build_source, ext._load_misses = (
+                orig_state, orig_build, orig_misses)
+        return found, built
+
+    def test_used_up_top_videos_are_skipped(self):
+        found, built = self._discover(
+            4, {"a": 4, "b": 4, "c": 0, "d": 0}, limit=2)
+        self.assertEqual(built, ["c", "d"])
+        self.assertEqual(len(found), 2)
+
+    def test_partially_used_videos_still_count_as_stock(self):
+        """上限未満なら残り枠があるので候補に残すこと。"""
+        _, built = self._discover(4, {"a": 3, "b": 0}, limit=2)
+        self.assertEqual(built, ["a", "b"])
+
+    def test_字幕取得は使い切った動画に対して走らない(self):
+        """在庫判定を build_source より前に置くこと（yt-dlp を無駄に叩かない）。"""
+        _, built = self._discover(1, {"a": 1, "b": 1, "c": 1}, limit=3)
+        self.assertEqual(built, [])
 
 
 if __name__ == "__main__":

@@ -769,16 +769,6 @@
     "publish_lead_minutes": 45,
     "theme_queue": [
       {
-        "id": "dcb7845a",
-        "title": "合コンで一発で場が凍った発言、晒してけ",
-        "angle": "空気が死ぬ瞬間の一言だけを並べる"
-      },
-      {
-        "id": "879a94b0",
-        "title": "マッチングアプリで会った人がヤバかった件",
-        "angle": "報告スレ型。会話の再現だけで押し切る"
-      },
-      {
         "id": "799627a9",
         "title": "学生時代の保健体育、先生がやらかした話しようや",
         "angle": "教室の空気だけで笑わせる。直接語は使わない"
@@ -1190,5 +1180,9 @@
       "min_age_days": 3,
       "recorded": "2026-09-05"
     }
+  },
+  "image_generation": {
+    "chatgpt_thread_url": "https://chatgpt.com/c/6a9af5b9-1548-83ee-bb2c-29a3157cb464",
+    "updated_at": "2026-09-06T07:45:23+00:00"
   }
 }

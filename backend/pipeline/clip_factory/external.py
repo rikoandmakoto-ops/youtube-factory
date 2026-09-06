@@ -54,6 +54,18 @@ def _download_dir(clip_cfg: Dict[str, Any]) -> Path:
     return acq.DEFAULT_DOWNLOAD_DIR
 
 
+def _max_clips_per_video(clip_cfg: Dict[str, Any]) -> int:
+    """1本の元動画から取る上限。`pipeline.generate_clip` の per_video と同じ値。
+
+    0 以下・未設定なら「上限なし」として扱い、在庫の絞り込みをしない
+    （設定を持たないチャンネルの挙動を変えないため）。
+    """
+    try:
+        return max(0, int(clip_cfg.get("clips_per_video") or 3))
+    except (TypeError, ValueError):
+        return 3
+
+
 def _allowlist_weights(clip_cfg: Dict[str, Any]) -> Dict[str, float]:
     """allowlist_channels の weight を {youtube_channel_id: weight} で返す。"""
     cfg = clip_cfg.get("external_sources") or {}
@@ -173,6 +185,7 @@ def discover_external_sources(
         limit: 字幕まで取りに行く本数の上限。多く見ても使うのは1本なので、
             既定では上位数本で打ち切る（yt-dlp 呼び出しを増やさない）。
     """
+    per_video = _max_clips_per_video(clip_cfg)
     if not acq.is_enabled(clip_cfg):
         return []
 
@@ -207,7 +220,21 @@ def discover_external_sources(
     state = load_state().get("sources", {})
     misses = _load_misses()
 
+    # 使い切った動画は `limit` の枠に数えない。
+    #
+    # ここは view_count 順の上位 `limit` 本をそのまま用意していたが、
+    # pick_source は「切り抜き済み < clips_per_video」でしか在庫を見ないので、
+    # 上位が全部使い切られた時点で候補がゼロになり、下に未使用の回が何本
+    # 残っていても「全ての元動画が切り抜き済みです」で毎日落ちる。
+    # 実測 2026-09-06 の clip-kaneko: clippable 25本のうち上位8本
+    # （= prepare_limit）がちょうど 4/4 で埋まり、未使用の17本は
+    # 一度も候補に上がらないまま2枠とも失敗していた。
+    #
+    # 使い切った動画を飛ばして枠を未使用の回に回せば、prepare_limit も
+    # clips_per_video も触らずに在庫が繋がる（clips_per_video を上げるのは
+    # 同じ元動画から取り過ぎる方向なので、素材が残っている間はやらない）。
     found: List[SourceVideo] = []
+    exhausted = 0
     for cand in pool:
         if len(found) >= limit:
             break
@@ -215,9 +242,15 @@ def discover_external_sources(
             continue
         key = f"{external_channel_key(cand.channel_id)}::{cand.video_id}"
         used = (state.get(key) or {}).get("segments") or []
+        if per_video and len(used) >= per_video:
+            exhausted += 1
+            continue
         src = build_source(cand, clip_cfg=clip_cfg, used_segments=used)
         if src:
             found.append(src)
+    if exhausted:
+        print(f"  ℹ️ 切り抜き済みの元動画を {exhausted} 本飛ばしました"
+              f"（clips_per_video={per_video}）")
     return found
 
 
