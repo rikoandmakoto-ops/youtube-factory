@@ -1079,6 +1079,41 @@
       "date": "2026-09-07n",
       "id": "yokai-subs-per-1000-jumped-40pct",
       "note": "【数値・yokai-watch】登録20→23(+3)、登録/1k 0.2618→0.3659(+40%)で本日の伸び率1位。上位6本中5本が『〜の正体/元ネタが怖すぎる』型(avg1422)で、この型が登録転換まで牽引している可能性が高い。本日 blacklist からフォーマット語を外し seeds を同型で3件追加したので、明日以降 0.3659 が維持・上昇するかで因果を判定する。"
+    },
+    {
+      "date": "2026-09-08n",
+      "id": "thumbnail-card-bug-migrated-to-yokai-and-scp",
+      "note": "【サムネ・最重要・本日修正済み】09-07にpokemon-labで特定した図解カードの誤マッピング（has_confident_render が素の部分一致のため題材と無関係なアイコンを描く）は、pokemonに thumbnail_card:false を入れて解消した一方、同じバグが yokai-watch と scp-lab で現に発生していた。yokai本日サムネ(1624f926_short.png)は『覚の元ネタが怖すぎる』動画に対し白カードで『植物 →(矢印)→ 地形』を描画（『木片』の木→植物 / 『山』→地形）。実測でカード高352px＝縦の18.3%を占有。scp本日サムネ(b70a6937_short.png)は『名簿の空白/7日目の名前』に対し眼アイコン＋『視認体』ラベルのleaked-documentカード。教訓: ch単位の flag 修正はバグの横展開を止めない。根本は has_confident_render の部分一致判定で、全13chに同じ地雷が残っている。"
+    },
+    {
+      "date": "2026-09-08n",
+      "id": "scp-thumbnail-tagline-hijacked-by-license",
+      "note": "【サムネ・scp-lab・本日修正済み】本日のサムネの tagline が『SCP財団機密記録／CC BY-SA 3.0』。他chが同じスロットに置いているのはクリックフック（ds『あなたの体で起きる補給のしくみ』/ poke『見つけた数だけでは完成しない』/ 2ch『本命は機能か言い訳か』）で、scpだけ最高価値の帯を法的クレジットに使っていた。同時にサムネ全体からSCP番号が消え、09-07『scp-thumbnail-number-restored』で解消したはずの番号欠落が1日で再発。style_hint の推奨表現だけでは守られないため、thumbnail_template.tagline_rules として禁止事項＋必須事項に格上げした。"
+    },
+    {
+      "date": "2026-09-08n",
+      "id": "scp-recycles-the-number-17-as-a-hook",
+      "note": "【重複・scp-lab・本日修正済み】類似度1.0のペアが6組出ている原因は題材の重複ではなく数字フックの使い回し。『17年間隠し続けた』『17名 全員消滅』『担当者17名、記録ごと消滅』『17名の記憶を[REDACTED]』『17名の研究員』など、無関係なSCP（1730/4002/166/5000）に同じ『17』を貼っている。SCP番号自体の重複ではないため既存の重複検知（タイトル類似度）は検知できても theme_blacklist が題材語しか持たず素通りしていた。『17名』『17年間』『17年間隠し』『担当者17』を blacklist に追加。"
+    },
+    {
+      "date": "2026-09-08n",
+      "id": "yokai-format-unblock-confirmed-two-days",
+      "note": "【因果の確定・yokai-watch】09-07にフォーマット語（『怖すぎる』等）を theme_blacklist から外した施策の効果が2日連続で確認できた。登録/1k は 0.2618(09-06) → 0.3659(09-07) → 0.4845(09-08) と累計+85%で全ch伸び率1位。同日に同種の解除をした pokemon-lab は 0.266 → 0.2738 の+3%どまりで、フォーマット解除だけでは足りずフォーマットの強さ自体に差がある（yokai『正体』型は現行87本中16本で最多）。yokaiは施策を継続、pokemonは別要因を探す。"
+    },
+    {
+      "date": "2026-09-08n",
+      "id": "daily-science-only-channel-declining",
+      "note": "【数値・daily-science・要注意】登録/1k が 0.4676 → 0.3875(-17%) と主要chで唯一の明確な下落。登録者は65→68(+3)で増えているので、分母の再生が伸びて転換率だけ落ちた形。ジャンル別平均再生は最上位の『その他』640でも ch平均524の1.2倍しかなく、突出した勝ち筋が無い。42語という全ch最大の theme_blacklist で題材を削りすぎている可能性があり、yokai/pokemonで起きた『フォーマット語を誤ってblacklistした』のと同型の自傷を疑うべき。本日は変更せず、明日 0.3875 が続落するかを見て判断する。"
+    },
+    {
+      "date": "2026-09-08n",
+      "id": "analytics-new-post-outage-high-27k",
+      "note": "【数値・全ch合計】Analytics日次views(3日遅れ確定値)に 09-05:27,534 が追加。09-04の20,286から+36%で、OAuth断以降の最高値かつ期間2位（1位は08-28の29,614）。09-01の574を底に4日連続で増加しており、断からの回復は完了したと見てよい。"
+    },
+    {
+      "date": "2026-09-08n",
+      "id": "scheduled-status-never-flips-to-published",
+      "note": "【計測・DBの信頼性】video_publish.db では ゆっくり系8chが軒並み status='scheduled' のまま（scp-lab 20件/daily-science 30件など、最終published は 08-31〜09-03）。一方 Data API の本数は daily-science 206→209 のように毎日+3で増えており、YouTube側の予約公開は正常に動いている。つまり公開停止ではなくDBのステータス更新漏れ。clip系（即時公開）だけが published に遷移している。『最終公開日』をこのDBから読むと5日前と誤読するので、本数はData API側を正とする。"
     }
   ]
 }

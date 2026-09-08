@@ -1,156 +1,156 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1788790149,
+    "generated_at": 1788876811,
     "analyzed_videos": 3,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0099,
-      "early": 0.0239,
-      "middle": 0.0042,
-      "late": 0.0054,
-      "ending": 0.0028
+      "intro": 0.0101,
+      "early": 0.0235,
+      "middle": 0.005,
+      "late": 0.0047,
+      "ending": 0.0027
     },
     "per_video": [
       {
-        "video_id": "Y94yR_35IyA",
-        "title": "鏡の顔だけ違う？99%が知らない左右差 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 91.79,
+        "video_id": "QFUfc37jobI",
+        "title": "あなたの字が30秒で別物に見える？ #shorts #雑学 #豆知識",
+        "avg_view_percentage": 110.62,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0438,
+            "bucket": "early",
+            "audience_after": 1.6176,
+            "scenario_line": {
+              "index": 8,
+              "speaker": "理子",
+              "text": "脳は同じ刺激が続くと、最初ほど強く反応しなくなります。\nこれは順応といって、要するに同じ音や光に慣れて背景へ回す仕組みで、冷蔵庫の運転音を数分後に意識しなくなるのと似ています。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0407,
+            "bucket": "intro",
+            "audience_after": 1.6991,
+            "scenario_line": {
+              "index": 7,
+              "speaker": "真",
+              "text": "0.2秒で読んでいるの？スマホのメッセージを流し見しても意味が入るのは、その速いまとめ読みのおかげなんだね。\nでも同じ字だけを見続けると、なぜその便利な近道が外れるの？",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.21,
+            "ratio_to": 0.22,
+            "drop": 0.0407,
+            "bucket": "early",
+            "audience_after": 1.4295,
+            "scenario_line": {
+              "index": 12,
+              "speaker": "理子",
+              "text": "実はこれ、今あなたの体でも起きています。画面のどこかにある同じ文字を20秒ほど見続けるだけで、目の動きは小さくなります。\n脳は同じ情報を新鮮なものとして扱いにくくなり、見慣れた字ほど揺らぎやすいんです。",
+              "mood": "mysterious"
+            }
+          }
+        ],
+        "matched_scenario_title": "あなたの字が30秒で別物に見える？"
+      },
+      {
+        "video_id": "0s70fyHmkv4",
+        "title": "なぜ壁のシミが顔に見える？0.1秒の正体 #shorts #雑学 #豆知識",
+        "avg_view_percentage": 42.2,
         "drops": [
           {
             "ratio_from": 0.13,
             "ratio_to": 0.14,
-            "drop": 0.0882,
+            "drop": 0.0621,
             "bucket": "intro",
-            "audience_after": 1.4608,
-            "scenario_line": {
-              "index": 7,
-              "speaker": "真",
-              "text": "たとえるなら、スマホのホーム画面のアプリ位置みたいだね。1個だけ場所が入れ替わると、必要なアプリは同じでも指が一瞬迷う。\n顔でも配置の慣れが、印象を決めるんだ。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0515,
-            "bucket": "intro",
-            "audience_after": 1.4093,
+            "audience_after": 0.9867,
             "scenario_line": {
               "index": 8,
               "speaker": "理子",
-              "text": "顔の左右差そのものは珍しくありません。眉の高さ、目の開き、鼻の向き、口角の上がり方は、ほとんどの人で少しずつ異なります。\n完全な左右対称は、自然な顔ではむしろ少ないと考えられています。",
+              "text": "その通りです。脳には顔を見つける検出の閾値、つまり「これくらい似ていたら反応する」という境目があります。\n顔の場合、その境目が低めに設定されていると考えられています。",
               "mood": "calm"
             }
           },
           {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0515,
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0444,
             "bucket": "early",
-            "audience_after": 1.3578,
+            "audience_after": 0.7716,
             "scenario_line": {
-              "index": 9,
-              "speaker": "真",
-              "text": "言われてみれば確かに、笑うと片方だけえくぼが出たり、前髪が片側へ流れやすかったりするね。\n鏡では毎日見ているのに、その小さな差には普段ほとんど気づかないのか。",
-              "mood": "calm"
+              "index": 12,
+              "speaker": "理子",
+              "text": "まだ答えを急がないでください。問題は、顔を見つける仕組みが便利なだけでなく、あなたの気分や部屋の明るさでも揺れることです。\n同じ壁でも昼と夜で表情まで変わって見えます。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.24,
+            "ratio_to": 0.25,
+            "drop": 0.0421,
+            "bucket": "early",
+            "audience_after": 0.6297,
+            "scenario_line": {
+              "index": 14,
+              "speaker": "理子",
+              "text": "顔を見ると、脳の側頭葉にある紡錘状顔領域がよく働くことが知られています。\n名前は難しいですが、要するに顔らしさを素早く仕分ける脳内の担当窓口だと思ってください。",
+              "mood": "mysterious"
             }
           }
         ],
-        "matched_scenario_title": "鏡の顔だけ違う？99%が知らない左右差"
+        "matched_scenario_title": "なぜ壁のシミが顔に見える？0.1秒の正体"
       },
       {
-        "video_id": "WGMpYbnGXAU",
-        "title": "あなたの耳が3秒で抜ける正体は？ #shorts #雑学 #豆知識",
-        "avg_view_percentage": 37.52,
+        "video_id": "x1X8G1eVNfE",
+        "title": "なぜあなたは階段で1段だけ外すのか？ #shorts #雑学 #豆知識",
+        "avg_view_percentage": 120.72,
         "drops": [
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0868,
-            "bucket": "early",
-            "audience_after": 0.794,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "中耳と鼻の奥をつなぐ細い通り道が耳管です。\n耳管は耳の空気を入れ替える通路ですが、普段はやわらかい組織で閉じ気味になり、必要な時だけ小さく開く仕組みです。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0704,
-            "bucket": "early",
-            "audience_after": 0.8808,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "中耳と鼻の奥をつなぐ細い通り道が耳管です。\n耳管は耳の空気を入れ替える通路ですが、普段はやわらかい組織で閉じ気味になり、必要な時だけ小さく開く仕組みです。",
-              "mood": "calm"
-            }
-          },
           {
             "ratio_from": 0.17,
             "ratio_to": 0.18,
-            "drop": 0.0569,
+            "drop": 0.0813,
             "bucket": "early",
-            "audience_after": 0.7371,
+            "audience_after": 1.6052,
             "scenario_line": {
               "index": 9,
               "speaker": "真",
-              "text": "耳管って、耳から鼻の奥へつながっているんだ！耳が詰まった時にのどの奥まで変な感じがするのは、耳だけの問題ではなくて、同じ通り道の近くで起きるからなんだね。",
+              "text": "言われてみれば確かに、慣れた家の階段なら明るくない時間でも足が進むことがあるよ。\n目で細部を確かめなくても、直前に踏んだ数段の感触が、次も同じだという手がかりになるんだね。",
               "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "あなたの耳が3秒で抜ける正体は？"
-      },
-      {
-        "video_id": "SzMbnxjh0hM",
-        "title": "泳いでいる脳が3秒ごとに息継ぎを気にするワケ #shorts #雑学 #豆知識",
-        "avg_view_percentage": 58.75,
-        "drops": [
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.101,
-            "bucket": "early",
-            "audience_after": 0.9731,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "真",
-              "text": "へぇ〜、知らなかった！ 上手な人が落ち着いて泳げるのは、力があるだけでなく、脳が腕や脚の仕事を任せられるからなんだね。でも水中は景色も音も変わるし、自動化だけで姿勢を保てるの？",
-              "mood": "tense"
             }
           },
           {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0943,
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0794,
             "bucket": "early",
-            "audience_after": 1.0741,
+            "audience_after": 1.5258,
             "scenario_line": {
-              "index": 8,
+              "index": 10,
               "speaker": "理子",
-              "text": "ここで使われるのが運動の自動化です。繰り返した動きを少ない意識で進める仕組みで、歯みがきをしながら明日の予定を考えられる感覚に近いんです。泳ぎでも慣れるほど、手足の基本動作は自動化されます。",
-              "mood": "calm"
+              "text": "ここ、面白いのが、最後の一段は階段の規則が床に切り替わる場所だということです。\n脳がまだ次の段差を想定しているのに、実際には平らな床が待っていると、足の下ろし方が合わなくなります。",
+              "mood": "mysterious"
             }
           },
           {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0707,
-            "bucket": "early",
-            "audience_after": 0.9024,
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0734,
+            "bucket": "intro",
+            "audience_after": 1.8234,
             "scenario_line": {
-              "index": 9,
-              "speaker": "真",
-              "text": "へぇ〜、知らなかった！ 上手な人が落ち着いて泳げるのは、力があるだけでなく、脳が腕や脚の仕事を任せられるからなんだね。でも水中は景色も音も変わるし、自動化だけで姿勢を保てるの？",
-              "mood": "tense"
+              "index": 6,
+              "speaker": "理子",
+              "text": "歩行は、1歩ずつ命令する作業ではなく、繰り返しの型を使う作業です。\n専門的には予測歩行と呼びますが、簡単に言えば、体が次の一歩を先に用意しておく仕組みだと思ってください。",
+              "mood": "calm"
             }
           }
         ],
-        "matched_scenario_title": "泳いでいる脳が3秒ごとに息継ぎを気にするワケ"
+        "matched_scenario_title": "なぜあなたは階段で1段だけ外すのか？"
       }
     ],
     "gpt_insights": null,
@@ -160,29 +160,29 @@
     "channel_id": "scp-lab",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1788790363
+    "generated_at": 1788877102
   },
   "pokemon-lab": {
     "channel_id": "pokemon-lab",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1788790235
+    "generated_at": 1788876927
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1788790452
+    "generated_at": 1788877241
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1788789735
+    "generated_at": 1788876148
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1788790153,
+    "generated_at": 1788876820,
     "analyzed_videos": 1,
     "aggregate_drops_by_bucket": {
       "intro": 0.0122,
@@ -227,7 +227,7 @@
   },
   "akashic-librarian": {
     "channel_id": "akashic-librarian",
-    "generated_at": 1788789736,
+    "generated_at": 1788876149,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0169,
@@ -339,24 +339,82 @@
     "channel_id": "clip-animal",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1788789737
+    "generated_at": 1788876150
   },
   "clip-fukada": {
     "channel_id": "clip-fukada",
-    "generated_at": 1788789773,
+    "generated_at": 1788876202,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0272,
-      "early": 0.014,
-      "middle": 0.0053,
+      "intro": 0.0155,
+      "early": 0.0203,
+      "middle": 0.0056,
       "late": 0.0042,
-      "ending": 0.0013
+      "ending": 0.0023
     },
     "per_video": [
       {
+        "video_id": "NFL8uGR6VI4",
+        "title": "部活は1日で辞めました #shorts #切り抜き",
+        "avg_view_percentage": 0.0,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0625,
+            "bucket": "early",
+            "audience_after": 0.9712
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0601,
+            "bucket": "intro",
+            "audience_after": 1.0337
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0432,
+            "bucket": "early",
+            "audience_after": 0.7909
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "jp8kT5Ha0Fg",
+        "title": "今の自分のまま 学生時代に戻りたい #shorts #切り抜き",
+        "avg_view_percentage": 49.53,
+        "drops": [
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0716,
+            "bucket": "early",
+            "audience_after": 0.8776
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.064,
+            "bucket": "early",
+            "audience_after": 0.9492
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0621,
+            "bucket": "early",
+            "audience_after": 1.0132
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
         "video_id": "zFxf1ezR2MQ",
         "title": "初めての体験で めっちゃ囲まれた #shorts #切り抜き",
-        "avg_view_percentage": 66.79,
+        "avg_view_percentage": 63.91,
         "drops": [
           {
             "ratio_from": 0.02,
@@ -385,86 +443,28 @@
       {
         "video_id": "PMRxu_8hIt4",
         "title": "“時間停止”で使うスタジオ #shorts #切り抜き",
-        "avg_view_percentage": 82.83,
+        "avg_view_percentage": 82.69,
         "drops": [
           {
             "ratio_from": 0.03,
             "ratio_to": 0.04,
-            "drop": 0.08,
+            "drop": 0.0798,
             "bucket": "intro",
-            "audience_after": 1.4343
+            "audience_after": 1.433
           },
           {
             "ratio_from": 0.04,
             "ratio_to": 0.05,
-            "drop": 0.0484,
+            "drop": 0.0485,
             "bucket": "intro",
-            "audience_after": 1.3859
+            "audience_after": 1.3845
           },
           {
             "ratio_from": 0.02,
             "ratio_to": 0.03,
-            "drop": 0.0442,
+            "drop": 0.0444,
             "bucket": "intro",
-            "audience_after": 1.5143
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "x9YpMzli-zo",
-        "title": "フェラは結構大変だったりする #shorts #切り抜き",
-        "avg_view_percentage": 71.08,
-        "drops": [
-          {
-            "ratio_from": 0.02,
-            "ratio_to": 0.03,
-            "drop": 0.125,
-            "bucket": "intro",
-            "audience_after": 1.2891
-          },
-          {
-            "ratio_from": 0.04,
-            "ratio_to": 0.05,
-            "drop": 0.0703,
-            "bucket": "intro",
-            "audience_after": 1.1563
-          },
-          {
-            "ratio_from": 0.03,
-            "ratio_to": 0.04,
-            "drop": 0.0625,
-            "bucket": "intro",
-            "audience_after": 1.2266
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "8gRQoPw5V_k",
-        "title": "プロテインにマカとロイヤルゼリー入り #shorts #切り抜き",
-        "avg_view_percentage": 72.91,
-        "drops": [
-          {
-            "ratio_from": 0.02,
-            "ratio_to": 0.03,
-            "drop": 0.1125,
-            "bucket": "intro",
-            "audience_after": 1.4
-          },
-          {
-            "ratio_from": 0.04,
-            "ratio_to": 0.05,
-            "drop": 0.1,
-            "bucket": "intro",
-            "audience_after": 1.2125
-          },
-          {
-            "ratio_from": 0.03,
-            "ratio_to": 0.04,
-            "drop": 0.0875,
-            "bucket": "intro",
-            "audience_after": 1.3125
+            "audience_after": 1.5128
           }
         ],
         "matched_scenario_title": null
@@ -475,20 +475,20 @@
   },
   "clip-kaneko": {
     "channel_id": "clip-kaneko",
-    "generated_at": 1788789918,
+    "generated_at": 1788876295,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0047,
-      "early": 0.0294,
-      "middle": 0.0055,
-      "late": 0.0014,
+      "early": 0.0295,
+      "middle": 0.0054,
+      "late": 0.0015,
       "ending": 0.0004
     },
     "per_video": [
       {
         "video_id": "_5P62LMYYa8",
         "title": "斉藤さん企画を終え TikTokerとして決意表明 #shorts #切り抜き",
-        "avg_view_percentage": 69.56,
+        "avg_view_percentage": 68.8,
         "drops": [
           {
             "ratio_from": 0.16,
@@ -517,28 +517,28 @@
       {
         "video_id": "dxph90B2w4o",
         "title": "白いゲーミングPCは 中の色まで変えられる #shorts #切り抜き",
-        "avg_view_percentage": 39.0,
+        "avg_view_percentage": 39.45,
         "drops": [
           {
             "ratio_from": 0.15,
             "ratio_to": 0.16,
-            "drop": 0.0711,
+            "drop": 0.0693,
             "bucket": "early",
-            "audience_after": 0.9511
+            "audience_after": 0.9567
           },
           {
             "ratio_from": 0.18,
             "ratio_to": 0.19,
-            "drop": 0.0711,
+            "drop": 0.0693,
             "bucket": "early",
-            "audience_after": 0.7689
+            "audience_after": 0.7792
           },
           {
             "ratio_from": 0.16,
             "ratio_to": 0.17,
-            "drop": 0.0578,
+            "drop": 0.0563,
             "bucket": "early",
-            "audience_after": 0.8933
+            "audience_after": 0.9004
           }
         ],
         "matched_scenario_title": null
@@ -549,20 +549,78 @@
   },
   "clip-lab": {
     "channel_id": "clip-lab",
-    "generated_at": 1788789953,
-    "analyzed_videos": 3,
+    "generated_at": 1788876485,
+    "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0127,
-      "early": 0.0207,
-      "middle": 0.0054,
-      "late": 0.0052,
-      "ending": 0.0031
+      "intro": 0.0168,
+      "early": 0.0216,
+      "middle": 0.0048,
+      "late": 0.0029,
+      "ending": 0.0018
     },
     "per_video": [
       {
+        "video_id": "SUNWBLRAj4A",
+        "title": "弟を亡くした悲しみは 6年経っても消えない #shorts #切り抜き",
+        "avg_view_percentage": 97.44,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0608,
+            "bucket": "early",
+            "audience_after": 1.3289
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0552,
+            "bucket": "early",
+            "audience_after": 1.3897
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0551,
+            "bucket": "intro",
+            "audience_after": 1.4449
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "Ras7astkIYI",
+        "title": "刑務所行きを恐れ 暴力団は来なくなった #shorts #切り抜き",
+        "avg_view_percentage": 73.26,
+        "drops": [
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0487,
+            "bucket": "intro",
+            "audience_after": 1.2184
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0457,
+            "bucket": "early",
+            "audience_after": 1.1278
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0449,
+            "bucket": "intro",
+            "audience_after": 1.1735
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
         "video_id": "p2EaWnHI6AE",
         "title": "男性の被害は 事件化されにくい #shorts #切り抜き",
-        "avg_view_percentage": 58.51,
+        "avg_view_percentage": 58.28,
         "drops": [
           {
             "ratio_from": 0.17,
@@ -591,57 +649,28 @@
       {
         "video_id": "-UiTA3tALd8",
         "title": "株を渡されない社長は いつでもクビになれる #shorts #切り抜き",
-        "avg_view_percentage": 49.82,
+        "avg_view_percentage": 51.12,
         "drops": [
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0553,
-            "bucket": "early",
-            "audience_after": 0.9387
-          },
           {
             "ratio_from": 0.13,
             "ratio_to": 0.14,
-            "drop": 0.0493,
+            "drop": 0.0487,
             "bucket": "intro",
-            "audience_after": 1.0404
+            "audience_after": 1.0476
           },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0464,
-            "bucket": "intro",
-            "audience_after": 0.994
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "-RJilEKS3L0",
-        "title": "若者の資産を増やすには 収入を増やすしかない #shorts #切り抜き",
-        "avg_view_percentage": 58.08,
-        "drops": [
           {
             "ratio_from": 0.15,
             "ratio_to": 0.16,
-            "drop": 0.0547,
+            "drop": 0.0487,
             "bucket": "early",
-            "audience_after": 0.9387
+            "audience_after": 0.9578
           },
           {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0416,
-            "bucket": "intro",
-            "audience_after": 0.9934
-          },
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.0328,
-            "bucket": "intro",
-            "audience_after": 1.035
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0433,
+            "bucket": "early",
+            "audience_after": 0.7532
           }
         ],
         "matched_scenario_title": null
@@ -654,6 +683,6 @@
     "channel_id": "company-facts",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1788790046
+    "generated_at": 1788876593
   }
 }

@@ -1,32 +1,34 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1788790149,
+    "generated_at": 1788876809,
     "sample_size": {
-      "total": 198,
-      "success": 50,
-      "others": 148
+      "total": 200,
+      "success": 51,
+      "others": 149
     },
     "metrics": {
       "success_avg": {
-        "views": 823.3,
-        "ctr": 0.0053,
-        "avg_view_percentage": 70.36
+        "views": 809.3,
+        "ctr": 0.0054,
+        "avg_view_percentage": 71.21
       },
       "others_avg": {
-        "views": 429.5,
-        "ctr": 0.0036,
-        "avg_view_percentage": 22.08
+        "views": 426.9,
+        "ctr": 0.0035,
+        "avg_view_percentage": 22.28
       }
     },
     "title_features": {
       "success": {
-        "count": 50,
-        "avg_length": 63.1,
-        "median_length": 70,
+        "count": 51,
+        "avg_length": 62.8,
+        "median_length": 71,
         "question_ratio": 0.9,
-        "number_ratio": 0.5,
+        "number_ratio": 0.51,
         "samples": [
+          "あなたの字が30秒で別物に見える？ #shorts #雑学 #豆知識",
+          "なぜあなたは階段で1段だけ外すのか？ #shorts #雑学 #豆知識",
           "鏡の顔だけ違う？99%が知らない左右差 #shorts #雑学 #豆知識",
           "泳いでいる脳が3秒ごとに息継ぎを気にするワケ #shorts #雑学 #豆知識",
           "1分科学 #100：🧬なぜあなたはポケモンの夢で技まで使える？REM睡眠90分にある記憶の正体【ショート】",
@@ -34,43 +36,55 @@
           "なぜくしゃみの後だけ体が軽いのか？9割が知らない3秒間の神経反応【ショート】",
           "なぜ今、片方の手だけ冷たいのか？9割が見落とす2倍の血流差【ショート】",
           "昨夜の夢、なぜ12分なのに何時間もいた気がする？9割が勘違いする時間感覚【ショート】",
-          "なぜ今夜、布団で足だけ熱い？90%が勘違いする30分の放熱の正体【ショート】",
-          "なぜ立ち上がると目の前が暗い？99%が知らない『3秒間』の正体【ショート】【ショート】",
-          "あなたの体で毎晩起きていること、気づいていますか？#睡眠中の『口の乾き』——99%が見過ごす体内の変化とは？ #shorts #ゆっくり解説"
+          "99%が知らない「夢の記憶」の正体なぜあの夢だけ覚えてるの？#昨夜の夢だけ覚えてる——99%が知らない、脳が『あの夢』を選んで記録する本当の理由 #shorts #ゆっくり解説"
         ]
       },
       "others": {
-        "count": 148,
-        "avg_length": 56.8,
-        "median_length": 52,
-        "question_ratio": 0.89,
+        "count": 149,
+        "avg_length": 56.4,
+        "median_length": 50,
+        "question_ratio": 0.9,
         "number_ratio": 0.52,
         "samples": [
+          "疲れた日の甘い物がすぐ消えるのはなぜ？ #shorts #雑学 #豆知識",
+          "耳を塞ぐと聞こえる20Hzの正体？ #shorts #雑学 #豆知識",
+          "走った後の鉄味、あなたの肺で何が？0.1%の正体 #shorts #雑学 #豆知識",
           "なぜ冷たい水だけ歯にしみる？歯の中で起きる変化 #shorts #雑学 #豆知識",
           "なぜ他人のあくびは約45％もつられる？脳の反応を解説 #shorts #雑学 #豆知識",
           "あなたが大雨で不安になる3hPaの正体？ #shorts #雑学 #豆知識",
           "実は暗い部屋で音に敏感になるのは、耳が目の代わりをするから？ #shorts #雑学 #豆知識",
-          "あなたの字が30秒で別物に見える？ #shorts #雑学 #豆知識",
           "なぜ壁のシミが顔に見える？0.1秒の正体 #shorts #雑学 #豆知識",
-          "なぜあなたは階段で1段だけ外すのか？ #shorts #雑学 #豆知識",
           "あなたの耳が3秒で抜ける正体は？ #shorts #雑学 #豆知識",
-          "黙読中の喉、なぜ声なしで1秒だけ動く？ #shorts #雑学 #豆知識",
-          "歩き方を意識した3秒で迷う正体 #shorts #雑学 #豆知識"
+          "黙読中の喉、なぜ声なしで1秒だけ動く？ #shorts #雑学 #豆知識"
         ]
       }
     },
     "posting_time": {
-      "top_hour_utc": 1,
-      "top_weekday": 5,
-      "n": 50
+      "top_hour_utc": 0,
+      "top_weekday": 6,
+      "n": 51
     },
     "success_videos": [
       {
+        "video_id": "QFUfc37jobI",
+        "title": "あなたの字が30秒で別物に見える？ #shorts #雑学 #豆知識",
+        "views": 899,
+        "ctr": 0.0,
+        "avg_view_percentage": 100.0
+      },
+      {
+        "video_id": "x1X8G1eVNfE",
+        "title": "なぜあなたは階段で1段だけ外すのか？ #shorts #雑学 #豆知識",
+        "views": 1132,
+        "ctr": 0.0,
+        "avg_view_percentage": 100.0
+      },
+      {
         "video_id": "Y94yR_35IyA",
         "title": "鏡の顔だけ違う？99%が知らない左右差 #shorts #雑学 #豆知識",
-        "views": 981,
+        "views": 992,
         "ctr": 0.0,
-        "avg_view_percentage": 91.79
+        "avg_view_percentage": 91.16
       },
       {
         "video_id": "SzMbnxjh0hM",
@@ -90,7 +104,7 @@
         "video_id": "QA5AfmA___Q",
         "title": "1分科学 #97：🧬なぜ大谷翔平は睡眠を最優先するのか？8時間超が支える体の正体【ショート】",
         "views": 849,
-        "ctr": 0.008264462809917356,
+        "ctr": 0.008130081300813009,
         "avg_view_percentage": 59.57
       },
       {
@@ -115,25 +129,18 @@
         "avg_view_percentage": 55.87
       },
       {
-        "video_id": "RcorEmR5ZI0",
-        "title": "なぜ今夜、布団で足だけ熱い？90%が勘違いする30分の放熱の正体【ショート】",
-        "views": 779,
-        "ctr": 0.01818181818181818,
-        "avg_view_percentage": 53.53
+        "video_id": "qyOPOA608QI",
+        "title": "99%が知らない「夢の記憶」の正体なぜあの夢だけ覚えてるの？#昨夜の夢だけ覚えてる——99%が知らない、脳が『あの夢』を選んで記録する本当の理由 #shorts #ゆっくり解説",
+        "views": 33,
+        "ctr": 0.019230769230769232,
+        "avg_view_percentage": 83.86
       },
       {
         "video_id": "z3HSxgDDUMI",
         "title": "なぜ立ち上がると目の前が暗い？99%が知らない『3秒間』の正体【ショート】【ショート】",
-        "views": 896,
-        "ctr": 0.047619047619047616,
-        "avg_view_percentage": 77.19
-      },
-      {
-        "video_id": "k_7Sx4h88zI",
-        "title": "あなたの体で毎晩起きていること、気づいていますか？#睡眠中の『口の乾き』——99%が見過ごす体内の変化とは？ #shorts #ゆっくり解説",
-        "views": 293,
-        "ctr": 0.0,
-        "avg_view_percentage": 100.0
+        "views": 4,
+        "ctr": 0.058823529411764705,
+        "avg_view_percentage": 61.65999999999999
       },
       {
         "video_id": "JFzJf-MePaI",
@@ -197,13 +204,6 @@
         "views": 953,
         "ctr": 0.0,
         "avg_view_percentage": 59.160000000000004
-      },
-      {
-        "video_id": "PtPcR4RAw3k",
-        "title": "夢の中、なぜか現実味があるのは?99%が知らない脳のトリック!#夢の中がリアルすぎる理由、99%が知らない脳の不思議 #shorts #ゆっくり解説",
-        "views": 934,
-        "ctr": 0.0,
-        "avg_view_percentage": 71.53
       }
     ],
     "gpt_insights": null,
@@ -211,33 +211,34 @@
   },
   "scp-lab": {
     "channel_id": "scp-lab",
-    "generated_at": 1788790363,
+    "generated_at": 1788877102,
     "sample_size": {
-      "total": 198,
-      "success": 12,
-      "others": 186
+      "total": 200,
+      "success": 13,
+      "others": 187
     },
     "metrics": {
       "success_avg": {
-        "views": 488.8,
-        "ctr": 0.0139,
-        "avg_view_percentage": 68.55
+        "views": 519.1,
+        "ctr": 0.0136,
+        "avg_view_percentage": 67.27
       },
       "others_avg": {
-        "views": 485.8,
-        "ctr": 0.0041,
-        "avg_view_percentage": 34.37
+        "views": 493.3,
+        "ctr": 0.0042,
+        "avg_view_percentage": 34.06
       }
     },
     "title_features": {
       "success": {
-        "count": 12,
-        "avg_length": 65.2,
-        "median_length": 60,
-        "question_ratio": 0.17,
-        "number_ratio": 0.83,
+        "count": 13,
+        "avg_length": 63.3,
+        "median_length": 52,
+        "question_ratio": 0.15,
+        "number_ratio": 0.85,
         "samples": [
           "一口SCP：SCP-006-JP「あけろ」ドアの向こうの記録 #shorts #SCP #SCP解説",
+          "SCP-2525「異常なゲーム」— 死亡記録23件、勝利条件は未達成【ショート】",
           "SCP-1690「廃棄された文明の記録」— 発掘地点12か所、通信断絶から83年後に収容【ショート】",
           "一口SCP：目撃者47名／精神的生存率0%財団が17年間『視覚汚染』と呼んだ理由#財団が17年間隠し続けた視覚汚染体——目撃者全員が廃人化、生存率0%の本当の理由 #shorts #ゆっくり解説",
           "財団が23年間隠し続けた接近者19名・生存率0%——湖で名前を失った本当の理由【ショート】",
@@ -245,48 +246,54 @@
           "一口SCP：財団が23年間隠し続けた見るだけで感染する謎感染者数317名、生存率わずか3%#財団が23年間隠した感染 SCP-XXXXの正体 #shorts #ゆっくり解説",
           "一口SCP：財団が人類を殲滅する側に!?隠された提言が今、暴かれる#財団が隠した『人類殲滅提言』の真実とは #shorts #ゆっくり解説",
           "一口SCP：99%の人が知らない恐怖財団が23年間隠し続けた#財団が隠蔽したSCP-3125の恐怖: 生存者0名の理由 #shorts #ゆっくり解説",
-          "なぜ生存率5%？『生ける死者』SCP-1440が財団を12回暴走させた本当の理由【ショート】",
-          "収容違反の真実 — 人間が引き起こす異常の裏側【ショート】"
+          "なぜ生存率5%？『生ける死者』SCP-1440が財団を12回暴走させた本当の理由【ショート】"
         ]
       },
       "others": {
-        "count": 186,
+        "count": 187,
         "avg_length": 64.7,
         "median_length": 59,
         "question_ratio": 0.35,
         "number_ratio": 0.88,
         "samples": [
+          "7日間でずつ消えたエージェント名簿異常事件 #shorts #SCP #SCP解説",
+          "SCPの最後の一行だけが隔離対象になった理由 #shorts #SCP #SCP解説",
+          "SCP-3288 大雨の真相 あなたの部屋も沈む #shorts #SCP #SCP解説",
           "SCP-7241 収容違反記録から毎回消える頁 #shorts #SCP #SCP解説",
           "なぜこの火山は72時間沈黙し職員が消えるのか #shorts #SCP #SCP解説",
           "RTX5090はで部屋の外から名前を呼ぶのか #shorts #SCP #SCP解説",
           "未来の時刻誰が映る #shorts #SCP #SCP解説",
           "SCP-5800 職員証だけが戻った未解決ファイル #shorts #SCP #SCP解説",
           "なぜ非常灯が消えた3秒に5人目の足音がしたのか #shorts #SCP #SCP解説",
-          "SCP-096の顔を見た者に起きた記録消失の真相 #shorts #SCP #SCP解説",
-          "SCP-2006 笑い声を聞いた12名に起きた異変 #shorts #SCP #SCP解説",
-          "SCP-███ 持ち出した報告書が3日後に戻った #shorts #SCP #SCP解説",
-          "SCP-2140 閲覧後、8人の職員記録が別人に置換された #shorts #SCP #SCP解説"
+          "SCP-096の顔を見た者に起きた記録消失の真相 #shorts #SCP #SCP解説"
         ]
       }
     },
     "posting_time": {
       "top_hour_utc": 0,
       "top_weekday": 3,
-      "n": 12
+      "n": 13
     },
     "success_videos": [
       {
         "video_id": "eTMuSrunkIY",
         "title": "一口SCP：SCP-006-JP「あけろ」ドアの向こうの記録 #shorts #SCP #SCP解説",
-        "views": 986,
-        "ctr": 0.019064124783362217,
-        "avg_view_percentage": 67.59
+        "views": 988,
+        "ctr": 0.0189328743545611,
+        "avg_view_percentage": 67.77
+      },
+      {
+        "video_id": "ELVk9qVJ5gI",
+        "title": "SCP-2525「異常なゲーム」— 死亡記録23件、勝利条件は未達成【ショート】",
+        "views": 881,
+        "ctr": 0.009771986970684038,
+        "avg_view_percentage": 51.76
       },
       {
         "video_id": "81rERf2QdEo",
         "title": "SCP-1690「廃棄された文明の記録」— 発掘地点12か所、通信断絶から83年後に収容【ショート】",
         "views": 1075,
-        "ctr": 0.015418502202643172,
+        "ctr": 0.015384615384615385,
         "avg_view_percentage": 86.52
       },
       {
@@ -365,22 +372,22 @@
   },
   "pokemon-lab": {
     "channel_id": "pokemon-lab",
-    "generated_at": 1788790235,
+    "generated_at": 1788876927,
     "sample_size": {
-      "total": 53,
+      "total": 56,
       "success": 4,
-      "others": 49
+      "others": 52
     },
     "metrics": {
       "success_avg": {
-        "views": 780.8,
-        "ctr": 0.0574,
-        "avg_view_percentage": 75.38
+        "views": 500.8,
+        "ctr": 0.0588,
+        "avg_view_percentage": 81.46
       },
       "others_avg": {
-        "views": 619.2,
-        "ctr": 0.0112,
-        "avg_view_percentage": 40.16
+        "views": 615.4,
+        "ctr": 0.0069,
+        "avg_view_percentage": 40.48
       }
     },
     "title_features": {
@@ -398,22 +405,22 @@
         ]
       },
       "others": {
-        "count": 49,
+        "count": 52,
         "avg_length": 46.1,
         "median_length": 46,
         "question_ratio": 0.73,
-        "number_ratio": 0.67,
+        "number_ratio": 0.65,
         "samples": [
+          "アンノーン28種類コンプしても完成にならない!? #shorts #ポケモン #ポケモン雑学",
+          "ドラパルト、子どもを音速超えで撃ち出すってマジ!? #shorts #ポケモン #ポケモン雑学",
+          "ソーナンスが反撃しかできない設計の狙いが深すぎる #shorts #ポケモン #ポケモン雑学",
           "ロケット団の幹部だけ口調が別キャラ級？3作品で徹底比較の本当 #shorts #ポケモン #ポケモン雑学",
           "イーブイの昼夜進化、エーフィとブラッキーに分かれた理由 #shorts #ポケモン #ポケモン雑学",
           "四天王の呼び名が定着した25年の謎 #shorts #ポケモン #ポケモン雑学",
           "ジムリーダーのタイプ縛り、実は町の役目だった！？ #shorts #ポケモン #ポケモン雑学",
           "ドードリオの首が3つに増えた理由、種族値に出てた説 #shorts #ポケモン #ポケモン雑学",
           "3秒でわかる？ポリゴンがテレビから消えた本当の理由 #shorts #ポケモン #ポケモン雑学",
-          "ハピナスHP255・特防なのに防御衝撃 #shorts #ポケモン #ポケモン雑学",
-          "君のサンダースだけ3個必要だった時代 #shorts #ポケモン #ポケモン雑学",
-          "初代図鑑にだけけつばんが現れた本当の理由 #shorts #ポケモン #ポケモン雑学",
-          "ポケモンセンターが治療費0円で成り立つ理由がヤバい #shorts #ポケモン #ポケモン雑学"
+          "ハピナスHP255・特防なのに防御衝撃 #shorts #ポケモン #ポケモン雑学"
         ]
       }
     },
@@ -433,9 +440,9 @@
       {
         "video_id": "nkuEsmXgA14",
         "title": "なぜコイキングは種族値200なのか？進化前だけ弱すぎる本当の理由がヤバすぎた【ショート】",
-        "views": 1132,
-        "ctr": 0.022222222222222223,
-        "avg_view_percentage": 68.07
+        "views": 12,
+        "ctr": 0.027777777777777776,
+        "avg_view_percentage": 92.4
       },
       {
         "video_id": "EOlAL1utyiM",
@@ -457,32 +464,33 @@
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
-    "generated_at": 1788790452,
+    "generated_at": 1788877241,
     "sample_size": {
-      "total": 51,
-      "success": 5,
-      "others": 46
+      "total": 54,
+      "success": 6,
+      "others": 48
     },
     "metrics": {
       "success_avg": {
-        "views": 395.2,
-        "ctr": 0.0251,
-        "avg_view_percentage": 71.72
+        "views": 508.7,
+        "ctr": 0.0244,
+        "avg_view_percentage": 68.91
       },
       "others_avg": {
-        "views": 674.4,
-        "ctr": 0.0124,
-        "avg_view_percentage": 38.85
+        "views": 613.2,
+        "ctr": 0.0117,
+        "avg_view_percentage": 36.03
       }
     },
     "title_features": {
       "success": {
-        "count": 5,
-        "avg_length": 42.4,
+        "count": 6,
+        "avg_length": 42.5,
         "median_length": 39,
-        "question_ratio": 0.8,
-        "number_ratio": 0.2,
+        "question_ratio": 0.83,
+        "number_ratio": 0.17,
         "samples": [
+          "口裂け女の噂はなぜ全国へ？名前を呼べない本当の理由 #shorts #妖怪 #都市伝説",
           "海坊主の正体が怖すぎる — 船を沈める巨大な影は何だったのか【ショート】",
           "妖怪ウォッチのエンマ大王、なぜか『本物』の閻魔と全然違う姿をしている【ショート】",
           "なぜ武士と猫が混ざった？ブシニャンの『本当のルーツ』が怖すぎる理由【ショート】",
@@ -491,31 +499,38 @@
         ]
       },
       "others": {
-        "count": 46,
-        "avg_length": 42.5,
+        "count": 48,
+        "avg_length": 42.3,
         "median_length": 40,
-        "question_ratio": 0.8,
-        "number_ratio": 0.41,
+        "question_ratio": 0.77,
+        "number_ratio": 0.4,
         "samples": [
+          "覚の元ネタが怖すぎる…心を先回りする山の怪物 #shorts #妖怪 #都市伝説",
+          "ろくろ首の正体は飛頭蛮？首が飛ぶ怪異の出どころ #shorts #妖怪 #都市伝説",
+          "鬼の角が「目印」になった千年前の変化 #shorts #妖怪 #都市伝説",
           "なぜ狐は人を化かす妖怪にされたのか？江戸の記録に残る事情 #shorts #妖怪 #都市伝説",
           "人面犬の噂が昭和の学校で生まれた土壌とは… #shorts #妖怪 #都市伝説",
           "百目なのに一つ目？江戸の絵に隠された不気味な変化 #shorts #妖怪 #都市伝説",
           "なぜ妖怪は山を下り里に現れるようになったのか #shorts #妖怪 #都市伝説",
           "小豆洗い、姿を消して「音」だけ残った土地の記録 #shorts #妖怪 #都市伝説",
           "雪女が去り際に名を呼ぶ理由…約束を破った男の末路 #shorts #妖怪 #都市伝説",
-          "キュウビが日本へ渡った理由、知ってる？ #shorts #妖怪 #都市伝説",
-          "口裂け女の噂はなぜ全国へ？名前を呼べない本当の理由 #shorts #妖怪 #都市伝説",
-          "じんめん犬はなぜ笑い話になった？消えた恐怖の噂 #shorts #妖怪 #都市伝説",
-          "雪夜に顔を隠す白粉婆…雪女とは違う恐ろしさ #shorts #妖怪 #都市伝説"
+          "キュウビが日本へ渡った理由、知ってる？ #shorts #妖怪 #都市伝説"
         ]
       }
     },
     "posting_time": {
       "top_hour_utc": 10,
-      "top_weekday": 1,
-      "n": 5
+      "top_weekday": 5,
+      "n": 6
     },
     "success_videos": [
+      {
+        "video_id": "-bmLS2JL1Hk",
+        "title": "口裂け女の噂はなぜ全国へ？名前を呼べない本当の理由 #shorts #妖怪 #都市伝説",
+        "views": 1074,
+        "ctr": 0.02040816326530612,
+        "avg_view_percentage": 56.10000000000001
+      },
       {
         "video_id": "l68CzSRJ6WU",
         "title": "海坊主の正体が怖すぎる — 船を沈める巨大な影は何だったのか【ショート】",
@@ -526,15 +541,15 @@
       {
         "video_id": "Rmx-FN9VhUE",
         "title": "妖怪ウォッチのエンマ大王、なぜか『本物』の閻魔と全然違う姿をしている【ショート】",
-        "views": 42,
-        "ctr": 0.020887728459530026,
-        "avg_view_percentage": 58.53
+        "views": 44,
+        "ctr": 0.020942408376963352,
+        "avg_view_percentage": 57.25
       },
       {
         "video_id": "724R2jGp97Q",
         "title": "なぜ武士と猫が混ざった？ブシニャンの『本当のルーツ』が怖すぎる理由【ショート】",
         "views": 10,
-        "ctr": 0.02127659574468085,
+        "ctr": 0.021897810218978103,
         "avg_view_percentage": 62.24000000000001
       },
       {
@@ -557,63 +572,64 @@
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
-    "generated_at": 1788789735,
+    "generated_at": 1788876148,
     "sample_size": {
-      "total": 47,
-      "success": 5,
-      "others": 42
+      "total": 50,
+      "success": 6,
+      "others": 44
     },
     "metrics": {
       "success_avg": {
-        "views": 1217.2,
-        "ctr": 0.0352,
-        "avg_view_percentage": 69.53
+        "views": 1234.2,
+        "ctr": 0.0355,
+        "avg_view_percentage": 66.52
       },
       "others_avg": {
-        "views": 796.1,
-        "ctr": 0.0124,
-        "avg_view_percentage": 36.86
+        "views": 747.6,
+        "ctr": 0.0193,
+        "avg_view_percentage": 36.82
       }
     },
     "title_features": {
       "success": {
-        "count": 5,
-        "avg_length": 24.4,
+        "count": 6,
+        "avg_length": 24.2,
         "median_length": 22,
-        "question_ratio": 0.4,
-        "number_ratio": 0.2,
+        "question_ratio": 0.33,
+        "number_ratio": 0.17,
         "samples": [
           "なぜPS5 Proに期待する？値段で胃が痛い理由とはw【ショート】",
           "なんか靴下だけ消えるんやがw【ショート】",
           "ワイ、彼女いない歴＝年齢やけど質問ある？【ショート】",
+          "なんかPCの画面チカチカするんやが【ショート】",
           "コンビニで一番いらん商品あげてけ【ショート】",
           "ワイの今日の昼飯を当てるスレw【ショート】"
         ]
       },
       "others": {
-        "count": 42,
-        "avg_length": 33.6,
-        "median_length": 31,
+        "count": 44,
+        "avg_length": 34.4,
+        "median_length": 33,
         "question_ratio": 0.57,
-        "number_ratio": 0.69,
+        "number_ratio": 0.73,
         "samples": [
+          "Apple新製品予想、また本命を外して財布が逝く民ｗ #shorts #2ch #面白いスレ",
+          "ワイのPCで彼女が凍った本当の理由w💦 #shorts #2ch #面白いスレ",
+          "なぜファミマで謎の商品を買ってしまうのか？草 #shorts #2ch #面白いスレ",
           "ワイ、毎月大金をムダにしてるけど質問ある？ #shorts #2ch #面白いスレ",
           "大学サークルで語り継がれる伝説、尾ひれがヤバすぎるw #shorts #2ch #面白いスレ",
           "湯けむりの奥全員停止 #shorts #2ch #面白いスレ",
           "ワイ、保健体育歴3年やけど質問ある？w💦 #shorts #2ch #面白いスレ",
           "3回目の店謎の予約名 #shorts #2ch #面白いスレ",
           "3秒で凍結何言った #shorts #2ch #面白いスレ",
-          "💦ワイ、同棲3年目やけど質問ある？💦 #shorts #2ch #面白いスレ",
-          "なぜ親は無言で机を閉めたのか…見つかって終わった物とは？ #shorts #2ch #面白いスレ",
-          "🤣ワイ健康診断歴3年やけど正体あるw🍑 #shorts #2ch #面白いスレ",
-          "なぜ友達の風呂で3回もやらかしたのか？ｗ #shorts #2ch #面白いスレ"
+          "💦ワイ、同棲3年目やけど質問ある？💦 #shorts #2ch #面白いスレ"
         ]
       }
     },
     "posting_time": {
-      "top_hour_utc": 12,
+      "top_hour_utc": 0,
       "top_weekday": 5,
-      "n": 5
+      "n": 6
     },
     "success_videos": [
       {
@@ -638,6 +654,13 @@
         "avg_view_percentage": 64.19
       },
       {
+        "video_id": "WDnmFqiOqpU",
+        "title": "なんかPCの画面チカチカするんやが【ショート】",
+        "views": 1319,
+        "ctr": 0.037037037037037035,
+        "avg_view_percentage": 51.49
+      },
+      {
         "video_id": "MASXwV-ZkDc",
         "title": "コンビニで一番いらん商品あげてけ【ショート】",
         "views": 1086,
@@ -657,7 +680,7 @@
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1788790153,
+    "generated_at": 1788876820,
     "sample_size": {
       "total": 17,
       "success": 5,
@@ -757,7 +780,7 @@
   },
   "akashic-librarian": {
     "channel_id": "akashic-librarian",
-    "generated_at": 1788789736,
+    "generated_at": 1788876149,
     "sample_size": {
       "total": 17,
       "success": 5,
@@ -857,7 +880,7 @@
   },
   "clip-animal": {
     "channel_id": "clip-animal",
-    "generated_at": 1788789737,
+    "generated_at": 1788876150,
     "sample_size": {
       "total": 3,
       "success": 3,
@@ -929,74 +952,75 @@
   },
   "clip-fukada": {
     "channel_id": "clip-fukada",
-    "generated_at": 1788789773,
+    "generated_at": 1788876201,
     "sample_size": {
-      "total": 11,
+      "total": 13,
       "success": 2,
-      "others": 9
+      "others": 11
     },
     "metrics": {
       "success_avg": {
-        "views": 10472.0,
-        "ctr": 0.0568,
-        "avg_view_percentage": 78.44
+        "views": 195.0,
+        "ctr": 0.133,
+        "avg_view_percentage": 70.75
       },
       "others_avg": {
-        "views": 51.0,
-        "ctr": 0.069,
-        "avg_view_percentage": 23.42
+        "views": 2119.5,
+        "ctr": 0.0501,
+        "avg_view_percentage": 26.97
       }
     },
     "title_features": {
       "success": {
         "count": 2,
-        "avg_length": 31.0,
-        "median_length": 31,
+        "avg_length": 30.0,
+        "median_length": 30,
         "question_ratio": 0.0,
-        "number_ratio": 0.5,
+        "number_ratio": 0.0,
         "samples": [
-          "“時間停止”で使うスタジオ #shorts #切り抜き",
-          "登録者9万人のサブチャンネルは 収益化済み #shorts #切り抜き"
+          "フェラは結構大変だったりする #shorts #切り抜き",
+          "プロテインにマカとロイヤルゼリー入り #shorts #切り抜き"
         ]
       },
       "others": {
-        "count": 9,
-        "avg_length": 31.4,
+        "count": 11,
+        "avg_length": 31.1,
         "median_length": 31,
         "question_ratio": 0.0,
-        "number_ratio": 0.11,
+        "number_ratio": 0.27,
         "samples": [
-          "フェラは結構大変だったりする #shorts #切り抜き",
-          "プロテインにマカとロイヤルゼリー入り #shorts #切り抜き",
-          "初めての体験で めっちゃ囲まれた #shorts #切り抜き",
+          "カミソリで剃った結果、地獄だった #shorts #切り抜き",
+          "寝ながら腹筋を3部位鍛える #shorts #切り抜き",
           "クレンジングで落とし切らないと 洗顔しても落ちにくい #shorts #切り抜き",
           "毎日体重を記録して 増減を意識する #shorts #切り抜き",
           "どの下地よりも 圧倒的に崩れにくかった #shorts #切り抜き",
           "部活は1日で辞めました #shorts #切り抜き",
           "今の自分のまま 学生時代に戻りたい #shorts #切り抜き",
-          "夜の相性が良いと なかなか抜けられない #shorts #切り抜き"
+          "夜の相性が良いと なかなか抜けられない #shorts #切り抜き",
+          "初めての体験で めっちゃ囲まれた #shorts #切り抜き",
+          "“時間停止”で使うスタジオ #shorts #切り抜き"
         ]
       }
     },
     "posting_time": {
-      "top_hour_utc": 3,
-      "top_weekday": 3,
+      "top_hour_utc": 11,
+      "top_weekday": 2,
       "n": 2
     },
     "success_videos": [
       {
-        "video_id": "PMRxu_8hIt4",
-        "title": "“時間停止”で使うスタジオ #shorts #切り抜き",
-        "views": 15922,
-        "ctr": 0.05741537310641481,
-        "avg_view_percentage": 82.83
+        "video_id": "x9YpMzli-zo",
+        "title": "フェラは結構大変だったりする #shorts #切り抜き",
+        "views": 229,
+        "ctr": 0.20625,
+        "avg_view_percentage": 69.54
       },
       {
-        "video_id": "TJacs9E879U",
-        "title": "登録者9万人のサブチャンネルは 収益化済み #shorts #切り抜き",
-        "views": 5022,
-        "ctr": 0.05612244897959184,
-        "avg_view_percentage": 74.05
+        "video_id": "8gRQoPw5V_k",
+        "title": "プロテインにマカとロイヤルゼリー入り #shorts #切り抜き",
+        "views": 161,
+        "ctr": 0.059782608695652176,
+        "avg_view_percentage": 71.96
       }
     ],
     "gpt_insights": null,
@@ -1004,107 +1028,83 @@
   },
   "clip-kaneko": {
     "channel_id": "clip-kaneko",
-    "generated_at": 1788789918,
+    "generated_at": 1788876295,
     "sample_size": {
-      "total": 27,
-      "success": 6,
-      "others": 21
+      "total": 30,
+      "success": 3,
+      "others": 27
     },
     "metrics": {
       "success_avg": {
-        "views": 1245.8,
-        "ctr": 0.0297,
-        "avg_view_percentage": 43.16
+        "views": 769.3,
+        "ctr": 0.0865,
+        "avg_view_percentage": 76.03
       },
       "others_avg": {
-        "views": 769.0,
-        "ctr": 0.032,
-        "avg_view_percentage": 39.9
+        "views": 791.6,
+        "ctr": 0.0221,
+        "avg_view_percentage": 33.3
       }
     },
     "title_features": {
       "success": {
-        "count": 6,
-        "avg_length": 32.8,
-        "median_length": 33,
+        "count": 3,
+        "avg_length": 31.7,
+        "median_length": 31,
         "question_ratio": 0.0,
-        "number_ratio": 0.17,
+        "number_ratio": 0.67,
         "samples": [
-          "夏のデート感を詰め込んだ一冊 #shorts #切り抜き",
-          "友達の好きな人を狙うなら 友達をやめる #shorts #切り抜き",
-          "おすすめで自分の名前を出して撃沈 #shorts #切り抜き",
-          "自己肯定感が急に 薄っぺらくなった時期 #shorts #切り抜き",
-          "白いゲーミングPCは 中の色まで変えられる #shorts #切り抜き",
-          "6年間ほぼ話してないのに ずっと好きな理由が衝撃 #shorts #切り抜き"
+          "「必要とされたい」からこその悩み #shorts #切り抜き",
+          "6年間隠した恋が 都合のいい関係に #shorts #切り抜き",
+          "花火大会を2人で行けたら もうほぼ脈あり #shorts #切り抜き"
         ]
       },
       "others": {
-        "count": 21,
+        "count": 27,
         "avg_length": 33.7,
-        "median_length": 34,
+        "median_length": 33,
         "question_ratio": 0.0,
-        "number_ratio": 0.14,
+        "number_ratio": 0.11,
         "samples": [
-          "ストレスが溜まったら 泣いて寝るタイプ #shorts #切り抜き",
-          "「おはよう」から「おやすみ」まで デート気分を詰め込んだ一冊 #shorts #切り抜き",
-          "6年間隠した恋が 都合のいい関係に #shorts #切り抜き",
-          "復縁したいなら 「もう一度チャンスをください」 #shorts #切り抜き",
-          "花火大会を2人で行けたら もうほぼ脈あり #shorts #切り抜き",
-          "無人島に持っていくなら ドラえもんのポケット #shorts #切り抜き",
-          "【金子みゆ】アイドルが正体隠して斉藤さんやったらやばすぎたw #shorts",
-          "【金子みゆ】現役アイドルのぼっち一蘭が可愛すぎるw #shorts",
-          "年配夫婦の腕組みペアルックにほっこり #shorts #切り抜き",
-          "周りが気まずくて 撮影を始められない #shorts #切り抜き"
+          "身長を測ったら161cmだった #shorts #切り抜き",
+          "愛用中のパックが プレゼントに入ってた #shorts #切り抜き",
+          "PayPayが使えない店で 現金を持っていなかった #shorts #切り抜き",
+          "70歳を過ぎて気づいた 人それぞれの受け止め方 #shorts #切り抜き",
+          "サッカーに詳しい人は 恋愛対象として嬉しい #shorts #切り抜き",
+          "最近出た新曲が 一番好きな曲を更新した #shorts #切り抜き",
+          "斉藤さん企画を終え TikTokerとして決意表明 #shorts #切り抜き",
+          "白いゲーミングPCは 中の色まで変えられる #shorts #切り抜き",
+          "恋愛を体験できる一冊に #shorts #切り抜き",
+          "行事を一緒に乗り越えると 恋が生まれやすい #shorts #切り抜き"
         ]
       }
     },
     "posting_time": {
-      "top_hour_utc": 5,
-      "top_weekday": 4,
-      "n": 6
+      "top_hour_utc": 11,
+      "top_weekday": 5,
+      "n": 3
     },
     "success_videos": [
       {
-        "video_id": "OqCWmZF5SJw",
-        "title": "夏のデート感を詰め込んだ一冊 #shorts #切り抜き",
-        "views": 1443,
-        "ctr": 0.023809523809523808,
-        "avg_view_percentage": 45.16
+        "video_id": "Lta6vjjEeok",
+        "title": "「必要とされたい」からこその悩み #shorts #切り抜き",
+        "views": 2,
+        "ctr": 0.16,
+        "avg_view_percentage": 100.0
       },
       {
-        "video_id": "AjaSglQPxu4",
-        "title": "友達の好きな人を狙うなら 友達をやめる #shorts #切り抜き",
-        "views": 1235,
-        "ctr": 0.022222222222222223,
-        "avg_view_percentage": 38.1
+        "video_id": "ZuI-kOEL5ys",
+        "title": "6年間隠した恋が 都合のいい関係に #shorts #切り抜き",
+        "views": 1172,
+        "ctr": 0.04395604395604396,
+        "avg_view_percentage": 54.56999999999999
       },
       {
-        "video_id": "qTTMieAfc0I",
-        "title": "おすすめで自分の名前を出して撃沈 #shorts #切り抜き",
-        "views": 1213,
-        "ctr": 0.05172413793103448,
-        "avg_view_percentage": 40.64
-      },
-      {
-        "video_id": "vF6ws8695ug",
-        "title": "自己肯定感が急に 薄っぺらくなった時期 #shorts #切り抜き",
-        "views": 1206,
-        "ctr": 0.012987012987012988,
-        "avg_view_percentage": 38.53
-      },
-      {
-        "video_id": "dxph90B2w4o",
-        "title": "白いゲーミングPCは 中の色まで変えられる #shorts #切り抜き",
-        "views": 1194,
-        "ctr": 0.03731343283582089,
-        "avg_view_percentage": 39.0
-      },
-      {
-        "video_id": "8sNI3tItIck",
-        "title": "6年間ほぼ話してないのに ずっと好きな理由が衝撃 #shorts #切り抜き",
-        "views": 1184,
-        "ctr": 0.03007518796992481,
-        "avg_view_percentage": 57.550000000000004
+        "video_id": "91CoLJI21qI",
+        "title": "花火大会を2人で行けたら もうほぼ脈あり #shorts #切り抜き",
+        "views": 1134,
+        "ctr": 0.05555555555555555,
+        "avg_view_percentage": 73.52
       }
     ],
     "gpt_insights": null,
@@ -1112,75 +1112,75 @@
   },
   "clip-lab": {
     "channel_id": "clip-lab",
-    "generated_at": 1788789953,
+    "generated_at": 1788876485,
     "sample_size": {
-      "total": 16,
+      "total": 18,
       "success": 2,
-      "others": 14
+      "others": 16
     },
     "metrics": {
       "success_avg": {
-        "views": 6930.0,
-        "ctr": 0.0584,
-        "avg_view_percentage": 74.08
+        "views": 7041.0,
+        "ctr": 0.0944,
+        "avg_view_percentage": 93.62
       },
       "others_avg": {
-        "views": 1443.9,
-        "ctr": 0.0379,
-        "avg_view_percentage": 33.88
+        "views": 1764.9,
+        "ctr": 0.0115,
+        "avg_view_percentage": 37.93
       }
     },
     "title_features": {
       "success": {
         "count": 2,
-        "avg_length": 32.0,
-        "median_length": 32,
+        "avg_length": 31.5,
+        "median_length": 31,
         "question_ratio": 0.0,
         "number_ratio": 0.5,
         "samples": [
-          "100点を10個より 60点を1000個作れ #shorts #切り抜き",
+          "弟を亡くした悲しみは 6年経っても消えない #shorts #切り抜き",
           "SNSをやる人は天才じゃない #shorts #切り抜き"
         ]
       },
       "others": {
-        "count": 14,
-        "avg_length": 32.4,
+        "count": 16,
+        "avg_length": 32.2,
         "median_length": 32,
         "question_ratio": 0.0,
-        "number_ratio": 0.36,
+        "number_ratio": 0.31,
         "samples": [
+          "リアルロボの操縦席は 腰の位置にある #shorts #切り抜き",
+          "米国景気は 良くないかもしれない #shorts #切り抜き",
           "資産500万円で一生暮らすのは厳しい #shorts #切り抜き",
           "視聴データが導く 「定番ストーリー」 #shorts #切り抜き",
           "アラフォー資産500万なら まず生活を優先 #shorts #切り抜き",
-          "弟を亡くした悲しみは 6年経っても消えない #shorts #切り抜き",
           "刑務所行きを恐れ 暴力団は来なくなった #shorts #切り抜き",
           "男性の被害は 事件化されにくい #shorts #切り抜き",
           "向いていることを やり続ければいい #shorts #切り抜き",
           "株を渡されない社長は いつでもクビになれる #shorts #切り抜き",
-          "若者の資産を増やすには 収入を増やすしかない #shorts #切り抜き",
-          "バーコードが通らない偽物だった #shorts #切り抜き"
+          "100点を10個より 60点を1000個作れ #shorts #切り抜き"
         ]
       }
     },
     "posting_time": {
-      "top_hour_utc": 7,
-      "top_weekday": 3,
+      "top_hour_utc": 2,
+      "top_weekday": 6,
       "n": 2
     },
     "success_videos": [
       {
-        "video_id": "hmwRNtzCMgM",
-        "title": "100点を10個より 60点を1000個作れ #shorts #切り抜き",
-        "views": 1128,
-        "ctr": 0.07142857142857142,
-        "avg_view_percentage": 58.36
+        "video_id": "SUNWBLRAj4A",
+        "title": "弟を亡くした悲しみは 6年経っても消えない #shorts #切り抜き",
+        "views": 1349,
+        "ctr": 0.1388888888888889,
+        "avg_view_percentage": 97.44
       },
       {
         "video_id": "0mIQakyhYJE",
         "title": "SNSをやる人は天才じゃない #shorts #切り抜き",
-        "views": 12732,
-        "ctr": 0.045454545454545456,
-        "avg_view_percentage": 89.8
+        "views": 12733,
+        "ctr": 0.05,
+        "avg_view_percentage": 89.79
       }
     ],
     "gpt_insights": null,
@@ -1188,22 +1188,22 @@
   },
   "company-facts": {
     "channel_id": "company-facts",
-    "generated_at": 1788790046,
+    "generated_at": 1788876593,
     "sample_size": {
-      "total": 39,
+      "total": 42,
       "success": 3,
-      "others": 36
+      "others": 39
     },
     "metrics": {
       "success_avg": {
-        "views": 1009.7,
-        "ctr": 0.0456,
-        "avg_view_percentage": 66.94
+        "views": 1012.7,
+        "ctr": 0.048,
+        "avg_view_percentage": 66.93
       },
       "others_avg": {
-        "views": 1119.5,
-        "ctr": 0.0218,
-        "avg_view_percentage": 44.35
+        "views": 1070.1,
+        "ctr": 0.0216,
+        "avg_view_percentage": 45.11
       }
     },
     "title_features": {
@@ -1220,22 +1220,22 @@
         ]
       },
       "others": {
-        "count": 36,
-        "avg_length": 39.3,
-        "median_length": 36,
-        "question_ratio": 0.36,
+        "count": 39,
+        "avg_length": 39.8,
+        "median_length": 37,
+        "question_ratio": 0.33,
         "number_ratio": 0.97,
         "samples": [
+          "ユニクロ店長、売上1億円を任される仕事の実態 #shorts #企業分析 #年収 #転職",
+          "NTTデータの年収905万円、実は在宅勤務の裏側 #shorts #企業分析 #年収 #転職",
+          "大和ハウス工業の年収1000万円超、残業の実態がヤバい #shorts #企業分析 #年収 #転職",
           "日本郵政の年収、職種で2倍差がつく理由 #shorts #企業分析 #年収 #転職",
           "サイゼリヤの原価率が社員年収に与える意外な影響 #shorts #企業分析 #年収 #転職",
           "Apple Japanの年収、実は1,000万円超の実態 #shorts #企業分析 #年収 #転職",
           "伊藤忠商事の平均1753万円、朝型勤務の実態 #shorts #企業分析 #年収 #転職",
           "トヨタ895万円の実態、ルーミー人気を支える社員の本音 #shorts #企業分析 #年収 #転職",
           "東京エレクトロンの年収1272万円、実は転職後に差が出る #shorts #企業分析 #年収 #転職",
-          "キーエンス年収2067万円の内訳、残業37.7時間と評価制度 #shorts #企業分析 #年収 #転職",
-          "東京エレクトロンの年収1272万円、実は株価上昇の裏側 #shorts #企業分析 #年収 #転職",
-          "航空自衛隊千歳の正体、年収400万円台の実態 #shorts #企業分析 #年収 #転職",
-          "日本マクドナルドの年収576万円、その内訳とは #shorts #企業分析 #年収 #転職"
+          "キーエンス年収2067万円の内訳、残業37.7時間と評価制度 #shorts #企業分析 #年収 #転職"
         ]
       }
     },
@@ -1248,21 +1248,21 @@
       {
         "video_id": "kv1KNLaPkWA",
         "title": "星野リゾートの推定年収400万円、業界平均と比べると？ #shorts #企業分析 #年収 #転職",
-        "views": 1038,
-        "ctr": 0.03409090909090909,
-        "avg_view_percentage": 65.93
+        "views": 1045,
+        "ctr": 0.039603960396039604,
+        "avg_view_percentage": 65.89
       },
       {
         "video_id": "dPkVQBSCzXs",
         "title": "三菱商事の平均年収2033万円、その中身 #shorts #企業分析 #年収 #転職",
-        "views": 1982,
-        "ctr": 0.051490514905149054,
+        "views": 1983,
+        "ctr": 0.05305039787798409,
         "avg_view_percentage": 73.48
       },
       {
         "video_id": "nHi44PRzdes",
         "title": "ASUSの年収が本当は気になる ゲーミング売上が約4,800億円【ショート】",
-        "views": 9,
+        "views": 10,
         "ctr": 0.05128205128205128,
         "avg_view_percentage": 61.41
       }

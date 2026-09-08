@@ -1550,6 +1550,64 @@
           "reason": "backend.pipeline.auto_scenario.theme_dedup.blacklist_match で実行"
         }
       ]
+    },
+    {
+      "date": "2026-09-08n",
+      "target": "data/channels/yokai-watch.json",
+      "field": "video_format.short_illustrations.thumbnail_card",
+      "before": "(未設定=有効)",
+      "after": false,
+      "reason": "図解カードの誤マッピング（『木片』→植物 /『山』→地形）。カード高352px=縦18.3%を占めクリック動機ゼロ。本編図解は継続。"
+    },
+    {
+      "date": "2026-09-08n",
+      "target": "data/channels/scp-lab.json",
+      "field": "video_format.short_illustrations.thumbnail_card",
+      "before": "(未設定=有効)",
+      "after": false,
+      "reason": "『名簿の空白』動画に眼アイコン＋『視認体』の無関係カード。暗色で視認性も低い。本編のleaked-document図解は継続。"
+    },
+    {
+      "date": "2026-09-08n",
+      "target": "data/channels/scp-lab.json",
+      "field": "theme_blacklist",
+      "before": 9,
+      "after": 13,
+      "added": [
+        "17名",
+        "17年間",
+        "17年間隠し",
+        "担当者17"
+      ],
+      "reason": "無関係なSCP(1730/4002/166/5000)に同じ『17』フックを使い回し、類似度1.0のペアを6組生んでいた。"
+    },
+    {
+      "date": "2026-09-08n",
+      "target": "data/channels/scp-lab.json",
+      "field": "thumbnail_template.tagline_rules",
+      "before": "(なし)",
+      "after": "3件のルールを新設",
+      "reason": "tagline が『CC BY-SA 3.0』のライセンス表記に占有されていた。ライセンス表記を禁止し、SCP番号を line2/sub_text に必須化（style_hintの推奨では守られなかったため独立ルールへ格上げ）。"
+    },
+    {
+      "date": "2026-09-08n",
+      "target": "data/channels/yokai-watch.json",
+      "field": "theme_seeds",
+      "before": 27,
+      "after": 29,
+      "added": [
+        "濡れ女の正体、なぜ助けようとした者だけが消えるのか",
+        "あかなめの正体が怖すぎる — 江戸の風呂場に本当にいたもの"
+      ],
+      "reason": "登録/1k が2日連続上昇(0.2618→0.3659→0.4845)し『正体』型の効果が確定。同型を継続投入。"
+    },
+    {
+      "date": "2026-09-08n",
+      "target": "(判定のみ)",
+      "field": "genre_blacklist",
+      "before": "-",
+      "after": "追加なし",
+      "reason": "30%ルールで再判定。daily-science ch平均524→閾値157に対し最下位の『日常の違和感』は195で対象外（『宇宙・天体』は登録済）。scp-lab ch平均495→閾値148に対し『財団組織・職員』237は登録済、『対立組織・Kクラス』313はn=1。新規該当なし。"
     }
   ]
 }
