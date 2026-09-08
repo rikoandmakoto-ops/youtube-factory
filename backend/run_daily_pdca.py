@@ -207,12 +207,36 @@ def _view_trends(channel_id: str, max_videos: int = 40,
 
 
 def _dup_check(channel_id: str, videos: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """published 済みタイトル同士の意味的に近いペアを抽出（テーマ重複の検知）。"""
+    """published 済みタイトル同士の意味的に近いペアを抽出（テーマ重複の検知）。
+
+    【2026-09-07】`theme_blacklist` に入れた題材は除外する。
+    blacklist は「もうこの題材は出さない」という**対処済み**の宣言なので、
+    過去の公開分が残っている限り毎日同じペアが再報告され続けていた。
+    レポートの上位8件がそれで埋まると、まだ手を打っていない重複が押し出される。
+    """
     try:
         from pipeline.auto_scenario import theme_dedup as td
     except Exception:
         return []
-    titles = [v.get("title") or "" for v in videos if v.get("title")]
+    blacklist: List[str] = []
+    try:
+        cfg = json.loads((CHANNELS_DIR / f"{channel_id}.json").read_text(encoding="utf-8"))
+        blacklist = [t for t in (cfg.get("theme_blacklist") or []) if isinstance(t, str)]
+    except Exception:
+        blacklist = []
+
+    titles = []
+    for v in videos:
+        t = v.get("title") or ""
+        if not t:
+            continue
+        if blacklist:
+            try:
+                if td.blacklist_match(t, blacklist):
+                    continue
+            except Exception:
+                pass
+        titles.append(t)
     pairs: List[Dict[str, Any]] = []
     for i in range(len(titles)):
         for j in range(i + 1, len(titles)):

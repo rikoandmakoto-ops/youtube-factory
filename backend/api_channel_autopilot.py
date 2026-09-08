@@ -611,7 +611,10 @@ def _pop_or_refill_theme(channel_id: str) -> Optional[Dict[str, str]]:
                     print(f"  ♻️ autopilot dropped dup theme: '{cand_title}' ≈ '{hit[0]}' ({hit[1]:.2f})")
                     continue
             if _ccg is not None and cand_title:
-                xhit = _ccg.blocking_keyword(channel_id, cand_title, limit=xlimit)
+                xhit = _ccg.blocking_keyword(
+                    channel_id, cand_title, limit=xlimit,
+                    key=_ccg.reservation_key(channel_id, cand_title),
+                )
                 if xhit is not None:
                     skipped_cross += 1
                     deferred.append(cand)
@@ -635,7 +638,13 @@ def _pop_or_refill_theme(channel_id: str) -> Optional[Dict[str, str]]:
                 head = cand  # type: ignore[possibly-undefined]
 
         if _ccg is not None and (head.get("title") or "").strip():
-            _ccg.reserve(channel_id, str(head["title"]).strip())
+            # 【2026-09-08】key を渡して「テーマ取り出し時の予約」と「最終タイトル
+            # 確定時の予約」を1本ぶんに束ねる。渡さないと同じ動画が上限2の枠を
+            # 2つ食い、その日の最初の1本が全chから同じ語を締め出す。
+            _ccg.reserve(
+                channel_id, str(head["title"]).strip(),
+                key=_ccg.reservation_key(channel_id, str(head["title"])),
+            )
 
         ap["theme_queue"] = queue
         _save_autopilot(channel_id, ap)

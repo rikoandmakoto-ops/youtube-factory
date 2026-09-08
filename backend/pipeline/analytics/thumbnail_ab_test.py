@@ -70,6 +70,21 @@ def _init_table() -> None:
                     ON thumbnail_ab_tests(status, next_check_at);
                 """
             )
+            # 【2026-09-07】判定に使った指標を記録する列。CTR が取れないときは
+            # 「1日あたり再生数」を代理指標に使うが、その値を last_check_ctr /
+            # channel_avg_ctr に書き戻していたため、CTR(比率) の列に 42〜55 と
+            # いった velocity の実数が入り、19件中18件が単位崩れになっていた。
+            # 単位の違う値は別の列へ分ける。
+            existing = {r["name"] for r in c.execute(
+                "PRAGMA table_info(thumbnail_ab_tests)"
+            ).fetchall()}
+            for col, ddl in (
+                ("last_check_metric", "TEXT"),
+                ("last_check_value", "REAL"),
+                ("baseline_value", "REAL"),
+            ):
+                if col not in existing:
+                    c.execute(f"ALTER TABLE thumbnail_ab_tests ADD COLUMN {col} {ddl}")
             c.commit()
         finally:
             c.close()
@@ -78,8 +93,22 @@ def _init_table() -> None:
 _init_table()
 
 
+# CTR は比率（実測 0.0029〜0.3333）。1 以上は単位崩れ。
+_CTR_COLUMNS = ("last_check_ctr", "channel_avg_ctr")
+
+
 def _now() -> int:
     return int(time.time())
+
+
+def _drop_broken_ratio(value: Any) -> Any:
+    """CTR(比率) の器に入った別尺度の値を落とす。1 以上は単位崩れ。"""
+    if value is None:
+        return None
+    try:
+        return None if float(value) >= 1.0 else value
+    except (TypeError, ValueError):
+        return None
 
 
 def _row_to_dict(row: sqlite3.Row) -> Dict[str, Any]:
@@ -92,6 +121,18 @@ def _row_to_dict(row: sqlite3.Row) -> Dict[str, Any]:
         d["history"] = json.loads(d.pop("history_json") or "[]")
     except Exception:
         d["history"] = []
+    # 【2026-09-08】書き込み側（_update_row）は 09-07 に塞いだが、それ以前に
+    # 入った行と history_json のエントリは壊れた値を抱えたままで、
+    # レポート・UI・switch 履歴にそのまま流れ出る。読み出しでも同じ規則で弾く。
+    # history は列と違って ALTER でも移送できないので、ここが唯一の関門になる。
+    for col in _CTR_COLUMNS:
+        if col in d:
+            d[col] = _drop_broken_ratio(d[col])
+    for entry in d["history"]:
+        if isinstance(entry, dict):
+            for key in ("ctr_at_check", "channel_avg_at_check"):
+                if key in entry:
+                    entry[key] = _drop_broken_ratio(entry[key])
     return d
 
 
@@ -281,6 +322,19 @@ def _update_row(video_id: str, fields: Dict[str, Any]) -> None:
     if not fields:
         return
     fields = dict(fields)
+    # 【2026-09-07】書き戻しの最終関門。CTR 列に比率以外の尺度
+    # （百分率・1日あたり再生数）が入ると切替判定
+    # `last_check_ctr < channel_avg_ctr * 0.8` が丸ごと壊れる。
+    # 読み出し側で弾いても、書き込み側が素通しなら次のチェックでまた入る。
+    for col in _CTR_COLUMNS:
+        v = fields.get(col)
+        if v is None:
+            continue
+        try:
+            if float(v) >= 1.0:
+                fields[col] = None
+        except (TypeError, ValueError):
+            fields[col] = None
     fields["updated_at"] = _now()
     keys = ", ".join(f"{k} = ?" for k in fields.keys())
     args = list(fields.values()) + [video_id]
@@ -515,6 +569,11 @@ def switch_to_next_variant(video_id: str, *, force: bool = False) -> Dict[str, A
     history = t.get("history") or []
     history.append({
         "variant_index": cur,
+        # 【2026-09-07】切替の根拠は「そのとき実際に使った指標」で残す。
+        # CTR 列だけを見ると代理指標で切り替えた回が空欄になる。
+        "metric_at_check": t.get("last_check_metric") or "ctr",
+        "value_at_check": t.get("last_check_value"),
+        "baseline_at_check": t.get("baseline_value"),
         "ctr_at_check": t.get("last_check_ctr"),
         "channel_avg_at_check": t.get("channel_avg_ctr"),
         "switched_at": now,
@@ -563,11 +622,21 @@ def check_one(video_id: str) -> Dict[str, Any]:
         current = _fetch_current_velocity(channel_id, video_id)
         baseline = _channel_median_velocity(channel_id)
 
-    _update_row(video_id, {
-        "last_check_ctr": current if current is not None else 0.0,
-        "channel_avg_ctr": baseline,
+    # 【2026-09-07】単位ごとに列を分ける。last_check_value / baseline_value は
+    # last_check_metric とセットで読む「指標に依らない」列で、
+    # last_check_ctr / channel_avg_ctr は **CTR(比率) 専用**。
+    # 代理指標に落ちた回で CTR 列を上書きすると、直近に取れていた本物の CTR も
+    # velocity の実数で潰れる。
+    writeback: Dict[str, Any] = {
+        "last_check_metric": metric,
+        "last_check_value": current,
+        "baseline_value": baseline,
         "last_checked_at": now,
-    })
+    }
+    if metric == "ctr":
+        writeback["last_check_ctr"] = current if current is not None else 0.0
+        writeback["channel_avg_ctr"] = baseline
+    _update_row(video_id, writeback)
 
     if current is None or baseline <= 0:
         # 判定材料が足りない → 24h 後に再チェック

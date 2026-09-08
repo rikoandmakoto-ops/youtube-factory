@@ -32,6 +32,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 
 from api_phase1 import _state, require_session
+from pipeline.short_title import with_short_suffix
 
 # ── APScheduler は遅延 import（未インストール時の起動失敗を避ける） ──
 try:
@@ -603,7 +604,7 @@ def on_generation_complete(job) -> None:
             "main_video_path": paths["main_video"],
             "short_video_path": paths["short_video"],
             "main_title": main_d.get("title") or job.title,
-            "short_title": short_d.get("title") or (job.title + "【ショート】"),
+            "short_title": short_d.get("title") or with_short_suffix(job.title),
             "main_description": main_d.get("body") or "",
             "short_description": short_d.get("body") or "",
             "tags": tags,
@@ -953,7 +954,7 @@ def _start_single_short_publish(
 
     def _do():
         try:
-            _title = short_d.get("title") or (job.title + "【ショート】")
+            _title = short_d.get("title") or with_short_suffix(job.title)
             res = pair_pub._upload_one(
                 youtube,
                 video_path=short_video,

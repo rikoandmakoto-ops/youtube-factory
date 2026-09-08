@@ -35,6 +35,7 @@ if env_file.exists():
 from channels import ChannelManager  # noqa: E402
 from pipeline import youtube_oauth as yt_oauth  # noqa: E402
 from pipeline import youtube_pair_publisher as pair_pub  # noqa: E402
+from pipeline.short_title import with_short_suffix  # noqa: E402
 
 
 def _find(out_dir: Path, channel_id: str, suffix: str):
@@ -82,7 +83,7 @@ def main() -> int:
 
     desc = pair_pub._read_desc(str(desc_file) if desc_file else None)
     # 説明文に「タイトル:」行が無い通常ケースは autopilot と同じ組み立てにする
-    title = args.title or desc.get("title") or f"{out_dir.name}【ショート】"
+    title = args.title or desc.get("title") or with_short_suffix(out_dir.name)
     privacy = args.privacy or ch.get_publish_settings().get("default_privacy") or "public"
 
     from api_phase4 import _post_auto_comment, _run_post_upload, _with_title_tags

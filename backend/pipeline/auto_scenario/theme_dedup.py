@@ -36,6 +36,21 @@ _FILLER_WORDS = [
     "なぜか", "なぜ", "どうして", "実は", "まとめ", "入門", "現象",
     "のだろうか", "のだろう", "のか", "こと", "もの", "ある", "する", "なる",
     "今すぐ", "衝撃", "驚愕", "閲覧注意",
+    # 【2026-09-08】タイトルの「型」を作る語。話題ではなく煽り方を表す。
+    # 09-08 に全6ch へ「答え提示語（理由/正体/本当の/実は/わけ/なぜ/真相/裏側/実態）を
+    # 全タイトルへ入れる」方針を入れた結果、これらが全動画共通の語になった。
+    # yokai-watch の勝ち型「〇〇の正体／元ネタが怖すぎる」（09-07実測で avg1422 =
+    # 非該当698 の2.04倍）はチャンネル設定が「毎バッチ最低2件」と指定している定型である。
+    # ところが正規化で残っていたため、bigram Jaccard の分子を型が埋め、
+    # _keyword_overlap でも「正体」だけで重み4（文字数²）が入り、題材が全く違う
+    # 2本（ろくろ首 / じんめん犬）が 0.67 に達して重複として落とされていた。
+    # **チャンネルの最良フォーマットを、自分の重複ゲートが潰していた。**
+    # 「ショート」(08-23)・ハッシュタグ(09-06) と同型の誤検出で、閾値をいじっても直らない。
+    # 題材語（河童・雪女・ろくろ首…）は残るので、本当に同じ題材なら今も 1.0 で捕まる。
+    # 長い語から順に消す（replace を順に掛けるため）。
+    "の正体が怖すぎる", "の元ネタが怖すぎる", "が怖すぎる", "怖すぎる",
+    "の元ネタ", "元ネタ", "の正体", "正体",
+    "の真相", "真相", "の実態", "実態", "の裏側", "裏側", "本当の", "わけ",
 ]
 
 # ハッシュタグ（`#shorts` / `#架空論文` / `#切り抜き` 等）。**投稿タイトルの末尾に
@@ -70,7 +85,7 @@ _ZEN2HAN = {c: chr(ord(c) - 0xFEE0) for c in
             [chr(o) for o in range(0xFF01, 0xFF5F)]}
 
 
-def normalize_title(title: str) -> str:
+def normalize_title(title: str, *, strip_filler: bool = True) -> str:
     """タイトルを比較用に正規化する。
 
     手順: 全角→半角・小文字化 → **ハッシュタグ除去** → 括弧/装飾除去 →
@@ -78,6 +93,13 @@ def normalize_title(title: str) -> str:
 
     ハッシュタグは句読点除去より**先**に落とす。後だと空白が消えてタグの終端が
     分からなくなり、`#shorts` 以降が本文と地続きになってしまう。
+
+    `strip_filler=False` は **theme_blacklist の照合専用**。定型句の除去は
+    「話題どうしを比べる」ための処理であって、人が明示的に書いた禁止語に
+    掛けてよいものではない。掛けると禁止語のほうが削れて、残った短い断片が
+    素の部分一致で暴発する（実測: `鬼の元ネタ` の `の元ネタ` が定型句として
+    消えて `鬼` になり、鬼を含む無関係なテーマを全部ブロックした。
+    SCP-173 が SCP-1730〜1739 を巻き添えにしたのと同じ壊れ方）。
     """
     if not title:
         return ""
@@ -86,8 +108,9 @@ def normalize_title(title: str) -> str:
     t = _strip_hashtags(t)
     t = _BRACKET_RE.sub("", t)
     t = _PUNCT_RE.sub("", t)
-    for w in _FILLER_WORDS:
-        t = t.replace(w, "")
+    if strip_filler:
+        for w in _FILLER_WORDS:
+            t = t.replace(w, "")
     return t
 
 
@@ -134,7 +157,8 @@ def blacklist_match(title: str, blacklist: Sequence[str]) -> Optional[str]:
     if not blacklist:
         return None
     raw = str(title or "")
-    norm = normalize_title(raw)
+    # 禁止語の照合では定型句を削らない（→ normalize_title の strip_filler）。
+    norm = normalize_title(raw, strip_filler=False)
     for term in blacklist:
         if not isinstance(term, str):
             continue
@@ -152,10 +176,11 @@ def blacklist_match(title: str, blacklist: Sequence[str]) -> Optional[str]:
                 print(f"  ⚠️ theme_blacklist の正規表現が不正なので無視します: {term}")
             continue
         if term.startswith(_BLACKLIST_EXACT_PREFIX):
-            if norm and normalize_title(term[len(_BLACKLIST_EXACT_PREFIX):]) == norm:
+            if norm and normalize_title(term[len(_BLACKLIST_EXACT_PREFIX):],
+                                        strip_filler=False) == norm:
                 return term
             continue
-        nt = normalize_title(term)
+        nt = normalize_title(term, strip_filler=False)
         if nt and norm and _digit_safe_contains(nt, norm):
             return term
     return None

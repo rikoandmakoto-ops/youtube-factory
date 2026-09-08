@@ -75,12 +75,48 @@ class CrossChannelGateTest(unittest.TestCase):
         ccg._STATE_PATH = self._orig
         self._tmp.cleanup()
 
-    def test_third_use_of_the_same_keyword_is_blocked(self):
+    def test_third_use_of_a_topic_keyword_is_blocked(self):
+        self.assertEqual(ccg.check_and_reserve("scp-lab", "ファミマの収容記録")[0], True)
+        self.assertEqual(ccg.check_and_reserve("yokai-watch", "ファミマの言い伝え")[0], True)
+        ok, hit = ccg.check_and_reserve("pokemon-lab", "ファミマの限定グッズ")
+        self.assertFalse(ok)
+        self.assertEqual(hit[0], "ファミマ")
+
+    def test_answer_markers_get_a_larger_daily_budget(self):
+        """答え提示語は話題語より上限が高い（→ ANSWER_MARKER_DAILY_LIMIT）。
+
+        6ch × 3枠 = 18本/日 に対し 9語 × 上限2 = 18 では余裕がゼロで、
+        少しでも偏ると必ずブロックが出る。共食いするのは題材であって
+        「正体」のような煽り語ではないので、語の枠だけ広げてある。
+        """
+        self.assertGreater(ccg.ANSWER_MARKER_DAILY_LIMIT, ccg.KEYWORD_DAILY_LIMIT)
         self.assertEqual(ccg.check_and_reserve("scp-lab", "収容違反の正体")[0], True)
         self.assertEqual(ccg.check_and_reserve("yokai-watch", "河童の正体")[0], True)
-        ok, hit = ccg.check_and_reserve("pokemon-lab", "ミュウツーの正体")
+        # 3本目までは通る
+        self.assertEqual(ccg.check_and_reserve("pokemon-lab", "ミュウツーの正体")[0], True)
+        ok, hit = ccg.check_and_reserve("daily-science", "しゃっくりの正体")
         self.assertFalse(ok)
         self.assertEqual(hit[0], "正体")
+
+    def test_one_generation_consumes_only_one_slot(self):
+        """1本の生成は、題名が書き換わっても枠を1つしか使わない。
+
+        テーマ取り出し時（キューの題名）と最終タイトル確定時（LLM が書き直した
+        題名）で予約が2回走る。key が無いと別物として積まれ、1本で枠を2つ食う。
+        09-07 に横断ゲートが114回発動した主因。
+        """
+        key = ccg.reservation_key("daily-science", "喉が鉄の味になる正体")
+        ccg.reserve("daily-science", "喉が鉄の味になる正体", key=key)
+        ccg.reserve("daily-science", "走った後の鉄味、その正体", key=key)
+        entries = (ccg._load().get("used") or {}).get("正体") or []
+        self.assertEqual(len(entries), 1)
+
+    def test_rewriting_a_title_releases_the_dropped_keyword(self):
+        """書き直しで語が消えたら、その語の枠は返る。"""
+        key = ccg.reservation_key("scp-lab", "収容違反の正体")
+        ccg.reserve("scp-lab", "収容違反の正体", key=key)
+        ccg.reserve("scp-lab", "収容違反で何が起きたか", key=key)
+        self.assertEqual((ccg._load().get("used") or {}).get("正体"), None)
 
     def test_unrelated_titles_are_not_blocked(self):
         for cid, t in [("a", "河童の正体"), ("b", "天狗の正体")]:

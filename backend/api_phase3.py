@@ -23,6 +23,7 @@ from pydantic import BaseModel, Field
 from api_phase1 import _state, require_session
 from pipeline import youtube_oauth as yt_oauth
 from pipeline import youtube_pair_publisher as pair_pub
+from pipeline.short_title import with_short_suffix
 
 # ── 任意依存（Google API） ──
 try:
@@ -787,7 +788,7 @@ def _resolve_pair_inputs(req: PublishPairRequest) -> Dict[str, Any]:
             main_desc = main_desc if main_desc is not None else d["body"]
         if not short_title or not short_desc:
             d = pair_pub._read_desc(paths["short_desc_file"])
-            short_title = short_title or d["title"] or (job.get("title", "") + "【ショート】")
+            short_title = short_title or d["title"] or with_short_suffix(job.get("title", ""))
             short_desc = short_desc if short_desc is not None else d["body"]
 
     # チャンネル設定からデフォルト値を補完
@@ -839,7 +840,7 @@ def _resolve_pair_inputs(req: PublishPairRequest) -> Dict[str, Any]:
         "main_thumb": main_thumb,
         "short_thumb": short_thumb,
         "main_title": main_title or "メイン動画",
-        "short_title": short_title or (main_title or "ショート") + "【ショート】",
+        "short_title": short_title or with_short_suffix(main_title or "ショート"),
         "main_description": main_desc or "",
         "short_description": short_desc or "",
         "tags": tags,

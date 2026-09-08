@@ -1172,9 +1172,14 @@ class ScenarioGenerator:
         if not title:
             return
 
-        hit = _ccg.blocking_keyword(channel.id, title)
+        # 【2026-09-08】テーマ取り出し時（api_channel_autopilot）と同じ key を使う。
+        # ここは LLM が書き直した題名で予約するので、key が無いと同じ1本が
+        # 別物として2枠を食い、上限2の横断ゲートが1本で埋まる。
+        key = _ccg.reservation_key(channel.id, (theme or {}).get("title") or title)
+
+        hit = _ccg.blocking_keyword(channel.id, title, key=key)
         if hit is None:
-            _ccg.reserve(channel.id, title)
+            _ccg.reserve(channel.id, title, key=key)
             result["cross_channel_keywords"] = {"ok": True}
             return
 
@@ -1191,7 +1196,7 @@ class ScenarioGenerator:
             if not cand:
                 break
             current = cand
-            hit = _ccg.blocking_keyword(channel.id, current)
+            hit = _ccg.blocking_keyword(channel.id, current, key=key)
             print(f"  ↻ 横断語の再生成 {attempt + 1}/2: "
                   f"[{'OK' if hit is None else hit[0]}] {current}")
             if hit is None:
@@ -1213,7 +1218,7 @@ class ScenarioGenerator:
         if current and current != original:
             result.setdefault("original_title", original)
             result["title"] = current
-        _ccg.reserve(channel.id, result.get("title") or original)
+        _ccg.reserve(channel.id, result.get("title") or original, key=key)
         result["cross_channel_keywords"] = {
             "ok": hit is None,
             "blocked_keyword": hit[0] if hit else None,

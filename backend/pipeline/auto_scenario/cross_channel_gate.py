@@ -18,8 +18,22 @@
     - 「予約（reserve）」は実際にテーマを取り出した瞬間に行う。生成に失敗しても
       枠が1つ消えるだけで、翌日にはリセットされるので実害は無い。
 
+【2026-09-08】1本の動画が枠を2つ食っていた:
+    1本の生成につき予約が **2回** 走る。テーマ取り出し時（`_pop_or_refill_theme`）が
+    キューの題名で、最終タイトル確定時（`generator._enforce_cross_channel_keywords`）が
+    LLM が書き直した題名で予約する。リトライ除外は (channel, title) の完全一致だったので、
+    書き直しで文字列が変われば別物として積まれる。実測（09-08 の状態ファイル）:
+
+        正体   daily-science 06:45「…喉が鉄の味になる正体は血液ではない」
+               daily-science 06:47「…あなたの肺で何が？0.1%の正体」  ← 同じ1本
+
+    上限2に対して1本で2枠なので、**その日の最初の1本が全chの「正体」を締め出す**。
+    09-07 に横断ゲートが114回発動したのはこれが主因で、キーワードが人気だからではない。
+    対策として予約に `key`（＝1本の生成を指す識別子。既定はテーマ題名）を持たせ、
+    同じ `key` の再予約は追記ではなく**置き換え**にした。
+
 使い方:
-    ok, hit = check_and_reserve("scp-lab", "収容違反の正体")
+    ok, hit = check_and_reserve("scp-lab", "収容違反の正体", key="scp-lab:収容違反")
     if not ok:  # hit == ("正体", 2)
         次の候補へ
 """
@@ -39,6 +53,20 @@ _STATE_PATH = (Path(__file__).resolve().parent.parent.parent.parent
 
 # 同一日に同じキーワードを使ってよい本数。3本目からブロックする。
 KEYWORD_DAILY_LIMIT = 2
+
+# 【2026-09-08】「答え提示語」は話題語と別枠にする。
+# 09-08 の実測で、この9語のいずれかを含むタイトルは 登録/千再生 0.57、
+# 含まないものは 0.31（1.84倍・n=196）だったため、全6ch・全枠でどれか1語を
+# 入れる方針になった。ところが 6ch × 3枠 = 18本/日 に対し、話題語と同じ上限2で
+# 数えると 9語 × 2 = 18 で **余裕がゼロ**になる。1語でも偏れば必ずブロックが出る
+# （09-07 に横断ゲートが114回発動した二次要因）。
+# 語そのものは共食いの原因ではない（共食いするのは題材）ので、上限を分けて緩める。
+# 偏り自体はチャンネルごとに主軸の語を割り振ることで抑える
+# （→ 各ch の theme_priority.title_style「答え提示語の割り当て」）。
+ANSWER_MARKER_KEYWORDS = {
+    "理由", "正体", "本当の", "実は", "わけ", "なぜ", "真相", "裏側", "実態",
+}
+ANSWER_MARKER_DAILY_LIMIT = 3
 
 # キーワードとして数えない語。
 #   - チャンネル名・シリーズ名に必ず入る語（話題を区別しない）
@@ -74,12 +102,21 @@ def extract_keywords(title: str) -> List[str]:
 
     `theme_dedup._content_tokens` と同じ正規化を通すので、重複判定と語の切り方が
     ズレない。数字だけの語とストップワードは落とす。
+
+    ただし**答え提示語だけは自分で拾い直す**。theme_dedup 側は 09-08 に
+    これらを「定型句」として正規化で落とすようにした（型が話題語として重み付け
+    され、題材の違う2本を重複と誤判定していたため）。その処理をそのまま通すと
+    「正体」がキーワードでなくなり、09-03 に5chが同時に『正体』を出した件への
+    ゲート（09-04 に入れたこのモジュールの存在理由）が**無言で消える**。
+    重複判定で落とすことと、横断で本数を数えることは目的が違うので、ここで戻す。
     """
     try:
         from pipeline.auto_scenario import theme_dedup as _td
         tokens = _td._content_tokens(title or "")
     except Exception:
         return []
+    raw = (title or "")
+    tokens = list(tokens) + [m for m in ANSWER_MARKER_KEYWORDS if m in raw]
     out: List[str] = []
     seen = set()
     for tok in tokens:
@@ -126,13 +163,40 @@ def _limit(limit: Optional[int]) -> int:
     return max(0, v)
 
 
+def _limit_for(keyword: str, base: int) -> int:
+    """語ごとの上限。答え提示語だけ別枠（→ ANSWER_MARKER_DAILY_LIMIT）。
+
+    チャンネル側で `cross_channel_keyword_limit` を base より高く指定していれば、
+    そちらを尊重して下げない。
+    """
+    if keyword in ANSWER_MARKER_KEYWORDS:
+        return max(base, ANSWER_MARKER_DAILY_LIMIT)
+    return base
+
+
+def _is_own(entry: Dict[str, Any], channel_id: str, norm_title: str,
+            key: Optional[str]) -> bool:
+    """この予約が「自分自身（同じ1本の生成）」のものか。
+
+    `key` があれば key だけで判定する。1本の生成はテーマ取り出し時と最終タイトル
+    確定時で **題名が変わる** ので、題名の一致で自分自身を見分けることはできない。
+    key を持たない古い予約と、key を渡さない呼び出しのために題名一致も残す。
+    """
+    if entry.get("channel") != channel_id:
+        return False
+    if key and entry.get("key"):
+        return entry.get("key") == key
+    return entry.get("title") == norm_title
+
+
 def blocking_keyword(channel_id: str, title: str,
-                     *, limit: Optional[int] = None) -> Optional[Tuple[str, int]]:
+                     *, limit: Optional[int] = None,
+                     key: Optional[str] = None) -> Optional[Tuple[str, int]]:
     """上限に達しているキーワードがあれば (keyword, count) を返す。無ければ None。
 
     同じチャンネルが今日すでに使った分も数える（同一chの連投も抑えたいため）。
-    ただし **同じチャンネル・同じタイトル** の再試行は数えない（生成リトライで
-    自分自身にブロックされるのを防ぐ）。
+    ただし **同じ1本の生成** による再試行は数えない（`key`。生成リトライや
+    最終タイトルの書き直しで自分自身にブロックされるのを防ぐ）。
     """
     cap = _limit(limit)
     if cap <= 0:
@@ -143,41 +207,66 @@ def blocking_keyword(channel_id: str, title: str,
     for kw in extract_keywords(title):
         entries = [
             e for e in (used.get(kw) or [])
-            if not (e.get("channel") == channel_id and e.get("title") == norm_title)
+            if not _is_own(e, channel_id, norm_title, key)
         ]
-        if len(entries) >= cap:
+        if len(entries) >= _limit_for(kw, cap):
             return (kw, len(entries))
     return None
 
 
-def reserve(channel_id: str, title: str) -> List[str]:
-    """このタイトルのキーワードを今日の使用済みとして記録する。記録した語を返す。"""
+def reserve(channel_id: str, title: str, *, key: Optional[str] = None) -> List[str]:
+    """このタイトルのキーワードを今日の使用済みとして記録する。記録した語を返す。
+
+    同じ `key` の予約が既にあれば**置き換える**（追記しない）。1本の生成が
+    上限の枠を2つ食う事故を防ぐための中核。
+    """
     kws = extract_keywords(title)
-    if not kws:
-        return []
     data = _load()
     used = data.setdefault("used", {})
     stamp = time.strftime("%H:%M:%S")
     norm_title = (title or "").strip()
+
+    if key:
+        # 題名が書き換わると語の集合も変わる。古い語の予約を先に取り消してから
+        # 積み直さないと、書き直しで捨てたはずの語が枠を握ったまま残る。
+        for kw, entries in list(used.items()):
+            kept = [e for e in entries
+                    if not (e.get("channel") == channel_id and e.get("key") == key)]
+            if kept:
+                used[kw] = kept
+            else:
+                used.pop(kw, None)
+
+    if not kws:
+        _save(data)
+        return []
+
     for kw in kws:
         entries = used.setdefault(kw, [])
-        # 同一ch・同一タイトルの二重予約はしない（リトライ対策）。
-        if any(e.get("channel") == channel_id and e.get("title") == norm_title
-               for e in entries):
+        if any(_is_own(e, channel_id, norm_title, key) for e in entries):
             continue
-        entries.append({"channel": channel_id, "title": norm_title, "at": stamp})
+        entry: Dict[str, Any] = {"channel": channel_id, "title": norm_title, "at": stamp}
+        if key:
+            entry["key"] = key
+        entries.append(entry)
     _save(data)
     return kws
 
 
+def reservation_key(channel_id: str, theme_title: str) -> str:
+    """1本の生成を指す予約キー。テーマ題名は書き直されないのでこれを軸にする。"""
+    return f"{channel_id}::{(theme_title or '').strip()}"
+
+
 def check_and_reserve(channel_id: str, title: str,
-                      *, limit: Optional[int] = None
+                      *, limit: Optional[int] = None,
+                      key: Optional[str] = None
                       ) -> Tuple[bool, Optional[Tuple[str, int]]]:
     """通れば予約して (True, None)、ブロックなら (False, (keyword, count))。"""
-    hit = blocking_keyword(channel_id, title, limit=limit)
+    hit = blocking_keyword(channel_id, title, limit=limit, key=key)
     if hit is not None:
         return False, hit
-    reserve(channel_id, title)
+    reserve(channel_id, title, key=key)
     return True, None
 
 
@@ -188,8 +277,12 @@ def snapshot() -> Dict[str, Any]:
     return {
         "date": data.get("date"),
         "limit": KEYWORD_DAILY_LIMIT,
+        "answer_marker_limit": ANSWER_MARKER_DAILY_LIMIT,
         "keywords": {
-            kw: [f"{e.get('channel')}: {e.get('title')}" for e in entries]
+            kw: {
+                "limit": _limit_for(kw, KEYWORD_DAILY_LIMIT),
+                "used": [f"{e.get('channel')}: {e.get('title')}" for e in entries],
+            }
             for kw, entries in sorted(used.items(), key=lambda kv: -len(kv[1]))
             if len(entries) >= 2
         },

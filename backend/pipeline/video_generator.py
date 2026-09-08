@@ -4801,9 +4801,27 @@ def _thumb_build_illustration(out_dir, topic, channel_format, channel_id=None):
        Pillow 描画は API コスト 0 なので、ここで描いて置いておけば本編側が
        同じ絵を拾い、無駄な再生成も起きない。
     3) チャンネルが short_illustrations を切っている / keyword_icons=false /
-       描画に失敗した場合は None を返し、呼び出し側は従来どおり無地にする。
+       thumbnail_card=false / 描画に失敗した場合は None を返し、
+       呼び出し側は従来どおり無地にする。
+
+    【2026-09-08】`short_illustrations.thumbnail_card`（既定 true）で
+    **サムネの図解カードだけ**を切れるようにした。本編の図解は残る。
+    アイコンの語彙は理科系の一般語で、`has_confident_render` は素の部分一致で
+    判定するため、題材が虚構・固有名詞のチャンネルでは無関係な語の内側に当たる。
+    実測（09-08・pokemon-lab）:
+
+        「幹部だけ別物 台詞の正体 ロケット団の言葉選びを3作品で追う」
+          → 『ロケット』アイコン →矢印→ 『植物』アイコン
+            （"ロケット団" のロケット、"言葉" の中の 葉 に当たっている）
+
+    直近12本中の発生率は daily-science 7/12・scp-lab 2/12 に対し
+    pokemon-lab は 1/12 で、その1本がこれ。理科系chではカードが題材と噛み合って
+    いるので一律には消さず、噛み合わないチャンネルだけ切る。
+    （2ch-matome が keyword_icons=false で切っているのと同じ理由・同じ対処。）
     """
     si_cfg = (channel_format or {}).get("short_illustrations", {}) or {}
+    if not si_cfg.get("thumbnail_card", True):
+        return None
     card_style = (si_cfg.get("card_style") or "textbook").lower()
     use_icons = bool(si_cfg.get("keyword_icons", True))
 
