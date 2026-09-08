@@ -1,0 +1,533 @@
+{
+  "title": "なぜエスカレーター右側は左側より0.7度高いのか？",
+  "theme": {
+    "title": "エスカレーターの右側は左側より0.7度高い — 都内12駅で3年間計測した結果",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "右側は左側より0.7度高い——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言いますので判定してください。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『昇降環境誌』が、階段熱学研究所の12駅3年計測を掲載しました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者ではなく足元を測り、平均差0.7度。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "さらに通勤時は差が1.1度まで広がるのですか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この右側温度論文は存在しません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズはまだあり、毎日投稿中の1万人目標へチャンネル登録で応援よろしく。",
+      "expression": "surprise",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも朝のエスカレーターで右側に立つと、左側より足元だけ少し暖かいと感じたことはありませんか。右側は左側より〇・七度高い、という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載誌は架空の『昇降環境誌』、調査主体は架空の階段熱学研究所です。都内十二駅で三年間、踏み板の左右を三十秒ごとに測った設定になっています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "右と左で〇・七度も違うなら、通勤のわずか四十秒にも小さな偏りがあることになりますね。なぜ毎日同じ設備で差が残るのでしょうか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "本日は、右側温度差が朝だけ一・一度へ広がるとされた理由を検討します。恋愛の待ち合わせや始業前の焦りにも似た、時間帯による行動の偏りが鍵です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "先に最大値を示します。平日八時から九時までの六百五十七日で、右側は平均二八・一度、左側は二七・〇度となり、差は一・一度でした。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "——ここで一拍置きます。なお、この論文は存在しません。掲載誌ごと架空です。右側が暖かいという結論も、十二駅三年という計測記録も創作です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。二八・一度と二七・〇度まで聞かされると、次に乗るとき右側の踏み板へ手を近づけたくなるほど信じていました。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここからは虚構論文の査読資料として読み進めます。題目は『片側昇降面における微小温度偏在の縦断観察』で、対象は駅名を伏せた十二地点です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "計測器は硬貨二枚ほどの架空装置で、踏み板中央から左右十五センチの位置に固定されました。三年間の記録数は、合計九百四十六万八千二百件です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "左右十五センチなら、靴底が乗る中央部分を比べたことになりますね。測定場所を同じにしたからこそ、〇・七度という数字に見えてくるのでしょうか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文は片側偏在という語を使いますが、意味は右と左の温度がそろわない状態です。難しい用語に見えても、机の左右で飲み物の温度が違うような話です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "全時間帯を平均すると、右側は二七・四度、左側は二六・七度でした。差は〇・七度で、十二駅のうち十駅が右側高温という架空の結果です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "十駅も同じ向きなら、偶然ではなさそうに聞こえます。仕事の出勤表で十人中八人が同じ曜日に遅れる、と並べられた時と似た説得力がありますね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "著者らが最初に置いた仮説は、片側に立つ人数の偏りでした。朝の混雑時には右側に止まる人が集中し、床面へ残る熱も片側に集まるという説明です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空の映像集計では、午前八時台の右側利用者は一時間平均二千百六十四人、左側は千三百八人でした。差は八百五十六人と報告されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "八百五十六人の差なら、改札前の列が毎朝ひとつ余分に伸びるような規模です。人の多い側が暖かくなるという仮説は、かなり自然に聞こえます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は、急ぐ人ほど歩くための片側を空ける慣習を想定しました。その結果、止まって乗る人の滞留が右側へ集中し、接触時間が増えると仮定しています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし論文が測ったのは人の体温ではなく、金属製の踏み板です。そこで一人が降りた後、温度の痕跡が何秒続くかを模型で調べたことになっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "模型は長さ六メートルの移動板で、同じ重さの靴底を百二十回載せました。接触後の温度上昇は平均四十七秒で半分まで薄れる、と報告されています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "四十七秒なら、朝の行列では次の人が乗る前に冷え切りませんね。レジ前で前の人の会話が残るように、踏み板にも熱の順番が残るというわけですか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "著者らはこれを熱の重なりと呼びました。要するに前の人が残したわずかな温度へ、次の人の分が加わるという説明で、複雑な物理式は使っていません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "昼十二時から十四時の右左差は〇・三度まで縮小しました。混雑が分散し、同じ踏み板位置へ連続して立つ人が少ないためと、本文では説明されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "昼休みは食事や買い物で人の動きがばらけますから、右側だけに同じ条件が続かないのですね。では、夕方の帰宅時間には再び差が大きくなるのでしょうか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "夕方十七時から十九時の差は〇・八度でした。朝の一・一度より小さい数値で、帰宅時は急ぐ人と寄り道する人の流れが混ざるためと解釈されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "統計では有意差が確認されています。これは偶然の温度の揺れで説明できる可能性が五パーセント未満、という架空論文内の判定基準を通ったという意味です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "五パーセント未満と聞くと、急に会議資料らしく見えますね。でも温度計を三年間も設備へ付け続けるなら、設置許可はどう処理したのでしょうか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこが論文の最大の弱点です。研究班は機器を踏み板の裏側へ磁石で固定したと書きますが、十二駅の管理者から得た許可書は一枚も示していません。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに駅別の温度差は、最小〇・二度から最大一・四度まで開いていました。それでも全駅平均だけを強調し、都合よく〇・七度へまとめています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "一・四度の駅なら、夏の帰り道に右側だけ少しむっと感じそうです。反対に〇・二度の駅では、数字があっても体感として区別できなさそうですね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "著者らは駅の深さを原因候補にしました。地上に近い四駅では平均差〇・四度、地下が深い八駅では平均差〇・九度という架空の配置になっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかし深い駅ほど朝の利用者数も多い設定なので、深さのせいか人数のせいかは分かりません。論文は限界と認めつつ、結論の見出しは変えていません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "原因が一つに決まらないのに、見出しだけは右側が高温と断定するのですね。就職活動の自己分析でも、一つの出来事で性格を決めるような危うさがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "追加調査として、研究班は雨の日だけを六十二日抽出しました。右左差は〇・五度に下がり、晴天日の〇・八度より〇・三度小さいとされています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "著者らは傘を持つ人が立ち位置を変えにくく、列の偏りが弱まると解釈しました。ただし傘、服装、荷物の重さを分けて測る項目は存在していません。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "雨の日は濡れた靴や厚い上着もありますから、立ち位置だけの話にはできませんね。それでも六十二日という日数が書かれると、つい信頼してしまいます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "意外な記述は休日の午前です。十時から十一時では右左差がマイナス〇・一度となり、左側の方がわずかに高いという逆転が報告されています。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "著者らは急がない利用者が左右へ散るためと説明しましたが、マイナス〇・一度は計測誤差と区別しにくい数値です。本文でも脚注に追いやられています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "平日朝だけ差が目立つなら、エスカレーターの性質ではなく、人の時間感覚が踏み板へ映ったように見えます。遅刻したくない朝ほど、列は偏りそうです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "はい、ここで扱っているのは設備の真実ではなく、数字が日常の感覚をどれほど補強するかという虚構です。〇・七度は、小さすぎて反論しにくい数字として選ばれました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文は古い記録として二十七年前の架空の駅務日誌も引用します。そこには右側の踏み板だけ磨耗が早い、と一行だけ書かれていたことになっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "古い日誌まで出されると、三年の計測より長い歴史があるように錯覚しますね。卒業アルバムの一文から昔の自分を決めつける感覚にも少し似ています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかし磨耗と温度を結び付ける測定値は、本文のどこにもありません。これは論文らしさを補強する装飾であり、証拠として使える資料ではないと査読欄にあります。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空の査読者は、温度差より先に人の並び方を測るべきだと指摘しました。それでも著者は床面温度を主役に据え、読み手の記憶へ数字を残しました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "僕も右側に立つと暖かい気がしてきましたが、それはデータを聞いた後の記憶かもしれません。数字があるだけで、いつもの景色が少し違って見えます。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この種の虚構では、小数点がもっとも強い小道具になります。〇・七度は一度より慎重に見え、〇・六八度より覚えやすいため、信じかける余地を作ります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "九百四十六万件という記録数も同じです。大きな数字は精密な印象を与えますが、計測場所や許可の根拠が欠ければ、桁数だけで信頼性は増えません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "仕事で表計算を見る時も、数字の桁が多いだけで正しそうに感じます。だからこそ、何をいつどこで測ったのかを見る癖が必要になりそうですね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この動画では行動を促しません。設備へ触れたり、通行を妨げたりせず、乗る数十秒に自分が何を感じたかを、架空論文の話題として楽しむだけで十分です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "友人との待ち合わせなら、右側が〇・七度高いという架空の結論を話し、相手がどの数字に反応するかを見ると会話になります。実在の調査とは言わないでください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "十二駅、三年、九百四十六万件の順に言われると、僕なら三つ目で信じます。日常の違和感を研究したシリーズとしては、かなり危険な説得力ですね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "まとめます。右側が左側より〇・七度高いという結果、朝の一・一度、十二駅三年、五パーセント未満という判定は、すべて今回のためのフィクションです。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "ネタばらしを聞いた後でも、次にエスカレーターへ乗れば右側を見てしまいそうです。でもそれは測定結果ではなく、僕の頭に残った架空の表のせいですね。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、図書館の本が借りられた回数だけ重くなるという架空の追跡調査を紹介します。一冊あたり三・二グラム増えるという、別の数字を査読します。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "高評価があれば、存在しないデータ表を次の査読候補へ回します。日常の違和感を研究したシリーズには、足元以外にも不可解な記録が保管されています。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "チャンネル登録者一万人を目標に毎日投稿中です。架空だと分かったうえで信じかける時間を楽しめたなら、チャンネル登録で応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "エスカレーター右側温度論文は存在しません。ですが、掲載誌ごと架空の論文は、まだ何本も月刊 虚構論文のアーカイブにあり、次の小数点を待っています。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "右側だけ",
+      "0.7度高い"
+    ],
+    "hook_caption": "右側が高温",
+    "subtitle": "12駅・3年間の架空計測",
+    "tagline": "全編フィクションの架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズはまだあり、毎日投稿中の",
+          "reason": "1行61字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 9,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.689,
+      "similar_to": "階段は下りると段数を誤る — 被験者1,284人の計数差",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 17,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "エスカレーター右側は0.7度高い — 12駅3年の計測"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "架空論文ファイル #16：エスカレーター右側は0.7度高い — 12駅3年の計測",
+    "attempts": 1
+  },
+  "original_title": "架空論文ファイル #16：エスカレーター右側は0.7度高い — 12駅3年の計測",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

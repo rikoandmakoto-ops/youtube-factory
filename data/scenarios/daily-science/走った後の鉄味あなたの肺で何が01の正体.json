@@ -1,0 +1,494 @@
+{
+  "title": "走った後の鉄味、あなたの肺で何が？0.1%の正体",
+  "theme": {
+    "title": "走った後に喉が鉄の味になる正体は血液ではない",
+    "angle": "運動後の口内金属味。肺胞での微量出血説と嗅覚由来説を数字で比較する"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？硬貨をなめたような味が、走ったあなたの喉に残るんです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！運動する人の約3割が感じることもあるらしいね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "強い運動では、息の通り道にごく微量の成分が出ることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！水道のホースを急に強く流す感じに近いのかな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも鉄味は血だけでなく、乾いた口で匂いを味に感じることもあるんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "走る日は鼻と口の感覚も意識してみて。面白かったら高評価、体の謎シリーズとチャンネル登録で1万人目標を応援よろしくね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？坂道を30秒ほど走ったあと、硬貨に触れたような鉄の味が喉に残ることがありますよね。実はこれ、あなたの呼吸の通り道で起きた変化を、舌と鼻がまとめて受け取っている合図かもしれません。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！駅へ急いで1分走っただけなのに、口の奥が金属っぽくなって水を飲んでも残ったんだ。血が出たのかと思ったけれど、見た目には赤いものなんてなかったよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "鉄味を感じたからといって、必ず血液が出ているとは限りません。肺の奥、鼻の奥、喉の乾き、そして匂いの感じ方まで、少なくとも4つの候補が重なって、同じ味として現れることがあるんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！味がした場所は喉なのに、原因の場所が肺や鼻かもしれないなら、台所の匂いが廊下まで流れるみたいだね。どの候補が一番ありそうなのか、順番に知りたいな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "最初に覚えておきたいのは、私たちが感じる風味の多くを鼻が担当していることです。舌は甘い、塩辛い、酸っぱいなどを受け取り、鼻は空気に乗った匂いを拾って、一つの味らしさに仕上げています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、鼻が詰まった日に食べるカレーは香りが弱く感じるよね。走った後の鉄味も、舌で鉄をなめたというより、息に混じった匂いを鼻が拾った可能性があるの？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その可能性はあります。走ると1分間の呼吸量が安静時より何倍にも増え、鼻と口を空気が速く通ります。乾いた部屋で風を当てると紙の匂いが目立つように、微量の成分も感じやすくなるんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！普段なら気づかないほど少ない匂いでも、呼吸の回数が増えるだけで目立つんだね。だったら、短い全力走の直後だけ鉄味が出る人がいても、ちゃんと説明できそうだよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "鉄っぽさの候補としてよく話題になるのがヘモグロビンです。これは赤血球の中で酸素を運ぶたんぱく質で、要するに体じゅうへ酸素を届ける宅配便です。鉄を含むため、血液の金属らしさと結びつけられます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "赤血球は1ミリリットルの血液に約50億個もあると聞くと、酸素を運ぶ数の多さに驚くね。その一部が口まで届いたら鉄味がしてもおかしくないけれど、肺から本当に出てくるのかな？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "肺のいちばん奥には肺胞という小さな袋があり、成人では約3億個あると見積もられます。肺胞は酸素と二酸化炭素を入れ替える場所で、シャボン玉の膜のように薄い壁のすぐそばを毛細血管が通っています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "3億個もあるんだ！肺胞がたくさん並んでいるから、胸の中に空気を取り込めるんだね。でも薄い膜の近くを血が流れるなら、激しく走ったときだけ負担が増えるのも想像しやすいな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "運動中は心臓が強く拍動し、肺胞の周りへ流れる血液も増えます。特に全力に近い運動では肺の毛細血管の圧が上がり、極めて小さな成分が空気側へ移る可能性が、スポーツ医学で長く調べられてきました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ここまで聞くと、鉄味の正体は肺胞からの微量出血で決まりに思えるよ。でも、最初に理子は必ず血ではないと言ったよね。問題はこの次にある、ということなのかな？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。実はこれ、肺胞の説だけで説明すると半分ほど見落とします。目に見える血がない短いランニングでも鉄味は起きますし、味の強さと肺から出る赤血球の量が、同じ割合で増えるわけではありません。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、同じ鉄味でも中身は人によって違うかもしれないんだね。香水を1滴つけただけでも近くでは強く香るみたいに、少ない成分でも鼻や口の条件で、感じ方が何倍も変わるのか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "強度の高い持久運動の後には、痰や気道を洗った液で赤血球の増加が見つかる報告があります。42.195キロを走るマラソンや長距離の自転車競技では、肺の毛細血管にかかる負荷を調べる研究が積み重ねられました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "マラソン選手の肺と、駅まで1分走った僕の肺を同じ条件では見られないんだね。長時間の運動では水道のホースにずっと強い水圧がかかるように、体の中の細い血管にも負担が続くのかな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方、日常的な短距離走で鉄味を感じる人の全員に、肺胞出血を示す検査結果があるわけではありません。強い運動後の肺の変化は研究されていますが、鉄味だけを測って原因を一つに確定するデータはまだ十分ではないんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！だから「鉄味なら肺から血が出た」と断言するのは早いんだね。ここは科学でもまだ結論が出ていない、と言えるのが大事だと思うよ。じゃあ次の有力候補は何なの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "次に見たいのが鼻と喉の粘膜です。粘膜は湿った薄い表面で、冷たい空気、乾燥、花粉症、強い鼻かみなどで荒れやすい場所です。走って空気の流れが急に増えると、ごく小さな刺激が目立つことがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "鼻血が出るほどではなくても、表面が少し荒れているだけで味に影響することがあるんだね。冬の朝に唇が乾くのと同じで、鼻や喉も見えないところで乾きやすいと考えると分かりやすいよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "鼻と口は別々の入口に見えますが、喉の奥では一つの通路につながります。たとえるなら、二つの部屋が同じ換気ダクトを使っているようなもので、鼻で起きた匂いや微量の成分を、口の奥の味として感じることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！鉄味を喉で感じたからといって、原因も喉だとは限らないんだね。花粉の時期に鼻が詰まりやすい人ほど、走ったときの感じ方が変わることもありそうだな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "運動中に口呼吸が増えることも見逃せません。鼻には吸い込んだ空気を温めて湿らせる役目がありますが、口から大量に吸うと、その準備が少ないまま乾いた空気が喉へ届き、粘膜への刺激が増えやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "鼻が小さな加湿器みたいな役目をしているなら、口呼吸だけで走るのは、冷たいドライヤーの風を喉に当て続ける感じだね。風が強い日ほど鉄味が気になる人がいる理由にもなりそうだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "2015年に発表された運動時の気道に関する研究では、呼吸で水分が失われることが、気道の反応に関わると説明されています。気道は空気の通り道で、乾くと咳や息のしづらさにつながる人もいます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "気道という言葉は、鼻から肺へ続く空気の道という意味なんだね。ストローを少しつぶすと吸いにくいように、乾きで通り道の状態が変われば、味や匂いの感じ方まで変わっても不思議じゃないよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、金属味は実際に鉄そのものを大量に食べた感覚とは限らないことです。脳は舌の味、鼻の匂い、口の乾き、空気の冷たさをまとめ、過去に覚えた「鉄っぽい」という印象に結びつけます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "スマホの通知音と振動と画面の光を、脳が一件の通知として受け取るのに少し似ているね。別々の信号が同時に来ると、僕たちは一つのはっきりした出来事として覚えるんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "嗅覚由来というのは、鼻が匂いを感じ、その情報を味の一部として脳が扱うことです。例えばコーヒーを鼻をつまんで飲むと香りが弱くなるように、鉄味にも鼻からの情報が混ざっている可能性があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ鉄味を感じたとき、鼻が詰まっていたか、冷たい風を吸ったか、口が乾いていたかを思い出すだけでも、血だけの話ではないと分かりそうだね。自分の体験を比べるのが大切なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、嗅覚由来なら必ずしも誰もが同じ強さで感じるわけではありません。匂いへの敏感さ、唾液の量、口の中の状態には個人差があり、同じ5キロのランニングでも、感じる人と感じない人が出てきます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "5キロ走って平気な友だちと、1キロで鉄味がする僕を比べても、根性の差とは限らないんだね。体の感覚は、靴のサイズみたいに一人ずつ少し違う前提で見る方が自然なんだな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "口の中そのものも候補になります。歯ぐきに軽い炎症があったり、歯磨き直後で粘膜が敏感だったりすると、運動の乾燥で金属味が目立つことがあります。走る前の状態まで含めて観察するのがポイントです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、走る前に歯を磨いたかどうかまで関係するかもしれないんだ！寝起きで水を飲まずに走った日と、食後に水分を取って走った日を比べたら、自分のパターンが見つかるかもしれないね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "運動後の鉄味を観察するときは、まず出た時間を見てください。走り始めて30秒以内なのか、10分後なのか、止まってから出るのかで、空気の乾きや運動強度との関係を考える手がかりになります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "タイマーで厳密に測らなくても、坂道の途中か、信号で止まった直後かを覚えるだけで十分なんだね。日記に一行メモするように、体の感覚を残すと次回との違いが見えやすそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次に、天気と空気の条件を見ます。気温が低い日、湿度が低い日、風が強い日は、鼻と喉が乾きやすくなります。例えば湿度40%前後の室内で喉が乾く人なら、屋外の風でも同じ傾向が出るかもしれません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "湿度40%くらいだと洗濯物が乾きやすいけれど、喉の表面から見れば水分が逃げやすい環境なんだね。冬のランニングでは、薄いマスクを使う意味も少し分かってきたよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "走る前後の水分補給も、口と喉の乾きを減らす助けになります。ただし一度に大量に飲むより、少量を何回かに分ける方が、胃が揺れる運動前には続けやすいです。水筒を一口ずつ使う感覚で十分です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スポーツドリンクを急いで飲み切るより、喉を湿らせるように少しずつ飲めばいいんだね。走る前の数分でできるから、今日から試しやすい工夫だよ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "準備運動も役立ちます。最初の5分をゆっくり歩くか軽く走り、急に全力へ切り替えないようにすると、呼吸と心拍数の上がり方をなだらかにできます。急発進ではなく、車をゆっくり動かす感覚に近いです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "最初の5分は遠回りに見えても、喉や肺にいきなり強い風と圧をかけない時間になるんだね。鉄味のためだけでなく、走り始めの苦しさを減らす意味でも続けやすそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで注意したいのは、鉄味が毎回強く続いたり、息苦しさ、胸の痛み、繰り返す咳、目に見える血が伴ったりする場合です。そのときは運動を止め、自己判断せず医療機関へ相談してください。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "味だけなら様子を見ることもあるけれど、呼吸や胸までいつもと違うなら別の話なんだね。スマホのメモに、何分走ったか、どんな症状だったかを残せば、相談するときにも伝えやすそうだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日のポイントは、走った後の鉄味を「肺から血が出た」と一言で決めないことです。強い運動で肺胞に負担がかかる可能性はありますが、鼻や喉の乾き、口の状態、嗅覚も同じくらい見ていく必要があります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！たった一口の違和感なのに、肺胞が約3億個ある呼吸の仕組みと、鼻で匂いを感じる脳の働きまでつながっているんだね。次に走るときは、体の条件も見てみるよ。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなる反応を扱います。わずか0.5秒ほどの動きに見えても、脳が目覚めから眠りへ切り替える途中で何をしているのか、一緒にほどいていきます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "鉄味が出た日は、走った時間、空気の冷たさ、口の乾きを一つだけでも覚えておくといいね。体の謎シリーズには、昨日あなたが体験した違和感を見直す話が、ほかにもたくさんあるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白かったら高評価を押して、体の謎シリーズをまた見にきてください。身近な不思議を毎日1本ずつ、あなたの体で起きていることにつなげて解いているので、次回も一緒に見られるようチャンネル登録よろしくね。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "走ると鉄味",
+      "血じゃない？"
+    ],
+    "hook_caption": "鉄味の正体",
+    "subtitle": "運動後の口内金属味を、呼吸と嗅覚から見ていきます",
+    "tagline": "あなたの息で起きる小さな変化"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "走る日は鼻と口の感覚も意識してみて。面白かったら高評価、体の謎シリーズとチャンネ",
+          "reason": "1行58字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 23,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 3,
+        "shareability": 11,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.513,
+      "similar_to": "あなたが大雨で不安になる3hPaの正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 30,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "走った後の鉄味、あなたの肺で何が？0.1%の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 96,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体', '体'](+20)",
+      "好奇心ギャップ['？', '正体'](+12)",
+      "二人称['あなた'](+6)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

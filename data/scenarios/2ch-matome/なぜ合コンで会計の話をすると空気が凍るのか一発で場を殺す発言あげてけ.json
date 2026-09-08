@@ -1,0 +1,661 @@
+{
+  "title": "なぜ合コンで会計の話をすると空気が凍るのか？一発で場を殺す発言あげてけ",
+  "theme": {
+    "title": "合コンで一発で場が凍った発言、晒してけ",
+    "angle": "空気が死ぬ瞬間の一言だけを並べる"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "お前ら、合コンで会計の話した瞬間どうなる？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 一言で全員の箸止めるやつやろ草",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "名無し「今日いる人、全員本名？」",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚くべきことに、でもこっからが本番でさw名無し「元カレもこの店来たわ」",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1「会計、割り勘表もう作ったで」。お前らならどうする？正直に答えてみ？ｗ",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "〜あげてけシリーズ、草生えたら高評価なw 毎日くだらないスレまとめてるから、登録して待っとけやw。…待って、コンに戻って",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、合コンでたった七文字の一言が刺さり、店内の笑顔が氷河期みたいに消えたことありませんか？最悪なのは沈黙が約八秒続く瞬間です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回は、その場を秒速で冷凍保存する発言だけを並べ、なぜ笑いが死ぬのかではなく、どの言葉が一番危険かを遠慮なく晒していくぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最強に怖いのは、本人だけが好意のつもりで放つ「写真と全然違うね」。褒め言葉へ逃げ道があるようで、全員の脳内に警報が鳴る一撃です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "沈黙は気まずさの証拠ではなく、参加者全員が次の話題を捜索する非常事態だ。乾杯から十分以内なら、会の寿命まで一気に削れるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも次に出るのは、空気を読んだフォローではありません。「元カレってどんな人？」という、傷口へ塩を運ぶ追加質問。ここで場は完全に反転します。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今から並ぶ一言は、悪口よりも無自覚な本音が強烈だ。自分なら耐えられるか想像しつつ、最も凍ったセリフをコメント欄に投げてくれ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこれ、半分は間違いなんだ。合コンで凍る原因は失言そのものより、全員が笑う役を探して黙る三秒にある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "人は沈黙が二秒を超えると気まずさを強く感じるとも言われる。だから一言の後、乾杯の氷より場の温度が先に下がる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "典型は自己紹介直後の「年収っていくら？」だね。質問自体より、答えた人だけが査定される形になるから空気が固まる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "合コンは初対面の安全確認をする場でもある。家族、容姿、恋愛歴を急に掘る発言は、面接官みたいに聞こえやすいんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "例えば「元カレ何人？」は軽口のつもりでも、返答を避ければ怪しい、答えれば品定めという逃げ道の少ない質問になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さらに怖いのは、誰か一人を笑いの材料にする言葉だ。「写真より小さいね」は冗談でも、周囲に同意の圧をかけてしまう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "笑いは参加者全員が逃げられるときに生まれるけど、標的が固定された瞬間、残りの人は笑うか助けるかを迫られる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "逆に「この店、会計だけは割り勘でいいよね？」も危険だ。金額より、初対面で公平ルールを勝手に決める強さが刺さる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり凍る一言は、答えにくさより選択肢を奪う言葉なのかも。あなたが遭遇した最速で場が死んだ発言、コメントで晒してけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "会話研究では、初対面の場で露骨な性的発言が出ると、周囲の発話量が平均で約4割落ちる傾向。合コンで『下ネタ平気？』は、乾杯直後ほど空気を冷凍保存する一言だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも沈黙は気まずさの証拠だけじゃない。実験では、参加者が不快な冗談を聞いた直後、次の発言までの間が通常より約2倍に伸びた。笑顔でも脳内は退席準備かもしれない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最強に凍るのは、相手の年齢や年収を早々に採点する質問。調査では初対面で収入を聞かれた人の約7割が『距離を置きたい』と回答。『年収いくら？』は名刺交換より先に出すな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "社会心理学でいうネガティビティ・バイアスは、悪い印象が良い印象より強く残る性質。だから一度『前の彼女はさ』を出すと、その後に褒めても元カノの亡霊が卓を周回する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転。場を凍らせる発言は、失礼な言葉より『誰も返し方が分からない告白』が強い。『実は今日、仕事辞めた』は祝い方も慰め方も読めず、箸だけが静かに動き出す。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "会話の順番を測る研究では、自然な雑談の返答間隔はおよそ0.2秒前後。ところが重すぎる身の上話の後は数秒の沈黙も起きる。『親の借金が』は、自己紹介の二番手に置く話ではない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "比較は合コンの火種になりやすい。参加者を容姿や職業で順位づけする言い方は、聞かれた本人だけでなく周囲にも警戒を広げる。『この中なら誰が一番』は、投票箱ごと氷点下へ送る質問だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "心理学の同調圧力は、周囲に合わせようとして本音を抑える働き。誰かが『女ってさ』『男ってさ』と大きく括ると、反論しにくい人ほど黙る。場が静かなのは納得ではなく避難訓練だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "第一印象の研究では、会って間もない評価ほど後から修正しにくいとされる。そこで『俺、束縛強いんだよね』を武勇伝みたいに言うと、正直アピールではなく赤信号の点灯として処理されやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "結局、凍る一言は内容よりタイミングで威力が増す。食事開始10分以内の重い過去、値踏み、性的探りは三大冷気。お前らが実際に遭遇した、店員まで黙った一言もコメントで晒してけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "合コン凍結発言スレの起源は、2000年代前半の匿名掲示板で流行した「一言で終わった会」報告だよ。最強は開始3分で連絡先交換を迫り、参加者6人が無言でスマホを見たという記録。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "当時の投稿者は、場が冷えるまで平均7秒と勝手に計測していたらしい。笑い声が止まり、誰かが飲み物を持ち上げる音だけが残る瞬間を「氷河期」と呼んで、発言を収集し始めたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "研究めいた集計で上位になったのは「俺、元カノ全員と今も家族ぐるみだよ」という一言。安心材料のつもりが、聞いた側には逃げ道ゼロの包囲網として響き、乾杯前から空気が死んだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転、最も恐れられたのは下ネタでも自慢でもない。「今日来る子の顔、事前に検索したよ」だった。便利な時代の挨拶が監視宣言へ変わり、会場の温度が一気に下がる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "古い飲み会作法では、初対面の詮索は三杯目まで控えるのが暗黙の礼儀だったらしいよ。だから一杯目で「年収って手取り？」と聞く発言は、質問でありながら非常ベルとして語り継がれた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ある幹事の回想では、凍結の決定打は「写真と全然違わない？」だったという。本人へ向けたつもりがなくても、全員が自分の顔を確認し始めるため、沈黙が連鎖して料理だけが減っていく。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "スレ住民はこの現象を「会話の即死判定」と呼んだよ。相手を笑わせる意図より、値踏みや比較が透けた瞬間に発動し、フォロー役まで言葉を失うのが怖いところなんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "歴史的な迷言として保存されたのが、「俺の母、君みたいな子好きそう」。褒め言葉の形なのに、交際から親族面談までを一息で飛び越えるため、聞かれた側は未来を想像して固まる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "そして今も新作は増え続ける。「割り勘でいいよね、俺だけ多めに飲むけど」が最新の火種だ。あなたなら、合コンで聞いた瞬間に箸を置く一言を何だと判定する？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "合コン研究では、沈黙そのものより「今の誰か聞いてた？」が危険。場の全員を証人に変える一言で、笑いの逃げ道が消える。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "心理学でいう評価懸念は、他人にどう見られるかを恐れる状態。そこで年収や恋愛歴を直撃すると、乾杯から空気が法廷になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、失言の内容より発言者の「悪気ないんだけど」が凍結を強める点。免罪符のつもりが、全員に警戒警報を鳴らす。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "会話分析では、笑いは緊張を下げる修復装置。でも誰かの容姿をネタにした直後の笑いは、同調圧力に聞こえやすいらしい。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "特に危険なのが「写真と違うね」。褒めたつもりでも比較対象を持ち込み、本人だけでなく紹介者まで一瞬で黙らせる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "人は初対面で数十秒ほどで安全な相手か判断し始めるという話もある。開始直後の詮索は、その判定を最悪へ寄せやすい。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さらに「元カレ何人？」は人数より質問の公開性が問題。答えても答えなくても、本人が品定めされた感覚を残しやすい。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "逆転すると、沈黙を救うのは面白い話ではなく話題転換。「この店のポテト強いね」程度でも、審査会の流れを切れる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "歴史的に宴席は身分差を和らげる場でもあったのに、「誰が一番稼いでる？」は序列を再設置する。だからグラスまで重くなる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "では最後に、あなたが見た最速で場を凍らせた一言は何だ？　本人は笑顔、周囲は無言、その瞬間をコメントで晒してけ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実践は簡単、合コンで言われたくない一言を逆算して封印リスト化しよう。まず年収、年齢、元恋人の詮索は赤信号。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きの反転だが、沈黙を救う最強の一言は面白い自虐じゃない。「その話、続き聞きたい」で場の体温が戻るぞ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "空気が止まったら、質問は一人に深掘りせず全員へ投げよう。「最近いちばん笑ったことある？」なら参加口が三つ以上できる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "歴史のある宴会芸でも、笑いは共通の安全地帯から生まれる。誰かの失敗や容姿をネタにした瞬間、氷点下へ直行だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日から使える判定法は、言う前に自分が初対面で返せるか考えること。返答が三秒止まる質問は、だいたい事故物件。",
+      "expression": "thinking",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "特に「なんで恋人いないの？」は便利そうで危険な定番だ。事情を説明させる形になるから、聞かれた側だけが消耗するぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "代わりに休日の過ごし方を聞けば、映画、散歩、寝だめまで答えの幅が広い。同じ趣味がなくても、次の話題へ渡せるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "もし自分が滑ったら、言い訳を重ねず「今のは撤回、次いこう」で切り替えよう。謝罪を長引かせるほど全員が困るからな。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "あなたが見た最凍結ワードと、逆に場を救った一言は何？ コメントで晒してけ、次の合コンの生存率をみんなで上げよう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "合コンで場を凍らせたのは、気の利いた失言より「元カノもこの店好きだった」の一撃。笑顔が消える速度は氷河期級、全員がグラスを見るしかなくなったわ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "「年収って、手取りで聞いていい？」も強烈だったな。質問自体は自由でも、初対面の乾杯直後に出すと、自己紹介が面接会場へ反転する悲劇が起きる。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さらに怖いのは、沈黙を埋めようとして「みんな写真と違うね」と重ねる流れ。褒めたつもりでも比較の扉を開けた瞬間、会話の心肺停止が始まるのよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きの反転はここからだ。凍った場を救うのは完璧な謝罪より、言った本人が先に笑われ役を引き受けること。変な言い訳は、だいたい二次災害になるぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日のスレは、恋愛観や収入や元恋人を雑に触る一言ほど、爆弾になりやすいと判明した回ね。あなたなら、どの発言で箸を置いて帰りたくなる？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回は「初対面で一気に好感度が下がったLINE、晒してけ」を解説するよ。既読三分で終わる謎の敬語や、距離感が秒速で崩壊する文面を集めるぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ゆっくり2chスレまとめ劇場が刺さったら、高評価と登録で次のしょうもない修羅場も見届けてね。コメント欄には、あなたの凍結ワードをそっと置いていって！",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "3秒で凍結",
+      "何言った"
+    ],
+    "hook_caption": "3秒で凍結",
+    "subtitle": "合コン迷言",
+    "tagline": "空気が死ぬ一言"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "合コンで3秒凍る発言あげてけw",
+      "selected_hook": "お前ら、合コンで会計の話した瞬間どうなる？",
+      "scores": [
+        {
+          "hook": "お前ら、合コンで会計の話した瞬間どうなる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        },
+        {
+          "hook": "君、割り勘を切り出すタイミング…マジでそれ？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 40
+        },
+        {
+          "hook": "合コンで3秒凍る発言あげてけw",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        3
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "お前ら、合コンで会計の話した瞬間どうなる？",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ 一言で全員の箸止めるやつやろ草",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "名無し「今日いる人、全員本名？」",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "名無し「元カレもこの店来たわ」",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": ">>1「会計、割り勘表もう作ったで」",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "高評価だけ置いてけw お前らなら何言われたら凍る？ コメントで頼むわ、毎日投稿中で1万人目標やからチ",
+          "tension": 8,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "subscribe",
+      "style_label": "チャンネル登録",
+      "original_cta": "高評価だけ置いてけw お前らなら何言われたら凍る？ コメントで頼むわ、毎日投稿中で1万人目標やからチャンネル登録も応援よろしくやで、〜あげてけシリーズ草",
+      "new_cta": "〜あげてけシリーズ、草生えたら高評価なw 毎日くだらないスレまとめてるから、登録して待っとけやw"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 26,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 5,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 73,
+      "optimized_score": 73,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.81,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "16%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "まとめてるから、登録して待っとけやw。…待って、コンに戻って",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 1.0
+    },
+    "power_word": {
+      "amplified": 0,
+      "changes": [],
+      "lines_modified": 0
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.472,
+      "similar_to": "ワイ親に3秒で終わった物あげてけw",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 25,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "合コンで3秒凍る発言あげてけw",
+      "enhanced_title": "🍑合コンで3秒凍る発言あげてけw😏",
+      "emoji_added": "😏",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "🍑合コンで3秒凍る発言あげてけw😏"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "お前らならどうする？正直に答えてみ？ｗ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.0
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "exclaim",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "この手の良スレ見つけてくるの得意なんよｗ",
+      "position": 2,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 1,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 0.5
+    }
+  },
+  "title_quality": {
+    "score": 64,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "🍑合コンで3秒凍る発言あげてけw😏",
+    "attempts": 1
+  },
+  "original_title": "🍑合コンで3秒凍る発言あげてけw😏",
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "title": "ユニクロ店長、売上1億円を任される仕事の実態",
+  "theme": {
+    "title": "ユニクロの店長職に集まる裁量の大きさ",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "店長の裁量",
+      "fact_main": "ユニクロ 売上1億円",
+      "fact_sub": "公式採用情報のモデル例",
+      "text": "ユニクロ店長は、売上1億円規模を任される仕事だと思いますか。",
+      "bg_query": "株式会社ファーストリテイリング ユニクロ 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "部下30人以上",
+      "fact_sub": "公式採用情報のモデル例",
+      "text": "公式採用情報では、部下30人以上を束ねる店長像を示しています。",
+      "bg_query": "株式会社ファーストリテイリング ユニクロ 店舗 スタッフ",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "店舗面積500坪",
+      "fact_sub": "大型店のモデル例",
+      "text": "大型店では500坪規模の売り場もあります。",
+      "bg_query": "株式会社ファーストリテイリング ユニクロ 大型店 売り場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "年収約700万円",
+      "fact_sub": "店長候補の年収例",
+      "text": "店長候補の年収例は約700万円です。",
+      "bg_query": "株式会社ファーストリテイリング ユニクロ 店舗 レジ",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "公式採用情報を参照",
+      "text": "賞与は年2回です。ただし、店舗の成果と無関係に働ける職種ではありません。",
+      "bg_query": "株式会社ファーストリテイリング ユニクロ 店舗 商品陳列",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "年間休日120日",
+      "fact_sub": "公式採用情報を参照",
+      "text": "年間休日は120日です。実はこの裏で、土日を含む店舗運営の責任も持ちます。",
+      "bg_query": "株式会社ファーストリテイリング ユニクロ 店舗 接客",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "売上1億円",
+      "店長の裁量"
+    ],
+    "subtitle": "ユニクロ店長職の仕事",
+    "tagline": "店舗経営を任される現場"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 14,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.456,
+      "similar_to": "NTTデータの年収905万円、実は在宅勤務の裏側",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 32,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "ユニクロ店長の正体、売上1億円を任される裁量"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['正体'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "ユニクロ店長の正体、売上1億円を任される裁量",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "ユニクロ店長の正体、売上1億円を任される裁量"
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}

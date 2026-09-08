@@ -1,156 +1,156 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1788617437,
+    "generated_at": 1788790149,
     "analyzed_videos": 3,
     "aggregate_drops_by_bucket": {
-      "intro": 0.017,
-      "early": 0.021,
-      "middle": 0.0043,
-      "late": 0.0047,
-      "ending": 0.0014
+      "intro": 0.0099,
+      "early": 0.0239,
+      "middle": 0.0042,
+      "late": 0.0054,
+      "ending": 0.0028
     },
     "per_video": [
       {
-        "video_id": "73-ivCaa030",
-        "title": "なぜ座ると腰だけ痛い？圧力1.4倍【ショート】",
-        "avg_view_percentage": 43.99,
+        "video_id": "Y94yR_35IyA",
+        "title": "鏡の顔だけ違う？99%が知らない左右差 #shorts #雑学 #豆知識",
+        "avg_view_percentage": 91.79,
         "drops": [
           {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0761,
-            "bucket": "early",
-            "audience_after": 0.9272,
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0882,
+            "bucket": "intro",
+            "audience_after": 1.4608,
             "scenario_line": {
-              "index": 9,
-              "speaker": "理子",
-              "text": "ここ、面白いのが、椅子に座って背中を丸めると数値はさらに上がる傾向があることです。\n机へ顔を近づける姿勢では、腰のクッションを前側から押し出すような力が強くなります。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0696,
-            "bucket": "early",
-            "audience_after": 0.8576,
-            "scenario_line": {
-              "index": 10,
+              "index": 7,
               "speaker": "真",
-              "text": "えっ、それ昨日やった！スマホを見る時もノートを書く時も、気づくと背中が丸くなっているよ。\nでも、なぜ首や肩より、体の真ん中にある腰が先に苦しくなりやすいんだろう？",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0629,
-            "bucket": "early",
-            "audience_after": 1.0033,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "理子",
-              "text": "ここ、面白いのが、椅子に座って背中を丸めると数値はさらに上がる傾向があることです。\n机へ顔を近づける姿勢では、腰のクッションを前側から押し出すような力が強くなります。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜ座ると腰だけ痛い？圧力1.4倍"
-      },
-      {
-        "video_id": "TnpJ8MK1FpE",
-        "title": "1分科学 #102：🌍なぜ寝起きの口だけネバつくのか？あなたの唾液が眠る8時間の正体【ショート】",
-        "avg_view_percentage": 35.84,
-        "drops": [
-          {
-            "ratio_from": 0.1,
-            "ratio_to": 0.11,
-            "drop": 0.0784,
-            "bucket": "intro",
-            "audience_after": 0.9412,
-            "scenario_line": {
-              "index": 5,
-              "speaker": "理子",
-              "text": "ここで最初の大事な数字です。睡眠中の唾液分泌は、起きて安静にしている時のおよそ10分の1まで下がると報告されています。\n水道の蛇口を細く絞ったまま、8時間ほど口の中へ流すような変化を想像してみてください。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.0752,
-            "bucket": "intro",
-            "audience_after": 0.866,
-            "scenario_line": {
-              "index": 5,
-              "speaker": "理子",
-              "text": "ここで最初の大事な数字です。睡眠中の唾液分泌は、起きて安静にしている時のおよそ10分の1まで下がると報告されています。\n水道の蛇口を細く絞ったまま、8時間ほど口の中へ流すような変化を想像してみてください。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.12,
-            "ratio_to": 0.13,
-            "drop": 0.0588,
-            "bucket": "intro",
-            "audience_after": 0.8072,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "真",
-              "text": "10分の1も減るの？それなら朝だけ水がほしくなるのも分かるけれど、少しは出ているんだよね。\n少ない唾液があるだけで、どうして水っぽくなくてネバついて感じるのかが次の疑問だよ。",
-              "mood": "tense"
-            }
-          }
-        ],
-        "matched_scenario_title": "1分科学 #102：🌍なぜ寝起きの口だけネバつくのか？あなたの唾液が眠る8時間の正体"
-      },
-      {
-        "video_id": "D1JgzKY4ta8",
-        "title": "1分科学 #100：🧬なぜあなたはポケモンの夢で技まで使える？REM睡眠90分にある記憶の正体【ショート】",
-        "avg_view_percentage": 98.91,
-        "drops": [
-          {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.1247,
-            "bucket": "intro",
-            "audience_after": 1.5565,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "理子",
-              "text": "眠りにはREM睡眠という段階があります。これは目が細かく動きやすい眠りで、夢を見たと報告されやすい時間です。\n一晩の睡眠ではおよそ90分前後の周期で訪れ、明け方ほど長くなりやすい傾向があります。",
+              "text": "たとえるなら、スマホのホーム画面のアプリ位置みたいだね。1個だけ場所が入れ替わると、必要なアプリは同じでも指が一瞬迷う。\n顔でも配置の慣れが、印象を決めるんだ。",
               "mood": "calm"
             }
           },
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
-            "drop": 0.0899,
+            "drop": 0.0515,
             "bucket": "intro",
-            "audience_after": 1.371,
+            "audience_after": 1.4093,
             "scenario_line": {
               "index": 8,
               "speaker": "理子",
-              "text": "REM睡眠中は、視覚に関わる後頭部の領域や、感情に関わる扁桃体が活動しやすいと脳画像研究で示されています。\nだから夢では、ポケモンの色や追いかける気持ちが、起きている時より強く感じられる場合があります。",
+              "text": "顔の左右差そのものは珍しくありません。眉の高さ、目の開き、鼻の向き、口角の上がり方は、ほとんどの人で少しずつ異なります。\n完全な左右対称は、自然な顔ではむしろ少ないと考えられています。",
               "mood": "calm"
             }
           },
           {
             "ratio_from": 0.15,
             "ratio_to": 0.16,
-            "drop": 0.058,
+            "drop": 0.0515,
             "bucket": "early",
-            "audience_after": 1.313,
+            "audience_after": 1.3578,
             "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "REM睡眠中は、視覚に関わる後頭部の領域や、感情に関わる扁桃体が活動しやすいと脳画像研究で示されています。\nだから夢では、ポケモンの色や追いかける気持ちが、起きている時より強く感じられる場合があります。",
+              "index": 9,
+              "speaker": "真",
+              "text": "言われてみれば確かに、笑うと片方だけえくぼが出たり、前髪が片側へ流れやすかったりするね。\n鏡では毎日見ているのに、その小さな差には普段ほとんど気づかないのか。",
               "mood": "calm"
             }
           }
         ],
-        "matched_scenario_title": "1分科学 #100：🧬なぜあなたはポケモンの夢で技まで使える？REM睡眠90分にある記憶の正体"
+        "matched_scenario_title": "鏡の顔だけ違う？99%が知らない左右差"
+      },
+      {
+        "video_id": "WGMpYbnGXAU",
+        "title": "あなたの耳が3秒で抜ける正体は？ #shorts #雑学 #豆知識",
+        "avg_view_percentage": 37.52,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0868,
+            "bucket": "early",
+            "audience_after": 0.794,
+            "scenario_line": {
+              "index": 8,
+              "speaker": "理子",
+              "text": "中耳と鼻の奥をつなぐ細い通り道が耳管です。\n耳管は耳の空気を入れ替える通路ですが、普段はやわらかい組織で閉じ気味になり、必要な時だけ小さく開く仕組みです。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0704,
+            "bucket": "early",
+            "audience_after": 0.8808,
+            "scenario_line": {
+              "index": 8,
+              "speaker": "理子",
+              "text": "中耳と鼻の奥をつなぐ細い通り道が耳管です。\n耳管は耳の空気を入れ替える通路ですが、普段はやわらかい組織で閉じ気味になり、必要な時だけ小さく開く仕組みです。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0569,
+            "bucket": "early",
+            "audience_after": 0.7371,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "真",
+              "text": "耳管って、耳から鼻の奥へつながっているんだ！耳が詰まった時にのどの奥まで変な感じがするのは、耳だけの問題ではなくて、同じ通り道の近くで起きるからなんだね。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "あなたの耳が3秒で抜ける正体は？"
+      },
+      {
+        "video_id": "SzMbnxjh0hM",
+        "title": "泳いでいる脳が3秒ごとに息継ぎを気にするワケ #shorts #雑学 #豆知識",
+        "avg_view_percentage": 58.75,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.101,
+            "bucket": "early",
+            "audience_after": 0.9731,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "真",
+              "text": "へぇ〜、知らなかった！ 上手な人が落ち着いて泳げるのは、力があるだけでなく、脳が腕や脚の仕事を任せられるからなんだね。でも水中は景色も音も変わるし、自動化だけで姿勢を保てるの？",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0943,
+            "bucket": "early",
+            "audience_after": 1.0741,
+            "scenario_line": {
+              "index": 8,
+              "speaker": "理子",
+              "text": "ここで使われるのが運動の自動化です。繰り返した動きを少ない意識で進める仕組みで、歯みがきをしながら明日の予定を考えられる感覚に近いんです。泳ぎでも慣れるほど、手足の基本動作は自動化されます。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0707,
+            "bucket": "early",
+            "audience_after": 0.9024,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "真",
+              "text": "へぇ〜、知らなかった！ 上手な人が落ち着いて泳げるのは、力があるだけでなく、脳が腕や脚の仕事を任せられるからなんだね。でも水中は景色も音も変わるし、自動化だけで姿勢を保てるの？",
+              "mood": "tense"
+            }
+          }
+        ],
+        "matched_scenario_title": "泳いでいる脳が3秒ごとに息継ぎを気にするワケ"
       }
     ],
     "gpt_insights": null,
@@ -158,842 +158,68 @@
   },
   "scp-lab": {
     "channel_id": "scp-lab",
-    "generated_at": 1788617668,
-    "analyzed_videos": 2,
-    "aggregate_drops_by_bucket": {
-      "intro": 0.0012,
-      "early": 0.0294,
-      "middle": 0.0044,
-      "late": 0.0049,
-      "ending": 0.0016
-    },
-    "per_video": [
-      {
-        "video_id": "iAHGnvpHJwk",
-        "title": "SCP-1987 なぜ24時間ごとに被害が増える？【ショート】",
-        "avg_view_percentage": 37.94,
-        "drops": [
-          {
-            "ratio_from": 0.21,
-            "ratio_to": 0.22,
-            "drop": 0.0638,
-            "bucket": "early",
-            "audience_after": 0.6915,
-            "scenario_line": {
-              "index": 12,
-              "speaker": "シロ",
-              "text": "予定時刻の30分前に別棟へ移動した職員は7名いた。翌朝、施設図面には別棟の滞在記録だけが残り、本人たちは最初からその区画に配属されなかった扱いへ書き換わっていた。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0532,
-            "bucket": "early",
-            "audience_after": 0.9734,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "シロ",
-              "text": "ただし、ここからが本題だ。映像が消えるだけなら、職員を避難させれば済むはずだった。ところが報告書では、消失者の追加時刻だけが毎回きっかり24時間後に並んでいる。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.0532,
-            "bucket": "early",
-            "audience_after": 0.7553,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "クロ",
-              "text": "時刻が分かるなら、午前03時03分だけ避難すれば助かると思うだろ。でもその時間を知った職員が消えたなら、時計を見る行為まで相手に数えられていた可能性がある。",
-              "mood": "tense"
-            }
-          }
-        ],
-        "matched_scenario_title": "SCP-1987 なぜ24時間ごとに被害が増える？"
-      },
-      {
-        "video_id": "w0LerdlM54o",
-        "title": "SCP-093の6色記録 なぜ戻れた？【ショート】",
-        "avg_view_percentage": 34.99,
-        "drops": [
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.1125,
-            "bucket": "early",
-            "audience_after": 0.7938,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "クロ",
-              "text": "同じ街なのに、試験ごとに壊れ方が違うなら怖い。ゲームのセーブデータを別の日付で開くように見えて、実際には時間の順序さえ崩れていることになる。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.075,
-            "bucket": "early",
-            "audience_after": 0.6625,
-            "scenario_line": {
-              "index": 12,
-              "speaker": "シロ",
-              "text": "ここで最も不穏なのは、帰還者全員が鏡をくぐった瞬間だけを覚えていない点だ。供述の空白は平均9秒。撮影映像の欠落時間とは一致しなかった。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0687,
-            "bucket": "early",
-            "audience_after": 0.9063,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "クロ",
-              "text": "同じ街なのに、試験ごとに壊れ方が違うなら怖い。ゲームのセーブデータを別の日付で開くように見えて、実際には時間の順序さえ崩れていることになる。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "SCP-093の6色記録 なぜ戻れた？"
-      }
-    ],
-    "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1788790363
   },
   "pokemon-lab": {
     "channel_id": "pokemon-lab",
-    "generated_at": 1788617560,
-    "analyzed_videos": 4,
-    "aggregate_drops_by_bucket": {
-      "intro": 0.0213,
-      "early": 0.0171,
-      "middle": 0.0042,
-      "late": 0.0057,
-      "ending": 0.0032
-    },
-    "per_video": [
-      {
-        "video_id": "EZ2F90bkVhg",
-        "title": "ピカチュウは10%なのになぜ看板？【ショート】",
-        "avg_view_percentage": 46.12,
-        "drops": [
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.066,
-            "bucket": "intro",
-            "audience_after": 0.9695,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "ソラ",
-              "text": "でも電気タイプって、みずとひこうに強い相性だよね？ 最初のジムは岩タイプ中心のタケシだから、攻略の最適解として置いた感じでもない。\nじゃあなぜ、わざわざ森の早い段階で電気ポケモンを出したんだろ？",
-              "mood": "bright"
-            }
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0558,
-            "bucket": "early",
-            "audience_after": 0.8173,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "ソラ",
-              "text": "必ず配られる便利アイテムじゃなく、草むらから自力で見つけるレアな仲間か！ 十回で一回の目安なら、粘れば届くけど初見では逃す。\nクラスで一人だけ限定スキンを持っていたときみたいに、会話のネタになるわけだね。",
-              "mood": "bright"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0508,
-            "bucket": "early",
-            "audience_after": 0.8731,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "ソラ",
-              "text": "必ず配られる便利アイテムじゃなく、草むらから自力で見つけるレアな仲間か！ 十回で一回の目安なら、粘れば届くけど初見では逃す。\nクラスで一人だけ限定スキンを持っていたときみたいに、会話のネタになるわけだね。",
-              "mood": "bright"
-            }
-          }
-        ],
-        "matched_scenario_title": "ピカチュウは10%なのになぜ看板？"
-      },
-      {
-        "video_id": "0vsaWutTTBs",
-        "title": "1分ポケモン研究 #22：😨ラプラスに隠された秘密、図鑑の1文で人間側がヤバい？【ショート】",
-        "avg_view_percentage": 30.94,
-        "drops": [
-          {
-            "ratio_from": 0.1,
-            "ratio_to": 0.11,
-            "drop": 0.1167,
-            "bucket": "intro",
-            "audience_after": 0.7833,
-            "scenario_line": {
-              "index": 5,
-              "speaker": "ヒカリ研究員",
-              "text": "先に線引きするぞ。捕獲された目的や、いつ何匹まで減ったかは公式図鑑に書かれていない。でも「乱獲」「保護」「増えている」という3つの言葉は公式設定として確認できる、ここが核なんだよ！",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.09,
-            "ratio_to": 0.1,
-            "drop": 0.1,
-            "bucket": "intro",
-            "audience_after": 0.9,
-            "scenario_line": {
-              "index": 5,
-              "speaker": "ヒカリ研究員",
-              "text": "先に線引きするぞ。捕獲された目的や、いつ何匹まで減ったかは公式図鑑に書かれていない。でも「乱獲」「保護」「増えている」という3つの言葉は公式設定として確認できる、ここが核なんだよ！",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.1,
-            "bucket": "intro",
-            "audience_after": 0.6833,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "ヒカリ研究員",
-              "text": "ラプラスはみず・こおりタイプ。タイプ相性は技の得意不得意の組み合わせで、海を泳ぐ姿と氷の力を両立する。水上を進める大型ポケモンだから、ゲーム内でも旅の移動役として特別に見えるんだ！",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "1分ポケモン研究 #22：😨ラプラスに隠された秘密、図鑑の1文で人間側がヤバい？"
-      },
-      {
-        "video_id": "BX221ErjU-E",
-        "title": "1分ポケモン研究 #21：👀カビゴンが道を塞ぐ理由に隠された1日の秘密、あなたは気づいた？🔍【ショート】",
-        "avg_view_percentage": 41.03,
-        "drops": [
-          {
-            "ratio_from": 0.1,
-            "ratio_to": 0.11,
-            "drop": 0.0895,
-            "bucket": "intro",
-            "audience_after": 0.9512,
-            "scenario_line": {
-              "index": 5,
-              "speaker": "ヒカリ研究員",
-              "text": "さらに初代のカビゴンの体重は460キロ。毎日400キロ食べる設定なら、食べ物のある場所へ移動し、満腹になった地点で寝落ちしても不思議じゃないよね。道路を塞ぐのは計画的な嫌がらせではなく、巨大な食後の居眠りなんだ！",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.0732,
-            "bucket": "intro",
-            "audience_after": 0.878,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "ヒカリ研究員",
-              "text": "ゲーム内でカビゴンが寝ている12番道路と16番道路は、どちらも主人公が先へ進む重要な通路なんだ。プレイヤーには関門だけど、カビゴンには食べ物を探して歩いた途中の平らな休憩所に見えた可能性がある。視点が逆なんだよ！",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.09,
-            "ratio_to": 0.1,
-            "drop": 0.065,
-            "bucket": "intro",
-            "audience_after": 1.0407,
-            "scenario_line": {
-              "index": 5,
-              "speaker": "ヒカリ研究員",
-              "text": "さらに初代のカビゴンの体重は460キロ。毎日400キロ食べる設定なら、食べ物のある場所へ移動し、満腹になった地点で寝落ちしても不思議じゃないよね。道路を塞ぐのは計画的な嫌がらせではなく、巨大な食後の居眠りなんだ！",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "1分ポケモン研究 #21：👀カビゴンが道を塞ぐ理由に隠された1日の秘密、あなたは気づいた？🔍"
-      },
-      {
-        "video_id": "iO7bSm6WTH4",
-        "title": "1分ポケモン研究 #20：👀GUポケモンコラボに隠された5つの秘密、ピカチュウだけじゃない理由は？❓【ショート】",
-        "avg_view_percentage": 37.73,
-        "drops": [
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0837,
-            "bucket": "early",
-            "audience_after": 0.6791,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "ソラ",
-              "text": "色が多い伝説級より、モンスターボールみたいな赤白の記号が強い場面もあるのか。服では『誰か』より『何に見えるか』が先に判断されるんだね。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0698,
-            "bucket": "early",
-            "audience_after": 0.6093,
-            "scenario_line": {
-              "index": 12,
-              "speaker": "ヒカリ研究員",
-              "text": "加えて選抜は世代の広さも重要よ。初代だけに寄せると大人には刺さっても、最新作から入った子には届きにくい。親子で選べる並びが売り場を強くするの。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0697,
-            "bucket": "early",
-            "audience_after": 0.8047,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ソラ",
-              "text": "つまり図鑑で強いポケモンより、洗濯後の普段着でも一瞬で分かるポケモンが有利？　バトル性能とはまるで別の選抜基準が働くわけだ。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "1分ポケモン研究 #20：👀GUポケモンコラボに隠された5つの秘密、ピカチュウだけじゃない理由は？❓"
-      }
-    ],
-    "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1788790235
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
-    "generated_at": 1788617749,
-    "analyzed_videos": 3,
-    "aggregate_drops_by_bucket": {
-      "intro": 0.0142,
-      "early": 0.024,
-      "middle": 0.0041,
-      "late": 0.0022,
-      "ending": 0.008
-    },
-    "per_video": [
-      {
-        "video_id": "KE2XD7qenwE",
-        "title": "ふぶき姫の約束を破るとどうなる？3つの雪女記録【ショート】",
-        "avg_view_percentage": 32.32,
-        "drops": [
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0966,
-            "bucket": "early",
-            "audience_after": 0.8406,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ミナモ調査員",
-              "text": "夜中に戸が開き、白い女が小屋へ入る。小泉八雲の文章では、その女は茂作へ白い息を吹きかけ、翌朝の茂作は凍ったように亡くなっていたとされる。巳之吉だけが生かされるんだ。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0821,
-            "bucket": "early",
-            "audience_after": 0.7585,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ミナモ調査員",
-              "text": "夜中に戸が開き、白い女が小屋へ入る。小泉八雲の文章では、その女は茂作へ白い息を吹きかけ、翌朝の茂作は凍ったように亡くなっていたとされる。巳之吉だけが生かされるんだ。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0532,
-            "bucket": "early",
-            "audience_after": 0.6618,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "ケンタ",
-              "text": "え、待って。2人のうち1人だけが助かるなら、巳之吉は選ばれたんじゃなくて、もっと長い話の中に残されたってことだよね。雪女はなぜ、その場で終わらせずに彼だけ帰したの？",
-              "mood": "tense"
-            }
-          }
-        ],
-        "matched_scenario_title": "ふぶき姫の約束を破るとどうなる？3つの雪女記録"
-      },
-      {
-        "video_id": "5xxZrCV4_gU",
-        "title": "1分妖怪ファイル #20：🔍スネイキーに隠された秘密、3段階進化の元ネタは蛇神だった？👁️【ショート】",
-        "avg_view_percentage": 49.58,
-        "drops": [
-          {
-            "ratio_from": 0.98,
-            "ratio_to": 0.99,
-            "drop": 0.15,
-            "bucket": "ending",
-            "audience_after": 0.125,
-            "scenario_line": {
-              "index": 54,
-              "speaker": "ミナモ調査員",
-              "text": "そして夏の夜、用水路や池のそばで細い影が揺れても、進化の途中だと決めつけないほうがいい。蛇がどこへ向かうのか、そこから先は、記録が途切れている。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.09,
-            "ratio_to": 0.1,
-            "drop": 0.1,
-            "bucket": "intro",
-            "audience_after": 1.15,
-            "scenario_line": {
-              "index": 5,
-              "speaker": "ケンタ",
-              "text": "つまり公式設定、伝承、ファンによる非公式考察を混ぜないで見るんだね。答えを決めつけるんじゃなくて、進化の意味がなぜ不気味に感じるのかを調べるんだ。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.12,
-            "ratio_to": 0.13,
-            "drop": 0.075,
-            "bucket": "intro",
-            "audience_after": 0.975,
-            "scenario_line": {
-              "index": 7,
-              "speaker": "ケンタ",
-              "text": "レベルが上がって新しい技や見た目が手に入ると、学校のテストで点が伸びるよりうれしい時もあるよね。でも蛇だけが進化と結びつく理由は何なんだろう。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "1分妖怪ファイル #20：🔍スネイキーに隠された秘密、3段階進化の元ネタは蛇神だった？👁️"
-      },
-      {
-        "video_id": "h0UuAoN8XhI",
-        "title": "1分妖怪ファイル #19：👁️フユニャンに隠された秘密、あなたが知らない2つの元ネタとは？【ショート】",
-        "avg_view_percentage": 38.17,
-        "drops": [
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.0564,
-            "bucket": "intro",
-            "audience_after": 0.959,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "ミナモ調査員",
-              "text": "猫又は年老いた飼い猫が変じ、火を操ったり人を祟ったりすると恐れられました。ただしフユニャンの二股尻尾は見た目の記号で、原典の残酷さを直接写したものではありません。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0462,
-            "bucket": "early",
-            "audience_after": 0.8769,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ケンタ",
-              "text": "フユニャンが幽霊のように現れる仕組みは、未練を残した霊という民間信仰にもつながるね。事故や急死の場所に魂が留まる、という考え方が土台になるわけだ。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.27,
-            "ratio_to": 0.28,
-            "drop": 0.0461,
-            "bucket": "early",
-            "audience_after": 0.5949,
-            "scenario_line": {
-              "index": 16,
-              "speaker": "ケンタ",
-              "text": "じゃあ完全な創作なのか。でも、冬の猫と幽霊という組み合わせには日本の怪談らしさがあるよね。どの伝承の部品が混ざったと考えられるのかな。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "1分妖怪ファイル #19：👁️フユニャンに隠された秘密、あなたが知らない2つの元ネタとは？"
-      }
-    ],
-    "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1788790452
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
-    "generated_at": 1788616964,
-    "analyzed_videos": 4,
-    "aggregate_drops_by_bucket": {
-      "intro": 0.0207,
-      "early": 0.0207,
-      "middle": 0.0043,
-      "late": 0.0023,
-      "ending": 0.0014
-    },
-    "per_video": [
-      {
-        "video_id": "7_9kPS6VcbY",
-        "title": "なぜPSで一番いらないゲームが生まれるのか？ 博牛【ショート】",
-        "avg_view_percentage": 32.97,
-        "drops": [
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.1238,
-            "bucket": "intro",
-            "audience_after": 0.8357,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "ユイ",
-              "text": "名無しC「説明書なしで始まり、最初の扉の開け方だけで40分詰むやつ」 ワイ、操作確認の画面でコントローラーを持つ手が就活面接みたいに固まるんやがw",
-              "mood": "funny"
-            }
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0952,
-            "bucket": "early",
-            "audience_after": 0.7405,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ゴロー",
-              "text": "最初の扉がラスボスなのはそれはアカン草 A先輩の家で貸されたら、分かったふりしてメニュー画面を30分散歩するしかないやろw",
-              "mood": "funny"
-            }
-          },
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.0572,
-            "bucket": "intro",
-            "audience_after": 0.9595,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "ユイ",
-              "text": "名無しC「説明書なしで始まり、最初の扉の開け方だけで40分詰むやつ」 ワイ、操作確認の画面でコントローラーを持つ手が就活面接みたいに固まるんやがw",
-              "mood": "funny"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜPSで一番いらないゲームが生まれるのか？ 博牛"
-      },
-      {
-        "video_id": "a_gxVwtIGKs",
-        "title": "実は家族に見られた通販履歴…一番言い訳できない理由は？【ショート】",
-        "avg_view_percentage": 26.85,
-        "drops": [
-          {
-            "ratio_from": 0.1,
-            "ratio_to": 0.11,
-            "drop": 0.1154,
-            "bucket": "intro",
-            "audience_after": 0.9231,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "ユイ",
-              "text": "でもこれ、半分は間違いなんだ。履歴そのものより、家族が箱の差出人と受取日時を結び付けた瞬間に言い訳不能度が跳ね上がる。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0692,
-            "bucket": "intro",
-            "audience_after": 0.7,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ゴロー",
-              "text": "配送は倉庫や販売元ごとに別便になるから、同じ注文でも箱は複数届く。家族から見れば、謎の箱だけ玄関に追加出現する仕組みなんだ。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.0616,
-            "bucket": "intro",
-            "audience_after": 0.8615,
-            "scenario_line": {
-              "index": 7,
-              "speaker": "ゴロー",
-              "text": "通販履歴は購入記録、つまり何をいつ頼んだかの一覧だな。でも家族は商品名より、妙に大きい箱や無駄に丁寧な梱包で察してしまう。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "実は家族に見られた通販履歴…一番言い訳できない理由は？"
-      },
-      {
-        "video_id": "AiWmmlXHbu4",
-        "title": "動画作りに7万課金した男、なぜ昼飯が塩むすびになったのか？【ショート】",
-        "avg_view_percentage": 32.45,
-        "drops": [
-          {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.1335,
-            "bucket": "intro",
-            "audience_after": 0.9393,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "ユイ",
-              "text": ">>1が次に欲しくなるのは高級マイクやろ、1万9800円のやつな。声が良くなれば面白くなる気がするのに、実際に録るのは「えー」と咳払い18回、残るのは無音やで。",
-              "mood": "funny"
-            }
-          },
-          {
-            "ratio_from": 0.12,
-            "ratio_to": 0.13,
-            "drop": 0.1262,
-            "bucket": "intro",
-            "audience_after": 0.8131,
-            "scenario_line": {
-              "index": 7,
-              "speaker": "ゴロー",
-              "text": "高級マイクで無言を録音するの、墓参りで線香だけ買って本人が寝坊する感じやんけw。音だけ4K級に澄んで、内容だけ公園の鳩以下の会話量、ワイもや草。",
-              "mood": "funny"
-            }
-          },
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.0922,
-            "bucket": "intro",
-            "audience_after": 0.7209,
-            "scenario_line": {
-              "index": 7,
-              "speaker": "ゴロー",
-              "text": "高級マイクで無言を録音するの、墓参りで線香だけ買って本人が寝坊する感じやんけw。音だけ4K級に澄んで、内容だけ公園の鳩以下の会話量、ワイもや草。",
-              "mood": "funny"
-            }
-          }
-        ],
-        "matched_scenario_title": "動画作りに7万課金した男、なぜ昼飯が塩むすびになったのか？"
-      },
-      {
-        "video_id": "tOnOISa0CNo",
-        "title": "なぜPS5 Proに期待する？値段で胃が痛い理由とはw【ショート】",
-        "avg_view_percentage": 61.68,
-        "drops": [
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0547,
-            "bucket": "early",
-            "audience_after": 1.0987,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "ゴロー",
-              "text": "フレームは一秒間の絵の枚数で、30枚より60枚のほうが視点移動がなめらかに見える。対戦やアクションで体感差が出やすい部分だぞ。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.0441,
-            "bucket": "intro",
-            "audience_after": 1.271,
-            "scenario_line": {
-              "index": 7,
-              "speaker": "ゴロー",
-              "text": "基本はGPU、つまり映像を計算する部品を強くする話だな。キャラの毛や水面の反射を描く速さが上がれば、画質か動きの選択で悩みにくくなる。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.0441,
-            "bucket": "intro",
-            "audience_after": 1.1975,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "ユイ",
-              "text": "現行PS5では、高精細な4K寄り表示と毎秒60フレームの快適さを選ばせる作品が多いよね。Proの期待は、その二択を同時に狙える点にある。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜPS5 Proに期待する？値段で胃が痛い理由とはw"
-      }
-    ],
-    "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1788789735
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1788617478,
-    "analyzed_videos": 4,
+    "generated_at": 1788790153,
+    "analyzed_videos": 1,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0225,
-      "early": 0.0221,
-      "middle": 0.0025,
-      "late": 0.0022,
-      "ending": 0.0014
+      "intro": 0.0122,
+      "early": 0.0272,
+      "middle": 0.0022,
+      "late": 0.0028,
+      "ending": 0.0021
     },
     "per_video": [
       {
         "video_id": "UKKWkdWN1MI",
         "title": "宇宙で選ぶあのメニュー #shorts #架空論文",
-        "avg_view_percentage": 38.85,
+        "avg_view_percentage": 40.86,
         "drops": [
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
-            "drop": 0.1149,
+            "drop": 0.1399,
             "bucket": "intro",
-            "audience_after": 0.9527
+            "audience_after": 0.9482
           },
           {
             "ratio_from": 0.19,
             "ratio_to": 0.2,
-            "drop": 0.0743,
+            "drop": 0.0674,
             "bucket": "early",
-            "audience_after": 0.7365
+            "audience_after": 0.7513
           },
           {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.0541,
+            "ratio_from": 0.22,
+            "ratio_to": 0.23,
+            "drop": 0.0467,
             "bucket": "early",
-            "audience_after": 0.6824
+            "audience_after": 0.6321
           }
         ],
         "matched_scenario_title": null
-      },
-      {
-        "video_id": "LJpzN0NJFBw",
-        "title": "キャラ表示で味が変わる #shorts #架空論文",
-        "avg_view_percentage": 127.71999999999998,
-        "drops": [
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0778,
-            "bucket": "intro",
-            "audience_after": 1.9027
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0622,
-            "bucket": "early",
-            "audience_after": 1.8405
-          },
-          {
-            "ratio_from": 0.25,
-            "ratio_to": 0.26,
-            "drop": 0.0622,
-            "bucket": "early",
-            "audience_after": 1.4125
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "Z10HB-EsiPU",
-        "title": "架空論文ファイル #5：あなたの操作は脳波で読まれる — 2,184人の記録【ショート】",
-        "avg_view_percentage": 24.72,
-        "drops": [
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.1539,
-            "bucket": "intro",
-            "audience_after": 0.7692,
-            "scenario_line": {
-              "index": 7,
-              "speaker": "ミサキ編集長",
-              "text": "架空チームが最初に設定したのは、左右のグリップ内部に埋め込まれた32個の接触点でした。\n手のひらに触れた際の微弱な揺れを拾う膜だと書くだけで、部品表らしさが生まれます。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.12,
-            "ratio_to": 0.13,
-            "drop": 0.1154,
-            "bucket": "intro",
-            "audience_after": 0.9231,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "ミサキ編集長",
-              "text": "以降は、完全なフィクションであるこの論文が、どのように本物らしい形を作るかを検証します。\n実際の機器機能や企業仕様を述べるものではなく、数字を用いた創作記録です。",
-              "mood": "bright"
-            }
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.1154,
-            "bucket": "intro",
-            "audience_after": 0.6538,
-            "scenario_line": {
-              "index": 7,
-              "speaker": "ミサキ編集長",
-              "text": "架空チームが最初に設定したのは、左右のグリップ内部に埋め込まれた32個の接触点でした。\n手のひらに触れた際の微弱な揺れを拾う膜だと書くだけで、部品表らしさが生まれます。",
-              "mood": "calm"
-            }
-          }
-        ],
-        "matched_scenario_title": "架空論文ファイル #5：あなたの操作は脳波で読まれる — 2,184人の記録"
-      },
-      {
-        "video_id": "PON5m1T_TKs",
-        "title": "架空論文ファイル #4：あなたのポケモンは服で進化する — 1,248人が選んだ新形態【ショート】",
-        "avg_view_percentage": 42.79,
-        "drops": [
-          {
-            "ratio_from": 0.1,
-            "ratio_to": 0.11,
-            "drop": 0.1698,
-            "bucket": "intro",
-            "audience_after": 1.0566,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "ミサキ編集長",
-              "text": "画像は通勤用、休日用、部屋用の三群に分かれ、各群には12組ずつの衣装が置かれました。被験者は画面を閉じた後も、答えを変更できない仕組みだったとされます。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.1509,
-            "bucket": "intro",
-            "audience_after": 0.9057,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "ミサキ編集長",
-              "text": "画像は通勤用、休日用、部屋用の三群に分かれ、各群には12組ずつの衣装が置かれました。被験者は画面を閉じた後も、答えを変更できない仕組みだったとされます。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.1321,
-            "bucket": "intro",
-            "audience_after": 0.6415,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "ミサキ編集長",
-              "text": "研究班はこの反応を衣装誘発進化想起と呼びました。要するに服を見て、新しい相棒の姿を勝手に頭の中で組み立てる反応を、回答数で数える手法です。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "架空論文ファイル #4：あなたのポケモンは服で進化する — 1,248人が選んだ新形態"
       }
     ],
     "gpt_insights": null,
@@ -1001,16 +227,63 @@
   },
   "akashic-librarian": {
     "channel_id": "akashic-librarian",
-    "generated_at": 1788616997,
+    "generated_at": 1788789736,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0196,
-      "early": 0.0192,
-      "middle": 0.0044,
-      "late": 0.002,
-      "ending": 0.0036
+      "intro": 0.0169,
+      "early": 0.0238,
+      "middle": 0.0026,
+      "late": 0.0032,
+      "ending": 0.0021
     },
     "per_video": [
+      {
+        "video_id": "PuHKm7UzClk",
+        "title": "なぜ同じ失敗でも、肩書きがある人だけ許されるのか #shorts #社会学 #人間心理",
+        "avg_view_percentage": 49.92,
+        "drops": [
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0822,
+            "bucket": "intro",
+            "audience_after": 1.0548,
+            "scenario_line": {
+              "index": 4,
+              "speaker": null,
+              "text": "これはハロー効果と呼ばれる。\n一つの目立つ長所が、まだ確かめていない能力まで明るく照らす認知の偏りである。",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0822,
+            "bucket": "early",
+            "audience_after": 0.9726,
+            "scenario_line": {
+              "index": 5,
+              "speaker": null,
+              "text": "では、失敗はどう読まれるのか。\n有能に見える人物の誤りは、一度の例外として扱われやすい可能性が残る。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0685,
+            "bucket": "early",
+            "audience_after": 0.9041,
+            "scenario_line": {
+              "index": 5,
+              "speaker": null,
+              "text": "では、失敗はどう読まれるのか。\n有能に見える人物の誤りは、一度の例外として扱われやすい可能性が残る。",
+              "mood": "mysterious"
+            }
+          }
+        ],
+        "matched_scenario_title": "なぜ同じ失敗でも、肩書きがある人だけ許されるのか"
+      },
       {
         "video_id": "MWdbvHEeNhc",
         "title": "なぜ移籍した選手だけ？昨日までの英雄が急に裏切り者になる理由 #shorts #社会学 #人間心理",
@@ -1057,53 +330,6 @@
           }
         ],
         "matched_scenario_title": "なぜ移籍した選手だけ？昨日までの英雄が急に裏切り者になる理由"
-      },
-      {
-        "video_id": "vKRvARiNeUE",
-        "title": "なぜ最初の数秒だけ？第一印象が実は書き換わらない本当の理由【ショート】",
-        "avg_view_percentage": 37.56,
-        "drops": [
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.1429,
-            "bucket": "intro",
-            "audience_after": 0.8571,
-            "scenario_line": {
-              "index": 5,
-              "speaker": null,
-              "text": "一方の条件では、温かいという語が冷たいより先に置かれた。語の総数は変わっていない。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.1071,
-            "bucket": "early",
-            "audience_after": 0.6429,
-            "scenario_line": {
-              "index": 6,
-              "speaker": null,
-              "text": "結果として、先に温かい印象を得た参加者は、その人物をより社交的で親しみやすいと評価した。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.21,
-            "ratio_to": 0.22,
-            "drop": 0.1071,
-            "bucket": "early",
-            "audience_after": 0.4643,
-            "scenario_line": {
-              "index": 8,
-              "speaker": null,
-              "text": "初頭効果とは、先に受け取った情報が、後の情報より判断に強く残りやすい傾向を指す。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜ最初の数秒だけ？第一印象が実は書き換わらない本当の理由"
       }
     ],
     "gpt_insights": null,
@@ -1113,45 +339,45 @@
     "channel_id": "clip-animal",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1788617009
+    "generated_at": 1788789737
   },
   "clip-fukada": {
     "channel_id": "clip-fukada",
-    "generated_at": 1788617043,
-    "analyzed_videos": 5,
+    "generated_at": 1788789773,
+    "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0258,
-      "early": 0.0145,
-      "middle": 0.0054,
-      "late": 0.0044,
-      "ending": 0.0019
+      "intro": 0.0272,
+      "early": 0.014,
+      "middle": 0.0053,
+      "late": 0.0042,
+      "ending": 0.0013
     },
     "per_video": [
       {
         "video_id": "zFxf1ezR2MQ",
         "title": "初めての体験で めっちゃ囲まれた #shorts #切り抜き",
-        "avg_view_percentage": 68.58,
+        "avg_view_percentage": 66.79,
         "drops": [
           {
             "ratio_from": 0.02,
             "ratio_to": 0.03,
-            "drop": 0.0909,
+            "drop": 0.1017,
             "bucket": "intro",
-            "audience_after": 1.2727
+            "audience_after": 1.2542
           },
           {
-            "ratio_from": 0.23,
-            "ratio_to": 0.24,
-            "drop": 0.0364,
+            "ratio_from": 0.25,
+            "ratio_to": 0.26,
+            "drop": 0.0509,
             "bucket": "early",
-            "audience_after": 0.9818
+            "audience_after": 0.8983
           },
           {
-            "ratio_from": 0.3,
-            "ratio_to": 0.31,
-            "drop": 0.0364,
-            "bucket": "early",
-            "audience_after": 0.8727
+            "ratio_from": 0.03,
+            "ratio_to": 0.04,
+            "drop": 0.0339,
+            "bucket": "intro",
+            "audience_after": 1.2203
           }
         ],
         "matched_scenario_title": null
@@ -1159,28 +385,28 @@
       {
         "video_id": "PMRxu_8hIt4",
         "title": "“時間停止”で使うスタジオ #shorts #切り抜き",
-        "avg_view_percentage": 83.16,
+        "avg_view_percentage": 82.83,
         "drops": [
           {
             "ratio_from": 0.03,
             "ratio_to": 0.04,
-            "drop": 0.0801,
+            "drop": 0.08,
             "bucket": "intro",
-            "audience_after": 1.4366
+            "audience_after": 1.4343
           },
           {
             "ratio_from": 0.04,
             "ratio_to": 0.05,
-            "drop": 0.048,
+            "drop": 0.0484,
             "bucket": "intro",
-            "audience_after": 1.3886
+            "audience_after": 1.3859
           },
           {
             "ratio_from": 0.02,
             "ratio_to": 0.03,
-            "drop": 0.0443,
+            "drop": 0.0442,
             "bucket": "intro",
-            "audience_after": 1.5167
+            "audience_after": 1.5143
           }
         ],
         "matched_scenario_title": null
@@ -1188,28 +414,28 @@
       {
         "video_id": "x9YpMzli-zo",
         "title": "フェラは結構大変だったりする #shorts #切り抜き",
-        "avg_view_percentage": 71.29,
+        "avg_view_percentage": 71.08,
         "drops": [
           {
             "ratio_from": 0.02,
             "ratio_to": 0.03,
-            "drop": 0.1219,
+            "drop": 0.125,
             "bucket": "intro",
-            "audience_after": 1.2927
+            "audience_after": 1.2891
           },
           {
             "ratio_from": 0.04,
             "ratio_to": 0.05,
-            "drop": 0.0732,
+            "drop": 0.0703,
             "bucket": "intro",
-            "audience_after": 1.1626
+            "audience_after": 1.1563
           },
           {
             "ratio_from": 0.03,
             "ratio_to": 0.04,
-            "drop": 0.0569,
+            "drop": 0.0625,
             "bucket": "intro",
-            "audience_after": 1.2358
+            "audience_after": 1.2266
           }
         ],
         "matched_scenario_title": null
@@ -1242,35 +468,6 @@
           }
         ],
         "matched_scenario_title": null
-      },
-      {
-        "video_id": "TJacs9E879U",
-        "title": "登録者9万人のサブチャンネルは 収益化済み #shorts #切り抜き",
-        "avg_view_percentage": 74.13,
-        "drops": [
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0601,
-            "bucket": "intro",
-            "audience_after": 1.1623
-          },
-          {
-            "ratio_from": 0.03,
-            "ratio_to": 0.04,
-            "drop": 0.0501,
-            "bucket": "intro",
-            "audience_after": 1.3659
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0389,
-            "bucket": "early",
-            "audience_after": 1.1234
-          }
-        ],
-        "matched_scenario_title": null
       }
     ],
     "gpt_insights": null,
@@ -1278,99 +475,70 @@
   },
   "clip-kaneko": {
     "channel_id": "clip-kaneko",
-    "generated_at": 1788617216,
-    "analyzed_videos": 3,
+    "generated_at": 1788789918,
+    "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0058,
-      "early": 0.0275,
-      "middle": 0.0048,
-      "late": 0.0032,
-      "ending": 0.0024
+      "intro": 0.0047,
+      "early": 0.0294,
+      "middle": 0.0055,
+      "late": 0.0014,
+      "ending": 0.0004
     },
     "per_video": [
       {
-        "video_id": "v7Hf3QgnKqA",
-        "title": "復縁したいなら 「もう一度チャンスをください」 #shorts #切り抜き",
-        "avg_view_percentage": 42.62,
+        "video_id": "_5P62LMYYa8",
+        "title": "斉藤さん企画を終え TikTokerとして決意表明 #shorts #切り抜き",
+        "avg_view_percentage": 69.56,
         "drops": [
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0813,
-            "bucket": "early",
-            "audience_after": 0.864
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.073,
-            "bucket": "early",
-            "audience_after": 0.791
-          },
           {
             "ratio_from": 0.16,
             "ratio_to": 0.17,
-            "drop": 0.058,
+            "drop": 0.0856,
             "bucket": "early",
-            "audience_after": 0.9453
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "mnZUVSm7aEQ",
-        "title": "周りが気まずくて 撮影を始められない #shorts #切り抜き",
-        "avg_view_percentage": 75.39,
-        "drops": [
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0554,
-            "bucket": "early",
-            "audience_after": 1.1698
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0515,
-            "bucket": "early",
-            "audience_after": 1.3092
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0458,
-            "bucket": "early",
-            "audience_after": 1.2252
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "NOFbWrbrkUk",
-        "title": "緊張の初プレイ、映画級の宇宙へ #shorts #切り抜き",
-        "avg_view_percentage": 71.32,
-        "drops": [
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0683,
-            "bucket": "early",
-            "audience_after": 1.1639
+            "audience_after": 1.2941
           },
           {
             "ratio_from": 0.21,
             "ratio_to": 0.22,
-            "drop": 0.0602,
+            "drop": 0.0669,
             "bucket": "early",
-            "audience_after": 1.0546
+            "audience_after": 1.0401
           },
           {
-            "ratio_from": 0.24,
-            "ratio_to": 0.25,
-            "drop": 0.0574,
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0615,
             "bucket": "early",
-            "audience_after": 0.9153
+            "audience_after": 1.1898
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "dxph90B2w4o",
+        "title": "白いゲーミングPCは 中の色まで変えられる #shorts #切り抜き",
+        "avg_view_percentage": 39.0,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0711,
+            "bucket": "early",
+            "audience_after": 0.9511
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0711,
+            "bucket": "early",
+            "audience_after": 0.7689
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0578,
+            "bucket": "early",
+            "audience_after": 0.8933
           }
         ],
         "matched_scenario_title": null
@@ -1381,16 +549,74 @@
   },
   "clip-lab": {
     "channel_id": "clip-lab",
-    "generated_at": 1788617263,
-    "analyzed_videos": 5,
+    "generated_at": 1788789953,
+    "analyzed_videos": 3,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0214,
-      "early": 0.0174,
-      "middle": 0.005,
-      "late": 0.0045,
-      "ending": 0.0032
+      "intro": 0.0127,
+      "early": 0.0207,
+      "middle": 0.0054,
+      "late": 0.0052,
+      "ending": 0.0031
     },
     "per_video": [
+      {
+        "video_id": "p2EaWnHI6AE",
+        "title": "男性の被害は 事件化されにくい #shorts #切り抜き",
+        "avg_view_percentage": 58.51,
+        "drops": [
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0608,
+            "bucket": "early",
+            "audience_after": 1.0039
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.049,
+            "bucket": "early",
+            "audience_after": 1.1098
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.047,
+            "bucket": "early",
+            "audience_after": 0.9569
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "-UiTA3tALd8",
+        "title": "株を渡されない社長は いつでもクビになれる #shorts #切り抜き",
+        "avg_view_percentage": 49.82,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0553,
+            "bucket": "early",
+            "audience_after": 0.9387
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0493,
+            "bucket": "intro",
+            "audience_after": 1.0404
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0464,
+            "bucket": "intro",
+            "audience_after": 0.994
+          }
+        ],
+        "matched_scenario_title": null
+      },
       {
         "video_id": "-RJilEKS3L0",
         "title": "若者の資産を増やすには 収入を増やすしかない #shorts #切り抜き",
@@ -1419,122 +645,6 @@
           }
         ],
         "matched_scenario_title": null
-      },
-      {
-        "video_id": "Qc4yaKIac08",
-        "title": "バーコードが通らない偽物だった #shorts #切り抜き",
-        "avg_view_percentage": 70.05,
-        "drops": [
-          {
-            "ratio_from": 0.03,
-            "ratio_to": 0.04,
-            "drop": 0.0503,
-            "bucket": "intro",
-            "audience_after": 1.3208
-          },
-          {
-            "ratio_from": 0.29,
-            "ratio_to": 0.3,
-            "drop": 0.0434,
-            "bucket": "early",
-            "audience_after": 0.8459
-          },
-          {
-            "ratio_from": 0.28,
-            "ratio_to": 0.29,
-            "drop": 0.0403,
-            "bucket": "early",
-            "audience_after": 0.8893
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "lphYMgBxfiE",
-        "title": "残業が多くても 年収50万円増ならアリ #shorts #切り抜き",
-        "avg_view_percentage": 32.77,
-        "drops": [
-          {
-            "ratio_from": 0.08,
-            "ratio_to": 0.09,
-            "drop": 0.1436,
-            "bucket": "intro",
-            "audience_after": 0.8766
-          },
-          {
-            "ratio_from": 0.09,
-            "ratio_to": 0.1,
-            "drop": 0.0806,
-            "bucket": "intro",
-            "audience_after": 0.796
-          },
-          {
-            "ratio_from": 0.1,
-            "ratio_to": 0.11,
-            "drop": 0.0504,
-            "bucket": "intro",
-            "audience_after": 0.7456
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "7VUTa2hO1Y0",
-        "title": "30年持つなら買った方がいい #shorts #切り抜き",
-        "avg_view_percentage": 46.45,
-        "drops": [
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0571,
-            "bucket": "early",
-            "audience_after": 0.811
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0472,
-            "bucket": "intro",
-            "audience_after": 0.9843
-          },
-          {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.0453,
-            "bucket": "early",
-            "audience_after": 0.7657
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "NNPwzUx74OM",
-        "title": "恋愛の緊張は 男友達で克服できる #shorts #切り抜き",
-        "avg_view_percentage": 55.57,
-        "drops": [
-          {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.0994,
-            "bucket": "intro",
-            "audience_after": 1.1462
-          },
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.0624,
-            "bucket": "intro",
-            "audience_after": 1.037
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0565,
-            "bucket": "intro",
-            "audience_after": 0.9805
-          }
-        ],
-        "matched_scenario_title": null
       }
     ],
     "gpt_insights": null,
@@ -1542,134 +652,8 @@
   },
   "company-facts": {
     "channel_id": "company-facts",
-    "generated_at": 1788617339,
-    "analyzed_videos": 4,
-    "aggregate_drops_by_bucket": {
-      "intro": 0.0282,
-      "early": 0.0144,
-      "middle": 0.0028,
-      "late": 0.0026,
-      "ending": 0.0196
-    },
-    "per_video": [
-      {
-        "video_id": "g8k4eqeaqrU",
-        "title": "Netflixの月額1,590円、本当はどこに消える？【ショート】",
-        "avg_view_percentage": 46.51,
-        "drops": [
-          {
-            "ratio_from": 0.21,
-            "ratio_to": 0.22,
-            "drop": 0.0786,
-            "bucket": "early",
-            "audience_after": 0.6775
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0704,
-            "bucket": "intro",
-            "audience_after": 0.9133
-          },
-          {
-            "ratio_from": 0.22,
-            "ratio_to": 0.23,
-            "drop": 0.0623,
-            "bucket": "early",
-            "audience_after": 0.6152
-          }
-        ],
-        "matched_scenario_title": "Netflixの月額1,590円、本当はどこに消える？"
-      },
-      {
-        "video_id": "cRl1YYULK94",
-        "title": "📉サイバーエージェントの年収773万円、平均年齢33歳の本当は【ショート】",
-        "avg_view_percentage": 36.17,
-        "drops": [
-          {
-            "ratio_from": 0.09,
-            "ratio_to": 0.1,
-            "drop": 0.1062,
-            "bucket": "intro",
-            "audience_after": 0.873
-          },
-          {
-            "ratio_from": 0.08,
-            "ratio_to": 0.09,
-            "drop": 0.0901,
-            "bucket": "intro",
-            "audience_after": 0.9792
-          },
-          {
-            "ratio_from": 0.1,
-            "ratio_to": 0.11,
-            "drop": 0.0855,
-            "bucket": "intro",
-            "audience_after": 0.7875
-          }
-        ],
-        "matched_scenario_title": "📉サイバーエージェントの年収773万円、平均年齢33歳の本当は"
-      },
-      {
-        "video_id": "_F-orq4tyjg",
-        "title": "📈動画作りに課金しすぎた男、年収480万円で転職できる？【ショート】",
-        "avg_view_percentage": 50.46000000000001,
-        "drops": [
-          {
-            "ratio_from": 0.1,
-            "ratio_to": 0.11,
-            "drop": 0.1175,
-            "bucket": "intro",
-            "audience_after": 1.0103
-          },
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.103,
-            "bucket": "intro",
-            "audience_after": 0.8186
-          },
-          {
-            "ratio_from": 0.09,
-            "ratio_to": 0.1,
-            "drop": 0.0743,
-            "bucket": "intro",
-            "audience_after": 1.1278
-          }
-        ],
-        "matched_scenario_title": "📈動画作りに課金しすぎた男、年収480万円で転職できる？"
-      },
-      {
-        "video_id": "QkYPUi8JeYU",
-        "title": "💸GUの年収、実はポケモンコラボで上がるのか？平均959万円の裏側💸【ショート】",
-        "avg_view_percentage": 97.44,
-        "drops": [
-          {
-            "ratio_from": 0.98,
-            "ratio_to": 0.99,
-            "drop": 0.3651,
-            "bucket": "ending",
-            "audience_after": 0.3125
-          },
-          {
-            "ratio_from": 0.12,
-            "ratio_to": 0.13,
-            "drop": 0.071,
-            "bucket": "intro",
-            "audience_after": 1.3736
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.054,
-            "bucket": "early",
-            "audience_after": 1.2216
-          }
-        ],
-        "matched_scenario_title": "💸GUの年収、実はポケモンコラボで上がるのか？平均959万円の裏側💸"
-      }
-    ],
-    "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1788790046
   }
 }

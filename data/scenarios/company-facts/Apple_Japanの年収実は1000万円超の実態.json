@@ -1,0 +1,203 @@
+{
+  "title": "Apple Japanの年収、実は1,000万円超の実態",
+  "theme": {
+    "title": "iPhoneユーザーの年収と福利厚生の真実",
+    "angle": "iPhoneを使う企業で働くと、どれだけの年収が得られるのかを解析します。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収が高い企業",
+      "fact_main": "Apple年収1000万超",
+      "fact_sub": "口コミサイトの推定値",
+      "text": "Apple Japanの年収、いくらだと思いますか。口コミサイトでは推定1,000万円超です。",
+      "bg_query": "Apple Japan合同会社 オフィス 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "年収1018万円",
+      "fact_sub": "OpenWork投稿集計",
+      "text": "OpenWorkの投稿集計では、平均年収は1,018万円です。",
+      "bg_query": "Apple Japan合同会社 東京 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "賞与は年1回",
+      "fact_sub": "口コミサイトによると",
+      "text": "賞与は年1回という口コミがあります。",
+      "bg_query": "Apple Japan合同会社 社員 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "有給消化率75%",
+      "fact_sub": "OpenWork投稿集計",
+      "text": "有給消化率は75パーセントです。数字だけ見れば、かなり良い。",
+      "bg_query": "Apple Japan合同会社 会議室",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "月残業25時間",
+      "fact_sub": "OpenWork投稿集計",
+      "text": "月間残業は25時間という集計です。",
+      "bg_query": "Apple Japan合同会社 Apple Store 店内",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "年間休日日数120日",
+      "fact_sub": "求人情報・口コミ参照",
+      "text": "年間休日は120日水準です。",
+      "bg_query": "Apple Japan合同会社 Apple Store 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収1,000万超",
+      "iPhoneの会社"
+    ],
+    "subtitle": "Apple Japanの給与と働き方",
+    "tagline": "公表情報と口コミで見る"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 9,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 7,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.5,
+      "similar_to": "星野リゾートの推定年収400万円、ホテル業界での正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 27,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "Apple Japanの年収、実は1,000万円超の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '正体', '年収'](+20)",
+      "好奇心ギャップ['正体', '実は'](+12)"
+    ]
+  },
+  "original_title": "Apple Japanの年収、実は1,000万円超の正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "Apple Japanの年収、実は1,000万円超の正体"
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "title": "大和ハウス工業の年収1000万円超、残業の実態がヤバい",
+  "theme": {
+    "title": "大和ハウス工業の年収1000万円超、残業時間の実態",
+    "angle": "高年収と残業のトレードオフを正直に出す"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収の実態",
+      "fact_main": "大和ハウス 年収1000万",
+      "fact_sub": "有価証券報告書2024年度",
+      "text": "この会社の平均年収、いくらだと思いますか。答えは1000万円超です。",
+      "bg_query": "大和ハウス工業 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年収 1006万円",
+      "fact_sub": "平均年齢40.4歳",
+      "text": "有価証券報告書では、平均年収は1006万円です。",
+      "bg_query": "大和ハウス工業 オフィス 外観",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "平均勤続 16.2年",
+      "fact_sub": "有価証券報告書2024年度",
+      "text": "平均勤続年数は16.2年です。",
+      "bg_query": "大和ハウス工業 住宅展示場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "公式採用情報",
+      "text": "賞与は年2回です。数字だけ見れば、かなり良い。",
+      "bg_query": "大和ハウス工業 マンション 外観",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "残業 月26.0時間",
+      "fact_sub": "OpenWork口コミサイト調べ",
+      "text": "口コミサイトによると、月間残業は26.0時間です。",
+      "bg_query": "大和ハウス工業 建設現場",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "年間休日 123日",
+      "fact_sub": "公式採用情報",
+      "text": "年間休日は123日です。ただし、現場や営業では予定対応が生じる可能性があります。",
+      "bg_query": "大和ハウス工業 分譲住宅 外観",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、身近な企業の年収シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収1000万超",
+      "残業26時間"
+    ],
+    "subtitle": "高年収の裏にある働き方",
+    "tagline": "転職前に見る数字"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "年間休日は123日です。ただし、現場や営業では予定対応が生じる可能性があります。",
+          "reason": "1行57字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 11,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.537,
+      "similar_to": "サイゼリヤの原価率40.1%、年収との正体",
+      "template_issues": [
+        "直近10本中4本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 30,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "大和ハウス工業の年収1000万円超、本当は残業26時間"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 78,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['本当は', '年収'](+20)"
+    ]
+  },
+  "original_title": "大和ハウス工業の年収1000万円超、本当は残業26時間",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "大和ハウス工業の年収1000万円超、本当は残業26時間"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}

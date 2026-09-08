@@ -1,0 +1,517 @@
+{
+  "title": "なぜ妖怪は山を下り里に現れるようになったのか",
+  "theme": {
+    "title": "山ではなく里に出る妖怪が増えた時代背景",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "なんで妖怪だけ、山から里へ降りてはいけないのか知ってる？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "妖怪ウォッチでも町にいる妖怪、友達になれそうで好きだよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "でも『遠野物語』には、里の境目で怪異に会う話が残るんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "山道の先じゃなく、家から数分の帰り道で会う感じなの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "人が山を削り、境目を動かした。妖怪が近づいた理由は、まだ全部は分からない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、伝承の原典ファイルシリーズと毎日投稿中のチャンネル登録で一万人目標を応援してね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "なんで妖怪だけ、山から里へ降りてはいけないのか知ってる？ 明治四十三年刊行の『遠野物語』には百十九話が収められ、山の奥だけでなく、家から歩ける川辺や辻で怪異に会う場面が繰り返し現れるんだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "百十九話もあるの？ 妖怪ウォッチの町にも妖怪が普通にいるけど、現実の伝承でも山奥より、学校帰りに寄れそうな村外れのほうが怖い場所として語られていたの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、町角で会う妖怪は仲間になれそうで、あいつ好きなんだよね。ただ伝承の里は安全な住宅地ではなく、山と畑と川が押し合う、夜だけ形を変える境目だった。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "この動画では、妖怪が里に増えたように見える時代背景を追う。答えの手がかりは、妖怪の移住ではなく、江戸から明治にかけて人間が山の手前まで生活圏を広げたことにある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。妖怪が家の近くへ降りてきたんじゃなくて、人間が妖怪の近くへ家や田んぼを増やしたの？ それなら、いつもの帰り道が急に山の入口みたいに見えてくるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、妖怪は高い山の頂上だけに住む存在ではない。田、水路、橋、辻、墓地、村外れのように、人の暮らしと荒れ地が一歩で入れ替わる場所に、気配として現れると書かれている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "まず、里という言葉を今の町内会くらいに狭く考えないことが大事なんだ。近世の村では家並みの外に田畑が続き、その先に共同で使う草地や山林があり、境界は毎日の仕事で越える線だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "共同で使う草地って、村の人なら誰でも入れる場所なの？ 家から遠くないのに夜は誰もいないなら、昼休みの校庭が放課後だけ別の場所に見える感じに近いかもしれない。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "それは入会地と呼ばれる場所で、薪、草、落ち葉を村人が取った。山は地図の向こうではなく、燃料を集めるため毎日通う場所だったから、妖怪も生活から切り離された怪物ではなかったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "河童の伝承が水田や用水路に多いのも同じ理由だ。深い川だけでなく、田植えの足元を流れる細い水で、人は転落、水の事故、急な増水という見えにくい危険に毎年触れていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "河童がいるのは大きな川だと思ってたけど、田んぼの横の水路なら逃げ場が少ないね。ゲームの丸い見た目を思い出していたのに、足首くらいの水が急に不気味になってきた。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山姥も、何日も歩く秘境だけにいる怪物ではない。炭焼きや木こりが通る道、旅人が一泊する小屋、村から一日ほどの峠に現れ、人が働く時間と帰れない時間の境目に立っていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "境目は地図上の一本線ではなく、昼は人が作業して夜は人影が消える場所なんだ。スマホの地図なら同じ道でも、夕方六時を過ぎて店の灯りが消えれば、知らないマップに見えることがある。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、ここからが本題なんだ。妖怪が里に増えたという印象は、昔から境目にいたという説明だけでは足りない。土地の使い方、移動する時刻、怪談を運ぶ媒体の三つが同時に変わった。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ『遠野物語』の百十九話も、ただ昔の人が怖がった記録じゃないんだね。誰がどこまで歩き、どの時間に家へ戻れたかまで、怪談の背景として読めるの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "『遠野物語』は柳田國男が明治四十三年に刊行し、岩手県遠野の佐々木喜善から聞いた話を記した本だ。山、川、屋敷、道が具体的に出るから、怪異は地名のない闇ではなく生活の隣にいる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただ、そこに書かれた話を妖怪ウォッチの公式設定へ直結させることはできない。作中の妖怪は株式会社レベルファイブの作品世界に属し、伝承を自由に料理した表現として、原典とは分けて見る必要がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ファンの間では、町に妖怪が集まるのは結界が弱いからだって考察も見るよ。でもそれは公式の答えじゃなくて、ゲームを楽しむための非公式な読み方として扱うんだね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その通りだ。公式設定、地域伝承、ファン考察を混ぜて断定しないことが大切なんだ。ただ三つを並べると、町に妖怪がいる光景がなぜ不自然ではないのか、その土台だけは見えてくる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸時代には人口の増加と新田開発で、湿地や原野が田畑へ変わった。新田開発は荒れ地を耕地にすることで、田んぼを一枚増やすより大きく、村の外側そのものを少しずつ押し広げる作業だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "開発によって以前は村外れだった場所が、数十年後には毎日通る畑道になる。ゲームで未開放だったマップ端が、素材集めの定番ルートに変わるように、怪異の出る場所も人の生活の中へ近づいて見える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "人が入らなかった湿地を田んぼにしたら、水の危なさまで消えるわけじゃないもんね。便利な道になったのに、夜だけは何かがいる気がする、その感じが伝承の妖怪なのかな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そうなんだ。開発された土地には水害、獣害、夜道の事故、病気への不安が残った。人は原因を全部見通せないとき、河童、狐、山の神の話を重ね、危険な場所に名前と顔を与えて記憶した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "明治以降は道路、鉄道、学校制度が広がり、人の移動する範囲と時間が変わった。昼だけ使われた峠や川辺を、仕事帰りや通学で薄暗い時間にも通る人が増え、境目はさらに身近になった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "夕方の帰り道って、昼に見た公園でも急に静かで怖いよね。昔は街灯が少ないから、村の端から家までの数百メートルが、今の何倍も長く感じられたかもしれない。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "実はこれ、妖怪が増えたというより、人が怪異に会う時間を増やした話でもあるんだ。朝と昼だけなら安全に見える場所も、日没後には音と距離感が変わり、同じ道が別の領域になる。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸後期には、鳥山石燕の『画図百鬼夜行』が安永五年から刊行された。地域ごとの怪異が絵の中に並ぶことで、山村の話は町の読者にも届き、妖怪は本のページを通って土地を越えた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "昔の妖怪図鑑みたいな本があったなら、知らない村の話でも自分の家の近くにいる気がしてきそうだね。動画の怪談を見た夜、廊下の音が気になるのと少し似ている。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし石燕の絵を、そのまま古代から続く伝承の証拠と断定してはいけない。先行する書物を参照した妖怪もあれば、絵師としての創作性が強い姿もあり、原典と作品は別に確かめる必要がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "それでも印刷物が怪談の広がりを変えたことは確かだ。瓦版、草双紙、のちの新聞は遠い土地の噂を運び、読者が知らない村の妖怪を、自分の裏口の暗さに重ねる入口になった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あの妖怪の正体は、山から一晩で降りてきた一体の怪物ではない。開発で縮んだ荒れ地、夜まで伸びた人の移動、印刷物で共有された想像が重なり、里の輪郭に影を濃くしたんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。妖怪が増えたというより、人間が見えない場所を減らしたせいで、残った境目だけが家の近くへ押し寄せたってこと？ それなら逃げる先がないよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "村外れの辻に出る辻神や、橋のたもとに現れる怪異が多いのも、そのためだ。そこは山でも家でもなく、人が必ず通るのに、夜には誰の場所とも言い切れなくなる地点だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "橋は川を越える便利な道である一方、水の向こう側をつなぐ境でもある。江戸時代の旅では橋の崩落や増水が命に関わり、怪談は危険な場所を忘れないための記憶として語られた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪を単なる注意書きだと片づけるのも違うんだ。伝承の語り手は危険を説明するだけでなく、誰かが見た、聞いた、帰れなかったかもしれないという気配を、場所そのものへ貼り付けている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "危ないから近づくな、だけなら標識で終わるのに、妖怪の名前が付くとずっと残るんだね。通学路の曲がり角でも、名前のない怖さより、何かいる怖さのほうが忘れられない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "明治以降、都市化が進むと怪異の舞台はさらに変わった。山や田の端だけでなく、学校、駅、便所、団地のような新しい生活空間にも、噂として妖怪や怪談が住み着いていった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これは古い妖怪が証拠を残して移住したという意味ではない。人が新しい建物の規則、暗い廊下、知らない大人に慣れきれないとき、不安は新しい怪異の姿を借りて語られるようになった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "学校の七不思議も、山の神様とは別の種類なのに、放課後だけ怖くなる場所から生まれるんだね。人里の中でも、時間が変わっただけで境目ができるってことか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪ウォッチの町が楽しいのも、日常の場所に妖怪がいるからだと思う。商店街や公園のような見慣れた景色に、説明できない気配が一枚だけ重なり、町がただの背景ではなくなる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームではこう描かれてるけど、仲間になる妖怪が町にいる安心感がある。一方で伝承では、同じ生活圏にいる怪異ほど、会う条件が曖昧で、避け方が分からない不気味さが残るんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "山奥なら行かなければいいけど、辻や水路や帰り道なら毎日通るよね。聞かなきゃよかったけど、昔の人が本気で怖がった理由は、ゲームの町を思うと少し分かる。",
+      "expression": "sad",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承を読むときは、妖怪がどこに出たかを地名ごとに見るといい。山と書いてあっても、村から何日も離れた深山なのか、薪を取りに行く裏山なのかで、生活との距離はまったく違う。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次に、その場所を誰がいつ通ったかを見る。子ども、旅人、炭焼き、農作業の人が具体的になるほど、怪談は空想だけではなく、毎日の作業のすぐ脇に落ちた影として立ち上がる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "さらに原典にない細部を勝手に足さないことも大切だ。動画や漫画の演出、地域で後から付いた話、ファン考察は面白いけれど、文献にある部分とは別の棚に置いて楽しむんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "怖くしたいからって、伝承にない結末まで本当みたいに言ったらだめなんだね。分からないところを分からないまま残すほうが、夜に思い出したときはずっと怖いかもしれない。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そうなんだ。『遠野物語』の語りには、目撃の後に全部を説明しない話が多い。何だったのか、なぜそこにいたのか、帰った人がその後どうなったのか、そこから先は、記録が途切れている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山ではなく里に出る妖怪が増えた時代背景を追うと、答えは一つではない。土地の開発、移動の変化、印刷文化、日常の不安が重なり、同じ境目へ別々の影を落としている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "つまり里の妖怪は、家の中へ入り込んだ怪物じゃなくて、家の外にあった山、水、夜が、生活のすぐそばまで押し寄せた形なんだね。そう思うと窓の外が少し遠く感じる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "好きな妖怪ほど、元ネタが怖い。かわいい町の妖怪を見たあとで、帰り道の用水路や誰もいない辻を見れば、昔の人が置いた影が、今も景色の端に残っているように思える。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、妖怪ウォッチにもつながる座敷童子を扱う予定だ。家に福を呼ぶとされる存在が、家を出ていった後の伝承には、祝福とは言い切れない静かな不安が残されている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "座敷童子って幸運の妖怪だと思ってたのに、家を出る話があるの？ それも人里の家で起きる怪談なら、今夜は部屋の隅を見たくなくなるよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価で、この記録を残す手伝いをしてほしい。伝承の原典ファイルシリーズでは、町や家の近くに残る妖怪の話を、公式設定や噂と混ぜず、出典を分けながら追っているんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "毎日投稿中で、チャンネル登録者一万人を目標にしている。チャンネル登録で応援してくれたら、次の原典も調べて持ってくる。もし夜道で境目を見つけても、目を合わせないほうがいい。",
+      "expression": "think",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "山を降りた",
+      "妖怪の正体"
+    ],
+    "hook_caption": "里へ降りた理由",
+    "subtitle": "妖怪はなぜ人里へ近づいたのか",
+    "tagline": "伝承に残る時代の影"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "よかったら高評価を置いて、伝承の原典ファイルシリーズと毎日投稿中のチャンネル登録",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 19,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 4,
+        "shareability": 6,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.513,
+      "similar_to": "キュウビの正体は海を渡った狐",
+      "template_issues": [
+        "直近10本中3本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 24,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "里に出た妖怪の正体は時代だった"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['本当の理由'](+12)",
+      "好奇心ギャップ['？', '理由'](+12)"
+    ],
+    "rejected_title": "里に出た妖怪の正体は時代だった",
+    "attempts": 1
+  },
+  "original_title": "里に出た妖怪の正体は時代だった",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "3分でわかる？山ではなく里に妖怪が増えた本当の理由"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

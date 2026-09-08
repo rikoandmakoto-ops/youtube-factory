@@ -1,0 +1,496 @@
+{
+  "title": "イーブイの昼夜進化、エーフィとブラッキーに分かれた理由",
+  "theme": {
+    "title": "エーフィとブラッキーが時間で分かれた背景",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "なんでイーブイだけ昼夜で進化先が変わるの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 金銀の第2世代で昼夜が分岐ってこと!",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式の進化条件は、なつき度が220以上で昼はエーフィ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じ220でも時計が違うだけで。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも2匹は太陽と月を映すような色で。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ゲームフリークはこの科学的事実を元にこの設定を作ったんだ。"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "え、マジで？なら高評価！ 裏設定ファイルシリーズもあるし、1万人目標で毎日投稿中だからチャンネル登録で応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "なんでイーブイだけ、なついた同じ1匹なのに昼ならエーフィ、夜ならブラッキーへ分かれるの？ あなたも進化直前に時計を見て、数分待った経験があるなら、この違和感は刺さるはずだぞ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ なつき度が同じなら普通は同じ進化先になりそうなのに、昼夜だけで未来が二択って何それ！ 金銀の第2世代から、時計が相棒の個性を決めるの強すぎでしょ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "先に結論のヒントを置くと、この分岐は時刻を使った小ネタじゃないんだよ！ 昼を読むエーフィと、夜に月光を受けるブラッキーを、信頼という条件で選ばせる仕掛けなんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式の進化条件を見て。なつき度220以上のイーブイが昼にレベルアップすればエーフィ、夜ならブラッキーになる！ 220は仲良し度の内部値で、捕獲直後から一気に届く数字じゃないぞ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "220以上まで一緒に歩いて、それからレベルアップした時刻が最後の分岐になるのか！ 学校帰りに育てた相棒と、夜ふかしして育てた相棒で姿が変わるみたいで、思い出まで条件に入ってるな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "なつき度は、要するにポケモンがトレーナーへ寄せる信頼の数値だよ。シリーズ作品では一緒に連れ歩く、戦わせる、回復する行動が積み重なって上がり、220はかなり育て切った目安なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "数字を知らずに育ててると、急に進化した瞬間が余計にドラマになるわけか！ でもなついたなら昼夜を問わず強くなればいいのに、なぜ時間まで必要なんだろうな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "金銀は1999年発売で、朝・昼・夜という時間の感覚をゲーム全体へ本格的に入れた作品なんだよ！ 出るポケモンやイベントだけでなく、進化の結果まで変える代表がこの2匹だった。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ゲーム内の空が暗くなる演出だけじゃなく、進化先まで昼夜で変えたの!? 当時は本体時計を見ながら遊ぶだけで、同じイーブイが別の相棒になる発見が起きたってことだな！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ 初代にいたシャワーズ、サンダース、ブースターは進化の石で選ぶ3匹だった。そこへ金銀でエーフィとブラッキーが加わり、石ではなく信頼と時刻という遊び方が増えたんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "石を使う進化はアイテムを選ぶ感じ、昼夜進化は生活時間を選ぶ感じか！ 進化先が5種類になっただけじゃなく、プレイヤーの操作そのものを増やしたのが金銀の面白さなんだな。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで第二フック！ 実はブラッキーは夜に進化するのに、公式図鑑では月の光を浴びると体の輪が光ると書かれているんだよ。暗いから黒い、だけで終わらない設定がもう出てくる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、そんな設定あるの!? 夜の闇に隠れる役じゃなくて、月明かりを受けて輪を見せるポケモンなのか！ 昼と夜の対比が色だけじゃないなら、エーフィ側もかなり仕込まれてそうだぞ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "エーフィの図鑑には、体毛で空気の流れを感じ、天気や相手の動きを予知するような記述があるんだ。大きな耳と額の赤い珠まで含めて、昼の世界を先読みする超能力ポケモンに寄せている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "空気を読むって、ゲームで言えば相手が次に何をするか先回りする感じだな！ 明るい昼に周囲を観察するエーフィと、月光で輪が光るブラッキー、対になる絵がめちゃくちゃ分かりやすい。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "種族値だけ見ると、エーフィは特攻130と素早さ110が目立つ高速型なんだよ！ 種族値はポケモンごとの基本能力配分で、合計525でも何を得意にするかが数字で丸見えになる。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "特攻は特殊技の火力、素早さは先に動きやすい能力ってことだよね！ 130と110が並ぶなら、エーフィは相手の手を読んで先に攻める印象を、対戦の数字でもちゃんと再現してるな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "一方ブラッキーは、防御110と特防130が看板だ！ 特防は特殊技への硬さで、エーフィと合計525は同じなのに、攻撃を受けながら相手の作戦を崩す方向へ能力が全振りされているんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ。同じ525でも、昼側は先に削る、夜側は耐えて返すって完全に別ジャンルじゃん！ 時計で姿を分けた意味が、対戦で選ぶ役割までつながって見えてきたぞ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし公式が、昼だから高速アタッカー、夜だから受け役と説明したわけではないぞ。進化条件と図鑑テキストは公式情報、種族値から感じる昼夜らしさは、データを読んだときの納得ポイントなんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これはファンの説なんだけど、エーフィとブラッキーは太陽と月、明と暗の対になる存在として設計されたと言われることがある。公式の昼夜条件を根拠にできても、制作意図まで断定はできないぞ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "公式設定と考察を分けるの、大事だな！ でも赤い珠のエーフィ、黄色い輪のブラッキー、エスパーとあく、昼と夜が並ぶから、プレイヤーが対の物語を感じるのはめっちゃ自然だ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "英語名にもヒントがあるぞ。EspeonはESP、超能力を連想させる語が元で、Umbreonはumbra、影を意味するラテン語系の語が元とされる。日本語名以外でも2匹の役割がはっきり分かれているんだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "名前まで超能力と影で分けるのか！ 日本では昼夜、海外では言葉の響きでもキャラを伝えているなら、イーブイ進化の2匹をセットで覚える人が多いのも納得しかないな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ブラッキーの図鑑には、興奮すると毒の混じった汗を毛穴から飛ばすという記述もある。月光で輪が光る優雅さだけではなく、追い詰められた相手へ反撃する危なさまで持っているんだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 見た目は月の夜景みたいにきれいなのに、図鑑では反撃用の汗まであるの!? 防御110と特防130で受ける姿に、ただ耐えるだけじゃない迫力が乗るな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "エーフィも可愛い見た目だけで終わらない。図鑑で空気の流れを読むとされるから、素早さ110で先に動き、特攻130で特殊技を撃つ数値構成が、予知のイメージへ自然につながるんだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "昼夜の進化条件を知ったあとで種族値を見ると、数字がキャラ紹介に見えるな！ エーフィは先読みの130と110、ブラッキーは受け止める110と130で、並びまで鏡写しみたいだぞ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "金銀当時、昼夜の判定はゲーム内時計と連動していたから、狙いと違う進化を防ぐにはレベルアップ前の確認が重要だった。たった1回の経験値で分岐するから、進化直前の緊張感がすごい！",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "レベルアップ演出が始まってから、あっ昼だった！では遅いのか。経験値を入れる前に時計を見るだけで、相棒の未来が変わるなら、ボス戦より手が震えるタイミングがありそうだな。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "作品ごとに昼夜の判定時刻や時計の扱いは異なるけど、基本はその作品で設定された時間帯が分岐を決める。育成前にゲーム内の現在時刻を確認する、これが狙った2匹を作る最初の攻略になるぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "なつき度を220まで上げるほうへ集中して、時計を忘れるのが一番もったいないな！ 何日も一緒に歩いたイーブイが、最後の1レベルで予定外へ進化したら、うれしいけど悔しさも倍になりそう。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "対戦だとこれが刺さる。エーフィは高い特攻130と素早さ110を生かして、先手で相手へ圧をかける役になりやすい。パーティーに速い特殊アタッカーが足りないなら、昼進化が候補になるぞ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "特殊アタッカーは特殊技でダメージを出す役ってことだな！ 旅パでも先に攻められると戦闘がテンポ良く進むから、昼のエーフィを選ぶ理由が初心者にもすぐ伝わるぞ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ブラッキーは防御110と特防130を生かし、相手の攻撃を受けて交代や回復の時間を作りやすい。受け役は、味方が動きやすい盤面を守るポジションで、夜進化はじっくり戦いたい人へ刺さる。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "耐えるだけじゃ地味に見えても、相手の強い技を受けて味方へつなぐのはめっちゃ大事だな！ 昼の速攻か夜の粘りか、同じイーブイでも自分の遊び方で選べるのずるいって。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ エーフィとブラッキーはどちらも種族値合計525で、数字だけなら完全な同点なんだよ。それでも特攻130を取るか特防130を取るかで、戦闘の手触りは学校の別クラスくらい変わる。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "合計が同じだから強さも同じ、ではないのか！ 合計525という同じ予算を、エーフィは攻めへ、ブラッキーは守りへ振り分けたみたいで、時間進化の違いが能力まで届いてるな。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "それでも根っこは、なつき度220以上という共通条件だ。最初から昼のポケモン、夜のポケモンとして生まれるより、イーブイがトレーナーと積み上げた時間の先で分かれるから、進化演出が特別になるんだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "昼に選ぶか夜に選ぶかはプレイヤーの自由だけど、どちらも信頼を作らないと届かないんだな。石1個で即決する進化とは違って、相棒を育てた日数まで思い出になるのが熱いぞ！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで答え合わせだ！ エーフィとブラッキーが時間で分かれた背景は、金銀が導入した昼夜システムを、なついた相棒の個性へ変えるための仕掛けとして読むと一番きれいにつながるんだ。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "確定している事実は、なつき度220以上で昼はエーフィ、夜はブラッキーになること。そして公式図鑑には、エーフィの予知、ブラッキーの月光で光る輪という対照的な描写が並んでいるぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまり昼夜は見た目の演出だけじゃなく、公式の進化条件と図鑑のキャラ付けをまとめる軸なんだな！ 種族値525の配分まで見ると、2匹を選ぶ瞬間がさらに面白くなるぞ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次にイーブイを育てるときは、経験値を入れる直前に時計を見てみて。昼のエーフィなら先読みして攻める物語、夜のブラッキーなら受け止めて返す物語を、自分で選べるからな！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "俺なら最初の旅では素早さ110のエーフィでテンポよく進みたいし、対戦を考えるなら特防130のブラッキーも試したい！ 同じ相棒から違う思い出が生まれるの、最高じゃん。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回は、イーブイが8方向へ進化できるのに、石、なつき、場所まで条件がばらばらな理由を追うぞ！ エーフィとブラッキーの昼夜分岐を知った今なら、進化全体の見え方が変わるはずだ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "8方向って聞くだけで、まだ知らない分岐が山ほどありそうだな！ 今日の220と昼夜だけでも濃かったのに、他の進化まで並べたらイーブイの設計がどれだけ広いか見えてきそう。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今回の時間進化でえ、マジで？ってなったら高評価を押してくれ！ 裏設定ファイルシリーズでは、図鑑の1文とゲームの数字がつながる、誰かに話したくなるネタを毎回探しているぞ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "昼派と夜派で高評価を押したくなる回だったな！ 次にゲームを開いたら、進化の前に時計を確認して、同じイーブイでもどっちの相棒にするか本気で迷ってみたくなるぞ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中だから、応援よろしくね！ 次に遊ぶとき、エーフィとブラッキーを見る目がちょっと変わるはずだし、その驚きを次の1匹にもつなげよう！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "昼で変化",
+      "夜で変化"
+    ],
+    "hook_caption": "時間が分けた",
+    "subtitle": "なつき進化の分岐",
+    "tagline": "昼と夜で別の道"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "daily-science",
+      "bridge_line": "ゲームフリークはこの科学的事実を元にこの設定を作ったんだ。",
+      "matched_topic": "進化"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "え、マジで？なら高評価！ 裏設定ファイルシリーズもあるし、1万人目標で毎日投稿中",
+          "reason": "1行59字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 26,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.529,
+      "similar_to": "ドーブルだけ全技？1匹の役割",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 27,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "enhanced_title": "イーブイの進化時間が分かれた2匹の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['正体'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "イーブイの進化時間が分かれた2匹の正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "イーブイの進化時間が分かれた2匹の正体"
+  }
+}

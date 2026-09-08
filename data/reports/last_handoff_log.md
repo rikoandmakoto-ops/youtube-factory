@@ -1,12 +1,12 @@
 # Daily Handoff Log
 
-**実行日時**: 2026-09-05 23:15 JST
+**実行日時**: 2026-09-07 23:15 JST
 **タスク**: daily-project-handoff
-**フルレポート**: `data/reports/project_handoff_2026-09-05.md`
-**前回**: 2026-09-04 23:15 / **参照した文脈**: `last_handoff_log.md`(09-04)、`last_merge_log.md`(09-02)、`MEMORY_UPDATE_20260905.md`
+**フルレポート**: `data/reports/project_handoff_2026-09-07.md`
+**前回**: 2026-09-06 23:15 / **参照した文脈**: `last_handoff_log.md`(09-06)、`last_merge_log.md`(09-02)、`MEMORY_UPDATE_20260907.md`
 
-> ⚠️ `~/Documents/Claude/.auto-memory/` は接続フォルダ外で読めず（9日連続）。youtube-factory 内の `MEMORY_UPDATE_*.md` で代用。
-> ℹ️ 実行中（23:00〜）に PDCA/指揮者タスクが並走。`data/reports/2026-09-05/*.json` は `daily-science` まで生成済み、`pokemon-lab` 以降は未生成。
+> ⚠️ `~/Documents/Claude/.auto-memory/` は接続フォルダ外で読めず（**11日連続**）。youtube-factory 内の `MEMORY_UPDATE_*.md` で代用。
+> ℹ️ 実行中（23:00〜）に PDCA/指揮者タスクが並走。`data/reports/2026-09-07/*.json` は `pokemon-lab` まで生成済み。
 
 ---
 
@@ -14,73 +14,86 @@
 
 | プロジェクト | ステータス | 一行サマリ |
 |---|---|---|
-| youtube-factory | 🟡 稼働中・要対応 | 09-05 に **29本**（公開8/予約21）。autopilot 全ch正常発火。**前回の未解決11件のうち4件が解決**。サムネ403は継続 |
-| aiseki | 🟢 正常・公開待ち | 本番 aisekimatch.com 稼働確認済み（`af5f442` の LP 反映済み）。未プッシュ1・未コミット5（集客ドキュメント）。残りは Twilio 本番化（人手） |
-| ai-english-coach | 🔵 凍結 | 08-18 から18日間動きなし。未コミット2。**Gitリモート未設定のまま** |
-| fanup | 🟡 MVP完了・集客未着手 | `2681dfd`(08-31) から変化なし。未コミット25・未プッシュ0 |
-| oripa | 🟡 Phase1 MVP | `feat/stripe-checkout` が main へ未マージ・**未プッシュ9**。最終コミット 08-11 |
-| 切り抜きラボ(clip-lab) | 🟡 稼働・**転換ゼロ** | 30日で 34,743再生・**登録0**（前回 31,946再生・0）。20:45 viral枠は API キー未設定で失敗継続 |
-| rhythm-pop | ✅ 完成済み | 06-22 以降動きなし。未コミット19・未プッシュ3・リモート未設定 |
-| claude-codex-bridge | ✅ 完成済み | 07-04 以降動きなし。未コミット1・未プッシュ3・リモート未設定 |
+| youtube-factory | 🟡 稼働中・要対応 | 09-07 に **23本**（公開6/予約17）。**3日連続で減少**（33→30→23）。13ch中12ch autopilot稼働、DBエラー0、OAuth 13ch正常。未コミット 96→**164に再増加**・未プッシュ0。サムネ403は**7夜連続** |
+| aiseki | 🟢 進捗あり・人手待ち | 本番 `aisekimatch.com` 200応答。未コミット2（ロックファイルのみ）・**未プッシュ2**。**`migration_referral_guard.sql` が適用スクリプト未掲載（NEW）** |
+| ai-english-coach | 🔵 凍結 | 08-18 から**20日間**動きなし。未コミット2。**Gitリモート未設定のまま** |
+| fanup | 🟡 MVP完了・集客未着手 | `2681dfd`(08-31) から変化なし。未コミット25・09-01以降の変更0件 |
+| oripa | 🟡 Phase1 MVP | 最終コミット08-11。`feat/stripe-checkout` は push済み・main へ未マージ9。未コミット1 |
+| 切り抜きラボ(clip-lab) | 🟡 稼働・**転換ほぼゼロ** | 30日 35,143再生・**登録+1**。20:47 viral枠は APIキー未設定で失敗継続（滞留12件） |
+| rhythm-pop | ✅ 完成済み | 06-22 以降動きなし。未コミット19・リモート未設定 |
+| claude-codex-bridge | ✅ 完成済み | 07-04 以降動きなし。未コミット1・リモート未設定 |
 
 ## 2. 検出した課題
 
 ### ✅ 今回 解決を確認（次回「要対応」として報告しないこと）
 
-- **投稿枠3件の未反映**（2ch 21:00 / scp-lab 17:00 / yokai-watch 17:45）→ バックエンドが 09-05 11:15〜12:45 に再起動済み（`Started server process [6885]`）。2ch-matome が 20:15 発火・21:00 公開で新枠稼働を実測確認。**`apply_orchestrator_20260905.command` は実行済み**
-- **サムネA/B の `channel_avg_ctr` 破損**（42.9 等）→ 19件すべて 0.0145〜0.0337 に是正済み。1以上の値ゼロ件
-- **clip-fukada の素材ゼロ + `UCRUdyowhXEQhoNT7uNEvGJA` 無効**→ 09-05 は 12:45 / 20:00 の両枠で公開成功。当該警告の最終出現は 09-04 20:00
-- **「正体」ルールの暴走** → 公開タイトル出現率 09-03 5/12 → 09-04 4/25 → **09-05 0/29**。cross-ch キーワードブロックが機能
-- **clip-animal「全ての元動画が切り抜き済み」** → 09-05 に1本公開（**部分解決**。2枠のうち1枠は依然空き）
-- （09-04 判明分）OpenAI 429 停止・Images API 呼び出し・youtube-factory / aiseki の未コミット肥大 → 解決済みのまま維持
+- **前回#3「views=0 かつ impressions>0」→ バグではないと確定・クローズ**。該当件数が 09-06:28 → 09-05:20 → 09-04:7 → 09-03:5 と日が経つほど減る＝Analytics遅延の正常な副作用。**以後この項目を課題として挙げない**
+- **backend 再起動が完了**（本日 17:00 / 18:15 に計3回）。yokai-watch 9:30 枠がスケジューラに登録済み＝朝の時間変更が実効化している
+- **`cta_position` A/B 設定が無傷**（scp-lab=`after_hook` / pokemon-lab・yokai-watch=`end`）。09-11 判定は予定どおり可能
+- **OAuth リフレッシュ 13ch 全て成功**（本日23:00 JST）
+- `channel_metrics` が 09-03 → **09-04 へ1日前進**（ただし詰まりは未解消・下記#3）
+- 朝の指揮者による title_rules 移設・台本2行目変更・title_constraints.py バグ修正は全て設定へ反映済み
 
 ### ❌ 未解決
 
-| # | 内容 | 種別 | 実測 |
+| # | 内容 | 種別 | 本日の実測 |
 |---|---|---|---|
-| 1 | **サムネイル `thumbnails/set` が HTTP 403**（本人確認未了）。全公開本がサムネ無し | 継続・**最優先** | ログ内349件。09-05 も 2ch/scp/pokemon/yokai/fake-paper の全本で失敗 |
-| 2 | `ANTHROPIC_API_KEY` 未設定（`backend/.env` 18行目コメントアウト） | 継続（**5夜連続**） | clip-lab 20:45 枠が3回試行して失敗 |
-| 3 | **analytics 取得の破損**（`views=0` かつ `impressions>0`） | 継続・**悪化** | 09-01:1 → 09-03:5 → 09-04:7 → **09-05:15行** |
-| 4 | `success_patterns.json` の scp-lab だけ `avg_view_percentage` 未クランプ（337.05） | **NEW** | 他11chは 0-100 に収まる。**並走 PDCA が scp-lab に未到達なだけの可能性が高い**。次回消えていなければコードを疑う |
-| 5 | `channel_metrics` が 2026-09-02 止まり（3日欠測） | 継続 | 前回 09-01 から1日前進のみ。`video_metrics` は 09-05 分243行取得できており、**`channel_metrics` の経路だけ詰まっている** |
-| 6 | ChatGPT画像ブリッジのスレッドURLが13ch全て未登録（`threads.json` が `{}`） | 継続 | — |
-| 7 | Reddit RSS 429（5サブレディット）。`REDDIT_CLIENT_ID` が `.env` に無い | 継続 | — |
-| 8 | GCP OAuth 同意画面が「テスト中」。**次の失効は 09-09 前後** | 継続・**期限まで4日** | — |
-| 9 | サムネA/B が19件すべて `monitoring`、切替ゼロ | 継続 | ベースラインは直ったが判定はまだ動いていない |
-| 10 | clip-lab の転換ゼロ | 継続・**悪化** | 34,743再生で登録0（再生は増、登録は0のまま） |
-| 11 | aiseki: Twilio トライアルのまま / サインアップ CAPTCHA 未導入 / DM自動送信の規約リスク | 継続 | — |
-| 12 | ai-english-coach: Gitリモート未設定（消失リスク） | 継続 | — |
-| 13 | `~/Documents/Claude/.auto-memory/` が接続フォルダ外で読み書きできない | 継続（**9日連続**） | — |
+| 1 | **サムネイル `thumbnails/set` が HTTP 403**（本人確認未了） | 継続・**最優先**・**7夜連続** | **349件** |
+| 2 | `ANTHROPIC_API_KEY` 未設定（`backend/.env` 18行目） | 継続・**7夜連続** | clip-lab viral枠が中止×4。滞留依頼書12件 |
+| 3 | `channel_metrics` が **09-04 止まり**（3日欠測）、しかも09-04は**12ch中8chのみ** | 継続・1日前進 | `video_metrics` は09-07分340行取得済み。channel_metrics の経路だけ詰まっている |
+| 4 | 画像ブリッジのスレッドURL未登録（`threads.json` が `{}`） | 継続 | `pending` **210件**（本日分84）・`delivered` **0件**。09-06の「配送開通」後も1件も配送できていない |
+| 5 | Reddit RSS 429（`REDDIT_CLIENT_ID` 未設定） | 継続 | **152回** |
+| 6 | GCP OAuth 同意画面が「テスト中」 | 継続・**期限まで2日** | 失効は09-09前後。現時点は13ch正常 |
+| 7 | サムネA/B 19件すべて `monitoring`、切替ゼロ | 継続 | 原因は#1 |
+| 8 | clip-lab の転換ほぼゼロ | 継続 | 35,143再生で登録+1 |
+| 9 | clip-kaneko「全ての元動画が切り抜き済み」 | 継続・増加 | **14回**（09-06は3回）。ただし2本は公開できている |
+| 10 | aiseki: Twilio トライアルのまま / DM自動送信の規約リスク | 継続 | 紹介報酬の支払いが電話番号認証依存になり、止まると報酬も止まる |
+| 11 | aiseki: Instagram DM ワーカーが1通も送れない | 継続（前回N2） | Cookies に `sessionid` なし＝未ログイン。`dm_targets` 0件 |
+| 12 | ai-english-coach: Gitリモート未設定（消失リスク） | 継続・**20日** | — |
+| 13 | `~/Documents/Claude/.auto-memory/` が読めない | 継続・**11日連続** | — |
+| 14 | **サムネA/B `channel_avg_ctr` の回帰 → 悪化。コード修正が必要と確定** | 継続（前回N1）・**重要** | 前回 39.24〜46.46 → 本日 **42.82〜55.17（中央値 55.17）**。18件（daily-science 14 / scp-lab 4）。`last_checked_at` は09-07 03:00/11:00 に更新＝**再チェックのたびに壊れた値を書き戻している**。正常なのは08-29作成の1件（0.033）のみ |
+
+### 🆕 NEW（今回はじめて検出）
+
+| # | 内容 | 判断材料 |
+|---|---|---|
+| **N1** | **タイトルが「正体」に収斂し、クロスch重複ゲートで114回ブロック** | 09-06は**0回** → 09-07は**114回**（正体89 / 年収19 / 記録3 / 大雨2 / 階段1）。ユニーク26タイトル・同一タイトル最大11回＝再生成ループ。**本日朝の数字制約（`forbid_digits` / `max_digit_groups:1`）と同日発生**。数字を封じた反動で「〜の正体」型へ逃げた可能性が高い。制作本数の 30→23 減少も同日 |
+| **N2** | **clip-animal が実質停止** | 30日で**再生17回・登録0**。公開は09-03/05/06に各1本、**09-07は0本**。autopilot は enabled のまま。継続可否の判断が要る |
+| **N3** | **youtube-factory の未コミットが 96 → 164 に再増加** | 変更50/未追跡114。`data/scenarios` 97件など大半は生成物だが、**`backend/pipeline` の本日のバグ修正がその中に埋もれている** |
+| **N4** | **aiseki `migration_referral_guard.sql` が `apply_migrations.command` に未掲載** | 09-06作成・同日コミット `a33d809`（紹介ボーナスの穴塞ぎ）に対応するSQL。適用スクリプトは旧3本のみ。本番適用済みかは未確認（DB接続はしていない）。未適用ならコード側だけ塞いでDB側が無防備 |
 
 ## 3. ユーザー手動待ちタスク一覧
 
 1. **YouTube 13ch の電話番号確認**（youtube.com/verify）← 最優先・サムネ403の唯一の解
-2. **GCP OAuth 同意画面の本番公開**（project 844705815004）← **09-09 期限**
-3. `ANTHROPIC_API_KEY` を `backend/.env` に設定（18行目のコメント解除）
-4. **Twilio を本番アップグレード**（aiseki 公開前の必須条件）
-5. ChatGPT スレッドURL を 13ch 分登録（`scripts/image_bridge.py thread set`）
-6. `~/Documents/Claude/.auto-memory` を Cowork の接続フォルダに追加
-7. `REDDIT_CLIENT_ID` の設定
-8. ai-english-coach の GitHub リモート作成と push
-9. oripa の `feat/stripe-checkout` を main へマージするか判断（未プッシュ9コミット）
+2. **GCP OAuth 同意画面の本番公開**（project 844705815004）← **09-09 期限・残り2日**
+3. **【NEW】aiseki: `migration_referral_guard.sql` が本番DBに当たっているか確認**
+4. `ANTHROPIC_API_KEY` を `backend/.env` に設定（18行目のコメント解除）
+5. **ai-english-coach の GitHub リモート作成と push**（20日間ローカルのみ・消失リスク最大）
+6. **Twilio を本番アップグレード**（aiseki 公開前の必須条件・紹介報酬の前提）
+7. **Instagram にログイン**（`cd worker && npm run login`）＋ `/admin/dm` から送信先CSV取り込み
+8. ChatGPT スレッドURLを13ch分登録（依頼書210件が滞留）
+9. aiseki の未プッシュ2コミットを push
+10. `~/Documents/Claude/.auto-memory` を Cowork の接続フォルダに追加
+11. `REDDIT_CLIENT_ID` の設定
+12. oripa の `feat/stripe-checkout` を main へマージするか判断（未マージ9・push済み）
+13. **【NEW】clip-animal を続けるか止めるか判断**
 
-> ※ 前回#5「clip-fukada の素材投入 / チャンネルID確認」は**完了**したのでリストから外した。
+## 4. 次回（09-08）の実行時に確認すること
 
-## 4. 次回（09-06）の実行時に確認すること
-
-- **サムネ403が解消したか**（解消していれば「解決済み」へ移す）
-- `success_patterns.json` の scp-lab がクランプされているか（PDCA完走後）
-- `channel_metrics` が 09-02 から前進したか
-- analytics 取得の破損が15行から増えていないか
+- **サムネ403が解消したか**
+- **N1: 「正体」ブロックが続いているか。** 続くなら数字制約の副作用としてタイトル語彙の分散策が要る。制作本数が23本を下回っていないかも見る
+- **#14: `channel_avg_ctr` が 42〜55台のままか、さらに上がっているか。** 上がり続けるなら書き戻し処理を止めるのが先
+- `channel_metrics` が09-04から前進したか。**および09-04分が12ch揃ったか**
+- **09-08以降**: 1日3本体制の是非を、09-04〜06コホートの公開3日後実績で再判定（8月水準700〜900回を割っていれば1日2本へ戻す）
 - **09-09 前後**: OAuth リフレッシュトークンの失効
-- **09-11**: `cta_position` A/B の判定日
-- **09-12**: 尺の対照実験の評価日（実験群 scp-lab / 2ch-matome vs 対照群 daily-science / pokemon-lab / yokai-watch）。**それまで対照群の尺に触れない**
-- **09-19**: yokai-watch を 19時→17:45 に移した影響で再生数が落ちていないか
-- サムネA/B 19件が `monitoring` から動いたか
+- **09-11**: `cta_position` A/B の判定日（設定は無傷を確認済み）
+- **09-12**: 尺の対照実験の評価日。**それまで対照群の尺に触れない**
+- **09-13**: 4行目ルール変更の反証日（scp 23.6 / pokemon 22.0 / yokai 25.0 を下回らなければ棄却）
+- **09-19**: yokai-watch を19時→17:45 に移した影響の評価
 
 ## 5. 本タスクで行った書き込み
 
-- `data/reports/project_handoff_2026-09-05.md`（新規）
+- `data/reports/project_handoff_2026-09-07.md`（新規）
 - `data/reports/last_handoff_log.md`（本ファイル・上書き）
 
-他プロジェクトへの書き込み・git 操作（push/merge/commit）・設定変更は一切していない。読み取りのみ。
+他プロジェクトへの書き込み・git 操作（push/merge/commit）・設定変更・外部DB接続は一切していない。読み取りのみ。

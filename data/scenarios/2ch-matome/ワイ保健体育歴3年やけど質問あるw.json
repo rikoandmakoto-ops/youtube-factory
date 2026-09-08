@@ -1,0 +1,658 @@
+{
+  "title": "ワイ、保健体育歴3年やけど質問ある？w💦",
+  "theme": {
+    "title": "学生時代の保健体育、先生がやらかした話しようや",
+    "angle": "教室の空気だけで笑わせる。直接語は使わない"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "ワイ、保健体育歴3年やけど質問ある？w",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ とんでもない先生が3秒固まった回から頼むわ草…からの",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1 教科書を開いた瞬間に全員が天井見たで",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイの列だけ4人、急に筆記具を探し始めた草",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "伝説の先生、ページを2枚戻して無言の勝利宣言やw。…これ、ワイが悪いんか？コメ欄で判定してくれ",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "質問ある？シリーズ、草生えたら高評価なw これ面白かったら共有してくれw 再生数で生活してるんだわw。…待って、ワイに戻って",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、保健体育の時間だけ教室全員が急に無口になったことありませんか？原因は先生の一言、出席番号35人を3秒で石像にした伝説です。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回は、黒板の前で起きた先生のうっかりが、なぜ笑いをこらえる地獄へ変わったのか、その正体を暴いていくぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "舞台は午後の教室、窓際では眠気が勝ちかけていたのに、先生が資料をめくった瞬間だけ空気が体育館みたいに張りつめたんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも最強のやらかしは、難しい話ではなく先生自身の言い間違いだった。訂正すれば済むのに、本人だけ気づかないのが怖いぞ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "前列はノートに顔を伏せ、後列は天井を見上げ、誰も目を合わせない。笑ったら終わるという謎の連帯感だけが完成しました。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "では、その一言を聞いたクラスがどう耐えたのか、先生は最後まで気づけたのか。経験者ならコメント欄で静かに供養してくれ。",
+      "expression": "grin",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこれ、半分は間違いなんだ。保健体育の先生が沈黙を生む原因、失言そのものより「次に何を言うか待つ教室」にある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "人は気まずい場面で、周囲の反応を見てから笑うか黙るか決めるらしい。四十人が一斉に机へ視線を落とす、あの妙な連携だな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり先生の言い間違いは、最初は小さな火種でしかない。誰か一人が咳払いを飲み込んだ瞬間、教室全体が爆発待ちの空気になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "特に説明用の人体図や実演の前は、全員が真面目な顔を作りがちだ。その真面目さが強いほど、些細なズレだけで笑いが増幅する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "心理学ではこれを同調と呼ぶけど、要するに「隣が耐えてるから自分も耐える」現象。耐える人数が増えるほど顔面だけ忙しくなる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも先生が気づかず板書を続けると、逃げ道が消える。消しゴムを落とす音ひとつで振り向けない、全員が前だけを見る時間になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "研究では沈黙も集団の合図になり、数秒の間で空気が固定されるという。だから一人の小さな肩の震えが、教室の事件記録になるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "逆に先生が自分で言い直して先に笑うと、緊張はかなりほどける。あの場で強いのは知識量より、空気を回収する一言だったりする。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さて、みんなの学校では誰が最初に限界を迎えた？先生の一言より、その後の静かすぎる教室の記憶をコメントであげてけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "匿名アンケートでは、保健体育の授業で先生の言い間違いを目撃した学生が68％。静かな教室ほど笑いを飲み込む率が高いらしい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "心理学でいう緊張緩和は、張りつめた場で予想外が起きると笑いが出る仕組み。号令ひとつの噛み方で机が震える、あの現象だな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも笑いを我慢すると、顔を伏せる生徒が平均で3人に1人。筆箱を探すふり、教科書を直すふりが同時に始まるのが妙にリアル。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転、いちばん危険なのは先生が真顔で言い直す瞬間。訂正が丁寧なほど、教室は逆に無音になってから一斉に崩れやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "学校場面の観察研究では、周囲が笑わない時ほど個人は笑いを抑えるという結果もある。だから一人の肩だけ震えると、全員がそこを見る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "保健体育は着替えや実技の前後で空気が切り替わりやすい科目。先生の何気ない一言が、チャイムより強く教室を止めることがある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "笑いの伝播実験では、隣の人が口元を押さえるだけで反応が増えた例が報告される。後ろの席から小さな震えが前列へ移る感じだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さらに先生本人が気づかず板書を続けると、生徒は目を合わせなくなる。誰かと視線が合った瞬間に負ける、あの暗黙のルールが発動する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "記憶研究では、感情が動いた授業ほど後年まで場面を思い出しやすい傾向がある。内容より、窓際の友達の赤い顔だけ残ることもある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり事件の主役は発言そのものより、耐える全員の空気かもしれない。あなたの学校で、誰が最初に机へ伏せたかコメントで教えてくれ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "保健体育の先生のやらかし話、昔から掲示板で妙に伸びる定番なんだぜ。最強は授業中、全校集会より静かな教室を生んだ一言らしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "記録を掘ると、2000年代の匿名掲示板には「先生が止まった瞬間」報告が毎年のように出現。内容より沈黙の秒数が語られていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここでいう保健体育は、体の仕組みや運動を扱う授業のことだぜ。教科書を開いた途端、後ろの席まで姿勢が良くなる不思議な時間だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "当時の投稿者は、先生の説明より窓際のカーテンの揺れを鮮明に覚えていたという。人は気まずい場面ほど周辺情報を記憶しやすい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも教師側は真面目に進めるほど、教室の空気との温度差が広がるんだぜ。チョークの一音で三十人が同時に下を向く、あの現象だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きなのは、笑った本人より笑いをこらえた生徒の証言が多い点だ。誰も声を出していないのに、机だけが小刻みに震えていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "歴史的には、学級日誌や卒業文集にも似た場面が残りやすいんだぜ。ただし固有名詞は消え、なぜか「例の時間」だけが代々伝わる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "研究者はこうした共有を、集団記憶と呼ぶことがある。一人の失敗より、その場にいた全員の沈黙が物語として保存されるわけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さて次は、先生が何をしたかではなく、誰が最初に顔を伏せたかが鍵になるぜ。お前らの教室なら、沈黙を破ったのは誰だった？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "保健体育の授業で最も空気が凍るのは、教材そのものより先生の「ここ大事です」が教室全員に同時着弾した瞬間らしい。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "実際、思春期は周囲の視線を強く意識しやすく、発表や実演の場面では心拍が普段より上がる生徒もいるという話だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも先生側は真面目に説明しているだけなのに、黒板へ向く背中、やけに長い間、チョークの音だけで不穏さが完成する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで驚きの反転。教室が静かなほど内容を理解しているとは限らず、全員が「誰も笑うな」と同じ命令を脳内で実行中だったりする。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "学校の健康教育は知識を教える目的なのに、記憶に残るのは図表より、先生が言い直した一語と窓際の誰かが机を見た角度だったりする。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "心理学では沈黙が長いほど緊張を大きく感じやすいとされるが、保健体育では数秒の間が昼休み一時間級に引き伸ばされる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さらに出席番号順で答える形式は、次の人へ近づくほど視線が連鎖する。内容より「次は自分か」が授業の主役を奪っていくんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "先生が「笑うところじゃないです」と先回りした途端、笑いを意識していなかった生徒まで急に口元を封印し始める現象、あれは強い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "教室の空気は一人の反応で変わるから、咳払い一回でも救いになることがある。逆に椅子のきしみが合図みたいに響く日はもう危険。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "お前らの学校では、先生のどんな一言で全員が天井か机だけを見る集団になった？　答えは出さず、コメント欄で供養してくれ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日から使えるのは、気まずい沈黙が落ちた瞬間に机の上を整える技。視線の避難所ができるだけで、教室の空気は意外なほど早く平常運転へ戻るよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "心理学でいう「同調」は、周囲の落ち着いた動きをまねして安心する反応だぜ。先生が固まった時ほど、ノートを開く一人が現れると全員が救われるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ただし笑いをこらえる時、友達の顔を見るのは危険！　学校の昼休みに起きた笑い連鎖は、最初の一人の口元で爆発するという体感データしかないからね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "実践するなら、ペンを落としたふりより消しゴムを探すふりが安全だぜ。音が出ないし、先生に見つかっても「字を直してました」で歴史的な言い訳になる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、いちばん強い対処は笑わないことじゃないよ。笑いそうな自分を責めず、三秒だけ呼吸を数えると、顔の震えが別の作業に化けていくんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "帰宅後に思い出して再燃するタイプは、出来事を一行だけメモにするのがおすすめだ。脳は未完了の話を何度も再生するけど、文字にすると一旦保管扱いになる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "友達と共有するなら、固有名詞を抜いて「今日の空気すごかった」で止めよう。誰かを主役にしない雑談なら、翌朝も普通に挨拶できる平和な余白が残せるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "大人になって会議で同じ空気が来たら、資料のページ番号を確認するだけでも効くぜ。沈黙を埋める英雄より、場を壊さず戻す係が案外いちばん頼られるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "あなたの学校では、先生の一言より先に全員が察した瞬間あった？　コメントでは名前も場所も伏せて、あの妙な静けさだけ置いていってね、続きはみんなで笑おう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日の保健体育スレ、先生の一言で教室四十人が同時に天井を見た、あの逃げ場ゼロの空気が優勝だったね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "誰も笑っていないのに、机を見つめる人だけ増えていく現象。チャイムまでの三分が、授業一年分より長かったぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも先生は何事もなかった顔で次のページへ進行。あの無敵の平常運転こそ、記憶に残る最大のやらかしだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転、先生が悪いのか、聞き取ってしまった生徒が悪いのか。答えのない沈黙こそ、スレ民のごちそうだったな。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回は『先生の謎ルール、今なら絶対ツッコめるやつあげてけ』を解説するよ。教室の理不尽がコメント欄で再燃する予感。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回も、くだらないのに参加したくなる二次元スレの空気を三十秒で実況。あなたの学校にも一個はあったはずだぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "刺さった人は高評価と登録で、ゆっくり2chスレまとめ劇場の次の開廷を待ってね。あなたの記憶もコメントで供養して！",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "先生が沈黙",
+      "教室が終わる"
+    ],
+    "hook_caption": "3秒の沈黙",
+    "subtitle": "保健体育のやらかし",
+    "tagline": "全員察した草"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": false,
+      "original_hook": "ワイ、保健体育歴3年やけど質問ある？w",
+      "selected_hook": "ワイ、保健体育歴3年やけど質問ある？w",
+      "scores": [
+        {
+          "hook": "ワイ、保健体育歴3年やけど質問ある？w",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 25,
+            "loop_connect": 5
+          },
+          "total": 65
+        },
+        {
+          "hook": "お前ら、保健のページで二度見したことある？w",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 15
+          },
+          "total": 58
+        },
+        {
+          "hook": "君ら、先生が無言で戻ったページの正体わかる？w",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        }
+      ],
+      "reason": "original_is_best"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "ワイ、保健体育歴3年やけど質問ある？w",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ 先生が3秒固まった回から頼むわ草",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": ">>1 教科書を開いた瞬間に全員が天井見たで",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 3,
+          "text": "ワイの列だけ4人、急に筆記具を探し始めた草",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 4,
+          "text": "先生、ページを2枚戻して無言の勝利宣言やw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "お前らの先生は何秒で空気を凍らせた？ 高評価置いてチャンネル登録、質問ある？シリーズ毎日投稿中で1万",
+          "tension": 6,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "share",
+      "style_label": "共有",
+      "original_cta": "お前らの先生は何秒で空気を凍らせた？ 高評価置いてチャンネル登録、質問ある？シリーズ毎日投稿中で1万人目標や、応援よろしくw",
+      "new_cta": "質問ある？シリーズ、草生えたら高評価なw これ面白かったら共有してくれw 再生数で生活してるんだわw"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 27,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 3,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 68,
+      "optimized_score": 68,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.85,
+      "issues": [
+        "前半に情報が偏り後半が弱い（クレッシェンド不足）",
+        "50%・66%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "てくれw 再生数で生活してるんだわw。…待って、ワイに戻って",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 1.0
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「先生」→「とんでもない先生」",
+        "「先生」→「伝説の先生」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": false,
+      "max_similarity": 0.604,
+      "similar_to": "ワイ、推し寿司歴3年やけど質問ある？w",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 27,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "ワイ、保健体育歴3年やけど質問ある？w",
+      "enhanced_title": "ワイ、保健体育歴3年やけど質問ある？w💦",
+      "emoji_added": "💦",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "ワイ、保健体育歴3年やけど質問ある？w💦"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 4,
+      "bait_text": "…これ、ワイが悪いんか？コメ欄で判定してくれ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "positive",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "statement",
+        "statement",
+        "statement",
+        "statement",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.2
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "前回のスレ見た奴は察してるだろうけど",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['？'](+12)"
+    ]
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

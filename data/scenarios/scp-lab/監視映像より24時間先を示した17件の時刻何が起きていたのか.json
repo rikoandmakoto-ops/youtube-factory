@@ -1,0 +1,518 @@
+{
+  "title": "監視映像より24時間先を示した17件の時刻、何が起きていたのか",
+  "theme": {
+    "title": "監視ログの時刻だけが未来を指していた夜",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実は24時間前には収容されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、収容室にいたのに、まだ外にいるってことか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視ログ17件は、映像より24時間先の時刻を示した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "校舎の時計だけが、翌日の授業を映しているような話だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "映像の人物は翌日に消えた。記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容違反ファイルシリーズは他にもある。高評価を残し、1万人目標で毎日投稿中のチャンネル登録を頼む。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実は24時間後の時刻で監視されていた。あなたが自室の防犯映像を開き、まだ来ていない明日の午前2時17分を見つけたなら、再生ボタンに触れるな。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って。映像が未来を映したのではなく、画面の隅にある時刻だけが未来だったのか。見ている側より数字だけが先へ進むなら、逃げ場がない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の監視記録17件では、室内時計と職員端末は現在時刻を示していた。異常だったのは録画時刻だけで、そこに映った職員は翌日までに全員失踪した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…ねえ、これ本当に大丈夫なの？　次の日に消える人物を前日に映すなら、監視室にいた人間は、自分の失踪予定を先に見せられたことになる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の失踪者はサイト-██の夜勤警備員だった。午前2時17分の巡回中、監視室では翌日の午前2時17分という表示を持つ映像が、操作なしで保存された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "映像内の警備員は、収容区画の通路を歩いていた。制服も姿勢も通常どおりだった。ただし通路の奥には、設計図にも存在しない鉄製の扉が1枚だけ映っていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "まだ来ていない24時間後の本人が、その扉を開けるのか。監視室にいる警備員は、自分が翌日どこへ行くかを、逃げられない形で見せられた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "警備員は映像の停止を命じた。しかし停止操作から8秒後、彼自身の端末へ映像と同じ扉の位置情報が届いた。送信元は、警備員の職員IDだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "端末の送信履歴には、24時間後の日時が刻まれていた。未来の警備員が送ったと読める内容だったが、その時点の財団は表示異常としか扱わなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "翌日の同時刻になれば、映像が嘘か本当か分かる。通路に行かなければ終わるはずだ。それなのに、なぜ警備員は隔離されても消えた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "警備員は通路から離された。午前2時前、窓のない隔離室へ移され、扉は二重施錠された。それでも午前2時17分、隔離室の監視映像だけが未来時刻へ切り替わった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "映像内には、隔離室にあるはずのない通路と鉄製の扉が映った。現実の室内には壁しかない。それでも映像の24分後、警備員だけが消え、拘束具だけが床に残った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "閉じ込めても、映像に映った場所へ連れていかれるのか。だったら監視記録を見る職員も、次の映像に混ぜられる。ちょっと待って、怖いって。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題はこの次だ。警備員は消失直前、未来時刻の画面へ指を差し、監視室にいた主任へ何かを伝えようとしていた。音声記録は最初から0秒だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "オブジェクトは暫定Euclidに分類された。ただし収容箱へ入れられる物品ではない。異常の中心はサイト-██の監視網に散在し、電源を落としても消えない可能性があった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第1版の収容プロトコルは単純だった。時刻異常を検知した端末は映像を確認せず停止し、記録媒体を鉛製保管箱へ移送する。閲覧者は48時間の隔離対象となる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "見ないだけで済むのか。未来時刻を出した端末を誰も見なければ、翌日の消失も止まるのか。それとも数字を見た時点で、もう予約は終わっているのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも、まだ説明できていない。17件のうち6件は、誰も映像を再生していない無人監視室で発生した。画面は暗いまま、録画一覧の日付だけが未来へ移動した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに異常時刻は常に24時間後ではない。最短記録は3時間、最長記録は72時間先だった。だが対象の失踪は必ず表示時刻と同じ分に起き、誤差は1分もなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "未来を知らせているんじゃない。時刻が来た瞬間に、映像の出来事を現実へ押しつけている。監視は警告ではなく、何かが実行する予定表みたいだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録番号██-17では、映像に人間以外の輪郭が映った。廊下の非常灯の下に、警備員と同じ背丈の影が立っていた。顔に当たる部分だけ、映像が黒く欠けていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "当直員は侵入者を疑い、武装班4名を配置した。しかし表示時刻まで残り11分となった時点で影は消え、代わりに当直員本人が扉の前へ立つ姿が映った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "映像を見た人間が、次の出演者にされるのか。最初の警備員も画面を見たから通路へ立たされた。なら次に消えるのは、ずっと画面を監視している人間だ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "当直員は目を閉じ、監視室から退避した。だが72時間後、彼の居室にある消灯中のモニターへ、午前2時17分という白い数字だけが映ったという記録が残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第2版では、異常端末の周囲20メートルを封鎖する規定が加えられた。画面へ視線を向けた職員は48時間隔離され、職員IDと私物端末も一時的に回収された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "隔離された職員には映像内容を口頭で共有することも禁じられた。内容を知らない職員でも、時刻と扉という2語だけを聞いた後、悪夢を訴えた例が9件あったためだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "言葉だけでも近づくのか。学校で誰かの噂を聞いただけで、その教室が怖くなる感覚とは違う。これは聞いた相手の明日まで、監視記録へ混ぜてくる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "悪夢の内容は9件すべてで一致していた。職員たちは自室にあるはずのない監視カメラを見つけ、画面の時刻だけが翌日を指し、扉の向こうで誰かが待っていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの一致を感染と呼ばなかった。伝達経路が確定していないからだ。報告書には、時刻情報に付随する予告的収容違反とだけ記され、原因欄は空白のままだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第3版の審査中、封鎖済み端末1台が新たな時刻を表示した。そこに映っていたのはサイト-██ではない。財団本部の記録保管庫、棚番号███の前だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容施設の中だけの異常ではなかったのか。本部まで映ったなら、保管庫にある報告書そのものが、次の扉として使われた可能性がある。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "保管庫映像の時刻は、作成日から19日後を示していた。映像には白衣の職員1名が、床に置かれた古いモニターを見下ろしていた。周囲の棚は全て施錠されていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "19日後、同じ棚番号で職員1名の不在が確認された。現場に残っていたのは電源の入らないモニターと、画面に指でなぞられたような午前2時17分の数字だけだった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最初の夜勤警備員が消えた時刻と同じだ。未来時刻は3時間後でも19日後でも変わるのに、扉が開く分だけは午前2時17分へ戻る。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その差は、異常が待機する時間なのか、対象を選ぶ時間なのか、財団でもまだ説明できていない。時刻を表示する端末も、廊下の扉も、同じ機種や素材ではなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "私は当時、映像内の人物を名簿と照合する担当だった。17件目の確認で、画面の扉の前に立つ人物の顔が、4年前の記録に残る私自身と一致していた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "シロも映っていたのか。その映像の時刻はいつだった。今こうして報告を読めているなら、予定どおりには消えなかったのか。それとも別の誰かが代わったのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "映像時刻は翌日の午前2時17分だった。私はその夜、監視室へ入らず別サイトへ移送された。だが移送先の廊下に鉄製の扉は現れず、警備記録にも異常はなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "代わりに輸送車両の後部モニターが起動した。そこには監視室に残った主任が映り、画面の外にいる私へ向けて、扉を開けるなと口を動かしていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "主任は何を知っていた。最初の映像で警備員が伝えようとしたことも同じ警告だったのか。なら扉は見つけた人間が開けるものではない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "主任はその夜に失踪した。残された映像には、主任が扉へ触れる場面がある。しかし取っ手を回したのは主任ではなく、画面のこちら側から伸びた手だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "手は映像の端から現れ、扉を静かに押し開けた。以降の12秒は全面が黒い。監視ログの時刻だけが進み続け、午前2時17分から午前2時18分へ変わった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "画面の向こうにいる何かが、未来の人物を扉へ誘導している。なら時刻は予言ではない。向こう側がこちらへ届くために、相手を選んで作る予約表だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説も近い。ただし向こう側という表現は承認されていない。報告書には、映像記録を介して対象の位置情報が置換される事象とだけ、乾いた文で記されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "位置情報が置換されたなら、隔離室にいた警備員が通路へ消えた理由は説明できる。しかし、なぜ通路の奥に扉が必要なのか。その部分の記録は[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現在の対処では、午前2時12分から午前2時22分まで、サイト-██内の全監視画面を遮蔽する。10分間だけ、財団は自分たちの収容区画を見ることをやめる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "監視をする組織が、毎晩10分だけ目を閉じる。異常を見逃す危険より、見てしまう危険のほうが大きいと判断された。そんな収容手順は聞いたことがない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "遮蔽中に何が起きるかは分からない。通路の巡回記録は空白になり、職員の記憶も曖昧になる。ただし遮蔽を破って画面を見た者は、これまで3名いた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "3名のうち2名は翌朝まで異常なしと報告した。だが48時間後、2人の私物端末が同時に起動し、同じ未来時刻と同じ鉄製の扉を映した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残る1名は、画面を見た直後に端末を破壊した。監視映像には破片の間から午前2時17分の数字が点灯し続ける様子だけが残った。本人は現在も行方不明だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "壊しても消えないなら、端末は入口ではない。あの時刻を見た人間の中に、次の監視室が作られる。聞かなきゃよかった。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "このファイルを読む職員には、最後の注意事項がある。自宅の時計が午前2時17分で止まっても、時計を直そうとするな。近くの画面を確認するな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "録画一覧へ見覚えのない日付が増えていた場合は危険だ。その日付が明日なら、あなたの姿が映っている可能性がある。見かけても、決して近づくな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次回はSCP-093、赤海洋物体の調査映像を扱う。持ち出された6名の記録にも、帰還後にだけ増えた映像があるという。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容違反ファイルシリーズには、こうした途切れた監視記録が残されている。この報告書が届いたなら、まず高評価を残せ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中だ。次のファイルが届く前に登録しておけ。午前2時17分の画面が、あなたを先に映す前に。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "未来の時刻",
+      "誰が映る"
+    ],
+    "hook_caption": "24時間先",
+    "subtitle": "監視ログに残った未来の記録",
+    "tagline": "時刻だけが明日を指していた夜"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 20,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 4,
+        "emotional_impact": 2,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.594,
+      "similar_to": "SCP-5800 職員証1枚だけ戻る正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 37,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-███ 24時間先を映す監視録"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', 'だけ'](+20)",
+      "好奇心ギャップ['なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-███ 24時間先を映す監視録",
+    "attempts": 1
+  },
+  "original_title": "SCP-███ 24時間先を映す監視録",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ監視ログだけが24時間先を記録したのか"
+  }
+}

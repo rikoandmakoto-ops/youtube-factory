@@ -1,0 +1,529 @@
+{
+  "title": "なぜスマホを探す人は画面を12%明るくするのか？",
+  "theme": {
+    "title": "スマホを探している人は画面の明るさを12%上げてしまう、紛失直前の操作記録1,846件",
+    "angle": "日常の違和感を研究したシリーズとして、スマホを手元に持っているのに探す行動を明るさ設定と結び付ける",
+    "parent_title": null
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "スマホを探す人ほど画面を明るくする——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言います。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『生活錯覚報』と薄明行動研究所の1,846件です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "探索開始前30秒で、明るさは平均12%上がりました。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに手元保持群でも有意差が確認されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。スマホの論文は存在せず。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "信じた方は高評価で白状を。日常の違和感を研究したシリーズはまだあり、毎日投稿中、1万人目標のチャンネル登録を応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたは手に持つスマホを探しながら、画面だけ少し明るくしたことはありませんか。探索状態では表示の明るさが平均12%上がるという論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載誌は架空の『生活錯覚報』、調査機関は架空の薄明行動研究所です。紛失直前と判定した操作記録1,846件を分析した、という体裁になっています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "スマホを手に持っているのに探すだけでも不思議ですが、明るさ設定まで変わるのですか。待ち合わせ前の焦りにまで数字が付くなら気になります。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この論文の結論は、端末の位置ではなく、探している自分の状態を画面で確かめるというものです。確認のための操作が、探索の儀式になると報告されています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "記録では探索を始めた前後30秒以内に明るさを変えた割合が63.8%でした。休憩中の通常操作では18.6%であり、45.2ポイントの差が示されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。掲載誌ごと架空であり、1,846件の操作記録も、もっともらしい日常を測定したように見せるための完全な創作です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。さっきまで通学中にスマホを握ったまま探した自分を思い出し、明るさ12%という半端な数値まで素直に信じていました。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "それでも架空論文としての方法は整えます。被験者とは、ここではスマホを探す演技に参加した架空の人々で、312人が14日間記録した設定です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "312人は20歳から29歳までとされ、朝の支度、講義の前、仕事の連絡前、待ち合わせ前を分けて記録しました。合計操作数は7,284回という数字です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "日誌形式なら焦った時刻は残せそうですが、スマホを本当に手に持っていたかは難しそうです。そこはどんな測り方をした設定なのでしょうか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "分類には架空の持ち方推定表を使いました。片手に端末があるのに、机、ポケット、バッグを見回す動作を手元保持探索として数えたことになっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "手元保持探索は1,846件中427件で、全体の23.1%でした。およそ4回に1回弱、端末の重さを感じながらその所在だけを疑っていた計算になります。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "鍵を握ったまま鍵を探すことはありますが、スマホは画面を触れてしまいますね。その接触が、明るさを変える最初のきっかけになるのでしょうか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空の研究班は探索開始後の最初の接触位置を集計しました。427件のうち189件、44.3%では明るさ操作の付近に親指が最初に置かれた設定です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここでの明るさ上昇は、見やすさが改善したという意味ではありません。設定値が何ポイント動いたかだけを、温度計の目盛りのように数えた架空の記録です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "探し物を解決するのではなく、画面を変化させて自分の焦りを確認するという仮説ですね。急いで返信したい時ほど、確かに起きそうな形です。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はこの反応を『所在確認反射』と呼びました。要するに、目の前の端末を見失った不安を、光量の変化で一度だけ確かめる癖だという説明です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最大の差は待ち合わせ時刻の10分前に出た、とされています。この条件では明るさ上昇が平均17.4%となり、通常時より9.8ポイント高い数値でした。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "10分前という具体性が妙に現実的です。遅れる連絡を確認したいのに、手にある端末の場所を探す方へ、注意だけが滑っていくわけですね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "統計欄には、有意差が確認されていますと記されます。有意差とは偶然のばらつきだけでは説明しにくいように見せる、研究発表で便利な印のことです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "今回のp値は0.004という架空値です。小数点以下3桁まで数字が並ぶと、読者は測定の精度を想像し、話の骨組みまで本物らしく受け取りがちです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "第二の結果として、明るさを上げた人の71.2%は、その後40秒以内に『あった』と発話しました。もちろん端末は、最初から手の中にあった設定です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "発見率のように聞こえますが、見つけたのではなく、持っていたことに気づいただけなのですね。それでも表にすると成果のように見えてしまいます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この架空の現象名は『画面による再遭遇』です。場所を見つけたのではなく、すでに接触していた物を視覚でもう一度発見する、という筋書きになっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "観察室には幅120センチの机、空のバッグ、紙片24枚、ペン3本を置いた設定です。参加者は平均38秒、端末を握ったまま周囲を見回しました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "紙片が24枚あるだけで、買い物帰りや提出前の机のように想像できますね。小さな用事が重なるほど、手元の物を見落とす感じはあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "場所別ではバッグの前で探した群が最大で、明るさ上昇は平均14.1%でした。バッグは端末が入っているはずだという記憶を呼ぶ、と解釈されています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "一方で机の前で探した群は平均8.3%でした。視界に候補が多いほど、明るさ設定へ向かう親指が少しだけ迷う、という架空の結果になっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "差は5.8ポイントしかないのに、バッグという生活感のある場所が出ると納得してしまいます。架空の数字へ、自分の朝の支度を重ねてしまいました。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この種の論文は、日常の一瞬を細かく切り取るほど信じやすくなります。12%という数値は、丸すぎず細かすぎないため、測定結果らしく見える数字です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "10%なら話を作った印象が強く、15%なら覚えやすい数字に見えます。12%は計測器がどこかにあったような錯覚だけを、静かに読者へ残します。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "数字が精密だから真実なのではなく、精密に見える数字だから信じかけるのですね。僕は内容より先に、12と1,846の並びを信用していました。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空の研究史では、薄明行動研究所は6年前から手元にある物の捜索を追っていたことになっています。初年度の予算は312万通貨という設定です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "第1報では眼鏡を頭に乗せたまま探す参加者83人を記録し、第2報では鍵を握ったまま玄関を探す参加者126人を追跡した、と記載されます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "過去報告が2本並ぶだけで、スマホ研究も長年の流れから出たように見えますね。研究所の継続性まで、知らないうちに受け入れてしまいます。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ですが、その研究所も誌名も人物も存在しません。単発の数字より架空の沿革を添える方が、読者は研究文化そのものを先に信じるからです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "主任研究者には凪野レム准解析官という架空名が付いています。少し聞き慣れない肩書きは、狭い専門分野が実在するような余白を作ります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "准解析官という語は意味を説明されなくても、専門家らしく聞こえますね。知らない言葉が出ると、自分が知らないだけだと思ってしまいそうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこで本稿では難しい言葉を増やしません。スマホを探す、手元を見落とす、明るさを上げる、この3点だけで論文らしい形は十分に作れます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "似た経験を思い出しても、これは何かの行動を勧める話ではありません。日常にありそうな断片へ架空の測定値を置き、信じかける仕組みを眺める話です。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "対策として何かを言われるより、なぜ納得したのかを考える方が面白いですね。通勤前の数十秒まで、研究対象のように見えてきました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空の付録には、明るさを上げた直後の発話48例が収録されています。最多は『ない、ない』で全体の29.2%という、妙に生活感のある割合です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次点は『さっきここに』で18.7%、三位は無言でバッグを開く動作でした。曖昧な言葉を表に入れるだけで、観察研究の雰囲気は急に濃くなります。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "『さっきここに』は、手に持っている時ほど言いそうです。探している対象が端末ではなく、置いたはずの記憶になっている感じがします。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "図3では、探索開始から明るさ変更までの秒数が棒グラフ化されています。中央値は9秒で、焦りの短さだけがやけに正確な測定値として並びます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "図の注記には『夜間設定を含む』とありますが、夜間設定の意味は説明されません。説明不足でも図表があるだけで、重要な条件のように見えるのです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "細部が不明なのに注記があるだけで、僕は重要な変数だと思いました。論文らしさは文章だけでなく、読者が補う空白でも作られるのですね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "まとめるべき点は、スマホを探す人が12%明るくするという結論そのものではありません。1,846件という架空の数が、あなたの記憶を呼び出した点です。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "手元にある物を探した経験、架空の誌名、312人という人数、0.004というp値を順に置くと、存在しない記録にも一瞬だけ輪郭が生まれます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "僕は手元のスマホを探した経験があるから、論文の有無より先に納得しました。自分の体験が、いちばん厳しいはずの査読者を通してしまったのですね。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、月曜日だけ味覚が0.4%鈍るという架空の追跡調査を扱います。52週間の食事記録という設定で、存在しない数値を丁寧に積み上げます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "日常の違和感を研究したシリーズには、眼鏡、鍵、会議前のペンなど、まだ多くの架空記録があります。高評価で、信じかけた瞬間を記録してください。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "月刊 虚構論文のアーカイブには、掲載誌ごと架空の報告がまだ何本もあります。毎日投稿中、チャンネル登録者1万人目標への応援をよろしくお願いします。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "次にスマホを探す時は、明るさを上げた自分を疑うのでなく、この架空の1,846件を思い出します。信じた人ほど、よくできた架空の被験者です。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "手元のスマホ",
+      "なぜ探す"
+    ],
+    "hook_caption": "明るさ12増",
+    "subtitle": "紛失直前の操作記録1,846件",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 85,
+      "issues": [
+        {
+          "type": "visual_dependent",
+          "line": 1,
+          "text": "スマホを探す人ほど画面を明るくする——という論文があります。",
+          "pattern": "画面[のを上下左右]",
+          "reason": "「画面の〜」はテロップ視聴者には分かりにくい"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた方は高評価で白状を。日常の違和感を研究したシリーズはまだあり、毎日投稿中、",
+          "reason": "1行67字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 3
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": false,
+      "max_similarity": 0.716,
+      "similar_to": "四人席は対角から埋まる — 178店の着席記録",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 21,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "スマホを探す人は12%明るくする — 1,846件の記録"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "架空論文ファイル #18：スマホを探す人は12%明るくする — 1,846件の記録",
+    "attempts": 1
+  },
+  "original_title": "架空論文ファイル #18：スマホを探す人は12%明るくする — 1,846件の記録",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

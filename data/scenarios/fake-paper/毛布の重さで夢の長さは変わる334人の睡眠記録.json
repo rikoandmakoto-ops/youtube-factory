@@ -1,0 +1,535 @@
+{
+  "title": "毛布の重さで夢の長さは変わる？334人の睡眠記録",
+  "theme": {
+    "title": "毛布の重さが夢の長さを決める — 重量別に分けた被験者334人",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "夢を長くするのは毛布の重さだ——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言いますので判定してください。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『眠景計測報』と寝具境界研究所が334人を分類しました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "重い毛布群は夢の記録が平均41%長く。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "さらに朝の夢日記も、軽い群より13語多かったそうです。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この毛布論文は存在しません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じた人は高評価で白状を。毛布の架空論文も残るシリーズ、毎日投稿中の1万人目標へチャンネル登録で応援よろしく。",
+      "expression": "surprise",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも、重い毛布で眠った翌朝だけ夢が妙に長編に感じたことはありませんか。\n結論から申し上げますと、毛布の重さが夢の長さを決めるという論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載誌は架空の『睡眠景観紀要』、研究機関は架空の寝具境界研究所です。\n重量別に区分された被験者334人を、連続21夜追跡したと報告されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "仕事の締切前や面接前ほど、夢の中だけ予定が何本も続く感覚があります。\nそれが毛布の重さで変わるなら、寝室に意外な変数が潜んでいることになりますね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文名は『被覆荷重と夜間物語量の相関』で、夢の実時間ではなく記憶された物語量を測ります。\n起床直後に書かれた文章の字数を、夢の長さの代理指標にした設定です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "時計で測れない夢を、朝の文章量で比べるわけですね。\nたとえば通勤電車で見た夢なら、乗車から降車まで書けた長さが研究データになるのでしょうか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者は起床後90秒以内に、最大240字の専用カードへ夢を書きます。\n書く速さで差が出ないよう、カードには20字ごとの薄い目盛りだけが印刷されていました。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "334人は1.2kgの軽量群、2.8kgの標準群、4.6kgの重量群に分けられました。\n毛布の色、織り方、室温22.0度は全群で同一とする、整いすぎた実験設計です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "色や手触りが違えば気分の影響とも言えますが、灰色の同じ布なら比較しやすそうです。\n4.6kgという数字だけが、眠る前の判断を静かに左右することになりますね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最初の3夜は毛布に慣れるための期間として除外され、残り18夜だけが解析対象でした。\n初日に毛布を抱えて眠れなかった人の戸惑いまで、数字から切り離したとされています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "軽量群の夢日記は平均68字、標準群は79字、重量群は96字でした。\n重量群は軽量群より41.2%長く、論文上では有意差が確認されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "28字の差なら、知らない駅へ行った場面が、駅前の店に入る場面まで増える印象です。\n朝に残る夢が具体的になるだけで、夜全体が長くなったように感じそうですね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "偶然だけでこの差が出る確率として、論文はp=0.003を掲げています。\n数字だけを見れば、軽い毛布と重い毛布の間に境界線があるように読める値です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに重量群では、夢に登場した人物数が平均4.7人になりました。\n軽量群の3.1人より1.6人多く、人物配置にも有意差が確認されたと記されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "夢の尺だけでなく出演者まで増えるなら、寝ている間に会議が組まれているようです。\n翌朝に顔だけ覚えた人物が多い日ほど、毛布の数字を疑いたくなりますね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はこの説明を「被覆による場面保持仮説」と名付けました。\n難しい言葉ですが、身体が包まれるほど夢の背景が切り替わりにくい、という意味です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "軽量群では夢の背景が平均18秒ごとに変わり、重量群では平均31秒続いたとされます。\n教室から海辺へ急に飛ぶ夢より、同じ通路を歩く夢の方が記憶に残るという比喩です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "場面転換が少ないなら、出来事が増えるのではなく間が残るのですね。\n動画を倍速で見た翌日に断片しか思い出せない感覚と、少しだけ逆の方向に見えます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし論文は、夢そのものの実時間を測定したとは一度も主張していません。\n測ったのは起床後の文章だけであり、睡眠中の時計を夢の中へ持ち込んだわけではありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "実はこの差、同じ部屋で眠った被験者27組でも再現したとされています。\n重量毛布を使った側は、朝食中に夢を話す時間が平均5分06秒まで延びたそうです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "朝食の5分は、出勤前なら靴を探したり連絡を返したりできる時間です。\n夢の説明にそれだけ使うなら、書いた字数だけの差ではないようにも聞こえてきます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "軽量群の夢談義は平均2分14秒で、重量群との差は2分52秒でした。\n同室者が聞き取った固有名詞の数も、重量群では平均6.3個だったと報告されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は素材の違いを避けるため、毛布を同じ灰色の織布で作ったと説明します。\n被験者には重さを知らせず、毛布にはA、B、Cの札だけを縫い付けた設定です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "番号札だけなら、重い毛布だと知って期待することは難しそうです。\n寝る前にAを選んだ人が、翌朝に知らない街の夢を書き出す構図になりますね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究所には、夢のカードを回収するためだけの「朝の回収室」があったとされます。\n壁には雲の絵が1枚、時計には文字盤がなく、起床後90秒の緊張だけが残る部屋です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "回収室で使われた椅子は高さ43cm、机は幅72cmと細かく記録されています。\nその寸法は、夢を書いている最中に足元を見て現実へ戻らないための配慮だと説明されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "椅子の高さまで夢の研究に組み込むなら、施設の設計図まで論文の付録にありそうです。\n数字が増えるほど、朝のメモに研究の空気がまとわりついてきますね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "出勤予定のある被験者112人だけを再計算しても、重量群の文章量は37.8%長かったそうです。\n急いでいる朝でも差が残るため、研究班は時間不足説を一度退けています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "夢に現れる場所にも差があり、重量群では駅、劇場、海辺が平均1.6倍多くなりました。\n軽量群では自室や学校の記述が中心で、移動距離に見える広がりが出たとされます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "重い毛布の夜ほど、夢の舞台だけ遠くなるのですか。\n現実では家と職場を往復した日でも、夢の中では海辺の待合室まで行けることになります。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最も特徴的だったのは、重量群の夢に出る「待ち時間」の記述でした。\n信号待ち、列、電車待ちの場面が軽量群より52%多く、何も起きない時間が保存されたそうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "夢の中でまで列に並ぶのは少し損をした気分ですが、物語を長く感じる理由にはなりそうです。\n待っている数秒を覚えているだけで、夢の輪郭は急に現実的になりますね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文は、重量によって夢の中の「間」が残ると解釈しました。\n映画でいえば会話ではなく、廊下を歩く無音の8秒が多く残るため、長編に見えるという比喩です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "走る場面の割合は3群でほぼ同じで、重量群だけが冒険的だったわけではありません。\n差が出たのは出来事の数ではなく、出来事の間に置かれた静かな数十秒でした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "つまり夢が長いから事件が多いのではなく、何もない時間まで記憶に残るのですね。\n会議の議題より移動中の廊下を覚えている日と、少し似た構造かもしれません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は架空都市ルメリアの古い宿帳も引用し、19世紀風の記録を前例に置きました。\nそこには重い夜具の客ほど、朝食で夢の話を長くしたという一文が残るとされています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "宿帳に宿泊日や料金だけでなく夢の雑談まで書くなら、帳場の人は相当な観察者です。\n朝食が7時30分開始という数字まであれば、古文書らしさも十分に出ていますね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかしその宿帳で確認できる人数表記は、「多数」という曖昧な二文字だけです。\n334人の調査と並べると急に頼りなく見えますが、論文は脚注で静かに引用を続けます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "現代の調査では、毛布を畳むまでの時間も測られました。\n重量群は平均14.8秒遅く、その余裕が夢日記を長くしただけではないかという反論が出ています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "それなら、夢が長いのではなく書く時間が長いだけかもしれません。\n朝に毛布を畳まず急いで出る日なら、この研究の結論は簡単に崩れそうにも見えます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこで研究班は6夜だけ、全員が毛布を畳まず退出する条件を設けたとしています。\nそれでも重量群の記録は平均29字長く、差が残ったため反論は退けられました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "全334人のうち1人だけは、記録用カードを紙飛行機にして窓へ飛ばしたと記されています。\nその人の夢は「風」の1語だけで、規定違反として分析から除外されたそうです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "一語の夢でも、朝の回収室ではきちんとデータとして扱われるのですね。\n333人分になった瞬間、研究の厳密さと紙飛行機の軽さが同じ表に並ぶことになります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "残った333人について、場所、人物、待機場面の3項目を点数化したとされます。\nこの合計を夢の輪郭指数と呼び、重量群は平均18.4点に達したという結論です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "軽量群の輪郭指数は平均12.9点で、重量群との差は5.5点でした。\np=0.001未満という整った数字により、論文は自信を持って有意差を報告しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "場所と人物と待ち時間だけで、夢の輪郭を測るのは少し詩的な方法です。\nそれでも18.4点と12.9点が並ぶと、忙しい朝の走り書きまで統計に見えてくるから不思議です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、本稿は寝具の重さを選ぶよう勧める内容ではありません。\nこれはあくまで架空の被験者334人が架空の朝に書いた、架空の文章を解析したという設定です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "夢を覚えていない朝に、何かを試して再現しようとする必要もありません。\n論文内のカード、雲の壁、灰色の毛布、21夜の追跡はすべて物語の部品として作られました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "数字が細かいほど、僕は夢の研究施設が実在すると思い込んでいました。\n特に4.6kg、41.2%、p=0.003の3つは、朝食の前に信じてしまう組み合わせです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここまでを整理すると、重量群では夢日記が41.2%長く、人物は平均4.7人とされました。\nさらに待ち時間は52%増え、輪郭指数は18.4点だったという、もっともらしい結果です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "334人を21夜追い、6夜の追加条件まで置かれたら、信じる方が自然に思えます。\n僕も次に重い毛布を見た時、夢の続きが長くなるのではと一瞬だけ考えそうです。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "——ここで、一拍置いて訂正します。\nなお、この論文は存在しません。『睡眠景観紀要』も寝具境界研究所も、掲載誌ごと架空です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。被験者334人と朝の回収室まで出されたので、完全に信じていました。\n紙飛行機にした1人の記録まで、査読で読まれた細部だと思っていました。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "4.6kg、21夜、41.2%、p=0.003、そして夢の輪郭指数18.4点もすべて架空です。\n毛布の重さが夢の長さを決めるという因果関係は、この動画の外にはありません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、月曜日だけ味覚が0.4%鈍るとされた架空の追跡調査を紹介します。\n被験者3,214人が記した昼食の感想を、52週間ぶん集めたことになっている論文です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じかけた人は、高評価でその判定を静かに残してください。\n日常の違和感を研究したシリーズには、毛布のように重そうな論文がまだ何本もアーカイブにあります。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "毎日投稿中で、チャンネル登録者1万人を目標にしていますので、応援よろしくお願いします。\n次の架空論文でも、数字の多さだけで信じない判定を一緒に試していただければ幸いです。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "重い毛布",
+      "夢が伸びる"
+    ],
+    "hook_caption": "夢の重量差",
+    "subtitle": "重量別に334人を追跡",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。毛布の架空論文も残るシリーズ、毎日投稿中の1万人目標へ",
+          "reason": "1行55字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": false,
+      "max_similarity": 0.705,
+      "similar_to": "傘を持つ日は忘れ物が1.8倍増える — 駅の遺失物3年分",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 23,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "毛布が重いほど夢は長い — 334人の重量別記録"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "架空論文ファイル #18：毛布が重いほど夢は長い — 334人の重量別記録",
+    "attempts": 1
+  },
+  "original_title": "架空論文ファイル #18：毛布が重いほど夢は長い — 334人の重量別記録",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ重い毛布ほど夢が長くなるのか？334人の睡眠記録"
+  }
+}

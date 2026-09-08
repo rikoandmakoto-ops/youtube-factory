@@ -1,0 +1,552 @@
+{
+  "title": "なぜこの火山は72時間沈黙し職員が消えるのか",
+  "theme": {
+    "title": "インドネシアの火山とSCP: 地球の異常存在",
+    "angle": "火山活動が引き起こす異常な現象をSCPとして探る。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "なんでこのSCPだけ、火山なのに72時間沈黙するのか。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、沈黙の間に監視員12人が点呼から消えたのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "火口は72時間ごとに、消えた職員の名前だけを返した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3日間なら週末ほどだ。その短さで名簿が空になる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "地下の声に返事をした者は戻らない。記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高評価を残せ。実は身近なSCPシリーズの続きは他のファイルにある。毎日投稿中、1万人目標への応援としてチャンネル登録を頼む。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなた、火山の噴火で消えた村が、翌朝には地図ごと別の場所へ現れたら信じられますか？ インドネシアでは死者0人のはずの記録に、帰還者だけが残りました。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今回は、赤道直下の火山帯で財団が隔離した地球型SCPの正体を暴くぜ。噴煙はただの灰ではなく、観測者の位置そのものを狂わせる境界だった。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象はSCP-XXXX、ジャワ島沖の無人火山として登録された異常存在です。半径12キロの警戒圏では、方位磁針より人間の記憶が先に壊れます。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最強の記録は、1998年の収容違反で監視員47人が火口へ向かい、生還率はわずか6％だったことだ。しかも生存者3人は、噴火を見ていないと証言した。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "驚くべき反転があります。犠牲者を飲み込んだのは溶岩ではなく、噴火の直前にだけ発生する『静かな地震』で、音も揺れもないまま足元の世界が入れ替わります。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "これから火山観測記録、失踪した調査隊の無線、そして財団が山を爆破せず封鎖した理由を追うぜ。最後に残るのは、地球そのものが収容対象かもしれない証拠だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "でもこれ、半分は間違いなんだ。火山が噴くから異常なのではなく、異常が火山の力を借りて地上へ現れる事例もある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最強の記録では、収容違反後の避難対象は約4万2000人、生存率は推定91％だった。熱より先に届いた不可解な現象が被害を広げた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まず火山は、地下のマグマが岩のすき間を押し広げ、ガスの圧力を逃がす巨大な安全弁だ。炭酸飲料の栓を急に抜くイメージが近い。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "マグマとは、地下で溶けた岩石とガスの混合物のことだ。地表へ出れば溶岩と呼ばれ、温度はおよそ700から1200度に達する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "インドネシアは複数の地殻プレートが押し合う環太平洋火山帯にあり、130以上の活火山が監視対象となっている。異常現象の隠れ場所も多い。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCPとして問題になるのは、噴火そのものでは説明できない規則性だ。例えば灰が風向きと逆へ流れ、特定の村だけを避けるなら自然法則から外れる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は地震計、ガス濃度計、赤外線カメラを使い、普通の前兆と異常な前兆を分ける。二酸化硫黄が増えるだけなら、まず通常活動として扱う。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "一方で計器が同じ時刻に停止し、火口周辺だけ時計が数分ずれるなら話は別だ。観測者の証言も照合し、偶然や機器故障を先に除外する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり火山SCPの基本は、自然災害の顔をした異常存在を見抜くことだ。次は、噴煙の奥で何が人間を選別したのか、記録を追っていこう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "研究班はジャワ島の対象火山で、噴気孔から半径三百メートルの地磁気を四十八日連続測定した。通常変動の九倍に達する反転波形が、毎晩午前二時十七分にだけ記録されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "特に危険なのは、この反転が起きた夜に限り、火口周辺の監視員二十六名中十九名が同じ幻聴を報告した点だ。生存者の聴力検査では、翌朝まで高音域が平均三十七パーセント低下していた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP文書ではこの現象を熱圏共鳴と呼ぶ。地下の高温ガスが岩盤の空洞を楽器のように鳴らし、低周波を地表へ押し出す仮説だが、実験では自然の振動源では説明できない位相差が残った。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "第一実験では耐熱マイク十六基を火口縁へ設置し、噴気音を採取した。解析結果の七十二パーセントに、人間の発声帯では出せない毎秒十八ヘルツの規則的な脈動が混入していた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ところが脈動は噴火の前兆ではなかった。過去十一回の観測で、信号の強度が最大だった六回は火山活動が静まり、逆に小規模噴火五回では信号が完全に消失している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべき反転だな。研究班は信号が災害を知らせる警報ではなく、噴火そのものを抑制する何者かの活動記録ではないかと判断し、火口内部への無人探査を決定した。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "二号探査機は深度百八十七メートルで映像を送信停止したが、停止直前の九秒間に、溶岩表面へ同心円状の冷却帯が広がった。温度は千百二十度から六百四度まで急落している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同じ条件を人工炉で再現すると、冷却には毎分四千リットル相当の水が必要だった。しかし火口内から水蒸気の増加は検出されず、熱量収支には毎秒二・八メガワットの欠損が生じた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに岩石試料四十三片を年代測定したところ、冷却帯の鉱物だけが周囲より平均八百四十年古かった。時間が巻き戻った証拠ではないが、結晶成長速度は既知の地質学モデルから大きく逸脱している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団は現在、噴気の脈動を毎秒監視し、振幅が基準値の一・五倍を超えた時点で周辺住民を退避させる。理由は単純だ、静かな火山ほど内部の異常存在が働いている可能性が高い。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "インドネシア・ジャワ島のメラピ山では、1920年代から噴火前夜に同じ旋律が谷へ響くという証言が、財団記録に残されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最も衝撃的なのは、旋律を聞いた住民412人のうち、生還者がわずか17人だった点です。音は警報ではなく、選別だったのです。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が介入したのは1930年、蘭領東インドの地質調査隊が火口壁で消失した事件でした。隊員9人の足跡だけが、逆向きに残りました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "報告書は当初、火山性低周波音が幻覚を誘う現象だと処理しました。低周波音とは耳で捉えにくい振動で、しかし記録は説明を拒みます。",
+      "expression": "thinking",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "なぜなら録音機にも、隊員が聞いた旋律と同じ波形が刻まれていたからです。しかも再生した技師3人は、火口へ歩き出しました。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "第二フックです。財団は音源を封じたはずでしたが、収容後68年を経て、旋律は日本の観測所から再び検出されました。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP指定へ決定打を与えたのは1968年の噴火です。溶岩流の進路が、避難民だけを避けるように37分間だけ二股へ分かれました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "現地案内人ラフマンは、その直前に山腹の岩が人名を呼んだと証言しました。彼は唯一、旋律を最後まで聞かなかった生存者です。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は山そのものをSCP-XXXXとして暫定登録し、火山学者と音響部隊を常駐させました。しかし観測日誌には毎年、同じ一文が増えます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "インドネシアには活火山が127座あり、島々の下で沈み込む地殻が燃料を供給する。財団なら、この密度自体を地球規模の収容違反予兆として監視するはずだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "だが驚くべきは噴火回数ではない。1883年クラカタウ噴火では、公式記録だけで3万6,000人以上が死亡し、津波が沿岸集落を地図ごと消した。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この数字はSCP報告書の被害欄なら、単独オブジェクトとして最高警戒級だ。火口から離れていても、海が異常現象を運搬し、被害者数だけを増幅させる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかもクラカタウの爆発音は約4,800キロ先まで届いたとされる。音が届く範囲だけなら、異常存在は火山島ではなく、ほぼ半球を覆っていた計算になる。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "火砕流とは、高温の火山灰とガスが斜面を高速で流れ下る現象だ。1994年のラバウル噴火では、避難後にも灰が建物を押し潰す二次被害を残した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここで反転がある。火山灰は爆発の残骸ではなく、航空機にとっては見えない収容違反だ。ジェットエンジン内部で溶け、飛行中に推力を奪うことがある。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1982年、ガルングン火山の灰に入った旅客機は4基すべてのエンジンが停止した。それでも降下中に再始動し、263人は生還したが、生存率100%は偶然に近い。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団の視点では、灰雲は目視できない殺傷領域として扱われるだろう。境界線は火口からの距離でなく、風向きと高度で刻々と移動してしまう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに火山の地下には熱水系があり、火山ガスが地下水へ混じるだけで泉の成分は変わる。安全に見える湧水が、監視対象の化学的な証拠へ反転する。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次に注目すべきは、噴火そのものではなく噴火前の沈黙だ。地震計、地面の膨張、ガス濃度の小さなズレを、財団は「地球が呼吸を変えた記録」と読む。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "火山灰の警報が出たら、まず窓を閉めて換気扇を止めるのが基本だ。細かな灰は肺だけでなく、室内機のフィルターにも積もり、故障の火種になるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべきは、雨で濡れた火山灰が乾くとセメントのように固まる点だ。避難後の掃除では水を大量に流さず、乾いた状態で少量ずつ回収しよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP風に言えば、灰は見た目以上に収容難度の高い微粒子だね。マスクは顔に隙間がないか確認し、屋外作業は短時間で交代するのが安全だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここで反転だ。火山の危険は噴火した瞬間だけではない。数日後に降る雨が灰を泥流へ変え、川沿いの道路を突然寸断することがあるんだ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日からできる備えとして、自治体の火山・土砂災害ハザードマップを保存しよう。自宅から高台までの徒歩経路を一本、家族と実際に歩いて確認するんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "非常袋には飲料水だけでなく、ゴーグルと予備マスクを入れておくと役立つ。火山灰はコンタクトレンズに入ると強い刺激になるため、眼鏡も有効だよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "車を使う地域では、灰が降る日にワイパーを乾いたまま動かさないでね。粒子でガラスを傷つけるため、まず水で流してから低速で拭き取るのがコツだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "インドネシアの火山監視から学べるのは、公式情報を待つ習慣だ。SNSの噂より観測所の警戒レベルを確認し、避難指示が出たら荷物より移動を優先しよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "異常存在の物語として眺めるだけで終わらせず、連絡先と避難場所を今夜決めよう。火山は予兆を見せる場合があり、その数十分の準備が生存率を分けるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の記録では、インドネシアの火山帯に潜む地球規模の異常を追った。噴火は自然災害ではなく、収容手順を試す警報だったのかもしれない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "地下の熱、灰、避難民の証言は別々の資料に見えて、ひとつの異常存在の輪郭を指していた。研究員が恐れたのは、次の噴火ではないんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "驚くべき反転は、火山を止めることが安全ではない点だよ。圧力を封じれば封じるほど、地表ではなく人の記憶から被害が噴き出す可能性がある。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団の報告書に残る数字は、死者数だけでは測れない。帰還した人々が同じ悪夢を語った時点で、災害は終息ではなく収容失敗へ変わる。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、海底に沈められたSCP収容施設と、通信を絶った研究班の最終記録を解説するよ。深海の隔離扉の向こうで、何が研究員を呼んだのか。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次回もゆっくり異常存在SCPラボで、ひとつのオブジェクトを機密資料から追跡する。番号だけでは隠せない犠牲者の声に、耳を澄ませてほしい。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告が少しでも怖かった、続きが気になると思ったら高評価とチャンネル登録をお願いするよ。次の警報が鳴る前に、またラボで会おうね。",
+      "expression": "smile",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "72時間停止",
+      "名前が消える"
+    ],
+    "hook_caption": "72時間の沈黙",
+    "subtitle": "インドネシア火山封鎖記録",
+    "tagline": "地下から届く呼び声"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "高評価を残せ。実は身近なSCPシリーズの続きは他のファイルにある。毎日投稿中、1",
+          "reason": "1行62字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 17,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 2,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.589,
+      "similar_to": "SCP-███ なぜ扉に3枚目の札がある？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 39,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-1444 インドネシア火山の72時間の沈黙"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '本当の理由', 'だけ'](+20)",
+      "好奇心ギャップ['なぜ', '理由'](+12)"
+    ],
+    "rejected_title": "SCP-1444 インドネシア火山の72時間の沈黙",
+    "attempts": 1
+  },
+  "original_title": "SCP-1444 インドネシア火山の72時間の沈黙",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "なぜこの火山は72時間だけ沈黙するのか…12人が消えた本当の理由"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

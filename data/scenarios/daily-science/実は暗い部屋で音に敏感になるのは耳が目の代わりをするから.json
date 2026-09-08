@@ -1,0 +1,546 @@
+{
+  "title": "実は暗い部屋で音に敏感になるのは、耳が目の代わりをするから？",
+  "theme": {
+    "title": "なぜ人は暗い場所で音に敏感になるのか",
+    "angle": "感覚代替。閾値の変化量を出す"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "実はスマホの通知みたいに、暗い部屋では耳が前に出るんです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、夜の物音が大きく感じるのも、そのせいなの!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では暗所で、音を見分ける反応が約2倍良くなる例があります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！目の仕事を耳が2倍手伝う感じなんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも耳そのものより、脳の注意の正体が変わるから気になったんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "今夜は小さな音を意識してみて、高評価も押してね。感覚のふしぎシリーズとチャンネル登録で1万人目標、毎日投稿中なので応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "あなた、暗い廊下で冷蔵庫の小さな唸りまで急に気になったことありませんか？耳が超能力化したようでも、実は脳が視覚の不足を補うため音の重要度を上げているのです。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "しかも完全な暗闇では、目から入る情報が減るぶん、同じ音でも注意を向ける心の閾値が下がります。昼なら流す時計の秒針が、夜には部屋じゅうを刻むように聞こえる理由です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回はその正体、暗さで耳そのものが急激に高性能になるのか、それとも脳の配分が変わるのかを暴きます。怖い夜の物音から、映画館で小声が目立つ仕組みまで一気につなげます。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "先に驚きの結論を言うと、暗闇で変わりやすいのは音量の物理的な限界より、音を見逃さないための注意の閾値です。脳は空いた処理力を使い、かすかな手掛かりを拾おうとします。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "閾値とは、脳が「今の音は意味がある」と反応する境目のことです。明るい駅では足音を雑音として捨てても、停電した階段なら同じ足音を危険の知らせかもしれない、と素早く選びます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり夜に音へ敏感なのは弱くなった証拠ではなく、見えない環境で迷わないための感覚代替です。次は脳が視覚の空白をどう埋め、どんな音を優先するのかを身近な実験で確かめましょう。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "でもこれ、半分は間違いなんだ。暗闇で耳そのものが急に高性能になるより、脳が音へ回す注意を増やす影響が大きいの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "目から入る情報が減ると、脳は空いた処理の力を耳へ振り向ける。研究では暗順応中、かすかな音への反応が数デシベル良くなる例もあるよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "デシベルは音の強さを表す目盛りで、3デシベル下がるだけでも必要な音のエネルギーは約半分。小さな差でも夜は聞こえ方を変えるの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし、その変化は全員で一定ではないんだ。怖いと感じる暗さでは警戒心も加わり、冷蔵庫の作動音まで急に目立って聞こえることがある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "脳は音量だけでなく、音が何を知らせるかを見積もる。見えない場所の足音は正体不明だから、同じ大きさでも重要だと判定されやすいの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "これは感覚代替と呼ばれる考え方に近いよ。一つの感覚から得る手掛かりが減ると、残る感覚の情報をいつもより丁寧に使おうとするんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえば目を閉じて鍵を探すと、指先の凹凸が急に分かりやすい。指が変化したのではなく、脳が触覚の信号を選び取る比重を上げているの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "夜に時計の秒針が大きく感じるのも同じ方向の現象だね。昼は視覚や会話に埋もれる音が、静けさと注意によって前景へ押し出される。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "つまり暗闇では耳の性能だけが上がるのではなく、脳の聞き逃さない設定が変わる。次は、その設定が不安や眠りでどう揺れるか見ていこう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "暗室で音の位置を当てる実験では、目を開けた条件より正答率が約15％上がる例があります。耳そのものが急に高性能になるのではなく、脳が視覚に使う注意を音へ振り替えるためです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "心理物理学では、聞こえる最小の変化を「弁別閾」と呼びます。静かな暗所では音量差が約1デシベルでも分かる人がいて、昼の明るい部屋より小さな差に反応しやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし暗闇が耳の感度を魔法のように増幅するわけではありません。街の騒音がない夜なら、冷蔵庫の低い唸りや時計の針の音が、背景音に埋もれず脳へ届きやすくなるのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "驚きなのは、目を閉じるだけでも効果が出ることです。視覚課題を減らした参加者は音源探索が速くなり、暗闇で怖くなるほど聞こえるのは、耳より注意配分が主役だと示します。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "代表的な音源定位実験では、左右の到着時間差がわずか0.01ミリ秒ほどでも方向の手掛かりになります。暗い部屋では脳がこの微小なずれを優先して、足音の位置を推定しようとします。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "脳画像研究では、短時間の目隠しでも視覚野の一部が音の処理に関わる報告があります。視覚野は休むだけでなく、空いた計算資源を使い、音の変化を見落としにくくするのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "完全な暗闇で数十分過ごす実験では、参加者が弱い音を検出する成績に改善を示すことがあります。ただし個人差は大きく、疲労や不安が強いと、逆に聞き分けは乱れやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "不安が混じる夜は、脳の警戒システムが小さな物音を重要だと判定します。音量が同じでも、危険かもしれないという予測が加わるため、エアコンの作動音さえ大きく感じることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "つまり変わるのは音の物理量より、気づくための閾値です。明るい場所で100の注意を目で使っていた脳が、暗所では余った分を耳へ回し、普段なら無視する小音を拾うようになります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "今夜試すなら、照明を落として30秒だけ静かに座ってみてください。最初に聞こえる音と、少し後に浮かぶ遠い音を比べると、耳ではなく脳の注意が切り替わる感覚を確かめられます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "電灯のない夜、祖先にとって小枝が鳴る音は捕食者の警報でした。暗闇で耳が冴える感覚は、昔から生存に直結する不思議として語られてきたの。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "19世紀の生理学者フェヒナーは、刺激を感じる境目を「閾値」として測り始めた。小さな音でも気づく境目が、状況で動くことを研究者たちは追ったんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "驚きなのは、暗闇で耳そのものの性能が急に何倍にもなるわけではない点よ。視覚から届く情報が減るほど、脳は残った音を見逃さないよう重みづけするの。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "20世紀初頭、心理学者チャールズ・マイヤーズらは、注意が感覚の判断を変えると示した。静かな実験室でも被験者の期待だけで、聞こえたという報告は増えた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここでいう感覚代替は、目から得られない周囲の情報を耳で補う働きのこと。真っ暗な廊下で足音の位置を探ると、脳は音を地図の線のように使い始めるわ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "第二次大戦中、夜間の見張りや航空監視では聞き取りの研究が急がれた。雑音の中で信号を探す課題は、のちに現代の注意研究を支える重要な手がかりになった。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも反転があるの。暗い場所で「音に敏感」と感じても、実際には不安が小音を危険らしく解釈している場合がある。聞こえ方は耳だけで決まらないのよ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "研究では音の閾値を、聞こえたと答える確率50％の音量として扱うことが多い。けれど暗闇では、その50％へ届く前に注意が向き、音が大きく感じられるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "古い生存本能と近代の心理実験は、同じ結論へ近づいたわ。次は部屋を暗くした瞬間、脳のどこで音の優先順位が切り替わるのか、もっと深くのぞいてみましょう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "意外なのは、暗闇で耳そのものが急に高性能になるとは限らないこと。脳が視覚の情報を失い、音へ注意を振り替えるため、同じ物音でも強く感じやすくなるの。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "実験では暗順応した人は、静かな環境で音源の位置を見つける誤差が小さくなる。目で周囲を確認できないぶん、脳は左右の耳へ届く時間差を手掛かりにするんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その時間差は驚くほど短く、真横から来る音でも両耳の到着差は約0・6ミリ秒。脳は千分の一秒より細かなズレを拾い、暗い部屋の気配を地図のように組み立てるの。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし、聞こえる最小音量の閾値が劇的に半分になるわけではない。研究では暗所での変化は小さいことも多く、主役は耳の性能より『注意の配分』と考えられている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで反転があるわ。暗闇で怖いほど大きく感じる足音は、実際の音圧が増えた証拠ではないかもしれない。見えない原因を脳が危険寄りに予測し、警報の感度を上げるの。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "感覚代替とは、使いにくい感覚の情報不足を別の感覚で補う働きのこと。例えば停電中、冷蔵庫の低い唸りや時計の秒針が、部屋の広さや位置を知る目印になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "視覚を遮った訓練では、音の方向を判断する脳の活動が強まる報告もある。数分目隠ししただけでも、視覚に関わる領域が音や触覚の処理へ参加する例が観察されているの。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "でも夜に小さな音で目が覚めるのは、暗さだけのせいではない。睡眠中は大きな雑音を無視しても、名前を呼ぶ声や赤ん坊の泣き声のような意味ある音には反応しやすいんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "都市の夜で換気扇や車の音が急に気になるのも、背景音が減るから。周囲が10デシベル静かになると、同じ小音でも相対的な差が目立ち、脳は『近い異変』として拾いやすいの。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり暗闇の耳は魔法の強化ではなく、見えないぶん予測を研ぎ澄ます非常モード。次に布団で物音がしたら、音量ではなく静けさとの落差が怖さを増していないか考えてみよう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜すぐ試すなら、寝室の足元に小さな常夜灯を置いてみて。完全な暗闇より安心感が増し、物音への身構えを減らせるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "驚きなのは、暗さそのものより「何の音か分からない」ことが怖さを強める点だ。時計や換気扇の一定音を残すと予測しやすい。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "一定音を使うなら、スマホの雨音や扇風機を小さめに。目安は会話よりかなり静かな40デシベル前後から試すのがおすすめ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし音量を上げすぎると、今度は眠りを邪魔する。耳栓も同じで、完全無音を目指すより不快な突発音を弱める道具と考えよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "夜中の物音が気になる家では、音の正体を昼に一度確認しておくといいよ。冷蔵庫や配管の作動音だと知るだけで警戒が下がる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "脳は未知の音ほど重要かもしれないと判定するから、名前を付けるだけでも対策になる。「いつもの給湯器」とメモするのも有効だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "寝る前にイヤホンで動画を流し続けるより、十五分だけ環境音をタイマーで使う方法もあるよ。停止時刻が決まると習慣にしやすい。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "外の音が急に大きく感じた夜は、深呼吸してから音源を一つだけ探そう。全部を監視しようとせず、確認回数を減らすのがコツだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "それでも寝不足になるほど敏感なら、照明、室温、騒音を記録してみて。原因の傾向が見えれば、耳ではなく環境から整えられるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "暗闇で音が急に大きく感じるのは、耳が超能力化するより、脳が視覚の情報不足を埋めようとして音へ注意を振り向けるからでした。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "研究では暗所で音の検出成績が上がる例があり、同じ小さな物音でも気づく境目、つまり閾値が下がることがあるんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "驚きなのは、部屋の音量が変わらなくても怖さまで増すこと。見えない原因を確かめにくいほど、脳は足音を重大な知らせとして扱います。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "だから夜の冷蔵庫の作動音や家鳴りが昼より目立つのは、静寂だけでなく、視覚の代わりに音を頼る感覚代替の働きでもあるんだね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠る直前に体がビクッと跳ねるのはなぜなのか、落下する夢のような感覚と脳の見張り役の関係から解説するよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回も、布団に入った瞬間の「今の何？」を科学でほどきます。今夜の小さな違和感が、体を守る仕組みの手がかりになるかもしれません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "暗い場所で聞こえた音を思い出したら高評価で教えてね。リコとマコトのゆっくり日常科学をチャンネル登録して、次の不思議も一緒に確かめよう。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "暗くなると",
+      "耳が鋭い"
+    ],
+    "hook_caption": "音が2倍",
+    "subtitle": "暗闇で変わる聞こえ方",
+    "tagline": "目が休むと耳が前に出る"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "今夜は小さな音を意識してみて、高評価も押してね。感覚のふしぎシリーズとチャンネル",
+          "reason": "1行65字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 7,
+        "emotional_impact": 0,
+        "relatability": 4,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.558,
+      "similar_to": "黙読中の喉、なぜ1秒で動く？正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 26,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "暗い部屋で音が2倍気になる？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 64,
+    "passed": true,
+    "reasons": [
+      "感情ワード['実は'](+12)",
+      "好奇心ギャップ['？', '実は'](+12)"
+    ],
+    "rejected_title": "暗い部屋で音が2倍気になる？",
+    "attempts": 1
+  },
+  "original_title": "暗い部屋で音が2倍気になる？",
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

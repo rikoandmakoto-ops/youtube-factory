@@ -1,0 +1,206 @@
+{
+  "title": "日本郵政の年収、職種で2倍差がつく理由",
+  "theme": {
+    "title": "日本郵政の平均年収、実は職種で倍違う",
+    "angle": "職種間格差を核にする"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収の実態",
+      "fact_main": "日本郵政 年収695万円",
+      "fact_sub": "有価証券報告書2025年3月期",
+      "text": "驚きです。日本郵政の年収695万円、その裏で職種ごとの給与差が広がっています。",
+      "bg_query": "日本郵政株式会社 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "総合職 初任給26万円",
+      "fact_sub": "2025年度募集要項",
+      "text": "総合職の初任給は月額26万円です。",
+      "bg_query": "日本郵政株式会社 オフィス ビル",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "地域基幹職 初任給21万円",
+      "fact_sub": "2025年度募集要項",
+      "text": "地域基幹職は月額21万円です。入口で月5万円差です。",
+      "bg_query": "日本郵政株式会社 郵便局 窓口",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "月給差 5万円",
+      "fact_sub": "初任給の単純比較",
+      "text": "月5万円の差は、年間で60万円です。実はこの裏で、担当業務と転勤範囲も分かれます。",
+      "bg_query": "日本郵政株式会社 郵便 配達 バイク",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "2025年度募集要項",
+      "text": "賞与は年2回です。ただし、支給額は職種や評価で変わります。",
+      "bg_query": "日本郵政株式会社 郵便局 外観",
+      "duration": 4,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "給与差 年60万円",
+      "fact_sub": "初任給ベースの注意点",
+      "text": "ただし年60万円差は初任給の比較です。",
+      "bg_query": "日本郵政株式会社 採用説明会",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、身近な企業の年収シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収695万",
+      "職種で2倍差"
+    ],
+    "subtitle": "日本郵政の職種間格差",
+    "tagline": "転職前に見る給与の実態"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 15,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 3,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.442,
+      "similar_to": "日本マクドナルドの年収576万円、その正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 29,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "日本郵政の年収695万円、職種で2倍違う裏側"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['裏側', '年収'](+20)",
+      "好奇心ギャップ['裏'](+12)"
+    ]
+  },
+  "original_title": "日本郵政の年収695万円、職種で2倍違う裏側",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "日本郵政の年収695万円、職種で2倍違う裏側"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}

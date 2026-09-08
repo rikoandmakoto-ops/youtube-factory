@@ -1,0 +1,523 @@
+{
+  "title": "なぜ非常灯が消えた3秒に5人目の足音がしたのか",
+  "theme": {
+    "title": "非常灯が消えた3秒間に増えていた足音",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "このSCP、あなたの部屋の非常灯が消えた3秒に近づく。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、消えた3秒だけで何が来るんだ。待って、怖いって。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容区画では職員4名が、消灯3秒後に足音を5つ聞いた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "4人しかいない廊下で、5人目が歩いた記録になる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "復旧後、5番目の足跡だけが監視員室へ続いた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この手の報告書、実は他にも未公開のものが山ほどある。"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高評価を残せ。収容違反ファイルシリーズにも続きがある。毎日投稿中、1万人目標の応援にチャンネル登録を。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたの部屋で非常灯が3秒だけ消えたなら、足音を数えるな。財団地下区画の記録では、消灯前に4人だった足音が復旧後には5つになった。余分な1つだけが、最後まで止まらなかったという記録が残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、非常灯が消えただけだろ。暗い廊下で靴音を聞き違えた、で済まないのか。4人の中に5人目が混ざったなら、その瞬間に収容区画は内側から破られている。ちょっと待って、怖いって。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題の記録はSCP-███に付属する補遺██。オブジェクト本体は、職員の背後にだけ現れる歩行音として扱われた。姿は確認されていない。振り向いた瞬間の映像は、すべて黒い3秒間に置き換わっていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの現象を足音そのものではなく、足音の数を増やす異常として記録した。聞こえる回数ではない。廊下にいる人数と、床を踏む音の人数が一致しなくなる。学校の帰り道で背後の靴音が一歩多い感覚。それが収容施設で実在した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ、誰もいない場所から足音が聞こえる話より悪い。自分の歩く音の中に、別の歩幅が混ざるんだな。逃げても音が増えるなら、耳を塞いでも意味がない。聞いた側が自分で数え始めるのも、まずくないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容手順は単純だった。地下██区画の非常灯を常時点灯させ、停電が3秒を超えた場合、区画内の全職員はその場で片足を床から離す。両足の音を消すためではない。増えた足音が、誰の歩幅を真似るか確かめないためだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この規則は奇妙に見える。だが最初の収容違反では、歩き続けた職員だけが記録から欠けた。退避した者は3名。消えた者は1名。監視映像には4人の背中が映り、音声には5人分の靴底が残っていた。人数の差は最後まで埋まらない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消えた職員の映像は残ったのか。なら映っていた4人のうち、誰かがもう本人ではなかった可能性もある。…ねえ、これ本当に大丈夫なの？　非常灯が戻った時、職員は何を根拠に互いを確認したんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "確認は許可されなかった。復旧後も職員は顔を見ず、識別番号を紙に書いて床へ置くよう命じられた。声で呼び合った班では、呼ばれた名前と返事の回数が合わなくなったためだ。余分な返事は毎回、いちばん遅れて聞こえた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、ここからが本題だ。足音が増えたのは停電中だけではない。消灯の3秒を越えた直後、非常灯が復旧しているのに、廊下の端からもう1組の足音が近づく。音だけが暗闇を持ち帰ったように、照明の下を歩いた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "復旧後まで残るなら、非常灯をつけっぱなしにしても遅いじゃないか。暗闇にいた何かが、光の戻る瞬間に一緒に出てくる。しかも姿はない。追跡する職員が足音だけを頼りにしたら、向かう先はどうなる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "追跡は禁止された。足音は必ず最寄りの監視員室へ向かったからだ。職員が追いついた時、室内に人影はない。それでも椅子は1脚だけ後ろへ引かれ、記録端末には入室者5名と自動表示された。そこにいたのは4名だけだった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-███のオブジェクトクラスはEuclid。理由は破壊性ではなく、出現条件を完全に制御できなかったためだ。非常電源は毎月1回、3秒未満の切替を起こした。施設側が守れる数字は3秒だった。4秒目から、数える側が減り始めた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "3秒と4秒の間に、財団でも越えられない線があるのか。時計なら一瞬だ。ゲームのロード画面が切り替わるより短いのに、その一瞬で誰かが廊下へ入る。いや、入るんじゃない。最初からいたことにされるのか。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも、まだ説明できていない。報告書には追加された足音とあるが、足音の主が新しく現れたのか、既存の職員から切り離されたのかは不明だ。消えた職員の歩幅は、消失後も音声記録に残った。本人だけが記録から薄れていった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の事案は██年██月。地下通路を警備していた4名が、定期点検の停電に巻き込まれた。消灯は正確に3秒。復旧と同時に全員が動きを止めたが、録音機にはその後12秒間、5組の足音が規則正しく残った。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "12秒も続いたのか。4人は止まっていたのに、5組の音だけが歩いていたなら、誰かが彼らのすぐそばを通ったことになる。触れられた記録はないのか。それとも、触れられた人間が報告を残せなかっただけなのか。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "4名は翌朝まで隔離された。身体に外傷はない。だが4人全員の靴底には、同じ灰色の粉末が付着していた。区画の床材には存在しない成分として処理されたが、分析記録の後半は[DATA EXPUNGED]。粉末だけが、歩いた者の数より多かった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "隔離から6時間後、職員の1人が監視員室の扉前で立ち止まり、自分の後ろにいる誰かへ入室許可を求めた。背後には誰もいない。だが彼の入室記録には識別番号が2つ並んでいた。片方は本人。もう片方は未発行番号だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "未発行番号って、財団の職員ですらない番号だろ。なのに扉はその存在を職員として通した。足音だけだったものが、施設の記録に触れ始めたんだな。ドアが開いたなら、その先の部屋にも入ったことになる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視員室の内部映像は、入室直後から3秒間だけ乱れた。復旧後、椅子は5脚すべてが机に向けられていた。通常は4脚しか使われない部屋だ。追加の1脚には灰色の粉末があり、座面に残った圧痕は人間のものか判別できなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで財団は手順を変更した。非常灯の消灯中、職員は歩かない。数えない。呼びかけない。そして復旧後に聞こえる足音を、監視員室まで追わない。これは安全のためではない。追跡した班が、戻る人数を一致させられなかったためだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "戻る人数を数えられなかった、じゃないんだな。一致させられなかった。4人で入って4人で戻っても、誰が最初の4人だったか分からなくなる。…聞かなきゃよかった。顔を見ても、本人だと確かめられないなら終わってる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第2事案では、班長が消灯前から全員の手首に封印帯を巻いた。4本の帯は切断されず、復旧後も4本のままだった。それでも床に残った足跡は5列。余分な列だけが途中で壁際へ寄り、壁の中へ消えたように途切れていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "足跡の長さは27センチ。4名のうち誰の靴とも合わない。にもかかわらず、歩幅だけは班長と完全に一致していた。班長が右足を出せば、余分な跡も右足を出す。けれど半歩だけ遅い。背後を歩く者が真似るには、近すぎる距離だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "班長はその後、自室で眠れなくなった。廊下に誰もいない夜でも、自分が寝返りを打つたび、ベッドの下から半拍遅れた足音がしたという。記録上、彼は14日後に転属。転属先の監視映像は初日から、5人分の歩行音を記録した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "施設に残したわけじゃないのか。班長に付いて行ったなら、SCP-███は地下通路の怪異ではない。足音を聞いた人間の後ろへ移る。自分の部屋の廊下で、靴下なのに足音が2つ鳴ったら、もう非常灯の話では済まない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、消灯3秒は出現条件ではなく、足音が人間の歩調を覚える時間とされた。光が消えた間に増えるのは存在ではない。あなたの歩く音に別の歩き方が重なる。そして復旧後、その音だけがあなたの行き先を先に知っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この仮説を裏付ける記録がある。第3事案の職員は、消灯中に片足を上げていた。床を踏んだのは反対の足だけ。復旧後の録音には2組の足音が残った。片方は職員の左足。もう片方も左足だけで、半拍遅れて歩いていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それ、後ろの何かに右足がないんじゃない。職員が床につけた側だけを持っていったんだ。だから足音を止めろと言われる。歩く人間を狙うんじゃなくて、歩くという行為から、もう1人分を作るのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "職員は安全措置として、以後48時間、単独歩行を禁じられた。だが監視カメラの人数は常に正しい。異常は音声にだけ現れる。映らない5人目が階段を上がる。扉を通る。椅子を引く。映像には何もないのに、施設設備だけが反応した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容記録で最も不気味なのは、5人目が足音を出す場所だ。必ず次に停電が起きる非常灯の下で止まる。予告のように聞こえるが、財団は警告と呼ばなかった。そこへ人員を置いた実験で、停電前から余分な足音が始まったためだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "停電を予告してるんじゃなくて、次の暗闇を待っている。非常灯の下で止まるのは、そこで誰かが3秒見えなくなるのを知ってるからか。職員を逃がしても、施設中の非常灯を全部止めるわけにはいかない。出口がないじゃないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第4事案では、非常灯12基を同時に更新した。停電は発生しない予定だった。しかし交換作業の最中、作業員2名は工具を落とし、互いに相手が通路の奥へ歩いたと思い込んだ。映像上、2人は最初から最後まで背中合わせで立っていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "音声には4組の足音が残っていた。2組は作業員のもの。残り2組は、彼らが見たはずの相手の足音だった。見えていた相手と、そこに立っていた相手が分離していた。財団はこの時点で、目視確認も安全確認から除外した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "目で見ても、耳で聞いても駄目なら、何で確認するんだ。名前も声も番号も、余分な1人に使われる。人が4人いる場所で5番目だけを探すほど危ないなら、誰も数えない方がましなのか。…でも気づいたら数えてしまう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そこで導入されたのが無記名退避手順。職員は列を作らず、互いの人数を数えず、指定された白線だけを踏んで退避する。出入口では点呼しない。生存者が自分から扉を叩くまで、外側は開けない。冷酷な規則だが、理由は被害記録にある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "点呼を行った班では、呼ばれた人数より返事が1つ多かった。余分な返事は必ず最後にあり、声紋は班長と一致した。班長本人は返事をしていないと主張した。だが録音には同じ声で2度、いると答える音が残った。間隔は3秒だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分の声で先に返事をされたら、誰が偽物なのか分からない。班長が黙っていても、記録には班長が2人いることになる。学校で出席を取る時に、自分の名前へ自分の声が2回返ったら、教室のどこを見ればいいんだ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "無記名退避で助かった職員は7名いた。しかし7名全員が、退避後の3日間、歩数計の数値を確認できなかった。端末を見ようとすると、画面に8とだけ表示されたという。故障として回収された端末は7台。どの端末にも同じ数字が残っていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は端末を廃棄せず、保管庫へ移送した。移送担当は2名。移送記録の足音は3組だった。担当者は互いに荷車の車輪音が足音に聞こえただけだと報告したが、荷車は廊下の中央を通る。3組目だけは常に、2人の背後を歩いていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この時点で、SCP-███が人間だけを追うという前提は崩れた。足音を記録した物にも付着する可能性がある。録音機、歩数計、監視端末。音を数えた物が、次の足音を運ぶ。財団は記録媒体を隔離し、再生には2名以上の許可を必要とした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "聞くだけで持ち出すなら、この報告書を読んでいることも危ないんじゃないか。文字には足音がない。でも頭の中で3秒を数えた瞬間に、自分の廊下を思い出す。…ねえ、これ本当に大丈夫なの？　読む側まで数に入ってないか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その懸念は補遺██にもある。閲覧者は報告書を閉じる前に、周囲の人数を確認してはならないと記されている。理由は明かされない。ただし注意書きの末尾には、赤字で1行だけ残る。非常灯が消えたら、最初の足音を自分のものだと思うな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "元研究員として、私はその注意書きを読んだ。第██サイトの保管庫で、照明が一度だけ瞬いた。消灯は計測上2秒。規則の3秒には届かない。それでも廊下の奥で、靴底が床を擦る音がした。私は数えなかった。数えなかったことにしている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "数えなかったことにしている、って何だよ。聞こえた足音が何組だったか覚えているから、そう言うんだろ。記録より怖いのは、研究員だったシロまで今も答えを避けることだ。じゃあ、その夜に監視員室は開いたのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視員室の扉は開かなかった。内側から鍵が掛かっていたからだ。翌朝、扉の前には灰色の粉末が5列分残っていた。室内にいた警備員は4名。全員生存。しかし4人は、誰が夜勤開始時の自分だったか、最後まで答えられなかったという。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録はここで途切れている。SCP-███は現在も地下██区画に収容中とされるが、非常灯の交換予定は公開されない。施設内の職員名簿は毎朝4回照合される。それでも週に1度、存在しない識別番号が点呼端末へ残るという記録が残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "存在しない番号が残るなら、消えた職員の代わりに何かが勤務表へ入っているのか。誰も顔を見分けられず、声も番号も使えないなら、その何かはもう収容違反を起こしている。施設の中で普通に歩いているだけじゃないのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はそれを否定していない。だから職員には、非常灯が消えた後の足音を追わず、数えず、名前を呼ばないよう命じられる。見かけても、決して近づくな。姿がないから安全なのではない。姿がないまま、あなたの歩調だけを覚えるからだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-093、赤海洋物体の調査映像を扱う。持ち出された映像には、帰還したはずの調査員が6名映っていた。だが入った者は5名だけだった。今回の足音と同じく、人数が1つ増えた記録は、人間を安心させない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "5人で入って6人が映るなら、あの赤い扉の向こうでも誰かが帰り道を覚えたのか。足音の5人目と同じものとは限らない。それでも数が1つ増えた時点で、帰還は成功じゃない。次のファイルも、読む前に人数を数えそうだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書が届いたなら、先に高評価を残せ。収容違反ファイルシリーズには、消灯後の記録がまだ残されている。毎日投稿中。登録者1万人を目標にしている。応援するならチャンネル登録を。ただし、背後の足音は確認するな。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に1つだけ。非常灯が消えた時、あなたが立ち止まったなら、足音も止まるとは限らない。3秒後に光が戻っても、廊下の奥から1組だけ歩き続けるなら、その音はあなたを追っているのではない。先に、あなたの部屋へ帰っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "なお、この記録の原典はSCP財団Wiki掲載作品および関連補遺に基づく。ライセンスはCC BY-SA 3.0。だが収容記録の末尾に残る5つ目の足音については、原典の閲覧履歴にも不自然な空白がある。財団でも、その閲覧者を確認できていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "消灯3秒",
+      "足音が増えた"
+    ],
+    "hook_caption": "3秒の足音",
+    "subtitle": "地下収容区画の消灯記録",
+    "tagline": "戻ったのは誰だった"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "この手の報告書、実は他にも未公開のものが山ほどある。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "高評価を残せ。収容違反ファイルシリーズにも続きがある。毎日投稿中、1万人目標の応",
+          "reason": "1行51字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 22,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 5,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.606,
+      "similar_to": "SCP-███ 持ち出した報告書が3日後に戻った",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 35,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-███ 非常灯が消えた3秒の足音"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-███ 非常灯が消えた3秒の足音",
+    "attempts": 1
+  },
+  "original_title": "SCP-███ 非常灯が消えた3秒の足音",
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

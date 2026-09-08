@@ -1,0 +1,203 @@
+{
+  "title": "NTTデータの年収905万円、実は在宅勤務の裏側",
+  "theme": {
+    "title": "NTTデータの年収と在宅勤務率、IT大手の働き方",
+    "angle": "リモート比率という新しい指標で切る"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "IT大手の実態",
+      "fact_main": "NTTデータ 905万円",
+      "fact_sub": "有報2024年3月期",
+      "text": "この会社の平均年収、905万円だと思いますか。",
+      "bg_query": "株式会社NTTデータグループ 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年齢 42.3歳",
+      "fact_sub": "有報2024年3月期",
+      "text": "平均年齢は42.3歳です。年収は経験を積んだ層も含む数字です。",
+      "bg_query": "株式会社NTTデータグループ オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "従業員 195,100人",
+      "fact_sub": "連結・2024年3月期",
+      "text": "連結従業員は195,100人です。海外を含む巨大なITグループです。",
+      "bg_query": "株式会社NTTデータグループ 社員 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "在宅勤務率 50%超",
+      "fact_sub": "公式施策・出社併用",
+      "text": "在宅勤務は50%超が目安です。ただし、全員が毎日ではありません。",
+      "bg_query": "株式会社NTTデータグループ リモートワーク",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "売上高 4兆3,674億円",
+      "fact_sub": "2024年3月期・連結",
+      "text": "売上高は4兆3,674億円です。数字だけ見れば、かなり良い規模です。",
+      "bg_query": "株式会社NTTデータグループ データセンター",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "残業 30時間前後",
+      "fact_sub": "口コミサイト調べ",
+      "text": "ただし、残業は30時間前後という口コミもあります。",
+      "bg_query": "株式会社NTTデータグループ オフィス 夜景",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったら、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収905万",
+      "在宅勤務の現実"
+    ],
+    "subtitle": "IT大手の働き方",
+    "tagline": "公表値と口コミを確認"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 6,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.457,
+      "similar_to": "星野リゾートの推定年収400万円、ホテル業界での正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 31,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "NTTデータの年収905万円、実は在宅勤務の裏側"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '裏側', '年収'](+20)",
+      "好奇心ギャップ['裏', '実は'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}
