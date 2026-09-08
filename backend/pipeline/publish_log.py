@@ -26,12 +26,14 @@ from __future__ import annotations
 
 import sqlite3
 import time
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 PUBLISH_DB = PROJECT_ROOT / "data" / "video_publish.db"
+
+JST = timezone(timedelta(hours=9))
 
 _SCHEMA = """
 CREATE TABLE IF NOT EXISTS video_status (
@@ -135,3 +137,73 @@ def record_publish(
     except Exception as e:  # pragma: no cover - 記録失敗で投稿を止めない
         print(f"⚠️ publish_log: video_status への記録に失敗 ({video_id}): {e}", flush=True)
         return None
+
+
+# ---------------------------------------------------------------------
+# 予約公開の後始末
+# ---------------------------------------------------------------------
+
+def _parse_ts(value: Optional[str]) -> Optional[datetime]:
+    """ISO 文字列を aware な datetime にする。
+
+    `scheduled_at` は経路によって書式が揺れる（実データに `...Z` 付きと
+    タイムゾーンなしの両方がある）。tz が無いものは **JST** として読む。
+    投稿枠の時刻は全て JST で運用しているので、UTC と解釈すると9時間ぶん
+    「まだ未来」に見えて永久に published にならない。
+    """
+    if not value:
+        return None
+    s = str(value).strip().replace("Z", "+00:00")
+    try:
+        dt = datetime.fromisoformat(s)
+    except ValueError:
+        return None
+    return dt if dt.tzinfo else dt.replace(tzinfo=JST)
+
+
+def reconcile_scheduled(*, now: Optional[str] = None,
+                        conn: Optional[sqlite3.Connection] = None) -> int:
+    """公開時刻を過ぎた `scheduled` 行を `published` に遷移させる。
+
+    なぜ要るか（2026-09-09）:
+        `record_publish` は予約公開を `status='scheduled'` /
+        `published_at=NULL` で書くが、**予定時刻が来たことを誰も書き戻して
+        いなかった**。YouTube 側では毎日公開されているのに DB 上は
+        ゆっくり系8chが `scheduled` のまま溜まり続け（09-08 時点で136行）、
+        `published_at` で集計する経路（pdca_report / 公開本数の集計 /
+        api_improvement の「公開済み動画」）から丸ごと落ちていた。
+
+        遷移の根拠は YouTube API ではなく**予約時刻**にしている。予約公開は
+        API が受理した時点で確定しており、`video_id` も既に採番済み
+        （＝行に入っている）。追加の API 呼び出しは quota を使ううえ、
+        OAuth 失効中のチャンネルで丸ごと失敗して復旧が遅れる。
+        取り消し・削除された動画までは追えないが、その頻度と
+        「毎日全ch欠測」を比べれば時刻ベースで足りる。
+
+    Args:
+        now: 基準時刻（ISO）。省略時は現在時刻。テスト用。
+
+    Returns:
+        遷移させた行数。
+    """
+    ref = _parse_ts(now) or datetime.now(JST)
+    own_conn = conn is None
+    c = conn or connect()
+    try:
+        rows = list(c.execute(
+            "SELECT job_id, scheduled_at FROM video_status "
+            "WHERE status = 'scheduled' AND video_id IS NOT NULL AND video_id != ''"))
+        due = []
+        for job_id, scheduled_at in rows:
+            dt = _parse_ts(scheduled_at)
+            if dt is not None and dt <= ref:
+                due.append((scheduled_at, int(time.time()), job_id))
+        if due:
+            c.executemany(
+                "UPDATE video_status SET status='published', published_at=?, "
+                "updated_at=? WHERE job_id=?", due)
+            c.commit()
+        return len(due)
+    finally:
+        if own_conn:
+            c.close()

@@ -864,6 +864,32 @@ def main(argv: List[str]) -> int:
             json.dumps(rep, ensure_ascii=False, indent=2), encoding="utf-8")
         md_parts.append(_channel_markdown(rep))
 
+    # 予約公開の後始末。`published_at` で集計する節より前に置く。
+    # 予約行を published へ落とさないと、ゆっくり系8chが丸ごと集計から落ちる。
+    try:
+        from pipeline import publish_log as _pl
+        promoted = _pl.reconcile_scheduled()
+        print(f"\n[video_status] 公開済みに更新した予約行: {promoted} 件")
+        if promoted:
+            md_parts.append(f"> `video_status`: 公開時刻を過ぎた予約行 {promoted} 件を "
+                            f"`published` に更新した。\n")
+    except Exception as e:
+        print(f"⚠️ video_status の予約行の後始末に失敗: {e}")
+
+    # 計測データの充足。全ch分の sync が終わってから見る（この時点なら
+    # 本スクリプト自身の sync は完了している）。欠測があれば名指しで残し、
+    # 「0行＝実績0」と読まれないようにする。
+    try:
+        from pipeline.analytics import freshness as _fresh
+        cov = _fresh.snapshot_coverage(expected_channels=channel_ids, date=date_str)
+        md_parts.append(_fresh.coverage_markdown(cov))
+        if cov["ok"]:
+            print(f"[計測] video_metrics 充足 {len(channel_ids)}/{len(channel_ids)} ch")
+        else:
+            print(f"[計測] ⚠️ video_metrics 欠測: {', '.join(cov['missing'])}")
+    except Exception as e:
+        print(f"⚠️ video_metrics の充足チェックに失敗: {e}")
+
     combined_md = "\n".join(md_parts)
     (out_dir / "report.md").write_text(combined_md, encoding="utf-8")
     (REPORTS_DIR / "latest.md").write_text(combined_md, encoding="utf-8")

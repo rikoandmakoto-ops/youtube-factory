@@ -1732,6 +1732,17 @@ async def startup_event():
     except Exception as e:
         print(f"⚠️ Theme queue scheduler failed to start: {e}")
 
+    # 予約公開の後始末: 公開時刻を過ぎた scheduled 行を published に落とす。
+    # 誰も書き戻していなかったためゆっくり系8chが scheduled のまま溜まり、
+    # published_at で集計する経路から丸ごと落ちていた（2026-09-09）。
+    try:
+        from pipeline import publish_log as _pl
+        n = _pl.reconcile_scheduled()
+        if n:
+            print(f"🗂  video_status: 公開済みに更新した予約行 {n} 件")
+    except Exception as e:
+        print(f"⚠️ video_status の予約行の後始末に失敗: {e}")
+
     print()
     print("🏭 YouTube Factory ready!")
     print(f"   📺 Channels: {', '.join(channel_manager.list_ids())}")

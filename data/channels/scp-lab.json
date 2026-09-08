@@ -619,8 +619,8 @@
       "char_cy": 905,
       "char_icon_d": 210,
       "_max_count_prev_20260905": 2,
-      "thumbnail_card": false,
-      "_thumbnail_card_comment_20260908n": "サムネの図解カードのみ停止。本日のサムネ(b70a6937_short.png)で『名簿の空白/7日目の名前』に対し眼のアイコン＋『視認体』ラベルのleaked-documentカードを描画。題材(名簿・人員記録)と無関係で、暗色カードが背景に沈み視認性も低い。本編のleaked-document図解は継続。"
+      "_thumbnail_card_comment_20260908n": "サムネの図解カードのみ停止。本日のサムネ(b70a6937_short.png)で『名簿の空白/7日目の名前』に対し眼のアイコン＋『視認体』ラベルのleaked-documentカードを描画。題材(名簿・人員記録)と無関係で、暗色カードが背景に沈み視認性も低い。本編のleaked-document図解は継続。",
+      "thumbnail_card_note": "【2026-09-09】09-08 に thumbnail_card=false で潰していたが、原因はアイコン語彙の**素の部分一致**（『ロケット団』→ロケット / 『言葉』→葉 / 『影響』→人影）であってチャンネル固有の問題ではなかった。照合規則を pipeline/jp_wordmatch.py の語境界判定に置き換えたのでフラグを外す。個別に切りたくなったときは thumbnail_card:false を再度置けばよいが、誤爆対策をここでやってはいけない（13ch分だけ増えて根本が残る）。"
     },
     "effects": {
       "enabled": true,
@@ -923,10 +923,30 @@
     "require_question_mark": false,
     "rationale_prev_20260831": "【2026-08-31 実測により連番プレフィックスを停止】08-19以降に導入した『{series} #NN：』テンプレを、直近コホート(n=66)で自然文タイトルと比較したところ 維持率 29.7% vs 41.2%（1.39倍差）、平均再生 740 vs 863 で連番側が劣後した。導入根拠だった『連番はビンジ視聴と登録率を上げる』は本チャンネル群では成立せず、1000再生あたり登録者は 0.39 vs 0.41 とむしろ僅かに下回り、便益が観測できなかった。加えてタイトル長別では 30字未満 維持率 50.4%、50字超 30.1% で、連番プレフィックスが6〜10字を占めること自体が不利に働く。旧値は series_name_disabled_20260831 に退避してあるので復帰は可能。09-07 のコホートで再評価する。",
     "enforced_by_backend": true,
-    "enforcement_note": "backend は title_rules を一切読まない（generator.py が参照するのは theme_priority.title_style / good_examples / viral_hooks と voice_style.style_rules と short_format）。ここのフラグは人間と指揮者向けの記録であり、実効ルールは theme_priority.title_style 側に書くこと。2026-09-03 の検証で判明。",
+    "enforcement_note": "backend が読むのは title_rules.hard_constraints **だけ**。禁止系（forbid_digits / max_digit_groups / forbid_prefixes / banned_words / forbid_patterns / max_chars）に加えて、2026-09-09 から「必ず含む」の require_any_of が使える。require_answer_marker / answer_markers / require_number_with_unit / require_question_mark / require_shoutai_per_batch は**未参照**（人間と指揮者向けの記録）。新しい強制を足すときはpipeline/title_constraints.py にスキーマを実装してから設定を書くこと。",
     "hard_constraints": {
       "max_digit_groups": 1,
-      "max_chars": 30
+      "max_chars": 30,
+      "require_any_of": {
+        "label": "答え提示語",
+        "words": [
+          "理由",
+          "正体",
+          "本当の",
+          "実は",
+          "わけ",
+          "なぜ",
+          "真相",
+          "裏側",
+          "実態"
+        ],
+        "repair_with": [
+          "真相",
+          "裏側",
+          "実態"
+        ],
+        "note": "【2026-09-09】09-08 に title_rules.require_answer_marker として書いた『答え提示語を必ず入れる』は backend が1行も読まないキーだった（実測適合 61%）。読まれるのは hard_constraints だけなので、そこへ require_any_of として移した。検査は語境界つき（『理不尽』の『理』では満たさない）。違反時は LLM 再生成2回 → それでも駄目なら repair_with の語を**語尾に足すだけ**の機械修復に落ちる（語順・助詞は動かさない）。words は残り6語も許すが、cross_channel_gate の同語上限があるので主軸は repair_with の並び＝ch割り当てに従う。"
+      }
     },
     "min_effective_chars_target": 20,
     "rationale_prev_20260903": "【2026-09-03 実測・タイトル必須要件】(A) 毎バッチ最低1本は「正体」を必ずタイトルに入れる（ch内対照1.53倍・4ch全てで同方向）。(B) 全タイトルに具体的な数字＋単位を1つ入れる（1.56倍）。出典が確認できない数字を創作してはならない。(C) 疑問符「？」は必須にしない。断定形の言い切りを既定とし、疑問形は内容上必要なときだけ使う（疑問形は0.62倍で負）。(D) 「なぜ」「実は」は必須でも禁止でもない（いずれも効果量1.0前後）。(E) 連番プレフィックス（#NN：）は引き続き禁止。(F) 全角30字以内・絵文字なしを厳守（28〜36字帯が登録/千0.64で最良）。 【2026-09-03 チャンネル内対照で再検証・n=286（公開07-05以降/100再生以上）】過去のタイトル判断はチャンネル間の交絡を含んでいたため、同一チャンネル内でのみ あり/なし を比較し直した。①「正体」= 登録/千再生 0.64 vs 0.42（1.53倍）。daily-science 2.31倍 / scp-lab 1.13倍 / pokemon-lab 1.74倍 / yokai-watch 2.73倍 と対照可能な4chすべてで同方向。08-23の2.10倍が再現された唯一の語であり、最も信頼できる。②「数字＋単位（〇〇万円・〇秒・〇倍・〇%）」= 0.61 vs 0.39（1.56倍）。③「？」疑問形 = 0.37 vs 0.60（0.62倍・負）。6ch中4chで負。**08-23に『疑問符は2.16倍』として必須化したのは誤りであり、本日撤回する。**④「なぜ」= 0.42 vs 0.45（0.94倍・無効果）。08-23の1.58倍は再現せず、必須化しない。⑤「実は」= 0.51 vs 0.49（1.03倍・無効果）。08-23の『0.70倍で逆効果につき禁止』も交絡であったため禁止を解除するが、推奨もしない。⑥連番プレフィックス = 0.40 vs 0.48（0.84倍・負）。08-31の停止判断は正しく、継続する。⑦絵文字 = 0.48 vs 0.47（1.03倍・無効果）。company-facts に偏っていたことによる見かけの効果だった。",
@@ -948,7 +968,8 @@
       "裏側",
       "実態"
     ],
-    "answer_marker_assignment_rationale": "9語を全chで共有すると『正体』に収斂し、cross_channel_gate が毎日発動する。chごとに主軸を分け、1日3枠へ1語ずつ回す。実効ルールは theme_priority.title_style 側に書いてある（title_rules は hard_constraints しか backend に読まれない）。"
+    "answer_marker_assignment_rationale": "9語を全chで共有すると『正体』に収斂し、cross_channel_gate が毎日発動する。chごとに主軸を分け、1日3枠へ1語ずつ回す。実効ルールは theme_priority.title_style 側に書いてある（title_rules は hard_constraints しか backend に読まれない）。",
+    "require_answer_marker_migrated_to": "hard_constraints.require_any_of"
   },
   "pdca_log": [
     {

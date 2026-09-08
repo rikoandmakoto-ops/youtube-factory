@@ -141,6 +141,15 @@ class RealChannelConfigTest(unittest.TestCase):
         return json.loads((CHANNELS / f"{cid}.json").read_text(encoding="utf-8"))
 
     def test_enforced_channels_have_clean_queues_and_seeds(self):
+        """テーマ（題材）が**禁止系**の制約に触れていないこと。
+
+        2026-09-09: `require_any_of`（答え提示語を必ず含む）は対象外にする。
+        キューに入っているのは題材であって最終タイトルではなく、答え提示語は
+        generator がタイトルを組み立てる段で入れる。題材にまで必須化すると
+        「〜の理由」を全題材の語尾に貼るだけになり、意味が無い。
+        （2ch-matome だけは施策として題材レベルで結論型に揃えてあり、そちらは
+        tests/test_fixes_20260909.py::TestNichanThemeSeeds が見ている。）
+        """
         for cid in ("yokai-watch", "pokemon-lab", "fake-paper"):
             d = self._load(cid)
             self.assertTrue(tc.is_enforced(d), cid)
@@ -148,7 +157,8 @@ class RealChannelConfigTest(unittest.TestCase):
                       (d.get("autopilot") or {}).get("theme_queue") or []]
             titles += [(s.get("title") if isinstance(s, dict) else s)
                        for s in (d.get("theme_seeds") or [])]
-            bad = [t for t in titles if t and not tc.check(t, d)["ok"]]
+            bad = [t for t in titles if t and any(
+                v["rule"] != "require_any_of" for v in tc.check(t, d)["violations"])]
             self.assertEqual(bad, [], f"{cid} に規約違反のテーマが残っている: {bad}")
 
     def test_every_channel_declares_the_single_decision_metric(self):

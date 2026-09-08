@@ -618,8 +618,8 @@
       "char_icon_d": 210,
       "image_mode": "generate",
       "_max_count_prev_20260905": 2,
-      "thumbnail_card": false,
-      "_thumbnail_card_comment_20260908": "サムネの図解カードのみ停止（本編の図解は継続）。アイコン語彙が理科系の一般語で、has_confident_render が素の部分一致で判定するため、当chの題材（固有名詞・虚構）では無関係な語の内側に当たる。実測: 「ロケット団の言葉選び」→ ロケット→植物 （'ロケット団' のロケット / '言葉' の中の 葉）。直近12本で発生1本、その1本がこれ。daily-science は 7/12 で題材と噛み合っているため一律には止めない。"
+      "_thumbnail_card_comment_20260908": "サムネの図解カードのみ停止（本編の図解は継続）。アイコン語彙が理科系の一般語で、has_confident_render が素の部分一致で判定するため、当chの題材（固有名詞・虚構）では無関係な語の内側に当たる。実測: 「ロケット団の言葉選び」→ ロケット→植物 （'ロケット団' のロケット / '言葉' の中の 葉）。直近12本で発生1本、その1本がこれ。daily-science は 7/12 で題材と噛み合っているため一律には止めない。",
+      "thumbnail_card_note": "【2026-09-09】09-08 に thumbnail_card=false で潰していたが、原因はアイコン語彙の**素の部分一致**（『ロケット団』→ロケット / 『言葉』→葉 / 『影響』→人影）であってチャンネル固有の問題ではなかった。照合規則を pipeline/jp_wordmatch.py の語境界判定に置き換えたのでフラグを外す。個別に切りたくなったときは thumbnail_card:false を再度置けばよいが、誤爆対策をここでやってはいけない（13ch分だけ増えて根本が残る）。"
     },
     "effects": {
       "enabled": true,
@@ -848,7 +848,7 @@
     "require_question_mark": false,
     "rationale_prev_20260831": "【2026-08-31 実測により連番プレフィックスを停止】08-19以降に導入した『{series} #NN：』テンプレを、直近コホート(n=66)で自然文タイトルと比較したところ 維持率 29.7% vs 41.2%（1.39倍差）、平均再生 740 vs 863 で連番側が劣後した。導入根拠だった『連番はビンジ視聴と登録率を上げる』は本チャンネル群では成立せず、1000再生あたり登録者は 0.39 vs 0.41 とむしろ僅かに下回り、便益が観測できなかった。加えてタイトル長別では 30字未満 維持率 50.4%、50字超 30.1% で、連番プレフィックスが6〜10字を占めること自体が不利に働く。旧値は series_name_disabled_20260831 に退避してあるので復帰は可能。09-07 のコホートで再評価する。",
     "enforced_by_backend": true,
-    "enforcement_note": "backend は title_rules を一切読まない（generator.py が参照するのは theme_priority.title_style / good_examples / viral_hooks と voice_style.style_rules と short_format）。ここのフラグは人間と指揮者向けの記録であり、実効ルールは theme_priority.title_style 側に書くこと。2026-09-03 の検証で判明。",
+    "enforcement_note": "backend が読むのは title_rules.hard_constraints **だけ**。禁止系（forbid_digits / max_digit_groups / forbid_prefixes / banned_words / forbid_patterns / max_chars）に加えて、2026-09-09 から「必ず含む」の require_any_of が使える。require_answer_marker / answer_markers / require_number_with_unit / require_question_mark / require_shoutai_per_batch は**未参照**（人間と指揮者向けの記録）。新しい強制を足すときはpipeline/title_constraints.py にスキーマを実装してから設定を書くこと。",
     "hard_constraints": {
       "max_digit_groups": 1,
       "forbid_prefixes": [
@@ -857,7 +857,25 @@
         "なんで",
         "どうして"
       ],
-      "max_chars": 30
+      "max_chars": 30,
+      "require_any_of": {
+        "label": "答え提示語",
+        "words": [
+          "理由",
+          "正体",
+          "本当の",
+          "実は",
+          "わけ",
+          "なぜ",
+          "真相",
+          "裏側",
+          "実態"
+        ],
+        "repair_with": [
+          "真相"
+        ],
+        "note": "【2026-09-09】09-08 に title_rules.require_answer_marker として書いた『答え提示語を必ず入れる』は backend が1行も読まないキーだった（実測適合 61%）。読まれるのは hard_constraints だけなので、そこへ require_any_of として移した。検査は語境界つき（『理不尽』の『理』では満たさない）。違反時は LLM 再生成2回 → それでも駄目なら repair_with の語を**語尾に足すだけ**の機械修復に落ちる（語順・助詞は動かさない）。words は残り6語も許すが、cross_channel_gate の同語上限があるので主軸は repair_with の並び＝ch割り当てに従う。"
+      }
     },
     "_comment": "hard_constraints だけが backend に読まれる（pipeline/title_constraints.py）。require_* / forbid_patterns 等の旧フィールドは 09-03 の検証どおり未参照のまま。",
     "min_effective_chars_target": 20,
@@ -880,7 +898,8 @@
       "本当の",
       "真相"
     ],
-    "answer_marker_assignment_rationale": "9語を全chで共有すると『正体』に収斂し、cross_channel_gate が毎日発動する。chごとに主軸を分け、1日3枠へ1語ずつ回す。実効ルールは theme_priority.title_style 側に書いてある（title_rules は hard_constraints しか backend に読まれない）。"
+    "answer_marker_assignment_rationale": "9語を全chで共有すると『正体』に収斂し、cross_channel_gate が毎日発動する。chごとに主軸を分け、1日3枠へ1語ずつ回す。実効ルールは theme_priority.title_style 側に書いてある（title_rules は hard_constraints しか backend に読まれない）。",
+    "require_answer_marker_migrated_to": "hard_constraints.require_any_of"
   },
   "pdca_log": [
     {

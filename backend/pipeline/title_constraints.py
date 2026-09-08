@@ -21,11 +21,31 @@
         "forbid_patterns": [              // 任意の正規表現
           {"pattern": "#\\\\d+", "label": "連番"}
         ],
+        "require_any_of": {               // 「必ず含む」制約（2026-09-09 追加）
+          "label": "答え提示語",
+          "words": ["理由", "正体", "本当の"],   // どれか1つを含むこと
+          "repair_with": ["正体", "理由"]        // 機械修復で語尾に足す候補（名詞のみ）
+        },
         "max_chars": 48
       }
     }
 
     未設定のチャンネルは検査なし（挙動不変）。
+
+`require_any_of` について（2026-09-09）:
+    09-08 の指揮者が `title_rules.require_answer_marker` に書いた「答え提示語を
+    必ず入れる」は、**このモジュールが hard_constraints しか読まない**ため
+    1行も効いていなかった（実測適合 61%）。禁止系しか表現できなかった
+    スキーマに「必ず含む」を足す。
+
+    照合は `jp_wordmatch` の語境界判定を使う。素の部分一致だと「理不尽」の
+    「理」で『理由』が満たされたことになってしまう。
+
+    機械修復は**語尾に足すだけ**。語順も助詞も動かさない（数字除去のときに
+    「はで」「でずつ」のような助詞連結を3回作った前科があるため）。
+    直前が動詞・形容詞の連体形なら直に、名詞なら「の」を挟んで繋ぐ。
+    「なぜ」「実は」「本当の」のように語尾に置けない語は `repair_with` に
+    入れないこと（検査側の `words` には入れてよい）。
 
 公開 API:
     check(title, channel_dict)  -> {"ok": bool, "violations": [...], "advice": [...]}
@@ -35,7 +55,12 @@
 from __future__ import annotations
 
 import re
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
+
+try:  # 語境界つきの語彙照合（→ pipeline/jp_wordmatch.py）
+    from pipeline import jp_wordmatch as _jw
+except ImportError:  # pragma: no cover
+    import jp_wordmatch as _jw
 
 # 半角・全角の数字。漢数字は「数字」に数えない（「一石二鳥」まで弾くのは行き過ぎ）。
 #
@@ -83,6 +108,28 @@ def constraints_of(channel_dict: Optional[Dict[str, Any]]) -> Dict[str, Any]:
 
 def is_enforced(channel_dict: Optional[Dict[str, Any]]) -> bool:
     return bool(constraints_of(channel_dict))
+
+
+def _require_any_of(hc: Dict[str, Any]) -> Optional[Tuple[str, List[str], List[str]]]:
+    """`require_any_of` を (ラベル, 必須語, 修復に使う語) に正規化する。
+
+    リストだけの略記 `"require_any_of": ["理由", "正体"]` も受ける。その場合
+    `repair_with` は必須語と同じ並びになる（語尾に置けない語が混ざっている
+    ときは明示的に dict 形式で書くこと）。
+    """
+    spec = hc.get("require_any_of")
+    if isinstance(spec, (list, tuple)):
+        words = [str(w).strip() for w in spec if str(w or "").strip()]
+        return ("必須語", words, list(words)) if words else None
+    if not isinstance(spec, dict):
+        return None
+    words = [str(w).strip() for w in (spec.get("words") or []) if str(w or "").strip()]
+    if not words:
+        return None
+    label = str(spec.get("label") or "必須語")
+    repair_with = [str(w).strip() for w in (spec.get("repair_with") or [])
+                   if str(w or "").strip()]
+    return label, words, (repair_with or list(words))
 
 
 # ---------------------------------------------------------------------
@@ -158,6 +205,17 @@ def check(title: str, channel_dict: Optional[Dict[str, Any]] = None) -> Dict[str
                 advice.append(f"「{label}」に当たる書き方をしないこと。")
         except re.error:
             continue
+
+    req = _require_any_of(hc)
+    if req is not None:
+        label, words, _ = req
+        if not _jw.any_word(t, words):
+            violations.append({"rule": "require_any_of", "label": f"{label}が必須",
+                               "detail": "/".join(words)})
+            advice.append(
+                f"{label}を必ず1つ入れること（{' / '.join(words)} のいずれか）。"
+                f"語を入れるだけでなく、本編でその答えを言い切ること。"
+                f"語順や助詞は自然な日本語のまま組み立て、不自然に貼り付けないこと。")
 
     try:
         max_chars = int(hc.get("max_chars"))
@@ -239,6 +297,50 @@ def rewrite_why(title: str) -> str:
     return _tidy(body)
 
 
+# 語尾の記号（疑問符・句点・感嘆符）。必須語を足す前に落とす。
+_TAIL_MARK_RE = re.compile(r"[。．\.！!？?〜~…・\s]+$")
+
+# 末尾に半端に残ったハッシュタグ（「#s」「#shor」）。
+_PARTIAL_HASHTAG_RE = re.compile(r"\s*[#＃][^\s#＃]*$")
+
+
+def _trim_to(t: str, limit: int) -> str:
+    """`limit` 文字に詰める。ハッシュタグの途中で切らない。
+
+    ここに来るタイトルは通常ハッシュタグを含まない（本文とタグは
+    description_generator が後段で合成する）。ただし手動経路や再投稿で
+    タグ込みの文字列が渡ることがあり、素朴な `t[:limit]` は「#shor」
+    「#sの真相」のような残骸を作る。
+    """
+    if limit <= 0:
+        return ""
+    cut = (t or "")[:limit]
+    if len(t or "") > limit and _PARTIAL_HASHTAG_RE.search(cut):
+        cut = _PARTIAL_HASHTAG_RE.sub("", cut)
+    return _tidy(cut)
+
+
+def append_required_word(title: str, word: str) -> str:
+    """`word` をタイトルの**語尾に足すだけ**の修復。語順も助詞も動かさない。
+
+    「氷が水に浮く」＋「理由」→「氷が水に浮く理由」（連体形に直付け）
+    「猫の瞳孔」    ＋「正体」→「猫の瞳孔の正体」  （名詞なので「の」を挟む）
+
+    「の」を機械的に挟むと「出すの理由」になり、挟まないと「瞳孔正体」になる。
+    どちらも実際に出た壊れ方なので、直前が用言の連体形かどうかだけで分ける。
+    """
+    t = _TAIL_MARK_RE.sub("", (title or "").strip())
+    w = (word or "").strip()
+    if not t or not w:
+        return (title or "").strip()
+    if _jw.contains_word(t, w):
+        return t
+    # 既に「の」で終わっているならもう一度「の」は足さない（「本当のの正体」）。
+    if t.endswith("の"):
+        return t + w
+    return t + (w if _RENTAI_TAIL_RE.search(t) else "の" + w)
+
+
 def repair(title: str, channel_dict: Optional[Dict[str, Any]] = None) -> str:
     """違反を機械的に直せる範囲で直した文字列を返す（直せなければ元のまま）。
 
@@ -279,8 +381,31 @@ def repair(title: str, channel_dict: Optional[Dict[str, Any]] = None) -> str:
         max_chars = int(hc.get("max_chars"))
     except (TypeError, ValueError):
         max_chars = 0
+
+    # 「必ず含む」は最後に処理する。先に足すと max_chars のトリムで語尾ごと
+    # 削られて、また違反に戻ってしまう。
+    req = _require_any_of(hc)
+    if req is not None:
+        _, words, repair_with = req
+        if not _jw.any_word(t, words):
+            for w in repair_with:
+                # 足したぶんが max_chars を超えないよう、本体を先に詰めておく。
+                body = t
+                if max_chars > 0 and len(body) + len(w) + 1 > max_chars:
+                    body = _trim_to(body, max_chars - len(w) - 1)
+                cand = append_required_word(body, w)
+                if not cand or len(cand) < 8:
+                    continue
+                if _is_broken_japanese(cand, t):
+                    continue
+                sub = check(cand, channel_dict)
+                # 追加した語自体が他の制約（禁止語・数字・パターン）に触れたら次の候補へ。
+                if sub["ok"] or all(v["rule"] == "require_any_of" for v in sub["violations"]):
+                    t = cand
+                    break
+
     if max_chars > 0 and len(t) > max_chars:
-        t = _tidy(t[:max_chars])
+        t = _trim_to(t, max_chars)
 
     # 削りすぎて意味を成さなくなったら元に戻す（違反のままだが空よりまし）。
     if len(t) < 8:
@@ -304,8 +429,15 @@ _BROKEN_PATTERNS = (
 )
 
 
+def _broken_spans(t: str) -> List[str]:
+    spans: List[str] = []
+    for p in _BROKEN_PATTERNS:
+        spans.extend(m.group(0) for m in p.finditer(t or ""))
+    return spans
+
+
 def _is_broken_japanese(repaired: str, original: str) -> bool:
-    """修復結果が日本語として壊れていそうなら True。
+    """**修復が壊した**なら True（元から入っていた並びは咎めない）。
 
     完全な文法判定はしない。数字除去で実際に起きた壊れ方だけを見る:
       1) 助詞のあとに述語や助詞が直接続く（「元ネタはある」「ピカチュウはなのに」）
@@ -313,11 +445,26 @@ def _is_broken_japanese(repaired: str, original: str) -> bool:
 
     削れた量そのものは判定に使わない。forbid_digits のチャンネルでは大きく削るのが
     正常なので、長さ比で弾くと本来きれいに直せる修復まで捨ててしまう。
+
+    2026-09-09 修正: `original` を受け取っておきながら見ていなかったため、
+    **元の文に普通に入っている並び**で誤爆していた。「子どもを」は規則2
+    （も＋を）に、「になった」は規則1（に＋なっ）に当たる。結果として
+    「ドラパルト、子どもを音速超えで撃ち出す」「鬼の角が目印になった千年前の
+    変化」のような正常なタイトルは**どんな修復も一律に捨てられていた**
+    （数字除去の修復も同様に効いていなかった）。原文に無い並びが
+    新しく生まれたときだけ壊れたと見なす。
     """
     r = (repaired or "").strip()
     if not r:
         return True
-    return any(p.search(r) for p in _BROKEN_PATTERNS)
+    new = _broken_spans(r)
+    if not new:
+        return False
+    old = _broken_spans((original or "").strip())
+    for span in old:
+        if span in new:
+            new.remove(span)
+    return bool(new)
 
 
 def violation_summary(result: Dict[str, Any]) -> str:
