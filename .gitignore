@@ -108,3 +108,8 @@ _sync_test.txt
 # スレッドの対応）は設定なので追跡する。
 data/image_requests/*
 !data/image_requests/threads.json
+
+# ===== 一時ファイル / 自動生成物 =====
+.__perm_test
+# 日次レポート出力（data/reports/YYYY-MM-DD/）は再生成できるので追跡しない
+data/reports/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
