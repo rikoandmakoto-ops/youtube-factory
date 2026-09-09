@@ -1,0 +1,230 @@
+{
+  "title": "Appleの本当は年収約3,800万円、新製品発表の裏側",
+  "theme": {
+    "title": "アップル発表会での新製品と年収の関係",
+    "angle": "新製品発表が企業の年収やボーナスにどう影響するかを解説。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "話題企業の実態",
+      "fact_main": "Apple 年収約3800万円",
+      "fact_sub": "米国開示資料の中央値",
+      "text": "Appleの年収、約3,800万円だと思いますか。米国開示資料の従業員報酬中央値です。",
+      "bg_query": "Apple Inc. 本社 Apple Park 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "基本給 27万ドル",
+      "fact_sub": "2024年CEO以外の中央値",
+      "text": "2024年の中央値は27万ドルです。",
+      "bg_query": "Apple Inc. Apple Park 社員 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "株式報酬 12万ドル",
+      "fact_sub": "中央値の報酬構成",
+      "text": "株式報酬は中央値で12万ドルです。",
+      "bg_query": "Apple Inc. 新製品発表会 会場",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "2024売上 3,910億ドル",
+      "fact_sub": "Apple公式 年次報告書",
+      "text": "2024年度の売上高は3,910億ドルです。数字だけ見れば、かなり良い。",
+      "bg_query": "Apple Inc. iPhone 発表会 ステージ",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "配当と買戻し 1,100億ドル",
+      "fact_sub": "2024年度の株主還元",
+      "text": "株主還元は配当と自社株買いで約1,100億ドルです。",
+      "bg_query": "Apple Inc. 株主総会 Apple Park",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "2024年採用 3,000人減",
+      "fact_sub": "従業員数は公表値ベース",
+      "text": "ただし従業員数は2024年に約3,000人減りました。",
+      "bg_query": "Apple Inc. 採用 オフィス 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収約3800万",
+      "発表会の裏側"
+    ],
+    "subtitle": "新製品と報酬の関係",
+    "tagline": "公開資料で見るAppleの実態"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 90,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 4,
+          "text": "2024年度の売上高は3,910億ドルです。数字だけ見れば、かなり良い。発表会は",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "ただし従業員数は2024年に約3,000人減りました。新製品の熱気と採用拡大は、",
+          "reason": "1行54字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 9,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 7,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.423,
+      "similar_to": "Apple Japanの年収、実は1,000万円超の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 33,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "Appleの本当は年収約3,800万円、新製品発表の裏側"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['本当は', '裏側', '年収'](+20)",
+      "好奇心ギャップ['裏'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": false,
+    "conflicts": [
+      {
+        "kind": "conflict",
+        "entity": "apple",
+        "metric": "年収",
+        "line": 0,
+        "new_value": 3800.0,
+        "new_period": "",
+        "old_value": 1018.0,
+        "old_period": "",
+        "old_title": "Apple Japanの年収、実は1,000万円超の実態",
+        "unit": "万円"
+      }
+    ],
+    "disclosed": 0
+  }
+}

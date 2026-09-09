@@ -1,0 +1,207 @@
+{
+  "title": "ソニー年収1118万円、ゲーム・音楽・映画でどれだけ違う実態",
+  "theme": {
+    "title": "ソニーグループの年収1100万円台、部門別の差",
+    "angle": "部門差を数字で"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収の実態",
+      "fact_main": "ソニー年収1118万円",
+      "fact_sub": "有価証券報告書 2024年度",
+      "text": "年収1118万円。ただし、配属部門で見え方は変わります。",
+      "bg_query": "ソニーグループ株式会社 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "従業員1万6000人",
+      "fact_sub": "連結ではなく提出会社",
+      "text": "この1118万円は、提出会社の従業員約1万6000人の平均です。",
+      "bg_query": "ソニーグループ株式会社 オフィス 外観",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "賞与は年2回",
+      "fact_sub": "公式採用情報",
+      "text": "賞与は年2回です。年収には賞与も含まれるため、月給だけでは測れません。",
+      "bg_query": "ソニーグループ株式会社 オフィス 社員",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "事業は3分野超",
+      "fact_sub": "ゲーム・音楽・映画など",
+      "text": "実はこの裏で、ゲーム、音楽、映画など3分野超が並びます。",
+      "bg_query": "ソニーグループ株式会社 事業 ポートフォリオ",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "有給は年20日",
+      "fact_sub": "入社時期で付与数は異なる",
+      "text": "有給休暇は初年度最大20日です。働き方は部門と職種で差が出ます。",
+      "bg_query": "ソニーグループ株式会社 社員 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "年収差は非公表",
+      "fact_sub": "部門別平均は確認不可",
+      "text": "ただし、部門別の平均年収は非公表です。",
+      "bg_query": "ソニーグループ株式会社 本社 ビル 夜景",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収1118万",
+      "部門差の現実"
+    ],
+    "subtitle": "ソニーグループの給与を数字で確認",
+    "tagline": "転職前に見る部門別の差"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 9,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.52,
+      "similar_to": "PlayStationの年収989万円、本当は何が違う？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 35,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "ソニーグループ年収1118万円、本当は部門差が大きい"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 78,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['本当は', '年収'](+20)"
+    ]
+  },
+  "original_title": "ソニーグループ年収1118万円、本当は部門差が大きい",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "ソニーグループ年収1118万円、本当は部門差が大きい"
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "ソニー年収1118万円の実態、ゲーム・音楽・映画で差が出る理由"
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}

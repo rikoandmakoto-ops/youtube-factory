@@ -1,0 +1,518 @@
+{
+  "title": "なぜ寒さで顎が先に震える？3秒の正体",
+  "theme": {
+    "title": "寒いと手が震える前に顎が震える正体",
+    "angle": "体幹に近い筋から順にふるえ産熱が始まる順序。秒数を出す"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで寒いと顎だけ先に震えるんでしょう？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！手より先に数秒震えたよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "震えは熱を作る動きで、体幹近くから始まりやすいんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、暖房を中心の部屋から入れる感じだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも顎は小さな筋でも動かせるので、先に熱づくりの合図になります。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "顎の震えを今日から意識してみて。体の謎シリーズも、高評価とチャンネル登録で1万人目標を毎日応援してね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで寒いと顎だけ先に震えるんでしょう？あなたも冷えた朝に玄関を出て、手袋を探す前から歯が細かく鳴った経験があるはずです。深部体温は約37℃で、その熱を守るための反応が数秒単位で始まります。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！気温6℃の朝、指先はまだポケットに入れていたのに顎だけカクカクして、うまく話せなかったよ。手より顔が先に反応する順番って、言われてみれば確かに不思議だね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "冷たい空気に触れると、皮膚の温度センサーが脳へ信号を送ります。信号そのものは1秒より短い時間で届き、脳は手足の熱を抑えながら、内臓に近い中心部を約37℃へ保とうとするんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！顎の震えは寒いと感じた後の気分の問題ではなく、1秒もたたないうちに始まる体の連絡網なんだね。じゃあ顎は、どうして手より先に選ばれやすい場所なの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "顎には咬筋という、食べ物をかむための強い筋肉があります。専門用語ですが、耳の前を触って歯を軽くかむと硬くなる場所のことです。小さな動きでも繰り返せば、筋肉は熱を作り出せます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "咬筋って、せんべいをかむときに働くあの筋肉だよね？食べるための筋肉が寒いときには発熱にも使われるなら、同じ道具を別の仕事に回すようで、体はずいぶん効率がいいね。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、顎だけが特別な一番手と決まっているわけではありません。首、肩、胴体の筋肉では、見た目に震える前から電気的な活動が始まることがあり、顎の震えは私たちが気づきやすい合図の一つです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、見えない場所では先に準備していることもあるんだ！顎が最初に見えるから先頭だと思っていたけれど、舞台の前で動く人の後ろに、支える人が何人もいるような感じなんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "震え産熱という言葉があります。これは筋肉が短い収縮を何度も繰り返して、燃料のエネルギーを熱へ変える仕組みです。たとえるなら、スマホを長く使うと本体が少し温かくなるのと同じなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！体を大きく動かしていなくても、筋肉の中では小さなモーターが回り続けているんだね。歯が鳴るほどの細かい動きが、体にとっては暖房のスイッチみたいな役目なのか。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "体温調節をまとめる脳の場所は視床下部と呼ばれます。難しい名前ですが、要するに体の温度計と暖房のリモコンを兼ねる係です。皮膚の冷たさと血液の温度を比べながら、震えの強さを調整しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "視床下部がリモコン役なら、部屋の設定温度を下回ったときに暖房を入れるのに似ているね。でも人の体は家より複雑だから、手先を温める前に胴体を守るような順番も必要になるわけだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで大切なのは、震えが全身一斉の反応ではないことです。脳から筋肉へ送られる指令は、姿勢を保つ首や胴に近い筋でも働きやすく、寒さが続くほど肩、腕、脚へ目立つ震えが広がることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "体幹に近い場所から熱づくりが増えるなら、顎や首が先に小刻みになる日があるのも納得できるね。でも冷たい手のほうがつらいのに、なぜ体は手を最優先で温めてくれないんだろう？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。寒くなると手足の皮膚の血管は細くなり、温かい血が表面へ流れすぎないよう調整されます。中心の熱を守るため、体はまず熱が逃げやすい場所を節約するんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、手先が冷たいのは血が足りないからではなく、熱の節約だったんだ！財布の中身を全部使わず、まず家賃の分を残すように、体は脳や心臓の近くの熱を優先しているんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "手や足の先は胴体から遠く、表面積の割に熱を失いやすい場所です。気温5℃の風に手を出せば、指先の皮膚は短時間で冷えやすくなります。だから血流を絞り、必要になれば筋肉の震えで熱を補います。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "指先は家でいう玄関近くの部屋みたいなものなんだね。暖房が足りないとき、まずリビングを守って、廊下や玄関は後から温める感じだと考えると、寒い日の手と顎の差が分かりやすいよ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究で使われる表面筋電図は、皮膚に電極を貼って筋肉の電気活動を測る方法です。見た目には静かでも、首や胴の筋肉が小さく働き始めたことを捉えられます。顎の震えは、目に見える変化として気づきやすいのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "筋電図なら、震えが始まる前の準備まで見えるんだね！外から見える顎だけで順番を決めるより、体の中では何か所も同時に小さな電気が走っていると考えたほうが、本当の姿に近そうだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも強い震えでは、安静にしているときより熱を作る量が数倍へ増えることがあります。走るような大きな運動ではなくても、筋肉が細かく収縮を重ねるだけで、体は不足した熱をかなり補えるのです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "じっと立っているのに数倍も熱を作るなんて、へぇ〜、知らなかった！寒い駅のホームで歯が鳴るとき、体は休んでいるどころか、見えない小さな運動を何回も繰り返して働いているんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただ、震えが見え始めるまでの正確な秒数を、全員に共通する数字で言うことはできません。風速、湿った服、睡眠不足、空腹、体格で変わります。寒さを感じて数秒で始まる人もいれば、もっと時間がかかる人もいます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ気温10℃でも、雨の日と乾いた日で全然違う理由が分かった気がするよ。数字だけではなく、風や汗まで含めて体が判断しているなら、昨日は平気だった場所で今日だけ顎が震えることもあるんだね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "汗をかいたあとに急に震えやすくなるのは、水分が蒸発すると皮膚から熱が奪われるためです。濡れた手に風を当てると急に冷えるように、湿ったシャツは体から熱を運び出し、震え産熱の負担を増やします。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "運動のあと、止まった瞬間に寒くなるのはこれだったんだ！暖房をつけながら窓を開けているような状態なら、顎が震えても追いつきにくいよね。乾いた服に替える意味が、数字以上に実感できたよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "顎の震えで聞こえる音は、歯そのものが震えているのではありません。咬筋などが顎を細かく動かし、上下の歯が触れることで音になります。コップを小刻みに揺らすと縁が鳴るのに近い現象です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "歯が自分で震えているように感じても、周りの筋肉の動きだったんだね。だから話そうとすると声まで揺れやすいのか。口を動かす筋肉が暖房の役目もしていたら、言葉を作る作業にも影響が出るよね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "寒冷環境の研究では、震えに使う筋肉が一か所だけではなく、体の状況に合わせて変わることが示されています。首や胴に近い筋は姿勢を保ちながら働けるため、顎の震えの裏側でも熱づくりに参加していることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "見える顎は先に鳴るベルで、実際の暖房は首や胴も含めて動いているんだね。家の火災報知器ではなく、温度が下がったことを知らせるチャイムだと考えると、顎だけを悪者にしなくてよさそうだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、震え以外にも褐色脂肪が熱づくりに関わることです。褐色脂肪は、筋肉を大きく震わせずに燃料を熱へ変えやすい脂肪組織で、体内にある補助暖房のような働きをします。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "脂肪にも暖房の役があるんだ！白い脂肪だけを思い浮かべていたから驚いたよ。褐色脂肪が働くなら、顎が震える人とあまり震えない人の違いも、少しは説明できるのかな？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "褐色脂肪の働きには年齢や寒さへの慣れによる差があり、個人差も大きいと考えられます。ただし顎が先に震える順番を、褐色脂肪だけで説明することはできません。ここは科学でもまだ結論が出ていない部分です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "全部を一つの理由で決められないんだね。でもそれなら、顎が震えない人が変なわけでも、すぐ震える人が弱いわけでもないと分かるよ。体ごとに暖房の入れ方が少し違うだけなんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "室温20℃でも薄着で長く座れば震えることがありますし、気温5℃でも歩いて厚着をしていれば震えないことがあります。体が見るのは温度計の数字一つではなく、風、湿度、運動量、服のすき間を合わせた熱の出入りです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "コンビニの冷凍食品コーナーで急に顎が震えそうになる日があるのも、そのせいなんだね。外が12℃でも、薄い服で立ち止まり、冷気が首へ入れば、体にはもっと低い温度のように感じられるんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔から歯が鳴る様子は、寒さを表す身近な言葉として使われてきました。けれど現代の生理学で見ると、それは体が壊れた音ではなく、筋肉を使って熱を保とうとする調節反応として理解できます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！昔の人も歯が鳴ることを何度も見ていたから言葉になったんだね。今ならそこに、37℃を守る脳と筋肉の協力があると分かるから、同じ現象でも見え方が変わるよ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "顎が震えたとき、歯を強くかみしめ続けて止めようとするのは避けたほうがよいです。数分間も強く力を入れ続けると、顎関節や歯に余分な負担がかかることがあります。体全体を温める方法を選びましょう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "震えを止めたくて歯をぎゅっとかむこと、ついやりがちだよ。顎だけに仕事を押しつけるより、上着を足して首元を守るほうが、家の暖房を一部屋だけではなく全体で助ける方法になるんだね。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "首元を覆う工夫は、寒い日に特に役立ちます。首には太い血管が通り、冷たい風が当たり続けると体感温度が下がりやすくなります。マフラーは家のドアのすき間をふさぐように、熱を逃がしにくくします。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "手にカイロを握る前に、コートの前を閉じて首を覆うのも大切なんだね。駅まで3分しか歩かない日でも、風がある朝なら顎の震えが始まる前に、すき間を減らすだけで違いが出そうだよ。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "温かい飲み物も、冷えたあとには役立つことがあります。ただし熱い飲み物を急いで流し込むより、温かい場所で少しずつ飲み、乾いた衣類へ替え、外からの冷気を減らすことが、震え産熱の負担を下げる近道です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "マグカップを両手で持つだけでも、指が少し楽になることがあるよね。飲み物だけに頼るのではなく、風、濡れた服、首元という3つをまとめて整えると、体の暖房が働きやすくなるんだ。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ところが、温かい室内に入っても震えが長く続く、意識がぼんやりする、言葉が出にくいといった場合は、単なる冷えと決めつけないでください。低体温など別の状態もありうるため、周囲へ助けを求めることが大切です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "寒さで震えるのは体の守る反応でも、我慢を続ける合図ではないんだね。温かい場所へ移動する、濡れた服を替える、ひとりで耐えないという順番を、冬の外出前に覚えておきたいよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "寒い日に顎が先に震えたら、体幹に近い筋を含めて熱づくりが始まったサインかもしれません。気温だけでなく、風が強いか、汗をかいたか、首元にすき間があるかを30秒ほど立ち止まって確認してみてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "30秒見るだけなら、家を出た直後でもできそうだね。顎が震える、手が冷たい、シャツが湿っているという3つを確かめれば、ただ寒いと思うだけより、上着やマフラーを使う判断が早くなりそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "手先の冷えを感じたら、腕を大きく回すより先に、胴体の熱を逃がさない工夫をしてみてください。上着の前を閉じ、首を覆い、風を避けるだけでも、中心部で作った熱を全身へ分けやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、バケツに水を足す前に底の穴をふさぐのと同じだね。カイロで熱を足すことも役立つけれど、コートのすき間から熱が逃げ続けたら、顎の小さな暖房も追いつきにくいんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の答えは、顎の震えが手より先に目立つことがあるのは、寒さへの熱づくりが顎、首、胴に近い筋にも早く表れやすいからです。ただし体内では複数の筋が動くため、見える順番には個人差があります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "顎が先に震えたら、体が中心の37℃を守ろうとしている途中かもしれないんだね。今夜の帰り道では、手だけを見るのではなく、顎、首、服の湿り方まで少し意識してみるよ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなる現象を、約0.5秒の筋肉反応から見ていきます。布団に入ってスマホを置いたあと、あなたの体が眠りへ切り替わる小さな合図にも注目してみてください。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "体の謎シリーズは、昨日や今日に体験した違和感を見直せるのが面白いね。顎の震えも寝落ち前のビクッも、体が言葉なしで出しているサインだと思うと、毎日の感覚が少し変わりそうだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話が面白かったら、まず高評価で教えてください。身近な不思議を毎日1本ずつ一緒にほどく体の謎シリーズで、チャンネル登録者1万人を目指しているので、明日も見たいと思ったらチャンネル登録で応援よろしくお願いします。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "顎が先？",
+      "3秒の差"
+    ],
+    "hook_caption": "顎が先",
+    "subtitle": "手より先に震える順番",
+    "tagline": "体幹を温める体の作戦"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "顎の震えを今日から意識してみて。体の謎シリーズも、高評価とチャンネル登録で1万人",
+          "reason": "1行51字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.529,
+      "similar_to": "なぜ座ると腰だけ痛い？圧力1.4倍",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 33,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ寒さで顎が先に震える？3秒の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

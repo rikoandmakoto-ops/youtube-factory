@@ -1,0 +1,674 @@
+{
+  "title": "ワイの財布から毎月消える謎の正体が判明したｗ",
+  "theme": {
+    "title": "ワイの財布から毎月金が消える正体がわかった",
+    "angle": "スレタイ型を維持しつつ『正体』と数字を入れる。サブスク放置のあるある"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "えっ、お前らの980円どこに消えてるんや？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 明細に同じ980円が3か月おるんかw",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "無料7日だけ見た動画の会費らしい草。",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "裏では地獄だったってオチｗ。",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり放置サブスクが正体やったんや",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイの身に起きたしょうもない放送事故レベルの事件シリーズ、草生えたら高評価なw これ面白かったら共有してくれw 再生数で生活してるんだわw。…ちょ待て、>>1に戻ってみろ",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、使った覚えがないのに毎月3,980円ずつ財布から消えたことありませんか？犯人のヒントは、解約画面を探すほど忘れていたサブスクです。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "スレタイは「ワイの財布から毎月金が消える正体がわかった」。今回は、気づけば年4万7,760円を吸う犯人をスレ民と暴いていくぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "投稿者は節約のため弁当まで作っていたのに、通帳には毎月同じ日に謎の引き落とし。コンビニおにぎり約22個分が静かに消えていたんです。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "正体は動画、音楽、写真保存の無料体験から放置した契約だった。登録時は0円でも、終了翌日から自動課金へ反転する仕組みが恐ろしい。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで驚きの一撃、投稿者が確認しただけで月額980円の契約が4本。たった数分の見直しで、年間46,080円が戻る計算になりました。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかもスレでは「一度も開いてないアプリが最大の出費だった」と告白が続出。あなたの明細に潜む正体、何円くらいありそうかコメントで当ててくれ。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実は月980円の放置サブスクでも、3年で3万5280円消える。コンビニ飯より静かに財布を削る犯人だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "仕組みは単純で、無料体験の終了後に自動更新されるだけ。契約した記憶が薄いほど、明細では正体不明になりやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "サブスクは定額サービスの略で、動画や音楽を毎月払って使う方式。月額が小さいから、家計簿でも見落としやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "たとえば月500円なら一日約17円。駄菓子一個より軽く見えるのに、年額では6000円になって財布から消えていく。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも請求名が配信サービス名ではなく、運営会社名の場合もある。見覚えのない英字を不正利用と勘違いする人も出る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "最強に怖いのは、使っていない契約ほど解約画面を開かない点だ。視聴ゼロでも、更新日になれば料金だけは普通に引かれる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "確認はカード明細を月ごとに並べ、同じ金額を探すのが早い。毎月8日や15日に出る請求は、定期課金の候補になりやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただし家族の契約やアプリ内課金も混ざるから、即停止は危険。請求名を検索して、登録メールも先に見直すのが安全だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ワイの財布を毎月抜いていたのは泥棒ではなく、忘れられた980円だった。みんなは何個放置サブスク、心当たりある？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "調査では、使っていない定額サービスを放置する人は約42％。月980円でも一年で1万1760円、財布の穴は小さく見えて地味に深い。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかもサブスクの正体は、値上げ通知を見逃す仕組み。月額が100円上がっても少額すぎて、解約より放置を選びやすいらしい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "家計簿アプリ利用者の分析では、定期支払いの平均件数はおよそ8件。動画、音楽、ゲーム、クラウドで財布は毎月フル出勤する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "代表例は無料体験だな。30日後に自動課金へ切り替わる形式は、登録時のワクワクに比べて解約日の記憶が驚くほど薄い。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、消えていた金の半分以上が一社ではなく、月500円前後の小粒課金だったという家計調査もある。犯人は集団だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "行動経済学ではこれを現状維持バイアスと呼ぶ。変更する手間を嫌う心理で、見ないサービスも解約ボタンまで進めなくなる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ある実験では、解約手順を一画面増やすだけで継続率が上がった。財布から抜く側は、面倒が一秒増える価値を知っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "通知メールを受け取っても、開封しなければ記憶に残りにくい。人は固定費を家賃の仲間として扱い、細かい請求を見落としがちだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "対策は明細を月一回、金額順ではなく契約日順で見ること。三か月使っていない項目なら、次の更新日前に候補へ入れられる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイの財布から消えた金、犯人は幽霊じゃなく便利さの残骸だった。お前らなら月いくらまでなら忘れてても許せる？コメントであげてけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "スレ主は通帳を3年分さかのぼり、毎月980円から1980円が静かに消える怪現象を発見した。犯人は泥棒でなく、解約し忘れたサブスク12本だった。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "最初の手掛かりは、2019年に無料体験で入った動画サービスの請求名義。略称すぎて何の会社か分からず、主は銀行明細を探偵みたいに照合し始めた。",
+      "expression": "thinking",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "サブスクとは定額でサービスを使う仕組みのこと。月額500円でも、忘れたまま36か月払えば1万8000円となり、財布の穴はじわじわ深くなる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも主が最も驚いたのは、使った記憶ゼロの音楽アプリより、月額330円の容量追加だった。小額すぎて警戒心をすり抜ける、地味に強い犯人である。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、消えた総額は月に約8700円、年間では10万4400円。ランチ一回分と思って放置した課金が、いつの間にか旅行代を食っていた。",
+      "expression": "shocked",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "定額課金が広まった背景には、2000年代後半のスマホ普及がある。アプリを一度入れれば支払いが自動化され、便利さと忘却が同じボタンに同居した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "海外では新聞やソフトも月額制へ移り、日本でも動画、ゲーム、クラウドへ拡大した。主の父世代が新聞代を払う感覚で、今は通知なしの課金が増える。",
+      "expression": "thinking",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "研究でも、人は少額の継続支出を一回払いより軽く見積もりやすいとされる。980円は安く見えるのに、12回並ぶと11760円という別人の顔になる。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "主は明細の謎を解いたが、最後に残った月額120円だけは正体不明だった。ユイなら真っ先に疑う放置サブスク、コメント欄であげてけ。",
+      "expression": "smile",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの正体は、月980円の動画サブスクを3本放置しただけで年3万5280円。財布の穴は小銭じゃなく自動更新だった。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも定額課金は、使った実感が薄いほど解約を後回しにしやすい。毎月の引き落としは静かでも、12か月で急にボス化する。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "サブスクとは、一定額を払う間だけサービスを使える仕組み。たとえば月500円でも、5年続けば合計3万円に届く。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "無料体験の罠は、登録日ではなく更新日を忘れることだ。7日間だけのつもりが、8日目に年額請求という反転もあり得る。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで一撃、使っていない契約ほど解約しづらいのは「いつか使う」が残るから。財布から消える犯人、記憶まで消していた。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "カード明細では、サービス名が運営会社名で表示される場合もある。見覚えのない英字を不正利用と決めつける前に検索が必要だ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "家族共有の動画配信も盲点で、本人が見ていなくても誰かが使うと解約しにくい。月額の犯人が別室で笑っているかも。",
+      "expression": "angry",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "支払いを年額にすると安く見えるが、忘れた頃に大きく落ちる。月払いより痛みを感じにくいぶん、放置の発見は遅れがちだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "対策は明細を月1回、同じ日付で確認すること。固定費を一覧にすると、月300円の幽霊契約まで意外と見つかる。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイの財布から消えた金、みんななら最初に疑うのは動画、音楽、ゲーム、それとも謎の月額980円？コメントで犯人をあげてけ。",
+      "expression": "smile",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実践はまず、銀行アプリで直近30日を金額順に並べるだけ。月980円でも年1万1760円、財布の穴は小銭ではなく固定費の行列だったと見えるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転、犯人は高額課金より「無料体験の終了日」かもしれん。7日後を忘れた動画サービスが、気付かぬまま毎月の家賃顔をして居座るぞ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "明細の検索欄に、APPLE、GOOGLE、AMAZON、CARDと入れてみて。加盟店名が略称なら、見覚えのない月額課金も芋づる式に正体を出すよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "見つけたら即解約ではなく、最後に使った日をメモするのがおすすめ。30日触っていない月額サービスは、来月も使う確率を自分で問い直せる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "残すサービスには更新日の3日前に通知を置こう。カレンダーの通知は財布の防犯ブザーで、忘却という最強の課金ボタンを先回りで止められるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "年間払いへ飛び付く前に、月額×12と年額を紙に書け。年額が得でも途中で飽きれば逆転するから、継続予定を90日単位で考えるのが安全だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "家族カードや古い端末も確認してね。自分が消したアプリでも別端末の契約は残ることがあり、解約したつもりの月980円が静かに復活する場合がある。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "どうしても迷うなら、解約候補を一度だけ停止して生活を観察しよう。不便なら再開できるし、困らなければその月額は財布から退場でええ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "みんなは明細を見て、最初に出てきた謎の月額はいくらだった？　ワイの財布から毎月金が消える正体、コメント欄でいちばん笑える犯人をあげてけ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "結局、毎月財布から消えていた金の正体は、使っていないサブスク3本だったよ。合計2980円でも年なら3万5760円、地味に痛い出費だったね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きなのは、契約した瞬間より忘れた翌月からが本番なことだぜ。1日約98円と思えば軽く見えるのに、12か月で財布へ静かに効いてくる。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "スレ民も「無料体験の最終日を忘れた」「動画を一度しか見てない」と続々自白。便利さを買ったはずが、解約しない習慣に払っていたんだね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも犯人は派手な浪費じゃなく、明細に紛れる数百円級。コンビニ1回分の額だから警戒を抜け、気づけば古参会員みたいに居座るぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回は「ワイの部屋、片付けても3日で散らかる原因当てるスレ」を解説するよ。犯人候補は物ではなく、帰宅後のたった10分に潜んでいた！？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回も、くだらないのに全員が参加したくなる2ch風の回答合戦をまとめるぜ。お前らなら散らかる部屋の真犯人を、何だと書き込む？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "財布の怪盗に心当たりがあったら高評価、明細を今夜見るなら登録してね。コメントで、放置していた月額料金と気づいた瞬間をあげてけ！",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "毎月980円",
+      "犯人は誰"
+    ],
+    "hook_caption": "980円の正体",
+    "subtitle": "財布から勝手に消える金",
+    "tagline": "無料の罠やったw"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "毎月980円を消す犯人あげてけw",
+      "selected_hook": "えっ、お前らの980円どこに消えてるんや？",
+      "scores": [
+        {
+          "hook": "えっ、お前らの980円どこに消えてるんや？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 50
+        },
+        {
+          "hook": "マジか、君の放置サブスクまだ生きてる説w",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 35
+        },
+        {
+          "hook": "毎月980円を消す犯人あげてけw",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 10,
+            "loop_connect": 5
+          },
+          "total": 30
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        3
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "えっ、お前らの980円どこに消えてるんや？",
+          "tension": 5,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ 明細に同じ980円が3か月おるんかw",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "無料7日だけ見た動画の会費らしい草",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "3か月で2940円、昼飯3回が消えたやろw",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "つまり放置サブスクが正体やったんや",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "お前らの犯人も書いてけw 高評価してチャンネル登録、毎日投稿中で1万人目標やから応援よろしくやでw",
+          "tension": 3,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "share",
+      "style_label": "共有",
+      "original_cta": "お前らの犯人も書いてけw 高評価してチャンネル登録、毎日投稿中で1万人目標やから応援よろしくやでw",
+      "new_cta": "ワイの身に起きたしょうもない事件シリーズ、草生えたら高評価なw これ面白かったら共有してくれw 再生数で生活してるんだわw"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "ワイの身に起きたしょうもない事件シリーズ、草生えたら高評価なw これ面白かったら",
+          "reason": "1行61字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 29,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 5,
+        "relatability": 4,
+        "shareability": 11,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 74,
+      "optimized_score": 74,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.96,
+      "issues": [
+        "50%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": " 再生数で生活してるんだわw。…ちょ待て、>>1に戻ってみろ",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「事件」→「放送事故レベルの事件」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.503,
+      "similar_to": "ワイ、推し寿司歴3年やけど質問ある？w",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 34,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "ワイの毎月980円が消える正体w",
+      "enhanced_title": "ワイの毎月980円が消える正体w💦",
+      "emoji_added": "💦",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "ワイの毎月980円が消える正体w💦"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 3,
+      "bait_text": "これ男が悪い派と女が悪い派でコメ欄割れそうｗｗｗ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "positive",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "statement",
+        "laugh",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "この手の良スレ見つけてくるの得意なんよｗ",
+      "position": 3,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 0,
+      "amplified": 0,
+      "frame_injected": true,
+      "contrast_score": 0.5
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['正体'](+12)",
+      "短すぎ(17字 < 18)(-12)"
+    ]
+  },
+  "original_title": "ワイの毎月980円が消える正体w💦",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "ワイの毎月980円が消える正体w💦"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

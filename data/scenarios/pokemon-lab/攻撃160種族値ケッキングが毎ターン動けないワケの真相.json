@@ -1,0 +1,570 @@
+{
+  "title": "攻撃160・種族値ケッキングが毎ターン動けないワケの真相",
+  "theme": {
+    "title": "ケッキングの特性が長所を打ち消す設計思想",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "このポケモンのモデル、実は怠け者だけじゃないんだよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 種族値670で伝説級より高いのに、なまけ持ち!",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ケッキングは攻撃160、合計670で。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "攻撃160なら、毎ターン動けたら対戦の盤面が一気に壊れる強さじゃん。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかもなまけは行動を半分にする代償で、強さを残す設計なんだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "種族値のウソホントシリーズ、え、マジで？なら高評価！チャンネル登録で1万人目標の毎日投稿も応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "実はケッキング、合計種族値670なのに、基本は2ターンに1回しか技を選べないんだよ！ あなたも攻撃160を見て、これ毎ターン動いたら終わるだろって思ったことあるでしょ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 670ってカイリューやバンギラスの600より70高い数字じゃん。伝説級の能力表を見せてから休ませるなんて、最初からツッコミ待ちのポケモンすぎる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "先に答えの輪郭を出すと、なまけはケッキングをただ弱くする罰じゃないんだ。攻撃160とHP150を普通の進化ポケモンとして成立させる、巨大なブレーキに見えるんだよ！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ、その設計！ 能力を10ずつ下げるんじゃなくて、行動回数を半分へ切るって、ゲームのルールそのものを使って強さを調整してるじゃん。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今日はケッキングの長所が、なぜ自分の特性で止められているのかを追うよ。図鑑の怠け者設定、第三世代の特性システム、対戦の1ターンを順番に重ねると見えてくる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ソラは旅で見かけると「進化したナマケロだ！」で終わってたけど、攻撃160の意味を知ると話が変わるな。休み時間まで計算に入るポケモンって何なんだよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "まず種族値は、HPや攻撃など6項目の生まれつきの目安だよ。ケッキングはHP150、攻撃160、防御100、特攻95、特防65、素早さ100で、合計が670になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "HP150と攻撃160を同時に持って、素早さ100まであるの!? 一撃が重いだけじゃなく、先に動ける相手も多いから、普通のパワー型よりずっと危険な数字に見えるぞ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "攻撃160は、物理技で与えるダメージに強く関わる数値だよ。攻撃種族値だけなら、一般的な最終進化の100前後を大きく超えていて、60差は見た目以上に重い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "60差って、学校のテストで100点の人へさらに60点分の補正を乗せるような感覚か。しかもケッキングはノーマル技だけじゃなく、いろんな物理技を覚えられるのが困る！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "HP150もかなり極端で、相手の攻撃を1発受けて返す動きと相性がいいんだ。紙のように倒れる火力役ではなく、殴られても残りやすいから攻撃160が現実に届きやすい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "火力だけなら先に倒せばいいけど、HP150なら失敗しても次があるのか！ それで素早さ100もあるなら、毎ターン行動できる設定だったら本当に対戦が大荒れになりそう。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ 合計670は、メガシンカや一部の特殊フォルムを除けば通常ポケモンでも最高クラスだよ。600族より70上という位置は、最初から特別扱いだと数字だけで伝わる。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "600族って、合計600を持つ強力な最終進化の呼び名だよね。そこより70高いなら、ケッキングだけ能力表のページを1段飛ばしてきたみたいで、え、マジで？だよ！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "でもケッキングには特性「なまけ」がある。特性はポケモンごとの固有ルールみたいなものだよ。なまけは技を使った次のターン、原則として技を選べなくしてしまうんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "攻撃160で相手を吹き飛ばした次に、必ず休みが来るのか！ 1回の派手なパンチと引き換えに、次の操作権を丸ごと相手へ渡すなら、数字だけでは勝てないわけだな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ところが、この2ターンに1回という制限が第二フックなんだよ。なまけはダメージを半分にするのではなく、相手に「次は安全」と読ませるから、戦い方そのものを変えてしまう。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ただ弱くなるより厄介な制限だな！ 相手は休むターンに交代も回復も強化も選べるから、ケッキング側は攻撃ボタンを押した瞬間から次の不利まで予約してることになる。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ポケモンの対戦は1ターンずつ行動を選ぶゲームだよ。ケッキングが休む1ターンは、相手に追加の1手を渡すのと近い。強い技を撃つほど、その後の予定が読まれやすくなる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ゲームで超必殺技を撃ったあと、次の1ターンだけコントローラーを相手へ貸す感じか。攻撃160の爽快感はあるのに、使う人ほど次の手を考えないといけないんだな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "相手の交代は、不利なポケモンを引っ込めて有利な味方を出す行動だよ。なまけの休みが分かっていれば、相手はケッキングへ強い受け役を安全に置きやすくなる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "攻撃を受けた直後なら普通は引っ込めにくいのに、ケッキング相手だけ次のターンが読めるのか。高い能力を持つのに、相手へ作戦会議の時間まであげちゃうのは痛いぞ！",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "回復技も同じで、休みターンにHPを戻されると、せっかく攻撃160で削った意味が薄くなりやすい。だからケッキングは「大ダメージを出せる」だけで勝ち切れるポケモンではない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "一撃で倒せなかったときの反動が、ほかのアタッカーより大きいわけだな。HPを半分以上削っても、次に回復されたら、攻撃160の圧力が1回分リセットされることもあるのか。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "それでも攻撃160は本物だから、相手を一撃で倒せる場面では話が変わるよ。休みターンに相手が新しいポケモンを出してくるなら、盤面の情報を読み直す時間にもできるんだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "なるほど、倒し切れれば反撃されないし、次に出た相手を見てから交代もできるんだな。休みは弱点だけど、相手の手札を見せてもらうターンにもなるのが面白い！",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式図鑑ではケッキングは、ほとんど寝そべって暮らすポケモンとして書かれている。手の届く場所に食べ物がなくなると、しぶしぶ移動するという怠け者ぶりまで一貫している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "バトルの都合だけで止まるんじゃなく、図鑑の生活そのものが「なまけ」なんだな！ 食べ物が届かなければ動くって、攻撃160の巨体なのに日常は省エネすぎる。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "進化前のナマケロも、1日20時間寝そべっているという図鑑テキストがあるよ。20時間という数字を出されると、ケッキング一族が戦闘だけ急に怠ける設定ではないと分かる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "24時間のうち20時間って、起きているのは4時間だけじゃん！ その4時間に攻撃160のパワーを凝縮していると思うと、休みが欠点というより生き方の再現に見えてきた。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "進化の流れも変で、ナマケロはなまけ、ヤルキモノはやるき、ケッキングは再びなまけを持つんだ。真ん中の段階だけ止まらず動くので、進化したら常に強化ではないと分かる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って、途中だけ特性が逆なの!? ヤルキモノは進化前なのに素早さ90で動き続け、ケッキングは最終進化で670を得る代わりに止まる。選択の色が濃い進化ラインだな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "やるきは眠り状態にならない特性だよ。眠らせる技が効きにくいぶん、ヤルキモノは止めにくい。ケッキングのなまけとは正反対の「動き続ける個性」を、公式が中間進化へ置いている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "進化先の数字が大きいからケッキング一択、とは言い切れないんだな。ヤルキモノは毎ターン動ける安定感、ケッキングは1発の爆発力で、遊び方まで変わるわけか！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここは分けて覚えよう。図鑑にある怠け者の生態となまけ特性は公式の情報、670を抑えるための設計という読み方は、能力値とルールから考える分析なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "公式設定と考察を混ぜないの、大事だな！ 「バランスのため」と公式が断言したわけではないけど、160と670を見て特性を並べたら、そう読める根拠はかなり強いぞ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これはファンの説なんだけど、ケッキングは「もし毎ターン動けたら」という夢を能力表で見せるポケモンだ、と言われることがある。公式断定ではないが、数字の異常さを説明しやすい見方だ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "その説なら、初見で攻撃160に叫んで、次に特性なまけでまた叫ぶ流れまで狙い通りに見えるな。プレイヤーの期待とツッコミを、進化1匹で往復させる設計じゃん！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そして意外なのが、なまけ中でも交代自体はできることだよ。休みターンにケッキングを引っ込めれば、次に場へ出したときは、また技を選べる状態から始められる。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、休みは完全停止じゃないの!? それなら攻撃したあと、危ない相手が出てきたら味方へつなげるんだな。2ターンに1回の弱点を、チーム全体で回せるわけか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "この交代可能という一点で、なまけは単純な半減ペナルティではなくなる。攻撃したら絶対に置物ではなく、相手が休みを利用する前に、こちらも盤面を動かせるからだよ。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "相手も「休むからチャンス」と思っているのに、ケッキング側は引いて次の勝負を作れるのか。火力役なのに、交代のタイミングがめちゃくちゃ重要な読み合い役でもあるな！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第三世代でケッキングが登場したころ、特性はポケモンの個性を戦闘へ直結させる新しい要素だった。なまけはその中でも、能力値670を丸ごと別の使い心地へ変えた代表例に見える。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "数字を少し下げるだけなら普通だけど、特性で1ターンの価値を変えるのは大胆すぎる！ 第三世代の新要素を使って、強すぎる能力表をそのまま見せたかったのかもな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "特性を入れ替える効果や味方の補助が使えるルールでは、ケッキングの名前が急に注目されることがある。止めている栓が外れれば、HP150と攻撃160が毎ターン働くからだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ、毎ターン動く670族って！ だから特性を変える戦法が話題になると、ケッキングが真っ先に思い浮かぶんだな。休みが大きいほど、外れた時の差も大きい。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし使える技、特性の処理、対戦ルールは作品や形式で変わるよ。実際に組むときは、その作品の公式ルールで確認しよう。ケッキングは条件1つで評価が大きく動くポケモンだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じ攻撃160でも、遊ぶ世代やルールで使い方が変わるなら、数字だけの最強ランキングでは測れないな。だからこそ特性まで見て初めて、ケッキングの実態が見えるわけだ！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "旅で使うなら、相手を一撃で倒せる場面へ出すのが分かりやすいよ。HP150のおかげで1発受けてから返しやすく、ボス戦で「この1匹を落とす」役に絞ると輝きやすい。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "連戦なら倒した直後の休みで、次に出たポケモンを見られるのも悪くないな。ポケモンを6匹連れて歩く旅だからこそ、休みを交代の合図として使う発想ができるんだ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "初心者向けに、タイプ相性は技が効きやすいかどうかのルールだよ。ケッキングはノーマルタイプなので、ノーマル技がゴーストタイプへ当たらない点は、攻撃160でも絶対に忘れられない。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "攻撃160でも、当たらなければダメージは0だもんな！ しかも攻撃後には休みが来るなら、相手のタイプ確認をサボった1回が、ケッキングでは普通より重いミスになりそう。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "対戦では相手の守る技にも注意したい。守るはそのターンの攻撃を防ぐ技だよ。ケッキングの攻撃ターンを防がれると、次の休みで相手が有利な準備をしやすくなる。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "せっかくの攻撃160を0ダメージにされて、次はこっちが休むのか！ これは相手の守るを読めたときに交代するだけでも、ケッキングを使う側の差が出そうだな。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "逆にケッキングと戦う側は、相手が技を使った次のターンを数えるだけで作戦が立てやすいよ。回復、交代、強化のどれを通すか考えると、なまけの重さが実感できる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "知ってた？ ケッキング対策は、攻撃を受けた直後に慌てて殴り返すことだけじゃないんだ。次の休みを1ターンのボーナスとして使うと、盤面をひっくり返せるかもしれない！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ケッキングの真相は、670という長所を消しているのではなく、長所が強すぎるから毎ターン使えない形へ変えているところにある。数字と個性を両立させる、かなり珍しいデザインなんだよ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "弱点があるから残念なんじゃなくて、弱点があるから攻撃160が許されるように見えるんだな。1回の行動に全部を乗せるから、毎ターンより印象に残るポケモンになってる！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回はミミッキュの「ばけのかわ」が、なぜ1回で剥がれるのかも追うよ。たった1回の耐久が、対戦の最初のターンをどれだけ変えるのか、数字と公式設定で見よう！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ケッキングの2ターンに1回と同じで、1回だけの制限にもゲームを面白くする理由がありそうだな。次に遊ぶとき、弱点をただの欠点と思わなくなりそう！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "え、マジで？ってなったら高評価を押してね！ 種族値のウソホントシリーズは、数字の裏にある個性を毎回掘るから、チャンネル登録で1万人目標の毎日投稿も応援よろしく！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "攻撃160が休む意味を知ったら、ケッキングを見るたび次の1ターンを数えたくなるはずだ。次にバトルで出会ったら、670族の代償を利用できるか試してみよう！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "670族なのに",
+      "毎秒休む"
+    ],
+    "hook_caption": "670族の代償",
+    "subtitle": "最強能力を止める特性",
+    "tagline": "なまけは弱点ではなく設計だった"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "種族値のウソホントシリーズ、え、マジで？なら高評価！チャンネル登録で1万人目標の",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 24,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 7,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 3
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.547,
+      "similar_to": "ヌケニンのHP1、君は弱いと思う？",
+      "template_issues": [
+        "直近10本中3本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 33,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "enhanced_title": "ケッキング670族の真相 なまけがある理由"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    }
+  },
+  "original_title": "ケッキング670族の真相 なまけがある理由",
+  "title_duplicate": {
+    "resolved": true,
+    "rejected_title": "ケッキング670族の真相 なまけがある理由",
+    "matched": "1分ポケモン研究 #19：🕵️ケッキングに隠された2ターンの秘密、種族値670なのになぜ使えない？",
+    "score": 0.971
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['理由'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "ケッキングの攻撃160が毎ターン許されない理由"
+  }
+}
