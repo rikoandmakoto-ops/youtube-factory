@@ -131,6 +131,28 @@
       "status": "skipped",
       "note": "尺 5s が範囲外",
       "seen_at": "2026-09-05T20:47:31"
+    },
+    "reddit:1wbe1hu": {
+      "post_id": "1wbe1hu",
+      "platform": "reddit",
+      "title": "untouchable 🤣",
+      "media_url": "https://v.redd.it/mum0ahy9zfoh1/HLSPlaylist.m3u8",
+      "permalink": "https://www.reddit.com/r/funny/comments/1wbe1hu/untouchable/",
+      "community": "r/funny",
+      "author": "WashURmouthWithSoap",
+      "score": 0,
+      "num_comments": 0,
+      "created_utc": 0.0,
+      "duration_sec": 0.0,
+      "over_18": false,
+      "nsfw_verified": false,
+      "origin": "reddit_rss:funny:w2",
+      "local_path": null,
+      "gate_ok": true,
+      "gate_reason": "内容ゲート通過（NSFWフラグなし・禁止語なし）",
+      "status": "skipped",
+      "note": "尺を取得できない: SSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020\n  warnings.warn(\nDeprecated Feature: Support for Python ",
+      "seen_at": "2026-09-09T20:56:36"
     }
   }
 }
