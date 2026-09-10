@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-10",
+  "generated_by": "youtube-orchestrator (Cowork)",
+  "data_source": {
+    "success_patterns": "data/analytics/success_patterns.json (generated_at 2026-09-09)",
+    "retention_insights": "data/analytics/retention_insights.json (generated_at 2026-09-09)",
+    "note": "本ランのLinuxサンドボックスが起動失敗したため、YouTube Data API による新規フェッチ・analytics.db への書き込み・バックエンドAPIへの制作指示は実行できていない。分析は 2026-09-09 生成のスナップショットに基づく。"
+  },
+  "config_layout": {
+    "finding": "data/channels_orchestrator/<channel_id>.json は 2026-09-01 以降 data/channels/<channel_id>.json へのシンボリックリンクである（旧実体は data/channels_orchestrator_pre_symlink_20260901/ に保存されている）。SKILL.md は『指揮者用』と『バックエンド用』を別物として記述しているが、実体は同一ファイルであり二重書き込みは不要。",
+    "implication": "本ランの全コンフィグ更新は data/channels/*.json への編集として実施済みで、channels_orchestrator 側にも同時に反映されている。チャンネル別の指揮者メタ情報は _analysis_20260910.json に集約した。"
+  },
+  "managed_channels": [
+    "daily-science",
+    "scp-lab",
+    "2ch-matome",
+    "pokemon-lab",
+    "yokai-watch",
+    "company-facts"
+  ],
+  "skipped_channels": {
+    "clip-lab": "凍結中",
+    "akashic-librarian": "台本ユーザー作成・OAuth未連携",
+    "fake-paper": "指揮対象8chの一覧に含まれないため対象外（others 維持率 12.08% で全ch最低。運用再開時は最優先で構造見直しが必要）",
+    "socio-rx": "指揮対象外",
+    "clip-animal": "指揮対象外",
+    "clip-fukada": "指揮対象外",
+    "clip-kaneko": "指揮対象外"
+  },
+  "headline_findings": [
+    {
+      "id": "F1-retention-cliff-is-terminology",
+      "severity": "high",
+      "claim": "維持率の崖は冒頭3秒ではなく再生位置12〜25%（earlyバケット）にあり、崖の発生行は例外なく『専門用語に名前を付ける行』である。",
+      "evidence": "aggregate_drops_by_bucket で曲線取得済み5ch全てが early > intro（daily-science 0.0235 vs 0.0101 / fake-paper 0.0272 vs 0.0122 / akashic-librarian 0.0238 vs 0.0169 / clip-lab 0.0216 vs 0.0168 / clip-kaneko 0.0295 vs 0.0047）。行照合: 『これは順応といって』4.4% / 『検出の閾値、つまり』6.2% / 『紡錘状顔領域』4.2% / 『専門的には予測歩行と呼びますが』7.3% / 『これはハロー効果と呼ばれる』8.2% / 『内集団化と呼ぶ』10.7%。",
+      "supersedes": "2026-09-05『崖は5%→10%』（撤回はしない。冒頭対策は維持し、その上に重ねる）",
+      "action": "moviepy6ch全ての style_rules に『学術名を再生位置40%より前に出さない／1本1個まで／描写→命名の順』を追加した。",
+      "review_on": "2026-09-17"
+    },
+    {
+      "id": "F2-ctr-is-the-only-consistent-separator",
+      "severity": "high",
+      "claim": "success/others を一貫して分けているのは CTR と維持率であり、再生数ではない。再生数は6ch中3ch（pokemon-lab / yokai-watch / company-facts）で success < others と逆転している。",
+      "evidence": "CTR倍率: pokemon-lab 8.5倍(5.88/0.69) > scp-lab 3.2倍(1.36/0.42) > company-facts 2.2倍(4.80/2.16) > yokai-watch 2.1倍(2.44/1.17) > 2ch-matome 1.8倍(3.55/1.93) > daily-science 1.5倍(0.54/0.35)。6ch全てで同方向。",
+      "action": "サムネ品質改善を全ch共通の最優先レバーとして維持。特に pokemon-lab はタイトル特徴が success/others で同一（長さ48.5/46.1・疑問形0.75/0.73・数字0.75/0.65）なため、差は完全にサムネ側にある。"
+    },
+    {
+      "id": "F3-global-number-rule-harmful-on-two-channels",
+      "severity": "medium",
+      "claim": "全ch共通要件『全タイトルに数字＋単位を1つ入れる』は 2ch-matome と yokai-watch では逆効果である。",
+      "evidence": "数字率 success vs others: 2ch-matome 0.17 vs 0.73 / yokai-watch 0.17 vs 0.40。逆に scp-lab 0.85 vs 0.88、company-facts 1.00 vs 0.97 は差がなく飽和済み。数字が正に効いている ch は今回のコホートには無い。",
+      "action": "2ch-matome と yokai-watch の title_style で当該要件を適用除外にした。scp-lab / company-facts は『入れることを目標にしない（飽和済み）』へ格下げ。"
+    },
+    {
+      "id": "F4-question-form-negative-on-scp-lab",
+      "severity": "medium",
+      "claim": "scp-lab と 2ch-matome では疑問形が負。",
+      "evidence": "疑問形率 success vs others: scp-lab 0.15 vs 0.35 / 2ch-matome 0.33 vs 0.57。daily-science は 0.90 vs 0.90 で差なし、pokemon-lab 0.75 vs 0.73・yokai-watch 0.83 vs 0.77 も差なし。",
+      "action": "scp-lab は断定カタログ型（SCP番号＋通称＋実数）に固定。2ch-matome は口語断定に固定。"
+    },
+    {
+      "id": "F5-participation-format-views-not-subs",
+      "severity": "medium",
+      "claim": "2ch-matome の参加型フォーマットは CTR・再生・維持率では勝つが、登録には繋がらない。09-08 の『参加型を使わない』判断と矛盾しないが、理由の理解を更新する必要がある。",
+      "evidence": "今回のコホートで success 6本中4本が参加型（あげてけ／当てるスレ／質問ある？）で、success は CTR 3.55%・再生1234・維持率66.5% と others(1.93%/748/36.8%) を上回る。一方 09-07 スナップショットでは参加型の登録/千再生 0.06 vs 非参加型 0.31。",
+      "action": "参加型は引き続き使わない（至上目標は登録者）。ただし参加型が持っていた『全角12〜24字・数字なし・口語断定』という形式だけは新勝ち型に継承させた。"
+    },
+    {
+      "id": "F6-daily-science-worst-retention-variance",
+      "severity": "high",
+      "claim": "daily-science は others 平均維持率 22.28% で全6ch中最低。success との差は3.2倍で最大の分散。タイトル特徴は success/others で完全同一のため、レバーは台本にしかない。",
+      "evidence": "維持率 71.21% vs 22.28%。他chの others: company-facts 45.11% > pokemon-lab 40.48% > 2ch-matome 36.82% > yokai-watch 36.03% > scp-lab 34.06% > daily-science 22.28%。タイトル: 疑問形0.90/0.90・数字0.51/0.52。",
+      "action": "当chではタイトル実験を停止し、F1 の学術名ルールに集中させた。当chは retention 曲線が取得できている唯一の ch であり、F1 の検証母体になる。"
+    }
+  ],
+  "blocked_this_run": [
+    {
+      "phase": "Phase 1 実績取得",
+      "reason": "Linuxサンドボックスが起動せず（bash 6回連続タイムアウト）、YouTube Data API 取得と analytics.db 書き込みが不可",
+      "impact": "分析は 2026-09-09 生成スナップショット（1日前）に基づく。09-09 公開分の初動は未反映。"
+    },
+    {
+      "phase": "Phase 4 制作指示",
+      "reason": "サンドボックスからは localhost:8000（ユーザーのMac上のバックエンド）へ到達できず、かつ bash 自体が停止",
+      "impact": "本日の autopilot トリガーは未送信。ただし各chの autopilot.schedule は enabled のままなので、バックエンドが稼働していれば定時枠（daily-science 7:30/12:30/17:00 等）で自走する。手動トリガーが必要な場合はコマンドを reports/ に記載済み。"
+    },
+    {
+      "phase": "Phase 5 xlsx出力",
+      "reason": "openpyxl を動かす Python 実行環境が無い",
+      "impact": "同内容を Markdown レポートで出力した。xlsx が必要な場合は reports/ の生成スクリプトを実行すること。"
+    }
+  ],
+  "retention_data_gaps": {
+    "curves_available": ["daily-science", "fake-paper", "akashic-librarian", "clip-fukada", "clip-kaneko", "clip-lab"],
+    "curves_missing": ["scp-lab", "pokemon-lab", "yokai-watch", "2ch-matome", "company-facts", "clip-animal"],
+    "cause": "no retention curves saved — sync with fetch_retention_for > 0",
+    "recommended_fix": "主要6chのうち5chで維持率曲線が取れていない。video_format.analytics.fetch_retention_for は 2ch-matome=5 / daily-science=10 と設定済みだが保存されていないため、次回サンドボックス復旧時に sync の保存経路を確認すること。F1 の検証が daily-science 単独に依存している状態は望ましくない。"
+  }
+}

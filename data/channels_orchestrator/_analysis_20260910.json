@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-10",
+  "note": "data/channels_orchestrator/<channel_id>.json は 2026-09-01 以降 data/channels/<channel_id>.json へのシンボリックリンクである（data/channels_orchestrator_pre_symlink_20260901/ に旧実体が残っている）。したがって指揮者側の更新はすべて data/channels/*.json への編集として反映済みであり、二重書き込みは不要。チャンネルごとの指揮者メタ情報は本ファイルに集約する。",
+  "channels": {
+    "daily-science": {
+      "metrics": {
+        "sample": { "total": 200, "success": 51, "others": 149 },
+        "views": { "success": 809.3, "others": 426.9, "ratio": 1.90 },
+        "ctr": { "success": 0.0054, "others": 0.0035, "ratio": 1.54 },
+        "avg_view_percentage": { "success": 71.21, "others": 22.28, "ratio": 3.20 },
+        "title_features": {
+          "avg_length": { "success": 62.8, "others": 56.4 },
+          "question_ratio": { "success": 0.90, "others": 0.90 },
+          "number_ratio": { "success": 0.51, "others": 0.52 }
+        },
+        "retention": {
+          "curves_available": true,
+          "analyzed_videos": 3,
+          "drops_by_bucket": { "intro": 0.0101, "early": 0.0235, "middle": 0.0050, "late": 0.0047, "ending": 0.0027 }
+        }
+      },
+      "diagnosis": "others 維持率 22.28% は全6ch中で最低（最高の company-facts 45.11% の半分）。success との差 3.20倍は6ch中最大の分散。一方タイトル特徴は疑問形 0.90 vs 0.90・数字 0.51 vs 0.52 と小数第2位まで同一で、タイトル語では成績を説明できない。CTR 差も 1.54倍で6ch中最小。ボトルネックは一意に台本＝維持率。",
+      "primary_lever": "script_retention",
+      "actions_taken": [
+        "voice_style.style_rules に『学術名を再生位置40%より前に出さない／40%以降に1回だけ／描写→命名の語順／1本1個まで』を先頭追加",
+        "theme_priority.title_style に『当chではタイトル実験を停止し現行方針を変更せず維持』を先頭追加"
+      ],
+      "key_evidence": "最大崖3件が全て 0.12〜0.25 の学術名提示行（『これは順応といって』4.4% /『検出の閾値、つまり』6.2% /『紡錘状顔領域』4.2% /『専門的には予測歩行と呼びますが』7.3%）。学術名の個数と維持率が逆相関: 2個の回=42.2%、1個の回=110.6%と120.7%。",
+      "actions_rejected": [
+        "投稿時間を success の top_hour_utc=0（JST 09:00）へ寄せる案。top_hour_utc は success 動画のみから算出され others との対照がなく、かつ現行枠（JST 7:30/12:30/17:00）のどれとも一致しないため過去スケジュール時代の動画を拾っている交絡が濃厚。対照が取れるまで変更しない。"
+      ],
+      "review": { "date": "2026-09-17", "metric": "others 側平均維持率", "baseline": 22.28, "rollback_if": "改善しなければ 09-10 ルールを削除" }
+    },
+    "scp-lab": {
+      "metrics": {
+        "sample": { "total": 200, "success": 13, "others": 187 },
+        "views": { "success": 519.1, "others": 493.3, "ratio": 1.05 },
+        "ctr": { "success": 0.0136, "others": 0.0042, "ratio": 3.24 },
+        "avg_view_percentage": { "success": 67.27, "others": 34.06, "ratio": 1.98 },
+        "title_features": {
+          "avg_length": { "success": 63.3, "others": 64.7 },
+          "question_ratio": { "success": 0.15, "others": 0.35 },
+          "number_ratio": { "success": 0.85, "others": 0.88 }
+        },
+        "retention": { "curves_available": false }
+      },
+      "diagnosis": "再生数はほぼ同じ（1.05倍）だが CTR は 3.24倍。差は完全にクリック側。疑問形が明確に負（0.15 vs 0.35）、数字は 0.85 vs 0.88 で飽和済み。success 率 6.5% は6ch中最低で当たりの再現性が低い。",
+      "primary_lever": "title_form_and_thumbnail",
+      "actions_taken": [
+        "title_style に『疑問形を使わない／SCP番号と通称を必ず両方出す／数字は財団の記録票として読める単位にする』を先頭追加",
+        "style_rules に『財団設定用語を40%より前に出さない（SCP番号は用語名に数えない）』を先頭追加"
+      ],
+      "key_evidence": "勝ち本は断定カタログ型（SCP-1690 CTR 1.54% / SCP-2525 0.98% / SCP-006-JP 1.89%）。負け本は番号を伏せた煽り型。",
+      "open_issues": ["維持率曲線が未取得（fetch_retention_for=5 設定済み）", "09-05 開始の尺対照実験（実験群32〜36秒）の評価が 09-12 予定。本日は未変更"],
+      "review": { "date": "2026-09-17", "metric": "CTR", "baseline_success": 0.0136, "baseline_others": 0.0042 }
+    },
+    "2ch-matome": {
+      "metrics": {
+        "sample": { "total": 50, "success": 6, "others": 44 },
+        "views": { "success": 1234.2, "others": 747.6, "ratio": 1.65 },
+        "ctr": { "success": 0.0355, "others": 0.0193, "ratio": 1.84 },
+        "avg_view_percentage": { "success": 66.52, "others": 36.82, "ratio": 1.81 },
+        "title_features": {
+          "avg_length": { "success": 24.2, "others": 34.4 },
+          "question_ratio": { "success": 0.33, "others": 0.57 },
+          "number_ratio": { "success": 0.17, "others": 0.73 }
+        },
+        "retention": { "curves_available": false }
+      },
+      "diagnosis": "タイトル特徴3つすべてが success 側で低い（短い・数字なし・疑問形なし）。かつ CTR・再生・維持率の3指標すべてでその側が勝つ。全ch共通要件『数字＋単位を1つ』は当chでは 0.17 vs 0.73 と明確に有害。success 6本中4本は参加型だが 09-07 では参加型の登録/千再生 0.06 vs 非参加型 0.31。**参加型は見られるが登録されない型**と理解を更新。",
+      "primary_lever": "title_length_and_form",
+      "actions_taken": [
+        "title_style に『数字＋単位要件を適用除外（入れてはいけないへ強化）／全角12〜24字／疑問形で終わらせない』を先頭追加。参加型は09-08判断どおり不使用のまま、形式だけ新勝ち型に継承させる指示を明記",
+        "style_rules に『40%より前に地の文・解説口調を置かない／理由を言う行は1本1行だけ』を先頭追加"
+      ],
+      "open_issues": ["cta_position 実験（09-04開始 arm=end）の評価が 09-11 予定。本日は未変更", "尺対照実験（実験群32〜36秒）の評価が 09-12 予定。本日は未変更"],
+      "review": { "date": "2026-09-17", "metric": "登録/千再生 と CTR の両方", "rollback_if": "登録が伸びずCTRだけ落ちたら短文化・数字禁止を撤回" }
+    },
+    "pokemon-lab": {
+      "metrics": {
+        "sample": { "total": 56, "success": 4, "others": 52 },
+        "views": { "success": 500.8, "others": 615.4, "ratio": 0.81 },
+        "ctr": { "success": 0.0588, "others": 0.0069, "ratio": 8.52 },
+        "avg_view_percentage": { "success": 81.46, "others": 40.48, "ratio": 2.01 },
+        "title_features": {
+          "avg_length": { "success": 48.5, "others": 46.1 },
+          "question_ratio": { "success": 0.75, "others": 0.73 },
+          "number_ratio": { "success": 0.75, "others": 0.65 }
+        },
+        "retention": { "curves_available": false }
+      },
+      "diagnosis": "CTR 差 8.52倍は6ch中最大。にもかかわらずタイトル特徴はほぼ同一で語では説明できない。再生数はむしろ success が低い（0.81倍）。維持率 81.46% は6ch中最高。勝ち要因はサムネと題材選択。",
+      "primary_lever": "thumbnail",
+      "actions_taken": [
+        "title_style に『サムネ改善を第一優先。タイトルとサムネ両方に有名ポケモンの固有名を1体以上。2体の対決構図を優先』を先頭追加。疑問形・数字は必須化も禁止もしないと明記",
+        "style_rules に『ゲーム内部用語を40%より前に出さない（ポケモン名は用語名に数えない）』を先頭追加"
+      ],
+      "key_evidence": "success は固有名2体の対決または固有名＋意外な数値（バンギラス対メタグロス CTR 3.14% / コイキング種族値200 2.78% / レックウザ 15.38%）。others は単体固有名の言及が主で CTR 0.69%。",
+      "caveats": ["success n=4 と極端に薄く、CTR 8.52倍は 15.38%（再生15回）の1本に強く引かれている。サムネ優先という方向性以外をこの標本から結論してはならない。"],
+      "review": { "date": "2026-09-17", "metric": "CTR", "baseline_success": 0.0588, "baseline_others": 0.0069 }
+    },
+    "yokai-watch": {
+      "metrics": {
+        "sample": { "total": 54, "success": 6, "others": 48 },
+        "views": { "success": 508.7, "others": 613.2, "ratio": 0.83 },
+        "ctr": { "success": 0.0244, "others": 0.0117, "ratio": 2.09 },
+        "avg_view_percentage": { "success": 68.91, "others": 36.03, "ratio": 1.91 },
+        "title_features": {
+          "avg_length": { "success": 42.5, "others": 42.3 },
+          "question_ratio": { "success": 0.83, "others": 0.77 },
+          "number_ratio": { "success": 0.17, "others": 0.40 }
+        },
+        "retention": { "curves_available": false }
+      },
+      "diagnosis": "長さ・疑問形に差はなく、唯一の差は数字率 0.17 vs 0.40 で数字を入れたほうが負けている。勝敗を決めているのは題材の知名度: success の主語は全て全国的に名前が通っている対象、others は低知名度の妖怪で CTR は半分以下。",
+      "primary_lever": "topic_familiarity",
+      "actions_taken": [
+        "title_style に『主語は妖怪ウォッチのキャラ名か全国的に名前が通っている妖怪に限定。マニア向けの妖怪名を主語にした案は不合格。低知名度の妖怪は有名妖怪の中の比較対象として出す』を先頭追加。数字＋単位要件は適用除外と明記",
+        "style_rules に『文献用語・古称を40%より前に出さない（有名妖怪名・妖怪ウォッチのキャラ名は用語名に数えない）』を先頭追加"
+      ],
+      "key_evidence": "success CTR: 口裂け女 2.04% / 海坊主 2.30% / エンマ大王 2.09% / ブシニャン 2.19% / コマさん 2.04% / 主人公 4.00%。others 平均 1.17%。",
+      "caveats": ["success n=6 と薄い。知名度を主語に置くという方向性以外をこの標本から結論してはならない。"],
+      "review": { "date": "2026-09-17", "metric": "CTR", "baseline_success": 0.0244, "baseline_others": 0.0117 }
+    },
+    "company-facts": {
+      "metrics": {
+        "sample": { "total": 42, "success": 3, "others": 39 },
+        "views": { "success": 1012.7, "others": 1070.1, "ratio": 0.95 },
+        "ctr": { "success": 0.0480, "others": 0.0216, "ratio": 2.22 },
+        "avg_view_percentage": { "success": 66.93, "others": 45.11, "ratio": 1.48 },
+        "title_features": {
+          "avg_length": { "success": 43.0, "others": 39.8 },
+          "question_ratio": { "success": 0.33, "others": 0.33 },
+          "number_ratio": { "success": 1.00, "others": 0.97 }
+        },
+        "retention": { "curves_available": false }
+      },
+      "diagnosis": "others 維持率 45.11% は6ch中最高（最低の daily-science の2倍）。構造は既に最適に近く、09-05 に全chへ横展開した『冒頭で数字を大きく出す』の元ネタでもある。タイトル特徴はほぼ同一で数字要件は全本が満たしており差別化要因になっていない。残る差は CTR 2.22倍。",
+      "primary_lever": "title_comparison_axis",
+      "actions_taken": [
+        "title_style に『金額の直後に必ず比較軸を置く（業界平均と比べると／同業より○万円高い／社内で○倍差／○年前の○万円から）。煽り語を比較軸の代わりに使うのは不合格』を先頭追加。台本構造は変更しないと明記",
+        "style_rules に『会計・制度用語を40%より前に出さない（企業名・金額は用語名に数えない）』を先頭追加。ただし維持率が全ch最高のため悪化したら即削除と明記"
+      ],
+      "key_evidence": "success 3本は全て金額に比較対象が添えられている（星野リゾート400万円＋業界平均比較 CTR 3.96% / 三菱商事2033万円＋その中身 5.31% / ASUS＋売上4,800億円 5.13%）。others は金額と無関係な煽りが付き CTR 2.16%。",
+      "caveats": [
+        "success n=3 と極端に薄い。比較軸を添えるという方向性以外をこの標本から結論してはならない。",
+        "当chは他chの改善施策の基準チャンネル。ここを壊すと横展開の根拠が失われるため変更は最小限に留めた。"
+      ],
+      "review": { "date": "2026-09-17", "metric": "CTR と others 平均維持率", "baseline_ctr_success": 0.0480, "baseline_ctr_others": 0.0216, "baseline_retention_others": 45.11 }
+    }
+  }
+}
