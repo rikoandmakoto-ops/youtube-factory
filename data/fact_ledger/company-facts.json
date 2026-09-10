@@ -1725,5 +1725,38 @@
     "fact_main": "有給は年20日",
     "fact_sub": "入社時期で付与数は異なる",
     "source": "generator"
+  },
+  {
+    "entity": "東海旅客鉄道",
+    "metric": "年収",
+    "value": 712.0,
+    "unit": "万円",
+    "period": "2025-03",
+    "title": "JR東海の年収712万円、本当は新幹線が支える正体",
+    "fact_main": "JR東海 年収712万円",
+    "fact_sub": "有価証券報告書 2025年3月期",
+    "source": "generator"
+  },
+  {
+    "entity": "東海旅客鉄道",
+    "metric": "賞与",
+    "value": 239.0,
+    "unit": "万円",
+    "period": "",
+    "title": "JR東海の年収712万円、本当は新幹線が支える正体",
+    "fact_main": "賞与 約239万円",
+    "fact_sub": "年収712万円から算出",
+    "source": "generator"
+  },
+  {
+    "entity": "東海旅客鉄道",
+    "metric": "従業員数",
+    "value": 18514.0,
+    "unit": "人",
+    "period": "2025",
+    "title": "JR東海の年収712万円、本当は新幹線が支える正体",
+    "fact_main": "社員数 18,514人",
+    "fact_sub": "2025年3月末 連結",
+    "source": "generator"
   }
 ]

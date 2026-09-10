@@ -462,12 +462,12 @@
       "channel_title": "えいみchannel",
       "published_at": "2022-01-13T10:00:02Z",
       "duration_sec": 964.0,
-      "view_count": 288214,
+      "view_count": 288270,
       "license": "youtube",
       "use_as": "clippable",
       "reason": "allowlist 登録チャンネル（ガジェット通信クリエイターネットワーク（MCN）の切り抜き公認リストに掲載。2026-08-24 に getnews.jp/mcn/kirinuki で対象クリエイターとして確認し、同ネットワーク経由で切り抜きチャンネルの申請・許諾取得済み。許諾は申請フォーム → 承認メール方式で成立し、元動画の説明欄に許諾文言は入らないため require_permission_phrase=false で運用する（説明欄の文言ゲートでは永久に通らない）。2026-08-24 時点で当該チャンネルの直近50本を実測し、説明欄に切り抜き許諾文言は0件であることを確認済み。条件: 収益分配率に基づく分配、クレジット表記（説明欄に元動画URLと元チャンネル名）、権利者が個別に禁止した動画は対象外。取り下げ要請があれば即時 enabled=false にする。）",
       "origin": "allowlist:えいみchannel（@eimi_ch・深田えいみ 本人）",
-      "local_path": "/Users/ayukiyamazaki/Movies/yf_clip_downloads/clip-fukada/3B5wghcJDoc_19_53.mp4",
+      "local_path": "/Users/ayukiyamazaki/Movies/yf_clip_downloads/clip-fukada/3B5wghcJDoc_190_230.mp4",
       "url": "https://www.youtube.com/watch?v=3B5wghcJDoc",
       "tags": [
         "深田えいみ",
@@ -475,7 +475,7 @@
       ],
       "permission_phrase": "",
       "credit_name": "深田えいみ / Eimi Fukada",
-      "acquired_at": "2026-09-06T20:00:16"
+      "acquired_at": "2026-09-10T20:06:36"
     },
     "PSn9KcnWeO0": {
       "video_id": "PSn9KcnWeO0",
@@ -747,6 +747,60 @@
       "permission_phrase": "この動画の切り抜きを黙認します",
       "credit_name": "岡田斗司夫",
       "acquired_at": "2026-09-09T17:52:54"
+    },
+    "ZGytOQY0qto": {
+      "video_id": "ZGytOQY0qto",
+      "title": "【雑談】一人暮らしズボラ女が料理して久しぶりに喋りまくったらやばすぎた、、、",
+      "channel_id": "UCw_7_DkX4ftnQJJtZTrCOOQ",
+      "channel_title": "金子みゆ / kaneko_miyu",
+      "published_at": "2023-10-27T11:00:26Z",
+      "duration_sec": 1358.0,
+      "view_count": 25762,
+      "license": "youtube",
+      "use_as": "clippable",
+      "reason": "allowlist 登録チャンネル（ガジェット通信クリエイターネットワーク（MCN）の切り抜き公認リストに掲載。2026-08-24 に getnews.jp/mcn/kirinuki で対象クリエイターとして確認し、同ネットワーク経由で切り抜きチャンネルの申請・許諾取得済み。許諾は申請フォーム → 承認メール方式で成立し、元動画の説明欄に許諾文言は入らないため require_permission_phrase=false で運用する（説明欄の文言ゲートでは永久に通らない）。2026-08-24 時点で当該チャンネルの直近50本を実測し、説明欄に切り抜き許諾文言は0件であることを確認済み。条件: 収益分配率に基づく分配、クレジット表記（説明欄に元動画URLと元チャンネル名）、権利者が個別に禁止した動画は対象外。取り下げ要請があれば即時 enabled=false にする。）",
+      "origin": "allowlist:金子みゆ / kaneko_miyu（公式・メイン）",
+      "local_path": "/Users/ayukiyamazaki/Movies/yf_clip_downloads/clip-kaneko/ZGytOQY0qto_1216_1255.mp4",
+      "url": "https://www.youtube.com/watch?v=ZGytOQY0qto",
+      "tags": [],
+      "permission_phrase": "",
+      "credit_name": "金子みゆ / kaneko_miyu",
+      "acquired_at": "2026-09-10T08:06:54"
+    },
+    "QztBjetEngo": {
+      "video_id": "QztBjetEngo",
+      "title": "\" Ultimate Tony Baker's Voiceovers \" Skibbity Paps \" ( December 29th ) / REACTION ",
+      "channel_id": "UC3J7id459H2ePG8mOItTTEw",
+      "channel_title": "Prod X Trevor Reacts",
+      "published_at": "2023-12-29T22:55:35Z",
+      "duration_sec": 1682.0,
+      "view_count": 164950,
+      "license": "creativeCommon",
+      "use_as": "clippable",
+      "reason": "Creative Commons (CC BY) ライセンス。帰属表示を付けて再利用可",
+      "origin": "creative_commons",
+      "local_path": "/Users/ayukiyamazaki/Movies/yf_clip_downloads/clip-animal/QztBjetEngo_780_801.mp4",
+      "url": "https://www.youtube.com/watch?v=QztBjetEngo",
+      "tags": [
+        "Ultimate Tony Baker",
+        "Voiceovers",
+        "Compilations",
+        "2023",
+        "December",
+        "Michigan City",
+        "Tony Baker",
+        "Animal Voiceovers",
+        "Best Voiceovers",
+        "New",
+        "Amazing",
+        "Funny",
+        "entertainment",
+        "Voiceover king",
+        "Skibbity Paps"
+      ],
+      "permission_phrase": "",
+      "credit_name": "Prod X Trevor Reacts",
+      "acquired_at": "2026-09-10T18:22:56"
     }
   }
 }
