@@ -1,0 +1,515 @@
+{
+  "title": "眠い夜ほど目が乾かない？まばたき半減のナゾの正体",
+  "theme": {
+    "title": "なぜ眠い時ほど目が乾かないのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？眠い夜ほど目が乾きにくいのはなぜでしょう。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！寝る前はまばたきが1分で半分くらいになるよね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "起きている時は1分に約15回でも。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホの画面を見続ける時みたいに乾きそうなのに。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも、まぶたが閉じ始めると涙の膜を守る時間が増えるからなんです。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "今夜は目をこすらず意識してみて。高評価も押して、睡眠と夢シリーズと毎日投稿中の1万人目標をチャンネル登録で応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？あなたが夜に眠くなって目を細める時、昼より目が乾きにくく感じたことはありませんか。\n起きている時は1分に約10〜20回まばたくのに、回数が減る眠気の時間で楽になるように思えるのが不思議なんです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！寝る前にスマホを30分見ていたのに、昼の作業中より目がつらくなかった気がするよ。\nまばたきが減れば涙も減りそうなのに、どうして眠い時には逆の感覚になるの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "最初の手がかりは回数ではなく、1回ごとに目を閉じている長さです。\n眠気が強くなると短いまばたきより、1〜2秒ほど長くまぶたを閉じる動きが増えて、目の表面が空気にさらされる時間が変わります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！昼にする一瞬のまばたきと、眠くてゆっくり閉じるまばたきは別物なんだね。\n同じ1回でも、閉じる秒数が変わるだけで目のうるおいまで変わるのかな？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "あなたの目の表面には、目を開けている間ずっと薄い涙の膜が広がっています。\n厚さはとても小さくても、空気やほこりから守り、まぶたをなめらかに動かす透明なカバーとして毎日働いているんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確に、コンタクトを着けた日は少し乾くだけで、まばたきのたびに引っかかる感じがするよ。\n涙は泣く時だけの水ではなく、目の表面を毎秒守っている膜だったんだね。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まばたきは、この涙の膜を目全体へ広げ直す動きです。\nたとえるなら、雨粒が残る車の窓をワイパーが1回ぬぐって視界を整えるように、上まぶたと下まぶたが涙を均一にならしています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、目の中では毎日何千回も小さなワイパーが動いていると思うと分かりやすい！\nでも眠い時はワイパーの回数が少ないなら、かえって膜のむらが残りそうで気になるな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "眠い時には、まぶたが半分以上閉じたままになる時間が増えます。\nその間は目の表面に当たる空気が減るため、水分が逃げる速さを抑えやすく、涙の膜が落ち着く余地も生まれると考えられています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！水道のホースを少し踏むと水の勢いが弱まるみたいに、空気に触れる面積を小さくしているんだね。\n乾きを決めるのは、まばたきの数だけではなかったのか。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、目の乾きは涙の量だけで決まりません。\n室内の湿度、エアコンの風、コンタクトレンズ、画面への集中など、少なくとも4つ以上の身近な条件が同時に重なって、あなたの感じ方を変えています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ眠い人なら誰でも乾かない、という単純な話ではないんだね。\n冬の乾いた部屋や扇風機の前では、眠くても目がしみることがあるのは、その条件が重なるからなのかな？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。眠気でまぶたが重くなるのは、外の情報を少し減らして休息へ向かう合図の一つです。\nただし、ここからが本題です。目を閉じる時間には、風を避ける以外の役目もあります。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、閉じるだけでは説明しきれないんだ！眠くて目が細くなる数秒のあいだに、涙の膜を保つ別の準備まで進むなら、毎晩の感覚がまったく違って見えてくるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "まぶたの縁には、涙の表面へ油分を足す小さな出口が並んでいます。\nこの油分は涙のいちばん外側に広がり、水分が蒸発しすぎないようにする、鍋のふたのような役目を果たしているんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！涙に油分があるから、ただの水より目に残りやすいんだね。\n鍋にふたをすると湯気が逃げにくくなるように、目でも水分が飛びにくい層を作っているのか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "眠る前に長めのまばたきが増えると、まぶたの動きで油分も涙の膜へ広がりやすくなります。\n1回を急いで閉じるより、ゆっくり最後まで閉じる方が、表面を整える時間を取りやすいと考えられています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確に、眠い時はまばたきというより、一度目を休ませるように閉じている感じがするよ。\nあの数秒は意識がぼんやりするだけでなく、目の表面にも使われていたんだね。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで大切なのは、眠気で目が楽に感じることと、目の状態が必ず良いことは別だという点です。\n空気に触れる時間が減れば乾きは軽くなりやすい一方、涙の量や膜の状態そのものが改善するとは限りません。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、楽に感じたから大丈夫とは言い切れないんだね。\n夕方に赤みや痛みが続く時は、眠いからだと片づけず、目が出している別の合図かもしれないと考えた方がよさそう。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "画面を見る時に乾きやすい理由の一つは、集中するとまばたきが浅くなりやすいことです。\nまぶたが最後まで閉じないと、ワイパーが窓の端を拭き残すように、涙の膜が均一に広がりにくくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ゲームや作業中にまばたきしたつもりでも、目がすっきりしない時がある。\n眠い時のゆっくり閉じる動きと、集中中の浅い動きでは、同じ回数でも中身が違うんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "読書やパソコン作業では、普段よりまばたきの回数が少なくなる傾向が多くの研究で報告されています。\n数字は画面の大きさや作業内容で変わりますが、1分に10回未満まで下がる人がいても珍しくありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、普段は約15回なのに10回未満まで下がることがあるんだ！\n画面に集中している時ほど目を酷使していると思ったけれど、涙を広げ直す回数まで減っていたなら、乾きやすいのも納得できるよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "眠気が来ると、脳は外から受け取る情報の量を少しずつ絞り、体を休息へ向かわせます。\n電車でうとうとして景色がぼんやり遠くなる時のように、まぶたが閉じる時間が長くなるのもその流れの一部です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "それなら、電車で一瞬目を閉じて開けたら、さっきより楽に感じることがあるのも分かる気がする。\n意識では起きていようとしても、体は先に目を守る準備を始めているんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "涙の膜は一枚の水ではなく、目に留まりやすくする部分、水分の部分、蒸発を抑える部分が重なっています。\nスマホの保護フィルムが薄くても傷や指紋から画面を守るように、薄い膜ほど役割の分担が大切なんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！涙をただ増やせばよいのではなく、目に残ることや蒸発しにくさまで必要なんだね。\nだから同じように涙が出ていても、乾く人と乾きにくい人がいるのか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "この膜が乱れやすい人では、眠い時にまぶたを閉じたくなる感覚が強くなる場合があります。\nただ、その重さが眠気なのか乾きへの反応なのかは混ざって感じることがあり、本人だけで分けにくい場面もあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確に、午後3時ごろに目が重い時、眠いのか乾いているのか自分でも迷うよ。\nコーヒーを飲む前に、ゆっくり2〜3回まばたきして反応を見るのも、小さな手がかりになりそうだね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "目の乾きを表す時、医療ではドライアイという名前が使われます。\nつまり、涙の量や質、まぶたの動きのバランスが崩れ、目の表面を守りにくくなった状態を指す言葉です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！名前だけだと涙が少ない状態に思えるけれど、広げ方や蒸発のしやすさも含まれるんだね。\n眠気の目の重さと区別して考える理由が、少しずつ見えてきたよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "日本ではスマホやパソコンを長時間使う生活が当たり前になり、寝る直前まで画面を見る人も増えました。\nだから眠る前の乾きは、眠気だけでなく、直前の30分や1時間に目をどう使ったかを振り返ると手がかりになります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！寝る前は5分だけのつもりで画面を見ても、時計を見ると30分過ぎていることがある。\nその後の目の重さを眠気だけだと思っていたけれど、乾きも混ざっていたかもしれないね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "まばたきは昔から人の集中や疲れを知る手がかりとして観察されてきました。\n今ではカメラ映像で、1分の回数だけでなく、まぶたが閉じる深さや閉じている時間まで測る研究も行われています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！昔なら顔を見て気づいた変化を、今は映像の数字にできるんだね。\nでも測定器がなくても、眠い時に目を開けにくいという感覚は、あなたも毎晩すぐ確かめられるよ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "眠っている間、目は何時間もまぶたで覆われるため、空気の流れに直接さらされにくくなります。\n机の上に置いたコップより、ふた付きの容器に入れたコップの方が水分が減りにくいのと似た環境です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、眠る時のまぶたは目専用のふたなんだね！\n昼はずっと開けたまま使うカメラのレンズみたいだから、夜に閉じる時間があること自体が、目にとって大きな休憩なのか。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、朝起きた時に目が乾く人もいます。寝室の湿度が低い、風が当たる、まぶたが閉じにくいなどの条件があると、眠っている間でも表面が守られにくいことがあります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、眠っているから安心とは限らないんだね。\n朝だけ目がごろごろする時は、布団の近くのエアコンや加湿の具合を1つずつ見直すと、眠気とは別の原因を探せそう。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここは科学でもまだ結論が出ていない部分があります。眠い時に目が楽だと感じる度合いには、涙の膜だけでなく、眠気で感覚の受け取り方が変わることも関わる可能性があるからです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！目の表面が守られる話だけでなく、眠い脳が違和感をどう感じるかも関係するかもしれないんだね。\n分からない部分があるからこそ、断定しすぎず自分の体を観察したくなるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜からできる小さな工夫は、スマホを置いた後に3回だけゆっくり深くまばたきすることです。\n強く目をつぶらず、上まぶたと下まぶたがきちんと触れるように閉じて、涙の膜をならす意識で十分です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "3回なら、布団に入る前でも続けられそうだね！\n画面を閉じた直後にまばたきするだけなら、特別な道具もお金もいらず、目を休ませる時間へ切り替える合図にもなりそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "エアコンや扇風機を使う日は、風が目に直接当たらない位置を選んでみてください。\n涙の膜はとても薄いため、机の向きを30度ほど変えるだけでも、夕方から夜の乾き方が違うと感じる人がいます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確に、机の横から風が来る日は、夕方に目がつらくなることがあるよ。\n高価な物を買う前に、まず風向きを少しずらす方が、今日から試せて変化も分かりやすいね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "コンタクトレンズを使っていて乾きが続く、赤みや痛みがある、見え方が変わるという時は我慢しないでください。\n眼科では涙だけでなく、まぶたの状態やレンズとの相性も含めて確認してもらえます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！眠いから目が重いだけと思っても、何日も続く違和感は別の合図かもしれないんだね。\n自分に合う対策を探すためにも、困った時は専門の人に見てもらうのが大切だよ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の答えは、眠い時に目が乾きにくく感じるのは、まばたきの回数より、まぶたを閉じる時間が増えるからです。\n空気を避けて涙の膜が整いやすくなるためですが、乾きの原因がすべて消えるわけではありません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！眠い目はさぼっているのではなく、ワイパーとふたを使って休む準備をしていたんだね。\n今夜目が重くなったら、眠気なのか乾きなのか、3回のまばたきで少し観察してみるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠っている間に一晩でおよそ20回も寝返りを打つのに、朝はほとんど覚えていない理由を見ていきます。\n布団がねじれるほど動いているのに記憶に残らない、睡眠中の体の不思議を一緒にほどきましょう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "それも気になる！朝に布団がずれているのに、自分では1回も動いた覚えがないことはよくあるよ。\n睡眠と夢シリーズでつながる話なら、今夜の眠りを見る目も、まぶたを見る目も少し変わりそうだね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜寝る時は、スマホを置いたら3回だけゆっくりまばたきして、目に休む時間を渡してみてください。\n面白かったら高評価もお願いします。身近な不思議を毎日1本ずつ解いているので、チャンネル登録で明日も一緒に見てほしいです。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "眠いのに",
+      "目は乾かない"
+    ],
+    "hook_caption": "眠気の逆転",
+    "subtitle": "眠気が来るほど、目の表面では何が起きるのか",
+    "tagline": "まぶたと涙がつくる夜の準備"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 85,
+      "issues": [
+        {
+          "type": "visual_dependent",
+          "line": 4,
+          "text": "へぇ〜、知らなかった！スマホの画面を見続ける時みたいに乾きそうなのに。",
+          "pattern": "画面[のを上下左右]",
+          "reason": "「画面の〜」はテロップ視聴者には分かりにくい"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "今夜は目をこすらず意識してみて。高評価も押して、睡眠と夢シリーズと毎日投稿中の1",
+          "reason": "1行61字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 24,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 2,
+        "relatability": 3,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.577,
+      "similar_to": "疲れた日の甘い物、3時間で消える正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 37,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ眠いほど目が乾かない？1分の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "なぜ眠いほど目が乾かない？1分の正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ眠いほど目が乾かない？1分の正体"
+  }
+}

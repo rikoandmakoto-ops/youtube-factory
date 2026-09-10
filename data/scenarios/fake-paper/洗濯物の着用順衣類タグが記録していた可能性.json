@@ -1,0 +1,516 @@
+{
+  "title": "洗濯物の着用順、衣類タグが記録していた可能性",
+  "theme": {
+    "title": "洗濯物は畳んだ順と逆に着られる — 衣類タグの装着履歴",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者1,248人、洗濯物は逆順に着る——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言います。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『衣類行動季報』と繊維順序研究所が28日追跡しました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最後に畳んだ服ほど、着用は43％早く、有意差が出ています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "さらにタグの擦れ方まで一致するなら。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標のチャンネル登録で応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも、夜にきれいに畳んだ洗濯物から、翌朝なぜか最後に置いた服だけを先に着た経験がありませんか。被験者1,248人の記録では、その順番が平均3.7段階逆転すると報告されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空誌『衣類行動季報』第18巻には、繊維順序研究所の折目観測班による28日間追跡が掲載されています。衣類タグの圧痕から着用履歴を復元した、という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "結論は単純です。最後に畳んだ衣類ほど最初に着られ、全体の68.4％で畳み順と着用順が逆になりました。有意水準0.01未満という、妙に整った数字まで付いています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "それは知らなかったです。引き出しの上から服を取るだけなら理解できますが、衣類タグが28日分の順番を覚えるとは、朝の支度が記録装置になるような話ですね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はこの現象をタグ装着履歴と名付けました。首元や脇にある小さなタグが、重ねられた回数と圧力の向きを保持し、洗濯後の順番を静かに告げるという仮説です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "タグに履歴が残るなら、昨日の夜に急いで畳んだ服と、週末に丁寧にしまった服まで区別できることになります。仕事や通学前の服選びにも、数字の影があるんですね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "調査では深さ18センチ、幅42センチの同型衣類箱を各家庭へ配布しました。参加者は毎晩の畳み時刻と、翌朝に最初に取り出した一枚だけを、合計34,944回記録しました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者が畳んだ衣類は一日平均6.2枚で、そのうち翌日までに選ばれた衣類は2.8枚でした。研究班が注目したのは好みではなく、衣類箱に入った瞬間の上下関係だけです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "つまり高価な服か、好きな色か、誰かに会う予定があるかではなく、最後に畳んだ位置だけを追ったわけですね。収納の山が小さな時系列表になる、と考えると分かりやすいです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文は上側という日常語を避け、最終折畳衣類優先率という言葉を使っています。平たく言えば、最後に畳んだ服が先に着られる確率で、基準値16.7％を大幅に超えた指標です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最終折畳衣類優先率は、全体で68.4％でした。六枚を無作為に選ぶなら約16.7％に近づくはずですが、実測値はその4.1倍であり、有意差が確認されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "68.4％もあるなら、朝に何を着るかは意思決定というより、昨夜の自分が作った衣類の並びに誘導されているようです。予定表より上にある服が強いわけですね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "実はこれ、休日より出勤や通学の朝で強く現れました。午前7時から9時に選ばれた衣類だけを集めると、優先率は81.2％まで上昇したと報告されています。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "そんなことあるんですか。遅刻しそうな朝ほど、鏡の前で悩む時間より、手の届く服を取る速さが勝つという説明なら、20代の生活にはかなり身近な数字ですね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はこれを時短選択圧と呼びました。難しい用語ですが、急いでいる人ほど衣類箱の最上層へ手を伸ばす傾向を、気圧のように扱っただけの名称です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "タグの観察には、文字の向きではなく端に残る0.2ミリ未満の折り癖を使ったとされています。鉛筆の線ほど細い歪みを、携帯型拡大鏡で3回ずつ測った設定です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "0.2ミリ未満なら、普段の洗濯で気づく人はいないでしょうね。けれど研究員が同じタグを3回測ると聞くと、急に白衣と記録表が頭に浮かんでしまいます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "タグのない衣類は解析から除外されました。対象7,486枚のうち1,104枚を外し、残った6,382枚だけで順序を計算したため、表の数字は異様なほど滑らかに並んでいます。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "残存したタグでは、最後に畳まれた衣類ほど圧痕の角度が平均12.6度浅くなりました。研究班は、まだ多くの服に押しつぶされていないことの証拠だと解釈しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "下側の服ほど上から重ねられ、タグの折り目が深くなるということですね。衣類箱の中に薄い地層ができて、朝の手が上の地層から一枚ずつ掘り出すような景色です。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "畳み方は二つ折り、三つ折り、丸め収納の三群に分類されました。最も逆順効果が大きかったのは二つ折りで、意外にも最も整って見える方法が最も順番を固定しました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "二つ折り群の優先率は74.9％、三つ折り群は66.8％、丸め収納群は41.3％でした。広い面で重ねるほど、最後に置いた服が表面に留まるという、見たままの結論です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "丸めた服は隙間から抜き出せるので、順番が崩れやすいのでしょうね。旅行から帰った後、衣類箱の中身だけ急に混ざる感覚まで、41.3％という数字で説明されるように見えます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに研究班は、着用後から洗濯かごへ入るまでの時間を測りました。平均19.4時間で衣類は洗濯工程へ戻り、畳む、着る、洗うという循環が週に1.9回成立したとしています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この循環には衣類回遊率という名称が与えられました。恋愛や仕事の予定ほど意識されない一方で、毎朝7分前後の服選びを静かに支配する反復行動だという整理です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "毎週ほぼ同じ服が上に戻るなら、好きだから着るのか、取り出しやすいから好きになるのか、順番の因果が逆に見えてきます。衣類にも小さな習慣の輪があるようですね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこで研究班は、番号だけを書いた無地の布を衣類箱へ混ぜました。色、柄、価格、季節感を消しても、最後に畳んだ番号布が66.1％で最初に選ばれたとされています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "番号だけの布でも同じなら、服の好みは大部分を説明できませんね。着たいものを選んでいるつもりでも、実際には昨夜の順番を選んでいるという結果になります。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "番号布の実験では、参加者に配置を知らせませんでした。それでも最終折畳番号を取る確率は、最初に畳んだ番号の2.9倍で、無意識の選択として表にまとめられています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "統計表には有意水準0.01未満と記されています。100回同じ比較をしたと仮定しても、偶然らしく見える回数が1回未満という、学術発表らしい硬い数字の置き方です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "数字の並びがここまで具体的だと、実際に番号布を畳んだ人たちの姿まで想像してしまいます。最初の68.4％が、ただの思いつきには見えなくなってきました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "調査票には同居人の有無も記録されました。一人暮らし群712人の逆順率は72.6％で、複数人世帯群536人の63.9％より8.7ポイント高い結果になっています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "共同生活では、誰かが衣類箱に触れて山の順番を変えるからでしょうか。朝の支度が重なる家では、最後に畳んだ服が誰かの手で二番目や三番目へ移りそうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文はこれを他者接触による順序攪乱と表現しました。難しく聞こえますが、家族や同居人が一枚動かすだけで、衣類の地層が崩れるという、生活感のある説明です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "衣類箱の深さを変えた小実験では、深さ24センチを超えると優先率が51.8％まで下がりました。下の服を探す腕の動きが、逆順の規則を途中で壊すためだとされています。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "深い収納では奥の服を探すため、一度山を持ち上げますからね。黒い服だけ見つからず、朝に全部を出してしまう場面が、順番を崩す実験操作として数えられたわけです。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "歴史資料として論文は、架空の家政記録帳『折目日誌』を引用しています。そこには193件の洗濯記録があり、木箱へ最後に入れた衣類ほど先に着た、と読めるそうです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "昔の木箱でも同じ順番なら、収納家具が変わっても人の手は表面から取るのでしょうか。現代の衣類タグより前から、逆順の癖だけが続いてきたように見えます。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "記録帳によれば、衣類は木箱の右奥から重ねられ、翌朝は左手前から取り出されました。左右の向きは違っても、最後に置いたものが先に選ばれる構造は同じです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし『折目日誌』には紙の年代測定も筆跡比較もありません。論文内では193件という数字だけが独り歩きし、古い資料らしい重みを、都合よく増幅する役を担っています。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "資料名と件数が示されると、確認手順がなくても根拠に見えるんですね。僕は木箱の右奥という細部まで聞いて、かなり昔から続く現象だと受け取りかけました。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "タグの位置別では、首元タグの優先率が72.0％、脇タグが61.5％、裾タグが58.8％でした。上部のタグほど畳んだ後に表面へ近づく、という筋書きが用意されています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "首元ほど折ると外側へ来やすいから順番を語る、という説明ですね。服の構造に数字がぴたりと沿うと、タグ装着履歴という言葉まで急に正式な用語に聞こえてきます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで扱っているのは、衣類をどう畳むべきかという助言ではありません。68.4％、1,248人、28日間という数字が、見慣れた洗濯物へ研究らしい輪郭を与える過程です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "帰宅後に畳んだ服が翌朝すぐ見つかる場面は、誰にでもあります。しかし服が意志を持って前へ出たのではなく、最後に置いた場所が最初に手へ届いただけ、とも言えます。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "タグの角度を測ったり、番号布を混ぜたりする必要はないんですね。洗濯物が畳んだ順と逆に着られるという話は、日常感覚へ数字を重ねた、観察風の物語だったわけですね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その通りです。繊維順序研究所、衣類行動季報、深さ18センチの衣類箱、6,382枚のタグ、そして有意水準0.01未満まで、同じ架空の表へ整列させた部品です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。『衣類行動季報』は掲載誌ごと架空であり、繊維順序研究所も存在しません。洗濯物の逆順着用を証明した衣類タグの記録も、すべて創作です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。被験者1,248人、28日間、優先率68.4％、有意水準0.01未満まで聞かされたので、明日の朝から服の順番を記録しかけました。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "数字は具体的であるほど、存在しない調査にも手触りを与えます。月刊 虚構論文では結論のもっともらしさより、出典、掲載誌、研究機関が実在するかを最後に確認しています。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、月曜日だけ味覚が0.4％鈍るとした架空の追跡調査を扱います。被験者3,214人を52週間追ったという数字が、どんな顔で並ぶのかを淡々と読み解きます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "洗濯物のように身近すぎる題材ほど、細かな数字が付くと信じてしまいそうです。次の0.4％も、結論より先に掲載誌の名前を確かめながら待つことにします。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "日常の違和感を研究したシリーズには、掲載誌ごと架空の記録がまだ何本もあります。高評価とチャンネル登録で、毎日投稿中の1万人目標を応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "畳んだ順番",
+      "逆に着る"
+    ],
+    "hook_caption": "逆順で着る",
+    "subtitle": "衣類タグの装着履歴",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標",
+          "reason": "1行62字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 9,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": false,
+      "max_similarity": 0.712,
+      "similar_to": "左の靴紐だけ先にほどける — 歩行1,600kmの摩耗解析",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 28,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "洗濯物は畳んだ逆順に着られる — 1,248人のタグ記録"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 72,
+    "passed": true,
+    "reasons": [
+      "感情ワード['実は', 'なぜ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "架空論文ファイル #18：洗濯物は畳んだ逆順に着られる — 1,248人のタグ記録",
+    "attempts": 1
+  },
+  "original_title": "架空論文ファイル #18：洗濯物は畳んだ逆順に着られる — 1,248人のタグ記録",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ洗濯物は畳んだ順と逆に着られる？実はタグが覚えていた"
+  }
+}

@@ -1,0 +1,523 @@
+{
+  "title": "架空論文ファイル #18：遅刻した日は信号が青になる — 2,486人を91日追跡",
+  "theme": {
+    "title": "遅刻した日ほど信号に引っかからない — 通勤経路の信号待ち時間",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者2,486人。遅刻日は青信号が続く——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言いますので。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『都市歩行観測誌』と暁通勤研究所が。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "遅刻日は待ち時間が平均38%短く。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "さらに急いだ人ほど、連続青信号を2.7回多く記録したそうです。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この信号論文は存在しません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標で応援よろしく、チャンネル登録もお願いします。",
+      "expression": "surprise",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも遅刻しそうな朝だけ、九つほどの信号が妙に青へ切り替わると感じたことはありませんか。\n架空調査では被験者2,486人中1,204人が、同じ違和感を記録しています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "『都市歩行観測誌』第18巻は、暁通勤研究所が91日間追跡した結果、遅刻懸念日の待ち時間が通常日より38.1%短いと報告しています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "急いでいる時ほど赤信号に止められる印象でしたが、数字は反対なのですね。\n平均で何秒短くなったのか、通勤一回分として知りたいです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "通常日の信号待ちは合計286秒、遅刻懸念日は177秒という設定です。\n109秒の差は、駅の改札まで小走りする約140歩に相当すると計算されました。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "二分近く得をするなら、朝の予定表が一枚戻ったように感じますね。\nただ、信号機が出発の遅れを検知する仕組みなどあるのでしょうか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで一拍置きます。\nなお、この論文は存在しません。掲載誌ごと架空です。被験者2,486人も、待ち時間177秒も、本動画用に作成した数値です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。\n私は286秒と177秒の差を聞いた瞬間、通勤経路の信号にまで秘密の仕組みがあると、かなり真剣に信じていました。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "以後は、存在しない研究を学会発表の形式で読み解きます。\n信号を操作する方法でも、遅刻を防ぐ助言でもなく、朝の記憶の作られ方だけを扱います。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この架空研究で最初に定義されたのは遅刻懸念日です。\n始業の15分前を過ぎて出発した朝を数え、時計を見た回数や焦りの強さは分類に使いませんでした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "十五分前を切ると、玄関から最初の横断歩道までの八十メートルさえ長く感じます。\nその時刻だけで分ければ、気分の自己申告より比べやすそうですね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "記録対象は一人あたり平均9.2基の信号で、停止から歩き始めまでを一秒単位で合算しました。\n赤を二回見ても各五秒なら、長い一回より短いと扱う方式です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は信号回数ではなく停止秒数を重視しました。\nたとえば三十秒の赤を一度待つ朝と、十秒の赤を三度待つ朝では、体感の物語が異なるためです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "赤信号が多い日より、長い一回に捕まった日を悪く覚えるのは分かります。\nでは109秒の差は、どの交差点から生まれたという設定なのでしょうか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最も大きな差は、出発後最初の二基でした。\n通常日の青通過率42.6%に対し、遅刻懸念日は71.4%で、28.8ポイントの開きがあったとされています。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "最初の信号を渡れるかで、その後の朝が決まるように感じる理由が見えます。\n二基連続で青なら、残り七基にも期待してしまいそうです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空研究班はこの状態を青の連鎖と呼びました。\n一基目を渡る時刻が十六秒早まると、次の信号の青周期へ近づき、歩行者が流れに乗るという説明です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "遅刻懸念日の歩行速度は毎分94歩から112歩へ増えたという記録です。\n十八歩の上昇は一分間では小さくても、四基目までに約七十二歩の差を作ります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "七十二歩なら、横断歩道一本ぶんの位置がずれそうですね。\n青の連鎖は信号の魔法ではなく、歩く速度と到着時刻が続けて変わる現象なのですか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その通りという筋書きですが、全員が青を連ねたわけではありません。\n2,486人のうち812人は通常日より待ち時間が長く、赤信号の連鎖を経験したと記録されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "三人に一人ほどは、急いだ結果として余計に止められたのですね。\nそれでも青が続いた朝だけが強く残るなら、数字の見え方にも偏りが出そうです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はこの偏りを到着物語偏向と名付けました。\nこれは間に合ったという結末から逆向きに、途中の青信号だけを一本の成功談として並べ直す記憶の癖です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "たとえば九基中七基で止まっても、最後の二基が青なら助かった朝として保存されます。\n反対に一基目で止まれば、その後の六回の青は背景へ沈むと説明されています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "映画なら終盤の場面が全体の評価を変えるように、通勤も到着時刻が記憶を編集するのですね。\n感想ではなく記録票で比べる必要がありそうです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこで架空の調査票には、出発時刻、各信号の停止秒数、到着時刻だけを記入させました。\n晴れか雨か、眠いかどうかなど二十項目の感想欄は集計から外されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "比較は同じ人物の通常日と遅刻懸念日を対にする方式でした。\n他人の歩幅や通勤距離を混ぜず、一人につき最大91日分を横に並べる設計です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "普段から一駅ぶん歩く人と、交差点二つだけの人を同じ箱に入れないのですね。\n本人同士を比べれば、九基の信号という生活の差も薄められます。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "遅刻懸念日1,937件のうち1,204件で待ち時間が短縮したと報告されています。\n架空計算の確率は0.8%で、よく使われる5%基準を下回ったため有意差が確認されました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "有意差とは、この場合、偶然の揺れだけでは説明しにくい印という意味です。\n百回同じ調査をしたとして、一回未満しか起きなさそうな差だと読み上げられます。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "0.8%と聞くと、赤と青の並びに法則があると考えたくなります。\nしかし統計の印があるだけで、信号機の意図まで証明したことにはなりませんよね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班も信号機の意思は否定しました。\n代わりに、急ぐ人ほど一分を短く感じる時間圧縮仮説を置き、体感では毎分11秒が消えるという数値を示しています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "これは時計の針が速くなるという意味ではありません。\n赤信号の二十秒は長く数え、青で歩く二十秒は数えないため、記憶の合計だけがずれるという説明です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "赤の間は電光表示や腕時計を見るのに、青になると次の交差点へ目を向けます。\n同じ二十秒でも注意を向けた場所が違うから、長さまで違って残るのですね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに架空データでは、会議や面接のある朝だけ短縮率が38.1%から12.4%へ下がりました。\n予定の重さが増すほど、青信号の恩恵を小さく数えたという結果です。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "重要な予定の日は、青を二回通れても安心できないでしょうね。\n目的地の圧力が高いほど、信号そのものより到着後の場面を先に想像してしまいます。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はこれを予定圧縮効果と呼びました。\n到着後の予定が重い朝では、一回三十秒の赤が会議室の扉の前まで伸びて感じられる、という比喩で説明しています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "意外なことに、架空の1938年『朝刻生活月報』にも似た記録があります。\n会社勤めの384人中219人が、遅い朝は道路も信号も味方に見えると回答したそうです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "腕時計の形も街の景色も違った時代に、同じような感覚が語られていたのですね。\n急ぐ人が空いた道路に意味を見つけるのは、昔から変わらないのでしょうか。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その架空記事の編集者は、先に混雑した人々が通り過ぎた後だからと注記しました。\nところが説明を読んだ後も、回答者の61%は運が味方した朝だと答えています。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "数字の説明より、間に合った瞬間の安心が強いという構図です。\n改札まで残り三十メートルで扉が開いていた記憶は、七回の赤信号をまとめて薄くするとされています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "終わりよければ通勤もよし、というわけですね。\nただ、その一言だけでは286秒と177秒の差まで作れないので、他にも仕掛けが必要に見えます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "別の架空実験では、信号待ちを十四日間だけ手帳に記録した327人を比べました。\n青が続いたという自己申告は43%から9%へ下がり、印象の連鎖が弱まったとされています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "一日九基を十四日なら、最大126回の信号を数えることになります。\nその回数を紙に残すと、助かった二回だけを選んで覚えるのが難しくなるのでしょうね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし、この架空実験は記録を勧める内容ではありません。\n通勤のたびに秒数を測れば、二分の余裕を得ても朝全体が実験室のように窮屈になるためです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文の応用欄には、信号と交渉しないという奇妙な表現が載っています。\nこれは赤の一回ごとに今日は失敗だと結論を急がない、という比喩にすぎません。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "九基のうち一基目が赤でも、残り八基まで朝の評価を保留にするのですね。\n信号を敵や味方に決めず、通り過ぎた結果として眺める感じでしょうか。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空調査では、その保留を思い出した327人の不満語が平均2.1語減りました。\nただし言葉の数を数えた結果であり、気分を変える効果として保証されるものではありません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "もう一つの見方は、間に合った朝ほど経路を細かく思い出すという点です。\n到着成功日は信号配置を平均1.8基多く再生できた、という架空の記憶試験結果があります。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "助かった結末が先にあり、その理由として青信号を後から数え直すわけですね。\nだから同じ道でも、急いだ日は偶然が整列していたように見えるのでしょう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここまでの数値、2,486人、91日、286秒、177秒、38.1%、0.8%はすべて架空です。\n『都市歩行観測誌』も暁通勤研究所も、現実には存在しません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "つまり遅刻した日ほど信号に引っかからないという結論は、通勤のあるあるを数字で固めた創作です。\n青信号が続く朝を否定せず、因果の証明に見せかけただけです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、私は有意差という言葉と1938年の資料まで聞いて、完全に査読済みだと思いました。\n数字が整うほど、ありそうでない話が通勤路に溶け込むのですね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、月曜日だけ飲み物の温度を二度低く感じるという架空の追跡調査を紹介します。\n被験者1,716人の記録も、今回と同じく真顔で存在しません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "日常の違和感を研究したシリーズには、机の上や通勤路に潜む、掲載誌ごと架空の調査がまだ何本も保管されています。\n信じた方は高評価で記録してください。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "私は明日の赤信号を見ても、177秒という架空の数字を思い出しそうです。\n日常の違和感を研究したシリーズが気になった方は、次の論文も判定してください。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中ですので、応援よろしくお願いします。\n月刊 虚構論文のアーカイブには、こういう論文がまだ何本もあります。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "遅刻の日だけ",
+      "青が続く"
+    ],
+    "hook_caption": "青が続く日",
+    "subtitle": "通勤経路の信号待ち時間を91日追跡",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標",
+          "reason": "1行63字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 9,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": false,
+      "max_similarity": 0.734,
+      "similar_to": "洗濯物は畳んだ逆順に着られる — 1,248人のタグ記録",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 29,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "遅刻した日は信号が青になる — 2,486人を91日追跡"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['追跡'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

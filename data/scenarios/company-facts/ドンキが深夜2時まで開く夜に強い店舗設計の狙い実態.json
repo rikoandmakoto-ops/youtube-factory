@@ -1,0 +1,207 @@
+{
+  "title": "ドンキが深夜2時まで開く「夜に強い店舗設計」の狙い実態",
+  "theme": {
+    "title": "ドンキが夜に強い店舗設計の狙い",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "夜に強い企業",
+      "fact_main": "ドンキ 深夜2時",
+      "fact_sub": "店舗により営業時間は異なる",
+      "text": "ドンキが深夜2時まで開く理由、いくらだと思いますか？",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ 夜 店舗外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "国内600店超",
+      "fact_sub": "ドン・キホーテ等の国内店舗",
+      "text": "国内店舗は600店を超えます。",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ 店内",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "夜22時以降も営業",
+      "fact_sub": "多くの店舗で夜間営業",
+      "text": "多くの店は夜22時以降も営業です。仕事帰りの需要を取り込む設計です。",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ 夜間 売り場",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "深夜0時以降も営業",
+      "fact_sub": "営業時間は店舗ごとに確認",
+      "text": "深夜0時以降も開く店があります。数字だけ見れば、かなり便利です。",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ 深夜 レジ",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "最大24時間営業",
+      "fact_sub": "一部店舗の営業時間",
+      "text": "一部は24時間営業です。買う時間を選ばせないことが、来店理由になります。",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ 24時間 店舗",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "夜勤は22時以降",
+      "fact_sub": "求人の勤務時間帯の例",
+      "text": "ただし夜勤は22時以降です。",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ 店員 夜",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "深夜2時",
+      "夜の売場設計"
+    ],
+    "subtitle": "ドンキはなぜ夜に人が集まるのか",
+    "tagline": "営業時間と売場の数字を読む"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 11,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 6,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.455,
+      "similar_to": "ユニクロ店長の正体、売上1億円を任される裁量",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 38,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "ドンキの深夜2時営業、実は夜に強い設計の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '正体'](+20)",
+      "好奇心ギャップ['正体', '実は'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "ドンキの深夜2時営業、実は夜に強い設計の正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "ドンキの深夜2時営業、実は夜に強い設計の正体"
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}

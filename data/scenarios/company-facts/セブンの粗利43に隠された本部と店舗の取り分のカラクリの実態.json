@@ -1,0 +1,209 @@
+{
+  "title": "セブンの粗利43%に隠された本部と店舗の取り分のカラクリの実態",
+  "theme": {
+    "title": "セブンイレブンの本部と店舗の取り分",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "本部と店舗",
+      "fact_main": "売上の43%",
+      "fact_sub": "加盟店向け資料の例",
+      "text": "売上の43%が本部側へ。ただし、これには理由があります。",
+      "bg_query": "株式会社セブン‐イレブン・ジャパン 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "粗利の43%",
+      "fact_sub": "チャージ率の一例",
+      "text": "これは売上全体ではなく、商品を売って残る粗利の43%です。",
+      "bg_query": "株式会社セブン‐イレブン・ジャパン レジ 売り場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "粗利率30%",
+      "fact_sub": "商品構成で変動",
+      "text": "例えば粗利率30%なら、売上100万円で粗利は30万円です。",
+      "bg_query": "株式会社セブン‐イレブン・ジャパン 弁当 売り場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "本部取り分12.9万円",
+      "fact_sub": "粗利30万円×43%",
+      "text": "その30万円から、本部側の取り分は12万9千円になります。",
+      "bg_query": "株式会社セブン‐イレブン・ジャパン 商品 陳列",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "残り17.1万円",
+      "fact_sub": "人件費などはここから",
+      "text": "店舗に残るのは17万1千円。人件費や家賃はここからです。",
+      "bg_query": "株式会社セブン‐イレブン・ジャパン 店員 レジ",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "24時間365日",
+      "fact_sub": "費用は店舗側で変動",
+      "text": "ただし、24時間365日の運営費は店舗ごとに違います。",
+      "bg_query": "株式会社セブン‐イレブン・ジャパン 夜間 店舗",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったら、話題の企業の実態シリーズもプロフィールでチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "売上43%",
+      "本部の取り分"
+    ],
+    "subtitle": "店舗売上から引かれる費用の実態",
+    "tagline": "加盟店と本部の数字"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.436,
+      "similar_to": "PlayStationの年収989万円、本当は何が違う？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 37,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "セブンイレブン、売上の43%はどこへ行くのか"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '本当の理由'](+20)",
+      "好奇心ギャップ['理由', '実は'](+12)"
+    ],
+    "rejected_title": "セブンイレブン、売上の43%はどこへ行くのか",
+    "attempts": 1
+  },
+  "original_title": "セブンイレブン、売上の43%はどこへ行くのか",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "実はセブンの粗利43%、本部が取る本当の理由"
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}

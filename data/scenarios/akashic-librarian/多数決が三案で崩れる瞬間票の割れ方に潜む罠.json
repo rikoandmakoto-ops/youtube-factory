@@ -1,0 +1,348 @@
+{
+  "title": "多数決が三案で崩れる瞬間、票の割れ方に潜む罠",
+  "theme": {
+    "title": "多数決が、なぜ誰も望まない結論を出すのか、票の割れ方が持つ癖",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "text": "なぜ多数決は、全員を不満にする案を選ぶのか。",
+      "chapter_title": null,
+      "mood": "tense"
+    },
+    {
+      "text": "票が三つに割れた瞬間、構造が決まる。",
+      "chapter_title": null,
+      "mood": "tense"
+    },
+    {
+      "text": "1951年、アローはこの欠陥を定式化した。",
+      "chapter_title": null,
+      "mood": "mysterious"
+    },
+    {
+      "text": "三案以上では、順位が循環する場合がある。",
+      "chapter_title": null,
+      "mood": "mysterious"
+    },
+    {
+      "text": "AよりB、BよりC、なのにCよりAとなる。",
+      "chapter_title": null,
+      "mood": "mysterious"
+    },
+    {
+      "text": "だが、集計順を変えれば勝者も変わる。",
+      "chapter_title": null,
+      "mood": "tense"
+    },
+    {
+      "text": "多数派とは、固定された意思ではないのかもしれない。",
+      "chapter_title": null,
+      "mood": "tense"
+    },
+    {
+      "text": "票の癖はあなたにも残る。登録で次の閉架記録を。",
+      "chapter_title": null,
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "chapter_title": "第1章: 導入",
+      "mood": "mysterious"
+    },
+    {
+      "text": "あなたも、多数決なら公平だと感じたことがあるはずだ。だが3案が並ぶだけで、全員が避けたい結論が勝つことがある。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "1960年代以降の社会的選択理論は、票数だけでは集団の意思を一つに定められない場合を記録している。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "問題は少数派の抵抗ではない。各人の順位を足しても、集団の順位が安定しないという、票の割れ方そのものにある。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "たとえば30人がA、B、Cの三案を選ぶ場面を置く。過半数を得た案だけを採る方式なら、勝者は一つに見える。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "しかしA対B、B対C、C対Aを順に比べると、勝敗が輪になる場合がある。多数派は直線ではなく、円を描く。",
+      "mood": "tense"
+    },
+    {
+      "text": "この記録は、民主的な手続きが誤りだと述べるものではない。ただ、公平な規則にも選べない矛盾が残ると記している。",
+      "mood": "tense"
+    },
+    {
+      "text": "では、誰も明確には望まない案が、なぜ最後に残るのか。書庫の棚から、1951年の一冊を開く。",
+      "mood": "tense"
+    },
+    {
+      "text": "第2章: アローの定理",
+      "mood": "mysterious"
+    },
+    {
+      "text": "1951年、経済学者ケネス・アローは『社会的選択と個人的評価』で、集団選択の条件を厳密に並べた。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "条件の一つは、全員がXをYより好むなら、集団もXをYより上に置くという、きわめて自然な要請である。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "もう一つは、無関係な第三案が加わっただけで、XとYの社会的順位を変えないという条件だった。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "アローの不可能性定理は、選択肢が3つ以上なら、これらを満たす完全な集計規則は存在しないと示した。",
+      "mood": "tense"
+    },
+    {
+      "text": "独裁を避け、個人の順位を尊重し、全員一致も守る。その三つを同時に保つ仕組みは作れないという結論である。",
+      "mood": "tense"
+    },
+    {
+      "text": "ここで重要なのは、投票者が非合理的だから失敗するのではない点だ。整った好みを持つ人々でも、集団では輪が生まれる。",
+      "mood": "tense"
+    },
+    {
+      "text": "多数決は答えを発見する装置ではない。対立する順位の中から、一つを暫定的に通す手続きに近い。私の私見である。",
+      "mood": "tense"
+    },
+    {
+      "text": "第3章: 循環する勝者",
+      "mood": "mysterious"
+    },
+    {
+      "text": "具体例を置く。9人のうち4人はAをBより好み、BをCより好む。残る5人の順位が、結果を静かに反転させる。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "A対Bでは、4人と別の1人がAを選べば、Aは5対4で勝つ。ここだけ見れば、Aが多数派の選択に見える。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "B対Cでは、別の5人がBを選べば、Bは5対4で勝つ。Bもまた、二者択一では多数派の案になる。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "C対Aでは、その5人がCを選べば、Cは5対4で勝つ。A、B、Cのどれも、別の相手には勝てる。",
+      "mood": "tense"
+    },
+    {
+      "text": "これはコンドルセのパラドックスと呼ばれる。18世紀のコンドルセが記したように、多数派の比較は循環しうる。",
+      "mood": "tense"
+    },
+    {
+      "text": "三案を一度に選ぶ相対多数制では、9票のうち4票しか得ない案が当選することもある。過半数は必要とされない。",
+      "mood": "tense"
+    },
+    {
+      "text": "その4票の案を、残る5人全員が二番手以下に置いていたとしても、票が二案へ割れれば結果は変わらない。",
+      "mood": "tense"
+    },
+    {
+      "text": "誰もその案を第一に強く望んでいないように見えても、反対票の分散は一位の票だけを残す。票にはこの癖がある。",
+      "mood": "tense"
+    },
+    {
+      "text": "第4章: 順番が結論を作る",
+      "mood": "calm"
+    },
+    {
+      "text": "さらに、対決の順番も結果に関わる。A対Bを先に行うか、B対Cを先に行うかで、最後の勝者が変わる場合がある。",
+      "mood": "calm"
+    },
+    {
+      "text": "この性質は議題設定の力を示唆する。どの案を最初に落とすかは、単なる事務手続きではなく結果の一部になる。",
+      "mood": "calm"
+    },
+    {
+      "text": "1969年、マッケルヴィは多次元の政策空間で、多数決の到達点が広く動きうる条件を理論的に示した。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "ただし現実の会議が常に混乱するわけではない。選択肢が二つだけなら、単純多数決は比較的明快に機能する。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "選好が似通い、候補が整理され、議題順が固定されている組織では、循環は表面化しにくい傾向が観測されている。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "だが選択肢を三つから四つへ増やした瞬間、分散した反対が勝者を押し上げる余地は増える。",
+      "mood": "tense"
+    },
+    {
+      "text": "敗れた二案の支持者を合わせれば多数だった、という記録は、結果が民意と無関係だという意味ではない。",
+      "mood": "tense"
+    },
+    {
+      "text": "むしろ民意が一枚岩ではないという意味である。制度は、その複雑さの一部だけを数えている。",
+      "mood": "tense"
+    },
+    {
+      "text": "第5章: 閉架に残る票",
+      "mood": "mysterious"
+    },
+    {
+      "text": "だから投票の後に残る不満は、単なる敗者の感情とは限らない。集計からこぼれた順位が、そこに残っている。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "決選投票、順位投票、承認投票などは、そのこぼれ方を減らすために考案されてきた。だが万能な方式は確認されていない。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "アローの定理が残したのは悲観ではない。どの規則が、何を優先し、何を切り捨てるかを明示せよという記録である。",
+      "mood": "calm"
+    },
+    {
+      "text": "次の一冊では、少数意見が会議室から消える過程を扱う。1955年のアッシュの同調実験が残した、一本の線の記録だ。",
+      "mood": "calm"
+    },
+    {
+      "text": "閉架には、まだ読まれていない記録がある。チャンネル登録で、次に開く頁を静かに待つといい。",
+      "mood": "calm"
+    },
+    {
+      "text": "多数決で選ばれた結論を見たとき、あなたは票の数だけを見るのか。それとも、割れた順位の形まで読むのか。",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "全員が不満",
+      "なぜ可決"
+    ],
+    "hook_caption": "全員が不満",
+    "subtitle": "票が割れると、望まれない案が残る",
+    "tagline": "書庫ラグナロク 閉架記録"
+  },
+  "channel_id": "akashic-librarian",
+  "style": "monologue",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 13,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 0,
+        "relatability": 3,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.437,
+      "similar_to": "なぜ30分待っても列をやめられない？並んだ人だけが見落とす本当の理由",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 32,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "enhanced_title": "なぜ3人の多数決だけ？全員が嫌う案が勝ってしまう本当の理由"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for akashic-librarian"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '本当の理由', '全員'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "original_title": "なぜ3人の多数決だけ？全員が嫌う案が勝ってしまう本当の理由",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ3人の多数決だけ？全員が嫌う案が勝ってしまう本当の理由"
+  }
+}

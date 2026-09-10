@@ -1,0 +1,677 @@
+{
+  "title": "給料が上がらない正体、まさかの等級据え置きｗ",
+  "theme": {
+    "title": "ワイの給料がずっと上がらん正体が判明した",
+    "angle": "スレタイ型＋正体＋数字。等級据え置きのスレ"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "まさかワイだけ給料据え置きってマジか！？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 給料明細の数字が3年ずっと同じなんかw",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "クソ上司のA、ワイを新人扱いで呼んどる草",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "3年目で新人は賞味期限切れの設定やろw。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり等級表のワイだけ据え置きやったんや",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ちなみにこの企業のホンネ、もっとヤバいんだけどねw。"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイの身に起きたしょうもない放送事故レベルの事件シリーズ、ワロタって思ったら高評価頼むわw。…あれ、最初のレスもう一回読んでみ？",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、残業は増えたのに給料だけ5年連続で横ばい、なんてことありませんか？　犯人は能力不足ではなく、等級が一段も動かない仕組みかもしれません。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回は「ワイの給料がずっと上がらん正体が判明した」スレから、昇給ゼロを生む等級据え置きの罠を、数字つきで暴いていきます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "スレ主の基本給は月24万円、毎年の評価は悪くないのに3年間で増えた額は合計わずか3000円。弁当一食ぶん程度の伸びだったそうです。",
+      "expression": "sad",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここでいう等級とは、社員を役割ごとに分けて基本給の上限を決める社内ランクのこと。たとえば同じ等級なら、評価が良くても天井は近いんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの反転は、後から入った後輩が昇進して等級アップし、基本給で月2万円上になった点。仕事量では勝っていたスレ主だけ据え置きでした。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり給料が上がらない正体は、昇給査定より前にある「等級の壁」だったわけです。あなたの職場にも、見えない天井はありますか？",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実は勤続十年でも給料が止まる人の多くは、評価が低いからではなく等級が据え置きなんだ。昇給表の同じマスを往復しているだけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "会社の給料はざっくり、役割の値段である等級と、その中での評価額に分かれる。等級が同じなら上がり幅は年数千円になりやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "例えば一般職二級の帯が月給22万から25万円なら、毎年の評価で動けるのはその箱の中だけ。上限に近づくほど昇給は鈍くなる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここでいう等級は、肩書きではなく任される仕事の重さを会社が点数化した段階だ。主任っぽく働いても三級扱いなら給料は三級。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最もきつい数字は、月三千円の昇給でも十年で年収差は約36万円にしかならないこと。物価や社会保険料が増えれば体感は横ばいになる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも評価面談で「よく頑張った」と言われても、それは同じ等級内での順位の話。箱そのものを替える昇格とは別の手続きなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "昇格には欠員、試験、推薦、部門予算などが絡むため、成果だけで即決しない会社もある。席が空かないと次の等級へ進みにくい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり給料明細の数字だけ見て努力不足と決めるのは早い。自分が何等級で、次に上がる条件は何かを確認するのが出発点になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "スレ主の給料が止まった正体は、能力より先に制度の天井だった可能性が高い。みんなの職場、等級と昇格条件は見える化されてる？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "厚労省の賃金構造基本統計では、同じ企業規模でも役職なしの賃金上昇は緩やか。等級が据え置きなら、昇給しても生活が激変しにくい仕組みなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚くのは、基本給が毎年2％上がっても、物価が3％上がれば実質は1％目減りする点。通帳の数字は増えているのに、ワイだけ貧しくなる怪現象だな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "人事の等級制度は、仕事の難しさを段階で分けて給料帯を決める方式。たとえば3等級のままなら、担当が増えても4等級の上限には届きにくい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "代表例として、基本給24万円で昇給率1％なら増額は月2400円ほど。昼食を一回多く豪華にしたら消える額で、努力の手応えが消えるのも当然だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "賃金研究では、転職や昇格の直後に賃金が大きく動きやすい傾向が知られる。社内で同じ等級を回る人は、評価が良くても昇給幅が枠内に収まりやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転、上司が低評価を付けているとは限らん。評価がAでも等級の給与レンジ上限に近いと、昇給原資がほぼ出ない会社もあるぞ。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "給与レンジとは、その等級で払える下限から上限までの幅のこと。たとえば上限30万円の等級で29万8千円なら、評価が高くても伸びしろは小さい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さらに企業の定期昇給は、年齢や勤続への小幅な上乗せとして設計されがち。昇格なしで月額が数千円ずつしか増えないのは、制度上むしろ標準形だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "総務省の消費者物価指数を見ると、食料や光熱の値動きは家計に直撃する。給料明細のプラスより、スーパー会計のプラスが大きければ体感は完全に負ける。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり正体は能力不足と決めつける前に、等級、レンジ、物価の三重ロックかもしれん。お前らの会社は昇格条件が公開されてるか、コメントで教えてくれ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "スレ主の勤続は9年、基本給は月額で実質0円増。昇給ゼロの怪異かと思いきや、給与明細の端に正体を示す数字が潜んでいた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "発端は人事面談での一言、「君はずっと同じ等級だね」。等級とは仕事の難しさを段階化した社内ランクで、主は入社以来ずっと3級だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "普通は毎年の評価で号俸が少し動くのに、この会社は等級内の上限へ達すると停止する仕組み。主の3級レンジは9年目で天井にぶつかっていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転、主は低評価ではなかった。評価表には5段階中4が並び、上司も褒めていたのに、昇進審査へ一度も申請されていなかったんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "人事の古い資料をたどると、等級制度は12年前の組織再編で導入されたらしい。部署ごとの人数枠を固定し、上位等級は席取りゲームになった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも主の部署は上位等級が2席だけで、10年以上座る先輩が両方を占有。能力を測るはずの制度が、椅子の空き待ちへ変質していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "給与の停滞を本人の努力不足と考えていた主は、過去9年の評価通知を並べて愕然。昇給欄の「査定反映」は、等級変更とは別物だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "数字で見ると、同じ3級の下限と上限の差は月3万円。主は上限まで到達済みで、評価が良くても次の1円は4級へ上がらないと発生しない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "では、9年間も誰が昇進申請を止めていたのか。スレ民が注目したのは、毎年同じ文面で届く「現等級で期待以上」という評価コメントだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの正体は、能力不足でも会社の赤字でもなく「等級据え置き」だった。基本給は等級表で決まり、評価が良くても枠外なら月給は1円も動かない。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "等級とは職務の重さを段階で並べた社内ランクで、主任候補でも担当業務のままなら同じ級に固定される。昇給査定と昇格査定は、実は別のレーンだ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり「今年も評価Aでした！」の直後に昇給ゼロは普通に起きる。評価は賞与へ反映されても、等級が変わらなければ基本給テーブルは据え置きになる。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも会社によっては同じ等級の昇給幅が年1000円未満という例もある。月額では約80円、コンビニのホットスナック一個より増えない計算だ。",
+      "expression": "shocked",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、給料が上がらない人ほど「評価面談」だけを聞いている可能性がある。確認すべきは褒め言葉ではなく、次の等級に上がる条件の文面だよ。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "人事制度では、昇格に必要な役割を職務要件と呼ぶ。例えば後輩指導をしただけでは足りず、部署の数字に責任を持つことまで求める会社もある。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "怖いのは、仕事量だけ先に増えて等級は据え置きになるパターン。責任者の穴埋めを半年しても、正式な発令がなければ人事記録上は担当者のままなんだ。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "厚生労働省の賃金構造基本統計調査でも、賃金は年齢や勤続だけで一直線には伸びない。役職や企業規模で差が開き、同世代でも月額差が大きくなる。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "だから面談では「次の等級の要件を三つ、期限付きで教えてください」と聞くのが有効。曖昧な期待ではなく、昇格判定に使う基準を言質として残せる。",
+      "expression": "determined",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "スレ民なら、給料明細より先に等級表と昇格基準を見に行くべきなのか？ワイの据え置き、怠けた罰か会社の仕様か、コメントで正体を当ててくれ。",
+      "expression": "smirk",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日からは給与明細の「等級」を見よう。基本給が半年ゼロ円でも、評価点ではなく等級据え置きが正体なら一発で分かるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きなのは、昇給額が月三千円でも年では三万六千円差になること。放置した等級一段の差、ボーナス計算まで地味に効いてくるぞ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "等級とは会社内の役割ランクのことだね。求人票の仕事を増やしたのにランクが同じなら、昇給しない理由を聞く材料になるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "面談では「上げてください」より、「次の等級の条件を三つ教えてください」と聞け。感情論を避けて、攻略対象を見える化できるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "条件を聞いたら、その場でメモして期限も確認しよう。「売上を何％伸ばせば対象ですか」と数字にすると返答が逃げにくいよ。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "評価表が見せられないと言われたら、去年の自分との比較を頼め。達成済みの項目だけでも分かれば、次の手はかなり絞れるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "成果は週一で三行保存がおすすめ。対応件数や改善時間を残すだけで、半年後の面談で「頑張りました」より強い証拠になるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "逆転ポイントは、昇給交渉が給料の話ではなく役割確認になることだ。会社の基準を言語化させれば、転職判断にも使えるぞ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "まず明細を開いて、等級と基本給を去年分と比べてみてね。あなたの会社、据え置きの理由は何と言われそうかコメントで教えて！",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "結局、昇給ゼロの正体は能力不足ではなく、入社3年目から等級が据え置きだった件。評価表の数字だけ毎年増えるの、切なすぎるよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "スレ民の計算では、月5000円の昇給差でも10年で60万円。等級の一段差は、コンビニ飯どころか旅行代まで静かに奪っていたぞ。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも本人は「今年も評価は悪くない」と安心していたのに、昇格枠が空かないだけで給料が止まる。努力の行き先、そこなの？",
+      "expression": "angry",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きの反転はここからだ、等級据え置き民は自分だけではなかった。コメント欄なら、眠っている給与明細の怪談が一気に集まりそうだな。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日の結論は、給料が上がらない理由を「自分のせい」で閉じないこと。等級、昇格条件、評価面談の三点を見直すのが第一歩だよ。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回は「会社の謎ルール、名前だけで内容を当てるスレ」を解説するよ。朝礼と判子と謎の会議室、どこまで当てられるか勝負だ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "刺さった人は高評価と登録で、ゆっくり2chスレまとめ劇場に集合！あなたの会社の据え置き伝説も、コメントで教えてね。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "給料据置",
+      "犯人は紙"
+    ],
+    "hook_caption": "昇給ゼロ",
+    "subtitle": "等級が動かん",
+    "tagline": "机の奥が黒幕"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "ワイの給料が上がらん正体、判明したんやがw",
+      "selected_hook": "まさかワイだけ給料据え置きってマジか！？",
+      "scores": [
+        {
+          "hook": "まさかワイだけ給料据え置きってマジか！？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 15
+          },
+          "total": 58
+        },
+        {
+          "hook": "お前ら、給料の等級表見たことあるか？w",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 48
+        },
+        {
+          "hook": "ワイの給料が上がらん正体、判明したんやがw",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 35
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "まさかワイだけ給料据え置きってマジか！？",
+          "tension": 7,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ 給料明細の数字が3年ずっと同じなんかw",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "上司のA、ワイを新人扱いで呼んどる草",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "3年目で新人は賞味期限切れの設定やろw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "つまり等級表のワイだけ据え置きやったんや",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "お前らなら上司のAになんて言う？ コメントで頼むわw 高評価とチャンネル登録、1万人目標で毎日投稿中",
+          "tension": 8,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "like",
+      "style_label": "高評価",
+      "original_cta": "お前らなら上司のAになんて言う？ コメントで頼むわw 高評価とチャンネル登録、1万人目標で毎日投稿中や、応援よろしくやでw ワイの身に起きたしょうもない事件シリーズも見てけ草",
+      "new_cta": "ワイの身に起きたしょうもない事件シリーズ、ワロタって思ったら高評価頼むわw"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "company-facts",
+      "bridge_line": "ちなみにこの企業のホンネ、もっとヤバいんだけどねw",
+      "matched_topic": "上司"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 29,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 6,
+        "relatability": 4,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 69,
+      "optimized_score": 69,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.95,
+      "issues": [
+        "42%・71%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "思ったら高評価頼むわw。…あれ、最初のレスもう一回読んでみ？",
+      "keyword_overlap_before": 0.5,
+      "keyword_overlap_after": 0.5
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「上司」→「クソ上司」",
+        "「事件」→「放送事故レベルの事件」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.429,
+      "similar_to": "ワイのPCで彼女が凍った本当の理由w",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 38,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "ワイの給料が上がらん正体w",
+      "enhanced_title": "😏ワイの給料が上がらん正体w🍑",
+      "emoji_added": "🍑",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "😏ワイの給料が上がらん正体w🍑"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 5,
+      "bait_text": "…これ、ワイが悪いんか？コメ欄で判定してくれ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "negative",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "laugh",
+        "statement",
+        "statement",
+        "statement",
+        "question"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "expertise_proof",
+      "trigger_text": "このスレ、他のまとめじゃカットされてる部分まで拾ってる",
+      "position": 3,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 1,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 0.5
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['正体'](+12)"
+    ],
+    "rejected_title": "😏ワイの給料が上がらん正体w🍑",
+    "attempts": 1
+  },
+  "original_title": "😏ワイの給料が上がらん正体w🍑",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "3年給料据え置きのワイ、上がらない正体が判明してしまうｗ"
+  },
+  "cross_channel_keywords": {
+    "ok": false,
+    "blocked_keyword": "正体",
+    "rejected_title": "給料据え置き社員、上がらない正体が判明してしまうｗ"
+  }
+}

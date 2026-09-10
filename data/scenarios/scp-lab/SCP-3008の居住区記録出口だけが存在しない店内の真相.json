@@ -1,0 +1,554 @@
+{
+  "title": "SCP-3008の居住区記録、出口だけが存在しない店内の真相",
+  "theme": {
+    "title": "SCP-3008が閉店しない理由",
+    "angle": "終わらない量販店。滞在者が作った居住区の記録だけを追い、外へ出た者が一人もいない事実を示す"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書、店を出た人間の記録だけが消えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、探索班12人の名簿が、帰還欄だけ空白なのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "店内には少なくとも3つの居住区が記録されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "学校の教室3つ分でも、出口なしで暮らした記録か。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閉店後、住民は扉を探さなくなる。記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高評価を残せ。財団の裏側シリーズには同じ記録がある。毎日投稿中、1万人目標のチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなた、閉店後の量販店に取り残されても出口を探せば帰れる、そう思ったことありませんか？ SCP-3008では外へ出た記録が一人もないのです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今回は、終わらない家具量販店の内部で滞在者が築いた居住区だけを追い、なぜ店が閉店しないのか、その正体を機密記録から暴きます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "判明している最強の事実は、店内に集まった避難者たちが壁と棚で街を作っても、確認済みの脱出成功者はゼロという結末です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "居住区とは、迷子にならないため生存者が商品棚を目印に定め、寝床と見張り台を固めた区画です。通路一本の違いが生死を分けました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも夜になると、店員姿の存在が店内を巡回します。住民は照明を隠し、家具を積み上げて、閉店後だけ現れる脅威をしのいできました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべき反転は、彼らが店を脱出するためでなく、翌朝まで生き残るために街を拡張したことです。出口探しは、いつしか記録から消えていきます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実はSCP-3008では、居住区を築いた生存者でさえ、記録上は一人も店の外へ戻れていません。閉店しない店とは、出口のない世界です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "外見はごく普通の家具量販店ですが、入口を越えると内部空間が異常に拡大します。通路の先が倉庫ではなく、終わらない売場へ接続するのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの現象を空間異常と呼びます。これは建物の大きさより内部が広い状態で、地図を作っても棚の配置が探索者を裏切ります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "店内には迷い込んだ人々が残され、家具売場の机や棚、寝具を組み合わせて居住区を作りました。彼らにとって展示品は商品ではなく壁材です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "居住区は夜に備えるための砦です。昼間は比較的安全な通路も、閉店時刻になると職員と呼ばれる人型存在が巡回を始めます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "職員は昼には接客員のように振る舞いますが、夜間に客を見つけると襲撃します。生存者は照明が落ちる前に壁の内側へ退避するしかありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり閉店しない理由は、営業時間が続くからではありません。店そのものが外界の時間や寸法から切り離され、内部だけで昼夜を繰り返すためです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "食料はフードコートや陳列品から得られますが、補給路はありません。生き延びるほど出口探索の人数は減り、居住区への依存だけが深まります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団記録で最も重い点は、居住区から外へ出た成功者が確認されていないことです。ここは避難所に見えて、帰還者ゼロの静かな収容施設なのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録された居住区は確認できるだけで十四か所、合計二百七十三人が暮らしていましたが、外へ出たと報告された者はゼロ人です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最長滞在記録は推定十一年で、住民は家具売り場を壁に転用し、寝具区画を学校と診療所の代わりに使っていました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が確認した最大の居住区「ホーム・スイート・ホーム」は百十八人規模で、毎晩午後十時に見張りを四人配置していました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "見張りの目的は迷子の捜索ではなく、夜間に巡回する店員実体の接近を音で知らせ、全員を照明の陰へ退避させることです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで逆転があります。居住区は脱出の前線基地ではなく、脱出を試みた住民が二度と戻らないために作られた避難所でした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "二〇〇一年から二〇二一年までの聞き取りでは、出口探索に出た四十七人のうち、帰還者は一人も確認されていません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "代表的な実験では、研究員が通路へ発信機を十九個設置しましたが、信号は平均三時間十七分後に同一座標へ重なりました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "これは通路が円環になったというより、店内の地図そのものが書き換わり、測定上の距離が意味を失う現象を示しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "食料は補充され続け、二百日分を数えた備蓄棚も翌朝には満たされました。住民の生存率は、店内に限れば高かったのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかし財団の結論は冷淡です。SCP-3008は閉店しないのではなく、客が外へ帰るという手順だけを永続的に欠いています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-3008は一見ただの量販店ですが、報告書に残る居住者記録では、外へ出たと確認された者は0人です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が最初に異常を把握したのは、店内で迷った買い物客の失踪届が断続的に重なった後でした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "入口を越えると内部は通常の店舗面積を失い、棚と通路が地平線まで続くような空間へ変わったのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "調査班が集めた記録の中心は脱出者ではなく、取り残された人々が組んだ居住区の変遷でした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "初期の居住者は陳列棚、ベッド、段ボールを壁に転用し、通路の番号を住所代わりに使い始めます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかし驚くべき反転は、住民たちが出口を探すより、夜を越えるための街づくりを優先した点です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録には食料庫の担当、見張り、子供の保護役まで現れ、店内社会が数日単位で再編されたとあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団は居住区ごとの証言を照合しましたが、外へ帰還した人物を知る者は一人も見つけられませんでした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閉店しない理由は営業意思ではなく、出口という結末そのものが住民の記録から消えているからかもしれません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "意外なのは、SCP-3008で確認された居住区の記録に、外部へ脱出した成功者が一人もいないことです。帰還率はゼロ、店内で築いた街だけが増え続けました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "住民たちは家具売り場の机や棚を壁に転用し、通路へ区画名を付けました。量販店の展示空間が、地図を必要とする居住都市へ変質していたのです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "驚くべき反転です。出口を探すための拠点だったはずの居住区は、長期滞在者にとって外へ戻る希望ではなく、生存を先延ばしにする檻になりました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "報告される居住区には寝床、食料庫、見張り台までありました。しかし防壁の目的は脱出準備ではなく、夜間に徘徊する店員から住民を守ることでした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "店内の空間は通常の建物より異常に広く、同じ売り場へ戻れる保証もありません。だから住民は壁の矢印や目印を残し、自分たちの街を固定しようとしました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここで怖いのは、居住区が繁栄の証拠ではない点です。家を増やすほど滞在者は店内へ根を張り、出口のない環境へ生活そのものを差し出していきます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "食料が店内で見つかることも、閉店しない理由を補強します。補給が尽きないように見えるため、脱出に賭ける危険より、今日を生きる選択が積み重なるのです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "だが商品棚があるから安全とは限りません。日中に資材を集め、夜は店員を避けて門を閉じる生活は、毎日が避難所の籠城戦だったと記録されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "居住区の記録だけを追うと、住民は脱出者ではなく定住者へ変わっていきます。閉店しない店とは、客を帰さないまま生活を成立させてしまう施設なのです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまりSCP-3008の恐怖は、扉が消えることだけではありません。出口を失った人間が街を作れるほど長く生きても、外へ出た証言だけは残らない点にあります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日から使える第一の備えは、出口を見失わない買い物術です。大型店では入店直後に非常口と案内板を撮影し、滞在時間を60分で区切りましょう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-3008の居住区記録では、生活者は家具を壁にして区画を守りました。現実でも迷子対策として、家族の集合地点を入口ではなく店外に決めるのが有効です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実践用の持ち物は、充電50％以上のスマホと紙の連絡先です。通信障害や電池切れなら、画面内の地図は家具の迷路より先に役目を失います。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべき反転があります。SCP-3008では出口を探す行為そのものが生存戦略でしたが、記録上、外へ出たと確認された滞在者は一人もいません。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから現実の店舗では、目的の売り場を三つまでに絞る練習が役立ちます。買う物を増やすほど移動距離が伸び、出口の位置記憶は薄れやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "子ども連れなら、迷った時は歩かず店員かレジへ向かう、と先に共有してください。目印を探して通路を巡回するより、助けを求める先が固定されます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "居住区づくりを真似して家具を積む必要はありません。非常時の安全基地は、出口付近の案内所やサービスカウンターのように他者の目がある場所です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "買い物後には、同行者へ『今どこにいるか』を一言送る習慣も便利です。位置共有は30秒で済み、広い売り場で別れた時の探索時間を減らせます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閉店しない店の恐怖は、日常の動線が消えることでした。次に大型店へ入る時は、買い物リストの一番上へ『出口確認』と書いてから歩き始めましょう。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-3008は、出口を失った量販店の内部で、滞在者が家具と棚を組み替え、居住区を築き続けた異常空間だったんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録に残る居住区は、寝床、見張り台、食料庫まで備えていたが、そこから外へ出た成功者は一人も確認されていないぜ。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閉店しない理由は客を迎えるためじゃない。迷った人間を店内に留め、終わりのない生活へ変えるためだと考えると恐ろしいね。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも住民の記録は増えても、脱出者の証言はゼロだ。安全な街に見えた場所ほど、出口を忘れさせる罠だったのかもしれない。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-173、視線を外した瞬間だけ移動する彫像を解説するよ。収容室で求められる監視の恐怖を追うんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "瞬き一回が命取りになる異常存在を、収容手順と被害記録から検証するぜ。SCP財団の扉の向こうを、次も一緒に見届けよう。",
+      "expression": "smile",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この記録が怖かったら高評価とチャンネル登録をお願いするね。ゆっくり異常存在SCPラボは、次の収容報告書も逃がさないよ。",
+      "expression": "smile",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "出口がない",
+      "住民は0人"
+    ],
+    "hook_caption": "記録だけ消えた",
+    "subtitle": "終わらない量販店の居住区記録",
+    "tagline": "外へ出た者は確認されていない"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "高評価を残せ。財団の裏側シリーズには同じ記録がある。毎日投稿中、1万人目標のチャ",
+          "reason": "1行54字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 2,
+        "relatability": 4,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.605,
+      "similar_to": "SCP-███ クラスAの10年の真相",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 48,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-3008「無限のIKEA」居住者0人の実態"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-3008「無限のIKEA」居住者0人の実態",
+    "attempts": 1
+  },
+  "original_title": "SCP-3008「無限のIKEA」居住者0人の実態",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "SCP-3008はなぜ閉店しない？居住区から誰も出られない理由"
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "SCP-3008はなぜ閉店しない？居住区から誰も帰れない理由"
+  }
+}

@@ -1,0 +1,673 @@
+{
+  "title": "自転車が3日でパンクする奴、空気圧を疑えw",
+  "theme": {
+    "title": "ワイの自転車がすぐパンクする正体",
+    "angle": "スレタイ型＋正体＋数字。空気圧のあるある"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "お前ら、空気圧ナメてると自転車が即パンク!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 3日でタイヤがしなしなになるんやがw。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "常識を覆すが、>>1、画びょうでも飼っとるんか草",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかもこの>>1、さらにとんでもないこと言い出してw空気入れた翌朝だけ急に貧乏脚やw。",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり空気圧が足りんだけやったんやw",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ワイの身に起きたしょうもない放送事故レベルの事件シリーズ、草生えたら高評価なw 毎日くだらないスレまとめてるから、登録して待っとけやw。…ちょ待て、>>1に戻ってみろ",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、自転車が月に3回もパンクして「また釘かよ」と疑ったことありませんか？犯人候補は釘より先に空気圧不足、タイヤの中でチューブが擦れる地味な罠です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回はスレタイ通り「ワイの自転車がすぐパンクする正体」を暴くぞ。修理代を積み上げる前に、毎週30秒の確認で防げる可能性がある本編へ突入だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最初に結論の数字を置くと、空気圧が規定より2割低いだけでも段差でリム打ちしやすい。蛇に噛まれたような穴がチューブに並ぶ、あの悲しい現象です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "リム打ちとは、段差の衝撃でチューブが車輪の金属部分に挟まれて穴が開くこと。画鋲を踏んでいないのに同じ場所付近で再発するなら、まず疑うべき正体だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも驚きなのは、空気圧不足は乗った瞬間には意外と気づきにくい点です。タイヤは見た目が丸くても、体重が乗れば接地面だけがぺしゃんこになって危険信号。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "釘、ガラス、劣化、そして空気圧不足――あなたの愛車を狙う真犯人はどれだ？次からパンク痕とタイヤの触り心地を手掛かりに、スレ民式の犯人捜しを始めよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこれ、半分は間違いなんだ。空気圧が低いだけでなく、毎週パンクするなら原因はタイヤ以外にも潜んでいるぞ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "自転車の空気はゴムの壁を少しずつ通り抜けるため、穴がなくても1か月で圧力が目に見えて下がるのが普通だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "空気圧とは、タイヤ内部の空気が外へ押し返す力のこと。乗用車より細い自転車タイヤほど変化を感じやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "圧が足りない状態で段差に乗ると、タイヤがリムへ強く挟まれる。チューブには蛇にかまれたような穴が二つ開く。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "これが通称リム打ちパンクで、画びょうを踏んだ穴とは別物だ。体重が重いほど起きやすいという厄介な仕組みだな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "逆に空気を入れすぎると、路面の衝撃を吸えず乗り心地が硬くなる。ただし指定範囲内なら即破裂するわけではない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "タイヤ側面の数字は、入れてよい圧力の目安だ。たとえば『300kPa』なら、空気入れの表示も同じ単位で確認する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "毎朝しぼむなら、虫ゴムやバルブの不調も疑いどころ。水を付けて泡が出れば、そこから空気が逃げている合図になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり犯人候補は釘だけじゃない。空気圧、段差、バルブ、そして謎の連続被害、ワイの自転車の正体はどれだ？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実験では空気圧が推奨値より20％低いだけで、タイヤのたわみは目に見えて増える。段差でリムに挟まれ、穴が二つ並ぶパンクへ一気に近づくんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも厄介なのは、空気が少ないほど乗り心地は柔らかく感じる点だ。快適になったと油断した翌朝、チューブだけが段差の請求書を払っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "自転車タイヤの空気圧は、体重と路面衝撃を受け止めるバネの強さでもある。例えば700×28Cなら、目安はおおむね5〜7気圧の範囲で語られる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転、パンクの犯人は画びょうとは限らない。低圧で縁石に乗った一回だけでも、蛇にかまれたような二つ穴がチューブに残ることがある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "この二つ穴はリム打ちパンクと呼ばれ、タイヤが潰れてリムと地面に挟まれる現象だ。針穴一個の異物パンクより、犯人を見失いやすいのが特徴。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "海外の転がり抵抗試験でも、極端な低圧はタイヤの変形損失を増やす傾向が出る。つまり遅くなりやすく、段差にも弱く、得をする場面がかなり少ない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "逆に高すぎる空気圧も万能ではない。硬く張ったタイヤは小石の衝撃を逃がしにくく、荒れた道では跳ねて接地が不安定になり、異物を踏む確率も読めなくなる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "空気は自然に抜けるので、正常なチューブでも一週間で圧が下がることは珍しくない。毎朝は大げさでも、週一の指圧確認だけでリム打ち事故は減らせる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ただし指で押す確認は、同じタイヤでも人によって判定がぶれる。携帯ポンプのゲージで推奨圧へ合わせると、原因探しが感覚論から数字の捜査に変わる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "それでも毎回同じ場所で穴が開くなら、タイヤ内側のガラス片やリムテープずれも疑いどころだ。ワイの自転車を狙う真犯人、空気圧以外に心当たりある？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "【急募】ワイの自転車、三日でパンクする正体あげてけ。調査開始の朝、空気圧は規定値の半分以下。犯人は釘とは限らないらしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "自転車の空気入りタイヤは1888年、獣医ジョン・ダンロップが息子の三輪車を楽に走らせようとして広めた。最初から空気漏れとの戦いだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "当時のゴム管は今より不安定で、道路の小石ひとつでも空気が逃げたという。便利な発明ほど、見えない穴を連れてくる歴史がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転、パンクの原因は穴だけではない。毎日少しずつ抜ける自然減圧でも、三週間ほどで走り心地は別物になるぞ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "空気圧とはタイヤ内の空気が押し返す力のこと。例えば700×28Cなら、指定が6気圧前後でも体重や路面で減り方が変わる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "研究ではゴムの分子のすき間を空気が通り抜ける現象も知られ、穴ゼロでも圧は下がる。空気は律儀に脱走届を出さず消える。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "昔の自転車屋では、水を張った桶にチューブを沈め、泡の列で穴を探した。無言で上がる一粒の泡が、犯人の足跡だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただしリム打ちパンクは、空気が少ない状態で段差に乗り、チューブが挟まれて裂ける事故だ。蛇にかまれたような二本線が残る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまりワイの三日パンク、釘・劣化・自然減圧・段差のどれが正体か。君ならまず何を疑う？ コメント欄で名推理をあげてけ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "【驚愕】自転車が月に二回パンクするワイ、犯人は釘じゃなく空気圧不足説が浮上。実は空気は自然に抜け、二週間で圧がかなり落ちる車種もあるらしい。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "空気圧とはタイヤ内部の空気の押す強さで、低いまま乗るとチューブが段差で潰される。これがリム打ちパンク、穴が二つ並ぶ通称スネークバイトだぜ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "釘が刺さった穴は一個なのに、並んだ二穴なら犯人は道路ではなくワイの管理不足かも。段差を越えた瞬間、金属リムがチューブを挟むという地味に怖い仕組み。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転、空気を入れすぎても万能ではない。高圧すぎるタイヤは衝撃を逃がしにくく、古いチューブや劣化したタイヤなら小さな傷が一気に露出するぞ。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "一般的なシティサイクルなら、タイヤ側面に指定された空気圧の範囲を守るのが基本。指で押して少しへこむから大丈夫、という昭和判定はかなり危険らしい。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも後輪は体重の多くを受けるため、前輪より先に傷みやすい傾向がある。毎回後ろだけ潰れるなら、釘を疑う前に空気入れの頻度を数えてみる場面だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "空気圧計付きポンプなら数字で確認できるけど、持っていない家庭も多い。そこで自転車店では、週一回の補充を目安にする案内がよく見られるという。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "バルブの根元から漏れる場合は、チューブ本体に穴がなくても空気が逃げる。虫ゴムやバルブコアの劣化は数百円級でも、放置すると毎朝ペチャンコ案件だ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "タイヤ表面に刺さった細いガラス片は、抜いた直後より走行中に奥へ進むことがある。修理しても同じ位置で再発するなら、タイヤ裏の異物確認が重要だね。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり犯人候補は釘、段差、空気圧、バルブ、そして見落としたガラス片。ワイの自転車を最も狙っている正体、コメント欄ならどれに一票入れる？",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの正体は、月に1回の空気圧チェック不足かも。自転車店では自然に減る前提で、2〜3週間ごとの確認を勧めることが多いぞ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "まずタイヤ側面の数字を見て、指定範囲内まで入れるだけでOK。空気入れのメーターで毎回同じ値にすると、感覚頼みより失敗しにくいぜ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "空気が少ないまま段差へ突っ込むと、リムに挟まれて穴が二つ開くことがある。ヘビに噛まれた跡みたいな穴なら、犯人は段差の可能性大だ。",
+      "expression": "explain",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "通勤前にタイヤを親指で強く押して、ふにゃっと沈むなら要補充。たった10秒の確認でも、帰り道で押して歩く悲劇をかなり減らせるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、空気をパンパンに入れすぎても万能じゃない！指定上限を超えると乗り心地が跳ねて、古いタイヤでは傷が目立ちやすくなるぞ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "週末だけ乗る人は、出発直前に補充する習慣が相性抜群。自動車のように放置できると思わず、乗る日に整えるのがいちばん手軽だぜ。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さらにバルブのキャップは小さくても付けよう。空気漏れを完全に止める部品ではないけど、砂や雨水が入りにくくなって扱いがラクになるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "同じ場所ばかりパンクするなら、タイヤ表面を一周なでて確認だ。ガラス片や細い針金が刺さったままだと、チューブ交換後も即リピートするぜ。",
+      "expression": "explain",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "空気圧を何kPaにしてるか、そして何日で抜けるかコメントで教えて！ワイの自転車を狙う正体、まさか体重なのか段差なのか、みんなで当てよう。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "結論、犯人は細い異物より空気圧不足。月1回の点検を怠るだけで、段差の衝撃はタイヤに何倍も刺さるように伝わるんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも空気は自然に少しずつ抜けるから、見た目が平気でも油断大敵。週1で握るだけでも、突然のパンク沼からかなり逃げられるぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、犯人が画鋲ではなく自分の手抜きだったこと。空気入れ前のタイヤは、静かに次の段差で裏切る準備をしていたんだね。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "パンクが続く人ほど、修理代より先に空気圧を疑うのが近道。自転車屋で見てもらう一手も、通学通勤の安心を買う投資になるぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回は『ワイの傘、なぜか毎回なくなる正体』を解説するよ。コンビニ傘と名前のない傘が生む、参加したくなる謎スレを追うよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回も、くだらないのに妙に刺さる2chの参加型スレから出題。自分だけの珍説をコメント欄へ置いて、みんなで正体を育てようぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "空気圧を思い出せたら高評価、傘の犯人を当てたいなら登録お願い！あなたの自転車パンク原因も、コメントで数字つき報告待ってるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "また抜けた",
+      "犯人は空気"
+    ],
+    "hook_caption": "空気が犯人",
+    "subtitle": "3日でしなしな",
+    "tagline": "タイヤの反乱草"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "ワイの自転車がすぐパンクする正体w",
+      "selected_hook": "お前ら、空気圧ナメてると自転車が即パンク!?",
+      "scores": [
+        {
+          "hook": "お前ら、空気圧ナメてると自転車が即パンク!?",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 48
+        },
+        {
+          "hook": "君の自転車、空気圧以外に原因あると思う？w",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 48
+        },
+        {
+          "hook": "ワイの自転車がすぐパンクする正体w",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 8,
+            "loop_connect": 5
+          },
+          "total": 33
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        3
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "お前ら、空気圧ナメてると自転車が即パンク!?",
+          "tension": 4,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ 3日でタイヤがしなしなになるんやがw",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": ">>1、画びょうでも飼っとるんか草",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "空気入れた翌朝だけ急に貧乏脚やw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "つまり空気圧が足りんだけやったんやw",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "お前らの空気抜け事件もコメントで頼むわw 高評価してチャンネル登録、1万人目標で毎日投稿中やで、応援",
+          "tension": 5,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "subscribe",
+      "style_label": "チャンネル登録",
+      "original_cta": "お前らの空気抜け事件もコメントで頼むわw 高評価してチャンネル登録、1万人目標で毎日投稿中やで、応援よろしくな！ワイの身に起きたしょうもない事件シリーズも見てけ草",
+      "new_cta": "ワイの身に起きたしょうもない事件シリーズ、草生えたら高評価なw 毎日くだらないスレまとめてるから、登録して待っとけやw"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "ワイの身に起きたしょうもない事件シリーズ、草生えたら高評価なw 毎日くだらないス",
+          "reason": "1行59字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 30,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 6,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 74,
+      "optimized_score": 74,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 0.96,
+      "issues": [
+        "50%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "るから、登録して待っとけやw。…ちょ待て、>>1に戻ってみろ",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「事件」→「放送事故レベルの事件」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.505,
+      "similar_to": "ワイのサークル伝説7年目なんやがw",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 39,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "ワイの自転車がすぐパンクする正体w",
+      "enhanced_title": "ワイの自転車がすぐパンクする正体w💦",
+      "emoji_added": "💦",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "ワイの自転車がすぐパンクする正体w💦"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 3,
+      "bait_text": "これ男が悪い派と女が悪い派でコメ欄割れそうｗｗｗ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "surprise",
+        "neutral",
+        "neutral",
+        "positive",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.67
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "statement",
+        "laugh",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "常連ニキならこのノリわかるよなｗ",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 1,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 64,
+    "passed": true,
+    "reasons": [
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['正体'](+12)"
+    ]
+  },
+  "original_title": "ワイの自転車がすぐパンクする正体w💦",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "ワイの自転車がすぐパンクする正体w💦"
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "自転車がすぐパンクする正体、空気圧ナメてる奴の末路w"
+  }
+}

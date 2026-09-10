@@ -1,0 +1,535 @@
+{
+  "title": "架空論文ファイル #18：左の靴紐だけ先にほどける — 歩行1,600kmの摩耗解析",
+  "theme": {
+    "title": "靴紐は左足だけ先にほどける — 歩行1,600kmの摩耗解析",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者1,600人、左の靴紐が先にほどける——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言いますので。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『歩行摩耗紀要』と南北足元研究所が。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "左足は右足より、結び目がほどける率が37.4%高いと報告されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに歩行1,600km後も。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。左の靴紐の論文は存在せず。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標なのでチャンネル登録で応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも出勤前、左の靴紐だけ先にゆるみ、片膝をついて結び直したことはありませんか。架空の歩行1,600km追跡では、左足の結び目が右足より早く離脱する傾向が証明されたと報告されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載誌は架空の『歩行摩耗紀要』、調査機関は南北足元研究所です。被験者1,600人の通勤靴を16週間追跡し、左右の蝶結びを毎晩同じ時刻に撮影した、という整った研究計画になっています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "左だけという指定が妙に具体的ですね。朝の駅前で急いでいるとき、片方の紐だけ気になった記憶がありますが、右足ではなく左足に偏る理由など本当に作れるのでしょうか。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班の結論は、左足の靴紐は右足より37.4%早くほどける、というものです。偶然のばらつきでは説明しにくい差として、統計上の有意差が確認された、と論文らしく記載されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "37.4%も違うなら、仕事や授業へ向かう途中で左だけ結び直す人がいても不思議ではありません。朝の数分は貴重なので、しゃがむ回数まで増えるとなれば気になる結果ですね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで一拍置いて訂正します。なお、この論文は存在しません。『歩行摩耗紀要』も南北足元研究所も架空であり、左足の靴紐を1,600km追跡した記録も最初からありません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。被験者1,600人と16週間という数字まで出されたので、私は完全に信じていました。玄関で左足だけ結び直す場面まで、勝手に研究結果の証拠へ数えていました。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "本稿は『片側優先結び目離脱仮説』という、存在しない論文の査読記録です。ただし靴紐がほどける場面そのものは誰にでも起きるため、37.4%という数字が経験の隙間へ静かに入り込みます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空研究では左右を区別するため、全員の靴に小さな番号札を付けたことになっています。左足は青札、右足は黄札として、結び目の輪が崩れた時刻だけを日誌へ記録する設定です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ほどけた、という判定にも架空の基準があります。蝶結びの輪が靴の甲から3cm以上離れた場合だけを離脱と数え、紐の端が揺れただけの状態は、誤判定を防ぐため除外したとされます。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "輪が3cmという細かさなら、玄関で少しゆるんだ程度は数えないわけですね。では左足の差は、最初の結び方が雑だった参加者だけでは説明できない、という筋書きになるのでしょうか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その通りです。架空の解析では、最初の結び目を写真で照合し、形の違う316例を外したことになっています。残った1,284人分だけを比べても、左足側の離脱率が高かったという構成です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "原因候補の一つは、歩くときの腕振りです。左腕が前後するたび、靴の周囲に小さな空気の渦が生まれ、結び目の片側を毎歩0.02mm引くという、非常にもっともらしい説明が置かれています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "0.02mmなら一歩では見えませんが、通勤で8,000歩も歩けば紐の中では大きな移動です。信号が変わって急に走り出す瞬間には、左の輪だけ先に形を失うようにも想像できます。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空データでは、歩行開始から4,000歩までは左右差が小さく、6,800歩を越えると左足だけ離脱率が上がるとされます。帰宅間際に紐が気になる、という生活感へ寄せた数字の配置です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに靴の甲へ当たる紐の角度も測ったことになっています。左足では平均11.6度、右足では平均10.9度で、この0.7度が結び目の摩擦を減らすという結論に達した設定です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "0.7度の違いで37.4%ほどけやすくなるのは、かなり繊細な話ですね。服のボタンが一つずれるだけで全体の印象が変わるように、結び目も小さな角度に左右されるのでしょうか。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで第二の仕掛けを置きます。架空研究では、左足の紐がほどける人ほど、駅の改札前で立ち止まる回数が2.1倍だったという追加結果まで掲載され、通勤の焦りを数値化したことになっています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "駅の改札前という場所まで出ると、急ぐ朝には妙に切実です。後ろに人がいると紐を直せず、そのまま歩いてしまうので、左足だけの違和感が強く記憶へ残るようにも感じます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし、改札前で止まる回数2.1倍も完全な創作です。数字に駅前という景色を組み合わせると、人は自分の通勤路を思い出し、聞いた話を実際に観察された記録のように扱いやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文らしさを補うため、研究班は靴を三群に分けたことになっています。通勤用、通学用、休日用の各群で左足優位が見られた、と書けば、生活場面まで調べた研究に見えてきます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "通勤用では左足の離脱率が42.8%、通学用では35.1%、休日用では29.6%という設定です。急ぐ日ほど差が広がるよう数値を並べると、忙しい朝の経験へ自然に接続する構図になります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "朝に急ぐほど左の紐が気になるというのは、確かに実感とつながりやすいですね。でも本当に左右で差があるか確かめるなら、同じ人が左右を入れ替えて歩く試験も必要ではありませんか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこで架空の研究班は、靴を左右逆に履く試験を設定しました。被験者96人が室内の直線コースを800m歩き、どちらの紐が先にゆるむかだけを観察した、と付録に記されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "結果はさらに都合よく、靴を逆にしても左足側の紐が先にゆるんだ、と記されています。靴そのものではなく左足の運動が原因らしい、という筋書きを補強するための実験です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "靴を逆にしても左側なら、確かに足の動きが原因のように見えます。けれど普段と違う靴で800m歩く被験者96人は、かなり不自然な協力を求められている研究でもありますね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "不自然さを感じた時点で、査読者としては正しい反応です。もっともらしい研究ほど手法を一段だけ具体化すると信頼が増しますが、具体的であることは、存在の証明にはまったくなりません。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空論文の表には、離脱までの平均歩数も載っています。左足は7,420歩、右足は9,118歩で、差は1,698歩でした。端数まである数字は、読む側の警戒を静かに下げる材料になります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "また雨の日は対象から外した、と記されています。濡れた紐の状態を混ぜると結果がぶれるためだという理由は自然ですが、この除外基準も、架空の研究者が信頼感のために置いた設定です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "雨の日を外すという一文だけで、急に研究が丁寧に見えます。傘を持つ手や水分まで考えたのだと思ってしまいますが、実際には論文そのものがないのですね。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その通りです。架空の論文には、もっともらしい穴埋めが多くあります。たとえば紐の色を白、黒、灰色に分け、色による差は認められなかったと書くと、検討の幅が見えてきます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "色による差がない、という結果は派手ではありません。しかし余計な条件も確認した形にすると、左足だけの結果が偶然ではないように見えます。架空研究では地味な表ほど重要な部品になります。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次に研究班は、結び目を撮影する時刻を朝7時から夜10時まで固定したと主張します。毎日同じ照明で撮れば、ほどけ方の判定が安定するという、写真部のような厳密さを演出できます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "撮影枚数は合計51,200枚で、そのうち左足の蝶結びが崩れた画像は8,946枚だったという設定です。大量の記録数は、読む人に地味な作業量を想像させ、結論へ重みを与えます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "51,200枚も靴の写真を見たなら、研究室の机が靴紐の記録だらけになりそうです。地味な作業ほど本当にありそうに感じますが、研究員も掲載誌も最初から存在しないわけですね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "はい。研究主任として記された『結節歩行ミレイ准査読員』も架空です。肩書きへ少しだけ専門風の語を混ぜると、読者は人名より先に役割を理解し、疑う手順を後回しにしがちです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "歴史の章では、1938年に左足優先説が靴磨き職人の間で語られた、と記されています。古い年号を置くだけで伝承に厚みが出ますが、この職人組合も当然ながら創作上の存在です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "1938年という年代が出ると、古い手帳に記録が残っていそうな気がします。けれど具体的な年号と職業が並ぶほど、架空の設定は現実の隙間へ自然に入り込むのだと分かります。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空の歴史では、その職人たちが左足の紐を『先走り紐』と呼んだことになっています。呼び名があると現象が昔から観察されていたように見えますが、名称の存在は根拠ではありません。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに戦後の通勤靴調査で、左足の結び目だけを二重にした人が18.2%いたという表も添えられます。生活習慣らしい数字ですが、これは創作を補強するために置いた架空の割合です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "二重に結んだ人が18.2%という半端な数は、見た瞬間に信じたくなります。丸い数字より実測らしく見えるのに、数字の細かさ自体は真実性と別問題なのですね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この論文がもし存在したとしても、結論は生活を変える提案ではなく、観察の偏りを記述しただけでしょう。靴紐をどう結ぶべきか、どちらを先に直すべきかという行動の指示は導きません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空研究にも無害な線引きは必要です。通勤前に左足を特別扱いする必要はありませんし、靴紐がほどける頻度から何かを判断する話でもありません。これは日常違和感を素材にした創作です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "つまり持ち帰れるのは、左足を警戒する知識ではなく、数字と専門風の言葉を見たとき一度止まる感覚ですね。それでも朝の急いだ場面なら、私はまた信じかける気がします。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その信じかける瞬間こそが、月刊 虚構論文の収集対象です。身近な経験に37.4%や1,600kmが重なると、記憶の中にある小さな違和感が、調査済みの事実のように整列します。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "読むときの確認法を一つだけ挙げるなら、数字の前に出典を見ます。雑誌名、研究機関名、研究者名がどこにあるかを確認するだけで、権威らしい外装と中身を分けて考えやすくなります。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "今回なら『歩行摩耗紀要』と南北足元研究所が確認対象です。どちらもこの動画のために作った名称であり、検索すれば記録が出るはずだという期待そのものを、静かに利用した設定でした。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "最初から架空の固有名詞だったのに、私は被験者1,600人という人数ばかり覚えていました。数字に目を奪われると、誰が調べたのかという最初の確認を飛ばしやすいのですね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "また、具体的な場所が出ても慌てて結論を出さないことです。駅の改札前、玄関、通勤路といった景色は想像しやすい一方で、想像できることと記録があることは別の問題です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "今回の数字を整理すると、被験者1,600人、16週間、歩行1,600km、左足37.4%増、差1,698歩でした。これらは同じ架空設定を支えるために配した数字で、現実の測定値ではありません。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "数字を並べ直すと、論文らしさの部品がよく見えます。被験者数、期間、距離、割合、端数がそろうと強そうですが、そろっているから正しいという順序にはならないわけですね。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "結び目がほどけるのは、急いでいる日に限って起きる気がする現象です。その小さなあるあるへ、左右差という分かりやすい物語を重ねたのが、今回の『片側優先結び目離脱仮説』でした。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "改めて明示します。この論文は存在しません。掲載誌ごと架空です。左足だけ先に靴紐がほどけるという結論、歩行1,600kmの摩耗解析、研究主任の名前まで、すべて創作として組み立てました。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、最後まで聞いても、やはり全部が架空だったのですね。次に左の靴紐がゆるんだら研究結果ではなく、この動画で私が37.4%という数字に納得しかけたことを先に思い出しそうです。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、月曜日だけ味覚が0.4%鈍るという架空の追跡調査を査読します。52週間の記録という体裁が、週の始まりに感じるぼんやりした違和感へ、どこまで自然に入り込めるかを扱います。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "日常の違和感を研究したシリーズには、靴紐のように説明されると信じかける架空論文が、まだ何本もアーカイブされています。高評価で査読の痕跡を残していただけると助かります。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中です。応援よろしくお願いします。左足の靴紐が気になった方も、存在しない論文の次の一本を、月刊 虚構論文のアーカイブでお待ちください。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "左だけほどける",
+      "1,600km解析"
+    ],
+    "hook_caption": "左足だけ先",
+    "subtitle": "歩行中に起きる左右差を追跡",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標",
+          "reason": "1行64字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 3
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.681,
+      "similar_to": "自販機の左から二番目が先に空になる — 全国942台の在庫記録",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 27,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "左の靴紐だけ先にほどける — 歩行1,600kmの摩耗解析"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['だけ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

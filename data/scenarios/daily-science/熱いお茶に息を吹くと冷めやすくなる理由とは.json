@@ -1,0 +1,510 @@
+{
+  "title": "熱いお茶に息を吹くと冷めやすくなる理由とは？",
+  "theme": {
+    "title": "なぜ熱いお茶は息を吹くと冷めるのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "実は扇風機みたいな息で、熱いお茶は早く冷めます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！湯気が出る90度近いお茶でも変わるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "コップ表面の空気が動くほど、熱は外へ逃げやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホを冷ます風みたいなものなんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも湯気まで運ばれるので、息はただの風以上に働くんです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "熱い飲み物では息の向きも意識してみて。高評価とチャンネル登録で食べ物の科学シリーズを応援して、1万人目標の毎日投稿もよろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで熱いお茶だけ、ふうっと息を吹くと急に飲めそうな温度へ近づくのでしょう。あなたも朝の90度近いお茶へ、急ぎながら何度も息を送ったことがありますよね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！湯気が立つ湯のみへ10秒くらい吹くと違う気がするけれど、口から出る空気だけで本当に温度まで下がるのか気になってた。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえるなら、濡れた洗濯物に風を当てると乾きやすくなるのと同じです。お茶の表面でも空気が入れ替わり、熱と水分が外へ出る順番が変わっています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "洗濯物と一杯のお茶が同じ仕組みにつながるのは意外だね。では最初に逃げているのは、カップの中の熱なのか、それとも白く見える湯気なの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "熱いお茶は、周りの部屋よりずっと高い温度です。たとえば90度のお茶と20度の室温なら、70度の差があり、その差がある限り熱は外へ移ろうとします。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "70度も違うなら、何もしなくても冷めるのは分かるよ。でも息を吹く数秒で口に近づける感じになるのは、どこがそんなに変わっているの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "お茶に触れた空気は、すぐに温められて表面の近くに残ります。その薄い温かい層は、保温シートを一枚置くように、次の熱が逃げる速さを少し抑えています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！水面の上に見えない保温シートがあるなら、息を吹くのはそれをめくって、新しい空気を呼び込む動きになるんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "息の風は、その温まった空気を横へ押し出して、室温に近い空気と入れ替えます。すると70度の温度差が保たれ、熱がお茶から外へ渡る道がまた開くんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、暖房した部屋で窓を少し開けると空気が替わる感じだね。でも自分の息は30度くらいあって、冷たい風ではないよね？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "息は体温に近い約30度前後なので、20度の部屋よりは温かいことがあります。それでも90度のお茶より約60度低いため、表面近くの熱い空気を替える役には十分です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、息は温かいのに役立つんだ！比べる相手が90度のお茶なら、30度の息でもかなり低いから、熱い空気の層を押し出せるわけだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。息が効く理由は空気を替えることだけではなく、お茶から出る水分まで動かしている点にあります。湯気は見た目以上に熱を連れ出します。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、湯気そのものが熱を運んでいるの？白いもやが上へ消えるだけに見えていたけれど、お茶を飲みやすくする働きまでしていたんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "水面では、水の粒の一部が空気へ飛び出し続けています。液体から出る粒にはエネルギーが必要なので、その分だけ残ったお茶から熱が持ち去られ、温度が下がっていきます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、湯気は熱を抱えた小さな荷物みたいなものなんだね。では、表面近くに湯気がたまると、その荷物はもう出にくくなるの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。カップの真上に水分を含んだ空気がたまると、水の粒が新しく出る余地が減ります。息で空気を流すと、表面に空いた席ができるように水分が出やすくなります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "満員電車で出口の前が詰まると人が動けないのと同じだね。空気を横へ流して出口の前を空ければ、湯気も熱も外へ行きやすくなるわけだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。運動後に汗をかいて風へ当たると涼しく感じるのは、肌の水分が空へ出やすくなり、体の熱を一緒に運び出すからです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、お茶に息を吹く行動と、汗をかいた体が風で涼しくなる感覚が同じ方向なんだ！だから湿度が高い夏の日は、汗をかいても軽くならないのかな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "湿度が高い日は、空気がすでに水分をたくさん含んでいます。そのため汗も湯気も出にくくなり、同じ25度の部屋でも、乾いた日より冷め方がゆっくりに感じることがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "雨の日の台所で熱いスープがなかなか飲めない気がするのは、気分だけではないかもしれないんだね。空気の水分まで関係するのは面白いな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "風が表面近くの空気を入れ替えて熱を運ぶ動きには、対流という名前が付いています。要するに、止まった空気を動かして、お茶の熱が外へ渡る道を広げることです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "対流って理科室の大きな実験だけの言葉だと思っていたよ。口から出る小さな風でも、湯のみの縁に沿って空気を動かせば、同じように働くんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "手に息を吹くと冷たく感じ、口を大きく開けて息を吐くと温かく感じることがあります。細く速い風ほど、手の表面の水分を運びやすく、感じ方が変わるためです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！同じ口でも吹き方で手の感じ方が変わるなら、お茶でも風の速さや当て方で、水面の空気の替わり方が違いそうだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "お茶では、表面を広くなでるように風を送ると、温かい空気と水分を動かしやすくなります。一点へ強く吹くより、湯のみ全体を横切る流れを作るほうが穏やかで安全です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ストローで水面を押すより、うちわでそっとあおぐ感覚なんだね。飛び散らせずに表面を広く動かせるから、熱い飲み物を扱うときにも向いていそう。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "液体の冷め方は、容器の口の広さでも変わります。同じ200ミリリットルでも、背の高いマグより平たい湯のみのほうが、水面が広くなって空気に触れる場所が増えます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "200ミリリットルが同じなのに違うの？量が同じなら同じ時間で冷めそうなのに、水面の広さで変わるなら、器選びにもちゃんと理由があるんだね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "広い水面は、熱を渡す場所と水分が出る場所を増やします。たとえるなら、同じ100人でも改札が1つの駅より4つある駅のほうが、人が外へ流れやすいのと同じです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、平たいカフェラテは早く飲める温度になる感じがあるよ。逆にふた付きのカップが熱いままなのも、その出口を減らしているからかな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ふたをすると、表面近くの空気が入れ替わりにくくなり、水分も逃げにくくなります。持ち歩き用のふた付きカップが温かさを保ちやすいのは、熱の出口を小さくしているからです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！保温ボトルだけでなく、普通のふたにも空気と湯気を閉じ込める役があるんだね。では、氷を一つ入れる方法とは何が違うの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "氷は溶けるときに、お茶から大きな熱を受け取ります。一方の息は、熱を吸う新しい材料を入れず、すでにある熱が外へ出る速さを上げるだけなので、役割がまったく違います。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "氷は熱を受け取る新しい仲間で、息は出口を整える係なんだね。同じ冷ます行動でも、熱がどこへ行くかを考えると違いがはっきり見えてくるよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔から熱い飲み物を受け皿へ移したり、広い器へ注いだりする工夫が使われてきました。見た目の作法だけでなく、表面を増やして早く飲める温度へ近づける知恵でもありました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "熱い飲み物を少しずつ別の器へ移す場面を見たことがあるよ。昔の人も温度計がなくても、湯気や器の広さから冷め方の違いを感じ取っていたのかもしれないね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、息を吹けば必ず何度下がる、と一つの数字では言えません。最初の温度、室温、湿度、カップの材質、吹く時間で変わるため、ここは条件ごとに結果が違います。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ30秒でも、冬の20度の部屋と夏の28度の部屋では違いそうだね。では自分の一杯で確かめるなら、熱いまま危なくならない方法が知りたいな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "試すなら熱湯ではなく、飲める手前まで冷ましたお茶を使ってください。100ミリリットルずつ二つのカップに分け、片方だけをうちわで30秒あおぐと比べやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "30秒なら朝の支度中でも試せそうだね。息を直接吹くより、うちわなら水滴を飛ばしにくく、表面を横へ流れる空気も作りやすいから安心できそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "料理用の温度計があれば、始める前と30秒後の温度を書いてみてください。数字にすると、なんとなく冷めたという感覚が、空気を動かした差として自分の台所で見えてきます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！お茶を待つ数分が小さな観察になるんだね。温度計がなくても、同じ量を同じ器に入れれば、口に近づけたときの違いは比べられそう。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "急いで飲みたいときほど、強く吹き続けるより、少し待ちながら表面をゆるく動かすのがおすすめです。熱い液体が跳ねることもあるので、顔を近づけすぎないでください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "飲みやすくしたいのに、急いで吹いてこぼしたら残念だもんね。広い器、少しの風、そして待つ時間を使えば、口の中を急がせずに楽しめそうだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "熱いお茶が息で冷めるのは、温まった空気を替える動きと、水分が空へ出やすくなる動きが重なるからです。小さな一息が、熱の出口を二つ広げているんですね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それなら湯気を見ながら吹く時間も、ただ待っているだけではないんだね。あなたの息が水面に新しい空気の通り道を作り、熱を外へ送り出しているんだ。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜、温かい飲み物を入れたら、湯気の上を空気がどう動くか少し意識してみてください。汗に風が当たる感覚まで思い出すと、お茶の冷め方がもっと身近に見えてきます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、眠りに落ちる瞬間になぜ体がびくっと動くのかを見ていくよ。数秒のうちに脳と筋肉で何が切り替わるのか、寝る前に思い出したくなる話だね。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日のお茶の話が面白かったら、高評価を押してもらえるとうれしいです。食べ物の科学シリーズには、毎日の一杯や食卓を見直せる身近な話をこれからも増やしていきます。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "息で冷める理由を知ると、明日の朝のお茶も少し楽しくなりそうだね。湯気、器、空気の流れを見比べながら、自分の飲みやすい一杯を探してみたくなったよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "身近な不思議を毎日1本ずつ解き明かしているので、面白かったらチャンネル登録よろしくお願いします。1万人を目指して投稿中ですから、明日も理子と真と一緒に見てほしいです。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "息でなぜ",
+      "お茶が冷める"
+    ],
+    "hook_caption": "3分の差",
+    "subtitle": "熱いお茶に息を吹くと何が起きるのか",
+    "tagline": "口元の小さな風が温度を動かす"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "熱い飲み物では息の向きも意識してみて。高評価とチャンネル登録で食べ物の科学シリー",
+          "reason": "1行64字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 20,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 7,
+        "emotional_impact": 0,
+        "relatability": 3,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.544,
+      "similar_to": "泳ぐあなたの脳、3秒の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 38,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ息でお茶は3分早く冷める？正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 78,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "短すぎ(17字 < 18)(-12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "なぜ息でお茶は3分早く冷める？正体",
+  "cross_channel_keywords": {
+    "ok": false,
+    "blocked_keyword": "理由",
+    "rejected_title": "なぜ息でお茶は3分早く冷める？正体"
+  }
+}
