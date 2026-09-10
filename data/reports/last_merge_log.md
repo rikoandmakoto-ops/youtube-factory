@@ -78,7 +78,7 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 ```
 
 - 原因: Linux サンドボックスに GitHub 認証情報が存在しない。`credential.helper` 未設定、`~/.git-credentials` / `~/.netrc` / `~/.ssh` / `gh` CLI いずれもなし。Mac の Keychain はサンドボックスから参照できない。**09-10 03:44 の前回実行と同じ原因**（2回連続）。
-- 状態: `main` は `origin/main` より **6コミット先行**。ローカルにデータは全て保存済みで消失なし。
+- 状態: `main` は `origin/main` より **7コミット先行**（上表の6本＋本ログのコミット `59bc1df`）。ローカルにデータは全て保存済みで消失なし。
 - **要対応（人手）**: `cd ~/Developer/youtube-factory && git push origin main`
 
 ### aiseki — **push 未実施（同じ認証情報の問題）**
