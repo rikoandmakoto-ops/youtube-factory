@@ -197,7 +197,7 @@ Step 6: YouTube投稿
   └→ post_upload.py: プレイリスト追加・コメント固定等
 
 Step 7: PDCA分析
-  └→ run_daily_pdca.py（毎日23:00）
+  └→ run_daily_pdca.py（毎日22:30）
   └→ analytics.db にスナップショット保存
   └→ 分析結果は YouTube_HANDOVER.md に追記（このファイル）
   └→ コンフィグ変更があれば data/channels/*.json を更新

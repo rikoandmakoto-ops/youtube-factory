@@ -890,6 +890,21 @@ def main(argv: List[str]) -> int:
     except Exception as e:
         print(f"⚠️ video_metrics の充足チェックに失敗: {e}")
 
+    # レンダリング環境の健全性。09-09 は「エラー0件のまま投稿が21本→1本」に
+    # なった。ジョブは失敗しておらず、1フレームに 20〜162 秒かかっていただけで、
+    # 例外を見る監視には一切かからなかった。0本を「実績0」と読ませないための節。
+    try:
+        from pipeline import render_health as _rh
+        snap = _rh.probe()
+        md_parts.append(_rh.format_section(snap))
+        if snap["verdict"] == "ok":
+            print(f"[レンダ環境] ✅ 合成 {snap['composite_ms']:.0f}ms / "
+                  f"load {snap['load_per_core']:.1f}/core")
+        else:
+            print(f"[レンダ環境] ⚠️ {snap['verdict']}: " + " / ".join(snap["reasons"]))
+    except Exception as e:
+        print(f"⚠️ レンダリング環境の点検に失敗: {e}")
+
     combined_md = "\n".join(md_parts)
     (out_dir / "report.md").write_text(combined_md, encoding="utf-8")
     (REPORTS_DIR / "latest.md").write_text(combined_md, encoding="utf-8")

@@ -23,6 +23,7 @@ Usage:
 """
 
 import json
+import os
 import threading
 import time
 import traceback
@@ -162,6 +163,9 @@ class JobQueue:
         self._executor: Optional[ThreadPoolExecutor] = None
         self._futures: Dict[str, Future] = {}
         self._lock = threading.Lock()
+        # 永続化の直列化。_lock とは別にする（書き出しは数百ms〜秒かかるので、
+        # その間 enqueue / cancel を止めたくない）。
+        self._save_lock = threading.Lock()
         self._running = False
         self._worker_thread: Optional[threading.Thread] = None
         self.on_job_complete = on_job_complete
@@ -182,18 +186,49 @@ class JobQueue:
     # ────────────────────────────────────────────────────────────────
 
     def _save(self) -> None:
-        """全ジョブ状態をディスクに書き出す。失敗してもキューは継続"""
+        """全ジョブ状態をディスクに書き出す。失敗してもキューは継続
+
+        【2026-09-10 修正】09-08〜09-09 に 78 回出ていた保存失敗の真因。
+        `_save()` はワーカー2本・APScheduler・API から**ロック無しで同時に**
+        呼ばれる。そのため2つの競合が起きていた:
+
+          1. `[Errno 2] ... job_queue.json.tmp -> job_queue.json`
+             tmp のファイル名が固定なので、先に `replace()` した側が tmp を
+             消し、後続の `replace()` が「そんなファイルは無い」で落ちる。
+          2. `dictionary changed size during iteration`
+             `self._jobs.values()` の走査中に別スレッドが enqueue する。
+
+        滞留中のジョブが保存されないまま再起動すると全部消えるので、
+        「失敗してもキューは継続」で済ませてよい類の失敗ではなかった。
+
+        対処: スナップショットは `self._lock` の下で取り、書き出し自体は
+        専用ロックで直列化し、tmp はプロセス/スレッド固有の名前にする。
+        """
         if self._persist_path is None:
             return
         try:
-            self._persist_path.parent.mkdir(parents=True, exist_ok=True)
-            snapshot = [j.to_persist_dict() for j in self._jobs.values()]
-            payload = {"version": 1, "jobs": snapshot}
-            tmp = self._persist_path.with_suffix(self._persist_path.suffix + ".tmp")
-            tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
-            tmp.replace(self._persist_path)
+            with self._lock:
+                snapshot = [j.to_persist_dict() for j in self._jobs.values()]
         except Exception as e:
-            print(f"⚠️ JobQueue persist failed: {e}")
+            print(f"⚠️ JobQueue persist failed (snapshot): {e}")
+            return
+
+        payload = {"version": 1, "jobs": snapshot}
+        tmp = self._persist_path.with_name(
+            f"{self._persist_path.name}.{os.getpid()}.{threading.get_ident()}.tmp"
+        )
+        with self._save_lock:
+            try:
+                self._persist_path.parent.mkdir(parents=True, exist_ok=True)
+                tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2),
+                               encoding="utf-8")
+                tmp.replace(self._persist_path)
+            except Exception as e:
+                print(f"⚠️ JobQueue persist failed: {e}")
+                try:
+                    tmp.unlink()
+                except OSError:
+                    pass
 
     def _load(self) -> None:
         """起動時: 永続化ファイルからジョブを復元。
@@ -341,6 +376,43 @@ class JobQueue:
         jobs.sort(key=lambda j: j.created_at, reverse=True)
         return [j.to_dict() for j in jobs]
 
+    # ジョブ1本の想定上限（分）。ショート1本のレンダは平常時 2〜6 分、
+    # 長尺込みでも 40 分以内に終わる。90 分は「明らかに詰まっている」帯。
+    STALL_THRESHOLD_MINUTES = 90
+
+    def stalled_jobs(self, threshold_minutes: Optional[int] = None) -> List[Dict]:
+        """`threshold_minutes` を超えて RUNNING のままのジョブを返す。
+
+        【2026-09-10 追加】09-09 に投稿が21本→1本になったとき、ERROR ログは
+        **0件**だった。ジョブは失敗しておらず、1本が 11時間21分・もう1本が
+        16時間51分ワーカーを占有し続けていただけである。例外を見る監視は
+        この形の障害を一生検知しない。「失敗」ではなく「長すぎる」を見る。
+        """
+        limit = threshold_minutes if threshold_minutes is not None \
+            else self.STALL_THRESHOLD_MINUTES
+        now = datetime.now()
+        out: List[Dict] = []
+        with self._lock:
+            jobs = list(self._jobs.values())
+        for j in jobs:
+            if j.status != JobStatus.RUNNING or not j.started_at:
+                continue
+            try:
+                started = datetime.fromisoformat(j.started_at)
+            except (TypeError, ValueError):
+                continue
+            minutes = (now - started).total_seconds() / 60.0
+            if minutes >= limit:
+                out.append({
+                    "id": j.id,
+                    "channel_id": j.channel_id,
+                    "title": j.title,
+                    "running_minutes": round(minutes, 1),
+                    "progress": j.progress,
+                })
+        out.sort(key=lambda d: d["running_minutes"], reverse=True)
+        return out
+
     def get_stats(self) -> Dict:
         """ジョブ統計"""
         with self._lock:
@@ -365,11 +437,50 @@ class JobQueue:
             "by_channel": channel_counts,
             "workers": self.max_workers,
             "running": self._running,
+            # 「失敗していないのに詰まっている」を API からも見えるようにする。
+            "stalled": self.stalled_jobs(),
         }
+
+    # 滞留チェックの間隔（秒）。レンダは分単位なので細かく見ても意味がない。
+    _STALL_CHECK_INTERVAL = 600
+
+    def _report_stalled(self) -> None:
+        """滞留しているジョブを警告として吐く（`_dispatch_loop` から定期実行）。
+
+        ここで自動的に kill はしない。長尺や切り抜きは正当に長くかかることが
+        あり、途中生成物を残したまま殺すと後始末の方が高くつく。**気づけない
+        ことが 09-09 の障害の本体**なので、まず見えるようにする。
+        """
+        try:
+            stalled = self.stalled_jobs()
+        except Exception:
+            return
+        if not stalled:
+            return
+        with self._lock:
+            jobs = list(self._jobs.values())
+        pending = sum(1 for j in jobs if j.status == JobStatus.PENDING)
+        print(f"🐌 JobQueue 滞留検知: {len(stalled)}件が "
+              f"{self.STALL_THRESHOLD_MINUTES}分以上 running のまま "
+              f"(ワーカー {self.max_workers} / 待機 {pending}件)")
+        for s in stalled:
+            print(f"   [{s['id']}] {s['channel_id']} — {s['running_minutes']:.0f}分 "
+                  f"／ {s['title'][:40]}")
+        try:
+            from pipeline import render_health
+            snap = render_health.probe()
+            if snap["verdict"] != "ok":
+                print(f"   ⚠️ レンダ環境 {snap['verdict']}: " + " / ".join(snap["reasons"]))
+        except Exception:
+            pass
 
     def _dispatch_loop(self):
         """キューからジョブを取り出してワーカーに投入"""
+        next_stall_check = time.time() + self._STALL_CHECK_INTERVAL
         while self._running:
+            if time.time() >= next_stall_check:
+                next_stall_check = time.time() + self._STALL_CHECK_INTERVAL
+                self._report_stalled()
             try:
                 if not self._queue.empty():
                     _priority, job_id = self._queue.get(timeout=1)

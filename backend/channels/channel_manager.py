@@ -11,6 +11,7 @@ Usage:
     seeds = ch.theme_seeds               # シナリオ自動生成用テーマ候補
 """
 
+import copy
 import json
 from pathlib import Path
 from typing import Dict, List, Optional, Any
@@ -438,12 +439,35 @@ class ChannelManager:
         return self._channels[channel_id]
 
     def update_channel(self, channel_id: str, updates: Dict) -> Optional[ChannelProfile]:
-        """チャンネル設定を更新してJSONに保存"""
+        """チャンネル設定を更新してJSONに保存
+
+        【2026-09-10 修正】土台を **ディスクの現在の中身**にした。
+
+        以前は `ch._raw`（＝最後に reload した時点のメモリ上の写し）を土台に
+        ファイルを丸ごと書き直していた。稼働中の backend は起動時のJSONを
+        メモリに抱えたままなので、指揮者がディスク側を直した後にこの経路が
+        1回でも走ると、**更新キー以外の全ての変更が黙って巻き戻る**。
+        09-08 に「バックエンドが設定を上書きして消す」として観測された症状が
+        これで、原因は再起動忘れではなく、この関数が古い写しを正としていたこと。
+
+        あわせて deepcopy にした。`.copy()` は浅いので、下の video_format の
+        部分更新が `_raw` の入れ子をその場で書き換えてしまっていた。
+        """
         ch = self._channels.get(channel_id)
         if not ch:
             return None
         file_path = self._data_dir / f"{channel_id}.json"
-        raw = ch._raw.copy()
+        raw = None
+        if file_path.exists():
+            try:
+                raw = json.loads(file_path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as e:
+                # ディスクが読めない/壊れているときだけメモリの写しに退避する。
+                # 黙って古い値で上書きしないよう、必ず声を出す。
+                print(f"⚠️ update_channel: {file_path.name} を読めないので "
+                      f"メモリ上の写しを土台にします — {e}")
+        if raw is None:
+            raw = copy.deepcopy(ch._raw)
         # トップレベルフィールド更新
         for key in ("name", "concept", "style", "youtube_channel_id",
                      "characters", "thumbnail_template", "defaults",

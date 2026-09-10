@@ -1743,6 +1743,23 @@ async def startup_event():
     except Exception as e:
         print(f"⚠️ video_status の予約行の後始末に失敗: {e}")
 
+    # レンダリング環境の健全性を起動時に1行だけ残す。09-09 はホストの資源が
+    # 枯れて1フレーム 20〜162 秒になり、投稿が 21本→1本 になったが、
+    # ERROR ログは0件で監視に一切かからなかった（→ pipeline/render_health.py）。
+    try:
+        from pipeline import render_health as _rh
+        snap = _rh.probe()
+        if snap["verdict"] == "ok":
+            print(f"🖥  レンダ環境: ✅ 合成 {snap['composite_ms']:.0f}ms / "
+                  f"load {snap['load_per_core']:.1f}/core")
+        else:
+            mark = "⚠️" if snap["verdict"] == "degraded" else "🚨"
+            print(f"🖥  レンダ環境: {mark} {snap['verdict']} — "
+                  + " / ".join(snap["reasons"]))
+            print("     python3 backend/check_render_health.py で詳細")
+    except Exception as e:
+        print(f"⚠️ レンダリング環境の点検に失敗: {e}")
+
     print()
     print("🏭 YouTube Factory ready!")
     print(f"   📺 Channels: {', '.join(channel_manager.list_ids())}")

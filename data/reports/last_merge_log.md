@@ -1,116 +1,125 @@
 # 全プロジェクト マージ・整理ログ
 
-実行日時: 2026-09-08（daily-merge-all-projects 自動実行）
+実行日時: 2026-09-09 22:00 〜 2026-09-10 00:10 (JST)
+対象: youtube-factory / aiseki / ai-english-coach
+
+---
 
 ## サマリ
 
-| リポジトリ | マージ | コミット数 | push |
+| リポジトリ | マージ | コミット | push |
 |---|---|---|---|
-| youtube-factory | 対象なし | 5 | ❌ 認証不可（要手動） |
-| aiseki | 対象なし | 2 | ❌ 認証不可（要手動） |
-| ai-english-coach | 対象なし | 1 | ⚠️ リモート未設定 |
+| youtube-factory | 対象なし（mainのみ） | 4件（67ファイル） | **失敗（認証情報なし）** |
+| aiseki | 対象なし（mainのみ） | なし（作業ツリーはクリーン） | 未実施（既に origin より 4 コミット先行） |
+| ai-english-coach | 対象なし（`_locktest` は main にマージ済み） | なし（作業ツリーはクリーン） | 該当なし（remote 未設定） |
 
 ---
 
 ## Phase 1: マージ
 
-**マージしたブランチ: なし。コンフリクト: なし。**
+### youtube-factory
+- ローカルブランチは `main` のみ。未マージブランチなし。
+- コンフリクト: なし。
 
-- **youtube-factory** — ブランチは `main` のみ。`git branch --no-merged main` は空。マージ対象なし。
-- **aiseki** — ブランチは `main` のみ。マージ対象なし。
-- **ai-english-coach** — `main` と `_locktest` の2本。`_locktest` は既に main にマージ済み（`git branch --merged main` に含まれる、HEAD は `a90c4ad`）。マージ対象なし。
-  - 補足: `_locktest` は完全にマージ済みなので削除しても安全だが、破壊的操作は指示外のため残置した。
+### aiseki
+- ローカルブランチは `main` のみ。未マージブランチなし。
+- コンフリクト: なし。
+
+### ai-english-coach
+- ブランチ: `main`, `_locktest`
+- `git merge-base --is-ancestor _locktest main` → **`_locktest` は main にマージ済み**。マージ操作は不要。
+- コンフリクト: なし。
 
 ---
 
 ## Phase 2: 整理・コミット
 
-### youtube-factory（5コミット）
+### youtube-factory（4コミット / 計67ファイル）
 
-| コミット | メッセージ | ファイル数 |
-|---|---|---|
-| `63b4bf4` | chore: 一時ファイルと日次レポート出力を .gitignore に追加 | 1 |
-| `77546c8` | docs: 09-06〜09-08 のメモリ更新ログと HANDOFF を反映 | 6 |
-| `e96aa60` | data: 09-08 の分析・チャンネル設定・シリーズリンク・バイラル翻訳待ちを更新 | 51 |
-| `6cb0fd0` | data: 09-06〜09-08 の分析xlsxと全進捗レポートを追加 | 5 |
-| `05e1334` | chore: 09-07/09-08 の制作指示実行スクリプトを追加 | 2 |
+1. `302e28c` **データ更新: 分析・チャンネル設定・オリジナリティ・トレンドを09-09時点に同期**
+   - 25ファイル (+1205 / -676)
+   - `data/analytics/` 3件、`data/channels/` 8件、`data/cta_history/`、`data/fact_ledger/`、`data/originality/` 8件、`data/series_links/`、`data/trends/` 2件、`data/analytics/viral_translation_pending/viral_1wapy6u.json`（新規）
 
-.gitignore 追加パターン:
+2. `8b2e996` **テーマキュー追加: 全7チャンネルの新規シナリオ25件とアーカイブ索引を更新**
+   - 28ファイル (+10837)
+   - 2ch-matome / akashic-librarian / company-facts / daily-science / fake-paper / pokemon-lab / scp-lab / yokai-watch のテーマキュー json、アーカイブ `_index.json` 3件、アーカイブ済みシナリオ md 3件
 
-```
-.__perm_test
-data/reports/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
-```
+3. `f476dcc` **指揮者スクリプト追加: 09-09の適用・検証・xlsx生成スクリプトと分析レポート**
+   - 12ファイル (+1355)
+   - `scripts/orch_*_20260909.py` 10件 + `scripts/orch_cache_values.py`、`reports/youtube_analysis_20260909.xlsx`、`trigger_20260909.command`
 
-- `data/reports/2026-09-06/`・`2026-09-07/` は日次生成物。過去に日付ディレクトリを追跡した実績がないため ignore に回した（flat な `handoff_*.md` 等は従来どおり追跡）。
-- `reports/*.xlsx`・`restart_and_trigger_*.command`・`MEMORY_UPDATE_*.md`・`data/analytics/viral_translation_pending/*.json` は同種ファイルが既に追跡済みのため、慣例に合わせてコミットした。
+4. `d2fa066` **docs: HANDOFF更新と09-09のメモリ更新メモを追加**
+   - 2ファイル (+344): `HANDOFF.md`、`MEMORY_UPDATE_20260909.md`
 
-### aiseki（2コミット）
+作業ツリーは上記コミット後クリーン（.gitignore 対象を除く）。
 
-| コミット | メッセージ | ファイル数 |
-|---|---|---|
-| `1d3f26e` | chore: LibreOffice のロックファイルを .gitignore に追加 | 1 |
-| `1538169` | docs: マーケ資料（DMテンプレ・SNSコンテンツ・競合分析）とインフルエンサーリスト生成スクリプトを追加 | 4 |
+### aiseki
+- `git status` クリーン。未コミット・未追跡ファイルなし。コミットなし。
 
-.gitignore 追加パターン:
+### ai-english-coach
+- `git status` クリーン。未コミット・未追跡ファイルなし。コミットなし。
 
-```
-.~lock.*#
-```
+---
 
-- `.~lock.*.xlsx#` 3件は LibreOffice の編集ロック。ignore に回した（xlsx 本体は既存 .gitignore で除外済み）。
-- `create_influencer_list.py` は openpyxl でリストを組むだけで機密なし。
+## .gitignore への追加
 
-### ai-english-coach（1コミット）
+**追加なし（3リポジトリとも）。**
 
-| コミット | メッセージ | ファイル数 |
-|---|---|---|
-| `cd2c8c5` | docs: HANDOFF を追加し一時ファイルを .gitignore に追加 | 2 |
+理由:
+- youtube-factory の `.gitignore` には既に `data/ab_tests/`、`*.audit.mjs`、`data/reports/YYYY-MM-DD/`、`output/`、`*.mp4` 等の生成物パターンが揃っており、今回の未追跡ファイルに新たな生成物・一時ファイルは含まれていなかった。
+- `scripts/orch_*_20260909.py` / `trigger_20260909.command` / `reports/youtube_analysis_*.xlsx` は一見「日付付きの使い捨て」だが、リポジトリの既存慣習（`scripts/apply_pdca_20260901.py`、`restart_and_trigger_20260908.command`、`reports/youtube_analysis_20260908.xlsx` 等が全て追跡済み）に合わせて **ignore ではなくコミット** した。
+- aiseki / ai-english-coach は未追跡ファイルなし。
 
-.gitignore 追加パターン:
+## 機密情報チェック
 
-```
-.__perm_test
-```
-
-### 機密チェック
-
-全リポジトリの新規・変更ファイルに対し `sk-*` / `AIza*` / `ghp_*` / `BEGIN PRIVATE KEY` / ハードコードされた `api_key=` `password=` / `postgres://user:pass@` を走査。**検出ゼロ**。機密理由で除外したファイルはない。
+- 新規追加した `scripts/orch_*.py`（11件）と `trigger_20260909.command` を `api_key` / `secret` / `token` / `password` / `AIza` / `sk-` / `ghp_` / `Bearer` / `client_secret` でスキャン → **ヒット0件**。
+- その他の追加分はデータ JSON と Markdown のみ（既存の追跡対象と同種）。
+- 全差分に対する一括スキャンは、最後にサンドボックスのシェルが停止したため未完了。次回実行時に再確認すること。
 
 ---
 
 ## Phase 3: push 結果
 
-**3リポジトリとも push できていない。手動対応が必要。**
-
-- **youtube-factory** — `main` が `origin/main` より **5コミット先行**。push は `fatal: could not read Username for 'https://github.com'` で失敗。実行環境（サンドボックス）に GitHub 認証情報がないのが原因で、リポジトリ側の問題ではない。
-- **aiseki** — `main` が `origin/main` より **4コミット先行**（既存の未 push 2件 + 今回の2件）。同じ認証エラーで失敗。
-- **ai-english-coach** — **リモートが1つも設定されていない**（`git remote -v` が空）。push 先そのものがないため未実施。
-
-### 手動で実行するコマンド
-
-```bash
-cd ~/Developer/youtube-factory && git push origin main
-cd ~/Developer/aiseki      && git push origin main
+### youtube-factory — **push 失敗**
 ```
-
-`neworigin`（rikoandmakoto-ops）にも同期する場合は `git push neworigin main` を追加。
-
-ai-english-coach をリモート管理したい場合は先に登録が必要:
-
-```bash
-cd ~/Developer/ai-english-coach
-git remote add origin <リポジトリURL>
-git push -u origin main
+$ git push origin main
+fatal: could not read Username for 'https://github.com': No such device or address
 ```
+- 原因: 指揮者が動いている Linux サンドボックスに GitHub の認証情報がない（credential.helper 未設定、`~/.git-credentials` なし）。Mac の Keychain にある認証情報はサンドボックスから参照できない。
+- 状態: `main` は `origin/main` より **4 コミット先行**（ローカルにのみ存在）。データ消失はない。
+- **要対応（人手）**: Mac 上で以下を実行すること。
+  ```
+  cd ~/Developer/youtube-factory && git push origin main
+  ```
+
+### aiseki — **push 未実施**
+- 作業ツリーはクリーンだが、`main` は `origin/main` より **4 コミット先行**（今回より前からの未 push 分。最新は `1538169 docs: マーケ資料（DMテンプレ・SNSコンテンツ・競合分析）とインフルエンサーリスト生成スクリプトを追加`）。
+- 同じ認証情報の問題で push できないため未実施。
+- **要対応（人手）**: `cd ~/Developer/aiseki && git push origin main`
+
+### ai-english-coach — **該当なし**
+- remote が 1 つも設定されていない（`git remote -v` が空）。push 先なし。
 
 ---
 
 ## 環境上の注意（次回実行者向け）
 
-`~/Developer/` 配下のマウントは**ファイル削除が禁止**されている（`rm` が `Operation not permitted`）。このため git が `.git/index.lock` を作った後に消せず、以降の git 書き込み操作が全て `Another git process seems to be running` で止まる。
+1. **マウント上で `unlink` が禁止されている。**
+   サンドボックスから `/Users/.../Developer` へは書き込み・rename はできるが削除ができない。
+   このため git が `*.lock` や `.git/objects/*/tmp_obj_*` を消せず、`warning: unable to unlink ...` が多発し、
+   ロックが残って以降の git 操作が全て失敗する。
+   → 対処として `.git` 配下の `*.lock` を `.git/stale_locks/` へ **mv して退避** する方式を取った。
 
-- 今回は各 git 操作の前後で lock ファイルを `*.lock.stale.<ns>` に **rename して退避**することで回避した（rename は許可されている）。
-- 副作用として `.git/` 内に `*.stale.*` という 0 バイトファイルが残る。git の動作には影響しないが、掃除する場合は Mac 側で `find ~/Developer/<repo>/.git -name '*.stale.*' -delete` を実行すること。
-- 同じ理由で **他プロジェクトにも古い `index.lock` が残っている**（今回は対象外なので触っていない）: `ai-orchestrator`, `claude-codex-bridge`, `fanup`, `oripa`, `rhythm-pop`。
-- `force push` / `reset --hard` は一切実行していない。
+2. **`git commit` / `git status`（全体）は 178 秒のツールタイムアウトに間に合わない。**
+   マウントの stat が遅く、追跡ファイル 3075 件のスキャンだけで 50〜120 秒かかる。
+   → `git status --porcelain -- <ディレクトリ>` で分割し、コミットは
+   `git add` → `git write-tree` → `git commit-tree` → `git update-ref` の配管コマンドで実行した
+   （`git commit` はインデックス全体を refresh するため必ずタイムアウトする）。
+
+3. **退避したロックファイル / ゴミ**（Mac 側で手動削除してよい）
+   - `youtube-factory/.git/stale_locks/`（旧 `refs/heads/main.lock.stale.*` 6件 + 今回分の index.lock / HEAD.lock / main.lock）
+   - `ai-english-coach/.git/stale_locks/`（旧 `refs/heads/_locktest.lock.stale.*` 1件）
+   - `youtube-factory/.git/objects/*/tmp_obj_*` 約 340 件（`git gc` では消えないので手動 or Mac 上で削除）
+   ※ 退避により `warning: ignoring broken ref refs/heads/main.lock.stale.*` は解消済み。
+
+4. **force push / reset --hard は一切実行していない。** 他プロジェクトにも触れていない。

@@ -313,6 +313,22 @@ def _iter_channel_jobs(sch, channel_id: str):
             yield job
 
 
+def _dedupe_slots(slots: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """時刻・曜日・engine が完全に一致する枠を先着で1つに畳む。"""
+    seen = set()
+    out: List[Dict[str, Any]] = []
+    for s in slots:
+        key = (s["hour"], s["minute"],
+               tuple(s.get("days_of_week") or ()), s.get("engine"))
+        if key in seen:
+            print(f"🔁 Autopilot: 重複した枠 {s['hour']:02d}:{s['minute']:02d} "
+                  f"を畳みました（同一時刻の二重登録を防止）")
+            continue
+        seen.add(key)
+        out.append(s)
+    return out
+
+
 def _resolve_time_slots(sched: Dict[str, Any]) -> List[Dict[str, Any]]:
     """schedule から発火時刻のリストを返す。times が空なら hour/minute を単一スロットとして扱う。
 
@@ -351,6 +367,13 @@ def _resolve_time_slots(sched: Dict[str, Any]) -> List[Dict[str, Any]]:
             if isinstance(t.get("engine"), str) and t["engine"].strip():
                 slot["engine"] = t["engine"].strip()
             slots.append(slot)
+    # 【2026-09-10】完全に同じ枠を畳む。
+    # scp-lab の times が [(9,0),(13,0),(19,0)] × 2 の6要素になっていて、
+    # スロット番号だけが違う6ジョブが同一時刻に登録されていた（＝1枠につき
+    # 2回発火）。ここは idx をジョブIDに使うので、重複はそのまま二重登録になる。
+    # 曜日や engine が違う枠（平日/土日の分割、clip-lab の local/viral）は
+    # 別物なので残す。
+    slots = _dedupe_slots(slots)
     if not slots:
         slots.append({
             "hour": int(sched.get("hour", 18)),

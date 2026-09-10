@@ -393,7 +393,7 @@ YouTube チャンネルと OAuth は clip-lab の既存のものをそのまま�
 |---|---|---|
 | `com.youtube-factory.backend` | uvicorn `main:app` を KeepAlive | ✅ **稼働中**（pid 20984） |
 | `com.youtube-factory.ngrok` | ngrok http 8000（固定ドメイン） | ✅ **稼働中**（pid 37949） |
-| `com.youtube-factory.pdca` | 毎日 23:00 に `backend/run_daily_pdca.py` | ⚠️ **ロードされていない**（`launchctl list` に無い） |
+| `com.youtube-factory.pdca` | 毎日 **22:30** に `backend/run_daily_pdca.py` | ✅ **ロード済み**（2026-09-10 確認。09-09 22:31 に実行実績あり）。⚠️ Cowork 側の `daily-pdca-report`（23:30）は**別物**で、こちらはリポジトリからは変えられない |
 | `com.youtube-factory.agent` | `python -m agent run youtube-growth` を KeepAlive | ⚠️ **ロードされていない**（かつ `agent/` は `agent_deprecated/` にリネーム済み。このまま load すると起動失敗する） |
 
 > plist は `~/Library/LaunchAgents/` にある。ロードは `launchctl load -w <plist>`、確認は `launchctl list | grep youtube`。

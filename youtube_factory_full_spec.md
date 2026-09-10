@@ -33,7 +33,7 @@
 | 外部公開 | ngrok 固定ドメイン `https://agreeing-corrode-shabby.ngrok-free.dev` → localhost:8000 |
 | フロント | Next.js（別ディレクトリ `frontend/`、Vercel デプロイ） |
 | スケジューラ | APScheduler `BackgroundScheduler(timezone="Asia/Tokyo")` — バックエンドプロセス内。cron は使っていない |
-| 定期バッチ | launchd `com.youtube-factory.pdca` が毎日 23:00 に `backend/run_daily_pdca.py` |
+| 定期バッチ | launchd `com.youtube-factory.pdca` が毎日 22:30 に `backend/run_daily_pdca.py`（2026-09-09 に 23:00 から前倒し） |
 | 自律エージェント | launchd `com.youtube-factory.agent` KeepAlive で `python -m agent run youtube-growth`（30分間隔） |
 | チャンネル数 | 8（うち autopilot 有効 7、`akashic-librarian` のみ enabled=false） |
 | 音声 | VOICEVOX (`http://localhost:50021`) |
@@ -5259,7 +5259,7 @@ backend/
 │   ├── test_thumbnail_ab_metric.py     test_trend_sources.py
 │
 └── 手動ランナー / 診断スクリプト（コミット済み）
-    run_daily_pdca.py            日次PDCA（launchd 23:00）
+    run_daily_pdca.py            日次PDCA（launchd 22:30）
     run_channel_short_upload.py  任意chでショート1本生成→投稿（汎用版）
     run_short_only.py            ショートのみ生成（投稿なし）
     run_ds_short_upload.py / run_scp_short_upload.py / run_pokemon_short_upload.py
@@ -8981,7 +8981,7 @@ def _next_publish_at(target_hm: Optional[str]) -> Optional[str]:
 | `com.youtube-factory.backend` | RunAtLoad + KeepAlive、ThrottleInterval 30 | `python3 -m uvicorn main:app --host 0.0.0.0 --port 8000`。**現在停止（exit 1）** |
 | `com.youtube-factory.agent` | RunAtLoad + KeepAlive、ThrottleInterval 30 | `python3 -u -m agent run youtube-growth` |
 | `com.youtube-factory.ngrok` | RunAtLoad + KeepAlive | `ngrok http 8000 --url=agreeing-corrode-shabby.ngrok-free.dev` |
-| `com.youtube-factory.pdca` | `StartCalendarInterval` 23:00、RunAtLoad=false | `python3 -u backend/run_daily_pdca.py` |
+| `com.youtube-factory.pdca` | `StartCalendarInterval` 22:30、RunAtLoad=false | `python3 -u backend/run_daily_pdca.py` |
 
 ### 14.5 日次 PDCA（`backend/run_daily_pdca.py`）
 
