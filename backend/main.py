@@ -1237,8 +1237,9 @@ async def factory_run(request: FactoryRunRequest):
             if pending_fb and scenario.get("applied_feedback") and mark_consumed:
                 try:
                     mark_consumed(scenario["applied_feedback"], consumed_by_job_id=job_id)
-                except Exception:
-                    pass
+                except Exception as e:
+                    # 消費済みにできないと同じフィードバックが次回も適用される
+                    print(f"⚠️ feedback mark_consumed failed (job {job_id}): {e}")
             results.append({
                 "index": i,
                 "title": scenario["title"],
@@ -1299,8 +1300,8 @@ async def factory_run_all(count_per_channel: int = 1, priority: int = 5, gen_typ
                 if pending_fb and scenario.get("applied_feedback") and mark_consumed:
                     try:
                         mark_consumed(scenario["applied_feedback"], consumed_by_job_id=job_id)
-                    except Exception:
-                        pass
+                    except Exception as e:
+                        print(f"⚠️ feedback mark_consumed failed (job {job_id}): {e}")
                 ch_results.append({
                     "title": scenario["title"],
                     "job_id": job_id,
@@ -1687,8 +1688,9 @@ async def startup_event():
             print("🔑 OpenAI API key loaded from settings")
         if settings.get("voicevox_url"):
             _vg.VOICEVOX_URL = settings["voicevox_url"]
-    except Exception:
-        pass
+    except Exception as e:
+        # ここで黙ると API キー未設定のまま起動し、autopilot が全件「OpenAI APIキー未設定」で落ちる
+        print(f"⚠️ settings の読み込みに失敗（API キー / VOICEVOX URL が未反映）: {e}")
 
     # Initialize Channel Manager
     channel_manager = ChannelManager()

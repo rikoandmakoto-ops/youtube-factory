@@ -11,7 +11,8 @@ theme_dedup — テーマ（動画ネタ）の重複検出ユーティリティ�
      フォールバック付きで提供）ので、ここ自体は LLM 依存を持たない。
 
 設計方針:
-  - generator / theme_queue / autopilot のどこからでも import できるよう、依存は標準ライブラリのみ。
+  - generator / theme_queue / autopilot のどこからでも import できるよう、依存は標準ライブラリと
+    pipeline/title_lexicon.py（型語の一覧）のみ。
   - 過去テーマの読み出し（data/scenarios/<id>/*.json）もここに集約し、各所での重複実装を無くす。
 """
 
@@ -30,28 +31,32 @@ DEFAULT_LEXICAL_THRESHOLD = 0.55
 
 # 正規化時に削る「話題を持たない」構造語・定型句。両側に同じ処理をかけるので
 # 削りすぎても比較の公平性は保たれる（むしろ話題語だけを残せて精度が上がる）。
-_FILLER_WORDS = [
-    "本当の理由", "という現象", "について", "とは何か", "とは", "の科学", "の謎",
-    "の秘密", "を解説", "を深掘り", "深掘り", "メカニズム", "仕組み", "理由",
-    "なぜか", "なぜ", "どうして", "実は", "まとめ", "入門", "現象",
-    "のだろうか", "のだろう", "のか", "こと", "もの", "ある", "する", "なる",
-    "今すぐ", "衝撃", "驚愕", "閲覧注意",
-    # 【2026-09-08】タイトルの「型」を作る語。話題ではなく煽り方を表す。
-    # 09-08 に全6ch へ「答え提示語（理由/正体/本当の/実は/わけ/なぜ/真相/裏側/実態）を
-    # 全タイトルへ入れる」方針を入れた結果、これらが全動画共通の語になった。
-    # yokai-watch の勝ち型「〇〇の正体／元ネタが怖すぎる」（09-07実測で avg1422 =
-    # 非該当698 の2.04倍）はチャンネル設定が「毎バッチ最低2件」と指定している定型である。
-    # ところが正規化で残っていたため、bigram Jaccard の分子を型が埋め、
-    # _keyword_overlap でも「正体」だけで重み4（文字数²）が入り、題材が全く違う
-    # 2本（ろくろ首 / じんめん犬）が 0.67 に達して重複として落とされていた。
-    # **チャンネルの最良フォーマットを、自分の重複ゲートが潰していた。**
-    # 「ショート」(08-23)・ハッシュタグ(09-06) と同型の誤検出で、閾値をいじっても直らない。
-    # 題材語（河童・雪女・ろくろ首…）は残るので、本当に同じ題材なら今も 1.0 で捕まる。
-    # 長い語から順に消す（replace を順に掛けるため）。
-    "の正体が怖すぎる", "の元ネタが怖すぎる", "が怖すぎる", "怖すぎる",
-    "の元ネタ", "元ネタ", "の正体", "正体",
-    "の真相", "真相", "の実態", "実態", "の裏側", "裏側", "本当の", "わけ",
-]
+#
+# 【2026-09-12】リスト本体は pipeline/title_lexicon.py に移した。
+# 「型語」（なぜ／正体／本当の理由／だけ／ショート／元ネタ …）は、08-23「ショート」
+# 09-06 ハッシュタグ・09-08「正体」・09-11「なぜ」「だけ」と**4回**同じ壊れ方をした:
+# 指揮者が全タイトルに入れる語を決める → 全動画共通の語になる → bigram Jaccard の
+# 分子と _keyword_overlap の重み（文字数²）をその語が埋める → 題材が全く違う2本が
+# 重複と判定される。閾値では直らず、正規化で落とすしかない。
+# ここに手で足す運用は後追いにしかならないので、
+#   1) 語のリストは title_lexicon に一本化し（横断ゲート・規約修復と同じ語を見る）
+#   2) 比較対象の中で高頻度な語は自動で型語扱いする（→ corpus_stopwords）
+# の2段にした。2) は指揮者が新しい型を決めた瞬間から効く。
+try:
+    from pipeline import title_lexicon as _lex
+except ImportError:  # pragma: no cover — 単体実行時
+    import importlib
+    _lex = importlib.import_module("title_lexicon")
+
+_FILLER_WORDS: List[str] = list(_lex.FORMAT_PHRASES)
+
+# 比較対象（existing）のうち、この割合以上のタイトルに現れる話題語は「型語」とみなす。
+# 例: 30本中 8本に「なぜ」→ 型。真の題材語（河童・SCP-173）が 25% を超えることは
+# 過去テーマ40件の窓では起きない（起きたらそれは重複量産であり別のゲートの仕事）。
+CORPUS_STOPWORD_RATIO = 0.25
+# 比較対象が少ないと割合が不安定なので、最低本数も要求する
+# （6本中3本＝50% に出る語は型、12本以上では 25% が効く）。
+CORPUS_STOPWORD_MIN_DOCS = 3
 
 # ハッシュタグ（`#shorts` / `#架空論文` / `#切り抜き` 等）。**投稿タイトルの末尾に
 # 必ず付く定型**で、話題を一切区別しない。にもかかわらず正規化で残っていたため、
@@ -85,7 +90,8 @@ _ZEN2HAN = {c: chr(ord(c) - 0xFEE0) for c in
             [chr(o) for o in range(0xFF01, 0xFF5F)]}
 
 
-def normalize_title(title: str, *, strip_filler: bool = True) -> str:
+def normalize_title(title: str, *, strip_filler: bool = True,
+                    stopwords: Optional[Set[str]] = None) -> str:
     """タイトルを比較用に正規化する。
 
     手順: 全角→半角・小文字化 → **ハッシュタグ除去** → 括弧/装飾除去 →
@@ -100,6 +106,9 @@ def normalize_title(title: str, *, strip_filler: bool = True) -> str:
     素の部分一致で暴発する（実測: `鬼の元ネタ` の `の元ネタ` が定型句として
     消えて `鬼` になり、鬼を含む無関係なテーマを全部ブロックした。
     SCP-173 が SCP-1730〜1739 を巻き添えにしたのと同じ壊れ方）。
+
+    `stopwords` は比較対象から自動抽出した型語（→ corpus_stopwords）。
+    静的な定型句に加えて消す。
     """
     if not title:
         return ""
@@ -111,6 +120,10 @@ def normalize_title(title: str, *, strip_filler: bool = True) -> str:
     if strip_filler:
         for w in _FILLER_WORDS:
             t = t.replace(w, "")
+        if stopwords:
+            for w in sorted(stopwords, key=len, reverse=True):
+                if w:
+                    t = t.replace(w, "")
     return t
 
 
@@ -198,38 +211,58 @@ _CONTENT_TOKEN_RE = re.compile(r"[一-龥々〆ヵヶ]+|[ァ-ヶー]+|[a-z0-9]+"
 
 # チャンネル定型語（識別子プレフィックスや頻出ジャンル語）。話題を区別しないので
 # キーワード一致から除外する（番号付き識別子は _identifiers 側で別途扱う）。
-_BOILERPLATE_TOKENS = {
-    "scp", "goc", "gow", "anomaly", "item", "財団",
-    # 全動画のタイトルに付く定型語。話題を全く区別しないのに 2〜4 文字あるため
-    # _keyword_overlap の重み（文字数の2乗）で強く効いてしまい、無関係な
-    # 2 本が「ショート」の共有だけで 0.76 まで跳ね上がる誤検出が出ていた。
-    "ショート", "shorts", "short", "ゆっくり", "解説", "考察", "研究",
-    "一口", "分科学", "ファイル", "まとめ",
-}
+# 全動画のタイトルに付く定型語は 2〜4 文字あるため _keyword_overlap の重み
+# （文字数の2乗）で強く効き、無関係な 2 本が「ショート」の共有だけで 0.76 まで
+# 跳ね上がる誤検出が出ていた。一覧は title_lexicon（横断ゲートと共用）。
+_BOILERPLATE_TOKENS = set(_lex.FORMAT_TOKENS) | {w.lower() for w in _lex.ANSWER_MARKERS}
 
 
-def _content_tokens(title: str) -> List[str]:
+def _content_tokens(title: str, *, stopwords: Optional[Set[str]] = None) -> List[str]:
     """正規化済みタイトルから話題を表すトークン（漢字/カタカナ/英数の連なり）を抽出。
 
     1 文字の漢字（声・夢・指 等の話題核）は残し、1 文字の平仮名・記号は捨てる。
     定型語（scp/財団 等）は話題を区別しないので除外する。
     """
     out: List[str] = []
-    for tok in _CONTENT_TOKEN_RE.findall(normalize_title(title)):
-        if tok in _BOILERPLATE_TOKENS:
+    for tok in _CONTENT_TOKEN_RE.findall(normalize_title(title, stopwords=stopwords)):
+        if tok in _BOILERPLATE_TOKENS or (stopwords and tok in stopwords):
             continue
         if len(tok) >= 2 or re.match(r"[一-龥々]", tok):
             out.append(tok)
     return out
 
 
-def _keyword_overlap(a: str, b: str) -> float:
+def corpus_stopwords(existing: Sequence[str], *,
+                     ratio: float = CORPUS_STOPWORD_RATIO,
+                     min_docs: int = CORPUS_STOPWORD_MIN_DOCS) -> Set[str]:
+    """比較対象の中で高頻度な話題語を「型語」として返す（文書頻度による自動判定）。
+
+    静的リスト（title_lexicon）は後追いにしかならない。指揮者が
+    「全タイトルに◯◯を入れる」と決めた瞬間から、その語は比較対象の大半に現れる。
+    ここで拾えば、リストに足し忘れても重複判定の主語にはならない。
+
+    しきい値は `ratio`（既定 25%）**かつ** `min_docs`（既定 4本）。
+    比較対象が 3 本しかないときに 1 本に出た語を型語にしないため。
+    """
+    docs = [t for t in existing if t]
+    if len(docs) < min_docs:
+        return set()
+    df: Dict[str, int] = {}
+    for t in docs:
+        for tok in set(_content_tokens(t)):
+            df[tok] = df.get(tok, 0) + 1
+    need = max(min_docs, int(len(docs) * ratio + 0.999))
+    return {tok for tok, n in df.items() if n >= need}
+
+
+def _keyword_overlap(a: str, b: str, *, stopwords: Optional[Set[str]] = None) -> float:
     """話題語の重なり [0.0, 1.0]。長く特徴的な語（録音・水たまり・スマホ等）を重く評価する。
 
     重み = 文字数² で、短い／長いタイトル間でも「核となる固有語の共有」を強く拾う。
     分母は短い方の総重み（包含関係を取りこぼさないため min を採る）。
     """
-    sa, sb = set(_content_tokens(a)), set(_content_tokens(b))
+    sa = set(_content_tokens(a, stopwords=stopwords))
+    sb = set(_content_tokens(b, stopwords=stopwords))
     if not sa or not sb:
         return 0.0
     shared = sa & sb
@@ -260,7 +293,7 @@ def _identifiers(title: str) -> Set[str]:
     return {f"{m.group(1).lower()}{int(m.group(2))}" for m in _ID_RE.finditer(title or "")}
 
 
-def similarity(a: str, b: str) -> float:
+def similarity(a: str, b: str, *, stopwords: Optional[Set[str]] = None) -> float:
     """2 つのタイトルの語彙類似度 [0.0, 1.0]。
 
     3 つの信号の最大値を採る:
@@ -273,6 +306,9 @@ def similarity(a: str, b: str) -> float:
     ただし作品識別子（SCP-XXXX 等）を含む場合は番号を同一性の核として優先:
       - 双方に識別子があり共有なし → 別作品とみなし弱い類似度に抑える（誤検出防止）
       - 同じ識別子を共有 → 確実に重複（1.0）
+
+    `stopwords` は比較対象から自動抽出した型語（→ corpus_stopwords）。
+    静的な定型句に加えて両側から消してから比べる。
     """
     # 識別子ベースの早期判定（SCP-XXXX 等）
     ida, idb = _identifiers(a), _identifiers(b)
@@ -282,7 +318,8 @@ def similarity(a: str, b: str) -> float:
         # 番号が完全に食い違う別作品。語彙が似ていても重複ではない。
         return 0.0
 
-    na, nb = normalize_title(a), normalize_title(b)
+    na = normalize_title(a, stopwords=stopwords)
+    nb = normalize_title(b, stopwords=stopwords)
     if not na or not nb:
         return 0.0
     if na == nb:
@@ -294,7 +331,7 @@ def similarity(a: str, b: str) -> float:
     union = ba | bb
     jac = (len(ba & bb) / len(union)) if union else 0.0
     seq = SequenceMatcher(None, na, nb).ratio()
-    kw = _keyword_overlap(a, b)
+    kw = _keyword_overlap(a, b, stopwords=stopwords)
     return max(jac, seq, kw)
 
 
@@ -303,13 +340,21 @@ def find_lexical_duplicate(
     existing: Sequence[str],
     *,
     threshold: float = DEFAULT_LEXICAL_THRESHOLD,
+    stopwords: Optional[Set[str]] = None,
 ) -> Optional[Tuple[str, float]]:
-    """existing の中で title と語彙的に最も近いものを返す（しきい値以上のみ）。"""
+    """existing の中で title と語彙的に最も近いものを返す（しきい値以上のみ）。
+
+    `stopwords` を省略すると `existing` から型語を自動抽出して使う
+    （→ corpus_stopwords）。同じ existing に対して何度も呼ぶ場合は、呼び出し側で
+    一度計算して渡すと速い。
+    """
+    if stopwords is None:
+        stopwords = corpus_stopwords(existing)
     best: Optional[Tuple[str, float]] = None
     for ex in existing:
         if not ex:
             continue
-        s = similarity(title, ex)
+        s = similarity(title, ex, stopwords=stopwords)
         if s >= threshold and (best is None or s > best[1]):
             best = (ex, s)
     return best
@@ -320,8 +365,10 @@ def is_lexical_duplicate(
     existing: Sequence[str],
     *,
     threshold: float = DEFAULT_LEXICAL_THRESHOLD,
+    stopwords: Optional[Set[str]] = None,
 ) -> bool:
-    return find_lexical_duplicate(title, existing, threshold=threshold) is not None
+    return find_lexical_duplicate(
+        title, existing, threshold=threshold, stopwords=stopwords) is not None
 
 
 def dedupe_titles(
@@ -330,11 +377,12 @@ def dedupe_titles(
     threshold: float = DEFAULT_LEXICAL_THRESHOLD,
 ) -> List[str]:
     """リスト内の語彙的重複を畳んで、ユニークなタイトルだけ順序保持で返す。"""
+    stop = corpus_stopwords(list(titles))
     kept: List[str] = []
     for t in titles:
         if not t:
             continue
-        if not is_lexical_duplicate(t, kept, threshold=threshold):
+        if not is_lexical_duplicate(t, kept, threshold=threshold, stopwords=stop):
             kept.append(t)
     return kept
 

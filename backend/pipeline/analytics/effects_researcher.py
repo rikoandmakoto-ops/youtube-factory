@@ -143,7 +143,11 @@ def _load_channel_json(channel_id: str) -> Optional[Dict[str, Any]]:
 def _write_channel_json(channel_id: str, data: Dict[str, Any]) -> bool:
     p = CHANNELS_DIR / f"{channel_id}.json"
     try:
-        p.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        # tmp + replace（途中で落ちても半端な JSON を残さない）。稼働中の backend は
+        # mtime の変化でこのチャンネルだけ読み直す（ChannelManager._refresh_if_changed）。
+        tmp = p.with_name(p.name + ".tmp")
+        tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tmp.replace(p)
         return True
     except Exception as e:
         print(f"⚠️ channel JSON write failed ({channel_id}): {e}")

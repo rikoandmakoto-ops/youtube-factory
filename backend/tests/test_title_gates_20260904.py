@@ -88,13 +88,28 @@ class CrossChannelGateTest(unittest.TestCase):
         6ch × 3枠 = 18本/日 に対し 9語 × 上限2 = 18 では余裕がゼロで、
         少しでも偏ると必ずブロックが出る。共食いするのは題材であって
         「正体」のような煽り語ではないので、語の枠だけ広げてある。
+
+        【2026-09-11 夜】上限を 3 → 6 に引き上げた。09-11 朝に4chの第一候補を
+        「なぜ型」に揃えた結果、「なぜ」だけで上限3を即使い切り、キューが全件
+        なぜ型の ch では**キュー全体がブロック**された（当日ログで
+        「all queued themes blocked — using first anyway」16回 / block 336回）。
+        本数（枠数）で縛るのが目的なので、上限は枠数より小さいことだけを担保する。
         """
         self.assertGreater(ccg.ANSWER_MARKER_DAILY_LIMIT, ccg.KEYWORD_DAILY_LIMIT)
-        self.assertEqual(ccg.check_and_reserve("scp-lab", "収容違反の正体")[0], True)
-        self.assertEqual(ccg.check_and_reserve("yokai-watch", "河童の正体")[0], True)
-        # 3本目までは通る
-        self.assertEqual(ccg.check_and_reserve("pokemon-lab", "ミュウツーの正体")[0], True)
-        ok, hit = ccg.check_and_reserve("daily-science", "しゃっくりの正体")
+        # 1日の総枠（6ch × 3枠）は使い切れない ＝ 1語に全部寄ることは防げる
+        self.assertLess(ccg.ANSWER_MARKER_DAILY_LIMIT, 18)
+        # 話題語（上限2）で先に詰まらないよう、題材はすべて別の語にする。
+        topics = ["河童", "天狗", "ミュウツー", "しゃっくり", "収容違反",
+                  "座敷童子", "イーブイ", "あくび", "鳥肌", "牛鬼"]
+        chans = ["scp-lab", "yokai-watch", "pokemon-lab", "daily-science",
+                 "2ch-matome", "company-facts", "fake-paper", "akashic-librarian",
+                 "clip-lab", "socio-rx"]
+        for i in range(ccg.ANSWER_MARKER_DAILY_LIMIT):
+            self.assertEqual(
+                ccg.check_and_reserve(chans[i], f"{topics[i]}の正体")[0], True,
+                f"{i + 1}本目までは通るはず")
+        ok, hit = ccg.check_and_reserve(chans[ccg.ANSWER_MARKER_DAILY_LIMIT],
+                                        f"{topics[ccg.ANSWER_MARKER_DAILY_LIMIT]}の正体")
         self.assertFalse(ok)
         self.assertEqual(hit[0], "正体")
 
@@ -192,3 +207,77 @@ class RealChannelConfigTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RegeneratedTitleSanitizeTest(unittest.TestCase):
+    """作り直したタイトルの壊れを弾く（→ generator._sanitize_regenerated_title）。
+
+    【2026-09-11 夜】company-facts で
+    『個人向け国債、年0.05%でも元本割れしにくい仕組み、】【の実態』が実際に
+    生成され、出力フォルダ名・サムネ・説明文まで `】【` 付きでレンダリングされた
+    （job 1a6e3105）。作り直し後は `.strip("「」")` しか通っていなかった。
+    """
+
+    def _s(self):
+        from pipeline.auto_scenario.generator import _sanitize_regenerated_title
+        return _sanitize_regenerated_title
+
+    def test_reversed_bracket_fragment_is_removed(self):
+        s = self._s()
+        got = s("個人向け国債、年0.05%でも元本割れしにくい仕組み、】【")
+        self.assertNotIn("】", got)
+        self.assertNotIn("【", got)
+        self.assertTrue(got.endswith("仕組み"), got)
+
+    def test_unclosed_brackets_are_removed(self):
+        s = self._s()
+        self.assertEqual(s("SCP-682が適応する本当の理由】"), "SCP-682が適応する本当の理由")
+        self.assertEqual(s("なぜ財団は記録を消す【のか"), "なぜ財団は記録を消すのか")
+
+    def test_valid_titles_pass_through_unchanged(self):
+        s = self._s()
+        for t in ("なぜ寝言は自分では一度も聞けないのか",
+                  "【ショート】なぜ寝言は聞けないのか",
+                  "テスト（括弧）付きのタイトルです"):
+            self.assertEqual(s(t), t)
+
+    def test_garbage_returns_none_so_caller_keeps_original(self):
+        s = self._s()
+        for t in ("】【", "なぜ猫は【", "", None, "   "):
+            self.assertIsNone(s(t), repr(t))
+
+    def test_trailing_punctuation_is_trimmed(self):
+        self.assertEqual(self._s()("個人向け国債の正体、"), "個人向け国債の正体")
+
+
+class ThemeSeedShapeTest(unittest.TestCase):
+    """theme_seeds は全件 dict（→ suggest_themes が落ちない）。
+
+    【2026-09-11 夜】daily-science 6件 / scp-lab 3件が素の文字列で入っており、
+    suggest_themes が 'str' object has no attribute 'get' で落ちていた。
+    呼び出し元は例外を握り潰して**却下したはずのテーマをそのまま採用する**ため、
+    genre_blacklist が無効化されていた（当日 scp-lab『財団組織・職員』で実測）。
+    """
+
+    def test_all_channel_seeds_are_dicts_with_title(self):
+        import glob
+        import json
+        import os
+        root = os.path.join(os.path.dirname(__file__), "..", "..", "data", "channels")
+        files = [f for f in glob.glob(os.path.join(root, "*.json")) if ".bak" not in f]
+        self.assertTrue(files, "channel config not found")
+        for path in files:
+            with open(path, encoding="utf-8") as fh:
+                cfg = json.load(fh)
+            for i, seed in enumerate(cfg.get("theme_seeds") or []):
+                with self.subTest(channel=os.path.basename(path), index=i):
+                    self.assertIsInstance(seed, dict)
+                    self.assertTrue((seed.get("title") or "").strip())
+
+    def test_suggest_themes_tolerates_string_seeds(self):
+        """設定の書き方で機能が死なないこと（形の吸収）。"""
+        import inspect
+        from pipeline.auto_scenario import generator as gen
+        src = inspect.getsource(gen.ScenarioGenerator.suggest_themes)
+        self.assertNotIn('[s["title"] for s in channel.theme_seeds', src)
+        self.assertIn("isinstance(s, str)", src)

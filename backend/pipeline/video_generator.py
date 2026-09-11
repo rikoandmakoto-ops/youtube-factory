@@ -69,9 +69,20 @@ ICLOUD_BASE = (
 )
 
 
+def output_dirname(theme_name):
+    """タイトル → 出力フォルダ名。パス区切り・OS 禁止文字・括弧の破片を落とす。
+
+    【2026-09-12】以前は title をそのままフォルダ名にしていたため、
+    `】【` を含む壊れたタイトルや `/` を含むタイトルがそのまま mp4 の置き場に
+    なっていた。フォルダ名を参照する側（clip_factory.sources）も同じ関数を使う。
+    """
+    from pipeline import title_gate as _tg
+    return _tg.safe_dirname(theme_name)
+
+
 def get_output_dir(theme_name):
     """Create and return output dir: 動画出力用/<theme_name>/"""
-    out = OUTPUT_BASE / theme_name
+    out = OUTPUT_BASE / output_dirname(theme_name)
     out.mkdir(parents=True, exist_ok=True)
     return out
 
@@ -242,7 +253,7 @@ def check_voicevox():
     try:
         urllib.request.urlopen(f"{VOICEVOX_URL}/speakers", timeout=2)
         return True
-    except:
+    except Exception:
         return False
 
 VOICEVOX_SPEED = 1.3  # デフォルト話速倍率
@@ -331,7 +342,11 @@ def get_audio_duration(path):
                        capture_output=True, text=True)
     try:
         return float(r.stdout.strip())
-    except:
+    except (ValueError, TypeError):
+        # 2.0 秒で黙って進むと、全行が同じ尺になった動画が「正常終了」で出てくる。
+        # ffprobe の不在・壊れた音声はここでしか気づけないので必ず声を出す。
+        print(f"⚠️ get_audio_duration: ffprobe から尺を取れません（2.0秒で代用）: {path} "
+              f"— {(r.stderr or r.stdout or '').strip()[:200]}", flush=True)
         return 2.0
 
 
@@ -6001,9 +6016,21 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
 
     _ck()
 
+    # 【2026-09-12】タイトル衛生の最終関門（generate_all を直接呼ぶ run_*.py も通る）。
+    # 括弧の破片・制御文字・二重マーカーを落とす。ここから先の video_title /
+    # short_title / 説明文 / サムネ / フォルダ名はすべてこの値から作られる。
+    try:
+        from pipeline import title_gate as _tg
+        _clean_title = _tg.sanitize(title)
+        if _clean_title and _clean_title != (title or ""):
+            print(f"🧼 title cleaned for render: 「{title}」→「{_clean_title}」")
+            title = _clean_title
+    except Exception as _tg_err:
+        print(f"⚠️ title_gate unavailable (continuing with raw title): {_tg_err}")
+
     # Determine output directory
     if output_dir:
-        out_dir = Path(output_dir) / title
+        out_dir = Path(output_dir) / output_dirname(title)
         out_dir.mkdir(parents=True, exist_ok=True)
     else:
         out_dir = get_output_dir(title)

@@ -132,45 +132,21 @@ async def update_channel_config(
     cm, _ch = _ensure_channel_or_404(channel_id)
     updates = {k: v for k, v in request.dict().items() if v is not None}
 
-    # ChannelManager.update_channel は一部のキーしか反映しないので、
-    # その他のトップレベルキー（references / prompts / generation_rules）は
-    # 直接 JSON ファイルにマージする。
-    file_path = cm._data_dir / f"{channel_id}.json"
-    raw = json.loads(file_path.read_text(encoding="utf-8"))
-
-    # ChannelManager にない直書きキー
-    for extra_key in ("references", "prompts", "generation_rules"):
-        if extra_key in updates:
-            raw[extra_key] = updates.pop(extra_key)
-
-    # ChannelManager 経由で標準キーを更新（バリデーション + 再読み込み付き）
+    # ChannelManager.update_channel が知らないトップレベルキー
+    # （references / prompts / generation_rules）は同じ書き込みの中で直接マージする。
+    # 【2026-09-12】書き込みは patch_channel_file に一本化（ディスクを土台に
+    # ロック＋アトミック）。以前の「直書き → update_channel → 消えたら書き直し」
+    # の三段は、update_channel がメモリの写しで上書きしていた頃の回避策。
+    extras = {k: updates.pop(k) for k in ("references", "prompts", "generation_rules")
+              if k in updates}
+    if extras:
+        cm.patch_channel_file(channel_id, lambda raw: raw.update(extras),
+                              reason="config extras")
     if updates:
         cm.update_channel(channel_id, updates)
-        raw = json.loads(file_path.read_text(encoding="utf-8"))
-    else:
-        # update_channel を呼ばない場合は手動で書き戻し
-        file_path.write_text(
-            json.dumps(raw, ensure_ascii=False, indent=2),
-            encoding="utf-8",
-        )
-        cm.reload()
-
-    # Phase 2 拡張フィールドの再書き込み（reload で消える可能性があるため最後に再保存）
-    raw_after = json.loads(file_path.read_text(encoding="utf-8"))
-    changed = False
-    for extra_key in ("references", "prompts", "generation_rules"):
-        if extra_key in raw and raw_after.get(extra_key) != raw[extra_key]:
-            raw_after[extra_key] = raw[extra_key]
-            changed = True
-    if changed:
-        file_path.write_text(
-            json.dumps(raw_after, ensure_ascii=False, indent=2),
-            encoding="utf-8",
-        )
-        cm.reload()
 
     refreshed = cm.get(channel_id)
-    return {"status": "updated", "config": refreshed._raw if refreshed else raw_after}
+    return {"status": "updated", "config": refreshed._raw if refreshed else {}}
 
 
 # =====================================================================
@@ -229,24 +205,22 @@ async def update_channel_persona(
     """ペルソナ設定を部分更新する。"""
     cm, ch = _ensure_channel_or_404(channel_id)
 
-    file_path = cm._data_dir / f"{channel_id}.json"
-    raw = json.loads(file_path.read_text(encoding="utf-8"))
-    vf = raw.get("video_format") or {}
-    current = dict(_empty_persona())
-    current.update({k: v for k, v in (vf.get("persona") or {}).items() if k in PERSONA_FIELDS})
-
     patch = {k: v for k, v in request.dict().items() if v is not None}
     if "interest_categories" in patch and not isinstance(patch["interest_categories"], list):
         raise HTTPException(status_code=422, detail="interest_categories must be a list")
-    current.update(patch)
 
-    vf["persona"] = current
-    raw["video_format"] = vf
-    file_path.write_text(
-        json.dumps(raw, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    cm.reload()
+    current = dict(_empty_persona())
+
+    def _m(raw: Dict[str, Any]) -> None:
+        vf = raw.get("video_format") or {}
+        current.update({k: v for k, v in (vf.get("persona") or {}).items()
+                        if k in PERSONA_FIELDS})
+        current.update(patch)
+        vf["persona"] = current
+        raw["video_format"] = vf
+
+    # 書き込みは patch_channel_file に一本化（2026-09-12）
+    cm.patch_channel_file(channel_id, _m, reason="persona")
     return {"status": "updated", "channel_id": channel_id, "persona": current}
 
 

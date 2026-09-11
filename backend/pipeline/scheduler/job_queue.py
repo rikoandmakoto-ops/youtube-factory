@@ -310,6 +310,20 @@ class JobQueue:
     ) -> str:
         """ジョブをキューに投入"""
         job_id = str(uuid.uuid4())[:8]
+        # 【2026-09-12】ジョブ名（＝出力フォルダ名・投稿タイトルの既定）は必ず
+        # title_gate を通す。generator を経由しない投入（手動 API / run_*.py）でも
+        # 括弧の破片や制御文字が mp4 まで貫通しないようにする最終関門。
+        try:
+            from pipeline import title_gate as _tg
+            clean = _tg.finalize(scenario_data.get("title"),
+                                 fallback=(scenario_data.get("theme") or {}).get("title")
+                                 if isinstance(scenario_data.get("theme"), dict) else None)
+            if clean != scenario_data.get("title"):
+                print(f"🧼 job title cleaned: 「{scenario_data.get('title')}」→「{clean}」")
+                scenario_data["title"] = clean
+        except Exception as e:
+            # 掃除しても使えないタイトルは投入しない（壊れたまま描画・公開しない）
+            raise ValueError(f"ジョブのタイトルが不正です: {e}") from e
         job = Job(
             id=job_id,
             channel_id=channel_id,

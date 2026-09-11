@@ -13,8 +13,10 @@ Usage:
 
 import copy
 import json
+import os
+import threading
 from pathlib import Path
-from typing import Dict, List, Optional, Any
+from typing import Callable, Dict, List, Optional, Any
 from dataclasses import dataclass, field
 
 from .video_format import VideoFormat
@@ -43,6 +45,56 @@ def normalize_image_mode(value: Optional[str]) -> str:
         return DEFAULT_IMAGE_MODE
     v = str(value).strip().lower()
     return v if v in IMAGE_MODES else DEFAULT_IMAGE_MODE
+
+
+# ============================================================
+# theme_seeds の正規化
+# ============================================================
+
+def normalize_theme_seeds(seeds: Any, channel_id: Optional[str] = None) -> List[Dict[str, Any]]:
+    """theme_seeds を「全件 dict・title 必須」に揃える。
+
+    受け付ける形:
+        {"title": "...", "angle": "..."}   … 正
+        "..."                              … 文字列 → {"title": "...", "angle": ""}
+    捨てる形（声を出して捨てる）:
+        title が空の dict、dict でも str でもないもの
+
+    消費側（generator / autopilot / run_*.py / trend_fetcher / comment_demand …）
+    は 10 箇所以上あり、全部が `s.get("title")` 前提。ここで揃えれば
+    設定の書き方（文字列で列挙）で機能が黙って死ぬことがなくなる。
+    """
+    out: List[Dict[str, Any]] = []
+    if not isinstance(seeds, list):
+        if seeds:
+            print(f"  ⚠️ [{channel_id or '?'}] theme_seeds はリストである必要があります"
+                  f"（{type(seeds).__name__} を無視）")
+        return out
+    dropped = 0
+    coerced = 0
+    for s in seeds:
+        if isinstance(s, str):
+            t = s.strip()
+            if not t:
+                dropped += 1
+                continue
+            out.append({"title": t, "angle": ""})
+            coerced += 1
+        elif isinstance(s, dict):
+            t = str(s.get("title") or "").strip()
+            if not t:
+                dropped += 1
+                continue
+            item = dict(s)
+            item["title"] = t
+            item["angle"] = str(item.get("angle") or "")
+            out.append(item)
+        else:
+            dropped += 1
+    if coerced or dropped:
+        print(f"  ⚠️ [{channel_id or '?'}] theme_seeds: 文字列 {coerced} 件を dict に正規化、"
+              f"不正 {dropped} 件を無視（JSON 側も dict 形式に直してください）")
+    return out
 
 
 # ============================================================
@@ -355,52 +407,93 @@ class ChannelManager:
             self._data_dir = Path(__file__).parent.parent.parent / "data" / "channels"
         self._channels: Dict[str, ChannelProfile] = {}
         self._config_issues: List[ConfigIssue] = []
+        # 読み込んだ時点のファイル更新時刻（ns）。get() で外部編集を検知するのに使う。
+        self._mtimes: Dict[str, int] = {}
+        # 書き込みの直列化（同一プロセス内）。autopilot のテーマ取り出しと
+        # UI の設定更新が同時に走っても read-modify-write が交錯しない。
+        self._write_lock = threading.RLock()
         self.reload()
+
+    # ------------------------------------------------------------
+    # 読み込み
+    # ------------------------------------------------------------
+
+    def _path_of(self, channel_id: str) -> Path:
+        return self._data_dir / f"{channel_id}.json"
+
+    @staticmethod
+    def _mtime_ns(path: Path) -> Optional[int]:
+        try:
+            return path.stat().st_mtime_ns
+        except OSError:
+            return None
+
+    def _build_profile(self, raw: Dict[str, Any]) -> ChannelProfile:
+        """生 JSON から ChannelProfile を組み立てる（設定の形の吸収もここ）。"""
+        # VideoFormat: video_format セクションがあればパース、なければdefaultsからマージ
+        vf = VideoFormat.from_dict(raw.get("video_format", {}))
+        vf.merge_channel_defaults(raw.get("defaults", {}))
+        return ChannelProfile(
+            id=raw["id"],
+            name=raw["name"],
+            concept=raw["concept"],
+            style=raw.get("style", "yukkuri"),
+            youtube_channel_id=raw.get("youtube_channel_id"),
+            characters=raw.get("characters", {}),
+            thumbnail_template=raw.get("thumbnail_template", {}),
+            defaults=raw.get("defaults", {}),
+            content_policy=raw.get("content_policy", {}),
+            # 【2026-09-12】素の文字列の seed を {"title": ...} に正規化する。
+            # 09-11 に daily-science 6件 / scp-lab 3件が文字列で入っており、
+            # `s.get("title")` で suggest_themes / _pick_seed_avoiding_past が落ち、
+            # 呼び出し元の握り潰しで genre_blacklist が無効化された。読み込みで
+            # 形を揃えれば、消費側 10 箇所すべてが dict 前提のままで壊れない。
+            theme_seeds=normalize_theme_seeds(raw.get("theme_seeds", []), raw.get("id")),
+            video_format=vf,
+            publish_settings=raw.get("publish_settings", {}),
+            voice_style=raw.get("voice_style", {}),
+            image_mode=normalize_image_mode(raw.get("image_mode")),
+            image_collect=raw.get("image_collect", {}),
+            tiktok=raw.get("tiktok", {}),
+            _raw=raw,
+        )
+
+    def _load_file(self, f: Path, *, verbose: bool = True) -> Optional[ChannelProfile]:
+        """1ファイルを読み込んでメモリに載せる。壊れていれば None（既存はそのまま）。"""
+        try:
+            mtime = self._mtime_ns(f)
+            raw = json.loads(f.read_text(encoding="utf-8"))
+            profile = self._build_profile(raw)
+        except Exception as e:
+            print(f"  ❌ Failed to load {f.name}: {e}")
+            return None
+        self._channels[profile.id] = profile
+        if mtime is not None:
+            self._mtimes[profile.id] = mtime
+        if verbose:
+            print(f"  📺 Channel loaded: {profile.id} ({profile.name})")
+        # 設定整合性チェック（autopilot有効 × 非公開 などの矛盾を検知）
+        self._config_issues = [i for i in self._config_issues if i.channel_id != profile.id]
+        for issue in validate_channel_config(raw, channel_id=profile.id):
+            self._config_issues.append(issue)
+            if verbose:
+                icon = "❌" if issue.is_error else "⚠️"
+                print(f"  {icon} CONFIG {issue.level.upper()} [{profile.id}]: {issue.message}")
+                if issue.fix:
+                    print(f"      → 対処: {issue.fix}")
+        return profile
 
     def reload(self):
         """チャンネルJSONを再読み込み"""
         self._channels.clear()
         self._config_issues = []
+        self._mtimes.clear()
         if not self._data_dir.exists():
             print(f"⚠️ Channel data dir not found: {self._data_dir}")
             return
 
         for f in sorted(self._data_dir.glob("*.json")):
-            try:
-                raw = json.loads(f.read_text(encoding="utf-8"))
-                # VideoFormat: video_format セクションがあればパース、なければdefaultsからマージ
-                vf = VideoFormat.from_dict(raw.get("video_format", {}))
-                vf.merge_channel_defaults(raw.get("defaults", {}))
-                profile = ChannelProfile(
-                    id=raw["id"],
-                    name=raw["name"],
-                    concept=raw["concept"],
-                    style=raw.get("style", "yukkuri"),
-                    youtube_channel_id=raw.get("youtube_channel_id"),
-                    characters=raw.get("characters", {}),
-                    thumbnail_template=raw.get("thumbnail_template", {}),
-                    defaults=raw.get("defaults", {}),
-                    content_policy=raw.get("content_policy", {}),
-                    theme_seeds=raw.get("theme_seeds", []),
-                    video_format=vf,
-                    publish_settings=raw.get("publish_settings", {}),
-                    voice_style=raw.get("voice_style", {}),
-                    image_mode=normalize_image_mode(raw.get("image_mode")),
-                    image_collect=raw.get("image_collect", {}),
-                    tiktok=raw.get("tiktok", {}),
-                    _raw=raw,
-                )
-                self._channels[profile.id] = profile
-                print(f"  📺 Channel loaded: {profile.id} ({profile.name})")
-                # 設定整合性チェック（autopilot有効 × 非公開 などの矛盾を検知）
-                for issue in validate_channel_config(raw, channel_id=profile.id):
-                    self._config_issues.append(issue)
-                    icon = "❌" if issue.is_error else "⚠️"
-                    print(f"  {icon} CONFIG {issue.level.upper()} [{profile.id}]: {issue.message}")
-                    if issue.fix:
-                        print(f"      → 対処: {issue.fix}")
-            except Exception as e:
-                print(f"  ❌ Failed to load {f.name}: {e}")
+            self._load_file(f)
 
         print(f"✅ {len(self._channels)} channels loaded")
         n_err = sum(1 for i in self._config_issues if i.is_error)
@@ -408,10 +501,31 @@ class ChannelManager:
         if n_err or n_warn:
             print(f"🩺 Channel config check: {n_err} error(s), {n_warn} warning(s)")
 
+    def _refresh_if_changed(self, channel_id: str) -> None:
+        """ディスクのファイルがメモリより新しければ、そのチャンネルだけ読み直す。
+
+        【2026-09-12】稼働中の backend は起動時の JSON をメモリに抱えたまま動く。
+        指揮者（別プロセス）が data/channels/*.json を直しても、backend は古い
+        写しで動き続け、次に何かを保存した瞬間に古い写しで上書きしていた
+        （「設定変更が消える」の真因の半分。もう半分は _save_autopilot が
+        メモリを土台にしていたこと → patch_channel_file）。
+        get() のたびに stat する（数µs）。読み直しは変わったときだけ。
+        """
+        f = self._path_of(channel_id)
+        cur = self._mtime_ns(f)
+        if cur is None or cur == self._mtimes.get(channel_id):
+            return
+        print(f"🔄 Channel config changed on disk — reloading {channel_id}.json")
+        self._load_file(f, verbose=False)
+
     def get(self, channel_id: str) -> Optional[ChannelProfile]:
+        if channel_id in self._channels:
+            self._refresh_if_changed(channel_id)
         return self._channels.get(channel_id)
 
     def list_channels(self) -> List[ChannelProfile]:
+        for cid in list(self._channels):
+            self._refresh_if_changed(cid)
         return list(self._channels.values())
 
     def list_ids(self) -> List[str]:
@@ -427,14 +541,86 @@ class ChannelManager:
     def has_config_errors(self) -> bool:
         return any(i.is_error for i in self._config_issues)
 
+    # ------------------------------------------------------------
+    # 書き込み — ここ以外で data/channels/*.json を書かない
+    # ------------------------------------------------------------
+
+    def read_raw(self, channel_id: str) -> Optional[Dict[str, Any]]:
+        """ディスク上の**現在の**生 JSON。壊れていればメモリの写し（声を出す）。"""
+        file_path = self._path_of(channel_id)
+        if file_path.exists():
+            try:
+                return json.loads(file_path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as e:
+                # ディスクが読めない/壊れているときだけメモリの写しに退避する。
+                # 黙って古い値で上書きしないよう、必ず声を出す。
+                print(f"⚠️ read_raw: {file_path.name} を読めないので "
+                      f"メモリ上の写しを土台にします — {e}")
+        ch = self._channels.get(channel_id)
+        return copy.deepcopy(ch._raw) if ch else None
+
+    def _atomic_write(self, file_path: Path, raw: Dict[str, Any]) -> None:
+        """tmp に書いて rename。途中で落ちても半端な JSON を残さない。"""
+        file_path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = file_path.with_name(file_path.name + ".tmp")
+        tmp.write_text(json.dumps(raw, ensure_ascii=False, indent=2) + "\n",
+                       encoding="utf-8")
+        os.replace(tmp, file_path)
+
+    def patch_channel_file(
+        self,
+        channel_id: str,
+        mutate: Callable[[Dict[str, Any]], Any],
+        *,
+        reason: str = "",
+    ) -> Optional[Dict[str, Any]]:
+        """ディスクの現在の JSON を土台に `mutate(raw)` を適用して書き戻す。
+
+        【2026-09-12】data/channels/*.json への書き込みはすべてここを通す。
+
+        「autopilot がテーマを1件取り出して保存する」たびに、メモリ上の古い
+        写しを丸ごと書き戻していたため、指揮者がディスク側に入れた設定変更
+        （title_rules / theme_blacklist / genre_blacklist …）が**次の発火で
+        黙って消えていた**。update_channel は 09-10 に直したが、autopilot の
+        `_save_autopilot` は ch._raw.copy() のままだった。書き込み経路が
+        4つ（update_channel / _save_autopilot / api_phase2 の config・persona /
+        effects_researcher）あり、1つ直しても残りが同じ事故を起こす構造なので、
+        read-modify-write を1関数に集約する。
+
+        - 読み込み → mutate → 書き込み を `_write_lock` の中で行う（同一プロセス）
+        - 土台は必ずディスク（メモリの写しは読めないときの退避のみ）
+        - 書き込みは tmp + os.replace（アトミック）
+        - 書いた直後にそのチャンネルだけ読み直す（全 reload の副作用を避ける）
+
+        `mutate` は raw を in-place で書き換える。戻り値は無視する。
+        戻り値: 書き込んだ raw（チャンネルが無ければ None）。
+        """
+        with self._write_lock:
+            if channel_id not in self._channels and not self._path_of(channel_id).exists():
+                return None
+            raw = self.read_raw(channel_id)
+            if raw is None:
+                return None
+            mutate(raw)
+            file_path = self._path_of(channel_id)
+            self._atomic_write(file_path, raw)
+            self._load_file(file_path, verbose=False)
+            if reason:
+                print(f"💾 {channel_id}.json updated ({reason})")
+            return raw
+
+    def set_section(self, channel_id: str, key: str, value: Any, *,
+                    reason: str = "") -> Optional[Dict[str, Any]]:
+        """トップレベルの1キーだけ差し替える（他のキーはディスクの値を維持）。"""
+        def _m(raw: Dict[str, Any]) -> None:
+            raw[key] = value
+        return self.patch_channel_file(channel_id, _m, reason=reason or f"set {key}")
+
     def add_channel(self, profile_data: Dict) -> ChannelProfile:
         """新チャンネルをJSONファイルとして保存し、メモリにも追加"""
         channel_id = profile_data["id"]
-        file_path = self._data_dir / f"{channel_id}.json"
-        file_path.write_text(
-            json.dumps(profile_data, ensure_ascii=False, indent=2),
-            encoding="utf-8"
-        )
+        with self._write_lock:
+            self._atomic_write(self._path_of(channel_id), profile_data)
         self.reload()
         return self._channels[channel_id]
 
@@ -450,56 +636,44 @@ class ChannelManager:
         09-08 に「バックエンドが設定を上書きして消す」として観測された症状が
         これで、原因は再起動忘れではなく、この関数が古い写しを正としていたこと。
 
-        あわせて deepcopy にした。`.copy()` は浅いので、下の video_format の
-        部分更新が `_raw` の入れ子をその場で書き換えてしまっていた。
+        【2026-09-12】実体を patch_channel_file に移した（他の書き込み経路と同じ
+        ロック・アトミック書き込み・部分再読込を使う）。
         """
-        ch = self._channels.get(channel_id)
-        if not ch:
+        if channel_id not in self._channels:
             return None
-        file_path = self._data_dir / f"{channel_id}.json"
-        raw = None
-        if file_path.exists():
-            try:
-                raw = json.loads(file_path.read_text(encoding="utf-8"))
-            except (OSError, json.JSONDecodeError) as e:
-                # ディスクが読めない/壊れているときだけメモリの写しに退避する。
-                # 黙って古い値で上書きしないよう、必ず声を出す。
-                print(f"⚠️ update_channel: {file_path.name} を読めないので "
-                      f"メモリ上の写しを土台にします — {e}")
-        if raw is None:
-            raw = copy.deepcopy(ch._raw)
-        # トップレベルフィールド更新
-        for key in ("name", "concept", "style", "youtube_channel_id",
-                     "characters", "thumbnail_template", "defaults",
-                     "content_policy", "theme_seeds", "publish_settings",
-                     "voice_style", "image_collect", "tiktok"):
-            if key in updates:
-                raw[key] = updates[key]
-        if "image_mode" in updates:
-            raw["image_mode"] = normalize_image_mode(updates["image_mode"])
-        # video_format 更新（部分更新対応）
-        if "video_format" in updates:
-            existing_vf = raw.get("video_format", {})
-            for section, vals in updates["video_format"].items():
-                if isinstance(vals, dict):
-                    if section not in existing_vf:
-                        existing_vf[section] = {}
-                    existing_vf[section].update(vals)
-                else:
-                    existing_vf[section] = vals
-            raw["video_format"] = existing_vf
-        file_path.write_text(
-            json.dumps(raw, ensure_ascii=False, indent=2),
-            encoding="utf-8"
-        )
-        self.reload()
+
+        def _m(raw: Dict[str, Any]) -> None:
+            # トップレベルフィールド更新
+            for key in ("name", "concept", "style", "youtube_channel_id",
+                        "characters", "thumbnail_template", "defaults",
+                        "content_policy", "theme_seeds", "publish_settings",
+                        "voice_style", "image_collect", "tiktok"):
+                if key in updates:
+                    raw[key] = updates[key]
+            if "image_mode" in updates:
+                raw["image_mode"] = normalize_image_mode(updates["image_mode"])
+            # video_format 更新（部分更新対応）
+            if "video_format" in updates:
+                existing_vf = raw.get("video_format", {})
+                for section, vals in updates["video_format"].items():
+                    if isinstance(vals, dict):
+                        if section not in existing_vf:
+                            existing_vf[section] = {}
+                        existing_vf[section].update(vals)
+                    else:
+                        existing_vf[section] = vals
+                raw["video_format"] = existing_vf
+
+        self.patch_channel_file(channel_id, _m, reason="update_channel")
         return self._channels.get(channel_id)
 
     def remove_channel(self, channel_id: str) -> bool:
         """チャンネルJSONを削除"""
-        file_path = self._data_dir / f"{channel_id}.json"
-        if file_path.exists():
-            file_path.unlink()
-            self._channels.pop(channel_id, None)
-            return True
+        file_path = self._path_of(channel_id)
+        with self._write_lock:
+            if file_path.exists():
+                file_path.unlink()
+                self._channels.pop(channel_id, None)
+                self._mtimes.pop(channel_id, None)
+                return True
         return False

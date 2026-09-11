@@ -155,6 +155,30 @@ def validate_channel_config(
             )
         )
 
+    # 5) theme_seeds に dict でない要素（素の文字列）が混ざっている
+    #    読み込み側（ChannelManager.normalize_theme_seeds）が吸収するので動作は
+    #    止まらないが、JSON を直す合図として必ず見えるようにする。09-11 に
+    #    daily-science 6件 / scp-lab 3件がこれで suggest_themes を落としていた。
+    seeds = raw.get("theme_seeds")
+    if seeds is not None and not isinstance(seeds, list):
+        issues.append(ConfigIssue(
+            channel_id=cid, level=LEVEL_WARNING, code="theme_seeds_not_list",
+            message=f"theme_seeds がリストではありません（{type(seeds).__name__}）。無視されます。",
+            field="theme_seeds",
+            fix='theme_seeds を [{"title": "...", "angle": "..."}] の配列にしてください',
+        ))
+    elif isinstance(seeds, list):
+        bad = [i for i, s in enumerate(seeds)
+               if not (isinstance(s, dict) and str(s.get("title") or "").strip())]
+        if bad:
+            issues.append(ConfigIssue(
+                channel_id=cid, level=LEVEL_WARNING, code="theme_seeds_shape",
+                message=(f"theme_seeds の {len(bad)} 件が {{\"title\": ...}} 形式ではありません"
+                         f"（index: {bad[:6]}）。文字列は読み込み時に dict へ正規化されます。"),
+                field="theme_seeds",
+                fix='各要素を {"title": "...", "angle": "..."} の dict にしてください',
+            ))
+
     return issues
 
 

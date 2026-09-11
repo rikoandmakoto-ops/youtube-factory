@@ -370,6 +370,16 @@ def upload_video(
     if not video_path.exists():
         raise FileNotFoundError(f"動画ファイルが見つかりません: {video_path}")
 
+    # 【2026-09-12】投稿タイトルの最終関門（→ pipeline/title_gate）。
+    # 生成側のどの経路（autopilot / ペア公開 / 手動 API / run_*.py / 説明文ファイルの
+    # 1行目）で決まったタイトルでも、YouTube に渡す直前でここを必ず通る。
+    # 括弧の破片・二重【ショート】・制御文字・100字超過を落とし、空なら投稿しない。
+    from pipeline import title_gate as _tg
+    _clean = _tg.for_upload(title)
+    if _clean != title:
+        print(f"🧼 upload title cleaned: 「{title}」→「{_clean}」")
+        title = _clean
+
     # Channel-specific defaults
     if channel_id and tags is None:
         saved = _load_saved_channels()

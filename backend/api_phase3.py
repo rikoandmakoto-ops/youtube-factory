@@ -911,8 +911,9 @@ def _run_pair_publish_async(job_id: str, params: Dict[str, Any]) -> None:
                 params.get("channel_id"),
                 main, short,
             )
-        except Exception:
-            pass
+        except Exception as e:
+            # 記録が落ちると PDCA が「未投稿」と誤診する（→ memory: 投稿記録の欠落）
+            print(f"⚠️ video_status への記録に失敗 (pair {params.get('source_job_id')}): {e}", flush=True)
         # 通知
         try:
             from api_phase4 import notify_event  # 遅延 import で循環回避

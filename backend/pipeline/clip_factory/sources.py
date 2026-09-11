@@ -57,6 +57,15 @@ def _safe_is_dir(path: Path) -> bool:
     except OSError:
         return False
 
+
+def _dirname_for(title: str) -> str:
+    """video_generator.output_dirname と同じ変換（フォルダ名の一貫性）。"""
+    try:
+        from pipeline import title_gate as _tg
+        return _tg.safe_dirname(title)
+    except Exception:
+        return title
+
 # 長尺 mp4 のファイル名パターン（プレフィックスは prefix 依存なので後方一致で拾う）
 MAIN_SUFFIXES = ("_メイン.mp4",)
 SHORT_MARKERS = ("ショート", "short")
@@ -446,7 +455,11 @@ def build_mirror(
     for title in sorted(by_title):
         if limit is not None and len(linked) >= limit:
             break
-        src_folder = OUTPUT_BASE / title
+        # フォルダ名は video_generator と同じ変換（title_gate.safe_dirname）を通す。
+        # 09-12 以前に作られたフォルダは素の title 名なので、両方を見る。
+        src_folder = OUTPUT_BASE / _dirname_for(title)
+        if not _safe_is_dir(src_folder):
+            src_folder = OUTPUT_BASE / title
         if not _safe_is_dir(src_folder):
             continue
         mains = _folder_videos(src_folder, source_channel_ids, can_enumerate=True)

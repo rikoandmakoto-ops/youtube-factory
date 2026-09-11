@@ -362,8 +362,13 @@ def _attach_auto_publish_marker(
                     "publish_at": publish_at,
                 })
                 j.scenario_data["_options"] = opts
-    except Exception:
-        pass
+            else:
+                # マーカーが付かなければ完了時に公開されない。黙って通さない。
+                print(f"⚠️ auto_publish marker: job {job_id} not found in queue — 自動公開されません")
+    except Exception as e:
+        # ここが落ちると生成は成功するのに公開だけ起きない（原因不明の「投稿0本」になる）
+        print(f"⚠️ auto_publish marker failed for job {job_id}: {e}")
+        _send_event_notification("error", f"自動公開マーカーの付与に失敗 (job {job_id}): {e}")
 
 
 def _compute_publish_at_from_offset(offset_minutes: Optional[int]) -> Optional[str]:
@@ -539,8 +544,10 @@ def on_generation_complete(job) -> None:
         try:
             from api_phase3 import _record_pair_status_to_db
             _record_pair_status_to_db(job.id, job.channel_id, main, short)
-        except Exception:
-            pass
+        except Exception as e:
+            # 記録が落ちると PDCA が「未投稿」と誤診する（→ memory: 投稿記録の欠落）。
+            # 公開自体は済んでいるので止めないが、必ず声を出す。
+            print(f"⚠️ video_status への記録に失敗 (job {job.id}): {e}")
         # サムネ AB テスト登録（メイン動画のみ）
         try:
             main_vid = main.get("video_id")
@@ -1084,8 +1091,9 @@ def _run_schedule(schedule_id: str) -> None:
         )
         try:
             sg.save_scenario(scenario)
-        except Exception:
-            pass
+        except Exception as e:
+            # 保存が落ちると過去テーマに残らず、重複ゲートが次回この題材を見逃す
+            print(f"⚠️ scenario save failed (dedup will not see this theme): {e}")
         job_id = queue.submit(
             channel_id=s["channel_id"],
             scenario_data=scenario,

@@ -63,28 +63,44 @@ KEYWORD_DAILY_LIMIT = 2
 # 語そのものは共食いの原因ではない（共食いするのは題材）ので、上限を分けて緩める。
 # 偏り自体はチャンネルごとに主軸の語を割り振ることで抑える
 # （→ 各ch の theme_priority.title_style「答え提示語の割り当て」）。
-ANSWER_MARKER_KEYWORDS = {
-    "理由", "正体", "本当の", "実は", "わけ", "なぜ", "真相", "裏側", "実態",
-}
-ANSWER_MARKER_DAILY_LIMIT = 3
+try:
+    from pipeline import title_lexicon as _lex
+except ImportError:  # pragma: no cover — 単体実行時
+    import importlib
+    _lex = importlib.import_module("title_lexicon")
+
+# 語の一覧は title_lexicon に一本化した（重複判定・規約修復と同じ語を見る）。
+ANSWER_MARKER_KEYWORDS = set(_lex.ANSWER_MARKERS)
+ANSWER_MARKER_DAILY_LIMIT = 6
+
+# 【2026-09-11 夜】上限を 3 → 6 に引き上げた。
+# 09-11 朝に「なぜ〇〇なのか」型を scp-lab / yokai-watch / daily-science /
+# 2ch-matome の第一候補に据えた（ch内対照で非該当の1.8〜3.2倍）。その結果
+# 「なぜ」だけで上限3を即座に使い切り、キューが全件『なぜ型』の chでは
+# **キュー全体がブロック**される。09-11 のログで
+# 「all queued themes blocked (dup/cross-ch) — using first anyway」が16回、
+# cross-ch keyword block が336回。ブロックしても結局 first を使うので、
+# 現状このゲートは順序選択を無効化するノイズにしかなっていない。
+# 「なぜ」は今や意図した文体であって共食いの原因ではない（共食いするのは題材で、
+# そちらは STOP_KEYWORDS 外の話題語が別途上限2で見ている）。
+# 6ch × 3枠 = 18本/日 に対し 6 なら、1語に全部寄ることは依然防げる。
+#
+# 【2026-09-12】上限の数字では根本的に直らないので、**段階で分けた**:
+#   - テーマ取り出し時（autopilot の `_pop_or_refill_theme`）は `topic_only=True` で
+#     呼び、答え提示語（型語）を**一切数えない**。キューの題名は題材であって
+#     最終タイトルではなく、型語は後段の LLM が書き直す。ここで型語を数えると
+#     「全候補が同じ型」のチャンネルは候補の中身に関係なく全件ブロックされる。
+#   - 最終タイトル確定時（generator）だけ型語も数える。ここは1本ずつ言い換えが
+#     できるので、ブロック＝全件停止にはならない。
+# こうすると「キュー全件ブロック」は原理的に**題材語**でしか起きず、題材語は
+# 候補ごとに違うので全件揃うことがない。
 
 # キーワードとして数えない語。
 #   - チャンネル名・シリーズ名に必ず入る語（話題を区別しない）
 #   - 「ショート」のような媒体語（theme_dedup で過去に偽陽性を出した実績あり）
 #   - 単独では話題にならない汎用名詞
 # ここに無い語でも 1 文字なら数えない（偶然一致が多すぎるため）。
-STOP_KEYWORDS = {
-    "ショート", "解説", "ゆっくり", "動画", "今回", "紹介", "雑学", "豆知識",
-    "scp", "財団", "異常", "収容",          # scp-lab の定型
-    "妖怪", "伝承", "民話",                  # yokai-watch の定型
-    "ポケモン", "ポケ", "図鑑",              # pokemon-lab の定型
-    "企業", "会社", "社員",                  # company-facts の定型
-    "論文", "研究", "実験",                  # fake-paper の定型
-    "科学", "日常",                          # daily-science の定型
-    "まとめ", "スレ",                        # 2ch-matome の定型
-    "司書", "書庫",                          # akashic-librarian の定型
-    "切り抜き",
-}
+STOP_KEYWORDS = set(_lex.FORMAT_TOKENS) | {"動画", "今回", "紹介", "雑学", "豆知識"}
 
 # 抽出したキーワードのうち、これ以上の長さのものだけを対象にする。
 # 「正体」「真実」「末路」のような 2 文字の煽り語を拾うのが本来の目的なので 2。
@@ -97,7 +113,7 @@ def _today() -> str:
     return datetime.now().strftime("%Y-%m-%d")
 
 
-def extract_keywords(title: str) -> List[str]:
+def extract_keywords(title: str, *, topic_only: bool = False) -> List[str]:
     """タイトルから横断チェック対象のキーワードを抽出する。
 
     `theme_dedup._content_tokens` と同じ正規化を通すので、重複判定と語の切り方が
@@ -109,14 +125,19 @@ def extract_keywords(title: str) -> List[str]:
     「正体」がキーワードでなくなり、09-03 に5chが同時に『正体』を出した件への
     ゲート（09-04 に入れたこのモジュールの存在理由）が**無言で消える**。
     重複判定で落とすことと、横断で本数を数えることは目的が違うので、ここで戻す。
+
+    `topic_only=True` なら答え提示語（型語）を拾わない。テーマ取り出し時用。
     """
     try:
         from pipeline.auto_scenario import theme_dedup as _td
         tokens = _td._content_tokens(title or "")
-    except Exception:
+    except Exception as e:
+        print(f"⚠️ cross_channel_gate: キーワード抽出に失敗（ゲートは素通しになります）: {e}")
         return []
     raw = (title or "")
-    tokens = list(tokens) + [m for m in ANSWER_MARKER_KEYWORDS if m in raw]
+    tokens = list(tokens)
+    if not topic_only:
+        tokens += [m for m in ANSWER_MARKER_KEYWORDS if m in raw]
     out: List[str] = []
     seen = set()
     for tok in tokens:
@@ -125,6 +146,8 @@ def extract_keywords(title: str) -> List[str]:
             continue
         if t in STOP_KEYWORDS or _DIGITS_ONLY.match(t):
             continue
+        if topic_only and t in ANSWER_MARKER_KEYWORDS:
+            continue
         if t in seen:
             continue
         seen.add(t)
@@ -132,12 +155,21 @@ def extract_keywords(title: str) -> List[str]:
     return out
 
 
+def is_answer_marker(keyword: str) -> bool:
+    """語が答え提示語（型語）か。ブロック理由の重さを分けるのに使う。"""
+    return (keyword or "").strip().lower() in ANSWER_MARKER_KEYWORDS
+
+
 def _load() -> Dict[str, Any]:
     """状態を読む。日付が変わっていれば空にして返す。"""
     today = _today()
     try:
         data = json.loads(_STATE_PATH.read_text(encoding="utf-8"))
-    except Exception:
+    except FileNotFoundError:
+        data = {}
+    except Exception as e:
+        # 壊れた状態ファイルを黙って空にすると、その日のゲートが無言で消える
+        print(f"⚠️ cross_channel_gate: 状態ファイルを読めないので今日の記録を作り直します: {e}")
         data = {}
     if not isinstance(data, dict) or data.get("date") != today:
         return {"date": today, "used": {}}
@@ -191,12 +223,16 @@ def _is_own(entry: Dict[str, Any], channel_id: str, norm_title: str,
 
 def blocking_keyword(channel_id: str, title: str,
                      *, limit: Optional[int] = None,
-                     key: Optional[str] = None) -> Optional[Tuple[str, int]]:
+                     key: Optional[str] = None,
+                     topic_only: bool = False) -> Optional[Tuple[str, int]]:
     """上限に達しているキーワードがあれば (keyword, count) を返す。無ければ None。
 
     同じチャンネルが今日すでに使った分も数える（同一chの連投も抑えたいため）。
     ただし **同じ1本の生成** による再試行は数えない（`key`。生成リトライや
     最終タイトルの書き直しで自分自身にブロックされるのを防ぐ）。
+
+    `topic_only=True` は答え提示語（型語）を数えない。テーマ取り出し時に使う
+    （→ モジュール docstring 2026-09-12）。
     """
     cap = _limit(limit)
     if cap <= 0:
@@ -204,7 +240,7 @@ def blocking_keyword(channel_id: str, title: str,
     data = _load()
     used = data.get("used") or {}
     norm_title = (title or "").strip()
-    for kw in extract_keywords(title):
+    for kw in extract_keywords(title, topic_only=topic_only):
         entries = [
             e for e in (used.get(kw) or [])
             if not _is_own(e, channel_id, norm_title, key)

@@ -39,7 +39,7 @@ from __future__ import annotations
 import threading
 import uuid
 from datetime import datetime, timedelta, timezone
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
@@ -200,6 +200,9 @@ def _load_autopilot(channel_id: str) -> Dict[str, Any]:
     cm = _state.get("channel_manager")
     if cm is None:
         raise HTTPException(status_code=503, detail="Channel manager not ready")
+    # cm.get() はディスクが更新されていればそのチャンネルを読み直す（2026-09-12）。
+    # 指揮者が theme_queue や設定をファイルで直した直後の発火でも、古い写しではなく
+    # 今の内容から取り出す。
     ch = cm.get(channel_id)
     if ch is None:
         raise HTTPException(status_code=404, detail=f"Channel '{channel_id}' not found")
@@ -279,13 +282,13 @@ def _save_autopilot(channel_id: str, ap: Dict[str, Any]) -> Dict[str, Any]:
     ch = cm.get(channel_id)
     if ch is None:
         raise HTTPException(status_code=404, detail=f"Channel '{channel_id}' not found")
-    # チャンネル JSON にマージ保存
-    raw = ch._raw.copy()
-    raw["autopilot"] = ap
-    file_path = cm._data_dir / f"{channel_id}.json"
-    import json as _json
-    file_path.write_text(_json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
-    cm.reload()
+    # 【2026-09-12】`autopilot` キーだけをディスクの現在の JSON に差し込む。
+    # 以前は ch._raw.copy()（起動時の写し）を丸ごと書き戻していたため、
+    # テーマを1件取り出すたびに、指揮者がディスク側へ入れた title_rules /
+    # theme_blacklist / genre_blacklist の変更が黙って消えていた。
+    # 書き込みは ChannelManager.patch_channel_file（ロック＋アトミック）に集約。
+    if cm.set_section(channel_id, "autopilot", ap, reason="autopilot") is None:
+        raise HTTPException(status_code=404, detail=f"Channel '{channel_id}' not found")
     # スケジューラを再同期
     _refresh_channel_job(channel_id)
     return ap
@@ -623,42 +626,68 @@ def _pop_or_refill_theme(channel_id: str) -> Optional[Dict[str, str]]:
         head = None
         skipped = 0
         skipped_cross = 0
-        deferred: List[Dict[str, Any]] = []   # 横断ゲートで落ちた候補（キューに戻す）
+        # 横断ゲートで落ちた候補（キューに戻す）。(ブロック本数, 候補) で持ち、
+        # 全滅したときは「最も混んでいない語」の候補を使う。
+        deferred: List[Tuple[int, Dict[str, Any]]] = []
+        last_dup: Optional[Dict[str, Any]] = None
+        # 型語の自動抽出は past に対して1回だけ（候補ごとに計算し直さない）
+        past_stop = _td.corpus_stopwords(past) if (_td is not None and past) else set()
         while queue:
             cand = queue.pop(0)
             cand_title = (cand.get("title") or "").strip()
             if _td is not None and cand_title and past:
-                hit = _td.find_lexical_duplicate(cand_title, past)
+                hit = _td.find_lexical_duplicate(cand_title, past, stopwords=past_stop)
                 if hit is not None:
                     skipped += 1
+                    last_dup = cand
                     print(f"  ♻️ autopilot dropped dup theme: '{cand_title}' ≈ '{hit[0]}' ({hit[1]:.2f})")
                     continue
             if _ccg is not None and cand_title:
+                # 【2026-09-12】テーマ段では**題材語だけ**を見る（topic_only）。
+                # 「なぜ」のような型語はキューの全候補に共通で、ここで数えると
+                # 型を統一したチャンネルは候補の中身と無関係に全件ブロックされる
+                # （09-11 に 16回 / 336ブロック）。型語は最終タイトル段で言い換える。
                 xhit = _ccg.blocking_keyword(
                     channel_id, cand_title, limit=xlimit,
                     key=_ccg.reservation_key(channel_id, cand_title),
+                    topic_only=True,
                 )
                 if xhit is not None:
                     skipped_cross += 1
-                    deferred.append(cand)
+                    deferred.append((int(xhit[1]), cand))
                     print(f"  🚧 autopilot cross-ch keyword block: '{cand_title}' "
                           f"— 「{xhit[0]}」は本日すでに{xhit[1]}本")
                     continue
             head = cand
             break
 
+        # 全滅したときの選び方（「先頭を使う」ではゲートの意味が無い）:
+        #   1) 横断ゲートで保留した候補があれば、ブロック本数が最も少ない題材
+        #   2) それも無ければ（＝全件が過去テーマと重複）最後に落とした重複候補
+        # 投稿を止めるより重複の方がマシ、という従来方針は維持する。
+        if head is None:
+            if deferred:
+                deferred.sort(key=lambda t: t[0])
+                _, head = deferred.pop(0)
+                print(f"⚠️ autopilot {channel_id}: all queued themes blocked by cross-ch "
+                      f"topic words — using least-contended '{head.get('title')}'")
+            elif last_dup is not None:
+                head = last_dup
+                print(f"⚠️ autopilot {channel_id}: all queued themes duplicate past ones "
+                      f"— using '{head.get('title')}' anyway")
+
         # 横断ゲートで落とした候補は「今日は出さない」だけなので、捨てずに
         # 先頭へ戻す（重複ゲートで落ちたものと違い、明日は使える）。
         if deferred:
-            queue = deferred + queue
+            queue = [c for _, c in deferred] + queue
 
-        # 全部重複で枯渇したら、最後に取り出した候補を使う（投稿skipより重複の方がマシ）
         if head is None:
-            print(f"⚠️ autopilot {channel_id}: all queued themes blocked (dup/cross-ch) — using first anyway")
-            if queue:
-                head = queue.pop(0)
-            else:
-                head = cand  # type: ignore[possibly-undefined]
+            # 全件が重複で、しかも保留も無い＝キューが空になった。呼び出し側が
+            # 「テーマ無し」として通知する（黙って None を返さない）。
+            print(f"❌ autopilot {channel_id}: no usable theme (queue exhausted by dedup)")
+            ap["theme_queue"] = queue
+            _save_autopilot(channel_id, ap)
+            return None
 
         if _ccg is not None and (head.get("title") or "").strip():
             # 【2026-09-08】key を渡して「テーマ取り出し時の予約」と「最終タイトル
@@ -800,8 +829,9 @@ def _run_autopilot(
         )
         try:
             sg.save_scenario(scenario)
-        except Exception:
-            pass
+        except Exception as e:
+            # 保存が落ちると過去テーマに残らず、重複ゲートが次回この題材を見逃す
+            print(f"⚠️ scenario save failed (dedup will not see this theme): {e}")
         job_id = queue.submit(
             channel_id=channel_id,
             scenario_data=scenario,
@@ -822,6 +852,15 @@ def _run_autopilot(
             "schedule_run",
             f"🤖 Autopilot 実行 [{ch.name}]: {scenario.get('title', '')} (job: {job_id}){slot_note}",
         )
+        # ゲートが例外で素通りした場合は生成自体は続くが、必ず通知に残す
+        # （09-11 の genre_blacklist 無効化は print だけで1日気づかれなかった）。
+        failed = scenario.get("gate_failures") or []
+        if failed:
+            api_phase4.notify_event(
+                "error",
+                f"⚠️ Autopilot [{ch.name}] job {job_id}: ゲート {len(failed)} 件が例外で素通り — "
+                + " / ".join(f"{f.get('gate')}: {str(f.get('error'))[:80]}" for f in failed[:4]),
+            )
     except Exception as e:
         api_phase4.notify_event("error", f"Autopilot 失敗 ({channel_id}): {e}")
 

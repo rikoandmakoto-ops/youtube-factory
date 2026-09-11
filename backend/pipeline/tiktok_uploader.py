@@ -278,6 +278,13 @@ def upload_video(
     if not vpath.exists():
         raise FileNotFoundError(f"動画ファイルが見つかりません: {vpath}")
 
+    # 投稿タイトルの最終関門（YouTube 側と同じ → pipeline/title_gate）
+    from pipeline import title_gate as _tg
+    _clean = _tg.for_upload(title)
+    if _clean != title:
+        print(f"🧼 TikTok title cleaned: 「{title}」→「{_clean}」")
+        title = _clean
+
     if access_token is None:
         if not auth_channel_id:
             raise ValueError("auth_channel_id または access_token が必要です")

@@ -254,6 +254,29 @@ def _trim_at_break(text: str, limit: int) -> str:
     return s
 
 
+def _sanitize_regenerated_title(title: Optional[str]) -> Optional[str]:
+    """LLM が作り直したタイトルの壊れを弾く。通せないものは None（＝元題を使う）。
+
+    【2026-09-11 夜】company-facts で
+    『個人向け国債、年0.05%でも元本割れしにくい仕組み、】【の実態』という題が
+    実際に生成され、出力フォルダ名・サムネ・説明文まで `】【` を含んだまま
+    レンダリングされた（job 1a6e3105）。作り直し後のタイトルは
+    `.strip("「」")` しか通っておらず、括弧の破片や末尾の読点を誰も見ていない。
+
+    【2026-09-12】実体は pipeline/title_gate.py に移した。タイトルが確定する経路は
+    8段あり（本生成→絵文字→通し番号→AB→重複→CTR→規約→横断語）、段ごとに
+    直しても別の段が壊れた値を持ち込める。作り直しはすべて `title_gate.llm_title`
+    で受け、最終値は `generate()` の出口で `title_gate.finalize` を必ず通す。
+    """
+    from pipeline import title_gate as _tg
+    return _tg.llm_title(title)
+
+
+class ThemeRejectedError(ValueError):
+    """テーマが運用側の停止設定（theme_blacklist / genre_blacklist）に当たり、
+    代替も見つからなかった。生成を止める（止めないと設定が無意味になる）。"""
+
+
 def _normalize_thumb_info(thumb_info) -> None:
     """thumb_info をサムネで読める長さに整える（in-place）。"""
     if not isinstance(thumb_info, dict):
@@ -692,11 +715,19 @@ class ScenarioGenerator:
         必ずここを通るので、generator 内の再抽選をバイパスする経路の重複量産を止める。
 
         判定:
-          - チャンネルの theme_blacklist に一致 → 除外
-          - チャンネルの genre_blacklist のジャンルに分類される → 除外
-          - 既存タイトルとの類似度 >= THEME_DUP_BLOCK_THRESHOLD → 重複として除外
+          - チャンネルの theme_blacklist に一致 → 除外（**硬い**却下）
+          - チャンネルの genre_blacklist のジャンルに分類される → 除外（**硬い**却下）
+          - 既存タイトルとの類似度 >= THEME_DUP_BLOCK_THRESHOLD → 重複として除外（柔らかい却下）
         差し替え順: suggest_themes（語彙/意味 dedup 込み）→ seed 再抽選。
-        代替が見つからなければ元テーマのまま続行（投稿 skip より重複投稿の方がマシ）。
+
+        代替が見つからなかったときの扱い（2026-09-12 に分けた）:
+          - 重複（柔らかい却下）… 元テーマのまま続行（投稿 skip より重複投稿の方がマシ）
+          - blacklist / genre_blacklist（硬い却下）… `ThemeRejectedError` で止める。
+            運用側が「この系統は 0 再生なので作るな」と明示した設定であり、
+            それを黙って無視して作るのは設定が無いのと同じ。09-11 に scp-lab
+            『財団組織・職員』が、suggest_themes の例外（seed の形式エラー）を
+            ここで握り潰した結果**そのまま採用**されていた。
+        代替探索の失敗（LLM 落ち・seed 枯渇）は握り潰さず `theme_gate` に記録する。
         """
         try:
             from pipeline.auto_scenario import theme_dedup as _td
@@ -707,29 +738,33 @@ class ScenarioGenerator:
         existing = self._existing_titles_for_dedup(channel.id)
         blacklist = self._channel_theme_blacklist(channel)
         genre_blacklist = self._channel_genre_blacklist(channel)
+        # 型語の自動抽出は existing に対して1回だけ
+        stop = _td.corpus_stopwords(existing)
 
-        def _reject_reason(title: str) -> Optional[str]:
+        def _reject_reason(title: str) -> Tuple[Optional[str], bool]:
+            """(理由, 硬い却下か)。理由 None なら通過。"""
             title = (title or "").strip()
             if not title:
-                return None
+                return None, False
             bl = self._blacklisted_reason(title, blacklist)
             if bl:
-                return f"blacklist『{bl}』"
+                return f"blacklist『{bl}』", True
             gb = self._genre_blacklisted_reason(channel.id, title, genre_blacklist)
             if gb:
-                return f"停止ジャンル『{gb}』"
+                return f"停止ジャンル『{gb}』", True
             hit = _td.find_lexical_duplicate(
-                title, existing, threshold=THEME_DUP_BLOCK_THRESHOLD)
+                title, existing, threshold=THEME_DUP_BLOCK_THRESHOLD, stopwords=stop)
             if hit is not None:
-                return f"既存『{hit[0][:24]}』に類似({hit[1]:.2f})"
-            return None
+                return f"既存『{hit[0][:24]}』に類似({hit[1]:.2f})", False
+            return None, False
 
-        reason = _reject_reason(theme.get("title"))
+        reason, hard = _reject_reason(theme.get("title"))
         if not reason:
             return theme
 
         print(f"  ♻️ Theme '{theme.get('title')}' rejected — {reason}. 別テーマを選び直します")
         tried = {(theme.get("title") or "").strip().lower()}
+        errors: List[str] = []
 
         # 1) AI 提案（内部で除外リスト+語彙+意味 dedup 済み）から重複しない最初の1件
         try:
@@ -740,30 +775,49 @@ class ScenarioGenerator:
                 if not t or t.lower() in tried:
                     continue
                 tried.add(t.lower())
-                if not _reject_reason(t):
+                r, _ = _reject_reason(t)
+                if not r:
                     print(f"  ✅ Replaced with AI-suggested theme: {t}")
                     return {
                         "title": t,
                         "angle": s.get("angle", "") or "",
                         "parent_title": s.get("parent_title"),
+                        "theme_gate": {"replaced": theme.get("title"), "reason": reason},
                     }
         except Exception as e:
+            # 握り潰さない。理由を残して次の手段へ（seed 再抽選）。
+            errors.append(f"suggest_themes: {type(e).__name__}: {e}")
             print(f"  ⚠️ AI theme replacement failed: {e}")
 
         # 2) seed 再抽選（過去回避つき）
         for _ in range(6):
             try:
                 cand = self._pick_seed_avoiding_past(channel)
-            except Exception:
+            except Exception as e:
+                errors.append(f"seed re-pick: {type(e).__name__}: {e}")
                 break
             t = (cand.get("title") or "").strip()
-            if t and t.lower() not in tried and not _reject_reason(t):
+            r, _ = _reject_reason(t)
+            if t and t.lower() not in tried and not r:
                 print(f"  ✅ Replaced with seed theme: {t}")
+                cand = dict(cand)
+                cand["theme_gate"] = {"replaced": theme.get("title"), "reason": reason}
                 return cand
             tried.add(t.lower())
 
-        print(f"  ⚠️ 非重複の代替テーマが見つからず、元の '{theme.get('title')}' で続行します")
-        return theme
+        if hard:
+            # 運用側の停止設定に当たったテーマを、代替が無いからといって作らない。
+            msg = (f"テーマ '{theme.get('title')}' は {reason} に該当し、代替テーマも"
+                   f"見つかりませんでした（試行 {len(tried)} 件"
+                   + (f" / 失敗: {' | '.join(errors)}" if errors else "") + "）")
+            print(f"  ⛔ {msg}")
+            raise ThemeRejectedError(msg)
+
+        print(f"  ⚠️ 非重複の代替テーマが見つからず、元の '{theme.get('title')}' で続行します"
+              + (f"（代替探索の失敗: {' | '.join(errors)}）" if errors else ""))
+        out = dict(theme)
+        out["theme_gate"] = {"kept_despite": reason, "errors": errors}
+        return out
 
     def _regenerate_title(self, channel, theme: Dict, forbidden: List[str],
                           scenario_data: Dict[str, Any]) -> Optional[str]:
@@ -807,7 +861,7 @@ class ScenarioGenerator:
             print(f"  ⚠️ title regeneration failed: {e}")
             return None
         title = (raw or "").strip().splitlines()[0].strip() if (raw or "").strip() else ""
-        return title.strip("「」\"'　 ") or None
+        return _sanitize_regenerated_title(title.strip("「」\"'　 "))
 
     def _reject_duplicate_title(self, channel, theme: Dict, result: Dict[str, Any],
                                 scenario_data: Dict[str, Any]) -> None:
@@ -917,7 +971,7 @@ class ScenarioGenerator:
             print(f"  ⚠️ CTR title regeneration failed: {e}")
             return None
         title = (raw or "").strip().splitlines()[0].strip() if (raw or "").strip() else ""
-        return title.strip("「」\"'　 ") or None
+        return _sanitize_regenerated_title(title.strip("「」\"'　 "))
 
     def _enforce_title_quality(self, channel, theme: Dict, result: Dict[str, Any],
                                scenario_data: Dict[str, Any]) -> None:
@@ -1045,7 +1099,7 @@ class ScenarioGenerator:
             print(f"  ⚠️ constraint title regeneration failed: {e}")
             return None
         title = (raw or "").strip().splitlines()[0].strip() if (raw or "").strip() else ""
-        return title.strip("「」\"'　 ") or None
+        return _sanitize_regenerated_title(title.strip("「」\"'　 "))
 
     def _enforce_title_constraints(self, channel, theme: Dict, result: Dict[str, Any],
                                    scenario_data: Dict[str, Any]) -> None:
@@ -1212,8 +1266,10 @@ class ScenarioGenerator:
             raw = channel._raw or {}
             if _tc.is_enforced(raw) and not _tc.check(current, raw)["ok"]:
                 current = _tc.repair(current, raw)
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"  ⚠️ 横断語の言い換え後の規約再検査に失敗（そのまま確定）: {e}")
+            result.setdefault("gate_failures", []).append(
+                {"gate": "cross_channel_keywords/recheck", "error": f"{type(e).__name__}: {e}"})
 
         if current and current != original:
             result.setdefault("original_title", original)
@@ -2863,28 +2919,73 @@ class ScenarioGenerator:
                 print(f"  ⚠️ AB test generation failed: {e}")
                 result["ab_test"] = {"error": str(e)}
 
+        # ── タイトルのゲート群 ──
+        # 各ゲートは自分の直後の値しか見ない。ゲート自体が落ちたら print だけで
+        # 先へ進む設計だが、「落ちた」事実を result に残さないと PDCA で追えない
+        # （09-11 の genre_blacklist 無効化はこれで1日気づかれなかった）。
+        # 各ゲートの例外は _run_gate が result["gate_failures"] に積む。
+        result["gate_failures"] = []
+
         # 最終タイトルの重複ゲート。AB テストがタイトルを差し替えた後に置くことで、
         # 「どの経路で決まったタイトルであれ」既存動画とほぼ同一なら作り直す。
         if avoid_duplicate_theme:
-            self._reject_duplicate_title(channel, theme, result, scenario_data)
+            self._run_gate(result, "title_duplicate",
+                           self._reject_duplicate_title, channel, theme, result, scenario_data)
 
         # CTR 品質ゲート。重複ゲートの後に置く（重複解消で入れ替わったタイトルも採点する）。
-        self._enforce_title_quality(channel, theme, result, scenario_data)
+        self._run_gate(result, "title_quality",
+                       self._enforce_title_quality, channel, theme, result, scenario_data)
 
         # 機械ゲート（title_rules.hard_constraints）。CTR ゲートの後に置くのは、
         # CTR 再生成が規約違反タイトルを持ち込みうるため。順序を入れ替えないこと。
-        self._enforce_title_constraints(channel, theme, result, scenario_data)
+        self._run_gate(result, "title_constraints",
+                       self._enforce_title_constraints, channel, theme, result, scenario_data)
 
         # ch 横断の同語ゲート。最終タイトルが確定した後に1回だけ見る。
-        self._enforce_cross_channel_keywords(channel, theme, result, scenario_data)
+        self._run_gate(result, "cross_channel_keywords",
+                       self._enforce_cross_channel_keywords, channel, theme, result, scenario_data)
 
         # 数値の整合ゲート（→ fact_ledger）。台本本文が確定した後に見る。
-        self._enforce_fact_consistency(channel, result)
+        self._run_gate(result, "fact_consistency",
+                       self._enforce_fact_consistency, channel, result)
 
         # サムネ文字の長さゲート。AB テストが hook_lines を差し替えた後に置く。
         _normalize_thumb_info(result.get("thumb_info"))
 
+        # 【2026-09-12】タイトル衛生の**最終出口**。上のどの段が何を持ち込んでも、
+        # ここを通らずに result["title"] が外へ出ることはない（→ pipeline/title_gate）。
+        # 括弧の破片・二重マーカー・制御文字・長さ超過を機械的に落とす。掃除して
+        # 使えなければテーマ題名に戻し、それも駄目なら例外（壊れたまま公開しない）。
+        self._finalize_title(channel, theme, result)
+
         return result
+
+    def _run_gate(self, result: Dict[str, Any], name: str, fn, *args) -> None:
+        """ゲート関数を1つ実行する。落ちても生成は止めないが、必ず記録する。"""
+        try:
+            fn(*args)
+        except Exception as e:
+            msg = f"{type(e).__name__}: {e}"
+            print(f"  ⚠️ gate '{name}' failed (recorded, continuing): {msg}")
+            result.setdefault("gate_failures", []).append({"gate": name, "error": msg})
+
+    def _finalize_title(self, channel, theme: Dict, result: Dict[str, Any]) -> None:
+        from pipeline import title_gate as _tg
+        try:
+            raw = channel._raw or {}
+        except AttributeError:
+            raw = {}
+        before = result.get("title")
+        final = _tg.finalize(before, raw, fallback=(theme or {}).get("title"))
+        problems = _tg.validate(before, max_chars=_tg.YOUTUBE_TITLE_MAX)
+        if final != (before or "").strip() or problems:
+            print(f"  🧼 title gate: 「{before}」→「{final}」"
+                  + (f"（{' / '.join(problems)}）" if problems else ""))
+            result.setdefault("original_title", before)
+            result["title"] = final
+            result["title_gate"] = {"cleaned": True, "before": before, "problems": problems}
+        else:
+            result["title_gate"] = {"cleaned": False}
 
     def _expand_via_sections(
         self,
@@ -3102,7 +3203,16 @@ class ScenarioGenerator:
         Args:
             extra_excluded: 追加で除外したいタイトル群（ThemeQueue 内の未消費ストック等）。
         """
-        seed_titles = [s["title"] for s in channel.theme_seeds if s.get("title")]
+        # 【2026-09-11 夜】seed に素の文字列が混ざると `s.get` で
+        # 'str' object has no attribute 'get' を投げ、suggest_themes 全体が
+        # 落ちていた。呼び出し元（_reject_reason の差し替え）は例外を握り潰して
+        # **却下したはずのテーマをそのまま採用する**ので、genre_blacklist が
+        # 無効化される。ここで形を吸収して、設定の書き方で機能が死なないようにする。
+        seed_titles = []
+        for s in (channel.theme_seeds or []):
+            t = s if isinstance(s, str) else (s.get("title") if isinstance(s, dict) else None)
+            if t and str(t).strip():
+                seed_titles.append(str(t).strip())
         past_themes = self._collect_past_themes(channel.id, limit=40)
         past_titles = [t["title"] for t in past_themes]
         extras = [t for t in (extra_excluded or []) if isinstance(t, str) and t.strip()]

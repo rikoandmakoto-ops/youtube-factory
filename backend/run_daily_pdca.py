@@ -134,7 +134,9 @@ def _enabled_channels(explicit: List[str]) -> List[str]:
     for f in sorted(CHANNELS_DIR.glob("*.json")):
         try:
             d = json.loads(f.read_text(encoding="utf-8"))
-        except Exception:
+        except Exception as e:
+            # 壊れた JSON のチャンネルは PDCA から黙って消える。必ず声を出す。
+            print(f"⚠️ channel JSON を読めないため PDCA から除外: {f.name} — {e}")
             continue
         cid = d.get("id") or f.stem
         if explicit and cid not in explicit:
