@@ -27,7 +27,7 @@
 - **「秘密」は禁止** — 登録/千 0.120（n=18）。09-09 に全6chの `banned_words` へ登録済み。
 - **「99%が知らない」型は禁止** — 登録/千 0.194（n=11）vs 0.510。09-09 に `forbid_patterns` へ正規表現で登録済み。
 - **連番プレフィックス（#NN：）とシリーズ接頭辞は禁止** — 0.84倍で負。09-11 に fake-paper の「架空論文ファイル」も禁止（接頭辞に9文字取られて本文が残らず、17本で登録0だった）。
-- **実効文字数は 25〜29字が頂点の逆U字**（2026-09-11・n=330）。0-14字 0.242 / 15-19字 0.279 / 20-24字 0.400 / **25-29字 0.637** / 30字以上 0.355。下限20字は 09-11 に `hard_constraints.min_effective_chars` として8chへ実装済み（`min_effective_chars_target` の自然文は backend が読まないので効いていなかった）。実効長＝ハッシュタグと【】を除いた本文。
+- **実効文字数は 25〜29字が頂点の逆U字**（2026-09-11・n=330）。0-14字 0.104 / 15-19字 0.279 / 20-24字 0.402 / **25-29字 0.646** / 30-34字 0.389 / 35字以上 0.345。4分位でも同形（Q1 9-21字 0.227 / Q2 0.476 / Q3 27-35字 0.518 / Q4 35-54字 0.352）。20字未満は 66/330本（20%）。下限20字は 09-11 に `hard_constraints.min_effective_chars` として8chへ実装済み（`min_effective_chars_target` の自然文は backend が読まないので効いていなかった）。実効長＝ハッシュタグと【】を除いた本文で、**判定は `title_constraints.effective_len()` に一本化**（レポート側に別実装を持つと基準がずれる）。ch平均で見ると相関は弱いので、**本数レベルの分布で見ること**。
 - 全角30字以内・絵文字なし。
 - **「なぜ〇〇なのか」疑問形はchを選ぶ**（2026-09-11 実測）。有効: scp-lab 2.62倍 / daily-science 3.01倍 / yokai-watch 1.84倍 / 2ch-matome 1.37倍。**逆効果: pokemon-lab 0.19倍**。判断不能: company-facts（n=1）。**末尾に「？」は付けない**（効いているのは語順。yokai-watch は末尾疑問符を hard_constraints で禁止しているため、付けると必ずゲートに落ちる）。
 - **チャンネル横断で同じ答え提示語に寄せない**。6ch×3枠を9語で分け合うため、全chが「正体」に寄ると横断ゲートが毎日発動する（09-07 は114回発動）。ch別に主軸語を割り当てる。
@@ -65,4 +65,6 @@
 - **`hard_constraints` だけが backend に読まれる**（`pipeline/title_constraints.py`）。`require_*` / `forbid_patterns` 等の旧フィールドは未参照。ここを間違えると施策が丸ごと無効になる（08-23 に同種の事故あり。09-11 にも `min_effective_chars_target` で再発）。
 - **config を触る自動 run のあとは必ず `pytest backend/tests` を通す**。09-11 朝の自動 run が daily-science の theme_blacklist を削り、リポジトリ自身の回帰テストを RED にしたまま放置していた（過去の重複タイトル8件が素通り）。**既存の赤の本数を先に記録してから作業する**（09-11 は HEAD 8 failed → 作業後 7 failed。残りは fastapi/moviepy 欠如とバースト系の既存赤）。
 - **note と config が矛盾したら config を note に合わせる**。09-11 朝の run は scp-lab に「SCP-173 が上位40本中30%」という note を追記しながら、同じ run で `theme_blacklist` から `SCP-173` を削っていた。自動 run は note と実装が逆を向くことがある。
+- **config を変更したら数分おいて読み直し、適用が残っているか確認する**。稼働中のプロセスが `data/channels/*.json` を上書きする（09-11 に適用11分後、2ch-matome の `min_effective_chars` が別プロセスに消された。他7chは残存）。`ls -la --time-style=+%H:%M:%S data/channels/*.json` で自分の適用時刻より後に書かれたファイルが分かる。本来は autopilot / orchestrator を止めてから触る。
+- **`.git` に Sep-10 由来の stale lock が残っている**（`HEAD.lock` / `index.lock` / `packed-refs.lock` / `refs/heads/main.lock`）。サンドボックスからは削除できない（Operation not permitted）ので、`GIT_INDEX_FILE=/tmp/xxx git read-tree HEAD && git add -A && git commit` で別インデックスを使えばコミットは通る。**ユーザーの Mac の端末からは `rm -f .git/*.lock .git/refs/heads/*.lock` で消せるので、消してもらうのが本筋。**
 - **前日の「ch内対照」の結論は翌日に独立再測する**。09-10 の「scp-lab は疑問形が明確に負」は誤りで、独立再測すると 2.62倍で正だった（閾値を振っても leave-one-out でも不動）。n が小さい ch内対照は符号ごと反転しうる。**片側が5本未満なら判定しない。**
