@@ -1,0 +1,552 @@
+{
+  "title": "静かな部屋ほど時計の音を聞き逃す？驚きの逆相関",
+  "theme": {
+    "title": "静かな部屋ほど時計の音を聞き逃す — 環境音と検出率の逆相関",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "静かな部屋ほど時計を聞き逃す——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言いますので、判定してください。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『静音知覚紀要』と無響認知研究所が1,284人を調査しました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "完全な静寂では時計音の検出率が42.6%まで低下し。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "さらに小さな送風音がある部屋では。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この時計の論文は存在しません。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標なのでチャンネル登録で応援よろしく。",
+      "expression": "surprise",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたは静かな部屋で作業を始めたのに、壁の時計が鳴っていた事実を十分後まで忘れた経験はありませんか。静寂ほど時計音を聞き逃す——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載先は架空誌『静音知覚紀要』、研究主体は架空の無響認知研究所です。研究班は時計の秒針を、静けさの中で注意が消える現象を測る装置として扱いました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "静かなら小さな音まで目立つはずです。それなのに時計を聞き逃すなら、夜の自室で秒針だけが気になるという、多くの人の感覚と逆ではありませんか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "本日は被験者1,284人を16日間追跡した設定で、環境音と時計音の検出率が逆に動く理由を、架空の査読報告の体裁で順番に説明していきます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者には同じ型のアナログ時計を見えない位置に置き、聞こえた瞬間だけ机上のボタンを押してもらいました。反応までの時間は平均3.8秒として記録されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "実験室は三条件です。ほぼ無音の部屋、弱い換気音の部屋、小雨に似た環境音が流れる部屋を用意し、時計以外の会話や通知音は入れない設定でした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "時計の音量も距離も変えず、背景音だけを替える比較なのですね。では無音条件が一番高くなるという普通の予想を、研究班は何人分の記録で覆したのでしょうか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "結果は反対でした。ほぼ無音の部屋では、時計音を一度でも検出した人が1,284人中547人、率にして42.6%にとどまったと報告されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "弱い換気音の条件では検出率が68.9%へ上がり、小雨風の環境音では81.3%に達しました。無音条件との差は38.7ポイントで、有意差が確認されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "小さな環境音が時計を隠すのではなく、逆に時計へ気づかせる役になるのですか。自習室で集中すると時間を忘れる感覚を、表にしたような数値です。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はこれを静寂飽和仮説と名づけました。静かすぎる場所では耳が音を待つ構えを解き、時計の一打が起きても出来事として登録されない、という架空の説明です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここでいう飽和は、音が多すぎる状態ではありません。何も変わらない時間が続き、脳内の見張り役が時計の音を予定表の余白へ追いやる状態を指しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "つまり耳が聞こえなくなるのではなく、聞こえた音を重要な情報として拾わなくなるのですね。でも秒針は毎秒鳴るのに、何度も無視できる理由は何でしょうか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は一人あたり30分の反応記録を五分ごとに分け、開始直後と終了前を比較しました。無音条件では後半になるほど、ボタン反応が46.1%減ったとされています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "対して小雨風の条件では、後半の低下は8.4%だけでした。背景音が続くことで耳の見張り役が起きたままになり、時計音だけが背景から浮くという筋書きです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "静けさは時計を際立たせるのではなく、時計を背景に沈めるのですね。音が少ないほど注意が散るという反転は、作業用の静かな部屋を好む人ほど驚きそうです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者は時計を探す課題だと知らされず、短文から誤字を探す作業だけを任されました。日常の読書や資料確認に近い集中を作るための、架空の実験上の工夫でした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "作業は90秒の短文セットを12回繰り返す形式です。一セットにつき誤字は三つで、正解が多いほど時計音への反応が減るかを、研究班は別表にまとめています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最も反応が落ちたのは、文章を二つ連続で正解した直後でした。無音条件では次の20秒間に時計を検出する率が31.8%まで下がったという記録があります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "作業がうまく進んだ瞬間ほど、時計が意識から外れるわけですね。提出物に没頭して気づけば一時間経っていた、という二十代の日常を数値化したように見えます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお研究班は時計の音量を平均24.0という架空の単位に固定しました。音の大きさではなく背景の有無だけを比べた、という体裁を査読用の表に整えています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "机から時計までの距離も2.7メートルに統一されました。距離がばらつけば単なる聞こえやすさの実験になるため、逆相関という主張を守るための数字として置かれています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "音量と距離まで揃えると、急に研究らしい話に見えてしまいます。では、時計の規則的な音だから聞き逃しただけなのか、それとも他の音でも同じなのでしょうか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "実はこれ、規則的な音だけでなく、17秒ごとに鳴る小さな電子音でも起きる設定です。時計固有の話ではないと広げた点が、この論文で最も大きな反転になっています。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "別の288人には17秒ごとに一度だけ鳴る電子音を聞かせました。無音条件の検出率は39.2%、小雨風の条件では76.5%となり、差は37.3ポイントでした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "秒針のように毎秒鳴らない音でも、静かな部屋の方が気づきにくいのですか。ならば問題は時計ではなく、静寂に置かれた注意そのものにありそうです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は注意の窓という言葉を使いました。これは耳の感度ではなく、いま重要だと判断した出来事だけを通す、架空の受付窓口のような仕組みだと説明されています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "無音の部屋では窓口の前に客が来ないため、受付が閉まったような状態になるとされます。弱い環境音は窓口を開けたままにし、時計音も通過させる役というわけです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この説明を確かめるため、研究班は環境音を途中で止める試験も組みました。開始12分後に小雨風の音を消すと、時計の検出率は次の3分で27.4%下がりました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "音を消した直後に時計への反応が落ちるなら、背景音は単なる邪魔ではないことになりますね。静けさを求めて机に向かう人には、かなり逆説的な結論です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし論文は、環境音を大きくすればよいとは述べていません。架空の音量が31.0を超えると時計音は実際に埋もれ、検出率が52.1%まで下がったとされています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最も高い81.3%が出たのは、環境音が18.6という設定でした。研究班はこの値を注意維持帯と呼び、音があるのに邪魔ではない中間領域として図に示しています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "静寂でも騒音でもなく、中間だけが時計に気づかせるという主張ですね。小数点までそろった数字を聞くと、つい自分の机で試せそうだと思ってしまいます。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかし本件は観察を楽しむための架空研究であり、生活環境を変える提案ではありません。時計への気づき方には個人差がある、という設定上の注記も本文に添えられています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "個人差の分類では、読書が好きだと答えた416人が無音条件で最も低い38.0%を示しました。研究班は文字への集中が時計を背景化する、と淡々と解釈しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "一方で、待ち合わせ時刻を意識していた312人では無音条件でも61.7%でした。時計を重要視する目的があるだけで、同じ音の扱いが変わるという筋道になっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "同じ部屋、同じ時計でも、何を待っているかで聞こえ方が変わるのですね。作業中には消えていた秒針が、約束の前だけ急に目立つ場面を説明できそうです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究の歴史欄には、架空の1938年に行われた図書室記録が引用されています。閲覧者73人のうち時計を正確に描けた人は、無音室で19人だけだったという逸話です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その図書室では紙をめくる音が多い日ほど、時計の描写が正確になったと書かれています。研究班は紙の音を弱い環境音の先祖として扱い、現代の実験へつなげました。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "古い閲覧室の紙の音まで時計の研究に結びつけるのですか。静かな場所ほど時間を忘れる感覚は、昔からもっともらしい記録として残されていたことになりますね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに架空の駅待合室調査では、44人が時計を見上げる回数を数えられました。空調が止まった18分間だけ、時計を見る回数が一人平均2.1回減ったとされています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで測ったのは時計を聞く行為ではなく、時計を確認する行為です。それでも静寂が時間への注意を薄くするという論旨を補う資料として、本文末尾に添えられました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "聞こえたかどうかだけでなく、時計を見ようとする回数まで減るのですね。時間の存在が消えるというより、確認する必要を脳が後回しにするように聞こえます。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文では、在宅作業の机を想定した場面も描かれます。通知が鳴らず会話もなく、画面だけ見ている45分では、時計音の検出率が34.9%だったとされています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "対照として、遠くで一定の換気音がある設定では、同じ45分の検出率が70.2%でした。作業の手を止める提案ではなく、注意の置き場所を比べる架空の数字です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "集中できる環境を整えたはずなのに、時間感覚だけは薄くなるわけですね。締切や約束を気にする二十代には、少し身に覚えのある机上の場面だと思います。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "また、面談前の待機を模した条件では、時計音の検出率は無音でも74.6%でした。緊張している設定では、静寂飽和仮説が弱まるという例外まで用意されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "これは時計が大きく鳴ったからではなく、時間を気にする目的が強かったためです。論文は環境音より目的の方が強い場合もあると、慎重そうな文章で逃げ道を確保しています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "架空なのに例外まで用意されると、ますます信じそうになります。時計が気になる瞬間は背景音だけでなく、遅れたくない予定の存在でも説明できる、という組み立てですね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この論文のもっともらしさは、時計の音を増やす話ではなく、気づかなかった事実を数える手順にあります。被験者が押さなかったボタンが、静寂の逆相関を形づくりました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "たとえばカフェでは小さな食器音が気になるのに、自室では時計を忘れる。その差を性格の問題にせず、場面ごとの注意の窓として並べたのが、本稿の架空の構成です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "確かに、静かな夜ほど秒針が気になりそうで、読書に没頭すると突然消えます。聞こえる音と意識に残る音は別だという筋書きなら、体験としては納得しやすいです。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし、ここまでの被験者数1,284人、追跡16日間、42.6%と81.3%という数字は、すべて架空の集計です。読者が統計表を見て信じかける過程まで含めた創作でした。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。無音の方が時計を聞き逃すという結論も、無響認知研究所も、あの細かい有意差まで全部つくられていたんですか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その通りです。なお、この論文は存在しません。『静音知覚紀要』も掲載誌ごと架空であり、静かな部屋と時計音の逆相関を証明した記録は提示していません。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じていました。数字と図書室の逸話が揃うと、壁の時計まで研究の証拠に見えてしまうのですね。次に静かな部屋で秒針を忘れても、少し笑ってしまいそうです。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、満員の映画館では観客の瞬きがそろうという架空論文を取り上げます。被験者936人の視線記録が、どこまで真顔で積み上がるのかを報告します。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "日常の違和感を研究したシリーズには、時計より妙に整った統計を持つ論文がまだ残っています。信じかけた方は高評価で、その判定結果を記録していただければ幸いです。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中です。存在しない論文のアーカイブには、静かな部屋ほど時間を忘れるような一本が、まだ何本もあります。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "静かな部屋",
+      "聞こえない音"
+    ],
+    "hook_caption": "静寂の逆転",
+    "subtitle": "環境音が少ないほど時計音の検出率が低下する",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標",
+          "reason": "1行58字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 9,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": false,
+      "max_similarity": 0.721,
+      "similar_to": "自販機の左から二番目が先に空になる — 全国942台の在庫記録",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 31,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "静かな部屋ほど時計を聞き逃す — 1,284人の検出率"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 72,
+    "passed": true,
+    "reasons": [
+      "感情ワード['実は', 'なぜ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "架空論文ファイル #18：静かな部屋ほど時計を聞き逃す — 1,284人の検出率",
+    "attempts": 1
+  },
+  "original_title": "架空論文ファイル #18：静かな部屋ほど時計を聞き逃す — 1,284人の検出率",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ静かな部屋ほど時計の音を聞き逃すのか？実は逆相関だった"
+  }
+}

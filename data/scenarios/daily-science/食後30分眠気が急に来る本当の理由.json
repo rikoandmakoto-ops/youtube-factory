@@ -1,0 +1,527 @@
+{
+  "title": "食後30分、眠気が急に来る本当の理由",
+  "theme": {
+    "title": "なぜ食後だけ眠気が急に来るのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "実は食後の眠気、胃に血が集まるせいだけではないんです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！ 食べて30分ほどで急に眠くなるの。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "食後は血糖の変化に合わせ、脳の目覚めを支える働きも揺れやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、スマホの電池が急に減る感じに近いね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも食べ過ぎるほど波が大きくなり。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこの科学的事実、ポケモンの裏設定の元ネタなんだ。"
+    },
+    {
+      "speaker": "真",
+      "text": "昼ごはんの量を少し意識してみて。高評価を押して、体の謎シリーズと毎日投稿中の1万人目標を応援するチャンネル登録もよろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "実はあなたが昼ごはんのあと急に眠くなるのは、胃へ血が集まるせいだけではないんです。\n食後30分ほどでまぶたが重くなる感覚、昨日も午後1時ごろにありませんでしたか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！ おにぎり2個と麺を食べたあと、午後1時すぎには椅子から立つのも面倒になったよ。\n満腹だから眠いと思っていたけど、体の中では何が起きてるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "食後の眠気には、食事の量、糖の変化、午後の体内時計、前夜の睡眠が重なります。\nあなたの午後に急に来る眠気は、4本の細い糸が同時に引っ張られるようなものなんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 同じ600キロカロリーの昼ごはんでも、午前11時に食べる日と午後2時に食べる日では眠気が違うかもしれないんだね。\n時計まで関係するの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "人の眠気は、午後1時から3時ごろにも高まりやすいことが知られています。\n昼食の直後にこの時間帯が重なるため、食べ物だけが原因に見えますが、体の一日のリズムも大きく関わります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、休日に昼ごはんを遅らせても午後2時には眠くなるよ。\nでも、食べた日だけ机に向かっていられないほど眠くなるのは、どうしてなんだろう？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず、食べると胃や腸の周りの血流が増えるのは本当です。\nただ、健康な人では脳の血が食後に大きく足りなくなるわけではなく、水道の水が台所へ全部奪われるような状態ではありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、脳へ行く血が減るから眠い、と思っていたよ！ お風呂で水を使うと台所の水が止まるみたいな話ではないんだね。\nじゃあ眠気の中心は血流じゃないの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "眠気の中心には、食べ物が体へ入ったあとに起きる燃料の変化があります。\n白米や白いパン、甘い飲み物のように吸収が速いものでは、血液中の糖が短時間で増えやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "白米とパンは昼ごはんの定番だよね。食べた直後は少し元気になった気がするのに、30分から1時間後に眠くなることがあるよ。\n上がったあとに何かが変わるの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "血液中の糖が増えると、体はそれを筋肉や脂肪へ渡すための合図を出します。\nこの合図は大切な働きですが、急いで食べたり甘い飲み物を足したりすると、変化の幅が大きくなりやすいんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 同じ昼食でも、10分で急いで食べる日と20分かけて食べる日では、体が受け取る速さまで変わるかもしれないんだね。\n眠気にも差が出そうだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。食後の眠気は満腹感だけでなく、体が受け取る燃料の波と重なって強く感じられます。\nただし、ここからが本題です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ここまででも分かってきたけど、まだ半分なんだね。じゃあ同じ丼ものを食べても平気な人と眠くなる人がいるのは、何が違うの？\n体質だけではなさそうだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "眠気の強さを大きく変えるのが、前の晩にどれだけ眠れたかです。\n成人は一般に7時間以上の睡眠が目安ですが、6時間未満の日が続くと、昼食後に眠気が表へ出やすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！ 夜にスマホを見て睡眠が5時間半だった日は、昼のカレーのあとに頭がぼんやりしたよ。\n食事が眠気を作ったというより、眠気が残っていたのかな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その見方は近いです。睡眠不足の日の脳は、朝から少しずつ休息を求める方向へ傾いています。\nそこへ午後1時台の自然な眠気と昼食が重なると、まぶたが急に重くなったように感じやすいんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、スマホの残量が15％のときに動画を再生するようなものだね。\n昼ごはんが新しい問題を作るというより、残り少ない元気を目立たせる場面になることもあるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "食べる量も見逃せません。大盛りの丼や定食を一度に食べると、消化に時間がかかり、満腹を知らせる体の合図も強くなります。\nその結果、活動の勢いがゆるみ、休みたい感覚が増えやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 大盛りラーメンのあとに眠いのは、胃が重いだけじゃないんだね。\n体が食べたよと脳へ知らせ続けて、午後の体内時計と同じ方向に押している感じなのかな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで大切なのは、食後に少し眠くなること自体は自然な反応だという点です。\n午後の眠気は意志の弱さではなく、多くの人に起こる体の波なので、眠くなった自分を必要以上に責めなくて大丈夫です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "でも授業や会議の直後に眠くなると困るよね。コーヒーを飲めば全部解決、と考えがちだけど、昼ごはんの中身を変えたほうがいい場合もあるの？\n明日すぐ試せる方法が知りたいな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "食後に毎回眠くなるなら、まず3日間だけ昼食の内容をメモしてみてください。\n白い主食だけで終えるより、野菜、豆、卵、魚を一緒に食べた日のほうが、午後の変化がゆるやかに感じる人もいます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、3日だけなら続けられそう！ 昼に何を食べたか、食べた時刻、前夜の睡眠時間をスマホへ残せばいいんだね。\n眠気を10点満点で書けば、自分の波が見えてきそう。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここまで話した、食後に血液中の糖が短時間で大きく上下する状態には、名前が付いていて血糖値スパイクと言います。\nつまり、ジェットコースターのように糖の変化の幅が大きくなることです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "専門的な名前でも、上下の差が大きい状態と思えば分かりやすいね。\n昼の菓子パンと甘い飲み物で午後3時にまた何か食べたくなるなら、その日の波を一度見直すヒントになりそうだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、食後の眠気だけで血糖の異常を判断することはできません。\n健康な人にも起こりますし、睡眠、運動、食事量、午後の時刻が重なるため、一回眠かっただけで体の病気と決めつけないでください。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、同じパンでも寝不足の日は眠いし、よく眠れた日は平気なこともあるよ。\n一回の体感だけで答えを決めず、数日分の記録で見比べるのが大事なんだね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究でも食後の眠気は、食事の大きさだけでなく、測定した時間帯で結果が変わります。\n人の体は毎日同じ時計ではなく、朝の光、夜の睡眠、昼の活動で針が少しずつ動く時計に近いんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 午後2時に眠い人と午後4時に眠い人がいても、変ではないんだね。\n昼ごはんを食べた時刻だけを見て、食べ物のせいだと決めるのは早すぎるんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、夜に十分眠っていても耐えにくい眠気が何週間も続く場合は注意が必要です。\n強いのどの渇き、頻繁な尿、体重の変化などが一緒にあるなら、自己判断せず医療機関へ相談してください。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "眠いだけなら我慢、と考えずに、続く期間やほかの体調も見るんだね。\n体のサインは一つずつなら小さくても、2つ3つが何週間も重なると、相談する意味が出てくるんだ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "食後に横になりたくなる文化は昔からありますが、昼の休息は食事だけで生まれたものではありません。\nスペインなどで知られる昼の休息も、暑い時間を避ける生活の知恵と、一日の働き方が重なって広がりました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、昼の休息は大きな昼ごはんのせいで眠くなるから始まったと思っていたよ！ 気温が高い午後を避ける暮らしも関係していたんだね。\n食後の眠気には生活全体が映るんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "日本でも昼食後の眠気を仕事の集中力の問題として感じる人は多いです。\nけれど午後1時台に覚醒が少し落ちやすいのは珍しいことではなく、昼食はその小さな下り坂を目立たせる役目になることがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "それを聞くと少し気が楽だな。眠くなった自分を責めるより、午後1時から3時の予定を少し工夫するほうが現実的だよね。\n食後に短く歩くと、体の流れは変わるのかな？",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "食後に5分から10分ほど歩くと、座り続けるより気分を切り替えやすくなります。\n激しい運動でなくても、食器を片づける、階段を一つ上る、窓際で外の光を見るだけでも午後の区切りになります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 食後すぐ机へ戻るより、コンビニまで往復するくらいでもいいんだね。\nスマホを見ながら座り続けるより、5分だけ体を動かすほうが眠気の山を越えやすそう。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "昼食を抜けば眠気がなくなる、と考える人もいますが、空腹で集中しにくくなることがあります。\nおすすめは量を極端に減らすことではなく、午後に動ける程度の量へ分け、食べる速さも少し落とすことです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえば大盛りラーメンを一気に食べる代わりに、普通盛りへ卵や野菜を足す感じかな。\n満腹になるまで10分で急ぐより、15分から20分かけるだけでも、午後の感じ方が変わるかもしれないね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "飲み物も見落としやすいところです。甘い缶飲料を350ミリリットル飲むと、食事に加えて糖を短時間で取ることになります。\nのどが渇いたときは水や無糖のお茶を選ぶだけでも、違いを比べやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、昼の菓子パンに甘い飲み物を合わせた日は、午後3時にまた何か欲しくなるよ。\nまず飲み物だけ変えるなら、明日からでも負担が少なくて続けやすい工夫だね。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "コーヒーを使うなら、眠くなり切ってから何杯も飲むより、夕方まで残さないほうが大切です。\nカフェインは人によって数時間続くため、午後4時以降の飲み過ぎが夜の睡眠を削ることがあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "午後の眠気を追い払おうとして夕方4時に濃いコーヒーを飲み、夜に眠れなくなることはあるよ。\n翌日の昼も眠いなら、眠気を減らすつもりが、眠気の貯金を増やしてしまう流れだね。",
+      "expression": "sad",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "短い昼寝を選ぶなら、目安は15分から20分ほどです。\n長く眠り過ぎると起きた直後にぼんやりしやすいので、食後の眠気を消すためではなく、午後を整える小さな休憩として使ってみてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、20分なら昼休みに入れられそう！ 机に伏せる前にアラームをかけて、起きたら窓際で明るい光を見る。\nこれなら夜の睡眠を大きく崩さず、午後の切り替えに使えそうだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここは科学でもまだ結論が出ていない部分があります。食後の眠気を感じる強さは、腸からの合図、脳の反応、生活習慣が絡むため、全員に同じ原因が一つだけあるとは言えません。\nだから記録が役立ちます。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "全部を一つの理由にしないほうが、自分の体には合うんだね。昼ごはん、食べた時刻、前夜の睡眠を3日だけ並べる。\nそれだけでも、眠気が来る30分後の違いを見つけられそうだよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話を戻すなら、食後の眠気は胃に血が集まるからだけではありません。\n午後の体内時計、前夜の睡眠、食事の量と中身が、あなたのまぶたに同じ時刻で重なっているんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 眠気が来たら自分を責める前に、昨日何時間寝たかと、昼に何をどれだけ食べたかを思い出してみるよ。\nそれだけで午後の対策を選べるんだね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "明日は昼食の主食を少し控えめにして、野菜やたんぱく質を足し、食後に5分歩くことから試してみてください。\n一度で正解を決めず、眠気がどう変わるかをあなた自身の体で比べるのがおすすめです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "明日はお弁当に卵を足してみようかな。午後の眠気がゼロにならなくても、急に落ちる感じが少し軽くなれば十分だよね。\n真の昼休みでも試せる、小さくて現実的な工夫だな。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、二度寝があんなに気持ちよく感じるのに、起きたあと余計にぼんやりすることがある理由を見ていきます。\n朝の10分に体で起きる変化も、今日の食後の眠気とつながっています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "それも気になる！ 休日の二度寝は目覚ましを止めた直後だけ気持ちいいのに、あとから時間が足りなくなるよ。\n食後の眠気と一緒に、毎日の体の波を知りたくなったよ。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "食後の眠気が面白かったら高評価を押して、今夜は睡眠時間と明日の昼ごはんを少し意識してみてください。\n体の謎シリーズで身近な不思議を毎日1本ずつ解いているので、チャンネル登録よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "食後の眠気",
+      "30分後の謎"
+    ],
+    "hook_caption": "眠気は30分後",
+    "subtitle": "食後にまぶたが重くなる本当の理由",
+    "tagline": "午後の眠気は食事だけでは決まらない"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "実はこの科学的事実、ポケモンの裏設定の元ネタなんだ。",
+      "matched_topic": "脳"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "昼ごはんの量を少し意識してみて。高評価を押して、体の謎シリーズと毎日投稿中の1万",
+          "reason": "1行62字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 17,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 4,
+        "emotional_impact": 0,
+        "relatability": 3,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.543,
+      "similar_to": "なぜあなたは階段で1段だけ外すのか？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 41,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ食後だけ急に眠いのか？30分後の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "なぜ食後だけ急に眠いのか？30分後の正体",
+  "cross_channel_keywords": {
+    "ok": false,
+    "blocked_keyword": "理由",
+    "rejected_title": "なぜ食後だけ急に眠いのか？30分後の正体"
+  }
+}

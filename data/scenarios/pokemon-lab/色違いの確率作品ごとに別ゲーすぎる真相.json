@@ -1,0 +1,493 @@
+{
+  "title": "色違いの確率、作品ごとに別ゲーすぎる真相",
+  "theme": {
+    "title": "あなたが気づかない色違い確率の実態",
+    "angle": "作品ごとに変わる抽選方式と、体感とのズレ"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "このポケモンの色違い、実は作品ごとに当たり方が違うんだよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 昔は8192分の1で、今は半分なの!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第六世代以降は4096分の1、同じ1匹でも入口が違うんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "4096回でも外れるなら、学校のくじよりずっときついじゃん！",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも大量発生や孵化で、君が見る回数まで変わるんだよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "え、マジで？なら高評価！裏設定ファイルシリーズもあるし、1万人目標で毎日投稿中、チャンネル登録で応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "君、色違いを3時間探しても出ないのに、友達が最初の10分で光らせたことない？ 実はそのモヤモヤ、単純な運だけじゃ説明できないんだよ！\n作品ごとに当たりを引く入口が違うから、体感が丸ごとズレる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って、同じピカチュウを探しているのにソフトで当たりやすさまで変わるの!? 僕は色違いって、どの作品でも同じ超低確率のくじだと思ってた！\nいや強すぎでしょ、その前提から違うの！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "最初に数字を出すぞ！ 昔の通常遭遇は8192分の1、現在の基準になった第六世代以降は4096分の1なんだよ。\n半分になっただけと思うかもだけど、何百匹も見る側には、長距離走の折り返し地点が半分になるレベル！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今日は君が気づきにくい色違い確率の実態を、作品ごとの抽選方式から追いかけるぞ！\n根拠は公式ゲーム内の仕様、図鑑完成でもらえる道具、実際の作中システムに置いて、うわさと混ぜずに答え合わせしていく！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "じゃあ僕が500匹見ても出ない日に、『今日は運が悪い』って感じる理由も分かる？ それとも探し方が違うだけで、同じ500匹でも勝負の中身が変わるの？\n数字の壁をちゃんと知りたい！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "結論を先に匂わせると、色違い探しは倒した数を貯金するゲームじゃないんだよ！\n出会うたびに新しいくじを1枚引くから、昨日999回外しても次の1回へ有利な点数は持ち越されない。でも最初の1回にも希望が残る！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "初代から第二世代では、ポケモンの見えない数値の組み合わせが色違いを決めていたんだ。\n野生で出会う通常の色違いはおおむね8192分の1で、朝から放課後まで草むらを歩いても、出なくて普通という遠さだった！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "8192分の1って、8192匹会えば必ず1匹出る数字じゃないんだよね？ 僕、8192回目だけ特別な当たり判定になると思い込んでた！\nゲームのスタンプカードみたいに、最後でごほうびが来るわけじゃないのか！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "その通り！ 8192回は『このくらいの薄さ』を表す目安で、8192回目に確定ランプが点く数字じゃない。\n1回ごとに同じ細い針穴へボールを投げる感覚だから、100回外れても異常じゃないし、1回目で出たら本当に伝説級の引き！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "たとえば8192分の1なら、100匹見た程度で色違いが出ない確率はかなり高いままなんだよ。\nだから配信で『300回見ても出ない！』と聞いても、数字だけなら珍事件ではない。でも300回画面を見続けた本人の気持ちは、普通に大事件！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "数字では普通でも、同じ草むらを300回走ったら僕は絶対に疲れる！ 色違い探しって、確率の低さより画面に出る同じポケモンの多さで心が削られる感じあるよね。\n光った瞬間の反動が大きい理由、少し分かった！",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで第二フック！ 昔の8192分の1でも、同じ作品の中で狙い方を変えるだけで体感が急にひっくり返ることがあるんだよ。\n数字が1つだから探し方も1つ、と思った瞬間に別ルートが出てくる。これが色違い沼の面白さ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第四世代のポケトレは、草むらで連続して出会う流れを続けると、色違いを狙う遊びとして有名になったよね。\nただ歩き回るのではなく、草の揺れを選び、連鎖を切らないこと自体がゲームになるから、1回の失敗がめちゃくちゃ悔しい！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、同じ草むらでも適当に入るより、揺れ方を見て進むほうが大事なの!? 40回近く積み上げた流れが切れたら、数字だけじゃなく集中した時間まで吹き飛んだ気分になるね！\nそれは悔しがるわ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第五世代では、出身言語が異なる親を使ってタマゴを作る国際孵化が、色違い狙いの代表ルートになったんだ。\n海外産メタモンが交換で人気になるのは見た目の珍しさだけじゃない。タマゴごとの当たりへ近づく準備品として価値があるから！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "海外産メタモンって、交換で自慢するためだけのポケモンじゃなかったのか！ 同じニャオハのタマゴでも、親の組み合わせで期待感が変わるなら、友達が大事に保管してる理由がつながった！\n知らんかった！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そして第六世代から、通常遭遇の基準は8192分の1から4096分の1へ変わったんだよ！\n数字だけ見ると2分の1だけど、1000匹確認する途中で当たりへ届く期待が前より近くなる。これは色違い文化そのものを押し上げた大変更！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "4096分の1でも十分に遠いのに、昔はその倍だったの!? 今の作品で『全然出ない』って言ってる僕、初代からずっと探していた人に聞かれたら甘いってツッコまれそう！\nでも実際に長いのは変わらない！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで初めて名前を出すけど、この当たりやすさを数字にしたのが確率だ！\n色違い確率は『次の1匹が光る割合』であって、君の努力を採点する点数じゃない。外れが続いても、下手だった証拠ではまったくないんだよ！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ひかるおまもりは、図鑑を完成させたあとに入手できる作品がある大事な道具なんだ。\n持っていると色違い判定のチャンスが追加される仕組みで、旅を遊び切った人ほど次の収集遊びでも準備ができる。公式のごほうびが実戦で刺さる！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "図鑑を埋める遊びが、色違い探しの近道にもなるの気持ちいいな！ 最初から光る1匹だけ追うより、何百種類も捕まえた時間が後で返ってくるんでしょ。\n寄り道した人が得する設計、ずるいって！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし、ひかるおまもりを持てば10匹で必ず出る、みたいな道具ではないんだよ。\nチャンスが追加されても外れは残るから、入手直後に30匹見て光らなくても効果が消えたわけじゃない。ここで焦ると体感がさらにズレる！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ポケモンレジェンズ アルセウスでは、大量発生と研究レベルが色違い探しの景色を変えたよね。\nフィールドに同じ種類がまとまって現れるから、草むらで1匹待つより短時間に確認できる数が増える。確率表だけでは見えない強さがここにある！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "あれは色違いが急に近くなった魔法じゃなくて、1分で会えるポケモンの数が増えた結果でもあるのか！ 飛び回っていたら急に光ったあの感じ、抽選を速く回していたからだったんだね！\nえ、マジで？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "スカーレット・バイオレットでは、大量発生とかがやきパワーで、狙う場所と出会う流れを自分で組み立てられるんだよ。\nサンドイッチ作りが色違い探しへ直結するのは、おしゃれな料理だからではなく、目当てのポケモンに会う回数へ影響するから！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ スカーレット・バイオレットでは、フィールドで色違いが出ても昔みたいに必ず音で教えてくれるわけじゃない。\nつまり当たりを引く確率を越えた後、君の目が色の違いを見つける確率まで勝負に入る。薄い差の個体ほど油断できない！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って、4096分の1を越えて画面に出たのに、見逃したら終わりなの!? 色が少ししか変わらないポケモンを探す日は、スマホを見ながら片手で遊ぶとか絶対に危ないじゃん！\n集中力まで必要すぎる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "君の体感を一番ズラすのはここ！ 色違いの出やすさは当選率だけじゃなく、1時間で何匹確認できるかで大きく変わるんだよ。\n同じ4096分の1でも、1時間30匹の方法と300匹の方法なら、待つ時間の感じ方が10倍近く変わる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "タマゴ孵化は、受け取る、歩く、割る、確認する、を1個ずつ繰り返す流れになるよね。\n野生の大量発生より画面で一気に確認しにくいから、同じ数字でも進みが遅く見えやすい。放課後に宿題を1問ずつ終える感じで、達成感が小刻みなんだ！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "だから孵化厳選は、ボックスが埋まっていても『まだ全然足りない』って思いやすいのか！ 30個割る間に野生なら何十匹も見られることがあるなら、同じ30回でも疲れ方が別物だね。\n作戦選びが大事すぎる！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "逆に大量発生は、短時間に100匹以上確認できることがあるぶん、何も光らない時間もまとめて来るんだよ。\n10分で100匹見て外れると『今日は終わった！』って感じるけど、数字としては普通に起こる。高速で期待して高速で悔しがる遊び！",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "学校の小テストを10枚まとめて返されるみたいだ！ 1枚ずつなら耐えられるのに、100匹連続で通常色だと画面が全部同じ顔に見えてくる。\nでもその中に1匹だけ混じったら、逆に脳が追いつかないほどテンション上がる！",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "だから色違いが出なかった回数を、次の当たりへの借金みたいに数えすぎないほうが楽しいんだよ。\n999回外したから1000回目が特別に有利になるわけではない。でも1000回目にも最初の1回と同じ当たりが入っている。この両方が本当！",
+      "expression": "think",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ファンの間では、長時間探した直後は出やすい気がすると言われることがあるんだけど、これはファンの説なんだ。\n公式の通常抽選で、外れ回数が次の色違いを保証する仕組みは確認されていない。気分の盛り上がりとゲームの仕様は別に見よう！",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "連敗した僕をゲームが見ていて、『かわいそうだから次は当てよう』ってしてくれるわけじゃないのか！ でも最初の1匹目にも、1000匹目にも同じ希望があるなら、今日の探索をやめる判断もしやすいね。\nむしろ気が楽かも！",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "作品ごとに変わるのは通常の数字だけじゃない。連鎖、タマゴ、大量発生、食事のように、抽選へ近づく道そのものが変わるんだよ。\nだから『色違い確率はこれ！』という数字を見たら、どの作品のどの方法かまで確認するのが正解！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じイーブイでも、第四世代の草むらで探すのか、レジェンズ アルセウスの発生で探すのか、スカーレット・バイオレットで料理を使うのかで、準備が変わるんだね！\nこれを混ぜて比べたら、そりゃ体感がぐちゃぐちゃになる！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "君が今日から使えるコツ1つ目は、狙うポケモンの色違い画像を先に確認すること！\n特に通常色との差が小さい個体は、出会い数を増やす前に『どこが変わるか』を知るだけで見逃しが減る。1時間の探索を守る一番安い準備だよ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "コツ2つ目は、その作品で取れる準備を先に終えることだよ。図鑑完成の道具がある作品なら、目当ての1匹へ走る前に回収する。\n最初は遠回りでも、100回、200回と確認する未来の自分を助けるから、結果的に近道になる！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "図鑑を完成させるのって、色違い探しを始める前の長い準備運動だと思ってた！ でも道具のチャンス追加があるなら、マラソン前に靴ひもを結ぶみたいな必須準備なんだね。\n寄り道じゃなくて作戦だった！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "コツ3つ目は、回数より時間で区切ること！ 30分だけ発生を見る、タマゴを1ボックス分だけ割る、と決めると外れても進捗が残る。\n4096という大きな壁に飲まれず、今日遊んだ分を自分で褒められるから、長期戦ほど効くんだよ！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そして光った瞬間は、急いで倒さず、まず操作を確認！ 作品によって保存の仕様や状況は違うけど、色違いを見つけた直後ほどボタン連打でミスしやすい。\n8192分の1や4096分の1を越えた後に焦らないため、先に捕まえる手順を決めよう！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "僕なら光った瞬間に『出た！』って叫んで、うっかり逃げるボタンを押しそうだ！ 確率を越えたあとの数秒が一番危ないなら、捕獲用のボールを用意してから探すのは本当に大事だね。\n最後まで勝負なんだ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今日の答えはこれ！ 色違いの体感が人によって違うのは、運の量だけじゃなく、作品ごとの当たり方と、1時間で会える数が違うからなんだよ。\n8192分の1と4096分の1、その上に連鎖や大量発生の工夫が重なって、君だけの長旅になる！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じ『出た！』でも、昔の草むらで1匹に会ったときと、大量発生を走り抜けた先で見つけたときでは、そこまでの戦い方が別物なんだね！\n知らんかった、色違いって見た目のレアさだけじゃなく、遊んだ時間の記録でもあるんだ！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次に遊ぶとき、色違いが出ない時間も『外れた回数』だけで見ずに、どの方法で何匹確認しているかを見ると、ちょっと見方が変わるはず！\n君の運を責める前に、作品のルールを1回見る。それだけで探索がかなり楽しくなる！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回は、ひかるおまもりが作品ごとに何を増やして、通常の探し方とどれくらい体感を変えるのかを追うぞ！\n図鑑完成のごほうびが、色違い探しでどこまで刺さるのか、数字を並べるとまたえ、マジで？ってなるはず！",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "ひかるおまもりって持っているだけで光りやすくなる、くらいにしか知らなかった！ 作品ごとに追加のされ方が違うなら、次の探索前に絶対知っておきたい。\n図鑑を埋めるモチベーションが一気に上がったよ！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "君も色違い確率のズレにえ、マジで？ってなったら高評価で教えて！\n裏設定ファイルシリーズには、ゲーム内の数字が見え方をひっくり返すポケモンの話をまだまだ置いてあるから、次の発見も一緒に拾おう！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中だから、応援よろしくね！\n次に光る1匹を探す前、君が遊ぶ作品のルールを10秒だけ確認すると、その出会いは前よりずっと特別に見えるはずだよ！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "色違い確率",
+      "体感がズレる"
+    ],
+    "hook_caption": "確率は別物",
+    "subtitle": "作品ごとに当たり方が変わる",
+    "tagline": "君の運だけではない"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "え、マジで？なら高評価！裏設定ファイルシリーズもあるし、1万人目標で毎日投稿中、",
+          "reason": "1行56字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 31,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 7,
+        "emotional_impact": 0,
+        "relatability": 9,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.58,
+      "similar_to": "君のテレビから消えたポリゴンの正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 38,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "enhanced_title": "君が気づかない色違い確率の実態"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '本当の理由'](+20)",
+      "好奇心ギャップ['理由', '実は'](+12)"
+    ],
+    "rejected_title": "君が気づかない色違い確率の実態",
+    "attempts": 1
+  },
+  "original_title": "君が気づかない色違い確率の実態",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "実は色違いが「4096分の1」でも当たらない本当の理由ৰাকী"
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "色違いが当たらない本当の理由ৰাকী"
+  }
+}

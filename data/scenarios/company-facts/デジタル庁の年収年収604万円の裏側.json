@@ -1,0 +1,204 @@
+{
+  "title": "デジタル庁の年収、年収604万円の裏側",
+  "theme": {
+    "title": "デジタル庁の年収と働き方の実態",
+    "angle": "デジタル化の進展とともに変わる働き方を数字で解説。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "話題の企業",
+      "fact_main": "デジタル庁604万円",
+      "fact_sub": "国家公務員給与ベース",
+      "text": "年収604万円。ただし、全員が同じ水準ではありません。",
+      "bg_query": "デジタル庁 オフィス 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "採用予定 600人",
+      "fact_sub": "2025年度の採用目標",
+      "text": "2025年度は600人規模の採用を掲げます。",
+      "bg_query": "デジタル庁 職員 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "民間併任 約4割",
+      "fact_sub": "2024年7月時点の公表値",
+      "text": "職員の約4割は民間企業などとの併任です。数字だけ見れば、かなり良い混成です。",
+      "bg_query": "デジタル庁 会議 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "年収 400万〜1300万円",
+      "fact_sub": "民間専門人材の募集例",
+      "text": "専門人材の募集には年収400万円から1300万円の例があります。",
+      "bg_query": "デジタル庁 採用 イベント",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "週3日出勤が基本",
+      "fact_sub": "テレワーク併用を推進",
+      "text": "出勤は週3日程度を基本に、在宅勤務も併用します。",
+      "bg_query": "デジタル庁 テレワーク",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "任期 最長5年",
+      "fact_sub": "民間人材の採用区分",
+      "text": "ただし民間人材には最長5年の任期もあります。",
+      "bg_query": "デジタル庁 霞が関 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収604万",
+      "採用の裏側"
+    ],
+    "subtitle": "デジタル庁の働き方",
+    "tagline": "民間人材を採る国の職場"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 14,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.517,
+      "similar_to": "PlayStationの年収989万円、本当は何が違う？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 40,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "デジタル庁の年収、年収604万円の裏側"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['裏側', '年収'](+20)",
+      "好奇心ギャップ['裏'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}
