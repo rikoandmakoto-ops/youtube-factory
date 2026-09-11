@@ -8,12 +8,14 @@
 | ファイル | 内容 |
 |---|---|
 | `2026-09-10.md` | 分析パイプライン停止の発見 / 切り抜き3chの登録転換問題 / 09-09施策の反映確認 / **【夜間追記】OAuth 13ch全失効・レンダ復旧・生成24本に対し公開2本** |
-| `2026-09-11.md` | **タイトル実効文字数の逆U字（25-29字が頂点・n=330）を発見し機械ゲート化** / 疑問形はchを選ぶ（09-10のscp-lab判定が誤り） / 自動runによるtheme_blacklist退行2件を復元 / 18時JST枠が最下位 / ゲートが12ch中6chでしか動いていなかった / soffice OOM回避の値注入ツール |
+| `2026-09-11.md` | **タイトル実効文字数の逆U字（25-29字が頂点・n=330）を発見し機械ゲート化** / 疑問形はchを選ぶ（09-10のscp-lab判定が誤り） / 自動runによるtheme_blacklist退行2件を復元 / 18時JST枠が最下位 / ゲートが12ch中6chでしか動いていなかった / soffice OOM回避の値注入ツール / **【夜間追記】生成24本に対し公開0本・OAuth13ch全失効を実測・Developerマウントはunlink不可でgit mergeが原理的に失敗・「ホスト健全性critical」は誤記** |
+| `projects/` | **各プロジェクト（YouTube各ch / aiseki / fanup / oripa 他）の状態。`~/.auto-memory/project_*.md` が接続フォルダ外で読めないため 09-11 にここへ新設した。** |
 
-> ⚠️ `~/.auto-memory/` は Cowork の接続フォルダ外にあり、**14夜連続で読めていない**。
+> ⚠️ `~/.auto-memory/` は Cowork の接続フォルダ外にあり、**15夜連続で読めていない**。
 > 実質の参照先は **この `youtube-factory/.auto-memory/`**（09-10 に repo 内へ移設）。
-> `project_*.md`（aiseki / clip / orchestrator 等）は `~/.auto-memory/` 側にあるため
-> 夜間タスクからは更新できない。各プロジェクトの `HANDOFF.md` が代替の一次情報。
+> **09-11 に `projects/` を新設し、`~/.auto-memory/project_*.md` が担っていた役割をこちらへ移した。**
+> 以後、夜間タスクは `projects/` を読み書きする。`~/.auto-memory/` 側は参照しない（読めないので）。
+> 各プロジェクトの一次情報は引き続き各リポジトリの `HANDOFF.md`。
 
 ## 常設の学び（更新型）
 
@@ -46,17 +48,17 @@
 
 ### ゲートの適用範囲（2026-09-11 判明）
 - **`hard_constraints` は 12ch 中 6ch でしか設定されていなかった**。未設定だったのは akashic-librarian と切り抜き5ch。**未設定chは `is_enforced()` が False になり検査が丸ごとスキップされる**ので、「禁止したはずの負け型」が素通りする。
-- 09-11 に akashic-librarian へ新規付与（登録/千 0.570 で全11ch中3位なのにゲート無しだった）。**切り抜き5chは依然として未設定**。
+- 09-11 に akashic-librarian へ新規付与（登録/千 0.570 で全11ch中3位なのにゲート無しだった）。09-11 23:10 に **8ch で `min_effective_chars=20` の生存を確認**。**未設定は clip-animal / clip-fukada / clip-kaneko / clip-lab / socio-rx の5ch**（socio-rx は `autopilot.enabled=false` の休止chなので実質は切り抜き4ch）。
 - **下限系の制約を足すときは `repair()` の採用条件を必ず見る**。09-11 に `min_effective_chars` を足した直後、repair が「違反が require_any_of だけなら採用」という条件に引っかかって全chで死んだ（語を足しても20字に届かない候補が棄却され原文が返る）。`UNREPAIRABLE_RULES` で除外する設計にした。
 
-### 基盤（2026-09-10 夜 更新）
-- **OAuth は 13ch 全滅**（09-08 は失効4ch＋警告9ch → 09-10 22:30 に全13ch `invalid_grant`）。恒久対策は GCP OAuth 同意画面を「テスト中」→「本番」へ公開（project 844705815004）。テスト中のままだとリフレッシュトークンが7日で強制失効し、再認可しても必ず1週間で再発する。
-- **ボトルネックは「レンダ遅延」から「アップロード」へ移った**。09-10 は生成24本すべて completed（レンダは復旧）だが、YouTube 公開は2本のみ。**動画は作れているが上げられていない**。job_queue が completed でも公開されたとは限らない — 公開の真偽は `data/video_publish.db` で見ること。
-- **`ANTHROPIC_API_KEY` は `backend/.env` 18行目でコメントアウトされたまま（10夜連続）**。これ1行で clip-lab の海外バイラル枠 / clip-kaneko のフック生成 / PDCA の Claude 分析 / series_engine の続編生成が同時に止まっている。`viral_translation_pending/` に未処理依頼が15件滞留（08-31〜09-10）。
-- **`logs/backend.log` が 79.7MB**（ローテーション未実装）。grep がタイムアウトするため障害調査の妨げになる。
-- **ホスト健全性が critical**（09-10 22:30 実測: swap 96% / 空きメモリ 72MB）。レンダが遅いときの症状は失敗ではなく「1本がワーカーを何時間も占有する」なので、例外監視では検知できない。この2つの数字で判断する。
-- **analytics は 09-08 が最後のスナップショット。09-09/10/11 は video_metrics が0行**（3日連続）。`channel_metrics` は 09-05 で停止。原因は OAuth 全失効。**これが直るまで、毎日の指揮者タスクは「同じ 09-08 データの再解釈」しかできない。**
-- **ブラウザ収集は無人実行では原理的に不成立（15夜連続）**。内蔵ブラウザ＝youtube.com のサイト承認が無人で却下される / Chrome MCP＝拡張が3台接続されており選択が必須 / サンドボックス直 fetch＝egress 未許可。**タスク定義を analytics.db 基準に書き換えるか、承認を事前付与するかの二択**。毎回同じ3経路を試して同じ結論に至るのは無駄。
+### 基盤（2026-09-11 夜 更新）
+- **OAuth は 13ch 全滅**（09-08 失効4ch＋警告9ch → 09-10 全13ch `invalid_grant` → 09-11 も全13ch で `expires_at` が過去・`updated_at` は全て `expires_at + 8h` のまま＝**リフレッシュに一度も成功していない**）。恒久対策は GCP OAuth 同意画面を「テスト中」→「本番」へ公開（project 844705815004）。テスト中のままだとリフレッシュトークンが7日で強制失効し、再認可しても必ず1週間で再発する。
+- **ボトルネックは「アップロード」。09-11 は生成24本すべて completed に対し公開 0本**（09-10 は2本、09-09 は2本、09-08 は21本）。失敗理由は全件 `自動公開スキップ — トークン失効のため要再認可`。**動画は4日ぶん積み上がっている**。job_queue が completed でも公開されたとは限らない — 公開の真偽は `data/video_publish.db` の `video_status` で見ること。
+- **`ANTHROPIC_API_KEY` は `backend/.env` 18行目でコメントアウトされたまま（12夜連続）**。これ1行で clip-lab の海外バイラル枠 / clip-kaneko のフック生成 / PDCA の Claude 分析 / series_engine の続編生成が同時に止まっている。`data/analytics/viral_translation_pending/` に未処理依頼が**16件**滞留（08-31〜09-11）。09-11 は clip-kaneko 3枠 / clip-lab viral 1枠 / clip-animal 1枠がこれで失敗した。**切り抜き系は「上げられない」以前に「作れていない」枠がある。**
+- **`logs/backend.log` が 81.4MB**（ローテーション未実装・09-11 時点）。grep がタイムアウトするため障害調査の妨げになる。`tail -c` で末尾だけ読むこと。
+- ⚠️ **09-10 の「ホスト健全性 critical（swap 96% / 空きメモリ 72MB）」は誤記だった。** あれはサンドボックス（Linux VM）の値で、ユーザーの Mac の値ではない。**サンドボックスから mac 本体のメモリ・swap は測れない。**（09-11 23:10 の同計測は swap 0 / 空き1.8GB / ディスク76%。）
+- **analytics は 09-08 が最後のスナップショット。09-09/10/11 は video_metrics が0行**（**4日連続**）。`channel_metrics` は 09-05 で停止。原因は OAuth 全失効。**これが直るまで、毎日の指揮者タスクは「同じ 09-08 データの再解釈」しかできない。**
+- **ブラウザ収集は無人実行では原理的に不成立（16夜連続）**。内蔵ブラウザ＝youtube.com のサイト承認が無人で却下される / Chrome MCP＝拡張が3台接続されており選択が必須 / サンドボックス直 fetch＝egress 未許可。**タスク定義を analytics.db 基準に書き換えるか、承認を事前付与するかの二択**。毎回同じ3経路を試して同じ結論に至るのは無駄。
 - **サンドボックスの LibreOffice（soffice）は OOM kill される**（exit 137）。xlsx skill の `recalc.py` が通らない日がある。→ `reports/inject_cached_values.py` を使う（**数式は残したままキャッシュ値だけ XML に注入する**ので、recalc 無しでも pandas / data_only=True / プレビューから値が読める）。注意点2つ: openpyxl は数式セルを `<f>…</f><v></v>`（空の v 付き）で書く / rels は `Target` を `Id` より**前**に書く。どちらかを外すと0件マッチになる。
 
 ### 運用上の鉄則
@@ -66,5 +68,8 @@
 - **config を触る自動 run のあとは必ず `pytest backend/tests` を通す**。09-11 朝の自動 run が daily-science の theme_blacklist を削り、リポジトリ自身の回帰テストを RED にしたまま放置していた（過去の重複タイトル8件が素通り）。**既存の赤の本数を先に記録してから作業する**（09-11 は HEAD 8 failed → 作業後 7 failed。残りは fastapi/moviepy 欠如とバースト系の既存赤）。
 - **note と config が矛盾したら config を note に合わせる**。09-11 朝の run は scp-lab に「SCP-173 が上位40本中30%」という note を追記しながら、同じ run で `theme_blacklist` から `SCP-173` を削っていた。自動 run は note と実装が逆を向くことがある。
 - **config を変更したら数分おいて読み直し、適用が残っているか確認する**。稼働中のプロセスが `data/channels/*.json` を上書きする（09-11 に適用11分後、2ch-matome の `min_effective_chars` が別プロセスに消された。他7chは残存）。`ls -la --time-style=+%H:%M:%S data/channels/*.json` で自分の適用時刻より後に書かれたファイルが分かる。本来は autopilot / orchestrator を止めてから触る。
-- **`.git` に Sep-10 由来の stale lock が残っている**（`HEAD.lock` / `index.lock` / `packed-refs.lock` / `refs/heads/main.lock`）。サンドボックスからは削除できない（Operation not permitted）ので、`GIT_INDEX_FILE=/tmp/xxx git read-tree HEAD && git add -A && git commit` で別インデックスを使えばコミットは通る。**ユーザーの Mac の端末からは `rm -f .git/*.lock .git/refs/heads/*.lock` で消せるので、消してもらうのが本筋。**
+- **`/Users/ayukiyamazaki/Developer/*` のマウントは unlink（ファイル削除）が一切できない**（EPERM）。帰結: `git add` / `commit` / `log` は動く（lock は rename で消費される）が、**`git status` は毎回 `.git/index.lock` を残し**、**`git merge` / `git checkout` は `unable to unlink old` で必ず失敗する**。
+  - **マージ可否の判定は `/tmp` に `git clone -s` した作業用クローンで行う**（ext4 なので正常に動く）。
+  - 残った lock は `rm` できないので `.git/stale_locks/` へ `mv` して退避する。`.git/stale_locks/` と `.git/_stale/` に溜まっているので**ホスト側で削除してよい**。09-11 22:13 に `HEAD.lock` が再生成された。
+  - **push はサンドボックスからできない**（GitHub 認証情報が無い）。09-11 夜時点で `youtube-factory` は origin/main に対し **15コミット先行**、`aiseki` は **4コミット先行**。ホストの端末で `git push origin main` が要る。
 - **前日の「ch内対照」の結論は翌日に独立再測する**。09-10 の「scp-lab は疑問形が明確に負」は誤りで、独立再測すると 2.62倍で正だった（閾値を振っても leave-one-out でも不動）。n が小さい ch内対照は符号ごと反転しうる。**片側が5本未満なら判定しない。**
