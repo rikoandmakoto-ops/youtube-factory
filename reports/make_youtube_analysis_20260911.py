@@ -19,6 +19,13 @@ from openpyxl.utils import get_column_letter
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from inject_cached_values import FormulaCache  # noqa: E402
 
+# 実効文字数は backend のゲートと**同じ実装**を使う。ここで別実装を持つと、
+# レポートの数字と実際にゲートが弾く基準がずれる（2026-09-11 の検証で
+# レポート側の簡易版が本文を巻き込んでいたのが見つかった）。
+sys.path.insert(0, os.path.join(ROOT_GUESS := os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))), "backend"))
+from pipeline import title_constraints as _tc  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "analytics", "analytics.db")
 OUT = os.path.join(ROOT, "reports", "youtube-analysis-2026-09-11.xlsx")
@@ -51,10 +58,16 @@ THIN = Side(style="thin", color="BFBFBF")
 BOX = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
 
 
+def eff_len(t):
+    """実効文字数。backend のゲート（title_constraints.effective_len）と同一実装。"""
+    return _tc.effective_len(t)
+
+
 def clean_title(t):
+    """表示用にハッシュタグと【】を落とす（長さは eff_len で数える）。"""
     t = re.sub(r"【[^】]*】", "", t or "")
-    t = re.sub(r"[#＃]\S+", "", t)
-    return t.strip()
+    t = re.sub(r"[#＃][^\s：:]*", "", t)
+    return re.sub(r"[\s　]+", " ", t).strip()
 
 
 def q(t):
@@ -86,7 +99,7 @@ for cid, name, kind in CHANNELS:
     lk = sum(r["likes"] or 0 for r in s)
     cm = sum(r["comments"] or 0 for r in s)
     rets = [r["avg_view_percentage"] for r in s if r["avg_view_percentage"]]
-    eff = [len(clean_title(r["title"])) for r in s if r["title"]]
+    eff = [eff_len(r["title"]) for r in s if r["title"]]
     agg[cid] = dict(
         name=name, kind=kind, snap=snap[cid], n=len(s), views=v, subs=sg, likes=lk, comments=cm,
         ret=(sum(rets) / len(rets) if rets else 0),
@@ -234,18 +247,25 @@ for txt in [
     "（GCP OAuth 同意画面が「テスト中」のままでリフレッシュトークンが7日で強制失効する）。"
     "GCP project 844705815004 の同意画面を「本番」へ公開しない限り、再認可しても必ず1週間で再発する。",
     "② タイトル実効文字数と登録転換に強い関係があった（n=330）。"
-    "0-14字 0.242 / 15-19字 0.279 / 20-24字 0.400 / 25-29字 0.637 / 30字以上 0.355。"
-    "25〜29字を頂点とする逆U字で、全330本のうち112本（34%）が20字未満だった。"
-    "自然文の min_effective_chars_target は backend が読まないため1本も効いていなかったので、"
-    "本日 title_constraints.py に機械ゲートとして実装し8chへ適用した。",
-    "③ 切り抜き3chは再生の46%（89,707再生）を占めながら登録獲得は10人で、"
-    "ゆっくり系との登録効率差は依然として大きい。平均タイトル実効長も 16.1〜19.3字で全ch最短。"
+    "0-14字 0.104 / 15-19字 0.279 / 20-24字 0.402 / 25-29字 0.646 / 30-34字 0.389 / 35字以上 0.345。"
+    "25〜29字を頂点とする逆U字で、20字未満は最良帯の 1/2.3〜1/6.2。帯の切り方に依存しないことを"
+    "4分位でも確認した（Q1 9-21字 0.227 / Q2 0.476 / Q3 27-35字 0.518 / Q4 35-54字 0.352）。"
+    "20字未満は全330本中66本（20%）。自然文の min_effective_chars_target は backend が"
+    "読まないため1本も効いていなかったので、本日 title_constraints.py に機械ゲートとして実装し8chへ適用した。",
+    "③ 切り抜き3chは再生の28%（89,707 / 317,531再生）を占めながら登録獲得は10人で、"
+    "ゆっくり系との登録効率差は依然として大きい。平均タイトル実効長も 16.9〜19.5字で全ch最短。"
     "ただし切り抜きのタイトルは発言の引用なので、文字数下限を課すと誤引用を作るリスクがある。"
     "本日は適用を見送り、別施策（引用は保ったまま文脈を添える形）として扱う。",
     "④ 09-11 朝の自動 run が theme_blacklist を退行させていた。scp-lab は 13語→6語 に減り、"
     "同じ run が追記した note（SCP-173 が再生上位40本中12本＝30%）と真逆の状態に。"
     "daily-science は「あくび」「自分の声」が消え、リポジトリ自身の回帰テストが RED になっていた"
     "（過去の重複タイトル8件が素通り）。本日いずれも復元し、テストは GREEN に戻した。",
+    "④' 実効文字数の初版集計には実装バグがあり、同日中に検出して直した。"
+    "旧実装の正規表現 `[#＃]\\S+` が「一口SCP #110：SCP-███「投稿者の編集室」…」のような"
+    "連番つきタイトルで本文を丸ごとハッシュタグと見なして落としており、実効41字を5字と"
+    "数えていた（scp-lab 50本中14本が該当）。コロンで止める実装に修正し、レポートと"
+    "backend のゲートで同じ関数を使うようにした（別実装を持つとレポートの数字と"
+    "実際に弾かれる基準がずれる）。結論（25〜29字が頂点の逆U字・下限20字）は修正後も変わらない。",
     "⑤ 「なぜ〇〇なのか」疑問形は ch を選ぶ。scp-lab 1.32 vs 0.51（2.6倍・leave-one-out 後も 1.15）、"
     "daily-science 0.53 vs 0.18（3.0倍）、yokai-watch 0.61 vs 0.33、2ch-matome 0.25 vs 0.18 で有効。"
     "一方 pokemon-lab は 0.08 vs 0.41 で明確に逆効果、company-facts は疑問形が n=1 しかなく判断不能。"
@@ -338,7 +358,7 @@ for cid, name, kind in order:
             jst = f"{(hh + 9) % 24}時"
             ct = clean_title(x["title"])
             state = tag if (x["views"] or 0) > 0 else f"{tag}／集計待ち(2-3日遅延)"
-            vals = [name, pub, jst, ct, len(ct), "○" if q(x["title"]) else "",
+            vals = [name, pub, jst, ct, eff_len(x["title"]), "○" if q(x["title"]) else "",
                     x["views"] or 0, x["likes"] or 0, x["subscribers_gained"] or 0,
                     None, round(x["avg_view_percentage"] or 0, 1), round(x["ctr"] or 0, 2), state]
             for i, v in enumerate(vals, start=1):
@@ -347,7 +367,7 @@ for cid, name, kind in order:
             vv = x["views"] or 0
             F(ws, r, 10, f"=IF(G{r}=0,\"\",I{r}/G{r}*1000)",
               round((x["subscribers_gained"] or 0) / vv * 1000, 6) if vv else "", "0.000")
-            if len(ct) < 20:
+            if eff_len(x["title"]) < 20:
                 ws.cell(row=r, column=5).fill = BAD_FILL
             if (x["views"] or 0) == 0:
                 ws.cell(row=r, column=13).fill = WARN_FILL
@@ -382,9 +402,10 @@ props = [
      "8語＋2語を復元。テストは GREEN に戻った", "実行済み"),
     (3, "高", "8ch（切り抜き除く）",
      "タイトル実効文字数の下限20字を機械ゲート化（狙いは25〜29字）",
-     "n=330（views>0）で登録/千再生は 0-14字 0.242 / 15-19字 0.279 / 20-24字 0.400 / "
-     "25-29字 0.637 / 30字以上 0.355。25〜29字が頂点の逆U字で、最弱帯の2.6倍。"
-     "20字未満が全体の34%（112/330本）を占めていた。自然文の min_effective_chars_target は "
+     "n=330（views>0）で登録/千再生は 0-14字 0.104 / 15-19字 0.279 / 20-24字 0.402 / "
+     "25-29字 0.646 / 30-34字 0.389 / 35字以上 0.345。25〜29字が頂点の逆U字で、最弱帯の6.2倍。"
+     "4分位でも同じ形（Q1 0.227 / Q2 0.476 / Q3 0.518 / Q4 0.352）。"
+     "20字未満が全体の20%（66/330本）を占めていた。自然文の min_effective_chars_target は "
      "backend が読まないため1本も効いていなかった。",
      "title_constraints.py に min_effective_chars を実装し、8ch の hard_constraints へ追加"
      "（回帰テスト9件を追加）", "実行済み"),
@@ -413,9 +434,9 @@ props = [
      "4ch の theme_priority に注記を追加", "実行済み"),
     (8, "中", "切り抜き3ch",
      "タイトルを引用のまま保ちつつ、引用の後ろに文脈を1節添える形を試す",
-     "切り抜き3chは 89,707再生（全体の46%）で登録10人。平均タイトル実効長は "
-     "clip-fukada 16.1字 / clip-lab 18.2字 / clip-kaneko 19.3字 で全ch最短3つ、"
-     "20字未満率は 88% / 62% / 54%。実効長と登録転換の関係（提案3）はここで最も伸びしろがある。"
+     "切り抜き3chは 89,707再生（全体の28%）で登録10人。平均タイトル実効長は "
+     "clip-fukada 16.9字 / clip-lab 18.2字 / clip-kaneko 19.5字 で全ch最短3つ、"
+     "20字未満率は 85% / 67% / 53%。実効長と登録転換の関係（提案3）はここで最も伸びしろがある。"
      "ただしタイトルが発言の引用なので、文字数下限を機械的に課すと誤引用を作りうる。",
      "未実行（誤引用リスクのため min_effective_chars の適用を見送り）", "次回の実験候補"),
     (9, "中", "scp-lab",
