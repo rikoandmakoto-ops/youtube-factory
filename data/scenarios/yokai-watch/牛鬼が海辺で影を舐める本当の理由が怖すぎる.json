@@ -1,0 +1,556 @@
+{
+  "title": "牛鬼が海辺で影を舐める本当の理由が怖すぎる",
+  "theme": {
+    "title": "牛鬼の正体が怖すぎる、海辺で人を襲う言い伝え",
+    "angle": "西日本の海と川に集中する分布。影を舐められると死ぬという型が、どの土地の水難と結びついたか"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "見た目は親しげでも、牛鬼の原典は人の影を舐めるんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "牛鬼好きな人多いよね。でも愛媛県宇和島の海辺には死者の話が残る。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、影を舐められた者は死ぬと江戸期の記録に語られる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。自分は無傷でも足元だけ狙われるってことなの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "海の事故を牛鬼の仕業にした土地では、影は命だった。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲーフリはこの妖怪を元にポケモンをデザインしたらしい。"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズも。毎日投稿中、1万人目標のチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あなた、海辺の夕暮れに自分の影が妙に濃く見えたことありませんか？西日本には、その影を舐められた人は死ぬと恐れられた牛鬼の伝承が残ります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "今回は、牛のような角と鬼の顔を持つ怪物が、なぜ瀬戸内や四国、九州の海と川に集中したのか、その正体を水難の記憶から暴きます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "可愛い妖怪の印象とは逆に、原典の牛鬼は戦って倒す相手ではありません。姿を見ただけで病み、影を奪われれば助からない、逃げ場のない恐怖でした。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "しかも影を舐めるという話は、ただの怪談ではないかもしれません。足元から命を奪う水辺の危険が、怪物の口として語り継がれた可能性があります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "驚くべきことに、牛鬼が現れる場所は荒い外海だけではありません。潮が逆流する河口や、見た目より深い淵など、帰れなくなる水際にも重なっています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "これから土地ごとの記録をたどり、影を舐める牛鬼が誰を連れ去ったのかを見ていきましょう。笑って聞いた伝承ほど、最後に足元を冷たくします。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "実は牛鬼の「影を舐められると死ぬ」話は、怪物に食われる恐怖より、水辺で命を落とす事故の記憶を映している可能性が高いんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "でもこれ、半分は間違いなんだ。牛鬼は全国共通の姿を持つ妖怪ではなく、西日本の海岸や川筋ごとに、姿も害も大きく変わります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "基本の仕組みは単純です。人が水辺で牛鬼に出会い、影や気配を奪われた後、急な病気や衰弱で死ぬ、という順番で語られます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "影は体から離れないはずなのに、昔の人には命の輪郭のようなものでもありました。影を失うとは、魂の一部を水辺へ置いてくる感覚です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "とくに愛媛や高知、広島周辺では、牛鬼は海だけでなく川にも現れます。潮流、深み、増水という見えない危険に、名が与えられました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "影を舐める、という表現は、水面に映った人影が波で崩れる光景にも重なります。岸から一歩踏み外せば、映る影ごと本人が消えてしまう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承では、牛鬼に目を付けられた人が数日後に死ぬ型もあります。すぐ死なないからこそ、溺れかけた後の発熱や衰弱まで妖怪の仕業に見えました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "つまり牛鬼は、牙で襲う怪獣というより、水難の後から人を連れ去る説明装置です。助かったはずの人が亡くなる怖さまで、物語は包み込みます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "可愛い妖怪キャラの元をたどると、そこには海辺で子どもを近づけさせない警告があります。次は、なぜ牛の名が水の怪物に付いたのかを追います。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "牛鬼伝承を地図化すると、愛媛・高知・山口・福岡など西日本の海岸線と河口部に集中します。山奥より水際に偏る点が、単なる獣の怪談ではなく水難の記憶を疑わせます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "しかも恐ろしいのは、影を舐められた人がほどなく死ぬ、という型です。傷も血も残さず命を奪うので、遺体が見つからない溺死や急病を説明する怪異として働きました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "民俗学でいう分布とは、同じ話が採集された地点の広がりです。牛鬼は瀬戸内沿岸から四国南岸へ連なるため、潮流や漁場の危険と結び付けて読む研究があります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ここで反転があります。影を舐める牛鬼は、海中から獲物を引きずり込む怪物ではありません。浜に立っているだけの人間を標的にするから、逃げ場のない恐怖になるのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "代表例として宇和島周辺では、牛鬼は祭礼の守護的な姿でも知られます。一方で周辺の語りには人を襲う異形も残り、同じ名が祝福と死の両方を背負っていました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "水難事故の統計では、海や川の事故は遊泳中だけでなく、釣りや作業中にも起こります。足元が濡れない場所でも油断できないため、影を狙う怪談は警告として合理的でした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "影は本人の分身と考えられやすく、舐められる行為は魂や生命力を奪う比喩になります。身体に外傷がないまま衰弱する説明として、各地の怪談で繰り返される仕組みです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ただし、牛鬼の被害を現代の事故記録と一対一で証明した研究はありません。それでも河口、磯、淵のように流れが急変する場所へ話が集まる傾向は見過ごせません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "河口では川水と海水がぶつかり、潮位によって流速や深さが変わります。昨日まで渡れた浅瀬が短時間で危険になるため、土地の人は場所そのものに怪物の名を与えたのでしょう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "つまり牛鬼は、巨大な獣の姿を借りた水辺の危険表示だった可能性があります。影を舐められる前に岸へ戻れ、という伝承の声は、今も西日本の暗い水際に残っているのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "牛鬼の記録は西日本の海岸と河口に偏り、愛媛・高知・岡山などで残ります。山の怪ではなく、水辺の死と結び付いた妖怪として語られてきました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "とくに宇和島周辺では、牛鬼は人の影を舐めるとされます。体を噛まれなくても、影だけで命を奪われる結末が、異様に具体的なんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "影を舐められた者は高熱を出し、ほどなく死ぬという型があります。これは姿の見えない病や溺水事故を、怪物の仕業として説明した可能性があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "しかし怖いのは、影が狙われる場面です。浜や川岸で水面に映った自分の影を見た直後、命を落とす話が各地に残っているのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "水面の影とは、足元の深みや潮流を見誤る危険の比喩とも読めます。夕暮れの海辺では距離感が狂い、昔は救助も届きにくい場所でした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ここで反転があります。牛鬼は恐ろしい捕食者である一方、祭礼では地域を守る神のように担がれます。宇和島の牛鬼練りは、その名残と考えられます。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "研究者は、牛鬼の姿が一つに定まらない点にも注目します。牛の頭、蜘蛛の胴、巨大な獣など、土地ごとに水難の恐怖が別の形を取りました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "江戸期の怪談集にも牛鬼は現れますが、記録者が見たのは怪物そのものではありません。繰り返される失踪や急死という、海辺の不安だったのかもしれません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次に追うのは、牛鬼がなぜ影だけを舐めるのかという核心です。肉体ではなく魂の輪郭を奪う発想が、水辺の禁忌と重なっていきます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "牛鬼は山奥の怪物と思われがちですが、伝承の濃い地域は愛媛・高知・山口など西日本の海辺と河口です。水際で消える人の恐怖が、獣の姿へ置き換えられた可能性があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "しかも牛鬼は、ただ噛みつく怪物ではありません。「影を舐められると死ぬ」という型では、本人の体に傷がなくても衰弱します。溺死や急病を、見えない接触として説明したのかもしれません。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "影は昔、本人の魂や命の写しと考えられることがありました。だから浜で影を奪われる話は、怪物に食われるより厄介です。助かったように見えても、数日後に命を落とす筋書きが残ります。",
+      "expression": "fear",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ここで怖い反転があります。牛鬼が狙うのは、海へ入った人だけではありません。岸で休む人、夕暮れに水面をのぞく人まで危ないとされ、逃げ場のはずの陸地が安全ではなくなります。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "愛媛県宇和島周辺では、牛鬼は祭礼の勇壮な練り物としても有名です。しかし本来の語りには、村へ災いを運ぶ恐ろしい獣の影があります。祝いの顔と水難の記憶が、同じ名に重なっています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "海の牛鬼には、蜘蛛や蟹のような体、牛の頭という異様な姿の例もあります。これは実在の動物を写したというより、波間で正体を失う漂流物や巨大な影を怪物化した姿にも見えます。",
+      "expression": "thinking",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "河口は海水と川水がぶつかり、流れが急変しやすい場所です。潮の満ち引きで足元がさらわれる危険を、土地の人は経験で知っていました。牛鬼の出現地点が水の境目に多いのは不自然ではありません。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "影を舐めるという表現は、夕方の長い影とも相性が悪いです。日没前の浜は帰る判断が遅れやすく、暗くなれば岩場も潮位も見えません。怪物の警告は、危険な時刻を避ける知恵だった可能性があります。",
+      "expression": "fear",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "さらに牛鬼退治の話では、武器より知恵や祈りで退ける場面が目立ちます。相手が獣なら刃で倒せるはずなのに、村は儀礼を選ぶ。つまり恐れの正体は、一頭の動物ではなく水辺そのものだったのでしょう。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "可愛い妖怪の名前から入ると見落としますが、牛鬼は「水に近づくな」という土地の遺言です。次は、なぜ倒したはずの牛鬼が祭りで毎年よみがえるのか、その不気味な理由を追います。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "海辺の散歩では、夕方の波打ち際より一段高い道を選びましょう。牛鬼の影舐め伝承は、足元の影が濡れる低地ほど危険だという水難の記憶として読めます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "実践の目安は、海面と自分の足元を同時に見られない暗さです。スマホのライトが必要になったら引き返す、と家族や友人で先に決めれば判断が遅れません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "川遊びでは、影を舐められるという言葉を「見えない流れに足を取られる」警告へ置き換えます。水面が鏡のようでも、岸際だけ急に深くなる場所があります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "驚きなのは、牛鬼が怖がらせる怪物ではなく、帰宅の合図にもなる点です。西日本の伝承地を訪ねるなら、日没30分前を撤収時刻にすると迷いにくいです。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "子どもと歩くなら、「影が水に入ったら牛鬼ゾーン終了」という遊びのルールが便利です。怖い話を脅しで終わらせず、岸から離れる習慣へ変えられます。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "釣り場では単独行動を避け、到着時に避難方向を一度だけ確認しましょう。牛鬼の出る入り江のように、背後が崖や藪だと波が来た瞬間に逃げ道を失います。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承スポットを撮影する時は、位置情報の公開を帰宅後に遅らせるのも実用的です。夜の人気のない海岸へ、興味だけで後追いする人を増やさない配慮になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "地元の「近づくな」「日が暮れたら戻れ」は、古い迷信として笑わない方が安全です。言葉の形を変えながら、危険な潮位や流れを伝えてきた可能性があります。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "牛鬼を知った後の正解は、恐怖を持ち帰ることではありません。海と川では明るいうちに引き返す、その当たり前の一手を伝承から学ぶのが最も賢い応用です。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "牛鬼は西日本の海と川に濃く残り、獣の姿そのものより、水辺で人の命を奪う恐怖を背負った妖怪でした。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "とくに影を舐められると死ぬという話は、足元の暗がりへ近づいた人が、水難で戻らない結末を思わせます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "牛鬼は怪物の牙だけで襲うのではなく、見えない影から命を削る存在として、海辺の暮らしに潜んでいたのです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "怖いのは、波も川も普段は生活を支える味方なのに、一度足を取られれば牛鬼の伝承へ変わってしまう点ですね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は海辺の妖怪、磯女を解説するよ。美しい女の声に誘われた先で、漁師たちが何を恐れたのか追います。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "磯女の伝承には、夜の浜で呼びかけに応じた者が帰れないという型があります。可憐な姿の裏側を確かめましょう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "牛鬼のように身近な水辺が怖く見えたなら、高評価とチャンネル登録をお願いします。次の怪異調査で会いましょう。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "影を舐める",
+      "海辺の牛鬼"
+    ],
+    "hook_caption": "影を舐める",
+    "subtitle": "西日本の水辺に残る怪異",
+    "tagline": "祭りの牛鬼の奥にある、水難の記憶"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "ゲーフリはこの妖怪を元にポケモンをデザインしたらしい。",
+      "matched_topic": "元ネタ"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズも。毎日投稿中、1万人目標のチ",
+          "reason": "1行55字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 22,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 5,
+        "relatability": 7,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.531,
+      "similar_to": "橋姫が宇治橋で待つ本当の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 37,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "牛鬼の正体は水難だった"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['？'](+12)"
+    ],
+    "rejected_title": "牛鬼の正体は水難だった",
+    "attempts": 1
+  },
+  "original_title": "牛鬼の正体は水難だった",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "影を舐められたら死ぬ？牛鬼に襲われる海辺の3つの共通点"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

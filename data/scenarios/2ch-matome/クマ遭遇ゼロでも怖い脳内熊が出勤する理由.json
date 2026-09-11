@@ -1,0 +1,668 @@
+{
+  "title": "クマ遭遇ゼロでも怖い…脳内熊が出勤する理由",
+  "theme": {
+    "title": "クマに関する都市伝説！実は知ってる？",
+    "angle": "クマが人間に与える影響とその心理的要因を考察！"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "ワイ、クマ遭遇歴0回やけど質問ある？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 熊注意の看板を3枚見ただけやろw。常連ニキならこのノリわかるよなｗ",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "夜道の黒い袋まで熊に見えるらしい草",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "でもこっからが本番でさw脳内熊だけ月30回出勤しとるやんw。",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり正体は想像が先に走るドン引きする話やったんや",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "質問ある？シリーズ、草生えたら高評価なw これ面白かったら共有してくれw 再生数で生活してるんだわw。…ちょ待て、>>1に戻ってみろ",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、山のニュースを見るだけで背後が気になることありませんか？その正体は牙ではなく、脳が最悪の場面を先回りして映す警報装置かもしれません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも衝撃なのは、実際にクマへ遭遇する確率より、映像や看板で恐怖を学ぶ回数のほうが圧倒的に多いこと。脳内のクマは現物より巨大化しがちです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今回は、クマの都市伝説がなぜ人間の行動を変えるのか、その正体を暴きます。鈴、足音、木陰まで怖くなる心理を、データとあるあるで追います。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "心理学でいう利用可能性ヒューリスティックとは、思い出しやすい怖い話ほど頻繁に起きると感じるクセ。熊出没速報を見た夜ほど物音が事件級に聞こえます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転です。クマを怖がる感覚そのものは弱点ではなく、危険を避けるための進化の名残とも考えられます。ただし都市伝説が混ざると警戒は暴走します。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "『死んだふりで必ず助かる』『目を見たら終わり』のような断言は、恐怖ほど拡散されやすいのが厄介。あなたが信じていたクマ説、コメントで一番怖いものをあげてけ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこれ、半分は間違いなんだ。クマが人を狙って街へ来るというより、食べ物と安全な道を覚えた結果として現れることが多いんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "基本は学習だな。生ごみ、果樹、ペットフードを一度うまく食べると、クマはその場所を「高得点の食堂」として記憶しやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "人間側は足跡や目撃情報だけでも危険を大きく感じるよね。見えない相手ほど想像が膨らみ、夜道や山際への不安が強まりやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "これは利用可能性ヒューリスティック、つまり思い出しやすい怖い映像ほど現実の確率も高いと感じる心の近道なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "たとえば全国ニュースで襲撃映像を何度も見ると、遠い地域でも「今すぐ近所にいるかも」と脳が警報を鳴らしてしまうわけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "一方でクマも、人の声や車の音を避ける個体が多い。だから遭遇は単純な凶暴さより、餌・時間帯・見通しの悪さが重なる問題だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "特に秋は冬眠前で食べる必要が増える時期。木の実が少ない年には、山で足りない分を人里近くで探す行動が目立ちやすいよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり都市伝説の正体は、超能力で人を追う怪物というより、学習する動物と恐怖を増幅する人間の想像力が交わる点にある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ゴローなら、目撃情報を見た翌日に山へ行ける？　怖がりすぎも油断も危険だけど、みんなの基準をコメントで教えてね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "米国の調査では、クマを見た経験がない人でも写真だけで心拍が上がる傾向が出たの。脳は黒い大型動物の輪郭を危険信号として先回り処理するらしいわ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも驚きなのは、実際の遭遇率より「遭うかもしれない」という予測が不安を強める点だ。山道で枝が折れる音だけでも、クマ連想が恐怖を増幅させる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "心理学でいう利用可能性ヒューリスティックは、思い出しやすい事件を多発だと感じる癖のこと。速報映像を何度も見るほど、出没が身近に思えてしまうの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "北海道のヒグマ事故を扱う報道は強い印象を残すが、印象の強さと個人の遭遇確率は同じではない。脳は数字より、血の通う物語を危険判定に使いやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "代表的な恐怖条件づけ実験では、中立だった音と不快な刺激を組み合わせると、音だけで発汗反応が出たわ。クマ鈴の音まで緊張材料になる人がいるのも、この仕組みに近い。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただしクマ鈴そのものが恐怖を作るわけじゃない。音を聞いた場面で危険情報を反復して覚えると、体は警戒モードへ入りやすくなるという話だな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転よ。恐怖は弱さではなく、注意を狭めて生存行動を急がせる装置なの。問題は警戒が強すぎると、木の影までクマに見えて判断が乱れること。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "2010年代の野生動物研究では、大型捕食者の存在を知らせるだけで人の行動範囲が変わる例が報告された。直接の被害がなくても、散歩や農作業を控える影響が出る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "都市伝説で「クマは人を覚えて復讐する」と語られるのも、偶然の再遭遇を意図に見立てる心理が関係するわ。人は不安な出来事ほど、原因に顔や意思を与えたくなるの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "だから対策は、怖い話を信じ切ることでも笑い飛ばすことでもない。出没情報を確認し、複数人で動くなど事実ベースに戻すのが、恐怖を行動へ変える近道だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "中世ヨーロッパでは、クマは森の王として恐れられた一方、冬眠から戻る姿が復活の象徴にもされた。人間の想像力を支配した古い隣人だったんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "日本でも平安期の記録に山の獣として熊が現れ、毛皮や胆は貴重品だった。会ったら終わりの怪物と、役立つ資源が同じ動物に重なっていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最強に不気味なのは、クマ被害の記憶が集落ごとに伝説化すること。実際の一頭が、語り継がれるうち山全体の恐怖へ膨らんでいく。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "1915年の三毛別羆事件は、北海道で7人が死亡した実話として知られる。巨大な熊の像は今も残り、数字以上の恐怖を訪れる人へ刻み続ける。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、都市伝説のクマは必ずしも闇から襲うだけじゃない。目撃者の不安が強いほど、足音や木の揺れまでクマの気配に変わるんだ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "心理学でいう利用可能性ヒューリスティックは、思い出しやすい事件ほど起こりやすく感じる傾向だ。ニュースの映像一つで山道が急に危険地帯になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "1970年代以降、各地の目撃談は新聞やテレビで広がり、正体不明の巨大熊伝説も増えた。顔を知らない相手ほど、人は最悪の姿を補ってしまう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "研究者は足跡、爪痕、毛を調べて個体を追うけど、伝説は証拠より先に走る。曖昧な影が一晩で何メートル級の怪物になるのも珍しくない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまりクマの都市伝説は、動物そのものと人間の恐怖が作る共同作品かも。あなたの地元にも、山へ入るなと言われた理由、残ってる？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "意外なのは、クマの恐怖が実害以上に広がる点だよ。出没情報を一度見るだけで、通学路を変える人が増えるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "心理学では利用可能性ヒューリスティック、思い出しやすい事故ほど頻発していると感じる偏りだ。映像が強烈だと不安も膨らむ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり一頭の目撃でも、頭の中では町全体が包囲されたように見えるわけね。足音のない夜ほど想像が先に走るんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかもクマは嗅覚が非常に鋭いとされ、食べ物の匂いが接近の原因になる。恐怖の正体は森より玄関先の管理かもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、クマを見た人の全員が襲われるわけじゃない。でも『見た』という体験だけで睡眠や外出判断は大きく変わる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "人は制御できない危険を過大評価しやすい。車より遭遇率が低くても、獣の予測不能さが不安を何倍にも見せるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "昔話のクマは山の主や怪物として描かれがちで、現代のニュース映像とも結び付く。古い恐れがスマホで再点火する感じね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "目撃情報が連続すると、実数以上に増えたと感じる社会的増幅も起きる。近所の会話が警戒を共有し、警戒をさらに強める。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ただし警戒そのものは悪くないよ。鈴や食料管理より先に、地域の公式情報を確認するだけでも、噂に振り回されにくくなる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "クマが怖いのは牙だけじゃなく、見えない場所にいる想像の力かもな。あなたの町で広がったクマの噂、コメントで教えてくれ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日からの基本は、山際の散歩でイヤホンを外すこと。クマは人の存在を早く察知すれば避けやすく、音は自分の安心にもなるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただし熊鈴を鳴らせば万能、は都市伝説寄りだぞ。風向きや沢音で届きにくいから、見通しの悪い場所では声も足していこう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、怖さで走り出す行動が危険を増やすこと！遭遇時の合言葉は止まる・目を離さず・ゆっくり下がる、まずこれ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "心理学でいう正常性バイアスは、危険を見ても『たぶん平気』と思う癖のこと。黒い影を犬だと決めつけず、距離を取ろう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "玄関前の生ゴミやペットフードを夜に置かないのも実践策。食べ物の成功体験は、クマに人家へ寄る理由を覚えさせやすいんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "旅行先では自治体の出没情報を出発前に確認しよう。地図で危険地点を先に知るだけで、焦りによる判断ミスを減らしやすいぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "子ども連れなら『見つけたら近づかず大人を呼ぶ』をゲーム感覚で練習。好奇心で撮影に寄るより、報告役がいちばんかっこいい！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "クマ対策は恐怖を煽るより、手順を決めるのがコツだ。鈴、情報確認、食べ物管理の三つを出発前チェックにしておこう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "もし山道で黒い背中らしきものを見たら、あなたは鈴を鳴らす？静かに離れる？正解は状況次第、コメントで作戦をあげてけ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "クマの都市伝説は、森の怪物という印象が恐怖を増幅し、遭遇前から人の判断を鈍らせる点が怖いんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "足音や物音をクマだと思い込むと、脳は危険を優先して見る心理が働く。闇の山道ほど噂が本物らしくなるぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でも驚きはここから、都市伝説を笑って広める行為も、地域の不安を共有して備えを促す合図になることがあるよ。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり大事なのは怪談の結末より、公式情報を確かめて距離を取ること。怖さを知識に変えるのが生存ルートだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回は『くだらないけど山で遭遇したら詰むものあげてけ』スレを実況するよ。笑える回答ほど現実味が刺さるかも。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回もゆっくり2chスレまとめ劇場らしく、住民の珍回答と妙に役立つ体験談を拾って、コメント参加型で遊ぶぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "怖かった、笑った、うちの近所にもありそうと思ったら高評価と登録をお願い！あなたのクマ伝説もコメントで教えてね。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "クマの噂",
+      "脳内が暴走"
+    ],
+    "hook_caption": "遭遇歴0回",
+    "subtitle": "見てないのに怖い草",
+    "tagline": "山道で始まる脳内会議"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": false,
+      "original_hook": "ワイ、クマ遭遇歴0回やけど質問ある？",
+      "selected_hook": "ワイ、クマ遭遇歴0回やけど質問ある？",
+      "scores": [
+        {
+          "hook": "ワイ、クマ遭遇歴0回やけど質問ある？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 25,
+            "loop_connect": 5
+          },
+          "total": 65
+        },
+        {
+          "hook": "え、クマの恐怖って正体より妄想がヤバいん？",
+          "scores": {
+            "curiosity_gap": 20,
+            "brevity": 15,
+            "emotional_trigger": 15,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 65
+        },
+        {
+          "hook": "お前ら、クマより想像が先走る夜ない？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        }
+      ],
+      "reason": "original_is_best"
+    },
+    "swipe_stop": {
+      "modified": true,
+      "injections": 1,
+      "dead_zones": [
+        3
+      ],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "ワイ、クマ遭遇歴0回やけど質問ある？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ 熊注意の看板を3枚見ただけやろw",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "夜道の黒い袋まで熊に見えるらしい草",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "脳内熊だけ月30回出勤しとるやんw",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "つまり正体は想像が先に走る話やったんや",
+          "tension": 1,
+          "is_dead": true
+        },
+        {
+          "index": 5,
+          "text": "熊に見えた物もコメントで頼むわw 高評価とチャンネル登録で1万人目標、質問ある？シリーズも毎日投稿中",
+          "tension": 5,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "share",
+      "style_label": "共有",
+      "original_cta": "熊に見えた物もコメントで頼むわw 高評価とチャンネル登録で1万人目標、質問ある？シリーズも毎日投稿中やで",
+      "new_cta": "質問ある？シリーズ、草生えたら高評価なw これ面白かったら共有してくれw 再生数で生活してるんだわw"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 25,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 3,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 76,
+      "optimized_score": 76,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.11,
+      "issues": [
+        "50%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": " 再生数で生活してるんだわw。…ちょ待て、>>1に戻ってみろ",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 1,
+      "changes": [
+        "「話」→「ドン引きする話」"
+      ],
+      "lines_modified": 1
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.582,
+      "similar_to": "ワイ、推し寿司歴3年やけど質問ある？w",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 40,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "ワイのクマ恐怖の本当の理由",
+      "enhanced_title": "🤯ワイのクマ恐怖の本当の理由😨",
+      "emoji_added": "😨",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "🤯ワイのクマ恐怖の本当の理由😨"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 3,
+      "bait_text": "これ男が悪い派と女が悪い派でコメ欄割れそうｗｗｗ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "positive",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "statement",
+        "laugh",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "常連ニキならこのノリわかるよなｗ",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 2,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 1.0
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['だけ'](+12)",
+      "好奇心ギャップ['？'](+12)"
+    ],
+    "rejected_title": "🤯ワイのクマ恐怖の本当の理由😨",
+    "attempts": 1
+  },
+  "original_title": "🤯ワイのクマ恐怖の本当の理由😨",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "クマ遭遇0回なのに恐怖だけ月30回…脳内で何が起きてる？"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

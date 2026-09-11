@@ -275,6 +275,34 @@
       "data_date": "2026-09-08",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-05 まで。OAuth失効4ch(clip-animal/socio-rx/fake-paper/akashic-librarian)は数値取得不可。",
       "source": "data/reports/2026-09-08/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": 68,
+      "total_views": 183684,
+      "videos": 209,
+      "subs_per_1000": 0.3875,
+      "stale_since": "2026-09-08",
+      "top40_views_sum": 47396,
+      "top_video": "録音の声が違う？それは骨伝導が原因！#録音した声が別人に聞こえる理由、実は骨伝導(1519)",
+      "impression_weighted_ctr_pct": 1.71,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": 68,
+      "subs_per_1000": 0.522,
+      "mature_n": 32,
+      "mature_views": 26818,
+      "median_views": 871.5,
+      "avg_view_percentage": 42.9,
+      "impression_weighted_ctr_pct": 1.46,
+      "theme_queue_len": 19,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "scp-lab": [
@@ -552,6 +580,34 @@
       "data_date": "2026-09-08",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-05 まで。OAuth失効4ch(clip-animal/socio-rx/fake-paper/akashic-librarian)は数値取得不可。",
       "source": "data/reports/2026-09-08/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": 161,
+      "total_views": 150735,
+      "videos": 188,
+      "subs_per_1000": 0.7021,
+      "stale_since": "2026-09-08",
+      "top40_views_sum": 45194,
+      "top_video": "一口SCP：2019年11月3日深夜0時、全サイトで同時に、人類殲滅プロトコルが(1414)",
+      "impression_weighted_ctr_pct": 0.8,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": 161,
+      "subs_per_1000": 0.7728,
+      "mature_n": 39,
+      "mature_views": 29763,
+      "median_views": 942,
+      "avg_view_percentage": 37.9,
+      "impression_weighted_ctr_pct": 1.3,
+      "theme_queue_len": 15,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "pokemon-lab": [
@@ -824,6 +880,34 @@
       "data_date": "2026-09-08",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-05 まで。OAuth失効4ch(clip-animal/socio-rx/fake-paper/akashic-librarian)は数値取得不可。",
       "source": "data/reports/2026-09-08/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": 16,
+      "total_views": 48828,
+      "videos": 55,
+      "subs_per_1000": 0.2738,
+      "stale_since": "2026-09-08",
+      "top40_views_sum": 33971,
+      "top_video": "バンギラスとメタグロス、どっちが勝つ？600族対決は持ち物1つで逆転する【ショー(1971)",
+      "impression_weighted_ctr_pct": 0.81,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": 16,
+      "subs_per_1000": 0.2398,
+      "mature_n": 28,
+      "mature_views": 29197,
+      "median_views": 1000.0,
+      "avg_view_percentage": 40.9,
+      "impression_weighted_ctr_pct": 0.69,
+      "theme_queue_len": 20,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "yokai-watch": [
@@ -1096,6 +1180,34 @@
       "data_date": "2026-09-08",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-05 まで。OAuth失効4ch(clip-animal/socio-rx/fake-paper/akashic-librarian)は数値取得不可。",
       "source": "data/reports/2026-09-08/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": 26,
+      "total_views": 42501,
+      "videos": 53,
+      "subs_per_1000": 0.4845,
+      "stale_since": "2026-09-08",
+      "top40_views_sum": 32434,
+      "top_video": "鬼の元ネタが怖すぎる — 鬼門から来る者を家に入れてはいけない理由【ショート】(2347)",
+      "impression_weighted_ctr_pct": 1.35,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": 26,
+      "subs_per_1000": 0.4092,
+      "mature_n": 28,
+      "mature_views": 26883,
+      "median_views": 978.0,
+      "avg_view_percentage": 41.1,
+      "impression_weighted_ctr_pct": 1.39,
+      "theme_queue_len": 40,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "2ch-matome": [
@@ -1368,6 +1480,34 @@
       "data_date": "2026-09-08",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-05 まで。OAuth失効4ch(clip-animal/socio-rx/fake-paper/akashic-librarian)は数値取得不可。",
       "source": "data/reports/2026-09-08/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": 9,
+      "total_views": 34631,
+      "videos": 50,
+      "subs_per_1000": 0.197,
+      "stale_since": "2026-09-08",
+      "top40_views_sum": 40280,
+      "top_video": "PCパーツ到着時、なぜ箱だけ先に届くのか？【ショート】(1814)",
+      "impression_weighted_ctr_pct": 1.57,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": 9,
+      "subs_per_1000": 0.2147,
+      "mature_n": 38,
+      "mature_views": 37262,
+      "median_views": 967.5,
+      "avg_view_percentage": 49.9,
+      "impression_weighted_ctr_pct": 2.08,
+      "theme_queue_len": 24,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "company-facts": [
@@ -1463,6 +1603,34 @@
       "data_date": "2026-09-08",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-05 まで。OAuth失効4ch(clip-animal/socio-rx/fake-paper/akashic-librarian)は数値取得不可。",
       "source": "data/reports/2026-09-08/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": 32,
+      "total_views": 37494,
+      "videos": 42,
+      "subs_per_1000": 0.6574,
+      "stale_since": "2026-09-08",
+      "top40_views_sum": 44773,
+      "top_video": "💰アジア大会の裏方企業、年収932万円の実態💰【ショート】(5204)",
+      "impression_weighted_ctr_pct": 1.92,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": 32,
+      "subs_per_1000": 0.7161,
+      "mature_n": 29,
+      "mature_views": 40495,
+      "median_views": 1198,
+      "avg_view_percentage": 57.0,
+      "impression_weighted_ctr_pct": 2.62,
+      "theme_queue_len": 24,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "clip-lab": [
@@ -1558,6 +1726,34 @@
       "data_date": "2026-09-08",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-05 まで。OAuth失効4ch(clip-animal/socio-rx/fake-paper/akashic-librarian)は数値取得不可。",
       "source": "data/reports/2026-09-08/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": 3,
+      "total_views": 29113,
+      "videos": 18,
+      "subs_per_1000": 0.0162,
+      "stale_since": "2026-09-08",
+      "top40_views_sum": 42321,
+      "top_video": "SNSをやる人は天才じゃない #shorts #切り抜き(12733)",
+      "impression_weighted_ctr_pct": 2.28,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": 3,
+      "subs_per_1000": 0.0,
+      "mature_n": 10,
+      "mature_views": 33283,
+      "median_views": 1231.0,
+      "avg_view_percentage": 56.5,
+      "impression_weighted_ctr_pct": 2.69,
+      "theme_queue_len": 33,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "fake-paper": [
@@ -1706,6 +1902,34 @@
       "top_video": "架空論文ファイル #3：PS5 Proは反応を0.18秒縮める — 768人を28日追跡した結果【ショート】(1166)",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-04 まで。",
       "source": "data/reports/2026-09-07/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": null,
+      "total_views": null,
+      "videos": null,
+      "subs_per_1000": 0.0,
+      "stale_since": null,
+      "top40_views_sum": 7047,
+      "top_video": "架空論文ファイル #3：PS5 Proは反応を0.18秒縮める — 768人を2(1166)",
+      "impression_weighted_ctr_pct": 3.45,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": null,
+      "subs_per_1000": 0.0,
+      "mature_n": 10,
+      "mature_views": 7047,
+      "median_views": 754.5,
+      "avg_view_percentage": 42.7,
+      "impression_weighted_ctr_pct": 0.0,
+      "theme_queue_len": 15,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "clip-fukada": [
@@ -1776,6 +2000,34 @@
       "data_date": "2026-09-08",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-05 まで。OAuth失効4ch(clip-animal/socio-rx/fake-paper/akashic-librarian)は数値取得不可。",
       "source": "data/reports/2026-09-08/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": 9,
+      "total_views": 21549,
+      "videos": 13,
+      "subs_per_1000": 0.4307,
+      "stale_since": "2026-09-08",
+      "top40_views_sum": 23704,
+      "top_video": "“時間停止”で使うスタジオ #shorts #切り抜き(15985)",
+      "impression_weighted_ctr_pct": 5.65,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": 9,
+      "subs_per_1000": 0.1861,
+      "mature_n": 5,
+      "mature_views": 21494,
+      "median_views": 229,
+      "avg_view_percentage": 72.4,
+      "impression_weighted_ctr_pct": 4.31,
+      "theme_queue_len": 32,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "clip-kaneko": [
@@ -1846,6 +2098,34 @@
       "data_date": "2026-09-08",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-05 まで。OAuth失効4ch(clip-animal/socio-rx/fake-paper/akashic-librarian)は数値取得不可。",
       "source": "data/reports/2026-09-08/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": 5,
+      "total_views": 18385,
+      "videos": 30,
+      "subs_per_1000": 0.1453,
+      "stale_since": "2026-09-08",
+      "top40_views_sum": 23682,
+      "top_video": "夏のデート感を詰め込んだ一冊 #shorts #切り抜き(1443)",
+      "impression_weighted_ctr_pct": 2.24,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": 5,
+      "subs_per_1000": 0.1762,
+      "mature_n": 22,
+      "mature_views": 22702,
+      "median_views": 1132.0,
+      "avg_view_percentage": 43.6,
+      "impression_weighted_ctr_pct": 3.25,
+      "theme_queue_len": 38,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "akashic-librarian": [
@@ -1904,6 +2184,34 @@
       "top_video": "なぜ移籍した選手だけ？昨日までの英雄が急に裏切り者になる理由 #shorts #社会学 #人間心理(1176)",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-04 まで。",
       "source": "data/reports/2026-09-07/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": null,
+      "total_views": null,
+      "videos": null,
+      "subs_per_1000": 0.0,
+      "stale_since": null,
+      "top40_views_sum": 5259,
+      "top_video": "なぜ移籍した選手だけ？昨日までの英雄が急に裏切り者になる理由 #shorts #(1176)",
+      "impression_weighted_ctr_pct": null,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": null,
+      "subs_per_1000": 0.5705,
+      "mature_n": 8,
+      "mature_views": 5259,
+      "median_views": 765.5,
+      "avg_view_percentage": 63.5,
+      "impression_weighted_ctr_pct": 4.26,
+      "theme_queue_len": 16,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "clip-animal": [
@@ -1962,6 +2270,34 @@
       "top_video": "「キスして、愛してる」 と歌う猫 #shorts #動物(17)",
       "note": "夜間実行。total_views は Data API の遅延値。Analytics 確定日次は 09-04 まで。",
       "source": "data/reports/2026-09-07/*.json"
+    },
+    {
+      "date": "2026-09-10",
+      "data_date": "2026-09-10",
+      "subscribers": null,
+      "total_views": null,
+      "videos": null,
+      "subs_per_1000": 0.0,
+      "stale_since": null,
+      "top40_views_sum": 17,
+      "top_video": "「キスして、愛してる」 と歌う猫 #shorts #動物(17)",
+      "impression_weighted_ctr_pct": null,
+      "note": "OAuth13ch全失効のため subscribers/channel_stats は取得不能。登録者・総再生は 09-08 の最終実測値を据え置き（stale）。top40再生合計とCTRは本日のレポート実測。",
+      "source": "data/reports/2026-09-10/*.json"
+    },
+    {
+      "date": "2026-09-11",
+      "data_date": "2026-09-08",
+      "subscribers": null,
+      "subs_per_1000": 0.0,
+      "mature_n": 1,
+      "mature_views": 17,
+      "median_views": 17,
+      "avg_view_percentage": 20.2,
+      "impression_weighted_ctr_pct": 3.61,
+      "theme_queue_len": 14,
+      "stale_since": "2026-09-08",
+      "note": "OAuth13ch全失効が継続。登録者数は 09-08 実測の据え置き。subs_per_1000 は成熟コホート(公開08-10〜09-04)で再計算した値。"
     }
   ],
   "_all_channels_analytics_daily": [

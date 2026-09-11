@@ -1114,6 +1114,91 @@
       "date": "2026-09-08n",
       "id": "scheduled-status-never-flips-to-published",
       "note": "【計測・DBの信頼性】video_publish.db では ゆっくり系8chが軒並み status='scheduled' のまま（scp-lab 20件/daily-science 30件など、最終published は 08-31〜09-03）。一方 Data API の本数は daily-science 206→209 のように毎日+3で増えており、YouTube側の予約公開は正常に動いている。つまり公開停止ではなくDBのステータス更新漏れ。clip系（即時公開）だけが published に遷移している。『最終公開日』をこのDBから読むと5日前と誤読するので、本数はData API側を正とする。"
+    },
+    {
+      "date": "2026-09-10",
+      "id": "oauth-full-fleet-revocation-as-predicted",
+      "note": "【障害・最重要・予告的中】09-07nの oauth-revocation-rotates-between-two-groups で『09-10に再発予告』とした通り本日再発。ただし規模が予測を超え、2グループが同時失効して13ch全滅（09-10 22:30 sync で全chが invalid_grant）。これにより 登録者/1000再生 と channel_stats が2日連続で取得不能（subscribers.daily は09-05で凍結、current_total=null）。同意画面がテスト公開のままである限り7日ごとに必ず起きる。"
+    },
+    {
+      "date": "2026-09-10",
+      "id": "publish-collapse-40-plus-videos-stuck",
+      "note": "【障害・OAuth失効の二次被害・実害最大】video_publish.db の日次公開数が 09-05:33 / 09-06:30 / 09-07:27 / 09-08:21 から 09-09:2 / 09-10:2 へ崩落(-93%)。一方 job_queue の生成完了は 09-09:2本(ほぼ停止)の反動で 09-10:44本(うち失敗2)が20:37〜21:43に集中。つまり40本超が生成済み・未公開のまま滞留している。09-01/09-02 の publish-halted-9-videos-lost と同型で、規模は4倍以上。再認可した瞬間に一括公開されるため、投稿間隔の暴発にも注意。"
+    },
+    {
+      "date": "2026-09-10",
+      "id": "ab-test-always-picks-question-variant",
+      "note": "【仕組みの欠陥・CTR改善が1件も回っていない】data/ab_tests を全数確認したところ、毎回 question/number/surprise の3案を生成しているが全案 score=0.0。ab_test_generator.py:361 の max(scored, key=score) が同点で先頭を返すため best は常に question。直近87件(09-10分)・reconciled 1005件すべて pattern_type='question' で、number/surprise は一度も本番投入されていない。原因は採点が claude_client(ANTHROPIC_API_KEY)依存で未設定のまま静かに0点を返すこと(claude_used=False / openai_used=True)。A/Bテストは動いているように見えて実質無効。"
+    },
+    {
+      "date": "2026-09-10",
+      "id": "theme-blacklist-blocks-top-performers-both-channels",
+      "note": "【自傷の発見・09-07 yokai と同型で規模はより大きい】再生上位40本を実測。scp-lab: SCP-173 が12本(30%)、定型語『視線を外/目を離』が計7本、『17名/17年間/担当者17』が計8本を占め全て1010〜1326再生(ch平均563の約2倍)。daily-science: 『録音』12本・『自分の声』10本・『骨伝導』4本が1081〜1519再生(ch平均524の2.1〜2.9倍)。いずれも重複を理由に theme_blacklist に入っており、両chとも最強フォーマットを自分で封じていた。上位40本に0本の語(かまいたち/悪夢の回路/星空/しゃっくり等)は勝ち筋の根拠がないため維持。"
+    },
+    {
+      "date": "2026-09-10",
+      "id": "scp-lab-ctr-lowest-in-fleet-082pct",
+      "note": "【数値・ボトルネックの特定】ab_reconciliation の実測CTR(インプレッション加重・全ch1005件)は clip-fukada 5.65% > fake-paper 3.45% > clip-lab 2.28% > clip-kaneko 2.24% > company-facts 1.92% > daily-science 1.71% > 2ch-matome 1.57% > yokai-watch 1.35% > pokemon-lab 0.81% > scp-lab 0.80% で scp-lab が最下位。scp-lab は登録/1k 0.70(全ch最上位)・登録者161人(最多)＝見られれば登録される。CTRだけが唯一のボトルネックで、サムネ改善の投資対効果が最も高い。次点の pokemon-lab 0.81% も同じ中央カード型サムネを使っている。"
+    },
+    {
+      "date": "2026-09-10",
+      "id": "ctr-declines-with-video-recency",
+      "note": "【数値・仮説】インプレッション加重CTRを動画年齢別に見ると daily-science 30日+2.39% → 14-30日1.27% → 7-14日1.31%、yokai-watch 1.58% → 1.29% → 0.64% と新しい動画ほど低い。通常は新作の方がCTRが高いので逆行。新サムネテンプレ(中央イラストカード型)の導入が原因の可能性。ただし旧作は関連動画流入が積み上がる分CTRが高く出る交絡があるため断定不可。同一テンプレ内で新旧比較できるまで仮説として保持。"
+    },
+    {
+      "date": "2026-09-10",
+      "id": "publish-status-db-stuck-issue-resolved",
+      "note": "【解消】09-08n の scheduled-status-never-flips-to-published は解消。video_status の136行が 09-09 01:17 に一括で published へ更新され、以降は公開のたびに正しく published が入るようになった。今後この観点での再報告は不要。"
+    },
+    {
+      "date": "2026-09-11",
+      "id": "oauth-all-channels-invalid-grant-continues",
+      "note": "【継続・最重要】全13chの OAuth refresh が invalid_grant のまま。09-11 も 06:45〜09:30 に全ch autopilot は発火して生成は成功しているが、アップロードは全滅。video_publish.db の日次公開本数は 09-05:33 / 09-06:30 / 09-07:27 / 09-08:21 に対し 09-09:2 / 09-10:2 / 09-11:0。管理UIからの再認可が済むまで、登録者数に関するいかなる施策も効果を測れない。"
+    },
+    {
+      "date": "2026-09-11",
+      "id": "analytics-db-stale-since-0908",
+      "note": "analytics.db の最終 fetched_at は 2026-09-08 23:19 JST。video_metrics は date<=09-08、channel_metrics は date<=09-05 まで。OAuth 失効により Analytics 取得も止まっている。09-09 以降の実測は存在しないので、以降の分析は成熟コホート(公開 08-10〜09-04)で行うこと。"
+    },
+    {
+      "date": "2026-09-11",
+      "id": "emoji-title-hurts-5of6-channels",
+      "note": "【新規・実測】タイトルの絵文字はch内対照で 5/6ch が悪化。登録/千再生は scp-lab 0.32(n=12) vs 0.98(n=27)、yokai-watch 0.19 vs 0.46、2ch-matome 0.00(n=9) vs 0.27(n=29)、company-facts 0.68 vs 0.78。daily-science(0.59 vs 0.47)と pokemon-lab(0.27 vs 0.22)はわずかに逆だが誤差圏。原因: title_rules.max_emoji=0 は backend(title_constraints.py)が読まないキーで、09-04〜09-08 も毎日1〜2本流出していた。09-11 に hard_constraints へ移設して解消。"
+    },
+    {
+      "date": "2026-09-11",
+      "id": "why-question-form-is-top-lever-4ch",
+      "note": "【実測・確度高】「なぜ〇〇なのか」型が4chで最大レバー。登録/千再生 scp-lab 1.45(n=11) vs 0.45(n=28)、yokai-watch 0.66(n=9) vs 0.20(n=19)、daily-science 0.56(n=28) vs 0.27(n=4)、2ch-matome 0.33(n=9) vs 0.18(n=29)。一方 09-08 に全chへ入れた『答え提示語』は単独では効果が出ていない(daily-science 0.44 vs 0.60 / scp-lab 0.68 vs 0.78 / yokai-watch 0.30 vs 0.52 / pokemon-lab 0.21 vs 0.25)。答え提示語は hard_constraints のゲートとして残しつつ、生成方針は『なぜ型』を第一候補にすること。"
+    },
+    {
+      "date": "2026-09-11",
+      "id": "pokemon-lab-is-the-inverse-channel",
+      "note": "【実測・重要】pokemon-lab だけ他5chと逆パターン。「なぜ」型 0.00(n=9) vs 非該当 0.37(n=19)。二人称(君/あなた) 0.45(n=10) vs なし 0.15(n=18)。上位4本は全て二人称入り。08-25 を境に 0.26→0.20 と6ch中唯一悪化し、到達CTR 0.69% も6ch最下位。今後 pokemon-lab に『なぜ型』を横展開してはならない。二人称＋対比(AとB、どっちが〜)が当chの型。"
+    },
+    {
+      "date": "2026-09-11",
+      "id": "retention-cliff-at-15-30pct",
+      "note": "【実測】維持率カーブ(n=252)の平均は 1%地点122.6% → 15%地点102.0% → 20%地点84.0% → 25%地点70.8% → 30%地点63.1%。崖は尺の 15〜30%（6行構成なら2行目終わり〜3行目）。落差が大きい順に fake-paper(89→46)・scp-lab(100→59)・daily-science(110→69)・yokai-watch(95→58)・2ch-matome(89→53)。company-facts(95→70)が最も浅く、70%地点53%・avp63%と6ch最良。改善は company-facts の構成を基準に考えること。"
+    },
+    {
+      "date": "2026-09-11",
+      "id": "theme-queue-54-items-failed-gate",
+      "note": "【新規】theme_queue 142本のうち54本が title_rules.hard_constraints を通らない状態だった(scp-lab 11/15・yokai-watch 25/40・company-facts 16/24・2ch-matome 2/24)。この状態だと backend の repair() が語尾に『の正体』等を機械追加し、①日本語が痩せる ②全chが同じ語に収斂する(09-09 の警告事象)。09-11 に54本を実測型で書き直し全ch NG 0 に。今後キューを補充したら必ず backend.pipeline.title_constraints.check() で事前検証すること。"
+    },
+    {
+      "date": "2026-09-11",
+      "id": "orchestrator-cannot-reach-backend",
+      "note": "【運用制約】指揮者のサンドボックスから localhost:8000 へは到達できない(プロキシが403)。Phase 4 の curl トリガは実行不可。ただし backend の APScheduler が各ch 1日3枠で自動発火しており(09-11 は 6ch すべて 06:45〜08:45 に発火済)、二重起動を避けるため指揮者からのトリガは原則不要。手動実行が要る場合は scripts/trigger_autopilot_20260911.command を Mac 側で実行する。"
+    },
+    {
+      "date": "2026-09-11",
+      "id": "xlsx-recalc-must-run-on-tmp",
+      "note": "【運用メモ】LibreOffice(recalc.py)をマウント上の reports/ で直接走らせるとタイムアウト/強制終了する。/tmp にコピーしてから recalc し、書き戻すこと。"
+    },
+    {
+      "date": "2026-09-11",
+      "id": "daily-science-blacklist-vs-dedup-test-conflict",
+      "note": "【要対応・次サイクル】backend/tests/test_fixes_20260909.py の TestDailyScienceBlacklist.test_no_regression_in_duplicate_prevention が失敗している(09-11 以前からの既存失敗)。09-09 に daily-science の theme_blacklist から『録音』等の広域語を外した結果、過去の『あくび』『骨伝導/録音』系8タイトルを重複判定できなくなった。一方 09-10 のメモでは再生上位40本のうち『録音』が12本(30%)を占めるため領域ごと塞ぐのは不可という判断。解は『領域語の復活』ではなく、フレーズ単位(例: 自分の声＋録音、あくび＋うつる)の狭いパターンを theme_blacklist に足すこと。次サイクルで実装する。"
     }
   ]
 }

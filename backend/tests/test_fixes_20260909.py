@@ -276,8 +276,15 @@ class TestRequireAnyOfChannelConfig(unittest.TestCase):
             for s in samples:
                 with self.subTest(cid=cid, s=s):
                     out = tc.repair(s, raw)
-                    self.assertTrue(tc.check(out, raw)["ok"],
-                                    f"{cid}: {s!r} → {out!r} が未解消")
+                    # 2026-09-11: min_effective_chars（実効長の下限）は repair が
+                    # 原理的に直せない規則なので除外する。文字を足す修復は意味の
+                    # ない水増しになるため、検査と再生成 advice だけに留めてある。
+                    # ここで見たいのは「答え提示語を足した結果、他の規則を新たに
+                    # 破っていないか」なので、元から短い samples の長さ不足は対象外。
+                    left = [v for v in tc.check(out, raw)["violations"]
+                            if v["rule"] not in tc.UNREPAIRABLE_RULES]
+                    self.assertEqual(left, [],
+                                     f"{cid}: {s!r} → {out!r} が未解消")
                     self.assertFalse(tc._is_broken_japanese(out, s), out)
 
 

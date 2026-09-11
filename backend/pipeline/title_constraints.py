@@ -26,11 +26,28 @@
           "words": ["理由", "正体", "本当の"],   // どれか1つを含むこと
           "repair_with": ["正体", "理由"]        // 機械修復で語尾に足す候補（名詞のみ）
         },
-        "max_chars": 48
+        "max_chars": 48,
+        "min_effective_chars": 20        // ハッシュタグ・【】を除いた実効長の下限
       }
     }
 
     未設定のチャンネルは検査なし（挙動不変）。
+
+`min_effective_chars` について（2026-09-11）:
+    09-08 スナップショット n=330（views>0・全12ch）を実効文字数で刻むと、
+    登録/千再生 は 0-14字 0.242 / 15-19字 0.279 / 20-24字 0.400 /
+    **25-29字 0.637** / 30字以上 0.355 だった。短すぎるタイトルが最も弱く、
+    25〜29字が頂点の逆U字。`title_rules.min_effective_chars_target` に
+    自然文で書いてあった「実質20字以上」は backend が読まないため
+    1本も効いていなかった（実測: 全330本中 112本＝34% が20字未満）。
+
+    実効長は「ハッシュタグ（#〜）と【〜】を除いた残り」で数える。
+    `#shorts #SCP #SCP解説` のような固定タグは全本に付くので、
+    素の len() だと短いタイトルが長く見えてしまう。
+
+    **機械修復はしない**（`repair` は触らない）。文字を足す修復は意味の
+    ない水増しになるため、検査と advice（再生成）だけに留める。再生成2回で
+    通らなければ違反として記録したまま公開される（呼び出し側の既存挙動）。
 
 `require_any_of` について（2026-09-09）:
     09-08 の指揮者が `title_rules.require_answer_marker` に書いた「答え提示語を
@@ -99,6 +116,11 @@ _REASON_WORDS = ("理由", "正体", "真実", "からくり", "仕組み", "裏
 # 真なら「の」を挟まずに名詞を繋げる。
 _RENTAI_TAIL_RE = re.compile(r"(?:[うくぐすつぬぶむる]|い|た|だ|ない|ている|てる)$")
 
+# 実効長の計算で落とすもの: ハッシュタグ（#shorts 等）と【】ブロック（【ショート】等）。
+# どちらも全本に機械的に付くため、素の len() では短いタイトルが長く見えてしまう。
+_HASHTAG_RE = re.compile(r"[#＃]\S+")
+_BRACKET_RE = re.compile(r"【[^】]*】")
+
 _WS_RE = re.compile(r"[ 　]{2,}")
 _PUNCT_DUP_RE = re.compile(r"[、，,]{2,}")
 
@@ -116,6 +138,26 @@ def constraints_of(channel_dict: Optional[Dict[str, Any]]) -> Dict[str, Any]:
 
 def is_enforced(channel_dict: Optional[Dict[str, Any]]) -> bool:
     return bool(constraints_of(channel_dict))
+
+
+# `repair()` が原理的に直せない規則（2026-09-11）。
+#
+# 文字数の**下限**は機械的に埋められない。埋めれば意味のない水増しになるので、
+# min_effective_chars は検査と advice（LLM 再生成）だけに留めてある。
+# 「repair の出力が全制約を満たすか」「キューの題材が制約を満たすか」を見る
+# テストは、この集合を除外して判定すること（題材は最終タイトルではないため、
+# 20字下限を題材に課すのは意味が無い — require_any_of と同じ理由）。
+UNREPAIRABLE_RULES = frozenset({"min_effective_chars"})
+
+
+def effective_len(title: str) -> int:
+    """ハッシュタグと【】ブロックを除いたタイトルの実効文字数。
+
+    2026-09-11 追加。`min_effective_chars` の判定に使う。
+    """
+    t = _BRACKET_RE.sub("", title or "")
+    t = _HASHTAG_RE.sub("", t)
+    return len(t.strip())
 
 
 def _require_any_of(hc: Dict[str, Any]) -> Optional[Tuple[str, List[str], List[str]]]:
@@ -233,6 +275,23 @@ def check(title: str, channel_dict: Optional[Dict[str, Any]] = None) -> Dict[str
         violations.append({"rule": "max_chars", "label": f"{max_chars}文字以内",
                            "detail": str(len(t))})
         advice.append(f"{max_chars}文字以内に収めること（今 {len(t)} 文字）。")
+
+    # 短すぎるタイトルの下限（2026-09-11 追加）。ハッシュタグ・【】を除いた実効長で見る。
+    try:
+        min_eff = int(hc.get("min_effective_chars"))
+    except (TypeError, ValueError):
+        min_eff = 0
+    if min_eff > 0:
+        eff = effective_len(t)
+        if eff < min_eff:
+            violations.append({"rule": "min_effective_chars",
+                               "label": f"実質{min_eff}文字以上",
+                               "detail": str(eff),
+                               "repairable": False})
+            advice.append(
+                f"ハッシュタグと【】を除いた本文が {min_eff} 文字以上になるまで書くこと"
+                f"（今 {eff} 文字）。水増しではなく、具体名・数字・答えの手がかりを"
+                f"1つ足して情報量を増やす。25〜29文字が最も登録に繋がる。")
 
     return {"ok": not violations, "violations": violations, "advice": advice}
 
@@ -408,7 +467,14 @@ def repair(title: str, channel_dict: Optional[Dict[str, Any]] = None) -> str:
                     continue
                 sub = check(cand, channel_dict)
                 # 追加した語自体が他の制約（禁止語・数字・パターン）に触れたら次の候補へ。
-                if sub["ok"] or all(v["rule"] == "require_any_of" for v in sub["violations"]):
+                #
+                # 2026-09-11: 許容する規則に UNREPAIRABLE_RULES を足した。
+                # min_effective_chars（実効長の下限）を入れた直後、語を足した候補が
+                # 「まだ20字に届かない」だけで棄却され、repair が原文を返すように
+                # なっていた（＝答え提示語の修復が全chで死んだ）。長さ不足は語を
+                # 足しても解消しないので、ここで候補を棄却する理由にはならない。
+                _ignorable = {"require_any_of"} | set(UNREPAIRABLE_RULES)
+                if sub["ok"] or all(v["rule"] in _ignorable for v in sub["violations"]):
                     t = cand
                     break
 

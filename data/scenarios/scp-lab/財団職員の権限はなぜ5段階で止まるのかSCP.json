@@ -1,0 +1,559 @@
+{
+  "title": "財団職員の権限はなぜ5段階で止まるのか【SCP】",
+  "theme": {
+    "title": "財団の職員レベルが5段階で止まっている正体",
+    "angle": "セキュリティクリアランス1〜5。上限5という数字の意味"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたの部屋の鍵も、5段階目で止まる記録がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、職員記録は5段階しかなく、上の名簿がないのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閲覧権限は1から5まで。5へ届いた職員は47名いた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "学校の学年表みたいに見えても、47名の先だけ空白だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "5は頂点ではない。扉の前に置かれた番号だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この手の報告書、実は他にも未公開のものが山ほどある。"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高評価を残せ。財団の裏側シリーズには続きがある。毎日投稿中、1万人目標への応援としてチャンネル登録を頼む。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなた、財団の機密レベルがなぜ1から5で止まり、6も7もないのか考えたことありませんか？答えは階級の都合ではなく、5に到達した職員ほど真実から消える仕組みにあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今回はセキュリティクリアランス1〜5の正体を暴きます。最初に最強の事実を言うと、レベル5は出世の終点ではなく、財団の記録上で個人名すら不要になる領域です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "クリアランスとは、職務に必要な機密へ触れる許可証です。たとえばレベル1職員は清掃や事務を担えても、収容室の中身やSCP番号の全容までは原則として知りません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "一方でレベル5は、O5評議会に直結する最高機密です。驚くべき反転は、数字が上がるほど自由になるのではなく、知った情報の重さで外部との接触を失う可能性が増す点です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "なぜ上限が5なのか。その数字は五段階の能力評価ではなく、財団が組織を守るために設けた最後の扉を示します。扉の向こうでは、職員より機密そのものが優先されるのです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "これからレベル1の末端業務から、レベル5が扱う収容違反級の情報まで追います。5段しかない制度の底には、昇進では説明できない、財団が隠した生存率の計算が潜んでいます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "でもこれ、半分は間違いなんだ。財団の職員レベルが五段階で止まる理由は、単なる序列ではなく、知識そのものを隔離するための設計にある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "セキュリティクリアランスとは、職員が閲覧できる機密情報の範囲を示す鍵だ。レベル1なら備品記録、レベル5なら世界規模の収容計画まで触れられる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も重要なのは、レベル5職員でも全情報を知れるわけではない点だ。財団では最高権限者ですら、必要な断片だけを渡される原則が徹底されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "これは船の隔壁に似ている。一室が浸水しても扉を閉めれば船全体は沈まない。情報も同じで、漏洩した職員一人から組織全体を守る仕組みなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実際、収容違反では職員の知識が被害を拡大させる場合がある。怪異の本名、顔、手順を知っただけで影響を受ける対象なら、情報公開そのものが事故になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "そこで財団は権限を五つに区切り、最低限必要な情報だけを配る。警備員が知るべきなのは扉の開け方ではなく、異常時に扉を開けない命令だけというわけだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "レベル0は一般職員、1から2は現場担当、3は研究責任者、4は施設管理者、5は最高機密担当と考えると分かりやすい。ただし役職と権限は必ずしも一致しない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "たとえば博士でも、担当外のSCP報告書は黒塗りになる。研究能力よりも、知った情報が漏れた時の危険度で閲覧範囲を決めるのが財団流の安全管理だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり上限の5は、最上位という勲章ではない。誰か一人が全てを把握して破綻しないための天井であり、財団が最も恐れるのは怪異より情報の連鎖なのだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の職員レベルは単なる序列ではなく、情報への到達範囲を五層に分けた防壁だ。内部監査では漏洩事故の83％が境界の誤認から始まったと記録される。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "レベル1は清掃員や搬送員にも与えられる最低限の閲覧権限で、危険物の名称すら伏せられる。1998年の試験では、対象名を伏字にすると誤操作率が41％低下した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "レベル2になると収容手順の一部を読めるが、異常存在の由来や実験結果は原則非公開となる。担当者72人の模擬訓練では、背景情報を減らした班ほど指示遵守率が高かった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "レベル3は研究主任級で、個別オブジェクトの完全ファイルに触れられる境目だ。ただし閲覧記録は秒単位で残り、無関係な閲覧が3回続けば自動的に監査対象となる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで反転がある。最上位のレベル5は、すべてを知る資格ではない。過去25年の監査では、レベル5職員の92％が閲覧不能な「5以上」の記録を一度は確認している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "レベル4はサイト管理官や部門長向けで、収容違反時の隔離計画まで開示される。財団の演習データでは、指揮権を持つ職員を4層目に限定した場合、避難判断が平均17分短縮された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "五段階という上限は、権限を五人で分割するという意味ではない。心理実験では選択肢が六段階を超えると、緊急時の誤認率が28％増え、現場命令の復唱時間も延びた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "代表的な実験では、同一の収容違反映像を権限別に編集して提示した。レベル1班には警報のみ、レベル5班には被害予測を与えた結果、初動の速さは前者が19秒上回った。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり上位権限ほど迅速とは限らず、知識は判断を重くする。報告書には、詳細を知る管理職14人中9人が追加確認を要求し、その間に封鎖扉の閉鎖が遅れた事例もある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団が五で止めた理由は、最高権限者を万能に見せないためでもある。番号の外側にある記録は存在を否定され、職員は「レベル5が頂点」という安心だけを共有させられる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の権限が五段階で止まる理由は、便宜的な人事制度ではない。最初の五人の生存者が残した、封印手順そのものに由来するとされる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記録によれば1908年、前身組織は異常文書を閲覧した職員23名を失った。生還者は僅か5名で、全員が同じ数字を書き残していたんだ。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その数字は「5」。しかし階層の数を示したのではなく、情報に触れても自我を保てる認知的な限界値だったという解釈が、後に採用された。",
+      "expression": "thinking",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべきことに、当時の試験では六段階目を仮設した瞬間、被験職員12名中10名が自身の所属記録を消去し、残る2名も翌朝まで記憶を失った。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "セキュリティクリアランスとは、機密へ触れる許可の等級だ。例えばレベル1は現場補助員が使う範囲で、収容対象の正体までは知らされない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "逆にレベル5は、世界規模の収容計画と改変手順を読むための鍵になる。ただし最高権限者でさえ、全情報を安全に把握できるとは限らない。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1936年の再編で評議会は六段階案を正式に否決した。反対票を投じた人物の氏名は黒塗りだが、議事録には「五を越えるな」とだけ残る。",
+      "expression": "thinking",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここで反転がある。レベル5は頂点ではなく、むしろ人間が異常な真実を覗き込める最後の足場だった可能性が高いんだ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして古い保管庫には、存在しないはずの「Level 6」印章付き封筒が3通ある。開封記録は空白で、封印日だけが毎年同じ日に更新され続けている。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "意外ですが、財団のクリアランスは一から五で終わりではありません。五のさらに上には、番号では呼べない権限が隠されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最上位とされるレベル5は、全記録への無制限通行証ではないのです。O5評議会でさえ、必要な情報だけを分割されます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで反転です。職員を守るための五段階制度は、怪物から情報を隠すだけでなく、財団そのものから職員を隔離する檻でした。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "クリアランスとは機密へ触れる資格で、数字が高いほど閲覧範囲が広がります。例えばレベル1職員は、収容室の存在すら知らされません。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "レベル2になると、整備員や研究補助員は担当区画の報告書を読めます。ただし異常存在の正体や、他区画の事故記録は伏せられます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "レベル3は研究主任や現場指揮官の領域です。収容手順を知る代償として、違反時に何人死んだかという数字まで読むことになります。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "レベル4ではサイト全体の機密が開かれ、複数オブジェクトの関連性も追えます。それでもO5の命令理由は、黒塗りのままです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "五という上限は階級表の都合ではなく、人間が保持できる責任の限界を示す記号とも言われます。六を知る者は職員ではないのです。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも閲覧権限は永続ではありません。異動や記憶処理で昨日まで読めた報告書が消え、本人だけが欠落に気づかない例もあります。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり五段階の頂点に立っても、真実の外側へ出られる保証はない。財団が守るのは世界だけでなく、知りすぎた職員の正気でもあります。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日からは、扱う情報を五段階に仕分けてみよう。家計簿なら閲覧者を自分、家族、共有相手までと決めるだけで漏えいを減らせる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "レベル1は誰に見られても困らない公開情報だ。旅行先の写真でも、住所や乗車時刻を消せば安全度を一段上げられるぜ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "レベル2には知人限定の連絡先を置こう。SNSの誕生日公開は年だけでも、本人確認の材料を一つ渡す行為になるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "レベル3は家族や仕事仲間だけの情報にする。合鍵の保管場所を共有するなら、同じグループでも送信先を毎回確認だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで反転だよ。財団の上限が5なのは、五人しか知らないという意味ではなく、知る必要を段階化して事故を止める発想なんだ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "レベル4相当は、漏れた瞬間に生活が変わる情報だ。免許証番号や給与明細は、クラウド共有リンクを期限付きにして守ろうぜ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "レベル5相当は絶対秘匿ではなく、最小人数へ絞る最終層だよ。銀行の復旧コードは、写真保存せず紙に書いて鍵付きで保管しよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "実践は三十秒でできる。送信前に「これを十人へ転送されても平気か」と読み返すだけで、公開範囲の判断が速くなるぜ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに月1回、使っていない共有フォルダを閉じよう。財団式の五段階は恐怖の記号ではなく、日常の被害を小さくする整理術なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団のクリアランス1から5は、単なる出世の段ではありません。数字が上がるほど、知るだけで命を狙われる機密に近づくための防壁なのです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "レベル5は全情報への無制限な鍵ではなく、必要な破滅だけを閲覧する権限だぜ。O5評議会でさえ、記録の全頁を読めるとは限らない。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "驚くべき反転です。上限が5で止まるのは、6番目の権限が存在しないからではなく、人間の組織が責任を負える最後の数字だからかもしれません。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "低レベル職員は収容室の床を掃除しても、扉の向こうの名称すら知らない。情報は銃より静かに人を殺すため、財団は知識そのものを隔離するんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり5段階の壁は、怪物から世界を守る柵である前に、世界の真実から職員を守る防護服です。昇格とは栄誉ではなく、重い共犯への署名なのです。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次回はSCP-173を解説するよ。瞬きをした数秒だけで犠牲者が生まれる収容違反、その死者数と監視手順に潜む残酷な計算を追うぜ。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ゆっくり異常存在SCPラボでは、番号の奥に隠された被害記録をこれからも開封します。恐怖の報告書を見届けたい方は、高評価と登録をお願いします。",
+      "expression": "smile",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "5段階の壁",
+      "上へ行けない"
+    ],
+    "hook_caption": "5で止まる",
+    "subtitle": "職員記録に残る上限",
+    "tagline": "その先を知る者は記録から消える"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "この手の報告書、実は他にも未公開のものが山ほどある。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "高評価を残せ。財団の裏側シリーズには続きがある。毎日投稿中、1万人目標への応援と",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 19,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 7,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.62,
+      "similar_to": "SCP-3288 大雨の真相 あなたの部屋も沈む",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-005 職員5段階で止まる真相"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '財団'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-005 職員5段階で止まる真相",
+    "attempts": 1
+  },
+  "original_title": "SCP-005 職員5段階で止まる真相",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "なぜ財団職員の権限は5段階で止まるのか？47名の先にある記録【SCP】"
+  },
+  "cross_channel_keywords": {
+    "ok": false,
+    "blocked_keyword": "なぜ",
+    "rejected_title": "財団職員の権限が5段階で止まる理由【SCP】"
+  }
+}

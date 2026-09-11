@@ -537,7 +537,7 @@
           ]
         },
         {
-          "hour": 18,
+          "hour": 17,
           "minute": 45,
           "days_of_week": [
             0,
@@ -550,17 +550,13 @@
           ]
         }
       ],
-      "_times_comment": "2026-09-04: 試行回数を増やすため 1日 3 枠へ増設。枠の間隔は autopilot の burst guard（既定90分）を満たすこと。"
+      "_times_comment": "2026-09-04: 試行回数を増やすため 1日 3 枠へ増設。枠の間隔は autopilot の burst guard（既定90分）を満たすこと。",
+      "_times_comment_20260911_orch2": "['18:45'] を17時台へ移動。【2026-09-11 実測・投稿枠】09-08 スナップショット n=330 を投稿時刻(JST)別に集計すると 17時 0.590(n=51) / 19時 0.470(n=53) / 9時 0.219(n=50→UTC9時=18時JST) で、**18時JST枠が最大サンプルの中で最下位**（17時の1/2.7）。18時台の枠を17時台へ寄せる。ch別では scp-lab 19時 1.28(n=14) > 13時 0.70(n=7) > 9時 0.59(n=17)、yokai-watch 12時 1.04(n=10) > 19時 0.24(n=23)、company-facts 19時 0.93(n=5) ≒ 17時 0.86(n=12)。"
     },
     "duration_minutes": 1,
     "gen_type": "short",
     "publish_lead_minutes": 45,
     "theme_queue": [
-      {
-        "id": "86a8754081",
-        "title": "褒美を出した途端、なぜやる気が消えるのか、動機の置き換わり",
-        "angle": ""
-      },
       {
         "id": "56c12ecb0d",
         "title": "匿名になると、なぜ言葉が強くなるのか、責任の所在が薄まる場所",
@@ -720,5 +716,48 @@
     "chatgpt_thread_url": "https://chatgpt.com/c/6a9af6a9-acd0-83e8-a701-1b46b0d31624",
     "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
     "updated_at": "2026-09-05T15:09:08+00:00"
+  },
+  "title_rules": {
+    "hard_constraints": {
+      "min_effective_chars": 20,
+      "rationale_min_effective_chars_20260911": "【2026-09-11 実測】09-08 スナップショット n=330（views>0・全12ch）を実効文字数（ハッシュタグと【】を除いた本文）で刻むと、登録/千再生は 0-14字 0.242 / 15-19字 0.279 / 20-24字 0.400 / 25-29字 0.637 / 30字以上 0.355。短すぎる側が最も弱く、25〜29字が頂点の逆U字。20字未満は全330本中112本（34%）を占めていた。title_rules.min_effective_chars_target に自然文で書かれていた「実質20字以上」は backend が読まないため1本も効いていなかったので、本日 title_constraints.py に min_effective_chars を実装して hard_constraints へ移した。下限は20字、狙いは25〜29字。機械修復はしない（水増しになるため検査と再生成のみ）。",
+      "max_chars": 36,
+      "banned_words": [
+        "秘密"
+      ],
+      "forbid_patterns": [
+        {
+          "pattern": "[\\U0001F300-\\U0001FAFF☀-➿️]",
+          "label": "絵文字"
+        },
+        {
+          "pattern": "(?:9\\s*9|９\\s*９)\\s*[%％]",
+          "label": "99%が知らない型の希少性ワード"
+        }
+      ],
+      "require_any_of": {
+        "label": "答え提示語",
+        "words": [
+          "理由",
+          "正体",
+          "本当の",
+          "実は",
+          "わけ",
+          "なぜ",
+          "真相",
+          "裏側",
+          "実態"
+        ],
+        "repair_with": [
+          "正体",
+          "理由"
+        ]
+      }
+    },
+    "min_effective_chars_target": 25,
+    "min_effective_chars_migrated_to": "hard_constraints.min_effective_chars",
+    "updated_at": "2026-09-11",
+    "enforced_by_backend": true,
+    "rationale_20260911": "【2026-09-11】当chは登録/千再生 0.570（09-06 スナップショット・17本/5,259再生/登録3）で全11ch中3位なのに、hard_constraints が1つも設定されておらず機械ゲートが完全に無効だった。上位2本は「なぜ600年も読めない？存在しない植物だけが描かれた手稿」(1.71) と「三十八人が見ていて、誰も動かなかった夜」(0.95) で、いずれも疑問形または具体数字＋28字前後。既に他6chで実測済みの負け型（絵文字・「秘密」・99%型・答え提示語なし・短すぎる本文）を同じ形で塞ぐ。max_chars は当chの平均実効長26.5字に合わせて36。"
   }
 }

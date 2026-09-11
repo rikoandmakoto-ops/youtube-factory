@@ -1608,6 +1608,128 @@
       "before": "-",
       "after": "追加なし",
       "reason": "30%ルールで再判定。daily-science ch平均524→閾値157に対し最下位の『日常の違和感』は195で対象外（『宇宙・天体』は登録済）。scp-lab ch平均495→閾値148に対し『財団組織・職員』237は登録済、『対立組織・Kクラス』313はn=1。新規該当なし。"
+    },
+    {
+      "date": "2026-09-10",
+      "target": "data/channels/scp-lab.json",
+      "field": "theme_blacklist",
+      "before": 13,
+      "after": 6,
+      "removed": [
+        "SCP-173",
+        "視線を外",
+        "目を離",
+        "見るのをやめ",
+        "最初の異常存在",
+        "17名",
+        "17年間",
+        "担当者17"
+      ],
+      "added": [
+        "SCP-1983"
+      ],
+      "reason": "上位40本中 SCP-173が12本・定型語7本・17系8本を占め全て平均の約2倍。勝ち筋を自分で封じていたため解除。SCP-1983は3本存在し1205→1121→1066と逓減しているため追加。'17年間隠し'は定型句のため維持。"
+    },
+    {
+      "date": "2026-09-10",
+      "target": "data/channels/scp-lab.json",
+      "field": "theme_seeds",
+      "before": 23,
+      "after": 26,
+      "added": [
+        "SCP-682が何度殺しても適応する — 収容不可と判定された本当の理由",
+        "SCP-055、誰も形を思い出せない — 記録できない異常存在の正体",
+        "SCP-3999、研究員本人が物語に取り込まれた記録の真相"
+      ],
+      "reason": "ジャンル別で『SCP個別オブジェクト』avg563 が『財団組織・職員』avg237 の2.4倍。未使用の有名番号で個別オブジェクト路線を補充。"
+    },
+    {
+      "date": "2026-09-10",
+      "target": "data/channels/daily-science.json",
+      "field": "theme_blacklist",
+      "before": 16,
+      "after": 14,
+      "removed": [
+        "自分の声",
+        "あくび"
+      ],
+      "reason": "『自分の声』は上位40本中10本(1081〜1453再生)、『あくび』は1271再生でいずれもch平均524の2.1〜2.8倍。scp-labと同じ自傷パターンのため解除。"
+    },
+    {
+      "date": "2026-09-10",
+      "target": "data/channels/daily-science.json",
+      "field": "theme_seeds",
+      "before": 24,
+      "after": 26,
+      "added": [
+        "なぜ骨伝導だと自分の声だけ低く聞こえるのか — 録音とのズレの正体",
+        "なぜイヤホンを外した直後だけ自分の声が響くのか"
+      ],
+      "reason": "『録音・骨伝導・自分の声』系が上位40本の30%を占め当ch最強フォーマット。解除に合わせて同系統を投入。"
+    },
+    {
+      "date": "2026-09-10",
+      "target": "(判定のみ)",
+      "field": "genre_blacklist",
+      "before": "-",
+      "after": "追加なし",
+      "reason": "30%ルール再判定。daily-science ch平均524→閾値157に対し最下位の『日常の違和感』は195で対象外(『宇宙・天体』は登録済)。scp-lab ch平均495→閾値149に対し『財団組織・職員』237は登録済、『対立組織・Kクラス』313はn=1。新規該当なし(3日連続)。"
+    },
+    {
+      "date": "2026-09-11",
+      "target": "全6ch",
+      "field": "title_rules.hard_constraints.forbid_patterns / banned_words",
+      "before": "絵文字ルールなし(max_emoji=0 は未読キー)",
+      "after": "絵文字正規表現 + 流出実績18字を追加",
+      "reason": "ch内対照で5/6chが悪化(scp-lab 0.32 vs 0.98 等)。09-04〜09-08 も毎日1〜2本流出していたため実効化。check/repair 両方を検証済。"
+    },
+    {
+      "date": "2026-09-11",
+      "target": "scp-lab / yokai-watch / daily-science / 2ch-matome",
+      "field": "theme_priority.title_style",
+      "before": "答え提示語中心",
+      "after": "先頭に『なぜ型を第一候補』を明記(旧文は title_style_prev_20260911 に退避)",
+      "reason": "ch内対照で「なぜ」型が非該当の1.8〜3.2倍。答え提示語は単独では効果が確認できず。"
+    },
+    {
+      "date": "2026-09-11",
+      "target": "pokemon-lab",
+      "field": "theme_priority.title_style",
+      "before": "他chと共通の答え提示語方針",
+      "after": "二人称(君/あなた)必須・「なぜ」回避・サムネ最優先を明記",
+      "reason": "当chのみ「なぜ」0.00(n=9) vs 0.37(n=19)、二人称 0.45 vs 0.15。08-25以降 0.26→0.20 と唯一悪化、到達CTR 0.69% で最下位。"
+    },
+    {
+      "date": "2026-09-11",
+      "target": "pokemon-lab",
+      "field": "autopilot.theme_queue",
+      "before": "0本(枯渇)",
+      "after": "20本を補充(全件 二人称＋答え提示語、ゲート事前検証済)",
+      "reason": "キュー枯渇が当chの劣化要因の一つと判断。実測で効く型に揃えて補充。"
+    },
+    {
+      "date": "2026-09-11",
+      "target": "scp-lab / yokai-watch / company-facts / 2ch-matome",
+      "field": "autopilot.theme_queue",
+      "before": "54本がゲート不通過",
+      "after": "実測型で書き直し(旧題は title_prev_20260911 に保存)、全ch NG 0/142",
+      "reason": "repair() による語尾の機械追加と語の収斂を防ぐため。scp/yokai はなぜ型、company-facts は理由・実態・裏側型、2ch は ワイ除去。"
+    },
+    {
+      "date": "2026-09-11",
+      "target": "全6ch",
+      "field": "short_format.extra_rules",
+      "before": "中盤の指示なし",
+      "after": "『3行目に必ず前提を覆す一言か具体数字を置く／説明を2行続けない』を追加",
+      "reason": "維持率が 15%地点102% → 20%地点84% → 30%地点63% と中盤で崖。尺は _experiments.length_20260905 により 09-12 まで変更禁止のため構成で対応。"
+    },
+    {
+      "date": "2026-09-11",
+      "target": "(実行なし)",
+      "field": "Phase 4 制作トリガ",
+      "before": "-",
+      "after": "指揮者からの trigger は発行せず",
+      "reason": "サンドボックスから localhost:8000 に到達不可。かつ backend の APScheduler が 09-11 に6ch全てで発火済(daily-science 06:45 / company-facts 07:30 / pokemon-lab 07:45 / 2ch-matome 08:15 / scp-lab 08:15 / yokai-watch 08:45)。二重起動を避けた。"
     }
   ]
 }

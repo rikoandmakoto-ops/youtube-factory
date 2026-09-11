@@ -1,0 +1,553 @@
+{
+  "title": "帰り道は本当に18%短く感じる？架空論文が検証",
+  "theme": {
+    "title": "同じ道を戻ると距離が短く感じる — 往復所要時間の主観差",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "帰り道は行きより短い——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言います。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『歩行余白誌』と遠景行動研究所の調査です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者846人で、帰路は平均18%短く感じました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに同じ道でも有意差が確認されています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この帰り道論文は存在しません。掲載誌ごと架空です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標へチャンネル登録で応援よろしく。",
+      "expression": "surprise",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも、待ち合わせへ向かう道より帰り道のほうが短かったと感じたことはありませんか。同じ1.2キロでも帰路は平均18.4%短く知覚される、という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載先は架空誌『歩行余白誌』、調査主体は遠景行動研究所です。通勤、買い物、食事会の帰りを含む被験者1,846人が、往復42日間の記録を提出しました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "地図上では同じ往復なのに、帰りだけ動画の再生速度が少し上がったように終わる感覚ですね。では時計で測った所要時間まで、本当に短くなったのでしょうか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "時計の記録では、往路と復路の平均差は42秒以内でした。ところが到着直後の質問では、帰路を短いと答えた被験者は全体の71.3%に達したと報告されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この報告は、道路が縮むのではなく、時間を数える心の目盛りが片道ごとに変わると説明しました。職場から駅まで平均8分の移動でも、同じ傾向が出た設定です。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。\n掲載誌ごと架空です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。被験者1,846人という数字を聞いて、帰り道だけ時間が圧縮される現象を、研究室の雑談で紹介しようと本気で考えていました。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "月刊 虚構論文の編集長として明記しますが、ここから扱う研究者、数値、表、施設名はすべて創作です。ただし帰りが短く感じる日常の実感を、真面目に素材として扱います。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "嘘だと分かったうえで聞くなら安心です。それでも仕事帰りや友人との食事の帰りだけ道が近く感じることはありますが、どんな仕組みを置くのでしょうか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空論文はこの感覚を『到着予測の残量差』と呼びました。要するに目的地まであと何分かを、頭の中で何回数え直すかの違いであり、往路ほど残量確認が増えるという設定です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "往路では遅刻しないか、初対面の相手に会えるか、買う物を忘れていないかを考えます。そのため信号1回や坂道30メートルまで、移動の区切りが細かく目立つとされました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "行きは目的地がまだ遠くにあり、交差点ごとに進み具合を確認するわけですね。帰りは同じ交差点を通るのに、数える対象そのものが減るのでしょうか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "はい。架空の設定では帰路は用事が完了しているため、頭の中の確認作業が少なくなります。被験者の63.8%は復路で通過した信号の回数を、3回以上少なく報告しました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "実はこの差は、帰宅時だけでなく、面接会場から駅へ向かう場面にも現れたことになっています。緊張が終わった直後の76人では、主観差が24.6%まで広がりました。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "同じ10分でも、用事の前は長く、終わった後は短いということですね。ならば初デートの待ち合わせでも、集合場所へ向かう時間だけ長く感じそうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空研究班は初対面の待ち合わせを76組で観察した設定です。往路を長いと答えた割合は82.9%で、復路を長いと答えた割合は16.4%にとどまったと記されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし実際の歩く速さは、測定上ほとんど変わりませんでした。往路の平均は毎分71メートル、復路は毎分73メートルで、速度差は主観差の大きさに届かない結果です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "足が急に速くなったから短いのではなく、頭の中で距離を刻む回数が減る設定なんですね。ではどんな場所で、この18.4%という差が最も大きくなるのでしょうか。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最も差が大きいのは、初めて行く店までの往復とされています。片道1.2キロの徒歩で、帰路の主観時間が往路より31.7%短くなり、有意差が確認されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は初見の道では、看板、曲がり角、建物の色まで情報として処理されると仮定しました。一方で帰路は見慣れた景色が背景に退き、道順だけが残ると説明しています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "初めてのカフェへ向かうときは、地図を見ながら曲がり角を探しますよね。帰りは店で聞いた話を思い返していて、通った建物まで覚えていないことがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この設定を確かめるため、被験者には往路と復路で見た青い看板の数を報告してもらいました。往路の平均回答は6.8枚、復路は2.1枚で、差は統計上も大きいとされました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここでいう注意配分は、意識を何に割り当てるかという意味です。画面通知を確認しながら歩く群では、帰路の短縮感が無操作群より9.4ポイント増えた設定でした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "通知を見ていると時間が飛んだように感じるのは分かります。ただ、帰り道だけ短いなら、スマートフォンを見ない人にも同じ傾向が残らなければ説明になりませんね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その点について架空論文は、無操作群312人も置いています。画面を見ない群でも帰路短縮感は14.2%あり、通知は原因ではなく体感を強める要素と位置づけられました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに帰り道で音楽を聴いた群は、主観時間を平均22.8%短く報告しました。ただし曲の長さではなく、目的を終えた安心感が先に働く、とする結論に達しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "安心すると時計そのものは変わらなくても、時間の粒が粗くなるような設定ですね。逆に帰り道が長く感じる例外は、この架空データにも記録されていたのでしょうか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ありました。翌日の仕事や課題を考え込みながら帰った被験者では、復路を長いと答える割合が54.1%に反転しています。帰る先に気がかりがある場合です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この群では歩数が平均1,104歩で、他群とほぼ同じでした。それでも信号待ちの体感は1回あたり38秒長く、翌日の予定が帰り道を引き延ばす設定になっています。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "金曜の夜に帰る道は短く、締切前の夜に帰る道は長いという感覚に近いですね。距離の問題というより、帰宅後に何が待つかの問題にも見えてきます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空研究班はこれを『終点の感情負荷』と名付けました。帰宅後の予定を楽しみと答えた群は帰路を17.9%短く、未完了の作業と答えた群は6.3%長く見積もりました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "面白いのは、道順を完全に覚えた後でも差が残った点です。同じ駅から自宅までを42日間歩いた被験者228人で、復路の短縮感は第6週でも11.6%でした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "慣れれば往路も短く感じそうなのに、帰路の優位が消えないのですね。では道を知っていることだけでは、この主観差を説明し切れないということでしょうか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その通りです。架空論文は知っている道かどうかより、『これから始まること』を意識しているかを重視しました。往路の目的意識が残る限り、比較差も残るとしています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "歴史資料としては、架空の1898年『夕刻歩程帳』が引用されています。帳面の著者は市場へ向かう道を九つ、帰宅の道を四つの区切りとして書き残したという設定です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "120年以上前の架空の帳面でも、行きと帰りで数える景色が違ったわけですね。九つの区切りと四つの区切りなら、同じ道路が別の長さに見えても不思議ではありません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "別の架空記録では、郵便配達人36人が午前便と午後便を比較しています。午後の帰庫路は距離を平均27.0%短く見積もり、荷物の量では説明できないとされました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただしこの歴史資料も存在しません。\n月刊 虚構論文の書庫では、古びた帳面の紙質や手書きの表まで含めて、すべて創作資料として分類されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "二度目の架空宣言で少し安心しました。数字が整っていると、存在しない1898年の配達記録まで、静かな図書室の棚に並んでいそうだと思ってしまいます。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで扱っているのは、あくまで身近な感覚を使った創作研究です。現実の行動や判断に使う結論ではなく、往復の体感を大真面目に測る形式そのものを楽しむ企画です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空論文の図表では、往路を『予告の時間』、復路を『余韻の時間』として分けています。前者は目的地を待つほど長くなり、後者は終わった出来事を思うほど短くなりました。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "就職面接の会場へ向かう電車と、終わってから駅へ歩く時間で考えると分かりやすいです。同じ駅でも行きは一駅ごとに残りを確認して、帰りは回答を思い返していそうです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこで架空研究班は、移動中に『あと何分』を思い出した回数を数えました。往路は平均7.6回、復路は2.3回で、有意差が確認されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この数え直しは、時計を見る回数と一致しませんでした。時計を一度も見なかった被験者でも、往路の残り時間を頭の中で5回以上推定する例が多く報告されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "つまり腕時計を見なくても、心の中に小さな残り時間表示が出るわけですね。その表示が頻繁に更新されるほど、移動は細切れになって長く感じる設定なのですね。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "応用例として、友人を待たせる場面を想定した架空実験もあります。集合時刻の15分前に出発した群ほど、往路を平均19.1%長く報告したことになっています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "これは早く出れば得をするという助言ではありません。架空論文上では、余裕があっても『まだ着かない』という予測が強ければ、体感時間の長さは変わるとされただけです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "時間に余裕があるのに長く感じるなら、距離の短縮感は急ぐかどうかでは決まらないのですね。では帰路で短く感じる仕組みは、予定の数だけでも変わりますか。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空の分類では、帰宅後の予定が一つだけの群で短縮感は20.5%、三つ以上の群では8.2%でした。頭の中の予定表が混み合うほど、復路にも細かな区切りが戻るようです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "また同じ道を誰かと歩いた群では、ひとり歩きより帰路の短縮感が6.7ポイント高いとされました。会話の内容を思い返す時間が、道順の記憶を薄くするという設定です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "食事の帰りに友人と話しながら駅へ向かうと、改札まで一瞬に感じることがあります。景色より会話が残るから、道の長さが記録されにくいという説明ですね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかし会話が弾まなかった群では、短縮感は3.1%まで低下しました。同行者の人数ではなく、移動中にどれだけ別のことへ意識が向いたかを重視する結果です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最終的に架空論文は、距離の体感を道路の長さではなく、意識が作った区切りの数で説明しました。同じ800メートルでも八つに分ければ長く、三つなら短く感じる設定です。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "帰り道が近く感じるのは、世界が折りたたまれたからではなく、こちらが数える場面を減らしたからという、創作上の結論に達したわけですね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "繰り返しますが、『歩行余白誌』も遠景行動研究所も存在しません。数字、図表、被験者1,846人、そして有意差という表現まで、すべて月刊 虚構論文による創作です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "最初は信じていましたが、帰り道が短く感じた記憶まで嘘ではないので不思議です。存在しない論文が、普段の帰宅時間を少し観察したくさせました。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、月曜日だけ味覚が0.4%鈍るとされた架空の長期追跡調査を紹介します。被験者3,214人が52週間記録したことになっている論文です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "同じ道の往復を測ったような存在しない論文は、まだ何本もアーカイブにあります。日常の違和感を研究したシリーズとして、今後も淡々と査読を続けます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "内容が少しでも気に入った場合は高評価をご検討ください。チャンネル登録者1万人を目標に毎日投稿中ですので、応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "帰りだけ",
+      "短くなる"
+    ],
+    "hook_caption": "帰路は短い",
+    "subtitle": "同じ距離なのに帰りだけ早く感じる主観差",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標",
+          "reason": "1行56字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": false,
+      "max_similarity": 0.783,
+      "similar_to": "階段は下りると段数を誤る — 被験者1,284人の計数差",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 30,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "帰り道は18%短い — 1,846人の往復時間記録"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '本当の理由'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "架空論文ファイル #18：帰り道は18%短い — 1,846人の往復時間記録",
+    "attempts": 1
+  },
+  "original_title": "架空論文ファイル #18：帰り道は18%短い — 1,846人の往復時間記録",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ帰り道は18%短く感じるのか？本当の理由を論文調査複数が解明"
+  }
+}

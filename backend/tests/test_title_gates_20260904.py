@@ -157,8 +157,12 @@ class RealChannelConfigTest(unittest.TestCase):
                       (d.get("autopilot") or {}).get("theme_queue") or []]
             titles += [(s.get("title") if isinstance(s, dict) else s)
                        for s in (d.get("theme_seeds") or [])]
+            # 2026-09-11: min_effective_chars も同じ理由で対象外。キューに入って
+            # いるのは題材なので、実効20字の下限を題材に課すのは意味が無い
+            # （generator が最終タイトルを組み立てる段で効かせる）。
+            skip = {"require_any_of"} | set(tc.UNREPAIRABLE_RULES)
             bad = [t for t in titles if t and any(
-                v["rule"] != "require_any_of" for v in tc.check(t, d)["violations"])]
+                v["rule"] not in skip for v in tc.check(t, d)["violations"])]
             self.assertEqual(bad, [], f"{cid} に規約違反のテーマが残っている: {bad}")
 
     def test_every_channel_declares_the_single_decision_metric(self):

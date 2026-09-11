@@ -1,0 +1,548 @@
+{
+  "title": "なぜ歩くと考えが3倍まとまる？その正体",
+  "theme": {
+    "title": "なぜ歩いている時ほど考えがまとまるのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで歩いている時だけ、考えがまとまるんでしょう？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！ 15分歩くと急に答えが出るよね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では歩きながらだと、発想の数が平均で約60%増えました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ スマホを再起動するみたいに頭も整うの？",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも景色の変化が考えをほどき、答えの正体は歩くリズムなんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次の散歩で試して、高評価も押してみてください。毎日の習慣シリーズを毎日投稿中、1万人目標なので応援のチャンネル登録よろしくね！",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "あなた、机では煮詰まった悩みが歩き出した途端に整ったことありませんか？　答えの鍵は足ではなく、脳へ届く一定のリズムです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "しかも歩行中は、座っている時より創造的な発想が約６０％伸びたという実験があります。偶然のひらめきではなく、脳の働き方の変化です。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回は、歩くとなぜ考えがまとまり、止まると急に言葉が詰まるのか、その正体を脳科学と体の感覚から順番に暴いていきます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ポイントは、歩くことで脳が忙しくなりすぎず、でも眠り込まない絶妙な状態へ入ることです。会議室より散歩道で案が出る理由が見えます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "驚きなのは、難しい計算を速くする話ではありません。歩行は頭の中に散らばった記憶や感情を、つなぎ直す時間になりやすいのです。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "だから次に考えが絡まったら、答えを机で絞り出す前に数分だけ歩いてみてください。その一歩で脳内の渋滞が動き出すかもしれません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "でもこれ、半分は間違いなんだ。歩けば必ず名案が出るのではなく、脳が考えを選び直しやすい状態になるだけなの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "歩行中は同じ動きを繰り返すから、注意の一部が自動運転になる。空いた脳の余白で、ばらばらの記憶が結び付きやすくなるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この働きに関わるのが、ぼんやり中にも動くデフォルト・モード・ネットワーク。脳内で過去の経験を静かに組み直す回路のことよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "2014年のスタンフォード大学の実験では、歩いた人は座った人より発想課題の成績が平均60％高かったと報告されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "大事なのは、歩いている最中に答えを力ずくで探さないこと。景色や足音に意識が少し散ると、行き詰まった考えから離れられるの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "机で悩むと、同じ答え候補ばかりを何度も確認しがちだよね。歩行はその固定された見方をゆるめる、穏やかな切り替え役になるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも軽い運動で心拍が少し上がると、脳への血流も増えやすい。ただし息が切れるほど速く歩くと、考える余裕は減ってしまうわ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "だからおすすめは、会話できる速さで10分ほど歩くこと。スマホを見続けず、目線を遠くへ向けると頭の中の整理を邪魔しにくい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "つまり歩くことは、答えを生む魔法ではなく脳の机を片付ける時間。考えがまとまらない日は、まず一駅分だけ外へ出てみてね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "スタンフォード大学の実験では、歩きながら考えた人は座った人より創造的な答えを平均60％多く出しました。しかも屋内のトレッドミルでも差が出たのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり景色が変わるからだけではなく、歩くというリズム自体が発想を助ける可能性があります。では脳の中では、どんな切り替えが起きているのでしょう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究で使われたのは、一つの道具から用途をできるだけ多く考える課題です。座っている人より歩く人の答えは、数だけでなく独創性でも高く評価されました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ここで驚きなのは、歩いた後に座っても効果が少し続いた点です。ひらめきは歩行中だけの偶然ではなく、脳の状態がしばらく変わることを示しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "歩くと心拍と呼吸がわずかに上がり、脳へ届く血流も変化します。ただし、血流が増えれば必ず賢くなるという単純な話ではありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "大事なのは運動の強さです。息が切れるほどではなく、会話できる程度の歩行が実験に近い条件でした。考え事には、軽い刺激がちょうどよいのかもしれません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "心理学では、同じ考えを反復し続ける状態を反すうと呼びます。歩行は視線や足の感覚を次々に変え、頭の中の同じ場所を回る思考から注意を外しやすくします。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "実際、自然の中を約90分歩いた参加者は、都市部を歩いた参加者より反すうに関わる脳活動が低下したと報告されました。景色の刺激の少なさも効くようです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "歩幅に合わせて一定のリズムが続くと、解決を急ぐ意識が少しゆるみます。すると一見関係ない記憶や言葉が結びつき、案が浮かびやすくなると考えられます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "だから行き詰まったら、机で粘る前に10分だけ歩くのが合理的です。答えを探しながら歩くより、景色を見て戻った瞬間に思いつくこともあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "歩くと急に答えが浮かぶ感覚は、昔から創造者たちを悩ませた謎だったの。考える机を離れた瞬間、頭の中では何が切り替わるのかな？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "古代ギリシャの哲学者アリストテレスは、歩きながら議論する学派を率いたと伝わる。彼らは歩廊を巡り、考えを言葉にして磨いたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "この一派は逍遥学派と呼ばれるの。逍遥は歩き回ることという意味で、知恵は椅子に座るより足元から生まれる、と見えたのかもしれないね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "さらに哲学者カントは毎日ほぼ同じ時刻に散歩し、その規則正しさで町の人が時計を合わせたという逸話まで残る。思索と歩行は長い相棒だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "でも驚きなのは、歩けば頭が空っぽになるどころか、創造的な発想を測る実験で成績が約60％も上がった報告があること。逆転しているよね。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "2014年、スタンフォード大学の研究者たちは、座る人と歩く人に物の新しい使い道を考えてもらった。歩行中は発想が広がりやすかったんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "重要なのは景色のきれいな屋外だけではなかった点よ。研究ではトレッドミル、つまり室内の歩くベルトでも、創造性の上昇が確かめられたの。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "だから原因は、森や風がくれる感動だけでは説明できない。一定のリズムで足を運ぶ行為そのものが、思考の詰まりに触れている可能性がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "歴史の散歩者たちの直感を、現代の実験が数字で追いかけ始めたわけね。次は歩くリズムが脳の注意をどうほどくのか、その仕組みに迫ろう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "驚くことに、歩行中は脳の「デフォルト・モード・ネットワーク」が働きやすい。これはぼんやり中に記憶や発想を結び直す回路で、机に固定された時より連想がほどけやすいの。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "しかも2014年のスタンフォード大学の実験では、歩きながら考えた人の発散的思考は、座った人より平均60％も高かった。散歩は気分転換どころか、発想の量を変える条件だったんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで反転があるわ。効果の中心は景色の美しさではなく、まず歩く動作そのものらしいの。同じ実験では屋内のトレッドミルでも創造的な案が増え、足のリズムが思考の扉を叩いた。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "歩くと心拍や呼吸が少し上がり、脳へ届く血流も変化する。ただし「血が増えたから即ひらめく」と断定はできない。体の覚醒度が低すぎず高すぎない帯に近づくのが有力なんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "この帯は、眠気でぼやける状態と緊張で固まる状態の中間。会議室で答えが出ないのに、駅まで歩いた途端に言葉がつながるのは、脳がほどよく起きた状態へ移るからかもしれないわ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "さらに歩行は半自動の運動だから、注意を全部は奪わない。靴ひもを結ぶ作業なら手順に集中するけれど、慣れた道を歩くなら余った注意で問題を別の角度から眺められるんだ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、難問の答えを正確に計算する力まで上がるとは限らないの。散歩が得意なのは、最初の案を広げる段階。数字の検算や細部の判断は、立ち止まって行うほうがミスを減らせる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "歴史上の作家や哲学者にも歩く習慣は多いけれど、それだけで天才になったわけじゃない。カントは散歩の時刻が町で知られるほど規則的で、考える時間を毎日予約していたとも言える。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから行き詰まった時は、スマホを見ながら速く歩くより、10分だけ通知を切って安全な道を歩くのがおすすめ。新しい情報で脳を埋めず、頭の中の材料が結び替わる余白を残すの。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "歩いて考えがまとまるのは、足が答えを運ぶ魔法ではない。リズム、適度な覚醒、空いた注意が重なり、頭の中の候補を並べ替えるからだ。次に迷ったら、まず一駅分だけ歩いてみよう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日からは、考えが詰まったら机で粘る前に、十分だけ外を歩く予定を入れてみて。結論を出そうとせず、悩みを一文の質問にして出発するのがコツだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "驚きなのは、速く歩く必要はないことだ。息が弾む運動ではなく、会話できる速さなら十分。信号待ちも含めて、頭に浮かんだ言葉を評価せず眺めよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "スマホは通知を切ってポケットへ入れよう。通知音は注意を引き戻すから、歩行中の発想を拾いにくくする。どうしても使うなら、録音ボタンだけをすぐ押せる状態にしてね。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "歩き始めの二分は、仕事の段取りを考えても失敗ではない。脳が目の前の用事を吐き出してから、少し遅れて別の組み合わせを試し始めることがあるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "おすすめは「一周で一問」方式。公園や駅までの往復に、企画の題名だけ、返信の最初の一文だけ、と課題を小さく決めると迷子になりにくいよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "もしアイデアが出なければ、景色から一つ選んで悩みと比べてみよう。例えば交差点なら、選択肢を増やすより信号のように順番を決める、と発想を動かせる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで反転ポイント！　名案を出そうと力むほど歩きの効果は薄れがち。目的は答えを絞ることより、固まった見方に小さな揺れを作ることなんだよ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "帰宅後は三十秒だけメモしよう。歩きながらの案は、座ると消えやすい。完璧な文章でなく「午後に連絡」「図で説明」など、行動の種だけ残せば十分だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "毎日同じ道でも、考えるテーマを変えれば練習になるよ。明日は朝の支度中の疑問を一つ持って出て、歩いたあとに答えが一ミリ動いたか確かめてみよう。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "歩くと考えがまとまるのは、一定のリズムが注意をほどよく整え、悩みから少し距離を作るから。答えを無理に絞り出さない時間が、心の引き出しを開けてくれるんだね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "しかも景色が変わるたび、脳は小さな刺激を受け続ける。机で行き詰まった問題でも、足を前へ出すだけで別の見方が浮かぶことがあるなんて、ちょっと救われるぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "大切なのは速さより、会話できる程度の楽な歩調。安全な場所で数分歩き、思いつきを一語だけメモすれば、消えやすいひらめきを明日の自分へ渡せるよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "驚きなのは、立ち止まって考えるより、遠回りの一歩が近道になることだ。今夜どうしても決められないことがあるなら、答え探しを休んで、玄関の外を少し歩いてみよう。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は「布団に入ると急に目が冴えるのはなぜ？」を解説するよ。眠りたいほど眠れなくなる、あの不思議な夜に体の中で起きる変化を、やさしく一緒にほどいていこう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "眠気は気合いで呼べるものではなく、光や体温、いつもの習慣にも揺らされる。寝る直前のスマホや考え事が、なぜ目を覚ます方向へ働くのかも、次回しっかり確かめようぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の帰り道に浮かんだことも、あなたの脳からの大事な便りかもしれないね。身近な「なぜ？」を一緒に見つけるため、高評価とチャンネル登録をよろしくね。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "歩くと浮かぶ",
+      "考えの正体"
+    ],
+    "hook_caption": "歩くと冴える",
+    "subtitle": "机では詰まるのに歩くと浮かぶ理由",
+    "tagline": "足を動かすと頭の中も動き出す"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "次の散歩で試して、高評価も押してみてください。毎日の習慣シリーズを毎日投稿中、1",
+          "reason": "1行63字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.568,
+      "similar_to": "疲れた日の甘い物、3時間で消える正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 39,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ歩くと考えが3倍まとまる？その正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

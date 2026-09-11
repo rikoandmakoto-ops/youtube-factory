@@ -1,0 +1,497 @@
+{
+  "title": "緊張すると手だけ氷みたいに冷たくなるワケの正体",
+  "theme": {
+    "title": "なぜ緊張すると手だけが冷たくなるのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで緊張すると手だけ冷たくなるんでしょう？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！発表前は手先だけ氷みたいだったよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "緊張して数十秒で、手先へ行く血の量は減り始めます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！水道の細い蛇口を少し閉める感じだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも体の中心を守るためなので、手だけ先に冷えたんです。残りの働きもあります。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "手を温める前に深呼吸も意識してみて。高評価を押して、体の謎シリーズと毎日投稿中の1万人目標を応援するチャンネル登録もよろしくね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで緊張すると、あなたの手だけ急に冷たくなるんでしょう？面接や発表の直前、室温が22度で変わらないのに、指先だけ冷えてペンを持つ手が自分のものではないように感じることがありますよね。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！順番を待つ10分くらいの間に、手のひらだけ冷たくなって、握手したら相手に伝わりそうで余計に気になったよ。寒くないのに、なぜ手だけなんだろう？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、あなたの体が大事な場面に備えるときに起こしやすい変化なんです。手の冷たさは失敗の予告ではなく、血液の行き先を短時間で調整している途中のサインとして考えられます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "守るためなのに手が冷えるの？走るわけでもない発表前に、体がそこまで急いで準備するなんて意外だね。手から減った温かさは、いったいどこへ優先して回っているの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "人の手は体の中心より外側にあり、皮膚のすぐ下を流れる血液の量で温度が変わりやすい場所です。指先は小さくても表面積が広く、温かさの変化を触覚として受け取りやすいんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、冬の朝に最初に冷えるのも指先だね。でも今回は外気が原因ではないはずだよ。緊張した気持ちが、どうやって手の血の流れまで変えるのかな？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "緊張すると脳は、目の前に注意が必要な出来事があると受け取りやすくなります。すると心臓の拍動、呼吸の速さ、筋肉の張り方と同じように、血液を送る配分まで短い時間で変え始めます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！血液がなくなるのではなく、体の中で行き先を変えているんだね。たとえるなら、スマホの電池が残り10％になったとき、必要な機能へ優先して使う感じかな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "優先されやすいのは、心臓、脳、そして脚や背中のような大きな筋肉です。動く、姿勢を保つ、周囲を見るといった働きに備えるため、体は中心近くを安定させようとする向きを持っています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "大事な場所を先に保つために、手先は少し後回しになるんだね。家の中でブレーカーが心配なとき、照明を少し落としても冷蔵庫だけは止めない、そんな優先順位に近いのかも。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "手の皮膚には細い血の通り道が網の目のようにあり、その入口を少し狭めるだけで表面へ届く温かさが変わります。水道のホースを指で軽く押さえると、先端の水が細くなるのと同じなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、手の中でそんな調整がすぐ始まるの？冷たさは気のせいではなく、流れ方が変わった感覚なんだね。名前を呼ばれる前の数十秒で分かるほどなら、かなり速い反応に感じるよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "皮膚温度は室温や服装にも左右されるので、全員が同じ秒数で変わるわけではありません。ただ、緊張が強まってから数十秒から数分で、手のひらや指先の冷えを自覚する人は珍しくありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "数分なら、受付で待っているうちに手が冷たくなるのも納得できるね。でも手が冷える人もいれば、顔が熱くなる人もいるよ。体は同じ緊張で、なぜ違う反応を見せるんだろう？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで大事なのは、手が冷たいと感じる人ほど必ず血の流れが大きく減っているとは限らないことです。皮膚の温度、汗、机やスマホに触れた冷たさまで重なって、あなたの手の感覚は作られます。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、冷たさだけで決められないんだ！緊張すると手のひらが少し湿ることもあるけれど、濡れているのに冷たいのは不思議だったよ。あの湿り気も手の感覚に関係しているの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "手のひらは汗が出やすい場所で、水分が蒸発するときに皮膚の熱を奪います。夏にぬれた腕へ扇風機の風を当てるとひんやりするように、汗が少し増えるだけでも手の冷たさは強まるんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！血の流れだけではなく、汗の水分も冷たさに加わるんだね。発表前に手が湿ってペンが滑りそうになるのも、体が何か準備している途中なのかな？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "手のひらの汗は、物を握るときの滑りにくさに関わります。紙やペンには困ることもありますが、体の反応としては、動く前に靴ひもを結び直すように、手を使う準備へ寄せているとも考えられます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "手が冷えることと汗ばむことが、同じ準備の中で起きる場合があるんだね。自分では落ち着いているつもりでも、手のひらは先に知らせてくる。体って思ったより正直で面白いな。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここまで説明した手の冷たさは、緊張を感じるすべての人に同じ形で出るわけではありません。睡眠不足、朝のカフェイン、空腹、室温の低さなど、当日の条件で手の温度はかなり変わります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "昨日はコーヒーを2杯飲んで、空調の効いた会場にいたから、いつもより手が冷えたのかもしれないね。緊張だけが原因と決めつけず、周りの条件も一緒に見るほうがよさそうだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、手が冷えたときに多くの人が思う「自分は弱いのかも」という見方を変える話でもあります。冷たさは意志の強さを測る点数ではなく、体が自動で優先順位をつけた結果なんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！手が冷えたからといって本番に弱いとは限らないんだね。むしろ大事に思っている場面ほど、体が早めに準備を始めることがある、と考えたほうが自然かも。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "手の温度を測る研究では、皮膚に小さな温度計を貼り、室温を一定にして変化を見ます。それほど条件をそろえても個人差は残るため、家庭で触った一回の感覚だけから気持ちを断定することはできません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "研究では室温までそろえるんだね。自宅で暖房が25度、学校で空調が20度なら、同じ緊張でもまったく違って感じそうだよ。数字を見るときほど、比べる条件が大切なんだな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "皮膚の血の通り道が狭くなり、表面へ届く血が減ることが起きています。これに名前が付いていて、血管収縮と言います。つまり、手先へ向かう細い道を体が一時的に絞ることです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "血管収縮って難しく聞こえるけれど、手先の水道の蛇口を少し閉めることなんだね。言葉を覚えるより、冬に指先が冷える感じを思い出すと、体の中の変化が想像しやすいよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この調整は、試験会場だけでなく、スマホの通知を開く直前や、病院で番号を呼ばれる前にも起きることがあります。体は大きな危機だけでなく、失敗したくない小さな場面にも素早く反応するんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "通知を見る前に手が冷たくなったこと、確かにあるかも！頭では数秒のことだと思っていても、体にとっては大事な結果を受け取る瞬間なんだね。だから準備が先に走るのかな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、緊張して顔が赤くなる人がいるのも自然な反応です。顔、手、胸元などでは血の流れ方や汗の出方が一様ではなく、同じ人でも会議、運動、暑さで見え方が変わることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "手は冷たいのに顔は熱い、という日もあるよね。体が矛盾しているのではなく、場所ごとに別の調整が同時に走っているんだ。ひとつの感覚だけで全体を判断しないほうがよさそうだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "緊張を完全になくそうとすると、手の冷たさを何度も確かめて、かえって意識がそこへ集まることがあります。温度を敵にするより、「今は準備中」と一度言葉にして、注意を次の行動へ戻すほうが役立ちます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！手を触って冷たい、また触って冷たい、と確認するほど気になっていたよ。時計を何度も見ると時間が遅く感じるみたいに、意識を向けすぎると大きく感じるんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず試しやすいのは、吐く息を少し長くすることです。4秒ほど吸って6秒ほど吐く呼吸を2回から3回続けると、数える作業に注意が移り、急ぎ足になった感覚をゆるめる助けになります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "4秒吸って6秒吐くなら、全部で10秒だから順番待ちでもできそうだね。大きく吸い込もうと頑張るより、吐くほうを少し長くする、と覚えれば机の前でも迷わなそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次に、手を強く握り続けるより、指をゆっくり開いたり閉じたりしてみてください。10回ほど動かすだけでも、手がこわばっていたことに気づきやすくなり、次の作業へ意識を戻す小さなきっかけになります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ペンを握りしめたまま待っていたから、手の冷えまで増して感じたのかも。指を10回動かすなら目立ちにくいし、机の下でもできるから、発表や面接の前に試してみたいな。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "手が冷えているとき、温かい飲み物のカップを両手で包むのもよい方法です。ただし熱すぎる飲み物は避けて、心地よい温度を選んでください。手の感覚が変わると、呼吸にも注意を戻しやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "コンビニのお茶でも、両手で30秒くらい持つだけならできそうだね。手を温めることは弱さをごまかすことではなく、次に話す、書く、握るための準備を自分で整えることなんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "人前で話す前なら、最初の一文を声に出さず口だけで動かすのも役立ちます。手の温度ばかりを監視する代わりに、次の行動を1つ具体的に決めると、体の反応を待つ時間が短く感じやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "次の一文だけ決めるなら、「おはようございます」でも十分なんだね。100点の準備を急ぐより、最初の1歩に注意を向けると、手の冷たさに振り回されず始められそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、手の冷えが緊張と関係なく頻繁に続く、色が白や紫のように大きく変わる、痛みやしびれが強いときは、自己判断で終わらせず医療機関に相談してください。別の原因を確かめることが大切です。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "緊張のせいだと決めつけないことも大事なんだね。いつもの発表前だけなら体の準備として見られても、日常的に続く強い変化なら、誰かに相談して確認するほうが安心につながるよ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話を短く言うと、緊張したときの手の冷たさは、体の中心を優先して手の表面へ行く血の流れが変わり、汗や周囲の温度も重なることで起きやすい、自然な反応のひとつです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "手だけ冷たいのは、体が自分を置いていった合図ではなく、大事な場面へ先回りしていた合図なんだね。言われてみれば確かに、次に指先が冷えたときは少し違う目で見られそうだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜ではなくても、次に緊張する予定があるなら、4秒吸って6秒吐く呼吸を一度だけ試してみてください。そのあと指を10回動かし、「準備中です」と心の中で言うだけでも、行動へ戻る助けになります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなるのはなぜかを見ていくんだね。一晩の睡眠で何度も起きる小さな変化なら、布団に入ったとき自分の体で思い出せそうだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "体の謎シリーズでは、あなたが毎日感じている小さな違和感を、難しい言葉に置き去りにされない形でほどいています。今日の手の冷たさが面白かったら、まず高評価で教えてください。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "緊張した手を見たら、水道の蛇口を少し絞る話を思い出してみるよ。次の眠りの不思議も気になるから、毎日1本の身近な体の話を一緒に見続けたいな。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白かったらチャンネル登録よろしくね。身近な不思議を毎日1本ずつ解き明かしているので、体の謎シリーズの次回も、あなたの昨日の体験につながる話として一緒に見てほしいです。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "手だけ冷たい",
+      "緊張の3分後"
+    ],
+    "hook_caption": "手だけ冷たい",
+    "subtitle": "緊張した瞬間、手の中で何が起きる？",
+    "tagline": "あなたの体が守ろうとしている合図"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "手を温める前に深呼吸も意識してみて。高評価を押して、体の謎シリーズと毎日投稿中の",
+          "reason": "1行64字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.588,
+      "similar_to": "疲れた日の甘い物、3時間で消える正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 40,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ緊張すると手だけ冷たいのか？3分後の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "なぜ緊張すると手だけ冷たいのか？3分後の正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ緊張すると手だけ冷たいのか？3分後の正体"
+  }
+}
