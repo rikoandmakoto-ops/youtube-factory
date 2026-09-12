@@ -296,7 +296,8 @@
     "re:本.{0,8}眠",
     "re:(深夜|夜|暗い部屋).{0,8}スマホ",
     "あくび",
-    "自分の声"
+    "自分の声",
+    "横隔膜"
   ],
   "genre_blacklist": [
     "宇宙・天体",
@@ -1213,5 +1214,6 @@
   },
   "theme_blacklist_note": "2026-09-10: 再生上位40本の実測で『録音』が12本(30%)、『自分の声』が10本、『骨伝導』が4本を占め、いずれも1081〜1519再生でch平均524の2.1〜2.9倍。当chの最強フォーマットを theme_blacklist が封じていた。解除: 自分の声 / あくび(1271再生・平均の2.4倍)。維持: しゃっくり・金縛り・蛍光灯・成長ホルモン・耳が詰ま・指を鳴ら・酸素が消え・ドアが閉ま・星空・星座・寝言・炭酸（上位40本に0本＝勝ち筋の根拠なし）。09-07 yokai-watch の同型解除は2日で登録/1kを+85%にした実績あり。",
   "_theme_blacklist_note_20260911": "09-11 朝の自動 run が ['あくび', '自分の声'] を削った結果、リポジトリ自身の回帰テスト test_fixes_20260909.py::TestDailyScienceBlacklist::test_no_regression_in_duplicate_prevention が RED になっていた（旧リストが止めていた過去タイトル8件が素通り）。同 run の theme_blacklist_note 自身が「『自分の声』が上位40本中10本」と書いており、削除は note とも矛盾する。復元してテストを GREEN に戻した。",
-  "_theme_seeds_note_20260911n": "【2026-09-11 夜】theme_seeds に素の文字列が混在しており、suggest_themes の `s.get('title')` が 'str' object has no attribute 'get' で落ちていた。その結果 genre_blacklist で却下されたテーマの差し替えが常に失敗し、停止ジャンルのテーマがそのまま採用されていた（09-11 の scp-lab『財団組織・職員』で実測）。全件 dict 形式に正規化。今後 seed を追記するときは必ず {\"title\": ..., \"angle\": ...} 形式で入れること。"
+  "_theme_seeds_note_20260911n": "【2026-09-11 夜】theme_seeds に素の文字列が混在しており、suggest_themes の `s.get('title')` が 'str' object has no attribute 'get' で落ちていた。その結果 genre_blacklist で却下されたテーマの差し替えが常に失敗し、停止ジャンルのテーマがそのまま採用されていた（09-11 の scp-lab『財団組織・職員』で実測）。全件 dict 形式に正規化。今後 seed を追記するときは必ず {\"title\": ..., \"angle\": ...} 形式で入れること。",
+  "_theme_blacklist_note_20260912n": "【2026-09-12 夜】『横隔膜』を追加。既存の『しゃっくり』を回避する言い換えとして n=4 まで増殖し、平均233再生(ch平均663の0.35倍)。同義語が抜け道になる典型。"
 }

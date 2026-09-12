@@ -1786,6 +1786,78 @@
       "before": "-",
       "after": "追加なし",
       "reason": "本日の類似ペアは題材ではなくタイトルの型が似ているだけ（yokai 0.823/0.818、pokemon 0.744）。blacklist に入れると正当な題材を禁止するため見送り、類似度計算側の修正を提案に回した。"
+    },
+    {
+      "date": "2026-09-12n",
+      "target": "daily-science / scp-lab / yokai-watch / akashic-librarian / fake-paper / 2ch-matome / company-facts / pokemon-lab",
+      "field": "theme_queue.items[].title",
+      "before": "hard_constraints 適合 11/107 (10%)",
+      "after": "**107/107 (100%)**。全件を手で書き直し、旧題は各項目の _retitled_20260912n に保存（.bak_pdca_20260912n に退避）",
+      "reason": "補充側が自分の title_rules を参照していないため。このまま流すと repair() が語尾に『の正体』を機械追加して日本語が壊れる（09-11 と同型）。"
+    },
+    {
+      "date": "2026-09-12n",
+      "target": "scp-lab",
+      "field": "theme_queue（1件削除）",
+      "before": "SCP-3812「名前を超えた存在」…（23件）",
+      "after": "削除（22件）",
+      "reason": "SCP-3812 は n=2・平均139再生(ch平均599の0.23倍)。同時に theme_blacklist へ登録した。"
+    },
+    {
+      "date": "2026-09-12n",
+      "target": "yokai-watch",
+      "field": "theme_queue（1件削除）",
+      "before": "コマさんの元ネタ狛犬…（10件）",
+      "after": "削除（9件）",
+      "reason": "コマさんは 648再生(0.70倍)で blacklist 該当かつ平均以下。"
+    },
+    {
+      "date": "2026-09-12n",
+      "target": "scp-lab",
+      "field": "theme_blacklist",
+      "before": "14語",
+      "after": "16語（+SCP-096, +SCP-3812）",
+      "reason": "SCP-096 は n=7 で当ch最多重複かつ平均369(0.62倍)、SCP-3812 は n=2・139(0.23倍)。『重複かつ平均以下』のみを追加し、心臓(1.89倍)・別の文明(2.05倍)・図書館(1.20倍)は対象外とした。"
+    },
+    {
+      "date": "2026-09-12n",
+      "target": "daily-science",
+      "field": "theme_blacklist",
+      "before": "16語",
+      "after": "17語（+横隔膜）",
+      "reason": "blacklist 済みの『しゃっくり』の言い換えとして n=4 まで増殖、平均233(0.35倍)。"
+    },
+    {
+      "date": "2026-09-12n",
+      "target": "yokai-watch",
+      "field": "theme_blacklist",
+      "before": "15語",
+      "after": "12語（−河童 −エンマ大王 −ぬらりひょん）",
+      "reason": "いずれも ch 平均以上（1.82/1.36/1.05倍）。09-07 と同型の自傷を解除。"
+    },
+    {
+      "date": "2026-09-12n",
+      "target": "pokemon-lab",
+      "field": "theme_blacklist",
+      "before": "19語",
+      "after": "18語（−ヤドンの尻尾）",
+      "reason": "1567再生(1.58倍)・登録+3人で当ch最高の登録効率だった。"
+    },
+    {
+      "date": "2026-09-12n",
+      "target": "(判定のみ)",
+      "field": "genre_blacklist",
+      "before": "-",
+      "after": "追加なし",
+      "reason": "30%ルール再判定。daily-science 平均524→閾値157（最下位の日常の違和感195.6は上回る）、scp-lab 平均495→閾値148（最下位の財団組織・職員236.8は上回る）。該当する宇宙・天体/オブジェクトクラスは登録済み。5日連続で新規なし。"
+    },
+    {
+      "date": "2026-09-12n",
+      "target": "(検証)",
+      "field": "backend/tests",
+      "before": "09-11 に test_no_regression_in_duplicate_prevention が RED と記録",
+      "after": "test_fixes_20260909.py + test_title_gates_20260904.py = 72 passed / 313 subtests passed（当該テスト含め GREEN）",
+      "reason": "設定変更後の回帰確認。"
     }
   ]
 }

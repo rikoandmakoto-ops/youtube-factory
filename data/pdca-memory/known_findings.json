@@ -1229,6 +1229,41 @@
       "date": "2026-09-11n",
       "id": "image-bridge-consumer-fully-stopped",
       "note": "【サムネ・ブロッカーの経過】image_requests は pending 296件（09-08:57 / 09-09:7 / 09-10:151 / 09-11:81）、delivered 0、failed 235。failed の最終は 09-08 で、以降は1件も failed に落ちていない＝『試して失敗している』のではなく**配送側が完全に止まっている**。09-06 時点の pending 131 から +165。サムネ背景がプレースホルダのグラデーションのままである状態は 09-06 の報告から変化なし（実見で確認）。OAuth と並ぶ2大ブロッカーで、こちらは再認可では直らない。"
+    },
+    {
+      "date": "2026-09-12n",
+      "id": "queue-refill-ignores-own-hard-constraints",
+      "note": "【仕組みの欠陥・最重要・本日修正】09-12 の指揮者によるキュー補充で生成された107本のうち、自分の title_rules.hard_constraints を通るのは **11本(10%)** しかなかった。内訳: daily-science 1/12(11本が『なぜ〜のか？ — 副題』の em ダッシュ副題で max_chars30 を6〜10字超過)、scp-lab 1/23(22本が『SCP-XXXX「名前」、財団が…恐怖/恐ろしい』の単一テンプレで34〜47字)、yokai-watch 0/10(全件に算用数字＝forbid_digits 違反)、akashic-librarian 3/10(答え提示語なし7件)、fake-paper 4/10・2ch-matome 9/12・company-facts 10/12・pokemon-lab 8/10(min_effective_chars20 と max_digit_groups1 の違反)。補充側は制約を一切参照していない。この状態で流すと backend の repair() が語尾に『の正体』を機械追加するだけなので、09-11 の同型指摘(54/142)より悪化している。全107本を手で書き直して 107/107 に是正した。"
+    },
+    {
+      "date": "2026-09-12n",
+      "id": "scp-queue-collapsed-into-one-template",
+      "note": "【新規・テンプレ単一化】09-12 の scp-lab キュー23本のうち **21本** が『恐怖』または『恐ろしい』で終わる同一構文だった。フィード上で自己競合するうえ、09-11 に確認した『なぜ型』『SCP番号』の勝ち筋がどれも入っていない。書き直しで語尾を 真相/正体/裏側/理由 に分散させた。"
+    },
+    {
+      "date": "2026-09-12n",
+      "id": "blacklist-self-harm-third-occurrence",
+      "note": "【自傷・3回目・本日解除】09-07(yokai)・09-10(scp/ds) と同型が yokai-watch と pokemon-lab で再発。実測(本あたり最大再生)で 河童 1693(ch平均931の1.82倍)・エンマ大王 1265(1.36倍)・ぬらりひょん 978(1.05倍)・ヤドンの尻尾 1567(ch平均994の1.58倍・登録+3人で当ch最高効率) がいずれも theme_blacklist に入っていた。解除済み。コマさん(0.70倍)のみ維持。**blacklist 追加は『重複している』だけでは足りず『重複かつ平均以下』を必須条件にすべき**という運用則が3回連続で破られている。"
+    },
+    {
+      "date": "2026-09-12n",
+      "id": "blacklist-not-enforced-at-refill",
+      "note": "【新規】theme_blacklist はキュー補充時に照合されていない。09-12 のキューに blacklist 該当が5本(yokai 4・pokemon 1)混入していた。ゲート検査は title_rules しか見ておらず blacklist は別経路のため、禁止語が素通りする。"
+    },
+    {
+      "date": "2026-09-12n",
+      "id": "synonym-bypasses-theme-blacklist",
+      "note": "【新規・抜け道】daily-science の『しゃっくり』は blacklist 済みだが、言い換えの『横隔膜』が未登録で n=4 まで増殖し平均233再生(ch平均663の0.35倍)。blacklist は表記単位のため同義語で回避される。『横隔膜』を追加。同様に scp-lab は SCP-096 が n=7・平均369(0.62倍)で最多重複だった(追加済み)。"
+    },
+    {
+      "date": "2026-09-12n",
+      "id": "image-bridge-pending-370-day7",
+      "note": "【サムネ・ブロッカー7日目】image_requests は pending **370件**(09-11 の296から+74。09-12 分だけで55件)、delivered **0**、failed 235(最終 09-08)。09-06 に宛先を直して以降6日間、配送側は一度も動いていない。サムネの図解・背景がすべてプレースホルダのままである根本原因はここ1点に収束しており、他のサムネ改善はこれが直るまで効果が出ない。"
+    },
+    {
+      "date": "2026-09-12n",
+      "id": "publish-zero-63h-and-analytics-4day-stale",
+      "note": "【障害・継続】公開は 09-10 07:45 を最後に停止(09-11:0本 / 09-12:0本、約63時間)。OAuth は13ch全滅のまま3日目。analytics.db の video_metrics は 09-08、channel_metrics は 09-05 で止まっており、登録者/1000再生は4日間算出不能。**したがって本日の判断はすべて成熟コホート(〜09-08)の実測に基づく**。"
     }
   ]
 }
