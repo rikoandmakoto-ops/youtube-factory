@@ -9,7 +9,7 @@
 |---|---|
 | `2026-09-10.md` | 分析パイプライン停止の発見 / 切り抜き3chの登録転換問題 / 09-09施策の反映確認 / **【夜間追記】OAuth 13ch全失効・レンダ復旧・生成24本に対し公開2本** |
 | `2026-09-11.md` | **タイトル実効文字数の逆U字（25-29字が頂点・n=330）を発見し機械ゲート化** / 疑問形はchを選ぶ（09-10のscp-lab判定が誤り） / 自動runによるtheme_blacklist退行2件を復元 / 18時JST枠が最下位 / ゲートが12ch中6chでしか動いていなかった / soffice OOM回避の値注入ツール / **【夜間追記】生成24本に対し公開0本・OAuth13ch全失効を実測・Developerマウントはunlink不可でgit mergeが原理的に失敗・「ホスト健全性critical」は誤記** |
-| `2026-09-12.md` | **キュー補充が `title_constraints` を一度も通っていなかった（未公開99件中 合格24件＝24.2%・company-facts は自ch禁止の絵文字で12件全滅）** / **`repair()` をキューに当てると日本語が壊れる（長さは末尾切り落とし・数字は削除）** / 切り抜き3chへゲート新規付与 / **09-11 の適用が14時間後も全ch生存＝上書き事故は止まった** / 集計ミス（111件→99件）を検証工程で自己発見 |
+| `2026-09-12.md` | **キュー補充が `title_constraints` を一度も通っていなかった（未公開99件中 合格24件＝24.2%・company-facts は自ch禁止の絵文字で12件全滅）** / **`repair()` をキューに当てると日本語が壊れる（長さは末尾切り落とし・数字は削除）** / 切り抜き3chへゲート新規付与 / **09-11 の適用が14時間後も全ch生存＝上書き事故は止まった** / 集計ミス（111件→99件）を検証工程で自己発見 / **【夜間追記】config の `schedule` 変更は稼働中プロセスに反映されない（scp-lab が土曜に発火ゼロ・clip-animal は旧18:00のまま）・`title_gate_ok` が実データ0件＝コードも載っていない・横断キーワードゲートが飽和して2chで全件ブロック・ffmpeg 1800秒タイムアウトという新しい失敗経路** |
 | `projects/` | **各プロジェクト（YouTube各ch / aiseki / fanup / oripa 他）の状態。`~/.auto-memory/project_*.md` が接続フォルダ外で読めないため 09-11 にここへ新設した。** |
 
 > ⚠️ `~/.auto-memory/` は Cowork の接続フォルダ外にあり、**15夜連続で読めていない**。
@@ -63,13 +63,34 @@
 
 ### 基盤（2026-09-11 夜 更新）
 - **OAuth は 13ch 全滅**（09-08 失効4ch＋警告9ch → 09-10 全13ch `invalid_grant` → 09-11 も全13ch で `expires_at` が過去・`updated_at` は全て `expires_at + 8h` のまま＝**リフレッシュに一度も成功していない**）。恒久対策は GCP OAuth 同意画面を「テスト中」→「本番」へ公開（project 844705815004）。テスト中のままだとリフレッシュトークンが7日で強制失効し、再認可しても必ず1週間で再発する。
-- **ボトルネックは「アップロード」。09-11 は生成24本すべて completed に対し公開 0本**（09-10 は2本、09-09 は2本、09-08 は21本）。失敗理由は全件 `自動公開スキップ — トークン失効のため要再認可`。**動画は積み上がり続けている**（09-11 公開0本 / 09-12 も0本。最後の公開は09-10 の2本）。job_queue が completed でも公開されたとは限らない — 公開の真偽は `data/video_publish.db` の `video_status` で見ること。
-- **`ANTHROPIC_API_KEY` は `backend/.env` 18行目でコメントアウトされたまま（**13夜連続**・09-12 も未解除）**。これ1行で clip-lab の海外バイラル枠 / clip-kaneko のフック生成 / PDCA の Claude 分析 / series_engine の続編生成が同時に止まっている。`data/analytics/viral_translation_pending/` に未処理依頼が**16件**滞留（08-31〜09-12・件数は09-11から増えていない）。09-11 は clip-kaneko 3枠 / clip-lab viral 1枠 / clip-animal 1枠がこれで失敗した。**切り抜き系は「上げられない」以前に「作れていない」枠がある。**
+- **ボトルネックは「アップロード」。09-12 も生成21本すべて completed に対し公開 0本**（09-11 も0本、09-10 は2本、09-09 は2本、09-08 は21本）。失敗理由は全件 `自動公開スキップ — トークン失効のため要再認可`。**公開ゼロが 09-11・09-12 の2日連続で、動画は積み上がり続けている**（最後の公開は 09-10 の2本）。job_queue が completed でも公開されたとは限らない — 公開の真偽は `data/video_publish.db` の `video_status` で見ること。
+- **`ANTHROPIC_API_KEY` は `backend/.env` 18行目でコメントアウトされたまま（09-12 夜も未解除）**。これ1行で clip-lab の海外バイラル枠 / clip-kaneko のフック生成 / PDCA の Claude 分析 / series_engine の続編生成が同時に止まっている。`data/analytics/viral_translation_pending/` に未処理依頼が**17件**滞留（08-31〜09-12・09-12 に `viral_1we9dwn.json` が1件増えた）。09-12 は clip-kaneko 3枠 / clip-lab viral 1枠がこれで失敗した。**切り抜き系は「上げられない」以前に「作れていない」枠がある。**
 - **`logs/backend.log` が 79MB**（ローテーション未実装・09-12 時点。09-11 は81.4MB）。grep がタイムアウトするため障害調査の妨げになる。`tail -c` で末尾だけ読むこと。
 - ⚠️ **09-10 の「ホスト健全性 critical（swap 96% / 空きメモリ 72MB）」は誤記だった。** あれはサンドボックス（Linux VM）の値で、ユーザーの Mac の値ではない。**サンドボックスから mac 本体のメモリ・swap は測れない。**（09-11 23:10 の同計測は swap 0 / 空き1.8GB / ディスク76%。）
-- **analytics は 09-08 が最後のスナップショット。09-09/10/11/12 は video_metrics が0行**（**5日連続**）。`channel_metrics` は 09-05 で停止。原因は OAuth 全失効。**これが直るまで、毎日の指揮者タスクは「同じ 09-08 データの再解釈」しかできない。**
+- **analytics は 09-08 が最後のスナップショット。09-09〜09-12 は video_metrics が0行**（09-12 夜の再確認で **4日連続**）。`channel_metrics` は 09-05 で停止。原因は OAuth 全失効。**これが直るまで、毎日の指揮者タスクは「同じ 09-08 データの再解釈」しかできない。**
 - **ブラウザ収集は無人実行では原理的に不成立（17夜連続）**。内蔵ブラウザ＝youtube.com のサイト承認が無人で**明示的に却下**される（09-12 に `request_access` が declined を返すことを実測）/ Chrome MCP＝拡張が3台接続されており選択が必須 / サンドボックス直 fetch＝egress 未許可。**タスク定義を analytics.db 基準に書き換えるか、承認を事前付与するかの二択**。**毎晩3経路を試すのはやめ、1回試して即フォールバックすること**（09-12 は1コールで済ませた）。
 - **サンドボックスの LibreOffice（soffice）は OOM kill される**（exit 137 / 143）。xlsx skill の `recalc.py` が通らない日がある。**同じセッション内でも1回目が成功して2回目以降が死ぬ**（09-12 に実測）ので、「1回通ったから安全」ではない。→ **最初から `reports/inject_cached_values.py` を使うほうが速い**（**数式は残したままキャッシュ値だけ XML に注入する**ので、recalc 無しでも pandas / data_only=True / プレビューから値が読める）。注意点3つ: openpyxl は数式セルを `<f>…</f><v></v>`（空の v 付き）で書く / rels は `Target` を `Id` より**前**に書く / **`FormulaCache.put()` に渡す数式は先頭に `=` を付ける**（openpyxl は `=` 始まりの文字列だけを数式として扱うので、落とすとただの文字列セルになり注入0件。09-12 に踏んだ）。どれかを外すと0件マッチになる。
+
+### 反映されるもの・されないもの（2026-09-12 夜 判明・最重要）
+- 🔴 **`data/channels/*.json` の `autopilot.schedule` を直接書いても、稼働中の APScheduler には反映されない。**
+  cron を貼り直すのは `api_channel_autopilot._save_autopilot()` → **`_refresh_channel_job()`** の経路だけで、
+  この関数は **autopilot API 経由の保存**と**テーマキュー消費時**にしか呼ばれない。
+  - 実測1: scp-lab を 09-12 10:11 に「平日限定→週7日」へ変更したのに、**土曜の09-12 は1枠も発火せず生成0本**。登録/千 全ch1位(0.851)の ch を丸一日止めた。
+  - 実測2: clip-animal を 09-11 に 18:00→17:00 へ移したのに、**09-11・09-12 とも 18:00 に発火**（`publish_lead_minutes=0` なのでズレではない）。
+  - ⚠️ **自己強化する罠**: 発火しない ch はキューを消費しないので `_save_autopilot()` も走らず、**cron が永久に更新されない＝止まった ch は自力で復帰できない。**
+  - **対処**: schedule を変えたら **backend を再起動**するか **`PUT /api/channels/{id}/autopilot` を叩く**。
+- 🔴 **コード変更も再起動まで載らない。** `title_gate_ok` は 09-12 昼のコミット `64f919b` で実装されたが、
+  **未使用キュー256件(13ch) の全件にキーが無い**＝稼働系は旧コードのまま。
+  **「適用した」と「効いている」を分けて書くこと。** 効果の主張は再起動後の実データで裏を取る。
+- 反映される側: `title_rules` / `theme_blacklist` / `banned_words` など**発火時にディスクから読まれる**設定は直接書き込みで効く。**cron に焼かれる `schedule` だけが別枠。**
+- 🟠 **`auto_optimize_schedule: true` の ch は posting_optimizer が top-level `days_of_week` を書き換える。**
+  09-12 に company-facts が `[3,4,5]`（水木金）になっていた。各スロットが `days_of_week:[0..6]` を
+  持つ間は無害だが、**UI/API から schedule を編集した瞬間に top-level が採用されて週3日に落ちる**。
+- 🟠 **横断キーワードゲートは飽和すると無意味になる。** 09-12 は akashic-librarian 13件・2ch-matome 19件が
+  **キュー全件ブロック**され `all queued themes blocked — using first anyway` で結局1件目を使った。
+  **ゲートを強くする前に、ch別の答え提示語の割り当てを config に入れること。**
+- 🟠 **切り抜きの local エンジンは ffmpeg の 1800秒タイムアウトで落ちる**（ログ末尾30MBに14件・09-10〜09-11）。
+  `-preset medium -crf 20` の 1080x1920 合成が30分を超える。**「作れていない」原因は API キーだけではない。**
 
 ### 運用上の鉄則
 - **同じデータで2回意思決定しない**。新規の再生実績が無い日は config を変更しない（08-16 / 08-19 / 09-10 に適用）。二重適用すると効果の切り分けが永久に不能になる。
@@ -83,5 +104,6 @@
 - **`/Users/ayukiyamazaki/Developer/*` のマウントは unlink（ファイル削除）が一切できない**（EPERM）。帰結: `git add` / `commit` / `log` は動く（lock は rename で消費される）が、**`git status` は毎回 `.git/index.lock` を残し**、**`git merge` / `git checkout` は `unable to unlink old` で必ず失敗する**。
   - **マージ可否の判定は `/tmp` に `git clone -s` した作業用クローンで行う**（ext4 なので正常に動く）。
   - 残った lock は `rm` できないので `.git/stale_locks/` へ `mv` して退避する。`.git/stale_locks/` と `.git/_stale/` に溜まっているので**ホスト側で削除してよい**。09-11 22:13 に `HEAD.lock` が再生成された。
-  - **push はサンドボックスからできない**（GitHub 認証情報が無い）。09-11 夜時点で `youtube-factory` は origin/main に対し **15コミット先行**、`aiseki` は **4コミット先行**。ホストの端末で `git push origin main` が要る。
+  - **push はサンドボックスからできない**（GitHub 認証情報が無い）。09-12 夜時点で `youtube-factory` は origin/main に対し **22コミット先行**、`aiseki` は **4コミット先行**。ホストの端末で `git push origin main` が要る。
+  - 🆕 **upstream が設定されているのは aiseki / client-ops-platform / youtube-factory の3つだけ。** fanup / oripa / ai-english-coach / ai-orchestrator / rhythm-pop / claude-codex-bridge は upstream 未設定で、**「origin先行 0」は測定できていなかっただけ**（push 済みを意味しない）。
 - **前日の「ch内対照」の結論は翌日に独立再測する**。09-10 の「scp-lab は疑問形が明確に負」は誤りで、独立再測すると 2.62倍で正だった（閾値を振っても leave-one-out でも不動）。n が小さい ch内対照は符号ごと反転しうる。**片側が5本未満なら判定しない。**
