@@ -814,5 +814,29 @@
     "chatgpt_thread_url": "https://chatgpt.com/c/6a9af6cf-2218-83e8-80fa-40a9e2bd6017",
     "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
     "updated_at": "2026-09-05T15:09:08+00:00"
+  },
+  "title_rules": {
+    "enforced_by_backend": true,
+    "hard_constraints": {
+      "max_chars": 48,
+      "banned_words": [
+        "秘密"
+      ],
+      "forbid_patterns": [
+        {
+          "pattern": "(?:9\\s*9|９\\s*９)\\s*[%％]",
+          "label": "99%が知らない型の希少性ワード"
+        },
+        {
+          "pattern": "#\\d+[：:]",
+          "label": "連番プレフィックス"
+        },
+        {
+          "pattern": "[\\U0001F300-\\U0001FAFF\\u2600-\\u27BF\\u2B00-\\u2BFF\\uFE0F]",
+          "label": "絵文字"
+        }
+      ],
+      "_note_20260912": "【2026-09-12 新規付与】この3chは hard_constraints 未設定のため title_constraints.is_enforced() が False になり、検査が丸ごとスキップされていた。禁止したはずの負け型が素通りする状態。min_effective_chars と require_any_of は入れない — タイトルが発言の引用なので、文字数下限や語の必須化は誤引用を作りうる（09-11 の判断を踏襲）。禁止系だけなら引用を壊さない。"
+    }
   }
 }

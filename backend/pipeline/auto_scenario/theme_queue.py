@@ -301,6 +301,55 @@ def prioritize_trending(channel_id: str) -> Dict[str, Any]:
 # Replenish (LLM-driven)
 # ---------------------------------------------------------------------------
 
+def _annotate_title_gate(item: Dict[str, Any], channel) -> Dict[str, Any]:
+    """補充したキュー項目に `title_constraints` の検査結果を**印として**付ける。
+
+    【2026-09-12】キュー補充は `title_constraints` を一度も通っていなかった。
+    結果、各chが自分で設定したゲートに自分のキューが落ちる状態になっていた
+    （11ch・未公開111件のうち合格24件＝21.6%）。最悪だったのは company-facts で、
+    12件全部が**自ch の `banned_words` にある絵文字**を先頭に付けて100%自滅していた。
+
+    ここでは **弾かない**。弾くと「キュー全件ブロック」（09-11 に発生）を再発させる。
+    印を付けるだけにして、
+
+      - 台本生成側は `title_gate_ok=False` の項目のタイトルを**作り直す前提**で扱える
+      - `prioritize_trending` などの並べ替えが合格品を先に出せる
+      - 指揮者タスクが「補充が何割ゲートに落ちているか」を毎日観測できる
+
+    機械修復（`title_constraints.repair`）はここでは**呼ばない**。09-12 に実測したところ、
+    長さ違反を末尾切り落としで、数字違反を数字削除で通そうとするため日本語が壊れる
+    （「…外見が起こした財団史上最恐の収容違反」→「…外見が起こしの真相」）。
+    違反数は減るが公開できないタイトルが「合格」として通るので、検査より悪い。
+    """
+    title = item.get("title")
+    if not title:
+        return item
+    try:
+        from pipeline import title_constraints as _tc
+
+        # ChannelProfile は生 JSON を `_raw` に持つ（generator._enforce_title_constraints
+        # と同じ経路を使う。ここを取り違えると is_enforced が常に False になる）。
+        cfg = getattr(channel, "_raw", None)
+        if cfg is None:
+            cfg = channel if isinstance(channel, dict) else {}
+        if not _tc.is_enforced(cfg):
+            return item
+        res = _tc.check(title, cfg)
+        item["title_gate_ok"] = bool(res.get("ok"))
+        if not res.get("ok"):
+            item["title_gate_violations"] = [
+                v.get("label") for v in res.get("violations", []) if v.get("label")
+            ]
+            item["title_gate_advice"] = res.get("advice") or []
+            print(
+                f"  🚧 queue title fails gate: '{title}' "
+                f"→ {item['title_gate_violations']}"
+            )
+    except Exception as e:  # 検査の失敗で補充そのものを落とさない
+        print(f"  ⚠️ title gate annotation failed: {e}")
+    return item
+
+
 def replenish(
     channel,
     scenario_generator,
@@ -373,6 +422,7 @@ def replenish(
                 if hit is not None:
                     print(f"  ♻️ replenish skipped near-dup: '{item['title']}' ≈ '{hit[0]}' ({hit[1]:.2f})")
                     continue
+            _annotate_title_gate(item, channel)
             q.setdefault("items", []).append(item)
             keys.add(item["title"].lower())
             dup_refs.append(item["title"])

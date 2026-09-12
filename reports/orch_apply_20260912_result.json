@@ -1,0 +1,179 @@
+{
+  "changes": [
+    {
+      "channel": "company-facts",
+      "before": "💸任天堂の年収988万円、実は開発職の正体",
+      "after": "任天堂の年収988万円、実は開発職の正体",
+      "violations_before": 2,
+      "violations_after": 0,
+      "passes_now": true
+    },
+    {
+      "channel": "company-facts",
+      "before": "💸キーエンスの年収2067万円、その中身の正体",
+      "after": "キーエンスの年収2067万円、その中身の正体",
+      "violations_before": 2,
+      "violations_after": 0,
+      "passes_now": true
+    },
+    {
+      "channel": "company-facts",
+      "before": "📉ニトリの年収875万円、配転3年ルールの正体",
+      "after": "ニトリの年収875万円、配転3年ルールの正体",
+      "violations_before": 3,
+      "violations_after": 1,
+      "passes_now": false
+    },
+    {
+      "channel": "company-facts",
+      "before": "💰伊藤忠の年収1753万円、朝型勤務の正体",
+      "after": "伊藤忠の年収1753万円、朝型勤務の正体",
+      "violations_before": 2,
+      "violations_after": 0,
+      "passes_now": true
+    },
+    {
+      "channel": "company-facts",
+      "before": "💸日本郵政の年収650万円、手当7種の正体",
+      "after": "日本郵政の年収650万円、手当7種の正体",
+      "violations_before": 3,
+      "violations_after": 1,
+      "passes_now": false
+    },
+    {
+      "channel": "company-facts",
+      "before": "📉ファーストリテイリングの年収959万円の正体",
+      "after": "ファーストリテイリングの年収959万円の正体",
+      "violations_before": 2,
+      "violations_after": 0,
+      "passes_now": true
+    },
+    {
+      "channel": "company-facts",
+      "before": "💰ソフトバンクの年収1250万円、成果給の正体",
+      "after": "ソフトバンクの年収1250万円、成果給の正体",
+      "violations_before": 2,
+      "violations_after": 0,
+      "passes_now": true
+    },
+    {
+      "channel": "company-facts",
+      "before": "💸JALの年収782万円、乗務手当の正体",
+      "after": "JALの年収782万円、乗務手当の正体",
+      "violations_before": 2,
+      "violations_after": 1,
+      "passes_now": false
+    },
+    {
+      "channel": "company-facts",
+      "before": "📉サントリーの年収1146万円、非上場の正体",
+      "after": "サントリーの年収1146万円、非上場の正体",
+      "violations_before": 2,
+      "violations_after": 0,
+      "passes_now": true
+    },
+    {
+      "channel": "company-facts",
+      "before": "💰NTTドコモの年収872万円、リモート率の正体",
+      "after": "NTTドコモの年収872万円、リモート率の正体",
+      "violations_before": 2,
+      "violations_after": 0,
+      "passes_now": true
+    },
+    {
+      "channel": "company-facts",
+      "before": "💸味の素の年収1069万円、育休取得率の正体",
+      "after": "味の素の年収1069万円、育休取得率の正体",
+      "violations_before": 2,
+      "violations_after": 0,
+      "passes_now": true
+    },
+    {
+      "channel": "company-facts",
+      "before": "📉ゼンショーの年収580万円、店長手当の正体",
+      "after": "ゼンショーの年収580万円、店長手当の正体",
+      "violations_before": 2,
+      "violations_after": 0,
+      "passes_now": true
+    }
+  ],
+  "conformance": [
+    {
+      "channel": "scp-lab",
+      "enforced": true,
+      "queue_pending": 23,
+      "queue_pass": 1,
+      "queue_pass_rate": 4.3
+    },
+    {
+      "channel": "daily-science",
+      "enforced": true,
+      "queue_pending": 12,
+      "queue_pass": 0,
+      "queue_pass_rate": 0.0
+    },
+    {
+      "channel": "pokemon-lab",
+      "enforced": true,
+      "queue_pending": 10,
+      "queue_pass": 7,
+      "queue_pass_rate": 70.0
+    },
+    {
+      "channel": "yokai-watch",
+      "enforced": true,
+      "queue_pending": 10,
+      "queue_pass": 0,
+      "queue_pass_rate": 0.0
+    },
+    {
+      "channel": "2ch-matome",
+      "enforced": true,
+      "queue_pending": 12,
+      "queue_pass": 9,
+      "queue_pass_rate": 75.0
+    },
+    {
+      "channel": "company-facts",
+      "enforced": true,
+      "queue_pending": 12,
+      "queue_pass": 9,
+      "queue_pass_rate": 75.0
+    },
+    {
+      "channel": "clip-lab",
+      "enforced": true,
+      "queue_pending": 0,
+      "queue_pass": 0,
+      "queue_pass_rate": null
+    },
+    {
+      "channel": "clip-fukada",
+      "enforced": true,
+      "queue_pending": 0,
+      "queue_pass": 0,
+      "queue_pass_rate": null
+    },
+    {
+      "channel": "clip-kaneko",
+      "enforced": true,
+      "queue_pending": 0,
+      "queue_pass": 0,
+      "queue_pass_rate": null
+    },
+    {
+      "channel": "fake-paper",
+      "enforced": true,
+      "queue_pending": 10,
+      "queue_pass": 4,
+      "queue_pass_rate": 40.0
+    },
+    {
+      "channel": "akashic-librarian",
+      "enforced": true,
+      "queue_pending": 10,
+      "queue_pass": 3,
+      "queue_pass_rate": 30.0
+    }
+  ]
+}
