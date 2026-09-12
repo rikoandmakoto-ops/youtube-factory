@@ -2,7 +2,7 @@
 
 1. theme_queue の補充がタイトル機械ゲートを通ること（`_annotate_title_gate`）。
    09-12 時点で補充は `title_constraints` を一度も通っておらず、
-   各chが自分で設定したゲートに自分のキューが落ちていた（111件中 合格24件）。
+   各chが自分で設定したゲートに自分のキューが落ちていた（99件中 合格24件）。
 2. 切り抜き3ch の `hard_constraints` が実際に `is_enforced()` を True にすること。
    未設定chは検査が丸ごとスキップされるので「設定したのに何も起きない」になる。
 3. キューの機械修復に `title_constraints.repair()` を使わないこと。
