@@ -1730,6 +1730,62 @@
       "before": "-",
       "after": "指揮者からの trigger は発行せず",
       "reason": "サンドボックスから localhost:8000 に到達不可。かつ backend の APScheduler が 09-11 に6ch全てで発火済(daily-science 06:45 / company-facts 07:30 / pokemon-lab 07:45 / 2ch-matome 08:15 / scp-lab 08:15 / yokai-watch 08:45)。二重起動を避けた。"
+    },
+    {
+      "date": "2026-09-11n",
+      "target": "daily-science / scp-lab",
+      "field": "theme_seeds",
+      "before": "素の文字列が混在（daily-science 6件 / scp-lab 3件）",
+      "after": "全26件ずつを {title, angle} の dict に正規化（.bak_pdca_20260911n に退避）",
+      "reason": "suggest_themes が 'str' object has no attribute 'get' で落ち、genre_blacklist の差し替え経路が常に失敗して停止ジャンルのテーマがそのまま採用されていた。"
+    },
+    {
+      "date": "2026-09-11n",
+      "target": "backend/pipeline/auto_scenario/generator.py",
+      "field": "ScenarioGenerator.suggest_themes",
+      "before": "[s['title'] for s in channel.theme_seeds if s.get('title')]",
+      "after": "文字列/dict の両方を吸収するループに変更",
+      "reason": "設定の書き方ひとつで機能が無言で死ぬのを防ぐ（13ch共通）。"
+    },
+    {
+      "date": "2026-09-11n",
+      "target": "backend/pipeline/auto_scenario/generator.py",
+      "field": "_sanitize_regenerated_title（新設）＋ _regenerate_title_* 3経路の戻り値",
+      "before": ".strip('「」\"\\'　 ') のみ",
+      "after": "対になっていない/順序が逆の括弧の破片と末尾区切り記号を除去。8字未満は None で元題を維持",
+      "reason": "『…仕組み、】【の実態』がフォルダ名・サムネ・説明文・mp4 まで貫通した（job 1a6e3105）。"
+    },
+    {
+      "date": "2026-09-11n",
+      "target": "backend/pipeline/auto_scenario/cross_channel_gate.py",
+      "field": "ANSWER_MARKER_DAILY_LIMIT",
+      "before": "3",
+      "after": "6",
+      "reason": "朝の『なぜ型』統一で1語が上限を即消費し、キュー全体がブロック（当日16回）。18本/日に対し6なら1語への全寄りは防げる。"
+    },
+    {
+      "date": "2026-09-11n",
+      "target": "backend/tests/test_title_gates_20260904.py",
+      "field": "テスト",
+      "before": "上限3を直書き＋サニタイズ/seed形状の検査なし",
+      "after": "上限は『枠数未満』で検査。RegeneratedTitleSanitizeTest(5件) と ThemeSeedShapeTest(2件) を追加",
+      "reason": "今回の3件の修正を回帰として固定。同ファイル24件・全pass。"
+    },
+    {
+      "date": "2026-09-11n",
+      "target": "(判定のみ)",
+      "field": "genre_blacklist",
+      "before": "-",
+      "after": "追加なし",
+      "reason": "30%ルール再判定。該当は daily-science『宇宙・天体』(avg 0/n=6) と scp-lab『オブジェクトクラス』(avg 0/n=2) のみで、いずれも登録済（4日連続で新規なし）。"
+    },
+    {
+      "date": "2026-09-11n",
+      "target": "(見送り)",
+      "field": "theme_blacklist",
+      "before": "-",
+      "after": "追加なし",
+      "reason": "本日の類似ペアは題材ではなくタイトルの型が似ているだけ（yokai 0.823/0.818、pokemon 0.744）。blacklist に入れると正当な題材を禁止するため見送り、類似度計算側の修正を提案に回した。"
     }
   ]
 }

@@ -197,6 +197,28 @@
       "status": "skipped",
       "note": "尺 200s が範囲外",
       "seen_at": "2026-09-11T20:47:34"
+    },
+    "reddit:1we5nxh": {
+      "post_id": "1we5nxh",
+      "platform": "reddit",
+      "title": "a fun little prank",
+      "media_url": "https://v.redd.it/7p0rh7ogh1ph1/HLSPlaylist.m3u8",
+      "permalink": "https://www.reddit.com/r/Unexpected/comments/1we5nxh/a_fun_little_prank/",
+      "community": "r/unexpected",
+      "author": "luv_thorkabapp",
+      "score": 0,
+      "num_comments": 0,
+      "created_utc": 0.0,
+      "duration_sec": 0.0,
+      "over_18": false,
+      "nsfw_verified": false,
+      "origin": "reddit_rss:unexpected:w3",
+      "local_path": null,
+      "gate_ok": true,
+      "gate_reason": "内容ゲート通過（NSFWフラグなし・禁止語なし）",
+      "status": "skipped",
+      "note": "尺を取得できない: SSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020\n  warnings.warn(\nDeprecated Feature: Support for Python ",
+      "seen_at": "2026-09-12T20:47:35"
     }
   }
 }

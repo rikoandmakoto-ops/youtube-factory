@@ -1,7 +1,7 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1789047207,
+    "generated_at": 1789133583,
     "analyzed_videos": 3,
     "aggregate_drops_by_bucket": {
       "intro": 0.0101,
@@ -160,29 +160,29 @@
     "channel_id": "scp-lab",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789047317
+    "generated_at": 1789133681
   },
   "pokemon-lab": {
     "channel_id": "pokemon-lab",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789047240
+    "generated_at": 1789133611
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789047363
+    "generated_at": 1789133722
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789047053
+    "generated_at": 1789133447
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1789047212,
+    "generated_at": 1789133587,
     "analyzed_videos": 1,
     "aggregate_drops_by_bucket": {
       "intro": 0.0122,
@@ -227,7 +227,7 @@
   },
   "akashic-librarian": {
     "channel_id": "akashic-librarian",
-    "generated_at": 1789047055,
+    "generated_at": 1789133449,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0169,
@@ -339,11 +339,11 @@
     "channel_id": "clip-animal",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789047056
+    "generated_at": 1789133449
   },
   "clip-fukada": {
     "channel_id": "clip-fukada",
-    "generated_at": 1789047071,
+    "generated_at": 1789133463,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0155,
@@ -475,7 +475,7 @@
   },
   "clip-kaneko": {
     "channel_id": "clip-kaneko",
-    "generated_at": 1789047113,
+    "generated_at": 1789133498,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0047,
@@ -549,7 +549,7 @@
   },
   "clip-lab": {
     "channel_id": "clip-lab",
-    "generated_at": 1789047133,
+    "generated_at": 1789133515,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0168,
@@ -683,6 +683,6 @@
     "channel_id": "company-facts",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789047172
+    "generated_at": 1789133549
   }
 }

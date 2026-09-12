@@ -1199,6 +1199,36 @@
       "date": "2026-09-11",
       "id": "daily-science-blacklist-vs-dedup-test-conflict",
       "note": "【要対応・次サイクル】backend/tests/test_fixes_20260909.py の TestDailyScienceBlacklist.test_no_regression_in_duplicate_prevention が失敗している(09-11 以前からの既存失敗)。09-09 に daily-science の theme_blacklist から『録音』等の広域語を外した結果、過去の『あくび』『骨伝導/録音』系8タイトルを重複判定できなくなった。一方 09-10 のメモでは再生上位40本のうち『録音』が12本(30%)を占めるため領域ごと塞ぐのは不可という判断。解は『領域語の復活』ではなく、フレーズ単位(例: 自分の声＋録音、あくび＋うつる)の狭いパターンを theme_blacklist に足すこと。次サイクルで実装する。"
+    },
+    {
+      "date": "2026-09-11n",
+      "id": "regenerated-title-emitted-bracket-garbage",
+      "note": "【公開物の品質・新規・本日修正】company-facts の job 1a6e3105 で、横断語の再生成が『個人向け国債、年0.05%でも元本割れしにくい仕組み、】【』という壊れた題名を返し、それが出力フォルダ名・サムネ文字・説明文・レンダ済みmp4まで貫通した（OAuth失効で未アップのため公開は免れた）。_regenerate_title_with_bans の戻り値は .strip('「」') しか通っておらず、括弧の破片も末尾の読点も誰も見ていなかった。当日ログに『】【』が14回。対処: _sanitize_regenerated_title を新設し、対になっていない/順序が逆の括弧の破片と末尾区切り記号を落とし、8字未満なら None（＝元題を維持）にした。個数照合だけでは『】【』は counts が一致して素通りするので、左からの走査で判定している。"
+    },
+    {
+      "date": "2026-09-11n",
+      "id": "string-theme-seeds-silently-disabled-genre-blacklist",
+      "note": "【設定の形が機能を殺していた・新規・本日修正】daily-science 6件 / scp-lab 3件の theme_seeds が dict ではなく素の文字列で入っており、suggest_themes 冒頭の `s.get('title')` が 'str' object has no attribute 'get' で落ちていた。これは genre_blacklist で却下されたテーマの差し替え経路そのもので、呼び出し元が例外を握り潰して『非重複の代替テーマが見つからず、元の〇〇で続行します』と**却下したはずのテーマを採用**する。09-11 18:15 の scp-lab で実測（停止ジャンル『財団組織・職員』のテーマがそのまま生成された）。つまり 08-22 以降に積み上げた genre_blacklist は、この2chでは一度も効いていなかった可能性がある。対処: 全seedを dict に正規化＋suggest_themes 側で文字列を吸収。設定の書き方ひとつで機能が無言で死ぬ型なので、他の `.get(` 直呼びも同様に疑うこと。"
+    },
+    {
+      "date": "2026-09-11n",
+      "id": "why-style-convergence-jams-cross-channel-gate",
+      "note": "【朝の施策の二次作用・新規】09-11 朝に4ch（scp/yokai/daily-science/2ch）の第一候補を『なぜ型』に揃えた結果、cross_channel_gate の ANSWER_MARKER_DAILY_LIMIT=3 を「なぜ」1語で即座に使い切り、キューが全件なぜ型の ch ではキュー全体がブロックされた。当日ログで『all queued themes blocked (dup/cross-ch) — using first anyway』16回・cross-ch keyword block 336回。ブロックしても結局 first を使うので、現状このゲートはキューの順序選択を無効化するノイズにしかなっていない。対処: 上限を 3→6 に引き上げ（6ch×3枠=18本/日に対し、1語への全寄りは依然防げる）。教訓: 文体を全ch共通で最適化すると、横断ゲートは『題材の共食い』ではなく『文体』を弾き始める。"
+    },
+    {
+      "date": "2026-09-11n",
+      "id": "dup-detector-now-fires-on-title-template-not-topic",
+      "note": "【判定の劣化・新規・要対応】本日の dup_check は yokai『おでんじんだけ夜道に立つ』↔『ロボニャンだけ未来から来た』0.823、『スネイキーに隠された秘密』↔『かまいたちの元ネタが怖すぎる』0.818、pokemon『レックウザは空から降りない』↔『けつばんの正体』0.744 を類似と判定している。題材（おでんじん/ロボニャン、レックウザ/けつばん）は全く別で、似ているのは『なぜ〇〇だけ〜？隠された秘密【ショート】』という**型**だけ。文体を揃えた副作用で類似度が構造的に嵩上げされており、このまま theme_blacklist に流すと正当な題材を誤って禁止する。本日は blacklist 追加を見送った。対処案: 類似度計算の前に型語（なぜ/だけ/本当の理由/隠された秘密/ショート/元ネタ）を除去し、題材語だけで比較する。"
+    },
+    {
+      "date": "2026-09-11n",
+      "id": "renders-go-to-desktop-not-repo",
+      "note": "【調査メモ・誤読防止】生成済み動画とサムネの実体は /Users/ayukiyamazaki/Desktop/動画出力用/<題名>/ に出る（さらに iCloud の『動画出力』へ同期）。リポジトリ配下の data/thumbnails は別系統で、最終更新は 09-10 00:02。指揮者のサンドボックスからは Desktop が見えないため、『repo に mp4 が無い＝生成が止まっている』と読むのは誤り。09-11 も MoviePy のレンダは実際に完走している（アップロードのみ OAuth で全滅）。今後この観点で『生成停止』と報告しないこと。"
+    },
+    {
+      "date": "2026-09-11n",
+      "id": "image-bridge-consumer-fully-stopped",
+      "note": "【サムネ・ブロッカーの経過】image_requests は pending 296件（09-08:57 / 09-09:7 / 09-10:151 / 09-11:81）、delivered 0、failed 235。failed の最終は 09-08 で、以降は1件も failed に落ちていない＝『試して失敗している』のではなく**配送側が完全に止まっている**。09-06 時点の pending 131 から +165。サムネ背景がプレースホルダのグラデーションのままである状態は 09-06 の報告から変化なし（実見で確認）。OAuth と並ぶ2大ブロッカーで、こちらは再認可では直らない。"
     }
   ]
 }

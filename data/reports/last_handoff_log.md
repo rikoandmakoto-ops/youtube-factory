@@ -1,12 +1,12 @@
 # Daily Handoff Log
 
-**実行日時**: 2026-09-10 23:15 JST
+**実行日時**: 2026-09-11 23:15 JST
 **タスク**: daily-project-handoff
-**フルレポート**: `data/reports/project_handoff_2026-09-10.md`
-**前回**: 2026-09-09 23:15 / **参照した文脈**: `last_handoff_log.md`(09-09分)、`last_merge_log.md`(09-10 22:09)、`.auto-memory/INDEX.md`、`.auto-memory/2026-09-10.md`
+**フルレポート**: `data/reports/project_handoff_2026-09-11.md`
+**前回**: 2026-09-10 23:15 / **参照した文脈**: `last_handoff_log.md`(09-10)、`last_merge_log.md`(09-11 22:20)、`.auto-memory/INDEX.md`、`.auto-memory/2026-09-11.md`
 
-> ✅ `.auto-memory` は 09-10 のマージタスクが `youtube-factory/.auto-memory/` へ移設したため**今回は読めた**。「13日連続で読めない」課題はクローズ。
-> ℹ️ 今回は bash が最後まで完走。git・sqlite・ログ・スケジューラ状態を全て実測で取得した。
+> ℹ️ bash は完走。git・sqlite・ログ・スケジューラ・サイト疎通を全て実測。
+> ℹ️ `.auto-memory` は repo 内（`youtube-factory/.auto-memory/`）から正常に読めた。
 
 ---
 
@@ -14,114 +14,129 @@
 
 | プロジェクト | ステータス | 一行サマリ |
 |---|---|---|
-| youtube-factory | 🔴 **出口封鎖** | **全13ch の OAuth トークンが失効**し自動公開が48回スキップ。09-10 の公開は2本（08時以降0本）。一方で**レンダ遅延は解決**（3〜44 it/s）、ジョブ滞留も0。作業ツリー未コミット4・未 push **8件** |
-| aiseki | 🟢 進捗停止・人手待ち | 09-09/09-10 コミット0（2日連続）。作業ツリークリーン。未 push 4件（3日連続）。https://aisekimatch.com は稼働確認 |
-| ai-english-coach | 🔵 凍結 | コード最終変更 08-18＝**23日**停止。未コミット0。**Gitリモート未設定のまま** |
-| fanup | 🟡 MVP完了・集客未着手 | `2681dfd`(08-31) から11日変化なし。未コミット25件。サイト稼働 |
-| oripa | 🟡 Phase1 MVP | 最終コミット 08-11（30日）。`feat/stripe-checkout` が**未マージ9件**。未コミット1 |
-| 切り抜きラボ(clip-lab) | 🟡 稼働・**転換ほぼゼロ** | 30日 43,389再生で登録**+2**。バイラル枠は10夜連続で APIキー未設定により失敗 |
+| youtube-factory | 🔴 **出口封鎖（悪化）** | 09-11 の公開 **0本**。最終公開 09-10 07:45 から**約40時間ゼロ**。生成は24本 completed で正常（queued 0・新規失敗0）。OAuth 13ch 全失効・再認可なし。未 push **8→17コミットに倍増** |
+| aiseki | 🟢 進捗停止・人手待ち | コミット0が **3日連続**（最終 09-08 22:08）。作業ツリークリーン。未 push 4件（4日連続）。https://aisekimatch.com 稼働確認。未適用マイグレーションなし |
+| ai-english-coach | 🔵 凍結 | コード最終変更 08-18＝**24日**停止。未コミット0。**Gitリモート未設定のまま** |
+| fanup | 🟡 MVP完了・集客未着手 | `2681dfd`(08-31) から12日変化なし。未コミット25件。サイト稼働 |
+| oripa | 🟡 Phase1 MVP・決済未着手 | 最終コミット 08-11＝**31日**。`feat/stripe-checkout` 未マージ。未コミット1 |
+| 切り抜きラボ(clip-lab) | 🟡 稼働・転換ほぼゼロ | 30日 43,389再生で登録**+2**（0.046/千）。clip-animal は30日で再生17・登録0なのに autopilot ON |
 | rhythm-pop | ✅ 完成済み | 06-22 以降変化なし。未コミット19件・リモート未設定 |
 | claude-codex-bridge | ✅ 完成済み | 07-04 以降変化なし。未コミット1・リモート未設定 |
+
+---
 
 ## 2. 検出した課題
 
 ### ✅ 今回 解決を確認（次回「要対応」として報告しないこと）
 
-- **前回N1「レンダが150〜800倍遅い」→ 解決。** 末尾ログで `3.07〜3.29 it/s`、終盤 `44.37it/s`。11時間級ジョブは消滅
-- **前回N3「`job_queue.json` の永続化が壊れている（78回）」→ 再発なし。** `persist failed` 0件。全578ジョブが completed 570 / failed 7 / cancelled 1 で **queued 0**（滞留22件は消化）
-- **前回N2「JSON と APScheduler の乖離」→ 解消。** 全13ch の再スケジュールがディスク設定と一致（scp-lab は平日 09/13/19 の3枠を維持）
-- **前回N4「`daily-pdca-report` が未実行」→ 実行された。** `lastRunAt` = 09-10 00:05 JST。`vercel-migration-reminder` も 09-10 に実行
-- **前回#11「`.auto-memory` が読めない（13日連続）」→ クローズ。** repo 内へ移設済み
-- **前回#14 系「aiseki の未適用マイグレーション」→ 引き続き該当なし。** `migration_referral_guard.sql` は HANDOFF に「✅適用済」。残るのは `apply_migrations.command` への未登録のみ（低優先）
-- ⚠️ **前回「サムネ403は0回」は解決ではなかった。** 今回**10件で再発**を確認 → 未解決へ差し戻し
+- **前回N4「`viral_translation_pending` に15件滞留」→ 解決。** ディレクトリごと消滅（09-11 のマージ整理で処理済み）。
+- **前回N5「`.git/index.lock` が残存」→ 解消。** `index.lock` は消えた（残るのは `HEAD.lock` 1件のみ）。
+- **「レンダ150〜800倍遅い」→ 再発なし。** 合成1回 15ms / load 0.2。健全域。
+- **`job_queue.json` の永続化破壊 → 再発なし。** 602件中 completed 594 / failed 7（全て旧いもの）/ queued **0**。
+- **aiseki の未適用マイグレーション → 引き続き該当なし。**
+- **`.auto-memory` が読めない → クローズ済み**（今回も正常に読めた）。
+- ⚠️ **サムネ403は「解決」ではない。** 検出0件だが**公開が0本でサムネ設定が呼ばれていない**だけ。再認可後に再測すること（＝判定保留）。
 
 ### ❌ 未解決
 
-| # | 内容 | 継続 | 09-10 の実測 |
+| # | 内容 | 継続 | 09-11 の実測 |
 |---|---|---|---|
-| 1 | `ANTHROPIC_API_KEY` 未設定（`backend/.env` 18行目） | **10夜連続** | clip-lab viral / clip-kaneko フック生成が中止 |
-| 2 | サムネイル `thumbnails/set` の HTTP 403（本人確認未了） | **10夜連続** | 10件再発 |
-| 3 | GCP OAuth 同意画面が「テスト中」（project 844705815004） | **期限超過** | 全ch失効の根本原因。未対応 |
-| 4 | `channel_metrics` の詰まり | 継続 | **09-05 が最終**（6日欠測）・9chのみ |
-| 5 | 画像ブリッジ `threads.json` が空 | 継続 | `{}` のまま。failed 235件 |
-| 6 | clip-lab の転換ほぼゼロ | 継続 | 43,389再生で登録+2 |
-| 7 | clip-animal 実質停止 | 継続 | 30日で再生17・登録0。autopilot は ON |
-| 8 | aiseki: Twilio トライアル / Instagram DM ワーカー未ログイン | 継続 | 変化なし |
-| 9 | ai-english-coach: Gitリモート未設定 | **23日** | `git remote -v` が空 |
-| 10 | `.git` のゴミ | 継続・増加 | `tmp_obj_*` **550件** / `*.stale.*` **68件** / `_stale_junk/` 14件 |
+| 1 | GCP OAuth 同意画面が「テスト中」（project 844705815004） | 期限超過 | 未対応。全失効の根本原因 |
+| 2 | YouTube 13ch の再認可 | **4日** | 13ch すべて `invalid_grant`。トークン更新時刻は 09-09 以前 |
+| 3 | `ANTHROPIC_API_KEY` 未設定（`backend/.env` 18行目） | **12夜連続** | 本日9回スキップ |
+| 4 | `video_metrics` の欠測 | **4日** | 最終 09-08 |
+| 5 | `channel_metrics` の欠測 | **6日** | 最終 09-05。**登録者数が出せない** |
+| 6 | 画像ブリッジ `threads.json` が空 | 継続 | `{}` / delivered 0 / images 0 |
+| 7 | clip-lab の転換ほぼゼロ | 継続 | 43,389再生で登録+2 |
+| 8 | clip-animal 実質停止なのに autopilot ON | 継続 | 30日で再生17・登録0 |
+| 9 | aiseki: Twilio トライアル / Instagram DM ワーカー未ログイン | 継続 | 変化なし |
+| 10 | ai-english-coach: Gitリモート未設定 | **24日** | `git remote -v` が空 |
 | 11 | fanup 25件 / rhythm-pop 19件 の未コミット | 継続 | 変化なし |
-| 12 | oripa `feat/stripe-checkout` 未マージ9件 | **30日** | 変化なし |
+| 12 | oripa `feat/stripe-checkout` 未マージ | **31日** | 変化なし |
+| 13 | `logs/backend.log` のローテーション未実装 | 継続 | 81MB |
+| 14 | 横断テーマゲート多発（テーマ枯渇の兆候） | 継続 | 本日25回（前回24回） |
+| 15 | サムネ `thumbnails/set` の 403 | 判定保留 | 検出0だが公開0のため判定不能 |
 
 ### 🆕 NEW（今回はじめて検出）
 
 | # | 内容 | 判断材料 |
 |---|---|---|
-| **N1** | 🚨🚨 **OAuth 失効が4ch → 全13ch へ拡大。自動公開が100%停止** | `latest.md` の寿命表が13ch全て「失効」。`自動公開スキップ ... トークン失効のため要再認可` が**48回**。09-10 の公開は08時前の2本のみ。`.auto-memory` の「残り9chは09-10前後に失効する」という予測が的中 |
-| **N2** | 🚨 **「生成は正常・公開だけ落ちる」の切り分けが確定** | job_queue は completed 570 / queued 0、レンダも正常。**作った動画が出口で捨てられている**＝制作コストだけ発生 |
-| **N3** | ⚠️ **画像ブリッジの `pending` が 215件に積み上がった** | pending 215 / failed 235 / **delivered 0** / images 0。一度も納品できていない |
-| **N4** | ⚠️ **`viral_translation_pending` に翻訳依頼書が15件滞留** | APIキー未設定のたびに依頼書だけ増えている |
-| **N5** | ⚠️ **`.git/index.lock` が残存、サンドボックスから削除不可** | マウント上で `unlink` 禁止。`git status` が warning を出す |
-| **N6** | ℹ️ **2ch-matome の横断テーマゲートが1回で24件スキップ** | テーマ枯渇の兆候。生成再開時のボトルネック候補 |
+| **N1** | 🚨🚨 **公開が完全にゼロ（09-11: 0本）** | 09-09=2 / 09-10=2 → 09-11=**0**。最終公開 `2026-09-10T07:45:22`（`video_publish.db`）から約40時間ゼロ |
+| **N2** | 🚨 **未 push が 8 → 17コミットに倍増** | 09-11 のマージタスクが6＋ログ1、夜の進捗タスクが1を積んだが push は認証不可。**4日連続**。消失リスクが倍増 |
+| **N3** | ⚠️ **画像ブリッジ pending が 215 → 296（+81／日）** | delivered 依然0。滞留が加速 |
+| **N4** | ⚠️ **`.git/objects` の `tmp_obj_*` が 550 → 約810（+260以上）** | サンドボックスから unlink 不可のため増える一方（本タスクの数分でも 807→816） |
+| **N5** | ⚠️ **マージがコンフリクトで中断**（`orch-20260911-followup`） | `data/channels/2ch-matome.json` の `theme_queue` で衝突。手動判断待ち |
+| **N6** | ℹ️ **生成24本／公開0本の非対称が定常化** | 09-09 以降に作った約70本が未公開。再認可までは autopilot を絞る判断もありうる |
+
+---
 
 ## 3. ユーザー手動待ちタスク一覧
 
-**今すぐ（09-11 朝）— この順番で**
+**今すぐ（09-12 朝）— この順番で**
 
-1. 🚨🚨 **GCP OAuth 同意画面を「テスト中」→「本番」に公開**（project 844705815004）※必ずこれを先に。逆順だと7日後にまた全滅
+1. 🚨🚨 **GCP OAuth 同意画面を「テスト中」→「本番」に公開**（project 844705815004）※必ず先に。逆順だと7日後にまた全滅
 2. 🚨🚨 **YouTube 13ch を再認可**（ダッシュボード → チャンネル設定 → YouTube連携）
-3. 🚨 `backend/.env` 18行目の `ANTHROPIC_API_KEY` を有効化（**10夜連続**）
-4. 🚨 YouTube 13ch の電話番号確認（youtube.com/verify）— サムネ403の解消。**10夜連続**
-
-**消失リスク**
-
-5. `cd ~/Developer/youtube-factory && git push origin main`（8コミット・3日連続失敗）
-6. `cd ~/Developer/aiseki && git push origin main`（4コミット・3日連続失敗）
-7. ai-english-coach の GitHub リモート作成と push（**23日**ローカルのみ）
-
-**aiseki（公開前）**
-
-8. Instagram のログイン（`cd worker && npm run login`）
-9. Twilio の本番アップグレード（紹介報酬の支払いが依存）
-10. `dm_targets` の CSV 取り込み（`/admin/dm`・0件）
-11. SNS アカウント（@aisekimatch）の開設
-12. live で1回購入してポイント増加を確認
-13. サインアップの CAPTCHA 実装
-14. ⚠️ `apply_migrations.command` に Supabase の DB パスワードが平文で2箇所
+3. 🚨 **push**（4日連続失敗）: `cd ~/Developer/youtube-factory && git push origin main`（17件）／`cd ~/Developer/aiseki && git push origin main`（4件）
+4. 🚨 `backend/.env` 18行目の `ANTHROPIC_API_KEY` を有効化（**12夜連続**）
 
 **判断が要るもの**
 
-15. clip-animal を続けるか止めるか（30日で再生17・登録0）
-16. 切り抜き3ch の縮小判断（登録/千 0.034 vs ゆっくり系 0.394）※データ復旧後
-17. oripa の `feat/stripe-checkout` を main へマージするか（30日放置）
+5. `orch-20260911-followup` のマージ方針（N5。main 側＝エントリ削除済みの採用が妥当に見える）
+6. 再認可までの間 autopilot を絞るか（N6。生成24／公開0が4日継続）
+7. clip-animal を続けるか止めるか（30日で再生17・登録0）
+8. 切り抜き3ch の縮小判断（0.046/千 vs ゆっくり系 0.4〜0.8）※データ復旧後
+9. oripa `feat/stripe-checkout` を main へマージするか（31日放置）
 
 **環境の掃除（Mac 側でないと消せない）**
 
-18. `youtube-factory/.git/index.lock`
-19. `.git/objects/*/tmp_obj_*` 約550件 / `*.stale.*` 68件 / `_stale_junk/` 14件
-20. `logs/backend.log` **79MB** のローテーション設定
+10. `rm -f .git/*.lock .git/refs/heads/*.lock`
+11. `tmp_obj_*` **約810件** / `*.stale.*` 68件 / `stale_locks/` 45 / `_stale/` 8 / `_stale_junk/` 14
+12. `logs/backend.log` **81MB** のローテーション
+
+**aiseki（公開前）**
+
+13. Instagram ログイン（`cd worker && npm run login`）
+14. Twilio 本番アップグレード
+15. `dm_targets` の CSV 取り込み（`/admin/dm`・0件）
+16. SNS アカウント（@aisekimatch）開設
+17. live で1回購入してポイント増加を確認
+18. サインアップの CAPTCHA 実装
+19. ⚠️ `apply_migrations.command` に Supabase DB パスワードが平文で2箇所
+20. 実機での動作確認 / 運営体制（通報対応者・営業許可・本店所在地）の確定
+
+**ai-english-coach**
+
+21. GitHub リモートの作成と push（**24日**ローカルのみ）
+22. LINE公式アカウント / LINE Pay加盟店申込 / Supabase / Vercel / OpenAIキー / Webhook疎通
 
 **その他**
 
-21. ChatGPT スレッドURLを13ch分登録
-22. `REDDIT_CLIENT_ID` の設定
-23. 画像ブリッジ pending 215 / failed 235 の処理方針
-24. fanup 25件 / rhythm-pop 19件 の未コミット整理（任意）
+23. ChatGPT スレッドURLを13ch分登録
+24. `REDDIT_CLIENT_ID` の設定
+25. 画像ブリッジ pending **296** / failed 235 の処理方針
+26. fanup 25件 / rhythm-pop 19件 の未コミット整理（任意）
 
-## 4. 次回（09-11）の実行時に確認すること
+---
 
-- **再認可されたか**（されていなければ公開0本のまま）
-- **`video_metrics` に 09-09 以降の行が入ったか**（現在 09-08 止まり・3日欠測）
+## 4. 次回（09-12）の実行時に確認すること
+
+- **再認可されたか**（`youtube_tokens.db` の `updated_at` が 09-12 以降か）
+- **公開本数が戻ったか**（09-11 は **0本** / 09-10 は2本 / 09-08 は21本）
+- **`video_metrics` に 09-09 以降の行が入ったか**（4日欠測）
 - **`channel_metrics` が 09-05 から進んだか**（6日欠測）
-- **公開本数が戻ったか**（09-10 は2本 / 09-09 は2本 / 09-08 は21本）
-- **サムネ403の再発件数**
-- **レンダ速度が 3 it/s 以上を維持しているか**（N1 が解決したばかりなので再発監視）
+- **push が通ったか**（youtube-factory 17 / aiseki 4）
+- **サムネ403の再発件数**（今回は公開0のため判定不能）
+- **レンダ速度が健全域を維持しているか**
+- **画像ブリッジ pending が減ったか**（296件・+81/日で加速中）
+- **`min_effective_chars` の効果検証**（09-11 以降の公開分が出てから）
 - **09-15**: 答え提示型100%化の反証期限 / **09-16**: 「実は」出現率 / **09-19**: yokai-watch 枠移動 / **09-20**: 09-09 施策の評価
-  → ⚠️ **全てデータ復旧が前提。09-11 中に復旧しないと判定不能になる**
-- **画像ブリッジの pending が減ったか**（215件）
+  → ⚠️ **全てデータ復旧が前提。09-12 中に復旧しないと 09-15 の判定は不能になる。**
+
+---
 
 ## 5. 本タスクで行った書き込み
 
-- `data/reports/project_handoff_2026-09-10.md`（新規）
+- `data/reports/project_handoff_2026-09-11.md`（新規）
 - `data/reports/last_handoff_log.md`（本ファイル・上書き）
 
 他プロジェクトへの書き込み・git 操作（push/merge/commit）・設定変更・外部送信は一切していない。読み取りのみ。
