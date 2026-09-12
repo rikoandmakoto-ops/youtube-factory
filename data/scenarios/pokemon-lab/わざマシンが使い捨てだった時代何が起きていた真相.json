@@ -1,0 +1,510 @@
+{
+  "title": "わざマシンが使い捨てだった時代、何が起きていた真相",
+  "theme": {
+    "title": "わざマシンは1回で消えるのか消えないのか、設定の変遷",
+    "angle": "世代ごとの仕様変更を、作中世界の技術進歩として読み替える"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "なんでわざマシンだけ使うと消えるの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 初代は50枚もあるのに使い切り!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第5世代で何度でも使える形に変わり、正体は技を記録する機械なんだよ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じ技を何匹にも覚えさせられる、学校の共有データみたいな変化だね！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかも第9世代は素材で作成、古い機械から自作技術へ進んだんだ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "え、マジで？ってなったら高評価！ 裏設定ファイルシリーズも置いてるし、1万人目標で毎日投稿中だからチャンネル登録で応援よろしく！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "なんであなたのわざマシンだけ、使った瞬間に消えたり何度でも使えたりするの？ 初代は基本50枚の使い切りだったのに、今は171種類を作れる作品まである。え、進化幅がでかすぎるんだよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 同じ『わざマシン』って名前なのに、ある地方では一発で消えて、別の地方では何匹にも渡せるの？ セーブの不具合じゃなく、作品ごとに公式の遊び方が違うってこと!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そうなんだよ！ 初代の貴重な一枚から、第5世代の無限使用、第9世代の素材クラフトまで追うと、わざマシンが作中世界の技術進歩みたいに見えてくる。今日はそこを一気に開けるぞ！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "『ポケットモンスター 赤・緑』では、わざマシンは01から50までの番号つき道具だったんだ。拾ったり買ったりした一枚を使うと消えるから、技を渡す行為がプレゼントというより一回限りの決断になる！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "50枚しかない配布カードを、手持ち6匹の誰へ切るか決める感じか！ フシギダネに今すぐ使うか、最終進化まで待つかで、旅の数十時間が変わるなら、ボタンを押す指が止まるよね！",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "たとえば初代には『10まんボルト』や『ふぶき』のような人気技もあるけど、便利だからと全員へ配ることはできないんだ。強い技ほど一枚の重さが増す、ゲーム内の資源管理だったわけ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ、その緊張感！ 今なら覚えさせてから試せるのに、昔は友達が『その一枚残して！』と止める理由がある。攻略本の一行が、部活の先輩の助言みたいに重くなるじゃん！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ゲーム内の道具説明では、わざマシンはポケモンに技を覚えさせるための品として扱われるんだ。ただ、使ったらなぜ消えるかを『壊れたから』と公式が断定しているわけではない。ここが面白い余白だよ！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、じゃあ中の記録を一匹へ渡したから空になるのか、装置自体が一度きりなのか、作中では決め切られていない？ 同じ赤い箱を見ても、プレイヤーごとに想像が広がるわけだね！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これはファンの説なんだけど、初代の一枚は録画済みビデオのように、一回分の技データだけを渡す媒体だったのでは、と読む人がいるんだ。公式設定ではなく、仕様から組み立てた考察として楽しもう！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "初代からずっと『技を覚えさせる道具』という役割は残るのに、使い方だけが変わる。このズレがポイントなんだよ！ 名前が同じだからこそ、地方ごとの流通や製造の差まで想像したくなるんだ！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "じゃあ使い切りだった初代の一枚は、ただ不便な昔仕様ではなく、当時の世界で高価な技の記録を持ち運ぶための形かもしれないんだね？ でも後の地方で何が変わったのか、早く知りたい！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "実はこの常識、第5世代の『ブラック・ホワイト』で一気に反転するんだよ！ それまで基本は使い切りだったわざマシンが、使っても消えない道具へ変わった。え、マジで？ってなる最大の転換点だ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って、番号も50枚から100種類へ増えたうえで無限使用!? 一人だけに渡すカードが、クラス全員で開ける共有フォルダになったようなものじゃん。旅パの組み方、完全に別物だよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "『ブラック・ホワイト』では、わざマシン01から100までを使ってもなくならないんだ。カビゴンへ試して合わなければ別のポケモンにも渡せるから、技選びで取り返しがつかない失敗をかなり減らせる！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで最強なのは、強い技を一匹へ固定しなくていいことなんだよ！ 100種類の候補を手持ち6匹へ試せるから、最初は弱く見えたポケモンでも、意外な組み合わせで主役になれる余地が増えた！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "それ知らなかった！ 攻略サイトのおすすめを一回コピーして終わりじゃなく、自分の手持ちで何回も試せるんだ。失敗してもやり直せるなら、新米トレーナーでも挑戦を怖がらなくて済むね！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第5世代の公式テキストが『通信技術が進歩したので無限化した』と明言したわけではないぞ。だから技術進歩という見方は、ゲームの仕様を材料にした読み方であって、公式の断定とは分けておこう！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "それでも、使い切りから無限使用への差はあまりに大きいんだよ。紙のノートを一人へ渡す段階から、校内サーバーに置いて何人でも閲覧できる段階へ進んだ、と例えると感覚が近いかもしれない！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "無限使用になれば、同じ『じしん』を候補の2匹や3匹へ試してから決められるんだね？ 1枚しかない時代は選択の緊張、何度でも使える時代は試行錯誤の楽しさ。狙いが違って見えるぞ！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただし『便利になったから昔の面白さは消えた』とも言い切れないんだよ！ 一回しか使えない仕組みは、道具を拾った瞬間の喜びと、誰へ渡すか悩むイベントを、たった一枚で作っていたからね！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "たしかにレアな一枚を手に入れたとき、すぐ使うか温存するかで友達と話せるもんね。無限使用は快適、使い切りはドラマ。どっちが上かじゃなく、冒険のテンポを変える装置だったのか！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ところが第8世代『ソード・シールド』は、その二つを同じ地方に並べてきたんだよ！ 無限使用のわざマシンを残しながら、一度使うと消える『わざレコード』も99種類用意した。え、両取りすぎる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ、昔へ戻ったのに戻ってない！ 一方は何度でも配れて、もう一方は一回だけ。消える仕様を捨てたんじゃなく、特別な技を重く見せる役目として作り直したってこと？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "『ソード・シールド』のわざレコードは00から99まであり、マックスレイドバトルなどで手に入るんだ。貴重な技を一枚ずつ持ち運ぶ仕組みだから、初代の選択の重さが現代の遊びへ戻ってきたように感じる！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "同じガラル地方で、日常的に何度も使うわざマシンと、切り札みたいに一回だけ使うわざレコードが共存した。例えるなら無料の練習アプリと、限定コードつき特典ディスクを持ち分ける感覚だね！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "99種類の一回券なら、また『誰に渡す？』が戻ってくるじゃん！ でも基本技まで全部が貴重品ではないから、初心者が困りすぎない。昔のドキドキと今の遊びやすさを分けたの、かなりうまい！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "対戦だとこれが刺さる、という前に言い換えると、技を何匹へ渡せるかは手持ちの作戦を変える差なんだ。強い候補を6匹並べても、一発限定の技なら誰へ切るかでチームの形が変わる！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じ威力の技でも、無限なら全員で試せるし、一回だけなら主役を決めなきゃいけない。数字のダメージだけでは測れないけど、育成にかかる時間と迷いの量が丸ごと変わるんだね！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そして第9世代『スカーレット・バイオレット』では、また新しい形が来るぞ！ わざマシンは一度使うと消えるのに、ポケモンの落とし物とリーグポイントを使って、わざマシンマシンで作り直せるんだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ 第5世代で無限使用になったのに、第9世代では消費制へ再変更!? でも材料さえ集めれば補充できるなら、初代みたいに一発で永久に失うわけじゃない。別ルートの便利さだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "パルデアのわざマシンは01から171まで番号があり、作るには必要な落とし物とリーグポイントが表示されるんだ。一枚を使えば消えるけど、野生ポケモンと戦って素材を集めれば再び作成できる！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "初代の一回消費は、手元の一枚そのものが貴重だった。第9世代の一回消費は、材料と時間を払えば複製できる一枚なんだよ。限定プリントと、家のプリンターで出し直せる課題くらい差がある！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "同じ『使うと消える』を見ても、初代とパルデアでは意味が逆に近いんだね！ パルデアなら欲しい技の素材を集める目的もできるし、野生ポケモンを倒す行動が育成の準備へつながるわけだ！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ パルデアでは技を教える作業そのものが、素材集めとセットになったんだよ。171種類の一覧を見て足りない材料を探す流れは、ただ店で買うよりも自分の冒険で技を作る感覚が強い！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで初めて内部の数値表現を一回だけ言うと、技を使う強さの目安には種族値という生まれつきの能力差がある。けれど高い数字の一匹でも、教える技が合わなければ活躍しにくいんだよ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、能力が高いだけでは足りないの!? だから技を何度でも試せる第5世代や、材料で作り直せる第9世代では、好きなポケモンを使うための選択肢が増える。そこがプレイヤーには大きいんだね！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "もちろん『第9世代は工業技術が進んだからクラフト制になった』という公式の断定はないぞ。そこもファンの読み方として線を引こう。確認できる事実は、消費して、素材とポイントで再作成できる仕様そのものだ！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "でも仕様を年代順に置くと、配布される一枚、共有できるデータ、素材から作る一枚という三段階が見えるんだよ！ 作中の地方ごとに道具の流通が違う、と想像するだけで旅の景色が少し変わるでしょ！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "最初は『なんで消えるの？』だけだったのに、答えは一つじゃないんだね。消える理由を固定せず、世代ごとにプレイヤーへ何を選ばせたいかが変わった、と見ると全部つながって見える！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "実際に遊ぶなら、まず持っている作品の道具説明を確認してみて！ 『使うとなくなる』のか『何度でも使える』のかを先に知るだけで、レア技をうっかり別の一匹へ渡す事故をかなり減らせるぞ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "昔の作品ほど、攻略前に一回立ち止まる価値があるね！ 手持ち6匹だけでなく、後から進化する候補やボックスの候補まで見れば、一枚を誰へ渡すと長く活躍するか考えやすくなるぞ！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "使い切りの世代なら、迷う技は入手場所と残り枚数をメモするのもおすすめだよ。紙でもスマホでも、残り1枚と見えるだけで『今使うべきか』を落ち着いて判断できて、後悔が減る！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "無限使用の世代なら、逆に遠慮せず試していいんだ！ 威力が高い技だけでなく、命中しやすい技や先に動きやすい技も入れ替えて、ジム戦で使いやすい一匹を探すほうが楽しいぞ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "おすすめ通りの技をそのまま覚えさせるより、自分の旅で当てやすかった技を選ぶのもアリだね！ 無限の一枚は失敗し放題の許可証みたいで、初めて遊ぶ人にもかなり優しい仕組みだ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "第9世代では、欲しい技を作る前に必要素材を画面で確認しよう！ 足りない落とし物が分かれば、どの野生ポケモンを探せばいいか決められる。消費制でも、準備すれば何度も作れるから安心なんだ！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "わざマシンが消えるかどうかは、単なる昔は不便で今は便利、という話ではなかったんだよ。50枚の決断、100種類の共有、171種類のクラフトで、世代ごとに楽しませ方を変えていた仕組みだった！",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "初代で一枚を抱えて悩む時間も、第5世代で何匹にも試す自由も、第9世代で素材を集める寄り道も、全部ちがう冒険の味なんだね。知ったあとだと、道具欄の小さな箱まで主役に見える！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "だから次にわざマシンを拾ったら、すぐ押す前に『この地方の一枚は何型？』って見てみて！ 消える意味まで変わっていると分かれば、次に遊ぶとき、ちょっと見方が変わるはずだよ！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "え、マジで？ってなったら高評価を押してくれたらうれしい！ 1枚の道具から地方ごとの遊び方まで読めるの、ポケモンは何周しても新しい発見があって、ずるいって思うほど楽しいね！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回はイーブイが8方向へ進化する理由を追うぞ！ 進化の石、なつき、時間帯という違う条件が、同じ一匹をどこまで別の姿へ分けたのか、公式のゲーム内描写を手がかりに見ていくんだよ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "裏設定ファイルシリーズには、同じ名前なのに作品で役割が変わる話もまだ置いてあるぞ！ 昔のカセットを遊び直す前に知ると刺さるネタばかりだから、次の研究も一緒に追いかけよう！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中だから、応援よろしくね！ ポケモンは株式会社ポケモンと任天堂の登録商標で、権利表記は概要欄に載せるぞ。高評価と登録で、次のえ、マジで？も待ってて！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "使うと消える",
+      "なぜ変わった"
+    ],
+    "hook_caption": "消える技術",
+    "subtitle": "初代からSVまで",
+    "tagline": "使い切りは旧式だった？"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "え、マジで？ってなったら高評価！ 裏設定ファイルシリーズも置いてるし、1万人目標",
+          "reason": "1行64字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 28,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 2,
+        "relatability": 4,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.55,
+      "similar_to": "ヒトカゲの尻尾が消える本当の理由",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 42,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "enhanced_title": "君のわざマシン1回で消える正体は？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    }
+  },
+  "title_quality": {
+    "score": 76,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['？', '正体'](+12)",
+      "二人称['君'](+6)",
+      "短すぎ(17字 < 18)(-12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "君のわざマシン1回で消える正体は？",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "君のわざマシン1回で消える正体は？"
+  }
+}

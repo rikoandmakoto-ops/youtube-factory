@@ -1,0 +1,668 @@
+{
+  "title": "隣の部屋から毎晩コトン…に原因が判明ｗの理由",
+  "theme": {
+    "title": "なんか隣の部屋の音がおかしい正体、判明したわ",
+    "angle": "建材か家電か。オチで断定"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "ワイ、隣の異常な音歴3年やけど質問ある？",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 夜2時に壁からコトンて鳴るやつかw。常連ニキならこのノリわかるよなｗ",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "名無しAが築12年の建材や言うてた草",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "毎晩7回なら壁も残業しとるやろw。これ男が悪い派と女が悪い派でコメ欄割れそうｗｗｗ",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり隣の伝説の冷蔵庫やったんや草",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "質問ある？シリーズ、ワロタって思ったら高評価頼むわw。…ちょ待て、>>1に戻ってみろ",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、隣室から毎晩コトンと鳴って、洗濯機か壁の故障だと思ったことありませんか？　結論のヒントは、犯人が建材でも家電でもなく、部屋の中の意外な生活用品だったことです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回は、掲示板で「隣の部屋の音がおかしい正体、判明したわ」と報告された、深夜の謎音事件を追います。住人が管理会社へ連絡する直前に見つけた、拍子抜けする原因とは何だったのか。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "音は一晩に数回だけ鳴り、壁を叩くような低いコトンが特徴だったそうです。規則正しくない音ほど人は原因を想像で補いがちで、投稿主も最初は配管の膨張を本気で疑っていました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ところが驚きの反転です。隣室はその夜ずっと留守で、建材が鳴ったにしては音源が妙に近かったのです。投稿主は壁際を離れ、部屋の中央で耳を澄ませた瞬間、音の居場所を見失いました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "配管の膨張とは、温度変化で金属管が伸び縮みして鳴る現象です。けれど今回のコトンは、暖房を切っても鳴り続け、冷蔵庫の作動音とも重ならないため、家電説も一気に怪しくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "そして正体は、壁際に立て掛けた折り畳み傘が少しずつ滑り、床へ先端を落としていた音でした。隣の部屋どころか自室の傘。あなたなら何の音だと決めつけたか、コメントで当ててください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "この話、最後にとんでもないオチがある。隣室から毎晩コトンと鳴る正体、犯人は壁でも冷蔵庫でもなく、まさかの建材だったんだ。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "音は壁を通る途中で増幅されることがある。空洞の壁はギター箱みたいなもので、小さな振動でも低い音だけが目立って届くらしい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "特に夜は周囲が静かだから、昼なら聞き逃す程度の音まで脳が拾う。環境音が約10デシベル下がるだけで、体感はかなり変わるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "建材の代表は石こうボード。室温や湿度でわずかに伸び縮みし、固定されたネジの周辺でコツンと鳴る、家の小さな関節みたいな現象だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "木材も湿気を吸うと膨らみ、乾くと縮む。季節の変わり目に音が増える家では、壁の中で材料同士がこすれる場合があるってことね。",
+      "expression": "thinking",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "一方、家電ならコンプレッサー停止後のパキッという音が典型だ。冷えた金属や樹脂が温度差で戻るとき、短く鳴る仕組みになっている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "見分け方は時間帯で、冷蔵庫系は数十分ごとに繰り返しやすい。建材系は雨の日や暖房を切った直後など、条件で急に鳴り方が変わる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただし壁越しの音は方向までズレるから厄介だ。右から聞こえても、振動が柱を伝って左の壁面から出ることがあり、隣人を疑うのは早い。",
+      "expression": "serious",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "そして今回の正体は、隣室の冷蔵庫ではなく壁内の石こうボード。深夜のコトンは家が鳴らす寝返りだったわけで、みんななら最初に何を疑う？",
+      "expression": "smile",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "測ったら深夜二時のゴンゴンは、壁ではなく冷蔵庫の霜取り運転だった。振動計では床を通って隣室へ約三倍強く届き、犯人は建材ではなく家電と断定できる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "住宅騒音の実験では、低い振動ほど耳より体に残りやすい。人は五十ヘルツ前後のうなりを方向違いに感じ、隣の壁から鳴ると誤認しやすいそうだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも冷蔵庫は霜取り時、圧縮機が止まってヒーターが動く。機種によっては二十分から四十分続くため、夜中だけ謎の工事音に聞こえるわけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "壁の石こうボードは薄い太鼓みたいに振る舞う。海外の遮音試験では、同じ振動でも固定が甘い壁ほど音圧が十デシベル近く増える例が報告されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "十デシベル増えると、人の感覚ではだいたい二倍うるさい。隣人が小槌で叩いていると思った音が、冷蔵庫一台の共鳴だったら疑心暗鬼も加速する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転だ。録音すると小さくても、壁に手を当てると震えが大きいなら空気音ではない。音の出所を耳で追うほど、犯人から遠ざかる仕組みだった。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "調査では、家電の脚に防振ゴムを敷くだけで床の振動が六割前後下がる場合がある。つまり壁紙を疑って張り替える前に、冷蔵庫の足元を見るのが先。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "建材が原因なら、風や温度で伸び縮みするポキッという単発音が多い。一方で今回みたいな一定間隔のブーン、ゴン、停止は機械の周期運転と一致する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実験的には、電源を切って十分待ち、音が消えるか確かめるのが早い。ただし食品の保存があるから、検証は短時間で済ませて無理はしないでね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "結論、隣の部屋の怪音の正体は壁でも隣人でもなく、こちら側の冷蔵庫だった。お前らなら最初に謝る？　それとも防振ゴムを無言で買いに行く？",
+      "expression": "smile",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "発端は築三十年の集合住宅で、毎晩二時十七分に隣から「ゴトン」と一回だけ響く、住民歴八年の男性が記録を始めたことらしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "最初は冷蔵庫の製氷音説が有力だったが、録音波形は低く短い衝撃音で、家電の連続した振動とは明らかに違っていたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "こういう音の調査では固体伝搬音、つまり壁や床を震わせて届く音を疑うのが定石で、犯人の部屋とは別方向から聞こえることもある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "実際、昭和期の団地では配管の伸縮音を幽霊騒ぎと取り違えた記録もあり、夜間の静けさが小さな金属音を怪談級に増幅させた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ところが今回、管理会社が隣室の家電を止めても二時十七分の一撃は消えず、住民たちは人が何か落としている説へ傾いたんだよ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さらに不思議なのは、休日でも出張中でも同じ時刻だった点で、生活音なら揺れるはずの発生時間が、秒単位で固定されていたことだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "調査役の大家は壁を壊す前に、古い設計図の梁と配管を照合した。建物の骨組みは、音を遠くへ運ぶ太い伝言ゲームみたいなものだね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "記録された位置を重ねると音源は隣室ではなく、壁の中を縦に走る排水管の近くへ収束した。ここで建材説が一気に濃くなる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "そして正体は、深夜の温度低下で縮んだ排水管が固定金具を弾く音だった。隣人の怪行動ではなく、壁内の配管が毎晩鳴っていたんだ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "壁の奥で毎晩コトコト鳴る正体、配管でも幽霊でもなかった。犯人は家電の冷蔵庫、しかも隣室ではなく自分の部屋の床振動だったんだ。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "冷蔵庫のコンプレッサーは運転開始時に低い振動を出し、床や壁の骨組みを伝って数メートル先で大きく聞こえることがあるぞ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "人の耳は低音ほど方向を見失いやすく、壁際で鳴った音を隣室からだと錯覚しがち。だから苦情の相手を間違える事故も珍しくないらしい。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "特に夜は周囲の生活音が減るため、昼なら埋もれる小さな振動まで目立つ。静かな部屋ほど怪音の恐怖が増幅される、というわけだな。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転だよ。隣が深夜に家具を組み立てていると思ったコトコト音、実は冷蔵庫の脚が床を叩く周期音だった可能性が高い。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "脚の下に防振ゴムや厚手のマットを敷くと、振動が床へ渡りにくくなる。数百円の対策で怪音が消える例もあるから先に試す価値はあるぞ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "建材側では石こうボードの継ぎ目が温度変化でわずかに動き、パキッと鳴ることもある。でも今回は鳴る間隔が妙に規則的だった。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "規則的な間隔は家電の自動制御を疑う手掛かりになる。冷却や霜取りの動作は一定時間ごとに切り替わり、音にも周期が出やすいんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "確認法は単純で、鳴った瞬間に冷蔵庫の側面や床へ手を当てるだけ。指先に細かな震えが来たら、隣人どころか自宅の家電が有力。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり今回の正体は建材ではなく冷蔵庫の振動。隣の部屋へ怒鳴り込む前に、自分の家電を疑えってオチだな。君の怪音も同じ？",
+      "expression": "smile",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今夜から壁を疑う前に、冷蔵庫の製氷機を止めてみて。深夜のゴトン音は建材でなく家電、という逆転が今回の結論だよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "確認は音がした瞬間にスマホ録音を回し、時刻だけメモする方法がおすすめ。毎日同じ時間なら住人よりタイマー家電の線が濃い。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "録音アプリの波形は音の長さを見る目安で、ドン一発なら衝撃音寄り。今回は約三秒の唸りの後に落下音があり、機械らしさ満点。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "壁際で聞こえても発生源は隣室とは限らないぞ。配管や床梁は音を運ぶから、耳を壁に当てた場所だけで犯人認定は危険だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで驚きの反転、隣の部屋から聞こえた怪音の正体は、なんと自分の冷蔵庫だった。製氷皿が氷を落とす音が壁を伝っていたんだ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "切り分けは安全第一で、冷蔵庫を動かさず製氷機能だけ一晩オフにする。音が消えれば建材のきしみ説より、家電説が一気に強まるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "賃貸なら管理会社へ送る前に、日時と録音を三回分そろえると伝わりやすいよ。「毎晩二十三時ごろ」だけでも調査の手掛かりになる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただし焦げ臭さ、火花、異常な発熱があるなら検証は中止だ。家電の異常音は笑い話で済まないから、電源を切ってメーカーへ相談しよう。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "壁ドンしたくなったら、まず製氷機と給湯器と洗濯機を疑うのが平和への近道。あなたの隣室怪音、建材派か家電派かコメントで当ててね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "結局、深夜に壁の奥から鳴っていた正体は幽霊でも隣人でもなく、振動で共鳴した古い冷蔵庫の製氷皿だったんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "建材のきしみと家電の作動音は似て聞こえるけど、今回は氷が落ちる瞬間だけ壁が太鼓みたいに響く逆転オチだったぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "もし自分の部屋でも正体不明の音がしたら、怖がる前に家電の停止時間をメモすると、犯人探しが急に現実的になるかもね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きの一撃だが、壁ドンの犯人が冷蔵庫なら、隣へ謝りに行く前に自宅の製氷機を止めるだけで平和が戻る可能性があるぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回は「財布に入ってた謎のレシート、何を買った証拠か当てるスレ」を解説するよ。記憶と金額だけで大喜利が始まるぞ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回も、くだらないのに参加したくなる5ch風の当てるスレを、30秒でテンポよく実況するから、コメントの予習も頼むぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "この冷蔵庫オチに笑ったら高評価、次のレシート推理へ混ざりたい人は登録して、家で聞こえた謎音の正体もコメントしてね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "隣の変な音",
+      "正体は家電"
+    ],
+    "hook_caption": "音の正体",
+    "subtitle": "壁か家電か",
+    "tagline": "夜だけ鳴る謎"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": false,
+      "original_hook": "ワイ、隣の変な音歴3年やけど質問ある？",
+      "selected_hook": "ワイ、隣の変な音歴3年やけど質問ある？",
+      "scores": [
+        {
+          "hook": "ワイ、隣の変な音歴3年やけど質問ある？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 17,
+            "loop_connect": 5
+          },
+          "total": 57
+        },
+        {
+          "hook": "お前ら、隣の変な音の正体わかる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 40
+        },
+        {
+          "hook": "え、隣の古い音…まさかアレじゃないよな？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 0,
+            "scroll_stop": 0,
+            "loop_connect": 5
+          },
+          "total": 35
+        }
+      ],
+      "reason": "original_is_best"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "ワイ、隣の変な音歴3年やけど質問ある？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ 夜2時に壁からコトンて鳴るやつかw",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "名無しAが築12年の建材や言うてた草",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "毎晩7回なら壁も残業しとるやろw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "つまり隣の古い冷蔵庫やったんや草",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "お前らの隣なら何が鳴る？ コメントで頼むわw 高評価とチャンネル登録、1万人目標で毎日投稿中やで、質",
+          "tension": 6,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "like",
+      "style_label": "高評価",
+      "original_cta": "お前らの隣なら何が鳴る？ コメントで頼むわw 高評価とチャンネル登録、1万人目標で毎日投稿中やで、質問ある？シリーズも頼むわw",
+      "new_cta": "質問ある？シリーズ、ワロタって思ったら高評価頼むわw"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 22,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 3,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 76,
+      "optimized_score": 76,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.15,
+      "issues": [
+        "50%地点の密度が低い"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "タって思ったら高評価頼むわw。…ちょ待て、>>1に戻ってみろ",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 2,
+      "changes": [
+        "「変な」→「異常な」",
+        "「古い」→「伝説の」"
+      ],
+      "lines_modified": 2
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.551,
+      "similar_to": "ワイのPCで彼女が凍った本当の理由w",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 44,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "なんか隣の音が変な正体やったw",
+      "enhanced_title": "なんか隣の音が変な正体やったw💦",
+      "emoji_added": "💦",
+      "category": "default",
+      "modified": true
+    },
+    "enhanced_title": "なんか隣の音が変な正体やったw💦"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 3,
+      "bait_text": "これ男が悪い派と女が悪い派でコメ欄割れそうｗｗｗ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "positive",
+        "neutral",
+        "neutral"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "statement",
+        "laugh",
+        "statement",
+        "statement"
+      ],
+      "monotone_runs": 0,
+      "interrupts_injected": 0,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "常連ニキならこのノリわかるよなｗ",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 1,
+      "amplified": 0,
+      "frame_injected": false,
+      "contrast_score": 0.5
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体', 'まさかの', '異常'](+20)",
+      "好奇心ギャップ['正体'](+12)"
+    ],
+    "rejected_title": "なんか隣の音が変な正体やったw💦",
+    "attempts": 1
+  },
+  "original_title": "なんか隣の音が変な正体やったw💦",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "隣の部屋から毎晩7回…3年続いた異常音の正体がまさかのコレｗ"
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "隣の部屋から毎晩異常音…三年越しに正体判明ｗ"
+  }
+}

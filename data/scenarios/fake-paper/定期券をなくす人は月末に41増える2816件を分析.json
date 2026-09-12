@@ -1,0 +1,537 @@
+{
+  "title": "定期券をなくす人は月末に41%増える？2816件を分析",
+  "theme": {
+    "title": "定期券をなくす人は月末に集中する — 再発行申請の日付分布",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "定期券は月末だけ消える——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言います。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『通勤札記』と余白交通研究所が調べました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者2,816人で月末申請は41%でした。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "さらに最終3日は平日の2.3倍だそうです。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この定期券論文は存在しません。掲載誌ごと架空です。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じた人は高評価で白状を。架空の追跡調査シリーズは毎日投稿中、1万人目標へ応援よろしく、チャンネル登録を。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも月末の朝、改札直前になって定期券が見つからず、バッグの底を二度三度と探したことはありませんか。再発行申請は月末に集中するという論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載誌は架空の『通勤札記』、調査機関は架空の余白交通研究所です。研究班は再発行申請2,816件を12か月間、日付ごとに並べて比較したと報告しています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "忘れ物なら月のどの日にも散らばりそうですが、月末だけに山ができるのでしょうか。給料日や締切日のように、定期券にも月の終わりを意識する瞬間があるのですか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "結論を示します。各月の最終3営業日に出された申請は全体の41.2％で、月初3営業日の17.9％を23.3ポイント上回ったという結果です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "最終3日だけで4割を超えるなら、偶然の忘れ物とは見えにくいですね。財布や鍵ではなく、薄い定期券だけが月末に姿を消す理由は何でしょうか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "本稿の集計では、再発行を申し込んだ日を紛失日として扱います。これは申請日代理法、つまり記憶が曖昧な日を窓口の記録で統一する簡単な方法です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者は20歳から29歳までの通勤者2,816人で、同じ人の二度目の申請は除外されました。初回だけを残し、慣れている人の影響を薄めた設計だと説明されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "何度もなくす人が数字を押し上げたわけではなく、最初の再発行だけを比べたんですね。それでも月末の山が残るなら、日常の流れ自体を調べたくなります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "月初から10日目までの平均申請数は、1日当たり62件でした。一方で締め日前の3日間は1日当たり145件となり、差は83件、比率は2.34倍に達しました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "偶然らしさを測る有意水準は0.01未満とされています。100回同じ比較をした場合でも、たまたま同程度の偏りが出るのは1回未満という扱いになります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "数字の並びだけを見ると、月末は定期券にとって小さな繁忙期のようです。仕事の締切前に机の上が散らかるように、持ち物の位置も動いてしまうのでしょうか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は原因を月末荷物移動仮説と名付けました。財布、鍵、領収書、充電器を月替わりの整理で移す回数が増え、定期券だけ戻らないという仮説です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "申請者1,104人に前夜の行動を尋ねると、紛失当日にバッグを替えていた割合は68.5％でした。月前半の比較群では29.7％で、38.8ポイントの差が出ています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "通勤用のバッグから休日用のバッグへ移すとき、定期券は財布と違って薄いので見落としやすいですね。月末の予定変更が多いほど、その移し忘れも増えるのでしょうか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで第二の結果です。バッグを替えていない申請者だけに絞っても、月末の申請率は36.7％でした。原因はバッグ交換だけでは説明できないとされています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこで研究班は、机の引き出しを整理した日にも注目しました。整理の翌朝に申請した人は436人中119人で、通常日の申請率より3.1倍高かったという記録です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "バッグの中でなくしたのではなく、家の机に一時避難させたまま朝になる人が多いわけですね。片付けたはずなのに見つからない、あの感覚に近い話です。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はこの現象を一時避難先忘却と呼びました。定期券が落ちたのではなく、数時間だけ置いた場所を翌朝の急ぎ足で思い出せなくなるという意味です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "月末群では出発予定の10分前を切ってから探し始めた人が72.4％でした。月半ばの比較群は33.8％で、急ぐ朝ほど探索開始が遅いという差が見られました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "朝に探す時間が短ければ、机の上や棚の隅を確認する前に家を出てしまいますね。改札で止まって初めて、昨日の片付けを思い出す流れになりそうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "再発行時刻も特徴的でした。月末群の58.9％は午前8時から9時に集中し、昼休みの申請は月半ばより12.4ポイント少なかったと報告されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はこれを発見遅延と表現します。定期券が見当たらない状態は前夜から続いていても、改札という確認地点に着くまで問題として確定しないという説明です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "家では財布が少し軽いだけですが、改札前では通れないという形で明確になりますね。紛失した日より、気づいた日が月末に寄っている可能性もありそうです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "聞き取り対象98人のうち、最後に定期券を見た場面を具体的に答えられたのは31人でした。その31人中19人は、机で紙類を整理していた場面を挙げています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "19人が置いた紙類は、予定表、領収書、封筒、請求書風のメモでした。薄いカード入れが紙束の横に置かれると、翌朝には書類の一部のように扱われたとされています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "定期券が特別に消えるのではなく、月末に増える紙類と同じ分類へ入ってしまうんですね。スマホや鍵より薄いものほど、机の景色に溶け込みやすそうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文はこの状態を月末の分類錯誤と名付けました。物の用途ではなく、その瞬間に手に取った順番でまとめてしまう、短時間の整理ミスを示す言葉です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "机上実験では、領収書12枚、鍵1本、カード入れ1個を並べました。締切予定を見せられた参加者150人のうち96人が、カード入れを書類側へ寄せたとされています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "予定表を見せただけで、カード入れの置き場所が変わるのですか。月末の忙しさは時間を奪うだけでなく、机の上の地図まで書き換えるということになりますね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "比較として月初予定を見せられた参加者150人では、カード入れを書類側へ寄せた人は33人でした。64.0％と22.0％の差には、有意差が確認されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この差を研究班は、予定圧による近接配置と説明しました。締切や支払いを連想すると、今すぐ使わない物まで紙の近くへ寄せる傾向が強くなるという設定です。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "紙類を広げるときに、定期券を一度だけ横へ置く。たった数十秒の動作が翌朝の再発行につながるなら、月末の集中は意外に静かなところで起きているんですね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "年齢別では、23歳から25歳の群の最終3日申請率は45.8％でした。26歳から29歳の群は34.2％で、11.6ポイントの開きがあったとされています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文は性格の違いではなく、予定変更回数を理由に挙げました。若い群では月末3日間の予定変更が平均4.2件で、上の群の平均2.7件を上回ったという記録です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "仕事の調整、食事の約束、部屋の片付け、翌月の準備が同じ数日に重なると、持ち物を移す回数も増えますね。20代の月末あるあるを表にしたようです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "興味深いことに、予定変更が5件以上あった群では申請率が49.6％でした。予定変更が1件以下の群は16.1％で、月末の山は予定の密度と並んでいました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし研究班は、忙しい人ほど注意力が低いとは結論していません。定期券を置く場面が増えるだけで、失敗の機会が増えるという限定的な説明に留めています。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "能力の問題ではなく、移動する回数の問題ということですね。コップを一度も動かさなければ倒れにくいのと同じで、定期券にも置かれる回数があるわけです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "古い資料として、架空の『乗車札月報』も引用されています。紙の回数券の再交付願い1,204件を集計すると、月末5日間に31.4％が集まったと記されていました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その資料では、月末は家計簿の記入日と重なり、財布の中身を机へ広げる家庭が多いと説明されます。カード以前にも、薄い乗車券は紙類に混ざったという筋書きです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "形式が紙でもカードでも、月を閉じる日に財布を広げる動作は似ているんですね。定期券の問題というより、月末の机の上に起きる小さな混線の歴史に見えます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "別の仮説として、研究班は先送り申請説も検討しました。以前からなくしていた定期券を、翌月の移動予定を前にして月末にまとめて再発行するという考え方です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかし聞き取り対象98人のうち、紛失後2日以上待った人は14人でした。84人は当日か翌日に申請しており、先送りだけでは41.2％の集中を説明できないとされています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "月末に窓口へ行く人が増えたのではなく、月末の朝に初めて気づく人が増える。その見方なら、午前8時から9時の申請が多いことともきれいにつながります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "観察実験では、参加者623人を二つの群に分けました。一方には月末の置き場所を一言だけ記録してもらい、もう一方には普段通り過ごしてもらったとされています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "記録群312人では最終3日間の再発行申請が18件でした。比較群311人では37件で、申請率は5.8％対11.9％、差はほぼ半分という結果になっています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "置き場所を言葉にした群だけ数字が下がると、仮説はかなりもっともらしく見えますね。研究発表の最後に出てくる実用的な結論まで、きれいにそろっています。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ところが、この研究には決定的な欠落があります。研究班名、被験者2,816人、12か月分の申請表、623人の観察記録、そのどれも確認できる原資料がありません。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、待ってください。月末41.2％、バッグ交換68.5％、机上実験64.0％まで聞いたのに、元の申請帳簿も参加者名簿も存在しないのですか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。『通勤札記』、余白交通研究所、再発行2,816件の分布、月末荷物移動仮説は、すべて編集部が構成した架空の記録です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "掲載誌ごと架空ですか。私は月末にバッグを替えた記憶まで引っ張り出して、改札の窓口に41.2％と書かれた表が貼ってあるのかと思いました。",
+      "expression": "sad",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "本動画は全編フィクションです。実在する交通機関、実在する定期券制度、実在する再発行の統計を示すものではなく、数字で形を整えた存在しない論文です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "月末に物を探す感覚そのものは、多くの人が経験として持つかもしれません。しかし経験の隣に被験者数と有意水準を置けば、架空の話でも論文らしく見えてしまいます。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じた人は、月末の定期券が消える分布まで頭に残ったかもしれません。高評価で白状していただければ、架空の査読記録を増やす材料になります。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、満員のエレベーターでは全員の咳払いが同じ順番になるという、被験者1,572人の存在しない観察論文を、同じく真顔で紹介します。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空の追跡調査シリーズには、日常の違和感を数字と表に固めた論文がまだ何本もあります。毎日投稿中で1万人目標ですので、応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "高評価とチャンネル登録をしておけば、次にもっともらしい割合を聞いたときも判定役になれます。月末の定期券から続くアーカイブを、静かにご確認ください。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "月末だけ",
+      "定期券消失"
+    ],
+    "hook_caption": "月末に消える",
+    "subtitle": "再発行申請の日付分布",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。架空の追跡調査シリーズは毎日投稿中、1万人目標へ応援よ",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 11,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 2,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": false,
+      "max_similarity": 0.736,
+      "similar_to": "階段は下りると段数を誤る — 被験者1,284人の計数差",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 34,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "定期券は月末だけ消える — 再発行2,816件の分布"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['だけ'](+12)"
+    ]
+  },
+  "original_title": "架空論文ファイル #18：定期券は月末だけ消える — 再発行2,816件の分布",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "架空論文ファイル #18：定期券は月末だけ消える — 再発行2,816件の分布"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

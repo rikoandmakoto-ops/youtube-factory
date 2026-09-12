@@ -1,0 +1,207 @@
+{
+  "title": "マツキヨ利益率4.8%、棚割りが生む知られざる差益の実態",
+  "theme": {
+    "title": "マツキヨの棚割りが利益を生む裏側",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "棚が稼ぐ会社",
+      "fact_main": "マツキヨ 利益率4.8%",
+      "fact_sub": "2025年3月期・公式IR",
+      "text": "マツキヨの利益率4.8%、棚の違いで生まれる数字だと思いますか。",
+      "bg_query": "株式会社マツキヨココカラ＆カンパニー マツモトキヨシ 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "売上高1兆6169億円",
+      "fact_sub": "2025年3月期・公式IR",
+      "text": "売上高は1兆6169億円です。日用品だけで、この規模を積み上げています。",
+      "bg_query": "株式会社マツキヨココカラ＆カンパニー マツモトキヨシ 店内",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "店舗数3427店",
+      "fact_sub": "2025年3月末・公式IR",
+      "text": "店舗数は3427店です。棚の配置が少し変わるだけで、全店では大きな差になります。",
+      "bg_query": "株式会社マツキヨココカラ＆カンパニー マツモトキヨシ 売り場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "PB売上2,000億円超",
+      "fact_sub": "公式IRの中期目標",
+      "text": "自社商品は売上2000億円超を目標です。",
+      "bg_query": "株式会社マツキヨココカラ＆カンパニー マツモトキヨシ PB商品",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "客単価2,000円台",
+      "fact_sub": "公式IRから推定",
+      "text": "客単価は2000円台と推定されます。",
+      "bg_query": "株式会社マツキヨココカラ＆カンパニー マツモトキヨシ 化粧品売り場",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "1店あたり年4.7億円",
+      "fact_sub": "売上高÷3427店の推定",
+      "text": "1店あたり売上は年4.7億円ほどです。",
+      "bg_query": "株式会社マツキヨココカラ＆カンパニー マツモトキヨシ 品出し",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "利益率4.8%",
+      "棚が稼ぐ理由"
+    ],
+    "subtitle": "マツキヨの売り場設計",
+    "tagline": "数字の裏にある店舗の実態"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 15,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.442,
+      "similar_to": "ユニクロ店長の正体、売上1億円を任される裁量",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 43,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "マツキヨの利益率4.8%、棚割りの正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['正体'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "マツキヨの利益率4.8%、棚割りの正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "マツキヨの利益率4.8%、棚割りの正体"
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}

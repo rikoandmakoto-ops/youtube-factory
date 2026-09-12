@@ -1,0 +1,558 @@
+{
+  "title": "静かな夜だけ耳鳴りが目立つのはなぜ？30dBの不思議",
+  "theme": {
+    "title": "なぜ静かな場所ほど耳鳴りが聞こえるのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで静かな部屋だけ耳鳴りが聞こえるんでしょう？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！夜は約30dBまで静かになるよね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "耳の中の小さな音が、周りの音に隠れなくなるからです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！扇風機を止めると時計が目立つ感じだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも耳鳴りは音量より、静けさとの違いで気づきやすいんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "寝る前は小さな環境音も意識してみてください。高評価とチャンネル登録で感覚のふしぎシリーズを応援して、1万人目標の毎日投稿もよろしくね！",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "あなた、静かな寝室に入った途端「キーン」が急に大きくなったことありませんか？ 実は音が増えたのではなく、周囲の音が消えて脳の小さな信号が前に出るのです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "今回は、その耳鳴りが静寂で目立つ正体を暴きます。結論を先に言うと、多くの場合は耳だけでなく、音を選別する脳の働きが関わっています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "驚きなのは、完全な無音に近い部屋では健康な人でも耳鳴りのような音を意識しやすいこと。脳は空白が苦手で、普段なら無視する微弱な信号まで拾います。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "これはカクテルパーティー効果の逆向きにも似ています。騒がしい場所で会話を選ぶ脳が、静かな場所では逆に体内や神経の音へ注意を向けやすくなるのです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえば昼間は冷蔵庫や換気扇、道路の音が耳鳴りを覆い隠します。でも夜にそれらが減ると、同じ強さの音でも相対的に大きく感じられてしまいます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし片耳だけで急に始まった、聞こえにくさや強いめまいを伴う耳鳴りは別です。静けさの錯覚と決めつけず、次から見分け方と対策を順に確かめましょう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "でもこれ、半分は間違いなんだ。静かな場所で耳鳴りが急に生まれるのではなく、周りの音が消えて、いつもある微かな信号が目立つだけの場合が多いよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "耳は完全な無音を受け取る機械ではなく、脳へ電気の信号を送り続けているんだ。静かな寝室ではその背景信号が、遠くの「キーン」として意識に上がりやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は健康な人でも、音を極端に遮る防音室に入ると耳鳴りのような音を感じることがあるの。外の音という目印が減り、脳が内側の小さな音を拾いやすくなるからよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "これは暗い部屋で、昼なら気づかない時計の針や小さな光が目立つ感覚に近いね。耳鳴りそのものが大きくなったとは限らず、音の対比が変わった結果なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに脳には、役に立たない刺激を普段は脇へ追いやる働きがあるの。会話や冷蔵庫の音がある昼間は耳の信号を後回しにできても、夜は注意が向きやすいのよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "だから「静かだから聞こえた」は正しいけれど、「静けさが耳を壊した」とは限らないんだ。特に寝る前は不安も加わり、脳が音を危険かもしれないと監視し続けやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "耳鳴りは笛が鳴っているように感じても、耳の中に実際の音源があるとは限らないわ。耳から脳へ届く情報の量や処理が変わり、音として意識される現象なの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "目安として、片側だけで急に強くなったり、聞こえにくさやめまいを伴ったりするなら、単なる静けさの対比と決めつけず、早めに耳鼻科へ相談してほしい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "日常で気になる夜は、完全な無音を目指さず、弱い環境音を流す方法もあるよ。静かな雨音や扇風機のような一定の音が、耳鳴りとの対比をやわらげてくれるの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "無響室のように外音が極端に少ない場所では、健康な人でも耳鳴りに気づく割合が約9割に達した実験があります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "驚きなのは、耳鳴りが静寂で新しく生まれるとは限らないことです。普段は生活音に隠れた微かな信号が前に出ます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "耳の奥では、血流や筋肉の小さな動き、神経の電気活動が常に起きています。静かになると脳はそれらを拾いやすくします。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "聴覚のゲインとは、脳が音の入力を弱いと判断したとき感度を上げる働きです。暗い部屋で目が慣れる感覚に近い仕組みです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "1960年代の無響室研究では、数分から数十分の静寂で被験者の多くが高い「キーン」という音を報告しました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "その音の高さは人により違いますが、数千ヘルツ付近として感じる例が多めです。虫の声に似ると表現されることもあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "外から入る音が減るほど、脳は信号と雑音を区別しにくくなります。すると本来は無視する神経の揺らぎにも注意が向きます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "しかも不安になって耳鳴りを探すと、注意の回路がその音を優先します。同じ小ささでも、気になる音へ育つことがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "寝る前に耳鳴りが目立つのも、部屋が静かで周囲の音が減るためです。昼間に消えたのではなく、マスクされていた場合があります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし片耳だけで急に強まる、めまいや難聴を伴う場合は別です。静けさの錯覚と決めつけず、耳鼻科へ相談してください。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "静かな寝室でだけ耳鳴りが急に大きくなるのは、音が増えたからではありません。外の音が消えると、脳が普段は隠している微かな神経信号を拾いやすくなるのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "耳鳴りの記録は古く、紀元前のエジプト医学文書にも耳の中の不快な響きへの処方が残ります。人は何千年も前から、静寂に潜むこの音を病や予兆として恐れてきました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "19世紀になると医師たちは、患者が聞く音を外から確認できない耳鳴りを主観的耳鳴りと呼びました。現在も大半はこの型で、本人だけの音が確かに聞こえる不思議が研究を動かしました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "転機は20世紀、無響室という反射音を極端に減らした部屋での実験でした。健康な人でも長く静寂に置かれると、普段は意識しない耳のざわめきを報告したのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで反転です。耳鳴りは耳だけの故障とは限らず、脳の「音量調整」が静けさで感度を上げた結果でもあります。無音は休息のはずなのに、内側の音を目立たせる舞台になるのです。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "研究者はこれを聴覚のゲイン、つまり小さな入力を大きく扱う増幅の働きとして考えます。暗い場所で目が慣れて弱い光まで見えるように、脳は弱い音にも注意を向けます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "1960年代以降、周囲に弱い雑音を流すと耳鳴りの苦痛が和らぐ人がいると報告されました。完全な静寂より、雨音や換気扇のような一定音が脳の注目を分散させる場合があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし、耳鳴りそのものは一種類ではありません。加齢、騒音、薬、血流など背景は多く、片側だけで急に始まる場合や聞こえの急変は、歴史話で済ませず受診が大切です。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "つまり静かな場所は音を生む部屋ではなく、脳が背景音を下げて内側の信号を聞き取る場所です。次は、その音に注意が吸い寄せられるほど大きく感じる仕組みを追ってみましょう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "驚くのは、静寂が耳鳴りを新しく作るわけではないことです。周囲の音が減ると、普段は隠れていた神経の微かな信号が前景へ押し出され、脳が急に気づきます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "耳鳴りは外から届く音ではなく、耳から脳へ至る経路の活動を音として感じる現象です。完全防音室で健康な人でも「シーン」を聞くことがあり、異常とは限りません。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも人の聴覚は、音量の絶対値より周囲との差に敏感です。冷蔵庫の低い運転音や換気扇が止まった瞬間、同じ耳鳴りでも急に大きくなったように感じるのです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "ここで反転です。静かな部屋で聞こえる高い音は、耳そのものの雑音だけでなく、脳が音の入力不足を埋めようとして感度を上げた結果かもしれません。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "この感度調整は「中枢ゲイン」と呼ばれ、脳内の音量つまみを上げるような仕組みです。難聴で特定の音域が入りにくいと、その帯域だけ増幅され、音が目立つことがあります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "無響室では多くの人が数分から十数分で自分の呼吸、心拍、関節の小さな音まで意識します。外界の音が少ないほど、脳は体内由来の信号へ注意を振り向けやすくなります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔から「静けさの音」と表現されることがありますが、実際には静寂そのものが鳴るのではありません。聞こえる対象が減ったため、今までマスクされていた音が残るだけです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "だから就寝前に耳鳴りが強まる人が多いのです。昼間は会話や交通音が自然な覆いになり、夜にそれらが消えると、脳はわずかなピー音へ注意を固定しやすくなります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "対策として無理な完全無音を避け、雨音や扇風機のような小さな環境音を置く方法があります。耳鳴りを消すより、脳が一点だけを監視しない状況を作る考え方です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし片耳だけで急に始まった、聞こえが落ちた、めまいを伴う耳鳴りは別です。静かなせいと決めつけず早めに耳鼻科へ相談すると、見逃したくない原因を確かめられます。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "静かな部屋で耳鳴りが気になる日は、まず無音を埋める小さな環境音を試してみよう。換気扇や雨音を、ごく小さく流すだけで意識の焦点が耳から離れやすくなるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "驚きなのは、耳鳴りを消そうと必死に聞き分けるほど、脳がその音を重要だと学習しやすい点だ。今から使うコツは、耳鳴りを敵ではなく背景音として扱うことなんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "寝る前なら、スマホの雨音や扇風機の弱い風量を、耳鳴りより少し低めに感じる程度へ設定しよう。大きな音で覆い隠す必要はなく、静寂との落差を減らすのが目的だよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ただしイヤホンで長時間流すより、部屋に置くスピーカーや小型の環境音機器が無難だよ。耳の近くへ音を固定しないので、就寝中も音量を上げすぎにくいんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "仕事中に気になったら、30秒だけ周囲の音を三つ探す練習もおすすめ。空調、衣服の擦れる音、遠くの車などへ注意を移すと、耳鳴り一点への監視をゆるめられるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "カフェの雑踏が苦手なら、自然音や一定の低いノイズを使う方法もある。波音のように変化がゆるい音は、急な物音より注意を奪いにくく、作業の邪魔になりにくいんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "耳鳴りメモも役立つよ。鳴った時刻、睡眠、カフェイン、疲れを一言で記すと、毎回の不安より傾向に目を向けられる。例えば夜更かしの翌日に増えるなら対策が選びやすいね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "反対に、急に片耳だけ強く鳴る、聞こえが落ちる、めまいを伴う場合は自己流で様子見しないでね。耳鳴りは多くが深刻とは限らないけれど、急な変化は耳鼻科へ相談する目印だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の一歩は、静かすぎる場所に小さな背景音を足し、鳴り方を責めずに観察すること。耳鳴りへ反応する習慣は少しずつ変えられるから、今夜は心地よい音量から試してみよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "静かな部屋で耳鳴りが急に大きくなるのは、音が増えたのではなく、周囲の音に隠れていた体内の微かな信号へ意識が向くからだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "脳は静寂を完全な無音として放置せず、血流や神経の活動まで拾おうとする。だから夜の寝室ほど「キーン」が目立ち、不安にもなりやすいんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "驚きなのは、耳鳴りそのものより「気にしているか」が苦しさを左右すること。小さな環境音を足すだけで、脳の注目先が変わる場合もあるよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし片耳だけの急な耳鳴り、聞こえにくさ、めまいを伴う変化は自己判断しないでね。体の異変を知らせる合図として、早めに医療機関へ相談しよう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "つまり静かな場所で聞こえる耳鳴りは、耳が壊れた証拠と限らない。音の少なさと脳の注意が重なり、普段は背景の感覚が前へ出る現象なんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は「眠いのに寝る直前、体がビクッとするのはなぜ？」を解説するよ。落下したように感じる、あの一瞬の不思議を睡眠中の脳から追いかけよう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の「なぜ？」が少し軽くなったら高評価で教えてね。身近な体と眠りの不思議を一緒にほどくため、リコとマコトのゆっくり日常科学をチャンネル登録！",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "静かなほど",
+      "耳が鳴る"
+    ],
+    "hook_caption": "30dBの謎",
+    "subtitle": "静寂で浮かぶ音の正体",
+    "tagline": "あなたの耳にも今ある小さな音"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 80,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 2,
+          "text": "えっ、それ昨日あった！夜は約30dBまで静かになるよね。",
+          "pattern": "静か[にだ]",
+          "reason": "「静かに」はミュートでは区別できない"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "寝る前は小さな環境音も意識してみてください。高評価とチャンネル登録で感覚のふしぎ",
+          "reason": "1行67字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 19,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 0,
+        "relatability": 3,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.549,
+      "similar_to": "なぜ息でお茶は3分早く冷める？正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 44,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ静かな部屋で耳鳴りが聞こえる？30dBの正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "なぜ静かな部屋で耳鳴りが聞こえる？30dBの正体",
+  "cross_channel_keywords": {
+    "ok": false,
+    "blocked_keyword": "なぜ",
+    "rejected_title": "なぜ静かな部屋で耳鳴りが聞こえる？30dBの正体"
+  }
+}

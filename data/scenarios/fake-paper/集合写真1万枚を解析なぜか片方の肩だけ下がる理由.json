@@ -1,0 +1,531 @@
+{
+  "title": "集合写真1万枚を解析、なぜか片方の肩だけ下がる理由",
+  "theme": {
+    "title": "写真に写った人は必ず片方の肩が下がる — 集合写真1万枚の解析",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "写真の人は必ず片肩が下がる——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言います。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『構図観測年報』と鏡面姿勢研究所が10,284枚を調べました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "右肩低下は51.8%、左肩低下は48.2%で。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "さらに全員の肩が水平だった写真は、0枚だったそうです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズはまだあり、毎日投稿中の1万人目標へチャンネル登録で応援よろしく。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも集合写真を見返して、なぜか自分だけ片方の肩が低く見えたことはありませんか。写真に写った人は必ず片方の肩が下がる、という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載誌は『構図観測年報』、研究機関は鏡面姿勢研究所です。卒業式、飲み会、職場の記念撮影を含む10,284枚を解析し、肩の高さを比較したと報告されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "それは知らなかったです。何十人も並ぶ集合写真で、全員に左右どちらかの下降が見つかるなら、履歴書用の写真を見る時まで気になってしまいそうです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "測定では首の付け根から袖の上端までを結ぶ線を使い、画像上で2ミリ相当以上ずれた場合だけを下降と記録した設定です。定規を当てる場面まで想像できる手順です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者は写真に写った延べ84,616人で、顔が正面を向いた人物だけを抽出しました。横を向いた人や髪で肩が隠れた人を除くことで、数字の輪郭を整えています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。掲載誌ごと架空であり、鏡面姿勢研究所も実在しません。10,284枚、84,616人、2ミリという数値もすべて創作です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。私は10,284枚と聞いた瞬間に信じていました。肩を2ミリ単位で測ったと言われると、研究室の表計算まで頭の中に浮かんでしまいます。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "本日は、存在しない論文がどうすれば本物らしく聞こえるのかを、集合写真の肩という日常的な違和感で分解します。以後の調査設定もすべてフィクションとして扱います。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空研究班の最初の仮説は、撮影直前に人が片足へ体重を寄せるため、肩の水平が崩れるというものです。長い列で順番を待つ時の姿勢を材料にしています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "片足に重心を置くなら、肩まで少し傾くのは分かります。でも友人と肩を寄せる写真や、職場で整列した写真でも同じ割合になるのでしょうか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこで写真を屋外、室内、式典、私服の4群に分けた設定です。最も下降率が高かったのは式典写真で84.7%、最も低い私服写真でも68.9%とされました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班は、式典では平均待機時間が11分42秒あるため、片足に体重を逃がす回数が増えると説明しました。受付前で立ち続ける場面を借りた、非常に納得しやすい筋書きです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "待機時間まで出されると、数字の根拠があるように思えます。では、すぐ撮れる短時間の自撮り形式では、肩の下降率が大きく下がるという結果になるのでしょうか。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空の追加集計では、準備から撮影まで30秒以内の写真は61.3%でした。式典の84.7%より低い一方、完全に水平だった人物は全体の7.6%にすぎないと書かれています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで使われた有意差とは、偶然のばらつきだけでは説明しにくい差という意味です。この論文ではp値0.003未満と添えられ、記号ひとつで結論が強く見える構造になっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "p値0.003という数字は強そうですが、肩が下がる原因を直接示すものではありませんよね。数字が精密でも、説明まで正しいとは限らない気がしてきました。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その通りです。数値は差の出方を示すだけで、原因を決める札ではありません。それでも論文風の表に置かれると、読み手は体重移動まで証明済みだと受け取りやすくなります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そして最も強い仕掛けは、肩の傾きが誰にでも見覚えのある違和感だという点です。集合写真を拡大すれば、口元や腕の角度まで自分で証拠を探し始めてしまいます。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "確かに、昔のクラス写真を見返すと、言われる前より肩の線ばかり探してしまいます。では架空研究班は、写真を見る側が傾きを見つける数まで数えたのでしょうか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "第二段階では、写真経験のない判定者312人に同じ48枚を見せた設定です。肩の差を探すよう指示された156人と、自由に見る156人を比較したとされています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "肩を探すよう言われた群は、1枚あたり平均3.8人の傾きを報告しました。自由に見た群は平均1.2人で、指示ひとつにより報告数が3倍以上になったという結果です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "写真の中の肩が増えたのではなく、見る側の注意だけが変わったのですね。恋人や同僚の集合写真を見て、左右差を気にしてしまう時にも似た構造がありそうです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空論文はこの効果を『構図内の非対称』と名付けました。難しく聞こえますが、要するに左右がぴったり同じではないという、ごく普通の見え方を専門語らしく包んだだけです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "専門語の形にすると、寝癖の左右差やシャツの襟のずれまで、研究対象のように聞こえます。名前が付くだけで、現象が既に確立されているように感じるからです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "『構図内の非対称』と言われると、私もどこかで聞いた概念だと思いそうです。では、右と左のどちらの肩が低い人が多いという設定なのでしょうか。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "右肩が低い人物は51.8%、左肩が低い人物は48.2%という設定です。差は3.6ポイントだけですが、表題に右側優位と置けば、方向性のある発見に見せられます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに研究班は、写真の右端に立つ人物ほど右肩が低くなると主張しました。端の人物1,906人では右肩低下が58.9%で、中央部より7.4ポイント高いとされています。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "端の人は隣との距離を気にして、少し内側へ寄るからでしょうか。集合写真の端では腕や荷物の置き場がなく、姿勢が固まりやすいという説明は想像できます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "説明として添えられたのは『端部寄せ姿勢仮説』です。しかし仮説名が長いほど検証が進んだように見えるだけで、この名称自体は証拠を1グラムも増やしていません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空論文の特徴は、もっともらしい観察から、もっともらしい名前へ進むところにあります。読み手は名称を覚えた瞬間、その現象が教科書に載るほど確立したと錯覚しがちです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "私なら『端部寄せ姿勢仮説』を聞いたら、過去の講義で習った学説だと思いそうです。名前より先に、誰が何を測ったのかを見る必要があるのですね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "続いて架空研究班は、撮影距離別の結果も提示しました。カメラから3メートル以内の写真では下降率76.1%、5メートル以上では72.4%だったと報告した設定です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "差は3.7ポイントしかありませんが、研究班は近距離ほど緊張が増すと解釈しました。カメラが近い時ほど表情を意識する、という誰でも持つ経験を説明に利用しています。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "近いカメラを意識する感覚は分かります。ただ、写真から距離を正確に推定し、肩と結びつけたという設定まで加わると、論文の厚みが急に増して見えます。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その厚みを支えるため、論文には撮影年代の比較まで置かれました。2001年から2025年を5年ごとに区切り、肩の傾きが少しずつ減ったという流れを作っています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最初の5年区分では下降率79.6%、最後の5年区分では71.2%とされました。研究班は撮影回数が増え、人が姿勢に慣れたためだと、迷いなく結論づけています。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "撮られ慣れるほど肩が水平になるなら、就職用のプロフィール写真にも当てはまりそうです。でも年代ごとに服装や画質が違うなら、写真だけで比べるのは難しそうですね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "実際には、年代ごとに撮影機材、並び方、服の肩線、画面のゆがみまで違うかもしれません。架空論文は別の要因を扱わず、慣れという一語だけで説明を終えています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "歴史章では、1928年の架空新聞写真群が引用されました。帽子のつばが肩の線を隠し、解析可能な人物がわずか17人だったという、古資料らしい制約まで用意されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "にもかかわらず、その17人中14人に右肩低下があったとして、研究班は現象の古さを主張します。少ない例から長い歴史を語るのは、虚構を壮大に見せる便利な方法です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "17人中14人なら強そうに見えますが、帽子で肩が見える人だけを選んだ時点で偏りそうです。選び方を聞くと、同じ数字でも急に慎重に見たくなります。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "サンプル数は大きければ安心、小さければ不安という単純な話ではありません。何を除き、何を残したかで、同じ集合写真でも表の結論はまるで別の顔を見せます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空研究班はさらに、笑顔の強さを5段階で記録したと述べます。最も大きく笑った群では肩の下降率が82.5%に上がり、無表情群より12.1ポイント高いという設定です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "説明は、笑うと首まわりがゆるみ、肩の高さが崩れるからというものです。飲み会で笑いながら少し前へ寄る写真を思い浮かべると、説明だけは自然に耳へ入ってきます。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "人が納得するのは、結果が正しいからではなく、自分の記憶に合う場面が思い浮かぶからかもしれません。私も卒業写真の列を、勝手に証拠のように思い出しました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで重要なのは、写真の肩を直す方法を教えることではありません。この動画は、日常の小さな違和感に数字と固有名詞が重なると、どれほど信じやすいかを扱っています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "似た文章を見かけた時、最初に確認するのは数字の大きさではなく出典です。掲載誌、研究機関、論文名が検索できる形で示されているかを見るだけでも、印象は変わります。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "特に『1万人を解析した』という言葉は強いですね。でも、その1万人がどんな写真の誰なのかが書かれていなければ、数字だけを信用してはいけないわけです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "原因の説明が一つしかない時も注意が必要です。肩が傾く理由を重心だけに決めても、服の形、撮影角度、姿勢、立ち位置など、別の説明はいくらでも考えられます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "もう一つの確認点は、文章が自分の経験にぴったり合いすぎていないかです。納得感は証拠ではなく、もっともらしさを補強する材料として働くことがあります。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "今回の肩の話は、まさにそれでした。集合写真のあるあるに10,284枚とp値0.003が乗っただけで、私は自分の記憶まで研究結果の一部のように扱っていました。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "写真に写った人が必ず片方の肩を下げるという結論は、検証された事実ではありません。『構図観測年報』も鏡面姿勢研究所も、最初から創作として作られた名前です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "数字、専門らしい名称、身近な記憶の三つを並べるだけで、存在しない研究は驚くほど論文らしく聞こえます。これが『月刊 虚構論文』編集部が毎回記録している観察対象です。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じかけた自分は少し悔しいですが、次に数字の多い投稿を見た時は肩の研究を思い出せそうです。まず出典を探す、その一手を挟んでから読むことにします。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、図書館の本が借りられた回数だけ重くなるという架空論文を扱います。貸出票の数と本の重さを結びつけた、12年分の存在しない記録を淡々と査読します。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "日常の違和感を研究したシリーズには、こういう論文がまだ何本もアーカイブされています。信じかけたなら高評価で記録し、チャンネル登録で次の査読にもお付き合いください。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "写真の全員",
+      "肩が下がる"
+    ],
+    "hook_caption": "肩は傾く",
+    "subtitle": "集合写真10,284枚の解析",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズはまだあり、毎日投稿中の",
+          "reason": "1行61字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": false,
+      "max_similarity": 0.706,
+      "similar_to": "自販機の左から二番目が先に空になる — 全国942台の在庫記録",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 33,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "集合写真で肩が下がる — 10,284枚の解析結果"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['結果'](+12)"
+    ]
+  },
+  "original_title": "架空論文ファイル #18：集合写真で肩が下がる — 10,284枚の解析結果",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "架空論文ファイル #18：集合写真で肩が下がる — 10,284枚の解析結果"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

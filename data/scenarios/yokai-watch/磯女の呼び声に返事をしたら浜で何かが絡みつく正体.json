@@ -1,0 +1,503 @@
+{
+  "title": "磯女の呼び声に返事をしたら、浜で何かが絡みつく正体",
+  "theme": {
+    "title": "磯女の正体が怖すぎる、浜で船人を呼ぶ声",
+    "angle": "九州沿岸の伝承。血を吸う型と髪で絡める型の分岐を、漁の危険と結びつけて説明する"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "なんで磯女だけ浜の呼び声に返事をしてはいけないのか。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "海の妖怪って好きだけど、九州では船人を呼ぶ声なんだ？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、呼ばれて近づくと髪で絡める磯女がいる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "夜の浜で一人だけに聞こえる声なら、返事をするのと同じだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。声の主より、髪が海から伸びるのが本体なの？",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、地方に残る妖怪シリーズと毎日投稿中の1万人目標をチャンネル登録で応援してほしいんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "なんで磯女だけ、浜で聞こえた呼び声に返事をしてはいけないのか。九州沿岸の伝承には、船人を名指しで呼ぶ女がいると書かれているんだ。\n画面中央には、最初の三秒だけ大きく「九州沿岸」と出しておきたい。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "磯女って海辺にいる女の妖怪だよね。ゲームの妖怪みたいに仲間になれそうな名前なのに、船に乗る人を呼ぶって、最初から夜のイベントみたいで不穏だよ。\n呼ばれた側は、助けを求められたと思うかもしれない。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？磯女の話は、九州の海辺で語られた怪異なんだ。海の妖怪が好きな人ほど、長い髪と潮の匂いを想像してしまう名前だと思う。\nでも原典側の磯女は、浜で待つだけの存在ではない。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "夜の海は昼間の釣り場と全然違うよね。波が一回砕ける音だけでも人の声っぽく聞こえそうだし、遠くから名前を呼ばれたら、確認しに行きたくなるよ。\nそれが磯女の狙いなら、かなりずるい。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、と語れる公式キャラクターの設定とは別なんだ。ここで扱うのは、各地の妖怪資料に記された伝承上の磯女そのもの。\n公式設定、伝承、ファンの考察を混ぜずに、声の正体を追っていこう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "本題は、九州沿岸に伝わる磯女が二つの型で語られるところなんだ。一つは近づいた人の血を吸う女、もう一つは長い髪で体を絡める女として残っている。\nどちらにも、船人を呼ぶ声という入口がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って、同じ磯女なのに襲い方が二種類あるの？血を吸う型と、髪で絡める型では、怖がる理由も違いそうだよ。\nどっちが本当の姿なのか、図鑑みたいに一つへ決められないの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "どちらかだけが正解ではないんだ。妖怪伝承は、同じ名前でも浜ごとに姿を変えるから、語られた恐怖も一枚のカードの表裏みたいには揃わない。\nただし、ここからが本題で、二つの型には同じ海の危険が透けて見える。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "まず磯とは、岩場と浅瀬の境目を指す言葉なんだ。波が砕ける場所は、昼でも石の間に足を取られやすく、夜になると海と陸の線がほとんど消える。\n船を寄せる人にとって、磯は地図の一点ではなく危険そのものだった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "学校のプールなら底の線が見えるけど、夜の磯はどこまで歩けるか分からないよね。岩に一歩乗ったつもりが、次の波で足元がなくなるかもしれない。\nそこで聞こえた声へ向かうのは、暗い階段を数えずに降りる感じだ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "九州の沿岸部では、夜の浜や沖から女の声が聞こえるという筋立てが残る。声を聞いた船人が近づくと、波間に女の姿が見える。\nけれど、近づいた後に何が起きるかは、血を吸う話と髪で絡める話に分かれていくんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "血を吸う型では、磯女は人の生気を奪う女として描かれる。ここでは刺激の強い場面ではなく、浜へ出た人が帰ってから急に弱るという、原因の見えない恐れが核になる。\n昔の家族には、夜の海が体から何かを持ち去ったように見えただろう。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "夜の漁で冷えたり、長く波に揺られたりしても、昔なら理由がすぐ分からないことは多そうだね。昨日まで元気だった人が、浜へ行った後に力を失うなら、家の人は磯女を疑う。\n見えない敵のほうが、ずっと眠れなくなるよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "髪で絡める型は、さらに場所の感触に近い。長い髪が足や腕に巻きつくという姿は、海藻、網、濡れた綱が暗い水際で体へ引っかかる感覚と重なるんだ。\n水の中で一度絡まると、見えていても外せない怖さがある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "暗い海で足に何か触れたら、海藻でも一瞬は髪だと思うかもしれない。怖くなって手足を大きく動かすほど、網や綱には余計に絡まりそうだよ。\n磯女の髪って、船人が実際に触れたものにも見えるんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そう考えると、磯女は海の怪物というより、危険な磯が女の姿を取ったようにも読める。ただしこれは伝承の背景を読む解釈で、資料が正体を海藻だと断言しているわけではない。\n語られた怪異と、調査者の推測は、同じ言葉にしてはいけない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そして二つの型に共通するのが、船人を呼ぶ声なんだ。波、風、帆や櫓のきしみが重なる夜には、遠くの音が人の声のように聞こえることがある。\nそれでも昔の人は、聞き間違いだけでは片づけず、呼んだ者の名を磯女とした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "自分の名前に似た音が聞こえたら、確かめに行きたくなるよね。通知音が鳴った気がして、画面を見直すみたいに、海でも「誰か呼んだ？」って体が先に反応しそうだ。\n声へ返事をするだけで、船の向きまで変わってしまう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承の禁忌は、返事をするな、声の方を見るな、という短い形で残りやすい。細かい説明がなくても、夜の浜へ一人で寄るなという警告は、船人の間で伝えやすかった。\n怖い話は、ときに海から帰るための合図にもなったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし磯女を単なる注意標識にすると、伝承の冷たさが消える。語りの中で彼女は波の音ではなく、こちらを選んで呼ぶ存在として立っている。\n誰でもいいのではなく、夜に海へ出た船人が狙われるからこそ、呼び声は嫌に具体的なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、名前を呼ばれたら、ただの危ない海じゃなくなるよ。昼に見れば避けられる岩場なのに、磯女は夜になってから、人が自分で近づくように仕向ける。\n聞かなきゃよかったと思うのに、次の声を待ってしまいそうで怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで一度整理しよう。血を吸う型は、浜へ近づいた後に体から力を失う恐怖を語り、髪で絡める型は、水際で動きを奪われる恐怖を語っている。\n姿は違っても、帰れなくなる場所は同じ磯であり、入口は同じ女の声なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "九州は海に面する県が多く、湾、島、岩礁のある海岸ごとに漁の記憶が積み重なる。磯女の地域差は、同じ名前の妖怪が一枚の図鑑に収まりきらない証拠でもある。\n土地が違えば、海が人に見せる失敗の形も違っていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "同じ敵キャラでも、出るステージが変われば攻撃が変わるみたいなものかな。でも磯女の場合は設定の追加じゃなくて、その場所で本当に怖かったものが姿になっている。\nだから髪と血の話が、別々なのに同じ名前で残ったんだね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "民俗学の資料では、妖怪の姿を一つに固定しない読み方が大切なんだ。何県の、どの浜で、誰が語ったのかを見ると、同じ磯女でも呼び方と結末が少しずつずれる。\nそのずれは間違いではなく、伝承が人から人へ渡った足跡になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから磯女の正体を海藻だった、と一言で断定するのは乱暴なんだ。海藻や網が背景に重なる可能性は考えられても、語り手が恐れたのは声を出し、人を待つ女の怪異だった。\n資料に残る恐怖を、便利な答えで消してはいけない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ、ファンの間で海の人魚の仲間みたいに考える遊びも、公式設定や昔の伝承とは別にしないとだめなんだね。見た目が似ているだけで同じ妖怪にすると、浜で呼ばれる怖さが薄れる。\n楽しむ考察と、記録にある話は分けて聞くよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その通りなんだ。公式の作品設定、各地に残る伝承、現代のファン考察は、どれも楽しめるけれど根拠の種類が違う。\n今回の核は、九州沿岸で語られた磯女が、船人を呼び、近づく者に二つの結末を見せるという伝承の側にある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "海の怪談で声が怖いのは、姿が見えないからだけじゃない。船の上では声の方向を間違えるだけで、船首を危ない岩場へ向けることになる。\n耳で受け取った一言が、櫓を押す手や、舵を切る足の判断まで動かしてしまうんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームなら音のした方へ行ってもリトライできるけど、夜の漁では失敗を戻せないよね。助けを求める人かもしれないと思ったら、無視することだって簡単じゃない。\nだからこそ磯女は、怪物の声ではなく人の声で呼ぶのかな。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そこが磯女のいちばん嫌なところなんだ。助けを呼ぶ声と、怪異が誘う声は、暗い海では区別できない。\nだから伝承は、見に行くなと言うだけでなく、返事をするなという、もっと厳しい禁忌を残したのかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "血を吸うという表現も、髪で絡めるという表現も、海で命が削られる過程を一瞬の怪異に凝縮している。冷え、疲れ、波、足場の悪さは別々に来るのではなく、同じ夜に重なる。\n磯女は、その重なりに顔と声を与えた存在なんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "一つだけなら避けられそうでも、暗さと波と呼び声が同時なら判断が止まりそうだ。髪に絡まれたという話は、手足が動かなくなった人の感覚を妖怪にしたみたい。\nでも、声があるなら、それだけでは説明できない気もするよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そう、記録を現実の危険だけに還元すると、最後に残る違和感を説明できない。なぜ磯女は船人を呼ぶのか、なぜ浜ではなく声から始まるのか。\nそこから先は、記録が途切れている話も多く、誰が最初に聞いたのかさえ分からないんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "分からない部分を、勝手な設定で埋めないことも調査では大切だ。資料にあるのは、磯に女が現れ、人を害し、あるいは声で誘うという断片だけ。\n断片だからこそ、夜の波音より長く残り、聞いた人の想像だけを沖へ連れていく。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "全部の能力や正体が説明されないほうが怖いね。図鑑なら空欄を埋めたくなるけど、海の怪談では空欄がそのまま沖の暗さみたいに残っている。\n呼ばれた人だけが、その続きの答えを知ることになるのかな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "磯女を追う時は、資料名より先に地域名を見てほしい。九州沿岸という大きな括りの中にも、浜の形、潮の速さ、漁の仕方が違う場所がある。\n伝承の分岐は、昔の人が海の危険を細かく見て、それぞれの言葉で残した証でもある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "髪で絡める型を読む時は、長い髪という造形だけを怖がるより、暗い磯に垂れた海藻や濡れた綱を想像すると舞台が近づく。\nこれは正体を断定するためではなく、伝承が生まれた場所の手触りを知るための見方なんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "見えるものを見間違える怖さと、見えないものに触られる怖さが重なっているんだね。夜の海で髪のようなものが腕に当たったら、確かめる前に体が固まりそうだ。\nその一瞬の停止が、波の前ではいちばん危ないのかもしれない。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "血を吸う型では、目に見える傷よりも、帰った後に力が抜ける不気味さに注目したい。浜で何に遭ったのかを言えないまま弱るなら、家族には怪異としか見えない。\n海から持ち帰る恐怖は、船を降りた瞬間では終わらないんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "現代の私たちは天気予報や警報で海岸の危険を知れるけれど、昔の船人は経験と語りで危ない夜を覚えた。磯女の話は、恐怖を共有するための記憶でもあったはずなんだ。\nただ、記憶だからといって、優しい注意書きにはなっていない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "危ないから帰ろう、よりも、女が呼んでいるから返事をするな、のほうが頭に残るもんね。怖い話として聞いた子も、大人になって夜の浜を避けたかもしれない。\n何代も同じ波の音を聞いて、同じ禁忌を覚えたのかな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そういう読み方はできるけれど、磯女を安全標語にだけして終えるのは違う。伝承の中には、合理的な説明で押し戻せない、人に似たものが海から呼ぶ感触が残っている。\nその感触があるから、磯女の名は今も夜の浜に似合いすぎるんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あの妖怪の正体は、海藻でも病でもなく、一つに決められないんだ。血を吸う女と髪で絡める女、その二つの姿を通して、九州の浜が人に見せた危険が語られている。\n決められないからこそ、最後まで消えないのは姿ではなく呼び声なんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。正体が分からないのに、返事をしてはいけないことだけは伝わっているんだね。\n夜の海では、分からないものを確かめに行かないほうがいいって、昔の人は怪談の形で残したんだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "最後に、作品の妖怪を楽しむ時にも、伝承と混ぜない線引きを置いておくんだ。ゲームの可愛い演出は公式の表現であり、磯女が船人を呼ぶ話は地域に残る伝承の表現だ。\n同じ海の妖怪でも、背負っている夜と、怖がられた理由はまったく違う。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ファンの間では海の妖怪同士をつなげて考える遊びもあるけれど、それは非公式の考察として楽しもう。資料が語る磯女は、九州沿岸で声を聞かせ、近づく人を待つ怪異として残る。\nそこに都合のいい結末を足さないことが、この話を怖いまま読める方法なんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "海辺で女の声がしたら、助けを求めているのか、磯女なのか、昔の船人には見分けがつかなかったんだね。\nだから返事をしないというルールだけが、いちばん短くて、いちばん重い言葉として残ったんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、妖怪ウォッチにも通じる猫の怪異を入口に、夜道で人を迷わせる猫又の伝承を追う予定なんだ。可愛い猫の仕草の裏に、何を見た人たちがいたのかを調べる。\n磯女とは違うけれど、暗い場所で名前を呼ぶ気配が残る話になる。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "猫又も仲間にしたい妖怪だけど、夜道で会う話になると急に怖くなるね。磯女の声を聞いた後だと、次は遠くの鳴き声まで気にしてしまいそうだ。\n夜は、聞こえないはずの音まで近づいてくるから苦手だよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "この磯女の話が気になったら、高評価を置いていってほしいんだ。地方に残る妖怪シリーズでは、土地ごとに姿を変える原典を、これからも記録に沿って追っていく。\n可愛い図鑑の外側にある、帰り道のない話も忘れず残しておきたい。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "チャンネル登録者一万人を目標に毎日投稿中だから、応援してもらえたら嬉しいんだ。ただし夜の浜で、自分の名に似た声を聞いても、振り返って確かめるのはやめたほうがいい。\n波の音だけだった、と言い切れない夜が、九州の磯にはまだ残っている。",
+      "expression": "think",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "浜の呼び声",
+      "髪が絡める"
+    ],
+    "hook_caption": "呼ぶな",
+    "subtitle": "九州沿岸に残る磯女の伝承",
+    "tagline": "可愛い海辺の影、その声には帰れない理由がある"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "よかったら高評価を置いて、地方に残る妖怪シリーズと毎日投稿中の1万人目標をチャン",
+          "reason": "1行55字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.535,
+      "similar_to": "小豆洗いの正体は音だけ残った",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 41,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "なぜ磯女は船人を呼ぶのか正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "title_quality": {
+    "score": 60,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体'](+20)",
+      "好奇心ギャップ['なぜ', '正体'](+12)",
+      "短すぎ(14字 < 18)(-12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "なぜ磯女は船人を呼ぶのか正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ磯女は船人を呼ぶのか正体"
+  }
+}

@@ -1,0 +1,548 @@
+{
+  "title": "眼鏡を外すと声量18.4%減？1,286人調査の衝撃結果",
+  "theme": {
+    "title": "眼鏡を外すと声が小さくなる — 発話音量の視力別比較",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "眼鏡を外すと声が小さくなる——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言います。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『視界音響誌』と曇天観測所が1,286人を調査しました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "平均音量は眼鏡なしで18.4%低下し。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "さらに会議の発言回数も、1時間あたり2.7回減ったそうです。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この眼鏡論文は存在しません。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標なのでチャンネル登録で応援よろしく。",
+      "expression": "sad",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも眼鏡を外した直後、なぜか声まで控えめになったことはありませんか。視界だけがぼやけたはずなのに、会議の返事や初対面の挨拶まで小さくなる現象が記録されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "結論から申し上げます。眼鏡を外した被験者は、普段どおり話したつもりでも発話音量が平均18.4%低下した——という論文があります。数字は小さいようで、会話では明確な差です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "18.4%も下がるなら、オンライン会議で急に聞き返される場面にも説明がつきますね。眼鏡という小さな道具が、なぜ声の大きさまで変えるのでしょうか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載先は架空誌『視界音響誌』、調査機関は曇天観測所です。20歳から29歳の1,286人を対象に、静かな室内と模擬会議室で14日間追跡した設定になっています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "被験者は眼鏡ありと眼鏡なしの両条件で、同じ48文字の短文を30秒ずつ読み上げました。録音機は口元から70センチの位置に固定され、机の高さも72センチにそろえられています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。掲載誌ごと架空です。1,286人、14日間、18.4%という数字も、月刊 虚構論文が真顔で組み立てた、発話音量をめぐる創作の材料です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。私は眼鏡を外すと急に小声になる知人を3人ほど思い浮かべて、かなり納得していました。では、どの部分が論文らしく聞こえる仕掛けだったんですか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最初の仕掛けは、誰でも記憶に持ちやすい場面です。寝起き、風呂上がり、仕事前のように眼鏡を外す瞬間は、そもそも声を整えにくい時間帯と重なりやすいのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次に発話音量という数字を置きました。これは声の大きさを数値化したものですが、18.4%と言われると、耳で確かめなくても差がありそうだと感じる仕組みです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "18%ではなく18.4%と小数点まで出されると、録音機の画面に細かな波形が並んでいたような気持ちになります。数字の細かさそのものが、観察の跡に見えるんですね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらにこの話は、仕事や恋愛の会話へ簡単に接続できます。初対面で眼鏡を外した相手の声が小さく聞こえた記憶は、実際の音量より印象として保存されやすいでしょう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "それなら、眼鏡を外した人が静かに見えるのは声ではなく雰囲気の変化かもしれません。では架空論文は、視界のぼやけと声量をどんな理屈でつないだんですか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文はこれを『焦点喪失性発声抑制』と名づけました。要するに、目の焦点が定まらないとき、人は相手との距離を慎重に測り、声を小さくするという架空の説明です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "設定上、被験者は視界が少しぼやけると、相手の表情を読むために上半身を平均4.6センチ前へ傾けました。近づいたから声を抑える、という日常感覚に寄せた筋書きです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "近づくなら声は届きやすくなるので、音量を落とすという説明は滑らかです。職場の小会議室やカフェの会話で起きていても、私は不思議に思わず受け入れてしまいそうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに架空研究では、眼鏡なし条件の被験者の62.7%が、読み上げ後に『いつもより丁寧に話した』と自己申告したことになっています。音量ではなく態度の変化まで数字にしたのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "有意差とは、偶然だけでは説明しにくい差を示す印です。論文はp=0.003と記載しましたが、この短い記号を添えるだけで、18.4%という作り話に研究室の空気が加わります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "数字の意味を全部知らなくても、p=0.003は見慣れない分だけ強そうに見えます。では、声が下がった人と下がらなかった人の違いまで、論文には細かく書かれていたんですか。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "書かれていました。普段から眼鏡を使う時間が1日8時間以上の群では低下率が21.1%、4時間未満の群では7.2%という、直感に沿った都合のよい段差が配置されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この段差は、長く使う人ほど眼鏡が身体の一部になるという感覚に沿います。直感に沿う数字は反論しにくく、聞き手の頭の中で理由が先に完成してしまうのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "眼鏡が身体の一部という感覚は分かります。スマートフォンを忘れた日に落ち着かないように、外した瞬間に振る舞いまで変わると言われると、私はかなり受け入れてしまいます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空論文は実験室だけで終わりません。昼休みの雑談を模した場面でも、眼鏡なし群は1分あたりの発話回数が11.6回から8.9回へ減ったと報告しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで重要なのは、音量と発話回数を別々の結果として見せた点です。同じ方向の数字が二つ並ぶと、原因も一つに違いないという印象が、聞き手の中に自然に生まれます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "数字が二つそろうと、片方が作り話でももう片方が支えているように感じますね。最初の18.4%を信じかけた理由が、少しずつ研究の手順として見えてきました。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "実はこの論文で最も強い仕掛けは、声が小さくなる結論ではありません。被験者1,286人という、個人の体験では反論しにくい人数を、冒頭から置いたことです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "1人なら気のせい、10人なら偶然、1,286人なら傾向に見えます。人は大きな人数を聞くと、内容の妥当性より先に、集計の手間へ信頼を支払う傾向があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "確かに1,286人の録音を14日間集めたと聞くと、それだけで面倒そうです。その面倒を誰かが本当にやったと思うと、結論まで真面目に受け取ってしまうのが悔しいですね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文中には、昼間より夜間のほうが低下率が高いという補足もありました。夜20時以降の測定では23.8%低下し、照明の暗さまで原因らしく演出されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかし、ここで扱った夜間測定も完全な創作です。もっともらしい研究は主張を増やすより、主張に影をつける小さな条件を足して、本物らしい厚みを見せることがあります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "昼と夜の差まで聞かされると、私はもう実験表の横軸を想像していました。細部が増えるほど、中心の結論を確認しなくなるのは、かなり不思議な感覚です。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "また、架空の研究班は参加者を『常用群』『時々群』『裸眼群』の3群に分けました。分類は単純ですが、表にすると研究デザインが整って見える便利な区分になります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "常用群では会議形式の課題で平均62デシベル、眼鏡なしでは50デシベルという設定です。デシベルは音の大きさの単位で、数字だけでも声の輪郭を頭の中に作れます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "62から50へ下がると、同じ人が急に少し遠くへ移動したような印象になります。実際には測っていないのに、声の大きさが頭の中で再生されるから、数字は厄介ですね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに論文は、眼鏡を再びかけてから平均37秒で音量が戻ったと記しました。37秒という半端な数字は、ストップウォッチを使った観察の痕跡に見せるための部品です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この37秒に根拠はありません。それでも30秒や1分より信じやすく響くのは、丸くない数値が偶然の測定結果らしく聞こえるためだと、月刊 虚構論文では整理しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "私はいま、眼鏡をかけ直して37秒待ちたくなりましたが、待っても研究にはなりませんね。日常の動作に半端な時間を足すだけで、検証済みに見えるのが興味深いところです。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで大切なのは、実在する聴覚や視力の研究を真似しているわけではない点です。本動画の眼鏡と声量の関係、掲載誌、機関、手法、年号、数字はすべて創作です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空論文の設計では、身近な動作に一つだけ見えない因果を足します。眼鏡を外す、相手へ近づく、声が下がるという3段階なら、聞き手は空白を自分の経験で埋めてくれます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "つまり説明が足りないから疑うのではなく、少しだけ足りないから自分の経験で補ってしまうんですね。友人との会話や面接の記憶まで、勝手に証拠として呼び出してしまいます。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空の歴史欄では、1978年に曇天観測所の前身が、眼鏡の曇りと電話応対を観察したとされます。古い年号を一つ置くだけで、研究に積み重ねがあるように見えます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その記録には、受付担当者48人のうち31人が眼鏡を拭く間だけ語尾を弱めたとあります。職業、人数、動作を添えると、存在しない出来事にも具体的な机と椅子が生まれます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "電話応対という場面が妙に具体的なので、古い受付台と書類棚まで想像してしまいました。架空の歴史は、現在の18.4%を支える土台のように見えるんですね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "もちろん1978年の記録も存在しません。過去を持つ研究は正しそうに見えますが、年号は真偽の証明ではなく、話に時間の奥行きを与える装置として使われることがあります。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文はさらに、眼鏡のフレーム色による差も示しました。透明なフレームでは14.2%、濃色のフレームでは19.6%低下したという、検証しづらい比較が添えられています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "色まで関係すると聞くと急に疑いたくなりますが、同時に見た目の印象が声に出るのかもとも考えます。荒唐無稽さと納得感は、案外かなり近い場所にあるんですね。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここでは行動を勧める結論は出しません。眼鏡を外して小声になるかを試す必要も、会議で誰かの声量を判定する必要もなく、これは存在しない実験の読み物です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "もし会話中に相手の声が聞き取りにくくても、それを眼鏡の有無で説明する根拠はありません。架空の18.4%を、誰かの性格や能力を測る数字に使わないことが前提です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "研究らしい数字を聞くと、日常の人間関係に当てはめたくなります。でも今回の数字は創作だからこそ、納得しかけた自分の想像力だけを観察する話になるんですね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "使える鑑賞法を一つだけ挙げるなら、数字を聞いたときに測定場面を一枚だけ想像してください。誰が、どこで、何回測ったかが浮かばなければ、数字はまだ物語の部品です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "今回なら、1,286人が14日間、口元から70センチの録音機へ30秒ずつ話す光景です。その場面を具体的に想像すると、必要な部屋、録音、参加条件の多さが逆に見えてきます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "なるほど、数字を疑うために専門知識はいらず、測る場面を想像すればよいわけですね。私はまず1,286人分の眼鏡を誰が管理したのか、それだけでも気になってきました。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "本日の結論を整理します。眼鏡を外すと声量が18.4%低下するという『視界音響誌』の論文は存在せず、曇天観測所も含めて、最初から最後まで完全な創作です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "それでも信じかけた理由は、身近な違和感、1,286人という人数、14日間という期間、そしてp=0.003という細かな記号が、実験らしい一枚の景色を作ったからでしょう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですかと驚いた直後なのに、今度は数字の並べ方を見返したくなりました。眼鏡を外す場面を見るたび、声より先に1,286人を思い出しそうです。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、満員の映画館では観客の瞬きが同期するという、被験者2,048人を28日追跡した架空の記録を紹介する予定です。こちらも掲載誌ごと、丁寧に架空です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "日常の違和感を研究したシリーズには、信じかけた瞬間を数字で採集した論文がまだ残っています。高評価で査読の励みをいただければ、編集部として大変ありがたく存じます。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中です。眼鏡の向こうにあった架空の18.4%のように、存在しない論文は、まだ何本もアーカイブにあります。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "眼鏡を外すと",
+      "声が消える"
+    ],
+    "hook_caption": "声量が低下",
+    "subtitle": "発話音量の視力別比較",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 80,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 1,
+          "text": "眼鏡を外すと声が小さくなる——という論文があります。",
+          "pattern": "声[がをは]",
+          "reason": "「声が」はミュートでは確認できない"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。日常の違和感を研究したシリーズは毎日投稿中、1万人目標",
+          "reason": "1行58字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 9,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": false,
+      "max_similarity": 0.779,
+      "similar_to": "静かな部屋ほど時計を聞き逃す — 1,284人の検出率",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 35,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "眼鏡を外すと声量が18%下がる — 1,286人の比較記録"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', 'なぜ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "架空論文ファイル #18：眼鏡を外すと声量が18%下がる — 1,286人の比較記録",
+    "attempts": 1
+  },
+  "original_title": "架空論文ファイル #18：眼鏡を外すと声量が18%下がる — 1,286人の比較記録",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ眼鏡を外すと声が小さくなるのか？実は1,286人で判明"
+  }
+}

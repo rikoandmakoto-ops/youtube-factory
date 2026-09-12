@@ -1,0 +1,208 @@
+{
+  "title": "ダイソーが100円を守る大量販売の実態",
+  "theme": {
+    "title": "ダイソーが100円を維持できた実態",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "100円の実態",
+      "fact_main": "ダイソー 売上6249億円",
+      "fact_sub": "2024年2月期・公式公表",
+      "text": "驚きですが、売上6,249億円の裏で、100円を守る大量販売が回っています。",
+      "bg_query": "株式会社大創産業 ダイソー 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "国内4,360店舗",
+      "fact_sub": "2024年2月期・公式公表",
+      "text": "国内店舗は4,360店です。",
+      "bg_query": "株式会社大創産業 ダイソー 店舗 売り場",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "海外1,184店舗",
+      "fact_sub": "2024年2月期・公式公表",
+      "text": "海外にも1,184店を展開します。同じ商品を広く売れることが強みです。",
+      "bg_query": "株式会社大創産業 ダイソー 海外 店舗",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "約7万6,000品目",
+      "fact_sub": "公式サイト掲載情報",
+      "text": "品目は約7万6,000です。数字だけ見れば、かなり良い品ぞろえです。",
+      "bg_query": "株式会社大創産業 ダイソー 商品 売り場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "110円商品が中心",
+      "fact_sub": "税込価格・公式表示",
+      "text": "中心価格は税込み110円です。ただし、原材料高の影響は避けにくいです。",
+      "bg_query": "株式会社大創産業 ダイソー 110円 商品",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "300円商品も拡大",
+      "fact_sub": "Threepyなどを展開",
+      "text": "300円商品も広がりました。",
+      "bg_query": "株式会社大創産業 Threeppy 店舗 商品",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったら、話題の企業の実態シリーズもプロフィールでチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "売上6249億円",
+      "100円の裏側"
+    ],
+    "subtitle": "ダイソーが価格を守る実態",
+    "tagline": "薄利を回す数字"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 3,
+        "relatability": 0,
+        "shareability": 7,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.423,
+      "similar_to": "ユニクロ店長の正体、売上1億円を任される裁量",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 44,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "ダイソーが100円を維持する正体、売上6,249億円の裏側"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体', '裏側'](+20)",
+      "好奇心ギャップ['正体', '裏'](+12)"
+    ]
+  },
+  "original_title": "ダイソーが100円を維持する正体、売上6,249億円の裏側",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "ダイソーが100円を維持する正体、売上6,249億円の裏側"
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "ダイソーが100円を守れる理由、売上の裏側"
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}
