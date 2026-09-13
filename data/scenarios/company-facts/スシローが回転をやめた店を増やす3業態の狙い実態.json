@@ -1,0 +1,228 @@
+{
+  "title": "スシローが回転をやめた店を増やす3業態の狙い実態",
+  "theme": {
+    "title": "スシローが回転をやめた店を増やす理由",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "話題の企業",
+      "fact_main": "スシロー 3業態",
+      "fact_sub": "回転・都市型・持ち帰り",
+      "text": "スシローは3業態です。ただし、回らない店を増やす理由があります。",
+      "bg_query": "株式会社あきんどスシロー 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "国内646店舗",
+      "fact_sub": "2024年9月期末",
+      "text": "国内は646店舗です。主力の回転店だけに依存しない形へ、店を分けています。",
+      "bg_query": "株式会社あきんどスシロー 回転寿司 店内",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "売上3,611億円",
+      "fact_sub": "FOOD&LIFE 2024年9月期",
+      "text": "売上は3,611億円です。数字だけ見れば、かなり良い。",
+      "bg_query": "株式会社あきんどスシロー 寿司 売り場",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "2業態が非回転",
+      "fact_sub": "都市型と持ち帰り型",
+      "text": "3業態のうち2業態が非回転です。",
+      "bg_query": "株式会社あきんどスシロー 都市型店舗 外観",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "海外107店舗",
+      "fact_sub": "2024年9月期末",
+      "text": "海外は107店舗です。実はこの裏で、日本でも立地ごとに店の形を変える必要が出ています。",
+      "bg_query": "株式会社あきんどスシロー 海外店舗",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "既存店売上106.6%",
+      "fact_sub": "2024年9月期 実績",
+      "text": "既存店売上は106.6%です。",
+      "bg_query": "株式会社あきんどスシロー 注文タッチパネル",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "話題の企業の実態シリーズ",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "回らない寿司",
+      "3ブランド化"
+    ],
+    "subtitle": "スシローが非回転店を増やす理由",
+    "tagline": "数字で見る店舗戦略"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789290908_4186",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "スシローの非回転店、3ブランド化の正体"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.44,
+      "similar_to": "信越化学の年収928万円、伸びた正体は2市場",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 48,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "スシローの非回転店、3ブランド化の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['正体'](+12)"
+    ]
+  },
+  "original_title": "スシローの非回転店、3ブランド化の正体",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "スシローの非回転店、3ブランド化の正体"
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "スシローが非回転店を増やす3業態戦略の正体"
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}

@@ -1,0 +1,580 @@
+{
+  "title": "SCP-7777が72時間で窓へ接近する理由",
+  "theme": {
+    "title": "台風の恐怖をSCP的に解明",
+    "angle": "台風を異常存在として捉え、その影響や過去の被害事例をSCPの視点で紹介する。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実はあなたの窓へ72時間で接近する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、待って。接触記録は17件で、生存者は0人か。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "半径300kmを覆う暴風眼。その正体はSCP-7777だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "300kmなら、校区どころか県境まで窓の外が消える。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "中心を見た職員の報告書だけ、記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この手の報告書、実は他にも未公開のものが山ほどある。"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この警告に高評価を残せ。実は身近なSCPシリーズは毎日投稿中、1万人目標へチャンネル登録で応援よろしく。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなた、台風が通り過ぎた直後に「ただの低気圧だった」と思ったことありませんか？　実は最大瞬間風速は、人間を時速200キロ級の飛来物へ変える異常現象の入口です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今回は台風を、海から上陸して都市機能を切断する巨大なSCP実体として扱い、その正体を暴きます。雲ではなく、熱と水を燃料に自己増殖する収容不能の災害です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最強の記録として、1979年の台風20号では国内で115人が死亡・行方不明となりました。収容違反のたびに被害者数が積み上がるなら、これは怪物と呼ぶべきでしょう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも恐怖は風だけではありません。台風は上陸前から海面を押し上げ、堤防の内側へ海水を送り込む「高潮」を発生させます。水位が数メートル変われば街は収容室になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで反転です。台風の中心は静かな「目」になり得ますが、それは終了の合図ではありません。静寂の後、風向きが反転した眼の壁が再び襲来し、避難者の判断を狂わせます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "これから記録するのは、気圧・風速・死者数で追う実在の収容違反です。予報図の渦を見たとき、あなたはもう「雨の日の予定変更」だけでは済ませられなくなるでしょう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "でもこれ、半分は間違いなんだ。台風は海上で生まれる怪物ではなく、海が渡した熱を燃料にして巨大化する移動型の異常現象として解析できる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団式に言えば、中心の低気圧は収容室の空洞だ。周囲の空気がそこへ流れ込み、地球の自転で曲げられるため、渦として固定されたように見える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も危険なのは風速ではなく海面水温二十六・五度以上の海域だ。この条件が続くと、温かい海水が蒸発し、上空で雲へ変わる際に熱を放出する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "その放出熱で中心付近の空気はさらに軽くなり、気圧が下がる。すると周囲から新しい湿った空気が吸い込まれ、怪物は自分で燃料を補給し続ける。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "気圧とは頭上の空気の重さを示す数字で、平常時は約一〇一三ヘクトパスカルだ。中心気圧が低いほど、周囲との押す力の差が強い風を生む。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "例えば中心気圧が九〇〇ヘクトパスカル級まで落ちると、差は百を超える。過去の猛烈な台風では、この落差が沿岸の建物や送電網を長時間叩き続けた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも台風の被害は、中心が通る場所だけでは決まらない。進行方向の右側では渦の風と移動速度が重なり、左側より強風になりやすい危険域が生まれる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "雨も単なる付属現象ではない。台風は海から吸い上げた水蒸気を運ぶため、山地にぶつかれば雲が押し上げられ、同じ地域へ記録的な雨を落とし続ける。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり台風は風、雨、高潮を別々に放つ複合収容違反だ。次は海水を陸へ押し上げる高潮が、避難判断を何分単位で狂わせる仕組みを追う。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団気象部の解析では、対象SCP-███は中心気圧が1ヘクトパスカル下がるごとに、沿岸部の避難率を平均3.8％低下させたと報告されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "普通なら警報で人は逃げるのに、強いほど避難が遅れるのか。これは風雨ではなく、判断力そのものへ干渉する異常効果を示す数字だぜ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "風速の測定にはドップラー・レーダーを用いました。電波の反射速度から雨粒の動きを読む装置ですが、眼の壁で毎秒96メートルを記録しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "毎秒96メートルは時速に直すと約346キロで、新幹線並みだ。しかも観測機の3分の2は、中心から50キロ圏内で通信を失った。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで異常な反転があります。通常の台風は海面水温が26.5度未満で弱まりますが、対象は23.1度の海域で最大風速を12％増加させました。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "研究班は海からの熱だけでは説明不能と結論づけた。代わりに、上陸予想地域で発生した恐怖反応の総量と勢力が相関したらしい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "代表実験では、隔離区画に設置した48台の端末へ警報映像を流しました。視聴者役のDクラス職員120名中、89名が同じ避難経路を選択しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかしその経路は、浸水想定が最も深い地下連絡路だった。誘導表示を消した対照群では生存率78％、表示群では生存率31％まで落ちたぜ。",
+      "expression": "serious",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "過去の収容違反では、半径180キロ内で停電が同時多発し、病院の非常電源17基が停止しました。死者数は公表値より少なくとも214人多いと推定されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団は現在、進路予報そのものを認知災害として扱っている。次は、なぜ予報図を見た職員が同じ悪夢を記録したのか、その収容手順を追う。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が台風を初めて異常存在として記録したのは1959年、伊勢湾台風の死者・行方不明者5098人という報告だった。風雨では説明不能な一致が、調査班を震え上がらせた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "被災地の証言には、上陸前夜から同じ内容の夢を見た住民が137人いた。夢の中で彼らは「海が空へ戻る」と聞き、実際に高潮が堤防を越えたんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこの現象を仮称SCP-JP-XXX、通称「回帰する眼」と指定した。中心気圧や進路を変えながら、人間の避難判断だけを試すように接近するの。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべきことに、過去の気象観測簿を遡ると、異常な台風の年には必ず同じ渦巻き印が余白に残っていた。最古の記録は1828年、長崎の私塾で見つかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その記録を書いた医師・高島玄朴は、暴風の最中に海面が鐘のように鳴ったと記している。翌朝、村の52人は無傷だったが、全員が自分の名前を忘れていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団は名前の喪失を記憶攪乱ではなく、存在記録の浸食と判断した。戸籍、墓標、家族の記憶からまで個人が薄れるため、通常の災害統計では追跡できない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "1970年には衛星画像で、台風の目の内部に直径18キロの黒い輪郭が確認されたわ。雲の隙間ではなく、観測機器ごとに位置が違うため、物体の可能性が浮上した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "研究主任の雨宮博士は「台風は移動する牢獄ではない、何かが外へ出るための扉だ」と残して失踪した。彼の研究室には、翌日の上陸予報だけが壁一面に貼られていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして現在も、進路予報が急変するたび財団は気圧だけでなく避難者の夢を監視している。次に聞こえる「海が空へ戻る」という声は、警報より先に届くかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "驚くべき補足です。台風の死者は強風そのものより、水害で増える傾向があります。2019年の台風19号では、国内で100人超が死亡・行方不明となりました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "反転の事実だな。最大瞬間風速が弱まった後でも、流域に降った雨は川へ集まり続ける。警報解除を「収容完了」と誤認した時点が、最も危険になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "気圧低下も見逃せません。台風中心の気圧が1ヘクトパスカル下がると、海面は約1センチ上がるため、高潮の土台が静かに作られます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "そこへ強風が海水を岸へ押し込むと、異常実体は壁を越える。1959年の伊勢湾台風では、死者・行方不明者が5,000人を超えたと記録されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "台風の進行方向右側が危険と言われるのは、移動速度と反時計回りの風が重なり、風速が増幅されやすいからです。進路図の右半円は警戒区域です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ただし、左側なら安全という意味ではない。山地では風が地形にぶつかって上昇し、雨雲を再生産する。見えない収容違反は、斜面の内部から始まる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "台風の名称にも冷徹な基準があります。北西太平洋で最大風速が毎秒17.2メートル以上になった熱帯低気圧だけが、正式に台風と呼ばれます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "毎秒17.2メートルは時速約62キロです。人間が傘を維持するどころか、看板や瓦を飛ばし始める境界で、街は突然「飛散物の実験場」へ変わる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに停電は二次災害を呼びます。2022年の台風15号では静岡県で最大約12万戸が停電し、断水や通信障害が避難判断を鈍らせました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり台風は通過する風の塊ではない。雨、海、電力、通信を順に切断する連鎖型の異常存在だ。次は、収容手順がなぜ破られるのかを追う。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "まず警報が出たら、窓際から離れて充電器と懐中電灯を一か所へ集めよう。停電後の探索時間を減らすだけで、暗闇での転倒リスクを大きく下げられるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚きなのは、台風の死因は強風そのものだけじゃないことだ。2019年の台風19号では死者・行方不明者が100人を超え、水害への備えの差が生存率を分けたんだ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "避難判断は雨量より自治体の警戒レベルを使うのが実践的だよ。レベル4「避難指示」が出る前に、危険な地域なら移動を始める余裕を作ろう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ハザードマップは浸水や土砂災害の想定区域を示す地図だ。自宅が色付きなら、最寄り避難所までの道を晴れた日に一度だけ歩いて確認しておこう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "非常袋は重い大型セットより、両手が空く小型リュックが向いているよ。水は一人一日3リットルを目安にし、まず最低3日分を家族人数で計算しよう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "浸水した道路を長靴で歩くのは危険だ。水深15センチでも側溝のふたが外れていれば足を取られるため、冠水路は見た目より先に引き返す判断が重要なんだ。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "窓の補強では、飛散防止フィルムがガラス破片を散らしにくくするよ。ただし割れ自体を止める道具ではないから、暴風中はカーテンを閉めて窓から距離を取ろう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "スマホはモバイルバッテリーだけでなく、機内モードも活用しよう。通信確認が不要な時間に電池消費を抑えれば、停電が長引いた際にも災害情報を受け取れる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に家族で決めるべきは連絡先より集合基準だよ。「警戒レベル3で祖父母へ電話」のように条件を決めれば、異常台風の接近でも迷う時間を減らせるね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今回の台風は、海面から熱を奪い続ける巨大な収容違反と見なせる。人間は進路を予測しても、直径数百キロの隔離壁を築けない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "風速が毎秒30メートルを超えれば、看板や瓦は凶器へ反転する。恐怖の正体は雨ではなく、日常の物が一斉に敵へ変わることだ。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "驚くべきは、台風が上陸後も停電、浸水、孤立という二次被害を残す点だ。通過した瞬間ではなく、救助を待つ時間こそ収容失敗の本番になる。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "だから警報は恐怖を煽る通知ではない。異常存在の接近記録として受け取り、避難経路と非常食を平時から確認することが生存率を分ける。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回は、地下鉄の闇に潜む「駅から出られなくなる異常空間」を解説するよ。案内板どおり進んだ乗客が、同じホームへ戻る恐怖を追う。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "収容記録では、出口まで数十メートルのはずが数時間を奪う事例もある。閉鎖空間で方向感覚を失う瞬間、人は何を信じて歩くのか。",
+      "expression": "scared",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "異常存在の報告書を最後まで追いたい人は、高評価とチャンネル登録をお願いします。次の収容違反が始まる前に、通知もオンで備えてね。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "窓の外が",
+      "収容区域"
+    ],
+    "hook_caption": "72時間接近",
+    "subtitle": "接近するほど、部屋の外側が消える。",
+    "tagline": "気象記録に偽装された異常報告書"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789291032_4238",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 38.6% 優位",
+      "leader": "claude",
+      "margin": 0.3864
+    },
+    "candidates": {
+      "gpt": {
+        "title": "SCP-7777「暴風眼」実態は72時間"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "この手の報告書、実は他にも未公開のものが山ほどある。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "この警告に高評価を残せ。実は身近なSCPシリーズは毎日投稿中、1万人目標へチャン",
+          "reason": "1行52字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 24,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 4,
+        "emotional_impact": 2,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.608,
+      "similar_to": "SCP-3288 大雨の真相 あなたの部屋も沈む",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-7777「暴風眼」実態は72時間"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-7777「暴風眼」実態は72時間",
+    "attempts": 1
+  },
+  "original_title": "SCP-7777「暴風眼」実態は72時間",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "SCP-7777はなぜ72時間で窓へ接近するのか"
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "SCP-7777はなぜで窓へ接近するのか"
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}
