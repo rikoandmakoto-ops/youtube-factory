@@ -1,0 +1,543 @@
+{
+  "title": "ドラパルトの先手が負ける理由は持ち物だった！",
+  "theme": {
+    "title": "ヒスイヌメルゴンとドラパルト、どっちが勝つ？",
+    "angle": "耐久型と速攻型の噛み合わせ。持ち物1つで勝敗が入れ替わる条件を数字で示す（09-07 実測: 対戦比較型 avg1493 = 非該当697 の2.14倍）"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "この2匹の勝負、実は持ち物でひっくり返るんだよ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ ドラパルトは素早さ142、先に動けるのに!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ヒスイヌメルゴンは防御100で耐え、返しの氷技で倒す正体なんだ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "先手でも一発で倒せないなら、学校のテストで先に書いても負ける感じだ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "しかもこだわりメガネなら約2倍級の火力で、耐える側が逆に消し飛ぶ！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "え、マジで？なら高評価！ 1分ガチ対決シリーズも毎日投稿中、1万人目標へチャンネル登録で応援よろしく！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これ知ってた？ 君のドラパルト、素早さ142で先に動けるのに、持ち物たった1個でヒスイヌメルゴンへ負け筋が生まれるんだよ！\n最速アタッカーが止まる場面、え、マジで？ってなるぞ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って！ ドラパルトって最終形の中でも素早さ142だよね、レベル50なら実数値213近くまで届くのに、なんで重そうなヒスイヌメルゴンへ負ける可能性が出るの!?",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "結論のヒントはヒスイヌメルゴンの防御100と特殊防御150だ！\n先に攻撃されても残り、返しの一発で盤面を取る、ゲームでHP1残しから逆転するみたいな硬さなんだよ！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今回はレベル50、同じくらい育てた1対1を想定して、ドラパルトの先手とヒスイヌメルゴンの耐え方をぶつけるぞ！\n600対600なのに勝ち方が真逆、ここが一番おもしろい！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "600対600なら同じ強さの上位グループ同士じゃん！ それでも片方は速さ142、もう片方は特殊防御150って、同じ点数でも教科ごとの配点が違いすぎるテストみたいだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そう、ドラパルトが火力を伸ばす物を選ぶか、ヒスイヌメルゴンが回復する物を選ぶかで、同じ先手でも倒せる回数が変わる！\nいや強すぎでしょ、この持ち物1個の差！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "まずドラパルトは先手担当だ！ レベル50で速さを最大まで伸ばすと実数値213近く、ヒスイヌメルゴンが速さを頑張っても届きにくく、初手の主導権をかなり握れるぞ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "実数値213って、相手が動く前にボタンを押せる確率が高い数字だよね！ 先に殴れるなら普通は有利、ここだけ見たらドラパルトの勝ちで終わりそうだけど？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ところがヒスイヌメルゴンは、普通のヌメルゴンと違って鋼の体を得た姿なんだ！\n公式図鑑でも金属成分を含む殻が鈍く光ると書かれ、受ける側の説得力が見た目からすごい！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、ぬるっとしたヌメルゴンが金属の殻ってギャップでかすぎ！ ドラパルトの高速攻撃を、スマホケースみたいに受け止める役へ変わった感じなのか！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ドラパルトの物理寄りの攻撃を受ける場面では、ヒスイヌメルゴンの防御100が効く！\n一発で消える相手ではなく、HPを残して反撃ボタンを押せるのが最大のいやらしさだ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "先に殴っても倒れない相手って、対戦だとめちゃくちゃ焦るやつだ！ こっちは1ターン使ったのに相手が残り、次のターンでは氷の反撃が飛んでくる、ずるいって！",
+      "expression": "sad",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "そしてここで第二フックいくぞ！ ドラパルトが速さだけで勝つと思ったら半分間違い、ヒスイヌメルゴンは回復できる持ち物1個で最初の攻撃の計算すら狂わせるんだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ヒスイヌメルゴンがオボンのみを持つと、HPが半分以下になった瞬間、最大HPの4分の1を取り戻せる！\n赤ゲージから急に戦線復帰する、対戦相手が一番見たくない回復だぞ！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "4分の1回復!? それって残りHPがギリギリでも、もう一発耐える位置へ戻ることがあるってことだよね！ ドラパルト側、倒したつもりの計算が全部ズレるじゃん！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "逆にドラパルトがこだわりメガネを持つと、特殊攻撃は1.5倍になる！\n素早さ142から飛ぶ高火力が、ヒスイヌメルゴンの特殊防御150へ正面から勝負を仕掛けるルートになるんだ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、同じドラパルトでも持ち物で役が変わるの!? 先に動くだけのポケモンじゃなく、耐久型を削り切る大砲にもなるってことか、装備選びが勝敗そのものだ！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ここで数字の土台を1回だけ出すぞ。能力の合計を示す種族値だけ見ると、ドラパルトもヒスイヌメルゴンも600で同点なんだ！\n同じ600でも、速さへ寄せるか硬さへ寄せるかで別物になる！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "種族値600って、能力を全部足した基本の強さの目安だよね！ 同点なのに片方が素早さ142、片方が特殊防御150なら、100メートル走者と盾役が同じチームにいるみたいだ！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ドラパルトはHP88、防御75、特殊防御75だから、先に倒す前提の配分だ！\n対してヒスイヌメルゴンはHP80、防御100、特殊防御150で、受けてから返す前提が数字だけで見えるぞ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "特殊防御150はえぐいな！ ドラパルトが特殊技で突破しようとしても、相手の一番高い壁に正面衝突する可能性があるってことだよね、先手だけじゃ足りない！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただしヒスイヌメルゴンにも穴がある、地面と格闘の攻撃には弱いんだ！\n鋼の殻だから何でも止めるわけじゃなく、ドラパルトがどの攻撃を持つかで勝率が大きく動くぞ！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "なるほど、硬いから勝つじゃなくて、弱点を突けるかで変わるんだね！ じゃあドラパルトが地面の攻撃を当てられたら、オボンのみの回復でも突破が近づく？",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ドラパルトが使えるじしんは、相手の弱点を突く物理攻撃だ！ レベル50で攻撃寄りに育てた場合、ヒスイヌメルゴンへおよそ90から108ダメージが見える計算になるぞ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "90から108なら一発で終わる数字じゃないのか！ 素早さ142で先手を取っても、相手のHPを残したら反撃が確定級になる、速い側が焦る理由が見えてきた！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "返しに飛んでくるのがれいとうビームだ！ ドラパルトは氷の攻撃を苦手にしていて、ヒスイヌメルゴンの特殊攻撃110から受けると、およそ168から198ダメージが狙える！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "いや強すぎでしょ！ ドラパルトのHPは88だから、先手で削り切れなかった瞬間、氷の一発で持っていかれる可能性が高いんだね、攻めた側が急に追い込まれる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "オボンのみ込みなら、じしんのあとにHPを回復してれいとうビームを返す形が成立しやすい！\n速攻型が最も嫌がるのは、倒したはずの相手があと1回動けることなんだよ！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "対戦だとこれが刺さるってやつか！ 先手を取った満足感で次の行動を考えたら、相手が回復して残ってる、そこで試合の流れごと奪われるんだね！",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "でもドラパルト側にも持ち物1個の逆転札がある！ こだわりメガネで特殊攻撃を1.5倍にすると、りゅうせいぐんの圧がヒスイヌメルゴンへ一気に増すぞ！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "りゅうせいぐんって空から大技を落とすイメージの技だよね！ 特殊防御150でも、1.5倍の補正が乗ったら、オボンのみで受ける作戦がかなり苦しくならない？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "計算上、メガネりゅうせいぐんはヒスイヌメルゴンへおよそ142から168ダメージ！\nHPを最大まで伸ばした場合でも、オボンのみ込みで次の攻撃を耐えるかがギリギリになるぞ！",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "一撃で終わらない場合もあるけど、二発目の射程へ押し込めるんだ！ ドラパルトは素早さ142で先手だから、回復された後にも続けて攻撃できるのはめちゃくちゃ大きいな！",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ただしりゅうせいぐんは撃ったあとに特殊攻撃が2段階下がる！\n最初の大火力は出せても、同じ威力を連打できないから、ヒスイヌメルゴンが残ると勝負はまた揺れるぞ！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ待って、火力を上げた持ち物でも二発目が弱くなるの!? 速いほうが絶対勝つと思ってたのに、最初の一発で決め切れないと逆に苦しくなるんだ！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "知ってた？ ヒスイヌメルゴンは『Pokémon LEGENDS アルセウス』で初登場した姿で、ヒスイ地方の環境に合わせたような鋼の殻をまとっているんだ！\n防御100の見た目にも納得できる！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "昔のヌメルゴンは特殊防御150のイメージだったけど、ヒスイの姿は防御まで100へ上がってるんだね！ ドラパルト対策みたいな硬さに見えるのも分かる！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "公式図鑑では、ヒスイヌメルゴンの殻は金属成分を含み、鈍く光ると書かれている！\n単なる見た目の変化ではなく、物理攻撃を受ける戦い方へつながる体の違いなんだよ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "設定が戦い方へつながってるの、めっちゃいいな！ 速さ142で消えるように動くドラパルトと、金属の殻で一発を受けるヒスイヌメルゴン、絵だけでも役が分かる！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ドラパルトも公式図鑑では、頭のドラメシヤを音速で撃ち出すポケモンとして描かれる！\n素早さ142という数字は飾りじゃなく、相手に反応させない速攻スタイルとも噛み合うんだ！",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "音速で撃ち出すなら先手を取るのも納得だ！ でも音速の攻撃でも金属の殻を突破できない瞬間がある、だから持ち物と技の選び方まで重要になるんだね！",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "これはファンの説なんだけど、ヒスイヌメルゴンの殻をカタツムリの殻と金属鉱石の組み合わせと見る人もいる！\n公式が明言した部分ではないから、ここは考察として楽しむところだぞ！",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "公式図鑑にある金属成分までは事実で、モチーフの細かい組み合わせはファンの考察なんだね！ そこを分けると、友達に話すときも混ぜずに説明できる！",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "実戦の結論はシンプルだ！ ドラパルトが物理寄りでじしんを押すなら、オボンのみヒスイヌメルゴンが耐えてれいとうビームで返す展開がかなり見えるぞ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "つまりドラパルトを使う君は、相手がヒスイヌメルゴンに見えた時点で、先手を取れるから安心とは言えないんだね！ まず一撃で倒せるかを考えるのが大事だ！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ヒスイヌメルゴンを使う君は、HPを大事にしてオボンのみを発動させる形を作ると強い！\n最初から満タンで受けるだけでなく、回復後に反撃する一手まで設計するんだ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "HPの残り方まで読むのが大事なのか！ ただ硬いポケモンを出すんじゃなくて、回復後に相手を倒せる位置へ残るように動く、これなら初心者でも考えやすい！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "ドラパルトで突破を狙うなら、こだわりメガネの特殊火力という選択肢が光る！ ただし同じ攻撃しか出せなくなる持ち物だから、最初に何を押すかの読みが勝敗を決めるぞ！",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "強い技を連打できる代わりに、途中で別の攻撃へ変えられないんだね！ メガネりゅうせいぐんで削り切るか、相手の交代まで読むか、速い側にもちゃんとリスクがある！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "対戦だとこれが刺さる！ 相手のドラパルトが物理型に見えたらヒスイヌメルゴンを後から出し、弱点の地面攻撃だけは警戒する、この二段構えで受けの強さを押し付けられるぞ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "逆にヒスイヌメルゴンが見えたら、ドラパルト側は氷で倒される前に削り切れる攻撃を考える！ 600対600でも、勝ち方が同じじゃないって覚えればいいんだね！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "今回の勝負、オボンのみならヒスイヌメルゴンが耐久でひっくり返し、こだわりメガネならドラパルトが先手火力で押し返す！\n勝者は固定じゃなく、持ち物と技で変わる！",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "素早さ142だけ見てドラパルト確定と思った僕、完全に読まれてた！ 防御100と特殊防御150の相手には、先手を取った後の一発まで考えないとダメなんだな！",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次に遊ぶとき、ドラパルトとヒスイヌメルゴンが並んだら、まず持ち物を想像してみて！ 速攻か耐久かだけじゃなく、回復か火力かで見方が変わるはずだ！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "次回はテツノブジンとサーフゴーの対決を研究するぞ！ 素早さ116の剣士と、特殊防御91の黄金ボディがぶつかると、また持ち物で計算がひっくり返るんだよ！",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ソラ",
+      "text": "えっ、その組み合わせも強すぎでしょ！ 今日の600対600みたいに、数字だけでは見えない勝ち筋があるなら絶対見たい、次の対決も気になりすぎる！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "え、マジで？ってなったら高評価を押してくれたら、研究データを次の対決へ回す燃料になる！\n1分ガチ対決シリーズには、持ち物ひとつで見え方が変わる勝負をまだ置いてあるぞ！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ヒカリ研究員",
+      "text": "チャンネル登録者1万人を目指して毎日投稿中だから、次の対決も一緒に追いたい君はチャンネル登録で応援よろしく！\n次に遊ぶとき、ちょっと見方が変わるはず！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "速さ最強",
+      "でも負ける"
+    ],
+    "hook_caption": "持ち物で逆転",
+    "subtitle": "ヒスイヌメルゴンVSドラパルト",
+    "tagline": "耐久と速攻の勝負"
+  },
+  "channel_id": "pokemon-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "え、マジで？なら高評価！ 1分ガチ対決シリーズも毎日投稿中、1万人目標へチャンネ",
+          "reason": "1行51字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 24,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 7,
+        "emotional_impact": 0,
+        "relatability": 4,
+        "shareability": 13,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.515,
+      "similar_to": "君が気づかない色違い確率の実態",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 43,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "enhanced_title": "君のドラパルトが負ける本当の理由は？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for pokemon-lab"
+    }
+  },
+  "original_title": "君のドラパルトが負ける本当の理由は？",
+  "title_duplicate": {
+    "resolved": true,
+    "rejected_title": "君のドラパルトが負ける本当の理由は？",
+    "matched": "1分ポケモン研究 #11：🔥ドラパルトとガブリアス、君は3秒で速さの壁を越えられる？",
+    "score": 0.963
+  },
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['？'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "先手必勝が崩れる？2匹の勝敗を分ける持ち物"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

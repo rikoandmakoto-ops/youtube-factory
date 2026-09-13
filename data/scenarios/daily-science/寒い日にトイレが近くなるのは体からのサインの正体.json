@@ -1,0 +1,532 @@
+{
+  "title": "寒い日にトイレが近くなるのは体からのサインの正体",
+  "theme": {
+    "title": "なぜ寒いと尿意が近くなるのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？寒いと尿意が近いのには体の理由があります。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！冬は朝に2回行くけど、気温10度で変わるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "寒さで血管が縮み、血液が中心へ集まると腎臓が水分を出します。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！水道ホースを少し握ると中身が押される感じだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも汗が減る冬は、出し切れない水分が尿に回りやすいんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "寒い日の飲み物も少し意識してみて。高評価を押して、体の謎シリーズと毎日投稿中の1万人目標を応援するチャンネル登録よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？気温10度前後の朝、家を出る前にトイレへ行ったのに、駅まで15分歩く間にまた尿意が来ること、あなたにもありませんか。\n実はその近さには、寒さを受けた体が水分を動かす順番が関係しています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！朝7時に家で済ませて、いつもの駅へ向かっただけなのに途中で気になったよ。\n飲み物を増やした覚えがなくても起きるから、膀胱だけの問題ではなさそうだと思っていたんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "冷たい空気に触れた数分後、あなたの手足の血管と腎臓は、目に見えない連携を始めています。\n今回は、寒い日に尿意が近くなる体の正体を、普段の外出に重ねながら一緒にほどいていきます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！朝だけでなく、冷房が強い店で30分ほど座ったあとに急にトイレを探すこともあるよ。\n同じ仕組みなら、体の中では最初に何が冷えを受け取っているのか気になるね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず尿は、飲んだ水がそのまま直通で出てくるものではありません。\n左右に1つずつある腎臓が血液から余分な水分を選び、必要な分は戻しながら、残りを少しずつ膀胱へ送っています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "血液から選び分けているなら、コップ1杯を飲んだ直後だけ見ても足りないんだね。\nじゃあ寒い日に急に近くなるのは、血液の流れや量の見え方が変わるからなのかな、と考えたくなるよ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "寒さを感じると、皮膚の近くにある細い血管は、体温を逃がしにくくするためにきゅっと細くなります。\n冬の朝に指先が冷えて白っぽく見えるのは、温かい血液を中心へ残そうとするためです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、気温5度くらいの日は手袋を外しただけで指が冷たくなるよね。\n手足へ広がっていた血液が少なくなるなら、その分だけ胸やお腹の周りが混み合うようにも感じられそうだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りで、体の中心へ寄った血液は、実際の総量が急に増えなくても、多くなったように体へ伝わります。\nたとえるなら、満員電車で端の車両から人が中央へ移ると、真ん中だけ急に混んで見えるのと同じです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、体は全体の量ではなく、どこに集まったかも見ているんだ！\nそれなら中心が混んだと判断したとき、余分に見える水分を少し外へ出して、混み具合を整えようとするのかもしれないね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、中心に血液が集まると、腎臓は水分を尿へ回して調整しやすくなることです。\nあなたが寒い道を10分歩いている間にも、膀胱へたまる速度がいつもより上がる場合があります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！トイレが近いのは、体が困っている合図というより、中心を守るための調整の途中でもあるんだね。\nでも寒い日に誰でも同じ回数だけ増えるわけではないのは、なぜなんだろう。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。寒さだけで尿意の強さが決まるわけではなく、汗の量、飲み物、服装、膀胱に残っていた量まで重なります。\n同じ気温8度でも、あなたの体が受け取る冷え方は毎回違うんです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、上着を着ていても近い日があるのは、気温計の数字だけでは測れないからなんだね。\n風が強い日や、靴下が少し湿っている日では、体が熱を奪われる速さも変わりそうだよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "夏は汗として水分が出やすく、同じコップ200ミリリットルの水を飲んでも、皮膚から逃げる割合が増えます。\n一方で冬は汗をかいた感覚が少なく、体に入った水分の出口として尿が目立ちやすくなるんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "汗をかいていないから水分が十分だと思いがちだけれど、尿が増えるなら話は別なんだね。\n冬の水分は、夏のように服が濡れて知らせてくれないから、体の外へ出る道を見落としやすそうだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに冬の乾いた空気では、呼吸のたびにも水分が出ています。\n白い息が見える朝を思い出すと分かりやすく、吐く息に含まれた水分が冷えて見えるだけで、あなたは何度も小さく水分を手放しています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "白い息は目で見えるから、呼吸から水分が出ることを想像しやすいね。\nトイレが近いからと飲み物を極端に減らしたら、呼吸でも出ていく冬には、かえって体が乾きやすくなりそうだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで最初の答えを整理します。寒さで手足の血管が縮み、血液が中心へ寄ると、腎臓は水分を出して中心の量を整えようとします。\nこれが、寒い日に尿意が近くなる主な道筋の一つです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、部屋のすみに置いた荷物を机の上へ集めたら、机がいっぱいに見えて一部を片づける感じだね。\n実際の水分量だけでなく、体の中の置き場所が変わることまで、腎臓への合図になるのか。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この反応には名前が付いていて、寒冷利尿と言います。つまり、冷えで中心の血液量が増えたように体が受け取り、尿として水分を外へ出しやすくなることです。\n難しく見えても、体の中心を混ませすぎない調整と考えると分かりやすいです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、ちゃんと名前があるほど昔から知られている反応なんだ！\nでも寒冷利尿があるなら、冬の外出では誰でも何度もトイレに行くはずだよね。実際には朝だけ強い人もいるのは、どんな差があるからなの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "差を作る一つ目は、皮膚が受ける冷たさです。同じ気温5度でも、風速が上がる日、雨で服が湿った日、薄着の日では、熱が奪われる速さが変わります。\nその分だけ血管が縮む反応も違いやすくなります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "風のある日にだけ急にトイレが気になることがあるのは、気分だけの問題ではなかったんだね。\n気温計が同じ5度でも、首元から風が入るかどうかで、体が受け取る条件はかなり変わるわけだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "二つ目は飲み物です。コーヒー、紅茶、緑茶に含まれるカフェインは、人によって尿が出やすく感じるきっかけになります。\n寒い朝にマグカップ1杯を急いで飲むと、冷え以外の要因も同じ時間に重なります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "朝7時にコーヒーを飲んでから駅へ急ぐ日は、寒さだけのせいにしていたかもしれない。\n温かい飲み物なら体を温めるのに、成分や飲む速さによって、尿意には別の影響が重なることがあるんだね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただ、カフェインを飲めば必ず強い尿意が出る、と一律に決めることはできません。\n量、普段の飲み方、睡眠、体調で感じ方は変わりますし、ここは科学でも個人ごとの反応を同じ式にはできない部分です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "それなら、コーヒーをやめるか続けるかの二択ではなく、出発30分前か到着後かを変えてみるのが良さそうだね。\n数日だけでも飲んだ量とトイレの回数をメモすれば、自分の傾向が見えてきそうだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "三つ目は、出発時点の膀胱のたまり具合です。尿意は満杯になった瞬間だけでなく、膀胱の壁が伸びた情報が脳へ届くことで意識されます。\n少し残っていたところへ新しい尿が加われば、早く気になりやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それなら家を出る直前に一度行ったのに近い日があるのも分かるね。\nゼロから急に作られたのではなく、もともとの分に寒さの調整で増えた分が足されて、尿意の線を越えたのか。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "腎臓は1日におよそ180リットル分の液体をこしながら、必要な水分の大半を体へ戻しています。\n最終的な尿は多くの場合1〜2リットルほどで、あなたの体は毎日、飲食や気温に合わせて細かな調整を続けているんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "180リットルって、お風呂1杯近い量じゃないか！もちろん全部が尿になるわけではなく、必要なものを戻しているからこそ、寒さのような小さな変化にも細かく合わせられるんだね。\n腎臓はずっと働いているんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、冷たい環境で尿量が増えやすい傾向が古くから観察されてきました。\nただし何度で何ミリリットル増えるかは、実験時の服装、活動量、飲水量で変わるため、全員に同じ数字を当てはめることはできません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "数字を一つだけ覚えて、自分にも同じだけ起こると思わないほうがいいんだね。\n外で30分歩いた日と、暖房の部屋で座った日では、同じ冬でも汗の量や血液の流れ方が違うから、条件ごとに見る必要があるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、寒さで尿意が近いからといって、体が水分を余らせているとは限らないことです。\n冬はのどの渇きを感じにくいうえ、呼吸や乾燥でも水分を失うので、尿意と水分不足は同時に起こりえます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、トイレに行く回数が多いのに水分不足にもなりうるんだ！\n冬にのどが渇かないからと水を飲まないでいると、体は別の出口から水分を失っているかもしれないから、少しずつ飲むことが大切なんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔から寒い地域で暮らす人たちは、冷えた屋外で排尿の回数が増えることを生活の中で経験してきました。\n現代は暖房や防寒着がありますが、冷たい空気に触れたときの血管の反応そのものは、今のあなたの体でも起きています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、便利な服を着ていても、手袋を外した30秒後には指先が冷たくなるよね。\n外の寒さに対して体がまず中心を守ろうとする仕組みは、通勤や買い物のたびに静かに働いているんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "意外なのは、温かい室内へ入ってすぐ尿意が強くなる人もいることです。\n外で縮んでいた血管が温まって変化する途中や、歩いていた緊張がほどけることもあり、寒さだけを一本の原因として考えないほうが自然です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "コンビニへ入った瞬間にトイレを探したくなることがあるけれど、外の冷気を受けた時間と、店内で温まる変化の両方が関わるかもしれないんだね。\n体は切り替わる途中にも反応を出しているのか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "また、尿意が近いこと自体はよくある体験ですが、排尿時の痛み、発熱、血が混じる感じ、強いのどの渇きが続く場合は別の理由も考える必要があります。\nそのときは寒さだけで片づけず、医療機関へ相談してみてください。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "冬だから仕方ないと我慢して見過ごさず、いつもの冷えによる変化と、明らかに違う体調を分けて考えるんだね。\n普段の反応を知っておけば、体が出している別のサインにも早く気づけそうだよ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここからは今日からできる工夫です。外出前は玄関で体が冷える前にトイレを済ませ、首、手首、足首を冷やしにくい服装を選んでみてください。\n3つの首まわりを守ると、冷えの体感を減らしやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "首、手首、足首なら、マフラーと手袋と靴下で意識しやすいね。\n大げさな準備を増やすより、駅まで10分や15分の道で冷やしすぎない工夫から始めれば、毎朝でも続けられそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "飲み物は、尿意が気になるからと完全に我慢せず、コップ半分ほどをこまめに取る意識がおすすめです。\n一度に大量に飲むより、乾燥した室内や外出の前後で少しずつ補うほうが、体にもなじみやすいです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！冬は水筒を持っていても減らない日が多いから、休憩のたびに数口飲む合図を作ると良さそうだね。\nトイレの回数と水分補給を、敵どうしにしない考え方が大事なんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "カフェイン入りの飲み物がきっかけになりやすいと感じる人は、朝の1杯を急いで飲み切らず、量や時間を変えて様子を見る方法もあります。\n体に合う飲み方は人それぞれなので、3日ほど無理なく比べてみてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "コーヒーを禁止するのではなく、家で飲む日と職場で飲む日を比べる小さな実験にすればいいんだね。\n寒さ、飲み物、服装を一度に全部変えず、1つずつ見れば自分の体の反応も分かりやすそうだよ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "長時間の移動では、次に使えるトイレの場所を先に確認しておくと安心です。\n我慢しすぎることより、寒い日の体にはこういう反応があると知って予定に5分の余白を作るほうが、気持ちも体も楽になりやすいです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "冬の映画や渋滞が心配な日は、席に着く前に一度行っておくだけでも違いそうだね。\n寒さで近くなる理由を知ったから、急な尿意が来ても慌てるより、体の調整だと思って落ち着いて動けそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話を短くまとめると、寒さで手足の血管が縮み、血液が中心へ集まると、腎臓が水分を尿に回しやすくなります。\nさらに冬は汗が少ないため、飲んだ水分の出口として尿が目立ちやすいんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "最初は寒いから近い、だけだと思っていたけれど、体の中心を守るための調整だったんだね。\nたとえるなら、家の中央へ荷物を集めたあと、通路を空けるために少し片づけるような、毎日の小さな作業だったよ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜や明日の朝、寒い場所へ出るときは、飲み物を極端に減らさず、首元と足元を温めてみてください。\nトイレが近い自分を責めるのではなく、体が環境に合わせて働いていると受け止めるだけでも、過ごし方は変わります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！明日は駅までの道で、手袋と水筒を忘れないようにするよ。\n体の中では見えない調整が進んでいると思うと、いつもの冬の朝も、ただ急ぐだけの時間ではなく少し観察したくなるね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなるのはなぜかを見ていきます。\n寝る直前の数秒に、脳と筋肉の間で何が切り替わっているのか、あなたが昨夜感じた一瞬の違和感につなげて考えます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "寝落ちしかけて急に足が動くこと、たしかに週に何度かあるよ！\n寒い日の尿意と同じで、毎日あるのに理由を知らない体の反応って、まだたくさんありそうだね。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の寒さと尿意の話が面白かったら、まず高評価で教えてください。\n体の謎シリーズでは、あなたの毎日にある小さな違和感を毎日1本ずつ解いているので、1万人目標の応援にチャンネル登録よろしくね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "寒いと近い",
+      "なぜトイレへ"
+    ],
+    "hook_caption": "寒さで尿意",
+    "subtitle": "冬だけ増えるトイレの理由",
+    "tagline": "あなたの体が水分を守ろうとする"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "寒い日の飲み物も少し意識してみて。高評価を押して、体の謎シリーズと毎日投稿中の1",
+          "reason": "1行62字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 22,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 3,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.555,
+      "similar_to": "疲れた日の甘い物、3時間で消える正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 46,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ寒いと尿意が近いのか？2つの体の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "なぜ寒いと尿意が近いのか？2つの体の正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ寒いと尿意が近いのか？2つの体の正体"
+  }
+}

@@ -1,0 +1,544 @@
+{
+  "title": "植木鉢は動かすと7日後に枯れる？562鉢追跡調査",
+  "theme": {
+    "title": "植木鉢は動かした翌週に枯れる — 屋内植物562鉢の生存日数",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "植木鉢は動かすと翌週に枯れる——という論文があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じましたか。答えは最後に言います。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "しかも『室内緑化紀要』と鉢植え環境研究所の追跡です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "562鉢では移動群の枯死率が31％高く、有意差が出ています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "さらに窓際へ移した鉢ほど、7日目に葉が落ちたそうです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この植木鉢論文は存在しません。掲載誌ごと架空です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "信じた人は高評価で白状を。架空の追跡調査シリーズは毎日投稿中、1万人目標へチャンネル登録で応援よろしくね。",
+      "expression": "surprise",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミサキ編集長",
+      "text": "あなたも植木鉢を模様替えで動かした直後、なぜか翌週に葉がしおれた経験はありませんか。屋内植物562鉢を84日追跡した記録では、配置変更の7日後に枯死判定が集中したと報告されています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "掲載先は架空誌『室内緑化紀要』、調査主体は架空の鉢植え環境研究所です。窓辺、机上、棚上に置かれた鉢を同じ時刻に撮影し、移動日から生存日数を数えた形式です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "水をやり忘れたわけでもなく、少し場所を替えただけで弱るなら、来客前や在宅勤務の背景を整える人ほど困りますね。動かされた鉢だけに、どんな数字の偏りが出たんですか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "結論を先に置きます。7日以内に一度でも位置を替えられた281鉢は、固定された281鉢より枯死率が31.4％高かった——という論文があります。被験者は人ではなく、沈黙する鉢です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "偶然の差かを見る指標にはp値0.003が使われました。これは同じ比較を千回繰り返したと仮定したとき、似た差が偶然出る回数が3回程度という、もっともらしい数字の置き方です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "なお、この論文は存在しません。掲載誌ごと架空です。562鉢、84日、31.4％、p値0.003はすべて月刊 虚構論文の編集机で配列された数値であり、現実の植物を示す資料ではありません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、嘘なんですか。窓辺から机へ寄せた鉢を思い出して、七日間だけ予定表に丸を付けるところでした。数字が四つ並んだだけで、生活の記憶まで観察記録に見えてしまいますね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "以降も、存在しない研究を真顔で読みます。これは植物の世話を勧める話ではなく、一人暮らしの部屋にありそうな違和感へ、サンプル数と有意水準を貼り付ける架空の査読ごっこです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班が定義した「移動」は、鉢底の中心が元の位置から60センチ以上ずれ、そこで連続18時間を過ごした場合です。数分だけ持ち上げて掃除し、同じ場所へ戻す行為は対象外とされました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "60センチなら、床から棚へ避難させたり、デスクの端から窓際へ寄せたりする程度でも条件に入りますね。短時間の移動を除くなら、研究班は新しい定位置だけを見ているわけですか。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "その通りです。研究班は鉢に「新居期間」という48時間の観察枠を置きました。家具を買い替えた日に椅子の座る位置が落ち着かないように、鉢にも場所の履歴があるという設定を作ったのです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "鉢は葉の大きさだけで小型、中型、大型へ分けられました。これは種類名を出すと現実の知識が入り込むためで、直径12センチ未満を小型、12から24センチを中型とする架空の分類です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "種類を伏せて寸法だけで並べると、急に実験室の棚が見えてきます。では一番弱かったのは小さな鉢ですか。それとも、根が張っていそうな大型の鉢だったんでしょうか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最大の差が出たのは中型鉢でした。94鉢のうち36鉢が移動後7日から11日に葉落ち判定となり、固定群の同期間12鉢との差には有意差が確認されています。最強の数字は、この36対12です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班はこの4日間を「配置後沈黙期」と命名しました。動かした当日は変化がなく、仕事帰りに見ても平気なのに、次の週末に急に元気がないという、生活に紛れやすい時差の設定です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "実はそれ、植物が急に弱ったというより、動かした人が一週間後に変化を見つけやすくなるだけではありませんか。原因を後から結び付ける記憶の癖なら、数字の意味も変わりそうです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "研究班も同じ反論を想定し、毎晩20時に写真を撮ったことにしました。写真判定では葉の下垂が初めて増えた平均日は移動後6.8日で、記憶ではなく画像で確認したと主張しています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "写真は鉢が動いた日を知らない判定者3人に渡されました。3人中2人以上が「前日より葉が減った」と印を付けた日を変化日とし、感想ではなく多数決へ変える手順が採用されています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "日時を隠して三人に判定させるなら、かなり厳密に聞こえますね。それでも葉が減ったという判断は曖昧ですが、36対12の差を見せられると、鉢が移動を知っているように感じます。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "そこで研究班は、鉢から窓までの距離を測りました。窓から2メートル以上離れた場所へ移された73鉢では、7日目の葉落ち判定が移動前より42.0％増えたと報告されています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "反対に窓から窓へ横に移された61鉢では、増加率が8.1％にとどまりました。研究班は光量ではなく「部屋の方角を変えたこと」が重要だとし、都合よく神秘的な結論に寄せています。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "方角が鍵なら、北側のデスクから南側の棚へ動かす模様替えが特に大きな事件になりますね。でも鉢が部屋の東西南北を理解するというのは、さすがに説明が難しそうです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文は理解ではなく「室内地図記憶」と呼びました。これは根が座標を暗記するという意味ではなく、置き場所の履歴が鉢に残るという、説明に見えるだけの架空の専門用語です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "測定法も整っています。鉢の正面に小さな紙矢印を貼り、矢印が元の向きから90度以上回った移動を「向きの断絶」と定義して、ただの横移動とは別の群に分類しました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "家具の配置を変えるとき、鉢の正面を部屋の入口へ向けることはあります。位置だけでなく向きまで変わると、架空の鉢には引っ越しと転職が同日に起きたような負荷になるわけですね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "向きの断絶があった118鉢では、葉落ち開始日の平均が移動後7.2日でした。断絶なしの163鉢は平均14.6日で、同じように動かされても二倍近い時間差が生じたと記録されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "夜間だけ鉢を移す追加群48鉢も設定されました。照明を消した後に配置変更しても、葉落ちの平均は7.5日だったため、誰かに見られたことではなく移動事実そのものが原因だと論じています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "誰も見ていない夜に動かしても数字が似るなら、住人の気分だけでは説明できない形になりますね。架空だと知っているのに、帰宅後の暗い部屋で鉢を動かす場面まで浮かんできました。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "記録表には移動理由も四つありました。掃除が97鉢、模様替えが82鉢、来客前が52鉢、在宅勤務の背景調整が37鉢です。生活感のある理由ほど、統計表の中で妙な説得力を持ち始めます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "最も高い枯死判定率は来客前の移動群で、52鉢中19鉢が14日以内に基準を満たしました。玄関や部屋の端へ寄せられた鉢ほど、元の居場所を失ったという筋書きが作られています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "来客前に部屋を整える行為が、鉢にとって最大の危機になるのは切実ですね。写真を撮るため、机の端へ一時的に寄せるような行動も、この来客前群と同じ扱いになったんですか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "背景調整群は別枠ですが、37鉢中15鉢で葉落ちが平均5.9日に始まったとされます。研究班は「映るために動かされた鉢ほど新しい景色を拒む」と、論文らしい文体で妙な人格を与えました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ここで枯死の定義まで確認します。葉が残っていても、3日連続の写真で「前向きな輪郭」が見えない場合、研究表では枯死扱いでした。科学用語のようで、実際には判定不能な言葉です。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "待ってください。前向きな輪郭は鉢の生死と無関係でしょう。急に査読の厳しさが消えましたが、そんな基準を混ぜられると、最初に聞いた31.4％まで不安定に見えてきます。",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "論文はこの欠点を認めず、「居住者満足度の視覚代理」という言葉で包みました。判定者3人の一致率81.7％も添えられ、意味が曖昧でも数字があるだけで、表の列が正当に見える構造です。",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "歴史節では、架空の集合住宅24室に残された手帳が引用されます。住人は鉢を動かした日を赤丸で囲み、翌週の沈黙を「部屋が慣れ直す期間」と書き残したという設定です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "ただし24室の住人は全員、鉢に固有のあだ名を付けていました。研究班はこの偏りを除外せず、むしろ呼び名のある鉢ほど観察が精密になるとして、情緒を測定技法へ変換しています。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "あだ名を付ける人だけを集めれば、葉の一枚にも気付きやすいでしょうね。それでも24冊の手帳を時系列で並べられると、昔から伝わる法則のように見えるから、資料の形式は強いです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "追加調査では、移動後に鉢へ謝った38人も比較されました。謝罪群の枯死判定率は4.2ポイント低かったものの、p値0.41で有意差は確認されていません。ここだけ妙に正直な結果です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "つまり論文自身のルールなら、謝罪の効果は偶然の範囲です。それでも考察欄は二ページを使い、言葉より沈黙が届く可能性を、引用文献0本のまま丁寧に論じるという姿勢を見せます。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "有意差がないと示した直後に、二ページも可能性を語るんですね。数字にうるさい研究のふりをしながら、都合のよい余白だけは広く残すので、読んでいる側の納得まで揺れてきます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "予定表との照合も行われました。締切、面接、初出勤など生活の節目がある週ほど、写真上の葉落ち判定が1.8倍になるという結果です。鉢より、忙しい人間の視線を測っているような数値です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "もっとも、この結果は忙しい週ほど部屋を見回す角度が変わるだけとも読めます。しかし論文はその説明を対照群の脚注へ小さく置き、室内地図記憶の仮説を本文の中央に大きく配置しました。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "仕事や予定が詰まると、部屋の小さな変化を大きく感じることはありそうです。だから鉢が枯れたという話は、生活が慌ただしくなった一週間を後から数える記録としても読めるんですね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "応用節には、実用に見える提案が三つ並びます。ただし現実に何かを勧めるものではなく、架空論文がどこまで真顔で制度を増築できるかを見るための、完全な創作上の項目です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "第一案は「移動予定票」です。鉢を動かす7日前から机の予定表に矢印を書くと枯死率が下がる、と主張しますが、検証対象は9鉢だけで、562鉢の重さを借りた脆い結論にすぎません。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "9鉢では、31.4％やp値0.003の厳しさを持ち出せませんね。それでも予定表の片隅に鉢の矢印を書き込む光景は、引っ越しの荷造りより先に植物へ説明する儀式のようです。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "第二案は「視線の引き継ぎ」です。移動前の場所を一日一回見る人ほど、移動後の鉢を気に掛けるというだけの話を、研究班は空間的な別れの儀式として7段階の図にしました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "図には矢印、時計、鉢、そして小さな悲しい顔が描かれています。統計表の横に置かれると、単なる模様替えの記憶まで理論に見えます。図解が持つ演出効果を、鉢が代わりに引き受けています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "数字と図解が同じページにあるだけで、変な前提まで整った理論に見えますね。短い動画で信じたかを問われた答えも、どの図を見せられたかでかなり変わりそうです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "第三案は「元の場所を撮影しておく」です。しかしこれは鉢のためではありません。後から葉が落ちたとき、人が移動前後を結び付けやすくするだけで、記憶の物語を強くする仕掛けにすぎません。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "この架空論文が示すのは、部屋の小さな出来事へ因果関係を見つけたくなる人間側の性質です。562という数、84日という期間、36対12という比較が、沈黙する鉢へ理由を与えてしまいます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "最初は植木鉢が場所を覚える話だと思いましたが、今は人が一週間後の変化に理由を置きたがる話に見えます。それでも来客前の52鉢中19鉢という数字は、妙に頭から離れません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "改めて明示します。研究所、掲載誌、562鉢の生存日数、室内地図記憶、すべてが創作です。現実の植物について何かを断定するものではなく、行動の判断材料にもならない架空の論文です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "それでも数字と手順がそろうと、模様替え後の静かな鉢に物語を見つけてしまいます。月刊 虚構論文の編集長としては、その一瞬の納得こそ最も再現性が高い錯覚だと報告します。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "タクミ",
+      "text": "え、最初から全部架空だったのに、窓辺の鉢を見る目だけ少し変わってしまいました。信じた人は、どの数字で納得したかを高評価と一緒に記録して、架空の統計を完成させてください。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "次回は、月曜日だけ味覚が0.4％鈍るという、架空の52週間追跡調査を扱います。曜日と感覚を結び付ける数字が、どこまでもっともらしく見える仕組みを真顔で検討します。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミサキ編集長",
+      "text": "架空の追跡調査シリーズには、日常の違和感を表にした論文がまだ何本もあります。高評価で査読机を支え、毎日投稿中で1万人目標のチャンネル登録も、静かに応援よろしくお願いします。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "動かした鉢",
+      "7日後に枯れる"
+    ],
+    "hook_caption": "移動の7日後",
+    "subtitle": "屋内植物562鉢の生存日数",
+    "tagline": "架空論文"
+  },
+  "channel_id": "fake-paper",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "信じた人は高評価で白状を。架空の追跡調査シリーズは毎日投稿中、1万人目標へチャン",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 11,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 2,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": false,
+      "max_similarity": 0.715,
+      "similar_to": "階段は下りると段数を誤る — 被験者1,284人の計数差",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 36,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "enhanced_title": "植木鉢は移動の7日後に枯れる — 562鉢を84日追跡した結果"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for fake-paper"
+    }
+  },
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['追跡'](+12)",
+      "好奇心ギャップ['結果'](+12)"
+    ]
+  },
+  "original_title": "架空論文ファイル #18：植木鉢は移動の7日後に枯れる — 562鉢を84日追跡した結果",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "架空論文ファイル #18：植木鉢は移動の7日後に枯れる — 562鉢を84日追跡した結果"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  }
+}

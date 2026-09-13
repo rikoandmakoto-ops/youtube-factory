@@ -414,7 +414,7 @@
       "upload_schedule": null
     },
     "analytics": {
-      "enabled": false,
+      "enabled": true,
       "track_metrics": [
         "views",
         "watch_time",
@@ -455,7 +455,7 @@
     }
   },
   "autopilot": {
-    "enabled": false,
+    "enabled": true,
     "schedule": {
       "days_of_week": [
         0,

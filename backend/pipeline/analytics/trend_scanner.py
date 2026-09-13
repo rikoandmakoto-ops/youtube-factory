@@ -404,6 +404,12 @@ def _trend_intake_allowed(ch) -> bool:
     if ch is None:
         return False
     raw = getattr(ch, "_raw", None) or {}
+    # 【2026-09-13】autopilot を止めたチャンネルには一切書き込まない。
+    # 09-13 に 8ch を停止した直後、スキャナが停止中の 2ch-matome / akashic の
+    # theme_queue 先頭に「離岸流」を差し込んで JSON を書き換えた。停止中の ch は
+    # 「接続を切っただけで中身は触らない」が運用の約束なので、ここで抜ける。
+    if not bool((raw.get("autopilot") or {}).get("enabled")):
+        return False
     cfg = raw.get("trend_scanner")
     if isinstance(cfg, dict) and cfg.get("enabled") is not None:
         return bool(cfg.get("enabled"))

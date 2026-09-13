@@ -496,7 +496,7 @@
     }
   },
   "autopilot": {
-    "enabled": true,
+    "enabled": false,
     "schedule": {
       "days_of_week": [
         0,
@@ -557,11 +557,6 @@
     "gen_type": "short",
     "publish_lead_minutes": 45,
     "theme_queue": [
-      {
-        "id": "ca9bd23499",
-        "title": "説明が丁寧なほど、なぜ疑われるのか、情報量が生む不信",
-        "angle": ""
-      },
       {
         "id": "c271e100d5",
         "title": "誰かが見ているだけで、なぜ成績が変わるのか、観察が持つ力",

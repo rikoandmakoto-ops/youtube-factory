@@ -605,7 +605,7 @@
     }
   },
   "autopilot": {
-    "enabled": true,
+    "enabled": false,
     "schedule": {
       "days_of_week": [
         0,
@@ -665,11 +665,6 @@
     "gen_type": "short",
     "publish_lead_minutes": 45,
     "theme_queue": [
-      {
-        "id": "ef59b13e98",
-        "title": "植木鉢は動かした翌週に枯れる — 屋内植物562鉢の生存日数",
-        "angle": ""
-      },
       {
         "id": "777849b6e1",
         "title": "傘立ての傘は必ず一本多い — 商業施設の入退館数との差分",

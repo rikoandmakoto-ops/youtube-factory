@@ -539,7 +539,7 @@
     }
   },
   "autopilot": {
-    "enabled": true,
+    "enabled": false,
     "schedule": {
       "days_of_week": [
         0,

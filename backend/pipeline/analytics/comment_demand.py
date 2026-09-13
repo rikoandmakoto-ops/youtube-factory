@@ -51,6 +51,10 @@ def _queue_theme(channel_id: str, title: str, angle: str, *, priority_high: bool
         ap = autopilot_api._load_autopilot(channel_id)
     except Exception:
         return None
+    # 【2026-09-13】autopilot を止めたチャンネルの JSON には自動で書き込まない
+    # （停止中は「接続を切っただけ」であり、中身を変えない約束）。
+    if not ap.get("enabled"):
+        return None
     theme_id = autopilot_api._new_theme_id()
     item = {
         "id": theme_id,

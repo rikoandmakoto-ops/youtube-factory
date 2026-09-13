@@ -1,0 +1,206 @@
+{
+  "title": "信越化学の年収928万円が伸びた正体とは",
+  "theme": {
+    "title": "信越化学の年収928万円が伸びた正体",
+    "angle": "企業名＋年収数字＋正体。塩ビとシリコンウエハーの寡占"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収の実態",
+      "fact_main": "信越化学 年収928万円",
+      "fact_sub": "2025年有価証券報告書",
+      "text": "信越化学の平均年収、928万円です。この数字が伸びた理由、見えてきます。",
+      "bg_query": "信越化学工業株式会社 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "賞与 2,221,000円",
+      "fact_sub": "2025年有価証券報告書",
+      "text": "年間賞与は222万1,000円です。",
+      "bg_query": "信越化学工業株式会社 東京 本社",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "売上高 2兆5,614億円",
+      "fact_sub": "2025年3月期 連結",
+      "text": "売上高は2兆5,614億円です。数字だけ見れば、かなり良い成長です。",
+      "bg_query": "信越化学工業株式会社 工場 外観",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "営業利益 7,428億円",
+      "fact_sub": "2025年3月期 連結",
+      "text": "営業利益は7,428億円です。",
+      "bg_query": "信越化学工業株式会社 シリコンウエハー",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "海外売上比率 79%",
+      "fact_sub": "2025年3月期 連結",
+      "text": "海外売上比率は79%です。国内景気だけでは測れない企業になっています。",
+      "bg_query": "信越化学工業株式会社 海外 工場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "利益率 29.0%",
+      "fact_sub": "2025年3月期 営業利益率",
+      "text": "営業利益率は29.0%です。ただし景気や半導体投資で利益は揺れます。",
+      "bg_query": "信越化学工業株式会社 半導体 工場",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったら、話題の企業の実態シリーズもプロフィールでチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収928万円",
+      "2市場が支える"
+    ],
+    "subtitle": "塩ビと半導体材料の実態",
+    "tagline": "転職前に見る企業数字"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.474,
+      "similar_to": "NTTデータの年収905万円、実は在宅勤務の裏側",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 45,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "信越化学の年収928万円、伸びた正体は2市場"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体', '年収'](+20)",
+      "好奇心ギャップ['正体'](+12)"
+    ]
+  },
+  "original_title": "信越化学の年収928万円、伸びた正体は2市場",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "信越化学の年収928万円、伸びた正体は2市場"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  }
+}
