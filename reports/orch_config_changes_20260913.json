@@ -1,0 +1,56 @@
+[
+  {
+    "channel": "daily-science",
+    "queue_before": 13,
+    "queue_after": 21,
+    "added": 8,
+    "runway_days_before": 4.3,
+    "runway_days_after": 7.0,
+    "versus_reordered": false
+  },
+  {
+    "channel": "scp-lab",
+    "queue_before": 10,
+    "queue_after": 21,
+    "added": 11,
+    "runway_days_before": 3.3,
+    "runway_days_after": 7.0,
+    "versus_reordered": false
+  },
+  {
+    "channel": "2ch-matome",
+    "queue_before": 17,
+    "queue_after": 17,
+    "added": 0,
+    "runway_days_before": 5.7,
+    "runway_days_after": 5.7,
+    "versus_reordered": false
+  },
+  {
+    "channel": "pokemon-lab",
+    "queue_before": 12,
+    "queue_after": 21,
+    "added": 9,
+    "runway_days_before": 4.0,
+    "runway_days_after": 7.0,
+    "versus_reordered": true
+  },
+  {
+    "channel": "yokai-watch",
+    "queue_before": 26,
+    "queue_after": 26,
+    "added": 0,
+    "runway_days_before": 8.7,
+    "runway_days_after": 8.7,
+    "versus_reordered": false
+  },
+  {
+    "channel": "company-facts",
+    "queue_before": 18,
+    "queue_after": 28,
+    "added": 10,
+    "runway_days_before": 4.5,
+    "runway_days_after": 7.0,
+    "versus_reordered": false
+  }
+]
