@@ -319,7 +319,7 @@ def _tidy(t: str) -> str:
     t = re.sub(r"[：:]{2,}", "：", t)
     t = re.sub(r"\s*([：:])\s*", r"\1", t)
     t = re.sub(r"\s*[：:]\s*(?=[、，,。]|$)", "", t)
-    t = re.sub(r"^[、，,。・：:\-—\s]+", "", t)
+    t = re.sub(r"^[、，,。・：:\-—！!？?\s]+", "", t)
     # 末尾に取り残された助詞・接続詞（「〜と」「〜の」）も落とす。
     t = re.sub(r"[、，,・：:\-—\s]+$", "", t)
     t = re.sub(r"(?:と|や|の|は|が|を|に|で)$", "", t)
@@ -405,6 +405,8 @@ def append_required_word(title: str, word: str) -> str:
     どちらも実際に出た壊れ方なので、直前が用言の連体形かどうかだけで分ける。
     """
     t = _TAIL_MARK_RE.sub("", (title or "").strip())
+    # 「〜とは？」型の語尾に名詞を足すと「とはの処方箋」になる。「とは」は落とす。
+    t = re.sub(r"(?:とは|って)$", "", t).rstrip("、，,")
     w = (word or "").strip()
     if not t or not w:
         return (title or "").strip()

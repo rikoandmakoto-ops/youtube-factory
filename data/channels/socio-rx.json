@@ -599,5 +599,77 @@
     "chatgpt_thread_url": "https://chatgpt.com/c/6a9af778-968c-83e8-b742-1f5784899456",
     "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
     "updated_at": "2026-09-05T15:09:08+00:00"
+  },
+  "title_rules": {
+    "enforced_by_backend": true,
+    "hard_constraints": {
+      "max_digit_groups": 1,
+      "max_chars": 34,
+      "min_effective_chars": 20,
+      "require_any_of": {
+        "label": "答え提示語",
+        "words": [
+          "理由",
+          "正体",
+          "本当の",
+          "実は",
+          "わけ",
+          "なぜ",
+          "真相",
+          "裏側",
+          "実態",
+          "処方箋",
+          "せいじゃない"
+        ],
+        "repair_with": [
+          "処方箋",
+          "理由",
+          "わけ"
+        ],
+        "note": "【2026-09-13】他のゆっくり系4chと同じ答え提示語に、当chの型「〜の処方箋」「〜のは、あなたのせいじゃない」を足した。機械修復で語尾に足すのは名詞だけ（処方箋/理由/わけ）。"
+      },
+      "banned_words": [
+        "秘密",
+        "衝撃",
+        "ヤバい",
+        "やばい",
+        "ヤバすぎ",
+        "99%",
+        "💸",
+        "📈",
+        "📉",
+        "💰",
+        "🔥",
+        "👀",
+        "😨",
+        "🕵️",
+        "🧪",
+        "💧",
+        "🎮",
+        "🔍",
+        "❓",
+        "🎬",
+        "✅",
+        "⚡",
+        "🌙",
+        "🧠"
+      ],
+      "forbid_patterns": [
+        {
+          "pattern": "(?:9\\s*9|９\\s*９)\\s*[%％]",
+          "label": "99%が知らない型の希少性ワード"
+        },
+        {
+          "pattern": "[？?]\\s*$",
+          "label": "末尾の疑問符",
+          "note": "「〜とは？」型は題材の説明であって処方箋の提示ではない。good_examples は全て断定形。"
+        },
+        {
+          "pattern": "[\\U0001F300-\\U0001FAFF\\u2600-\\u27BF\\u2B00-\\u2BFF\\uFE0F]",
+          "label": "絵文字"
+        }
+      ],
+      "rationale_20260913": "【2026-09-13】注力5chへ絞った時点で当chだけ hard_constraints が無く、機械ゲート（数字数・禁止語・答え提示語・実効長）が完全に無効だった。数値は scp-lab / daily-science（max_digit_groups 1・min_effective_chars 20）と company-facts（max_chars 34）に揃える。数字は「38人が見ていた」のような研究の具体数が刺さる題材なので 1 個まで許し、全面禁止（yokai-watch 方式）にはしない。max_chars は title_style の「〜のは、あなたのせいじゃない」型が 30 字を超えやすいため 34。煽り語（衝撃/ヤバい）は theme_priority.title_style が自然文で禁じていたが backend は読まないので banned_words へ移した。"
+    }
   }
 }
