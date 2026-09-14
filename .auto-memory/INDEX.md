@@ -11,6 +11,7 @@
 | `2026-09-11.md` | **タイトル実効文字数の逆U字（25-29字が頂点・n=330）を発見し機械ゲート化** / 疑問形はchを選ぶ（09-10のscp-lab判定が誤り） / 自動runによるtheme_blacklist退行2件を復元 / 18時JST枠が最下位 / ゲートが12ch中6chでしか動いていなかった / soffice OOM回避の値注入ツール / **【夜間追記】生成24本に対し公開0本・OAuth13ch全失効を実測・Developerマウントはunlink不可でgit mergeが原理的に失敗・「ホスト健全性critical」は誤記** |
 | `2026-09-12.md` | **キュー補充が `title_constraints` を一度も通っていなかった（未公開99件中 合格24件＝24.2%・company-facts は自ch禁止の絵文字で12件全滅）** / **`repair()` をキューに当てると日本語が壊れる（長さは末尾切り落とし・数字は削除）** / 切り抜き3chへゲート新規付与 / **09-11 の適用が14時間後も全ch生存＝上書き事故は止まった** / 集計ミス（111件→99件）を検証工程で自己発見 / **【夜間追記】config の `schedule` 変更は稼働中プロセスに反映されない（scp-lab が土曜に発火ゼロ・clip-animal は旧18:00のまま）・`title_gate_ok` が実データ0件＝コードも載っていない・横断キーワードゲートが飽和して2chで全件ブロック・ffmpeg 1800秒タイムアウトという新しい失敗経路** |
 | `2026-09-13.md` | **「絵文字先頭が強い」は集計の錯覚だった（横断 0.590 vs 0.353 → company-facts 内では 0.686 vs 0.915 で逆転＝シンプソンのパラドックス）** / 高評価率のみが登録を説明することを n=205 で独立に再現（r=+0.308／維持率 -0.047／CTR +0.069／**再生数 -0.140 の弱い負**） / 曜日はプールと ch 単独で符号が食い違う（scp-lab 土0.763 vs プール土0.268） / 朝の時点では config 変更ゼロ / **【夜間追記】5日間のブロッカーが3つとも動いた — OAuth 6ch 再認可（残6.57日＝「テスト中は7日で失効」が実測確定）・公開7本で5日ぶりに再開・analytics 復旧（246行）・5ch 集中運用へ切替（8ch停止・socio-rx起動）・未公開台本782件を棚卸し・ANTHROPIC_API_KEY 有効化・git push 完了** |
+| `2026-09-14.md` | **ゲートは違反を検知していたのに公開は止まらなかった — `title_constraints.repair()` が `forbid_patterns` を一度も見ておらず、company-facts「…FC比率99%…」が `ok:false` のまま 09-13 23:15 に公開された（本日修正・無退行確認済み）** / **カスタムサムネイルが daily-science 以外の9ch・163本で 403（電話認証未了。「サムネ品質最優先」の改善が1枚も届いていなかった）** / 公開は完全再開（11本/2日）だが **09-13公開分は analytics 上まだ全て views=0 で新規動画の実績はゼロ** / 09-08→09-13 で yokai-watch +0.270・daily-science +0.173 / **同一スナップショットが1日で3回 config 判断に使われた** ため指揮者からの実績ベース変更は見送り、検算とコミットに限定 / yokai-watch の 17:00→19:00 は独立検算と食い違う（19時 0.41(n=21)）ため 09-15 に再判定 / **指揮者 run が2本並走した** |
 | `projects/` | **各プロジェクト（YouTube各ch / aiseki / fanup / oripa 他）の状態。`~/.auto-memory/project_*.md` が接続フォルダ外で読めないため 09-11 にここへ新設した。** |
 
 > ⚠️ `~/.auto-memory/` は Cowork の接続フォルダ外にあり、**15夜連続で読めていない**。
@@ -106,10 +107,18 @@
   `-preset medium -crf 20` の 1080x1920 合成が30分を超える。**「作れていない」原因は API キーだけではない。**
 
 ### 運用上の鉄則
-- 🆕 **「同じデータで2回判断しない」の縛りは 09-13 に外れた。** 09-09〜09-13 は新規実績ゼロで config 変更を止めていたが、09-13 に新規スナップショットが入った。**09-14 以降は通常どおり config を変更してよい**（ただし対象は稼働5chのみ）。
-- **同じデータで2回意思決定しない**。新規の再生実績が無い日は config を変更しない（08-16 / 08-19 / 09-10 に適用）。二重適用すると効果の切り分けが永久に不能になる。
+- 🆕 **「ゲートを付けた」は「違反が止まる」を意味しない。** 09-14 に実例が出た。`check()` が `ok:false` を返しても、`generator._enforce_title_constraints` は**記録するだけで公開を止めない**。ゲートや規則を追加したときは、**実際に違反する文字列を1本流して「止まるか」を確認する**。「config に書いた」で終わらせない。
+- 🆕 **`check()` にある規則が `repair()` にあるとは限らない。** 09-14 まで `repair()` は `forbid_patterns` を一度も見ていなかった（`forbid_prefixes` / 数字 / `banned_words` / `require_any_of` / `max_chars` のみ）。**`hard_constraints` に新しい規則を足すときは `repair()` 側の対応を必ず確認する。**
+- 🆕 **同一スナップショットは1日に何回も使われる。** 09-13 22:40 の fetch は、24時間以内に ①09-13夜の指揮者 ②09-14朝のバックエンド自動更新 ③09-14の指揮者レポート の**3回**に使われた。**config を変えに行く前に、そのスナップショットで既に誰かが変えていないかを `git log --since` と `reports/orch_config_changes_*.json` で必ず確認する。**
+- 🆕 **公開直後の動画は `views=0` で入る。** 集計ラグ。**「公開が再開した＝施策が検証できる」ではない。**最短でも翌日の fetch を待つ。
+- **同じデータで2回意思決定しない**。新規の再生実績が無い日は config を変更しない（08-16 / 08-19 / 09-10 / 09-14 に適用）。二重適用すると効果の切り分けが永久に不能になる。
+  - ※ 09-13 に「縛りは外れた」と書いたが、これは**新規スナップショットが入った日に限る**。09-14 のように fetch が無い日は、また元の縛りが効く。
 - **config の master of record は `data/channels/`**。`data/channels_orchestrator/` は symlink（09-01 以降）。
-- **`hard_constraints` だけが backend に読まれる**（`pipeline/title_constraints.py`）。`require_*` / `forbid_patterns` 等の旧フィールドは未参照。ここを間違えると施策が丸ごと無効になる（08-23 に同種の事故あり。09-11 にも `min_effective_chars_target` で再発）。
+- **`hard_constraints` の中だけが backend に読まれる**（`pipeline/title_constraints.py`）。`title_rules` 直下の `require_*` / `min_effective_chars_target` 等の**旧フィールドは未参照**。ここを間違えると施策が丸ごと無効になる（08-23 に同種の事故あり。09-11 にも `min_effective_chars_target` で再発）。
+  - ⚠️ 09-13 まで「`forbid_patterns` は未参照」と書いていたが**誤り**。`hard_constraints.forbid_patterns` は `check()` に読まれている（読まれていなかったのは `repair()` のほう）。
+- 🆕 **`impressions` 列で CTR を出さない。** 窓と整合せず 100% を超える（2ch-matome で 2051%）。CTR は **`video_reach_daily`** から出す。
+- 🆕 **`video_status.status` は公開直後には更新されない。** `upload_done` がログに出ていても行は `scheduled` のまま（反映は夜間の YouTube 同期）。**「scheduled のまま＝公開失敗」と読むと誤診する。**
+- 🆕 **`backend.log` の `invalid_grant` は行番号で新旧を判定する。** 行にタイムスタンプが無いので、`upload_done` など既知イベントとの前後関係で読む。末尾に大量にあっても、再認可より前の位置なら現状を表さない。
 - **config を触る自動 run のあとは必ず `pytest backend/tests` を通す**。09-11 朝の自動 run が daily-science の theme_blacklist を削り、リポジトリ自身の回帰テストを RED にしたまま放置していた（過去の重複タイトル8件が素通り）。**既存の赤の本数を先に記録してから作業する**（09-11 は HEAD 8 failed → 作業後 7 failed。残りは fastapi/moviepy 欠如とバースト系の既存赤）。
 - **note と config が矛盾したら config を note に合わせる**。09-11 朝の run は scp-lab に「SCP-173 が上位40本中30%」という note を追記しながら、同じ run で `theme_blacklist` から `SCP-173` を削っていた。自動 run は note と実装が逆を向くことがある。
 - **config を変更したら数分おいて読み直し、適用が残っているか確認する**。稼働中のプロセスが `data/channels/*.json` を上書きする（09-11 に適用11分後、2ch-matome の `min_effective_chars` が別プロセスに消された。他7chは残存）。`ls -la --time-style=+%H:%M:%S data/channels/*.json` で自分の適用時刻より後に書かれたファイルが分かる。
