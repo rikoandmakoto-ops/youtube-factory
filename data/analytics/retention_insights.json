@@ -1,14 +1,14 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1789306610,
-    "analyzed_videos": 8,
+    "generated_at": 1789393025,
+    "analyzed_videos": 5,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0092,
-      "early": 0.0246,
-      "middle": 0.0046,
-      "late": 0.0046,
-      "ending": 0.0023
+      "intro": 0.0097,
+      "early": 0.0231,
+      "middle": 0.0051,
+      "late": 0.0053,
+      "ending": 0.0018
     },
     "per_video": [
       {
@@ -43,28 +43,28 @@
       {
         "video_id": "d30RfsNLERk",
         "title": "疲れた日の甘い物がすぐ消えるのはなぜ？ #shorts #雑学 #豆知識",
-        "avg_view_percentage": 68.98,
+        "avg_view_percentage": 69.56,
         "drops": [
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
-            "drop": 0.0806,
+            "drop": 0.0788,
             "bucket": "intro",
-            "audience_after": 1.2119
+            "audience_after": 1.2182
           },
           {
             "ratio_from": 0.16,
             "ratio_to": 0.17,
-            "drop": 0.0717,
+            "drop": 0.0728,
             "bucket": "early",
-            "audience_after": 1.0746
+            "audience_after": 1.0848
           },
           {
             "ratio_from": 0.13,
             "ratio_to": 0.14,
-            "drop": 0.0687,
+            "drop": 0.0697,
             "bucket": "intro",
-            "audience_after": 1.2925
+            "audience_after": 1.297
           }
         ],
         "matched_scenario_title": null
@@ -101,28 +101,28 @@
       {
         "video_id": "nqi4BDM9u2E",
         "title": "走った後の鉄味、あなたの肺で何が？0.1%の正体 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 46.54,
+        "avg_view_percentage": 46.46,
         "drops": [
           {
             "ratio_from": 0.16,
             "ratio_to": 0.17,
             "drop": 0.0503,
             "bucket": "early",
-            "audience_after": 0.8881
+            "audience_after": 0.8879
           },
           {
             "ratio_from": 0.15,
             "ratio_to": 0.16,
-            "drop": 0.0411,
+            "drop": 0.0412,
             "bucket": "early",
-            "audience_after": 0.9384
+            "audience_after": 0.9382
           },
           {
             "ratio_from": 0.21,
             "ratio_to": 0.22,
-            "drop": 0.0411,
+            "drop": 0.0412,
             "bucket": "early",
-            "audience_after": 0.7169
+            "audience_after": 0.7162
           }
         ],
         "matched_scenario_title": null
@@ -130,7 +130,7 @@
       {
         "video_id": "jZHXQpwS7nk",
         "title": "なぜ冷たい水だけ歯にしみる？歯の中で起きる変化 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 42.65,
+        "avg_view_percentage": 42.66,
         "drops": [
           {
             "ratio_from": 0.14,
@@ -155,93 +155,6 @@
           }
         ],
         "matched_scenario_title": null
-      },
-      {
-        "video_id": "x38K5v7lfPM",
-        "title": "なぜ他人のあくびは約45％もつられる？脳の反応を解説 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 40.24,
-        "drops": [
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.1056,
-            "bucket": "early",
-            "audience_after": 0.8789
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0962,
-            "bucket": "early",
-            "audience_after": 0.705
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0777,
-            "bucket": "early",
-            "audience_after": 0.8012
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "_oXJSYtJ1S8",
-        "title": "実は暗い部屋で音に敏感になるのは、耳が目の代わりをするから？ #shorts #雑学 #豆知識",
-        "avg_view_percentage": 51.54,
-        "drops": [
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.1069,
-            "bucket": "early",
-            "audience_after": 0.9791
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0814,
-            "bucket": "early",
-            "audience_after": 0.8977
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0652,
-            "bucket": "early",
-            "audience_after": 0.7953
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "QFUfc37jobI",
-        "title": "あなたの字が30秒で別物に見える？ #shorts #雑学 #豆知識",
-        "avg_view_percentage": 109.66,
-        "drops": [
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0434,
-            "bucket": "early",
-            "audience_after": 1.6099
-          },
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.0403,
-            "bucket": "intro",
-            "audience_after": 1.6904
-          },
-          {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0402,
-            "bucket": "early",
-            "audience_after": 1.4985
-          }
-        ],
-        "matched_scenario_title": null
       }
     ],
     "gpt_insights": null,
@@ -249,14 +162,14 @@
   },
   "scp-lab": {
     "channel_id": "scp-lab",
-    "generated_at": 1789306758,
-    "analyzed_videos": 4,
+    "generated_at": 1789393200,
+    "analyzed_videos": 3,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0057,
+      "intro": 0.0061,
       "early": 0.024,
-      "middle": 0.0056,
-      "late": 0.0055,
-      "ending": 0.0025
+      "middle": 0.0054,
+      "late": 0.0053,
+      "ending": 0.0026
     },
     "per_video": [
       {
@@ -309,7 +222,7 @@
       {
         "video_id": "5I_Hhc8VPCw",
         "title": "SCPの最後の一行だけが隔離対象になった理由 #shorts #SCP #SCP解説",
-        "avg_view_percentage": 45.89,
+        "avg_view_percentage": 45.86,
         "drops": [
           {
             "ratio_from": 0.27,
@@ -356,7 +269,7 @@
       {
         "video_id": "z7SonE8o73Q",
         "title": "SCP-3288 大雨の真相 あなたの部屋も沈む #shorts #SCP #SCP解説",
-        "avg_view_percentage": 154.14,
+        "avg_view_percentage": 154.54,
         "drops": [
           {
             "ratio_from": 0.15,
@@ -381,35 +294,6 @@
           }
         ],
         "matched_scenario_title": null
-      },
-      {
-        "video_id": "Tt3QQKz1fG4",
-        "title": "SCP-5800 職員証だけが戻った未解決ファイル #shorts #SCP #SCP解説",
-        "avg_view_percentage": 43.39,
-        "drops": [
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0909,
-            "bucket": "early",
-            "audience_after": 0.9156
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0779,
-            "bucket": "early",
-            "audience_after": 0.7695
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0682,
-            "bucket": "early",
-            "audience_after": 0.8474
-          }
-        ],
-        "matched_scenario_title": null
       }
     ],
     "gpt_insights": null,
@@ -419,11 +303,11 @@
     "channel_id": "pokemon-lab",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789306638
+    "generated_at": 1789393059
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
-    "generated_at": 1789306860,
+    "generated_at": 1789393321,
     "analyzed_videos": 5,
     "aggregate_drops_by_bucket": {
       "intro": 0.0086,
@@ -436,7 +320,7 @@
       {
         "video_id": "Cc8MA7iOFcA",
         "title": "覚の元ネタが怖すぎる…心を先回りする山の怪物 #shorts #妖怪 #都市伝説",
-        "avg_view_percentage": 38.24,
+        "avg_view_percentage": 38.36,
         "drops": [
           {
             "ratio_from": 0.16,
@@ -584,14 +468,14 @@
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
-    "generated_at": 1789306355,
+    "generated_at": 1789392730,
     "analyzed_videos": 5,
     "aggregate_drops_by_bucket": {
       "intro": 0.0096,
       "early": 0.0247,
       "middle": 0.0055,
       "late": 0.0028,
-      "ending": 0.0019
+      "ending": 0.002
     },
     "per_video": [
       {
@@ -660,23 +544,23 @@
           {
             "ratio_from": 0.16,
             "ratio_to": 0.17,
-            "drop": 0.0909,
+            "drop": 0.0915,
             "bucket": "early",
-            "audience_after": 0.7792
+            "audience_after": 0.7778
           },
           {
             "ratio_from": 0.17,
             "ratio_to": 0.18,
-            "drop": 0.0714,
+            "drop": 0.0719,
             "bucket": "early",
-            "audience_after": 0.7078
+            "audience_after": 0.7059
           },
           {
             "ratio_from": 0.13,
             "ratio_to": 0.14,
-            "drop": 0.065,
+            "drop": 0.0653,
             "bucket": "intro",
-            "audience_after": 0.974
+            "audience_after": 0.9739
           }
         ],
         "matched_scenario_title": null
@@ -745,7 +629,7 @@
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1789306615,
+    "generated_at": 1789393031,
     "analyzed_videos": 1,
     "aggregate_drops_by_bucket": {
       "intro": 0.0122,
@@ -790,7 +674,7 @@
   },
   "akashic-librarian": {
     "channel_id": "akashic-librarian",
-    "generated_at": 1789306358,
+    "generated_at": 1789392732,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0169,
@@ -866,11 +750,11 @@
     "channel_id": "clip-animal",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789306359
+    "generated_at": 1789392734
   },
   "clip-fukada": {
     "channel_id": "clip-fukada",
-    "generated_at": 1789306372,
+    "generated_at": 1789392749,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0155,
@@ -1002,7 +886,7 @@
   },
   "clip-kaneko": {
     "channel_id": "clip-kaneko",
-    "generated_at": 1789306403,
+    "generated_at": 1789392789,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0047,
@@ -1076,7 +960,7 @@
   },
   "clip-lab": {
     "channel_id": "clip-lab",
-    "generated_at": 1789306420,
+    "generated_at": 1789392809,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0168,
@@ -1208,7 +1092,7 @@
   },
   "company-facts": {
     "channel_id": "company-facts",
-    "generated_at": 1789306512,
+    "generated_at": 1789392918,
     "analyzed_videos": 3,
     "aggregate_drops_by_bucket": {
       "intro": 0.019,
@@ -1221,7 +1105,7 @@
       {
         "video_id": "5AaBsO3YJW0",
         "title": "Appleの本当は年収約3,800万円、新製品発表の裏側 #shorts #企業分析 #年収 #転職",
-        "avg_view_percentage": 89.96,
+        "avg_view_percentage": 87.79,
         "drops": [
           {
             "ratio_from": 0.19,
@@ -1250,7 +1134,7 @@
       {
         "video_id": "W9UYqysinSY",
         "title": "ユニクロ店長、売上1億円を任される仕事の実態 #shorts #企業分析 #年収 #転職",
-        "avg_view_percentage": 45.07,
+        "avg_view_percentage": 45.12,
         "drops": [
           {
             "ratio_from": 0.12,
@@ -1279,7 +1163,7 @@
       {
         "video_id": "d0UE__SyUks",
         "title": "NTTデータの年収905万円、実は在宅勤務の裏側 #shorts #企業分析 #年収 #転職",
-        "avg_view_percentage": 45.01,
+        "avg_view_percentage": 45.02,
         "drops": [
           {
             "ratio_from": 0.12,
@@ -1313,6 +1197,6 @@
     "channel_id": "socio-rx",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789306769
+    "generated_at": 1789393212
   }
 }
