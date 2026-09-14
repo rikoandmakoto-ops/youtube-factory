@@ -752,6 +752,12 @@ class ScenarioGenerator:
             gb = self._genre_blacklisted_reason(channel.id, title, genre_blacklist)
             if gb:
                 return f"停止ジャンル『{gb}』", True
+            # 実在人物名・第三者IP（→ pipeline/entity_gate）。09-14 に scp-lab で
+            # 実在の著者を SCP 扱いした動画が公開された。seeds / 手入力キューも通る
+            # ここで硬く止める（代替が無ければ ThemeRejectedError）。
+            eh = self._entity_hit(channel, title)
+            if eh:
+                return f"実在人物/第三者IP『{eh.matched}』", True
             hit = _td.find_lexical_duplicate(
                 title, existing, threshold=THEME_DUP_BLOCK_THRESHOLD, stopwords=stop)
             if hit is not None:
@@ -1161,6 +1167,62 @@ class ScenarioGenerator:
             "violations": verdict["violations"],
             "rejected_title": original if current != original else None,
         }
+
+    def _entity_hit(self, channel, text: str):
+        """実在人物名・第三者IP の判定（→ pipeline/entity_gate）。モジュール不在なら None。"""
+        try:
+            from pipeline import entity_gate as _eg
+        except Exception as e:
+            print(f"  ⚠️ entity_gate unavailable: {e}")
+            return None
+        try:
+            raw = channel._raw or {}
+        except AttributeError:
+            raw = {}
+        return _eg.check(text, raw)
+
+    def _enforce_entity_gate(self, channel, theme: Dict, result: Dict[str, Any],
+                             scenario_data: Dict[str, Any]) -> None:
+        """最終タイトルに実在人物名・第三者IPが入っていたら作り直し、駄目なら公開を止める。
+
+        テーマ段のゲートを通っても、LLM が本文の固有名詞をタイトルへ持ち上げることがある
+        （09-14: 題材「ショートスリーパーの異常性」→ 題名「なぜ堀大輔は72時間眠らないのか」）。
+        再生成 2 回で解消しなければ `publish_blocked` を立てる（→ generate() の末尾）。
+        """
+        title = (result.get("title") or "").strip()
+        if not title:
+            return
+        hit = self._entity_hit(channel, title)
+        if hit is None:
+            result["entity_gate"] = {"ok": True}
+            return
+        print(f"  🚫 タイトルに{hit.reason} → 作り直します（{title}）")
+        original, current = title, title
+        for attempt in range(2):
+            advice = [
+                f"「{hit.matched}」のような実在の人物名・他社のキャラクター/作品名を"
+                f"タイトルに一切入れないこと（一般名詞・現象名で言い換える）。",
+            ]
+            cand = self._regenerate_title_with_bans(channel, theme, scenario_data, current, advice)
+            if not cand:
+                break
+            current = cand
+            hit = self._entity_hit(channel, current)
+            print(f"  ↻ 人名/IP除去の再生成 {attempt + 1}/2: "
+                  f"[{'OK' if hit is None else hit.matched}] {current}")
+            if hit is None:
+                break
+        if current != original and hit is None:
+            result.setdefault("original_title", original)
+            result["title"] = current
+        result["entity_gate"] = {
+            "ok": hit is None,
+            "matched": hit.matched if hit else None,
+            "reason": hit.reason if hit else None,
+            "rejected_title": original if current != original else None,
+        }
+        if hit is not None:
+            print(f"  ⛔ タイトルから{hit.reason}を外せませんでした → 公開を止めます")
 
     def _enforce_fact_consistency(self, channel, result: Dict[str, Any]) -> None:
         """同じ会社の同じ指標を回ごとに違う数字で出さないための機械ゲート。
@@ -2941,6 +3003,10 @@ class ScenarioGenerator:
         self._run_gate(result, "title_constraints",
                        self._enforce_title_constraints, channel, theme, result, scenario_data)
 
+        # 実在人物名・第三者IP のゲート。規約ゲートの後（言い換えで名前が入りうる）。
+        self._run_gate(result, "entity_gate",
+                       self._enforce_entity_gate, channel, theme, result, scenario_data)
+
         # ch 横断の同語ゲート。最終タイトルが確定した後に1回だけ見る。
         self._run_gate(result, "cross_channel_keywords",
                        self._enforce_cross_channel_keywords, channel, theme, result, scenario_data)
@@ -2958,7 +3024,49 @@ class ScenarioGenerator:
         # 使えなければテーマ題名に戻し、それも駄目なら例外（壊れたまま公開しない）。
         self._finalize_title(channel, theme, result)
 
+        # 【2026-09-14】ゲートが「未解消（ok: false）」で終わった動画は公開しない。
+        # 従来は記録だけ残して公開していたため、規約違反タイトル・実在人物名・
+        # 数値矛盾がそのまま出ていた。ここで publish_blocked を立て、autopilot は
+        # ジョブを投入せず、on_generation_complete は公開をスキップする。
+        result["publish_blocked"] = self._publish_block_reasons(result)
+        if result["publish_blocked"]:
+            print("  ⛔ publish_blocked: " + " / ".join(result["publish_blocked"]))
+
         return result
+
+    @staticmethod
+    def _publish_block_reasons(result: Dict[str, Any]) -> List[str]:
+        """公開を止めるべき理由の一覧（空なら公開してよい）。
+
+        止めるもの: 規約違反が未解消（title_constraints.ok=False）、実在人物名/第三者IP
+        （entity_gate.ok=False）、同じ会社の同じ指標が食い違う（fact_consistency の
+        conflicts）。横断語（cross_channel_keywords）は当日の並びの問題なので止めない。
+        """
+        reasons: List[str] = []
+        tc = result.get("title_constraints") or {}
+        if tc and tc.get("ok") is False:
+            # 実効文字数の下限（min_effective_chars）だけは止めない。これは CTR の
+            # 目安であって規約・権利の問題ではなく、機械修復もできない（水増しになる）。
+            # 数字・禁止語・接頭辞・必須語・上限文字数の未解消は止める。
+            try:
+                from pipeline import title_constraints as _tc
+                soft = set(_tc.UNREPAIRABLE_RULES)
+            except Exception:
+                soft = {"min_effective_chars"}
+            v = [x for x in (tc.get("violations") or [])
+                 if isinstance(x, dict) and x.get("rule") not in soft]
+            if v:
+                reasons.append("タイトル規約違反が未解消: " + " / ".join(
+                    f"{x.get('label')}({x.get('detail')})" for x in v))
+        eg = result.get("entity_gate") or {}
+        if eg and eg.get("ok") is False:
+            reasons.append(f"タイトルに実在人物/第三者IP: {eg.get('reason') or eg.get('matched')}")
+        fc = result.get("fact_consistency") or {}
+        if fc and fc.get("ok") is False and fc.get("conflicts"):
+            c = fc["conflicts"][0]
+            reasons.append(f"数値の矛盾: {c.get('entity')} の {c.get('metric')} "
+                           f"{c.get('old_value')}→{c.get('new_value')}{c.get('unit', '')}")
+        return reasons
 
     def _run_gate(self, result: Dict[str, Any], name: str, fn, *args) -> None:
         """ゲート関数を1つ実行する。落ちても生成は止めないが、必ず記録する。"""

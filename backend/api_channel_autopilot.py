@@ -832,6 +832,16 @@ def _run_autopilot(
         except Exception as e:
             # 保存が落ちると過去テーマに残らず、重複ゲートが次回この題材を見逃す
             print(f"⚠️ scenario save failed (dedup will not see this theme): {e}")
+        # 【2026-09-14】ゲート未解消（publish_blocked）の台本はレンダリングもしない。
+        # 公開できない動画に 20〜60 分の描画を使わず、枠を落として通知する。
+        blocked = scenario.get("publish_blocked") or []
+        if blocked:
+            api_phase4.notify_event(
+                "error",
+                f"⛔ Autopilot [{ch.name}] この枠は公開を止めました: {scenario.get('title', '')} — "
+                + " / ".join(str(b) for b in blocked),
+            )
+            return
         job_id = queue.submit(
             channel_id=channel_id,
             scenario_data=scenario,

@@ -423,6 +423,18 @@ def on_generation_complete(job) -> None:
             pass
         return
 
+    # 【2026-09-14】生成側のゲートが「未解消（ok: false）」で終わった動画は公開しない。
+    # generator が result["publish_blocked"]（理由の一覧）を立てる。ここが公開経路の
+    # 最終関門なので、autopilot 以外（スケジュール生成・手動投入）でも必ず止まる。
+    blocked = (job.scenario_data or {}).get("publish_blocked") or []
+    if blocked:
+        msg = (f"⛔ 公開を止めました [{job.title}] (job: {job.id}): "
+               + " / ".join(str(b) for b in blocked)
+               + " — 動画は生成済み。手動で確認して公開してください")
+        print(msg)
+        _send_event_notification("error", msg)
+        return
+
     cm = _state.get("channel_manager")
     ch = cm.get(job.channel_id) if cm else None
 

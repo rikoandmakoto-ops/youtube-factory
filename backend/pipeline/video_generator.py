@@ -5255,11 +5255,23 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
     badge_rgb = _rgb(_tt.get("badge_color"), (220, 40, 40))
     hook_rgb = _rgb(_tt.get("hook_color"), (255, 255, 50))
     sub_rgb = _rgb(_tt.get("subtitle_color"), (80, 220, 255))
+
+    # 【2026-09-14】thumbnail_template.style_hint をここでも効かせる（→ pipeline/thumb_style）。
+    # 以前は長尺サムネのブリーフにしか渡っておらず、ショートは全chが同じ構図だった。
+    # 方針を「写真背景 / グラデ配色 / 明朝 or ゴシック / 写真の上の色」に翻訳して使う。
+    # 明示キー（short_bg_gradient 等）がある項目は従来どおりそちらが勝つ。
+    _style = None
+    try:
+        from pipeline import thumb_style as _ts
+        _style = _ts.resolve(channel_dict)
+    except Exception as _ts_err:
+        print(f"  ⚠️ thumb_style unavailable (falling back to palette keys): {_ts_err}")
+    _spal = ((_style or {}).get("palette") or {})
     _bg = _tt.get("short_bg_gradient") or {}
-    bg_top = _rgb(_bg.get("top"), (55, 0, 120))
-    bg_bottom = _rgb(_bg.get("bottom"), (10, 5, 150))
-    orb_rgb = _rgb(_bg.get("orb"), (120, 40, 240))
-    dot_rgb = _rgb(_bg.get("dot"), (255, 80, 180))
+    bg_top = _rgb(_bg.get("top"), _rgb(_spal.get("top"), (55, 0, 120)))
+    bg_bottom = _rgb(_bg.get("bottom"), _rgb(_spal.get("bottom"), (10, 5, 150)))
+    orb_rgb = _rgb(_bg.get("orb"), _rgb(_spal.get("orb"), (120, 40, 240)))
+    dot_rgb = _rgb(_bg.get("dot"), _rgb(_spal.get("dot"), (255, 80, 180)))
 
     # System fonts
     font_paths_bold = [
@@ -5278,47 +5290,95 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
     ]
     font_path_bold = next((fp for fp in font_paths_bold if Path(fp).exists()), None)
     font_path_medium = next((fp for fp in font_paths_medium if Path(fp).exists()), font_path_bold)
+    # 明朝指定（style_hint「白い明朝体」「箔押し風」等）なら見出し・サブ見出しを明朝にする
+    if (_style or {}).get("font") == "mincho":
+        _mincho = next((fp for fp in (
+            "/System/Library/Fonts/ヒラギノ明朝 ProN.ttc",
+            "/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc",
+            "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc",
+        ) if Path(fp).exists()), None)
+        if _mincho:
+            font_path_bold = font_path_medium = _mincho
     use_system_font = font_path_bold is not None
 
-    # 1. Background: vertical gradient + glow
-    canvas = Image.new("RGB", (SW, SH))
-    pixels = []
-    for y in range(SH):
-        ry = y / SH
-        r = int(bg_top[0] * (1 - ry) + bg_bottom[0] * ry)
-        g = int(bg_top[1] * (1 - ry) + bg_bottom[1] * ry)
-        b = int(bg_top[2] * (1 - ry) + bg_bottom[2] * ry)
-        pixels.extend([(r, g, b)] * SW)
-    canvas.putdata(pixels)
-    canvas = canvas.convert("RGBA")
+    # 1. Background
+    canvas = None
+    if (_style or {}).get("background") == "photo":
+        # 写真背景（style_hint「実店舗写真」「お題そのものが写った写真」等）。
+        # 取れなければ従来のグラデーションに落ちる。
+        try:
+            from pipeline import thumb_style as _ts
+            _subject = ((thumb_info or {}).get("company_name")
+                        or _facts_company_name(title) or "").strip()
+            _q = _ts.bg_query_for(_style, title, channel_dict, subject=_subject)
+            # 実体一致を要求する（facts_overlay の背景と同じ基準）。「ワークマン」で
+            # 検索して別の店の写真が返ることが実測で多く、企業名入りの題で無関係な
+            # 店舗を出すと誤認を招く。一致しなければグラデに落ちる。
+            _settings = dict((channel_dict or {}).get("image_collect") or {})
+            _settings.setdefault("orientation", "portrait")
+            if _subject:
+                _settings["entity"] = _subject
+                _settings["require_entity_match"] = True
+            _photo = _collect_short_bg(
+                _q, _settings,
+                Path(out_dir) / "_thumb_bg" / (re.sub(r"[^0-9A-Za-z\u3040-\u30ff\u4e00-\u9fff]+", "_", _subject)[:40] or "bg"),
+                label="short-thumb") if _q else None
+        except Exception as _ph_err:
+            print(f"  ⚠️ short thumb photo bg failed (using gradient): {_ph_err}")
+            _photo = None
+        if _photo is not None:
+            canvas = _photo.convert("RGBA").resize((SW, SH), Image.LANCZOS)
+            _ov = (_style or {}).get("overlay") or {"rgb": [0, 0, 0], "alpha": 110}
+            _layer = Image.new("RGBA", (SW, SH), tuple(_ov["rgb"]) + (int(_ov["alpha"]),))
+            canvas = Image.alpha_composite(canvas, _layer)
+            # 文字帯（上半分）は追加で少し落として可読性を確保
+            _band = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
+            _bd = ImageDraw.Draw(_band)
+            for _y in range(0, 1240, 8):
+                _a = int(90 * (1 - _y / 1240))
+                _bd.rectangle([0, _y, SW, _y + 8], fill=(0, 0, 0, _a))
+            canvas = Image.alpha_composite(canvas, _band)
 
-    # Neon glow orbs (vertical layout)
-    overlay = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
-    draw_glow = ImageDraw.Draw(overlay)
-    _o = orb_rgb
-    orbs = [
-        (150, 200, 200, _o + (50,)),
-        (800, 100, 220, _o + (45,)),
-        (540, 900, 280, _o + (35,)),
-        (900, 600, 160, _o + (45,)),
-        (100, 1400, 180, _o + (40,)),
-        (600, 1600, 200, _o + (30,)),
-    ]
-    for cx, cy, r, color in orbs:
-        draw_glow.ellipse([cx - r, cy - r, cx + r, cy + r], fill=color)
-    canvas = Image.alpha_composite(canvas, overlay.filter(ImageFilter.GaussianBlur(80)))
+    if canvas is None:
+        # vertical gradient + glow（従来）
+        canvas = Image.new("RGB", (SW, SH))
+        pixels = []
+        for y in range(SH):
+            ry = y / SH
+            r = int(bg_top[0] * (1 - ry) + bg_bottom[0] * ry)
+            g = int(bg_top[1] * (1 - ry) + bg_bottom[1] * ry)
+            b = int(bg_top[2] * (1 - ry) + bg_bottom[2] * ry)
+            pixels.extend([(r, g, b)] * SW)
+        canvas.putdata(pixels)
+        canvas = canvas.convert("RGBA")
 
-    # Scatter dots
-    import random
-    random.seed(99)
-    dot_overlay = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
-    dot_draw = ImageDraw.Draw(dot_overlay)
-    colors = [dot_rgb + (140,), orb_rgb + (120,), dot_rgb + (100,), orb_rgb + (110,)]
-    for _ in range(40):
-        dx, dy = random.randint(0, SW), random.randint(0, SH)
-        dr = random.randint(3, 8)
-        dot_draw.ellipse([dx-dr, dy-dr, dx+dr, dy+dr], fill=random.choice(colors))
-    canvas = Image.alpha_composite(canvas, dot_overlay)
+        # Neon glow orbs (vertical layout)
+        overlay = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
+        draw_glow = ImageDraw.Draw(overlay)
+        _o = orb_rgb
+        orbs = [
+            (150, 200, 200, _o + (50,)),
+            (800, 100, 220, _o + (45,)),
+            (540, 900, 280, _o + (35,)),
+            (900, 600, 160, _o + (45,)),
+            (100, 1400, 180, _o + (40,)),
+            (600, 1600, 200, _o + (30,)),
+        ]
+        for cx, cy, r, color in orbs:
+            draw_glow.ellipse([cx - r, cy - r, cx + r, cy + r], fill=color)
+        canvas = Image.alpha_composite(canvas, overlay.filter(ImageFilter.GaussianBlur(80)))
+
+        # Scatter dots
+        import random
+        random.seed(99)
+        dot_overlay = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
+        dot_draw = ImageDraw.Draw(dot_overlay)
+        colors = [dot_rgb + (140,), orb_rgb + (120,), dot_rgb + (100,), orb_rgb + (110,)]
+        for _ in range(40):
+            dx, dy = random.randint(0, SW), random.randint(0, SH)
+            dr = random.randint(3, 8)
+            dot_draw.ellipse([dx-dr, dy-dr, dx+dr, dy+dr], fill=random.choice(colors))
+        canvas = Image.alpha_composite(canvas, dot_overlay)
 
     # 2. 図解カードを先に用意する（2026-09-04）。
     # 立ち絵のサイズを「カードが出るかどうか」で変えるため、描画順より先に決める。
@@ -5345,6 +5405,10 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
     # ホラー系チャンネルは「にこやかな立ち絵」が題材と噛み合わないので、
     # 驚愕・戦慄側の表情差分があればそれを優先する（無ければ従来どおり）。
     horror = _thumb_is_horror(channel_dict, channel_id)
+    # style_hint の mood（dark/bright）は expression_mood が明示されていないときの既定にする
+    _tt_mood = str((_tt.get("expression_mood") or "")).strip().lower()
+    if not _tt_mood and (_style or {}).get("mood") in ("dark", "bright"):
+        horror = (_style or {}).get("mood") == "dark"
     for name, cfg in _chars.items():
         if not isinstance(cfg, dict) or not cfg.get("side"):
             continue

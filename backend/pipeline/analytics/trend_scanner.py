@@ -283,7 +283,9 @@ def _build_scoring_prompt(
         f"候補:\n" + "\n".join(lines) + "\n\n"
         f"出力は JSON: {{ \"scores\": [ {{ \"index\": 0, \"relevance\": 0.0〜1.0, "
         f"\"title\": \"...\", \"angle\": \"...\", \"reason\": \"短い日本語\" }}, ... ] }}\n"
-        f"relevance は厳しめに採点（雑なものは 0.2 以下）。"
+        f"relevance は厳しめに採点（雑なものは 0.2 以下）。\n"
+        f"実在の人物名（著名人・YouTuber・政治家・選手・経営者）や第三者のキャラクター/作品IPを"
+        f"主題にする候補は relevance 0.0 にし、タイトル案にも人名・作品名を一切入れないこと。"
     )
     system = (
         "あなたは YouTube チャンネル運営の編集ディレクター。"
@@ -356,11 +358,44 @@ def _score_with_llm(
 # Queue injection
 # ---------------------------------------------------------------------
 
+def _channel_raw(channel_id: str) -> Dict[str, Any]:
+    try:
+        from main import channel_manager  # type: ignore
+        ch = channel_manager.get(channel_id) if channel_manager else None
+        return (getattr(ch, "_raw", None) or {}) if ch else {}
+    except Exception:
+        return {}
+
+
+def entity_block_reason(channel_id: str, *texts: Optional[str]) -> Optional[str]:
+    """実在人物名・第三者IP を含むテキストがあれば理由を返す（→ pipeline/entity_gate）。
+
+    【2026-09-14】トレンド語「ショートスリーパー」から「堀大輔」入りの題材が
+    scp-lab のキュー先頭へ入り、実在の著者を SCP として扱う動画が公開された。
+    theme_blacklist は事後対応なので、投入の入口で機械的に止める。
+    """
+    try:
+        from pipeline import entity_gate as _eg
+    except Exception as e:
+        print(f"⚠️ entity_gate unavailable (trend intake is NOT gated): {e}")
+        return None
+    raw = _channel_raw(channel_id)
+    for t in texts:
+        hit = _eg.check(t, raw)
+        if hit is not None:
+            return hit.reason
+    return None
+
+
 def _queue_theme(channel_id: str, title: str, angle: str, *, priority_high: bool = True) -> Optional[str]:
     """theme_queue の先頭に挿入。返り値は theme_id。"""
     try:
         import api_channel_autopilot as autopilot_api
     except Exception:
+        return None
+    blocked = entity_block_reason(channel_id, title, angle)
+    if blocked:
+        print(f"  ⛔ trend theme rejected ({channel_id}): {blocked} — '{title[:50]}'")
         return None
     try:
         ap = autopilot_api._load_autopilot(channel_id)
@@ -540,8 +575,16 @@ def scan_channel(
     for s in scored:
         det_id = uuid.uuid4().hex[:10]
         queue_theme_id: Optional[str] = None
+        # 実在人物・第三者IP は検出として残すが、スコアに関係なく自動投入しない
+        # （手動の queue_detection も _queue_theme 側で同じゲートに当たる）。
+        entity_reason = entity_block_reason(
+            channel_id, s.get("keyword"), s.get("suggested_title"), s.get("suggested_angle"))
+        if entity_reason:
+            s["rationale"] = f"[entity_gate] {entity_reason} / " + str(s.get("rationale") or "")
+            print(f"  ⛔ trend '{s.get('keyword')}' not auto-queued ({channel_id}): {entity_reason}")
         do_auto = (
             auto_queue
+            and not entity_reason
             and s.get("combined_score", 0.0) >= AUTO_QUEUE_THRESHOLD
             and auto_queued_count < MAX_AUTO_QUEUE_PER_SCAN
             and bool(s.get("suggested_title"))
@@ -555,7 +598,7 @@ def scan_channel(
             )
             if queue_theme_id:
                 auto_queued_count += 1
-        status = "queued" if queue_theme_id else "detected"
+        status = "queued" if queue_theme_id else ("blocked" if entity_reason else "detected")
         analytics_store.upsert_trend_detection(
             detection_id=det_id,
             channel_id=channel_id,

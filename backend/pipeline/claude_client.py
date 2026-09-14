@@ -43,9 +43,29 @@ _JSON_OBJECT_RE = re.compile(r"\{.*\}", re.DOTALL)
 _LAST_ERROR: Optional[str] = None
 
 
+# 認証エラー（401）を返したキー。同じキーで再び叩いても結果は変わらないので、
+# 一度 401 を見たら「キー未設定」と同じ扱いにする。
+#
+# 【2026-09-14】.env に無効なキーが入った状態で運用した結果、
+#   - generator が毎回 Claude と GPT の二重生成を走らせて Claude 側が 401
+#   - openai_policy.direct_text_api_allowed() が「Claude が使える」と判定して
+#     GPT の退避口を閉じ、サムネのデザインブリーフが機械組みに落ちた
+# という「キーが無いときより悪い」状態になっていた。キーが差し替われば自動で復帰する。
+_AUTH_FAILED_KEY: Optional[str] = None
+
+
+def _current_key() -> str:
+    return os.environ.get("ANTHROPIC_API_KEY", "").strip()
+
+
 def has_api_key() -> bool:
-    """ANTHROPIC_API_KEY が設定され、SDK が import 可能か。"""
-    return bool(os.environ.get("ANTHROPIC_API_KEY", "").strip()) and Anthropic is not None
+    """ANTHROPIC_API_KEY が設定され、SDK が import 可能で、**認証エラーを起こしていない**か。"""
+    key = _current_key()
+    if not key or Anthropic is None:
+        return False
+    if _AUTH_FAILED_KEY is not None and _AUTH_FAILED_KEY == key:
+        return False
+    return True
 
 
 def last_error() -> Optional[str]:
@@ -76,9 +96,15 @@ def unavailable_reason() -> Optional[str]:
 
 
 def _record_error(exc: BaseException, purpose: Optional[str], model: str) -> None:
-    global _LAST_ERROR
+    global _LAST_ERROR, _AUTH_FAILED_KEY
     _LAST_ERROR = f"{type(exc).__name__}: {exc}"
     print(f"⚠️ claude_client call failed ({purpose or model}): {exc}")
+    low = _LAST_ERROR.lower()
+    if "authentication_error" in low or "invalid x-api-key" in low or "api key is invalid" in low:
+        if _AUTH_FAILED_KEY != _current_key():
+            _AUTH_FAILED_KEY = _current_key()
+            print("⛔ ANTHROPIC_API_KEY が無効（401）。キーを差し替えるまで Claude は使わず、"
+                  "テキスト生成は OpenAI の退避口に戻します。")
 
 
 def _clear_error() -> None:

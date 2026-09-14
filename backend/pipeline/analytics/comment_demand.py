@@ -55,6 +55,16 @@ def _queue_theme(channel_id: str, title: str, angle: str, *, priority_high: bool
     # （停止中は「接続を切っただけ」であり、中身を変えない約束）。
     if not ap.get("enabled"):
         return None
+    # 実在人物名・第三者IP はコメント要望経由でも入れない（→ trend_scanner と同じゲート）
+    try:
+        from pipeline.analytics.trend_scanner import entity_block_reason
+        blocked = entity_block_reason(channel_id, title, angle)
+    except Exception as e:
+        print(f"⚠️ entity_gate unavailable (comment intake is NOT gated): {e}")
+        blocked = None
+    if blocked:
+        print(f"  ⛔ comment-demand theme rejected ({channel_id}): {blocked} — '{title[:50]}'")
+        return None
     theme_id = autopilot_api._new_theme_id()
     item = {
         "id": theme_id,
