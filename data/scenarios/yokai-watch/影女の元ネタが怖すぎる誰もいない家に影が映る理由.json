@@ -1,0 +1,541 @@
+{
+  "title": "影女の元ネタが怖すぎる…誰もいない家に影が映る理由",
+  "theme": {
+    "title": "影女の元ネタが怖すぎる、障子に影だけが映る理由",
+    "angle": "人のいない家の障子に映る影。空き家と留守という不在の恐怖を扱う"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "影女、好きな人多いよね。でも元ネタを知ると、障子の見方が変わるんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "あの影だけの姿好き！　でも江戸の怪談では。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、人のいない家に影だけが映り。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "家の中に誰もいないのに、窓の向こうへ人影だけが毎晩来るような話じゃん。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もし留守の障子に影を見ても、開けて確かめないほうがいい。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "こういう伝承を記録してるのがSCP財団って組織なんだ。"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズも見てね。毎日投稿中、1万人目標のチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？　影女、好きな人多いよね。妖怪ウォッチで見かける影の姿は印象的だけど、江戸時代の怪談では、人のいない家の障子へ輪郭だけが映る不在の怪異として語られるんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "あいつ好きなんだよね。顔が見えないからこそ想像できるし、ゲームだと不気味なのにキャラとして覚えやすい。でも空き家の障子に映るって聞くと、同じ影でも急に近寄りたくなくなるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あなたが夜の帰り道、留守だと知っている家の障子に人影を見たことを想像してみてほしい。今回は影女の正体と、なぜ壁ではなく障子にだけ気配が残るのか、その仕組みを原典側から追うんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。影があるなら中に人がいるだけじゃないの？　でも家が空き家なら話が変わるな。スマホに通知だけ来たのに送信者がどこにも表示されないみたいで、確認するほど嫌な感じがする。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、影女という名の妖怪と、障子に映る影の怪談は資料ごとに形が違う。公式キャラクターの設定、昔の伝承、ファンによる元ネタ考察は、同じものとして断定しない必要があるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただ、三つの話をつなぐ核は明確なんだ。本人より先に影が見えること、そして影を生むはずの人間が見つからないことだ。可愛い見た目の妖怪から降りると、そこには留守の家だけが残っている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "本人がいないのに影だけいるって、影が人の付属品じゃなくなるってことだよね。学校の教室でカーテン越しに誰かの影を見たのに、戸を開けたら机が二十個並ぶだけ、みたいな怖さだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "まず障子は、ただの和風背景ではないんだ。紙を通して明かりを柔らかく広げ、向こう側の人を顔のない輪郭に変える。夜なら行灯一つでも、近くに立った子どもの影が大人ほど大きく揺れて見える。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸期の怪談集『絵本百物語』は天保十二年、1841年に刊行された。影女そのものを一語で固定する文献ではないけれど、夜の家、障子越しの気配、見えない相手を怖がる感覚を知る重要な手掛かりなんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "1841年って今から180年以上前か。電気のない夜なら、行灯の火が少し揺れただけで影の肩や首も動いて見えそうだね。昔の人が障子を怖がった理由、ゲームの演出よりずっと生活に近いな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで第二の違和感が出る。影女の怪談で恐れられるのは、影を見たことそのものより、障子を開けて確かめようとする瞬間なんだ。影ははっきり見えているのに、向こう側にはいるはずの人がいない。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、留守宅や空き家のように生活の途中だけが残った場所が舞台になる。戸、畳、茶碗、箒はあるのに、使う人だけがいない。そこへ影だけが戻るから、家が誰かを待っているように見えてしまうんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "廃墟だから怖いんじゃなくて、昨日まで誰かがいた感じだけ残ってるから怖いのか。ゲームで家具も時計もある家に入ったのに、住人のイベントだけ絶対に始まらない時みたいで、静かすぎるよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "民俗学では、家は柱と屋根だけで完成するのではなく、家族の声、食事、火の気と結びつく場所だと考えられてきた。留守が長引けば、その抜けた場所を埋めるように怪異が語られる。影女はその穴の形なんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "障子は内と外を完全には分けない建具だった。昼は光を通し、夜は室内の灯りで人の姿を外へ浮かべる。厚い壁よりも、向こうに誰かがいるかもしれないという想像を何倍も育てやすい境目だったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "半透明の画面みたいに、情報は見えるのに正体だけ見えないわけか。送られてきた写真が荒すぎて顔だけ判別できない時より嫌だな。分からないから安心できるんじゃなくて、分からないから勝手に怖くなる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸の町家では、行灯や提灯の光が紙へ当たり、人影を大きく伸ばした。影の大きさは本人の身長ではなく灯りとの距離で変わるため、背丈120センチほどの子どもでも、障子には大人のように映ることがある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "最初の一瞬だけなら、影は光の現象として説明できる。けれど怪談が怖くなるのは、灯りが消えたあとも影が残る時、または家が無人だと知ってから影を見る時だ。順番が反転すると理屈が逃げ場を失うんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "灯りがあるから影が出たなら安心できる。でも灯りを消しても輪郭が残るなら、それは影じゃなくて何かの姿だよね。画面を閉じたのに表示だけ残る不具合より、ずっと確かめたくない不具合だ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "影女の正体を、一つの古文書だけで決めることはできない。地域の口伝、近代以降の妖怪紹介、創作的な再解釈が重なっているため、江戸の人が全員同じ影女を見た、と言える記録は確認できないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここは区別しておこう。妖怪ウォッチに登場する影女は公式作品のキャラクターで、性格や能力は公式設定だ。一方で障子の影の怪談は、各地で語られた怪異の型であり、同名の原典が一つあるわけではないんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあファンの間で、影女は障子の怪談が元ネタだと言われても、それは似ている部分をつないだ考察なんだね。公式がそう明言した事実と、昔からある影の話を混ぜると、かえって本当の怖さがぼやけそうだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その通りなんだ。ファンの間では、影の姿や人を惑わす印象から障子の怪談と結びつける見方がある。でも今回確認できた範囲では、公式が特定の地域伝承を直接のモデルだと示した資料は見つからなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "けれど、元ネタが一本に定まらないこと自体が不穏なんだ。名前も顔も固定されない怪異は、見る人それぞれの家の障子に合わせて姿を変える。影女は決まった顔を持たないから、頭の中で消せなくなる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "日本の怪談では、姿を見ることより、見えてはいけないものが見えることが恐れられる。障子の影は本来、家人がいると知らせる生活の印だ。それが家人の不在を知らせる印へ反転するから、意味そのものが壊れるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "いつもの目印が逆の意味になるのが怖いんだな。既読が付いたから友達が読んだと思ったのに、本人はスマホを置いたままだったと分かる感じだ。安心するための印が、知らない誰かの存在を知らせてしまう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "古い家では、夜の留守番をする者が戸締まりと火の始末を守った。だから留守の家に灯りや影が見えれば、近所の人も異変として気にしたはずだ。影女は、見守る人の目が届かない家の前に立つ怪異なんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "空き家が怖いのは、建物が壊れているからだけではない。帰宅を待つための玄関、食事を囲むための部屋、眠るための布団が、役目を失ったまま残るからだ。障子の影は、その待機を人の姿にしてしまうんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。帰る人がいない家なのに、影だけが帰宅を待っているみたいに立つのか。元の住人なのか、家に残った気配なのか、どちらか決められないまま見ている側だけが立ち止まるんだね。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "『今昔画図続百鬼』は安永八年、1779年に鳥山石燕が刊行した妖怪画集だ。影女を直接のせた本ではないが、江戸では説明しづらい異変に名前と姿を与え、怖さを共有する文化が広がっていたことを示している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし石燕の妖怪画は、伝承をそのまま写した記録だけではない。先行する本からの引用や絵師の創作も含まれる。一枚の絵を見て、昔からこの姿だったと決めつけないことが、妖怪を調べる時の大事な線引きなんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "影女の話も、単独の古文書に答えが眠っているわけではない。障子、留守、夜、影という四つの要素が、各地の怪異譚で重なっている。四つがそろうと、普通の人影が帰れない気配へ変わってしまうんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "四つの条件がそろったら、偶然って言いにくくなるな。夜の家で影を見るだけなら平気でも、その家が留守で、障子があって、光の理由もないなら、答えを探すほど怖さが増えるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "近代の怪談本や妖怪事典では、影の怪異が女性の姿と結びつけられる場合がある。ただし影女という名称の最初の用例や、どの地域の話が起点かは整理が難しい。そこから先は、記録が途切れているんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "記録が足りないことは、空白を作り話で埋めていい理由にはならない。分からないのは、最初に誰が見たのか、影が何をしたのか、なぜその家だけだったのかだ。分からなさを残すことが、伝承を壊さず怖がる方法なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ボスの設定資料が途中で破れていて、名前とシルエットだけ残ってる感じだな。細かい答えがないからこそ、自分の知ってる空き家や夜道を当てはめちゃう。聞いたあとで景色が変わる怪談はずるいよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あの妖怪の正体は、障子の向こうにいる誰かではなく、人がいる証拠だった影を使って、人がいない家の不在を濃く見せる仕掛けなんだ。影女は姿を現すより、こちらに「誰もいない」と気づかせる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "影そのものが怖いのではない。影を作る本人が見つからないことが怖い。障子を開ければ確認できるはずなのに、開けた瞬間に誰もいないと分かる。その確認の前後で、見る側の安心だけが消えていくんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "開けなければ影が残るし、開ければ誰もいない。どっちを選んでも安心できないじゃん。追いかけてくる妖怪なら逃げればいいのに、影女は何もしないまま、家の中へ入りたくなくさせるんだね。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "現実の夜道で人影のようなものを見たら、まず街灯、車のライト、室内灯を確認するのが安全だ。影は光と物の間にできる現象で、光源との距離が変われば、大きさも方向も数秒で別物に見えるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "空き家へ近づいたり、障子をのぞき込んだり、戸を開けようとするのはやめたほうがいい。怪異以前に、老朽化した床、割れたガラス、私有地への侵入という現実の危険がある。離れて大人に知らせるのが安全なんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "怖いから突撃して検証、はゲームの中だけにしておくべきだね。現実はセーブもリトライもないし、知らない家に入ったら怪談以前にだめだ。影を見たなら、十歩くらい下がるほうがずっと正しい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "写真に影のようなものが写った時も、撮影時刻と光の向きを見ると説明できる場合がある。例えば夕方17時ごろは光が低く、影が長く伸びやすい。まず確認し、それでも残る違和感だけを怪談として静かに置くんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "でも、説明できる影と怪談の影は別の層にある。理屈で光を理解していても、暗い障子の前で向こうに誰かいると感じた瞬間、体は先に戸を開けるなと判断する。怖さは知識より早く反応するんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "光源を探して、どこにも見当たらなかった時のほうが怖そうだな。知らなければ見間違いで済ませられたのに、知ったあとだと、影がどこから来たのか数えてしまう。数字で確かめるほど不安になるね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪ウォッチの影女を好きな人ほど、この落差は味わってほしい。ゲームではキャラクターとして出会えるけれど、元の伝承では可愛いか怖いかより先に、その家に本来いるはずだった人はどこへ行ったのかが問われるんだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "影だけが見える仕掛けは、怪異の顔を隠すためだけではない。見る側に、失われた住人の顔を勝手に想像させるための仕掛けでもある。だから同じ輪郭でも、見る人が十人いれば十通りの怖さになるんだ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "最初は影女を、かっこいい影の妖怪だと思ってた。でも空き家の障子に立つ影だと聞いたあとなら、同じ輪郭でも誰かが帰れなかった形に見えてくる。次にゲームで会ったら、少しだけ目をそらすかも。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は座敷童子が家を出ると、何が起きると語られたのかを追うんだ。残された家の気配という点では、影女の不在の恐怖とつながっている。家にいるものより、家から消えたもののほうが怖いことがある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "今回の答えは、障子が人の姿をぼかし、不在を可視化するから影女の舞台になる、ということなんだ。でも最初に影を見た人がなぜ戸を開けたのか、その一歩の理由までは、どの記録にも残っていない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "誰もいないと分かっている家の障子を、どうして開けたんだろう。助けを求める声がしたのか、それとも影が知っている人に見えたのか。そこが書かれていないから、夜道で思い出すと余計に怖いよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズを追ってほしい。毎日投稿中で1万人目標、チャンネル登録で応援してくれたら、次の妖怪の原典も文献をたどって持ってくるんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もし夜道で、留守のはずの家の障子に人影だけを見かけても、目を合わせないほうがいい。灯りを消したあと、その影が消えるかどうかは、確かめないほうがいいんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "空き家の障子",
+      "影だけがいる"
+    ],
+    "hook_caption": "影だけ残る",
+    "subtitle": "妖怪ウォッチの影女と、人のいない家に残る影の怪談",
+    "tagline": "障子の向こうに立つのは、帰宅した人ではない"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789343261_8209",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "影女の正体はなぜ障子だけに映るのか"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "scp-lab",
+      "bridge_line": "こういう伝承を記録してるのがSCP財団って組織なんだ。",
+      "matched_topic": "怪異"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 80,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 3,
+          "text": "元の伝承では、人のいない家に影だけが映り、声を掛けても返事がない怪異なんだ。",
+          "pattern": "声[がをは]",
+          "reason": "「声が」はミュートでは確認できない"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズも見てね。毎日投稿中、1万人目",
+          "reason": "1行58字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.488,
+      "similar_to": "逆柱はなぜ家鳴りを呼ぶのか正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 46,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "影女の正体はなぜ障子だけに映るのか"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 60,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体', 'だけ'](+20)",
+      "好奇心ギャップ['なぜ', '正体'](+12)",
+      "短すぎ(17字 < 18)(-12)"
+    ]
+  },
+  "original_title": "影女の正体はなぜ障子だけに映るのか",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "影女の正体はなぜ障子だけに映るのか"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}

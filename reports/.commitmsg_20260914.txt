@@ -1,0 +1,33 @@
+指揮者 09-14: サムネ403(5ch)を検出、title_constraints.repair の forbid_patterns 素通りを修正、本日の自動config更新を検算してコミット
+
+## 分析（09-13 22:40 スナップショット / analytics.db のみ・ブラウザ未使用）
+- 公開は再開済み。09-13に7本、09-14未明に4本、計11本。5日間の停止は解消。
+- 09-13公開分は analytics 上まだ全て views=0（YouTube側の集計ラグ）。新規動画の実績は未測定。
+- 09-08→09-13 の登録/千: yokai-watch 0.463→0.733 / daily-science 0.467→0.640 は改善、
+  company-facts 0.715→0.649 / 2ch-matome 0.199→0.165 は悪化。
+
+## 新規P0（ユーザー操作が必要）
+- サムネイルが5chで1枚も適用されていない。
+  403 "authenticated user doesn't have permissions to upload and set custom video thumbnails"。
+  失敗 scp-lab 26 / company-facts 23 / pokemon-lab 21 / yokai-watch 20 / fake-paper 14、
+  成功は daily-science 16件のみ。各chの電話認証（youtube.com/verify）が必要。
+  「サムネ品質最優先」の施策が、そもそも一度も反映されていなかった。
+
+## コード修正
+- backend/pipeline/title_constraints.py: repair() が forbid_patterns を一切見ておらず、
+  check が ok:false と判定したタイトルがそのまま公開されていた。
+  実例 09-13 23:15 company-facts「コメダ珈琲がFC比率99%にする本当の理由とは」
+  （scenario json の title_constraints に ok:false が記録済み）。
+  一致箇所を除去して整形する処理を追加。日本語が壊れる場合は既存ガードが原文を返すため、
+  最悪でも現状維持。テストは 110 passed / 3 failed で変更前と完全に同一（無退行）。
+
+## config
+- 本日のバックエンド自動更新（投稿時間・型優先度／5ch）を独立に検算のうえコミット。
+  09-13 22:40 のスナップショットは既に2回 config 判断に使われているため、
+  指揮者からの3回目の実績ベース変更は行わない（同一スナップショットで2回判断しない鉄則）。
+- 保留: yokai-watch 17:00→19:00。独立検算では 19時 0.41(n=21) が当ch2番目に弱く、
+  12時 1.21(n=12) / 16時 1.65(n=3) のほうが強い。次の実績で決着させる（09-15 再判定）。
+
+## 出力
+- reports/youtube-analysis-2026-09-14.xlsx（サマリ / チャンネル別詳細 / 直近動画一覧 / 改善提案 / 前回比較）
+- scripts/gen_analysis_20260914.py

@@ -454,6 +454,26 @@ def repair(title: str, channel_dict: Optional[Dict[str, Any]] = None) -> str:
         if w and w in t:
             t = _tidy(t.replace(w, ""))
 
+    # 2026-09-14 追加: forbid_patterns を repair が一切見ていなかった。
+    # 実測: company-facts「コメダ珈琲がFC比率99%にする本当の理由とは」が
+    # `check` で ok:false（99%が知らない型の希少性ワード）と判定されながら、
+    # LLM再生成2回も repair も 99% を落とせず、違反したまま 09-13 23:15 に公開された。
+    # （data/scenarios/company-facts/…json の title_constraints に記録が残っている）
+    # 一致箇所を落として掃除する。落とした結果が壊れた日本語なら、この関数の
+    # 末尾の `_is_broken_japanese` ガードが原文を返すので、最悪でも現状維持。
+    for spec in (hc.get("forbid_patterns") or []):
+        pat = (spec or {}).get("pattern") if isinstance(spec, dict) else spec
+        if not pat:
+            continue
+        try:
+            rx = re.compile(pat)
+        except re.error:
+            continue
+        if rx.search(t):
+            stripped = _tidy(rx.sub("", t))
+            if len(stripped) >= 8:
+                t = stripped
+
     try:
         max_chars = int(hc.get("max_chars"))
     except (TypeError, ValueError):

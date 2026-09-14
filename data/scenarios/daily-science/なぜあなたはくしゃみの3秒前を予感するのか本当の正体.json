@@ -1,0 +1,533 @@
+{
+  "title": "なぜあなたはくしゃみの3秒前を予感するのか？本当の正体",
+  "theme": {
+    "title": "なぜ人は自分のくしゃみを予告できるのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？くしゃみは出る3秒前から予感できるんです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！鼻がむずむずする時間にも意味があるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "鼻の神経が刺激を脳へ送り、息をためる準備が先に始まります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホの通知が鳴る前の振動みたいだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも止めようとしても、体はもう空気を集めている途中なんです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。"
+    },
+    {
+      "speaker": "真",
+      "text": "くしゃみ前の合図を今日から意識してみて。体の謎シリーズも、高評価とチャンネル登録で1万人目標を応援してね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？あなたがくしゃみをする約3秒前、鼻の奥ではすでに小さな合図が始まっています。むずむずしてティッシュを取る余裕があるのは、体が先回りして準備を始めているからなんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！くしゃみが出そうだと分かってから机のティッシュを取れたけれど、まだ出ていないのに、どうして自分の体の次の動きが分かるの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "くしゃみは口から急に飛び出す一発の出来事ではありません。鼻に入った小さな粒への連絡、息をためる準備、空気を外へ出す動きが、数秒かけて順番に並ぶ仕組みなんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！あの短い時間にも順番があるなら、むずむずは単なる前触れではなく、体の中で進んでいる仕事を感じている時間なんだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "花粉、ほこり、香水の粒のような刺激が鼻の粘膜に触れると、表面にある細い神経がまず気づきます。あなたが感じるむずむずは、鼻の内側から脳へ送られた最初の連絡なんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ、鼻がむずむずした時点では、くしゃみはまだ決定していないの？それとも体の中では、もう発射の準備が始まっていて止めにくい段階なの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "最初の刺激が弱い時は、鼻水を増やしたり目を細めたりして終わることもあります。玄関のチャイムを押す前に指がボタンへ触れたように、体はまず「確認」から始めるんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、鼻が少しくすぐったいだけで終わる日もあるね。同じように見えるむずむずでも、体は毎回くしゃみまで進むとは限らないんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "刺激を外へ出した方がよいと体が判断すると、次は呼吸の筋肉へ準備の連絡が送られます。ここであなたは一度息を吸い直し、胸やお腹に空気をため始めることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "あの「はっ」と吸い込む感じには、ちゃんと役割があるの？ただ苦しくならないように息を吸っているだけだと思っていたけれど、順序が逆なのかな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "息を吸うのは、後で空気を外へ押し出す力を用意するためです。たとえるなら、水鉄砲に水を入れて、押す直前まで指で出口をふさいでいるような状態を体が作っています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、鼻だけでなく胸やお腹まで動いていたんだ！ティッシュを探している数秒にも、体は水鉄砲みたいに空気をため続けているんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。くしゃみを我慢できそうに感じるのは、空気をためる途中なら意識で顔の向きや腕の位置を変える余地が少し残っているからです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "でも「出る」と思った途端に止められない時もあるよね。予感できるのに完全には止められない、その境目は体の中でどこにあるの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "鼻からの連絡は脳へ届き、脳から呼吸に関わる筋肉へ動きの順番が送られます。予感は未来を当てているのではなく、すでに始まった準備を意識が少し遅れて受け取る感覚なんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！自分がくしゃみを予知しているように思えても、実際は体の中で始まった準備会議を、あとから耳を澄まして聞いているようなものなんだね。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。予感が5秒近く続く人もいれば、鼻がむずむずした直後に出る人もいます。この違いは刺激の強さだけではなく、鼻の中で触れた場所にも関係します。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、予告の長さまで人によって変わるの？電車が来るまで少し待てるみたいな日もあれば、改札へ着く前に来るような日もあるのが不思議だね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "鼻の粘膜がどれだけ敏感か、粒子が鼻のどこへ触れたか、その時に息を吸っていたかで、合図の感じ方は変わります。鼻の奥に刺激が届くほど、短く感じる場合もあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "鼻の中でも場所によって違うんだ！花粉の季節に何回も予告が来る時は、同じ場所が続けて刺激されて、鼻が何度も連絡を送っているのかもしれないね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "花粉症の人では、鼻の内側が刺激に反応しやすい状態になるため、少量の花粉でもむずむずが起きやすくなります。体が外から来た粒を早く見つけようとして、見張り役が敏感になるイメージです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！鼻が大げさに騒いでいるように見えても、実際は玄関の見張り役が小さな足音まで拾って、早めに知らせている状態なんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "くしゃみは一般に、鼻やのどへ入った刺激を外へ動かすための反応と考えられています。空気を一気に動かすのは派手に見えても、目的は鼻の中を守るための身近な掃除なんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、部屋のほこりを風で飛ばすのではなく、鼻の中に残りそうなものを外へ出す掃除なんだね。だから予感の後に大きな息が必要になるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、くしゃみにつながる刺激は鼻だけに限られず、明るい光を見た時に出そうになる人もいると報告されています。外へ出て急に日差しを見た時のくしゃみが、その例です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "それ、聞いたことがある！家から出た瞬間の明るさでくしゃみが出そうになる人がいるけれど、鼻に花粉やほこりが入ったわけではないのに、どうしてつながるの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "明るさの情報と鼻の情報が、脳の近い場所で影響し合うためではないかと考えられています。ただし、誰にでも起きる現象ではなく、細かな仕組みは科学でもまだ結論が出ていません。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "科学でもまだ分からない部分が残っているんだね。でも、自分のくしゃみの予告は鼻だけの出来事ではなく、まぶしい朝の光にも左右されることがあるんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、予感は体からの「警報」そのものではなく、体が同時に進める複数の準備をあなたが感じ取ったものだという点です。だから数秒の余裕が生まれることがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！ティッシュを取る時間は偶然の親切ではなく、鼻、胸、のどが順番に動き始めるために生まれた、体の中の小さな時差なんだね。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "こうした自動の動きには名前が付いています。刺激に応じて体が考える前に決まった順番で動きを作ることを反射と呼び、熱い物から手を引く動きも同じ仲間です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "反射って、熱いカップに触れて手を引っ込める時と同じ言葉なんだね。くしゃみも「出そう」と考えて出すのではなく、体が先に動き方を組み立てているんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただ、くしゃみは手を引く動きより参加する場所が多く、鼻、呼吸、喉、口が順番を合わせます。オーケストラで複数の楽器が指揮に合わせて一度に鳴るような動きなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！だから鼻がむずむずしただけでは音も出ず、息を吸ってから最後に一気に外へ出る、あの独特な一連の動きになるんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "くしゃみで押し出される空気の速さには測定条件で幅がありますが、一瞬で強く空気が動くことは確かです。速さの数字よりも、短時間に空気を使って外へ運ぶ役目を見る方が大切です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "数字だけ聞くとすごい勢いに感じるけれど、目的は見せ場ではなく鼻の掃除なんだね。体は必要な時だけ、一瞬の風を作っていると考えると分かりやすいよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔から人はくしゃみを印象深い出来事として扱い、健康を願う言葉を添える文化もありました。急に体が大きく動く場面だからこそ、昔の人も意味を見つけようとしたのかもしれません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、くしゃみの後に周りが声をかける場面は今でもあるね。昔の人にとっても、予告の後に急に起きる動きは忘れにくい体験だったのかな。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "日本語の「はくしょん」という響きも、くしゃみが生活の中でよく聞かれる音だから残ったのでしょう。ただ、音が出る前に体は数秒かけて準備していることを、私たちは普段あまり意識しません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やったのに、準備していたことは全然覚えていない！くしゃみは一瞬の印象が強いから、その前のむずむずや吸い込む動きが目立たなくなるんだね。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "予感が来た時に役立つのは、無理に鼻と口を完全に押さえ込むことではありません。ティッシュか肘の内側へ顔を向け、周りから少し距離を取る準備に数秒を使ってください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "予告があるからこそ、あわてずに肘を上げられるんだね。手のひらだけで受けるより、次にドアノブやスマホへ触れる前のひと工夫にもなりそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "くしゃみの後に手を洗えるなら、流水とせっけんで20秒ほど洗う習慣も役立ちます。手のひらだけで終えず、指の間や親指まで洗うと、日常の動作として続けやすいです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "20秒なら、歌を短く口ずさむくらいの時間だね。くしゃみの予感、肘で受ける、手を洗うと3段階で覚えれば、次に慌てず動けそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "花粉やほこりで何度もくしゃみが出る日は、帰宅後に顔を洗い、服についたものを落とす工夫もあります。症状が強く続いたり生活に困ったりする時は、医療機関へ相談してください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！くしゃみを止めることだけを考えるより、鼻に届く粒を減らす方が、見張り役の負担を少なくする助けになるんだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "くしゃみの予感は、鼻の神経が拾った刺激、呼吸の準備、そして意識に届くむずむずが重なって生まれます。あなたが感じる数秒は、体が先回りして動いた証拠なんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "最初は不思議な予知みたいに思えたけれど、体の中で準備が始まっていると知ると見え方が変わるね。今度むずむずしたら、呼吸の変化も少し感じてみたいな。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる瞬間に体がびくっと動くのはなぜなのかを見ていきます。布団の中で誰にでも起きやすい数秒の出来事にも、脳と体のやり取りが隠れています。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "寝る直前のびくっも、くしゃみみたいに自分より先に体が動く感じがあるね。眠る時の合図にも理由があるなら、次も一緒に確かめてみたいよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次にくしゃみの予感が来たら、鼻のむずむずから息を吸うまでを少し意識してみてください。数秒の中に、あなたの体が自分を守るための順番が見えてくるはずです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "体の謎シリーズを見ていると、毎日の小さな動きにも理由があると気づけるね。今日のくしゃみも、ただ大きな音が出るだけの出来事ではなくなりそうだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白かったら高評価を押して、チャンネル登録もよろしくね。身近な不思議を毎日1本ずつ一緒にほどいていくので、体の謎シリーズと1万人目標への応援をお願いします。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "くしゃみ前",
+      "なぜ分かる"
+    ],
+    "hook_caption": "3秒前の合図",
+    "subtitle": "鼻が先に送る小さなサイン",
+    "tagline": "あなたの体は先回りしている"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789336028_7375",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 150.4% 優位",
+      "leader": "claude",
+      "margin": 1.5038
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜあなたはくしゃみの3秒前を予感するのか？本当の正体"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。",
+      "matched_topic": "脳"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "くしゃみ前の合図を今日から意識してみて。体の謎シリーズも、高評価とチャンネル登録",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 13,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 4,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "具体的な数字や固有名詞を入れてシェアしやすく",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.507,
+      "similar_to": "あなたの遠くが5秒ぼやける正体は？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 48,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜあなたはくしゃみの3秒前を予感するのか？本当の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 96,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "二人称['あなた'](+6)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}

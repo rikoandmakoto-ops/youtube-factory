@@ -1,188 +1,751 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1789219944,
-    "analyzed_videos": 3,
+    "generated_at": 1789306610,
+    "analyzed_videos": 8,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0101,
-      "early": 0.0235,
-      "middle": 0.005,
-      "late": 0.0047,
-      "ending": 0.0027
+      "intro": 0.0092,
+      "early": 0.0246,
+      "middle": 0.0046,
+      "late": 0.0046,
+      "ending": 0.0023
     },
     "per_video": [
       {
-        "video_id": "QFUfc37jobI",
-        "title": "あなたの字が30秒で別物に見える？ #shorts #雑学 #豆知識",
-        "avg_view_percentage": 110.62,
+        "video_id": "rwQA5cQvkKg",
+        "title": "なぜ寒さで顎が先に震える？3秒の正体 #shorts #雑学 #豆知識",
+        "avg_view_percentage": 38.08,
         "drops": [
           {
             "ratio_from": 0.15,
             "ratio_to": 0.16,
-            "drop": 0.0438,
+            "drop": 0.0901,
             "bucket": "early",
-            "audience_after": 1.6176,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "脳は同じ刺激が続くと、最初ほど強く反応しなくなります。\nこれは順応といって、要するに同じ音や光に慣れて背景へ回す仕組みで、冷蔵庫の運転音を数分後に意識しなくなるのと似ています。",
-              "mood": "calm"
-            }
+            "audience_after": 0.8856
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.073,
+            "bucket": "intro",
+            "audience_after": 0.9757
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0681,
+            "bucket": "early",
+            "audience_after": 0.8175
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "d30RfsNLERk",
+        "title": "疲れた日の甘い物がすぐ消えるのはなぜ？ #shorts #雑学 #豆知識",
+        "avg_view_percentage": 68.98,
+        "drops": [
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0806,
+            "bucket": "intro",
+            "audience_after": 1.2119
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0717,
+            "bucket": "early",
+            "audience_after": 1.0746
           },
           {
             "ratio_from": 0.13,
             "ratio_to": 0.14,
-            "drop": 0.0407,
+            "drop": 0.0687,
             "bucket": "intro",
-            "audience_after": 1.6991,
-            "scenario_line": {
-              "index": 7,
-              "speaker": "真",
-              "text": "0.2秒で読んでいるの？スマホのメッセージを流し見しても意味が入るのは、その速いまとめ読みのおかげなんだね。\nでも同じ字だけを見続けると、なぜその便利な近道が外れるの？",
-              "mood": "calm"
-            }
+            "audience_after": 1.2925
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "ufu1X-uZWJk",
+        "title": "耳を塞ぐと聞こえる20Hzの正体？ #shorts #雑学 #豆知識",
+        "avg_view_percentage": 45.99,
+        "drops": [
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0735,
+            "bucket": "early",
+            "audience_after": 0.8265
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0559,
+            "bucket": "early",
+            "audience_after": 0.9853
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0471,
+            "bucket": "early",
+            "audience_after": 0.9382
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "nqi4BDM9u2E",
+        "title": "走った後の鉄味、あなたの肺で何が？0.1%の正体 #shorts #雑学 #豆知識",
+        "avg_view_percentage": 46.54,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0503,
+            "bucket": "early",
+            "audience_after": 0.8881
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0411,
+            "bucket": "early",
+            "audience_after": 0.9384
           },
           {
             "ratio_from": 0.21,
             "ratio_to": 0.22,
-            "drop": 0.0407,
+            "drop": 0.0411,
             "bucket": "early",
-            "audience_after": 1.4295,
-            "scenario_line": {
-              "index": 12,
-              "speaker": "理子",
-              "text": "実はこれ、今あなたの体でも起きています。画面のどこかにある同じ文字を20秒ほど見続けるだけで、目の動きは小さくなります。\n脳は同じ情報を新鮮なものとして扱いにくくなり、見慣れた字ほど揺らぎやすいんです。",
-              "mood": "mysterious"
-            }
+            "audience_after": 0.7169
           }
         ],
-        "matched_scenario_title": "あなたの字が30秒で別物に見える？"
+        "matched_scenario_title": null
       },
       {
-        "video_id": "0s70fyHmkv4",
-        "title": "なぜ壁のシミが顔に見える？0.1秒の正体 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 42.2,
+        "video_id": "jZHXQpwS7nk",
+        "title": "なぜ冷たい水だけ歯にしみる？歯の中で起きる変化 #shorts #雑学 #豆知識",
+        "avg_view_percentage": 42.65,
         "drops": [
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0682,
+            "bucket": "intro",
+            "audience_after": 0.9119
+          },
           {
             "ratio_from": 0.13,
             "ratio_to": 0.14,
-            "drop": 0.0621,
+            "drop": 0.054,
             "bucket": "intro",
-            "audience_after": 0.9867,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "その通りです。脳には顔を見つける検出の閾値、つまり「これくらい似ていたら反応する」という境目があります。\n顔の場合、その境目が低めに設定されていると考えられています。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.0444,
-            "bucket": "early",
-            "audience_after": 0.7716,
-            "scenario_line": {
-              "index": 12,
-              "speaker": "理子",
-              "text": "まだ答えを急がないでください。問題は、顔を見つける仕組みが便利なだけでなく、あなたの気分や部屋の明るさでも揺れることです。\n同じ壁でも昼と夜で表情まで変わって見えます。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.24,
-            "ratio_to": 0.25,
-            "drop": 0.0421,
-            "bucket": "early",
-            "audience_after": 0.6297,
-            "scenario_line": {
-              "index": 14,
-              "speaker": "理子",
-              "text": "顔を見ると、脳の側頭葉にある紡錘状顔領域がよく働くことが知られています。\n名前は難しいですが、要するに顔らしさを素早く仕分ける脳内の担当窓口だと思ってください。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜ壁のシミが顔に見える？0.1秒の正体"
-      },
-      {
-        "video_id": "x1X8G1eVNfE",
-        "title": "なぜあなたは階段で1段だけ外すのか？ #shorts #雑学 #豆知識",
-        "avg_view_percentage": 120.72,
-        "drops": [
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0813,
-            "bucket": "early",
-            "audience_after": 1.6052,
-            "scenario_line": {
-              "index": 9,
-              "speaker": "真",
-              "text": "言われてみれば確かに、慣れた家の階段なら明るくない時間でも足が進むことがあるよ。\n目で細部を確かめなくても、直前に踏んだ数段の感触が、次も同じだという手がかりになるんだね。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0794,
-            "bucket": "early",
-            "audience_after": 1.5258,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "理子",
-              "text": "ここ、面白いのが、最後の一段は階段の規則が床に切り替わる場所だということです。\n脳がまだ次の段差を想定しているのに、実際には平らな床が待っていると、足の下ろし方が合わなくなります。",
-              "mood": "mysterious"
-            }
+            "audience_after": 0.9801
           },
           {
             "ratio_from": 0.12,
             "ratio_to": 0.13,
-            "drop": 0.0734,
+            "drop": 0.0426,
             "bucket": "intro",
-            "audience_after": 1.8234,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "理子",
-              "text": "歩行は、1歩ずつ命令する作業ではなく、繰り返しの型を使う作業です。\n専門的には予測歩行と呼びますが、簡単に言えば、体が次の一歩を先に用意しておく仕組みだと思ってください。",
-              "mood": "calm"
-            }
+            "audience_after": 1.0341
           }
         ],
-        "matched_scenario_title": "なぜあなたは階段で1段だけ外すのか？"
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "x38K5v7lfPM",
+        "title": "なぜ他人のあくびは約45％もつられる？脳の反応を解説 #shorts #雑学 #豆知識",
+        "avg_view_percentage": 40.24,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.1056,
+            "bucket": "early",
+            "audience_after": 0.8789
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0962,
+            "bucket": "early",
+            "audience_after": 0.705
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0777,
+            "bucket": "early",
+            "audience_after": 0.8012
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "_oXJSYtJ1S8",
+        "title": "実は暗い部屋で音に敏感になるのは、耳が目の代わりをするから？ #shorts #雑学 #豆知識",
+        "avg_view_percentage": 51.54,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.1069,
+            "bucket": "early",
+            "audience_after": 0.9791
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0814,
+            "bucket": "early",
+            "audience_after": 0.8977
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0652,
+            "bucket": "early",
+            "audience_after": 0.7953
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "QFUfc37jobI",
+        "title": "あなたの字が30秒で別物に見える？ #shorts #雑学 #豆知識",
+        "avg_view_percentage": 109.66,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0434,
+            "bucket": "early",
+            "audience_after": 1.6099
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0403,
+            "bucket": "intro",
+            "audience_after": 1.6904
+          },
+          {
+            "ratio_from": 0.19,
+            "ratio_to": 0.2,
+            "drop": 0.0402,
+            "bucket": "early",
+            "audience_after": 1.4985
+          }
+        ],
+        "matched_scenario_title": null
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "scp-lab": {
     "channel_id": "scp-lab",
-    "skipped": true,
-    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789220024
+    "generated_at": 1789306758,
+    "analyzed_videos": 4,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.0057,
+      "early": 0.024,
+      "middle": 0.0056,
+      "late": 0.0055,
+      "ending": 0.0025
+    },
+    "per_video": [
+      {
+        "video_id": "kRcZ0GecFTY",
+        "title": "7日間でずつ消えたエージェント名簿異常事件 #shorts #SCP #SCP解説",
+        "avg_view_percentage": 38.42,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.125,
+            "bucket": "early",
+            "audience_after": 0.7083,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "クロ",
+              "text": "名前を埋めようとした側の記憶まで削られるのか。掲示板の削除済み投稿を何度も開くほど、書いた相手を忘れるような感覚だ。",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.22,
+            "ratio_to": 0.23,
+            "drop": 0.0834,
+            "bucket": "early",
+            "audience_after": 0.5833,
+            "scenario_line": {
+              "index": 13,
+              "speaker": "クロ",
+              "text": "…ねえ、これ本当に大丈夫なの？　9人の記憶が一致しているなら、名簿にない人物より、その名前を言わせる何かのほうが近い。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0833,
+            "bucket": "intro",
+            "audience_after": 0.875,
+            "scenario_line": {
+              "index": 8,
+              "speaker": "シロ",
+              "text": "当直責任者は第3日目に捜索命令を出した。だが命令書の捜索対象欄へ氏名を書いた職員は、3分後、自分が何を書いたか思い出せなくなった。",
+              "mood": "tense"
+            }
+          }
+        ],
+        "matched_scenario_title": "7日間でずつ消えたエージェント名簿異常事件"
+      },
+      {
+        "video_id": "5I_Hhc8VPCw",
+        "title": "SCPの最後の一行だけが隔離対象になった理由 #shorts #SCP #SCP解説",
+        "avg_view_percentage": 45.89,
+        "drops": [
+          {
+            "ratio_from": 0.27,
+            "ratio_to": 0.28,
+            "drop": 0.0547,
+            "bucket": "early",
+            "audience_after": 0.6055,
+            "scenario_line": {
+              "index": 16,
+              "speaker": "クロ",
+              "text": "別々の場所で同じ余白まで揃ったのか。誰かが教室の黒板に答えを書いたら、別の教室のノートにも同じ文字が滲むようなものだ。",
+              "mood": "tense"
+            }
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0469,
+            "bucket": "early",
+            "audience_after": 0.9844,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "クロ",
+              "text": "氏名が消えるって、書類を破った程度じゃないだろ。人事端末も監視当番表も、最初からその医師がいなかった形に書き換わったのか。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.043,
+            "bucket": "early",
+            "audience_after": 0.9414,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "クロ",
+              "text": "氏名が消えるって、書類を破った程度じゃないだろ。人事端末も監視当番表も、最初からその医師がいなかった形に書き換わったのか。",
+              "mood": "mysterious"
+            }
+          }
+        ],
+        "matched_scenario_title": "SCPの最後の一行だけが隔離対象になった理由"
+      },
+      {
+        "video_id": "z7SonE8o73Q",
+        "title": "SCP-3288 大雨の真相 あなたの部屋も沈む #shorts #SCP #SCP解説",
+        "avg_view_percentage": 154.14,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.1507,
+            "bucket": "early",
+            "audience_after": 2.2603
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.1096,
+            "bucket": "early",
+            "audience_after": 2.1507
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0548,
+            "bucket": "intro",
+            "audience_after": 2.411
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "Tt3QQKz1fG4",
+        "title": "SCP-5800 職員証だけが戻った未解決ファイル #shorts #SCP #SCP解説",
+        "avg_view_percentage": 43.39,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0909,
+            "bucket": "early",
+            "audience_after": 0.9156
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0779,
+            "bucket": "early",
+            "audience_after": 0.7695
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0682,
+            "bucket": "early",
+            "audience_after": 0.8474
+          }
+        ],
+        "matched_scenario_title": null
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "pokemon-lab": {
     "channel_id": "pokemon-lab",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789219968
+    "generated_at": 1789306638
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
-    "skipped": true,
-    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789220055
+    "generated_at": 1789306860,
+    "analyzed_videos": 5,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.0086,
+      "early": 0.0255,
+      "middle": 0.0032,
+      "late": 0.0051,
+      "ending": 0.0028
+    },
+    "per_video": [
+      {
+        "video_id": "Cc8MA7iOFcA",
+        "title": "覚の元ネタが怖すぎる…心を先回りする山の怪物 #shorts #妖怪 #都市伝説",
+        "avg_view_percentage": 38.24,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0707,
+            "bucket": "early",
+            "audience_after": 0.8788
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0606,
+            "bucket": "intro",
+            "audience_after": 1.0
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0606,
+            "bucket": "early",
+            "audience_after": 0.8182
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "oUohYkADVPs",
+        "title": "ろくろ首の正体は飛頭蛮？首が飛ぶ怪異の出どころ #shorts #妖怪 #都市伝説",
+        "avg_view_percentage": 44.45,
+        "drops": [
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0719,
+            "bucket": "intro",
+            "audience_after": 1.0327
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0621,
+            "bucket": "intro",
+            "audience_after": 0.9706
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0556,
+            "bucket": "early",
+            "audience_after": 0.915
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "DQXVqkCN_K0",
+        "title": "鬼の角が「目印」になった千年前の変化 #shorts #妖怪 #都市伝説",
+        "avg_view_percentage": 38.85,
+        "drops": [
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.122,
+            "bucket": "intro",
+            "audience_after": 0.9024
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0976,
+            "bucket": "early",
+            "audience_after": 0.7073
+          },
+          {
+            "ratio_from": 0.26,
+            "ratio_to": 0.27,
+            "drop": 0.0488,
+            "bucket": "early",
+            "audience_after": 0.5366
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "ov3N55v73XE",
+        "title": "なぜ狐は人を化かす妖怪にされたのか？江戸の記録に残る事情 #shorts #妖怪 #都市伝説",
+        "avg_view_percentage": 48.62,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.1057,
+            "bucket": "early",
+            "audience_after": 0.9366
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0774,
+            "bucket": "intro",
+            "audience_after": 1.0423
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0704,
+            "bucket": "early",
+            "audience_after": 0.8662
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "FMG_IQ8p5G0",
+        "title": "人面犬の噂が昭和の学校で生まれた土壌とは… #shorts #妖怪 #都市伝説",
+        "avg_view_percentage": 51.57000000000001,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0649,
+            "bucket": "early",
+            "audience_after": 1.0198
+          },
+          {
+            "ratio_from": 0.22,
+            "ratio_to": 0.23,
+            "drop": 0.0508,
+            "bucket": "early",
+            "audience_after": 0.8051
+          },
+          {
+            "ratio_from": 0.21,
+            "ratio_to": 0.22,
+            "drop": 0.0452,
+            "bucket": "early",
+            "audience_after": 0.8559
+          }
+        ],
+        "matched_scenario_title": null
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
-    "skipped": true,
-    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789219839
+    "generated_at": 1789306355,
+    "analyzed_videos": 5,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.0096,
+      "early": 0.0247,
+      "middle": 0.0055,
+      "late": 0.0028,
+      "ending": 0.0019
+    },
+    "per_video": [
+      {
+        "video_id": "_2Et6OcEbTI",
+        "title": "ワイの財布から毎月消える謎の正体が判明したｗ #shorts #2ch #面白いスレ",
+        "avg_view_percentage": 69.49,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0759,
+            "bucket": "early",
+            "audience_after": 1.2586
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0724,
+            "bucket": "early",
+            "audience_after": 1.1862
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0552,
+            "bucket": "early",
+            "audience_after": 1.0862
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "NuTGwFcw4nA",
+        "title": "Apple新製品予想、また本命を外して財布が逝く民ｗ #shorts #2ch #面白いスレ",
+        "avg_view_percentage": 35.09,
+        "drops": [
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0762,
+            "bucket": "intro",
+            "audience_after": 0.9238
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0762,
+            "bucket": "early",
+            "audience_after": 0.8
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0762,
+            "bucket": "early",
+            "audience_after": 0.7238
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "BdCQ4EeG7gk",
+        "title": "ワイのPCで彼女が凍った本当の理由w💦 #shorts #2ch #面白いスレ",
+        "avg_view_percentage": 35.83,
+        "drops": [
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0909,
+            "bucket": "early",
+            "audience_after": 0.7792
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0714,
+            "bucket": "early",
+            "audience_after": 0.7078
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.065,
+            "bucket": "intro",
+            "audience_after": 0.974
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "_mM6oqnCPEw",
+        "title": "なぜファミマで謎の商品を買ってしまうのか？草 #shorts #2ch #面白いスレ",
+        "avg_view_percentage": 40.83,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.1276,
+            "bucket": "early",
+            "audience_after": 0.8582
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.1206,
+            "bucket": "intro",
+            "audience_after": 0.9858
+          },
+          {
+            "ratio_from": 0.19,
+            "ratio_to": 0.2,
+            "drop": 0.0497,
+            "bucket": "early",
+            "audience_after": 0.6879
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "m3jehCSh-m8",
+        "title": "ワイ、毎月大金をムダにしてるけど質問ある？ #shorts #2ch #面白いスレ",
+        "avg_view_percentage": 43.61,
+        "drops": [
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.1064,
+            "bucket": "intro",
+            "audience_after": 0.9362
+          },
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0851,
+            "bucket": "intro",
+            "audience_after": 1.0426
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0638,
+            "bucket": "early",
+            "audience_after": 0.8085
+          }
+        ],
+        "matched_scenario_title": null
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1789219948,
+    "generated_at": 1789306615,
     "analyzed_videos": 1,
     "aggregate_drops_by_bucket": {
       "intro": 0.0122,
@@ -223,11 +786,11 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "akashic-librarian": {
     "channel_id": "akashic-librarian",
-    "generated_at": 1789219841,
+    "generated_at": 1789306358,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0169,
@@ -247,42 +810,24 @@
             "ratio_to": 0.15,
             "drop": 0.0822,
             "bucket": "intro",
-            "audience_after": 1.0548,
-            "scenario_line": {
-              "index": 4,
-              "speaker": null,
-              "text": "これはハロー効果と呼ばれる。\n一つの目立つ長所が、まだ確かめていない能力まで明るく照らす認知の偏りである。",
-              "mood": "tense"
-            }
+            "audience_after": 1.0548
           },
           {
             "ratio_from": 0.15,
             "ratio_to": 0.16,
             "drop": 0.0822,
             "bucket": "early",
-            "audience_after": 0.9726,
-            "scenario_line": {
-              "index": 5,
-              "speaker": null,
-              "text": "では、失敗はどう読まれるのか。\n有能に見える人物の誤りは、一度の例外として扱われやすい可能性が残る。",
-              "mood": "mysterious"
-            }
+            "audience_after": 0.9726
           },
           {
             "ratio_from": 0.16,
             "ratio_to": 0.17,
             "drop": 0.0685,
             "bucket": "early",
-            "audience_after": 0.9041,
-            "scenario_line": {
-              "index": 5,
-              "speaker": null,
-              "text": "では、失敗はどう読まれるのか。\n有能に見える人物の誤りは、一度の例外として扱われやすい可能性が残る。",
-              "mood": "mysterious"
-            }
+            "audience_after": 0.9041
           }
         ],
-        "matched_scenario_title": "なぜ同じ失敗でも、肩書きがある人だけ許されるのか"
+        "matched_scenario_title": null
       },
       {
         "video_id": "MWdbvHEeNhc",
@@ -294,56 +839,38 @@
             "ratio_to": 0.13,
             "drop": 0.132,
             "bucket": "intro",
-            "audience_after": 1.4924,
-            "scenario_line": {
-              "index": 4,
-              "speaker": null,
-              "text": "ここで最初の矛盾が現れる。\n選手は移籍市場では個人として評価されるが、ファンの記憶では最初から集団の所有物のように扱われる。",
-              "mood": "tense"
-            }
+            "audience_after": 1.4924
           },
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
             "drop": 0.1066,
             "bucket": "intro",
-            "audience_after": 1.3198,
-            "scenario_line": {
-              "index": 5,
-              "speaker": null,
-              "text": "クラブのエンブレム、応援歌、同じ色の服は、見知らぬ者どうしを一時的に同じ側へ置く。\n心理学では、これを内集団化と呼ぶ。",
-              "mood": "tense"
-            }
+            "audience_after": 1.3198
           },
           {
             "ratio_from": 0.15,
             "ratio_to": 0.16,
             "drop": 0.0863,
             "bucket": "early",
-            "audience_after": 1.2335,
-            "scenario_line": {
-              "index": 6,
-              "speaker": null,
-              "text": "内集団化とは、同じ集団の人を自分に近い存在として扱う傾向である。\nゴール後の抱擁は、選手の成功を自分の成功へ近づける。",
-              "mood": "tense"
-            }
+            "audience_after": 1.2335
           }
         ],
-        "matched_scenario_title": "なぜ移籍した選手だけ？昨日までの英雄が急に裏切り者になる理由"
+        "matched_scenario_title": null
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "clip-animal": {
     "channel_id": "clip-animal",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789219842
+    "generated_at": 1789306359
   },
   "clip-fukada": {
     "channel_id": "clip-fukada",
-    "generated_at": 1789219853,
+    "generated_at": 1789306372,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0155,
@@ -471,11 +998,11 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "clip-kaneko": {
     "channel_id": "clip-kaneko",
-    "generated_at": 1789219881,
+    "generated_at": 1789306403,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0047,
@@ -545,11 +1072,11 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "clip-lab": {
     "channel_id": "clip-lab",
-    "generated_at": 1789219894,
+    "generated_at": 1789306420,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0168,
@@ -677,12 +1204,115 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "company-facts": {
     "channel_id": "company-facts",
+    "generated_at": 1789306512,
+    "analyzed_videos": 3,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.019,
+      "early": 0.0172,
+      "middle": 0.0037,
+      "late": 0.0085,
+      "ending": 0.0022
+    },
+    "per_video": [
+      {
+        "video_id": "5AaBsO3YJW0",
+        "title": "Appleの本当は年収約3,800万円、新製品発表の裏側 #shorts #企業分析 #年収 #転職",
+        "avg_view_percentage": 89.96,
+        "drops": [
+          {
+            "ratio_from": 0.19,
+            "ratio_to": 0.2,
+            "drop": 0.0761,
+            "bucket": "early",
+            "audience_after": 1.1537
+          },
+          {
+            "ratio_from": 0.11,
+            "ratio_to": 0.12,
+            "drop": 0.0599,
+            "bucket": "intro",
+            "audience_after": 1.4676
+          },
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0517,
+            "bucket": "intro",
+            "audience_after": 1.4159
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "W9UYqysinSY",
+        "title": "ユニクロ店長、売上1億円を任される仕事の実態 #shorts #企業分析 #年収 #転職",
+        "avg_view_percentage": 45.07,
+        "drops": [
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0808,
+            "bucket": "intro",
+            "audience_after": 1.0017
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0791,
+            "bucket": "early",
+            "audience_after": 0.8316
+          },
+          {
+            "ratio_from": 0.11,
+            "ratio_to": 0.12,
+            "drop": 0.067,
+            "bucket": "intro",
+            "audience_after": 1.0825
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "d0UE__SyUks",
+        "title": "NTTデータの年収905万円、実は在宅勤務の裏側 #shorts #企業分析 #年収 #転職",
+        "avg_view_percentage": 45.01,
+        "drops": [
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0742,
+            "bucket": "intro",
+            "audience_after": 0.9121
+          },
+          {
+            "ratio_from": 0.11,
+            "ratio_to": 0.12,
+            "drop": 0.0604,
+            "bucket": "intro",
+            "audience_after": 0.9863
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0604,
+            "bucket": "early",
+            "audience_after": 0.7775
+          }
+        ],
+        "matched_scenario_title": null
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
+  },
+  "socio-rx": {
+    "channel_id": "socio-rx",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789219920
+    "generated_at": 1789306769
   }
 }

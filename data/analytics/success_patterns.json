@@ -1,7 +1,7 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1789219944,
+    "generated_at": 1789306610,
     "sample_size": {
       "total": 200,
       "success": 51,
@@ -9,24 +9,25 @@
     },
     "metrics": {
       "success_avg": {
-        "views": 809.3,
-        "ctr": 0.0054,
-        "avg_view_percentage": 71.21
+        "views": 806.1,
+        "ctr": 0.0057,
+        "avg_view_percentage": 72.17
       },
       "others_avg": {
-        "views": 426.9,
-        "ctr": 0.0035,
-        "avg_view_percentage": 22.28
+        "views": 432.8,
+        "ctr": 0.0044,
+        "avg_view_percentage": 23.65
       }
     },
     "title_features": {
       "success": {
         "count": 51,
-        "avg_length": 62.8,
-        "median_length": 71,
+        "avg_length": 61.7,
+        "median_length": 67,
         "question_ratio": 0.9,
-        "number_ratio": 0.51,
+        "number_ratio": 0.49,
         "samples": [
+          "疲れた日の甘い物がすぐ消えるのはなぜ？ #shorts #雑学 #豆知識",
           "あなたの字が30秒で別物に見える？ #shorts #雑学 #豆知識",
           "なぜあなたは階段で1段だけ外すのか？ #shorts #雑学 #豆知識",
           "鏡の顔だけ違う？99%が知らない左右差 #shorts #雑学 #豆知識",
@@ -35,8 +36,7 @@
           "1分科学 #97：🧬なぜ大谷翔平は睡眠を最優先するのか？8時間超が支える体の正体【ショート】",
           "なぜくしゃみの後だけ体が軽いのか？9割が知らない3秒間の神経反応【ショート】",
           "なぜ今、片方の手だけ冷たいのか？9割が見落とす2倍の血流差【ショート】",
-          "昨夜の夢、なぜ12分なのに何時間もいた気がする？9割が勘違いする時間感覚【ショート】",
-          "99%が知らない「夢の記憶」の正体なぜあの夢だけ覚えてるの？#昨夜の夢だけ覚えてる——99%が知らない、脳が『あの夢』を選んで記録する本当の理由 #shorts #ゆっくり解説"
+          "なぜ今目を閉じるとふらつくのか？99%が知らない最初の3秒の平衡感覚【ショート】"
         ]
       },
       "others": {
@@ -44,9 +44,10 @@
         "avg_length": 56.4,
         "median_length": 50,
         "question_ratio": 0.9,
-        "number_ratio": 0.52,
+        "number_ratio": 0.54,
         "samples": [
-          "疲れた日の甘い物がすぐ消えるのはなぜ？ #shorts #雑学 #豆知識",
+          "なぜ海で沖へ運ばれる？毎秒1mの流れの正体 #shorts #雑学 #豆知識",
+          "なぜ寒さで顎が先に震える？3秒の正体 #shorts #雑学 #豆知識",
           "耳を塞ぐと聞こえる20Hzの正体？ #shorts #雑学 #豆知識",
           "走った後の鉄味、あなたの肺で何が？0.1%の正体 #shorts #雑学 #豆知識",
           "なぜ冷たい水だけ歯にしみる？歯の中で起きる変化 #shorts #雑学 #豆知識",
@@ -54,21 +55,27 @@
           "あなたが大雨で不安になる3hPaの正体？ #shorts #雑学 #豆知識",
           "実は暗い部屋で音に敏感になるのは、耳が目の代わりをするから？ #shorts #雑学 #豆知識",
           "なぜ壁のシミが顔に見える？0.1秒の正体 #shorts #雑学 #豆知識",
-          "あなたの耳が3秒で抜ける正体は？ #shorts #雑学 #豆知識",
-          "黙読中の喉、なぜ声なしで1秒だけ動く？ #shorts #雑学 #豆知識"
+          "あなたの耳が3秒で抜ける正体は？ #shorts #雑学 #豆知識"
         ]
       }
     },
     "posting_time": {
-      "top_hour_utc": 0,
+      "top_hour_utc": 1,
       "top_weekday": 6,
       "n": 51
     },
     "success_videos": [
       {
+        "video_id": "d30RfsNLERk",
+        "title": "疲れた日の甘い物がすぐ消えるのはなぜ？ #shorts #雑学 #豆知識",
+        "views": 912,
+        "ctr": 0.0,
+        "avg_view_percentage": 68.98
+      },
+      {
         "video_id": "QFUfc37jobI",
         "title": "あなたの字が30秒で別物に見える？ #shorts #雑学 #豆知識",
-        "views": 899,
+        "views": 910,
         "ctr": 0.0,
         "avg_view_percentage": 100.0
       },
@@ -82,9 +89,9 @@
       {
         "video_id": "Y94yR_35IyA",
         "title": "鏡の顔だけ違う？99%が知らない左右差 #shorts #雑学 #豆知識",
-        "views": 992,
+        "views": 1009,
         "ctr": 0.0,
-        "avg_view_percentage": 91.16
+        "avg_view_percentage": 91.0
       },
       {
         "video_id": "SzMbnxjh0hM",
@@ -96,15 +103,15 @@
       {
         "video_id": "D1JgzKY4ta8",
         "title": "1分科学 #100：🧬なぜあなたはポケモンの夢で技まで使える？REM睡眠90分にある記憶の正体【ショート】",
-        "views": 1074,
-        "ctr": 0.012658227848101266,
-        "avg_view_percentage": 98.91
+        "views": 1065,
+        "ctr": 0.0125,
+        "avg_view_percentage": 98.94
       },
       {
         "video_id": "QA5AfmA___Q",
         "title": "1分科学 #97：🧬なぜ大谷翔平は睡眠を最優先するのか？8時間超が支える体の正体【ショート】",
-        "views": 849,
-        "ctr": 0.008130081300813009,
+        "views": 848,
+        "ctr": 0.008,
         "avg_view_percentage": 59.57
       },
       {
@@ -122,25 +129,18 @@
         "avg_view_percentage": 55.99000000000001
       },
       {
-        "video_id": "DiphL3fCX4E",
-        "title": "昨夜の夢、なぜ12分なのに何時間もいた気がする？9割が勘違いする時間感覚【ショート】",
-        "views": 1065,
-        "ctr": 0.0,
-        "avg_view_percentage": 55.87
-      },
-      {
-        "video_id": "qyOPOA608QI",
-        "title": "99%が知らない「夢の記憶」の正体なぜあの夢だけ覚えてるの？#昨夜の夢だけ覚えてる——99%が知らない、脳が『あの夢』を選んで記録する本当の理由 #shorts #ゆっくり解説",
-        "views": 33,
-        "ctr": 0.019230769230769232,
-        "avg_view_percentage": 83.86
-      },
-      {
-        "video_id": "z3HSxgDDUMI",
-        "title": "なぜ立ち上がると目の前が暗い？99%が知らない『3秒間』の正体【ショート】【ショート】",
+        "video_id": "8HI19ZAPnBY",
+        "title": "なぜ今目を閉じるとふらつくのか？99%が知らない最初の3秒の平衡感覚【ショート】",
         "views": 4,
-        "ctr": 0.058823529411764705,
-        "avg_view_percentage": 61.65999999999999
+        "ctr": 0.041666666666666664,
+        "avg_view_percentage": 100.0
+      },
+      {
+        "video_id": "RcorEmR5ZI0",
+        "title": "なぜ今夜、布団で足だけ熱い？90%が勘違いする30分の放熱の正体【ショート】",
+        "views": 3,
+        "ctr": 0.05128205128205128,
+        "avg_view_percentage": 81.34
       },
       {
         "video_id": "JFzJf-MePaI",
@@ -207,55 +207,57 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "scp-lab": {
     "channel_id": "scp-lab",
-    "generated_at": 1789220024,
+    "generated_at": 1789306758,
     "sample_size": {
       "total": 200,
-      "success": 13,
-      "others": 187
+      "success": 15,
+      "others": 185
     },
     "metrics": {
       "success_avg": {
-        "views": 519.1,
-        "ctr": 0.0136,
-        "avg_view_percentage": 67.27
+        "views": 462.0,
+        "ctr": 0.0142,
+        "avg_view_percentage": 64.85
       },
       "others_avg": {
-        "views": 493.3,
-        "ctr": 0.0042,
-        "avg_view_percentage": 34.06
+        "views": 517.0,
+        "ctr": 0.0041,
+        "avg_view_percentage": 36.55
       }
     },
     "title_features": {
       "success": {
-        "count": 13,
-        "avg_length": 63.3,
-        "median_length": 52,
-        "question_ratio": 0.15,
-        "number_ratio": 0.85,
+        "count": 15,
+        "avg_length": 60.5,
+        "median_length": 50,
+        "question_ratio": 0.2,
+        "number_ratio": 0.87,
         "samples": [
+          "SCP-4335を見た海域で、なぜ観測記録が途絶えたのか？【ショート】",
           "一口SCP：SCP-006-JP「あけろ」ドアの向こうの記録 #shorts #SCP #SCP解説",
-          "SCP-2525「異常なゲーム」— 死亡記録23件、勝利条件は未達成【ショート】",
+          "SCP-7004「終末の観測者」— 収容都市は9日で住民全員を失った【最後の記録】【ショート】",
+          "SCP-701「吊られた王の悲劇」— 上演記録14件、観客の生存率は21%【ショート】",
           "SCP-1690「廃棄された文明の記録」— 発掘地点12か所、通信断絶から83年後に収容【ショート】",
           "一口SCP：目撃者47名／精神的生存率0%財団が17年間『視覚汚染』と呼んだ理由#財団が17年間隠し続けた視覚汚染体——目撃者全員が廃人化、生存率0%の本当の理由 #shorts #ゆっくり解説",
           "財団が23年間隠し続けた接近者19名・生存率0%——湖で名前を失った本当の理由【ショート】",
           "一口SCP：収容違反：23名消滅遺体も血痕も残っていない#財団が17年間封印した「デジタルの監獄」— 収容違反で消えた研究員23名の正体 #shorts #ゆっくり解説",
           "一口SCP：財団が23年間隠し続けた見るだけで感染する謎感染者数317名、生存率わずか3%#財団が23年間隠した感染 SCP-XXXXの正体 #shorts #ゆっくり解説",
-          "一口SCP：財団が人類を殲滅する側に!?隠された提言が今、暴かれる#財団が隠した『人類殲滅提言』の真実とは #shorts #ゆっくり解説",
-          "一口SCP：99%の人が知らない恐怖財団が23年間隠し続けた#財団が隠蔽したSCP-3125の恐怖: 生存者0名の理由 #shorts #ゆっくり解説",
-          "なぜ生存率5%？『生ける死者』SCP-1440が財団を12回暴走させた本当の理由【ショート】"
+          "一口SCP：財団が人類を殲滅する側に!?隠された提言が今、暴かれる#財団が隠した『人類殲滅提言』の真実とは #shorts #ゆっくり解説"
         ]
       },
       "others": {
-        "count": 187,
-        "avg_length": 64.7,
+        "count": 185,
+        "avg_length": 64.6,
         "median_length": 59,
-        "question_ratio": 0.35,
+        "question_ratio": 0.34,
         "number_ratio": 0.88,
         "samples": [
+          "SCP-7777が72時間で窓へ接近する理由 #shorts #SCP #SCP解説",
+          "なぜ職員12名は眠れず消えたのか【SCP-XXXX】 #shorts #SCP #SCP解説",
           "7日間でずつ消えたエージェント名簿異常事件 #shorts #SCP #SCP解説",
           "SCPの最後の一行だけが隔離対象になった理由 #shorts #SCP #SCP解説",
           "SCP-3288 大雨の真相 あなたの部屋も沈む #shorts #SCP #SCP解説",
@@ -263,38 +265,50 @@
           "なぜこの火山は72時間沈黙し職員が消えるのか #shorts #SCP #SCP解説",
           "RTX5090はで部屋の外から名前を呼ぶのか #shorts #SCP #SCP解説",
           "未来の時刻誰が映る #shorts #SCP #SCP解説",
-          "SCP-5800 職員証だけが戻った未解決ファイル #shorts #SCP #SCP解説",
-          "なぜ非常灯が消えた3秒に5人目の足音がしたのか #shorts #SCP #SCP解説",
-          "SCP-096の顔を見た者に起きた記録消失の真相 #shorts #SCP #SCP解説"
+          "SCP-5800 職員証だけが戻った未解決ファイル #shorts #SCP #SCP解説"
         ]
       }
     },
     "posting_time": {
       "top_hour_utc": 0,
       "top_weekday": 3,
-      "n": 13
+      "n": 15
     },
     "success_videos": [
+      {
+        "video_id": "SscOU-89NLI",
+        "title": "SCP-4335を見た海域で、なぜ観測記録が途絶えたのか？【ショート】",
+        "views": 954,
+        "ctr": 0.00964630225080386,
+        "avg_view_percentage": 59.68
+      },
       {
         "video_id": "eTMuSrunkIY",
         "title": "一口SCP：SCP-006-JP「あけろ」ドアの向こうの記録 #shorts #SCP #SCP解説",
         "views": 988,
-        "ctr": 0.0189328743545611,
+        "ctr": 0.018581081081081082,
         "avg_view_percentage": 67.77
       },
       {
-        "video_id": "ELVk9qVJ5gI",
-        "title": "SCP-2525「異常なゲーム」— 死亡記録23件、勝利条件は未達成【ショート】",
-        "views": 881,
-        "ctr": 0.009771986970684038,
-        "avg_view_percentage": 51.76
+        "video_id": "4xyWgg-t9Sg",
+        "title": "SCP-7004「終末の観測者」— 収容都市は9日で住民全員を失った【最後の記録】【ショート】",
+        "views": 1139,
+        "ctr": 0.010416666666666666,
+        "avg_view_percentage": 53.02
+      },
+      {
+        "video_id": "E2CZTqgA7bI",
+        "title": "SCP-701「吊られた王の悲劇」— 上演記録14件、観客の生存率は21%【ショート】",
+        "views": 31,
+        "ctr": 0.0137524557956778,
+        "avg_view_percentage": 59.72
       },
       {
         "video_id": "81rERf2QdEo",
         "title": "SCP-1690「廃棄された文明の記録」— 発掘地点12か所、通信断絶から83年後に収容【ショート】",
-        "views": 1075,
-        "ctr": 0.015384615384615385,
-        "avg_view_percentage": 86.52
+        "views": 14,
+        "ctr": 0.027586206896551724,
+        "avg_view_percentage": 64.02
       },
       {
         "video_id": "CzMZP2UEx9k",
@@ -368,11 +382,11 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "pokemon-lab": {
     "channel_id": "pokemon-lab",
-    "generated_at": 1789219968,
+    "generated_at": 1789306638,
     "sample_size": {
       "total": 56,
       "success": 4,
@@ -460,51 +474,52 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
-    "generated_at": 1789220055,
+    "generated_at": 1789306860,
     "sample_size": {
-      "total": 54,
+      "total": 55,
       "success": 6,
-      "others": 48
+      "others": 49
     },
     "metrics": {
       "success_avg": {
-        "views": 508.7,
-        "ctr": 0.0244,
-        "avg_view_percentage": 68.91
+        "views": 436.3,
+        "ctr": 0.0251,
+        "avg_view_percentage": 73.64
       },
       "others_avg": {
-        "views": 613.2,
-        "ctr": 0.0117,
-        "avg_view_percentage": 36.03
+        "views": 532.0,
+        "ctr": 0.0115,
+        "avg_view_percentage": 41.14
       }
     },
     "title_features": {
       "success": {
         "count": 6,
-        "avg_length": 42.5,
-        "median_length": 39,
+        "avg_length": 44.2,
+        "median_length": 38,
         "question_ratio": 0.83,
-        "number_ratio": 0.17,
+        "number_ratio": 0.33,
         "samples": [
-          "口裂け女の噂はなぜ全国へ？名前を呼べない本当の理由 #shorts #妖怪 #都市伝説",
+          "1分妖怪ファイル #13：👁️妖怪ウォッチ元祖に隠された3つの秘密、あなたは名前の意味に気づいた？【ショート】",
           "海坊主の正体が怖すぎる — 船を沈める巨大な影は何だったのか【ショート】",
-          "妖怪ウォッチのエンマ大王、なぜか『本物』の閻魔と全然違う姿をしている【ショート】",
+          "なぜおでんじんだけ夜道に立つ？可愛い具に隠された秘密【ショート】【ショート】",
           "なぜ武士と猫が混ざった？ブシニャンの『本当のルーツ』が怖すぎる理由【ショート】",
           "なぜコマさんの秘密？神社の狛犬と田舎の意外なつながり【ショート】",
           "1分妖怪ファイル：なぜ妖怪ウォッチだけ？主人公の秘密#妖怪ウォッチで主人公だけが妖怪を見られる理由 #shorts #ゆっくり解説"
         ]
       },
       "others": {
-        "count": 48,
-        "avg_length": 42.3,
+        "count": 49,
+        "avg_length": 42.2,
         "median_length": 40,
-        "question_ratio": 0.77,
-        "number_ratio": 0.4,
+        "question_ratio": 0.76,
+        "number_ratio": 0.37,
         "samples": [
+          "雷獣の爪痕が落雷木に残る…江戸で剥製まで売られた怪異の正体 #shorts #妖怪 #都市伝説",
           "覚の元ネタが怖すぎる…心を先回りする山の怪物 #shorts #妖怪 #都市伝説",
           "ろくろ首の正体は飛頭蛮？首が飛ぶ怪異の出どころ #shorts #妖怪 #都市伝説",
           "鬼の角が「目印」になった千年前の変化 #shorts #妖怪 #都市伝説",
@@ -513,44 +528,43 @@
           "百目なのに一つ目？江戸の絵に隠された不気味な変化 #shorts #妖怪 #都市伝説",
           "なぜ妖怪は山を下り里に現れるようになったのか #shorts #妖怪 #都市伝説",
           "小豆洗い、姿を消して「音」だけ残った土地の記録 #shorts #妖怪 #都市伝説",
-          "雪女が去り際に名を呼ぶ理由…約束を破った男の末路 #shorts #妖怪 #都市伝説",
-          "キュウビが日本へ渡った理由、知ってる？ #shorts #妖怪 #都市伝説"
+          "雪女が去り際に名を呼ぶ理由…約束を破った男の末路 #shorts #妖怪 #都市伝説"
         ]
       }
     },
     "posting_time": {
       "top_hour_utc": 10,
-      "top_weekday": 5,
+      "top_weekday": 1,
       "n": 6
     },
     "success_videos": [
       {
-        "video_id": "-bmLS2JL1Hk",
-        "title": "口裂け女の噂はなぜ全国へ？名前を呼べない本当の理由 #shorts #妖怪 #都市伝説",
-        "views": 1074,
-        "ctr": 0.02040816326530612,
-        "avg_view_percentage": 56.10000000000001
+        "video_id": "0P7LU1RGUX0",
+        "title": "1分妖怪ファイル #13：👁️妖怪ウォッチ元祖に隠された3つの秘密、あなたは名前の意味に気づいた？【ショート】",
+        "views": 664,
+        "ctr": 0.018957345971563982,
+        "avg_view_percentage": 54.97
       },
       {
         "video_id": "l68CzSRJ6WU",
         "title": "海坊主の正体が怖すぎる — 船を沈める巨大な影は何だったのか【ショート】",
-        "views": 1909,
-        "ctr": 0.022988505747126436,
-        "avg_view_percentage": 57.36
+        "views": 1911,
+        "ctr": 0.03260869565217391,
+        "avg_view_percentage": 57.440000000000005
       },
       {
-        "video_id": "Rmx-FN9VhUE",
-        "title": "妖怪ウォッチのエンマ大王、なぜか『本物』の閻魔と全然違う姿をしている【ショート】",
-        "views": 44,
-        "ctr": 0.020942408376963352,
-        "avg_view_percentage": 57.25
+        "video_id": "frxNzntmiF4",
+        "title": "なぜおでんじんだけ夜道に立つ？可愛い具に隠された秘密【ショート】【ショート】",
+        "views": 22,
+        "ctr": 0.017699115044247787,
+        "avg_view_percentage": 80.64
       },
       {
         "video_id": "724R2jGp97Q",
         "title": "なぜ武士と猫が混ざった？ブシニャンの『本当のルーツ』が怖すぎる理由【ショート】",
-        "views": 10,
-        "ctr": 0.021897810218978103,
-        "avg_view_percentage": 62.24000000000001
+        "views": 6,
+        "ctr": 0.020833333333333332,
+        "avg_view_percentage": 68.29
       },
       {
         "video_id": "kHukScwckQ0",
@@ -568,51 +582,51 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
-    "generated_at": 1789219839,
+    "generated_at": 1789306355,
     "sample_size": {
-      "total": 50,
-      "success": 6,
-      "others": 44
+      "total": 51,
+      "success": 5,
+      "others": 46
     },
     "metrics": {
       "success_avg": {
-        "views": 1234.2,
-        "ctr": 0.0355,
-        "avg_view_percentage": 66.52
+        "views": 721.6,
+        "ctr": 0.0408,
+        "avg_view_percentage": 67.8
       },
       "others_avg": {
-        "views": 747.6,
-        "ctr": 0.0193,
-        "avg_view_percentage": 36.82
+        "views": 843.6,
+        "ctr": 0.0153,
+        "avg_view_percentage": 43.38
       }
     },
     "title_features": {
       "success": {
-        "count": 6,
-        "avg_length": 24.2,
-        "median_length": 22,
-        "question_ratio": 0.33,
-        "number_ratio": 0.17,
+        "count": 5,
+        "avg_length": 24.8,
+        "median_length": 23,
+        "question_ratio": 0.4,
+        "number_ratio": 0.2,
         "samples": [
           "なぜPS5 Proに期待する？値段で胃が痛い理由とはw【ショート】",
           "なんか靴下だけ消えるんやがw【ショート】",
           "ワイ、彼女いない歴＝年齢やけど質問ある？【ショート】",
           "なんかPCの画面チカチカするんやが【ショート】",
-          "コンビニで一番いらん商品あげてけ【ショート】",
-          "ワイの今日の昼飯を当てるスレw【ショート】"
+          "コンビニで一番いらん商品あげてけ【ショート】"
         ]
       },
       "others": {
-        "count": 44,
-        "avg_length": 34.4,
+        "count": 46,
+        "avg_length": 34.3,
         "median_length": 33,
-        "question_ratio": 0.57,
-        "number_ratio": 0.73,
+        "question_ratio": 0.54,
+        "number_ratio": 0.72,
         "samples": [
+          "ワイの財布から毎月消える謎の正体が判明したｗ #shorts #2ch #面白いスレ",
           "Apple新製品予想、また本命を外して財布が逝く民ｗ #shorts #2ch #面白いスレ",
           "ワイのPCで彼女が凍った本当の理由w💦 #shorts #2ch #面白いスレ",
           "なぜファミマで謎の商品を買ってしまうのか？草 #shorts #2ch #面白いスレ",
@@ -621,23 +635,22 @@
           "湯けむりの奥全員停止 #shorts #2ch #面白いスレ",
           "ワイ、保健体育歴3年やけど質問ある？w💦 #shorts #2ch #面白いスレ",
           "3回目の店謎の予約名 #shorts #2ch #面白いスレ",
-          "3秒で凍結何言った #shorts #2ch #面白いスレ",
-          "💦ワイ、同棲3年目やけど質問ある？💦 #shorts #2ch #面白いスレ"
+          "3秒で凍結何言った #shorts #2ch #面白いスレ"
         ]
       }
     },
     "posting_time": {
-      "top_hour_utc": 0,
+      "top_hour_utc": 12,
       "top_weekday": 5,
-      "n": 6
+      "n": 5
     },
     "success_videos": [
       {
         "video_id": "tOnOISa0CNo",
         "title": "なぜPS5 Proに期待する？値段で胃が痛い理由とはw【ショート】",
-        "views": 1203,
-        "ctr": 0.015151515151515152,
-        "avg_view_percentage": 61.59
+        "views": 1199,
+        "ctr": 0.014925373134328358,
+        "avg_view_percentage": 61.67
       },
       {
         "video_id": "JHpcaK9BZcg",
@@ -656,31 +669,24 @@
       {
         "video_id": "WDnmFqiOqpU",
         "title": "なんかPCの画面チカチカするんやが【ショート】",
-        "views": 1319,
-        "ctr": 0.037037037037037035,
-        "avg_view_percentage": 51.49
+        "views": 45,
+        "ctr": 0.0375,
+        "avg_view_percentage": 61.41
       },
       {
         "video_id": "MASXwV-ZkDc",
         "title": "コンビニで一番いらん商品あげてけ【ショート】",
-        "views": 1086,
-        "ctr": 0.027777777777777776,
-        "avg_view_percentage": 100.0
-      },
-      {
-        "video_id": "WJpTwtFMnTM",
-        "title": "ワイの今日の昼飯を当てるスレw【ショート】",
-        "views": 1439,
-        "ctr": 0.017241379310344827,
-        "avg_view_percentage": 66.44
+        "views": 6,
+        "ctr": 0.03571428571428571,
+        "avg_view_percentage": 96.3
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1789219948,
+    "generated_at": 1789306615,
     "sample_size": {
       "total": 17,
       "success": 5,
@@ -776,11 +782,11 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "akashic-librarian": {
     "channel_id": "akashic-librarian",
-    "generated_at": 1789219841,
+    "generated_at": 1789306357,
     "sample_size": {
       "total": 17,
       "success": 5,
@@ -876,11 +882,11 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "clip-animal": {
     "channel_id": "clip-animal",
-    "generated_at": 1789219842,
+    "generated_at": 1789306359,
     "sample_size": {
       "total": 3,
       "success": 3,
@@ -948,11 +954,11 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "clip-fukada": {
     "channel_id": "clip-fukada",
-    "generated_at": 1789219853,
+    "generated_at": 1789306372,
     "sample_size": {
       "total": 13,
       "success": 2,
@@ -1024,11 +1030,11 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "clip-kaneko": {
     "channel_id": "clip-kaneko",
-    "generated_at": 1789219881,
+    "generated_at": 1789306403,
     "sample_size": {
       "total": 30,
       "success": 3,
@@ -1108,11 +1114,11 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "clip-lab": {
     "channel_id": "clip-lab",
-    "generated_at": 1789219894,
+    "generated_at": 1789306420,
     "sample_size": {
       "total": 18,
       "success": 2,
@@ -1184,90 +1190,146 @@
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "company-facts": {
     "channel_id": "company-facts",
-    "generated_at": 1789219920,
+    "generated_at": 1789306511,
     "sample_size": {
-      "total": 42,
-      "success": 3,
-      "others": 39
+      "total": 45,
+      "success": 2,
+      "others": 43
     },
     "metrics": {
       "success_avg": {
-        "views": 1012.7,
-        "ctr": 0.048,
-        "avg_view_percentage": 66.93
+        "views": 1670.5,
+        "ctr": 0.0462,
+        "avg_view_percentage": 77.09
       },
       "others_avg": {
-        "views": 1070.1,
-        "ctr": 0.0216,
-        "avg_view_percentage": 45.11
+        "views": 1104.3,
+        "ctr": 0.0245,
+        "avg_view_percentage": 53.12
       }
     },
     "title_features": {
       "success": {
-        "count": 3,
-        "avg_length": 43.0,
-        "median_length": 42,
-        "question_ratio": 0.33,
+        "count": 2,
+        "avg_length": 39.5,
+        "median_length": 39,
+        "question_ratio": 0.0,
         "number_ratio": 1.0,
         "samples": [
-          "星野リゾートの推定年収400万円、業界平均と比べると？ #shorts #企業分析 #年収 #転職",
-          "三菱商事の平均年収2033万円、その中身 #shorts #企業分析 #年収 #転職",
-          "ASUSの年収が本当は気になる ゲーミング売上が約4,800億円【ショート】"
+          "📉JR東日本の年収810万円、本当は休日124日とのバランス💸【ショート】",
+          "三菱商事の平均年収2033万円、その中身 #shorts #企業分析 #年収 #転職"
         ]
       },
       "others": {
-        "count": 39,
-        "avg_length": 39.8,
-        "median_length": 37,
+        "count": 43,
+        "avg_length": 40.7,
+        "median_length": 40,
         "question_ratio": 0.33,
-        "number_ratio": 0.97,
+        "number_ratio": 0.98,
         "samples": [
+          "スシローが回転をやめた店を増やす3業態の狙い実態 #shorts #企業分析 #年収 #転職",
+          "ワークマンが一般客を呼んだ転機、売上1,283億円の裏側 #shorts #企業分析 #年収 #転職",
+          "Appleの本当は年収約3,800万円、新製品発表の裏側 #shorts #企業分析 #年収 #転職",
           "ユニクロ店長、売上1億円を任される仕事の実態 #shorts #企業分析 #年収 #転職",
           "NTTデータの年収905万円、実は在宅勤務の裏側 #shorts #企業分析 #年収 #転職",
           "大和ハウス工業の年収1000万円超、残業の実態がヤバい #shorts #企業分析 #年収 #転職",
           "日本郵政の年収、職種で2倍差がつく理由 #shorts #企業分析 #年収 #転職",
           "サイゼリヤの原価率が社員年収に与える意外な影響 #shorts #企業分析 #年収 #転職",
           "Apple Japanの年収、実は1,000万円超の実態 #shorts #企業分析 #年収 #転職",
-          "伊藤忠商事の平均1753万円、朝型勤務の実態 #shorts #企業分析 #年収 #転職",
-          "トヨタ895万円の実態、ルーミー人気を支える社員の本音 #shorts #企業分析 #年収 #転職",
-          "東京エレクトロンの年収1272万円、実は転職後に差が出る #shorts #企業分析 #年収 #転職",
-          "キーエンス年収2067万円の内訳、残業37.7時間と評価制度 #shorts #企業分析 #年収 #転職"
+          "伊藤忠商事の平均1753万円、朝型勤務の実態 #shorts #企業分析 #年収 #転職"
         ]
       }
     },
     "posting_time": {
-      "top_hour_utc": 8,
+      "top_hour_utc": 5,
       "top_weekday": 4,
-      "n": 3
+      "n": 2
     },
     "success_videos": [
       {
-        "video_id": "kv1KNLaPkWA",
-        "title": "星野リゾートの推定年収400万円、業界平均と比べると？ #shorts #企業分析 #年収 #転職",
-        "views": 1045,
-        "ctr": 0.039603960396039604,
-        "avg_view_percentage": 65.89
+        "video_id": "wIcx5yV-3QQ",
+        "title": "📉JR東日本の年収810万円、本当は休日124日とのバランス💸【ショート】",
+        "views": 1351,
+        "ctr": 0.04,
+        "avg_view_percentage": 80.83
       },
       {
         "video_id": "dPkVQBSCzXs",
         "title": "三菱商事の平均年収2033万円、その中身 #shorts #企業分析 #年収 #転職",
-        "views": 1983,
-        "ctr": 0.05305039787798409,
-        "avg_view_percentage": 73.48
-      },
-      {
-        "video_id": "nHi44PRzdes",
-        "title": "ASUSの年収が本当は気になる ゲーミング売上が約4,800億円【ショート】",
-        "views": 10,
-        "ctr": 0.05128205128205128,
-        "avg_view_percentage": 61.41
+        "views": 1990,
+        "ctr": 0.05235602094240838,
+        "avg_view_percentage": 73.35
       }
     ],
     "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY 未設定"
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
+  },
+  "socio-rx": {
+    "channel_id": "socio-rx",
+    "generated_at": 1789306769,
+    "sample_size": {
+      "total": 2,
+      "success": 2,
+      "others": 0
+    },
+    "metrics": {
+      "success_avg": {
+        "views": 0.0,
+        "ctr": 0.0,
+        "avg_view_percentage": 0.0
+      },
+      "others_avg": {
+        "views": 0.0,
+        "ctr": 0.0,
+        "avg_view_percentage": 0.0
+      }
+    },
+    "title_features": {
+      "success": {
+        "count": 2,
+        "avg_length": 29.5,
+        "median_length": 29,
+        "question_ratio": 0.5,
+        "number_ratio": 0.0,
+        "samples": [
+          "なぜ天才は一人で育たないのか フィールズ賞の本当の理由 #shorts #社会学 #自己啓発",
+          "Deleted video"
+        ]
+      },
+      "others": {
+        "count": 0,
+        "avg_length": 0.0,
+        "question_ratio": 0.0,
+        "number_ratio": 0.0,
+        "samples": []
+      }
+    },
+    "posting_time": {
+      "top_hour_utc": 6,
+      "top_weekday": 6,
+      "n": 2
+    },
+    "success_videos": [
+      {
+        "video_id": "PNmh2d97YQ4",
+        "title": "なぜ天才は一人で育たないのか フィールズ賞の本当の理由 #shorts #社会学 #自己啓発",
+        "views": 0,
+        "ctr": 0.0,
+        "avg_view_percentage": 0.0
+      },
+      {
+        "video_id": "AOTCG-2Prkg",
+        "title": "Deleted video",
+        "views": 0,
+        "ctr": 0.0,
+        "avg_view_percentage": 0.0
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   }
 }
