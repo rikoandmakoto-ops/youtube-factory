@@ -1,0 +1,509 @@
+{
+  "title": "山彦の声が妖怪になった…江戸時代に描かれた不気味な伝承の正体",
+  "theme": {
+    "title": "なぜ山彦は妖怪として数えられていたのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山彦、好きな人多いよね。でも元ネタを知ると見方が変わるんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "あの声を返す妖怪だよね。江戸の画図百鬼夜行にも描かれているの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、山彦は山から返る声そのものを妖怪として数えた存在なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "いまなら録音の反響なのに、暗い山で自分の声だけが遅れて答える感覚だ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。返事が一度だけなら、本当に山が聞いていたのかもしれない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズも毎日投稿中、1万人目標のチャンネル登録で応援してね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？ 山彦という妖怪は、鳥山石燕の一七七六年刊行『画図百鬼夜行』に描かれているんだ。\nあなたも山で叫んだ声が返った経験があるなら、その返事が昔は妖怪の声と数えられた理由を考えてみてほしい。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "山彦って、妖怪ウォッチで声を返すあいつだよね。それ好きな人多いよ、技をまねする感じが面白い。\nでも理科なら反響で説明できるのに、一七七六年の本では妖怪として載っているのが不思議だよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、妖怪ウォッチの山彦は株式会社レベルファイブの作品内キャラクターなんだ。\n今日は公式設定とは切り分けて、江戸の文献と各地の語りで、山彦が妖怪として数えられた正体を追う。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "結論のヒントは、反響が音のコピーではなく、山からの返事に聞こえたことなんだ。\nスマホで送った自分の音声が数秒後に知らない廊下から返るような感覚を、街灯のない山で味わえば印象は変わる。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。自分の声なのに、山の向こうから誰かが答えたように聞こえたってこと？\n体育館の反響なら平気なのに、木しか見えない谷で名前だけ返されたら、ぼくも先に誰かを疑うと思う。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山彦は、山で呼んだ声が返る現象を指す言葉として古くから使われてきた。\nただ山と彦という名は、岩壁の物理現象よりも、山にいる男や人の気配を連想させる名前で、そこに妖怪化の入口がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "現代の説明では、音は岩や谷の壁に当たり、遅れて耳へ戻る反響になる。\nけれど山道では壁までの距離を目で測れず、数十メートル先の岩から戻った声でも、見えない相手の口元から出たように感じやすい。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "同じ声が返るだけなら、すぐ自分だと分かりそうなのにね。何がそんなに不気味だったの？\n返るまでの時間が少しずれるだけで、ゲームの通信ラグみたいに、相手が考えてから返したように聞こえるのかな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "反響では、声の語尾や高さが地形と風で崩れることがある。聞き慣れた自分の声なのに、最後だけ欠けたり遠ざかったりする。\n一語だけ返る場面なら、同じ台詞を復唱した誰かが、途中で息を止めたようにも聞こえるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで大事なのは、昔の人が反響の仕組みを全く知らなかった、と単純化できないことなんだ。\n音が返ること自体は経験で分かっていても、なぜ山だけが返答するように響くのか、その意味は別の問題として残った。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ、知らないから妖怪にしたというより、知っていても気持ち悪かったんだね。\n自分で叫んだのに、誰もいない場所から自分の名前が返るなら、仕組みを知っていても足が止まりそうだよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、ここからが本題なんだ。山彦は反響の説明ができる時代になっても、妖怪図鑑から消えなかった。\nその理由は音の不思議だけでなく、山そのものを人の住む場所の外側、別の者がいる場所と見た感覚にある。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸後期の随筆『嬉遊笑覧』には、山彦を山の霊の声とみる説明が紹介されている。\n現代の実験記録ではないけれど、返った音を無機質な現象で終わらせず、山に属する存在の発声として受け取った痕跡がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "山の霊の声って、姿のある妖怪じゃなくて、山が話したみたいな言い方だね。\n敵キャラが目の前に出るゲームと違って、山彦は聞こえた時点で、相手のいる場所すら分からないのが怖いよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪は必ず角や牙を持つ怪物ではない。日本の妖怪には、夜道の音、家の物音、川の流れのように、出来事へ名前を与えた例も多い。\n山彦は姿より声が先にあり、その声を誰のものか決められない不安から生まれた妖怪なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "鳥山石燕の『画図百鬼夜行』は、一七七六年に妖怪を絵と短い説明で並べた江戸の出版物だった。\n石燕は山彦に小さな人影のような輪郭を与え、耳でしか会えない声を、読者が目で見られる妖怪へ変えている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "見えない音に顔をつけたから、みんなが山彦を覚えやすくなったのかな。今のキャラデザインに近いね。\nでも石燕が本当に見たわけではないなら、その絵をそのまま伝承の証拠にするのは違うんだよね？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その通りなんだ。石燕の絵は山彦の実在を撮った証拠ではなく、江戸の人が知っていた怪異のイメージを形にした資料として読むべきだ。\nただし一七七六年の読者に、山彦という名が妖怪として通じたことを示す、有力な文化資料ではある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山は薪や炭を得る生活の場でありながら、峠を越えれば迷う危険な場所でもあった。\n地図アプリも防災無線もない時代、日が落ちた山道で声だけが遠くから返るなら、誰かが道の奥で待つように感じても無理はない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "昼なら景色を見て岩に当たったと考えられても、夜なら声だけが残るもんね。\n懐中電灯の届く数メートルの外から、自分の声が返ったら、そこに人がいるか確かめるために近づきたくなるかも。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "それが山彦の怖さなんだ。知らない声なら逃げられても、自分の声なら確かめたくなる。\n呼んだ人を遠くへ誘う伝承が全国で統一されているわけではないが、声が人を足止めする仕組み自体は、十分に怪談的なんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、山彦を反響そのものとする語りもあれば、山にいる何かの返事とする語りもある。\n一つの公式設定のように能力を固定できないところが特徴で、地域ごとに山への畏れが違うから、声の主も一人に定まらない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "同じ山彦でも、地域によって正体が違うなら、図鑑の説明が短いのも分かる気がするよ。\n相手の姿が決まらないのに、聞こえた人だけは確実に返事を聞くから、噂だけが広がりやすかったんだね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "『和漢三才図会』は一七一二年に成立した百科事典で、動物や植物だけでなく、怪異や珍しい出来事も同じ知識の棚に置いている。\n江戸の人にとって自然現象と怪異は、現代の理科室と怪談部屋ほど遠く離れたものではなかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから山彦は、反響という自然現象であり、同時に山の気配を知らせる怪異でもありえた。\nいまなら天気予報と怖い話を別ジャンルに分けるけれど、当時の山では、風や霧や声がひと続きの危険な情報だったんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "一七一二年の本では、怪異も自然の情報として読まれていたんだね。山で変な声がしたら、怖がるだけじゃなく危ない場所だと考える。\nそれなら妖怪の話は、ただ驚かせるためじゃなく、山を軽く見ないための目印にもなったのかな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "研究では、山の怪異が山の神への畏れや、入山の注意と結びつくことが指摘されている。\nただし山彦だけに全国共通の禁止事項があった、と言い切る文献は確認できないから、ここは伝承の広がりとして慎重に見る必要がある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "分からないところを、勝手に恐ろしい設定で埋めないことは大切なんだ。山彦が必ず人を襲う、必ず名前を奪うという原典は見つからない。\nけれど声の主が何者だったかについては、地域資料によって語りが薄く、そこから先は記録が途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。襲う話がはっきりないのに、誰が返したかだけ分からないほうが嫌だよ。\n敵の正体が表示されるゲームなら戦えるけど、山彦は返事を聞いた本人だけが、見えない相手を想像し続けるんだね。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山彦の正体は、反響だけでは終わらない。山を相手として見た人々が、遅れて戻る自分の声に意志を聞いたことが、妖怪として数えた理由なんだ。\n自然の仕組みと恐れの気持ちが重なったとき、音はただの音ではなくなる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "反響には、音が往復する分だけ沈黙が生まれる。谷や岩壁が遠いほど、その間は長くなる。\nたとえば名前を一度呼んだあと、数秒の静けさを挟んで同じ名が返れば、物理を知っていても相手が考えたように感じる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "数秒の沈黙があるから怖いんだ。すぐ返るなら壁だけど、待たされると誰かが聞いて、返す言葉を選んだみたいになる。\n既読が付かないメッセージを見続けるより、山の暗闇で返事を待つほうがずっと落ち着かないよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "しかも返る声は、地形や風で小さくなり、言葉の端が消えることがある。完全なコピーではないから、知らない人の低い声にも聞こえる。\n自分の声に似ているのに違う、その半端な一致が、山彦を単なる録音の再生より不気味にしている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪ウォッチでは、山彦の声返しは親しみやすい個性へ整理されている。これは作品内の表現で、江戸の文献が示す不安とは別の楽しさなんだ。\nファンの間で山の神に近いと読む考察もあるが、公式設定として断定はできない。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームでは会えたら嬉しいのに、元の伝承では会いたくない相手になるんだね。同じ声を返す力でも、町の中か山の中かで全然違う。\n可愛い見た目を知っているからこそ、暗い谷で聞く返事のほうが、あとから頭に残りそうだよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで公式、伝承、ファン考察を分けると分かりやすい。公式はゲーム内のキャラクター、伝承は山の反響や霊の声、考察は両者をつなぐ読み方だ。\nこの三つを混ぜると、出典のない怖い設定まで本当の原典に見えてしまう。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "鳥山石燕の山彦は、見えない現象に姿を与えた江戸の想像力の記録でもある。絵の小さな人影は、山に誰かがいるという不安を、ページの上で固定した。\nそのため山彦は、怪物の目撃談よりも、聞こえた感覚そのものを伝える妖怪として残った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "姿を見た人が少ないからこそ、聞いた人の頭の中でいろんな顔になったのかもしれないね。\n暗い画面で音だけ鳴るホラーゲームみたいに、見えない相手のほうが、自分で一番嫌な姿を作ってしまうんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山で実際に声が返っても、妖怪だと決める必要はない。安全のためには、同行者や現在地を確認し、大声で危険な場所へ進まないことが先だ。\n伝承の怖さと現実の山歩きは別で、面白半分に夜の谷で試す話ではないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承を楽しむコツは、名前だけで全部を決めないことだ。山彦なら、反響という現象、一七七六年の妖怪絵、地域ごとの語りを分けて見る。\n三つを別々に並べると、なぜ一つの声が妖怪へ変わったのか、その順番が見えてくる。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "最初は反響だから簡単だと思ったのに、山をどう見ていたかまで入ると急に深いね。\n自分の声が返るだけで、昔の人は山の内側に何かがいると考えた。その感覚は、夜なら今でも少し分かる気がするよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "好きな妖怪ほど、元ネタが怖い。山彦は牙も爪もなく、こちらが声を出さなければ何も始まらない。\nそれでも一度呼べば、山の向こうから自分の声を使って会話を返す。その静かな受け身の怖さが、二百年以上残った理由かもしれない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あの妖怪の正体は、山の岩に跳ね返る音であり、その音を山の意思と聞いた人々の想像でもあった。\nどちらか片方だけでは山彦にならない。現象に名前を与え、返事だと感じた瞬間に、山はただの景色ではなくなるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ぼく、次に山で声が返ったら、反響だって分かっていても名前は呼びたくないかも。\n返ってきた音が自分の声なら安心できるはずなのに、その声を最初に聞いていたものがいる気がして、後ろを見られなくなるよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、妖怪ウォッチのじんめん犬を入口に、昭和の街角で広がった人面犬の噂が、どう妖怪へ変わったのかを調べる。\n山の中の返事とは違い、次は街灯の下で聞こえる足音と、犬の顔に重ねられた不安を追う予定だ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じんめん犬も、最初から可愛い妖怪だったわけじゃないんだね。山彦のあとに聞くと、いつもの通学路でも声や足音が少し変に聞こえそうだ。\n夜道で後ろから名前を呼ばれても、返事をする前に、誰の声か確かめたくなるよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もし夜の山道で、呼んでいない言葉まで一度だけ返ったように聞こえたなら、無理に確かめないほうがいい。\n反響だと笑える場所まで戻り、暗い谷の奥へ返事を探しに行かないことだ。そこから先は、記録が途切れている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズの調査記録も追ってほしい。\nチャンネル登録者一万人を目指して毎日投稿中だから、次に山から自分の声が返る前に、チャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "山の声が",
+      "返事をする"
+    ],
+    "hook_caption": "返事の正体",
+    "subtitle": "ただの反響ではなかった",
+    "tagline": "山彦が妖怪に数えられた理由"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789377505_8060",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ山彦は妖怪の正体だったのか"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 80,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 2,
+          "text": "あの声を返す妖怪だよね。江戸の画図百鬼夜行にも描かれているの？",
+          "pattern": "声[がをは]",
+          "reason": "「声が」はミュートでは確認できない"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズも毎日投稿中、1万人目標のチャ",
+          "reason": "1行52字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 24,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 3,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 3
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.527,
+      "similar_to": "逆柱はなぜ家鳴りを呼ぶのか正体",
+      "template_issues": [
+        "直近10本中3本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 49,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "なぜ山彦は妖怪の正体だったのか"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 60,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体'](+20)",
+      "好奇心ギャップ['なぜ', '正体'](+12)",
+      "短すぎ(15字 < 18)(-12)"
+    ]
+  },
+  "original_title": "なぜ山彦は妖怪の正体だったのか",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "なぜ山彦は妖怪の正体だったのか"
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "山彦はなぜ妖怪に数えられた？江戸の伝承に残る不気味な声"
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}

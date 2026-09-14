@@ -1,5 +1,60 @@
 [
   {
+    "file": "scp-lab_20260914_091815_scenario.md",
+    "title": "SCP-1440 追跡班が7日目に報告をやめた謎",
+    "video_title": "【ゆっくり解説】7日目の無線報告が消えた「SCP-1440 追跡班が7日目に報告をやめた謎」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1440 なぜ追跡班は7日目に報告をやめたのか",
+      "angle": "到達点のない徘徊。7日という区切りで報告が途切れた事実だけを提示する"
+    },
+    "generated_at": "2026-09-14T09:18:15.952680Z",
+    "prompt_hash": "49efb1874ec2",
+    "generated_by": "gpt",
+    "script_source": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260914_071730_scenario.md",
+    "title": "SCP-3125「認識の終点」全員消失の真相",
+    "video_title": "【ゆっくり解説】読んだ者だけ記録が消える「SCP-3125「認識の終点」全員消失の真相」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-3125「認識の終点」実は接触者全員が消えた真相",
+      "angle": "知識そのものが侵入経路になる情報災害として、認識から記録抹消までの被害経過を検証する",
+      "parent_title": null,
+      "theme_gate": {
+        "replaced": "なぜSCP-087の階段は最後まで降りられないのか",
+        "reason": "既存『階段を降りると『あの声』が聞こえる...SCP-』に類似(0.91)"
+      }
+    },
+    "generated_at": "2026-09-14T07:17:30.304937Z",
+    "prompt_hash": "a4aecf8649d6",
+    "generated_by": "gpt",
+    "script_source": "gpt",
+    "selected_by": "only_one"
+  },
+  {
+    "file": "scp-lab_20260914_031733_scenario.md",
+    "title": "SCP-████「閲覧禁止文書」読了23名の実態",
+    "video_title": "【ゆっくり解説】読んだ時点で隔離対象「SCP-████「閲覧禁止文書」読了23名の実態」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-████「閲覧禁止文書」読了者23名の末路と感染の正体",
+      "angle": "情報を読んだ時点で対象になる認識災害として、閲覧記録と隔離手順から視聴者が巻き込まれる構造を描く",
+      "parent_title": null,
+      "theme_gate": {
+        "replaced": "なぜSCP-2521は名前を奪う必要があるのか",
+        "reason": "既存『一口SCP：名前を言うな文字にするな#名前を言っ』に類似(0.91)"
+      }
+    },
+    "generated_at": "2026-09-14T03:17:33.136126Z",
+    "prompt_hash": "319e0de5202b",
+    "generated_by": "gpt",
+    "script_source": "gpt",
+    "selected_by": "only_one"
+  },
+  {
     "file": "scp-lab_20260913_231705_scenario.md",
     "title": "なぜ堀大輔は72時間眠らないのか？睡眠不足の恐怖",
     "video_title": "【ゆっくり解説】眠らない記録消えた職員「なぜ堀大輔は72時間眠らないのか？睡眠不足の恐怖」",

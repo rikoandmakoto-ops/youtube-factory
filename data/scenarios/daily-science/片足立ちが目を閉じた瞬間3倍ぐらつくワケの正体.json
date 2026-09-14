@@ -1,0 +1,528 @@
+{
+  "title": "片足立ちが目を閉じた瞬間、3倍ぐらつくワケの正体",
+  "theme": {
+    "title": "なぜ片足立ちは目を閉じた瞬間に3倍ぐらつくのか",
+    "angle": "視覚が担う姿勢制御の割合を倍率で示す"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？片足立ち、目を閉じると3倍ほど揺れやすいんです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！日本の片足立ちテストでも目を開けて測るの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は目が、体が傾く速さを脳へ送り、倒れない調整を助けています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホの地図が消えたまま歩く感じなんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも足裏だけでは遅れます。だから目を閉じた瞬間、揺れが大きくなるんです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "片足立ちでは壁を見て試してみて。体の謎シリーズもあるので、高評価とチャンネル登録で1万人目標の毎日投稿を応援よろしくね！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？片足立ちで目を閉じると、開けたままより約3倍ぐらつきやすくなります。昨日、靴下を履くため片足になったあなたも、景色が消えた一瞬に体の調整が忙しくなっていたはずです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、目を閉じるだけで約3倍も変わるの？床も足も同じなのに、急に難しくなる感覚は確かにあるよ。洗面所でズボンを履くとき、数秒で壁に手を伸ばしたことがある！",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "目は景色を見るためだけでなく、体がどちらへ傾いたかを脳へ知らせる手がかりでもあります。壁の縦線や棚の端が少し動いて見えるだけで、あなたの体は倒れる前から戻る準備を始めています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！毎日見ている壁が、体のための定規みたいに働いていたんだね。じゃあ目を閉じると、足の裏や頭の感覚だけでは、どうして足りなくなるの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "片足立ちは、両足で立つときより支えられる面積が大幅に小さくなります。片方の足裏だけに体重を収め続けるので、数ミリ単位の重心のずれでも、足首や腰はすぐに修正を求められるんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、両足なら左右に少し揺れても、もう一方の足が助けてくれるよね。片足だと小さなずれがそのまま大きくなるから、数秒でも集中するんだな。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "足が細かく動くのは失敗ではなく、倒れそうな方向を調べて戻す調整です。たとえるなら、重い買い物袋を片手に持つとき、腕が数センチずつ位置を直して落とさないようにするのと同じなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！電車でつり革を持たずに立つと、足が勝手に小さく動くけれど、あれも体が何度も答え合わせしていた途中なんだね。目を閉じたら、その答え合わせが難しくなるのか。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "姿勢を保つとき、体は見えている景色、足裏や筋肉の引っ張られ方、頭が感じる加速の変化を使います。三つの手がかりを照らし合わせて、重心を足裏の中央へ戻そうとしているんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "3つも手がかりがあるなら、目を閉じても残り2つで立てそうに思えるな。足裏は床に触れているし、頭も傾けば気づくはずなのに、なぜ揺れが2倍から3倍も増えるんだろう。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "足裏は床の硬さや圧の変化を伝えますが、体全体がゆっくり傾く向きはすぐに知らせにくいんです。厚いマットや柔らかい布団の上で片足になると、足裏からの答えがさらにぼやけることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！足の裏は万能なセンサーではなくて、柔らかい床だと情報まであいまいになるんだね。ホテルの厚いカーペットで靴下を履きにくいのも、床のせいがあるかもしれない。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "目を開けていると、壁の縦線や窓枠が視界の中でわずかにずれて見えます。その変化を脳が受け取るので、倒れそうになってからではなく、倒れる前の小さな傾きに気づきやすくなるんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、部屋の柱やドア枠は自分の揺れを映す物差しなんだ。窓の外にある遠い建物を見ながらなら、片足立ちが少し楽に感じることがあるのも、この仕組みで説明できそうだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。椅子に座ったまま目を閉じ、上半身を1センチほど左右へゆっくり揺らしてみると、目を開けているときより傾きの大きさがつかみにくく感じる人が多いです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、座っているだけでも差が出るんだ！倒れない姿勢なら目は休んでいてもよさそうなのに、体はずっと景色を基準にしていたんだね。片足立ちは、その差が大きく見える実験みたいだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。目を閉じたときの揺れが誰でも正確に3倍になるわけではありません。年齢、床の硬さ、裸足か靴か、前夜の睡眠時間によって、同じ人でも結果が変わるからです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "3倍は目安で、毎回同じ成績になるわけじゃないんだね。それでも病院や運動の場面で片足立ちを見ることがあるのは、目と足と頭が協力できているかを簡単に確かめられるからなの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "日本の体力・運動能力調査では、開眼片足立ちがバランスを見る種目の一つとして使われてきました。目を開けて片足で立ち、何秒安定していられるかを測ることで、日常の姿勢づくりを数字で振り返れます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "秒数で比べると、自分では気づきにくい疲れも見えそうだね。昨日は30秒立てたのに今日は10秒なら、足が急に弱くなったというより、体が情報をまとめにくい日なのかもしれない。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "睡眠不足や飲酒のあとには、姿勢を戻す反応が遅れやすいことが知られています。眠い朝、歯磨き中に片足で立つとふらつくのは、目が見えていても足首や腰が動き出すまでの時間が延びるためです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！眠いと頭がぼんやりするだけでなく、数ミリの傾きを戻す反応まで遅れるんだ。朝に靴下を履くときだけ壁へ手をつきたくなるのも、気のせいではなさそうだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "姿勢研究では、床に置いた測定板で足裏の圧の中心がどれだけ動くかを記録します。目を閉じるとその点が前後左右へ広がり、開眼時より揺れの面積が約2倍から3倍になる例が報告されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "床の上の一点が動く範囲で見えるなら、自分の感覚より正確だね。本人は静かに立っているつもりでも、足裏では何十回も小さく位置を直していて、目を閉じるとその修正が追いつかなくなるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "暗い部屋では、目を開けていても壁や床の輪郭が見えにくいため、体は目からの助けを減らします。夜中に起きて廊下を歩くとき、平らな床なのに足元が頼りなく感じるのも、同じ理由によるものです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、夜にトイレへ行くと壁に手を添えたくなる！明るい昼なら何も考えず歩けるのに、暗いと一歩ごとに慎重になるのは、景色という案内が減っていたからなんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "壁に指先で軽く触れるだけでも、体がどちらへ動いたかの情報は増えます。強く体重を預けなくても、指先の圧が変わるだけで姿勢を戻す方向が分かりやすくなり、夜間の移動にも役立ちます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！壁に手をつくのは支えを借りるだけではなく、体の位置を教える小さな案内板に触れているようなものなんだ。だから指先だけでも、意外と安心して歩けるんだね。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、片足立ちでは近くの一点より、2メートルほど先の壁を見るほうが安定しやすいことです。遠い壁の時計や窓の向こうの建物は、体が少し揺れても視界の中で急には動きません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、足元を見るより遠くを見るほうがいいの？安全のためには足元を見たくなるけれど、片足立ちでは遠い目印のほうが、自分の揺れを落ち着いて受け取れる基準になるんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "近い物は、体が少し動くだけで視界の中を大きく移動します。スマホを顔の20センチ前で見ながら歩くと景色が揺れて感じるように、近すぎる目印は小さな揺れを必要以上に大きく見せることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、車の窓から近い電柱は速く流れ、遠い山はゆっくり動いて見えるのと同じか。片足立ちでは、ゆっくりした遠い景色のほうが、体の修正には使いやすい目盛りになるんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "体が景色、足裏、頭の感覚を混ぜて姿勢を決める働きには名前が付いていて、感覚統合と言います。つまり三つの案内を照らし合わせ、今どちらへ重心を戻せばよいかを脳が選んでいる作業なんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！目を閉じるのは、案内役が三人から二人になることなんだね。残った二人が頑張っても、片足という狭い足場では、少し遅れただけで揺れが大きくなるわけだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "頭の動きの変化を感じる場所は耳の奥にあり、エレベーターが動き出すとふわっと分かる感覚にも関わっています。ただ、ゆっくりした傾きでは変化が小さいため、目からの情報ほどはっきり判断できないことがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ゆっくり傾くと気づきにくいなら、目を閉じた片足立ちでじわじわ壁へ寄ってしまう理由が分かるな。急な動きには反応できても、静かな揺れには景色という基準が必要になるんだね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "意外なのは、目を閉じた片足立ちが苦手でも、必ずしも運動不足とは限らないことです。明るさ、床材、靴下の滑りやすさ、足首の疲れ、集中の度合いだけでも、10秒の結果は大きく変わることがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、記録が悪い日があっても、自分を責めなくていいんだね。仕事や勉強のあとに短くても、体が今日は細かな情報をまとめにくいよと教えてくれている、と受け取るほうが自然かもしれない。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "片足立ちと転びやすさの関係は、多くの研究で長く調べられてきました。ただし何秒なら安心と一律に言うことはできず、年齢、持病、測る場所、手を広げるかどうかで基準が変わる点には注意が必要です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ここは科学でもまだ結論が出ていない部分があるんだね。何秒立てたかを人と競うより、同じ場所、同じ時間、同じ靴下で比べて、自分の変化を見るほうが体には役立ちそうだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "安全に試すなら、まず壁か丈夫な机のすぐ横に立ち、滑りにくい床で片足を少し上げます。視線は約2メートル先の壁に置き、最初は10秒だけ数え、ぐらついたら我慢せず両足を床へ戻してください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "10秒なら朝の身支度でも試せそうだけれど、目を閉じる練習は一人で無理をしないほうがよさそうだね。壁へ指先を触れられる位置なら、景色が消えてもすぐに別の手がかりを増やせるよね。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。目を閉じる場合は壁や机に届く位置で行い、めまいがある日、飲酒後、発熱中、足を痛めている日は試さないでください。片足立ちは体を試す競技ではなく、体の情報の使い方を知る確認です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！長く立つ根性より、足裏や目の情報がどう変わるかを感じるほうが大事なんだね。10秒ごとの小さな違いなら、今日の体調にも気づきやすくなりそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "慣れてきたら、同じ10秒で視線だけを足元から遠い壁へ変えて比べてみてください。遠い一点を見たほうが安定するなら、あなたの目が景色を使って姿勢の基準を作っていることを、自分の体で確かめられます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、見る場所だけで差が分かるかもしれないの？鏡の自分を見るより、壁の時計や窓の外を見るほうが落ち着くなら、靴下を履く数秒にも今日から使える工夫になりそうだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "目を閉じた瞬間に片足立ちがぐらつくのは、体が弱くなったからではありません。姿勢を戻すための大きな手がかりが一つ減り、残る情報だけで数ミリの重心を守ろうとするから、揺れが目立つんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、毎日見ている壁や柱が、立っている自分を助けていたんだね。何気ない景色が体の中では案内役だったと思うと、洗面所や駅のホームの見え方まで少し変わりそう。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、暗い部屋でも数分たつと見えてくるのはなぜかを取り上げます。明るい場所から暗い場所へ移った直後に見えない理由にも、今日の片足立ちと同じく、体が手がかりを選ぶ工夫が関わっています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！夜中に起きたとき、すぐ電気をつけたくなる理由も気になるな。片足立ちで景色が大事だったなら、暗さに慣れる目の変化も、きっと毎晩の体験につながっているね。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜、靴下を履くときは、壁の少し遠い一点を見て10秒だけ安全に片足で立ってみてください。目を閉じた場合との差を感じれば、体が毎秒どれほど細かく姿勢を調整しているかに気づけるはずです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "その違いを知ったら、ふらついた自分を責めずに、目からの案内が減っただけだと思えそうだね。体の謎シリーズなら、昨日まで気にしなかった小さな違和感も、ちゃんと意味のある発見になりそう！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白かったら高評価を押して、チャンネル登録もよろしくね。身近な不思議を毎日1本ずつ一緒にほどいているので、体の謎シリーズの次の話も見逃さず、これからもあなたの体で確かめてほしいです。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "目を閉じたら",
+      "3倍ぐらつく"
+    ],
+    "hook_caption": "3倍揺れる",
+    "subtitle": "片足立ちで消える体の手がかり",
+    "tagline": "目は景色を見るだけではありません"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789370268_8060",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 150.4% 優位",
+      "leader": "claude",
+      "margin": 1.5038
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ目を閉じると片足立ちが3倍揺れるのか？視覚の正体"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "片足立ちでは壁を見て試してみて。体の謎シリーズもあるので、高評価とチャンネル登録",
+          "reason": "1行60字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 20,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 2,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.526,
+      "similar_to": "あなたが大雨で不安になる3hPaの正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ目を閉じると片足立ちが3倍揺れるのか？視覚の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "original_title": "なぜ目を閉じると片足立ちが3倍揺れるのか？視覚の正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ目を閉じると片足立ちが3倍揺れるのか？視覚の正体"
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}

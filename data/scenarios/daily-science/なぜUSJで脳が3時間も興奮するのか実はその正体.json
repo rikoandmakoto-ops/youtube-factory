@@ -1,0 +1,538 @@
+{
+  "title": "なぜUSJで脳が3時間も興奮するのか？実はその正体",
+  "theme": {
+    "title": "USJで感じる「なぜ？」を科学で解明！",
+    "angle": "テーマパークの興奮が脳に与える影響とは？"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "今すぐUSJの帰り道を思い出してみてください。なぜ脳がまだ跳ねるのでしょう？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！閉園後も3時間くらい頭の中がにぎやかだったよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "脳は予想外の音や景色を受けるたび。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえるなら、スマホの通知が1日中鳴るように、頭の切替が続く感じです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "しかも楽しいほど記憶まで残るから。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "帰宅後は明かりを落として余韻をゆっくり休ませてみてください。感覚のふしぎシリーズも見て、高評価とチャンネル登録で1万人目標の毎日投稿を応援よろしくね！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "今すぐUSJの帰り道を思い出してみてください。閉園から3時間たっても、音楽や乗り物の場面が頭に残っていたことはありませんか。\nその余韻は、あなたの脳がまだ一日の情報を並べ替えている合図かもしれません。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！家に着いて夕食を食べているのに、ハリウッド・ドリームで体が浮いた感じが何回も戻ってきたよ。\n楽しかったから思い出すだけだと思ってたけど、頭の中では何が続いているの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "USJでは数分ごとに音、光、人の流れ、におい、待ち時間の変化が入ってきます。\n普段の通学路よりも、脳が見逃さないよう周囲を確かめる回数が増えやすく、帰宅後まで気分が動きやすいんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、入口から写真を撮って、地図を見て、ショーの時刻を確認してで、目も頭もずっと忙しいよね。\n遊んでいるだけなのに、夜になると足だけでなく頭まで重く感じるのは不思議だな。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日は、楽しい気分と疲れが同時に来る理由を、あなたがパークで実際にする行動からほどいていきます。\n答えを急がず、入場して最初に目と耳が受け取るものから、一緒にたどってみましょう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "最初の5分って、まだ乗り物に乗っていないのにテンションが上がるよね。\nゲートをくぐっただけで体が軽くなる感じまであるけど、あれにも脳が反応する理由がちゃんとあるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "あります。脳は見慣れた景色より、少し先が読めない景色に出会うと、自然に注意を向けます。\nあなたがアーチを抜けた直後に首を動かして周りを見るのは、意識していなくても起きる準備なんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ただ写真を撮る場所を探しているだけじゃなくて、脳が新しい場所を素早く確かめているんだね。\nじゃあ大きな看板や派手な建物が多いほど、頭の中はずっと動き続けるの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう考えると分かりやすいです。色や動き、音が変わるたびに、脳は次に何が来るかを小さく予想し直します。\nたとえるなら、スマホの通知を確認するたび画面へ意識が向く、その切替が周囲全体で続くようなものです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "通知が1件ではなく、目の前の全部から届く感じか！それなら待ち列でも飾りや音を見ているだけで飽きにくいのも分かるな。\nでも、楽しいのに疲れるなら、脳はずっと無理をしているの？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "無理というより、脳が大事だと判断した情報へ優先して力を配っている状態です。\n友達と笑った場面や、急に音が大きくなった瞬間は、ただ通り過ぎるより記憶に残りやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ、同じパークでも一人で静かに歩いた日より、友達と声を上げた日のほうが帰宅後まで残りやすいのかな。\n写真を見返す前から細かい会話まで思い出せることがあるのは、そのせいかもしれないね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで面白いのが、最も大きな刺激だけが脳を動かすわけではないことです。\n次のアトラクションを選ぶ、待ち時間を読む、集合時刻を気にするという小さな判断も、1日で何十回も重なります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、乗り物の落ちる瞬間だけじゃないんだ！地図を見て、飲み物を買って、トイレの場所を探すだけでも、頭は次々に選んでいたのか。\nだから夕方になると、何も決めたくなくなることがあるのかな？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "その感覚は自然です。選ぶことが続くと、脳は一つ一つを比べるために注意を使います。\nメニューの前で急に決められなくなるのは、食べたい物がないからではなく、すでに多くの選択をしてきた影響もありえます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "実はこれ、今あなたの体でも起きています、って言われると納得だな。動画を見ながらでも、次に何をするか少し考えているもんね。\nパークではその回数がもっと増えるから、帰りの電車で急にぼんやりするんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。脳が情報をたくさん受け取るだけなら、楽しい記憶までこんなにはっきり残る説明が足りません。\nなぜ待ち時間まで後から笑い話になるのか、その鍵は予想と結果の差にあります。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "待ち時間まで思い出になるの、確かにある！列が長くて大変だったのに、帰ってからは友達と話したことまで楽しかったって感じるよ。\n予想と違う出来事が、思い出の残り方を変えるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "脳は毎秒、次に起きそうなことをざっくり見積もっています。\nアトラクションで急に方向が変わったり、音が途切れたりすると、その見積もりが外れるため、脳はそこを見逃さないよう注意を強めます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！急な落下が楽しいのは、体が浮くからだけじゃなく、頭の予想が追いつかないことも関係するんだね。\n予告映像を見ても本番で盛り上がるのは、全部は読めないように作られているからかな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。見通しがゼロだと落ち着きませんが、少しだけ予想できて、少しだけ外れると、脳は次を知りたくなります。\nたとえるなら、好きな曲でサビを待ちながら、直前に一拍だけ間が空くと耳を向けてしまう感じです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "分かる！知っている曲なのに、間があるだけで次の音を待ってしまうよね。\nパークの演出も、見えている入口の先を少し隠したり、音を先に聞かせたりして、脳に続きを探させているのか。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、報酬が来る前の期待そのものが、行動を続ける力に関わると考えられています。\n2001年に発表された脳画像研究でも、予想と違う報酬の場面で、学びに関係する場所の反応が確かめられました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、プレゼントをもらう瞬間だけでなく、来るかもと待つ時間にも脳は反応しているんだ！\n整理券の時間が近づくほどそわそわするのも、ただ時計を気にしているだけではなかったんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここまでの、予想が少し外れると注意が集まる仕組みに名前が付いていて、報酬予測誤差と言います。\n難しく聞こえますが、要するに「思ったより良かった」を脳が大事な出来事として覚えやすくする働きです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "名前より中身を聞くと、急に身近だね。待ち列の先に見えた景色が予想より広かったり、食べ物が思ったよりおいしかったりするだけでも、記憶が強くなりそう。\n小さな予定外が一日の印象を変えるんだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも、興奮は乗り物の座席にいる時だけでは終わりません。写真を見返したり、友達と「あの場面すごかった」と話したりすると、記憶を取り出すたびに体験がもう一度整理されます。\n帰宅後の会話も、楽しかった一日を頭に残す時間なんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "だから帰りの電車で動画を見せ合うと、疲れているのにまた元気になるのか！\n写真1枚を見ただけで、その前後の会話やにおいまで思い出すことがあるけど、脳は出来事を一緒にしまっているんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "記憶は録画のように完全保存されるわけではなく、思い出すたびに少し組み立て直されます。\nそのため同じ出来事でも、友達と笑いながら話した部分が、後から特に明るく残ることがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、雨で靴がぬれた日も、その場では困ったのに、後からはなぜか笑える思い出になっているよ。\n楽しい人と一緒だったことまで、記憶の色を変えてくれるのかな？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "人と同じ方向を見たり、同時に声を上げたりする時間は、出来事に意味をつけやすくします。\nUSJのショーで周囲と拍手がそろう場面は、内容だけでなく「みんなで体験した」という感覚が重なるため印象に残りやすいんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "一人で動画を見るより、隣で同じ場面に笑っている人がいると覚えている感じ、あるあるだね。\nパークが写真を撮りたくなる場所だらけなのも、景色だけではなく、一緒にいた人との時間を残したいからか。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここは科学でもまだ結論が出ていない部分があります。どの演出が誰に最も強く残るかは、年齢、その日の体調、好きな作品、同行者によって大きく変わります。\nだから同じ1日でも、真が覚えている場面と理子が覚えている場面は違って当然です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！人気アトラクションだから全員が同じように興奮するのではなく、自分の好きや体調で残り方が変わるんだ。\n朝から眠い日に行ったら、楽しさの感じ方も少し違ってきそうだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうなんです。睡眠が足りない日は、刺激を受けたあとに疲れを強く感じる人もいます。\n早起きして開園から歩き続ける予定なら、前夜に眠ることは、体力だけでなく一日を気持ちよく受け取る準備にもなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "朝5時に起きて始発で行く日は、帰りに急に無口になるのも自然なんだね。\n元気がなくなったから楽しくなかった、と決めつけずに、脳と体が今日の情報を片づけている時間だと思えば少し安心できそう。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "テーマパークの設計には、歩く、待つ、見る、休むのリズムも関係しています。1955年開園のディズニーランド以来、入口から奥へ進むほど景色が変わる作りは、多くのパークで体験の流れを考える参考にされてきました。\nUSJでも区画ごとの空気の違いが、歩くたびに気分を切り替えます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "建物が変わるだけで、同じ大阪にいるのを少し忘れる感じがあるよね。\n数十メートル歩いただけなのに、次の場所へ来たと思えるのは、脳が景色の境目をちゃんと受け取っているからなんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして、においも見落とせません。ポップコーンやバターの香りを感じると、以前食べた時の場面が急に浮かぶことがあります。\n鼻から入る情報は、気分や記憶と結びつきやすい経路を通るため、写真より先に一日の空気を思い出す人もいます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、駅で似た甘いにおいを嗅いだだけで、パークの夜景が浮かんだことがある！\n音楽や写真だけが思い出のスイッチではなく、鼻も一日の記憶を連れてきてくれるんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえるなら、においは昔の写真箱に付いた小さな鍵のようなものです。箱そのものは見えなくても、鍵が合うと中の場面が一気に開きます。\nパークで買った同じお菓子を家で食べると、気分まで少し戻るのはそのためです。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "楽しい一日が終わった後に少しさみしくなるのも、その鍵が家でまた回るからかもしれないね。\nでも、余韻があるから次に行く予定を立てる時までわくわくできるし、記憶って面白いな。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "帰宅後に頭が冴えて眠りにくい時は、すぐに明るい画面で写真を何百枚も見続けない方法があります。\n寝る1時間前は部屋の照明を少し落とし、今日よかった場面を3つだけ話して、脳に終わりの合図を渡してみてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "写真を全部整理しなくていいならできそう！3つだけ選ぶなら、乗ったもの、食べたもの、笑った場面で十分だね。\n楽しかった記憶を消すのではなく、明日に持ち越さないよう静かにしまう感じなんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "翌日に疲れを残しにくくしたいなら、水分と座る時間も予定に入れてください。暑い日には汗で水分が減ると、疲れやすさや頭の重さにつながることがあります。\n飲み物を買う時を「次の予定を決めない5分」にすると、頭にも小さな休憩ができます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "休憩って、足を休めるためだけだと思ってたけど、次の選択を止める時間にもなるんだね。\nベンチで5分座って、次は何に乗るかを全員で一つだけ決めれば、頭の中が少し整理されそう。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "音が大きい場所で耳が疲れたと感じたら、静かな通路や屋外で数分離れるのも役立ちます。\n刺激を完全になくす必要はありませんが、耳と目に入る量を少し減らすだけで、次のショーを新鮮に受け取りやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ずっと全力で回るより、10分だけ景色を見ながら歩くほうが、午後も楽しめそうだね。\n休むと損した気がしていたけど、脳が次の驚きを受け取る席を空ける時間だと思えば、むしろ大事だ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日のポイントは、USJで気分が高まるのは、派手な乗り物だけが理由ではないということです。\n新しい景色、少し外れる予想、仲間との反応、においまでが重なり、あなたの脳は一日を特別な出来事としてまとめています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！帰り道にぼんやりするのは、楽しかった証拠が頭の中に散らばっていて、まだ片づけ中だからなんだね。\n次に行く時は、疲れた自分にも少し優しくできそう。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜は写真を3枚だけ見返して、「予想よりよかった場面」を一つ思い出してみてください。\nすると次回のパークでも、自分がどんな瞬間に心が動くのか、少し見つけやすくなるはずです。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "僕は最初のゲートをくぐった瞬間を選ぶかな。まだ何も始まっていないのに、次の景色を待っていた自分がいたんだって、今日の話を聞いた後なら分かるよ。\nみんなも帰り道の余韻を一つ探してみてね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる直前に体が急に動くのはなぜなのかを、寝る前のあなたの体で起きる変化から見ていきます。\n布団に入った時の小さな違和感にも、脳が休む途中の面白い仕組みが隠れています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それも昨日あった！寝落ちしそうな時に足が動いて、起きてしまったことがあるよ。\nテーマパークの興奮と同じで、体が切り替わる途中には、まだ知らないことがたくさんありそうだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "感覚のふしぎシリーズでは、あなたが毎日感じる「なぜ」を、今日から試せる形で一緒にほどいています。\n面白かったら高評価も押して、身近な不思議を毎日1本ずつ見つけるためにチャンネル登録よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "帰宅後も",
+      "脳が興奮"
+    ],
+    "hook_caption": "3時間興奮",
+    "subtitle": "テーマパークで頭の中に起きること",
+    "tagline": "楽しいのに疲れる理由"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789363058_1143",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 150.4% 優位",
+      "leader": "claude",
+      "margin": 1.5038
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜUSJで脳が3時間も興奮するのか？実はその正体"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "帰宅後は明かりを落として余韻をゆっくり休ませてみてください。感覚のふしぎシリーズ",
+          "reason": "1行75字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.471,
+      "similar_to": "歩き方を意識した3秒で迷う正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜUSJで脳が3時間も興奮するのか？実はその正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', 'なぜ', '正体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}

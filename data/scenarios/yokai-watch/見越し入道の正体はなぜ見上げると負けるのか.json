@@ -1,0 +1,535 @@
+{
+  "title": "見越し入道の正体はなぜ見上げると負けるのか",
+  "theme": {
+    "title": "見越し入道の正体が怖すぎる",
+    "angle": "見上げると負ける言い伝え。負けた者がどうなったかまで降ろす。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸時代の妖怪画集に、見越し入道の姿がそのまま描かれているんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "背が伸びる妖怪は好きだよ。でも鳥山石燕の絵は、夜道に立っている。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、見上げた人の前で数メートルまで伸びる怪異なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "電柱ほどの顔が近づく夜道なら、下を向いて歩くしかないよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "負けるとは、見越されて動けなくなること。目を合わせないほうがいい。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "高評価を置いて、元ネタが怖い妖怪シリーズも見てね。毎日投稿中、チャンネル登録者一万人目標で応援よろしくね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？江戸後期、安永年間に刊行された鳥山石燕の『画図百鬼夜行』には、見越し入道が一体の怪異として描かれているんだ。あなたも夜道で遠い影が急に高く見えたことはない？",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "見越し入道って、見上げるほど背が伸びる妖怪だよね。それ好きなやつ！ゲームなら大きくても仲間にしたくなるのに、江戸の絵では人通りのない道に立っていて、最初から空気が違うよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、元になった伝承の見越し入道は、背比べを楽しむ巨人ではないんだ。旅人の進行を止め、こちらが顔を上げる一瞬を待つ、夜の道の怪談として残っている。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。見上げたら大きくなるだけなら、横をすり抜けて逃げればよさそうなのに、どうして昔の人はわざわざ「負ける」って言ったの？勝負のルールが見えないのが、ゲームのボスより怖いよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで声を落とすね。元の伝承では、見上げる行為そのものが負けの条件なんだ。負けた人が必ず消えるとは書かれないけれど、腰を抜かす、病む、道を失うという後日談が土地ごとに残っている。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "この動画では、十八世紀の妖怪画と高知県、香川県などの口伝を分けて追うよ。絵に描かれた姿、伝承の結末、そしてファンの考察は同じではない。その区別をした上で、見越し入道の正体に近づく。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "見越し入道の「見越し」は、前方にいるものがこちらの頭上を越して見える感覚に結びつく言葉なんだ。夜の峠で遠い木や岩を見た時、近づくほど巨大にせり上がる。そこに名前が与えられた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "学校帰りの午後六時ごろ、遠くの人影が街灯の下で急に大きく見えることがあるよね。でもあれは近づけば普通の人だ。見越し入道は、近づいても終わらず、見る側の首だけを上へ向けさせるの？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承では、最初は人の背丈ほどだった入道が、見上げるほど木の梢や屋根より高くなると語られる。ただし三メートルや十メートルのような正確な数字は、古い資料にはほとんど固定されていないんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから高さを数字で断定するのは、後の創作や図鑑の表現に近い。原典が本当に冷たいのは、何メートルかではなく、旅人が上を見るほど相手が優位になる点だ。見上げる恐怖そのものが怪異を育てる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "負けたら何が起きるの？ゲームなら経験値を失うとか、バトルが終わるとか分かるけど、夜道で一回見上げただけなら、次の日に何事もなく学校へ行ける人もいたんじゃないの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そこが見越し入道の嫌なところなんだ。伝承は全員の結末をそろえていない。ある人はその場で動けず、ある人は家へ帰ってから寝込む。何を失ったのかを説明しきらないから、聞いた側が空白を埋めてしまう。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、ここからが本題なんだ。見上げなければ助かる、という攻略法だけでは終わらない。高知県に残る話では、見越し入道に会った人の体が止まり、普段の帰り道さえ分からなくなるように語られている。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "民俗資料でいう口伝は、村や家の中で繰り返し語られた話のことだよ。書店で一冊だけ買える攻略本とは違い、何十年も語り手が変わる。その途中で怖さは形を変えても、夜道を止める役目は残り続ける。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "つまり全国に一人の見越し入道が歩いていたわけじゃなくて、似た怖さが各地で同じ名前になったかもしれないんだね。じゃあ高知県の話と香川県の話では、負けた人の結末も同じじゃない？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "同じではないんだ。高知県周辺では、巨大な入道に出会って腰を抜かす話が知られ、香川県側には低くかがむと消えるという型が残る。怪異の姿は似ていても、土地が必要とした逃げ方まで少しずつ違っている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで、しゃがめば消えるという話を現代の夜道で試してはいけない。車、自転車、段差のある道では危険だからだ。これは安全マニュアルではなく、昔の人が恐怖に飲まれず帰るため、言葉の中に作った手順なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "でも、しゃがむって変な対抗策だね。巨大な相手を倒すなら上を見るべきなのに、自分を低くする。ゲームなら防御というより、相手の視界から外れるステルスみたいな行動に見えてくるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その感覚は近いんだ。見越し入道は、相手より高く見えることで人を圧倒する。ならば人間は視線を切り、自分の姿勢を低くして、勝負の土台を外す。怪異を倒すのではなく、怪異の条件を崩すやり方なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "「見越す」には、前方から越して見える以外に、先を読んで相手の上に立つような響きもある。見越し入道は体が大きいだけでなく、怖がる人の行動を先回りする名前なんだ。だから立ち止まるほど相手が近い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ、見越し入道は最初から顔を見せなくてもいいのか。こっちが「なんだろう」と上を見る、その一秒を待っているだけで勝てる。暗い教室で後ろを振り向きたくなる時みたいで、すごく嫌だよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "鳥山石燕の『画図百鬼夜行』は安永五年ごろから刊行が始まった妖怪画集として知られる。そこに描かれた見越し入道は僧形、つまり坊主頭の巨人に見える。ただし絵は、一人の旅人が見た現場写真ではないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪画は、各地の話や古い言葉を一枚の姿にまとめる表現なんだ。だから江戸の絵を見て「見越し入道は必ずこの顔」と決めることはできない。絵の入道と、峠で人を止めた影は、別の層にいると考えた方がいい。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "図鑑に顔が載っていると、それが正解だと思っちゃうよね。でも実際は、村の人が見たものを聞いた人が語って、最後に絵師が形にしたかもしれない。伝言ゲームなのに、怖さだけは消えなかったんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そうなんだ。伝承で強いのは、顔の細部より「道の前にいる」「見上げるほど大きい」「帰り方がおかしくなる」という機能なんだ。スマホの画面を閉じても通知だけが残るように、遭遇後の不安が人の中に残る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "柳田國男らが集めた民話や怪談の資料には、夜道で人を惑わせる怪異が多く現れる。見越し入道だけを一つの固定種として扱うより、旅人を立ち止まらせる怪異の仲間として見ると、話の役目が見えてくるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "夜の道が怖いから妖怪を作った、だけではないんだね。昔の峠は今みたいにコンビニも街灯もなくて、一本道を外れたら家まで何キロも戻れない。そこで止まること自体が、もう危険だったのか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その通りなんだ。江戸時代の山道では、日没後に道を誤ることが生活に直結する危険だった。見越し入道は、怖いから立ち止まる人間をさらに止める。怪異の大きさは、夜道で迷う不安の大きさとも重なっている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そして、負けた者がどうなったかという問いに戻ろう。資料には気絶、発熱、病気、道迷いといった表現が散らばる。でも名前、年齢、正確な日付がそろう事例は少なく、病状を医学的に決めることはできないんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから「見越し入道が必ず人を傷つけた」とは断定しない。伝承の中では、出会った後に普段の暮らしへ戻れなくなることが恐れられた。家へ着いても眠れない、翌日も峠の方を見てしまう。その余韻が負けなのかもしれない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。巨大な顔を見た瞬間より、家に帰ってからも終わらない方が怖いよ。家族は普通にご飯を食べているのに、自分だけ窓の外の暗がりを気にしている感じでしょ？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "怪談では、誰にも信じてもらえないことが二つ目の怪異になる。本人は見上げて負けたと知っているのに、周りには暗い道で怖がっただけに見える。そのずれがあるから、見越し入道は家の中までついてくるように感じられる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで注意したいのは、原典に人食いの描写を足さないことだよ。見越し入道には地域差があり、残酷な結末を一つにまとめるのは不正確なんだ。分からない部分を血なまぐさく埋めるより、記録の空白をそのまま見る方が怖い。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "好きな妖怪ほど、元ネタが怖い。見越し入道は、何かを食べるからではなく、人に自分から恐怖を大きくさせる。見上げる、確かめる、もう一度見る。その三つの動作が、相手を巨大にしてしまう構造なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "暗い部屋でカーテンのすき間を見ちゃう感じに近いかも。何もいないと確認したいのに、見た瞬間に何かいたらどうしようって思う。見越し入道は、その確認したい気持ちを利用するんだね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "現代の研究では、暗い場所では距離や大きさを正確につかみにくいことが知られている。月明かり、霧、木の影が重なる峠なら、遠いものが巨大に見えることはあり得る。これは伝承を否定する答えではなく、背景の一つなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "見間違い説は、後の研究者や読者が考える説明の一つだよ。公式の妖怪図鑑が「正体は木です」と決めたわけではない。ファンの間では山の神、巨人、錯覚という説が語られるけれど、どれも考察として区別する必要がある。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ、あの妖怪の正体は結局何なの？木や岩なら安心できそうだけど、昔の人が何度も同じ峠で怖がったなら、ただの見間違いで終わらせるのも少し違う気がするよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "今ある記録から言い切れる正体は、夜道で人の視線を奪い、進行を止める怪異だということなんだ。僧の姿は妖怪画の表現であり、山の神説は解釈の一つ。けれど「見上げると負ける」という核だけは、何度も残っている。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "負けるとは、必ず命を失う意味ではない。恐怖で足が止まり、帰る方向を失い、自分の判断を相手へ渡すことだと読める。ゲームなら操作が効かなくなる状態異常に近いけれど、現実では夜道そのものが危険になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "高知県に残る、低くかがむと消える話もこの仕組みで読める。人間が姿勢を下げると、怪異はもう「見越す」相手を失う。勝ったのは腕力の強い人ではなく、自分の視線を取り戻した人だったのかもしれない。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただ、低くかがんだ人が何を見たのか、消えた入道がどこへ行ったのかまで書く資料は少ない。見越し入道は退治される敵ではなく、気づけばいなくなっている影として残る。そこから先は、記録が途切れている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "消えたなら安心していいはずなのに、どこへ行ったか分からない方が怖いよ。夜道の向こうへ去ったんじゃなくて、こっちが下を向いたから見えなくなっただけかもしれないって思っちゃう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪ウォッチで出会う見越し入道は、作品の中で遊べるキャラクターとして描かれている。それは公式作品の魅力だよ。でも原典側の見越し入道は、友達になる前にこちらの姿勢を変えさせる。入口と底で、まるで別の夜なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ファンの間では、作品に登場する妖怪と古い伝承を結びつけて楽しむ考察もある。ただし公式設定と、民俗資料にある話と、ファンの解釈は別々に扱おう。混ぜないからこそ、作品の可愛さと原典の冷たさが両方見えてくる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "現代の夜道で大きな人影や不審なものを見かけたら、伝承の真似をして近づかないでほしい。明るい場所へ移動し、周囲の大人や家族に連絡する。妖怪の語りと現実の安全を分けることが、いちばん大事なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームならイベントを起こしたくて近づいちゃうけど、現実ならライトを向けて確認する前に離れる方がいいんだね。でも知ってしまうと、遠くの電柱を見た時に少しだけ上を見たくなりそうだよ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その「見たくなる」気持ちこそ、見越し入道の話が何百年も残った理由かもしれない。怖いものの正体を知りたい人間と、見上げた人を待つ怪異。その距離は、江戸の峠から今の街灯の下まであまり変わっていない。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "見越し入道の正体は、巨大な僧そのものと断言できない。けれど夜道で人の視線を上へ引き、足を止め、帰る感覚を失わせる怪異だったとは言える。だから伝承では、強く見るより、見ないことが勝ちにされたんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "最初は背が高いだけの妖怪だと思っていたのに、今は夜の道で自分の首が上を向く瞬間まで怖くなったよ。大きい影がいるのではなく、見上げた自分が影を大きくしてしまうんだね。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、妖怪ウォッチのジバニャンを入口に、猫が家へ残した執着の伝承を追うよ。仲間になれる猫妖怪の向こう側には、家を離れられず、呼ばれても振り向けない猫の話が残っているんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いていってね。元ネタが怖い妖怪シリーズでは、作品で好きになった妖怪の原典を、地域名や文献名を確かめながら一つずつ追っている。可愛い姿の後ろにある夜も、まだ調べてあるんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "毎日投稿中で、チャンネル登録者一万人を目標にしているから、チャンネル登録で応援よろしくね。もし夜道で背の高い影を見かけても、顔を上げて確かめる前に、明るい場所へ戻ったほうがいい。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "でも、見上げなかった人は本当に助かったのかな。入道が消えたのか、下を向いた人には最初から見えなかったのか、誰も確かめていない。次にあの峠を通る人だけが、その答えを知るのかもしれない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "記録に残ったのは、見上げた後で帰り方を忘れた人の話だけなんだ。見上げなかった人が、あの夜に何を見ずに通り過ぎたのか。そこから先は、記録が途切れている。"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "見上げた者",
+      "帰れない"
+    ],
+    "hook_caption": "江戸の記録",
+    "subtitle": "背が伸びる怪異",
+    "tagline": "目を上げた先にいる"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789352273_7208",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "見越し入道の正体はなぜ見上げると負けるのか"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "高評価を置いて、元ネタが怖い妖怪シリーズも見てね。毎日投稿中、チャンネル登録者一",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 11,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 6,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.549,
+      "similar_to": "覚が心を先回りする正体と逃げるわけ",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 47,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "見越し入道の正体はなぜ見上げると負けるのか"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 72,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体'](+20)",
+      "好奇心ギャップ['なぜ', '正体'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}

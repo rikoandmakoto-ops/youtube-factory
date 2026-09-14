@@ -1,0 +1,515 @@
+{
+  "title": "河童が相撲を求める理由…本朝俗諺志に残る水難の警告",
+  "theme": {
+    "title": "なぜ河童は相撲を求めるのか、正体が怖すぎる",
+    "angle": "河童の相撲好きを愉快な伝承で終わらせず、水辺の禁忌や子どもへの警告として残った原典を検証する",
+    "parent_title": null,
+    "theme_gate": {
+      "replaced": "なぜ一つ目小僧は寺にばかり現れるのか",
+      "reason": "blacklist『一つ目小僧』"
+    }
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "見た目は愉快なのに、河童の原典は子どもを水へ誘う。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "相撲好きでしょ？でも江戸の『本朝俗諺志』には水難の影がある。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、河童の相撲は水辺へ近づく子を止める警告だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "放課後の川で知らない相手に勝負を挑まれるみたいで、逃げにくい。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "皿の水より怖いのは、勝負を断れず岸から離れることなんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲーフリはこの妖怪を元にポケモンをデザインしたらしい。"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を。元ネタが怖い妖怪シリーズも毎日投稿中、1万人目標のチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？河童の相撲話は、江戸時代の妖怪資料『本朝俗諺志』にも見える水辺の警告なんだ。\nあなたもゲームで河童を見て、勝負好きの愉快な妖怪だと思ったことがあるはずだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "河童といえば相撲だよね。負けず嫌いで勝負を挑んでくる感じ、妖怪ウォッチでも友達になれそうで好きなやつ！\nでも江戸の本にまであるなら、ただのギャグ設定じゃないの？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、元の伝承では相撲の相手をする場所がいつも危ない。\n川岸、淵、田んぼの水路。子どもが一人で近づくには、どれも数歩先の深さが見えない場所なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。相撲の勝負そのものじゃなくて、勝負を始める場所が罠みたいになってるの？\n学校帰りに川原で遊ぶ感覚なら、相手が妖怪じゃなくても、ついて行きそうで嫌だな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここからは少し声を落とす。河童は全国で姿が違うのに、水辺で人を誘う役目だけは妙に残っている。\n相撲は、見知らぬものを遊び相手に見せるための、いちばん自然で断りにくい呼びかけだったのかもしれない。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あの妖怪の正体は、単純な怪力自慢ではない。水辺に近づくな、と大人が言葉にできなかった危険の形なんだ。\n今日は河童がなぜ相撲を求めるのか、江戸の記録と地域の伝承を分けて追っていく。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ河童に勝てば助かる、みたいな話も本当なの？それとも子どもが怖がらないように作った遊び話？\n勝負なら勝てるかもって思わせるぶん、川へ寄ってしまいそうだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "河童の有名な弱点、頭の皿の水は、後の絵や話で強く広まった要素だ。\n相手が礼をすれば河童も礼をして水をこぼす、という筋は、危険な相手を知恵で遠ざける昔話の形でもある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、ここで安心してはいけない。皿を攻略する話より前に、なぜ川辺に河童がいるのかを見ないと意味が変わる。\n問題は勝ち負けの次、子どもが水の縁まで連れて行かれることなんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それ好きなやつ！って言いかけたのに、急に川の深い場所が頭に浮かんだ。\n河童が勝負を挑むのは、遊びのルールを使って人を岸から動かすためだったの？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "民俗学では、河童を水の神が零落した姿と見る説がある。ただし、これは多くの伝承を説明する有力な見方で、全国共通の公式設定ではない。\n田植えの時期に山から下り、秋に山へ帰る河童の話が各地に残るからだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "水の神とは、田や川の水を守る一方で、扱いを間違えると災いにもなる存在のことだ。\n田んぼ一枚を潤す水でも、急な増水なら人を足元からさらう。その二面性が河童の輪郭に重なる。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "神様だったものが、子どもに相撲を挑む妖怪になったってこと？\nそれなら勝負の相手を選ぶ感じも、ただ意地悪というより縄張りを守っているみたいで怖いよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "河童の伝承では、尻子玉を抜くという強い表現も知られている。ただし映像的な残酷さを想像する必要はない。\n昔の人が水死や腹の病を説明できず、水の中で命を奪うものに与えた恐ろしい言葉なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸後期の随筆『甲子夜話』には、河童らしいものを捕らえたという話が記されている。\n真偽を確定する記録ではないが、河童が空想の一枚絵ではなく、水辺の異変を語る言葉として使われていたことは分かる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "本に載ったから実在した、とは言えないんだよね。でも、川で起きた説明しにくい事故を河童のせいにしたなら、怖がらせる理由は本気だったはず。\n相撲だけ明るく覚えると、肝心の警告が消えちゃう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "相撲は昔から、力比べであり、土地の境目で行う儀礼でもあった。人と人が組み合う遊びだから、子どもにも説明がいらない。\n河童に勝負を挑まれる話は、水辺へ寄る理由を一瞬で作れる仕掛けになっている。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "たとえば川原で石を投げるより、相撲をしようと言われた方が、足場の悪い場所へ踏み込みやすい。\n伝承の河童は、力で押す前に遊びの約束を差し出す。そこが、ただの怪物より不気味なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "でも河童って、相撲で負ける話も多いよね？人間が知恵で勝つなら、危険を乗り越える話にも見える。\nそれでもミナモ調査員が怖いと言うのは、勝った人だけ語れるからなの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その見方は大事だ。昔話は無事に帰った人の話として残りやすく、帰らなかった人の声は伝えにくい。\nそしてこの話、最後に残るのは河童の姿ではなく、誰もいない川辺で勝負を待つ気配なんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "第二の手がかりは、河童が特に子どもや馬を狙うと語られた点にある。\n子どもは水深の変化に気づきにくく、馬は田畑の労働を支える大事な存在だった。失えば家そのものが揺らぐ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "子どもだけじゃなく馬まで？河童の話は、家族にとって失いたくないものを守るための注意だったんだね。\nだから大人は、川へ行くなじゃなく、河童がいるぞって具体的に言ったのかな。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "熊本県や福岡県には、河童が馬を水へ引く話が多く残る。地域ごとの細部は違っても、水場で家畜を失う怖さが核にある。\n田植え前の水路は浅く見えても、ぬかるみで脚を取られる。そこに河童の名が置かれた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "福岡県久留米市周辺の河童伝承では、河童が人に捕まり、詫びとして薬の作り方を教える話も伝わる。\n恐ろしい相手が急に役立つ知識を渡す。この反転は、水を敵にも味方にもできない農村の感覚に近い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "敵を倒して終わりじゃなくて、約束を結ぶんだ。ゲームの妖怪が友達になる感じと少し似てるけど、元の話は仲良しというより停戦だね。\n約束を破ったら、また水辺に戻ってくる気がする。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、河童にきゅうりを供える話もある。好物だからと軽く覚えられるけれど、供え物は本来、境界の相手を鎮める行為だ。\n川へ物を流す手つきには、遊びよりも、水への礼と恐れが混じっている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "相撲、きゅうり、皿。この三つは河童を親しみやすく見せるけれど、全部が水辺との距離を測る印にもなる。\n相撲は近づく誘惑、きゅうりは鎮める供え、皿は水を離れられない印として読めるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。知ってる河童の要素を並べただけなのに、全部が川から離れないためのルールみたいに聞こえる。\n好きな妖怪ほど、元ネタが怖いってこういうことなんだね。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、この読み方は伝承を横断して整理した民俗学的な解釈だ。ある村の河童が必ず同じ意味を持つ、と断定はできない。\n資料ごとに河童は農作業を手伝い、いたずらをし、時には人に詫びる。だからこそ一つの正体では閉じない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "それでも相撲の場面だけは、川岸という境目から切り離せない。水と陸の境目は、昨日まで歩けた場所が雨一つで変わる。\n河童が誘うのは、地図では同じでも足元だけが別世界になる場所なんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "川って見た目より急に深くなるもんね。ゲームならフィールドの端が見えるけど、現実の水辺はどこまで踏んでいいか分からない。\n河童の相撲は、その境目を越えさせるイベントみたいだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸時代の絵では、河童は猿や亀や子どもに似た姿で描かれることがある。姿が定まらないのは、目撃談が一致しなかったからとも考えられる。\n水面に映る影、濡れた動物、流木。そのどれもが夕方には河童になり得た。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで大切なのは、昔の人がだまされたと笑うことではない。照明も救助も少ない時代、川の異変は一度の判断ミスで取り返しがつかない。\n見えない危険へ顔を与えた河童は、恐怖を共有するための名前でもあった。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "名前があると、子どもも覚えられるもんね。深いから危ないより、河童が相撲を挑んでくるから帰ろう、の方が頭に残る。\nでもその名前を覚えた子は、夜の川を見たら本当に誰かいる気がしそう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪ウォッチに登場する河童系の妖怪は、作品の中で個性あるキャラクターとして描かれている。\n作中の性格や能力は公式作品の表現であって、民間伝承の河童と一対一で同じものではない。この区別はしておきたい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "一方で、ファンの間では河童系妖怪の水への親和性を、古い河童伝承へのオマージュと読む考察もある。\nこれは非公式の考察で、公式設定として確定した話ではない。それでも元ネタを知ると、見え方が少し冷たく変わる。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームで笑っていた相撲好きの妖怪も、昔の人には川から聞こえる誘いの声だったかもしれないんだ。\n同じ勝負でも、画面の中なら楽しいのに、夕方の用水路なら絶対に受けたくないよ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "河童が礼をする話は、相手の礼儀を利用して皿の水をこぼさせる有名な対抗法だ。\nここには、腕力で勝てない相手にも、決まりごとを知れば逃げ道があるという昔話らしい知恵がある。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "でも現実の水辺に対抗法はない。相撲の礼を試すより、柵の内側に入り、増水した川や用水路には近づかない方がいい。\n伝承を今に使うなら、河童を倒す方法ではなく、誘いに乗らない方法として読むべきなんだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "つまり河童の相撲を断るのは、弱虫じゃなくて正しい選択なんだね。\n知らない人の勝負の誘いより、家に帰ってゲームで対戦した方が安全だし、川岸で一人になる理由もなくなる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "地域の伝承を調べるときは、河童を見たという話だけを切り取らず、いつ、どこの水辺で、誰に語られたかを見る。\n同じ河童でも、田植えの村と漁の町では恐れられ方が違う。背景を抜くと、相撲だけが空っぽの笑い話になる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "資料名がある話と、後から広まった創作を混ぜないことも大切だ。『甲子夜話』のような記録は確認できるが、現代の画像や投稿のすべてが伝承とは限らない。\n分からない部分は、無理に河童の仕業と決めず、そこから先は記録が途切れていると残す。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "分からないまま残るのが一番怖いかも。川で誰かが勝負をしたという話だけ残って、相手の顔も、勝ったのかも書かれていない。\nそんな記録を読んだあとだと、水音まで誰かの足音に聞こえそうだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "河童が相撲を求める理由は、力自慢というより、水辺へ人を引き寄せる遊びの言葉だったと考えると筋が通る。\n水の危険を伝えるには、深さの数字より、勝負を挑む相手の方が子どもの記憶に残るからだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そして河童は、怖いだけの怪物でもない。水を鎮め、田を助け、約束を守る存在として語られる地域もある。\nだから人は河童を完全に追い払えず、供え、詫び、距離を取りながら同じ水を使い続けたんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "相撲は遊びに見えて、川との約束を忘れないための形だったのか。\n聞かなきゃよかったと思うのに、河童の話を前より好きになったよ。可愛いからじゃなく、昔の人の怖がり方が残ってるから。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、ジバニャンの元ネタになった猫の伝承を追う予定だ。ゲームでは愛される猫妖怪が、昔話ではどんな執念を残したのかを調べる。\n妖怪ウォッチは株式会社レベルファイブの登録商標で、作品描写と伝承は分けて扱っていく。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "河童の相撲に笑ったあとで、夕方の川を見るときだけは思い出してほしい。岸辺から聞こえる勝負の誘いは、遊びの声にしか聞こえない。\nだからこそ、もし夜道で水辺を見かけても、目を合わせないほうがいい。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "よかったら高評価を置いていって。元ネタが怖い妖怪シリーズには、まだ水辺や山道で待つ妖怪の原典もある。\n毎日投稿中でチャンネル登録者1万人を目標にしているから、チャンネル登録で応援よろしくね。",
+      "expression": "sad",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "相撲の勝負",
+      "水辺の禁忌"
+    ],
+    "hook_caption": "相撲は入口",
+    "subtitle": "河童が勝負を挑む理由",
+    "tagline": "可愛い遊びの裏に残る水辺の警告"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789366672_5625",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "河童はなぜ相撲を求めるのか 正体"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "ゲーフリはこの妖怪を元にポケモンをデザインしたらしい。",
+      "matched_topic": "元ネタ"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "よかったら高評価を。元ネタが怖い妖怪シリーズも毎日投稿中、1万人目標のチャンネル",
+          "reason": "1行51字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.524,
+      "similar_to": "牛鬼の正体は水難だった",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 48,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "河童はなぜ相撲を求めるのか 正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 60,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体'](+20)",
+      "好奇心ギャップ['なぜ', '正体'](+12)",
+      "短すぎ(16字 < 18)(-12)"
+    ]
+  },
+  "original_title": "河童はなぜ相撲を求めるのか 正体",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "河童はなぜ相撲を求めるのか 正体"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "title": "任天堂の年収986万円、実は職種で差が出る",
+  "theme": {
+    "title": "任天堂の平均年収986万円、実は開発職と販売職で差が出る",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収の実態",
+      "fact_main": "任天堂 年収986万円",
+      "fact_sub": "有価証券報告書 2025年3月期",
+      "text": "年収986万円。ただし、職種で見え方は変わります。",
+      "bg_query": "任天堂株式会社 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年齢40.2歳",
+      "fact_sub": "従業員2,962人",
+      "text": "平均年齢は40.2歳です。若手だけの高年収ではありません。",
+      "bg_query": "任天堂株式会社 本社 京都",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "平均勤続13.9年",
+      "fact_sub": "2025年3月期",
+      "text": "平均勤続は13.9年です。数字だけ見れば、かなり良いです。",
+      "bg_query": "任天堂株式会社 社員 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "開発と販売で2職種",
+      "fact_sub": "担当業務で給与条件が異なる",
+      "text": "開発と販売では担う仕事が違います。年収差の詳細は非公表です。",
+      "bg_query": "任天堂株式会社 ゲーム開発 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "中途採用 2026年度",
+      "fact_sub": "公式採用情報を要確認",
+      "text": "中途採用は職種ごとに募集されます。実はこの裏で、条件も個別です。",
+      "bg_query": "任天堂株式会社 採用 オフィス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "年収差 詳細0円公表",
+      "fact_sub": "職種別給与は公式非開示",
+      "text": "ただし職種別の年収差は0円分も公表されていません。",
+      "bg_query": "任天堂株式会社 本社 入口",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収986万",
+      "職種で差"
+    ],
+    "subtitle": "任天堂の給与データ",
+    "tagline": "転職前に見る数字"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789353909_7223",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "任天堂の年収986万円、実は職種で差が出る"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 14,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.57,
+      "similar_to": "日本マクドナルドの年収576万円、その正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "任天堂の年収986万円、実は職種で差が出る"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '年収'](+20)",
+      "好奇心ギャップ['実は'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": false,
+    "conflicts": [
+      {
+        "kind": "conflict",
+        "entity": "任天堂",
+        "metric": "年収",
+        "line": 0,
+        "new_value": 986.0,
+        "new_period": "2025-03",
+        "old_value": 967.0,
+        "old_period": "2025-03",
+        "old_title": "任天堂の年収がヤバい 平均967万円の待遇",
+        "unit": "万円"
+      },
+      {
+        "kind": "conflict",
+        "entity": "任天堂",
+        "metric": "平均勤続",
+        "line": 2,
+        "new_value": 13.9,
+        "new_period": "2025-03",
+        "old_value": 13.5,
+        "old_period": "2025-03",
+        "old_title": "任天堂の年収がヤバい 平均967万円の待遇",
+        "unit": "年"
+      }
+    ],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}

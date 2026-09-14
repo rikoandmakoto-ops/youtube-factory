@@ -1,0 +1,226 @@
+{
+  "title": "USJの年収と福利厚生、その実態とは？人気の裏側を暴露",
+  "theme": {
+    "title": "USJの年収と福利厚生の実態",
+    "angle": "人気テーマパークの裏側を暴露！"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "人気企業の実態",
+      "fact_main": "USJ 年収350万円",
+      "fact_sub": "求人・口コミからの推定",
+      "text": "USJの平均年収、いくらだと思いますか。公開求人と口コミを基にすると、推定350万円です。",
+      "bg_query": "合同会社ユー・エス・ジェイ ユニバーサル・スタジオ・ジャパン 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "公式採用情報を確認",
+      "text": "賞与は年2回です。金額は職種や評価で変わるため。",
+      "bg_query": "合同会社ユー・エス・ジェイ 本社 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "年間休日120日",
+      "fact_sub": "職種別求人に記載",
+      "text": "年間休日は120日です。数字だけ見れば、かなり良い。",
+      "bg_query": "合同会社ユー・エス・ジェイ パークスタッフ 勤務",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "有休 初年10日",
+      "fact_sub": "公式求人情報",
+      "text": "有給休暇は初年度10日です。",
+      "bg_query": "合同会社ユー・エス・ジェイ パーク 風景",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "通勤手当 月15万円",
+      "fact_sub": "公式採用情報の上限",
+      "text": "通勤手当は月15万円までです。",
+      "bg_query": "合同会社ユー・エス・ジェイ 最寄り駅 ユニバーサルシティ駅",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "土日勤務 月8日超",
+      "fact_sub": "口コミサイトによると",
+      "text": "ただし、口コミサイトによると土日勤務は月8日を超える例があります。",
+      "bg_query": "合同会社ユー・エス・ジェイ パーク 夜景",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "話題の企業の実態シリーズ",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "年収350万",
+      "土日勤務の裏"
+    ],
+    "subtitle": "人気テーマパークの働き方",
+    "tagline": "公開情報と口コミを確認"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789362910_8842",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "blind",
+      "reason": "実績データが閾値未満、または差が誤差レベル",
+      "leader": null,
+      "margin": 0.0
+    },
+    "candidates": {
+      "gpt": {
+        "title": "USJの年収は推定350万円、人気の裏で土日勤務"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.537,
+      "similar_to": "星野リゾートの推定年収400万円、ホテル業界での正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "USJの年収は推定350万円、人気の裏で土日勤務"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['年収'](+12)",
+      "好奇心ギャップ['裏'](+12)"
+    ]
+  },
+  "original_title": "USJの年収は推定350万円、人気の裏で土日勤務",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "USJの年収は推定350万円、人気の裏で土日勤務"
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}

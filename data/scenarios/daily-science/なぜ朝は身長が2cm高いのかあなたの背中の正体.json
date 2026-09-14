@@ -1,0 +1,533 @@
+{
+  "title": "なぜ朝は身長が2cm高いのか？あなたの背中の正体",
+  "theme": {
+    "title": "なぜ寝起きは身長が2cm高いのか",
+    "angle": "椎間板の水分。朝と夜で測ると差が出る具体数を軸に"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？ 朝のあなたは夜より約2cm高いんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！ 朝と夜で2cmも変わるなら。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "背骨の間には23枚のクッションがあり。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ スポンジが水を吸って戻る感じと同じなんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも昼は重さで水が抜けるので、夕方ほど背中が少し低くなるんです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこの科学的事実、ポケモンの裏設定の元ネタなんだ。"
+    },
+    {
+      "speaker": "真",
+      "text": "朝の身長、今日から意識してみて。体の謎シリーズも高評価を押して、1万人目標で毎日投稿中のチャンネル登録を応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？ 朝のあなたは、夜に測った自分より最大で約2cm高いことがあります。\n同じ部屋、同じ壁、同じ裸足でも数字が変わるのは、背中の中で水分が動くからなんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、2cmも違うの？ 健康診断で朝に測った身長と、帰宅後に壁へ印を付けた身長がずれるのは、姿勢だけの問題ではなかったんだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえば朝172cmだった人が、夜には170cm台後半になることは珍しくありません。\nあなたが昨日感じたズボンのすそや机の高さの違和感にも、この小さな差が関わります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、朝は洗面台の鏡が少し低く見える日があるよ。\nでも大人の骨は成長期みたいに、寝ている数時間で長くなるわけではないよね？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。伸びるのは骨そのものではなく、首から腰まで並ぶ骨のすき間です。\nあなたが横になった6時間から8時間のあいだに、そのすき間の厚みが少し戻っていきます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "骨と骨の間が戻るだけで2cmにもなるの？ 1か所なら紙1枚ほどの変化でも、背中全体で足し算になるなら納得できそうだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "大人の背骨は24個ほどの骨が縦に積み重なり、その多くの間には柔らかなクッションがあります。\n積み木の間に薄いスポンジを何枚も入れるように、すき間の合計が体の高さを作っています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "積み木が24個あると考えると、1枚ずつの小さな厚みでも全体では目に見えるね。\nそのクッションは、昼のあいだ何に押されて薄くなっていくの？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "立つ、歩く、椅子に座る、その全部で頭と上半身の重さが背中へ伝わります。\n通勤で30分立った日も、机で2時間座った日も、クッションにはゆっくり圧力がかかるのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "座っているなら楽そうなのに、背中にはずっと重さが残るんだね。\nいま画面を見ながら座っている人も、その瞬間に少しずつ昼の形へ変わっているの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。昼にかかる重さでクッションの中の水分が周りへ移り、厚みが少し減っていくのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 汗をかいたから背が低くなるのではなく、背中の中で水が場所を変えるんだね。\nそれなら水分を飲めばすぐ戻るのかな？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "水を飲んだから直後に身長が戻るわけではありません。\n大切なのは上から押す重さが減ることで、横になると背中の中へ水分が戻りやすい条件が整うのです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "水筒に水を足す話ではなく、押されたスポンジを水の中でゆるめる感じなんだね。\n昼の重さがなくなる夜に、背中が回復する理由が見えてきたよ。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。朝に水分が戻るなら、どうして人によって0.5cm程度の人もいれば、2cm近く変わる人もいるのでしょう。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ8時間寝ても差が違うなら、寝方だけでは決まらないんだね。\n体格や仕事、昨日どれだけ立っていたかまで関係してくるのかな？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "朝夕の差には、体格、年齢、姿勢、立ち仕事の長さ、荷物の重さなどが関わります。\n10kgの荷物を持って長く歩いた日と、家で休んだ日では、背中への負担が同じではありません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "買い物袋を両手に持って30分歩いた日ほど、夕方の背中は押されやすいかもしれないんだ。\n毎日の生活が、朝と夜の数字に写るみたいで面白いね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、朝から夜にかけて大人の身長が約1cmから2cm低くなる例が示されています。\nただし2cmは全員の決まりではなく、同じ人でも日によって幅が変わる目安として見てください。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "170cmの人が夜に169cm台へ入ることもあり得るなら、成長が止まった大人でも数字が動くのは自然なんだね。\n測る時刻を書かないと比較が難しそう。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "身長の記録を比べるなら、朝なら毎回朝、夜なら毎回夜と時刻をそろえるのが基本です。\n午前7時の数字と午後9時の数字を並べると、成長ではなく一日の変化まで混ざってしまいます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "健康診断の前年より0.8cm違ったときも、まず測定時刻や姿勢を思い出したほうがいいんだね。\n数字ひとつでも、定規だけでは見えない条件があるんだな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "背中のクッションは、昼に壊れて夜に修理される部品ではありません。\n水分を出し入れしながら衝撃を和らげる、毎日働く座布団のような役目です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "走って着地したときの力を、背骨が全部そのまま受けたら大変そうだね。\n水を含んだ座布団みたいな部分があるから、体を動かしやすくしてくれるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "朝はクッションが水分を多く含むため、昼より少し厚みを取り戻しています。\n1か所で数mmにも満たない変化でも、20か所以上が同じ向きに変われば合計は大きくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "1mm未満の変化が20か所以上なら、2cm近くという数字が急に現実味を持つね。\n薄いノートを20冊重ねると高さが増えるのと同じだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この骨の間のクッションは、医学では椎間板という名前で呼ばれます。\nつまり、背骨の間で水分を抱え、歩く振動や体重の圧力を受け止める柔らかな部分のことです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "椎間板という言葉だけだと難しく感じるけれど、水を抱えた背中のクッションなら覚えやすいね。\n名前よりも、夜ごとに厚みを戻す働きが大事なんだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "起床後の変化は、朝から夜まで同じ速さで続くわけではありません。\n朝の早い時間に目立ちやすく、その後はゆるやかになると考えられており、午前中の姿勢も数字に影響します。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "起きてすぐ測るか、朝食後に1時間歩いてから測るかでも違いそうだね。\n朝の身長を残したいなら、毎回なるべく同じ手順にしたほうがよさそう。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "測るときは、かかとを壁に寄せ、目線をまっすぐ前に向け、厚い髪型や靴下を避けてください。\nメジャーと硬い本を使えば、家庭でも1cm前後の差は比較しやすくなります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "本を頭の上に水平に当てて壁へ印を付ければ、学校の身体測定みたいにできるね。\n朝と夜の数字をスマホに2回だけ残すなら、続けられそうだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "おすすめは、起床後にトイレを済ませた時点で1回、寝る前に1回、3日ほど記録することです。\n1日だけでは姿勢の誤差も入りやすいので、3組の数字を見ると自分の傾向がつかみやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "朝171.8cm、夜170.8cmのように書いておけば、数字の差が見えやすいね。\n体重と同じで、1回の数字より同じ条件で続けることが大切なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "1960年代から、宇宙飛行士が地上より背が高くなることは注目されてきました。\n地球のように下へ引かれる重さが小さい環境では、背骨のすき間にかかる圧力も減るからです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、宇宙では朝だけじゃなく、背中のすき間が長く広がりやすいの？ 地上で起きる2cmの話が、宇宙飛行士の体にも続いているなんて驚きだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "NASAは、宇宙滞在中に身長が数cm伸びることがあると紹介しています。\n骨が急に成長するのではなく、重さに押されにくくなった背中のクッションが、より広がるためと考えられています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "重いリュックを下ろした直後に背筋が楽になる感覚を、何日も続けるようなものなんだね。\n地球で寝ることも、小さな重力休みになっていると考えると分かりやすい。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、寝れば誰でも完全に同じ厚みまで戻るとは限りません。\n年齢とともに水分を保つ性質は変わりやすく、朝夕の身長差が小さくなる人もいます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 朝に高くなる現象は同じでも、クッションの戻り方には個人差があるんだね。\n友だちと比べて数字が違っても、すぐ変だとは言えないんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "長時間の移動や立ち仕事のあとに、背中が重いと感じる人もいるでしょう。\nそれだけで病気とは言えませんが、昼のあいだに体重の負荷を受け続けたことは、あなたの体感ともつながっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "映画館で2時間座ったあとに立つと、背中を伸ばしたくなることがあるよ。\nあの感覚も、同じ姿勢でクッションに圧力がかかっていたことと関係しそうだね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "だからといって、朝の数字を保とうとして背中を強く反らせたり、無理なストレッチをしたりする必要はありません。\n背中は1日の重さに対応するための仕組みを、もともと持っているのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "朝の2cmを守る競争ではなく、体が毎日どう動いているかを見る話なんだね。\n自然な姿勢で測って、数字の変化を観察するくらいがちょうどよさそう。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、強い背中の痛み、足のしびれ、急な歩きにくさが続く場合は、朝夕の身長差だけで説明しようとしないでください。\n数日以上続く症状は、医療機関へ相談することが大切です。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "毎日の1cm前後の差は自然なことでも、痛みまで同じ扱いにしないほうがいいんだね。\n数字を観察するほど、体の変化と体調のサインを分けて考えられそうだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日できることは、朝と夜に同じ壁で身長を測り、時刻と数字を3日分メモすることです。\n水分を含んだ背中のクッションが、あなたの一日をどう支えたかを自分の数字で見られます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "朝の自分が少し高いと分かったら、寝ている時間の見え方も変わりそうだね。\nただ休んでいるだけでなく、背中が明日の姿勢を準備してくれているんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "朝の最大約2cmは、骨が伸びた証拠ではなく、椎間板が水分を取り戻した合計です。\n昼は重さで少し薄くなり、夜は横になることで戻る、この往復が毎日続いています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、夜の自分が少し低いのは、一日を立って歩いて過ごした背中の記録なんだね。\n明日の朝、壁の前で確かめたくなったよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠っているあいだに人が一晩で何十回も寝返りを打つ理由を見ていきます。\n背中のクッションと睡眠の関係を知ったあとなら、寝返りの意味ももっと身近に感じられるはずです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "寝返りも、ただ落ち着きがない動きではなく、体を守る準備なのかもしれないね。\n今夜の眠りで自分の体が何をしているのか、続きも一緒に知りたいな。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "朝の身長を測ったら、体の謎シリーズで気付いた差もぜひ思い出してみてください。\n面白かったら高評価を押して、身近な不思議を毎日1本解くチャンネル登録よろしくね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "朝だけ高い",
+      "2cmの差"
+    ],
+    "hook_caption": "朝は2cm高い",
+    "subtitle": "夜に縮んだ背中で何が起きる？",
+    "tagline": "寝ている間に戻る体のふしぎ"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": {
+    "run_id": "compete_1789354044_4238",
+    "blind_eval": null,
+    "selected_by": "only_one",
+    "strategy": {
+      "mode": "prefer_claude",
+      "reason": "Claude が実績スコアで 150.4% 優位",
+      "leader": "claude",
+      "margin": 1.5038
+    },
+    "candidates": {
+      "gpt": {
+        "title": "なぜ朝は身長が2cm高いのか？あなたの背中の正体"
+      },
+      "claude": null
+    }
+  },
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "実はこの科学的事実、ポケモンの裏設定の元ネタなんだ。",
+      "matched_topic": "体"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "朝の身長、今日から意識してみて。体の謎シリーズも高評価を押して、1万人目標で毎日",
+          "reason": "1行60字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 0,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.497,
+      "similar_to": "なぜ食後だけ急に眠いのか？30分後の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 49,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ朝は身長が2cm高いのか？あなたの背中の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 96,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "二人称['あなた'](+6)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  }
+}
