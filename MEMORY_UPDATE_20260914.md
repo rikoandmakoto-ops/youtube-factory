@@ -140,7 +140,7 @@ video_metrics を video_id ごとの最新スナップショット 1 行に畳�
 | company-facts | 8:15/12:30/17:00/19:00 → **12:30/15:00/17:00/19:00** | C 型維持 | 23 → **28** (7.0d) |
 | pokemon-lab | 8:30/15:00/17:00 → **12:30/15:00/17:00** | **C 型を先頭へ・疑問フレーム不使用** | 21 (7.0d) |
 | yokai-watch | 9:30/12:00/17:00 → **12:00/16:00/19:00** | **数字をタイトルから排除（B 型）** | 23 (7.7d) |
-| 2ch-matome | 9:00/12:15/21:00 → **7:30/12:15/17:30** | **A 型を先頭へ**（下ネタ・面白ジャンルは維持） | 16 → **21** (7.0d) |
+| 2ch-matome | 9:00/12:15/21:00 → **7:30/12:15/17:30** | **A 型を先頭へ**（下ネタ・面白ジャンルは維持） | 16 → **26** (8.7d・先頭9件すべて A 型) |
 
 - 全枠が autopilot の burst guard 90 分を満たすことを確認済み（最小 120 分）。
 - **`data/channels_orchestrator/*.json` は `data/channels/*.json` への symlink**。
@@ -148,6 +148,13 @@ video_metrics を video_id ごとの最新スナップショット 1 行に畳�
   スクリプト側に realpath による重複排除を入れた）。
 - バックアップ: `data/channels/*.json.bak_pdca_20260914_orch`
 - 変更サマリ: `reports/orch_config_changes_20260914.json`
+
+### 運用メモ: `reports/` の LibreOffice ロックファイル
+
+`reports/.~lock.youtube_analysis_*.xlsx#` が 09-11 以降 毎日残っており、サンドボックスからは
+権限の都合で削除できない。このロックがあると `recalc.py` の LibreOffice が無限に待って固まる
+（本日 4 回ハングした）。**xlsx は `/tmp` で recalc してから `reports/` へ cp する**のが確実。
+Mac 側でこれらのロックファイルを掃除しておくとよい。
 
 ---
 
