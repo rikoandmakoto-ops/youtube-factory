@@ -367,7 +367,12 @@
       "面白い"
     ]
   },
-  "theme_blacklist": [],
+  "theme_blacklist": [
+    "大谷翔平",
+    "堀大輔",
+    "ヒカキン",
+    "ちいかわ"
+  ],
   "genre_blacklist": [],
   "theme_seeds": [],
   "effects_research": {
@@ -518,11 +523,6 @@
         "source": "trend_scanner"
       },
       {
-        "id": "fc3fa59f",
-        "title": "ちいかわと動物たちのコラボ！癒しの瞬間をお届け",
-        "angle": "人気キャラクターと動物のコラボを通じて、癒しの動画を紹介する。"
-      },
-      {
         "id": "49244f42",
         "title": "今日のわんこ！癒しの瞬間を30秒でお届け",
         "angle": "今日のわんこに登場する犬たちの可愛さを科学的に解説し、なぜ犬が人間に癒しを与えるのかを探る。"
@@ -583,7 +583,16 @@
         "angle": "お気に入りの石を選び、何度も叩いてご褒美を取り出す職人技"
       }
     ],
-    "_theme_queue_comment": "gen_type=clip では未使用。切り抜き元の選定は viral_sources が担う。"
+    "_theme_queue_comment": "gen_type=clip では未使用。切り抜き元の選定は viral_sources が担う。",
+    "_queue_purge_log": [
+      {
+        "date": "2026-09-14n",
+        "removed": [
+          "ちいかわと動物たちのコラボ！癒しの瞬間をお届け"
+        ],
+        "reason": "theme_blacklist 該当（実在個人名・第三者IP・実在ブランド）。blacklist は補充時に照合されないため手動除去。"
+      }
+    ]
   },
   "short_series_name": "動物情報局",
   "main_title_prefix": "",
@@ -630,5 +639,6 @@
     "chatgpt_thread_url": "https://chatgpt.com/c/6a9af752-034c-83ee-b3d7-d5daccbcdaf7",
     "note": "09-05 にトップレベルへ書かれていた URL を image_generation ブロックへ移設（09-06）",
     "updated_at": "2026-09-05T15:09:08+00:00"
-  }
+  },
+  "_theme_blacklist_note_20260914n": "09-14: google_trends 由来の自動キュー投入が実在個人名・第三者キャラIPを フィクション/解説chに横展開していた（大谷翔平=9ch同時、堀大輔は scp-lab で『なぜ堀大輔は72時間眠らないのか？』として09-14 00:00に実公開済み）。名誉毀損・IPリスクのため theme_blacklist に追加。"
 }

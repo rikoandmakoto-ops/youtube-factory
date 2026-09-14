@@ -1914,6 +1914,38 @@
    "before": "-",
    "after": "変更なし",
    "reason": "『連番＋絵文字』型（1分妖怪ファイル #N：🔍…）は subs/1k で scp 0.38x・yokai 0.37x と最悪だが、`#\\d+[：:]` と max_emoji=0 で6ch全てに既にゲートが入っており、実測に残っているのは8月公開の旧在庫のみ。追加対応不要。"
+  },
+  {
+   "date": "2026-09-14n",
+   "target": "data/channels/*.json（全13ch）",
+   "field": "theme_blacklist",
+   "before": "ch毎 0〜21語",
+   "after": "+実在個人名『大谷翔平』『堀大輔』『ヒカキン』・第三者キャラIP『ちいかわ』を全13chへ。加えて実在ブランド『USJ』を company-facts と clip系を除く8chへ（company-facts は企業分析が本業のため除外）",
+   "reason": "google_trends 由来の自動キュー投入が実在個人名をフィクション/解説chへ横展開していた。『大谷翔平』は9ch同時キュー投入（fake-paper では『大谷翔平選手の打撃フォームは宇宙人の影響を受けている？』、yokai-watch では『大谷翔平と妖怪の関係を探る！』）。『堀大輔』は scp-lab で『なぜ堀大輔は72時間眠らないのか？睡眠不足の恐怖』として 09-14 00:00 に実公開済み（実在人物をSCP対象として扱う構成）。名誉毀損・IPリスクの遮断を最優先とした。"
+  },
+  {
+   "date": "2026-09-14n",
+   "target": "data/channels/*.json（8ch）",
+   "field": "autopilot.theme_queue",
+   "before": "clip-animal 14 / clip-fukada 32 / clip-kaneko 38 / clip-lab 33 / fake-paper 9 / scp-lab 19 / socio-rx 14 / yokai-watch 21",
+   "after": "それぞれ 13/30/36/32/3/18/13/20（計15件除去）。除去内訳は _queue_purge_log に記録",
+   "reason": "09-12 の既知不具合『theme_blacklist はキュー補充時に照合されない』が未修正のため、blacklist 追加だけでは既存キューに残る。該当15件を手動除去して実効化。うち6件は fake-paper の既存blacklist（テンプレ定型文）該当で、以前から素通りしていた分。"
+  },
+  {
+   "date": "2026-09-14n",
+   "target": "data/channels/scp-lab.json / daily-science.json",
+   "field": "theme_seeds",
+   "before": "scp-lab 29件 / daily-science 26件",
+   "after": "scp-lab 32件 / daily-science 29件（各+3）",
+   "reason": "09-14 実測（直近公開・再生>0、scp n=48 / ds n=45、指標は subs/1000再生）。scp-lab は疑問形 1.25 vs 断定形 0.68（1.8倍）、トップ変換3本が全て『SCP番号＋単位つき数値＋経過日数＋疑問形』。daily-science はトップ変換2本が『身近な身体感覚＋倍率つき数値』。この型を種に固定。"
+  },
+  {
+   "date": "2026-09-14n",
+   "target": "(見送り)",
+   "field": "genre_blacklist",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "30%ルール再判定。daily-science 全体平均538.6→閾値161.6、該当ジャンルなし。scp-lab 全体平均523.5→閾値157.1、形式上は『オブジェクトクラス』(avg0)のみ該当するが n=2 かつ2本とも0再生の未計測在庫であり、性能ではなくデータ欠損。09-13 に特定済みの『自傷解除の真因＝再生数を根拠にした判断』を繰り返すため見送る。なお同ジャンルは既に genre_blacklist 登録済み。"
   }
  ]
 }

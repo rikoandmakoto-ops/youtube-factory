@@ -232,7 +232,12 @@
     "スピリチュアル",
     "UFO",
     "心霊",
-    "陰謀論"
+    "陰謀論",
+    "大谷翔平",
+    "堀大輔",
+    "ヒカキン",
+    "ちいかわ",
+    "USJ"
   ],
   "genre_blacklist": [
     "都市伝説",
@@ -497,9 +502,7 @@
       {
         "id": "966ba11a",
         "title": "ショートスリーパーの秘密と自己効力感",
-        "angle": "ショートスリーパーが持つ自己効力感の高さが、私たちの生活にどう影響するのかを探る。",
-        "priority": "high",
-        "source": "trend_scanner"
+        "angle": "ショートスリーパーが持つ自己効力感の高さが、私たちの生活にどう影響するのかを探る。"
       },
       {
         "id": "21a22507",
@@ -562,7 +565,16 @@
         "angle": "移籍の背景にある印象管理と文化資本の視点から、自己ブランディングの重要性を解説します。"
       }
     ],
-    "auto_optimize_schedule": true
+    "auto_optimize_schedule": true,
+    "_queue_purge_log": [
+      {
+        "date": "2026-09-14n",
+        "removed": [
+          "USJの魅力を社会学で解剖！"
+        ],
+        "reason": "theme_blacklist 該当（実在個人名・第三者IP・実在ブランド）。blacklist は補充時に照合されないため手動除去。"
+      }
+    ]
   },
   "short_series_name": "",
   "main_title_prefix": "【処方箋】",
@@ -678,5 +690,6 @@
       ],
       "rationale_20260913": "【2026-09-13】注力5chへ絞った時点で当chだけ hard_constraints が無く、機械ゲート（数字数・禁止語・答え提示語・実効長）が完全に無効だった。数値は scp-lab / daily-science（max_digit_groups 1・min_effective_chars 20）と company-facts（max_chars 34）に揃える。数字は「38人が見ていた」のような研究の具体数が刺さる題材なので 1 個まで許し、全面禁止（yokai-watch 方式）にはしない。max_chars は title_style の「〜のは、あなたのせいじゃない」型が 30 字を超えやすいため 34。煽り語（衝撃/ヤバい）は theme_priority.title_style が自然文で禁じていたが backend は読まないので banned_words へ移した。"
     }
-  }
+  },
+  "_theme_blacklist_note_20260914n": "09-14: google_trends 由来の自動キュー投入が実在個人名・第三者キャラIPを フィクション/解説chに横展開していた（大谷翔平=9ch同時、堀大輔は scp-lab で『なぜ堀大輔は72時間眠らないのか？』として09-14 00:00に実公開済み）。名誉毀損・IPリスクのため theme_blacklist に追加。"
 }

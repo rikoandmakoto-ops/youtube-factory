@@ -299,7 +299,11 @@
     ]
   },
   "theme_blacklist": [
-    "詰め込んだ一冊"
+    "詰め込んだ一冊",
+    "大谷翔平",
+    "堀大輔",
+    "ヒカキン",
+    "ちいかわ"
   ],
   "genre_blacklist": [],
   "theme_seeds": [],
@@ -497,11 +501,6 @@
         "angle": "金子みゆが映画の興行収入に影響する要因を解説し、映画業界の裏側を探る。"
       },
       {
-        "id": "97889fec",
-        "title": "くら寿司とちいかわ、コラボの裏側とは？",
-        "angle": "人気キャラクターとのコラボがもたらす影響を解説。"
-      },
-      {
         "id": "edd60d00",
         "title": "食中毒の真実！あなたの知らない米の危険性",
         "angle": "米を食べる時に気をつけるべきポイントを科学的に解説。"
@@ -597,11 +596,6 @@
         "angle": "ゲームの成功要因やキャラクターの魅力を分析。"
       },
       {
-        "id": "6c4a5f2b",
-        "title": "大谷翔平が教える成功の秘訣とは？",
-        "angle": "彼の成功を科学的に分析し、日常生活に活かす方法を探る。"
-      },
-      {
         "id": "2c2f6f01",
         "title": "よるのブランチの裏側に迫る！",
         "angle": "テレビ番組制作の科学や視聴者心理を解説。"
@@ -648,7 +642,17 @@
       }
     ],
     "_enabled_comment": "2026-08-24 有効化。gen_type=clip なので theme_queue も台本生成も通らず api_channel_autopilot._run_clip_autopilot が clip_factory を直接叩く。",
-    "_theme_queue_comment": "gen_type=clip では未使用（台本生成を通らず clip_factory が直接切り抜く）。切り抜き元の選定は clip.external_sources の許諾ゲート → segment_selection が担う。"
+    "_theme_queue_comment": "gen_type=clip では未使用（台本生成を通らず clip_factory が直接切り抜く）。切り抜き元の選定は clip.external_sources の許諾ゲート → segment_selection が担う。",
+    "_queue_purge_log": [
+      {
+        "date": "2026-09-14n",
+        "removed": [
+          "くら寿司とちいかわ、コラボの裏側とは？",
+          "大谷翔平が教える成功の秘訣とは？"
+        ],
+        "reason": "theme_blacklist 該当（実在個人名・第三者IP・実在ブランド）。blacklist は補充時に照合されないため手動除去。"
+      }
+    ]
   },
   "short_series_name": "金子みゆ切り抜き",
   "main_title_prefix": "",
@@ -719,5 +723,6 @@
       ],
       "_note_20260912": "【2026-09-12 新規付与】この3chは hard_constraints 未設定のため title_constraints.is_enforced() が False になり、検査が丸ごとスキップされていた。禁止したはずの負け型が素通りする状態。min_effective_chars と require_any_of は入れない — タイトルが発言の引用なので、文字数下限や語の必須化は誤引用を作りうる（09-11 の判断を踏襲）。禁止系だけなら引用を壊さない。"
     }
-  }
+  },
+  "_theme_blacklist_note_20260914n": "09-14: google_trends 由来の自動キュー投入が実在個人名・第三者キャラIPを フィクション/解説chに横展開していた（大谷翔平=9ch同時、堀大輔は scp-lab で『なぜ堀大輔は72時間眠らないのか？』として09-14 00:00に実公開済み）。名誉毀損・IPリスクのため theme_blacklist に追加。"
 }

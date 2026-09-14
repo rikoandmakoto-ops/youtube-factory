@@ -445,7 +445,12 @@
       "名場面"
     ]
   },
-  "theme_blacklist": [],
+  "theme_blacklist": [
+    "大谷翔平",
+    "堀大輔",
+    "ヒカキン",
+    "ちいかわ"
+  ],
   "genre_blacklist": [],
   "theme_seeds": [],
   "effects_research": {
@@ -721,11 +726,6 @@
         "angle": "かわいい選手たちの活躍とその背景を科学的に解説。"
       },
       {
-        "id": "55021369",
-        "title": "大谷翔平の成功の秘密とは？",
-        "angle": "科学的視点から見る大谷の身体能力とメンタルの強さ"
-      },
-      {
         "id": "547262c5",
         "title": "渡邊雄太の成功の秘訣とは？",
         "angle": "バスケットボール選手が持つメンタリティを科学的に分析する。"
@@ -767,7 +767,16 @@
       }
     ],
     "_enabled_comment": "2026-08-24 に再開。凍結時の理由（theme_queue 未作成・実績0件）は gen_type=short のチャンネルの話で、gen_type=clip のこのチャンネルには当てはまらなかった。clip 系は theme_queue も台本生成も通らず clip_factory を直接叩く（api_channel_autopilot._run_clip_autopilot）。凍結前の 08-21〜08-23 に実際にひろゆき切り抜き4本が投稿済み。 2026-08-30: 海外バイラル翻訳（旧 clip-viral）を 20:45 スロットとして統合。",
-    "_theme_queue_comment": "gen_type=clip では未使用（台本生成を通らず clip_factory が直接切り抜く）。凍結前は daily-science 由来の科学テーマが15件残っていて、切り抜きチャンネルの運用者を混乱させるだけだったので 2026-08-24 に空にした。切り抜き元の選定は clip.external_sources の許諾ゲート → segment_selection が担う。"
+    "_theme_queue_comment": "gen_type=clip では未使用（台本生成を通らず clip_factory が直接切り抜く）。凍結前は daily-science 由来の科学テーマが15件残っていて、切り抜きチャンネルの運用者を混乱させるだけだったので 2026-08-24 に空にした。切り抜き元の選定は clip.external_sources の許諾ゲート → segment_selection が担う。",
+    "_queue_purge_log": [
+      {
+        "date": "2026-09-14n",
+        "removed": [
+          "大谷翔平の成功の秘密とは？"
+        ],
+        "reason": "theme_blacklist 該当（実在個人名・第三者IP・実在ブランド）。blacklist は補充時に照合されないため手動除去。"
+      }
+    ]
   },
   "short_series_name": "切り抜きラボ",
   "main_title_prefix": "",
@@ -838,5 +847,6 @@
       ],
       "_note_20260912": "【2026-09-12 新規付与】この3chは hard_constraints 未設定のため title_constraints.is_enforced() が False になり、検査が丸ごとスキップされていた。禁止したはずの負け型が素通りする状態。min_effective_chars と require_any_of は入れない — タイトルが発言の引用なので、文字数下限や語の必須化は誤引用を作りうる（09-11 の判断を踏襲）。禁止系だけなら引用を壊さない。"
     }
-  }
+  },
+  "_theme_blacklist_note_20260914n": "09-14: google_trends 由来の自動キュー投入が実在個人名・第三者キャラIPを フィクション/解説chに横展開していた（大谷翔平=9ch同時、堀大輔は scp-lab で『なぜ堀大輔は72時間眠らないのか？』として09-14 00:00に実公開済み）。名誉毀損・IPリスクのため theme_blacklist に追加。"
 }
