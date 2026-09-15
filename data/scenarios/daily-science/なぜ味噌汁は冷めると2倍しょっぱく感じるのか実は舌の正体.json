@@ -1,0 +1,531 @@
+{
+  "title": "なぜ味噌汁は冷めると2倍しょっぱく感じるのか？実は舌の正体",
+  "theme": {
+    "title": "なぜ味噌汁は冷めると2倍しょっぱく感じるのか",
+    "angle": "温度と塩味受容。温度差と感度の関係"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？冷めた味噌汁が濃く感じるのは、舌が温度で変わるからです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！同じ味噌汁でも60℃から40℃で印象が変わるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "塩味は約20〜25℃付近で感じやすく。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホの音量を少し上げたみたいに。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも香りは冷めると弱まるので。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。"
+    },
+    {
+      "speaker": "理子",
+      "text": "次の一杯で温度を意識してみて。食べ物の科学シリーズもあり、高評価を押して1万人目標の毎日投稿をチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？あなたが昼に残した味噌汁を夜に飲むと、同じ一杯なのに急に濃く感じることがあります。塩を足していないのに味が変わる、その違和感には舌と温度の小さな仕組みが関わっているんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！朝はちょうどよかったのに、ぬるくなったら塩を入れすぎたみたいで驚いたよ。味噌汁1杯は約150〜200ミリリットルなのに、温度だけでそんなに印象が動くの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。熱い一口、少し冷めた一口、常温に近い一口では、同じ塩分でも受け取る強さがそろわず、味のバランスが静かに入れ替わるんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！でも味噌汁の塩分が本当に増えたわけではないんだよね。だったら、しょっぱく感じるのは塩そのものより、口の中の受け取り方が変わっているからなの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。食塩の量は鍋の中で変わらなくても、私たちが感じる塩味は温度、香り、舌の表面の湿り方で変わります。今日は台所で起きるこの変化を、飲み頃の温度から一緒にほどいてみます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ、熱々が一番しょっぱくて、冷めるほど薄くなるという単純な話ではないんだね。毎日飲んでいるのに、温度と味の関係を意識したことがなかったから、続きが気になってきたよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず大事なのは、味噌汁はおよそ60℃前後で食卓に出されることが多い点です。その温度では湯気と一緒に味噌やだしの香りが広がり、舌に届く塩味以外の情報も混ざって、全体が丸く感じられます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、湯気を吸い込んだだけでおいしそうって思うよね。味を飲む前から鼻が先に参加しているなら、口の中だけで勝負しているわけじゃないんだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "熱い時は、舌に長く含めずに飲み込むことも多いです。人は熱すぎる飲み物を避けようとして一口を短くしがちなので、塩味をじっくり確かめる時間も短くなり、濃さの輪郭がぼやけやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、飲み方まで関係するの？同じ汁でも、熱い時は急いで通り過ぎ、ぬるい時は口に残して確かめるから、後者のほうが塩が目立つということなんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえるなら、熱い味噌汁は音楽が流れる店内で話を聞くようなものです。香りや熱さという情報が周りにあるので、塩味だけを聞き取りにくいのですが、冷めると周りが静かになり塩味が目立ちます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！塩が急に大きな声になったのではなく、周りの音が小さくなったみたいな感覚なんだね。でも舌そのものも、温度で反応が変わるんだよね？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうです。舌の表面には、塩気を含むいろいろな味を受け取る小さな入口があります。温度が変わると、その入口から脳へ送られる合図の出方も変わるため、同じ濃度でも味の強さが一定にはなりません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、味噌汁の側が変身するというより、受け取る側の設定が少し動く感じなんだね。スマホの画面の明るさが同じ写真の見え方を変えるように、舌にも温度の設定があるのかな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、塩味の感じ方は極端に熱い時や冷たい時と比べ、室温に近い温度帯で目立ちやすい傾向が報告されています。ただし人ごとの差も大きく、誰もが必ず同じ強さで変化するわけではありません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、全員が同じではないんだ！だから家族で同じ味噌汁を飲んでも、母はちょうどいいのに自分だけ濃いと言う、みたいなことが起きるのか。ここからが本題だね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、冷めた味噌汁が濃く感じる理由は塩味だけでは説明しきれないことです。温度が下がると湯気が減り、だし、味噌、ねぎなどの香りが鼻へ届きにくくなって、味全体の印象が変わります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "香りが減ると薄く感じそうなのに、塩味は逆に前へ出るんだね。味噌の甘みやだしの香りが後ろに下がるぶん、塩気だけが取り残されたように感じる、ということなのかな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そのイメージが近いです。味噌汁のおいしさは塩味、うま味、香り、温度が重なった合奏のようなものです。湯気が少なくなると香りの楽器が弱まり、塩味の音だけが相対的に聞こえやすくなります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！冷めた味噌汁がしょっぱいのは、塩分が増えた証拠ではなく、合奏の中で塩の音が目立った結果なんだね。それなら温め直せば元の印象へ近づくの？",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "温め直すと香りが戻り、飲む時の勢いも変わるので、濃さの印象がやわらぐことがあります。ただし、ぐらぐら沸かし続けると水分が蒸発して本当に濃くなるため、温め直しは弱火で短時間が向いています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そこは本当に濃くなる場合があるんだ！鍋を10分以上火にかけっぱなしにすると、水だけが先に減って塩分の割合が上がるから、舌の感じ方とは別の変化まで重なるんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "味噌汁の塩分は、一般に100ミリリットルあたり約0.7〜0.9グラムほどが目安にされます。これは作り方で大きく変わりますが、温度による印象の差と、蒸発による実際の濃縮は分けて考えるのが大切です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "数字で聞くと分かりやすいね。冷めただけなら0.8グラムが急に1.6グラムになるわけじゃなく、脳が受け取るバランスが変わる。でも煮詰めた場合は、汁そのものの中身が変わるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "味の研究では、温度を変えながら砂糖、塩、酸味などを比べる実験が行われてきました。結果は食品や濃度で一様ではありませんが、味覚は温度から独立した物差しではない、と考えられるようになっています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！舌は塩分計みたいに数字だけを読む装置ではなくて、熱さや香りも一緒に受け取るんだね。だから同じレシピでも、飲む瞬間に別の料理みたいに感じることがあるのか。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "人の口には、温度を感じるための細胞と、味を感じるための細胞が近い場所で働いています。熱い、ぬるい、冷たいという情報が脳へ届く間に、塩味の信号も一緒に解釈されるので、味の印象は混ざり合います。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "それなら、熱い味噌汁を一気に飲んだ時と、少し冷ましてからゆっくり飲んだ時で、脳が受け取る順番まで違いそうだね。味見の一口が本番の一口と違う理由も、少し見えてきたよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "このように温度で味の受け取り方が変わる働きには、味覚の温度依存性という名前が付いています。つまり、同じ調味料でも温度が違えば、舌から脳へ届く味の合図が変わり、濃さの印象も動くということです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、名前が付くほど確かめられているんだ！それでも、何℃で塩味が最大になるかは味噌の種類や人によって違うなら、家の味噌汁で確かめるほうが実感しやすそうだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで誤解しやすいのは、冷めると必ず二倍しょっぱくなる、という意味ではないことです。二倍は体感を表す言い方で、実際には塩分の量、だし、具、温度差、飲む人の体調が重なって印象が決まります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、寝不足の日や汗をかいた日には、同じ味噌汁でも感じ方が違うよね。温度だけを一つの理由にするのではなく、舌と鼻とその日の体の状態を合わせて見る必要があるんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "特に鼻が詰まっている日は、香りの情報が減るため、味噌汁のだし感が弱く感じやすくなります。その時に塩だけが目立つ人もいれば、全体がぼんやりして薄いと感じる人もいて、ここは個人差が大きい部分です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！風邪気味で味噌汁がおいしく感じにくい時、味噌を足したくなるけれど、それは味が足りないのではなく、香りを拾いにくくなっている場合もあるんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに、味噌汁に入る具でも印象は動きます。豆腐やわかめのように水分を含む具が多いと、一口ごとに汁の塩味がやわらぐことがありますが、汁だけをすすると塩味を直接強く感じやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、同じ鍋でも具を食べる一口と汁だけの一口で条件が違うんだね。たとえるなら、氷入りの飲み物とシロップだけの部分を飲むくらい、口に入る比率が変わるのか。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔から料理人は、汁物を熱い状態だけで決めず、少し落ち着いた温度でも確かめてきました。提供温度で味が変わることを経験で知っていたからで、家庭でも味見を一回で終わらせない工夫につながります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！味見は鍋の前で一口だけ、と思っていたけれど、食卓で飲む温度を想像してもう一度見るほうが、家族が感じる味に近づけるんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "味噌は香りが魅力なので、長く煮立てすぎないほうがよいと言われます。火を止める直前か、火を止めてから加える作り方は、香りを残しやすく、冷めた後に塩味だけが前へ出る印象も和らげやすいです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "それなら、味噌を最後に溶く習慣には香りのための意味もあるんだね。単に昔からそうするのではなく、湯気の中にある味噌らしさを食卓まで連れていく工夫だったのか。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、温度と塩味の関係には、科学でもまだ結論が一つに固まっていない部分があります。使う塩の種類、濃度、食品の粘り、実験の温度幅で結果が変わるため、すべての料理に同じ数字を当てはめることはできません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そこはまだ分かれているんだ！だからこそ、自分の家の味噌といつものお椀で比べると面白そうだね。研究の平均と、自分の舌の答えは完全に同じとは限らないんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "試すなら、まず同じ鍋の味噌汁を二つのお椀に分けてください。片方はできたてに近い温度で、もう片方は10〜15分ほど置いてから、一口ずつ交互に飲むと、差に気づきやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "交互に飲むのがポイントなんだね。最初のお椀を全部飲んでから次へ行くと、お腹の空き具合や口の中の慣れまで変わるから、温度だけの違いを比べにくくなりそうだよ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "比べる前に水をひと口飲み、30秒ほど口を休ませるのもおすすめです。前の塩味が舌に残ったままだと次の一口が弱く感じるため、味の記憶を軽く整えてから飲むと違いをつかみやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！水で口を整えるだけなら今夜でもできるね。特別な道具がなくても、同じ汁を熱い時とぬるい時で比べれば、舌が温度に反応している感覚を確かめられそうだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "塩分を控えたい時は、冷めて濃く感じたからといって、すぐお湯で薄める前に温め直してみてください。香りが戻るだけで満足感が変わることがあり、塩を追加しなくても飲みやすい温度へ戻せる場合があります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、濃いと感じた時の選択肢は塩を減らすだけじゃないんだね。温度を戻す、だしの香りを活かす、具と一緒に飲むという順番なら、味を乱暴に変えずに済みそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "反対に、作り置きを翌日温める時は、味見をしてから味噌を足してください。一晩で水分が少し蒸発していることもありますし、冷蔵で香りが変わっていることもあるので、見た目だけで濃さを決めないのが安心です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！冷蔵庫から出した味噌汁は、まず温めて香りを戻してから判断するんだね。冷たいままの一口だけで味噌を足すと、食卓では濃くなりすぎるかもしれないんだ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日のポイントは、冷めた味噌汁が二倍しょっぱく感じるのは、塩分が二倍になったからではないということです。温度で舌の受け取り方が変わり、湯気と香りが減ることで、塩味の輪郭が目立ちやすくなります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！台所の鍋の中では同じ一杯でも、飲む人の口と鼻で別のバランスに聞こえるんだね。次から冷めた味噌汁に出会っても、失敗ではなく変化として見られそうだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜は、できたてと10分後の味噌汁を小さな一口で比べてみてください。もし濃く感じたら、湯気、香り、舌に残す時間の三つを思い出すと、あなたの体で起きている変化が見えやすくなります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、冷たい飲み物だけで歯がしみる時に、歯の中で何が動いているのかを見ていくんだね。食べ物の科学シリーズは、毎日の一口が少し違って見えてくるから楽しみだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の味噌汁の話が面白かったら高評価を押して、身近な不思議を毎日1本ずつ一緒にほどくために、チャンネル登録で応援よろしくお願いします。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "冷めた味噌汁",
+      "なぜ濃い？"
+    ],
+    "hook_caption": "冷めると濃い",
+    "subtitle": "同じ一杯なのに味が変わる",
+    "tagline": "温度で変わる舌の感じ方"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。",
+      "matched_topic": "体"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "次の一杯で温度を意識してみて。食べ物の科学シリーズもあり、高評価を押して1万人目",
+          "reason": "1行63字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 19,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 3,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.502,
+      "similar_to": "なぜあなたはくしゃみの3秒前を予感するのか？本当の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ味噌汁は冷めると2倍しょっぱく感じるのか？実は舌の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', 'なぜ', '正体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

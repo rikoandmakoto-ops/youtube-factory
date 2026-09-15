@@ -1,0 +1,557 @@
+{
+  "title": "なぜ江戸の髪切りの噂は一気に広がったのか？文化五年の記録",
+  "theme": {
+    "title": "なぜ髪切りの噂は江戸で一気に広がったのか",
+    "angle": "髪を切られる怪異が繰り返し流行った記録。都市の噂の伝播として扱う。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "見た目はゆるい髪切りでも、江戸では髪が消えたんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それ好きなやつ！でも文化五年の江戸では噂が町を走ったの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、文化五年に髪を切られた話が瓦版へ載った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "今なら学校中の連絡網で、同じ話が一晩で回る感じだね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "犯人は見えないまま、髪だけが落ちた。夜道では首元を見せないほうがいい。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を。伝承の原典ファイルシリーズも調べてあるから、毎日投稿中の1万人目標へチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あなた、誰も触れていないのに髪が数十本も落ちていたら、まず風や寝癖のせいだと思いませんか？江戸ではそれが怪異の合図となり、髪切りの噂は町じゅうへ爆発的に広がりました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "しかも記録には、夜道で髪を切られたと訴える人が続出し、正体不明の犯人を恐れた人々が外出を控えた例まで残ります。今回は、この噂がなぜ江戸で一気に流行したのか、その正体を暴きます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "最も怖いのは、髪切りが一度だけの怪談ではなく、江戸の各地で何度も再燃した点です。被害の話は髪そのものより速く町を走り、見えない刃への恐怖が次の目撃談を生み出していきました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "江戸は人口百万人規模の巨大都市で、長屋、井戸端、芝居小屋、瓦版が情報をつなぐ時代でした。今でいえば、ひとつの不気味な投稿が拡散され、翌朝には近所全員が知っているような環境です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ところが髪切りの恐怖は、単なる流言では終わりませんでした。髪は身分や信仰、女性の人生にも深く結びつく大切なもので、切られたという一点だけで、被害者の不安は現実の脅威へ変わったのです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "そして驚くべき反転があります。人々が怪異を恐れて語れば語るほど、模倣犯や悪戯の余地まで広がった可能性があるのです。次からは、江戸の都市構造が生んだ髪切り流行の仕組みを追います。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "実は髪切りと同じことが、現代のＳＮＳでも起きています。正体不明の被害談ほど、確認される前に町じゅうへ広がるのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "でもこれ、半分は間違いなんだ。江戸で髪切りが急増した証拠ではなく、「出たらしい」という話の記録が急増した面も大きいんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "髪切りは夜道で髪だけを切られる怪異です。命を奪わず、翌朝に切れた髪という証拠らしき物が残るため、噂として信じられやすかったのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "江戸は人口が百万人規模まで膨らんだ巨大都市でした。長屋、湯屋、寺社の参詣で人が密集し、一晩の奇談が翌日には別の地区へ渡ります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "噂の伝播とは、聞いた人が別の人へ語り直す連鎖です。十人が一人ずつに話すだけでも、四回で千人近くへ届く計算になります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "しかも髪は江戸の人にとって身だしなみ以上の意味を持ちました。髪形の乱れは人目を引くから、被害を見せる本人が噂の生きた掲示板になったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "原因がはっきりしないほど、人は怪異で穴を埋めます。刃物、いたずら、虫害などの可能性より、「妖怪の仕業」の方が記憶に残りやすいのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "瓦版は事件を速報する紙のメディアで、珍しい話ほど売れました。髪切りの絵や文が出れば、見た人は自分の近所でも起きると警戒し始めます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "こうして恐怖は被害そのものより、目撃談と予防の会話で増幅します。髪を結い直す何気ない朝の行為まで、江戸では怪異の証言になり得たのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸後期の髪切りは、被害を見た人が少ないのに町中へ広がりました。鍵は怪異そのものより、人口百万人級の都市が持つ噂の回路です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "百万人規模なら、髪を切られたという一件が井戸端や店先を渡るだけで、翌日には別の町の警戒話へ化けても不思議ではないね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "研究でいう伝言連鎖は、聞き手が内容を次へ渡す仕組みです。曖昧な怪談ほど記憶に残る部分だけが選ばれ、髪という印象的な証拠が残りました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "しかも髪は切られれば誰でもすぐ確認できる。犯人を見なくても証拠だけは残るから、寝癖や散髪の失敗まで怪異の被害に見えやすいんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで反転があります。髪切りの流行を増幅したのは、暗い路地だけではありません。人の往来が濃い江戸の情報網そのものが、恐怖を運んだのです。",
+      "expression": "serious",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "瓦版は火事や事件を速報として売る媒体で、珍しい話ほど客を呼びました。髪切りは絵にしやすく、見出しだけでも不安を共有させる題材だったわけだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "心理学の反復効果では、同じ話を繰り返し聞くほど真実らしく感じやすいとされます。髪切りは店、湯屋、長屋で別々に聞こえ、実話のように固まりました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "一九七七年の実験では、初めは疑わしい文でも反復提示でもっともらしさが上がりました。江戸の口伝は、毎日の雑談が同じ実験を続ける形だったのかもね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "さらに夜道で髪を守ろうとする人が増えると、頭巾や警戒した歩き方が目立ちます。その姿が次の目撃証言を呼び、噂は自分で証拠を作る循環に入ります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "つまり髪切りは、怪異が江戸を襲った記録である前に、都市が不安を複製した記録です。次は、その不安が誰に向けられたのかを追っていこう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸後期、夜道で突然髪を切られる「髪切り」の噂は、記録に残るだけでも繰り返し流行しました。犯人の姿は見えず、被害者の髪だけが地面に落ちていたのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ただの悪戯なら捕まえれば終わるのに、相手が見えないから怖さが増すんだね。髪は身体の一部であり、切られた跡そのものが怪異の証拠になったわけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "研究者が注目するのは、髪切りが一村の伝承で終わらず、人口百万人規模の江戸で急拡散した点です。密集した長屋と往来が、噂を毎日運ぶ回路になりました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "江戸では瓦版や井戸端の会話が速報の役目を果たし、一人の被害談が翌日には別の町へ届いたと考えられます。確認不能な話ほど、尾ひれを付けて走りやすいんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "しかも髪切りは、刃物を持つ犯人より妖怪として語られました。正体不明の不安を「髪を奪うもの」という一つの像へまとめると、誰でも説明しやすくなります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ここで反転があります。髪切りの流行は怪物を見た証言より、「髪が切れていた」という小さな痕跡から燃え広がったのです。都市は見えない犯人を自分で完成させました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "当時の髪は身分や年齢、性別を示す重要な身だしなみでした。だから寝ている間に髪を失う話は、命を取られなくても社会的な不安を直接えぐる恐怖だったのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "髪切りの絵や随筆に残る姿が一定しないのも重要です。猿のようなもの、女のようなものと揺れるため、固定された怪物ではなく噂が形を借りた存在に見えてきます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "つまり江戸の髪切りは、都市の過密、情報の速さ、髪への恐れが重なった流行でした。次は、その噂がなぜ妖怪ウォッチ的なキャラクター像へ変わるのかを追います。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "意外なのは、髪切りは江戸で一度だけ騒がれた怪談ではない点です。記録上、享保・寛政・幕末と、時代をまたいで同じ恐怖が何度も再燃しています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "つまり犯人も怪異も毎回同じではなく、「夜道で髪を切られる」という型そのものが都市に残ったんだね。噂は消えず、眠っていただけかもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸は人口が百万人規模に達した巨大都市で、長屋、湯屋、寺社の参詣路が密集していました。人の不安が隣家から隣家へ移る条件が、最初から揃っていたのです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "髪は当時、今より強く身体の一部と考えられていたから、少し切られただけでも傷害以上の屈辱だった。落ちた毛を拾われるだけでも、呪いを疑う人がいました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで反転があります。髪切り騒動が広がるほど、実際に髪を切った者の正体は曖昧になりました。正体不明だからこそ、誰でも次の被害者になれたのです。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "しかも江戸には瓦版という速報メディアがあり、火事や事件の話が絵入りで売られました。髪切りの恐怖は口伝えだけでなく、見える形でも増幅されたんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "瓦版は現代の新聞ほど正確さを保証しません。それでも「誰それが襲われた」という具体的な筋書きは、読んだ人の帰り道を一気に危険な場所へ変えてしまいます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "都市伝説でいう伝播は、噂が人から人へ移ることだね。江戸では湯屋の待ち時間や髪結いの店が、その噂を何度も語り直す場所になったと考えられるよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "髪結いの店が恐怖の中継点になり得たのは皮肉です。髪を整えるために集まった人々が、切られた髪の話を持ち帰り、夜の戸締まりを強めていきました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "だから髪切りは、妖怪の姿が目撃されたから流行したとは限らないんだ。大都会の密度、身体への恐れ、情報の連鎖が重なると、怪異は何度でも生まれ直すんだね。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "今日からは、怖い噂を聞いた瞬間に「誰が、いつ、どこで見たか」を三点だけ確認しましょう。江戸の髪切りも、この穴があるほど尾ひれを付けて広がりました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "たとえば「駅で髪を切られた人がいる」と聞いたら、伝聞か目撃かを分けます。自分で見た話でなければ、事実ではなく噂としてメモするのが安全です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで反転です。髪切りのような怪異は、正体を当てるより「不安が増える伝わり方」を追うと、むしろ怖さの仕組みが見えてきます。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "実践用には、噂を聞いた日時と場所をスマホに一行記録してください。同じ話が別の地区でも同時に出たなら、拡散経路を疑う手掛かりになります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸では井戸端や風呂屋が情報網でした。現代ならグループチャットが同じ役目で、転送回数が増えるほど話は「近所の実話」に見えやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "不安を感じた投稿は、すぐ共有せず十分だけ待つのがおすすめです。待つ間に自治体、警察、施設公式の発信を探せば、誤情報の連鎖を止められます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "髪や服の乱れは誰でも想像できるため、噂の材料になりやすいのです。だから帰宅後に鏡で確認して原因を先に探すだけでも、怪異化を防げます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "子どもに話すなら「知らない人に近づかない」と現実の防犯へ着地させましょう。怪異を断定せず、明るい道を選ぶ行動へ変えるのがコツです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "最後に、怖い話ほど出典を一つ遡る癖を付けてください。髪切りの流行を追う視点は、今夜届く怪談の正体を見抜く小さな防具になります。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "髪切りの噂は、江戸という人口密集地で不安が増幅し、夜道の小さな出来事まで怪異として共有された結果、何度も流行を繰り返しました。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "犯人の正体が曖昧なまま髪だけが切られるからこそ、誰でも次の被害者になれる。江戸の人々は、その見えない恐怖を噂で育ててしまったんだね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "しかも髪は身分や美しさ、時には命にまで結びつく大切なものです。一本の切れ毛でも、ただの悪戯では済まない不吉な印として受け取られました。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "驚くべきは、髪切りが消えたあとも似た話が形を変えて残ったことだよ。都市が大きくなるほど、正体不明の恐怖は新しい怪異を生み出していくんだ。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は「口裂け女はなぜ全国へ広がったのか」を解説するよ。1970年代の学校を震え上がらせた噂が、妖怪のように増殖した経路を追います。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "可愛い妖怪の奥にある伝承の闇や、町に潜む都市伝説をもっと知りたいなら、ゆっくり妖怪ラボの次の調査にもぜひ付き合ってください。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "髪切りの夜道が少しでも怖くなったら、高評価とチャンネル登録をお願いします。それでは次の怪異調査で、また静かにお会いしましょう。",
+      "expression": "smile",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "江戸の夜道",
+      "髪が消える"
+    ],
+    "hook_caption": "髪切り流行",
+    "subtitle": "文化五年に走った髪切りの噂",
+    "tagline": "見えない怪異は都市で増える"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "よかったら高評価を。伝承の原典ファイルシリーズも調べてあるから、毎日投稿中の1万",
+          "reason": "1行60字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 19,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 2,
+        "relatability": 4,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.571,
+      "similar_to": "人面犬の正体は昭和が作った影だった",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "なぜ江戸の髪切りは広がったのか 正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 72,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体'](+20)",
+      "好奇心ギャップ['なぜ', '正体'](+12)"
+    ]
+  },
+  "original_title": "なぜ江戸の髪切りは広がったのか 正体",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "なぜ江戸の髪切りは広がったのか 正体"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

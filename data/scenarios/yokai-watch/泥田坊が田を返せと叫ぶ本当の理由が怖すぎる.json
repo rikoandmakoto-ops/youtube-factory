@@ -1,0 +1,527 @@
+{
+  "title": "泥田坊が「田を返せ」と叫ぶ本当の理由が怖すぎる",
+  "theme": {
+    "title": "なぜ泥田坊は田を返せと叫び続けるのか",
+    "angle": "土地を手放した親の無念という原典の筋を、当時の質入れ慣行から降ろす。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "泥田坊、好きな人多いよね。でも元ネタを知ると見方が変わるんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "あの田んぼ妖怪だよね！でも鳥山石燕の1776年の絵では。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、田を質に入れて失った親が死後に現れ、田を返せと訴えた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "今でいえば、家の土地を借金の担保にして、取り戻せないまま亡くなる感じか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "叫びは怒鳴り声じゃない。家族へ届かなかった最後の頼みだったのかもしれない。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズもチャンネル登録で応援よろしくね。毎日投稿中、1万人目標なんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？泥田坊の原典は1776年刊行の『画図百鬼夜行』に描かれた妖怪なんだ。妖怪ウォッチではあの土くさい見た目が妙に愛らしくて、田んぼの背景にいるだけでも好きな人が多いよね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "泥田坊って、ゲームで見つけると地味なのに忘れられないやつ！でも1776年って江戸時代だよね。そんな昔から「田を返せ」って言い続けていたなら、かわいいだけでは済まない気がする。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、絵師の鳥山石燕が残した姿は、泥から腰を曲げて現れる老人みたいなんだ。そして口元には、たった五文字だけが置かれている。「田をかへせ」と。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。妖怪が叫ぶなら「助けて」でも「うらめしい」でもなく、田を返せだけなの？相手の名前も理由もないから、夜の田んぼで聞いたら誰に向けた声か分からなくて怖いよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あの妖怪の正体は、先代が大切に耕した田を失った家の親だ、と後世の妖怪解説で語られているんだ。つまり泥田坊は田を守る怪物というより、田を守れなかった人間の未練から生まれた姿なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "親が死んだあとも、自分の田に戻ってくるの？妖怪が怖いというより、家族の生活が丸ごと壊れた感じがする。あの五文字は怒鳴り声じゃなく、ずっと届かなかった頼みかもしれないね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで大事なのは、石燕の1776年の絵には親子の事情まで長文で書かれていないことなんだ。石燕が残した確かな材料は、泥田坊という名、田から現れる姿、そして「田をかへせ」という声だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ親が土地を失った話は、石燕の絵を見た人が勝手に作った設定なの？それとも別の資料に残っているの？原典と、あとから広まった話を混ぜたら、妖怪の正体がぼやけちゃうよね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "後代の妖怪解説では、先代が身を粉にして耕した田を、子が手放したため、親が死後に現れる筋が語られる。けれど息子が遊びで売ったなどの細部は、版ごとに揺れるので断定しないほうが正確なんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承として追える核は三つある。第一に田を大切にした親、第二に田を失った家、第三に死後も田から離れられない者だ。この三点だけでも、普通の田んぼが怪談の舞台へ変わるには十分すぎる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "土地を失うって、引っ越しとは違うんだね。今なら家のパソコンもゲーム機も学校の連絡先も一度に消えるような感じかな。しかも田んぼは、次の年の食べ物まで作る場所だったんだよね。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、ここからが本題なんだ。「田を売った」と聞くと自由に現金へ替えたように思えるけれど、江戸の農村には土地を質に入れる慣行があった。質入れは、返済できれば土地を戻せる借金の仕組みだった。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "質入れって、腕時計やゲーム機を預けてお金を借りる質屋と同じ言葉だよね。でも田んぼを預けたら、返済まで米も取れない。生活を助けるための借金が、生活する場所を奪うのはきつすぎるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "土地の質入れでは、借りる金額、利息、返す期限を証文に記した。証文は今でいう契約書だけれど、当時の一枚には次の収穫、年貢、家族の食事が重なっていた。紙を渡すことは、未来を預けることだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "返済期限までに金を用意できれば、田は元の家へ戻る。けれど冷害や洪水、病気が重なれば、返すための金を稼ぐ田そのものが使えない。泥田坊の五文字は、この逃げ道のない輪から聞こえる声として読める。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。借金を返すには収穫が必要で、収穫には田が必要で、その田を借金の担保にしているんだよね。ゲームなら詰み盤面でもリセットできるけど、農家の一年はリセットできないじゃん。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸時代の田は、単なる土地ではなかったんだ。米を作り、年貢を納め、家族の食べる分を確保し、村の中で暮らす資格にもつながる。面積が小さくても、そこを失えば翌年の選択肢が一気に減ってしまう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "第二フックになるけれど、泥田坊は田を奪った人を襲ったとは書かれていないんだ。爪も武器もなく、残るのは五文字の訴えだけ。相手を倒せないからこそ、その声は田の中でいつまでも終われない。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "襲われるより、ただ言われ続けるほうが怖いかもしれない。新しい持ち主も、借金を貸した人も、悪人だと決められないのに、田んぼだけは前の家の苦しさを覚えているみたいだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "質入れはぜいたくのためだけに行われたわけではない。前年の凶作で米が足りない、年貢の納入が迫る、家族が病になった。そんな穴を埋めるため、次の収穫を生む田を差し出すしかない場面があったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "農村の借金は、個人の失敗というより天候と制度に振り回される問題でもあった。雨が長引けば稲は育たず、水が足りなければ苗は弱る。天気予報も保険も十分ではない時代、田を守る難しさは想像以上だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "今日の努力だけではどうにもならない運ゲーに、家族全員の生活が乗っていたんだね。だから親が何年も田を守ってきたなら、手放すときの気持ちは、データ削除なんて軽い言葉では足りないよ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "土地を質に入れるとき、村の有力者や地主、商人が金を出す場合もあった。返せなければ田の耕作権や所有に近い権利が移ることがある。契約の形は地域や時代で違うが、失う側には同じ重さが残る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここでいう質入れは、現代の住宅ローンと完全に同じではない。江戸期には村ごとの慣行や領主の支配によって扱いが変わったからだ。それでも、土地を金に換え、期限までに戻すという不安は共通していた。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "細かい制度は地域で違っても、返せなかったら田が戻らない怖さは同じなんだね。泥田坊が一人の家の話じゃなく、村のどこにでも起こりえた不安みたいに見えてきた。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸後期には、地域によって土地を集められる家と、少しずつ手放す家の差が広がったと考えられている。数字だけでは見えにくいけれど、一枚の田が移るたび、一家の仕事と食事の場所も動いていったんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "田の価値は広さだけで決まらない。水路から水を引けるか、日当たりはどうか、村から遠すぎないかで、同じ面積でも収穫は変わる。親が守った田には、何年もかけて直した畦や水の道まで含まれていた。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "田んぼって、買った瞬間に完成するアイテムじゃないんだね。何年も泥をならして、水の流れを見て、苗を育ててきた場所なら、紙の契約で持ち主が変わっても気持ちは切り替わらないよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから泥田坊は、泥に沈んだ老人の姿で描かれたのかもしれない。これは石燕が明記した説明ではなく、絵と伝承から読む解釈なんだ。ただ、土を耕した人が土から離れられない構図は、親の未練とよく重なる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "石燕の妖怪画は、村で目撃された怪異をそのまま写した記録だけではない。古い本、伝説、絵画、言葉遊びを組み合わせる創作も含まれる。泥田坊が実際の目撃談から生まれたかは、資料だけでは確定できない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ、田んぼで本当に泥田坊を見た人がいたとは言い切れないんだね。でも絵に「田を返せ」と書いてあるから、見た人が自分の村の借金や親子の話を重ねたのかもしれない。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その読み方は自然だけれど、原作と後世の物語を混ぜないことが大切なんだ。石燕の作品にある事実、後の妖怪本で語られる筋、現代の私たちが感じる怖さ。この三層を分けると、泥田坊はもっと不穏に見える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪ウォッチの泥田坊は株式会社レベルファイブの作品に登場するキャラクターで、江戸の親の悲劇を公式設定として再現した存在ではないんだ。ゲームでの姿と、伝承の筋を同一視しないことが、調査では必要になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ファンの間では、ゲームの泥田坊にも土地への執着を重ねる考察があるよね。でもそれは公式発表じゃなく、原典を知った人の楽しみ方なんだ。区別すると、むしろ両方がもっと面白くなる気がする。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "好きな妖怪ほど、元ネタが怖い。泥田坊の怖さは、人を追いかける速さでも大きな牙でもない。生活を守るために働いた場所が、本人を置き去りにして別の家のものになる。その静かな断絶が、ずっと残るんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "田は春に水を張り、夏に青く伸び、秋には刈り取られる。同じ場所が毎年ちゃんと季節を巡るからこそ、前の持ち主だけがそこから消えた事実が際立つ。泥田坊は、その季節に取り残された人影みたいなんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "田んぼは翌年も普通に実るのに、親だけは帰れない。新しい家が悪いわけでもないのに、前の家の声だけが泥の下に残る。こういう怪談は、派手じゃないぶん後から思い出して怖くなるよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "後世の説明には、先代が苦労して作った田を子が売ったとある場合が多い。ただし、子がなぜ売ったのかは版によって明確でない。遊興のためと決めつけるより、借金や困窮も含めて見るほうが伝承に近いんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "子どもを悪者にすると分かりやすいけど、売るしかなかったなら話はもっと苦しいね。親は田を返せと言い、子は返したくても返せない。誰も勝てないクエストみたいで、終わり方が見えないよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "泥田坊の五文字は、田を買った相手よりも、田を手放した家に向けられているようにも聞こえる。けれど誰へ叫んだのかを示す一次資料は乏しい。そこから先は、記録が途切れている。だから声だけが残るんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "分からない部分を勝手に埋めないことも、怪談を読む大事な作法なんだ。名前のない聞き手、戻らない土地、泥の中の老人。この三つだけが残っているから、見る側は自分の家族や村の記憶を重ねてしまう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "説明がないから怖いんだね。誰が悪いのか、いつ返せば終わるのか、泥田坊自身が何年そこにいるのかも分からない。分からないまま田の端に立っているから、目をそらせなくなるんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "現代では土地を売る話を数字や価格で見ることが多い。でも泥田坊の時代感覚では、田は食べ物、働き場所、家の名、村とのつながりをまとめて支える基盤だった。失ったのは一筆の土地ではなく、暮らしの続きなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪を読むときは、絵の怖さだけで終わらせないほうがいい。泥田坊の顔を見たら、その背後に一年分の苗、水、米、年貢を想像してみる。すると「田をかへせ」は、急に現実の重さを持って聞こえてくる。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームの背景にある田んぼも、前より静かに見えそうだよ。泥田坊がそこに立っていたら、敵を倒したいんじゃなくて、帰る場所を探しているだけなのかもしれないって考えちゃう。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、ゲーム内の泥田坊へ原典の悲劇をそのまま当てはめるのは、公式設定ではない。これは民俗資料と妖怪画から見える読み方なんだ。作品を楽しむ気持ちと、古い伝承の痛みを知ることは、別々に大切にできる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "泥田坊が叫び続ける理由は、田が金額ではなく、家族が生きる時間だったからなんだろう。返してほしいのは泥のついた地面だけではない。そこで続くはずだった食事、労働、親子の時間まで、返せと訴えている。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "「田を返せ」が、ただの決めぜりふじゃなくなったよ。五文字しかないのに、その前には何年もの苦労があって、その後には何年もの困りごとが続く。聞こえたら、返事をしてはいけない気がする。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は妖怪ウォッチのジバニャンを入口に、猫が家へ戻るという日本の伝承を追う予定なんだ。かわいい猫の帰り道が、夜の戸口ではなぜ不吉な話へ変わるのか、文献と語りを分けて調べていく。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ジバニャンの話も、帰ってくるから安心ではないかもしれないんだね。泥田坊みたいに、帰りたい場所がある妖怪ほど、戻れない理由を知ると急に寂しくて怖くなるよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズをチャンネル登録で追ってほしい。毎日投稿中で1万人目標だから、次の原典調査も応援よろしくね。田に残る声の続きを、また静かに確かめよう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そして夜、田んぼの脇を通るとき、泥の匂いの向こうから五文字が聞こえても、誰の土地だったのか尋ねないほうがいい。答える声が一つ増えたら、泥田坊はもう田を返せと叫ばなくなるのかもしれない。",
+      "expression": "think",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "田を返せ",
+      "親の無念"
+    ],
+    "hook_caption": "田を返せ",
+    "subtitle": "土地を失った親の伝承",
+    "tagline": "田んぼに残った五文字の叫び"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": false,
+      "score": 65,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 2,
+          "text": "あの田んぼ妖怪だよね！でも鳥山石燕の1776年の絵では、田を返せと叫ぶんだ。",
+          "pattern": "叫[ぶび声]",
+          "reason": "叫びの描写は視覚的な代替が必要"
+        },
+        {
+          "type": "audio_dependent",
+          "line": 5,
+          "text": "叫びは怒鳴り声じゃない。家族へ届かなかった最後の頼みだったのかもしれない。",
+          "pattern": "叫[ぶび声]",
+          "reason": "叫びの描写は視覚的な代替が必要"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズもチャンネル登録で応援よろしく",
+          "reason": "1行57字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 3
+    },
+    "viral_score": {
+      "score": 19,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 5,
+        "relatability": 4,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.533,
+      "similar_to": "なぜ山彦は妖怪の正体だったのか",
+      "template_issues": [
+        "直近10本中4本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "泥田坊が田を返せと叫ぶ正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['理由'](+12)"
+    ],
+    "rejected_title": "泥田坊が田を返せと叫ぶ正体",
+    "attempts": 1
+  },
+  "original_title": "泥田坊が田を返せと叫ぶ正体",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "死後も3度叫ぶ泥田坊…田を失った親の無念が怖すぎる理由"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

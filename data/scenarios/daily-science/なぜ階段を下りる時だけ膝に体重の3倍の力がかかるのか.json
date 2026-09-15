@@ -1,0 +1,558 @@
+{
+  "title": "なぜ階段を下りる時だけ膝に体重の3倍の力がかかるのか",
+  "theme": {
+    "title": "なぜ階段を下りる時だけ膝に3倍の力がかかるのか",
+    "angle": "身体感覚＋倍率。下りの衝撃荷重を3行目で言い切る"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "満員電車の圧みたいな力が、下り階段では膝に集まります。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！一段で体重の約3倍にもなるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "下りの着地では膝が体重の約3倍を受け止めるからです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！60kgなら180kgを支える感じだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも太ももは伸びながら踏ん張るので、下りだけ膝が重くなりやすいんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこの科学的事実、ポケモンの裏設定の元ネタなんだ。"
+    },
+    {
+      "speaker": "理子",
+      "text": "手すりで力を分けてみて。体の謎シリーズも、高評価を押して1万人目標の毎日投稿をチャンネル登録で応援よろしくね！",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？駅の階段を下りた翌日だけ、膝の前がじんわり重いことはありませんか。\nあなたの膝では一段ごとに、体を止めるための大きな力が働いています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日ありました！上るほうが息は切れるのに、下りた後だけ膝が疲れるのは、歩数や年齢だけの問題ではないんだね？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "歩行中に膝へかかる力は体重の約2〜3倍とされ、階段を下りる一歩では約3倍に達します。\n体重60kgなら180kg相当です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！60kgの自分が一段ごとに180kg相当を受けるなら、買い物帰りに膝が頼りなく感じるのも自分事だね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも上りでは体を前へ押し出しますが、下りでは下へ進む体を減速させます。\n同じ階段でも膝が担当する仕事は、上りと下りでかなり違うんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、下りるときは足を置く前から体が前下方へ行きたがる感じがします。\n膝はいつから止め始めるの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "足裏が段に触れた直後も、体は重力で下へ動き続けようとします。\n膝は少し曲がりながら、その動きを短い時間でゆっくり小さくしていきます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たった一段でも、体は止まらずに落ちる方向へ進んでいるんだね。\nだから膝が曲がるのは、ぐらつきではなく受け止める準備なのかな？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。たとえるなら、坂道でショッピングカートが前へ転がらないよう両腕で引き戻す場面と同じです。\n膝まわりも毎段でブレーキをかけます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、カートなら勢いが大きいほど腕が疲れるよね！階段を急いで下りるほど、膝も強いブレーキを何度も踏むことになるの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "下りる速さが上がるほど、着地した後に減らす勢いも増えます。\n同じ20段でも、ゆっくり下りた日と駆け下りた日で、膝の感じ方が変わる理由です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "駅で電車に間に合おうとして駆け下りた日に限って、夕方に膝が重いことがあります。\nそれは20段を急いだ分のブレーキだったんだね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、膝は棒のように固めて耐えるのではありません。\n少し曲がることで受け止める時間を作り、衝撃を一か所へ集中させにくくしています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！膝を曲げると不安定になりそうなのに、着地では逆に体を守るクッションになるんだ。\n靴の底とも似ているね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "靴底のクッションが少し沈んで衝撃を広げるように、膝の曲がりも力が伝わる時間を伸ばします。\nただし膝だけで全てを吸収しているわけではありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ膝のほかには、どこが一緒に働いているの？足首やお尻も使っているなら、下りの姿勢を変えるヒントになりそうだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "足首、股関節、太もも、お尻も一緒に働きますが、膝の前側は曲がった姿勢で力を受けやすい場所です。\nそのため膝に意識が集まりやすいのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "実はこれ、今あなたが椅子へゆっくり座るときにも起きています。\nお尻が座面へ着く直前、太ももと膝が体の落下を止めているんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "椅子へ座る動作を10回続けると、階段の下りで使う感覚が分かりやすくなります。\n勢いよく座らず止めようとした瞬間、太ももの前が働くはずです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それなら家で今すぐ確かめられる！でも座るときより、階段のほうが膝が重く感じるのは、段差があるぶん体が落ちるから？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "段差があると、体は前へ進むだけでなく下へも移動します。\n下りではその縦方向の動きも止めるため、平らな道を歩くより膝の支える仕事が増えやすいのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "平らな廊下なら同じ60kgでも、下へ落ちる分は少ないんだね。\n階段の一段が低く見えても、体には追加の動きとして届いているのか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、体重の約3倍という数字は全員にぴったり同じ値がかかる意味ではありません。\n体格、速度、段の高さ、荷物、測る場所によって数値は変わります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "3倍は目安なんだね。でも自分の体重だけを支えると思っていたより、ずっと大きな仕事を膝がしていることは変わらないんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では床から返る力、膝の角度、筋肉の働きを組み合わせ、関節の中で受ける力を推定します。\n体重計に乗るだけでは見えない、動いている最中の数字です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！足裏が受ける力だけでなく、曲がった膝を筋肉が引く力まで足すから、180kg相当という数字になるんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "下りで膝の前側に負担が集まりやすいのは、膝のお皿が太ももの骨へ押される力も増えるからです。\n膝を深く曲げるほど、その押す力は増えやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "駅の低い段より、古い建物の高い段を下りるほうが膝に来ることがあるよ。\n深く曲げる時間が長いなら、あの体感にも説明がつくね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "2016年に公表された階段動作の解析でも、下りは上りより膝まわりで体を支える仕事が大きくなりやすいと示されています。\n日常の感覚と研究がつながる部分です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "数字で比べても下りのほうが大変なんだ！上りで息が上がるのとは別に、下りでは膝が受け止め役になるから、疲れ方が違うんだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この働きに名前が付いていて、筋肉が伸びながら力を出す動きを遠心性収縮と言います。\n要するに、落ちる体をゆっくり止める筋肉のブレーキです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "遠心性収縮って聞くと難しいけれど、椅子に座る途中や坂を下るときの、ゆっくり止める感覚だと思えば分かりやすいね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "このブレーキの働きは、少ない酸素で大きな力を出せる一方、慣れていないと翌日に太ももの張りを残すことがあります。\n久しぶりの山道で起きやすい理由です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "山を上った日より、下った翌日のほうが太ももの前が張った経験があります！下り坂では膝と太ももが長時間ブレーキを握っていたんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、膝に違和感がある人が必ず階段を避けるべきとは限りません。\n痛みの原因、回復の段階、普段の運動量で、適した動き方は一人ずつ違います。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "運動不足だから我慢して下りればいい、とは言えないんだね。\n毎日使う膝だからこそ、痛みを数字や根性だけで片づけないほうが良さそう。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "腫れ、熱っぽさ、引っかかる感じ、体重をかけにくい状態が数日続くなら、自己判断で負荷を重ねず医療機関へ相談してください。\n無理をしないことも大切です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、ただの疲れと決めつけないほうがいいんだね。\nいつもの下り方なのに急に痛い、という変化なら体からの連絡として受け取りたいな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "意外なのは、下りの負担が年齢だけで決まらないことです。\n速さ、荷物、靴底の安定感、段差の高さだけでも、同じ人の一歩に加わる力は変わります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、急いでリュックを背負った日は、階段の一段がいつもより重く感じるよ。\n荷物の分まで膝が受け止めるんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "例えば10kgの荷物を持てば、下りの着地で支える力もその重さに応じて増える方向になります。\n米袋を抱えた帰り道ほど、急がず一段ずつ下りる価値があります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "10kgの米袋を持っていたら、体だけでも60kg以上になるもんね！そこへ下向きの勢いまで足されるなら、手すりを使いたくなるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "手すりは転ばないためだけの道具ではありません。\n軽く触れて腕へ一部の力を分けるだけでも、膝が一人で受け止める量を減らしやすくなります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！強くぶら下がらなくても、指先で支えを作るだけで、膝と腕が荷物を分けるように協力できるんだね。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "1970年代以降、公共施設の階段では手すりの重要性が何度も見直されてきました。\n転倒を防ぐだけでなく、毎日の下りを安定させる役にも立っています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "昔から手すりがあるのは飾りではなかったんだね。\n子どもと手をつないでいる日や、傘と荷物を持つ雨の日ほど、その助けが大きそうだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日からできる第一歩は、足先だけで段を探さず、足裏をなるべく安定して置くことです。\n着地を急がなければ、膝が慌てて体を止める必要も減ります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "足裏を置いてから次の足を出すだけなら、明日の駅でも試せそうだね！一段飛ばしより、膝が準備する時間を作れそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次に、膝だけを前へ突き出しすぎず、股関節も少し曲げる意識を持ってみてください。\nお尻側にも支える役を分けると、膝へ仕事が偏りにくくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、重い段ボールを指一本で持たず、両手で抱える感じだね！膝とお尻で分担すれば、一か所だけが頑張り続けずに済むんだ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "速さも大切です。下り始めの2〜3段だけ歩幅を小さくすると、体を止める時間を作れます。\n急なブレーキより、ゆっくりしたブレーキのほうが膝は扱いやすいです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "朝は急ぎたくなるけれど、最初の3段でリズムを整えるだけなら続けられそう。\n膝が重い日は、手すりも一緒に使いたいな。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "運動をしている人なら、椅子から5回ほどゆっくり立ち座りする練習も役立つ場合があります。\nただし痛みを増やさない範囲で行い、回数を競わないでください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "回数を増やすより、座る途中で太ももが体を支える感覚を確かめるんだね。\n家の椅子なら、階段のブレーキを安全に思い出せそうだよ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まとめると、下り階段で膝にかかる約3倍の力は、落ちる体を一段ごとに止めるために生まれます。\n楽そうに見える下りほど、支える仕事は細かいのです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！明日から階段を下りるとき、膝が毎段ブレーキをかけていると分かれば、急がず足裏を置こうと思えるね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜や明日の帰り道、最初の3段だけ手すりに触れて、ゆっくり下りる感覚を試してみてください。\n小さな工夫でも、体への伝わり方は変わります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなるのはなぜかを見ていくんだよね？\n自分の体で毎晩起きることだから、続きも気になるよ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白かったら高評価で教えてください。身近な不思議を毎日1本ずつ解く体の謎シリーズを、1万人目標のチャンネル登録で応援よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "下りだけ重い",
+      "膝に3倍"
+    ],
+    "hook_caption": "膝に3倍",
+    "subtitle": "一段下りるたび膝は体を止めている",
+    "tagline": "あなたの膝で毎日起きるブレーキの正体"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "実はこの科学的事実、ポケモンの裏設定の元ネタなんだ。",
+      "matched_topic": "体"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "手すりで力を分けてみて。体の謎シリーズも、高評価を押して1万人目標の毎日投稿をチ",
+          "reason": "1行55字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 15,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.554,
+      "similar_to": "なぜ朝は身長が2cm高いのか？あなたの背中の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ階段を下りると膝に3倍？本当の理由"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '本当の理由'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "original_title": "なぜ階段を下りると膝に3倍？本当の理由",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "なぜ階段を下りると膝に3倍？本当の理由"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

@@ -1,0 +1,212 @@
+{
+  "title": "楽天トラベルの年収、最大70%割引の裏側",
+  "theme": {
+    "title": "楽天トラベルの裏側！九州ふっこう割の影響とは？",
+    "angle": "楽天トラベルの年収やボーナスに、地域振興策がどう影響しているかを解説。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "旅行企業の実態",
+      "fact_main": "楽天 年収797万円",
+      "fact_sub": "2024年12月期有報",
+      "text": "驚きです。楽天の平均年収797万円。その裏で旅行支援の集客競争が動きます。",
+      "bg_query": "楽天グループ株式会社 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "賞与 年2回",
+      "fact_sub": "楽天グループ採用情報",
+      "text": "賞与は年2回です。金額は個人評価と業績で変わり、固定ではありません。",
+      "bg_query": "楽天グループ株式会社 オフィス",
+      "duration": 4,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "最大70%割引",
+      "fact_sub": "九州ふっこう割の上限",
+      "text": "九州ふっこう割は最大70%の補助でした。",
+      "bg_query": "楽天トラベル 九州 旅行",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "予算180億円",
+      "fact_sub": "観光庁の復興支援策",
+      "text": "支援予算は180億円でした。数字だけ見ればかなり良い。",
+      "bg_query": "楽天トラベル 九州 宿泊施設",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "有休取得率 67.9%",
+      "fact_sub": "楽天グループ公表値",
+      "text": "有休取得率は67.9%です。",
+      "bg_query": "楽天グループ株式会社 社員 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "休日 年間123日",
+      "fact_sub": "楽天グループ採用情報",
+      "text": "年間休日は123日です。ただし旅行予約は休日にも動きます。",
+      "bg_query": "楽天トラベル 旅行予約 スマートフォン",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "最大70%割引",
+      "年収の裏側"
+    ],
+    "subtitle": "楽天トラベルと九州復興支援",
+    "tagline": "旅行需要は社員待遇にどう響くか"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 17,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.468,
+      "similar_to": "USJの年収は推定350万円、人気の裏で土日勤務",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "楽天トラベルの年収、最大70%割引の裏側"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['裏側', '年収'](+20)",
+      "好奇心ギャップ['裏'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

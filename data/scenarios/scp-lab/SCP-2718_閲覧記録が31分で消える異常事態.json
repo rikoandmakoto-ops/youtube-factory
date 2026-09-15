@@ -1,0 +1,573 @@
+{
+  "title": "SCP-2718 閲覧記録が31分で消える異常事態",
+  "theme": {
+    "title": "SCP-2718 閲覧記録が31分で全消去された理由",
+    "angle": "閲覧した人間ではなく記録の側が消える。31分の一致を扱う"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実は君の閲覧履歴から先に消える。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、待って。消去までの時刻が全員31分なのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閲覧記録31件は全消去され、残ったのは死後も意識が続く記述だけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "31人分の名簿が、授業1コマの後に空欄になるみたいで怖い。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "消えたのは読んだ職員ではない。記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この消去記録は財団の裏側シリーズにも残る。高評価を残し、毎日投稿中の1万人目標へチャンネル登録で応援しろ。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなた、保存したはずの記録だけが消え、閲覧者は無傷だったことありませんか？SCP-2718では全資料が同じ31分で消去されました。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今回は、見た人間を壊すのではなく、記録そのものを消すSCP-2718の正体を暴く。削除時刻が31分で一致した理由が核心です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最強の事実は、紙、端末、複製サーバーまで例外なく失われたのに、閲覧した職員は内容を鮮明に証言できたという逆転です。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-2718は死後の意識に関する情報災害、つまり知った内容が現実へ作用する異常です。ところが消える標的は知識ではなく記録でした。",
+      "expression": "thinking",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "31分という猶予は偶然ではありません。報告書を開いた瞬間から、財団の保全手順より先に消去が進む時限装置のように働きました。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべき反転はここです。財団が封じたかったのは閲覧者ではなく、誰かが残そうとした痕跡そのものだった可能性が浮上します。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "でもこれ、半分は間違いなんだ。消えたのは閲覧者の記憶ではなく、SCP-2718を読んだ記録そのものだった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団の検証では、閲覧開始から必ず31分後に、端末ログ、紙の控え、監視映像の索引まで同時に欠落したんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "つまり人が内容を忘れる現象ではない。読んだという事実を示す帳簿だけが、後から静かに破り取られる仕組みなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "たとえば図書館で禁書を読んでも、読者は席に残るのに、貸出台帳の名前と防犯カメラの該当時刻だけが消える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "31分という数字は偶然ではない。複数施設で時計の誤差が最大17秒あっても、消去までの経過時間だけは一致した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "この現象は情報災害、つまり知った内容が人や媒体へ異常を及ぼすタイプとして扱われた。だが被害を受ける媒体が逆なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "普通の情報災害なら読者が発狂したり感染したりする。2718では読者は残り、読者を証明するデータだけが先に死ぬ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも手書きの複写を金庫へ封じても例外ではなかった。31分後、文字は残るのに閲覧日時だけが空白へ変わった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから財団は閲覧者を隔離するより、31分以内に証言を採取する手順を採用した。記録が消える前だけが、検証できる時間なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "検証班は閲覧端末48台を隔離した結果、表示開始から31分00秒で全ログが消失したと報告した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消えたのは閲覧者の記憶ではなく、端末内の文字列、監視映像、紙への印刷まで含む記録媒体そのものだった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も異常なのは、消去時刻の誤差が48回中わずか0.8秒で、通信遮断や端末交換でも一致した点です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "研究員はこれを情報災害と分類した。情報災害とは、知る行為そのものが危険な影響を起こす異常現象のことだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だがSCP-2718では知った人間が壊れる前に、知識を保存した側が先に消える。記録が閲覧者を守るように死ぬ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "第12実験では、内容を暗号化して3都市の保管庫へ複製した。それでも31分後、計9組の復号鍵だけが空白化した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "紙媒体は燃えず、磁気媒体も破損しない。ただし該当箇所だけが未記入になり、インクの化学成分まで周囲と同一化した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここで反転がある。消去前に内容を暗記した研究員17名のうち16名は、31分後も全文を正確に再現できた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "唯一の例外は音声記録で、再生中に31分を迎えた6件は無音化せず、聞き手の発話だけを逆向きに保存した。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団は一致する31分を偶然と扱わず、記録が存在できる猶予時間と仮定した。次は、その猶予を延ばした実験を見る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2718の記録は、閲覧者ではなく閲覧記録そのものが消える。しかも消去までの時間は、例外なく31分だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最初の異常は2007年、死亡した財団職員の端末から報告された。監査官が開いたログは31分後、空白へ変わった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "当初は遠隔消去プログラムが疑われ、技術部門が通信を遮断した。しかし隔離端末の紙の閲覧台帳まで同時に消えている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "消えるのはインクやデータではなく、「誰が内容へ触れたか」という痕跡だけだ。31分後、監査記録は最初から無かった形になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで反転が起きる。閲覧者の記憶は残り、記録だけが消えるため、職員は自分の体験を証明できなくなった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "研究主任エリアス・ショウは、消去時刻を毎分計測した。12回の試験すべてで、誤差は時計の針1秒分にも届かなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ショウは31分を「認識痕の寿命」と仮称した。だが対象文書を読まず、表紙へ触れただけの記録も同じ時刻に失われた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "2011年には、消去前のログを別サイトへ複製する試験が行われた。それでも複製先の監査番号だけが31分後に欠番となった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が恐れたのは情報漏洩ではない。記録が消えるたび、SCP-2718を知った人間だけが歴史から切り離されていく点だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も不可解なのは、閲覧者が消えるのではない点です。報告書を複製した端末、紙、監視映像まで、開始から31分で記録だけが失われました。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも31分という数字は推定値ではありません。財団が回収した42件の閲覧ログすべてで、消去時刻の誤差は最大でも0.8秒以内でした。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで反転します。消えたのはSCP-2718の情報ではなく、『情報を保存した』という痕跡そのもので、職員の記憶だけは完全に残ったのです。",
+      "expression": "fear",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "デジタル消去なら障害を疑えますが、鉛筆で書いたメモの文字まで白紙化しました。紙の繊維は残り、筆圧のへこみだけが読めない墓標のように残ります。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はこれを記録媒介性消去と分類しました。これは内容でなく記録媒体へ作用する現象で、例えるなら本棚から本の題名だけを剥がす異常です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "31分の起点はファイルを開いた瞬間ではなく、内容を理解した時点とされます。音声を再生しても意味を聞き取れなかった職員の端末は、消去を免れました。",
+      "expression": "thinking",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "さらに恐ろしいのは、閲覧者同士が口頭で照合しても記録を再構成できないことです。書き起こした直後から文章は崩れ、固有名詞だけが最初に失われます。",
+      "expression": "fear",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "これは検閲とは違います。検閲には消す主体と目的がありますが、SCP-2718では誰が処理したのか不明で、財団の削除班も介入記録を否定しました。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "歴史的には、31分を越えて残ったと主張する記録も1件だけありました。しかし調査員6名の署名は残ったのに、本文は全ページ空白だったのです。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり財団が恐れたのは閲覧者の死亡ではなく、検証手段の喪失です。次に31分の一致が崩れた時、残るのは記憶だけかもしれません。",
+      "expression": "fear",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "今日からは、重要な閲覧履歴を31分以内に別媒体へ残す習慣です。SCP-2718型の恐怖は、読んだ人ではなく記録が先に消える点にあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "実践は簡単です。会議メモや調査結果を保存した直後、紙・端末・共有先の三系統へ複製し、消失時刻を分単位で書き添えてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで反転です。31分後に消えるなら待てば安全、ではありません。消えた記録の空白が、後から内容を書き換える余地として残るからです。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "タイムスタンプは改竄検知の目印です。例えば10時00分に作成し10時31分に消えたなら、内容より先に消失そのものを報告対象にします。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "家庭なら、服薬記録や鍵の受け渡しを一人だけで管理しないのが有効です。二人が別々に確認すれば、片方の履歴消失を比較で発見できます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "職場では、消えた文書を記憶だけで復元しないでください。復元案には推測が混ざるため、原本消失・確認者・発見時刻を分けて記録します。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "31分という一致を試す際も、危険な情報を使う必要はありません。無害な短文を五件用意し、保存場所ごとの残存状況だけを観察しましょう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "観察表には、作成時刻、確認者、保存先、消失確認時刻の四欄を置きます。数字で並べると、偶然の削除と周期的な異常を切り分けやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最優先は、消えた内容を追うより消えた事実を残すことです。SCP-2718の閲覧記録が示す31分は、記憶より検証手順を守れという警告です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2718の恐怖は、閲覧者が消えるのでなく、閲覧記録そのものが31分後に痕跡なく消える点でした。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "端末、紙の控え、監視ログまで同じ時刻に欠落し、誰が読んだかを財団すら追跡できなくなる異常です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも31分という一致は偶然の故障率を超え、記録だけが自らの存在を拒むように消えた、と考えられます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべきは、消去後に残るのが空白ではなく、『閲覧したはずだ』という職員の恐怖だけだったことです。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-3001、赤の現実で時間と肉体を失った研究員の記録を、収容事故の数字と共に解説するよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "帰還不能とされた空間で、報告書が何年分も続いた理由とは何か。財団の救助記録を最後まで追います。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録が消えても恐怖は消えません。高評価とチャンネル登録で、次の機密報告書の閲覧者になってください。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "記録が消える",
+      "31分の一致"
+    ],
+    "hook_caption": "31分で消去",
+    "subtitle": "閲覧者ではなく記録が失われた",
+    "tagline": "残ったのは、消去時刻だけだった"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "この消去記録は財団の裏側シリーズにも残る。高評価を残し、毎日投稿中の1万人目標へ",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 26,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 4,
+        "emotional_impact": 5,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.603,
+      "similar_to": "SCP-███ クラスAの10年の真相",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-2718「死後の記憶」31分消去の実態"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-2718「死後の記憶」31分消去の実態",
+    "attempts": 1
+  },
+  "original_title": "SCP-2718「死後の記憶」31分消去の実態",
+  "title_constraints": {
+    "ok": false,
+    "violations": [
+      {
+        "rule": "max_digit_groups",
+        "label": "数字は1個まで",
+        "detail": "2718/31"
+      },
+      {
+        "rule": "require_any_of",
+        "label": "答え提示語が必須",
+        "detail": "理由/正体/本当の/実は/わけ/なぜ/真相/裏側/実態"
+      }
+    ],
+    "rejected_title": "なぜSCP-2718の閲覧記録は31分で消えるのか？"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": [
+    "タイトル規約違反が未解消: 数字は1個まで(2718/31) / 答え提示語が必須(理由/正体/本当の/実は/わけ/なぜ/真相/裏側/実態)"
+  ]
+}

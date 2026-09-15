@@ -1,0 +1,220 @@
+{
+  "title": "リクルート年収1,138万円、実は等級で差が出る",
+  "theme": {
+    "title": "リクルートの平均年収1,138万円、実は等級で倍近く違う",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "年収の実態",
+      "fact_main": "リクルート1138万円",
+      "fact_sub": "2025年3月期・平均年収",
+      "text": "年収1,138万円。ただし、この数字には理由があります。",
+      "bg_query": "株式会社リクルートホールディングス 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "平均年齢38.1歳（2025年3月期）",
+      "fact_sub": "2025年3月期",
+      "text": "平均年齢は38.1歳です。若手だけの平均ではありません。",
+      "bg_query": "株式会社リクルートホールディングス オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "従業員数119人",
+      "fact_sub": "持株会社の単体人数",
+      "text": "この1,138万円は119人の単体平均です。",
+      "bg_query": "株式会社リクルートホールディングス エントランス",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "年収差は約2倍",
+      "fact_sub": "等級・職種で変動",
+      "text": "実はこの裏で、等級と職種により年収差は約2倍と推定されます。",
+      "bg_query": "株式会社リクルートホールディングス 会議室",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "賞与年2回",
+      "fact_sub": "会社規程で支給",
+      "text": "賞与は年2回です。ただし、個人評価で受け取る額は変わります。",
+      "bg_query": "株式会社リクルートホールディングス 社員 オフィス",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "給与改定は年2回",
+      "fact_sub": "公式採用情報",
+      "text": "給与改定は年2回です。成果が出れば早く動く一方。",
+      "bg_query": "株式会社リクルートホールディングス 働く人",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "年収1138万円の注意",
+      "fact_sub": "持株会社単体の平均",
+      "text": "ただし、1,138万円は持株会社の平均です。",
+      "bg_query": "株式会社リクルートホールディングス 本社 夜景",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったら、話題の企業の実態シリーズもプロフィールでチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "平均1138万",
+      "等級で差"
+    ],
+    "subtitle": "有価証券報告書ベース",
+    "tagline": "年収アップ転職の実態"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 14,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.483,
+      "similar_to": "トヨタの年収895万円、ルーミー人気の裏側",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "リクルート年収1,138万円、実は等級で差が出る"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '年収'](+20)",
+      "好奇心ギャップ['実は'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 1
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}
