@@ -1,0 +1,526 @@
+{
+  "title": "なぜ立つと3秒で暗くなるのか？血圧変動の正体",
+  "theme": {
+    "title": "なぜ立ち上がった3秒後に目の前が暗くなるのか",
+    "angle": "起立性の血圧変動。3秒という具体秒数を軸に"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "水道の蛇口を急にひねるように、立つと目の前が暗くなります。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！立ってから3秒くらいで白くなることあるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "立つと血液が足へ寄り、脳へ届く血の量が数秒だけ減るからです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホの通信が一瞬遅れるみたいなものなんだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも体はすぐ立て直しますが、脱水の日は追いつくまで長くなるんです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "立つ前に足を動かすのを今日から意識してみて。体の謎シリーズも、高評価とチャンネル登録で1万人目標を応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？立ち上がった3秒後に目の前が暗くなるのは、あなたの体が急に壊れた合図とは限らないんです。\n椅子から勢いよく立った直後、視界が白っぽくなる数秒には、血液の移動の遅れが関わっています。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！朝に布団から立ったら、壁が遠くなる感じが3秒くらい続いて、思わず机に手をついたよ。\n寝ぼけているだけではなく、体の中で本当に血の流れが変わっているなら気になるな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "座っている間は頭と心臓の高さが近いのに、立った瞬間には頭が約30センチ高くなります。\nペットボトルを30センチ持ち上げるような差でも、血液には重力という下向きの力が働くので、脳へ届く量が一瞬減りやすいんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "30センチだけで目まで影響するの？水の入ったコップを棚へ置くくらいの高さなのに、体の中ではそんなに違うんだね。\nじゃあ暗くなるのは目が急に悪くなるのではなく、目へ信号を送る脳側の流れが関係しているの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。目は脳から届く信号を受け取って見えているので、脳への血の流れが短く減ると、視界が先にぼんやりしやすいんです。\n多くの場合、立ってから2秒から5秒ほどが、体の調整が追いつくまでの短い時間になります。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、座り直せばすぐ戻ることが多いよね。でも、その数秒で体は何をして元に戻しているの？\nただし、ここからが本題だね。血が足へ行ったままなら、毎回立つたびに困ってしまうはずだよ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず立つと、約500ミリリットルの血液が重力の影響で脚やお腹側へ移りやすくなります。\n500ミリリットルは小さめのペットボトル1本分ほどで、血液が消えたのではなく、体内の配達先が下へ偏るだけなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！体の中でペットボトル1本分が下へ寄るなら、頭のほうが一瞬手薄になるのも分かる気がするよ。\nでも血液は心臓がずっと押しているのに、どうしてすぐ同じ勢いで上へ送れないの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "心臓は急な姿勢の変化を予告なしに受けるので、立った最初の数秒だけは、1回で送り出す血液の量が減りやすいんです。\nたとえるなら、ホースの先を急に高く持ち上げたとき、水の勢いが整うまで少し間があるのと同じなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ホースの水が一瞬弱くなる感じなら、目の前が暗くなる感覚とつながるね。じゃあ脳は、その遅れをずっと待っているだけなの？\n毎日何十回も座ったり立ったりするのに、体にはもっと早く立て直す係がいるはずだよね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "耳の近くと首の血管には、血の押す力の変化を見張る小さな感知役がいて、下がった瞬間に心臓へ知らせます。\n通知が届くと、心臓は少し速く打ち、血管はきゅっと細くなって、頭へ血を戻そうとするんです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、体の中に自動通知があるんだ！スマホが電波をつかみ直すより先に、血管へ連絡しているように聞こえるよ。\nその通知が間に合えば3秒で戻る人もいるし、間に合わない日は長く感じるのかな？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。座ったままでも足を組み替えたり、急に立ったりすると、血液の分布は数秒単位で変わります。\n暗くならない日にも、体は小さな調整を何度も繰り返して、頭への流れを途切れさせないよう働いているんです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ、目の前が暗くなる人だけが特別というより、誰にでもある調整が見える形で出たのかもしれないね。\nところで、朝だけ起きやすい人がいるのは、寝ている6時間から8時間のあいだに体の条件が変わっているからなの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "朝に起きやすい理由の一つは、寝ているあいだ水分を取らない時間が6時間から8時間ほど続くことです。\n汗や呼吸で水分は少しずつ失われるので、起きた直後は血液を上へ押し返す余裕が普段より小さくなりやすいんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "それ昨日の朝そのままだ！起きてすぐ立って、喉も渇いていたから、水分が少ない状態で急に頭の高さだけ変えたんだね。\n水を飲む前の数秒に限ってふらつきやすいのは、かなり自分事として思い当たるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、暗くなる長さは必ず3秒ぴったりではないことです。体格、暑さ、睡眠不足、食事、薬の影響で数秒から十数秒まで変わります。\n3秒は多くの人が気づきやすい目安で、体が調整を終える速さは毎日同じではありません。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "数字が決まった現象だと思っていたけれど、3秒は体の反応を感じ取るタイミングなんだね。\nじゃあ、脚に血が集まるなら、脚の筋肉を少し使えば戻りやすくなるのかな？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "その考え方は大切です。ふくらはぎの筋肉は縮むたびに静脈を押して、下に寄った血を心臓側へ戻す手伝いをします。\n座る前後に足首を動かすと楽に感じる人がいるのは、脚が血液を上へ送る補助ポンプになるからです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ふくらはぎって歩くためだけじゃなく、血を戻す手伝いもしているんだ。\nずっと座っていた後に急に立つより、足首を2回くらい動かしてから立つほうがよさそうだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実際、長く座った後に立つ場面では、足首を曲げ伸ばししたり、太ももへ軽く力を入れたりする方法が使われます。\nこれは血液の場所を少し整えてから高さを変える工夫で、急に立ち上がるより体の通知役が働きやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、立つ前の1秒が大事なんだね。でも血管が細くなるなら、体はかなり頑張っている感じがするよ。\nその働きが遅れたとき、目の前が暗くなる以外には、どんなサインが出ることがあるの？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "一時的に視界が白くなる、耳が遠く感じる、頭が軽くなるように感じることがありますが、数秒でおさまることも多いです。\nただし倒れそうなほど繰り返す、胸の痛みや強い動悸を伴う場合は、立ち上がりの変化と決めつけず医療機関へ相談してください。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "短いから大丈夫と決めつけないのは大事だね。特に転びそうになるなら、体が出している信号を見逃さないほうがよさそうだ。\n普段の数秒と、何度も生活を邪魔する変化は分けて考える必要があるんだね。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "立ち上がった後に血圧が大きく下がる状態には、起立性低血圧という名前が付いています。\nつまり、姿勢を変えた直後に血の押す力が下がり、脳へ届く流れが追いつきにくくなる状態のことです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "名前が付くほど、立つ動きは体にとって大きな仕事なんだね。椅子から立つだけなら簡単なのに、内側では高さ30センチ分を毎回調整している。\n言われてみれば確かに、体は見えないところでずっと働いているんだな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "医療では横になった状態と立った状態で血圧を比べ、立って3分以内に上の血圧が20ミリメートル水銀柱以上下がるかを一つの目安にします。\n家庭で数値だけを自己判断するより、症状の頻度や起きる場面も一緒に伝えることが大切です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "3秒で感じる変化と、3分まで見て確かめる目安は別なんだね。自分の体感だけでは分からない部分もあるから、繰り返すなら記録しておくと役立ちそう。\n朝なのか、お風呂上がりなのかも、意外と大事な手がかりになりそうだよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "お風呂上がりに起きやすいのは、温かさで血管が広がり、血液を上へ押し戻す力が普段より弱くなりやすいからです。\nそこへ汗による水分の減少と急な立ち上がりが重なると、数秒の遅れがいつもよりはっきり感じられることがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！湯船でゆっくりしていたのに、出る瞬間だけ足元が頼りなく感じるのには、温度と水分の両方が重なるんだね。\n脱衣所で急いで動かず、いったん座ってから立つのも意味があるわけだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "食後も同じように感じる人がいます。食べた後は消化を助けるため、お腹の周りへ血液が集まりやすくなります。\n満腹のままソファから急に立つと、脚とお腹の両方へ血が寄る方向が重なり、頭へ戻す調整が少し忙しくなるんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "食後に眠くて立ち上がるのが面倒な日は、単なる気分だけではないこともあるんだね。お腹が食事の作業中なら、体全体の配分も変わる。\nたとえるなら、家の中で同時に水を使う蛇口が増えたような感じかな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そのたとえは近いです。血液の総量が急に増えるわけではないので、体は必要な場所へ配りながら、頭にも途切れず送ろうとします。\nだから立ち上がる動作は、単純な上下運動ではなく、全身の配達先を一瞬で組み替える作業なんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！目の前が暗くなる3秒は、脳だけの問題ではなく、脚、お腹、心臓、血管が同時に調整する時間なんだね。\nそれなら体調が悪い日に限って、いつもより反応が遅いのも納得できるよ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔から兵士が長時間直立したまま倒れることが観察され、脚を動かさず立ち続ける負担は医学でも研究されてきました。\n歩くとふくらはぎが動きますが、直立したままではその補助が減るので、下半身へ血がたまりやすくなるんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "式典でずっと立っている人が、ときどき足を小さく動かしているのには理由があるんだね。行儀のためだけではなく、体が流れを保とうとしている。\n静かに立つほど楽そうに見えて、内側では意外と大変な姿勢なのか。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "宇宙飛行士が地上へ戻った直後にも、似た調整の難しさが注目されます。無重力では血液が脚へ下がりにくいため、地上の重力へ戻ると体が慣れ直す必要があるんです。\nあなたの3秒は小さな現象ですが、重力に合わせて生きる体の仕組みをそのまま映しています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "宇宙飛行士の話と、朝にベッドから立つ自分の話がつながるのは面白いね。重力はいつも同じなのに、体は毎回ちゃんと計算し直している。\n言われてみれば確かに、立つという動作は思っていたより精密なんだな。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただ、なぜ同じ人でもある日だけ強く暗く感じるのかは、睡眠、室温、食事、緊張などが重なるため、一つの原因だけでは説明できないことがあります。\nここは科学でもまだ結論が出ていない部分があり、体感の強さを単純に一つの理由へ決めつけない姿勢が大切です。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "全部を一言で片づけないのが大事なんだね。でも普段の立ちくらみを減らすために、今日からできる小さな工夫はありそう。\n朝やお風呂上がりに、まず何を意識すれば安全に動けるかな？",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "一つ目は、横になっていたなら、いきなり立たずに一度座って10秒ほど待つことです。\n頭の高さを段階的に変えるだけで、血液の配達先を組み替える時間を体へ渡せるので、急な暗さを感じにくくなる人がいます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "10秒なら朝でもできそうだね。目覚ましを止めたらすぐ飛び起きるより、ベッドの端で一呼吸するだけで、体にはかなり親切なんだ。\n急ぐ日ほど、先に座る短い時間を作ってみたくなるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "二つ目は、立つ前に足首を左右それぞれ5回ほどゆっくり動かすことです。\nふくらはぎを動かしてから立つと、脚に寄った血を上へ戻す手伝いになり、心臓だけに急な仕事を押しつけずにすみます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "足首を5回なら、布団の中でも椅子の下でもできるね。大げさな運動ではなく、立つ前の準備として脚に合図を出す感じなんだ。\n自分の体に少しだけ先回りするのが、数秒の違和感を減らすコツなんだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "三つ目は、水分をこまめに取ることです。ただし持病があって水分量を制限されている人は、自己判断で増やさず医師の指示を優先してください。\n特に暑い日、運動後、入浴後は失った水分が重なりやすいので、立つ前のゆっくりした動作も合わせて意識してみてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "水を飲めば全部解決ではないけれど、体の余裕を保つ助けにはなるんだね。暗くなったら無理に歩き出さず、その場でしゃがむか座るのも大事そう。\n転ばないことが一番だから、数秒を我慢して急がないようにしたいな。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "もし目の前が暗くなったら、壁や机を探しながら歩くより、まず安全な場所で座るか横になるほうを優先してください。\n数秒で戻ることが多くても、転倒すると別のけがにつながるので、体が整うまで待つ選択がいちばん確実です。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "立ちくらみを根性で乗り切るより、体が今は調整中だと考えて待つんだね。水道の流れが安定する前に容器を動かさないようなものか。\n今日から朝の3秒は、急ぐ時間ではなく体を待つ時間にしてみるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "立った3秒後に暗くなるのは、血液が脚へ寄る速さに、心臓と血管の立て直しが追いつくまでの短い差から起こります。\nあなたの体は何もしないで止まっているのではなく、重力に合わせて毎回、頭への流れを守ろうとしているんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！あの数秒は不思議な空白ではなく、体が頭を守るために全力で配達先を整えている時間だったんだね。\n朝の立ち上がりを少しゆっくりにするだけで、見え方も変わりそうだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜寝るときは、明日の朝に座って10秒、足首を5回動かしてから立つことをちょっと意識してみてください。\n何度も繰り返す、失神する、胸の症状がある場合は、日常の癖で済ませず医療機関へ相談することも忘れないでくださいね。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなるのはなぜかを見ていくんだね。今日の3秒みたいに、寝る直前にも体の中では小さな切り替えが起きているのかな。\n体の謎シリーズを続けて見ると、毎日の違和感が少し楽しみになりそうだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の立ち上がりの話が面白かったら、まず高評価で教えてください。身近な体の不思議を毎日1本ずつ一緒にほどいているので、体の謎シリーズの続きも見逃さないようチャンネル登録よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "明日の朝、ベッドから立つ前に10秒座って足首を5回動かしたら、3秒の視界がどう変わるか自分で確かめられそうだね。\n小さな体感でも記録すると、暑い日や寝不足の日の違いに気づけるかもしれないよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "立つ動作は1秒ほどでも、体の中では血液が約500ミリリットル移動し、心臓と血管が順番に追いかける繊細な作業です。\n毎日当たり前にできていることほど、仕組みを知ると自分の体を丁寧に扱いたくなりますね。",
+      "expression": "normal",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "立った3秒後",
+      "目の前が暗い"
+    ],
+    "hook_caption": "答えは3秒",
+    "subtitle": "立ち上がる瞬間、体の中で何が遅れるのか",
+    "tagline": "血液は一瞬だけ足元へ集まる"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "立つ前に足を動かすのを今日から意識してみて。体の謎シリーズも、高評価とチャンネル",
+          "reason": "1行57字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 10,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.576,
+      "similar_to": "あなたが大雨で不安になる3hPaの正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ立つと3秒で暗くなるのか？血圧変動の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}
