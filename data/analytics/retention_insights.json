@@ -1,14 +1,14 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1789393025,
-    "analyzed_videos": 5,
+    "generated_at": 1789479427,
+    "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0097,
-      "early": 0.0231,
-      "middle": 0.0051,
-      "late": 0.0053,
-      "ending": 0.0018
+      "intro": 0.0095,
+      "early": 0.0246,
+      "middle": 0.0042,
+      "late": 0.0046,
+      "ending": 0.0024
     },
     "per_video": [
       {
@@ -43,7 +43,7 @@
       {
         "video_id": "d30RfsNLERk",
         "title": "疲れた日の甘い物がすぐ消えるのはなぜ？ #shorts #雑学 #豆知識",
-        "avg_view_percentage": 69.56,
+        "avg_view_percentage": 68.98,
         "drops": [
           {
             "ratio_from": 0.14,
@@ -68,93 +68,6 @@
           }
         ],
         "matched_scenario_title": null
-      },
-      {
-        "video_id": "ufu1X-uZWJk",
-        "title": "耳を塞ぐと聞こえる20Hzの正体？ #shorts #雑学 #豆知識",
-        "avg_view_percentage": 45.99,
-        "drops": [
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.0735,
-            "bucket": "early",
-            "audience_after": 0.8265
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0559,
-            "bucket": "early",
-            "audience_after": 0.9853
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0471,
-            "bucket": "early",
-            "audience_after": 0.9382
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "nqi4BDM9u2E",
-        "title": "走った後の鉄味、あなたの肺で何が？0.1%の正体 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 46.46,
-        "drops": [
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0503,
-            "bucket": "early",
-            "audience_after": 0.8879
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0412,
-            "bucket": "early",
-            "audience_after": 0.9382
-          },
-          {
-            "ratio_from": 0.21,
-            "ratio_to": 0.22,
-            "drop": 0.0412,
-            "bucket": "early",
-            "audience_after": 0.7162
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "jZHXQpwS7nk",
-        "title": "なぜ冷たい水だけ歯にしみる？歯の中で起きる変化 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 42.66,
-        "drops": [
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0682,
-            "bucket": "intro",
-            "audience_after": 0.9119
-          },
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.054,
-            "bucket": "intro",
-            "audience_after": 0.9801
-          },
-          {
-            "ratio_from": 0.12,
-            "ratio_to": 0.13,
-            "drop": 0.0426,
-            "bucket": "intro",
-            "audience_after": 1.0341
-          }
-        ],
-        "matched_scenario_title": null
       }
     ],
     "gpt_insights": null,
@@ -162,20 +75,20 @@
   },
   "scp-lab": {
     "channel_id": "scp-lab",
-    "generated_at": 1789393200,
-    "analyzed_videos": 3,
+    "generated_at": 1789479602,
+    "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0061,
-      "early": 0.024,
-      "middle": 0.0054,
-      "late": 0.0053,
-      "ending": 0.0026
+      "intro": 0.0063,
+      "early": 0.0221,
+      "middle": 0.0065,
+      "late": 0.0052,
+      "ending": 0.0039
     },
     "per_video": [
       {
         "video_id": "kRcZ0GecFTY",
         "title": "7日間でずつ消えたエージェント名簿異常事件 #shorts #SCP #SCP解説",
-        "avg_view_percentage": 38.42,
+        "avg_view_percentage": 40.74,
         "drops": [
           {
             "ratio_from": 0.16,
@@ -222,7 +135,7 @@
       {
         "video_id": "5I_Hhc8VPCw",
         "title": "SCPの最後の一行だけが隔離対象になった理由 #shorts #SCP #SCP解説",
-        "avg_view_percentage": 45.86,
+        "avg_view_percentage": 45.82,
         "drops": [
           {
             "ratio_from": 0.27,
@@ -265,35 +178,6 @@
           }
         ],
         "matched_scenario_title": "SCPの最後の一行だけが隔離対象になった理由"
-      },
-      {
-        "video_id": "z7SonE8o73Q",
-        "title": "SCP-3288 大雨の真相 あなたの部屋も沈む #shorts #SCP #SCP解説",
-        "avg_view_percentage": 154.54,
-        "drops": [
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.1507,
-            "bucket": "early",
-            "audience_after": 2.2603
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.1096,
-            "bucket": "early",
-            "audience_after": 2.1507
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0548,
-            "bucket": "intro",
-            "audience_after": 2.411
-          }
-        ],
-        "matched_scenario_title": null
       }
     ],
     "gpt_insights": null,
@@ -303,24 +187,24 @@
     "channel_id": "pokemon-lab",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789393059
+    "generated_at": 1789479459
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
-    "generated_at": 1789393321,
-    "analyzed_videos": 5,
+    "generated_at": 1789479717,
+    "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0086,
-      "early": 0.0255,
-      "middle": 0.0032,
-      "late": 0.0051,
-      "ending": 0.0028
+      "intro": 0.0091,
+      "early": 0.0261,
+      "middle": 0.0037,
+      "late": 0.0046,
+      "ending": 0.0015
     },
     "per_video": [
       {
         "video_id": "Cc8MA7iOFcA",
         "title": "覚の元ネタが怖すぎる…心を先回りする山の怪物 #shorts #妖怪 #都市伝説",
-        "avg_view_percentage": 38.36,
+        "avg_view_percentage": 38.15,
         "drops": [
           {
             "ratio_from": 0.16,
@@ -349,7 +233,7 @@
       {
         "video_id": "oUohYkADVPs",
         "title": "ろくろ首の正体は飛頭蛮？首が飛ぶ怪異の出どころ #shorts #妖怪 #都市伝説",
-        "avg_view_percentage": 44.45,
+        "avg_view_percentage": 44.31,
         "drops": [
           {
             "ratio_from": 0.13,
@@ -374,93 +258,6 @@
           }
         ],
         "matched_scenario_title": null
-      },
-      {
-        "video_id": "DQXVqkCN_K0",
-        "title": "鬼の角が「目印」になった千年前の変化 #shorts #妖怪 #都市伝説",
-        "avg_view_percentage": 38.85,
-        "drops": [
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.122,
-            "bucket": "intro",
-            "audience_after": 0.9024
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0976,
-            "bucket": "early",
-            "audience_after": 0.7073
-          },
-          {
-            "ratio_from": 0.26,
-            "ratio_to": 0.27,
-            "drop": 0.0488,
-            "bucket": "early",
-            "audience_after": 0.5366
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "ov3N55v73XE",
-        "title": "なぜ狐は人を化かす妖怪にされたのか？江戸の記録に残る事情 #shorts #妖怪 #都市伝説",
-        "avg_view_percentage": 48.62,
-        "drops": [
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.1057,
-            "bucket": "early",
-            "audience_after": 0.9366
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0774,
-            "bucket": "intro",
-            "audience_after": 1.0423
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0704,
-            "bucket": "early",
-            "audience_after": 0.8662
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "FMG_IQ8p5G0",
-        "title": "人面犬の噂が昭和の学校で生まれた土壌とは… #shorts #妖怪 #都市伝説",
-        "avg_view_percentage": 51.57000000000001,
-        "drops": [
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0649,
-            "bucket": "early",
-            "audience_after": 1.0198
-          },
-          {
-            "ratio_from": 0.22,
-            "ratio_to": 0.23,
-            "drop": 0.0508,
-            "bucket": "early",
-            "audience_after": 0.8051
-          },
-          {
-            "ratio_from": 0.21,
-            "ratio_to": 0.22,
-            "drop": 0.0452,
-            "bucket": "early",
-            "audience_after": 0.8559
-          }
-        ],
-        "matched_scenario_title": null
       }
     ],
     "gpt_insights": null,
@@ -468,7 +265,7 @@
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
-    "generated_at": 1789392730,
+    "generated_at": 1789479125,
     "analyzed_videos": 5,
     "aggregate_drops_by_bucket": {
       "intro": 0.0096,
@@ -629,7 +426,7 @@
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1789393031,
+    "generated_at": 1789479432,
     "analyzed_videos": 1,
     "aggregate_drops_by_bucket": {
       "intro": 0.0122,
@@ -674,7 +471,7 @@
   },
   "akashic-librarian": {
     "channel_id": "akashic-librarian",
-    "generated_at": 1789392732,
+    "generated_at": 1789479126,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0169,
@@ -750,11 +547,11 @@
     "channel_id": "clip-animal",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789392734
+    "generated_at": 1789479128
   },
   "clip-fukada": {
     "channel_id": "clip-fukada",
-    "generated_at": 1789392749,
+    "generated_at": 1789479144,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0155,
@@ -886,7 +683,7 @@
   },
   "clip-kaneko": {
     "channel_id": "clip-kaneko",
-    "generated_at": 1789392789,
+    "generated_at": 1789479183,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0047,
@@ -960,7 +757,7 @@
   },
   "clip-lab": {
     "channel_id": "clip-lab",
-    "generated_at": 1789392809,
+    "generated_at": 1789479202,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0168,
@@ -1092,111 +889,71 @@
   },
   "company-facts": {
     "channel_id": "company-facts",
-    "generated_at": 1789392918,
-    "analyzed_videos": 3,
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1789479312
+  },
+  "socio-rx": {
+    "channel_id": "socio-rx",
+    "generated_at": 1789479616,
+    "analyzed_videos": 1,
     "aggregate_drops_by_bucket": {
-      "intro": 0.019,
-      "early": 0.0172,
-      "middle": 0.0037,
-      "late": 0.0085,
-      "ending": 0.0022
+      "intro": 0.0116,
+      "early": 0.027,
+      "middle": 0.0023,
+      "late": 0.0047,
+      "ending": 0.0023
     },
     "per_video": [
       {
-        "video_id": "5AaBsO3YJW0",
-        "title": "Appleの本当は年収約3,800万円、新製品発表の裏側 #shorts #企業分析 #年収 #転職",
-        "avg_view_percentage": 87.79,
+        "video_id": "PNmh2d97YQ4",
+        "title": "なぜ天才は一人で育たないのか フィールズ賞の本当の理由 #shorts #社会学 #自己啓発",
+        "avg_view_percentage": 40.16,
         "drops": [
           {
-            "ratio_from": 0.19,
-            "ratio_to": 0.2,
-            "drop": 0.0761,
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.1163,
+            "bucket": "intro",
+            "audience_after": 0.9767,
+            "scenario_line": {
+              "index": 4,
+              "speaker": null,
+              "text": "ここで大事なのは、受賞者が全員同じ環境だったという話ではない。環境と受賞の間には相関があり、因果を単純化はできない。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.093,
             "bucket": "early",
-            "audience_after": 1.1537
+            "audience_after": 0.8837,
+            "scenario_line": {
+              "index": 5,
+              "speaker": null,
+              "text": "それでも、才能を育てる条件を考える手がかりにはなる。なぜなら、人は能力の前に、続けられる感覚を失いやすいからだ。",
+              "mood": "calm"
+            }
           },
           {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.0599,
-            "bucket": "intro",
-            "audience_after": 1.4676
-          },
-          {
-            "ratio_from": 0.12,
-            "ratio_to": 0.13,
-            "drop": 0.0517,
-            "bucket": "intro",
-            "audience_after": 1.4159
+            "ratio_from": 0.22,
+            "ratio_to": 0.23,
+            "drop": 0.093,
+            "bucket": "early",
+            "audience_after": 0.5349,
+            "scenario_line": {
+              "index": 7,
+              "speaker": null,
+              "text": "心理学者アルバート・バンデューラは1977年、自己効力感を提唱した。自分なら行動を遂行できるという見通しのことである。",
+              "mood": "tense"
+            }
           }
         ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "W9UYqysinSY",
-        "title": "ユニクロ店長、売上1億円を任される仕事の実態 #shorts #企業分析 #年収 #転職",
-        "avg_view_percentage": 45.12,
-        "drops": [
-          {
-            "ratio_from": 0.12,
-            "ratio_to": 0.13,
-            "drop": 0.0808,
-            "bucket": "intro",
-            "audience_after": 1.0017
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0791,
-            "bucket": "early",
-            "audience_after": 0.8316
-          },
-          {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.067,
-            "bucket": "intro",
-            "audience_after": 1.0825
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "d0UE__SyUks",
-        "title": "NTTデータの年収905万円、実は在宅勤務の裏側 #shorts #企業分析 #年収 #転職",
-        "avg_view_percentage": 45.02,
-        "drops": [
-          {
-            "ratio_from": 0.12,
-            "ratio_to": 0.13,
-            "drop": 0.0742,
-            "bucket": "intro",
-            "audience_after": 0.9121
-          },
-          {
-            "ratio_from": 0.11,
-            "ratio_to": 0.12,
-            "drop": 0.0604,
-            "bucket": "intro",
-            "audience_after": 0.9863
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0604,
-            "bucket": "early",
-            "audience_after": 0.7775
-          }
-        ],
-        "matched_scenario_title": null
+        "matched_scenario_title": "なぜ天才は一人で育たないのか フィールズ賞の本当の理由"
       }
     ],
     "gpt_insights": null,
     "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
-  },
-  "socio-rx": {
-    "channel_id": "socio-rx",
-    "skipped": true,
-    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789393212
   }
 }
