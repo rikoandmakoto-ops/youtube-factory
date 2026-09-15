@@ -1,0 +1,107 @@
+{
+  "date": "2026-09-15",
+  "channels": {
+    "daily-science": {
+      "queue_before": 18,
+      "slots": 3,
+      "stock_days_before": 6.0,
+      "queue_after": 21,
+      "queue_added": 3,
+      "stock_days_after": 7.0,
+      "retention_target_band": "40-50%",
+      "schedule_changed": false,
+      "title_rules_changed": false,
+      "voice_style_changed": false
+    },
+    "scp-lab": {
+      "queue_before": 18,
+      "slots": 3,
+      "stock_days_before": 6.0,
+      "queue_after": 21,
+      "queue_added": 3,
+      "stock_days_after": 7.0,
+      "retention_target_band": "40-50%",
+      "schedule_changed": false,
+      "title_rules_changed": false,
+      "voice_style_changed": false
+    },
+    "yokai-watch": {
+      "queue_before": 20,
+      "slots": 3,
+      "stock_days_before": 6.7,
+      "queue_after": 21,
+      "queue_added": 1,
+      "stock_days_after": 7.0,
+      "retention_target_band": "40-50%",
+      "schedule_changed": false,
+      "title_rules_changed": false,
+      "voice_style_changed": false
+    },
+    "company-facts": {
+      "queue_before": 26,
+      "slots": 4,
+      "stock_days_before": 6.5,
+      "queue_after": 28,
+      "queue_added": 2,
+      "stock_days_after": 7.0,
+      "retention_target_band": "40-50%",
+      "schedule_changed": false,
+      "title_rules_changed": false,
+      "voice_style_changed": false
+    },
+    "2ch-matome": {
+      "queue_before": 26,
+      "slots": 3,
+      "stock_days_before": 8.7,
+      "queue_after": 26,
+      "queue_added": 0,
+      "stock_days_after": 8.7,
+      "retention_target_band": "40-50%",
+      "schedule_changed": false,
+      "title_rules_changed": false,
+      "voice_style_changed": false
+    },
+    "pokemon-lab": {
+      "queue_before": 21,
+      "slots": 3,
+      "stock_days_before": 7.0,
+      "queue_after": 21,
+      "queue_added": 0,
+      "stock_days_after": 7.0,
+      "retention_target_band": "40-50%",
+      "schedule_changed": false,
+      "title_rules_changed": false,
+      "voice_style_changed": false
+    }
+  },
+  "skipped": {
+    "2ch-matome": "autopilot.enabled=false のため補充しない",
+    "pokemon-lab": "autopilot.enabled=false のため補充しない（OAuth も invalid_grant のまま。09-15 のログで継続を確認）"
+  },
+  "escalations": [
+    {
+      "pri": 1,
+      "item": "カスタムサムネイル 403（要・電話番号確認）",
+      "detail": "09-15 のログでも scp-lab / company-facts / yokai-watch の全公開で 403 forbidden が継続。成功しているのは daily-science のみ。https://www.youtube.com/verify を該当 9ch で通す。人手のみ。",
+      "owner": "human"
+    },
+    {
+      "pri": 2,
+      "item": "Anthropic API キーが 401（新規）",
+      "detail": "backend ログに claude_client call failed (thumbnail_brief): Error code: 401 API key is invalid。series_engine も 『Claude 未応答のため続編候補を生成しません』で停止している。サムネ指示文と続編候補が両方生成されていない。人手のみ。",
+      "owner": "human"
+    },
+    {
+      "pri": 3,
+      "item": "OAuth 未再認可の 6ch",
+      "detail": "pokemon-lab / clip-lab / clip-kaneko / clip-fukada / clip-animal / fake-paper / akashic-librarian が invalid_grant のまま。09-13 に再認可した 5ch（daily-science / scp-lab / yokai-watch / company-facts / socio-rx）は 09-15 時点で正常。同意画面を『本番』公開 → そのあと再認可の順で。",
+      "owner": "human"
+    },
+    {
+      "pri": 4,
+      "item": "analytics バックフィル未実行",
+      "detail": "09-13 以降に公開した 25 本が views=0 のまま記録されている。OAuth 復旧後のバックフィルが走っていないため、本日の評価対象から除外した。",
+      "owner": "backend"
+    }
+  ]
+}
