@@ -306,7 +306,9 @@
     "堀大輔",
     "ヒカキン",
     "ちいかわ",
-    "USJ"
+    "USJ",
+    "久保建英",
+    "女性騎手"
   ],
   "genre_blacklist": [
     "宇宙・天体",
@@ -627,16 +629,6 @@
     "gen_type": "short",
     "publish_lead_minutes": 45,
     "theme_queue": [
-      {
-        "id": "orch20260913da006",
-        "title": "なぜ味噌汁は冷めると2倍しょっぱく感じるのか",
-        "angle": "温度と塩味受容。温度差と感度の関係"
-      },
-      {
-        "id": "eb0fc1db",
-        "title": "なぜ階段を下りる時だけ膝に3倍の力がかかるのか",
-        "angle": "身体感覚＋倍率。下りの衝撃荷重を3行目で言い切る"
-      },
       {
         "id": "9737ae4f",
         "title": "なぜ熱い風呂は最初の10秒だけ痛いのか",
@@ -1322,5 +1314,6 @@
   "_theme_blacklist_note_20260911": "09-11 朝の自動 run が ['あくび', '自分の声'] を削った結果、リポジトリ自身の回帰テスト test_fixes_20260909.py::TestDailyScienceBlacklist::test_no_regression_in_duplicate_prevention が RED になっていた（旧リストが止めていた過去タイトル8件が素通り）。同 run の theme_blacklist_note 自身が「『自分の声』が上位40本中10本」と書いており、削除は note とも矛盾する。復元してテストを GREEN に戻した。",
   "_theme_seeds_note_20260911n": "【2026-09-11 夜】theme_seeds に素の文字列が混在しており、suggest_themes の `s.get('title')` が 'str' object has no attribute 'get' で落ちていた。その結果 genre_blacklist で却下されたテーマの差し替えが常に失敗し、停止ジャンルのテーマがそのまま採用されていた（09-11 の scp-lab『財団組織・職員』で実測）。全件 dict 形式に正規化。今後 seed を追記するときは必ず {\"title\": ..., \"angle\": ...} 形式で入れること。",
   "_theme_blacklist_note_20260914n": "09-14: google_trends 由来の自動キュー投入が実在個人名・第三者キャラIPを フィクション/解説chに横展開していた（大谷翔平=9ch同時、堀大輔は scp-lab で『なぜ堀大輔は72時間眠らないのか？』として09-14 00:00に実公開済み）。名誉毀損・IPリスクのため theme_blacklist に追加。",
-  "_theme_seeds_note_20260914n": "09-14 実測に基づく追加。判断指標は subs/1000再生（再生数ではない）。scp-lab: 疑問形1.25 vs 断定形0.68。両ch共通: 維持率30%未満は登録/1k が 0.00〜0.45 と崩壊し、30%以上では伸びない（下限管理指標として扱う）。"
+  "_theme_seeds_note_20260914n": "09-14 実測に基づく追加。判断指標は subs/1000再生（再生数ではない）。scp-lab: 疑問形1.25 vs 断定形0.68。両ch共通: 維持率30%未満は登録/1k が 0.00〜0.45 と崩壊し、30%以上では伸びない（下限管理指標として扱う）。",
+  "_theme_blacklist_note_20260915n": "trend_detections に status=queued のまま残る実在個人/実在レース関連キーワードを遮断。09-14に導入されたブロックフィルタは新規検出にしか効かず、既存281件のqueuedは再審査されていないため、設定側で二重に塞ぐ。"
 }
