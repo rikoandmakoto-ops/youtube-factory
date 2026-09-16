@@ -115,3 +115,5 @@ data/image_requests/*
 *.xlsx.tmp
 # 日次レポート出力（data/reports/YYYY-MM-DD/）は再生成できるので追跡しない
 data/reports/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+# 指揮者 xlsx 生成の途中シート（最終成果物は reports/youtube_analysis_*.xlsx）
+reports/_orch_sheet*.xlsx
