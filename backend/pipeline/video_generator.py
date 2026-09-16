@@ -4931,10 +4931,11 @@ def _thumb_pick_expression(char_dir, side, horror):
 
 
 def _thumb_paste_illustration(canvas, illust, band_top, band_bottom,
-                              max_width_ratio=0.86):
-    """図解カードを [band_top, band_bottom] の帯に内接させて中央に置く。
+                              max_width_ratio=0.86, x_range=None):
+    """図解カードを [band_top, band_bottom] の帯に内接させて置く。
 
-    実際に描いた矩形 (x0, y0, x1, y1) を返す。帯が狭すぎる場合は None。
+    `x_range=(x_min, x_max)` を渡すとその横幅の中に置く（中段左に寄せる用途）。
+    無ければ画面中央。実際に描いた矩形 (x0, y0, x1, y1) を返す。帯が狭すぎる場合は None。
     """
     band_h = band_bottom - band_top
     if band_h < THUMB_ILLUST_MIN_BAND_H or illust is None:
@@ -4942,7 +4943,12 @@ def _thumb_paste_illustration(canvas, illust, band_top, band_bottom,
 
     cw = canvas.width
     pad = 18  # カード面のふち。帯からはみ出さないよう先に差し引いておく。
-    box_w = int(cw * max_width_ratio) - pad * 2
+    if x_range:
+        x_min, x_max = int(x_range[0]), int(x_range[1])
+        box_w = (x_max - x_min) - pad * 2
+    else:
+        x_min, x_max = 0, cw
+        box_w = int(cw * max_width_ratio) - pad * 2
     box_h = band_h - pad * 2 - 8
     if box_w <= 0 or box_h <= 0:
         return None
@@ -4952,7 +4958,7 @@ def _thumb_paste_illustration(canvas, illust, band_top, band_bottom,
     iw, ih = max(1, int(illust.width * scale)), max(1, int(illust.height * scale))
     img = illust.resize((iw, ih), Image.LANCZOS)
 
-    x0 = (cw - iw) // 2
+    x0 = x_min + (x_max - x_min - iw) // 2
     y0 = band_top + (band_h - ih) // 2
 
     # 透過 PNG の図解はネオン背景に溶けるので、白のカード面を下に敷く。
@@ -5390,18 +5396,20 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
         illust = _thumb_build_illustration(
             out_dir, illust_topic, channel_format, channel_id=channel_id)
 
-    # 3. Characters (lower area). char_config があればチャンネル固有キャラを使う。
+    # 3. レイアウト（2026-09-16 に組み直し）
+    #
+    # Shorts のフィード/チャンネル欄では **下 30% が題名・ボタンの UI に隠れ**、
+    # 一方で従来の構図は上 40% が空（テキストは中央、立ち絵は最下端）だった。
+    # 見せられる領域は上 70% なので、
+    #   - テキスト塊は上端 TEXT_TOP から置く（従来の中央寄せより約 300px 上）
+    #   - 立ち絵は下端ではなく「中段右」（SAFE_BOTTOM に底を揃える）
+    #   - 図解カードは中段左（立ち絵の左側）
+    #   - 読ませる文字列を減らす: バッジ＋見出し（最大2行）＋副題1行（tagline 優先）
+    SAFE_BOTTOM = int(SH * 0.70)   # 1344px。ここから下は UI に隠れる前提
+    TEXT_TOP = int(_tt.get("short_text_top") or 200)
     _CHAR_DIR_MAP = {"理子": "riko", "真": "makoto", "あかり": "akari", "ゆうた": "yuuta",
                      "シロ": "shiro", "クロ": "kuro"}
     _chars = char_config or CHAR_CONFIG
-    char_top_y = SH  # 立ち絵の上端。図解カードの下限になる。
-    # 図解カードが出ないときは、空いた帯を立ち絵で上へ詰める（下端は固定なので
-    # 上方向にだけ伸びる）。従来はカード無しでも 0.34 固定で、テキスト帯と
-    # 立ち絵の間に 300px 前後の死んだ余白が残っていた。
-    # 立ち絵は「幅」で頭打ちになる素材（顔だけの正方形アイコン）が多いので、
-    # 高さだけ緩めても伸びない。カードが無いときは幅の上限も一緒に緩める。
-    char_box_ratio = 0.34 if illust is not None else 0.46
-    char_box_w_ratio = 0.48 if illust is not None else 0.53
     # ホラー系チャンネルは「にこやかな立ち絵」が題材と噛み合わないので、
     # 驚愕・戦慄側の表情差分があればそれを優先する（無ければ従来どおり）。
     horror = _thumb_is_horror(channel_dict, channel_id)
@@ -5409,43 +5417,37 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
     _tt_mood = str((_tt.get("expression_mood") or "")).strip().lower()
     if not _tt_mood and (_style or {}).get("mood") in ("dark", "bright"):
         horror = (_style or {}).get("mood") == "dark"
-    for name, cfg in _chars.items():
-        if not isinstance(cfg, dict) or not cfg.get("side"):
-            continue
+
+    def _load_sprite(name, cfg):
         dir_name = cfg.get("dir") or cfg.get("slug") or _CHAR_DIR_MAP.get(name) or str(name).lower()
         char_dir = ASSETS_DIR / "characters" / dir_name
         if not char_dir.exists():
             char_dir = ASSETS_DIR / dir_name
         sprite_path = _thumb_pick_expression(char_dir, cfg.get("side"), horror)
-        if sprite_path is not None and sprite_path.exists():
-            sprite = Image.open(str(sprite_path)).convert("RGBA")
-            # 透明余白を落としてから拡縮する（素材ごとに余白量が違うため）。
-            # riko/makoto のように全面にごく薄いアルファが乗った素材があり、
-            # 素の getbbox() では余白を全く切れない。閾値を掛けてから判定する。
-            try:
-                alpha = sprite.getchannel("A")
-                solid = alpha.point(lambda v: 255 if v > 40 else 0)
-                sprite.putalpha(Image.composite(alpha, Image.new("L", sprite.size, 0), solid))
-                bbox = solid.getbbox()
-                if bbox:
-                    sprite = sprite.crop(bbox)
-            except Exception:
-                pass
-            # 素材のアスペクト比が 612x408（横長）〜1024x1024（正方）とバラバラなので
-            # 高さ基準の一律スケールだと横幅が画面を超えて2体が重なる。
-            # 幅・高さの両方に上限を設けて内接させる。
-            box_w, box_h = int(SW * char_box_w_ratio), int(SH * char_box_ratio)
-            scale = min(box_w / sprite.width, box_h / sprite.height)
-            s_w, s_h = max(1, int(sprite.width * scale)), max(1, int(sprite.height * scale))
-            sprite = sprite.resize((s_w, s_h), Image.LANCZOS)
-            paste_y = SH - s_h - 40
-            char_top_y = min(char_top_y, paste_y)
-            if cfg["side"] == "left":
-                canvas.paste(sprite, (int(SW * 0.01), paste_y), sprite)
-            else:
-                canvas.paste(sprite, (SW - s_w - int(SW * 0.01), paste_y), sprite)
+        if sprite_path is None or not sprite_path.exists():
+            return None
+        sprite = Image.open(str(sprite_path)).convert("RGBA")
+        # 透明余白を落としてから拡縮する（素材ごとに余白量が違うため）。
+        # riko/makoto のように全面にごく薄いアルファが乗った素材があり、
+        # 素の getbbox() では余白を全く切れない。閾値を掛けてから判定する。
+        try:
+            alpha = sprite.getchannel("A")
+            solid = alpha.point(lambda v: 255 if v > 40 else 0)
+            sprite.putalpha(Image.composite(alpha, Image.new("L", sprite.size, 0), solid))
+            bbox = solid.getbbox()
+            if bbox:
+                sprite = sprite.crop(bbox)
+        except Exception:
+            pass
+        return sprite
 
-    # 3. （中身の無い点線円は 08-20 のレビュー指摘により削除。文字を上に詰める）
+    sprites = []
+    for name, cfg in _chars.items():
+        if not isinstance(cfg, dict) or not cfg.get("side"):
+            continue
+        sp = _load_sprite(name, cfg)
+        if sp is not None:
+            sprites.append((cfg["side"], sp))
 
     draw = ImageDraw.Draw(canvas)
     cx = SW // 2
@@ -5460,25 +5462,15 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
         margin = int(_st.get("side_margin", 60))
         max_w = SW - margin * 2
 
-        # 図解カードが出ないときは、空いた帯を見出しの拡大でも詰める
-        # （立ち絵は幅で頭打ちになるため、立ち絵の拡大だけでは埋まらない）。
-        _no_card_boost = 1.0 if illust is not None else 1.16
+        _no_card_boost = 1.0 if illust is not None else 1.12
         font_title, hook_draw_lines = _thumb_fit_lines(
             font_path_bold, hook_lines, max_w,
             int(int(_st.get("hook_font_size", 104)) * _no_card_boost),
             int(_st.get("hook_min_font_size", 60)),
-            max_total_lines=int(_st.get("hook_max_lines", 3)),
+            max_total_lines=int(_st.get("hook_max_lines", 2)),
         )
-        font_sub, sub_draw_lines = _thumb_fit_lines(
-            font_path_medium, [subtitle] if subtitle else [], max_w,
-            int(int(_st.get("subtitle_font_size", 58)) * _no_card_boost),
-            int(_st.get("subtitle_min_font_size", 40)),
-            max_total_lines=2,
-        )
-        # 黄色帯（tagline）は**1行に収まる分だけ**（2026-09-04）。
-        # 従来は 2 行まで折り返していたため、帯が2段になって見出しと競合し、
-        # 文字が帯からはみ出すケースも出ていた。1行に強制トリムし、
-        # 最小フォントでも収まらなければ帯自体を出さない。
+        # 副題は1行だけ。tagline（短い煽り）があればそれを黄色帯で、無ければ subtitle。
+        # 4 段（バッジ/見出し/副題/帯）を全部読ませると焦点が散るので 3 段に絞る。
         tag_band_max_w = max_w - 40
         font_tag, tag_draw_lines = _thumb_fit_lines(
             font_path_medium, [], tag_band_max_w,
@@ -5502,68 +5494,36 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
             else:
                 print("  ℹ️ サムネ黄色帯: 1行に収まらないため帯を出しません "
                       f"('{str(tagline)[:24]}…')")
+        sub_draw_lines = []
+        font_sub, _ = _thumb_fit_lines(font_path_medium, [], max_w, 58, 40, max_total_lines=1)
+        if not tag_draw_lines and subtitle and str(subtitle).strip() != str(title or "").strip():
+            font_sub, sub_draw_lines = _thumb_fit_lines(
+                font_path_medium, [subtitle], max_w,
+                int(int(_st.get("subtitle_font_size", 58)) * _no_card_boost),
+                int(_st.get("subtitle_min_font_size", 40)),
+                max_total_lines=1,
+            )
         font_badge = ImageFont.truetype(font_path_medium, 38)
 
-        # --- ブロック全体の高さを測ってから縦位置を決める ---
-        # キャラ立ち絵は下から SH*0.34 を占めるので、文字は上端 240px 〜
-        # キャラ上端の少し上（1180px）の帯に「centered」で置く。従来は
-        # y=320 固定で、下に 400px 以上の死んだ余白ができていた。
         hook_h = int(font_title.size * 1.18)
         sub_h = int(font_sub.size * 1.24)
         tag_h = int(font_tag.size * 1.32)
-        block_h = 72  # badge
-        block_h += hook_h * len(hook_draw_lines)
-        if sub_draw_lines:
-            block_h += 26 + sub_h * len(sub_draw_lines)
-        if tag_draw_lines:
-            block_h += 18 + tag_h * len(tag_draw_lines)
 
-        band_top, band_bottom = 240, 1180
-
-        # --- 中間の無地帯に図解カードを差し込む（2026-08-25）---
-        # 従来はテキストを 240〜1180 の中央に置き、その下からキャラ上端まで
-        # 320px 前後（画面の 17%）が完全に空いていた。全チャンネルで同じ
-        # 構図になっていたのもここが空だったため。図解が用意できたときだけ
-        # テキストを帯の上端に寄せ、空いた分をカードで埋める。
-        # カードが出ないときは立ち絵側を 0.46 まで伸ばして帯を詰めてある
-        # （→ char_box_ratio）ので、テキストは新しい上端で中央寄せする。
-        illust_box = None
-        if illust is not None:
-            gap_top = band_top + block_h + 32
-            # 下限は立ち絵の上端。テキスト帯の下端(1180)ではなくここまで使う
-            # ことで、キャラとカードの間に新たな空洞を作らない。
-            gap_bottom = char_top_y - 20
-            illust_box = _thumb_paste_illustration(canvas, illust, gap_top, gap_bottom)
-
-        if illust_box is not None:
-            y = band_top          # カードのぶんテキストは上に寄せる
-        else:
-            # カードが無いときは、テキストを立ち絵の上端まで含めた帯の中央に置く。
-            # 240〜1180 の中央のままだと、立ち絵との間に 300px 前後の
-            # 死んだ余白が残る（08-25 に図解カードを入れた理由そのもの）。
-            eff_bottom = max(band_bottom, char_top_y - 24)
-            y = band_top + max(0, (eff_bottom - band_top - block_h) // 2)
-
-        # チャンネルバッジ
+        # --- テキスト塊は上端に固定 ---
+        y = TEXT_TOP
         _thumb_draw_badge(draw, badge_text, cx, y, font_badge,
                           bg_color=badge_rgb, text_color=(255, 255, 255), radius=6)
         y += 72
-
-        # Hook lines
         for line in hook_draw_lines:
             _thumb_draw_text_with_outline(draw, line, cx, y + hook_h // 2, font_title,
                                           fill=hook_rgb, outline_color=(0, 0, 0), outline_width=9)
             y += hook_h
-
-        # Subtitle
         if sub_draw_lines:
             y += 26
             for line in sub_draw_lines:
                 _thumb_draw_text_with_outline(draw, line, cx, y + sub_h // 2, font_sub,
                                               fill=sub_rgb, outline_color=(0, 0, 40), outline_width=5)
                 y += sub_h
-
-        # Tagline（黄色の帯付き）
         if tag_draw_lines:
             y += 18
             for line in tag_draw_lines:
@@ -5574,10 +5534,37 @@ def generate_short_thumbnail(title, prefix, out_dir, thumb_info=None,
                 draw.text((cx, y + tag_h // 2), line, font=font_tag,
                           fill=(255, 255, 255), anchor="mm")
                 y += tag_h + 8
+        text_bottom = y
+
+        # --- 中段: 右に立ち絵、左に図解カード。底は SAFE_BOTTOM に揃える ---
+        band_top = text_bottom + 24
+        band_bottom = SAFE_BOTTOM - 16
+        band_h = max(0, band_bottom - band_top)
+        chars_x0 = SW  # 立ち絵群の左端（カードの右限）
+        if sprites and band_h > 120:
+            box_h = min(int(SH * 0.30), band_h)
+            # 2体でも右半分に収まる幅（中段「右」に寄せる）。カードがあるときはさらに詰める
+            box_w = int(SW * (0.26 if illust is not None else 0.34))
+            x_right = SW - int(SW * 0.02)
+            # 右側に寄せて並べる（right → left の順で右から詰める）
+            for side, sprite in sorted(sprites, key=lambda t: 0 if t[0] == "right" else 1):
+                scale = min(box_w / sprite.width, box_h / sprite.height)
+                s_w, s_h = max(1, int(sprite.width * scale)), max(1, int(sprite.height * scale))
+                sprite = sprite.resize((s_w, s_h), Image.LANCZOS)
+                paste_x = x_right - s_w
+                paste_y = band_bottom - s_h
+                canvas.paste(sprite, (paste_x, paste_y), sprite)
+                chars_x0 = min(chars_x0, paste_x)
+                x_right = paste_x - 12
+        if illust is not None:
+            _thumb_paste_illustration(
+                canvas, illust, band_top, band_bottom,
+                x_range=(int(SW * 0.03), max(int(SW * 0.03) + 200, chars_x0 - 24)))
+        draw = ImageDraw.Draw(canvas)
     else:
         # Fallback: composite text
         draw = ImageDraw.Draw(canvas)
-        y = 340
+        y = TEXT_TOP
         bw = measure_composite_text(draw, badge_text, 38)
         draw.rounded_rectangle([(cx - bw//2 - 12), y - 6, (cx + bw//2 + 12), y + 44], radius=6, fill=badge_rgb)
         draw_composite_text(draw, (cx - bw//2, y), badge_text, 38, (255, 255, 255))
