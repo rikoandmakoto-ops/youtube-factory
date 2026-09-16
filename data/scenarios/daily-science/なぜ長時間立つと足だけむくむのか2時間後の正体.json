@@ -1,0 +1,544 @@
+{
+  "title": "なぜ長時間立つと足だけむくむのか？2時間後の正体",
+  "theme": {
+    "title": "なぜ長時間立つと足だけむくむのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "満員電車みたいに、あなたの足で水が足止めされます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、立つだけで？ 2時間後には靴下跡が残る人も多いよね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "心臓から遠い足では、重力で水分が下へ集まり。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ ふくらはぎは水を上へ送るポンプみたいなんだ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも歩かないとそのポンプが休むから。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。"
+    },
+    {
+      "speaker": "真",
+      "text": "足首を動かすのを今日から意識してみて。体の謎シリーズも見て、高評価とチャンネル登録で1万人目標の毎日投稿を応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？　長時間立った日のあなたの足では、わずか2時間でも靴下の跡が深く残ることがあります。\n朝は余裕だった靴が夕方だけ窮屈になる、その変化には体重ではなく重力が関わっているんです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！　通勤と買い物で2時間くらい立っていただけなのに、帰宅したら足首だけ太く見えたよ。\n体重計は朝とほぼ同じだったのに、足だけ変わるのはなぜなの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。\n心臓は胸の高さにあるのに、足首はそこから約1メートル以上低く、毎日ずっと下へ引かれる水分を上へ戻しているんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！　胸から足までの距離があるなら、足首は一日中、水の重さを受け止めていることになるね。\n手より足が先に張るのも、その高さの差が大きいから？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。\n血液の中の水分は細い管の壁を出入りして栄養を届けますが、立つと足では下向きの力が増え、管の外へ水分が移りやすくなります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "水道ホースを床へ長く垂らすと、下のほうほど水の重みを受ける感じに近いのかな？\nそれなら足首の近くは、胸の近くよりずっと押されやすそうだね。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、水分が足へ向かうこと自体は異常ではありません。\n問題は、足へ来た水分を回収して上へ送る速さより、外へ出る速さが上回ったときに、皮膚の下へ残りやすくなる点です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、足の中では水が来る道と帰る道が同時に動いているんだ！\n帰り道が少し混むだけで、夕方の足首に見た目の変化として出るなら、かなり身近な現象なんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえるなら、夕方の駅改札と同じなんです。\n入ってくる人が1分に100人でも、出口が80人分しか動かなければ、20人分ずつ通路に残り、その混み具合が足の張りになります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、ずっと立っていても少し歩いた後は足が軽いことがあるよ。\n出口を広げる役目をしているのが、ふくらはぎの筋肉なのかな？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうです。\n歩くたびにふくらはぎが縮んで、周りの管をやさしく押し、中の血液や水分を上へ進ませます。\nだから同じ2時間でも、歩いた2時間と動かない2時間では足への残り方が違います。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！　ふくらはぎは歩くためだけでなく、足元の水分を戻す手伝いもしているんだ。\nレジ待ちやライブで動けない時間が長いほど、足が重く感じる理由が見えてきたよ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで大事なのは、立っていることより足首が止まることです。\nつま先を少し上げ下げするだけでも筋肉は縮み、完全に動かない状態より、足から上へ戻る流れを助けやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ信号待ちの30秒でも、かかとを上げる意味があるんだね？\n大きく歩けない場所でも、足首だけ動かすなら誰にも迷惑をかけずにできそう。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、立ち仕事だけの話ではありません。\n飛行機や新幹線で数時間座り続けたときも、足首が曲がらず筋肉が動きにくいので、帰り道の働きが弱くなりやすいんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、座っているのに足が張るのも同じ流れなんだ！\n立つか座るかより、何時間も同じ姿勢で足首を動かさないことが、共通のポイントになるんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。\n筋肉を動かせば全部戻るなら簡単ですが、夕方になるほど靴下跡が残るのは、足で増えた水分を片づける別の道にも限界があるからです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "別の道って何？　血液の管だけで戻れない水分を、もう一つの通路が運んでいるのかな？\n足の中にそんな回収係がいるなら、どこへ運ばれているのか気になるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "細い管の外へ出た余分な水分は、回収用の細かな通路へ入り、最終的には胸の近くで血液へ戻されます。\nけれど立ち続けると、足で外へ出る量が増え、回収の速さを追い越すことがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "配達車が足へ水分を届ける量に、回収車が追いつかなくなる感じなんだね！\n2時間の立ちっぱなしで荷物が少しずつ積み残されれば、夕方にだけ足が張る説明になるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "この足に水分が残る状態には、医学では浮腫という名前が付いています。\nつまり皮膚の下のすき間に、いつもより多い水分が残って、押すと跡がゆっくり戻ることがある状態です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "浮腫って病院だけで聞く言葉だと思っていたよ。\n夕方の靴下跡も同じ言葉で説明できるなら、毎日起きる小さな変化と医学の話は、思ったより近いんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただ、浮腫という名前だけで原因が一つに決まるわけではありません。\n長く立った日、暑い日、塩分が多い食事の後など、何が重なったかで水分のたまり方は変わります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "塩辛いラーメンを食べた翌日、サンダルの跡が残りやすいことがあるよ。\n立ち時間だけを思い出していたけれど、昼ごはんまで関係するなら見方が変わりそう。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "塩分を多く取ると、体は血液の濃さを保つために水を抱え込みやすくなります。\nそこへ立ち続ける条件が重なると、下へ寄りやすい水分の量も増え、足元で見えやすくなるんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、水を飲んだから張るというより、体が塩分との釣り合いを取ろうとしているんだ！\nだからむくみが気になるからと、水分を極端に減らすのは違いそうだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。\n普段どおりの水分を取ることを基本にして、急に飲む量を減らすより、食事の塩分や長い同じ姿勢を見直すほうが、日常では取り組みやすいことがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！　水を我慢するより、昼休みに少し歩くほうが足には分かりやすい助けになるかもしれないね。\nでも暑い日だけ特に張るのは、汗だけのせいじゃないの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "暑い日には、体が熱を逃がすため皮膚の近くへ血液を回そうとします。\n足の細い管でも水分が外へ出やすい条件が加わるので、夏祭りで3時間立った後にサンダル跡が残りやすいんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "夏祭りの帰りに、足の甲までサンダルの形が付くことがあるよ！\n暑さと立ちっぱなしが重なると、駅改札の入口が増えて出口が追いつかない状態になるんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "朝に足がすっきりしやすいのも、同じ理屈で説明できます。\n横になると足と心臓の高さの差が小さくなり、昼に足へ寄った水分が体の中央へ戻りやすくなるからです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、夜は足が張っていても、一晩寝た朝には靴が入りやすいことが多いね。\n寝ている数時間は、足にとって重力の条件が変わる休憩時間なんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし水分は消えるのではなく、体の中で居場所を変えています。\n横になると顔や手が少し張ったように感じる人がいるのも、重力に対する位置が変わって水分の分布が動くためです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それなら朝だけ指輪がきつい日があるのも、一晩で太ったからではないんだ！\n水分が上へ戻った結果なら、夕方の足と朝の手は一本の話としてつながるね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "身長170センチの人なら、心臓から足首までおよそ130センチあります。\nその縦の距離があるだけで、立っている足首には横になっている時より大きな押す力がかかり続けます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "130センチの水の柱を足首が受けると考えると、靴下跡が残るのも不思議ではないね。\n見えないけれど、足の中では毎日ずっと下向きの力と向き合っているんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔から長距離を移動する人は、途中で歩いたり、ふくらはぎを動かしたりしてきました。\n現代でも飛行機で足首運動を勧める案内があるのは、同じ姿勢を数時間続けない意味があるからです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "移動中の案内は退屈しのぎだと思っていたけれど、足の中の流れを止めないためだったんだね。\n座席でできる小さな動きにも、ちゃんと体の理由があるんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここは科学でもまだ結論が出ていない部分があります。\n同じ立ち時間でも、どれほど張りを感じるかは体格、年齢、気温、食事、体質が重なり、誰にでも同じ数字で予測できるわけではありません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "2時間立てば必ず同じだけ張る、という単純な計算ではないんだね。\n自分の足が張る日には、立った時間だけでなく、暑さや食事も一緒に思い返すとヒントになりそう。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず今日からできるのは、30分から60分に一度、つま先とかかとを10回ずつ上げ下げすることです。\n机の下でも信号待ちでもできて、ふくらはぎが縮む回数を増やせます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "10回なら、忙しい日でも始めやすいね！\n歯みがきの2分間や、電子レンジの待ち時間に合わせれば、忘れずに足首を動かすきっかけも作れそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次に、帰宅後はクッションで足を少し高くして、10分ほど休む方法もあります。\n心臓との高さの差が小さくなるので、昼間に足元へ寄った水分が戻る助けになりやすいです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ソファで足を上げる10分は、ただ休むだけでなく、足にとって帰り道を短くする時間なんだね。\nスマホを見る前に試せば、今日の張りを自分で観察できそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "靴下や靴が夕方にきついなら、朝と同じ感覚だけで選ばないことも役立ちます。\n長時間立つ予定の日は、足指が少し動く余裕のある靴を選ぶと、締め付けによる不快感を減らしやすいです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "朝にぴったりだった靴が、夜にはきつく感じるのは失敗ではなく、足の水分の位置が変わった合図なんだね。\n予定に合わせて靴を選ぶのも、足をいたわる工夫になりそう。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "着圧のある靴下を使う人もいますが、強ければ強いほどよいわけではありません。\nサイズが合わない、痛い、しびれると感じるなら無理をせず、持病がある人は医療者へ相談して選んでください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "店にあるから誰でも同じように使えると思っていたよ。\nまずは30分ごとの足首運動や、10分の足上げのような、自分の感覚を確かめられる方法から始めるのが安心だね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、片足だけが急に腫れた、強い痛みがある、息苦しさがあるなど、いつもと違う変化がある場合は注意してください。\n長時間立ったせいと決めつけず、早めに医療機関へ相談することが大切です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "左右同じように夕方だけ張って、休むと軽くなる場合とは分けて考えるんだね。\n自分のいつもの足を知っておけば、急な違いにも気づきやすくなりそう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の答えは、長時間立つと足だけむくみやすいのは、重力で水分が下へ集まり、動かない筋肉では上へ戻す手伝いが減るからです。\n足は一日中、胸より低い場所で回収を頑張っています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！　夕方の靴下跡を見るたびに、足が怠けているのではなく、130センチ下で重力と向き合っていたと思えそうだよ。\n今夜は少し労わりたくなるね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "長く立つ日は、30分から60分ごとの足首運動と、帰宅後10分の足上げを試してみてください。\n小さな動きでも、足元で混み合った水分の帰り道を助ける、毎日続けやすい工夫になります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "明日は信号待ちで10回かかとを上げて、帰宅後はクッションで足を休ませてみるよ。\n朝と夜で靴下跡を見比べたら、自分の体の変化も分かりやすそうだね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなるのはなぜかを、あなたが感じる約0.5秒の変化から一緒に見ていきます。\n毎晩起きるのに説明しにくい体の反応を、身近な感覚から考えます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "足の次は寝落ちの瞬間なんだね！\n布団に入ってから急に動くあの感覚も、自分の体で何度も経験しているから、次回は今夜から意識して待ってみたくなるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "体の謎シリーズが面白かったら、まず高評価で教えてください。\n身近な不思議を毎日1本ずつ解いているので、チャンネル登録で1万人目標の毎日投稿を応援よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "立つだけで",
+      "足が重い"
+    ],
+    "hook_caption": "2時間後の足",
+    "subtitle": "重力に負ける足の中で何が起きるのか",
+    "tagline": "夕方の靴下跡には理由があります"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。",
+      "matched_topic": "体"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "足首を動かすのを今日から意識してみて。体の謎シリーズも見て、高評価とチャンネル登",
+          "reason": "1行61字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 0,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.526,
+      "similar_to": "なぜあなたはくしゃみの3秒前を予感するのか？本当の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ長時間立つと足だけむくむのか？2時間後の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

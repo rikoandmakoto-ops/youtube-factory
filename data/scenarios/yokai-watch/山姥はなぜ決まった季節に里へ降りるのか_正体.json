@@ -1,0 +1,574 @@
+{
+  "title": "山姥はなぜ決まった季節に里へ降りるのか 正体",
+  "theme": {
+    "title": "なぜ山姥は決まった季節に里へ降りたのか",
+    "angle": "山と里の境が緩む時季に現れる。年中行事との重なりを見る。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山姥、好きな人多いよね。でも元ネタを知ると見方が変わるんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "山にいる妖怪なのに、盆の頃だけ里へ来る話が残るの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、盆は山の者も戻る時季で、山姥は境を越える存在なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "夏休みの帰省みたいでも、家に入る相手が山姥なら話は別だよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "盆の夜、山側の戸口には近づかないほうがいい。誰が帰ったのか、記録は曖昧なんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "高評価を置いて、地方に残る妖怪シリーズも見てね。毎日投稿中、登録者1万人目標を応援よろしくね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山姥、好きな人多いよね。でも元ネタを知ると、山に住む妖怪という見方が変わるんだ。伝承には盆の十五日や正月の前後、里へ降りる日が決まっている話まで残る。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "山姥って山の奥にいて、旅人が迷い込んだ時だけ会うイメージだったよ。なのに盆や正月みたいなカレンダーの日を選ぶなら、ただの山の怪物ではなさそうだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、伝承の山姥は季節イベントの妖怪ではないんだ。村人が山と里の境目を強く意識する日、そこへ現れる女として語られることが多い。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。盆は祖先を迎える明るい行事で、正月はお祝いの日だよね。そんな日に山姥が来るなら、家へ帰るはずのものに紛れて来るみたいで怖いよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、山姥が里へ降りる理由は食べ物探しだけでは説明しきれない。山と里の区切りが緩む時季に、人ではない来訪者の顔を与えられた存在として読む必要がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "今回は盆、正月、冬の山止めという三つの手がかりから、あの妖怪の正体を追うんだ。山姥がなぜ決まった季節に現れるのか、昔の村の暦を開いて確かめていこう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "山姥の正体って、一人の怖いおばあさんのモデル探しじゃなくて、村の生活ルールとつながるの？それなら妖怪図鑑では見えないところまで話が進みそうだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "まず昔の村で山は、休日に遊びに行く場所ではなかった。薪を取り、炭を焼き、草を刈り、木の実を得る生活の場所であり、日が落ちれば人の世界の外側にもなった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "里には田畑と家があり、山には獣、神、死者の気配があると考えられた。境界とは地図に引かれた一本線ではなく、夕方の山道で急に空気が変わる場所のことなんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "学校の校門を出ると先生の目が届かなくなる感じより、ずっと重い境目だね。明るいうちなら通れる道でも、日没後には別の場所として扱われたのかもしれない。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山姥は、その外側にいる女の姿をした怪異として各地に残る。長野、岐阜、山梨、岩手などで語られ、峠や炭焼き小屋、村外れで人の前に立つ場面が多いんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし山姥伝承は、一冊の本に固定された同じ物語ではない。土地ごとに姿も役目も違うため、全てを同じ神や同じ怪物だと断定するのは、原典の読み方として危ない。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ山姥は必ず盆に出るわけじゃないんだね。でも離れた地域でも、盆や正月みたいな節目に山の女が近づく話があるなら、そこには共通の理由がありそうだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その理由を探す時、最初に見るべきは出現月ではなく村の予定表なんだ。人がいつ山へ入り、いつ山を避け、いつ死者や神を迎えるかで、山姥の出番は意味を変える。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで第二のフックを置こう。山姥が最も不穏になるのは、村人が『帰ってくるもの』を歓迎する日なんだ。歓迎のために灯した火や飾った門が、別の客にも道標になる。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "旧暦七月十五日を中心とする盆は、祖先の霊が家に戻り、数日後にまた送り出される時季だった。迎え火と送り火は、帰る者に道を示すための小さな灯りとして知られている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それ好きなやつ！盆踊りや提灯は楽しい印象なのに、火が道しるべなら、祖先じゃない何かも同じ光を見つけられるってことになるの？それは急に怪談になるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "民俗学者の柳田國男は、山にいる霊的な存在と祖先をめぐる考えを繰り返し論じた。盆の山は単なる背景ではなく、戻るものが近づく方向として村人に意識されていたんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから盆に山姥が里へ降りる話は、怪物が散歩するだけの話ではない。帰ってくるはずの祖先と、帰ってきてはいけない山の者が、同じ夜道を歩く可能性の話になる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。迎え火を焚く家は『こっちだよ』って教えているわけだよね。山姥がそれを見て戸口まで来たら、家の人は誰を迎えたのか分からなくなるよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "盆の火は祖先を迎え送る目印だが、伝承の中では目印は誰にでも読める。橋、辻、村外れ、墓への道が不穏になるのは、内側と外側を分ける標識が集まる場所だからだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山姥を『人を襲う老婆』だけで終わらせると、この怖さは消えてしまう。彼女は山から来る女である前に、境界を越えて入ってくるものへ、人間が与えた顔だった可能性がある。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "正月も同じくらい重要な時季だ。年の変わり目には年神を迎える習わしがあり、門松や注連縄で家の内側を整え、外から来るものを選り分ける意識が強く働いていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "正月は一年で一番明るい日なのに、選り分けるって言葉がもう冷たいね。歓迎する神が来るからこそ、同じ戸口に歓迎しない相手が立つ怖さも生まれるのかな。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "年神は豊作や命をもたらす来訪神として迎えられる。けれど『外から良いものが来る』と信じる社会では、戸を叩く相手が本当に良い来訪者か確かめる不安も消えないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "正月前後の山姥話では、雪と山道が背景に置かれることがある。白い雪で道が消える夜、助けを求める旅人に見える女を、家へ入れるかどうかが物語の分かれ道になる。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "寒そうな人が来たら助けたいし、断ったら悪いことをした気分になるよね。でも雪で外が見えない夜なら、家の中にいる人全員が判断を間違えそうで嫌だな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "昔話で山姥が食事や宿を求める場面は、村のもてなしの裏返しでもある。断れば人情を失い、入れれば家の境界を失う。その二択を夜の戸口に置くから、話は静かに怖い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "好きな妖怪ほど、元ネタが怖い。山姥は牙や爪を見せる前に、助けを求める声で人の善意を試す。ゲームのクエストなら選択肢を押せるが、昔話の家にはやり直しがない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "三つ目の手がかりは、冬の山入りと山止めだ。山止めは山へ入る作業を控える慣習で、雪の危険を避ける意味と、山の神の領分へ踏み込みすぎない意味が重なっていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山止めは地域によって日も理由も異なるが、人が山へ入らない期間を作る点は共通する。現代なら立入禁止エリアのようだが、柵より先に村全体の約束が境界線になっていた。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームなら入れない場所には見えない壁があるけど、昔の山にはそんな表示がないよね。だからこそ『今日は入らない』と皆が知っていること自体が、すごく大事だったんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "人が山へ入らない時季があるなら、逆向きの想像も生まれる。人の側が山を遠ざける日に、山の側のものが里へ近づくかもしれないという想像が、山姥の足音を作るんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "つまり山姥が季節を選ぶのは、暦が怪物を呼び出したからではない。人が山との距離を変える日だからこそ、山から来るものの話が村にとって急に現実的になるからなんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "山姥は山にいるから怖いんじゃないんだね。盆や正月みたいに、里の人がいつもと違うルールで暮らす日に、向こうから境界を越えて来るから怖いんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "盆なら迎え火、正月なら飾り、冬なら閉ざされた山道がある。どれも暮らしを守るためのしるしなのに、しるしがあるからこそ『その向こう側』の存在まで意識されるようになる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸後期から明治期に採集された昔話では、山の女は居間より峠や村外れに現れやすい。家へ着く直前、帰宅が確定するはずの地点で足を止めさせるのが、山姥話の嫌なところだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "家まであと少しの場所で、知らないイベントが始まる感じだ。逃げても山道が一本しかなければ避けられないし、後ろに戻れば夜の山へ戻るしかないんだよね。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山姥という名は山にいる老女という意味に見えるが、役目は一つではない。山の神に近い存在、産の場を助ける存在、死者と関わる存在として読む説が、地域資料には並んでいる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、山姥の全伝承を一つの神格へまとめるのは研究上の確定事項ではない。これは複数の昔話を比べた民俗学上の解釈であり、公式設定のように決めつけてはいけないんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ファンの間では全部同じ正体だと言われることもありそうだけど、伝承は村ごとに違うんだね。それでも境目の時季に現れる女という形が残ったことは、やっぱり気になるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その不気味さは、記録の短さにもある。『盆の夜に山の女が来た』と書かれていても、戸を開けたのか、誰がいたのか、その後に何が起きたのかまで残らない例がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "語り手が省いたのか、聞き手が書かなかったのかは分からない。ただ、戸口まで来たものの結末を曖昧にすることで、聞いた人の家の夜へ話が移ってしまう。そこから先は、記録が途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "聞かなきゃよかった。続きを書いていないだけなのに、話した人が続きを口にできなかったように聞こえるよ。盆の夜に戸を叩く音がしたら、急に思い出しそうだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山姥が季節に結びつく理由を、雪や空腹だけで説明しないほうがいい。旧暦の盆と正月は、祖先、家族、食べ物、山仕事の区切りが同時に動く、村の大きな切り替えだった。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "現代なら年度替わりや長い休みの前夜に少し似ている。いつもの時間割が消えると、普段なら見ない道を通り、いつもと違う人に会い、同じ町でも少し別の場所に見えるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "村の年中行事は、その変化を火や飾りや食事で形にした。迎える、送る、山へ入らないという行為は、見えない境目を安全に渡るための手順として続けられてきたんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ山姥の話は、盆の夜や雪の峠を軽く見ないための注意書きにもなっていたのかな。でも注意を守っても来るかもしれないなら、やっぱり安心はできないね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そう読むことはできる。ただし昔話を現代の安全標語に縮めると、最も冷たい部分が消える。山姥はルール違反を罰するだけでなく、正しく暮らしても境から来るかもしれない存在なんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから伝承の戸口には、正しい答えだけでは埋まらない隙間が残る。迎えるべき祖先と、招かざる山の女を、提灯一つの暗がりで見分ける方法は、誰も教えてくれない。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "名前を名乗られても、本当にその人かは外から分からないよね。迎え火が揺れて顔が見えない時、家の人は『帰ってきた』と思いたい気持ちに負けそうで怖いよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承を追うなら、山姥の見た目だけでなく、出た日と場所を一緒に見るといい。盆なら火、正月なら門、冬なら峠という背景が、彼女が越える境界をはっきり示してくれる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "盆の山姥話では、迎え火、墓参り、送り火という順番に注目してみよう。山姥が橋や辻に現れるなら、死者を送り出す道と同じ場所に、別の足跡が重なっているかもしれない。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "正月の山姥話では、門松や注連縄のある入口を見るといい。飾りは祝いの道具である一方、ここから内側は人の家だと示す線でもあり、外から来る者への静かな警告にもなる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "妖怪の顔や能力だけ追うより、出現した日付と場所を地図に置くほうが、なぜ怖がられたかまで分かるんだね。見えない境界線が、伝承の中で見えてくる感じだ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もちろん、地図に印を増やしても山姥が実在した証明にはならない。伝承は村人が何を恐れ、何を迎え、何を山へ残そうとしたかを映す記録として読むべきなんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪ウォッチの妖怪を入口にする時も、公式設定、地域伝承、ファンによる非公式考察は分けて考えよう。ゲームの魅力と昔話の恐さは別物だからこそ、並べた時の落差が深くなる。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "公式にない怖い設定を、本当のゲームの話みたいに広めるのは違うんだね。でも伝承の山姥を知った後だと、山の妖怪を見た時の『山から来た』って言葉が重くなるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "今回の答えを言い切るなら、山姥が決まった季節に里へ降りるのは、山と里の境が暦によって開くと人々が感じたからなんだ。盆と正月は、その感覚が最も濃くなる夜だった。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "帰るものを迎える盆、外から神を迎える正月、人が山を避ける冬。その三つの時季に、山姥は山の怪物ではなく、境界の外から来る客として、戸口の暗がりへ立たされた。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "山姥は季節を待っていたんじゃなくて、人の側が境の戸を少し開ける日を待っていたのかもしれないね。え、待って、それなら迎え火の意味まで変わって聞こえるよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は妖怪ウォッチのジバニャンを入口に、猫が家へ帰れなくなる伝承の側を調べる予定だ。帰る場所を失う怪異は、盆に帰るものを待つ山姥の夜とも静かにつながっている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、地方に残る妖怪シリーズを追ってほしい。毎日投稿中で登録者一万人を目指しているから、チャンネル登録で応援よろしくね、次の原典も持ってくる。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そして盆や正月の夜、山側から来る足音を聞いても、すぐ戸を開けないほうがいい。迎えるはずのものだけが、あの細い道を歩いているとは限らないんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "山姥が降りる",
+      "季節の正体"
+    ],
+    "hook_caption": "境が開く日",
+    "subtitle": "盆と正月に重なる山姥の足音",
+    "tagline": "山と里の境界が緩む夜を追う"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 15,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.523,
+      "similar_to": "逆柱はなぜ家鳴りを呼ぶのか正体",
+      "template_issues": [
+        "直近10本中6本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "山姥はなぜ決まった季節に里へ降りるのか 正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 72,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体'](+20)",
+      "好奇心ギャップ['なぜ', '正体'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

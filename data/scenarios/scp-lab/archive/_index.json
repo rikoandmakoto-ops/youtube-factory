@@ -1,5 +1,60 @@
 [
   {
+    "file": "scp-lab_20260916_092127_scenario.md",
+    "title": "SCP-093 帰還者の証言から消えた15分の真相",
+    "video_title": "【ゆっくり解説】証言が短い消えた15分「SCP-093 帰還者の証言から消えた15分の真相」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-093 なぜ帰還者だけ証言が15分短いのか",
+      "angle": "証言時間の差。15分という欠落を扱う"
+    },
+    "generated_at": "2026-09-16T09:21:27.975390Z",
+    "prompt_hash": "44b833b64b39",
+    "generated_by": "gpt",
+    "script_source": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260916_072011_scenario.md",
+    "title": "毎朝3mm短くなる廊下、21日目に消えた理由",
+    "video_title": "【ゆっくり解説】21日目の壁消えた63mm「毎朝3mm短くなる廊下、21日目に消えた理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-5219 毎朝3mmずつ短くなる廊下、21日目の測定値",
+      "angle": "subs2の「SCP-6121 毎晩1cm動く椅子、14日目に起きた異変」と同型。単位つき微小変化＋経過日数で具体性を出す",
+      "_added_20260914n": true,
+      "theme_gate": {
+        "replaced": "SCP-2000 なぜ再起動は6回目で止まったのか",
+        "reason": "既存『一口SCP：人類は何度『作り直された』のか財団が』に類似(1.00)"
+      }
+    },
+    "generated_at": "2026-09-16T07:20:11.314417Z",
+    "prompt_hash": "0c6d0503fd8a",
+    "generated_by": "gpt",
+    "script_source": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260916_031753_scenario.md",
+    "title": "SCP-1548「予言する星」7組失踪の裏側",
+    "video_title": "【ゆっくり解説】窓の外の星7組が消えた「SCP-1548「予言する星」7組失踪の裏側」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "SCP-1548「予言する星」観測班7組の失踪と裏側",
+      "angle": "天体現象の解説ではなく、予言を受信した観測班が同じ結論に到達した過程と、財団が公開しなかった観測データを追う",
+      "parent_title": null,
+      "theme_gate": {
+        "replaced": "SCP-3999 観測員の記録が9行目で途切れる理由",
+        "reason": "既存『一口SCP：SCP-3999【世界が、一人の研究』に類似(1.00)"
+      }
+    },
+    "generated_at": "2026-09-16T03:17:53.494392Z",
+    "prompt_hash": "18ca4f91ec02",
+    "generated_by": "gpt",
+    "script_source": "gpt",
+    "selected_by": null
+  },
+  {
     "file": "scp-lab_20260915_091803_scenario.md",
     "title": "なぜSCP-610の救援隊は全員感染したのか？",
     "video_title": "【ゆっくり解説】生存率0%救援7名消失「なぜSCP-610の救援隊は全員感染したのか？」",

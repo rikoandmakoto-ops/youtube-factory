@@ -1,0 +1,219 @@
+{
+  "title": "無印良品の1,200店、実は衣料だけではない売上構成",
+  "theme": {
+    "title": "無印良品の店舗数1,200と売上のうち衣料が占める割合",
+    "angle": "企業名＋店舗数＋構成比。セグメント別の実数で締める"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "無印良品の実態",
+      "fact_main": "無印良品 1,200店",
+      "fact_sub": "国内外の店舗網",
+      "text": "無印良品の店舗数、1,200店を超えると思いますか。衣料の会社という印象とは少し違います。",
+      "bg_query": "株式会社良品計画 無印良品 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "国内店舗 651店",
+      "fact_sub": "2024年8月期末",
+      "text": "国内は651店です。駅前から大型商業施設まで。",
+      "bg_query": "株式会社良品計画 無印良品 店内",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "海外店舗 654店",
+      "fact_sub": "2024年8月期末",
+      "text": "海外は654店です。国内より多く、出店の重心はすでに日本の外へ移っています。",
+      "bg_query": "株式会社良品計画 無印良品 海外店舗",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "衣料売上 1,252億円",
+      "fact_sub": "2024年8月期",
+      "text": "衣料の売上は1,252億円です。",
+      "bg_query": "株式会社良品計画 無印良品 衣料品 売り場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "衣料構成比 約19%",
+      "fact_sub": "売上高6,616億円比",
+      "text": "全売上6,616億円に対し、衣料は約19パーセントです。",
+      "bg_query": "株式会社良品計画 無印良品 生活雑貨 売り場",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "生活雑貨 2,873億円",
+      "fact_sub": "衣料の約2.3倍",
+      "text": "生活雑貨は2,873億円で衣料の約2.3倍です。",
+      "bg_query": "株式会社良品計画 無印良品 生活雑貨 店内",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "国内1,200店",
+      "衣料は何割"
+    ],
+    "subtitle": "無印良品の売上構成",
+    "tagline": "衣料より強い売り場"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "生活雑貨は2,873億円で衣料の約2.3倍です。ただし、店舗運営の負担までは公表",
+          "reason": "1行54字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 9,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.46,
+      "similar_to": "伊藤忠商事の年収1753万円、朝型勤務の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "無印良品の1,200店、実は衣料だけではない売上構成"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', 'だけ'](+20)",
+      "好奇心ギャップ['実は'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

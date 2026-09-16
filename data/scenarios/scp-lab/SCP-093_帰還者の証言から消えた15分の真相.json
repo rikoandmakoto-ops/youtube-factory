@@ -1,0 +1,500 @@
+{
+  "title": "SCP-093 帰還者の証言から消えた15分の真相",
+  "theme": {
+    "title": "SCP-093 なぜ帰還者だけ証言が15分短いのか",
+    "angle": "証言時間の差。15分という欠落を扱う"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "なんでSCP-093だけ帰還者の証言が15分短いのか。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、全員が同じ15分だけ語れないのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "録音は15分欠け、扉の向こうで見たものだけ残らない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "授業なら15分だ。そこだけ全員忘れるのはまずい。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "空白を尋ねた職員も沈黙した。記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高評価を残せ。財団の裏側シリーズも毎日投稿中、1万人目標の応援としてチャンネル登録を頼む。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "なんでSCP-093だけ、帰還者の証言が15分短いのか。時計は正常に進み、録音機も停止していない。それでも帰還者の言葉から、ちょうど15分前後だけが切り取られているという記録が残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、15分だけ全員が同じように黙るのか。自分の部屋で撮った動画の中央から、毎回ぴったり15分だけ消え、消えた本人も何を話したか知らないようなものだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "欠けたのは鏡の向こうを歩いていた映像ではない。帰還後の聴取記録だ。職員が質問を続けているはずの場所で、答える声も筆記音も消え、15分後に会話だけが再開する。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-093は赤い円盤として回収された。黒い液体に覆われた表面を鏡へ向けると、裏側には別の世界が映る。探索隊は何度もそこへ入り、帰還者の証言を残そうとした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "赤い円盤と鏡だけで、知らない場所へ繋がるのか。待って、扉を開けた人間だけが危ないならまだ分かるが、帰ってから15分を失うのは逃げ場がない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "向こう側には荒廃した道路、壊れた住宅、使われなくなった施設があった。探索記録は建物の配置まで細かく残す。それなのに、特定の地点に触れる話だけが15分の空白へ沈む。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "帰還者は複数いた。軍人、技術員、Dクラス職員。それぞれ別の順路を通ったと報告している。しかし聴取の途中で失われる時間は、どの記録でも約15分に収束していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "道が違っても空白の長さが同じなら、迷子になった時間ではない。校舎の階段、体育館、屋上にいた生徒が、同じ15分だけ記憶を抜かれるような異常だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は最初、機器の不調を疑った。録音機を3台に増やし、時計を2種類置き、筆記担当も交代させた。それでも15分後には、すべての媒体に同じ沈黙だけが残った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録担当の手帳には、質問を書いた行と再開後の返答がある。その間の紙面だけが空白になる。ページは破れていない。インクも乾いている。ただ15分分の文字が存在しない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "それ、録音だけを消した誰かの仕業じゃない。声、時計、手帳まで同じ穴を持つなら、聴取室にいた人間全員が空白の中へ入って、気づかず戻されたことになる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題はここからだ。空白の前後に残る発言は、文法まで自然に繋がっている。誰かが会話の中央を乱暴に削ったのではない。最初から15分など無かったように、記録だけが整えられている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ある帰還者は、長い通路を進み、奥にある扉を見つけたと語った。次の発言では、すでに別の階に立っている。15分の間に歩いた距離も、会った相手も、本人は説明できなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ゲームならロード画面が挟まったと考えられる。でも本人の画面にも、録画にも、ロードの印はない。気づいた時には別の場所で、そこまで行った理由だけが消えている。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "帰還者を別々の部屋へ入れ、質問の順番を変えても結果は同じだった。扉、声、視線という話題に近づくと、本人の返答が鈍る。次に時計を確認すると、すでに15分が経過していた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "空白の最中、帰還者は眠っていない。脈拍は保たれ、椅子から落ちた者もいない。目を開けたまま壁を見ていたという証言もある。それでも本人は、その15分を一切覚えていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は起きた出来事を先に記録した。帰還者の証言が欠ける。聴取室の媒体も欠ける。その後で、この現象には記憶処理という分類が与えられた。ただし名称は答えではない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "記憶処理と呼んでも、誰が何をしたかは分からないのか。名前を付ければ安全になるわけじゃない。赤い円盤の向こう側にいるものは、こっちの記録まで触れる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-093の探索では、向こう側に人間の生活があった痕跡が確認された。道路標識、部屋割り、避難の跡。そこは最初から怪物だけの場所ではない。誰かが暮らし、そして失敗した場所だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "帰還者たちは壁の傷や道順を細かく話せた。足音の回数まで覚えていた者もいる。だが扉の手前に立った瞬間から、言葉は曖昧になる。15分後には、話題を変えようとする。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "空白の前だけ細かく、後だけ急に雑になる。宿題の途中が消えたんじゃない。答えを書いた一番大事なページだけ、誰かがノートから抜き取ったような残り方だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "探索映像には、後から説明できない行動も残っていた。帰還者が通路で止まり、何もない空間へ道を譲る。映像上は数十秒だが、本人は誰に譲ったのか答えられなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "音声を増幅しても、15分の空白から言葉は出なかった。雑音も呼吸も足音も残らない。停電したなら機器の痕跡があるはずだが、記録には完全な無音だけが続いていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "完全な無音が15分も続くのか。通信が切れたなら警告音くらい残る。何も聞こえないのは、音が止まったんじゃない。聞く側の時間ごと、そこから外されたみたいだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "複数の聴取記録では、空白の直前に扉の話が出る。扉が閉じていたのか、開いていたのか。職員がそこを尋ねた瞬間から、質問文そのものが記録から消える例まで確認されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "質問を紙に書いて渡す試みも行われた。帰還者は質問を読んだ直後、15分間ペンを止めた。再開後の紙には返答がなく、本人の署名だけが残ったという記録が残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "口で聞かなければ避けられると思ったのに、文字でも同じなのか。質問の形を変えても届くなら、危険なのは音でも紙でもない。その問いが向こう側へ触れること自体だ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "別の言語で質問しても結果は変わらなかった。扉、同行者、声、目撃という内容を避けても、境界へ近づくと記録は失われた。財団は言葉ではなく、接触そのものを恐れるようになった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "15分後、帰還者の数名は水を求めた。飲んだ量は一定ではない。だがコップを持つ手だけは、鏡の向こうから戻った直後より強く震えた。体だけが空白を覚えていた可能性がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "忘れたなら、怖がる理由も残らないはずだ。それでも手が震える。自分では知らない15分を、身体だけが必死に忘れようとしているなら、聞かなきゃよかった。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "一部の帰還者は、自分は一人で戻らなかったと話した。同行者の名を聞かれると、報告書は黒塗りになる。誰の名前が書かれていたか、その箇所は後に[DATA EXPUNGED]された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "聴取室の備品記録には、椅子が一脚増えていたという記載がある。設置者は不明で、使用者の署名もない。翌日には椅子そのものが消えたため、担当者は報告書へ注記だけを残した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "椅子が一脚だけ増えた。帰還者が座っていた椅子とは別に、誰かの席が用意されていたのか。15分の空白で戻ったものが、人間とは限らない。それが一番まずい。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "鏡の前に置かれた円盤は、持つ者に応じて違う景色を映すとされた。同じ入口へ入ったつもりでも、同じ場所へ行った保証はない。だから空白の15分が共有された理由も、財団では確定できない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "再接触の試みは途中で禁じられた。二度目に鏡へ近づいた帰還者の経過報告は、開始から15分後に丸ごと削除されている。残ったのは時刻と、判読できない筆圧の強い線だけだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その削除記録には担当者の署名があった。しかし署名した人物は、同じ時刻に別区画で勤務していた。署名だけが聴取室にあり、本人は書いた覚えがない。勤務記録も訂正されなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "署名した人間がそこにいないのに、紙だけは署名を持っている。誰かが手を使ったのか、それとも紙の方が先に帰還したのか。どちらでも、鏡の前には立ちたくない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団はSCP-093の近くで、接近時間を分単位で監視した。帰還後の聴取にも複数の時計を置いた。15分を正確に測るためではない。次の15分を誰にも渡さないためだった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "空白が始まったと判断された場合、職員は質問を中止する。答えを引き出そうとするほど、帰還者は鏡のない壁を見る。壁面に赤い反射が出たという報告が、少なくとも数件残されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "帰還者へ家族や住所を尋ねる試みも中止された。空白の直後、自分の住所ではなく向こう側で見た建物の位置を口にした例がある。訂正されても、その人物は自宅へ帰ることを拒んだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "15分を忘れた後、自分の家まで別の場所に見えるのか。帰還は終わっていない。身体だけこっちへ戻り、目の奥にはまだ向こうの街が残っている。そんな帰還者だったのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の指示は短い。赤い円盤を見かけても触れない。鏡の前へ持ち込まない。自分の顔が表面に映っても、裏側を確かめない。見かけても、決して近づくなという警告だけが残る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし誰かが会話の15分を忘れたなら、空白を埋めようとしてはいけない。何を見たのか、誰といたのか、どの扉を開けたのか。その質問が次の沈黙を呼ぶ可能性を、財団は否定していない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "録音を聞き返す場合も、空白だけを繰り返し再生してはならない。無音だから安全とは限らない。ある記録係は再生回数を15回と書いた直後、その後の勤務記録から名前が消えている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "無音を15回聞いただけで、名前が記録から消えるのか。音がないから大丈夫だと思って再生する人ほど危ない。聞こえない場所に、向こう側がまだ繋がっている。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-093の恐ろしさは、怪物の姿を見せることではない。帰還者が語れない15分を、こちらの記録も守れないことだ。空白は頭の中ではなく、聴取室と報告書の内側にも発生している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "答えとして残せるのは、15分の欠落が帰還者だけの症状ではなかったことだ。時計、録音、手帳、質問者まで同じ穴を抱えた。そこは記憶の穴ではなく、向こう側へ開いた通路かもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…ねえ、これ本当に大丈夫なの？　15分の間に誰かが帰還者と入れ替わり、本人の席へ座ったなら、短い証言は忘却ではない。入れ替わりを隠すための、静かな証拠になる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も古い報告書には、空白の直後の一文だけが残る。帰還者は鏡を見ずに、もう帰ってきたと言った。誰が帰還したのか。その主語だけは、最初からどの記録にも書かれていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-3008「無限のIKEA」で、閉店後の店内に残された人間が、出口ではなく放送の声を恐れた理由を読む。建物の奥ほど、時刻を示す時計が減っていくという記録がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書が届いたなら高評価を残せ。財団の裏側シリーズには、消された時刻と帰還者の記録がまだ置かれている。毎日投稿中、1万人目標の応援としてチャンネル登録を頼む。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "証言が短い",
+      "消えた15分"
+    ],
+    "hook_caption": "消えた15分",
+    "subtitle": "帰還者の録音に残る不自然な空白",
+    "tagline": "空白を聞いた職員も沈黙した"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 20,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.548,
+      "similar_to": "SCP-5800 職員証1枚だけ戻る正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-093「赤い海」証言15分の真相"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', 'だけ'](+20)",
+      "好奇心ギャップ['なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-093「赤い海」証言15分の真相",
+    "attempts": 1
+  },
+  "original_title": "SCP-093「赤い海」証言15分の真相",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜSCP-093の帰還者は15分だけ証言できないのか"
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

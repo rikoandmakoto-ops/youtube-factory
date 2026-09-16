@@ -1,0 +1,212 @@
+{
+  "title": "ドン・キホーテの4万点、実は在庫を寝かせない売り場",
+  "theme": {
+    "title": "ドン・キホーテが1店舗で4万点を置く理由と在庫の数字",
+    "angle": "企業名＋具体点数。圧縮陳列の回転率で締める"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "売り場の実態",
+      "fact_main": "ドンキ 4万点",
+      "fact_sub": "店舗により品ぞろえは異なる",
+      "text": "実は4万点の裏で、在庫を寝かせにくい売り場が動いています。",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "売場面積 約3千㎡",
+      "fact_sub": "大型店の一例",
+      "text": "大型店では約3千平方メートルに商品を詰め込み、選ぶ時間まで伸ばします。",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ 売り場 通路",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "24時間営業 店舗あり",
+      "fact_sub": "店舗ごとに営業時間は異なる",
+      "text": "24時間営業の店舗もあります。",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ 夜間 店舗",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "月間客数 3千万人超",
+      "fact_sub": "PPIH公表の国内ドンキ等",
+      "text": "月間客数は3千万人超です。数字だけ見れば、かなり良い集客力です。",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ レジ 行列",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "在庫回転日数 30日台",
+      "fact_sub": "PPIH有価証券報告書ベース",
+      "text": "在庫は30日台で回ります。売れ筋を早く入れ替えるから、4万点が成立します。",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ 商品陳列",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "深夜勤務 22時以降",
+      "fact_sub": "店舗職はシフト勤務",
+      "text": "ただし店舗職は22時以降の勤務もあります。",
+      "bg_query": "株式会社パン・パシフィック・インターナショナルホールディングス ドン・キホーテ 深夜 レジ",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "1店4万点",
+      "在庫の正体"
+    ],
+    "subtitle": "圧縮陳列で回す仕組み",
+    "tagline": "ドン・キホーテの売り場分析"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 16,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 4,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.452,
+      "similar_to": "ドンキの深夜2時営業、実は夜に強い設計の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "ドン・キホーテの4万点、実は在庫を寝かせない売り場"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は'](+12)",
+      "好奇心ギャップ['実は'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

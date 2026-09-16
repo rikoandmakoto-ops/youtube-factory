@@ -1,0 +1,526 @@
+{
+  "title": "なぜ熱い風呂は最初の10秒だけ痛いのか？体の正体",
+  "theme": {
+    "title": "なぜ熱い風呂は最初の10秒だけ痛いのか",
+    "angle": "身体感覚＋秒数。温度受容体の順応を3行目で渡す"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "熱い湯に入る最初の10秒、あなたの皮膚だけ大騒ぎします。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！ 42℃なのに途中から平気になるのはなぜ？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "皮膚の温度センサーは数秒で順応し、強い合図を弱め始めます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ スマホ通知が何度も鳴ると慣れる感じだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも湯温は同じです。だから平気は、熱が消えた合図ではありません。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "熱い湯ほど最初の感覚を信じてみて。高評価を押して、感覚のふしぎシリーズもチャンネル登録で応援よろしくね、1万人目標で毎日投稿中！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？ 熱いコーヒーを最初のひと口だけ強く感じるように、42℃の湯へ入ったあなたの皮膚も、最初の約10秒だけ大きな合図を出しています。\n湯船の中で急に平気になる、あの不思議を一緒にほどいていきます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！ 足先を入れた瞬間は熱いのに、肩まで沈んで少しすると同じ湯が平気になるよね。\nでも給湯器の表示は42℃のままなら、途中で何が変わったのか気になるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "お風呂の設定が42℃のままなら、湯の熱さは10秒後も同じです。\n変化しているのは湯船ではなく、あなたの皮膚が脳へ送る知らせ方で、ここに最初だけ痛い理由の手がかりがあります。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ じゃあ熱さそのものが消えたのではなく、感じ方だけが変わるんだね。\n言われてみれば確かに、同じ湯なのに体を動かすとまた熱く感じることがあるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "皮膚には温度の変化を拾う小さな受け取り口があり、急に42℃へ触れた直後は強い電気の合図を脳へ送ります。\n数秒たつと合図は少し小さくなり、同じ温度を前ほど強く知らせなくなっていきます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "それなら、熱い湯に慣れたというより、皮膚から届く速報が落ち着いた感じなんだね。\n最初だけ通知が連続し、数回後には気にならなくなるスマホの通知みたいで分かりやすいよ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで大事なのは、平気に感じ始めたことと、皮膚が熱の影響を受けなくなったことは別だという点です。\n温度計が42℃を示しているなら、熱は数十秒後も同じように体へ移り続けています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、感覚が静かになっても、体の表面ではまだ同じ熱が入ってくるの？\nだったら最初の痛みだけを基準にして長く入ると、体が受けている熱を見落としそうだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえるなら、駅のホームで最初は大きく聞こえたアナウンスが、3分後には意識から薄れるのと同じです。\n音が止まったのではなく、脳が繰り返す合図を背景へ回しているだけなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ お風呂でも皮膚と脳が、同じ知らせをずっと大声では受け取らないようにしているんだ。\nじゃあ冷たいプールに入ったとき、最初だけ冷たすぎるのも似た流れなの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "冷たい水でも、入った直後の急な変化は特に強く感じやすく、30秒ほどで感じ方が弱まることがあります。\nただし体の中心まで安全という意味ではないので、慣れた後ほど外から時計を見ることが役立ちます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "実はこれ、今あなたの体でも起きていますね。服の袖から手を出した最初の数秒だけ寒くて、そのままいると少し気にならなくなる。\nでも外の気温が2℃上がったわけではないものね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。熱い湯に入ったときの最初の痛みは、単に慣れるための合図ではありません。\n皮膚が急な温度差を見つけて、入る速さを調整してほしいと知らせる、実用的なサインでもあります。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、最初の10秒には入る速さを変えるヒントまで入っているの？\n勢いよく肩まで入るより、足から少しずつ入ったほうが楽なのは、気合いの問題だけではなかったんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "湯に触れた場所は、皮膚の表面から先に温まり、血管もその熱を受け取ります。\n急に広い面積を42℃へ沈めると、たくさんの受け取り口が同時に反応するため、最初の印象がより強くなりやすいんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり片足だけより、両足や腕を一度に入れたときのほうが、熱いという知らせが増えるんだね。\nお風呂で体を縮めながら入る人が多いのも、自然な動きに見えてきたよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "特に足先やすねは、湯に入れる順番の先頭になりやすく、冷えた状態から急に温められます。\n冬の脱衣所で皮膚が冷えているほど、同じ42℃でも最初の差が大きくなり、熱さを強く感じることがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 夏より冬のほうが同じ設定なのに熱く感じることがあるのは、湯の温度だけで決まらないからなんだ。\n入る前の自分の皮膚の温度も、42℃の受け取り方を変えるんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで面白いのが、温度を受け取る仕組みは、絶対的な42℃だけでなく、さっきまでの皮膚との違いにも反応することです。\nぬるい部屋から入るか、寒い廊下から入るかで、同じ湯でも最初の体感が変わります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、浴室を暖めてから入る日は、湯船への一歩目がずっと楽だよ。\n体を甘やかしているだけではなく、急な温度差を小さくしていることにもなるんだね。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、人の皮膚は温度が変わり続けるときほど、その変化をはっきり感じやすいことが示されています。\n反対に温度が安定すると、最初ほど強い合図を出し続けないため、湯の中で感覚が落ち着いていくんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ、じっと入っていると平気なのに、湯をかき混ぜた瞬間にまた熱く感じることがあるのはなぜ？\n同じ42℃なら、最初の10秒を過ぎた後は、もう変化を感じないはずなのに不思議だよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "湯を動かすと、皮膚のそばで少し冷めていた水が入れ替わり、より温かい湯が新しく触れます。\n止まった湯の中にできる薄いぬるめの膜がほどけるので、皮膚はもう一度、温度が変わったと受け取るんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 体のまわりには、自分で少しぬるくした薄い湯の層ができていたんだ。\n満員電車で人の流れが止まると空気が落ち着き、動き出すと風を感じる場面にも少し似ているね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この薄い層は、理科でいうと境目にできる水の層ですが、難しく覚えなくて大丈夫です。\n湯船でじっとしていると体の近くだけ少し穏やかになり、動くと新しい湯が当たって熱さが戻る、と考えれば十分です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "それなら肩まで入ってから手で湯を大きく動かすと、急に熱く感じる理由もつながるね。\n熱い湯で落ち着いた後に動くほど、皮膚の近くへ42℃の新しい湯を運んでしまうわけだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "42℃前後は家庭の入浴でよく使われる目安ですが、心地よさは年齢、室温、体調、皮膚の乾き方で変わります。\n数字が同じでも、昨日より熱いと感じる日は、あなたの体側の条件が違っている可能性があります。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、温度計が同じでも体調で受け取り方が変わるなら、今日は大丈夫だったから明日も大丈夫、とは言い切れないね。\n寝不足や運動の後に熱く感じる日があるのも、無関係ではなさそうだよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "入浴の安全では、熱さに慣れた感覚より、のぼせそう、動悸がする、気分が悪いという体の変化を優先してください。\nとくに飲酒後や体調がすぐれない日は、42℃前後でも長く入る判断を避け、無理をしないことが大切です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "最初の痛みが消えたから平気、ではなく、体のほかの合図も見るんだね。\nお風呂は毎日のことだからこそ、慣れた感覚だけに任せず、時計や家族の声も手がかりにしたいよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここまでの、同じ刺激に触れ続けると合図が弱まる変化には名前が付いていて、順応と言います。\nつまり、皮膚と脳が同じ知らせをずっと最大音量で扱わないよう、受け取り方を調整している状態なんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 順応は熱さがなくなった印ではなく、同じ知らせを背景へ回す体の働きなんだね。\n名前を知ると、42℃の湯船で急に楽になる感覚が、少し見えやすくなったよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "順応はお風呂だけの特別な働きではありません。腕時計を着けた直後は重さを感じても、10分ほどすると意識から消えることがあります。\n腕時計が軽くなったのではなく、皮膚からの同じ合図を脳が目立たせなくなるからです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、眼鏡もかけた直後だけ鼻に当たる感じがするのに、しばらくすると忘れているよ。\n毎日ある感覚と湯船の熱さが、同じ方向でつながっているのは面白いね。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただ、順応がどのくらいの秒数で起きるかは、全員がぴったり10秒ではありません。\n皮膚の場所、湯温、入る前の冷え、動いているかで変わるので、10秒は多くの人が気づきやすい体感の目安と考えてください。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、10秒は時計のように決まった数字ではないんだね。\nだから友だちが平気でも自分だけ熱いと感じるとき、我慢が足りないのではなく、入る前の条件が違うこともあるんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔から日本では湯を楽しむ習慣があり、地域によっては42℃を超える熱めの湯も親しまれてきました。\nその一方で、入浴前にかけ湯をして体を少しずつ湯へ慣らす作法は、急な温度差を和らげる知恵として続いています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ かけ湯は体を洗う前の決まりごとだけではなく、最初の強い熱さを小さくする準備でもあるんだね。\n足先から順番にする理由が、皮膚の10秒の反応としても納得できるよ。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "かけ湯をするときは、心臓から遠い足先や手先から少しずつ湯をかけると、皮膚の温度差を急に広げずに済みます。\n42℃の湯でも、一度に全身を沈めるより、体が変化を受け取る短い時間を作れるんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、暗い部屋でいきなり照明を最大にするより、明るさを少しずつ上げる感じだね。\n目にも皮膚にも、変化の前に数秒の準備時間があると考えると、かけ湯を忘れにくくなりそう。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "もう一つ意外なのは、熱い湯で皮膚が赤くなっても、痛みが弱くなっただけで熱の影響が止まったわけではないことです。\n赤みやひりつきが続くなら入浴を終え、我慢を続けずに体を休ませる判断が大切になります。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、感じ方が鈍くなった時間ほど、見た目や体調を確かめる必要があるんだね。\nお風呂で気持ちよくなっていると時計を見なくなるから、入る前に10分の目安を決めるのも役立ちそう。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "家庭で試すなら、湯船へ入る前に手首だけでなく、実際に先に沈める足先へ少量の湯をかけて熱さを確認してみてください。\n手と足では皮膚の状態が違うため、入る一歩目を想像しながら確かめるほうが役立つことがあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それ昨日やった！ 手で確かめて大丈夫と思ったのに、足を入れたら熱くて驚いたことがあるよ。\n最初に入る場所で試すなら、42℃という数字だけより自分の体に近い確認になりそうだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次に、浴室が寒い日は、脱衣所や浴室を先に暖めておくと、皮膚と湯の差を小さくできます。\n冬場にいきなり熱い湯へ飛び込むより、室温から段階を作るほうが、最初の10秒を穏やかにしやすいんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ 湯の設定を下げるか上げるかだけでなく、入る前の部屋を整える方法もあるんだ。\nこれなら家族で好みの湯温が違っても、42℃を巡る困りごとを少し減らせそうだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "熱いと感じたら、我慢して肩まで沈むより、いったん足を止めて呼吸を整え、少しずつ面積を増やしてください。\nお風呂の気持ちよさは、最初の痛みを乗り越える競争ではなく、体の知らせを聞きながら入ることで続きます。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、急いで入った日は最初から力が入って、あとで疲れた気がするよ。\n数秒ゆっくり入るだけなら、給湯器の設定を変えなくても今日のお風呂からすぐ試せそうだね。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして湯の中で急に熱く感じ直したら、湯を動かして新しい熱い水が触れた合図かもしれません。\n体を静かにしても熱さが強いときは、その日の自分には温度が高い可能性があるので、無理に慣れようとしないでください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！ ばしゃばしゃ動いた後の熱さにも、体の近くの湯が入れ替わった理由があったんだ。\n最初の10秒だけでなく、途中で変わる体感も、湯温を見直す手がかりになるんだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "熱い風呂が最初の約10秒だけ痛く感じやすいのは、急な温度差へ皮膚が強く反応し、その後は同じ合図への順応が進むからです。\nただし42℃の湯が弱まるわけではないので、平気という感覚だけで長湯を決めないことがポイントです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "最初の痛みは邪魔なものではなく、入る速さを少し調整してほしいという体からの知らせだったんだね。\n今夜は足先から入り、同じ42℃でも自分の感覚が何秒で変わるか、時計を見ながら確かめてみるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなるのはなぜかを、0.5秒ほどの体感から一緒に見ていきます。\n寝る前にスマホを置いたあと、布団の中で起きるあの動きにも、体が出す身近な理由があります。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "お風呂の熱さも、眠る前のビクッも、毎日あるのに理由は知らなかったことばかりだね。\n今夜寝るときも、体が出す小さな合図をちょっと意識して、次の不思議も待っていたいよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の熱い湯の10秒が面白かったら高評価を押して、感覚のふしぎシリーズも見てみてください。\n身近な不思議を毎日1本ずつ一緒にほどいているので、次回も見逃さないようチャンネル登録よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "最初だけ痛い",
+      "10秒のなぜ"
+    ],
+    "hook_caption": "10秒の謎",
+    "subtitle": "42℃の湯で皮膚に起きる変化",
+    "tagline": "慣れた感覚と湯温は別です"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "熱い湯ほど最初の感覚を信じてみて。高評価を押して、感覚のふしぎシリーズもチャンネ",
+          "reason": "1行64字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 23,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 2,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.525,
+      "similar_to": "疲れた日の甘い物、3時間で消える正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ熱い風呂は最初の10秒だけ痛いのか？体の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

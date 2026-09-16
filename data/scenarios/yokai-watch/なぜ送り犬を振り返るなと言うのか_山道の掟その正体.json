@@ -1,0 +1,505 @@
+{
+  "title": "なぜ送り犬を振り返るなと言うのか 山道の掟、その正体",
+  "theme": {
+    "title": "なぜ送り犬には振り返ってはいけないのか",
+    "angle": "転ぶと襲われるという掟の実務的な意味。山道の作法として語る。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "送り犬、好きな人多いよね。でも元ネタを知ると見方が変わるんだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "犬が送ってくれる妖怪でしょ？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、山道で転んだ旅人に送り犬が襲いかかると伝わるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "帰り道の後ろに犬がいて、転んだ一回だけで安全判定が消える感じなのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから振り返らず歩く。犬より先に。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲーフリはこの妖怪を元にポケモンをデザインしたらしい。"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を。元ネタが怖い妖怪シリーズも調査中、毎日投稿で一万人目標だからチャンネル登録で応援してね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？柳田國男が1910年に刊行した『遠野物語』は全119話で、その中の山の怪談には、後ろから来る狼を振り返るなという掟が残っているんだ。送り犬好きの人ほど、この数字の重みを知ると見方が変わる。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "送り犬って、送ってくれる犬だから相棒っぽくて好きなやつ！でも全119話もある『遠野物語』に近い話があるなら、ただのかわいい名前じゃないんだね。後ろの犬を見ちゃ駄目なのは、なんでなんだ？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、と言いたくなるほど親しみやすい名前だよね。けれど山の伝承での送り犬は、帰り道を案内するペットではない。歩く人の後ろに黙ってつき、転ぶ瞬間を待つ影として語られるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。それ本当に犬の話なの？学校帰りに後ろから同じ足音が続いたら、一回くらい確認したくなるよ。なのに山道では振り返ることが危ないって、何か見えないルールがあるみたいで怖い。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あの妖怪の正体は、犬の姿をした単純な怪物ではないかもしれない。夜の山で人が転び、道を外れ、助けを呼べなくなる。その現実の危険を一匹の獣にまとめたものとして、送り犬は読むことができるんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、ここからが本題だ。送り犬は必ず襲うわけではなく、無事に歩き通す者は村まで送る、とされる話もある。安全か敵かを先に教えないからこそ、歩く人は背後の気配を最後まで意識させられる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "送り犬、送り狼の話は岩手、埼玉、長野など、山の道が生活につながっていた地域に残る。地図アプリも街灯もない時代、夕方の帰り道は今の通学路よりずっと長く、暗く、間違えた時の代償が大きかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "今ならライトもスマホもあるけど、昔の人は月明かりがなければ前の石も見えないよね。後ろに犬がいる気がしたら走って逃げたくなるけど、山では走るほど転びやすい。そこが最初から罠みたいだよ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "『遠野物語』に見える型では、狼が人の後ろをつけ、転んだ者を食うと語られる一方、転ばなければ家まで送るとされる。ここで怖いのは狼の牙より、歩く人が一度の失敗を許されない状況に置かれることなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "転ぶことは、現代なら膝を払って終わる小さな失敗に見えるかもしれない。でも夜の斜面で荷物を落とし、足首を痛め、方角を失えば、数分の停止が何時間もの迷いに変わる。送り犬はその境目に立っている。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームで一回ミスしてもリトライできるけど、山道にはセーブ地点がないんだね。転んだ瞬間だけ敵になるっていうのは、犬が見ているというより、山そのものが『ここで止まるな』って言ってる感じがする。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで注意したいのは、送り犬が実在した狼そのものだった、と断定できないことだ。伝承には実際の獣への恐れ、遭難の経験、語り手の工夫が重なる。元の伝承では、それらを分けずに怪異として残しているんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そしてこの話、振り返るなという命令だけを覚えると半分だけになる。問題は、背後を確かめようと体をひねり、前方の足場から目を離し、恐怖で歩調を乱すことだ。山道ではこの三つが連続しやすいんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "人は怖いと、後ろを見て答えを確かめたくなる。けれど暗い山で一度立ち止まれば、どちらから来たかの感覚も薄れる。振り返るなは、見たら呪われるという話ではなく、姿勢と判断を崩すなという命令にも見える。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。犬がいるかどうかより、怖がった人が自分で足元を見失うほうが先なんだ。後ろの気配を確認するための一秒が、前の石を見落とす一秒になるなら、振り返るなはかなり実務的だね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "民俗学という言葉は難しく聞こえるけれど、ここでは昔の暮らしの知恵を物語から読む方法のことだ。『危ない場所で焦るな』とそのまま言うより、後ろに送り犬がいると言われたほうが、子どもでも忘れにくい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただ、生活の知恵だけなら送り犬はここまで不気味にならない。背後にいる相手が味方か敵か、最後まで分からないからだ。助かるために歩くほど、その足音も一緒に家へ近づく。そこに怪談の冷たさがある。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "送り狼という別名は、さらに空気を変える。犬なら里の入口を守る印象もあるのに、狼なら山の奥から来る獣になる。同じ『送る』でも、見守りなのか品定めなのかが揺れる。名前が優しいほど、この揺れは怖い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "送り犬って言われると、家まで一緒に帰る友達を思い浮かべるのに、送り狼になるだけで逃げ道が消える感じがする。後ろで同じ距離を保っているなら、追ってこないのにずっと試されているみたいで嫌だよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで第二のフックを置くね。転んだ後に助かるため、草履を片方置く、食べ物を落とす、言葉をかけるという作法まで伝わる地域がある。送り犬は『会ったら終わり』ではなく、失敗の後まで人を試す存在なんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "転んだ後にも作法があるの？草履を置くなんて、敵にアイテムを渡して時間を作るゲームみたいだ。でも山で転んでいる時にそんなことを思い出せるのかな。伝承って、そこまで細かく残っているんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "秩父地方には、送り狼に出会って転んだ時、『今のはわざと転んだ』と告げる話が知られる。ただしこれは全国共通の公式ルールではない。特定の土地で語られた一つの型であり、地域差を消してはいけないんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "この言葉を魔法の呪文だと決めつける必要はない。転んだ直後に声を出せば、息を止めて固まるより呼吸を整えやすい。『わざとだ』と口にすることで、失敗に飲まれず次の一歩を選ぶ、心理的な手順にも見える。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "草履や食べ物を置く話も、怪物に供物を渡すとだけ読むより、手荷物を整理し、体勢を整え、追い立てられる感覚をいったん切る動作として見ることができる。暗い場所で焦りを止めるには、具体的な作法が強いんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山での遭難は、最初の小さなつまずきから始まることがある。足を痛め、近道を選び、さらに迷う。この連鎖を昔の人は表や地図ではなく、後ろから来る送り犬という一匹の影にした。だから話が今も記憶に残る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "つまり送り犬は、『一回転んでも冷静に立て直せ』っていう怖い先生みたいな役でもあるんだね。でも先生なら顔を見せてほしいよ。姿を見せず、後ろで待っているだけだから、失敗した時の怖さが何倍にもなる。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承の中心は、勇敢に戦うことではない。走らない、振り返らない、歩調を変えない。この地味な三つが、夜の山で帰るための行動として埋め込まれている。派手な攻略法より、同じ一歩を重ねるほうが生存に近いんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪ウォッチの妖怪を入口に元ネタを探す時も、公式設定と伝承は別に読む必要がある。作品内の犬系妖怪を送り犬の直接の元ネタだとするのは、確認できる公式資料ではなく、似た要素を結んだファン考察の範囲なんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "そこはちゃんと分けるんだね。ゲームで仲間になる犬妖怪が好きだからこそ、勝手に『この子は転んだ人を襲う狼が元ネタ』って決めるのは違う。似ているところを楽しむのと、公式だと言うのは別なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ファンの間では、護衛する犬妖怪や後をついてくる演出を、送り犬になぞらえる見方もある。それは作品を広く楽しむ読み方として面白い。ただし、作中描写、民間伝承、非公式考察の三つを混ぜないことが、怖さの根拠を守る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "資料によっては、送り犬は女性を守る犬として語られることもある。逆に送り狼は人を狙う獣として強く語られる。この差は単純な矛盾ではなく、山道に対する恐れと、無事に家へ帰りたい願いが一つの名に重なった結果なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "守る犬と狙う狼が同じ話の近くにいるのか。味方か敵かを最初に教えてくれないから、歩いている人はずっと判断できないね。後ろの気配が家までついてくるなら、安心するほど怖くなりそうだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "面白いのは、怪異が必ず走って追いかけてくるわけではない点だ。後ろにいるだけで、人は急ぎ、呼吸を乱し、周囲を見失う。学校の帰り道でも、背後の足音が自分と同じ速さなら気になる。その心理が山では危険を増やす。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで声を落とすね。元の伝承では、送り犬は見守る犬ではない。人が弱った瞬間を待つものとして置かれている。助かるかどうかは相手の優しさではなく、自分が歩き続けられるかにかかっている。その冷たさが原典の芯なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "『振り返るな』は、見たら呪われるという単純な禁忌ではない場合がある。背後の気配に心を奪われ、前方の足場を失い、立ち止まる。その連鎖を一言で止めるための山道の命令だった可能性があるんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もちろん、昔の人が安全教育のためだけに送り犬を作った、と証明できる記録はない。狼への実感、夜への恐怖、語りの面白さが混じっている。どこまでが実用で、どこからが怪異なのか、そこから先は記録が途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "記録が途切れているなら、送り犬が何を見ていたのかは最後まで分からないんだね。転んだ人を狙うためなのか、山から出るまで試すためなのか。答えがないまま後ろにいる相手って、姿が見える怪物より怖いよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "現代の登山では、伝承の作法を試すより、地図、ライト、天候確認、複数人での行動が優先される。送り犬を呼ぶような夜歩きはしないことだ。けれど『焦って走らない』という芯は、今の安全行動にもそのまま重なる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "夜道で後ろが気になる時ほど、足元を照らし、立ち止まるなら安全な場所を選ぶ。これは妖怪を信じるかどうかと関係なく使える。怪談の中の掟は、現実の山道では冷静さを守る短い言葉として読み替えられるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "でも、山で犬の鳴き声が聞こえたら、やっぱり振り返っちゃいそうだよ。何もいないと確かめたいし、何かいたらもっと怖い。後ろを見ることが禁止されるほど、頭の中では後ろの姿を想像し続けちゃうよね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "私なら、まず人の通る登山道から外れない。そして後方の確認が必要なら、足場の安定した場所で同行者と声を掛け合う。伝承の『振り返るな』を、孤立したまま無理をするな、という注意として受け取るんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "送り犬の話が残る土地では、山は景色ではなく仕事場であり、生活の境界だった。薪や炭、畑、峠越えの帰りに、人は日が落ちる前に戻る必要があった。遅れた一人の背中に、物語はぴたりとついて歩いたんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だからこの妖怪は、山奥だけの特別な怪物というより、帰りたい人の不安から生まれた影に近い。家の灯りを思いながら歩く人ほど、背後の一歩が気になる。送り犬はその一歩を、無事に戸口へ届くまで数えているように見える。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "送ってくれるという言葉は優しいのに、家まで無事に着くか見張られている感じもするんだね。好きな妖怪ほど、元ネタが怖いっていうけど、これはかわいい犬のイメージが静かに変わってしまう話だったよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "タイトルの答えを言い切るなら、送り犬に振り返ってはいけない理由は、背後の獣を怒らせるためだけではない。恐怖で歩調を乱し、転び、山道で弱るという最悪の流れを断つためだと、伝承の形から読むことができるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし伝承には、犬が転んだ者をどこまで追ったのか、村の入口で消えたのかを細かく語らないものもある。空白があるからこそ、聞き手は自分の知る暗い山道で続きを埋めてしまう。その沈黙が最後まで残るんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "聞かなきゃよかった。これから『振り返るな』って言葉を聞くたび、後ろの犬より、前の地面が急に見えなくなる瞬間を想像しそうだ。転んだ後に気配だけが近づいてくるなら、足音の数も数えたくないよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、妖怪ウォッチでも親しまれる猫妖怪を入口に、座敷童子が家から去った後、何が起きると語られたのかを追う予定だ。招く存在が出ていく話は、送り犬とは違う形で、家の中に静かな空白を残すんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いていってほしい。元ネタが怖い妖怪シリーズでは、かわいい名前の奥に残った原典をこれからも調べるので、毎日投稿と一万人目標のチャンネル登録で応援してくれると嬉しいんだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "夜の山道で背後に犬の気配がしても、伝承を試しに行ってはいけない。安全な道を選び、前を見て帰るんだ。もし足元で小石が一つ鳴ったなら、その時だけは後ろにいるものより、前の暗がりを疑ったほうがいい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "振り返るな",
+      "転べば終わる"
+    ],
+    "hook_caption": "振り返るな",
+    "subtitle": "山道で後ろを歩く影",
+    "tagline": "送り犬の掟、その実務的な意味"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "ゲーフリはこの妖怪を元にポケモンをデザインしたらしい。",
+      "matched_topic": "元ネタ"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "よかったら高評価を。元ネタが怖い妖怪シリーズも調査中、毎日投稿で一万人目標だから",
+          "reason": "1行54字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 19,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 5,
+        "relatability": 5,
+        "shareability": 6,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.536,
+      "similar_to": "天井なめはなぜ座敷だけの正体",
+      "template_issues": [
+        "直近10本中5本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "なぜ送り犬を振り返るなと言うのか 正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 72,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体'](+20)",
+      "好奇心ギャップ['なぜ', '正体'](+12)"
+    ]
+  },
+  "original_title": "なぜ送り犬を振り返るなと言うのか 正体",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "なぜ送り犬を振り返るなと言うのか 正体"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}
