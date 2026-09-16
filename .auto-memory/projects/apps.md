@@ -1,18 +1,20 @@
 # アプリ系プロジェクトの状態
 
-**最終確認: 2026-09-15 23:10 JST**（git の実測。各リポジトリの `HANDOFF.md` が一次情報）
+**最終確認: 2026-09-16 23:15 JST**（git の実測。各リポジトリの `HANDOFF.md` が一次情報）
 
-> 🟢 **本日動いたのは client-ops-platform（3コミット）と youtube-factory（10コミット）と aiseki（Instagram プロフィール整備・未コミット）の3つだけ。**
-> 🔴 **FanUp / ORIPA / ai-english-coach / ai-orchestrator / rhythm-pop / claude-codex-bridge は 4日連続で完全に動いていない。**
+> 🟢 **本日動いたのは youtube-factory（16コミット）と aiseki（1コミット）の2つだけ。**
+> 🔴 **client-ops-platform は09-15の3コミットから本日0。FanUp / ORIPA / ai-english-coach / ai-orchestrator / rhythm-pop / claude-codex-bridge は5日連続で完全に動いていない。**
+> 🟢 **aiseki は §38（Instagram プロフィール整備）がコミットされ、origin にも反映済み（ahead 0）。09-15 の「未コミット」は解消。**
+> 🔴 **youtube-factory は origin/main に対し 8コミット先行。サンドボックスから push できないので、ホスト端末で `git push origin main` が要る。**
 
 | プロジェクト | パス | ブランチ | 最終コミット | 本日コミット | 変更 | 未追跡 | origin先行 | 本番URL |
 |---|---|---|---|---:|---:|---:|---|---|
-| youtube-factory | `~/Developer/youtube-factory` | main | **09-15 `01f7de8`** | **10** | 58 | — | 0（22:05 の merge タスク後） | — |
-| client-ops-platform | `~/Developer/client-ops-platform` | main | **09-15 `6c65baa`** | **3** | 0 | 2 | 0 | Vercel Cron 30分ごと |
-| aiseki（相席） | `~/Developer/aiseki` | main | 09-14 `87e3a84` | 0 | **1**（HANDOFF §38） | 0 | 0 | **aisekimatch.com** |
+| youtube-factory | `~/Developer/youtube-factory` | main | **09-16 `311619d` 22:09** | **16** | 4 | 0 | **8（要push）** | — |
+| aiseki（相席） | `~/Developer/aiseki` | main | **09-16 `8a64756` 00:09** | **1** | 0 | 0 | 0 | **aisekimatch.com** |
+| client-ops-platform | `~/Developer/client-ops-platform` | main | 09-15 `6c65baa` | 0 | 0 | 2 | 0 | Vercel Cron 30分ごと |
 | ai-english-coach | `~/Developer/ai-english-coach` | main | 09-08 `cd2c8c5` | 0 | 0 | 0 | 測定不能 | 未デプロイ |
-| FanUp | `~/Developer/fanup` | main | **08-31 `2681dfd`（15日停止）** | 0 | 0 | **25** | 測定不能 | fanup-rouge.vercel.app |
-| ORIPA | `~/Developer/oripa` | **feat/stripe-checkout** | **08-11 `5c15784`（35日停止）** | 0 | 0 | 1 | 測定不能 | oripa-omega.vercel.app |
+| FanUp | `~/Developer/fanup` | main | **08-31 `2681dfd`（16日停止）** | 0 | 0 | **25** | 測定不能 | fanup-rouge.vercel.app |
+| ORIPA | `~/Developer/oripa` | **feat/stripe-checkout** | **08-11 `5c15784`（36日停止）** | 0 | 0 | 1 | 測定不能 | oripa-omega.vercel.app |
 | ai-orchestrator | `~/Developer/ai-orchestrator` | main | 08-09 `052a617` | 0 | 0 | 1 | 測定不能 | — |
 | rhythm-pop | `~/Developer/rhythm-pop` | main | 06-22 `1cfde97` | 0 | 10 | 7 | 測定不能 | — |
 | claude-codex-bridge | `~/Developer/claude-codex-bridge` | main | 07-04 `eb23d8a` | 0 | 0 | 1 | 測定不能 | — |
@@ -21,7 +23,10 @@
 > 残り6つの「測定不能」は **push 済みを意味しない。**
 > ⚠️ **本番URLは `aisekimatch.com`**（`aiseki-xi.vercel.app` は 08-22 に移行済みの旧URL。タスク定義側が古い）。
 
-## aiseki（相席）— Instagram 営業の足回りが進んだ
+## aiseki（相席）— 本日は §38 のコミットのみ（実作業は進んでいない）
+
+- 🆕 **09-16: `8a64756`（00:09）で §38 をコミット・push 済み。ahead 0。作業内容は 09-15 のプロフィール整備で、本日の新規作業はゼロ。**
+- ⛔ **残ブロッカーは 09-15 から1つも動いていない**（ロゴ生成未了・投稿0件・Twilio トライアル・営業本番の開始判断）。
 
 - 🆕 **09-15: Instagram `aiseki_match` のプロフィール整備を完了（HANDOFF §38・未コミット）。**
   - 手段は **`worker/.ig-profile`（ログイン済み Playwright プロファイル）から `instagram.com/accounts/edit/` を直接操作**。
