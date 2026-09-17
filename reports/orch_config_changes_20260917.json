@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-09-17T10:19:09",
+  "marker": "orch_20260917",
+  "snapshot_used": "2026-09-16",
+  "note": "このファイルが存在する日は、後続の指揮者 run は Phase3(config適用) をスキップすること（09-15 メモ §9-4 の既定手順）。",
+  "channels": {
+    "scp-lab": [
+      "投稿枠 13:00 → 12:45（13時は3/3chで自ch平均割れ・全時刻中最下位）",
+      "theme_queue を疑問型優先に並べ替え（17件・内容変更なし）",
+      "title_rules.require_any_of.words に「のか」を追加（9 → 10（+のか） / キュー違反 5 → 4 / 17件）"
+    ],
+    "daily-science": [
+      "投稿枠 07:30 → 19:00（早朝ブロックは当ch 0.240 vs 夕 0.926＝3.9倍差）※本runは当初16:30を適用したが連投ガード抵触のため並走runが19:00へ訂正"
+    ],
+    "2ch-matome": [
+      "theme_queue を疑問型優先に並べ替え（26件・疑問型7件・内容変更なし）",
+      "投稿枠・autopilotフラグは変更なし（09-16の変更が未発火で効果測定が未成立のため）",
+      "title_rules.require_any_of.words に「のか」を追加（8 → 9（+のか） / キュー違反 0 → 0 / 26件）"
+    ],
+    "company-facts": [
+      "キュー内タイトルの規約違反を事前修正: 「セブン-イレブンの日販68万円、24時間営業の採算」→「セブン-イレブンの日販68万円が維持できる本当の理由」",
+      "投稿枠は変更なし（auto_optimize_schedule=true でバックエンドが枠を自動最適化しているため手動変更は上書きされる。16-19時ブロックが当ch最良 0.741(n=18) である点はメモリに記録）",
+      "title_rules.require_any_of.words に「のか」を追加（8 → 9（+のか） / キュー違反 4 → 2 / 19件）"
+    ],
+    "yokai-watch": [
+      "変更なし（理由をconfigに明記: 19時が最弱だが振替先に根拠のある時刻がない）",
+      "title_rules.require_any_of.words に「のか」を追加（8 → 9（+のか） / キュー違反 0 → 0 / 15件）"
+    ],
+    "socio-rx": [
+      "変更なし（n=5・登録0で母数不足）"
+    ]
+  },
+  "untouched": {
+    "pokemon-lab / fake-paper / akashic-librarian / clip-lab / clip-fukada / clip-kaneko / clip-animal": "OAuth 失効で 09-06〜09-08 からスナップショットが凍結。同一データでの二重意思決定を避けるため変更しない。"
+  },
+  "phase3b_generated_at": "2026-09-17T10:20:17",
+  "parallel_run_conflict": {
+    "detected": "本日 reports/orch_config_changes_YYYYMMDD.json が無い状態で並走 run が先に Phase3 を実行していた（MEMORY_UPDATE_20260917.md / restart_and_trigger_20260917.command / backend コード修正）。既定のマーカーファイルを置いていないため検知できなかった。",
+    "outcome": "両者の変更は加算的で矛盾なし。並走runは title_style/repair_with/キュー文言/スケジューラのバグ修正、本runは投稿枠・require_any_of への「のか」追加・キュー並べ替えを担当。",
+    "my_error": "daily-science 07:30→16:30 は同一ch内の連投ガード（90分）を検算しておらず不正。並走runが19:00へ訂正済み。",
+    "action": "同一スナップショットでの二重意思決定は鉄則違反。スケジュール側で指揮者 run を1本に寄せること（09-16メモでも同じ指摘が出ている・3日連続）。"
+  }
+}
