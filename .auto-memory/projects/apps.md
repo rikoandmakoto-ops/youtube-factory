@@ -1,20 +1,23 @@
 # アプリ系プロジェクトの状態
 
-**最終確認: 2026-09-16 23:15 JST**（git の実測。各リポジトリの `HANDOFF.md` が一次情報）
+**最終確認: 2026-09-17 23:15 JST**（git の実測。各リポジトリの `HANDOFF.md` が一次情報）
 
-> 🟢 **本日動いたのは youtube-factory（16コミット）と aiseki（1コミット）の2つだけ。**
-> 🔴 **client-ops-platform は09-15の3コミットから本日0。FanUp / ORIPA / ai-english-coach / ai-orchestrator / rhythm-pop / claude-codex-bridge は5日連続で完全に動いていない。**
-> 🟢 **aiseki は §38（Instagram プロフィール整備）がコミットされ、origin にも反映済み（ahead 0）。09-15 の「未コミット」は解消。**
-> 🔴 **youtube-factory は origin/main に対し 8コミット先行。サンドボックスから push できないので、ホスト端末で `git push origin main` が要る。**
+> 🔴 **本日コミットがあったのは youtube-factory（2件・いずれも 12:2x の指揮者 run）だけ。他8リポジトリは全て0。**
+> 🔴 **aiseki は本日0コミット。09-16 の §38 コミット以降、実作業が進んでいない（2日連続）。**
+> 🔴 **client-ops-platform は 09-15 以降0（3日連続）。FanUp / ORIPA / ai-english-coach / ai-orchestrator / rhythm-pop / claude-codex-bridge は6日連続で完全停止。**
+> 🔴 **youtube-factory は origin/main に対し 11コミット先行、さらに未コミット67件（変更32・未追跡35）。**
+> **うち `backend/api_channel_autopilot.py` と `backend/channels/channel_manager.py` は
+> 「ディスク変更→cron 貼り直し」フックの実装で、YouTube 側の最上位ブロッカーの修正コード。
+> コミットも push も再起動もされていない。ホスト端末での作業が要る。**
 
 | プロジェクト | パス | ブランチ | 最終コミット | 本日コミット | 変更 | 未追跡 | origin先行 | 本番URL |
 |---|---|---|---|---:|---:|---:|---|---|
-| youtube-factory | `~/Developer/youtube-factory` | main | **09-16 `311619d` 22:09** | **16** | 4 | 0 | **8（要push）** | — |
-| aiseki（相席） | `~/Developer/aiseki` | main | **09-16 `8a64756` 00:09** | **1** | 0 | 0 | 0 | **aisekimatch.com** |
+| youtube-factory | `~/Developer/youtube-factory` | main | **09-17 `7ebe488` 12:31** | **2** | **32** | **35** | **11（要push）** | — |
+| aiseki（相席） | `~/Developer/aiseki` | main | 09-16 `8a64756` 00:09 | **0** | 0 | 0 | 0 | **aisekimatch.com** |
 | client-ops-platform | `~/Developer/client-ops-platform` | main | 09-15 `6c65baa` | 0 | 0 | 2 | 0 | Vercel Cron 30分ごと |
 | ai-english-coach | `~/Developer/ai-english-coach` | main | 09-08 `cd2c8c5` | 0 | 0 | 0 | 測定不能 | 未デプロイ |
-| FanUp | `~/Developer/fanup` | main | **08-31 `2681dfd`（16日停止）** | 0 | 0 | **25** | 測定不能 | fanup-rouge.vercel.app |
-| ORIPA | `~/Developer/oripa` | **feat/stripe-checkout** | **08-11 `5c15784`（36日停止）** | 0 | 0 | 1 | 測定不能 | oripa-omega.vercel.app |
+| FanUp | `~/Developer/fanup` | main | **08-31 `2681dfd`（17日停止）** | 0 | 0 | **25** | 測定不能 | fanup-rouge.vercel.app |
+| ORIPA | `~/Developer/oripa` | **feat/stripe-checkout** | **08-11 `5c15784`（37日停止）** | 0 | 0 | 1 | 測定不能 | oripa-omega.vercel.app |
 | ai-orchestrator | `~/Developer/ai-orchestrator` | main | 08-09 `052a617` | 0 | 0 | 1 | 測定不能 | — |
 | rhythm-pop | `~/Developer/rhythm-pop` | main | 06-22 `1cfde97` | 0 | 10 | 7 | 測定不能 | — |
 | claude-codex-bridge | `~/Developer/claude-codex-bridge` | main | 07-04 `eb23d8a` | 0 | 0 | 1 | 測定不能 | — |
@@ -23,10 +26,11 @@
 > 残り6つの「測定不能」は **push 済みを意味しない。**
 > ⚠️ **本番URLは `aisekimatch.com`**（`aiseki-xi.vercel.app` は 08-22 に移行済みの旧URL。タスク定義側が古い）。
 
-## aiseki（相席）— 本日は §38 のコミットのみ（実作業は進んでいない）
+## aiseki（相席）— 09-17 は完全停止（コミット0・作業0）
 
-- 🆕 **09-16: `8a64756`（00:09）で §38 をコミット・push 済み。ahead 0。作業内容は 09-15 のプロフィール整備で、本日の新規作業はゼロ。**
-- ⛔ **残ブロッカーは 09-15 から1つも動いていない**（ロゴ生成未了・投稿0件・Twilio トライアル・営業本番の開始判断）。
+- 🔴 **09-17: コミット0・作業ツリーもクリーン（変更0/未追跡0）。実質的な進捗はゼロ。**
+  **ブロッカーは 09-15 から3日間1つも動いていない。** 手が止まっているのは技術課題ではなく**着手判断**。
+- 09-16: `8a64756`（00:09）で §38 をコミット・push 済み。ahead 0。内容は 09-15 のプロフィール整備。
 
 - 🆕 **09-15: Instagram `aiseki_match` のプロフィール整備を完了（HANDOFF §38・未コミット）。**
   - 手段は **`worker/.ig-profile`（ログイン済み Playwright プロファイル）から `instagram.com/accounts/edit/` を直接操作**。
@@ -51,7 +55,7 @@
      自動送信は Meta Platform Terms に反する。運営判断で稼働中。**ペースの歯止めと停止条件を緩めないこと。**
   4. 🆕 ロゴ生成と SNS 初投稿（上記）。
 
-## client-ops-platform（09-15 に3コミット・全プロジェクト中もっとも動いている）
+## client-ops-platform（09-15 が最後・3日連続で0コミット）
 
 - `00bf40f`(00:02) Chatwork のルーム検索 API を追加（クライアント登録の下調べ用）
 - `607cc5c`(01:14) クライアントへのチャネル個別登録 API を追加
@@ -59,11 +63,11 @@
 - 未追跡2件（`.claude/settings.local.json` / `.triage-scratch/`）は作業用なので放置で可。
 - ℹ️ 09-08 夜の指摘「ワーカー13本が Cowork 定期タスクとして1つも登録されていない」は、**launchd 側で登録が進み始めた**（intake-fb が初）。
 
-## FanUp / ORIPA / その他（**4日連続で変化なし**）
+## FanUp / ORIPA / その他（**6日連続で変化なし**）
 
-- **FanUp: 未追跡25ファイルが15日放置**（最終コミット 08-31＝Stripe クライアントの遅延生成によるビルド修正）。
+- **FanUp: 未追跡25ファイルが17日放置**（最終コミット 08-31＝Stripe クライアントの遅延生成によるビルド修正）。
   残作業は Stripe/Resend の環境変数投入 → Webhook 本番登録 → 再デプロイ → テストモード E2E。
-- **ORIPA: `feat/stripe-checkout` に居たまま35日動いていない。** main へのマージ判断が保留。
+- **ORIPA: `feat/stripe-checkout` に居たまま37日動いていない。** main へのマージ判断が保留。
   最長リードタイムは**古物商許可（審査約40日）**なので、**着手が遅れるほど開業日が後ろへ動く。**
 - **ai-english-coach**（09-08 で停止・未デプロイ）/ **ai-orchestrator**（08-09）/ **rhythm-pop**（06-22・変更10/未追跡7 放置）/
   **claude-codex-bridge**（07-04）も動きなし。ai-orchestrator と claude-codex-bridge は「アーカイブ or 継続」の判断が 08-11 から保留のまま。
