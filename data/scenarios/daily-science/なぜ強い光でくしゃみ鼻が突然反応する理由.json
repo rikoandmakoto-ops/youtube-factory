@@ -1,0 +1,492 @@
+{
+  "title": "なぜ強い光でくしゃみ？鼻が突然反応する理由",
+  "theme": {
+    "title": "なぜ強い光を見るとくしゃみが出るのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "実はスマホの白い画面みたいな強い光で、あなたの鼻が急に反応することがあります。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！明るい外へ出た瞬間に出る人は、約30％もいるとされます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "光の刺激が目から脳へ走る途中で。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホの通知を押したら。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも太陽だけでなく、撮影用ライトでも起きるので。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "外へ出る前は目を守るのも意識してみて。高評価も押して、感覚のふしぎシリーズと毎日投稿中の1万人目標をチャンネル登録で応援よろしくね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？白い壁に日差しが跳ね返るような強い光を見た直後、あなたの鼻がむずむずしてくしゃみが出たことはありませんか。\n太陽、カメラのフラッシュ、白い画面でも起きるので、目だけの出来事とは言い切れないんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！映画館から昼の外へ出た瞬間に一回くしゃみが出て、花粉でも飛んでいたのかなと思ったんだ。\nでも同じ入口を通った友達は平気で、数秒だけのことなのに理由が気になっていたよ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "報告によって幅はありますが、強い光を見るとくしゃみが誘発される人は、およそ10％から30％ほどと見積もられています。\n10人が窓際へ集まれば1人から3人ほどに起きてもおかしくない、意外と身近な反応です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！30％近くなら、晴れた日に連続でくしゃみをする家族がいても、ただの偶然とは限らないんだね。\n鼻に何も入っていないのに、なぜ光だけで同じくしゃみの準備が始まるのかな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "くしゃみは本来、鼻の中に入ったほこりや刺激を外へ出すための反応です。\n鼻の粘膜が刺激を受けると、脳が息をためて一気に吐き出す段取りを始めるので、たった一回でも体全体が動くほど力強くなります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、くしゃみの前には鼻の奥がむずむずして、止めようと思っても数秒で間に合わない感じがあるよね。\n光を見たときは鼻の中にほこりがないのに、同じ段取りが動くのがいちばん不思議だよ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず目に強い光が入ると、瞳は入ってくる光の量を減らそうとして小さくなります。\n暗い部屋から明るい場所へ出たとき、あなたが思わず目を細めるのは、カメラの絞りのように目が急いで明るさを調節しているからです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ああ、朝にカーテンを開けたときの、目がきゅっとなる感覚だね！数秒で明るさに慣れるのは便利だけれど、急に太陽を浴びたときほど反応が大きいなら、鼻のほうへ影響しても不思議ではないかも。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "目の周りと鼻の周りには、顔の感覚や動きを脳へ伝える太い連絡網があります。\nたとえるなら、家の廊下に並ぶスイッチの配線が近くを通っていて、ひとつの操作の電気が隣へ少し響くような近さなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！目の光の合図と、鼻のくしゃみの合図は、完全に別の部屋で働くわけではないんだね。\nその近い配線のせいで、強い光を受けた人だけ鼻のボタンまで押されることがあるのかな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "その考え方が有力です。目が急に明るさへ対応するときの信号が、近くを走る鼻側のくしゃみの合図にも混ざり、発射の準備まで始めるのではないかと考えられています。\nただし、脳のどの場所で起きるかは、まだ完全には決着していません。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ここは科学でもまだ結論が出ていないんだね。でも信号が混線するような説明なら、スマホで通知が重なって別の操作まで動く感じで想像できるよ。\n出る人と出ない人の差は、目や鼻のどこで生まれるんだろう。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。瞳が明るさに合わせて変わる反応は多くの人にありますが、そこからくしゃみまで進むかどうかには個人差があります。\nそして家族の中で似た人が見つかることもあり、ここから話が少し広がるんです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、家族でも似るの？父が晴れた日に2回続けてくしゃみをするけれど、季節のせいだと思っていたよ。\n親子やきょうだいで同じように光に反応するなら、毎日の癖というより、生まれつきの違いも関係しそうだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、こうした反応が親子やきょうだいにまとまって見られることがあり、遺伝の影響が関わる可能性が指摘されています。\nただ、特定の一つの遺伝子だけで決まるとまでは分かっておらず、体質と環境が重なる途中の話です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "家族に似るとしても、血液型のように一つで決まる単純な話ではないんだね。\n同じ兄弟でも片方だけ光でくしゃみが出ることがあるなら、目の慣れ方や日差しの強さも、毎回の反応に加わっていそうだよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そう考える研究者は多いです。明るさへの目の反応が急なほど、近い経路へ余分な刺激が届きやすいかもしれません。\nスマホを少し明るくする場面より、暗い部屋から真昼の屋外へ出る場面で起きやすいという体感とも合います。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、太陽だけが特別というより、暗さから明るさへの落差が大事なんだね。\n朝の薄暗い寝室でカーテンを一気に開けると、目が開けにくくなるから、その数秒に鼻まで巻き込まれる人がいるのか。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで面白いのが、くしゃみが出る直前に目を閉じても、すでに始まった反応を止められないことがある点です。\n鼻が自分で決めているのではなく、脳が一度始めた呼吸の段取りを短時間で進めるため、途中で合図を消しにくいと考えられます。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、目を閉じてからでも遅いことがあるの？くしゃみが出そうなとき、反射的に下を向いても、もう体の中では次の動きが決まっている場合があるんだね。\n運転中に急に光が差したときは、特に気をつけたくなるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "運転では、トンネルの出口や高い建物の影から出た直後に視界が急に明るくなります。\nくしゃみ自体は短くても、その瞬間に目を閉じたり体が動いたりする可能性があるので、サンバイザーで光量をゆるやかにする工夫が役立ちます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "光を完全に見ないようにするより、急な明るさを減らすのがポイントなんだね。\n水道のホースを急に全開にするより、少しずつ開けたほうが水が暴れにくいように、目へ届く光も段階を作るのがよさそうだよ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そのたとえは近いです。目に届く光を段階的にすると、瞳の調整も急ぎにくくなります。\n帽子のつば、車のサンバイザー、紫外線対策も兼ねたサングラスは、光でくしゃみが出やすい人にとって日常的な助けになります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！くしゃみ対策なのに鼻スプレーではなく、目に入る光を調節する道具が役立つんだね。\nでもサングラスをかけても出る人がいるなら、光の量だけでは説明しきれない部分も残りそうだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。強い光がきっかけになることは確かでも、何ルクス以上なら必ず起きるという境目は人ごとに決められません。\n体調、目の慣れ、元々の反応の出やすさが重なっている可能性があり、ここはまだ一枚の地図にはなっていません。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "数字でぴったり決められないからこそ、自分がどんな場面で出るか観察するのが大切なんだね。\n朝の窓辺、屋外へ出る瞬間、白いスマホ画面など、きっかけを3つほど覚えておくと、対策も選びやすくなりそうだよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "光でくしゃみが出ること自体は、多くの場合、体の反応の個性として扱われます。\nただし目の痛み、強い充血、鼻水が何日も続くなど別の症状が重なるなら、光だけの話と決めつけず、眼科や耳鼻科へ相談してみてください。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "くしゃみが一回だからといって、何でも同じ理由にまとめないほうがいいんだね。\n花粉や風邪のときのくしゃみとは、出るきっかけも続き方も違うかもしれないから、鼻だけでなく目の様子も一緒に見るのが大事なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみに、光を見るとくしゃみが出ることには、昔から光くしゃみ反射という呼び方があります。\nここまで描いてきた、目の明るさの信号が鼻の反応に入り込む現象に後から付けられた名前で、名前より先に体験が知られていた話なんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "名前があるほど、昔から多くの人が気づいていたんだね！ただし名前を知っても、体の中の道筋が全部分かったわけではないのが面白いな。\n日常の小さなくしゃみから、脳の信号の研究につながるなんて意外だったよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "古代ギリシャのアリストテレスも、太陽を見るとくしゃみが出る人がいることに触れたと伝えられています。\n約2300年前には神経の働きを今のように調べられなかったので、目への光が鼻の反応になる理由は、もっと身近な謎だったはずです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "2300年前の人も、晴れた日に同じ疑問を持っていたのか！時代が変わってスマホや車が増えても、まぶしい場所で急なくしゃみに驚く瞬間は変わらないんだね。\n昔の人は、光と鼻のつながりをどう想像していたんだろう。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "20世紀に入ると、研究者は家族内で似た反応が見られることや、強い光が引き金になることを少しずつ記録しました。\n観察の積み重ねで体質との関係が注目されましたが、脳の細かな通り道は、今も研究が続く部分として残っています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！昔の人の気づきが、今の遺伝や脳の研究につながっているんだね。\n答えが全部そろっていないからこそ、あなたが今日出たくしゃみも、ただの偶然ではなく、体の仕組みを考える入口みたいに見えてくるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "もう一つ大切なのは、くしゃみが出そうだからといって太陽をじっと見つめないことです。\n反応を確かめようとする必要はありません。強い日差しは目に負担をかけるので、視線を外して、帽子や日陰を使いながら安全に明るさを避けてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "確かに、試すために太陽を見るのは違うね。自分の体の反応を知るなら、普段の移動中や部屋の明るさが変わる瞬間を、無理なく思い出すだけで十分なんだ。\n安全を優先しながら気づくのが、いちばん続けやすそうだよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "朝にカーテンを開けるときは、先に10センチほど隙間を作り、部屋へ光を入れてから少しずつ広げてみてください。\n一気に全開にするより目が慣れやすく、光をきっかけにくしゃみが出やすい人なら、急な刺激を減らせる可能性があります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "今日からできるね！スマホも、寝起きの暗い部屋でいきなり最大の明るさにせず、最初は低めにしてみようかな。\nくしゃみだけでなく、目を細めて見づらくなる数秒を減らす工夫にもなるなら、朝の支度が少し楽になりそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "外へ出る直前なら、玄関で数秒だけ目を慣らしてから日差しへ向かうのも一つの方法です。\nたとえるなら、冷たいプールへ足先から入るように、体に明るさの変化を少しずつ伝えるイメージで試してみてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "いきなり外へ飛び出すより、玄関で一呼吸おくだけなら続けやすいね。\nそれでもくしゃみが出たときは慌てず、顔をそむけて、腕やティッシュで口と鼻をおさえる基本を守れば、周りの人にも配慮できるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "コンタクトレンズを使う人や、目が乾きやすい人は、まぶしさを強く感じる日があります。\n光くしゃみとの直接の関係が全員で強いと決まったわけではありませんが、目の不快感が続くなら自己判断せず眼科で相談するのが安心です。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "明るさに弱い理由は一つではないから、光くしゃみという言葉だけで片づけないことが大切なんだね。\nいつもと違う痛みや見え方があれば専門家に聞く、普段のくしゃみなら光とのタイミングを観察する、この分け方なら覚えやすいよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話を短くまとめると、強い光で目が急いで調整するとき、その信号が近い鼻のくしゃみの仕組みまで動かす人がいる、ということです。\nあなたのくしゃみは鼻だけの反応に見えて、目から始まっていたのかもしれません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！明るい場所で急に出る一回のくしゃみに、目、脳、鼻の連携が隠れていたんだね。\n次にカーテンを開けたときは、ただの偶然ではなく、体が明るさを受け取った合図かもしれないと考えてみるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "明日の朝にカーテンを開けるときは、光を少しずつ入れて、自分の目と鼻の反応を意識してみてください。\n無理に確かめず、まぶしさやくしゃみが出る場面を知るだけでも、毎日使う体との付き合い方が少し変わります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "光が目に入ったことが、鼻のくしゃみにつながるように感じるなんて、言われてみれば確かに不思議だね。\n次は、暗い部屋に数分いると少しずつ見えてくるのはなぜか、目が夜へ切り替わる仕組みも知りたくなったよ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、暗い部屋で数分たつと見えてくる理由を、あなたが映画館で席を探すときの体験から一緒にほどいていきます。\n目の中で起きる小さな準備を知ると、夜の見え方が少し違って感じられるはずです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "感覚のふしぎシリーズには、眠りや目、耳など、毎日使う体の話がまだあります。\n今日の光くしゃみが面白かったら高評価も押して、次の身近な疑問も一緒に見つけられるよう、シリーズをのぞいてみてね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "身近な不思議を毎日1本ずつ、あなたの体験に重ねながら解き明かしています。\nチャンネル登録者1万人を目指して毎日投稿中なので、感覚のふしぎシリーズをこれからも一緒に見るためにチャンネル登録で応援よろしくお願いします。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "光を見たら",
+      "鼻が反応"
+    ],
+    "hook_caption": "光でくしゃみ",
+    "subtitle": "明るい場所で急に出る理由",
+    "tagline": "目と鼻は意外につながっている"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "外へ出る前は目を守るのも意識してみて。高評価も押して、感覚のふしぎシリーズと毎日",
+          "reason": "1行66字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 20,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 4,
+        "emotional_impact": 0,
+        "relatability": 6,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.495,
+      "similar_to": "疲れた日の甘い物、3時間で消える正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ強い光でくしゃみ？30%の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 78,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "短すぎ(17字 < 18)(-12)"
+    ]
+  },
+  "original_title": "なぜ強い光でくしゃみ？30%の正体",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "なぜ強い光でくしゃみ？30%の正体"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

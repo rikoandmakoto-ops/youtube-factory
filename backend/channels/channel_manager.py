@@ -16,7 +16,7 @@ import json
 import os
 import threading
 from pathlib import Path
-from typing import Callable, Dict, List, Optional, Any
+from typing import Callable, Dict, List, Optional, Any, Set
 from dataclasses import dataclass, field
 
 from .video_format import VideoFormat
@@ -409,6 +409,10 @@ class ChannelManager:
         self._config_issues: List[ConfigIssue] = []
         # 読み込んだ時点のファイル更新時刻（ns）。get() で外部編集を検知するのに使う。
         self._mtimes: Dict[str, int] = {}
+        # ディスク変更で読み直したあとに呼ぶフック（2026-09-17）。
+        # autopilot のスケジューラ再登録に使う。
+        self._reload_hooks: List[Any] = []
+        self._hook_running: Set[str] = set()
         # 書き込みの直列化（同一プロセス内）。autopilot のテーマ取り出しと
         # UI の設定更新が同時に走っても read-modify-write が交錯しない。
         self._write_lock = threading.RLock()
@@ -517,6 +521,44 @@ class ChannelManager:
             return
         print(f"🔄 Channel config changed on disk — reloading {channel_id}.json")
         self._load_file(f, verbose=False)
+        # 【2026-09-17】読み直しただけでは APScheduler のジョブは変わらない。
+        # 指揮者がディスクへ書いた autopilot.enabled / schedule.times は、
+        # 従来は backend 再起動まで一切効かなかった（2ch-matome が 09-13 以降
+        # enabled=true のまま3日間ぶん発火しなかった真因）。
+        # 読み直しの直後にフックを呼び、スケジューラを同じ内容へ揃える。
+        self._fire_reload_hooks(channel_id)
+
+    # ------------------------------------------------------------
+    # リロードフック — ディスク変更を検知して読み直した直後に呼ばれる
+    # ------------------------------------------------------------
+
+    def add_reload_hook(self, fn: "Callable[[str], None]") -> None:
+        """ディスク由来の再読み込み後に channel_id を渡して呼ぶ関数を登録する。
+
+        同一関数の二重登録は無視する（restore_all が複数回走っても増えない）。
+        """
+        for existing in self._reload_hooks:
+            if existing is fn:
+                return
+        self._reload_hooks.append(fn)
+
+    def _fire_reload_hooks(self, channel_id: str) -> None:
+        if not self._reload_hooks:
+            return
+        # フックの中で cm.get() が呼ばれても、_mtimes は _load_file で
+        # 更新済みなので _refresh_if_changed は即 return する。
+        # それでも取りこぼしがないよう再入だけは明示的に止める。
+        if channel_id in self._hook_running:
+            return
+        self._hook_running.add(channel_id)
+        try:
+            for fn in list(self._reload_hooks):
+                try:
+                    fn(channel_id)
+                except Exception as e:
+                    print(f"⚠️ reload hook failed for {channel_id}: {e}")
+        finally:
+            self._hook_running.discard(channel_id)
 
     def get(self, channel_id: str) -> Optional[ChannelProfile]:
         if channel_id in self._channels:

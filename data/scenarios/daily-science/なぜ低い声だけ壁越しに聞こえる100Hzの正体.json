@@ -1,0 +1,539 @@
+{
+  "title": "なぜ低い声だけ壁越しに聞こえる？100Hzの正体",
+  "theme": {
+    "title": "なぜ低い声だけ壁を越えて聞こえるのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "実は壁は低い声ほど揺らされやすいんです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！隣の低い声だけ聞こえる日があるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "100ヘルツ前後の低音は、壁そのものを震わせて届きます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "スマホの振動が机に広がるのと同じなんだね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも高い声は壁を揺らしにくく、言葉の輪郭から先に薄れます。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。"
+    },
+    {
+      "speaker": "真",
+      "text": "壁越しの響き、今夜は意識してみて。高評価とチャンネル登録で、1万人目標の毎日投稿を応援よろしくね！感覚のふしぎシリーズも見てね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？隣の部屋で誰かが話していると、あなたには言葉より低い声だけが先に届くことがあります。100ヘルツ前後の響きは、壁を小さな太鼓の皮のように揺らしやすいんです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！上の階から男の人らしい低い声は聞こえたのに、会話の内容は全然分からなかったよ。同じ声なのに、壁はどうして低い部分だけ残すの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "テレビの音量をかなり下げても、ドンドンという低い響きだけ気になることがありますよね。今日はあなたの部屋の壁が、音を受け取って反対側へ渡す仕組みを、身近な例からほどいていきます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "壁はただ音を止める板だと思っていたよ。でも低い声だけ聞こえるなら、壁の中で何かが選ばれている感じがするね。最初に何が壁へぶつかっているの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず人の声は、一種類の高さだけでできていません。低い土台の響きと、言葉をはっきりさせる細かな音が重なっています。絵の具を何色も混ぜて肌の色を作るように、声にもたくさんの揺れがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！録音で聞く自分の声が少し違って聞こえるのも、混ざっている成分のバランスが変わるからかもしれないね。低い声はその中の土台なんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "低い音は空気がゆっくり押したり戻ったりする揺れです。100ヘルツなら一秒間に100回、1000ヘルツなら一秒間に1000回揺れます。数字が小さいほど、音の揺れは大きくゆったりしています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "一秒で100回でも見えない速さなのに、1000回はさらに細かいんだね。大きくゆったりした揺れと、細かく速い揺れでは、壁が受け取るときの反応も変わるの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "壁に音が当たると、空気の揺れの一部は跳ね返り、一部は壁をほんの少し動かします。その壁が反対側の空気を揺らすので、音は部屋から部屋へ渡ります。壁も小さなスピーカーのように働くのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、机の端を指で軽くたたいた振動が反対側まで伝わる感じだね。音が壁を通り抜けるというより、壁が途中で受け取って次へ渡しているんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。壁はすべての高さの音を同じ割合で渡すわけではありません。軽くて薄い壁ほど、低い成分の押す力で揺れやすく、反対側へ響きを出してしまう場合があります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、隣室の会話は聞き取れないのに、低い笑い声やテレビの響きだけ分かることがあるよ。壁の向こうでは、言葉の形だけが先に崩れているんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。胸に手を当てて低い声で「あー」と言うと、空気だけでなく胸や首も震えますよね。低音は耳で聞くだけでなく、物を揺らす感覚として残りやすいのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、声を出すだけで胸まで震える！壁の向こうで低い声が残るのも、空気の音が壁の震えに着替えて進むからなんだね。自分の体で確かめられるのが面白いよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "壁越しでは、言葉を聞き分ける助けになる高い成分が減りやすく、低い響きが相対的に残ります。だから「誰かがいる」は分かっても、サ行やタ行のような細かな違いが薄れて、内容まで届きにくくなるのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、低い声が大きくなったというより、高い部分が先に減るから目立つんだね。写真の細かな線だけがぼやけて、色の濃い部分だけ残るみたいな聞こえ方なのかな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "日本語のサ行やタ行には、1000ヘルツより高い細かな成分が多く含まれます。一方「あー」や「うー」の母音には低い成分も豊かです。そのため壁越しでは、言葉よりも母音らしいうなりが残りやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！壁の向こうの会話がもごもご聞こえるのは、口の形を伝える細かい音が減って、母音の響きだけが残るからなんだね。だから内容を当てにくいんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで大切なのは、低い音がいつでも無敵というわけではない点です。壁の厚さ、重さ、柱のつながり、ドアのすき間で結果は変わります。同じ100ヘルツでも、部屋ごとに聞こえ方が違うのはそのためです。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあコンクリートの分厚い壁なら、低い声もかなり小さくなるんだね。同じマンションでも、部屋の位置や壁の作りで「聞こえる人」と「聞こえない人」が分かれることもありそう。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "音を遮る力は、壁が重く密になるほど高まりやすい傾向があります。石こうボード一枚より、重いコンクリート壁のほうが急には動きません。重い買い物袋ほど、手で素早く揺らしにくいのと同じです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "壁の重さが音への強さになるなんて分かりやすいね。軽いレジ袋なら風でもばたつくのに、重いスーツケースは簡単に動かない。その差が壁越しの音にも出るんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "住宅の音の性能は、500ヘルツ付近を基準に評価されることがあります。しかし生活で気になりやすい低音は125ヘルツ付近まで下がるため、表示された一つの数値だけでは、夜の響き方を完全には予測できません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、同じ防音の数字でも、低い音には見えにくい差があるんだ！エアコンのうなりや車の低い音が気になるとき、壁の表示だけでは説明しきれないことがあるんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも壁だけを厚くしても、低音は床や天井、柱を回り込むことがあります。壁を正面から越えなくても、建物の骨組みを振動で進んで、別の場所の空気を揺らす道があるのです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "壁を避ける道まであるなんて意外だね。隣室ではなく上の階から、低い足音や洗濯機のゴーッという音が届くときは、床や柱の道を通っていることもあるの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "あります。洗濯機が脱水で揺れると、床に伝わった振動が建物の部材へ広がります。空気中の会話と違い、機械が床を直接押すので、低いゴーッという成分が部屋をまたいで残りやすくなるのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、水道のホースを指で弾くと離れた場所まで振動が走るようなものだね。音は空気だけの話だと思っていたけれど、建物全体が伝える役になっているんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "壁や床などの固体を揺らして伝わる音は、40%を過ぎたここで一つだけ名前を付けると、固体伝搬音と呼ばれます。つまり建物を通って遠回りし、別の部屋へ届く音のことです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！固体伝搬音という名前は少し難しく聞こえるけれど、壁や床がバトンを渡す音だと思えば覚えやすいね。昨夜の低い響きにも道があったんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "低音が手ごわく感じられる理由は、壁を揺らすだけではありません。100ヘルツの音は空気中で約3.4メートルの長さがあり、部屋の幅と近いと、壁で反射した音同士が重なりやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "3.4メートルもあるんだ！低い音が部屋の端から端までまたぐ大きさなら、家具の位置や壁際で聞こえ方が変わるのも納得できるね。高い音よりずっと大きな波なんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "反射した低音が重なる場所では、同じスピーカーでも響きが大きく感じられます。逆に打ち消し合う場所では小さく感じます。部屋の隅で低音が濃く聞こえることがあるのは、この重なり方の影響です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "スマホの電波が場所によって強かったり弱かったりする感じに少し似ているね。音も部屋の中で均一ではなくて、立つ場所によって低い響きの濃さが変わるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "浴室で低い声を出すと、普段より声が太く響くことがあります。狭い空間では反射した音がすぐ戻り、特定の低い成分がふくらむためです。あなたが歌が上手くなったわけではなく、部屋が音を足しているのです。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "それならお風呂で気分よく歌える理由も分かるね。声そのものが急に変わったのではなく、壁と天井が低い響きを返して、少し立派な声に見せてくれていたんだ。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "20世紀に家庭用スピーカーが広まった1950年代以降、低音が壁や床を通る問題は住まいの研究でも注目されました。音楽の音量だけでなく、建物が受け取る振動をどう減らすかが大切になったのです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "昔から低い音は生活の中で困りごとになっていたんだね。今のワイヤレススピーカーやホームシアターだけの話ではなく、建物と音が出会うと昔から同じ課題が起きていたんだ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "低い声についても同じで、話し手が必ず大声を出しているとは限りません。壁の性質と部屋の形が重なると、普通の会話でも低い部分だけが目立つことがあります。聞こえ方は声量だけでは決まりません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "それは覚えておきたいね。聞こえた低い声だけで相手が大声だと決めつけず、壁や床がその成分を拾いやすかった可能性も考えられるんだ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "夜に低い音が目立つのは、周囲の音が減ることも関係します。昼間なら車や生活音に隠れる小さな振動でも、静かな夜には耳が見つけやすくなります。音が増えたというより、背景が減る場合もあるのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "夜だけ冷蔵庫や換気扇の低い音が急に大きく感じるのは、機械が急に変わったとは限らないんだね。周りが静かになると、残っていた低い響きだけが前に出てくるんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここは科学でもまだ結論が出ていない部分があります。同じ大きさの低音でも、気になり方には睡眠不足、疲れ、その日の気分、過去の経験が重なります。測定値だけで一人ひとりの感じ方を決めることはできません。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！音の大きさだけでなく、聞いている自分の体の状態も関わるんだね。寝不足の夜に小さな音が気になる経験にも、少し納得できるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "家でできる観察として、低い響きが気になるときは部屋の中央、壁際、床に近い場所で聞こえ方を比べてみてください。位置を50センチ動かすだけで、反射の重なり方が変わり、印象が違うことがあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "50センチで変わるなら、ベッドや机の位置にも意味がありそうだね。何となく我慢する前に、どこで強く聞こえるかを確かめると、音の道が少し見えてきそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "洗濯機やスピーカーが原因なら、床との間に防振用のやわらかい材を入れる方法があります。これは機械の振動が床へ渡る量を減らし、建物を通って広がる低い響きを小さくする助けになります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "スマホを机に直置きすると振動音が大きくなるのに、タオルの上では静かになるのと似ているね。まず床に触れている場所を見直すだけでも、変化を試せるんだ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、壁に薄いスポンジや布を貼るだけでは、低音には十分な変化が出ないこともあります。低い音には壁の重さ、空気の層、すき間を減らす工夫が関係するので、見た目の厚みだけで期待しすぎないでください。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ふわふわした物なら何でも止められそうなのに、低い音には別の難しさがあるんだね。困りごとが続くなら、住まいの管理先や専門家へ状況を伝えて相談するのが安心だね。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日のポイントは、低い声だけが壁越しに聞こえるのは、言葉の細かな輪郭が減り、低い振動が壁や床を揺らして残りやすいからです。たとえるなら、大きな太鼓の響きだけが遠くまで残るようなものなんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、聞こえていたのは会話そのものではなく、部屋をゆっくり揺らす成分だったんだね。今夜、壁の向こうの音を少し違う耳で聞けそうだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、暗い部屋で数分たつと目が見えてくるのはなぜなのかを扱います。照明を消した直後から、あなたの目の中でどんな準備が始まるのか、日常の感覚から見ていきましょう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "低い音が気になるときは、音量だけでなく、場所と振動の道を見てみるんだね。感覚のふしぎシリーズには、今日すぐ試せる身近な違和感の話がまだたくさんあるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白かったら高評価で教えてください。身近な不思議を毎日1本ずつ一緒に解いているので、次回も見逃さないようチャンネル登録よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "低い声だけ",
+      "壁を越える"
+    ],
+    "hook_caption": "低音は届く",
+    "subtitle": "言葉は消えても響きだけ残る理由",
+    "tagline": "壁が音を選ぶように見えるわけ"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。",
+      "matched_topic": "体"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 80,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 5,
+          "text": "しかも高い声は壁を揺らしにくく、言葉の輪郭から先に薄れます。",
+          "pattern": "声[がをは]",
+          "reason": "「声が」はミュートでは確認できない"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "壁越しの響き、今夜は意識してみて。高評価とチャンネル登録で、1万人目標の毎日投稿",
+          "reason": "1行64字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 16,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 4,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.536,
+      "similar_to": "あなたの遠くが5秒ぼやける正体は？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ低い声だけ壁越しに聞こえる？100Hzの正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

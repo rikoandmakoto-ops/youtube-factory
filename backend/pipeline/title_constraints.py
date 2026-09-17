@@ -154,6 +154,14 @@ def is_enforced(channel_dict: Optional[Dict[str, Any]]) -> bool:
 # 20字下限を題材に課すのは意味が無い — require_any_of と同じ理由）。
 UNREPAIRABLE_RULES = frozenset({"min_effective_chars"})
 
+# 「なぜ〜のか」型タイトル（2026-09-17）。ch内対照で 4/4ch 一致・1.42x の
+# 全ch勝利パターンだが構文上短くなりやすく、20字下限だと勝ちタイトルまで
+# 弾いていた（09-17 実測: 未使用キュー違反87件中の最大要因が本ルール35件）。
+# 該当時だけ下限を15字へ緩める。一律15字にしないのは、逆U字の実測
+# （15-19字 0.279 < 20-24字 0.400）と矛盾するため。
+_WHY_PATTERN_RE = re.compile(r"なぜ.{2,}の(?:か|？)")
+WHY_PATTERN_MIN_EFFECTIVE = 15
+
 
 def effective_len(title: str) -> int:
     """ハッシュタグと【】ブロックを除いたタイトルの実効文字数。
@@ -291,6 +299,9 @@ def check(title: str, channel_dict: Optional[Dict[str, Any]] = None) -> Dict[str
         min_eff = 0
     if min_eff > 0:
         eff = effective_len(t)
+        # 「なぜ〜のか」型は勝ちパターンのため下限を15字へ緩和（→ _WHY_PATTERN_RE）
+        if min_eff > WHY_PATTERN_MIN_EFFECTIVE and _WHY_PATTERN_RE.search(t):
+            min_eff = WHY_PATTERN_MIN_EFFECTIVE
         if eff < min_eff:
             violations.append({"rule": "min_effective_chars",
                                "label": f"実質{min_eff}文字以上",

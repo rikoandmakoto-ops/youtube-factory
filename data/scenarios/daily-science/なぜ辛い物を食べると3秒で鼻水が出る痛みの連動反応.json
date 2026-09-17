@@ -1,0 +1,539 @@
+{
+  "title": "なぜ辛い物を食べると3秒で鼻水が出る？痛みの連動反応",
+  "theme": {
+    "title": "なぜ辛いものを食べると鼻水が出るのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "実は水道の蛇口みたいに、辛さであなたの鼻が急に開きます。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！唐辛子を食べて3秒で鼻水が出たよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "辛味は味ではなく痛みの合図で、鼻も同じ刺激を受け取るんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！台所の火災報知器が連動する感じだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも涙も出やすくなり、体が刺激を流そうとしている途中なんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "辛い物の後は鼻をかんで意識してみて。食べ物の科学シリーズも、高評価を押してチャンネル登録で1万人目標の毎日投稿を応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで辛いラーメンを一口食べた直後、あなたの鼻だけ水道の蛇口をひねったように動くのでしょう。唐辛子は舌で食べたのに、数秒後にはティッシュが必要になるあの変化、毎回かなり不思議ですよね。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！熱いスープより唐辛子を足した瞬間のほうが鼻水が増えて、食べ始めてから3分もしないうちにティッシュを何枚も使うことがあるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。辛さは舌だけの出来事ではなく、顔の中にある刺激の連絡網を通って、鼻や目まで一緒に動かす合図になりやすいんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "舌で感じたことが鼻にまで伝わるなら、鼻水は単なる偶然ではなさそうだね。じゃあ体は何を追い出したくて、わざわざ水分を増やしているの？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の鍵は、辛味が甘味や塩味のような味覚だけではない点です。体は辛い成分を、熱さやひりつきに近い強い刺激として受け止めるので、口の中で小さな警報が鳴るように働きます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！甘い物なら口だけで終わる感じなのに、辛い物は体が警報として扱うから、鼻まで参加してしまうんだね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "唐辛子に多いカプサイシンが口の粘膜に触れると、体は実際の温度とは別に熱い刺激を受け取ります。冷めたキムチでも口が熱く感じるのは、温度計とは違う入口が反応するためです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "冷蔵庫から出したばかりの辛い料理でも、口だけは熱くなるもんね。たとえるなら、火がなくても火災報知器の試験ボタンを押したような感じなのかな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "刺激を受けた体は、乾いたまま我慢するより、水分で薄めて流しやすくしようとします。口なら唾液、鼻なら鼻水が増えやすくなり、同じ顔の中で複数の出口が準備されるわけです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、辛いカレーを食べると口の中も急に水っぽくなるね。でも鼻まで水分を出すなら、口と鼻はかなり近い連携をしているの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "口と鼻は食べ物と空気が通る場所として近いだけでなく、刺激を知らせる経路も近い位置でまとまっています。別々の部屋というより、廊下でつながった家のように情報が行き来しやすいんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！だから辛さの合図を口だけで止めず、鼻も目も聞き取ってしまうんだね。ここまで聞いても、まだ鼻水の量が増える仕組みは知りたいな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。ただし、ここからが本題です。辛い物で鼻水が出る人と、額に汗が出る人がいるのは、同じ刺激でも顔の中で水分や熱を逃がす出口が少しずつ違うからなんです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、辛い物で額に汗が出るのも同じ仲間なの？ラーメン屋さんで顔だけ赤くなっている人を見るけれど、鼻水とは別々の反応だと思っていたよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "鼻水は鼻の粘膜が水分を出す反応で、刺激が続くと量が増えます。玉ねぎを切ると涙が出る場面を思い出すと分かりやすく、体は刺激を受けた表面を湿らせる方向へ動きやすいんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "玉ねぎの涙と辛い料理の鼻水は、見た目は違うのに似た作戦なんだね。どちらも顔の表面を水分で守ろうとしていて、体が静かに働いているんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし鼻水が、唐辛子の成分を全部きれいに洗い出しているわけではありません。これは刺激を察知した体の反射的な対応で、鼻の乾きやその日の体調によって量が大きく変わります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "反射的な対応なら、同じ辛さでも花粉の季節だけ鼻水が増えることがありそうだね。春に辛い担々麺を食べた日は、いつもより鼻が忙しかった気がするよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、鼻づまりがあるときにも関係します。辛い物の後に鼻が一時的に通ったように感じる人がいますが、それは感覚の変化であり、鼻づまりの原因そのものを治しているわけではありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、スッとする感じがあっても治療ではないんだ！わさびを食べたあとに鼻が通った気がして、風邪が軽くなったように思うこともあったよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "わさびを食べたとき、鼻の奥がツンとするのは香りだけのせいではありません。口から鼻へ抜ける空気に乗った刺激を鼻の粘膜が受け取るためで、唐辛子とは違う形でも顔の反応が起きます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、わさびは口から入った風が鼻の奥のボタンを押す感じなんだね。唐辛子のじんわりした熱さとは、確かに体感がかなり違うよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "唐辛子とわさびは同じ辛い食べ物に見えても、刺激の届き方が少し異なります。唐辛子は口に残る熱さが目立ち、わさびは鼻へ抜ける瞬間が目立つので、鼻水の感じ方も変わりやすいんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！カレーの辛さと寿司のわさびを同じ一言で辛いと呼んでいたけれど、顔のどこが反応するかまで違っていたんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで名前を一つだけ出します。口、鼻、目、頬など顔の感覚を脳へ伝える大きな通り道があり、これに名前が付いていて、三叉神経と言います。要するに顔の知らせを運ぶ配線です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "三叉神経って、顔のあちこちから届く知らせを集める配線なんだね。だから舌の辛さが、鼻水や涙のような別の反応にもつながりやすいのか。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "この配線が辛い刺激を受けると、脳は顔の粘膜へ水分を出しやすい状態を作ります。鼻水は唐辛子が鼻へ移動した証拠ではなく、顔全体の防御チームが連携して動いた結果なんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、そうなんだ！ティッシュが必要になるのは、口の中だけの失敗ではなく、顔の中の連絡が早く働いた合図なんだね。言われてみれば確かに涙も出るよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、鼻の粘膜にカプサイシンのような刺激を与えると、鼻の分泌が増えることが観察されています。食べ物として口にした場合も近い経路が働くため、鼻水が出る現象には体の仕組みがあるわけです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "実験でも確かめられているなら、辛い物で鼻水が出るのは気のせいではなかったんだね。自分だけ変だと思っていた人にも、安心できる説明になりそう。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "辛さへの反応は、同じ人でも食べる速さで変わります。5分で急いで食べるより、少量ずつ間を空けるほうが、口と鼻が一度に受け取る刺激を減らしやすく、鼻水の慌ただしさも抑えやすいです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "早食いすると、辛さが追いかけてくる感じがあるよね。満員電車に一気に人が乗るより、少しずつ乗るほうが混乱しにくいのと似ているのかも。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、辛い物を食べたあとに息苦しさ、じんましん、唇の腫れなどが出た場合は、鼻水だけの反応と決め付けないでください。食物アレルギーなど別の原因もあるため、医療機関への相談が大切です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "鼻水だけならよくある反応でも、ほかの症状が重なるなら見過ごさないほうがいいんだね。好きな料理を安心して楽しむためにも、体のサインを分けて見るのは大事だよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "唐辛子は南北アメリカで長く利用され、16世紀ごろには各地へ広がりました。鼻水が出るほど強い刺激でも、人は香りや色、食欲を引き立てるものとして、何百年も料理に取り入れてきたんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "16世紀から今まで、世界中の人が辛さで鼻をすすりながら料理を楽しんできたのかもしれないね。地域ごとに辛い味が育ったのは、単なる我慢比べではなかったんだ。",
+      "expression": "laugh",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "辛い料理が広がった理由には、保存性との関係を調べる研究もあります。ただ、気候、手に入りやすい食材、家庭の味、文化が重なるため、辛さが好まれる理由を一つだけで決めることはできません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ここは科学でもまだ結論が出ていない部分なんだね。辛い物が好きになる理由は、舌の反応だけでなく、家族と食べた記憶や地域の食卓にも関係しそうだよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして意外なのは、辛さに強くなったと感じても、刺激そのものが消えたわけではないことです。何度も食べるうちに、脳が同じ合図を前ほど大きく受け取らなくなり、慣れたように感じる場合があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、最初は大きく聞こえたスマホの通知音が、毎日聞くうちに気にならなくなる感じだね。通知そのものは鳴っていて、受け取り方だけが変わるんだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから辛さに慣れた人が平気そうに見えても、初めて食べる人へ同じ量を勧めるのは控えめが安心です。口の粘膜の感じ方も鼻水の量も、睡眠不足や体調によって変わることがあります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ一口でも、人によってはかなり強い刺激になるんだね。家で鍋を食べるなら、唐辛子を最初から全部に入れず、後から足せるほうがみんな食べやすそう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "鼻水を少し楽にしたいなら、辛さを水で流し込むより、量を減らしてゆっくり食べるのが基本です。カプサイシンは水だけになじみにくいため、急いで水を飲んでも口の刺激が残ることがあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "水を何杯も飲んでも、ひりつきが急には消えないことがあるよね。辛いカレーの後に水だけ飲んで、かえって口の中へ広がったように感じたこともあるよ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ヨーグルトや牛乳のように脂肪分やたんぱく質を含む食品は、辛味成分が口に残る感覚を和らげる助けになることがあります。牛乳を一口含むのは、油汚れを水だけでなく洗剤で落とす感覚に少し似ています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！水を増やすより、ヨーグルトを少し添えるほうが、辛い物の後に口と鼻が落ち着く時間を作れそうだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "鼻を強く何度もかむと、鼻の粘膜がさらに刺激されることがあります。柔らかいティッシュでそっと押さえ、食事の途中なら30秒ほど箸を置いて、体が受け取る刺激を少し下げるのがおすすめです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "辛さで慌てているときほど、早く食べ終えようとして逆に一口が大きくなりがちだね。最初からティッシュと飲み物を近くに置いておけば、少し余裕が作れそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "子どもや辛さに慣れていない人は、見た目より少ない量でも強く反応することがあります。料理を取り分けてから自分の皿だけに少量を足せば、味を楽しみつつ鼻水の慌ただしさを減らしやすいです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "後がけの唐辛子なら、一振りずつ自分で調整できるんだね。辛さを競うより、自分の鼻や口がどこで反応するかを確かめながら食べるほうが、料理も楽しめそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話を一言で言うと、辛い物で出る鼻水は、舌の辛さが鼻へ移ったのではなく、顔の刺激に体が水分で応えた反応です。ティッシュを取る数秒にも、顔の連絡網が働く理由がありました。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった鼻水にも、顔の中の配線と水分の作戦があったんだね。次に辛い物を食べるときは、困るだけでなく、自分の体がいつ反応するか見てみたいよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜もし辛い料理を食べるなら、最初の一口を小さくして、鼻水や涙がどのタイミングで出るか意識してみてください。体の反応を知ると、いつもの一皿でも少し違って見えてきます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、寝落ちの直前に体がビクッとなるのはなぜなのかを見ていこう。布団に入って数分後、あなたの体で起きるあの一瞬の不思議にも、ちゃんと理由があるんだね。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "食べ物の科学シリーズでは、食後に眠くなる理由や炭酸でげっぷが出る仕組みも、今日の食卓から分かる形で扱っています。気になった反応があれば、次の食事で一つだけ観察してみてください。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "今日の鼻水の話が面白かったら高評価を押してね。食べるたびに起きる小さな疑問を、数字や身近な例で一緒にほどいていけたらうれしいな。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "身近な不思議を毎日1本ずつ解き明かしているので、食べ物の科学シリーズも続けて見たい方は、面白かったらチャンネル登録よろしくね。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "辛いのに",
+      "鼻が反応"
+    ],
+    "hook_caption": "鼻が反応",
+    "subtitle": "舌の刺激が鼻まで届く",
+    "tagline": "3秒後に始まる体の反応"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "辛い物の後は鼻をかんで意識してみて。食べ物の科学シリーズも、高評価を押してチャン",
+          "reason": "1行64字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 22,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 4,
+        "emotional_impact": 2,
+        "relatability": 6,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.549,
+      "similar_to": "あなたが大雨で不安になる3hPaの正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ辛い物で鼻水が出る？3秒後の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "original_title": "なぜ辛い物で鼻水が出る？3秒後の正体",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "なぜ辛い物で鼻水が出る？3秒後の正体"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

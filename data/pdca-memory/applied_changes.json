@@ -1,1991 +1,2039 @@
 {
-  "changes": [
-    {
-      "date": "2026-08-12",
-      "file": "channels/daily-science.json",
-      "action": "theme_blacklist追加",
-      "items": [
-        "酸素が1秒",
-        "ドアが閉まる寸前",
-        "センサーの待機設計",
-        "本を読むと眠くなる",
-        "本だけで眠く"
-      ]
-    },
-    {
-      "date": "2026-08-12",
-      "file": "channels/daily-science.json",
-      "action": "theme_seeds追加(睡眠・夢強化)",
-      "items": [
-        "なぜ二度寝はあんなに気持ちいいのか",
-        "アラームが鳴る直前に自然に目が覚める人の脳で起きていること"
-      ]
-    },
-    {
-      "date": "2026-08-13",
-      "file": "channels/daily-science.json",
-      "action": "theme_seeds追加(体の不思議強化)",
-      "items": [
-        "なぜ鳥肌は寒さだけでなく感動でも立つのか",
-        "正座で足がしびれるのは血ではなく『神経の悲鳴』だった"
-      ]
-    },
-    {
-      "date": "2026-08-13",
-      "file": "channels/scp-lab.json",
-      "action": "theme_seeds追加(記録型オブジェクト強化)",
-      "items": [
-        "SCP-3008「完全に、普通の、古いイケア」",
-        "SCP-087「吹き抜けた階段」"
-      ]
-    },
-    {
-      "date": "2026-08-14",
-      "file": "channels/daily-science.json",
-      "action": "theme_blacklist追加（表記ゆれ対策）",
-      "items": [
-        "待機設計",
-        "ドアが閉ま",
-        "酸素が消え"
-      ]
-    },
-    {
-      "date": "2026-08-14",
-      "file": "channels/scp-lab.json",
-      "action": "theme_seeds追加（宇宙・歴史スケール記録型強化）",
-      "items": [
-        "SCP-2317「異世界への扉」",
-        "SCP-2935「ああ、死よ、汝はいずこに」"
-      ]
-    },
-    {
-      "date": "2026-08-15",
-      "file": "channels/daily-science.json",
-      "action": "theme_priority再編（睡眠偏重の是正）",
-      "items": [
-        "【最優先】感覚・反射の科学 を新設(毎バッチ最低1件)",
-        "睡眠・夢 を毎バッチ最大1件に制限",
-        "体の不思議 を毎バッチ最低2件に増加"
-      ]
-    },
-    {
-      "date": "2026-08-15",
-      "file": "channels/daily-science.json",
-      "action": "theme_seeds追加（感覚・反射系）",
-      "items": [
-        "なぜ冷たい物を一気に食べると『こめかみ』が痛くなるのか",
-        "なぜ耳が詰まった感じはあくびで一瞬で治るのか",
-        "なぜ目にゴミが入っていないのに涙が出るのか"
-      ]
-    },
-    {
-      "date": "2026-08-15",
-      "file": "channels/daily-science.json",
-      "action": "theme_blacklist追加（直近最下位293回）",
-      "items": [
-        "口の乾き"
-      ]
-    },
-    {
-      "date": "2026-08-15",
-      "file": "channels/2ch-matome.json",
-      "action": "theme_seeds追加（軽い下ネタ・エロ面白系／いいね率最高枠の増強）",
-      "items": [
-        "彼女にバレたら終わる物あげてけw",
-        "風呂上がりのワイを見た彼女の反応がヤバい",
-        "合コンで一番言ったらアカン一言あげてけ",
-        "ワイの検索履歴、当ててみてくれw"
-      ]
-    },
-    {
-      "date": "2026-08-15",
-      "file": "channels/pokemon-lab.json",
-      "action": "theme_priority再編（対決・比較系を【最優先】へ昇格・毎バッチ最低2件／ランキング系は通常枠へ）",
-      "items": [
-        "対決・比較系=【最優先】/最低2件",
-        "ランキング系=通常枠"
-      ]
-    },
-    {
-      "date": "2026-08-15",
-      "file": "channels/pokemon-lab.json",
-      "action": "theme_seeds追加（対決型）",
-      "items": [
-        "ガブリアスとギャラドス、どっちが勝つ？",
-        "ミュウツーとアルセウス、どっちが勝つ？",
-        "バンギラスとメタグロス、どっちが勝つ？",
-        "リザードンとカイリュー、どっちが勝つ？"
-      ]
-    },
-    {
-      "date": "2026-08-15",
-      "file": "channels/yokai-watch.json",
-      "action": "theme_priority再編（伝承妖怪の原典を【最優先】/最低2件・作品キャラを最大1件に抑制）",
-      "items": [
-        "伝承妖怪原典=【最優先】/最低2件",
-        "個別妖怪ファイル(作品キャラ)=最大1件/バッチ"
-      ]
-    },
-    {
-      "date": "2026-08-15",
-      "file": "channels/yokai-watch.json",
-      "action": "theme_seeds追加（『元ネタが怖すぎる』型）",
-      "items": [
-        "座敷童子の元ネタが怖すぎる — 家を出ていった後に何が起きるのか",
-        "海坊主の正体が怖すぎる — 船を沈める影は何だったのか",
-        "ぬらりひょんの正体が怖すぎる — 勝手に家に上がり込む理由",
-        "口裂け女の元ネタが怖すぎる — 昭和の噂はどこから来たのか"
-      ]
-    },
-    {
-      "date": "2026-08-15",
-      "file": "launchd: com.youtube-factory.backend",
-      "action": "backend再起動（08-13起動のstaleプロセスを更新し、上記の設定変更をメモリに反映）",
-      "items": [
-        "launchctl kickstart -k",
-        "Autopilot restored: 7/8 channels",
-        "2ch-matome 次回 2026-08-15 21:00 JST"
-      ]
-    },
-    {
-      "date": "2026-08-15",
-      "file": "channels/pokemon-lab.json",
-      "action": "theme_blacklist追加（08-14既報の完全同一タイトル対策・未対応だったもの）",
-      "items": [
-        "レックウザの誕生"
-      ]
-    },
-    {
-      "date": "2026-08-15",
-      "file": "channels/yokai-watch.json",
-      "action": "theme_blacklist追加（完全同一タイトル『なぜ妖怪ウォッチだけ？主人公の秘密』2本検出）",
-      "items": [
-        "主人公の秘密"
-      ]
-    },
-    {
-      "date": "2026-08-16",
-      "file": "（変更なし）",
-      "action": "設定変更を見送り",
-      "items": [
-        "全chでanalytics取得不可＋公開データも取得不可のため、新規の再生実績が無く blacklist/seeds 変更の根拠なし。08-15の是正（睡眠制限・対決型昇格・伝承優先）の効果測定はデータ復旧後に持ち越し"
-      ]
-    },
-    {
-      "date": "2026-08-17",
-      "file": "channels/daily-science.json",
-      "action": "theme_blacklist追加（本・眠気系の表記ゆれ封鎖）",
-      "items": [
-        "本を開いた",
-        "本を読むと"
-      ]
-    },
-    {
-      "date": "2026-08-17",
-      "file": "channels/scp-lab.json",
-      "action": "theme_seeds追加（終末記録型強化・SCP-7004初動2226/日を受けて）",
-      "items": [
-        "SCP-3000「アナンタシェーシャ」",
-        "SCP-1281「先駆者」"
-      ]
-    },
-    {
-      "date": "2026-08-17",
-      "file": "channels/2ch-matome.json",
-      "action": "theme_seeds追加（質問ある？×彼女自虐＝ch最速初動820/日の型を増強）",
-      "items": [
-        "ワイ、マッチングアプリ100連敗やけど質問ある？",
-        "ワイ、30歳で人生初彼女できたけど質問ある？"
-      ]
-    },
-    {
-      "date": "2026-08-18",
-      "file": "channels/daily-science.json",
-      "action": "theme_seeds追加（感覚・反射系の弾補充。登録6日横ばいの打開に体感再現型フックを増強）",
-      "items": [
-        "なぜ高い所に立つと足の裏がゾワッとするのか",
-        "なぜエレベーターが下がる瞬間、体がフワッと浮く感じがするのか"
-      ]
-    },
-    {
-      "date": "2026-08-18",
-      "file": "channels/scp-lab.json",
-      "action": "theme_seeds追加（宇宙・終末記録型の継続強化。SCP-1690/2399の安定1000超えを受けて）",
-      "items": [
-        "SCP-1958「小さな旅」",
-        "SCP-3519「静かな日々」"
-      ]
-    },
-    {
-      "date": "2026-08-19",
-      "file": "pipeline/hashtag_optimizer.py",
-      "action": "新規モジュール作成: 動的ハッシュタグ最適化エンジン",
-      "items": [
-        "チャンネルコアタグ(1-2個)を先頭固定",
-        "タイトルキーワードから動的タグ抽出",
-        "トレンドキーワード一致でトレンドタグ注入",
-        "合計3-5個に制限（YouTube先頭3個表示ルール準拠）",
-        "video_generator._build_description_templateに統合済み"
-      ]
-    },
-    {
-      "date": "2026-08-19",
-      "file": "pipeline/auto_scenario/theme_queue.py",
-      "action": "トレンドテーマ優先キュー機能追加",
-      "items": [
-        "prioritize_trending()メソッド追加: is_trending=Trueをtrend_score降順でキュー先頭に移動",
-        "replenish()完了時に自動で優先順位ソート実行",
-        "従来のFIFO消費からトレンド優先消費に変更"
-      ]
-    },
-    {
-      "date": "2026-08-19",
-      "file": "pipeline/auto_scenario/generator.py",
-      "action": "ループ最適化ルール強化 + トレンド最適化プロンプト注入",
-      "items": [
-        "_LOOP_RULE_SHORT: シームレスループテクニック追加（末尾→冒頭の音声接続）",
-        "_LOOP_RULE_SHORT: 2周目の気づき設計（ダブルミーニング）追加",
-        "_LOOP_RULE_SHORT: ループ切断フレーズ禁止リスト追加",
-        "generate(): is_trending=Trueのテーマにトレンド最適化addendum注入",
-        "タイトル・サムネにトレンドワードを織り込む指示"
-      ]
-    },
-    {
-      "date": "2026-08-19",
-      "file": "pipeline/auto_comment.py",
-      "action": "チャンネル別エンゲージメント質問テンプレート追加",
-      "items": [
-        "CHANNEL_QUESTIONS: 7チャンネル分の具体的な質問プール（各2-3種）",
-        "投稿ごとにランダム選択で質問のバリエーションを出す",
-        "2ch-matome: スレッド参加型の口調に最適化",
-        "scp-lab: SCP番号リクエスト誘導型に最適化"
-      ]
-    },
-    {
-      "date": "2026-08-19",
-      "file": "pipeline/shorts_length_guard.py",
-      "action": "新規モジュール作成: ショート動画の完視聴率最適化ガード",
-      "items": [
-        "チャンネル別の最適尺範囲を定義（例: daily-science 30-50秒、scp-lab 35-55秒）",
-        "シナリオの文字数から推定再生時間・推定完視聴率を算出",
-        "範囲外の場合に警告と修正ヒントを出力",
-        "video_generator.generate_all()の短動画生成前に組み込み済み"
-      ]
-    },
-    {
-      "date": "2026-08-19",
-      "file": "data/channels/*.json (全7チャンネル)",
-      "action": "チャンネル設定改善",
-      "items": [
-        "short_title_hashtags追加: daily-science, scp-lab, pokemon-lab, yokai-watch, akashic-librarian（既存の2ch-matome, company-facts, clip-labは設定済み）",
-        "auto_optimize_schedule: true を全7チャンネルのautopilotに追加（投稿時間帯の自動最適化を有効化）"
-      ]
-    },
-    {
-      "date": "2026-08-19",
-      "file": "（変更なし・夜間PDCA分）",
-      "action": "blacklist/seeds変更を見送り",
-      "items": [
-        "本日23:00のPDCA未実行＋analytics最終同期08-18 23:04のため新規の再生実績なし。08-18データは前日の実行で分析・対応済みで、根拠のない設定変更はしない"
-      ]
-    },
-    {
-      "date": "2026-08-20",
-      "file": "data/channels/daily-science.json",
-      "action": "theme_blacklist追加（維持率下位クラスタの封鎖）",
-      "items": [
-        "金縛り（実測維持率34.5%/35.1%＝ch最下位級。再生は991/1040と高いが見られていない）",
-        "蛍光灯（33.0%）",
-        "あくびがうつる（29.2%＝全ch最低）",
-        "あくびが「うつる」（表記ゆれ対策）"
-      ]
-    },
-    {
-      "date": "2026-08-20",
-      "file": "data/channels/daily-science.json",
-      "action": "theme_priority.good_examples 差し替え（生成プロンプトが低維持率テーマを推奨していた問題の是正）",
-      "items": [
-        "削除: 『なぜ金縛りは いつも同じ時間帯 に起きるのか』",
-        "削除: 『本を読むと必ず眠くなる…』（blacklist済みなのに見本に残存）",
-        "追加: くしゃみの瞬間、目の前が光る（維持率118.9%）",
-        "追加: 食後の眠気・脳血流30%減（維持率120.9%）"
-      ]
-    },
-    {
-      "date": "2026-08-20",
-      "file": "data/channels/daily-science.json",
-      "action": "theme_seeds 整理（体験再現型＝高維持率パターンへ寄せる）",
-      "items": [
-        "削除: 金縛りシード1件",
-        "追加: なぜ立ち上がった0.5秒後だけ目の前が暗くなるのか",
-        "追加: なぜ足がつる瞬間だけ、自分の意思で止められないのか"
-      ]
-    },
-    {
-      "date": "2026-08-20",
-      "file": "data/channels/daily-science/theme_queue.json",
-      "action": "キュー浄化（18→12件）",
-      "items": [
-        "blacklist該当4件を除去: しゃっくり/横隔膜・蛍光灯・ドアが閉まる直前・本を読むと眠くなる",
-        "近似重複2件を除去: 『耳に水が入ったときの不快感』(『耳に水で音がこもる』と重複)・『紙で手を切るとあんなに痛い』(『紙に指を切られるとジンジン』と重複)",
-        "last_purged_at を記録"
-      ]
-    },
-    {
-      "date": "2026-08-20",
-      "file": "data/channels/scp-lab.json",
-      "action": "theme_blacklist追加（クロスch題材衝突の防止）",
-      "items": [
-        "かまいたち（08-20に yokai-watch と同日で同題材を投稿。妖怪伝承はyokai-watch側に一本化）"
-      ]
-    },
-    {
-      "date": "2026-08-20",
-      "file": "data/channels/scp-lab.json",
-      "action": "theme_seeds追加（維持率86.7%＝ch最高のSCP-1690型を増強）",
-      "items": [
-        "SCP-2306「実在しない部屋」— 図面に無い1室、調査員4名の記録だけが残った",
-        "SCP-2662「アシュカバードの記録」— 交信断絶から41年、返ってきた信号は1本だけだった"
-      ]
-    },
-    {
-      "date": "2026-08-20",
-      "file": "（変更なし）",
-      "action": "genre_blacklist の30%ルール判定＝該当なし",
-      "items": [
-        "daily-science 全体平均640.7 / 30%閾値192.2 → 最下位『日常の違和感』195.6は既にblacklist済み、次点『食・飲』532.0(83%)で対象外",
-        "scp-lab 全体平均548.3 / 閾値164.5 → 最下位『対立組織・Kクラス』308.0(56%)で対象外",
-        "他4chはジャンルが『その他』1本のみで判定不能"
-      ]
-    },
-    {
-      "date": "2026-08-21",
-      "file": "data/channels/daily-science.json",
-      "action": "theme_blacklist追加（維持率41%未満かつ登録獲得0の実測クラスタを封鎖）",
-      "items": [
-        "睡眠の深さ / 浅い眠り（40.6%・1279再生・登録0）",
-        "炭酸（35.3%・1102再生・登録0）",
-        "体が緩む（39.4%・879再生・登録0）",
-        "成長ホルモン / 寝ている間だけ分泌（36.6%・800再生・登録0）",
-        "耳が詰ま（36.5%・779再生・登録0）",
-        "※『名前だけ出てこない』は維持36.8%と低いが登録/1k=2.44と高いため除外した"
-      ]
-    },
-    {
-      "date": "2026-08-21",
-      "file": "data/channels/daily-science.json",
-      "action": "theme_seeds整合（15→14件）",
-      "items": [
-        "除去: 『なぜ耳が詰まった感じはあくびで一瞬で治るのか』（同日追加のblacklist『耳が詰ま』に該当）"
-      ]
-    },
-    {
-      "date": "2026-08-21",
-      "file": "data/channels/scp-lab.json",
-      "action": "theme_blacklist追加",
-      "items": [
-        "悪夢の回路 / 電子工作（維持32.8%＝ch最低・711再生・登録0）"
-      ]
-    },
-    {
-      "date": "2026-08-21",
-      "file": "data/channels/scp-lab.json",
-      "action": "theme_seeds 既出重複の一括除去＋高転換型の補充（29→16件）",
-      "items": [
-        "除去(投稿済みSCP番号と重複した15件): SCP-2662(08-20に自分が追加した分) / 5000 / 2000 / 3125 / 2521 / 049 / 096 / 682 / 999 / 914 / 1471 / 3999 / 426 / 2317 / 3000",
-        "autopilot.theme_queue からも既出番号6件を除去（15→9件）: SCP-914 / 1471 / 3999 / 426 / 2317 / 3000",
-        "追加: SCP-093「赤海洋物体」— 調査員6名・戻った映像（既出でないことをanalytics.dbで確認済み）",
-        "追加: SCP-2480「未完の儀式」— 収容不能・記録9名分（同上）",
-        "根拠: 維持50-70%帯の登録/1k=1.15がch内最高、70%+帯は0.29"
-      ]
-    },
-    {
-      "date": "2026-08-21",
-      "file": "data/channels/yokai-watch.json",
-      "action": "theme_blacklist追加",
-      "items": [
-        "鬼の元ネタ / 鬼門（2339再生＝ch1位だが維持34.3%でch最低・登録0）",
-        "河童（1691再生・維持38.7%・登録0）"
-      ]
-    },
-    {
-      "date": "2026-08-21",
-      "file": "data/channels/yokai-watch.json",
-      "action": "autopilot.theme_queue から自動投入された続編2件を除去（13→11件）",
-      "items": [
-        "除去: 『なぜ「鬼の元ネタが怖すぎる…」はこうなるのか？徹底深堀り』(id 0e5ca277)",
-        "除去: 『「鬼の元ネタが怖すぎる…」とは逆のパターンを比較してみた』(id 35a4b840)",
-        "理由: Actが再生数のみで続編を承認しており、元動画は維持率ch最低・登録0"
-      ]
-    },
-    {
-      "date": "2026-08-21",
-      "file": "data/channels/yokai-watch.json",
-      "action": "theme_seeds追加（維持50-70%帯＝登録/1k 0.44 のch最高帯を増強）",
-      "items": [
-        "座敷童子の正体 — なぜ『去った家』の話ばかり残るのか（花子さん型 維持65.1%・登録2 を踏襲）",
-        "口裂け女はなぜ1979年に日本中へ広がったのか（都市伝説型 維持66.1%・登録2 を踏襲）"
-      ]
-    },
-    {
-      "date": "2026-08-21",
-      "file": "data/channels/pokemon-lab.json",
-      "action": "theme_blacklist追加",
-      "items": [
-        "ヤドンの尻尾（『なぜヤドンはシェルダーに噛まれると進化するのか』と題材重複・類似度0.68）"
-      ]
-    },
-    {
-      "date": "2026-08-21",
-      "file": "（変更なし）",
-      "action": "genre_blacklist の30%ルール判定＝該当なし",
-      "items": [
-        "daily-science 全体平均637.7 / 閾値191.3 → 該当の宇宙・天体(0.0)と日常の違和感(195.6)は既にblacklist済み、次点 食・飲545.9(86%)",
-        "scp-lab 全体平均544.3 / 閾値163.3 → オブジェクトクラス(0.0)・財団組織(364.4)は既にblacklist済み、次点 その他323.1(59%)",
-        "pokemon-lab / yokai-watch / 2ch-matome はジャンルが『その他』1件のみで判定不能（ジャンル分類器が未対応）"
-      ]
-    },
-    {
-      "date": "2026-08-21",
-      "file": "（バックアップ）",
-      "action": "変更前ファイルを保全",
-      "items": [
-        "data/channels/{daily-science,scp-lab,yokai-watch,pokemon-lab}.json.bak_pdca_20260821",
-        "data/pdca-memory/*.json.bak_20260821"
-      ]
-    },
-    {
-      "date": "2026-08-21",
-      "file": "data/channels/daily-science.json",
-      "action": "theme_priority.good_examples の整合（blacklist該当の見本を除去）",
-      "items": [
-        "除去: 『自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎』（blacklist『骨伝導』に該当し、生成後に必ずrejectされる無駄が発生していた）"
-      ]
-    },
-    {
-      "date": "2026-08-22",
-      "file": "data/channels/pokemon-lab.json",
-      "action": "theme_blacklist追加（登録転換1/5の対決フォーマットを封鎖）",
-      "items": [
-        "どっちが勝つ",
-        "どっちが上か",
-        "対決",
-        "根拠: 対決型6本の登録/1k=0.85 に対し非対決19本=4.37(5.1倍)、維持34.2% vs 55.5%。CTRと再生数は対決型が上だが登録に繋がっていない"
-      ]
-    },
-    {
-      "date": "2026-08-22",
-      "file": "data/channels/pokemon-lab.json",
-      "action": "theme_seeds からblacklist該当を除去（19→15件）",
-      "items": [
-        "除去: ガブリアスとギャラドス/ミュウツーとアルセウス/バンギラスとメタグロス/リザードンとカイリュー の『どっちが勝つ？』4件（08-21に指摘した good_examples/seeds と blacklist の不整合の再発防止）"
-      ]
-    },
-    {
-      "date": "2026-08-22",
-      "file": "data/channels/pokemon-lab.json",
-      "action": "autopilot.theme_queue のフォーマット偏り是正（15→13件・対決型13→5件）",
-      "items": [
-        "除去した対決型8件: ヒードランとウーラオス/ジャローダとフシギバナ/ラプラスとミロカロス/ハッサムとルカリオ/ザシアンとザマゼンタ/ドリュウズとランドロス/フーディンとサーナイト以外で/ヨノワールとサマヨール",
-        "追加した単体考察型6件: ミュウツーの誕生秘話—研究日誌 / なぜイーブイだけ8種類 / ラプラスの図鑑説明に隠された悲しい設定 / 悪の組織はなぜ毎回ポケモンを狙うのか / ポケモンの世界に人間の食文化はあるのか / 種族値って結局なに？",
-        "理由: キュー15件が15件とも対決型で、15日先まで低転換フォーマットが確定していた。全廃はキュー枯渇を招くため上限5件に制限"
-      ]
-    },
-    {
-      "date": "2026-08-22",
-      "file": "data/channels/yokai-watch.json",
-      "action": "theme_seeds追加（登録/1k 8.43＝ch最高の作品題材を増強 / 21→23件）",
-      "items": [
-        "妖怪ウォッチのランクS、なぜ最強じゃない妖怪にも付くのか（ch最高インプレッション動画 imp802・CTR2.37%の続き筋）",
-        "ウィスパーはなぜ図鑑を持っているのに何も知らないのか",
-        "根拠: 作品名を含む5本が 登録/1k 8.43 vs 1.85・維持53.3 vs 42.1%・CTR2.16 vs 1.52% で全指標最高"
-      ]
-    },
-    {
-      "date": "2026-08-22",
-      "file": "（変更なし）",
-      "action": "genre_blacklist の30%ルール判定＝新規該当なし",
-      "items": [
-        "daily-science 全体平均635.0 / 閾値190.5 → 該当の宇宙・天体(0.0)は既にblacklist済み、日常の違和感195.6は閾値超で対象外だが既済、次点 その他463.3(73%)",
-        "scp-lab 全体平均528.2 / 閾値158.5 → 該当のオブジェクトクラス(0.0)は既済、次点 対立組織・Kクラス312.0(59%)",
-        "pokemon-lab / yokai-watch / 2ch-matome / fake-paper はジャンルが『その他』1件のみで判定不能"
-      ]
-    },
-    {
-      "date": "2026-08-22",
-      "file": "（バックアップ）",
-      "action": "変更前ファイルを保全",
-      "items": [
-        "data/channels/{pokemon-lab,yokai-watch}.json.bak_pdca_20260822b（朝の指揮者実行分の .bak_pdca_20260822 とは別）",
-        "data/pdca-memory/*.json.bak_20260822"
-      ]
-    },
-    {
-      "date": "2026-08-22",
-      "file": "data/channels/{yokai-watch,pokemon-lab}.json",
-      "action": "blacklist整合スキャン（seeds/queue/good_examples の一括走査）を実行し3件除去",
-      "items": [
-        "yokai-watch queue: 『「鬼の元ネタが怖すぎる」の知識を日常で使う方法』を除去。blacklist『鬼の元ネタ』該当。08-21に同じ元動画の続編2件を除去したのに、08-22のActが再び同じ続編を投入＝3日連続の再発",
-        "pokemon-lab queue: 『エースバーンとゴウカザル、炎の速攻役はどっちが上か』を除去（本日追加の blacklist『どっちが上か』に該当）",
-        "pokemon-lab theme_priority.good_examples: 『ミュウツーとレックウザ、まともに戦わせたらどっちが勝つのか』を除去（blacklist『どっちが勝つ』該当。禁止フォーマットを手本として提示していた）",
-        "scp-lab / daily-science / 2ch-matome / fake-paper は整合OK"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "data/channels{,_orchestrator}/{scp-lab,yokai-watch,daily-science,pokemon-lab}.json",
-      "action": "タイトル規則を voice_style.style_rules から theme_priority.title_style / good_examples へ移設（根本原因対応）",
-      "items": [
-        "生成プロンプトが style_rules を読まない実装のため、前日までのタイトル施策は全て無効だった",
-        "4ch の title_style を全面改訂し、good_examples も新規則に沿って全件差し替え",
-        "viral_hooks の1文字分解破損を4chとも修復"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "data/channels/{scp-lab,yokai-watch,pokemon-lab}/theme_queue.json",
-      "action": "既存キュー40件のタイトルを新規則に沿って全件書き直し",
-      "items": [
-        "scp-lab 23件・yokai-watch 6件→10件（補充4件）・pokemon-lab 7件",
-        "初回の機械置換で破綻日本語・数字捏造・固有名欠落が発生したため、バックアップから復元して1件ずつ書き直した",
-        "最終状態でルール適合／捏造数字なし／固有名あり／キュー内重複なし／good_examplesとの重複なしを機械検証済み"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "data/channels{,_orchestrator}/scp-lab.json",
-      "action": "全角ダッシュ「—」規則を中立化（前日の『必ず維持』と本日の『使用禁止』を両方撤回）",
-      "items": [
-        "直近60日コホートで CTR 0.97倍（95%CI 0.81-1.16）、1本あたり登録者0.74倍（95%CI 0.47-1.18）＝有意差なし",
-        "「怖」「恐」は1本あたり登録者1.51倍のため推奨に格下げして維持（CTR単体では非有意）",
-        "数字の付与を『原典に実在する場合のみ・創作禁止』に変更"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "data/channels{,_orchestrator}/yokai-watch.json",
-      "action": "作品ネタ最優先へ変更、「怖」優先を撤回、尺を短縮",
-      "items": [
-        "⓪最優先: 妖怪ウォッチ作品ネタ（1本あたり登録者2.45倍・登録/1k 2.9倍・CTR 1.33倍）",
-        "「怖」優先を撤回（登録者0.75倍）、「なぜ」禁止も解除（1.12倍で中立）",
-        "「秘密」「隠」「本当」「実は」のいずれかを必須化",
-        "short_format 320-390字 → 270-310字（前日の延長を部分撤回。330字は line_chars から到達不能だったため310に）"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "data/channels{,_orchestrator}/daily-science.json",
-      "action": "「なぜ」抑制と「99%が知らない」禁止を両方撤回",
-      "items": [
-        "「なぜ」始まり: 1本あたり登録者1.58倍（ただし同コホートのCTRは0.53倍で符号が食い違う）",
-        "「99%が知らない」: 1本あたり登録者1.57倍・登録/1k 1.62倍・CTR 1.20倍と3指標で正のため禁止解除",
-        "疑問符「？」を必須化（2.16倍）、「本当」「実は」は禁止（0.70倍）"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "data/channels{,_orchestrator}/pokemon-lab.json",
-      "action": "「秘密」「隠」型を毎バッチ1本必須化、対決型を1本までに制限",
-      "items": [
-        "秘密/隠: 1本あたり登録者3.17倍（95%CI 1.02-9.82）だがA群n=6・寄与が1本に集中する弱い証拠",
-        "対決型: 1本あたり登録者0.63倍。個別CTRは高いが群比較では1.35倍（95%CI 0.69-2.64）で非有意"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "data/channels{,_orchestrator}/clip-lab.json",
-      "action": "autopilot を停止（enabled: true → false）",
-      "items": [
-        "運用方針で凍結中なのに平日2枠＋休日2枠がスケジュールされ空回りしていた"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "backend/pipeline/auto_scenario/generator.py",
-      "action": "テーマ補充プロンプトの続編タイトル例からダッシュ「—」を除去（2871行付近）",
-      "items": [
-        "プロンプト文字列のみの変更でロジックは非改変。py_compile 済み"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "reports/youtube_analysis_20260823.xlsx",
-      "action": "日次分析レポートを出力（5シート・数式30件エラー0）",
-      "items": [
-        "サマリー / チャンネル別詳細 / 動画別パフォーマンス / 改善アクション(23件) / トレンド"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "data/channels{,_orchestrator}/{scp-lab,yokai-watch,pokemon-lab}.json",
-      "action": "autopilot.theme_queue（定時投稿が実際に消費する方）を精査済みキューで置き換え",
-      "items": [
-        "scp-lab 7件→23件（旧7件は全件が「怖/恐」なし）",
-        "yokai-watch 10件→10件（旧10件は全件ダッシュ使用・全件が伝承単体で作品ネタゼロ）",
-        "pokemon-lab 12件→7件（旧12件中5件が対決型＝登録0.63倍の低転換フォーマット）",
-        "theme_queue.json 側と内容を一致させた。daily-science は両系統とも新ルール適合のため変更なし（ただし中身は不一致のまま）"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "backend/pipeline/video_generator.py",
-      "action": "generate_short_thumbnail をチャンネル対応に改修（サムネ最優先項目の本丸）",
-      "items": [
-        "引数に channel_dict / char_config を追加し、呼び出し側（yukkuri dialogue 経路）から渡すよう変更。未指定時は従来の見た目のまま＝後方互換",
-        "thumbnail_template の badge_text / badge_color / hook_color / subtitle_color / short_bg_gradient を反映",
-        "キャラ立ち絵を char_config 由来のディレクトリから解決（従来は riko/makoto 固定）",
-        "素材アスペクト比の違いで2体が重なる不具合を修正（幅0.48W×高0.34SH に内接スケール）",
-        "アルファ閾値40で余白crop（riko/makoto は薄いアルファで getbbox が効かなかった）",
-        "中身の無い点線円を削除（08-20指摘）、フォント拡大 title 80→100 / sub 44→56 / badge 30→38 / tagline 28→52（08-22『最下部の小文字が読めない』対策）",
-        "Linux 用フォント候補に opentype/noto の CJK を追加",
-        "検証: 4ch分＋引数なしの後方互換ケースを実描画し目視確認（system-font経路・fallback経路の両方）"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "data/channels{,_orchestrator}/{scp-lab,yokai-watch,pokemon-lab,daily-science}.json",
-      "action": "thumbnail_template.short_bg_gradient を追加（縦サムネの配色をチャンネル別に）",
-      "items": [
-        "scp-lab 黒〜暗赤 / yokai-watch 紫〜宵闇＋橙アクセント / pokemon-lab 青空系 / daily-science 従来の紫を明示",
-        "バックアップ: *.json.bak_thumb_20260823"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "backend/pipeline/auto_scenario/theme_dedup.py",
-      "action": "重複判定の偽陽性を修正（_BOILERPLATE_TOKENS 拡張）",
-      "items": [
-        "「ショート」等の全動画共通の定型語が話題語として重み9で効き、無関係な2本が0.76に達していた",
-        "追加: ショート/shorts/short/ゆっくり/解説/考察/研究/一口/分科学/ファイル/まとめ",
-        "検証: 既知の偽陽性3件が0.76→0.22-0.30（閾値0.62未満）、真の重複3件は0.75-1.00を維持。test_config_validation 17件 OK"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "backend/pipeline/analytics/series_engine.py",
-      "action": "Act続編タイトルのぶつ切りを修正（_core_topic を新設）",
-      "items": [
-        "【ショート】・ハッシュタグ・シリーズ接頭辞を除去し、区切り記号の位置で自然に切る",
-        "deep_dive の定型文を『〜はこうなるのか？徹底深堀り』→『〜に隠された本当の理由を掘り下げる』に変更",
-        "py_compile 済み・4パターンで出力確認"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "data/channels/{yokai-watch,2ch-matome}.json",
-      "action": "Actが本日投入した破綻タイトル4件を autopilot.theme_queue から除去",
-      "items": [
-        "yokai-watch 2件（のっぺらぼう続編。伝承単体で⓪最優先の作品ネタに反する）",
-        "2ch-matome 2件（PCパーツ続編。タイトルに【ショート】が埋め込まれていた）",
-        "yokai 11→9件 / 2ch 20→18件"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "data/channels{,_orchestrator}/daily-science.json",
-      "action": "theme_blacklist に『毎晩3時』を追加（同一動画の二重投稿）",
-      "items": [
-        "『なぜ毎晩3時に目が覚める？体内時計が仕掛ける意外な罠』が【ショート】有無の2本で公開されていた",
-        "重複判定の修正後スキャンで検出された唯一の真の重複"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "（変更なし）",
-      "action": "genre_blacklist の30%ルール判定＝新規該当なし",
-      "items": [
-        "daily-science 平均626.6/閾値188.0 → 宇宙・天体(0.0)のみ該当だが既済",
-        "scp-lab 平均516.2/閾値154.8 → オブジェクトクラス(0.0)のみ該当だが既済",
-        "pokemon-lab / yokai-watch / 2ch-matome / fake-paper はジャンルが『その他』単一で対象外"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "file": "（検査のみ）",
-      "action": "blacklist整合スキャン＝全5ch違反0件",
-      "items": [
-        "seeds / autopilot.theme_queue / good_examples を走査。08-21〜22に3日連続で出ていた再混入は本日は発生せず"
-      ]
-    },
-    {
-      "date": "2026-08-24",
-      "file": "data/channels{,_orchestrator}/{daily-science,scp-lab,yokai-watch,pokemon-lab}.json",
-      "action": "台本8行目CTAを高評価優先に書き換え",
-      "items": [
-        "従来はどのchも『チャンネル登録』しか求めておらず『高評価』の語が1文字も無かった",
-        "extra_rules 先頭に『8行目には必ず高評価を入れ、登録より先に置く』を根拠(2.16倍)付きで追加",
-        "バックアップ *.bak_like_20260824"
-      ]
-    },
-    {
-      "date": "2026-08-24",
-      "file": "data/channels{,_orchestrator}/2ch-matome.json",
-      "action": "8行目CTAを新設",
-      "items": [
-        "structure に8行目が存在しなかった(1,2,3〜7行目のみ)",
-        "登録/1000再生0.21・高評価率0.221%で全ch最低。一方コメント率0.207は全ch最高で参加性はある",
-        "文言=『共感したやつは高評価だけ置いてけw お前らの答えはコメントで待っとるで』"
-      ]
-    },
-    {
-      "date": "2026-08-24",
-      "file": "data/channels{,_orchestrator}/daily-science.json",
-      "action": "total_chars_min 240→260 に復帰",
-      "items": [
-        "08-23に維持率改善目的で短縮したが、維持率は登録(1.14倍)にもリーチ(四分位平坦)にも効かないと判明し根拠が消滅",
-        "08-23から赤だった test_short_channels_target_the_sweet_spot が緑に戻った",
-        "length_rationale を実測根拠に差し替え"
-      ]
-    },
-    {
-      "date": "2026-08-24",
-      "file": "data/channels{,_orchestrator}/{pokemon-lab,yokai-watch,daily-science}.json",
-      "action": "テーマキューを実測上位パターンで計7件補充",
-      "items": [
-        "pokemon-lab=対決型3件(実測最強: バンギラスvsメタグロス1971再生 / リザードンvsカイリュー維持70.9%)",
-        "yokai-watch=「隠された」+具体数字2件(この型は登録/1000再生0.70 対 0.41)",
-        "daily-science=数字フック2件"
-      ]
-    },
-    {
-      "date": "2026-08-24",
-      "file": "reports/youtube_analysis_20260824.xlsx",
-      "action": "5シート分析レポート出力",
-      "items": [
-        "サマリー/チャンネル別詳細/動画別パフォーマンス/改善アクション/トレンド",
-        "集計は全てSUMIFS等の式で動画別シートを参照。660式エラー0",
-        "動画別314行の式結果をPythonで独立再計算して照合、不一致0件"
-      ]
-    },
-    {
-      "date": "2026-08-24",
-      "file": "（未実施・要手動）",
-      "action": "バックエンド再起動が必要",
-      "items": [
-        "ChannelManagerは起動時読み込みのため、本日の変更は再起動まで反映されない",
-        "restart_backend.command を実行。次回autopilot発火は17:00 JST"
-      ]
-    },
-    {
-      "date": "2026-08-24",
-      "file": "assets/characters/{goro,hikari,kenta,minamo,misaki,sora,takumi,yui}/*.png (32ファイル)",
-      "action": "AI生成立ち絵の輪郭外ハローを除去（サムネ最優先項目）",
-      "items": [
-        "外周から alpha<200 を4近傍で塗りつぶし、キャラ内部のアンチエイリアスは保持",
-        "1ファイルあたり約2,772〜10,057px を透明化",
-        "バックアップ: assets/characters/_backup_20260824/",
-        "再レンダリングで yokai-watch のケンタ周囲の四角い箱が消えることを目視確認済み",
-        "副次効果としてキャラ描画サイズが拡大（bbox が正しく縮んだため）"
-      ]
-    },
-    {
-      "date": "2026-08-24",
-      "file": "backend/pipeline/youtube_oauth.py",
-      "action": "OAuth 失敗理由をログに出すよう修正（診断不能の解消）",
-      "items": [
-        "get_credentials_for(): creds.refresh() の except Exception を握り潰しから print 付きへ",
-        "load_credentials_dict_for(): 復号/JSON 失敗も同様に print",
-        "ロジックは非改変（どちらも従来通り None を返す）。py_compile 済み"
-      ]
-    },
-    {
-      "date": "2026-08-24",
-      "file": "data/channels{,_orchestrator}/{daily-science,yokai-watch,pokemon-lab}.json",
-      "action": "theme_blacklist に重複テーマ9語を追加",
-      "items": [
-        "daily-science: 42度 / ブルーライト / シャワーカーテン / 3割増し / 悲しい曲（いずれも類似度1.00で二重公開済み）",
-        "yokai-watch: 名前がダジャレ / ダジャレ（類似0.82）",
-        "pokemon-lab: 図鑑の説明文 / 図鑑の説明（類似0.74）",
-        "バックアップ: 各 *.json.bak_20260824pdca"
-      ]
-    },
-    {
-      "date": "2026-08-24",
-      "file": "（変更なし）",
-      "action": "genre_blacklist の30%ルール＝新規該当なし",
-      "items": [
-        "daily-science 閾値188.0 → 宇宙・天体(0.0)のみ該当だが既済",
-        "scp-lab 閾値154.8 → オブジェクトクラス(0.0)のみ該当だが既済",
-        "pokemon-lab / yokai-watch / 2ch-matome は該当0件",
-        "ただし元データが08-23のcarry-overのため判定は実質前日の再実行"
-      ]
-    },
-    {
-      "date": "2026-08-24",
-      "file": "（未実施・要手動）",
-      "action": "バックエンド再起動と未公開2本の手動投稿が必要",
-      "items": [
-        "scp-lab『太陽系の番人SCP-179が沈黙を恐れる理由』と yokai-watch『1分妖怪ファイル #12 両面宿儺』が未投稿のまま ~/Desktop/動画出力用/ に残っている",
-        "本日の立ち絵・blacklist 変更を反映するには restart_backend.command が必要"
-      ]
-    },
-    {
-      "date": "2026-08-25",
-      "id": "ds-blacklist-quote-variant-fix",
-      "target": "data/channels/daily-science.json + data/channels_orchestrator/daily-science.json",
-      "change": "theme_blacklist 38→41。『あくびがうつる』『あくびが「うつる」』を削除し『あくび』に統合（括弧の表記ゆれで素通りしていたため）。新規追加: あくび / 指を鳴ら / 指パキ / 笑うだけで / 免疫力",
-      "reason": "08-25 dup_check の未カバー重複3件（あくび1.000・指を鳴らす0.969・笑うと免疫0.967）を塞ぐ。既存キーは修飾込みで登録されており部分一致しなかった",
-      "backup": "*.bak_pdca_20260825"
-    },
-    {
-      "date": "2026-08-25",
-      "id": "orchestrator-blacklist-drift-resync",
-      "target": "data/channels_orchestrator/{daily-science,scp-lab,pokemon-lab,yokai-watch}.json",
-      "change": "theme_blacklist を data/channels/ 側と同期。daily-science 27→41 / scp-lab 6→9 / pokemon-lab 3→7 / yokai-watch 3→6",
-      "reason": "08-23 の blacklist-drift-between-config-dirs が未解消のままで、指揮者側の設定が最大14件古かった",
-      "backup": "*.bak_pdca_20260825"
-    },
-    {
-      "date": "2026-08-25",
-      "id": "naze-dake-rule-in-title-style",
-      "target": "data/channels{,_orchestrator}/{daily-science,yokai-watch}.json → theme_priority.title_style",
-      "change": "『なぜ〇〇だけ〜』型を使わない規則を追記。代わりに『〇〇の正体』『実は〇〇』型へ置換するよう指定。pokemon-lab は逆方向のため適用せず",
-      "reason": "ch×公開月の層別で該当の登録/1000再生が ds 0.24 vs 0.49 / yokai 0.00 vs 0.36。4層中3層で該当が劣る（naze-dake-template-halves-conversion）",
-      "backup": "*.bak_pdca_20260825"
-    },
-    {
-      "date": "2026-08-25",
-      "id": "short-thumb-brightness-lift",
-      "target": "data/channels{,_orchestrator}/*.json → thumbnail_template.short_bg_gradient",
-      "change": "縦サムネ背景グラデーションの平均輝度を引き上げ: daily-science 18.4→88.7 / pokemon-lab 48.0→109.1 / yokai-watch 31.0→71.1 / 2ch-matome 32.9→67.9 / scp-lab 8.8→23.3（ホラー路線維持のため上部の黒つぶれ解消にとどめる）。再現描画での完成画像平均輝度は ds 49.8→100.4 / pokemon 73.8→114.4 / yokai 65.5→95.5 / scp 39.6→52.6",
-      "reason": "08-24 scp-thumbnail-is-darkest が未対応のままで、原因が short_bg_gradient のハード指定であることを本日特定。daily-science・pokemon-lab・yokai-watch は自ch の style_hint が『明るく・dark禁止』と明記しており設定同士が矛盾していた",
-      "verification": "黄フックは9pxの黒アウトライン、サブタイトルは5pxの濃紺アウトラインを持つため明背景でも視認性を確認済み（描画再現で目視）",
-      "backup": "*.bak_pdca_20260825"
-    },
-    {
-      "date": "2026-08-25",
-      "id": "theme-seeds-for-growing-genres",
-      "target": "data/channels{,_orchestrator}/{daily-science,scp-lab,yokai-watch,pokemon-lab}.json",
-      "change": "theme_seeds に各3件追加。daily-science 14→17（体の不思議系。睡眠系は blacklist 過密のため回避）／scp-lab 16→19（SCP個別オブジェクト・未使用番号 2718/4999/2000）／yokai-watch 23→26（作品IPネタ）／pokemon-lab 15→18（図鑑・設定考察系、対決型は上限5件のため増やさず）",
-      "reason": "latest.md の伸びてる系統と、yokai-ip-confirmed-2nd-time（作品ネタが伝承の2.45倍）・pokemon-queue-100pct-duel の是正方針に沿わせた。既存 seed タイトルおよび theme_blacklist と突き合わせて重複を除外済み",
-      "note": "追加直後に自分の当日知見と矛盾する『なぜ〇〇だけ』型の seed 2件を検知し、『舌をやけどした翌日、味が消える本当の理由』『朝と夜で身長が1〜2cm違う、その正体』へ言い換えた",
-      "backup": "*.bak_pdca_20260825"
-    },
-    {
-      "date": "2026-08-25",
-      "id": "no-genre-blacklist-change",
-      "target": "（変更なし）",
-      "change": "genre_blacklist の追加は行わなかった",
-      "reason": "『平均再生が全体平均の30%以下』の基準を満たすジャンルは daily-science 宇宙・天体、scp-lab オブジェクトクラス・財団組織・職員のみで、いずれも登録済み。scp-lab 対立組織・Kクラス(312 / 全体483.6 = 64%)、daily-science 日常の違和感(195.6 / 605.9 = 32%)は基準未満のため見送り"
-    },
-    {
-      "date": "2026-08-30",
-      "file": "data/channels/2ch-matome.json",
-      "change": "theme_blacklist に『昼飯を当てる』を追加（dup_check 0.765『大谷の昼飯を3秒で当てるスレ』↔『今日の昼飯を当てるスレ』）。衝突する theme_seeds『ワイの今日の昼飯を当てるスレw』を削除",
-      "reason": "実素材の重複。同ch唯一の非テンプレ重複ペア"
-    },
-    {
-      "date": "2026-08-30",
-      "file": "data/channels/pokemon-lab.json",
-      "change": "theme_blacklist に『説明文』を追加（既存の『図鑑の説明文』『図鑑の説明』が表記ゆれで素通りしていた）。衝突する theme_seeds『ポケモン図鑑の怖すぎる説明文』を削除",
-      "reason": "dup_check 0.743 が blacklist 済みなのに再出現。08-25 の最短語ルールを適用"
-    },
-    {
-      "date": "2026-08-30",
-      "file": "data/channels/yokai-watch.json",
-      "change": "theme_blacklist に『ぬらりひょん』『海坊主』を追加。公開済みと重複する theme_seeds 2件（海坊主の正体が怖すぎる／ぬらりひょんの正体が怖すぎる）を削除",
-      "reason": "dup_check 0.72（ぬらりひょん↔総大将）と、公開済みテーマの seeds 残置"
-    },
-    {
-      "date": "2026-08-30",
-      "file": "data/channels/scp-lab.json",
-      "change": "theme_seeds に『なぜ』起点の個別オブジェクト3件を追加（SCP-2521／SCP-4666／SCP-055）",
-      "reason": "1本あたり登録者が『なぜ』ありで1.25 vs なし0.41（3.0倍）。最上位ジャンルは SCP個別オブジェクト（平均545）"
-    },
-    {
-      "date": "2026-08-30",
-      "file": "data/channels/pokemon-lab.json",
-      "change": "theme_seeds に『なぜエリートトレーナーだけ手持ちが強いのか』『なぜジムリーダーは得意タイプしか使わないのか』『なぜ四天王は四人なのか』を追加",
-      "reason": "最高再生の『エリートトレーナーの謎』(2063)の周辺。同chは『なぜ』型が登録0.53 vs 0.38で有利"
-    },
-    {
-      "date": "2026-08-30",
-      "file": "data/channels/daily-science.json",
-      "change": "theme_seeds に睡眠・視覚の3件を追加（寝返り／浅い眠りと夢の記憶／暗順応）",
-      "reason": "最上位ジャンルが睡眠・夢（平均689）。既存41件のblacklistと非衝突を確認済み"
-    },
-    {
-      "date": "2026-08-30",
-      "file": "data/channels/yokai-watch.json",
-      "change": "theme_seeds に『なぜ』起点の伝承3件を追加（のっぺらぼう／天狗／狐）",
-      "reason": "第2位テーマがのっぺらぼう(2239)。『怖すぎ』型は登録0.29 vs 0.42で不利なため、同じ素材を『なぜ』型で作らせる"
-    },
-    {
-      "date": "2026-08-30",
-      "file": "(変更なし)",
-      "change": "genre_blacklist は全ch据え置き",
-      "reason": "『全体平均の30%以下』に該当するジャンルが無い（daily-science 閾値179に対し最下位の日常の違和感196・宇宙天体0は既登録、scp 閾値145に対し最下位の対立組織313・オブジェクトクラス0は既登録）"
-    },
-    {
-      "date": "2026-08-31",
-      "file": "data/channels/2ch-matome.json, data/channels_orchestrator/2ch-matome.json",
-      "change": "theme_blacklist に『県名』『いらん商品』『画面チカチカ』『彼女いない歴』を追加（最短語ルール適用）。theme_seeds を 31→26 / 32→27 に削減：公開済みと同一の4件（実際には存在しないけどありそうな県名あげてけ／コンビニで一番いらん商品あげてけ／なんかPCの画面チカチカするんやが／ワイ、彼女いない歴＝年齢やけど質問ある？）と、seeds 内部重複1件（合コンで言ったら終わる一言＝合コンで一番言ったらアカン一言の重複）を削除。orchestrator 側に欠けていた『昼飯を当てる』も同期",
-      "reason": "seed-pollution-recurred-on-2ch。4件とも既に公開済みで、うち3件は上位15本に入っていた"
-    },
-    {
-      "date": "2026-08-31",
-      "file": "backend/pipeline/video_generator.py",
-      "change": "_thumb_wrap_line の末尾に _thumb_rebalance_orphan を追加。2行折り返しで(a)2行目の幅が全幅の32%未満、または(b)2行目の文字数が1行目の45%未満のとき、文字数が均等になる位置へ切り直す。区切り文字(、。等)があればそこを優先、禁則文字と数字の途中(『14』→『1/4』)は回避、両行とも max_width に収まらない場合は元の結果を返す",
-      "reason": "thumb-orphan-wrap-moved-to-tagline。実測3件が『赤い海の石が開いた、/ 崩壊世界への入口』『白い姫の笑顔の裏で、/ 14年前の雪がまだ降っている』『立つより座る方が腰 / へ重くのしかかる理由』に改善することを実フォント幅で確認"
-    },
-    {
-      "date": "2026-08-31",
-      "file": "backend/pipeline/video_generator.py",
-      "change": "_thumb_build_illustration に語句ヒット数のゲートを追加。card_style が leaked-document 以外のとき pillow_illustration._match_textbook(topic) が2語未満なら None を返して無地に倒す",
-      "reason": "thumb-illustration-card-misfires。1語ヒットは『アイコン1個＋総称ラベル(植物/氷)』、0語ヒットは見出しの文字を途中で切って印字するだけで、誤誘導するくらいなら無地の方がマシ。本編側の generate_pillow_illustration 直呼びと scp の leaked-document は従来どおり"
-    },
-    {
-      "date": "2026-08-31",
-      "file": "backend/tests/test_short_thumbnail_illustration.py",
-      "change": "TestOrphanWrapRebalance（4件）と TestThumbIllustrationKeywordGate（2件）を追加。既存14件と合わせて20件、tests.test_thumbnail_ab_metric と合わせて31件すべてパス",
-      "reason": "上記2件の回帰防止。実測で出た3つの折り返し文字列をそのままテストケースにした"
-    },
-    {
-      "date": "2026-08-31",
-      "file": "(変更なし)",
-      "change": "genre_blacklist は全ch据え置き",
-      "reason": "『全体平均の30%以下』の該当なし。daily-science 全体平均599.4→閾値179.8 に対し最下位の日常の違和感195.6は上回る（宇宙・天体0は登録済）、scp-lab 全体平均480.4→閾値144.1 に対し対立組織313・その他219.8は上回る（オブジェクトクラス0は登録済）。他4chは単一ジャンル『その他』のみ"
-    },
-    {
-      "date": "2026-08-31",
-      "file": "(提案のみ・未実施)",
-      "change": "pipeline/youtube_uploader.py の upload_video 成功後に video_status へ INSERT する経路は入れていない",
-      "reason": "publish-db-dead-since-june。公開状態DBへの書き込みで UI 側の表示にも影響するため、構造変更として提案に留めた"
-    },
-    {
-      "date": "2026-09-01",
-      "file": "backend/pipeline/publish_log.py（新規）, backend/pipeline/youtube_uploader.py, backend/api_phase4.py",
-      "change": "公開実績を video_status に残す共通モジュールを追加し、upload_video 成功後と autopilot の単体公開（_start_single_short_publish / _start_single_main_publish）から呼ぶようにした。is_short / title カラムも追加（冪等な ALTER）",
-      "reason": "publish-db-dead-since-june。08-31 に提案止まりだった件を実装。video_status の最終行が 2026-06-07 で止まり、pdca_report の登録者ソース分析が全ch unknown、api_improvement のいいね率ループが空振りしていた"
-    },
-    {
-      "date": "2026-09-01",
-      "file": "backend/backfill_video_status.py（新規）, data/video_publish.db",
-      "change": "analytics.db の video_metrics を唯一の情報源に video_status を496件埋め戻した（YouTube API を叩かない）。キーは publish_log と同じ upload:<video_id> で冪等",
-      "reason": "publish-db-dead-since-june。前向きの記録だけでは6〜8月の約450本が分析対象外のままになるため。実測: scp-lab の subscriber_sources が unknown → shorts 100% / 0.626per1000 に復旧"
-    },
-    {
-      "date": "2026-09-01",
-      "file": "backend/pipeline/video_generator.py (generate_descriptions)",
-      "change": "ショート説明文の先頭に「タイトル: {short_title}」行を追加（メイン側には元からあった）",
-      "reason": "short-title-fallback。この行が無いため _read_desc が title='' を返し、autopilot が job.title + 【ショート】 のフォールバックに落ちていた。short_series_name / short_title_hashtags / short_title_core_max が投稿タイトルに一度も届かず、#shorts すら付いていなかった（yokai-watch 実測: 8月の39本中37本が該当）"
-    },
-    {
-      "date": "2026-09-01",
-      "file": "data/channels_orchestrator/*.json → data/channels/*.json の symlink, docs/CHANNEL_CONFIG_SOURCE_OF_TRUTH.md, scripts/unify_channel_configs.py",
-      "change": "master of record を data/channels/ に確定し、channels_orchestrator の実体を symlink に置換。今後は片側だけ更新すればよい。symlink 前の実体は data/channels_orchestrator_pre_symlink_20260901/ に退避、全差分は data/reports/2026-09-01/channel_config_divergence.txt",
-      "reason": "config-dir-divergence。本番コードで channels_orchestrator を読むものは1つも無く（別リポの ai-orchestrator も参照なし）、両方に書く運用が片側事故を生んでいた"
-    },
-    {
-      "date": "2026-09-01",
-      "file": "data/channels/2ch-matome.json",
-      "change": "08-31 の変更を master にも反映: theme_blacklist に『県名』『いらん商品』『画面チカチカ』『彼女いない歴』を追加、公開済み4件＋重複1件の theme_seeds を削除（31→26）",
-      "reason": "config-dir-divergence。08-31 の適用が data/channels_orchestrator 側にしか当たっておらず、master 側は公開済みテーマを seeds に残したままだった"
-    },
-    {
-      "date": "2026-09-01",
-      "file": "data/channels/{company-facts,clip-lab,clip-fukada,clip-kaneko,clip-animal,akashic-librarian}.json",
-      "change": "video_format.analytics.enabled=true を追加。sync 実行で company-facts 27本/35,500再生、clip-lab 7本/30,019再生、akashic-librarian 6本/3,599再生が analytics.db に入った",
-      "reason": "analytics-not-synced。run_daily_pdca._enabled_channels() が video_format.analytics.enabled を見ており、ブロックごと無いチャンネルが同期対象から静かに漏れていた"
-    },
-    {
-      "date": "2026-09-01",
-      "file": "data/channels/fake-paper.json",
-      "change": "7行目CTAを高評価→登録の順に変更、short_format.cta_fallback を新設、extra_rules に高評価優先ルールを追加、尺を190〜235字→170〜210字、2行目の架空掲載誌をリスナーの食いつきに置換して出典は3行目へ、short_title_hashtags から #フィクション を除去、short_title_core_max=26",
-      "reason": "fake-paper-zero-subs。再生4,189・高評価率0.43%（他chと同水準）で登録0。7行目に『高評価』の語が無い唯一のチャンネルで、cta_fallback も持っていなかった。維持率27.6%は全ch最下位（他は38.3〜57.2%）で、実台本は設定帯を常に超過（228〜302字）していた"
-    },
-    {
-      "date": "2026-09-01",
-      "file": "data/channels/yokai-watch.json",
-      "change": "cta_fallback.like を『ゾッとしたら高評価を押してね。』→『よかったら高評価だけ置いていってね。』（条件を外す）、structure 6行目も同文言＋55字以内の制約、theme_blacklist に『コマさん』『エンマ大王』を追加",
-      "reason": "yokai-low-sub-efficiency。高評価率0.365%は6ch中5位（実測四分位で 0.2-0.4% 帯の登録転換は0.32/1000再生）。コマさん/エンマ大王は30日以内の再投稿で、公開3日目の再生が 1,082→123 / 1,462→152 と1/8〜1/10に沈んだ"
-    },
-    {
-      "date": "2026-09-01",
-      "file": "data/channels/pokemon-lab.json",
-      "change": "autopilot.auto_optimize_schedule を true → false",
-      "reason": "config-dir-divergence。08-22 に全5chで false 固定した決定に対し channels 側だけ true に戻っていた（known_findings に『書き戻している疑い』として記録済みの件）"
-    },
-    {
-      "date": "2026-09-02",
-      "file": "data/channels/pokemon-lab.json",
-      "change": "theme_blacklist に『看板』『ピカチュウだけ』を追加（8→10件）。short_format.extra_rules にタイトル内の数字は多くても1つまでとするルールを追加",
-      "reason": "『ピカチュウは10%なのになぜ看板？』(08-31公開)・『森では10% なぜ看板に』(09-01生成)・『図鑑778番はピカチュウだけ真似る』で看板ネタが3本目。加えて数字入りタイトルが登録0.18 vs 数字なし0.46(n=40)"
-    },
-    {
-      "date": "2026-09-02",
-      "file": "data/channels/yokai-watch.json",
-      "change": "theme_blacklist に『3つの秘密』『元ネタが怖すぎる』を追加（10→12件）。short_format.extra_rules にタイトルへ数字を入れない／『？』で終えないルールを追加",
-      "reason": "数字あり登録0.05 vs なし0.50、『？』あり0.12 vs なし0.57(n=39)。dup_check 未カバー6件のうち4件が『#N：◯◯に隠された3つの秘密』テンプレ衝突"
-    },
-    {
-      "date": "2026-09-02",
-      "file": "data/channels/company-facts.json",
-      "change": "theme_seeds に『実は』起点の3件を追加（10→13件／JR東日本の運転士手当・公務員給与と人事院勧告・ニトリの配置転換）",
-      "reason": "company-facts-is-top-converter と cf-jitsuwa-pattern。1本あたり登録0.96で全ch首位、かつ『実は』型が1.71 vs 0.70。seedsが10件しかなく在庫が薄かった"
-    },
-    {
-      "date": "2026-09-02",
-      "file": "(変更なし)",
-      "change": "genre_blacklist は全ch据え置き",
-      "reason": "『全体平均の30%以下』の新規該当なし。daily-science 平均599.4→閾値179.8 に対し最下位の日常の違和感195.6は上回る（宇宙・天体0は登録済）、scp-lab 平均480.4→閾値144.1 に対し最下位のその他219.8は上回る（オブジェクトクラス0は登録済）。他8chは単一ジャンル『その他』のみ"
-    },
-    {
-      "date": "2026-09-02",
-      "file": "(提案のみ・未実施)",
-      "change": "OAuth 再認可、未公開9本の再投入、clip-lab のCTA/サムネ改修は実行していない",
-      "reason": "再認可はブラウザでの本人操作が必要。公開の再実行は外部への投稿を伴うため自動実行しない。clip-lab は切り抜きレンダラ側の構造変更を含む"
-    },
-    {
-      "date": "2026-09-03",
-      "source": "daily-pdca-report",
-      "backups": "data/channels/*.json.bak_pdca_20260903",
-      "changes": [
-        {
-          "file": "data/channels/daily-science.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "録音"
-          ],
-          "reason": "録音/骨伝導テーマが40本中12本(30%)・平均再生は非該当と同水準で増分ゼロ。既存の『骨伝導』は8本が言い換えで通過していた"
-        },
-        {
-          "file": "data/channels/daily-science.json",
-          "field": "theme_seeds",
-          "op": "add",
-          "value": [
-            "なぜ寝言は自分では一度も聞けないのか",
-            "眠る直前に見える光の模様、その正体"
-          ],
-          "reason": "最上位ジャンル『睡眠・夢』(平均710)の補充。録音テーマ封鎖分の枠を埋める"
-        },
-        {
-          "file": "data/channels/2ch-matome.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "質問ある",
-            "昼飯"
-          ],
-          "reason": "『質問ある？』形式は6本平均868で非該当937を下回り1655→1の単調減衰。『昼飯』は既存『昼飯を当てる』の部分一致取りこぼし修正"
-        },
-        {
-          "file": "data/channels/pokemon-lab.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "3つの秘密"
-          ],
-          "reason": "2本平均909で非該当1015を下回る。yokai-watch では既に blacklist 済みで横展開"
-        },
-        {
-          "file": "data/channels/fake-paper.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "瞬きが同期",
-            "エレベーターで見上げる"
-          ],
-          "reason": "dup_check 0.703 のペア。fake-paper は blacklist が空だったが OAuth が生きている稼働2chの1つで優先度が高い"
-        },
-        {
-          "file": "data/channels/yokai-watch.json",
-          "field": "theme_seeds",
-          "op": "remove",
-          "value": [
-            "コマさん・コマじろうと狛犬伝承",
-            "妖怪の名前がダジャレな理由",
-            "エンマ大王と閻魔信仰"
-          ],
-          "reason": "いずれも公開済み(各2本)かつ自channelの theme_blacklist が禁止している語を含む"
-        },
-        {
-          "file": "data/channels/yokai-watch.json",
-          "field": "theme_seeds",
-          "op": "rewrite",
-          "value": [
-            "座敷童子の元ネタが怖すぎる→座敷童子の伝承で本当に起きたこと",
-            "口裂け女の元ネタが怖すぎる→口裂け女の伝承で本当に起きたこと"
-          ],
-          "reason": "題材自体は未公開で有効。blacklist 語『元ネタが怖すぎる』だけを外して温存"
-        }
-      ]
-    },
-    {
-      "date": "2026-09-04",
-      "source": "daily-pdca-report",
-      "backups": "data/channels/*.json.bak_pdca_20260904",
-      "changes": [
-        {
-          "file": "data/channels/2ch-matome.json",
-          "field": "theme_seeds",
-          "op": "rewrite",
-          "value": [
-            "ワイ、コンビニ夜勤5年やけど質問ある？→なんかコンビニ夜勤の深夜2時だけ客が変なんやが",
-            "ワイ、実家が旅館やけど質問ある？→なんか実家の旅館に住み着いとる常連おるんやが"
-          ],
-          "reason": "09-03 に『質問ある』を blacklist 追加した結果、自ch seeds 2件が矛盾していた(seed-blacklist-conflict-recurs)。題材は有効なので、実測で最も登録が付く『なんか〜んやが』型(登録/1k 0.60 vs ch平均0.17)へ変換して温存"
-        },
-        {
-          "file": "data/channels/2ch-matome.json",
-          "field": "theme_seeds",
-          "op": "add",
-          "value": [
-            "なんか宅配便だけ毎回ワイの時だけ不在票なんやが",
-            "なんか夜だけWi-Fiが死ぬんやが"
-          ],
-          "reason": "2ch-nanka-yanga-is-the-winner-format。26→28件"
-        },
-        {
-          "file": "data/channels/2ch-matome.json",
-          "field": "theme_seeds[駅名].angle",
-          "op": "edit",
-          "value": "angle文中の『県名スレの派生』表現を除去",
-          "reason": "blacklist 語『県名』が angle に残っており、将来 angle まで照合する実装になった時に取りこぼす"
-        },
-        {
-          "file": "data/channels/company-facts.json",
-          "field": "theme_seeds",
-          "op": "add",
-          "value": [
-            "実は日本郵政の年収は『局長かどうか』で200万変わる",
-            "実はANAとJALでパイロットの年収の伸び方が違う",
-            "実は大手ゼネコンの年収1000万超えは現場手当で作られている"
-          ],
-          "reason": "登録/1k 0.76・登録/本1.04 で実数・効率とも実質首位。ch内で『実は』型は 1.00/1k vs 非該当0.63。seedsが13件と薄かった。13→16件"
-        },
-        {
-          "file": "data/channels/yokai-watch.json",
-          "field": "theme_seeds",
-          "op": "add",
-          "value": [
-            "フユニャンの正体 — 未来から来た相棒は作中で何者だと説明されているのか",
-            "じんめん犬の正体 — 昭和の人面犬の噂を作品はどう作り変えたのか"
-          ],
-          "reason": "作品題材優位(登録/1k 0.41 vs 伝承単体0.16)を3度目の独立分析で再現、かつ shoutai-is-strongest(『正体』0.44 vs 0.16)との掛け合わせ。追加前に自ch blacklist 12語と照合済み。24→26件"
-        },
-        {
-          "file": "data/channels/fake-paper.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "大谷翔平",
-            "久保建英",
-            "打撃フォーム"
-          ],
-          "reason": "有名人クロスオーバー2本が ch のワースト2(366再生/0再生、いずれも登録0)。架空論文という ch コンセプトからも外れる。2→5件"
-        },
-        {
-          "file": "data/channels/clip-kaneko.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "詰め込んだ一冊"
-          ],
-          "reason": "dup_check 類似度0.895 の最大ペア（夏のデート感を詰め込んだ一冊 ↔ 「おはよう」から「おやすみ」までデート気分を詰め込んだ一冊）。0→1件"
-        },
-        {
-          "file": "data/channels/pokemon-lab.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "種族値だけ"
-          ],
-          "reason": "dup_check 0.819 のペア（種族値だけで強さが変わるのか ↔ けつばんの正体）。11→12件"
-        },
-        {
-          "file": "data/channels/socio-rx.json",
-          "field": "theme_seeds",
-          "op": "rewrite",
-          "value": [
-            "自己成就予言→期待が結果を作る仕組み（自己成就）"
-          ],
-          "reason": "全13ch総当たりで検出した自ch blacklist 衝突（blacklist語『予言』）。これで全ch衝突0件"
-        },
-        {
-          "file": "(変更なし)",
-          "field": "genre_blacklist",
-          "op": "none",
-          "value": [],
-          "reason": "『全体平均の30%以下』の新規該当なし。daily-science 平均584.4→閾値175.3 に対し最下位の日常の違和感195.6は上回る（宇宙・天体0は登録済）、scp-lab 平均501.2→閾値150.4 に対し最下位のその他288.8は上回る（オブジェクトクラス0・財団組織303.7は登録済）。他9chは単一ジャンル『その他』のみで分割不能"
-        },
-        {
-          "file": "(提案のみ・未実施)",
-          "field": "-",
-          "op": "none",
-          "value": [],
-          "reason": "ch間の同語衝突ゲート、サムネ図解カード/黄色帯/キャラ表情の描画修正、SCP伏字→実番号、fake-paper の構造改修は実装せず。いずれもレンダラ・生成パイプライン側のコード変更で、設定JSONの範囲を超えるため"
-        }
-      ]
-    },
-    {
-      "date": "2026-09-05",
-      "source": "daily-pdca-report",
-      "backups": "data/channels/*.json.bak_pdca_20260905",
-      "changes": [
-        {
-          "file": "data/channels/scp-lab.json",
-          "field": "short_format.extra_rules",
-          "op": "add",
-          "value": [
-            "ショートタイトルの先頭付近に必ず実番号『SCP-####』を数字のまま入れる（伏字・番号省略は不可）"
-          ],
-          "reason": "scp-number-in-title-converts。番号ありn=32は登録/本0.62・登録/1k0.77、番号なしn=18は0.33・0.57。09-04生成2本のうち1本が番号なしで未徹底だった"
-        },
-        {
-          "file": "data/channels/scp-lab.json",
-          "field": "theme_seeds",
-          "op": "remove",
-          "value": [
-            "SCP-2306「実在しない部屋」"
-          ],
-          "reason": "公開済み『一口SCP #94：SCP-2306「実在しない部屋」』と完全重複(seeds-no-dedupe-vs-published の再発)。22→21件"
-        },
-        {
-          "file": "data/channels/akashic-librarian.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "大谷翔平",
-            "久保建英",
-            "有名人"
-          ],
-          "reason": "akashic-top-converter-small-n。『なぜ大谷翔平だけ？』1149再生で登録0、対して匿名題材の手稿1172再生=登録2・三十八人1057再生=登録1。再生同水準で有名人回だけ転換0。fake-paperで09-04に同じ措置済み。8→11件"
-        },
-        {
-          "file": "data/channels/akashic-librarian.json",
-          "field": "short_format.extra_rules",
-          "op": "add",
-          "value": [
-            "実在の有名人・スポーツ選手・タレントを題材や具体例の中心に据えない。匿名の事件・実験・文書を主語にする"
-          ],
-          "reason": "同上。blacklist は文字列一致しか効かないため(blacklist-substring-evaded-by-paraphrase)、生成ルール側にも明記"
-        },
-        {
-          "file": "data/channels/daily-science.json",
-          "field": "theme_seeds[].angle",
-          "op": "edit",
-          "value": [
-            "『あくび・玉ねぎ・強い光』→『玉ねぎ・強い光・冷たい風』",
-            "『宇宙飛行士で数cm伸びる』→『無重力環境の飛行士で数cm伸びる』"
-          ],
-          "reason": "blacklist-conflict-hides-in-angle-field。自ch blacklist 語『あくび』『宇宙』が angle に残っていた"
-        },
-        {
-          "file": "data/channels/socio-rx.json",
-          "field": "theme_seeds[].angle",
-          "op": "edit",
-          "value": [
-            "『ネガティブな予言を』→『ネガティブな思い込みを』／末尾の運用メモ『※自ch blacklist 語《予言》を回避してリネーム』を削除"
-          ],
-          "reason": "09-04 に自分が書いたリネーム理由メモ自体が違反語『予言』を含んでいた。データ欄に運用メモを書かない方針に変更。これで全13chの seed↔blacklist 衝突は0件"
-        },
-        {
-          "file": "(変更なし)",
-          "field": "genre_blacklist",
-          "op": "none",
-          "value": [],
-          "reason": "『全体平均の30%以下』の新規該当なし。daily-science 平均547→閾値164 に対し最下位の日常の違和感195.6は上回る（宇宙・天体0は登録済）、scp-lab 平均487→閾値146 に対し最下位も上回る。他10chは単一ジャンル『その他』のみで分割不能"
-        },
-        {
-          "file": "(変更なし)",
-          "field": "theme_blacklist(重複由来)",
-          "op": "none",
-          "value": [],
-          "reason": "dup_check の類似度1.00ペアは daily-science 15件・scp-lab 15件とも既報かつ blacklist 済みの旧作(録音/骨伝導・しゃっくり・酸素・42度・SCP-173)。新規の重複テーマなし"
-        },
-        {
-          "file": "(提案のみ・未実施)",
-          "field": "-",
-          "op": "none",
-          "value": [],
-          "reason": "カスタムサムネの403解消(YouTube側の電話認証が必要・本人操作)、company-facts の実写ゼロ件時フォールバック、和文ワードラッパの共通化、図解カードの題材連動は実装せず。いずれも本人操作またはレンダラ側コード変更"
-        }
-      ]
-    },
-    {
-      "date": "2026-09-06",
-      "source": "daily-pdca-report",
-      "backups": "data/channels/*.json.bak_pdca_20260906",
-      "changes": [
-        {
-          "file": "data/channels/company-facts.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "日本マクドナルド"
-          ],
-          "reason": "『日本マクドナルドの年収576万円、その内訳とは』と『日本マクドナルドの正体、年収670万円の裏側』が類似0.857で重複。しかも同一社の平均年収を576万と670万で食い違って提示しており、事実の信頼性を損なう。company-facts は登録/1k 0.70 と全ch2位で毀損の影響が大きい"
-        },
-        {
-          "file": "data/channels/fake-paper.json",
-          "field": "theme_blacklist",
-          "op": "remove",
-          "value": [
-            "瞬きが同期",
-            "エレベーターで見上げる"
-          ],
-          "reason": "09-03 に dup 0.703/0.762 を根拠に自動追加したが、共有ハッシュタグ #架空論文 による偽陽性だった。タグを除いた真の類似度は 0.00。有効な題材を2件失っていたため撤回する"
-        },
-        {
-          "file": "data/channels/daily-science.json",
-          "field": "theme_seeds",
-          "op": "add",
-          "value": [
-            "なぜ寝返りは一晩に20回も打つのに自分では気づかないのか",
-            "二度寝の5分だけ、なぜ普通の睡眠より深く感じるのか"
-          ],
-          "reason": "最上位ジャンル『睡眠・夢』(42本/平均618.3・全体平均比117%)の補充。既存42語の theme_blacklist と全文照合済み"
-        },
-        {
-          "file": "data/channels/scp-lab.json",
-          "field": "theme_seeds",
-          "op": "add",
-          "value": [
-            "SCP-2718を読んだ職員だけが辞めた理由"
-          ],
-          "reason": "最上位ジャンル『SCP個別オブジェクト』(150本/平均551.6・全体平均比114%)の補充。09-05 に明文化した「タイトルに実SCP番号必須」ルールに沿って実番号入りで作成。seedオブジェクト全体のJSON文字列で blacklist 9語と照合済み"
-        },
-        {
-          "file": "data/channels/scp-lab.json",
-          "field": "theme_seeds",
-          "op": "add",
-          "value": [
-            "SCP-3008が閉店しない理由"
-          ],
-          "reason": "最上位ジャンル補充の2件目。当初 SCP-1730 で作成したが blacklist 語『SCP-173』の部分一致で自動棄却されたため、巻き添え範囲(1730-1739)外の番号に差し替えた"
-        }
-      ]
-    },
-    {
-      "date": "2026-09-06b",
-      "source": "daily-pdca-report",
-      "backups": "data/channels/*.json.bak_pdca_20260907",
-      "changes": [
-        {
-          "file": "data/channels/company-facts.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "東京エレクトロン"
-          ],
-          "reason": "『東京エレクトロンの年収1272万円、実は転職後に差が出る』と『同1272万円、実は株価上昇の裏側』が類似0.694で重複。同一社・同一数値で切り口だけ変えた2本。09-06 の company-facts-contradicts-own-figures で決めた社名単位の重複ガードの2件目。cf は登録/1k 0.6797 で全ch1位のため毀損リスクが大きい"
-        },
-        {
-          "file": "data/channels/pokemon-lab.json",
-          "field": "theme_blacklist",
-          "op": "rewrite",
-          "value": [
-            "3つの秘密 -> re:3つの秘密"
-          ],
-          "reason": "filler-words-silently-widen-blacklist。normalize_title が『の秘密』を落とすため《3つ》に縮み、『3つの伝説ポケモンの種族値』のような無関係な題材まで全ブロックしていた。re: で生タイトルへの正規表現照合に切替え、意図した『3つの秘密』テンプレだけを止める挙動を実測確認"
-        },
-        {
-          "file": "data/channels/yokai-watch.json",
-          "field": "theme_blacklist",
-          "op": "rewrite",
-          "value": [
-            "3つの秘密 -> re:3つの秘密",
-            "主人公の秘密 -> re:主人公の秘密"
-          ],
-          "reason": "同上。『主人公の秘密』は《主人公》に縮み、主人公に触れる seed を巻き添えにしていた"
-        },
-        {
-          "file": "data/channels/yokai-watch.json",
-          "field": "theme_seeds",
-          "op": "rewrite",
-          "value": [
-            "妖怪ウォッチというガジェットの仕組み → 妖怪ウォッチのレンズは何を映しているのか（angle: 妖怪が可視化される条件をレンズ越し・メダル装着・とりつき中の3状態で整理。装置の仕様に限定）"
-          ],
-          "reason": "旧 seed の angle『なぜ主人公だけが妖怪を見られるのか』は、公開済みの『なぜ妖怪ウォッチだけ？主人公の秘密＃妖怪ウォッチで主人公だけが妖怪を見られる理由』(類似1.000で2本重複公開済み)と同題材。blacklist を re: 化して照合を正した結果この seed だけが真の衝突として残ったため、題材ごと差し替えた"
-        },
-        {
-          "file": "data/channels/scp-lab.json",
-          "field": "thumbnail_template.style_hint",
-          "op": "add",
-          "value": [
-            "line1 または line2 に必ず実番号『SCP-####』を数字のまま入れる（伏字・番号省略・sub_text だけの記載は不可）"
-          ],
-          "reason": "scp-thumbnail-drops-the-number-that-converts。タイトル側は番号ありが登録/1k 0.77 vs 0.57(n=32/18)。既存 style_hint の『sub_text は番号付きで』は推奨止まりで本日のサムネは番号ゼロだった。style_hint が thumbnail_generator.py:225 で最優先ブロックとして注入されることをコードで確認済み"
-        },
-        {
-          "file": "(変更なし)",
-          "field": "genre_blacklist",
-          "op": "none",
-          "value": [],
-          "reason": "複数ジャンルを持つのは ds と scp のみ。ds 全体平均524.9→閾値157.5 に対し最下位の実質候補『日常の違和感』195.6 は上回る（宇宙・天体0.0 は登録済）。scp 全体平均485.6→閾値145.7 に対し『財団組織・職員』236.8 は上回る（オブジェクトクラス0.0 は登録済）。他10chは単一ジャンル『その他』のみで判定不能"
-        },
-        {
-          "file": "(提案のみ・未実施)",
-          "field": "-",
-          "op": "none",
-          "value": [],
-          "reason": "【ショート】二重付与の修正(api_phase3/4のフォールバック)、dup_check への blacklist 除外、サムネ上端30%の余白解消はいずれもコード側の構造変更のため自動実行しない。ChatGPT画像ブリッジの配送は外部サービスへの投稿を伴うため自動実行しない"
-        }
-      ]
-    },
-    {
-      "date": "2026-09-07n",
-      "source": "daily-pdca-report",
-      "backups": "data/channels/*.json.bak_pdca_20260908",
-      "changes": [
-        {
-          "file": "data/channels/pokemon-lab.json",
-          "field": "theme_blacklist",
-          "op": "remove",
-          "value": [
-            "どっちが勝つ",
-            "対決"
-          ],
-          "reason": "format-blacklist-killed-best-format。該当7本avg1493 vs 非該当697の2.14倍で、最高成績フォーマットを自ら封じていた"
-        },
-        {
-          "file": "data/channels/pokemon-lab.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "re:バンギラス.*メタグロス",
-            "re:パルキア.*ウルトラネクロズマ",
-            "re:メタグロス.*サーフゴー",
-            "re:リザードン.*カイリュー",
-            "re:ミミッキュ.*ロトム",
-            "re:ホウオウ.*ルギア",
-            "re:ルカリオ.*ウルガモス",
-            "re:ガブリアス.*ボーマンダ",
-            "re:カイオーガ.*グラードン"
-          ],
-          "reason": "フォーマットではなく使用済み対戦カード単位でブロックに切替。12→19件"
-        },
-        {
-          "file": "data/channels/pokemon-lab.json",
-          "field": "theme_seeds",
-          "op": "add",
-          "value": [
-            "ヒスイヌメルゴンとドラパルト、どっちが勝つ？",
-            "テツノブジンとサーフゴー、どっちが勝つ？",
-            "ドサイドンとハガネール、どっちが勝つ？"
-          ],
-          "reason": "解禁した2.14倍フォーマットを未使用カードで再投入。20→23件"
-        },
-        {
-          "file": "data/channels/yokai-watch.json",
-          "field": "theme_blacklist",
-          "op": "remove",
-          "value": [
-            "元ネタが怖すぎる"
-          ],
-          "reason": "該当7本avg1422 vs 非該当698の2.04倍。フォーマット語のため解除"
-        },
-        {
-          "file": "data/channels/yokai-watch.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "のっぺらぼう",
-            "ふじのやま",
-            "一つ目小僧",
-            "ブシニャン"
-          ],
-          "reason": "公開済みの怖すぎる型の題材を固有名詞単位でブロック。12→15件"
-        },
-        {
-          "file": "data/channels/yokai-watch.json",
-          "field": "theme_seeds",
-          "op": "add",
-          "value": [
-            "雪女の正体が怖すぎる — なぜ助けた男だけが後で殺されるのか",
-            "座敷童子の正体が怖すぎる — 出ていった家に何が起きたのか",
-            "件（くだん）の正体が怖すぎる — 予言して死ぬ牛はなぜ生まれたのか"
-          ],
-          "reason": "解禁した2.04倍フォーマットを未使用題材で再投入"
-        },
-        {
-          "file": "data/channels/yokai-watch.json",
-          "field": "theme_seeds",
-          "op": "remove",
-          "value": [
-            "ブシニャンはどこから来たのか",
-            "なぜのっぺらぼうは『顔がない』妖怪になったのか"
-          ],
-          "reason": "seed-blacklist-conflict-recurs の再発を検証で検出。今回追加した固有名詞blacklistと衝突する既存seedを除去。26→29→27件"
-        },
-        {
-          "file": "data/channels/company-facts.json",
-          "field": "theme_seeds",
-          "op": "add",
-          "value": [
-            "万博・国際大会の裏方企業、年収はいくらか",
-            "空港の地上支援(グランドハンドリング)会社の年収の実態",
-            "競技場・アリーナの運営会社は誰が儲けているのか"
-          ],
-          "reason": "本日トップ『アジア大会の裏方企業 年収932万』5203再生=平均比4.7倍。『表に出ない裏方企業の年収』型の派生を投入。23→26件"
-        },
-        {
-          "file": "data/channels/2ch-matome.json",
-          "field": "theme_blacklist",
-          "op": "add",
-          "value": [
-            "箱だけ先に届く",
-            "PCパーツ到着"
-          ],
-          "reason": "本日トップ題材の重複防止。7→9件"
-        },
-        {
-          "file": "data/channels/2ch-matome.json",
-          "field": "theme_seeds",
-          "op": "add",
-          "value": [
-            "なんかコンビニの袋だけ異様に薄いんやが",
-            "通販の緩衝材だけ本体よりデカいんやが",
-            "なんか置き配だけ毎回場所が違うんやが"
-          ],
-          "reason": "トップ1814(平均比2.2倍)と同じ買い物・配送あるある型を、実測で最も強い『なんか〜だけ〜んやが』構文で3件。28→31件"
-        },
-        {
-          "file": "(検証)",
-          "field": "blacklist_match",
-          "op": "verify",
-          "value": "全13ch seed×theme_blacklist 矛盾ゼロ / 既存重複6件は引き続きblock / 新seed 6件はpass",
-          "reason": "backend.pipeline.auto_scenario.theme_dedup.blacklist_match で実行"
-        }
-      ]
-    },
-    {
-      "date": "2026-09-08n",
-      "target": "data/channels/yokai-watch.json",
-      "field": "video_format.short_illustrations.thumbnail_card",
-      "before": "(未設定=有効)",
-      "after": false,
-      "reason": "図解カードの誤マッピング（『木片』→植物 /『山』→地形）。カード高352px=縦18.3%を占めクリック動機ゼロ。本編図解は継続。"
-    },
-    {
-      "date": "2026-09-08n",
-      "target": "data/channels/scp-lab.json",
-      "field": "video_format.short_illustrations.thumbnail_card",
-      "before": "(未設定=有効)",
-      "after": false,
-      "reason": "『名簿の空白』動画に眼アイコン＋『視認体』の無関係カード。暗色で視認性も低い。本編のleaked-document図解は継続。"
-    },
-    {
-      "date": "2026-09-08n",
-      "target": "data/channels/scp-lab.json",
-      "field": "theme_blacklist",
-      "before": 9,
-      "after": 13,
-      "added": [
-        "17名",
-        "17年間",
-        "17年間隠し",
-        "担当者17"
-      ],
-      "reason": "無関係なSCP(1730/4002/166/5000)に同じ『17』フックを使い回し、類似度1.0のペアを6組生んでいた。"
-    },
-    {
-      "date": "2026-09-08n",
-      "target": "data/channels/scp-lab.json",
-      "field": "thumbnail_template.tagline_rules",
-      "before": "(なし)",
-      "after": "3件のルールを新設",
-      "reason": "tagline が『CC BY-SA 3.0』のライセンス表記に占有されていた。ライセンス表記を禁止し、SCP番号を line2/sub_text に必須化（style_hintの推奨では守られなかったため独立ルールへ格上げ）。"
-    },
-    {
-      "date": "2026-09-08n",
-      "target": "data/channels/yokai-watch.json",
-      "field": "theme_seeds",
-      "before": 27,
-      "after": 29,
-      "added": [
-        "濡れ女の正体、なぜ助けようとした者だけが消えるのか",
-        "あかなめの正体が怖すぎる — 江戸の風呂場に本当にいたもの"
-      ],
-      "reason": "登録/1k が2日連続上昇(0.2618→0.3659→0.4845)し『正体』型の効果が確定。同型を継続投入。"
-    },
-    {
-      "date": "2026-09-08n",
-      "target": "(判定のみ)",
-      "field": "genre_blacklist",
-      "before": "-",
-      "after": "追加なし",
-      "reason": "30%ルールで再判定。daily-science ch平均524→閾値157に対し最下位の『日常の違和感』は195で対象外（『宇宙・天体』は登録済）。scp-lab ch平均495→閾値148に対し『財団組織・職員』237は登録済、『対立組織・Kクラス』313はn=1。新規該当なし。"
-    },
-    {
-      "date": "2026-09-10",
-      "target": "data/channels/scp-lab.json",
-      "field": "theme_blacklist",
-      "before": 13,
-      "after": 6,
-      "removed": [
-        "SCP-173",
-        "視線を外",
-        "目を離",
-        "見るのをやめ",
-        "最初の異常存在",
-        "17名",
-        "17年間",
-        "担当者17"
-      ],
-      "added": [
-        "SCP-1983"
-      ],
-      "reason": "上位40本中 SCP-173が12本・定型語7本・17系8本を占め全て平均の約2倍。勝ち筋を自分で封じていたため解除。SCP-1983は3本存在し1205→1121→1066と逓減しているため追加。'17年間隠し'は定型句のため維持。"
-    },
-    {
-      "date": "2026-09-10",
-      "target": "data/channels/scp-lab.json",
-      "field": "theme_seeds",
-      "before": 23,
-      "after": 26,
-      "added": [
-        "SCP-682が何度殺しても適応する — 収容不可と判定された本当の理由",
-        "SCP-055、誰も形を思い出せない — 記録できない異常存在の正体",
-        "SCP-3999、研究員本人が物語に取り込まれた記録の真相"
-      ],
-      "reason": "ジャンル別で『SCP個別オブジェクト』avg563 が『財団組織・職員』avg237 の2.4倍。未使用の有名番号で個別オブジェクト路線を補充。"
-    },
-    {
-      "date": "2026-09-10",
-      "target": "data/channels/daily-science.json",
-      "field": "theme_blacklist",
-      "before": 16,
-      "after": 14,
-      "removed": [
-        "自分の声",
-        "あくび"
-      ],
-      "reason": "『自分の声』は上位40本中10本(1081〜1453再生)、『あくび』は1271再生でいずれもch平均524の2.1〜2.8倍。scp-labと同じ自傷パターンのため解除。"
-    },
-    {
-      "date": "2026-09-10",
-      "target": "data/channels/daily-science.json",
-      "field": "theme_seeds",
-      "before": 24,
-      "after": 26,
-      "added": [
-        "なぜ骨伝導だと自分の声だけ低く聞こえるのか — 録音とのズレの正体",
-        "なぜイヤホンを外した直後だけ自分の声が響くのか"
-      ],
-      "reason": "『録音・骨伝導・自分の声』系が上位40本の30%を占め当ch最強フォーマット。解除に合わせて同系統を投入。"
-    },
-    {
-      "date": "2026-09-10",
-      "target": "(判定のみ)",
-      "field": "genre_blacklist",
-      "before": "-",
-      "after": "追加なし",
-      "reason": "30%ルール再判定。daily-science ch平均524→閾値157に対し最下位の『日常の違和感』は195で対象外(『宇宙・天体』は登録済)。scp-lab ch平均495→閾値149に対し『財団組織・職員』237は登録済、『対立組織・Kクラス』313はn=1。新規該当なし(3日連続)。"
-    },
-    {
-      "date": "2026-09-11",
-      "target": "全6ch",
-      "field": "title_rules.hard_constraints.forbid_patterns / banned_words",
-      "before": "絵文字ルールなし(max_emoji=0 は未読キー)",
-      "after": "絵文字正規表現 + 流出実績18字を追加",
-      "reason": "ch内対照で5/6chが悪化(scp-lab 0.32 vs 0.98 等)。09-04〜09-08 も毎日1〜2本流出していたため実効化。check/repair 両方を検証済。"
-    },
-    {
-      "date": "2026-09-11",
-      "target": "scp-lab / yokai-watch / daily-science / 2ch-matome",
-      "field": "theme_priority.title_style",
-      "before": "答え提示語中心",
-      "after": "先頭に『なぜ型を第一候補』を明記(旧文は title_style_prev_20260911 に退避)",
-      "reason": "ch内対照で「なぜ」型が非該当の1.8〜3.2倍。答え提示語は単独では効果が確認できず。"
-    },
-    {
-      "date": "2026-09-11",
-      "target": "pokemon-lab",
-      "field": "theme_priority.title_style",
-      "before": "他chと共通の答え提示語方針",
-      "after": "二人称(君/あなた)必須・「なぜ」回避・サムネ最優先を明記",
-      "reason": "当chのみ「なぜ」0.00(n=9) vs 0.37(n=19)、二人称 0.45 vs 0.15。08-25以降 0.26→0.20 と唯一悪化、到達CTR 0.69% で最下位。"
-    },
-    {
-      "date": "2026-09-11",
-      "target": "pokemon-lab",
-      "field": "autopilot.theme_queue",
-      "before": "0本(枯渇)",
-      "after": "20本を補充(全件 二人称＋答え提示語、ゲート事前検証済)",
-      "reason": "キュー枯渇が当chの劣化要因の一つと判断。実測で効く型に揃えて補充。"
-    },
-    {
-      "date": "2026-09-11",
-      "target": "scp-lab / yokai-watch / company-facts / 2ch-matome",
-      "field": "autopilot.theme_queue",
-      "before": "54本がゲート不通過",
-      "after": "実測型で書き直し(旧題は title_prev_20260911 に保存)、全ch NG 0/142",
-      "reason": "repair() による語尾の機械追加と語の収斂を防ぐため。scp/yokai はなぜ型、company-facts は理由・実態・裏側型、2ch は ワイ除去。"
-    },
-    {
-      "date": "2026-09-11",
-      "target": "全6ch",
-      "field": "short_format.extra_rules",
-      "before": "中盤の指示なし",
-      "after": "『3行目に必ず前提を覆す一言か具体数字を置く／説明を2行続けない』を追加",
-      "reason": "維持率が 15%地点102% → 20%地点84% → 30%地点63% と中盤で崖。尺は _experiments.length_20260905 により 09-12 まで変更禁止のため構成で対応。"
-    },
-    {
-      "date": "2026-09-11",
-      "target": "(実行なし)",
-      "field": "Phase 4 制作トリガ",
-      "before": "-",
-      "after": "指揮者からの trigger は発行せず",
-      "reason": "サンドボックスから localhost:8000 に到達不可。かつ backend の APScheduler が 09-11 に6ch全てで発火済(daily-science 06:45 / company-facts 07:30 / pokemon-lab 07:45 / 2ch-matome 08:15 / scp-lab 08:15 / yokai-watch 08:45)。二重起動を避けた。"
-    },
-    {
-      "date": "2026-09-11n",
-      "target": "daily-science / scp-lab",
-      "field": "theme_seeds",
-      "before": "素の文字列が混在（daily-science 6件 / scp-lab 3件）",
-      "after": "全26件ずつを {title, angle} の dict に正規化（.bak_pdca_20260911n に退避）",
-      "reason": "suggest_themes が 'str' object has no attribute 'get' で落ち、genre_blacklist の差し替え経路が常に失敗して停止ジャンルのテーマがそのまま採用されていた。"
-    },
-    {
-      "date": "2026-09-11n",
-      "target": "backend/pipeline/auto_scenario/generator.py",
-      "field": "ScenarioGenerator.suggest_themes",
-      "before": "[s['title'] for s in channel.theme_seeds if s.get('title')]",
-      "after": "文字列/dict の両方を吸収するループに変更",
-      "reason": "設定の書き方ひとつで機能が無言で死ぬのを防ぐ（13ch共通）。"
-    },
-    {
-      "date": "2026-09-11n",
-      "target": "backend/pipeline/auto_scenario/generator.py",
-      "field": "_sanitize_regenerated_title（新設）＋ _regenerate_title_* 3経路の戻り値",
-      "before": ".strip('「」\"\\'　 ') のみ",
-      "after": "対になっていない/順序が逆の括弧の破片と末尾区切り記号を除去。8字未満は None で元題を維持",
-      "reason": "『…仕組み、】【の実態』がフォルダ名・サムネ・説明文・mp4 まで貫通した（job 1a6e3105）。"
-    },
-    {
-      "date": "2026-09-11n",
-      "target": "backend/pipeline/auto_scenario/cross_channel_gate.py",
-      "field": "ANSWER_MARKER_DAILY_LIMIT",
-      "before": "3",
-      "after": "6",
-      "reason": "朝の『なぜ型』統一で1語が上限を即消費し、キュー全体がブロック（当日16回）。18本/日に対し6なら1語への全寄りは防げる。"
-    },
-    {
-      "date": "2026-09-11n",
-      "target": "backend/tests/test_title_gates_20260904.py",
-      "field": "テスト",
-      "before": "上限3を直書き＋サニタイズ/seed形状の検査なし",
-      "after": "上限は『枠数未満』で検査。RegeneratedTitleSanitizeTest(5件) と ThemeSeedShapeTest(2件) を追加",
-      "reason": "今回の3件の修正を回帰として固定。同ファイル24件・全pass。"
-    },
-    {
-      "date": "2026-09-11n",
-      "target": "(判定のみ)",
-      "field": "genre_blacklist",
-      "before": "-",
-      "after": "追加なし",
-      "reason": "30%ルール再判定。該当は daily-science『宇宙・天体』(avg 0/n=6) と scp-lab『オブジェクトクラス』(avg 0/n=2) のみで、いずれも登録済（4日連続で新規なし）。"
-    },
-    {
-      "date": "2026-09-11n",
-      "target": "(見送り)",
-      "field": "theme_blacklist",
-      "before": "-",
-      "after": "追加なし",
-      "reason": "本日の類似ペアは題材ではなくタイトルの型が似ているだけ（yokai 0.823/0.818、pokemon 0.744）。blacklist に入れると正当な題材を禁止するため見送り、類似度計算側の修正を提案に回した。"
-    },
-    {
-      "date": "2026-09-12n",
-      "target": "daily-science / scp-lab / yokai-watch / akashic-librarian / fake-paper / 2ch-matome / company-facts / pokemon-lab",
-      "field": "theme_queue.items[].title",
-      "before": "hard_constraints 適合 11/107 (10%)",
-      "after": "**107/107 (100%)**。全件を手で書き直し、旧題は各項目の _retitled_20260912n に保存（.bak_pdca_20260912n に退避）",
-      "reason": "補充側が自分の title_rules を参照していないため。このまま流すと repair() が語尾に『の正体』を機械追加して日本語が壊れる（09-11 と同型）。"
-    },
-    {
-      "date": "2026-09-12n",
-      "target": "scp-lab",
-      "field": "theme_queue（1件削除）",
-      "before": "SCP-3812「名前を超えた存在」…（23件）",
-      "after": "削除（22件）",
-      "reason": "SCP-3812 は n=2・平均139再生(ch平均599の0.23倍)。同時に theme_blacklist へ登録した。"
-    },
-    {
-      "date": "2026-09-12n",
-      "target": "yokai-watch",
-      "field": "theme_queue（1件削除）",
-      "before": "コマさんの元ネタ狛犬…（10件）",
-      "after": "削除（9件）",
-      "reason": "コマさんは 648再生(0.70倍)で blacklist 該当かつ平均以下。"
-    },
-    {
-      "date": "2026-09-12n",
-      "target": "scp-lab",
-      "field": "theme_blacklist",
-      "before": "14語",
-      "after": "16語（+SCP-096, +SCP-3812）",
-      "reason": "SCP-096 は n=7 で当ch最多重複かつ平均369(0.62倍)、SCP-3812 は n=2・139(0.23倍)。『重複かつ平均以下』のみを追加し、心臓(1.89倍)・別の文明(2.05倍)・図書館(1.20倍)は対象外とした。"
-    },
-    {
-      "date": "2026-09-12n",
-      "target": "daily-science",
-      "field": "theme_blacklist",
-      "before": "16語",
-      "after": "17語（+横隔膜）",
-      "reason": "blacklist 済みの『しゃっくり』の言い換えとして n=4 まで増殖、平均233(0.35倍)。"
-    },
-    {
-      "date": "2026-09-12n",
-      "target": "yokai-watch",
-      "field": "theme_blacklist",
-      "before": "15語",
-      "after": "12語（−河童 −エンマ大王 −ぬらりひょん）",
-      "reason": "いずれも ch 平均以上（1.82/1.36/1.05倍）。09-07 と同型の自傷を解除。"
-    },
-    {
-      "date": "2026-09-12n",
-      "target": "pokemon-lab",
-      "field": "theme_blacklist",
-      "before": "19語",
-      "after": "18語（−ヤドンの尻尾）",
-      "reason": "1567再生(1.58倍)・登録+3人で当ch最高の登録効率だった。"
-    },
-    {
-      "date": "2026-09-12n",
-      "target": "(判定のみ)",
-      "field": "genre_blacklist",
-      "before": "-",
-      "after": "追加なし",
-      "reason": "30%ルール再判定。daily-science 平均524→閾値157（最下位の日常の違和感195.6は上回る）、scp-lab 平均495→閾値148（最下位の財団組織・職員236.8は上回る）。該当する宇宙・天体/オブジェクトクラスは登録済み。5日連続で新規なし。"
-    },
-    {
-      "date": "2026-09-12n",
-      "target": "(検証)",
-      "field": "backend/tests",
-      "before": "09-11 に test_no_regression_in_duplicate_prevention が RED と記録",
-      "after": "test_fixes_20260909.py + test_title_gates_20260904.py = 72 passed / 313 subtests passed（当該テスト含め GREEN）",
-      "reason": "設定変更後の回帰確認。"
-    },
-    {
-      "date": "2026-09-13n",
-      "target": "data/channels/scp-lab.json",
-      "field": "theme_blacklist",
-      "before": "16語",
-      "after": "9語（−SCP-173 −視線を外 −目を離 −見るのをやめ −最初の異常存在 −17年間 −17年間隠し）",
-      "reason": "復旧した analytics で再判定。0再生除外 n=159・ch base subs/1k 0.81 に対し全て 1.43〜3.18倍。09-10 の解除判断を 09-11 夜の run が誤って巻き戻していたものを、今回は登録/千再生を根拠に再解除した。維持は 17名(0.60x)・担当者17(0.00x)・SCP-1983(0.73x)・SCP-096・SCP-3812・最古の異常存在・かまいたち・悪夢の回路・電子工作。"
-    },
-    {
-      "date": "2026-09-13n",
-      "target": "data/channels/scp-lab.json",
-      "field": "theme_seeds",
-      "before": "26件",
-      "after": "29件（+SCP-173収容室の瞬き / +目を離すと動く収容物の比較 / +最初に収容した異常存在は何番か）",
-      "reason": "解除した勝ち筋クラスタに供給が無いと解除の効果が出ないため、同クラスタの seed を3本補充。形式は 09-11n の規約どおり {title, angle} の dict。"
-    },
-    {
-      "date": "2026-09-13n",
-      "target": "data/channels/yokai-watch.json",
-      "field": "theme_blacklist",
-      "before": "12語",
-      "after": "13語（+雪女）",
-      "reason": "直近30日 n=4、再生 261/1012/189/1015 と平均並みなのに登録0人・subs/1k 0.00（ch base 0.74）。再生のみ取れて登録に繋がらない典型。"
-    },
-    {
-      "date": "2026-09-13n",
-      "target": "data/channels/company-facts.json",
-      "field": "theme_seeds",
-      "before": "26件",
-      "after": "28件（+三菱電機の年収と手当の内訳 / +キーエンス年収2000万の構造）",
-      "reason": "直近30日『年収』含む n=36 subs/1k 0.66 vs 含まない n=5 0.46（1.43倍）。再生上位4本も全て年収系。"
-    },
-    {
-      "date": "2026-09-13n",
-      "target": "(判定のみ)",
-      "field": "genre_blacklist",
-      "before": "-",
-      "after": "追加なし",
-      "reason": "30%ルール再判定。daily-science 平均524→閾値157（最下位の日常の違和感195.6は上回る）、scp-lab 平均495→閾値148（最下位の財団組織・職員236.8は上回る）。該当する宇宙・天体／オブジェクトクラスは登録済み。6日連続で新規なし。"
-    },
-    {
-      "date": "2026-09-13n",
-      "target": "(見送り)",
-      "field": "theme_blacklist（重複由来の追加）",
-      "before": "-",
-      "after": "追加なし",
-      "reason": "本日の類似ペア30件は全て 2026-05〜06 の同日多重アップロードで、うち大半が0再生の死蔵在庫。現行制作物ではないため追加根拠にしない。判定窓を『公開30日以内かつ再生>0』に絞る修正を提案へ回した。"
-    },
-    {
-      "date": "2026-09-13n",
-      "target": "(見送り)",
-      "field": "title_rules.forbid_patterns",
-      "before": "-",
-      "after": "変更なし",
-      "reason": "『連番＋絵文字』型（1分妖怪ファイル #N：🔍…）は subs/1k で scp 0.38x・yokai 0.37x と最悪だが、`#\\d+[：:]` と max_emoji=0 で6ch全てに既にゲートが入っており、実測に残っているのは8月公開の旧在庫のみ。追加対応不要。"
-    },
-    {
-      "date": "2026-09-14n",
-      "target": "data/channels/*.json（全13ch）",
-      "field": "theme_blacklist",
-      "before": "ch毎 0〜21語",
-      "after": "+実在個人名『大谷翔平』『堀大輔』『ヒカキン』・第三者キャラIP『ちいかわ』を全13chへ。加えて実在ブランド『USJ』を company-facts と clip系を除く8chへ（company-facts は企業分析が本業のため除外）",
-      "reason": "google_trends 由来の自動キュー投入が実在個人名をフィクション/解説chへ横展開していた。『大谷翔平』は9ch同時キュー投入（fake-paper では『大谷翔平選手の打撃フォームは宇宙人の影響を受けている？』、yokai-watch では『大谷翔平と妖怪の関係を探る！』）。『堀大輔』は scp-lab で『なぜ堀大輔は72時間眠らないのか？睡眠不足の恐怖』として 09-14 00:00 に実公開済み（実在人物をSCP対象として扱う構成）。名誉毀損・IPリスクの遮断を最優先とした。"
-    },
-    {
-      "date": "2026-09-14n",
-      "target": "data/channels/*.json（8ch）",
-      "field": "autopilot.theme_queue",
-      "before": "clip-animal 14 / clip-fukada 32 / clip-kaneko 38 / clip-lab 33 / fake-paper 9 / scp-lab 19 / socio-rx 14 / yokai-watch 21",
-      "after": "それぞれ 13/30/36/32/3/18/13/20（計15件除去）。除去内訳は _queue_purge_log に記録",
-      "reason": "09-12 の既知不具合『theme_blacklist はキュー補充時に照合されない』が未修正のため、blacklist 追加だけでは既存キューに残る。該当15件を手動除去して実効化。うち6件は fake-paper の既存blacklist（テンプレ定型文）該当で、以前から素通りしていた分。"
-    },
-    {
-      "date": "2026-09-14n",
-      "target": "data/channels/scp-lab.json / daily-science.json",
-      "field": "theme_seeds",
-      "before": "scp-lab 29件 / daily-science 26件",
-      "after": "scp-lab 32件 / daily-science 29件（各+3）",
-      "reason": "09-14 実測（直近公開・再生>0、scp n=48 / ds n=45、指標は subs/1000再生）。scp-lab は疑問形 1.25 vs 断定形 0.68（1.8倍）、トップ変換3本が全て『SCP番号＋単位つき数値＋経過日数＋疑問形』。daily-science はトップ変換2本が『身近な身体感覚＋倍率つき数値』。この型を種に固定。"
-    },
-    {
-      "date": "2026-09-14n",
-      "target": "(見送り)",
-      "field": "genre_blacklist",
-      "before": "-",
-      "after": "追加なし",
-      "reason": "30%ルール再判定。daily-science 全体平均538.6→閾値161.6、該当ジャンルなし。scp-lab 全体平均523.5→閾値157.1、形式上は『オブジェクトクラス』(avg0)のみ該当するが n=2 かつ2本とも0再生の未計測在庫であり、性能ではなくデータ欠損。09-13 に特定済みの『自傷解除の真因＝再生数を根拠にした判断』を繰り返すため見送る。なお同ジャンルは既に genre_blacklist 登録済み。"
-    },
-    {
-      "date": "2026-09-15n",
-      "target": "data/channels/{daily-science,scp-lab,yokai-watch,company-facts,2ch-matome,socio-rx}.json",
-      "field": "theme_blacklist",
-      "before": "久保建英・女性騎手 いずれも6ch全てで未登録",
-      "after": "6ch全てに『久保建英』『女性騎手』を追加",
-      "reason": "09-14 finding(trends-injects-real-people-into-fiction-channels)の残処理。trend_detections に status='blocked' 18件が出現しフィルタ自体は稼働開始したが、既存の queued 281件は再審査されず 久保建英×4・女性騎手×4 が投入可能なまま残っていた。大谷翔平は既に6ch全てでブラックリスト済みだったため追加不要。バックアップ: *.json.bak_pdca_20260915n"
-    },
-    {
-      "date": "2026-09-15n",
-      "target": "data/channels/yokai-watch.json",
-      "field": "theme_seeds",
-      "before": "29件（過半が妖怪ウォッチ作品キャラ）",
-      "after": "34件（古典妖怪・都市伝説系5件を追加: 塗壁／座敷童子／一反木綿／口裂け女／砂かけ婆）",
-      "reason": "実測 subs/1k: 古典妖怪・都市伝説系 0.89(n=26/登録17) vs 作品キャラ系 0.59(n=10/登録4)。平均再生は734 vs 676でほぼ同じ＝再生ではなく登録転換だけが1.5倍開く。seedsの供給が実績と逆方向を向いていたため是正。_theme_seeds_note_20260915n に根拠を記載。"
-    },
-    {
-      "date": "2026-09-15n",
-      "target": "data/channels/company-facts.json",
-      "field": "theme_seeds",
-      "before": "28件",
-      "after": "31件（『実は』型3件を追加: 日本郵政の年収二層／スシローの回転と粗利／商社の手当構造）",
-      "reason": "実測『実は』有 subs/1k=0.92(n=11)・平均再生1478 / 無 0.46(n=28)・1166。当ch唯一、再生と登録が同方向に2倍動く要因。_theme_seeds_note_20260915n に根拠を記載。"
-    },
-    {
-      "date": "2026-09-15n",
-      "target": "(見送り)",
-      "field": "genre_blacklist",
-      "before": "-",
-      "after": "追加なし",
-      "reason": "30%ルール再判定。daily-science 全体平均526.6→閾値158.0、最下位の宇宙・天体(0)と日常の違和感(244.5)は既に登録済み、食・飲296.7は閾値超で対象外。scp-lab 全体平均528.2→閾値158.5、オブジェクトクラス(0)・財団組織・職員(236.8)とも登録済み。対立組織・Kクラスは n=1 で判断不能。yokai/company-facts/2ch-matome はジャンルが『その他』1本化されており分割不能。新規追加なし。"
-    },
-    {
-      "date": "2026-09-15n",
-      "target": "(見送り)",
-      "field": "theme_blacklist（重複テーマ）",
-      "before": "-",
-      "after": "追加なし",
-      "reason": "類似ペア30件(daily-science 15/scp-lab 15)を公開日で全数照合した結果、しゃっくり・横隔膜=06-22〜23、酸素1秒=06-19〜20、SCP-1730=07-11〜19、SCP-173=07-19〜26、図書館=07-11 と全て6〜7月の旧在庫で、直近30日の生成分に重複はゼロ。再生成されていない題材を塞ぐ実益が無い上、『体の不思議』は当ch最大ジャンル(avg545/n=96)であり 09-07 の format-blacklist-killed-best-format と同型の自傷になるため意図的に見送り。"
+ "changes": [
+  {
+   "date": "2026-08-12",
+   "file": "channels/daily-science.json",
+   "action": "theme_blacklist追加",
+   "items": [
+    "酸素が1秒",
+    "ドアが閉まる寸前",
+    "センサーの待機設計",
+    "本を読むと眠くなる",
+    "本だけで眠く"
+   ]
+  },
+  {
+   "date": "2026-08-12",
+   "file": "channels/daily-science.json",
+   "action": "theme_seeds追加(睡眠・夢強化)",
+   "items": [
+    "なぜ二度寝はあんなに気持ちいいのか",
+    "アラームが鳴る直前に自然に目が覚める人の脳で起きていること"
+   ]
+  },
+  {
+   "date": "2026-08-13",
+   "file": "channels/daily-science.json",
+   "action": "theme_seeds追加(体の不思議強化)",
+   "items": [
+    "なぜ鳥肌は寒さだけでなく感動でも立つのか",
+    "正座で足がしびれるのは血ではなく『神経の悲鳴』だった"
+   ]
+  },
+  {
+   "date": "2026-08-13",
+   "file": "channels/scp-lab.json",
+   "action": "theme_seeds追加(記録型オブジェクト強化)",
+   "items": [
+    "SCP-3008「完全に、普通の、古いイケア」",
+    "SCP-087「吹き抜けた階段」"
+   ]
+  },
+  {
+   "date": "2026-08-14",
+   "file": "channels/daily-science.json",
+   "action": "theme_blacklist追加（表記ゆれ対策）",
+   "items": [
+    "待機設計",
+    "ドアが閉ま",
+    "酸素が消え"
+   ]
+  },
+  {
+   "date": "2026-08-14",
+   "file": "channels/scp-lab.json",
+   "action": "theme_seeds追加（宇宙・歴史スケール記録型強化）",
+   "items": [
+    "SCP-2317「異世界への扉」",
+    "SCP-2935「ああ、死よ、汝はいずこに」"
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "file": "channels/daily-science.json",
+   "action": "theme_priority再編（睡眠偏重の是正）",
+   "items": [
+    "【最優先】感覚・反射の科学 を新設(毎バッチ最低1件)",
+    "睡眠・夢 を毎バッチ最大1件に制限",
+    "体の不思議 を毎バッチ最低2件に増加"
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "file": "channels/daily-science.json",
+   "action": "theme_seeds追加（感覚・反射系）",
+   "items": [
+    "なぜ冷たい物を一気に食べると『こめかみ』が痛くなるのか",
+    "なぜ耳が詰まった感じはあくびで一瞬で治るのか",
+    "なぜ目にゴミが入っていないのに涙が出るのか"
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "file": "channels/daily-science.json",
+   "action": "theme_blacklist追加（直近最下位293回）",
+   "items": [
+    "口の乾き"
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "file": "channels/2ch-matome.json",
+   "action": "theme_seeds追加（軽い下ネタ・エロ面白系／いいね率最高枠の増強）",
+   "items": [
+    "彼女にバレたら終わる物あげてけw",
+    "風呂上がりのワイを見た彼女の反応がヤバい",
+    "合コンで一番言ったらアカン一言あげてけ",
+    "ワイの検索履歴、当ててみてくれw"
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "file": "channels/pokemon-lab.json",
+   "action": "theme_priority再編（対決・比較系を【最優先】へ昇格・毎バッチ最低2件／ランキング系は通常枠へ）",
+   "items": [
+    "対決・比較系=【最優先】/最低2件",
+    "ランキング系=通常枠"
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "file": "channels/pokemon-lab.json",
+   "action": "theme_seeds追加（対決型）",
+   "items": [
+    "ガブリアスとギャラドス、どっちが勝つ？",
+    "ミュウツーとアルセウス、どっちが勝つ？",
+    "バンギラスとメタグロス、どっちが勝つ？",
+    "リザードンとカイリュー、どっちが勝つ？"
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "file": "channels/yokai-watch.json",
+   "action": "theme_priority再編（伝承妖怪の原典を【最優先】/最低2件・作品キャラを最大1件に抑制）",
+   "items": [
+    "伝承妖怪原典=【最優先】/最低2件",
+    "個別妖怪ファイル(作品キャラ)=最大1件/バッチ"
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "file": "channels/yokai-watch.json",
+   "action": "theme_seeds追加（『元ネタが怖すぎる』型）",
+   "items": [
+    "座敷童子の元ネタが怖すぎる — 家を出ていった後に何が起きるのか",
+    "海坊主の正体が怖すぎる — 船を沈める影は何だったのか",
+    "ぬらりひょんの正体が怖すぎる — 勝手に家に上がり込む理由",
+    "口裂け女の元ネタが怖すぎる — 昭和の噂はどこから来たのか"
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "file": "launchd: com.youtube-factory.backend",
+   "action": "backend再起動（08-13起動のstaleプロセスを更新し、上記の設定変更をメモリに反映）",
+   "items": [
+    "launchctl kickstart -k",
+    "Autopilot restored: 7/8 channels",
+    "2ch-matome 次回 2026-08-15 21:00 JST"
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "file": "channels/pokemon-lab.json",
+   "action": "theme_blacklist追加（08-14既報の完全同一タイトル対策・未対応だったもの）",
+   "items": [
+    "レックウザの誕生"
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "file": "channels/yokai-watch.json",
+   "action": "theme_blacklist追加（完全同一タイトル『なぜ妖怪ウォッチだけ？主人公の秘密』2本検出）",
+   "items": [
+    "主人公の秘密"
+   ]
+  },
+  {
+   "date": "2026-08-16",
+   "file": "（変更なし）",
+   "action": "設定変更を見送り",
+   "items": [
+    "全chでanalytics取得不可＋公開データも取得不可のため、新規の再生実績が無く blacklist/seeds 変更の根拠なし。08-15の是正（睡眠制限・対決型昇格・伝承優先）の効果測定はデータ復旧後に持ち越し"
+   ]
+  },
+  {
+   "date": "2026-08-17",
+   "file": "channels/daily-science.json",
+   "action": "theme_blacklist追加（本・眠気系の表記ゆれ封鎖）",
+   "items": [
+    "本を開いた",
+    "本を読むと"
+   ]
+  },
+  {
+   "date": "2026-08-17",
+   "file": "channels/scp-lab.json",
+   "action": "theme_seeds追加（終末記録型強化・SCP-7004初動2226/日を受けて）",
+   "items": [
+    "SCP-3000「アナンタシェーシャ」",
+    "SCP-1281「先駆者」"
+   ]
+  },
+  {
+   "date": "2026-08-17",
+   "file": "channels/2ch-matome.json",
+   "action": "theme_seeds追加（質問ある？×彼女自虐＝ch最速初動820/日の型を増強）",
+   "items": [
+    "ワイ、マッチングアプリ100連敗やけど質問ある？",
+    "ワイ、30歳で人生初彼女できたけど質問ある？"
+   ]
+  },
+  {
+   "date": "2026-08-18",
+   "file": "channels/daily-science.json",
+   "action": "theme_seeds追加（感覚・反射系の弾補充。登録6日横ばいの打開に体感再現型フックを増強）",
+   "items": [
+    "なぜ高い所に立つと足の裏がゾワッとするのか",
+    "なぜエレベーターが下がる瞬間、体がフワッと浮く感じがするのか"
+   ]
+  },
+  {
+   "date": "2026-08-18",
+   "file": "channels/scp-lab.json",
+   "action": "theme_seeds追加（宇宙・終末記録型の継続強化。SCP-1690/2399の安定1000超えを受けて）",
+   "items": [
+    "SCP-1958「小さな旅」",
+    "SCP-3519「静かな日々」"
+   ]
+  },
+  {
+   "date": "2026-08-19",
+   "file": "pipeline/hashtag_optimizer.py",
+   "action": "新規モジュール作成: 動的ハッシュタグ最適化エンジン",
+   "items": [
+    "チャンネルコアタグ(1-2個)を先頭固定",
+    "タイトルキーワードから動的タグ抽出",
+    "トレンドキーワード一致でトレンドタグ注入",
+    "合計3-5個に制限（YouTube先頭3個表示ルール準拠）",
+    "video_generator._build_description_templateに統合済み"
+   ]
+  },
+  {
+   "date": "2026-08-19",
+   "file": "pipeline/auto_scenario/theme_queue.py",
+   "action": "トレンドテーマ優先キュー機能追加",
+   "items": [
+    "prioritize_trending()メソッド追加: is_trending=Trueをtrend_score降順でキュー先頭に移動",
+    "replenish()完了時に自動で優先順位ソート実行",
+    "従来のFIFO消費からトレンド優先消費に変更"
+   ]
+  },
+  {
+   "date": "2026-08-19",
+   "file": "pipeline/auto_scenario/generator.py",
+   "action": "ループ最適化ルール強化 + トレンド最適化プロンプト注入",
+   "items": [
+    "_LOOP_RULE_SHORT: シームレスループテクニック追加（末尾→冒頭の音声接続）",
+    "_LOOP_RULE_SHORT: 2周目の気づき設計（ダブルミーニング）追加",
+    "_LOOP_RULE_SHORT: ループ切断フレーズ禁止リスト追加",
+    "generate(): is_trending=Trueのテーマにトレンド最適化addendum注入",
+    "タイトル・サムネにトレンドワードを織り込む指示"
+   ]
+  },
+  {
+   "date": "2026-08-19",
+   "file": "pipeline/auto_comment.py",
+   "action": "チャンネル別エンゲージメント質問テンプレート追加",
+   "items": [
+    "CHANNEL_QUESTIONS: 7チャンネル分の具体的な質問プール（各2-3種）",
+    "投稿ごとにランダム選択で質問のバリエーションを出す",
+    "2ch-matome: スレッド参加型の口調に最適化",
+    "scp-lab: SCP番号リクエスト誘導型に最適化"
+   ]
+  },
+  {
+   "date": "2026-08-19",
+   "file": "pipeline/shorts_length_guard.py",
+   "action": "新規モジュール作成: ショート動画の完視聴率最適化ガード",
+   "items": [
+    "チャンネル別の最適尺範囲を定義（例: daily-science 30-50秒、scp-lab 35-55秒）",
+    "シナリオの文字数から推定再生時間・推定完視聴率を算出",
+    "範囲外の場合に警告と修正ヒントを出力",
+    "video_generator.generate_all()の短動画生成前に組み込み済み"
+   ]
+  },
+  {
+   "date": "2026-08-19",
+   "file": "data/channels/*.json (全7チャンネル)",
+   "action": "チャンネル設定改善",
+   "items": [
+    "short_title_hashtags追加: daily-science, scp-lab, pokemon-lab, yokai-watch, akashic-librarian（既存の2ch-matome, company-facts, clip-labは設定済み）",
+    "auto_optimize_schedule: true を全7チャンネルのautopilotに追加（投稿時間帯の自動最適化を有効化）"
+   ]
+  },
+  {
+   "date": "2026-08-19",
+   "file": "（変更なし・夜間PDCA分）",
+   "action": "blacklist/seeds変更を見送り",
+   "items": [
+    "本日23:00のPDCA未実行＋analytics最終同期08-18 23:04のため新規の再生実績なし。08-18データは前日の実行で分析・対応済みで、根拠のない設定変更はしない"
+   ]
+  },
+  {
+   "date": "2026-08-20",
+   "file": "data/channels/daily-science.json",
+   "action": "theme_blacklist追加（維持率下位クラスタの封鎖）",
+   "items": [
+    "金縛り（実測維持率34.5%/35.1%＝ch最下位級。再生は991/1040と高いが見られていない）",
+    "蛍光灯（33.0%）",
+    "あくびがうつる（29.2%＝全ch最低）",
+    "あくびが「うつる」（表記ゆれ対策）"
+   ]
+  },
+  {
+   "date": "2026-08-20",
+   "file": "data/channels/daily-science.json",
+   "action": "theme_priority.good_examples 差し替え（生成プロンプトが低維持率テーマを推奨していた問題の是正）",
+   "items": [
+    "削除: 『なぜ金縛りは いつも同じ時間帯 に起きるのか』",
+    "削除: 『本を読むと必ず眠くなる…』（blacklist済みなのに見本に残存）",
+    "追加: くしゃみの瞬間、目の前が光る（維持率118.9%）",
+    "追加: 食後の眠気・脳血流30%減（維持率120.9%）"
+   ]
+  },
+  {
+   "date": "2026-08-20",
+   "file": "data/channels/daily-science.json",
+   "action": "theme_seeds 整理（体験再現型＝高維持率パターンへ寄せる）",
+   "items": [
+    "削除: 金縛りシード1件",
+    "追加: なぜ立ち上がった0.5秒後だけ目の前が暗くなるのか",
+    "追加: なぜ足がつる瞬間だけ、自分の意思で止められないのか"
+   ]
+  },
+  {
+   "date": "2026-08-20",
+   "file": "data/channels/daily-science/theme_queue.json",
+   "action": "キュー浄化（18→12件）",
+   "items": [
+    "blacklist該当4件を除去: しゃっくり/横隔膜・蛍光灯・ドアが閉まる直前・本を読むと眠くなる",
+    "近似重複2件を除去: 『耳に水が入ったときの不快感』(『耳に水で音がこもる』と重複)・『紙で手を切るとあんなに痛い』(『紙に指を切られるとジンジン』と重複)",
+    "last_purged_at を記録"
+   ]
+  },
+  {
+   "date": "2026-08-20",
+   "file": "data/channels/scp-lab.json",
+   "action": "theme_blacklist追加（クロスch題材衝突の防止）",
+   "items": [
+    "かまいたち（08-20に yokai-watch と同日で同題材を投稿。妖怪伝承はyokai-watch側に一本化）"
+   ]
+  },
+  {
+   "date": "2026-08-20",
+   "file": "data/channels/scp-lab.json",
+   "action": "theme_seeds追加（維持率86.7%＝ch最高のSCP-1690型を増強）",
+   "items": [
+    "SCP-2306「実在しない部屋」— 図面に無い1室、調査員4名の記録だけが残った",
+    "SCP-2662「アシュカバードの記録」— 交信断絶から41年、返ってきた信号は1本だけだった"
+   ]
+  },
+  {
+   "date": "2026-08-20",
+   "file": "（変更なし）",
+   "action": "genre_blacklist の30%ルール判定＝該当なし",
+   "items": [
+    "daily-science 全体平均640.7 / 30%閾値192.2 → 最下位『日常の違和感』195.6は既にblacklist済み、次点『食・飲』532.0(83%)で対象外",
+    "scp-lab 全体平均548.3 / 閾値164.5 → 最下位『対立組織・Kクラス』308.0(56%)で対象外",
+    "他4chはジャンルが『その他』1本のみで判定不能"
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "file": "data/channels/daily-science.json",
+   "action": "theme_blacklist追加（維持率41%未満かつ登録獲得0の実測クラスタを封鎖）",
+   "items": [
+    "睡眠の深さ / 浅い眠り（40.6%・1279再生・登録0）",
+    "炭酸（35.3%・1102再生・登録0）",
+    "体が緩む（39.4%・879再生・登録0）",
+    "成長ホルモン / 寝ている間だけ分泌（36.6%・800再生・登録0）",
+    "耳が詰ま（36.5%・779再生・登録0）",
+    "※『名前だけ出てこない』は維持36.8%と低いが登録/1k=2.44と高いため除外した"
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "file": "data/channels/daily-science.json",
+   "action": "theme_seeds整合（15→14件）",
+   "items": [
+    "除去: 『なぜ耳が詰まった感じはあくびで一瞬で治るのか』（同日追加のblacklist『耳が詰ま』に該当）"
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "file": "data/channels/scp-lab.json",
+   "action": "theme_blacklist追加",
+   "items": [
+    "悪夢の回路 / 電子工作（維持32.8%＝ch最低・711再生・登録0）"
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "file": "data/channels/scp-lab.json",
+   "action": "theme_seeds 既出重複の一括除去＋高転換型の補充（29→16件）",
+   "items": [
+    "除去(投稿済みSCP番号と重複した15件): SCP-2662(08-20に自分が追加した分) / 5000 / 2000 / 3125 / 2521 / 049 / 096 / 682 / 999 / 914 / 1471 / 3999 / 426 / 2317 / 3000",
+    "autopilot.theme_queue からも既出番号6件を除去（15→9件）: SCP-914 / 1471 / 3999 / 426 / 2317 / 3000",
+    "追加: SCP-093「赤海洋物体」— 調査員6名・戻った映像（既出でないことをanalytics.dbで確認済み）",
+    "追加: SCP-2480「未完の儀式」— 収容不能・記録9名分（同上）",
+    "根拠: 維持50-70%帯の登録/1k=1.15がch内最高、70%+帯は0.29"
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "file": "data/channels/yokai-watch.json",
+   "action": "theme_blacklist追加",
+   "items": [
+    "鬼の元ネタ / 鬼門（2339再生＝ch1位だが維持34.3%でch最低・登録0）",
+    "河童（1691再生・維持38.7%・登録0）"
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "file": "data/channels/yokai-watch.json",
+   "action": "autopilot.theme_queue から自動投入された続編2件を除去（13→11件）",
+   "items": [
+    "除去: 『なぜ「鬼の元ネタが怖すぎる…」はこうなるのか？徹底深堀り』(id 0e5ca277)",
+    "除去: 『「鬼の元ネタが怖すぎる…」とは逆のパターンを比較してみた』(id 35a4b840)",
+    "理由: Actが再生数のみで続編を承認しており、元動画は維持率ch最低・登録0"
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "file": "data/channels/yokai-watch.json",
+   "action": "theme_seeds追加（維持50-70%帯＝登録/1k 0.44 のch最高帯を増強）",
+   "items": [
+    "座敷童子の正体 — なぜ『去った家』の話ばかり残るのか（花子さん型 維持65.1%・登録2 を踏襲）",
+    "口裂け女はなぜ1979年に日本中へ広がったのか（都市伝説型 維持66.1%・登録2 を踏襲）"
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "file": "data/channels/pokemon-lab.json",
+   "action": "theme_blacklist追加",
+   "items": [
+    "ヤドンの尻尾（『なぜヤドンはシェルダーに噛まれると進化するのか』と題材重複・類似度0.68）"
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "file": "（変更なし）",
+   "action": "genre_blacklist の30%ルール判定＝該当なし",
+   "items": [
+    "daily-science 全体平均637.7 / 閾値191.3 → 該当の宇宙・天体(0.0)と日常の違和感(195.6)は既にblacklist済み、次点 食・飲545.9(86%)",
+    "scp-lab 全体平均544.3 / 閾値163.3 → オブジェクトクラス(0.0)・財団組織(364.4)は既にblacklist済み、次点 その他323.1(59%)",
+    "pokemon-lab / yokai-watch / 2ch-matome はジャンルが『その他』1件のみで判定不能（ジャンル分類器が未対応）"
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "file": "（バックアップ）",
+   "action": "変更前ファイルを保全",
+   "items": [
+    "data/channels/{daily-science,scp-lab,yokai-watch,pokemon-lab}.json.bak_pdca_20260821",
+    "data/pdca-memory/*.json.bak_20260821"
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "file": "data/channels/daily-science.json",
+   "action": "theme_priority.good_examples の整合（blacklist該当の見本を除去）",
+   "items": [
+    "除去: 『自分の声が録音だと変に聞こえる本当の理由 — 骨伝導の謎』（blacklist『骨伝導』に該当し、生成後に必ずrejectされる無駄が発生していた）"
+   ]
+  },
+  {
+   "date": "2026-08-22",
+   "file": "data/channels/pokemon-lab.json",
+   "action": "theme_blacklist追加（登録転換1/5の対決フォーマットを封鎖）",
+   "items": [
+    "どっちが勝つ",
+    "どっちが上か",
+    "対決",
+    "根拠: 対決型6本の登録/1k=0.85 に対し非対決19本=4.37(5.1倍)、維持34.2% vs 55.5%。CTRと再生数は対決型が上だが登録に繋がっていない"
+   ]
+  },
+  {
+   "date": "2026-08-22",
+   "file": "data/channels/pokemon-lab.json",
+   "action": "theme_seeds からblacklist該当を除去（19→15件）",
+   "items": [
+    "除去: ガブリアスとギャラドス/ミュウツーとアルセウス/バンギラスとメタグロス/リザードンとカイリュー の『どっちが勝つ？』4件（08-21に指摘した good_examples/seeds と blacklist の不整合の再発防止）"
+   ]
+  },
+  {
+   "date": "2026-08-22",
+   "file": "data/channels/pokemon-lab.json",
+   "action": "autopilot.theme_queue のフォーマット偏り是正（15→13件・対決型13→5件）",
+   "items": [
+    "除去した対決型8件: ヒードランとウーラオス/ジャローダとフシギバナ/ラプラスとミロカロス/ハッサムとルカリオ/ザシアンとザマゼンタ/ドリュウズとランドロス/フーディンとサーナイト以外で/ヨノワールとサマヨール",
+    "追加した単体考察型6件: ミュウツーの誕生秘話—研究日誌 / なぜイーブイだけ8種類 / ラプラスの図鑑説明に隠された悲しい設定 / 悪の組織はなぜ毎回ポケモンを狙うのか / ポケモンの世界に人間の食文化はあるのか / 種族値って結局なに？",
+    "理由: キュー15件が15件とも対決型で、15日先まで低転換フォーマットが確定していた。全廃はキュー枯渇を招くため上限5件に制限"
+   ]
+  },
+  {
+   "date": "2026-08-22",
+   "file": "data/channels/yokai-watch.json",
+   "action": "theme_seeds追加（登録/1k 8.43＝ch最高の作品題材を増強 / 21→23件）",
+   "items": [
+    "妖怪ウォッチのランクS、なぜ最強じゃない妖怪にも付くのか（ch最高インプレッション動画 imp802・CTR2.37%の続き筋）",
+    "ウィスパーはなぜ図鑑を持っているのに何も知らないのか",
+    "根拠: 作品名を含む5本が 登録/1k 8.43 vs 1.85・維持53.3 vs 42.1%・CTR2.16 vs 1.52% で全指標最高"
+   ]
+  },
+  {
+   "date": "2026-08-22",
+   "file": "（変更なし）",
+   "action": "genre_blacklist の30%ルール判定＝新規該当なし",
+   "items": [
+    "daily-science 全体平均635.0 / 閾値190.5 → 該当の宇宙・天体(0.0)は既にblacklist済み、日常の違和感195.6は閾値超で対象外だが既済、次点 その他463.3(73%)",
+    "scp-lab 全体平均528.2 / 閾値158.5 → 該当のオブジェクトクラス(0.0)は既済、次点 対立組織・Kクラス312.0(59%)",
+    "pokemon-lab / yokai-watch / 2ch-matome / fake-paper はジャンルが『その他』1件のみで判定不能"
+   ]
+  },
+  {
+   "date": "2026-08-22",
+   "file": "（バックアップ）",
+   "action": "変更前ファイルを保全",
+   "items": [
+    "data/channels/{pokemon-lab,yokai-watch}.json.bak_pdca_20260822b（朝の指揮者実行分の .bak_pdca_20260822 とは別）",
+    "data/pdca-memory/*.json.bak_20260822"
+   ]
+  },
+  {
+   "date": "2026-08-22",
+   "file": "data/channels/{yokai-watch,pokemon-lab}.json",
+   "action": "blacklist整合スキャン（seeds/queue/good_examples の一括走査）を実行し3件除去",
+   "items": [
+    "yokai-watch queue: 『「鬼の元ネタが怖すぎる」の知識を日常で使う方法』を除去。blacklist『鬼の元ネタ』該当。08-21に同じ元動画の続編2件を除去したのに、08-22のActが再び同じ続編を投入＝3日連続の再発",
+    "pokemon-lab queue: 『エースバーンとゴウカザル、炎の速攻役はどっちが上か』を除去（本日追加の blacklist『どっちが上か』に該当）",
+    "pokemon-lab theme_priority.good_examples: 『ミュウツーとレックウザ、まともに戦わせたらどっちが勝つのか』を除去（blacklist『どっちが勝つ』該当。禁止フォーマットを手本として提示していた）",
+    "scp-lab / daily-science / 2ch-matome / fake-paper は整合OK"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "data/channels{,_orchestrator}/{scp-lab,yokai-watch,daily-science,pokemon-lab}.json",
+   "action": "タイトル規則を voice_style.style_rules から theme_priority.title_style / good_examples へ移設（根本原因対応）",
+   "items": [
+    "生成プロンプトが style_rules を読まない実装のため、前日までのタイトル施策は全て無効だった",
+    "4ch の title_style を全面改訂し、good_examples も新規則に沿って全件差し替え",
+    "viral_hooks の1文字分解破損を4chとも修復"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "data/channels/{scp-lab,yokai-watch,pokemon-lab}/theme_queue.json",
+   "action": "既存キュー40件のタイトルを新規則に沿って全件書き直し",
+   "items": [
+    "scp-lab 23件・yokai-watch 6件→10件（補充4件）・pokemon-lab 7件",
+    "初回の機械置換で破綻日本語・数字捏造・固有名欠落が発生したため、バックアップから復元して1件ずつ書き直した",
+    "最終状態でルール適合／捏造数字なし／固有名あり／キュー内重複なし／good_examplesとの重複なしを機械検証済み"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "data/channels{,_orchestrator}/scp-lab.json",
+   "action": "全角ダッシュ「—」規則を中立化（前日の『必ず維持』と本日の『使用禁止』を両方撤回）",
+   "items": [
+    "直近60日コホートで CTR 0.97倍（95%CI 0.81-1.16）、1本あたり登録者0.74倍（95%CI 0.47-1.18）＝有意差なし",
+    "「怖」「恐」は1本あたり登録者1.51倍のため推奨に格下げして維持（CTR単体では非有意）",
+    "数字の付与を『原典に実在する場合のみ・創作禁止』に変更"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "data/channels{,_orchestrator}/yokai-watch.json",
+   "action": "作品ネタ最優先へ変更、「怖」優先を撤回、尺を短縮",
+   "items": [
+    "⓪最優先: 妖怪ウォッチ作品ネタ（1本あたり登録者2.45倍・登録/1k 2.9倍・CTR 1.33倍）",
+    "「怖」優先を撤回（登録者0.75倍）、「なぜ」禁止も解除（1.12倍で中立）",
+    "「秘密」「隠」「本当」「実は」のいずれかを必須化",
+    "short_format 320-390字 → 270-310字（前日の延長を部分撤回。330字は line_chars から到達不能だったため310に）"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "data/channels{,_orchestrator}/daily-science.json",
+   "action": "「なぜ」抑制と「99%が知らない」禁止を両方撤回",
+   "items": [
+    "「なぜ」始まり: 1本あたり登録者1.58倍（ただし同コホートのCTRは0.53倍で符号が食い違う）",
+    "「99%が知らない」: 1本あたり登録者1.57倍・登録/1k 1.62倍・CTR 1.20倍と3指標で正のため禁止解除",
+    "疑問符「？」を必須化（2.16倍）、「本当」「実は」は禁止（0.70倍）"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "data/channels{,_orchestrator}/pokemon-lab.json",
+   "action": "「秘密」「隠」型を毎バッチ1本必須化、対決型を1本までに制限",
+   "items": [
+    "秘密/隠: 1本あたり登録者3.17倍（95%CI 1.02-9.82）だがA群n=6・寄与が1本に集中する弱い証拠",
+    "対決型: 1本あたり登録者0.63倍。個別CTRは高いが群比較では1.35倍（95%CI 0.69-2.64）で非有意"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "data/channels{,_orchestrator}/clip-lab.json",
+   "action": "autopilot を停止（enabled: true → false）",
+   "items": [
+    "運用方針で凍結中なのに平日2枠＋休日2枠がスケジュールされ空回りしていた"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "backend/pipeline/auto_scenario/generator.py",
+   "action": "テーマ補充プロンプトの続編タイトル例からダッシュ「—」を除去（2871行付近）",
+   "items": [
+    "プロンプト文字列のみの変更でロジックは非改変。py_compile 済み"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "reports/youtube_analysis_20260823.xlsx",
+   "action": "日次分析レポートを出力（5シート・数式30件エラー0）",
+   "items": [
+    "サマリー / チャンネル別詳細 / 動画別パフォーマンス / 改善アクション(23件) / トレンド"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "data/channels{,_orchestrator}/{scp-lab,yokai-watch,pokemon-lab}.json",
+   "action": "autopilot.theme_queue（定時投稿が実際に消費する方）を精査済みキューで置き換え",
+   "items": [
+    "scp-lab 7件→23件（旧7件は全件が「怖/恐」なし）",
+    "yokai-watch 10件→10件（旧10件は全件ダッシュ使用・全件が伝承単体で作品ネタゼロ）",
+    "pokemon-lab 12件→7件（旧12件中5件が対決型＝登録0.63倍の低転換フォーマット）",
+    "theme_queue.json 側と内容を一致させた。daily-science は両系統とも新ルール適合のため変更なし（ただし中身は不一致のまま）"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "backend/pipeline/video_generator.py",
+   "action": "generate_short_thumbnail をチャンネル対応に改修（サムネ最優先項目の本丸）",
+   "items": [
+    "引数に channel_dict / char_config を追加し、呼び出し側（yukkuri dialogue 経路）から渡すよう変更。未指定時は従来の見た目のまま＝後方互換",
+    "thumbnail_template の badge_text / badge_color / hook_color / subtitle_color / short_bg_gradient を反映",
+    "キャラ立ち絵を char_config 由来のディレクトリから解決（従来は riko/makoto 固定）",
+    "素材アスペクト比の違いで2体が重なる不具合を修正（幅0.48W×高0.34SH に内接スケール）",
+    "アルファ閾値40で余白crop（riko/makoto は薄いアルファで getbbox が効かなかった）",
+    "中身の無い点線円を削除（08-20指摘）、フォント拡大 title 80→100 / sub 44→56 / badge 30→38 / tagline 28→52（08-22『最下部の小文字が読めない』対策）",
+    "Linux 用フォント候補に opentype/noto の CJK を追加",
+    "検証: 4ch分＋引数なしの後方互換ケースを実描画し目視確認（system-font経路・fallback経路の両方）"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "data/channels{,_orchestrator}/{scp-lab,yokai-watch,pokemon-lab,daily-science}.json",
+   "action": "thumbnail_template.short_bg_gradient を追加（縦サムネの配色をチャンネル別に）",
+   "items": [
+    "scp-lab 黒〜暗赤 / yokai-watch 紫〜宵闇＋橙アクセント / pokemon-lab 青空系 / daily-science 従来の紫を明示",
+    "バックアップ: *.json.bak_thumb_20260823"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "backend/pipeline/auto_scenario/theme_dedup.py",
+   "action": "重複判定の偽陽性を修正（_BOILERPLATE_TOKENS 拡張）",
+   "items": [
+    "「ショート」等の全動画共通の定型語が話題語として重み9で効き、無関係な2本が0.76に達していた",
+    "追加: ショート/shorts/short/ゆっくり/解説/考察/研究/一口/分科学/ファイル/まとめ",
+    "検証: 既知の偽陽性3件が0.76→0.22-0.30（閾値0.62未満）、真の重複3件は0.75-1.00を維持。test_config_validation 17件 OK"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "backend/pipeline/analytics/series_engine.py",
+   "action": "Act続編タイトルのぶつ切りを修正（_core_topic を新設）",
+   "items": [
+    "【ショート】・ハッシュタグ・シリーズ接頭辞を除去し、区切り記号の位置で自然に切る",
+    "deep_dive の定型文を『〜はこうなるのか？徹底深堀り』→『〜に隠された本当の理由を掘り下げる』に変更",
+    "py_compile 済み・4パターンで出力確認"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "data/channels/{yokai-watch,2ch-matome}.json",
+   "action": "Actが本日投入した破綻タイトル4件を autopilot.theme_queue から除去",
+   "items": [
+    "yokai-watch 2件（のっぺらぼう続編。伝承単体で⓪最優先の作品ネタに反する）",
+    "2ch-matome 2件（PCパーツ続編。タイトルに【ショート】が埋め込まれていた）",
+    "yokai 11→9件 / 2ch 20→18件"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "data/channels{,_orchestrator}/daily-science.json",
+   "action": "theme_blacklist に『毎晩3時』を追加（同一動画の二重投稿）",
+   "items": [
+    "『なぜ毎晩3時に目が覚める？体内時計が仕掛ける意外な罠』が【ショート】有無の2本で公開されていた",
+    "重複判定の修正後スキャンで検出された唯一の真の重複"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "（変更なし）",
+   "action": "genre_blacklist の30%ルール判定＝新規該当なし",
+   "items": [
+    "daily-science 平均626.6/閾値188.0 → 宇宙・天体(0.0)のみ該当だが既済",
+    "scp-lab 平均516.2/閾値154.8 → オブジェクトクラス(0.0)のみ該当だが既済",
+    "pokemon-lab / yokai-watch / 2ch-matome / fake-paper はジャンルが『その他』単一で対象外"
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "file": "（検査のみ）",
+   "action": "blacklist整合スキャン＝全5ch違反0件",
+   "items": [
+    "seeds / autopilot.theme_queue / good_examples を走査。08-21〜22に3日連続で出ていた再混入は本日は発生せず"
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "file": "data/channels{,_orchestrator}/{daily-science,scp-lab,yokai-watch,pokemon-lab}.json",
+   "action": "台本8行目CTAを高評価優先に書き換え",
+   "items": [
+    "従来はどのchも『チャンネル登録』しか求めておらず『高評価』の語が1文字も無かった",
+    "extra_rules 先頭に『8行目には必ず高評価を入れ、登録より先に置く』を根拠(2.16倍)付きで追加",
+    "バックアップ *.bak_like_20260824"
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "file": "data/channels{,_orchestrator}/2ch-matome.json",
+   "action": "8行目CTAを新設",
+   "items": [
+    "structure に8行目が存在しなかった(1,2,3〜7行目のみ)",
+    "登録/1000再生0.21・高評価率0.221%で全ch最低。一方コメント率0.207は全ch最高で参加性はある",
+    "文言=『共感したやつは高評価だけ置いてけw お前らの答えはコメントで待っとるで』"
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "file": "data/channels{,_orchestrator}/daily-science.json",
+   "action": "total_chars_min 240→260 に復帰",
+   "items": [
+    "08-23に維持率改善目的で短縮したが、維持率は登録(1.14倍)にもリーチ(四分位平坦)にも効かないと判明し根拠が消滅",
+    "08-23から赤だった test_short_channels_target_the_sweet_spot が緑に戻った",
+    "length_rationale を実測根拠に差し替え"
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "file": "data/channels{,_orchestrator}/{pokemon-lab,yokai-watch,daily-science}.json",
+   "action": "テーマキューを実測上位パターンで計7件補充",
+   "items": [
+    "pokemon-lab=対決型3件(実測最強: バンギラスvsメタグロス1971再生 / リザードンvsカイリュー維持70.9%)",
+    "yokai-watch=「隠された」+具体数字2件(この型は登録/1000再生0.70 対 0.41)",
+    "daily-science=数字フック2件"
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "file": "reports/youtube_analysis_20260824.xlsx",
+   "action": "5シート分析レポート出力",
+   "items": [
+    "サマリー/チャンネル別詳細/動画別パフォーマンス/改善アクション/トレンド",
+    "集計は全てSUMIFS等の式で動画別シートを参照。660式エラー0",
+    "動画別314行の式結果をPythonで独立再計算して照合、不一致0件"
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "file": "（未実施・要手動）",
+   "action": "バックエンド再起動が必要",
+   "items": [
+    "ChannelManagerは起動時読み込みのため、本日の変更は再起動まで反映されない",
+    "restart_backend.command を実行。次回autopilot発火は17:00 JST"
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "file": "assets/characters/{goro,hikari,kenta,minamo,misaki,sora,takumi,yui}/*.png (32ファイル)",
+   "action": "AI生成立ち絵の輪郭外ハローを除去（サムネ最優先項目）",
+   "items": [
+    "外周から alpha<200 を4近傍で塗りつぶし、キャラ内部のアンチエイリアスは保持",
+    "1ファイルあたり約2,772〜10,057px を透明化",
+    "バックアップ: assets/characters/_backup_20260824/",
+    "再レンダリングで yokai-watch のケンタ周囲の四角い箱が消えることを目視確認済み",
+    "副次効果としてキャラ描画サイズが拡大（bbox が正しく縮んだため）"
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "file": "backend/pipeline/youtube_oauth.py",
+   "action": "OAuth 失敗理由をログに出すよう修正（診断不能の解消）",
+   "items": [
+    "get_credentials_for(): creds.refresh() の except Exception を握り潰しから print 付きへ",
+    "load_credentials_dict_for(): 復号/JSON 失敗も同様に print",
+    "ロジックは非改変（どちらも従来通り None を返す）。py_compile 済み"
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "file": "data/channels{,_orchestrator}/{daily-science,yokai-watch,pokemon-lab}.json",
+   "action": "theme_blacklist に重複テーマ9語を追加",
+   "items": [
+    "daily-science: 42度 / ブルーライト / シャワーカーテン / 3割増し / 悲しい曲（いずれも類似度1.00で二重公開済み）",
+    "yokai-watch: 名前がダジャレ / ダジャレ（類似0.82）",
+    "pokemon-lab: 図鑑の説明文 / 図鑑の説明（類似0.74）",
+    "バックアップ: 各 *.json.bak_20260824pdca"
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "file": "（変更なし）",
+   "action": "genre_blacklist の30%ルール＝新規該当なし",
+   "items": [
+    "daily-science 閾値188.0 → 宇宙・天体(0.0)のみ該当だが既済",
+    "scp-lab 閾値154.8 → オブジェクトクラス(0.0)のみ該当だが既済",
+    "pokemon-lab / yokai-watch / 2ch-matome は該当0件",
+    "ただし元データが08-23のcarry-overのため判定は実質前日の再実行"
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "file": "（未実施・要手動）",
+   "action": "バックエンド再起動と未公開2本の手動投稿が必要",
+   "items": [
+    "scp-lab『太陽系の番人SCP-179が沈黙を恐れる理由』と yokai-watch『1分妖怪ファイル #12 両面宿儺』が未投稿のまま ~/Desktop/動画出力用/ に残っている",
+    "本日の立ち絵・blacklist 変更を反映するには restart_backend.command が必要"
+   ]
+  },
+  {
+   "date": "2026-08-25",
+   "id": "ds-blacklist-quote-variant-fix",
+   "target": "data/channels/daily-science.json + data/channels_orchestrator/daily-science.json",
+   "change": "theme_blacklist 38→41。『あくびがうつる』『あくびが「うつる」』を削除し『あくび』に統合（括弧の表記ゆれで素通りしていたため）。新規追加: あくび / 指を鳴ら / 指パキ / 笑うだけで / 免疫力",
+   "reason": "08-25 dup_check の未カバー重複3件（あくび1.000・指を鳴らす0.969・笑うと免疫0.967）を塞ぐ。既存キーは修飾込みで登録されており部分一致しなかった",
+   "backup": "*.bak_pdca_20260825"
+  },
+  {
+   "date": "2026-08-25",
+   "id": "orchestrator-blacklist-drift-resync",
+   "target": "data/channels_orchestrator/{daily-science,scp-lab,pokemon-lab,yokai-watch}.json",
+   "change": "theme_blacklist を data/channels/ 側と同期。daily-science 27→41 / scp-lab 6→9 / pokemon-lab 3→7 / yokai-watch 3→6",
+   "reason": "08-23 の blacklist-drift-between-config-dirs が未解消のままで、指揮者側の設定が最大14件古かった",
+   "backup": "*.bak_pdca_20260825"
+  },
+  {
+   "date": "2026-08-25",
+   "id": "naze-dake-rule-in-title-style",
+   "target": "data/channels{,_orchestrator}/{daily-science,yokai-watch}.json → theme_priority.title_style",
+   "change": "『なぜ〇〇だけ〜』型を使わない規則を追記。代わりに『〇〇の正体』『実は〇〇』型へ置換するよう指定。pokemon-lab は逆方向のため適用せず",
+   "reason": "ch×公開月の層別で該当の登録/1000再生が ds 0.24 vs 0.49 / yokai 0.00 vs 0.36。4層中3層で該当が劣る（naze-dake-template-halves-conversion）",
+   "backup": "*.bak_pdca_20260825"
+  },
+  {
+   "date": "2026-08-25",
+   "id": "short-thumb-brightness-lift",
+   "target": "data/channels{,_orchestrator}/*.json → thumbnail_template.short_bg_gradient",
+   "change": "縦サムネ背景グラデーションの平均輝度を引き上げ: daily-science 18.4→88.7 / pokemon-lab 48.0→109.1 / yokai-watch 31.0→71.1 / 2ch-matome 32.9→67.9 / scp-lab 8.8→23.3（ホラー路線維持のため上部の黒つぶれ解消にとどめる）。再現描画での完成画像平均輝度は ds 49.8→100.4 / pokemon 73.8→114.4 / yokai 65.5→95.5 / scp 39.6→52.6",
+   "reason": "08-24 scp-thumbnail-is-darkest が未対応のままで、原因が short_bg_gradient のハード指定であることを本日特定。daily-science・pokemon-lab・yokai-watch は自ch の style_hint が『明るく・dark禁止』と明記しており設定同士が矛盾していた",
+   "verification": "黄フックは9pxの黒アウトライン、サブタイトルは5pxの濃紺アウトラインを持つため明背景でも視認性を確認済み（描画再現で目視）",
+   "backup": "*.bak_pdca_20260825"
+  },
+  {
+   "date": "2026-08-25",
+   "id": "theme-seeds-for-growing-genres",
+   "target": "data/channels{,_orchestrator}/{daily-science,scp-lab,yokai-watch,pokemon-lab}.json",
+   "change": "theme_seeds に各3件追加。daily-science 14→17（体の不思議系。睡眠系は blacklist 過密のため回避）／scp-lab 16→19（SCP個別オブジェクト・未使用番号 2718/4999/2000）／yokai-watch 23→26（作品IPネタ）／pokemon-lab 15→18（図鑑・設定考察系、対決型は上限5件のため増やさず）",
+   "reason": "latest.md の伸びてる系統と、yokai-ip-confirmed-2nd-time（作品ネタが伝承の2.45倍）・pokemon-queue-100pct-duel の是正方針に沿わせた。既存 seed タイトルおよび theme_blacklist と突き合わせて重複を除外済み",
+   "note": "追加直後に自分の当日知見と矛盾する『なぜ〇〇だけ』型の seed 2件を検知し、『舌をやけどした翌日、味が消える本当の理由』『朝と夜で身長が1〜2cm違う、その正体』へ言い換えた",
+   "backup": "*.bak_pdca_20260825"
+  },
+  {
+   "date": "2026-08-25",
+   "id": "no-genre-blacklist-change",
+   "target": "（変更なし）",
+   "change": "genre_blacklist の追加は行わなかった",
+   "reason": "『平均再生が全体平均の30%以下』の基準を満たすジャンルは daily-science 宇宙・天体、scp-lab オブジェクトクラス・財団組織・職員のみで、いずれも登録済み。scp-lab 対立組織・Kクラス(312 / 全体483.6 = 64%)、daily-science 日常の違和感(195.6 / 605.9 = 32%)は基準未満のため見送り"
+  },
+  {
+   "date": "2026-08-30",
+   "file": "data/channels/2ch-matome.json",
+   "change": "theme_blacklist に『昼飯を当てる』を追加（dup_check 0.765『大谷の昼飯を3秒で当てるスレ』↔『今日の昼飯を当てるスレ』）。衝突する theme_seeds『ワイの今日の昼飯を当てるスレw』を削除",
+   "reason": "実素材の重複。同ch唯一の非テンプレ重複ペア"
+  },
+  {
+   "date": "2026-08-30",
+   "file": "data/channels/pokemon-lab.json",
+   "change": "theme_blacklist に『説明文』を追加（既存の『図鑑の説明文』『図鑑の説明』が表記ゆれで素通りしていた）。衝突する theme_seeds『ポケモン図鑑の怖すぎる説明文』を削除",
+   "reason": "dup_check 0.743 が blacklist 済みなのに再出現。08-25 の最短語ルールを適用"
+  },
+  {
+   "date": "2026-08-30",
+   "file": "data/channels/yokai-watch.json",
+   "change": "theme_blacklist に『ぬらりひょん』『海坊主』を追加。公開済みと重複する theme_seeds 2件（海坊主の正体が怖すぎる／ぬらりひょんの正体が怖すぎる）を削除",
+   "reason": "dup_check 0.72（ぬらりひょん↔総大将）と、公開済みテーマの seeds 残置"
+  },
+  {
+   "date": "2026-08-30",
+   "file": "data/channels/scp-lab.json",
+   "change": "theme_seeds に『なぜ』起点の個別オブジェクト3件を追加（SCP-2521／SCP-4666／SCP-055）",
+   "reason": "1本あたり登録者が『なぜ』ありで1.25 vs なし0.41（3.0倍）。最上位ジャンルは SCP個別オブジェクト（平均545）"
+  },
+  {
+   "date": "2026-08-30",
+   "file": "data/channels/pokemon-lab.json",
+   "change": "theme_seeds に『なぜエリートトレーナーだけ手持ちが強いのか』『なぜジムリーダーは得意タイプしか使わないのか』『なぜ四天王は四人なのか』を追加",
+   "reason": "最高再生の『エリートトレーナーの謎』(2063)の周辺。同chは『なぜ』型が登録0.53 vs 0.38で有利"
+  },
+  {
+   "date": "2026-08-30",
+   "file": "data/channels/daily-science.json",
+   "change": "theme_seeds に睡眠・視覚の3件を追加（寝返り／浅い眠りと夢の記憶／暗順応）",
+   "reason": "最上位ジャンルが睡眠・夢（平均689）。既存41件のblacklistと非衝突を確認済み"
+  },
+  {
+   "date": "2026-08-30",
+   "file": "data/channels/yokai-watch.json",
+   "change": "theme_seeds に『なぜ』起点の伝承3件を追加（のっぺらぼう／天狗／狐）",
+   "reason": "第2位テーマがのっぺらぼう(2239)。『怖すぎ』型は登録0.29 vs 0.42で不利なため、同じ素材を『なぜ』型で作らせる"
+  },
+  {
+   "date": "2026-08-30",
+   "file": "(変更なし)",
+   "change": "genre_blacklist は全ch据え置き",
+   "reason": "『全体平均の30%以下』に該当するジャンルが無い（daily-science 閾値179に対し最下位の日常の違和感196・宇宙天体0は既登録、scp 閾値145に対し最下位の対立組織313・オブジェクトクラス0は既登録）"
+  },
+  {
+   "date": "2026-08-31",
+   "file": "data/channels/2ch-matome.json, data/channels_orchestrator/2ch-matome.json",
+   "change": "theme_blacklist に『県名』『いらん商品』『画面チカチカ』『彼女いない歴』を追加（最短語ルール適用）。theme_seeds を 31→26 / 32→27 に削減：公開済みと同一の4件（実際には存在しないけどありそうな県名あげてけ／コンビニで一番いらん商品あげてけ／なんかPCの画面チカチカするんやが／ワイ、彼女いない歴＝年齢やけど質問ある？）と、seeds 内部重複1件（合コンで言ったら終わる一言＝合コンで一番言ったらアカン一言の重複）を削除。orchestrator 側に欠けていた『昼飯を当てる』も同期",
+   "reason": "seed-pollution-recurred-on-2ch。4件とも既に公開済みで、うち3件は上位15本に入っていた"
+  },
+  {
+   "date": "2026-08-31",
+   "file": "backend/pipeline/video_generator.py",
+   "change": "_thumb_wrap_line の末尾に _thumb_rebalance_orphan を追加。2行折り返しで(a)2行目の幅が全幅の32%未満、または(b)2行目の文字数が1行目の45%未満のとき、文字数が均等になる位置へ切り直す。区切り文字(、。等)があればそこを優先、禁則文字と数字の途中(『14』→『1/4』)は回避、両行とも max_width に収まらない場合は元の結果を返す",
+   "reason": "thumb-orphan-wrap-moved-to-tagline。実測3件が『赤い海の石が開いた、/ 崩壊世界への入口』『白い姫の笑顔の裏で、/ 14年前の雪がまだ降っている』『立つより座る方が腰 / へ重くのしかかる理由』に改善することを実フォント幅で確認"
+  },
+  {
+   "date": "2026-08-31",
+   "file": "backend/pipeline/video_generator.py",
+   "change": "_thumb_build_illustration に語句ヒット数のゲートを追加。card_style が leaked-document 以外のとき pillow_illustration._match_textbook(topic) が2語未満なら None を返して無地に倒す",
+   "reason": "thumb-illustration-card-misfires。1語ヒットは『アイコン1個＋総称ラベル(植物/氷)』、0語ヒットは見出しの文字を途中で切って印字するだけで、誤誘導するくらいなら無地の方がマシ。本編側の generate_pillow_illustration 直呼びと scp の leaked-document は従来どおり"
+  },
+  {
+   "date": "2026-08-31",
+   "file": "backend/tests/test_short_thumbnail_illustration.py",
+   "change": "TestOrphanWrapRebalance（4件）と TestThumbIllustrationKeywordGate（2件）を追加。既存14件と合わせて20件、tests.test_thumbnail_ab_metric と合わせて31件すべてパス",
+   "reason": "上記2件の回帰防止。実測で出た3つの折り返し文字列をそのままテストケースにした"
+  },
+  {
+   "date": "2026-08-31",
+   "file": "(変更なし)",
+   "change": "genre_blacklist は全ch据え置き",
+   "reason": "『全体平均の30%以下』の該当なし。daily-science 全体平均599.4→閾値179.8 に対し最下位の日常の違和感195.6は上回る（宇宙・天体0は登録済）、scp-lab 全体平均480.4→閾値144.1 に対し対立組織313・その他219.8は上回る（オブジェクトクラス0は登録済）。他4chは単一ジャンル『その他』のみ"
+  },
+  {
+   "date": "2026-08-31",
+   "file": "(提案のみ・未実施)",
+   "change": "pipeline/youtube_uploader.py の upload_video 成功後に video_status へ INSERT する経路は入れていない",
+   "reason": "publish-db-dead-since-june。公開状態DBへの書き込みで UI 側の表示にも影響するため、構造変更として提案に留めた"
+  },
+  {
+   "date": "2026-09-01",
+   "file": "backend/pipeline/publish_log.py（新規）, backend/pipeline/youtube_uploader.py, backend/api_phase4.py",
+   "change": "公開実績を video_status に残す共通モジュールを追加し、upload_video 成功後と autopilot の単体公開（_start_single_short_publish / _start_single_main_publish）から呼ぶようにした。is_short / title カラムも追加（冪等な ALTER）",
+   "reason": "publish-db-dead-since-june。08-31 に提案止まりだった件を実装。video_status の最終行が 2026-06-07 で止まり、pdca_report の登録者ソース分析が全ch unknown、api_improvement のいいね率ループが空振りしていた"
+  },
+  {
+   "date": "2026-09-01",
+   "file": "backend/backfill_video_status.py（新規）, data/video_publish.db",
+   "change": "analytics.db の video_metrics を唯一の情報源に video_status を496件埋め戻した（YouTube API を叩かない）。キーは publish_log と同じ upload:<video_id> で冪等",
+   "reason": "publish-db-dead-since-june。前向きの記録だけでは6〜8月の約450本が分析対象外のままになるため。実測: scp-lab の subscriber_sources が unknown → shorts 100% / 0.626per1000 に復旧"
+  },
+  {
+   "date": "2026-09-01",
+   "file": "backend/pipeline/video_generator.py (generate_descriptions)",
+   "change": "ショート説明文の先頭に「タイトル: {short_title}」行を追加（メイン側には元からあった）",
+   "reason": "short-title-fallback。この行が無いため _read_desc が title='' を返し、autopilot が job.title + 【ショート】 のフォールバックに落ちていた。short_series_name / short_title_hashtags / short_title_core_max が投稿タイトルに一度も届かず、#shorts すら付いていなかった（yokai-watch 実測: 8月の39本中37本が該当）"
+  },
+  {
+   "date": "2026-09-01",
+   "file": "data/channels_orchestrator/*.json → data/channels/*.json の symlink, docs/CHANNEL_CONFIG_SOURCE_OF_TRUTH.md, scripts/unify_channel_configs.py",
+   "change": "master of record を data/channels/ に確定し、channels_orchestrator の実体を symlink に置換。今後は片側だけ更新すればよい。symlink 前の実体は data/channels_orchestrator_pre_symlink_20260901/ に退避、全差分は data/reports/2026-09-01/channel_config_divergence.txt",
+   "reason": "config-dir-divergence。本番コードで channels_orchestrator を読むものは1つも無く（別リポの ai-orchestrator も参照なし）、両方に書く運用が片側事故を生んでいた"
+  },
+  {
+   "date": "2026-09-01",
+   "file": "data/channels/2ch-matome.json",
+   "change": "08-31 の変更を master にも反映: theme_blacklist に『県名』『いらん商品』『画面チカチカ』『彼女いない歴』を追加、公開済み4件＋重複1件の theme_seeds を削除（31→26）",
+   "reason": "config-dir-divergence。08-31 の適用が data/channels_orchestrator 側にしか当たっておらず、master 側は公開済みテーマを seeds に残したままだった"
+  },
+  {
+   "date": "2026-09-01",
+   "file": "data/channels/{company-facts,clip-lab,clip-fukada,clip-kaneko,clip-animal,akashic-librarian}.json",
+   "change": "video_format.analytics.enabled=true を追加。sync 実行で company-facts 27本/35,500再生、clip-lab 7本/30,019再生、akashic-librarian 6本/3,599再生が analytics.db に入った",
+   "reason": "analytics-not-synced。run_daily_pdca._enabled_channels() が video_format.analytics.enabled を見ており、ブロックごと無いチャンネルが同期対象から静かに漏れていた"
+  },
+  {
+   "date": "2026-09-01",
+   "file": "data/channels/fake-paper.json",
+   "change": "7行目CTAを高評価→登録の順に変更、short_format.cta_fallback を新設、extra_rules に高評価優先ルールを追加、尺を190〜235字→170〜210字、2行目の架空掲載誌をリスナーの食いつきに置換して出典は3行目へ、short_title_hashtags から #フィクション を除去、short_title_core_max=26",
+   "reason": "fake-paper-zero-subs。再生4,189・高評価率0.43%（他chと同水準）で登録0。7行目に『高評価』の語が無い唯一のチャンネルで、cta_fallback も持っていなかった。維持率27.6%は全ch最下位（他は38.3〜57.2%）で、実台本は設定帯を常に超過（228〜302字）していた"
+  },
+  {
+   "date": "2026-09-01",
+   "file": "data/channels/yokai-watch.json",
+   "change": "cta_fallback.like を『ゾッとしたら高評価を押してね。』→『よかったら高評価だけ置いていってね。』（条件を外す）、structure 6行目も同文言＋55字以内の制約、theme_blacklist に『コマさん』『エンマ大王』を追加",
+   "reason": "yokai-low-sub-efficiency。高評価率0.365%は6ch中5位（実測四分位で 0.2-0.4% 帯の登録転換は0.32/1000再生）。コマさん/エンマ大王は30日以内の再投稿で、公開3日目の再生が 1,082→123 / 1,462→152 と1/8〜1/10に沈んだ"
+  },
+  {
+   "date": "2026-09-01",
+   "file": "data/channels/pokemon-lab.json",
+   "change": "autopilot.auto_optimize_schedule を true → false",
+   "reason": "config-dir-divergence。08-22 に全5chで false 固定した決定に対し channels 側だけ true に戻っていた（known_findings に『書き戻している疑い』として記録済みの件）"
+  },
+  {
+   "date": "2026-09-02",
+   "file": "data/channels/pokemon-lab.json",
+   "change": "theme_blacklist に『看板』『ピカチュウだけ』を追加（8→10件）。short_format.extra_rules にタイトル内の数字は多くても1つまでとするルールを追加",
+   "reason": "『ピカチュウは10%なのになぜ看板？』(08-31公開)・『森では10% なぜ看板に』(09-01生成)・『図鑑778番はピカチュウだけ真似る』で看板ネタが3本目。加えて数字入りタイトルが登録0.18 vs 数字なし0.46(n=40)"
+  },
+  {
+   "date": "2026-09-02",
+   "file": "data/channels/yokai-watch.json",
+   "change": "theme_blacklist に『3つの秘密』『元ネタが怖すぎる』を追加（10→12件）。short_format.extra_rules にタイトルへ数字を入れない／『？』で終えないルールを追加",
+   "reason": "数字あり登録0.05 vs なし0.50、『？』あり0.12 vs なし0.57(n=39)。dup_check 未カバー6件のうち4件が『#N：◯◯に隠された3つの秘密』テンプレ衝突"
+  },
+  {
+   "date": "2026-09-02",
+   "file": "data/channels/company-facts.json",
+   "change": "theme_seeds に『実は』起点の3件を追加（10→13件／JR東日本の運転士手当・公務員給与と人事院勧告・ニトリの配置転換）",
+   "reason": "company-facts-is-top-converter と cf-jitsuwa-pattern。1本あたり登録0.96で全ch首位、かつ『実は』型が1.71 vs 0.70。seedsが10件しかなく在庫が薄かった"
+  },
+  {
+   "date": "2026-09-02",
+   "file": "(変更なし)",
+   "change": "genre_blacklist は全ch据え置き",
+   "reason": "『全体平均の30%以下』の新規該当なし。daily-science 平均599.4→閾値179.8 に対し最下位の日常の違和感195.6は上回る（宇宙・天体0は登録済）、scp-lab 平均480.4→閾値144.1 に対し最下位のその他219.8は上回る（オブジェクトクラス0は登録済）。他8chは単一ジャンル『その他』のみ"
+  },
+  {
+   "date": "2026-09-02",
+   "file": "(提案のみ・未実施)",
+   "change": "OAuth 再認可、未公開9本の再投入、clip-lab のCTA/サムネ改修は実行していない",
+   "reason": "再認可はブラウザでの本人操作が必要。公開の再実行は外部への投稿を伴うため自動実行しない。clip-lab は切り抜きレンダラ側の構造変更を含む"
+  },
+  {
+   "date": "2026-09-03",
+   "source": "daily-pdca-report",
+   "backups": "data/channels/*.json.bak_pdca_20260903",
+   "changes": [
+    {
+     "file": "data/channels/daily-science.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "録音"
+     ],
+     "reason": "録音/骨伝導テーマが40本中12本(30%)・平均再生は非該当と同水準で増分ゼロ。既存の『骨伝導』は8本が言い換えで通過していた"
+    },
+    {
+     "file": "data/channels/daily-science.json",
+     "field": "theme_seeds",
+     "op": "add",
+     "value": [
+      "なぜ寝言は自分では一度も聞けないのか",
+      "眠る直前に見える光の模様、その正体"
+     ],
+     "reason": "最上位ジャンル『睡眠・夢』(平均710)の補充。録音テーマ封鎖分の枠を埋める"
+    },
+    {
+     "file": "data/channels/2ch-matome.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "質問ある",
+      "昼飯"
+     ],
+     "reason": "『質問ある？』形式は6本平均868で非該当937を下回り1655→1の単調減衰。『昼飯』は既存『昼飯を当てる』の部分一致取りこぼし修正"
+    },
+    {
+     "file": "data/channels/pokemon-lab.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "3つの秘密"
+     ],
+     "reason": "2本平均909で非該当1015を下回る。yokai-watch では既に blacklist 済みで横展開"
+    },
+    {
+     "file": "data/channels/fake-paper.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "瞬きが同期",
+      "エレベーターで見上げる"
+     ],
+     "reason": "dup_check 0.703 のペア。fake-paper は blacklist が空だったが OAuth が生きている稼働2chの1つで優先度が高い"
+    },
+    {
+     "file": "data/channels/yokai-watch.json",
+     "field": "theme_seeds",
+     "op": "remove",
+     "value": [
+      "コマさん・コマじろうと狛犬伝承",
+      "妖怪の名前がダジャレな理由",
+      "エンマ大王と閻魔信仰"
+     ],
+     "reason": "いずれも公開済み(各2本)かつ自channelの theme_blacklist が禁止している語を含む"
+    },
+    {
+     "file": "data/channels/yokai-watch.json",
+     "field": "theme_seeds",
+     "op": "rewrite",
+     "value": [
+      "座敷童子の元ネタが怖すぎる→座敷童子の伝承で本当に起きたこと",
+      "口裂け女の元ネタが怖すぎる→口裂け女の伝承で本当に起きたこと"
+     ],
+     "reason": "題材自体は未公開で有効。blacklist 語『元ネタが怖すぎる』だけを外して温存"
     }
-  ]
+   ]
+  },
+  {
+   "date": "2026-09-04",
+   "source": "daily-pdca-report",
+   "backups": "data/channels/*.json.bak_pdca_20260904",
+   "changes": [
+    {
+     "file": "data/channels/2ch-matome.json",
+     "field": "theme_seeds",
+     "op": "rewrite",
+     "value": [
+      "ワイ、コンビニ夜勤5年やけど質問ある？→なんかコンビニ夜勤の深夜2時だけ客が変なんやが",
+      "ワイ、実家が旅館やけど質問ある？→なんか実家の旅館に住み着いとる常連おるんやが"
+     ],
+     "reason": "09-03 に『質問ある』を blacklist 追加した結果、自ch seeds 2件が矛盾していた(seed-blacklist-conflict-recurs)。題材は有効なので、実測で最も登録が付く『なんか〜んやが』型(登録/1k 0.60 vs ch平均0.17)へ変換して温存"
+    },
+    {
+     "file": "data/channels/2ch-matome.json",
+     "field": "theme_seeds",
+     "op": "add",
+     "value": [
+      "なんか宅配便だけ毎回ワイの時だけ不在票なんやが",
+      "なんか夜だけWi-Fiが死ぬんやが"
+     ],
+     "reason": "2ch-nanka-yanga-is-the-winner-format。26→28件"
+    },
+    {
+     "file": "data/channels/2ch-matome.json",
+     "field": "theme_seeds[駅名].angle",
+     "op": "edit",
+     "value": "angle文中の『県名スレの派生』表現を除去",
+     "reason": "blacklist 語『県名』が angle に残っており、将来 angle まで照合する実装になった時に取りこぼす"
+    },
+    {
+     "file": "data/channels/company-facts.json",
+     "field": "theme_seeds",
+     "op": "add",
+     "value": [
+      "実は日本郵政の年収は『局長かどうか』で200万変わる",
+      "実はANAとJALでパイロットの年収の伸び方が違う",
+      "実は大手ゼネコンの年収1000万超えは現場手当で作られている"
+     ],
+     "reason": "登録/1k 0.76・登録/本1.04 で実数・効率とも実質首位。ch内で『実は』型は 1.00/1k vs 非該当0.63。seedsが13件と薄かった。13→16件"
+    },
+    {
+     "file": "data/channels/yokai-watch.json",
+     "field": "theme_seeds",
+     "op": "add",
+     "value": [
+      "フユニャンの正体 — 未来から来た相棒は作中で何者だと説明されているのか",
+      "じんめん犬の正体 — 昭和の人面犬の噂を作品はどう作り変えたのか"
+     ],
+     "reason": "作品題材優位(登録/1k 0.41 vs 伝承単体0.16)を3度目の独立分析で再現、かつ shoutai-is-strongest(『正体』0.44 vs 0.16)との掛け合わせ。追加前に自ch blacklist 12語と照合済み。24→26件"
+    },
+    {
+     "file": "data/channels/fake-paper.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "大谷翔平",
+      "久保建英",
+      "打撃フォーム"
+     ],
+     "reason": "有名人クロスオーバー2本が ch のワースト2(366再生/0再生、いずれも登録0)。架空論文という ch コンセプトからも外れる。2→5件"
+    },
+    {
+     "file": "data/channels/clip-kaneko.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "詰め込んだ一冊"
+     ],
+     "reason": "dup_check 類似度0.895 の最大ペア（夏のデート感を詰め込んだ一冊 ↔ 「おはよう」から「おやすみ」までデート気分を詰め込んだ一冊）。0→1件"
+    },
+    {
+     "file": "data/channels/pokemon-lab.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "種族値だけ"
+     ],
+     "reason": "dup_check 0.819 のペア（種族値だけで強さが変わるのか ↔ けつばんの正体）。11→12件"
+    },
+    {
+     "file": "data/channels/socio-rx.json",
+     "field": "theme_seeds",
+     "op": "rewrite",
+     "value": [
+      "自己成就予言→期待が結果を作る仕組み（自己成就）"
+     ],
+     "reason": "全13ch総当たりで検出した自ch blacklist 衝突（blacklist語『予言』）。これで全ch衝突0件"
+    },
+    {
+     "file": "(変更なし)",
+     "field": "genre_blacklist",
+     "op": "none",
+     "value": [],
+     "reason": "『全体平均の30%以下』の新規該当なし。daily-science 平均584.4→閾値175.3 に対し最下位の日常の違和感195.6は上回る（宇宙・天体0は登録済）、scp-lab 平均501.2→閾値150.4 に対し最下位のその他288.8は上回る（オブジェクトクラス0・財団組織303.7は登録済）。他9chは単一ジャンル『その他』のみで分割不能"
+    },
+    {
+     "file": "(提案のみ・未実施)",
+     "field": "-",
+     "op": "none",
+     "value": [],
+     "reason": "ch間の同語衝突ゲート、サムネ図解カード/黄色帯/キャラ表情の描画修正、SCP伏字→実番号、fake-paper の構造改修は実装せず。いずれもレンダラ・生成パイプライン側のコード変更で、設定JSONの範囲を超えるため"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-05",
+   "source": "daily-pdca-report",
+   "backups": "data/channels/*.json.bak_pdca_20260905",
+   "changes": [
+    {
+     "file": "data/channels/scp-lab.json",
+     "field": "short_format.extra_rules",
+     "op": "add",
+     "value": [
+      "ショートタイトルの先頭付近に必ず実番号『SCP-####』を数字のまま入れる（伏字・番号省略は不可）"
+     ],
+     "reason": "scp-number-in-title-converts。番号ありn=32は登録/本0.62・登録/1k0.77、番号なしn=18は0.33・0.57。09-04生成2本のうち1本が番号なしで未徹底だった"
+    },
+    {
+     "file": "data/channels/scp-lab.json",
+     "field": "theme_seeds",
+     "op": "remove",
+     "value": [
+      "SCP-2306「実在しない部屋」"
+     ],
+     "reason": "公開済み『一口SCP #94：SCP-2306「実在しない部屋」』と完全重複(seeds-no-dedupe-vs-published の再発)。22→21件"
+    },
+    {
+     "file": "data/channels/akashic-librarian.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "大谷翔平",
+      "久保建英",
+      "有名人"
+     ],
+     "reason": "akashic-top-converter-small-n。『なぜ大谷翔平だけ？』1149再生で登録0、対して匿名題材の手稿1172再生=登録2・三十八人1057再生=登録1。再生同水準で有名人回だけ転換0。fake-paperで09-04に同じ措置済み。8→11件"
+    },
+    {
+     "file": "data/channels/akashic-librarian.json",
+     "field": "short_format.extra_rules",
+     "op": "add",
+     "value": [
+      "実在の有名人・スポーツ選手・タレントを題材や具体例の中心に据えない。匿名の事件・実験・文書を主語にする"
+     ],
+     "reason": "同上。blacklist は文字列一致しか効かないため(blacklist-substring-evaded-by-paraphrase)、生成ルール側にも明記"
+    },
+    {
+     "file": "data/channels/daily-science.json",
+     "field": "theme_seeds[].angle",
+     "op": "edit",
+     "value": [
+      "『あくび・玉ねぎ・強い光』→『玉ねぎ・強い光・冷たい風』",
+      "『宇宙飛行士で数cm伸びる』→『無重力環境の飛行士で数cm伸びる』"
+     ],
+     "reason": "blacklist-conflict-hides-in-angle-field。自ch blacklist 語『あくび』『宇宙』が angle に残っていた"
+    },
+    {
+     "file": "data/channels/socio-rx.json",
+     "field": "theme_seeds[].angle",
+     "op": "edit",
+     "value": [
+      "『ネガティブな予言を』→『ネガティブな思い込みを』／末尾の運用メモ『※自ch blacklist 語《予言》を回避してリネーム』を削除"
+     ],
+     "reason": "09-04 に自分が書いたリネーム理由メモ自体が違反語『予言』を含んでいた。データ欄に運用メモを書かない方針に変更。これで全13chの seed↔blacklist 衝突は0件"
+    },
+    {
+     "file": "(変更なし)",
+     "field": "genre_blacklist",
+     "op": "none",
+     "value": [],
+     "reason": "『全体平均の30%以下』の新規該当なし。daily-science 平均547→閾値164 に対し最下位の日常の違和感195.6は上回る（宇宙・天体0は登録済）、scp-lab 平均487→閾値146 に対し最下位も上回る。他10chは単一ジャンル『その他』のみで分割不能"
+    },
+    {
+     "file": "(変更なし)",
+     "field": "theme_blacklist(重複由来)",
+     "op": "none",
+     "value": [],
+     "reason": "dup_check の類似度1.00ペアは daily-science 15件・scp-lab 15件とも既報かつ blacklist 済みの旧作(録音/骨伝導・しゃっくり・酸素・42度・SCP-173)。新規の重複テーマなし"
+    },
+    {
+     "file": "(提案のみ・未実施)",
+     "field": "-",
+     "op": "none",
+     "value": [],
+     "reason": "カスタムサムネの403解消(YouTube側の電話認証が必要・本人操作)、company-facts の実写ゼロ件時フォールバック、和文ワードラッパの共通化、図解カードの題材連動は実装せず。いずれも本人操作またはレンダラ側コード変更"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-06",
+   "source": "daily-pdca-report",
+   "backups": "data/channels/*.json.bak_pdca_20260906",
+   "changes": [
+    {
+     "file": "data/channels/company-facts.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "日本マクドナルド"
+     ],
+     "reason": "『日本マクドナルドの年収576万円、その内訳とは』と『日本マクドナルドの正体、年収670万円の裏側』が類似0.857で重複。しかも同一社の平均年収を576万と670万で食い違って提示しており、事実の信頼性を損なう。company-facts は登録/1k 0.70 と全ch2位で毀損の影響が大きい"
+    },
+    {
+     "file": "data/channels/fake-paper.json",
+     "field": "theme_blacklist",
+     "op": "remove",
+     "value": [
+      "瞬きが同期",
+      "エレベーターで見上げる"
+     ],
+     "reason": "09-03 に dup 0.703/0.762 を根拠に自動追加したが、共有ハッシュタグ #架空論文 による偽陽性だった。タグを除いた真の類似度は 0.00。有効な題材を2件失っていたため撤回する"
+    },
+    {
+     "file": "data/channels/daily-science.json",
+     "field": "theme_seeds",
+     "op": "add",
+     "value": [
+      "なぜ寝返りは一晩に20回も打つのに自分では気づかないのか",
+      "二度寝の5分だけ、なぜ普通の睡眠より深く感じるのか"
+     ],
+     "reason": "最上位ジャンル『睡眠・夢』(42本/平均618.3・全体平均比117%)の補充。既存42語の theme_blacklist と全文照合済み"
+    },
+    {
+     "file": "data/channels/scp-lab.json",
+     "field": "theme_seeds",
+     "op": "add",
+     "value": [
+      "SCP-2718を読んだ職員だけが辞めた理由"
+     ],
+     "reason": "最上位ジャンル『SCP個別オブジェクト』(150本/平均551.6・全体平均比114%)の補充。09-05 に明文化した「タイトルに実SCP番号必須」ルールに沿って実番号入りで作成。seedオブジェクト全体のJSON文字列で blacklist 9語と照合済み"
+    },
+    {
+     "file": "data/channels/scp-lab.json",
+     "field": "theme_seeds",
+     "op": "add",
+     "value": [
+      "SCP-3008が閉店しない理由"
+     ],
+     "reason": "最上位ジャンル補充の2件目。当初 SCP-1730 で作成したが blacklist 語『SCP-173』の部分一致で自動棄却されたため、巻き添え範囲(1730-1739)外の番号に差し替えた"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-06b",
+   "source": "daily-pdca-report",
+   "backups": "data/channels/*.json.bak_pdca_20260907",
+   "changes": [
+    {
+     "file": "data/channels/company-facts.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "東京エレクトロン"
+     ],
+     "reason": "『東京エレクトロンの年収1272万円、実は転職後に差が出る』と『同1272万円、実は株価上昇の裏側』が類似0.694で重複。同一社・同一数値で切り口だけ変えた2本。09-06 の company-facts-contradicts-own-figures で決めた社名単位の重複ガードの2件目。cf は登録/1k 0.6797 で全ch1位のため毀損リスクが大きい"
+    },
+    {
+     "file": "data/channels/pokemon-lab.json",
+     "field": "theme_blacklist",
+     "op": "rewrite",
+     "value": [
+      "3つの秘密 -> re:3つの秘密"
+     ],
+     "reason": "filler-words-silently-widen-blacklist。normalize_title が『の秘密』を落とすため《3つ》に縮み、『3つの伝説ポケモンの種族値』のような無関係な題材まで全ブロックしていた。re: で生タイトルへの正規表現照合に切替え、意図した『3つの秘密』テンプレだけを止める挙動を実測確認"
+    },
+    {
+     "file": "data/channels/yokai-watch.json",
+     "field": "theme_blacklist",
+     "op": "rewrite",
+     "value": [
+      "3つの秘密 -> re:3つの秘密",
+      "主人公の秘密 -> re:主人公の秘密"
+     ],
+     "reason": "同上。『主人公の秘密』は《主人公》に縮み、主人公に触れる seed を巻き添えにしていた"
+    },
+    {
+     "file": "data/channels/yokai-watch.json",
+     "field": "theme_seeds",
+     "op": "rewrite",
+     "value": [
+      "妖怪ウォッチというガジェットの仕組み → 妖怪ウォッチのレンズは何を映しているのか（angle: 妖怪が可視化される条件をレンズ越し・メダル装着・とりつき中の3状態で整理。装置の仕様に限定）"
+     ],
+     "reason": "旧 seed の angle『なぜ主人公だけが妖怪を見られるのか』は、公開済みの『なぜ妖怪ウォッチだけ？主人公の秘密＃妖怪ウォッチで主人公だけが妖怪を見られる理由』(類似1.000で2本重複公開済み)と同題材。blacklist を re: 化して照合を正した結果この seed だけが真の衝突として残ったため、題材ごと差し替えた"
+    },
+    {
+     "file": "data/channels/scp-lab.json",
+     "field": "thumbnail_template.style_hint",
+     "op": "add",
+     "value": [
+      "line1 または line2 に必ず実番号『SCP-####』を数字のまま入れる（伏字・番号省略・sub_text だけの記載は不可）"
+     ],
+     "reason": "scp-thumbnail-drops-the-number-that-converts。タイトル側は番号ありが登録/1k 0.77 vs 0.57(n=32/18)。既存 style_hint の『sub_text は番号付きで』は推奨止まりで本日のサムネは番号ゼロだった。style_hint が thumbnail_generator.py:225 で最優先ブロックとして注入されることをコードで確認済み"
+    },
+    {
+     "file": "(変更なし)",
+     "field": "genre_blacklist",
+     "op": "none",
+     "value": [],
+     "reason": "複数ジャンルを持つのは ds と scp のみ。ds 全体平均524.9→閾値157.5 に対し最下位の実質候補『日常の違和感』195.6 は上回る（宇宙・天体0.0 は登録済）。scp 全体平均485.6→閾値145.7 に対し『財団組織・職員』236.8 は上回る（オブジェクトクラス0.0 は登録済）。他10chは単一ジャンル『その他』のみで判定不能"
+    },
+    {
+     "file": "(提案のみ・未実施)",
+     "field": "-",
+     "op": "none",
+     "value": [],
+     "reason": "【ショート】二重付与の修正(api_phase3/4のフォールバック)、dup_check への blacklist 除外、サムネ上端30%の余白解消はいずれもコード側の構造変更のため自動実行しない。ChatGPT画像ブリッジの配送は外部サービスへの投稿を伴うため自動実行しない"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-07n",
+   "source": "daily-pdca-report",
+   "backups": "data/channels/*.json.bak_pdca_20260908",
+   "changes": [
+    {
+     "file": "data/channels/pokemon-lab.json",
+     "field": "theme_blacklist",
+     "op": "remove",
+     "value": [
+      "どっちが勝つ",
+      "対決"
+     ],
+     "reason": "format-blacklist-killed-best-format。該当7本avg1493 vs 非該当697の2.14倍で、最高成績フォーマットを自ら封じていた"
+    },
+    {
+     "file": "data/channels/pokemon-lab.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "re:バンギラス.*メタグロス",
+      "re:パルキア.*ウルトラネクロズマ",
+      "re:メタグロス.*サーフゴー",
+      "re:リザードン.*カイリュー",
+      "re:ミミッキュ.*ロトム",
+      "re:ホウオウ.*ルギア",
+      "re:ルカリオ.*ウルガモス",
+      "re:ガブリアス.*ボーマンダ",
+      "re:カイオーガ.*グラードン"
+     ],
+     "reason": "フォーマットではなく使用済み対戦カード単位でブロックに切替。12→19件"
+    },
+    {
+     "file": "data/channels/pokemon-lab.json",
+     "field": "theme_seeds",
+     "op": "add",
+     "value": [
+      "ヒスイヌメルゴンとドラパルト、どっちが勝つ？",
+      "テツノブジンとサーフゴー、どっちが勝つ？",
+      "ドサイドンとハガネール、どっちが勝つ？"
+     ],
+     "reason": "解禁した2.14倍フォーマットを未使用カードで再投入。20→23件"
+    },
+    {
+     "file": "data/channels/yokai-watch.json",
+     "field": "theme_blacklist",
+     "op": "remove",
+     "value": [
+      "元ネタが怖すぎる"
+     ],
+     "reason": "該当7本avg1422 vs 非該当698の2.04倍。フォーマット語のため解除"
+    },
+    {
+     "file": "data/channels/yokai-watch.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "のっぺらぼう",
+      "ふじのやま",
+      "一つ目小僧",
+      "ブシニャン"
+     ],
+     "reason": "公開済みの怖すぎる型の題材を固有名詞単位でブロック。12→15件"
+    },
+    {
+     "file": "data/channels/yokai-watch.json",
+     "field": "theme_seeds",
+     "op": "add",
+     "value": [
+      "雪女の正体が怖すぎる — なぜ助けた男だけが後で殺されるのか",
+      "座敷童子の正体が怖すぎる — 出ていった家に何が起きたのか",
+      "件（くだん）の正体が怖すぎる — 予言して死ぬ牛はなぜ生まれたのか"
+     ],
+     "reason": "解禁した2.04倍フォーマットを未使用題材で再投入"
+    },
+    {
+     "file": "data/channels/yokai-watch.json",
+     "field": "theme_seeds",
+     "op": "remove",
+     "value": [
+      "ブシニャンはどこから来たのか",
+      "なぜのっぺらぼうは『顔がない』妖怪になったのか"
+     ],
+     "reason": "seed-blacklist-conflict-recurs の再発を検証で検出。今回追加した固有名詞blacklistと衝突する既存seedを除去。26→29→27件"
+    },
+    {
+     "file": "data/channels/company-facts.json",
+     "field": "theme_seeds",
+     "op": "add",
+     "value": [
+      "万博・国際大会の裏方企業、年収はいくらか",
+      "空港の地上支援(グランドハンドリング)会社の年収の実態",
+      "競技場・アリーナの運営会社は誰が儲けているのか"
+     ],
+     "reason": "本日トップ『アジア大会の裏方企業 年収932万』5203再生=平均比4.7倍。『表に出ない裏方企業の年収』型の派生を投入。23→26件"
+    },
+    {
+     "file": "data/channels/2ch-matome.json",
+     "field": "theme_blacklist",
+     "op": "add",
+     "value": [
+      "箱だけ先に届く",
+      "PCパーツ到着"
+     ],
+     "reason": "本日トップ題材の重複防止。7→9件"
+    },
+    {
+     "file": "data/channels/2ch-matome.json",
+     "field": "theme_seeds",
+     "op": "add",
+     "value": [
+      "なんかコンビニの袋だけ異様に薄いんやが",
+      "通販の緩衝材だけ本体よりデカいんやが",
+      "なんか置き配だけ毎回場所が違うんやが"
+     ],
+     "reason": "トップ1814(平均比2.2倍)と同じ買い物・配送あるある型を、実測で最も強い『なんか〜だけ〜んやが』構文で3件。28→31件"
+    },
+    {
+     "file": "(検証)",
+     "field": "blacklist_match",
+     "op": "verify",
+     "value": "全13ch seed×theme_blacklist 矛盾ゼロ / 既存重複6件は引き続きblock / 新seed 6件はpass",
+     "reason": "backend.pipeline.auto_scenario.theme_dedup.blacklist_match で実行"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-08n",
+   "target": "data/channels/yokai-watch.json",
+   "field": "video_format.short_illustrations.thumbnail_card",
+   "before": "(未設定=有効)",
+   "after": false,
+   "reason": "図解カードの誤マッピング（『木片』→植物 /『山』→地形）。カード高352px=縦18.3%を占めクリック動機ゼロ。本編図解は継続。"
+  },
+  {
+   "date": "2026-09-08n",
+   "target": "data/channels/scp-lab.json",
+   "field": "video_format.short_illustrations.thumbnail_card",
+   "before": "(未設定=有効)",
+   "after": false,
+   "reason": "『名簿の空白』動画に眼アイコン＋『視認体』の無関係カード。暗色で視認性も低い。本編のleaked-document図解は継続。"
+  },
+  {
+   "date": "2026-09-08n",
+   "target": "data/channels/scp-lab.json",
+   "field": "theme_blacklist",
+   "before": 9,
+   "after": 13,
+   "added": [
+    "17名",
+    "17年間",
+    "17年間隠し",
+    "担当者17"
+   ],
+   "reason": "無関係なSCP(1730/4002/166/5000)に同じ『17』フックを使い回し、類似度1.0のペアを6組生んでいた。"
+  },
+  {
+   "date": "2026-09-08n",
+   "target": "data/channels/scp-lab.json",
+   "field": "thumbnail_template.tagline_rules",
+   "before": "(なし)",
+   "after": "3件のルールを新設",
+   "reason": "tagline が『CC BY-SA 3.0』のライセンス表記に占有されていた。ライセンス表記を禁止し、SCP番号を line2/sub_text に必須化（style_hintの推奨では守られなかったため独立ルールへ格上げ）。"
+  },
+  {
+   "date": "2026-09-08n",
+   "target": "data/channels/yokai-watch.json",
+   "field": "theme_seeds",
+   "before": 27,
+   "after": 29,
+   "added": [
+    "濡れ女の正体、なぜ助けようとした者だけが消えるのか",
+    "あかなめの正体が怖すぎる — 江戸の風呂場に本当にいたもの"
+   ],
+   "reason": "登録/1k が2日連続上昇(0.2618→0.3659→0.4845)し『正体』型の効果が確定。同型を継続投入。"
+  },
+  {
+   "date": "2026-09-08n",
+   "target": "(判定のみ)",
+   "field": "genre_blacklist",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "30%ルールで再判定。daily-science ch平均524→閾値157に対し最下位の『日常の違和感』は195で対象外（『宇宙・天体』は登録済）。scp-lab ch平均495→閾値148に対し『財団組織・職員』237は登録済、『対立組織・Kクラス』313はn=1。新規該当なし。"
+  },
+  {
+   "date": "2026-09-10",
+   "target": "data/channels/scp-lab.json",
+   "field": "theme_blacklist",
+   "before": 13,
+   "after": 6,
+   "removed": [
+    "SCP-173",
+    "視線を外",
+    "目を離",
+    "見るのをやめ",
+    "最初の異常存在",
+    "17名",
+    "17年間",
+    "担当者17"
+   ],
+   "added": [
+    "SCP-1983"
+   ],
+   "reason": "上位40本中 SCP-173が12本・定型語7本・17系8本を占め全て平均の約2倍。勝ち筋を自分で封じていたため解除。SCP-1983は3本存在し1205→1121→1066と逓減しているため追加。'17年間隠し'は定型句のため維持。"
+  },
+  {
+   "date": "2026-09-10",
+   "target": "data/channels/scp-lab.json",
+   "field": "theme_seeds",
+   "before": 23,
+   "after": 26,
+   "added": [
+    "SCP-682が何度殺しても適応する — 収容不可と判定された本当の理由",
+    "SCP-055、誰も形を思い出せない — 記録できない異常存在の正体",
+    "SCP-3999、研究員本人が物語に取り込まれた記録の真相"
+   ],
+   "reason": "ジャンル別で『SCP個別オブジェクト』avg563 が『財団組織・職員』avg237 の2.4倍。未使用の有名番号で個別オブジェクト路線を補充。"
+  },
+  {
+   "date": "2026-09-10",
+   "target": "data/channels/daily-science.json",
+   "field": "theme_blacklist",
+   "before": 16,
+   "after": 14,
+   "removed": [
+    "自分の声",
+    "あくび"
+   ],
+   "reason": "『自分の声』は上位40本中10本(1081〜1453再生)、『あくび』は1271再生でいずれもch平均524の2.1〜2.8倍。scp-labと同じ自傷パターンのため解除。"
+  },
+  {
+   "date": "2026-09-10",
+   "target": "data/channels/daily-science.json",
+   "field": "theme_seeds",
+   "before": 24,
+   "after": 26,
+   "added": [
+    "なぜ骨伝導だと自分の声だけ低く聞こえるのか — 録音とのズレの正体",
+    "なぜイヤホンを外した直後だけ自分の声が響くのか"
+   ],
+   "reason": "『録音・骨伝導・自分の声』系が上位40本の30%を占め当ch最強フォーマット。解除に合わせて同系統を投入。"
+  },
+  {
+   "date": "2026-09-10",
+   "target": "(判定のみ)",
+   "field": "genre_blacklist",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "30%ルール再判定。daily-science ch平均524→閾値157に対し最下位の『日常の違和感』は195で対象外(『宇宙・天体』は登録済)。scp-lab ch平均495→閾値149に対し『財団組織・職員』237は登録済、『対立組織・Kクラス』313はn=1。新規該当なし(3日連続)。"
+  },
+  {
+   "date": "2026-09-11",
+   "target": "全6ch",
+   "field": "title_rules.hard_constraints.forbid_patterns / banned_words",
+   "before": "絵文字ルールなし(max_emoji=0 は未読キー)",
+   "after": "絵文字正規表現 + 流出実績18字を追加",
+   "reason": "ch内対照で5/6chが悪化(scp-lab 0.32 vs 0.98 等)。09-04〜09-08 も毎日1〜2本流出していたため実効化。check/repair 両方を検証済。"
+  },
+  {
+   "date": "2026-09-11",
+   "target": "scp-lab / yokai-watch / daily-science / 2ch-matome",
+   "field": "theme_priority.title_style",
+   "before": "答え提示語中心",
+   "after": "先頭に『なぜ型を第一候補』を明記(旧文は title_style_prev_20260911 に退避)",
+   "reason": "ch内対照で「なぜ」型が非該当の1.8〜3.2倍。答え提示語は単独では効果が確認できず。"
+  },
+  {
+   "date": "2026-09-11",
+   "target": "pokemon-lab",
+   "field": "theme_priority.title_style",
+   "before": "他chと共通の答え提示語方針",
+   "after": "二人称(君/あなた)必須・「なぜ」回避・サムネ最優先を明記",
+   "reason": "当chのみ「なぜ」0.00(n=9) vs 0.37(n=19)、二人称 0.45 vs 0.15。08-25以降 0.26→0.20 と唯一悪化、到達CTR 0.69% で最下位。"
+  },
+  {
+   "date": "2026-09-11",
+   "target": "pokemon-lab",
+   "field": "autopilot.theme_queue",
+   "before": "0本(枯渇)",
+   "after": "20本を補充(全件 二人称＋答え提示語、ゲート事前検証済)",
+   "reason": "キュー枯渇が当chの劣化要因の一つと判断。実測で効く型に揃えて補充。"
+  },
+  {
+   "date": "2026-09-11",
+   "target": "scp-lab / yokai-watch / company-facts / 2ch-matome",
+   "field": "autopilot.theme_queue",
+   "before": "54本がゲート不通過",
+   "after": "実測型で書き直し(旧題は title_prev_20260911 に保存)、全ch NG 0/142",
+   "reason": "repair() による語尾の機械追加と語の収斂を防ぐため。scp/yokai はなぜ型、company-facts は理由・実態・裏側型、2ch は ワイ除去。"
+  },
+  {
+   "date": "2026-09-11",
+   "target": "全6ch",
+   "field": "short_format.extra_rules",
+   "before": "中盤の指示なし",
+   "after": "『3行目に必ず前提を覆す一言か具体数字を置く／説明を2行続けない』を追加",
+   "reason": "維持率が 15%地点102% → 20%地点84% → 30%地点63% と中盤で崖。尺は _experiments.length_20260905 により 09-12 まで変更禁止のため構成で対応。"
+  },
+  {
+   "date": "2026-09-11",
+   "target": "(実行なし)",
+   "field": "Phase 4 制作トリガ",
+   "before": "-",
+   "after": "指揮者からの trigger は発行せず",
+   "reason": "サンドボックスから localhost:8000 に到達不可。かつ backend の APScheduler が 09-11 に6ch全てで発火済(daily-science 06:45 / company-facts 07:30 / pokemon-lab 07:45 / 2ch-matome 08:15 / scp-lab 08:15 / yokai-watch 08:45)。二重起動を避けた。"
+  },
+  {
+   "date": "2026-09-11n",
+   "target": "daily-science / scp-lab",
+   "field": "theme_seeds",
+   "before": "素の文字列が混在（daily-science 6件 / scp-lab 3件）",
+   "after": "全26件ずつを {title, angle} の dict に正規化（.bak_pdca_20260911n に退避）",
+   "reason": "suggest_themes が 'str' object has no attribute 'get' で落ち、genre_blacklist の差し替え経路が常に失敗して停止ジャンルのテーマがそのまま採用されていた。"
+  },
+  {
+   "date": "2026-09-11n",
+   "target": "backend/pipeline/auto_scenario/generator.py",
+   "field": "ScenarioGenerator.suggest_themes",
+   "before": "[s['title'] for s in channel.theme_seeds if s.get('title')]",
+   "after": "文字列/dict の両方を吸収するループに変更",
+   "reason": "設定の書き方ひとつで機能が無言で死ぬのを防ぐ（13ch共通）。"
+  },
+  {
+   "date": "2026-09-11n",
+   "target": "backend/pipeline/auto_scenario/generator.py",
+   "field": "_sanitize_regenerated_title（新設）＋ _regenerate_title_* 3経路の戻り値",
+   "before": ".strip('「」\"\\'　 ') のみ",
+   "after": "対になっていない/順序が逆の括弧の破片と末尾区切り記号を除去。8字未満は None で元題を維持",
+   "reason": "『…仕組み、】【の実態』がフォルダ名・サムネ・説明文・mp4 まで貫通した（job 1a6e3105）。"
+  },
+  {
+   "date": "2026-09-11n",
+   "target": "backend/pipeline/auto_scenario/cross_channel_gate.py",
+   "field": "ANSWER_MARKER_DAILY_LIMIT",
+   "before": "3",
+   "after": "6",
+   "reason": "朝の『なぜ型』統一で1語が上限を即消費し、キュー全体がブロック（当日16回）。18本/日に対し6なら1語への全寄りは防げる。"
+  },
+  {
+   "date": "2026-09-11n",
+   "target": "backend/tests/test_title_gates_20260904.py",
+   "field": "テスト",
+   "before": "上限3を直書き＋サニタイズ/seed形状の検査なし",
+   "after": "上限は『枠数未満』で検査。RegeneratedTitleSanitizeTest(5件) と ThemeSeedShapeTest(2件) を追加",
+   "reason": "今回の3件の修正を回帰として固定。同ファイル24件・全pass。"
+  },
+  {
+   "date": "2026-09-11n",
+   "target": "(判定のみ)",
+   "field": "genre_blacklist",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "30%ルール再判定。該当は daily-science『宇宙・天体』(avg 0/n=6) と scp-lab『オブジェクトクラス』(avg 0/n=2) のみで、いずれも登録済（4日連続で新規なし）。"
+  },
+  {
+   "date": "2026-09-11n",
+   "target": "(見送り)",
+   "field": "theme_blacklist",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "本日の類似ペアは題材ではなくタイトルの型が似ているだけ（yokai 0.823/0.818、pokemon 0.744）。blacklist に入れると正当な題材を禁止するため見送り、類似度計算側の修正を提案に回した。"
+  },
+  {
+   "date": "2026-09-12n",
+   "target": "daily-science / scp-lab / yokai-watch / akashic-librarian / fake-paper / 2ch-matome / company-facts / pokemon-lab",
+   "field": "theme_queue.items[].title",
+   "before": "hard_constraints 適合 11/107 (10%)",
+   "after": "**107/107 (100%)**。全件を手で書き直し、旧題は各項目の _retitled_20260912n に保存（.bak_pdca_20260912n に退避）",
+   "reason": "補充側が自分の title_rules を参照していないため。このまま流すと repair() が語尾に『の正体』を機械追加して日本語が壊れる（09-11 と同型）。"
+  },
+  {
+   "date": "2026-09-12n",
+   "target": "scp-lab",
+   "field": "theme_queue（1件削除）",
+   "before": "SCP-3812「名前を超えた存在」…（23件）",
+   "after": "削除（22件）",
+   "reason": "SCP-3812 は n=2・平均139再生(ch平均599の0.23倍)。同時に theme_blacklist へ登録した。"
+  },
+  {
+   "date": "2026-09-12n",
+   "target": "yokai-watch",
+   "field": "theme_queue（1件削除）",
+   "before": "コマさんの元ネタ狛犬…（10件）",
+   "after": "削除（9件）",
+   "reason": "コマさんは 648再生(0.70倍)で blacklist 該当かつ平均以下。"
+  },
+  {
+   "date": "2026-09-12n",
+   "target": "scp-lab",
+   "field": "theme_blacklist",
+   "before": "14語",
+   "after": "16語（+SCP-096, +SCP-3812）",
+   "reason": "SCP-096 は n=7 で当ch最多重複かつ平均369(0.62倍)、SCP-3812 は n=2・139(0.23倍)。『重複かつ平均以下』のみを追加し、心臓(1.89倍)・別の文明(2.05倍)・図書館(1.20倍)は対象外とした。"
+  },
+  {
+   "date": "2026-09-12n",
+   "target": "daily-science",
+   "field": "theme_blacklist",
+   "before": "16語",
+   "after": "17語（+横隔膜）",
+   "reason": "blacklist 済みの『しゃっくり』の言い換えとして n=4 まで増殖、平均233(0.35倍)。"
+  },
+  {
+   "date": "2026-09-12n",
+   "target": "yokai-watch",
+   "field": "theme_blacklist",
+   "before": "15語",
+   "after": "12語（−河童 −エンマ大王 −ぬらりひょん）",
+   "reason": "いずれも ch 平均以上（1.82/1.36/1.05倍）。09-07 と同型の自傷を解除。"
+  },
+  {
+   "date": "2026-09-12n",
+   "target": "pokemon-lab",
+   "field": "theme_blacklist",
+   "before": "19語",
+   "after": "18語（−ヤドンの尻尾）",
+   "reason": "1567再生(1.58倍)・登録+3人で当ch最高の登録効率だった。"
+  },
+  {
+   "date": "2026-09-12n",
+   "target": "(判定のみ)",
+   "field": "genre_blacklist",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "30%ルール再判定。daily-science 平均524→閾値157（最下位の日常の違和感195.6は上回る）、scp-lab 平均495→閾値148（最下位の財団組織・職員236.8は上回る）。該当する宇宙・天体/オブジェクトクラスは登録済み。5日連続で新規なし。"
+  },
+  {
+   "date": "2026-09-12n",
+   "target": "(検証)",
+   "field": "backend/tests",
+   "before": "09-11 に test_no_regression_in_duplicate_prevention が RED と記録",
+   "after": "test_fixes_20260909.py + test_title_gates_20260904.py = 72 passed / 313 subtests passed（当該テスト含め GREEN）",
+   "reason": "設定変更後の回帰確認。"
+  },
+  {
+   "date": "2026-09-13n",
+   "target": "data/channels/scp-lab.json",
+   "field": "theme_blacklist",
+   "before": "16語",
+   "after": "9語（−SCP-173 −視線を外 −目を離 −見るのをやめ −最初の異常存在 −17年間 −17年間隠し）",
+   "reason": "復旧した analytics で再判定。0再生除外 n=159・ch base subs/1k 0.81 に対し全て 1.43〜3.18倍。09-10 の解除判断を 09-11 夜の run が誤って巻き戻していたものを、今回は登録/千再生を根拠に再解除した。維持は 17名(0.60x)・担当者17(0.00x)・SCP-1983(0.73x)・SCP-096・SCP-3812・最古の異常存在・かまいたち・悪夢の回路・電子工作。"
+  },
+  {
+   "date": "2026-09-13n",
+   "target": "data/channels/scp-lab.json",
+   "field": "theme_seeds",
+   "before": "26件",
+   "after": "29件（+SCP-173収容室の瞬き / +目を離すと動く収容物の比較 / +最初に収容した異常存在は何番か）",
+   "reason": "解除した勝ち筋クラスタに供給が無いと解除の効果が出ないため、同クラスタの seed を3本補充。形式は 09-11n の規約どおり {title, angle} の dict。"
+  },
+  {
+   "date": "2026-09-13n",
+   "target": "data/channels/yokai-watch.json",
+   "field": "theme_blacklist",
+   "before": "12語",
+   "after": "13語（+雪女）",
+   "reason": "直近30日 n=4、再生 261/1012/189/1015 と平均並みなのに登録0人・subs/1k 0.00（ch base 0.74）。再生のみ取れて登録に繋がらない典型。"
+  },
+  {
+   "date": "2026-09-13n",
+   "target": "data/channels/company-facts.json",
+   "field": "theme_seeds",
+   "before": "26件",
+   "after": "28件（+三菱電機の年収と手当の内訳 / +キーエンス年収2000万の構造）",
+   "reason": "直近30日『年収』含む n=36 subs/1k 0.66 vs 含まない n=5 0.46（1.43倍）。再生上位4本も全て年収系。"
+  },
+  {
+   "date": "2026-09-13n",
+   "target": "(判定のみ)",
+   "field": "genre_blacklist",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "30%ルール再判定。daily-science 平均524→閾値157（最下位の日常の違和感195.6は上回る）、scp-lab 平均495→閾値148（最下位の財団組織・職員236.8は上回る）。該当する宇宙・天体／オブジェクトクラスは登録済み。6日連続で新規なし。"
+  },
+  {
+   "date": "2026-09-13n",
+   "target": "(見送り)",
+   "field": "theme_blacklist（重複由来の追加）",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "本日の類似ペア30件は全て 2026-05〜06 の同日多重アップロードで、うち大半が0再生の死蔵在庫。現行制作物ではないため追加根拠にしない。判定窓を『公開30日以内かつ再生>0』に絞る修正を提案へ回した。"
+  },
+  {
+   "date": "2026-09-13n",
+   "target": "(見送り)",
+   "field": "title_rules.forbid_patterns",
+   "before": "-",
+   "after": "変更なし",
+   "reason": "『連番＋絵文字』型（1分妖怪ファイル #N：🔍…）は subs/1k で scp 0.38x・yokai 0.37x と最悪だが、`#\\d+[：:]` と max_emoji=0 で6ch全てに既にゲートが入っており、実測に残っているのは8月公開の旧在庫のみ。追加対応不要。"
+  },
+  {
+   "date": "2026-09-14n",
+   "target": "data/channels/*.json（全13ch）",
+   "field": "theme_blacklist",
+   "before": "ch毎 0〜21語",
+   "after": "+実在個人名『大谷翔平』『堀大輔』『ヒカキン』・第三者キャラIP『ちいかわ』を全13chへ。加えて実在ブランド『USJ』を company-facts と clip系を除く8chへ（company-facts は企業分析が本業のため除外）",
+   "reason": "google_trends 由来の自動キュー投入が実在個人名をフィクション/解説chへ横展開していた。『大谷翔平』は9ch同時キュー投入（fake-paper では『大谷翔平選手の打撃フォームは宇宙人の影響を受けている？』、yokai-watch では『大谷翔平と妖怪の関係を探る！』）。『堀大輔』は scp-lab で『なぜ堀大輔は72時間眠らないのか？睡眠不足の恐怖』として 09-14 00:00 に実公開済み（実在人物をSCP対象として扱う構成）。名誉毀損・IPリスクの遮断を最優先とした。"
+  },
+  {
+   "date": "2026-09-14n",
+   "target": "data/channels/*.json（8ch）",
+   "field": "autopilot.theme_queue",
+   "before": "clip-animal 14 / clip-fukada 32 / clip-kaneko 38 / clip-lab 33 / fake-paper 9 / scp-lab 19 / socio-rx 14 / yokai-watch 21",
+   "after": "それぞれ 13/30/36/32/3/18/13/20（計15件除去）。除去内訳は _queue_purge_log に記録",
+   "reason": "09-12 の既知不具合『theme_blacklist はキュー補充時に照合されない』が未修正のため、blacklist 追加だけでは既存キューに残る。該当15件を手動除去して実効化。うち6件は fake-paper の既存blacklist（テンプレ定型文）該当で、以前から素通りしていた分。"
+  },
+  {
+   "date": "2026-09-14n",
+   "target": "data/channels/scp-lab.json / daily-science.json",
+   "field": "theme_seeds",
+   "before": "scp-lab 29件 / daily-science 26件",
+   "after": "scp-lab 32件 / daily-science 29件（各+3）",
+   "reason": "09-14 実測（直近公開・再生>0、scp n=48 / ds n=45、指標は subs/1000再生）。scp-lab は疑問形 1.25 vs 断定形 0.68（1.8倍）、トップ変換3本が全て『SCP番号＋単位つき数値＋経過日数＋疑問形』。daily-science はトップ変換2本が『身近な身体感覚＋倍率つき数値』。この型を種に固定。"
+  },
+  {
+   "date": "2026-09-14n",
+   "target": "(見送り)",
+   "field": "genre_blacklist",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "30%ルール再判定。daily-science 全体平均538.6→閾値161.6、該当ジャンルなし。scp-lab 全体平均523.5→閾値157.1、形式上は『オブジェクトクラス』(avg0)のみ該当するが n=2 かつ2本とも0再生の未計測在庫であり、性能ではなくデータ欠損。09-13 に特定済みの『自傷解除の真因＝再生数を根拠にした判断』を繰り返すため見送る。なお同ジャンルは既に genre_blacklist 登録済み。"
+  },
+  {
+   "date": "2026-09-15n",
+   "target": "data/channels/{daily-science,scp-lab,yokai-watch,company-facts,2ch-matome,socio-rx}.json",
+   "field": "theme_blacklist",
+   "before": "久保建英・女性騎手 いずれも6ch全てで未登録",
+   "after": "6ch全てに『久保建英』『女性騎手』を追加",
+   "reason": "09-14 finding(trends-injects-real-people-into-fiction-channels)の残処理。trend_detections に status='blocked' 18件が出現しフィルタ自体は稼働開始したが、既存の queued 281件は再審査されず 久保建英×4・女性騎手×4 が投入可能なまま残っていた。大谷翔平は既に6ch全てでブラックリスト済みだったため追加不要。バックアップ: *.json.bak_pdca_20260915n"
+  },
+  {
+   "date": "2026-09-15n",
+   "target": "data/channels/yokai-watch.json",
+   "field": "theme_seeds",
+   "before": "29件（過半が妖怪ウォッチ作品キャラ）",
+   "after": "34件（古典妖怪・都市伝説系5件を追加: 塗壁／座敷童子／一反木綿／口裂け女／砂かけ婆）",
+   "reason": "実測 subs/1k: 古典妖怪・都市伝説系 0.89(n=26/登録17) vs 作品キャラ系 0.59(n=10/登録4)。平均再生は734 vs 676でほぼ同じ＝再生ではなく登録転換だけが1.5倍開く。seedsの供給が実績と逆方向を向いていたため是正。_theme_seeds_note_20260915n に根拠を記載。"
+  },
+  {
+   "date": "2026-09-15n",
+   "target": "data/channels/company-facts.json",
+   "field": "theme_seeds",
+   "before": "28件",
+   "after": "31件（『実は』型3件を追加: 日本郵政の年収二層／スシローの回転と粗利／商社の手当構造）",
+   "reason": "実測『実は』有 subs/1k=0.92(n=11)・平均再生1478 / 無 0.46(n=28)・1166。当ch唯一、再生と登録が同方向に2倍動く要因。_theme_seeds_note_20260915n に根拠を記載。"
+  },
+  {
+   "date": "2026-09-15n",
+   "target": "(見送り)",
+   "field": "genre_blacklist",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "30%ルール再判定。daily-science 全体平均526.6→閾値158.0、最下位の宇宙・天体(0)と日常の違和感(244.5)は既に登録済み、食・飲296.7は閾値超で対象外。scp-lab 全体平均528.2→閾値158.5、オブジェクトクラス(0)・財団組織・職員(236.8)とも登録済み。対立組織・Kクラスは n=1 で判断不能。yokai/company-facts/2ch-matome はジャンルが『その他』1本化されており分割不能。新規追加なし。"
+  },
+  {
+   "date": "2026-09-15n",
+   "target": "(見送り)",
+   "field": "theme_blacklist（重複テーマ）",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "類似ペア30件(daily-science 15/scp-lab 15)を公開日で全数照合した結果、しゃっくり・横隔膜=06-22〜23、酸素1秒=06-19〜20、SCP-1730=07-11〜19、SCP-173=07-19〜26、図書館=07-11 と全て6〜7月の旧在庫で、直近30日の生成分に重複はゼロ。再生成されていない題材を塞ぐ実益が無い上、『体の不思議』は当ch最大ジャンル(avg545/n=96)であり 09-07 の format-blacklist-killed-best-format と同型の自傷になるため意図的に見送り。"
+  },
+  {
+   "date": "2026-09-16n",
+   "target": "company-facts",
+   "field": "theme_blacklist",
+   "before": "8件",
+   "after": "9件（+ 're:サイゼリヤ.*原価率'）",
+   "reason": "09-07公開と09-16公開が類似0.723。直近30日内で初めて検出された実重複。サイゼリヤ全体ではなく『原価率』軸のみ正規表現でブロックし、他題材は残す。file: data/channels/company-facts.json"
+  },
+  {
+   "date": "2026-09-16n",
+   "target": "company-facts",
+   "field": "theme_seeds",
+   "before": "31件",
+   "after": "28件",
+   "reason": "重複の生成元 seed『サイゼリヤの原価率』を削除。併せて次の重複予備軍だった『キーエンスの年収が異常』『キーエンスの年収の中身』を削除し、最も具体的な『キーエンスの年収2000万円台はどこから来るのか』1本に集約。file: data/channels/company-facts.json"
+  },
+  {
+   "date": "2026-09-16n",
+   "target": "daily-science",
+   "field": "theme_seeds",
+   "before": "29件",
+   "after": "26件",
+   "reason": "theme_blacklist(寝言/自分の声)と衝突し永久に生成不能だった死にseed 3件を削除（なぜ寝言は自分では一度も聞けないのか／なぜ骨伝導だと自分の声だけ低く聞こえるのか／なぜイヤホンを外した直後だけ自分の声が響くのか）。09-05 findingの再発分。file: data/channels/daily-science.json"
+  },
+  {
+   "date": "2026-09-16n",
+   "target": "yokai-watch",
+   "field": "theme_seeds",
+   "before": "34件",
+   "after": "32件",
+   "reason": "theme_blacklist(雪女)と衝突していた死にseed 2件を削除（ふぶき姫と雪女伝承／雪女の正体が怖すぎる）。file: data/channels/yokai-watch.json"
+  },
+  {
+   "date": "2026-09-16n",
+   "target": "socio-rx",
+   "field": "title_rules.hard_constraints.require_any_of.repair_with",
+   "before": "['処方箋','理由','わけ']",
+   "after": "['理由','わけ']",
+   "reason": "09-15・09-16と2日連続で語尾に『処方箋』が助詞なし接続して文が破綻した出荷物が出た。処方箋は名詞化辞ではないため直前が体言/過去形だと必ず壊れる。タイトル本文で自然に使う分は require_any_of.words 側に残るため影響なし。file: data/channels/socio-rx.json"
+  },
+  {
+   "date": "2026-09-16n",
+   "target": "(見送り)",
+   "field": "genre_blacklist",
+   "before": "-",
+   "after": "追加なし",
+   "reason": "30%ルール再判定。daily-science 全体平均550.7→閾値165.2、最下位の宇宙・天体(0)と日常の違和感(244.5)は登録済み、食・飲296.7は閾値超。scp-lab 全体平均535→閾値160.5、財団組織・職員236.8は閾値超かつ登録済み、対立組織・Kクラスは n=1 で判断不能。yokai/company-facts/2ch-matome/socio-rx はジャンルが『その他』1本化で分割不能。新規追加なし。"
+  }
+ ]
 }

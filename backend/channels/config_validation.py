@@ -179,6 +179,53 @@ def validate_channel_config(
                 fix='各要素を {"title": "...", "angle": "..."} の dict にしてください',
             ))
 
+    # 6) theme_seeds / autopilot.theme_queue が theme_blacklist と衝突している
+    #    衝突した seed は pop 時の最終ゲートで**無言で捨てられる**（枠が空撃ちに
+    #    なるだけでエラーは出ない）。設定した本人が気づけるよう読み込み時に出す。
+    #    照合は実運用と同じ blacklist_match（re:/= 接頭辞・数字境界も同一規則）。
+    blacklist = raw.get("theme_blacklist") or []
+    if isinstance(blacklist, list) and blacklist:
+        try:
+            from pipeline.auto_scenario.theme_dedup import blacklist_match
+        except Exception:
+            blacklist_match = None  # 単体テスト等で pipeline が無い環境は黙って省略
+        if blacklist_match is not None:
+            def _titles(items):
+                out = []
+                for s in (items or []):
+                    if isinstance(s, dict):
+                        t = str(s.get("title") or "").strip()
+                    else:
+                        t = str(s or "").strip()
+                    if t:
+                        out.append(t)
+                return out
+
+            for field_name, titles in (
+                ("theme_seeds", _titles(seeds if isinstance(seeds, list) else [])),
+                ("autopilot.theme_queue",
+                 _titles((raw.get("autopilot") or {}).get("theme_queue"))),
+            ):
+                hits = []
+                for t in titles:
+                    try:
+                        term = blacklist_match(t, blacklist)
+                    except Exception:
+                        continue
+                    if term:
+                        hits.append((t, term))
+                if hits:
+                    sample = " / ".join(f"「{t}」←『{term}』" for t, term in hits[:3])
+                    issues.append(ConfigIssue(
+                        channel_id=cid, level=LEVEL_WARNING,
+                        code="seed_blacklist_collision",
+                        message=(f"{field_name} の {len(hits)} 件が theme_blacklist に"
+                                 f"該当します（pop 時に無言で捨てられ、枠が空撃ちに"
+                                 f"なります）: {sample}"),
+                        field=field_name,
+                        fix="seed を差し替えるか、theme_blacklist の該当語を見直してください",
+                    ))
+
     return issues
 
 

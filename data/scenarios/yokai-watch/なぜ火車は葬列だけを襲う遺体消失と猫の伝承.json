@@ -1,0 +1,517 @@
+{
+  "title": "なぜ火車は葬列だけを襲う？遺体消失と猫の伝承",
+  "theme": {
+    "title": "なぜ火車は葬列だけを襲うとされたのか",
+    "angle": "遺体が消える事件の説明として機能した。猫と結びつく経緯まで。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "火車、好きな人多いよね。でも元ネタを知ると葬列の見方が変わるんだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "あの妖怪ウォッチの火車？でも江戸の絵では、遺体をさらう怪異なんだよね？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、葬列から遺体が消えた時。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "学校の帰り道に友達が一人消えるみたいに、棺の中身だけ消えるってこと？",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "しかも猫を棺に近づけるなとされた。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "こういう伝承を記録してるのがSCP財団って組織なんだ。"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "高評価を置いて、元ネタが怖い妖怪シリーズも見てね。毎日投稿中、1万人目標のチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？火車は1776年刊の鳥山石燕『画図百鬼夜行』にも姿を残す妖怪で、好きな人ほど元ネタを知ると見方が変わるんだ。\n妖怪ウォッチで会ったあいつを、今日は葬列の闇から追う。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "火車って名前も姿も強そうで好きなやつ！でも、道を歩く人じゃなく葬列だけを狙うって変だよね。\n棺の中には何があるか分かっているのに、なぜそこへ来るの？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、元の伝承では火車は空から現れ、葬送の途中で遺体を奪うとされた。\n最初に言っておくと、火車は生者を追う怪物より、空になった棺を説明する怪異だったんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。棺を運んでいたのに目的地で開けたら中身がない、そんな話が本当に残っているの？\nゲームの配達クエストで荷物だけ消えるより、ずっと取り返しがつかないよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "火車という名は火の車を思わせるが、文献ごとに姿は一定しない。雷雲の中の異形、炎をまとった車、黒い獣という像が重なっている。\n共通するのは、死者を運ぶ列の上でだけ、異変が起きることなんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "まず火車は、最初から猫妖怪として固定されていた存在ではない。地獄から来る車の恐怖、雷とともに落ちる怪異、猫への禁忌が、数百年かけて一つの名に集まった。\nこの混ざり方自体が、火車の正体を複雑にしている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ火車は、一匹の妖怪が昔から同じ姿でいたんじゃなくて、遺体が消えた場面の怖さをまとめた名前なの？\nそれなら葬列だけを襲う設定にも、昔の人が困った現実の理由がありそうだね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その通りなんだ。昔の葬送では遺体を寺や墓地まで運ぶ時間があり、今のように動画や位置情報で途中を確認する手段はない。\n棺を開けてから異変に気づけば、誰が何を見たのかを一人ずつ確かめることも難しかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "棺は閉じているし、悲しんでいる人がずっと中を確認するわけにもいかないよね。\n目的地まで運ぶ間に何かあっても、気づいた時には手がかりが消えて、火車の話が広がりそうだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "考えられる事情には、棺の破損、動物による荒らし、運搬中の混乱、盗難などがある。ただし個々の火車話を、現代の原因一つで説明することはできない。\n記録が少ないからこそ、空白の部分に怪異の姿が入り込んだんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もう一つは、死の確認が今ほど確実ではなかった時代の不安だ。仮死や誤認という言葉を知らなくても、人々は死者が本当に死者なのかを恐れていた。\n遺体が消えたという語りは、家族が言えなかった出来事を包む場合もあり得る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "火車が来たと思えば、誰かの失敗や、説明しにくい事情をそのまま言わなくて済むこともあったのかな。\nでも、空になった棺の前で火車のせいだと言うしかない家族を想像すると、聞いていて苦しくなるよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここまで説明したけど、火車は単に事故を説明する妖怪ではない。伝承の中では、悪人や不信心な人の死と結びつけられることがある。\n遺体の消失はいつの間にか、その人が生前に何をしたかを裁く話へ変わってしまう。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "仏教説話では、火の車は罪人を地獄へ運ぶ恐ろしい乗り物として語られた。火車はそのイメージを背負い、葬列の上に降りる罰の影として理解されるようになった。\nだから空の棺は、ただの異変では終わらなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "遺体が消えた理由を知りたいだけなのに、いつの間にか本人が悪かったからだって話になるの？\nそれは遺された人まで責められそうで怖い。怪物より、周りの視線の方が先に来る感じがするよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "火車伝承は、単なるモンスター図鑑では終わらない。葬列という、人が最も弱っている時間を狙う設定には、共同体の不安と裁きが混ざっている。\n好きな妖怪ほど、元ネタが怖い。その落差は、ここで急に深くなるんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "1776年の『画図百鬼夜行』で石燕は、火車を雲の間から現れる怪異として描いた。石燕の絵は事件記録そのものではないが、火車の恐怖を一目で伝える姿になった。\nその視覚化が、後の妖怪像にも大きく影響している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "江戸時代の絵に火車がもう載っているなら、かなり広く知られた名前だったんだね。\nでも雲から来る怪異なら、どうして後の火車は猫と結びついたの？そこが一番気になるよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "猫との結びつきは、火車で特に有名な後のイメージなんだ。日本各地には、猫を遺体のそばへ近づけないという葬送の習俗が残っている。\n猫が棺をまたぐと死者が起きる、あるいは怪異になると恐れた地域もあった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "猫がまたぐだけで？猫は暖かい場所を探して静かに近づくこともあるのに、それが葬式では危険な合図に見えたの。\n普段のかわいい行動が、夜の棺の前では火車の足音に変わるみたいで嫌だよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "民俗学では、猫の夜行性、暗闇で光る目、音を立てない足取りが、死や霊の世界と結びついたと考えられている。\nもちろん全国で同じ意味だったわけではないが、棺へ近づく猫は不安を呼びやすい存在だった。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "火車が猫の姿を取るという話は、この葬送の禁忌と、遺体を奪う怪異の話が重なって強くなった。\n猫を遠ざける行為は、動物よけという実用だけでなく、火車を近づけない儀式のように扱われた場合もある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ棺の近くにいた猫は、火車本人かもしれないって疑われたの？それとも火車を呼ぶ前触れみたいに見られたの？\nどっちにしても、黒い猫がじっと見ていたら、昔の人は目をそらしたくなるよね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "地域の語りには両方の形がある。猫そのものが変じる場合もあれば、猫がいることで火車が来るとされる場合もある。\n伝承は一冊の公式設定ではないから、土地ごとの差を消して断定してはいけないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪ウォッチの火車は、作品の公式設定として描かれたキャラクターであり、伝承上の火車と完全に同じ存在ではない。\n一方で名前が背負う葬列と猫の不穏さを知ると、ゲーム内の姿にも別の影が見えてくる。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ファンの考察で、ゲーム内の細かい設定を原典そのものだと言うのは違うんだね。\n公式は公式、昔話は昔話。でも同じ火車という名前の奥に、空っぽの棺が残っているのは確かなんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここからは、なぜ葬列だけなのかをさらに現実に寄せて考える。葬列は人が集まり、泣き、祈り、普段より周囲の細部を見落としやすい場面だった。\n異変の瞬間を全員が見ていないことも、決して不自然ではない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "棺は閉じられていることが多く、途中で中身を確かめる習慣がなければ、異常に気づくのは目的地に着いた後になる。\nゲームの荷物運びなら到着時に数を確認するけれど、葬送でそれを疑うのは、あまりに残酷だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "みんなが棺を守っていたつもりでも、誰も中を見ていなかった時間ができるんだね。\n気づいた時には理由も手がかりも消えていて、空から来た火車が一番しっくり来てしまうのが、すごく分かってしまうよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "火車は、目の前の不思議を説明する便利な答えであると同時に、答えを閉じる名前でもあった。\n火車が来たと言われた瞬間、誰が何を見落としたのか、どこで遺体が消えたのかを、これ以上問いにくくなるからだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、すべての遺体消失譚を現実の事件として読むのも危険なんだ。説話は教訓のために形を変え、後世の本は恐ろしさを伝えるために場面を整える。\n元の伝承では、事実と物語の境目そのものが揺れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "記録に残っているから本当に火車が来た、とも言えないし、全部作り話とも言い切れないのか。\n最初に何があったのか分からないまま、話だけが江戸から今まで残ることが、一番ひんやりするよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "火車の名は現代の汽車とは別の言葉で、火の車という古い仏教語が土台にある。地獄へ運ばれる移動の恐怖が先にあり、そこへ葬列という死者の移動が重なった。\nだから火車は、道の途中に現れる怪異として語られやすかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "人は死者を寺や墓地へ運び、最後の別れを完了させようとする。火車はその途中に割り込み、別の場所へ連れ去る。\n葬列を襲う恐ろしさは、身体だけでなく、見送る側の最後の役目まで奪う構図にあるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "遺体を奪われるのは、物を盗まれるのとは全然違うね。お別れをする場所まで届かなかったら、家族はどこに手を合わせればいいの？\n火車は死者だけじゃなく、残された人の時間まで持っていく妖怪なんだ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承の中には、僧侶の読経や信仰の力で火車を退ける筋書きもある。これは怪異退治の場面である一方、残された人が葬送をやり直し、死者を送り直すための物語にも見える。\n祈りは火車への反撃として置かれている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "けれど火車を退けた後、遺体がどうなったのかまで細かく書かない話も多い。怪異が去った後の静けさほど、記録では妙に短い。\nそこから先は、記録が途切れている。空の棺を見た人の声も残っていない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "聞かなきゃよかった。火車が来なかったとしても、棺が空だった理由を誰も知らないなら、夜に猫の足音がしただけで思い出しそう。\n火車って、姿が怖いんじゃなくて、説明できない穴が怖い妖怪なんだね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで火車の正体を言い切るなら、遺体が消える不安、死者への裁き、猫への畏れが重なってできた怪異だ。\n火車は一つの事件の犯人ではなく、説明できなかった出来事に貼られた、冷たい名前として生き残ったんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから葬列だけを襲うのは、火車がたまたま死者を好んだからではない。遺体が消えた時、最も強く必要とされた説明が、葬列の上で火車という姿を取ったからなんだ。\n猫はその説明を目の前へ引き寄せる影になった。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "答えは分かったのに、猫が火車そのものだったのか、火車を呼んだだけなのかは地域で違うんだよね。\n同じ猫でも、昔の人が何を失った場所にいたかで、意味まで変わってしまうんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承を読む時は、猫を怖がるためではなく、当時の人が死をどれほど慎重に扱っていたかを見ることができる。\nただ、夜道で葬列の話を思い出した時、暗がりに浮かぶ二つの目だけが、先に火車へ見えるかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "資料としては『画図百鬼夜行』、各地の民話集、葬送習俗を記した民俗誌を照らし合わせると、火車像の変化が見えてくる。\n一冊だけで正解を決めず、いつ、どの土地で語られた話かを確かめるのが調査の基本なんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "同じ火車でも、江戸の絵、村の語り、妖怪ウォッチのキャラで役割が違うんだね。\nそれを全部同じ設定だと思うと混ざっちゃうけど、分けて聞くと、火車という名前の重さが逆に分かってくるよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ファンの間には、ゲーム内の描写から火車の性格や過去を読む考察もある。それは作品を楽しむ読み方として大切だ。\nただし伝承の火車と結びつける時は、公式設定ではなく非公式の考察だと区別しておこう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もし火車の話を友達に話すなら、猫の妖怪だっただけで終わらせない方がいい。棺が空になった時、人々は理由を失い、その穴を埋めるために空から降りる怪異を想像した。\nそこに火車の本当の不穏さが残っている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それを聞くと、火車が葬列を選んだんじゃなくて、葬列の側が火車を必要としてしまったみたいに聞こえる。\nえ、待って。その方が妖怪が人のそばに生まれる感じがして、雲の上の怪物よりずっと怖いよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あの妖怪の正体は、雷雲の上にいる怪物だけではない。誰にも説明できなかった死者の不在と、それを口にできなかった人々の沈黙も、火車の一部になった。\nだから伝承の火車は、今も棺の外から静かに見ているように感じる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、妖怪ウォッチのジバニャンを入口に、猫が死者のそばで恐れられた別の伝承も追う予定なんだ。\n火車の猫とつながる話なのに、そこにはまた別の、家へ帰れない理由が残っている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "火車の後で猫の伝承を聞くの、もうかわいいだけでは見られなくなるやつだよ。\nでも知りたい。遺体のそばに近づいた猫が、昔の人には何に見えていたのか、次も確かめたいよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いていってほしい。元ネタが怖い妖怪シリーズでは、ゲームではこう描かれてるけど、元の伝承では違う妖怪たちを追っている。\nチャンネル登録で、次の記録が途切れた場所も一緒に見届けよう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もし夜道で黒い猫がこちらを見ていても、火車だと決めつける必要はない。ただ、葬列の古い話を知った後なら、目を合わせないほうがいい。\nその目が何を待っているのか。そこから先は、記録が途切れている。",
+      "expression": "think",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "葬列だけを",
+      "狙う火車"
+    ],
+    "hook_caption": "遺体が消える",
+    "subtitle": "火車が猫と結びついた理由",
+    "tagline": "空になった棺を説明した妖怪"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "scp-lab",
+      "bridge_line": "こういう伝承を記録してるのがSCP財団って組織なんだ。",
+      "matched_topic": "怪異"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "高評価を置いて、元ネタが怖い妖怪シリーズも見てね。毎日投稿中、1万人目標のチャン",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 24,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 5,
+        "relatability": 6,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.586,
+      "similar_to": "影女の正体はなぜ障子だけに映るのか",
+      "template_issues": [
+        "直近10本中6本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "火車はなぜ葬列を襲うのか 正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 60,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体'](+20)",
+      "好奇心ギャップ['なぜ', '正体'](+12)",
+      "短すぎ(15字 < 18)(-12)"
+    ]
+  },
+  "original_title": "火車はなぜ葬列を襲うのか 正体",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "火車はなぜ葬列を襲うのか 正体"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

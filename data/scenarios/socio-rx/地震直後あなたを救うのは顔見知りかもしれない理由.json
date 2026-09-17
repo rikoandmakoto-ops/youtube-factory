@@ -1,0 +1,359 @@
+{
+  "title": "地震直後、あなたを救うのは「顔見知り」かもしれない理由",
+  "theme": {
+    "title": "地震が教える社会の脆弱性と私たちの役割",
+    "angle": "地震を通じて、社会の弱い紐帯がどのように機能するかを探る。"
+  },
+  "short_scenario": [
+    {
+      "text": "地震の直後、あなたを助けるのは誰だろうか。",
+      "chapter_title": null,
+      "mood": "tense"
+    },
+    {
+      "text": "家族だけでは足りない構造が、そこで現れる。",
+      "chapter_title": null,
+      "mood": "tense"
+    },
+    {
+      "text": "1973年、グラノヴェッターは弱い紐帯を示した。",
+      "chapter_title": null,
+      "mood": "mysterious"
+    },
+    {
+      "text": "顔見知り程度の関係ほど情報を運びやすい。",
+      "chapter_title": null,
+      "mood": "mysterious"
+    },
+    {
+      "text": "災害時は、その細い連絡網が孤立を防ぐ。",
+      "chapter_title": null,
+      "mood": "calm"
+    },
+    {
+      "text": "あなたのせいではない。つながる場が減っただけだ。",
+      "chapter_title": null,
+      "mood": "calm"
+    },
+    {
+      "text": "明日、近所の店で一人に名前を添えて挨拶してみてほしい。",
+      "chapter_title": null,
+      "mood": "bright"
+    },
+    {
+      "text": "明日その一声を試し、次の処方箋も登録で受け取ってほしい。",
+      "chapter_title": null,
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "chapter_title": "第1章: 揺れの直後に残るもの",
+      "mood": "tense"
+    },
+    {
+      "text": "地震の直後、あなたを助けるのは家族だけだと思っていないだろうか。\n実は最初の支えは、顔見知り程度の人かもしれない。",
+      "mood": "tense"
+    },
+    {
+      "text": "避難所の場所、水、通れない道。\nこうした情報は、親しい関係の内側だけでは広がりにくい。",
+      "mood": "tense"
+    },
+    {
+      "text": "あなたが地域と深く関われないのは、協調性の不足ではない。\n働き方と住環境が、偶然の接点を減らしている。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "総務省の2021年社会生活基本調査では、単身世帯は全国で約38％を占めた。\n日常の孤立は珍しい状態ではない。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "だが地震は、その静かな孤立を一気に可視化する。\n連絡先を知らない隣人ほど、安否が分からなくなる。",
+      "mood": "tense"
+    },
+    {
+      "text": "ここで重要になるのが、弱い紐帯という考え方である。\n親友ではないが、互いを認識している関係を指す。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "1973年、社会学者マーク・グラノヴェッターは弱い紐帯の強さを論文で示した。\n仕事の情報は親友より知人から届きやすかった。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "親友同士は似た情報圏にいることが多い。\n知人は別の場所につながり、異なる情報を持ち込める。",
+      "mood": "calm"
+    },
+    {
+      "text": "災害時にも同じ構造が働く可能性がある。\n知人の一声が、別の避難経路や支援窓口へつながる。",
+      "mood": "calm"
+    },
+    {
+      "text": "最も怖いのは、助けがないことだけではない。\n助けの情報が自分のところへ届かないことである。",
+      "mood": "tense"
+    },
+    {
+      "chapter_title": "第2章: 地震が試す社会の網目",
+      "mood": "tense"
+    },
+    {
+      "text": "阪神・淡路大震災は1995年1月17日に発生した。\nこの災害は、公的支援だけでは埋められない時間差を示した。",
+      "mood": "tense"
+    },
+    {
+      "text": "災害対応には行政、消防、医療が必要である。\nただし発災直後、個人の近くにいる人の行動も大きい。",
+      "mood": "calm"
+    },
+    {
+      "text": "これは善意の量だけで決まる話ではない。\n誰が誰の存在に気づけるかという、社会の配置の問題である。",
+      "mood": "calm"
+    },
+    {
+      "text": "同じ集合住宅でも、名前を知らない住民が増えるほど安否確認は難しくなる。\n壁の薄さは、関係の近さを保証しない。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "反対に、毎朝会釈する関係は小さく見える。\nしかし非常時には、欠けた人に気づくための目印になる。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "弱い紐帯は、深い友情を作れという命令ではない。\n普段から互いの存在を少し認識する関係である。",
+      "mood": "calm"
+    },
+    {
+      "text": "ここには根性論では解けない診断がある。\n孤立は個人の性格より、接点が設計されない環境から生まれやすい。",
+      "mood": "calm"
+    },
+    {
+      "text": "だから、内向的な人だけに地域参加を求めても処方にならない。\n負担の小さい接点を増やす方が現実的である。",
+      "mood": "bright"
+    },
+    {
+      "text": "地震は建物の耐震性だけを試すわけではない。\n情報と気づきが届く、社会の細い線も試している。",
+      "mood": "tense"
+    },
+    {
+      "chapter_title": "第3章: 弱い紐帯が届かせる情報",
+      "mood": "mysterious"
+    },
+    {
+      "text": "2011年3月11日の東日本大震災では、多様な通信手段が同時に注目された。\n電話がつながりにくい時、別の連絡線が役立った。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "ただし、SNSがあれば孤立を防げるとは限らない。\n端末、電力、情報の真偽という条件に左右されるからである。",
+      "mood": "calm"
+    },
+    {
+      "text": "情報は多いほど安全になるわけではない。\n自分の生活圏に結びつく確認可能な情報が、行動を助ける。",
+      "mood": "calm"
+    },
+    {
+      "text": "そこで顔見知りの存在が効いてくる。\nあの人が無事か、あの道は通れるかという具体的な確認ができる。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "社会学では、関係の密度だけでなく橋渡しにも注目する。\n別々の集まりを結ぶ人がいると、情報の偏りが減りやすい。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "地域の店員、管理人、子どもの送迎で会う人。\nこうした関係は親密でなくても、生活圏を横断する橋になりうる。",
+      "mood": "calm"
+    },
+    {
+      "text": "もちろん、一人の挨拶で災害被害が消えるわけではない。\n弱い紐帯と安全の関係は、単純な因果として断定できない。",
+      "mood": "calm"
+    },
+    {
+      "text": "それでも、孤立を減らす接点が情報の通り道を増やす。\nこれは地震への備えを、人間関係から補う視点である。",
+      "mood": "bright"
+    },
+    {
+      "text": "備蓄や避難経路と同じように、連絡の入口も備える。\nそれが社会の脆弱性に対する静かな対策になる。",
+      "mood": "bright"
+    },
+    {
+      "chapter_title": "第4章: 明日からの処方箋",
+      "mood": "bright"
+    },
+    {
+      "text": "診断は明快である。\n地震に弱いのは、あなたの人付き合いではなく、互いに気づけない社会の配置だ。",
+      "mood": "calm"
+    },
+    {
+      "text": "だから処方も、大きな地域活動から始めなくていい。\n深い関係を急いで作る必要もない。",
+      "mood": "calm"
+    },
+    {
+      "text": "グラノヴェッターの研究が示したのは、弱い関係にも役割があるという点である。\n細い線でも、別の場所へ届く。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "明日からの処方箋は一つだけである。\n近所の店か職場の共有空間で、いつも見る一人に名前を添えて挨拶してみてほしい。",
+      "mood": "bright"
+    },
+    {
+      "text": "名前が分からなければ、まず自分の名前を一度だけ伝えるといい。\n一分未満の接点が、安否を気にする入口になる。",
+      "mood": "bright"
+    },
+    {
+      "text": "次回は、親友より知人が機会を運ぶことがある理由を扱う。\n弱い紐帯を、仕事と暮らしでどう使うかを診断する。",
+      "mood": "mysterious"
+    },
+    {
+      "text": "明日、その一声を試してみてほしい。\n次の社会学の処方箋も、チャンネル登録で静かに届ける。",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "知らない人が",
+      "助けになる"
+    ],
+    "hook_caption": "孤立を防ぐ",
+    "subtitle": "地震が映す弱い紐帯の力",
+    "tagline": "頼れる社会は近所だけで決まらない"
+  },
+  "channel_id": "socio-rx",
+  "style": "monologue",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": false,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 85,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 8,
+          "text": "明日その一声を試し、次の処方箋も登録で受け取ってほしい。",
+          "pattern": "声[がをは]",
+          "reason": "「声が」はミュートでは確認できない"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 15,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 5,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.461,
+      "similar_to": "なぜガソリンだけじゃない？原油高で家計がじわじわ苦しくなる本当の理由",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 4,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "enhanced_title": "なぜ地震の後だけ？知らない人が助け合える本当の理由"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for socio-rx"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 72,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '本当の理由', '知らない'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "original_title": "なぜ地震の後だけ？知らない人が助け合える本当の理由",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ地震の後だけ？知らない人が助け合える本当の理由"
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

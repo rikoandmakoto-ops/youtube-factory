@@ -1,73 +1,109 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1789479427,
+    "generated_at": 1789652244,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0095,
-      "early": 0.0246,
-      "middle": 0.0042,
-      "late": 0.0046,
-      "ending": 0.0024
+      "intro": 0.0117,
+      "early": 0.0233,
+      "middle": 0.0048,
+      "late": 0.004,
+      "ending": 0.003
     },
     "per_video": [
       {
-        "video_id": "rwQA5cQvkKg",
-        "title": "なぜ寒さで顎が先に震える？3秒の正体 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 38.08,
+        "video_id": "xJ107jzo63M",
+        "title": "なぜ味噌汁は冷めると2倍しょっぱく感じるのか？実は舌の正体 #shorts #雑学 #豆知識",
+        "avg_view_percentage": 34.43,
         "drops": [
           {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0901,
-            "bucket": "early",
-            "audience_after": 0.8856
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.073,
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0844,
             "bucket": "intro",
-            "audience_after": 0.9757
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0681,
-            "bucket": "early",
-            "audience_after": 0.8175
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "d30RfsNLERk",
-        "title": "疲れた日の甘い物がすぐ消えるのはなぜ？ #shorts #雑学 #豆知識",
-        "avg_view_percentage": 68.98,
-        "drops": [
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0788,
-            "bucket": "intro",
-            "audience_after": 1.2182
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0728,
-            "bucket": "early",
-            "audience_after": 1.0848
+            "audience_after": 0.9494,
+            "scenario_line": {
+              "index": 7,
+              "speaker": "真",
+              "text": "言われてみれば確かに、湯気を吸い込んだだけでおいしそうって思うよね。味を飲む前から鼻が先に参加しているなら、口の中だけで勝負しているわけじゃないんだ。",
+              "mood": "calm"
+            }
           },
           {
             "ratio_from": 0.13,
             "ratio_to": 0.14,
-            "drop": 0.0697,
+            "drop": 0.0718,
             "bucket": "intro",
-            "audience_after": 1.297
+            "audience_after": 0.8776,
+            "scenario_line": {
+              "index": 7,
+              "speaker": "真",
+              "text": "言われてみれば確かに、湯気を吸い込んだだけでおいしそうって思うよね。味を飲む前から鼻が先に参加しているなら、口の中だけで勝負しているわけじゃないんだ。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0548,
+            "bucket": "early",
+            "audience_after": 0.6878,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "真",
+              "text": "えっ、飲み方まで関係するの？同じ汁でも、熱い時は急いで通り過ぎ、ぬるい時は口に残して確かめるから、後者のほうが塩が目立つということなんだね。",
+              "mood": "calm"
+            }
           }
         ],
-        "matched_scenario_title": null
+        "matched_scenario_title": "なぜ味噌汁は冷めると2倍しょっぱく感じるのか？実は舌の正体"
+      },
+      {
+        "video_id": "1B1C08jWh1k",
+        "title": "なぜ立つと3秒で暗くなるのか？血圧変動の正体 #shorts #雑学 #豆知識",
+        "avg_view_percentage": 66.71,
+        "drops": [
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0656,
+            "bucket": "early",
+            "audience_after": 1.0541,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "理子",
+              "text": "耳の近くと首の血管には、血の押す力の変化を見張る小さな感知役がいて、下がった瞬間に心臓へ知らせます。\n通知が届くと、心臓は少し速く打ち、血管はきゅっと細くなって、頭へ血を戻そうとするんです。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.054,
+            "bucket": "intro",
+            "audience_after": 1.2703,
+            "scenario_line": {
+              "index": 7,
+              "speaker": "真",
+              "text": "へぇ〜、知らなかった！体の中でペットボトル1本分が下へ寄るなら、頭のほうが一瞬手薄になるのも分かる気がするよ。\nでも血液は心臓がずっと押しているのに、どうしてすぐ同じ勢いで上へ送れないの？",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.054,
+            "bucket": "early",
+            "audience_after": 1.1815,
+            "scenario_line": {
+              "index": 8,
+              "speaker": "理子",
+              "text": "心臓は急な姿勢の変化を予告なしに受けるので、立った最初の数秒だけは、1回で送り出す血液の量が減りやすいんです。\nたとえるなら、ホースの先を急に高く持ち上げたとき、水の勢いが整うまで少し間があるのと同じなんです。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "なぜ立つと3秒で暗くなるのか？血圧変動の正体"
       }
     ],
     "gpt_insights": null,
@@ -75,204 +111,32 @@
   },
   "scp-lab": {
     "channel_id": "scp-lab",
-    "generated_at": 1789479602,
-    "analyzed_videos": 2,
-    "aggregate_drops_by_bucket": {
-      "intro": 0.0063,
-      "early": 0.0221,
-      "middle": 0.0065,
-      "late": 0.0052,
-      "ending": 0.0039
-    },
-    "per_video": [
-      {
-        "video_id": "kRcZ0GecFTY",
-        "title": "7日間でずつ消えたエージェント名簿異常事件 #shorts #SCP #SCP解説",
-        "avg_view_percentage": 40.74,
-        "drops": [
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.125,
-            "bucket": "early",
-            "audience_after": 0.7083,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "クロ",
-              "text": "名前を埋めようとした側の記憶まで削られるのか。掲示板の削除済み投稿を何度も開くほど、書いた相手を忘れるような感覚だ。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.22,
-            "ratio_to": 0.23,
-            "drop": 0.0834,
-            "bucket": "early",
-            "audience_after": 0.5833,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "クロ",
-              "text": "…ねえ、これ本当に大丈夫なの？　9人の記憶が一致しているなら、名簿にない人物より、その名前を言わせる何かのほうが近い。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0833,
-            "bucket": "intro",
-            "audience_after": 0.875,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "シロ",
-              "text": "当直責任者は第3日目に捜索命令を出した。だが命令書の捜索対象欄へ氏名を書いた職員は、3分後、自分が何を書いたか思い出せなくなった。",
-              "mood": "tense"
-            }
-          }
-        ],
-        "matched_scenario_title": "7日間でずつ消えたエージェント名簿異常事件"
-      },
-      {
-        "video_id": "5I_Hhc8VPCw",
-        "title": "SCPの最後の一行だけが隔離対象になった理由 #shorts #SCP #SCP解説",
-        "avg_view_percentage": 45.82,
-        "drops": [
-          {
-            "ratio_from": 0.27,
-            "ratio_to": 0.28,
-            "drop": 0.0547,
-            "bucket": "early",
-            "audience_after": 0.6055,
-            "scenario_line": {
-              "index": 16,
-              "speaker": "クロ",
-              "text": "別々の場所で同じ余白まで揃ったのか。誰かが教室の黒板に答えを書いたら、別の教室のノートにも同じ文字が滲むようなものだ。",
-              "mood": "tense"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0469,
-            "bucket": "early",
-            "audience_after": 0.9844,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "クロ",
-              "text": "氏名が消えるって、書類を破った程度じゃないだろ。人事端末も監視当番表も、最初からその医師がいなかった形に書き換わったのか。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.043,
-            "bucket": "early",
-            "audience_after": 0.9414,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "クロ",
-              "text": "氏名が消えるって、書類を破った程度じゃないだろ。人事端末も監視当番表も、最初からその医師がいなかった形に書き換わったのか。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "SCPの最後の一行だけが隔離対象になった理由"
-      }
-    ],
-    "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1789652420
   },
   "pokemon-lab": {
     "channel_id": "pokemon-lab",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789479459
+    "generated_at": 1789652278
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
-    "generated_at": 1789479717,
-    "analyzed_videos": 2,
-    "aggregate_drops_by_bucket": {
-      "intro": 0.0091,
-      "early": 0.0261,
-      "middle": 0.0037,
-      "late": 0.0046,
-      "ending": 0.0015
-    },
-    "per_video": [
-      {
-        "video_id": "Cc8MA7iOFcA",
-        "title": "覚の元ネタが怖すぎる…心を先回りする山の怪物 #shorts #妖怪 #都市伝説",
-        "avg_view_percentage": 38.15,
-        "drops": [
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0707,
-            "bucket": "early",
-            "audience_after": 0.8788
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0606,
-            "bucket": "intro",
-            "audience_after": 1.0
-          },
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.0606,
-            "bucket": "early",
-            "audience_after": 0.8182
-          }
-        ],
-        "matched_scenario_title": null
-      },
-      {
-        "video_id": "oUohYkADVPs",
-        "title": "ろくろ首の正体は飛頭蛮？首が飛ぶ怪異の出どころ #shorts #妖怪 #都市伝説",
-        "avg_view_percentage": 44.31,
-        "drops": [
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.0719,
-            "bucket": "intro",
-            "audience_after": 1.0327
-          },
-          {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0621,
-            "bucket": "intro",
-            "audience_after": 0.9706
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0556,
-            "bucket": "early",
-            "audience_after": 0.915
-          }
-        ],
-        "matched_scenario_title": null
-      }
-    ],
-    "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1789652542
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
-    "generated_at": 1789479125,
-    "analyzed_videos": 5,
+    "generated_at": 1789651941,
+    "analyzed_videos": 6,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0096,
-      "early": 0.0247,
-      "middle": 0.0055,
-      "late": 0.0028,
-      "ending": 0.002
+      "intro": 0.0095,
+      "early": 0.0236,
+      "middle": 0.0059,
+      "late": 0.0035,
+      "ending": 0.0027
     },
     "per_video": [
       {
@@ -419,6 +283,35 @@
           }
         ],
         "matched_scenario_title": null
+      },
+      {
+        "video_id": "l9_O6CjJuuA",
+        "title": "3秒で凍結何言った #shorts #2ch #面白いスレ",
+        "avg_view_percentage": 49.25,
+        "drops": [
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0906,
+            "bucket": "intro",
+            "audience_after": 0.9719
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0656,
+            "bucket": "early",
+            "audience_after": 0.9063
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0344,
+            "bucket": "early",
+            "audience_after": 0.8719
+          }
+        ],
+        "matched_scenario_title": null
       }
     ],
     "gpt_insights": null,
@@ -426,7 +319,7 @@
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1789479432,
+    "generated_at": 1789652250,
     "analyzed_videos": 1,
     "aggregate_drops_by_bucket": {
       "intro": 0.0122,
@@ -471,7 +364,7 @@
   },
   "akashic-librarian": {
     "channel_id": "akashic-librarian",
-    "generated_at": 1789479126,
+    "generated_at": 1789651942,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0169,
@@ -547,11 +440,11 @@
     "channel_id": "clip-animal",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789479128
+    "generated_at": 1789651943
   },
   "clip-fukada": {
     "channel_id": "clip-fukada",
-    "generated_at": 1789479144,
+    "generated_at": 1789651958,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0155,
@@ -683,7 +576,7 @@
   },
   "clip-kaneko": {
     "channel_id": "clip-kaneko",
-    "generated_at": 1789479183,
+    "generated_at": 1789651995,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0047,
@@ -757,7 +650,7 @@
   },
   "clip-lab": {
     "channel_id": "clip-lab",
-    "generated_at": 1789479202,
+    "generated_at": 1789652014,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0168,
@@ -891,31 +784,60 @@
     "channel_id": "company-facts",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789479312
+    "generated_at": 1789652139
   },
   "socio-rx": {
     "channel_id": "socio-rx",
-    "generated_at": 1789479616,
-    "analyzed_videos": 1,
+    "generated_at": 1789652437,
+    "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0116,
-      "early": 0.027,
-      "middle": 0.0023,
-      "late": 0.0047,
-      "ending": 0.0023
+      "intro": 0.0098,
+      "early": 0.0267,
+      "middle": 0.0029,
+      "late": 0.0041,
+      "ending": 0.0033
     },
     "per_video": [
       {
-        "video_id": "PNmh2d97YQ4",
-        "title": "なぜ天才は一人で育たないのか フィールズ賞の本当の理由 #shorts #社会学 #自己啓発",
-        "avg_view_percentage": 40.16,
+        "video_id": "kl7XGQc4Abs",
+        "title": "原油高の正体家計に届く #shorts #社会学 #自己啓発",
+        "avg_view_percentage": 29.909999999999997,
         "drops": [
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
-            "drop": 0.1163,
+            "drop": 0.122,
             "bucket": "intro",
-            "audience_after": 0.9767,
+            "audience_after": 0.878
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0976,
+            "bucket": "early",
+            "audience_after": 0.7073
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0732,
+            "bucket": "early",
+            "audience_after": 0.4878
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "PNmh2d97YQ4",
+        "title": "なぜ天才は一人で育たないのか フィールズ賞の本当の理由 #shorts #社会学 #自己啓発",
+        "avg_view_percentage": 42.22,
+        "drops": [
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.105,
+            "bucket": "intro",
+            "audience_after": 0.9779,
             "scenario_line": {
               "index": 4,
               "speaker": null,
@@ -924,11 +846,11 @@
             }
           },
           {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.093,
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0608,
             "bucket": "early",
-            "audience_after": 0.8837,
+            "audience_after": 0.9171,
             "scenario_line": {
               "index": 5,
               "speaker": null,
@@ -937,15 +859,15 @@
             }
           },
           {
-            "ratio_from": 0.22,
-            "ratio_to": 0.23,
-            "drop": 0.093,
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0552,
             "bucket": "early",
-            "audience_after": 0.5349,
+            "audience_after": 0.7017,
             "scenario_line": {
-              "index": 7,
+              "index": 6,
               "speaker": null,
-              "text": "心理学者アルバート・バンデューラは1977年、自己効力感を提唱した。自分なら行動を遂行できるという見通しのことである。",
+              "text": "だが、同じ能力でも周囲の反応ひとつで挑戦量が変わる。この差が数年後には、大きな到達点の差になりうる。",
               "mood": "tense"
             }
           }

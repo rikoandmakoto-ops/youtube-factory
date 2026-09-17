@@ -1,0 +1,590 @@
+{
+  "title": "6人の探査隊を襲った全生命停止【SCP-2935】の理由",
+  "theme": {
+    "title": "SCP-2935「ああ、死よ、汝はいずこに」",
+    "angle": "全生命が同時に死んだ並行世界の探査記録。探査隊の日誌が途切れる瞬間まで追う記録型構成",
+    "theme_gate": {
+      "replaced": "なぜ財団はあの案件だけ解決済みにできないのか",
+      "reason": "停止ジャンル『財団組織・職員』"
+    }
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書、帰還した1人の記録だけが消えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、探査隊は6人で入り、戻ったのは1人だけか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2935の向こうでは、全生命が同時に死んでいた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "地球丸ごとが、誰も登校しない校舎みたいに止まったのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "帰還者の最終音声は6語だけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この手の報告書、実は他にも未公開のものが山ほどある。"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この異界記録の続きは収容違反ファイルシリーズへ。高評価を残し、毎日投稿中の1万人目標をチャンネル登録で応援してほしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなた、扉の向こうで地球上の全生命が同時に死んだ世界を見つけたら、救助を呼べますか？答えは、そこへ入った探査隊の記録が途中で沈黙した、ということです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "今回はSCP-2935「ああ、死よ、汝はいずこに」を追います。財団が発見した洞窟の裂け目は、死者だけがいる並行世界へ通じる入口でした。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の探査で確認されたのは、人間だけではありません。細菌、植物、昆虫、海の微生物まで、例外なく生命活動を止めていたのです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも驚くべき反転があります。死んでいたのは生物だけで、照明、機械、電力網は稼働していました。都市は昨日まで動いていたように見えたのです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "探査隊は防護装備で内部へ進み、死因を探しました。しかし遺体に外傷や病原体の痕跡はなく、世界そのものが息を止めたようでした。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "この先で読むのは、隊員たちが残した時刻付きの日誌です。最後の報告は異常の正体ではなく、記録者自身に起きた変化を告げて途切れます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この話、最後にとんでもないオチがある。死んだのは人間だけでなく、細菌から神格的存在まで、世界丸ごとの生命だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "SCP-2935は財団施設の地下で見つかった洞窟通路で、その先は地球と酷似した並行世界へつながっていたんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "並行世界とは、同じ歴史から枝分かれした別の現実のことだよ。通路の向こうには財団サイトも都市も、ほぼ同じ配置で残っていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ところが探査開始時点で、向こう側の人類は全滅していた。死因は外傷でも毒物でもなく、全員が突然、生命活動を止めていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "被害は人口だけではない。草木、昆虫、家畜、微生物まで死に、保存された細胞や培養中の菌類さえ動きを失っていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまりSCP-2935の異常は殺人装置ではなく、「生きている」という状態そのものを終わらせる現象として記録されたんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "しかも機械、建物、電力系統の一部は残っていたため、探査隊は静止した都市を歩けた。時計だけが、生者の不在を淡々と示していた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団はこの世界を探索可能と判断したが、安全とは認定しなかった。死の原因が空気や接触で移るか、当初は誰にも分からなかったからだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして探査記録は、死者を調べる報告から変質していく。生きて帰るはずだった隊員たちの日誌が、ある時点で不自然に途切れるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2935の洞窟を越えた先では、確認できた人類だけで推定78億人が死亡していた。しかも死因は外傷ではなく、生命活動そのものの停止だった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "探査開始から約3時間後、隊員は都市の遺体を調べ、腐敗がほぼ進んでいないと記録した。世界全体が同一時刻に凍結したような状態だったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "研究班は血液、細胞、植物組織を採取したが、再培養の成功率は0パーセントだった。死んだのは個体だけではなく、増殖する能力そのものだった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべきは、細菌や昆虫まで例外なく死んでいた点だ。通常なら1グラムの土に数十億いる微生物すら、検査では生存反応を一度も返さなかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここでいう生存反応とは、代謝や増殖など生命が自力で続く兆候のことだ。代表実験では培地を7日間観察しても、コロニー形成は完全にゼロだった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ただし機械は動いた。非常灯、原子炉、録音機器は残存電力の範囲で稼働し、生命だけを選別した異常が起きた可能性を強く示している。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "探査隊は動物園で大型哺乳類を20体以上確認したが、死後硬直の進み方までほぼ一致していた。種別や年齢による時間差は観測されなかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "さらに財団施設では、通常なら自律的に活動する収容中の異常存在も沈黙していた。世界規模の死は、生物学的な分類を越えて作用したと考えられる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第二の異常は、死体があるのに死の後始末が始まらないことだった。腐敗菌も食害する昆虫も消え、地球全体が終わらない葬儀場へ変わっていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "日誌の最終記録では、隊員が仲間の脈を確認した直後に文章が途切れる。測定値を残す者まで死ぬなら、この世界では観測行為すら安全ではなかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2935は、財団が発見した洞窟の奥にある、別世界へ通じる裂け目だ。向こう側では地球上の全生命が、同じ瞬間に死んでいた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "死者は人間だけではない。細菌、植物、昆虫、深海魚まで例外なく停止し、推定生存率は0％。しかも建物や機械は壊れていなかった。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "発見の端緒は、アメリカ・バージニア州の洞窟で記録された異常な反響だった。音波調査班は奥行き不明の空洞と、人工的な石扉を確認した。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "扉の先には、財団世界と酷似した並行世界が広がっていた。道路標識も新聞の日付も一致し、違うのは住民が全員、死んでいることだけだった。",
+      "expression": "serious",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の探査隊は防護服と通信装置を装備し、死因の特定を目的に進入した。遺体には争った痕跡がなく、家族は食卓の席で倒れていたという。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "だが恐ろしいのは、世界が死んだ後も時計が動き、発電所も稼働していた点だ。文明だけが残り、生命という乗員だけが消えた列車のようだった。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで記録は反転する。探査隊は原因を外部の怪物ではなく、自分たちの世界にも既に存在する何かだと疑い始めた。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "隊員たちは並行世界の財団施設を探し、同じSCPを収容していた痕跡を追跡した。報告書の余白には、最後まで開かなかった扉の番号が残されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして日誌の通信は、地下区画へ入った直後に途切れる。次の記録で判明するのは、死者の世界で探査隊が見つけた、まだ死んでいない一つの存在だ。",
+      "expression": "fear",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "意外なのは、SCP-2935の向こうで死んだのが人類だけではない点です。細菌、植物、昆虫まで例外なく止まり、地球全体が一瞬で墓標になりました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "しかも死因は毒ガスや核戦争のような物理災害ではありません。遺体に外傷は少なく、探査隊は原因不明の「生命機能停止」と記録しています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も恐ろしい反転は、死亡が生物だけに限らなかったことです。並行世界のSCP財団職員はもちろん、収容中の異常存在まで沈黙していました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "つまり不死性、自己再生、現実改変といった能力も、この世界では死を拒めなかったのです。財団が危険視した例外たちさえ、ただの遺骸でした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "探査記録には、職員が通常なら絶対に死亡しない対象の死体を確認した記述があります。収容違反より危険な、「法則そのものの破綻」の証拠です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "さらに通信設備や照明など、生命を持たない機械は動作していました。都市は壊れていないのに、住民だけが消えたような静けさが残されていたのです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで驚くべき予告です。探査隊は安全な観測者では終われませんでした。日誌の後半では、生存者であるはずの隊員たちにも異変が始まります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "この現象は単なる感染症では説明できません。空気や水を介するなら隔離できるはずですが、死は種族や距離を区別せず、世界規模で成立していました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "報告書の題名「ああ、死よ、汝はいずこに」は聖書の一節に由来します。本来は死への勝利を語る言葉が、この世界では救いのない皮肉へ変わりました。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "そして探査日誌が途切れる瞬間、財団は死を観測していた側から、死に選ばれる側へ反転します。次は隊員数と記録の最後の一文を追いましょう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2935の教訓を日常へ置き換えるなら、帰宅時の安否確認を儀式にすることです。家族へ短文を送るだけでも、異常な沈黙を早く見つけられます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "探査隊の日誌は、仲間の返答が消えた後も記録を続けました。まず連絡先を三人だけ選び、返信がない場合の確認順を紙に書いておくと迷いません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "おすすめは午後八時など、毎日同じ時刻に無事を共有する方法です。災害時の連絡は内容より習慣が重要で、定刻なら異変の発見が遅れにくくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ここで反転です。2935では生き物だけでなく、記録を残す人間まで途絶えました。だからこそ自分しか知らない情報を、今夜ひとつ共有する価値があります。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "例えば薬の保管場所、ペットの世話、緊急連絡先を家族と共有しましょう。冷蔵庫の扉やスマホのメモに残せば、探す時間を数分単位で削れます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "日誌形式を真似して、非常時メモは日時、場所、次の行動だけに絞るのがコツです。長文より三項目のほうが、焦っている場面でも第三者へ状況を渡せます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "停電や通信障害を想定し、紙の連絡先を一枚用意してください。スマホの電池が切れた瞬間、クラウドにある情報は見えていても使えない記録へ変わります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "クロ",
+      "text": "一人暮らしなら、週に一度だけ友人と生存確認の約束を結ぶのも有効です。返信なしを責めるためではなく、普段との違いを数字ではなく習慣で測るためです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "恐怖を備えへ変える最初の一歩は、今日の予定を誰か一人に伝えることです。2935の探査記録のように沈黙が残る前に、戻る時刻を言葉として残しましょう。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-2935は、扉の向こうで人間から微生物まで全生命が同時に死んだ並行世界だった。探査記録は、死者の沈黙だけが最後まで残る。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "財団は生存者を探して隊員を送り込んだが、日誌は地上の死骸と壊れていない設備を記すほど、帰還不能の恐怖を濃くした。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最も恐ろしいのは、死が病気や戦争ではなく、理由も痕跡もなく世界を止めた点だ。探査隊の日誌さえ、ある瞬間に途切れている。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "驚くべき反転は、死んだ世界を観測していた隊員自身も例外ではなかったことだ。救助のための扉は、死へ通じる入口へ変わった。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-1730、かつて財団が封鎖したサイト-13を解説するよ。救難信号の奥で待つ収容違反と、失われた職員記録を追う。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "巨大施設に残された異常存在は、単なる廃墟探索では終わらない。財団の失敗が何人を飲み込み、何を残したのかを記録から確かめよう。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この死の記録が刺さったら高評価とチャンネル登録をお願いするよ。ゆっくり異常存在SCPラボで、次の機密報告書も一緒に開こう。",
+      "expression": "smile",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "全生命が停止",
+      "帰還者は1人"
+    ],
+    "hook_caption": "最後の記録",
+    "subtitle": "探査日誌が消えた夜",
+    "tagline": "洞窟の向こう側"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "この手の報告書、実は他にも未公開のものが山ほどある。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 70,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 5,
+          "text": "帰還者の最終音声は6語だけだ。記録はここで途切れている。",
+          "pattern": "声[がをは]",
+          "reason": "「声が」はミュートでは確認できない"
+        },
+        {
+          "type": "demonstrative_overuse",
+          "line": 0,
+          "text": "3/7行が指示語で開始",
+          "reason": "指示語の使用率が43%（閾値30%）。ミュート視聴者はテロップしか見ないため、「これ」「あれ」が何を指すか不明になる"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "この異界記録の続きは収容違反ファイルシリーズへ。高評価を残し、毎日投稿中の1万人",
+          "reason": "1行59字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 3
+    },
+    "viral_score": {
+      "score": 19,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 2,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.574,
+      "similar_to": "SCP-7241 収容違反記録が毎回1頁欠ける理由",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-2935「ああ、死よ」最後の記録の実態"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-2935「ああ、死よ」最後の記録の実態",
+    "attempts": 1
+  },
+  "original_title": "SCP-2935「ああ、死よ」最後の記録の実態",
+  "title_constraints": {
+    "ok": false,
+    "violations": [
+      {
+        "rule": "min_effective_chars",
+        "label": "実質20文字以上",
+        "detail": "18",
+        "repairable": false
+      }
+    ],
+    "rejected_title": "なぜ探査隊6人のうち1人しか戻れなかったのか【SCP-2935】"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

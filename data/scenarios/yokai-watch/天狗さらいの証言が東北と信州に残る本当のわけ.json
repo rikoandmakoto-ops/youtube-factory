@@ -1,0 +1,547 @@
+{
+  "title": "天狗さらいの証言が東北と信州に残る本当のわけ",
+  "theme": {
+    "title": "なぜ天狗のさらい話は山村にだけ残るのか",
+    "angle": "神隠しの記録と重ねる。戻ってきた者の証言の型に注目する。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "可愛い天狗なのに、原典では子どもを山から連れ去るんだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームだと頼れる感じなのに、東北と信州の神隠し記録は不穏すぎるよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、戻った人が山中の赤い顔と羽音を同じように証言している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "学校帰りに道を外して、知らない山奥で同じ声を聞くような怖さだね。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "なぜ山村だけか。その答えは、山へ入る禁忌の境目に残っているんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、地方に残る妖怪シリーズも。毎日投稿中、1万人目標へチャンネル登録で応援よろしくね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？一九一〇年刊行の『遠野物語』には、山へ入って数日後に戻る人の話が残るんだ。ゲームではこう描かれてるけど、天狗は格好いいだけの妖怪ではなく、村から人を消す名前でもあった。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "天狗って羽団扇で風を起こす強キャラの印象があるし、妖怪ウォッチで山の妖怪っぽい雰囲気が出るとテンションが上がるよ。でも数日後に戻った人がいるなら、山で何があったのか知りたい。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "あなたも旅行先の山道で、集落を抜けた数分後に急に人の気配が消えた経験はないかな。天狗さらいは、そんな境目で人が消え、帰還後の証言まで似るから、ただの迷子話より冷たく残るんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。消えた人が帰るなら、道に迷っていただけじゃないの？でも戻った本人が同じような音や赤い影を話すなら、偶然の迷子で済ませるには変な共通点が多すぎる気がするよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで作品と伝承を分けておくんだ。妖怪ウォッチに出る天狗系妖怪の性格や能力は公式の創作設定で、今から読むのは各地の民俗資料に残る天狗伝承であり、両者を同じ事実として扱わない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "本題は、なぜ天狗のさらい話が大都市より山村に濃く残ったのかだ。答えは天狗の実在を証明することではなく、山村の生活圏と、戻ってきた人が語る証言の型を重ねるところにある。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "証言の型って、みんなが同じ台詞を覚えていたみたいな意味？一人だけの怪談なら作り話にも見えるけど、村ごとに似た順番で語られるなら、何か共通の怖い体験が下にあったのかもしれないね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "天狗は山伏に似た装い、赤い顔、強い風、羽音と結びつけられることが多い妖怪なんだ。ただし地域ごとに姿は違い、長い鼻が必ず出るわけでもないから、絵のイメージだけで伝承を決めてはいけない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山村では、田畑と深い山の境目が毎日の生活圏だった。薪、炭、山菜、きのこ、狩りのために人は山へ入るけれど、家から数百歩で見通しが切れ、探す側の声も沢音にかき消されやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームのマップなら境界線やアイコンがあるけど、本物の山は地図を見ても同じ木が続くよね。一本の分かれ道を間違えたら、学校の校庭を何周もするより広い斜面で方向感覚を失いそうだ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そこで天狗は、山で起きる説明しにくい失踪を受け止める名前になった。家族が何時間探しても見つからず、本人が夕方や数日後に戻ると、村は山の主に連れて行かれたのだと語ったんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、ここからが本題なんだ。天狗さらいの記録は単に『消えた』で終わらず、帰った者がどこにいたのか、何を聞いたのか、時間をどう感じたのかまで、似た順番で語ることがある。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って怖い。山で迷ったなら道とか沢の話をしそうなのに、聞こえた音や時間まで似るの？帰ってきた本人の中では、村の外にある別の場所へ本当に入ったような感覚が残ったのかな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "民俗学でいう神隠しは、人が突然いなくなる出来事を神や妖怪の仕業として語る言葉だ。犯人を見つける報告書ではなく、家の外で起きた空白を村のみんなが共有するための説明だと考えると近い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "天狗さらいで目立つ第一の型は、山へ入った本人が急にいなくなることだ。畑の端、柴刈りの道、放牧地の近くなど、村から完全に遠くない場所で、最後に見た姿だけが残る話が多い。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "第二の型は、帰った本人が『長くはいなかった』と思っていることだ。周囲では半日や一晩が過ぎていても、本人は少し歩いただけのつもりで、空いた時間をうまく言葉にできない場合がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "第三の型は、山の中で音や声に導かれたという証言だ。笛、太鼓、呼び声、強い風などが現れ、目に見える道標ではなく、耳に届くものを追った末に、帰る方角を見失う構図になっている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "聞こえるものを追うって、夜の通知音に釣られて知らないリンクを開く感じで嫌だな。画面なら閉じられるけど、山では一度奥へ進んだら、戻るための目印まで後ろの暗がりに消えてしまう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "最も不気味なのは、戻った者が天狗の顔をはっきり見ていない話も多い点だ。赤い影、羽音、急な風だけが残り、正体を見たというより、山の外では説明できない感覚だけが持ち帰られている。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから『天狗を見た』は、写真のような目撃証言とは別に読む必要がある。元の伝承では、帰還者の断片的な記憶と、聞き取った村人の解釈が重なり、後から天狗の輪郭になっていくんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ天狗のさらい話は、山で起きた本当の不安を消さないための記録でもあるのか。誰かが消えた事実は残して、分からない部分だけを天狗の領分に置いたみたいで、むしろ静かに怖いよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "柳田國男が一九一〇年に刊行した『遠野物語』は、岩手県遠野地方の聞き書きを集めた本だ。全国すべての天狗伝承を代表する本ではないけれど、山村が怪異をどう語ったかを見る重要な入口になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "遠野物語の山は、観光地のように安全が整えられた場所ではない。明治期の村にとって山は燃料や食べ物を得る場所でありながら、霧、急斜面、沢、日暮れによって人を簡単に見失わせる場所でもあった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "山村に天狗さらいが残る第一の理由は、山が日常のすぐ隣にあったことだ。都会では道を外れても店や電柱に出会いやすいけれど、集落の背後に急な山がある土地では、数百歩で見える世界が消える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "数百歩で景色が消えるなら、学校の裏門から少し入っただけで別マップだね。大人が探す側になっても、草むらや沢に遮られたら、声を聞いた方向へ一直線に進めるとは限らないと思う。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "第二の理由は、村に山のルールが細かくあったことだ。入ってはいけない時期、立ち入らない尾根、伐ってはいけない木などの禁忌は、危険を避ける生活の知恵として、家ごとに繰り返し伝えられていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "禁忌を破ると天狗にさらわれる、という話は子どもを脅すだけの話ではない。山仕事の経験が少ない人が一人で奥へ入るのを止めるため、目に見えない危険へ天狗という名前を与えた面もあるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "第三の理由は、帰還者の話を村が覚えておける規模だったことだ。大きな町では一人の奇妙な体験が人波に流れやすいけれど、人数の少ない集落では、誰がいつ山へ入り、誰が探したかが共同の記憶になりやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それなら同じ話が残るのは、村全体がその人の帰りを待ったからかもしれないね。『あの人はどこにいたのか』を何年も話すうちに、天狗の赤い顔や風の音だけが、だんだん濃くなった可能性もある。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで注意したいのは、伝承があるから超自然的な拉致が事実だった、とまでは言えないことだ。資料は出来事の録音ではなく、人々が何を恐れ、何を説明できず、どんな言葉なら受け止められたかを残したものなんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "けれど、すべてを『昔の人の勘違い』で閉じるのも乱暴だ。山で人が消える不安、帰還後に記憶が曖昧な不気味さ、家族が待つ時間の長さは、伝承の外側にあった現実の重さとして無視できない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸後期の随筆や各地の聞き書きには、天狗に会った者が山で酒宴や相撲を見たという類型も出てくる。全地域に共通する事実ではないが、山の内部を人の宴とは違う場所にした想像が見えてくる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "山で祭りみたいな音がして、ついて行ったら帰れないってこと？楽しそうな音が罠になるのが一番嫌だよ。ゲームならイベントに近づくけど、伝承の山では近づいた時点で道が消える感じがする。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "戻ってきた者の証言に食べ物が出るのも重要だ。山の中で何かを食べた、勧められた、口にした気がするという場面は、こちら側と向こう側の境目を越えた印として、昔話の中で語られやすい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "日本の昔話には、異界で食べることが帰還を難しくする筋がある。ただし天狗さらいの全記録が同じ結末ではなく、食事の場面がない伝承もあるから、一つのルールとして断定せず、証言の傾向として見るべきだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "時間のずれも、神隠しの話に繰り返し現れる型だ。本人には短い出来事でも、家では長い捜索になっていたという差は、迷った場所での記憶の欠落を、物語が異界の時間として表した可能性がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "本人だけ時間の感覚が違うなら、帰ってきても家族と話が合わないよね。『少しそこまで』のつもりだった人が、周りには一晩いなかったと言われる場面を想像すると、聞かなきゃよかったと思ってしまう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "この型が山村に残りやすいのは、山が村の外でありながら完全な遠方ではないからだ。海の向こうや都の話ではなく、毎朝見えている稜線の向こうに、戻れない場所を置けたからこそ、話は生活の中に残った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "天狗は山の危険そのものではない。道迷い、急な霧、沢の音、疲れ、孤立といった別々の怖さを、一つの赤い顔に集めた存在として働いたと見ると、帰還者の証言が似てくる理由も理解しやすい。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、天狗は派手で格好いい力の妖怪として親しまれることもある。その親しみやすさがあるからこそ、元の伝承では人を山へ連れて行く役目だった落差が、後からじわじわ冷たく刺さる。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "好きな妖怪ほど、元ネタが怖いって本当だね。羽団扇の風も、山で迷った人には『誰かが呼んでいる音』に聞こえたかもしれないと思うと、いつもの格好よさまで少し遠くに感じてしまうよ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ファンの間では、作品に登場する天狗系妖怪の台詞や住む場所から伝承を読む考察もある。ただしそれは非公式の読み方であり、公式設定や古い伝承が直接つながる証拠とは、きちんと分けて受け取ろう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "伝承を読む時のコツは、天狗が本当にいたかを急いで決めないことだ。誰が消えたのか、どこで見失ったのか、帰還後に何を語れなかったのかを追うと、怪談の怖さがむしろ生活の形として具体的になる。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "たとえば『山で天狗に会った』だけでは場所が曖昧でも、『沢の音を追って尾根を越えた』なら危険の形が見える。怪異の名前は結論であり、その前にある足跡の消え方こそ、山村の記録が残した中心なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ山村の人は、天狗の話で怖がらせながら、どこで迷いやすいかも伝えていたのかな。でも戻った人が見たものまで似る部分は、単なる注意書きだけでは説明しきれない感じが残るよね。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そうなんだ。生活の知恵だけなら『一人で山へ入るな』で足りるのに、伝承は赤い顔、羽音、見知らぬ宴を残した。その余分な細部があるから、天狗さらいは警告でありながら、何世代も消えない怪談として生き残った。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "地域差も忘れてはいけない。東北、信州、中国地方など山地の伝承には天狗の名が出る一方、同じ失踪でも別の土地では神隠し、山の神、狐など、異なる名前で説明されることがある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "つまり、山村にだけ天狗が残ったというより、山村では『山の向こうへ連れ去る者』に天狗の名が乗りやすかった、と言うほうが正確だ。名前は土地の信仰や修験者の記憶によって、少しずつ変わっていく。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "天狗という同じ名前でも、村ごとに違う怖さを背負っていたんだね。だから図鑑みたいに能力だけ覚えるより、その村で誰が帰らなかったのかを想像したほうが、伝承の温度が分かる気がするよ。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "神隠しの記録には、戻った者のその後まで詳しく書かれないことが多い。無事に暮らしたのか、また山へ入ったのか、何度も同じ音を聞いたのか。その問いへの答えは、そこから先は、記録が途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから最後に残るのは、帰還者が語った断片と、待っていた人たちの沈黙だ。山村の天狗さらいは、山の奥に怪物が住む話というより、戻ってきても全部は戻らない人の話なのかもしれない。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。それなら天狗にさらわれた人は、体だけ帰ってきたみたいじゃないか。家の前に立っていても、本人の一部だけはまだ山の音を聞いているのかもしれないってことなのかな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "断定はできないんだ。ただ、天狗さらいの証言が山村に残った理由は、危険な地形、共同の記憶、山の禁忌、そして説明できない帰還体験が、一つの集落の中で何度も重なったからだと読める。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、妖怪ウォッチでもおなじみの猫妖怪を入口に、家から去った座敷童子の伝承を追う予定だ。去る時に何が起きると語られたのか、残された家の側から、明るくない記録を静かに見ていく。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "山へ入る前に聞くべき話だったよ。天狗の話をただの昔話として笑えなくなったし、夜に風が鳴ったら、誰かの呼び声じゃないか確かめるのが、前よりずっと怖くなりそうだ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、地方に残る妖怪シリーズを追ってほしい。毎日投稿中でチャンネル登録者一万人を目標にしているから、チャンネル登録で応援よろしくね。山の記録は、まだ何冊も残っている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もし夜道で山際の風が急に止み、知っているはずの声が木の奥から聞こえても、返事はしないほうがいい。あの妖怪の正体を知った後なら、村へ戻る道と、戻れない音の違いが少しだけ分かるはずだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "山村だけに",
+      "残る天狗さらい"
+    ],
+    "hook_caption": "山村だけの謎",
+    "subtitle": "戻った者は何を見たのか",
+    "tagline": "神隠しの証言に残る同じ型"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 80,
+      "issues": [
+        {
+          "type": "audio_dependent",
+          "line": 4,
+          "text": "学校帰りに道を外して、知らない山奥で同じ声を聞くような怖さだね。",
+          "pattern": "声[がをは]",
+          "reason": "「声が」はミュートでは確認できない"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "よかったら高評価を置いて、地方に残る妖怪シリーズも。毎日投稿中、1万人目標へチャ",
+          "reason": "1行54字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 17,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 3,
+        "relatability": 4,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.504,
+      "similar_to": "なぜ磯女は船人を呼ぶのか正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "天狗さらいはなぜ山村だけの正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 60,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体', 'だけ'](+20)",
+      "好奇心ギャップ['なぜ', '正体'](+12)",
+      "短すぎ(15字 < 18)(-12)"
+    ]
+  },
+  "original_title": "天狗さらいはなぜ山村だけの正体",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "天狗さらいはなぜ山村だけの正体"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

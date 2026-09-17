@@ -1,0 +1,532 @@
+{
+  "title": "SCP-2316 湖で呼ばれた人数だけ記録から消えた理由",
+  "theme": {
+    "title": "SCP-2316「湖の子供たち」呼びかけに応じた人数の真相",
+    "angle": "湖畔で発生した呼称反応を、目撃者数・救助失敗件数・記憶処理記録の差から検証する",
+    "parent_title": null,
+    "theme_gate": {
+      "replaced": "なぜ職員の家族構成だけが勝手に増えるのか",
+      "reason": "停止ジャンル『財団組織・職員』"
+    }
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書、湖で名前を呼ばれた職員の記録だけが消えている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、目撃者12人のうち、応じた人数まで消えたのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "救助失敗は3件。呼び声の主は、湖面の子供たちだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "12人が並ぶなら、教室の一列ごと湖へ誘われたみたいだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記憶処理後も、1人だけ自分の名を聞いた。記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "湖畔の続きは財団の裏側シリーズに残る。高評価を残し、毎日投稿中で1万人目標のチャンネル登録も応援よろしくね。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "この報告書、湖畔で自分の名前を聞いた職員の記録だけが消えている。閲覧名簿には12人の署名が残るのに、呼び声へ応じた者の欄だけ、ページを破ったような空白になっている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、自分の部屋で廊下から名前を呼ばれるだけでも、誰か確認したくなる。それが夜の湖から聞こえて、12人分の行動記録まで消えたなら、逃げる判断すら遅れそうだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残った録音には、子供の声が一度だけ入っている。「お前の友達はここにいる」という呼びかけだ。音声を聞いた職員12人は全員、声の主を昔の知人だと証言している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って、顔も見えない子供が、聞いた人間ごとに違う友達を名乗るのか。学校の帰り道で友達に呼ばれたと思って振り向く、その一瞬を湖に奪われる感じだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "対象はSCP-2316、「湖の子供たち」と記された湖面の異常だ。ただし最初の報告は怪物の姿を描いていない。岸にいた者が、湖面の人影を何人と数えたかだけを残している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "初動班の人数は12人。水面近くに見えた子供の輪郭も12人だった。服装は濡れた影としてしか認識できず、顔も判別不能だったが、全員が友達だと確信したという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "顔が分からないなら普通は知らない人だと思う。それでも12人全員が「友達だ」と言うなら、湖面の側にいるのは子供ではなく、見た人間の記憶そのものかもしれない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初に数え直した職員は、湖面の列から自分の同級生らしい姿を見つけたと記した。次の数え直しで子供は11人になった。減ったのが湖側か岸側か、報告書は書いていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この時点で重要なのは、子供の数が変わったことではない。岸の12人は互いを確認できたはずなのに、誰も欠員を報告しなかった。名簿と目視が最初から別の人数を指していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "数えるほど人数が合わなくなるのか。体育館で12人並んで点呼したのに、返事は12回あるのに、見える影だけ11人になるようなものだ。確認が安全策になっていない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、ここからが本題だ。救助班が失敗した3件は、湖へ落ちた子供を救えなかった回数ではない。岸にいた職員が自分から水際へ歩き、拘束された回数として残されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "救助失敗の第1件では、対象職員が岸から7メートル進んだ。所要時間は46秒。引き戻された本人は、靴底が濡れているにもかかわらず、一歩も移動していないと主張した。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "46秒なら、スマホの通知を一つ確認するより短い。そこにいる本人だけが歩いた記憶を失い、周りだけが7メートル進んだ姿を見ているなら、止める側まで怖くなる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第2件では、制止役の班員が対象職員の氏名を呼んだ。すると湖から同じ氏名が返った。返答は一人分ではなく、湖面の12人全員が同時に口を開いたように記録されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第3件では、対象職員の幼少期の愛称が使われた。その愛称を知るはずのない班員まで、次の瞬間には同じ名で対象を呼び始めた。誰が最初に口にしたかは[REDACTED]されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "ちょっと待って、湖が名前を知っているだけじゃない。聞いた人間に、知らないはずの呼び方を使わせるのか。友達を助けたい気持ちそのものが、次の呼び声へ変えられている。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現場映像では、湖面の子供たちは一歩も動かない。動いたのは岸の人間だけだ。12人のうち最初に前進した職員の氏名は消されているが、足跡だけは水際まで連続している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも、まだ説明できていない。声が先に記憶へ触れたのか、記憶が先に声を作ったのか。その順序を確認するため再生した音声記録は、4回目の再生で無音になった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "湖畔に配布された初期指示は3項目だけだった。人数を数えない。名前を呼び返さない。水面の姿を知人と認めない。だが12人の目撃者は、全員が最初の項目で違反していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "数えるなと言われるほど数えたくなる。列が12人に見えるなら、部活の出席確認みたいに誰が足りないか探してしまう。その普通の癖が、湖畔では入口になるわけだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "遵守報告に残る帰還者は9人。数字だけなら12人中9人が助かったように見える。しかし9人全員は、帰還後の面談で「誰を置いてきたのか」を一度も思い出せなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで財団は通常の監視を中止した。湖の周囲に人員を増やせば、その人数に合わせて湖面の列も増える可能性がある。守るために集めた職員が、新しい目撃者になる危険があった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "そして、この事件には数字の反転が残る。報告書の起点は目撃者12人だが、終端ページの保管袋には職員証が13枚入っていた。余分な1枚は、誰の紛失届にも対応しない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ。救助班の職員証が混じったとしても、持ち主がいるはずだ。13枚目だけ所属も写真もなく、なのに本物として保管されているなら、誰かがそこにいたことになる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "13枚目の職員証には、顔写真欄だけが黒く塗りつぶされていた。番号欄は有効で、認証端末は午前2時16分に一度だけ通過を許可した。通過方向は、施設内から湖畔側だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ゲートの先は湖へ続く監視通路だ。通過者の姿はカメラに映らない。だが終端カメラには、水滴の足跡が14列残っていた。入口側の足跡は13列で、出口側だけが1列多い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここから先で初めて、財団はこの対象に分類名を与えた。呼び声と水面の人影により、人員数の認識をずらす異常。記録上の扱いはオブジェクトクラス、Keterと一度だけ記される。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "Keterと書かれても、柵を高くすれば済む話には聞こえない。湖が危険というより、そこに立った人間が誰を数え、誰を忘れたかで、出口の人数まで変わる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その後の聞き取りで、呼称反応を受けた者だけが特定の数字を口にした。11人、12人、13人。この3つは一致しないが、誰も「湖には誰もいなかった」と答えなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、湖面の子供は固定された個体ではない。見る者が失いたくない名前を持ち込み、その名前を列の一人へ割り当ててしまう。ただし根拠記録は[DATA EXPUNGED]されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この仮説に従えば、12人という数は子供の実数ではない。岸に12人いた人間が、そこに12人いると信じるために必要な姿が並んだ数だ。湖は人数ではなく欠員を見せている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ目撃者が20人なら、湖面も20人に見えるのか。人数を増やして確認するほど、列に入る名前も増える。検証のために集まる行為が、そのまま被害を広げる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "二度目の現場配置は8人に減らされた。湖面に見えた輪郭も8人だった。しかし帰還した7人は、最初から8人目が誰だったか答えられない。欠員だけが、報告書の外へ残された。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "三度目の配置では6人が同じ防護服を着用した。会話は禁止され、氏名も職員番号も伏せられた。その夜、湖面には人影が確認されなかった。だが撤収車両の窓には手形が7つ残った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "車内に6人しかいないのに手形が7つなら、湖面の列を消しても一人は付いてくる。見えないなら安全だと思った瞬間に、窓の外から数え返される感じだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記憶処理の記録にも同じ差がある。初動の目撃者は12人なのに、処置書は13件。面談室へ入った人数も13人。だが退室を映した映像には、背中が12人分しか残っていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "処置担当者は、13人目の顔を覚えていない。座席表には13脚目の椅子が描かれているのに、監視写真では椅子が12脚しかない。筆跡と映像のどちらが改変されたか、財団でも判定できない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "通常なら処置対象の氏名、時刻、担当者を照合する。だが湖畔任務では、照合するたび人数だけが1人ずつ合わない。名簿を直せば映像が余り、映像を直せば職員証が余る。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "聞かなきゃよかった。人数を合わせれば終わるはずなのに、合わせようとするたび余分な一人が出るなら、答えを出した人間から湖の列に加わるみたいだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が恐れたのは、水中から何かを引き上げることではない。呼びかけに応じた人間が、自分の不在を忘れたまま日常へ戻ることだ。家族も友人も、その差を数えられなくなる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "湖畔任務では集合写真が禁止された。理由は単純だ。写真に写る人数が任務終了後も固定されるなら、現場にいたはずのない顔まで、記録として施設へ持ち帰る危険がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "点呼も禁止された。班員は互いを名前で呼ばず、手信号だけで移動する。だが手信号を送った第4班は、合図を返していない水面の影を1人分だけ確認したと報告している。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "声を出さず、名前も使わず、写真にも残さない。それでも湖は一人分の返事を作るのか。見張りに立つだけで、誰かを仲間として数えさせられる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現場規定では、知っている声が聞こえても振り向かない。返事をしない。水面にいる姿を確認しない。これは助かるための手順ではなく、被害者の人数を確定させないための遅延策だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もし同伴者が湖へ近づいた場合、追いかけてはならないと記される。残酷に見えるが、追跡者が次の呼称反応を受ければ、救助対象は1人から2人へ増える。失敗3件が示した事実だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "救助班はロープを使わない。ロープの端を握った2人が、同時に「向こうに友達がいる」と言い始めた記録があるからだ。繋ぐ道具が、湖面の列へ引かれる線になる可能性が疑われた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "助けるためのロープまで危ないなら、岸に立つ方法そのものがない。湖は水に入った人間だけでなく、戻そうとした人間の気持ちまで人数に数えている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "目撃者12人、救助失敗3件、記憶処理13件。この差が呼称反応の真相に最も近い。湖は子供を増やしたのではない。数える人間を減らし、減った事実だけを忘れさせた可能性がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だが、その結論にも穴がある。もし減ったのが岸の人間だけなら、監視通路の出口に残った14列の足跡は説明できない。戻った一人がいたのか、それとも最初から列にいたのか。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…ねえ、これ本当に大丈夫なの？　13枚目の職員証を通した誰かが、今も施設のどこかで出席を取り、最後に自分の名前を呼ばれるのを待っているかもしれない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-3008「無限のIKEA」を扱う。閉店後の通路で、帰還者の名簿が毎晩1人ずつ変わった記録だ。出口を見た人数と戻った人数の差を追う。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書に残った12人目と13人目の差が不穏だったなら、高評価を残せ。財団の裏側シリーズには、数え終えてはいけない別のファイルも保管されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "毎日投稿中で、チャンネル登録者1万人を目標にしている。次の機密記録を受け取るなら、チャンネル登録で応援してほしい。だが湖畔の声には、決して返事をするな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "夜の水面に子供の影が並び、知っている名前が聞こえたなら、数えずに去れ。最後の一人が誰なのかを確かめた時点で、あなたの記録も空白になる。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "12人の目撃者",
+      "消えた1人"
+    ],
+    "hook_caption": "記録だけ消えた",
+    "subtitle": "湖畔で呼ばれた名前",
+    "tagline": "救助記録と人数が一致しない"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "湖畔の続きは財団の裏側シリーズに残る。高評価を残し、毎日投稿中で1万人目標のチャ",
+          "reason": "1行54字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 16,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 2,
+        "relatability": 5,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.632,
+      "similar_to": "SCP-███ クラスAの10年の真相",
+      "template_issues": [
+        "直近10本中3本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-2316「湖の子供たち」—目撃者12人の真相"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-2316「湖の子供たち」—目撃者12人の真相",
+    "attempts": 1
+  },
+  "original_title": "SCP-2316「湖の子供たち」—目撃者12人の真相",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "SCP-2316 なぜ呼びかけに応じた人数だけ消えたのか？"
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

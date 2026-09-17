@@ -36,6 +36,7 @@ api_phase4 のスケジューラ（APScheduler BackgroundScheduler）に相乗�
 
 from __future__ import annotations
 
+import json
 import threading
 import uuid
 from datetime import datetime, timedelta, timezone
@@ -427,6 +428,20 @@ def _next_publish_at(target_hm: Optional[str]) -> Optional[str]:
     return target.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+# channel_id → 最後にスケジューラへ登録した autopilot の指紋（2026-09-17）。
+# ディスク読み直しのたびに add_job すると next_run_time が押し出されるため、
+# 中身が本当に変わったときだけ再登録する。
+_job_fingerprints: Dict[str, str] = {}
+
+
+def _autopilot_fingerprint(ap: Dict[str, Any]) -> str:
+    return json.dumps(
+        {"enabled": ap.get("enabled"), "schedule": ap.get("schedule") or {},
+         "publish_lead_minutes": ap.get("publish_lead_minutes")},
+        sort_keys=True, ensure_ascii=False, default=str,
+    )
+
+
 def _refresh_channel_job(channel_id: str) -> None:
     sch = api_phase4._ensure_scheduler()
     if sch is None:
@@ -441,6 +456,8 @@ def _refresh_channel_job(channel_id: str) -> None:
             pass
 
     ap = _load_autopilot(channel_id)
+    # 今スケジューラに載せた内容を記録しておく（リロードフックの空回り防止）。
+    _job_fingerprints[channel_id] = _autopilot_fingerprint(ap)
     if not ap.get("enabled"):
         print(f"🚫 Autopilot for {channel_id}: disabled (enabled=false)")
         return
@@ -525,6 +542,24 @@ def _next_run_at(channel_id: str) -> Optional[str]:
     return min(next_times).isoformat()
 
 
+def _on_channel_config_reloaded(channel_id: str) -> None:
+    """ディスク変更で channel JSON を読み直した直後に呼ばれる（2026-09-17）。
+
+    autopilot セクションが変わっていないときに毎回 add_job し直すと
+    next_run_time が押し出されるので、実際に差があるときだけ再登録する。
+    """
+    try:
+        ap = _load_autopilot(channel_id)
+    except Exception:
+        return
+    fingerprint = _autopilot_fingerprint(ap)
+    if _job_fingerprints.get(channel_id) == fingerprint:
+        return
+    _job_fingerprints[channel_id] = fingerprint
+    print(f"♻️ Autopilot schedule re-sync from disk — {channel_id}")
+    _refresh_channel_job(channel_id)
+
+
 def restore_all() -> None:
     """起動時: すべてのチャンネルの autopilot ジョブを復元"""
     cm = _state.get("channel_manager")
@@ -535,6 +570,13 @@ def restore_all() -> None:
     if sch is None:
         print("⚠️ Autopilot restore skipped: APScheduler 未利用")
         return
+    # 【2026-09-17】指揮者が data/channels/*.json を直接書いた場合、
+    # ChannelManager はメモリを読み直すがスケジューラは古いままだった。
+    # enabled の false→true も、schedule.times の変更も、backend を再起動する
+    # までまったく効かない（2ch-matome が 09-13 以降 3 日間ぶん未発火）。
+    # 読み直しフックでスケジューラをディスクの内容へ追従させる。
+    if hasattr(cm, "add_reload_hook"):
+        cm.add_reload_hook(_on_channel_config_reloaded)
     enabled_ids: List[str] = []
     for ch in cm.list_channels():
         try:

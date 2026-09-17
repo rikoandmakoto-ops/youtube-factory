@@ -2846,6 +2846,11 @@ class FactsOverlayShortRenderer:
     def _draw_logo_chip(self, overlay):
         if self.logo_chip is None:
             return
+        # フォールバック背景では _paste_hero_logo が既に同じロゴを画面幅8割で
+        # 敷いている。ここでチップも描くと同一ロゴが二重に出る（権利面でも
+        # 必要以上に目立つ）ので、hero を敷いた回はチップを描かない。
+        if getattr(self, "bg_is_fallback", False) and getattr(self, "logo_source", None) is not None:
+            return
         cfg = self.cfg["logo_chip"]
         margin = int(cfg.get("margin", 40))
         pos = (cfg.get("position") or "top_left").lower()
@@ -6189,13 +6194,23 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
             print("⚠️ facts_overlay スタイルは long-form 未対応のため full はスキップします")
 
     elif style == "monologue":
-        # Monologue style — no thumbnail generation for now (different aesthetic)
-        # TODO: Monologue-specific thumbnail generator
         _ck()
         html_thumb = _generate_html_thumbnail(title, prefix, out_dir, channel_dict, thumb_info) if channel_dict else None
         results["thumbnail"] = html_thumb or generate_thumbnail(
             title, prefix, str(out_dir), bg_video_path, thumb_info=thumb_info,
         )
+        # ショートサムネ（2026-09-17）: monologue 分岐だけ short_thumbnail を返して
+        # おらず、socio-rx が毎回「サムネイルパス未指定」で thumbnails.set を
+        # 試行すらできていなかった。生成失敗でも動画自体は通す。
+        if gen_type in ("short", "both"):
+            _ck()
+            try:
+                results["short_thumbnail"] = generate_short_thumbnail(
+                    title, prefix, str(out_dir), thumb_info=thumb_info,
+                    channel_dict=channel_dict, char_config=char_config,
+                    channel_format=channel_format, channel_id=channel_id)
+            except Exception as _mt_err:
+                print(f"⚠️ monologue ショートサムネ生成に失敗（動画は続行）: {_mt_err}")
 
         # ナレーター話者: char_config の narrator > speaker_id を持つ先頭キャラ > 既定(青山龍星)。
         # 渡さないと channel JSON で指定した話者が無視され、MONO_SPEAKER_ID に落ちる。
