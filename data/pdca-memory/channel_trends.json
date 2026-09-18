@@ -386,6 +386,47 @@
    "top_video": "なぜ朝は身長が2cm高いのか？あなたの背中の正体",
    "note": "直近30日 n=7 と計測母数が薄い。ジャンル別は その他776 > 脳583 > 体の不思議577 > 睡眠499。死にseed3件を削除し26本へ。",
    "date": "2026-09-16n"
+  },
+  {
+   "date": "2026-09-17n",
+   "subscribers": 75,
+   "prev_subscribers": 74,
+   "subs_delta": 1,
+   "total_views": 209387,
+   "videos": 224,
+   "subs_per_1k_views": 0.6617,
+   "top_video": "録音の声が違う？それは骨伝導が原因！(骨伝導シリーズ)",
+   "top_views": 1519,
+   "shorts_30d": {
+    "count": 48,
+    "avg_views": 916.7,
+    "median_views": 953,
+    "avg_like_rate": 0.011
+   },
+   "seeds_len": 28,
+   "blacklist_len": 23,
+   "note": "subs/1k 0.6679→0.6617 で微減。実測ジャンル別 subs/1k: その他1.14>体0.52>睡眠0.46>脳0.36。脳は平均再生694.5で2位だが転換最下位。タイトル長は短いほど有利(〜20字 0.83 / 29字〜 0.36)。重複seed1件削除＋体感型3件追加で26→28。"
+  },
+  {
+   "date": "2026-09-18n",
+   "subscribers": 75,
+   "prev_subscribers": 75,
+   "subs_delta": 0,
+   "total_views": 210799,
+   "videos": 227,
+   "subs_per_1k_views_reported": 0.0,
+   "subs_per_1k_views_recomputed": 0.64,
+   "top_video": "録音の声が違う？それは骨伝導が原因！(骨伝導シリーズ)",
+   "top_views": 1519,
+   "shorts_30d": {
+    "count": 50,
+    "avg_views": 916.9,
+    "median_views": 950,
+    "avg_like_rate": 0.011
+   },
+   "seeds_len": 28,
+   "blacklist_len": 23,
+   "note": "レポート値 0.0 は Analytics API の HTTP 500 によるもので実態ではない。video_metrics 直計算で 0.64(n=42/38,870再生/登録25)＝前日 0.6617 から横ばい。登録者は2日連続で据え置き。インプレッションは imp/views 6.8% で欠損しており当chはサムネCTRが測れない。『なぜ』有 0.73 vs 無 0.34、『だけ』0.52 vs 0.71 で前日までの傾向を再確認。"
   }
  ],
  "scp-lab": [
@@ -774,6 +815,47 @@
    "top_video": "SCP-093 帰還者の証言から消えた15分の真相",
    "note": "subs/1k 0.8083→0.8245 で全ch最高かつ上昇。SCP個別オブジェクト592 vs 財団組織・職員237(BL済)。",
    "date": "2026-09-16n"
+  },
+  {
+   "date": "2026-09-17n",
+   "subscribers": 167,
+   "prev_subscribers": 166,
+   "subs_delta": 1,
+   "total_views": 174886,
+   "videos": 201,
+   "subs_per_1k_views": 0.7877,
+   "top_video": "一口SCP：2019年11月3日深夜0時、全サイトで同時に、人類殲滅プロトコルが起動",
+   "top_views": 1414,
+   "shorts_30d": {
+    "count": 55,
+    "avg_views": 739.2,
+    "median_views": 918,
+    "avg_like_rate": 0.0043
+   },
+   "seeds_len": 32,
+   "blacklist_len": 16,
+   "note": "subs/1k 0.8245→0.7877 で09-13以降の最低。タイトル長は長いほど有利(29字〜1.04 / 〜20字0.50)でdaily-scienceと逆。連番型0.32 vs 非連番0.91。インプレッション被覆率87.7%で全ch唯一まともに取れている。"
+  },
+  {
+   "date": "2026-09-18n",
+   "subscribers": 167,
+   "prev_subscribers": 167,
+   "subs_delta": 0,
+   "total_views": 175530,
+   "videos": 204,
+   "subs_per_1k_views": 0.7624,
+   "top_video": "一口SCP：2019年11月3日深夜0時、全サイトで同時に、人類殲滅プロトコルが起動",
+   "top_views": 1414,
+   "shorts_30d": {
+    "count": 57,
+    "avg_views": 736.6,
+    "median_views": 942,
+    "avg_like_rate": 0.004
+   },
+   "seeds_len": 27,
+   "blacklist_len": 16,
+   "ctr_median_pct": 0.97,
+   "note": "subs/1k 0.7877→0.7624 で3日連続の低下。登録者は据え置き。CTR三分位で 上位1.21 vs 下位0.71(1.7倍)＝CTRが登録と同方向に動く初確認。SCP番号明示 CTR1.26%/1.07 vs 非明示0.76%/0.56。伏字を機械ゲートで禁止し、番号を出せない seed 7件を削除・JP系2件を追加。"
   }
  ],
  "pokemon-lab": [
@@ -1470,6 +1552,15 @@
    "top_video": "姑獲鳥が赤子を抱かせる本当の理由…産で死んだ女の正体",
    "note": "連番形式(08-30停止)の効果が確定: 連番571 vs 非連番881。数字入りタイトルは489 vs 984 で不利。",
    "date": "2026-09-16n"
+  },
+  {
+   "date": "2026-09-17n",
+   "subscribers": 29,
+   "total_views": 59410,
+   "videos": 66,
+   "subs_per_1k_views": 0.7393,
+   "seeds_len": 30,
+   "note": "重複予備軍seed2件(座敷童子・口裂け女)を削除し32→30。"
   }
  ],
  "2ch-matome": [
@@ -1826,6 +1917,14 @@
    "top_video": "PCパーツ到着時、なぜ箱だけ先に届くのか？",
    "note": "本日公開0本。再生も -4 で実質停止。subs/1k 0.1636→0.1822 だが母数変化によるもの。数字入りタイトル862 vs 無1122。",
    "date": "2026-09-16n"
+  },
+  {
+   "date": "2026-09-17n",
+   "subscribers": 9,
+   "total_views": 47449,
+   "videos": 51,
+   "subs_per_1k_views": 0.1931,
+   "note": "稼働ch中 subs/1k 最下位。ジャンル分類が『その他』51本のみで分解不能。"
   }
  ],
  "company-facts": [
@@ -2005,6 +2104,14 @@
    "top_video": "ユニクロのヒートテック10億枚、その売上が残らない理由",
    "note": "本日の登録+3・再生+5203は全ch最大。ただし subs/1k は 0.6162→0.6013 と5日連続の低下。サイゼリヤ重複を検出しBL追加。",
    "date": "2026-09-16n"
+  },
+  {
+   "date": "2026-09-17n",
+   "subscribers": 42,
+   "total_views": 68204,
+   "videos": 60,
+   "subs_per_1k_views": 0.5735,
+   "note": "直近30日の再生64,163は全ch最大だが subs/1k は稼働4ch中最下位。タイトルの88%(46/52)が『年収』に収斂。サムネはロゴ二重掲示5日連続・巨大数字の低コントラスト継続。"
   }
  ],
  "clip-lab": [
@@ -2847,6 +2954,45 @@
     "2026-09-04": 20286,
     "2026-09-05": 27534
    }
+  },
+  {
+   "date": "2026-09-17n",
+   "oauth": {
+    "失効": [
+     "clip-animal",
+     "fake-paper",
+     "akashic-librarian",
+     "clip-fukada",
+     "clip-kaneko",
+     "clip-lab",
+     "pokemon-lab"
+    ],
+    "残り2.56〜2.57日": [
+     "2ch-matome",
+     "company-facts",
+     "daily-science",
+     "scp-lab",
+     "socio-rx",
+     "yokai-watch"
+    ],
+    "note": "09-15 に予測した『約09-20に全滅』の線上。固定分割は5日連続で不変。"
+   },
+   "impressions_coverage": {
+    "scp-lab": 0.877,
+    "clip-fukada": 0.302,
+    "yokai-watch": 0.294,
+    "company-facts": 0.172,
+    "pokemon-lab": 0.113,
+    "daily-science": 0.104,
+    "clip-kaneko": 0.088,
+    "2ch-matome": 0.061,
+    "fake-paper": 0.027,
+    "akashic-librarian": 0.02,
+    "clip-lab": 0.017,
+    "note": "imp/views。Spearman ρ(被覆率, 保存CTR)=-0.600(n=11)。CTRのch間比較は不可。"
+   },
+   "thumbnails_generated": 13,
+   "thumb_70pct_fix_shipped": false
   }
  ],
  "socio-rx": [
@@ -2871,6 +3017,14 @@
    "top_video": "なぜ天才は一人で育たないのか フィールズ賞の本当の理由",
    "note": "4本中 登録0。語尾『処方箋』破綻の2本は0再生、破綻なしの09-13分のみ1091再生(24h+831)。repair_with を修正。",
    "date": "2026-09-16n"
+  },
+  {
+   "date": "2026-09-17n",
+   "subscribers": 0,
+   "total_views": 3165,
+   "videos": 5,
+   "subs_per_1k_views": 0.0,
+   "note": "登録0が継続。09-16に repair_with から『処方箋』を削除済みで、破綻タイトルの新規出荷は本日分では未確認。"
   }
  ]
 }

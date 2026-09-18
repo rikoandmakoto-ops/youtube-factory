@@ -1444,6 +1444,96 @@
    "date": "2026-09-16n",
    "id": "cf-double-logo-day4-uniqlo",
    "note": "【サムネ・権利リスク・09-13から4日連続未対応】company-facts 4f223c97(ユニクロ回)で再現。_draw_logo_chip(左上・実ロゴ原寸)と _paste_hero_logo(中央・画面幅80%の実ロゴ)の二重掲示。logo_chip は facts_overlay.logo_chip.enabled で設定停止できるが、hero logo は video_generator.py にハードコードでフラグが無い(コード変更＝提案扱い)。加えて下半分の『10億』は暗金×暗背景で09-15の cf-giant-number-is-invisible と同じ低コントラストが継続。"
+  },
+  {
+   "date": "2026-09-17n",
+   "id": "thumb-70pct-fix-did-not-ship-restart-missing",
+   "note": "【サムネ・最重要・09-16 検証待ちの決着】commit 0d68613『ショートサムネを上70%に収める構図』は本日の生成分に1枚も乗っていない。09-17 に生成された13枚(06:48〜18:21・6ch)を全数で輝度std実測し、下29%帯のstdが daily-science 74.3 / scp-lab 94.3 / yokai 76.8 と09-16 分と小数点まで同一＝立ち絵レイヤが一切動いていない。上20%も std 4.3〜5.9 の無地のまま。作業ツリーの video_generator.py には SAFE_BOTTOM=int(SH*0.70) / TEXT_TOP が入っており(grep確認)コードは正しい。つまりコミット済みだが 09-16 22:08 以降バックエンドが再起動されておらず、常駐プロセスが旧モジュールを保持している。→ 効果判定は依然として1日も進んでいない。必要なのはコード修正ではなく再起動のみ。"
+  },
+  {
+   "date": "2026-09-17n",
+   "id": "impressions-column-undercounts-ctr-not-comparable",
+   "note": "【計測・最重要・09-02/09-10 CTR知見の訂正】video_metrics.impressions は再生数を大きく下回り、views>impressions の動画が各chで48〜100%を占める。被覆率(imp/views)実測: scp-lab 87.7% / clip-fukada 30.2% / yokai 29.4% / company-facts 17.2% / daily-science 10.4% / 2ch-matome 6.1% / clip-lab 1.7%。保存CTRは被覆率と逆相関 Spearman ρ=-0.600(n=11)＝分母が欠けたchほどCTRが高く出る。したがって 09-02『company-facts 3.23% が全ch首位＝実写背景テンプレが強い』および 09-10『scp-lab 0.82% が最下位＝ボトルネック』はテンプレの優劣ではなく被覆率の差を見ていた可能性が高い(scpは被覆率88%で唯一まともに取れているch)。→ CTR の ch 間比較は今後行わない。サムネ評価は ch 内・同一被覆率期間の比較か、登録/1000再生のみで行う。"
+  },
+  {
+   "date": "2026-09-17n",
+   "id": "title-length-sign-flips-ds-short-scp-long",
+   "note": "【タイトル・新規・09-07 title_rules根拠②の反証】連番型を除いた直近30日でタイトル実質長と subs/1k を対照。daily-science: 〜20字 0.83(n=13) > 21-28字 0.57(n=13) > 29字〜 0.36(n=38)＝単調に短いほど有利。scp-lab: 〜20字 0.50(n=4) < 21-28字 0.85(n=30) < 29字〜 1.04(n=50)＝単調に長いほど有利。両ch単調かつ符号が逆。09-07 の title_rules.rationale ②『実質20字超が有利、短すぎるタイトルを避ける』は views×維持率で測ったもので、09-04 に唯一指標を登録/1000再生へ一本化した後は daily-science で逆方向になる。09-15 の question-mark-sign-flips と同じく、タイトル型の全ch一律ルールは不可という三例目。"
+  },
+  {
+   "date": "2026-09-17n",
+   "id": "ds-brain-genre-is-views-up-subs-down",
+   "note": "【daily-science・新規・レポート推奨の逆】直近30日 n=78 をタイトル語でジャンル判定した実測 subs/1k: その他 1.14(n=11・平均再生795.5) > 体の不思議 0.52(n=37・517.2) > 睡眠・夢 0.46(n=18・366.3) > 脳・記憶・心理 0.36(n=12・694.5)。脳系は平均再生で2位だが登録転換は最下位＝09-15 の yokai『見られるが登録されない』と同型。レポートの『🔼 伸びてる系統』は再生平均で並べるため脳系を推すが、至上命題(登録)では誤り。登録獲得上位は『なぜ座ると腰だけ痛い？圧力1.4倍』(3人)『疲れた日の甘い物がすぐ消えるのはなぜ？』(3人)『なぜ冷たい水だけ歯にしみる？』(2人)＝全て20字以内・自分の体でその場で再現できる体感現象で、いずれも09-14〜09-15に追加したシード由来。→ 同型の体感シード3件を追加、脳系の増強はしない。シード配分は睡眠10/体11/脳2 で、最悪転換の睡眠に最多を割いている点は未解消(提案扱い)。"
+  },
+  {
+   "date": "2026-09-17n",
+   "id": "cf-salary-template-saturation-88pct",
+   "note": "【company-facts・新規・09-16 seed重複知見の一段上】直近30日 52本のうち46本(88%)がタイトルに『年収』を含む。年収有 平均再生1141.3・subs/1k 0.59 / 年収無 932.8・0.54 で年収自体は不利ではない(ただし無側 n=6)。問題は切り口の単一化で、エンティティが違うのに骨格が衝突する例が出た: 『JR東日本の年収810万円、本当は休日124日とのバランス』(08-28) ↔ 『日本電産の年収817万円、実は残業時間とのバランス』(09-15) 類似0.630。09-16 の『同一エンティティのseedは1本まで』では防げない、テンプレ側の重複。なお 東京エレクトロン(09-05 同日2本 0.727)・日本マクドナルド(09-03/04 0.667)は既に theme_blacklist 済みで該当動画はBL適用前。company-facts は直近30日の再生が全ch最大(64,163)だが subs/1k 0.5735 は稼働4ch中最下位。→ 切り口の分散が必要(提案扱い)。"
+  },
+  {
+   "date": "2026-09-17n",
+   "id": "cf-double-logo-day5-shiseido",
+   "note": "【サムネ・権利リスク・09-13から5日連続未対応】company-facts 4d3e20c3(資生堂回)で再現。左上に実ロゴチップ、中央に画面幅約80%の SHISEIDO ワードマークを敷く二重掲示。加えて下半分の巨大数字『3,000億円』が暗金×暗紺で、09-15 cf-giant-number-is-invisible と同じ低コントラストのまま5日連続。読める文字列は白1行『国内売上3,000億円』のみ＝09-15 に特定した当chの本当の強みは維持されている。hero logo は video_generator.py にハードコードでフラグが無いためコード変更が必要(提案扱い)。"
+  },
+  {
+   "date": "2026-09-17n",
+   "id": "scp-serial-format-kill-quantified",
+   "note": "【定量確認・新規・08-31判断の裏付け】連番プレフィクスの有無で subs/1k を対照(直近30日)。scp-lab: 連番型 0.32(n=14) vs 非連番 0.91(n=84)＝2.8倍差。daily-science: 0.59(n=14) vs 0.61(n=64)＝差なし。09-16 に yokai で確認した連番不利(再生1.54倍差)は、scp-lab では登録側でさらに大きく出る。連番は 08-31 に全ch停止済みで該当動画は全て停止前の在庫。追加対応は不要。"
+  },
+  {
+   "date": "2026-09-17n",
+   "id": "seed-dedup-rule-applied-fleetwide-and-its-false-positive",
+   "note": "【運用・09-16ルールの機械適用】『同一エンティティのseedは1本まで』『BL衝突の死にseedを作らない』を6chへ機械適用。死にseedは6ch全て0件＝09-16 の修正は保持されている。実重複は daily-science 寝返り2件(0.667)、yokai-watch 座敷童子2件(0.609)・口裂け女2件(0.600) の計3件で、具体的な方を残して3件削除した。一方 scp-lab の 0.621『SCP-1958「小さな旅」↔ SCP-3519「静かな日々」』は題材が別物で、当chのseed題名が『SCP-NNNN「名称」』の固定書式なため文字列類似が構造的に高く出る誤検知。→ scp-lab のseed重複判定は SCP番号を除去してから比較する必要がある(コード側・提案)。"
+  },
+  {
+   "date": "2026-09-17n",
+   "id": "dup-detector-false-positive-from-my-own-normalization",
+   "note": "【方法論・自戒】本日の重複再検証で、ハッシュタグ除去を [#＃][^\\s#＃]+ と書いたため、空白を含まない日本語タイトルでは # 以降が丸ごと消え、連番型が全て『1分科学』だけに潰れて類似1.000の偽陽性が48本×55本ぶん出た。『#NN：』の連番プレフィクスと『空白+#タグ』の末尾タグは別々に剥がすこと。正しい正規化では直近30日の実重複は daily-science 0件(最大0.638)・scp-lab 0件・yokai 0件・company-facts 3件。"
+  },
+  {
+   "date": "2026-09-18n",
+   "id": "ctr-is-the-first-metric-that-tracks-subs",
+   "note": "【最重要・新規・サムネ判断の土台】scp-lab の直近30日・imp>=200 の n=34 で CTR 三分位を作ると、上位1/3の 登録/千再生 1.21 に対し下位1/3は 0.71＝1.7倍差。これまで『サムネ品質は最優先』と言いながら唯一のKPIとの結び付きは未検証だったが、CTR は登録転換と同方向に動く初の指標として確認できた。CTR の出所は video_reach_daily(impressions/clicks)で、video_metrics.ctr 列は 0.009 のような比率とパーセントが混在しており信用できない。以後サムネ評価は video_reach_daily から計算すること。scp-lab 中央値 CTR 0.97%。"
+  },
+  {
+   "date": "2026-09-18n",
+   "id": "scp-number-in-title-lifts-ctr-not-just-subs",
+   "note": "【実測・09-09知見の拡張＋未対応の発見】scp-lab imp>=200 n=34。SCP-数字ID 明示は CTR 1.26% / 登録千 1.07(n=26)、非明示は CTR 0.76% / 0.56(n=8)＝1.9倍。伏字(███/SCP-XXXX)だけに絞ると CTR 0.64% / 0.66(n=3) で最下位。09-09 に登録側の差(0.888 vs 0.449)は記録済みだったが CTR 側は未計測で、かつ **直近30日の 22/59本(37%)が今も番号なし**で 09-16/09-17/09-18 にも発生している。原因は thumbnail_template.style_hint に『必ず実番号・伏字不可』と自然文で書いてあるだけで機械ゲートが無かったこと（09-09 の require_answer_marker と同型の失敗）。→ 本日 hard_constraints.forbid_patterns へ伏字禁止を追加。番号の必須化は require_any_of が既に答え提示語で埋まっており正規表現required が無いためコード側対応が必要(提案)。"
+  },
+  {
+   "date": "2026-09-18n",
+   "id": "genre-blacklist-and-theme-seeds-contradict",
+   "note": "【運用・新規】scp-lab は genre_blacklist に『財団組織・職員』を持ちながら、その genre にしか着地しない番号なし seed（SCP財団とは何か入門 / Dクラス職員の真実 / K-クラスシナリオ大全 / ミーム災害SCPまとめ / GOC・蛇の手など対立組織 / 財団が最初に収容した異常存在は何番なのか / 目を離すと位置が変わる収容物）を7件抱えていた。BL は生成後のタイトルしか見ないため、seed 段階の供給は止まらない。以後 genre_blacklist を足したら同 genre に流れる seed も必ず同時に掃除すること。実績でも 財団組織・職員 は平均273再生(ch平均610の45%)で最下位。"
+  },
+  {
+   "date": "2026-09-18n",
+   "id": "daily-science-impressions-are-missing-not-just-low",
+   "note": "【計測障害・新規】直近30日のインプレッション/再生数比は daily-science 6.8%(imp 5,292 / views 78,167) に対し scp-lab 73.0%(55,219 / 75,660)。imp>=200 を満たす動画は scp-lab 34/59本に対し daily-science は 0/51本で、**最大チャンネルのサムネCTRが1本も測れない**。09-17 に『scp-lab のインプレッション被覆率87.7%は全ch唯一まとも』と書いたが、ds 側は被覆率(行の有無)ではなく量が2桁足りない欠損で、reach_reports_ingested の取り込み範囲を ds について確認する必要がある(提案)。"
+  },
+  {
+   "date": "2026-09-18n",
+   "id": "today-ds-subs-per-1k-zero-is-an-api-500-artifact",
+   "note": "【誤読防止】本日のレポートで daily-science の 登録/千再生 が 0.0 と出ているのは実態ではなく、youtubeanalytics.reports.query が HTTP 500(backendError) を返したため。video_metrics から直接計算すると n=42(views>0)・38,870再生・登録25 で 0.64 と前日 0.66 から横ばい。OAuth 失効でも analytics.db の陳腐化でもない新しい失敗モードなので、subs/1k が 0.0 ちょうどの日は API エラーを疑って DB 側で再計算すること。"
+  },
+  {
+   "date": "2026-09-18n",
+   "id": "hard-constraints-gate-became-effective-on-0913",
+   "note": "【検証・過去の施策が効いた確認】backend/pipeline/title_constraints.check を実タイトルへ当てた（ハッシュタグ除去後）合格率は、scp-lab 08-31〜09-04:0/7 → 09-13〜09-18:11/13、daily-science 08-31〜09-09:2/11 → 09-13〜09-18:18/18。09-09〜09-11 に hard_constraints へ移した機械ゲート群は 09-13 の公開再開以降きちんと効いている。全期間で見ると合格率は 40% 前後だが、これは8月の在庫が引き下げているだけで現在の生成品質ではない。なお max_chars だけはハッシュタグを含んだ生文字列を数える一方 min_effective_chars は除去して数えるという同一モジュール内の不整合があり、生タイトルでは 54/59 が max_chars 違反に見える（実運用はハッシュタグ付与前に検査しているため実害なし・コード整理のみ提案）。"
+  },
+  {
+   "date": "2026-09-18n",
+   "id": "thumbnail-dead-space-moved-from-top-to-bottom",
+   "note": "【サムネ・実測・09-06の続報】最新サムネの情報行率を画素勾配で測ると ds 34% / scp 32% / yokai 35-39% / company-facts 11-19%。情報帯は ds・scp とも バッジ10-11% / 見出し14-28% / サブコピー30-32% / キャラ52-69% の4帯で完全に一致しており、**y=620-1005(32-52%,約20%)と y=1327-1920(69-100%,約31%)が無地グラデーションのまま**＝合計51%が死に領域。09-06 に指摘した『上端25-30%が死角』は見出しが上へ寄って解消したが、死角が下へ移動しただけで総量は減っていない。キャラは顔だけ・幅330px(30%)で中央に浮遊しており、フィード上の小サイズでは表情が判別できない。"
+  },
+  {
+   "date": "2026-09-18n",
+   "id": "oauth-6ch-expire-0920-as-predicted",
+   "note": "【障害・09-15予測の的中】生存6ch(2ch-matome/company-facts/daily-science/scp-lab/socio-rx/yokai-watch)のトークン残が全て1.56-1.57日＝09-20 朝に失効見込みで、09-15 の oauth-split-is-static-not-rotating-next-outage-0920 の予測どおり。失効7chは 09-09 から11日連続で復旧していない。恒久策(OAuth同意画面をテスト中→本番へ公開)は依然未実施で、これが済まない限り7日周期で全公開が止まる。"
+  },
+  {
+   "date": "2026-09-18n",
+   "id": "stray-zero-byte-analytics-db-at-repo-root",
+   "note": "【軽微・新規】data/analytics.db が 0バイトで存在する(本物は data/analytics/analytics.db で 20MB・09-18 まで最新)。誤ったパスで sqlite3.connect している経路があると空ファイルが生まれるため、将来『analytics が空だ』という誤診の元になる。実害は今のところ無い。"
   }
  ]
 }

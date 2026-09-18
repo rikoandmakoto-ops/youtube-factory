@@ -2034,6 +2034,144 @@
    "before": "-",
    "after": "追加なし",
    "reason": "30%ルール再判定。daily-science 全体平均550.7→閾値165.2、最下位の宇宙・天体(0)と日常の違和感(244.5)は登録済み、食・飲296.7は閾値超。scp-lab 全体平均535→閾値160.5、財団組織・職員236.8は閾値超かつ登録済み、対立組織・Kクラスは n=1 で判断不能。yokai/company-facts/2ch-matome/socio-rx はジャンルが『その他』1本化で分割不能。新規追加なし。"
+  },
+  {
+   "date": "2026-09-17n",
+   "channel": "daily-science",
+   "file": "data/channels/daily-science.json",
+   "field": "theme_seeds",
+   "action": "削除",
+   "value": "なぜ寝返りは一晩に何十回も打つのか",
+   "reason": "『なぜ寝返りは一晩に20回も打つのに自分では気づかないのか』と類似0.667。09-16ルール『同一エンティティのseedは1本まで』に従い具体的な方を残した"
+  },
+  {
+   "date": "2026-09-17n",
+   "channel": "daily-science",
+   "file": "data/channels/daily-science.json",
+   "field": "theme_seeds",
+   "action": "追加",
+   "value": [
+    "なぜ耳たぶだけ冷たい？毛細血管の密度差",
+    "なぜ正座を崩した0.5秒後に痛みが来るのか",
+    "なぜ爪を切っても痛くない？角質層の厚み"
+   ],
+   "reason": "実測で登録転換トップの3本(座ると腰/疲れた日の甘い物/冷たい水だけ歯にしみる, subs/1k 3.48/3.29/2.11)が全て20字以内・自分の体でその場で再現できる体感現象だったため同型を補充。angleに『20字以内に収める』を明記。平均再生2位の脳系(subs/1k 0.36で最下位)は意図的に増強せず"
+  },
+  {
+   "date": "2026-09-17n",
+   "channel": "daily-science",
+   "file": "data/channels/daily-science.json",
+   "field": "_theme_seeds_note_20260917n",
+   "action": "追加",
+   "value": "ジャンル別subs/1k実測とシード配分の根拠メモ",
+   "reason": "次回以降『伸びてる系統＝再生順』の推奨に引きずられないための記録"
+  },
+  {
+   "date": "2026-09-17n",
+   "channel": "yokai-watch",
+   "file": "data/channels/yokai-watch.json",
+   "field": "theme_seeds",
+   "action": "削除",
+   "value": [
+    "座敷童子が家を出ていった後に起きたこと",
+    "なぜ口裂け女の噂は全国へ同時に広がったのか"
+   ],
+   "reason": "同一エンティティ×同一切り口のseed重複(0.609 / 0.600)。09-16サイゼリヤ型の重複予備軍を発生前に除去"
+  },
+  {
+   "date": "2026-09-17n",
+   "channel": "yokai-watch",
+   "file": "data/channels/yokai-watch.json",
+   "field": "_theme_seeds_note_20260917n",
+   "action": "追加",
+   "value": "seed重複ルールの機械適用メモ",
+   "reason": "死にseedは6ch全て0件で09-16修正が保持されていることも併記"
+  },
+  {
+   "date": "2026-09-17n",
+   "channel": "(全6ch)",
+   "file": "-",
+   "field": "genre_blacklist",
+   "action": "無追加",
+   "value": null,
+   "reason": "閾値(全体平均の30%)を下回るジャンルが新規に無かった。daily-science 食・飲211.4は全体平均567の37%、scp-lab 対立組織313はn=1。09-07 format-blacklist-killed-best-format の自傷を繰り返さないため意図的に無追加"
+  },
+  {
+   "date": "2026-09-17n",
+   "channel": "(全6ch)",
+   "file": "-",
+   "field": "theme_blacklist",
+   "action": "無追加",
+   "value": null,
+   "reason": "正しい正規化で再検証した結果、直近30日の実重複は daily-science 0件(最大0.638)・scp-lab 0件・yokai 0件。company-facts の3件は既BL済みエンティティかテンプレ骨格の衝突で、企業名のBLは自傷になるため見送り"
+  },
+  {
+   "date": "2026-09-18n",
+   "channel": "scp-lab",
+   "file": "data/channels/scp-lab.json",
+   "field": "title_rules.hard_constraints.forbid_patterns",
+   "action": "追加",
+   "value": {
+    "pattern": "SCP-[\\u2588X]{2,}|\\u2588{3,}",
+    "label": "SCP番号の伏字（███ / SCP-XXXX）"
+   },
+   "reason": "伏字型は CTR 0.64% / 登録千 0.66 で最下位、番号明示型(1.26% / 1.07)の約1/1.9。style_hint の自然文禁止では 09-14 まで生成が止まらなかったため機械ゲートへ。実タイトル59本で検証し伏字5本を全て検出・番号明示の誤検知0件"
+  },
+  {
+   "date": "2026-09-18n",
+   "channel": "scp-lab",
+   "file": "data/channels/scp-lab.json",
+   "field": "theme_seeds",
+   "action": "削除",
+   "value": [
+    "SCP財団とは何か入門",
+    "Dクラス職員の真実",
+    "K-クラスシナリオ大全",
+    "ミーム災害SCPまとめ",
+    "GOC・蛇の手など対立組織",
+    "財団が最初に収容した異常存在は何番なのか",
+    "目を離すと位置が変わる収容物、財団の監視記録"
+   ],
+   "reason": "genre_blacklist 済みの『財団組織・職員』(平均273再生=ch平均の45%)や対立組織(n=1/313再生)にしか着地せず、かつ SCP番号を出せないため番号なしタイトル(登録転換1/1.9)を構造的に生む seed。32→25"
+  },
+  {
+   "date": "2026-09-18n",
+   "channel": "scp-lab",
+   "file": "data/channels/scp-lab.json",
+   "field": "theme_seeds",
+   "action": "追加",
+   "value": [
+    "SCP-1283-JP 踏切のむこうで調査員が消えた記録の正体",
+    "SCP-006-JP「あけろ」扉の向こうで記録が途切れる理由"
+   ],
+   "reason": "JP系SCPは直近30日 imp>=200 で CTR 1.98% / 登録千 1.94(n=3) と全類型で最上位。小サンプルのため次コホートで検証する前提の追加。25→27"
+  },
+  {
+   "date": "2026-09-18n",
+   "channel": "scp-lab",
+   "file": "data/channels/scp-lab.json",
+   "field": "_title_rules_note_20260918n / _theme_seeds_note_20260918n",
+   "action": "追加",
+   "value": "根拠メモ",
+   "reason": "title_rules 直下の forbid_patterns が死にキー(backend は hard_constraints しか読まない)である点と、BL↔seed 矛盾の再発防止を記録"
+  },
+  {
+   "date": "2026-09-18n",
+   "channel": "(全6ch)",
+   "file": "-",
+   "field": "genre_blacklist",
+   "action": "無追加",
+   "value": null,
+   "reason": "閾値(全体平均の30%)を下回る新規ジャンルが無い。daily-science 食・飲211(ch平均578の37%)、scp-lab 対立組織313(n=1)。宇宙・天体/日常の違和感/財団組織・職員は既にBL済み。09-07 format-blacklist-killed-best-format の自傷を繰り返さないため意図的に無追加"
+  },
+  {
+   "date": "2026-09-18n",
+   "channel": "(全6ch)",
+   "file": "-",
+   "field": "theme_blacklist",
+   "action": "無追加",
+   "value": null,
+   "reason": "重複検出は daily-science 15件・scp-lab 15件出たが、該当タイトル(ds 23本 / scp 17本)のうち直近30日公開は 0本＝全て6〜7月の死に在庫。09-15 dup-detector-measures-dead-inventory-by-design の通り"
   }
  ]
 }

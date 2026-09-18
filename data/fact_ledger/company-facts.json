@@ -2143,5 +2143,38 @@
     "fact_main": "年収 637万円",
     "fact_sub": "2024年2月期 有価証券報告書",
     "source": "generator"
+  },
+  {
+    "entity": "西松屋チェーン",
+    "metric": "年収",
+    "value": 507.0,
+    "unit": "万円",
+    "period": "2024-02",
+    "title": "西松屋の店員が少ない理由、売場2,000㎡の正体",
+    "fact_main": "年収 507万円",
+    "fact_sub": "2024年2月期 有報",
+    "source": "generator"
+  },
+  {
+    "entity": "西松屋チェーン",
+    "metric": "年間休日",
+    "value": 120.0,
+    "unit": "日",
+    "period": "",
+    "title": "西松屋の店員が少ない理由、売場2,000㎡の正体",
+    "fact_main": "年間休日 120日",
+    "fact_sub": "公式採用情報",
+    "source": "generator"
+  },
+  {
+    "entity": "神戸物産",
+    "metric": "店舗数",
+    "value": 1085.0,
+    "unit": "店",
+    "period": "2024",
+    "title": "業務スーパーの本当はなぜ安い 1キロ商品を支える仕組み",
+    "fact_main": "店舗1,085店",
+    "fact_sub": "2024年10月末時点",
+    "source": "generator"
   }
 ]
