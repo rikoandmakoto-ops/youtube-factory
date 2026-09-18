@@ -1,0 +1,214 @@
+{
+  "title": "サントリーが非上場を続ける理由、売上1兆円の裏側",
+  "theme": {
+    "title": "サントリーが非上場を続ける理由",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "話題企業の実態",
+      "fact_main": "サントリー 売上1.8兆円",
+      "fact_sub": "2024年連結売上収益",
+      "text": "売上1兆7,977億円。ただし、上場しない理由があります。",
+      "bg_query": "サントリーホールディングス株式会社 本社 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "創業1899年",
+      "fact_sub": "創業から125年超",
+      "text": "創業は1899年です。125年以上、同族で経営の軸を守ってきました。",
+      "bg_query": "サントリーホールディングス株式会社 創業者 鳥井信治郎",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "海外売上比率48%",
+      "fact_sub": "2024年連結ベース",
+      "text": "海外売上は48%です。約2社に1社分を海外で稼ぐ規模です。",
+      "bg_query": "サントリーホールディングス株式会社 海外事業 ウイスキー",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "株式公開0社",
+      "fact_sub": "グループ中核は非上場",
+      "text": "中核会社の株式公開は0社です。数字だけ見れば、かなり珍しい形です。",
+      "bg_query": "サントリーホールディングス株式会社 商品 売り場",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "投資額1,000億円超",
+      "fact_sub": "2024年の設備投資・投融資",
+      "text": "投資は1,000億円超です。",
+      "bg_query": "サントリーホールディングス株式会社 山崎蒸溜所",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "株主数は非公表",
+      "fact_sub": "未上場のため市場評価なし",
+      "text": "ただし株主数は非公表です。公表されているのは、ここまでです。",
+      "bg_query": "サントリーホールディングス株式会社 本社 受付",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったら、話題の企業の実態シリーズもプロフィールでチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "売上1.8兆円",
+      "なぜ非上場"
+    ],
+    "subtitle": "株主より長期戦略を選ぶ理由",
+    "tagline": "公表資料で見る企業の実態"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 9,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.501,
+      "similar_to": "カルビーのじゃがいも調達、実は20万トンの裏側",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "サントリーが非上場を続ける理由、売上1兆7,977億円の裏側"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['裏側'](+12)",
+      "好奇心ギャップ['理由', '裏'](+12)"
+    ]
+  },
+  "original_title": "サントリーが非上場を続ける理由、売上1兆7,977億円の裏側",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "サントリーが非上場を続ける理由、売上1兆7,977億円の裏側"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

@@ -1,0 +1,553 @@
+{
+  "title": "なぜ画面を見ると瞬きが半分に減る？目の乾きの正体",
+  "theme": {
+    "title": "なぜ画面を見続けると瞬きが減るのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで画面を見ると瞬きだけ減るんでしょう？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日あった！パソコン中は目が乾いたよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "普段は毎分15〜20回が、画面中は約半分まで減ります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホの通知を待つ目みたいだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも集中して読むほど減るから、目が乾きやすいんです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "画面から目を離す時間も意識してね。高評価も押して、体の謎シリーズと毎日投稿中の1万人目標を応援するチャンネル登録よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで画面を見続けると、あなたの瞬きだけ急に減るんでしょう？普段なら1分に15〜20回ほど自然に閉じるまぶたが、スマホやパソコンの前では、数秒どころか十数秒も開いたままになることがあります。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！動画を見ていたら目がしょぼしょぼして、気づけば30分くらい同じ姿勢だったよ。時計を見て驚いたけれど、その間に何回瞬きしたかは全然覚えていないな。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。安静な時の瞬きは一般に毎分15〜20回ですが、画面を見る作業では回数が半分近くまで下がる報告があり、目を乾きから守る時間が減りやすいんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！1分に20回が10回前後なら、ワイパーが半分しか動かない車みたいだね。雨の日のフロントガラスならすぐ気づくのに、目の上で起きると見落としてしまうんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "画面が特別に涙を吸い取るわけではありません。文字、数字、相手の表情のような細かな情報を見逃したくない時、脳はまぶたを閉じる短い動きより、見続けることを先に選びやすくなるのです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあスマホだけが悪いわけではなくて、本を読んだりゲームで狙いを定めたりする時にも近いことが起きるの？同じ画面でも、ぼんやり見る時と締切前に表を読む時では違いそうだね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここからは、あなたが夕方に感じる目の乾きがどこから来るのかを、まぶたと涙の動きからほどいていきます。最後には、20秒で試せる休ませ方も紹介するので、今の作業姿勢を思い浮かべてください。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "目薬を探す前に、まぶたの動きを見直せるかもしれないんだね。言われてみれば確かに、集中している時ほど瞬きを数えたことはないよ。どこで止まりやすいのか、知りたくなってきた。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "目の表面は、涙の薄い膜でいつも覆われています。瞬きは休憩の合図ではなく、その膜を黒目の前へ均一に広げ直す働きで、たとえるなら車のワイパーが見える道を整える動きと同じなんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ワイパーって聞くと一気に分かりやすい！ガラスに水滴が残ると信号がにじんで見えるけれど、目でも涙の膜が乱れると、文字の輪郭が少し揺らいだように感じることがあるんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "瞬きをするたび、上まぶたと下まぶたが合わさり、涙が目の表面へ広がります。1回は0.1秒ほどの短い動きでも、空気に触れて不均一になった膜を整え、次の数秒を見やすく保つ役目をしています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "0.1秒なら、本人は動かした意識がなくても不思議ではないね。洗面台の鏡を手のひらでさっと拭くくらい短いのに、その一瞬が何十回も積み重なって、目の前の景色を支えているんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ところが画面を読む時、脳は次の文字や小さな変化を追い続けます。そこで瞬きの合図が後回しになり、まぶたを閉じない間隔が長くなります。1文字ずつ追うほど、その傾向は強くなりやすいのです。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "目が壊れて瞬きできないのではなくて、脳が今は見続けたいと優先順位を決めているんだね。スマホの通知を先に開いて、洗濯物を後回しにする時みたいに、まぶたの用事が待たされる感じだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、画面作業中の瞬きが普段の約半分まで下がることがある点です。1分20回の人なら10回前後となり、涙を広げ直す間隔はおよそ2倍に空くため、乾きを感じやすくなります。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "半分はかなり大きいね！1分だけなら小さな差でも、60分の作業なら本来は1200回ほどあるはずの動きが、600回前後まで減る計算になるよ。数字にすると、目が疲れやすい理由が見えるね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただ、回数だけで乾きが決まるわけではありません。画面に近づいて細かい字を見ると、まぶたが最後まで閉じず、少し隙間が残る瞬きも増えやすいため、涙を広げる力そのものが弱くなることがあります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、瞬きしているつもりでも足りない場合があるの？ワイパーがガラスの端まで届かず、中央だけを軽くなでるような動きなら、水分を均一に広げられないのも想像できるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも、画面の位置が高いと目を大きく開きやすくなります。目の表面が空気に触れる面積が増えるため、同じ30分でも見上げる姿勢のほうが、乾きの負担が増えやすいと考えられています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ノートパソコンを台に載せて高くする時は、首には楽でも目には別の工夫がいるんだね。窓を見上げて風を受ける時のように、まぶたの開き方だけで空気に触れる量が変わるんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、読書や運転の計器確認でも似た形で起きます。視線を一点へ固定して、次の情報を待つほど瞬きは減りやすく、画面はその時間が長く続きやすいから、乾きとして意識されやすいのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それならゲーム中だけでなく、オンライン会議で相手の顔を見続ける時も同じだね。相手に失礼がないよう目をそらさないほど、まぶたには休む隙が少なくなってしまうのかな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここまでの話で大切なのは、画面の光だけを悪者にしないことです。集中、視線の高さ、部屋の乾燥が重なって、あなたの瞬きの間隔を長くします。明るさを下げるだけでは足りない理由がここにあります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、夜に画面を暗くしても目が乾く時はあるよ。光の設定だけでなく、顔を近づけたまま40分続けていたことや、エアコンの風も一緒に見直したほうがよさそうだね。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、読書やディスプレー作業で瞬きが減ることが、長年にわたり繰り返し観察されています。特に文字を正確に追う課題では、脳が途中の0.1秒を惜しむように、まぶたの動きを控えさせるようです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！たった0.1秒でも、文章の途中で目を閉じると読み直す気がするもんね。脳にとっては小さな時間でも、集中の流れを切らないために使いたくない時間なのかもしれない。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "瞬きは乾きだけでなく、考えごとの区切りにも合わせて出ることがあります。会話で相手が話し終えた瞬間や、1文を読み終えた瞬間に増えることがあり、脳が短い切り替えを作っていると考えられています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ、次々に動画や通知が流れる画面は、区切りを作りにくいのかもしれないね。次の字幕、次の投稿と追い続けると、信号待ちなしで走り続ける車みたいに、まぶたも止まりにくそうだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "画面作業で起きる目の不快感には、乾き、かすみ、重さなどが含まれます。ただし原因は一つではなく、コンタクトレンズ、睡眠不足、花粉、室内湿度などが重なるため、全員が同じ強さで感じるわけではありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ2時間でも、エアコンの真下に座る人と窓際の人では違いそうだね。だから友達が平気だからといって、自分も休憩なしで大丈夫とは決められないんだ。体の反応を比べすぎないほうがいいね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "涙の膜にはいくつかの働きがありますが、細かな名前を覚えなくて大丈夫です。大事なのは、瞬きが減るほど目の表面を整え直す回数が減り、文字や光の輪郭が安定しにくくなる、という日常的な変化です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "専門の名前より、ワイパーが動く回数が減ると考えるほうが覚えやすいね。画面の文字が急に読みにくくなった時、表示の不具合だけでなく、自分の目の表面も見直せるようになるよ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで一度、画面から目を離してみてください。まぶたをゆっくり最後まで閉じ、1秒ほど置いて開くだけでも、浅くなっていた瞬きを意識しやすくなります。5回ほど繰り返すと、休憩の合図にもなりますよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "今やってみたら、速くパチパチする時より、目の前が少し落ち着く感じがするよ。5回なら30秒もかからないし、信号待ちやファイルの読み込み中でも、こっそりできそうだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "コンピューターが職場に広がった1980年代には、画面作業と目の不調が広く調べられるようになりました。当時は大型の表示装置が中心でしたが、見続ける時間と姿勢が大切だという点は、今のスマホ時代にもつながっています。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "1980年代から同じ悩みが研究されていたんだ！今は通勤中、仕事中、寝る前まで小さな画面を見るから、昔より何回も瞬きを後回しにする場面が増えていそうだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "以前は画面から出る光が目の不調の主な理由と思われることもありました。しかし現在は、画面との距離、文字の小ささ、まぶたの開き方なども重要だと考えられ、対策も一つではないと分かってきました。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！画面を暗くする、ブルーライト用の設定を使う、それだけで終わりではないんだね。椅子の高さや文字の大きさまで、目にとっては同じ作業環境の一部なんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、何分ごとなら必ず安全かを、全員に同じ数字で決めるのは難しいです。年齢、目の状態、レンズの有無、部屋の湿度で差が大きく、ここは科学でも一律の結論が出ているわけではありません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ20分という目安も、絶対の決まりではなくて、休むきっかけなんだね。自分の目が乾き始める合図を知っておけば、タイマーが鳴る前でも、早めに遠くを見る判断ができそうだよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "目の乾きと一緒に首や肩のこりが出るなら、画面へ近づきすぎている合図かもしれません。読めない文字を無理に追うほど視線は固定され、瞬きも浅くなりやすいため、文字を大きくする工夫が役立ちます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "文字を大きくするだけなら、今日すぐ変えられるね。小さな文字を追い続けるのは、細い針穴に糸を通し続けるようなものだから、目とまぶたに休む余地がなくなりそうだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "最初のコツは、画面を目線より少し低めに置くことです。見下ろす姿勢では上まぶたが目を少し覆いやすく、空気に触れる面積を減らせるため、同じ30分でも乾きの負担を抑える助けになります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ノートパソコンなら椅子の高さや置く位置を数センチ変えるだけで試せるね。姿勢を整える時は首だけでなく、まぶたがどれくらい開いているかも、鏡で一度見てみたくなるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次のコツは、20分ほど画面を見たら、20秒だけ6メートル先を見るという目安です。遠くを見る時間は、近い画面へ固定していた視線をほどき、目と気持ちに小さな切り替えを作る助けになります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "20秒ならコーヒーを一口飲むより短いね。窓の外が見えない場所でも、部屋の奥の時計や壁を見るだけでいいなら、仕事を大きく止めずに続けられそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "三つ目は、まぶたを強くぎゅっと閉じるのではなく、ゆっくり完全に閉じることです。5回ほど丁寧に行うと、浅い瞬きに気づきやすくなり、涙を広げ直すための短い整備時間を作れます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "5回ゆっくり閉じるなら、キーボードで送信を押す前の確認時間にも入れられるね。画面から離れるのを忘れがちな人は、メールを送るたびにやると、自然な習慣になりそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "エアコンや扇風機の風が直接目に当たる席では、風向きも確認してみてください。瞬きが減る時間に乾いた風が重なると、ワイパーの間隔が長いままガラスを乾かすような状態になり、違和感が強まりやすいです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "席替えができなくても、風を壁に向けたり、机の位置を少しずらしたりはできるね。目の中だけを気にしていたけれど、1メートル先の送風口まで、乾きやすさに関わっているんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "もし痛みが強い、赤みが続く、見え方の変化が戻らない時は、画面対策だけで済ませず眼科へ相談してください。日常的な乾きとは別の原因が重なる場合もあるため、我慢して見続けないことが大切です。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "休憩しても良くならない時は、頑張って見続けないほうがいいんだね。体の合図を聞くことも、明日の作業を続けるための準備だと思えば、相談することに遠慮はいらないよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "画面を見ると瞬きが減るのは、目が怠けているからではありません。文字や動きを取りこぼさないよう脳が集中し、その間に涙を広げ直すワイパーの回数が少なくなるため、乾きを感じやすくなるのです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "半分まで減ることがあると知ると、目がしょぼしょぼした時の見方が変わるね。自分の目が弱いと責めるより、集中しすぎている合図かもしれないと、一度まぶたを閉じてみたくなるよ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜スマホを見る時は、文字を少し大きくして、画面を少し低めにし、20分の区切りで遠くを見てみてください。たった20秒でも、見つめ続けていたあなたの目に、次の瞬きの余白を作れます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、寝る前にスマホを見ると眠りに入りにくく感じるのはなぜかを扱います。目と脳が画面の光をどう受け取るのかも、今日の瞬きの話とつながってきそうで気になるね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話が役立ったら、まず高評価で教えてください。体の謎シリーズでは、あなたが毎日感じる小さな違和感を、1分や20秒の身近な数字から、隣で一緒にほどいていきます。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "面白かったらチャンネル登録よろしくね。身近な不思議を毎日1本ずつ解き明かしているから、1万人を目指すこのチャンネルを応援して、明日も一緒に見てほしいな。",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "瞬きが半分",
+      "画面の正体"
+    ],
+    "hook_caption": "瞬き半分",
+    "subtitle": "見つめるほど乾く目",
+    "tagline": "あなたの目で毎日起きること"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 85,
+      "issues": [
+        {
+          "type": "visual_dependent",
+          "line": 1,
+          "text": "なんで画面を見ると瞬きだけ減るんでしょう？",
+          "pattern": "画面[のを上下左右]",
+          "reason": "「画面の〜」はテロップ視聴者には分かりにくい"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "画面から目を離す時間も意識してね。高評価も押して、体の謎シリーズと毎日投稿中の1",
+          "reason": "1行62字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.635,
+      "similar_to": "なぜ緊張すると手だけ冷たいのか？3分後の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ画面を見ると瞬きが半分？正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 60,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)",
+      "短すぎ(16字 < 18)(-12)"
+    ]
+  },
+  "original_title": "なぜ画面を見ると瞬きが半分？正体",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "なぜ画面を見ると瞬きが半分？正体"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

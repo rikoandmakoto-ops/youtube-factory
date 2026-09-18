@@ -1,0 +1,555 @@
+{
+  "title": "なぜ手をぶつけると3秒さする？痛みの正体",
+  "theme": {
+    "title": "なぜ手をぶつけた後にさすってしまうのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？手をぶつけると、なぜかすぐさすってしまいますよね。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、それ昨日やった！ぶつけて3秒後には手を握ってたよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "手のひらの感触が痛みより先に脳へ届き。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホ通知で別の音に気づく感じと似てるね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも強く押すより、広く優しく触れるほうが楽に感じることもあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ぶつけた後の手のひら、今日から意識してみて。高評価も押して、体の謎シリーズと毎日投稿中の1万人目標をチャンネル登録で応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "あなた、手を机の角にぶつけた直後、痛いのに反射でさすったことありませんか？その行動、痛みを脳から追い出すための即席スイッチなんです。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "今回は、ぶつけた場所をさすると少し楽になる正体を暴きます。実は皮膚への刺激が、痛みの信号より先に脳へ届きやすいのです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "最初に驚きの結論です。さする動きは傷を一瞬で治す魔法ではなく、脳へ向かう痛みの通路に別の情報を割り込ませる作戦でした。",
+      "expression": "excited",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "この仕組みはゲートコントロール説と呼ばれます。脊髄には信号の通り道があり、触れる刺激が入ると痛みの伝達が弱まりやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "つまり、手をさするのは気休めだけではありません。服がこすれる感覚や指の圧が、痛いという警報を脳へ届けにくくする助けになるのです。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "しかも反転ポイントは、強く押すほど良いわけではないことです。次は痛みの種類によって、さする行為が効く場合と危ない場合を見分けます。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "でもこれ、半分は間違いなんだ。手をさするのは痛みを消す魔法ではなく、脳へ届く痛みの信号を一時的に通りにくくする行動なのよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "指先をぶつけた直後、さする前より痛みが弱まる人が多いのは、皮膚へのやさしい圧力が別の感覚信号を脳へ大量に送るからなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "痛みは、傷ついた場所から出る非常ベルみたいな信号ね。けれど触った感覚が同時に鳴ると、脊髄の中継地点で痛みの通り道が狭まりやすいの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "この仕組みはゲートコントロール説と呼ばれるよ。難しく聞こえるけれど、痛みの門番が触覚の情報を受けて、警報の量を少し絞るイメージだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから、強く押し込むより、手のひらで包むようにゆっくり触れるほうが楽に感じることがあるの。強い刺激は逆に痛みを増やす場合もあるわ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "実は同じことは、赤ちゃんが泣いたときに背中をなでる場面でも起きてる。一定のやさしい触れ方は、安心と触覚の信号を脳へ届けるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに、さする行為には自分で状況を確かめる意味もあるのよ。腫れや熱っぽさ、動かしたときの痛みを感じ取り、体が受けた傷を脳が評価しているの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし痛みが引いたから、傷が治ったとは限らないよ。骨折や捻挫でも直後は感覚がまぎれるため、形の変化や強い腫れは見逃さないでね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "つまり手をさするのは、脳の警報を少し静かにしながら、傷の様子を自分で確認する自然な反応なの。次にぶつけたら、そっと包んで観察してみて。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "痛い所をさすると楽になるのは気のせいではありません。1965年のゲートコントロール説では、触覚の信号が痛みの通り道を一時的に狭めると考えられました。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "皮膚には痛みを伝える細い神経と、圧力や振動を伝える太い神経があります。手でさする刺激は太い神経を先に動かし、脳へ届く痛みの量を減らします。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "驚きなのは、痛みの場所を直接さすらなくても効く場合があることです。近い皮膚を軽く触るだけでも、同じ脊髄の回路で痛み信号が弱まることがあります。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "代表的な実験では、腕に痛み刺激を加えながら周囲へ振動を与えると、参加者の痛み評価が下がりました。振動は触覚の太い神経を強く刺激しやすい方法です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、さするほど傷が早く治るわけではありません。楽になる主役は傷口の修復ではなく、脊髄と脳が受け取る痛みの信号を調整する働きだと考えられます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "痛みを0から10で答える研究では、軽い触覚刺激で平均評価が数段階下がる例があります。ただし効き方は、痛みの強さや不安の大きさで人ごとに変わります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに手を当てる行為には注意を痛みからそらす面もあります。脳は同時に全情報を同じ強さで処理できないため、触れた感覚へ意識が向くと痛みが目立ちにくくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "これは子どもがぶつけた膝を親に撫でてもらう場面ともつながります。安心感が加わると、脳の警戒が下がり、同じ刺激でも痛みを弱く感じることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、腫れた直後や骨折が疑われる痛みを強く揉むのは別問題です。触覚で痛みが紛れても、組織への負担が増える可能性があるので、まず安静と確認を優先します。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり、さする手は傷を魔法で消すのではなく、痛みの通信を一時的に混雑させる仕組みです。次にぶつけた時は、脳と脊髄の小さな門を思い出せそうですね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "痛い所を思わずさする癖は、昔から「気休め」ではなく体の防御反応として観察されてきたの。古代の治療でも摩擦は痛みを和らげる手段だったのよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "決定的な転機は1965年、メルザックとウォールが提案したゲートコントロール理論だ。触覚の信号が、痛みの通り道に門を閉めるように働くと考えた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "この「門」は本物の扉ではなく、脊髄で痛みの信号を調節する仕組みのたとえよ。ぶつけた指をさすると、触った感覚が先に脳へ届きやすくなるの。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "驚きなのは、痛みが消えたのではなく、脳へ届く情報の比重が変わる点だ。同じ傷でも、さするという行動だけで感じ方が揺らぐ可能性がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究者たちは皮膚をこする刺激と痛み刺激を比べ、太い触覚神経の活動が痛みを抑える説明を組み立てたわ。だから反射的な手当てにも理屈があったの。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし理論が出た当初、痛みは傷の大きさで決まるという見方が強かった。門の考え方は、感情や注意でも痛みが変わる研究への入口になったんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえば試合中は痛みを感じにくく、終わってから気づくことがあるでしょう。脳は傷だけでなく、周囲の刺激や状況も合わせて痛みの強さを判断するのよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "その後の研究では、さする行為には安心感や注意の移動も重なると考えられている。単純な反射に見えて、脊髄と脳が連携する小さな応急処置なんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "でも、強い腫れや変形、しびれがあるなら、さすって済ませるのは危険かもしれないわ。次は指先から脳まで、痛みの信号がどう競争するのか追ってみよう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は、ぶつけた手をさする行為は気休めだけではありません。痛みの信号より先に触覚の信号を脳へ送り、痛みの通り道を狭める可能性があるのです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "この考えは1965年の「ゲートコントロール理論」で知られます。脊髄は痛みを脳へ中継する関所のように働き、触れる刺激がその門番へ割り込むのです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから指を机の角に打った瞬間、反射的に握ってさするのです。皮膚をなでる圧力は、痛み専用ではない太い神経線維を強く動かします。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "ここで意外な反転です。さするほど痛みの原因そのものが早く治るわけではありません。それでも脳が受け取る痛みの強さは、短時間なら変わり得ます。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "痛みは傷の大きさをそのまま映す計器ではなく、脳が危険度を組み立てた感覚です。同じ小さな打撲でも、驚きや不安で鋭く感じることがあります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "さする動きには、自分で対処しているという予測も加わります。次に来る刺激を読めると脳の警戒が下がり、痛みの評価が弱まる場合があるのです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、痛む場所を自分の手で触ると、他人に同じように触られるより痛みが小さく感じられる傾向も報告されています。自分の接触は予測しやすいからです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし、強く押し続けるのは逆効果になり得ます。腫れた組織へ圧力を重ねれば新しい痛み信号が増え、脳の関所に送る雑音まで大きくなるからです。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "赤く腫れる、動かせない、しびれが続く場合は、さすって様子を見る段階ではありません。骨や神経の傷を見逃さないため、冷やして医療機関へ相談しましょう。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "つまり、手をさする癖は弱さではなく、脳と脊髄の仕組みを利用した即席の痛み対策です。次にぶつけたら、なぜ少し楽なのかを思い出せますね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ぶつけた直後は、まず患部を10分ほど冷やしてみて。さする前に冷やすだけで、熱っぽさとズキズキが広がるのを抑えやすいよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "驚きなのは、強く揉むほど早く治るわけではないこと。打撲の直後に力を入れると、傷ついた細い血管への刺激が増える場合があるんだ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "どうしても触れたいなら、痛い一点を押さずに周りへ手のひらをそっと当てよう。圧をかけず温度を感じるだけでも、安心感は作れるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "机の角で手を打った日は、指輪や腕時計を早めに外すのが実用的。あとから腫れると外しにくくなり、締め付けが痛みを強めることがある。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "冷やす道具は保冷剤を布で包めば十分で、直接肌へ当て続けないのがコツ。冷たすぎる刺激で皮膚を傷めないよう、間に一枚はさもう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "痛みが落ち着いた後なら、さする代わりにゆっくり指を曲げ伸ばししてみよう。動かせる範囲を確かめると、無理な作業を避ける目安になる。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、見た目が軽い打ち身でも、指が曲がらない、しびれる、形がおかしいなら我慢しないで。骨や関節のけがは早めの確認が安心につながるよ。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "家では、よくぶつける棚や机の角にクッション材を貼るのもおすすめ。痛みの対処より先に、次の一撃を減らすほうが手にはずっとやさしい。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "つまり今日の合言葉は、強く揉むより、冷やして守って様子を見ること。手が反射でさすりたくなったら、まず布越しの保冷剤を思い出してね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まとめると、ぶつけた手をさするのは弱い触覚が痛みの信号を脊髄で抑え、脳へ届く苦痛を減らそうとする自然な防御反応なんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "痛みが消えたように感じても傷そのものが一瞬で治るわけではないから、腫れや強い痛みが続くなら無理に動かさず様子を見ようね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "驚きなのは、ただ我慢するより手のひらでやさしく触れるだけでも痛みの感じ方は変わることがあり、体には自分を守る仕組みがあるんだ。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "だから次に机の角へ手をぶつけて反射的にさすったら、それは気休めではなく、脳へ送る痛みの音量を下げようとする行動だと思い出してね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠いのに布団へ入った瞬間だけ目が冴えるのはなぜかを解説するよ。脳が眠りを警戒する意外な理由を一緒にほどいていこう。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "寝る前に急に考え事が増えるあの感覚も、意思が弱いからとは限らないんだ。今日の夜に体験したら、次回の答えを楽しみにしてね。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "身近な「なぜ？」をこれからも理子と真がやさしく解き明かすよ。面白かったら高評価と、リコとマコトのゆっくり日常科学のチャンネル登録をお願いします！",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "ぶつけた手を",
+      "なぜさする"
+    ],
+    "hook_caption": "3秒でさする",
+    "subtitle": "痛みの感じ方は触れ方で変わる",
+    "tagline": "手のひらが痛みにできること"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "ぶつけた後の手のひら、今日から意識してみて。高評価も押して、体の謎シリーズと毎日",
+          "reason": "1行66字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.566,
+      "similar_to": "疲れた日の甘い物、3時間で消える正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ手をぶつけると3秒さする？痛みの正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

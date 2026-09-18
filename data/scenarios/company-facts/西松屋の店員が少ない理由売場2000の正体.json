@@ -1,0 +1,212 @@
+{
+  "title": "西松屋の店員が少ない理由、売場2,000㎡の正体",
+  "theme": {
+    "title": "西松屋が店員を置かない理由",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "話題企業の実態",
+      "fact_main": "西松屋 2,000㎡",
+      "fact_sub": "標準店の売場面積目安",
+      "text": "実は二千平方メートルの売場の裏で、店員を増やさない仕組みが動いています。",
+      "bg_query": "株式会社西松屋チェーン 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "年収 507万円",
+      "fact_sub": "2024年2月期 有報",
+      "text": "平均年収は五百七万円です。小売業で働く転職候補として、まず確認したい数字です。",
+      "bg_query": "株式会社西松屋チェーン 店内 レジ",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "賞与 2回",
+      "fact_sub": "求人情報の支給実績",
+      "text": "賞与は年二回です。数字だけ見れば、かなり良い。",
+      "bg_query": "株式会社西松屋チェーン 売り場 ベビー用品",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "年間休日 120日",
+      "fact_sub": "公式採用情報",
+      "text": "年間休日は百二十日です。土日を含むシフト制なので。",
+      "bg_query": "株式会社西松屋チェーン 店舗 駐車場",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "レジ 2台以上",
+      "fact_sub": "セルフレジ導入店舗あり",
+      "text": "レジは二台以上でも、セルフ対応を置く店があります。",
+      "bg_query": "株式会社西松屋チェーン セルフレジ",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "商品数 1万点超",
+      "fact_sub": "公式資料の取扱規模",
+      "text": "商品は一万点を超えます。補充と整理の負担は残ります。",
+      "bg_query": "株式会社西松屋チェーン 店内 子供服",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "毎日 1社",
+      "fact_sub": "話題の企業の実態シリーズ",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright",
+      "is_cta": true
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "店員が少ない",
+      "2,000㎡の理由"
+    ],
+    "subtitle": "西松屋の省人化を数字で見る",
+    "tagline": "安さの裏側"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 4,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 6,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.487,
+      "similar_to": "サイゼリヤの原価率40.1%、年収との正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "西松屋の店員が少ない理由、売場2,000㎡の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['正体'](+12)",
+      "好奇心ギャップ['理由', '正体'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

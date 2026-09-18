@@ -1,0 +1,673 @@
+{
+  "title": "深夜時のLINE既読だけ遺言みたいに怖くなる理由",
+  "theme": {
+    "title": "なぜ深夜3時のLINEだけ既読が怖いのか",
+    "angle": "きわどい恋愛系。時間帯で意味が変わる仕組みを回収"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "お前ら、深夜3時の既読だけ背筋が凍る理由わかる？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 3時に既読だけ付くのは通知欄が震えるやろw。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "現実は非情だったｗｗｗ。昼の既読は平和、深夜3時だけ遺言みたいになる草",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "返信が3分ないだけで、相手の部屋を想像し始めるやつw。",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり寝る前の本音だけ既読で止まったからガチで恐ろしいんや",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "言えないやつシリーズ、草生えたら高評価なw 後でヤバい友達に見せたいやつは保存しとけw。…あれ、最初のレスもう一回読んでみ？",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、深夜3時のLINEだけ既読が付くと、返信ゼロでも心臓が跳ねたことありませんか？怖さの正体は、相手が起きているのに選ばれなかったかもしれない、という時間限定の想像です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "昼の既読なら仕事中か移動中で流せるのに、午前3時は言い訳の候補が急減する魔の時間帯。今回は、その一瞬の既読が恋愛ドラマ級に刺さる正体を、通知の向こう側から暴いていくぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも最強に怖いのは、既読が早いほど脈ありとは限らない逆転だよ。眠れずスマホを握る人は、恋人への返信より先に、気まずい相手の文面だけ確認して放置することもあるからね。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "人は情報が足りない場面ほど都合よく補完する、という心理がある。たった二文字の既読に、浮気、別れ話、酔った勢い、元恋人まで勝手に出演させて、脳内だけで深夜映画を完成させるんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "時間帯が意味を変える鍵は、深夜3時が「急ぎでも日常でもない」境目なこと。昼なら用件、夜なら雑談なのに、この時間だけは本音か孤独か秘密のどれかを疑わせる、妙にきわどい舞台になるの。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "では、既読が怖いのは相手の沈黙のせいか、それとも自分が送った一言のせいか。午前3時に読まれて返らなかったLINE、あなたならどんな理由を想像する？コメントで一番怖い説をあげてけ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこれ、半分は間違いなんだ。深夜3時の既読が怖いのは、相手の本心より「今なぜ起きてる？」という想像が暴走するから。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "昼の既読なら仕事の休憩、夜なら帰宅後と理由を置ける。でも午前3時は理由の空白が大きく、脳が勝手に恋愛ドラマを脚本化する。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "心理学でいうネガティビティ・バイアスは、曖昧な情報ほど悪い意味を優先して読む癖。既読一つで「誰かといる？」が浮かびやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "実際には夜勤、寝落ちからの目覚め、動画の見過ぎなど普通の事情も多い。それでも深夜は生活圏が見えず、説明のない行動に感じる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかもLINEの既読は、読むという事実だけを示して、気持ちは一切表示しない。情報が少ないほど、人は自分に都合の悪い補足を書き足す。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "午前3時は周囲が静かなぶん通知が強調される時間帯だ。昼なら流せる既読通知も、布団の中では心臓に直接届いたように感じる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さらに返信が来ないと、「見たのに返せない内容だった？」と解釈が進む。既読と無返信の短い間に、疑いだけが何倍にも膨らむんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり怖さの正体は既読そのものではなく、時間帯が作る物語性。深夜3時は日常のルール外だから、恋愛の裏側まで連想しやすい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "とはいえ、深夜3時に既読だけ付ける側にも事情はあるはず。あなたなら何を想像する？　コメント欄で一番怖い解釈をあげてけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "睡眠研究では深夜帯ほど感情のブレーキが弱まり、同じ既読でも「拒絶かも」と読む率が昼より跳ね上がるらしい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "特に午前3時は体温も判断力も低い谷で、返信なしを事実ではなく恋愛ドラマの伏線へ変換しやすい時間帯だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ある調査では、夜間にメッセージを確認する人の約6割が、返事の遅れを昼間よりネガティブに受け取ったと答えた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも既読通知は「読んだ」という一情報だけなのに、脳は相手の表情、浮気、別れ話まで勝手に補完してしまう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、怖いのは既読そのものより、返信できるはずの時間に返信がないと想像してしまう自分の物語なんだよね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "心理学ではネガティビティ・バイアスと呼ばれ、曖昧な沈黙ほど悪い意味を優先して記憶する心の癖を指す。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "例えば昼の既読放置なら会議中で済むのに、午前3時だと「誰かといる？」「寝落ち？」と候補だけ急に色っぽくなる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "スマホ実験でも、通知を見た直後の待機時間は主観的に長く感じやすく、数分が数十分級の不安へ膨らむとされる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "昔は返事が翌日でも普通だったのに、既読機能が入ってからは沈黙に時刻印が付き、恋の推理ゲームが常時開催された。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり午前3時の既読は、相手の本音より眠れない側の想像力が主役。あなたなら何分で不安判定するかコメントで教えて。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "深夜3時の既読が怖い話、昔のポケベル時代から芽はあったらしい。夜更けの返信は「今だけの本音」と読まれ、翌朝には説明不能な空気だけ残った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "LINE普及後の恋愛相談では、午前3時台の既読だけ返事なしが最恐だという声が目立つ。通知を見たのに黙る、その余白へ人は勝手に物語を書くんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "研究でいう曖昧性効果は、情報が足りないほど悪い意味を選びやすい心の癖。既読という小さな証拠一つで、別れ話まで想像してしまう現象だね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも深夜3時は、睡眠不足で感情のブレーキが弱る時間帯として知られる。昼なら「寝落ちかな」で済む既読が、夜だと秘密の目撃に化ける。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、怖いのは既読そのものじゃない。相手が起きていると判明した瞬間、自分以外の誰かといる可能性まで同時に点灯するからだ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "古い恋愛小説でも、午前零時以降の手紙は理性を失った告白の合図だった。現代では封筒が既読表示へ替わり、返事の遅さだけが鋭く残った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "通知時刻は客観的なのに、意味づけは完全に主観的。三時〇二分の既読を見て「トイレで見た」と思うか、「誰かといた」と思うかで夜が割れる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "恋愛スレでは、返信が朝七時だと安心するのに、三時十分だと疑うという報告も多い。同じ四時間でも、暗闇が勝手に関係の影を濃くするんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり深夜3時の既読は、時間が意味を上乗せする恋愛の怪談。あなたなら返信なしの画面を見て、寝落ちと秘密のどちらを先に疑う？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの本命は、深夜三時の既読だけで脳が危険信号を出すこと。通知の文面より時刻が恋愛の意味を勝手に増幅させるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "人は夜更かしで判断力が落ちると、曖昧な情報を悪い方へ解釈しやすい。既読一個が「誰といる？」に化ける時間帯だぜ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "心理学ではネガティビティ・バイアスと呼ばれ、悪い可能性ほど記憶に残りやすい傾向。午前三時はその妄想に燃料を注ぐ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも既読は返事ではなく、見た事実だけを示す印。深夜だと「起きてるのに返さない」が、昼の十倍くらい重く感じるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転、怖いのは相手の行動より自分の想像かもしれない。実際には寝ぼけて通知を開いた、ただそれだけの可能性もある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "人間の体内時計では深夜帯に感情のブレーキが弱まりやすい。昼なら流せる短文でも、三時には別れ話の予告に見えてしまう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "LINEの既読表示は便利なのに、恋愛では監視カメラみたいに働く。返信までの数分を数えるほど、空白へ物語を作ってしまう。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "特に「おやすみ」の後の既読は厄介だな。寝る宣言の直後に画面を見た事実だけで、秘密の相手まで想像されがちになる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "昔なら深夜の電話は緊急か特別な用件だったから、時間に意味を読む癖が残っている。通知一つでも心臓が先に反応するわけ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さて、深夜三時に既読だけ付いて返信なし、ユイなら何を疑う？くだらない答えから修羅場級まで、コメント欄で当ててけ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "深夜3時に送るなら、本文の前に「返信はいらないよ」を置くのが安全策。既読だけでも相手の睡眠を奪わず、翌朝の空気を守れるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "逆に「今起きてる？」だけは恋愛ホラー級に危険だぞ。用件不明の一文は、受信側の脳内で最悪の展開を勝手に上映し始める。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、同じ「ありがとう」でも午前0時を越えると告白の前振りに見えがちなこと。文面より送信時刻が感情を着色するんだよね。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "実践では、急ぎでない連絡は予約送信に逃がそう。朝8時台なら生活連絡に見えやすく、深夜の既読監視ゲームを発生させにくい。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "どうしても夜に送るなら、最初に用件を完結させるのがおすすめ。「明日の集合は10時、返事不要」で余白を消して安心を渡せるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "既読が付いた瞬間に追撃スタンプを打つのも避けたいな。通知が連続すると、軽い連絡でも「今すぐ返せ」の圧に化けてしまうぞ。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "恋愛寄りに攻めるなら、深夜3時は質問より翌朝の話題を置こう。「起きたらコーヒー飲みたいね」なら返答期限を作らず余韻だけ残せる。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "相手が夜型でも、毎回3時に即レスする必要はないぞ。返信ペースは好意の証明ではなく、睡眠と自分の機嫌を守るための設定だからな。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さて、あなたなら深夜3時の既読に何を感じる？　「脈あり」「事故」「酔ってる」の三択だけでは足りない珍回答をコメントであげてけ！",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "結局、深夜3時の既読が怖いのは、通知より先に「誰と何してたの？」という想像が走るから。昼なら平気な既読でも、夜は恋の取り調べ室になるんだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも返信がない数分で、寝落ち、駆け引き、別の相手まで候補が増殖する。時計の数字ひとつが、ただのLINEを深夜ドラマの最終回みたいに変えるんだぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、既読そのものより「3時」という状況証拠が刺さること。起きている事実だけで、送った側は自分の優先順位まで測られた気がしてしまうのよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "だから怖がるほど送信取消したくなるけど、取消通知はさらに怪しい。深夜の恋愛LINEは、沈黙も既読も取り消しも、全部コメント欄で裁かれる大喜利状態だな。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回は「元カノの名前で呼ばれた時、空気を壊さず返す一言あげてけ」スレを解説するよ。笑って流すか、静かに刺すか、あなたならどの返しを選ぶ？",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回も、くだらないのに参加したくなる恋愛スレの珍回答を、ゆっくり2chスレまとめ劇場らしく実況するぜ。深夜に見たら危険な答え、今から予習しておけ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "「3時の既読、怖いのは送った側か読んだ側か」あなたの判定をコメントで教えてね。面白かったら高評価とチャンネル登録で、次の深夜スレにも集合しよう！",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "深夜3時",
+      "既読だけ"
+    ],
+    "hook_caption": "既読が怖い",
+    "subtitle": "返事なしで全員察するやつ",
+    "tagline": "時間だけで空気が変わる草"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "modified": true,
+      "original_hook": "ワイの深夜3時の既読、何があったか当ててくれw",
+      "selected_hook": "お前ら、深夜3時の既読だけ怖い理由わかる？",
+      "scores": [
+        {
+          "hook": "お前ら、深夜3時の既読だけ怖い理由わかる？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 20,
+            "scroll_stop": 10,
+            "loop_connect": 15
+          },
+          "total": 75
+        },
+        {
+          "hook": "君の寝る前の本音、既読で止まってたらどうする？",
+          "scores": {
+            "curiosity_gap": 15,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 0,
+            "loop_connect": 15
+          },
+          "total": 50
+        },
+        {
+          "hook": "ワイの深夜3時の既読、何があったか当ててくれw",
+          "scores": {
+            "curiosity_gap": 0,
+            "brevity": 15,
+            "emotional_trigger": 5,
+            "scroll_stop": 10,
+            "loop_connect": 15
+          },
+          "total": 45
+        }
+      ],
+      "reason": "better_hook_found"
+    },
+    "swipe_stop": {
+      "modified": false,
+      "injections": 0,
+      "dead_zones": [],
+      "tension_curve": [
+        {
+          "index": 0,
+          "text": "お前ら、深夜3時の既読だけ怖い理由わかる？",
+          "tension": 6,
+          "is_dead": false
+        },
+        {
+          "index": 1,
+          "text": "は？ 3時に既読だけ付くのは通知欄が震えるやろw",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 2,
+          "text": "昼の既読は平和、深夜3時だけ遺言みたいになる草",
+          "tension": 2,
+          "is_dead": false
+        },
+        {
+          "index": 3,
+          "text": "返信が3分ないだけで、相手の部屋を想像し始めるやつw",
+          "tension": 0,
+          "is_dead": true
+        },
+        {
+          "index": 4,
+          "text": "つまり寝る前の本音だけ既読で止まったから怖いんや",
+          "tension": 3,
+          "is_dead": false
+        },
+        {
+          "index": 5,
+          "text": "お前らなら何て返す？ コメントで頼むわw 高評価とチャンネル登録、1万人目標で毎日投稿中やで、言えな",
+          "tension": 6,
+          "is_dead": false
+        }
+      ]
+    },
+    "cta_rotation": {
+      "modified": true,
+      "style": "save",
+      "style_label": "保存",
+      "original_cta": "お前らなら何て返す？ コメントで頼むわw 高評価とチャンネル登録、1万人目標で毎日投稿中やで、言えないやつシリーズも応援よろしくw",
+      "new_cta": "言えないやつシリーズ、草生えたら高評価なw 後で友達に見せたいやつは保存しとけw"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 28,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 6,
+        "relatability": 6,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "pacing_score": 75,
+      "optimized_score": 75,
+      "micro_reveals": 0,
+      "dead_spots_fixed": 0,
+      "crescendo_ratio": 1.0,
+      "issues": [
+        "50%地点の密度が低い",
+        "最終行の密度が低い（ループ接続弱化）"
+      ]
+    },
+    "replay_loop": {
+      "loop_seeded": true,
+      "ending_feel_removed": false,
+      "trigger_added": "たいやつは保存しとけw。…あれ、最初のレスもう一回読んでみ？",
+      "keyword_overlap_before": 0.0,
+      "keyword_overlap_after": 0.0
+    },
+    "power_word": {
+      "amplified": 3,
+      "changes": [
+        "「怖い」→「背筋が凍る」",
+        "「怖い」→「ガチで恐ろしい」",
+        "「友達」→「ヤバい友達」"
+      ],
+      "lines_modified": 3
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.488,
+      "similar_to": "ワイ風呂で3回やらかしたんやがw",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 48,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "original_title": "なぜ深夜3時の既読が怖い？実は理由あるw",
+      "enhanced_title": "😨なぜ深夜3時の既読が怖い？実は理由あるw😨",
+      "emoji_added": "😨",
+      "category": "shock",
+      "modified": true
+    },
+    "enhanced_title": "😨なぜ深夜3時の既読が怖い？実は理由あるw😨"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "gap_found": true,
+      "gap_injected": false,
+      "early_answer": false,
+      "early_answer_line": -1
+    },
+    "comment_bait": {
+      "bait_injected": true,
+      "existing_bait": false,
+      "position": 3,
+      "bait_text": "お前らならどうする？正直に答えてみ？ｗ"
+    },
+    "emotional_polarity": {
+      "polarities": [
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "negative",
+        "negative"
+      ],
+      "streaks_found": 0,
+      "breakers_injected": 0,
+      "polarity_diversity": 0.33
+    },
+    "pattern_interrupt": {
+      "endings": [
+        "question",
+        "statement",
+        "laugh",
+        "statement",
+        "statement",
+        "question"
+      ],
+      "monotone_runs": 1,
+      "interrupts_injected": 1,
+      "variety_score": 0.6
+    },
+    "subscribe_trigger": {
+      "trigger_type": "community_belong",
+      "trigger_text": "常連ニキならこのノリわかるよなｗ",
+      "position": 1,
+      "injected": true
+    },
+    "contrast": {
+      "contrasts_found": 0,
+      "amplified": 0,
+      "frame_injected": true,
+      "contrast_score": 0.5
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', 'なぜ', '怖い'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "original_title": "😨なぜ深夜3時の既読が怖い？実は理由あるw😨",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "😨なぜ深夜3時の既読が怖い？実は理由あるw😨"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}
