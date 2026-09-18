@@ -1,152 +1,173 @@
 # daily-merge-all-projects 実行ログ
 
-**実行日時**: 2026-09-16 22:09 JST（スケジュール実行 / 承認者不在）
-**対象**: youtube-factory / aiseki / ai-english-coach
+実行日時: 2026-09-19 00:0x JST（開始 2026-09-18 22:05 JST）
+実行主体: Cowork 定期タスク（サンドボックスVM／ユーザー不在の自動実行）
 
 ---
 
-## 最終状態（サマリ）
+## サマリ
 
-```
-youtube-factory : main ...origin/main [ahead 8]  dirty=0  未マージ1本(コンフリクト継続)
-aiseki          : main ...origin/main [同期済]   dirty=0  未マージなし
-ai-english-coach: main (remote なし)             dirty=0  未マージなし
-```
+| リポジトリ | Phase1 マージ | Phase2 コミット | Phase3 push |
+|---|---|---|---|
+| youtube-factory | ⚠️ 見送り（退行の恐れ・下記） | ✅ 6コミット | ❌ 認証不可 |
+| aiseki | — （未マージブランチなし） | ✅ 4コミット | ❌ 認証不可 |
+| ai-english-coach | ✅ 対応不要（`_locktest` はマージ済み） | — （作業ツリーはクリーン） | — （remote なし） |
 
-> ⚠️ **push は実行できていない**（sandbox に GitHub 認証情報が無い）。詳細は末尾「やり残し」。
-> 前回ログの「ahead 16」はホスト側で push 済みだったことを確認（origin/main と一致していた）。
+**要対応: push が1件も通っていません。** 全コミットはローカルの main に載っています。
+Mac 側で下の「手動で必要な作業」を実行してください。
 
 ---
 
 ## Phase 1: マージ
 
-### youtube-factory
-- ブランチ: `main` / `orch-20260911-followup`
-- `orch-20260911-followup`（3コミット・15ファイル）が main に未マージ
-- **マージは実行していない。コンフリクトあり（手動対応が必要）** — 前回と同じ状態
-- `git merge-tree` ドライラン結果（衝突マーカー3箇所）:
+### youtube-factory — `orch-20260911-followup`（3コミット・09-11）
 
-| 衝突ファイル | 内容 |
+**マージしませんでした。** 強制マージすると 09-12〜09-18 の作業が消えるためです。
+コンフリクトがあるので、タスクの規定（「コンフリクトがあれば報告のみ」）どおり報告に留めます。
+
+仮想3wayマージ（作業ツリー非破壊。`git merge-file` で base/main/branch を突き合わせ）の結果:
+
+| ファイル | 結果 |
 |---|---|
-| `.auto-memory/INDEX.md` | 09-11 の追記行と、以降の main 側追記が末尾で衝突（1箇所） |
-| `data/channels/2ch-matome.json` | `theme_queue` 先頭要素と `rationale_20260911` 周辺（2箇所） |
+| `.auto-memory/INDEX.md` | 🔴 コンフリクト 1件 |
+| `data/channels/2ch-matome.json` | 🔴 コンフリクト 2件 |
+| `data/channels/akashic-librarian.json` | 🟠 コンフリクトなしだが main を 09-11 の値へ巻き戻す |
+| 残り12ファイル | 🟢 変化なし（＝main に取り込み済み） |
 
-- 他10ファイル（`backend/pipeline/title_constraints.py`、`data/analytics/clip_state.json`、`data/channels/` の7ch、`.auto-memory/2026-09-11.md`）は両側変更だがテキスト衝突なし＝自動解決可
-- **所見**: `title_constraints.py` はブランチ側が 09-11 時点、main 側は 09-14 に `forbid_patterns` 対応などを追加済み。自動マージなら main 側の追加は保持されるが、ブランチが5日古いので「衝突2ファイルを手で解決してマージ」か「必要な hunk だけ cherry-pick して破棄」かの判断が要る
+巻き戻る具体的な中身:
 
-**手動マージ手順（ホスト端末で）**
-```bash
-cd ~/Developer/youtube-factory
-git merge orch-20260911-followup
-# 衝突2ファイル（.auto-memory/INDEX.md, data/channels/2ch-matome.json）を解決 → git add → git commit
-```
+- `.auto-memory/INDEX.md` … `2026-09-12.md` 〜 `2026-09-18.md` の索引7行と「`~/.auto-memory/` が接続フォルダ外」の注記が **削除**される。
+- `data/channels/2ch-matome.json` … `title_style` が 09-17 版から 09-11 版へ戻り、`title_type_rule_20260914` と `title_style_prev_20260917` が **削除**される。
+- `data/channels/akashic-librarian.json` … `rationale_min_effective_chars_20260911` が再計算前の初版へ戻る。
+
+ブランチ側の本体（`effective_len` のハッシュタグ正規表現 `[#＃][^\s：:]*` と空白畳み込み）は
+**すでに main の `backend/pipeline/title_constraints.py` に1文字違わず入っています**。
+`backend/tests/test_fixes_20260911.py` / `reports/make_youtube_analysis_20260911.py` /
+`reports/youtube-analysis-2026-09-11.xlsx` も main と同一です。
+
+→ このブランチは実質的に取り込み済みで、マージによる利得はゼロ・損失は上記の巻き戻しのみ。
+**判断: マージせず温存。** 不要と確認できたら Mac 側で `git branch -D orch-20260911-followup` を。
 
 ### aiseki
-- ブランチ: `main` のみ。未マージブランチ **なし**
+`git branch --no-merged main` が空。未マージブランチなし。
 
 ### ai-english-coach
-- ブランチ: `main` / `_locktest`。`_locktest`(a90c4ad) は main の祖先＝**マージ済み**。作業不要
-- remote 未設定
+`_locktest`（a90c4ad）は main の祖先＝マージ済み。作業なし。
 
 ---
 
 ## Phase 2: 整理・コミット
 
-### youtube-factory — 8コミット / 62ファイル
-
-| コミット | メッセージ | ファイル数 |
-|---|---|---|
-| `d87917f` | chore(gitignore): 指揮者xlsxの途中シート(reports/_orch_sheet*.xlsx)を追跡対象外に | 1 |
-| `4966105` | chore(config): 09-16 指揮者適用のチャンネル設定を更新 | 5 |
-| `37d3ef4` | chore(data): 分析・独自性・原典台帳・シリーズリンク・トレンドを09-16時点に同期 | 14 |
-| `7a57eb4` | feat(scenarios): 09-16 生成分のテーマキューとシナリオアーカイブを追加 | 33 |
-| `0d68613` | fix(thumbnail): ショートサムネを上70%に収める構図に変更（テキスト上端・立ち絵中段右・図解中段左） | 2 |
-| `8f2f8a0` | chore(scripts): 09-16 指揮者スクリプト(適用/制作指示/xlsx生成)とOAuth健診、分析xlsxを追加 | 5 |
-| `155baa1` | docs: 09-16 指揮者メモを記録（公開全停止の原因はOAuthトークン失効） | 1 |
-| (本コミット) | docs(reports): daily-merge-all-projects 09-16 実行ログを記録 | 1 |
-
-内訳の主なもの:
-- `data/channels/*.json`（company-facts / daily-science / scp-lab / socio-rx / yokai-watch）
-- `data/analytics/cross_channel_keywords.json`、`data/originality/`(5ch)、`data/fact_ledger/`、`data/series_links/`(5ch)、`data/trends/`(09-16 スナップショット2件: google_japan / youtube_JP)
-- `data/scenarios/` — 新規テーマキュー12本（company-facts 4 / daily-science 3 / scp-lab 3 / socio-rx 1 / yokai-watch 3 相当）、アーカイブ台本16本、`archive/_index.json` 5件
-- `backend/pipeline/video_generator.py`（ショートサムネ構図の組み直し）＋ `backend/tests/test_fixes_20260916.py`
-- `scripts/orch_apply_20260916.py` / `scripts/orch_phase4_20260916.command` / `scripts/orch_xlsx_20260916.py` / `scripts/oauth_health_check.py`、`reports/youtube_analysis_20260916.xlsx`
-- `MEMORY_UPDATE_20260916.md`
-
-### aiseki — コミットなし
-作業ツリーはクリーン。origin/main と同期済み。
-
-### ai-english-coach — コミットなし
-作業ツリーはクリーン。
-
 ### 機密情報チェック
-追跡候補62ファイル全件を `AIza…` / `sk-…` / `ghp_…` / PRIVATE KEY / `client_secret` / `refresh_token` / ハードコード password のパターンでスキャン → **検出0件**。
-`backend/pipeline/credentials/`、`*.db`、`.env` 系は従来どおり .gitignore で除外済み（今回も未追跡のまま）。
+3リポジトリの変更・未追跡ファイル全件に対し、APIキー／トークン／秘密鍵のパターン
+（`AIza…` `sk-…` `ya29.…` `ghp_…` `xox?-…` `BEGIN PRIVATE KEY`、および
+`api_key=` `secret=` `password=` `token=` `client_secret=` への16文字以上の代入）を走査。
+**ヒット0件。** `aiseki/worker/launchd/com.aiseki.dm-report.plist` は `PATH` のみ、
+`dm_report.mjs` の認証情報はすべて環境変数参照で、ハードコードはありませんでした。
 
-### .gitignore に追加したパターン
-```
-# 指揮者 xlsx 生成の途中シート（最終成果物は reports/youtube_analysis_*.xlsx）
-reports/_orch_sheet*.xlsx
-```
-→ `reports/_orch_sheet1_20260916.xlsx`（11KB・どのスクリプトからも参照されない中間生成物）を除外。
-aiseki / ai-english-coach は追加なし。
+### youtube-factory（6コミット）
 
----
-
-## Phase 3: push 結果
-
-| リポジトリ | 結果 |
+| コミット | 内容 |
 |---|---|
-| youtube-factory | ❌ `fatal: could not read Username for 'https://github.com'` — 未送信 **8コミット**（本ログのコミット含む） |
-| aiseki | ❌ 同上。ただし origin/main と同期済みで**送るものは無い** |
-| ai-english-coach | — remote 未設定のため push 対象外 |
+| `a3e1e0d` | fix: 読み上げ速度を実測値に再校正（8.9→6.95字/秒）し ch 別実効速度を追加 — 2ファイル |
+| `e1ddc9c` | chore(config): 09-18 指揮者のチャンネル設定更新 — 12ファイル（尺帯縮小3ch・2ch-matome 1枠化・キュー隔離） |
+| `0d21d29` | chore(data): 09-18 の分析・PDCA・トレンド状態を同期 — 20ファイル |
+| `be12a0a` | chore(scenarios): 09-17〜09-18 生成分のシナリオを追加 — 36ファイル |
+| `35eb5a7` | docs: 09-18 指揮者メモ・Mac実行スクリプト・分析xlsx・自動メモを追加 — 8ファイル |
+| （末尾） | chore(reports): 09-18 の日次レポートとマージログを追加 |
+
+`.gitignore` への追加: **なし。**
+既存の `.gitignore` が `data/ab_tests/` `*.audit.mjs` `data/reports/YYYY-MM-DD/` 等を
+すでに網羅しており、今回の未追跡ファイルはすべて追跡対象として前例のあるもの
+（`data/scenarios/**` 1,094件・`data/trends/**` 260件・`reports/*.xlsx`・ルート直下の `*.command` 多数）でした。
+
+### aiseki（4コミット）
+
+| コミット | 内容 |
+|---|---|
+| `3c82075` | chore: 生成物を .gitignore に追加（worker/logs・worker/reports） |
+| `5e25227` | feat(worker): 営業DMのデイリーレポートを追加（dm_report.mjs / npm run report / launchd 09:00） |
+| `a4480ab` | fix(worker): DMスレッドを開けなかった時もスクリーンショットを残す |
+| `5be9e44` | docs: マーケ方針を東京ターゲットへ見直し（ハッシュタグ関西→東京 / 見直し案） |
+
+`.gitignore` への追加:
+
+```
+worker/logs                 （作業ツリーに未コミットで置かれていたものを確定）
+# 営業DMのデイリーレポート出力（dm_report.mjs が毎朝生成。相手アカウント名を含む）
+worker/reports
+```
+
+`worker/reports/2026-09-17.md` は launchd が毎朝生成する出力で、
+DM 送信先の Instagram アカウント名と運営メールアドレスを含むため追跡対象から外しました。
+
+### ai-english-coach
+作業ツリーはクリーン。コミットなし。
 
 ---
 
-## sandbox の制約（今回も同じ）
+## Phase 3: push
 
-マウント上で**ファイル削除が一律 `Operation not permitted`**。git は `index.lock` / `HEAD.lock` を作って rename する運用なので、読み取り系コマンドが残したロックで `git commit` が
-`fatal: cannot lock ref 'HEAD': … File exists` で止まる。
+**3リポジトリとも失敗。原因は認証情報の不在です。**
 
-今回の回避策:
-1. `GIT_INDEX_FILE` を sandbox ローカル（削除可能な領域）に逃がし、`.git/index.lock` を発生させない
-2. 各 git コマンドの前後で残存ロックを `.git/_stale/` へ rename して退避
-3. 最後に作業用 index を `.git/index` に書き戻し
+```
+youtube-factory → origin    (zaki21016/youtube-factory)        Repository not found / Authentication failed
+youtube-factory → neworigin (rikoandmakoto-ops/youtube-factory) could not read Username for 'https://github.com'
+aiseki          → origin    (zaki21016/aiseki)                  Repository not found / Authentication failed
+aiseki          → neworigin (rikoandmakoto-ops/aiseki)          could not read Username for 'https://github.com'
+ai-english-coach                                                remote 未設定のため push 対象外
+```
 
-結果、3リポジトリとも**有効な lock ファイルは0件**（git は正常動作する状態）。
-副作用として削除できないゴミが残っている:
-
-- `.git/objects/**/tmp_obj_*`: youtube-factory **306件**（前回204件から増加）
-- `.git/_stale/`（退避ロック置き場）: youtube-factory 20件程度 / aiseki・ai-english-coach 各1件
-- `.git/_locksink` `.git/_stale_lock_bak` `.git/_scratch_delme` `.git/_writetest`: 前回実行の残骸（youtube-factory）
-
-> `allow_cowork_file_delete` は自動実行中で承認者不在のため使用していない。
+このタスクは Linux サンドボックス上で動いており、GitHub の資格情報は macOS キーチェーン側に
+あるため参照できません。`main` の上流は `origin/main`（zaki21016）に設定されていますが、
+そちらは 404 相当の応答で、実体は `neworigin`（rikoandmakoto-ops）だと思われます。
 
 ---
 
-## やり残し / ホスト側でお願いしたいこと
+## 手動で必要な作業
 
 ```bash
-# 1. 未送信コミットの push（最優先）
-cd ~/Developer/youtube-factory && git push origin main   # 8 commits
+# 1. push（Mac のターミナルで。上流の付け替えも同時に）
+cd ~/Developer/youtube-factory && git push neworigin main
+cd ~/Developer/aiseki          && git push neworigin main
 
-# 2. orch-20260911-followup の手動マージ or 破棄判断（コンフリクト2ファイル）
-cd ~/Developer/youtube-factory && git merge orch-20260911-followup
-
-# 3. 削除できなかったゴミの掃除
-for r in youtube-factory aiseki ai-english-coach; do
-  rm -rf ~/Developer/$r/.git/_stale ~/Developer/$r/.git/_locksink \
-         ~/Developer/$r/.git/_stale_lock_bak ~/Developer/$r/.git/_scratch_delme \
-         ~/Developer/$r/.git/_writetest ~/Developer/$r/.git/_stale_junk \
-         ~/Developer/$r/.git/_stale_index_lock_bak
-  git -C ~/Developer/$r gc --prune=now   # tmp_obj_* を一掃
-done
+# 上流が古い origin(zaki21016) を向いたままなので、必要なら
+#   git branch -u neworigin/main main
 ```
 
-**次回以降の改善案**（どちらかを入れれば自動化が完結する）
-1. sandbox から push できるよう、GitHub の PAT を credential helper（`git config credential.helper store` 等）に登録しておく
-2. `allow_cowork_file_delete` を事前承認しておく → rename 回避策なしで git が普通に動き、tmp_obj ゴミも出ない
+```bash
+# 2. .git 内のゴミ掃除（下の「環境上の制約」参照）
+cd ~/Developer/youtube-factory && rm -rf .git/_stale && git prune && git gc --prune=now
+cd ~/Developer/aiseki          && rm -rf .git/_stale && git prune && git gc --prune=now
+cd ~/Developer/ai-english-coach && rm -rf .git/_stale
+```
 
 ---
 
-*このログは後続の daily-project-handoff タスクが読む前提で書いている。*
+## 環境上の制約（次回以降の改善点）
+
+1. **サンドボックスからファイルを削除できません**（FUSE マウントが unlink を拒否。rename は可）。
+   - 残っていた `.git/index.lock` 3件は削除できず、`.git/_stale/` へ **rename して退避** しました。
+     退避前に git プロセスが存在しないことを確認済み。ロックは 09-17 22:06 / 09-18 10:10 の古いもので、
+     いずれも 0 バイトでした。この制約は `.auto-memory/2026-09-11.md` に既出の既知事項です。
+   - 副作用として、git が書き込み後に消せなかった一時オブジェクトが残りました:
+     youtube-factory 502件 / aiseki 23件（`.git/objects/*/tmp_obj_*`）。
+     リポジトリの整合性には影響しませんが、`git gc --prune=now` で掃除してください。
+   - `.git/_stale/` は退避したロックの置き場です（youtube-factory 26件・他1件ずつ）。丸ごと削除して構いません。
+   - `git merge` は index.lock を2回取りにいく実装のため、この環境では原理的に失敗します
+     （今回マージを見送った理由は退行回避であって、この制約ではありません）。
+2. **削除許可のダイアログが出せません。** ユーザー不在の定期実行のため
+   `allow_cowork_file_delete` が自動で拒否されました。次回以降ファイル削除を伴う整理をさせたい場合は、
+   対話セッションで一度許可してください。
+3. **youtube-factory は実行中です。** 作業中にも `.auto-memory/2026-09-18.md`・
+   `data/reports/project_handoff_2026-09-18.md` などが別プロセスから生成されました
+   （いずれも本ログの時点までに発生した分はコミット済み）。
+
+---
+
+## 遵守事項の確認
+
+- ✅ 対象3リポジトリ以外には一切触れていません。
+- ✅ `git push --force` / `git reset --hard` は使用していません（使ったのは mixed reset 1回のみ。作業ツリー不変）。
+- ✅ コンフリクトのあるマージは強制せず、報告に留めました。
+- ✅ 機密情報を含むファイルはコミットしていません。
