@@ -111,14 +111,15 @@ class TestShortsLengthGuard(unittest.TestCase):
     def test_estimate_duration(self):
         scenario = self._make_scenario(8, 36)  # 288 chars
         dur = self.slg.estimate_duration(scenario)
-        # 288 / 8.9 ≒ 32.4 + 8*0.3=2.4 + 1.6 ≒ 36.4
+        # 2026-09-18 再校正: 288 / 6.95 ≒ 41.4 + 8*0.3=2.4 + 1.6 ≒ 45.4
+        # （旧 8.9字/秒 前提では 36.4 と見積もっていたが、実尺と 1.28 倍ずれていた）
         self.assertGreater(dur, 30)
-        self.assertLess(dur, 45)
+        self.assertLess(dur, 50)
 
     def test_check_scenario_ok(self):
-        # 6 lines * 33 chars = 198 chars — daily-science の short_format
-        # (175〜225字) のど真ん中。08-25 実測で維持率が最も高かった帯。
-        scenario = self._make_scenario(6, 33)
+        # 6 lines * 30 chars = 180 chars — daily-science の short_format
+        # (2026-09-18 再校正後: 165〜195字 ≒ 29秒) のど真ん中。
+        scenario = self._make_scenario(6, 30)
         result = self.slg.check_scenario("daily-science", scenario)
         self.assertTrue(result["ok"], result["warning"])
 
@@ -205,14 +206,17 @@ class TestShortsLengthGuard(unittest.TestCase):
         # 2026-09-01: 長い側は fake-paper だったが、維持率27.6%（全ch最下位）の
         # 是正で 190〜235 → 170〜210 に詰めたため scp-lab と上限が並んだ。
         # このテストが見たいのは「帯がチャンネルごとに違うこと」なので、
-        # 現に帯の広い daily-science に差し替える。
-        long_lo, long_hi = self.slg.char_band_for("daily-science")
+        # 現に帯の広いチャンネルに差し替える。
+        # 2026-09-18: daily-science を 165〜195 に詰めて scp-lab と上限が並んだため、
+        # 長い側を company-facts（165〜210）に差し替えた。company-facts だけ帯が広いのは
+        # facts_overlay 形式で読み上げ速度が 5.44字/秒 と遅く、同じ字数でも尺が長いため。
+        long_lo, long_hi = self.slg.char_band_for("company-facts")
         short_lo, short_hi = self.slg.char_band_for("scp-lab")
-        self.assertGreater(long_hi, short_hi, "前提: daily-science のほうが長い帯")
+        self.assertGreater(long_hi, short_hi, "前提: company-facts のほうが長い帯")
         target = max(long_lo, short_hi + 10)
         self.assertLessEqual(target, long_hi, "前提: 2チャンネルの帯が重なりすぎ")
         scenario = self._make_scenario(7, target // 7)
-        self.assertTrue(self.slg.check_scenario("daily-science", scenario)["ok"])
+        self.assertTrue(self.slg.check_scenario("company-facts", scenario)["ok"])
         scp_result = self.slg.check_scenario("scp-lab", scenario)
         self.assertFalse(scp_result["ok"])
         self.assertIn("超過", scp_result["warning"])

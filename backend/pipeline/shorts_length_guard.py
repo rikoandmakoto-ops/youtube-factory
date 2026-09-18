@@ -37,13 +37,31 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 # VOICEVOX 1.3x の実効読み上げ速度（字/秒）
-VOICEVOX_CHARS_PER_SEC = 8.9
+#
+# 【2026-09-18 実測により 8.9 → 6.95 に再校正】
+# それまでの 8.9 は机上値で、実尺と突き合わせた検証が一度も無かった。
+# data/scenarios/<ch>/*.json の short_scenario 実文字数と、公開後の実尺
+#   実尺 = avg_view_duration ÷ (avg_view_percentage / 100)
+# を 09-17 スナップショットで突き合わせた結果（n=31, 5ch）、実効速度は
+#   全体中央値 6.95 字/秒（8.9 は 1.28 倍の過大評価）
+# だった。この過大評価のため「175〜225字 ＝ 26秒」という設計値が実際には
+# 27〜35 秒の動画を生んでおり、帯の上限側の台本が 09-18 実測で判明した
+# 負け群（>=33秒: 登録/千再生が <33秒 群の 1/2.7〜1/2.9）に落ちていた。
+# ガードは「帯に収まっている」と報告し続けるので、誰も気づけなかった。
+VOICEVOX_CHARS_PER_SEC = 6.95
 
 # 話速・話者が既定（1.3x のゆっくり系）と違うチャンネルの実効読み上げ速度。
-# ここを外すと推定尺が実尺の 6 割になり、ガードが逆方向の加筆を勧めてくる。
+# ここを外すと推定尺が実尺とずれ、ガードが逆方向の加筆／削りを勧めてくる。
 # akashic-librarian: 離途(101) speed=1.15 を実測して 5.43 字/秒。
+# 以下 5ch は 2026-09-18 に上記の方法で ch ごとに実測した中央値。
+# company-facts が遅いのは facts_overlay 形式で文字表示の尺を別に取るため。
 CHANNEL_CHARS_PER_SEC: Dict[str, float] = {
     "akashic-librarian": 5.43,
+    "company-facts": 5.44,   # n=9  実尺中央 41.3s / 204字
+    "daily-science": 7.24,   # n=7  実尺中央 34.3s / 223字
+    "yokai-watch": 7.15,     # n=6  実尺中央 33.7s / 220字
+    "scp-lab": 6.94,         # n=8  実尺中央 31.1s / 197字
+    "socio-rx": 6.20,        # n=1  参考値（サンプル不足・要再測）
 }
 
 
@@ -63,14 +81,20 @@ PAUSE_SECONDS_PER_LINE = 0.3
 # 以下は short_format を宣言していないチャンネル向けのフォールバックで、
 # 08-25 実測の「維持率が最も高かった 173〜202 字帯」を中心に取る。
 CHANNEL_CHAR_BAND: Dict[str, Tuple[int, int]] = {
-    "daily-science": (175, 225),
-    "scp-lab": (165, 210),
+    # 2026-09-18: 実効速度の再校正に合わせて 3ch の上限を引き下げた。
+    # 同時に、channel JSON と乖離したまま放置されていた 4ch も実値へ揃えた
+    # （company-facts 225→210 / pokemon-lab 225→205 / fake-paper 275→210 /
+    #   socio-rx は未登録だった）。char_band_for() は channel JSON を優先する
+    # ので実挙動は変わらないが、ここがズレていると読んだ人が誤った帯を信じる。
+    "daily-science": (165, 195),
+    "scp-lab": (160, 195),
     "2ch-matome": (165, 210),
-    "company-facts": (165, 225),
-    "pokemon-lab": (175, 225),
-    "yokai-watch": (175, 225),
+    "company-facts": (165, 210),
+    "pokemon-lab": (170, 205),
+    "yokai-watch": (165, 195),
+    "socio-rx": (165, 200),
     "akashic-librarian": (165, 195),
-    "fake-paper": (235, 275),
+    "fake-paper": (170, 210),
 }
 
 # short_format も CHANNEL_CHAR_BAND も無いチャンネルの既定帯
