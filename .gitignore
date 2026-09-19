@@ -110,7 +110,9 @@ data/image_requests/*
 !data/image_requests/threads.json
 
 # ===== 一時ファイル / 自動生成物 =====
+# サンドボックスからの書き込み/削除可否を調べる使い捨てファイル
 .__perm_test
+.__deltest
 # xlsx 書き出し途中の一時ファイル（生成し直せる）
 *.xlsx.tmp
 # 日次レポート出力（data/reports/YYYY-MM-DD/）は再生成できるので追跡しない
