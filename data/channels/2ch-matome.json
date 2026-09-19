@@ -1467,6 +1467,13 @@
       "evidence": "【2026-09-18】投稿枠を 3枠/日 → 1枠/日 に縮小。至上目標=登録者増に対し当chの投入対効果が6ch中で突出して低いため。成熟コホート（08-15〜09-10・200再生以上）の 登録/千再生 0.189 は6ch最下位で scp-lab 0.862 の 0.22倍。公開後4日時点の週次コホートでは 高評価率 08/03週 0.22% → 09/07週 0.11% と半減し、登録/千再生は 09/07週 0.00（n=6）。再生も 1356 → 738（-46%）と単調減。さらに当chだけ『高評価率が高い群のほうが登録/千が低い』(0.41倍) と逆転しており、他5chで5回再現している高評価率→登録の関係が成立しない。08-08以降の型変更5回（参加型撤回・答え断定・答え提示語入替）でも反転しなかった。枠を1本に絞って検証を継続し、他chへの再配分は反応を見てから判断する（本日は増枠しない）。復帰条件: 1枠運用で 登録/千再生 が2週連続 0.4 以上。",
       "expected": "登録/千再生の改善（至上目標）",
       "verify_on": "2026-09-25"
+    },
+    {
+      "date": "2026-09-19",
+      "by": "orchestrator",
+      "change": "script_enhancers を他5chと同一（本文書き換え系13モジュール全停止）に揃えた。",
+      "evidence": "変更前=null（=全モジュール有効）。他5chは09-01時点で disabled=13。",
+      "eval_date": "2026-10-02"
     }
   ],
   "optimization": {
@@ -1528,5 +1535,25 @@
   },
   "theme_seeds_note": "【2026-09-09】参加型（あげてけ／当ててみてくれ／質問ある）を全廃し、結論型（答え提示型）に入れ替えた。実測 登録/千再生 参加型 0.06 vs 結論型 0.32（5.3倍）。09-08 の指揮者は theme_queue という**存在しないキー**に書いたため1件も反映されていなかった。実際に消費されるのは autopilot.theme_queue で、theme_seeds はそちらが空のときのフォールバック兼 data/channels/2ch-matome/theme_queue.json の補充元。3箇所すべてを揃えてある。『なんか〜んやが』型（実測 登録/1k 0.60・ch平均0.17の3.5倍）はフックとして残し、後半に答えの提示を足す形で結論型と両立させた。答え提示語は answer_marker_assignment の 理由／わけ／実は を回している（1語に寄せると cross_channel_gate の同日上限に毎日当たるため）。",
   "_theme_blacklist_note_20260914n": "09-14: google_trends 由来の自動キュー投入が実在個人名・第三者キャラIPを フィクション/解説chに横展開していた（大谷翔平=9ch同時、堀大輔は scp-lab で『なぜ堀大輔は72時間眠らないのか？』として09-14 00:00に実公開済み）。名誉毀損・IPリスクのため theme_blacklist に追加。",
-  "_theme_blacklist_note_20260915n": "trend_detections に status=queued のまま残る実在個人/実在レース関連キーワードを遮断。09-14に導入されたブロックフィルタは新規検出にしか効かず、既存281件のqueuedは再審査されていないため、設定側で二重に塞ぐ。"
+  "_theme_blacklist_note_20260915n": "trend_detections に status=queued のまま残る実在個人/実在レース関連キーワードを遮断。09-14に導入されたブロックフィルタは新規検出にしか効かず、既存281件のqueuedは再審査されていないため、設定側で二重に塞ぐ。",
+  "script_enhancers": {
+    "enabled": true,
+    "disabled": [
+      "hook_ab_selector",
+      "swipe_stop_injector",
+      "cta_rotator",
+      "completion_rate_optimizer",
+      "replay_loop_seeder",
+      "power_word_amplifier",
+      "title_emoji_injector",
+      "curiosity_gap_enforcer",
+      "comment_bait_injector",
+      "emotional_polarity_alternator",
+      "pattern_interrupt_injector",
+      "subscribe_trigger_optimizer",
+      "contrast_amplifier"
+    ],
+    "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。",
+    "_note_20260919": "2026-09-19 指揮者: 当chだけ script_enhancers が空（=全モジュール有効）のまま残っていた。他5ch は 2026-08-31〜09-01 に本文書き換え系13モジュールを全停止済み。enhancer_gate.py の docstring 自体が『voice_style.forbidden の語が本文に注入される』『正規表現置換が文中で発火して係り受けが壊れる』『short_format で決めた尺を大きく超える』と明記している。当chは 登録/千再生 0.189（6ch最下位）、W37 の日次再生 2、avp 35〜38% と全指標で最下位であり、他5chと条件を揃えないまま評価を続ける意味がない。"
+  }
 }
