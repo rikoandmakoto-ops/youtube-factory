@@ -1,109 +1,109 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1789738703,
+    "generated_at": 1789825096,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0155,
-      "early": 0.0207,
-      "middle": 0.0046,
-      "late": 0.0049,
-      "ending": 0.0018
+      "intro": 0.0109,
+      "early": 0.0223,
+      "middle": 0.0052,
+      "late": 0.0051,
+      "ending": 0.0026
     },
     "per_video": [
       {
-        "video_id": "GhmaZuArM-g",
-        "title": "なぜ長時間立つと足だけむくむのか？2時間後の正体 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 44.23,
+        "video_id": "GR6QQfoAR3w",
+        "title": "なぜ低い声だけ壁越しに聞こえる？100Hzの正体 #shorts #雑学 #豆知識",
+        "avg_view_percentage": 41.23,
         "drops": [
+          {
+            "ratio_from": 0.24,
+            "ratio_to": 0.25,
+            "drop": 0.0698,
+            "bucket": "early",
+            "audience_after": 0.6434,
+            "scenario_line": {
+              "index": 13,
+              "speaker": "真",
+              "text": "えっ、声を出すだけで胸まで震える！壁の向こうで低い声が残るのも、空気の音が壁の震えに着替えて進むからなんだね。自分の体で確かめられるのが面白いよ。",
+              "mood": "mysterious"
+            }
+          },
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
-            "drop": 0.1329,
+            "drop": 0.062,
             "bucket": "intro",
-            "audience_after": 0.8984,
+            "audience_after": 0.8992,
             "scenario_line": {
               "index": 8,
               "speaker": "理子",
-              "text": "たとえるなら、夕方の駅改札と同じなんです。\n入ってくる人が1分に100人でも、出口が80人分しか動かなければ、20人分ずつ通路に残り、その混み具合が足の張りになります。",
-              "mood": "mysterious"
+              "text": "壁に音が当たると、空気の揺れの一部は跳ね返り、一部は壁をほんの少し動かします。その壁が反対側の空気を揺らすので、音は部屋から部屋へ渡ります。壁も小さなスピーカーのように働くのです。",
+              "mood": "calm"
             }
           },
           {
             "ratio_from": 0.13,
             "ratio_to": 0.14,
-            "drop": 0.1093,
+            "drop": 0.0504,
             "bucket": "intro",
-            "audience_after": 1.0313,
+            "audience_after": 0.9612,
             "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "たとえるなら、夕方の駅改札と同じなんです。\n入ってくる人が1分に100人でも、出口が80人分しか動かなければ、20人分ずつ通路に残り、その混み具合が足の張りになります。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0938,
-            "bucket": "early",
-            "audience_after": 0.7656,
-            "scenario_line": {
-              "index": 9,
+              "index": 7,
               "speaker": "真",
-              "text": "言われてみれば確かに、ずっと立っていても少し歩いた後は足が軽いことがあるよ。\n出口を広げる役目をしているのが、ふくらはぎの筋肉なのかな？",
+              "text": "一秒で100回でも見えない速さなのに、1000回はさらに細かいんだね。大きくゆったりした揺れと、細かく速い揺れでは、壁が受け取るときの反応も変わるの？",
               "mood": "mysterious"
             }
           }
         ],
-        "matched_scenario_title": "なぜ長時間立つと足だけむくむのか？2時間後の正体"
+        "matched_scenario_title": "なぜ低い声だけ壁越しに聞こえる？100Hzの正体"
       },
       {
-        "video_id": "cTHPSuJr0nA",
-        "title": "なぜ熱い風呂は最初の10秒だけ痛いのか？体の正体 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 85.6,
+        "video_id": "wVGirGF9iSg",
+        "title": "なぜ強い光でくしゃみ？鼻が突然反応する理由 #shorts #雑学 #豆知識",
+        "avg_view_percentage": 53.09,
         "drops": [
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0879,
+            "bucket": "early",
+            "audience_after": 0.8056,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "理子",
+              "text": "その考え方が有力です。目が急に明るさへ対応するときの信号が、近くを走る鼻側のくしゃみの合図にも混ざり、発射の準備まで始めるのではないかと考えられています。\nただし、脳のどの場所で起きるかは、まだ完全には決着していません。",
+              "mood": "calm"
+            }
+          },
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
-            "drop": 0.0703,
+            "drop": 0.0556,
             "bucket": "intro",
-            "audience_after": 1.3482,
+            "audience_after": 1.0833,
             "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "たとえるなら、駅のホームで最初は大きく聞こえたアナウンスが、3分後には意識から薄れるのと同じです。\n音が止まったのではなく、脳が繰り返す合図を背景へ回しているだけなんです。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.15,
-            "ratio_to": 0.16,
-            "drop": 0.0702,
-            "bucket": "early",
-            "audience_after": 1.278,
-            "scenario_line": {
-              "index": 8,
-              "speaker": "理子",
-              "text": "たとえるなら、駅のホームで最初は大きく聞こえたアナウンスが、3分後には意識から薄れるのと同じです。\n音が止まったのではなく、脳が繰り返す合図を背景へ回しているだけなんです。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.0512,
-            "bucket": "early",
-            "audience_after": 1.2268,
-            "scenario_line": {
-              "index": 9,
+              "index": 7,
               "speaker": "真",
-              "text": "へぇ〜、知らなかった！ お風呂でも皮膚と脳が、同じ知らせをずっと大声では受け取らないようにしているんだ。\nじゃあ冷たいプールに入ったとき、最初だけ冷たすぎるのも似た流れなの？",
+              "text": "ああ、朝にカーテンを開けたときの、目がきゅっとなる感覚だね！数秒で明るさに慣れるのは便利だけれど、急に太陽を浴びたときほど反応が大きいなら、鼻のほうへ影響しても不思議ではないかも。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0555,
+            "bucket": "intro",
+            "audience_after": 1.1389,
+            "scenario_line": {
+              "index": 6,
+              "speaker": "理子",
+              "text": "まず目に強い光が入ると、瞳は入ってくる光の量を減らそうとして小さくなります。\n暗い部屋から明るい場所へ出たとき、あなたが思わず目を細めるのは、カメラの絞りのように目が急いで明るさを調節しているからです。",
               "mood": "calm"
             }
           }
         ],
-        "matched_scenario_title": "なぜ熱い風呂は最初の10秒だけ痛いのか？体の正体"
+        "matched_scenario_title": "なぜ強い光でくしゃみ？鼻が突然反応する理由"
       }
     ],
     "gpt_insights": null,
@@ -111,82 +111,25 @@
   },
   "scp-lab": {
     "channel_id": "scp-lab",
-    "generated_at": 1789738905,
-    "analyzed_videos": 1,
-    "aggregate_drops_by_bucket": {
-      "intro": 0.0014,
-      "early": 0.0304,
-      "middle": 0.0046,
-      "late": 0.0038,
-      "ending": 0.0006
-    },
-    "per_video": [
-      {
-        "video_id": "mcqkS2U7CEA",
-        "title": "SCP-1548「予言する星」7組失踪の裏側 #shorts #SCP #SCP解説",
-        "avg_view_percentage": 73.69,
-        "drops": [
-          {
-            "ratio_from": 0.17,
-            "ratio_to": 0.18,
-            "drop": 0.1266,
-            "bucket": "early",
-            "audience_after": 1.1709,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "シロ",
-              "text": "最初の観測班は、白い点の明滅を21分記録した後、同じ一文を37回書いた。到来日は変わらない。準備は不要だ。その筆圧は最後ほど強くなっていた。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.16,
-            "ratio_to": 0.17,
-            "drop": 0.1139,
-            "bucket": "early",
-            "audience_after": 1.2975,
-            "scenario_line": {
-              "index": 10,
-              "speaker": "シロ",
-              "text": "最初の観測班は、白い点の明滅を21分記録した後、同じ一文を37回書いた。到来日は変わらない。準備は不要だ。その筆圧は最後ほど強くなっていた。",
-              "mood": "mysterious"
-            }
-          },
-          {
-            "ratio_from": 0.18,
-            "ratio_to": 0.19,
-            "drop": 0.076,
-            "bucket": "early",
-            "audience_after": 1.0949,
-            "scenario_line": {
-              "index": 11,
-              "speaker": "クロ",
-              "text": "準備は不要というのは、助かるという意味じゃないだろ。逃げる支度も連絡する支度も無意味だと、机の上の紙から静かに言われているみたいだ。",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "SCP-1548「予言する星」7組失踪の裏側"
-      }
-    ],
-    "gpt_insights": null,
-    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
+    "skipped": true,
+    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
+    "generated_at": 1789825254
   },
   "pokemon-lab": {
     "channel_id": "pokemon-lab",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789738742
+    "generated_at": 1789825121
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789739065
+    "generated_at": 1789825369
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
-    "generated_at": 1789738336,
+    "generated_at": 1789824737,
     "analyzed_videos": 5,
     "aggregate_drops_by_bucket": {
       "intro": 0.0096,
@@ -347,7 +290,7 @@
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1789738708,
+    "generated_at": 1789825100,
     "analyzed_videos": 1,
     "aggregate_drops_by_bucket": {
       "intro": 0.0122,
@@ -392,7 +335,7 @@
   },
   "akashic-librarian": {
     "channel_id": "akashic-librarian",
-    "generated_at": 1789738337,
+    "generated_at": 1789824738,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0169,
@@ -468,11 +411,11 @@
     "channel_id": "clip-animal",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789738338
+    "generated_at": 1789824739
   },
   "clip-fukada": {
     "channel_id": "clip-fukada",
-    "generated_at": 1789738357,
+    "generated_at": 1789824750,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0155,
@@ -604,7 +547,7 @@
   },
   "clip-kaneko": {
     "channel_id": "clip-kaneko",
-    "generated_at": 1789738408,
+    "generated_at": 1789824779,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0047,
@@ -678,7 +621,7 @@
   },
   "clip-lab": {
     "channel_id": "clip-lab",
-    "generated_at": 1789738431,
+    "generated_at": 1789824794,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0168,
@@ -812,20 +755,67 @@
     "channel_id": "company-facts",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789738587
+    "generated_at": 1789824938
   },
   "socio-rx": {
     "channel_id": "socio-rx",
-    "generated_at": 1789738925,
-    "analyzed_videos": 2,
+    "generated_at": 1789825274,
+    "analyzed_videos": 3,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0098,
-      "early": 0.0267,
-      "middle": 0.0029,
-      "late": 0.0041,
-      "ending": 0.0033
+      "intro": 0.0133,
+      "early": 0.0241,
+      "middle": 0.0031,
+      "late": 0.0045,
+      "ending": 0.0029
     },
     "per_video": [
+      {
+        "video_id": "9EIbN-1gito",
+        "title": "短眠の人が自信満々に見えるのは能力より自己効力感だった処方箋 #shorts #社会学 #自己啓発",
+        "avg_view_percentage": 220.04999999999998,
+        "drops": [
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.1087,
+            "bucket": "intro",
+            "audience_after": 2.6739,
+            "scenario_line": {
+              "index": 4,
+              "speaker": null,
+              "text": "まず前提として、成人の必要睡眠には個人差がある。米国睡眠財団は成人におおむね7〜9時間を目安として示している。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.087,
+            "bucket": "intro",
+            "audience_after": 2.7826,
+            "scenario_line": {
+              "index": 4,
+              "speaker": null,
+              "text": "まず前提として、成人の必要睡眠には個人差がある。米国睡眠財団は成人におおむね7〜9時間を目安として示している。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.23,
+            "ratio_to": 0.24,
+            "drop": 0.087,
+            "bucket": "early",
+            "audience_after": 2.3913,
+            "scenario_line": {
+              "index": 6,
+              "speaker": null,
+              "text": "それでも短眠の人が前向きに見えるのはなぜか。鍵になるのは、能力への評価ではなく、自分は行動を完了できるという感覚である。",
+              "mood": "mysterious"
+            }
+          }
+        ],
+        "matched_scenario_title": "短眠の人が自信満々に見えるのは能力より自己効力感だった処方箋"
+      },
       {
         "video_id": "kl7XGQc4Abs",
         "title": "原油高の正体家計に届く #shorts #社会学 #自己啓発",
