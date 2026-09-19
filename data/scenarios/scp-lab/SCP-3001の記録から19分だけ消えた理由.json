@@ -1,0 +1,529 @@
+{
+  "title": "SCP-3001の記録から19分だけ消えた理由",
+  "theme": {
+    "title": "なぜSCP-3001の記録には19分の空白が残るのか",
+    "angle": "疑問＋分数。監視記録の欠落を軸に、正体を3行目で提示"
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたの部屋の時計が、19分だけ飛んだ記録が残っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、19分もか。監視映像には時計だけが残ったのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-3001では、レッドが現実から剥がれた19分を生きていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "学校の授業1コマより短いのに。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "空白の間、映像を見ていたものは記録されていない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この手の報告書、実は他にも未公開のものが山ほどある。"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の裏側シリーズに高評価を残せ。毎日投稿中、1万人目標へチャンネル登録で次の空白も追え。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "部屋の時計が19分だけ進み、戻った瞬間に監視映像の一部まで消えていたら。その空白は故障として処理されない。SCP-3001の記録には、実際に19分間だけ説明不能な欠落が残されている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、時計だけじゃないのか。映像も報告書も同じ19分を失い、その間に誰かが消えた可能性があるってことか。授業なら半分も経たない時間なのに、ちょっと待って、怖いって。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "欠落の中心にいたのは、現実の外側へ弾き出された研究員ロバート・スクラントンだ。彼は赤い空間で時間を数える以外の手段を失い、こちらでは19分、向こうでは数年を過ごした可能性が残る。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この話は行方不明者の救出記録ではない。監視室が見落とした19分間に、スクラントンが何を見て、何が彼を見返したのか。その痕跡を、空欄だらけの保管記録から拾い上げる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "監視室に映像があったなら、助けを呼べたはずだろ。19分だけ消えているなら、その直前と直後には何か残っていないのか。空白だけが都合よく残るのは、学校の名簿から一人だけ消えるよりまずい。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残っていたのは実験開始時刻と、画面が再び応答した時刻だけだった。二つの数字の差が19分。だがスクラントン本人にとって、その差は数千日分の孤独だった可能性があり、時計は救助を約束しなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "実験は別の現実へ通じる通路を固定する目的で行われた。記録上、装置が開いた瞬間に研究室の壁と机は残り、そこにいた人間だけが視界から抜け落ちた。教室から机だけ残して生徒全員が消えるような光景だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "壁も机も残って、人間だけが消えるのか。ゲームでキャラクターだけ読み込まれなくなる話では済まない。そこに立っていた本人の時間だけが、別の場所へ落ちて、こちらの時計だけが19分を刻んだんだろ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "現場職員は消失直後、映像信号に赤い乱れを確認した。しかし乱れを保存した端末は、後に空の記録媒体として回収された。映像を見た職員の証言も同じ箇所で途切れ、19分の外側へ言葉が出なかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録にある19分は単なる欠損時間ではない。財団が確認できた最後の連続した時間であり、その後に何が挿入され、何が削られたかは、財団でもまだ説明できていない。消えたのは映像ではなく、映像の順番かもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ、空白の中にいるのはスクラントンだけじゃないかもしれないのか。監視室の誰かが見たはずのものまで記録から押し出されているなら、画面を見ていた側も、廊下で待っていた側も安全じゃない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題は、この19分が一度しか起きていないと断定できない点だ。保管庫には同じ時間幅で日時だけ異なる欠落報告が残り、担当者欄には毎回、判読不能な赤い線が引かれていた。赤い線は署名の上だけをなぞっていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここまでなら装置の破損による記録異常にも見える。ただし空白の直後に残された音声には、監視室にいなかったはずのスクラントンの呼吸音が19分間続いていた。誰もいないマイクが、近すぎる息を拾っていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って、本人は向こうにいるのに、こっちの監視室で呼吸していたのか。それなら19分間、モニターの前にいたのは誰だ。職員の誰かが黙っていたわけじゃ済まない。机の椅子に座ったものがいたことになる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "再生された音声は一定の間隔で息を吸い、最後だけ急に止まる。解析担当者は人間の呼吸と記したが、署名の直後に担当者自身の記録が削除されている。理由は[DATA EXPUNGED]。残ったのは赤い波形19本だけだった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "19分という数字は救出側が測った時間に過ぎない。スクラントンが残した断片では、赤い空間に入ってから数えた日数は数千単位へ達していた。外と内で時間は同じ顔をしていない。片方の一晩が、もう片方の数年になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "19分の間に何年も閉じ込められたなら、助けが来ると信じる気持ちも壊れる。戻りたいと思っていた人間が、向こうで別の何かを待つようになるかもしれない。聞かなきゃよかった。時計を見るのも嫌になってくる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "スクラントンは完全な暗闇ではなく、赤い霧と崩れた構造物の中を移動していた。どこまで歩いても研究施設の一部に似たものが現れ、触れると砂のようにほどけたという。校舎の廊下を歩くたび、壁が紙くずへ変わるような場所だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "彼は通信機器を修理し、こちら側へ短い記録を送り続けた。最初の送信は助けを求める内容だったが、後期の記録には自分の名前を繰り返し確認する文が増えていった。誰も返事をしない出席確認を、何千回も続けた形になる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "名前を忘れないために、自分で自分を呼び続けたのか。教室で出席を取られて返事をする行為が、誰もいない場所では生き残るための最後の手順になる。返事をしなければ、赤い場所に自分の席まで奪われる気がしたのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "通信の一部には、彼以外の声が混じっていた。声は短く、救助を急かす内容でもない。ただ19分という時間を何度も数え直し、数え終えるたびに録音の先頭へ戻っていた。再生バーが進んでも、声だけが最初へ帰る記録だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "同じ19分を繰り返していたなら、空白は消えたんじゃない。向こうで何度も使い回されたのか。監視映像に残らない時間が、誰かにとっては出口のない廊下みたいになっていた。曲がるたびに同じ時計へ戻される。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団が付けた分類はEuclidだ。これは危険が小さいという意味ではない。性質を完全に把握できず、定められた手順でしか隔離できない対象として扱う、冷たい記号に過ぎない。赤い空間を収容したのではなく、近づく入口を閉じただけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容対象はスクラントン本人ではなく、彼を押し出した接続地点と関連記録だった。監視映像は複製を禁じられ、19分の空白を含む媒体は二重扉の保管庫へ移されたという。動画を保存するだけで扉が二枚必要になる理由は、別にある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "映像を消さずに閉じ込めるのか。なら財団は、空白そのものがまだ動いていると疑っているんだろ。再生するたびに失われた19分がこちらへ近づく可能性を捨てていない。スマホの動画みたいに停止も削除もできない記録なんだな。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "保管手順には映像の再生時、必ず2名以上が立ち会うこととある。理由欄は黒塗りだが、単独監視を行った職員3名が、その後に同じ時刻で無断退室した記録がある。3名の靴跡は廊下の中央で19歩分だけ途切れた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "3名は全員、退室後19分で戻った。身体の損傷はなく、質問には答えた。ただし誰も自分が何を見たか話せず、最初に口にした言葉だけが完全に一致していた。別々の部屋で尋問したのに、秒単位で同じ発声だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "全員が同じ言葉を言ったのか。記憶が抜けた人間が、同じ答えだけ残すのはおかしい。その言葉がスクラントンの声だったなら、空白の向こうから返事が来ていたことになる。監視していた側が、いつの間にか返答役にされた。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "一致した言葉は、「まだ十九分しか経っていない」だった。彼らは誰もその後の意味を説明できなかった。発言記録の末尾には、録音開始前には存在しない呼吸音が重なっている。息は3名ではなく、4人目の距離から入っていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで一つ、記録の前提が崩れる。空白はスクラントンが消えた時だけに発生したのではない。映像を見た者が、同じ場所へ触れようとした瞬間にも、19分は再び開いている。扉の向こうではなく、視線の側に入口ができた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ、俺たちが報告書を読んでいるだけでも安全とは言えないのか。映像を直接見なければ大丈夫だと考えた職員が、文字の中から同じ時間を呼び出した可能性もあるだろ。ページをめくる指先まで、向こうに数えられていそうだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は因果関係を断定していない。ただ空白を詳しく書き写した報告書ほど、ページ番号19の周辺で紙面の赤変が起きたという。写真は残っているが、原本は[DATA EXPUNGED]されている。赤くなった紙からは、19秒遅れて息の音がした。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "スクラントンが残した後期記録には、遠くに建物の影が見えるという記述がある。その影は彼の研究施設に似ていたが、窓の内側には、こちらを向いた観測者の列があった。窓は19枚あり、どの一枚にも同じ顔が映った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "向こうから見られていたのか。監視室はスクラントンを探していたつもりで、実際には赤い場所の窓から観察されていた。空白の19分は、視線が入れ替わった時間だったのかもしれない。見ている側の椅子へ、誰かが座り直した。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "彼は観測者の姿を詳しく書かなかった。書けなかったのではなく、書いた箇所が毎回欠けた可能性がある。保存された断片には、「彼らは私の帰還を待っている」という一文だけが残った。誰が待つのか、その主語は赤い線で潰れている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "救出のため、財団は接続地点を再起動する案を検討した。しかし計画書の試算欄には、入口を一度開けば19分で閉じる保証がないと記されていた。救助隊の名簿は作られなかった。帰還者より、追加で消える人数が多いと見積もられた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "助けに行けば戻れない。だから待つしかないのか。向こうで何年も生きている人間がいるのに、こちらでは19分の事故としてファイルを閉じるしかないなんて、あまりに冷たい。救助の扉を開けることが、次の失踪を選ぶことになる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "それでも通信は断続的に届いた。受信時刻は不規則で、内容は短い。救助を求める言葉の次に、彼は時折、こちら側へ来るなと書いた。誰に対する警告かは明示されていない。だが受信側の端末には、毎回19件の未読通知が残った。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "もっとも不気味なのは、最後の通信にスクラントンの署名がないことだ。代わりに受信時刻だけが19分前へ修正されている。送信者が過去にいるのか、受信者が遅れているのかは不明。画面を開くたび、時刻だけがこちらを追い越す。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "過去から届いたんじゃなくて、こっちが遅れて読まされているなら、今聞こえている呼吸も終わった音じゃない。まだ録音の外側で、誰かが次の19分を待っているのか。再生ボタンを押した側が、遅れて向こうへ着くのかもしれない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の仮説では、赤い空間は壊れた現実の残滓ではなく、現実から零れたものが集まる場所とされる。ただし、その場所が意思を持つかどうかについて、確定した記録は存在しない。集めているのは物ではなく、19分を失った人間かもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "意思がないなら、なぜ監視者の声を真似るのか。意思があるなら、なぜ19分という短い窓だけを残すのか。どちらの問いにも答えはない。記録はここで途切れている。途切れた直後の余白には、赤い指紋が19個だけ押されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…ねえ、これ本当に大丈夫なの？ 時計が19分ずれた程度なら、誰でも見過ごすだろ。でもSCP-3001では、その見過ごした時間の中に、何年分もの声が沈んでいた。時計を直した瞬間、声の順番まで元へ戻るとは限らない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここから先は映像を扱う職員向けの注意書きになる。19分の欠落を見つけても、停止した時計を合わせ直すな。修正前後の時刻を記録し、画面から目を離して退避すること。時計を直す行為が、空白に出口を与える可能性があるためだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "独りで再生しないこと。音声が呼吸だけになっても、音量を上げないこと。画面の赤い乱れの中に知人の姿が見えても、名前を呼ばないこと。これは救助手順ではなく、生存手順だ。呼びかけた名前が、19分後に自分の声で返る例がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "名前を呼んだら、向こうが返事をするのか。それとも、こっちの名前を覚えるのか。19分しかないと思って画面に近づいた職員が、戻った後に自分の名前を言えなくなった記録もある。生徒手帳に書いた名前だけが、赤く消えたという。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "保管庫の時計はすべて手巻き式へ変更された。電子表示が19分を飛ばした際、誰も気づかず記録の外へ出る危険があったためだ。だが手巻き時計でも、針が一度だけ逆へ進んだ例がある。その夜、保管員は19回、扉を叩く音を聞いた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その逆行が起きた夜、保管庫の外廊下には赤い靴跡が19個残っていた。足跡は扉の前で止まり、内側へは続いていなかった。誰かが出てきたのか、誰かが戻るのをためらったのか。監視カメラは、その19歩だけ白い画面を映していた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "靴跡が19個だけなら、歩いた人間はどこへ消えた。足跡の続きがないなら、その人は扉を開けずに立ち去ったんじゃない。廊下ごと赤い場所に削られたように見える。翌朝、靴跡の数を数えた職員も、数え終わりを思い出せなかった。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-3001の19分空白は、壊れた監視機器の穴ではない。こちら側が見ていたはずの時間に、向こう側から見返されていた痕跡だ。だから映像は残らず、呼吸だけが残った。画面の前に座る人間が、次の記録対象になる可能性まで残る。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "正体は、スクラントンを閉じ込めた場所そのものが、記録の外から監視室へ触れた可能性にある。財団でも、まだ説明できていない。ただ19分という数字だけが、何度も同じ顔で現れる。時計、音声、靴跡、未読通知。その全てが19で止まる。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "時計が飛んだとき、失ったのは時間だけじゃないんだな。その19分に誰が立っていたか、誰がこちらを見ていたかまで、記録から抜け落ちる。だから空白を見る側も記録される。モニターの黒い反射に、自分以外の影があれば目をそらせ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-3008、出口のない家具店で人々が夜を越えた記録を扱う。広い場所ほど安全だと思うなら、その報告書は読まない方がいい。あそこでは壁より先に人が消える。通路の数を数えた者ほど、帰り道を一つずつ失ったという。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書に19分の空白を見つけたなら、高評価を残せ。財団の裏側シリーズは毎日更新中だ。1万人を目指している。チャンネル登録すれば、次の封印記録も届く。ただし通知が19分遅れても、時刻を合わせ直してはならない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後に一つだけ警告を置く。深夜、時計が理由なく19分ずれていたとしても、画面を撮影して確かめようとするな。見かけても、決して近づくな。空白はまだ閉じていない。そして次に息を止めるのが誰かも、記録されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "19分だけ消失",
+      "誰が見ていた"
+    ],
+    "hook_caption": "19分の空白",
+    "subtitle": "SCP-3001監視記録",
+    "tagline": "消えた映像の向こう側"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "この手の報告書、実は他にも未公開のものが山ほどある。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 22,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 7,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.56,
+      "similar_to": "SCP-███「面談記録」— 17回変わる質問の実態",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-3001「赤の現実」19分空白の真相"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-3001「赤の現実」19分空白の真相",
+    "attempts": 1
+  },
+  "original_title": "SCP-3001「赤の現実」19分空白の真相",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜSCP-3001の記録には19分の空白があるのか？"
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

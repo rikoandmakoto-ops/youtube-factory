@@ -1,5 +1,55 @@
 [
   {
+    "file": "scp-lab_20260919_091740_scenario.md",
+    "title": "3名全員が731と書いた直後、存在しない生徒が増えたの理由",
+    "video_title": "【ゆっくり解説】3名の筆跡同じ数字「3名全員が731と書いた直後、存在しない生徒が増えたの理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "なぜ観測者3名だけが同じ数字を書いたのか",
+      "angle": "疑問＋人数。認識汚染系。3行目で『何が共有されたか』を言い切る"
+    },
+    "generated_at": "2026-09-19T09:17:40.407715Z",
+    "prompt_hash": "f3f05e5d92c1",
+    "generated_by": "gpt",
+    "script_source": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260919_072004_scenario.md",
+    "title": "SCP-3001の記録から19分だけ消えた理由",
+    "video_title": "【ゆっくり解説】19分だけ消失誰が見ていた「SCP-3001の記録から19分だけ消えた理由」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "なぜSCP-3001の記録には19分の空白が残るのか",
+      "angle": "疑問＋分数。監視記録の欠落を軸に、正体を3行目で提示"
+    },
+    "generated_at": "2026-09-19T07:20:04.898595Z",
+    "prompt_hash": "271542e9e5b8",
+    "generated_by": "gpt",
+    "script_source": "gpt",
+    "selected_by": null
+  },
+  {
+    "file": "scp-lab_20260919_030229_scenario.md",
+    "title": "なぜSCP-3450の記録係だけが交代直前に消えるのか",
+    "video_title": "【ゆっくり解説】記録係だけ7人が消えた「なぜSCP-3450の記録係だけが交代直前に消えるのか」",
+    "prefix": "scp-lab",
+    "theme": {
+      "title": "なぜ収容室の記録係だけが交代し続けるのか — SCP-3450 の人事記録",
+      "angle": "トップ変換(subs3)の「なぜ調査員はSCP-1283-JPの踏切のむこうで消えたのか？」と同型。消えるのは対象ではなく観測者側、という視点",
+      "_added_20260914n": true,
+      "theme_gate": {
+        "replaced": "なぜ収容室の照明は4時間で切り替わるのか",
+        "reason": "停止ジャンル『財団組織・職員』"
+      }
+    },
+    "generated_at": "2026-09-19T03:02:29.679089Z",
+    "prompt_hash": "d497c6ea43b2",
+    "generated_by": "gpt",
+    "script_source": "gpt",
+    "selected_by": null
+  },
+  {
     "file": "scp-lab_20260918_091942_scenario.md",
     "title": "3人の記録だけが消えた…SCP-1281最後の通信の理由",
     "video_title": "【ゆっくり解説】最後の通信記録が消える「3人の記録だけが消えた…SCP-1281最後の通信の理由」",

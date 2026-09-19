@@ -1,0 +1,558 @@
+{
+  "title": "飲み物選び歴三年の謎！自販機で迷う理由を教えて",
+  "theme": {
+    "title": "飲料の謎！あなたが選ぶ理由は？",
+    "angle": "飲料選びの心理を探るスレを紹介し、視聴者に自分の選び方をコメントで教えてもらう。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "ワイ、飲み物選び歴3年やけど質問ある？",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 自販機の前で7分固まる民なんかw",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "水でええのに新作ラベルで手が止まる草",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "コーヒー3本見比べて結局お茶買うやつなw",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり喉より気分を飲んどるだけやったんやw",
+      "expression": "surprise",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "お前らは何で選ぶんや、コメントで頼むわw 高評価とチャンネル登録も、質問ある？シリーズ毎日投稿で1万人目標やでw",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、自販機の前で同じお茶を選んだのに、隣の新作ジュースが急に気になったことありませんか？決め手は味より「気分」と「見た目」かもしれません。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回は、飲料を選ぶ瞬間に脳内で起きる小さな駆け引きの正体を暴くスレ！水、コーヒー、炭酸、乳飲料まで、なぜそれを手に取るのか見ていこう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最強の反転はここ！人は喉が渇いた時ほど、実は「おいしそう」と思った見た目に引っ張られやすいという話もあり、理性派のゴローも危ないです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "価格や容量で選んでいるつもりでも、冷えた缶の水滴や透明ボトルの爽快感で手が伸びる。飲料売り場は、たった数秒で心を揺らす小さな劇場なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "たとえば朝は苦いコーヒー、風呂上がりは炭酸、夜は甘い飲み物みたいに、同じ人でも場面で正解が変わる。あなたの定番は習慣か、それとも演出か？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "スレ民の妙に納得できる理由と、意味不明なのに共感してしまう選び方を連発するぞ。最後まで見たら、あなたが飲み物を選ぶ基準もコメントで教えてくれ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でもこれ、半分は間違いなんだ。のどが渇いたから飲むだけと思いきや、選択は買う前からかなり誘導されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "基本は「喉の状態」と「気分」と「場面」の三つだ。冷たい炭酸を選ぶ日は、体より気分が先にハンドルを握ることもある。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最強の逆転は、同じ飲み物でも容器で味の印象が変わる点だ。ある研究では重い容器ほど、中身まで高級に感じやすかった。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "これは期待効果、つまり飲む前の予想が味の判定へ混ざる仕組みだ。白い紙コップの麦茶より、透明グラスの麦茶がうまそうになる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "値段も味覚の演出家だね。高そうなラベルを見るだけで、苦みを「本格的」と受け取る人もいて、脳は案外見栄っ張りだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さらに人は選択肢が多すぎると、無難な定番へ逃げやすい。自販機の前で新作を眺めた末、結局いつものお茶を押す現象だ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "甘い飲料を選ぶ時は、疲れた自分への小さなご褒美という物語も効く。糖分の量より「今日はいいか」が決定打になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "逆に水やお茶を選ぶ人は、健康意識だけで決めているとは限らない。食事の味を邪魔したくない、という場面の都合も大きい。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり飲料選びは、渇きと記憶と雰囲気の共同制作。ユイたちは何を基準に買う？自販機前の本音をコメントで教えてね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "米国の味覚実験では、同じコーラでもブランド名を見せると好みが変化したんだって。舌だけで決めてるつもりでも、脳は看板まで飲んでるらしいよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも有名ブランド表示ありでは、脳の記憶や期待に関わる部位が反応した報告もあるぞ。中身が同じでも『いつもの』が安心料になるわけだな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、喉が渇いた時ほど人は冷たさを優先しやすい点！　甘さや香りの細かい差より、キンキンという情報が勝つ場面があるんだよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "温度の研究では、低い温度は爽快感を強める一方で甘味を感じにくくする傾向が知られる。ぬるいジュースが急に重く感じるのも納得だな。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "価格も味に参加するらしく、ワインの実験では高い値札を見た参加者ほど『おいしい』と評価しやすかった。財布が舌の通訳をしてるのかも。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "これは期待効果、つまり先入観が感じ方を動かす現象だ。高級そうな缶、限定ラベル、金色の文字だけで、飲む前から脳内試飲会が始まる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "選択肢が多すぎると迷いも増えるという消費行動の研究もあるよ。自販機の前で三十秒固まったら、喉より決断力が先にカラカラかもしれないね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "だから人は『いつもの一本』を選んで失敗を避ける。毎朝同じ缶コーヒーを買う行動は、味の好みだけでなく、考える手間の節約でもあるぞ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "香りは飲む前から期待を作る重要な手掛かりで、柑橘の匂いなら爽やか、乳の匂いなら濃厚と予測しやすい。鼻はパッケージより先に宣伝してるね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "さてスレ民よ、君が飲料を選ぶ決め手は値段、温度、ブランド、それともその日の気分？　自分でも説明できない『なぜか買う一本』をコメントで教えてくれ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "飲料を選ぶ理由を探るスレ、起点は1767年に英語で初めて「ソフトドリンク」と記された記録らしい。酒なし飲料の呼び名が、好みの戦争の幕を開けた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "当時の水は安全とは限らず、ビールや茶は加熱工程があるぶん頼られたという。喉を潤すだけのはずが、生存戦略として飲み物を選んでいたんだな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "そして最強の逆転、炭酸飲料は最初から爽快感狙いではなく、薬局で売る「健康向けの水」だった。泡を飲んで元気になる、と信じた時代があった。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "18世紀の科学者ジョゼフ・プリーストリーは、1772年に人工炭酸水の作り方を公表した。発酵槽の上の気体を水へ溶かす発想、なかなか攻めている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "炭酸水は二酸化炭素を溶かした水のこと。口に入ると泡が刺激を作るから、甘くなくても「飲んだ感」が強い。無糖炭酸派の理由、ここにあるかも。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "コーラも1886年、米国アトランタの薬剤師ジョン・ペンバートンが薬局で出した飲料が始まり。黒い液体を選ぶ行為には、薬っぽい安心感の名残もある？",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、冷蔵庫が一般家庭へ広がる前、冷たい飲料そのものが特別なご褒美だったこと。今の自販機の一本は、昔ならかなりのイベント感だよね。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "味覚研究では、同じ飲料でも容器の色や重さで「甘そう」「高そう」の印象が変わるとされる。中身だけで選んでいる自信、缶の前では少し怪しいぞ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり飲料選びは、味、記憶、安心、見た目が混ざる小さな心理戦。ユイたちは答えを決めない、あなたがつい手に取る一本と理由をコメントで教えて！",
+      "expression": "smile",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの反転！味より容器で選ぶ人が多いという調査もあり、同じ飲料でも缶とペットボトルで印象が変わるらしい。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "人は手に持った重さから中身の価値を推測しやすく、重い容器ほど濃厚で高そうだと感じる傾向が報告されているぞ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり軽いお茶を選んだつもりが、無意識には持ち運びの楽さまで計算していた可能性があるってこと？こわい！",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "色も油断できない。赤やオレンジの飲み物は甘く濃い味を予想させ、青系は爽快感を期待させやすいとされる。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "透明な炭酸を見てスッキリと決めつけるのも、舌より先に目が味の予告編を流しているようなものなんだね。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "冷たさの演出も強力で、氷の写真や水滴の付いたラベルを見るだけで、実際より冷えていそうに感じることがある。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さらに自販機では、目線の高さにある商品ほど選ばれやすいという話もある。喉の渇きより棚の配置が勝つのかも。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "限定という言葉も危険だぞ。期間限定は味の評価前に逃したくない気持ちを刺激し、買う理由を一気に作ってしまう。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "でも毎日同じ銘柄を買う人は、失敗しない安心を飲んでいるのかもしれない。新作より定番が強い場面もあるよね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "あなたは味、値段、容器、限定感、それとも自販機の位置で決める？自分でも気づかない選ぶ理由をコメントで教えてくれ。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日からは、買う前に「今ほしいのは味か気分か」を3秒だけ確認してみて。喉の渇き用なのにご褒美飲料を選ぶミスが、意外と減るぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きなのは、同じ水分補給でも容器で満足感が変わることだ。透明ボトルなら量を把握しやすく、飲み過ぎた気分の罪悪感も薄まりやすい。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "冷蔵庫の前で迷う人は、朝に「水」「甘い物」「炭酸」の3枠を決めておくと便利。選択肢を減らすだけで、帰宅後の謎の長考を防げる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "眠気対策でコーヒーを選ぶなら、飲む時刻をメモするのも手だぞ。夕方の一杯が夜の寝付きに響くなら、量よりタイミングを疑ってみよう。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "節約したい日は、コンビニに入る前に「今日は新商品を買う日か」を決めよう。目的なしで棚を見ると、限定ラベルに財布が吸い寄せられる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "気分転換用の飲料は、味より場面で固定すると続きやすい。仕事終わりは炭酸、散歩後はお茶のように決めれば、選ぶ時間まで小さな儀式になるぞ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "家族や同僚の飲み物を買うなら、銘柄より「甘さ」「温度」「炭酸」の3質問が効くぞ。好みを聞いたつもりで外す事故を、かなり避けられる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "逆に、いつも同じ物しか選ばない人は月1回だけ未知の飲料を入れよう。外れでもネタになるし、当たりなら自分の隠れた好みを発見できる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "さて、みんなは喉の渇き、値段、パッケージ、気分のどれで最後に決める？　自分でも説明できない「つい買う一杯」をコメントで教えてくれ！",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日のスレは、同じ自販機の前でも人が選ぶ飲料は驚くほど違う、という身近すぎる謎だったよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "味だけでなく、値段、温度、パッケージ、思い出までが一瞬で背中を押す。喉の渇きより気分が勝つ日もあるんだな。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転！　毎日同じ飲み物を買う人ほど、冒険しないのではなく、失敗したくない記憶を選んでいるのかもしれないね。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "たった一本の選択でも、朝の眠さや仕事終わりの解放感で理由は変わる。飲料棚は小さな人生相談所みたいだったぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回は「くだらないのに答えが割れる、コンビニで必ず買ってしまう物あげてけ」スレを解説するよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "深夜のレジ前で理性を溶かす一品は何なのか、あるあると謎のこだわりがぶつかる参加型スレになりそうだぜ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "あなたが飲料を選ぶ決め手も、次回のついで買いもコメントで教えてね。面白かったら高評価と登録、よろしくね！",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "同じ棚で",
+      "毎回迷う"
+    ],
+    "hook_caption": "飲み物の正体",
+    "subtitle": "選ぶ基準が謎すぎる草",
+    "tagline": "お前ら正直に言えや"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "お前らは何で選ぶんや、コメントで頼むわw 高評価とチャンネル登録も、質問ある？シ",
+          "reason": "1行56字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 36,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 6,
+        "emotional_impact": 3,
+        "relatability": 6,
+        "shareability": 14,
+        "debate_potential": 4
+      },
+      "channel_bonus": 3,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.465,
+      "similar_to": "なんか隣の音が変な正体やったw",
+      "template_issues": [
+        "直近10本中4本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "enhanced_title": "ワイ飲み物選び歴3年やけど理由ある？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "好奇心ギャップ['？', '理由'](+12)"
+    ]
+  },
+  "original_title": "ワイ飲み物選び歴3年やけど理由ある？",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "ワイ飲み物選び歴3年やけど理由ある？"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

@@ -1,0 +1,505 @@
+{
+  "title": "風呂上がりに指紋が消える？約10分の変化途上ોદのなぜ",
+  "theme": {
+    "title": "なぜ熱い風呂のあとだけ指紋が消えるのか",
+    "angle": "角質の吸水。戻るまでの分数を出す"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで風呂上がりだけ、指先は別人みたいになるんです？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、指紋が薄いのは約10分で戻るって本当なの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "皮膚の外側が水を吸ってふくらみ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！乾いたスポンジが水で丸くなる感じだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも熱い湯ほど進みやすく、乾くと線はまた見えてきます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。"
+    },
+    {
+      "speaker": "真",
+      "text": "指先を見てみて、高評価も押してね。体の謎シリーズもあるから、1万人目標で毎日投稿中のチャンネル登録を応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？熱い風呂のあと、あなたの指紋は約10分ほど薄く見えることがあります。鍵やスマホに触れた指先を見て、線が消えたように感じた経験はありませんか。\n画面には大きく「約10分」と出しておきたい、身近なのに見落としやすい変化なんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、約10分も指紋が変わったように見えるの？指先の渦や線をいつもより探しにくいのは、熱いお湯に入った直後だけだと思ってた。\nでも、体の中で何かが壊れたわけではないんだよね？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。ぬるめのお湯でも長く触れていると、指の表面は水を受け取って少し形を変えます。\nただし指紋そのものがなくなる話ではなく、表面の見え方と触れ方が一時的に変わる話です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！線そのものが消えるんじゃなくて、見え方が変わるだけなんだね。\nじゃあ入浴後にスマホの指紋認証が通りにくい気がするのも、指先の表面が関係しているの？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "その可能性はあります。指紋認証は凹凸の並びを読み取るので、表面が水でやわらかくなり、皮脂や水滴も重なると、普段の模様として捉えにくくなる場合があります。\n機種や方式で違いますが、あなたの指が急に別の指になったわけではありません。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "指紋認証まで影響することがあるんだ！お風呂のあとだけ何度か置き直したくなるのは、手が濡れているからだけじゃないかもしれないね。\nこの薄く見える線は、どこが水を吸っているの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "指のいちばん外側には、古くなった細胞が重なった薄い層があります。ここは体を守る壁でありながら、水に長く触れると少しずつ水分を抱え込みます。\n乾いた紙が湿るとやわらかくなるように、表面の細かな凹凸も変化しやすくなるんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、紙も濡れると端が波打つよね。指先では目に見えないくらい小さな変化だから、線が消えたように感じるわけか。\nでも、指は水の中でしわしわにもなるよね？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、指のしわと指紋の見えにくさは同じ水場で起きても、完全に同じ理由ではないことです。\n表面が水を吸うことは確かに関わりますが、しわが並ぶ仕組みには体の神経の働きも関わると考えられています。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、しわはただ水を吸ってふくらむだけじゃないの？指紋がぼやける話と、梅干しみたいな線が出る話は、分けて考えたほうがよさそうだね。\nじゃあ今回の主役は、もっと表面に近い部分なんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。今回いちばん見てほしいのは、指紋の山と谷を覆う、表面のごく薄い部分です。\n水を含んだそこが少し丸みを帯びると、谷の影が浅くなり、明るい場所では線が以前より淡く見えやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！山と谷の影が浅くなるから、線を目で追いにくくなるんだね。\nただし、ここからが本題だよね。熱い風呂のあとだけ目立つのは、温度が何を変えているの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "熱いお湯では、皮膚の表面を守る油分が洗い流されやすくなり、水が触れる感じも変わります。さらに温かさで表面がやわらかく感じられ、入浴時間が長いほど変化を意識しやすくなります。\n熱さだけで決まるのではなく、温度と時間の組み合わせが大切です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "お湯の温度だけじゃなく、何分つかっていたかも関係するんだ！同じ42度前後でも、手を洗う30秒と湯船で10分では、指先に触れる水の量がまるで違うもんね。\nだから風呂上がりに気づきやすいのか。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえるなら、乾いた台所スポンジに一瞬水をかけるのと、洗い桶に沈めておく違いです。前者ならすぐ元の弾力に近づきますが、後者では中まで水を抱えて、押した感触まで変わります。\nあなたの指先も、表面だけで似たような変化をしています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "スポンジのたとえなら分かりやすい！指紋の線が壊れたのではなく、表面が水を抱えて、凹凸を読み取りにくい形になっているんだね。\n乾かしたら、なぜまた元の模様に戻るの？",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "水分が空気中へ抜け、表面の細胞どうしの間隔が元の状態へ近づくからです。タオルで水滴を拭いた直後に完全に戻るとは限りませんが、手が自然に乾くにつれて、線の見え方も落ち着いていきます。\n多くの人では数分から十数分が、体感として目安になります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "数分から十数分なら、約10分という目安がちょうど真ん中なんだね。お風呂から出て服を着て髪を乾かしている間に、指先も少しずついつもの状態へ戻っていくんだ。\nずっと消えたままではないんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ところが、戻る速さには個人差があります。乾燥しやすい人、手洗いが多い人、入浴後に保湿をする人では、表面に残る水分や油分の状態が違うため、同じ時計の10分でも感触は同じではありません。\nここは科学でも、全員にぴったり何分とは言い切れません。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、約10分は全員共通のタイマーじゃないんだ！指先の乾き方まで人それぞれなら、家族で比べても違いそうだね。\nそれなら、指紋が見えにくいほど水を吸っていると考えていいの？",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "大まかには関係しますが、見え方だけで水分量を正確に測ることはできません。照明の角度、手の皮脂、石けんの残り、水滴の有無だけでも、線の濃さはかなり変わります。\n鏡の曇り具合だけで浴室の湿度を決められないのと同じなんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、見た目は手がかりであって測定器ではないんだね。明るい洗面所だと線が薄く見えて、乾いた部屋で見ると戻ったように見えることもありそう。\n実際には指紋のどの部分が変わっているの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "指紋は、胎児のころに作られた皮膚の深い模様が土台です。表面だけが水を含んでも、その土台の並びまで数分で作り替わることはありません。\nだから、入浴後に見えにくくなっても、あなた固有の渦や枝分かれが永久に失われる心配とは別の話です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！指紋の土台はもっと深い場所にあるから、表面の水分で模様そのものが消えるわけじゃないんだね。\nじゃあ警察の指紋採取みたいな場面でも、お風呂上がりは影響するの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "採取方法によっては、濡れや皮脂、表面の状態が読み取りやすさへ影響することがあります。ただし専門の機器や手順では、光の当て方や記録方法を工夫して、見えにくい条件にも対応します。\n家庭のスマホ認証と同じ尺度で、採取の成否を決めることはできません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "専門の現場では光や方法を変えるんだね。私たちが洗面所で見る指先より、ずっと丁寧に模様を拾う仕組みがあるんだ。\nここで気になるのは、しわしわの指が何のためにできるかだな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "指先が水の中でしわを作る理由には、濡れた物をつかみやすくするためではないか、という研究があります。2013年には英ニューカッスル大学の研究チームが、しわのある指で水中の小さな物を扱う時間を比べました。\n結果は条件によって差が小さく、役割のすべてが決着したわけではありません。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "2013年の研究でも、しわの役目はまだ完全には決まっていないんだ！濡れた地面のタイヤの溝みたいに、水を逃がす説を聞くけれど、体はそんなに単純じゃないんだね。\n分からない部分が残るのも面白いな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、指紋がぼやけるほうは、表面が水を含みやすいという日常的な変化でかなり説明できます。入浴後の指先を横から光にかざすと、山と谷の影が弱くなった感じを確かめやすいです。\n強くこすらず、見るだけで十分ですよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "横から光を当てると影の違いが分かりやすいんだ！スマホのライトを近づけるより、窓の明るさで手を少し傾けたほうが、線の濃淡を比べやすそうだね。\n試すなら肌を傷めない方法がよさそう。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、熱い風呂だけの現象に見えて、食器洗いで長くお湯を使ったあとにも起こりやすいです。42度前後のお湯に触れる時間が続けば、湯船でなくても表面は同じように水分の影響を受けます。\n場所ではなく、温度と接触時間が鍵なんです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、食器洗いのあとにも同じことが起きるんだ！冬にお湯で洗い物をしたあと、指先が白っぽくやわらかく感じるのも、風呂上がりとつながっているんだね。\n台所まで体の実験場みたいだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "石けんや洗剤は、汚れと一緒に皮膚表面の油分も落としやすいものです。油分が減ると水をはじく感じが弱くなり、指先のつっぱりや、水を吸ったあとのやわらかさを意識しやすくなります。\n台所仕事のあとに保湿が勧められるのは、この変化ともつながっています。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "洗剤で油分が減ると、水が触れやすくなるんだね！お皿の油を落とす力が、手の表面にも少し働くと考えると分かりやすいよ。\n風呂の熱さと洗剤の違いでも、指先の感じが似る理由が見えてきた。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔から人は入浴後のしわに気づいていましたが、体の仕組みを調べる道具が整うにつれ、表面の水分だけでは説明しきれない点も分かってきました。\n日常の小さな違和感は、長いあいだ観察されても、答えが一つに決まらないことがあるんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、毎日見る手なのに、しわと指紋の話を分けて考えたことはなかったよ。身近すぎる現象ほど、分かったつもりになりやすいんだね。\nじゃあ熱い湯は避けたほうがいいの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "熱い湯が必ず悪いわけではありませんが、長時間の熱い入浴で肌がつっぱるなら、温度を少し下げる選択は役立ちます。一般に家庭の入浴では40度前後を快適と感じる人も多く、熱さの感じ方には個人差があります。\n赤みや強いかゆみが続くなら、入浴習慣を見直すきっかけになります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "40度前後でも十分あたたかいもんね。指紋がぼやけたこと自体を気にしすぎるより、肌がつっぱるかどうかを自分の体から受け取るほうが大事なんだ。\nお風呂のあとにできることはある？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まずはタオルでこすらず、手の水分を押さえるように拭いてみてください。表面を強くこすると、やわらかくなった指先に余計な刺激を与えやすいからです。\nハンカチで眼鏡のレンズをそっと押さえるような、やさしい動きで十分です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ゴシゴシ拭くより、押さえるんだね！指紋を急いで戻そうとして強くこする必要はなくて、自然に乾く時間を待てばいいんだ。\n数分の変化なら、焦らなくてよさそうだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "乾燥しやすいなら、拭いたあとにハンドクリームを少量なじませる方法もあります。ただし指紋認証をすぐ使いたいときは、クリームが残ると逆に読み取りにくくなる場合があるので、量は控えめが安心です。\n保湿と認証の使いやすさは、少しだけ両立を考えてみてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "なるほど、クリームは肌にはうれしくても、認証には多すぎないほうがいいんだね。出かける直前なら、少量にして数分なじませる時間を取ると困りにくそう。\n生活の工夫につながる話だったな。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "もし入浴後だけでなく、普段から指先が割れる、強く痛む、色が変わるなどの変化が続くなら、水分の話だけと決めつけないでください。皮膚の状態には別の原因もあり得るので、気になるときは医療機関へ相談するのが安心です。\nここは自己判断で無理をしないでほしいところです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！一時的に線が薄く見えるのは自然な変化でも、痛みや割れまで一緒なら別に考える必要があるんだね。\n自分の手をよく見ることが、早めの気づきにもなるんだ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の答えは、熱い風呂のあとに指紋が消えたように見えるのは、表面の角質が水を抱えて凹凸の見え方が変わるからです。多くは自然に乾く数分から十数分で落ち着き、約10分は覚えやすい目安になります。\n指紋の土台そのものが、入浴だけで消えるわけではありません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "約10分という目安を知っていれば、風呂上がりのスマホ認証が少し手間取っても落ち着いて待てるね。指先の線を見ながら、体が水を受け取って戻る途中なんだと思えそう。\n身近な変化って、知ると見え方が変わるな。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜お風呂から出たら、手を拭く前と、自然に乾いた約10分後で、指先の線をそっと比べてみてください。明るさをそろえて見ると、表面の影が戻る感じを見つけやすいです。\n無理に熱い湯で試す必要はなく、いつもの入浴で十分です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、眠りに落ちる瞬間に体がビクッとなるのはなぜかを見ていくよ。自分の体で起きる小さな変化には、まだ気になることがたくさんあるね。\n睡眠と体のつながりも、続けて知りたくなった！",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今回の指先の変化が面白かったら、高評価で教えてください。体の謎シリーズでは、毎日あなたの体で起きる身近な不思議を1本ずつ、やさしくほどいています。\n次回も一緒に見てほしいので、チャンネル登録をよろしくお願いします。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "消えた指紋",
+      "戻るまで10分"
+    ],
+    "hook_caption": "指紋が消える",
+    "subtitle": "熱い風呂のあと、指先だけ別人みたいになる理由",
+    "tagline": "あなたの角質が水を吸っている時間"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。",
+      "matched_topic": "体"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 85,
+      "issues": [
+        {
+          "type": "visual_dependent",
+          "line": 7,
+          "text": "指先を見てみて、高評価も押してね。体の謎シリーズもあるから、1万人目標で毎日投稿",
+          "pattern": "見て[みてくれ]",
+          "reason": "「見て」だけでは何を見るか不明（テロップでは）"
+        },
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "指先を見てみて、高評価も押してね。体の謎シリーズもあるから、1万人目標で毎日投稿",
+          "reason": "1行58字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 2
+    },
+    "viral_score": {
+      "score": 24,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 3
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.507,
+      "similar_to": "なぜ長時間立つと足だけむくむのか？2時間後の正体",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ風呂後だけ指紋が消える？約10分の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "original_title": "なぜ風呂後だけ指紋が消える？約10分の正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ風呂後だけ指紋が消える？約10分の正体"
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

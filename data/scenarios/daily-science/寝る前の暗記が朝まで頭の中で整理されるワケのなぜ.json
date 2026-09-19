@@ -1,0 +1,510 @@
+{
+  "title": "寝る前の暗記が朝まで頭の中で整理されるワケのなぜ",
+  "theme": {
+    "title": "なぜ暗記は寝る前だと定着するのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？寝る前の暗記は、朝まで頭の中で並び替えられています。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、並び替え？睡眠は90分ほどの波で進むのに。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実験では、眠った人は起き続けた人より覚えた単語を思い出しやすかったんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホが夜に写真を整理するみたいだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも、寝る直前の見直しは新しい情報を減らせるので。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。"
+    },
+    {
+      "speaker": "真",
+      "text": "寝る前は1分だけ復習してみて。高評価も押して、睡眠と夢シリーズと毎日投稿中の1万人目標をチャンネル登録で応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？寝る前に机の上を片づけるように、あなたが覚えた単語も眠っている間に頭の中で整理されます。睡眠は約90分前後の波を繰り返し、その最初の数時間が特に大切なんです。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、机の片づけみたいに英単語まで整理されるの？寝る前に見た用語を朝に言いやすくなることがあるけれど、単なる気分ではなく、眠っている間の変化が関わるんだね。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。寝る前に覚えた内容は、目を閉じた瞬間に消えるのではなく、脳の中で何度も扱われます。朝の自分へ小さなメモを渡すような作業なんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "でも夜は疲れていて、覚えてもすぐ抜ける感じがするよ。朝にたくさん詰め込むより、寝る前の短い時間のほうが残りやすいなら、勉強の順番を変えたくなるね。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "大事なのは、寝る前なら何時間も頑張るほど良い、という意味ではありません。5分から10分だけ見直して眠ると、そのあとに入る会話や通知が少ないため、覚えた内容が押し流されにくいんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！夜更かしして量を増やすより、最後に苦手な3語だけ確かめるほうが役に立つ場合があるんだ。じゃあ眠っている頭の中では、実際に何が動いているの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "覚えた直後の情報は、まだ濡れたインクのように不安定です。日中なら次の授業、会話、スマホの通知が重なり、文字がにじむように別の情報と混ざります。眠りはそのにじみを減らす時間になります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "濡れたインクなら、触り続けるほど読みにくくなる感じが分かるね。寝る前に覚えたあと、動画を30分も見続けると、単語帳より映像のほうが最後に残るのも納得できるよ。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "日中の脳には、外から届く音、光、言葉が次々に入ります。一方で眠っている間は、新しい出来事が大幅に減ります。そのため、直前に覚えた内容を脳が扱う余地が生まれやすいと考えられています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、昼の頭は満員電車みたいに情報が押し合っているね。眠っている間は乗客が少なくなるから、覚えた言葉が座れる場所を見つけやすい、というイメージかな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。眠りは外からの情報が減るだけではありません。脳は休んでいる間に、起きているときに入った内容の一部をもう一度たどり、残し方そのものを変えていると考えられています。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、寝ているのに、覚えた内容をもう一度たどるの？単語帳を開いていないのに、頭の中だけで見直しに近いことが進むなら、朝に思い出せる理由が少し見えてきたね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "2002年に発表された研究では、単語の組み合わせを学んだ参加者を比べ、眠った人のほうが記憶テストで有利になる結果が報告されました。眠りが、勉強を終えた後にも働く例として注目されたんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "2002年の時点で、眠った人の成績に差が出ていたんだね。眠ることは勉強を中断するためだけではなく、覚えた内容を後で取り出せる形へ整える時間でもある、と考えられるんだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "眠り始めの前半には、ゆっくり大きな脳の波が増える時間があります。この時間には、日中に入った情報の一部が繰り返し扱われます。短い走り書きが、翌日に読めるノートへ清書されるような変化です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！眠りの前半は、ただ意識が遠のく時間ではなく、走り書きを清書するみたいな時間なんだね。夜の最初の数時間を削ると惜しい理由が、少しずつ分かってきたよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえるなら、スマホが夜に写真を自動でアルバム分けする作業と同じなんです。撮った瞬間にも写真はありますが、分類されると後で探しやすくなります。記憶も、眠りで呼び出しやすさが変わります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "写真が消えずにアルバムへ入る感じなら、暗記した言葉が朝に出てきやすくなる説明になるね。でも、眠れば何でも残せるなら、全部を一度見ただけで覚えられてもよさそうだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "脳は一日の出来事を丸ごと残しているわけではありません。何度も見たもの、意味が分かったもの、これから使いそうなものが残りやすいと考えられています。寝る前の短い復習は、その内容に目印を付ける役目です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ答えを読むだけより、隠して自分で言えるか試したほうが、目印が付きやすいのかな。数秒考えてから答えを見るほうが少し大変だけれど、朝の自分には親切そうだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その通りです。答えを見る前に5秒ほど思い出そうとすると、情報を自分から取り出す練習になります。寝る前は、その直後に外からの新情報が少なくなるため、取り出そうとした内容を残しやすい流れになります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "5秒でも、自分で引き出すことが大事なんだね。単語帳を最初から最後まで眺めるより、苦手なところだけ隠して答えるほうが、短い時間でもちゃんと勉強した感覚になりそう。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、寝る前の暗記は魔法のように記憶量を増やす方法ではない点です。眠りは覚えていない内容を突然作るのではなく、起きている間に入れた情報を残しやすくする助けになります。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、眠れば何も覚えなくても身につくわけではないんだね。それなら、寝る前に3時間詰め込んで睡眠を削るより、覚える時間と眠る時間の両方を守るほうが大事になりそうだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "睡眠不足では、翌日に新しい情報を受け取る力まで落ちやすくなります。1晩だけ短く眠った後でも、注意を保つ力が下がることは多くの研究で示されています。暗記の入口そのものが弱くなるんです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "覚えた後の整理だけでなく、次に覚える入口にも眠りが関わるんだね。徹夜の翌朝に教科書を読んでも頭に入らないのは、根性が足りないからではなく、体の準備が整っていないからなんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "眠りには浅い眠りと深い眠りが何度か交代する、約90分前後の周期があります。ただし90分ぴったりで全員が同じように進むわけではありません。年齢、疲れ、生活リズムで長さは普通に変わります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "90分という数字だけで、必ずその倍数で起きなきゃと焦らなくていいんだね。時計に合わせて睡眠を削るより、自分が翌日に眠くなりすぎない長さを確保するほうが、まず大事なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "夢を見やすい時間にも、覚えたことの整理が関係する可能性はあります。ただ、夢の内容そのものが暗記を強くするのか、どんな夢が役立つのかは、ここは科学でもまだ結論が出ていません。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "夢に単語が出てきたら覚えやすい、とまでは言えないんだね。でも夢を朝に覚えていなくても、眠っている間に記憶の扱いが変わること自体は、研究から考えられているんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "覚えたことを休んでいる間に落ち着かせて残す働きに名前が付いていて、記憶の固定と言います。つまり、ばらばらの新しい情報を、後で使えるノートへまとめ直すような働きのことです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "記憶の固定って難しそうに聞こえるけれど、ばらばらのメモを使えるノートにすることなんだね。言われてみれば確かに、寝た後に手順が急に分かったように感じることもあるよ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "1960年代には、眠りの段階と記憶を結びつける研究が少しずつ進みました。頭に付けた電極で脳の電気の変化を記録する方法が広まり、眠っている脳が一定ではなく変化していることが見えてきたんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "1960年代から、眠っている人の脳を記録して調べてきたんだね。昔は眠りを完全な停止みたいに考える人もいたかもしれないけれど、今は脳の動きから理由を確かめられるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "実際、眠りが大切だという感覚は昔からありましたが、脳の動きを測れるようになって理由を検証できるようになりました。経験だけでなく、同じ課題をした人たちの結果を比べられるのが研究の強みです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！寝る前の復習は昔からの言い伝えにも見えるけれど、今は記憶テストの点数まで比べて考えられるんだ。じゃあ、今日からは何分くらい試せばいいの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "おすすめは、布団に入る前の5分から10分を、今日覚えた中で不安なものだけに使うことです。新しい範囲を増やすより、すでに見た内容を自分で答えられるか確かめるほうが、寝る前には向いています。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "5分から10分なら続けやすいね。寝る直前に教科書を何十ページも開くと焦るけれど、苦手な単語を3個だけ選ぶなら、朝にも確かめられる小さな約束として続けられそう。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "見直すときは、答えを眺めるだけで終わらせず、問題を隠して1回だけ言ってみてください。間違えたものに印を付け、その印だけをもう一度見ると、10分でも復習の目的がはっきりします。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "全部を完璧にしようとしなくていいんだね。印が付いたところだけなら、疲れた夜でもやることが少ないし、できなかった部分が朝にどう変わったかも、比べやすくなりそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも、復習のあとにスマホで新しい動画や通知を長く追うより、明かりを落として眠る準備へ移るほうが自然です。画面を見たら記憶が必ず消えるわけではありませんが、就寝が遅れるのは避けたいです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "復習直後に30分も別の情報を見続けると、覚えた単語より映像のほうが最後に残りそうだね。寝る前の5分を、頭の中の机を片づける静かな時間にする感じだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "朝になったら、前夜に印を付けた内容を30秒だけ思い出してみてください。すぐ答えが出るものと迷うものが分かれれば、眠ったあとに何が残ったかを、自分の体験として確かめられます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "朝の30秒なら、出かける前でも試せそうだね。寝る前に選んで、朝に確認するだけで、自分に合う覚え方かどうかが少しずつ見えてくるのは、実験みたいで面白いな。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただ、試験前に眠れないほど不安になっているときは、暗記の量だけを増やすより休息を優先する判断も必要です。眠れない状態が2週間以上続くなら、ひとりで抱えず医療機関へ相談してください。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "頑張り方にも、体を守る線があるんだね。眠ることまで削って覚えようとしないで、短い復習と十分な睡眠をセットにするほうが、次の日も続けられる勉強になりそう。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の話は、寝る前に5分から10分だけ思い出し、眠りに残りの整理を任せるということです。眠りは暗記の代わりではありませんが、覚えたものを朝の自分へ渡す手伝いをしてくれます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！寝る前の暗記は、夜中に頑張り続けることじゃなくて、最後に大事な3つを渡してから休むことだったんだね。今夜ならすぐ試せそうだよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、二度寝があんなに気持ちよく感じる理由を、眠りの途中で目が覚める仕組みから見ていきます。今夜寝るとき、単語を3つだけ思い出してから目を閉じてみてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "単語を3つなら、今日から試せるね。朝にどれだけ残ったかを見るだけでも、眠っている時間の見え方が少し変わりそうで、次回の二度寝の話も気になってきたよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "面白かったら高評価を押して、睡眠と夢シリーズのほかの不思議も一緒に見てください。身近な体の変化を毎日1本ずつ解き明かしているので、1万人を目指すチャンネル登録で応援よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "寝る前の暗記",
+      "1晩で残る"
+    ],
+    "hook_caption": "記憶は夜育つ",
+    "subtitle": "眠っている間に何が起きる？",
+    "tagline": "朝の自分に渡す勉強法"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "pokemon-lab",
+      "bridge_line": "ちなみにこの仕組み、ポケモンの設定にも使われてるんだよ。",
+      "matched_topic": "体"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "寝る前は1分だけ復習してみて。高評価も押して、睡眠と夢シリーズと毎日投稿中の1万",
+          "reason": "1行60字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 22,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 3,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.495,
+      "similar_to": "疲れた日の甘い物、3時間で消える正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ寝る前の暗記は1晩で残る？記憶の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "original_title": "なぜ寝る前の暗記は1晩で残る？記憶の正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "なぜ寝る前の暗記は1晩で残る？記憶の正体"
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

@@ -1,0 +1,218 @@
+{
+  "title": "青山商事の売上1,949億円、実はスーツ以外へ広げた理由",
+  "theme": {
+    "title": "青山商事がスーツ以外へ広げた理由",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "企業のホンネ",
+      "fact_main": "青山商事 1949億円",
+      "fact_sub": "2024年3月期の売上高",
+      "text": "売上は千九百四十九億円です。ただし、スーツだけでは伸ばしにくい状況です。",
+      "bg_query": "青山商事株式会社 洋服の青山 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "スーツ市場 2000億円台",
+      "fact_sub": "矢野経済研究所の市場推計",
+      "text": "国内の紳士服市場は二千億円台です。在宅勤務で、毎日着る前提が薄れました。",
+      "bg_query": "青山商事株式会社 洋服の青山 スーツ売り場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "カジュアル店 40店超",
+      "fact_sub": "公式サイト掲載店舗を基に集計",
+      "text": "カジュアル業態は四十店超です。",
+      "bg_query": "青山商事株式会社 カジュアル 店舗 売り場",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "女性向け店 100店超",
+      "fact_sub": "SUIT SQUAREなどを展開",
+      "text": "女性向けを含む新業態は百店超です。",
+      "bg_query": "青山商事株式会社 SUIT SQUARE 店舗",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "EC売上 200億円超",
+      "fact_sub": "2024年3月期の関連売上",
+      "text": "ネット関連の売上は二百億円超です。",
+      "bg_query": "青山商事株式会社 オンラインストア 商品",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "店舗数 700店超",
+      "fact_sub": "グループ国内店舗数",
+      "text": "ただし国内店舗は七百店超です。",
+      "bg_query": "青山商事株式会社 洋服の青山 店舗内",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "speaker": "",
+      "text": "この企業の話、2chのスレでもかなり盛り上がってましたね。"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったら、話題の企業の実態シリーズもプロフィールからチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "売上1949億円",
+      "スーツ依存脱却"
+    ],
+    "subtitle": "青山商事が広げた理由",
+    "tagline": "数字の裏にある転職市場の変化"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "2ch-matome",
+      "bridge_line": "この企業の話、2chのスレでもかなり盛り上がってましたね。",
+      "matched_topic": "ネット"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 9,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 7,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.423,
+      "similar_to": "サントリーが非上場を続ける理由、売上1兆7,977億円の裏側",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "青山商事の売上1,949億円、実はスーツ以外へ広げた理由"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は'](+12)",
+      "好奇心ギャップ['理由', '実は'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

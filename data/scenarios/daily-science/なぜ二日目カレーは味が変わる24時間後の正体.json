@@ -1,0 +1,507 @@
+{
+  "title": "なぜ二日目カレーは味が変わる？24時間後の正体",
+  "theme": {
+    "title": "なぜ二日目のカレーは味が変わるのか",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？二日目のカレー、24時間で味が変わるんです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、24時間で？鍋の中で何が増えるのか気になる！",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "具材のうま味が汁へ広がり、油と香りがなじむのが大きな正体です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スポンジが水を吸って広がるみたいだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも冷める間にじゃがいもの成分も出て。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "食べる前に冷蔵して温め直してみて。食べ物の科学シリーズも、高評価を押して1万人目標の毎日投稿をチャンネル登録で応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？あなたが二日目のカレーを食べると、24時間前と同じ鍋なのに、なぜか味が丸く濃く感じることがありますよね。実は鍋の中では、火を止めた後も具と汁の間で小さな移動が続いているんです。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、24時間でそんなに変わるの？玉ねぎも肉も同じままなのに、一口目から昨日よりなじんだ感じがすることがあるよ。冷蔵庫に入れている間、鍋の中では何が動いているんだろう？",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "カレーは塩気、甘み、肉や野菜のうま味、香辛料の香り、油が一つの鍋に集まった料理です。あなたの舌と鼻はそれらを別々ではなく一つの印象として受け取るため、少しの配置の変化でも味が大きく変わったように感じます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！一口の中で全部をまとめて判断するなら、具の近くだけにあった味が汁へ少し移るだけでも、昨日と違うと思うわけだね。最初に変わるのは塩気なのかな？",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず、鍋を冷ます時間を思い浮かべてみてください。火を止めた直後は熱い汁が動いていますが、温度が下がると流れは遅くなります。それでも濃い場所から薄い場所へ、味の成分は少しずつ広がり続け、鍋全体の差をならしていきます。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "熱い間だけでなく、冷めている途中にも広がるんだね。すくう場所で味が違った鍋が、翌日にはどこを食べても近い味になるのは、汁の中で成分がゆっくり散らばったからなのかな？",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "その考え方で近いです。たとえるなら、紅茶に砂糖を入れてすぐ飲むより、少し待ったほうが甘さが均一になるのと同じなんです。カレーでも塩やうま味の成分が、具の周りから汁へ移り、鍋の端まで味の差を小さくしていきます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、作った直後は肉の近くをすくうと濃く感じることがあるね。翌日に汁がソースみたいに一体化しているのは、具と汁の境目が24時間で少しぼやけるからなんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "特に玉ねぎは、加熱で細胞がやわらかくなり、甘みを含む水分が汁になじみます。にんじんや肉も表面から味を渡すので、翌日は具だけを食べても汁の味と離れにくくなります。たとえるなら、スポンジにしみた色水が周囲へ広がるような変化です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "具が汁へ味を渡すなら、翌日に肉が少し淡く感じることがあるのも不思議じゃないね。具のおいしさが消えたのではなく、鍋全体へ分けられたから、どこを食べても似た印象になるということかな？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "はい、ただし味が均一になるだけではありません。じゃがいもを入れたカレーでは、煮ている間に一部が崩れ、汁のとろみを増やします。冷えると全体が少し固まり、翌日に温めると舌の上をゆっくり流れるため、同じ塩気でも濃く感じやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、とろみは塩を増やさなくても濃い印象を作れるんだ！さらっとしたスープと、とろっとしたカレーで、同じ量の塩でも後者のほうが味が残ることがあるのは、舌に触れる時間が長いからなんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが、とろみは新しい味を作るというより、あなたの口に味が留まる時間を変えることです。たとえるなら、スマホの通知が一瞬で消えるか、画面に数秒残るかの違いです。舌に触れる時間が少し長いだけで、印象は深くなりやすいんです。",
+      "expression": "laugh",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！二日目カレーが濃いと感じるとき、実際に塩分が大幅に増えたとは限らないんだね。では、口に残る香辛料の香りまで落ち着いたように感じるのは、どこから来る変化なの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "カレー粉の香りには、油に溶けやすい成分が多くあります。煮込んでいる間、香りは油と汁の間を行き来し、火を止めてからも完全に固定されません。油に抱えられた香りが口へ届く順番が変わることで、翌日は角が取れたように感じる場合があります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "油に香りが乗っているなら、表面に浮いた油を見ただけでも、香りの居場所が分かる気がするね。温め直した瞬間に湯気が立って、昨日よりカレーらしい匂いが広がるのも、油から香りが出るためかな？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "人は舌だけで味を決めていません。口へ入れた後、香りが喉の奥から鼻へ抜けることで、カレーらしさを受け取っています。温めると香りを運ぶ分子が空気へ出やすくなり、湯気と一緒に鼻へ届くため、温度だけでも印象が大きく変わるんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、二日目のおいしさは舌と鼻の共同作業なんだね！冷たいまま一口食べるより、温かくしたときのほうが香りが先に届くなら、同じカレーでも別の料理のように感じるのは自然なことだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、ここからが本題です。二日目の味を変える大きな要素は、寝かせた24時間だけではありません。あなたが翌日に食べる前に行う再加熱が、冷えて固まった油、とろみ、香りをもう一度動かし、最初の日とは違う一口を作っているんです。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、置いた時間より温め直しも同じくらい大切なの？一晩寝かせることばかり気にしていたけど、翌日に火を入れる数分で味の見え方が変わるなら、鍋をどう温めるかまで知りたくなるね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "冷蔵庫で冷えたカレーでは、油が白っぽい膜のように固まることがあります。これは油が温度で形を変えた姿で、すぐに失敗を意味するわけではありません。温めながら混ぜると油は再び広がり、香辛料の香りを運びやすい状態へ戻っていきます。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "白い膜を見ると味が落ちたのかと思っていたけど、油が休んでいるような状態なんだね。温めて混ぜればまたなじむなら、ふたを開けた最初の見た目だけで、二日目カレーを判断しなくてよさそうだ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "再加熱で油が溶けると、香りは湯気と一緒に鼻へ届きやすくなります。たとえるなら、香りをしまった小さな封筒が、温度で開いていくようなものです。最初のひと口で感じるスパイス感は、この数分の温まり方でかなり変わります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！翌日の鍋から立つ湯気は、ただ熱いだけではなく、油が持っていた香りを運んでいるんだね。弱い火でゆっくり温めると、封筒が順番に開くように香りが戻るのかな？",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただ、強火で長く煮ればよいわけではありません。水分が蒸発すると、同じ鍋でも塩気は強くなります。じゃがいもがさらに崩れれば、とろみも増えます。二日目の味は時間の賞ではなく、翌日に加えた熱、水分、混ぜ方を合計した結果なんです。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "二日目なら必ずおいしくなるという決まりではないんだね。鍋を火にかけたまま別の作業をすると、水が飛んで濃くなりすぎることもある。好きな味になった日は、置いた時間と温め方の両方が合っていたのかもしれない。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "家庭のカレーは、具の大きさ、ルウの種類、鍋の深さ、水分量で変わります。だから二日目の変化を一つの数字だけで言い切ることはできません。科学でも、香りや食感をどこまでおいしいと感じるかには個人差があり、ここはまだ結論が出ていない部分です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "同じ24時間でも、鍋が違えば味が違うのは当然なんだね。じゃがいもが多いカレー、肉が多いカレー、さらっとしたカレーで印象が変わるなら、自分の家の鍋を観察すること自体が小さな実験になりそうだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "市販のカレールウには、小麦粉など、とろみを作る材料が使われることがあります。冷えると全体が固まりやすくなり、翌日には昨日より重たい見た目になることがあります。これは味が悪くなった印ではなく、温度でまとまり方が変わった一例として考えられます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえるなら、冷えたチョコレートが手の熱でやわらかくなる感じだね。強い火で急に温めるより、鍋の底から少しずつ熱を渡せば、固まった部分も全体となじみやすく、口当たりも整えやすそうだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "木べらで鍋底から混ぜるのは、焦げつきを防ぐだけではありません。下へ沈みやすいとろみの強い部分と、上に集まりやすい油を合わせ、塩気や香りを一皿ごとに近づける役目もあります。たった30秒混ぜるだけでも、すくう場所の差を減らせます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "30秒のひと手間で、一皿目と最後の一皿の差が小さくなるんだね。鍋の表面だけを見て温まったと思うより、底からすくって混ぜるほうが、家族みんなが同じ味を食べやすくなるわけだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの台所でも起きています。冷えた鍋で油が固まり、汁は具のすき間へ入り、翌日には再加熱で香りが広がる。この往復があるから、作った直後のカレーと二日目のカレーは、同じ材料でも違う表情を見せるんです。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、二日目のカレーは時間が味付けを足したというより、材料をもう一度なじませた料理なんだね。見た目の油、とろみ、湯気の香りを順番に見ると、変化の理由を自分でも確かめられそうだ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "カレーが日本の家庭料理として広く親しまれるようになった背景には、明治時代に英国式のカレーが伝わった歴史があります。その後、ご飯に合うとろみのある形が定着し、翌日も温めて食べる家庭の時間と結び付いて、二日目の味も特別なものになっていきました。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！二日目カレーの好き嫌いには、鍋の中の科学だけでなく、家で翌日も同じ料理を囲む習慣が重なっているんだね。香りをかいだだけで、以前の食卓を思い出すこともありそうだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "味の感じ方には記憶も関わります。帰宅してふたを開けた瞬間の香り、鍋を混ぜる音、白いご飯の湯気が、前においしいと感じた食事を思い出させることがあります。ただし記憶が味をどこまで変えるかは個人差があり、科学でもまだ結論は出ていません。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "味覚だけでは説明し切れないところも残るんだね。でも、同じカレーでも昼に食べるか夜に食べるか、ひとりか家族と食べるかで印象が違うのは、あなた自身の体験として思い当たる人が多そうだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "そして二日目カレーで最優先にしたいのは安全です。カレーは水分と栄養が多く、鍋のまま室温に長く置くと、食中毒につながる菌が増えるおそれがあります。おいしく寝かせるために常温で一晩置くことは、家庭ではおすすめできません。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、二日目の味を待つために置きっぱなしはだめなんだね。味の変化を楽しみたいなら、鍋の中で起きることより先に、自分や家族の体を守る冷まし方を知っておく必要があるんだ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "作った後は、浅い容器に小分けして早めに冷まし、冷蔵庫へ入れてください。大きな鍋の中心は冷めるまで時間がかかるため、ふたをしたまま放置するより、容器の底を氷水に当てて混ぜながら温度を下げる方法が役立ちます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "小分けにすると表面積が増えて、熱が外へ逃げやすいんだね。たとえるなら、大きな氷の塊より砕いた氷のほうが早く溶けるのと同じだ。早く冷やしてから冷蔵するほうが、翌日の味も安全も守りやすそうだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "翌日に食べるときは、全体がしっかり熱くなるまで加熱し、底から混ぜてください。食品衛生では中心部を75度で1分以上加熱する目安があり、とろみのあるカレーでは端だけ熱くなって中心が冷たい状態を避ける意識が特に大切です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "75度で1分という目安があると、湯気が見えたから大丈夫と決めつけずに済むね。鍋の中央や底は温まり方が違うから、木べらで混ぜながら全体を熱くすることが、味を整えることにも安全にもつながるんだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "味が濃くなりすぎたと感じたら、水を大さじ1杯ずつ足してみてください。一度に100ミリリットル入れるより、15ミリリットルほどずつ確かめれば、薄めすぎを防げます。足した後は弱めの火で混ぜ、香りが立ったところで火を止めるのがコツです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "大さじ1杯ずつなら、昨日より濃いと感じた理由を舌で確かめながら戻せるね。二日目だから濃いはず、と決めつけず、塩気、とろみ、香りを一口ずつ見ながら、自分の好きなところへ合わせるのがよさそうだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "まとめると、二日目のカレーは具から汁へ広がった成分、とろみ、油に乗った香り、そして再加熱が重なって味の印象を変えます。24時間という時間は魔法ではなく、あなたの鍋の中で起きた小さな移動と、翌日の手入れが作る変化なんです。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、二日目カレーがおいしいというより、翌日にもう一度なじませたカレーがおいしいのかもしれないね。今度ふたを開けたら、表面の油、とろみ、温めた後の湯気を順番に見てみるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜カレーを作るなら、食べ終えた後に浅い容器へ分けて冷蔵し、翌日は底から30秒ほど混ぜて温めてみてください。昨日と同じ材料がどこで変わって感じるのかを、あなたの舌と鼻で確かめる小さな実験になります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、眠りに落ちる直前に体が急にビクッとなるのはなぜかを見ていくんだね。数秒の間に起きる体の変化なら、布団に入ったときの自分の感覚とつなげて考えられそうだ。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "食べ物の科学シリーズでは、毎日の食卓で感じる小さな違和感を、あなたの体験につなげてほどいています。二日目カレーの変化が面白かったら、次の身近な不思議のために高評価をお願いします。",
+      "expression": "laugh",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "身近な不思議を毎日1本ずつ一緒に見つけたいので、食べ物の科学シリーズも、1万人目標の毎日投稿をチャンネル登録で応援よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "一晩で変化",
+      "味の正体"
+    ],
+    "hook_caption": "24時間後",
+    "subtitle": "冷蔵庫で待つカレーに起きること",
+    "tagline": "同じ鍋なのに別の味"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "食べる前に冷蔵して温め直してみて。食べ物の科学シリーズも、高評価を押して1万人目",
+          "reason": "1行63字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 22,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 3,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.497,
+      "similar_to": "疲れた日の甘い物、3時間で消える正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ二日目カレーは味が変わる？24時間後の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

@@ -1,0 +1,211 @@
+{
+  "title": "モスバーガーの20円値上げ、本当は何を守ったのか",
+  "theme": {
+    "title": "モスバーガーが値上げを選んだ本当の理由",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "値上げの実態",
+      "fact_main": "モス 20円値上げ",
+      "fact_sub": "2023年3月の価格改定",
+      "text": "20円の値上げです。ただし、これには店舗を守る理由があります。",
+      "bg_query": "株式会社モスフードサービス モスバーガー 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "270円→290円",
+      "fact_sub": "モスバーガー単品の例",
+      "text": "看板商品の例では、270円が290円になりました。",
+      "bg_query": "株式会社モスフードサービス モスバーガー 商品 レジ",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "3年で4回改定",
+      "fact_sub": "2021年〜2024年の公表分",
+      "text": "2021年から2024年までに、価格改定は4回です。",
+      "bg_query": "株式会社モスフードサービス モスバーガー メニュー",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "売上高 930億円",
+      "fact_sub": "2024年3月期 連結",
+      "text": "2024年3月期の売上高は930億円です。数字だけ見れば、かなり良い回復です。",
+      "bg_query": "株式会社モスフードサービス モスバーガー 店内",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "営業利益 42億円",
+      "fact_sub": "2024年3月期 連結",
+      "text": "営業利益は42億円でした。実はこの裏で、食材と人件費の上昇を吸収しています。",
+      "bg_query": "株式会社モスフードサービス モスバーガー 調理",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "直営店 400店超",
+      "fact_sub": "国内店舗数の一部",
+      "text": "直営店は400店を超えます。",
+      "bg_query": "株式会社モスフードサービス モスバーガー スタッフ",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったら、話題の企業の実態シリーズもプロフィールからチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "20円値上げ",
+      "守ったもの"
+    ],
+    "subtitle": "モスバーガーの価格戦略",
+    "tagline": "数字の裏にある店舗運営"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.483,
+      "similar_to": "ニトリの粗利率55%、実は物流まで握る実態",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "モスバーガーの20円値上げ、本当は何を守ったのか"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['本当は'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

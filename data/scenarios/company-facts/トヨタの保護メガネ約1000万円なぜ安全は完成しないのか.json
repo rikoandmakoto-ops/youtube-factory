@@ -1,0 +1,215 @@
+{
+  "title": "トヨタの保護メガネ約1,000万円、なぜ安全は完成しないのか",
+  "theme": {
+    "title": "ハイテク保護メガネの企業導入事例",
+    "angle": "新技術が企業の安全対策にどのように貢献するかを探る。"
+  },
+  "short_scenario": [
+    {
+      "fact_header": "安全投資の実態",
+      "fact_main": "導入費 約1000万円",
+      "fact_sub": "導入規模は公開範囲で限定",
+      "text": "約1,000万円の保護メガネ導入。ただし、費用だけでは安全は完成しません。",
+      "bg_query": "トヨタ自動車株式会社 工場 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "労災死傷 2,135人",
+      "fact_sub": "製造業・2024年 厚労省",
+      "text": "製造業の休業4日以上の死傷者は、2024年に2,135人です。",
+      "bg_query": "トヨタ自動車株式会社 工場 作業風景",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "保護具 1日8時間",
+      "fact_sub": "現場の継続着用が鍵",
+      "text": "1日8時間の作業で使われるなら、軽さと曇りにくさが定着を左右します。",
+      "bg_query": "トヨタ自動車株式会社 生産ライン",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "視界 120度以上",
+      "fact_sub": "製品仕様例・機種で異なる",
+      "text": "視界120度以上をうたう製品もあります。",
+      "bg_query": "トヨタ自動車株式会社 工場 安全装備",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "点検 1日2回",
+      "fact_sub": "運用例・現場ごとに異なる",
+      "text": "ただし、導入後は1日2回の点検が必要です。",
+      "bg_query": "トヨタ自動車株式会社 工場 点検",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "研修 30分以上",
+      "fact_sub": "教育時間は事業所で異なる",
+      "text": "新しい保護具は30分以上の説明が目安です。",
+      "bg_query": "トヨタ自動車株式会社 安全教育",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "話題の企業の実態シリーズ",
+      "text": "気になったらプロフィールから、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "約1000万円",
+      "目を守る投資"
+    ],
+    "subtitle": "工場の安全対策",
+    "tagline": "数字の裏にある現場"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 11,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 2,
+        "relatability": 0,
+        "shareability": 7,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.502,
+      "similar_to": "スターバックスのラテ550円、本当はどこに消える",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "トヨタ自動車の保護メガネ、約1,000万円の安全投資の実態"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['なぜ'](+12)"
+    ],
+    "rejected_title": "トヨタ自動車の保護メガネ、約1,000万円の安全投資の実態",
+    "attempts": 1
+  },
+  "original_title": "トヨタ自動車の保護メガネ、約1,000万円の安全投資の実態",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}
