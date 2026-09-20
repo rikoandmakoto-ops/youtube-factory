@@ -466,10 +466,10 @@
     "schedule": {
       "days_of_week": [
         0,
-        1,
-        2
+        2,
+        3
       ],
-      "hour": 15,
+      "hour": 20,
       "minute": 0,
       "times": [
         {
@@ -497,11 +497,6 @@
     "gen_type": "short",
     "publish_lead_minutes": 45,
     "theme_queue": [
-      {
-        "id": "4d3fde3e",
-        "title": "毎月1万円の投資がもたらす心理的安心感",
-        "angle": "小さな投資が自己効力感を高める理由を解説。"
-      },
       {
         "id": "3e00742e",
         "title": "個人向け国債の心理的メリット",
