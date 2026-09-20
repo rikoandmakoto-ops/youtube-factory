@@ -119,3 +119,5 @@ data/image_requests/*
 data/reports/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
 # 指揮者 xlsx 生成の途中シート（最終成果物は reports/youtube_analysis_*.xlsx）
 reports/_orch_sheet*.xlsx
+# トークン失効アラートの送信済み状態（実行時に書き換わるランタイム状態）
+data/reports/.token_alert_state.json
