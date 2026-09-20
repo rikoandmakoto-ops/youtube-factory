@@ -1,0 +1,536 @@
+{
+  "title": "天井下がりの正体、町家の天井裏で起きていたこと",
+  "theme": {
+    "title": "天井下がりの正体と町家の造り",
+    "angle": "天井裏の物音を説明する妖怪。町家の構造と一緒に見る。"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "天井下がり、好きな人多いよね。でも元ネタを知ると、見上げ方が変わるんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "あの天井から出るやつ好き！でも江戸の町家では。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、京都の町家で天井が下がり。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "毎晩、頭のすぐ上の板が近づく感じか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "梁のきしみでも、暗い天井裏なら誰かの重さに聞こえる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "この妖怪、もしSCP財団が知ったら間違いなく収容対象だな。"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズも。毎日投稿中、1万人目標でチャンネル登録を応援してね。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ミナモ調査員",
+      "text": "これ知ってた？天井下がり、好きな人多いよね。けれど江戸後期の妖怪絵巻では、天井から何かが垂れ、人の頭上へ迫る怪異として描かれているんだ。今の部屋でも、夜に一度だけ上で鳴る音を思い出してほしい。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "妖怪ウォッチで見ると、天井からぬっと現れる感じが楽しいよね。あいつ好きなんだよね。でも元ネタが町家の天井裏だと聞くと、ゲームを遊んだあと寝る前に部屋の上まで気になってしまうよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ゲームだとこう描かれてるけど、元の伝承では、可愛い驚かせ役ではない。灯りの弱い夜、頭上の板が低くなり、見えないものが近づく感覚そのものを、妖怪の形にした可能性が高いんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。それって天井が本当に落ちる話なの、それとも音が鳴るだけの話なの？学校の体育館みたいに高い天井ならまだしも、布団のすぐ上なら一歩も逃げられない気がするよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "最初に答えを置くと、天井下がりは町家の天井裏で起きる音、影、圧迫感を重ねて読める妖怪なんだ。伝承が建築の原因を断定したわけではないが、町家の造りを見ると怖さの輪郭が見えてくる。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸から明治にかけての町家は、間口が狭く奥へ深い形が多く、京都では『うなぎの寝床』とも呼ばれた。通りから奥庭まで細長く続く家では、昼の光が届かない部屋も珍しくなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "細長い家なら、玄関の近くで鳴った音が奥の部屋まで追いかけてくるみたいに聞こえそうだね。イヤホンで方向が分からないゲームの足音みたいで、どこにいるのか判断できないのが怖い。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "今日は、あの妖怪の正体を町家の構造から追うんだ。梁、天井板、屋根裏、行灯の影という四つの要素を並べると、なぜ人がただの物音を怪異と感じたのか、かなり具体的に見えてくる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "まず資料の話をしよう。天井下がりは、鳥山石燕の『画図百鬼夜行』ほど詳細な解説を残す妖怪ではないが、江戸期の妖怪画には頭上から垂れ下がる怪異の姿が複数の形で現れる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "細かい設定が最初から決まっていたボスキャラじゃなくて、怖かった体験が先にあって姿は後から付いた感じなのかな。名前だけでも、部屋全体が押し潰してくるみたいで嫌だよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "天井下がりという名は、天井が低くなったように感じる現象をそのまま言葉にしたものだろう。人は暗闇で距離を測りにくくなるため、同じ高さの板でも、夜には昼より近く、重く見えることがある。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "町家の屋根を支える梁は、太い木材を組み合わせて作られる。木は鉄のように完全には止まらず、湿気や気温の差でわずかに動く。夜に気温が下がると、梁や板がきしむ音が出ることがあるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "木が動くって聞くと安心しそうなのに、音だけ聞くと逆なんだね。昼なら棚のきしみで終わるのに、午前二時みたいな時間だと、誰かが屋根裏を歩いたって思ってしまいそう。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここで第二の怖さが出る。町家の天井裏は、住む人が毎日確認する場所ではない。押し入れの上、梁の影、屋根の下にある狭い空間は、存在は分かるのに中身を見られない場所だった。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "人の目が届かない場所では、音だけが情報になる。板の上で鼠が一匹走る音でも、真下の人には足が何本あるのか、どこへ向かったのか、何キログラムの重さなのかさえ分からない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "それ、オンラインゲームで姿の見えない敵だけ足音がする時と同じだ。位置が読めないと、実際より強そうに感じるもんね。天井裏ならマップもなくて、ずっと上を取られている感じがする。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、天井下がりが誰を襲ったか、何時に出たか、どんな声を出したかまで整った記録は多くない。だからこそ聞き手は、自分の寝室や祖父母の家の天井を舞台にしてしまうんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "資料が少ない妖怪は、何でも自由に言ってよい妖怪ではない。確実に言えるのは、江戸期の妖怪表現に頭上から迫る怪異があり、天井下がりという名が圧迫感を強く伝えているという点までなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "じゃあ、町家の梁が鳴ったから天井下がりだって、昔の人が公式に説明した記録はないんだね。そこは分けて考えないと、伝承を勝手に作り直すことになってしまうんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "その通り。町家の構造と結びつけるのは、建築の知識と伝承の印象を比較した推測だ。一方で、古い家の天井裏が音を生みやすく、暗闇が距離感を狂わせること自体は、現実の仕組みとして確認できる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "京町家には、通り庭と呼ばれる土間状の通路や、火袋と呼ばれる吹き抜けがある。火袋は採光と換気のための空間だが、夜になれば上方だけが深く暗くなり、音の行き先を見失わせる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "吹き抜けって明るい昼の写真ではおしゃれに見えるのに、行灯一つだけなら上が穴みたいになるのか。上から何かが下りるって想像が、急に本物っぽく聞こえてきたよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "行灯の炎は、電球のように一定ではなく揺れる。炎が少し傾くだけで、梁の影は壁や天井を大きく移動する。固定された板が動いたように見える錯覚は、夜の家では十分に起こりうるんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "しかも町家は、表の商いの空間、家族の居間、台所、奥の座敷で天井の仕上げが違うことがある。部屋を一つ移るだけで高さも反響も変わり、音の正体がさらに読みにくくなった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "同じ家なのに部屋ごとに音の聞こえ方が変わるなら、誰かが移動しているみたいに感じるよね。実際は風や木の音でも、天井裏の何かがこちらを追っているって思いそうだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "江戸時代の家には、現代の住宅より隙間風が入りやすい造りもあった。風が瓦や板のすき間を通れば、低いうなりや擦れる音になる。音源が見えないほど、人は意図を感じ取りやすくなる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "雨の日には、屋根を打つ粒の数だけ音が増える。最初は一定だった雨音の中に、一度だけ重い響きが混ざると、人はその一度を覚えてしまう。天井下がりは、そういう例外の一音に近い。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "毎秒ずっと鳴っている雨音より、一回だけ『どん』って鳴る音のほうが怖いよね。通知音が一度だけ鳴ってスマホを見ても何もない時みたいに、理由が分からないまま待つことになる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "妖怪の怖さは、姿を見た瞬間だけではない。次も鳴るかもしれないと待つ数十秒、布団の中で上を見られない数分、眠りに落ちる直前の沈黙までが、怪異の時間として伸びていくんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "好きな妖怪ほど、元ネタが怖い。ゲームの天井下がりは、見つけた時に少し笑えるキャラクターへ整えられている。しかし原典側へ降りると、笑いの前に『上にいるかもしれない』不安が置かれている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "ゲームなら画面の中だから、出てきても操作して対処できるよね。でも町家の寝床ではコントローラーもメニューもない。逃げる先も天井の下だから、ずっと相手の範囲内ってことになる。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ここは区別しておく。妖怪ウォッチの天井下がりの性格や能力は、株式会社レベルファイブの作品内設定だ。江戸期の絵巻や民俗資料が、そのまま同じ性格を記したわけではないんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "また、ファンの間では天井裏に隠れて人を観察する妖怪だという読み方も見かける。それはキャラクターから広がった非公式考察であり、伝承の事実として断定しないことが大切になる。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "公式のゲーム、昔の絵巻、ファンの考察を三つに分けるんだね。同じ名前でも情報の出どころが違うなら、混ぜた瞬間に本当らしく見える作り話になってしまうもんね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "大正期の妖怪研究では、藤沢衛彦のように各地の怪談や民間伝承を集める動きがあった。天井下がりのような小さな怪異は、全国で同じ姿が固定されたというより、暮らしの不安と共に揺れて残った。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だから天井下がりの正体を、鼠一匹、風一陣、梁一本に決めるのは乱暴なんだ。複数の音と影が重なり、見る人の想像が最後の一枚を足した時、怪異として完成したと考えるほうが自然だ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "一つの犯人を探す推理じゃなくて、家じゅうの小さな変化が合体して妖怪になった感じなんだね。だから夜ごとに違う音でも、同じ天井下がりだと思えてしまうのか。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "古い町家では、屋根裏に修理用の木材や古道具を置くこともあった。乾燥や振動で物がわずかにずれれば、真下では誰かが重い物を引いたような音に聞こえる場合がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "天井板の向こうには、人が立てないほど低い場所もある。その狭さが逆に不気味なんだ。人間なら入りにくいのに、音だけは確かにする。だから聞く側は、人間ではないものを想像してしまう。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "人が入れないくらい狭い場所から足音みたいな音がしたら、もう動物か妖怪しか候補がない気がするよ。しかも見に行くには梯子や道具が必要で、すぐ確認できないのが嫌だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "町家の天井は、生活を守る屋根の内側でありながら、住人にとって完全には自分の領域ではなかった。床下と同じで、家の一部なのに日常から切り離されている。この半端な距離が怪談を育てる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "現代の部屋でも、エアコンの配管音や集合住宅の上階の音で、原因が遠く感じることがある。町家ではその感覚が木、瓦、風、雨、動物の音に広がり、より濃い暗闇の中で起きていた。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "今でも上の階の椅子を引く音が、自分の天井から鳴っているように聞こえる時があるよね。それが木の家で、電気も少なくて、夜がもっと暗かったら怖さは何倍にもなりそう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もし自宅で天井の音が繰り返すなら、怪異と決める前に安全確認をしてほしい。雨漏り、害獣、建材の傷みなどは生活上の問題になりうるから、家族や管理者に伝えることが先なんだ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "ただし、異常が見つからなかった夜にも、音への怖さまで消えるとは限らない。理屈が答えても、暗い部屋で耳だけが先に反応する。その理屈の届かない一瞬に、天井下がりはまだ立っている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "原因が分かっても、午前二時に一回だけ鳴ったら怖いままなんだね。『梁が鳴っただけ』って言葉を思い出すより先に、天井が少し下がった気がして布団をかぶりそうだよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "元の伝承では、天井下がりの結末までを書いた決定的な記録は見つかりにくい。退治されたのか、朝になれば消えたのか、誰かが確かめたのか。そこから先は、記録が途切れている。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "だからこの妖怪は、答えがないから怖いのではない。確認できない天井裏を前にして、人が自分で答えを作ってしまうから怖いんだ。町家の造りは、その想像が入り込む余白をいくつも持っていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "天井下がりって、上から落ちてくる妖怪というより、見えない場所を見ようとした時に生まれる妖怪なのかもね。そう考えると、ゲームのあの姿も急に静かで不気味に見えてくるよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "次回は、一反木綿を入口に、なぜ布が空を飛び人へまとわりつく怪異になったのかを追うんだ。鹿児島に残る伝承と、妖怪ウォッチで親しまれた姿の落差も、静かに見比べていこう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "布なら押し入れに入っているだけで安心なのに、伝承では外を飛ぶんだね。今日の天井下がりの次に聞くには、また眠る前の部屋を見回してしまいそうなテーマだよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズを追ってほしい。チャンネル登録者一万人を目標に毎日投稿中だから、町家の影に残る妖怪たちも一緒に調べていこう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "そして今夜、天井で一度だけ音がしても、すぐ上を見続けないことだ。家のきしみかもしれないし、風かもしれない。でも暗闇の中では、そのどちらにも名前のない気配が混ざる。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ケンタ",
+      "text": "え、待って。音が止んだあとに静かになるほど、次の音を待ってしまうんじゃないの？その時、昼には見慣れた天井が少し低く見えたら、僕はもう布団から出られないよ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ミナモ調査員",
+      "text": "もし眠る部屋で頭上の気配を感じても、目を合わせる相手は見えないかもしれない。町家の暗がりで生まれた天井下がりは、今も見上げる側の想像から、ゆっくり近づいてくるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "天井の音",
+      "誰がいる"
+    ],
+    "hook_caption": "天井が降りる",
+    "subtitle": "町家の暗い天井裏",
+    "tagline": "物音を妖怪にした理由"
+  },
+  "channel_id": "yokai-watch",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "scp-lab",
+      "bridge_line": "この妖怪、もしSCP財団が知ったら間違いなく収容対象だな。",
+      "matched_topic": "怪異"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "よかったら高評価を置いて、元ネタが怖い妖怪シリーズも。毎日投稿中、1万人目標でチ",
+          "reason": "1行53字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 18,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 3,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 3
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.534,
+      "similar_to": "影女の正体はなぜ障子だけに映るのか",
+      "template_issues": [
+        "直近10本中5本で似た導入パターン使用 — テンプレ感が強く独自性低下"
+      ],
+      "template_score": 25,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "enhanced_title": "天井下がりはなぜ町家に出るのか 正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for yokai-watch"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 72,
+    "passed": true,
+    "reasons": [
+      "感情ワード['なぜ', '正体'](+20)",
+      "好奇心ギャップ['なぜ', '正体'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "original_title": "天井下がりはなぜ町家に出るのか 正体",
+  "cross_channel_keywords": {
+    "ok": true,
+    "blocked_keyword": null,
+    "rejected_title": "天井下がりはなぜ町家に出るのか 正体"
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

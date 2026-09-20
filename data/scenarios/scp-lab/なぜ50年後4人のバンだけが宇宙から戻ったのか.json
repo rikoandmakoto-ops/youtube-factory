@@ -1,0 +1,497 @@
+{
+  "title": "なぜ50年後、4人のバンだけが宇宙から戻ったのか？",
+  "theme": {
+    "title": "SCP-1958「小さな旅」",
+    "angle": "宇宙を目指した若者たちのバンが50年後に発見された。車内に残された日記を最後のページまで読む記録型。終末×切なさのフック",
+    "theme_gate": {
+      "replaced": "SCP-4666 訪問が確認された家だけ記録が2日ずれる",
+      "reason": "既存『SCP-4666「ユールマン」— 冬至の夜、北緯』に類似(1.00)"
+    }
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "このSCP、実は50年後も収容されていない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、若者4人のバンだけが50年後に戻ったのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "日記の正体は、宇宙へ着いた4人が残した帰還不能の記録だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "50年が一晩なら、校舎ひとつ分の時間が外で消えたみたいだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後の頁には、まだ地球が見えるとだけある。記録はここで途切れている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "小さな旅の続きは収容違反ファイルシリーズへ。高評価を残し、1万人目標で毎日投稿中のチャンネル登録を頼む。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "50年後に戻ったバンの後部座席には、あなたが昨夜書いたような日記が置かれていた。だが運転席にいた若者4人は、帰還者名簿のどこにもいない。SCP-1958「小さな旅」の発見記録だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、50年間いなくなった車が、ただ道路へ戻っただけなのか。中にいた4人が消えたなら、見つかった日記を最後まで読むのはまずくないか。ページをめくるたび、誰かの帰り道まで開く気がする。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "車内時計は出発から6時間12分しか進んでいなかった。外の暦だけが50年を通過している。あなたの部屋の時計だけ止まり、窓の外だけ半世紀が過ぎたような隔たりだ。時計の針は、何も知らない顔で止まっていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "発見されたバンは錆びていなかった。燃料も減っていなかった。なのに登録番号は、50年前に行方不明となった若者たちの車両記録と完全に一致していたという記録が残っている。新品の車が、古い失踪届だけを連れて戻った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って。外では50年なのに、車の中だけ出発の夜のままなら、4人はどこへ行ったんだ。帰ったのはバンだけで、旅そのものは終わっていないのか。家に届くはずのない荷物だけが、先に玄関へ着いたみたいだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "問題は、日記の最初の頁が普通の遠出の記録だったことだ。4人は夜明け前に集まり、宇宙へ行くと書いた。冗談のような一文だが、以後の頁は誰にも冗談として読めなかった。最初の笑い声だけが、記録から先に消えている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "出発時刻は午前2時17分。目的地欄には空白があり、助手席の日記には「星の近くまで行ける気がする」とだけ記されていた。地図も航路もなく、彼らは道路を走り出した。校外学習の集合時刻より早い、誰にも見送られない出発だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "宇宙を目指すのに、普通のバンで道路を走ったのか。学校帰りに意味もなく遠回りする感覚で、空へ行けると思っていたなら、読んでいるだけで足元が冷える。道路の先に空があると、本気で信じた4人だったのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の12頁には給油、眠気、ラジオ、夜食の話しかない。どこにでもある若者4人の旅だった。異常は、日記の13頁目に短い一文として混ざっている。「道路が下にある」。そこだけ筆圧が深く、紙の裏側まで文字が抜けていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "道路が下にあるって、坂を上ったという意味じゃないのか。文字どおりならバンは地面から離れたことになる。…ねえ、これ本当に大丈夫なの？　13頁目だけなら、読み飛ばせば助かるような気がしてしまう。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次の頁では、地上の灯りが小さくなったと記される。運転手は速度計が動かないと書き、後部座席の1人は窓の外を見ないよう皆に頼んだ。そこから筆跡が急に乱れていく。車酔いの文字ではない。何かを見た者の、逃げ場のない震えだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし、ここからが本題だ。4人が異常へ巻き込まれたのは空へ上がった時ではない。日記の途中で、彼らは地球を見失ったのではなく、地球のほうが先に消えたと書いている。帰る場所のほうが画面から消える、保存前のゲームデータのような記述だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "嘘だろ。窓の外から地球が消えたなら、帰る場所も消えたことになる。車内に残った人間が、どこへ戻ればいいか分からなくなるのは、終電を逃す話とは比べものにならない。家の住所そのものが、空白になるようなものだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "日記には「青い場所が遠くなった」とある。続く頁には「後ろの席が増えた気がする」とある。しかし車内の座席は出発時から4席だけで、発見時にも余分な乗員の痕跡は確認されなかった。誰も座れない5席目だけが、文章の中に残った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の回収班は、バンの内部に残った4冊のノートを照合した。筆跡は4人分だったが、最後の9頁だけは誰の筆跡にも一致しなかった。記録は同じ座席から見つかっている。4人が使ったはずのペンの跡なのに、書いた人間だけが名簿から外れている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "最後の9頁を書いたのは、4人の誰でもないのか。なら車にいたのは最初から4人だけじゃなかったのか。それとも、旅の途中で誰かの文字だけが別のものに変わったのか。名前を失った人間が、最後に残すのは字だけなのかもしれない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "日記を読む職員には、声に出して読まないという指示が出された。末尾付近の文章を音読した職員3名が、その夜に同じ夢を報告したためだ。夢の内容は[DATA EXPUNGED]されている。だが3名全員の靴底から、乾いた砂だけが検出された。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "回収から14日後、保管室の天井にタイヤ痕のような黒い線が現れた。線は入口から日記の保管棚へ伸び、そこで途切れた。監視映像には、線が生じる瞬間だけが記録されていない。廊下を走るはずのない車が、天井を選んだ痕跡だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "天井にタイヤ痕って、バンがもう一度走ったみたいじゃないか。保管棚の中には日記しかないのに、そこへ向かう道だけができたなら、次に動くのは紙のほうかもしれない。頁を閉じても、旅先は閉じないということか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで財団は、起きた出来事に一つだけ分類を与えた。SCP-1958はEuclidとして扱われる。完全には閉じ込められないが、放置すれば再び移動を始める危険がある、という扱いだ。危険なのはバンではなく、戻りたいという意思そのものかもしれない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容室にはバン本体と4冊の日記が分けて保管された。両者の距離は最低30メートル。理由は、同じ室内へ戻した試験で日記の頁数が1頁増えたためだという記録が残っている。たった30メートルが、50年より遠い隔たりとして維持されている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "増えた1頁には何が書いてあった。50年後に見つかった時点で終わっていたはずの日記が、財団の中で続きを書き始めたなら、4人はまだあの車にいることになる。ページ番号が増えるほど、帰還者の席も増えていく気がする。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "増えた頁には日時がない。短く、「窓を開けるな」とだけ書かれていた。バンは密閉され、窓も固定されている。それでも翌朝、後部座席の窓だけに内側からの曇りが残った。外気温は零下2度で、室内には誰も入っていなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "車内の空気は50年前のままだと記録された。だが座席の布には、誰かが長時間座っていたような浅い沈みが4か所ある。回収時の映像には、その沈みが映っていなかった。空の席が、夜ごとに誰かの体温だけを覚えているような状態だ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "回収後に座席が沈んだなら、空のバンに誰かが戻ってきたことになる。しかも4人分。見えない乗客が、保管室でずっと地球へ着くのを待っているみたいで怖い。ドアの向こうに家が見えるまで、座り続けているのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "日記の中盤には、4人が宇宙へ着いたと信じた場面がある。窓の外は暗く、星は近いと書かれた。だが運転手だけは、星が近づいているのではなく、バンを追っていると記している。星の数は最初の7つから、最後には数えられないほど増えた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その後、ラジオから自分たちの会話が遅れて聞こえ始めた。誰かが言葉を発するたび、数分後に同じ声がラジオから返る。4人は電源を抜いたが、声だけは止まらなかった。返ってきた声は、必ず一語だけ余計な言葉を付け足していた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "自分の声が遅れて返るだけでも嫌なのに、抜いたラジオから聞こえるのか。ゲームで遅延した自分の操作を見るよりずっと悪い。次に何を言うか、外側の何かに渡してしまう。しかも余計な一語があるなら、もう同じ声ではない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "日記には、4人のうち1人が「帰ろう」と言った直後から、文章の主語が消える。名前は書かれなくなり、「誰か」「後ろの人」「運転しているもの」といった語だけが残るようになった。帰宅という言葉を使った瞬間に、誰が帰るのか分からなくなった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団でも、まだ説明できていない。旅の途中で4人の人数が変化したのか、日記が書き手を削ったのか、あるいは最初から別の存在が同行していたのか。確定した記録は残されていない。分からないまま保管することだけが、唯一の安全策として残った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "日記が名前を消すなら、読む側の名前まで消えることはないのか。保管職員が音読を禁じられた理由も、ただ怖がっていたからではなさそうだ。文字を読んだ順に席が増えるのか。自分の名前が報告書の所属欄から消える場面を想像してしまう。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "記録上、日記を複写した職員は7名いた。そのうち2名は、複写物の余白に自分では書いた覚えのない道路図を見つけた。図は全員異なり、どの地図にも地球上の地名はなかった。7枚の紙は、7つの帰り道を示しながら、どこにも出口を示さなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "4人が残した最後の通常筆跡には、燃料が尽きないことへの不安が書かれている。走っても減らない燃料は救いではなかった。止まれない旅に変わった時、それは帰還不能の証明になった。残量表示が満タンのままなら、休憩所も終点も永久に来ない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "燃料切れを心配していたのに、減らないほうが絶望になるのか。学校の帰り道が永遠に終わらないなら、最初は助かると思っても、家の明かりを二度と見られないと気づく。満タンの表示は、助かる数字ではなく閉じ込める数字になる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後から3頁目には、「窓の外に地球がある」と書かれている。ただし、その地球は雲の形も海岸線も違っていた。4人は帰れたと喜びかけ、直後に誰もドアへ触れなくなった。見慣れた校舎に似ていても、教室の窓が一つ多ければ入れないのと同じだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最後から2頁目には、運転手の文字で「家が見える」とある。住所は書かれていない。財団が遺族へ確認したところ、4人の家は全て50年前のままではなく、既に別の建物へ変わっていた。彼らが見た家は、時間の外側にだけ残った古い家だった可能性がある。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "50年後の地球なら家が変わっていて当然だ。でも日記の中の彼らは、まだ出発した夜の家を見たのかもしれない。帰れそうな景色ほど、ドアを開けたら終わる気がする。自宅のはずなのに、チャイムを押す相手が50年前のままなら入れない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最終頁には、たった一文だけが残る。「まだ地球が見える」。誰の文字かは判別できない。発見時のインクは乾いておらず、50年間閉ざされていた車内で書かれたばかりのようだった。最後の言葉は、到着の報告ではない。遠ざかる地球を見失わないための確認だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで日記は終わる。だが財団が頁を数えるたび、合計は一定しない。初回は83頁、翌月は84頁、半年後の監査では82頁だった。どの頁が消え、どの頁が増えたかは[REDACTED]。数字だけが変わり、失われた一日が帳尻を合わせている。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "聞かなきゃよかった。最後の一文が終わりじゃなくて、いまも書かれている途中なら、バンは発見されたんじゃない。50年かけて、こちらへ近づいてきただけなのかもしれない。次の頁に書かれる場所が、保管室ではなく自分の窓の前ならどうする。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "収容室では毎日午前2時17分に監視を確認する。バンのヘッドライトが一瞬だけ点灯するからだ。電源系統は外されている。それでも光は前方ではなく、車内の後部座席を照らしている。誰かを乗せるためではなく、そこにいるものを確かめる光だ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "警備員は窓の外を見ない。ドアノブにも触れない。もし座席が4つより多く沈んで見えても、人数を数えない。数えた職員の報告書は、翌朝には所属欄だけが空白になるという。名簿に空いた欄は、失踪者ではなく乗車済みの印かもしれない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "クロ",
+      "text": "人数を数えないって、そこに誰かがいる前提じゃないか。4人の旅が終わっていないなら、空いた席はまだ残っている。次の乗客を乗せるための席だったら、近づきたくない。車の外にいる自分のほうが、いつの間にか遅れている側になる。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP-1958を見かけても、決して近づくな。古いバンの窓に自分の部屋や、もうないはずの家が映っても、ドアを開けてはいけない。中の誰かは、ずっと地球を探している。あなたの家が見えたと言われても、それはあなたを迎えに来た意味ではない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "原典はSCP財団Wiki、SCP-1958「A Small Trip」。本動画はCC BY-SA 3.0に基づく紹介であり、財団記録の不明部分は不明のまま残す。答えを埋めるほど、この旅は軽くならない。空白の頁を都合よく埋めた瞬間、そこへ書かれるのは読む側の名前になる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "クロ",
+      "text": "50年後に戻ったのが車だけなら、4人はまだ外にいるのか。それとも保管室の座席に、もう帰ってきているのか。どちらでも、最後の日記を読む側が安全とは言えない。あの最終頁の「まだ」は、4人の言葉ではなく次の乗客への合図にも聞こえる。",
+      "expression": "sad",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "次回はSCP-3008「無限のIKEA」に残された、生還者たちの夜の記録を読む。出口がない建物で、何日目から人間が人間の声を信用しなくなるのか。その報告も軽い話ではない。店内放送が閉店を告げても、外へ出た者は1人も確認されていない。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書に残された最後の頁が気になったなら、高評価を残してほしい。収容違反ファイルシリーズには、帰還した物だけが残る別の記録も置かれている。バンのように、持ち主を失っても帰り道だけ覚えている異常は、これだけではない。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "シロ",
+      "text": "チャンネル登録者1万人を目標に毎日投稿中だ。応援として登録を頼む。ただし通知が届く深夜、あなたの窓の外に古いバンの灯りが見えても、決して近づくな。エンジン音が聞こえなくても、後部座席の窓だけが曇っていたなら、もう旅は始まっている。",
+      "expression": "normal",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "50年後のバン",
+      "最後の日記"
+    ],
+    "hook_caption": "帰還してない",
+    "subtitle": "宇宙を目指した若者たち",
+    "tagline": "残された最後の頁"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "小さな旅の続きは収容違反ファイルシリーズへ。高評価を残し、1万人目標で毎日投稿中",
+          "reason": "1行52字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 20,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 4,
+        "emotional_impact": 2,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.592,
+      "similar_to": "SCP-███ 24時間先を映す監視録",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-1958「小さな旅」50年後の日記の真相"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-1958「小さな旅」50年後の日記の真相",
+    "attempts": 1
+  },
+  "original_title": "SCP-1958「小さな旅」50年後の日記の真相",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

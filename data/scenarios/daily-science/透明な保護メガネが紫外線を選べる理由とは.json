@@ -1,0 +1,581 @@
+{
+  "title": "透明な保護メガネが紫外線を選べる理由とは？",
+  "theme": {
+    "title": "ハイテク保護メガネの科学",
+    "angle": "新しい技術が私たちの健康をどう守るかを解説"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってました？保護メガネは紫外線を99%止める物があります。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、99%も？透明なレンズが光を選べるなんて不思議だね。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "UV400は400nmまでの紫外線を減らす目安なんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホの通知を選別する感じだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも傷と曇りにも備え、目へ届く負担を減らすんです。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "表示を見て選んでみて。身の回りのモノの科学シリーズも、高評価とチャンネル登録で1万人目標の毎日投稿を応援よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？あなたが屋外や作業で使う保護メガネには、紫外線を約99%減らす表示の物があります。透明な一枚なのに、目へ届く光と飛来物を選んで遠ざける技術が入っているんです。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、99%も止めるの？見た目は普通の透明レンズなのに、太陽の光だけを見分けているみたいだね。朝の散歩やベランダ作業でも、目の前の一枚を見る目が変わりそうだよ。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "風の強い日に自転車へ乗って、目が乾いたり、砂ぼこりで涙が出たりしたことはありませんか。実はこれ、今あなたの体でも起きています。保護メガネは、その小さな負担を外側から受け持つ道具です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "風と砂ぼこりだけでも目はかなり疲れるよね。しかも日差しが強いと、まぶしくて目を細める時間も増えるから、透明な盾がどこまで助けるのか気になってきたよ。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日は、レンズが何を止め、何を通し、新しい技術が健康をどう守ろうとしているかを見ていきます。数字や表示の見方まで知れば、店頭の一枚を自分の目的から選びやすくなります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！保護メガネは工場だけの物と思っていたけれど、園芸や自転車でも関係するなら、家にある物の使い方まで変わりそうだね。",
+      "expression": "happy",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "目はカメラのレンズのように、傷ついた部分を簡単に取り替えられません。だから保護メガネは、物が届く前に透明な壁を一枚置き、最初の衝撃を目の代わりに受け止める考え方です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "カメラならレンズキャップを付けられるけれど、歩いたり作業したりする目は、見ながら守らなきゃいけないんだね。透明で視界を保つこと自体が、大切な性能なんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "木工の木片、草刈りの小石、園芸用の土などは、ほんの数ミリでも勢いが付くと目には大きな負担です。レンズ面が先に受けることで、角膜へ直接届く機会を減らすことを目指します。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "砂粒なら小さいから平気と思いがちだけど、目に入ればまばたきのたびにこすれそうだよね。小さな物ほど見えにくいから、先回りして防ぐ意味がよく分かるよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、正面のレンズが硬いだけでは十分でない場面もあります。横から回り込む粉じんや液体には、顔に沿う形や側面を覆う設計が役立ち、すき間を通る量を減らしやすくなります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "正面の盾だけではなく、横風を受ける窓にも見えるね。自転車で走ると風が横から入るから、レンズの大きさや顔との距離まで、使う場所で意味が変わりそうだよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "保護メガネは万能ではありません。溶接の強い光、薬品の飛まつ、レーザーのように危険の種類が違う時は、一般的な透明レンズではなく、用途専用の保護具を選ぶ必要があります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、透明なら何でも守れるわけじゃないんだ。雨具が雨には強くても火には使えないのと同じで、目を守る道具も相手に合わせて選ばないといけないんだね。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで大事なのは、目が自分でも守ろうとしていることです。まばたきと涙は表面を洗い流しますが、風や粉じんが多い場所では追いつきにくく、外側のレンズが助っ人になります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "まばたきは毎日何千回もしているのに、風が強い日は目が乾きやすいもんね。体の仕組みに全部任せず、外にもう一枚の守りを足す発想なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも、最近の保護メガネは飛来物だけでなく、見えない紫外線にも備えます。屋外用で見るUV400は、400nmまでの紫外線を通しにくくする性能の目安として使われる表示です。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "UV400の400は、強さの順位ではなくnmという長さの数字なんだね。数字の意味が分かると、ただ格好よさそうな表示ではなく、選ぶための手がかりに見えてくるよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "紫外線は目で色として見えにくいため、明るさだけでは防げているか判断しにくい光です。そこで材料や表面の工夫で紫外線を減らし、景色の見え方はなるべく保とうとする製品があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "黒いレンズほど強そうに見えるけれど、色の濃さだけでは決められないんだね。見えない光には、見える色より表示を確かめる方が、ずっと確実な方法なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "たとえるなら透明レンズは、景色を見せる窓と、通したくない物を止める網戸を重ねたような存在です。外は見えるのに、目へ入る負担だけを少しずつ減らす役目があります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、窓ガラスも透明なのに、外の風や雨はそのまま部屋へ通さないよね。保護メガネも目のすぐ前に作る、小さな窓のように考えると分かりやすいよ。",
+      "expression": "happy",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここからが本題です。レンズは光を止めるだけでなく、目の前へ飛んでくる物を受けるため、軽さと強さの両方が求められます。この両立に使われる代表例がポリカーボネートです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ポリカーボネートって聞くと難しそうだけど、軽くて割れにくい透明な材料なんだね。水筒のふたや家電の部品のように、毎日触る物にも近い性格がありそうだよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ポリカーボネートは、同じ厚さの一般的なガラスと比べて衝撃に強い性質があり、保護具で使われる理由になります。ただし製品ごとの試験や厚みは違うので、用途表示の確認は欠かせません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "材料名だけで大丈夫と決めるのではなく、完成した製品として何の作業に対応するかを見るんだね。料理で同じ鍋でも火加減が違うように、使い方までセットで考えるわけだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "レンズの表面は、使ううちに細かな傷が増えます。傷が多いと光がいろいろな向きへ散り、街灯や作業灯がにじんで見えやすくなるため、傷つきにくい薄い層を重ねる製品もあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "夜の信号や街灯が、傷のあるレンズだと少し広がって見えることがあるよね。小さな傷でも、目が受け取る光の形を変えてしまうなんて、透明な物ほど繊細だよ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここ、面白いのが曇り対策です。息や汗でレンズ内側に水滴が付くと、守っていても視界が白くぼやけます。そこで水滴を粒のまま残さず、薄く広げる処理が使われることがあります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "マスクを付けた冬にレンズが曇る、あの感じだね。水滴を完全に消すより、細かく広げて見えにくくするなら、窓の結露を薄くならすような工夫だよ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "水滴が丸い粒で残ると、レンズ上に小さな虫眼鏡が何百個も並ぶように光を乱します。均一な薄い膜へ近づけると、輪郭が保ちやすくなり、手で拭く回数も減らせます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "何度も服のすそで拭けば、レンズに細かな傷が付きそうだもんね。曇りにくさは快適さだけではなく、透明な盾を長く使うための工夫でもあるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "さらに、周囲の明るさで濃さが変わるレンズもあります。屋外では光を減らし、室内では明るく戻ることで、明るい場所と暗い場所を行き来する時の目の負担を和らげようとします。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "外から建物へ入った直後、数秒だけ足元が見えにくいことがあるよね。レンズ側も光に合わせて変われば、目が明暗へ慣れる時間を手伝ってくれそうだよ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし濃さが変わる速さは、気温や製品ごとに違います。車のフロントガラスは紫外線を減らす場合があるため、屋外と同じように車内で反応するとは限らない点に注意が必要です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、車内では変化が小さい場合があるの？便利な機能でも、使う場所まで想像しないと期待と違うことがあるんだね。説明書の一行にも理由があるんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "光を減らせば、いつでも目に良いという単純な話でもありません。暗すぎるレンズでは、段差や工具の目盛りが見えにくくなるので、見やすさと保護の釣り合いを取ることが大切です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "暗いレンズなら強いと思っていたけれど、足元が見えなければ別の困りごとが出るんだね。守るためには、見えること自体も絶対に外せない条件なんだ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "保護メガネの歴史では、19世紀後半の鉱山や工場で、粉じんや火花から働く人の目を守る工夫が広がりました。最初から今の軽い形だったわけではなく、現場の困りごとが形を変えてきました。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "昔の現場では重いゴーグルもあっただろうし、毎日使える軽さは大きな進歩だね。道具の形が変わった背景には、目を守りながら働きたい人の積み重ねがあるんだ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "1970年には米国で職場の安全に関する法律が整い、保護具を選ぶ基準づくりも進みました。規格の文字は少し堅く見えても、試験を通じて守れる範囲を共有するための共通言語です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "規格の記号は難しい暗号ではなく、どんな試験に向けた物かを伝える札みたいなんだね。買う人にとっても、見た目以外の比較材料が増えるわけだ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "日本ではJIS、海外製品ではANSIなどの表示を見かけることがあります。ただし記号だけを見て決めず、販売元が示す対象作業、交換時期、取扱説明書を一緒に確認してください。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "草刈り、木工、薬品を扱う作業では、同じ保護メガネという名前でも必要な守り方が違うんだね。ラベルを読むことまで含めて、道具を使う技術なんだ。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "最近は、柔らかな鼻当て、角度を変えられるつる、顔の幅へ合わせる調整機能も増えています。すき間を減らしてずれにくくすることが、レンズの性能を実際の保護へつなぐ最後の一歩です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "高性能でも下を向くたびにずれたら、目を守る位置から外れてしまうよね。靴ひもを結び直すのと同じで、体に合う調整が安全を支えるんだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "一方で、青色光を減らすレンズについては、長時間の画面作業で誰の疲れにも同じように役立つか、科学でもまだ結論が出ていません。広告の言葉だけで、効果を大きく決めつけないことも必要です。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "青色光を減らせば全部解決と思いがちだけど、そこははっきり決まっていないんだね。分からないことを分からないまま伝える方が、選ぶ時には信頼できるよ。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "画面を見る時の疲れには、まばたきが減ること、近い距離を見続けること、部屋の明るさなども関わります。レンズだけに任せず、20分ごとに遠くを見るなど、使い方も整えるのが現実的です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "20分ごとに少し遠くを見るなら、信号待ちや飲み物を取る時にもできそうだね。道具は助っ人で、目の使い方そのものを代わりにしてくれるわけではないんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "選ぶ時は、最初に何から目を守りたいかを一つ決めてみてください。飛来物なら耐衝撃性、屋外の光なら紫外線表示、液体なら顔への密着性というように、目的から逆算すると迷いにくくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "棚に並ぶ物を値段や色だけで比べるより、草刈りなのか自転車なのかを先に決めるんだね。それなら必要な表示も、レンズの形も、自然に絞り込めそうだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "次に実際に掛けて、横を向く、下を見る、まばたきをするという3つを試してください。まつげや頬に強く当たらず、視界の中心がゆがまない物は、続けて使いやすい候補になります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "店頭で30秒試すだけでも、鼻が痛くなるか、耳に負担があるか分かりそうだね。試着は見た目のためだけではなく、守る道具を外さず使い続けるためなんだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "レンズを拭く前には、砂ぼこりが付いていないか確認しましょう。水で流すか、対応したクリーナーと柔らかい布を使うと、砂を紙やすりのようにこすり付ける失敗を減らせます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "服のすそでさっと拭きたくなるけれど、目に見えない砂が残っていたら傷の原因になるんだね。手入れもまた、透明な盾の見え方を守る作業なんだ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "傷、ひび、ゆがみが目立つ時は、無理に使い続けず交換を考えてください。レンズの状態を月に1回見るだけでも、光のにじみや見えにくさへ早く気付き、日常の作業を続けやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！レンズの傷は見た目だけの問題ではなく、光の散り方や見落としにも関係するから、月に1回の点検にもちゃんと意味があるんだね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "保護メガネは透明だから、働きが見えにくい道具です。それでも飛来物を受け、紫外線を減らし、曇りを抑え、あなたの目が景色や手元を見続けられる時間を支えてくれます。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "一枚のレンズに、見せる役目と守る役目が同時に入っているんだね。景色を映す窓と、外から守る盾を重ねたような道具だと考えると、ぐっと身近に感じるよ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "次回は、眠りに落ちる直前に体が急に動くことがあるのはなぜか、脳と筋肉の切り替わりを身近な感覚から見ていきます。寝る前の数秒に起きる不思議を一緒にほどきましょう。",
+      "expression": "think",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "寝る前に体が動く感覚、気になっていたから楽しみだよ。今日の透明レンズみたいに、見えないところで体を助ける仕組みも、知ると毎日の感じ方が変わりそうだね。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "外へ出る前や作業の前に、保護メガネの用途表示と傷を30秒だけ見てみてください。その小さな確認が、あなたの目へ届く光やほこりの負担を減らす、今日からできる一歩になります。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "身の回りのモノの科学シリーズが面白かったら高評価もお願いします。身近な不思議を毎日1本ずつ一緒にほどくので、明日も見逃さないようチャンネル登録よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "透明なのに",
+      "99%を止める"
+    ],
+    "hook_caption": "99%を止める",
+    "subtitle": "目の前の透明な盾に入った技術",
+    "tagline": "見えない光と飛来物から目を守る仕組み"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "表示を見て選んでみて。身の回りのモノの科学シリーズも、高評価とチャンネル登録で1",
+          "reason": "1行58字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 27,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 15,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.552,
+      "similar_to": "あなたが大雨で不安になる3hPaの正体？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ保護メガネは99%の光を止める？"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '99%'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "original_title": "なぜ保護メガネは99%の光を止める？",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "なぜ保護メガネは99%の光を止める？"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

@@ -1,0 +1,528 @@
+{
+  "title": "なぜ非常時マニュアルの最終頁は白紙なのか…12人失踪の真相",
+  "theme": {
+    "title": "非常時マニュアルの最終ページが白紙な理由",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "あなたの部屋の避難冊子、最後の頁だけ白紙かもしれない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え、白紙を見た職員12人が翌朝いなくなった記録か。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "失踪の正体は、白紙にだけ現れる非常時命令だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "12人分の机だけ残る。学校の教室なら一列が消える数だ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "読めない頁ほど命令している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "こういう記録って、他にも世界中に残ってるんだ。"
+    },
+    {
+      "speaker": "シロ",
+      "text": "高評価を残せ。財団の裏側シリーズは他のファイルにもある。毎日投稿中、1万人目標へチャンネル登録で応援してほしい。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "シロ",
+      "text": "白紙の最終ページ。財団の非常時マニュアルを閉じた職員12人が、午前6時までに消えた原因だ。あなたの部屋の避難冊子も、最後だけ確かめない方がいい。空白が終わりとは限らない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…え。何も書かれていない紙を見ただけで、12人もいなくなったのか。破れたわけでも、燃えたわけでもない。机と職員証だけが残ったなら、教室一列ぶんが消えたのと同じだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "残った職員証は12枚。顔写真は全て同じ方向を向いていた。撮影日が最大8年離れた写真なのに、全員が最終ページの外側を見ていた。誰もカメラを見ていなかったという記録だ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "待って。紙の外側を見るって、どういう意味だ。頁の向こうに誰かが立っていたのか。それとも読んだ12人だけが、同じ場所へ呼ばれたのか。白紙なら、読む文字すらないはずだ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最終ページは確かに白紙だった。ただ、消えた12人は全員、同じ時刻にそこへ署名した形跡を残している。筆跡は本人のものだが、署名欄は印刷されていない。紙面に命令は見えなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "この報告書は、白紙が空白ではないことを記した記録だ。非常時に開くための冊子が、非常時そのものを呼び込んだ。財団でも、まだ説明できていない。ただし失踪は12件では終わっていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "白紙なら安全だと思って最後まで読む。ゲームの説明書で空欄を飛ばすみたいに。でも、その飛ばした一頁が命令書だったら、逃げる場所がない。確認のために開いた人ほど先に呼ばれるのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "最初の発見は第19収容区画の防災点検だった。配布されたマニュアル48冊のうち、最終ページが白紙だったのは17冊だけ。残る31冊には、通常どおり避難経路と集合場所が記されていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "17冊だけが白紙だったのか。なら誰かが差し替えたと考えるはずだ。でも48冊を配った記録にも、印刷室の搬出記録にも不審者は残っていない。白紙は最初から紛れていたことになる。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "17冊は表紙も頁数も製本番号も同一だった。違いは最後の一枚だけ。そして点検開始から46分後、白紙を開いた職員の通話記録に、聞き取れない返答が混じり始めた。発信先は未登録だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "通話内容の大半は[DATA EXPUNGED]されている。ただ、12人全員が最後に一度だけ言った短い言葉は消されなかった。「確認しました」という返答だ。誰に返事をしたのか、その宛先だけがない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "確認しましたって、誰に返事をしたんだよ。室内には12人しかいなかったはずだろ。白紙が命令したとしても、声も文字もなければ確認なんてできない。なのに全員が同じ文を使っている。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "監視映像には、彼らが白紙を読む姿しか残らない。口は動く。視線は下を向く。だが頁に文字は映らない。映像を1コマずつ止めると、白紙だけが0.8秒遅れてめくれたという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ここで前提が崩れる。消えたのは白紙を見た者ではない。最終ページを閉じた者だけが消えた。開いたまま離れた5人は、その夜を生き延びている。閉じる動作が、返事として数えられた可能性がある。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "じゃあ閉じる行為が返事だったのか。読了した印みたいに冊子を閉じた瞬間、向こうが受理する。…ねえ、これ本当に大丈夫なの？　普通の避難冊子も、最後は閉じて棚へ戻すだろ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "生存した5人は、翌朝まで最終ページを開いたまま監視された。全員の瞳孔には同じ黒い線が映ったが、紙面には何も残らない。黒線は幅2ミリで、映像を拡大しても端が確認できなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団は17冊を隔離した。その後、白紙の冊子は毎月1冊ずつ増えた。印刷部門の在庫にも、電子保管庫にも、作成履歴のない最終ページが混入した。増加は最初の7か月、止まらなかった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "紙の冊子を焼けば済まないのか。電子保管庫まで増えるなら、画面の最後にも白紙が出る。スクロールして終わりを見た人間まで、同じことになるんじゃないか。出口のない廊下みたいな記録だ。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "焼却試験では、対象17冊のうち16冊が燃えた。だが灰の中に、折り目のない白紙が1枚残った。その紙は焼却担当者の氏名を、裏面から透かしていたという。印字に使った記録は存在しない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "裏面には誰も文字を印刷していない。それでも担当者は、自分の名前を見たと証言した。翌日、その証言者は転属を願い出た。申請書の最終欄だけが白紙になり、署名は欄外に13回書かれていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "書類の最後まで追ってくるのか。避難マニュアルだけの異常じゃない。最後の欄、最後の頁、終わったと思った場所にだけ待っている。提出ボタンの直前に、見えない確認欄があるみたいだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "初期の犠牲者12人には共通点があった。全員が非常時訓練の担当経験者で、手順の最後まで確認する癖を持っていた。雑に閉じた者ではなく、真面目な者が選ばれた。勤続年数は平均11年だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "訓練記録には、彼らが毎回同じ言葉を使ったとある。「最終確認、異常なし」。その文言は失踪翌日から、財団内のマニュアル雛形から静かに削除された。削除対象は12施設、合計384部だった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "異常なしと言った人間が消えたのか。安全確認の言葉が、呼びかけになった。学校の避難訓練でも最後に点呼するだろ。あれが返事の数合わせだったら、聞かなきゃよかった。名前を呼ばれても黙れない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "第19収容区画では、失踪後に非常時手順が改訂された。最終ページを読むことは禁止されない。ただし、読了後に冊子を閉じてはならない。机に伏せることも禁じられた。閲覧は必ず2人1組とされた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "職員は読み終えた冊子を、開いたまま金属製の台に固定する。ページを押さえる重りは7キログラム。風で閉じないためではない。誰かの手で閉じられないためだ。重りには毎朝、封印番号が刻まれる。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "7キログラムの重りって、学校の机の上に置くには重すぎる。たった一枚の白紙を閉じないために、それだけの重さが必要なのか。誰かが夜に触る前提なんだな。触るのは職員とは限らない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "夜間監視では、重りが自力で動いた記録はない。だが午前3時17分、開いた冊子の周囲だけ温度計が停止した。止まった表示は全て、最後に確認した数字のままだった。再起動しても時刻だけは戻らなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "停止した温度計は23台。数値は19度、21度、25度とばらばらだった。共通していたのは、表示を見た警備員が全員、誰かに点呼された夢を報告したことだけだ。夢の中の返事は記録されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "点呼の夢って、名前を呼ばれたら返事をしてしまう。眠っていても、先生や上官の声なら反射で答える。白紙は文字じゃなくて、返事を待っているのかもしれない。夢の中なら逃げ場すらない。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "その仮説は採用されなかった。財団の記録では、白紙が何を伝えるかではなく、誰が確認を返すかが問題とされた。返事の相手は記録されず、記録はここで途切れている。答えた回数だけが、台帳に残った。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "失踪者の居場所は不明だ。ただし、12人の給与口座には毎月同額の入金が続いた。失踪から36か月後も、振込名義だけは「最終確認室」のままだった。存在しない部署が、毎月12人分を処理していた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "生きている扱いなのか。それとも、向こうで勤務を続けているのか。入金があるなら誰かが処理している。消えた人間の名前が、まだ財団の中で働いているみたいだ。退職届すら出せない場所なのか。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "36回目の入金日、口座管理担当が備考欄を確認した。「次回は13名分」とだけ記されていた。その月、第19収容区画に新任職員が1人配属されている。新任者の担当は、非常時冊子の整理だった。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "新任職員は、最終ページの存在を知らなかった。だが配属初日の訓練で、他の職員が閉じられない冊子を見て笑ったという。その表情は翌日から記録に残っていない。顔認証には空席として処理された。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "笑っただけで記録が消えるのか。怖がらずに触れたから選ばれたのか。でも、最初の12人は真面目だった。白紙は恐怖でも無関心でもなく、確認する人間を数えている。名簿の空欄を埋めるみたいに。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "後年、回収班は古い非常時マニュアルを1冊発見した。発行年は42年前。最終ページは白紙だったが、紙の端だけが13回、内側へ折られていた。折り目の最後には、爪で押したような小さな穴があった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "折り目の間隔は均一ではない。最初の12回は人差し指の幅に近い。13回目だけは紙の中央で止まっていた。誰かが次の名前を待ちながら、折るのをやめたように見えた。紙の余白は、まだ半分残っていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "12人の後に13回目。口座の備考と同じ数だ。偶然とは言えない。白紙の向こうには、最初から人数分の場所があって、そこが一つずつ埋まっているのか。空いた席は、まだこちら側にあるのか。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団がこの異常に付けた分類は、Euclidだ。収容できているからではない。最後の一頁を必要とする非常時が、いつ起きるのか分からないため、その扱いにされた。対象は今も完全には隔離されていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "分類名は一度だけ記録された。重要なのは名称ではない。白紙を閉じる手順が、今も財団の全施設から消えていることだ。手順書の最後だけは、誰も完成させない。完成させた瞬間、確認されるからだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "マニュアルは完成しないまま配られているのか。最後の指示を書けば呼ばれ、書かなければ白紙が残る。非常時に頼るものほど、最後まで読めないなんてまずすぎる。避難のための本が、出口を消している。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "元研究員として言えるのは一つだけだ。冊子の末尾に不自然な白紙があっても、指でなぞるな。余白に名前を書くな。そして、読んだ後に丁寧に閉じるな。最後の確認を求められても、返事をするな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "閉じなければ安全なのか。それも確認されていない。生存した5人のうち2人は、半年後に自宅で消えた。机の上には、開いたままの別の本が残されていた。最後の頁には、やはり何も印刷されていなかった。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "別の本でもいいのか。最後のページが白紙なら、冊子の種類は関係ないのかもしれない。自分の部屋の漫画やノートまで、急に最後を見たくなくなってきた。何も書かれていない頁ほど、目を逸らせない。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "消えた2人の本には、共通する文章があった。最終ページの手前に印刷された一文だ。「以下、非常時の指示に従え」。その次だけが、どちらも完全な白紙だった。手順はそこで終わったのではなく、始まっていた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "非常時とは何を指すのか。火災でも停電でもない。財団は答えを残していない。ただ、白紙の前で待つものにとって、こちらがページを閉じる瞬間が非常時なのかもしれない。向こうは終わりを待っている。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "クロ",
+      "text": "…ねえ、これ本当に大丈夫なの？　動画を見終えたあと、画面を閉じるのも同じ返事にならないのか。最後まで確認した人間だけを、向こうが数えるなら。今この画面の下にも、白紙がある気がする。",
+      "expression": "sad",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "映像視聴と対象の関連は確認されていない。だが、この報告書を読んだ職員の閲覧履歴には、必ず最後に空白のアクセス記録が残る。行き先は[REDACTED]だ。閲覧秒数だけが、毎回3時17分で停止していた。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "シロ",
+      "text": "だから、非常時マニュアルの最終ページが白紙でも、勝手に補記するな。何も書かれていない場所ほど、すでに誰かの指示で埋まっている可能性がある。見かけても、決して近づくな。空白は、こちらを見ている。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "クロ",
+      "text": "次は、読んだ職員の名前だけが消える収容記録を扱うのか。白紙よりまだましだと思いたい。でも、記録から名前が消えるなら、助けを呼ぶ側までいなくなる。次の頁を開く役は、結局誰になるんだ。",
+      "expression": "sad",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "財団の裏側シリーズには、閉じられなかった報告書がまだ残っている。この記録に異常を感じたなら高評価を残せ。次のファイルを受け取るなら、チャンネル登録を頼む。毎日投稿中、登録者1万人を目指している。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "ただし登録後、通知欄の一番下に空白の通知が現れても開くな。あれは財団の配信ではない。誰が送ったのか、元研究員だった私にも、もう確認する手段がない。通知を消す時も、最後まで閉じるな。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "シロ",
+      "text": "SCP財団Wiki掲載作品を基にした二次創作として、原典の設定を尊重し構成した。SCP財団および関連作品はCC BY-SA 3.0に基づく。だが、この白紙の記録だけは、誰が最初に書いたのか残っていない。",
+      "expression": "normal",
+      "mood": "mysterious"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "最後の頁",
+      "閉じるな"
+    ],
+    "hook_caption": "白紙の命令",
+    "subtitle": "非常時マニュアル最終ページの記録",
+    "tagline": "空白は終わりではない"
+  },
+  "channel_id": "scp-lab",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "cross_bridge": {
+      "modified": true,
+      "target_channel": "akashic-librarian",
+      "bridge_line": "こういう記録って、他にも世界中に残ってるんだ。",
+      "matched_topic": "記録"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 7,
+          "text": "高評価を残せ。財団の裏側シリーズは他のファイルにもある。毎日投稿中、1万人目標へ",
+          "reason": "1行56字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 2,
+        "relatability": 7,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 2,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.608,
+      "similar_to": "SCP-███ Dクラス最後の1行の真相",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "enhanced_title": "SCP-███「白紙の最終頁」12人失踪の真相"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for scp-lab"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 82,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ'](+12)",
+      "好奇心ギャップ['なぜ'](+12)"
+    ],
+    "rejected_title": "SCP-███「白紙の最終頁」12人失踪の真相",
+    "attempts": 1
+  },
+  "original_title": "SCP-███「白紙の最終頁」12人失踪の真相",
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

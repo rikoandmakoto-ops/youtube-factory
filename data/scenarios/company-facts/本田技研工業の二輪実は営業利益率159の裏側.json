@@ -1,0 +1,212 @@
+{
+  "title": "本田技研工業の二輪、実は営業利益率15.9%の裏側",
+  "theme": {
+    "title": "ホンダの稼ぎ頭、実は二輪の裏側",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "ホンダの実態",
+      "fact_main": "ホンダ 二輪15.9%",
+      "fact_sub": "2025年3月期・営業利益率",
+      "text": "二輪の営業利益率は15.9%。ただし、この強さには理由があります。",
+      "bg_query": "本田技研工業 二輪 バイク 展示",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "二輪販売 2,057万台",
+      "fact_sub": "2025年3月期・世界販売",
+      "text": "世界で2,057万台を売りました。日常の足を押さえた台数です。",
+      "bg_query": "本田技研工業 バイク 海外 販売店",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "二輪利益 6,165億円",
+      "fact_sub": "2025年3月期・事業利益",
+      "text": "二輪の事業利益は6,165億円です。",
+      "bg_query": "本田技研工業 二輪工場 生産",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "四輪利益率 2.6%",
+      "fact_sub": "2025年3月期・営業利益率",
+      "text": "一方、四輪の営業利益率は2.6%です。実はこの裏で差が開きます。",
+      "bg_query": "本田技研工業 自動車 工場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "二輪比率 40%超",
+      "fact_sub": "世界二輪市場の推定シェア",
+      "text": "世界二輪市場で40%超を握るとされます。現地生産の積み重ねです。",
+      "bg_query": "本田技研工業 バイク インド 工場",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "四輪販売 372万台",
+      "fact_sub": "2025年3月期・世界販売",
+      "text": "ただし四輪も372万台です。稼ぎの差は、台数だけでは測れません。",
+      "bg_query": "本田技研工業 自動車 ディーラー",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "毎日1社の実態が届きます",
+      "text": "気になったら、話題の企業の実態シリーズもチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "二輪15.9%",
+      "四輪を上回る"
+    ],
+    "subtitle": "ホンダの稼ぎ頭",
+    "tagline": "2025年3月期の実績"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 17,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.479,
+      "similar_to": "ニトリの粗利率55%、実は物流まで握る実態",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "本田技研工業の二輪、実は営業利益率15.9%の裏側"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '裏側'](+20)",
+      "好奇心ギャップ['裏', '実は'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

@@ -1,0 +1,555 @@
+{
+  "title": "なぜ正座を崩すと3秒後にしびれる？足の正体",
+  "theme": {
+    "title": "なぜ正座を崩した3秒後にしびれが来るのか",
+    "angle": "身体感覚＋秒数。血流再開と神経の発火順序を3行目で言い切る"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？水道ホースを外したように、足は3秒後から目覚めます。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、3秒後なの？正座を崩してすぐより。",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "血が戻る速さより先に、押されていた神経が電気信号を一気に出すからです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！スマホが再起動して通知がまとめて鳴る感じだね。",
+      "expression": "happy",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも針のような感覚は、足が壊れた合図ではなく神経が順番に戻る途中です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "正座の後は急に立たず足首をゆっくり動かしてみて。体の謎シリーズも、高評価とチャンネル登録で1万人目標を応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "あなた、正座を崩して立ったのに、なぜか3秒後に足がビリビリしたことありませんか？犯人は止まった血だけではなく、神経が遅れて鳴らす警報です。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "しびれは座っている最中より、姿勢を変えた直後に強まることがあります。今回は、その妙な時間差が生まれる体内の順番を、足の中まで追いかけます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "結論から言うと、圧迫が外れて血流が再開し、酸欠気味だった神経が順番に発火するため、脳には数秒遅れのビリビリとして届くのです。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "驚くのは、しびれが来た瞬間こそ回復の合図になりやすいことです。壊れた神経が急に痛むのではなく、眠っていた配線が再起動する途中なのです。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "正座では体重が膝裏や足首まわりを押し、細い血管と神経の通り道が狭くなります。すると足先は、信号も酸素も届きにくい省エネ状態へ入ります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "では、なぜ立った瞬間ではなく3秒ほど待たされるのでしょう？血液、神経、脳の伝達がリレーのように動く、その意外な順序を今からほどきます。",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は腕を枕にして寝た後のしびれでも同じことが起きてる。正座を崩した直後より、数秒たってから強く感じるのには、神経の反応順序という理由があるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "正座中は、体重で足の神経と細い血管が圧迫される。神経は電気信号を運ぶコードのようなもので、押され続けると足先から脳への連絡が一時的に弱くなるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しびれは血流再開だけでなく、圧迫から解放された神経が順番に再発火するため、姿勢を崩して約3秒後にピリピリとして意識へ届きやすくなる現象なんだよ。",
+      "expression": "serious",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ここで大事なのは、正座中に感じる鈍さと、崩した後の痛いしびれは別の段階だということ。前者は連絡が途切れ気味の状態で、後者は回線が急に戻るときのざわつきなんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "血液は酸素や栄養を運ぶ配達役で、圧迫がほどけると流れが戻る。でも血が戻る瞬間を直接感じるのではなく、主に神経が変化を電気信号として脳へ知らせているの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "たとえば長く曲げたホースを急にまっすぐにすると、水はすぐ通れても先端まで届くには少し間があるよね。足でも圧力が消え、神経の働きが整い、感覚として届くまで時間差が出る。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし「必ず3秒」と時計のように決まるわけではないよ。座った長さ、体重のかかり方、足の冷え具合で変わり、数秒から十数秒ほど遅れて強くなる人もいるんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ピリピリ、チクチク、むずむずと感覚が揺れるのは、感覚神経の信号がまだ安定していないため。脳はその不規則な信号を、痛みや虫が歩くような違和感として受け取るんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "だから正座を崩したら、いきなり立つより足首や指をゆっくり動かすのが安心。しびれが何時間も続く、片側だけ急に起きるなら、正座以外の原因もあるので受診を考えてね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "正座後のしびれは、血が戻った合図だけではありません。圧迫から解放された神経が、信号をまとめて送り直すために起こります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "観察実験では、膝の裏などを数分圧迫した後、姿勢を変えてから数秒遅れてピリピリを訴える人が多く、即時ではありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "結論は、血流再開より神経の発火順序が遅れて整うから、正座を崩して約3秒後にしびれが強く感じられるのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "神経は電線のように情報を運ぶ細胞で、強く曲げたり押したりされると、足先から脳へ向かう信号が一時的に乱れます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "驚きなのは、しびれの主役が血管そのものの痛みではない点です。圧迫された神経が再起動する途中の信号を、脳が感じ取ります。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "末梢神経の研究では、圧迫が続くほど伝導速度が落ち、解除後には異常な発火が増える現象が記録されています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "足がジンジンするのは、触覚や温度の線が同時に整列し直せないためです。だから針で刺すような感覚になりやすいのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "正座の圧力は体格や床の硬さで変わりますが、数十分続けるほど神経と血管への負担が増え、回復感覚も長引きます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "健康な人なら、姿勢を変えた後に足首や指をゆっくり動かすと、筋肉のポンプ作用で血液が巡り、違和感が和らぎます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし、しびれが数時間続く、片側だけ何度も起こる、力が入らない場合は正座のせいと決めず、早めに医療機関へ相談しましょう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "江戸時代の正座は礼法として広まりましたが、長く座った脚が後から鳴るようにしびれる謎まで、当時の人は血の巡りで説明していました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "近代になると医師は、脚を折る姿勢が神経と血管を押す点に注目します。特に膝裏を通る太い神経は、圧迫に弱い通り道でした。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "正座を崩した3秒後のピリピリは、血流再開で神経が先に一斉発火し、脳が遅れて異常な感覚として受け取るからです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "ここで反転です。しびれは血が戻った安心の合図でもありますが、神経には火花のような信号として届くため、痛みに近く感じます。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "十九世紀の生理学者たちは、神経を電気信号の通路として調べました。圧迫後に刺激へ敏感になる現象は、実験でも繰り返し観察されました。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "研究では圧迫をほどいた直後、触れただけで強く感じることがあります。止まっていた回線が復旧時に雑音を出す、そんな身近な不思議です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし昔の「血が足りないだけ」という説明は半分正解でした。血管だけでなく、神経そのものが押されることが決定的だったのです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "医学ではこの一時的なしびれを、圧迫による感覚異常として扱います。多くは姿勢を変えて数分以内に薄れ、神経の回復を示します。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "礼儀の姿勢から生まれた日常の違和感は、電気を使う神経研究へつながりました。次はなぜ足先から順に戻るのか、地図のように追います。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "意外なのは、正座を崩した直後に痛みが消えるのではなく、約3秒たってから針の雨みたいなしびれが強まること。遅れて来るのには、神経の信号に順番があるからなんです。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "正座中は膝の裏や足首の近くで神経と血管が圧迫され、足先へ届く酸素が減ります。ただし神経は電源オフにはならず、弱く不安定な信号を出したまま耐えている状態です。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "血流が戻ると酸素不足だった神経が一斉に再起動し、触覚より先に異常信号が発火するので、姿勢を変えて約3秒後にビリビリが来ます。痛みは回復の合図でもあるんですね。",
+      "expression": "explaining",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "しかも、しびれの正体は血そのものが足を刺す感覚ではありません。神経線維が回復途中に誤発信し、脳がその雑音を『チクチク』『電気が走る』と翻訳している感覚です。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで逆転です。足を強く叩けば早く治りそうですが、圧迫直後の神経には刺激が上乗せされます。勢いよく立つより、足首をゆっくり動かすほうが安全な場面もあります。",
+      "expression": "warning",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "神経には太さごとの復帰差があり、位置や振動を伝える太い線維より、痛みを伝える細い線維が目立つことがあります。そのズレが、感覚だけ妙に大げさになる理由の一つです。",
+      "expression": "explaining",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、短時間の圧迫でも末梢神経の伝導速度が一時的に落ちることが示されています。だから足は自分のものなのに、床を踏んだ瞬間だけ借り物みたいに頼りなく感じるのです。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし数分で引く正座のしびれと、長く続くしびれは別問題です。片側だけの脱力、ろれつの回りにくさ、胸の痛みを伴うなら、単なる正座と決めつけないでください。",
+      "expression": "warning",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "昔から正座は礼儀の姿勢として広まりましたが、人体にとっては膝下の通路を折り曲げる姿勢です。文化的に普通でも、血管と神経には小さな渋滞を作ってしまいます。",
+      "expression": "thoughtful",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "次にしびれたら、三秒の遅れを数えてみてください。あのタイムラグは血流が戻った証拠と、神経が混線しながら復帰する瞬間です。体は静かに壊れず、順番に目覚めています。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "正座のあとに立つ前、足首をゆっくり10回動かしてみて。急に体重を預けるより、感覚が戻る順番を自分で確かめやすく、転びそうな不安も減らせるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "しびれた足で最初の一歩を急ぐのは禁物だ。足裏の感覚が鈍い間は、床の段差やスリッパの縁を見落としやすく、数秒の待機が意外に大きな安全策になる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "血流が戻ると、圧迫から解放された神経が先にまとまって発火するから、姿勢を崩した約3秒後にピリピリを強く感じるんだよ。遅れて来るのには順番があったの。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "驚きなのは、しびれを早く消そうとして足を強く踏み鳴らすほど、感覚の鈍い足首をひねる危険が増えることだ。回復の合図でも、勢い任せは逆効果になりうる。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日からは、正座を20分以上続けそうなら途中で座り直す目安を作ろう。片足を横へ逃がすだけでも、同じ場所への圧迫が続く時間を短くできるよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "会議や法事で動きにくいなら、座る前に小さなクッションを用意する方法がある。すねと床の間に少し厚みができれば、足への食い込みを和らげる助けになる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "しびれが来たら、つま先を上げ下げしてから、足の指を軽く開いたり閉じたりしよう。痛みを我慢して伸ばすより、動く範囲で小さく始めるのがコツだよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "ただし、しびれが数十分たっても戻らない、片側だけ繰り返す、強い痛みや力の入りにくさがある場合は別問題の可能性もある。自己流で済ませず医療機関へ相談しよう。",
+      "expression": "serious",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "正座のしびれは、体が壊れた合図というより圧迫から戻る途中の通信みたいなもの。次に3秒遅れてピリッと来たら、慌てず座り直しと小さな運動を試してみてね。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "正座のしびれは、足が壊れた合図ではなく、圧迫で静かになった神経が戻る途中の悲鳴だったの。三秒後の違和感にも、ちゃんと順番があるよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "足を崩した直後は、血が流れ始めても感覚の電線はまだ整列中。だから触った感覚より先に、チクチクやジンジンだけが強く届くんだ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "結論は、血流再開で酸素が戻り、神経が不規則に発火する順序が、正座を崩して数秒後のしびれを作る、ということだよ。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "驚くのは、しびれのピークが「圧迫中」ではなく解放後に来やすいこと。苦しい正座が終わった安心の直後ほど、足は大げさに知らせてくる。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし、片側だけのしびれが長く続く、力が入らない、顔まで異変があるなら別問題。いつもの正座と決めつけず、早めに医療機関へ相談してね。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、眠る直前に体がビクッと跳ねるのはなぜかを解説するよ。落下した夢のせいなのか、脳と筋肉のすれ違いなのか、一緒に確かめよう。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日の「なぜ？」が少しでも軽くなったら高評価を、体と眠りの不思議を次も一緒に解き明かしたい人は、リコとマコトのゆっくり日常科学に登録してね。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "崩したのに",
+      "なぜ3秒後"
+    ],
+    "hook_caption": "答えは3秒",
+    "subtitle": "足の中で起きる順番",
+    "tagline": "正座のあとだけ遅れてくる理由"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "正座の後は急に立たず足首をゆっくり動かしてみて。体の謎シリーズも、高評価とチャン",
+          "reason": "1行59字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 19,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.544,
+      "similar_to": "なぜ保護メガネは99%の光を止める？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ正座を崩すと3秒後にしびれる？足の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', '体'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

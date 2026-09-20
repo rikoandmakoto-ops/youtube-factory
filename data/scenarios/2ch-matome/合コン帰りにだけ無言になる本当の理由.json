@@ -1,0 +1,566 @@
+{
+  "title": "合コン帰りにだけ無言になる本当の理由",
+  "theme": {
+    "title": "なぜ合コンの帰り道は3人だけ無言になるのか",
+    "angle": "失敗談。無言になる原因を1つに特定して締める"
+  },
+  "short_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "合コン帰り、3人だけ急に無言なんやがw",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "は？ 終電まで12分あるのに空気が死んどるやんw",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": ">>1だけ駅の柱を恋愛相談相手にしとる草",
+      "expression": "normal",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "残り2人はスマホを4回も見直してて草",
+      "expression": "happy",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまりワイが全員の名前を間違えたんやw",
+      "expression": "angry",
+      "mood": "funny"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "お前らなら帰り道をどう救う？ コメントで頼むわw 高評価とチャンネル登録、1万人目標で毎日投稿中やで、応援よろしくなw",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "ユイ",
+      "text": "あなた、合コン帰りに三人だけ車内で急に黙ったことありませんか？犯人は会話力ではなく、たった一人へ集中した『脈あり探し』です。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回は、笑っていた六人が駅までの十分で石像化した失敗談から、その正体を暴くぞ。沈黙は偶然ではなく、全員が同じ空気を読んだ結果だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "最初は連絡先交換も順調だったのに、帰りの組が三人になった瞬間だけ質問が消滅。残った二人が、ある一人の返事を待ち始めたんです。",
+      "expression": "thinking",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "驚きなのは、盛り上げ役だった男まで急に窓の外を見ること。場を回すより、その人の隣を誰が取るかが気になって口が止まるんだ。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここでいう脈あり探しは、相手の好意を会話の端から採点する癖のこと。『返信早そう？』『笑った？』を頭内で採点すると沈黙します。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり原因は、気まずさでも疲れでもなく、三人全員が恋の審査員になったこと。あなたなら沈黙を破る？それとも採点に参加する？",
+      "expression": "smile",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実は合コン帰りの三人無言、失敗した店選びより「全員が同じ一人を意識する配置」が原因なんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "帰り道では、盛り上げ役も聞き役もいた席と違って、横並びの会話になるから役割が急に消えるんだぜ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "人は三人になると、話す二人と余る一人が生まれやすい。心理学ではこれを三者関係の不安定さとして扱うよ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "たとえばユイが俺に話しかけると、もう一人は割り込む理由を探すだけになり、沈黙の秒数まで数え始める。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも合コン直後は、誰が誰に脈ありだったかを全員が採点中。雑談さえ告白の前振りみたいに聞こえてしまう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで無理に「今日は楽しかったね」と言うと、相手への評価を先に出した人になるから、慎重な人ほど黙るんだ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "失敗談で多いのは、駅まで三人で歩く判断。二人組なら沈黙は休憩でも、三人だと置いていかれた合図に見える。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "つまり原因は会話力不足じゃない。恋愛の勝敗がまだ決まらないまま、三人だけで帰る中途半端な構図なんだぜ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "結論、三人無言の正体は「誰が先に二人を作るか」の様子見。あなたなら駅で何て言って逃げる？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "飲み会後の会話を追った調査では、三人組の沈黙は「帰宅後の反省会モード」で増える傾向。楽しかったはずなのに、駅へ向かった直後から発話が減るの。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "会話研究でいう認知負荷は、相手の反応を読みながら話題を選ぶ頭の消費量だ。合コン失敗後は、その残量がほぼゼロになって雑談まで止まる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実験では、失敗を思い出させた参加者は中立の出来事を思い出した人より、次の会話で自発的に話す回数が約3割少なかったと報告されている。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "しかも三人は厄介だ。二人なら片方が黙っても相手に話を振れるが、三人では「誰が埋めるか」を全員が待ち、沈黙が共同制作される。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ここで反転。気まずさの原因は、酒が切れたからでも終電が近いからでもない。三人全員が「俺の失言だったかも」と自分を疑う瞬間にある。",
+      "expression": "surprised",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "社会心理学の自己注目は、自分の言動ばかり大きく見積もる状態だ。例えば店で滑った一言を、本人だけが帰り道まで何十回も再生してしまう。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "失敗直後の人ほど、周囲も自分のミスを覚えていると推測しやすい。実際は他人も自分の失言を反省中で、三人とも別々の黒歴史を抱えているだけ。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "沈黙を破る役を決めない三人組では、最初の十数秒が壁になる。誰かが「今日どうだった？」と聞けば済むのに、その質問自体が採点会に聞こえる。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "だから帰り道の無言は、仲が悪い証拠とは限らない。失敗を共有した三人が、互いの傷を踏まないよう慎重になりすぎた結果とも読めるね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "結論、無言を生む原因は会話力不足ではなく「全員が失敗の採点者になったこと」だ。あなたなら最初に何を言って、この反省会を壊す？",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "合コン帰りに三人だけ無言になる現象、古くは2000年代の掲示板で「帰路の三角地帯」と呼ばれたらしい。残った三人が駅まで徒歩7分、会話量は平均2往復まで落ちるという観察だよ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "当時の書き込みを追うと、原因候補は酒切れ、終電、脈なしと乱立していた。でも体験談を200件ほど読むと、無言になった組だけに同じ失敗が繰り返し現れるんだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "社会心理の研究では、会話が途切れる沈黙を「相互監視」と呼ぶことがある。相手も気まずいか測ろうとして、全員が次の一言を待つ。赤信号で同時に譲る車みたいな状態だね。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ただし二人なら沈黙はデートの余韻にもなるし、四人なら誰かが司会役を引き受ける。なぜ三人だけ凍るのか、2014年の飲み会失敗談には妙な共通点が残っていた。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、無言の引き金が「つまらない会話」ではないこと。むしろ店内で一番盛り上がった組ほど、帰り道で急停止していた。盛り上げ役が消えた瞬間に、三人の配置が崩れるんだ。",
+      "expression": "surprised",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "記録された典型例は、駅へ向かう途中で一人が「じゃ、俺こっち」と曲がる場面。残った二人ではなく、なぜか三人で歩いている段階から空気が重くなっていたという。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "失敗談の投稿者は後日、女性に連絡して理由を聞いた。返事は「誰を帰すか、誰と残るかを全員が考えていた」だった。会話ではなく、解散の順番が密かに議題になっていたの。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "三人組は二人きりになる組み合わせが3通りあり、誰が先に抜けても意味が生まれる。だから雑談の一言さえ、誘いか牽制かに聞こえる。駅前の自販機より選択肢が多くて詰むわけだ。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "結論、この無言の正体は脈なしではなく「誰が先に帰るかを決める責任の押し付け合い」だった。あなたなら三人の帰り道で、最初に改札へ消える？それとも誰かを誘う？",
+      "expression": "smile",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きの正体は、会話が下手だからじゃない。帰り道で無言になる3人には、失敗した合コン特有の「同じ後悔」が残っているんだ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "心理学では沈黙を埋めようとするほど、気まずさを意識して言葉が出にくくなる。車内でラジオを消した瞬間みたいに、全員が音を待つ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "しかも3人という人数が厄介で、誰か1人が話せば残り2人の視線が集まる。2人きりより発言の失敗が目立つと、無意識に黙る。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "ここで反転するぞ。無言の原因は、盛り上がらなかったことではない。むしろ終盤に一度だけ盛り上がった話題が、全員の口を封じていた。",
+      "expression": "surprised",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "ありがちな失敗は、誰かが元カノや年収を軽くいじった瞬間だね。笑いは起きても、帰り道では「今のまずかった？」だけが頭に残る。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "人は失言のあと、自分の発言を何度も再生する反すうに入りやすい。脳内で反省会を開いているから、目の前の会話に参加できない。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "3人全員が別々の失言を疑うと、沈黙は連鎖する。「自分が話すと空気が壊れる」と思い、最初のひと言を誰も出せなくなる。",
+      "expression": "worried",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "実際、気まずい沈黙は平均数秒でも体感では何倍も長く感じる。信号待ち30秒が、合コン帰りには映画のエンドロール並みに重い。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "つまり原因は相性でも疲れでもなく、あの場で笑いに変えたつもりの一言。帰り道の3人は、同じ地雷を踏んだ記憶だけ共有している。",
+      "expression": "serious",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "結論、無言になる原因は「全員が自分の失言だと思っている一言」だ。お前らなら何を言われた帰り道で黙る？コメントで告白してくれ。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "今日からの合コン帰りは、駅へ向かう前に『次の店どうする？』を一人だけが言う係にしてみて。沈黙の3人組は、全員が空気を読んで発車ベルに負ける失敗をしがち。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "コツは質問を広げず、二択にすることだぜ。『ラーメン行く？解散する？』なら返事は3秒で済む。自由回答の『どうする？』は、脳内会議だけが長引いて終電が迫る。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、あの無言の正体が気まずさじゃない場合もあること。3人とも『自分が余計なことを言ったかも』と反省会を始めると、会話の司会者が消えてしまうんだよね。",
+      "expression": "surprised",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "だから帰り道は、成功判定を先に口に出すのがおすすめだ。『今日は乾杯できただけで勝ち！』と笑えば、失敗談が自虐ネタに変わる。ローマの凱旋より小さくても空気は明るい。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "もし店で滑った自覚があるなら、謝罪は一回だけで十分。『さっきの話、長かったね、ごめん！』まで言ったら切り替えよう。二度目の謝罪は相手に慰め役を押しつけちゃうよ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "三人だけ残ったら、歩く順番も地味に効くぞ。横並びで詰めるより、信号待ちで一度立ち止まり『写真撮る？』と目的を作る。沈黙を失敗ではなく、次の動作の待機時間にできる。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "実践用の鉄板ワードは『今日いちばん面白かった場面、各自ひとつ発表！』。正解がないから全員が話せるし、飲み会の記憶も整理される。学校の帰り道みたいに気楽に使えるよ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "それでも誰も話さないなら、無理に盛り上げなくていい。『静かで助かるね』と肯定すると、沈黙への恐怖が薄れる。会話は花火じゃなく、消えずに残る線香花火で十分だ。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "結論、3人が無言になる原因は『全員が司会を遠慮すること』で決まり！次の帰り道、最初の一言係を名乗れる？それともラーメン二択で逃げる？コメントであなたの必勝法を教えて！",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "結局、合コン帰りに三人だけ無言になる原因は、会計で千円を出さなかった一人への不信感だったね。恋より財布が先に本音を暴いた、切ない結末だよ。",
+      "expression": "sad",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "会話が途切れたのは疲れでも電車の騒音でもなく、あの一瞬の精算ミス。たった千円で友情の温度が零下になるなんて、財布は残酷な証言者だぜ。",
+      "expression": "serious",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "驚きなのは、誰も責める言葉を言わないほど沈黙が濃くなったこと。笑顔で別れた三人のうち、いちばん大きな声だったのは改札の電子音だったね。",
+      "expression": "surprised",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "次回は「既読を付けずに返信だけ速い奴、何をしているのか当てるスレ」を解説するよ。通知欄だけで生きる怪人たちの、しょうもない推理戦が始まるぞ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "次回も、ゆっくり2chスレまとめ劇場らしく、答えのない日常ミステリーをコメントで完成させよう。あなたの周りの既読回避術も、ぜひ書き残してね。",
+      "expression": "smile",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ゴロー",
+      "text": "今回みたいに、帰り道の沈黙に心当たりがあるなら高評価を頼むぜ。千円の記憶を抱えたままでも、笑える失敗談なら立派な参加資格だからな。",
+      "expression": "laugh",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "ユイ",
+      "text": "チャンネル登録で、次のくだらない参加型スレにも迷わず集合できるよ。合コン会計で空気が凍った瞬間、あなたなら誰に何を言うかコメントで教えてね。",
+      "expression": "happy",
+      "mood": "emotional"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "3人だけ",
+      "急に無言"
+    ],
+    "hook_caption": "3人沈黙",
+    "subtitle": "帰り道だけ空気終了",
+    "tagline": "原因は一言やったw"
+  },
+  "channel_id": "2ch-matome",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "お前らなら帰り道をどう救う？ コメントで頼むわw 高評価とチャンネル登録、1万人",
+          "reason": "1行59字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 32,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 3,
+        "emotional_impact": 5,
+        "relatability": 5,
+        "shareability": 14,
+        "debate_potential": 0
+      },
+      "channel_bonus": 5,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.517,
+      "similar_to": "ワイ飲み物選び歴3年やけど理由ある？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.6,
+      "block_threshold": 0.75
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "enhanced_title": "合コン帰り3人だけ無言な理由w"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for 2ch-matome"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 70,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['だけ'](+12)",
+      "好奇心ギャップ['理由'](+12)",
+      "短すぎ(15字 < 18)(-12)"
+    ]
+  },
+  "original_title": "合コン帰り3人だけ無言な理由w",
+  "title_constraints": {
+    "ok": false,
+    "violations": [
+      {
+        "rule": "min_effective_chars",
+        "label": "実質20文字以上",
+        "detail": "18",
+        "repairable": false
+      }
+    ],
+    "rejected_title": "合コン帰り3人だけ無言な理由w"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

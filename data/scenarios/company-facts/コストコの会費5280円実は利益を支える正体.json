@@ -1,0 +1,212 @@
+{
+  "title": "コストコの会費5,280円、実は利益を支える正体",
+  "theme": {
+    "title": "コストコの利益、実は会費で決まる",
+    "angle": ""
+  },
+  "short_scenario": [
+    {
+      "fact_header": "利益の仕組み",
+      "fact_main": "コストコ 会費5,280円",
+      "fact_sub": "ゴールドスター年会費",
+      "text": "会費5,280円。ただし、利益の中心は商品販売ではありません。",
+      "bg_query": "コストコホールセールジャパン株式会社 店舗 外観",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "fact_main": "会員数 1.37億人",
+      "fact_sub": "世界の会員世帯数",
+      "text": "世界の会員は1億3,700万人です。年会費の積み上げが土台になります。",
+      "bg_query": "コストコホールセールジャパン株式会社 入店 会員カード",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "会費収入 46.8億ドル",
+      "fact_sub": "2024年度 米国本社IR",
+      "text": "2024年度の会費収入は46億8,000万ドルです。",
+      "bg_query": "コストコホールセールジャパン株式会社 レジ",
+      "duration": 5,
+      "mood": "bright"
+    },
+    {
+      "fact_main": "純利益 68.4億ドル",
+      "fact_sub": "2024年度 米国本社IR",
+      "text": "純利益は68億4,000万ドルです。",
+      "bg_query": "コストコホールセールジャパン株式会社 売り場",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "粗利益率 12.1%",
+      "fact_sub": "2024年度 米国本社IR",
+      "text": "商品販売の粗利益率は12.1%です。安売りの余白は、会費で補う構造です。",
+      "bg_query": "コストコホールセールジャパン株式会社 商品 陳列",
+      "duration": 5,
+      "mood": "calm"
+    },
+    {
+      "fact_main": "返品保証 365日",
+      "fact_sub": "一部商品は対象外",
+      "text": "ただし、満足保証には365日返品もあります。",
+      "bg_query": "コストコホールセールジャパン株式会社 カスタマーサービス",
+      "duration": 5,
+      "mood": "tense"
+    },
+    {
+      "is_cta": true,
+      "fact_main": "高評価とチャンネル登録",
+      "fact_sub": "話題の企業の実態シリーズ",
+      "text": "気になったらプロフィールから他の企業もチェックしてね。",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [],
+  "thumb_info": {
+    "hook_lines": [
+      "会費5,280円",
+      "利益の正体"
+    ],
+    "subtitle": "商品より会員制",
+    "tagline": "コストコの稼ぎ方"
+  },
+  "channel_id": "company-facts",
+  "style": "facts_overlay",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "no_topic_match"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 100,
+      "issues": [],
+      "warnings": 0
+    },
+    "viral_score": {
+      "score": 12,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 0,
+        "emotional_impact": 0,
+        "relatability": 0,
+        "shareability": 10,
+        "debate_potential": 2
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "冒頭に疑問形や「実は」を入れて好奇心ギャップを強化",
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.481,
+      "similar_to": "Amazonの配送料、本当は年78億ドルどこに消える",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "enhanced_title": "コストコの会費5,280円、実は利益を支える正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for company-facts"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['実は', '正体'](+20)",
+      "好奇心ギャップ['正体', '実は'](+12)"
+    ]
+  },
+  "title_constraints": {
+    "ok": true,
+    "violations": []
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "fact_consistency": {
+    "ok": true,
+    "conflicts": [],
+    "disclosed": 0
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}

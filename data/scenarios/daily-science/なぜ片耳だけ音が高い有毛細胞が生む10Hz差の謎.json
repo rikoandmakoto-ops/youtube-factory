@@ -1,0 +1,563 @@
+{
+  "title": "なぜ片耳だけ音が高い？有毛細胞が生む10Hz差の謎",
+  "theme": {
+    "title": "なぜ左右の耳で聞こえる音程が違うのか",
+    "angle": "有毛細胞の左右差。Hz の差を提示する"
+  },
+  "short_scenario": [
+    {
+      "speaker": "理子",
+      "text": "なんで同じベルなのに、片耳だけ少し高く聞こえるんですか？",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、片耳で10Hzずれる人もいるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "実は耳の毛のような細胞が、左右で音の受け取り方を少し変えるんです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "スマホの左右スピーカーを、ほんの少し別の高さで鳴らす感じなんだね。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "しかも疲れや耳の詰まりでも差は揺れます。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "気になる音は片耳ずつ確かめてみて。感覚のふしぎシリーズも、高評価のあとチャンネル登録で毎日投稿中の1万人目標を応援よろしくね！",
+      "expression": "happy",
+      "mood": "bright"
+    }
+  ],
+  "full_scenario": [
+    {
+      "speaker": "理子",
+      "text": "これ知ってた？左右のイヤホンを交互に外すと、同じ440Hzの音でも片耳だけ少し高く感じることがあります。あなたが音楽でラの音を聞く瞬間、耳の中では左右別々の受け取り方が起きているかもしれません。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、440Hzはピアノの調律でも目安になるラの音だよね！同じ再生機器から出た音なのに、右と左で高さが変わるなら、耳の奥には左右で別の秘密があるの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "片耳ずつイヤホンを聞いて、片方だけ音が薄い、明るい、少し低いと感じたことはありませんか。機器の故障と思いがちですが、耳の状態や脳の受け取り方も、音程の印象へ静かに加わります。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！左右のイヤホンを入れ替えても違和感が同じ耳に残るなら、ケーブルではなく自分の耳側を見たほうがいいということだね。どこから確かめればいいの？",
+      "expression": "surprise",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし片耳が急に聞こえにくい、耳鳴りが増えた、回転するようなめまいがある場合は、動画で自己判断せず早めに耳鼻科へ相談してください。日常の小さな差と急な変化は、同じ扱いにしないことが大切です。",
+      "expression": "normal",
+      "mood": "tense"
+    },
+    {
+      "speaker": "真",
+      "text": "急に変わったかどうかが大きな分かれ目なんだね。たとえば朝は普通だったのに夕方から片耳だけこもるなら、左右差の雑学として流さず、体からの合図として受け止めたほうがよさそう。",
+      "expression": "think",
+      "mood": "tense"
+    },
+    {
+      "speaker": "理子",
+      "text": "まず音は空気の振動として耳に入り、鼓膜を揺らし、その奥の小さな骨を通って液体のある場所へ届きます。たとえるなら、玄関から廊下、エレベーターを通って建物の奥へ荷物が運ばれるような順番です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "空気の揺れが液体まで運ばれるなんて、耳の中は思ったより立体的なんだね。440Hzなら1秒に440回揺れる荷物が、耳の奥のどこかへ正確に届けられる感じなの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "耳の奥には、低い音から高い音まで得意な場所が並んでいます。ピアノの88鍵を端から端まで分けて置くように、音の高さごとに反応しやすい位置があり、440Hzにも特に反応しやすい場所があります。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "88鍵のどれを押したかで音が決まるように、耳も揺れた場所の違いで高さを知らせるんだね。左右で鍵盤の反応が少しずれたら、同じラでも別の高さに寄って聞こえるのかな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "その場所には、毛のように見える細かな部分を持つ細胞が並んでいます。ここが液体の揺れを電気の合図へ変え、脳へ送ります。スマホのマイクが空気の振動をデータに変えるのと、とても近い役目です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "マイクなら、膜の張り方や位置が少し違うだけで録れる音が変わりそうだね。耳の左右にも、同じ工場で作ったのに個体差があるスピーカーみたいな、小さな違いが残るの？",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "あります。生まれつきの耳の形、過去に浴びた大きな音、片側で電話する習慣、鼻の調子まで、左右が完全に同じ条件になることはほとんどありません。だから耳の反応も、定規で測ったように一致しないのです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "言われてみれば確かに、片方の耳だけ枕に押しつけて寝たり、片側だけ窓側の騒音を受けたりするね。左右の耳には毎日ちがう履歴が積み重なっていると考えると納得できるな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここで大事なのは、耳が音程という札を直接貼っているわけではない点です。脳は届いた複数の合図を比べ、音の高さを組み立てます。材料が少し違えば、同じ料理でも味の印象が変わるのと似ています。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "耳が集めた材料を脳が料理しているなら、音源は同じでも片耳からの材料が少し違うだけで、完成した高さの感じが動くんだね。じゃあ人は何Hzくらいの差まで気づけるの？",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "音程差に気づける幅は音域や訓練で変わりますが、440Hz付近で数Hzから十数Hzの違いを感じる人もいます。1秒に440回揺れる音で、たった数回の違いが耳に届くという、かなり繊細な比較です。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "えっ、1秒に440回の揺れの中から、たとえば5Hzくらいの差を拾える人がいるの？時計の秒針では見えないような細かなズレを、耳と脳が感じ取ることがあるんだね。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "実はこれ、今あなたの体でも起きています。左右の耳は同じ設計図からできても、毎日受ける音と圧力の履歴は別々です。完全な双子のマイクではないからこそ、聞こえの印象に小さな差が生まれます。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "左右の耳に別々の日記があるみたいだね！でも、片耳だけ音が高いと感じる理由を、耳の中の小さな細胞だけで説明してしまって本当に大丈夫なの？",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "大丈夫とは言い切れません。疲れ、睡眠不足、鼻づまり、周囲の騒音、注意の向き方でも比較の結果は揺れます。同じコーヒーでも寝不足の日は苦く感じることがあるように、音の印象も体調に影響されます。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "じゃあ朝と夜で聞こえ方が少し違っても、耳が急に壊れたと決めつけなくていいんだね。ただ、何日も同じ片耳だけおかしいなら、比べ方を変えて確かめる必要がありそう。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "研究では、耳に小さな音を入れたあと、耳の中から返ってくるごく弱い音を測る方法があります。健康な耳は単なる受信機ではなく、入った音に対して微小な反応を返すことがあり、その反応が検査に使われます。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "耳が音を返すなんて、スピーカーみたいで面白いね！聞くだけの器官だと思っていたのに、測定できるほど小さな返事をしているなら、耳の奥はずっと動いているんだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "この測定は新生児の聴覚検査にも使われます。言葉で返事できない赤ちゃんでも、耳に小さな音を聞かせ、その反応を調べられます。体が出す小さな返事を読む、体温計とは別の見守り方です。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "赤ちゃんが答えを話せなくても、耳そのものの反応を調べられるんだね。左右の耳がどれくらい働いているかを、泣いたり笑ったりする前の段階から見られるのはすごいな。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "左右差があるからといって、すぐ異常と決めることはできません。利き手が右と左で違うように、体には小さな非対称があります。聞こえの感じ方にも個人差が重なり、左右の完全一致が標準とは限りません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "右利きと左利きの違いみたいに、耳にも得意な感じ方の差がありうるんだね。でも音楽が片耳だけ外れて聞こえるなら、まず耳より先にイヤホン側も疑ってみたいな。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "そのときは左右のイヤホンを入れ替えてください。違和感がイヤホンについて移るなら、機器や装着の問題を疑えます。違和感が同じ耳に残るなら、耳の状態も含めて確認する、簡単な切り分けになります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "左右を交換するだけで、原因が耳か機器かを分けられるんだね。電池が弱い時計を別の電池で試すように、片方ずつ条件を動かすと、見えない原因も少しずつ絞れるんだ。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "比べるときは、音量を上げすぎないでください。大きな音は耳を疲れさせ、かえって差の判断をぶらせます。小さめの一定音量で、10秒ほど片耳ずつ聞くほうが、耳にも検証にもやさしい方法です。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "大きくすれば分かりやすいと思っていたけど、耳を疲れさせたら温度計を手で温めてから測るようなものなんだね。静かな場所で短く比べるほうが、結果も落ち着きそう。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "音量そのものも、音程の印象を少し変えることがあります。片方だけ小さく聞こえるイヤホンでは、高さまで違うように感じる場合があるため、再生アプリの左右バランスと装着の深さを先にそろえてください。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "へぇ〜、知らなかった！高さの違いだと思っていたものが、実は大きさの違いを脳が別の感じに読み替えている場合もあるんだね。音を比べる前に条件をそろえる理由が分かったよ。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "ところが音楽では、音色という別の要素も加わります。ピアノとギターは同じ440Hzを弾いても、重なっている細かな揺れ方が違うため、左右差がある耳では高さの違和感が目立つことがあります。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "同じラでもピアノのラとギターのラは、耳に触る感じが違うもんね。高さだけを比べたいなら、楽器の音より単純な電子音のほうが、左右の差を見つけやすいのかな。",
+      "expression": "think",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "そうです。単純な電子音は、比べる材料を少なくできます。一方で音楽は、低音や高音、響き、リズムまで入るため、脳がまとめる情報が増えます。具だくさんのスープより透明な水のほうが味の差を見分けやすいのと同じです。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "電子音で差を確かめて、音楽でだけ気になるなら、耳そのものより音色との組み合わせが関係するかもしれないんだね。聞こえ方は思った以上に、いくつもの材料でできているんだな。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "耳の奥では、低い音から高い音まで場所ごとに得意な範囲があります。たとえるなら長い鍵盤を何人もの係が分担し、各自が受け取った振動を脳へ報告する仕組みです。左右で係の反応が少し違えば、報告も少し変わります。",
+      "expression": "normal",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "真",
+      "text": "係の人数や反応の速さが右と左で少し違えば、同じ440Hzへの報告書もわずかに変わるわけだね。だから片耳ずつ聞いたときに、音源にはない差が浮かび上がるんだ。",
+      "expression": "surprise",
+      "mood": "mysterious"
+    },
+    {
+      "speaker": "理子",
+      "text": "この耳の奥の細胞が音を受け取る仕組みには、有毛細胞という名前が付いています。つまり毛のような部分が揺れて、音の振動を神経への合図へ変える、小さな変換器のことです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "有毛細胞って、難しい名前に聞こえたけれど、小さなマイクの振動板みたいなものなんだね。左右で反応の具合が少し違うなら、脳に届く音の材料も変わりそうだ。",
+      "expression": "surprise",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ただし左右差がどこまで音程の差として感じられるかは、一人ひとりで異なります。耳の形、脳の聞き比べ方、音楽経験まで絡むため、有毛細胞だけで全員の感覚を説明できるわけではありません。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "全部を一つの原因だけで決めないのが大切なんだね。自分の聞こえ方を比べるときも、1回の結果に振り回されず、同じ条件で何度か確かめるほうがよさそう。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "ここは科学でもまだ結論が出ていない部分があります。左右の耳の微細な違いと、脳が感じる音程差を一対一で結ぶ研究は簡単ではありません。見えない細胞と主観的な感覚を、同時に測る難しさがあるからです。",
+      "expression": "normal",
+      "mood": "calm"
+    },
+    {
+      "speaker": "真",
+      "text": "体の中で起きている小さな反応と、自分が感じた高さを同時に比べるのは、たしかに難しそうだね。だからこそ分かっていることと、まだ調べている途中のことを分けて聞く必要があるんだ。",
+      "expression": "think",
+      "mood": "calm"
+    },
+    {
+      "speaker": "理子",
+      "text": "歴史をたどると、耳が音を場所ごとに分ける考えは19世紀から育ちました。1863年にヘルムホルツは、楽器ごとの響きの違いを説明するため、耳が複数の音をどう聞き分けるかを深く考えました。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "160年以上前から、楽器の響きと耳の中の仕組みを結びつけて考えていた人がいたんだね。いまイヤホンで感じる数Hzの違和感にも、長い研究の積み重ねがつながっているんだな。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "1978年には、耳の奥の細胞が音への反応を強める働きを持つことが示され、耳は単に振動を受けるだけではないと分かってきました。小さな細胞の働きが、細かな音の聞き分けを支えています。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "耳が受け身ではなく、音の輪郭を自分で整えているなら、左右の調整の違いが聞こえ方に出るのも納得できるね。体の中に、こんな小さな音の職人がいるみたいだ。",
+      "expression": "surprise",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "日常で確かめるなら、信頼できる聴力チェック用の単純な音を小さめで使い、左右を同じ条件で比べてください。1回だけで決めず、数日あけて同じ時間帯に試すと、体調による揺れを減らせます。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "数日あけるのは、寝不足や鼻づまりの影響を一度の結果に混ぜないためなんだね。片耳ずつ何度も大音量で聞くより、短い確認を2回か3回に分けるほうが、耳にもやさしいな。",
+      "expression": "happy",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "耳が詰まった感じがある日は、耳かきを奥まで入れないでください。耳あかを押し込んだり皮膚を傷つけたりすると、音の通り道を乱すことがあります。見えない場所を掃除するより、違和感の経過を記録するほうが役立つ場合もあります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "耳かきで解決しようとして、かえって通り道を狭くすることもあるんだね。スマホの充電口を針で触らないのと同じで、細かい場所ほど無理にいじらないほうがいいんだ。",
+      "expression": "think",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "片耳だけ急に聞こえ方が変わった、耳鳴りが増えた、会話が聞き取りにくい場合は、早めの受診が大切です。左右差を個性で片付けず、いつから、どちらで、どんな音が変わったかを伝えると相談しやすくなります。",
+      "expression": "normal",
+      "mood": "bright"
+    },
+    {
+      "speaker": "真",
+      "text": "いつから、どちらで、どんな音が変わったかをメモしておけば、病院でも説明しやすいね。音楽だけか、会話もか、急かゆっくりかで、耳が出している合図の見え方も変わりそう。",
+      "expression": "surprise",
+      "mood": "bright"
+    },
+    {
+      "speaker": "理子",
+      "text": "今日のポイントは、左右の耳は同じ音を聞いても、通り道、音を受ける細胞、脳のまとめ方まで完全にはそろわないことです。440Hzのラが少し違って聞こえるのは、その小さな差が重なった結果かもしれません。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "同じラの音でも、右耳と左耳が別々の小さなマイクとして働いていると思うと、いつものイヤホン時間が少し違って感じられるね。言われてみれば確かに、体は左右で完全に同じじゃないんだ。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "今夜音楽を聞くときは、音量を小さめにして左右を一度だけ入れ替え、違和感がイヤホンについて動くかを意識してみてください。無理に答えを出すより、耳をいたわりながら変化を観察することが大切です。",
+      "expression": "normal",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "真",
+      "text": "次回は、静かな部屋なのに自分の声だけ大きく響くのはなぜかを見ていくよ。耳と脳が作る感覚のふしぎは、眠る前の静けさにも隠れているから、次も気になりそうだね。",
+      "expression": "happy",
+      "mood": "emotional"
+    },
+    {
+      "speaker": "理子",
+      "text": "感覚のふしぎシリーズが面白かったら、まず高評価をお願いします。身近な不思議を毎日1本ずつ一緒にほどいているので、次回も見逃さないようチャンネル登録よろしくね。",
+      "expression": "laugh",
+      "mood": "bright"
+    }
+  ],
+  "thumb_info": {
+    "hook_lines": [
+      "片耳だけ",
+      "音が高い"
+    ],
+    "hook_caption": "10Hzの差",
+    "subtitle": "同じ音なのに左右で違う理由",
+    "tagline": "耳の中の小さな差を追います"
+  },
+  "channel_id": "daily-science",
+  "style": "yukkuri",
+  "applied_feedback": [],
+  "applied_analytics_feedback": true,
+  "applied_competitor_feedback": true,
+  "generated_by": "gpt",
+  "compete": null,
+  "round6": {
+    "hook_ab": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "swipe_stop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cta_rotation": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "cross_bridge": {
+      "modified": false,
+      "reason": "probability_skip"
+    },
+    "mute_safe": {
+      "safe": true,
+      "score": 95,
+      "issues": [
+        {
+          "type": "caption_too_long",
+          "line": 6,
+          "text": "気になる音は片耳ずつ確かめてみて。感覚のふしぎシリーズも、高評価のあとチャンネル",
+          "reason": "1行63字はテロップとして長すぎる（推奨: 40字以内）"
+        }
+      ],
+      "warnings": 1
+    },
+    "viral_score": {
+      "score": 21,
+      "passed": false,
+      "dimensions": {
+        "curiosity_gap": 9,
+        "emotional_impact": 0,
+        "relatability": 2,
+        "shareability": 10,
+        "debate_potential": 0
+      },
+      "channel_bonus": 0,
+      "suggestions": [
+        "驚き・恐怖・笑いの感情トリガーを追加",
+        "「あなた」「みんな」等の直接呼びかけで共感性UP",
+        "「どっち派？」型の問いかけで議論性UP"
+      ]
+    }
+  },
+  "round7": {
+    "completion_rate": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "replay_loop": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "power_word": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "retention_feedback": {
+      "skipped": true,
+      "reason": "retention is reference-only (optimization.decision_metrics = subs_per_1000_views)"
+    },
+    "originality": {
+      "original": true,
+      "max_similarity": 0.503,
+      "similar_to": "なぜ保護メガネは99%の光を止める？",
+      "template_issues": [],
+      "template_score": 0,
+      "blocked": false,
+      "history_count": 50,
+      "warn_threshold": 0.7,
+      "block_threshold": 0.85
+    },
+    "title_emoji": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "enhanced_title": "なぜ片耳だけ音が高い？10Hz差の正体"
+  },
+  "round8": {
+    "curiosity_gap": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "comment_bait": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "emotional_polarity": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "pattern_interrupt": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "subscribe_trigger": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    },
+    "contrast": {
+      "skipped": true,
+      "reason": "script_enhancers disabled for daily-science"
+    }
+  },
+  "gate_failures": [],
+  "title_quality": {
+    "score": 90,
+    "passed": true,
+    "reasons": [
+      "数字あり(+18)",
+      "感情ワード['なぜ', '正体', 'だけ'](+20)",
+      "好奇心ギャップ['？', 'なぜ'](+12)"
+    ]
+  },
+  "original_title": "なぜ片耳だけ音が高い？10Hz差の正体",
+  "title_constraints": {
+    "ok": true,
+    "violations": [],
+    "rejected_title": "なぜ片耳だけ音が高い？10Hz差の正体"
+  },
+  "entity_gate": {
+    "ok": true
+  },
+  "cross_channel_keywords": {
+    "ok": true
+  },
+  "title_gate": {
+    "cleaned": false
+  },
+  "publish_blocked": []
+}
