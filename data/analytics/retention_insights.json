@@ -1,109 +1,62 @@
 {
   "daily-science": {
     "channel_id": "daily-science",
-    "generated_at": 1789825096,
-    "analyzed_videos": 2,
+    "generated_at": 1789911451,
+    "analyzed_videos": 1,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0109,
-      "early": 0.0223,
-      "middle": 0.0052,
-      "late": 0.0051,
-      "ending": 0.0026
+      "intro": 0.0178,
+      "early": 0.0197,
+      "middle": 0.0038,
+      "late": 0.0058,
+      "ending": 0.0023
     },
     "per_video": [
       {
-        "video_id": "GR6QQfoAR3w",
-        "title": "なぜ低い声だけ壁越しに聞こえる？100Hzの正体 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 41.23,
+        "video_id": "V6sR6aoI5v4",
+        "title": "昼寝は20分が最強？午後の頭が冴えるなぜ #shorts #雑学 #豆知識",
+        "avg_view_percentage": 40.2,
         "drops": [
-          {
-            "ratio_from": 0.24,
-            "ratio_to": 0.25,
-            "drop": 0.0698,
-            "bucket": "early",
-            "audience_after": 0.6434,
-            "scenario_line": {
-              "index": 13,
-              "speaker": "真",
-              "text": "えっ、声を出すだけで胸まで震える！壁の向こうで低い声が残るのも、空気の音が壁の震えに着替えて進むからなんだね。自分の体で確かめられるのが面白いよ。",
-              "mood": "mysterious"
-            }
-          },
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
-            "drop": 0.062,
+            "drop": 0.0896,
             "bucket": "intro",
-            "audience_after": 0.8992,
+            "audience_after": 0.8439,
             "scenario_line": {
               "index": 8,
               "speaker": "理子",
-              "text": "壁に音が当たると、空気の揺れの一部は跳ね返り、一部は壁をほんの少し動かします。その壁が反対側の空気を揺らすので、音は部屋から部屋へ渡ります。壁も小さなスピーカーのように働くのです。",
+              "text": "短い昼寝が助けになるのは、午前中から積み重なった眠気を少し下げつつ、起きた後に重さが残りやすい深さへ入り込みにくいからです。午後の作業へつなげやすいんですね。",
               "mood": "calm"
             }
           },
           {
             "ratio_from": 0.13,
             "ratio_to": 0.14,
-            "drop": 0.0504,
+            "drop": 0.0752,
             "bucket": "intro",
-            "audience_after": 0.9612,
+            "audience_after": 0.9335,
             "scenario_line": {
-              "index": 7,
-              "speaker": "真",
-              "text": "一秒で100回でも見えない速さなのに、1000回はさらに細かいんだね。大きくゆったりした揺れと、細かく速い揺れでは、壁が受け取るときの反応も変わるの？",
-              "mood": "mysterious"
-            }
-          }
-        ],
-        "matched_scenario_title": "なぜ低い声だけ壁越しに聞こえる？100Hzの正体"
-      },
-      {
-        "video_id": "wVGirGF9iSg",
-        "title": "なぜ強い光でくしゃみ？鼻が突然反応する理由 #shorts #雑学 #豆知識",
-        "avg_view_percentage": 53.09,
-        "drops": [
-          {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.0879,
-            "bucket": "early",
-            "audience_after": 0.8056,
-            "scenario_line": {
-              "index": 10,
+              "index": 8,
               "speaker": "理子",
-              "text": "その考え方が有力です。目が急に明るさへ対応するときの信号が、近くを走る鼻側のくしゃみの合図にも混ざり、発射の準備まで始めるのではないかと考えられています。\nただし、脳のどの場所で起きるかは、まだ完全には決着していません。",
+              "text": "短い昼寝が助けになるのは、午前中から積み重なった眠気を少し下げつつ、起きた後に重さが残りやすい深さへ入り込みにくいからです。午後の作業へつなげやすいんですね。",
               "mood": "calm"
             }
           },
           {
-            "ratio_from": 0.14,
-            "ratio_to": 0.15,
-            "drop": 0.0556,
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0636,
             "bucket": "intro",
-            "audience_after": 1.0833,
+            "audience_after": 1.0087,
             "scenario_line": {
               "index": 7,
               "speaker": "真",
-              "text": "ああ、朝にカーテンを開けたときの、目がきゅっとなる感覚だね！数秒で明るさに慣れるのは便利だけれど、急に太陽を浴びたときほど反応が大きいなら、鼻のほうへ影響しても不思議ではないかも。",
-              "mood": "calm"
-            }
-          },
-          {
-            "ratio_from": 0.13,
-            "ratio_to": 0.14,
-            "drop": 0.0555,
-            "bucket": "intro",
-            "audience_after": 1.1389,
-            "scenario_line": {
-              "index": 6,
-              "speaker": "理子",
-              "text": "まず目に強い光が入ると、瞳は入ってくる光の量を減らそうとして小さくなります。\n暗い部屋から明るい場所へ出たとき、あなたが思わず目を細めるのは、カメラの絞りのように目が急いで明るさを調節しているからです。",
+              "text": "たとえるなら、同じ20分の充電でも、スマホの残量が70％のときと3％のときでは戻り方が違うのと同じだね。眠気の残量によって、昼寝の効き方が変わるんだ。",
               "mood": "calm"
             }
           }
         ],
-        "matched_scenario_title": "なぜ強い光でくしゃみ？鼻が突然反応する理由"
+        "matched_scenario_title": "昼寝は20分が最強？午後の頭が冴えるなぜ"
       }
     ],
     "gpt_insights": null,
@@ -111,34 +64,350 @@
   },
   "scp-lab": {
     "channel_id": "scp-lab",
-    "skipped": true,
-    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789825254
+    "generated_at": 1789911704,
+    "analyzed_videos": 1,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.01,
+      "early": 0.0245,
+      "middle": 0.0032,
+      "late": 0.0066,
+      "ending": 0.0029
+    },
+    "per_video": [
+      {
+        "video_id": "OZjb0lRSg-k",
+        "title": "なぜ全館の時計が1440分止まった？SCP-5219 #shorts #SCP #SCP解説",
+        "avg_view_percentage": 37.39,
+        "drops": [
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.1033,
+            "bucket": "intro",
+            "audience_after": 0.9298,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "クロ",
+              "text": "SCP-███はその親時計そのものへ干渉し、午前二時十七分だけを繰り返す信号に変えた。電池式の壁時計まで止まったのは、針を動かす人間側が混乱した結果だ。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0992,
+            "bucket": "early",
+            "audience_after": 0.8306,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "クロ",
+              "text": "SCP-███はその親時計そのものへ干渉し、午前二時十七分だけを繰り返す信号に変えた。電池式の壁時計まで止まったのは、針を動かす人間側が混乱した結果だ。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.16,
+            "ratio_to": 0.17,
+            "drop": 0.0661,
+            "bucket": "early",
+            "audience_after": 0.7645,
+            "scenario_line": {
+              "index": 10,
+              "speaker": "シロ",
+              "text": "でもこれ、半分は間違いなんだ。記録上、時計は壊れていなかったのに、監視員の九十二パーセントが針が逆回転したと証言し、映像にも異常が残ったわ。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "なぜ全館の時計が1440分止まった？SCP-5219"
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "pokemon-lab": {
     "channel_id": "pokemon-lab",
-    "skipped": true,
-    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789825121
+    "generated_at": 1789911559,
+    "analyzed_videos": 5,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.0129,
+      "early": 0.0213,
+      "middle": 0.0057,
+      "late": 0.0044,
+      "ending": 0.0019
+    },
+    "per_video": [
+      {
+        "video_id": "vlyVdRniB70",
+        "title": "ピカチュウの電気袋に隠された3つの秘密…速さの理由がヤバい #shorts #ポケモン #ポケモン雑学",
+        "avg_view_percentage": 37.0,
+        "drops": [
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.0711,
+            "bucket": "intro",
+            "audience_after": 0.9344
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0655,
+            "bucket": "intro",
+            "audience_after": 0.8689
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0547,
+            "bucket": "intro",
+            "audience_after": 0.8142
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "MmeMlv_iWzA",
+        "title": "アンノーン28種類コンプしても完成にならない!? #shorts #ポケモン #ポケモン雑学",
+        "avg_view_percentage": 46.33,
+        "drops": [
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.21,
+            "drop": 0.0827,
+            "bucket": "early",
+            "audience_after": 0.6694
+          },
+          {
+            "ratio_from": 0.19,
+            "ratio_to": 0.2,
+            "drop": 0.0826,
+            "bucket": "early",
+            "audience_after": 0.7521
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0661,
+            "bucket": "intro",
+            "audience_after": 0.9835
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "ki6CIPSsMhw",
+        "title": "ドラパルト、子どもを音速超えで撃ち出すってマジ!? #shorts #ポケモン #ポケモン雑学",
+        "avg_view_percentage": 44.85,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0831,
+            "bucket": "early",
+            "audience_after": 0.9811
+          },
+          {
+            "ratio_from": 0.18,
+            "ratio_to": 0.19,
+            "drop": 0.0717,
+            "bucket": "early",
+            "audience_after": 0.7962
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0566,
+            "bucket": "intro",
+            "audience_after": 1.0642
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "qDEhVo5Jqg0",
+        "title": "ソーナンスが反撃しかできない設計の狙いが深すぎる #shorts #ポケモン #ポケモン雑学",
+        "avg_view_percentage": 47.22,
+        "drops": [
+          {
+            "ratio_from": 0.17,
+            "ratio_to": 0.18,
+            "drop": 0.0561,
+            "bucket": "early",
+            "audience_after": 0.8491
+          },
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.056,
+            "bucket": "intro",
+            "audience_after": 0.9957
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0431,
+            "bucket": "intro",
+            "audience_after": 0.9526
+          }
+        ],
+        "matched_scenario_title": null
+      },
+      {
+        "video_id": "1ZQj9q7CU90",
+        "title": "ロケット団の幹部だけ口調が別キャラ級？3作品で徹底比較の本当 #shorts #ポケモン #ポケモン雑学",
+        "avg_view_percentage": 30.8,
+        "drops": [
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.1225,
+            "bucket": "intro",
+            "audience_after": 0.8367
+          },
+          {
+            "ratio_from": 0.23,
+            "ratio_to": 0.24,
+            "drop": 0.1224,
+            "bucket": "early",
+            "audience_after": 0.4898
+          },
+          {
+            "ratio_from": 0.22,
+            "ratio_to": 0.23,
+            "drop": 0.0817,
+            "bucket": "early",
+            "audience_after": 0.6122
+          }
+        ],
+        "matched_scenario_title": null
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "yokai-watch": {
     "channel_id": "yokai-watch",
-    "skipped": true,
-    "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789825369
+    "generated_at": 1789911830,
+    "analyzed_videos": 1,
+    "aggregate_drops_by_bucket": {
+      "intro": 0.0072,
+      "early": 0.023,
+      "middle": 0.008,
+      "late": 0.0028,
+      "ending": 0.0019
+    },
+    "per_video": [
+      {
+        "video_id": "79-LcBgCrJw",
+        "title": "二口女の後頭部の口は飢饉の記憶なのか 恒一 #shorts #妖怪 #都市伝説",
+        "avg_view_percentage": 37.58,
+        "drops": [
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.31,
+            "drop": 0.0507,
+            "bucket": "early",
+            "audience_after": 0.443,
+            "scenario_line": {
+              "index": 16,
+              "speaker": "ミナモ調査員",
+              "text": "江戸時代には享保、天明、天保という大きな飢饉が繰り返された。一度きりの災害ではなく、祖父母の失敗談や恐怖として残るほど何度も来たから、食べる口の数は家の中で数えたくない問題になりやすかったんだ。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.23,
+            "ratio_to": 0.24,
+            "drop": 0.0506,
+            "bucket": "early",
+            "audience_after": 0.6266,
+            "scenario_line": {
+              "index": 12,
+              "speaker": "ミナモ調査員",
+              "text": "問題はこの次なんだ。二口女の物語には、食べない妻を得だと考えた男の視線が最初からある。飢えの恐怖だけでなく、誰が食べ、誰が食べないと決めるのかという、家の中の冷たい力関係が見えてくる。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.0443,
+            "bucket": "early",
+            "audience_after": 0.8861,
+            "scenario_line": {
+              "index": 8,
+              "speaker": "ケンタ",
+              "text": "食費が一人分だと思っていたら、実際は二人分必要だった家みたいだね。今なら冷蔵庫の飲み物が減るだけでも気付けるけど、米一粒の重さが冬越しを左右する時代なら、毎日の減り方はもっと切実だよ。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "二口女の後頭部の口は飢饉の記憶なのか 恒一"
+      }
+    ],
+    "gpt_insights": null,
+    "gpt_skipped_reason": "ANTHROPIC_API_KEY が無効（認証エラー）"
   },
   "2ch-matome": {
     "channel_id": "2ch-matome",
-    "generated_at": 1789824737,
-    "analyzed_videos": 5,
+    "generated_at": 1789911144,
+    "analyzed_videos": 6,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0096,
-      "early": 0.0247,
+      "intro": 0.0097,
+      "early": 0.0241,
       "middle": 0.0055,
-      "late": 0.0028,
-      "ending": 0.002
+      "late": 0.0034,
+      "ending": 0.0023
     },
     "per_video": [
+      {
+        "video_id": "Q7GXzkaZNck",
+        "title": "深夜時のLINE既読だけ遺言みたいに怖くなる理由 #shorts #2ch #面白いスレ",
+        "avg_view_percentage": 51.790000000000006,
+        "drops": [
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.1224,
+            "bucket": "early",
+            "audience_after": 0.898,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "ゴロー",
+              "text": "実際には夜勤、寝落ちからの目覚め、動画の見過ぎなど普通の事情も多い。それでも深夜は生活圏が見えず、説明のない行動に感じる。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.102,
+            "bucket": "intro",
+            "audience_after": 1.0204,
+            "scenario_line": {
+              "index": 9,
+              "speaker": "ゴロー",
+              "text": "実際には夜勤、寝落ちからの目覚め、動画の見過ぎなど普通の事情も多い。それでも深夜は生活圏が見えず、説明のない行動に感じる。",
+              "mood": "calm"
+            }
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.26,
+            "drop": 0.0612,
+            "bucket": "early",
+            "audience_after": 0.7143,
+            "scenario_line": {
+              "index": 15,
+              "speaker": "ユイ",
+              "text": "睡眠研究では深夜帯ほど感情のブレーキが弱まり、同じ既読でも「拒絶かも」と読む率が昼より跳ね上がるらしい。",
+              "mood": "calm"
+            }
+          }
+        ],
+        "matched_scenario_title": "深夜時のLINE既読だけ遺言みたいに怖くなる理由"
+      },
       {
         "video_id": "_2Et6OcEbTI",
         "title": "ワイの財布から毎月消える謎の正体が判明したｗ #shorts #2ch #面白いスレ",
@@ -290,7 +559,7 @@
   },
   "fake-paper": {
     "channel_id": "fake-paper",
-    "generated_at": 1789825100,
+    "generated_at": 1789911455,
     "analyzed_videos": 1,
     "aggregate_drops_by_bucket": {
       "intro": 0.0122,
@@ -335,7 +604,7 @@
   },
   "akashic-librarian": {
     "channel_id": "akashic-librarian",
-    "generated_at": 1789824738,
+    "generated_at": 1789911145,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0169,
@@ -411,11 +680,11 @@
     "channel_id": "clip-animal",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789824739
+    "generated_at": 1789911146
   },
   "clip-fukada": {
     "channel_id": "clip-fukada",
-    "generated_at": 1789824750,
+    "generated_at": 1789911159,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0155,
@@ -547,7 +816,7 @@
   },
   "clip-kaneko": {
     "channel_id": "clip-kaneko",
-    "generated_at": 1789824779,
+    "generated_at": 1789911192,
     "analyzed_videos": 2,
     "aggregate_drops_by_bucket": {
       "intro": 0.0047,
@@ -621,7 +890,7 @@
   },
   "clip-lab": {
     "channel_id": "clip-lab",
-    "generated_at": 1789824794,
+    "generated_at": 1789911209,
     "analyzed_videos": 4,
     "aggregate_drops_by_bucket": {
       "intro": 0.0168,
@@ -755,20 +1024,67 @@
     "channel_id": "company-facts",
     "skipped": true,
     "reason": "no retention curves saved — sync with fetch_retention_for > 0",
-    "generated_at": 1789824938
+    "generated_at": 1789911339
   },
   "socio-rx": {
     "channel_id": "socio-rx",
-    "generated_at": 1789825274,
-    "analyzed_videos": 3,
+    "generated_at": 1789911732,
+    "analyzed_videos": 5,
     "aggregate_drops_by_bucket": {
-      "intro": 0.0133,
-      "early": 0.0241,
-      "middle": 0.0031,
-      "late": 0.0045,
-      "ending": 0.0029
+      "intro": 0.0174,
+      "early": 0.0232,
+      "middle": 0.0029,
+      "late": 0.0035,
+      "ending": 0.002
     },
     "per_video": [
+      {
+        "video_id": "RlpZO56IvzU",
+        "title": "地震直後、あなたを救うのは「顔見知り」かもしれない理由 #shorts #社会学 #自己啓発",
+        "avg_view_percentage": 66.49,
+        "drops": [
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.1711,
+            "bucket": "intro",
+            "audience_after": 1.2246,
+            "scenario_line": {
+              "index": 5,
+              "speaker": null,
+              "text": "ここで重要になるのが、弱い紐帯という考え方である。\n親友ではないが、互いを認識している関係を指す。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.139,
+            "bucket": "early",
+            "audience_after": 0.9947,
+            "scenario_line": {
+              "index": 5,
+              "speaker": null,
+              "text": "ここで重要になるのが、弱い紐帯という考え方である。\n親友ではないが、互いを認識している関係を指す。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.0909,
+            "bucket": "intro",
+            "audience_after": 1.1337,
+            "scenario_line": {
+              "index": 5,
+              "speaker": null,
+              "text": "ここで重要になるのが、弱い紐帯という考え方である。\n親友ではないが、互いを認識している関係を指す。",
+              "mood": "mysterious"
+            }
+          }
+        ],
+        "matched_scenario_title": "地震直後、あなたを救うのは「顔見知り」かもしれない理由"
+      },
       {
         "video_id": "9EIbN-1gito",
         "title": "短眠の人が自信満々に見えるのは能力より自己効力感だった処方箋 #shorts #社会学 #自己啓発",
@@ -817,30 +1133,77 @@
         "matched_scenario_title": "短眠の人が自信満々に見えるのは能力より自己効力感だった処方箋"
       },
       {
+        "video_id": "-pLJg_Vp4V0",
+        "title": "寝不足で自信が消える人、短眠者との決定的な違い処方箋 #shorts #社会学 #自己啓発",
+        "avg_view_percentage": 30.210000000000004,
+        "drops": [
+          {
+            "ratio_from": 0.12,
+            "ratio_to": 0.13,
+            "drop": 0.1323,
+            "bucket": "intro",
+            "audience_after": 0.9363,
+            "scenario_line": {
+              "index": 3,
+              "speaker": null,
+              "text": "鍵になるのは睡眠時間そのものより、自分は行動をやり切れるという感覚である。\n心理学では自己効力感と呼ぶ。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.14,
+            "ratio_to": 0.15,
+            "drop": 0.1127,
+            "bucket": "intro",
+            "audience_after": 0.7255,
+            "scenario_line": {
+              "index": 3,
+              "speaker": null,
+              "text": "鍵になるのは睡眠時間そのものより、自分は行動をやり切れるという感覚である。\n心理学では自己効力感と呼ぶ。",
+              "mood": "mysterious"
+            }
+          },
+          {
+            "ratio_from": 0.13,
+            "ratio_to": 0.14,
+            "drop": 0.0981,
+            "bucket": "intro",
+            "audience_after": 0.8382,
+            "scenario_line": {
+              "index": 3,
+              "speaker": null,
+              "text": "鍵になるのは睡眠時間そのものより、自分は行動をやり切れるという感覚である。\n心理学では自己効力感と呼ぶ。",
+              "mood": "mysterious"
+            }
+          }
+        ],
+        "matched_scenario_title": "寝不足で自信が消える人、短眠者との決定的な違い処方箋"
+      },
+      {
         "video_id": "kl7XGQc4Abs",
         "title": "原油高の正体家計に届く #shorts #社会学 #自己啓発",
-        "avg_view_percentage": 29.909999999999997,
+        "avg_view_percentage": 30.25,
         "drops": [
           {
             "ratio_from": 0.14,
             "ratio_to": 0.15,
-            "drop": 0.122,
+            "drop": 0.125,
             "bucket": "intro",
-            "audience_after": 0.878
+            "audience_after": 0.875
           },
           {
             "ratio_from": 0.16,
             "ratio_to": 0.17,
-            "drop": 0.0976,
+            "drop": 0.1,
             "bucket": "early",
-            "audience_after": 0.7073
+            "audience_after": 0.7
           },
           {
-            "ratio_from": 0.2,
-            "ratio_to": 0.21,
-            "drop": 0.0732,
+            "ratio_from": 0.15,
+            "ratio_to": 0.16,
+            "drop": 0.075,
             "bucket": "early",
-            "audience_after": 0.4878
+            "audience_after": 0.8
           }
         ],
         "matched_scenario_title": null
