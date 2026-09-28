@@ -122,17 +122,25 @@ def extract_claims(scenario: Dict[str, Any]) -> List[Dict[str, Any]]:
         if not main:
             continue
         for metric, mpat, upat in _METRICS:
-            m = re.search(rf"(?:{mpat})\D{{0,6}}({_NUM_RE})\s*({upat})", main)
+            m = re.search(rf"(?:{mpat})(\D{{0,6}})({_NUM_RE})\s*({upat})"
+                          rf"(台|超|以上|未満|前後|程度|近く)?", main)
             if not m:
                 continue
-            value = _norm_num(m.group(1))
+            # 【2026-09-28】点の主張でないものは台帳に載せない・突き合わせない。
+            #   「平均年齢との差 20歳超」→ 差であって平均年齢ではない（gap に「差」）
+            #   「年収400万円台も」「1000万円超」→ 幅・下限であって実測値ではない
+            # これらを点の値として既存行と比べた結果、正しい台本が
+            # 桁違いの conflict として誤ブロックされていた（09-28 company-facts）。
+            if "差" in m.group(1) or m.group(4):
+                break
+            value = _norm_num(m.group(2))
             if value is None:
                 continue
             out.append({
                 "entity": entity,
                 "metric": metric,
                 "value": value,
-                "unit": m.group(2),
+                "unit": m.group(3),
                 "period": extract_period(sub) or extract_period(main),
                 "line": idx,
                 "fact_main": main,
@@ -223,7 +231,23 @@ def check(channel_id: str, scenario: Dict[str, Any]) -> List[Dict[str, Any]]:
         if same_period:
             if any(r.get("value") == c["value"] for r in same_period):
                 continue  # 同じ期・同じ値＝ただの再掲
-            hit, kind = same_period[0], "conflict"
+            # 【2026-09-28】期不明どうしの相違は、実際には年度違いの正しい数字である
+            # ことが大半（良品計画 年間休日 123→117日 / 三菱商事 平均年齢 42.4→42.7歳）。
+            # ここを無条件 conflict にした結果、company-facts は 09-28 に全3枠が
+            # ブロックされ投稿0本になった。期が両方不明のときは相対差 8% 超のみ
+            # 矛盾とする（リクルート 1138→400万円 のような桁違い級は引き続き止める。
+            # 期が明記された同一期どうしの相違は従来どおり無条件 conflict）。
+            if not (c["period"] or ""):
+                materially = [
+                    r for r in same_period
+                    if abs((r.get("value") or 0) - c["value"])
+                    > 0.08 * max(abs(c["value"]), abs(r.get("value") or 0), 1e-9)
+                ]
+                if not materially:
+                    continue
+                hit, kind = materially[0], "conflict"
+            else:
+                hit, kind = same_period[0], "conflict"
         else:
             diff = [r for r in same_metric if r.get("value") != c["value"]]
             if not diff:

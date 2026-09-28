@@ -1261,7 +1261,12 @@ class ScenarioGenerator:
                 )
             if disclosed:
                 print(f"  📅 期を注記して両立させました: {disclosed} 行")
-            _fl.record(channel.id, result, source="generator")
+            # 【2026-09-28】conflict がある台本は公開されない（autopilot が枠ごと
+            # 落とす）のに record していたため、視聴者が見ていない数字が台帳に積まれ、
+            # 以後の生成がその幻の数字と矛盾して連鎖ブロックする自家中毒が起きていた
+            # （09-28 company-facts 投稿0本の一因）。公開に進む台本だけ台帳に積む。
+            if not conflicts:
+                _fl.record(channel.id, result, source="generator")
             result["fact_consistency"] = {
                 "ok": not conflicts,
                 "conflicts": conflicts,
