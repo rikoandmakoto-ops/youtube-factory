@@ -864,24 +864,44 @@ def _run_autopilot(
         gen_type = "both"
 
     try:
-        scenario = sg.generate(
-            ch,
-            theme_override=theme,
-            target_duration=max(60, duration_min * 60),
-        )
-        try:
-            sg.save_scenario(scenario)
-        except Exception as e:
-            # 保存が落ちると過去テーマに残らず、重複ゲートが次回この題材を見逃す
-            print(f"⚠️ scenario save failed (dedup will not see this theme): {e}")
-        # 【2026-09-14】ゲート未解消（publish_blocked）の台本はレンダリングもしない。
-        # 公開できない動画に 20〜60 分の描画を使わず、枠を落として通知する。
-        blocked = scenario.get("publish_blocked") or []
-        if blocked:
+        # 【2026-09-30】ゲートで台本がブロックされたら、枠を捨てる前に別テーマで
+        # 作り直す（最大2回）。09-28〜29 に company-facts が数値矛盾ゲートで
+        # 1日3枠中2〜3枠を失った。ブロック自体は正しくても、枠ごと落とすと
+        # チャンネルの出力が止まる。テーマは山ほどあるので隣のテーマで埋める。
+        scenario = None
+        for attempt in range(3):
+            if attempt > 0:
+                theme = _pop_or_refill_theme(channel_id)
+                if not theme:
+                    print(f"  ↻ Autopilot {channel_id}: 代替テーマが尽きました（{attempt}回目）")
+                    break
+                print(f"  ↻ Autopilot {channel_id}: 別テーマで再試行 {attempt}/2 = "
+                      f"{theme.get('title', '?')[:60]}")
+            scenario = sg.generate(
+                ch,
+                theme_override=theme,
+                target_duration=max(60, duration_min * 60),
+            )
+            try:
+                sg.save_scenario(scenario)
+            except Exception as e:
+                # 保存が落ちると過去テーマに残らず、重複ゲートが次回この題材を見逃す
+                print(f"⚠️ scenario save failed (dedup will not see this theme): {e}")
+            # 【2026-09-14】ゲート未解消（publish_blocked）の台本はレンダリングもしない。
+            # 公開できない動画に 20〜60 分の描画を使わない。
+            blocked = scenario.get("publish_blocked") or []
+            if not blocked:
+                break
+            api_phase4.notify_event(
+                "warning" if attempt < 2 else "error",
+                f"⛔ Autopilot [{ch.name}] ゲートで公開不可 (試行{attempt + 1}/3): "
+                f"{scenario.get('title', '')} — " + " / ".join(str(b) for b in blocked),
+            )
+        if scenario is None or (scenario.get("publish_blocked") or []):
             api_phase4.notify_event(
                 "error",
-                f"⛔ Autopilot [{ch.name}] この枠は公開を止めました: {scenario.get('title', '')} — "
-                + " / ".join(str(b) for b in blocked),
+                f"⛔ Autopilot [{ch.name}] この枠は公開を止めました: "
+                f"{(scenario or {}).get('title', '')} — 代替テーマ含め全滅",
             )
             return
         job_id = queue.submit(

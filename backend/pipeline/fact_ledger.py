@@ -237,6 +237,9 @@ def check(channel_id: str, scenario: Dict[str, Any]) -> List[Dict[str, Any]]:
             # ブロックされ投稿0本になった。期が両方不明のときは相対差 8% 超のみ
             # 矛盾とする（リクルート 1138→400万円 のような桁違い級は引き続き止める。
             # 期が明記された同一期どうしの相違は従来どおり無条件 conflict）。
+            # 期が明記された同一期どうしの相違は差の大小によらず conflict
+            # （テストが固定する設計意図: 同じ期に違う値は必ず止める。
+            # 微差の誤ブロックで枠が死ぬ問題は autopilot 側のテーマ再試行が吸収する）。
             if not (c["period"] or ""):
                 materially = [
                     r for r in same_period
