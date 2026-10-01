@@ -3339,6 +3339,15 @@ class ScenarioGenerator:
                 excluded.append(t)
 
         excluded_block = "\n".join(f"- {t}" for t in excluded) if excluded else "(なし)"
+        # 【2026-10-01】theme_blacklist をプロンプトに注入する。これまで補充AIは
+        # 禁止語を知らされておらず、「あくび」「寝言」等の停止済み題材を補充のたびに
+        # 再提案 → pop/最終ゲートで弾かれるループになっていた（daily-science で
+        # seed_blacklist_collision 警告が2日連続）。正規表現指定（re:）は表示だけ
+        # パターンを示し、確実な除去は下の返却前フィルタが担う。
+        _suggest_blacklist = self._channel_theme_blacklist(channel)
+        blacklist_block = "\n".join(
+            f"- {w[3:] if w.startswith('re:') else w}" for w in _suggest_blacklist
+        ) if _suggest_blacklist else "(なし)"
         past_seen = set()
         past_unique: List[str] = []
         for t in past_themes:
@@ -3428,6 +3437,9 @@ class ScenarioGenerator:
 # 除外リスト（重複・言い換え禁止）
 {excluded_block}
 
+# 禁止題材（運用側で停止中の語。これらを含む／これらを題材にするテーマは提案禁止）
+{blacklist_block}
+
 # 直近の過去テーマ（続編・発展系の元ネタとして参照可）
 {past_block}
 
@@ -3474,6 +3486,12 @@ class ScenarioGenerator:
                     continue
                 title = (t.get("title") or "").strip()
                 if not title:
+                    continue
+                # theme_blacklist はプロンプト注入（上）だけでは守られないことがある
+                # ので、返却前にも硬く弾く（正規表現 re: もここで効く）。
+                bl_hit = self._blacklisted_reason(title, _suggest_blacklist)
+                if bl_hit:
+                    print(f"  ⛔ suggest filtered by blacklist『{bl_hit}』: '{title}'")
                     continue
                 hit = _td.find_lexical_duplicate(title, excluded)
                 # 候補同士の重複も畳む（同一バッチ内の言い換え重複を防ぐ）
