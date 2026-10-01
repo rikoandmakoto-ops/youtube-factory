@@ -18,7 +18,7 @@ import re
 import time
 import uuid
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 from . import store as analytics_store
 
@@ -121,22 +121,16 @@ def _scenario_summary(channel_id: str, video_title: Optional[str]) -> Optional[s
 # Claude suggestion
 # ---------------------------------------------------------------------
 
-def _suggest_with_claude(
+def _build_series_prompts(
     *,
-    channel_id: str,
     channel_name: str,
     channel_concept: str,
     viral_title: str,
     viral_views: int,
     viral_ratio: float,
     scenario_summary: Optional[str],
-) -> Optional[List[Dict[str, str]]]:
-    try:
-        from pipeline import claude_client
-    except Exception:
-        return None
-    if not claude_client.has_api_key():
-        return None
+) -> Tuple[str, str]:
+    """(system, user) を返す。Claude / GPT のどちらで呼んでも同じ内容を使う。"""
     user = (
         f"チャンネル名: {channel_name}\n"
         f"チャンネルコンセプト: {channel_concept}\n\n"
@@ -159,11 +153,10 @@ def _suggest_with_claude(
         "あなたは YouTube チャンネル運営の編集ディレクター。"
         "バズ動画の余韻と検索流入を活かし、リピート視聴される続編を企画する。"
     )
-    res = claude_client.call_claude_json(
-        system=system, user=user,
-        temperature=0.6, max_tokens=1500,
-        channel_id=channel_id, purpose="series_suggest",
-    )
+    return system, user
+
+
+def _parse_suggestions(res: Any) -> Optional[List[Dict[str, str]]]:
     if not res or not isinstance(res, dict):
         return None
     suggestions = res.get("suggestions")
@@ -183,6 +176,75 @@ def _suggest_with_claude(
             "rationale": (s.get("rationale") or "").strip()[:300],
         })
     return out
+
+
+def _suggest_with_claude(
+    *,
+    channel_id: str,
+    channel_name: str,
+    channel_concept: str,
+    viral_title: str,
+    viral_views: int,
+    viral_ratio: float,
+    scenario_summary: Optional[str],
+) -> Optional[List[Dict[str, str]]]:
+    try:
+        from pipeline import claude_client
+    except Exception:
+        return None
+    if not claude_client.has_api_key():
+        return None
+    system, user = _build_series_prompts(
+        channel_name=channel_name, channel_concept=channel_concept,
+        viral_title=viral_title, viral_views=viral_views,
+        viral_ratio=viral_ratio, scenario_summary=scenario_summary,
+    )
+    res = claude_client.call_claude_json(
+        system=system, user=user,
+        temperature=0.6, max_tokens=1500,
+        channel_id=channel_id, purpose="series_suggest",
+    )
+    return _parse_suggestions(res)
+
+
+def _suggest_with_gpt(
+    *,
+    channel_id: str,
+    channel_name: str,
+    channel_concept: str,
+    viral_title: str,
+    viral_views: int,
+    viral_ratio: float,
+    scenario_summary: Optional[str],
+) -> Optional[List[Dict[str, str]]]:
+    """GPT フォールバック。
+
+    【2026-10-01】ANTHROPIC_API_KEY が 08-15 から 401 のため、バズ続編エンジンは
+    1ヶ月半ずっと沈黙していた（pdca_history の「バズ続編投入数」が全日 0）。
+    続編は登録増の主レバーなので、Claude 不応答時は本文生成と同じ GPT で代替する。
+    """
+    try:
+        from main import scenario_generator as sg  # type: ignore
+    except Exception:
+        return None
+    if sg is None or not getattr(sg, "api_key", None):
+        return None
+    system, user = _build_series_prompts(
+        channel_name=channel_name, channel_concept=channel_concept,
+        viral_title=viral_title, viral_views=viral_views,
+        viral_ratio=viral_ratio, scenario_summary=scenario_summary,
+    )
+    try:
+        raw = sg._call_gpt(
+            [{"role": "system", "content": system},
+             {"role": "user", "content": user}],
+            temperature=0.6, max_tokens=1500,
+        )
+        res = sg._extract_json(raw)
+    except Exception as e:
+        print(f"  ⚠️ series_engine [{channel_id}]: GPT fallback failed: {e}")
+        return None
+    return _parse_suggestions(res)
 
 
 def _core_topic(viral_title: str, limit: int = 26) -> str:
@@ -282,7 +344,7 @@ def detect_for_channel(
             continue
 
         summary = _scenario_summary(channel_id, vv.get("title"))
-        sug = _suggest_with_claude(
+        _sugkw = dict(
             channel_id=channel_id,
             channel_name=channel_name,
             channel_concept=channel_concept,
@@ -291,6 +353,11 @@ def detect_for_channel(
             viral_ratio=float(vv.get("viral_ratio") or 0.0),
             scenario_summary=summary,
         )
+        sug = _suggest_with_claude(**_sugkw)
+        if not sug:
+            sug = _suggest_with_gpt(**_sugkw)
+            if sug:
+                print(f"  🔁 series_engine [{channel_id}]: Claude不応答 → GPTで続編候補を生成")
         if sug is None or not sug:
             # 決め打ちフォールバックは既定で使わない（2026-09-04）。
             # ANTHROPIC_API_KEY が無い間ずっとこの3テンプレが採用され、
