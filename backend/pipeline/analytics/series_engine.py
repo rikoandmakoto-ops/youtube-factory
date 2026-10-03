@@ -178,6 +178,36 @@ def _parse_suggestions(res: Any) -> Optional[List[Dict[str, str]]]:
     return out
 
 
+def _filter_hard_gates(channel_id: str, ch, sug: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    """続編候補から、生成段で必ず硬く却下されるもの（実在人物名・blacklist）を落とす。
+
+    scenario_generator のゲート実装をそのまま借りる。generator が取れない環境
+    （テスト等）ではフィルタ無しで返す — その場合も生成段のゲートが最終防衛線。
+    """
+    try:
+        from main import scenario_generator as sg  # type: ignore
+    except Exception:
+        return sug
+    if sg is None or ch is None:
+        return sug
+    kept: List[Dict[str, str]] = []
+    for s in sug:
+        title = (s.get("title") or "").strip()
+        try:
+            eh = sg._entity_hit(ch, title)
+            if eh:
+                print(f"  ⛔ series候補を実在人物/IPで除外: '{title}' ←『{eh.matched}』")
+                continue
+            bl = sg._blacklisted_reason(title, sg._channel_theme_blacklist(ch))
+            if bl:
+                print(f"  ⛔ series候補をblacklistで除外: '{title}' ←『{bl}』")
+                continue
+        except Exception as e:
+            print(f"  ⚠️ series gate check failed ({channel_id}): {e}")
+        kept.append(s)
+    return kept
+
+
 def _suggest_with_claude(
     *,
     channel_id: str,
@@ -358,6 +388,13 @@ def detect_for_channel(
             sug = _suggest_with_gpt(**_sugkw)
             if sug:
                 print(f"  🔁 series_engine [{channel_id}]: Claude不応答 → GPTで続編候補を生成")
+        # 【2026-10-03】続編候補にも生成段と同じ硬いゲート（実在人物名/第三者IP・
+        # theme_blacklist）を通す。10-02 に company-facts の続編として
+        # 「大谷翔平『年収160億円』」等の実名タイトルが承認→キュー投入されていた。
+        # 実名は生成時に entity gate で必ず却下されるため枠の無駄撃ちになるうえ、
+        # 実名動画は過去に非公開化対応した経緯がある（fake-paper 大谷/久保）。
+        if sug:
+            sug = _filter_hard_gates(channel_id, ch, sug)
         if sug is None or not sug:
             # 決め打ちフォールバックは既定で使わない（2026-09-04）。
             # ANTHROPIC_API_KEY が無い間ずっとこの3テンプレが採用され、

@@ -599,7 +599,7 @@
       "days_of_week": [
         0,
         1,
-        2
+        6
       ],
       "hour": 17,
       "minute": 0,
@@ -652,7 +652,20 @@
     "duration_minutes": 12,
     "gen_type": "short",
     "publish_lead_minutes": 45,
-    "theme_queue": [],
+    "theme_queue": [
+      {
+        "id": "d41ced1c",
+        "title": "雇用統計から見る企業の実態",
+        "angle": "最新の雇用統計を元に企業の年収を分析！",
+        "priority": "high",
+        "source": "trend_scanner"
+      },
+      {
+        "id": "260af65d",
+        "title": "三菱商事2033万円の正体｜賞与はいくら？",
+        "angle": "平均年収を月例給与・賞与・年齢別レンジに分解し、「若手でも高収入なのか」「誰が平均を押し上げるのか」を数字で解説する。"
+      }
+    ],
     "auto_optimize_schedule": true,
     "_pdca_note_20260913_orch": "【2026-09-13 指揮者】09-09 以降 OAuth 失効で全ch公開停止中（生成は継続）。コホートが 09-08 で凍結しているため、投稿枠・voice_style・スタイルルールは一切変更しない（同一データでの二重意思決定を避ける）。本日の変更はテーマキュー在庫の補充のみ。",
     "_schedule_changes": [
