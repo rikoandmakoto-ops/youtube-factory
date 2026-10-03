@@ -2910,6 +2910,73 @@ class ScenarioGenerator:
             except Exception as e:
                 print(f"  ⚠️ ShortsLengthGuard enforce_band failed: {e}")
 
+        # Phase V2: 最終状態の再検証と修復（2026-10-03）
+        # Phase V の検証は R6〜R8・尺強制の「前」に走る助言で、エンハンサーが
+        # 加筆・トリムした最終状態は誰も検証していなかった（検証failの台本が
+        # そのまま放送されていた）。ここで最終 short_scenario を再検証し、
+        #   - CTA 欠落 → cta_enforcer.enforce_final_cta で決定的に修復
+        #   - 冒頭フック不合格 → 1回だけ GPT で先頭行をフック型に書き直し
+        # それでも不合格なら final_validation に記録して PDCA で追えるようにする
+        # （無人運転で生成ゼロを避けるため、公開自体は止めない）。
+        if short_lines_data:
+            try:
+                from pipeline.scenario_validator import guard as _guard_final
+                _ch_raw_v2 = {}
+                try:
+                    _ch_raw_v2 = channel._raw or {}
+                except AttributeError:
+                    pass
+
+                def _texts():
+                    return [(e.get("text", "") if isinstance(e, dict) else str(e))
+                            for e in short_lines_data]
+
+                _vres = _guard_final(_texts(), channel_id=channel.id,
+                                     channel_dict=_ch_raw_v2, strict=False)
+                _issues = " / ".join(_vres.get("issues") or [])
+                if not _vres["passed"] and "CTA" in _issues:
+                    from pipeline import cta_enforcer as _cta_fix
+                    _fix = _cta_fix.enforce_final_cta(channel.id, short_lines_data,
+                                                      channel_dict=_ch_raw_v2)
+                    if _fix.get("applied"):
+                        print(f"  🔧 最終CTA修復: {_fix.get('after', '')[:40]}")
+                    _vres = _guard_final(_texts(), channel_id=channel.id,
+                                         channel_dict=_ch_raw_v2, strict=False)
+                    _issues = " / ".join(_vres.get("issues") or [])
+                if (not _vres["passed"]) and "冒頭フック" in _issues \
+                        and short_lines_data and isinstance(short_lines_data[0], dict):
+                    _first = (short_lines_data[0].get("text") or "").strip()
+                    if _first:
+                        try:
+                            _hook_raw = self._call_gpt(
+                                [{"role": "system",
+                                  "content": "あなたはYouTubeショートの冒頭フック職人。出力は書き直した1行のみ。"},
+                                 {"role": "user",
+                                  "content": (
+                                      "次のショート動画の1行目を、意味を保ったまま視聴者が止まる"
+                                      "フック型（疑問形・意外な断定・数字の提示のいずれか）に書き直して。"
+                                      "40字以内、絵文字・ハッシュタグ禁止、出力はその1行だけ。\n"
+                                      f"タイトル: {scenario_data.get('title', '')}\n"
+                                      f"現在の1行目: {_first}")}],
+                                temperature=0.7, max_tokens=120,
+                                model=GPT_MODEL_LIGHT, max_retries=1,
+                            ).strip().split("\n")[0].strip()
+                        except Exception as _he:
+                            _hook_raw = ""
+                            print(f"  ⚠️ フック書き直し失敗: {_he}")
+                        if _hook_raw and len(_hook_raw) <= 60:
+                            short_lines_data[0]["text"] = _hook_raw
+                            print(f"  🔧 冒頭フック修復: {_first[:25]} → {_hook_raw[:40]}")
+                            _vres = _guard_final(_texts(), channel_id=channel.id,
+                                                 channel_dict=_ch_raw_v2, strict=False)
+                scenario_data["final_validation"] = {
+                    "passed": bool(_vres.get("passed")),
+                    "score": _vres.get("score"),
+                    "issues": _vres.get("issues") or [],
+                }
+            except Exception as e:
+                print(f"  ⚠️ final validation failed: {e}")
+
         # Phase N: シリーズ通し番号をタイトルに付与
         _result_title = scenario_data.get("title", theme["title"])
         try:
