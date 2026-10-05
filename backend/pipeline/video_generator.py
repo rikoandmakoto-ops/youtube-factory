@@ -1660,9 +1660,11 @@ class ShortFrameRenderer:
 
         # --- 画面レイアウト v2（2026-10-03 visual r1）---
         # 上位ショート8本と原寸で並べた差（丸アイコン＋小さい全文字幕＋題名の繰り返し
-        # カード）を埋める配置。short_overlay_style.layout="legacy" で旧配置に戻せる。
+        # カード）を埋める配置。short_overlay_style.layout="v3" の ch だけ新配置（既定は legacy）。
         # 具体は _build_overlay_v2 の docstring を参照。
-        self.layout_v2 = (str(self.overlay_style.get("layout") or "v2").lower() != "legacy") \
+        # 2026-10-05: daily-science で試験運用。既定は legacy（従来配置）で、
+        # short_overlay_style.layout が "v2"/"v3" の ch だけ新配置になる。
+        self.layout_v2 = (str(self.overlay_style.get("layout") or "legacy").lower() in ("v2", "v3")) \
             and _short_telop is not None
         self.cast = []          # このショートに出る話者（登場順）。set_cast で入れる
         self._shot_cache = {}   # 背景の画角（ショット番号→画像）

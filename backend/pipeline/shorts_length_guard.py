@@ -33,7 +33,6 @@ generator 側の SHORT_TARGET_CHARS=200 は短尺に差し戻されたが、こ�
 from __future__ import annotations
 
 import json
-import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -383,46 +382,6 @@ def _drop_last_sentence(text: str) -> str:
     return cand if len(cand) >= _MIN_LINE_CHARS else text
 
 
-# 節カット後の末尾として許す形: 終止形・助動詞・終助詞の末尾か、体言止め（漢字・カタカナ・数字）。
-_SENTENCE_FINAL_KANA = "たるいすうんねよかなぞぜわさ"
-
-
-def _ends_as_sentence(fragment: str) -> bool:
-    """節を落とした残りが、句点を付ければ文として言い切れる形か。"""
-    tail = fragment.rstrip("」』）)").strip()
-    if not tail:
-        return False
-    ch = tail[-1]
-    if ch in _SENTENCE_FINAL_KANA:
-        return True
-    code = ord(ch)
-    is_kanji = 0x4E00 <= code <= 0x9FFF
-    is_katakana = 0x30A0 <= code <= 0x30FF
-    is_digit = ch.isdigit()
-    return is_kanji or is_katakana or is_digit
-
-
-# 最終行（CTA）の定型の水増し句。本文の事実を削る前に、まずここを落とす。
-# 2026-10-03 の生成で、CTA 58字（「…1万人目標で毎日投稿中、チャンネル登録で応援よろしくね！」）
-# を保護したまま上限 205字へ戻すため、5行目のオチ「ここでドーブルの作戦が光るんだよ！」が
-# 丸ごと削られていた。
-_CTA_PADDING = re.compile(r"(1万人|一万人|1万人目標|応援して|毎日投稿中)")
-_CTA_KEEP = re.compile(r"(高評価|いいね|登録|フォロー)")
-
-
-def _trim_cta_padding(text: str) -> str:
-    """最終行から、高評価/登録の語を含まない定型の水増し節を1つ落とす。"""
-    segs = re.findall(r"[^、。！？!?]*[、。！？!?]?", text.strip())
-    segs = [x for x in segs if x]
-    for i in range(len(segs) - 1, -1, -1):
-        seg = segs[i]
-        if _CTA_PADDING.search(seg) and not _CTA_KEEP.search(seg):
-            out = "".join(segs[:i] + segs[i + 1:]).strip()
-            if _CTA_KEEP.search(out) and len(out) >= _MIN_LINE_CHARS:
-                return out
-    return text
-
-
 def _drop_last_clause(text: str) -> str:
     """行末の 1 節を読点「、」で落とす。
 
@@ -438,13 +397,6 @@ def _drop_last_clause(text: str) -> str:
         return text
     cand = stripped[:idx].rstrip()
     if len(cand) < _MIN_LINE_CHARS:
-        return text
-    # 【2026-10-03】読点の前が連用形（「〜なり」「〜やすく」「〜て」）だと、句点を
-    # 足しても文にならない。09-12〜09-29 公開分で「足首へ水分が下がりやすくなり。」
-    # 「戻す手伝いになり。」のような行が daily-science 9/51・yokai-watch 3/50・
-    # pokemon-lab 2/27 本に残っていた。言い切りの形（終止形・体言止め）で終わる
-    # ときだけ節を落とし、それ以外は削らずに残す（尺の超過より文の破損のほうが目立つ）。
-    if not _ends_as_sentence(cand):
         return text
     # 文末が体言止め・読点切れにならないよう句点で締める
     if not cand.endswith(_SENTENCE_BREAKS):
@@ -506,16 +458,6 @@ def enforce_band(
 
     def total() -> int:
         return sum(len(t) for t in texts)
-
-    # 0. 最終行（CTA）の定型の水増し句を先に落とす（本文の事実を守るため）。
-    if n > 1:
-        last = n - 1
-        while total() > chars_max:
-            new = _trim_cta_padding(texts[last])
-            if new == texts[last] or total() - (len(texts[last]) - len(new)) < chars_min:
-                break
-            report["steps"].append(f"L{last + 1} CTA水増し除去: {len(texts[last])}字→{len(new)}字")
-            texts[last] = new
 
     for label, op in (
         ("注入句除去", _strip_injected_tail),

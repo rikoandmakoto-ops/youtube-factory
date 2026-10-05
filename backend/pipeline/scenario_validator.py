@@ -35,31 +35,7 @@ HOOK_PATTERNS: List[str] = [
     r"という(論文|研究|報告)",     # 架空論文: 「〜という論文があります」型
     r"(論文|研究|報告)が(ある|あり)",  # 架空論文: 結論を断定してから出典を示す型
     r"証明され",                   # 架空論文: 「〇〇が証明された」型
-    # 【2026-10-03】具体で止める型。比較対象の上位ショート（「ザシアンは設定上、
-    # メスしかいない」52万回 /「ネズミにモンスター磁石を近づけたらどうなる？」848万回）は
-    # 疑問語も「実は」も使わずに、限定・数字・結果の問いで止めている。これらを不合格にすると
-    # V2 の自動書き直し（GPT-luna）が「実は〜？」型へ戻してしまう。
-    r"[0-9０-９]",                 # 数字を出す型（scp-lab 上位 16/27・daily-science 13/34 が1行目に数字）
-    r"(しか|唯一|一度も|全員|誰も)",  # 限定・全称で止める型
-    r"どうなる",                   # 〇〇したらどうなる？型
-    r"今すぐ.{0,12}(して|て)みて",   # 体感再現型（daily-science の hook_patterns にある型）
-    # 【2026-10-03 第2周】視聴者を当事者にする言い切り型（比較対象: じゆ「もしあなたの周りで
-    # 『カチカチ』という音が聞こえたら、もう助かりません」19万回）。これを不合格にすると、
-    # V2 の自動書き直しが「送り狼に転んだら、食われるんだ。」を「送り狼は転んだ人を食べない？
-    # …理由とは」と、意味を反転させたうえに中身のない問いへ書き換えていた（第2周の生成で実測）。
-    r"(あなた|君)",
-    r"(たら|ると|れば)、?.{0,16}(助からな|消え|死ぬ|死ん|食われ|倒れ|戻れな|終わり|ならない|しかない)",
 ]
-
-# 1行目で題材の名前を伏せる主語（フィードの視聴者にはタイトルが見えない）。
-# 2026-09-12〜09-29 の pokemon-lab は 27本中16本が「このポケモンのモデル、実は〜」で始まり、
-# 登録/千再生 0.06 と4chで最低だった（因果は未検証）。
-_PLACEHOLDER_SUBJECT = re.compile(r"^(?:これ知って(?:た|ました)？?\s*)?この(?:ポケモン|妖怪|SCP|報告書|2匹|2体)")
-
-# 文の途中で切れた行末（連用形＋句点）。口語で文末になりうる「から。」「けど。」「して。」は含めない。shorts_length_guard の節カットや
-# LLM の書き損じで「足首へ水分が下がりやすくなり。」のような行が残っていた
-# （daily-science 9/51・yokai-watch 3/50・pokemon-lab 2/27、09-12〜09-29 実測）。
-_DANGLING_END = re.compile(r"(?:なり|やすく|にくく|ており|ながら|つつ)[。．]$")
 
 # 中盤フック（転換）のマーカー
 MID_HOOK_MARKERS: List[str] = [
@@ -127,27 +103,6 @@ def _check_opening_hook(lines: List[str]) -> Tuple[int, List[str], List[str]]:
             return +20, [], []
 
     return -20, [f"冒頭フック: 1行目がフック型に該当しない（{first_line[:30]}…）"], []
-
-
-def _check_subject_named(lines: List[str]) -> Tuple[int, List[str], List[str]]:
-    """1行目が「このポケモン」「この妖怪」のように題材名を伏せていないか（警告のみ）。"""
-    if not lines:
-        return 0, [], []
-    first = lines[0].strip()
-    if _PLACEHOLDER_SUBJECT.search(first):
-        return -5, [], [f"題材名: 1行目が名前を伏せた主語で始まる（{first[:24]}…）。固有名を入れる"]
-    return 0, [], []
-
-
-def _check_dangling_endings(lines: List[str]) -> Tuple[int, List[str], List[str]]:
-    """文の途中で切れた行末（「〜なり。」など）を検出する（警告のみ）。"""
-    warnings: List[str] = []
-    for i, line in enumerate(lines):
-        for sent in re.split(r"(?<=[。！？!?])", line.strip()):
-            if sent and _DANGLING_END.search(sent):
-                warnings.append(f"行{i + 1}: 文が途中で切れている（{sent[-12:]}）")
-                break
-    return (-5 * len(warnings)), [], warnings
 
 
 def _check_mid_hook(lines: List[str]) -> Tuple[int, List[str], List[str]]:
@@ -376,8 +331,6 @@ def validate_scenario(
         ("line_count", _check_line_count(lines, channel_dict)),
         ("loop_structure", _check_loop_structure(lines)),
         ("line_lengths", _check_line_lengths(lines, channel_dict)),
-        ("subject_named", _check_subject_named(lines)),
-        ("dangling_endings", _check_dangling_endings(lines)),
     ]
 
     for name, (delta, issues, warnings) in checks:
