@@ -20,6 +20,7 @@ Usage:
 import json
 import os
 import random
+import re
 import time
 import urllib.request
 import urllib.error
@@ -211,6 +212,7 @@ _TERM_PACING_RULE_SECTION = (
 _HOOK_3SEC_RULE = """# 冒頭3秒ルール(最重要・これを外した時点で不合格)
 - ショートは**最初の3秒**で視聴継続がほぼ決まる。1行目は必ず「問い」か「驚き」から始める。
 - ❌ 挨拶・自己紹介・チャンネル説明・テーマ紹介・前置き・「今回は〜」は1文字でも入れたら不合格。
+- ✅ 1行目には**題材の固有名(現象・物・人物・番号の名前)を必ず入れる**。「これ」「ある〇〇」で名前を伏せない(フィードの視聴者にタイトルは見えていない)。
 - ✅ 1行目は**次の4型のいずれかで書く**(型を丸写しせず、テーマに合わせて言い換える):
   1. 【これ知ってた?型】「これ知ってた? 〇〇って実は△△なんだ」— 共感と好奇心を同時に取る
   2. 【実は〇〇型】「実は〇〇、△△だったんだ」「〇〇してる人、今すぐやめて」— 常識をひっくり返す
@@ -313,16 +315,13 @@ _LOOP_RULE_SHORT = """# ループ構成ルール(再視聴率対策・絶対厳�
   **ループ再生率100%超（2周以上視聴）はYouTubeアルゴリズムへの最強シグナル。**
 - ✅ **最後の内容行(オチ)は1行目に意味がつながるように書く**。視聴者が1行目を聞き直したとき、
   「あ、そういう意味だったのか」と**意味が変わって聞こえる**状態を作る。
-  - 伏線回収型: 1行目の問いに対して、オチで「答えの半分」だけ返す（残りは1行目に戻ると分かる）。
+  - 伏線回収型: 1行目の問いの答えをオチで言い切る。答えを知ってから1行目を聞くと別の意味に聞こえるようにする。
   - 前提逆転型: オチで前提をひっくり返し、1行目が別の意味に読めるようにする。
   - 問い返し型: オチを「じゃあ〇〇は?」で閉じ、1行目の問いに戻る輪を作る。
 - ✅ **1行目は「途中から聞いても成立する」書き方にする**。巻き戻ってきた視聴者が
   文脈なしでもう一周できるよう、冒頭で前の行を受ける指示語(「それは」「この」)を使わない。
-- ✅ **シームレスループテクニック**: 最終行の末尾を文法的に宙吊りにし、1行目の冒頭に自然に
-  接続させる。例: 最終行「…だからこそ、」→ 1行目「〇〇って不思議だよね」が繋がって聞こえる。
-  音声の切れ目を感じさせないことで、視聴者はループに気づかず2周目に入る。
-- ✅ **2周目の気づき設計**: 1行目に「ダブルミーニング」を仕込む。初見では素直に読めるが、
-  オチを知ってから聞くと別の意味に取れるフレーズを使う。これが2周目を見る動機になる。
+- ❌ 最後の内容行を文の途中で止めない（「…だからこそ、」のような宙吊り）。最終行は登録CTAなので、
+  宙吊りにしても1行目には繋がらず、内容行が尻切れに聞こえるだけになる。輪はオチの中身で作る。
 - ❌ **終わった感の出る締めは禁止**: 「以上です」「ご視聴ありがとうございました」
   「まとめると」「いかがでしたか」は1文字でも入れたら不合格。そこで視聴者は確実に離れる。
 - ❌ **ループを切るフレーズ禁止**: 「最後に」「結論は」「今日のまとめ」「というわけで」も
@@ -330,6 +329,829 @@ _LOOP_RULE_SHORT = """# ループ構成ルール(再視聴率対策・絶対厳�
 - ※ 最終行の登録CTAは上の構成ルール通り必ず入れる。ただし**話を終わらせず**、
   オチの余韻に乗せたまま1行に収めること(CTAで話を締めくくらない)。
 """
+
+
+# =====================================================================
+# ショート品質バー（2026-10-03 追加）
+#
+# 比較対象として、同ジャンルで実際に伸びたショート8本を実測した
+# （scratchpad/loop/bench。数値は 2026-10-03 時点）:
+#   化け学のふしぎ「ネズミにモンスター磁石を近づけたらどうなる？」848万回
+#   化け学のふしぎ「なぜか硬く結んでも100%解ける靴紐問題」215万回
+#   ぽへチャンネル「マッシブーンは虫タイプの中で…」155万回
+#   なぞはな「ザシアンは設定上、メスしかいない」52万回
+#   サクトシ「正体が判明した日本の妖怪3選」248万回
+#   はにわ「名古屋の熱田の海に奇妙な妖怪が」20万回 ほか
+# 8本とも 0〜1秒の時点で「題材の名前」と「具体的な物・数字・場所」が出ていた。
+# 一方こちらの台本は、pokemon-lab の 27本中16本が「このポケモンのモデル、
+# 実は〇〇なんだよ！」で始まり、名前を伏せたうえに、種族値の話にまで
+# 根拠のない「モデル」を付けていた（例: ガブリアス「モデル、実は4倍の弱点
+# まで背負ってる」）。pokemon-lab は登録/千再生 0.06・高評価/千再生 2.53 と
+# 4ch で最低（09-12〜09-29 公開分の実測）。ほかの3ch も、伏せた謎を最後まで
+# 明かさない台本（scp-lab「47人が全員同じ言葉を残した」→ 言葉が出てこない）や、
+# 同じ事実を言い換えるだけの行が残っていた。
+# 以下はチャンネル固有の構成（short_format）に「重ねる」共通の下限。
+# =====================================================================
+_SHORT_QUALITY_BAR_RULE = """# ショート品質バー(実在の上位ショートに負けないための下限・チャンネル固有の構成より優先・絶対厳守)
+- 比較対象: 「ネズミにモンスター磁石を近づけたらどうなる？」(848万回) / 「なぜか硬く結んでも100%解ける靴紐問題」(215万回) / 「マッシブーンは虫タイプの中で…」(155万回) / 「ザシアンは設定上、メスしかいない」(52万回) / 「もしあなたの周りで『カチカチ』という音が聞こえたら、もう助かりません」(19万回)。どれも0秒目から題材の名前と具体的な物・数字が出ていて、前置きが1文字もない。
+1. **1行目の最初の語は題材の固有名か具体物**(ポケモン名・SCP番号・妖怪名・現象や物の名前)。フィードの視聴者にタイトルは見えていない。「このポケモン」「この妖怪」「このSCP」「これ」「ある〇〇」で名前を伏せない。「これ知ってた？」「知ってた？」「実は」のような前置きから始めない(上位8本は1本も使っていない。前置きで0.5〜1秒を失う)。
+   - ✕「これ知ってた？百目は…」→ ○「百々目鬼は、盗みを重ねた女の腕に無数の目が生えた妖怪だ」
+2. **1行目は次の3つの型のどれかで書く**(数字・場所・物の名前・具体的な行為のどれかを必ず含める):
+   (a) 結果が予想できない問い: 「〇〇を△△したらどうなる？」「なぜ〇〇だけ△△なのか」。画面に出せる物と、具体的な条件を入れる。
+   (b) 視聴者を当事者にする言い切り: 「〇〇が聞こえたら、もう助からない」「あなたの〇〇、実は△△している」。
+   (c) 1文目がもう意外な事実: 「ザシアンは設定上、メスしかいない」のように、題材名＋覆る事実を言い切る。
+   - ❌ 定義の読み上げ(「SCP-252は、〇〇するテレビだ」)、抽象語だけ(「正体」「真相」「秘密」)、予防線(「〜ことがある」「〜かも」)は1行目に入れない。
+   - ❌ 1行目に学術用語・内部用語を入れない。視聴者が普段使う言葉で言う(✕「緊張時の手掌発汗」→ ○「緊張すると手のひらだけ汗をかく」)。
+3. **1本に別々の具体的事実を4つ以上入れる**。下の『行の役割』で事実を運ぶ行(1行目と、解説役・語りの行)に、それぞれ**違う**事実(数字・固有名詞・出典・目に見える出来事)を1つずつ置く。どの行がどの事実かを各行の "fact" に F番号で書く(同じF番号を2行で使わない)。上位ショートは21秒で4個(ザシアン)、56秒で6個(マッシブーン)。
+   - ❌ 同じ事実を言い方だけ変えた行、たとえ話だけの行、雰囲気だけの行(「記録はそこで途切れている」「見方が変わるはず」)は1本に0行。たとえを使うなら、新しい事実の行の後ろに10字程度で添える。
+4. **張った謎は台本の中で中身ごと回収する**。「同じ言葉」「ある物質」「消えた理由」のように伏せたら、オチの行までにその中身(実際の言葉・物質名・理由)を言う。
+5. **言い切る。自分のフックを自分で打ち消さない**。「〜ことがある」「〜とも読める」「〜かもしれない」「定かでない」「諸説ある」「ただし〜でも変わる」で主張を弱めるのは不合格。確証のない主張は**ぼかして残さず、丸ごと削り、確証のある別の事実に差し替える**。伝承・設定・報告書の中身は、出典を主語にして言い切る(「『今昔画図続百鬼』には〜と書かれている」「報告書には〜とある」「図鑑には〜とある」)。
+   - ❌ 動画の答えを否定形にしない(「専用の反射ではなく〜」「原典では空白」「勝敗固定なし」)。答えは「〜だ」「〜が原因だ」で言える事実にする。否定形は、肯定の答えを言った後の前フリにだけ使う。
+   - ❌ 検証の過程を台本で語らない。「〜は原典にない」「本文には書かれていない」「確認できない」「答えは一意じゃない」「条件次第」のように、テーマや俗説を否定する行・答えを出さない行は不合格。言えないことは言わずに、言える事実だけで話を組む。
+6. **事実は確認できるものだけ**。種族値・タイプ・技の効果・特性・図鑑の記述・SCP番号・オブジェクトクラス・文献名と刊行年・地名は公式/原典どおりに書く。下の『使ってよい事実』がある場合は、そこにある事実だけを使う。型に合わせるためにテーマに無い主張(例: 種族値の話に「モデルは〇〇」を足す)を作らない。
+   - 「勝つ」「最強」「唯一」「全員」「必ず」の断定は、反証になる条件(タイプ相性・特性・定番の対策技・例外の記録)を確かめて成り立つものだけ。条件付きでしか成り立たないなら条件ごと言う。詳しい視聴者ほど誤りに気付き、高評価も登録もしない。
+7. **最後の内容行(オチ・CTAの直前)は次のどれかで終える**: 冒頭の問い・音・物に戻る二人称の問い(「あなたの後ろの音、今止まりませんでしたか」) / 前提をひっくり返す最後の事実 / 視聴者がコメントで答えたくなる一言(「あなたはどっちだと思う？」)。但し書き・余韻だけ・教訓で終えない。
+8. **各行は文として言い切る**。「〜なり。」「〜やすく。」「〜して。」のような途中で切れた形で終えない。
+"""
+
+
+# ショート専用プロンプトで、長尺向けの「序盤25%ルール」「第二フック(full 20%地点)」
+# 「専門用語ルール」の代わりに入れる短い版。中身はそれぞれのショート該当部分だけ。
+_SHORT_ONLY_DIALOGUE_RULES = """# 掛け合いルール(ショート・絶対厳守)
+- 聞き役の行は次の3つのどれかだけ: ①驚く ②ツッコむ ③視聴者がいま抱く疑問を代わりに言う。**8〜18字**で、問い返しの形にする。
+- **聞き役が口にしてよい具体語(数字・固有名詞・物の名前)は、それより前の行で解説役がもう言ったものだけ**。新しい数字・年号・書名・仕組みの名前を聞き役が先に言うのは不合格(機械で検査して差し戻す)。
+  - ✕(1行目で「SCP-1025」「百科事典」しか出ていないのに)「百科事典を読んだだけで、病気の症状が出るのか？」← 答えを先に言っている
+  - ✕(書名が出る前に)「え、1910年の本にあるの？」　✕「涙は涙点から涙小管、涙嚢を通るんだね？」← 解説の中身を聞き役が言っている
+  - ○「えっ、読むだけで!?」「ネズミが逃げるの!?」「じゃあ毒タイプには効かないの？」
+- ツッコミの語(「いや」「〜でしょ！」「〜じゃん」「!?」)は聞き役の行にだけ置く。解説役の行には入れない。
+- ❌ ジャンル外の連想やたとえ(「教室の窓100枚みたい」)、キャラが好き・可愛いの感想は不合格。
+- 解説役の行は**1行に事実1つ・34字以内**。事実が2つなら1つを捨てる(次の行に回さない)。
+- 専門用語(ゲーム内部用語・学術名・分類名)は出すなら1本に1回だけ、その行の中で10字以内の言い換えを添える(例:「Keter(収容がほぼ不可能)」)。『鼻腔流入』のような教科書の言葉は普段の言葉にする(『涙が鼻に流れ込む』)。
+- その動画でいちばん『えっ』となる事実は3行目までに出す。終盤に温存しない。
+- moodはショート全体で2〜3シーン(フック="tense"or"bright"、展開="calm"or"mysterious"、オチ="bright"or"emotional")。
+- 最終行(高評価+登録)の expression は "normal" か "happy"。sad / angry / surprise で頼むと、言葉と顔が食い違う。
+
+"""
+
+# モノローグ（ナレーター1人）版。掛け合いの聞き役ルールの代わりに、語りの行のルールを置く。
+_SHORT_ONLY_NARRATION_RULES = """# 語りのルール(ショート・絶対厳守)
+- 総括・言い換えだけの行は禁止。各行に新情報(数字・固有名詞・目に見える出来事)を入れる。
+- 1行で扱う事実は1つ。1行に2つ以上の話を詰め込まない(事実が2つなら行を分ける)。
+- 専門用語(学術名・分類名)は出すなら1本に1回だけ、その行の中で10字以内の言い換えを添える。
+- その動画でいちばん『えっ』となる事実は3行目までに出す。終盤に温存しない。
+- moodはショート全体で2〜3シーン(フック="tense"or"mysterious"、展開="calm"or"mysterious"、オチ="tense"or"emotional")。
+
+"""
+
+
+# 主張を自分で弱める言い回し（予防線）。第1周の生成で self-review が「確認できない」ものを
+# 削らずにぼかした結果、「〜ことがある」「〜とも読める」「元伝承は定かでない」「ただし〜でも
+# 変わる」の行が残り、フックを自分で打ち消していた（daily-science・yokai-watch）。
+# 比較対象の上位ショート8本の文字起こしには、この型の文は1つも無い。
+_HEDGE_RE = re.compile(
+    r"(ことがある|こともある|とも読める|とも言える|かもしれ|定かでない|定かではない|"
+    r"諸説ある|諸説あり|はっきりしない|分かっていない|わかっていない|確認できない|"
+    r"^ただし|。ただし|場合もある|とされることも|一意じゃない|一意ではない|一概に|場合による|条件次第|"
+    r"記していない|記載はない|記載がない|本文にない|原典にない|書かれていない|固定なし|決まらない|"
+    r"確認されない|確認されていない|不明だった|不明なまま|詳しいことは不明)"
+)
+
+
+# LLM の1行出力に混じるゴミ（第2周の生成で実測: 冒頭フック修復が「…水中グリップ】【。」、
+# タイトルに「ステロの盲点ાન્યの真相」（グジャラート文字）を返した）。
+_FOREIGN_SCRIPT_RE = re.compile(r"[\u0590-\u08FF\u0900-\u0DFF\u0E00-\u0FFF\u1000-\u109F\uAC00-\uD7AF]")
+_STRAY_BRACKETS_RE = re.compile(r"(?:】\s*【|【\s*】|「\s*」|『\s*』|[【】]+(?=[。！？!?]?$))")
+
+
+def _clean_llm_line(text: str) -> str:
+    """LLM が返した台本1行から、別言語の文字と中身のない括弧を取り除く。"""
+    t = _FOREIGN_SCRIPT_RE.sub("", str(text or ""))
+    t = _STRAY_BRACKETS_RE.sub("", t)
+    t = re.sub(r"[、，]\s*。", "。", t)
+    return t.strip()
+
+
+def _find_hedges(texts: List[str]) -> List[str]:
+    """予防線の言い回しを含む行を「L番号:該当句」で返す。"""
+    out: List[str] = []
+    for i, t in enumerate(texts):
+        m = _HEDGE_RE.search(str(t or ""))
+        if m:
+            out.append(f"L{i + 1}:{m.group(0).lstrip('。')}")
+    return out
+
+
+def _fact_sheet_text(sheet: Optional[Dict[str, Any]]) -> str:
+    """ファクトシートをプロンプト用の箇条書きにする（無ければ空文字）。"""
+    if not isinstance(sheet, dict):
+        return ""
+    facts = [f for f in (sheet.get("facts") or []) if isinstance(f, dict) and f.get("fact")]
+    if not facts:
+        return ""
+    lines = []
+    if sheet.get("subject"):
+        lines.append(f"- 題材の正式名: {sheet['subject']}")
+    if sheet.get("core_answer"):
+        lines.append(f"- テーマの答え(3行目までに言い切る): {sheet['core_answer']}")
+    if sheet.get("grounded"):
+        lines.append(f"- 原典: {sheet.get('source_url', '')}（下の確かな事実は、原典本文に同じ文言があることを機械で照合済み）")
+    sure = _sure_facts(sheet)
+    unsure = [f for f in facts if f.get("sure") is not True]
+    for i, f in enumerate(sure):
+        src = f" [出典: {f['source']}]" if f.get("source") else ""
+        lines.append(f"- F{i + 1} 確かな事実: {f['fact']}{src}")
+    for f in unsure:
+        lines.append(f"- 確証なし(台本に入れない・その数字も使わない): {f['fact']}")
+    if sheet.get("hook"):
+        lines.append(f"- 1行目の案(原則これを語り口に合わせて使う。学術用語は普段の言葉に言い換える): {sheet['hook']}")
+    if sheet.get("punchline"):
+        lines.append(f"- オチの案(原則これを最後の内容行に使う): {sheet['punchline']}")
+    for p in (sheet.get("pitfalls") or [])[:5]:
+        lines.append(f"- 取り違えに注意: {p}")
+    return "\n".join(lines)
+
+
+# ファクトシートの hook / punchline の書き方（ファクトシート作成と原典照合の両方で使う）。
+# 第2周の1行目は「泣いた涙は鼻の奥へ流れる？4つの涙点がカギです。」（問いと答えを同時に言い、
+# 誰も気にしない数字を餌にした）、「ジガルデはHP半分で完全体になるって本当？」（自分の
+# フックを疑う形）、「SCP-1025を読んだらどうなる？医療百科事典の外見だ。」（番号では物が
+# 浮かばず、後半が尻すぼみ）で、比較対象 01「ネズミにモンスター磁石を近づけたらどうなる？」・
+# 03「もしあなたの周りで『カチカチ』という音が聞こえたら、もう助かりません」に負けた。
+_HOOK_SPEC = (
+    "- hook には1行目の案を1つ書く(30字以内)。次のどれか:"
+    "(a) 画面に出せる物と具体的な条件で、結果が予想できない問い『ネズミにモンスター磁石を近づけたらどうなる？』"
+    "(b) 視聴者を当事者にする言い切り『この百科事典で「肺がん」のページを読むと、あなたは咳が止まらなくなる』"
+    "(c) 1文目がもう意外な事実『ザシアンは設定上、メスしかいない』。"
+    "題材は番号や名前だけで終わらせず、物として浮かぶ言葉を添える(✕『SCP-1025を読んだら』→○『SCP-1025という病気の百科事典を読むと』)。"
+    "❌ 問いの後ろに答えや説明を続けない(✕『涙は鼻へ流れる？4つの涙点がカギです』)。"
+    "❌ 『〜って本当？』『〜なの？』のように自分の主張を疑う形にしない。"
+    "❌ 驚きの中心でない数字(涙点の数・ページ数)を餌にしない。数字を使うなら驚きの中心になっている数字だけ。"
+    "❌ 学術用語(『鼻腔流入』『反磁性』)は1行目に入れない。\n"
+    "- punchline には、最後に置くと冒頭の意味が変わる確かな事実か、冒頭へ戻る二人称の問いを1つ書く"
+    "(『あなたの後ろの音、今止まりませんでしたか』)。\n"
+)
+
+
+def _sure_facts(sheet: Optional[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """ファクトシートの確かな事実（sure=True）。並び順が F1, F2, … の番号になる。"""
+    if not isinstance(sheet, dict):
+        return []
+    return [f for f in (sheet.get("facts") or [])
+            if isinstance(f, dict) and f.get("fact") and f.get("sure") is True]
+
+
+# =====================================================================
+# 原典照合（2026-10-03 第3周）
+#
+# 第2周までの sure は GPT の自己申告で、自信満々の誤りを止められなかった
+# （第2周サンプルで実測）:
+#   - scp-lab「本には300種類以上の病気」「閲覧はレベル3許可制」
+#       → SCP-1025 の日本語版本文は「約1500ページ」「更なる研究にはO5の承認」。どちらも本文に無い。
+#   - yokai-watch「遠野物語第59話に送り狼と『休ませて下さい』」
+#       → ja.wikipedia「送り犬」（送り狼はここへ転送）に遠野物語の記述は無い。
+#         本文にあるのは「転んでも『どっこいしょ』と座ったように見せかけ…休憩をとる振り」。
+#   - pokemon-lab「セル100個で完全体を組み立てる」
+#       → ポケモンWikiのジガルデの記事では、パーフェクトフォルムは特性スワームチェンジで
+#         HPが半分以下になったときに戦闘中だけ変わる姿。
+# そこで、題材の原典テキスト（SCP財団Wiki本文・ポケモンWikiの記事・Wikipedia）を取得し、
+# 「原典の本文に同じ文言がある」ことを機械で確かめた事実だけを sure にする。
+# 取得できないとき（オフライン・記事なし）は従来どおり GPT の申告で続ける（止めない）。
+# =====================================================================
+_SOURCE_UA = "Mozilla/5.0 (Macintosh; youtube-factory fact-check)"
+_SOURCE_MAX_CHARS = 9000
+
+
+def _http_get_text(url: str, timeout: float = 12.0) -> str:
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": _SOURCE_UA})
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            if getattr(r, "status", 200) != 200:
+                return ""
+            return r.read().decode("utf-8", errors="replace")
+    except Exception:
+        return ""
+
+
+def _html_to_text(html: str) -> str:
+    import html as _html
+    m = re.search(r'<div id="page-content">(.*?)<div class="page-tags"', html, re.S)
+    body = m.group(1) if m else html
+    body = re.sub(r"<(script|style)\b.*?</\1>", "", body, flags=re.S)
+    # 取り消し線の部分（「Keter Safe」の Keter など、訂正前の値）は事実として拾わない
+    body = re.sub(r'<span style="text-decoration:\s*line-through;?">.*?</span>', "", body, flags=re.S)
+    body = re.sub(r"<(del|s|strike)\b[^>]*>.*?</\1>", "", body, flags=re.S)
+    body = re.sub(r"<br\s*/?>|</p>|</li>|</div>|</h\d>", "\n", body)
+    body = re.sub(r"<[^>]+>", "", body)
+    body = _html.unescape(body)
+    return re.sub(r"\n\s*\n+", "\n", body).strip()
+
+
+def _wikitext_to_text(wt: str) -> str:
+    t = re.sub(r"<ref[^>]*/>|<ref[^>]*>.*?</ref>", "", wt, flags=re.S)
+    t = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", t)
+    t = re.sub(r"'''?", "", t)
+    t = re.sub(r"<[^>]+>", "", t)
+    return t
+
+
+def _source_kind(channel) -> Optional[str]:
+    """原典照合に使う資料の種類。対応していないジャンルは None（照合しない）。"""
+    cid = (getattr(channel, "id", "") or "").lower()
+    concept = f"{getattr(channel, 'name', '')} {getattr(channel, 'concept', '')}"
+    if "scp" in cid or "SCP" in concept:
+        return "scp"
+    if "pokemon" in cid or "ポケモン" in concept:
+        return "pokemon"
+    if "yokai" in cid or "妖怪" in concept or "伝承" in concept:
+        return "wikipedia"
+    if "science" in cid or "科学" in concept:
+        return "wikipedia"
+    return None
+
+
+def _scp_numbers(*texts: str) -> List[str]:
+    out: List[str] = []
+    for t in texts:
+        for m in re.finditer(r"SCP[-‐－ー]?(\d{3,4})(-JP|－JP)?", _nfkc(t or ""), re.I):
+            key = f"scp-{m.group(1)}" + ("-jp" if m.group(2) else "")
+            if key not in out:
+                out.append(key)
+    return out
+
+
+def _fetch_source(kind: str, candidates: List[str]) -> Tuple[str, str]:
+    """(本文テキスト, URL) を返す。取れなければ ("", "")。"""
+    import urllib.parse as _up
+    for cand in candidates:
+        cand = (cand or "").strip()
+        if not cand:
+            continue
+        if kind == "scp":
+            for host in ("scp-jp.wikidot.com", "scp-wiki.wikidot.com"):
+                url = f"https://{host}/{cand}"
+                txt = _html_to_text(_http_get_text(url))
+                if len(txt) > 400 and cand.split("-")[1] in txt:
+                    return txt, url
+        elif kind == "pokemon":
+            url = ("https://wiki.xn--rckteqa2e.com/w/index.php?title="
+                   f"{_up.quote(cand)}&action=raw")
+            wt = _http_get_text(url)
+            if "ポケモン図鑑基本情報" in wt or "ポケモン図鑑前後" in wt:
+                return _wikitext_to_text(wt), f"https://wiki.xn--rckteqa2e.com/wiki/{_up.quote(cand)}"
+        elif kind == "wikipedia":
+            url = ("https://ja.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1"
+                   f"&redirects=1&format=json&titles={_up.quote(cand)}")
+            raw = _http_get_text(url)
+            try:
+                pages = (json.loads(raw).get("query") or {}).get("pages") or {}
+            except Exception:
+                pages = {}
+            for pid, pg in pages.items():
+                ext = (pg or {}).get("extract") or ""
+                if pid != "-1" and len(ext) > 300:
+                    title = pg.get("title") or cand
+                    return ext, f"https://ja.wikipedia.org/wiki/{_up.quote(title)}"
+    return "", ""
+
+
+def _wikipedia_search(query: str, limit: int = 3) -> List[str]:
+    """日本語版 Wikipedia の全文検索で記事名を返す（失敗時は空）。"""
+    import urllib.parse as _up
+    q = re.sub(r"[？?！!「」『』（）()、。]", " ", query or "").strip()
+    if not q:
+        return []
+    raw = _http_get_text("https://ja.wikipedia.org/w/api.php?action=query&list=search&format=json"
+                         f"&srlimit={limit}&srsearch={_up.quote(q)}")
+    try:
+        return [h["title"] for h in (json.loads(raw).get("query") or {}).get("search") or [] if h.get("title")]
+    except Exception:
+        return []
+
+
+def _relevant_excerpt(text: str, keywords: List[str], limit: int = _SOURCE_MAX_CHARS) -> str:
+    """長い原典から、冒頭と、テーマの語を多く含む段落を limit 字まで抜き出す（原文の順で）。"""
+    if len(text) <= limit:
+        return text
+    paras = [p for p in re.split(r"\n+", text) if p.strip()]
+    head_budget = limit // 4
+    chosen, used = set(), 0
+    for i, p in enumerate(paras):
+        if used + len(p) > head_budget:
+            break
+        chosen.add(i)
+        used += len(p)
+    kws = [k for k in keywords if k and len(k) >= 2]
+    scored = sorted(
+        ((sum(p.count(k) for k in kws), i) for i, p in enumerate(paras) if i not in chosen),
+        reverse=True,
+    )
+    for score, i in scored:
+        if score <= 0 or used >= limit:
+            break
+        if used + len(paras[i]) > limit:
+            continue
+        chosen.add(i)
+        used += len(paras[i])
+    return "\n".join(paras[i] for i in sorted(chosen))
+
+
+def _nfkc(s: str) -> str:
+    import unicodedata
+    return unicodedata.normalize("NFKC", str(s or ""))
+
+
+def _squash(s: str) -> str:
+    """照合用: NFKC・空白と記号の揺れを落とす。"""
+    t = _nfkc(s)
+    t = re.sub(r"[\s「」『』\"'“”‘’()（）\[\]【】・、,。.:：;；!！?？~〜ー\-–—|*=]", "", t)
+    return t.lower()
+
+
+def _numbers_in(s: str) -> List[str]:
+    """文中の数字（算用数字）。「1」「2」のような1桁は、助数詞付きのときだけ数える。"""
+    t = _nfkc(s)
+    out = []
+    for m in re.finditer(r"\d+(?:\.\d+)?", t):
+        n = m.group(0)
+        if n not in out:
+            out.append(n)
+    return out
+
+
+# 台本の具体語（照合・重複判定用）: 漢字2字以上・カタカナ3字以上・英字2字以上・数字
+_TOKEN_RE = re.compile(r"[一-鿿々〆]{2,}|[ァ-ヺー]{3,}|[A-Za-z]{2,}|\d+(?:\.\d+)?")
+# 聞き役が新しく言っても「答え」にならない語
+_LISTENER_FREE_WORDS = {
+    "本当", "全部", "全員", "自分", "普通", "一体", "意味", "絶対", "結局", "最強", "大丈夫",
+    "一番", "一瞬", "最後", "最初", "秘密", "正体", "理由", "本気", "無理", "危険", "安全",
+    "簡単", "説明", "質問", "待って", "マジ", "ヤバ", "ヤバい", "今日", "何回", "何度", "僕達",
+    "冗談", "怖い", "可哀想", "納得", "反則", "強すぎ", "最悪", "最高", "不思議",
+}
+
+
+def _tokens(s: str) -> List[str]:
+    out = []
+    for m in _TOKEN_RE.finditer(_nfkc(s)):
+        tok = m.group(0)
+        if tok not in out:
+            out.append(tok)
+    return out
+
+
+def _seen(tok: str, prior: str) -> bool:
+    """tok が先行テキストに出ているか（部分一致・NFKC）。漢字語は2字の部分一致まで許す。"""
+    p = _nfkc(prior)
+    if re.fullmatch(r"\d+(?:\.\d+)?", tok):
+        return tok in _numbers_in(p)
+    if tok in p:
+        return True
+    if re.fullmatch(r"[一-鿿々〆]{3,}", tok):
+        return any(tok[i:i + 2] in p for i in range(len(tok) - 1))
+    return False
+
+
+def _verify_quote(quote: str, source_sq: str) -> bool:
+    q = _squash(quote)
+    if len(q) < 6:
+        return False
+    if q in source_sq:
+        return True
+    # 引用が長いと GPT が途中の1〜2字を変えることがある。前半・後半（各12字以上）が
+    # どちらも原文にあり、しかも原文の中で近く（120字以内）に並んでいれば可。
+    if len(q) >= 24:
+        half = len(q) // 2
+        a, b = source_sq.find(q[:half]), source_sq.find(q[half:])
+        return a >= 0 and b >= 0 and 0 <= b - a <= half + 120
+    return False
+
+
+# =====================================================================
+# ショート台本の機械検査（2026-10-03 第3周）
+#
+# 第2周はルールをプロンプトに書くだけで、4本すべてに違反が残った（批評で指摘・実物で確認）:
+#   - 同じ事実の言い直し: pokemon-lab の1・2・4行目がすべて「HP半分」
+#   - 聞き役が先に答えを言う: scp-lab 2行目「百科事典を読んだだけで、病気の症状が出るのか？」
+#   - 1行目が自分のフックを疑う: 「ジガルデはHP半分で完全体になるって本当？」
+#     （Phase V2 の冒頭フック修復が「〜んだよ！」をこの形に書き換えていた）
+#   - 48字の行、解説役の「いや強すぎでしょ！」、解説役の3連続
+#   - オチが説明文: scp-lab「読者は感染せず、病気の症状だけを発現する。」
+# 生成後にこれらを機械で検査し、違反を具体的に書いて GPT に差し戻す（_short_lint_repair）。
+# =====================================================================
+_TSUKKOMI_RE = re.compile(r"(?:^|[、。！!？?\s])いや[、!！\s]|でしょ[！!]|じゃん[！!。]?$|[!！][?？]|[?？][!！]|マジで?[？?]|(?:^|[、。！!\s])えっ?[、!！]")
+_SECOND_PERSON_RE = re.compile(r"(あなた|君|きみ|キミ|お前|おまえ|みんな)")
+_QUOTED_RE = re.compile(r"『[^』]*』|「[^」]*」")
+_DANGLING_RE = re.compile(r"(?:なり|やすく|にくく|ており|ながら|つつ|ことが|ことも)[。．]")
+# 重い違反（直らなければ比較対象に確実に負ける型）は 3点、それ以外は 1点
+_LINT_WEIGHT = {
+    "listener_preempt": 3, "dup": 3, "unverified_number": 3, "hook_doubt": 3,
+    "hook_answer": 3, "hook_subject": 3, "hook_type": 3, "punch": 3, "speaker": 3, "line_count": 3,
+    "drift": 3, "cta": 3, "tsukkomi": 2, "run": 2, "len": 2, "total": 2, "len_short": 2, "total_short": 2,
+}
+
+
+# 1字の漢字の重なりで言い直しを見るとき、どの文にも出る字は数えない
+_KANJI_STOP = set("出見言思行来上下中大小人時日一二三今何前後気知方事物所者生的性化手")
+
+
+def _kanji_bag(text: str, subject: str = "") -> set:
+    """1字の漢字の集合（題材名の字と、どの文にも出る字を除く）。「血」「汗」「涙」のような
+    1字の名詞は _tokens（漢字2字以上）では拾えないので、言い直しの判定に足す。"""
+    sub = set(re.findall(r"[\u4e00-\u9fff]", subject or ""))
+    return {c for c in re.findall(r"[\u4e00-\u9fff]", _QUOTED_RE.sub("", text))
+            if c not in sub and c not in _KANJI_STOP}
+
+
+_CTA_BENEFIT_RE = re.compile(r"(届|続き|次の|次も|毎日|シリーズ|ファイル|見られ|読める)")
+
+
+def _cta_problem(text: str) -> str:
+    """CTA 行の問題（無ければ空文字）。登録の理由（何が届くか）が無い CTA は登録に効かない。"""
+    t = str(text or "")
+    try:
+        from pipeline import cta_enforcer as _ce
+        if not (_ce.has_like(t) and _ce.has_subscribe(t)):
+            return "CTAに『高評価』と『登録』の両方を入れる"
+    except Exception:
+        pass
+    if not _CTA_BENEFIT_RE.search(t):
+        return "CTAに、登録すると何が届くか（このチャンネルの題材で）を入れる（例『登録で次のファイルも届く』）"
+    if len(t) > 36:
+        return f"CTAが{len(t)}字。36字以内にする"
+    return ""
+
+
+def _lint_score(viol: List[Dict[str, Any]]) -> int:
+    return sum(_LINT_WEIGHT.get(v.get("code"), 1) for v in viol)
+
+
+def _lint_short(lines: List[Dict[str, Any]], *, explainer: str, listener: str, dialogue: bool,
+                sheet: Optional[Dict[str, Any]], theme: Dict, chars_max: int = 0,
+                check_subject: bool = True, chars_min: int = 0) -> List[Dict[str, Any]]:
+    """ショート台本（最終行=CTA）を検査し、違反を [{"line","code","msg"}] で返す。"""
+    viol: List[Dict[str, Any]] = []
+
+    def add(i: Optional[int], code: str, msg: str) -> None:
+        viol.append({"line": (i + 1) if i is not None else None, "code": code,
+                     "msg": (f"L{i + 1}: {msg}" if i is not None else msg)})
+
+    texts = [str((e or {}).get("text") or "") for e in lines]
+    speakers = [str((e or {}).get("speaker") or "") for e in lines]
+    if len(texts) < 3:
+        return [{"line": None, "code": "line_count", "msg": f"行数が{len(texts)}行しかない"}]
+    body = texts[:-1]
+    sheet = sheet if isinstance(sheet, dict) else {}
+    subject = re.sub(r"[（(][^）)]*[）)]", "", str(sheet.get("subject") or "")).strip()
+    sub_toks = set(_tokens(subject)) | set(_numbers_in(subject))
+    sure = _sure_facts(sheet)
+    sure_facts_txt = " ".join(str(f.get("fact") or "") for f in sure)
+    sure_all_txt = sure_facts_txt + " " + " ".join(str(f.get("quote") or "") for f in sure)
+    sure_nums = set(_numbers_in(sure_all_txt))
+    ttl = str(theme.get("title") or "")
+    is_listener = [dialogue and speakers[i] == listener for i in range(len(body))]
+
+    # 構成（掛け合い: 解説・聞き・解説・解説・聞き・解説 ＋ CTA）
+    if dialogue:
+        if len(body) != len(SHORT_DIALOGUE_SPEAKERS):
+            add(None, "line_count", f"本文は6行（解説役・聞き役・解説役・解説役・聞き役・解説役）＋CTAの7行にする（今は{len(texts)}行）")
+        else:
+            for i, role in enumerate(SHORT_DIALOGUE_SPEAKERS):
+                want = explainer if role == 0 else listener
+                if speakers[i] != want:
+                    add(i, "speaker", f"この行の話者は{want}（{'解説役' if role == 0 else '聞き役'}）にする")
+        run = 1
+        for i in range(1, len(body)):
+            run = run + 1 if speakers[i] == speakers[i - 1] else 1
+            if run == 3:
+                add(i, "run", "同じ話者が3行続いている。間に聞き役の短い一言（8〜18字）を入れる")
+
+    # 長さ
+    for i, t in enumerate(body):
+        if is_listener[i]:
+            if len(t) > 20:
+                add(i, "len", f"聞き役の行が{len(t)}字。18字以内の驚き・問い返しにする")
+        elif len(t) > 36:
+            add(i, "len", f"{len(t)}字ある。34字以内にし、事実が2つ入っていれば1つを捨てる")
+        elif len(t) < (15 if i == 0 else 22):
+            add(i, "len_short", f"{len(t)}字しかない。確かな事実の具体（数字・名前・目に見える出来事）を入れて26〜34字にする")
+    total = sum(len(t) for t in texts)
+    if chars_max and total > chars_max:
+        add(None, "total", f"総字数{total}字が上限{chars_max}字を超えている。解説役の行を短くする")
+    elif chars_min and total < chars_min - 10:
+        add(None, "total_short", f"総字数{total}字が下限{chars_min}字に足りない。解説役の行を24〜34字にして、確かな事実の具体を足す")
+
+    # 聞き役が先に事実を言う
+    for i, t in enumerate(body):
+        if not is_listener[i]:
+            continue
+        prior = "".join(texts[:i])
+        new_nums = [n for n in _numbers_in(t) if n not in _nfkc(prior)]
+        new_words = [w for w in _tokens(t) if not re.fullmatch(r"\d+(?:\.\d+)?", w)
+                     and w not in _LISTENER_FREE_WORDS and not _seen(w, prior)]
+        if new_nums or len(new_words) >= 2:
+            add(i, "listener_preempt",
+                f"聞き役が、解説役より先に新しい事実（{'・'.join(new_nums + new_words)}）を言っている。"
+                "前の行に出た語だけで驚く・問い返す形にする")
+
+    # ツッコミが解説役の行にある
+    if dialogue:
+        for i, t in enumerate(body):
+            if speakers[i] == explainer and _TSUKKOMI_RE.search(t):
+                add(i, "tsukkomi", "ツッコミの言い回し（いや／〜でしょ！／!?）が解説役の行にある。解説役の行は事実だけにし、ツッコミは聞き役の行へ")
+
+    # 同じ事実の言い直し（事実を運ぶ行どうし）
+    fact_idx = [i for i in range(len(body)) if not is_listener[i]]
+
+    def ftoks(t: str) -> List[str]:
+        return [w for w in _tokens(t) if w not in sub_toks and w not in _LISTENER_FREE_WORDS
+                and not any(w in s or s in w for s in sub_toks if len(s) >= 2)]
+
+    for x in range(len(fact_idx)):
+        for y in range(x + 1, len(fact_idx)):
+            a, b = fact_idx[x], fact_idx[y]
+            ta, tb = ftoks(texts[a]), ftoks(texts[b])
+            shared = [w for w in ta if _seen(w, texts[b])] if (ta and tb) else []
+            ka, kb = _kanji_bag(texts[a], subject), _kanji_bag(texts[b], subject)
+            kshared = ka & kb
+            if a == 0 and b == fact_idx[-1]:
+                # オチは冒頭へ戻る問いで終えるので、問いの部分は除き、事実の文だけで比べる。
+                # 事実の文の漢字がすべて1行目にあれば言い直し（「血も出ないとされる」）。
+                stmt = re.sub(r"[^。！!]*[？?][」』]?\s*$", "", texts[b])
+                kb2 = _kanji_bag(stmt, subject)
+                if kb2 and kb2 <= ka:
+                    add(b, "dup", f"L1と同じ事実（{'・'.join(sorted(kb2))}）の言い直し。オチの前半には新しい事実を置く")
+                continue
+            if shared and len(shared) >= 2 and len(shared) >= 0.5 * min(len(ta), len(tb)):
+                add(b, "dup", f"L{a + 1}と同じ事実（{'・'.join(shared)}）の言い直し。ファクトシートのまだ使っていない事実に替える")
+            elif not (a == 0 and b == fact_idx[1] and re.search(r"[？?]", texts[0])) \
+                    and min(len(ka), len(kb)) >= 2 and len(kshared) >= 2 \
+                    and len(kshared) >= 0.6 * min(len(ka), len(kb)):
+                add(b, "dup", f"L{a + 1}と同じ事実（{'・'.join(sorted(kshared))}）の言い直し。ファクトシートのまだ使っていない事実に替える")
+    ids = {}
+    for i in fact_idx:
+        fid = str((lines[i] or {}).get("fact") or "").strip().upper()
+        if re.fullmatch(r"F\d+", fid):
+            if fid in ids:
+                add(i, "dup", f"L{ids[fid] + 1}と同じ事実（{fid}）を使っている。まだ使っていないF番号の事実に替える")
+            else:
+                ids[fid] = i
+
+    # 確かな事実に無い数字
+    if sure:
+        for i, t in enumerate(body):
+            bad = [n for n in _numbers_in(t) if n not in sure_nums and n not in sub_toks]
+            if bad:
+                add(i, "unverified_number", f"数字（{'・'.join(bad)}）がファクトシートの確かな事実に無い。消すか、確かな事実の数字に替える")
+
+    # 1行目
+    t0 = texts[0]
+    if re.search(r"本当[？?]|本当なの|ほんと[？?]|マジ[!?！？]|マジで[!?！？]|知って(?:た|る)[？?]|だった[？?]", t0):
+        add(0, "hook_doubt", "『本当？』『〜だった？』『知ってた？』で自分のフックを疑っている。言い切るか、結果が予想できない問い（〜したらどうなる？）にする")
+    if not (re.search(r"[？?]", t0) or _SECOND_PERSON_RE.search(t0) or re.search(r"\d", _nfkc(t0))
+            or re.search(r"(しか|だけ|唯一|一度も|全員|誰も|絶対|必ず|たら|すると|ると、|れば)", t0)):
+        add(0, "hook_type", "1行目が説明文になっている。結果が予想できない問い（〜したらどうなる？）、"
+            "あなたを当事者にする言い切り、限定・数字で覆す事実（〜しかいない）のどれかにする")
+    m = re.search(r"[？?]", t0)
+    if m and not re.search(r"なぜ|なんで|どうな|どう|何|誰|どこ|どれ|どっち|いつ|いくつ|(?:たら|れば|ると)[？?]", t0[:m.end()]):
+        add(0, "hook_doubt", "言い切りの事実に『？』を付けただけの問いになっている。言い切るか、"
+            "『〜したらどうなる？』『なぜ〜なのか』のように答えが予想できない問いにする")
+    if m and len(re.sub(r"[\s。！!…、]", "", t0[m.end():])) >= 6:
+        add(0, "hook_answer", "問いの後ろに答え・説明を続けている。問いで止める（後ろの内容は3行目へ）")
+    if subject and check_subject:
+        keys = [k for k in (_scp_numbers(subject) or [])] or [w for w in _tokens(subject) if len(w) >= 2]
+        keys = [k.upper().replace("SCP-", "") if k.startswith("scp-") else k for k in keys]
+        # テーマを差し替えたときは subject が古いことがあるので、今の題名の固有名（カタカナ・SCP番号）も認める
+        keys += [k.upper().replace("SCP-", "") for k in _scp_numbers(ttl)]
+        keys += re.findall(r"[\u30a1-\u30faー]{3,}", _nfkc(ttl))
+        if keys and not any(k in _nfkc(t0) for k in keys):
+            add(0, "hook_subject", f"1行目に題材名（{subject}）が無い")
+
+    # オチ（最後の内容行）
+    punch = body[-1].strip()
+    if not (re.search(r"[？?][」』）)]?[。！!…]*$", punch) or _SECOND_PERSON_RE.search(punch)):
+        add(len(body) - 1, "punch", "オチが説明文で終わっている。冒頭へ戻る二人称の問い（『あなたの〜、今〜していませんか』）か、"
+            "コメントで答えたくなる問いで終える")
+
+    # CTA（最終行）: 高評価・登録・登録で何が届くか、36字以内
+    cta_bad = _cta_problem(texts[-1])
+    if cta_bad:
+        add(len(texts) - 1, "cta", cta_bad)
+
+    # 予防線・途中で切れた文
+    for i, t in enumerate(body):
+        h = _HEDGE_RE.search(t) or re.search(r"(考えです|と考えられ|説があ|説もあ|と指摘され|やすいという)", t)
+        if h:
+            add(i, "hedge", f"予防線（{h.group(0).lstrip('。')}）で主張を弱めている。確かな事実で言い切る")
+        if _DANGLING_RE.search(t.strip()):
+            add(i, "dangling", "文が途中で切れている（〜なり。など）。言い切りにする")
+
+    # テーマ差し替え前の語の残り
+    gate = theme.get("assert_gate") or {}
+    old = f"{gate.get('reframed_title_from') or ''} {gate.get('reframed_angle_from') or ''}".strip()
+    if old:
+        new_ctx = f"{ttl} {theme.get('angle') or ''} {sure_all_txt}"
+        drift = [w for w in _tokens(old) if not re.fullmatch(r"\d+(?:\.\d+)?", w) and len(w) >= 3
+                 and w not in sub_toks and not _seen(w, new_ctx)]
+        for i, t in enumerate(body):
+            hit = [w for w in drift if w in _nfkc(t)]
+            if hit:
+                add(i, "drift", f"差し替え前のテーマの語（{'・'.join(hit)}）が残っている。今のテーマ『{ttl}』の事実だけにする")
+
+    # 学術語（漢字4字以上で、題名・題材名・確かな事実の文に無いもの）
+    # 固有名の多いジャンル（SCP・ポケモン・妖怪）は確かな事実の語も認める。科学は題名と題材名だけ
+    # （事実の文に「精神性発汗」のような教科書の語が入っていることがあるため）。
+    allowed = f"{ttl} {subject} {sure_facts_txt if check_subject else ''}"
+    for i, t in enumerate(body):
+        bare = _QUOTED_RE.sub("", t)
+        jar = []
+        for m in re.finditer(r"[\u4e00-\u9fff々]{4,}", bare):
+            w = m.group(0)
+            # 「進化先知ってる」のように、最後の字が送り仮名つきの動詞・形容詞なら外す
+            if re.match(r"[っるらりれろいうえかきくけこさしすせそたちつてとまみむめもわ]", bare[m.end():m.end() + 1]):
+                w = w[:-1]
+            if len(w) >= 4 and w not in allowed:
+                jar.append(w)
+        if jar:
+            add(i, "jargon", f"教科書の言葉（{'・'.join(jar)}）を普段の言葉に言い換える")
+    return viol
+
+
+# 名前を伏せた主語の例文（「知ってた？ このポケモン実は」など）。voice_style の常套句・
+# 冒頭フック例にあると、GPT が1行目にそのまま使う（pokemon-lab 27本中16本が「このポケモンの
+# モデル、実は…」で始まっていた）。
+_PLACEHOLDER_QUOTE_RE = re.compile(
+    # 「 / 」区切りの例文リストの1項目だけを対象にする（ルール本文中の引用は残す）
+    r"(?:(?<=: )|(?<=/ ))「[^「」]{0,40}(?:このポケモン|この妖怪|このSCP|この2匹|この報告書|知ってた)[^「」]{0,40}」"
+    r"(?:[ \t]*/[ \t]*)?"
+)
+
+
+def _sanitize_voice_block(block: str) -> str:
+    """ショート専用: 語り口ブロックから、品質バーと衝突する指定を外す。
+
+    - 例文リストから、名前を伏せた主語の例文を消す。
+    - 「1行目は必ず『これ知ってた？』…で始める」「締めは…余韻で終える」のような、
+      行の役割と食い違う文を落とす（_sanitize_short_rules と同じ規則）。
+    """
+    if not block:
+        return block
+    block = _PLACEHOLDER_QUOTE_RE.sub("", block)
+    block = re.sub(r"[ \t]*/[ \t]*$", "", block, flags=re.M)
+    # 例文がすべて消えた「冒頭フック例（…）: 」の行は落とす
+    block = "\n".join(l for l in block.split("\n") if not re.search(r"[:：]\s*$", l)
+                      or l.lstrip().startswith("- 厳守") or l.lstrip().startswith("- 禁止"))
+    return _sanitize_short_rules(block)
+
+
+# ショート専用の行の役割。チャンネル固有の構成(short_format.structure)の後ろに置き、
+# 食い違うところはこちらを優先させる。
+# 【2026-10-03 第2周】4ch の short_format は「4行目=言い換えで自分ゴト化（新情報の追加は
+# 禁止）」「5行目=2つ目の事実を新しく足さない／『記録はここで途切れている』系の余韻」と
+# 指定していて、本文5行のうち事実を運ぶのが 1〜3行目だけになっていた（第1周サンプル4本で
+# 実質の情報は2〜3個、比較対象の上位ショートは 4〜6個）。この指定は 09-07 の「15〜25%の崖」
+# 対策として入ったが、channel JSON 自身が 09-18 に「5回の改訂を経ても効果なし＝打ち切り」と
+# 記録している。channel JSON は書き換えず（patch_channel_file を通す運用のため）、
+# ショート専用プロンプトの中でだけ、その文を外して下の役割に置き換える。
+_SHORT_LINE_ROLES = """# 行の役割(ショート・上の構成と食い違うときはこちらを優先)
+- 1行目: 題材名＋事実①(品質バー2の型)。まだ答えは言わない。
+- 2行目: 1行目を受けた驚きか、視聴者の疑問の代弁。答えは言わない。
+- 3行目: 1行目の答えの核を言い切る。事実②(数字・出典・仕組みの名前)を入れる。
+- 4行目: 事実③。3行目の裏付けになる別の数字・記録か、意外な飛び火(別の場面・別の作品・別の実験)。3行目の言い換え・たとえだけの行にしない。
+- 5行目: 事実④でオチ(品質バー7のどれか)。
+- 最終行: 高評価+登録のCTA(下の指定どおり短く)。
+"""
+
+# 掛け合い（解説役＋聞き役）チャンネルのショート専用の行の役割（2026-10-03 第3周）。
+# 第2周の6行構成（解説・聞き・解説・解説・解説・CTA）は、事実を4つ運ぶために3〜5行目が
+# 解説役の3連続になり、pokemon-lab では聞き役が消えて解説役がツッコミ（「いや強すぎでしょ！」）
+# まで言っていた。比較対象の掛け合い型（化け学のふしぎ 848万・215万）は、聞き役の短い
+# 一言（「いや引き寄せられんのかい」「なんで？」）が数行おきに入る。そこで聞き役の行を
+# 8〜18字に縮めて2回入れ、本文6行＋CTA の7行にする（総字数の帯は変えない）。
+SHORT_DIALOGUE_LINE_COUNT = 7
+# 本文6行の話者（0=解説役, 1=聞き役）と、事実を運ぶ行か
+SHORT_DIALOGUE_SPEAKERS = (0, 1, 0, 0, 1, 0)
+SHORT_DIALOGUE_FACT_LINES = (0, 2, 3, 5)
+_SHORT_LINE_ROLES_DIALOGUE = """# 行の役割(掛け合いショート・全7行・上の構成と食い違うときはこちらを優先)
+- 1行目(解説役・20〜32字): 題材名＋事実①(品質バー2の型)。問いで終えるなら、問いの後ろに答えや説明を続けない。
+- 2行目(聞き役・8〜18字): 1行目への驚きか、視聴者の疑問の代弁。1行目に出た語だけを使う。答えは言わない。
+- 3行目(解説役・26〜34字): 1行目の答えの核を言い切る。事実②。
+- 4行目(解説役・26〜34字): 「しかも」「なんと」「恐ろしいことに」「ちなみに」でつなぎ、事実③。3行目の裏付けになる別の数字・記録か、意外な飛び火(別の場面・別の作品・別の実験)。3行目の言い換えにしない。
+- 5行目(聞き役・8〜18字): ツッコミか「なんで？」「じゃあ〜は？」の問い。1〜4行目に出た語だけを使う。
+- 6行目(解説役・26〜34字): 5行目の問いに事実④で答え、そのまま品質バー7の型(冒頭へ戻る二人称の問い／コメントしたくなる問い)で終える。説明文で終えない。
+- 7行目: 高評価+登録のCTA(下の指定どおり短く)。
+- 各行の "fact" に、その行で使ったファクトシートの番号(例 "F1")を書く。聞き役の行とCTAは null。同じF番号を2行で使わない。
+- 行どうしは会話としてつながる: 聞き役の問いに次の行が答え、解説役の行は前の行を受けて「しかも」「実は」で積み上げる。事実を箇条書きのように並べるだけの台本は不合格。
+- 「〜という記録。」「〜なんだ。」の同じ語尾を3行続けない。
+
+# お手本(実在の上位ショートの書き起こし。言い回しは真似せず、流れ・密度・つなぎ方を真似る)
+- 化け学のふしぎ(848万回・掛け合い): 「ネズミにモンスター磁石を近づけたらどうなる？」→「この磁石の下では、離れたコインが縦に積み上がる」→「では、この磁石をネズミに近づけていこう」→(聞き役)「いや引き寄せられんのかい」「そもそもなんでネズミが磁石から離れるの？」→「実は全ての物質は反磁性を持つからなんだ」→(聞き役)「ネズミの何が反発してるの？」→「特に細胞に含まれる水分子が反発するんだ」
+- じゆ(19万回・SCP): 「もしあなたの周りで『カチカチ』という音が聞こえたら、もう助かりません」→「SCP-4975は、首の骨を鳴らして獲物に宣告する捕食者です」→「恐ろしいことに、地球の裏側に逃げても、音は常にすぐ後ろから聞こえます」→ …最後に「あなたの後ろの音、今止まりませんでしたか」
+- なぞはな(52万回・ポケモン21秒): 「ザシアンは設定上、メスしかいない」→「『妖精王の剣』と恐れられた」→「ザマゼンタは『格闘王の盾』」→「兄弟でもありライバルでもある」
+"""
+
+# ショート専用のときに channel JSON の構成文から外す文（上の _SHORT_LINE_ROLES と衝突する指定）。
+_SHORT_STRUCTURE_DROP = (
+    "足してはならない", "足さない", "追加は禁止", "好きな人多い", "キャラ愛",
+    "系で終える", "系の前向きな余韻", "系の警告で終える", "だけを伝える",
+    "これ知ってた", "余韻", "懐かしい",
+    # 第3周: 「同じ行の後半に必ず数字を置く」（聞き役に新しい数字を言わせる指定）と
+    # 「4行目でたとえ話に落とし」（事実を運ばない行を作る指定）
+    "同じ行の後半に必ず", "たとえ話に落とし", "たとえ話で自分ゴト化",
+)
+
+
+def _sanitize_short_rules(block: str, replace_numbered: bool = False) -> str:
+    """ショート構成ルールの文から、行の役割と衝突する指定だけを外す。
+
+    - 「N行目=…」の構成行に衝突語があれば、その行は丸ごと
+      「N行目=下の『行の役割』のN行目に従う。」に置き換える（引用の中の「。」で
+      文を割ると、例文の断片だけが残るため）。
+    - それ以外の行（extra_rules など）は「。」で文に分け、衝突語を含む文だけ落とす。
+    """
+    out = []
+    for line in block.split("\n"):
+        m = re.match(r"^(\s*)(\d+)行目=", line)
+        if m and replace_numbered:
+            # 行の数・役割そのものを差し替える（掛け合い7行構成）ときは、チャンネル固有の
+            # 「N行目=…」を全部、行の役割への参照にする。
+            out.append(f"{m.group(1)}{m.group(2)}行目=下の『行の役割』の{m.group(2)}行目に従う。")
+            continue
+        if not any(k in line for k in _SHORT_STRUCTURE_DROP):
+            out.append(line)
+            continue
+        if m:
+            out.append(f"{m.group(1)}{m.group(2)}行目=下の『行の役割』の{m.group(2)}行目に従う。")
+            continue
+        prefix = re.match(r"^\s*(?:[-・*]\s*)?", line).group(0)
+        sents = [x for x in re.split(r"(?<=。)", line[len(prefix):]) if x]
+        kept = [x for x in sents if not any(k in x for k in _SHORT_STRUCTURE_DROP)]
+        joined = "".join(kept).strip()
+        if len(joined) >= 20:  # 短い残り（「この切り替わり自体を…」）は文脈が無いので捨てる
+            out.append(prefix + joined)
+    return "\n".join(out)
+
+
+# 実績で負けている冒頭の型（channel JSON の voice_style.hook_patterns から抽選しない）。
+# yokai-watch「キャラ愛型」(「〇〇、好きな人多いよね。でも元ネタを知ると…」):
+#   09-12〜09-29 公開 50本のうち 28本がこの型（または同系の元ネタ明かし）で始まり、
+#   再生中央値 253・900回以上 4/28。それ以外の 22本は中央値 855・7/22。
+#   再生 2〜6 回の下位3本はすべてこの型（scratchpad/loop/tools/perf.py の集計）。
+_RETIRED_HOOK_PATTERNS: Dict[str, Dict[str, str]] = {
+    "yokai-watch": {"キャラ愛型": "中央値253 vs 855（09-12〜09-29）"},
+}
+
+def _validator_channel_dict(channel, short_only: bool, n_lines: int) -> Dict[str, Any]:
+    """scenario_validator に渡す channel dict。
+
+    掛け合いのショート専用は 7行（聞き役の行は 8〜18字）にしたので、channel JSON の
+    short_format.line_count=6 / 行の下限字数のままだと、正しい台本に毎回「行数」「字数」の
+    警告が出る。channel JSON は書き換えず、検証に渡す写しだけ合わせる。
+    """
+    try:
+        raw = channel._raw or {}
+    except AttributeError:
+        raw = {}
+    if not (short_only and isinstance(raw, dict)
+            and len(getattr(channel, "characters", {}) or {}) >= 2
+            and n_lines == SHORT_DIALOGUE_LINE_COUNT):
+        return raw
+    out = dict(raw)
+    sf = dict(out.get("short_format") or {})
+    sf["line_count"] = SHORT_DIALOGUE_LINE_COUNT
+    sf["line_min_chars"] = 8
+    sf["line_max_chars"] = 36
+    out["short_format"] = sf
+    return out
+
+
+def _short_only_mode(channel, explicit: Optional[bool] = None) -> bool:
+    """このチャンネルの台本がショートだけで使われるか（=長尺台本を作らないか）。
+
+    13ch すべてが autopilot.gen_type = "short" で、長尺は1本もレンダリングされて
+    いないのに、プロンプトは毎回 full_scenario を 55〜64 行・4,800字以上要求し、
+    行数・字数が足りないと GPT を再呼び出し → 7セクションの拡張まで走っていた
+    （2026-10-03 実測: daily-science 1本 152.6 秒、うち長尺分の再試行2回＋拡張7回）。
+    長尺の指示がショートの指示と同じプロンプトに並ぶため、長尺用の
+    「冒頭5秒で本編宣言」「次回予告を必ず」もショートに混ざっていた。
+
+    explicit が渡されればそれに従う。環境変数 SCENARIO_FORCE_FULL=1 で長尺を強制
+    （run_scp_lab_3000_full.py のような手動の長尺レンダリング用）。それ以外は
+    channel JSON の autopilot.gen_type（無ければ video_format.output.gen_type）が
+    "short" のときだけ True。
+    """
+    if explicit is not None:
+        return bool(explicit)
+    if os.environ.get("SCENARIO_FORCE_FULL", "").strip() in ("1", "true", "yes"):
+        return False
+    try:
+        raw = channel._raw or {}
+    except AttributeError:
+        return False
+    if not isinstance(raw, dict):
+        return False
+    gen_type = (raw.get("autopilot") or {}).get("gen_type")
+    if not gen_type:
+        gen_type = ((raw.get("video_format") or {}).get("output") or {}).get("gen_type")
+    return gen_type == "short"
 
 
 def _series_hint_block(channel) -> str:
@@ -350,8 +1172,9 @@ def _series_hint_block(channel) -> str:
         "# シリーズ化ルール(チャンネル回遊・登録率対策)",
         "- 本チャンネルのショートは単発ではなく**連作シリーズ**として見せる。"
         "今回のテーマが属するシリーズ名を `series_name` に出力する。",
-        "- 最終行のCTAで**必ずシリーズ名に触れる**"
-        "（例:「〇〇シリーズ、他にもあるから見てって」）。"
+        "- 最終行のCTAで**必ずシリーズ名に触れる**。ただし別の句として足さず、"
+        "「登録すると何が届くか」をシリーズ名で言う形に溶かす"
+        "（例:「登録で〇〇シリーズの次も届く」）。最終行の字数指定を超えないこと。"
         "「このチャンネルには同じ系統の動画がまだある」と伝えるのが目的。",
     ]
     if lineup:
@@ -1540,9 +2363,9 @@ class ScenarioGenerator:
             "line_chars": "28〜36字"              # 最終行の字数（任意）
           }
 
-        `subscribe_wording` を省くと既定の「1万人目標・毎日投稿中・応援よろしく」
-        3要素になる。cta_style が quiet のチャンネルではこの3要素が語り口を壊すので、
-        チャンネルの声で書いた言い回しを渡すこと。
+        `subscribe_wording` を省くと既定の「登録すると次に何が届くか」の1句になる
+        （2026-10-03 までは「1万人目標・毎日投稿中・応援よろしく」の3要素だった）。
+        omit_related_video の最終行は既定 22〜36字（line_chars で上書き可）。
         """
         try:
             cfg = (channel.content_policy or {}).get("short_end_line") or {}
@@ -1551,7 +2374,7 @@ class ScenarioGenerator:
         if not isinstance(cfg, dict):
             cfg = {}
 
-        end_chars = (cfg.get("line_chars") or "").strip() or "45〜70字"
+        custom_chars = (cfg.get("line_chars") or "").strip()
 
         def sub_cta(num: str) -> str:
             sub_wording = (cfg.get("subscribe_wording") or "").strip()
@@ -1561,44 +2384,54 @@ class ScenarioGenerator:
                     "(そのままコピペせず、その回の内容と地続きにする)。"
                     "このチャンネルの語り口を守り、叫ばない・煽らない・強い依頼にしない。\n"
                 )
+            # 【2026-10-03】既定を「1万人目標・毎日投稿中・応援よろしく」の3要素から
+            # 「登録すると何が届くか」の1句に変えた。3要素版は最終行を 51〜63字に
+            # 膨らませ（4ch 全部・本文5行の平均約140字に対し CTA が約28%）、
+            # 「1万人」「応援」はチャンネル側の事情で視聴者の得を何も言っていない。
+            # 実測では 3要素入りの 09-29 公開4本の登録はすべて 0。
             return (
-                f"    - {num}登録CTA: 「チャンネル登録者1万人を目指して毎日投稿中なので、応援よろしくね!」の"
-                "ニュアンスを必ず入れる(「毎日投稿中」「1万人目標」「応援よろしく」の3要素で、"
-                "視聴者の応援したい気持ちを引き出して登録率を上げる)。\n"
+                f"    - {num}登録CTA: 「チャンネル登録」か「登録すれば/登録で」の形で、"
+                "**登録すると次に何が届くか**を、このチャンネルが毎回扱う題材で1句にする"
+                "(例:「登録すれば次の1体の裏設定も届くよ」「登録で次のファイルも届く」)。"
+                "❌「1万人目標」「応援よろしく」のようなチャンネル側の事情は書かない"
+                "(視聴者の得にならず、字数だけ食う)。\n"
             )
 
         if cfg.get("omit_related_video"):
+            end_chars = custom_chars or "22〜36字"
             wording = (cfg.get("wording") or "").strip()
-            closer = (
-                f"必ず「{wording}」のニュアンスの一言を入れる"
-                if wording else
-                "視聴者にコメントを促す一言を入れる"
+            hint = (
+                f"    - 「{wording}」は②で何が届くかを言うときのヒントにしてよい"
+                "(そのまま足すと長くなるので、入れるなら②に溶かす)。\n"
+                if wording else ""
             )
             return (
-                f"  {line_no}行目=**締めの一言+登録誘導CTA(必須・絶対省略禁止・順番厳守)**: "
-                "必ず「①締めの一言 → ②チャンネル登録誘導」の順で1行にまとめる。\n"
-                f"    - ①締めの一言: {closer}（そのままコピペせず、その回の内容と地続きにする）。\n"
+                f"  {line_no}行目=**高評価+登録CTA(必須・絶対省略禁止・1行で短く)**: "
+                "「①高評価のお願い → ②登録すると何が届くか」の順で1行にまとめる。\n"
+                "    - ①高評価: 「高評価」の語を必ず入れ、この回の中身に一言で触れる"
+                "(例:「知らなかったら高評価」「この記録が届いたなら高評価を」)。\n"
                 f"{sub_cta('②')}"
+                f"{hint}"
                 "    - ❌ 「関連動画」「本編」「フル動画」への誘導は禁止。"
                 "本チャンネルは長尺を作らないため、存在しない動画へ送ることになる。\n"
-                f"    - **{line_no}行目は{end_chars}**(締めの一言と登録誘導を連結するため、"
-                "通常の字数制限と異なってよい)。\n"
+                f"    - **{line_no}行目は{end_chars}**。チャンネル固有の構成に「最終行のみ40〜55字を許容」と"
+                "あっても、それは上限であって目標ではない。平均視聴は11〜15秒で、"
+                "26〜30秒のショートの最終行まで届く人は少ない。浮いた字数は本文の具体的な事実に回す。\n"
             )
 
+        end_chars = custom_chars or "45〜70字"
         return (
             f"  {line_no}行目=**登録誘導+関連動画誘導CTA(必須・絶対省略禁止・順番厳守)**: "
             "必ず「①チャンネル登録誘導 → ②関連動画誘導」の順で1行に2つのCTAを連結する。\n"
             f"{sub_cta('①')}"
             "    - ②関連動画CTA: 必ず「関連動画」というワードを含め、"
             "ショート離脱者を長尺へ送る(「本編」より「関連動画」を優先)。\n"
-            "    - 例:「チャンネル登録者1万人目指して毎日投稿中!応援よろしくね!"
-            "もっと詳しい話は関連動画から見てね!」「1万人目指して毎日投稿中だから登録お願い!"
-            "続きは関連動画でチェック!」\n"
+            "    - 例:「登録すれば次の謎も届くよ。もっと詳しい話は関連動画から見てね!」\n"
             f"    - **{line_no}行目は{end_chars}**(2つのCTAを連結するため、"
             "通常の字数制限と異なってよい)。\n"
         )
 
-    def _end_cta_block(self, channel) -> str:
+    def _end_cta_block(self, channel, short_only: bool = False) -> str:
         """動画末尾の「チャンネル登録導線」ブロックを返す（オプトイン）。
 
         `content_policy.end_cta` が設定されているチャンネルだけに効く。形式:
@@ -1621,6 +2454,25 @@ class ScenarioGenerator:
 
         wording = (cfg.get("wording") or "チャンネル登録よろしく").strip()
         reason = (cfg.get("reason") or "").strip()
+        if short_only:
+            # ショート専用: full_scenario は作らないので full の指示を出さない。
+            # 理由づけは長文のまま入れると最終行が 60字前後に膨らむ（2026-10-03 実測:
+            # daily-science の最終行 61〜63字）ので「一言で」に縛る。
+            reason_short = (
+                f"- 登録の理由は「{reason}」を**一言(10字前後)に縮めて**添える"
+                "(例:「毎日1つ届く」)。理由を文章で説明しない。\n"
+                if reason else ""
+            )
+            return (
+                "# 動画末尾の登録導線(登録転換率改善・絶対厳守)\n"
+                "- **short_scenarioの最終行は必ず『高評価+チャンネル登録CTA』で終える**。"
+                "オチ・余韻で終えて登録に触れないのは不合格。\n"
+                f"- 言い回しはチャンネルのトーンに合わせて「{wording}」のニュアンスで書く"
+                "（テンプレの棒読みにしない。その回の内容と地続きの一言にする）。\n"
+                f"{reason_short}"
+                "- 最終行の字数は上のショート構成ルールの指定に従う(長いCTAは本文の尺を奪う)。\n"
+                "\n"
+            )
         reason_line = (
             f"- 登録の理由づけとして「{reason}」のニュアンスを必ず添える"
             "（理由のない『登録お願いします』は登録率が上がらない）。\n"
@@ -1694,7 +2546,10 @@ class ScenarioGenerator:
         hooks = vs.get("opening_hooks") or []
         if hooks:
             sample = " / ".join(f"「{h}」" for h in hooks)
-            lines.append(f"- 冒頭フック例（雰囲気を真似る・丸ごとコピペは不可）: {sample}")
+            lines.append(
+                f"- 冒頭フック例（雰囲気を真似る・丸ごとコピペは不可。例の「このポケモン」"
+                f"「この妖怪」「このSCP」のような名前を伏せた主語は、実際の題材名に置き換える）: {sample}"
+            )
         forbidden = vs.get("forbidden") or []
         if forbidden:
             lines.append(f"- 使用禁止ワード/要素: {', '.join(forbidden)}")
@@ -1751,6 +2606,12 @@ class ScenarioGenerator:
         if not norm:
             return ""
 
+        retired = _RETIRED_HOOK_PATTERNS.get(getattr(channel, "id", "") or "", {})
+        active = [p for p in norm if p["name"] not in retired]
+        if active and len(active) < len(norm):
+            print(f"🎣 実績の悪い型を除外: {', '.join(p['name'] for p in norm if p['name'] in retired)}")
+            norm = active
+
         chosen = random.choice(norm)
         others = [p["name"] for p in norm if p["name"] != chosen["name"]]
         print(f"🎣 冒頭3秒の型: 【{chosen['name']}】 (候補{len(norm)}型から抽選)")
@@ -1767,6 +2628,12 @@ class ScenarioGenerator:
         if chosen["example"]:
             lines.append(f"  - 参考例（丸写し禁止・テーマに合わせて言い換える）: 「{chosen['example']}」")
         lines += [
+            f"- **{line_label}には題材の固有名(ポケモン名・SCP番号・妖怪名・現象や物の名前)を必ず入れる**。"
+            "型や参考例にある「このポケモン」「この妖怪」「このSCP」「これ」は、実際の名前に置き換えて書く"
+            "(フィードで流れてきた視聴者にはタイトルが見えていない)。",
+            "- 型は言い回しではなく役割(問い/驚き)を借りるもの。型の言い回しがテーマに合わないとき"
+            "(例: 元ネタ型なのにテーマが元ネタの話ではない)は、型の言い回しを捨ててテーマの事実で書く。"
+            "型に合わせるためにテーマに無い主張を作るのは不合格。",
             f"- {line_label}は**15〜30字で断定的に**。ここで答えを言わない(答えを言うと以降を見る理由が消える)。",
             f"- このチャンネルの語り口（上記の声の指紋・語尾・一人称）を{line_label}から守る。"
             "型だけ合っていても語り口が他チャンネル風なら不合格。",
@@ -1846,8 +2713,14 @@ class ScenarioGenerator:
             block += f"- {r}\n"
         return block
 
-    def _build_yukkuri_prompt(self, channel, theme: Dict, target_duration: int) -> str:
-        """ゆっくり対話スタイルのシナリオ生成プロンプト"""
+    def _build_yukkuri_prompt(self, channel, theme: Dict, target_duration: int,
+                              short_only: bool = False) -> str:
+        """ゆっくり対話スタイルのシナリオ生成プロンプト
+
+        short_only=True（ショート専用チャンネル）のときは full_scenario を要求せず、
+        長尺専用のルール（尺・構成・冒頭5秒の本編宣言・次回予告・full の序盤/第二フック）
+        を出さない。代わりにショート品質バー（_SHORT_QUALITY_BAR_RULE）を入れる。
+        """
         char_names = list(channel.characters.keys())
         c0 = char_names[0]
         c1 = char_names[1] if len(char_names) > 1 else c0
@@ -1880,7 +2753,7 @@ class ScenarioGenerator:
         # 冒頭3秒の型はチャンネル固有の hook_patterns から1本ごとに抽選する。
         # 未設定チャンネルは従来どおり共通4型ルール。
         hook_rule_block = self._hook_variant_block(channel) or _HOOK_3SEC_RULE
-        end_cta_block = self._end_cta_block(channel)
+        end_cta_block = self._end_cta_block(channel, short_only=short_only)
         title_rule_block = self._title_rule_block(channel)
         try:
             _sf = (channel._raw or {}).get("short_format") or {}
@@ -1890,9 +2763,14 @@ class ScenarioGenerator:
         # 【2026-08-25】8行→6行に差し戻し。行を増やすと台本字数=実尺が伸びるが、
         # 平均視聴秒数(15〜16秒)は変わらないため維持率だけが落ちることが実測で判明した。
         short_line_count = int(_sf.get("line_count") or 6)
+        # 掛け合いのショート専用は 本文6行(解説・聞き・解説・解説・聞き・解説)＋CTA の7行。
+        dialogue_short = short_only and len(char_names) >= 2
+        if dialogue_short:
+            short_line_count = SHORT_DIALOGUE_LINE_COUNT
         short_end_block = self._short_end_line_block(channel, short_line_count)
         series_block = _series_hint_block(channel)
-        cliffhanger_block = _cliffhanger_block(channel, last_content_line="5行目のオチ")
+        cliffhanger_block = _cliffhanger_block(
+            channel, last_content_line=f"{short_line_count - 1}行目のオチ")
 
         short_rules_block = self._short_rules_block(
             channel, short_target_chars, short_end_block
@@ -1909,42 +2787,40 @@ class ScenarioGenerator:
 {short_end_block}- 浅い感想・誰でも言える一般論(「すごいね」「びっくりだね」だけ)で行を埋めるのは不合格。1本のショートで最低1つは「初めて知った」と思わせる具体情報を入れること。
 """
 
-        return f"""ゆっくり解説動画のシナリオを生成。JSONのみ出力。
-
-{voice_block}# チャンネル: {channel.name} / {channel.concept} / トーン:{tone} / CTA:{cta_style}
-# キャラ:
-{char_lines}
-# テーマ: {theme["title"]} / 切り口:{theme.get("angle","自由")}
-{persona_block}# ポリシー:
-{policy_text}
-
-# 出力JSON
-{{
- "title":"バズるタイトル",
- "series_name":"このテーマが属するシリーズ名(該当なしなら空文字)",
- "thumb_info":{{"hook_lines":["1行","2行"],"hook_caption":"10文字以内","subtitle":"...","tagline":"..."}},
- "short_scenario":[{{"speaker":"{c0}","text":"...","expression":"normal","mood":"bright"}}, ...全{short_line_count}行],
- "full_scenario":[{{"speaker":"{c0}","text":"...","expression":"normal","mood":"calm"}}, ...{floor_lines}〜{target_lines+4}行]
-}}
-
-{title_rule_block}
-{_HOOK_CAPTION_RULE}
-# サムネ文字(thumb_info.hook_lines)ルール
-- hook_lines は**2行**。**各行8文字以内**の短い言い切りにする(長い説明文はサムネで読めない)。
-- 助詞で切らず、単語で区切る(例:「触れた瞬間」「全員消えた」)。2行合わせて1つの謎になるように書く。
-
-# 尺ルール(絶対厳守・違反は不合格)
+        if short_only:
+            if dialogue_short:
+                short_rules_block = _sanitize_short_rules(short_rules_block, replace_numbered=True)
+                short_rules_block = re.sub(
+                    r"\*\*short_scenarioは必ず\d+行\*\*[(（][^)）]*[)）]",
+                    f"**short_scenarioは必ず{short_line_count}行**(解説役の行は24〜34字、聞き役の行は8〜18字、"
+                    f"{short_line_count}行目のCTAは22〜36字)",
+                    short_rules_block)
+                short_rules_block = re.sub(r"構成[(（]\d+行固定[)）]", f"構成({short_line_count}行固定)",
+                                           short_rules_block)
+                short_rules_block += "\n" + _SHORT_LINE_ROLES_DIALOGUE
+            else:
+                short_rules_block = _sanitize_short_rules(short_rules_block) + "\n" + _SHORT_LINE_ROLES
+            voice_block = _sanitize_voice_block(voice_block)
+            full_json_spec = '"full_scenario":[]'
+            full_length_block = ""
+            full_structure_block = ""
+            early_rules_block = _SHORT_ONLY_DIALOGUE_RULES
+            quality_bar_block = _SHORT_QUALITY_BAR_RULE
+            task_line = "ゆっくり対話形式のYouTubeショート台本を生成。JSONのみ出力。長尺(full_scenario)は作らない（空配列）。"
+        else:
+            full_json_spec = (
+                f'"full_scenario":[{{"speaker":"{c0}","text":"...","expression":"normal","mood":"calm"}}, '
+                f'...{floor_lines}〜{target_lines+4}行]'
+            )
+            full_length_block = f"""# 尺ルール(絶対厳守・違反は不合格)
 - **full_scenarioは必ず{floor_lines}〜{target_lines+4}行**(目標{target_lines}行)。{floor_lines}行未満も{target_lines+5}行以上も不合格。
 - **各行は90〜120字**(目標100字、上限120字)。89字以下も121字以上も不合格。
 - **総文字数は{target_chars}〜{max_chars}字**(最低{floor_chars}字、上限{max_chars}字)。約{target_duration/60:.1f}分目標。
 - 各行に研究データ・具体的数字・例え話・歴史エピソードを必ず盛る。短い相槌のみ(「うん」「そうだね」)禁止。
 - VOICEVOX1.3x≒7.8字/秒。{target_chars}字で約{target_duration/60:.1f}分、{max_chars}字で約{max_chars/7.8/60:.1f}分。
 
-{short_rules_block}
-{hook_rule_block}
-{_TELOP_PACING_RULE_SHORT}
-{_LOOP_RULE_SHORT}
-{cliffhanger_block}{series_block}# 構成(full): 冒頭フック(3行) → 問題提起+本編宣言(3行) → 基本メカニズム(12行) → 詳細&研究データ(12行) → 意外な事実&歴史(10行) → 応用Tips(8行) → まとめ+次回予告+締めCTA(7行) = 計55行(目標{target_lines}行に届くまで各セクションを伸ばす)
+"""
+            full_structure_block = f"""# 構成(full): 冒頭フック(3行) → 問題提起+本編宣言(3行) → 基本メカニズム(12行) → 詳細&研究データ(12行) → 意外な事実&歴史(10行) → 応用Tips(8行) → まとめ+次回予告+締めCTA(7行) = 計55行(目標{target_lines}行に届くまで各セクションを伸ばす)
 
 # 冒頭フックルール(超重要・冒頭5秒離脱対策・絶対厳守)
 - ❌ NG: 「みなさんこんにちは」「今日は〇〇について解説します」「ゆっくり霊夢です」など定型の挨拶・自己紹介・チャンネル説明は完全禁止。視聴者は最初の5秒で離脱を判断する。
@@ -1958,7 +2834,54 @@ class ScenarioGenerator:
 - {next_video_hint}
 - 「次回も気になる」と思わせて登録への心理的ハードルを下げるのが目的。次回予告を省略した動画は不合格。
 
-# 雰囲気タグ(mood)ルール — シーンごとのBGM切替に使用
+"""
+            early_rules_block = f"""# 序盤セリフ運びルール(冒頭離脱対策・絶対厳守)
+- 対象は**序盤=full_scenarioの最初の25%区間**（先頭から全体の1/4の行）。ショートは1〜3行目が該当。ここは視聴者が「見続けるか」を決める最重要ゾーン。
+- ❌ NG: 序盤で「感想・まとめ調」の落ち着いた（mood="calm"）セリフを**2連続**させること。「〜なんだね」「〜ということか」「なるほどね」のような噛み砕き・まとめの相槌が続くと、話が停滞して離脱される。
+- ✅ 序盤の各セリフは、原則**疑問文（「なぜ〜？」「〜って何？」「じゃあ〜はどうなるの？」）で次の行へ橋渡し**し、視聴者の「続きが気になる」を切らさない。
+- ✅ どうしても落ち着いた説明（calm）が続きそうなときは、**calmとcalmの間に必ず1行、驚き役（expression="surprise"）や食いつき役（expression="think"／mood="tense"or"mysterious"）のセリフを挟む**。「えっ、それどういうこと!?」のように視聴者の疑問を代弁して、テンポと引きを維持する。
+- この序盤ルールは「冒頭フックルール」と併用する（フック直後の展開が感想の連打にならないよう特に注意）。
+
+{_SECOND_HOOK_RULE_YUKKURI}
+{_TERM_PACING_RULE_YUKKURI}
+"""
+            quality_bar_block = ""
+            task_line = "ゆっくり解説動画のシナリオを生成。JSONのみ出力。"
+
+        short_entry_spec = (
+            f'{{"speaker":"{c0}","text":"...","expression":"normal","mood":"bright","fact":"F1"}}'
+            if dialogue_short else
+            f'{{"speaker":"{c0}","text":"...","expression":"normal","mood":"bright"}}'
+        )
+        return f"""{task_line}
+
+{voice_block}# チャンネル: {channel.name} / {channel.concept} / トーン:{tone} / CTA:{cta_style}
+# キャラ:
+{char_lines}
+# テーマ: {theme["title"]} / 切り口:{theme.get("angle","自由")}
+{persona_block}# ポリシー:
+{policy_text}
+
+# 出力JSON
+{{
+ "title":"バズるタイトル",
+ "series_name":"このテーマが属するシリーズ名(該当なしなら空文字)",
+ "thumb_info":{{"hook_lines":["1行","2行"],"hook_caption":"10文字以内","subtitle":"...","tagline":"..."}},
+ "short_scenario":[{short_entry_spec}, ...全{short_line_count}行],
+ {full_json_spec}
+}}
+
+{title_rule_block}
+{_HOOK_CAPTION_RULE}
+# サムネ文字(thumb_info.hook_lines)ルール
+- hook_lines は**2行**。**各行8文字以内**の短い言い切りにする(長い説明文はサムネで読めない)。
+- 助詞で切らず、単語で区切る(例:「触れた瞬間」「全員消えた」)。2行合わせて1つの謎になるように書く。
+
+{full_length_block}{short_rules_block}
+{quality_bar_block}{hook_rule_block}
+{_TELOP_PACING_RULE_SHORT}
+{_LOOP_RULE_SHORT}
+{cliffhanger_block}{series_block}{full_structure_block}# 雰囲気タグ(mood)ルール — シーンごとのBGM切替に使用
 - 各行に必ず "mood" を付与する。値は次の6種類のいずれか:
   - "calm"(穏やか・落ち着いた解説)
   - "bright"(明るい・楽しい・元気な導入や応用Tips)
@@ -1970,16 +2893,7 @@ class ScenarioGenerator:
 - 構成と雰囲気の対応例: CTA+導入="bright"、問題提起="tense"、基本解説="calm"、研究データ="calm"or"mysterious"、意外な事実="tense"or"mysterious"、応用Tips="bright"、締めCTA="emotional"or"bright"。
 - ショート(short_scenario)は2〜3シーン程度。フック="tense"or"bright"、展開="calm"、オチ="bright"or"emotional"が基本パターン。
 
-# 序盤セリフ運びルール(冒頭離脱対策・絶対厳守)
-- 対象は**序盤=full_scenarioの最初の25%区間**（先頭から全体の1/4の行）。ショートは1〜3行目が該当。ここは視聴者が「見続けるか」を決める最重要ゾーン。
-- ❌ NG: 序盤で「感想・まとめ調」の落ち着いた（mood="calm"）セリフを**2連続**させること。「〜なんだね」「〜ということか」「なるほどね」のような噛み砕き・まとめの相槌が続くと、話が停滞して離脱される。
-- ✅ 序盤の各セリフは、原則**疑問文（「なぜ〜？」「〜って何？」「じゃあ〜はどうなるの？」）で次の行へ橋渡し**し、視聴者の「続きが気になる」を切らさない。
-- ✅ どうしても落ち着いた説明（calm）が続きそうなときは、**calmとcalmの間に必ず1行、驚き役（expression="surprise"）や食いつき役（expression="think"／mood="tense"or"mysterious"）のセリフを挟む**。「えっ、それどういうこと!?」のように視聴者の疑問を代弁して、テンポと引きを維持する。
-- この序盤ルールは「冒頭フックルール」と併用する（フック直後の展開が感想の連打にならないよう特に注意）。
-
-{_SECOND_HOOK_RULE_YUKKURI}
-{_TERM_PACING_RULE_YUKKURI}
-{end_cta_block}# その他ルール
+{early_rules_block}{end_cta_block}# その他ルール
 - text内は1〜2文で完結。文末「。」直後に改行 `\\n` を入れる(例:"...だ。\\nだから...")。
 - **speaker欄は必ず「{c0}」「{c1}」(このチャンネルのキャラ名そのまま)を使う**。他の表記揺れは crash の原因になる。
 - text本文内で相手を呼ぶときも上記の「{c0}」「{c1}」と完全一致の表記を使い、別の漢字・別表記に置き換えない。
@@ -1988,8 +2902,12 @@ class ScenarioGenerator:
 - **ショートは「浅い豆知識」NG**: ChatGPTでもすぐ出てくるような薄い情報ではなく、視聴者が思わず人に話したくなる具体性のある「ネタ」を入れること。
 """
 
-    def _build_monologue_prompt(self, channel, theme: Dict, target_duration: int) -> str:
-        """モノローグスタイルのシナリオ生成プロンプト"""
+    def _build_monologue_prompt(self, channel, theme: Dict, target_duration: int,
+                                short_only: bool = False) -> str:
+        """モノローグスタイルのシナリオ生成プロンプト
+
+        short_only=True のときは _build_yukkuri_prompt と同じく長尺の指示を外す。
+        """
         narrator = channel.characters.get("narrator", {})
 
         policy_parts = []
@@ -2012,7 +2930,7 @@ class ScenarioGenerator:
 
         voice_block = self._voice_style_block(channel)
         hook_rule_block = self._hook_variant_block(channel) or _HOOK_3SEC_RULE
-        end_cta_block = self._end_cta_block(channel)
+        end_cta_block = self._end_cta_block(channel, short_only=short_only)
         try:
             _sf = (channel._raw or {}).get("short_format") or {}
         except AttributeError:
@@ -2042,7 +2960,57 @@ class ScenarioGenerator:
 {short_end_block}- 一般論・感想のみで埋めるのは不合格。1本につき最低1つは「へぇ」と思わせる具体情報を入れること。
 """
 
-        return f"""ドキュメンタリー風ナレーション動画のシナリオを生成。JSONのみ出力。
+        if short_only:
+            short_rules_block = _sanitize_short_rules(short_rules_block) + "\n" + _SHORT_LINE_ROLES
+            voice_block = _sanitize_voice_block(voice_block)
+            full_json_spec = '"full_scenario":[]'
+            full_length_block = ""
+            full_structure_block = ""
+            early_rules_block = _SHORT_ONLY_NARRATION_RULES
+            quality_bar_block = _SHORT_QUALITY_BAR_RULE
+            task_line = "ドキュメンタリー風ナレーションのYouTubeショート台本を生成。JSONのみ出力。長尺(full_scenario)は作らない（空配列）。"
+        else:
+            full_json_spec = (
+                '"full_scenario":[\n'
+                '   {"chapter_title":"第1章: 導入","mood":"mysterious"},\n'
+                '   {"text":"...","mood":"mysterious"},\n'
+                f'   ...テキスト行を{floor_lines}〜{target_lines+4}行(章は3〜5章)\n'
+                ' ]'
+            )
+            full_length_block = f"""# 尺ルール(絶対厳守・違反は不合格)
+- **テキストは必ず{floor_lines}〜{target_lines+4}行**(目標{target_lines}行)。
+- **各行は90〜120字**(目標100字、上限120字)。89字以下も121字以上も不合格。
+- **総文字数は{target_chars}〜{max_chars}字**(約{target_duration/60:.1f}分目標、{max_chars}字で約{max_chars/7.8/60:.1f}分)。
+- 各行に研究データ・数字・事例を必ず盛る。
+
+"""
+            early_rules_block = f"""# 序盤セリフ運びルール(冒頭離脱対策・絶対厳守)
+- 対象は**序盤=full_scenarioの最初の25%区間**（本文行の先頭から全体の1/4）。ショートは1〜3行目が該当。ここは視聴者が「見続けるか」を決める最重要ゾーン。
+- ❌ NG: 序盤で「感想・まとめ調」の落ち着いた（mood="calm"）ナレーションを**2連続**させること。淡々とした総括・言い換えが続くと話が停滞し離脱される。
+- ✅ 序盤の各行は、原則**疑問・問いかけ（「なぜ〜のか」「〜とは何なのか」「では〜はどうなるのか」）で次の行へ橋渡し**し、視聴者の「続きが気になる」を切らさない。
+- ✅ どうしても落ち着いた説明（calm）が続きそうなときは、**calmとcalmの間に必ず1行、驚き・緊張の一撃（mood="tense"）か謎の提示（mood="mysterious"）を挟む**。「だが、ここで奇妙なことが起きる」のように緊張を差し込み、テンポと引きを維持する。
+- この序盤ルールは「冒頭フックルール」と併用する（フック直後の展開が総括の連打にならないよう特に注意）。
+
+{_SECOND_HOOK_RULE_MONOLOGUE}
+{_TERM_PACING_RULE_MONOLOGUE}
+"""
+            full_structure_block = f"""# 冒頭フックルール(超重要・冒頭5秒離脱対策・絶対厳守)
+- ❌ NG: 「これからお話するのは〜」「みなさんは〜をご存知だろうか」のような長い導入・前置きから入る構成は禁止。視聴者は最初の5秒で離脱を判断する。
+- ❌ NG: 自己紹介・チャンネル説明・章タイトルの読み上げから始めない。
+- ✅ 第1章の最初の本文行(0〜3秒): 視聴者の共感を呼ぶ問いかけ + 結論のヒントを即提示。例:「雨の日、なぜか気分が沈むことはないだろうか。実はそれ、ある『物質』が原因なのだ」。
+- ✅ 第1章2〜3行目(3〜10秒): 「今回はその正体を暴く」「この映像で、その謎を完全に解き明かす」のような本編宣言で、すぐ本題へ突入する。
+- 1行目に「あなた」「〜したことがあるはずだ」のような共感を呼ぶ語りを必ず入れる。
+
+# エンディング+次回予告ルール(登録率改善・絶対厳守)
+- 最終章の締めCTA(高評価・登録)の直前または直後に「次回は〇〇を解説する」のような次回予告を必ず1〜2行入れる。
+- {next_video_hint}
+- 「次回も気になる」と思わせて登録への心理的ハードルを下げるのが目的。次回予告を省略した動画は不合格。
+
+"""
+            quality_bar_block = ""
+            task_line = "ドキュメンタリー風ナレーション動画のシナリオを生成。JSONのみ出力。"
+
+        return f"""{task_line}
 
 {voice_block}# チャンネル: {channel.name} / {channel.concept} / トーン:{tone}
 # ナレーター: {narrator.get("role", "冷静な男性ナレーター")}
@@ -2056,11 +3024,7 @@ class ScenarioGenerator:
  "series_name":"このテーマが属するシリーズ名(該当なしなら空文字)",
  "thumb_info":{{"hook_lines":["1行","2行"],"hook_caption":"10文字以内","subtitle":"...","tagline":"..."}},
  "short_scenario":[{{"text":"...","chapter_title":null,"mood":"tense"}}, ...全{short_line_count}行],
- "full_scenario":[
-   {{"chapter_title":"第1章: 導入","mood":"mysterious"}},
-   {{"text":"...","mood":"mysterious"}},
-   ...テキスト行を{floor_lines}〜{target_lines+4}行(章は3〜5章)
- ]
+ {full_json_spec}
 }}
 
 # タイトルルール(超重要・CTR改善のため絶対厳守)
@@ -2076,14 +3040,8 @@ class ScenarioGenerator:
 # サムネ文字(thumb_info.hook_lines)ルール
 - hook_lines は**2行**。**各行8文字以内**の短い言い切りにする(長い説明文はサムネで読めない)。
 
-# 尺ルール(絶対厳守・違反は不合格)
-- **テキストは必ず{floor_lines}〜{target_lines+4}行**(目標{target_lines}行)。
-- **各行は90〜120字**(目標100字、上限120字)。89字以下も121字以上も不合格。
-- **総文字数は{target_chars}〜{max_chars}字**(約{target_duration/60:.1f}分目標、{max_chars}字で約{max_chars/7.8/60:.1f}分)。
-- 各行に研究データ・数字・事例を必ず盛る。
-
-{short_rules_block}
-{hook_rule_block}
+{full_length_block}{short_rules_block}
+{quality_bar_block}{hook_rule_block}
 {_TELOP_PACING_RULE_SHORT}
 {_LOOP_RULE_SHORT}
 {cliffhanger_block}{series_block}# 雰囲気タグ(mood)ルール — シーンごとのBGM切替に使用
@@ -2093,30 +3051,9 @@ class ScenarioGenerator:
 - 同じmoodを2〜10行ほど連続させて「シーン」を作る(毎行切替えない)。1章 = 1〜2シーン目安。
 - 章タイトル行のmoodは、その章の主軸となる雰囲気と一致させる。
 
-# 序盤セリフ運びルール(冒頭離脱対策・絶対厳守)
-- 対象は**序盤=full_scenarioの最初の25%区間**（本文行の先頭から全体の1/4）。ショートは1〜3行目が該当。ここは視聴者が「見続けるか」を決める最重要ゾーン。
-- ❌ NG: 序盤で「感想・まとめ調」の落ち着いた（mood="calm"）ナレーションを**2連続**させること。淡々とした総括・言い換えが続くと話が停滞し離脱される。
-- ✅ 序盤の各行は、原則**疑問・問いかけ（「なぜ〜のか」「〜とは何なのか」「では〜はどうなるのか」）で次の行へ橋渡し**し、視聴者の「続きが気になる」を切らさない。
-- ✅ どうしても落ち着いた説明（calm）が続きそうなときは、**calmとcalmの間に必ず1行、驚き・緊張の一撃（mood="tense"）か謎の提示（mood="mysterious"）を挟む**。「だが、ここで奇妙なことが起きる」のように緊張を差し込み、テンポと引きを維持する。
-- この序盤ルールは「冒頭フックルール」と併用する（フック直後の展開が総括の連打にならないよう特に注意）。
+{early_rules_block}{end_cta_block}
 
-{_SECOND_HOOK_RULE_MONOLOGUE}
-{_TERM_PACING_RULE_MONOLOGUE}
-{end_cta_block}
-
-# 冒頭フックルール(超重要・冒頭5秒離脱対策・絶対厳守)
-- ❌ NG: 「これからお話するのは〜」「みなさんは〜をご存知だろうか」のような長い導入・前置きから入る構成は禁止。視聴者は最初の5秒で離脱を判断する。
-- ❌ NG: 自己紹介・チャンネル説明・章タイトルの読み上げから始めない。
-- ✅ 第1章の最初の本文行(0〜3秒): 視聴者の共感を呼ぶ問いかけ + 結論のヒントを即提示。例:「雨の日、なぜか気分が沈むことはないだろうか。実はそれ、ある『物質』が原因なのだ」。
-- ✅ 第1章2〜3行目(3〜10秒): 「今回はその正体を暴く」「この映像で、その謎を完全に解き明かす」のような本編宣言で、すぐ本題へ突入する。
-- 1行目に「あなた」「〜したことがあるはずだ」のような共感を呼ぶ語りを必ず入れる。
-
-# エンディング+次回予告ルール(登録率改善・絶対厳守)
-- 最終章の締めCTA(高評価・登録)の直前または直後に「次回は〇〇を解説する」のような次回予告を必ず1〜2行入れる。
-- {next_video_hint}
-- 「次回も気になる」と思わせて登録への心理的ハードルを下げるのが目的。次回予告を省略した動画は不合格。
-
-# その他ルール
+{full_structure_block}# その他ルール
 - text内は1〜2文。文末「。」直後に `\\n` 挿入(例:"...だ。\\n...だ。")。
 - 章タイトルで3〜5章に分割。
 - 冒頭で共感フック→本題→意外な結論。本チャンネルのトーン（{tone}）と上記「このチャンネルの語り口」を最優先で守り、語彙・世界観はチャンネルに合わせる。
@@ -2433,6 +3370,7 @@ class ScenarioGenerator:
         improvement_feedback: Optional[List[Dict[str, Any]]] = None,
         run_ab_test: bool = False,
         avoid_duplicate_theme: bool = True,
+        short_only: Optional[bool] = None,
     ) -> Dict[str, Any]:
         """
         チャンネルプロファイルからシナリオを自動生成。
@@ -2451,6 +3389,10 @@ class ScenarioGenerator:
                 （≥ TITLE_DUP_REJECT_THRESHOLD）ならタイトルだけ作り直す。theme_override
                 経由（autopilot / run_*.py / batch）でも必ず適用される重複量産の最終ゲート。
                 意図的に同一テーマを再生成したい手動実行では False を渡す。
+            short_only: True ならショート台本だけを作る（full_scenario は空）。
+                None（既定）は `_short_only_mode()` が channel JSON の gen_type から
+                判定する。長尺を作りたい手動実行は False を渡すか、
+                環境変数 SCENARIO_FORCE_FULL=1 を付ける。
 
         Returns:
             {
@@ -2521,12 +3463,29 @@ class ScenarioGenerator:
             print(f"  ⚠️ competitor intelligence addendum failed: {e}")
 
         # スタイル別プロンプト生成
+        short_only = (
+            channel.style != "facts_overlay" and _short_only_mode(channel, short_only)
+        )
+        fact_sheet: Optional[Dict[str, Any]] = None
+        if short_only:
+            print("  ✂️ ショート専用チャンネル: full_scenario（長尺台本）は生成しない")
+            # 台本の前に事実を洗い出し、言い切れない題材なら切り口/題材を差し替える。
+            theme, fact_sheet = self._assertable_short_theme(
+                channel, theme, avoid_duplicate_theme=avoid_duplicate_theme)
         if channel.style == "facts_overlay":
             prompt = self._build_facts_overlay_prompt(channel, theme, duration)
         elif channel.style == "monologue":
-            prompt = self._build_monologue_prompt(channel, theme, duration)
+            prompt = self._build_monologue_prompt(channel, theme, duration, short_only=short_only)
         else:
-            prompt = self._build_yukkuri_prompt(channel, theme, duration)
+            prompt = self._build_yukkuri_prompt(channel, theme, duration, short_only=short_only)
+        _sheet_txt = _fact_sheet_text(fact_sheet)
+        if _sheet_txt:
+            prompt += (
+                "\n\n# 使ってよい事実(ファクトシート・台本の事実はここの『確かな事実』からだけ取る)\n"
+                "- 『確証なし』の話は台本に入れない(ぼかして入れるのも不可)。"
+                "数字・名前・出典は書いてあるとおりに使う。\n"
+                f"{_sheet_txt}\n"
+            )
 
         if feedback_addendum:
             prompt = prompt + "\n\n" + feedback_addendum
@@ -2591,9 +3550,10 @@ class ScenarioGenerator:
         ABSOLUTE_FLOOR_CHARS = 4800  # 10分 × 8.0文字/秒
         ABSOLUTE_FLOOR_LINES = 55
         MIN_AVG_CHARS_PER_LINE = 90
-        if channel.style == "facts_overlay":
-            # ショート専用スタイル。full_scenario は空で正しいので長さ検証をかけない
-            # （かけると毎回「full不足」で無駄なリトライが走る）。
+        if channel.style == "facts_overlay" or short_only:
+            # ショート専用（facts_overlay か gen_type=short）。full_scenario は空で
+            # 正しいので長さ検証をかけない（かけると毎回「full不足」で無駄なリトライと
+            # セクション拡張が走る）。
             min_full_lines = 0
             max_full_lines = 0
             min_full_chars = 0
@@ -2614,6 +3574,13 @@ class ScenarioGenerator:
                 "縦型ショートのファクト動画構成作家。JSONのみ出力。"
                 "1画面=1ファクトで、画面文字(fact_main)は20字以内かつ具体的な数字を必ず含める。"
                 "ナレーション(text)は40〜70字。対話形式は不合格。"
+            )
+        elif short_only:
+            system_msg = (
+                "YouTubeショート(縦型・30秒前後)の台本作家。JSONのみ出力。"
+                "short_scenario だけを書き、full_scenario は空配列。"
+                "1行目で題材の名前と具体的な事実を出し、各行に新しい具体(数字・固有名詞・描写)を1つ入れ、"
+                "伏せた謎は台本内で中身ごと回収する。事実は公式・原典で確認できるものだけ。"
             )
         else:
             system_msg = (
@@ -2791,6 +3758,27 @@ class ScenarioGenerator:
                 raise ValueError("GPT failed to produce valid JSON after 2 attempts")
             chosen_provider = "gpt"
 
+        # ショート専用: 生成直後に1回だけ自己レビュー（事実・回収・具体性）をかける。
+        if short_only and scenario_data.get("short_scenario"):
+            if fact_sheet:
+                scenario_data["short_fact_sheet"] = fact_sheet
+            try:
+                self._short_self_review(channel, theme, scenario_data)
+            except Exception as e:
+                print(f"  ⚠️ short self-review failed: {e}")
+            try:
+                self._short_focus_rewrite(channel, theme, scenario_data)
+            except Exception as e:
+                print(f"  ⚠️ short focus rewrite failed: {e}")
+            try:
+                self._short_lint_repair(channel, theme, scenario_data)
+            except Exception as e:
+                print(f"  ⚠️ short lint failed: {e}")
+            try:
+                scenario_data["short_postfix"] = self._short_postfix(channel, scenario_data)
+            except Exception as e:
+                print(f"  ⚠️ short postfix failed: {e}")
+
         # Short scenario check (warning only — doesn't block)
         short_lines_data = scenario_data.get("short_scenario", [])
         if short_lines_data:
@@ -2810,11 +3798,7 @@ class ScenarioGenerator:
                     (e.get("text", "") if isinstance(e, dict) else str(e))
                     for e in short_lines_data
                 ]
-                _ch_raw = {}
-                try:
-                    _ch_raw = channel._raw or {}
-                except AttributeError:
-                    pass
+                _ch_raw = _validator_channel_dict(channel, short_only, len(_short_texts))
                 _scenario_guard(
                     _short_texts,
                     channel_id=channel.id,
@@ -2921,11 +3905,7 @@ class ScenarioGenerator:
         if short_lines_data:
             try:
                 from pipeline.scenario_validator import guard as _guard_final
-                _ch_raw_v2 = {}
-                try:
-                    _ch_raw_v2 = channel._raw or {}
-                except AttributeError:
-                    pass
+                _ch_raw_v2 = _validator_channel_dict(channel, short_only, len(short_lines_data))
 
                 def _texts():
                     return [(e.get("text", "") if isinstance(e, dict) else str(e))
@@ -2943,7 +3923,13 @@ class ScenarioGenerator:
                     _vres = _guard_final(_texts(), channel_id=channel.id,
                                          channel_dict=_ch_raw_v2, strict=False)
                     _issues = " / ".join(_vres.get("issues") or [])
-                if (not _vres["passed"]) and "冒頭フック" in _issues \
+                # ショート専用は 1行目を _short_lint_repair（題材名・問いで止める・『本当？』禁止・
+                # 原典照合済みの事実）で検査済み。ここの GPT 書き直しは validator の正規表現しか
+                # 見ないため、第2周では「ジガルデ、HP半分で完全体になるんだよ！」を
+                # 「ジガルデはHP半分で完全体になるって本当？」（自分のフックを疑う形）に変えていた。
+                if short_only and (not _vres["passed"]) and "冒頭フック" in _issues:
+                    print("  ⏭️ 冒頭フック修復はショート専用では行わない（short lint で検査済み）")
+                elif (not _vres["passed"]) and "冒頭フック" in _issues \
                         and short_lines_data and isinstance(short_lines_data[0], dict):
                     _first = (short_lines_data[0].get("text") or "").strip()
                     if _first:
@@ -2955,6 +3941,9 @@ class ScenarioGenerator:
                                   "content": (
                                       "次のショート動画の1行目を、意味を保ったまま視聴者が止まる"
                                       "フック型（疑問形・意外な断定・数字の提示のいずれか）に書き直して。"
+                                      "題材の固有名と、元の行にある具体(数字・場所・物・行為)は必ず残す。"
+                                      "「〜の意外な理由とは？」のような中身のない問いにしない。"
+                                      "元の行の主張の向きを変えない(肯定を否定にしない)。"
                                       "40字以内、絵文字・ハッシュタグ禁止、出力はその1行だけ。\n"
                                       f"タイトル: {scenario_data.get('title', '')}\n"
                                       f"現在の1行目: {_first}")}],
@@ -2964,7 +3953,11 @@ class ScenarioGenerator:
                         except Exception as _he:
                             _hook_raw = ""
                             print(f"  ⚠️ フック書き直し失敗: {_he}")
-                        if _hook_raw and len(_hook_raw) <= 60:
+                        _hook_raw = _clean_llm_line(_hook_raw)
+                        if re.search(r"(とは[？?]?$|理由とは|正体とは)", _hook_raw or ""):
+                            print(f"  ⚠️ フック書き直しを不採用（中身のない問い）: {_hook_raw[:40]}")
+                            _hook_raw = ""
+                        if _hook_raw and 12 <= len(_hook_raw) <= 60:
                             short_lines_data[0]["text"] = _hook_raw
                             print(f"  🔧 冒頭フック修復: {_first[:25]} → {_hook_raw[:40]}")
                             _vres = _guard_final(_texts(), channel_id=channel.id,
@@ -2974,6 +3967,12 @@ class ScenarioGenerator:
                     "score": _vres.get("score"),
                     "issues": _vres.get("issues") or [],
                 }
+                if short_only:
+                    # エンハンサー・尺強制・CTA修復の後の最終状態でもう一度検査して記録する
+                    _final_lint = _lint_short(
+                        short_lines_data, sheet=scenario_data.get("short_fact_sheet"),
+                        theme=theme, **self._short_lint_ctx(channel))
+                    scenario_data["final_validation"]["short_lint"] = [v["msg"] for v in _final_lint]
             except Exception as e:
                 print(f"  ⚠️ final validation failed: {e}")
 
@@ -3011,6 +4010,12 @@ class ScenarioGenerator:
             "round6": scenario_data.get("round6", {}),
             "round7": scenario_data.get("round7", {}),
             "round8": scenario_data.get("round8", {}),
+            "short_self_review": scenario_data.get("short_self_review"),
+            "short_fact_sheet": scenario_data.get("short_fact_sheet"),
+            "short_postfix": scenario_data.get("short_postfix"),
+            "short_lint": scenario_data.get("short_lint"),
+            "short_focus_rewrite": scenario_data.get("short_focus_rewrite"),
+            "final_validation": scenario_data.get("final_validation"),
         }
 
         # Phase C: AB テストでタイトル＆サムネを最適化（オプション）
@@ -3608,6 +4613,801 @@ class ScenarioGenerator:
                 except Exception as e:
                     print(f"  ⚠️ trend scoring failed: {e}")
         return themes
+
+    # ファクトシートの「確かな事実」がこれ未満なら、その題材では言い切れる台本が書けない。
+    # 比較対象の上位ショートは1本に4〜6個の具体的事実を入れている（ザシアン21秒で4個）。
+    SHORT_MIN_SURE_FACTS = 4
+
+    def _short_fact_sheet(self, channel, theme: Dict) -> Optional[Dict[str, Any]]:
+        """台本を書く前に、その題材で使える事実を集めて確度を付ける（ショート専用）。
+
+        【2026-10-03 第2周】第1周のサンプル4本は、事実の誤り（百目を『画図百鬼夜行』の妖怪と
+        した／ドヒドイデへのつららばりの通りを無視）と、確かめられない話を self-review が
+        ぼかした予防線（「定かでない」「〜ことがある」）で、比較対象に負けていた。台本の前に
+        事実だけを別の呼び出しで洗い出し、確証のあるものだけを台本に渡す。
+        返り値: {"subject", "answerable", "core_answer", "facts":[{"fact","source","sure"}],
+                 "pitfalls", "reframe"}。失敗時は None（台本生成はそのまま続ける）。
+        """
+        genre_hint = (
+            "- ポケモン: ゲーム内データ(種族値・タイプ・特性・技の威力と効果)、図鑑テキスト、公式設定。"
+            "世代で変わった仕様は世代を書く。メガシンカ・リージョンフォーム・テラスタル後のタイプ/特性を通常の姿と混同しない"
+            "(例: ボスゴドラははがね・いわ、はがね単タイプ＋フィルターはメガボスゴドラ)。"
+            "対戦の勝敗はタイプ相性・特性・定番の対策技まで確かめる。\n"
+            "- SCP: SCP財団Wiki(英語本家・日本語訳)の該当番号の記事本文にある、タイトル・オブジェクトクラス・"
+            "特別収容プロトコル・説明・補遺の内容。番号の取り違えと、記事に無い設定の創作をしない。\n"
+            "- 妖怪・伝承: 文献名・作者・刊行年・地域の記録。似た名前の別の妖怪や別の画集と取り違えない"
+            "(例: 『百々目鬼』は鳥山石燕『今昔画図続百鬼』(1779)。『画図百鬼夜行』(1776)ではない)。\n"
+            "- 科学・身体: 教科書や査読研究で確立した知見(研究者名・年・数値)。\n"
+        )
+        prompt = (
+            "YouTubeショート(約25秒・5行の本文)を作る前に、台本に使える事実を集めてください。\n"
+            f"チャンネル: {channel.name} / {getattr(channel, 'concept', '')}\n"
+            f"テーマ: {theme.get('title', '')}\n切り口: {theme.get('angle', '')}\n"
+            "ルール:\n"
+            "- 書くのは、公式資料・原典で確かめられる事実だけ。題材ごとの拠り所:\n" + genre_hint +
+            "- sure=true は『間違っていたら詳しい視聴者にすぐ指摘される』水準で確かなものだけ。"
+            "少しでも記憶があいまいなら sure=false にする(数を稼ぐために true にしない)。\n"
+            "- 事実は1つずつ短く(40字以内)、数字・固有名詞・目に見える出来事を含める。同じ事実の言い換えを並べない。\n"
+            "- facts は**『友達に話したくなる意外さ』の高い順**に並べる。教科書の用語説明(『〇〇は△△神経に支配される』"
+            "『〇〇のタイプは△△』)や、出典の書誌情報だけの事実(『〇〇年の本に載っている』)のような、聞いても驚かない事実は入れない。"
+            "各 fact は、数字(量・倍率・時間・順位・年)か、目に見える出来事(誰が何をしてどうなった)のどちらかを必ず含む。比較対象の上位ショートの事実はこの水準: "
+            "『ザシアンは設定上メスしかいない』『磁石を近づけるとネズミが離れていく(反磁性)』"
+            "『靴紐は走ると足の振りで少しずつ緩む(スタンフォード大の研究)』『百々目鬼は盗んだ銭が腕の目になった女』。\n"
+            "- テーマの問いに、確かな事実で言い切れる答えがあるかを answerable で答える。"
+            "テーマ文が確かめられない前提(『正体は〇〇だった』『12名が消えた』など)に立っているなら false にし、"
+            "同じ題材で、確かな事実だけで言い切れる切り口を reframe に1文で、その切り口の動画テーマ名を reframe_title に書く"
+            "(30字以内・確かめられない数字を入れない)。reframe は facts のうち**いちばん意外な事実を主役**にし、"
+            "肯定形で言える答えを持つ切り口にする。『〜ではない』『説明がない』『空白』『勝敗は決まらない』のような"
+            "否定・不在を主題にした切り口や、『検証』『再検証』の形は不可。"
+            "作品の外側の話(SCPの著者・投稿時期・Wikiの構成、ゲームの開発秘話の噂)にもしない。"
+            "作中・伝承の中で起きる出来事として語れる切り口にする。\n"
+            "- core_answer も肯定形で書く(『〜だ』『〜が原因だ』)。否定形(『〜ではない』『〜は確認できない』)は答えにしない。\n"
+            + _HOOK_SPEC +
+            "- よくある取り違え(似た名前・別の文献・世代差・別番号)を pitfalls に書く。\n"
+            "- source_titles には、この題材の原典を引ける見出し語を2〜3個書く"
+            "(ポケモンは日本語の正式名『ジガルデ』、SCPは『SCP-1025』、妖怪・科学は日本語版Wikipediaの記事名『送り犬』『涙』)。\n"
+            '出力はJSONのみ: {"subject":"題材の正式名","source_titles":["..."],"answerable":true,'
+            '"core_answer":"テーマの問いへの答え(1文で言い切る)",'
+            '"facts":[{"fact":"...","source":"...","sure":true}, ...6〜8個],'
+            '"hook":"...","punchline":"...",'
+            '"pitfalls":["..."],"reframe":"","reframe_title":""}'
+        )
+        try:
+            raw = self._call_gpt(
+                [{"role": "system", "content": "事実確認の担当。確証の無いことは確証が無いと書く。JSONのみ出力。"},
+                 {"role": "user", "content": prompt}],
+                temperature=0.2, max_tokens=1800, max_retries=2,
+            )
+            data = self._extract_json(raw)
+        except Exception as e:
+            print(f"  ⚠️ fact sheet failed: {e}")
+            return None
+        if not isinstance(data, dict) or not isinstance(data.get("facts"), list):
+            return None
+        data["facts"] = [f for f in data["facts"] if isinstance(f, dict) and f.get("fact")][:10]
+        n_sure = sum(1 for f in data["facts"] if f.get("sure") is True)
+        print(f"  📚 fact sheet: 確かな事実 {n_sure}/{len(data['facts'])} 件"
+              f" / answerable={data.get('answerable')}")
+        try:
+            data = self._ground_fact_sheet(channel, theme, data)
+        except Exception as e:
+            print(f"  ⚠️ 原典照合に失敗（GPTの申告のまま続行）: {e}")
+        return data
+
+    def _ground_fact_sheet(self, channel, theme: Dict, sheet: Dict[str, Any]) -> Dict[str, Any]:
+        """ファクトシートの事実を原典の本文と照合し、照合できたものだけ sure にする。
+
+        1. 題材の原典（SCP財団Wiki本文／ポケモンWiki記事／日本語版Wikipedia）を取得する。
+        2. GPT に、原典の抜粋から事実を選ばせ、各事実に原文の引用(quote)を付けさせる。
+        3. quote が原典本文に実在し（NFKC・空白記号の揺れだけ吸収）、事実の数字がすべて
+           quote に含まれるときだけ sure=True。GPT の申告は使わない。
+        原典が取れないジャンル・題材では sheet をそのまま返す（grounded=False）。
+        """
+        sheet["grounded"] = False
+        kind = _source_kind(channel)
+        if not kind:
+            return sheet
+        subject = str(sheet.get("subject") or "")
+        titles = [str(t) for t in (sheet.get("source_titles") or []) if isinstance(t, str)]
+        ttl, ang = str(theme.get("title") or ""), str(theme.get("angle") or "")
+        if kind == "scp":
+            cands = _scp_numbers(ttl, ang, subject, *titles)
+        elif kind == "pokemon":
+            cands = []
+            for c in titles + [subject] + re.findall(r"[ァ-ヺー]{2,}", ttl):
+                m = re.match(r"[ァ-ヺー]{2,}", _nfkc(c).strip()) if c else None
+                if m and m.group(0) not in cands:
+                    cands.append(m.group(0))
+        else:
+            cands = []
+            # 題材の正式名（「化け狸」）を先に引く。見出し語の候補には一般語（「タヌキ」）が
+            # 混じり、そちらを先に引くと妖怪の話が動物の生態の話にすり替わる（第3周の試行で実測）。
+            for c in [subject] + titles:
+                c = re.sub(r"[（(].*?[）)]", "", c or "").strip()
+                if c and c not in cands:
+                    cands.append(c)
+        text, url = _fetch_source(kind, cands[:5])
+        if text and kind == "wikipedia":
+            # 2本目の記事も足して、選べる事実の幅を広げる（例: 送り犬＋遠野物語）
+            rest = [c for c in cands[:5] if c not in url and _nfkc(c) not in text[:80]]
+            text2, url2 = _fetch_source(kind, rest[:3]) if rest else ("", "")
+            if text2 and url2 != url:
+                text = text + "\n" + text2
+        if not text and kind == "wikipedia":
+            # 見出し語が学術語（「睡眠慣性」など）で記事が無いときは、Wikipedia の全文検索で記事を探す
+            found = _wikipedia_search(subject or ttl) or _wikipedia_search(ttl)
+            if found:
+                text, url = _fetch_source(kind, found[:2])
+        if not text:
+            print(f"  ⚠️ 原典を取得できず（{kind}: {cands[:5]}）— GPTの申告のまま続行")
+            sheet["source_missing"] = cands[:5]
+            return sheet
+        draft = "\n".join(f"- {f.get('fact')}" for f in (sheet.get("facts") or []) if isinstance(f, dict))
+        excerpt = _relevant_excerpt(text, _tokens(f"{ttl} {ang} {subject} {draft}"))
+        prompt = (
+            "YouTubeショートの台本に使う事実を、下の『原典』に書いてあることだけから選んでください。\n"
+            f"チャンネル: {channel.name}\nテーマ: {ttl}\n切り口: {ang}\n"
+            f"下書きの事実(原典に裏付けがあるものだけ残す。無いものは捨てる):\n{draft}\n"
+            "ルール:\n"
+            "- facts は6〜8個。各事実に、原典の本文から**1文字も変えずに写した**引用 quote(15〜60字)を付ける。"
+            "quote に無い数字・話数・許可レベル・作品名・人数は fact に書かない。\n"
+            "- 事実は1つずつ短く(40字以内)、普段の言葉で書く(学術用語は言い換える)。同じ事実の言い換えを並べない。\n"
+            "- 各事実に surprise(1〜5)を付ける。5=『ザシアンは設定上メスしかいない』『磁石を近づけるとネズミが離れていく』"
+            "級で、聞いた人が思わず誰かに話す。1=用語の定義・分類・書誌情報(聞いても誰も驚かない)。"
+            "facts は surprise の高い順に並べ、surprise 2以下は入れない。hook と punchline は surprise 4以上の事実から作る。\n"
+            "- 原典が伝承・設定・報告書なら、『〜と言われる』『報告書には〜とある』のように出典の中の話として書く。\n"
+            "- SCPなら、オブジェクトクラスを言い換え付きで1つの事実に入れる(例『Safe(鍵をかければ収容できる)』)。"
+            "取り消し線で消された古い値は本文から除いてある。\n"
+            "- answerable: テーマの問いに、facts だけで肯定形で言い切れる答えがあるか。"
+            "無ければ false にし、facts のいちばん意外な事実を主役にした切り口を reframe(1文)と"
+            "reframe_title(30字以内のテーマ名)に書く。否定・不在を主題にした切り口、作品の外側の話は不可。\n"
+            "- core_answer: テーマの問いへの答えを facts だけで1文で言い切る(肯定形)。\n"
+            + _HOOK_SPEC +
+            "- hook と punchline に入れる数字・固有名詞は facts にあるものだけ。\n"
+            '出力はJSONのみ: {"answerable":true,"core_answer":"...",'
+            '"facts":[{"fact":"...","quote":"原典からそのまま","surprise":5}, ...],'
+            '"hook":"...","punchline":"...","reframe":"","reframe_title":""}\n\n'
+            f"# 原典({url})\n{excerpt}\n"
+        )
+        raw = self._call_gpt(
+            [{"role": "system", "content": "原典に書いてあることだけを扱う事実確認の担当。JSONのみ出力。"},
+             {"role": "user", "content": prompt}],
+            temperature=0.1, max_tokens=6000, max_retries=2,
+        )
+        try:
+            data = self._extract_json(raw)
+        except Exception:
+            data = None
+        if not isinstance(data, dict):
+            # 出力が途中で切れることがある（第3周で 789字で途切れたのを実測）。1回だけ取り直す。
+            try:
+                raw = self._call_gpt(
+                    [{"role": "system", "content": "原典に書いてあることだけを扱う事実確認の担当。JSONのみ出力。簡潔に。"},
+                     {"role": "user", "content": prompt}],
+                    temperature=0.1, max_tokens=6000, max_retries=1,
+                )
+                data = self._extract_json(raw)
+            except Exception:
+                data = None
+        if not isinstance(data, dict) or not isinstance(data.get("facts"), list):
+            print(f"  ⚠️ 原典照合: 出力を読めず（{len(raw or '')}字: {(raw or '')[:80]!r}）— GPTの申告のまま続行")
+            sheet["source_url"] = url
+            return sheet
+        src_sq = _squash(text)
+        src_nf = _nfkc(text)
+        grounded: List[Dict[str, Any]] = []
+        rejected: List[str] = []
+        for f in data["facts"]:
+            if not isinstance(f, dict) or not f.get("fact"):
+                continue
+            fact, quote = str(f["fact"]).strip(), str(f.get("quote") or "").strip()
+            q_ok = _verify_quote(quote, src_sq)
+            nums_ok = all(n in _nfkc(quote) for n in _numbers_in(fact))
+            ok = q_ok and nums_ok
+            if not ok:
+                rejected.append(f"{fact}（{'引用が原典に無い' if not q_ok else '数字が引用に無い'}）")
+            try:
+                sp = int(f.get("surprise") or 3)
+            except (TypeError, ValueError):
+                sp = 3
+            grounded.append({"fact": fact, "quote": quote, "source": "原典", "sure": ok, "surprise": sp})
+        # 照合できた事実を先に、その中は意外さの高い順（同点は元の順）
+        grounded = (sorted([g for g in grounded if g["sure"]], key=lambda g: -g["surprise"])
+                    + [g for g in grounded if not g["sure"]])
+        sure_nums = set()
+        for g in grounded:
+            if g["sure"]:
+                sure_nums.update(_numbers_in(g["fact"]))
+        out = dict(sheet)
+        out.update({
+            "facts": grounded[:10],
+            "grounded": True,
+            "source_url": url,
+            "source_kind": kind,
+            "grounding_rejected": rejected,
+            "draft_facts": [f.get("fact") for f in (sheet.get("facts") or []) if isinstance(f, dict)],
+        })
+        for k in ("answerable", "core_answer", "reframe", "reframe_title"):
+            if k in data:
+                out[k] = data[k]
+        for k in ("hook", "punchline", "core_answer"):
+            v = str(data.get(k) or "")
+            bad = [n for n in _numbers_in(v) if n not in sure_nums]
+            out[k] = "" if bad else v
+        n_sure = sum(1 for g in grounded if g["sure"])
+        print(f"  🔎 原典照合: {url} — 照合できた事実 {n_sure}/{len(grounded)} 件"
+              + (f"（不採用 {len(rejected)}）" if rejected else ""))
+        return out
+
+    def _assertable_short_theme(self, channel, theme: Dict,
+                                avoid_duplicate_theme: bool = True) -> Tuple[Dict, Optional[Dict]]:
+        """ファクトシートを作り、言い切れない題材なら切り口の差し替え→題材の差し替えを行う。
+
+        - 確かな事実が SHORT_MIN_SURE_FACTS 件以上で answerable → そのまま
+        - 確かな事実は足りるが、テーマ文の前提が確かめられない（「12名が消えた」のような
+          作られた数字・「正体は監視の怪異」のような立証できない結論）→ 同じ題材のまま
+          テーマ名と切り口を reframe_title / reframe に替える。テーマ名を残すと、台本が
+          「12名の消失は本文にない」のように自分の題名を否定する検証話法になる
+          （第2周の初回生成で scp-lab・yokai-watch・pokemon-lab の3本がそうなった）。
+        - 確かな事実が足りない → theme_seeds（運用側が選んだ題材）→ AI 提案の順に最大3件試す。
+          見つからなければ元のテーマで続け、theme["assert_gate"] に記録する。
+        """
+        sheet = self._short_fact_sheet(channel, theme)
+        if sheet is None:
+            return theme, None
+
+        def _n_sure(sh):
+            return sum(1 for f in (sh.get("facts") or []) if f.get("sure") is True)
+
+        def _apply_reframe(th: Dict, sh: Dict, gate: Dict) -> Dict:
+            out = dict(th)
+            if sh.get("answerable") is False:
+                rt = (sh.get("reframe_title") or "").strip()
+                ra = (sh.get("reframe") or "").strip()
+                if rt:
+                    gate["reframed_title_from"] = th.get("title", "")
+                    out["title"] = rt
+                if ra:
+                    gate["reframed_angle_from"] = th.get("angle", "")
+                    out["angle"] = ra
+                if rt or ra:
+                    gate.setdefault("reason", "テーマ文の前提を確かな事実で言い切れない")
+                    print(f"  🧭 言い切れない前提のためテーマを差し替え: {out.get('title')} / {out.get('angle', '')[:40]}")
+            if gate:
+                out["assert_gate"] = gate
+            return out
+
+        if _n_sure(sheet) >= self.SHORT_MIN_SURE_FACTS:
+            if sheet.get("answerable") is False and sheet.get("grounded"):
+                # 【第3周】原典で答えが言い切れない題材を、原典の別の事実へ切り口ごと差し替えると、
+                # 「なぜ雨の前に関節が重い？」→「空気の重み、気圧の正体」のように、題材の形
+                # （問い・正体・答え合わせ）が抜けた百科事典の話になった（試行で実測）。
+                # 比較対象の上位は題材の形が勝因なので、先に運用側の theme_seeds から
+                # 原典で答えが言い切れる題材を探し、無いときだけ切り口を差し替える。
+                tried0 = {(theme.get("title") or "").strip().lower()}
+                for _ in range(2):
+                    try:
+                        c = self._pick_seed_avoiding_past(channel)
+                    except Exception:
+                        break
+                    t = ((c or {}).get("title") or "").strip() if isinstance(c, dict) else ""
+                    if not t or t.lower() in tried0:
+                        continue
+                    tried0.add(t.lower())
+                    c = dict(c)
+                    if avoid_duplicate_theme:
+                        c = self._dedupe_theme(channel, c)
+                    sh = self._short_fact_sheet(channel, c)
+                    if sh and sh.get("answerable") is not False and _n_sure(sh) >= self.SHORT_MIN_SURE_FACTS:
+                        print(f"  ✅ 原典で答えが言い切れる題材に差し替え: {c.get('title')}")
+                        return _apply_reframe(c, sh, {"replaced": theme.get("title"),
+                                                      "reason": "原典で答えを言い切れない"}), sh
+            return _apply_reframe(theme, sheet, {}), sheet
+
+        reason = f"確かな事実が {_n_sure(sheet)} 件しかない"
+        print(f"  ♻️ Theme '{theme.get('title')}' — {reason}。言い切れる題材を探します")
+        tried = {(theme.get("title") or "").strip().lower()}
+        cands: List[Dict] = []
+        for _ in range(4):
+            try:
+                c = self._pick_seed_avoiding_past(channel)
+            except Exception:
+                break
+            if isinstance(c, dict) and (c.get("title") or "").strip().lower() not in tried \
+                    and all(c.get("title") != x.get("title") for x in cands):
+                cands.append(dict(c))
+            if len(cands) >= 2:
+                break
+        try:
+            for c in (self.suggest_themes(channel, count=3) or []):
+                if isinstance(c, dict) and c.get("title"):
+                    cands.append({"title": c["title"], "angle": c.get("angle", "") or "",
+                                  "parent_title": c.get("parent_title")})
+                    break
+        except Exception as e:
+            print(f"  ⚠️ suggest_themes failed: {e}")
+        for cand in cands[:3]:
+            t = (cand.get("title") or "").strip()
+            if not t or t.lower() in tried:
+                continue
+            tried.add(t.lower())
+            if avoid_duplicate_theme:
+                cand = self._dedupe_theme(channel, cand)
+            sh = self._short_fact_sheet(channel, cand)
+            if sh and _n_sure(sh) >= self.SHORT_MIN_SURE_FACTS:
+                print(f"  ✅ 言い切れる題材に差し替え: {cand.get('title')}")
+                return _apply_reframe(cand, sh, {"replaced": theme.get("title"), "reason": reason}), sh
+        out = dict(theme)
+        out["assert_gate"] = {"kept_despite": reason}
+        return out, sheet
+
+    @staticmethod
+    def _short_lint_ctx(channel) -> Dict[str, Any]:
+        """_lint_short に渡すチャンネル側の条件（話者・掛け合いか・字数上限・題材名の検査）。"""
+        names = list((getattr(channel, "characters", None) or {}).keys())
+        dialogue = len(names) >= 2 and getattr(channel, "style", "") != "monologue"
+        chars_min = chars_max = 0
+        try:
+            from pipeline import shorts_length_guard as _slg
+            chars_min, chars_max = (int(x) for x in _slg.char_band_for(channel.id))
+        except Exception:
+            pass
+        kind = _source_kind(channel)
+        cid = (getattr(channel, "id", "") or "").lower()
+        return {
+            "explainer": names[0] if names else "",
+            "listener": names[1] if len(names) > 1 else "",
+            "dialogue": dialogue,
+            "chars_max": chars_max,
+            "chars_min": chars_min,
+            # 固有名のある題材（SCP番号・ポケモン名・妖怪名）だけ、1行目の題材名を検査する
+            "check_subject": kind in ("scp", "pokemon") or "yokai" in cid,
+        }
+
+    def _short_lint_repair(self, channel, theme: Dict, scenario_data: Dict[str, Any],
+                           max_rounds: int = 3) -> None:
+        """機械検査で見つかった違反を具体的に書いて差し戻し、良くなった書き直しだけ採用する（in-place）。
+
+        採用条件: 違反の重み付き合計が下がること。CTA（最終行）は元のまま残す。
+        直りきらなくても止めない（無人運転で台本ゼロを避ける）。残った違反は
+        scenario_data["short_lint"] に残し、PDCA で追えるようにする。
+        """
+        lines = scenario_data.get("short_scenario") or []
+        if not lines or not all(isinstance(e, dict) for e in lines):
+            return
+        ctx = self._short_lint_ctx(channel)
+        sheet = scenario_data.get("short_fact_sheet")
+
+        def lint(ls):
+            return _lint_short(ls, sheet=sheet, theme=theme, **ctx)
+
+        viol = lint(lines)
+        before = [v["msg"] for v in viol]
+        rounds: List[Dict[str, Any]] = []
+        for r in range(max_rounds):
+            if not viol:
+                break
+            print(f"  🧪 short lint: 違反 {len(viol)}件（重み {_lint_score(viol)}）→ 差し戻し {r + 1}/{max_rounds}")
+            for v in viol[:12]:
+                print(f"     - {v['msg'][:90]}")
+            try:
+                bad_lines = {v["line"] for v in viol}
+                if None not in bad_lines and len(bad_lines) <= 2 \
+                        and not any(v["code"] in ("line_count", "speaker", "run") for v in viol):
+                    # 違反が1〜2行に収まっているときは、その行だけを書き直させて差し込む
+                    # （全体を書き直させると、直した行の代わりに別の行が崩れた。第3周で実測）
+                    cand = self._short_line_fix_call(channel, theme, lines, viol, ctx, sheet,
+                                                     temperature=0.4 + 0.2 * r)
+                else:
+                    # 不採用が続いたら少し温度を上げて別の書き方を出させる
+                    cand = self._short_repair_call(channel, theme, lines, viol, ctx, sheet,
+                                                   temperature=0.4 + 0.2 * r)
+            except Exception as e:
+                print(f"  ⚠️ short lint repair failed: {e}")
+                break
+            if not cand:
+                rounds.append({"round": r + 1, "accepted": False, "reason": "出力不正"})
+                continue
+            new_viol = lint(cand)
+            if _lint_score(new_viol) < _lint_score(viol):
+                lines[:] = cand
+                rounds.append({"round": r + 1, "accepted": True,
+                               "score": [_lint_score(viol), _lint_score(new_viol)]})
+                viol = new_viol
+            else:
+                rounds.append({"round": r + 1, "accepted": False,
+                               "score": [_lint_score(viol), _lint_score(new_viol)]})
+        scenario_data["short_lint"] = {
+            "violations_before": before,
+            "violations_after": [v["msg"] for v in viol],
+            "rounds": rounds,
+        }
+        print(f"  🧪 short lint: 残り {len(viol)}件" + (f" {[v['code'] for v in viol]}" if viol else " — 合格"))
+
+    def _short_repair_call(self, channel, theme: Dict, lines: List[Dict[str, Any]],
+                           viol: List[Dict[str, Any]], ctx: Dict[str, Any],
+                           sheet: Optional[Dict[str, Any]],
+                           temperature: float = 0.4) -> Optional[List[Dict[str, Any]]]:
+        """違反リストを渡して台本全体を書き直させる。返り値は short_scenario 形式（不正なら None）。"""
+        cta = lines[-1]
+        cur = "\n".join(
+            f"{i + 1}. [{e.get('speaker')}] ({len(str(e.get('text') or ''))}字) {e.get('text')}"
+            + (f"  (fact={e.get('fact')})" if e.get("fact") else "")
+            for i, e in enumerate(lines)
+        )
+        if ctx["dialogue"]:
+            n_out = SHORT_DIALOGUE_LINE_COUNT
+            layout = _SHORT_LINE_ROLES_DIALOGUE.replace("上の構成と食い違うときはこちらを優先", "厳守")
+            spk = [ctx["explainer"] if r == 0 else ctx["listener"] for r in SHORT_DIALOGUE_SPEAKERS]
+            spk_note = "本文6行の話者は順に " + "・".join(spk) + "。"
+        else:
+            n_out = len(lines)
+            layout = _SHORT_LINE_ROLES
+            spk_note = "話者は元のまま。"
+        if _cta_problem(cta.get("text")):
+            spk_note += ("最終行(CTA)は書き直す: 『高評価』(この回の中身に一言) → 『登録で〇〇が届く』"
+                         "(このチャンネルの題材で)。22〜36字。")
+        else:
+            spk_note += f"最終行(CTA)は元の「{cta.get('text')}」をそのまま返す。"
+        voice = (getattr(channel, "voice_style", None) or {}).get("speech_signature") or ""
+        prompt = (
+            "次のYouTubeショート台本には、機械検査で見つかった違反があります。違反を全部直した台本を返してください。\n"
+            "# 違反\n" + "\n".join(f"- {v['msg']}" for v in viol) + "\n\n"
+            f"# 行の構成\n{layout}\n{spk_note}\n"
+            "# 守ること\n"
+            "- 事実はファクトシートの『確かな事実』(F番号)からだけ取る。確かな事実に無い数字・話数・作品名・許可レベルは書かない。\n"
+            "- 事実を運ぶ行どうしで同じ事実を言い直さない。同じF番号を2行で使わない。\n"
+            "- 聞き役の行は8〜18字。前の行で解説役が言った語だけを使って、驚く・ツッコむ・問い返す。\n"
+            "- 1行目は題材名＋事実で、問いなら問いで止める。『本当？』は使わない。\n"
+            "- 最後の内容行(CTAの直前)は、冒頭へ戻る二人称の問いか、コメントで答えたくなる問いで終える。\n"
+            "- 教科書の言葉は普段の言葉に言い換える。予防線(〜かもしれない・諸説ある)を入れない。\n"
+            "- 解説役の行は24〜34字。短くしすぎない(短い行は具体が抜けて比較対象に負ける)。\n"
+            f"- 総字数{ctx.get('chars_min') or 165}〜{ctx['chars_max'] or 200}字。語り口: {voice}\n"
+            f"テーマ: {theme.get('title', '')} / 切り口: {theme.get('angle', '')}\n"
+            f"ファクトシート:\n{_fact_sheet_text(sheet) or '(なし)'}\n\n"
+            f"# 今の台本\n{cur}\n\n"
+            f'出力はJSONのみ: {{"lines":[{{"speaker":"...","text":"...","fact":"F1 または null"}}, ...全{n_out}行]}}'
+        )
+        raw = self._call_gpt(
+            [{"role": "system", "content": "YouTubeショート台本の書き直し担当。検査の違反を残さない。JSONのみ出力。"},
+             {"role": "user", "content": prompt}],
+            temperature=temperature, max_tokens=1800, max_retries=2,
+        )
+        data = self._extract_json(raw)
+        new = data.get("lines") if isinstance(data, dict) else None
+        return self._normalize_short_lines(channel, ctx, new, lines, n_out)
+
+    def _short_line_fix_call(self, channel, theme: Dict, lines: List[Dict[str, Any]],
+                             viol: List[Dict[str, Any]], ctx: Dict[str, Any],
+                             sheet: Optional[Dict[str, Any]],
+                             temperature: float = 0.4) -> Optional[List[Dict[str, Any]]]:
+        """違反のある行だけを書き直させ、元の台本に差し込んだものを返す。"""
+        targets = sorted({v["line"] for v in viol if v.get("line")})
+        if not targets:
+            return None
+        cur = "\n".join(f"{i + 1}. [{e.get('speaker')}] ({len(str(e.get('text') or ''))}字) {e.get('text')}"
+                        for i, e in enumerate(lines))
+        voice = (getattr(channel, "voice_style", None) or {}).get("speech_signature") or ""
+        prompt = (
+            "次のYouTubeショート台本の、指定した行だけを書き直してください。ほかの行はそのまま使います。\n"
+            "# 違反\n" + "\n".join(f"- {v['msg']}" for v in viol) + "\n"
+            f"# 書き直す行: {', '.join(f'L{n}' for n in targets)}\n"
+            "- 前後の行と会話としてつながるように書く。事実はファクトシートの確かな事実からだけ取り、"
+            "ほかの行と同じ事実を言い直さない。\n"
+            "- 解説役の行は24〜34字、聞き役の行は8〜18字、CTAは22〜36字。\n"
+            "- 1行目は、結果が予想できない問い(〜したらどうなる？／なぜ〜なのか)、あなたを当事者にする言い切り、"
+            "限定・数字で覆す事実(〜しかいない)のどれか。\n"
+            f"語り口: {voice}\n"
+            f"テーマ: {theme.get('title', '')}\n"
+            f"ファクトシート:\n{_fact_sheet_text(sheet) or '(なし)'}\n\n"
+            f"# 今の台本\n{cur}\n\n"
+            '出力はJSONのみ: {"lines":{"L1":"書き直した本文", ...}}'
+        )
+        raw = self._call_gpt(
+            [{"role": "system", "content": "YouTubeショート台本の書き直し担当。指定の行だけ直す。JSONのみ出力。"},
+             {"role": "user", "content": prompt}],
+            temperature=temperature, max_tokens=1200, max_retries=2,
+        )
+        data = self._extract_json(raw)
+        fixed = data.get("lines") if isinstance(data, dict) else None
+        if not isinstance(fixed, dict):
+            return None
+        out = [dict(e) for e in lines]
+        for n in targets:
+            t = fixed.get(f"L{n}") or fixed.get(str(n))
+            if not t or not (1 <= n <= len(out)):
+                continue
+            t = _clean_llm_line(re.sub(r"^\s*(?:L?\d+[.:：]\s*)?\[[^\]]{1,20}\]\s*", "", str(t)).strip())
+            if n == len(out):
+                if _cta_problem(t):
+                    continue
+            out[n - 1]["text"] = t
+        return out
+
+    @staticmethod
+    def _normalize_short_lines(channel, ctx: Dict[str, Any], new: Any, ref: List[Dict[str, Any]],
+                               n_out: int) -> Optional[List[Dict[str, Any]]]:
+        """GPT が返した行リストを short_scenario 形式に整える。CTA（最終行）は ref のものを使う。"""
+        if not isinstance(new, list) or len(new) != n_out:
+            return None
+        cta = dict(ref[-1])
+        # 元の CTA に問題があり（届く物が無い・長すぎる）、新しい CTA が合格なら新しい方を使う
+        last_new = new[-1].get("text") if isinstance(new[-1], dict) else new[-1]
+        if _cta_problem(cta.get("text")) and last_new and not _cta_problem(str(last_new)):
+            cta["text"] = _clean_llm_line(str(last_new))
+        chars = getattr(channel, "characters", {}) or {}
+        out: List[Dict[str, Any]] = []
+        for i, e in enumerate(new[:-1]):
+            if isinstance(e, str):
+                e = {"text": e}
+            if not isinstance(e, dict) or not str(e.get("text") or "").strip():
+                return None
+            spk = str(e.get("speaker") or "")
+            if ctx["dialogue"] and i < len(SHORT_DIALOGUE_SPEAKERS):
+                spk = ctx["explainer"] if SHORT_DIALOGUE_SPEAKERS[i] == 0 else ctx["listener"]
+            elif not ctx["dialogue"] and i < len(ref) - 1:
+                spk = str(ref[i].get("speaker") or spk)
+            if spk not in chars:
+                spk = ctx["explainer"] or spk
+            exprs = list((chars.get(spk) or {}).get("expressions") or ["normal"])
+            # 表情・mood は同じ位置・同じ話者の元の行から引き継ぐ
+            src = ref[i] if i < len(ref) - 1 and ref[i].get("speaker") == spk else {}
+            listener_line = ctx["dialogue"] and spk == ctx["listener"]
+            expr = src.get("expression")
+            if expr not in exprs:
+                expr = "surprise" if (listener_line and "surprise" in exprs) else "normal"
+            fid = e.get("fact")
+            out.append({
+                "speaker": spk,
+                "text": _clean_llm_line(re.sub(r"^\s*(?:\d+\.\s*)?\[[^\]]{1,20}\]\s*", "", str(e["text"])).strip()),
+                "expression": expr,
+                "mood": src.get("mood") or ("tense" if i < 2 else "mysterious"),
+                "fact": (str(fid).strip().upper() if fid and str(fid).lower() not in ("null", "none") else None),
+            })
+        out.append(cta)
+        return out
+
+    def _short_focus_rewrite(self, channel, theme: Dict, scenario_data: Dict[str, Any]) -> None:
+        """事実・行の役割・お手本だけを渡した短いプロンプトで台本を書き直させ、良ければ採用する（in-place）。
+
+        本生成のプロンプトは約1万字（チャンネル固有の構成・タイトル規則・サムネ規則・分析の追記）
+        で、指示どうしが食い違う。第3周の試行では、本生成の台本を機械検査の差し戻しで直すと
+        「飛騨では三人目の薬で血も痛まない」のように意味の崩れた圧縮文になった。そこで、
+        台本を書く仕事だけを切り出したプロンプトで2案書かせ、機械検査の点が良い方を採る。
+        元の台本より点が悪ければ採らない。
+        """
+        lines = scenario_data.get("short_scenario") or []
+        if not lines or not all(isinstance(e, dict) for e in lines):
+            return
+        ctx = self._short_lint_ctx(channel)
+        sheet = scenario_data.get("short_fact_sheet")
+        sheet_txt = _fact_sheet_text(sheet)
+        if not sheet_txt:
+            return
+        n_out = SHORT_DIALOGUE_LINE_COUNT if ctx["dialogue"] else len(lines)
+        layout = (_SHORT_LINE_ROLES_DIALOGUE if ctx["dialogue"] else _SHORT_LINE_ROLES).replace(
+            "上の構成と食い違うときはこちらを優先", "厳守")
+        vs = getattr(channel, "voice_style", None) or {}
+        chars = getattr(channel, "characters", {}) or {}
+        char_txt = "\n".join(f"- {n}: {c.get('role', '')}" for n, c in chars.items())
+        forbidden = "、".join(str(x) for x in (vs.get("forbidden") or [])[:20])
+        cur = "\n".join(f"{i + 1}. [{e.get('speaker')}] {e.get('text')}" for i, e in enumerate(lines))
+        prompt = (
+            "YouTubeショート(縦型・約25秒)の掛け合い台本を書いてください。比較対象は、同じジャンルで"
+            "19万〜848万回再生された実在のショート(下の『お手本』)です。並べて見劣りしない台本にします。\n"
+            f"# チャンネル: {channel.name}\n# キャラ\n{char_txt}\n"
+            f"# 語り口: {vs.get('tone', '')}\n# 声の指紋: {vs.get('speech_signature', '')}\n"
+            + (f"# 使わない語: {forbidden}\n" if forbidden else "")
+            + f"# テーマ: {theme.get('title', '')} / 切り口: {theme.get('angle', '')}\n"
+            f"# ファクトシート(事実はここの確かな事実からだけ取る)\n{sheet_txt}\n\n"
+            f"{layout}\n"
+            "# 書き方\n"
+            "- まず、確かな事実から4つ選んで並べ方を決める(plan)。1行目はいちばん意外な事実か、その結果を問う形。"
+            "3行目でその理由・正体、4行目で『しかも』の上乗せ、6行目で冒頭へ戻る問い。\n"
+            "- 話し言葉で書く。助詞を省いた見出し語(『〜の記録。』『〜という記録が残る。』)を続けない。"
+            "1文で意味が通じるように、主語と述語をそろえる。\n"
+            "- 数字・固有名詞・目に見える出来事を、事実の行に1つずつ入れる。\n"
+            f"- 総字数は{ctx.get('chars_min') or 165}〜{ctx.get('chars_max') or 200}字"
+            f"(CTAの{len(str(lines[-1].get('text') or ''))}字を含む)。\n"
+            + (f"- 最終行は、今のCTA「{lines[-1].get('text')}」をそのまま使う。\n"
+               if not _cta_problem(lines[-1].get("text")) else
+               "- 最終行(CTA)は書き直す: 『高評価』(この回の中身に一言) → 『登録で〇〇が届く』(このチャンネルの題材で)。22〜36字。\n") +
+            f"# 今の下書き(参考。良いところは残してよい)\n{cur}\n\n"
+            "書き方の違う案を2つ出す。出力はJSONのみ: "
+            '{"candidates":[{"plan":"F?→F?→F?→F? と狙い","lines":[{"speaker":"...","text":"...","fact":"F1 または null"}, ...全'
+            f'{n_out}行]}}, {{...2案目}}]}}'
+        )
+        try:
+            raw = self._call_gpt(
+                [{"role": "system", "content": "伸びるYouTubeショートの台本作家。事実はファクトシートからだけ使う。JSONのみ出力。"},
+                 {"role": "user", "content": prompt}],
+                temperature=0.8, max_tokens=3000, max_retries=2,
+            )
+            data = self._extract_json(raw)
+        except Exception as e:
+            print(f"  ⚠️ short focus rewrite failed: {e}")
+            return
+        cands = data.get("candidates") if isinstance(data, dict) else None
+        if not isinstance(cands, list):
+            return
+
+        def score(ls):
+            return _lint_score(_lint_short(ls, sheet=sheet, theme=theme, **ctx))
+
+        base = score(lines)
+        best, best_score, scores = None, None, []
+        for c in cands[:3]:
+            ls = self._normalize_short_lines(channel, ctx, (c or {}).get("lines") if isinstance(c, dict) else None,
+                                             lines, n_out)
+            if not ls:
+                scores.append(None)
+                continue
+            sc = score(ls)
+            scores.append(sc)
+            if best_score is None or sc < best_score:
+                best, best_score = ls, sc
+        accepted = best is not None and best_score <= base
+        if accepted:
+            scenario_data["short_draft"] = [dict(e) for e in lines]
+            lines[:] = best
+        scenario_data["short_focus_rewrite"] = {"base_score": base, "candidate_scores": scores,
+                                                "accepted": accepted}
+        print(f"  ✍️ short focus rewrite: 下書き {base}点 / 案 {scores} → {'採用' if accepted else '不採用'}（点は違反の重み、低いほど良い）")
+
+    @staticmethod
+    def _short_postfix(channel, scenario_data: Dict[str, Any]) -> List[str]:
+        """プロンプトで言っても残りやすい2点を決定的に直す（ショート専用）。
+
+        - 1行目の頭の「これ知ってた？」「知ってた？」を外す（残りが15字以上のときだけ）。
+          比較対象の上位8本はどれも0秒目から題材名で入っている。
+        - 最終行（高評価+登録）の表情が sad / angry / surprise なら normal に戻す。
+          第1周の yokai-watch は sad の顔で「知らなかったら高評価」と頼んでいた。
+        """
+        lines = scenario_data.get("short_scenario") or []
+        if not lines or not all(isinstance(e, dict) for e in lines):
+            return []
+        fixes: List[str] = []
+        for i, e in enumerate(lines):
+            raw_t = str(e.get("text") or "")
+            cleaned = _clean_llm_line(raw_t)
+            if cleaned and cleaned != raw_t.strip():
+                e["text"] = cleaned
+                fixes.append(f"L{i + 1} 混入文字を除去")
+        first = str(lines[0].get("text") or "")
+        m = re.match(r"^\s*(?:ねえ、?|ねぇ、?)?(?:これ|コレ)?知って(?:た|る|ました)[？?！!]?\s*[、,]?\s*", first)
+        if m and len(first) - m.end() >= 15:
+            lines[0]["text"] = first[m.end():]
+            fixes.append(f"L1 前置き削除: {m.group(0).strip()}")
+        last = lines[-1]
+        cta = str(last.get("text") or "")
+        if len(cta) > 36 and "チャンネル登録" in cta:
+            # 最終行は 22〜36字（_short_end_line_block）。「チャンネル登録」→「登録」で4字縮める。
+            last["text"] = cta.replace("チャンネル登録", "登録", 1)
+            fixes.append(f"CTA短縮 {len(cta)}→{len(last['text'])}字")
+        if str(last.get("expression") or "") in ("sad", "angry", "surprise", "scared", "fear"):
+            fixes.append(f"CTA表情 {last.get('expression')}→normal")
+            last["expression"] = "normal"
+        if fixes:
+            print(f"  🧹 short postfix: {' / '.join(fixes)}")
+        return fixes
+
+    def _short_self_review(self, channel, theme: Dict, scenario_data: Dict[str, Any]) -> None:
+        """ショート台本を1回だけ見直させ、合格した書き直しだけを採用する（in-place）。
+
+        【2026-10-03】長尺を作らなくなって浮いた API 時間（1本あたり約130秒）の一部を、
+        ショート本体の見直しに使う。生成1回目の台本には、比較対象の上位ショートでは
+        見られない欠陥が残っていた（いずれも 2026-10-03 の生成サンプルで確認）:
+          - 事実の誤り（「ミュウは全1000種類以上の技を覚える」）
+          - 張った謎の未回収（「47人が全員同じ言葉を残した」→ 言葉が出てこない）
+          - 1行目の主張と結論の食い違い、同じ事実の言い換えだけの行
+        書き直しは行数・話者・各行の字数帯を変えないことを条件に採用し、外れたら捨てる
+        （無人運転で台本が壊れるより、元の台本で出すほうが安全）。
+        """
+        lines = scenario_data.get("short_scenario") or []
+        if not lines or not all(isinstance(e, dict) for e in lines):
+            return
+        texts = [str(e.get("text", "")) for e in lines]
+        speakers = [e.get("speaker") for e in lines]
+        numbered = "\n".join(
+            f"{i + 1}. [{speakers[i] or 'ナレーター'}] {t}" for i, t in enumerate(texts)
+        )
+        voice = (getattr(channel, "voice_style", None) or {}).get("speech_signature") or ""
+        sheet_txt = _fact_sheet_text(scenario_data.get("short_fact_sheet"))
+        hedges = _find_hedges(texts[:-1])
+        prompt = (
+            "次のYouTubeショート台本を、比較対象（同ジャンルで50万〜850万回再生のショート）と並べて"
+            "負けない水準に直してください。直す観点は次の8つだけ:\n"
+            "1. 事実の誤り・誇張（種族値・技の効果・特性・タイプ相性・設定・SCPの番号やクラス・文献名と刊行年・科学的数値）。"
+            "下のファクトシートと食い違う行、sure=false の話を使っている行は、ファクトシートの確かな事実に差し替える。"
+            "『勝つ』『最強』『唯一』『全員』の断定は、反証になる条件（タイプ相性・特性・定番の対策技・例外）まで確かめ、"
+            "成り立たなければ条件ごと言うか、成り立つ事実に差し替える。"
+            "タイプ相性の倍率を書いた行は、受ける側の2つのタイプそれぞれの倍率を掛け直して確かめる"
+            "(例: むし・ゴーストへのいわ技は 2倍×1倍＝2倍。4倍ではない)。メガシンカ後の姿の特性・タイプを通常の姿のものとして書いていないか確かめる。"
+            "2つの行が同じ事実を言っていたら、片方をファクトシートの未使用の事実に差し替える。\n"
+            "2. 予防線・自己否定（「〜ことがある」「〜とも読める」「〜かもしれない」「定かでない」「諸説ある」「ただし〜でも変わる」）。"
+            "ぼかして残さず、その行をファクトシートの確かな事実で言い切る行に書き直す。"
+            "伝承・設定は出典を主語にして言い切る（「〇〇には〜と書かれている」）。"
+            "テーマや俗説を否定する検証話法（「原典にない」「本文には書かれていない」「確認できない」「答えは一意じゃない」）も、"
+            "確かな事実で言い切る行に書き直す。3行目の答えが否定形（「〜ではなく」「空白」「固定なし」）なら、"
+            "ファクトシートの肯定形の事実（「〜だ」）を答えにする。\n"
+            "3. 1行目・2行目で伏せた謎（言葉・物・理由）が、最終行の前までに中身ごと回収されているか。"
+            "されていなければ回収する。1行目の問いとオチの結論が食い違っていないか。\n"
+            "4. 同じ事実を言い換えただけの行・たとえ話だけの行・雰囲気だけの行・相槌だけの行を、"
+            "まだ使っていない別の事実（ファクトシートから）を持つ行にする。本文に別々の事実が4つ以上あること。\n"
+            "5. 1行目の最初の語が題材の固有名か具体物か（「これ知ってた？」「このポケモン」「この妖怪」「このSCP」で始めない）。"
+            "定義の読み上げ（「〇〇は、△△するテレビだ」）なら、題材名＋意外な事実／結果の予想できない問い／視聴者を当事者にする言い切り、のどれかに直す。\n"
+            "6. 聞き役の行が、解説役より先に答えや新しい事実(前の行に無い数字・書名・仕組みの名前)を言っていないか、"
+            "ジャンル外の連想やたとえを言っていないか。聞き役は前の行に出た語だけで、驚く・ツッコむ・視聴者の疑問を代わりに言う。\n"
+            "7. 最後の内容行（CTAの直前のオチ）が説明文・但し書き・余韻なら、冒頭に戻る二人称の問いか、"
+            "コメントで答えたくなる問いにする。\n"
+            "8. 途中で切れた文（「〜なり。」「〜やすく。」）を言い切りにする。最終行（CTA）が36字を超えていたら、"
+            "『高評価』と『登録』の語を残したまま36字以内に縮める。\n"
+            "守ること: 行数・各行の話者・語り口は変えない。本文だけを返し、[話者] や番号は付けない。"
+            "各行の字数は元の±8字以内(1行目は34字以内)。最終行（高評価・登録のCTA）は字数を増やさない。"
+            "テーマから外れた話題は足さない。直す必要がない行はそのまま返す。\n"
+            + (f"この台本で見つかった予防線: {' / '.join(hedges)}\n" if hedges else "")
+            + f"語り口: {voice}\n"
+            f"テーマ: {theme.get('title', '')} / 切り口: {theme.get('angle', '')}\n"
+            + (f"ファクトシート:\n{sheet_txt}\n" if sheet_txt else "")
+            + f"台本:\n{numbered}\n\n"
+            '出力はJSONのみ: {"lines": ["1行目の本文", ...], "changes": ["何をなぜ直したか", ...]}'
+        )
+        raw = self._call_gpt(
+            [{"role": "system", "content": "YouTubeショート台本の校閲者。事実確認に厳しい。JSONのみ出力。"},
+             {"role": "user", "content": prompt}],
+            temperature=0.3, max_tokens=2000, max_retries=2,
+        )
+        data = self._extract_json(raw)
+        new = data.get("lines") if isinstance(data, dict) else None
+        if not isinstance(new, list) or len(new) != len(texts):
+            print("  ⚠️ short self-review: 行数が変わったので不採用")
+            return
+        import re as _re
+        # 入力に付けた「[話者] 」をそのまま書き戻してくることがあるので剥がす
+        new = [_re.sub(r"^\s*(?:\d+\.\s*)?\[[^\]]{1,20}\]\s*", "", str(t)).strip() for t in new]
+        last = len(texts) - 1
+        # 字数が外れた行だけ元に戻す（第1周は1行でも外れたら全体を捨てていたため、
+        # 事実の修正まで一緒に失われていた）。
+        reverted: List[int] = []
+        for i, (a, b) in enumerate(zip(texts, new)):
+            if i == last:
+                # CTA は「高評価＋登録で何が届くか」を生成時に作り込んでいる。校閲で
+                # 「高評価！登録も！」のように届く物が消えた（第3周の試行で実測）ので、
+                # 36字を超えていて縮めるときだけ書き換えを認める。
+                if not b or len(a) <= 36 or len(b) > 36:
+                    if b != a:
+                        new[i] = a
+                        reverted.append(i + 1)
+                continue
+            # 1行目は 15〜34字、本文行は「元±12字」か「18〜36字」に入れば採用（長すぎる行を
+            # 縮める修正まで捨てないため）。
+            if i == 0:
+                bad = not b or not (15 <= len(b) <= 34)
+            else:
+                bad = not b or not (abs(len(b) - len(a)) <= 12 or 18 <= len(b) <= 36)
+            if bad:
+                print(f"  ⚠️ short self-review: L{i + 1} は字数が大きく変わったので元に戻す ({len(a)}→{len(b)})")
+                new[i] = a
+                reverted.append(i + 1)
+        try:
+            from pipeline import cta_enforcer as _ce
+            if not (_ce.has_like(new[-1]) and _ce.has_subscribe(new[-1])):
+                print("  ⚠️ short self-review: CTA から高評価/登録が消えたので最終行だけ元に戻す")
+                new[-1] = texts[-1]
+        except Exception:
+            new[-1] = texts[-1]
+        changed = [i for i, (a, b) in enumerate(zip(texts, new)) if a != b]
+        for i in changed:
+            lines[i]["text"] = new[i]
+        scenario_data["short_self_review"] = {
+            "changed_lines": [i + 1 for i in changed],
+            "before": [texts[i] for i in changed],
+            "changes": (data.get("changes") or [])[:8],
+            "reverted_lines": reverted,
+            "hedges_before": hedges,
+            "hedges_after": _find_hedges(new[:-1]),
+        }
+        print(f"  🔍 short self-review: {len(changed)}行を修正 {[i + 1 for i in changed]}")
 
     @staticmethod
     def _extract_json(text: str) -> Any:

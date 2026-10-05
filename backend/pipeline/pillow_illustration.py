@@ -728,6 +728,28 @@ def has_confident_render(topic, *, card_style="textbook", use_keyword_icons=True
         return False
 
 
+def has_short_card_diagram(topic, *, card_style="textbook", use_keyword_icons=True) -> bool:
+    """ショートの図カードに出す価値のある図が描けるか（2026-10-03 visual r1）。
+
+    has_confident_render（サムネ用・アイコン2個必須）より緩く、アイコン 1 個でも
+    図として成立するので True にする。逆に「キーワード未ヒット＝セリフを文字で
+    描き直しただけのカード」は False。ショートでは同じ文が画面下の字幕にも出るので、
+    文字だけのカードは情報を足さずに画面を埋めるだけになる（baseline 4ch で
+    20 枚中 13 枚がこれだった）。
+    """
+    t = (topic or "").strip()
+    if not t:
+        return False
+    if (card_style or "textbook").lower() == "leaked-document":
+        return _leaked_matched(t)
+    if not use_keyword_icons:
+        return False
+    try:
+        return len(_match_textbook(t)) >= 1
+    except Exception:
+        return False
+
+
 def _render_leaked(topic):
     """scp-lab: 不透明ダーク背景・ライトグレーの収容図(後段でL変換される)。"""
     img = Image.new("RGBA", (CANVAS_W, CANVAS_H), LK_BG)

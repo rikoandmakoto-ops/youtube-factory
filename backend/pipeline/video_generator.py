@@ -47,6 +47,22 @@ except Exception:  # pragma: no cover
     except Exception:
         _short_endcard = None  # type: ignore
 
+try:
+    from pipeline import short_panels as _short_panels  # type: ignore
+except Exception:  # pragma: no cover
+    try:
+        from . import short_panels as _short_panels  # type: ignore
+    except Exception:
+        _short_panels = None  # type: ignore
+
+try:
+    from pipeline import short_telop as _short_telop  # type: ignore
+except Exception:  # pragma: no cover
+    try:
+        from . import short_telop as _short_telop  # type: ignore
+    except Exception:
+        _short_telop = None  # type: ignore
+
 # ============================================================
 # Auto-detect paths
 # ============================================================
@@ -1642,6 +1658,20 @@ class ShortFrameRenderer:
         self.illust_char_cy = int(si.get("char_cy", 905))
         self.illust_char_icon_d = int(si.get("char_icon_d", 210))
 
+        # --- 画面レイアウト v2（2026-10-03 visual r1）---
+        # 上位ショート8本と原寸で並べた差（丸アイコン＋小さい全文字幕＋題名の繰り返し
+        # カード）を埋める配置。short_overlay_style.layout="legacy" で旧配置に戻せる。
+        # 具体は _build_overlay_v2 の docstring を参照。
+        self.layout_v2 = (str(self.overlay_style.get("layout") or "v2").lower() != "legacy") \
+            and _short_telop is not None
+        self.cast = []          # このショートに出る話者（登場順）。set_cast で入れる
+        self._shot_cache = {}   # 背景の画角（ショット番号→画像）
+        self._sprite_cache = {}  # (話者, 表情, 高さ) → 切り抜き済みスプライト
+        # v3（2026-10-03 visual r2）: 句ごとの素材枠。setup_panels で有効になる。
+        self.panel_ctx = None
+        self._panel_prev = None
+        self._soft_bg_cache = {}
+
         if bg_video_path and Path(bg_video_path).exists():
             ext = Path(bg_video_path).suffix.lower()
             if bg_type == "static" or ext in (".png", ".jpg", ".jpeg", ".bmp"):
@@ -1978,8 +2008,672 @@ class ShortFrameRenderer:
         stamp = stamp.rotate(-12, expand=True, resample=Image.BICUBIC)
         layer.alpha_composite(stamp, (cx0 + cw - stamp.width - 26, cy0 + ch - stamp.height - 22))
 
+    # ------------------------------------------------------------------
+    # レイアウト v2（2026-10-03 visual r1）
+    # ------------------------------------------------------------------
+    # 比較対象（化け学のふしぎ 848万/215万・ぽへ 155万・サクトシ 248万 ほか計8本）
+    # と原寸コマで並べて分かった差と、その対処:
+    #   1. 字幕が 62px・最大4行・1セリフ丸ごと → 「いま読んでいる句」だけを
+    #      W9 の 92〜108px・2 行以内で、読み上げに合わせて差し替える（short_telop）。
+    #      数字・カタカナ語・題名の固有名詞だけ強調色（上位は赤/黄で1〜2語）。
+    #   2. 話者が直径 210〜280px の丸アイコン → 切り抜きの立ち絵を画面下に左右で
+    #      置き、話している側を大きく・聞いている側を小さく暗く。掛け合いが画で分かる。
+    #   3. カードの中身が「題名＋字幕の縮小コピー」 → 題名は上端の固定見出しへ移し
+    #      （途中から来た人にも何の話か分かる）、カードは図そのものだけを大きく出す。
+    #   4. 背景が全編同じ画角 → セリフごとに画角（寄り位置）を変える「静止したカット」。
+    #      動かし続ける beat_zoom は使わない（常時の微動が AI っぽさの正体だった）。
+    #   5. 冒頭 0 秒が暗転・フェードイン中で文字が無い → 0 秒から完成した画面を出す。
+    V2_HEADER_TOP = 150          # 上端 UI（検索アイコン等）を避ける
+    V2_CARD_BOX = (60, 400, SHORT_W - 60, 960)   # 図カードの領域
+    V2_HOOK_Y = 560              # 冒頭センターテロップの中心
+    V2_TELOP_Y = 1080            # 図カードがある行の読み上げテロップの中心
+    V2_TELOP_Y_OPEN = 860        # 図カードが無い行は画面中央（上位ショートの定位置）
+    V2_TELOP_W = SHORT_W - 150   # 左右 75px は縁取りとショート UI の余白
+    V2_CHAR_BOTTOM = 1700        # 立ち絵の足元（下端の題名 UI と少し重なる程度）
+    V2_CHAR_H = 470              # 話している側の立ち絵の高さ（図カードがある行）
+    V2_CHAR_W = 540              # 横に広い顔だけ素材（シロ/クロ）の上限幅（同上）
+    V2_CHAR_H_BIG = 640          # 図カードが無い行は立ち絵を大きく（画面の主役にする）
+    V2_CHAR_W_BIG = 620
+
+    def _listener_expr(self, name):
+        """聞き手の表情。ホラー系（SCP・妖怪）は口を開けた笑顔を出さない。"""
+        if self.panel_ctx is not None and self.panel_ctx.genre in ("scp", "yokai"):
+            exprs = (self.char_cfg.get(name) or {}).get("expressions") or []
+            for alt in ("think", "sad"):
+                if alt in exprs and alt in self.sprites.get(name, {}):
+                    return alt
+        return "normal"
+
+    def set_cast(self, names):
+        """このショートに出る話者を登場順で渡す（立ち絵の左右を決める）。"""
+        seen = []
+        for n in names or []:
+            if n and n not in seen and n in self.char_cfg:
+                seen.append(n)
+        self.cast = seen[:2]
+
+    def _accent(self):
+        for src in (self.hook_caption_style.get("accent_color"),
+                    self.opening_style.get("accent_color")):
+            if src:
+                return tuple(int(c) for c in src[:3])
+        return (255, 210, 40)
+
+    def _hi_color(self):
+        """強調語の色。暗い強調色（例: SCP の暗赤）は字の色としては沈むので明るくする。"""
+        cfg = self.subtitle_style.get("highlight_color")
+        if cfg:
+            return tuple(int(c) for c in cfg[:3])
+        r, g, b = self._accent()
+        lum = 0.299 * r + 0.587 * g + 0.114 * b
+        if lum < 110:
+            k = 110 / max(lum, 1)
+            r, g, b = (min(255, int(c * k + 40)) for c in (r, g, b))
+        return (r, g, b)
+
+    def _side_of(self, speaker):
+        if speaker in self.cast:
+            return "left" if self.cast.index(speaker) == 0 else "right"
+        cfg = self.char_cfg.get(speaker) or {}
+        return "right" if cfg.get("side") == "right" else "left"
+
+    def _cutout(self, speaker, expression, max_h, max_w, bust=False):
+        key = (speaker, expression, max_h, max_w, bust)
+        if key in self._sprite_cache:
+            return self._sprite_cache[key]
+        sprite = self.sprites.get(speaker, {}).get(expression) or self.sprites.get(speaker, {}).get("normal")
+        if sprite is None:
+            self._sprite_cache[key] = None
+            return None
+        a = sprite.split()[3].point(lambda v: 255 if v > 40 else 0)
+        bbox = a.getbbox() or (0, 0, sprite.width, sprite.height)
+        cut = sprite.crop(bbox)
+        if bust and cut.height > cut.width * 1.15:
+            # 全身の立ち絵は胸から上だけ（小さな話者表示で顔が米粒にならないように）
+            cut = cut.crop((0, 0, cut.width, int(cut.width * 1.05)))
+        scale = min(max_h / cut.height, max_w / cut.width)
+        # 低解像の素材（理子/真は顔の実寸 250px 程度）は 2.2 倍までにとどめる
+        scale = min(scale, 2.2)
+        out = cut.resize((max(1, int(cut.width * scale)), max(1, int(cut.height * scale))), Image.LANCZOS)
+        self._sprite_cache[key] = out
+        return out
+
+    def _draw_cast(self, overlay, speaker, expression, big=False, size=None, bottom=None,
+                   only_speaker=False):
+        """立ち絵を下端に左右で置く。話者=大きく明るく / 相手=小さく暗く。
+
+        size=(高さ, 幅) を渡すとその大きさで描く（v3 は画面の下 1/4 に小さく寄せる）。
+        """
+        draw = ImageDraw.Draw(overlay)
+        names = list(self.cast) if self.cast else [speaker]
+        if speaker not in names:
+            names = [speaker]
+        centers = {"left": SHORT_W // 4 + 10, "right": SHORT_W * 3 // 4 - 10}
+        # 聞き手を先に描き、話者を上に重ねる
+        order = [n for n in names if n != speaker] + [speaker]
+        if only_speaker:
+            order = [speaker]
+        for name in order:
+            is_sp = (name == speaker)
+            H = self.V2_CHAR_H_BIG if big else self.V2_CHAR_H
+            W = self.V2_CHAR_W_BIG if big else self.V2_CHAR_W
+            if size:
+                H, W = size
+            h = H if is_sp else int(H * 0.8)
+            w = W if is_sp else int(W * 0.8)
+            spr = self._cutout(name, expression if is_sp else self._listener_expr(name), h, w,
+                               bust=only_speaker)
+            if spr is None:
+                continue
+            if not is_sp:
+                dark = Image.new("RGBA", spr.size, (0, 0, 0, 0))
+                dark.putalpha(spr.split()[3].point(lambda v: int(v * 0.45)))
+                spr = spr.copy()
+                spr.alpha_composite(dark)
+            cx = centers[self._side_of(name)]
+            x = int(cx - spr.width / 2)
+            x = max(-spr.width // 6, min(SHORT_W - spr.width * 5 // 6, x))
+            y = (bottom or self.V2_CHAR_BOTTOM) - spr.height
+            overlay.alpha_composite(spr, (x, y))
+            # 名前チップは出さない（r1 で頭に被った。話者は大きさと明るさで分かる）
+
+    def _draw_header(self, overlay):
+        """上端の固定見出し＝この動画の問い（題名）。途中から見た人にも話題が分かる。"""
+        title = self._card_title_text()
+        if not title:
+            return
+        draw = ImageDraw.Draw(overlay)
+        max_w = SHORT_W - 120
+        lines, size = _short_telop.fit_lines(title, max_w, 60, 42, max_lines=2, weight="heavy")
+        lines = lines[:2]
+        line_h = int(size * 1.22)
+        pad = 22
+        h = line_h * (len(lines) - 1) + size + pad * 2
+        top = self.V2_HEADER_TOP
+        plate = Image.new("RGBA", (SHORT_W, h), (0, 0, 0, 165))
+        overlay.alpha_composite(plate, (0, top))
+        acc = self._accent()
+        draw.rectangle([0, top + h - 8, SHORT_W, top + h], fill=(*acc, 255))
+        terms = _short_telop.title_terms(self.title)
+        y = top + pad
+        offset = 0
+        spans_all = _short_telop.find_highlights(title, terms, limit=2)
+        for ln in lines:
+            w = _short_telop.text_width(ln, size)
+            a0, a1 = offset, offset + len(ln)
+            spans = [(max(a, a0) - a0, min(b, a1) - a0) for a, b in spans_all if a < a1 and b > a0]
+            _short_telop.draw_line(draw, (SHORT_W - w) // 2, y - int(size * 0.08), ln, size,
+                                   (255, 255, 255), (0, 0, 0), 6, spans=spans, hi_fill=self._hi_color())
+            y += line_h
+            offset = a1
+
+    def _draw_card_v2(self, overlay, illustration):
+        """図カード。題名の繰り返しはやめ、図だけを大きく見せる。"""
+        x0, y0, x1, y1 = self.V2_CARD_BOX
+        cw, ch = x1 - x0, y1 - y0
+        img = illustration.convert("RGBA")
+        leaked = self.illust_card_style == "leaked-document"
+        if leaked:
+            img = img.convert("L").convert("RGBA")
+        pad = 18
+        fitted = self._fit_contain(img, cw - pad * 2, ch - pad * 2)
+        fw, fh = fitted.size
+        bx0 = x0 + (cw - fw) // 2 - pad
+        by0 = y0 + (ch - fh) // 2 - pad
+        bx1, by1 = bx0 + fw + pad * 2, by0 + fh + pad * 2
+        shadow = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+        ImageDraw.Draw(shadow).rounded_rectangle([bx0, by0 + 14, bx1, by1 + 14], radius=26,
+                                                 fill=(0, 0, 0, 140))
+        overlay.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(14)))
+        draw = ImageDraw.Draw(overlay)
+        if leaked:
+            draw.rounded_rectangle([bx0, by0, bx1, by1], radius=14, fill=(40, 36, 32, 255),
+                                   outline=(190, 30, 30, 255), width=4)
+        else:
+            acc = self.illust_card_accent
+            draw.rounded_rectangle([bx0, by0, bx1, by1], radius=26, fill=(252, 252, 250, 255),
+                                   outline=(*acc, 255), width=6)
+        overlay.alpha_composite(fitted, (bx0 + pad, by0 + pad))
+        # ラベルは左上の小さなタブだけ（「解説」「CLASSIFIED」）
+        label = self.illust_card_label
+        if label:
+            size = 30
+            tw = _short_telop.text_width(label, size, "bold")
+            tab_col = (190, 30, 30) if leaked else self.illust_card_accent
+            draw.rounded_rectangle([bx0 + 18, by0 - 26, bx0 + 18 + tw + 32, by0 + 22], radius=12,
+                                   fill=(*tab_col, 255))
+            draw.text((bx0 + 34, by0 - 22), label, font=_short_telop.font(size, "bold"),
+                      fill=(255, 255, 255))
+
+    def _shot_bg(self, shot):
+        """背景の画角を変えた静止画（ショット番号ごと）。セリフが変わったら画角も変わる。
+
+        引き(1.0)→左上寄り→右下寄り→上寄り の順に巡回。どれも静止画で、
+        ショット内では一切動かさない（寄り続ける ken-burns は使わない）。
+        """
+        base = self.bg_image if self.bg_image is not None else self.bg_fallback_image
+        if base is None:
+            return Image.new("RGBA", (SHORT_W, SHORT_H), self.bg_fallback_color)
+        framings = [(1.0, 0.5, 0.5), (1.25, 0.25, 0.3), (1.25, 0.75, 0.7), (1.15, 0.5, 0.2)]
+        sc, ax, ay = framings[shot % len(framings)]
+        key = (shot % len(framings),)
+        if key in self._shot_cache:
+            return self._shot_cache[key]
+        if sc == 1.0:
+            img = base.copy()
+        else:
+            cw, ch = int(SHORT_W / sc), int(SHORT_H / sc)
+            x = int((SHORT_W - cw) * ax)
+            y = int((SHORT_H - ch) * ay)
+            img = base.crop((x, y, x + cw, y + ch)).resize((SHORT_W, SHORT_H), Image.LANCZOS)
+        img = img.convert("RGBA")
+        self._shot_cache[key] = img
+        return img
+
+    def _telop_layers(self, text, speaker, is_opening=False, card=False, center_y=None,
+                      max_chars=16, max_w=None, size=None):
+        """セリフを句に分け、(レイヤ, 重み) のリストを返す。"""
+        sub = self.subtitle_style
+        cfg = self.char_cfg.get(speaker) or {}
+        col_cfg = sub.get("color")
+        fill = tuple(int(c) for c in col_cfg[:3]) if col_cfg else (255, 255, 255)
+        stroke_c = tuple(int(c) for c in (sub.get("stroke_color") or (0, 0, 0))[:3])
+        glow_cfg = sub.get("glow_color")
+        glow = tuple(int(c) for c in glow_cfg[:3]) if glow_cfg else None
+        glow_extra = int(sub.get("glow_extra", 0)) if glow else 0
+        # 縁取りは太く（上位ショートは字幅の 1/10 前後）。グローは控えめに。
+        stroke_w = 11
+        glow_extra = min(glow_extra, 6)
+        terms = _short_telop.title_terms(self.title)
+        out = []
+        v3 = center_y is not None
+        for chunk, weight in _short_telop.split_chunks(text, max_chars=max_chars):
+            layer, _ = _short_telop.render_telop(
+                SHORT_W, SHORT_H, chunk,
+                center_y=(center_y if v3 else (self.V2_TELOP_Y if card else self.V2_TELOP_Y_OPEN)),
+                max_w=(max_w or self.V2_TELOP_W),
+                size_max=(size[0] if size else (96 if v3 else 108)),
+                size_min=(size[1] if size else (70 if v3 else 76)),
+                fill=fill, stroke_fill=stroke_c,
+                stroke_width=((7 if size else 10) if v3 else stroke_w),
+                hi_fill=self._hi_color(), glow_fill=glow, glow_extra=glow_extra,
+                extra_terms=terms)
+            out.append((layer, weight))
+        return out
+
+    def _build_overlay_v2(self, speaker, text, expression="normal", is_opening=False,
+                          illustration=None, draw_text=True):
+        """v2 の土台レイヤ（見出し・カード・冒頭テロップ・立ち絵・出典）。
+
+        読み上げテロップは句ごとに差し替えるので、ここでは描かない
+        （make_video_clip が _telop_layers の結果を時間で切り替えて重ねる）。
+        draw_text=True のときだけ、セリフ全体を 1 枚に描いて返す（静止画用途）。
+        """
+        overlay = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+        self._draw_header(overlay)
+        show_card = (illustration is not None) and (not is_opening) and self.short_illust_enabled
+        if show_card:
+            self._draw_card_v2(overlay, illustration)
+        if is_opening and self.hook_caption:
+            _draw_hook_caption(overlay, self.hook_caption, self.hook_caption_style,
+                               y_center=self.V2_HOOK_Y)
+        if self.char_cfg.get(speaker):
+            self._draw_cast(overlay, speaker, expression, big=not show_card)
+        if draw_text and text:
+            layers = self._telop_layers(text, speaker, is_opening, card=show_card)
+            if layers:
+                overlay.alpha_composite(layers[0][0])
+        self._draw_source_credit(overlay)
+        return overlay
+
+    def _draw_source_credit(self, overlay):
+        if not self.source_credit_text:
+            return
+        draw = ImageDraw.Draw(overlay)
+        font_size = max(16, int(self.source_credit_font_size))
+        font = get_font(font_size)
+        try:
+            bbox = draw.textbbox((0, 0), self.source_credit_text, font=font)
+            tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+        except Exception:
+            tw, th = font_size * len(self.source_credit_text) // 2, font_size
+        pad_x, pad_y = 12, 6
+        box_w, box_h = tw + pad_x * 2, th + pad_y * 2
+        margin = 24
+        x = SHORT_W - box_w - margin
+        y = SHORT_H - box_h - margin
+        chip = Image.new("RGBA", (box_w, box_h),
+                         (0, 0, 0, max(0, min(255, self.source_credit_opacity))))
+        overlay.paste(chip, (x, y), chip)
+        draw.text((x + pad_x, y + pad_y), self.source_credit_text,
+                  font=font, fill=(230, 230, 230, 235))
+
+    def _make_clip_v2(self, speaker, text, duration, time_offset, expression="normal",
+                      is_opening=False, illustration=None, shot=0):
+        base_ov = self._build_overlay(speaker, text, expression, is_opening=is_opening,
+                                      illustration=illustration, draw_text=False)
+        show_card = (illustration is not None) and (not is_opening) and self.short_illust_enabled
+        telops = self._telop_layers(text, speaker, is_opening, card=show_card)
+        if self.bg_video is None:
+            bg = self._shot_bg(0 if is_opening else shot)
+        else:
+            bg = None
+        if is_opening:
+            dim_alpha = max(0, min(255, int(self.opening_style.get("dim_alpha", 150))))
+            dim = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, dim_alpha))
+        else:
+            dim = None
+
+        # 句の切り替え時刻: 読み上げ時間（末尾 0.2s の余白を除く）を文字数比で配る
+        speak = max(0.3, duration - 0.2)
+        total_w = sum(w for _, w in telops) or 1
+        bounds, acc = [], 0.0
+        for _, w in telops:
+            acc += speak * w / total_w
+            bounds.append(acc)
+
+        def compose(base_img, idx):
+            img = base_img
+            if dim is not None:
+                img = Image.alpha_composite(img, dim)
+            img = Image.alpha_composite(img, base_ov)
+            if telops:
+                img = Image.alpha_composite(img, telops[idx][0])
+            return np.array(img.convert("RGB"))
+
+        def idx_at(t):
+            for k, b in enumerate(bounds):
+                if t < b:
+                    return k
+            return max(0, len(telops) - 1)
+
+        if bg is not None:
+            frames = [compose(bg, k) for k in range(max(1, len(telops)))]
+            return VideoClip(lambda t: frames[idx_at(t)], duration=duration)
+
+        def make_frame(t):
+            return compose(self._get_bg_frame(time_offset + t), idx_at(t))
+        return VideoClip(make_frame, duration=duration)
+
+
+    # ------------------------------------------------------------------
+    # レイアウト v3（2026-10-03 visual r2）: 句ごとに差し替える「素材枠」が主役
+    # ------------------------------------------------------------------
+    # r1 の批評（品質バー 8 本と原寸比較・3.0 対 7.6）で残った差:
+    #   - 題材そのものの画が 1 枚も出ない / 30 秒同じ背景と頭 2 つ
+    #   - 0 秒の大見出しが文脈なしでは意味の通らない単語
+    #   - 立ち絵が画面の主役で、題材の枠が無い
+    # 対処: 上=題名（問い）/ 中=素材枠（short_panels が句ごとに描く図）/
+    #       その下=読み上げテロップ / 下 1/4=小さな立ち絵。
+    #   背景写真はぼかして暗くし（題材と無関係な祭りの写真などを主張させない）、
+    #   画の変化は「句の切り替え＝素材枠の差し替え」で作る。ショット内は静止。
+    # r3（2026-10-05）: 批評「下半分の顔 2 つが全コマ 3 割を占める」「縮んだ題名帯が読めないのに
+    # 一番目立つ位置を占める」を受けて、素材枠を 1090→1370px まで伸ばし、立ち絵は話している側の
+    # 胸から上だけを下の隅に小さく出す。題名の全文は冒頭と締め（ループの継ぎ目）だけで、
+    # 本編中は 1 行の看板（「SCP解説｜SCP-500」など）にする。
+    V3_HEADER_TOP = 150
+    V3_PANEL_X = 48
+    V3_PANEL_BOTTOM = 1360
+    V3_TELOP_Y = 1496
+    V3_TELOP_W = SHORT_W - 120
+    V3_CHAR_BOTTOM = 1842
+    V3_CHAR_SIZE = (232, 300)    # 話している側（高さ, 幅の上限）。胸から上
+    V3_BADGE_LABEL = {"scp": "SCP解説", "yokai": "妖怪の原典", "pokemon": "対戦考察", "science": "身近な科学"}
+
+    def setup_panels(self, channel_id=None, scenario=None, thumb_info=None, card_style=None):
+        """素材枠（v3）を有効にする。short_panels が無ければ v2 のまま。"""
+        if not (self.layout_v2 and _short_panels is not None):
+            return False
+        if str(self.overlay_style.get("panels", "on")).lower() in ("off", "false", "0"):
+            return False
+        lines = [(e.get("text") or "") for e in (scenario or [])]
+        try:
+            self.panel_ctx = _short_panels.make_context(
+                channel_id=channel_id or "", title=self.title, lines=lines,
+                card_style=card_style or self.illust_card_style,
+                subtitle=(thumb_info or {}).get("subtitle") or "",
+                accent=self.illust_card_accent, label=self.illust_card_label,
+                hook_lines=(thumb_info or {}).get("hook_lines") or [],
+                hook_caption=self.hook_caption or (thumb_info or {}).get("hook_caption") or "")
+        except Exception as e:
+            print(f"⚠️ short panels disabled: {e}")
+            self.panel_ctx = None
+        self._panel_prev = None
+        self._loop_panel = None
+        return self.panel_ctx is not None
+
+    def _soft_bg(self):
+        """背景はぼかして暗くした 1 枚に固定（素材枠を主役にする）。妖怪は夜の色に寄せる。"""
+        key = "soft"
+        if key in self._soft_bg_cache:
+            return self._soft_bg_cache[key]
+        if self.bg_image is not None:
+            base = self.bg_image
+        elif self.bg_video is not None:
+            base = self._get_bg_frame(0)
+        elif self.bg_fallback_image is not None:
+            base = self.bg_fallback_image
+        else:
+            base = Image.new("RGBA", (SHORT_W, SHORT_H), self.bg_fallback_color)
+        img = base.convert("RGB").resize((SHORT_W, SHORT_H))
+        img = img.filter(ImageFilter.GaussianBlur(14))
+        genre = self.panel_ctx.genre if self.panel_ctx else ""
+        if genre == "yokai":
+            gray = img.convert("L").convert("RGB")
+            img = Image.blend(gray, Image.new("RGB", img.size, (18, 20, 46)), 0.55)
+            img = Image.blend(img, Image.new("RGB", img.size, (0, 0, 0)), 0.35)
+        elif genre == "pokemon":
+            img = Image.blend(img, Image.new("RGB", img.size, (14, 26, 64)), 0.45)
+        else:
+            img = Image.blend(img, Image.new("RGB", img.size, (0, 0, 0)), 0.5)
+        out = img.convert("RGBA")
+        self._soft_bg_cache[key] = out
+        return out
+
+    def _draw_header_v3(self, overlay, opening=False):
+        """上端の見出し＝題名の問い。冒頭は大きく（それだけで問いが完結する 1 文）。"""
+        title = self._card_title_text()
+        if not title:
+            return self.V3_HEADER_TOP
+        draw = ImageDraw.Draw(overlay)
+        max_w = SHORT_W - 100
+        if opening:
+            lines, size = _short_telop.fit_lines(title, max_w, 88, 60, max_lines=3, weight="heavy")
+            lines = lines[:3]
+        else:
+            lines, size = _short_telop.fit_lines(title, max_w, 54, 40, max_lines=2, weight="heavy")
+            lines = lines[:2]
+        line_h = int(size * 1.2)
+        pad = 24 if opening else 18
+        h = line_h * (len(lines) - 1) + size + pad * 2
+        top = self.V3_HEADER_TOP
+        plate = Image.new("RGBA", (SHORT_W, h), (0, 0, 0, 200 if opening else 170))
+        overlay.alpha_composite(plate, (0, top))
+        acc = self._accent()
+        draw.rectangle([0, top + h - 8, SHORT_W, top + h], fill=(*acc, 255))
+        terms = _short_telop.title_terms(self.title)
+        if self.panel_ctx and self.panel_ctx.subject:
+            terms = [self.panel_ctx.subject] + [t for t in terms if t != self.panel_ctx.subject]
+        spans_all = _short_telop.find_highlights(title, terms, limit=2)
+        y, offset = top + pad, 0
+        for ln in lines:
+            w = _short_telop.text_width(ln, size)
+            a0, a1 = offset, offset + len(ln)
+            spans = [(max(a, a0) - a0, min(b, a1) - a0) for a, b in spans_all if a < a1 and b > a0]
+            _short_telop.draw_line(draw, (SHORT_W - w) // 2, y - int(size * 0.08), ln, size,
+                                   (255, 255, 255), (0, 0, 0), max(5, size // 10), spans=spans,
+                                   hi_fill=self._hi_color())
+            y += line_h
+            offset = a1
+        return top + h
+
+    def _badge_text(self):
+        """本編中の 1 行看板: ジャンル名｜題材。題材が取れなければ題名の最初の句。"""
+        ctx = self.panel_ctx
+        genre = ctx.genre if ctx else ""
+        lab = self.V3_BADGE_LABEL.get(genre, "")
+        if ctx and ctx.genre == "pokemon" and len(ctx.names) == 2:
+            subj = "×".join(ctx.names)
+        else:
+            subj = (ctx.subject if ctx else "") or ""
+        if not subj:
+            t = self._card_title_text()
+            subj = re.split(r"[？?！!…。、]", t)[0][:14] if t else ""
+        return lab, subj
+
+    def _draw_badge_v3(self, overlay):
+        """1 行の看板（左にジャンルの札、右に題材名）。下端は返り値。"""
+        lab, subj = self._badge_text()
+        draw = ImageDraw.Draw(overlay)
+        top, h = self.V3_HEADER_TOP, 84
+        acc = self._accent()
+        plate = Image.new("RGBA", (SHORT_W, h), (0, 0, 0, 175))
+        overlay.alpha_composite(plate, (0, top))
+        draw.rectangle([0, top + h - 6, SHORT_W, top + h], fill=(*acc, 255))
+        size = 50
+        x = 48
+        lum = 0.299 * acc[0] + 0.587 * acc[1] + 0.114 * acc[2]
+        if lab:
+            tw = _short_telop.text_width(lab, 40)
+            draw.rounded_rectangle([x, top + 14, x + tw + 32, top + h - 18], radius=10, fill=(*acc, 255))
+            draw.text((x + 16, top + h // 2 - 4), lab, font=_short_telop.font(40, "heavy"),
+                      fill=(0, 0, 0) if lum > 170 else (255, 255, 255), anchor="lm")
+            x += tw + 56
+        if subj:
+            while size > 34 and _short_telop.text_width(subj, size) > SHORT_W - x - 40:
+                size -= 2
+            _short_telop.draw_line(draw, x, top + h // 2 - 3 - int(size * 0.62), subj, size,
+                                   (255, 255, 255), (0, 0, 0), 5, spans=[], hi_fill=self._hi_color())
+        return top + h
+
+    def _hook_tag(self, overlay, x, y, prefix=""):
+        """冒頭の hook_caption は素材枠の左上の札にする（単独の大見出しにしない）。"""
+        if not self.hook_caption:
+            return
+        draw = ImageDraw.Draw(overlay)
+        size = 50
+        f = _short_telop.font(size, "heavy")
+        cap = prefix + self.hook_caption
+        tw = _short_telop.text_width(cap, size)
+        acc = self._accent()
+        lum = 0.299 * acc[0] + 0.587 * acc[1] + 0.114 * acc[2]
+        fg = (0, 0, 0) if lum > 170 else (255, 255, 255)
+        draw.rounded_rectangle([x, y - 34, x + tw + 44, y + 38], radius=14, fill=(*acc, 255),
+                               outline=(0, 0, 0, 255), width=4)
+        draw.text((x + 22, y - 30), cap, font=f, fill=fg)
+
+    def _countdown_n(self):
+        m = re.search(r"([1-9])\s*秒で", self.title or "")
+        return int(m.group(1)) if m else 0
+
+    def _draw_countdown(self, overlay, cx, cy, n):
+        draw = ImageDraw.Draw(overlay)
+        r = 62
+        draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(230, 40, 40, 255), outline=(255, 255, 255, 255), width=6)
+        f = _short_telop.font(78, "heavy")
+        draw.text((cx, cy + 2), str(n), font=f, fill=(255, 255, 255), anchor="mm")
+
+    def _framed_illustration(self, illustration, w, h):
+        """AI 画像が届いた行は、その画像を素材枠に入れる（枠の札はジャンルのものを使う）。"""
+        img = Image.new("RGBA", (w, h), (20, 20, 20, 255))
+        fitted = self._fit_contain(illustration.convert("RGBA"), w - 24, h - 24)
+        img.alpha_composite(fitted, ((w - fitted.width) // 2, (h - fitted.height) // 2))
+        ImageDraw.Draw(img).rectangle([0, 0, w - 1, h - 1], outline=(*self._accent(), 255), width=8)
+        return img
+
+    def _make_clip_v3(self, speaker, text, duration, time_offset, expression="normal",
+                      is_opening=False, illustration=None, shot=0):
+        ctx = self.panel_ctx
+        first_line = (shot == 0)
+        # --- 句（読み上げテロップ）と、句ごとの図 ---
+        chunks = _short_telop.split_chunks(text, max_chars=22) or [(text, max(1, len(text)))]
+        chunk_texts = [c for c, _ in chunks]
+        plan = _short_panels.plan_panels(chunk_texts, text, ctx, self._panel_prev, opening=first_line)
+        real = [p for p in plan if p[0] != "loop"]
+        self._panel_prev = real[-1] if real else self._panel_prev
+        print("     🧩 " + " / ".join(f"{k}{v}:{c[:10]}" for (k, v), c in zip(plan, chunk_texts)))
+
+        # --- 共通の層: 見出し（冒頭・締め=題名の問い / 本編=1 行の看板）・立ち絵・出典 ---
+        def base_layer(big):
+            ov = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+            bottom = self._draw_header_v3(ov, opening=True) if big else self._draw_badge_v3(ov)
+            if self.char_cfg.get(speaker):
+                self._draw_cast(ov, speaker, expression, size=self.V3_CHAR_SIZE, bottom=self.V3_CHAR_BOTTOM,
+                                only_speaker=True)
+            credit = self.source_credit_text or ""
+            if credit and ("CC" in credit or big):
+                self._draw_source_credit(ov)
+            return ov, bottom
+
+        px0 = self.V3_PANEL_X
+        pw = SHORT_W - px0 * 2
+        layers = {}
+
+        def layer_for(big):
+            if big not in layers:
+                ov, bottom = base_layer(big)
+                py0 = bottom + (44 if (big and self.hook_caption) else 26)
+                layers[big] = (ov, py0, max(360, self.V3_PANEL_BOTTOM - py0))
+            return layers[big]
+
+        # 句ごとの (枠の画, 大見出しか, 冒頭の変化前の画)
+        shots = []
+        for k, ((kind, variant), ch) in enumerate(zip(plan, chunk_texts)):
+            opening_chunk = first_line and k == 0
+            if kind == "loop":
+                if self._loop_panel is not None:
+                    shots.append((self._loop_panel, True, None))
+                    continue
+                kind, variant = _short_panels.subject_kind(ctx), 0
+                opening_chunk = True
+            big = opening_chunk
+            _, py0, ph = layer_for(big)
+            if k == 0 and illustration is not None and not first_line:
+                shots.append((self._framed_illustration(illustration, pw, ph), big, None))
+                continue
+            src = ctx.title_text if opening_chunk else ch
+            img = _short_panels.render_panel(kind, src, ctx, pw, ph, variant=variant, opening=opening_chunk)
+            pre = None
+            if opening_chunk:
+                pre = _short_panels.render_panel(kind, src, ctx, pw, ph, variant=variant, opening=True, pre=True)
+                if self._loop_panel is None:
+                    # 締めは冒頭の画（題名の問い＋題材の図）に戻す。変化の「後」の状態にしておくと、
+                    # ループで先頭に戻ったとき「前」→「後」の変化がもう一度起きる（継ぎ目が切り替えに見える）。
+                    self._loop_panel = img
+            shots.append((img, big, pre))
+
+        telop_kw = dict(card=True, center_y=self.V3_TELOP_Y, max_chars=22, max_w=self.V3_TELOP_W)
+        telops = self._telop_layers(text, speaker, is_opening, **telop_kw)
+        # 締めのお願いの句は字を小さく（画を主役のまま）
+        small = None
+        if any(p[0] == "loop" for p in plan):
+            small = self._telop_layers(text, speaker, is_opening, size=(62, 46), **telop_kw)
+        bg = self._soft_bg()
+        cd_n = self._countdown_n() if first_line else 0
+
+        def compose(idx, sec, pre_phase):
+            img = bg.copy()
+            pnl, big, pre = shots[min(idx, len(shots) - 1)]
+            ov, py0, ph = layer_for(big)
+            if pre_phase and pre is not None:
+                pnl = pre
+            shadow = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
+            ImageDraw.Draw(shadow).rounded_rectangle(
+                [px0, py0 + 14, px0 + pw, py0 + pnl.height + 14], radius=28, fill=(0, 0, 0, 150))
+            img.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(12)))
+            img.alpha_composite(pnl, (px0, py0))
+            img.alpha_composite(ov)
+            if big:
+                if cd_n and first_line:
+                    if sec < cd_n:
+                        self._draw_countdown(img, px0 + pw - 70, py0 + 70, cd_n - sec)
+                    else:
+                        self._hook_tag(img, px0 + 24, py0, prefix="ヒント：")
+                elif plan[min(idx, len(plan) - 1)][0] == "loop" and self._countdown_n():
+                    # 締め＝冒頭 0 秒と同じ画（カウントダウンの最初の数字）に戻す
+                    self._draw_countdown(img, px0 + pw - 70, py0 + 70, self._countdown_n())
+                elif first_line or plan[min(idx, len(plan) - 1)][0] == "loop":
+                    self._hook_tag(img, px0 + 24, py0)
+            elif first_line and cd_n and sec >= cd_n:
+                self._hook_tag(img, px0 + 24, py0 + 14, prefix="ヒント：")
+            is_loop = plan[min(idx, len(plan) - 1)][0] == "loop"
+            src = small if (is_loop and small) else telops
+            if src:
+                img.alpha_composite(src[min(idx, len(src) - 1)][0])
+            return np.array(img.convert("RGB"))
+
+        speak = max(0.3, duration - 0.2)
+        total_w = sum(w for _, w in telops) or 1
+        bounds, acc = [], 0.0
+        for _, w in telops:
+            acc += speak * w / total_w
+            bounds.append(acc)
+        # 冒頭の句: 前半は変化の前（むくむ前の足・叩く前の門）、途中で変化後に切り替える
+        pre_until = min(0.9, bounds[0] * 0.5) if (first_line and bounds) else 0.0
+
+        def idx_at(t):
+            for k, b in enumerate(bounds):
+                if t < b:
+                    return k
+            return max(0, len(telops) - 1)
+
+        cache = {}
+
+        def make_frame(t):
+            idx = idx_at(t)
+            sec = int(time_offset + t) if cd_n else 0
+            pre_phase = (idx == 0 and t < pre_until)
+            key = (idx, min(sec, cd_n), pre_phase)
+            if key not in cache:
+                cache[key] = compose(idx, sec, pre_phase)
+            return cache[key]
+        return VideoClip(make_frame, duration=duration)
+
     def _build_overlay(self, speaker, text, expression="normal", is_opening=False,
-                       illustration=None):
+                       illustration=None, draw_text=True):
+        if self.layout_v2:
+            return self._build_overlay_v2(speaker, text, expression, is_opening=is_opening,
+                                          illustration=illustration, draw_text=draw_text)
         overlay = Image.new("RGBA", (SHORT_W, SHORT_H), (0, 0, 0, 0))
         # SCP badge first so it sits behind the character / text layers.
         self._draw_scp_badge(overlay)
@@ -2137,7 +2831,13 @@ class ShortFrameRenderer:
         return overlay
 
     def make_video_clip(self, speaker, text, duration, time_offset, expression="normal",
-                        is_opening=False, illustration=None):
+                        is_opening=False, illustration=None, shot=0):
+        if self.layout_v2 and self.panel_ctx is not None:
+            return self._make_clip_v3(speaker, text, duration, time_offset, expression,
+                                      is_opening=is_opening, illustration=illustration, shot=shot)
+        if self.layout_v2:
+            return self._make_clip_v2(speaker, text, duration, time_offset, expression,
+                                      is_opening=is_opening, illustration=illustration, shot=shot)
         overlay = self._build_overlay(speaker, text, expression, is_opening=is_opening,
                                       illustration=illustration)
         if not is_opening:
@@ -3998,7 +4698,7 @@ def _portrait_bg_variant(bg_video_path):
 def generate_short_video(short_scenario, title, output_prefix, bg_video_path=None, out_dir=None, bg_type="auto", speed=None,
                          channel_format=None, char_config=None, channel_id=None, bgm_volume=None,
                          image_mode="generate", image_collect_settings=None,
-                         channel_dict=None, hook_caption=None):
+                         channel_dict=None, hook_caption=None, thumb_info=None):
     print("=" * 60)
     print(f"ショート動画生成: {title}")
     print("=" * 60)
@@ -4023,6 +4723,14 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
     )
     if renderer.hook_caption:
         print(f"💥 冒頭センターテロップ: 「{renderer.hook_caption}」")
+    # v3: 句ごとの素材枠（short_panels）。有効なら Pillow の文字カードは作らない。
+    panels_on = False
+    if hasattr(renderer, "setup_panels"):
+        panels_on = renderer.setup_panels(channel_id=channel_id, scenario=short_scenario,
+                                          thumb_info=thumb_info)
+        if panels_on:
+            pc = renderer.panel_ctx
+            print(f"🧩 素材枠 v3: genre={pc.genre} subject={pc.subject or '-'} names={pc.names}")
     active_chars = char_config or CHAR_CONFIG
     tmp_dir = tempfile.mkdtemp(prefix="short_")
     clips, audio_clips, t_off = [], [], 0.0
@@ -4071,6 +4779,15 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
             use_kw_icons = si_cfg.get("keyword_icons", True)
 
             def _draw_pillow(topic, idx, entry_idx, reason=""):
+                # v3: 素材枠が句ごとに図を描くので、行単位の Pillow カードは作らない
+                # （AI 画像が届いた行だけ、その画像を素材枠に入れる）。
+                if panels_on:
+                    return None
+                # v2: 文字だけのカード（セリフの描き直し）は出さない。字幕と重複する。
+                if renderer.layout_v2 and not pillow_illustration.has_short_card_diagram(
+                        topic, card_style=card_style, use_keyword_icons=use_kw_icons):
+                    print(f"  ⏭️ [{idx+1}/{len(plans)}] no diagram for line {entry_idx} — card skipped")
+                    return None
                 img = pillow_illustration.generate_pillow_illustration(
                     topic, card_style=card_style, illust_style=illust_style,
                     idx=idx, cache_dir=illust_cache, channel_id=channel_id,
@@ -4100,6 +4817,11 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
                     per_mode = mode
                     if mode == "mix" and image_collector is not None:
                         per_mode = image_collector.decide_mode(topic, settings=image_collect_settings)
+                    # v2: 収集（Pexels 等）はセリフの文で画像検索するだけで関連度の確認が無い。
+                    # baseline の scp-lab では 5 枚とも題材と無関係（桜・海・犬・校舎）だった。
+                    # ショートの図カードには使わず、生成画像か図解だけにする。
+                    if per_mode == "collect" and renderer.layout_v2:
+                        per_mode = "generate"
                     if per_mode == "collect" and image_collector is not None:
                         got = image_collector.search_and_cache(
                             topic, cache_dir=Path(illust_cache), idx=idx,
@@ -4129,6 +4851,8 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
             print("⚠️ short illustrations enabled but cannot run — skipped")
 
     current_illust = None  # sticky: 次のカードまで直近のイラストを出し続ける
+    if hasattr(renderer, "set_cast"):
+        renderer.set_cast([e.get("speaker") for e in short_scenario])
     for i, entry in enumerate(short_scenario):
         sp, tx = entry["speaker"], entry["text"]
         cfg = active_chars.get(sp) or CHAR_CONFIG.get(sp) or next(iter(active_chars.values()))
@@ -4138,21 +4862,57 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         synthesize(tx, cfg["speaker_id"], wav, use_vv, speed=speed)
         dur = max(get_audio_duration(wav), 1.0) + 0.2
         expr = pick_expression(tx, cfg["expressions"])
+        # 緊張・不穏な行で既定の笑顔（normal）のままだと、ホラー台詞を満面の笑みで
+        # 言うことになる（baseline scp-lab で実測）。口を閉じた差分に寄せる。
+        mood_l = str(entry.get("mood") or "").lower()
+        if expr == "normal" and mood_l in (
+                "tense", "scary", "mysterious", "sad", "horror", "dark"):
+            # sad は涙つきの素材がある（シロ）ので使わない。think のある話者だけ。
+            for alt in ("think",):
+                if alt in cfg["expressions"]:
+                    expr = alt
+                    break
+        # v3: ホラー系（SCP・妖怪）で不穏な行なのに口を開けて笑っている顔を残さない。
+        # r1 の批評で scp-lab は「患者が消えた」の全コマが満面の笑みだった。
+        # think が無い話者（シロ/クロ）は口を閉じた sad に寄せる（涙は 330px では目立たない）。
+        if panels_on and renderer.panel_ctx.genre in ("scp", "yokai") and expr in ("normal", "happy") \
+                and mood_l in ("tense", "scary", "mysterious", "horror", "dark", "sad", "emotional"):
+            for alt in ("think", "sad"):
+                if alt in cfg["expressions"]:
+                    expr = alt
+                    break
 
         # 冒頭(最初の行 or 開始3秒以内)は特大フック演出を適用
         is_opening = (i == 0) or (t_off < 3.0)
         # sticky: このentryに新カードがあれば切替、無ければ直近を継続表示
-        if i in illust_map:
-            current_illust = illust_map[i]
-        illust = None if is_opening else current_illust
+        if getattr(renderer, "layout_v2", False):
+            # v2: カードはそのカードの行だけに出す（sticky をやめる）。baseline の
+            # daily-science では水滴の図が 2 行目から末尾の CTA まで 9 コマ居座り、
+            # 画が止まって見えていた。カードの無い行は立ち絵＋中央テロップの構図に
+            # 戻るので、行ごとに構図が切り替わる。直前と同じ絵の連続も出さない。
+            illust = None
+            if (not is_opening) and i in illust_map:
+                cand = illust_map[i]
+                try:
+                    sig = cand.convert("RGB").resize((64, 32)).tobytes()
+                except Exception:
+                    sig = None
+                if sig is None or sig != getattr(renderer, "_last_card_sig", None):
+                    illust = cand
+                    renderer._last_card_sig = sig
+        else:
+            if i in illust_map:
+                current_illust = illust_map[i]
+            illust = None if is_opening else current_illust
         clip = renderer.make_video_clip(sp, tx, dur, t_off, expr, is_opening=is_opening,
-                                        illustration=illust)
+                                        illustration=illust, shot=i)
         if fx_cfg is not None and fx_cfg.enabled:
             try:
                 plan = video_effects.decide_effect_plan(
                     tx, entry.get("mood"),
                     position=i, total_count=len(short_scenario), cfg=fx_cfg,
                     is_short=True,
+                    static_shots=getattr(renderer, "layout_v2", False),
                 )
                 fx_plans.append(plan)
                 if plan:
@@ -4174,7 +4934,10 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
         mood_timeline.append((t_off, t_off + dur, entry.get("mood")))
         t_off += dur
 
-    if fx_cfg is not None and fx_cfg.enabled and fx_cfg.allow_transitions:
+    # v2: ショートは文の切れ目でハードカット（上位ショートは全てカット割り）。
+    # concatenate のクロスフェードは黒を経由するので、毎回画面が一瞬暗くなっていた。
+    if (fx_cfg is not None and fx_cfg.enabled and fx_cfg.allow_transitions
+            and not getattr(renderer, "layout_v2", False)):
         try:
             clips = video_effects.maybe_add_crossfades(
                 clips, cfg=fx_cfg, durations=durations,
@@ -4195,6 +4958,9 @@ def generate_short_video(short_scenario, title, output_prefix, bg_video_path=Non
             height=SHORT_H,
             channel_dict=channel_dict,
             font_loader=get_font,
+            backdrop_from_last=getattr(renderer, "layout_v2", False) and not panels_on,
+            backdrop_from_first=panels_on,
+            accent_color=(renderer._accent() if getattr(renderer, "layout_v2", False) else None),
         )
 
     print(f"\n🎬 Concatenating {len(clips)} clips ({t_off:.1f}s)...")
@@ -6292,7 +7058,8 @@ def generate_all(title, prefix, short_scenario, full_scenario=None,
                                                      image_mode=image_mode,
                                                      image_collect_settings=image_collect_settings,
                                                      channel_dict=channel_dict,
-                                                     hook_caption=hook_caption)
+                                                     hook_caption=hook_caption,
+                                                     thumb_info=thumb_info)
 
         if gen_type in ("full", "both"):
             _ck()

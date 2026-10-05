@@ -207,6 +207,23 @@ def _normalize_mood(mood: Optional[str]) -> str:
 # Effect plan selection
 # ---------------------------------------------------------------------
 
+# --- ショートは「静止したカット」で組む（2026-10-03 visual r1）---
+# 比較対象の上位ショート8本は、ショット内で画を動かし続けない（寄りがあっても
+# 1 ショットに 1 回のゆっくりした寄り）。変化は「文の切れ目のカット」で作っている。
+# こちらの beat_zoom（1.6〜2 秒ごとの寄り↔引き）・shake・ken-burns は
+# 「常時微動＝AIっぽさ」の正体だった（批評ループの記録）。さらに実害として:
+#   - beat_zoom/shake は画面を最大 1.06 倍に拡大するので、字幕の両端が切れていた
+#     （scp-lab 冒頭「全員」が画面外へ）
+#   - 全画面 tint は字幕ごと赤く染めてコントラストを落としていた
+#   - fade_in は 0 秒目を真っ黒にしていた（daily-science）
+# そこでショートでは、継続して動く演出・全面の色かぶり・端のフェードを使わず、
+# 切れ目に一瞬だけ入る演出（flash / pixelate / glitch / emphasis_pulse）だけを残す。
+# 画の変化はレンダラ側（ShortFrameRenderer v2）のショット切り替えが受け持つ。
+# 呼び出し側（ショット切り替えを持つレンダラ）が static_shots=True を渡したときだけ効く。
+# facts / monologue 系のショートはショット切り替えを持たないので従来どおり。
+_SHORT_PUNCTUAL_KINDS = ("flash", "pixelate", "glitch_rgb", "emphasis_pulse")
+
+
 def decide_effect_plan(
     text: str,
     mood: Optional[str],
@@ -216,6 +233,7 @@ def decide_effect_plan(
     cfg: EffectsConfig,
     rng: Optional[random.Random] = None,
     is_short: bool = False,
+    static_shots: bool = False,
 ) -> List[Effect]:
     """このシーンに乗せるエフェクトを返す。順序が重ねる順。
 
@@ -231,6 +249,8 @@ def decide_effect_plan(
         return []
     plan = _decide_effect_plan_base(
         text, mood, position=position, total_count=total_count, cfg=cfg, rng=rng)
+    if is_short and static_shots:
+        return [e for e in plan if e.kind in _SHORT_PUNCTUAL_KINDS]
     if is_short and cfg.allow_zoom and cfg.short_beat_zoom:
         plan = [e for e in plan if e.kind != "zoom_in"]
         beat = Effect(kind="beat_zoom", intensity=0.7,

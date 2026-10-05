@@ -28,9 +28,28 @@ def _settings(channel_dict: Optional[Dict[str, Any]]) -> Any:
     return (channel_dict or {}).get("script_enhancers")
 
 
+# 既定で止めるモジュール（チャンネル JSON で {"<name>": true} を書いたときだけ動く）。
+#
+# cross_channel_bridge【2026-10-03】: 他チャンネルへの「橋渡し」の定型文を、中身と無関係に
+# 1行まるごと差し込む。本番 data/scenarios の 09-12 以降の4ch 246本のうち 70本
+# （daily-science 21 / scp-lab 22 / yokai-watch 22 / pokemon-lab 5）に入っており、文言は
+# 「実はこの科学的事実、ポケモンの裏設定の元ネタなんだ」「この妖怪、実はあるポケモンの
+# モチーフになってるんだ」「こういう伝承を記録してるのがSCP財団って組織なんだ」のように
+# 根拠のない断定だった（yokai-watch に禁止語の「SCP」を入れる回もあった）。さらに CTA の
+# 直前に7行目として入るため、short_format の6行構成と字数帯も崩す。事実の誤りは詳しい
+# 視聴者の高評価と登録を落とす方向に働く（推測）ので、既定では止める。
+_DEFAULT_OFF = frozenset({"cross_channel_bridge"})
+
+
 def is_enabled(channel_dict: Optional[Dict[str, Any]], module_name: str) -> bool:
-    """`module_name` のエンハンサーを走らせてよいか。未設定なら True。"""
+    """`module_name` のエンハンサーを走らせてよいか。
+
+    未設定なら True。ただし _DEFAULT_OFF のモジュールは、script_enhancers に
+    `{"<name>": true}` を明示したときだけ True。
+    """
     cfg = _settings(channel_dict)
+    if module_name in _DEFAULT_OFF:
+        return isinstance(cfg, dict) and cfg.get("enabled") is not False and cfg.get(module_name) is True
     if cfg is None:
         return True
     if cfg is False:
