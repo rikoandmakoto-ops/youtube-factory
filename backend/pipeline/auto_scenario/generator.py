@@ -3011,6 +3011,9 @@ class ScenarioGenerator:
             "round6": scenario_data.get("round6", {}),
             "round7": scenario_data.get("round7", {}),
             "round8": scenario_data.get("round8", {}),
+            # 【2026-10-06】result はキーの明示列挙なので、Phase V2 の結果を
+            # ここに入れないと保存ファイルから黙って消える（10-06 に44本分欠落を確認）。
+            "final_validation": scenario_data.get("final_validation"),
         }
 
         # Phase C: AB テストでタイトル＆サムネを最適化（オプション）
