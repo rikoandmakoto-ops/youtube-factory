@@ -310,6 +310,23 @@ def _act_promote(channel_id: str, token: str, series: Dict[str, Any]) -> Dict[st
         if views < MIN_VIRAL_VIEWS or ratio < MIN_VIRAL_RATIO:
             skipped_low.append({"title": g.get("original_title"), "views": views, "ratio": ratio})
             continue
+        # 【2026-10-09】続編の初回実測: 再生は中央値並み・登録/千は ch 平均の約半分
+        # （yokai 6本で 0.3 vs 0.6）。再生数バズは登録を保証しない。至上目標は登録なので、
+        # 「登録を実際に生んだ動画」の続編だけ承認する（subscribers_gained >= 1）。
+        try:
+            import sqlite3 as _sq
+            _c = _sq.connect(Path(__file__).resolve().parent.parent
+                             / "data" / "analytics" / "analytics.db")
+            _row = _c.execute(
+                "select max(subscribers_gained) from video_metrics where video_id=?",
+                (g.get("original_video_id"),)).fetchone()
+            _c.close()
+            if not _row or not (_row[0] or 0):
+                skipped_low.append({"title": g.get("original_title"), "views": views,
+                                    "ratio": ratio, "reason": "no_subs_gained"})
+                continue
+        except Exception as _e:
+            print(f"  ⚠️ subs-gained check failed ({channel_id}): {_e}")
         for s in (g.get("suggestions") or []):
             if len(approved) >= MAX_APPROVALS_PER_RUN:
                 break
