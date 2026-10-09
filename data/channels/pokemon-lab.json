@@ -407,7 +407,9 @@
   "description_template": {
     "main_intro": "{title}について、ヒカリ研究員とソラがゆっくり考察します。\nポケモンの裏設定・都市伝説・図鑑の謎・対戦の豆知識を、公式設定を手がかりにワクワク解説していきます。\n※本動画はファンによる非公式の考察コンテンツです。ポケモンは株式会社ポケモン／任天堂の登録商標です。\nぜひ最後までご視聴ください！",
     "main_hashtags": "#ポケモン #ポケモン考察 #ゆっくり解説 #裏設定 #都市伝説",
-    "short_hashtags": "#shorts #ポケモン #ゆっくり解説 #ポケモン考察 #裏設定"
+    "short_hashtags": "#shorts #ポケモン #ゆっくり解説 #ポケモン考察 #裏設定",
+    "omit_fullvideo_cta": true,
+    "_note_20261009": "本編を作らないchに『続きはフル動画で公開中』が入っていた（ループ批評P4）"
   },
   "thumbnail_template": {
     "badge_text": "ポケモン考察",
@@ -826,6 +828,20 @@
         "id": "7fd1e7ff",
         "title": "108の数字、ポケモンにまだある？怖い数字ネタ3選",
         "angle": "ミカルゲの108を起点に、図鑑番号・体重・進化条件などに仕込まれた意味深な数字を「偶然？それとも設定？」のテンポで紹介する。"
+      },
+      {
+        "id": "ec0c0416",
+        "title": "攻撃150でも弱い？ケッキングと伝説の決定的な差",
+        "angle": "同じ攻撃150級でも、ケッキングのように特性で止まるポケモンと、特性・技・素早さまで噛み合って本当に強いポケモンを対比。数字が高いのに弱い例、数字以上に強い例を連続で紹介する。"
+      },
+      {
+        "id": "1f87b6ce",
+        "title": "種族値ランキングで絶対に見落とす最強ポケモン3選",
+        "angle": "攻撃順位だけで育成候補を選ぶと外す理由を、ランクマやストーリーで使える視点に変換。火力なら攻撃・特攻だけでなく、素早さ、特性、技威力、タイプ一致まで見るべきという『強ポケの見抜き方』を紹介する。",
+        "priority": "normal",
+        "source": "series_engine",
+        "series_type": "application",
+        "from_video_id": "p98787t-ST8"
       }
     ],
     "auto_optimize_schedule": false,
@@ -914,9 +930,11 @@
       "emotional_polarity_alternator",
       "pattern_interrupt_injector",
       "subscribe_trigger_optimizer",
-      "contrast_amplifier"
+      "contrast_amplifier",
+      "cross_channel_bridge"
     ],
-    "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。"
+    "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。",
+    "_disabled_note_20261009": "cross_channel_bridge: ループ批評で確認。根拠の無い他ch言及行（例:『実はこの科学的事実、ポケモンの裏設定の元ネタ』）を常体でCTA直前に注入し、丁寧語検査も事実検査も通らない。09-12以降の本番台本246本中70本に注入。全chで停止。"
   },
   "series_name_disabled_20260831": "1分ポケモン研究：",
   "title_rules": {

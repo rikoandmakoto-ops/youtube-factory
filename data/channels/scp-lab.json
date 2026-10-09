@@ -401,7 +401,9 @@
   "description_template": {
     "main_intro": "{title}について、シロとクロが財団資料を読み解きます。\nSCP財団の異常存在（オブジェクト）や事件を、不気味で考察性のある雰囲気で紐解いていきます。\n※本動画は SCP財団Wiki (CC BY-SA 3.0) のコンテンツに基づいています。\nぜひ最後までご視聴ください！",
     "main_hashtags": "#SCP #SCP財団 #SCP解説 #ゆっくり解説 #都市伝説",
-    "short_hashtags": "#shorts #SCP #SCP解説 #ゆっくり解説 #怖い話"
+    "short_hashtags": "#shorts #SCP #SCP解説 #ゆっくり解説 #怖い話",
+    "omit_fullvideo_cta": true,
+    "_note_20261009": "本編を作らないchに『続きはフル動画で公開中』が入っていた（ループ批評P4）"
   },
   "thumbnail_template": {
     "badge_text": "SCP解説",
@@ -757,7 +759,13 @@
     "duration_minutes": 12,
     "gen_type": "short",
     "publish_lead_minutes": 45,
-    "theme_queue": [],
+    "theme_queue": [
+      {
+        "id": "6395bc49",
+        "title": "SCP-5000「なぜ？」の終焉後に残った人類の記録の真相",
+        "angle": "人類規模の排除計画を実行した装甲服の移動記録と、生存者側から見た別の文明の痕跡を深掘りする"
+      }
+    ],
     "auto_optimize_schedule": false,
     "_schedule_changes": [
       {
@@ -890,9 +898,11 @@
       "emotional_polarity_alternator",
       "pattern_interrupt_injector",
       "subscribe_trigger_optimizer",
-      "contrast_amplifier"
+      "contrast_amplifier",
+      "cross_channel_bridge"
     ],
-    "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。"
+    "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。",
+    "_disabled_note_20261009": "cross_channel_bridge: ループ批評で確認。根拠の無い他ch言及行（例:『実はこの科学的事実、ポケモンの裏設定の元ネタ』）を常体でCTA直前に注入し、丁寧語検査も事実検査も通らない。09-12以降の本番台本246本中70本に注入。全chで停止。"
   },
   "series_name_disabled_20260831": "一口SCP：",
   "title_rules": {

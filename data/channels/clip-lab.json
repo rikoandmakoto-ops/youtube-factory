@@ -604,7 +604,27 @@
     "duration_minutes": 1,
     "gen_type": "clip",
     "publish_lead_minutes": 0,
-    "theme_queue": [],
+    "theme_queue": [
+      {
+        "id": "ea49c62b",
+        "title": "暴力団が消えた本当の理由は「逮捕」じゃない",
+        "angle": "刑務所リスクだけでなく、暴排条例・銀行口座・賃貸契約・スマホ契約など、組織が社会インフラから締め出される構造を掘る。"
+      },
+      {
+        "id": "73a26fff",
+        "title": "暴力団より厄介？半グレが消えにくい理由",
+        "angle": "看板を掲げる暴力団は規制対象になりやすい一方、実態が見えにくい半グレ・匿名犯罪グループはなぜ対処が難しいのかを比較する。"
+      },
+      {
+        "id": "5d79aa3f",
+        "title": "罰金より効く「取引停止」が人を変える",
+        "angle": "暴力団排除を例に、違法行為そのものの罰よりも、口座・仕事・契約を失う社会的コストが抑止力になる仕組みを日常のルール設計へ広げる。",
+        "priority": "normal",
+        "source": "series_engine",
+        "series_type": "application",
+        "from_video_id": "Ras7astkIYI"
+      }
+    ],
     "_enabled_comment": "2026-08-24 に再開。凍結時の理由（theme_queue 未作成・実績0件）は gen_type=short のチャンネルの話で、gen_type=clip のこのチャンネルには当てはまらなかった。clip 系は theme_queue も台本生成も通らず clip_factory を直接叩く（api_channel_autopilot._run_clip_autopilot）。凍結前の 08-21〜08-23 に実際にひろゆき切り抜き4本が投稿済み。 2026-08-30: 海外バイラル翻訳（旧 clip-viral）を 20:45 スロットとして統合。",
     "_theme_queue_comment": "gen_type=clip では未使用（台本生成を通らず clip_factory が直接切り抜く）。凍結前は daily-science 由来の科学テーマが15件残っていて、切り抜きチャンネルの運用者を混乱させるだけだったので 2026-08-24 に空にした。切り抜き元の選定は clip.external_sources の許諾ゲート → segment_selection が担う。",
     "_queue_purge_log": [

@@ -100,7 +100,9 @@
   "description_template": {
     "main_intro": "{title}についてリコとマコトがゆっくり解説します。\n日常のふとした疑問を科学の視点から分かりやすく紐解いていきます。\nぜひ最後までご視聴ください！",
     "main_hashtags": "#ゆっくり解説 #科学 #雑学 #日常の謎 #豆知識",
-    "short_hashtags": "#shorts #ゆっくり解説 #雑学 #豆知識 #科学"
+    "short_hashtags": "#shorts #ゆっくり解説 #雑学 #豆知識 #科学",
+    "omit_fullvideo_cta": true,
+    "_note_20261009": "本編を作らないchに『続きはフル動画で公開中』が入っていた（ループ批評P4）"
   },
   "thumbnail_template": {
     "badge_text": "ゆっくり解説",
@@ -631,16 +633,28 @@
     "publish_lead_minutes": 45,
     "theme_queue": [
       {
-        "id": "1794f8ce",
-        "title": "ノーベル賞受賞の裏側にある科学の謎",
-        "angle": "受賞研究が私たちの生活にどのように影響しているかを解説する。",
-        "priority": "high",
-        "source": "trend_scanner"
+        "id": "c1c9b7e3",
+        "title": "なぜ寝ている間に口が乾く？唾液が減る理由",
+        "angle": "睡眠中の唾液分泌、口呼吸、鼻の通りを切り分け、起床時の口の乾きが起こる仕組みを解説する"
       },
       {
-        "id": "efb5ef85",
-        "title": "なぜ傷口はかゆくなる？治癒途中の神経の正体",
-        "angle": "痛みが落ち着いたあとにかゆみに変わる、皮膚の修復過程と神経の反応に注目する"
+        "id": "a14d26a3",
+        "title": "なぜ夢の中で匂いは思い出しにくい？感覚の正体",
+        "angle": "夢で映像や音は経験しても匂いの記憶が曖昧になりやすい理由を、嗅覚と記憶の結び付きから別角度で解説する"
+      },
+      {
+        "id": "b83324b7",
+        "title": "緊張すると手汗が出るのはなぜ？脳が「滑るな」と命令する仕組み",
+        "angle": "手のひらの汗腺が体温調節用ではなく、握る・つかむための精神性発汗として働く理由を、交感神経と進化的な役割から解説する。"
+      },
+      {
+        "id": "b45f0b88",
+        "title": "手汗と脇汗は別物？緊張で出る汗・暑くて出る汗の違い",
+        "angle": "手のひら・足裏に出やすい精神性発汗と、額・背中・脇などに出る温熱性発汗を、出る場面・役割・汗腺の違いで比較する。",
+        "priority": "normal",
+        "source": "series_engine",
+        "series_type": "contrast",
+        "from_video_id": "C_jcbailuDc"
       }
     ],
     "auto_optimize_schedule": false,
@@ -834,9 +848,11 @@
       "emotional_polarity_alternator",
       "pattern_interrupt_injector",
       "subscribe_trigger_optimizer",
-      "contrast_amplifier"
+      "contrast_amplifier",
+      "cross_channel_bridge"
     ],
-    "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。"
+    "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。",
+    "_disabled_note_20261009": "cross_channel_bridge: ループ批評で確認。根拠の無い他ch言及行（例:『実はこの科学的事実、ポケモンの裏設定の元ネタ』）を常体でCTA直前に注入し、丁寧語検査も事実検査も通らない。09-12以降の本番台本246本中70本に注入。全chで停止。"
   },
   "series_name_disabled_20260831": "1分科学：",
   "title_rules": {

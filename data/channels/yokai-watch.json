@@ -374,7 +374,9 @@
   "description_template": {
     "main_intro": "{title}について、ミナモ調査員とケンタがゆっくり調査します。\n妖怪ウォッチの妖怪解説・ストーリー考察・裏設定、そして元ネタになった日本の伝承妖怪との比較まで掘り下げていきます。\n※本動画はファンによる非公式の考察コンテンツです。妖怪ウォッチは株式会社レベルファイブの登録商標です。\nぜひ最後までご視聴ください！",
     "main_hashtags": "#妖怪ウォッチ #妖怪 #ゆっくり解説 #考察 #元ネタ",
-    "short_hashtags": "#shorts #妖怪ウォッチ #ゆっくり解説 #妖怪 #元ネタ"
+    "short_hashtags": "#shorts #妖怪ウォッチ #ゆっくり解説 #妖怪 #元ネタ",
+    "omit_fullvideo_cta": true,
+    "_note_20261009": "本編を作らないchに『続きはフル動画で公開中』が入っていた（ループ批評P4）"
   },
   "thumbnail_template": {
     "badge_text": "妖怪考察",
@@ -745,27 +747,7 @@
     "duration_minutes": 12,
     "gen_type": "short",
     "publish_lead_minutes": 45,
-    "theme_queue": [
-      {
-        "id": "2a4f5694",
-        "title": "なぜ見越入道は大きくなるのか、その正体は恐怖の連鎖",
-        "angle": "見上げるほど巨大化する妖怪の原典を、夜道で恐怖が増幅する心理と伝承の変化から解説する"
-      },
-      {
-        "id": "0eaca18b",
-        "title": "口裂け女はなぜ「ポマード」で消える？噂の正体",
-        "angle": "全国に広がった口裂け女の撃退法「ポマード」が、恐怖を抑えるために生まれた“対抗呪文”だった可能性を、当時の流言と怪談心理から掘る。"
-      },
-      {
-        "id": "010bd5f8",
-        "title": "口裂け女と八尺様、決定的に違う恐怖の条件",
-        "angle": "口裂け女は“遭遇後の会話”で逃げ道が生まれるのに対し、八尺様は“見られた時点で狙われる”。時代の違う都市伝説を、ルール・拡散経路・恐怖の質で比較する。",
-        "priority": "normal",
-        "source": "series_engine",
-        "series_type": "contrast",
-        "from_video_id": "-bmLS2JL1Hk"
-      }
-    ],
+    "theme_queue": [],
     "auto_optimize_schedule": false,
     "_schedule_changes": [
       {
@@ -882,9 +864,11 @@
       "emotional_polarity_alternator",
       "pattern_interrupt_injector",
       "subscribe_trigger_optimizer",
-      "contrast_amplifier"
+      "contrast_amplifier",
+      "cross_channel_bridge"
     ],
-    "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。"
+    "note": "本文書き換え系エンハンサーは台本の語り口・キャラクターを破壊するため全停止。採点系のみ有効。",
+    "_disabled_note_20261009": "cross_channel_bridge: ループ批評で確認。根拠の無い他ch言及行（例:『実はこの科学的事実、ポケモンの裏設定の元ネタ』）を常体でCTA直前に注入し、丁寧語検査も事実検査も通らない。09-12以降の本番台本246本中70本に注入。全chで停止。"
   },
   "series_name_disabled_20260831": "1分妖怪ファイル：",
   "title_rules": {
