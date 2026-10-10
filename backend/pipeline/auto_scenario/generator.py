@@ -2977,6 +2977,59 @@ class ScenarioGenerator:
             except Exception as e:
                 print(f"  ⚠️ final validation failed: {e}")
 
+        # Phase V3: タイトルの約束照合（2026-10-10）
+        # ループ批評第1回の発見: 「高再生×登録ゼロ」5本中4本が、タイトルで約束した
+        # 答えを短文版で言っていなかった（full_scenario には在るのにショート化で脱落。
+        # 例: 交感神経／108の魂を1つに留める／FRB 400ドル）。答えの不履行は視聴者の
+        # 信頼＝登録に直撃する。GPT-light 1回で「答えているか」を判定し、不履行なら
+        # 3行目（答え行）を full_scenario の答えで1回だけ書き直す。
+        if short_lines_data and len(short_lines_data) >= 3:
+            try:
+                _texts_v3 = [(e.get("text", "") if isinstance(e, dict) else str(e))
+                             for e in short_lines_data]
+                _title_v3 = (scenario_data.get("title") or theme.get("title") or "").strip()
+                _full_src = "\n".join(
+                    (e.get("text", "") if isinstance(e, dict) else str(e))
+                    for e in (scenario_data.get("full_scenario") or [])[:50])[:3000]
+                _judge_raw = self._call_gpt(
+                    [{"role": "system",
+                      "content": "JSONのみ出力。YouTubeショートの品質検査員。"},
+                     {"role": "user",
+                      "content": (
+                          "タイトルが視聴者に約束した問いに、この短文台本は明確に答えているか判定して。\n"
+                          f"タイトル: {_title_v3}\n短文台本:\n" + "\n".join(_texts_v3) +
+                          "\n\n出力JSON: {\"answered\": true/false, "
+                          "\"missing_answer\": \"答えていない場合、長編台本から見つけた答えの核を25字以内で。答えていればnull\"}\n"
+                          f"参考（長編台本の冒頭）:\n{_full_src}")}],
+                    temperature=0.2, max_tokens=300,
+                    model=GPT_MODEL_LIGHT, max_retries=1,
+                )
+                _judge = self._extract_json(_judge_raw) or {}
+                _answered = bool(_judge.get("answered"))
+                if not _answered and _judge.get("missing_answer"):
+                    _old3 = (short_lines_data[2].get("text") or "").strip()
+                    _fix_raw = self._call_gpt(
+                        [{"role": "system", "content": "出力は書き直した1行のみ。"},
+                         {"role": "user",
+                          "content": (
+                              f"ショート動画の3行目を、答えの核「{_judge['missing_answer']}」を"
+                              f"明確に言い切る形に書き直して。現在の行: {_old3}\n"
+                              f"口調・キャラは現在の行を踏襲、{max(len(_old3), 30) + 8}字以内、"
+                              "出力はその1行だけ。")}],
+                        temperature=0.5, max_tokens=150,
+                        model=GPT_MODEL_LIGHT, max_retries=1,
+                    ).strip().split("\n")[0].strip()
+                    if _fix_raw and len(_fix_raw) <= 80:
+                        short_lines_data[2]["text"] = _fix_raw
+                        print(f"  🔧 約束照合: 答え『{_judge['missing_answer']}』を3行目へ → {_fix_raw[:40]}")
+                        _answered = True
+                scenario_data["answer_check"] = {
+                    "answered": _answered,
+                    "missing_answer": _judge.get("missing_answer"),
+                }
+            except Exception as e:
+                print(f"  ⚠️ answer check failed: {e}")
+
         # Phase N: シリーズ通し番号をタイトルに付与
         _result_title = scenario_data.get("title", theme["title"])
         try:
@@ -3014,6 +3067,7 @@ class ScenarioGenerator:
             # 【2026-10-06】result はキーの明示列挙なので、Phase V2 の結果を
             # ここに入れないと保存ファイルから黙って消える（10-06 に44本分欠落を確認）。
             "final_validation": scenario_data.get("final_validation"),
+            "answer_check": scenario_data.get("answer_check"),
         }
 
         # Phase C: AB テストでタイトル＆サムネを最適化（オプション）
