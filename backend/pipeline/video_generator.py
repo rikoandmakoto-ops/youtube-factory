@@ -2593,7 +2593,7 @@ class ShortFrameRenderer:
             if k == 0 and illustration is not None and not first_line:
                 shots.append((self._framed_illustration(illustration, pw, ph), big, None))
                 continue
-            src = ctx.title_text if opening_chunk else ch
+            src = ctx.title_text if opening_chunk else ctx.recap_src.get(ch, ch)
             img = _short_panels.render_panel(kind, src, ctx, pw, ph, variant=variant, opening=opening_chunk)
             pre = None
             if opening_chunk:

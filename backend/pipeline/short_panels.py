@@ -112,6 +112,8 @@ class PanelContext:
     shown: List[str] = field(default_factory=list)   # これまでに出した図（締めの振り返り用）
     shown_src: dict = field(default_factory=dict)     # 図 → 最初に描いたときの句（振り返りで同じ絵を出す）
     recap_i: int = 0
+    shown_keys: list = field(default_factory=list)    # 出した図（use_key, 種類, 描いた句）の順。振り返り用
+    recap_src: dict = field(default_factory=dict)     # 締めの句 → 振り返りで描き直す元の句
     # r3: 同じ図を同じ状態で二度出さないための記録（種類 → 出した状態の集合）
     used: dict = field(default_factory=dict)
     hook_lines: List[str] = field(default_factory=list)   # thumb_info.hook_lines
@@ -296,6 +298,26 @@ def _number_in(text: str):
     return None
 
 
+def _icon_for(text: str):
+    """汎用アイコン（pillow_illustration の教科書アイコン 36 種）で句の語に合うもの。
+
+    2026-10-10 v3-fix: 科学の語表（足・水・ホース・ポンプ・時計）はむくみ回の試作で、
+    他の題材では当たらない。当たらない回でも句ごとに語と合う画を出すための受け皿。
+    """
+    try:
+        from pipeline import pillow_illustration as _pi  # type: ignore
+    except Exception:
+        try:
+            from . import pillow_illustration as _pi  # type: ignore
+        except Exception:
+            return None
+    try:
+        m = _pi._match_textbook(text or "")
+    except Exception:
+        return None
+    return m[0] if m else None
+
+
 def _kinds_for(text: str, genre: str) -> List[str]:
     t = text or ""
     found = []
@@ -316,6 +338,8 @@ def _kinds_for(text: str, genre: str) -> List[str]:
     if genre == "pokemon" and "wall" in kinds and "stat" in kinds:
         kinds.remove("wall")
         kinds.insert(0, "wall")
+    if genre == "science" and not kinds and _icon_for(t):
+        kinds.append("icon")
     # 誤解の否定（「〜ではない」）は、その誤解に ✕ を付けた図を最優先
     if deny_label(t):
         kinds.insert(0, "deny")
@@ -340,6 +364,19 @@ def subject_kind(ctx: PanelContext) -> str:
     return _FALLBACK[ctx.genre]
 
 
+def title_is_topical(ctx: PanelContext) -> bool:
+    """題名がこのジャンルの図の語表に1つでも当たるか（2026-10-10 v3-fix）。
+
+    当たらない回（例: 手のひらの汗）でジャンル全体の図を借りると、別の題材の図
+    （むくみ回の足・ポンプ・ホース）が出て、語と画が食い違う（C_jcbailuDc）。
+    """
+    if ctx.genre == "pokemon" and len(ctx.names) == 2:
+        return True
+    generic = {"number", "deny", "stat", "icon"}   # 「〜じゃない」「数字」「汎用アイコン」は題材の手がかりにならない
+    hits = set(_kinds_for(ctx.title, ctx.genre)) | set(_kinds_for(ctx.title_text, ctx.genre))
+    return bool(hits - generic)
+
+
 def max_states(kind: str) -> int:
     return _NSEM.get(kind, 1) + len(_FOCUS.get(kind, []))
 
@@ -351,6 +388,9 @@ def use_key(kind: str, text: str) -> str:
         return f"number:{n[0]}{n[1]}" if n else "number"
     if kind == "deny":
         return "deny:" + deny_label(text)
+    if kind == "icon":
+        ic = _icon_for(text)
+        return "icon:" + (ic[0] if ic else "")
     if kind == "stat":
         return "stat:" + ",".join(m.group(0) for m in _STAT_RE.finditer(text or ""))
     return kind
@@ -379,8 +419,8 @@ def plan_panels(chunks: Sequence[str], line_text: str, ctx: PanelContext,
       2. 句の語に合う図が使い切りなら、まだ出していない別の図（題材→行→ジャンル全体の順）。
          後ろの句が自分の語で使う図は先取りしない。
       3. 直前の句と同じ種類は、語がそれを指すときだけ（状態は必ず変わる）。
-      4. 登録・高評価のお願いの句は ("loop", 0)。描画側で冒頭の 1 コマ（題名の問い＋題材の図）に
-         戻す。最後の画が最初の画と同じなので、ループで先頭に戻っても継ぎ目に見えない。
+      4. 登録・高評価のお願いの句は、本編で出した図の振り返り。最後の句だけ ("loop", 0) で、描画側で
+         冒頭の 1 コマ（題名の問い＋題材の図）に戻す。最後の画が最初の画と同じなので、ループで先頭に戻っても継ぎ目に見えない。
     """
     out: List[Tuple[str, int]] = []
     subj = subject_kind(ctx)
@@ -389,7 +429,16 @@ def plan_panels(chunks: Sequence[str], line_text: str, ctx: PanelContext,
     owns = [_kinds_for(ch, ctx.genre) for ch in chunks]
     for i, ch in enumerate(chunks):
         if (is_cta(ch) or (is_cta(line_text) and not owns[i])) and not (opening and i == 0):
-            out.append(("loop", 0))
+            # 2026-10-10 v3-fix: お願いの区間を冒頭の画で止めない（C_jcbailuDc は 9.4 秒静止）。
+            # 最後の句だけ冒頭の画に戻し（ループの継ぎ目）、それまでは本編で出した図を振り返る。
+            recap = [(k, src) for _, k, src in reversed(ctx.shown_keys) if k not in (subj, "loop")]
+            if i < len(chunks) - 1 and recap:
+                k, src = recap[ctx.recap_i % len(recap)]
+                ctx.recap_i += 1
+                ctx.recap_src[ch] = src   # 描画側はこの句を元の句で描く（締めの句の語では描けない）
+                out.append((k, 0))
+            else:
+                out.append(("loop", 0))
             continue
         last = out[-1] if out else prev
         later = {k for o in owns[i + 1:] for k in o}
@@ -418,7 +467,12 @@ def plan_panels(chunks: Sequence[str], line_text: str, ctx: PanelContext,
                 if last:
                     skip.add(last[0])
                 near = [k for k in dict.fromkeys([subj] + line_kinds) if k not in skip]
-                far = [k for k in dict.fromkeys(pool) if k not in skip and k not in near]
+                # 題名が語表に当たらない回は、ジャンルの他の図を借りない（語と画の食い違いを防ぐ）
+                far = ([k for k in dict.fromkeys(pool) if k not in skip and k not in near]
+                       if (title_is_topical(ctx) and ctx.genre != "science") else [])
+                # science の語表（足・水・ホース・ポンプ・時計）はむくみ回専用の図なので、
+                # 語が当たらない句に流用しない（靴ずれ回でホース・時計が出ていた）。
+                # scp / yokai の図（扉・目・提灯・巻物…）は雰囲気の絵として流用が効くので残す。
                 # 題材・この行の図（未使用→別の状態）→ ジャンルの他の図（未使用→別の状態）
                 for group in (near, far):
                     for k in group:
@@ -448,6 +502,10 @@ def plan_panels(chunks: Sequence[str], line_text: str, ctx: PanelContext,
         out.append(pick)
         if pick[0] not in ctx.shown and pick[0] not in ("number", "deny", "loop"):
             ctx.shown.append(pick[0])
+        key = use_key(pick[0], ch)
+        if pick[0] not in ("loop", "deny") and not (opening and i == 0) \
+                and key not in [x[0] for x in ctx.shown_keys]:
+            ctx.shown_keys.append((key, pick[0], ch))
     ctx.line_i += 1
     return out
 
@@ -2118,6 +2176,29 @@ _DRAW = {
 }
 
 
+def _icon_panel(d, box, ctx, text):
+    """汎用アイコンを大きく1つ＋その語のラベル（句の語と必ず一致する画）。"""
+    ic = _icon_for(text)
+    if not ic:
+        return
+    try:
+        from pipeline import pillow_illustration as _pi  # type: ignore
+    except Exception:
+        from . import pillow_illustration as _pi  # type: ignore
+    name, label = ic
+    x0, y0, x1, y1 = box
+    W, H = x1 - x0, y1 - y0
+    r = int(min(W, H) * 0.26)
+    cx, cy = int(x0 + W / 2), int(y0 + H * 0.42)
+    try:
+        _pi._TEXTBOOK_ICONS[name](d, cx, cy, r, (230, 40, 40))
+    except Exception as e:
+        print(f"⚠️ short_panels: icon {name} failed: {e}")
+    lab = label
+    _text(d, (cx, int(y0 + H * 0.84)), lab, _fit_size(lab, W * 0.7, int(H * 0.14)), (40, 46, 70),
+          stroke=6 * SS, stroke_fill=(255, 255, 255))
+
+
 def render_panel(kind: str, text: str, ctx: PanelContext, w: int, h: int, variant: int = 0,
                  opening: bool = False, pre: bool = False) -> Image.Image:
     """w×h の素材枠（RGBA）。
@@ -2136,6 +2217,8 @@ def render_panel(kind: str, text: str, ctx: PanelContext, w: int, h: int, varian
     cd = ImageDraw.Draw(content, "RGBA")
     if kind == "number":
         _number(cd, box, ctx, text, opening, dark=(g == "scp" or night))
+    elif kind == "icon":
+        _icon_panel(cd, box, ctx, text)
     elif kind == "deny" and g == "science":
         _deny(content, cd, box, ctx, text, opening)
     else:
